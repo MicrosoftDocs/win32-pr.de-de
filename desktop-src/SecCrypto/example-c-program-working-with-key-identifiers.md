@@ -1,25 +1,25 @@
 ---
-description: 'Beispiel-C-Programm: Arbeiten mit Schlüssel Bezeichnerzeichen'
+description: 'C-Beispielprogramm: Arbeiten mit Schlüsselbezeichnern'
 ms.assetid: 5ca160fd-8a63-46fa-99ce-e01a6acb81f4
-title: 'Beispiel-C-Programm: Arbeiten mit Schlüssel Bezeichnerzeichen'
+title: 'C-Beispielprogramm: Arbeiten mit Schlüsselbezeichnern'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 36d849edc33e1738fec8e861f71f1e48475faed0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b94d2374f63758e47d53a0d69cc8f76af4db99a2f546dbd51860ab34c356af0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351542"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119140765"
 ---
-# <a name="example-c-program-working-with-key-identifiers"></a>Beispiel-C-Programm: Arbeiten mit Schlüssel Bezeichnerzeichen
+# <a name="example-c-program-working-with-key-identifiers"></a>C-Beispielprogramm: Arbeiten mit Schlüsselbezeichnern
 
-Im folgenden Beispiel werden Methoden zum Arbeiten mit Schlüssel bezeichnerpunkten veranschaulicht. In diesem Beispiel werden die folgenden Aufgaben und kryptoapi-Funktionen veranschaulicht:
+Im folgenden Beispiel werden Möglichkeiten zum Arbeiten mit Schlüsselbezeichnern veranschaulicht. Dieses Beispiel veranschaulicht die folgenden Aufgaben und CryptoAPI-Funktionen:
 
--   Erstellen eines Schlüssel Bezeichners mithilfe von [**cryptkreatekeyidentifierfromcsp**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatekeyidentifierfromcsp).
--   Festlegen einer Eigenschaft für einen Schlüssel Bezeichner mithilfe von " [**cryptsetkeyidentifierproperty**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsetkeyidentifierproperty)".
--   Der Inhalt einer schlüsselbezeichnereigenschaft wird mithilfe von " [**cryptgetkeyidentifierproperty**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetkeyidentifierproperty)" abgerufen.
--   Auflisten der Eigenschaften eines Schlüssel Bezeichners mithilfe von " [**cryptenrekeyidentifierproperties**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptenumkeyidentifierproperties)".
--   Deklarieren, definieren und Verwenden einer Rückruffunktion.
+-   Erstellen eines Schlüsselbezeichners [**mit CryptCreateKeyIdentifierFromCSP**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatekeyidentifierfromcsp).
+-   Festlegen einer Eigenschaft für einen Schlüsselbezeichner [**mithilfe von CryptSetKeyIdentifierProperty**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsetkeyidentifierproperty).
+-   Abrufen des Inhalts einer Schlüsselbezeichnereigenschaft [**mithilfe von CryptGetKeyIdentifierProperty**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetkeyidentifierproperty).
+-   Auflisten der Eigenschaften eines Schlüsselbezeichners [**mithilfe von CryptEnumKeyIdentifierProperties**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptenumkeyidentifierproperties).
+-   Deklarieren, Definieren und Verwenden einer Rückruffunktion.
 
 
 ```C++

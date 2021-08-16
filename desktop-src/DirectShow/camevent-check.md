@@ -1,7 +1,7 @@
 ---
-description: Die Check-Methode überprüft, ob das Ereignis festgelegt ist, ohne zu blockieren.
+description: Die Check-Methode überprüft, ob das Ereignis ohne Blockierung festgelegt ist.
 ms.assetid: b8e55798-fd8e-4442-bc35-08887d8a3129
-title: Camevent. Check-Methode (wxutil. h)
+title: WEBCAMEvent.Check-Methode (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1a112d1b9484acb4d7e9cc2992b8dee629f40e23
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1a961d7df45ddac7ade5e39f91c1aed56609ce2d2eeb8e7423799c9a4903884e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367437"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955539"
 ---
-# <a name="cameventcheck-method"></a>Camevent. Check-Methode
+# <a name="cameventcheck-method"></a>CAMEvent.Check-Methode
 
-Die- `Check` Methode überprüft, ob das Ereignis festgelegt ist, ohne zu blockieren.
+Die `Check` -Methode überprüft, ob das Ereignis ohne Blockierung festgelegt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,9 +40,9 @@ BOOL Check();
 
 Diese Methode hat keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Gibt " **true** " zurück, wenn das Ereignis festgelegt ist, andernfalls " **false** ". Diese Methode ruft die Methode " [**camevent:: Wait**](camevent-wait.md) " mit einem Timeout von 0 (null) auf. Wenn das Objekt ein automatisches Zurücksetzungs Ereignis ist, setzt diese Methode das Ereignis zurück.
+Gibt **TRUE zurück,** wenn das Ereignis festgelegt ist, andernfalls **FALSE.** Diese Methode ruft die [**METHODE WEBCAMEvent::Wait**](camevent-wait.md) mit einem Time out von 0 (null) auf. Wenn es sich bei dem Objekt um ein Ereignis zur automatischen Zurücksetzung handelt, setzt diese Methode das Ereignis zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,16 +50,16 @@ Gibt " **true** " zurück, wenn das Ereignis festgelegt ist, andernfalls " **fal
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Camevent-Klasse**](camevent.md)
+[**CAMEvent-Klasse**](camevent.md)
 </dt> </dl>
 
  

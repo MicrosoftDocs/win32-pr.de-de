@@ -13,13 +13,13 @@ ms.locfileid: "117740942"
 ---
 # <a name="pseudo-blocking-and-true-blocking"></a>Pseudoblockierung und true-Blockierung
 
-In 16 Windows wird eine echte Blockierung vom Betriebssystem nicht unterstützt. Daher wird ein blockierende Vorgang, der nicht sofort abgeschlossen werden kann, wie folgt behandelt:
+In 16 Windows-Umgebungen wird eine echte Blockierung vom Betriebssystem nicht unterstützt. Daher wird ein blockierende Vorgang, der nicht sofort abgeschlossen werden kann, wie folgt behandelt:
 
 -   Der Dienstanbieter initiiert den Vorgang und gibt dann eine Schleife ein, in der er alle Windows-Nachrichten weitersendet (bei Bedarf wird der Prozessor an einen anderen Thread übermittelt).
 -   Anschließend wird überprüft, ob die Sockets-Windows abgeschlossen ist.
 -   Wenn die Funktion abgeschlossen wurde oder [**WSPCancelBlockingCall**](/previous-versions/windows/desktop/legacy/ms742269(v=vs.85)) aufgerufen wurde, wird die Schleife beendet, und die blockierende Funktion wird mit einem entsprechenden Ergebnis abgeschlossen.
 
-Dies ist mit dem Begriff Pseudoblockierung gemeint, und die oben genannte Schleife wird als der standardmäßige blockierende Hook bezeichnet.
+Dies ist mit dem Begriff Pseudoblockierung gemeint, und die oben genannte Schleife wird als standardmäßiger blockierende Hook bezeichnet.
 
  
 

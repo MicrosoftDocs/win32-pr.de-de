@@ -1,7 +1,7 @@
 ---
 description: CLSID eines benutzerdefinierten Videomixers für die MEDIENSenke des erweiterten Videorenderers (Enhanced Video Renderer, EVR).
 ms.assetid: a3586e6f-a2a2-4932-8b43-a076f64c5958
-title: MF_ACTIVATE_CUSTOM_VIDEO_MIXER_CLSID -Attribut (Mfidl.h)
+title: MF_ACTIVATE_CUSTOM_VIDEO_MIXER_CLSID-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.openlocfilehash: 6a110d6ef5b6cc65fcf3d81fc252737bbcc70575c2d1600751281f9222b032a1

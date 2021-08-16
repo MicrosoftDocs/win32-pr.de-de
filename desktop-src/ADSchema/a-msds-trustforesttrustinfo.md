@@ -56,10 +56,10 @@ Enthält Gesamtstruktur-Vertrauensstellungsinformationen (ein binäres BLOB), di
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Is-Single-Valued       | True                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | True                                                 |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Richtig                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
@@ -77,10 +77,10 @@ Enthält Gesamtstruktur-Vertrauensstellungsinformationen (ein binäres BLOB), di
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Is-Single-Valued       | True                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | True                                                 |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Richtig                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
@@ -98,10 +98,10 @@ Enthält Gesamtstruktur-Vertrauensstellungsinformationen (ein binäres BLOB), di
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Is-Single-Valued       | True                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | True                                                 |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Richtig                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
@@ -119,10 +119,10 @@ Enthält Gesamtstruktur-Vertrauensstellungsinformationen (ein binäres BLOB), di
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist einwertig       | True                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | True                                                 |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Richtig                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
@@ -140,10 +140,10 @@ Enthält Gesamtstruktur-Vertrauensstellungsinformationen (ein binäres BLOB), di
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist einwertig       | True                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | True                                                 |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Richtig                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |

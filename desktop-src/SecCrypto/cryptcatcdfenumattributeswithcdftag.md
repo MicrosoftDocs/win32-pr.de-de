@@ -24,10 +24,10 @@ ms.locfileid: "117768895"
 
 \[Die **Funktion CryptCATCDFEnumAttributesWithCDFTag** steht für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen zur Verfügung. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
 
-Die **Funktion CryptCATCDFEnumAttributesWithCDFTag** führt die Attribute von Memberdateien im **Abschnitt CatalogFiles** einer Katalogdefinitionsdatei (CDF) auf. **CryptCATCDFEnumAttributesWithCDFTag** wird von [MakeCat aufgerufen.](makecat.md)
+Die **CryptCATCDFEnumAttributesWithCDFTag-Funktion** führt die Attribute von Memberdateien im **Abschnitt CatalogFiles** einer Katalogdefinitionsdatei (CDF) auf. **CryptCATCDFEnumAttributesWithCDFTag** wird von [MakeCat aufgerufen.](makecat.md)
 
 > [!Note]  
-> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch eine Verknüpfung mit Mssign32.dll.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um eine dynamische Verknüpfung mit Mssign32.dll.
 
  
 

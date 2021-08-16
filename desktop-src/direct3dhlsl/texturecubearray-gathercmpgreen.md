@@ -27,7 +27,7 @@ Sampling und Vergleich einer Textur und Rückgabe der grünen Komponente.
 
 
 
-| Methode                                                                                      | BESCHREIBUNG                                                                                                      |
+| Methode                                                                                      | Beschreibung                                                                                                      |
 |:--------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|
 | [**GatherCmpGreen(S,float,float,uint)**](tcubearray-gathercmpgreen-s-float-float-uint-.md) | Lädt eine Textur ein und vergleicht sie und gibt die grüne Komponente zusammen mit dem Status des Vorgangs zurück.<br/> |
 

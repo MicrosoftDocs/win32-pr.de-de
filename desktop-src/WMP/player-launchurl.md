@@ -1,11 +1,11 @@
 ---
-title: Player. launchurl-Methode
-description: Die launchurl-Methode sendet eine URL an den Standardbrowser des Benutzers, der gerendert werden soll. | Player. launchurl-Methode
+title: Player.launchURL-Methode
+description: Die launchURL-Methode sendet eine URL an den Standardbrowser des Benutzers, der gerendert werden soll. | Player.launchURL-Methode
 ms.assetid: 2b445e59-f884-4519-9acb-f349319429d2
 keywords:
-- launchurl-Methode, Windows Media Player
-- launchurl-Methode, Windows Media Player, Player-Klasse
-- Player-Klasse, Windows Media Player, launchurl-Methode
+- launchURL-Methode Windows Media Player
+- launchURL-Methode Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , launchURL-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c496e8f40f4d7c8a21e718b820e438d3ce32ad1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 79d22c65a29aaee9c849677dfa42acb5769bf30d2fb7079e305ee79632ef22e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134823"
 ---
-# <a name="playerlaunchurl-method"></a>Player. launchurl-Methode
+# <a name="playerlaunchurl-method"></a>Player.launchURL-Methode
 
-Die **launchurl** -Methode sendet eine URL an den Standardbrowser des Benutzers, der gerendert werden soll.
+Die **launchURL-Methode** sendet eine URL an den Standardbrowser des Benutzers, der gerendert werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ Player.launchURL(
 
 <dl> <dt>
 
-*URL* \[ in\]
+*URL* \[ In\]
 </dt> <dd>
 
-**Zeichen** folgen Wert, der die zu startende URL darstellt.
+**Zeichenfolgenwert,** der die zu startde URL darstellt.
 
 </dd> </dl>
 
@@ -53,15 +53,15 @@ Player.launchURL(
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode öffnet nur Webseiten mithilfe der http-oder HTTPS-Protokolle.
+Diese Methode öffnet nur Webseiten, die das HTTP- oder HTTPS-Protokoll verwenden.
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das, wenn darauf geklickt wird, die Microsoft-Website in einem neuen Browserfenster anzeigt. Das **Player** -Element wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird ein HTML BUTTON-Element erstellt, das beim Klicken die Microsoft-Website in einem neuen Browserfenster anzeigt. Das **Player-Element** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -81,12 +81,12 @@ Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das, wenn d
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

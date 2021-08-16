@@ -1,33 +1,33 @@
 ---
-description: Das frei Hand Blog Beispiel veranschaulicht verschiedene nützliche Verfahren, die in frei Hand fähigen Webanwendungen verwendet werden können.
+description: Im Ink-Blogbeispiel werden verschiedene nützliche Techniken veranschaulicht, die in Ink-fähigen Webanwendungen verwendet werden können.
 ms.assetid: 4a5a453d-e3c1-40e6-b0eb-99009f0024dd
-title: Webanwendungen Ink-Enabled
+title: Ink-Enabled Webanwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b14e368c1d2e97e35afa6d72a0fe082f304c5fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bf8097bd55c34abbcb4469d74642e9dbc9a5f29e3b0b7110a76543fd40f5b1ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343671"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118043491"
 ---
-# <a name="ink-enabled-web-applications"></a>Webanwendungen Ink-Enabled
+# <a name="ink-enabled-web-applications"></a>Ink-Enabled Webanwendungen
 
-Das frei Hand [Blog](ink-blog-web-sample.md) Beispiel veranschaulicht verschiedene nützliche Verfahren, die in frei Hand fähigen Webanwendungen verwendet werden können. Hierzu gehören: testen, ob der Client Computer frei Hand fähige Steuerelemente unterstützen kann, frei Hand Daten an einen Server übermittelt und frei Hand Daten auf einer Webseite anzeigt.
+Im [Ink-Blogbeispiel](ink-blog-web-sample.md) werden verschiedene nützliche Techniken veranschaulicht, die in Ink-fähigen Webanwendungen verwendet werden können. Dazu gehören: Testen, ob der Clientcomputer Freihandsteuerelemente unterstützen kann, Übermitteln von Freihanddaten an einen Server und Anzeigen von Freihanddaten auf einer Webseite.
 
-## <a name="testing-ink-enablement"></a>Testen der frei Hand Aktivierung
+## <a name="testing-ink-enablement"></a>Testen der Aktivierung von Ink
 
-Es kann nützlich sein, zu testen, ob der Client Computer frei Hand fähige Steuerelemente anzeigen kann. Dies ermöglicht es Ihnen, die webpageshow ein Steuerelement anzuzeigen, wenn es sich bei dem Client um einen Tablet PC oder einen anderen handelt, wenn dies nicht der Fall ist. Eine Möglichkeit, dies zu testen, besteht darin, ein Objekt zu erstellen, z. b. ein [InkOverlay](/previous-versions/ms833057(v=msdn.10))-Objekt, das nur auf einem Computer erstellt werden kann, auf dem das Betriebssystem Windows Vista, das Windows XP Tablet PC Edition oder das Windows XP Tablet PC Edition SDK (Software Development Kit) installiert ist. Wenn Sie das Objekt in einem try/catch-Block erstellen und alle ausgelösten Ausnahmen abfangen (häufig wird eine file- [FoundException](/previous-versions/windows/) ausgelöst, um anzugeben, dass die Assembly mit diesem Steuerelement nicht gefunden werden kann), können Sie erkennen, ob der Client Computer frei Hand Steuerelemente unterstützen kann. Im Beispiel befindet sich dieser Code im Konstruktor der- `InkArea` Klasse.
+Es kann hilfreich sein, zu testen, ob auf dem Clientcomputer Steuerelemente mit Ink-Aktivierung angezeigt werden können. Dadurch können Sie festlegen, dass das Steuerelementwebpage ein Steuerelement zeigt, wenn es sich bei dem Client um einen Tablet-PC handelt, oder um ein anderes Steuerelement, wenn dies nicht dere ist. Eine Möglichkeit, dies zu testen, besteht darin, ein Objekt wie z.B. [inkOverlay](/previous-versions/ms833057(v=msdn.10))zu erstellen, das nur auf einem Computer erstellt werden kann, auf dem das Windows Vista, Windows Betriebssystem XP Tablet PC Edition oder das Windows XP Tablet PC Edition Software Development Kit (SDK) installiert ist. Wenn Sie das Objekt in einem try/catch-Block erstellen und alle ausgelösten Ausnahmen abfangen (häufig wird eine [FileNotFoundException](/previous-versions/windows/) ausgelöst, um anzugeben, dass die Assembly mit diesem Steuerelement nicht gefunden werden kann), können Sie erkennen, ob der Clientcomputer Freihandsteuerelemente unterstützen kann. Im Beispiel finden Sie diesen Code im Konstruktor der `InkArea` -Klasse.
 
-## <a name="submitting-ink-data"></a>Senden von frei Hand Daten
+## <a name="submitting-ink-data"></a>Übermitteln von Ink-Daten
 
-Eine einfache Möglichkeit, Daten zu übermitteln, besteht darin, die Daten aus dem Freihand-aktivierten Steuerelement zu übertragen, in ein ausgeblendetes Formular zu übertragen und dann das Formular Die frei Hand Eingaben können mithilfe der [Save](/previous-versions/dotnet/netframework-3.5/ms571335(v=vs.90)) -Methode serialisiert und anschließend in eine Zeichenfolge konvertiert werden. Im Beispiel wird das ausgeblendete Formular in "addblog. aspx" definiert, und die Freihand-Serialisierung wird in behandelt `InkArea.SerializeInkData` , wobei die frei Hand Eingaben in ein GIF-Bild serialisiert werden. (Beachten Sie, dass es auch in anderen Formaten, wie z. b. ISF (Ink serialisiert Format), serialisiert werden kann.
+Eine einfache Möglichkeit zum Übermitteln von Daten besteht darin, die Daten aus Ihrem Freihandsteuerelement zu übernehmen, in ein ausgeblendetes Formular zu übertragen und dann das Formular zu übermitteln. Die Ink-Datei kann mithilfe der [Save-Methode](/previous-versions/dotnet/netframework-3.5/ms571335(v=vs.90)) serialisiert und dann in eine Zeichenfolge konvertiert werden. Im Beispiel wird das ausgeblendete Formular in AddBlog.aspx definiert, und die Ink-Serialisierung wird in `InkArea.SerializeInkData` behandelt, wobei die Ink-Datei in ein GIF-Bild serialisiert wird. (Beachten Sie, dass die Serialisierung auch in anderen Formaten ähnlich sein kann, z. B. im serialisierten Ink-Format (ISF).)
 
-## <a name="displaying-ink-data"></a>Anzeigen von frei Hand Daten
+## <a name="displaying-ink-data"></a>Anzeigen von Ink-Daten
 
-Im Beispiel verfügt addblog. aspx. cs über eine Methode mit `Page_Load` dem Namen, die die Daten abruft, die an den Server gesendet und in Dateien gespeichert werden. Anschließend werden auf dem Server, der IMG-Tags enthält, die auf die Dateien mit den GIF-Bildern verweisen, Webseiten generiert. Jetzt müssen Sie nur zu diesen Seiten navigieren, um Bilder der frei Hand Eingabe anzuzeigen. (Beachten Sie Folgendes: Wenn Sie die frei Hand Eingabe in ein anderes Format serialisiert hätten (z. b. "Ink serialisiert Format", ISF), müssten Sie die frei Hand Eingaben in ein Bild auf dem Server konvertieren, um Sie auf Clients anzuzeigen, bei denen es sich nicht um Tablets handelt.)
+Im Beispiel verfügt AddBlog.aspx.cs über eine Methode namens `Page_Load` , die die Daten abruft, die an den Server gesendet werden, und diese in Dateien speichert. Anschließend werden Webseiten auf dem Server generiert, die Img-Tags enthalten, die auf die Dateien mit den GIF-Bildern verweisen. Jetzt müssen Sie nur zu diesen Seiten navigieren, um Bilder der Ink anzuzeigen. (Beachten Sie Folgendes: Wenn Sie die Ink-Datei mit einem anderen Format serialisiert hätten, z. B. serialisiertes Freihandformat (ISF), müssten Sie die Ink-Datei in ein Bild auf dem Server konvertieren, um sie auf Clients anzuzeigen, die keine Tablets sind.)
 
-Tablet PC-Clients können die frei Hand Eingaben in ein frei Hand fähiges Steuerelement laden und es dem Benutzer ermöglichen, die frei Hand Eingaben mithilfe von ISF zu bearbeiten. Dies gilt auch für frei Hand Eingaben, die mithilfe des **GIF** -Werts der [PersistenceFormat](/previous-versions/ms827245(v=msdn.10)) -Enumeration gespeichert werden, da die ISF-Daten in den GIF-Metadaten enthalten sind.
+Tablet PC-Clients können die Ink-Datei wieder in ein Steuerelement laden, das für Die-Ink-Unterstützung aktiviert ist, und es dem Benutzer ermöglichen, die Ink-Datei mithilfe von ISF zu bearbeiten. Dies gilt auch für Ink-Dateien, die mit dem **GIF-Wert** der [PersistenceFormat-Enumeration](/previous-versions/ms827245(v=msdn.10)) gespeichert werden, da die ISF-Daten in den GIF-Metadaten enthalten sind.
 
  
 

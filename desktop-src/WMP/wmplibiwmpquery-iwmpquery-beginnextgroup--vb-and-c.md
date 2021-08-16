@@ -1,11 +1,11 @@
 ---
-title: Iwmpquery beginnextgroup-Methode
-description: Die beginnextgroup-Methode beginnt mit einer neuen Bedingungs Gruppe. | Iwmpquery beginnextgroup-Methode
+title: IWMPQuery beginNextGroup-Methode
+description: Die beginNextGroup-Methode startet eine neue Bedingungsgruppe. | IWMPQuery beginNextGroup-Methode
 ms.assetid: 15d20c9f-2ce7-4a86-9054-b7317ebe1a0a
 keywords:
-- beginnextgroup-Methode, Windows-Media Player
-- beginnextgroup-Methode, Windows Media Player, iwmpquery-Schnittstelle
-- Iwmpquery Interface, Windows Media Player, beginnextgroup-Methode
+- beginNextGroup-Methode Windows Media Player
+- beginNextGroup-Methode Windows Media Player , IWMPQuery-Schnittstelle
+- IWMPQuery-Schnittstelle Windows Media Player , beginNextGroup-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 866727f821fb40b6bf09f3ee2cf0231c4ffc3005
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 56a5e0622140aacd2668b1ea145e6a36f7fb2b0ecd243adacc313301d5fb7220
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352029"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117745725"
 ---
-# <a name="iwmpquerybeginnextgroup-method"></a>Iwmpquery:: beginnextgroup-Methode
+# <a name="iwmpquerybeginnextgroup-method"></a>IWMPQuery::beginNextGroup-Methode
 
-Die **beginnextgroup** -Methode beginnt mit einer neuen Bedingungs Gruppe.
+Die **beginNextGroup-Methode** startet eine neue Bedingungsgruppe.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,13 +53,13 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Starten einer neuen Bedingungs Gruppe impliziert, dass Sie die aktuelle Bedingungs Gruppe abgeschlossen haben. Die neue Bedingungs Gruppe wird immer mit der- **oder** -Logik mit der vorherigen Bedingungs Gruppe verkettet.
+Wenn Sie eine neue Bedingungsgruppe beginnen, bedeutet dies, dass Sie die aktuelle Bedingungsgruppe abgeschlossen haben. Die neue Bedingungsgruppe wird immer mithilfe der **OR-Logik** mit der vorherigen Bedingungsgruppe verkettet.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird eine komplexe Abfrage erstellt, indem zwei Gruppen durchlaufen werden, die jeweils eine Bedingung enthalten. Die Ergebnisse der Abfrage werden als Zeichen folgen Sammlung extrahiert und in einem Listenfeld angezeigt. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird eine komplexe Abfrage erstellt, indem zwei Gruppen kombiniert werden, die jeweils eine Bedingung enthalten. Die Ergebnisse der Abfrage werden als Zeichenfolgenauflistung extrahiert und in einem Listenfeld angezeigt. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -135,20 +135,20 @@ Next i
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IWMPMediaCollection2. kreatequery (VB und c#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-createquery--vb-and-c.md)
+[**IWMPMediaCollection2.createQuery (VB und C#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-createquery--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPMediaCollection2. getplaylistbyquery (VB und c#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-getplaylistbyquery--vb-and-c.md)
+[**IWMPMediaCollection2.getPlaylistByQuery (VB und C#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-getplaylistbyquery--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPMediaCollection2. getstringcollectionbyquery (VB und c#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-getstringcollectionbyquery--vb-and-c.md)
+[**IWMPMediaCollection2.getStringCollectionByQuery (VB und C#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-getstringcollectionbyquery--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpquery-Schnittstelle (VB und c#)**](iwmpquery--vb-and-c.md)
+[**IWMPQuery-Schnittstelle (VB und C#)**](iwmpquery--vb-and-c.md)
 </dt> </dl>
 
  

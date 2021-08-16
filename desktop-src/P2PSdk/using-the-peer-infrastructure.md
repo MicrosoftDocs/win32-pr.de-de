@@ -19,7 +19,7 @@ In den folgenden Themen werden Lösungen für allgemeine Aufgaben zum Entwickeln
 
 
 
-| Thema                                                                                                        | BESCHREIBUNG                                                                                                             |
+| Thema                                                                                                        | Beschreibung                                                                                                             |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | [Installieren der Peerinfrastruktur](installing-the-peer-infrastructure.md)                                 | Gibt an, wie die Peerinfrastruktur in Windows XP installiert wird.                                                        |
 | [Überlegungen zur Programmierung](programming-considerations.md)                                                 | Identifiziert wichtige Überlegungen zur Programmierung bei der Entwicklung von Anwendungen mithilfe der Peerinfrastruktur.              |
@@ -28,7 +28,7 @@ In den folgenden Themen werden Lösungen für allgemeine Aufgaben zum Entwickeln
 | [Direkte Verbindungen](direct-connections.md)                                                                 | Gibt an, wie direkte Verbindungen zwischen und zwischen Peers innerhalb der Peer graphing- und grouping-APIs verwendet werden. |
 | [Enumerationen](enumerations.md)                                                                             | Gibt an, wie sie mit den Enumerationsfunktionen arbeiten, die von der Peerinfrastruktur verwendet werden.                                |
 | [Freeing Peer Data](freeing-peer-data.md)                                                                   | Gibt an, wie allgemeine Peerinfrastruktur-Funktionsaufrufe von Daten veröffentlicht werden, die zurückgegeben werden.                                      |
-| [Ereignisinfrastruktur](peer-events-infrastructure.md)                                                      | Identifiziert die Arbeit mit den Peerereignissen und interpretiert die Ereignisse, die von den Peergraphing- und Graphing-APIs definiert werden.  |
+| [Ereignisinfrastruktur](peer-events-infrastructure.md)                                                      | Identifiziert die Arbeit mit den Peerereignissen und interpretiert die Ereignisse, die von den Peer graphing- und graphing-APIs definiert werden.  |
 | [Importieren und Exportieren der Identitäts- und Gruppenkonfiguration](identity-and-group-configuration-import-and-export.md) | Gibt an, wie Peeridentitäts- und Gruppenidentitätskonfigurationen importiert und exportiert werden.                                    |
 | [Datensätze](records.md)                                                                                       | Identifiziert die Arbeit mit Peerdatensätzen und der Datensatzdatenbank.                                                       |
 

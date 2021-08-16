@@ -1,6 +1,6 @@
 ---
 title: FreeUiInfo-Funktion (Ndattributils.h)
-description: Gibt die interne Speicherbelegung für eine UiInfo-Struktur auf.
+description: Gibt den intern einer UiInfo-Struktur zugeordneten Arbeitsspeicher auf.
 ms.assetid: 41d923fd-2fb3-406e-a5cf-f3ba475685f6
 keywords:
 - FreeUiInfo-Funktion NDF

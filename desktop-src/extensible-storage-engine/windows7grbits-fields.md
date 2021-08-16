@@ -28,7 +28,7 @@ Der [Windows7Grbits-Typ](./windows7grbits-class.md) macht die folgenden Member v
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>

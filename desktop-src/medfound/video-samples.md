@@ -13,7 +13,7 @@ ms.locfileid: "118972599"
 ---
 # <a name="video-samples"></a>Videobeispiele
 
-Das Videobeispielobjekt ist eine spezielle Implementierung der [**INTERFACESSample-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) für die Verwendung mit dem [Enhanced Video Renderer](enhanced-video-renderer.md) (EVR). Um eine Instanz dieses Objekts zu erstellen, rufen Sie die [**MFCreateVideoSampleFromSurface-Funktion**](/windows/desktop/api/evr/nc-evr-mfcreatevideosamplefromsurface) auf. Die Funktion verwendet einen Zeiger auf eine Direct3D-Oberfläche und gibt einen Zeiger auf die **SCHNITTSTELLE "POINTERSample"** zurück. Die folgenden Objekttypen sollten Mithilfe dieser Funktion Beispiele zuordnen:
+Das Videobeispielobjekt ist eine spezielle Implementierung der [**INTERFACESSample-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) für die Verwendung mit dem [Enhanced Video Renderer](enhanced-video-renderer.md) (EVR). Um eine Instanz dieses Objekts zu erstellen, rufen Sie die [**MFCreateVideoSampleFromSurface-Funktion**](/windows/desktop/api/evr/nc-evr-mfcreatevideosamplefromsurface) auf. Die -Funktion verwendet einen Zeiger auf eine Direct3D-Oberfläche und gibt einen Zeiger auf die **SCHNITTSTELLE "POINTERSample"** zurück. Die folgenden Objekttypen sollten Mithilfe dieser Funktion Beispiele zuordnen:
 
 -   Benutzerdefinierte EVR-Moderatoren. Eine Moderatorin ordnet Videobeispiele zu und sendet sie an die [**MIXERTransform::P rocessOutput-Methode**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) des Mixers. Weitere Informationen finden Sie unter [Schreiben eines EVR-Presenters.](how-to-write-an-evr-presenter.md)
 
@@ -21,7 +21,7 @@ Das Videobeispielobjekt ist eine spezielle Implementierung der [**INTERFACESSamp
 
 Das Videobeispielobjekt implementiert die folgenden Schnittstellen:
 
--   [**DIESSAMPLE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
+-   [**1000000000**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 
 -   [**ÜBER DASIREDSAMPLE**](/windows/desktop/api/evr/nn-evr-imfdesiredsample)
 

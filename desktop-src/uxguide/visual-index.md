@@ -4,17 +4,17 @@ description: Visuelle Beispiele für viele Benutzeroberflächenelemente, die im 
 ms.assetid: be99bf83-dcd7-44df-be0d-b1b17305a2d6
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 2dc56707564115b612cc008d66697a2543191859
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: e240cd30b022fa8acab654c80189239852e5bf906c9cfcbeb03963e1b541763c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111444601"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119815971"
 ---
 # <a name="visual-index"></a>Visual Index
 
 > [!NOTE]
-> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere aktuelle [Entwurfsanleitung wider.](/windows/uwp/design/)
+> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
 
 Im Folgenden finden Sie visuelle Beispiele für viele Benutzeroberflächenelemente, die im Leitfaden zur Benutzeroberfläche erläutert werden.
 
@@ -35,7 +35,7 @@ Dieser Index ist in die folgenden Abschnitte unterteilt:
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Ballons](ctrl-balloons.md)<br/> ![Screenshot des Balloons, der angibt, dass die Sperre für Schließenden ein ist ](images/visual-index-image1.png)<br/>                                   |
 | [Kontrollkästchen](ctrl-check-boxes.md)<br/> ![Screenshot mit vier Kontrollkästchen ](images/visual-index-image2.png)<br/>                                               |
-| [Befehlsschaltflächen](ctrl-command-buttons.md)<br/> ![Screenshot einer Schaltfläche "OK" ](images/visual-index-image3.png)<br/>                                           |
+| [Befehlsschaltflächen](ctrl-command-buttons.md)<br/> ![Screenshot einer SCHALTFLÄCHE "OK" ](images/visual-index-image3.png)<br/>                                           |
 | [Befehlslinks](ctrl-command-links.md)<br/> ![Screenshot von zwei Befehlslinks ](images/visual-index-image4.png)<br/>                                          |
 | [Dropdownlisten und Kombinationsfelder](./ctrl-drop.md)<br/> ![Screenshot einer Dropdownliste mit Schriftgraden ](images/visual-index-image5.png)<br/>                |
 | [Gruppenfelder](ctrl-group-boxes.md)<br/> ![Screenshot der beiden aktivierten Kontrollkästchen ](images/visual-index-image6.png)<br/>                               |
@@ -48,11 +48,11 @@ Dieser Index ist in die folgenden Abschnitte unterteilt:
 | [Optionsfelder](ctrl-radio-buttons.md)<br/> ![Screenshot eines von drei ausgewählten Optionsfeldern ](images/visual-index-image13.png)<br/>                       |
 | [Suchfelder](ctrl-search-boxes.md)<br/> ![Screenshot eines Suchtextfelds ](images/visual-index-image14.png)<br/>                                           |
 | [Schieberegler](ctrl-sliders.md)<br/> ![Screenshot eines Balkens, Schiebereglers und Teilstrichs ](images/visual-index-image15.png)<br/>                                         |
-| [Drehungssteuerelemente](ctrl-spin-controls.md)<br/> ![Screenshot eines Drehungssteuer steuerelements ](images/visual-index-image16.png)<br/>                                            |
+| [Drehsteuerelemente](ctrl-spin-controls.md)<br/> ![Screenshot eines Drehungssteuer steuerelements ](images/visual-index-image16.png)<br/>                                            |
 | [Statusleisten](ctrl-status-bars.md)<br/> ![Screenshot der Statusleiste und des Popupfensters ](images/visual-index-image17.png)<br/>                                  |
 | [Registerkarten](ctrl-tabs.md)<br/> ![Screenshot von fünf Registerkarten ](images/visual-index-image18.png)<br/>                                                                   |
 | [Textfelder](ctrl-text-boxes.md)<br/> ![Screenshot eines Textfelds und seiner Bezeichnung ](images/visual-index-image19.png)<br/>                                        |
-| [Quickinfos](ctrl-tooltips-and-infotips.md)<br/> ![Screenshot der Druckschaltfläche und ihrer QuickInfo ](images/visual-index-image20.png)<br/>                           |
+| [tooltips](ctrl-tooltips-and-infotips.md)<br/> ![Screenshot der Druckschaltfläche und ihrer QuickInfo ](images/visual-index-image20.png)<br/>                           |
 | [Infotipp](ctrl-tooltips-and-infotips.md)<br/> ![Screenshot der Schaltfläche "Freigeben" und deren Infotip ](images/visual-index-image21.png)<br/>                            |
 | [Strukturansichten](ctrl-tree-views.md)<br/> ![Screenshot der Ordnerhierarchie ](images/visual-index-image22.png)<br/>                                                |
 
@@ -82,7 +82,7 @@ Dieser Index ist in die folgenden Abschnitte unterteilt:
 |-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Arbeiten im Hintergrund](inter-mouse.md)<br/> ![Screenshot eines ringförmigen Zeigers mit Pfeil ](images/visual-index-image26.png)<br/> |
 | [Beschäftigt](inter-mouse.md)<br/> ![Screenshot eines ringförmigen Zeigers ](images/visual-index-image27.png)<br/>                             |
-| [Aktivitätsindikator](inter-mouse.md)<br/> ![Screenshot eines ringförmigen Zeigers und Texts ](images/visual-index-image28.png)<br/>      |
+| [Aktivitätsindikator](inter-mouse.md)<br/> ![Screenshot von ringförmigem Zeiger und Text ](images/visual-index-image28.png)<br/>      |
 
 
 
@@ -113,7 +113,7 @@ Dieser Index ist in die folgenden Abschnitte unterteilt:
 | [Einstiegspunkte für die Benutzerkontensteuerung](winenv-uac.md)<br/> ![Screenshot großer, kleiner Sicherheitsschutzsymbole](images/visual-index-image36.png)<br/> |
 | [Benutzeroberfläche für die Zustimmung zur Benutzerkontensteuerung](winenv-uac.md)<br/> ![Screenshot einer Anforderung zum Fortsetzen eines Programms ](images/visual-index-image37.png)<br/>     |
 | **VERALTET:** Gadget (ausführlich/unverankert)<br/> ![Screenshot des Wetter-Gadgets ](images/visual-index-image33.png)<br/>                             |
-| **VERALTET:** Gadget (präzise/angedockt)<br/> ![Screenshot eines kleinen, andockten Wetter-Gadgets ](images/visual-index-image34.png)<br/>                |
+| **VERALTET:** Gadget (präzise/angedockt)<br/> ![Screenshot eines kleinen, angedockten Wetter-Gadgets ](images/visual-index-image34.png)<br/>                |
 
 
 

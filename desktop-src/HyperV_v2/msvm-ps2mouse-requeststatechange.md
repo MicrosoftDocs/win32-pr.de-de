@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 878b0977a244d4b098dfa449f3c778c33e909111
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 28136033b3c43c49f127ecd59a79bb85d96a0f341d7c9f8f8f1e7c664e419cb6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148263"
 ---
 # <a name="requeststatechange-method-of-the-msvm_ps2mouse-class"></a>RequestStateChange-Methode der Msvm \_ Ps2Mouse-Klasse
 
@@ -128,7 +128,7 @@ Der für das Element angeforderte Zustand. Diese Informationen werden in die Req
 *Auftrag* \[ out\]
 </dt> <dd>
 
-Kann einen Verweis auf den ConcreteJob enthalten, der erstellt wurde, um den Zustandsübergang nachzuverfolgen, der durch den Methodenaufruf initiiert wurde.
+Kann einen Verweis auf den ConcreteJob enthalten, der zum Nachverfolgen des Zustandsübergangs erstellt wurde, der durch den Methodenaufruf initiiert wurde.
 
 </dd> <dt>
 
@@ -157,11 +157,11 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 

@@ -1,9 +1,9 @@
 ---
-title: Freeconnections-Funktion (naputil. h)
-description: Gibt eine Verbindungsdaten Struktur frei.
+title: FreeConnections-Funktion (NapUtil.h)
+description: Gibt eine Verbindungsdatenstruktur frei.
 ms.assetid: bb339d71-f8e3-48d8-834d-8b957e0cb5ec
 keywords:
-- Freeconnections-Funktion NAP
+- FreeConnections-Funktion NAP
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f840d02572af3e6382a06a1873573fc7a30420e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 258295df0b12f30d98825dd139eb51a7d1bc277417cf4d06bba9e811a00740db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340397"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118940637"
 ---
-# <a name="freeconnections-function"></a>Freeconnections-Funktion
+# <a name="freeconnections-function"></a>FreeConnections-Funktion
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **freeconnections** -Funktion gibt eine [**Verbindungs**](connections-struct.md) Datenstruktur frei.
+Die **FreeConnections-Funktion** gibt eine [**Connections-Datenstruktur**](connections-struct.md) frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,22 +45,22 @@ NAPAPI VOID WINAPI FreeConnections(
 
 <dl> <dt>
 
-*Verbindungen* \[ in\]
+*Verbindungen* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die frei verfügbaren [**Verbindungs**](connections-struct.md) Struktur.
+Ein Zeiger auf die frei zu lassende [**Connections-Struktur.**](connections-struct.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle vom NAP-System unterstützten com-Schnittstellen verwenden Standard-com-Speicher Verwaltungsregeln und die com-Speicher Belegungs Funktion (**cotaskmembelegc** und **CoTaskMemFree**):
+Alle com-Schnittstellen, die vom NAP-System unterstützt werden, verwenden COM-Standardspeicherverwaltungsregeln und die COM-Speicherbezuweisungen (**CoTaskMemAlloc** und **CoTaskMemFree**):
 
--   **In** -Parameter werden vom Aufrufer zugeordnet und freigegeben.
--   Out-Parameter werden vom **aufgerufenen** zugeordnet und vom Aufrufer mithilfe von **cotaskmem** freigegeben.
--   **In/out-** Parameter werden vom Aufrufer zugeordnet, vom aufgerufenen freigegeben und neu zugeordnet und schließlich mit **cotaskmem** vom Aufrufer freigegeben.
+-   **In** werden Parameter vom Aufrufer zugeordnet und freigegeben.
+-   **Out-Parameter** werden vom Aufgerufenen zugeordnet und vom Aufrufer mit **coTaskMem** freigegeben.
+-   **Ein-/Aus-Parameter** werden vom Aufrufer zugeordnet, vom Aufgerufenen freigegeben und neu zugeordnet und schließlich vom Aufrufer freigegeben, indem **CoTaskMem** verwendet wird.
 
-Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten Zeiger.
+Alle NAP-Funktionen zum Freigeben von Arbeitsspeicher gibt auch alle eingebetteten Zeiger frei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,18 +68,18 @@ Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Naputil. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>NapUtil.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Zuordnung von Verbindungen**](allocconnections-func.md)
+[**AllocConnections**](allocconnections-func.md)
 </dt> </dl>
 
  

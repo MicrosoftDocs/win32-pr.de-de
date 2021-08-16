@@ -1,11 +1,11 @@
 ---
 title: IMsRdpClipboard SyncRemoteClipboardToLocalSession-Methode
-description: Synchronisiert die Remote Zwischenablage mit der lokalen Sitzung.
+description: Synchronisiert die Remote-Zwischenablage mit der lokalen Sitzung.
 ms.tgt_platform: multiple
 keywords:
-- Synkremoteclipboardtolocalsession-Methode Remotedesktopdienste
-- Synkremoteclipboardtolocalsession-Methode Remotedesktopdienste, imsrdpclipboard-Schnittstelle
-- Imsrdpclipboard Interface Remotedesktopdienste, synkremoteclipboardtolocalsession-Methode
+- SyncRemoteClipboardToLocalSession-Remotedesktopdienste
+- SyncRemoteClipboardToLocalSession-Methode Remotedesktopdienste, IMsRdpClipboard-Schnittstelle
+- IMsRdpClipboard-Remotedesktopdienste, SyncRemoteClipboardToLocalSession-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 12/16/2020
-ms.openlocfilehash: d397d7c1ca4407a5125877721be9aa022f8132a7
-ms.sourcegitcommit: 04e801237156e90b48111d60bddf437f87f5cdfe
+ms.openlocfilehash: e1e56a67504ab3182ed6ccaba97591e8259d6e46b6ebdd3bdc06fbaf63c170f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "104520323"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119000820"
 ---
-# <a name="imsrdpclipboardsyncremoteclipboardtolocalsession-method"></a>Imsrdpclipboard:: synkremoteclipboardtolocalsession-Methode
+# <a name="imsrdpclipboardsyncremoteclipboardtolocalsession-method"></a>IMsRdpClipboard::SyncRemoteClipboardToLocalSession-Methode
 
-Synchronisiert die Remote Zwischenablage mit der lokalen Sitzung.
+Synchronisiert die Remote-Zwischenablage mit der lokalen Sitzung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Geben Sie **S \_ OK zurück,** wenn erfolgreich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,9 +48,9 @@ Gibt **\_ OK** zurück, wenn erfolgreich.
 | Unterstützte Mindestversion (Client)| Windows 10, Version 1803 (Build 17134)      |
 | Typbibliothek            | MsTscAx.dll                        |
 | DLL                  | MsTscAx.dll     |
-| IID                      | IID \_ imsrdpclipboard ist als 2e769ee8-00c7-43dc-afd9-235d75b72a40 definiert.          |
+| IID                      | IID \_ IMsRdpClipboard ist als 2E769EE8-00C7-43DC-AFD9-235D75B72A40 definiert.          |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-description: 'D3DXSHEvalConeLight-Funktion (D3dx9math.h): Wertet ein Licht aus, das ein Kegel konstanter Intensität ist, und gibt shherische (Spherical Sply)-Daten zurück.'
+description: 'D3DXSHEvalConeLight-Funktion (D3dx9math.h): Wertet ein Licht aus, das ein Kegel konstanter Intensität ist und shherische (Sh)-Daten zurückgibt.'
 ms.assetid: 13088e3b-76ae-43ef-886e-686f1f18a31d
 title: D3DXSHEvalConeLight-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 31c90e705a0bb4e82813fff42673e143c5acf171
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a3904ee079399a2a3b7152e04a0101bfdef6f1eee393822465bf072271749cba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119122759"
 ---
 # <a name="d3dxshevalconelight-function-d3dx9mathh"></a>D3DXSHEvalConeLight-Funktion (D3dx9math.h)
 
@@ -62,7 +62,7 @@ Reihenfolge der SH-Auswertung. Muss im Bereich von [D3DXSH \_ MINORDER](other-d3
 
 Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf den Achsenrichtungsvektor (x, y, z), in dem die SH-Basisfunktionen ausgewertet werden sollen. Siehe Hinweise.
+Zeiger auf den Hemisphärenrichtungsvektor (x, y, z), in dem die SH-Basisfunktionen ausgewertet werden sollen. Siehe Hinweise.
 
 </dd> <dt>
 
@@ -133,17 +133,17 @@ Zeiger auf den SH-Ausgabevektor für die blaue Komponente.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wertet ein Licht aus, das ein Kegel mit konstanter Intensität ist und sh-Daten zurückgibt. Der Ausgabevektor wird so berechnet, dass, wenn das Intensitätsverhältnis R/G/B gleich 1 ist, die Beendigungsausgabe eines Punkts direkt unter dem Licht (ausgerichtet in der Kegelrichtung bei einem diffusen Objekt mit einem Albedo von 1) 1,0 wäre. Dadurch werden drei Beispielbeispiele berechnet: *pROut* wird zurückgegeben, während *pGOut* und *pBOut* zurückgegeben werden können.
+Wertet ein Licht aus, bei dem es sich um einen Kegel konstanter Intensität handelt, und gibt rekonsistente SH-Daten zurück. Der Ausgabevektor wird so berechnet, dass bei einem Intensitätsverhältnis von R/G/B gleich 1 die Ausgangsstärke eines Punkts direkt unter dem Licht (in Kegelrichtung an einem diffusen Objekt mit einem Albedo von 1 ausgerichtet) 1,0 wäre. Dadurch werden drei Testbeispiele berechnet: *pROut* wird zurückgegeben, während *pGOut* und *pBOut* zurückgegeben werden können.
 
 Auf der Kugel mit Einheitenradius kann die Richtung wie in der folgenden Abbildung dargestellt einfach mit theta, dem Winkel um die [Z-Achse in rechtshändiger Richtung](coordinate-systems.md)und phi, dem Winkel von z, angegeben werden.
 
 ![Abbildung einer Kugel mit Einheitenradius](images/spherical-coordinates.png)
 
-Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen Koordinaten (x, y, z) und sphärischen Koordinaten (Theta, Phi) auf der Einheitenkugel. Der Winkel theta variiert im Bereich von 0 bis 2 Pi, während phi von 0 bis Pi variiert.
+Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen Koordinaten (x, y, z) und sphärischen Koordinaten (Theta, Phi) auf der Einheitenkugel. Der Winkel theta variiert über den Bereich von 0 bis 2 Pi, während phi von 0 bis pi variiert.
 
 ![Gleichungen der Beziehung zwischen kartesischen und sphärischen Koordinaten](images/spherical-coordinates-equations.png)
 
@@ -151,7 +151,7 @@ Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen Koordinaten
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

@@ -29,14 +29,14 @@ Das **editButtonVisible-Attribut** gibt einen Wert an, der angibt, ob die Wieder
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
+Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
 
 
 
 | Wert | BESCHREIBUNG                                       |
 |-------|---------------------------------------------------|
-| true  | Die Schaltfläche zum Bearbeiten der Wiedergabeliste ist sichtbar.              |
-| false | Standard. Die Schaltfläche zum Bearbeiten der Wiedergabeliste ist nicht sichtbar. |
+| true  | Die Wiedergabelisten-Bearbeitungsschaltfläche ist sichtbar.              |
+| false | Standard. Die Wiedergabelisten-Bearbeitungsschaltfläche ist nicht sichtbar. |
 
 
 
@@ -44,7 +44,7 @@ Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie dieses Attribut auf TRUE festlegen, wird die Wiedergabelisten-Bearbeitungsschaltfläche in der unteren linken Ecke des **PLAYLIST-Elements** angezeigt. Wenn Sie auf diese Schaltfläche klicken, wird ein Menü mit Optionen angezeigt, mit denen der Benutzer eine Wiedergabeliste bearbeiten, löschen, sortieren, öffnen, speichern oder kopieren kann.
+Wenn Sie dieses Attribut auf TRUE festlegen, wird die Wiedergabelisten-Bearbeitungsschaltfläche in der linken unteren Ecke des **PLAYLIST-Elements** angezeigt. Wenn Sie auf diese Schaltfläche klicken, wird ein Menü mit Optionen angezeigt, mit denen der Benutzer eine Wiedergabeliste bearbeiten, löschen, sortieren, öffnen, speichern oder kopieren kann.
 
 ## <a name="requirements"></a>Anforderungen
 

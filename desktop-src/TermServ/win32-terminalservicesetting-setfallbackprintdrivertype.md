@@ -1,12 +1,12 @@
 ---
-title: Setfallbackprintdrivertype-Methode der Win32_TerminalServiceSetting-Klasse
-description: Die setfallbackprintdrivertype-Methode legt die fallbackprintdrivertype-Eigenschaft für die-Klasse fest.
+title: SetFallbackPrintDriverType-Methode der Win32_TerminalServiceSetting-Klasse
+description: Die SetFallbackPrintDriverType-Methode legt die FallbackPrintDriverType-Eigenschaft für die -Klasse fest.
 ms.assetid: be738134-199a-41a6-b2f8-cccfa14fa02b
 ms.tgt_platform: multiple
 keywords:
-- Setfallbackprintdrivertype-Methode Remotedesktopdienste
-- Setfallbackprintdrivertype-Methode Remotedesktopdienste, Win32_TerminalServiceSetting-Klasse
-- Win32_TerminalServiceSetting-Klasse Remotedesktopdienste, setfallbackprintdrivertype-Methode
+- SetFallbackPrintDriverType-Methode Remotedesktopdienste
+- SetFallbackPrintDriverType-Methode Remotedesktopdienste , Win32_TerminalServiceSetting-Klasse
+- Win32_TerminalServiceSetting-Klasse Remotedesktopdienste , SetFallbackPrintDriverType-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 16e445fef86970e89d5b0f09abebecd40f49ab7f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d39033a34c75ea94f365ae690b1ac6fe4cd61663e9cd6db19f2cd2c232bd8c89
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040930"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137863"
 ---
-# <a name="setfallbackprintdrivertype-method-of-the-win32_terminalservicesetting-class"></a>Setfallbackprintdrivertype-Methode der Win32 \_ terminalservicesetts-Klasse
+# <a name="setfallbackprintdrivertype-method-of-the-win32_terminalservicesetting-class"></a>SetFallbackPrintDriverType-Methode der Win32 \_ TerminalServiceSetting-Klasse
 
-Die **setfallbackprintdrivertype** -Methode legt die **fallbackprintdrivertype** -Eigenschaft für die-Klasse fest.
+Die **SetFallbackPrintDriverType-Methode** legt die **FallbackPrintDriverType-Eigenschaft** für die -Klasse fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,21 +43,21 @@ uint32 SetFallbackPrintDriverType(
 
 <dl> <dt>
 
-*Fallbackprintdrivertype* \[ in\]
+*FallbackPrintDriverType* \[ In\]
 </dt> <dd>
 
-Legt die **fallbackprintdrivertype** -Eigenschaft fest, die neue Remotedesktopdienste Verbindungen zulässt oder ablehnt.
+Legt die **FallbackPrintDriverType-Eigenschaft** fest, die neue Remotedesktopdienste Verbindungen zulässt oder ablehnt.
 
 <dt>
 
 <span id="0"></span>
 
-<span id="0"></span>**1,0**
+<span id="0"></span>**0**
 
 
 </dt> <dd>
 
-Keine Fall Back Treiber.
+Keine Fallbacktreiber.
 
 </dd> <dt>
 
@@ -79,18 +79,18 @@ Beste Schätzung.
 
 </dt> <dd>
 
-Beste Schätzung. Wenn keine Entsprechung gefunden wird, Fall Back auf Hewlett-Packard-druckersteuerungsprache (PCL).
+Beste Schätzung. Wenn keine Übereinstimmung gefunden wird, wird ein Fallback auf Hewlett-Packard Printer Control Language (PCL) angezeigt.
 
 </dd> <dt>
 
 <span id="3"></span>
 
-<span id="3"></span>**€**
+<span id="3"></span>**3**
 
 
 </dt> <dd>
 
-Beste Schätzung. Wenn keine Entsprechung gefunden wird, Fall Back auf PostScript (PS).
+Beste Schätzung. Wenn keine Übereinstimmung gefunden wird, fallbacken Sie auf Postscript (PS).
 
 </dd> <dt>
 
@@ -101,17 +101,17 @@ Beste Schätzung. Wenn keine Entsprechung gefunden wird, Fall Back auf PostScrip
 
 </dt> <dd>
 
-Beste Schätzung. Wenn keine Entsprechung gefunden wird, zeigen Sie sowohl PS-als auch PCL-Treiber an.
+Beste Schätzung. Wenn keine Übereinstimmung gefunden wird, zeigen Sie sowohl PS- als auch PCL-Treiber an.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg Erfolg zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) . Die-Methode gibt einen Fehler zurück, wenn die Einstellung Untergruppen Richtlinien Steuerung liegt.
+Gibt Erfolg bei Erfolg zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden [Sie unter Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md) Die -Methode gibt einen Fehler zurück, wenn die Einstellung der Gruppenrichtliniensteuerung unterliegt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,16 +122,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32 \_ terminalservicesetts**](win32-terminalservicesetting.md)
+[**Win32 \_ TerminalServiceSetting**](win32-terminalservicesetting.md)
 </dt> </dl>
 
  

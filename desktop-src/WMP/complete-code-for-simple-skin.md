@@ -1,28 +1,28 @@
 ---
-title: Vervollständigen von Code für einfache Skin
-description: Vervollständigen von Code für einfache Skin
+title: Vollständiger Code für simple skin
+description: Vollständiger Code für simple skin
 ms.assetid: ece437d2-1a11-4096-8b3b-db2b4def8248
 keywords:
 - Erstellen von Skins, Codebeispielen
 - Windows Media Player Skins, Codebeispiele
 - Skins, Codebeispiele
-- Skin-Definitions Dateien, Codebeispiele
-- Erstellen von Skins, Beispiele
+- Skindefinitionsdateien, Codebeispiele
+- Erstellen von Skins, Beispielen
 - Windows Media Player Skins, Beispiele
 - Skins, Beispiele
-- Skin-Definitions Dateien, Beispiele
+- Skindefinitionsdateien, Beispiele
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3682e6143c751d1c72cd8799f849fef7c9c27adb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6a3b4d4380c6d7fb44290e8faff26bf5cb84dae552d09fe13594402dbe434ab0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856443"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135793"
 ---
-# <a name="complete-code-for-simple-skin"></a>Vervollständigen von Code für einfache Skin
+# <a name="complete-code-for-simple-skin"></a>Vollständiger Code für simple skin
 
-Im folgenden finden Sie den gesamten Code für die erste Beispiel Skin:
+Hier ist der vollständige Code für die erste Beispielskin:
 
 
 ```C++
@@ -56,20 +56,20 @@ Im folgenden finden Sie den gesamten Code für die erste Beispiel Skin:
 
 Nun haben Sie alle Teile zusammengestellt.
 
-Erstellen Sie eine komprimierte Datei mit der Dateinamenerweiterung ". zip". Diese komprimierte Datei enthält Ihre Skin-Definitionsdatei, Bitmaps und alle Digital Media-Dateien, die Sie einschließen möchten. Benennen Sie die Datei so um, dass Sie die Dateinamenerweiterung. WMZ enthält. Wenn Sie dann auf die komprimierte Skin doppelklicken, wird Sie gestartet.
+Erstellen Sie eine komprimierte Datei mit der Dateinamenerweiterung .zip. Diese komprimierte Datei enthält Ihre Skindefinitionsdatei, Bitmaps und alle digitalen Mediendateien, die Sie einschließen möchten. Benennen Sie die Datei so um, dass sie über die Dateinamenerweiterung .wmz verfügt. Wenn Sie dann auf die komprimierte Skin doppelklicken, wird die Wiedergabe gestartet.
 
-Im Abschnitt mit den Beispielen des SDK sehen Sie eine ähnliche Arbeits einfache Skin.
+Eine ähnliche funktionierende einfache Skin finden Sie im Abschnitt mit den Beispielen des SDK.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Erstellen der Skin-Definitionsdatei**](creating-the-skin-definition-file.md)
+[**Erstellen der Skindefinitionsdatei**](creating-the-skin-definition-file.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Wertet einen Ausdruck aus und verursacht eine breakpointausnahme, wenn der Ausdruck false ist. Der Text des Ausdrucks, der Name der Quelldatei und die Zeilennummer werden mithilfe des dbglog-Makros protokolliert. Wird in Einzelhandels Builds ignoriert.
+description: Wertet einen Ausdruck aus und löst eine Breakpointausnahme aus, wenn der Ausdruck FALSE ist. Der Text des Ausdrucks, der Name der Quelldatei und die Zeilennummer werden mit dem DbgLog-Makro protokolliert. Wird in Einzelhandelsbuilds ignoriert.
 ms.assetid: fd116403-df23-490f-b3a8-b2a8bf2b4a5f
-title: Kassert-Makro (wxdebug. h)
+title: KASSERT-Makro (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Wxdebug.h
-ms.openlocfilehash: f797e60a6175a86f2c1c9d675e9607a48a58c14a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a1eb6738ea3e9d4535bf9f8291dc71349d67bb51d143b6bc73e83290f36657cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117817057"
 ---
-# <a name="kassert-macro"></a>Kassert-Makro
+# <a name="kassert-macro"></a>KASSERT-Makro
 
-Wertet einen Ausdruck aus und verursacht eine breakpointausnahme, wenn der Ausdruck **false** ist. Der Text des Ausdrucks, der Name der Quelldatei und die Zeilennummer werden mithilfe des [**dbglog**](dbglog.md) -Makros protokolliert. Wird in Einzelhandels Builds ignoriert.
+Wertet einen Ausdruck aus und löst eine Breakpointausnahme aus, wenn der Ausdruck **FALSE** ist. Der Text des Ausdrucks, der Name der Quelldatei und die Zeilennummer werden mit dem [**DbgLog-Makro**](dbglog.md) protokolliert. Wird in Einzelhandelsbuilds ignoriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ void KASSERT(
 
 <dl> <dt>
 
-*cond* 
+*Cond* 
 </dt> <dd>
 
 Der auszuwertende Ausdruck.
@@ -50,9 +50,9 @@ Der auszuwertende Ausdruck.
 
 Dieses Makro gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im Gegensatz zu den Makros [**Assert**](assert.md) und [**Execute \_ Assert**](execute-assert.md) zeigt dieses Makro kein Meldungs Feld an, in dem der Benutzer dazu aufgefordert wird. Wenn in Debugbuilds der Ausdruck **false** lautet, bewirkt das Makro automatisch, dass eine breakpointausnahme auftritt.
+Im Gegensatz zu den [**Assert-**](assert.md) und [**EXECUTE \_ ASSERT-Makros**](execute-assert.md) zeigt dieses Makro kein Meldungsfeld an, in dem der Benutzer dazu aufgefordert wird. Wenn der Ausdruck in Debugbuilds **FALSE** ist, löst das Makro automatisch eine Breakpointausnahme aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,15 +60,15 @@ Im Gegensatz zu den Makros [**Assert**](assert.md) und [**Execute \_ Assert**](e
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Assert-und breakpointmakros](assert-and-breakpoint-macros.md)
+[Assert- und Breakpoint-Makros](assert-and-breakpoint-macros.md)
 </dt> </dl>
 
  

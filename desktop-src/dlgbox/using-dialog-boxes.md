@@ -1,46 +1,46 @@
 ---
-title: Verwenden von Dialog Feldern
-description: Mithilfe von Dialogfeldern können Sie Informationen anzeigen und Eingabeaufforderung für den Benutzer eingeben.
+title: Verwenden von Dialogfeldern
+description: Sie verwenden Dialogfelder, um Informationen anzuzeigen und eingabeaufforderungen des Benutzers anzuzeigen.
 ms.assetid: 8a5b6bdd-4429-4f48-b846-6bd617a87abf
 keywords:
-- Windows-Benutzeroberfläche, Fenster
-- Windows-Benutzeroberfläche, Dialogfelder
+- Windows Benutzeroberfläche,Windowing
+- Windows Benutzeroberfläche,Dialogfelder
 - Fenster, Dialogfelder
-- Dialogfelder, Info
+- Dialogfelder, Informationen
 - Dialogfelder, anzeigen
 - Modale Dialogfelder
 - Nicht modale Dialogfelder
-- Dialogfelder, Modal
-- Dialogfelder, ohne Modell
-- Dialogfelder, initialisieren
-- Dialogfeld Vorlagen
-- Dialogfelder, Vorlagen
+- Dialogfelder,modal
+- Dialogfelder, moduslos
+- Dialogfelder,initialisieren
+- Dialogfeldvorlagen
+- Dialogfelder,Vorlagen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 21da47d7d59f4cadc21314566bce41a9ef3456a7
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 32ec5e97060697388224ac92f60b6043a188d4259520aaf151fb188c43f6bb64
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117720793"
 ---
-# <a name="using-dialog-boxes"></a>Verwenden von Dialog Feldern
+# <a name="using-dialog-boxes"></a>Verwenden von Dialogfeldern
 
-Mithilfe von Dialogfeldern können Sie Informationen anzeigen und Eingabeaufforderung für den Benutzer eingeben. Die Anwendung lädt und initialisiert das Dialogfeld, verarbeitet Benutzereingaben und zerstört das Dialogfeld, wenn der Benutzer die Aufgabe beendet. Der Prozess für die Behandlung von Dialogfeldern variiert abhängig davon, ob das Dialogfeld modal oder nicht modelliert ist. Ein modales Dialogfeld erfordert, dass der Benutzer das Dialogfeld schließt, bevor ein anderes Fenster in der Anwendung aktiviert wird. Der Benutzer kann jedoch Fenster in verschiedenen Anwendungen aktivieren. Ein nicht modalem Dialogfeld erfordert keine sofortige Antwort vom Benutzer. Es ähnelt einem Hauptfenster, das-Steuerelemente enthält.
+Sie verwenden Dialogfelder, um Informationen anzuzeigen und eingabeaufforderungen des Benutzers anzuzeigen. Ihre Anwendung lädt und initialisiert das Dialogfeld, verarbeitet Benutzereingaben und zerstört das Dialogfeld, wenn der Benutzer die Aufgabe abgeschlossen hat. Der Prozess für die Behandlung von Dialogfeldern variiert abhängig davon, ob das Dialogfeld modal oder moduslos ist. Ein modales Dialogfeld erfordert, dass der Benutzer das Dialogfeld schließt, bevor er ein anderes Fenster in der Anwendung aktiviert. Der Benutzer kann jedoch Fenster in verschiedenen Anwendungen aktivieren. Für ein nicht modusloses Dialogfeld ist keine sofortige Antwort des Benutzers erforderlich. Sie ähnelt einem Hauptfenster mit Steuerelementen.
 
 In den folgenden Abschnitten wird erläutert, wie beide Arten von Dialogfeldern verwendet werden.
 
--   [Anzeigen eines Meldungs Felds](#displaying-a-message-box)
--   [Erstellen eines modalen Dialog Felds](#creating-a-modal-dialog-box)
--   [Erstellen eines nicht modalem Dialog Felds](#creating-a-modeless-dialog-box)
--   [Initialisieren eines Dialog Felds](#initializing-a-dialog-box)
--   [Erstellen einer Vorlage im Speicher](#creating-a-template-in-memory)
+-   [Anzeigen eines Meldungsfelds](#displaying-a-message-box)
+-   [Erstellen eines modalen Dialogfelds](#creating-a-modal-dialog-box)
+-   [Erstellen eines dialogfelds ohne Modus](#creating-a-modeless-dialog-box)
+-   [Initialisieren eines Dialogfelds](#initializing-a-dialog-box)
+-   [Erstellen einer Vorlage im Arbeitsspeicher](#creating-a-template-in-memory)
 
-## <a name="displaying-a-message-box"></a>Anzeigen eines Meldungs Felds
+## <a name="displaying-a-message-box"></a>Anzeigen eines Meldungsfelds
 
-Die einfachste Form eines modalen Dialog Felds ist das Meldungs Feld. Die meisten Anwendungen verwenden Meldungs Felder, um den Fehler des Benutzers zu warnen und Anweisungen einzugeben, wie nach einem Fehler fortgefahren werden kann. Sie erstellen ein Meldungs Feld mit der [**MessageBox**](/windows/desktop/api/Winuser/nf-winuser-messagebox) -Funktion oder der [**messageboxex**](/windows/desktop/api/Winuser/nf-winuser-messageboxexa) -Funktion, indem Sie die Meldung sowie die Anzahl und den Typ der anzuzeigenden Schaltflächen angeben. Das System erstellt ein modales Dialogfeld, das eine eigene Dialogfeld Vorlage und eine eigene Prozedur bereitstellt. Nachdem der Benutzer das Meldungs Feld geschlossen hat, gibt **MessageBox** oder **messageboxex** einen Wert zurück, der die Schaltfläche identifiziert, die der Benutzer zum Schließen des Meldungs Felds ausgewählt hat.
+Die einfachste Form des modalen Dialogfelds ist das Meldungsfeld. Die meisten Anwendungen verwenden Meldungsfelder, um den Benutzer vor Fehlern zu warnen und anweisungen zur Vorgehensweise nach einem Fehler zu erhalten. Sie erstellen ein Meldungsfeld, indem Sie die [**MessageBox-**](/windows/desktop/api/Winuser/nf-winuser-messagebox) oder [**MessageBoxEx-Funktion**](/windows/desktop/api/Winuser/nf-winuser-messageboxexa) verwenden und dabei die Nachricht sowie die Anzahl und den Typ der anzuzeigenden Schaltflächen angeben. Das System erstellt ein modales Dialogfeld und stellt eine eigene Dialogfeldvorlage und -prozedur zur Verfügung. Nachdem der Benutzer das Meldungsfeld geschlossen hat, gibt **MessageBox** oder **MessageBoxEx** einen Wert zurück, der die Schaltfläche identifiziert, die der Benutzer zum Schließen des Meldungsfelds ausgewählt hat.
 
-Im folgenden Beispiel zeigt die Anwendung ein Meldungs Feld an, das den Benutzer zur Eingabe einer Aktion auffordert, nachdem ein Fehler aufgetreten ist. Im Meldungs Feld wird die Meldung angezeigt, in der der Fehlerzustand und die Lösung beschrieben werden. Das Format **MB \_ YesNo** weist [**MessageBox**](/windows/desktop/api/Winuser/nf-winuser-messagebox) an, zwei Schaltflächen bereitzustellen, mit denen der Benutzer auswählen kann, wie der Vorgang fortgesetzt werden soll:
+Im folgenden Beispiel zeigt die Anwendung ein Meldungsfeld an, in dem der Benutzer nach einem Fehlerzustand zur Eingabe einer Aktion aufgefordert wird. Im Meldungsfeld wird die Meldung angezeigt, in der die Fehlerbedingung und deren Behebung beschrieben werden. Der **MB \_ YESNO-Stil** leitet [**MessageBox**](/windows/desktop/api/Winuser/nf-winuser-messagebox) an, zwei Schaltflächen zur Verfügung zu stellen, mit denen der Benutzer auswählen kann, wie der Vorgang fortgesetzt werden soll:
 
 
 ```
@@ -64,19 +64,19 @@ int DisplayConfirmSaveAsMessageBox()
 
 
 
-Die folgende Abbildung zeigt die Ausgabe des vorangehenden Code Beispiels:
+Die folgende Abbildung zeigt die Ausgabe des vorherigen Codebeispiels:
 
-![Meldungs Feld](images/messagebox-01.png)
+![Meldungsfeld](images/messagebox-01.png)
 
-## <a name="creating-a-modal-dialog-box"></a>Erstellen eines modalen Dialog Felds
+## <a name="creating-a-modal-dialog-box"></a>Erstellen eines modalen Dialogfelds
 
-Sie erstellen ein modales Dialogfeld mit der Funktion [**Dialogbox**](/windows/desktop/api/Winuser/nf-winuser-dialogboxa) . Sie müssen den Bezeichner oder den Namen einer Dialogfeld Vorlagen-Ressource und einen Zeiger auf die Dialogfeld Prozedur angeben. Die Funktion **Dialogbox** lädt die Vorlage, zeigt das Dialogfeld an und verarbeitet alle Benutzereingaben, bis der Benutzer das Dialogfeld schließt.
+Sie erstellen ein modales Dialogfeld mithilfe der [**DialogBox-Funktion.**](/windows/desktop/api/Winuser/nf-winuser-dialogboxa) Sie müssen den Bezeichner oder Namen einer Dialogfeldvorlagenressource und einen Zeiger auf die Dialogfeldprozedur angeben. Die **DialogBox-Funktion** lädt die Vorlage, zeigt das Dialogfeld an und verarbeitet alle Benutzereingaben, bis der Benutzer das Dialogfeld schließt.
 
-Im folgenden Beispiel zeigt die Anwendung ein modales Dialogfeld an, wenn der Benutzer im Anwendungsmenü auf **Element löschen** klickt. Das Dialogfeld enthält ein Bearbeitungs Steuerelement (in dem der Benutzer den Namen eines Elements eingibt) und die Schaltflächen " **OK** " und " **Abbrechen** ". Die Steuerelement Bezeichner für diese Steuerelemente sind ID \_ ItemName, IDOK bzw. IDCANCEL.
+Im folgenden Beispiel zeigt die Anwendung ein modales  Dialogfeld an, wenn der Benutzer in einem Anwendungsmenü auf Element löschen klickt. Das Dialogfeld enthält ein Bearbeitungssteuerelement (in das der Benutzer den Namen eines Elements ein gibt) sowie die **Schaltflächen OK** und **Abbrechen.** Die Steuerelementbezeichner für diese Steuerelemente sind ID \_ ITEMNAME, IDOK bzw. IDCANCEL.
 
-Der erste Teil des Beispiels besteht aus den Anweisungen, die das modale Dialogfeld erstellen. Diese Anweisungen erstellen Sie in der Fenster Prozedur für das Hauptfenster der Anwendung das Dialogfeld, wenn das System eine [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Nachricht mit dem IDM \_ DeleteItem-Menü Bezeichner empfängt. Der zweite Teil des Beispiels ist die Dialogfeld Prozedur, die den Inhalt des Bearbeitungs Steuer Elements abruft und das Dialogfeld nach dem Empfang einer **WM- \_ Befehls** Meldung schließt.
+Der erste Teil des Beispiels besteht aus den Anweisungen, die das modale Dialogfeld erstellen. Diese Anweisungen erstellen in der Fensterprozedur für das Hauptfenster der Anwendung das Dialogfeld, wenn das System eine [**WM \_ COMMAND-Meldung**](/windows/desktop/menurc/wm-command) mit dem IDM \_ DELETEITEM-Menübezeichner empfängt. Der zweite Teil des Beispiels ist die Dialogfeldprozedur, die den Inhalt des Bearbeitungssteuerfelds abruft und das Dialogfeld schließt, wenn eine **WM \_ COMMAND-Meldung empfangen** wird.
 
-Die folgenden Anweisungen erstellen das modale Dialogfeld. Die Dialogfeld Vorlage ist eine Ressource in der ausführbaren Datei der Anwendung und verfügt über den Ressourcen Bezeichner DLG \_ DeleteItem.
+Mit den folgenden Anweisungen wird das modale Dialogfeld erstellt. Die Dialogfeldvorlage ist eine Ressource in der ausführbaren Datei der Anwendung und verfügt über den Ressourcenbezeichner DLG \_ DELETEITEM.
 
 
 ```
@@ -104,7 +104,7 @@ case WM_COMMAND:
 
 
 
-In diesem Beispiel gibt die Anwendung das Hauptfenster als Besitzer Fenster für das Dialogfeld an. Wenn das System das Dialogfeld anfänglich anzeigt, ist seine Position relativ zur oberen linken Ecke des Client Bereichs des Besitzer Fensters. Die Anwendung verwendet den Rückgabewert aus [**Dialogbox**](/windows/desktop/api/Winuser/nf-winuser-dialogboxa) , um zu bestimmen, ob der Vorgang fortgesetzt oder abgebrochen werden soll. Die folgenden Anweisungen definieren die Dialogfeld Prozedur.
+In diesem Beispiel gibt die Anwendung das Hauptfenster als Besitzerfenster für das Dialogfeld an. Wenn das System das Dialogfeld anfänglich anzeigt, ist seine Position relativ zur oberen linken Ecke des Clientbereichs des Besitzerfensters. Die Anwendung verwendet den Rückgabewert von [**DialogBox,**](/windows/desktop/api/Winuser/nf-winuser-dialogboxa) um zu bestimmen, ob der Vorgang fortgesetzt oder abgebrochen werden soll. Die folgenden Anweisungen definieren die Dialogfeldprozedur.
 
 
 ```
@@ -137,15 +137,15 @@ BOOL CALLBACK DeleteItemProc(HWND hwndDlg,
 
 
 
-In diesem Beispiel verwendet die Prozedur [**getdlgitemtext**](/windows/desktop/api/Winuser/nf-winuser-getdlgitemtexta) , um den aktuellen Text aus dem Bearbeitungs Steuerelement abzurufen, das durch ID \_ ItemName identifiziert wird. Die Prozedur ruft dann die [**EndDialog**](/windows/desktop/api/Winuser/nf-winuser-enddialog) -Funktion auf, um den Rückgabewert des Dialog Felds abhängig von der empfangenen Nachricht entweder auf IDOK oder IDCANCEL festzulegen, und beginnt damit, das Dialogfeld zu schließen. Die IDOK-und IDCANCEL-Bezeichner entsprechen den Schaltflächen **OK** und **Abbrechen** . Nachdem die Prozedur **EndDialog** aufgerufen hat, sendet das System zusätzliche Meldungen an die Prozedur, um das Dialogfeld zu zerstören, und gibt den Rückgabewert des Dialog Felds zurück an die Funktion, die das Dialogfeld erstellt hat.
+In diesem Beispiel verwendet die Prozedur [**GetDlgItemText,**](/windows/desktop/api/Winuser/nf-winuser-getdlgitemtexta) um den aktuellen Text aus dem Bearbeitungssteuerelement abzurufen, das durch ID \_ ITEMNAME identifiziert wird. Die Prozedur ruft dann die [**EndDialog-Funktion**](/windows/desktop/api/Winuser/nf-winuser-enddialog) auf, um den Rückgabewert des Dialogfelds je nach empfangener Nachricht auf IDOK oder IDCANCEL zu setzen und mit dem Schließen des Dialogfelds zu beginnen. Die IDOK- und IDCANCEL-Bezeichner entsprechen den **Schaltflächen OK** **und Abbrechen.** Nachdem die Prozedur **EndDialog** aufruft, sendet das System zusätzliche Nachrichten an die Prozedur, um das Dialogfeld zu zerstören, und gibt den Rückgabewert des Dialogfelds an die Funktion zurück, die das Dialogfeld erstellt hat.
 
-## <a name="creating-a-modeless-dialog-box"></a>Erstellen eines nicht modalem Dialog Felds
+## <a name="creating-a-modeless-dialog-box"></a>Erstellen eines dialogfelds ohne Modus
 
-Sie erstellen ein nicht modalem Dialogfeld mithilfe der Funktion "up [**Dialog**](/windows/desktop/api/Winuser/nf-winuser-createdialoga) ", indem Sie den Bezeichner oder den Namen einer Dialogfeld Vorlagen Ressource und einen Zeiger auf die Dialogfeld Prozedur angeben. Mit " **anatedialog** " wird die Vorlage geladen, das Dialogfeld erstellt und optional angezeigt. Die Anwendung ist für das Abrufen und Verteilen von Benutzereingabe Nachrichten an die Dialogfeld Prozedur zuständig.
+Sie erstellen ein nicht modusloses Dialogfeld, indem Sie die [**CreateDialog-Funktion**](/windows/desktop/api/Winuser/nf-winuser-createdialoga) verwenden und dabei den Bezeichner oder Namen einer Dialogfeldvorlagenressource und einen Zeiger auf die Dialogfeldprozedur angeben. **CreateDialog** lädt die Vorlage, erstellt das Dialogfeld und zeigt sie optional an. Ihre Anwendung ist für das Abrufen und Senden von Benutzereingabenachrichten an die Dialogfeldprozedur verantwortlich.
 
-Im folgenden Beispiel zeigt die Anwendung ein nicht modalem Dialogfeld an – wenn Sie nicht bereits angezeigt wird –, wenn der Benutzer in einem Anwendungsmenü **auf "Gehe zu** " klickt. Das Dialogfeld enthält ein Bearbeitungs Steuerelement, ein Kontrollkästchen und Schaltflächen " **OK** " und " **Abbrechen** ". Die Dialogfeld Vorlage ist eine Ressource in der ausführbaren Datei der Anwendung und verfügt über den Ressourcen Bezeichner DLG \_ goto. Der Benutzer gibt eine Zeilennummer in das Bearbeitungs Steuerelement ein und überprüft das Kontrollkästchen, um anzugeben, dass die Zeilennummer relativ zur aktuellen Zeile ist. Die Steuerelement-IDs sind ID- \_ Zeile, ID- \_ absrel, IDOK und IDCANCEL.
+Im folgenden Beispiel zeigt die Anwendung ein nicht modusloses Dialogfeld an , wenn es nicht bereits angezeigt wird, wenn der Benutzer in einem Anwendungsmenü auf **Gehe** zu klickt. Das Dialogfeld enthält ein Bearbeitungssteuerfeld, ein Kontrollkästchen sowie **die Schaltflächen OK** **und Abbrechen.** Die Dialogfeldvorlage ist eine Ressource in der ausführbaren Datei der Anwendung und verfügt über den Ressourcenbezeichner DLG \_ GOTO. Der Benutzer gibt eine Zeilennummer in das Bearbeitungssteuerfeld ein und überprüft das Kontrollkästchen, um anzugeben, dass die Zeilennummer relativ zur aktuellen Zeile ist. Die Steuerelementbezeichner sind ID \_ LINE, ID \_ ABSREL, IDOK und IDCANCEL.
 
-Mit den-Anweisungen im ersten Teil des Beispiels wird das nicht modante Dialogfeld erstellt. Diese Anweisungen erstellen Sie in der Fenster Prozedur für das Hauptfenster der Anwendung das Dialogfeld, wenn die Fenster Prozedur eine [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Nachricht mit dem IDM- \_ goto-Menü Bezeichner empfängt, aber nur, wenn die globale Variable nicht bereits ein gültiges Handle enthält. Der zweite Teil des Beispiels ist die Hauptnachrichten Schleife der Anwendung. Die-Schleife schließt die [**IsDialogMessage**](/windows/desktop/api/Winuser/nf-winuser-isdialogmessagea) -Funktion ein, um sicherzustellen, dass der Benutzer die Dialogfeld-Tastaturschnittstelle im Dialogfeld "nicht modess" verwenden kann. Der dritte Teil des Beispiels ist die Dialogfeld Prozedur. Die Prozedur ruft den Inhalt des Bearbeitungs Steuer Elements und des Kontrollkästchens ab, wenn der Benutzer auf die Schaltfläche **OK** klickt. Die Prozedur zerstört das Dialogfeld, wenn der Benutzer auf die Schaltfläche **Abbrechen** klickt.
+Die Anweisungen im ersten Teil des Beispiels erstellen das dialogfeld ohne Modus. Diese Anweisungen erstellen in der Fensterprozedur für das Hauptfenster der Anwendung das Dialogfeld, wenn die Fensterprozedur eine [**WM \_ COMMAND-Meldung**](/windows/desktop/menurc/wm-command) mit dem IDM GOTO-Menübezeichner empfängt, jedoch nur, wenn die globale Variable noch kein gültiges Handle \_ enthält. Der zweite Teil des Beispiels ist die Hauptnachrichtenschleife der Anwendung. Die -Schleife enthält die [**IsDialogMessage-Funktion,**](/windows/desktop/api/Winuser/nf-winuser-isdialogmessagea) um sicherzustellen, dass der Benutzer die Tastaturschnittstelle des Dialogfelds in diesem moduslosen Dialogfeld verwenden kann. Der dritte Teil des Beispiels ist die Dialogfeldprozedur. Die Prozedur ruft den Inhalt des Bearbeitungssteuerfelds ab und kontrollkästchen, wenn der Benutzer auf die Schaltfläche **OK** klickt. Die Prozedur zerstört das Dialogfeld, wenn der Benutzer auf die Schaltfläche **Abbrechen** klickt.
 
 
 ```
@@ -172,9 +172,9 @@ case WM_COMMAND:
 
 
 
-In den vorangehenden Anweisungen wird " [**foratedialog**](/windows/desktop/api/Winuser/nf-winuser-createdialoga) " nur aufgerufen, wenn kein `hwndGoto` gültiges Fenster Handle enthält. Dadurch wird sichergestellt, dass die Anwendung nicht gleichzeitig zwei Dialogfelder anzeigt. Zur Unterstützung dieser Überprüfungs Methode muss die Dialogfeld Prozedur auf **null** festgelegt werden, wenn das Dialogfeld zerstört wird.
+In den vorherigen Anweisungen wird [**CreateDialog**](/windows/desktop/api/Winuser/nf-winuser-createdialoga) nur aufgerufen, `hwndGoto` wenn kein gültiges Fensterhand handle enthält. Dadurch wird sichergestellt, dass die Anwendung nicht zwei Dialogfelder gleichzeitig zeigt. Um diese Überprüfungsmethode zu unterstützen, muss die Dialogprozedur auf **NULL** festgelegt werden, wenn sie das Dialogfeld zerstört.
 
-Die Nachrichten Schleife für eine Anwendung besteht aus den folgenden Anweisungen.
+Die Meldungsschleife für eine Anwendung besteht aus den folgenden Anweisungen.
 
 
 ```
@@ -196,9 +196,9 @@ while ((bRet = GetMessage(&msg, NULL, 0, 0)) != 0)
 
 
 
-Die-Schleife prüft die Gültigkeit des Fenster Handles auf das Dialogfeld und ruft nur die [**IsDialogMessage**](/windows/desktop/api/Winuser/nf-winuser-isdialogmessagea) -Funktion auf, wenn das Handle gültig ist. **IsDialogMessage** verarbeitet die Nachricht nur, wenn Sie zum Dialogfeld gehört. Andernfalls wird **false** zurückgegeben, und die Schleife sendet die Nachricht an das entsprechende Fenster.
+Die -Schleife überprüft die Gültigkeit des Fensterhandpunkts für das Dialogfeld und ruft nur dann die [**IsDialogMessage-Funktion**](/windows/desktop/api/Winuser/nf-winuser-isdialogmessagea) auf, wenn das Handle gültig ist. **IsDialogMessage** verarbeitet die Nachricht nur, wenn sie zum Dialogfeld gehört. Andernfalls wird **FALSE zurückgegeben,** und die Schleife gibt die Nachricht an das entsprechende Fenster weiter.
 
-Die folgenden Anweisungen definieren die Dialogfeld Prozedur.
+Die folgenden Anweisungen definieren die Dialogfeldprozedur.
 
 
 ```
@@ -244,17 +244,17 @@ BOOL CALLBACK GoToProc(HWND hwndDlg, UINT message, WPARAM wParam, LPARAM lParam)
 
 
 
-In den vorangehenden Anweisungen verarbeitet die Prozedur die [**\_ Befehle**](/windows/desktop/menurc/wm-command) " [**WM \_ InitDialog**](wm-initdialog.md) " und "WM". Während der **WM \_ InitDialog** -Verarbeitung wird das Kontrollkästchen durch die Prozedur initialisiert, indem der aktuelle Wert der globalen Variablen an [**checkdlgbutton**](https://msdn.microsoft.com/library/Cc410649(v=MSDN.10).aspx)übergeben wird. Die Prozedur gibt dann " **true** " zurück, um das System anzuweisen, den Standardeingabe Fokus festzulegen.
+In den vorherigen Anweisungen verarbeitet die Prozedur die [**WM \_ INITDIALOG-**](wm-initdialog.md) und [**WM \_ COMMAND-Meldungen.**](/windows/desktop/menurc/wm-command) Während **der WM \_ INITDIALOG-Verarbeitung** initialisiert die Prozedur das Kontrollkästchen, indem der aktuelle Wert der globalen Variablen an [**CheckDlgButton übergeben wird.**](https://msdn.microsoft.com/library/Cc410649(v=MSDN.10).aspx) Die Prozedur gibt dann **TRUE zurück,** damit das System den Standardeingabefokus festlegen kann.
 
-Während der [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Verarbeitung schließt die Prozedur das Dialogfeld nur dann, wenn der Benutzer auf die Schaltfläche **Abbrechen** klickt, d. –. auf die Schaltfläche mit dem IDCANCEL-Bezeichner. Die Prozedur muss [**DestroyWindow**](/windows/desktop/api/winuser/nf-winuser-destroywindow) aufzurufen, um ein nicht modalem Dialogfeld zu schließen. Beachten Sie, dass die-Prozedur auch die-Variable auf **null** festlegt, um sicherzustellen, dass andere, von dieser Variable abhängige-Anweisungen ordnungsgemäß funktionieren.
+During [**WM\_COMMAND**](/windows/desktop/menurc/wm-command) processing, the procedure closes the dialog box only if the user clicks the **Cancel** button — that is, the button having the IDCANCEL identifier. Die Prozedur muss [**DestroyWindow aufrufen,**](/windows/desktop/api/winuser/nf-winuser-destroywindow) um ein nicht modusloses Dialogfeld zu schließen. Beachten Sie, dass die Prozedur auch die Variable auf **NULL setzt,** um sicherzustellen, dass andere Anweisungen, die von dieser Variablen abhängen, ordnungsgemäß funktionieren.
 
-Wenn der Benutzer auf die Schaltfläche **OK** klickt, ruft die Prozedur den aktuellen Zustand des Kontrollkästchens ab und weist Sie der **frelative** Variablen zu. Anschließend wird die-Variable verwendet, um die Zeilennummer aus dem Bearbeitungs Steuerelement abzurufen. [**Getdlgitemint**](/windows/desktop/api/Winuser/nf-winuser-getdlgitemint) übersetzt den Text im Bearbeitungs Steuerelement in eine ganze Zahl. Der Wert von **frelative** bestimmt, ob die Funktion die Zahl als einen Wert mit oder ohne Vorzeichen interpretiert. Wenn der Bearbeitungs Steuerelement-Text keine gültige Zahl ist, legt **getdlgitemint** den Wert der **ferror** -Variable auf einen Wert ungleich 0 (null) fest. Die Prozedur überprüft diesen Wert, um zu bestimmen, ob eine Fehlermeldung angezeigt oder die Aufgabe durchgeführt werden soll. Wenn ein Fehler auftritt, sendet die Dialogfeld Prozedur eine Nachricht an das Bearbeitungs Steuerelement und leitet Sie an den Text im Steuerelement weiter, sodass der Benutzer Sie problemlos ersetzen kann. Wenn **getdlgitemint** keinen Fehler zurückgibt, kann die Prozedur entweder die angeforderte Aufgabe selbst ausführen oder eine Nachricht an das Besitzer Fenster senden, um den Vorgang auszuführen.
+Wenn der Benutzer auf die Schaltfläche **OK** klickt, ruft die Prozedur den aktuellen Status des Kontrollkästchens ab und weist ihn der **Variablen fRelative** zu. Anschließend wird die Variable verwendet, um die Zeilennummer aus dem Bearbeitungssteuerzeichen abzurufen. [**GetDlgItemInt übersetzt**](/windows/desktop/api/Winuser/nf-winuser-getdlgitemint) den Text im Bearbeitungssteuerfeld in eine ganze Zahl. Der Wert von **fRelative bestimmt,** ob die Funktion die Zahl als Wert mit Vorzeichen oder ohne Vorzeichen interpretiert. Wenn der Bearbeitungssteuertext keine gültige Zahl ist, legt **GetDlgItemInt** den Wert der **fError-Variablen** auf ungleich 0 (null) fest. Die Prozedur überprüft diesen Wert, um zu bestimmen, ob eine Fehlermeldung angezeigt oder die Aufgabe durchgeführt werden soll. Im Falle eines Fehlers sendet die Dialogfeldprozedur eine Nachricht an das Bearbeitungssteuerfeld und leitet es an, den Text im Steuerelement auszuwählen, damit der Benutzer ihn problemlos ersetzen kann. Wenn **GetDlgItemInt** keinen Fehler zurücksendet, kann die Prozedur entweder die angeforderte Aufgabe selbst durchführen oder eine Nachricht an das Besitzerfenster senden, um den Vorgang auszuführen.
 
-## <a name="initializing-a-dialog-box"></a>Initialisieren eines Dialog Felds
+## <a name="initializing-a-dialog-box"></a>Initialisieren eines Dialogfelds
 
-Beim Verarbeiten der " [**WM \_ InitDialog**](wm-initdialog.md) "-Nachricht initialisieren Sie das Dialogfeld und seinen Inhalt. Die häufigste Aufgabe besteht darin, die Steuerelemente zu initialisieren, um die aktuellen Dialogfeld Einstellungen widerzuspiegeln. Eine weitere häufige Aufgabe besteht darin, ein Dialogfeld auf dem Bildschirm oder innerhalb des Besitzer Fensters zu zentrieren. Eine nützliche Aufgabe für einige Dialogfelder besteht darin, den Eingabefokus auf ein angegebenes Steuerelement festzulegen, anstatt den Standardeingabe Fokus zu akzeptieren.
+Sie initialisieren das Dialogfeld und dessen Inhalt während der Verarbeitung der [**WM \_ INITDIALOG-Nachricht.**](wm-initdialog.md) Die häufigste Aufgabe besteht darin, die Steuerelemente so zu initialisieren, dass sie die aktuellen Dialogfeldeinstellungen widerspiegeln. Eine weitere häufige Aufgabe besteht darin, ein Dialogfeld auf dem Bildschirm oder innerhalb des Besitzerfensters zu zentriert. Eine nützliche Aufgabe für einige Dialogfelder besteht darin, den Eingabefokus auf ein angegebenes Steuerelement festzulegen, anstatt den Standardeingabefokus zu akzeptieren.
 
-Im folgenden Beispiel zentriert die Dialogfeld Prozedur das Dialogfeld und legt den Eingabefokus bei der Verarbeitung der [**WM \_ InitDialog**](wm-initdialog.md) -Nachricht fest. Um das Dialogfeld zu zentrieren, ruft die Prozedur die Fenster Rechtecke für das Dialogfeld und das Besitzer Fenster ab und berechnet eine neue Position für das Dialogfeld. Um den Eingabefokus festzulegen, überprüft die Prozedur den *wParam* -Parameter, um den Bezeichner des Standardeingabe Fokus zu ermitteln.
+Im folgenden Beispiel fokus die Dialogfeldprozedur das Dialogfeld und legt den Eingabefokus fest, während die [**WM \_ INITDIALOG-Nachricht verarbeitet**](wm-initdialog.md) wird. Um das Dialogfeld zu zentriert, ruft die Prozedur die Fensterrechtecke für das Dialogfeld und das Besitzerfenster ab und berechnet eine neue Position für das Dialogfeld. Um den Eingabefokus festzulegen, überprüft die Prozedur den *wParam-Parameter,* um den Bezeichner des Standardeingabefokus zu bestimmen.
 
 
 ```
@@ -304,19 +304,19 @@ case WM_INITDIALOG:
 
 
 
-In den vorangehenden Anweisungen verwendet die Prozedur die [**GetParent**](/windows/desktop/api/winuser/nf-winuser-getparent) -Funktion, um das Besitzer Fenster Handle in ein Dialogfeld abzurufen. Die-Funktion gibt das Besitzer Fenster Handle für Dialogfelder und das übergeordnete Fenster Handle für untergeordnete Fenster zurück. Da eine Anwendung ein Dialogfeld ohne Besitzer erstellen kann, prüft die Prozedur das zurückgegebene Handle und verwendet die [**GetDesktopWindow**](/windows/desktop/api/winuser/nf-winuser-getdesktopwindow) -Funktion, um das Desktop Fenster Handle bei Bedarf abzurufen. Nach der Berechnung der neuen Position verwendet die Prozedur die [**SetWindowPos**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) -Funktion, um das Dialogfeld zu verschieben. dabei wird der erste HWND-Wert angegeben, \_ um sicherzustellen, dass das Dialogfeld oben im Besitzer Fenster bleibt.
+In den vorherigen Anweisungen verwendet die Prozedur die [**GetParent-Funktion,**](/windows/desktop/api/winuser/nf-winuser-getparent) um das Besitzerfensterhandl in ein Dialogfeld abzurufen. Die Funktion gibt das Besitzerfensterhand handle an Dialogfelder und das übergeordnete Fensterhand handle an untergeordnete Fenster zurück. Da eine Anwendung ein Dialogfeld erstellen kann, das keinen Besitzer hat, überprüft die Prozedur das zurückgegebene Handle und verwendet bei Bedarf die [**GetDesktopWindow-Funktion,**](/windows/desktop/api/winuser/nf-winuser-getdesktopwindow) um das Desktopfensterhand handle abzurufen. Nach der Berechnung der neuen Position verwendet die Prozedur die [**SetWindowPos-Funktion,**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) um das Dialogfeld zu verschieben, und gibt den HWND TOP-Wert an, um sicherzustellen, dass das Dialogfeld über dem Besitzerfenster \_ verbleibt.
 
-Bevor der Eingabefokus festgelegt wird, überprüft die Prozedur den Steuerelement Bezeichner des Standardeingabe Fokus. Das System übergibt das Fenster Handle des Standardeingabe Fokus im *wParam* -Parameter. Die [**getdlgctrlid**](/windows/desktop/api/Winuser/nf-winuser-getdlgctrlid) -Funktion gibt den Bezeichner für das Steuerelement zurück, das durch das Fenster Handle identifiziert wird. Wenn der Bezeichner nicht mit dem richtigen Bezeichner identisch ist, verwendet die Prozedur die [**SetFocus**](/windows/desktop/api/winuser/nf-winuser-setfocus) -Funktion, um den Eingabefokus festzulegen. Die [**GetDlgItem**](/windows/desktop/api/Winuser/nf-winuser-getdlgitem) -Funktion ist erforderlich, um das Fenster Handle des gewünschten Steuer Elements abzurufen.
+Vor dem Festlegen des Eingabefokus überprüft die Prozedur den Steuerelementbezeichner des Standardeingabefokus. Das System übergibt das Fensterhand handle des Standardeingabefokus im *wParam-Parameter.* Die [**GetDlgCtrlID-Funktion**](/windows/desktop/api/Winuser/nf-winuser-getdlgctrlid) gibt den Bezeichner für das Steuerelement zurück, das vom Fensterhandle identifiziert wird. Stimmt der Bezeichner nicht mit dem richtigen Bezeichner überein, verwendet die Prozedur die [**SetFocus-Funktion,**](/windows/desktop/api/winuser/nf-winuser-setfocus) um den Eingabefokus zu setzen. Die [**GetDlgItem-Funktion**](/windows/desktop/api/Winuser/nf-winuser-getdlgitem) ist erforderlich, um das Fensterhandl des gewünschten Steuerelements abzurufen.
 
-## <a name="creating-a-template-in-memory"></a>Erstellen einer Vorlage im Speicher
+## <a name="creating-a-template-in-memory"></a>Erstellen einer Vorlage im Arbeitsspeicher
 
-Anwendungen passen oder ändern den Inhalt von Dialogfeldern abhängig vom aktuellen Status der verarbeiteten Daten. In solchen Fällen ist es nicht praktikabel, alle möglichen Dialogfeld Vorlagen als Ressourcen in der ausführbaren Datei der Anwendung bereitzustellen. Das Erstellen von Vorlagen im Arbeitsspeicher bietet der Anwendung jedoch mehr Flexibilität bei der Anpassung an jede Situation.
+Anwendungen passen den Inhalt von Dialogfeldern manchmal abhängig vom aktuellen Status der verarbeiteten Daten an oder ändern diesen. In solchen Fällen ist es nicht praktikabel, alle möglichen Dialogfeldvorlagen als Ressourcen in der ausführbaren Datei der Anwendung zur Verfügung zu stellen. Das Erstellen von Vorlagen im Arbeitsspeicher bietet der Anwendung jedoch mehr Flexibilität bei der Anpassung an beliebige Umstände.
 
-Im folgenden Beispiel erstellt die Anwendung eine Vorlage im Arbeitsspeicher für ein modales Dialogfeld, das die Schaltflächen Nachricht und **OK** und **Hilfe** enthält.
+Im folgenden Beispiel erstellt die Anwendung eine Vorlage im Arbeitsspeicher für ein modales Dialogfeld, das eine Meldung sowie die **Schaltflächen OK** und **Hilfe** enthält.
 
-In einer Dialogfeld Vorlage müssen alle Zeichen folgen, z. b. das Dialogfeld und die Schaltflächen Titel, Unicode-Zeichen folgen sein. In diesem Beispiel werden diese Unicode-Zeichen folgen mithilfe der [**multibytetewidechar**](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) -Funktion generiert.
+In einer Dialogvorlage müssen alle Zeichenfolgen, z. B. das Dialogfeld und schaltflächentitel, Unicode-Zeichenfolgen sein. In diesem Beispiel wird die [**MultiByteToWideChar-Funktion**](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) verwendet, um diese Unicode-Zeichenfolgen zu generieren.
 
-Die [**DLGITEMTEMPLATE**](/windows/desktop/api/Winuser/ns-winuser-dlgitemtemplate) -Strukturen in einer Dialogfeld Vorlage müssen an den **DWORD** -Grenzen ausgerichtet sein. Um diese Strukturen auszurichten, wird in diesem Beispiel eine Hilfsroutine verwendet, die einen Eingabe Zeiger annimmt und den nächstgelegenen Zeiger zurückgibt, der an einer **DWORD** -Grenze ausgerichtet ist.
+Die [**DLGITEMTEMPLATE-Strukturen**](/windows/desktop/api/Winuser/ns-winuser-dlgitemtemplate) in einer Dialogvorlage müssen an **DWORD-Grenzen ausgerichtet** werden. Um diese Strukturen auszurichten, verwendet dieses Beispiel eine Hilfsroutine, die einen Eingabezeiger verwendet und den nächstgelegenen Zeiger zurückgibt, der an einer **DWORD-Grenze ausgerichtet** ist.
 
 
 ```
@@ -433,6 +433,6 @@ LRESULT DisplayMyMessage(HINSTANCE hinst, HWND hwndOwner, LPSTR lpszMessage)
 
 
 
- 
+ 
 
- 
+ 

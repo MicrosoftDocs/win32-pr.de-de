@@ -1,7 +1,7 @@
 ---
 description: Präfix jedes Puffers in Bytes.
 ms.assetid: 471b73bf-f959-41aa-84ba-324a2738dd0e
-title: 'Cbasezucator:: m_lPrefix Member (amfilter. h)'
+title: CBaseAllocator::m_lPrefix Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fc52db44dcdfa050cf8bc7faf57cb7094d8cac91
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a22f2ac1a54c4820f109b55002428c87df321328ef6b6b6d6096343df8cde85f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352884"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955289"
 ---
-# <a name="cbaseallocatorm_lprefix-member"></a>Cbasezucator:: m \_ lprefix-Member
+# <a name="cbaseallocatorm_lprefix-member"></a>CBaseAllocator::m \_ lPrefix-Member
 
-Präfix jedes Puffers in Bytes. Wenn der Wert ungleich 0 (null) ist, wird jedem Puffer Zeiger, der von der [**cbasezucator:: GetBuffer**](cbaseallocator-getbuffer.md) -Methode zurückgegeben wird, ein Block von Bytes der Größe *m \_ lprefix* vorangestellt. Dieser Speicherblock wird als *Präfix* bezeichnet. Die Member-Variable [**cbasezucator:: m \_ LSIZE**](cbaseallocator-m-lsize.md) enthält nicht den Präfix Wert.
+Präfix jedes Puffers in Bytes. Wenn der Wert nicht 0 (null) ist, wird jedem Pufferzeiger, der von der [**CBaseAllocator::GetBuffer-Methode**](cbaseallocator-getbuffer.md) zurückgegeben wird, ein Byteblock der Größe *m \_ lPrefix voranstehen.* Dieser Speicherblock wird als Präfix *bezeichnet.* Die [**CBaseAllocator::m \_ lSize-Membervariable**](cbaseallocator-m-lsize.md) enthält nicht den Präfixwert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ long m_lPrefix;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

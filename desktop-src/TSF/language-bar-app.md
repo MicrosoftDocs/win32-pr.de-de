@@ -1,37 +1,37 @@
 ---
-title: Sprach Leiste (TSF-Anwendungen)
-description: Eine Anwendung kann der sprach Leiste keine Elemente hinzufügen. nur ein Text Dienst kann der sprach Leiste Elemente hinzufügen.
+title: Sprachleiste (TSF-Anwendungen)
+description: Eine Anwendung kann der Sprachleiste keine Elemente hinzufügen. nur ein Textdienst kann der Sprachleiste Elemente hinzufügen.
 ms.assetid: facb0da1-3f80-4745-b021-c026e7e5356c
 keywords:
-- Text Services-Framework (TSF), sprach Leiste
-- TSF (Text Dienst Framework), sprach Leiste
-- TSF-aktivierte Anwendungen, sprach Leiste
-- sprach Leiste
+- Textdienstframework (TSF), Sprachleiste
+- TSF (Textdienstframework),Sprachleiste
+- TSF-fähige Anwendungen, Sprachleiste
+- Sprachleiste
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ef227b29c8b481bfaefc4a218305ba8974fe54e2
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: ea2f0adeacdfe105700efba761b0622432f4ac382d147bd82145242be9fdd71a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "103858618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117952108"
 ---
-# <a name="language-bar-tsf-applications"></a>Sprach Leiste (TSF-Anwendungen)
+# <a name="language-bar-tsf-applications"></a>Sprachleiste (TSF-Anwendungen)
 
-Eine Anwendung kann der sprach Leiste keine Elemente hinzufügen. nur ein Text Dienst kann der sprach Leiste Elemente hinzufügen. Eine Anwendung kann Einfluss darauf haben, wie bestimmte Elemente in der sprach Leiste angezeigt werden.
+Eine Anwendung kann der Sprachleiste keine Elemente hinzufügen. nur ein Textdienst kann der Sprachleiste Elemente hinzufügen. Eine Anwendung kann beeinflussen, wie bestimmte Elemente auf der Sprachleiste angezeigt werden.
 
-Mit dem " [GUID Depot \_ \_ Speech \_ ](predefined-compartments.md) "-Depot wird der Typ der Spracheingabe angegeben, die von der Anwendung akzeptiert werden kann: direkt Texteingabe (Diktat) und/oder Sprachbefehle. Standardmäßig ist das Diktat aktiviert, und der Sprachbefehl ist deaktiviert. Wenn die Anwendung Sprachbefehle akzeptieren kann, sollte Sie den Wert für den TF-Befehl [ \_ \_ aktivieren](speech-recognition-constants.md) , der in der Sprachausgabe des GUID-Depots abgelegt wurde \_ \_ \_ . Wenn die Anwendung eine Diktat Annahme akzeptieren kann, sollte Sie den Wert für die TF- \_ Diktat \_ Aktivierung in der Sprachausgabe des GUID-Depots festlegen \_ \_ \_ . Der TF- \_ Diktat \_ für den Wert oder der TF- \_ \_ Befehl für den Wert dieses Depots bestimmt, welche Mode-(Diktat-oder Befehls) Spracheingaben derzeit in ausgeführt werden.
+Das [ \_ GUID-Department "COMPARTMENT \_ SPEECH \_ DICTATIONSTAT"](predefined-compartments.md) wird verwendet, um den Typ der Spracheingabe anzugeben, den die Anwendung akzeptieren kann: direkte Texteingabe (Diktat) und/oder Sprachbefehle. Standardmäßig ist das Diktat aktiviert, und der Sprachbefehl ist deaktiviert. Wenn die Anwendung Sprachbefehle akzeptieren kann, sollte sie den [TF \_ COMMANDING \_ ENABLED-Wert](speech-recognition-constants.md) im GUID-COMPARTMENT \_ SPEECH \_ \_ DICTATIONSTAT-Abteil festlegen. Wenn die Anwendung Diktat akzeptieren kann, sollte sie den TF \_ DICTATION \_ ENABLED-Wert im \_ GUID-Compartment \_ SPEECH \_ DICTATIONSTAT-Abteil festlegen. Der TF-DICTATION ON- oder TF COMMANDING ON-Wert dieses Compartments bestimmt, in welchem Modus \_ \_ (Diktat- oder Befehlseingabe) sich die \_ \_ Spracheingabe derzeit befindet.
 
-Wenn die Anwendung persistente Speicherung von Eigenschafts Daten unterstützt, sollte das [GUID-Depot \_ \_ persistmenuaktiviertes](predefined-compartments.md) Depot auf einen Wert ungleich 0 (null) festgelegt werden. Dies bewirkt, dass der sprach Text Dienst das Menü Element " **Sprach Daten speichern** " aktiviert.
+Wenn die Anwendung die persistente Speicherung von Eigenschaftsdaten unterstützt, sollte sie das [ \_ GUID-Compartment \_ PERSISTMENUENABLED](predefined-compartments.md) auf einen Wert ungleich 0 (null) festlegen. Dies bewirkt, dass der Sprachtextdienst das **Menüelement Speech-Daten speichern** aktiviert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Einrichten des Text Dienst-Frameworks](how-to-set-up-tsf.md)
+[Einrichten von Textdienstframework](how-to-set-up-tsf.md)
 </dt> <dt>
 
-[Sprach Leiste (Text Dienste)](language-bar.md)
+[Sprachleiste (Textdienste)](language-bar.md)
 </dt> </dl>
 
  

@@ -18,19 +18,19 @@ ms.locfileid: "117791888"
 
 <dl> <dt>
 
-<span id="_rras_cyclic_redundancy_check_crc__gly"></span><span id="_RRAS_CYCLIC_REDUNDANCY_CHECK_CRC__GLY"></span>**Zyklische Redundanzprüfung (CRC)**
+<span id="_rras_cyclic_redundancy_check_crc__gly"></span><span id="_RRAS_CYCLIC_REDUNDANCY_CHECK_CRC__GLY"></span>**Cyclic Redundancy Check (CRC)**
 </dt> <dd>
 
-Eine CRC ist ein numerischer Wert, der mit einem Datenblock verknüpft ist. Dieser Wert stellt Informationen zur Verfügung, mit denen eine Anwendung bestimmen kann, ob die Daten geändert wurden. Eine CRC ähnelt einer Prüfsumme, wird aber als stärkerer Mechanismus zur Fehlerüberprüfung angesehen.
+Eine CRC ist ein numerischer Wert, der mit einem Datenblock verknüpft ist. Dieser Wert stellt Informationen bereit, mit denen eine Anwendung bestimmen kann, ob die Daten geändert wurden. Eine CRC ähnelt einer Prüfsumme, wird aber als stärkerer Fehlerüberprüfungsmechanismus betrachtet.
 
 </dd> <dt>
 
-<span id="_rras_compression_control_protocol_ccp__gly"></span><span id="_RRAS_COMPRESSION_CONTROL_PROTOCOL_CCP__GLY"></span>**Compression Control Protocol (PC)**
+<span id="_rras_compression_control_protocol_ccp__gly"></span><span id="_RRAS_COMPRESSION_CONTROL_PROTOCOL_CCP__GLY"></span>**Compression Control Protocol (CCP)**
 </dt> <dd>
 
-Mit dem Komprimierungskontrollprotokoll (COMPRESSION Control Protocol,CS) können zwei Computer, die über DIE-Verschlüsselung kommunizieren, kompatible Algorithmen zum Senden und Empfangen komprimierter FRAMES aushandeln. Die beiden Computer verwenden bis zur Netzwerksteuerungsprotokoll-Phase der VERBINDUNG MIT DER MÖGLICHERWEISE ERST DANN.
+Das Komprimierungssteuerungsprotokoll (COMPRESSION Control Protocol, CCPS) ermöglicht es zwei Computern, die über CSV kommunizieren, kompatible Algorithmen zum Senden und Empfangen von komprimierten FRAMES auszuhandeln. Die beiden Computer dürfen ERST in der Phase "network-control-protocol" der PPP-Verbindung DIECS-Verbindung verwenden.
 
-Weitere Informationen finden Sie unter [RFC 1962](remote-access-request-for-comments.md). Weitere Informationen [**finden Sie auch unter INFORMATIONEN \_ \_ zu HK UND**](/windows/desktop/api/Mprapi/ns-mprapi-ppp_ccp_info) [**RASPPPCCP.**](/previous-versions/windows/desktop/legacy/aa377620(v=vs.85))
+Weitere Informationen finden Sie unter [RFC 1962](remote-access-request-for-comments.md). Weitere Informationen finden Sie auch unter INFO zu [**PPM \_ UND \_**](/windows/desktop/api/Mprapi/ns-mprapi-ppp_ccp_info) [**RASPPPCCP.**](/previous-versions/windows/desktop/legacy/aa377620(v=vs.85))
 
 </dd> </dl>
 

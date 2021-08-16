@@ -1,28 +1,28 @@
 ---
-description: Zeigt das registrieren (erstellen) und Öffnen eines System Stores, das Registrieren eines physischen Stores als Mitglied eines System Stores und das Aufheben der Registrierung (Löschen) eines System Stores.
+description: Zeigt das Registrieren (Erstellen) und Öffnen eines Systemspeichers, das Registrieren eines physischen Speichers als Mitglied eines Systemspeichers und das Aufheben der Registrierung (Löschen) eines Systemspeichers.
 ms.assetid: 857ab592-68c7-4660-b37d-b165aeee14f4
-title: 'Beispiel-C-Programm: registrieren physischer und System eigener Zertifikat Speicher'
+title: 'Beispiel C-Programm: Registrieren von physischen und Systemzertifikatspeichern'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 708a840767b4e49bd1ba5c70dd5ae63f0f9ab7bd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d3e1302f0590244ae4e1cd84e477c5deac8266b69d15f9ee83f60b71df3d1a80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119140873"
 ---
-# <a name="example-c-program-registering-physical-and-system-certificate-stores"></a>Beispiel-C-Programm: registrieren physischer und System eigener Zertifikat Speicher
+# <a name="example-c-program-registering-physical-and-system-certificate-stores"></a>Beispiel C-Programm: Registrieren von physischen und Systemzertifikatspeichern
 
-Physische Speicher werden möglicherweise mehr oder weniger permanente Mitglieder eines System Speichers erstellt. Wenn ein physischer Speicher Mitglied eines System Speichers ist, werden Vorgänge im Systemspeicher, wie z. b. die Suche nach einem Zertifikat, in allen physischen Speichern betrachtet, die als Mitglieder des System Speichers registriert sind. Ein physischer Speicher kann mithilfe der Funktion "aufheben" aus der Mitgliedschaft in einem Systemspeicher entfernt werden.
+Physische Speicher können mehr oder weniger permanente Mitglieder eines Systemspeichers werden. Wenn ein physischer Speicher Mitglied eines Systemspeichers ist, werden Vorgänge im Systemspeicher, z. B. das Suchen eines Zertifikats, in allen physischen Speichern, die als Mitglieder des Systemspeichers registriert sind, nach ihnen suchen. Ein physischer Speicher kann mithilfe einer Funktion zum Aufheben der Registrierung aus der Mitgliedschaft in einem Systemspeicher entfernt werden.
 
-In diesem Beispiel werden die folgenden Aufgaben und kryptoapi-Funktionen veranschaulicht:
+Dieses Beispiel zeigt die folgenden Aufgaben und CryptoAPI-Funktionen:
 
--   Registrieren (erstellen) eines neuen System Stores mithilfe von [**certregistersystemstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certregistersystemstore).
--   Öffnen eines neu erstellten System Stores mithilfe von " [**certopdstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore)".
--   Registrieren eines physischen Speicher als Mitglied eines System Stores mithilfe von [**certregisterphysicalstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certregisterphysicalstore).
--   Aufheben der Registrierung (Löschen) eines System Stores mithilfe von " [**certunregistersystemstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certunregistersystemstore)".
+-   Registrieren (Erstellen) eines neuen Systemspeichers [**mithilfe von CertRegisterSystemStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certregistersystemstore).
+-   Öffnen eines neu erstellten Systemspeichers [**mithilfe von CertOpenStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore)
+-   Registrieren eines physischen Speichers als Mitglied eines Systemspeichers [**mithilfe von CertRegisterPhysicalStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certregisterphysicalstore).
+-   Aufheben der Registrierung (Löschen) eines Systemspeichers [**mithilfe von CertUnregisterSystemStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certunregistersystemstore).
 
-Dieses Beispiel veranschaulicht auch das Erstellen und Löschen von System Stores.
+In diesem Beispiel wird auch das Erstellen und Löschen von Systemspeichern veranschaulicht.
 
 
 ```C++

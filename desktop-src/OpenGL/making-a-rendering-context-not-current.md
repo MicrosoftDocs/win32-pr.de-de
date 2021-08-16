@@ -1,9 +1,9 @@
 ---
-title: Machen eines Renderingkontexts nicht aktuell
-description: Um einen Renderingkontext von einem Thread zu trennen, machen Sie ihn nicht aktuell. Rufen Sie hierzu die wglMakeCurrent-Funktion auf, bei der die Parameter auf NULL festgelegt sind. Im Folgenden finden Sie ein Beispiel für diese einfache Aufgabe.
+title: Erstellen eines Renderingkontexts als nicht aktuell
+description: Um einen Renderingkontext von einem Thread zu trennen, machen Sie ihn nicht aktuell. Rufen Sie hierzu die wglMakeCurrent-Funktion auf, wobei die Parameter auf NULL festgelegt sind. Im Folgenden wird ein Beispiel für diese einfache Aufgabe veranschaulicht.
 ms.assetid: fe76e3d3-5480-448d-95aa-a5af0da309f3
 keywords:
-- OpenGL auf Windows,Renderingkontexte
+- OpenGL für Windows,Renderingkontexte
 - Renderingkontexte OpenGL
 ms.topic: article
 ms.date: 05/31/2018
@@ -14,9 +14,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118937363"
 ---
-# <a name="making-a-rendering-context-not-current"></a>Machen eines Renderingkontexts nicht aktuell
+# <a name="making-a-rendering-context-not-current"></a>Erstellen eines Renderingkontexts als nicht aktuell
 
-Um einen Renderingkontext von einem Thread zu trennen, machen Sie ihn nicht aktuell. Rufen Sie hierzu die [**wglMakeCurrent-Funktion auf,**](/windows/desktop/api/wingdi/nf-wingdi-wglmakecurrent) bei der die Parameter auf **NULL festgelegt sind.** Im Folgenden finden Sie ein Beispiel für diese einfache Aufgabe.
+Um einen Renderingkontext von einem Thread zu trennen, machen Sie ihn nicht aktuell. Rufen Sie hierzu die [**wglMakeCurrent-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-wglmakecurrent) auf, wobei die Parameter auf **NULL** festgelegt sind. Im Folgenden wird ein Beispiel für diese einfache Aufgabe veranschaulicht.
 
 ``` syntax
 // detach the current rendering context from the thread  

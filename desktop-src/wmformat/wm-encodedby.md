@@ -1,9 +1,9 @@
 ---
-title: WM/encodby
-description: Das WM/encodby-Attribut enthält den Namen der Person oder Gruppe, die den Inhalt codiert hat.
+title: WM/EncodedBy
+description: Das WM/EncodedBy-Attribut enthält den Namen der Person oder Gruppe, die den Inhalt codiert hat.
 ms.assetid: 13c4d8c6-6dca-4f2c-a76f-a127004a8aaf
 keywords:
-- WM/encodedby Windows Media-Format
+- WM/EncodedBy windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,35 +12,35 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e4edff7d1688c1edfcabb2ad46b0a830c945bcd1
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 31a316a4af680353be44be375094693234345523ab8936390153392820212783
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119326540"
 ---
-# <a name="wmencodedby"></a>WM/encodby
+# <a name="wmencodedby"></a>WM/EncodedBy
 
-Das **WM/encodby-** Attribut enthält den Namen der Person oder Gruppe, die den Inhalt codiert hat.
+Das **WM/EncodedBy-Attribut** enthält den Namen der Person oder Gruppe, die den Inhalt codiert hat.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmencodedby
+g \_ wszWMEncodedBy
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

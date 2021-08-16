@@ -36,7 +36,7 @@ Die **StreamSelectOperation-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                 | BESCHREIBUNG                                                                                                                                       |
+| Methode                                                 | Beschreibung                                                                                                                                       |
 |:-------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**GetResults**](streamselectoperation-getresults.md) | Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von [**SelectBestStreamAsync gestartet wurde.**](/previous-versions/windows/desktop/legacy/hh829001(v=vs.85))<br/> |
 
@@ -50,7 +50,7 @@ Die **StreamSelectOperation-Klasse** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                        | Zugriffstyp           | BESCHREIBUNG                                                                                                                                                                             |
+| Eigenschaft                                                        | Zugriffstyp           | Beschreibung                                                                                                                                                                             |
 |:----------------------------------------------------------------|:----------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Abgeschlossen**](streamselectoperation-completed.md)<br/> | Lesen/Schreiben<br/> | Ruft einen Ereignishandler ab, der aufgerufen wird, wenn der von [**SelectBestStreamAsync**](/previous-versions/windows/desktop/legacy/hh829002(v=vs.85)) gestartete asynchrone Vorgang abgeschlossen ist, oder legt diesen fest.<br/> |
 

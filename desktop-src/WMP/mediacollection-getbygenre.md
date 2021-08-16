@@ -1,11 +1,11 @@
 ---
-title: Mediacollection. getbygenre-Methode
-description: Die getbygenre-Methode ruft eine Wiedergabeliste der Medienelemente mit dem angegebenen Genre ab.
+title: MediaCollection.getByGenre-Methode
+description: Die getByGenre-Methode ruft eine Wiedergabeliste der Medienelemente mit dem angegebenen Genre ab.
 ms.assetid: 022a0c52-93e1-4ab4-90a7-632bcd6fc004
 keywords:
-- getbygenre-Methode, Windows-Media Player
-- getbygenre-Methode Windows Media Player, mediacollection-Klasse
-- Mediacollection-Klasse, Windows Media Player, getbygenre-Methode
+- getByGenre-Methode Windows Media Player
+- getByGenre-Methode Windows Media Player , MediaCollection-Klasse
+- MediaCollection-Klasse Windows Media Player , getByGenre-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b73cd7fe9bb3efa9115e2ba5d01b6d12c89898d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 06df514e7ed399e73f6778912df32a4ed0be57a90039fe867c75cf31a3eec807
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354127"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135013"
 ---
-# <a name="mediacollectiongetbygenre-method"></a>Mediacollection. getbygenre-Methode
+# <a name="mediacollectiongetbygenre-method"></a>MediaCollection.getByGenre-Methode
 
-Die **getbygenre** -Methode ruft eine Wiedergabeliste der Medienelemente mit dem angegebenen Genre ab.
+Die **getByGenre-Methode** ruft eine Wiedergabeliste der Medienelemente mit dem angegebenen Genre ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ retVal = MediaCollection.getByGenre(
 
 <dl> <dt>
 
-*Genre* \[ in\]
+*Genre* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Namen des Genres enthält.
+**Zeichenfolge,** die den Namen des Genres enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt ein **Wiedergabe** Listen Objekt zurück.
+Diese Methode gibt ein **Playlist-Objekt** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *mediacollection* verwendet. **getbygenre** zum Abrufen einer Wiedergabeliste von Medien Elementen. Die Wiedergabeliste enthält Elemente mit dem vom Benutzer angegebenen Genre in einem HTML-Text Eingabe Element mit dem Namen getgenre. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird *MediaCollection* verwendet. **getByGenre,** um eine Wiedergabeliste von Medienelementen abzurufen. Die Wiedergabeliste enthält Elemente mit dem Genre, das vom Benutzer in einem HTML TEXT-Eingabeelement mit dem Namen GetGenre angegeben wird. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -94,25 +94,25 @@ onClick = "
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mediacollection-Objekt**](mediacollection-object.md)
+[**MediaCollection-Objekt**](mediacollection-object.md)
 </dt> <dt>
 
-[**Wiedergabelisten Objekt**](playlist-object.md)
+[**Wiedergabelistenobjekt**](playlist-object.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

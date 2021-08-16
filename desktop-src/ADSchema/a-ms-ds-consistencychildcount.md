@@ -1,6 +1,6 @@
 ---
 title: MS-DS-Consistency-Child-Count-Attribut
-description: Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und einem anderen Objekt, einer anderen Datenbank oder Anwendung zu überprüfen, indem die Anzahl der untergeordneten Objekte verglichen wird.
+description: Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und einem anderen Objekt, einer Datenbank oder Anwendung zu überprüfen, indem die Anzahl der untergeordneten Objekte verglichen wird.
 ms.assetid: f7d6e8f0-963b-45a9-86af-8e51d6de32bb
 ms.tgt_platform: multiple
 keywords:
@@ -23,7 +23,7 @@ ms.locfileid: "118961179"
 ---
 # <a name="ms-ds-consistency-child-count-attribute"></a>MS-DS-Consistency-Child-Count-Attribut
 
-Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und einem anderen Objekt, einer anderen Datenbank oder Anwendung zu überprüfen, indem die Anzahl der untergeordneten Objekte verglichen wird.
+Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und einem anderen Objekt, einer Datenbank oder Anwendung zu überprüfen, indem die Anzahl der untergeordneten Objekte verglichen wird.
 
 
 
@@ -35,7 +35,7 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1361              |
-| System-ID-GUID    | 178b7bc2-b63a-11d2-90e1-00c04fd91ab1 |
+| System-Id-Guid    | 178b7bc2-b63a-11d2-90e1-00c04fd91ab1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -58,10 +58,10 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist einwertig       | True                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -79,10 +79,10 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist einwertig       | True                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -100,10 +100,10 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist einwertig       | True                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -121,10 +121,10 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist einwertig       | True                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -142,10 +142,10 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist einwertig       | True                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -163,10 +163,10 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist einwertig       | True                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -184,10 +184,10 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist einwertig       | True                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |

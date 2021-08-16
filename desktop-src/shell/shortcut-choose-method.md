@@ -46,7 +46,7 @@ Statische Verben sind die einfachsten Zu implementierenden Verben, bieten aber t
 <thead>
 <tr class="header">
 <th>Statisches Verb</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -93,7 +93,7 @@ Die folgenden dynamischen Verbmethoden werden bevorzugt:
 
 
 
-| Verbtyp                                                                                 | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Verbtyp                                                                                 | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Statisches Verb (in der vorherigen Tabelle aufgeführt) + Erweiterte Abfragesyntax (AQS)                  | Diese Auswahl ruft die Sichtbarkeit des dynamischen Verbs ab.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | Windows 7 und höher: [ **IExplorerCommand**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand)                         | Diese Auswahl ermöglicht eine allgemeine Implementierung von Verben und Explorer-Befehlen, die im Befehlsmodul im Windows werden.                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -105,7 +105,7 @@ Die folgenden dynamischen Verbmethoden werden bevorzugt:
 
 ### <a name="discouraged-dynamic-verb-methods"></a>Nicht entmutigte dynamische Verbmethoden
 
-[**IContextMenu ist**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) die leistungsfähigste, aber auch die komplizierteste Zu implementierende Methode. Sie basiert auf in bearbeitungsbasierten COM-Objekten, die im Thread des Aufrufers ausgeführt werden, der in der Regel Windows Explorer verwendet, aber eine beliebige Anwendung sein kann, die die Elemente hosten kann. **IContextMenu unterstützt** Sichtbarkeit, Reihenfolge und benutzerdefiniertes Zeichnen von Verben. Einige dieser Features wurden den Features des statischen Verbs hinzugefügt, z. B. ein Symbol, das einem Befehl zugeordnet werden soll, und [**IExplorerCommand,**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) um die Sichtbarkeit zu behandeln.
+[**IContextMenu ist**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) die leistungsfähigste, aber auch die komplizierteste Zu implementierende Methode. Sie basiert auf in bearbeitungsbasierten COM-Objekten, die im Thread des Aufrufers ausgeführt werden, der in der Regel Windows Explorer verwendet, aber jede Anwendung sein kann, die die Elemente hosten kann. **IContextMenu unterstützt** Sichtbarkeit, Reihenfolge und benutzerdefiniertes Zeichnen von Verben. Einige dieser Features wurden den Features des statischen Verbs hinzugefügt, z. B. ein Symbol, das einem Befehl zugeordnet werden soll, und [**IExplorerCommand,**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) um die Sichtbarkeit zu behandeln.
 
 Wenn Sie das Kontextmenü für einen Dateityp erweitern müssen, indem Sie ein dynamisches Verb für den Dateityp registrieren, befolgen Sie die Anweisungen unter Anpassen eines Kontextmenüs mit dynamischen [Verben.](shortcut-menu-using-dynamic-verbs.md)
 

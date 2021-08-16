@@ -3,45 +3,45 @@ title: VCM-Dienste
 description: VCM-Dienste
 ms.assetid: ca35cf56-b823-450d-a218-e386bafbe872
 keywords:
-- Video für Windows (Vfw), VCM-Dienste
-- VFW (Video für Windows), VCM-Dienste
+- Video für Windows (VFW), VCM-Dienste
+- VFW (Video für Windows),VCM-Dienste
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ac723ee2d135cde9b57cababa76db9fefbb9a23
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 13d32d4a81005b6545b205d14612e9e8de06a82d436619fd5bb3a2ea9286f6ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117800832"
 ---
 # <a name="vcm-services"></a>VCM-Dienste
 
 Im Allgemeinen verwendet eine Anwendung VCM, um die folgenden Aufgaben auszuführen:
 
--   Sie können einen Kompressor oder einen Debug suchen, öffnen oder installieren.
--   Konfigurieren oder Abrufen von Konfigurationsinformationen zum-Kompressor oder-Dekompressor
+-   Suchen, öffnen oder installieren Sie einen Entpacker oder Dekomprimierer.
+-   Konfigurieren oder abrufen Sie Konfigurationsinformationen über den Entpacker oder Dekomprimierer.
 -   Verwenden Sie eine Reihe von Funktionen, um die Daten zu komprimieren, zu dekomprimieren oder zu zeichnen.
 
-Die Funktionen und Makros der drawdib-Bibliothek führen diese Aufgaben implizit aus und stellen möglicherweise die einfachste Möglichkeit zur Verwendung von VCM dar. Weitere Informationen zur drawdib-Bibliothek finden Sie unter [drawdib](drawdib.md).
+Die Funktionen und Makros der DrawDib-Bibliothek führen diese Aufgaben implizit aus und stellen möglicherweise die einfachste Möglichkeit zur Verwendung von VCM dar. Weitere Informationen zur DrawDib-Bibliothek finden Sie unter [DrawDib](drawdib.md).
 
-In den folgenden Abschnitten werden Aufgaben beschrieben, die Sie mit VCM ausführen können:
+In den folgenden Abschnitten werden Aufgaben beschrieben, die Sie mithilfe von VCM ausführen können:
 
--   [Grundlagen zu Kompressor und Debug](compressor-and-decompressor-basics.md)
--   [Vom Benutzer ausgewählte Kompressoren](user-selected-compressors.md)
--   [Installation und Deinstallation von Kompressor und Debug](compressor-and-decompressor-installation-and-removal.md)
--   [Konfiguration des Kompressors und dekompressors](compressor-and-decompressor-configuration.md)
--   [Informationen zu Kompressoren und Dekompressoren erhalten](getting-information-about-compressors-and-decompressors.md)
--   [Komprimierung mit einem Bild](single-image-compression.md)
--   [Sequenz Komprimierung](sequence-compression.md)
--   [Image-Datenkomprimierung](image-data-compression.md)
--   [Decokomprimieren mit einem Bild](single-image-decompression.md)
--   [Image-Datenkomprimierung](image-data-decompression.md)
--   [Überwachen des Fortschritts von Kompressoren und Dekompressoren](monitoring-the-progress-of-compressors-and-decompressors.md)
--   [Hardware Zeichnungsfunktionen](hardware-drawing-capabilities.md)
+-   [Grundlagen zu "1" und "Dekomprimierung"](compressor-and-decompressor-basics.md)
+-   [Vom Benutzer ausgewählte Aussteller](user-selected-compressors.md)
+-   [Installations- und Dekomprimierungs- und Dekomprimierungsvorgang](compressor-and-decompressor-installation-and-removal.md)
+-   [Konfiguration von "Metrik" und "Dekomprimierung"](compressor-and-decompressor-configuration.md)
+-   [Abrufen von Informationen zu Ausstellern und Dekomprimatoren](getting-information-about-compressors-and-decompressors.md)
+-   [Einzelbildkomprimierung](single-image-compression.md)
+-   [Sequenzkomprimierung](sequence-compression.md)
+-   [Bilddatenkomprimierung](image-data-compression.md)
+-   [Dekomprimierung einzelner Images](single-image-decompression.md)
+-   [Dekomprimierung von Bilddaten](image-data-decompression.md)
+-   [Überwachen des Fortschritts von Ausstellern und Dekomprimierern](monitoring-the-progress-of-compressors-and-decompressors.md)
+-   [Hardwarezeichnungsfunktionen](hardware-drawing-capabilities.md)
 
- 
+ 
 
- 
+ 
 
 
 

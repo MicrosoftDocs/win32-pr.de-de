@@ -1,6 +1,6 @@
 ---
 title: LDAP-Admin-Limits-Attribut
-description: Enthält eine Reihe von Attribut-Wert-Paaren, die verwaltungsbezogene Grenzwerte für LDAP-Server definieren.
+description: Enthält eine Reihe von Attribut-Wert-Paaren, die administrative Ldap-Servergrenzwerte definieren.
 ms.assetid: 335d666e-3f96-4df8-9555-e913efb8da2d
 ms.tgt_platform: multiple
 keywords:
@@ -23,7 +23,7 @@ ms.locfileid: "118961289"
 ---
 # <a name="ldap-admin-limits-attribute"></a>LDAP-Admin-Limits-Attribut
 
-Enthält eine Reihe von Attribut-Wert-Paaren, die verwaltungsbezogene Grenzwerte für LDAP-Server definieren.
+Enthält eine Reihe von Attribut-Wert-Paaren, die administrative Ldap-Servergrenzwerte definieren.
 
 
 
@@ -35,7 +35,7 @@ Enthält eine Reihe von Attribut-Wert-Paaren, die verwaltungsbezogene Grenzwerte
 | Aktualisieren von Berechtigungen  | \-                                          |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.843                      |
-| System-ID-GUID    | 7359a352-90f7-11d1-aebc-0000f80367c1        |
+| System-Id-Guid    | 7359a352-90f7-11d1-aebc-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -58,16 +58,16 @@ Enthält eine Reihe von Attribut-Wert-Paaren, die verwaltungsbezogene Grenzwerte
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist einwertig       | False                                            |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Falsch                                            |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfragerichtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Query-Policy**](c-querypolicy.md)<br/> |
 
 
 
@@ -79,16 +79,16 @@ Enthält eine Reihe von Attribut-Wert-Paaren, die verwaltungsbezogene Grenzwerte
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist einwertig       | False                                            |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Falsch                                            |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfragerichtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Query-Policy**](c-querypolicy.md)<br/> |
 
 
 
@@ -100,16 +100,16 @@ Enthält eine Reihe von Attribut-Wert-Paaren, die verwaltungsbezogene Grenzwerte
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist einwertig       | False                                            |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Falsch                                            |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfragerichtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Query-Policy**](c-querypolicy.md)<br/> |
 
 
 
@@ -121,10 +121,10 @@ Enthält eine Reihe von Attribut-Wert-Paaren, die verwaltungsbezogene Grenzwerte
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist einwertig       | False                                            |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
+| System-Only            | Falsch                                            |
+| Ist einwertig       | Falsch                                            |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
@@ -142,10 +142,10 @@ Enthält eine Reihe von Attribut-Wert-Paaren, die verwaltungsbezogene Grenzwerte
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist einwertig       | False                                            |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
+| System-Only            | Falsch                                            |
+| Ist einwertig       | Falsch                                            |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
@@ -163,10 +163,10 @@ Enthält eine Reihe von Attribut-Wert-Paaren, die verwaltungsbezogene Grenzwerte
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist einwertig       | False                                            |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
+| System-Only            | Falsch                                            |
+| Ist einwertig       | Falsch                                            |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
@@ -184,10 +184,10 @@ Enthält eine Reihe von Attribut-Wert-Paaren, die verwaltungsbezogene Grenzwerte
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist einwertig       | False                                            |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
+| System-Only            | Falsch                                            |
+| Ist einwertig       | Falsch                                            |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |

@@ -1,7 +1,7 @@
 ---
-description: Die Methoden, die für die Arbeit mit DirectX. x-Dateien verwendet werden, können zusätzlich zu den Standard-com-Rückgabe Werten die folgenden Werte zurückgeben. Veraltet.
+description: Die Methoden, die für die Arbeit mit DirectX-X-Dateien verwendet werden, können zusätzlich zu den COM-Standard-Rückgabewerten die folgenden Werte zurückgeben. Veraltet.
 ms.assetid: a91168bc-966a-47b5-ba83-fc480593228d
-title: Rückgabewerte (dxfile. h)
+title: Rückgabewerte (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,212 +13,212 @@ api_type:
 - HeaderDef
 api_location:
 - DXFile.h
-ms.openlocfilehash: 7d465b9759d958cba06bf0b950bc67772fbb84a3
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 51bc2155a74daf15945a79714355bdace06672c348dfd75679156f812d3d42be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119122477"
 ---
-# <a name="return-values-dxfileh"></a>Rückgabewerte (dxfile. h)
+# <a name="return-values-dxfileh"></a>Rückgabewerte (DXFile.h)
 
-Die Methoden, die für die Arbeit mit DirectX. x-Dateien verwendet werden, können zusätzlich zu den Standard-com-Rückgabe Werten die folgenden Werte zurückgeben. Veraltet.
+Die Methoden, die für die Arbeit mit DirectX-X-Dateien verwendet werden, können zusätzlich zu den COM-Standard-Rückgabewerten die folgenden Werte zurückgeben. Veraltet.
 
 <dl> <dt>
 
-<span id="DXFILE_OK"></span><span id="dxfile_ok"></span>**dxfile \_ OK**
+<span id="DXFILE_OK"></span><span id="dxfile_ok"></span>**DXFILE \_ OK**
 </dt> <dd>
 
 Der Befehl wurde erfolgreich ausgeführt.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADALLOC"></span><span id="dxfileerr_badalloc"></span>**dxfileerr \_ badzuweisung**
+<span id="DXFILEERR_BADALLOC"></span><span id="dxfileerr_badalloc"></span>**DXFILEERR \_ BADALLOC**
 </dt> <dd>
 
 Die Speicherbelegung hat einen Fehler erzeugt.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADARRAYSIZE"></span><span id="dxfileerr_badarraysize"></span>**dxfileerr \_ badarraysize**
+<span id="DXFILEERR_BADARRAYSIZE"></span><span id="dxfileerr_badarraysize"></span>**DXFILEERR \_ BADARRAYSIZE**
 </dt> <dd>
 
-Die Array Größe ist ungültig.
+Die Arraygröße ist ungültig.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADCACHEFILE"></span><span id="dxfileerr_badcachefile"></span>**dxfileerr \_ badcachefile**
+<span id="DXFILEERR_BADCACHEFILE"></span><span id="dxfileerr_badcachefile"></span>**DXFILEERR \_ BADCACHEFILE**
 </dt> <dd>
 
-Die Cachedatei mit dem Datum der x-Datei ist ungültig. Eine Cachedatei enthält Daten, die vom Netzwerk abgerufen, auf der Festplatte zwischengespeichert und in nachfolgenden Anforderungen abgerufen werden.
+Die Cachedatei, die das X-Dateidatum enthält, ist ungültig. Eine Cachedatei enthält Daten, die aus dem Netzwerk abgerufen, auf der Festplatte zwischengespeichert und in nachfolgenden Anforderungen abgerufen werden.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADDataReference"></span><span id="dxfileerr_baddatareference"></span><span id="DXFILEERR_BADDATAREFERENCE"></span>**Dxfileerr \_ baddatareferenzierung**
+<span id="DXFILEERR_BADDataReference"></span><span id="dxfileerr_baddatareference"></span><span id="DXFILEERR_BADDATAREFERENCE"></span>**DXFILEERR \_ BADDataReference**
 </dt> <dd>
 
-Der Daten Verweis ist ungültig.
+Der Datenverweis ist ungültig.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADFILE"></span><span id="dxfileerr_badfile"></span>**dxfileerr- \_ BadFile**
+<span id="DXFILEERR_BADFILE"></span><span id="dxfileerr_badfile"></span>**DXFILEERR \_ BADFILE**
 </dt> <dd>
 
 Die Datei ist ungültig.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADFILECOMPRESSIONTYPE"></span><span id="dxfileerr_badfilecompressiontype"></span>**dxfileerr \_ badfilecompressiontype**
+<span id="DXFILEERR_BADFILECOMPRESSIONTYPE"></span><span id="dxfileerr_badfilecompressiontype"></span>**DXFILEERR \_ BADFILECOMPRESSIONTYPE**
 </dt> <dd>
 
-Der Datei Komprimierungstyp ist ungültig.
+Der Dateikomprimierungstyp ist ungültig.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADFILEFLOATSIZE"></span><span id="dxfileerr_badfilefloatsize"></span>**dxfileerr \_ badfilefloatsize**
+<span id="DXFILEERR_BADFILEFLOATSIZE"></span><span id="dxfileerr_badfilefloatsize"></span>**DXFILEERR \_ BADFILEFLOATSIZE**
 </dt> <dd>
 
-Die Gleit Komma Größe ist ungültig.
+Die Gleitkommagröße ist ungültig.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADFILETYPE"></span><span id="dxfileerr_badfiletype"></span>**dxfileerr \_ badfiletype**
+<span id="DXFILEERR_BADFILETYPE"></span><span id="dxfileerr_badfiletype"></span>**DXFILEERR \_ BADFILETYPE**
 </dt> <dd>
 
-Die Datei ist keine DirectX. x-Datei.
+Die Datei ist keine DirectX-X-Datei.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADFILEVERSION"></span><span id="dxfileerr_badfileversion"></span>**dxfileerr \_ badfileversion**
+<span id="DXFILEERR_BADFILEVERSION"></span><span id="dxfileerr_badfileversion"></span>**DXFILEERR \_ BADFILEVERSION**
 </dt> <dd>
 
 Die Dateiversion ist ungültig.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADINTRINSICS"></span><span id="dxfileerr_badintrinsics"></span>**dxfileerr- \_ badintrinsics**
+<span id="DXFILEERR_BADINTRINSICS"></span><span id="dxfileerr_badintrinsics"></span>**DXFILEERR \_ BADINTRINSICS**
 </dt> <dd>
 
-Systeminterne Funktionen sind ungültig.
+Systeminterne Eigenschaften sind ungültig.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADOBJECT"></span><span id="dxfileerr_badobject"></span>**dxfileerr- \_ badobject**
+<span id="DXFILEERR_BADOBJECT"></span><span id="dxfileerr_badobject"></span>**DXFILEERR \_ BADOBJECT**
 </dt> <dd>
 
 Das Objekt ist ungültig.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADRESOURCE"></span><span id="dxfileerr_badresource"></span>**dxfileerr \_ badresource**
+<span id="DXFILEERR_BADRESOURCE"></span><span id="dxfileerr_badresource"></span>**DXFILEERR \_ BADRESOURCE**
 </dt> <dd>
 
 Die Ressource ist ungültig.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADSTREAMHANDLE"></span><span id="dxfileerr_badstreamhandle"></span>**dxfileerr \_ badstreamhandle**
+<span id="DXFILEERR_BADSTREAMHANDLE"></span><span id="dxfileerr_badstreamhandle"></span>**DXFILEERR \_ BADSTREAMHANDLE**
 </dt> <dd>
 
-Das Streamhandle ist ungültig.
+Das Streamhand handle ist ungültig.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADTYPE"></span><span id="dxfileerr_badtype"></span>**dxfileerr- \_ badtype**
+<span id="DXFILEERR_BADTYPE"></span><span id="dxfileerr_badtype"></span>**DXFILEERR \_ BADTYPE**
 </dt> <dd>
 
 Der Objekttyp ist ungültig.
 
 </dd> <dt>
 
-<span id="DXFILEERR_BADVALUE"></span><span id="dxfileerr_badvalue"></span>**dxfileerr- \_ badvalue**
+<span id="DXFILEERR_BADVALUE"></span><span id="dxfileerr_badvalue"></span>**DXFILEERR \_ BADVALUE**
 </dt> <dd>
 
 Der Parameter ist ungültig.
 
 </dd> <dt>
 
-<span id="DXFILEERR_FILENOTFOUND"></span><span id="dxfileerr_filenotfound"></span>**dxfileerr \_ dateinfound**
+<span id="DXFILEERR_FILENOTFOUND"></span><span id="dxfileerr_filenotfound"></span>**DXFILEERR \_ FILENOTFOUND**
 </dt> <dd>
 
-Die Datei konnte nicht gefunden werden.
+Die Datei wurde nicht gefunden.
 
 </dd> <dt>
 
-<span id="DXFILEERR_INTERNALERROR"></span><span id="dxfileerr_internalerror"></span>**dxfileerr \_ InternalError**
+<span id="DXFILEERR_INTERNALERROR"></span><span id="dxfileerr_internalerror"></span>**DXFILEERR \_ INTERNALERROR**
 </dt> <dd>
 
 Interner Fehler.
 
 </dd> <dt>
 
-<span id="DXFILEERR_NOINTERNET"></span><span id="dxfileerr_nointernet"></span>**dxfileerr- \_ nointernet**
+<span id="DXFILEERR_NOINTERNET"></span><span id="dxfileerr_nointernet"></span>**DXFILEERR \_ NOINTERNET**
 </dt> <dd>
 
-Die Internet Verbindung wurde nicht gefunden.
+Internetverbindung nicht gefunden.
 
 </dd> <dt>
 
-<span id="DXFILEERR_NOMOREDATA"></span><span id="dxfileerr_nomoredata"></span>**dxfileerr \_ nomoredata**
+<span id="DXFILEERR_NOMOREDATA"></span><span id="dxfileerr_nomoredata"></span>**DXFILEERR \_ NOMOREDATA**
 </dt> <dd>
 
 Es sind keine weiteren Daten verfügbar.
 
 </dd> <dt>
 
-<span id="DXFILEERR_NOMOREOBJECTS"></span><span id="dxfileerr_nomoreobjects"></span>**dxfileerr \_ nomoreobjects**
+<span id="DXFILEERR_NOMOREOBJECTS"></span><span id="dxfileerr_nomoreobjects"></span>**DXFILEERR \_ NOMOREOBJECTS**
 </dt> <dd>
 
-Alle Objekte wurden aufgezählt.
+Alle Objekte wurden aufzählt.
 
 </dd> <dt>
 
-<span id="DXFILEERR_NOMORESTREAMHANDLES"></span><span id="dxfileerr_nomorestreamhandles"></span>**dxfileerr \_ nomorestreamhandles**
+<span id="DXFILEERR_NOMORESTREAMHANDLES"></span><span id="dxfileerr_nomorestreamhandles"></span>**DXFILEERR \_ NOMORESTREAMHANDLES**
 </dt> <dd>
 
-Es sind keine Datenstrom Handles verfügbar.
+Es sind keine Streamhandles verfügbar.
 
 </dd> <dt>
 
-<span id="DXFILEERR_NOTDONEYET"></span><span id="dxfileerr_notdoneyet"></span>**dxfileerr \_ notdoneyet**
+<span id="DXFILEERR_NOTDONEYET"></span><span id="dxfileerr_notdoneyet"></span>**DXFILEERR \_ NOTDONEYET**
 </dt> <dd>
 
 Der Vorgang wurde nicht abgeschlossen.
 
 </dd> <dt>
 
-<span id="DXFILEERR_NOTFOUND"></span><span id="dxfileerr_notfound"></span>**dxfileerr \_ NotFound**
+<span id="DXFILEERR_NOTFOUND"></span><span id="dxfileerr_notfound"></span>**DXFILEERR \_ NOTFOUND**
 </dt> <dd>
 
-Das Objekt konnte nicht gefunden werden.
+Das Objekt wurde nicht gefunden.
 
 </dd> <dt>
 
-<span id="DXFILEERR_PARSEERROR"></span><span id="dxfileerr_parseerror"></span>**dxfileerr- \_ Analysefehler**
+<span id="DXFILEERR_PARSEERROR"></span><span id="dxfileerr_parseerror"></span>**DXFILEERR \_ PARSEERROR**
 </dt> <dd>
 
 Die Datei konnte nicht analysiert werden.
 
 </dd> <dt>
 
-<span id="DXFILEERR_RESOURCENOTFOUND"></span><span id="dxfileerr_resourcenotfound"></span>**dxfileerr \_ resourcenotfound**
+<span id="DXFILEERR_RESOURCENOTFOUND"></span><span id="dxfileerr_resourcenotfound"></span>**DXFILEERR \_ RESOURCENOTFOUND**
 </dt> <dd>
 
 Die Ressource wurde nicht gefunden.
 
 </dd> <dt>
 
-<span id="DXFILEERR_NOTEMPLATE"></span><span id="dxfileerr_notemplate"></span>**dxfileerr \_ notemplate**
+<span id="DXFILEERR_NOTEMPLATE"></span><span id="dxfileerr_notemplate"></span>**DXFILEERR \_ NOTEMPLATE**
 </dt> <dd>
 
 Keine Vorlage verfügbar.
 
 </dd> <dt>
 
-<span id="DXFILEERR_URLNOTFOUND"></span><span id="dxfileerr_urlnotfound"></span>**dxfileerr \_ urlnotfound**
+<span id="DXFILEERR_URLNOTFOUND"></span><span id="dxfileerr_urlnotfound"></span>**DXFILEERR \_ URLNOTFOUND**
 </dt> <dd>
 
-Die URL wurde nicht gefunden.
+DIE URL wurde nicht gefunden.
 
 </dd> </dl>
 
@@ -228,15 +228,15 @@ Die URL wurde nicht gefunden.
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dxfile. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DXFile.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[X-Datei Verweis (Legacy)](dx9-graphics-reference-x-file.md)
+[X-Dateireferenz (Legacy)](dx9-graphics-reference-x-file.md)
 </dt> </dl>
 
  

@@ -28,7 +28,7 @@ ms.locfileid: "119433270"
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM \_ Policy \_ Result01 \_ SmartScreen02-Klasse stellt die SmartScreen-Richtlinien dar.
+Die Klasse MDM \_ Policy \_ Result01 \_ SmartScreen02 stellt die SmartScreen-Richtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -48,13 +48,13 @@ class MDM_Policy_Result01_SmartScreen02
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ Policy \_ Result01 \_ SmartScreen02-Klasse** verfügt über diese Typen von Membern:
+Die **Klasse MDM Policy \_ \_ Result01 \_ SmartScreen02 verfügt** über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ Policy \_ Result01 \_ SmartScreen02-Klasse** verfügt über diese Eigenschaften.
+Die **Klasse MDM Policy \_ \_ Result01 \_ SmartScreen02** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -83,13 +83,13 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
@@ -97,13 +97,13 @@ Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 **Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>

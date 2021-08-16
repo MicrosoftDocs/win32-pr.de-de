@@ -1,9 +1,9 @@
 ---
-title: Userplayzählteveneing-Attribut
-description: Das userplayzählteveneing-Attribut gibt an, wie oft das Element zwischen 17 00 und 22 00 Ortszeit wiedergegeben wurde.
+title: UserPlaycountEvening-Attribut
+description: Das UserPlaycountEvening-Attribut gibt an, wie oft das Element zwischen 17 00 und 22.00 Uhr Ortszeit wiedergegeben wurde.
 ms.assetid: 2f8f5fbd-8edf-49ce-beb9-b9301b9d99da
 keywords:
-- Userplayzählteveneing-Attribut, Windows Media Player
+- UserPlaycountEvening-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,29 +12,29 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e7c84af7d661dd1b99110f27e3b9d44daef9bb6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 51249a2c3e20f70da8cdc78471c67e3c3463b106549a10bb57f30e33f26cc196
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134403"
 ---
-# <a name="userplaycountevening-attribute"></a>Userplayzählteveneing-Attribut
+# <a name="userplaycountevening-attribute"></a>UserPlaycountEvening-Attribut
 
-Das **userplayzählteveneing** -Attribut gibt an, wie oft das Element zwischen 17:00 und 22:00 Ortszeit wiedergegeben wurde.
+Das **UserPlaycountEvening-Attribut** gibt an, wie oft das Element zwischen 17:00 und 22:00 Uhr Ortszeit wiedergegeben wurde.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
 -   [Andere Elemente](other-item-attributes.md)
 -   [Wiedergabelisten](playlist-attributes-ref.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur in der-Bibliothek gespeichert.
+Dieses Attribut wird nur in der Bibliothek gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,11 +46,11 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

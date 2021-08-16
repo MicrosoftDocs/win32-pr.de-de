@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentlogdiskfullexception-Konstruktor'
-title: Esentlogdiskfullexception-Konstruktor
+description: 'Weitere Informationen zu: EsentLogDiskFullException-Konstruktor'
+title: EsentLogDiskFullException-Konstruktor
 TOCTitle: 'EsentLogDiskFullException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentLogDiskFullException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentlogdiskfullexception.esentlogdiskfullexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d931a42a8a01135e93c9515e02d602b899164c90
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6fed2483428bb3faedcfdf8ce2193550988b1a60990b6b8ca3b8222b8b189251
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119363793"
 ---
-# <a name="esentlogdiskfullexception-constructor"></a>Esentlogdiskfullexception-Konstruktor
+# <a name="esentlogdiskfullexception-constructor"></a>EsentLogDiskFullException-Konstruktor
 
-Initialisiert eine neue Instanz der esentlogdiskfullexception-Klasse.
+Initialisiert eine neue Instanz der EsentLogDiskFullException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentLogDiskFullException()
 public EsentLogDiskFullException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentlogdiskfullexception-Klasse](./esentlogdiskfullexception-class.md)
+[EsentLogDiskFullException-Klasse](./esentlogdiskfullexception-class.md)
 
-[Esentlogdiskfullexception-Elemente](./esentlogdiskfullexception-members.md)
+[EsentLogDiskFullException-Member](./esentlogdiskfullexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

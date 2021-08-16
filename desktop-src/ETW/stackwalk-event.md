@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Stapel Ablauf Verfolgungs Ereignisse.
+description: Diese Klasse ist die Ereignistypklasse für Stapelablaufverfolgungsereignisse.
 ms.assetid: 05117bd6-a39c-42f3-8aed-c6f758f946c6
 title: StackWalk_Event-Klasse
 ms.topic: reference
@@ -17,16 +17,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 746a7f2a9b5f6bb6316bf0d0e20e5645cea15a7e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 672d8fc609c14a43ca2692b5cf8a46356a00cccb9c06371e515bc102706c3638
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069700"
 ---
-# <a name="stackwalk_event-class"></a>Stackwalk ( \_ Ereignisklasse)
+# <a name="stackwalk_event-class"></a>\_StackWalk-Ereignisklasse
 
-Diese Klasse ist die Ereignistyp Klasse für Stapel Ablauf Verfolgungs Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Stapelablaufverfolgungsereignisse.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,108 +46,108 @@ class StackWalk_Event : StackWalk
 
 ## <a name="members"></a>Member
 
-Die **Stackwalk- \_ Ereignis** Klasse verfügt über diese Typen von Membern:
+Die **\_ StackWalk-Ereignisklasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Stackwalk- \_ Ereignis** Klasse verfügt über diese Eigenschaften.
+Die **\_ StackWalk-Ereignisklasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Eventtimestamp**
+**EventTimeStamp**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1)
+Qualifizierer: WmiDataId(1)
 </dt> </dl>
 
-Ursprünglicher ereigniszeitstempel aus dem Ereignis Header. Verwenden Sie diesen Zeitstempel, um den Stapel mit einem Ereignis zu vergleichen.
+Ursprünglicher Ereigniszeitstempel aus dem Ereignisheader. Verwenden Sie diesen Zeitstempel, um den Stapel mit einem Ereignis abzugleichen.
 
 </dd> <dt>
 
 **Stack1**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), Zeiger
+Qualifizierer: WmiDataId(4), Zeiger
 </dt> </dl>
 
-Adresse des Aufrufes.
+Adresse des Aufrufs.
 
 </dd> <dt>
 
 **Stack192**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (195), Zeiger
+Qualifizierer: WmiDataId(195), Zeiger
 </dt> </dl>
 
-Adresse des Aufrufes.
+Adresse des Aufrufs.
 
 </dd> <dt>
 
-**Stackprocess**
+**StackProcess**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Format ("x")
+Qualifizierer: WmiDataId(2), format("x")
 </dt> </dl>
 
-Der Prozess Bezeichner des ursprünglichen Ereignisses.
+Der Prozessbezeichner des ursprünglichen Ereignisses.
 
 </dd> <dt>
 
-**Stackthread**
+**StackThread**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Der Thread Bezeichner des ursprünglichen Ereignisses.
+Der Threadbezeichner des ursprünglichen Ereignisses.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass die-Klasse nicht alle **Stapel * n***-Eigenschaften anzeigt, die zwischen **Stack1** und **Stack192** vorhanden sind. Verwenden Sie die Größe des Ereignisses, um zu bestimmen, wie viele **Stapel * n***-Eigenschaften gültige Adressen enthalten.
+Beachten Sie, dass die Klasse nicht alle **Stack*n***-Eigenschaften zeigt, die zwischen **Stack1** und **Stack192** vorhanden sind. Verwenden Sie die Größe des Ereignisses, um zu bestimmen, wie viele **Stack*n***-Eigenschaften gültige Adressen enthalten.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 

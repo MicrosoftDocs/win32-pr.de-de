@@ -1,9 +1,9 @@
 ---
-title: Error-Objekt (WMP-SDK)
-description: Das Error-Objekt ermöglicht den Zugriff auf eine Auflistung von ErrorItem-Objekten.
+title: Error-Objekt (WMP SDK)
+description: Das Error-Objekt bietet Zugriff auf eine Auflistung von ErrorItem-Objekten.
 ms.assetid: 1f026ad4-0240-48fe-90ad-739a24e8a7ca
 keywords:
-- Windows-Fehler Objekt-Media Player
+- Fehlerobjekt-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,44 +13,44 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0aae4c86dc3f5282be7a16207923e1238e217a9e
-ms.sourcegitcommit: 6f7576b297d54c0b8f9c79e02c912b83041aa4fb
+ms.openlocfilehash: c8e5b7627db2c55eb41a267f6c8d3a7a779e2f20190ca3061a49a41eb8577adb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "106340475"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117748469"
 ---
 # <a name="error-object"></a>Error-Objekt
 
-Das **Error** -Objekt ermöglicht den Zugriff auf eine Auflistung von [ErrorItem](erroritem-object.md) -Objekten.
+Das **Error-Objekt** bietet Zugriff auf eine Auflistung von [ErrorItem-Objekten.](erroritem-object.md)
 
-Das **Error** -Objekt unterstützt die folgende Eigenschaft.
+Das **Error-Objekt** unterstützt die folgende Eigenschaft.
 
 
 
-| Eigenschaft                           | BESCHREIBUNG                                        |
+| Eigenschaft                           | Beschreibung                                        |
 |------------------------------------|----------------------------------------------------|
-| [errorCount](error-errorcount.md) | Ruft die Anzahl der Fehler in der Fehler Warteschlange ab. |
+| [errorCount](error-errorcount.md) | Ruft die Anzahl der Fehler in der Fehlerwarteschlange ab. |
 
 
 
- 
+ 
 
-Das **Error** -Objekt unterstützt die folgenden Methoden.
+Das **Error-Objekt** unterstützt die folgenden Methoden.
 
 
 
-| Methode                                       | BESCHREIBUNG                                                                                     |
+| Methode                                       | Beschreibung                                                                                     |
 |----------------------------------------------|-------------------------------------------------------------------------------------------------|
-| [clearerrorqueue](error-clearerrorqueue.md) | Löscht die Fehler in der Fehler Warteschlange.                                                         |
-| [item](error-item.md)                       | Ruft ein [ErrorItem](erroritem-object.md) -Objekt aus der Fehler Warteschlange ab.                     |
-| [WebHelp](error-webhelp.md)                 | Hiermit wird die Windows Media Player-Webhilfe Seite gestartet, um weitere Informationen zum Fehler anzuzeigen. |
+| [clearErrorQueue](error-clearerrorqueue.md) | Entfernt die Fehler aus der Fehlerwarteschlange.                                                         |
+| [item](error-item.md)                       | Ruft ein [ErrorItem-Objekt](erroritem-object.md) aus der Fehlerwarteschlange ab.                     |
+| [Webhelp](error-webhelp.md)                 | Startet die Windows Media Player Webhilfeseite, um weitere Informationen zum Fehler anzuzeigen. |
 
 
 
- 
+ 
 
-Der Zugriff auf das **Fehler** Objekt erfolgt über die folgende Eigenschaft.
+Auf **das Error-Objekt** wird über die folgende Eigenschaft zugegriffen.
 
 
 
@@ -60,18 +60,18 @@ Der Zugriff auf das **Fehler** Objekt erfolgt über die folgende Eigenschaft.
 
 
 
- 
+ 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Objektmodell Referenz für die Skripterstellung**](object-model-reference-for-scripting.md)
+[**Objektmodellreferenz für die Skripterstellung**](object-model-reference-for-scripting.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

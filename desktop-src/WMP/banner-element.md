@@ -1,9 +1,9 @@
 ---
-title: Banner-Element
-description: Das Banner Element definiert eine URL zu einer Grafikdatei, die im Anzeigebereich angezeigt wird.
+title: BANNER-Element
+description: Das BANNER-Element definiert eine URL zu einer Grafikdatei, die im Anzeigebereich angezeigt wird.
 ms.assetid: 8b4a3369-a687-40a8-b5df-afb0e0518cd1
 keywords:
-- Banner Element Windows Media Player
+- BANNER-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8e257c14e5908482cdf8de458c259bc64a55c6d5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 91b3de50c1360337c1344a1af1a0696361614dbc293390470e7c196e53528a1d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354705"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135963"
 ---
-# <a name="banner-element"></a>Banner-Element
+# <a name="banner-element"></a>BANNER-Element
 
-Das **Banner** Element definiert eine URL zu einer Grafikdatei, die im Anzeigebereich angezeigt wird.
+Das **BANNER-Element** definiert eine URL zu einer Grafikdatei, die im Anzeigebereich angezeigt wird.
 
 ``` syntax
 <BANNER
@@ -33,36 +33,36 @@ Das **Banner** Element definiert eine URL zu einer Grafikdatei, die im Anzeigebe
 
 ## <a name="attributes"></a>Attribute
 
-**Href** (erforderlich)
+**HREF** (erforderlich)
 
 URL zu einer Grafikdatei, die im Anzeigebereich angezeigt wird.
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy       | Elemente                   |
 |-----------------|----------------------------|
-| Übergeordnete Elemente | **ASX**, **Eintrag**         |
-| Untergeordnete Elemente  | **abstract**, **moreingefo** |
+| Übergeordnete Elemente | **ASX**, **ENTRY**         |
+| Untergeordnete Elemente  | **ABSTRACT**, **MOREINFO** |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Element definiert eine URL zu einer Grafikdatei, die im Windows-Media Player Anzeigebereich unterhalb des Video Inhalts angezeigt wird. Wenn das Medium nur Audiodaten ist, wird die Banner Grafik eigenständig angezeigt. Windows Media Player reserviert einen Bereich von 32 Pixel, der um 194 Pixel breit (die Banner Leiste) für die Grafik ist. Wenn die in der URL definierte Grafik kleiner als diese ist, wird Sie in ihrer ursprünglichen Größe angezeigt. Wenn die Grafik größer als der reservierte Platz ist, wird das Bild von Windows Media Player an den Platz angepasst.
+Dieses Element definiert eine URL zu einer Grafikdatei, die im Windows Media Player unterhalb des Videoinhalts angezeigt wird. Wenn es sich bei dem Medium nur um Audiodaten handelt, wird die Bannergrafik allein angezeigt. Windows Media Player reserviert einen Abstand von 32 Pixeln hoch bis 194 Pixel breit (Bannerleiste) für die Grafik. Wenn die in der URL definierte Grafik kleiner als diese ist, wird sie in ihrer ursprünglichen Größe angezeigt. Wenn die Grafik größer als der reservierte Speicherplatz ist, Windows Media Player das Bild an den Platz zuschneiden.
 
-Sie können ein **abstraktes** Element innerhalb des Gültigkeits Bereichs des **Banner** Elements verwenden, um Text als QuickInfo anzuzeigen, wenn der Benutzer den Mauszeiger über die Banner Grafik hält. Ein **Moran FO** -Element innerhalb eines **Banner** Elements definiert eine URL, auf die der Benutzer klickt, wenn der Benutzer auf die Banner Grafik klickt. (Die URL kann ein beliebiger Pfad oder Protokoll sein, z. b. ein e-Mail-Link, eine HTTP-URL (Hypertext Transfer Protocol) zu einer Website oder sogar ein Microsoft JScript-Befehl.) Wenn der Zeiger über die Grafik bewegt wird, wird die Grafik als geprägt und sieht wie eine Schaltfläche aus.
+Sie können ein **ABSTRACT-Element** innerhalb des Bereichs des **BANNER-Elements** verwenden, um Text als QuickInfo anzuzeigen, wenn der Benutzer den Mauszeiger über der Bannergrafik hält. Ein **MOREINFO-Element** innerhalb **eines BANNER-Elements** definiert eine URL, zu der der Benutzer gehört, wenn er auf die Bannergrafik klickt. (Die URL kann ein beliebiger Pfad oder ein beliebiges Protokoll sein, z. B. ein E-Mail-Link, eine HTTP-URL (Hypertext Transfer Protocol) zu einer Website oder sogar ein Microsoft JScript-Befehl.) Wenn der Zeiger über die Grafik bewegt wird, wird die Grafik eingebettet und sieht wie eine Schaltfläche aus.
 
-Ein für ein **ASX** -Element definiertes **Banner** Element wird angezeigt, während alle Clips in der Wiedergabeliste abgespielt werden. Ein **Banner** Element, das in einem **Entry** -Element definiert ist, wird nur angezeigt, während dieser Clip wiedergegeben wird, und während dieser Zeit überschreibt jedes Banner, das im übergeordneten **ASX** -Element definiert Sie können angeben, wie Windows Media Player Speicherplatz für das Banner reserviert, indem Sie das **bannerbar** -Attribut des **ASX** -Elements festlegen.
+Ein **BANNER-Element,** das für ein **ASX-Element** definiert ist, wird angezeigt, während alle Clips in der Wiedergabeliste abspielt werden. Ein  BANNER-Element, das in einem **ENTRY-Element** definiert ist, wird nur angezeigt, während dieser Clip abspielt, und überschreibt während dieser Zeit alle Banner, die im übergeordneten **ASX-Element definiert** sind. Sie können angeben, Windows Media Player Speicherplatz für das Banner reserviert, indem Sie das **BANNERBAR-Attribut** des **ASX-Elements** festlegen.
 
-Banner Bilder werden bei DRM-Dateien nicht unterstützt, oder wenn Windows Media Player in eine Webseite eingebettet ist.
+Bannerbilder werden nicht mit DRM-Dateien unterstützt, oder wenn Windows Media Player in eine Webseite eingebettet ist.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden finden Sie ein Beispiel für ein **Banner** Element ohne untergeordnete Elemente:
+Im Folgenden finden Sie ein Beispiel für ein **BANNER-Element** ohne untergeordnete Elemente:
 
 
 ```XML
@@ -71,7 +71,7 @@ Im folgenden finden Sie ein Beispiel für ein **Banner** Element ohne untergeord
 
 
 
-Im folgenden finden Sie ein Beispiel für ein **Banner** -Element, das **abstrakte** und **morumfo** -Elemente enthält.
+Im Folgenden finden Sie ein Beispiel für ein **BANNER-Element,** das **ABSTRACT-** und **MOREINFO-Elemente** enthält.
 
 
 ```XML
@@ -94,18 +94,18 @@ Im folgenden finden Sie ein Beispiel für ein **Banner** -Element, das **abstrak
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Metadateien**](windows-media-metafile-reference.md)
+[**Windows Referenz zur Medienmetadatei**](windows-media-metafile-reference.md)
 </dt> </dl>
 
  

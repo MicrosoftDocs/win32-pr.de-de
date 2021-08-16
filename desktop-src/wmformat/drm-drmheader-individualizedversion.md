@@ -1,9 +1,9 @@
 ---
 title: DRM_DRMHeader_IndividualizedVersion
-description: Das DRM- \_ Attribut "drmheaderindividualizedversion" enthält die mindestens erforderliche individualisierte Version, die für die Wiedergabe der Datei erforderlich ist.
+description: Das \_ DRM DRMHeaderIndividualizedVersion-Attribut enthält die minimale individualisierte Version, die zum Wiedergeben der Datei erforderlich ist.
 ms.assetid: 2ac24660-8b7a-4dba-9f9f-ad8b13a22f5c
 keywords:
-- DRM_DRMHeader_IndividualizedVersion Windows Media-Format
+- DRM_DRMHeader_IndividualizedVersion Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,39 +12,39 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 167065f99a72245c6d7cc677ce24fa1ff96dec84
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 5793fa81a7c6c57542991d582607edb0cf3e38b62b037ad46974a4211a7ef8ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "106338438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119931180"
 ---
-# <a name="drm_drmheader_individualizedversion"></a>DRM \_ drmHeader \_ IndividualizedVersion
+# <a name="drm_drmheader_individualizedversion"></a>DRM \_ DRMHeader \_ IndividualizedVersion
 
-Das DRM-Attribut " **\_ drmheaderindividualizedversion** " enthält die mindestens erforderliche individualisierte Version, die für die Wiedergabe der Datei erforderlich ist.
+Das **\_ DRM DRMHeaderIndividualizedVersion-Attribut** enthält die minimale individualisierte Version, die zum Wiedergeben der Datei erforderlich ist.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmdrm \_ drmHeader \_ IndividualizedVersion
+g \_ wszWMDRM \_ DRMHeader \_ IndividualizedVersion
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur für den DRM-Inhalt von DRM Version 7 vorhanden. Sie kann mit " [**iwmdrmreader:: getdrmproperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)" abgerufen werden. Zum Festlegen der individualisierten Version (auch als Sicherheitsversion bezeichnet) für die Datei mithilfe von [**iwmdrmwriter:: setdrmattribute**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmwriter-setdrmattribute) müssen Sie die [**DRM \_ Individual Version**](drm-individualizedversion.md) -Eigenschaft verwenden.
+Dieses Attribut ist nur mit DRM Version 7-Inhalt vorhanden. Sie kann mit [**IWMDRMReader::GetDRMProperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)abgerufen werden. Um die individualisierte Version (auch als Sicherheitsversion bezeichnet) für die Datei mit [**IWMDRMWriter::SetDRMAttribute**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmwriter-setdrmattribute) festzulegen, müssen Sie die [**\_ DRM-Eigenschaft IndividualizedVersion**](drm-individualizedversion.md) verwenden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

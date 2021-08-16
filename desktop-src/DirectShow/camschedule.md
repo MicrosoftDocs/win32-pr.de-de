@@ -1,7 +1,7 @@
 ---
-description: Die Klasse "camschedule" implementiert einen Planer für Referenzuhren.
+description: Die KLASSE CABSchedule implementiert einen Scheduler für Verweisuhren.
 ms.assetid: 67aacffb-b781-4323-8973-355a76821401
-title: Camschedule-Klasse (dsschedule. h)
+title: CABSchedule-Klasse (Dsschedule.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,48 +16,48 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1bef8ad07347284c53a3490c21032070788fa3ce
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d2236eb66086bb590892401cab052f39d81a41941db38d2a73dedd5edb4c53ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365693"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955409"
 ---
-# <a name="camschedule-class"></a>Camschedule-Klasse
+# <a name="camschedule-class"></a>WEBCAMSchedule-Klasse
 
-Die- `CAMSchedule` Klasse implementiert einen Planer für Referenzuhren.
+Die `CAMSchedule` -Klasse implementiert einen Scheduler für Verweisuhren.
 
 
 
-| Öffentliche Methoden                                             | BESCHREIBUNG                                                                          |
+| Öffentliche Methoden                                             | Beschreibung                                                                          |
 |------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| [**"Camschedule"**](camschedule-camschedule.md)             | Konstruktormethode.                                                                  |
-| [**~ Camschedule**](camschedule--camschedule.md)           | Dekonstruktormethode. Virtu.                                                          |
-| [**Getadviercount**](camschedule-getadvisecount.md)       | Ruft die Anzahl der ausstehenden Anforderungs Anforderungen ab.                                     |
-| [**Getnextadvictime**](camschedule-getnextadvisetime.md) | Ruft den Zeitpunkt der nächsten anforderungsanforderung ab.                                       |
-| [**Addadvisepacket**](camschedule-addadvisepacket.md)     | Fügt der Liste der ausstehenden Anforderungen eine anforderungsanforderung hinzu.                              |
-| [**Unadvise**](camschedule-unadvise.md)                   | Entfernt eine Benachrichtigungs Anforderung.                                                           |
-| [**Advise**](camschedule-advise.md)                       | Sendet alle Anforderungen, die für eine angegebene Zeit oder eine frühere Zeit geplant sind.          |
-| [**GetEvent**](camschedule-getevent.md)                   | Ruft ein Ereignis Handle ab, das verwendet wird, um eine Änderung in der nächsten Empfehlung zu signalisieren. |
+| [**CAMSchedule**](camschedule-camschedule.md)             | Konstruktormethode.                                                                  |
+| [**~WEBCAMSchedule**](camschedule--camschedule.md)           | Destruktormethode. Virtuellen.                                                          |
+| [**GetAdviseCount**](camschedule-getadvisecount.md)       | Ruft die Anzahl ausstehender Beratungsanforderungen ab.                                     |
+| [**GetNextAdviseTime**](camschedule-getnextadvisetime.md) | Ruft den Zeitpunkt der nächsten Empfehlungsanforderung ab.                                       |
+| [**AddAdvisePacket**](camschedule-addadvisepacket.md)     | Fügt der Liste der ausstehenden Anforderungen eine Empfehlungsanforderung hinzu.                              |
+| [**Unadvise**](camschedule-unadvise.md)                   | Entfernt eine Empfehlungsanforderung.                                                           |
+| [**Beraten**](camschedule-advise.md)                       | Verteilt alle Anforderungen, die für einen bestimmten Zeitraum oder früher geplant sind.          |
+| [**Getevent**](camschedule-getevent.md)                   | Ruft ein Ereignishandle ab, das verwendet wird, um eine Änderung im nächsten Empfehlungszeitpunkt zu signalisieren. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Hilfsobjekt verwaltet eine Liste von Anforderungs Anforderungen für eine Referenzuhr. Die [**cbasereferenceclock**](cbasereferenceclock.md) -Klasse verwendet diese, um Anforderungs Anforderungen zu planen. Uhren verwenden dieses Objekt wie folgt:
+Dieses Hilfsobjekt verwaltet eine Liste von Beratungsanforderungen für eine Referenzuhr. Die [**CBaseReferenceClock-Klasse**](cbasereferenceclock.md) verwendet sie, um Beratungsanforderungen zu planen. Uhren verwenden dieses Objekt wie folgt:
 
-1.  Die Uhr erstellt einen Arbeits Thread zur Handhabung der Planung.
-2.  Der Arbeits Thread ruft die " [**camschedule:: GetEvent**](camschedule-getevent.md) "-Methode auf, um ein Ereignis Handle aus dem Scheduler abzurufen. Er wartet auf dieses Ereignis, anfänglich mit einem unendlichen Timeout.
-3.  Zum Planen einer neuen Benachrichtigungs Anforderung Ruft die Uhr die " [**camschedule:: addadvisepacket**](camschedule-addadvisepacket.md) "-Methode auf. Eine Benachrichtigungs Anforderung kann ein-oder periodisch sein. Der Scheduler speichert die Liste der Anforderungen in der angegebenen Reihenfolge.
-4.  Wenn eine Anforderung am Anfang der Liste hinzugefügt wird, signalisiert der Planer das Ereignis. (Die Liste ist zuerst leer, sodass die erste Anforderung das Ereignis garantiert signalisiert.)
-5.  Wenn das Ereignis signalisiert wird, ruft der Arbeits Thread die Methode " [**camschedule:: Empfehlung**](camschedule-advise.md) " auf und gibt den aktuellen Verweis Zeitpunkt an. Wenn ausstehende Anforderungen abgelaufen sind, werden Sie vom Scheduler versendet.
-6.  Die Methode "Empfehlung" gibt den Zeitpunkt der nächsten Anforderung zurück. Der Arbeits Thread verwendet diesen Wert, um einen neuen Timeout Wert zu berechnen.
+1.  Die Uhr erstellt einen Arbeitsthread für die Planung.
+2.  Der Arbeitsthread ruft die [**METHODE CABSchedule::GetEvent**](camschedule-getevent.md) auf, um ein Ereignishandle vom Scheduler abzurufen. Es wartet auf dieses Ereignis, anfänglich mit einem unendlichen Time out.
+3.  Um eine neue Empfehlungsanforderung zu planen, ruft die Uhr die [**METHODE CABSchedule::AddAdvisePacket**](camschedule-addadvisepacket.md) auf. Eine Empfehlungsanfrage kann einmalig oder regelmäßig erfolgen. Der Scheduler speichert die Liste der Anforderungen in der Zeitreihenfolge.
+4.  Wenn am Ende der Liste eine Anforderung hinzugefügt wird, signalisiert der Scheduler das Ereignis. (Die Liste ist zunächst leer, sodass die erste Anforderung garantiert das Ereignis signalisiert.)
+5.  Wenn das Ereignis signalisiert wird, ruft der Arbeitsthread die [**METHODE CABSchedule::Advise**](camschedule-advise.md) auf und gibt die aktuelle Referenzzeit an. Wenn ausstehende Anforderungen abgelaufen sind, werden sie vom Planer gesendet.
+6.  Die Advise-Methode gibt den Zeitpunkt der nächsten Anforderung zurück. Der Arbeitsthread verwendet diesen Wert, um einen neuen Time out-Wert zu berechnen.
 7.  Die Schritte 2 6 werden unbegrenzt wiederholt.
-8.  Um den Arbeits Thread zu beenden, legt die Uhr ein internes Flag fest und signalisiert das Ereignis.
+8.  Um den Arbeitsthread zu beenden, legt die Uhr ein internes Flag fest und signalisiert das Ereignis.
 
-In Schritt 2 wird entweder das Ereignis signalisiert, oder der Warte Vorgang ist abgelaufen. Wenn das Ereignis signalisiert wird, bedeutet dies, dass am Anfang der Liste eine neue Anforderung hinzugefügt wurde. Der Arbeits Thread muss einen neuen Timeout Wert berechnen. Andererseits bedeutet dies, dass bei einem Timeout eine anforderungsanforderung ausgegeben wurde und verteilt werden muss. Der in Schritt 5 genannte Anrufe behandelt beide Fälle.
+In Schritt 2 wird entweder das Ereignis signalisiert, oder der Wartezeitsend tritt ein. Wenn das Ereignis signalisiert wird, bedeutet dies, dass am Ende der Liste eine neue Anforderung hinzugefügt wurde. Der Arbeitsthread muss einen neuen Time out-Wert berechnen. Andererseits bedeutet dies, dass eine Empfehlungsanforderung fällig ist und gesendet werden muss, wenn bei der Wartezeit ein Zeit überschritten wird. Der Aufruf von Advise in Schritt 5 behandelt beide Fälle.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ In Schritt 2 wird entweder das Ereignis signalisiert, oder der Warte Vorgang ist
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dsschedule. h (Include Streams. h)</dt> </dl>                                                                                |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Dsschedule.h (include Streams.h)</dt> </dl>                                                                                |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

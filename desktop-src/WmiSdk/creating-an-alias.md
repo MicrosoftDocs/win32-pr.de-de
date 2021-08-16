@@ -1,32 +1,32 @@
 ---
-description: Ein Alias in WMI ist ein symbolischer Verweis in einer Klasse oder einer Klasseninstanz an einer anderen Stelle in einer Managed Object Format Datei (MOF).
+description: Ein Alias in WMI ist ein symbolischer Verweis in einer Klasse oder einer Klasseninstanz, die sich an anderer Stelle in einer MOF-Datei (Managed Object Format) befindet.
 ms.assetid: bf4981dc-3aab-46c5-bf02-48132ccec8c2
 ms.tgt_platform: multiple
 title: Erstellen eines WMI-Alias
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0fdd538e113f227eac4980855ea0035e839b92fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 39a4709cba6ba1fa1790c80ac8d8f52f5fa2105207f0094ec3168f62ba0fcc43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343819"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117925621"
 ---
 # <a name="creating-a-wmi-alias"></a>Erstellen eines WMI-Alias
 
-Ein [*Alias*](gloss-a.md) in WMI ist ein symbolischer Verweis in einer Klasse oder einer Klasseninstanz an einer anderen Stelle in einer Managed Object Format Datei (MOF). Der MOF-Compiler verwendet Aliase, um Verweise zwischen Klassen und Instanzen herzustellen. Der Compiler löst Aliase zu den Klassen auf, auf die Sie verweisen, sodass Aliasnamen im kompilierten Code nicht verfügbar sind. Daher können Client Anwendungen nicht auf Klassen verweisen, die Aliase verwenden.
+Ein [*Alias*](gloss-a.md) in WMI ist ein symbolischer Verweis in einer Klasse oder einer Klasseninstanz, die sich an anderer Stelle in einer MOF-Datei (Managed Object Format) befindet. Der MOF-Compiler verwendet Aliase, um Verweise zwischen Klassen und Instanzen herzustellen. Der Compiler löst Aliase in die Klassen auf, auf die sie verweisen, sodass Aliasnamen im kompilierten Code nicht verfügbar sind. Daher können Clientanwendungen nicht auf Klassen verweisen, die Aliase verwenden.
 
 > [!Note]  
-> WMI unterstützt Forward-Verweise, aber keine zirkulären Aliase.
+> WMI unterstützt Vorwärtsverweisen, aber keine zirkulären Aliase.
 
  
 
-Ein Alias weist nur den Gültigkeitsbereich innerhalb der MOF-Datei auf, in der Sie den Alias deklarieren. Daher verwenden Sie in der Regel einen Alias als Verknüpfung zu einem langen Objekt Pfad.
+Ein Alias hat nur einen Bereich innerhalb der MOF-Datei, in der Sie den Alias deklarieren. Daher verwenden Sie in der Regel einen Alias als Verknüpfung mit einem langen Objektpfad.
 
 **So definieren Sie einen Alias**
 
-1.  Fügen Sie der-Instanz oder-Klassen Deklaration den Ausdruck "as $*Aliasname*" hinzu.
-2.  Aliasnamen folgen denselben Regeln wie Instanznamen und Klassennamen, mit dem Unterschied, dass Aliasnamen mit einem Dollarzeichen ($) beginnen müssen. Unterstriche können in einem Aliasnamen nach dem ersten Zeichen angezeigt werden.
+1.  Fügen Sie der Instanz- oder Klassendeklaration den Ausdruck "as $*aliasname"* hinzu.
+2.  Aliasnamen folgen den gleichen Regeln wie Instanz- und Klassennamen, außer dass Aliasnamen mit einem Dollarzeichen ($) beginnen müssen. Unterstriche können in einem Aliasnamen nach dem Anfangszeichen angezeigt werden.
 
 Im folgenden Codebeispiel wird beschrieben, wie ein Alias in einer Klassendefinition verwendet wird.
 
@@ -39,7 +39,7 @@ instance of MyClass as $MyInstanceAlias
 };
 ```
 
-In den folgenden Codebeispielen wird beschrieben, wie ein Alias als symbolischer Verweis auf einen Objekt Pfad verwendet wird. In diesen Beispielen werden zwei Klassen deklariert, um einen Datenträger zu beschreiben: die Disk-Klasse zum Angeben des Laufwerk Buchstabens und die DiskRef-Klasse, um den Datenträger Pfad anzugeben. Ein Alias ist für die Datenträger Klasseninstanz definiert. Dieser Alias wird als Wert für die Eigenschaft pathto Disk in der DiskRef-Instanz verwendet.
+In den folgenden Codebeispielen wird beschrieben, wie ein Alias als symbolischer Verweis auf einen Objektpfad verwendet wird. In diesen Beispielen werden zwei Klassen deklariert, um einen Datenträger zu beschreiben: die Disk-Klasse zum Angeben des Laufwerkbuchstabens und die DiskRef-Klasse zum Angeben des Datenträgerpfads. Ein Alias wird für die Disk-Klasseninstanz definiert. Dieser Alias wird als Wert für die PathToDisk-Eigenschaft in der DiskRef-Instanz verwendet.
 
 ``` syntax
 class Disk {

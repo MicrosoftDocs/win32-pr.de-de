@@ -1,26 +1,26 @@
 ---
-title: VML-Fokus Attribut
-description: VML-Fokus Attribut
+title: VML-Fokusattribut
+description: VML-Fokusattribut
 ms.assetid: 9ed52203-4142-47cd-851f-74230aac934d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 062b2900c2f980c9a1433e5e790a34d463def9be
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b60eeb9ff379c8006cbb9068b6b78c8f24490ecf2fd15573b5b224a9ee1208ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039585"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119057868"
 ---
-# <a name="vml-focus-attribute"></a>VML-Fokus Attribut
+# <a name="vml-focus-attribute"></a>VML-Fokusattribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den Mittelpunkt einer linearen Farbverlaufsfüllung. Lese-/Schreibzugriff. **Vgbruchteile**.
+Definiert den Mittelpunkt einer linearen Farbverlaufsfüllung. Lese-/Schreibzugriff. **VgFraction**.
 
 **Gilt für**
 
@@ -28,23 +28,23 @@ Definiert den Mittelpunkt einer linearen Farbverlaufsfüllung. Lese-/Schreibzugr
 
 **Tagsyntax**
 
-<v: *Element* Fokus = " *Ausdruck* " >
+<v: *element* focus="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Focus = "*Ausdruck*"
+*element* .focus="*expression*"
 
-*Ausdruck* = *Element*. Fokus
+*expression* = *Element*.focus
 
 **Anmerkungen**
 
-Definiert die Startposition der Mitte der Mischung. Die Werte reichen von 100% bis-100%. Der Standardwert ist 0. Ein Wert von 100% (oder-100%) Verschiebt den Fokus so, dass die Richtung der Blend umkehren wird (sodass die **Farbe** und der **color2** umkehren). Mit einem Wert von 50% wird die Mischung geändert, sodass sich die **Farbe** an beiden Enden und der **color2** -Wert in der Mitte befindet. Mit dem Wert-50% wird die Mischung geändert, sodass sich **color2** an beiden Enden und die **Farbe** in der Mitte befindet.
+Definiert die zentrierte Anfangsposition der Mischung. Die Werte liegen zwischen 100 % und -100 %. Der Standardwert ist 0. Ein Wert von 100 % (oder -100 %) verschiebt den Fokus so, dass die Richtung der Mischung umgekehrt wird (in der Folge wird **Color** und **Color2** umgekehrt). Ein Wert von 50 % ändert die Mischung, sodass **Sich Color** an beiden Enden und **Color2** in der Mitte befindet. Ein Wert von -50 % ändert die Mischung, sodass **Color2** an beiden Enden und **Color** sich in der Mitte befindet.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Der Farbverlaufs Fokus der Füllung wird so verschoben, dass Rot (**Farbe**) ein Band in der Mitte der Form ist und dass der obere und untere Rand blau (**color2**) sind.
+Der Farbverlaufsfokus der Füllung wird so verschoben, dass rot (**Farbe**) ein Band in der Mitte der Form ist und dass der obere und untere Rand blau ist (**Color2**).
 
 
 ```HTML
@@ -60,6 +60,6 @@ Der Farbverlaufs Fokus der Füllung wird so verschoben, dass Rot (**Farbe**) ein
 
 
 
- 
+ 
 
- 
+ 

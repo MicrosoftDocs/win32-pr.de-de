@@ -1,6 +1,6 @@
 ---
-title: VML-OLEIcon-Attribut
-description: VML-OLEIcon-Attribut
+title: VML OLEIcon-Attribut
+description: VML OLEIcon-Attribut
 ms.assetid: 52a664c6-7424-4d1d-929b-fe9fb3fefb88
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119334220"
 ---
-# <a name="vml-oleicon-attribute"></a>VML-OLEIcon-Attribut
+# <a name="vml-oleicon-attribute"></a>VML OLEIcon-Attribut
 
 In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 

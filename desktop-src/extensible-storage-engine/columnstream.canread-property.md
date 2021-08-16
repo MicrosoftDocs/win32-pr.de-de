@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der columnstream. CanRead-Eigenschaft.
-title: Columnstream. CanRead (Eigenschaft)
+description: Weitere Informationen zur ColumnStream.CanRead-Eigenschaft
+title: ColumnStream.CanRead-Eigenschaft
 TOCTitle: 'CanRead property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.ColumnStream.CanRead
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.columnstream.canread(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0f38621d96cc3401c16108078a8e0093e2392066
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e2d2b22c201a32a8b9edd591ca96a88b7ddf2206cccf7f9ffbdad62c1c3d46da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117717051"
 ---
-# <a name="columnstreamcanread-property"></a>Columnstream. CanRead (Eigenschaft)
+# <a name="columnstreamcanread-property"></a>ColumnStream.CanRead-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob der Stream Lesevorgänge unterstützt
+Ruft einen Wert ab, der angibt, ob der Stream Lesen unterstützt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public override bool CanRead { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Columnstream-Klasse](./columnstream-class.md)
+[ColumnStream-Klasse](./columnstream-class.md)
 
-[Columnstream-Member](./columnstream-members.md)
+[ColumnStream-Member](./columnstream-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

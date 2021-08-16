@@ -1,7 +1,7 @@
 ---
-description: Die Seek-Methode legt die Anfangs-und Endposition des Streams fest.
+description: Die Seek-Methode legt die Start- und Stopppositionen des Streams fest.
 ms.assetid: d84476f5-688c-429d-a51b-7020a6316e35
-title: Cpullpin. Seek-Methode (pullpin. h)
+title: CPullPin.Seek-Methode (Pullpin.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6f1a82ec549b5ceb888acc194a7abc2cd3eace47
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 65ea4deddd000d1064adf8b8caf5a636eed87105856d506191d677e70978d096
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362045"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953989"
 ---
-# <a name="cpullpinseek-method"></a>Cpullpin. Seek-Methode
+# <a name="cpullpinseek-method"></a>CPullPin.Seek-Methode
 
-Die `Seek` -Methode legt die Anfangs-und Endposition des Streams fest.
+Die `Seek` -Methode legt die Start- und Stopppositionen des Streams fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,31 +43,31 @@ HRESULT Seek(
 
 <dl> <dt>
 
-*tSTART* 
+*tStart* 
 </dt> <dd>
 
-Gibt die Startposition in Bytes multipliziert mit 10 Millionen an.
+Gibt die Startposition in Bytes multipliziert mit 10.000.000 an.
 
 </dd> <dt>
 
-*tstopps* 
+*tStop* 
 </dt> <dd>
 
-Gibt die Position des Stopps in Bytes multipliziert mit 10 Millionen an.
+Gibt die Stoppposition in Bytes multipliziert mit 10.000.000 an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK zurück, wenn die Methode erfolgreich ist, andernfalls einen Fehlercode.
+Gibt S \_ OK zurück, wenn die Methode erfolgreich ist, andernfalls ein Fehlercode.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Arbeits Thread ausgeführt wird, hält die Methode den Thread an, leert das Filter Diagramm und setzt den Thread fort. Der Thread beginnt mit dem Abrufen von Daten von der neuen Startposition. Andernfalls werden die neuen Positionswerte immer dann wirksam, wenn der Thread gestartet wird.
+Wenn der Arbeitsthread ausgeführt wird, hält die Methode den Thread an, leert das Filterdiagramm und setzt den Thread wieder auf. Der Thread beginnt mit dem Pullen von Daten von der neuen Startposition. Andernfalls werden die neuen Positionswerte wirksam, sobald der Thread gestartet wird.
 
-Positionen sind relativ zum Anfang der ursprünglichen Quelle. Multiplizieren Sie die gewünschten Byte Offsets um die Konstanten Einheiten, die in der Basisklassen Bibliothek als 10 Millionen definiert sind.
+Positionen sind relativ zum Anfang der ursprünglichen Quelle. Multiplizieren Sie die gewünschten Byteoffsets mit der Konstanten UNITS, die in der Basisklassenbibliothek als 10.000.000 definiert ist.
 
-Wenn die PIN zum ersten Mal eine Verbindung herstellt, werden die Start-und Startpositionen standardmäßig auf den Anfang und das Ende des Streams eingestellt.
+Wenn der Pin zum ersten Mal eine Verbindung herstellt, werden die Stopp- und Startpositionen standardmäßig auf den Anfang und das Ende des Streams festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,16 +75,16 @@ Wenn die PIN zum ersten Mal eine Verbindung herstellt, werden die Start-und Star
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Pullpin. h</dt> </dl>                                                                                                       |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pullpin.h</dt> </dl>                                                                                                       |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cpullpin-Klasse**](cpullpin.md)
+[**CPullPin-Klasse**](cpullpin.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Methode ' iwmdrmdevice ' getsecureclockchallenge
-description: Die getsecureclockchallenge-Methode ruft das Challenge-Ergebnis der sicheren Uhr ab.
+title: IWMDRMDevice GetSecureClockChallenge-Methode
+description: Die GetSecureClockChallenge-Methode ruft das Ergebnis der Herausforderung der sicheren Uhr ab.
 ms.assetid: cbef160c-91a3-47d1-9d7a-e649ce2c77ff
 keywords:
-- Getsecureclockchallenge-Methode, Windows Media Device Manager
-- Getsecureclockchallenge-Methode Windows Media Device Manager, iwmdrmdevice-Schnittstelle
-- Iwmdrmdevice-Schnittstelle Windows Media Device Manager, getsecureclockchallenge-Methode
+- GetSecureClockCuhrge-Methode windows Media Geräte-Manager
+- GetSecureClockChallenge-Methode windows Media Geräte-Manager , IWMDRMDevice-Schnittstelle
+- IWMDRMDevice interface windows Media Geräte-Manager , GetSecureClockChallenge-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d7e57165f75a23d13d847e028deb69de383e2855
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: eaed21ddffb9c2001c3b57d32d34ac9106ede7cecaff723cb95d8cee1c428fb5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106353790"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119957250"
 ---
-# <a name="iwmdrmdevicegetsecureclockchallenge-method"></a>Iwmdrmdevice:: getsecureclockchallenge-Methode
+# <a name="iwmdrmdevicegetsecureclockchallenge-method"></a>IWMDRMDevice::GetSecureClockChallenge-Methode
 
-Die **getsecureclockchallenge** -Methode ruft das Challenge-Ergebnis der sicheren Uhr ab.
+Die **GetSecureClockChallenge-Methode** ruft das Ergebnis der Herausforderung der sicheren Uhr ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ HRESULT GetSecureClockChallenge(
 
 <dl> <dt>
 
-*ppbchallenge* \[ vorgenommen\]
+*ppbC wiege* \[ out\]
 </dt> <dd>
 
-Das Abfrageergebnis wurde abgerufen.
+Abgerufenes Ergebnis der Herausforderung.
 
 </dd> <dt>
 
-*pcbchallenge* \[ vorgenommen\]
+*beiC wiege* \[ out\]
 </dt> <dd>
 
 Größe des Challenge-Ergebnisses in Bytes.
@@ -60,7 +60,7 @@ Größe des Challenge-Ergebnisses in Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -78,19 +78,19 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmddrmsp. idl</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Mssachlp. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>WMDDRMSP.idl</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Mssachlp.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Getsecureclock**](iwmdrmdevice-getsecureclock.md)
+[**GetSecureClock**](iwmdrmdevice-getsecureclock.md)
 </dt> <dt>
 
-[**Iwmdrmdevice-Schnittstelle**](iwmdrmdevice.md)
+[**IWMDRMDevice-Schnittstelle**](iwmdrmdevice.md)
 </dt> </dl>
 
  

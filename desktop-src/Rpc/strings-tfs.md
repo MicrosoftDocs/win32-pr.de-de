@@ -20,7 +20,7 @@ Es gibt drei Zeichenfolgentypen, die durch die folgenden endenden Unterzeichenfo
 | type                  | TEILZEICHENFOLGE |
 |-----------------------|-----------|
 | Zeichenfolge      | Cstring   |
-| Breitzeichenzeichenfolge | WSTRING   |
+| Zeichenfolge mit Breitzeichen | WSTRING   |
 | Zeichenfolgen-orientierte Struktur | SSTRING   |
 
 
@@ -54,7 +54,7 @@ conformance_description<>
 
 Das erste Format beschreibt allgemeine Zeichenfolgen, z. B. ein **\[ \] Zeichenfolgen-Char-Argument.** \* Eine konforme Zeichenfolge mit angepasster Größe hat die zweite Beschreibung.
 
-Die Konformitätsbeschreibung ist<> Korrelationsdeskriptor und hat 4 oder 6 Bytes, je nachdem, ob \_ [**/robust**](/windows/desktop/Midl/-robust) verwendet wird.
+Die Konformitätsbeschreibung ist<> Korrelationsdeskriptor und hat je nachdem, ob \_ [**/robust**](/windows/desktop/Midl/-robust) verwendet wird, 4 oder 6 Bytes.
 
 ### <a name="structure-strings"></a>Strukturzeichenfolgen
 
@@ -82,7 +82,7 @@ FC_STRING_SIZED FC_PAD
 conformance_description<>
 ```
 
-Letztere Beschreibung ist für eine Zeichenfolgenstruktur mit Zeichenfolgengröße.
+Die zweite Beschreibung ist für eine Zeichenfolgenstruktur mit Zeichenfolgengröße.
 
  
 

@@ -1,9 +1,9 @@
 ---
 title: g_wszWMACOriginalWaveFormat (Wmcodecdsp.h)
-description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | g_wszWMACOriginalWaveFormat (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | g_wszWMACOriginalWaveFormat (Wmcodecdsp.h)
 ms.assetid: 5d4f727c-c58c-4d66-8140-469cb24b3b0e
 keywords:
-- g_wszWMACOriginalWaveFormat Windows-Medienformat
+- g_wszWMACOriginalWaveFormat Windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119447370"
 ---
 # <a name="g_wszwmacoriginalwaveformat"></a>g \_ wszWMACOriginalWaveFormat
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und [DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 

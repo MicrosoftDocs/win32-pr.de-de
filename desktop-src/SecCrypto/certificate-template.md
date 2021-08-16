@@ -1,5 +1,5 @@
 ---
-description: Gibt die Dem Zertifikat zugeordnete Vorlage zurück.
+description: Gibt die Vorlage zurück, die dem Zertifikat zugeordnet ist.
 ms.assetid: 84fbf984-b932-4794-a939-de01e529d891
 title: ICertificate2::Template-Methode
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "117771086"
 ---
 # <a name="icertificate2template-method"></a>ICertificate2::Template-Methode
 
-\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
+\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
 Die **Template-Methode** gibt die Vorlage zurück, die dem Zertifikat zugeordnet ist. Diese Methode wird in CAPICOM 2.0 eingeführt.
 

@@ -1,43 +1,43 @@
 ---
-title: EMP-Tag
-description: EMP-Tag
+title: Emp-Tag
+description: Emp-Tag
 ms.assetid: b0ba1315-cb7c-403f-ad32-65b899eb37bb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c28a6e34952c62fe698d9851a7f24d49e94c8cf1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7669544bf20e8ad734276fbd55b3770d5a05ca59cb6d5ad45d6103ace9e0ca71
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206840"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963050"
 ---
-# <a name="emp-tag"></a>EMP-Tag
+# <a name="emp-tag"></a>Emp-Tag
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Hebt das nächste gesprochene Wort auf. Dieses Tag muss dem Wort unmittelbar vorangestellt sein.
+Hebt das nächste gesprochene Wort hervor. Dieses Tag muss dem Wort unmittelbar vorangestellt werden.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-**\\EMP\\**
+**\\Emp\\**
 
 </dd> </dl>
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Dieses Tag wird nur für die von TTS generierte Ausgabe unterstützt. Der Wertebereich für den-Parameter kann abhängig von der installierten TTS-Engine variieren.
+Dieses Tag wird nur für TTS-generierte Ausgaben unterstützt. Der Wertebereich für den Parameter kann je nach installierter TTS-Engine variieren.
 
- 
+ 
 
- 
+ 
 
 
 

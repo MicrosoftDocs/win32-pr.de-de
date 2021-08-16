@@ -1,6 +1,6 @@
 ---
 title: ID2D1Geometry Widen-Methoden
-description: Breitet die Geometrie um den angegebenen Strich und schreibt das Ergebnis in eine ID2D1SimplifiedGeometrySink.
+description: Breitet die Geometrie um den angegebenen Strich und schreibt das Ergebnis in id2D1SimplifiedGeometrySink.
 ms.assetid: c951ab85-7980-41e3-95c4-291d2fb046c8
 keywords:
 - Widen-Methoden Direct2D
@@ -28,7 +28,7 @@ Breitet die Geometrie um den angegebenen Strich und schreibt das Ergebnis in ein
 
 
 
-| Methode                                                                                                                                                                                                          | BESCHREIBUNG                                                                                                                                                                                                                                              |
+| Methode                                                                                                                                                                                                          | Beschreibung                                                                                                                                                                                                                                              |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Widen(FLOAT,ID2D1StrokeStyle \* ,D2D1 \_ MATRIX \_ 3X2 \_ F \* ,ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-widen(float_id2d1strokestyle_constd2d1_matrix_3x2_f__id2d1simplifiedgeometrysink))             | Breitet die Geometrie um den angegebenen Strich und schreibt das Ergebnis in eine [**ID2D1SimplifiedGeometrySink,**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) nachdem sie von der angegebenen Matrix transformiert und mithilfe der Standardtoleranz vereinfacht wurde.<br/>   |
 | [**Widen(FLOAT,ID2D1StrokeStyle \* ,D2D1 \_ MATRIX \_ 3X2 \_ F&,ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-widen(float_id2d1strokestyle_constd2d1_matrix_3x2_f_id2d1simplifiedgeometrysink))              | Breitet die Geometrie um den angegebenen Strich und schreibt das Ergebnis in eine [**ID2D1SimplifiedGeometrySink,**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) nachdem sie von der angegebenen Matrix transformiert und mithilfe der Standardtoleranz vereinfacht wurde.<br/>   |
@@ -39,7 +39,7 @@ Breitet die Geometrie um den angegebenen Strich und schreibt das Ergebnis in ein
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Codebeispiel zeigt, wie **Widen** verwendet wird, um die Geometrie um den angegebenen Strich zu verbreitern und das Ergebnis dann in ein [**ID2D1SimplifiedGeometrySink-Objekt zu**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) schreiben.
+Das folgende Codebeispiel zeigt, wie **Widen** verwendet wird, um die Geometrie um den angegebenen Strich zu erhöhen und das Ergebnis dann in ein [**ID2D1SimplifiedGeometrySink-Objekt zu**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) schreiben.
 
 
 ```C++

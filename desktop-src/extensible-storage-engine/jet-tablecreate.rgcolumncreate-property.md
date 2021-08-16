@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_TABLECREATE.rgcolumncreate-Eigenschaft.'
+description: 'Weitere Informationen zu: JET_TABLECREATE.rgcolumncreate-Eigenschaft'
 title: JET_TABLECREATE.rgcolumncreate-Eigenschaft
 TOCTitle: 'rgcolumncreate property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_TABLECREATE.rgcolumncreate
@@ -35,7 +35,7 @@ ms.locfileid: "119472860"
 ---
 # <a name="jet_tablecreatergcolumncreate-property"></a>JET_TABLECREATE.rgcolumncreate-Eigenschaft
 
-Ruft ein Array von Spaltenerstellungsinformationen vom Typ [JET_COLUMNCREATE.](./jet-columncreate-class.md)
+Ruft ein Array von Spaltenerstellungsinformationen vom Typ JET_COLUMNCREATE ab oder legt dieses [fest.](./jet-columncreate-class.md)
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -70,6 +70,6 @@ Typ: \[\]
 
 [JET_TABLECREATE-Klasse](./jet-tablecreate-class.md)
 
-[JET_TABLECREATE Mitglieder](./jet-tablecreate-members.md)
+[JET_TABLECREATE-Member](./jet-tablecreate-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

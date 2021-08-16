@@ -1,5 +1,5 @@
 ---
-description: 'In diesem Abschnitt wird erläutert, wie sie die folgenden Aufgaben ausführen:'
+description: 'In diesem Abschnitt wird erläutert, wie die folgenden Aufgaben ausgeführt werden:'
 ms.assetid: 7236489c-d3b0-4f1a-b452-e71b70ad7996
 title: Verwenden von Metadateien
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "119468260"
 ---
 # <a name="using-metafiles"></a>Verwenden von Metadateien
 
-In diesem Abschnitt wird erläutert, wie sie die folgenden Aufgaben ausführen:
+In diesem Abschnitt wird erläutert, wie die folgenden Aufgaben ausgeführt werden:
 
 -   [Erstellen einer erweiterten Metadatei](creating-an-enhanced-metafile.md)
 -   [Anzeigen eines Bilds und Speichern in einer erweiterten Metadatei](displaying-a-picture-and-storing-it-in-an-enhanced-metafile.md)

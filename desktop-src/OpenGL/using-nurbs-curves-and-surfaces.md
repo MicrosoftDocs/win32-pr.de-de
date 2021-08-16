@@ -18,7 +18,7 @@ ms.locfileid: "118932770"
 ---
 # <a name="using-nurbs-curves-and-surfaces"></a>Verwenden von NURBS-Kurven und -Oberflächen
 
-NurBS-Funktionen (Non-Uniform Rational B-Spline) bieten allgemeine und leistungsstarke Beschreibungen von Kurven und Oberflächen in zwei und drei Dimensionen und konvertieren die Kurven und Oberflächen in OpenGL-Auswertungen. Die NURBS-Funktionen können Geometrie in vielen computergestützten, maschinellen Entwurfssystemen darstellen. Sie können Kurven und Oberflächen in einer Vielzahl von Stilen rendern, und sie können automatisch adaptive Unterteilungen verarbeiten, die die Domäne in kleinere Dreiecke in Regionen mit hoher Krümmung und in der Nähe von Kanten zusammenfassen. NURBS-Funktionen fallen in die folgenden Kategorien.
+NurBS-Funktionen (Non-Uniform Rational B-Spline) bieten allgemeine und leistungsstarke Beschreibungen von Kurven und Oberflächen in zwei und drei Dimensionen und konvertieren die Kurven und Oberflächen in OpenGL-Auswertungen. Die NURBS-Funktionen können Geometrie in vielen computergestützten, maschinellen Entwurfssystemen darstellen. Sie können Kurven und Oberflächen in einer Vielzahl von Stilen rendern, und sie können automatisch adaptive Unterteilungen verarbeiten, die die Domäne in kleinere Dreiecke in Regionen mit hoher Krümmung und in der Nähe von Eckenrändern mosaikieren. NURBS-Funktionen fallen in die folgenden Kategorien.
 
 Verwenden Sie zum Verwalten eines NURBS-Objekts:
 

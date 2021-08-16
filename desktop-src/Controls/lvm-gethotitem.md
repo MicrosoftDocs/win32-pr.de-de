@@ -3,7 +3,7 @@ title: LVM_GETHOTITEM (Commctrl.h)
 description: Ruft den Index des heißen Elements ab. Sie können diese Nachricht explizit senden oder das ListView \_ GetHotItem-Makro verwenden.
 ms.assetid: f80189da-6c8b-4faf-925a-0c33fedf8c4e
 keywords:
-- LVM_GETHOTITEM message Windows Controls
+- LVM_GETHOTITEM von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:

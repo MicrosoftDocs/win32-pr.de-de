@@ -1,23 +1,23 @@
 ---
-title: Code Beispiel für Windows-Rendering-Kontext
-description: Das folgende Codebeispiel zeigt, wie der glx-renderingkontextcode im vorherigen Abschnitt bei der Portierung zu Windows aussieht.
+title: Windows Beispiel für Renderingkontextcode
+description: Im folgenden Codebeispiel wird veranschaulicht, wie der GLX-Renderingkontextcode im vorherigen Abschnitt aussieht, wenn er zu einem Windows.
 ms.assetid: 12992faa-eb64-4a21-8015-3c73c2914189
 keywords:
-- renderingkontexte
-- Portieren auf OpenGL, renderingkontexte
-- OpenGL-portieren, Rendern von Kontexten
+- Renderingkontexte
+- Portieren zu OpenGL, Rendern von Kontexten
+- OpenGL-Portierung, Renderingkontexte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ca0423f7458538f903a339f2f82dbff1c86c0626
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9693b140083210ce0865b18463f4595c2f1fc731c8fc1d837f61342ede50b9d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340199"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117794693"
 ---
-# <a name="windows-rendering-context-code-sample"></a>Code Beispiel für Windows-Rendering-Kontext
+# <a name="windows-rendering-context-code-sample"></a>Windows Beispiel für Renderingkontextcode
 
-Das folgende Codebeispiel zeigt, wie der glx-renderingkontextcode im vorherigen Abschnitt bei der Portierung zu Windows aussieht.
+Im folgenden Codebeispiel wird veranschaulicht, wie der GLX-Renderingkontextcode im vorherigen Abschnitt aussieht, wenn er zu einem Windows.
 
 
 ```C++
@@ -69,9 +69,9 @@ break;
 
 
 
- 
+ 
 
- 
+ 
 
 
 

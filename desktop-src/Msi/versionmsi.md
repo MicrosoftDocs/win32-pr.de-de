@@ -1,23 +1,23 @@
 ---
-description: Der Installer legt die versionmsi-Eigenschaft auf die-Version fest, die während der Installation von Windows Installer ausgeführt wird.
+description: Das Installationsprogramm legt die VersionMsi-Eigenschaft auf die Version von Windows Installer fest, der während der Installation ausgeführt wird.
 ms.assetid: f4d00308-db97-4c9d-901b-3ff0feeedea0
-title: Versionmsi (Eigenschaft)
+title: VersionMsi-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6066c5aa482c1ab0d67a5b59684aa873971e0378
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d1c2331dc9dc3de24b0e302ac652096f62f60fb48d6d51581a1f0f220bc12e3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356339"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117804018"
 ---
-# <a name="versionmsi-property"></a>Versionmsi (Eigenschaft)
+# <a name="versionmsi-property"></a>VersionMsi-Eigenschaft
 
-Der Installer legt die **versionmsi** -Eigenschaft auf die-Version fest, die während der Installation von Windows Installer ausgeführt wird.
+Das Installationsprogramm legt die **VersionMsi-Eigenschaft** auf die Version von Windows Installer fest, der während der Installation ausgeführt wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [veröffentlichte Versionen von Windows Installer](released-versions-of-windows-installer.md).
+Weitere Informationen finden Sie unter [Veröffentlichte Versionen von Windows Installer.](released-versions-of-windows-installer.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -25,7 +25,7 @@ Weitere Informationen finden Sie unter [veröffentlichte Versionen von Windows I
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind.<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installer auf Windows Server 2003 oder Windows XP Finden Sie unter Windows Installer Run-Time Requirements (Anforderungen für den [Windows Installer)](windows-installer-portal.md) Informationen zu den mindestens erforderlichen Windows Service Packs, die von einer Windows Installer-Version benötigt werden.<br/> |
 
 
 

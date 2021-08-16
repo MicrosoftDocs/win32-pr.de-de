@@ -13,13 +13,13 @@ ms.locfileid: "118969599"
 ---
 # <a name="windows-shell-libraries-in-windows"></a>Windows Shellbibliotheken in Windows
 
-In diesem Thema wird die Einführung von Bibliotheken für Windows 7 und höher beschrieben. Bibliotheken sind ein Windows Shell-Feature. Um auf Windows Shell-Funktionalität wie Bibliotheken zugreifen zu können, müssen Drittanbieter von Windows Search-Anwendungen zunächst einen Shell-Datenspeicher implementieren. Weitere Informationen finden Sie unter [Implementieren der grundlegenden Ordnerobjektschnittstellen.](/previous-versions/windows/desktop/legacy/cc144093(v=vs.85))
+In diesem Thema wird die Einführung von Bibliotheken für Windows 7 und höher beschrieben. Bibliotheken sind ein Windows Shell-Feature. Um auf Windows Shell-Funktionalität wie Bibliotheken zuzugreifen, müssen Drittanbieter von Windows Search-Anwendungen zunächst einen Shell-Datenspeicher implementieren. Weitere Informationen finden Sie unter [Implementieren der grundlegenden Ordnerobjektschnittstellen.](/previous-versions/windows/desktop/legacy/cc144093(v=vs.85))
 
 Dieses Thema ist wie folgt organisiert:
 
 - [Libraries](#libraries)
   - [Einstiegspunkte für Benutzerdaten](#user-data-entry-points)
-  - [Ordnersammlungen](#collections-of-folders)
+  - [Sammlungen von Ordnern](#collections-of-folders)
   - [Unterstützte Ordner in Bibliotheken](#supported-folders-in-libraries)
   - [Storage gesichert](#storage-backed)
   - [Nicht-Dateisystem-Shellcontainer](#non-file-system-shell-containers)
@@ -36,15 +36,15 @@ Standardbibliotheken (z. **B. Eigene Dokumente**, **Meine Bilder** usw.) entspre
 
 ### <a name="collections-of-folders"></a>Ordnersammlungen
 
-Bibliotheken sind benutzerdefinierte Inhaltssammlungen. Windows Durchsucht indizes unterstützte Ordner, wenn sie in Bibliotheken enthalten sind. Dies ermöglicht die sofortige Suche und eigenschaftenbasierte Stapelanordnungsansichten in Bibliotheken.
+Bibliotheken sind benutzerdefinierte Inhaltssammlungen. Windows Suchindizes unterstützen Ordner, wenn sie in Bibliotheken enthalten sind. Dies ermöglicht die sofortige Suche und eigenschaftenbasierte Stapelanordnungsansichten in Bibliotheken.
 
 ### <a name="supported-folders-in-libraries"></a>Unterstützte Ordner in Bibliotheken
 
-Damit Ordner in Bibliotheken unterstützt werden können, müssen sie auf dem lokalen Computer indizierbar und entweder auf einem Remotecomputer Windows Computers oder auf einem Server mit Dateien indiziert sein, die von Windows Search indiziert werden.
+Damit Ordner in Bibliotheken unterstützt werden können, müssen sie auf dem lokalen Computer indizierbar und entweder auf einem Remotecomputer Windows Oder auf einem Server mit Dateien indiziert sein, die von Windows Search indiziert werden.
 
 Das Hinzufügen nicht unterstützter Ordner durch Benutzer im Dialogfeld Windows Bibliotheksverwaltung wird blockiert. Wenn nicht indizierte Remoteordner mithilfe der [IShellLibrary-API](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishelllibrary) zu einer Bibliothek hinzugefügt werden, wird die Bibliotheksbenutzeroberfläche **Tresor Modus** zurückgesetzt. In **Tresor Modus** werden Features wie eigenschaftenbasierte Stapelanordnungsansichten, Filtervorschläge und Die Unterstützung der **Startmenüsuche** aus der betroffenen Bibliothek entfernt.
 
-In der folgenden Tabelle werden ordner aufgelistet, die in Bibliotheken mithilfe des Dialogfelds Windows-Explorer-Bibliotheksverwaltung enthalten sind, sowie Ordner, die im **Tresor-Modus** nicht unterstützt werden:
+In der folgenden Tabelle werden ordner aufgelistet, die in Bibliotheken mithilfe des Dialogfelds Windows Explorer-Bibliotheksverwaltung enthalten sind, sowie Ordner, die im **Tresor-Modus** nicht unterstützt werden:
 
 | Unterstützte Ordner                                                                                                                            | Nicht unterstützte Ordner                                                                                     |
 |----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
@@ -72,7 +72,7 @@ Bibliotheksbeschreibungsdateien sind XML-Dateien mit der Dateinamenerweiterung .
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[suche nach Windows 7](./-search-3x-wds-overview.md)
+[Windows 7 Suche](./-search-3x-wds-overview.md)
 
 [Neu für Windows 7-Suche](new-for-windows-7-search.md)
 

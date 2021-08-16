@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 9212528bec454a8d349c6249f851c3b021dceb00
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ef36ef0d48dc3e6d94abe15c4b37e1843130a6d6da1b1e6e6c543c551c850422
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118801478"
 ---
 # <a name="id3dxprtcompbuffergetnumchannels-method"></a>ID3DXPRTCompBuffer::GetNumChannels-Methode
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Gibt die Anzahl der Farbkanäle zurück, die im Arbeitsspeicher zum Speichern von Beispielen verwendet werden. Der Wert ist in der Regel entweder 1, um Leuchtwerte darzustellen, oder 3, um RGB-Werte darzustellen.
+Gibt die Anzahl der Farbkanäle zurück, die im Arbeitsspeicher zum Speichern von Beispielen verwendet werden. Der Wert ist im Allgemeinen entweder 1, um Leuchtwerte darzustellen, oder 3, um RGB-Werte darzustellen.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -50,7 +50,7 @@ Gibt die Anzahl der Farbkanäle zurück, die im Arbeitsspeicher zum Speichern vo
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

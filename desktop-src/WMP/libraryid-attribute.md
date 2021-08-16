@@ -3,7 +3,7 @@ title: LibraryID-Attribut
 description: Das LibraryID-Attribut ist der Bezeichner der Bibliothek, zu der das Element gehört.
 ms.assetid: 680d9374-8729-4258-8672-b4b93b65e20a
 keywords:
-- Windows Media Player des LibraryID-Attributs
+- LibraryID-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -32,9 +32,9 @@ Das **LibraryID-Attribut** ist der Bezeichner der Bibliothek, zu der das Element
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Medienelement kann zur lokalen Bibliothek des aktuellen Benutzers gehören oder zu einer Bibliothek gehören, die von einem anderen Benutzer im Heimnetzwerk oder im Internet zur Verfügung gestellt wurde.
+Ein Medienelement kann zur lokalen Bibliothek des aktuellen Benutzers oder zu einer Bibliothek gehören, die von einem anderen Benutzer im Heimnetzwerk oder im Internet zur Verfügung gestellt wurde.
 
-Der Wert dieses Attributs entspricht dem Wert, der von der [**IWMPLibrary2::getItemInfo-Methode**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmplibrary-get_name) zurückgegeben wird.
+Der Wert dieses Attributs ist identisch mit dem Wert, der von der [**IWMPLibrary2::getItemInfo-Methode zurückgegeben**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmplibrary-get_name) wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,7 +50,7 @@ Der Wert dieses Attributs entspricht dem Wert, der von der [**IWMPLibrary2::getI
 
 <dl> <dt>
 
-[**Attributverweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

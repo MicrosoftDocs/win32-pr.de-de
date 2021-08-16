@@ -1,11 +1,11 @@
 ---
-title: Methode zum Konfigurieren von ivmserialport (vpccominterfaces. h)
+title: IVMSerialPort Configure-Methode (VPCCOMInterfaces.h)
 description: Konfiguriert den seriellen Anschluss.
 ms.assetid: fee2e373-8e7c-4f1d-84d0-f0f187a41e9f
 keywords:
-- Konfigurieren des virtuellen Computers für die Methode
-- Konfigurieren Sie die Methode Virtual PC, ivmserialport Interface.
-- Ivmserialport Interface Virtual PC, Methode konfigurieren
+- Konfigurieren der Methode "Virtueller PC"
+- Konfigurieren der Methode Virtual PC, IVMSerialPort-Schnittstelle
+- IVMSerialPort-Schnittstelle Virtueller PC, Methode konfigurieren
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c99440263dbf52282b6f3c2756ff7dd76151ff73
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e6e67d84239f7b672b5b8c47346d1dde73de6a35c1e99a3ba231b8425fe8b7d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136623"
 ---
-# <a name="ivmserialportconfigure-method"></a>Ivmserialport:: Configure-Methode
+# <a name="ivmserialportconfigure-method"></a>IVMSerialPort::Configure-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Konfiguriert den seriellen Anschluss.
 
@@ -46,24 +46,24 @@ HRESULT Configure(
 
 <dl> <dt>
 
-*portType* \[ in\]
+*portType* \[ In\]
 </dt> <dd>
 
-Der Typ des seriellen Anschlusses. Eine Liste der Werte finden Sie unter [**vmserialporttype**](vmserialporttype.md).
+Der Typ des seriellen Anschlusses. Eine Liste der Werte finden Sie unter [**VMSerialPortType**](vmserialporttype.md).
 
 </dd> <dt>
 
-*Portname* \[ in\]
+*portName* \[ In\]
 </dt> <dd>
 
-Der Name des seriellen Anschlusses. Beispiel: "COM1" for **vmserialport \_ hostport**, "C: \\SerialPort.txt" for **vmserialport \_ Textfile** oder " \\ \\ *Servername* \\ Pipe \\ *Pipename*" für **vmserialport \_ NamedPipe**.
+Der Name des seriellen Anschlusses. Beispiel: "COM1" für **vmSerialPort \_ HostPort,**"C:SerialPort.txt" für \\ **vmSerialPort \_ TextFile** oder " \\ \\ *servername* \\ pipe \\ *pipename*" für **vmSerialPort \_ NamedPipe**.
 
 </dd> <dt>
 
-*vmconnectimmediately* \[ in\]
+*vmConnectImmediately* \[ In\]
 </dt> <dd>
 
-**True** , wenn der serielle Host-Port sofort geöffnet werden soll, wenn der virtuelle Computer gestartet wird, andernfalls **false** . Wird ignoriert, wenn der *portType* nicht der **vmserialport- \_ hostport** ist.
+**TRUE,** wenn der serielle Hostport sofort geöffnet werden soll, wenn der virtuelle Computer gestartet wird, **andernfalls FALSE.** Wird ignoriert, *wenn portType* nicht **vmSerialPort \_ HostPort ist.**
 
 </dd> </dl>
 
@@ -73,18 +73,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                                            | BESCHREIBUNG                                                                                                                       |
+| Rückgabecode/-wert                                                                                                                                                                            | Beschreibung                                                                                                                       |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                                  | Der Vorgang wurde durchgeführt.<br/>                                                                                          |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>0x80000003</dt> </dl>                                 | Der *portType* -Parameter ist ungültig.<br/>                                                                                 |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>                            | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                      |
-| <dl> <dt>**E \_ Zeiger**</dt> <dt>0x80004003</dt> </dl>                                    | Der *Portname* -Parameter ist **null**.<br/>                                                                                  |
-| <dl> <dt>**HRESULT \_ Von \_ Win32 (Error \_ outo-Memory)**</dt> <dt>0x8007000E</dt> </dl>      | Es ist nicht genügend Arbeitsspeicher verfügbar, um diese Anforderung abzuschließen.<br/>                                                         |
-| <dl> <dt>**HRESULT \_ Von \_ Win32 (Fehler \_ Puffer \_ Überlauf)**</dt> <dt>0x8007006f</dt> </dl> | Der vom *Portname* -Parameter angegebene Pfad ist zu lang. Der Pfad muss kleiner als der **Maximale \_ Pfad** (260) sein.<br/> |
-| <dl> <dt>**HRESULT \_ Von \_ Win32 ( \_ ungültiger \_ Name)**</dt> <dt>0x8007007b</dt> </dl>    | Der *Portname* -Parameter enthält ein ungültiges Zeichen (eines der " \* ? <>/ \| ": ").<br/>                                    |
-| <dl> <dt>**HRESULT \_ FROM \_ Win32 (Error ungültiger \_ \_ Pfadname)**</dt> <dt>0x800700a1</dt> </dl>    | Der *Portname* -Parameter gibt einen leeren oder relativen Pfad an. Ein absoluter Pfad ist erforderlich.<br/>                            |
-| <dl> <dt>**VM \_ E \_ VM \_ unbekannt**</dt> <dt>0xa0040207</dt> </dl>                            | Die Konfiguration für diesen virtuellen Computer ist ungültig.<br/>                                                               |
-| <dl> <dt>**VM \_ E \_ Pref \_ \_**</dt> unzulässiger Wert <dt>0xa0040301</dt> </dl>                   | Der angegebene Port wird bereits verwendet.<br/>                                                                                  |
+| <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>                                 | Der *portType-Parameter* ist ungültig.<br/>                                                                                 |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>                            | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                      |
+| <dl> <dt>**E \_ ZEIGER 0X80004003**</dt> <dt></dt> </dl>                                    | Der *portName-Parameter* ist **NULL.**<br/>                                                                                  |
+| <dl> <dt>**HRESULT \_ FROM \_ WIN32(ERROR \_ OUTOFMEMORY)**</dt> <dt>0x8007000e</dt> </dl>      | Zum Abschließen dieser Anforderung ist nicht genügend Arbeitsspeicher verfügbar.<br/>                                                         |
+| <dl> <dt>**HRESULT \_ FROM \_ WIN32(ERROR \_ BUFFER \_ OVERFLOW)**</dt> <dt>0x8007006f</dt> </dl> | Der durch den *portName-Parameter angegebene Pfad* ist zu lang. Der Pfad muss kleiner als **MAX \_ PATH** -Zeichen (260) sein.<br/> |
+| <dl> <dt>**HRESULT \_ FROM \_ WIN32(ERROR \_ INVALID \_ NAME)**</dt> <dt>0x8007007b</dt> </dl>    | Der *portName-Parameter* enthält ein ungültiges Zeichen (eines von " \* ?<>/ \| ":").<br/>                                    |
+| <dl> <dt>**HRESULT \_ FROM \_ WIN32(ERROR \_ BAD \_ PATHNAME)**</dt> <dt>0x800700a1</dt> </dl>    | Der *portName-Parameter* gibt einen leeren oder relativen Pfad an. Ein absoluter Pfad ist erforderlich.<br/>                            |
+| <dl> <dt>**VM \_ E \_ VM \_ UNKNOWN**</dt> <dt>0xA0040207</dt> </dl>                            | Die Konfiguration für diesen virtuellen Computer ist ungültig.<br/>                                                               |
+| <dl> <dt>**VM \_ E \_ PREF \_ \_ UNGÜLTIGER**</dt> <dt>0XA0040301</dt> </dl>                   | Der angegebene Port wird bereits verwendet.<br/>                                                                                  |
 
 
 
@@ -96,20 +96,20 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmserialport ist als 2ce4460d-1d3f-4458-bf8b-44084b816815 definiert.<br/>              |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMSerialPort ist als 2ce4460d-1d3f-4458-bf8b-44084b816815 definiert.<br/>              |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmserialport**](ivmserialport.md)
+[**IVMSerialPort**](ivmserialport.md)
 </dt> </dl>
 
  

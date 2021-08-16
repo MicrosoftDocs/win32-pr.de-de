@@ -1,7 +1,7 @@
 ---
 description: Enthält Konfigurationseigenschaften für die Erfassungsquelle.
 ms.assetid: 9A21D21B-E77F-4C7C-B41F-361CEDA322E7
-title: MF_CAPTURE_ENGINE_MEDIASOURCE_CONFIG-Attribut (Mfcaptureengine.h)
+title: MF_CAPTURE_ENGINE_MEDIASOURCE_CONFIG -Attribut (Mfcaptureengine.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.openlocfilehash: a3d111aa41d423f39bb55597d75ec18cc2ee24d93a7f250074a10882c6f38f66
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119464370"
 ---
-# <a name="mf_capture_engine_mediasource_config-attribute"></a>MF \_ CAPTURE \_ ENGINE \_ MEDIASOURCE \_ CONFIG-Attribut
+# <a name="mf_capture_engine_mediasource_config-attribute"></a>MEDIASOURCE \_ \_ CONFIG-Attribut der \_ MF-ERFASSUNGS-ENGINE \_
 
 Enthält Konfigurationseigenschaften für die Erfassungsquelle.
 
@@ -21,7 +21,7 @@ Enthält Konfigurationseigenschaften für die Erfassungsquelle.
 
 ## <a name="remarks"></a>Hinweise
 
-Derzeit wird dieses Attribut ignoriert. In Zukunft kann er verwendet werden, um Konfigurationseigenschaften an die Medienquelle zu übergeben.
+Dieses Attribut wird derzeit ignoriert. In Zukunft kann es verwendet werden, um Konfigurationseigenschaften an die Medienquelle zu übergeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,13 +39,13 @@ Derzeit wird dieses Attribut ignoriert. In Zukunft kann er verwendet werden, um 
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [Attribute der Erfassungs-Engine](capture-engine-attributes.md)
 </dt> <dt>
 
-[**ADRPaturEngine::Initialize**](/windows/desktop/api/mfcaptureengine/nf-mfcaptureengine-imfcaptureengine-initialize)
+[**INITIALIZECaptureEngine::Initialize**](/windows/desktop/api/mfcaptureengine/nf-mfcaptureengine-imfcaptureengine-initialize)
 </dt> </dl>
 
  

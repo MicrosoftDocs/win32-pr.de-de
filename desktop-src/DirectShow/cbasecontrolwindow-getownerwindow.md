@@ -1,5 +1,5 @@
 ---
-description: Die GetOwnerWindow-Methode ruft das besitzende Fensterhand handle m \_ hwndOwner ab.
+description: Die GetOwnerWindow-Methode ruft das handle m hwndOwner des besitzenden Fensters \_ ab.
 ms.assetid: fa576b42-b4a7-4374-8ba4-7d21e86d9d61
 title: CBaseControlWindow.GetOwnerWindow-Methode (Ctlutil.h)
 ms.topic: reference
@@ -25,7 +25,7 @@ ms.locfileid: "119432510"
 ---
 # <a name="cbasecontrolwindowgetownerwindow-method"></a>CBaseControlWindow.GetOwnerWindow-Methode
 
-Die `GetOwnerWindow` -Methode ruft den besitzenden Fensterhandpunkt **m \_ hwndOwner ab.**
+Die `GetOwnerWindow` -Methode ruft das handle des besitzenden Fensters ab, **m \_ hwndOwner.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Gibt das Besitzerfenster zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Ruft das besitzende Fenster ab, ohne die Schnittstellenmethode auf aufruft. Verwenden Sie diese Memberfunktion anstelle [**von CBaseControlWindow::get \_ Owner,**](cbasecontrolwindow-get-owner.md)es sei denn, Sie rufen diese extern über die [**IVideoWindow::get \_ Owner-Methode**](/windows/desktop/api/Control/nf-control-ivideowindow-get_owner) auf.
+Ruft das besitzende Fenster ab, ohne die Schnittstellenmethode aufzurufen. Verwenden Sie diese Memberfunktion anstelle von [**CBaseControlWindow::get \_ Owner,**](cbasecontrolwindow-get-owner.md)es sei denn, Sie rufen dies extern über die [**IVideoWindow::get \_ Owner-Methode**](/windows/desktop/api/Control/nf-control-ivideowindow-get_owner) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,11 +55,11 @@ Ruft das besitzende Fenster ab, ohne die Schnittstellenmethode auf aufruft. Verw
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -38,7 +38,7 @@ Diese Eigenschaft ist eine Lese-/Schreibnummer (**long**).
 
 Eine LCID identifiziert eindeutig einen bestimmten Sprachdialekt, der als Gebietsschema bezeichnet wird.
 
-Für Windows Medienbasierte Inhalte unterstützen Eigenschaften und Methoden im Zusammenhang mit der Sprachauswahl nur eine einzelne Ausgabe.
+Für Windows medienbasierten Inhalt unterstützen Eigenschaften und Methoden im Zusammenhang mit der Sprachauswahl nur eine einzelne Ausgabe.
 
 Wenn Sie mit DVD-Inhalten arbeiten, führt die Angabe einer LCID dazu, dass die erste verfügbare Audiospur mit der angegebenen Sprach-ID ausgewählt wird.
 

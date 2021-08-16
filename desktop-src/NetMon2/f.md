@@ -26,7 +26,7 @@ Blob (Binary Large Object), das verwendet wird, um die Suche nach einer Netzwerk
 <span id="_netmon_follow_set_gly"></span><span id="_NETMON_FOLLOW_SET_GLY"></span>**follow set**
 </dt> <dd>
 
-Ein Protokollsatz, der einem Protokoll folgt. Netzwerkmonitor verwendet den folgenden Satz eines Protokolls, wenn der Parser das nächste Protokoll aus den Daten in der Erfassung nicht erkennen kann. Siehe auch [ *Handoffset*](h.md)
+Ein Protokollsatz, der einem Protokoll folgt. Netzwerkmonitor verwendet den folgenden Satz eines Protokolls, wenn der Parser das nächste Protokoll aus den Daten in der Erfassung nicht erkennen kann. Siehe auch [ *Handoffset.*](h.md)
 
 </dd> <dt>
 

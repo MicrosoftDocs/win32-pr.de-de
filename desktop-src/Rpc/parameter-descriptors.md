@@ -1,6 +1,6 @@
 ---
 title: Parameterdeskriptoren
-description: Wie bereits erwähnt, sind \ 8211;Oi und \ 8211;Oif-Stilparameterdeskriptoren vorhanden.
+description: Wie bereits erwähnt, sind die Parameterdeskriptoren \8211;Oi und \ 8211;Oif vorhanden.
 ms.assetid: c2dad284-abe5-4b38-b3a6-3c7373fc5b84
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118927549"
 ---
 # <a name="parameter-descriptors"></a>Parameterdeskriptoren
 
-Wie bereits erwähnt, sind [**die Formatparameterdeskriptoren –Oi**](/windows/desktop/Midl/-oi) und **–Oif** vorhanden.
+Wie bereits erwähnt, sind Die Parameterdeskriptoren [**–Oi**](/windows/desktop/Midl/-oi) und **–Oif** vorhanden.
 
 ## <a name="the-oi-parameter-descriptors"></a>Die –Oi-Parameterdeskriptoren
 
@@ -23,7 +23,7 @@ Vollständig interpretierte Stubs erfordern zusätzliche Informationen für jede
 
 **Parameterdeskriptoren**
 
-Das Format für die Beschreibung eines \[ **In- oder** \] Rückgabeparameters eines einfachen Typs ist:
+Das Format für die Beschreibung eines in - \[  \] oder -Rückgabeparameters vom Typ ist:
 
 ``` syntax
 FC_IN_PARAM_BASETYPE 
@@ -37,18 +37,18 @@ FC_RETURN_PARAM_BASETYPE
 simple_type<1>
 ```
 
-Wenn der \_ einfache Typ<1> ist das FC-Token, das den einfachen Typ angibt. Die Codes lauten wie folgt:
+Wobei simple \_ type<1> das FC-Token ist, das den einfachen Typ angibt. Die Codes sind wie folgt:
 
 ``` syntax
 4e  FC_IN_PARAM_BASETYPE 
 53  FC_RETURN_PARAM_BASETYPE
 ```
 
-**Andere –Oi**
+**Other –Oi**
 
 **Parameterdeskriptoren**
 
-Das Format für die Beschreibung für alle anderen Parametertypen ist:
+Das Format für die Beschreibung für alle anderen Parametertypen lautet:
 
 ``` syntax
 param_direction<1> 
@@ -56,34 +56,34 @@ stack_size<1>
 type_offset<2>
 ```
 
-Wenn die Parameterrichtung<1> für jede dieser Beschreibungen muss eine der in der folgenden Tabelle \_ gezeigten Sein.
+Wenn die \_ Parameterrichtung<1> Feld für jede dieser Beschreibungen muss eine der in der folgenden Tabelle aufgeführten Sein.
 
 
 
 | Hex | Flag                          | Bedeutung                                                     |
 |-----|-------------------------------|-------------------------------------------------------------|
 | 4d  | FC \_ IN \_ PARAM                 | Ein in-Parameter.                                            |
-| 50  | FC \_ IN \_ \_ OUT-PARAMETER            | Ein In/Out-Parameter.                                        |
-| 51  | FC \_ \_ OUT-PARAMETER                | Ein out-Parameter.                                           |
-| 52  | FC \_ \_ RETURN-PARAMETER             | Ein Prozedur-Rückgabewert.                                   |
-| 4f  | FC \_ IN \_ PARAM \_ NO \_ FREE \_ INST | Ein in xmit/rep als Parameter, für den keine Freiung erfolgt. |
+| 50  | FC \_ IN \_ OUT \_ PARAM            | Ein In/Out-Parameter.                                        |
+| 51  | FC \_ OUT \_ PARAM                | Ein out-Parameter.                                           |
+| 52  | FC \_ RETURN \_ PARAM             | Ein Prozedurrückgabewert.                                   |
+| 4f  | FC \_ IN \_ PARAM \_ NO \_ FREE \_ INST | Ein in xmit/rep als Parameter, für den keine Freigabe erfolgt. |
 
 
 
  
 
-Die Stapelgröße<1> ist die Größe des Parameters im Stapel, ausgedrückt als die Anzahl der ganzen Zahlen, die der Parameter im \_ Stapel belegt.
+Die \_ Stapelgröße<1> entspricht der Größe des Parameters im Stapel, ausgedrückt als die Anzahl der ganzen Zahlen, die der Parameter im Stapel belegt.
 
 > [!Note]  
-> Der [**Modus –Oi**](/windows/desktop/Midl/-oi) wird auf 64-Bit-Plattformen nicht unterstützt.
+> Der [**-Oi-Modus**](/windows/desktop/Midl/-oi) wird auf 64-Bit-Plattformen nicht unterstützt.
 
  
 
-Der Typoffset<2> ist der Offset in der Typformatzeichenfolgentabelle, der den \_ Typdeskriptor für das Argument angibt.
+Der \_ Typoffset<2> Feld ist der Offset in der Zeichenfolgentabelle des Typformats, der den Typdeskriptor für das Argument angibt.
 
-## <a name="the-oif-parameter-descriptors"></a>Die –Oif-Parameterdeskriptoren
+## <a name="the-oif-parameter-descriptors"></a>Die -Oif-Parameterdeskriptoren
 
-Es gibt zwei mögliche Formate für eine Parameterbeschreibung: eines für Basistypen und eins für alle anderen Typen.
+Es gibt zwei mögliche Formate für eine Parameterbeschreibung: eines für Basistypen, eins für alle anderen Typen.
 
 Basistypen:
 
@@ -102,7 +102,7 @@ stack_offset<2>
 type_offset<2>
 ```
 
-In beiden Stapeloffsets<2> den Offset auf dem virtuellen Argumentstapel \_ in Bytes an. Bei Basistypen wird der Argumenttyp direkt durch das Formatzeichen angegeben, das dem Typ entspricht. Bei anderen Typen gibt der Typoffset<2>-Feld den Offset in der Typformatzeichenfolgentabelle an, in der sich der Typdeskriptor für das \_ Argument befindet.
+In beiden \_ Stapeloffsets<2> gibt den Offset auf dem virtuellen Argumentstapel in Bytes an. Bei Basistypen wird der Argumenttyp direkt durch das Formatzeichen angegeben, das dem Typ entspricht. Bei anderen Typen gibt der \_ Typoffset<2> Feld den Offset in der Zeichenfolgentabelle des Typformats an, in der sich der Typdeskriptor für das Argument befindet.
 
 Das Parameterattributfeld ist wie folgt definiert:
 
@@ -127,11 +127,11 @@ typedef struct
 
 -   Das **MustSize-Bit** wird nur festgelegt, wenn die Größe des Parameters festgelegt werden muss.
 -   Das **MustFree-Bit** wird festgelegt, wenn der Server die NdrFree-Routine des Parameters aufrufen \* muss.
--   Das **IsSimpleRef-Bit** wird für einen Parameter festgelegt, der ein Verweiszeiger auf einen anderen Zeiger als einen anderen Zeiger ist und keine Zuteilungsattribute aufgibt. Für einen solchen Typ stellt der Typoffset<> -Feld der Parameterbeschreibung, mit Ausnahme eines Verweiszeigers auf einen Basistyp, den Offset für den Typ des Verweises zurVerfügung. Der Verweiszeiger wird einfach \_ übersprungen.
--   Das **IsDontCallFreeInst-Bit** wird für bestimmte Darstellen als Parameter festgelegt, deren Routinen für freie Instanzen \_ nicht aufgerufen werden sollen.
--   Die **ServerAllocSize-Bits** sind ungleich 0 (null), wenn der -Parameter out ist, in oder in,out-Zeiger auf Zeiger oder Zeiger auf \[  \] \[  \] \[  \] enum16, **\_** und werden im Stapel des Serverinterpreter initialisiert, anstatt einen Aufruf von I RpcAllocate zu verwenden. Wenn dieser Wert ungleich 0 (null) ist, wird dieser Wert mit 8 multipliziert, um die Anzahl der Bytes für den Parameter zu erhalten. Beachten Sie, dass dies bedeutet, dass einem Zeiger immer mindestens 8 Bytes zugeordnet werden.
--   Das **IsBasetype-Bit** wird für einfache Typen festgelegt, die von der [**Main-Oif-Interpreterschleife gemarshallt**](/windows/desktop/Midl/-oi) werden. Insbesondere wird ein einfacher Typ mit einem Bereichsattribut nicht als Basistyp gekennzeichnet, um das Marshalling der Bereichsroutine durch Die Dispatching mithilfe eines FC RANGE-Tokens zu \_ erzwingen.
--   Das **IsByValue-Bit** wird für zusammengesetzte Typen festgelegt, die als Wert gesendet werden, aber nicht für einfache Typen, unabhängig davon, ob das Argument ein Zeiger ist. Die zusammengesetzten Typen, für die sie festgelegt wird, sind Strukturen, Unions, übertragen als , stellen als [**, \_**](/windows/desktop/Midl/represent-as) [**Wire \_ Marshal**](/windows/desktop/Midl/wire-marshal) und SAFEARRAY dar. [**\_**](/windows/desktop/Midl/transmit-as) Im Allgemeinen wurde das Bit zum Nutzen der Hauptinterpreterschleife im [**-Oicf-Interpreter**](/windows/desktop/Midl/-oi) eingeführt, um sicherzustellen, dass die nicht einfachen Argumente (als Verbundtypargumente bezeichnet) ordnungsgemäß dereferenziert werden. Dieses Bit wurde in früheren Versionen des Interpreters nie verwendet.
+-   Das **IsSimpleRef-Bit** wird für einen Parameter festgelegt, der ein Verweiszeiger auf einen anderen Zeiger als einen anderen Zeiger ist und über keine zugeordneten Attribute verfügt. Bei einem solchen Typ stellt der Typoffset der Parameterbeschreibung \_<> Feld mit Ausnahme eines Verweiszeigers auf einen Basistyp den Offset zum Typ des Referenzreferenzs bereit. Der Verweiszeiger wird einfach übersprungen.
+-   Das **IsDontCallFreeInst-Bit** wird für bestimmte \_ Darstellende als Parameter festgelegt, deren Routinen für freie Instanzen nicht aufgerufen werden sollen.
+-   Die **ServerAllocSize-Bits** sind ungleich 0 (null), wenn der Parameter \[ **out** \] ist, \[ **in**, oder \] \[ **in,out** Zeiger auf Zeiger oder Zeiger auf \] enum16, und wird im Stapel des Serverinterpreters initialisiert, anstatt einen Aufruf von I **\_ RpcAllocate** zu verwenden. Wenn der Wert ungleich 0 (null) ist, wird dieser Wert mit 8 multipliziert, um die Anzahl der Bytes für den Parameter abzurufen. Beachten Sie, dass auf diese Weise immer mindestens 8 Bytes für einen Zeiger zugeordnet werden.
+-   Das **IsBasetype-Bit** wird für einfache Typen festgelegt, die von der [**Main-Oif-Interpreterschleife**](/windows/desktop/Midl/-oi) gemarshallt werden. Insbesondere wird ein einfacher Typ mit einem Bereichsattribut nicht als Basistyp gekennzeichnet, um das Marshalling der Bereichsroutine durch die Verteilung mithilfe eines FC \_ RANGE-Tokens zu erzwingen.
+-   Das **IsByValue-Bit** wird für zusammengesetzte Typen festgelegt, die als Wert gesendet werden, aber nicht für einfache Typen, unabhängig davon, ob das Argument ein Zeiger ist. Die zusammengesetzten Typen, für die sie festgelegt ist, sind Strukturen, Unions, [**übertragen \_ als**](/windows/desktop/Midl/transmit-as), [**stellen \_ als**](/windows/desktop/Midl/represent-as)dar, [**Wire \_ Marshal**](/windows/desktop/Midl/wire-marshal) und SAFEARRAY. Im Allgemeinen wurde das Bit zum Vorteil der Hauptinterpreterschleife im [**-Oicf-Interpreter**](/windows/desktop/Midl/-oi) eingeführt, um sicherzustellen, dass die nicht einfachen Argumente (als zusammengesetzte Typargumente bezeichnet) ordnungsgemäß dereferenziert werden. Dieses Bit wurde in früheren Versionen des Interpreters nie verwendet.
 
  
 

@@ -17,7 +17,7 @@ Die folgenden Attribute werden mit der Transcodierungs-API verwendet.
 
 
 
-| attribute                                                                          | BESCHREIBUNG                                                                                  |
+| attribute                                                                          | Beschreibung                                                                                  |
 |------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
 | [ANPASSEN DES \_ MF-TRANSCODIERUNGSPROFILS \_ \_](mf-transcode-adjust-profile.md)                  | Profilflags, die die Streameinstellungen für die Transcodierungstopologie definieren.                    |
 | [MF \_ TRANSCODE \_ CONTAINERTYPE](mf-transcode-containertype.md)                     | Gibt den Containertyp einer codierten Datei an.                                             |

@@ -1,9 +1,9 @@
 ---
-title: Komplexer Typ von patternmaptype
-description: Nicht verwendet. Definiert eine Zuordnung zwischen zwei regulären Ausdrücken. Ein Ausdruck wird verwendet, um nach einer übereinstimmenden Zeichenfolge in der Meldungs Zeichenfolge zu suchen, und die andere wird verwendet, um die Zeichenfolge zu ändern
+title: Komplexer PatternMapType-Typ
+description: Wird nicht verwendet. Definiert eine Zuordnung zwischen zwei regulären Ausdrücken. Ein Ausdruck wird verwendet, um eine übereinstimmende Zeichenfolge in der Meldungszeichenfolge zu finden, und der andere wird verwendet, um die Zeichenfolge zu ändern, bevor der Dienst sie wieder in die Meldungszeichenfolge eingibt.
 ms.assetid: 184b6aeb-a554-4a92-b19e-1849c711d33b
 keywords:
-- "\"Patternmaptype Complex Type Event Log\""
+- Komplexer PatternMapType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e39ca30520f4f595bfc73a4d80b9bc191793859a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d4ba0c404220023a124c082ea448cbb7bdcab192b611bf35a2afc90df82e9e63
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136192"
 ---
-# <a name="patternmaptype-complex-type"></a>Komplexer Typ von patternmaptype
+# <a name="patternmaptype-complex-type"></a>Komplexer PatternMapType-Typ
 
-Nicht verwendet. Definiert eine Zuordnung zwischen zwei regulären Ausdrücken. Ein Ausdruck wird verwendet, um nach einer übereinstimmenden Zeichenfolge in der Meldungs Zeichenfolge zu suchen, und die andere wird verwendet, um die Zeichenfolge zu ändern
+Wird nicht verwendet. Definiert eine Zuordnung zwischen zwei regulären Ausdrücken. Ein Ausdruck wird verwendet, um eine übereinstimmende Zeichenfolge in der Meldungszeichenfolge zu finden, und der andere wird verwendet, um die Zeichenfolge zu ändern, bevor der Dienst sie wieder in die Meldungszeichenfolge eingibt.
 
 ``` syntax
 <xs:complexType name="PatternMapType">
@@ -51,9 +51,9 @@ Nicht verwendet. Definiert eine Zuordnung zwischen zwei regulären Ausdrücken. 
 
 
 
-| Element                                                       | type                                                                               | BESCHREIBUNG                                                                                                   |
+| Element                                                       | type                                                                               | Beschreibung                                                                                                   |
 |---------------------------------------------------------------|------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| [**bilden**](eventmanifestschema-map-patternmaptype-element.md) | [**Patternmapvaluetype**](eventmanifestschema-patternmapvaluetype-complextype.md) | Definiert die regulären Ausdrücke, mit denen eine übereinstimmende Zeichenfolge in der Meldungs Zeichenfolge gesucht und geändert wird.<br/> |
+| [**Karte**](eventmanifestschema-map-patternmaptype-element.md) | [**PatternMapValueType**](eventmanifestschema-patternmapvaluetype-complextype.md) | Definiert die regulären Ausdrücke, die verwendet werden, um eine übereinstimmende Zeichenfolge in der Meldungszeichenfolge zu suchen und zu ändern.<br/> |
 
 
 
@@ -65,7 +65,7 @@ Nicht verwendet. Definiert eine Zuordnung zwischen zwei regulären Ausdrücken. 
 |--------|-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | format | anyURI                                                            | Die zu verwendende Engine für reguläre Ausdrücke.<br/>                                                                                                                                                                                                                                                                    |
 | name   | **QName**                                                         | Der Name der Musterzuordnung. Verwenden Sie den Namen in einem Datenelement, um auf die Zuordnungen zu verweisen.<br/>                                                                                                                                                                                                                   |
-| Symbol | [**Csymboltype**](eventmanifestschema-csymboltype-simpletype.md) | Das Symbol, das verwendet werden soll, um auf die Zuordnungen in der Anwendung zu verweisen. Der [**Nachrichten Compiler (MC.exe)**](message-compiler--mc-exe-.md) verwendet das Symbol, um eine Konstante für die Zuordnung in der vom Compiler generierten Header Datei zu erstellen. Wenn Sie kein Symbol angeben, generiert der Compiler einen für Sie.<br/> |
+| Symbol | [**CSymbolType**](eventmanifestschema-csymboltype-simpletype.md) | Das Symbol, das verwendet werden soll, um auf die Zuordnungen in Ihrer Anwendung zu verweisen. Der [**Nachrichtencompiler (MC.exe)**](message-compiler--mc-exe-.md) verwendet das -Symbol, um eine Konstante für die Zuordnung in der Headerdatei zu erstellen, die der Compiler generiert. Wenn Sie kein Symbol angeben, generiert der Compiler ein Symbol für Sie.<br/> |
 
 
 
@@ -75,8 +75,8 @@ Nicht verwendet. Definiert eine Zuordnung zwischen zwei regulären Ausdrücken. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

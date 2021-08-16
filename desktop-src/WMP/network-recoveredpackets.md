@@ -1,9 +1,9 @@
 ---
-title: Network. Wiederherstellungspakete
-description: Die Wiederherstellungs Pakete-Eigenschaft ruft die Anzahl der wiederhergestellten Pakete ab.
+title: Network.recoveredPackets
+description: Die recoveredPackets-Eigenschaft ruft die Anzahl der wiederhergestellten Pakete ab.
 ms.assetid: ce10b906-2e8b-4b9f-83d0-56ba67cacd3f
 keywords:
-- Netzwerk. Wiederherstellungspakete (Windows Media Player)
+- Network.recoveredPackets Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,34 +14,34 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a4222033d7e124e6ef29714bc47faf5664950fa
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 464f7ad27603e506632d87254eaa4f76cbedf39ed15e353050cd13da0fa46204
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134933"
 ---
-# <a name="networkrecoveredpackets"></a>Network. Wiederherstellungspakete
+# <a name="networkrecoveredpackets"></a>Network.recoveredPackets
 
-Die **Wiederherstellungs Pakete** -Eigenschaft ruft die Anzahl der wiederhergestellten Pakete ab.
+Die **recoveredPackets-Eigenschaft** ruft die Anzahl der wiederhergestellten Pakete ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player*. *Netzwerk*. wieder **herstellbare Pakete**
+*Player*. *network*. **recoveredPackets**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jedes Mal, wenn die Wiedergabe beendet und neu gestartet wird, wird diese Eigenschaft auf NULL festgelegt. Wenn die Wiedergabe angehalten wird, wird Sie nicht zurückgesetzt.
+Jedes Mal, wenn die Wiedergabe beendet und neu gestartet wird, wird diese Eigenschaft auf 0 (null) festgelegt. Sie wird nicht zurückgesetzt, wenn die Wiedergabe angehalten wird.
 
-Diese Eigenschaft gibt nur zur Laufzeit gültige Informationen und nur dann zurück, wenn der *Player*. Die **URL** -Eigenschaft ist ebenfalls festgelegt. Sie entspricht 0 (null), wenn das HTTP-Protokoll verwendet wird, das verlustfrei ist.
+Diese Eigenschaft gibt gültige Informationen nur während der Laufzeit und nur dann zurück, wenn der *Player*. Die **URL-Eigenschaft** ist ebenfalls festgelegt. Bei Verwendung des HTTP-Protokolls, das verlustfrei ist, entspricht sie 0 (null).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *Network* verwendet. **Wiederherstellungs Pakete** zum Anzeigen der Anzahl der wiederhergestellten Pakete. Die Informationen werden in einem HTML div-Code angezeigt, der mit ID = "PR" erstellt wurde. Im Beispiel wird ein Timer mit einem Intervall von 1 Sekunde verwendet, um die Anzeige zu aktualisieren. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird *Network* verwendet. **recoveredPackets,** um die Anzahl der wiederhergestellten Pakete anzuzeigen. Die Informationen werden in einem HTML-DIV angezeigt, das mit der ID " PR" erstellt wurde. Im Beispiel wird ein Timer mit einem Intervall von 1 Sekunde verwendet, um die Anzeige zu aktualisieren. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -78,19 +78,19 @@ function UpdatePR(){
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Netzwerk Objekt**](network-object.md)
+[**Netzwerkobjekt**](network-object.md)
 </dt> <dt>
 
-[**Player. URL**](player-url.md)
+[**Player.URL**](player-url.md)
 </dt> </dl>
 
  

@@ -19,7 +19,7 @@ Die folgenden Funktionen werden verwendet, um sich beim Multicastgruppen-Manager
 
 [**MgmDeRegisterMProtocol**](/windows/desktop/api/Mgm/nf-mgm-mgmderegistermprotocol)
 
-Die folgenden Funktionen werden verwendet, um den Schnittstellenbesitz zu verwalten:
+Die folgenden Funktionen werden zum Verwalten des Schnittstellenbesitzes verwendet:
 
 [**MgmGetProtocolOnInterface**](/windows/desktop/api/Mgm/nf-mgm-mgmgetprotocoloninterface)
 
@@ -33,7 +33,7 @@ Die folgenden Funktionen werden zum Verwalten der Gruppenmitgliedschaft verwende
 
 [**MgmDeleteGroupMembershipEntry**](/windows/desktop/api/Mgm/nf-mgm-mgmdeletegroupmembershipentry)
 
-Die folgenden Funktionen werden verwendet, um Multicastweiterleitungseinträge (MFEs) und MFE-Statistiken zu erhalten:
+Die folgenden Funktionen werden verwendet, um Multicastweiterleitungseinträge (MFEs) und MFE-Statistiken abzurufen:
 
 [**MgmGetFirstMfe**](/windows/desktop/api/Mgm/nf-mgm-mgmgetfirstmfe)
 
@@ -51,7 +51,7 @@ Die folgende Funktion wird verwendet, um MFEs zu ändern:
 
 [**MgmSetMfe**](/windows/desktop/api/Mgm/nf-mgm-mgmsetmfe)
 
-Die folgenden Funktionen werden verwendet, um eine Liste von Gruppen zu erhalten, die beigetreten sind:
+Die folgenden Funktionen werden verwendet, um eine Liste der Gruppen abzurufen, die verknüpft wurden:
 
 [**MgmGroupEnumerationStart**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationstart)
 

@@ -1,19 +1,19 @@
 ---
-description: Der folgende Code ist die IP-agnostische Server. c-Datei, bei der es sich um eine IPv6-aktivierte Version der simples. c-Datei handelt.
+description: Der folgende Code ist die IP-agnostische Datei Server.c, bei der es sich um eine IPv6-fähige Version der Datei Simples.c handelt.
 ms.assetid: 5e27c731-c9c7-4c49-91bd-6f4dee60460b
-title: IPv6-Enabled Server Code
+title: IPv6-Enabled Servercode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 55f174cbfd9294d027ba9c70ec47bb2aee58521c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3ef040ee7343c11f762e2cb722b856ccc3180f3e1ed438cff5fd21c917a3d5a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129172"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119132103"
 ---
-# <a name="ipv6-enabled-server-code"></a>IPv6-Enabled Server Code
+# <a name="ipv6-enabled-server-code"></a>IPv6-Enabled Servercode
 
-Der folgende Code ist die IP-agnostische Server. c-Datei, bei der es sich um eine IPv6-aktivierte Version der simples. c-Datei handelt.
+Der folgende Code ist die IP-agnostische Datei Server.c, bei der es sich um eine IPv6-fähige Version der Datei Simples.c handelt.
 
 
 ```C++

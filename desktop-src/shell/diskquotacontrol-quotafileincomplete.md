@@ -1,7 +1,7 @@
 ---
-description: Ruft einen booleschen Wert ab, der angibt, ob die Kontingent Datei für das Volume fertig ist.
+description: Ruft einen booleschen Wert ab, der angibt, ob die Kontingentdatei für das Volume abgeschlossen ist.
 ms.assetid: 25eb7df4-ba6c-4c6c-b611-e32b673a4d18
-title: Diskquotacontrol. quotafilinput Complete (Eigenschaft)
+title: DiskQuotaControl.QuotaFileIncomplete (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: feb9365a6aa541ed8461bbe6d58c77ebc3684b91
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9556b6a2cca3aa2ab040a3cfb81b29c8578d4d544c8d51af6ad70a0d601d63cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104995206"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119032778"
 ---
-# <a name="diskquotacontrolquotafileincomplete-property"></a>Diskquotacontrol. quotafilinput Complete (Eigenschaft)
+# <a name="diskquotacontrolquotafileincomplete-property"></a>DiskQuotaControl.QuotaFileIncomplete (Eigenschaft)
 
-Ruft einen booleschen Wert ab, der angibt, ob die Kontingent Datei für das Volume fertig ist.
+Ruft einen booleschen Wert ab, der angibt, ob die Kontingentdatei für das Volume abgeschlossen ist.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,9 +37,9 @@ bQuotaFileIncomplete = DiskQuotaControl.QuotaFileIncomplete
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Diese Eigenschaft wird auf **true** festgelegt, wenn die Kontingent Datei unvollständig ist, andernfalls **false** .
+Diese Eigenschaft wird auf **TRUE festgelegt,** wenn die Kontingentdatei unvollständig ist, andernfalls **FALSE.**
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -47,7 +47,7 @@ Diese Eigenschaft wird auf **true** festgelegt, wenn die Kontingent Datei unvoll
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Diese Eigenschaft wird auf **true** festgelegt, wenn die Kontingent Datei unvoll
 
 <dl> <dt>
 
-[**Diskquotacontrol-Objekt**](diskquotacontrol-object.md)
+[**DiskQuotaControl-Objekt**](diskquotacontrol-object.md)
 </dt> </dl>
 
  
