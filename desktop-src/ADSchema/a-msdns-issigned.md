@@ -4,7 +4,7 @@ description: Ein Attribut, mit dem definiert wird, ob die DNS-Zone signiert ist.
 ms.assetid: 488661fd-1a3b-4b63-9ec6-d402f4318c59
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ms-DNS-Is-Signed-Attributs
+- MS-DNS-Is-Signed-Attribut AD-Schema
 - AD-Schema des msDNS-IsSigned-Attributs
 topic_type:
 - apiref
@@ -35,7 +35,7 @@ Ein Attribut, mit dem definiert wird, ob die DNS-Zone signiert ist.
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2130              |
-| System-Id-Guid    | aa12854c-d8fc-4d5e-91ca-368b8d829bee |
+| System-ID-GUID    | aa12854c-d8fc-4d5e-91ca-368b8d829bee |
 | Syntax            | [**Boolean**](s-boolean.md)         |
 
 
@@ -53,7 +53,7 @@ Ein Attribut, mit dem definiert wird, ob die DNS-Zone signiert ist.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Is-Single-Valued       | True                                     |
+| Ist einwertig       | True                                     |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                             |
@@ -61,7 +61,7 @@ Ein Attribut, mit dem definiert wird, ob die DNS-Zone signiert ist.
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000008                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 

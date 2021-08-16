@@ -4,26 +4,26 @@ description: Entwerfen von Zeichen für Microsoft Office
 ms.assetid: ac536662-cc3b-42db-81cb-e5eb60039a4d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8ad771cc42d23c875c28ef5bda6e42eaa8cd4e3f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0a73ff4ef69a956f15fa83769df12181f910cb8aa777c309d9fbb0d65fba04b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712126"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118479862"
 ---
 # <a name="designing-characters-for-microsoft-office"></a>Entwerfen von Zeichen für Microsoft Office
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-Dieses Dokument enthält Informationen, die Ihnen beim Entwerfen und entwickeln eines Microsoft-agentzeichens zur Verwendung in Microsoft Office 2000 helfen können (Microsoft-agentzeichen funktionieren nicht mit Microsoft Office 97). In diesem Dokument wird davon ausgegangen, dass Sie über Kenntnisse des Microsoft-Agent-Zeichen-Editors verfügen und wissen, wie Microsoft-agentzeichen erstellt werden. Weitere Informationen zum Agent-Zeichen-Editor sowie zum Entwerfen und entwickeln von Zeichen finden [Sie unter Verwenden des Microsoft-Agent-Zeichen-Editors](using-the-microsoft-agent-character-editor.md). Weitere Informationen zum Erstellen von Zeichen für den Microsoft-Agent finden Sie unter [Entwerfen von Zeichen für den Microsoft-Agent](designing-characters-for-microsoft-agent.md).
+Dieses Dokument enthält Informationen, die Sie beim Entwerfen und Entwickeln eines Microsoft Agent-Zeichens für die Verwendung in Microsoft Office 2000 unterstützen können (Microsoft Agent-Zeichen funktionieren nicht mit Microsoft Office 97). In diesem Dokument wird davon ausgegangen, dass Sie über kenntnisse Kenntnisse des Microsoft Agent-Zeichen-Editors verfügen und wissen, wie Sie Microsoft Agent-Zeichen erstellen. Weitere Informationen zum Zeichen-Editor des -Agents sowie zum Entwerfen und Entwickeln von Zeichen finden Sie unter [Verwenden des Microsoft Agent-Zeichen-Editors.](using-the-microsoft-agent-character-editor.md) Weitere Informationen zum Erstellen von Zeichen für Microsoft Agent finden Sie unter [Entwerfen von Zeichen für Microsoft Agent.](designing-characters-for-microsoft-agent.md)
 
--   [Animations Design](animation-design.md)
--   [Der Office-Animations Satz](the-office-animation-set.md)
+-   [Animationsentwurf](animation-design.md)
+-   [Der Office-Animationssatz](the-office-animation-set.md)
 -   [Installieren des Zeichens](installing-your-character.md)
 
- 
+ 
 
- 
+ 
 
 
 

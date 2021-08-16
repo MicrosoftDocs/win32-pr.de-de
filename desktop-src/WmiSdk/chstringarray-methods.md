@@ -14,7 +14,7 @@ ms.locfileid: "118556816"
 ---
 # <a name="chstringarray-methods"></a>CHStringArray-Methoden
 
-\[Die [**CHStringArray-Klasse**](/windows/desktop/api/ChStrArr/nl-chstrarr-chstringarray) ist Teil des WMI-Anbieterframeworks, das jetzt als endgültiger Zustand betrachtet wird. Für nicht sicherheitsrelevante Probleme, die sich auf diese Bibliotheken auswirken, sind keine weiteren Entwicklungen, Erweiterungen oder Updates verfügbar. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle Neuentwicklungen verwendet werden.\]
+\[Die [**CHStringArray-Klasse**](/windows/desktop/api/ChStrArr/nl-chstrarr-chstringarray) ist Teil des WMI-Anbieterframework, das jetzt im endgültigen Zustand betrachtet wird, und es sind keine weiteren Entwicklungen, Erweiterungen oder Updates für nicht sich sicherheitsbezogene Probleme verfügbar, die sich auf diese Bibliotheken betreffen. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
 
 Die [**CHStringArray-Klasse**](/windows/desktop/api/ChStrArr/nl-chstrarr-chstringarray) macht die folgenden Methoden verfügbar.
 

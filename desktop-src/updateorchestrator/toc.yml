@@ -1,15 +1,15 @@
 - name: Aktualisieren von Orchestrator
   href: index.md
-- name: Orchestrator-Referenz aktualisieren
+- name: Aktualisieren der Orchestratorreferenz
   items:
     - name: Schnittstellen
       items:
-        - name: Iuniversalorchestrator
+        - name: IUniversalOrchestrator
           href: universalorchestrator-iuniversalorchestrator.md
           items:
-            - name: ':: Schedulework'
+            - name: '::ScheduleWork'
               href: universalorchestrator-schedulework.md
-            - name: ':: Workabgeschlossene'
+            - name: '::WorkCompleted'
               href: universalorchestrator-workcompleted.md
-            - name: ':: Hasmoratoriumbestandene'
+            - name: '::Has WiegePassed'
               href: universalorchestrator-hasmoratoriumpassed.md

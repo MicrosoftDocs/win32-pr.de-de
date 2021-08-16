@@ -15,7 +15,7 @@ ms.locfileid: "118624093"
 
 Die Systemwiederherstellung überwacht und zeichnet wichtige Systemänderungen automatisch auf dem Computer eines Benutzers auf. Weitere Informationen finden Sie unter [Systemwiederherstellung.](../sr/system-restore-portal.md)
 
-Systemwiederherstellungspunkte werden vom System und auch vom Windows Installer erstellt, wenn Software installiert oder entfernt wird.
+Systemwiederherstellungspunkte werden vom System und auch von Windows Installer erstellt, wenn Software installiert oder entfernt wird.
 
 Auf Windows XP erstellt das Installationsprogramm möglicherweise Prüfpunkte während der ersten Installation einer Anwendung und während des Entfernens. Das Installationsprogramm erstellt in diesen Fällen nur Prüfpunkte, wenn die Änderung mit mindestens einer [*einfachen Benutzeroberfläche*](b-gly.md)ausgeführt wird. Installationen, bei denen die [Benutzeroberflächenebene auf](user-interface-levels.md) Keine festgelegt ist, werden in der Regel vom System oder von einer Anwendung initiiert, die die Erstellung eines Prüfpunkts verarbeiten soll. Weitere Informationen finden Sie unter [Systemwiederherstellung.](../sr/system-restore-portal.md)
 

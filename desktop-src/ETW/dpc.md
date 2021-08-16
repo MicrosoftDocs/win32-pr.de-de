@@ -78,7 +78,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(2), Zeiger
 </dt> </dl>
 
-Adresse der DPC-Routine. Verwenden Sie die Adresse mit den Bildereignissen, um zu suchen, welches Image gestartet wurde.
+Adresse der DPC-Routine. Verwenden Sie die Adresse mit den Imageereignissen, um zu suchen, welches Image gestartet wurde.
 
 </dd> </dl>
 

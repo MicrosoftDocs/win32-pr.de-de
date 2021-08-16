@@ -1,7 +1,7 @@
 ---
-description: Legt das angegebene Überprüfungs Profil als Standardprofil fest.
+description: Legt das angegebene Scanprofil als Standardprofil fest.
 ms.assetid: c680be8b-88f0-4f7f-b1a3-e12711dba870
-title: 'Iscanprofilemgr:: SetDefault-Methode (scanprofilemgr. h)'
+title: IScanProfileMgr::SetDefault-Methode (Scanprofilemgr.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Scanprofilemgr.h
-ms.openlocfilehash: 3a7c32f246bcafc8ff7ce55e8c6f34ea45553a95
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd7b46241e967e02083c344aa7f3f77a773c72b02ff74b225910788d498fe252
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357772"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965789"
 ---
-# <a name="iscanprofilemgrsetdefault-method"></a>Iscanprofilemgr:: SetDefault-Methode
+# <a name="iscanprofilemgrsetdefault-method"></a>IScanProfileMgr::SetDefault-Methode
 
-Legt das angegebene Überprüfungs Profil als Standardprofil fest.
+Legt das angegebene Scanprofil als Standardprofil fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ HRESULT SetDefault(
 
 <dl> <dt>
 
-*pscanprofile* \[ in\]
+*pScanProfile* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[**iscanprofile**](-wia-iscanprofile.md) \** _
+Typ: **[ **IScanProfile**](-wia-iscanprofile.md)\***
 
 Ein Zeiger auf das Profil.
 
@@ -50,15 +50,15 @@ Ein Zeiger auf das Profil.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die **iscanprofilemgr:: SetDefault** -Methode, um dem Profil ein-Element hinzuzufügen `<Default>` oder dieses Element aus dem vorherigen Standardprofil des Geräts zu entfernen.
+Verwenden Sie die **IScanProfileMgr::SetDefault-Methode,** um dem Profil ein Element hinzuzufügen `<Default>` oder dieses Element aus dem vorherigen Standardprofil des Geräts zu entfernen.
 
-Verwenden Sie die [**scanprofiledialog**](-wia-iscanprofileui-scanprofiledialog.md) -Methode, um das Standardprofil zu ändern.
+Verwenden Sie die [**ScanProfileDialog-Methode,**](-wia-iscanprofileui-scanprofiledialog.md) um das Standardprofil zu ändern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,21 +66,21 @@ Verwenden Sie die [**scanprofiledialog**](-wia-iscanprofileui-scanprofiledialog.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                        |
-| Header<br/>                   | <dl> <dt>Scanprofilemgr. h</dt> </dl> |
-| IDL<br/>                      | <dl> <dt>Scanprofiles. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Scanprofilemgr.h</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscanprofilemgr**](-wia-iscanprofilemgr.md)
+[**IScanProfileMgr**](-wia-iscanprofilemgr.md)
 </dt> <dt>
 
-[Profil Schema überprüfen](-wia-scan-profile-schema.md)
+[Scanprofilschema](-wia-scan-profile-schema.md)
 </dt> </dl>
 
  

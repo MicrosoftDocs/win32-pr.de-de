@@ -1,5 +1,5 @@
 ---
-description: Gibt an, ob der Längengrad "East" oder "West" ist.
+description: Gibt an, ob der Längengrad ost oder west ist.
 ms.assetid: 011b8830-60a4-4c37-a7a7-4948f87bffcc
 title: System.GPS.LongitudeRef
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118466516"
 ---
 # <a name="systemgpslongituderef"></a>System.GPS.LongitudeRef
 
-Gibt an, ob der Längengrad "East" oder "West" ist.
+Gibt an, ob der Längengrad ost oder west ist.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8
 

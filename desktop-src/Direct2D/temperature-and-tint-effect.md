@@ -4,12 +4,12 @@ description: Temperatur- und Tönungseffekt
 ms.assetid: 8df72105-26ea-2dea-a4de-ef06902b7e0b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bc2c3628e1fdcb1c72a84a9e08736e4215d55514
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 4f77cd293520e21811c6d8845daa56b60cabac6c8b88bdf1f1f5b1d20408fb73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117825121"
 ---
 # <a name="temperature-and-tint-effect"></a>Temperatur- und Tönungseffekt
 
@@ -38,10 +38,10 @@ Die Eigenschaften für den Temperatur- und Tönungseffekt werden durch die [**D2
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 10 desktop \[ apps \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 10 desktop \[ apps \| Windows Store-Apps\] |
+| Unterstützte Mindestversion (Client) | \[Windows 10 Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | \[Windows 10 Desktop-Apps \| Windows Store Apps\] |
 | Header                   | d2d1effects \_ 2.h                                  |
 | Bibliothek                  | d2d1.lib, dxguid.lib                              |
 

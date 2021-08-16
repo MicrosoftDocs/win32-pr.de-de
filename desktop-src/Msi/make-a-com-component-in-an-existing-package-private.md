@@ -1,5 +1,5 @@
 ---
-description: Ein Administrator kann erzwingen, dass eine COM-Clientanwendung immer dieselbe Kopie eines COM-Servers in einem vorhandenen Paket&8212; verwendet, ohne dass sich dies auf andere Anwendungen&8212; ausdrungen hat, indem er eine Isolierte Komponentenbeziehung zwischen dem COM-Server und dem Client \# \# ankämmt.
+description: Ein Administrator kann erzwingen, dass eine COM-Clientanwendung immer die gleiche Kopie eines COM-Servers in einem vorhandenen Paket&\# 8212 verwendet, ohne dass sich dies auf andere Anwendungen&\# 8212 auswirkt, indem er eine Beziehung zwischen isolierten Komponenten zwischen dem COM-Server und dem Client angibt.
 ms.assetid: 814eca94-2bb5-4aff-8de3-473da71d4400
 title: Erstellen einer COM-Komponente in einem vorhandenen Paket als privat
 ms.topic: article
@@ -13,11 +13,11 @@ ms.locfileid: "118629031"
 ---
 # <a name="make-a-com-component-in-an-existing-package-private"></a>Erstellen einer COM-Komponente in einem vorhandenen Paket als privat
 
-Ein Administrator kann erzwingen, dass eine COM-Clientanwendung immer dieselbe Kopie eines COM-Servers in einem [](isolated-components.md) vorhandenen Paket verwendet – ohne Auswirkungen auf andere Anwendungen – indem er eine Isolierte Komponentenbeziehung zwischen COM-Server und -Client ankämmt. Dadurch wird eine private Kopie der COM-Serverkomponente an einem Speicherort installiert, der ausschließlich von der Clientanwendung verwendet wird. Der Administrator muss Transformationen oder ein Paketerstellungstool verwenden, um Folgendes zu tun:
+Ein Administrator kann erzwingen, dass eine COM-Clientanwendung immer die gleiche Kopie eines COM-Servers in einem vorhandenen Paket verwendet , ohne dass sich dies auf andere Anwendungen auswirkt, indem er eine Beziehung zwischen [isolierten Komponenten](isolated-components.md) zwischen dem COM-Server und dem Client angibt. Dadurch wird eine private Kopie der COM-Serverkomponente an einem Speicherort installiert, der ausschließlich von der Clientanwendung verwendet wird. Der Administrator muss Transformationen oder ein Paketerstellungstool verwenden, um folgende Schritte ausführen zu können:
 
--   Legen Sie die COM-Server-DLL und den .exe-Client in separaten Komponenten ab.
--   Geben Sie in der [Tabelle IsolatedComponent](isolatedcomponent-table.md) einen Datensatz mit der COM-Clientkomponente in der Spalte Freigegebene Komponente und der Clientanwendung \_ in der Spalte \_ Komponentenanwendung ein. Schließen Sie [die Aktion IsolateComponents](isolatecomponents-action.md) in die Sequenztabellen ein.
--   Legen Sie **das Bit msidbComponentAttributesSharedDllRefCount** im Komponententabellendatensatz für Freigegebene Komponente [](component-table.md) \_ fest. Das Installationsprogramm erfordert diese globale Refcount am freigegebenen Speicherort, um die freigegebenen Dateien und die Registrierung in Fällen zu schützen, in denen die Freigabe mit anderen Installationstechnologien besteht.
+-   Legen Sie die COM-Server-DLL und den .exe-Client in separate Komponenten ein.
+-   Geben Sie in der [Tabelle IsolatedComponent](isolatedcomponent-table.md) einen Datensatz mit der COM-Clientkomponente in der \_ Spalte Komponenten freigegeben und der Clientanwendung in der \_ Spalte Komponentenanwendung ein. Schließen Sie die [IsolateComponents-Aktion](isolatecomponents-action.md) in die Sequenztabellen ein.
+-   Legen Sie das Bit **msidbComponentAttributesSharedDllRefCount** im [Komponententabellendatensatz](component-table.md) für Component \_ Shared fest. Das Installationsprogramm erfordert diese globale Refcount-Anzahl am freigegebenen Speicherort, um die freigegebenen Dateien und die Registrierung in Fällen zu schützen, in denen eine Freigabe mit anderen Installationstechnologien erfolgt.
 
  
 

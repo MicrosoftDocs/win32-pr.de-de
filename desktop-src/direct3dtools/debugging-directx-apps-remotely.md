@@ -1,23 +1,23 @@
 ---
-title: Remote Debugging von DirectX-apps
-description: Sie können Visual Studio und das Windows 8 SDK zum Remote Debuggen von DirectX-Apps verwenden.
+title: Remotedebuggen von DirectX-Apps
+description: Sie können directX Visual Studio und das Windows 8 SDK remote debuggen.
 ms.assetid: CA471465-47C2-4706-B391-C9E6C2CD69D9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 55548cd282bf643e16f22177e46643c6e283a909
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 30f9fd97519bb88a0a89206e5a8c3aa43cf990948cb9aa8c9dd40379c53ed1a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118505675"
 ---
-# <a name="debugging-directx-apps-remotely"></a>Remote Debugging von DirectX-apps
+# <a name="debugging-directx-apps-remotely"></a>Remotedebuggen von DirectX-Apps
 
-Sie können Visual Studio und das Windows 8 SDK zum Remote Debuggen von DirectX-Apps verwenden. Das Windows 8 SDK bietet eine Reihe von Komponenten, die die DirectX-Entwicklung unterstützen, sowie die Fehlerüberprüfung und Parameter Validierung zusätzlich zum Debuggen, das von Visual Studio bereitgestellt wird. Diese Komponenten sind D3D11 \_1SDKLayers.dll, D2D1Debug1.dll und Dxgidebug.dll.
+Sie können directX Visual Studio und das Windows 8 SDK remote debuggen. Das Windows 8 SDK stellt eine Reihe von Komponenten bereit, die die DirectX-Entwicklung unterstützen und fehlerüberprüfung und Parametervalidierung zusätzlich zum Debuggen bereitstellen, das von Visual Studio wird. Diese Komponenten sind D3D11 \_1SDKLayers.dll, D2D1Debug1.dll und Dxgidebug.dll.
 
-Wenn Sie Remote Debuggen auf einem Computer durchführt, auf dem das Windows 8-SDK nicht installiert ist, und Sie diese zusätzliche Debugfunktion wünschen, müssen Sie das remotedebugpaket installieren, das für die Architektur geeignet ist, die Sie debuggen möchten. Mit den Windows Installer Paketen in wird `C:\Program Files (x86)\Windows Kits\8.0\Remote\<arch>` die entsprechende Unterstützung installiert.
+Wenn Sie remote auf einem Computer debuggen möchten, auf dem das Windows 8 SDK nicht installiert ist, und diese zusätzliche Debugfunktion verwenden möchten, müssen Sie das Remotedebugpaket installieren, das für die Architektur geeignet ist, in der Sie debuggen möchten. Die Windows Installer-Pakete in `C:\Program Files (x86)\Windows Kits\8.0\Remote\<arch>` installieren die entsprechende Unterstützung.
 
-Um die zusätzlichen Debuggingfunktionen für Direct2D-apps zu aktivieren, verwenden Sie folgenden Code:
+Verwenden Sie den folgenden Code, um die zusätzlichen Debugfunktionen für Direct2D-Apps zu aktivieren:
 
 ```cpp
     D2D1_FACTORY_OPTIONS options;
@@ -38,7 +38,7 @@ Um die zusätzlichen Debuggingfunktionen für Direct2D-apps zu aktivieren, verwe
         );         
 ```
 
-Um die zusätzlichen Debuggingfunktionen für Direct3D-apps zu aktivieren, verwenden Sie folgenden Code:
+Verwenden Sie den folgenden Code, um die zusätzlichen Debugfunktionen für Direct3D-Apps zu aktivieren:
 
 ```cpp
     // This flag supports surfaces with a different color channel ordering than the API default.
@@ -66,6 +66,6 @@ Um die zusätzlichen Debuggingfunktionen für Direct3D-apps zu aktivieren, verwe
         );
 ```
 
-Weitere Informationen zum Debuggen von Direct2D-apps finden Sie unter [Direct2D Debug Layer](/windows/desktop/Direct2D/direct2ddebuglayer-portal).
+Weitere Informationen zum Debuggen von Direct2D-Apps finden Sie unter [Direct2D-Debugebene.](/windows/desktop/Direct2D/direct2ddebuglayer-portal)
 
-Weitere Informationen zum Debuggen von Direct3D-apps finden Sie unter [Direct3D Debug Layer](/windows/desktop/direct3d11/overviews-direct3d-11-devices-layers).
+Weitere Informationen zum Debuggen von Direct3D-Apps finden Sie unter [Direct3D Debug Layer](/windows/desktop/direct3d11/overviews-direct3d-11-devices-layers).

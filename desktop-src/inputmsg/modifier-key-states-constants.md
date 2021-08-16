@@ -1,6 +1,6 @@
 ---
-title: Modifiziererschlüsselzustand
-description: Gibt an, welche Tastatur Modifizierertasten beim Generieren der Eingabe gedrückt wurden.
+title: Status des Modifiziererschlüssels
+description: Gibt an, welche Tastaturmodifizierertasten zum Zeitpunkt der Eingabegenerierung gedrückt wurden.
 ms.assetid: 721f5109-67ab-4242-921e-580c2dc0463b
 topic_type:
 - apiref
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: 115ee8d33d8f54ab145026152af28b6d565a7935
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ec041ffd62bb028f2839d45b00743714cea375f4e66c0723cb7fe9bfb279445f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104570"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118756880"
 ---
-# <a name="modifier-key-state"></a>Modifiziererschlüsselzustand
+# <a name="modifier-key-state"></a>Status des Modifiziererschlüssels
 
-Gibt an, welche Tastatur Modifizierertasten beim Generieren der Eingabe gedrückt wurden.
+Gibt an, welche Tastaturmodifizierertasten zum Zeitpunkt der Eingabegenerierung gedrückt wurden.
 
 <dl> <dt>
 
@@ -34,7 +34,7 @@ Gibt an, welche Tastatur Modifizierertasten beim Generieren der Eingabe gedrück
 
 
 
-Eine Umschalttaste wurde gedrückt.
+Eine UMSCHALTTASTE wurde gedrückt.
 
 
 </dt> </dl> </dd> <dt>
@@ -47,7 +47,7 @@ Eine Umschalttaste wurde gedrückt.
 
 
 
-Eine STRG-Taste wurde gedrückt.
+Eine STRG-TASTE wurde gedrückt.
 
 
 </dt> </dl> </dd> </dl>
@@ -58,13 +58,13 @@ Eine STRG-Taste wurde gedrückt.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Winuser. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winuser.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,30 +1,30 @@
 ---
-title: Basewindow-Beispiel
-description: Diese Beispielanwendung zeigt, wie Anwendungs Zustandsdaten in der WM \_ nccreate-Nachricht übergeben werden.
+title: BaseWindow-Beispiel
+description: Diese Beispielanwendung zeigt, wie Anwendungszustandsdaten in der WM \_ NCCREATE-Nachricht übergeben werden.
 ms.assetid: 5be8a5ef-8a63-43e7-b2a5-a4fff63c7ce3
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 304a29b3f194e9ec8f530d1a5bb360d2d98add51
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 980c89a3793fed27694c3e439afbe9d6106dc4e14a945bee6af1bd01712bd2af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118388453"
 ---
-# <a name="basewindow-sample"></a>Basewindow-Beispiel
+# <a name="basewindow-sample"></a>BaseWindow-Beispiel
 
-Diese Beispielanwendung zeigt, wie Anwendungs Zustandsdaten in der [**WM \_ nccreate**](/windows/desktop/winmsg/wm-nccreate) -Nachricht übergeben werden.
+Diese Beispielanwendung zeigt, wie Anwendungszustandsdaten in der [**WM \_ NCCREATE-Nachricht übergeben**](/windows/desktop/winmsg/wm-nccreate) werden.
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Die Beispielanwendung basewindow ist eine Variation des [Windows-Hallo Welt](windows-hello-world-sample.md)Beispiels. Er verwendet die [**WM- \_ nccreate**](/windows/desktop/winmsg/wm-nccreate) -Meldung, um Anwendungsdaten an die Fenster Prozedur zu übergeben. Dieses Beispiel wird im Thema Verwalten des [Anwendungs Zustands](managing-application-state-.md)erläutert.
+Die BaseWindow-Beispielanwendung ist eine Variation des [Windows Hello World Sample](windows-hello-world-sample.md). Die WM [**\_ NCCREATE-Nachricht wird verwendet,**](/windows/desktop/winmsg/wm-nccreate) um Anwendungsdaten an die Fensterprozedur zu übergeben. Dieses Beispiel wird im Thema Verwalten des [Anwendungszustands erläutert.](managing-application-state-.md)
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Dieses Beispiel ist [hier](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/begin/LearnWin32/BaseWindow)verfügbar.
+Dieses Beispiel ist hier [verfügbar.](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/begin/LearnWin32/BaseWindow)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-* [Erlernen Sie das Program mieren für Windows: Beispiel Code](learn-to-program-for-windows--sample-code.md)
+* [Informationen zum Programmieren für Windows: Beispielcode](learn-to-program-for-windows--sample-code.md)
 * [Managing Application State (Verwalten eines Anwendungszustands)](managing-application-state-.md)
-* [Modul 1. Ihr erstes Windows-Programm](your-first-windows-program.md)
+* [Modul 1. Ihr erstes Windows Programm](your-first-windows-program.md)

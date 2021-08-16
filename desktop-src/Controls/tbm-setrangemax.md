@@ -1,9 +1,9 @@
 ---
-title: TBM_SETRANGEMAX Meldung (kommstrg. h)
-description: Legt die maximale logische Position für den Schieberegler in einer TrackBar fest.
+title: TBM_SETRANGEMAX (Commctrl.h)
+description: Legt die maximale logische Position für den Schieberegler in einer Trackleiste fest.
 ms.assetid: 8e9d8fd3-2ee3-4fb6-aa1f-9d6e999ef330
 keywords:
-- Windows-Steuerelemente für TBM_SETRANGEMAX Meldung
+- TBM_SETRANGEMAX meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b43997725e2fa88db3f9d4dc2fec1d51255cbb0c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f26b4a588e67164b96db8256116466206d0274a5bc64caedbcb1ccf25135ce62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475135"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117829593"
 ---
-# <a name="tbm_setrangemax-message"></a>TBM- \_ Nachricht
+# <a name="tbm_setrangemax-message"></a>TBM \_ SETRANGEMAX-Nachricht
 
-Legt die maximale logische Position für den Schieberegler in einer TrackBar fest.
+Legt die maximale logische Position für den Schieberegler in einer Trackleiste fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt die maximale logische Position für den Schieberegler in einer TrackBar fes
 *wParam* 
 </dt> <dd>
 
-Flag neu zeichnen. Wenn dieser Parameter **true** ist, wird die TrackBar nach dem Festlegen des Bereichs neu gezeichnet. Wenn dieser Parameter auf **false** festgelegt ist, legt die Meldung den Bereich fest, aber die TrackBar wird nicht neu gezeichnet.
+Flag neu gezeichnet. Wenn dieser Parameter **TRUE ist,** wird die Trackleiste neu gezeichnet, nachdem der Bereich festgelegt wurde. Wenn dieser Parameter **FALSE ist,** legt die Meldung den Bereich fest, zeichnet die Trackleiste jedoch nicht neu.
 
 </dd> <dt>
 
@@ -47,9 +47,9 @@ Maximale Position für den Schieberegler.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die aktuelle Schieberegler-Position größer als die neue Höchstzahl ist, legt die **TBM \_ SetRangeMax** -Meldung die Schieberegler-Position auf den neuen maximalen Wert fest.
+Wenn die aktuelle Position des Schiebereglers größer als der neue Höchstwert ist, legt die **TBM \_ SETRANGEMAX-Meldung** die Position des Schiebereglers auf den neuen Höchstwert fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,23 +57,23 @@ Wenn die aktuelle Schieberegler-Position größer als die neue Höchstzahl ist, 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**TBM-über \_ Tragung**](tbm-setrange.md)
+[**TBM \_ SETRANGE**](tbm-setrange.md)
 </dt> <dt>
 
-[**TBM \_ -Anpassung**](tbm-setrangemin.md)
+[**TBM \_ SETRANGEMIN**](tbm-setrangemin.md)
 </dt> </dl>
 
  

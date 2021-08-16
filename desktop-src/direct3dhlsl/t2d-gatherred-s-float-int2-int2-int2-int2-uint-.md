@@ -1,6 +1,6 @@
 ---
 title: Texture2D::GatherRed(S,float,int2,int2,int2,int2,uint)-Funktion
-description: Gibt die roten Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang zusammen mit dem Kachelzuordnungsstatus verwendet werden. | Texture2D::GatherRed(S,float,int2,int2,int2,int2,uint)-Funktion
+description: Gibt die roten Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang zusammen mit dem Kachelzuordnungsstatus verwendet werden. | Texture2D::GatherRed(S,float,int2,int2,int2,int2,uint)-Funktion
 ms.assetid: 7CDFAA5A-315A-40AE-A662-9AF97D486039
 keywords:
 - GatherRed-Funktion HLSL
@@ -22,7 +22,7 @@ ms.locfileid: "118507544"
 ---
 # <a name="texture2dgatherredsfloatint2int2int2int2uint-function"></a>Texture2D::GatherRed(S,float,int2,int2,int2,int2,uint)-Funktion
 
-Gibt die roten Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang zusammen mit dem Kachelzuordnungsstatus verwendet werden.
+Gibt die roten Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang zusammen mit dem Kachelzuordnungsstatus verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -104,7 +104,7 @@ Die vierte Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoord
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die systeminterne [**CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE** zurück, wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte aus einer nicht zugeordneten Kachel stammen, gibt **CheckAccessFullyMapped** **FALSE** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die [**systeminterne CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE zurück,** wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource zugegriffen haben.](/windows/desktop/direct3d11/direct3d-11-2-features) Wenn Werte aus einer nicht zugeordneten Kachel übernommen wurden, gibt **CheckAccessFullyMapped** **FALSE zurück.**
 
 </dd> </dl>
 

@@ -58,13 +58,13 @@ Zeiger auf den Triggerwert.
 *hErrorBlob* \[ out\]
 </dt> <dd>
 
-Handle für ein Fehlerblob, das angibt, wo im ursprünglichen BLOB der Fehler aufgetreten ist (sofern ein Fehler aufgetreten ist).
+Behandeln Sie ein Fehler-BLOB, das angibt, wo im ursprünglichen BLOB der Fehler aufgetreten ist (falls vorhanden).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
+Wenn die Funktion erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler angibt.
 

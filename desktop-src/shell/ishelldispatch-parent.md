@@ -1,7 +1,7 @@
 ---
-description: Ruft ein-Objekt ab, das das übergeordnete Element des aktuellen-Objekts darstellt.
+description: Ruft ein -Objekt ab, das das übergeordnete Element des aktuellen -Objekts darstellt.
 ms.assetid: 2FDEF8D3-3F5B-43ae-9812-83B4249D9CBB
-title: Ishelldispatch. Parent-Eigenschaft (Shldisp. h)
+title: IShellDispatch.Parent-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 051e6f323b9663b692410d81d85e55a404e99d56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e166afe66aa20a98e316d55b4c9b94016dd8be3c73b4f23aca11c47c462a5a64
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130093"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118969069"
 ---
-# <a name="ishelldispatchparent-property"></a>Ishelldispatch. Parent-Eigenschaft
+# <a name="ishelldispatchparent-property"></a>IShellDispatch.Parent (Eigenschaft)
 
-Ruft ein-Objekt ab, das das übergeordnete Element des aktuellen-Objekts darstellt.
+Ruft ein -Objekt ab, das das übergeordnete Element des aktuellen -Objekts darstellt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,17 +45,17 @@ Property Parent As Object
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Variable vom Typ [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) , die das übergeordnete Objekt empfängt.
+Eine Variable vom Typ [**IDispatch,**](/windows/win32/api/oaidl/nn-oaidl-idispatch) die das übergeordnete Objekt empfängt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft wird implementiert, und der Zugriff erfolgt über die [**Shell. Parent**](shell-parent.md) -Eigenschaft.
+Diese Eigenschaft wird implementiert und über die [**Shell.Parent-Eigenschaft**](shell-parent.md) aufgerufen.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **Parent** in JScript, VBScript und Visual Basic veranschaulicht.
+Die folgenden Beispiele zeigen die Verwendung von **Parent** in JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -76,7 +76,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -124,17 +124,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

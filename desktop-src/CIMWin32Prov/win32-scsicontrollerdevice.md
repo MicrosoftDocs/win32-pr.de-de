@@ -1,5 +1,5 @@
 ---
-description: Die Win32 \_ -WMI-Klasse scsicontrollerdevice Association bezieht sich auf einen SCSI-Controller (Small Computersystem Interface) und das logische Gerät (Laufwerk), das mit ihm verbunden ist.
+description: Die WMI-Klasse für die \_ Win32-SCSIControllerDevice-Zuordnung verknüpft einen kleinen SCSI-Controller (Computer System Interface) und das damit verbundene logische Gerät (Laufwerk).
 ms.assetid: 0334829c-3625-4acf-8ef3-da934c51e9bf
 ms.tgt_platform: multiple
 title: Win32_SCSIControllerDevice-Klasse
@@ -21,18 +21,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 7a3189f9d9b75321df7c69214e68779864953f6c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1f703d5a290245b1596801f78c005c565faa45296c3582e4feaad5dc4011787b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117834171"
 ---
-# <a name="win32_scsicontrollerdevice-class"></a>Win32 \_ scsicontrollerdevice-Klasse
+# <a name="win32_scsicontrollerdevice-class"></a>Win32 \_ SCSIControllerDevice-Klasse
 
-Die Win32- [WMI-Klasse](../wmisdk/retrieving-a-class.md) **\_ scsicontrollerdevice** Association bezieht sich auf einen SCSI-Controller (Small Computersystem Interface) und das logische Gerät (Laufwerk), das mit ihm verbunden ist.
+Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) für die **\_ Win32-SCSIControllerDevice-Zuordnung** verknüpft einen kleinen SCSI-Controller (Computer System Interface) und das damit verbundene logische Gerät (Laufwerk).
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,28 +52,28 @@ class Win32_SCSIControllerDevice : CIM_ControlledBy
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ scsicontrollerdevice** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ SCSIControllerDevice-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ scsicontrollerdevice** -Klasse verfügt über diese Eigenschaften.
+Die **\_ Win32-Klasse SCSIControllerDevice verfügt** über diese Eigenschaften.
 
 <dl> <dt>
 
-**Accessstate**
+**AccessState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Controller aktiv auf das Gerät zugreift oder darauf zugreift. Diese Informationen sind erforderlich, wenn ein logisches Gerät durch mehrere Controller befohlen werden kann oder darauf zugegriffen werden kann.
+Gibt an, ob der Controller aktiv befehlet oder auf das Gerät zutritt. Diese Informationen sind erforderlich, wenn ein logisches Gerät von mehreren Controllern befehlet oder über diese aufgerufen werden kann.
 
-Diese Eigenschaft wird von [**CIM \_ controlledby**](cim-controlledby.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ControlledBy geerbt.**](cim-controlledby.md)
 
 <dt>
 
@@ -100,7 +100,7 @@ Diese Eigenschaft wird von [**CIM \_ controlledby**](cim-controlledby.md)geerbt.
 
 </dd> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Win32 \_ SCSIController**
@@ -109,14 +109,14 @@ Datentyp: **Win32 \_ SCSIController**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**override**](../wmisdk/standard-qualifiers.md) ("Vorgänger"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("CIM \| Win32 \_ SCSIController")
+Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**Override**](../wmisdk/standard-qualifiers.md) ("Antecedent"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("CIM \| Win32 \_ SCSIController")
 </dt> </dl>
 
-Die [**Win32 \_ SCSIController**](win32-scsicontroller.md) Vorgänger-Referenz stellt den SCSI-Controller dar, der diesem Gerät zugeordnet ist.
+Der [**Win32 \_ SCSIController-Hinweis**](win32-scsicontroller.md) stellt den diesem Gerät zugeordneten SCSI-Controller dar.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalDevice**
@@ -125,17 +125,17 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**override**](../wmisdk/standard-qualifiers.md) ("Dependent"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("CIM \| CIM \_ LogicalDevice")
+Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**Override**](../wmisdk/standard-qualifiers.md) ("Dependent"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("CIM \| CIM \_ LogicalDevice")
 </dt> </dl>
 
-Der von [**CIM \_ LogicalDevice**](cim-logicaldevice.md) abhängige Verweis stellt das logische Gerät dar, das mit dem SCSI-Controller verbunden ist.
+Der [**\_ abhängige CIM-Verweis LogicalDevice**](cim-logicaldevice.md) stellt das logische Gerät dar, das mit dem SCSI-Controller verbunden ist.
 
 </dd> <dt>
 
-**Aushandateddatawidth**
+**NegotiatedDataWidth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -144,16 +144,16 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Bits")
 </dt> </dl>
 
-Wenn mehrere Bus-oder Verbindungsdaten breiten möglich sind, definiert diese Eigenschaft die jeweils verwendete Eigenschaft zwischen den Geräten. Die Daten Breite wird in Bits angegeben. Wenn die Daten Breite nicht ausgehandelt wird oder diese Informationen für die Geräteverwaltung nicht verfügbar oder wichtig sind, sollte die-Eigenschaft auf 0 (null) festgelegt werden.
+Wenn mehrere Bus- oder Verbindungsdatenbreiten möglich sind, definiert diese Eigenschaft die zwischen den Geräten verwendete Eigenschaft. Die Datenbreite wird in Bits angegeben. Wenn die Datenbreite nicht ausgehandelt wird oder diese Informationen für die Geräteverwaltung nicht verfügbar oder wichtig sind, sollte die -Eigenschaft auf 0 (null) festgelegt werden.
 
-Diese Eigenschaft wird von CIM-Geräte [**\_ erviceconnetction**](cim-deviceconnection.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ DeviceConnection geerbt.**](cim-deviceconnection.md)
 
 </dd> <dt>
 
-**Aushandatedspeed**
+**NegotiatedSpeed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -162,47 +162,47 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Bits pro Sekunde")
 </dt> </dl>
 
-Wenn mehrere Bus-oder Verbindungsgeschwindigkeiten möglich sind, definiert diese Eigenschaft die zwischen den Geräten verwendete. Die Geschwindigkeit wird in Bits pro Sekunde angegeben. Wenn Verbindungs-oder Busgeschwindigkeiten nicht ausgehandelt werden oder diese Informationen für die Geräteverwaltung nicht verfügbar oder wichtig sind, sollte die-Eigenschaft auf 0 (null) festgelegt werden.
+Wenn mehrere Bus- oder Verbindungsgeschwindigkeiten möglich sind, definiert diese Eigenschaft die zwischen den Geräten verwendete Eigenschaft. Die Geschwindigkeit wird in Bits pro Sekunde angegeben. Wenn die Verbindungs- oder Busgeschwindigkeit nicht ausgehandelt wird oder wenn diese Informationen nicht verfügbar oder für die Geräteverwaltung wichtig sind, sollte die -Eigenschaft auf 0 (null) festgelegt werden.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](../wmisdk/creating-a-wmi-script.md).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](../wmisdk/creating-a-wmi-script.md)
 
-Diese Eigenschaft wird von CIM-Geräte [**\_ erviceconnetction**](cim-deviceconnection.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ DeviceConnection geerbt.**](cim-deviceconnection.md)
 
 </dd> <dt>
 
-**Anzahlersätze**
+**NumberOfHardResets**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl von Festplatten, die vom Controller ausgegeben werden. Bei einer festen zurück setzung wird das Gerät wieder in den Initialisierungs-oder Startzustand versetzt. Alle internen Geräte Zustandsinformationen und Daten gehen verloren.
+Anzahl der vom Controller ausgegebenen zurückgesetzten Festplatten. Durch eine harte Zurücksetzung wird das Gerät in den Initialisierungs- oder Startzustand zurückgesetzt. Alle internen Gerätestatusinformationen und -daten gehen verloren.
 
-Diese Eigenschaft wird von [**CIM \_ controlledby**](cim-controlledby.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ControlledBy geerbt.**](cim-controlledby.md)
 
 </dd> <dt>
 
-**Anzahlermengen**
+**NumberOfSoftResets**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der vom Controller ausgestellten Soft-zurück Stellungen. Eine weiche zurück Setzung löscht den aktuellen Gerätestatus und die Daten nicht vollständig. Die genaue Semantik ist abhängig vom Gerät und den Protokollen und Mechanismen, die für die Kommunikation mit dem Gerät verwendet werden.
+Anzahl der vom Controller ausgegebenen zurückgesetzten Daten. Bei einer zurückgesetzten Zurücksetzung werden der aktuelle Gerätestatus und die aktuellen Daten nicht vollständig entschlossen. Die genaue Semantik hängt vom Gerät sowie von den Protokollen und Mechanismen ab, die für die Kommunikation verwendet werden.
 
-Diese Eigenschaft wird von [**CIM \_ controlledby**](cim-controlledby.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ControlledBy geerbt.**](cim-controlledby.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32-Klasse \_ scsicontrollerdevice** ist von [**CIM \_ controlledby**](cim-controlledby.md)abgeleitet.
+Die **Win32 \_ SCSIControllerDevice-Klasse** wird von [**CIM \_ ControlledBy abgeleitet.**](cim-controlledby.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -212,20 +212,20 @@ Die **Win32-Klasse \_ scsicontrollerdevice** ist von [**CIM \_ controlledby**](c
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ controlledby**](cim-controlledby.md)
+[**CIM \_ ControlledBy**](cim-controlledby.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

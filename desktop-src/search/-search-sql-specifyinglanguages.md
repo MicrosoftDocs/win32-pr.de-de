@@ -13,7 +13,7 @@ ms.locfileid: "118226815"
 ---
 # <a name="specifying-languages"></a>Angeben von Sprachen
 
-Sie können die Sprache angeben, die in Suchabfragen verwendet wird. Sowohl das FREETEXT- als auch das CONTAINS-Prädikat in der WHERE-Klausel unterstützen die Angabe einer Sprache. Sie können die Abfragesprache angeben, indem Sie einen numerischen Sprachcodebezeichner (NUMERIC Language Code Identifier, LCID) im CONTAINS- oder FREETEXT-Prädikat angeben. Dieser LCID gibt an, welche Wörterpause zum Analysieren der Abfragezeichenfolge verwendet werden soll. Es verwendet die folgende Syntax:
+Sie können die Sprache angeben, die in Suchabfragen verwendet wird. Sowohl die FREETEXT- als auch die CONTAINS-Prädikate in der WHERE-Klausel unterstützen die Angabe einer Sprache. Sie können die Abfragesprache angeben, indem Sie einen numerischen Codebezeichner (LCID) im CONTAINS- oder FREETEXT-Prädikat angeben. Diese LCID gibt an, welche Wörterpause zum Analysieren der Abfragezeichenfolge verwendet werden soll. Es verwendet die folgende Syntax:
 
 
 ```

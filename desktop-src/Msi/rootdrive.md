@@ -13,11 +13,11 @@ ms.locfileid: "118625737"
 ---
 # <a name="rootdrive-property"></a>ROOTDRIVE-Eigenschaft
 
-Die **ROOTDRIVE-Eigenschaft** gibt das Standardlaufwerk für das Zielverzeichnis der Installation an. Wenn die Directory -Spalte der [Directory-Tabelle](directory-table.md) das Stammzielverzeichnis mit einem nicht definierten Eigenschaftennamen angibt, verwendet das Installationsprogramm den Wert der **ROOTDRIVE-Eigenschaft,** um den Pfad zum Zielverzeichnis aufzulösen.
+Die **ROOTDRIVE-Eigenschaft** gibt das Standardlaufwerk für das Zielverzeichnis der Installation an. Wenn die Directory-Spalte der [Directory-Tabelle](directory-table.md) das Stammzielverzeichnis durch einen nicht definierten Eigenschaftennamen angibt, verwendet das Installationsprogramm den Wert der **ROOTDRIVE-Eigenschaft,** um den Pfad zum Zielverzeichnis aufzulösen.
 
-Wenn **ROOTDRIVE** nicht über die Befehlszeile festgelegt oder in der [Tabelle Property (Eigenschaft)](property-table.md)verfasst wurde, legt das Installationsprogramm diese Eigenschaft fest. Während einer [Administratorinstallation legt](administrative-installation.md) das Installationsprogramm **ROOTDRIVE** auf das erste verbundene Netzwerklaufwerk fest, auf das geschrieben werden kann. Wenn es sich nicht um eine Administratorinstallation handelt oder das Installationsprogramm keine Netzwerklaufwerke finden kann, legt das Installationsprogramm **ROOTDRIVE** auf das lokale Laufwerk fest, auf das der größte freie Speicherplatz geschrieben werden kann.
+Wenn **ROOTDRIVE** nicht in einer Befehlszeile festgelegt oder in der [Property-Tabelle](property-table.md)erstellt wird, legt das Installationsprogramm diese Eigenschaft fest. Während einer [Administratorinstallation](administrative-installation.md) legt das Installationsprogramm **ROOTDRIVE** auf das erste verbundene Netzwerklaufwerk fest, auf das geschrieben werden kann. Wenn es sich nicht um eine Administratorinstallation handelt oder das Installationsprogramm keine Netzwerklaufwerke finden kann, legt das Installationsprogramm **ROOTDRIVE** auf das lokale Laufwerk fest, das auf den meisten freien Speicherplatz geschrieben werden kann.
 
-Der Wert für diese Eigenschaft muss mit ' ' \\ enden.
+Der Wert für diese Eigenschaft muss mit ' \\ ' enden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -25,7 +25,7 @@ Der Wert für diese Eigenschaft muss mit ' ' \\ enden.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Requirements (Anforderungen für den Windows Installer).<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Unter [Windows Installer Run-Time Requirements (Anforderungen für](windows-installer-portal.md) Windows Installer) finden Sie Informationen zu den mindest erforderlichen Windows Service Packs für eine Windows Installer-Version.<br/> |
 
 
 

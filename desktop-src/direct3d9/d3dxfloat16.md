@@ -52,7 +52,7 @@ Die 16-Bit-Daten.
 
 ## <a name="remarks"></a>Hinweise
 
-C++-Programmierer können mit den [**D3DXFLOAT16-Erweiterungen**](d3dxfloat16-extensions.md)operator overloading und type casting nutzen, die überladene Konstruktoren und Zuweisungs-, unäre und binäre Operatoren (einschließlich Gleichheit) implementieren.
+C++-Programmierer können die Vorteile der Operatorüberladung und Typcasting mit den [**D3DXFLOAT16-Erweiterungen**](d3dxfloat16-extensions.md)nutzen, die überladene Konstruktoren und Zuweisungs-, unäre und binäre Operatoren (einschließlich Gleichheitsoperatoren) implementieren.
 
 ## <a name="requirements"></a>Anforderungen
 

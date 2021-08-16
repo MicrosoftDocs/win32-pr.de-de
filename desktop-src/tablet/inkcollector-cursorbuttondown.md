@@ -70,7 +70,7 @@ Diese Ereignismethode wird in den \_ \_ Dispatch-only-Schnittstellen IInkCollect
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

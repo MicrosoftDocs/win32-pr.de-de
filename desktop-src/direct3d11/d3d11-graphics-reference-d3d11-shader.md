@@ -1,6 +1,6 @@
 ---
 title: Shaderreferenz (Direct3D 11-Grafiken)
-description: Die Direct3D-API definiert mehrere API-Elemente, mit denen Sie programmierbare Shader erstellen und verwalten können. Shader sind ausführbare Programme, die ausschließlich mit HLSL programmiert werden.
+description: Die Direct3D-API definiert mehrere API-Elemente, mit deren Hilfe Sie programmierbare Shader erstellen und verwalten können. Shader sind ausführbare Programme, die ausschließlich mit HLSL programmiert werden.
 ms.assetid: dd2e414b-02ed-4f55-90ad-8d17c322ec72
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,14 +13,14 @@ ms.locfileid: "118537732"
 ---
 # <a name="shader-reference-direct3d-11-graphics"></a>Shaderreferenz (Direct3D 11-Grafiken)
 
-Die Direct3D-API definiert mehrere API-Elemente, mit denen Sie programmierbare Shader erstellen und verwalten können. Shader sind ausführbare Programme, die ausschließlich mit HLSL programmiert werden.
+Die Direct3D-API definiert mehrere API-Elemente, mit deren Hilfe Sie programmierbare Shader erstellen und verwalten können. Shader sind ausführbare Programme, die ausschließlich mit HLSL programmiert werden.
 
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                | Beschreibung                                                               |
+| Thema                                                                                | BESCHREIBUNG                                                               |
 |--------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | [Shader-Schnittstellen](d3d11-graphics-reference-d3d11-shader-interfaces.md)<br/> | Dieser Abschnitt enthält Informationen zu den Shaderschnittstellen.<br/> |
 | [Shaderfunktionen](d3d11-graphics-reference-shader-functions.md)<br/>         | Dieser Abschnitt enthält Informationen zu den Shaderfunktionen.<br/>  |

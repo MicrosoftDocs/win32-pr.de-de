@@ -1,9 +1,9 @@
 ---
-title: Deducingblobsetter (D2d1effecthelpers. h)
-description: Leitet die-Klasse und die-Argumente ab und ruft dann einen Eigenschaften Setter-Rückruf für eine Element Funktion für eine BLOB-Type-Eigenschaft auf.
+title: DeducingBlobSetter (D2d1effecthelpers.h)
+description: Deduces the class and arguments and then calls a member-function property setter callback for a blob-type property.
 ms.assetid: 4B8B871D-FE5E-4EF3-AEED-A3D92C10E8C6
 keywords:
-- Deducingblobsetter Direct2D
+- DeducingBlobSetter Direct2D
 topic_type:
 - apiref
 api_name:
@@ -14,19 +14,19 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a2d3bbfcc0a48d722bd98456821d7f7df5e8780a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 165f88f9ba9a7f0706726a13a1dfa3445d3b752719e71dc231a23cdd1583a4c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367700"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117825974"
 ---
-# <a name="deducingblobsetter"></a>Deducingblobsetter
+# <a name="deducingblobsetter"></a>DeducingBlobSetter
 
-Leitet die-Klasse und die-Argumente ab und ruft dann einen Eigenschaften Setter-Rückruf für eine Element Funktion für eine BLOB-Type-Eigenschaft auf.
+Deduces the class and arguments and then calls a member-function property setter callback for a blob-type property.
 
 > [!Note]  
-> Deducingblobsetter sollte nicht direkt aufgerufen werden.
+> DeducingBlobSetter sollte nicht direkt aufgerufen werden.
 
  
 
@@ -46,15 +46,15 @@ HRESULT DeducingBlobSetter(
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D2d1effecthelpers. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D2d1effecthelpers.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Direct2D::D educingblobgetter**](deducingblobgetter.md)
+[**Direct2D::D educingBlobGetter**](deducingblobgetter.md)
 </dt> </dl>
 
  

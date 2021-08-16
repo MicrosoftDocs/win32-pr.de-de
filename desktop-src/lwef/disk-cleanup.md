@@ -1,12 +1,12 @@
 ---
 title: Erstellen eines Datenträgerbereinigungshandlers
-description: Ein Axiom, das sich in der Welt der Computer immer wieder bewährt hat, ist, dass Sie es unabhängig von der Größe der Speicherkapazität Ihres Computers schließlich auffüllen.
+description: Ein Axiom, das sich in der Welt der Computer immer wieder bewährt hat, ist, dass sie unabhängig von der Größe der Speicherkapazität Ihres Computers letztendlich aufgefüllt werden.
 ms.assetid: f85e0db7-fbdb-452e-90c8-672f716b5692
 keywords:
 - Datenträgerbereinigungshandler
 - Datenträgerbereinigung
 - DataDrivenCleaner
-- Register,Datenträgerbereinigungshandler
+- Register, Datenträgerbereinigungshandler
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 61ce7fc96e16cb27168e00196b65d48d378758a47594122cca978dc1a1f4de94
@@ -18,26 +18,26 @@ ms.locfileid: "118479893"
 ---
 # <a name="creating-a-disk-cleanup-handler"></a>Erstellen eines Datenträgerbereinigungshandlers
 
-Ein Axiom, das sich in der Welt der Computer immer wieder bewährt hat, ist, dass Sie es unabhängig von der Größe der Speicherkapazität Ihres Computers schließlich auffüllen. Während die durchschnittliche Größe der Festplatte eines Computers im Laufe der Zeit erheblich gestiegen ist, sind die Anwendungen auch entsprechend gestiegen, und Benutzer suchen nach Möglichkeiten, mehr freien Festplattenspeicher zu erstellen. Der verfügbare Speicherplatz wird auch durch die vielen temporären Dateien reduziert, die Anwendungen aus Sicherungs- oder Leistungsgründen erstellen. Wenn der Speicherplatz auf dem Datenträger zu niedrig wird, ist es notwendig, den von Anwendungen verwendeten Speicherplatz zu reduzieren. Speicherplatz auf dem Datenträger kann mit einer Vielzahl von Möglichkeiten, einschließlich der folgenden, frei werden:
+Ein Axiom, das sich in der Welt der Computer immer wieder bewährt hat, ist, dass sie unabhängig von der Größe der Speicherkapazität Ihres Computers letztendlich aufgefüllt werden. Während die durchschnittliche Größe der Festplatte eines Computers im Laufe der Zeit erheblich angestiegen ist, sind die Anwendungen ebenfalls entsprechend gestiegen, sodass Benutzer nach Möglichkeiten suchen, mehr freien Festplattenspeicher zu erstellen. Der verfügbare Speicherplatz wird auch durch die vielen temporären Dateien reduziert, die Anwendungen aus Sicherungs- oder Leistungsgründen erstellen. Wenn der Speicherplatz knapp wird, muss der von Anwendungen belegte Speicherplatz reduziert werden. Speicherplatz kann mit einer Vielzahl von Möglichkeiten freigegeben werden, einschließlich der folgenden:
 
 -   Löschen von Dateien.
 -   Komprimieren von Dateien.
 -   Verschieben von Dateien auf ein Sicherungsmedium.
 -   Übertragen von Dateien auf einen Remoteserver.
 
-Dateien, die gute Kandidaten für die Bereinigung sind, sind:
+Dateien, die sich gut für die Bereinigung eignen, sind:
 
--   Dateien, die der Benutzer nie mehr benötigt.
+-   Dateien, die der Benutzer nie wieder benötigt.
 -   Temporäre Dateien, die nur aus Leistungsgründen vorhanden sind.
 -   Dateien, die bei Bedarf von einer Installations-CD wiederhergestellt werden können.
 -   Datendateien, die möglicherweise durch neuere Versionen ersetzt wurden, z. B. alte Sicherungsdateien.
--   Ältere Dateien, die seit langer Zeit nicht mehr verwendet wurden.
+-   Ältere Dateien, die seit langem nicht mehr verwendet wurden.
 
-Das Löschen ist besonders für Dateien geeignet, die der Benutzer nie mehr benötigt, z. B. Dateien, die aus Leistungsgründen vorübergehend zwischengespeichert werden. Das Löschen ist auch für Dateien geeignet, die leicht wiederhergestellt werden können, z. B. Grafikdateien, die von einer Installations-CD erneut geladen werden können. Dateien, die der Benutzer später benötigen oder die schwer zu rekonstruieren sind, sind bessere Kandidaten für die Komprimierung oder Sicherung.
+Das Löschen eignet sich besonders für Dateien, die der Benutzer nie wieder benötigt, z. B. Dateien, die aus Leistungsgründen vorübergehend zwischengespeichert werden. Das Löschen eignet sich auch für Dateien, die leicht wiederhergestellt werden können, z. B. Grafikdateien, die von einer Installations-CD neu geladen werden können. Dateien, die der Benutzer möglicherweise später benötigt oder die schwer zu rekonstruieren sind, sind bessere Kandidaten für die Komprimierung oder Sicherung.
 
-Die Erwartung, dass ein Benutzer das Dateisystem manuell bereinigt, ist keine gute Lösung. Der Benutzer weiß möglicherweise nicht, wo sich viele der Dateien befinden oder wie er erkennt, welche dateien sicher entfernt werden können. Darüber hinaus besteht das Risiko, dass der Benutzer wichtige Dateien löscht.
+Die Erwartung, dass ein Benutzer das Dateisystem manuell bereinigt, ist keine gute Lösung. Der Benutzer weiß möglicherweise nicht, wo sich viele der Dateien befinden oder wie erkannt wird, welche Dateien sicher entfernt werden können. Darüber hinaus besteht das Risiko, dass der Benutzer wichtige Dateien löscht.
 
-Die folgenden Facets des Datenträgerbereinigungs-Hilfsprogramms werden in diesem Thema erläutert.
+Die folgenden Facets des Hilfsprogramms "Datenträgerbereinigung" werden in diesem Thema erläutert.
 
 -   [Das Windows-Hilfsprogramm für die Datenträgerbereinigung](#the-windows-disk-cleanup-utility)
 -   [Grundlagen der Implementierung](#implementation-basics)
@@ -55,43 +55,43 @@ Die folgenden Facets des Datenträgerbereinigungs-Hilfsprogramms werden in diese
 
 ## <a name="the-windows-disk-cleanup-utility"></a>Das Windows-Hilfsprogramm für die Datenträgerbereinigung
 
-Ab Windows 98 enthält das Windows-Betriebssystem Datenträgerbereinigung, ein Hilfsprogramm, das dem Benutzer die Verwaltung des verfügbaren Festplattenspeicherplatzes erheblich erleichtert. Das Hilfsprogramm Datenträgerbereinigung ist so konzipiert, dass so viel Speicherplatz wie möglich frei wird und das Risiko verringert wird, dass der Benutzer versehentlich wichtige Dateien löscht.
+Ab Windows 98 enthält das Windows Betriebssystem die Datenträgerbereinigung, ein Hilfsprogramm, mit dem der Benutzer den verfügbaren Festplattenspeicher viel einfacher verwalten kann. Das Hilfsprogramm "Datenträgerbereinigung" ist so konzipiert, dass so viel Speicherplatz wie möglich freigegeben wird und das Risiko verringert wird, dass der Benutzer versehentlich wichtige Dateien löscht.
 
 Die Datenträgerbereinigung kann auf drei Arten initiiert werden.
 
--   Der Benutzer kann die Datenträgerbereinigung initiieren, indem er auf **Starten klickt.** , die auf **Alle Programme,** **Zubehör** und **Systemtools zeigen;** und klicken Sie dann auf **Datenträgerbereinigung**.
--   Das System benachrichtigt den Benutzer mit einem Meldungsfeld, dass nicht verwendeter Speicherplatz den kritischen Modus erreicht hat. Der Schwellenwert für den kritischen Modus für ein Laufwerk, das größer als 2,25 GIGABYTE (GB) ist, beträgt 200 MEGABYTE (MB). Nachfolgende Warnungen werden bei 80, 50 und 1 MB angegeben. Der Benutzer erhält die Möglichkeit, Speicherplatz manuell freizugeben oder das Hilfsprogramm Datenträgerbereinigung zu starten.
--   Der Benutzer kann den assistenten für Windows Geplanter Task (auf älteren Systemen als Wartungs-Assistent bezeichnet) das Hilfsprogramm Datenträgerbereinigung automatisch zu geplanten Zeiten ausführen lassen.
+-   Der Benutzer kann die Datenträgerbereinigung initiieren, indem er auf **Starten** klickt. Verweisen auf **Alle Programme,** **Zubehör** und **Systemtools**; klicken Sie dann auf **Datenträgerbereinigung.**
+-   Das System benachrichtigt den Benutzer mit einem Meldungsfeld, dass nicht verwendeter Speicherplatz den kritischen Modus erreicht hat. Der Schwellenwert für den kritischen Modus für ein Laufwerk, das größer als 2,25 Gigabyte (GB) ist, beträgt 200 MEGABYTE (MB). Nachfolgende Warnungen werden bei 80, 50 und 1 MB ausgegeben. Der Benutzer erhält die Möglichkeit, Speicherplatz manuell frei zu geben oder das Hilfsprogramm "Datenträgerbereinigung" zu starten.
+-   Der Benutzer kann den Assistenten für Windows geplanten Task (auf älteren Systemen als Wartungs-Assistent bezeichnet) das Hilfsprogramm für die Datenträgerbereinigung automatisch zu geplanten Zeiten ausführen lassen.
 
-Die grundlegende Herausforderung bei der Datenträgerbereinigung besteht darin, so viel Speicherplatz wie möglich frei zu geben, ohne wichtige Dateien zu löschen. Da es keine Standard-Möglichkeit gibt, Dateien für die Bereinigung zu markieren, kann keine einzelne Anwendung zuverlässig alle unerlädlichen Dateien erkennen und bereinigen. Das Hilfsprogramm Datenträgerbereinigung löst dieses Problem, indem  es den Bereinigungsvorgang zwischen einem einzelnen Datenträgerbereinigungs-Manager und einer Sammlung von Datenträgerbereinigungshandlern *aufteilt.*
+Die grundlegende Herausforderung bei der Datenträgerbereinigung besteht darin, so viel Speicherplatz wie möglich frei zu machen, ohne wichtige Dateien zu löschen. Da es keine Standard-Möglichkeit gibt, Dateien für die Bereinigung zu markieren, kann keine einzelne Anwendung zuverlässig alle unwichtigen Dateien erkennen und bereinigen. Das Hilfsprogramm Datenträgerbereinigung löst dieses Problem, indem es den Bereinigungsvorgang zwischen einem einzelnen *Datenträgerbereinigungs-Manager* und einer Sammlung von *Datenträgerbereinigungshandlern aufteilt.*
 
-Wenn das Hilfsprogramm Datenträgerbereinigung ausgeführt wird, wird dem Benutzer das folgende Dialogfeld angezeigt. (Wenn auf dem Computer mehrere Datenträger oder Datenträgerpartitionen vorhanden sind, wird der Benutzer zunächst aufgefordert, ein Laufwerk zu wählen, bevor dieses Dialogfeld angezeigt wird.)
+Wenn das Hilfsprogramm Datenträgerbereinigung ausgeführt wird, wird dem Benutzer das folgende Dialogfeld angezeigt. (Wenn auf dem Computer mehrere Datenträger oder Datenträgerpartitionen vorhanden sind, wird der Benutzer zunächst aufgefordert, ein Laufwerk auszuwählen, bevor dieses Dialogfeld angezeigt wird.)
 
-![Screenshot des Dialogfelds "Bereinigung"](images/cleanup1.png)
+![Screenshot des Bereinigungsdialogfelds](images/cleanup1.png)
 
-Der Datenträgerbereinigungs-Manager ist Teil des Betriebssystems. Es zeigt das in der vorherigen Abbildung gezeigte Dialogfeld an, verarbeitet Benutzereingaben und verwaltet den Bereinigungsvorgang. Die tatsächliche Auswahl und Bereinigung nicht verwendeter Dateien erfolgt durch die einzelnen Datenträgerbereinigungshandler, die im Listenfeld des Datenträgerbereinigungs-Managers angezeigt werden. Der Benutzer hat die Möglichkeit, einzelne Handler zu aktivieren oder zu deaktivieren, indem er sein Kontrollkästchen auf der Benutzeroberfläche des Datenträgerbereinigungs-Managers aktivieren oder deaktivieren kann.
+Der Datenträgerbereinigungs-Manager ist Teil des Betriebssystems. Es zeigt das in der vorherigen Abbildung gezeigte Dialogfeld an, verarbeitet Benutzereingaben und verwaltet den Bereinigungsvorgang. Die tatsächliche Auswahl und Bereinigung nicht benötigter Dateien erfolgt durch die einzelnen Datenträgerbereinigungshandler, die im Listenfeld des Datenträgerbereinigungs-Managers angezeigt werden. Der Benutzer hat die Möglichkeit, einzelne Handler zu aktivieren oder zu deaktivieren, indem er sein Kontrollkästchen in der Benutzeroberfläche des Datenträgerbereinigungs-Managers aktiviert oder deaktiviert.
 
-Jeder Handler ist für einen klar definierten Satz von Dateien verantwortlich. Beispielsweise ist der ausgewählte Handler in der Abbildung für das Bereinigen heruntergeladener Programmdateien verantwortlich. Der in der Abbildung ausgewählte Handler stellt auch die Schaltfläche **Dateien anzeigen** zur Auswahl. Durch Klicken auf die Schaltfläche kann der Benutzer anfordern, dass der Handler eine Benutzeroberfläche anzeigt, in der Regel ein Windows Explorer-Fenster, in dem der Benutzer angeben kann, welche Dateien oder Klassen von Dateien bereinigt werden.
+Jeder Handler ist für einen klar definierten Satz von Dateien verantwortlich. Beispielsweise ist der ausgewählte Handler in der Abbildung für die Bereinigung heruntergeladener Programmdateien verantwortlich. Der in der Abbildung ausgewählte Handler stellt auch die Schaltfläche **Dateien anzeigen** bereit. Durch Klicken auf die Schaltfläche kann der Benutzer anfordern, dass der Handler in der Regel ein Windows Explorer-Fenster anzeigt, in dem der Benutzer angeben kann, welche Dateien oder Klassen von Dateien bereinigt werden sollen.
 
-Obwohl Windows eine Reihe von Datenträgerbereinigungshandlern enthält, sind sie nicht für die Behandlung von Dateien konzipiert, die von anderen Anwendungen erzeugt werden. Stattdessen ist der Datenträgerbereinigungs-Manager so konzipiert, dass er flexibel und erweiterbar ist, indem er es entwicklern ermöglicht, ihren eigenen Datenträgerbereinigungshandler zu implementieren und zu registrieren. Jeder Entwickler kann die verfügbaren Datenträgerbereinigungsdienste erweitern, indem er einen Datenträgerbereinigungshandler implementieren und registrieren kann.
+Obwohl Windows über eine Reihe von Datenträgerbereinigungshandlern verfügt, sind sie nicht für die Verarbeitung von Dateien konzipiert, die von anderen Anwendungen erzeugt werden. Stattdessen ist der Datenträgerbereinigungs-Manager flexibel und erweiterbar, indem jeder Entwickler seinen eigenen Datenträgerbereinigungshandler implementieren und registrieren kann. Jeder Entwickler kann die verfügbaren Datenträgerbereinigungsdienste erweitern, indem er einen Datenträgerbereinigungshandler implementiert und registriert.
 
-Alle Anwendungen, die temporäre Dateien erstellen, können und sollten einen Datenträgerbereinigungshandler implementieren und registrieren. Auf diese Weise können Benutzer die temporären Dateien der Anwendung bequem und zuverlässig verwalten. Wenn Sie den Handler implementieren, können Sie entscheiden, welche Dateien betroffen sind, und bestimmen, wie die eigentliche Bereinigung erfolgt.
+Alle Anwendungen, die temporäre Dateien erzeugen, können und sollten einen Datenträgerbereinigungshandler implementieren und registrieren. Auf diese Weise können Benutzer die temporären Dateien der Anwendung bequem und zuverlässig verwalten. Wenn Sie den Handler implementieren, können Sie entscheiden, welche Dateien betroffen sind, und bestimmen, wie die eigentliche Bereinigung erfolgt.
 
 ## <a name="implementation-basics"></a>Grundlagen der Implementierung
 
-Bereinigungshandler sind In-Process-Server Component Object Model (COM)-Objekte. Windows stellt ein vorhandenes Handlerobjekt mit dem Namen DataDrivenCleaner für Ihre Verwendung zur Anwendung. Sie können auch einen Handler selbst implementieren, um mehr Flexibilität zu erhalten. Mit diesen Objekten können Sie dann angeben, wie Dateien ausgewählt und Speicherplatz auf dem Datenträger frei wird. Im Fall eines implementierten Handlers können Sie die optionale Benutzeroberfläche für eine präzisere Steuerung anzeigen. In diesem Abschnitt wird die Implementierung Ihres eigenen Handlers behandelt. Weitere Informationen zur Verwendung des DataDrivenCleaner-Objekts finden Sie unter [Verwenden des DataDrivenCleaner-Objekts.](#using-the-datadrivencleaner-object)
+Bereinigungshandler sind COM-Objekte (In-Process Server Component Object Model). Windows stellt ein vorhandenes Handlerobjekt namens DataDrivenCleaner für Ihre Verwendung bereit. Sie können einen Handler auch selbst implementieren, um mehr Flexibilität zu erhalten. Mit diesen Objekten können Sie dann angeben, wie Sie Dateien auswählen, Speicherplatz freigeben und im Fall eines implementierten Handlers die optionale Benutzeroberfläche für eine präzisere Steuerung anzeigen. In diesem Abschnitt wird die Implementierung eines eigenen Handlers behandelt. Ausführliche Informationen zur Verwendung des DataDrivenCleaner-Objekts finden Sie unter [Verwenden des DataDrivenCleaner-Objekts.](#using-the-datadrivencleaner-object)
 
 Ein Datenträgerbereinigungshandler sollte diese fünf grundlegenden Aufgaben ausführen.
 
--   Initialisiert das Handlerobjekt.
--   Überprüfen Sie den Datenträger, um zu bestimmen, wie viel Speicherplatz auf dem Datenträger frei werden kann.
--   Zeigen Sie die Benutzeroberfläche an, um Benutzerfeedback darüber zu erhalten, welche Dateien bereinigt werden müssen. (Optional)
--   Bereinigt sie.
+-   Initialisieren Sie das Handlerobjekt.
+-   Überprüfen Sie den Datenträger, um zu ermitteln, wie viel Speicherplatz freigegeben werden kann.
+-   Zeigen Sie die Benutzeroberfläche an, um Benutzerfeedback dazu zu erhalten, welche Dateien bereinigt werden sollen. (Optional)
+-   Durchführen der Bereinigung.
 -   Herunterfahren.
 
-Damit der Datenträgerbereinigungs-Manager diese Aufgaben verwalten kann, muss ein Handler entweder [**IEmptyVolumeCache**](/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache) für Windows 98 oder [**IEmptyVolumeCache2**](/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache2) für Windows Edition (Windows Me), Windows 2000 und Windows XP exportieren. Da **IEmptyVolumeCache2** von **IEmptyVolumeCache** erbt und nur die zusätzliche **InitializeEx-Methode** hinzugefügt wird, ist relativ wenig zusätzlicher Arbeitsaufwand erforderlich, um beides zu implementieren. Sofern ihr Handler nicht nur für eines dieser Betriebssysteme vorgesehen ist, sollte er beide Schnittstellen exportieren.
+Damit der Datenträgerbereinigungs-Manager diese Aufgaben verwalten kann, muss ein Handler entweder [**IEmptyVolumeCache**](/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache) für Windows 98 oder [**IEmptyVolumeCache2**](/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache2) für Windows Edition (Windows Me), Windows 2000 und Windows XP exportieren. Da **IEmptyVolumeCache2** von **IEmptyVolumeCache** erbt und nur die zusätzliche **InitializeEx-Methode** hinzugefügt wird, ist relativ wenig zusätzlicher Aufwand erforderlich, um beides zu implementieren. Sofern ihr Handler nicht nur für eines dieser Betriebssysteme vorgesehen ist, sollten beide Schnittstellen exportiert werden.
 
-Um diese Schnittstellen zu exportieren, müssen Sie diese Methoden implementieren, die den fünf grundlegenden Aufgaben entspricht.
+Um diese Schnittstellen zu exportieren, müssen Sie diese Methoden implementieren, die den fünf grundlegenden Aufgaben entsprechen.
 
 -   [Initialize/InitializeEx](#initializeinitializeex)
 -   [GetSpaceUsed](#getspaceused)
@@ -101,7 +101,7 @@ Um diese Schnittstellen zu exportieren, müssen Sie diese Methoden implementiere
 
 ### <a name="initializeinitializeex"></a>Initialize/InitializeEx
 
-Die beiden Initialisierungsmethoden, die sehr ähnlich sind, werden aufgerufen, wenn das Hilfsprogramm Für die Datenträgerbereinigung ausgeführt wird. Der Windows 98-Datenträgerbereinigungs-Manager ruft die [**IEmptyVolumeCache::Initialize-Methode**](/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache-initialize) eines Handlers auf. Der Windows Editions-Manager (Windows Me), Windows 2000 oder Windows XP-Datenträgerbereinigungs-Manager versucht jedoch zuerst, [**IEmptyVolumeCache2::InitializeEx**](/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache2-initializeex) aufrufen und verwendet nur **IEmptyVolumeCache::Initialize,** wenn [**IEmptyVolumeCache2**](/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache2) nicht vom Handler verfügbar gemacht wird. Der Datenträgerbereinigungs-Manager übergibt Informationen an die -Methode, z. B. den Registrierungsschlüssel des Handlers und das Datenträgervolumen, das bereinigt werden soll.
+Die beiden Initialisierungsmethoden, die sehr ähnlich sind, werden aufgerufen, wenn das Hilfsprogramm für die Datenträgerbereinigung ausgeführt wird. Der Windows 98-Datenträgerbereinigungs-Manager ruft die [**IEmptyVolumeCache::Initialize-Methode**](/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache-initialize) eines Handlers auf. Der Windows Windows Me), Windows 2000 oder Windows XP-Datenträgerbereinigungs-Manager versucht jedoch zunächst, [**IEmptyVolumeCache2::InitializeEx**](/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache2-initializeex) aufzurufen und verwendet nur **IEmptyVolumeCache::Initialize,** wenn [**IEmptyVolumeCache2**](/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache2) nicht vom Handler verfügbar gemacht wird. Der Datenträgerbereinigungs-Manager übergibt Informationen an die -Methode, z. B. den Registrierungsschlüssel des Handlers und das Datenträgervolume, das bereinigt werden soll.
 
 Beide Methoden können verschiedene Anzeigezeichenfolgen zurückgeben und ein oder mehrere Flags festlegen. Der Hauptunterschied zwischen den beiden Methoden besteht darin, wie der im Datenträgerbereinigungs-Manager angezeigte Text behandelt wird. Die folgenden drei Zeichenfolgen sind betroffen.
 
@@ -110,7 +110,7 @@ Beide Methoden können verschiedene Anzeigezeichenfolgen zurückgeben und ein od
 | String       | Zweck                                                                            | Initialisieren                                                                           | InitializeEx                                                                                     |
 |--------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | Anzeigename | Der Name des Handlers, der im Listenfeld des Datenträgerbereinigungs-Managers angezeigt wird.               | Wenn *ppwszDisplayName* **NULL** ist, wird der Standardwert aus der Registrierung abgerufen. | Eine ordnungsgemäß lokalisierte Zeichenfolge muss in *ppwszDisplayName* angegeben werden, es werden keine Registrierungswerte verwendet. |
-| Beschreibung  | Beschreibender Text, der unterhalb des Listenfelds angezeigt wird, wenn der Name des Handlers ausgewählt ist. | Wenn *ppwszDescription* **NULL** ist, wird der Standardwert aus der Registrierung abgerufen. | Eine ordnungsgemäß lokalisierte Zeichenfolge muss in *ppwszDescription* angegeben werden, es dürfen keine Registrierungswerte verwendet werden. |
+| BESCHREIBUNG  | Beschreibender Text, der unterhalb des Listenfelds angezeigt wird, wenn der Name des Handlers ausgewählt ist. | Wenn *ppwszDescription* **NULL** ist, wird der Standardwert aus der Registrierung abgerufen. | Eine ordnungsgemäß lokalisierte Zeichenfolge muss in *ppwszDescription* angegeben werden, es dürfen keine Registrierungswerte verwendet werden. |
 | Schaltflächentext  | Text für die optionale Schaltfläche, mit der Benutzer die Benutzeroberfläche des Handlers anzeigen können.        | Kein Parameter verfügbar. Muss in der Registrierung angegeben werden.                           | Eine ordnungsgemäß lokalisierte Zeichenfolge muss in *ppwszBtnText* angegeben werden, es werden keine Registrierungswerte verwendet.     |
 
 
@@ -243,43 +243,43 @@ Im Allgemeinen wird der Name des Schlüssels, der die Besonderheiten eines Handl
 <tr class="even">
 <td>AdvancedButtonText</td>
 <td>REG_SZ</td>
-<td>Text für die optionale Schaltfläche, auf die Benutzer klicken können, um die Benutzeroberfläche des Handlers anzuzeigen. Das & Zeichen kann vor einem Zeichen platziert werden, um eine Tastenkombination für die Schaltfläche zuzuweisen. Der AdvancedButtonText-Wert wird von Handlern ignoriert, die <a href="/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache2-initializeex"><strong>IEmptyVolumeCache2::InitializeEx</strong></a>verfügbar machen.</td>
+<td>Text für die optionale Schaltfläche, auf die Benutzer klicken können, um die Benutzeroberfläche des Handlers anzuzeigen. Das & zeichen kann vor einem Zeichen platziert werden, um der Schaltfläche eine Tastenkombination zu zuweisen. Der AdvancedButtonText-Wert wird von Handlern ignoriert, die <a href="/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache2-initializeex"><strong>IEmptyVolumeCache2::InitializeEx verfügbar machen.</strong></a></td>
 </tr>
 <tr class="odd">
 <td>CleanupString</td>
 <td>REG_SZ</td>
-<td>Befehlszeile, die eine ausführbare Datei und optionale Befehlszeilenparameter angibt. Diese Befehlszeile wird nach Abschluss der Datenträgerbereinigung ausgeführt.</td>
+<td>Befehlszeile, in der eine ausführbare Datei und optionale Befehlszeilenparameter angegeben werden. Diese Befehlszeile wird nach Abschluss der Datenträgerbereinigung ausgeführt.</td>
 </tr>
 <tr class="even">
 <td>Csidl</td>
 <td>REG_DWORD</td>
-<td>Ein systemunabhängiger Bezeichner für einen speziellen Ordner, der in die Dateisuche eingeschlossen werden soll. Dieser Wert muss beispielsweise als numerischer Wert eingegeben werden, 0x0000001c anstatt als CSIDL_LOCAL_APPDATA. Eine Liste der möglichen Werte finden Sie unter <a href="/windows/desktop/shell/csidl"><strong>CSIDL</strong></a>. Es kann nur ein einzelner Wert verwendet werden.<br/> Wenn der Ordnerwert angegeben wird, wird dieser Information der durch den CSIDL-Wert angegebene Speicherort voran gestellt, um einen Suchpfad zu erstellen. Betrachten Sie beispielsweise das folgende Szenario.<br/>
+<td>Ein systemunabhängiger Bezeichner für einen speziellen Ordner, der in die Dateisuche integriert werden soll. Dieser Wert muss z. B. als numerischer Wert eingegeben werden, z. B. 0x0000001c als CSIDL_LOCAL_APPDATA. Eine Liste der möglichen Werte finden Sie unter <a href="/windows/desktop/shell/csidl"><strong>CSIDL</strong></a>. Es kann nur ein einzelner Wert verwendet werden.<br/> Wenn der Wert Ordner angegeben wird, wird der durch den CSIDL-Wert angegebene Speicherort diesen Informationen vorausbewegt, um einen Suchpfad zu erstellen. Betrachten Sie beispielsweise das folgende Szenario.<br/>
 <ul>
 <li>Der CSIDL-Wert wird als 0x0000000d (CSIDL_MYMUSIC) angegeben.</li>
-<li>Ihr Ordner My Musik befindet sich unter C:\Documents and Einstellungen\<em>username</em>\My Musik</li>
-<li>Der Ordnerwert enthält &quot; Jazz\Programme.&quot;</li>
+<li>Der Ordner "Mein Musik" befindet sich unter C:\Documents und Einstellungen\<em>username</em>\My Musik</li>
+<li>Der Ordnerwert enthält &quot; "Jazz\Jazzs".&quot;</li>
 </ul>
-Das Ergebnis dieses Szenarios ist, dass der Datenträgerbereinigungshandler den Ordner C:\Documents und Einstellungen\<em>Username</em>\My Musik\Jazz\Programme durchsucht. Beachten Sie, dass der Schrägstrich vor dem Wert Ordner hinzugefügt wird, wenn er nicht vorhanden ist.<br/></td>
+Das Ergebnis dieses Szenarios ist, dass der Datenträgerbereinigungshandler den<em></em>Ordner "C:\Documents" und "Einstellungen\username \My Musik\Jazz\Jazzs" durchsucht. Beachten Sie, dass der Schrägstrich vor dem Wert Ordner hinzugefügt wird, wenn er nicht vorhanden ist.<br/></td>
 </tr>
 <tr class="odd">
-<td>Beschreibung</td>
+<td>BESCHREIBUNG</td>
 <td>REG_SZ</td>
-<td>Beschreibender Text, der unter dem Listenfeld des Datenträgerbereinigungs-Managers angezeigt wird, wenn der Name des Handlers ausgewählt ist. Hier können Sie die Aufgaben des Handlers, die Dateien, mit der er sich selbst befasst, und alle anderen Informationen erläutern, die dem Benutzer aufschlussant sind. Wenn <a href="/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache2-initializeex"><strong>IEmptyVolumeCache2::InitializeEx</strong></a> nicht vom Handler verfügbar gemacht wird, kann dieser Text durch die <a href="/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache-initialize"><strong>IEmptyVolumeCache::Initialize-Methode</strong></a> des Handlers überschrieben werden, indem eine alternative Zeichenfolge im <em>ppwszDescription-Parameter</em> angegeben wird, wenn die -Methode aufgerufen wird.</td>
+<td>Beschreibender Text, der unter dem Listenfeld des Datenträgerbereinigungs-Managers angezeigt wird, wenn der Handlername ausgewählt ist. Hier können Sie erläutern, was der Handler tut, mit welchen Dateien er sich selbst beschäftigt, und alle anderen Informationen, die für den Benutzer aufträumen. Wenn <a href="/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache2-initializeex"><strong>IEmptyVolumeCache2::InitializeEx</strong></a> vom Handler nicht verfügbar gemacht wird, kann dieser Text durch die <a href="/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache-initialize"><strong>IEmptyVolumeCache::Initialize-Methode</strong></a> des Handlers überschrieben werden, indem eine alternative Zeichenfolge im <em>ppwszDescription-Parameter</em> angegeben wird, wenn die -Methode aufgerufen wird.</td>
 </tr>
 <tr class="even">
 <td>Anzeige</td>
 <td>REG_SZ</td>
-<td>Der Name des Handlers, der im Listenfeld des Datenträgerbereinigungs-Managers angezeigt werden soll. Wenn <a href="/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache2-initializeex"><strong>IEmptyVolumeCache2::InitializeEx</strong></a> nicht vom Handler verfügbar gemacht wird, kann dieser Text durch die <a href="/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache-initialize"><strong>IEmptyVolumeCache::Initialize-Methode</strong></a> des Handlers überschrieben werden, indem eine alternative Zeichenfolge im <em>ppwszDisplayName-Parameter</em> angegeben wird, wenn die -Methode aufgerufen wird.</td>
+<td>Der Name des Handlers, der im Listenfeld des Datenträgerbereinigungs-Managers angezeigt werden soll. Wenn <a href="/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache2-initializeex"><strong>IEmptyVolumeCache2::InitializeEx</strong></a> vom Handler nicht verfügbar gemacht wird, kann dieser Text durch die <a href="/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache-initialize"><strong>IEmptyVolumeCache::Initialize-Methode</strong></a> des Handlers überschrieben werden, indem eine alternative Zeichenfolge im <em>ppwszDisplayName-Parameter</em> angegeben wird, wenn die Methode aufgerufen wird.</td>
 </tr>
 <tr class="odd">
 <td>Liste</td>
 <td>REG_SZ oder REG_MULTI_SZ</td>
-<td>Eine Liste der Dateien, die von diesem Handler gesucht und bereinigt werden. Sie können Platzhalter mithilfe von angeben. oder * Zeichen. Wenn der Wert vom Typ REG_SZ ist, werden mehrere Erweiterungen mithilfe des | oder : Zeichen ohne Leerzeichen auf beiden Seiten.<br/> Wenn das DDEVCF_REMOVEDIRS-Flag im Flags-Wert festgelegt ist, können diese Werte Verzeichnisnamen sowie Dateien angeben.<br/></td>
+<td>Eine Liste von Dateien, die von diesem Handler gesucht und bereinigt wurden. Sie können Platzhalter angeben, indem Sie ? oder * Zeichen. Wenn der Wert vom Typ REG_SZ, werden mehrere Erweiterungen mithilfe der | oder : Zeichen ohne Leerzeichen auf beiden Seiten.<br/> Wenn das DDEVCF_REMOVEDIRS flag im Flags-Wert festgelegt ist, können diese Werte Verzeichnisnamen sowie Dateien angeben.<br/></td>
 </tr>
 <tr class="even">
 <td>Flags</td>
 <td>REG_DWORD oder REG_BINARY</td>
-<td>Flags, die Elemente der Such- und Bereinigungsprozedur steuern. Mindestens einer der folgenden Werte.
+<td>Kennzeichnet steuernde Elemente der Such- und Bereinigungsprozedur. Mindestens einer der folgenden Werte.
 <ul>
 <li>DDEVCF_DOSUBDIRS (0x00000001). Rekursiv suchen und entfernen.</li>
 <li>DDEVCF_REMOVEAFTERCLEAN (0x00000002). Nachdem der Handler einmal ausgeführt wurde, entfernen Sie ihn aus der Registrierung.</li>
@@ -287,46 +287,46 @@ Das Ergebnis dieses Szenarios ist, dass der Datenträgerbereinigungshandler den 
 <li>DDEVCF_REMOVESYSTEM (0x00000008). Entfernen Sie Dateien, die die Suchkriterien erfüllen, auch wenn es sich um Systemdateien handelt.</li>
 <li>DDEVCF_REMOVEHIDDEN (0x00000010). Entfernen Sie Dateien, die die Suchkriterien erfüllen, auch wenn es sich um ausgeblendete Dateien handelt.</li>
 <li>DDEVCF_DONTSHOWIFZERO (0x00000020). Zeigen Sie diesen Handler nicht im Datenträgerbereinigungs-Manager an, wenn keine Dateien den Suchkriterien entsprechen.</li>
-<li>DDEVCF_REMOVEDIRS (0x00000040). Übereinstimmung mit dem FileList-Wert mit Verzeichnissen und Entfernen von Übereinstimmungen und allen zugehörigen Unterverzeichnissen.</li>
-<li>DDEVCF_RUNIFOUTOFDISKSPACE (0x00000080). Führen Sie diesen Handler nur aus, wenn der verfügbare Speicherplatz unter den kritischen Wert gefallen ist, der durch den Datenträgerbereinigungs-Manager bestimmt wird, der das flag EVCF_OUTOFDISKSPACE über <a href="/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache-initialize"><strong>IEmptyVolumeCache::Initialize</strong></a> oder <a href="/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache2-initializeex"><strong>IEmptyVolumeCache2::InitializeEx</strong></a>festlegt.</li>
-<li>DDEVCF_REMOVEPARENTDIR (0x00000100). Entfernen Sie das übergeordnete Verzeichnis der angegebenen Dateien, sobald die Bereinigung ausgeführt wurde.</li>
-<li>DDEVCF_PRIVATE_LASTACCESS (0x10000000). Verwenden Sie ggf. den LastAccess-Wert, um festzustellen, welche Dateien bereinigt werden sollen. Dieses Flag wird ignoriert, wenn bei Verwendung von <a href="#using-the-datadrivencleaner-object">DataDrivenCleaner</a> jeder angegebene LastAccess-Wert immer verwendet wird.</li>
+<li>DDEVCF_REMOVEDIRS (0x00000040). Übereinstimmung des FileList-Werts mit Verzeichnissen und Entfernen von Übereinstimmungen und allen zugehörigen Unterverzeichnissen.</li>
+<li>DDEVCF_RUNIFOUTOFDISKSPACE (0x00000080). Führen Sie diesen Handler nur aus, wenn der verfügbare Speicherplatz unter den kritischen Wert gefallen ist, der vom Datenträgerbereinigungs-Manager festgelegt wird, der das EVCF_OUTOFDISKSPACE-Flag über <a href="/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache-initialize"><strong>IEmptyVolumeCache::Initialize</strong></a> oder <a href="/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache2-initializeex"><strong>IEmptyVolumeCache2::InitializeEx</strong></a>festgelegt hat.</li>
+<li>DDEVCF_REMOVEPARENTDIR (0x00000100). Entfernen Sie das übergeordnete Verzeichnis der angegebenen Dateien, nachdem die Bereinigung ausgeführt wurde.</li>
+<li>DDEVCF_PRIVATE_LASTACCESS (0x10000000). Verwenden Sie den LastAccess-Wert, falls angegeben, um zu ermitteln, welche Dateien bereinigt werden sollen. Dieses Flag wird ignoriert, wenn <a href="#using-the-datadrivencleaner-object">dataDrivenCleaner verwendet</a> wird. Jeder bereitgestellte LastAccess-Wert wird immer verwendet.</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td>Ordner</td>
 <td>REG_SZ, REG_MULTI_SZ oder REG_EXPAND_SZ</td>
-<td>Ein bestimmter Ordner oder Ordner, in dem nach Elementen gesucht werden soll, die einträgen im FileList-Wert entsprechen. Sie können Platzhalter mithilfe von angeben. oder * Zeichen. Wenn der Wert vom Typ REG_SZ ist, werden mehrere Ordnernamen mithilfe der | zeichen, ohne Leerzeichen auf beiden Seiten.<br/> Wenn ein CSIDL-Wert vorhanden ist, kann in diesem Wert nur ein Ordner angegeben werden. Der durch den CSIDL-Wert angegebene Speicherort wird diesem Ordnerpfad voran gestellt, um einen Suchpfad zu erstellen. Ein Beispiel finden Sie in der Beschreibung des CSIDL-Werts.<br/> Wenn dieser Wert auf Windows Vista Service Pack 1 (SP1) und höher nicht vorhanden ist, wird der Bereinigungshandler ignoriert und gibt bei der Initialisierung S_FALSE zurück.<br/> Wenn dieser Wert in der ursprünglichen Version von Windows Vista und früher nicht vorhanden ist, wird der Stammordner des aktuellen Volumes verwendet. Das DDEVCF_DOSUBDIRS Flag ist in diesem Fall erforderlich, um das gesamte Laufwerk zu durchsuchen. Ohne diese wird nur der Stammordner selbst durchsucht.<br/> Ein Laufwerk oder Laufwerk muss angegeben werden. Dies kann über den CSIDL-Wert oder eine REG_EXPAND_SZ Zeichenfolge bereitgestellt werden. Wenn Sie diese Optionen nicht verwenden, muss das zu durchsuchende Laufwerk jedoch im Ordnernamen angegeben werden. Verwenden Sie ?: , um den Ordner auf dem aktuellen Laufwerk zu durchsuchen.<br/></td>
+<td>Ein bestimmter Ordner oder Ordner, um nach Elementen zu suchen, die einträgen im FileList-Wert übereinstimmen. Sie können Platzhalter angeben, indem Sie ? oder * Zeichen. Wenn der Wert vom Typ REG_SZ ist, werden mehrere Ordnernamen mithilfe der | zeichen, ohne Leerzeichen auf beiden Seiten.<br/> Wenn ein CSIDL-Wert vorhanden ist, kann in diesem Wert nur ein Ordner angegeben werden. Der durch den CSIDL-Wert angegebene Speicherort wird diesem Ordnerpfad vorgefertigt, um einen Suchpfad zu erstellen. Ein Beispiel finden Sie in der Beschreibung des CSIDL-Werts.<br/> Wenn dieser Wert in Windows Vista Service Pack 1 (SP1) und höher nicht vorhanden ist, wird der Bereinigungshandler ignoriert und S_FALSE initialisierung zurückgegeben.<br/> Wenn dieser Wert in der ursprünglichen Version von Windows Vista und früher nicht vorhanden ist, wird der Stammordner des aktuellen Volumes verwendet. Das DDEVCF_DOSUBDIRS-Flag ist in diesem Fall erforderlich, um das gesamte Laufwerk zu durchsuchen. Ohne sie wird nur der Stammordner selbst durchsucht.<br/> Ein Oder mehrere Laufwerke müssen angegeben werden. Dies kann über den CSIDL-Wert oder über eine Zeichenfolge REG_EXPAND_SZ werden. Wenn diese Optionen nicht verfügbar sind, muss das zu durchsuchende Laufwerk jedoch im Ordnernamen angegeben werden. Verwenden Sie ?: , um den Ordner auf dem aktuellen Laufwerk zu durchsuchen.<br/></td>
 </tr>
 <tr class="even">
 <td>IconPath</td>
 <td>REG_SZ oder REG_EXPAND_SZ</td>
-<td>Der Pfad zu der Ressource, aus der ein Symbol zur Verwendung in Verbindung mit dem Handler abzurufen ist.</td>
+<td>Der Pfad zu der Ressource, von der ein Symbol für die Zuordnung zum Handler erhalten werden soll.</td>
 </tr>
 <tr class="odd">
 <td>LastAccess</td>
 <td>REG_DWORD oder REG_BINARY</td>
-<td>Die Anzahl von Tagen, die seit dem letzten Zugriff auf eine Datei oder der Erstellung eines Verzeichnisses für diese Datei oder dieses Verzeichnis verstrichen sein müssen, um für die Bereinigung berücksichtigt zu werden.</td>
+<td>Die Anzahl der Tage, die seit dem letzten Zugriff auf eine Datei oder dem Erstellen eines Verzeichnisses verstrichen sein müssen, damit diese Datei oder dieses Verzeichnis für die Bereinigung berücksichtigt wird.</td>
 </tr>
 <tr class="even">
 <td>Priorität</td>
 <td>REG_DWORD oder REG_BINARY</td>
-<td>Bestimmt die Reihenfolge, in der der Handler in Bezug auf andere Handler ausgeführt wird. Je höher die Zahl, desto früher im Prozess, in dem der Handler ausgeführt wird. Es gibt keinen definierten Bereich, für den eine beliebige Zahl zulässig ist.</td>
+<td>Bestimmt die Reihenfolge, in der der Handler in Bezug auf andere Handler ausgeführt wird. Je höher die Zahl ist, desto früher im Prozess wird der Handler ausgeführt. Es gibt keinen definierten Bereich, für den eine Beliebige Zahl akzeptabel ist.</td>
 </tr>
 <tr class="odd">
 <td>Propertybag</td>
 <td>REG_SZ</td>
-<td>Die CLSID einer Ressource, die verwendet wird, um lokalisierten Text für den Anzeigenamen, die Beschreibung und den Schaltflächentext bereitzustellen. Diese Ressource ist in Situationen nützlich, in denen ein Handler <a href="/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache"><strong>IEmptyVolumeCache</strong></a> nicht implementiert und der Handler unter Microsoft Windows NT oder Windows XP ausgeführt wird.<br/> Der Datenträgerbereinigungs-Manager überprüft zunächst, ob die Initialisierungsroutine des Handlers diese Zeichenfolgen zurückgegeben hat, wie dies bei der Implementierung von <a href="/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache2"><strong>IEmptyVolumeCache2</strong></a> der Fall wäre. Andernfalls wechselt der Manager als Nächstes zu einem Eigenschaftenbehälter namens in diesem Wert. Wenn kein Text bereitgestellt wurde, wird der Text aus der Registrierung abgerufen.<br/></td>
+<td>Die CLSID einer Ressource, mit der lokalisierter Text für den Anzeigenamen, die Beschreibung und den Schaltflächentext angegeben wird. Diese Ressource ist nützlich, wenn ein Handler <a href="/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache"><strong>IEmptyVolumeCache</strong></a> nicht implementiert und der Handler unter Microsoft Windows NT oder Windows XP ausgeführt wird.<br/> Der Datenträgerbereinigungs-Manager überprüft zunächst, ob die Initialisierungsroutine des Handlers diese Zeichenfolgen zurückgegeben hat, wie dies der Fall wäre, wenn <a href="/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache2"><strong>IEmptyVolumeCache2</strong></a> implementiert wird. Wenn dies nicht der Fall ist, wird der Manager als Nächstes zu einer Eigenschaftentüte mit dem Namen in diesem Wert. Wenn keine bereitgestellt wurde, wird der Text aus der Registrierung abgerufen.<br/></td>
 </tr>
 <tr class="even">
 <td>StateFlags</td>
 <td>REG_DWORD</td>
-<td>Indem Sie die ausführbare Datei des Datenträgerbereinigungs-Managers Cleanmgr.exe über eine Befehlszeile ausführen, können Sie <em>Bereinigungsprofile</em>deklarieren. Diese Profile bestehen aus einer Teilmenge der verfügbaren Handler und erhalten eine eindeutige numerische Bezeichnung. Auf diese Weise können Sie die Ausführung verschiedener Handlersätze zu unterschiedlichen Zeiten automatisieren.<br/> Die Befehlszeile &quot;cleanmgr.exe /sageset:<strong>nnnn</strong>, wobei &quot; <strong>nnnn eine</strong> eindeutige numerische Bezeichnung ist, zeigt eine Benutzeroberfläche an, auf der Sie die Handler auswählen können, die in dieses Profil aufgenommen werden sollen. Zusätzlich zum Definieren des Profils schreibt der sageset-Parameter auch einen Wert namens StateFlags<strong>nnnn</strong>, wobei <strong>nnnn die</strong> Bezeichnung ist, die Sie im -Parameter verwendet haben, in alle Unterschlüssel unter <strong>VolumeCaches</strong>. Es gibt zwei mögliche Datenwerte für diese Einträge.
+<td>Indem Sie die ausführbare Datei des Datenträgerbereinigungs-Managers über Cleanmgr.exe Befehlszeile ausführen, können Sie Bereinigungsprofile <em>deklarieren.</em> Diese Profile bestehen aus einer Teilmenge der verfügbaren Handler und erhalten eine eindeutige numerische Bezeichnung. Dadurch können Sie die Ausführung verschiedener Handlersätze zu unterschiedlichen Zeiten automatisieren.<br/> Die Befehlszeile &quot;cleanmgr.exe /sageset:<strong>nnnn</strong> &quot; , wobei <strong>nnnn</strong> eine eindeutige numerische Bezeichnung ist, zeigt eine Benutzeroberfläche an, über die Sie die Handler auswählen können, die in diesem Profil enthalten sein sollen. Neben der Definition des Profils schreibt der Sageset-Parameter auch einen Wert namens StateFlags<strong>nnnn</strong>, wobei <strong>nnnn</strong> die Bezeichnung ist, die Sie im -Parameter verwendet haben, in alle Unterschlüssel unter <strong>VolumeCaches</strong>. Es gibt zwei mögliche Datenwerte für diese Einträge.
 <ul>
 <li>0: Führen Sie diesen Handler nicht aus, wenn dieses Profil ausgeführt wird.</li>
 <li>2: Schließen Sie diesen Handler ein, wenn dieses Profil ausgeführt wird.</li>
 </ul>
-<br/> Angenommen, die Befehlszeilecleanmgr.exe &quot; /sageset:1234 wird &quot; ausgeführt. Auf der angezeigten Benutzeroberfläche wählt der Benutzer <strong>Heruntergeladene</strong>Programmdateien aus, aber keine <strong>temporären Internetdateien.</strong> Die folgenden Werte werden dann in die Registrierung geschrieben.<br/>
+<br/> Angenommen, die Befehlszeile &quot;cleanmgr.exe /sageset:1234 wird &quot; ausgeführt. Auf der angezeigten Benutzeroberfläche wählt der Benutzer <strong>heruntergeladene Programmdateien</strong>aus, aber nicht <strong>temporäre Internetdateien.</strong> Die folgenden Werte werden dann in die Registrierung geschrieben.<br/>
 <pre data-space="preserve"><code>HKEY_LOCAL_MACHINE
    Software
       Microsoft
@@ -338,7 +338,7 @@ Das Ergebnis dieses Szenarios ist, dass der Datenträgerbereinigungshandler den 
                         StateFlags1234 = 0x00000002
                      Internet Cache Files
                         StateFlags1234 = 0x00000000</code></pre>
-<br/> Die Befehlszeile &quot;cleanmgr.exe /sagerun:<strong>nnnn</strong>, wobei der Wert &quot; von <strong>nnnn</strong> der mit dem sageset-Parameter deklarierten Bezeichnung entspricht, führt alle in diesem Profil ausgewählten Handler aus.<br/> Ein generischer StateFlags-Wert wird in die Registrierung geschrieben, wenn die Datenträgerbereinigung normal ausgeführt wird. Dieser Wert speichert einfach den Zustand (aktiviert oder deaktiviert) des Handlers, als er zuletzt als Option für den Benutzer angezeigt wurde. Es gibt zwei mögliche Datenwerte für diese Einträge.
+<br/> Die Befehlszeile &quot;cleanmgr.exe /sagerun:<strong>nnnn</strong> &quot; , wobei der Wert von <strong>nnnn mit</strong> der mit dem sageset-Parameter deklarierten Bezeichnung übereinstimmt, führt alle in diesem Profil ausgewählten Handler aus.<br/> Ein generischer StateFlags-Wert wird in die Registrierung geschrieben, wenn die Datenträgerbereinigung normal ausgeführt wird. Dieser Wert speichert einfach den Zustand (aktiviert oder deaktiviert) des Handlers, wenn er dem Benutzer zuletzt als Option angezeigt wurde. Es gibt zwei mögliche Datenwerte für diese Einträge.
 <ul>
 <li>0: Der Handler wurde nicht ausgewählt.</li>
 <li>1: Der Handler wurde ausgewählt.</li>
@@ -354,19 +354,19 @@ Das Ergebnis dieses Szenarios ist, dass der Datenträgerbereinigungshandler den 
 
 ### <a name="registering-a-handler-with-the-disk-cleanup-manager-windows-2000-or-later-systems"></a>Registrieren eines Handlers beim Datenträgerbereinigungs-Manager: Windows 2000 oder höher
 
-Das Angeben von Anzeigetext in der Registrierung kann das Lokalisieren von Software erschweren. Aus diesem Grund unterstützen Windows 2000 und Windows XP die [**IEmptyVolumeCache2-Schnittstelle**](/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache2) mit ihrer bevorzugten [**Initialisierungsmethode InitializeEx.**](/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache2-initializeex) Unter Windows 2000 oder höher wird immer versucht, **IEmptyVolumeCache2::InitializeEx** vor [**IEmptyVolumeCache::Initialize aufrufen.**](/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache-initialize) Das System verwendet **Initialize** nur zum Initialisieren eines Handlers, wenn **IEmptyVolumeCache2** nicht verfügbar gemacht wird.
+Das Angeben von Anzeigetext in der Registrierung kann die Lokalisierung von Software erschweren. Aus diesem Grund unterstützen Windows 2000 und Windows XP die [**IEmptyVolumeCache2-Schnittstelle**](/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache2) mit ihrer bevorzugten Initialisierungsmethode [**InitializeEx**](/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache2-initializeex). Unter Windows 2000 oder höher wird immer versucht, **IEmptyVolumeCache2::InitializeEx** vor [**IEmptyVolumeCache::Initialize**](/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache-initialize)aufzurufen. Das System verwendet Initialize nur, um einen Handler zu **initialisieren,** wenn **IEmptyVolumeCache2** nicht verfügbar gemacht wird.
 
-Im Hinblick auf die Registrierung besteht der einzige Unterschied unter Windows 2000 oder höher im Weglassen der Werte AdvancedButtonText, Display und Description, wenn [**IEmptyVolumeCache2::InitializeEx**](/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache2-initializeex) vom Handler verfügbar gemacht wird. Diese Werte, die ordnungsgemäß lokalisierten Text enthalten, werden dem Datenträgerbereinigungs-Manager beim Aufrufen von **InitializeEx bereitgestellt.**
+Im Hinblick auf die Registrierung besteht der einzige Unterschied unter Windows 2000 oder höher darin, dass Sie die Werte AdvancedButtonText, Display und Description weglassen können, wenn [**IEmptyVolumeCache2::InitializeEx**](/windows/desktop/api/Emptyvc/nf-emptyvc-iemptyvolumecache2-initializeex) vom Handler verfügbar gemacht wird. Diese Werte, die ordnungsgemäß lokalisierten Text enthalten, werden dem Datenträgerbereinigungs-Manager beim Aufrufen von **InitializeEx** bereitgestellt.
 
 ### <a name="using-the-datadrivencleaner-object"></a>Verwenden des DataDrivenCleaner-Objekts
 
-Das Betriebssystem stellt einen einfachen Datenträgerbereinigungshandler namens DataDrivenCleaner zur Verfügung. Verwenden Sie die CLSID {C0E13E61-0CC6-11d1-BBB6-0060978B2AE6} als Standardwert für den Unterschlüssel des Handlers unter **VolumeCaches,** wie unter Registrieren eines Handlers mit dem [Datenträgerbereinigungs-Manager: Allgemein](#registering-a-handler-with-the-disk-cleanup-manager-general)beschrieben, um dieses Objekt als Handler zu verwenden, anstatt Ihr eigenes zu implementieren.
+Ein einfacher Datenträgerbereinigungshandler namens DataDrivenCleaner wird vom Betriebssystem bereitgestellt. Um dieses Objekt als Handler zu verwenden, anstatt ihren eigenen zu implementieren, verwenden Sie die CLSID {C0E13E61-0CC6-11d1-BBB6-0060978B2AE6} als Standardwert für den Unterschlüssel des Handlers unter **VolumeCaches,** wie unter [Registrieren eines Handlers beim Datenträgerbereinigungs-Manager: Allgemein](#registering-a-handler-with-the-disk-cleanup-manager-general)beschrieben.
 
-DataDrivenCleaner macht [**IEmptyVolumeCache2**](/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache2)nicht verfügbar, sodass die Werte Anzeige und Beschreibung über die Registrierung bereitgestellt werden. Beachten Sie beim Deklarieren dieser Zeichenfolgen, dass dies zu Lokalisierungsproblemen führen kann. Lokalisierter Text kann über den PropertyBag-Wert bereitgestellt werden. Der AdvancedButtonText-Wert wird ignoriert, da für diesen Handler keine Benutzeroberfläche und somit keine Schaltfläche zum Anzeigen verfügbar ist.
+Der DataDrivenCleaner macht [**IEmptyVolumeCache2**](/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache2)nicht verfügbar, sodass die Werte Anzeige und Beschreibung über die Registrierung bereitgestellt werden. Beachten Sie beim Deklarieren dieser Zeichenfolgen, dass dies zu Lokalisierungsproblemen führen kann. Lokalisierter Text kann über den PropertyBag-Wert bereitgestellt werden. Der AdvancedButtonText-Wert wird ignoriert, da keine Benutzeroberfläche und somit keine Schaltfläche zum Anzeigen für diesen Handler verfügbar ist.
 
 ### <a name="example-registration-of-a-disk-cleanup-handler"></a>Beispielregistrierung eines Datenträgerbereinigungshandlers
 
-Im Folgenden finden Sie ein Beispiel für die Registrierung eines Datenträgerbereinigungshandlers, der von The Telefon Company implementiert wird. Dieser Handler implementiert sowohl [**IEmptyVolumeCache**](/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache) als auch [**IEmptyVolumeCache2**](/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache2)und stellt daher AdvancedButtonText-, Description- und Display-Werte für den Fall zur Verwendung auf einem Computer mit Windows 98 zur Anwendung. Der Handler kombiniert die CsIDL- und Folder-Werte, um nach Dateien im Verzeichnis C: Programme zu suchen. Das verzeichnis Telefon Company Temp und das \\ \\ \\ DDEVCF DOSUBDIRS-Flag wird so festgelegt, dass auch die Unterverzeichnisse durchsucht \_ werden. Nur dateien mit TMP- und TPC-Erweiterungen werden für die Bereinigung berücksichtigt, und das Flag DDEVCF PRIVATE LASTACCESS wird so festgelegt, dass von diesen Dateien nur dateien berücksichtigt werden, auf die 14 Tage oder mehr nicht zugegriffen \_ \_ wurde. Das DDEVCF DONTSHOWIFZERO-Flag wird ebenfalls so festgelegt, dass der Handler nicht in der Liste angezeigt wird, es sei denn, er hat \_ Cleanupkandidaten gefunden.
+Im Folgenden sehen Sie ein Beispiel für die Registrierung eines Datenträgerbereinigungshandlers, der von The Telefon Company implementiert wird. Dieser Handler implementiert sowohl [**IEmptyVolumeCache**](/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache) als [**auch IEmptyVolumeCache2**](/windows/desktop/api/Emptyvc/nn-emptyvc-iemptyvolumecache2)und stellt daher AdvancedButtonText-, Description- und Display-Werte für den Fall bereit, dass er auf einem Computer verwendet wird, auf dem Windows 98 ausgeführt wird. Der Handler kombiniert die CsIDL- und Folder-Werte, um nach Dateien im Verzeichnis C: Programme The Telefon Company Temp zu \\ \\ \\ suchen, und das DDEVCF \_ DOSUBDIRS-Flag ist so festgelegt, dass auch seine Unterverzeichnisse durchsucht werden. Nur dateien mit TMP- und TPC-Erweiterungen werden für die Bereinigung berücksichtigt, und das DDEVCF \_ PRIVATE \_ LASTACCESS-Flag wird so festgelegt, dass von diesen Dateien nur diejenigen berücksichtigt werden, auf die seit 14 Tagen oder mehr nicht zugegriffen wurde. Das DDEVCF-Flag \_ DONTSHOWIFZERO ist ebenfalls so festgelegt, dass der Handler nicht in der Liste angezeigt wird, es sei denn, er hat Bereinigungskandidaten gefunden.
 
 ```
 HKEY_LOCAL_MACHINE

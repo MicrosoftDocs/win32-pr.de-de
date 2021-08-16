@@ -28,7 +28,7 @@ ms.locfileid: "118329814"
 
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Intel<sup>?</sup> Advanced Vector Extensions (AVX)<sup>?</sup> ist eine 256-Bit-SIMD-Gleitkommavektorerweiterung der Intel-Architektur. Sie enthält Erweiterungen für Anweisungs- und Registersätze.
 

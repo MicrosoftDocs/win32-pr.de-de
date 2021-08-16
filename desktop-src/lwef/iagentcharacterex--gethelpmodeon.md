@@ -1,19 +1,19 @@
 ---
-title: Iagentcharakteriex gethelpmudeon
-description: Iagentcharakteriex gethelpmudeon
+title: IAgentCharacterEx GetHelpModeOn
+description: IAgentCharacterEx GetHelpModeOn
 ms.assetid: 848c9e75-6e4c-487c-b01c-36ec6314d0c1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 072f657ba5ac93d057474f062f73101f2559aed0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7bb78cf535fbfd7e28ab797c887c8e1548d3fd18dce03fb6b64d888c7e304c0d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118750785"
 ---
-# <a name="iagentcharacterexgethelpmodeon"></a>Iagentcharakteriex:: gethelpmudeon
+# <a name="iagentcharacterexgethelpmodeon"></a>IAgentCharacterEx::GetHelpModeOn
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT GetHelpModeOn(
@@ -21,33 +21,33 @@ HRESULT GetHelpModeOn(
 );
 ```
 
-Ruft ab, ob der kontextabhängige Hilfe Modus für das Zeichen on ist.
+Ruft ab, ob der kontextsensitive Hilfemodus für das Zeichen aktiviert ist.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="pbHelpModeOn"></span><span id="pbhelpmodeon"></span><span id="PBHELPMODEON"></span>*pbhelpmudeon*
+<span id="pbHelpModeOn"></span><span id="pbhelpmodeon"></span><span id="PBHELPMODEON"></span>*pbHelpModeOn*
 </dt> <dd>
 
-Adresse einer Variablen, die **true** empfängt, wenn der Hilfe Modus für das Zeichen on ist, andernfalls **false** .
+Die Adresse einer Variablen, die **TRUE empfängt,** wenn der Hilfemodus für das Zeichen aktiviert ist, und **False,** wenn dies nicht der Fall ist.
 
 </dd> </dl>
 
-Wenn diese Eigenschaft auf **true** festgelegt ist, ändert sich der Mauszeiger in das kontextabhängige Hilfe Bild, wenn er über das Zeichen oder über das Popupmenü für das Zeichen verschoben wird. Wenn der Benutzer auf das Zeichen klickt oder zieht oder auf ein Element im Popup Menü des Zeichens klickt, löst der Server das [**iagentnotifysinkex:: helpcomplete**](https://www.bing.com/search?q=**IAgentNotifySinkEx::HelpComplete**) -Ereignis aus und beendet den Hilfe Modus.
+Wenn diese Eigenschaft auf **True** festgelegt ist, ändert sich der Mauszeiger in das kontextsensitive Hilfebild, wenn er über das Zeichen oder über das Popupmenü für das Zeichen verschoben wird. Wenn der Benutzer auf das Zeichen klickt oder es zieht oder auf ein Element im Popupmenü des Zeichens klickt, löst der Server das [**IAgentNotifySinkEx::HelpComplete-Ereignis**](https://www.bing.com/search?q=**IAgentNotifySinkEx::HelpComplete**) aus und beendet den Hilfemodus.
 
-Im Hilfe Modus sendet der Server die Ereignisse " [**iagentnotifysink:: Click**](iagentnotifysink--click.md)", " [**iagentnotifysink::D ragstart**](iagentnotifysink--dragstart.md)", " [**iagentnotifysink::D ragcomplete**](iagentnotifysink--dragcomplete.md)" und " [**iagentnotifysink:: Command**](iagentnotifysink--command.md) " nicht, es sei denn, die [**GetAutoPopupMenu**](https://www.bing.com/search?q=**GetAutoPopupMenu**) -Eigenschaft gibt " **true**" zurück. In diesem Fall sendet der Server das **iagentnotifysink:: Click** -Ereignis (der Hilfe Modus wird nicht beendet), sondern nur für die Rechte Maustaste, damit Sie das Popup Menü anzeigen können.
+Im Hilfemodus sendet der Server keine [**IAgentNotifySink::Click-,**](iagentnotifysink--click.md) [**IAgentNotifySink::D ragStart-,**](iagentnotifysink--dragstart.md) [**IAgentNotifySink::D ragComplete-**](iagentnotifysink--dragcomplete.md)und [**IAgentNotifySink::Command-Ereignisse,**](iagentnotifysink--command.md) es sei denn, die [**GetAutoPopupMenu-Eigenschaft**](https://www.bing.com/search?q=**GetAutoPopupMenu**) gibt **True zurück.** In diesem Fall sendet der Server das **IAgentNotifySink::Click-Ereignis** (beendet den Hilfemodus nicht), sondern nur für die rechte Maustaste, damit Sie das Popupmenü anzeigen können.
 
-Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch die Client Anwendung. Diese Einstellung wirkt sich nicht auf andere Clients des Zeichens oder andere Zeichen ihrer Client Anwendung aus.
+Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch Ihre Clientanwendung. Die Einstellung wirkt sich nicht auf andere Clients des Zeichens oder anderer Zeichen Ihrer Clientanwendung aus.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcharakteriex:: Setup**](iagentcharacterex--sethelpmodeon.md)
+[**IAgentCharacterEx::SetHelpModeOn**](iagentcharacterex--sethelpmodeon.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

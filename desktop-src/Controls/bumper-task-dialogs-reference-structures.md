@@ -15,7 +15,7 @@ ms.locfileid: "118415854"
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**\_TASKDIALOG-SCHALTFLÄCHE**](/windows/desktop/api/Commctrl/ns-commctrl-taskdialog_button)
+-   [**SCHALTFLÄCHE \_ "TASKDIALOG"**](/windows/desktop/api/Commctrl/ns-commctrl-taskdialog_button)
 -   [**TASKDIALOGCONFIG**](/windows/desktop/api/Commctrl/ns-commctrl-taskdialogconfig)
 
  

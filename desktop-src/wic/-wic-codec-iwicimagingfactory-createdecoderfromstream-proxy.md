@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Methode "samatedecoderfromstream".
+description: Proxyfunktion für die CreateDecoderFromStream-Methode.
 ms.assetid: 8395d647-c8c9-4715-b15d-a30755ae0a98
 title: IWICImagingFactory_CreateDecoderFromStream_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 1f6f84c9c29d10243f1b3bcb2cad43967547eeae
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ab635d524adc379aae6d91cee5a65b41b39252bc60c7e260e5fe8158b5d47baf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103760189"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965169"
 ---
-# <a name="iwicimagingfactory_createdecoderfromstream_proxy-function"></a>IWICImagingFactory- \_ Funktion "deedecoderfromstream" \_
+# <a name="iwicimagingfactory_createdecoderfromstream_proxy-function"></a>IWICImagingFactory \_ CreateDecoderFromStream-Proxyfunktion \_
 
-Proxy Funktion für die Methode " [**samatedecoderfromstream**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromstream) ".
+Proxyfunktion für die [**CreateDecoderFromStream-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromstream)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,46 +44,46 @@ HRESULT IWICImagingFactory_CreateDecoderFromStream_Proxy(
 
 <dl> <dt>
 
-*pfactory* \[ in\]
+*pFactory* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) \** _
+Typ: **[ **IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory)\***
 
 </dd> <dt>
 
-_pIStream * \[ in\]
+*pIStream* \[ In\]
 </dt> <dd>
 
-Typ: **[IStream](/windows/desktop/api/objidl/nn-objidl-istream) \** _
+Typ: **[IStream](/windows/desktop/api/objidl/nn-objidl-istream)\***
 
 Der Stream, aus dem der Decoder erstellt werden soll.
 
 </dd> <dt>
 
-_pguidVendor * \[ in\]
+*pguidVendor* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: * Konstante *GUID \** _
+Typ: **const \* GUID**
 
-Die Anbieter-GUID für den Decoder.
+Die Hersteller-GUID für den Decoder .
 
 </dd> <dt>
 
-_metadataOptions * \[ in\]
+*metadataOptions* \[ In\]
 </dt> <dd>
 
-Typ: **[ **wicdecodeoptions**](/windows/desktop/api/Wincodec/ne-wincodec-wicdecodeoptions)**
+Typ: **[ **WICDecodeOptions**](/windows/desktop/api/Wincodec/ne-wincodec-wicdecodeoptions)**
 
-Die [**wicdecodeoptions**](/windows/desktop/api/Wincodec/ne-wincodec-wicdecodeoptions) , die beim Erstellen des Decoders verwendet werden sollen.
+Die [**WICDecodeOptions, die**](/windows/desktop/api/Wincodec/ne-wincodec-wicdecodeoptions) beim Erstellen des Decoders verwendet werden.
 
 </dd> <dt>
 
-*ppidecoder* \[ vorgenommen\]
+*ppIDecoder* \[ out\]
 </dt> <dd>
 
 Typ: **[ **IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)\*\***
 
-Ein Zeiger, der einen Zeiger auf einen neuen [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)empfängt.
+Ein Zeiger, der einen Zeiger auf einen neuen [**IWICBitmapDecoder empfängt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)
 
 </dd> </dl>
 
@@ -91,7 +91,7 @@ Ein Zeiger, der einen Zeiger auf einen neuen [**IWICBitmapDecoder**](/windows/de
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -101,9 +101,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

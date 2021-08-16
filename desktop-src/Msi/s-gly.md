@@ -13,7 +13,7 @@ ms.locfileid: "118625550"
 ---
 # <a name="s-windows-installer"></a>S (Windows Installer)
 
-[A](a-gly.md) [B](b-gly.md) [C](c-gly.md) [D](d-gly.md) [E](e-gly.md) F [G](f-gly.md) [](g-gly.md) H [I](i-gly.md) J K L [M](m-gly.md) N [O](o-gly.md) [P](p-gly.md) [Q](q-gly.md) [R](r-gly.md) S [T](t-gly.md) [U](u-gly.md) [V](v-gly.md) W X Y Z
+[A](a-gly.md) [B](b-gly.md) [C](c-gly.md) [D](d-gly.md) [E](e-gly.md) F [G](f-gly.md) [](g-gly.md) H [I](i-gly.md) J K L [M](m-gly.md) N [O](o-gly.md) [P](p-gly.md) [Q](q-gly.md) [R](r-gly.md) S T [](t-gly.md) [U](u-gly.md) [V](v-gly.md) W X Y Z
 
 <dl> <dt>
 
@@ -55,7 +55,7 @@ Sprache, die zum Verarbeiten von Daten in einer relationalen Datenbank verwendet
 <span id="_msi_summary_information_stream_gly"></span><span id="_MSI_SUMMARY_INFORMATION_STREAM_GLY"></span>**Zusammenfassungsinformationsstream**
 </dt> <dd>
 
-Storage Speicherort in [*der*](m-gly.md).msi, um Informationen zu erhalten, die mit dem Microsoft Windows Explorer angezeigt werden können. Weitere Informationen finden Sie unter [Informationen zum Zusammenfassungsinformationsstream.](about-the-summary-information-stream.md)
+Storage Speicherort in der.msi [*datei,*](m-gly.md) um Informationen zu erhalten, die mit dem Microsoft Windows Explorer angezeigt werden können. Weitere Informationen finden Sie unter [Informationen zum Zusammenfassungsinformationsstream.](about-the-summary-information-stream.md)
 
 </dd> <dt>
 

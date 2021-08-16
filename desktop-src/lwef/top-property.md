@@ -1,19 +1,19 @@
 ---
 title: Top-Eigenschaft (Characters-Objekt)
-description: Erfahren Sie mehr über die Top-Eigenschaft (Characters-Objekt). Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.
+description: Erfahren Sie mehr über die Top-Eigenschaft (Characters-Objekt). Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.
 ms.assetid: d5758a77-2d9a-44b8-bbbb-57ddf96c7fe4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 28a5e26d2ef578a98447d47eb2a3fae3613760a9
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: 87bdc753bc287e1289b2a75633081c7b325d698a7fbe92ba495cc93662485d75
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112396345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118474478"
 ---
 # <a name="top-property-characters-object"></a>Top-Eigenschaft (Characters-Objekt)
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
@@ -31,9 +31,9 @@ Gibt den oberen Rand des Rahmens des angegebenen Zeichens zurück oder legt dies
 
 
 
-| Teil    | Beschreibung                                             |
+| Teil    | BESCHREIBUNG                                             |
 |---------|---------------------------------------------------------|
-| *value* | Eine long-Ganzzahl, die den oberen Rand des Zeichens angibt. |
+| *value* | Eine lange ganze Zahl, die den oberen Rand des Zeichens angibt. |
 
 
 
@@ -41,13 +41,13 @@ Gibt den oberen Rand des Rahmens des angegebenen Zeichens zurück oder legt dies
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Top-Eigenschaft** wird immer in Pixel relativ zum Bildschirmursprung (oben links) ausgedrückt. Die Einstellung dieser Eigenschaft gilt für alle Clients des Zeichens.
+Die **Top-Eigenschaft** wird immer in Pixel ausgedrückt, relativ zum Ursprung des Bildschirms (links oben). Die Einstellung dieser Eigenschaft gilt für alle Clients des Zeichens.
 
-Obwohl das Zeichen in einem unregelmäßig formatierten Bereichsfenster angezeigt wird, basiert die Position des Zeichens auf den externen Dimensionen des rechteckigen Animationsrahmens, der beim Kompilieren des Zeichens mit dem Microsoft-Agent-Zeichen-Editor verwendet wurde.
+Obwohl das Zeichen in einem unregelmäßig angeordneten Bereichsfenster angezeigt wird, basiert die Position des Zeichens auf den externen Dimensionen des rechteckigen Animationsframes, der beim Kompilieren des Zeichens mit dem Microsoft Agent-Zeichen-Editor verwendet wurde.
 
-Verwenden Sie die [**MoveTo-Methode,**](moveto-method.md) um die Position des Zeichens zu ändern.
+Verwenden Sie [**die MoveTo-Methode,**](moveto-method.md) um die Position des Zeichens zu ändern.
 
 ## <a name="see-also"></a>Weitere Informationen
 

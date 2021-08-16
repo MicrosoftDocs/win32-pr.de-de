@@ -1,33 +1,33 @@
 ---
-description: Ein Benutzer kann die vom System bereitgestellte standardmäßige Ducking-Benutzerfreundlichkeit mithilfe der Optionen deaktivieren, die auf der Registerkarte "Kommunikation" der Windows-Multimedia-Systemsteuerung (Mmsys.cpl) verfügbar sind.
+description: Ein Benutzer kann die vom System bereitgestellte Standardbenutzeroberfläche deaktivieren, indem er die Optionen verwendet, die auf der Registerkarte Kommunikation der Windows Multimedia-Systemsteuerung Mmsys.cpl verfügbar sind.
 ms.assetid: 5604b927-99f8-450f-a48c-b38d782584de
-title: Deaktivieren der Standardeinstellung für das ducken
+title: Deaktivieren der Standardbenutzeroberfläche für die Entzung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed33fa7d9473cb5c68a018b98bff8a826612387e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 473b0bab8c3575d416cc72b7e931b4c85160bdaacc6031611ad80394f44b9098
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117828551"
 ---
-# <a name="disabling-the-default-ducking-experience"></a>Deaktivieren der Standardeinstellung für das ducken
+# <a name="disabling-the-default-ducking-experience"></a>Deaktivieren der Standardbenutzeroberfläche für die Entzung
 
-Ein Benutzer kann die vom System bereitgestellte [standardmäßige Ducking](stream-attenuation.md) -Benutzerfreundlichkeit mithilfe der Optionen deaktivieren, die auf der Registerkarte " **Kommunikation** " der Windows-Multimedia-Systemsteuerung (Mmsys.cpl) verfügbar sind.
+Ein Benutzer kann die vom System [bereitgestellte Standardbenutzeroberfläche](stream-attenuation.md) deaktivieren, indem er die Optionen verwendet, die auf der Registerkarte **Kommunikation** der Windows Multimedia-Systemsteuerung verfügbar sind, Mmsys.cpl.
 
-Wenn das Einblenden angewendet wird, wird für einen Zeitraum von 1 Sekunde ein Ausblend-und einblenden Effekt verwendet. Eine Spiel Anwendung möchte möglicherweise nicht, dass der Kommunikationsstream die Spiel Audiodaten beeinträchtigt. Einige Medienanwendungen stellen möglicherweise fest, dass die Wiedergabe Darstellung jarringvorgänge ist, wenn Musik wieder in den Hintergrund kommt. Diese Arten von Anwendungen können auswählen, dass Sie nicht an der Ducking-Funktion teilnehmen möchten.
+Beim Anwenden von Abblendungen wird eine Einblendungs- und Einblendungswirkung für einen Zeitraum von 1 Sekunde verwendet. Eine Spielanwendung möchte möglicherweise nicht, dass der Kommunikationsdatenstrom die Spielaudiodaten beeinträchtigt. Einige Medienanwendungen stellen möglicherweise fest, dass die Wiedergabe nicht mehr erfolgt, wenn die Musik wieder einblendet. Diese Arten von Anwendungen können auswählen, dass sie nicht an der Benutzeroberfläche teilnehmen.
 
-Programm gesteuert kann ein direkter WASAPI-Client den Sitzungs-Manager für die Audiositzung verwenden, die die volumesteuerung für die nicht-Kommunikationsstreams bereitstellt. Beachten Sie, dass auch dann, wenn ein Client nicht mit dem ducken beendet wird, trotzdem Benachrichtigungen vom System empfangen werden.
+Programmgesteuert kann ein direkter WASAPI-Client die Verwendung des Sitzungs-Managers für die Audiositzung deaktivieren, der die Volumesteuerung für die Nichtkommunikationsstreams bereitstellt. Beachten Sie, dass ein Client selbst dann, wenn er sich von der Abmeldung abmeldet, immer noch Entenbenachrichtigungen vom System empfängt.
 
-Um das einducken zu abonnieren, muss der Client einen Verweis auf die [**IAudioSessionControl2**](/windows/desktop/api/audiopolicy/nn-audiopolicy-iaudiosessioncontrol2) -Schnittstelle des Sitzungs-Managers erhalten. Führen Sie die folgenden Schritte aus, um das ducken zu abonnieren:
+Um das Veralten zu deaktivieren, muss der Client einen Verweis auf die [**IAudioSessionControl2-Schnittstelle**](/windows/desktop/api/audiopolicy/nn-audiopolicy-iaudiosessioncontrol2) des Sitzungs-Managers abrufen. Um die Entzungserfahrung zu deaktivieren, verwenden Sie die folgenden Schritte:
 
-1.  Instanziieren Sie den Geräte Enumerator, und verwenden Sie ihn, um einen Verweis auf den Endpunkt des Geräts zu erhalten, das die Medien Anwendung zum Rendering des nicht-Kommunikationsstreams verwendet.
-2.  Aktivieren Sie den Sitzungs-Manager über den Geräte Endpunkt, und erhalten Sie einen Verweis auf die [**IAudioSessionManager2**](/windows/desktop/api/audiopolicy/nn-audiopolicy-iaudiosessionmanager2) -Schnittstelle des Sitzungs-Managers.
-3.  Wenn Sie den [**IAudioSessionManager2**](/windows/desktop/api/audiopolicy/nn-audiopolicy-iaudiosessionmanager2) -Zeiger verwenden, erhalten Sie einen Verweis auf die [**iaudiosessioncontrol**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessioncontrol) -Schnittstelle des Sitzungs-Managers.
-4.  Fragen Sie die [**IAudioSessionControl2**](/windows/desktop/api/audiopolicy/nn-audiopolicy-iaudiosessioncontrol2) von der [**iaudiosessioncontrol**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessioncontrol) -Schnittstelle ab.
-5.  Aufrufen von [**IAudioSessionControl2:: setduckingpreference**](/windows/desktop/api/audiopolicy/nf-audiopolicy-iaudiosessioncontrol2-setduckingpreference) und übergeben von **true** oder **false** , um die Ducking-Einstellung anzugeben. Die angegebene Einstellung kann während der Sitzung dynamisch geändert werden. Beachten Sie, dass die Opt-out-Änderung erst wirksam wird, wenn der Stream beendet und erneut gestartet wurde.
+1.  Instanziieren Sie den Geräteenumerator, und verwenden Sie ihn, um einen Verweis auf den Endpunkt des Geräts abzurufen, den die Medienanwendung zum Rendern des Nichtkommunikationsdatenstroms verwendet.
+2.  Aktivieren Sie den Sitzungs-Manager über den Geräteendpunkt, und erhalten Sie einen Verweis auf die [**IAudioSessionManager2-Schnittstelle**](/windows/desktop/api/audiopolicy/nn-audiopolicy-iaudiosessionmanager2) des Sitzungs-Managers.
+3.  Mithilfe des [**IAudioSessionManager2-Zeigers**](/windows/desktop/api/audiopolicy/nn-audiopolicy-iaudiosessionmanager2) können Sie einen Verweis auf die [**IAudioSessionControl-Schnittstelle**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessioncontrol) des Sitzungs-Managers abrufen.
+4.  Fragen Sie [**IAudioSessionControl2**](/windows/desktop/api/audiopolicy/nn-audiopolicy-iaudiosessioncontrol2) über die [**IAudioSessionControl-Schnittstelle**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessioncontrol) ab.
+5.  Rufen Sie [**IAudioSessionControl2::SetDuckingPreference**](/windows/desktop/api/audiopolicy/nf-audiopolicy-iaudiosessioncontrol2-setduckingpreference) auf, und übergeben Sie **TRUE** oder **FALSE,** um die Enthaltungseinstellung anzugeben. Die angegebene Einstellung kann während der Sitzung dynamisch geändert werden. Beachten Sie, dass die Deaktivierungsänderung erst wirksam wird, wenn der Stream beendet und erneut gestartet wird.
 
-Der folgende Code zeigt, wie eine Anwendung ihre Ducking-Einstellung angeben kann. Der Aufrufer der Funktion muss im Parameter "duckingoptoutcheck" den Wert " **true** " oder " **false** " übergeben. Abhängig vom übergebenen Wert wird das ducken mithilfe von [**IAudioSessionControl2:: setduckingpreference**](/windows/desktop/api/audiopolicy/nf-audiopolicy-iaudiosessioncontrol2-setduckingpreference)aktiviert oder deaktiviert.
+Der folgende Code zeigt, wie eine Anwendung ihre Entzungspräferenz angeben kann. Der Aufrufer der Funktion muss **TRUE** oder **FALSE** im Parameter "TigeringOptOutChecked" übergeben. Abhängig vom übergebenen Wert wird das Entschließen über [**IAudioSessionControl2::SetDuckingPreference**](/windows/desktop/api/audiopolicy/nf-audiopolicy-iaudiosessioncontrol2-setduckingpreference)aktiviert oder deaktiviert.
 
 
 ```C++
@@ -117,19 +117,19 @@ HRESULT DuckingOptOut(bool DuckingOptOutChecked)
 
 <dl> <dt>
 
-[Verwenden eines kommunikationsgeräts](using-the-communication-device.md)
+[Verwenden eines Kommunikationsgeräts](using-the-communication-device.md)
 </dt> <dt>
 
-[Standardmäßiges ducken](stream-attenuation.md)
+[Standardmäßige Benutzeroberfläche](stream-attenuation.md)
 </dt> <dt>
 
-[Bereitstellen eines benutzerdefinierten Ducking-Verhaltens](providing-a-custom-ducking-experience.md)
+[Bereitstellen eines benutzerdefinierten Entzungsverhaltens](providing-a-custom-ducking-experience.md)
 </dt> <dt>
 
-[Implementierungs Überlegungen für Ducking-Benachrichtigungen](handling-audio-ducking-events-from-communication-devices.md)
+[Überlegungen zur Implementierung von Benachrichtigungen](handling-audio-ducking-events-from-communication-devices.md)
 </dt> <dt>
 
-[Erhalten von Ducking-Ereignissen](getting-ducking-events-from-a-communication-device.md)
+[Abrufen von Entzungsereignissen](getting-ducking-events-from-a-communication-device.md)
 </dt> </dl>
 
  

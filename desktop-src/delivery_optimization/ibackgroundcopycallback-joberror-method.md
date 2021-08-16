@@ -1,6 +1,6 @@
 ---
 title: IBackgroundCopyCallback JobError-Methode (Deliveryoptimization.h)
-description: Übermittlungsoptimierung (DO) ruft Ihre Implementierung der JobError-Methode auf, wenn sich der Status des Auftrags in BG_JOB_STATE_ERROR.
+description: Übermittlungsoptimierung (DO) ruft Ihre Implementierung der JobError-Methode auf, wenn sich der Status des Auftrags in BG_JOB_STATE_ERROR ändert.
 ms.assetid: 121712A5-98EB-4B2F-A004-A3BDF9C1332B
 keywords:
 - JobError-Methode
@@ -26,7 +26,7 @@ ms.locfileid: "118543132"
 ---
 # <a name="ibackgroundcopycallbackjoberror-method"></a>IBackgroundCopyCallback::JobError-Methode
 
-Übermittlungsoptimierung (DO) ruft Ihre Implementierung der [**JobError-Methode**](https://www.bing.com/search?q=**JobError**) auf, wenn sich der Status des Auftrags in BG_JOB_STATE_ERROR.
+Übermittlungsoptimierung (DO) ruft Ihre Implementierung der [**JobError-Methode**](https://www.bing.com/search?q=**JobError**) auf, wenn sich der Status des Auftrags in BG_JOB_STATE_ERROR ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,32 +47,32 @@ HRESULT JobError(
 *pJob* \[ In\]
 </dt> <dd>
 
-Enthält auftragsbezogene Informationen, z. B. die Anzahl der Bytes und Dateien, die vor dem Fehler übertragen wurden. Sie enthält auch die Methoden zum Fortsetzen und Abbrechen des Auftrags. Geben Sie *pJob nicht frei.* DO gibt die Schnittstelle frei, wenn die [**JobError-Methode**](https://www.bing.com/search?q=**JobError**) zurückgegeben wird.
+Enthält auftragsbezogene Informationen, z. B. die Anzahl der Bytes und Dateien, die vor dem Auftreten des Fehlers übertragen wurden. Sie enthält auch die Methoden zum Fortsetzen und Abbrechen des Auftrags. Geben Sie *pJob* nicht frei. DO gibt die Schnittstelle frei, wenn die [**JobError-Methode**](https://www.bing.com/search?q=**JobError**) zurückgegeben wird.
 
 </dd> <dt>
 
 *pError* \[ In\]
 </dt> <dd>
 
-Enthält Fehlerinformationen, z. B. die Datei, die zum Zeitpunkt des schwerwiegenden Fehlers verarbeitet wird, und eine Beschreibung des Fehlers. Geben Sie *pError nicht frei.* DO gibt die Schnittstelle frei, wenn die [**JobError-Methode**](https://www.bing.com/search?q=**JobError**) zurückgegeben wird.
+Enthält Fehlerinformationen, z. B. die Datei, die zum Zeitpunkt des schwerwiegenden Fehlers verarbeitet wird, und eine Beschreibung des Fehlers. pError nicht freigeben; DO gibt die Schnittstelle frei, wenn die [**JobError-Methode**](https://www.bing.com/search?q=**JobError**) zurückgegeben wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode sollte **S_OK.** Andernfalls wird diese Methode von DO weiterhin verwendet, **bis S_OK** zurückgegeben wird. Aus Leistungsgründen sollten Sie die Anzahl der Rückgaben eines anderen Werts als S_OK auf **einige** Male beschränken. Als Alternative zur Rückgabe eines Fehlercodes  sollten Sie in Betracht ziehen, immer S_OK und den Fehler intern zu behandeln. Das Intervall, in dem diese Methode aufgerufen wird, ist beliebig.
+Diese Methode sollte **S_OK** zurückgeben. andernfalls wird diese Methode weiterhin von DO aufgerufen, bis **S_OK** zurückgegeben wird. Aus Leistungsgründen sollten Sie die Anzahl der Rückgaben eines anderen Werts als **S_OK** auf einige Male beschränken. Als Alternative zum Zurückgeben eines Fehlercodes sollten Sie erwägen, immer **S_OK** zurückzugeben und den Fehler intern zu behandeln. Das Intervall, in dem diese Methode aufgerufen wird, ist willkürlich.
 
 ## <a name="remarks"></a>Hinweise
 
 Nachdem Sie die Ursache des Fehlers ermittelt haben, führen Sie eine der folgenden Optionen aus:
 
--   Rufen Sie zum Abbrechen des Auftrags die [**IBackgroundCopyJob::Cancel-Methode**](ibackgroundcopyjob-cancel.md) auf.
--   Um den Teil des Auftrags zu akzeptieren, der vor dem Fehler erfolgreich übertragen wurde, rufen Sie die [**IBackgroundCopyJob::Complete-Methode**](ibackgroundcopyjob-complete.md) auf. Diese Option gilt nicht für Uploadaufträge. Sie können einen Teil eines Uploadauftrags nicht abschließen.
--   Beheben Sie das Problem, und rufen Sie dann die [**IBackgroundCopyJob::Resume-Methode**](ibackgroundcopyjob-resume.md) auf, um die Verarbeitung des Auftrags fertig zu stellen.
+-   Um den Auftrag abzubrechen, rufen Sie die [**IBackgroundCopyJob::Cancel-Methode**](ibackgroundcopyjob-cancel.md) auf.
+-   Um den Teil des Auftrags zu akzeptieren, der erfolgreich übertragen wurde, bevor der Fehler aufgetreten ist, rufen Sie die [**IBackgroundCopyJob::Complete-Methode**](ibackgroundcopyjob-complete.md) auf. Diese Option gilt nicht für Uploadaufträge. Sie können einen Teil eines Uploadauftrags nicht abschließen.
+-   Um die Verarbeitung des Auftrags abzuschließen, beheben Sie das Problem, und rufen Sie dann die [**IBackgroundCopyJob::Resume-Methode**](ibackgroundcopyjob-resume.md) auf.
 
 Vorübergehende Fehler generieren keine Aufrufe der [**JobError-Methode.**](https://www.bing.com/search?q=**JobError**)
 
-DO gibt BG_ERROR_CONTEXT_REMOTE_FILE zurück, wenn für den Auftrag ein HTTP 403-Fehler aufgetreten ist, BG_ERROR_CONTEXT_NONE andernfalls .
+DO gibt BG_ERROR_CONTEXT_REMOTE_FILE zurück, wenn der Auftrag einen HTTP 403-Fehler aufweist, andernfalls BG_ERROR_CONTEXT_NONE.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,8 +80,8 @@ DO gibt BG_ERROR_CONTEXT_REMOTE_FILE zurück, wenn für den Auftrag ein HTTP 403
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1709 \[\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
 | Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
@@ -90,7 +90,7 @@ DO gibt BG_ERROR_CONTEXT_REMOTE_FILE zurück, wenn für den Auftrag ein HTTP 403
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

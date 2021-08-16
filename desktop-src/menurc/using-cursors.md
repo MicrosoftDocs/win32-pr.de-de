@@ -37,7 +37,7 @@ In diesem Abschnitt werden die folgenden Themen erläutert.
 
 ## <a name="creating-a-cursor"></a>Erstellen eines Cursors
 
-Im folgenden Beispiel werden zwei Cursorhandles erstellt: einer für den Standardmäßig-Sanduhrcursor und einer für einen benutzerdefinierten Cursor, der als Ressource in der Ressourcendefinitionsdatei der Anwendung enthalten ist.
+Im folgenden Beispiel werden zwei Cursorhandles erstellt: einen für den Standardmäßig-Sanduhrcursor und einen für einen benutzerdefinierten Cursor, der als Ressource in der Ressourcendefinitionsdatei der Anwendung enthalten ist.
 
 
 ```
@@ -240,7 +240,7 @@ case WM_SETCURSOR:
 
 
 
-Wenn das Fenster nicht minimiert ist, zeigt das System den Klassencursor an.
+Wenn das Fenster nicht minimiert wird, zeigt das System den Klassencursor an.
 
 Sie können einen Klassencursor ersetzen, indem Sie die [**SetClassLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setclasslonga) verwenden. Diese Funktion ändert die Standardfenstereinstellungen für alle Fenster einer angegebenen Klasse. Im folgenden Beispiel wird der vorhandene Klassencursor durch den Cursor `hCurs2` ersetzt.
 
@@ -259,7 +259,7 @@ Weitere Informationen finden Sie unter [Fensterklassen und](/windows/desktop/win
 
 ## <a name="confining-a-cursor"></a>Einordnen eines Cursors
 
-Im folgenden Beispiel wird der Cursor auf das Fenster der Anwendung beschränkt, und anschließend wird der Cursor im vorherigen Fenster wiederhergestellt. Im Beispiel wird die [**GetClipCursor-Funktion**](/windows/desktop/api/Winuser/nf-winuser-getclipcursor) verwendet, um den Bereich zu erfassen, in den sich der Cursor bewegen kann, und die [**ClipCursor-Funktion,**](/windows/desktop/api/Winuser/nf-winuser-clipcursor) um den Cursor zu beschränken und wiederherzustellen.
+Im folgenden Beispiel wird der Cursor auf das Fenster der Anwendung beschränkt und anschließend im vorherigen Fenster wiederhergestellt. Im Beispiel wird die [**GetClipCursor-Funktion**](/windows/desktop/api/Winuser/nf-winuser-getclipcursor) verwendet, um den Bereich zu erfassen, in den sich der Cursor bewegen kann, und die [**ClipCursor-Funktion,**](/windows/desktop/api/Winuser/nf-winuser-clipcursor) um den Cursor zu beschränken und wiederherzustellen.
 
 
 ```
@@ -289,7 +289,7 @@ ClipCursor(&rcOldClip);
 
 
 
-Da im System immer nur ein Cursor gleichzeitig verfügbar ist, muss eine Anwendung, die den Cursor beschränkt, den Cursor wiederherstellen, bevor das Steuerelement in ein anderes Fenster eingefügt wird.
+Da im System immer nur ein Cursor gleichzeitig verfügbar ist, muss eine Anwendung, die den Cursor einsperrt, den Cursor wiederherstellen, bevor das Steuerelement in ein anderes Fenster eingefügt wird.
 
 ## <a name="using-cursor-functions-to-create-a-mousetrap"></a>Verwenden von Cursorfunktionen zum Erstellen einer Mausbewegung
 

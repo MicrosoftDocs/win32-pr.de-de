@@ -3,7 +3,7 @@ title: LVM_GETCOLUMNWIDTH (Commctrl.h)
 description: Ruft die Breite einer Spalte in der Berichts- oder Listenansicht ab. Sie können diese Nachricht explizit oder mithilfe des ListView \_ GetColumnWidth-Makros senden.
 ms.assetid: 06e8ec36-3bc5-4516-ac29-17c36fb6d962
 keywords:
-- LVM_GETCOLUMNWIDTH meldungssteuerelemente Windows
+- LVM_GETCOLUMNWIDTH message Windows Controls
 topic_type:
 - apiref
 api_name:

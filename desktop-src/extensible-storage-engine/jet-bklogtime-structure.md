@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_BKLOGTIME Struktur'
-title: JET_BKLOGTIME Struktur
+description: 'Weitere Informationen zu: JET_BKLOGTIME-Struktur'
+title: JET_BKLOGTIME-Struktur
 TOCTitle: JET_BKLOGTIME Structure
 ms:assetid: 31460079-7c5b-4145-837d-b112ba0117d6
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269219(v=EXCHG.10)
@@ -22,14 +22,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118487722"
 ---
-# <a name="jet_bklogtime-structure"></a>JET_BKLOGTIME Struktur
+# <a name="jet_bklogtime-structure"></a>JET_BKLOGTIME-Struktur
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_bklogtime-structure"></a>JET_BKLOGTIME Struktur
+## <a name="jet_bklogtime-structure"></a>JET_BKLOGTIME-Struktur
 
-Die **JET_BKLOGTIME-Struktur** enthält die Datums- und Uhrzeitelemente eines Ereignisses. Es ist eine Erweiterung von [JET_LOGTIME.](./jet-logtime-structure.md)
+Die **JET_BKLOGTIME-Struktur** enthält die Datums- und Uhrzeitelemente eines Ereignisses. Es handelt sich um eine Erweiterung von [JET_LOGTIME](./jet-logtime-structure.md).
 
 **Windows Vista: JET_BKLOGTIME** wird in Windows Vista eingeführt.
 
@@ -62,27 +62,27 @@ Die **JET_BKLOGTIME-Struktur** enthält die Datums- und Uhrzeitelemente eines Er
 
 **bSeconds**
 
-Die Zeit des Ereignisses in Sekunden. Dies kann 0 (null) bis 60 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** "NULL" ist.
+Die Zeit des Ereignisses in Sekunden. Dies kann 0 (null) bis 60 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** -Struktur "NULL" ist.
 
 **bMinutes**
 
-Die Zeit des Ereignisses in Minuten. Dies kann 0 (null) bis 60 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** "NULL" ist.
+Die Zeit des Ereignisses in Minuten. Dies kann 0 (null) bis 60 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** -Struktur "NULL" ist.
 
 **bHours**
 
-Die Zeit des Ereignisses in Stunden. Dies kann 0 (null) bis 24 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** "NULL" ist.
+Die Uhrzeit des Ereignisses in Stunden. Dies kann 0 (null) bis 24 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** -Struktur "NULL" ist.
 
 **Bday**
 
-Der Tag des Monats des Ereignisses. Dies kann 0 (null) bis 31 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** "NULL" ist.
+Der Tag des Monats des Ereignisses. Dies kann 0 (null) bis 31 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** -Struktur "NULL" ist.
 
 **bMonth**
 
-Der Monat des Jahres des Ereignisses. Dies kann 0 (null) bis 12 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** "NULL" ist.
+Der Monat des Jahres des Ereignisses. Dies kann 0 (null) bis 12 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** -Struktur "NULL" ist.
 
 **bYear**
 
-Das Jahr (Offset um 1900) des Ereignisses. Um das tatsächliche Jahr zu erreichen, fügen Sie diesem Wert 1900 hinzu. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** "NULL" ist.
+Das Jahr (Offset um 1900) des Ereignisses. Um das tatsächliche Jahr zu erreichen, fügen Sie diesem Wert 1900 hinzu. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** -Struktur "NULL" ist.
 
 **bFiller1**
 
@@ -154,7 +154,7 @@ Diese Struktur wird beim Debuggen verwendet.
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In Esent.h deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 </tbody>
 </table>

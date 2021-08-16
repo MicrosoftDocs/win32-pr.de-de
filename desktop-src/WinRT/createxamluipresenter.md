@@ -43,26 +43,26 @@ Eine statische Erstellerfunktion, die einen [**XamlUIPresenter**](/uwp/api/Windo
 *pPresentSite* \[ In\]
 </dt> <dd>
 
-Eine vorhandene Hostingschnittstelle. Weitere **Informationen finden Sie unter IViewObjectPresentNotifySite** in Internet Explorer Dokumentation.
+Eine vorhandene Hostingschnittstelle. Weitere Informationen finden Sie in Internet Explorer Dokumentation unter **IViewObjectPresentNotifySite.**
 
 </dd> <dt>
 
 *ppPresenter* \[ out\]
 </dt> <dd>
 
-Die **\[ exclusiveto-Schnittstelle \]** für einen [**XamlUIPresenter.**](/uwp/api/Windows.UI.Xaml.Hosting.XamlUIPresenter?view=winrt-19041)
+Die **\[ \] exclusiveto-Schnittstelle** für einen [**XamlUIPresenter.**](/uwp/api/Windows.UI.Xaml.Hosting.XamlUIPresenter?view=winrt-19041)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **Standard-HResult,** **S \_ OK für** erfolg.
+Ein **Standard-HResult,** **S \_ OK** für erfolg.
 
 ## <a name="remarks"></a>Hinweise
 
-Zum Aufrufen dieser Methode ist ein **DllImport-Windows.UI.Xaml.dll.**
+Zum Aufrufen dieser Methode ist ein **DllImport** von Windows.UI.Xaml.dll erforderlich.
 
-Sie können diese Methode nicht über eine Windows Store aufrufen.
+Sie können diese Methode nicht über eine Windows Store-App aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

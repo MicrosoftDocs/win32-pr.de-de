@@ -2,7 +2,7 @@
 description: Die CIM UserDevice-Klasse ist eine übergeordnete Klasse, von der andere Klassen \_ wie CIM Keyboard oder CIM \_ \_ DesktopMonitor absteigen. Benutzergeräte sind logische Geräte, mit denen der Benutzer eines Computersystems Daten eingeben, anzeigen oder hören kann.
 ms.assetid: 311a065a-df9b-4c4b-bdc4-d3de89ce2f3d
 ms.tgt_platform: multiple
-title: CIM_UserDevice -Klasse (CIMWin32-WMI-Anbieter)
+title: CIM_UserDevice -Klasse (CIMWin32 WMI-Anbieter)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -41,9 +41,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118420495"
 ---
-# <a name="cim_userdevice-class-cimwin32-wmi-providers"></a>CIM_UserDevice -Klasse (CIMWin32-WMI-Anbieter)
+# <a name="cim_userdevice-class-cimwin32-wmi-providers"></a>CIM_UserDevice -Klasse (CIMWin32 WMI-Anbieter)
 
-Die **CIM \_ UserDevice-Klasse** ist eine übergeordnete Klasse, von der andere Klassen wie [**CIM \_ Keyboard**](cim-keyboard.md) oder [**CIM \_ DesktopMonitor**](cim-desktopmonitor.md)absteigen. Benutzergeräte sind logische Geräte, mit denen der Benutzer eines Computersystems Daten eingeben, anzeigen oder hören kann.
+Die **CIM \_ UserDevice-Klasse** ist eine übergeordnete Klasse, von der andere Klassen wie [**CIM \_ Keyboard**](cim-keyboard.md) oder [**CIM \_ DesktopMonitor**](cim-desktopmonitor.md)absteigend absteigen. Benutzergeräte sind logische Geräte, mit denen der Benutzer eines Computersystems Daten eingeben, anzeigen oder hören kann.
 
 > [!IMPORTANT]
 > Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
@@ -143,7 +143,7 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.
 
 <span id="Running_Full_Power"></span><span id="running_full_power"></span><span id="RUNNING_FULL_POWER"></span>
 
-<span id="Running_Full_Power"></span><span id="running_full_power"></span><span id="RUNNING_FULL_POWER"></span>**Running/Full Power** (3)
+<span id="Running_Full_Power"></span><span id="running_full_power"></span><span id="RUNNING_FULL_POWER"></span>**Wird ausgeführt/Vollstrom** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -224,7 +224,7 @@ Es ist bekannt, dass sich das Gerät im Energiesparmodus befindet, aber sein gen
 
 <span id="Power_Save_-_Low_Power_Mode"></span><span id="power_save_-_low_power_mode"></span><span id="POWER_SAVE_-_LOW_POWER_MODE"></span>
 
-<span id="Power_Save_-_Low_Power_Mode"></span><span id="power_save_-_low_power_mode"></span><span id="POWER_SAVE_-_LOW_POWER_MODE"></span>**Stromsparen – Niedriger Energiemodus** (14)
+<span id="Power_Save_-_Low_Power_Mode"></span><span id="power_save_-_low_power_mode"></span><span id="POWER_SAVE_-_LOW_POWER_MODE"></span>**Stromsparen – Modus mit geringer Leistung** (14)
 
 
 </dt> <dd>
@@ -235,12 +235,12 @@ Das Gerät befindet sich in einem Energiesparzustand, funktioniert aber weiterhi
 
 <span id="Power_Save_-_Standby"></span><span id="power_save_-_standby"></span><span id="POWER_SAVE_-_STANDBY"></span>
 
-<span id="Power_Save_-_Standby"></span><span id="power_save_-_standby"></span><span id="POWER_SAVE_-_STANDBY"></span>**Stromsparen – Standby** (15)
+<span id="Power_Save_-_Standby"></span><span id="power_save_-_standby"></span><span id="POWER_SAVE_-_STANDBY"></span>**Energiesparen – Standby** (15)
 
 
 </dt> <dd>
 
-Das Gerät funktioniert nicht, kann aber schnell voll funktionsfähig sein.
+Das Gerät funktioniert nicht, kann aber schnell voll in Betrieb gebracht werden.
 
 </dd> <dt>
 
@@ -311,7 +311,7 @@ Das Gerät ist still.
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -397,7 +397,7 @@ Das Gerät funktioniert nicht ordnungsgemäß. Einer der Treiber oder die Regist
 
 <span id="The_driver_for_this_device_needs_a_resource_that_Windows_cannot_manage."></span><span id="the_driver_for_this_device_needs_a_resource_that_windows_cannot_manage."></span><span id="THE_DRIVER_FOR_THIS_DEVICE_NEEDS_A_RESOURCE_THAT_WINDOWS_CANNOT_MANAGE."></span>
 
-<span id="the_driver_for_this_device_needs_a_resource_that_windows_cannot_manage."></span><span id="THE_DRIVER_FOR_THIS_DEVICE_NEEDS_A_RESOURCE_THAT_WINDOWS_CANNOT_MANAGE."></span>**Der Treiber für dieses Gerät benötigt eine Ressource, die nicht Windows verwaltet werden kann.** (5)
+<span id="the_driver_for_this_device_needs_a_resource_that_windows_cannot_manage."></span><span id="THE_DRIVER_FOR_THIS_DEVICE_NEEDS_A_RESOURCE_THAT_WINDOWS_CANNOT_MANAGE."></span>**Der Treiber für dieses Gerät benötigt eine Ressource, die Windows verwaltet werden kann.** (5)
 
 
 </dt> <dd>
@@ -431,7 +431,7 @@ Die Startkonfiguration für das Gerät steht in Konflikt mit anderen Geräten.
 
 </dt> <dd>
 
-Das Treiberlader für das Gerät fehlt.
+Das Treiberladegerät für das Gerät fehlt.
 
 </dd> <dt>
 
@@ -767,9 +767,9 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True gibt an, dass der in der **LastErrorCode-Eigenschaft** gemeldete Fehler jetzt gelöscht wird.
+True **gibt an,** dass der in der **LastErrorCode-Eigenschaft** gemeldete Fehler jetzt entfernt wird.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 </dd> <dt>
 
@@ -782,9 +782,9 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Freiformzeichenfolge, die Informationen über den in der **LastErrorCode-Eigenschaft** aufgezeichneten Fehler und die auszuführenden Korrekturmaßnahmen enthält.
+Freiformzeichenfolge, die Informationen zum In der **LastErrorCode-Eigenschaft** aufgezeichneten Fehler und durchzuführende Korrekturmaßnahmen enthält.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 </dd> <dt>
 
@@ -797,12 +797,12 @@ Datentyp: **datetime**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installationsdatum")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installation date")
 </dt> </dl>
 
 Datum und Uhrzeit der Installation des Objekts. Diese Eigenschaft benötigt keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
@@ -815,7 +815,7 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True gibt an, dass das Gerät gesperrt ist, wodurch Benutzereingaben oder -ausgaben verhindert werden.
+True **gibt an,** dass das Gerät gesperrt ist, was Benutzereingaben oder -ausgaben verhindert.
 
 </dd> <dt>
 
@@ -828,9 +828,9 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der letzte vom logischen Gerät gemeldete Fehlercode.
+Letzter vom logischen Gerät gemeldeter Fehlercode.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 </dd> <dt>
 
@@ -846,9 +846,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
 </dt> </dl>
 
-Bezeichnung, mit der das Objekt bekannt ist. Bei Einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden.
+Bezeichnung, unter der das Objekt bekannt ist. Bei Unterklassen kann diese Eigenschaft überschrieben werden, um eine Schlüsseleigenschaft zu sein.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
@@ -864,7 +864,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32")
 </dt> </dl>
 
-Win32 Plug & Play Gerätebezeichner des logischen Geräts. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Win32 Plug & Play Gerätebezeichner des logischen Geräts. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 Beispiel: \* "PNP030b"
 
@@ -873,7 +873,7 @@ Beispiel: \* "PNP030b"
 **PowerManagementCapabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **uint16-Array**
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -881,7 +881,7 @@ Zugriffstyp: Schreibgeschützt
 
 Array der spezifischen energiebezogenen Funktionen eines logischen Geräts.
 
-Diese Eigenschaft wird von **CIM \_ LogicalDevice** geerbt.
+Diese Eigenschaft wird von **CIM \_ LogicalDevice geerbt.**
 
 <dt>
 
@@ -913,7 +913,7 @@ Diese Eigenschaft wird von **CIM \_ LogicalDevice** geerbt.
 
 </dt> <dd>
 
-Die Energieverwaltungsfunktionen sind derzeit aktiviert, aber der genaue Featuresatz ist unbekannt, oder die Informationen sind nicht verfügbar.
+Die Energieverwaltungsfeatures sind derzeit aktiviert, aber der genaue Funktionssatz ist unbekannt, oder die Informationen sind nicht verfügbar.
 
 </dd> <dt>
 
@@ -935,29 +935,29 @@ Das Gerät kann seinen Energiezustand basierend auf der Nutzung oder anderen Kri
 
 </dt> <dd>
 
-Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) wird unterstützt. Diese Methode befindet sich in der übergeordneten **CIM \_ LogicalDevice-Klasse** und kann implementiert werden. Weitere Informationen finden Sie unter [Entwerfen von MOF-Klassen (Managed Object Format).](/windows/desktop/WmiSdk/designing-managed-object-format--mof--classes)
+Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) wird unterstützt. Diese Methode befindet sich in der übergeordneten **CIM \_ LogicalDevice-Klasse** und kann implementiert werden. Weitere Informationen finden Sie unter [Entwerfen Managed Object Format -Klassen (MOF).](/windows/desktop/WmiSdk/designing-managed-object-format--mof--classes)
 
 </dd> <dt>
 
 <span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>
 
-<span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>**PowerCycling unterstützt** (6)
+<span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>**Power-Bike unterstützt** (6)
 
 
 </dt> <dd>
 
-Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) kann aufgerufen werden, wobei der *PowerState-Parameter* auf 5 (Power Cycle) festgelegt ist.
+Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) kann mit dem *PowerState-Parameter* aufgerufen werden, der auf 5 (Power Cycle) festgelegt ist.
 
 </dd> <dt>
 
 <span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>
 
-<span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>Timed Power On Supported (7) **(Zeitiertes Einschalten unterstützt** (7)
+<span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>**Timed Power On Supported** (7)
 
 
 </dt> <dd>
 
-Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) kann aufgerufen werden, wobei der *PowerState-Parameter* für das Einschalten auf 5 (Power Cycle) und *Time* auf ein bestimmtes Datum und eine bestimmte Uhrzeit oder ein bestimmtes Intervall festgelegt ist.
+Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) kann aufgerufen werden, wenn der *PowerState-Parameter* auf 5 (Power Cycle) und *Time* auf ein bestimmtes Datum und eine bestimmte Uhrzeit oder ein bestimmtes Intervall für das Ein-/Aus-Setzen festgelegt ist.
 
 </dd> </dl>
 
@@ -972,9 +972,9 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True gibt an, dass das Gerät mit Strom verwaltet werden kann, d.h. in einen Energiesparzustand versetzt werden kann. **False** gibt an, dass der ganzzahlige Wert 1 ("Nicht unterstützt") der einzige Eintrag im **PowerManagementCapabilities-Array** sein sollte.
+If **TRUE**, the device can be power managed, that is, put into a power-save state. False **gibt** an, dass der ganzzahlige Wert 1 ("Nicht unterstützt") der einzige Eintrag im **PowerManagementCapabilities-Array sein** sollte.
 
-Diese Eigenschaft gibt nicht an, ob energieverwaltungsfeatures derzeit aktiviert sind oder welche Features unterstützt werden. Weitere Informationen finden Sie im **PowerManagementCapabilities-Array.** Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft gibt nicht an, ob energieverwaltungsfeatures derzeit aktiviert sind oder welche Features unterstützt werden, sofern aktiviert. Weitere Informationen finden Sie unter **PowerManagementCapabilities-Array.** Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 </dd> <dt>
 
@@ -990,7 +990,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
-Aktueller Status des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Aktueller Status des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 Folgende Werte sind gültig:
 
@@ -1033,14 +1033,14 @@ Folgende Werte sind gültig:
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-**Wird gestartet** ("Wird gestartet")
+**Wird** gestartet ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-**Beenden** ("Wird beendet")
+**Wird beendet** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -1054,7 +1054,7 @@ Folgende Werte sind gültig:
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Mannslast** ("1000")
+**Striche** ("Strich")
 
 
 </dt> <dd></dd> <dt>
@@ -1075,7 +1075,7 @@ Folgende Werte sind gültig:
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorenes Komma** ("Verlorenes Komma")
+**Lost Comm** ("Lost Comm")
 
 
 </dt> <dd></dd> </dl>
@@ -1096,13 +1096,13 @@ Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers)
 
 Status des logischen Geräts. Wenn diese Eigenschaft nicht für das logische Gerät gilt, sollte der Wert 5 (Nicht zutreffend) verwendet werden.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Andere** (1)
+**Sonstige** (1)
 
 
 </dt> <dd></dd> <dt>

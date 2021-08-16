@@ -17,9 +17,9 @@ keywords:
 - IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , BitmapVirtualCache16BppSize (Eigenschaft)
 - BitmapVirtualCache16BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
 - IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , BitmapVirtualCache16BppSize (Eigenschaft)
-- BitmapVirtualCache16BppSize-Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- BitmapVirtualCache16BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
 - IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , BitmapVirtualCache16BppSize (Eigenschaft)
-- BitmapVirtualCache16BppSize-Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- BitmapVirtualCache16BppSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
 - IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , BitmapVirtualCache16BppSize (Eigenschaft)
 topic_type:
 - apiref
@@ -94,7 +94,7 @@ Gibt **S \_ OK zurück,** wenn erfolgreich.
 
 Verwandte Eigenschaften sind die **Eigenschaften BitmapVirtualCacheSize** und **BitmapVirtualCache24BppSize.**
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 

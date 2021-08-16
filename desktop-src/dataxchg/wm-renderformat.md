@@ -3,7 +3,7 @@ title: WM_RENDERFORMAT (Winuser.h)
 description: Wird an den Besitzer der Zwischenablage gesendet, wenn das Rendering eines bestimmten Zwischenablageformats verzögert wurde und eine Anwendung Daten in diesem Format angefordert hat.
 ms.assetid: 81638109-4c5e-4b4c-b2db-4208b6ee83cc
 keywords:
-- WM_RENDERFORMAT der Exchange
+- WM_RENDERFORMAT-Nachricht Data Exchange
 topic_type:
 - apiref
 api_name:
@@ -39,7 +39,7 @@ Wird an den Besitzer der Zwischenablage gesendet, wenn das Rendering eines besti
 *wParam* 
 </dt> <dd>
 
-Das [zwischenablageformat,](standard-clipboard-formats.md) das gerendert werden soll.
+Das [Format der Zwischenablage,](standard-clipboard-formats.md) das gerendert werden soll.
 
 </dd> <dt>
 
@@ -56,7 +56,7 @@ Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgebe
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn der Besitzer der Zwischenablage auf eine **WM \_ RENDERFORMAT-Meldung** reagiert, darf er die Zwischenablage nicht öffnen, bevor [**er SetClipboardData aufruft.**](/windows/win32/api/winuser/nf-winuser-setclipboarddata) Das Öffnen der Zwischenablage ist vor dem Platzieren von Daten als Reaktion auf **WM \_ RENDERFORMAT** nicht erforderlich, und bei jedem Versuch, die Zwischenablage zu öffnen, wird ein Fehler angezeigt, da die Zwischenablage derzeit von der Anwendung geöffnet gehalten wird, die das zu rendernde Format angefordert hat.
+Wenn der Besitzer der Zwischenablage auf eine **WM \_ RENDERFORMAT-Meldung** reagiert, darf er die Zwischenablage nicht öffnen, bevor [**er SetClipboardData aufruft.**](/windows/win32/api/winuser/nf-winuser-setclipboarddata) Das Öffnen der Zwischenablage ist vor dem Platzieren von Daten als Reaktion auf **WM \_ RENDERFORMAT** nicht erforderlich. Bei jedem Versuch, die Zwischenablage zu öffnen, wird ein Fehler angezeigt, da die Zwischenablage derzeit von der Anwendung geöffnet gehalten wird, die das zu rendernde Format angefordert hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Wenn der Besitzer der Zwischenablage auf eine **WM \_ RENDERFORMAT-Meldung** rea
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

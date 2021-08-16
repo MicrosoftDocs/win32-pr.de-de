@@ -1,6 +1,6 @@
 ---
 title: Befehl "break"
-description: Der Break-Befehl gibt einen Schlüssel zum Abbrechen eines Befehls an, der mithilfe von \ 0034;wait \ 0034 aufgerufen wurde. Flag. Dieser Befehl ist ein MCI-Systembefehl. sie wird direkt von MCI interpretiert.
+description: Der Break-Befehl gibt einen Schlüssel zum Abbrechen eines Befehls an, der mit \0034;wait \ 0034 aufgerufen wurde. Flag. Dieser Befehl ist ein MCI-Systembefehl. sie wird direkt von MCI interpretiert.
 ms.assetid: 959df85f-5020-4e37-952b-15ba5e6fb672
 keywords:
 - Befehl "break" Windows Multimedia
@@ -21,9 +21,9 @@ ms.locfileid: "118375472"
 ---
 # <a name="break-command"></a>Befehl "break"
 
-Der Befehl break gibt einen Schlüssel zum Abbrechen eines Befehls an, der mithilfe des Flags "wait" aufgerufen wurde. Dieser Befehl ist ein MCI-Systembefehl. sie wird direkt von MCI interpretiert.
+Der Break-Befehl gibt einen Schlüssel zum Abbrechen eines Befehls an, der mit dem Flag "wait" aufgerufen wurde. Dieser Befehl ist ein MCI-Systembefehl. sie wird direkt von MCI interpretiert.
 
-Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) auf, wobei der *lpszCommand-Parameter* wie folgt festgelegt ist.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) mit dem *lpszCommand-Parameter* auf, der wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -55,8 +55,8 @@ Eines der folgenden Flags.
 
 | Wert                 | Bedeutung                                                                         |
 |-----------------------|---------------------------------------------------------------------------------|
-| *im Code des virtuellen Schlüssels* | Gibt den Schlüssel an, der einen Befehl abbricht, der mit dem Flag "wait" gestartet wurde. |
-| aus                   | Deaktiviert den aktuellen Halteschlüssel.                                                 |
+| für *code des virtuellen Schlüssels* | Gibt den Schlüssel an, der einen Befehl abbricht, der mit dem Flag "wait" gestartet wurde. |
+| aus                   | Deaktiviert die aktuelle Haltetaste.                                                 |
 
 
 
@@ -67,21 +67,21 @@ Eines der folgenden Flags.
 <span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify" oder beides sein. Für DigitalVideo- und VCR-Geräte kann auch "Test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
+Kann "wait", "notify" oder beides sein. Für digital-video- und VCR-Geräte kann auch "test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die Haltetaste aktiviert ist und der Benutzer die Taste drückt, die durch den im *lpszVirtKey-Parameter* angegebenen Code für virtuelle Schlüssel identifiziert wird, gibt das Gerät die Steuerung an die Anwendung zurück. Nach Möglichkeit wird die Ausführung des Befehls fortgesetzt.
+Wenn die Haltetaste aktiviert ist und der Benutzer den Schlüssel drückt, der durch den im *lpszVirtKey-Parameter* angegebenen virtuellen Schlüsselcode identifiziert wird, gibt das Gerät die Steuerung an die Anwendung zurück. Wenn möglich, setzt der Befehl die Ausführung fort.
 
 ## <a name="examples"></a>Beispiele
 
-Mit dem folgenden Befehl wird F2 als Haltetaste für das Gerät "mysound" festgelegt.
+Der folgende Befehl legt F2 als Halteschlüssel für das Gerät "mysound" fest.
 
 ``` syntax
 break mysound on 113

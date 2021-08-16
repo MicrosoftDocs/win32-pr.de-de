@@ -72,7 +72,7 @@ Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

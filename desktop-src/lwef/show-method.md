@@ -4,36 +4,36 @@ description: Show-Methode
 ms.assetid: 58adbb55-f4cb-4356-abc4-b85fa3af744d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a05a1adaa46c85f34e02128960330c68d9a86db1
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: ede9dd8474b21911fccb0c217b070dbfb84160125d2fd56092685ccaf82905b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106340486"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118475352"
 ---
 # <a name="show-method"></a>Show-Methode
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Macht das angegebene Zeichen sichtbar und gibt dessen zugeordnete **Animation wieder** .
+Macht das angegebene Zeichen sichtbar und gibt die zugeordnete **Anzeigeanimation** wieder.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent ***. Zeichen ("*** Merkmal-ID * * *").* *  \[ *Schnell* anzeigen\]
+*agent***. Zeichen ("**_CharacterID_*_"). Schnell_ *  \[ *anzeigen*\]
 
 
 
 | Teil   | BESCHREIBUNG                                                                                                                                                                                                                              |
 |--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Fast* | Dies ist optional. Ein boolescher Ausdruck, der angibt, ob der Server die **Anzeige** Animation wieder gibt. **True** Überspringt die **Anzeige** Status Animation. <br/> **False** (Standard) lässt die **Anzeige** Status Animation nicht überspringen. <br/> |
+| *Fast* | Optional. Ein boolescher Ausdruck, der an gibt, ob der Server die **Showing-Animation wieder** spielt. **True** Überspringt die **Animation Zum** Anzeigen des Zustands. <br/> **False** (Standard) Überspringt die Animation **Zum Anzeigen des** Zustands nicht. <br/> |
 
 
 
@@ -41,11 +41,11 @@ Macht das angegebene Zeichen sichtbar und gibt dessen zugeordnete **Animation wi
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie einen Objekt Verweis deklarieren und diesen auf diese Methode festlegen, wird ein [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt zurückgegeben. Wenn außerdem die zugeordnete **Anzeige** Animation nicht geladen wurde und Sie den **fast** -Parameter nicht als **true** angegeben haben, legt der Server die [**Status**](status-property.md) -Eigenschaft des **Anforderungs** Objekts auf "failed" (Fehler) mit einer entsprechenden Fehlernummer fest. Wenn Sie also das HTTP-Protokoll verwenden, um auf **Daten der Zeichen** Animation zuzugreifen, verwenden Sie die [**Get**](get-method.md) -Methode, um die Show State-Animation vor dem Aufrufen der **Show** -Methode zu laden.
+Wenn Sie einen Objektverweis deklarieren und auf diese Methode festlegen, wird ein [**Request-Objekt**](/windows/desktop/lwef/the-request-object) zurückgegeben. Wenn die zugeordnete  Showing-Animation nicht geladen wurde und Sie den **Fast-Parameter** nicht  als **True** angegeben haben, legt der Server die [**Status-Eigenschaft**](status-property.md) des Anforderungsobjekts mit einer entsprechenden Fehlernummer auf "failed" fest. Wenn Sie daher das HTTP-Protokoll für den Zugriff auf Zeichenanimationsdaten verwenden, verwenden Sie die [**Get-Methode,**](get-method.md) um die Animation zum Anzeigen des Zustands zu laden, bevor Sie die **Show-Methode** aufrufen. 
 
-Legen Sie den **fast** -Parameter nicht auf " **true** " fest, ohne zuvor eine Animation vorher zu spielen Andernfalls wird der Zeichen Rahmen möglicherweise ohne Bild angezeigt. Beachten Sie insbesondere Folgendes: Wenn Sie " [**muveto**](moveto-method.md) " anrufen, wenn das Zeichen nicht sichtbar ist, wird keine Animation wiedergegeben. Wenn Sie also die **Show** -Methode aufrufen, bei der **fast** auf **true** festgelegt ist, wird kein Bild angezeigt. Wenn Sie " [**Ausblenden**](hide-method.md) **" und "mit** **fast** festgelegtem" auf " **true**" aufzurufen, wird das Bild nicht angezeigt.
+Vermeiden Sie es, den **Fast-Parameter** auf **TRUE zu** setzen, ohne zuvor eine Animation wiedergibt. Andernfalls wird der Zeichenrahmen möglicherweise ohne Bild angezeigt. Beachten Sie insbesondere Folgendes: Wenn Sie [**MoveTo**](moveto-method.md) aufrufen, wenn das Zeichen nicht sichtbar ist, wird keine Animation wieder verwendet. Wenn Sie daher die Show-Methode **aufrufen,** bei **der Fast** auf True festgelegt **ist,** wird kein Bild angezeigt. Wenn Sie Ausblenden und dann  [**Schnell**](hide-method.md) anzeigen auf  **True** festlegen, wird kein Bild angezeigt.
 
 ## <a name="see-also"></a>Weitere Informationen
 

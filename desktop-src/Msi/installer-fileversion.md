@@ -1,5 +1,5 @@
 ---
-description: Die FileVersion-Methode des Installer-Objekts gibt die Versionszeichenfolge oder Sprachzeichenfolge des in Path angegebenen Pfads zurück. Dabei wird das Format verwendet, in dem das Installationsprogramm erwartet, dass sie in der Datenbank zu finden sind.
+description: Die FileVersion-Methode des Installer-Objekts gibt die Versionszeichenfolge oder Sprachzeichenfolge des unter Path angegebenen Pfads mit dem Format zurück, in dem das Installationsprogramm erwartet, dass sie in der Datenbank gefunden werden.
 ms.assetid: 387cf269-5a7a-476b-811e-d576da1c752f
 title: Installer.FileVersion-Methode
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118630582"
 ---
 # <a name="installerfileversion-method"></a>Installer.FileVersion-Methode
 
-Die **FileVersion-Methode** des [**Installer-Objekts**](installer-object.md) gibt die Versionszeichenfolge oder Sprachzeichenfolge des in *Path* angegebenen Pfads zurück. Dabei wird das Format verwendet, in dem das Installationsprogramm erwartet, dass sie in der Datenbank zu finden sind. Bei Versionen ist dies eine Zeichenfolge im \# Format " . . . \# \# \# ". Für die Sprache ist dies die ID der Dezimalsprache.
+Die **FileVersion-Methode** des [**Installer-Objekts**](installer-object.md) gibt die Versionszeichenfolge oder Sprachzeichenfolge des unter *Path* angegebenen Pfads mit dem Format zurück, in dem das Installationsprogramm erwartet, dass sie in der Datenbank gefunden werden. Bei Versionen ist dies eine Zeichenfolge im Format " \# . \# . . \# \# ". Für language ist dies die ID der Dezimalsprache.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ Erforderliche Zeichenfolge, die den Pfad zur Datei enthält.
 *Sprache* 
 </dt> <dd>
 
-Flag zum Angeben, ob der zurückgegebene Wert eine Sprach-ID oder Versionszeichenfolge ist. TRUE gibt die Sprache zurück, FALSE gibt die Version zurück. Dieser Parameter ist optional und hat den Standardwert FALSE.
+Flag zum Kennzeichnen, ob der zurückgegebene Wert eine Sprach-ID oder eine Versionszeichenfolge ist. TRUE gibt die Sprache zurück, FALSE gibt die Version zurück. Dieser Parameter ist optional und hat den Standardwert FALSE.
 
 </dd> </dl>
 
@@ -64,9 +64,9 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 

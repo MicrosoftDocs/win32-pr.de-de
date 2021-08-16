@@ -1,5 +1,5 @@
 ---
-description: Erfahren Sie mehr D3DX_CHANNEL Flags, die verwendet werden, um anzugeben, welche Kanäle in einer Textur verwendet werden sollen, z. B. D3DX_CHANNEL_RED.
+description: Erfahren Sie mehr über die D3DX_CHANNEL Flags, die verwendet werden, um anzugeben, welche Kanäle in einer Textur verwendet werden sollen, z. B. D3DX_CHANNEL_RED.
 ms.assetid: b592b42a-0af1-49df-b159-4b84e4e12c95
 title: D3DX_CHANNEL
 ms.topic: article
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118526798"
 ---
-# <a name="d3dx_channel"></a>D3DX-KANAL \_
+# <a name="d3dx_channel"></a>\_D3DX-KANAL
 
 Die folgenden Flags werden verwendet, um anzugeben, welche Kanäle in einer Textur verwendet werden sollen.
 
@@ -20,16 +20,16 @@ Die folgenden Flags werden verwendet, um anzugeben, welche Kanäle in einer Text
 | \#Definieren                 | BESCHREIBUNG                                                                   |
 |--------------------------|-------------------------------------------------------------------------------|
 | D3DX \_ CHANNEL \_ RED       | Gibt an, dass der rote Kanal verwendet werden soll.                                     |
-| D3DX \_ CHANNEL \_ BLUE      | Gibt an, dass der blaue Kanal verwendet werden soll.                                    |
+| D3DX-KANAL \_ \_ BLAU      | Gibt an, dass der blaue Kanal verwendet werden soll.                                    |
 | D3DX-KANAL \_ \_ GRÜN     | Gibt an, dass der grüne Kanal verwendet werden soll.                                   |
-| D3DX \_ CHANNEL \_ ALPHA     | Gibt an, dass der Alphakanal verwendet werden soll.                                   |
-| \_ \_ D3DX-KANAL-LUDOMINANZ | Gibt die Leuchtdichten der roten, grünen und blauen Kanäle an, die verwendet werden sollen. |
+| D3DX-KANAL \_ \_ ALPHA     | Gibt an, dass der Alphakanal verwendet werden soll.                                   |
+| D3DX \_ CHANNEL \_ LUMINANCE | Gibt die Leuchtdichten der roten, grünen und blauen Kanäle an, die verwendet werden sollen. |
 
 
 
  
 
-## <a name="constant-information"></a>Konstante Informationen
+## <a name="constant-information"></a>Konstanteninformationen
 
 
 

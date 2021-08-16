@@ -15,7 +15,7 @@ ms.locfileid: "118626654"
 
 Die folgenden Themen enthalten weitere Informationen zu veröffentlichten Versionen, Tools und verteilbaren Windows Installer.
 
--   [Windows SDK Components for Windows Installer Developers](platform-sdk-components-for-windows-installer-developers.md) (Entwickler des Windows-Installers) erläutert, wo sie die verteilbaren Komponenten des Installationsprogramms, die Dokumentation, das Datenbankvalidierungstool, den Datenbanktabellen-Editor, das Datenbankschema, Entwicklungstools, VBScript-Tools, das Beispielprodukt und Codebeispiele abrufen können.
+-   [Windows SDK Components for Windows Installer Developers](platform-sdk-components-for-windows-installer-developers.md) (Entwickler des Windows-Installers) erläutert, wo sie die verteilbaren Komponenten des Installationsprogramms, die Dokumentation, das Datenbankvalidierungstool, den Datenbanktabellen-Editor, das Datenbankschema, Entwicklungstools, VBScript-Tools, beispielprodukt und Codebeispiele abrufen können.
 -   [Windows Installer Redistributables](windows-installer-redistributables.md) enthält Informationen dazu, wo sie die verteilbaren Komponenten des Installationsprogramms abrufen können.
 -   [Veröffentlichte Versionen des Windows Installers](released-versions-of-windows-installer.md) listet die veröffentlichten Versionen des Installationsprogramms auf, die mit verschiedenen Betriebssystemen ausgeliefert wurden.
 -   [Windows Installer Development Tools](windows-installer-development-tools.md) enthält Referenzseiten für die Verwendung der Installer-Entwicklungstools.

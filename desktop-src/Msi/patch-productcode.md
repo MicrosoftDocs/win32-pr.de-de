@@ -1,7 +1,7 @@
 ---
 description: Die ProductCode-Eigenschaft des Patch-Objekts gibt die ProductCode-GUID des Produkts zurück.
 ms.assetid: 11d81bc0-dac6-4135-9b60-31d39c3455da
-title: Patch.ProductCode-Eigenschaft
+title: Patch.ProductCode (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118627653"
 ---
-# <a name="patchproductcode-property"></a>Patch.ProductCode-Eigenschaft
+# <a name="patchproductcode-property"></a>Patch.ProductCode (Eigenschaft)
 
 Die **ProductCode-Eigenschaft** des [**Patch-Objekts**](patch-object.md) gibt die [**ProductCode-GUID**](productcode.md) des Produkts zurück.
 
@@ -43,13 +43,13 @@ propVal = Patch.ProductCode
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm 3.0 oder höher auf Windows Server 2003, Windows XP und Windows 2000<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installer 3.0 oder höher auf Windows Server 2003, Windows XP und Windows 2000<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                                                   |
-| IID<br/>     | IID \_ IPatch ist als 000C10A1-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                                                            |
+| IID<br/>     | IID IPatch ist als \_ 000C10A1-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                                                            |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -3,10 +3,10 @@ title: Manipulationen
 description: In diesem Abschnitt wird die Objektbearbeitung für Windows Touch erläutert.
 ms.assetid: 7f905c36-7804-422c-8a60-a281e03c5e15
 keywords:
-- Windows Touch,Manipulationen
-- Manipulationen,About
-- Manipulationen,Gestenunterschiede
-- Gesten,Manipulationsunterschiede
+- Windows Toucheingabe, Bearbeitungen
+- Manipulationen, Informationen
+- Manipulationen, Gestenunterschiede
+- Gesten, Manipulationsunterschiede
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 5368b39de1f35cc9a547bc240fc3c984fc1f10f658972b0f845a965e09bb29c8
@@ -20,18 +20,18 @@ ms.locfileid: "118435985"
 
 In diesem Abschnitt wird die Objektbearbeitung für Windows Touch erläutert.
 
-## <a name="manipulation-overview"></a>Übersicht über die Manipulation
+## <a name="manipulation-overview"></a>Manipulationsübersicht
 
-Eine praktische Möglichkeit, sich über Manipulationen gedanken zu machen, ist, sie als Obermenge von Gesten zu betrachten. Was Sie mit Gesten tun können, können Sie mithilfe von Manipulationen mit mehr Flexibilität und mit feinerer Genauigkeit tun. Der Unterschied zwischen Manipulationen und Gesten wird am besten anhand eines einfachen Beispiels demonstriert. Sie können ein Objekt erweitern und gleichzeitig mithilfe von Bearbeitungen übersetzen. mit Gesten können Sie nur eine nach der anderen tun. Diese Möglichkeit, ein Objekt in Echtzeit zu bearbeiten, macht Anwendungen für Benutzer intuitiver, da sie eine realistischere Erfahrung ermöglichen.
+Eine praktische Möglichkeit, über Manipulationen nachzudenken, besteht darin, sie als eine Obermenge von Gesten zu betrachten. Was Sie mit Gesten tun können, können Sie mit mehr Flexibilität und mit feinerer Genauigkeit durch Manipulationen erreichen. Der Unterschied zwischen Manipulationen und Gesten wird am besten anhand eines einfachen Beispiels veranschaulicht. Sie können ein Objekt erweitern und gleichzeitig mithilfe von Bearbeitungen übersetzen. Mit Gesten können Sie jeweils nur eine Aktion durchführen. Diese Möglichkeit, ein Objekt in Echtzeit zu bearbeiten, macht Anwendungen für Benutzer intuitiver, da sie eine realistischere Erfahrung ermöglichen.
 
-Die Manipulations-APIs werden verwendet, um Transformationsvorgänge für Objekte für Touch-fähige Anwendungen zu vereinfachen. Manipulationen werden in Windows 7 über das COM-Objekt manipulations ausgeführt. Durch die Verwendung von Manipulationen können Entwickler Trägheit (Objektkörper) einfacher unterstützen und Transformationen für Objekte problemlos auf eine Weise durchführen, die mit anderen Anwendungen konsistent ist. In den folgenden Abschnitten werden verschiedene Möglichkeiten zum Ausführen von Bearbeitungen erläutert.
+Die Manipulations-APIs werden verwendet, um Transformationsvorgänge für Objekte für touchfähige Anwendungen zu vereinfachen. Bearbeitungen werden in Windows 7 über das COM-Objekt manipulations durchgeführt. Durch die Verwendung von Manipulationen können Entwickler Trägheit (Objektmechanik) leichter unterstützen und Transformationen für Objekte auf eine Weise durchführen, die mit anderen Anwendungen konsistent ist. In den folgenden Abschnitten werden verschiedene Möglichkeiten zum Ausführen von Bearbeitungen erläutert.
 
 
 
 | `Section`                                                                                            | BESCHREIBUNG                                                                                                                                          |
 |----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Hinzufügen von Manipulationsunterstützung zu nicht verwaltetem Code](adding-manipulation-support-in-unmanaged-code.md) | Erläutert das Implementieren einer Ereignissenke für die [**\_ IManipulationEvents-Schnittstelle**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) und das Hinzufügen von Ereignishandlern zum Code. |
-| [Erweiterte Manipulationen](advanced-manipulations.md)                                               | Erläutert das Ausführen komplexer Bearbeitungen.                                                                                                       |
+| [Erweiterte Bearbeitungen](advanced-manipulations.md)                                               | Erläutert, wie komplexe Bearbeitungen durchgeführt werden.                                                                                                       |
 | [Drehung mit einem Finger](single-finger-rotation.md)                                               | Erläutert, wie ein Objekt mithilfe eines Pivotpunkts und des Bearbeitungsprozessors gedreht wird.                                                              |
 
 

@@ -1,7 +1,7 @@
 ---
-description: Berechnet das Punktprodukt einer Ebene und einen 3D-Vektor. Der w-Parameter des Vektors wird als 1 angenommen.
+description: Berechnet das Punktprodukt einer Ebene und eines 3D-Vektors. Der w-Parameter des Vektors wird als 1 angenommen.
 ms.assetid: 634de6bc-b631-493d-a7a6-292a3c3253d6
-title: D3DXPlaneDotCoord-Funktion (D3dx9math. h)
+title: D3DXPlaneDotCoord-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 99ee9db7df541dcf74867b828a73ede80f11e22b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 30f04ec310ce66dc43073e724b08c358cd8fc6f24f0b3840475a1abc61544503
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219434"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118524927"
 ---
 # <a name="d3dxplanedotcoord-function"></a>D3DXPlaneDotCoord-Funktion
 
-Berechnet das Punktprodukt einer Ebene und einen 3D-Vektor. Der w-Parameter des Vektors wird als 1 angenommen.
+Berechnet das Punktprodukt einer Ebene und eines 3D-Vektors. Der w-Parameter des Vektors wird als 1 angenommen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,33 +41,33 @@ FLOAT D3DXPlaneDotCoord(
 
 <dl> <dt>
 
-*PP* \[ in\]
+*pP* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXPLANE**](d3dxplane.md) \***
+Typ: **const [**D3DXPLANE**](d3dxplane.md) \***
 
-Zeiger auf eine Quell- [**D3DXPLANE**](d3dxplane.md) -Struktur.
+Zeiger auf eine [**D3DXPLANE-Quellstruktur.**](d3dxplane.md)
 
 </dd> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR3**](d3dxvector3.md) -Struktur.
+Zeiger auf eine [**D3DXVECTOR3-Quellstruktur.**](d3dxvector3.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 Das Punktprodukt der Ebene und des 3D-Vektors.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei einer Ebene (a, b, c, d) und einem 3D-Vektor (x, y, z) ist der Rückgabewert dieser Funktion ein \* x + b \* y + c \* z + d \* 1. Die **D3DXPlaneDotCoord** -Funktion ist nützlich, um die Beziehung der Ebene mit einer Koordinate im 3D-Raum zu bestimmen.
+Bei einer Ebene (a, b, c, d) und einem 3D-Vektor (x, y, z) ist der Rückgabewert dieser Funktion \* ein x + b \* y + c z + d \* \* 1. Die **D3DXPlaneDotCoord-Funktion** ist nützlich, um die Beziehung der Ebene mit einer Koordinate im 3D-Raum zu bestimmen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,12 +75,12 @@ Bei einer Ebene (a, b, c, d) und einem 3D-Vektor (x, y, z) ist der Rückgabewert
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

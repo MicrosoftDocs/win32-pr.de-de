@@ -1,7 +1,7 @@
 ---
 description: Schlägt die Sicherheitsrichtlinie vor, die auf den Browser angewendet werden soll.
 ms.assetid: 73541611-2024-4c33-ab03-e3204244c46c
-title: 'Iitempreviewerext:: Vorschlags-browserpolicy-Methode'
+title: IItemPreviewerExt::SuggestBrowserPolicy-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,14 +12,14 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 0a4f248edbfa4a1779016e40d73051d8c1d9acac
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 84446b49ab723f161de8f148e95916202efe06176191e820ab8bafc88ed9158a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118969759"
 ---
-# <a name="iitempreviewerextsuggestbrowserpolicy-method"></a>Iitempreviewerext:: Vorschlags-browserpolicy-Methode
+# <a name="iitempreviewerextsuggestbrowserpolicy-method"></a>IItemPreviewerExt::SuggestBrowserPolicy-Methode
 
 Schlägt die Sicherheitsrichtlinie vor, die auf den Browser angewendet werden soll.
 
@@ -39,21 +39,21 @@ HRESULT SuggestBrowserPolicy(
 
 <dl> <dt>
 
-*dwcontext* \[ in\]
+*dwContext* \[ In\]
 </dt> <dd>
 
 Typ: **DWORD**
 
-Der Kontext Bezeichner für den Vorgang. Überschreiben Sie den *dwcontext* -Standard, um den Kontext Bezeichner auf einen Wert Ihrer Wahl festzulegen.
+Der Kontextbezeichner für den Vorgang. Überschreiben Sie *den dwContext-Standardwert,* um den Kontextbezeichner auf einen Wert Ihrer Wahl zu setzen.
 
 </dd> <dt>
 
-*pdwflags* \[ Out, retval\]
+*pdwFlags* \[ out, retval\]
 </dt> <dd>
 
-Typ: **DWORD \** _
+Typ: **DWORD \***
 
-Ein Zeiger auf einen DWORD-Wert, der Überprüfungs Prüfungs Flags enthält. Das Flag _ *browserpolicy \_ nicht vertrauenswürdiges \_ Content** deaktiviert jede Möglichkeit, dass die Vorschau das Skript oder ActiveX ausführen kann. Der *pdwflags* -Parameter darf kein **null** -Zeiger sein.
+Ein Zeiger auf einen DWORD-Wert, der Überprüfungsflags enthält. Das **FLAG BROWSERPOLICY \_ UNTRUSTED \_ CONTENT** deaktiviert die Möglichkeit, dass die Vorschau skript- oder ActiveX. Der Parameter *pdwFlags darf* kein **NULL-Zeiger** sein.
 
 </dd> </dl>
 
@@ -61,15 +61,15 @@ Ein Zeiger auf einen DWORD-Wert, der Überprüfungs Prüfungs Flags enthält. Da
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**iitempreviewerext**](-search-iitempreviewerext.md) -Schnittstelle wird nur unter Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
+Die [**IItemPreviewerExt-Schnittstelle**](-search-iitempreviewerext.md) wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
-Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**iitempreviewerext**](-search-iitempreviewerext.md) -Schnittstelle und die folgenden APIs zu verwenden: die Schnittstellen [**isearchprotocolui**](-search-isearchprotocolui.md), [**iitempropertybag**](iitempropertybag.md) und [**isearchitem**](-search-isearchitem.md) , die [**linkinfo**](-search-linkinfo.md) -Struktur und die [**linktype**](-search-linktype.md)
+Um eine Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern anzuzeigen, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**IItemPreviewerExt-Schnittstelle**](-search-iitempreviewerext.md) und die folgenden APIs zu verwenden: die [**Schnittstellen ISearchProtocolUI,**](-search-isearchprotocolui.md) [**IItemPropertyBag**](iitempropertybag.md) und [**ISearchItem,**](-search-isearchitem.md) die [**LINKINFO-Struktur**](-search-linkinfo.md) und die [**LINKTYPE-Enumeration.**](-search-linktype.md)
 
-Die Verwendung des Flags " **browserpolicy \_ nicht vertrauenswürdiger \_ Inhalt** " wird dringend empfohlen, um die Möglichkeit zu deaktivieren, dass die Vorschau Skripts oder ActiveX ausführen kann. Die **iitempreviewerext:: Vorschlags-browserpolicy** -Methode kann Informationen darüber zurückgeben, ob das Element, das in der Vorschau angezeigt wird, vertrauenswürdig ist oder nicht. Dies ermöglicht es dem Vorschau-Steuerelement, das Skript und sogar ActiveX-Steuerelemente auszuführen. Da der Vorschau häufig temporäre Dateien verwendet, um die Vorschau zu generieren, kann dies dazu führen, dass in der lokalen Computer Zone unerwartete Skript-und Code Ausführungen ausgeführt werden.
+Die Verwendung **des FLAGS BROWSERPOLICY \_ UNTRUSTED \_ CONTENT** wird dringend empfohlen, um die Möglichkeit zu deaktivieren, dass die Vorschau skript- oder ActiveX. Die **IItemPreviewerExt::SuggestBrowserPolicy-Methode** kann Informationen darüber zurückgeben, ob das Element, für das die Vorschauversion angezeigt wird, vertrauenswürdig ist oder nicht. Dadurch kann das Trident-Steuerelement der Vorschauversion Skripts ausführen und sogar ActiveX ausführen. Da die Vorschauversion häufig temporäre Dateien verwendet, um die Vorschau zu generieren, kann dies zu unerwarteten Skript- und Codeausführungen in der Zone Lokaler Computer führen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,17 +77,17 @@ Die Verwendung des Flags " **browserpolicy \_ nicht vertrauenswürdiger \_ Inhal
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 3,0<br/>          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 3.0<br/>          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iitempreviewerext**](-search-iitempreviewerext.md)
+[**IItemPreviewerExt**](-search-iitempreviewerext.md)
 </dt> </dl>
 
  

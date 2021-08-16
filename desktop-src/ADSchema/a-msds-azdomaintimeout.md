@@ -1,6 +1,6 @@
 ---
 title: ms-DS-Az-Domain-Timeout-Attribut
-description: Zeit in Millisekunden, nachdem erkannt wurde, dass eine Domäne nicht erreichbar ist, und bevor der Domänencontroller erneut versucht wird.
+description: Zeit in Millisekunden, nachdem erkannt wurde, dass eine Domäne nicht erreichbar ist, und bevor der DC erneut versucht wird.
 ms.assetid: b2523faa-7cf1-4325-a3fa-70c5f568adaa
 ms.tgt_platform: multiple
 keywords:
@@ -23,7 +23,7 @@ ms.locfileid: "118426733"
 ---
 # <a name="ms-ds-az-domain-timeout-attribute"></a>ms-DS-Az-Domain-Timeout-Attribut
 
-Zeit in Millisekunden, nachdem erkannt wurde, dass eine Domäne nicht erreichbar ist, und bevor der Domänencontroller erneut versucht wird.
+Zeit in Millisekunden, nachdem erkannt wurde, dass eine Domäne nicht erreichbar ist, und bevor der DC erneut versucht wird.
 
 
 

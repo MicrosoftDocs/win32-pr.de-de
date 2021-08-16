@@ -87,7 +87,7 @@ Ein Gleitkommawert, der als Vergleichswert verwendet werden soll.
 
 Typ: **float**
 
-Ein optionaler Wert, an den LoD-Beispielwerte klammern werden. Wenn Sie z. B. 2,0f für den Klammerwert übergeben, stellen Sie sicher, dass keine einzelne Stichprobe auf eine MIP-Ebene unter 2,0f zuf zutritt.
+Ein optionaler Wert, an den LoD-Beispielwerte klammern werden. Wenn Sie z. B. 2,0f für den Klammerwert übergeben, stellen Sie sicher, dass keine einzelne Stichprobe auf eine Mip-Ebene unter 2,0f zuf zutritt.
 
 </dd> </dl>
 

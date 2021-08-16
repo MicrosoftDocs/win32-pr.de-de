@@ -1,21 +1,21 @@
 ---
-title: Pager-Steuerelement Konstanten
-description: Pager-Steuerelement Konstanten
+title: Pager-Steuerelementkonstanten
+description: Pager-Steuerelementkonstanten
 ms.assetid: 993021a4-c0f4-47ec-9473-5e41dbe045a3
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 560ff025cf58eefad3a5f6f8683ccbca7610341b
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d13e8aebc8b59915c383d539865a420268b034b0af3c70aa7970643a331505af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352209"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117833371"
 ---
-# <a name="pager-control-constants"></a>Pager-Steuerelement Konstanten
+# <a name="pager-control-constants"></a>Pager-Steuerelementkonstanten
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Pager-Steuerelement Stile](pager-control-styles.md)
+-   [Pager-Steuerelementstile](pager-control-styles.md)
 
  
 

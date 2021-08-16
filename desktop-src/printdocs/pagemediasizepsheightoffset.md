@@ -1,21 +1,21 @@
 ---
-description: Hier finden Sie Informationen zum PageMediaSizePSHeightOffset-Parameter. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Abrufen von Informationen zum PageMediaSizePSHeightOffset-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: e86d6a5d-484d-4c80-8c86-7d12d287ee21
 title: PageMediaSizePSHeightOffset
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b5e2c0e3802a6c461fe2f9eec68b28677c254be9
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: a904b8e1d1ef9f917dae96d863563eff2b5bc8e6dd7b43a0e1d24783eb87077e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112395735"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118471043"
 ---
 # <a name="pagemediasizepsheightoffset"></a>PageMediaSizePSHeightOffset
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt den Offset parallel zur Ausrichtungsrichtung des Feeds an (Referenz [zur Spezifikation des PostScript-Druckerbeschreibungsdateiformats](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)).
+Gibt den Offset parallel zur Richtung der Feedausrichtung an (Referenz PostScript Spezifikation des [Formatformats der Druckerbeschreibung).](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -28,7 +28,7 @@ Gibt den Offset parallel zur Ausrichtungsrichtung des Feeds an (Referenz [zur Sp
 |----------------------------|-------------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                     |
 | Bereichspräfix <br/> | Seite<br/>                                             |
-| Hinweise <br/>          | Verknüpft mit PageMediaSize-Element, CustomPS-Option<br/> |
+| Hinweise <br/>          | Mit PageMediaSize-Element verknüpft, CustomPS-Option<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt den Offset parallel zur Ausrichtungsrichtung des Feeds an (Referenz [zur Sp
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements ist:
+Die XML-Struktur dieses Elements lautet:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageMediaSizePSHeightOffset">
@@ -67,7 +67,7 @@ Die XML-Struktur dieses Elements ist:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
@@ -89,7 +89,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 <dl> <dt>
 
-[Spezifikation des Dateiformats der PostScript-Druckerbeschreibung](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)
+[PostScript Spezifikation des Druckerbeschreibungsdateiformats](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)
 </dt> <dt>
 
 [Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)

@@ -33,7 +33,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                                     | BESCHREIBUNG                                                                                                                             |
+| Element                                     | Beschreibung                                                                                                                             |
 |---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | [**importHint**](importhint.md)<br/> | Gibt den Downloadspeicherort für eine \<wsdl:import> -Direktive an, die nicht explizit einen Speicherort angibt.<br/> <br/> |
 

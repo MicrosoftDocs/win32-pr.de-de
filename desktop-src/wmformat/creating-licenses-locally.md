@@ -23,7 +23,7 @@ ms.locfileid: "118433906"
 ---
 # <a name="creating-licenses-locally"></a>Lokales Erstellen von Lizenzen
 
-Unter bestimmten Umständen, z. B. während des [DRM-Imports,](drm-import.md)können Sie Eigene Lizenzen erstellen. Windows Medien-DRM-Lizenzen können auf verschiedene Weise geschrieben werden, aber um Ihre eigene Lizenz zu erstellen, müssen Sie das binäre Schema Extensible Media Rights (XMR) verwenden. Weitere Informationen finden Sie unter [Erstellen einer XMR-Lizenz.](building-an-xmr-license.md)
+Unter bestimmten Umständen, z. B. während [des DRM-Imports,](drm-import.md)können Sie Eigene Lizenzen erstellen. Windows Medien-DRM-Lizenzen können auf verschiedene Weise geschrieben werden, aber um Ihre eigene Lizenz zu erstellen, müssen Sie das binäre Schema Extensible Media Rights (XMR) verwenden. Weitere Informationen finden Sie unter [Erstellen einer XMR-Lizenz.](building-an-xmr-license.md)
 
 Wenn Sie eine Lizenz erstellen, können Sie sie dem lokalen Lizenzspeicher hinzufügen, indem Sie die [**IWMDRMLicenseManagement::StoreLicense-Methode**](iwmdrmlicensemanagement-storelicense.md) aufrufen.
 

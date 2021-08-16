@@ -33,7 +33,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                             | BESCHREIBUNG                                                                            |
+| Element                             | Beschreibung                                                                            |
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | [**Gehostet**](hosted.md)<br/> | Definiert Elemente für die vom Diensthost definierten Dienste. <br/> <br/> |
 

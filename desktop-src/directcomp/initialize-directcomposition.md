@@ -14,7 +14,7 @@ ms.locfileid: "118505151"
 # <a name="how-to-initialize-directcomposition"></a>Initialisieren von DirectComposition
 
 > [!NOTE]
-> Für Apps in Windows 10 wird empfohlen, Windows.UI.Composition-APIs anstelle von DirectComposition zu verwenden. Weitere Informationen finden Sie unter [Modernisieren Ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
+> Für Apps auf Windows 10 empfehlen wir die Verwendung von Windows.UI.Composition-APIs anstelle von DirectComposition. Weitere Informationen finden Sie unter [Modernisieren Ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
 
 In diesem Thema wird veranschaulicht, wie sie den minimalen Satz von Microsoft DirectComposition-Objekten erstellen und initialisieren, die zum Erstellen einer einfachen Komposition erforderlich sind.
 

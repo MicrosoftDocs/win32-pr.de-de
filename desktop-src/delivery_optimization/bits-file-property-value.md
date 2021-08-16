@@ -1,6 +1,6 @@
 ---
-title: BITS_FILE_PROPERTY_VALUE -Struktur (Deliveryoptimization.h)
-description: Die BITS_FILE_PROPERTY_VALUE Union stellt den -Eigenschaftswert der DO-Datei basierend auf einem Wert aus der BITS_FILE_PROPERTY_ID dar.
+title: BITS_FILE_PROPERTY_VALUE-Struktur (Deliveryoptimization.h)
+description: Die BITS_FILE_PROPERTY_VALUE Union stellt den Eigenschaftswert der DO-Datei basierend auf einem Wert aus der BITS_FILE_PROPERTY_ID-Enumeration bereit.
 ms.assetid: 56A634F9-FB30-49D5-BD03-DD59AEF702C1
 keywords:
 - BITS_FILE_PROPERTY_VALUE-Struktur
@@ -24,7 +24,7 @@ ms.locfileid: "118544625"
 ---
 # <a name="bits_file_property_value-structure"></a>BITS_FILE_PROPERTY_VALUE-Struktur
 
-Die **BITS_FILE_PROPERTY_VALUE** Union stellt den -Eigenschaftswert der DO-Datei basierend auf einem Wert aus der BITS_FILE_PROPERTY_ID [**dar.**](bits-file-property-id-.md)
+Die **BITS_FILE_PROPERTY_VALUE** Union stellt den Eigenschaftswert der DO-Datei basierend auf einem Wert aus der [**BITS_FILE_PROPERTY_ID-Enumeration**](bits-file-property-id-.md) bereit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ typedef struct {
 **String**
 </dt> <dd>
 
-Dieser Wert wird bei Verwendung des Eigenschafts-ID-Enum-Werts BITS_FILE_PROPERTY_ID_HTTP_RESPONSE_HEADERS. 
+Dieser Wert wird verwendet, wenn der Eigenschafts-ID-Enumerationswert **BITS_FILE_PROPERTY_ID_HTTP_RESPONSE_HEADERS** verwendet wird.
 
 </dd> </dl>
 
@@ -54,13 +54,13 @@ Dieser Wert wird bei Verwendung des Eigenschafts-ID-Enum-Werts BITS_FILE_PROPERT
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1709 \[\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                     |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                     |
 | Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

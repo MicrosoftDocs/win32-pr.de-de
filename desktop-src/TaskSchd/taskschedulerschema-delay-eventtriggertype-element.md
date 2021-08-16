@@ -3,7 +3,7 @@ title: Delay(eventTriggerType)-Element
 description: Gibt die Zeit zwischen dem Auftreten des Ereignisses und dem Start der Aufgabe an.
 ms.assetid: b38bebc7-9818-41f0-a277-cb0e63c28d86
 keywords:
-- Delay-Taskplaner
+- Verzögerungselement-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -22,7 +22,7 @@ ms.locfileid: "118357106"
 ---
 # <a name="delay-eventtriggertype-element"></a>Delay(eventTriggerType)-Element
 
-Gibt die Zeit zwischen dem Auftreten des Ereignisses und dem Start der Aufgabe an. Das Format für diese Zeichenfolge ist PnYnMnDTnHnMnS, Dabei steht nY für die Anzahl von Jahren, nM für die Anzahl von Monaten, nD für die Anzahl von Tagen, "T" für das Datums-/Uhrzeittrennzeichen, nH für die Anzahl von Stunden, nM für die Anzahl von Minuten und nS für die Anzahl von Sekunden (PT5M gibt beispielsweise 5 Minuten an, und P1M4DT2H5M gibt einen Monat, vier Tage, zwei Stunden und fünf Minuten an). Weitere Informationen zum Dauertyp finden Sie unter <https://go.microsoft.com/fwlink/p/?linkid=106886> .
+Gibt die Zeit zwischen dem Auftreten des Ereignisses und dem Start der Aufgabe an. Das Format für diese Zeichenfolge ist PnYnMnDTnHnMnS, Dabei steht nY für die Anzahl von Jahren, nM für die Anzahl der Monate, nD für die Anzahl von Tagen, "T" für das Datums-/Uhrzeittrennzeichen, nH für die Anzahl von Stunden, nM für die Anzahl von Minuten und nS für die Anzahl von Sekunden (pt5M gibt beispielsweise 5 Minuten an, und P1M4DT2H5M gibt einen Monat, vier Tage, zwei Stunden und fünf Minuten an). Weitere Informationen zum Dauertyp finden Sie unter <https://go.microsoft.com/fwlink/p/?linkid=106886> .
 
 ``` syntax
 <xs:element name="Delay"
@@ -46,7 +46,7 @@ Das **Delay-Element** wird durch den komplexen [**EventTriggerType-Typ**](tasksc
 
 Für die Skriptentwicklung wird die Ereignistriggerverzögerung durch die [**EventTrigger.Delay-Eigenschaft**](eventtrigger-delay.md) angegeben.
 
-Für die C++-Entwicklung wird die Ereignistriggerverzögerung durch die [**IEventTrigger::D elay-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-ieventtrigger-get_delay) angegeben.
+Bei der C++-Entwicklung wird die Ereignistriggerverzögerung durch die [**IEventTrigger::D elay-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-ieventtrigger-get_delay) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 

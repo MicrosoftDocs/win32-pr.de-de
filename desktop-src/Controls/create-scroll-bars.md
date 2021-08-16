@@ -1,36 +1,36 @@
 ---
-title: Erstellen von Scrollleisten
-description: Beim Erstellen eines überlappenden, Popup-oder untergeordneten Fensters können Sie Standard Scrollleisten hinzufügen, indem Sie die Funktion "kreatewindowex" verwenden und "WS \_ HScroll", "WS \_ VScroll" oder beide Stile angeben.
+title: Erstellen von Bildlaufleisten
+description: Beim Erstellen eines überlappenden, Popup- oder untergeordneten Fensters können Sie Standardscrollleisten hinzufügen, indem Sie die CreateWindowEx-Funktion verwenden und WS \_ HSCROLL, WS VSCROLL oder beide Stile \_ angeben.
 ms.assetid: 58353030-DCF5-4368-9658-BB282B8B5EF0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 06b27e3e6d9495492f46567633cc53b0f3f7c5bd
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: aec76c49d9f97e21626546a760d0e42a44b04c70db5790e0b80c08fcdee34412
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104474429"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117831752"
 ---
-# <a name="how-to-create-scroll-bars"></a>Erstellen von Scrollleisten
+# <a name="how-to-create-scroll-bars"></a>Erstellen von Bildlaufleisten
 
-Beim Erstellen eines überlappenden, Popup-oder untergeordneten Fensters können Sie Standard Scrollleisten hinzufügen, indem Sie die Funktion " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " verwenden und "WS \_ HScroll", "WS \_ VScroll" oder beide Stile angeben.
+Beim Erstellen eines überlappenden, Popup- oder untergeordneten Fensters können Sie Standardscrollleisten hinzufügen, indem Sie die [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) verwenden und WS \_ HSCROLL, WS VSCROLL oder beide Stile \_ angeben.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="create-a-scroll-bar"></a>Bild Lauf Leiste erstellen
+### <a name="create-a-scroll-bar"></a>Erstellen einer Scrollleiste
 
-Im folgenden Beispiel wird ein Fenster mit standardmäßigen horizontalen und vertikalen Schiebe leisten erstellt.
+Im folgenden Beispiel wird ein Fenster mit horizontalen und vertikalen Standardscrollleisten erstellt.
 
 
 ```C++
@@ -53,11 +53,11 @@ Im folgenden Beispiel wird ein Fenster mit standardmäßigen horizontalen und ve
 
 
 
-Um Bild Lauf leisten Meldungen für diese Schiebe leisten zu verarbeiten, müssen Sie den entsprechenden Code in die Hauptfenster Prozedur einschließen.
+Um Bildlaufleistenmeldungen für diese Bildlaufleisten zu verarbeiten, müssen Sie den entsprechenden Code in die Hauptfensterprozedur eingeben.
 
-Sie können [**die Funktion "**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) -Funktion" verwenden, um eine Bild Lauf Leiste zu erstellen, indem Sie die ScrollBar-Fenster Klasse angeben. Dadurch wird eine horizontale oder vertikale Schiebe Leiste erstellt, abhängig davon, ob [**SSB \_ Horz**](scroll-bar-control-styles.md) oder [**SSB \_ Vert**](scroll-bar-control-styles.md) als Fenster Stil angegeben wird. Die Bild Lauf leisten Größe und ihre Position relativ zum übergeordneten Fenster können ebenfalls angegeben werden.
+Sie können die [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) verwenden, um eine Scrollleiste zu erstellen, indem Sie die SCROLLBAR-Fensterklasse angeben. Dadurch wird eine horizontale oder vertikale Scrollleiste erstellt, je nachdem, ob [**SBS \_ HORZ**](scroll-bar-control-styles.md) oder [**SBS \_ VERT**](scroll-bar-control-styles.md) als Fensterformat angegeben ist. Die Bildlaufleistengröße und ihre Position relativ zum übergeordneten Fenster können ebenfalls angegeben werden.
 
-Im folgenden Beispiel wird eine horizontale Schiebe Leiste erstellt, die am unteren Rand des Client Bereichs des übergeordneten Fensters positioniert ist.
+Im folgenden Beispiel wird eine horizontale Scrollleiste erstellt, die am unteren Rand des Clientbereichs des übergeordneten Fensters positioniert ist.
 
 
 ```C++
@@ -102,12 +102,12 @@ HWND CreateAHorizontalScrollBar(HWND hwndParent, int sbHeight)
 
 <dl> <dt>
 
-[Verwenden von Scrollleisten](using-scroll-bars.md)
+[Verwenden von Bildlaufleisten](using-scroll-bars.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Windows demo (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

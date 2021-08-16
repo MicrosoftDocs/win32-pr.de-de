@@ -1,7 +1,7 @@
 ---
 description: Wird an ein Fenster gesendet, in dem die Größe des Benutzers geändert wird. Durch die Verarbeitung dieser Nachricht kann eine Anwendung die Größe und Position des Ziehrechtecks überwachen und bei Bedarf die Größe oder Position ändern.
 ms.assetid: 8cf56194-8a10-48e1-b0eb-aa3d66896599
-title: WM_SIZING Meldung (Winuser.h)
+title: WM_SIZING-Nachricht (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.openlocfilehash: 09645c9aaf778d5866050b45496298a46c4488e39b12f449f3ee0e8607dfc367

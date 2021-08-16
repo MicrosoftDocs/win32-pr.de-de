@@ -68,7 +68,7 @@ Die **CollectUserInfo-Methode** ruft den [FirstRun-Dialog auf.](firstrun-dialog.
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

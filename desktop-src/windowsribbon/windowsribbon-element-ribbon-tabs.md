@@ -1,6 +1,6 @@
 ---
 title: Ribbon.Tabs-Eigenschaft
-description: Stellt einen Container für alle Kernregisterkarte in einem Menüband dar.
+description: Stellt einen Container für alle Kernregisterkarten in einem Menüband dar.
 ms.assetid: b43d0544-c110-4785-85d7-935842b8f03e
 keywords:
 - Ribbon.Tabs-Eigenschaft Windows Menüband
@@ -21,7 +21,7 @@ ms.locfileid: "118202211"
 ---
 # <a name="ribbontabs-property"></a>Ribbon.Tabs-Eigenschaft
 
-Stellt einen Container für alle Kernregisterkarte in einem Menüband dar.
+Stellt einen Container für alle Kernregisterkarten in einem Menüband dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -39,9 +39,9 @@ Es gibt keine Attribute.
 
 
 
-| Element                                             | BESCHREIBUNG                                     |
+| Element                                             | Beschreibung                                     |
 |-----------------------------------------------------|-------------------------------------------------|
-| [**Registerkarte**](windowsribbon-element-tab.md)<br/> | Muss mindestens einmal auftreten<br/> <br/> |
+| [**Registerkarte**](windowsribbon-element-tab.md)<br/> | Muss mindestens einmal auftreten.<br/> <br/> |
 
 
 
@@ -59,11 +59,11 @@ Es gibt keine Attribute.
 
 Erforderlich.
 
-Kann ein oder mehrere Male für jedes Menüband [**auftreten.**](windowsribbon-element-ribbon.md)
+Kann ein oder mehrere Male für jedes [**Menüband**](windowsribbon-element-ribbon.md)auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für ein **Ribbon.Tabs-Element** mit einer Home **Tab-Deklaration** [](windowsribbon-element-tab.md) veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für ein **Ribbon.Tabs-Element** mit einer **Deklaration** der [**Startregisterkarte**](windowsribbon-element-tab.md) veranschaulicht.
 
 
 ```C++
@@ -118,7 +118,7 @@ Im folgenden Beispiel wird das grundlegende Markup für ein **Ribbon.Tabs-Elemen
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 

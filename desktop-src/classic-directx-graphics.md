@@ -1,5 +1,5 @@
 ---
-description: In diesem Abschnitt werden Microsoft DirectX-Grafiktechnologien beschrieben, die minimal unterstützt werden. Diese Informationen werden bereitgestellt, um vorhandene Anwendungen zu unterstützen. Wir raten davon ab, diese Technologien in neuen Anwendungen zu verwenden.
+description: In diesem Abschnitt werden Microsoft DirectX-Grafiktechnologien beschrieben, die minimal unterstützt werden. Diese Informationen werden zur Unterstützung vorhandener Anwendungen bereitgestellt. Es wird nicht empfohlen, diese Technologien in neuen Anwendungen zu verwenden.
 ms.assetid: CD246474-3360-4588-86F7-21EB36B8B121
 title: Klassische DirectX-Grafiken
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118311381"
 ---
 # <a name="classic-directx-graphics"></a>Klassische DirectX-Grafiken
 
-In diesem Abschnitt werden Microsoft DirectX-Grafiktechnologien beschrieben, die minimal unterstützt werden. Diese Informationen werden bereitgestellt, um vorhandene Anwendungen zu unterstützen. Wir raten davon ab, diese Technologien in neuen Anwendungen zu verwenden.
+In diesem Abschnitt werden Microsoft DirectX-Grafiktechnologien beschrieben, die minimal unterstützt werden. Diese Informationen werden zur Unterstützung vorhandener Anwendungen bereitgestellt. Es wird nicht empfohlen, diese Technologien in neuen Anwendungen zu verwenden.
 
 Informationen zu den ersten Schritte mit DirectX-Grafiken finden Sie unter [Erste Schritte mit DirectX-Grafiken.](./getting-started-with-directx-graphics.md)
 
@@ -21,11 +21,11 @@ Informationen zu den ersten Schritte mit DirectX-Grafiken finden Sie unter [Erst
 
 
 
-| Thema                                                                 | BESCHREIBUNG                                                                                                                                |
+| Thema                                                                 | Beschreibung                                                                                                                                |
 |-----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| [Direct3D 10-Grafiken](/windows/desktop/direct3d10/d3d10-graphics)<br/>          | Enthält Informationen zur Programmierung mit Microsoft Direct3D 10.<br/>                                                              |
-| [Direct3D 9-Grafiken](/windows/desktop/direct3d9/dx9-graphics)<br/>              | Enthält Informationen zur Programmierung mit Microsoft Direct3D 9.<br/>                                                               |
-| [Directdraw](/windows/desktop/directdraw/directdraw)<br/>                        | Stellt Informationen zum Programmieren mit DirectDraw zur Verfügung.<br/>                                                                         |
+| [Direct3D 10-Grafiken](/windows/desktop/direct3d10/d3d10-graphics)<br/>          | Enthält Informationen zum Programmieren mit Microsoft Direct3D 10.<br/>                                                              |
+| [Direct3D 9-Grafiken](/windows/desktop/direct3d9/dx9-graphics)<br/>              | Enthält Informationen zum Programmieren mit Microsoft Direct3D 9.<br/>                                                               |
+| [Directdraw](/windows/desktop/directdraw/directdraw)<br/>                        | Stellt Informationen zum Programmieren mit DirectDraw bereit.<br/>                                                                         |
 | [Technische Artikel](/windows/desktop/DxTechArts/dx9-technical-articles)<br/>    | Enthält eine Reihe von technischen Artikeln zum Entwickeln von Spielen für Windows.<br/>                                                     |
 | [Wo finde ich das DirectX SDK?](./directx-sdk--august-2009-.md)<br/> | Enthält Informationen dazu, wo Sie DirectX-Technologien, -Tools und -Dokumentation finden, die das DirectX SDK zuvor bereitgestellt hat.<br/> |
 | [DirectX 9.0 für verwalteten Code](/previous-versions/windows/desktop/bb318658(v=vs.85))<br/>          | Enthält Informationen zum Programmieren mit DirectX 9.0 für verwalteten Code.<br/>                                                       |

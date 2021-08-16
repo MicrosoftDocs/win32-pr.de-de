@@ -1,9 +1,9 @@
 ---
-title: BCM_SETDROPDOWNSTATE Meldung (kommstrg. h)
-description: Legt den Dropdown-Zustand für eine Schaltfläche mit dem Dropdown Menü Style tbstyle fest \_ . Senden Sie diese Nachricht explizit oder mithilfe des \_ setdropdownstate-Makros der Schaltfläche.
+title: BCM_SETDROPDOWNSTATE (Commctrl.h)
+description: Legt den Dropdownzustand für eine Schaltfläche mit dem Format TBSTYLE \_ DROPDOWN fest. Senden Sie diese Nachricht explizit oder mithilfe des \_ Button SetDropDownState-Makros.
 ms.assetid: 725deff4-0bcb-497d-a6cf-e9c98b05f16e
 keywords:
-- Windows-Steuerelemente für BCM_SETDROPDOWNSTATE Meldung
+- BCM_SETDROPDOWNSTATE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,25 +14,25 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fc44ec58d40e047708591121f81c84f327ca47c1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 989b4a04502a730c06a906be28a6915a4e604ff22c4b4e5ae9a4b85c8b464f81
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103634"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117833631"
 ---
-# <a name="bcm_setdropdownstate-message"></a>BCM \_ setdropdownstate-Meldung
+# <a name="bcm_setdropdownstate-message"></a>BCM \_ SETDROPDOWNSTATE-Meldung
 
-Legt den Dropdown-Zustand für eine Schaltfläche mit dem [**\_ Dropdown Menü Style tbstyle**](toolbar-control-and-button-styles.md)fest. Senden Sie diese Nachricht explizit oder mithilfe des [**\_ setdropdownstate**](/windows/desktop/api/Commctrl/nf-commctrl-button_setdropdownstate) -Makros der Schaltfläche.
+Legt den Dropdownzustand für eine Schaltfläche mit dem Format [**TBSTYLE \_ DROPDOWN fest.**](toolbar-control-and-button-styles.md) Senden Sie diese Nachricht explizit oder mithilfe des [**\_ Button SetDropDownState-Makros.**](/windows/desktop/api/Commctrl/nf-commctrl-button_setdropdownstate)
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
-Ein **boolescher** Wert  , der für den Status von BST \_ dropdownpushübertragung true ist, andernfalls **false** .
+Eine **BOOL,** die **true für** den Status von BST \_ DROPDOWNPUSHED ist, **andernfalls FALSE.**
 
 </dd> <dt>
 
@@ -45,7 +45,7 @@ Muss Null sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,23 +53,23 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [Schaltflächenstile](button-styles.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Schaltflächentypen](button-types-and-styles.md)

@@ -18,11 +18,11 @@ Die folgenden Datentypen werden in d3d12.h deklariert.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | Beschreibung |
+| Thema | BESCHREIBUNG |
 |-|-|
-| [**D3D12_GPU_VIRTUAL_ADDRESS**](d3d12_gpu_virtual_address.md) | Stellt eine virtuelle Adresse im GPU-Arbeitsspeicher dar. |
+| [**D3D12_GPU_VIRTUAL_ADDRESS**](d3d12_gpu_virtual_address.md) | Stellt eine virtuelle Adresse im GPU-Speicher dar. |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 * [Core-Referenz](direct3d-12-core-reference.md)
-* [Referenz zu Direct3D 12](direct3d-12-reference.md)
+* [Direct3D 12-Referenz](direct3d-12-reference.md)

@@ -53,7 +53,7 @@ Ein Handle für das [**InkDivider-Objekt.**](inkdivider-class.md)
 *pfn* 
 </dt> <dd>
 
-Ein Zeiger auf eine Funktion, die aufgerufen wird, wenn die Erkennung auf dem übergebenen [**InkDivider**](inkdivider-class.md) auftritt.
+Ein Zeiger auf eine Funktion, die aufgerufen wird, wenn die Erkennung für den [**übergebenen InkDivider**](inkdivider-class.md) erfolgt.
 
 </dd> </dl>
 
@@ -74,7 +74,7 @@ Diese Funktion kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Im Folgenden ist die Syntax für die Rückruffunktion angegeben.
+Im Folgenden finden Sie die Syntax für die Rückruffunktion.
 
 ``` syntax
 public delegate void GetLineRecoDef(

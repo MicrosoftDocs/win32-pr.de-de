@@ -1,5 +1,5 @@
 ---
-description: Die Managed Object Format -Sprache (MOF) unterstützt viele Datentypen, die verwenden, um Eigenschaften, Qualifizierern und Methodenparametern Werte zu zuweisen.
+description: Die MOF-Sprache (Managed Object Format) unterstützt viele Datentypen, die verwenden, um Eigenschaften, Qualifizierern und Methodenparametern Werte zuzuweisen.
 ms.assetid: c09209ea-5283-4779-9481-71a24b03002f
 ms.tgt_platform: multiple
 title: MOF-Datentypen
@@ -14,7 +14,7 @@ ms.locfileid: "118555200"
 ---
 # <a name="mof-data-types"></a>MOF-Datentypen
 
-Die Managed Object Format -Sprache (MOF) unterstützt viele Datentypen, die verwenden, um Eigenschaften, Qualifizierern und Methodenparametern Werte zu zuweisen.
+Die MOF-Sprache (Managed Object Format) unterstützt viele Datentypen, die verwenden, um Eigenschaften, Qualifizierern und Methodenparametern Werte zuzuweisen.
 
 Die MOF-Sprache unterstützt die folgenden Datentypen und Kategorien von Datentypen:
 

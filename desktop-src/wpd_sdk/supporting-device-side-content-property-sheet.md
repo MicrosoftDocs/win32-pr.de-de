@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie die Windows Shell-API oder die WPD-API verwen
 ms.assetid: ea11f8e6-fb53-46e4-b210-2dae33cdc056
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3aeade3745c37296b334c54af9edcc768fb8c93e
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 451bf63c1270b121cf909fa5ee07aff62cc3b83aa0e0d031cae61005f725c197
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112404193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117842567"
 ---
 # <a name="supporting-device-side-content"></a>Unterstützen von geräteseitigem Inhalt
 
@@ -164,7 +164,7 @@ Exit:
 
 
 
-Zusätzlich zur Initialisierung und Verarbeitung der Elementbezeichnerliste muss Ihre Anwendung die IShellPropSheetExt::ReplacePage-Methode implementieren und die entsprechenden Ersetzungshandler einfügen. Die Windows-Shell ruft diese Methode jedes Mal auf, wenn ein ersetzbares Eigenschaftenblatt angezeigt wird, damit Ihre Anwendung einen entsprechenden Ersatzhandler aufrufen kann. Das niedrige Wort des ersten Parameters für die ReplacePage-Methode ist ein Bezeichner für das gegebene Eigenschaftenblatt, das Windows anzeigen soll. Die werte, die im unteren Wort des ersten Parameters übergeben werden, entsprechen den Werten, die in der Datei WpdShellExtension.h definiert sind. Diese Werte und ihre Beschreibungen sind in der folgenden Tabelle aufgeführt.
+Zusätzlich zur Initialisierung und Verarbeitung der Elementbezeichnerliste muss Ihre Anwendung die IShellPropSheetExt::ReplacePage-Methode implementieren und die entsprechenden Ersetzungshandler einfügen. Die Windows Shell ruft diese Methode jedes Mal auf, wenn ein ersetzbares Eigenschaftenblatt angezeigt wird, was Ihrer Anwendung die Möglichkeit gibt, einen entsprechenden Ersatzhandler aufrufen. Das niedrige Wort des ersten Parameters für die ReplacePage-Methode ist ein Bezeichner für das gegebene Eigenschaftenblatt, Windows angezeigt werden soll. Die im unteren Wort des ersten Parameters übergebenen Werte entsprechen den Werten, die in der Datei WpdShellExtension.h definiert sind. Diese Werte und ihre Beschreibungen sind in der folgenden Tabelle aufgeführt.
 
 
 

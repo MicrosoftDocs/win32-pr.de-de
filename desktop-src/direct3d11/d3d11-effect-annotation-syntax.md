@@ -28,9 +28,9 @@ Eine Anmerkung ist eine benutzerdefinierte Information, die mit der in diesem Ab
 
 
 
-| Element                                                                                                   | Beschreibung                                                                                                                                                                      |
+| Element                                                                                                   | BESCHREIBUNG                                                                                                                                                                      |
 |--------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="DataType"></span><span id="datatype"></span><span id="DATATYPE"></span>*Datatype*<br/> | \[in \] Der -Datentyp, der jeden [skalaren HLSL-Typ](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar) sowie den Zeichenfolgentyp [enthält.](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar)<br/> |
+| <span id="DataType"></span><span id="datatype"></span><span id="DATATYPE"></span>*Datatype*<br/> | \[in \] Der Datentyp, der alle [skalaren HLSL-Typen](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar) sowie den [Zeichenfolgentyp](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar)enthält.<br/> |
 | <span id="Name"></span><span id="name"></span><span id="NAME"></span>*Namen*<br/>                 | \[in \] Eine ASCII-Zeichenfolge, die den Anmerkungsnamen darstellt.<br/>                                                                                                          |
 | <span id="Value"></span><span id="value"></span><span id="VALUE"></span>*Wert*<br/>             | \[in \] Der Anfangswert der Anmerkung.<br/>                                                                                                                           |
 | <span id="..."></span>*...*<br/>                                                                 | \[in \] Zusätzliche Anmerkungen (Name-Wert-Paare).<br/>                                                                                                                     |
@@ -41,7 +41,7 @@ Eine Anmerkung ist eine benutzerdefinierte Information, die mit der in diesem Ab
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können innerhalb der eckigen Klammern mehrere Anmerkungen hinzufügen, die jeweils durch ein Semikolon getrennt sind. Die Effektframework-APIs erkennen Anmerkungen für globale Variablen. alle anderen Anmerkungen werden ignoriert.
+Sie können innerhalb der spitzen Klammern mehrere Anmerkungen hinzufügen, die jeweils durch ein Semikolon getrennt sind. Die Effektframework-APIs erkennen Anmerkungen zu globalen Variablen. alle anderen Anmerkungen werden ignoriert.
 
 ## <a name="example"></a>Beispiel
 
@@ -76,7 +76,7 @@ return pos;
 
 <dl> <dt>
 
-[Effect-Format](d3d11-effect-format.md)
+[Effektformat](d3d11-effect-format.md)
 </dt> <dt>
 
 [Syntax der Effect-Variablen](d3d11-effect-variable-syntax.md)

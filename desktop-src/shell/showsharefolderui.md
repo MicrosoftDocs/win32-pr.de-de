@@ -1,7 +1,7 @@
 ---
-description: Zeigt die Registerkarte Ordner Freigabe auf der Eigenschaften Seite für den angegebenen Ordner an.
+description: Zeigt die Registerkarte Ordnerfreigabe auf dem Eigenschaftenblatt für den angegebenen Ordner an.
 ms.assetid: e622e4bb-eaf7-494f-b2a2-78ba1311a496
-title: Showsharefolderui-Funktion
+title: ShowShareFolderUI-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 api_location:
 - Ntshrui.dll
-ms.openlocfilehash: e6270f72d1574a21b98ac9ee3151af1f34f08a72
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 9683d7faee4bd44bd8f21e14250503f351e1a134119f978f872d7a0fe3ad6c4b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968259"
 ---
-# <a name="showsharefolderui-function"></a>Showsharefolderui-Funktion
+# <a name="showsharefolderui-function"></a>ShowShareFolderUI-Funktion
 
-Zeigt die Registerkarte **Ordner Freigabe** auf der Eigenschaften Seite für den angegebenen Ordner an.
+Zeigt die Registerkarte **Ordnerfreigabe** auf dem Eigenschaftenblatt für den angegebenen Ordner an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT ShowShareFolderUI(
 
 <dl> <dt>
 
-*hwndParent* \[ in\]
+*hwndParent* \[ In\]
 </dt> <dd>
 
 Typ: **HWND**
 
-Ein Handle für das übergeordnete Fenster für das Eigenschaften Blatt.
+Ein Handle für das übergeordnete Fenster für das Eigenschaftenblatt.
 
 </dd> <dt>
 
-*pszpath* \[ in\]
+*pszPath* \[ In\]
 </dt> <dd>
 
 Typ: **LPCWSTR**
 
-Ein Zeiger auf eine Zeichenfolge, die den Pfad zum Ordner angibt, in dem die Registerkarte für die **Ordner Freigabe** angezeigt wird.
+Ein Zeiger auf eine Zeichenfolge, die den Pfad zu dem Ordner angibt, in dem die Registerkarte **Ordnerfreigabe** angezeigt wird.
 
 </dd> </dl>
 
@@ -63,22 +63,22 @@ Ein Zeiger auf eine Zeichenfolge, die den Pfad zum Ordner angibt, in dem die Reg
 
 Typ: **HRESULT**
 
-Diese Funktion gibt immer \_ OK zurück.
+Diese Funktion gibt immer S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion verfügt über keine zugehörige lib-Datei. Sie müssen " [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) " und " [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) " verwenden, um Sie zu verwenden.
+Dieser Funktion ist keine LIB-Datei zugeordnet. Sie müssen [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um es zu verwenden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Ntshrui.dll</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Showsharefolderuiw** (Unicode)<br/>                                            |
+| Unicode- und ANSI-Name<br/>   | **ShowShareFolderUIW** (Unicode)<br/>                                            |
 
 
 
@@ -86,7 +86,7 @@ Diese Funktion verfügt über keine zugehörige lib-Datei. Sie müssen " [**Load
 
 <dl> <dt>
 
-[**Cansharefolderw**](cansharefolderw.md)
+[**CanShareFolderW**](cansharefolderw.md)
 </dt> </dl>
 
  

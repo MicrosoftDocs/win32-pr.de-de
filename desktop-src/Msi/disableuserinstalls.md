@@ -15,7 +15,7 @@ ms.locfileid: "118378513"
 
 Dies ist eine computerspezifische [Systemrichtlinie,](system-policy.md) die verwendet werden kann, wenn der Administrator nur computerspezifische Anwendungen installieren möchte.
 
-Wenn diese Richtlinie nicht festgelegt ist, durchsucht das Installationsprogramm die Registrierung in der folgenden Reihenfolge nach Anwendungen: verwaltete Anwendungen, die als benutzerspezifische Anwendungen registriert sind, nicht verwaltete Anwendungen, die pro Benutzer registriert sind, und schließlich Anwendungen, die pro Computer registriert sind.
+Wenn diese Richtlinie nicht festgelegt ist, durchsucht das Installationsprogramm die Registrierung nach Anwendungen in der folgenden Reihenfolge: verwaltete Anwendungen, die als benutzerspezifische Anwendungen registriert sind, nicht verwaltete Anwendungen, die als pro Benutzer registriert sind, und schließlich Anwendungen, die pro Computer registriert sind.
 
 Wenn diese Richtlinie auf 1 festgelegt ist, ignoriert das Installationsprogramm alle Als pro Benutzer registrierten Anwendungen und sucht nur nach Anwendungen, die als computerspezifische Anwendungen registriert sind. Aufrufe der Windows Installer-Anwendungsprogrammierschnittstelle oder des Systems ignorieren benutzerspezifische Anwendungen. Wenn versucht wird, eine Installation [](installation-context.md) im Benutzerinstallationskontext durchzuführen, zeigt das Installationsprogramm eine Fehlermeldung an und beendet die Installation. In diesem Fall verhindert der Windows Installer auch benutzerspezifische Installationen von einem Terminalserver.
 

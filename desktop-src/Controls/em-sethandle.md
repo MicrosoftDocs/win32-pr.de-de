@@ -1,9 +1,9 @@
 ---
-title: EM_SETHANDLE Meldung (Winuser. h)
-description: Legt das Handle des Arbeitsspeichers fest, der von einem mehrzeiligen Bearbeitungs Steuerelement verwendet wird.
+title: EM_SETHANDLE Meldung (Winuser.h)
+description: Legt das Handle des Arbeitsspeichers fest, der von einem mehrzeiligen Bearbeitungssteuerelement verwendet wird.
 ms.assetid: 0eae9365-62af-4040-8a51-273997a00b81
 keywords:
-- Windows-Steuerelemente für EM_SETHANDLE Meldung
+- EM_SETHANDLE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac8f918d056db1000c6018f55d89095a73a15109
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b3ece3eb9c385b5f4d468a7dd2f08ff3335a4314b4c90569cdba453c4815728f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105573"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118412591"
 ---
-# <a name="em_sethandle-message"></a>EM- \_ Nachricht
+# <a name="em_sethandle-message"></a>EM \_ SETHANDLE-Meldung
 
-Legt das Handle des Arbeitsspeichers fest, der von einem mehrzeiligen Bearbeitungs Steuerelement verwendet wird.
+Legt das Handle des Arbeitsspeichers fest, der von einem mehrzeiligen Bearbeitungssteuerelement verwendet wird.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt das Handle des Arbeitsspeichers fest, der von einem mehrzeiligen Bearbeitun
 *wParam* 
 </dt> <dd>
 
-Ein Handle für den Arbeitsspeicher Puffer, den das Bearbeitungs Steuerelement verwendet, um den aktuell angezeigten Text zu speichern, anstatt seinen eigenen Arbeitsspeicher zuzuordnen. Falls erforderlich, ordnet das-Steuerelement diesen Arbeitsspeicher neu zu.
+Ein Handle für den Speicherpuffer, den das Bearbeitungssteuerelement verwendet, um den aktuell angezeigten Text zu speichern, anstatt seinen eigenen Arbeitsspeicher zuzuweisen. Bei Bedarf weist das Steuerelement diesen Speicher neu zu.
 
 </dd> <dt>
 
@@ -47,15 +47,15 @@ Dieser Parameter wird nicht verwendet.
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bevor eine Anwendung ein neues Speicher handle festlegt, sollte Sie eine [**EM \_ GetHandle**](em-gethandle.md) -Nachricht senden, um das Handle des aktuellen Speicherpuffers abzurufen, und diesen Arbeitsspeicher freigeben.
+Bevor eine Anwendung ein neues Speicherhandle festlegt, sollte sie eine [**\_ EM-GETHANDLE-Nachricht**](em-gethandle.md) senden, um das Handle des aktuellen Speicherpuffers abzurufen, und diesen Arbeitsspeicher freigeben.
 
-Ein Bearbeitungs Steuerelement ordnet den angegebenen Puffer automatisch neu zu, wenn ein zusätzlicher Platz für Text benötigt wird, oder er entfernt ausreichend Text, sodass zusätzlicher Speicherplatz nicht mehr benötigt wird.
+Ein Bearbeitungssteuerelement weist den angegebenen Puffer automatisch neu zu, wenn es zusätzlichen Platz für Text benötigt, oder entfernt genügend Text, sodass kein zusätzlicher Speicherplatz mehr benötigt wird.
 
-Beim Senden einer **EM- \_ SetHandle** -Nachricht wird der Rückgängig-Puffer gelöscht ([**EM \_ CanUndo**](em-canundo.md) gibt NULL zurück), und das Flag für die interne Änderung ([**EM \_ getmodify**](em-getmodify.md) gibt NULL zurück). Das Bearbeitungs Steuerelement-Fenster wird neu gezeichnet.
+Beim Senden einer **EM \_ SETHANDLE-Nachricht** werden der Rückgängigpuffer [**(EM \_ CANUNDO**](em-canundo.md) gibt 0 zurück) und das interne Änderungsflag [**(EM \_ GETMODIFY**](em-getmodify.md) gibt 0 zurück). Das Bearbeitungssteuerelementfenster wird neu gezeichnet.
 
-Umfassende **Bearbeitung:** Die **EM \_** -Abmeldung wird nicht unterstützt. Rich Edit-Steuerelemente speichern Text nicht als einfaches Zeichen Array.
+**Rich Edit:** Die **EM \_ SETHANDLE-Nachricht** wird nicht unterstützt. Rich-Edit-Steuerelemente speichern Text nicht als einfaches Array von Zeichen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,26 +63,26 @@ Umfassende **Bearbeitung:** Die **EM \_** -Abmeldung wird nicht unterstützt. Ri
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ CanUndo**](em-canundo.md)
+[**EM \_ CANUNDO**](em-canundo.md)
 </dt> <dt>
 
-[**EM \_ GetHandle**](em-gethandle.md)
+[**EM \_ GETHANDLE**](em-gethandle.md)
 </dt> <dt>
 
-[**EM \_ getmodify**](em-getmodify.md)
+[**EM \_ GETMODIFY**](em-getmodify.md)
 </dt> </dl>
 
  

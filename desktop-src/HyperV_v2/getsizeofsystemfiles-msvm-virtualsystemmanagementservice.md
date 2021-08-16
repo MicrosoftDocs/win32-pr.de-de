@@ -43,14 +43,14 @@ uint32 GetSizeOfSystemFiles(
 *Vssd* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf die [**CIM \_ VirtualSystemSettingData-Instanz,**](/previous-versions//cc136954(v=vs.85)) deren Größe der Systemdateien abgerufen werden soll. Diese Instanz kann entweder die aktuelle Instanziierung des virtuellen Computers oder eine Instanz einer Momentaufnahme eines virtuellen Computers darstellen.
+Ein Verweis auf die [**CIM \_ VirtualSystemSettingData-Instanz,**](/previous-versions//cc136954(v=vs.85)) deren Systemdateigröße abgerufen werden soll. Diese Instanz kann entweder die aktuelle Instanziierung des virtuellen Computers oder eine Instanz einer Momentaufnahme eines virtuellen Computers darstellen.
 
 </dd> <dt>
 
 *Größe* \[ out\]
 </dt> <dd>
 
-Die Gesamtgröße der Systemdateien in Bytes.
+Die Gesamtgröße von Systemdateien in Bytes.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-**Überprüfte Methodenparameter – Auftragsstart** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
 **Fehler** (32768)
@@ -81,7 +81,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)

@@ -45,7 +45,7 @@ Folder.MoveHere(
 
 Typ: **Variant**
 
-Das element oder die Elemente, die bzw. die sie verschieben. Dies kann eine Zeichenfolge sein, die einen Dateinamen, ein [**FolderItem-Objekt**](folderitem.md) oder ein [**FolderItems-Objekt**](folderitems.md) darstellt.
+Das Element oder die elemente, die verschoben werden sollen. Dies kann eine Zeichenfolge sein, die einen Dateinamen, ein [**FolderItem-Objekt**](folderitem.md) oder ein [**FolderItems-Objekt**](folderitems.md) darstellt.
 
 </dd> <dt>
 
@@ -54,7 +54,7 @@ Das element oder die Elemente, die bzw. die sie verschieben. Dies kann eine Zeic
 
 Typ: **Variant**
 
-Optionen für den Move-Vorgang. Dieser Wert kann 0 (null) oder eine Kombination der folgenden Werte sein. Diese Werte basieren auf Flags, die für die Verwendung mit dem **fFlags-Member** der C++-SHFILEOPSTRUCT-Struktur [**definiert**](/windows/desktop/api/Shellapi/ns-shellapi-shfileopstructa) sind. Diese Flags sind nicht als solche für Visual Basic, VBScript oder JScript definiert, daher müssen Sie sie selbst definieren oder ihre numerischen Entsprechungen verwenden.
+Optionen für den Verschiebungsvorgang. Dieser Wert kann 0 (null) oder eine Kombination der folgenden Werte sein. Diese Werte basieren auf Flags, die für die Verwendung mit dem **fFlags-Member** der [**C++-SHFILEOPSTRUCT-Struktur**](/windows/desktop/api/Shellapi/ns-shellapi-shfileopstructa) definiert sind. Diese Flags sind nicht als solche für Visual Basic, VBScript oder JScript definiert. Daher müssen Sie sie selbst definieren oder ihre numerischen Entsprechungen verwenden.
 
 <dt>
 
@@ -65,7 +65,7 @@ Optionen für den Move-Vorgang. Dieser Wert kann 0 (null) oder eine Kombination 
 
 </dt> <dd>
 
-Zeigt kein Statusdialogfeld an.
+Zeigen Sie kein Statusdialogfeld an.
 
 </dd> <dt>
 
@@ -76,7 +76,7 @@ Zeigt kein Statusdialogfeld an.
 
 </dt> <dd>
 
-Geben Sie der Datei, die in einem Verschieben, Kopieren oder Umbenennen verwendet wird, einen neuen Namen, wenn bereits eine Datei mit dem Zielnamen vorhanden ist.
+Geben Sie der Datei, die mit einem neuen Namen betrieben wird, einen Verschiebungs-, Kopier- oder Umbenennungsvorgang, wenn bereits eine Datei mit dem Zielnamen vorhanden ist.
 
 </dd> <dt>
 
@@ -87,7 +87,7 @@ Geben Sie der Datei, die in einem Verschieben, Kopieren oder Umbenennen verwende
 
 </dt> <dd>
 
-Antworten Sie mit "Ja zu allen" für jedes dialogfeld, das angezeigt wird.
+Antworten Sie für alle angezeigten Dialogfelder mit "Ja zu allen".
 
 </dd> <dt>
 
@@ -98,7 +98,7 @@ Antworten Sie mit "Ja zu allen" für jedes dialogfeld, das angezeigt wird.
 
 </dt> <dd>
 
-Behalten Sie nach Möglichkeit rückgängig gemachte Informationen bei.
+Behalten Sie nach Möglichkeit rückgängige Informationen bei.
 
 </dd> <dt>
 
@@ -109,7 +109,7 @@ Behalten Sie nach Möglichkeit rückgängig gemachte Informationen bei.
 
 </dt> <dd>
 
-Führen Sie den Vorgang für Dateien nur aus, wenn ein Platzhalterdateiname ( \* . \* ) angegeben ist.
+Führen Sie den Vorgang nur für Dateien aus, wenn ein Platzhalterdateiname ( \* . \* ) angegeben ist.
 
 </dd> <dt>
 
@@ -120,7 +120,7 @@ Führen Sie den Vorgang für Dateien nur aus, wenn ein Platzhalterdateiname ( \*
 
 </dt> <dd>
 
-Zeigt ein Statusdialogfeld an, zeigt jedoch nicht die Dateinamen an.
+Zeigen Sie ein Statusdialogfeld an, aber nicht die Dateinamen.
 
 </dd> <dt>
 
@@ -153,7 +153,7 @@ Zeigen Sie keine Benutzeroberfläche an, wenn ein Fehler auftritt.
 
 </dt> <dd>
 
-[Version 4.71.](versions.md) Kopieren Sie nicht die Sicherheitsattribute der Datei.
+[Version 4.71.](versions.md) Kopieren Sie die Sicherheitsattribute der Datei nicht.
 
 </dd> <dt>
 
@@ -164,7 +164,7 @@ Zeigen Sie keine Benutzeroberfläche an, wenn ein Fehler auftritt.
 
 </dt> <dd>
 
-Wird nur im lokalen Verzeichnis betrieben. Arbeiten Sie nicht rekursiv in Unterverzeichnisse.
+Wird nur im lokalen Verzeichnis ausgeführt. Arbeiten Sie nicht rekursiv in Unterverzeichnissen.
 
 </dd> <dt>
 
@@ -186,13 +186,13 @@ Diese Methode gibt keinen Wert zurück.
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise ist die [**ParseName-Methode**](folder-parsename.md) nicht für den ordner Systemsteuerung (CSIDL \_ CONTROLS) implementiert. Wenn Sie versuchen, eine nichtimplementierte Methode auf 0x800A01BD fehler (dezimal 445) wird ausgelöst.
+> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise wird die [**ParseName-Methode**](folder-parsename.md) nicht für den ordner Systemsteuerung (CSIDL \_ CONTROLS) implementiert. Wenn Sie versuchen, eine nicht implementierte Methode aufzurufen, wird ein 0x800A01BD (Dezimalzahl 445) ausgelöst.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **MoveHere** verwendet, um die Datei Temp.txt aus dem Stammverzeichnis des Laufwerks C in den Ordner C: Windows \\ zu verschieben. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
+Im folgenden Beispiel wird **MoveHere** verwendet, um die Datei Temp.txt aus dem Stammverzeichnis des Laufwerks C in den Ordner C: Windows zu \\ verschieben. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
 JScript:
 

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Api.JetSetSystemParameter-Methode (JET_INSTANCE, JET_SESID, JET_param, JET_CALLBACK, String).'
+description: 'Weitere Informationen finden Sie unter: Api.JetSetSystemParameter-Methode (JET_INSTANCE, JET_SESID, JET_param, JET_CALLBACK, String)'
 title: Api.JetSetSystemParameter-Methode (JET_INSTANCE, JET_SESID, JET_param, JET_CALLBACK, String)
 TOCTitle: JetSetSystemParameter method (JET_INSTANCE, JET_SESID, JET_param, JET_CALLBACK, String)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetSetSystemParameter(Microsoft.Isam.Esent.Interop.JET_INSTANCE,Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_param,Microsoft.Isam.Esent.Interop.JET_CALLBACK,System.String)
@@ -72,7 +72,7 @@ public static JET_wrn JetSetSystemParameter(
   - instance  
     Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
     
-    Die Instanz, für die die Option auf oder [Nil](./jet-instance.nil-property.md) festgelegt werden soll, um die Option auf allen Instanzen festzulegen.
+    Die -Instanz, für die die Option auf oder [Nil](./jet-instance.nil-property.md) festgelegt werden soll, um die Option für alle Instanzen zu festlegen.
 
 <!-- end list -->
 
@@ -86,21 +86,21 @@ public static JET_wrn JetSetSystemParameter(
   - paramid  
     Typ: [Microsoft.Isam.Esent.Interop.JET_param](./jet-param-enumeration.md)  
     
-    Der festzulegende Parameter.
+    Der parameter, der festgelegt werden soll.
 
 <!-- end list -->
 
   - Paramvalue  
     Typ: [Microsoft.Isam.Esent.Interop.JET_CALLBACK](./jet-callback-delegate.md)  
     
-    Der Wert des festzulegende Parameters, wenn der Parameter ein JET_CALLBACK ist.
+    Der Wert des parameters, der festgelegt werden soll, wenn der Parameter ein JET_CALLBACK.
 
 <!-- end list -->
 
   - paramString  
     Typ: [System.String](/dotnet/api/system.string)  
     
-    Der Wert des festzulegende Parameters, wenn der Parameter ein Zeichenfolgentyp ist.
+    Der Wert des parameters, der festgelegt werden soll, wenn der Parameter ein Zeichenfolgentyp ist.
 
 #### <a name="return-value"></a>Rückgabewert
 

@@ -1,31 +1,31 @@
 ---
 title: objectCategory im Vergleich zu objectClass
-description: Das objectCategory-Attribut und das objectClass-Attribut können auf eine bestimmte Schema Klasse eines Verzeichnis Objekts verweisen.
+description: Sowohl das objectCategory-Attribut als auch das objectClass-Attribut können auf eine bestimmte Schemaklasse eines Verzeichnisobjekts verweisen.
 ms.assetid: 66dadedb-61e4-4184-9b87-0fff036a94d9
 ms.tgt_platform: multiple
 keywords:
 - objectCategory im Vergleich zu objectClass ADSI
-- Attribute ASI, suchen nach objectCategory-und objectClass-Attributen
+- Attribute ASI , Suchen nach objectCategory- und objectClass-Attributen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dbbb8c5fe737b7c81193a75cdae6b772db64e69c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0d3833f8cf26cb2272fbe1e7c1063322f39a8c0147e4b22382d26067f90e72e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036309"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117839220"
 ---
 # <a name="objectcategory-vs-objectclass"></a>objectCategory im Vergleich zu objectClass
 
-Das **objectCategory** -Attribut und das **objectClass** -Attribut können auf eine bestimmte Schema Klasse eines Verzeichnis Objekts verweisen. Es gibt jedoch einen wichtigen Unterschied in der Semantik zwischen den beiden. "objectClass = Joy" bezieht sich auf solche Verzeichnisobjekte, bei denen "Joy" eine beliebige Klasse in der Objektklassen Hierarchie darstellt. "objectCategory = Joy" bezieht sich hingegen auf die Verzeichnisobjekte, in denen "Joy" eine bestimmte Klasse in der Objektklassen Hierarchie identifiziert.
+Sowohl das **objectCategory-Attribut als** **auch das objectClass-Attribut** können auf eine bestimmte Schemaklasse eines Verzeichnisobjekts verweisen. Es gibt jedoch einen wichtigen Unterschied in der Semantik zwischen den beiden. "objectClass=class" bezieht sich auf solche Verzeichnisobjekte, in denen "class" jede Klasse in der Objektklassenhierarchie darstellt. "objectCategory=class" bezieht sich hingegen auf die Verzeichnisobjekte, in denen "wild" eine bestimmte Klasse in der Objektklassenhierarchie identifiziert.
 
-**objectClass** kann mehrere Werte annehmen, während **objectCategory** einen einzelnen Wert annimmt. Aus diesem Grund eignet sich **objectCategory** besser für die Typübereinstimmung von Objekten in einer Verzeichnis Suche. ADSI verwendet dies als Standard Übereinstimmungs Kriterium. Suchvorgänge mit einer **objectClass** können nicht in großen Datenbanken skaliert werden. ADSI unterstützt die Syntaxen "(objectCategory = somedn)" und "(objectCategory = LDAP \_ Display \_ Name \_ of \_ Class)".
+**objectClass** kann mehrere Werte verwenden, **während objectCategory** einen einzelnen Wert an sich nimmt. Daher eignet sich **objectCategory** besser für den Typabgleich von Objekten in einer Verzeichnissuche. ADSI verwendet dies als Standardabgleichskriterium. Suchvorgänge mit **einer objectClass** sind für große Datenbanken nicht skalierbar. ADSI unterstützt die Syntaxen "(objectCategory=SomeDN)" und "(objectCategory=Ldap \_ Display \_ Name of \_ \_ Class)".
 
-Eine Ausnahme besteht darin, dass der LDAP-Suchfilter "(objectClass = \* )" keine Suche in der Objektklasse angibt, sondern lediglich prüft, ob die Objekte vorhanden sind.
+Die Ausnahme ist, dass der LDAP-Suchfilter "(objectClass= )" keine Suche in der Objektklasse anknt, sondern lediglich testet, ob die \* Objekte vorhanden sind.
 
- 
+ 
 
- 
+ 
 
 
 

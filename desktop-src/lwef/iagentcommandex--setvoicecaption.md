@@ -1,19 +1,19 @@
 ---
-title: Iagentcommandex setvoicecaption
-description: Iagentcommandex setvoicecaption
+title: IAgentCommandEx SetVoiceCaption
+description: IAgentCommandEx SetVoiceCaption
 ms.assetid: 672fdc13-25d3-4ced-b295-2b687767c17f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 358514dd33fc97a98f9b63107eabc98e0387bab8
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: fe76edb17c2b099db5e16e2b6160703c6b11e8a9f52bcbc24a9ca4bfcb7077c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038824"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118477213"
 ---
-# <a name="iagentcommandexsetvoicecaption"></a>Iagentcommandex:: setvoicecaption
+# <a name="iagentcommandexsetvoicecaption"></a>IAgentCommandEx::SetVoiceCaption
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT SetVoiceCaption(
@@ -21,28 +21,28 @@ HRESULT SetVoiceCaption(
 );
 ```
 
-Legt den für einen [**Befehl**](/windows/desktop/lwef/the-command-object)angezeigten [**voicecaption**](voicecaption-property.md) -Text fest.
+Legt den [**VoiceCaption-Text**](voicecaption-property.md) fest, der für einen Befehl [**angezeigt wird.**](/windows/desktop/lwef/the-command-object)
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="bszVoiceCaption"></span><span id="bszvoicecaption"></span><span id="BSZVOICECAPTION"></span>*bszvoicecaption*
+<span id="bszVoiceCaption"></span><span id="bszvoicecaption"></span><span id="BSZVOICECAPTION"></span>*bszVoiceCaption*
 </dt> <dd>
 
-Ein BSTR, der den Text für die [**voicecaption**](voicecaption-property.md) -Eigenschaft für einen [**Befehl**](/windows/desktop/lwef/the-command-object)angibt.
+Ein BSTR, der den Text für die [**VoiceCaption-Eigenschaft**](voicecaption-property.md) für einen [**Befehl angibt.**](/windows/desktop/lwef/the-command-object)
 
 </dd> </dl>
 
-Wenn Sie ein [**Command**](/windows/desktop/lwef/the-command-object) -Objekt in einer [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung definieren und seine [**Voice**](voice-property.md) -Eigenschaft festlegen, legen Sie in der Regel auch seine [**voicecaption**](voicecaption-property.md) -Eigenschaft fest. Dieser Text wird im Fenster "Sprachbefehle" angezeigt, wenn die Client Anwendung aktiv ist. Wenn diese Eigenschaft nicht festgelegt ist, bestimmt die-Einstellung für die [**Caption**](caption-property.md) -Eigenschaft den angezeigten Text. Wenn weder die **voicecaption** -Eigenschaft noch die-Eigenschaft festgelegt ist, wird der Befehl nicht im Fenster "Sprachbefehle" angezeigt.
+Wenn Sie ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) in einer [**Commands-Sammlung**](/windows/desktop/lwef/the-commands-collection-object) definieren und dessen [**Voice-Eigenschaft**](voice-property.md) festlegen, legen Sie in der Regel auch die [**VoiceCaption-Eigenschaft**](voicecaption-property.md) fest. Dieser Text wird im Fenster Sprachbefehle angezeigt, wenn Ihre Clientanwendung aktiv ist. Wenn diese Eigenschaft nicht festgelegt ist, bestimmt die Einstellung für die [**Caption-Eigenschaft**](caption-property.md) den angezeigten Text. Wenn weder **voiceCaption noch** die -Eigenschaft festgelegt ist, wird der Befehl nicht im Fenster "Sprachbefehle" angezeigt.
 
 [**Caption**](caption-property.md)
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcommand:: getcaption**](iagentcommand--getcaption.md), [**iagentcommand:: SetEnabled**](iagentcommand--setenabled.md), [**iagentcommand:: setVisible**](iagentcommand--setvisible.md), [**iagentcommand:: setvoice**](iagentcommand--setvoice.md), [**iagentcommandsex:: Addex**](iagentcommandsex--addex.md), [**iagentcommandsex:: insertex**](iagentcommandsex--insertex.md), [**iagentcommands:: Add**](iagentcommands--add.md), [**iagentcommands:: Insert**](iagentcommands--insert.md)
+[**IAgentCommand::GetCaption**](iagentcommand--getcaption.md), [**IAgentCommand::SetEnabled**](iagentcommand--setenabled.md), [**IAgentCommand::SetVisible**](iagentcommand--setvisible.md), [**IAgentCommand::SetVoice**](iagentcommand--setvoice.md), [**IAgentCommandsEx::AddEx**](iagentcommandsex--addex.md), [**IAgentCommandsEx::InsertEx**](iagentcommandsex--insertex.md), [**IAgentCommands::Add**](iagentcommands--add.md), [**IAgentCommands::Insert**](iagentcommands--insert.md)
 
 
- 
+ 
 
- 
+ 

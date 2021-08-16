@@ -35,7 +35,7 @@ Dieses Diagnoseverfahren ist möglicherweise nicht so nützlich für Clients und
 
 WSDAPI-Clients und -Hosts müssen Nachrichten senden, die den folgenden Kriterien entsprechen. Allgemeine Informationen zu Nachrichtenmustern finden Sie unter [Discovery and Metadata Exchange Message Patterns](discovery-and-metadata-exchange-message-patterns.md).
 
--   Nachrichten müssen die Im Thema Überprüfen von Netzwerkverfolgungen für [die UDP-WS-Ermittlung](inspecting-network-traces-for-udp-ws-discovery.md)angegebenen Datenverkehrsanforderungen erfüllen, es sei denn, es ist absolut sicher, dass WS-Discovery nicht für den Metadatenaustausch verwendet wird.
+-   Nachrichten müssen die Datenverkehrsanforderungen im Thema [Inspecting Network Traces for UDP WS-Discovery](inspecting-network-traces-for-udp-ws-discovery.md)erfüllen, es sei denn, es ist absolut sicher, dass WS-Discovery nicht für den Metadatenaustausch verwendet wird.
 -   Zwischen dem Client und der ersten Transportadresse, die im **XAddrs-Element** einer [ProbeMatches-](probematches-message.md) oder [ResolveMatches-Nachricht](resolvematches-message.md) bereitgestellt wird, muss eine TCP-Verbindung hergestellt werden. Die folgende Liste zeigt einen typischen Paketaustausch, der zum Herstellen einer TCP-Verbindung verwendet wird.
     -   Der Client sendet ein TCP SYN-Paket an den Host an einem angegebenen Port.
     -   Der Host sendet ein TCP SYN/ACK-Paket an den Client.

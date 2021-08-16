@@ -6,7 +6,7 @@ keywords:
 - Windows Medienformat-SDK, Geräteregistrierungsobjekte
 - Advanced Systems Format (ASF), Geräteregistrierungsobjekte
 - ASF (Advanced Systems Format), Geräteregistrierungsobjekte
-- Objekte,Geräteregistrierungsobjekte
+- Objekte, Geräteregistrierungsobjekte
 - Geräteregistrierungsobjekte
 ms.topic: article
 ms.date: 05/31/2018
@@ -19,11 +19,11 @@ ms.locfileid: "118433886"
 ---
 # <a name="device-registration-object"></a>Geräteregistrierungsobjekt
 
-Das Geräteregistrierungsobjekt verwaltet die Geräteregistrierungsdatenbank. Diese Datenbank speichert Informationen zu Netzwerkgeräten, z. B. Set-Top-Videoplayern, die mit dem Clientcomputer verbunden sind. Der Hauptzweck der Geräteregistrierungsdatenbank ist die Verwaltung von Geräten, die das Windows Media DRM 10 for Network Devices-Protokoll verwenden, um gesicherte Datenströme zu empfangen.
+Das Geräteregistrierungsobjekt verwaltet die Geräteregistrierungsdatenbank. Diese Datenbank speichert Informationen zu Netzwerkgeräten, z. B. Set-Top-Videoplayern, die mit dem Clientcomputer verbunden sind. Der Hauptzweck der Geräteregistrierungsdatenbank besteht darin, Geräte zu verwalten, die das Windows Media DRM 10 for Network Devices-Protokoll verwenden, um gesicherte Datenströme zu empfangen.
 
-Wenn Ihre Anwendung Windows Media DRM 10 für Netzwerkgeräte unterstützt, müssen Sie die Schnittstellen dieses Objekts verwenden, um Netzwerkgeräte zu registrieren und diese Geräte zu überprüfen. Sie können auch die Geräteregistrierungsdatenbank verwenden, um Informationen zu Netzwerkgeräten zu speichern, die Windows Media DRM 10 für Netzwerkgeräte nicht verwenden, obwohl nicht alle Informationen in der Datenbank für solche Geräte gelten.
+Wenn Ihre Anwendung Windows Media DRM 10 für Netzwerkgeräte unterstützt, müssen Sie die Schnittstellen dieses Objekts verwenden, um Netzwerkgeräte zu registrieren und diese Geräte zu überprüfen. Sie können auch die Geräteregistrierungsdatenbank verwenden, um Informationen zu Netzwerkgeräten zu speichern, die nicht Windows Media DRM 10 für Netzwerkgeräte verwenden, obwohl nicht alle Informationen in der Datenbank für solche Geräte gelten.
 
-Das Geräteregistrierungsobjekt wird von der [**WMCreateDeviceRegistration-Funktion**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatedeviceregistration) erstellt, die einen Zeiger auf eine **IWMDeviceRegistration-Schnittstelle** legt. Die anderen Methoden des Geräteregistrierungsobjekts können durch Aufrufen der **QueryInterface-Methode ermittelt** werden.
+Das Geräteregistrierungsobjekt wird von der [**WMCreateDeviceRegistration-Funktion**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatedeviceregistration) erstellt, die einen Zeiger auf eine **IWMDeviceRegistration-Schnittstelle** festlegt. Die anderen Methoden des Geräteregistrierungsobjekts können durch Aufrufen der **QueryInterface-Methode** abgerufen werden.
 
 Die folgenden Schnittstellen werden vom Geräteregistrierungsobjekt unterstützt.
 
@@ -39,7 +39,7 @@ Die folgenden Schnittstellen werden vom Geräteregistrierungsobjekt unterstützt
 
  
 
-Die folgende Rückrufschnittstelle muss von der Anwendung implementiert werden, um die Methoden der **IWMProximityDetection-Schnittstelle verwenden zu** können.
+Die folgende Rückrufschnittstelle muss von der Anwendung implementiert werden, damit die Methoden der **IWMProximityDetection-Schnittstelle** verwendet werden können.
 
 
 

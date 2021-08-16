@@ -53,7 +53,7 @@ Adresse eines Zeigers auf das erstellte Geräteobjekt.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,7 +66,7 @@ Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten 
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

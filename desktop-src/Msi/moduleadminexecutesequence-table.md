@@ -56,7 +56,7 @@ Wenn [Sie Standardaktionen](standard-actions.md) in Mergemodulsequenztabellen ve
 <span id="BaseAction"></span><span id="baseaction"></span><span id="BASEACTION"></span>BaseAction
 </dt> <dd>
 
-Die Spalte BaseAction kann eine Standardaktion, eine benutzerdefinierte Aktion, die in der benutzerdefinierten Aktionstabelle des Mergemoduls angegeben ist, oder ein Dialogfeld enthalten, das in der Dialogtabelle des Moduls angegeben ist. Die BaseAction-Spalte ist ein Schlüssel in der Action-Spalte dieser Tabelle. Es kann kein Fremdschlüssel in einer anderen Mergetabelle oder Tabelle in der .msi Datei sein. Dies bedeutet, dass jede Standardaktion, jede benutzerdefinierte Aktion oder jedes Dialogfeld, die in der Spalte BaseAction aufgeführt sind, auch in der Spalte Aktion eines anderen Datensatzes in dieser Tabelle aufgeführt werden muss.
+Die Spalte BaseAction kann eine Standardaktion, eine benutzerdefinierte Aktion, die in der benutzerdefinierten Aktionstabelle des Mergemoduls angegeben ist, oder ein Dialogfeld enthalten, das in der Dialogtabelle des Moduls angegeben ist. Die BaseAction-Spalte ist ein Schlüssel in der Action-Spalte dieser Tabelle. Es darf kein Fremdschlüssel in einer anderen Mergetabelle oder Tabelle in der .msi-Datei sein. Dies bedeutet, dass jede Standardaktion, jede benutzerdefinierte Aktion oder jedes Dialogfeld, die in der Spalte BaseAction aufgeführt sind, auch in der Spalte Aktion eines anderen Datensatzes in dieser Tabelle aufgeführt werden muss.
 
 </dd> <dt>
 

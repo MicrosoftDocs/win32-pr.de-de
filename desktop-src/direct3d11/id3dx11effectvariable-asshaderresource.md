@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectVariable asshaderresource-Methode (D3dx11effect. h)
-description: Eine Shader-Resource-Variable erhalten.
+title: ID3DX11EffectVariable AsShaderResource-Methode (D3dx11effect.h)
+description: Abrufen einer Shader-Ressourcenvariablen.
 ms.assetid: 02db94eb-980a-4677-af89-3006aef6faca
 keywords:
-- Asshaderresource-Methode Direct3D 11
-- Asshaderresource-Methode Direct3D 11, ID3DX11EffectVariable-Schnittstelle
-- ID3DX11EffectVariable-Schnittstelle Direct3D 11, asshaderresource-Methode
+- AsShaderResource-Methode Direct3D 11
+- AsShaderResource-Methode Direct3D 11 , ID3DX11EffectVariable-Schnittstelle
+- ID3DX11EffectVariable-Schnittstelle Direct3D 11 , AsShaderResource-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a3af6236d25e8a2c652f5a551bf7199f3a78d8e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0ef87874c005f12d3e49962ee438f516df3631c12ff17fc4db27e0a82fe1a654
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104996314"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118531383"
 ---
-# <a name="id3dx11effectvariableasshaderresource-method"></a>ID3DX11EffectVariable:: asshaderresource-Methode
+# <a name="id3dx11effectvariableasshaderresource-method"></a>ID3DX11EffectVariable::AsShaderResource-Methode
 
-Eine Shader-Resource-Variable erhalten.
+Abrufen einer Shader-Ressourcenvariablen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,27 +45,27 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **ID3DX11EffectShaderResourceVariable**](id3dx11effectshaderresourcevariable.md)\***
 
-Ein Zeiger auf eine Shader-Resource-Variable. Siehe [**ID3DX11EffectShaderResourceVariable**](id3dx11effectshaderresourcevariable.md).
+Ein Zeiger auf eine Shader-Ressourcenvariable. Siehe [**ID3DX11EffectShaderResourceVariable**](id3dx11effectshaderresourcevariable.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Asshaderresource gibt eine Version der Effekt Variablen zurück, die auf eine Shader-Resource-Variable spezialisiert wurde. Ähnlich wie bei einer Umwandlung gibt diese Spezialisierung ein ungültiges Objekt zurück, wenn die Effekt Variable keine Shader-Ressourcen Daten enthält.
+AsShaderResource gibt eine Version der Effect-Variablen zurück, die auf eine Shader-Ressourcenvariable spezialisiert wurde. Ähnlich wie bei einer Umwandlung gibt diese Spezialisierung ein ungültiges Objekt zurück, wenn die Effect-Variable keine Shaderressourcendaten enthält.
 
-Anwendungen können das zurückgegebene Objekt auf Gültigkeit testen, indem Sie [**IsValid**](id3dx11effectvariable-isvalid.md)aufrufen.
+Anwendungen können das zurückgegebene Objekt auf Gültigkeit testen, indem [**sie IsValid**](id3dx11effectvariable-isvalid.md)aufrufen.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 

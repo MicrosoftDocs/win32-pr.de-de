@@ -1,7 +1,7 @@
 ---
-description: Gibt den Linktyp beim Crawlen oder indizieren an.
+description: Gibt den Typ des Links beim Durchforsten oder Indizieren an.
 ms.assetid: 2a0ddb31-df35-4da5-9950-b091cd461556
-title: Linktype-Enumeration
+title: LINKTYPE-Enumeration
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: e5b2105e8d56a9c8042f341ffc3f24a4d7995f4e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 16c61f8d92a6f90be0fa4b64ddd9d582987ac0bdf52ca1c596c7db3a7fa4b669
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343242"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118463043"
 ---
-# <a name="linktype-enumeration"></a>Linktype-Enumeration
+# <a name="linktype-enumeration"></a>LINKTYPE-Enumeration
 
-\[Die **linktype** -Enumeration wird nur unter Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.\]
+\[Die **LINKTYPE-Enumeration** wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.\]
 
-Gibt den Linktyp beim Crawlen oder indizieren an.
+Gibt den Typ des Links beim Durchforsten oder Indizieren an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ typedef enum _LINKTYPE {
 
 <dl> <dt>
 
-<span id="LINKTYPE_URL"></span><span id="linktype_url"></span>**linktype- \_ URL**
+<span id="LINKTYPE_URL"></span><span id="linktype_url"></span>**\_LINKTYPE-URL**
 </dt> <dd>
 
-Gibt an, ob der Linktyp der URLs indiziert werden soll.
+Gibt an, ob der URL-Linktyp indiziert werden soll.
 
 </dd> <dt>
 
-<span id="LINKTYPE_CONTENT"></span><span id="linktype_content"></span>**linktype- \_ Inhalt**
+<span id="LINKTYPE_CONTENT"></span><span id="linktype_content"></span>**\_LINKTYPE-INHALT**
 </dt> <dd>
 
-Gibt an, ob der Link Inhalt indiziert werden soll.
+Gibt an, ob der Linkinhalt indiziert werden soll.
 
 </dd> <dt>
 
-<span id="LINKTYPE_RELATED"></span><span id="linktype_related"></span>**linktype \_ verwandt**
+<span id="LINKTYPE_RELATED"></span><span id="linktype_related"></span>**LINKTYPE \_ RELATED**
 </dt> <dd>
 
-Gibt einen zugehörigen Link an.
+Gibt einen verknüpften Link an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, kann es erforderlich sein, die **linktype** -Flags und die folgenden anderen APIs zu verwenden: die Methoden [**iitempreviewerext:: getlinkedcontent**](-search-iitempreviewerext-getlinkedcontent.md) und [**iitempreviewerext:: getrelatedpart**](-search-iitempreviewerext-getrelatedpart.md) und die [**linkinfo**](-search-linkinfo.md) -Struktur
+Um eine Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern anzuzeigen, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die **LINKTYPE-Flags** und die folgenden anderen APIs zu verwenden: [**die Methoden IItemPreviewerExt::GetLinkedContent**](-search-iitempreviewerext-getlinkedcontent.md) und [**IItemPreviewerExt::GetRelatedPart**](-search-iitempreviewerext-getrelatedpart.md) und die [**LINKINFO-Struktur.**](-search-linkinfo.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,8 +73,8 @@ Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittan
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

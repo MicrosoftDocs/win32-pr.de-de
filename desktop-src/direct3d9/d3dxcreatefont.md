@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein Schriftart Objekt für ein Gerät und eine Schriftart.
+description: Erstellt ein Schriftartobjekt für ein Gerät und eine Schriftart.
 ms.assetid: 3e65dfdc-9608-420c-9672-c38289d13ab1
-title: D3DXCreateFont-Funktion (D3dx9core. h)
+title: D3DXCreateFont-Funktion (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 488a400928ecc270612a307fbede971e02b43b25
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d9bac71e89657f4df176a1ee15e2dca0cda6e4a25b8c47560adc5cf26c982383
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118526154"
 ---
 # <a name="d3dxcreatefont-function"></a>D3DXCreateFont-Funktion
 
-Erstellt ein Schriftart Objekt für ein Gerät und eine Schriftart.
+Erstellt ein Schriftartobjekt für ein Gerät und eine Schriftart.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,61 +51,61 @@ HRESULT D3DXCreateFont(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, das Gerät, das dem Schriftart Objekt zugeordnet werden soll.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) das Gerät, das dem Schriftartobjekt zugeordnet werden soll.
 
 </dd> <dt>
 
-*Höhe* \[ in\]
+*Höhe* \[ In\]
 </dt> <dd>
 
-Typ: **[ **int**](../winprog/windows-data-types.md)**
+Typ: **[ **INT**](../winprog/windows-data-types.md)**
 
 Die Höhe der Zeichen in logischen Einheiten.
 
 </dd> <dt>
 
-*Breite* \[ in\]
+*Breite* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Die Breite der Zeichen in logischen Einheiten.
 
 </dd> <dt>
 
-*Gewichtung* \[ in\]
+*Gewichtung* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Schrift Breite. Ein Beispiel ist "Bold".
+Schriftgewichtung. Ein Beispiel ist fett.
 
 </dd> <dt>
 
-*Miplevels* \[ in\]
+*MipLevels* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl von MipMap-Ebenen.
+Die Anzahl der Mipmap-Ebenen.
 
 </dd> <dt>
 
-*Kursiv* \[ in\]
+*Italisch* \[ In\]
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-True für kursiv Schrift, andernfalls false.
+True für die italische Schriftart, andernfalls FALSE.
 
 </dd> <dt>
 
-Zeichen *Satz* \[ in\]
+*CharSet* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
@@ -114,48 +114,48 @@ Der Zeichensatz der Schriftart.
 
 </dd> <dt>
 
-*Outputprecision* \[ in\]
+*OutputPrecision* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt an, wie Windows versuchen soll, die gewünschten Schriftgrößen und Merkmale mit tatsächlichen Schriftarten abzugleichen. Verwenden \_ \_ \_ Sie nur die Precis-präcis, um sicherzustellen, dass Sie immer eine TrueType-Schriftart erhalten.
+Gibt an, Windows, wie versucht werden soll, die gewünschten Schriftgrößen und -merkmale mit den tatsächlichen Schriftarten zu finden. Verwenden Sie \_ beispielsweise OUT TT ONLY PRECIS, um sicherzustellen, dass Sie immer eine \_ \_ TrueType-Schriftart erhalten.
 
 </dd> <dt>
 
-*Qualität* \[ in\]
+*Qualität* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt an, wie Windows der gewünschten Schriftart mit einer echten Schriftart entsprechen soll. Sie gilt nur für Raster Schriftarten und sollte sich nicht auf TrueType-Schriftarten auswirken.
+Gibt an, Windows der gewünschten Schriftart mit einer echten Schriftart übereinstimmen soll. Sie gilt nur für Rasterschriftarten und sollte sich nicht auf TrueType-Schriftarten auswirken.
 
 </dd> <dt>
 
-*PitchAndFamily* \[ in\]
+*PitchAndFamily* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Der-und der-Familien Index.
+Tonhöhe und Familienindex.
 
 </dd> <dt>
 
-*pfakename* \[ in\]
+*pFacename* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCTSTR**](../winprog/windows-data-types.md)**
 
-Zeichenfolge, die den Namen der Schriftart enthält. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der String-Datentyp in LPCSTR aufgelöst. Siehe Hinweise.
+Eine Zeichenfolge, die den Schriftartnamen enthält. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR auflösen. Andernfalls wird der Zeichenfolgendatentyp in LPCSTR auflösen. Siehe Hinweise.
 
 </dd> <dt>
 
-*ppfont* \[ vorgenommen\]
+*ppFont* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXFONT**](id3dxfont.md)\***
 
-Gibt einen Zeiger auf eine [**ID3DXFont**](id3dxfont.md) -Schnittstelle zurück, die das erstellte Schriftart Objekt darstellt.
+Gibt einen Zeiger auf eine [**ID3DXFont-Schnittstelle**](id3dxfont.md) zurück, die das erstellte Schriftartobjekt darstellt.
 
 </dd> </dl>
 
@@ -163,15 +163,15 @@ Gibt einen Zeiger auf eine [**ID3DXFont**](id3dxfont.md) -Schnittstelle zurück,
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Erstellung eines ID3DXFont-Objekts erfordert, dass das Gerät 32-Bit-Farbe unterstützt.
+Die Erstellung eines ID3DXFont-Objekts erfordert, dass das Gerät 32-Bit-Farben unterstützt.
 
-Die Compilereinstellung bestimmt auch die Funktions Version. Wenn Unicode definiert ist, wird der Funktions aufrufin D3DXCreateFontW aufgelöst. Andernfalls wird der Funktions Aufruhe in D3DXCreateFontA aufgelöst, da ANSI-Zeichen folgen verwendet werden.
+Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in D3DXCreateFontW auflösen. Andernfalls wird der Funktionsaufruf in D3DXCreateFontA auflösen, da ANSI-Zeichenfolgen verwendet werden.
 
-Weitere Informationen zu Schriftart Parametern finden Sie in [der logischen Schriftart](../gdi/creating-a-logical-font.md).
+Weitere Informationen zu Schriftartparametern finden Sie unter [Die logische Schriftart](../gdi/creating-a-logical-font.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -179,16 +179,16 @@ Weitere Informationen zu Schriftart Parametern finden Sie in [der logischen Schr
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Universell Funktionen](dx9-graphics-reference-d3dx-functions-general-purpose.md)
+[Universell Functions](dx9-graphics-reference-d3dx-functions-general-purpose.md)
 </dt> </dl>
 
  

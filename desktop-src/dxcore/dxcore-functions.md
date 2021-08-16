@@ -1,25 +1,25 @@
 ---
 title: DXCore-Funktionen
-description: Die folgenden freien Funktionen werden in "DXCore. h" deklariert.
+description: Die folgenden freien Funktionen werden in dxcore.h deklariert.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 06/20/2019
-ms.openlocfilehash: 33b0e6cf1c8b77ad64a85c4d602cf6a1231cdcbf
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c140e967b26e2267497829e70d1124e6d46aa364ca56bfdfd03d8dc30c7db89f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338669"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118502591"
 ---
 # <a name="dxcore-functions"></a>DXCore-Funktionen
 
-Die folgenden freien Funktionen werden in "DXCore. h" deklariert.
+Die folgenden freien Funktionen werden in dxcore.h deklariert.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 | Thema | BESCHREIBUNG |
 |-|-|
-| [**DXCoreCreateAdapterFactory**](./dxcore/nf-dxcore-dxcorecreateadapterfactory.md) | Erstellt eine DXCore-AdapterFactory, die Sie verwenden können, um weitere DXCore-Objekte zu generieren. |
+| [**DXCoreCreateAdapterFactory**](./dxcore/nf-dxcore-dxcorecreateadapterfactory.md) | Erstellt eine DXCore-Adapterfactory, mit der Sie weitere DXCore-Objekte generieren können. |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

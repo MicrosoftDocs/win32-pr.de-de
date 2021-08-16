@@ -31,7 +31,7 @@ Signalisiert eine DVD-Fehlerbedingung.
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-**DWORD-Wert,** der die Fehlerbedingung angibt. Member des [**\_ aufzählten DVD**](/previous-versions/windows/desktop/api/dvdevcod/ne-dvdevcod-dvd_error) ERROR-Datentyps.
+**DWORD-Wert,** der die Fehlerbedingung angibt. Member des [**aufzählten DVD ERROR-Datentyps. \_**](/previous-versions/windows/desktop/api/dvdevcod/ne-dvdevcod-dvd_error)
 
 </dd> <dt>
 

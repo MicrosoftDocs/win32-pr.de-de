@@ -1,7 +1,7 @@
 ---
-description: Tritt auf, bevor das iinkanalyzer-Objekt ein icontextnode-Objekt an eine neue Position in der Auflistung der untergeordneten Knoten des übergeordneten Knotens verschiebt.
+description: Tritt ein, bevor IInkAnalyzer ein IContextNode-Objekt an eine neue Position in der Auflistung der Unterknoten des übergeordneten Knotens verschiebt.
 ms.assetid: c7a5956e-ffc4-4205-9de3-e8b7d672156d
-title: '_IAnalysisProxyEvents:: ContextNodeMovingToPosition-Ereignis (iacom. h)'
+title: _IAnalysisProxyEvents::ContextNodeMovingToPosition-Ereignis (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 462e7428fb43fd998d769dd152e19f8109b04158
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 4cd814e45692d90c77bad8c46fea5dfd8534bd769a07a9d0bc1648ecafc7b2f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106353268"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117857149"
 ---
-# <a name="_ianalysisproxyeventscontextnodemovingtoposition-event"></a>\_Ianalysisproxyevents:: ContextNodeMovingToPosition-Ereignis
+# <a name="_ianalysisproxyeventscontextnodemovingtoposition-event"></a>\_IAnalysisProxyEvents::ContextNodeMovingToPosition-Ereignis
 
-Tritt auf, bevor das [**iinkanalyzer**](iinkanalyzer.md) -Objekt ein [**icontextnode**](icontextnode.md) -Objekt an eine neue Position in der Auflistung der untergeordneten Knoten des übergeordneten Knotens verschiebt.
+Tritt ein, bevor [**IInkAnalyzer**](iinkanalyzer.md) ein [**IContextNode-Objekt**](icontextnode.md) an eine neue Position in der Auflistung der Unterknoten des übergeordneten Knotens verschiebt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,43 +42,43 @@ HRESULT ContextNodeMovingToPosition(
 
 <dl> <dt>
 
-*pinkanalyzer* \[ in\]
+*pInkAnalyzer* \[ In\]
 </dt> <dd>
 
-Das [**iinkanalyzer**](iinkanalyzer.md) -Objekt, das das [**icontextnode**](icontextnode.md) -Objekt verschiebt.
+Das [**IInkAnalyzer-Objekt,**](iinkanalyzer.md) das das [**IContextNode-Objekt**](icontextnode.md) bewegt.
 
 </dd> <dt>
 
-*pisubnoabtomove* \[ in\]
+*pISubNodeToMove* \[ In\]
 </dt> <dd>
 
-Das [**icontextnode**](icontextnode.md) -Objekt, das verschoben werden soll.
+Das zu verschiebende [**IContextNode-Objekt.**](icontextnode.md)
 
 </dd> <dt>
 
-*pparameentcontextnode* \[ in\]
+*pParentContextNode* \[ In\]
 </dt> <dd>
 
-Das übergeordnete [**icontextnode**](icontextnode.md) -Objekt von *pisubnodecotomove*.
+Das übergeordnete [**IContextNode-Objekt**](icontextnode.md) von *pISubNodeToMove.*
 
 </dd> <dt>
 
-*ulnetwindex* \[ in\]
+*ulNewIndex* \[ In\]
 </dt> <dd>
 
-Die neue Position von *pisubnodetomove* in der Auflistung der untergeordneten Knoten des übergeordneten Knotens.
+Der neue Speicherort von *pISubNodeToMove* in der Sammlung der Untergeordneten Knoten des übergeordneten Knotens.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie dieses Ereignis, wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der von [**iinkanalyzer**](iinkanalyzer.md)synchronisiert wird. Dieses Ereignis tritt während der Abstimmungsphase der frei Hand Analyse oder als Reaktion auf eine Ink Analyzer-Methode auf, die einen [**icontextnode**](icontextnode.md) in der Auflistung der untergeordneten Knoten des übergeordneten Knotens verschiebt (siehe [**icontextnode:: gettientnode**](icontextnode-getparentnode.md) und [**icontextnode:: getsubnodes**](icontextnode-getsubnodes.md)).
+Verwenden Sie dieses Ereignis, wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der des [**IInkAnalyzer**](iinkanalyzer.md)synchronisiert wird. Dieses Ereignis tritt während der Abstimmungsphase der Freihandanalyse oder als Reaktion auf eine Freihandanalysemethode auf, die einen [**IContextNode**](icontextnode.md) innerhalb der Auflistung der Unterknoten des übergeordneten Knotens verschiebt (siehe [**IContextNode::GetParentNode**](icontextnode-getparentnode.md) und [**IContextNode::GetSubNodes**](icontextnode-getsubnodes.md)).
 
-Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyzer**](iinkanalyzer.md)finden Sie unter [Daten Proxy mit Ink-Analyse](data-proxy-with-ink-analysis.md).
+Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnalyzer**](iinkanalyzer.md)finden Sie unter [Datenproxy mit Freihandanalyse.](data-proxy-with-ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,39 +86,39 @@ Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyze
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_Ianalysisproxyevents**](-ianalysisproxyevents.md)
+[**\_IAnalysisProxyEvents**](-ianalysisproxyevents.md)
 </dt> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: analysierungsmethode**](iinkanalyzer-analyze.md)
+[**IInkAnalyzer::Analyze-Methode**](iinkanalyzer-analyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
+[**IInkAnalyzer::BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
 </dt> <dt>
 
-[**Icontextnode:: getparameentnode**](icontextnode-getparentnode.md)
+[**IContextNode::GetParentNode**](icontextnode-getparentnode.md)
 </dt> <dt>
 
-[**Icontextnode:: getsubnodes**](icontextnode-getsubnodes.md)
+[**IContextNode::GetSubNodes**](icontextnode-getsubnodes.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

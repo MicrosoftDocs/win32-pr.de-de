@@ -3,7 +3,7 @@ title: XTYP_ADVDATA Transaktion (Ddeml.h)
 description: Informiert den Client darüber, dass sich der Wert des Datenelements geändert hat. Die dynamische Daten Exchange -Clientrückruffunktion (DDE), DdeCallback, empfängt diese Transaktion, nachdem eine Advise-Schleife mit einem Server hergestellt wurde.
 ms.assetid: c6e61785-b98c-4ffa-9d23-339e1c66cb4d
 keywords:
-- XTYP_ADVDATA Transaktion Data Exchange
+- XTYP_ADVDATA Von Transaktionen Exchange
 topic_type:
 - apiref
 api_name:
@@ -113,7 +113,7 @@ Eine Anwendung darf das während dieser Transaktion erhaltene Datenhand handle n
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

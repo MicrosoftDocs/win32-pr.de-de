@@ -227,7 +227,7 @@ Der Zugriff auf diese Oberfläche wird verweigert, weil versucht wurde, die prim
 
 
 
-Fehler beim Sperren einer Oberfläche. Die Seitensperre funktioniert nicht auf einer Anzeigespeicheroberfläche oder einer emulierten primären Oberfläche.
+Fehler beim Sperren einer Oberfläche. Die Seitensperre funktioniert auf einer Anzeigespeicheroberfläche oder einer emulierten primären Oberfläche nicht.
 
 
 </dt> </dl> </dd> <dt>
@@ -237,7 +237,7 @@ Fehler beim Sperren einer Oberfläche. Die Seitensperre funktioniert nicht auf e
 
 
 
-Fehler beim Entsperren einer Oberfläche. Das Entsperren von Seiten funktioniert nicht auf einer Anzeigespeicheroberfläche oder einer emulierten primären Oberfläche.
+Fehler beim Entsperren einer Oberfläche. Das Entsperren von Seiten funktioniert auf einer Anzeigespeicheroberfläche oder einer emulierten primären Oberfläche nicht.
 
 
 </dt> </dl> </dd> <dt>
@@ -647,7 +647,7 @@ Für diese Oberfläche wurde noch kein Gerätekontext (DC) erstellt.
 
 
 
-Es ist keine DirectDraw-ROP-Hardware (Rasteroperation) verfügbar.
+Es ist keine DirectDraw-ROP-Hardware (Raster-Operation) verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -657,7 +657,7 @@ Es ist keine DirectDraw-ROP-Hardware (Rasteroperation) verfügbar.
 
 
 
-Die Ausschließliche Erstellung von DirectDraw-Objekten auf Hardware ist nicht möglich. der Treiber unterstützt keine Hardware.
+Die ausschließliche Hardware-DirectDraw-Objekterstellung ist nicht möglich. Der Treiber unterstützt keine Hardware.
 
 
 </dt> </dl> </dd> <dt>
@@ -677,7 +677,7 @@ DirectDraw-Unterstützung ist mit dem aktuellen Anzeigetreiber nicht möglich.
 
 
 
-Neu für DirectX 7.0. Der Test kann nicht fortgesetzt werden, da der Adaptertreiber keine Aktualisierungsraten aufzählt.
+Neu für DirectX 7.0. Die Tests können nicht fortgesetzt werden, da der Treiber für den Anzeigeadapter keine Aktualisierungsraten aufzählt.
 
 
 </dt> </dl> </dd> <dt>
@@ -687,7 +687,7 @@ Neu für DirectX 7.0. Der Test kann nicht fortgesetzt werden, da der Adaptertrei
 
 
 
-Die Softwareemulation ist nicht verfügbar.
+Softwareemulation ist nicht verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -697,7 +697,7 @@ Die Softwareemulation ist nicht verfügbar.
 
 
 
-Für den Vorgang muss die Anwendung über den exklusiven Modus verfügen, die Anwendung verfügt jedoch nicht über den exklusiven Modus.
+Für den Vorgang muss die Anwendung über den exklusiven Modus verfügen, die Anwendung jedoch nicht über den exklusiven Modus.
 
 
 </dt> </dl> </dd> <dt>
@@ -717,7 +717,7 @@ Das Spiegeln sichtbarer Oberflächen wird nicht unterstützt.
 
 
 
-Es wurde versucht, ein Gerätefenster zu erstellen oder festlegen, ohne zuerst das Fokusfenster festlegen zu müssen.
+Es wurde versucht, ein Gerätefenster zu erstellen oder festzulegen, ohne zuerst das Fokusfenster festzulegen.
 
 
 </dt> </dl> </dd> <dt>
@@ -737,7 +737,7 @@ Es ist keine GDI vorhanden.
 
 
 
-Clipper Benachrichtigung erfordert ein Fensterhand handle, oder es wurde zuvor kein Fensterhand handle als kooperatives Fensterhand handle festgelegt.
+Clipper Benachrichtigung erfordert ein Fensterhandle, oder es wurde zuvor kein Fensterhandle als Fensterhandle auf kooperativer Ebene festgelegt.
 
 
 </dt> </dl> </dd> <dt>
@@ -747,7 +747,7 @@ Clipper Benachrichtigung erfordert ein Fensterhand handle, oder es wurde zuvor k
 
 
 
-Es ist keine Mipmap-fähige Texturzuordnungshardware vorhanden oder verfügbar.
+Es ist keine Mipmap-fähige Hardware für die Texturzuordnung vorhanden oder verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -767,7 +767,7 @@ Es ist keine Spiegelungshardware vorhanden oder verfügbar.
 
 
 
-Neu für DirectX 7.0. Der Test kann nicht fortgesetzt werden, da dem Monitor keine EDID-Daten zugeordnet sind.
+Neu für DirectX 7.0. Die Tests können nicht fortgesetzt werden, da dem Monitor keine EDID-Daten zugeordnet sind.
 
 
 </dt> </dl> </dd> <dt>
@@ -777,7 +777,7 @@ Neu für DirectX 7.0. Der Test kann nicht fortgesetzt werden, da dem Monitor kei
 
 
 
-Es wurde versucht, nichtlokalen Videospeicher von einem Gerät zu reservieren, das keinen nichtlokalen Videospeicher unterstützt.
+Es wurde versucht, nichtlokalen Videospeicher von einem Gerät zuzuordnen, das keinen nicht lokalen Videospeicher unterstützt.
 
 
 </dt> </dl> </dd> <dt>
@@ -797,7 +797,7 @@ Das Gerät unterstützt keine optimierten Oberflächen.
 
 
 
-Die [**IDirectDrawSurface7::GetOverlayPosition-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawsurface7-getoverlayposition) wird für eine Überlagerung aufgerufen, für die die [**IDirectDrawSurface7::UpdateOverlay-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawsurface7-updateoverlay) nicht aufgerufen wurde, um als Ziel zu erstellen.
+Die [**IDirectDrawSurface7::GetOverlayPosition-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawsurface7-getoverlayposition) wird für eine Überlagerung aufgerufen, für die die [**IDirectDrawSurface7::UpdateOverlay-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawsurface7-updateoverlay) nicht aufgerufen wurde, um als Ziel festzulegen.
 
 
 </dt> </dl> </dd> <dt>
@@ -807,7 +807,7 @@ Die [**IDirectDrawSurface7::GetOverlayPosition-Methode**](/windows/desktop/api/D
 
 
 
-Es ist keine Overlayhardware vorhanden oder verfügbar.
+Es ist keine Überlagerungshardware vorhanden oder verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -837,7 +837,7 @@ Es gibt keine Hardwareunterstützung für Paletten mit 16 oder 256 Farben.
 
 
 
-Es ist keine geeignete Hardware für den Rastervorgang vorhanden oder verfügbar.
+Es ist keine geeignete Hardware für rasterbasierte Vorgänge vorhanden oder verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -917,7 +917,7 @@ Das DirectDrawSurface-Objekt verwendet keine 8-Bit-Farbpalette, und der angeford
 
 
 
-Eine Überlagerungskomponente wird für eine Nichtüberlagerungsoberfläche aufgerufen.
+Eine Überlagerungskomponente wird für eine nicht überlappende Oberfläche aufgerufen.
 
 
 </dt> </dl> </dd> <dt>
@@ -927,7 +927,7 @@ Eine Überlagerungskomponente wird für eine Nichtüberlagerungsoberfläche aufg
 
 
 
-Der Vorgang kann nicht ausgeführt werden, da keine Texturzuordnungshardware vorhanden oder verfügbar ist.
+Der Vorgang kann nicht ausgeführt werden, da keine Hardware für die Texturzuordnung vorhanden oder verfügbar ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -937,7 +937,7 @@ Der Vorgang kann nicht ausgeführt werden, da keine Texturzuordnungshardware vor
 
 
 
-Es wurde versucht, eine Oberfläche zu kippen, die nicht gekippt werden kann.
+Es wurde versucht, eine Oberfläche zu spiegeln, die nicht gekippt werden kann.
 
 
 </dt> </dl> </dd> <dt>
@@ -957,7 +957,7 @@ Das angeforderte Element wurde nicht gefunden.
 
 
 
-Es wurde versucht, eine Schnittstellenmethode eines DirectDraw-Objekts auf rufen, das von [**CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) erstellt wurde, bevor das Objekt initialisiert wurde.
+Es wurde versucht, eine Schnittstellenmethode eines DirectDraw-Objekts aufzurufen, das von [**CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) erstellt wurde, bevor das Objekt initialisiert wurde.
 
 
 </dt> </dl> </dd> <dt>
@@ -967,7 +967,7 @@ Es wurde versucht, eine Schnittstellenmethode eines DirectDraw-Objekts auf rufen
 
 
 
-Die Oberfläche ist eine optimierte Oberfläche, aber ihr wurde noch kein Arbeitsspeicher zugewiesen.
+Die Oberfläche ist eine optimierte Oberfläche, aber ihr wurde noch kein Arbeitsspeicher zugeordnet.
 
 
 </dt> </dl> </dd> <dt>
@@ -977,7 +977,7 @@ Die Oberfläche ist eine optimierte Oberfläche, aber ihr wurde noch kein Arbeit
 
 
 
-Es wurde versucht, eine nicht gesperrte Oberfläche zu entsperren.
+Es wurde versucht, eine Oberfläche zu entsperren, die nicht gesperrt war.
 
 
 </dt> </dl> </dd> <dt>
@@ -1007,17 +1007,17 @@ Die verwendete Oberfläche ist keine palettenbasierte Oberfläche.
 
 
 
-Es gibt keine Hardwareunterstützung für vertikale, leere synchronisierte Vorgänge.
+Es gibt keine Hardwareunterstützung für synchronisierte Vorgänge mit vertikalem Leerstellen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="DDERR_NOZBUFFERHW"></span><span id="dderr_nozbufferhw"></span>**DDERR \_ NOUFFERHW**
+<span id="DDERR_NOZBUFFERHW"></span><span id="dderr_nozbufferhw"></span>**DDERR \_ NOFLOUFFERHW**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Vorgang zum Erstellen eines Z-Puffers im Anzeigespeicher oder zum Ausführen einer Bitblockübertragung (bitblt) mithilfe eines Z-Puffers kann nicht ausgeführt werden, da keine Hardwareunterstützung für Z-Puffer besteht.
+Der Vorgang zum Erstellen eines Z-Puffers im Anzeigespeicher oder zum Ausführen einer Bitblockübertragung (bitblt) mithilfe eines Z-Puffers kann nicht ausgeführt werden, da keine Hardwareunterstützung für Z-Puffer vorhanden ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -1027,7 +1027,7 @@ Der Vorgang zum Erstellen eines Z-Puffers im Anzeigespeicher oder zum Ausführen
 
 
 
-Die Überlagerungsoberflächen können basierend auf der Z-Reihenfolge nicht z-schichtig sein, da die Hardware keine Z-Sortierung von Überlagerungen unterstützt.
+Die Überlagerungsoberflächen können nicht auf Z-Schicht basierend auf der Z-Reihenfolge angeordnet werden, da die Hardware keine Z-Reihenfolge von Überlagerungen unterstützt.
 
 
 </dt> </dl> </dd> <dt>
@@ -1047,7 +1047,7 @@ Die für den angeforderten Vorgang benötigte Hardware wurde bereits zugeordnet.
 
 
 
-DirectDraw verfügt nicht über genügend Arbeitsspeicher zum Ausführen des Vorgangs.
+DirectDraw verfügt nicht über genügend Arbeitsspeicher, um den Vorgang auszuführen.
 
 
 </dt> </dl> </dd> <dt>
@@ -1057,27 +1057,27 @@ DirectDraw verfügt nicht über genügend Arbeitsspeicher zum Ausführen des Vor
 
 
 
-DirectDraw verfügt nicht über genügend Anzeigespeicher zum Ausführen des Vorgangs.
+DirectDraw verfügt nicht über genügend Anzeigespeicher, um den Vorgang auszuführen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="DDERR_OVERLAPPINGRECTS"></span><span id="dderr_overlappingrects"></span>**DDERR \_ OVERLAPPINGRECTS**
+<span id="DDERR_OVERLAPPINGRECTS"></span><span id="dderr_overlappingrects"></span>**\_DDERR-ÜBERLAPPENDERECTS**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Quell- und Zielrechtecke befinden sich auf derselben Oberfläche und überlappen sich gegenseitig.
+Die Quell- und Zielrechtecke befinden sich auf derselben Oberfläche und überlappen sich.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="DDERR_OVERLAYCANTCLIP"></span><span id="dderr_overlaycantclip"></span>**DDERR \_ OVERLAYCANTCLIP**
+<span id="DDERR_OVERLAYCANTCLIP"></span><span id="dderr_overlaycantclip"></span>**DDERR \_ OVERLAYCLIP**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Hardware unterstützt keine abgeschnittenen Überlagerungen.
+Die Hardware unterstützt keine beschnittenen Überlagerungen.
 
 
 </dt> </dl> </dd> <dt>
@@ -1087,7 +1087,7 @@ Die Hardware unterstützt keine abgeschnittenen Überlagerungen.
 
 
 
-Es wurde versucht, mehr als einen Farbschlüssel auf einer Überlagerung aktiv zu haben.
+Es wurde versucht, mehr als einen Farbschlüssel für eine Überlagerung zu aktivieren.
 
 
 </dt> </dl> </dd> <dt>
@@ -1097,7 +1097,7 @@ Es wurde versucht, mehr als einen Farbschlüssel auf einer Überlagerung aktiv z
 
 
 
-Die [**IDirectDrawSurface7::GetOverlayPosition-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawsurface7-getoverlayposition) wurde für eine verborgene Überlagerung aufgerufen.
+Die [**IDirectDrawSurface7::GetOverlayPosition-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawsurface7-getoverlayposition) wurde für eine ausgeblendete Überlagerung aufgerufen.
 
 
 </dt> </dl> </dd> <dt>
@@ -1107,7 +1107,7 @@ Die [**IDirectDrawSurface7::GetOverlayPosition-Methode**](/windows/desktop/api/D
 
 
 
-Der Zugriff auf diese Palette wird verweigert, da die Palette von einem anderen Thread gesperrt wird.
+Der Zugriff auf diese Palette wird verweigert, da die Palette durch einen anderen Thread gesperrt ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -1127,7 +1127,7 @@ Dieser Prozess hat bereits eine primäre Oberfläche erstellt.
 
 
 
-Die an die [**IDirectDrawClipper::GetClipList-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawclipper-getcliplist) übergebene Region ist zu klein.
+Der an die [**IDirectDrawClipper::GetClipList-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawclipper-getcliplist) übergebene Bereich ist zu klein.
 
 
 </dt> </dl> </dd> <dt>
@@ -1137,7 +1137,7 @@ Die an die [**IDirectDrawClipper::GetClipList-Methode**](/windows/desktop/api/Dd
 
 
 
-Es wurde versucht, eine Oberfläche an eine andere Oberfläche anfügen, an die sie bereits angefügt ist.
+Es wurde versucht, eine Oberfläche an eine andere Oberfläche anzufügen, an die sie bereits angefügt ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -1147,7 +1147,7 @@ Es wurde versucht, eine Oberfläche an eine andere Oberfläche anfügen, an die 
 
 
 
-Es wurde versucht, eine Oberfläche zu einer Abhängigkeit von einer anderen Oberfläche zu machen, von der sie bereits abhängig ist.
+Es wurde versucht, eine Oberfläche zu einer Abhängigkeit einer anderen Oberfläche zu machen, von der sie bereits abhängig ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -1157,7 +1157,7 @@ Es wurde versucht, eine Oberfläche zu einer Abhängigkeit von einer anderen Obe
 
 
 
-Der Zugriff auf die Oberfläche wird verweigert, da die Oberfläche von einem anderen Thread gesperrt wird.
+Der Zugriff auf die Oberfläche wird verweigert, da die Oberfläche durch einen anderen Thread gesperrt ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -1177,7 +1177,7 @@ Der Zugriff auf die Oberfläche wird verweigert, da die Oberfläche verdeckt ist
 
 
 
-Der Zugriff auf die Oberfläche wird verweigert, da der Oberflächenspeicher nicht mehr verfügbar ist. Rufen Sie [**die IDirectDrawSurface7::Restore-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawsurface7-restore) auf dieser Oberfläche auf, um den zugeordneten Arbeitsspeicher wiederherzustellen.
+Der Zugriff auf die Oberfläche wird verweigert, da der Oberflächenspeicher nicht mehr vorhanden ist. Rufen Sie auf dieser Oberfläche die [**IDirectDrawSurface7::Restore-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawsurface7-restore) auf, um den zugeordneten Arbeitsspeicher wiederherzustellen.
 
 
 </dt> </dl> </dd> <dt>
@@ -1197,12 +1197,12 @@ Die angeforderte Oberfläche ist nicht angefügt.
 
 
 
-Neu für DirectX 7.0. Wenn dieser Wert von der [**IDirectDraw7::StartModeTest-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdraw7-startmodetest) zurückgegeben wird, bedeutet dieser Wert, dass kein Test initiiert werden konnte, da alle für tests ausgewählten Auflösungen bereits Informationen zur Aktualisierungsrate in der Registrierung enthalten. Wenn der Wert [**von IDirectDraw7::EvaluateMode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdraw7-evaluatemode)zurückgegeben wird, bedeutet der Wert, dass DirectDraw einen Aktualisierungsratentest abgeschlossen hat.
+Neu für DirectX 7.0. Wenn dieser Wert von der [**IDirectDraw7::StartModeTest-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdraw7-startmodetest) zurückgegeben wird, bedeutet dies, dass kein Test initiiert werden konnte, da alle für tests ausgewählten Lösungen bereits Aktualisierungsrateinformationen in der Registrierung enthalten. Bei Rückgabe durch [**IDirectDraw7::EvaluateMode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdraw7-evaluatemode)bedeutet der Wert, dass DirectDraw einen Aktualisierungsratentest abgeschlossen hat.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="DDERR_TOOBIGHEIGHT"></span><span id="dderr_toobigheight"></span>**DDERR \_ TOIGHT**
+<span id="DDERR_TOOBIGHEIGHT"></span><span id="dderr_toobigheight"></span>**DDERR \_ TOOBIGHEIGHT**
 </dt> <dd> <dl> <dt>
 
 
@@ -1217,7 +1217,7 @@ Die von DirectDraw angeforderte Höhe ist zu groß.
 
 
 
-Die von DirectDraw angeforderte Größe ist zu groß. Die einzelnen Größen für Höhe und Breite sind jedoch gültig.
+Die von DirectDraw angeforderte Größe ist zu groß. Die individuelle Höhe und Breite sind jedoch gültige Größen.
 
 
 </dt> </dl> </dd> <dt>
@@ -1277,7 +1277,7 @@ Die Anzeige befindet sich derzeit in einem nicht unterstützten Modus.
 
 
 
-Ein vertikales Leerzeichen wird in Bearbeitung.
+Ein vertikales Leerzeichen wird ausgeführt.
 
 
 </dt> </dl> </dd> <dt>
@@ -1292,12 +1292,12 @@ Der Videoport ist nicht aktiv.
 
 </dt> </dl> </dd> <dt>
 
-<span id="DDERR_WASSTILLDRAWING"></span><span id="dderr_wasstilldrawing"></span>**DDERR \_ WASUNGDRAWING**
+<span id="DDERR_WASSTILLDRAWING"></span><span id="dderr_wasstilldrawing"></span>**DDERR \_ WASDRAWING**
 </dt> <dd> <dl> <dt>
 
 
 
-Der vorherige bitblt-Vorgang, bei dem Informationen auf oder von dieser Oberfläche übertragen werden, ist unvollständig.
+Der vorherige Bitblt-Vorgang, der Informationen an diese oder von dieser Oberfläche überträgt, ist unvollständig.
 
 
 </dt> </dl> </dd> <dt>

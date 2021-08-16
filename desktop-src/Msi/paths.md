@@ -1,5 +1,5 @@
 ---
-description: Der Paths-Datentyp ist eine Textzeichenfolge, die eine Liste von Path-Datentypen enthält, die durch Semikolons (;).
+description: Der Datentyp Paths ist eine Textzeichenfolge, die eine Liste von Path-Datentypen enthält, die durch Semikolons (;).
 ms.assetid: 8bf4fdaa-ec2d-4a90-b4ad-8e9e45b19183
 title: Pfade (Windows Installer)
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118377623"
 ---
 # <a name="paths-windows-installer"></a>Pfade (Windows Installer)
 
-Der Paths-Datentyp ist eine Textzeichenfolge, die eine Liste von [Path-Datentypen](path.md) enthält, die durch Semikolons (;).
+Der Datentyp Paths ist eine Textzeichenfolge, die eine Liste von [Path-Datentypen](path.md) enthält, die durch Semikolons (;).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
