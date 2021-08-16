@@ -48,7 +48,7 @@ Fremdschlüssel für die Family -Spalte der [ImageFamilies-Tabelle (Patchwiz.dll
 <span id="FTK"></span><span id="ftk"></span>FTK
 </dt> <dd>
 
-Fremdschlüssel in [Der Dateitabelle](file-table.md) des .msi datei des aktualisierten Images.
+Fremdschlüssel in [Der Dateitabelle des](file-table.md) .msi datei des aktualisierten Images.
 
 </dd> <dt>
 
@@ -62,7 +62,7 @@ Vollständiger Pfad der externen Datei, einschließlich des Dateinamens. Das Fil
 <span id="SymbolPaths"></span><span id="symbolpaths"></span><span id="SYMBOLPATHS"></span>SymbolPaths
 </dt> <dd>
 
-Vollständiger Pfad, der nach Symboldateien der datei gesucht wird, die in der FTK-Spalte angegeben ist.
+Vollständiger Pfad, der nach Symboldateien der datei gesucht wurde, die in der FTK-Spalte angegeben ist.
 
 </dd> <dt>
 
@@ -78,7 +78,7 @@ Die Werte können dezimal oder hexadezimal sein. [Patchwiz.dll](patchwiz-dll.md)
 <span id="IgnoreLengths"></span><span id="ignorelengths"></span><span id="IGNORELENGTHS"></span>IgnoreLengths
 </dt> <dd>
 
-Der Wert in diesem Feld ist eine durch Trennzeichen getrennte Liste von Bereichslängen in Bytes für die Bereiche, die in der externen Datei ignoriert werden sollen. Die Reihenfolge und Anzahl der Bereiche in der Liste müssen mit den Elementen in der IgnoreOffsets -Spalte übereinstimmen. Diese Spalte ist optional.
+Der Wert in diesem Feld ist eine durch Trennzeichen getrennte Liste von Bereichslängen in Bytes für die Bereiche, die in der externen Datei ignoriert werden sollen. Die Reihenfolge und Anzahl der Bereiche in der Liste müssen mit den Elementen in der IgnoreOffsets-Spalte übereinstimmen. Diese Spalte ist optional.
 
 Die Werte können dezimal oder hexadezimal sein. [Patchwiz.dll](patchwiz-dll.md) behandelt den Wert als hexadezimal, wenn ihm "0x" vorangestellt ist. Die Spalten sind Zeichenfolgenspalten, Patchwiz.dll werden die Werte in ULONGs konvertiert.
 

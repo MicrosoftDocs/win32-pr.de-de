@@ -1,9 +1,9 @@
 ---
-title: Player. Controls
-description: Die Eigenschaft Steuerelemente Ruft das Steuerelement Objekt ab.
+title: Player.controls
+description: Die Controls-Eigenschaft ruft das Controls-Objekt ab.
 ms.assetid: 25771690-af04-4c31-967d-cebae42ebe64
 keywords:
-- Player. Controls Windows-Media Player
+- Player.controls-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,24 +14,24 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bcd4ede5b89be590172092423b3390a52e8d2db0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 237bdfc778400be6eaa3e469715d1bfcbae9bdd7ff45694df7e14a63ed5f9e0b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358694"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118338344"
 ---
-# <a name="playercontrols"></a>Player. Controls
+# <a name="playercontrols"></a>Player.controls
 
-Die Eigenschaft Steuer **Elemente** Ruft das Steuerelement Objekt ab.
+Die **Controls-Eigenschaft** ruft das Controls-Objekt ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player* . Steuer **Elemente**
+*Player* . **Steuerelemente**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein Schreib geschütztes Steuer **Element Objekt.**
+Diese Eigenschaft ist ein  schreibgeschütztes Controls-Objekt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,12 +39,12 @@ Diese Eigenschaft ist ein Schreib geschütztes Steuer **Element Objekt.**
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

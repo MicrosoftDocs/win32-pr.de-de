@@ -1,11 +1,11 @@
 ---
 title: Query-Policy-Object-Attribut
-description: Verweis auf den Standard Query-Policy, der für diesen Server erzwungen wird.
+description: Verweis auf die für diesen Server geltende Standard-Query-Policy.
 ms.assetid: 5a492305-ac57-4331-b96b-bdd8107d4a4d
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Query-Policy-Object-Attribut
-- queryPolicyObject-Attribut, AD-Schema
+- AD-Schema des Query-Policy-Object-Attributs
+- queryPolicyObject-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e33bc2840fb1ca8a936b417c4407f48fcdf7f46
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 57ddd8b98cdc19efc8bed8db709fb0b335ff770129dde5bbf5933b706273d722
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117836780"
 ---
 # <a name="query-policy-object-attribute"></a>Query-Policy-Object-Attribut
 
-Verweis auf den Standard Query-Policy, der für diesen Server erzwungen wird.
+Verweis auf die für diesen Server geltende Standard-Query-Policy.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
 | CN                | Query-Policy-Object                     |
-| LDAP-Display-Name | queryPolicyObject                       |
+| Ldap-Anzeigename | queryPolicyObject                       |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.607                  |
 | System-ID-GUID    | e1aea403-cd5b-11d0-afff-0000f80367c1    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
@@ -43,7 +43,7 @@ Verweis auf den Standard Query-Policy, der für diesen Server erzwungen wird.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,20 +58,20 @@ Verweis auf den Standard Query-Policy, der für diesen Server erzwungen wird.
 |------------------------|------------------------------------------------------------------------------------------------------|
 | Link-ID                | 68                                                                                                   |
 | MAPI-Id                | \-                                                                                                   |
-| System-Only            | False                                                                                                |
-| Ist-einwertig       | Richtig                                                                                                 |
-| Ist indiziert             | False                                                                                                |
-| Im globalen Katalog      | False                                                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                         |
+| System-Only            | Falsch                                                                                                |
+| Ist einwertig       | Richtig                                                                                                 |
+| Ist indiziert             | Falsch                                                                                                |
+| Im globalen Katalog      | Falsch                                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                         |
 | Range-Lower            | \-                                                                                                   |
 | Range-Upper            | \-                                                                                                   |
 | Search-Flags           | 0x00000000                                                                                           |
 | System-Flags           | 0x00000010                                                                                           |
-| In verwendete Klassen        | [**NTDS-DSA**](c-ntdsdsa.md)<br/> [**NTDS-Site-Settings**](c-ntdssitesettings.md)<br/> |
+| In verwendete Klassen        | [**NTDS-DSA**](c-ntdsdsa.md)<br/> [**NTDS-Site-Einstellungen**](c-ntdssitesettings.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,16 +79,16 @@ Verweis auf den Standard Query-Policy, der für diesen Server erzwungen wird.
 |------------------------|------------------------------------------------------------------------------------------------------|
 | Link-ID                | 68                                                                                                   |
 | MAPI-Id                | \-                                                                                                   |
-| System-Only            | False                                                                                                |
-| Ist-einwertig       | Richtig                                                                                                 |
-| Ist indiziert             | False                                                                                                |
-| Im globalen Katalog      | False                                                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                         |
+| System-Only            | Falsch                                                                                                |
+| Ist einwertig       | Richtig                                                                                                 |
+| Ist indiziert             | Falsch                                                                                                |
+| Im globalen Katalog      | Falsch                                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                         |
 | Range-Lower            | \-                                                                                                   |
 | Range-Upper            | \-                                                                                                   |
 | Search-Flags           | 0x00000000                                                                                           |
 | System-Flags           | 0x00000010                                                                                           |
-| In verwendete Klassen        | [**NTDS-DSA**](c-ntdsdsa.md)<br/> [**NTDS-Site-Settings**](c-ntdssitesettings.md)<br/> |
+| In verwendete Klassen        | [**NTDS-DSA**](c-ntdsdsa.md)<br/> [**NTDS-Site-Einstellungen**](c-ntdssitesettings.md)<br/> |
 
 
 
@@ -100,16 +100,16 @@ Verweis auf den Standard Query-Policy, der für diesen Server erzwungen wird.
 |------------------------|------------------------------------------------------------------------------------------------------|
 | Link-ID                | 68                                                                                                   |
 | MAPI-Id                | \-                                                                                                   |
-| System-Only            | False                                                                                                |
-| Ist-einwertig       | Richtig                                                                                                 |
-| Ist indiziert             | False                                                                                                |
-| Im globalen Katalog      | False                                                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                         |
+| System-Only            | Falsch                                                                                                |
+| Ist einwertig       | Richtig                                                                                                 |
+| Ist indiziert             | Falsch                                                                                                |
+| Im globalen Katalog      | Falsch                                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                         |
 | Range-Lower            | \-                                                                                                   |
 | Range-Upper            | \-                                                                                                   |
 | Search-Flags           | 0x00000000                                                                                           |
 | System-Flags           | 0x00000010                                                                                           |
-| In verwendete Klassen        | [**NTDS-DSA**](c-ntdsdsa.md)<br/> [**NTDS-Site-Settings**](c-ntdssitesettings.md)<br/> |
+| In verwendete Klassen        | [**NTDS-DSA**](c-ntdsdsa.md)<br/> [**NTDS-Site-Einstellungen**](c-ntdssitesettings.md)<br/> |
 
 
 
@@ -121,16 +121,16 @@ Verweis auf den Standard Query-Policy, der für diesen Server erzwungen wird.
 |------------------------|------------------------------------------------------------------------------------------------------|
 | Link-ID                | 68                                                                                                   |
 | MAPI-Id                | \-                                                                                                   |
-| System-Only            | False                                                                                                |
-| Ist-einwertig       | Richtig                                                                                                 |
-| Ist indiziert             | False                                                                                                |
-| Im globalen Katalog      | False                                                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                         |
+| System-Only            | Falsch                                                                                                |
+| Is-Single-Valued       | Richtig                                                                                                 |
+| Ist indiziert             | Falsch                                                                                                |
+| Im globalen Katalog      | Falsch                                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                         |
 | Range-Lower            | \-                                                                                                   |
 | Range-Upper            | \-                                                                                                   |
 | Search-Flags           | 0x00000000                                                                                           |
 | System-Flags           | 0x00000010                                                                                           |
-| In verwendete Klassen        | [**NTDS-DSA**](c-ntdsdsa.md)<br/> [**NTDS-Site-Settings**](c-ntdssitesettings.md)<br/> |
+| In verwendete Klassen        | [**NTDS-DSA**](c-ntdsdsa.md)<br/> [**NTDS-Site-Einstellungen**](c-ntdssitesettings.md)<br/> |
 
 
 
@@ -142,16 +142,16 @@ Verweis auf den Standard Query-Policy, der für diesen Server erzwungen wird.
 |------------------------|------------------------------------------------------------------------------------------------------|
 | Link-ID                | 68                                                                                                   |
 | MAPI-Id                | \-                                                                                                   |
-| System-Only            | False                                                                                                |
-| Ist-einwertig       | Richtig                                                                                                 |
-| Ist indiziert             | False                                                                                                |
-| Im globalen Katalog      | False                                                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                         |
+| System-Only            | Falsch                                                                                                |
+| Is-Single-Valued       | Richtig                                                                                                 |
+| Ist indiziert             | Falsch                                                                                                |
+| Im globalen Katalog      | Falsch                                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                         |
 | Range-Lower            | \-                                                                                                   |
 | Range-Upper            | \-                                                                                                   |
 | Search-Flags           | 0x00000000                                                                                           |
 | System-Flags           | 0x00000010                                                                                           |
-| In verwendete Klassen        | [**NTDS-DSA**](c-ntdsdsa.md)<br/> [**NTDS-Site-Settings**](c-ntdssitesettings.md)<br/> |
+| In verwendete Klassen        | [**NTDS-DSA**](c-ntdsdsa.md)<br/> [**NTDS-Site-Einstellungen**](c-ntdssitesettings.md)<br/> |
 
 
 
@@ -163,16 +163,16 @@ Verweis auf den Standard Query-Policy, der für diesen Server erzwungen wird.
 |------------------------|------------------------------------------------------------------------------------------------------|
 | Link-ID                | 68                                                                                                   |
 | MAPI-Id                | \-                                                                                                   |
-| System-Only            | False                                                                                                |
-| Ist-einwertig       | Richtig                                                                                                 |
-| Ist indiziert             | False                                                                                                |
-| Im globalen Katalog      | False                                                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                         |
+| System-Only            | Falsch                                                                                                |
+| Is-Single-Valued       | Richtig                                                                                                 |
+| Ist indiziert             | Falsch                                                                                                |
+| Im globalen Katalog      | Falsch                                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                         |
 | Range-Lower            | \-                                                                                                   |
 | Range-Upper            | \-                                                                                                   |
 | Search-Flags           | 0x00000000                                                                                           |
 | System-Flags           | 0x00000010                                                                                           |
-| In verwendete Klassen        | [**NTDS-DSA**](c-ntdsdsa.md)<br/> [**NTDS-Site-Settings**](c-ntdssitesettings.md)<br/> |
+| In verwendete Klassen        | [**NTDS-DSA**](c-ntdsdsa.md)<br/> [**NTDS-Site-Einstellungen**](c-ntdssitesettings.md)<br/> |
 
 
 
@@ -184,16 +184,16 @@ Verweis auf den Standard Query-Policy, der für diesen Server erzwungen wird.
 |------------------------|------------------------------------------------------------------------------------------------------|
 | Link-ID                | 68                                                                                                   |
 | MAPI-Id                | \-                                                                                                   |
-| System-Only            | False                                                                                                |
-| Ist-einwertig       | Richtig                                                                                                 |
-| Ist indiziert             | False                                                                                                |
-| Im globalen Katalog      | False                                                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                         |
+| System-Only            | Falsch                                                                                                |
+| Is-Single-Valued       | Richtig                                                                                                 |
+| Ist indiziert             | Falsch                                                                                                |
+| Im globalen Katalog      | Falsch                                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                         |
 | Range-Lower            | \-                                                                                                   |
 | Range-Upper            | \-                                                                                                   |
 | Search-Flags           | 0x00000000                                                                                           |
 | System-Flags           | 0x00000010                                                                                           |
-| In verwendete Klassen        | [**NTDS-DSA**](c-ntdsdsa.md)<br/> [**NTDS-Site-Settings**](c-ntdssitesettings.md)<br/> |
+| In verwendete Klassen        | [**NTDS-DSA**](c-ntdsdsa.md)<br/> [**NTDS-Site-Einstellungen**](c-ntdssitesettings.md)<br/> |
 
 
 

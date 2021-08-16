@@ -1,7 +1,7 @@
 ---
-description: Bestimmt das Punktprodukt zweier 2D-Vektoren.
+description: Bestimmt das Punktprodukt von zwei 2D-Vektoren.
 ms.assetid: ae77ff29-44be-4b67-9c63-aaffa4fe8d59
-title: D3DXVec2Dot-Funktion (D3dx9math. h)
+title: D3DXVec2Dot-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 79b65127c415695b3df9f927b6edff8fcdd5c58d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 98cb865ebd075dcd78db8200b18de1644107e9a497b977fe062017c758e52256
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353710"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118523826"
 ---
 # <a name="d3dxvec2dot-function"></a>D3DXVec2Dot-Funktion
 
-Bestimmt das Punktprodukt zweier 2D-Vektoren.
+Bestimmt das Punktprodukt von zwei 2D-Vektoren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,27 +41,27 @@ FLOAT D3DXVec2Dot(
 
 <dl> <dt>
 
-*pV1* \[ in\]
+*pV1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](d3dxvector2.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR2**](d3dxvector2.md) -Struktur.
+Zeiger auf eine [**D3DXVECTOR2-Quellstruktur.**](d3dxvector2.md)
 
 </dd> <dt>
 
-*pV2* \[ in\]
+*pV2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](d3dxvector2.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR2**](d3dxvector2.md) -Struktur.
+Zeiger auf eine [**D3DXVECTOR2-Quellstruktur.**](d3dxvector2.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 Das Skalarprodukt.
 
@@ -71,12 +71,12 @@ Das Skalarprodukt.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

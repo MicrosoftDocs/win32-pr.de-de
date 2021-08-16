@@ -1,19 +1,19 @@
 ---
-description: Im folgenden Codebeispiel wird gezeigt, wie mit EnumDisplayDevices Informationen zu einem Bildschirm angezeigt werden.
+description: Das folgende Codebeispiel zeigt, wie EnumDisplayDevices verwendet wird, um Informationen zu einem Anzeigemonitor abzurufen.
 ms.assetid: 8c2420de-292f-481e-b06b-54cc174a8faf
-title: Informationen zu einem Anzeige Monitor
+title: Abrufen von Informationen auf einem Anzeigemonitor
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e8b120563e9ceed2e87d66e5bb79790a0f7c771
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c4b446b379d1d90dd32eedb47d356d2de0fb9e07d1f30eba9e65e470a3f24e82
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104993990"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117886723"
 ---
-# <a name="getting-information-on-a-display-monitor"></a>Informationen zu einem Anzeige Monitor
+# <a name="getting-information-on-a-display-monitor"></a>Abrufen von Informationen auf einem Anzeigemonitor
 
-Im folgenden Codebeispiel wird gezeigt, wie mit [**EnumDisplayDevices**](/windows/desktop/api/Winuser/nf-winuser-enumdisplaydevicesa) Informationen zu einem Bildschirm angezeigt werden.
+Das folgende Codebeispiel zeigt, wie [**EnumDisplayDevices**](/windows/desktop/api/Winuser/nf-winuser-enumdisplaydevicesa) verwendet wird, um Informationen zu einem Anzeigemonitor abzurufen.
 
 
 ```C++

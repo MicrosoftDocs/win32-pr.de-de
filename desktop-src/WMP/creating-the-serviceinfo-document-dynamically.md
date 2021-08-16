@@ -1,41 +1,41 @@
 ---
-title: Dynamisches Erstellen des serviceingefo-Dokuments
-description: Dynamisches Erstellen des serviceingefo-Dokuments
+title: Dynamisches Erstellen des ServiceInfo-Dokuments
+description: Dynamisches Erstellen des ServiceInfo-Dokuments
 ms.assetid: 96937b04-f705-49f6-8ddf-25c98a51dc9a
 keywords:
-- Windows Media Player Online Stores, Erstellen eines serviceingefo-Dokuments
-- Online Stores, Erstellen eines serviceingefo-Dokuments
-- Typ 1 Online Stores, serviceInfo-Dokument wird erstellt
-- Typ 2 Online Stores, Erstellen von serviceInfo-Dokumenten
-- Windows Media Player Online Stores, Dynamisches Erstellen von servicabfo-Dokumenten
-- Online Stores, Dynamisches Erstellen von serviceingefo-Dokumenten
-- Typ 1 Online Stores, Dynamisches Erstellen von serviceInfo-Dokumenten
-- Typ 2 Online Stores, Dynamisches Erstellen von serviceInfo-Dokumenten
-- Windows Media Player Online Stores, serviceingefo-Dokument
-- Online Stores, serviceingefo-Dokument
-- Typ 1 Online Stores, serviceInfo-Dokument
-- Typ 2 Online Stores, serviceInfo-Dokument
-- Dynamisches Erstellen von servicinfo-Dokumenten
-- servicinfo-Dokument wird erstellt
-- Servicinfo-Dokument
+- Windows Media Player,Erstellen eines ServiceInfo-Dokuments
+- Onlineshops,Erstellen eines ServiceInfo-Dokuments
+- Typ 1 Onlineshops,Erstellen eines ServiceInfo-Dokuments
+- 'Typ 2: Onlineshops,Erstellen eines ServiceInfo-Dokuments'
+- Windows Media Player,dynamisches Erstellen eines ServiceInfo-Dokuments
+- Onlineshops,dynamisches Erstellen eines ServiceInfo-Dokuments
+- Geben Sie 1 Onlineshops ein, und erstellen Sie dynamisch ein ServiceInfo-Dokument.
+- 'Typ 2: Onlineshops, dynamisches Erstellen eines ServiceInfo-Dokuments'
+- Windows Media Player,ServiceInfo-Dokument
+- Onlineshops,ServiceInfo-Dokument
+- Typ 1 Onlineshops,ServiceInfo-Dokument
+- Typ 2 Onlineshops,ServiceInfo-Dokument
+- Dynamisches Erstellen eines ServiceInfo-Dokuments
+- Erstellen eines ServiceInfo-Dokuments
+- ServiceInfo-Dokument
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 90159e72046536cf6b69521586a0640935478eb1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e3883487d072af57174a1f40f2fcef05d3290917b473a95bf723c34d793c5ba5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118340990"
 ---
-# <a name="creating-the-serviceinfo-document-dynamically"></a>Dynamisches Erstellen des serviceingefo-Dokuments
+# <a name="creating-the-serviceinfo-document-dynamically"></a>Dynamisches Erstellen des ServiceInfo-Dokuments
 
-Sie können ASP zum Erstellen des serviceingefo-Dokuments verwenden. Dadurch erhalten Sie mehr Flexibilität in Ihrem Online Store, indem Sie die folgenden Verfahren verwenden:
+Sie können ASP verwenden, um Ihr ServiceInfo-Dokument zu erstellen. Dies kann Ihnen mithilfe der folgenden Techniken mehr Flexibilität in Ihrem Onlineshop bieten:
 
--   Dynamisches Erstellen des Host Namens für URLs.
--   Ändern von URLs für die Lokalisierung basierend auf Gebiets Schema-und Geoid-Parametern.
--   Dynamisches Anfügen von Abfrage Zeichen folgen Parametern aus der serviceingefo-URL an andere URLs, z. b. die URL der Navigationsseite.
+-   Dynamisches Generieren des Hostnamens für URLs.
+-   Ändern von URLs für die Lokalisierung basierend auf Locale- und Geoidparametern.
+-   Dynamisches Anfügen von Abfragezeichenfolgenparametern aus der ServiceInfo-URL an andere URLs, z. B. die URL der Navigationsseite.
 
-Der folgende Beispielcode zeigt eine einfache ASP-Seite, die ein servicanfo-Dokument dynamisch erstellt:
+Der folgende Beispielcode zeigt eine einfache ASP-Seite, die dynamisch ein ServiceInfo-Dokument erstellt:
 
 
 ```C++
@@ -67,30 +67,30 @@ Der folgende Beispielcode zeigt eine einfache ASP-Seite, die ein servicanfo-Doku
 
 
 
-Der vorherige Beispielcode verwendet ASP zum Abrufen des Host namens vom Webserver und zum dynamischen Erstellen der URLs im Dokument. Der Code ruft auch den Parameter für die *locale* -Abfrage Zeichenfolge aus der servicinfo-Anforderung ab und fügt ihn an die URL für die Navigationsseite an.
+Im obigen Beispielcode wird ASP verwendet, um den Hostnamen vom Webserver abzurufen und die URLs im Dokument dynamisch zu erstellen. Der Code ruft auch den *Abfragezeichenfolgenparameter des Locale-Objekts* aus der ServiceInfo-Anforderung ab und fügt ihn an die URL für die Navigationsseite an.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen, die von Typ 1 und Typ 2 Online Stores gemeinsam sind**](information-common-to-type-1-and-type-2-online-stores.md)
+[**Allgemeine Informationen zu Onlineshops vom Typ 1 und 2**](information-common-to-type-1-and-type-2-online-stores.md)
 </dt> <dt>
 
-[**Navigation für den Typ 2-Online Speicher**](navigation-for-type-2-online-stores.md)
+[**Navigation für Type 2 Online Stores**](navigation-for-type-2-online-stores.md)
 </dt> <dt>
 
-[**ServiceInfo-Dokument für einen Typ-1-Online Store**](serviceinfo-document-for-a-type-1-online-store.md)
+[**ServiceInfo-Dokument für eine Online-Store**](serviceinfo-document-for-a-type-1-online-store.md)
 </dt> <dt>
 
-[**ServiceInfo-Dokument für einen Typ 2-Online Store**](serviceinfo-document-for-a-type-2-online-store.md)
+[**ServiceInfo-Dokument für eine Online-Store**](serviceinfo-document-for-a-type-2-online-store.md)
 </dt> <dt>
 
-[**Servicinfo-Dokument**](serviceinfo-document.md)
+[**ServiceInfo-Dokument**](serviceinfo-document.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

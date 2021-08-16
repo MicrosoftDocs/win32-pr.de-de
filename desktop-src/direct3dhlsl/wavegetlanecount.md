@@ -1,9 +1,9 @@
 ---
-title: Wavegetlanecount-Funktion
-description: Gibt die Anzahl der Bereiche in einer Welle für diese Architektur zurück.
+title: WaveGetLaneCount-Funktion
+description: Gibt die Anzahl der Lanes in einer Welle in dieser Architektur zurück.
 ms.assetid: 04059B5E-0F62-4623-84AD-E41FF7166B34
 keywords:
-- Wavegetlanecount-Funktion HLSL
+- WaveGetLaneCount-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0bfdb3ce2dfde84b070fee57e7fc587a71d5f948
-ms.sourcegitcommit: f01bc6744cea55ad1aeeace7981a30b567e6fe60
+ms.openlocfilehash: 6a177e50ee3c4c9c715ea109faaed72c24e174e4e942059a4dee0dcd0de91a9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104391227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118504738"
 ---
-# <a name="wavegetlanecount-function"></a>Wavegetlanecount-Funktion
+# <a name="wavegetlanecount-function"></a>WaveGetLaneCount-Funktion
 
-Gibt die Anzahl der Bereiche in einer Welle für diese Architektur zurück.
+Gibt die Anzahl der Lanes in einer Welle in dieser Architektur zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,11 +36,11 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das Ergebnis ist zwischen 4 und 128 und umfasst alle Wellen: aktive, inaktive und/oder hilfsbereiche. Das Ergebnis, das von dieser Funktion zurückgegeben wird, kann sich abhängig von der Treiber Implementierung erheblich unterscheiden.
+Das Ergebnis liegt zwischen 4 und 128 und umfasst alle Wellen: aktive, inaktive und/oder Hilfsspuren. Das von dieser Funktion zurückgegebene Ergebnis kann je nach Treiberimplementierung erheblich variieren.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird vom Shader-Modell 6,0 in allen shaderphasen unterstützt. 
+Diese Funktion wird von Shadermodell 6.0 in allen Shaderstufen unterstützt. 
 
 
 
@@ -56,10 +56,10 @@ Diese Funktion wird vom Shader-Modell 6,0 in allen shaderphasen unterstützt.
 
 <dl> <dt>
 
-[Übersicht über Shader-Modell 6](hlsl-shader-model-6-0-features-for-direct3d-12.md)
+[Übersicht über Shadermodell 6](hlsl-shader-model-6-0-features-for-direct3d-12.md)
 </dt> <dt>
 
-[Shader-Modell 6](shader-model-6-0.md)
+[Shadermodell 6](shader-model-6-0.md)
 </dt> </dl>
 
  

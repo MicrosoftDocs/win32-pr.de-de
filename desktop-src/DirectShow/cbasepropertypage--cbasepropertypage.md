@@ -1,5 +1,5 @@
 ---
-description: CBasePropertyPage.~CBasePropertyPage-Destruktor – Destruktormethode.
+description: 'CBasePropertyPage.~CBasePropertyPage-Destruktor : Destruktormethode.'
 ms.assetid: 9a8e18b7-7582-4a91-8114-6f96481284c1
 title: CBasePropertyPage.~CBasePropertyPage-Destruktor (Cprop.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b5f69ca081379a6e493369a4dde3454d31201c9d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e3fd9fe5b64e7fa4b12c76e5fdb85ef902343c792b49b945e41358e2ede93c0e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117823234"
 ---
 # <a name="cbasepropertypagecbasepropertypage-destructor"></a>CBasePropertyPage.~CBasePropertyPage-Destruktor
 
@@ -40,10 +40,10 @@ Destruktormethode.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Cprop.h (include Streams.h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

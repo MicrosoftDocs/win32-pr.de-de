@@ -4,79 +4,79 @@ description: 'WCS-Farbauswahlpalette: Profilschema und Algorithmen'
 ms.assetid: 64b9871a-1b4f-4e9a-be4d-4c25b3198b91
 keywords:
 - Windows Color System (WCS), Gamut Map Model Profile (GMMP)
-- WCS (Windows Color System), Gamut Map Model Profile (GMMP)
-- Bild Farbverwaltung, Gamut Map Model Profile (GMMP)
-- Farbverwaltung, Gamut Map Model Profile (GMMP)
-- Farben, Gamut Map Model Profile (GMMP)
-- Windows Color System (WCS), profile
-- WCS (Windows Color System), profile
-- Bildfarben Verwaltung, profile
-- Farbverwaltung, profile
-- Farben, profile
-- Farbskala Map Model Profile (GMMP)
-- GMMP (Gamut Map Model Profile)
-- WCS-Modell Profil für gamingkarten
-- Schemas, Gamut Map Model Profile (GMMP)
-- Algorithmen, Gamut Map Model Profile (GMMP)
+- WCS (Windows Color System), gamut map model profile (GMMP)
+- Bildfarbverwaltung, Gamut-Kartenmodellprofil (GMMP)
+- Farbverwaltung, Gamut-Kartenmodellprofil (GMMP)
+- Colors, gamut map model profile (GMMP) (Farben,Gamut-Kartenmodellprofil (GMMP))
+- Windows Color System (WCS), Profile
+- WCS (Windows Color System), Profile
+- Bildfarbverwaltung, Profile
+- Farbverwaltung, Profile
+- Farben, Profile
+- gamut map model profile (GMMP)
+- GMMP (Gamut-Kartenmodellprofil)
+- GAMUT-Kartenmodellprofil für WCS
+- schemas,gamut map model profile (GMMP)
+- algorithms,gamut map model profile (GMMP)
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3714e5d7592cb1fbbbfa98e238642a2fcb38bafd
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: e7db5b7a26fe5832fe33095c5785e90ad0a6938649878ff279e101a7e5817cc4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104566894"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118037290"
 ---
 # <a name="wcs-gamut-map-model-profile-schema-and-algorithms"></a>WCS-Farbauswahlpalette: Profilschema und Algorithmen
 
 -   [Übersicht](#overview)
--   [Architektur des Gamut-Karten Modell Profils](#gamut-map-model-profile-architecture)
--   [Generierung der Gamut-Grenze](#generation-of-the-gamut-boundary)
+-   [Architektur des Gamut-Kartenmodellprofils](#gamut-map-model-profile-architecture)
+-   [Generierung der Gamutgrenze](#generation-of-the-gamut-boundary)
 -   [Das GMMP-Schema](#the-gmmp-schema)
--   [Die GMMP-Schema Elemente](#the-gmmp-schema-elements)
--   [Gamutmapmodel](#defaultbaselinegamutmapmodel-type)
+-   [Die GMMP-Schemaelemente](#the-gmmp-schema-elements)
+-   [GamutMapModel](#defaultbaselinegamutmapmodel-type)
     -   [Namespace](#namespace)
     -   [Version](#version)
     -   [Dokumentation](#documentation)
-    -   [Defaultbaselinegamutmapmodel-Typ](#defaultbaselinegamutmapmodel-type)
-    -   [Plugingamutmaptype](#plugingamutmaptype)
+    -   [DefaultBaselineGamutMapModel-Typ](#defaultbaselinegamutmapmodel-type)
+    -   [PlugInGamutMapType](#plugingamutmaptype)
     -   [ExtensionType](#extensiontype)
--   [Die GMMP-baselinealgorithmen](#the-gmmp-baseline-algorithms)
+-   [Die GMMP-Baselinealgorithmen](#the-gmmp-baseline-algorithms)
 -   [Ausrichten der neutralen Achsen](#aligning-the-neutral-axes)
-    -   [Minimale Farbunterschiede (mincd)](#minimum-color-difference-mincd)
-    -   [Basicphoto](#basicphoto)
+    -   [Minimaler Farbunterschied (MinCD)](#minimum-color-difference-mincd)
+    -   [BasicPhoto](#basicphoto)
     -   [Übersicht](#overview)
-    -   [Die Groß-/Kleinschreibung einer einzelnen Farbskala-Shell](#the-case-of-single-gamut-shell)
-    -   [Schwarze Erweiterung](#black-enhancement)
-    -   [Die Groß-/Kleinschreibung von dualer Farbskala Shells](#the-case-of-dual-gamut-shells)
-    -   [Gründe für Änderungen von den Cie TC8-03-Empfehlungen](#reasons-for-changes-from-the-cie-tc8-03-recommendations)
+    -   [Fall einer einzelnen gamut-Shell](#the-case-of-single-gamut-shell)
+    -   [Black-Erweiterung](#black-enhancement)
+    -   [Fall von dualen gamut-Shells](#the-case-of-dual-gamut-shells)
+    -   [Gründe für Änderungen an den CIE TC8-03-Empfehlungen](#reasons-for-changes-from-the-cie-tc8-03-recommendations)
     -   [Hue-Zuordnung](#hue-mapping)
--   [Beschreibung von Gamut-Grenzen und Gamut-shellalgorithmen](#gamut-boundary-description-and-gamut-shell-algorithms)
-    -   [Die Untergrenze der spielbegrenzung.](#triangulation-of-the-gamut-boundary)
-    -   [Begrenzungs Linien Elemente](#boundary-line-elements)
-    -   [Gamut-Vorgang: Prüfpunkt](#gamut-operation-checkgamut)
-    -   [Vollton-Ebene: Intersect](#full-hue-plane-intersect)
-    -   [Gamut-Vorgang: checkgamut (fortgesetzt)](#gamut-operation-checkgamut-continued)
-    -   [Minimale Farbunterschiede-Diagramm Zuordnung](#minimum-color-difference-gamut-mapping)
-    -   [Farbton Glättung](#hue-smoothing)
-    -   [Festlegen von primären und sekundären Replikaten in der Beschreibung der changesehe](#setting-primaries-and-secondaries-in-the-gamut-boundary-description)
-    -   [Festlegen der neutralen Achse in der Beschreibung der Gamut-Grenze](#setting-the-neutral-axis-in-the-gamut-boundary-description)
+-   [Gamut Boundary Description and Gamut Shell Algorithms](#gamut-boundary-description-and-gamut-shell-algorithms)
+    -   [Triangulation der Gamutgrenze](#triangulation-of-the-gamut-boundary)
+    -   [Begrenzungslinienelemente](#boundary-line-elements)
+    -   [Gamut-Vorgang: CheckGamut](#gamut-operation-checkgamut)
+    -   [Vollständige Hue-Ebene: Überschneiden](#full-hue-plane-intersect)
+    -   [Gamut-Vorgang: CheckGamut (fortsetzung)](#gamut-operation-checkgamut-continued)
+    -   [Minimale Farbunterschiede – Gamutzuordnung](#minimum-color-difference-gamut-mapping)
+    -   [Farbtonglättung](#hue-smoothing)
+    -   [Festlegen von primären und zweiten Binärdateien in der Gamut-Begrenzungsbeschreibung](#setting-primaries-and-secondaries-in-the-gamut-boundary-description)
+    -   [Festlegen der neutralen Achse in der Gamut-Begrenzungsbeschreibung](#setting-the-neutral-axis-in-the-gamut-boundary-description)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="overview"></a>Übersicht
 
-Dieses Schema wird verwendet, um den Inhalt eines Farbskala Map Model-Profils (GMMP) anzugeben. Die zugehörigen baselinealgorithmen werden im folgenden Thema beschrieben.
+Dieses Schema wird verwendet, um den Inhalt eines gamutmap-Modellprofils (GMMP) anzugeben. Die zugehörigen Baselinealgorithmen werden im folgenden Thema beschrieben.
 
-Das grundlegende GMMP-Schema besteht aus allgemeinen Header Informationen, einem optionalen Verweis auf ein bevorzugtes Gamut-Karten Modell-Plug-in und Erweiterungs Tags.
+Das grundlegende GMMP-Schema besteht aus allgemeinen Headerinformationen, einem optionalen Verweis auf ein bevorzugtes Gamut Map Model-Plug-In und Erweiterungstags.
 
-Darüber hinaus stellt das GMMP explizite Informationen über das Zielmodell für die Gamut-Zuordnung bereit und stellt eine Richtlinie für das Modell der baselinefallbackgamingzuordnung bereit, das verwendet werden soll, wenn das Zielmodell nicht verfügbar ist. Das Schema kann private Erweiterungsinformationen enthalten, enthält jedoch keine weiteren überflüssigen Informationen.
+Darüber hinaus stellt GMMP explizite Informationen zum gamut-Zielzuordnungsmodell bereit und stellt eine Richtlinie für das Gamut Map-Basismodell bereit, das verwendet werden soll, wenn das Zielmodell nicht verfügbar ist. Das Schema kann private Erweiterungsinformationen enthalten, enthält jedoch keine weiteren überflüssigen Informationen.
 
-## <a name="gamut-map-model-profile-architecture"></a>Architektur des Gamut-Karten Modell Profils
+## <a name="gamut-map-model-profile-architecture"></a>Architektur des Gamut-Kartenmodellprofils
 
-![Diagramm, das das Modell Profil für die Profilerstellung anzeigt.](images/gmmp-image002.png)
+![Diagramm, das das Gamut-Kartenmodellprofil zeigt.](images/gmmp-image002.png)
 
-Die Stichprobenentnahme des Colorant-Raums der Ausgabegeräte erfolgt durch Durchlaufen der Colorants von 0,0 bis 1,0 mit einem Bruchteil, kumulieren Sie bei jedem Schritt alle Kombinationen der einzelnen coloranten, und wandeln Sie diese dann mithilfe der Methode DM::D evicetocolormetriccolors, gefolgt von der Methode CAM:: colormetrictoappearance-Methode, aus dem Colorant-Raum des Geräts in den Farb Darstellungs Bereich um. Im folgenden finden Sie ein Beispiel dafür, wie dies für RGB erfolgt.
+Die Stichprobenentnahme des Farbraums des Ausgabegeräts erfolgt, indem die Farbmittel von 0,0 bis 1,0 mit einem Bruchteilschritt durchlaufen werden, wobei alle Kombinationen jedes Farbelements bei jedem Schritt akkumuliert werden. Anschließend werden sie mithilfe der DM::D eviceToColorimetricColors-Methode, gefolgt von der METHODE DER::ColorimetricToAppearanceColors, vom Farbraum des Geräts in den Farbdarstellungsbereich konvertiert. Im Folgenden wird ein Beispiel dafür veranschaulicht, wie dies für RGB erfolgt.
 
 
 ```C++
@@ -102,13 +102,13 @@ For (red= 0.0; red <= 1.0; red += redStep) {
 
 
 
-## <a name="generation-of-the-gamut-boundary"></a>Generierung der Gamut-Grenze
+## <a name="generation-of-the-gamut-boundary"></a>Generierung der Gamutgrenze
 
-Es gibt drei Komponenten der Grenze für das Spiel: die primäre Replikate, die neutralen Beispiele und die Shells. Die primären Replikate werden generiert, indem die Geräte primäre Replikate übernommen und die devicetocolormetric/colormetrictoappearance-Transformation angewendet wird. Die neutralen Beispiele werden generiert, indem der Colorant-Bereich des Geräts im neutralen Bereich Abtast und dieselbe Transformation angewendet wird. Für drei Colorant-Geräte (RGB oder CMY) werden die neutralen Beispiele so definiert, dass alle Colorants gleich sind, z. b. R = = G = = B. Für CMYK sind die neutralen Beispiele so definiert, dass Sie C = = M = = Y = = 0 aufweisen.
+Die Gamutgrenze besteht aus drei Komponenten: den primären, den neutralen Stichproben und den Shells. Die primären Primären werden generiert, indem die primären Geräteanwendungen verwendet und die Transformation DeviceToColorimetric/ColorimetricToAppearance angewendet wird. Die neutralen Stichproben werden generiert, indem der Farbraum des Geräts im neutralen Bereich entnommen und die gleiche Transformation angewendet wird. Bei drei farbigen Geräten (RGB oder CMY) werden die neutralen Stichproben so definiert, dass alle Farbelemente gleich sind, z. B. R == G == B. Für CMYK werden die neutralen Stichproben als C == M == Y == 0 definiert.
 
-Die Faktoren, die die Daten beeinflussen, die zum Erstellen der Farbskala-Grenze verwendet werden, sind die Daten Stichproben (nur baselinegeräte) und die Anzeige Bedingungen. Die Schrittgröße, die für die vollständige Stichprobenentnahme des Colorant-Raums (für Monitore und für eine plausible Shell) verwendet wird, ist eine interne Konstante und ist nicht für die externe Bearbeitung verfügbar. Durch Ändern der Anzeige Bedingungen wird das Verhalten des Farb Darstellungs Modells (Color Appearance Model, CAM) geändert, und die Form der spielbegrenzung wird geändert, sodass Sie eine an das Profil der Anzeige Bedingungen gebundene Farbskala-Grenze generieren müssen. Wenn Beispiel Daten verwendet werden, wie im Fall von baselinedruckern und Erfassungs Geräten, haben die Beispiele eine große Auswirkung auf die Form des Verweis Schachtes und wirken sich auf das Verhalten des Modells selbst aus.
+Die Faktoren, die die Daten beeinflussen, die zum Erstellen der Gamutgrenze verwendet werden, sind die Datenbeispiele (nur Baselinegeräte) und die Anzeigebedingungen. Die Schrittgröße, die zum Durchführen der vollständigen Stichprobenentnahme des Farbraums (für Monitore und für die shell-Shell) verwendet wird, ist eine interne Konstante und steht nicht für externe Bearbeitungen zur Verfügung. Das Ändern der Anzeigebedingungen ändert das Verhalten des Farbdarstellungsmodells (COLOR) und ändert die Form der Gamutgrenze, sodass Sie eine gamut-Begrenzung generieren müssen, die an das Anzeigebedingungenprofil gebunden ist. Wenn Beispieldaten verwendet werden, wie bei Baselinedruckern und Erfassungsgeräten, haben die Beispiele große Auswirkungen auf die Form des Referenz-Gamuts und wirken sich auf das Verhalten des Modells selbst aus.
 
-Für Eingabegeräte, z. b. Kameras und Scanner, werden unterschiedliche Samplings verwendet, um die verweisshell und die plausible Shell zu generieren. Die verweisshell wird aus den Messungen generiert, die zum Initialisieren des Geräte Modells verwendet werden. Die plausible Shell wird ähnlich wie in der vorherigen Abbildung für Ausgabegeräte generiert. Der Unterschied besteht darin, dass Sie beim Eingeben eines typischen Ziels nicht vollständig satte Werte erhalten (R, G oder B = 255). Sie müssen die Werte mithilfe des Geräte Modells extrapolieren.
+Für Eingabegeräte, z. B. Kameras und Scanner, werden verschiedene Stichproben verwendet, um die Referenzshell und die Shell shell zu generieren. Die Verweisshell wird aus den Messungen generiert, die zum Initialisieren des Gerätemodells verwendet werden. Die shell-Shell wird ähnlich wie in der vorherigen Abbildung für Ausgabegeräte generiert. Der Unterschied besteht darin, dass Sie bei der Eingabe eines typischen Ziels keine vollständigen Werte erhalten (wobei R, G oder B = 255 ist). Sie müssen mithilfe des Gerätemodells extrapolieren, um diese Werte zu schätzen.
 
 ## <a name="the-gmmp-schema"></a>Das GMMP-Schema
 
@@ -168,147 +168,147 @@ Für Eingabegeräte, z. b. Kameras und Scanner, werden unterschiedliche Sampling
 
 
 
-## <a name="the-gmmp-schema-elements"></a>Die GMMP-Schema Elemente
+## <a name="the-gmmp-schema-elements"></a>Die GMMP-Schemaelemente
 
-## <a name="gamutmapmodel"></a>Gamutmapmodel
+## <a name="gamutmapmodel"></a>GamutMapModel
 
-Dieses Element ist eine Sequenz der folgenden unter Elemente:
+Dieses Element ist eine Sequenz der folgenden Unterelemente:
 
-1.  Profilnamen Zeichenfolge,
-2.  Defaultbaselinegamutmapmodel,
-3.  Optionale Beschreibungs Zeichenfolge,
-4.  Optionale Autor Zeichenfolge,
-5.  Optionale plugingamutmap und
+1.  ProfileName-Zeichenfolge,
+2.  DefaultBaselineGamutMapModel,
+3.  Optionale Beschreibungszeichenfolge,
+4.  Optionale Erstellungszeichenfolge,
+5.  Optionale PlugInGamutMap und
 6.  Optionaler ExtensionType.
 
-**Validierungs Bedingungen** : jedes untergeordnete Element wird anhand seines eigenen Typs überprüft.
+**Validierungsbedingungen:** Jedes Unterelement wird durch seinen eigenen Typ überprüft.
 
 ### <a name="namespace"></a>Namespace
 
-xmlns: GMM = " http://schemas.microsoft.com/windows/2005/02/color/GamutMapModel "
+xmlns:gmm=" http://schemas.microsoft.com/windows/2005/02/color/GamutMapModel "
 
-targetNamespace = " http://schemas.microsoft.com/windows/2005/02/color/GamutMapModel "
+targetNamespace=" http://schemas.microsoft.com/windows/2005/02/color/GamutMapModel "
 
 ### <a name="version"></a>Version
 
-Version "1,0" mit der ersten Version von Windows Vista.
+Version "1.0" mit der ersten Version von Windows Vista.
 
-Überprüfungs **Bedingungen** : 1,0 in Windows Vista. &lt;Die Versionen 2,0 sind ebenfalls gültig, um nicht unterbrechende Änderungen im Format zu unterstützen.
+**Überprüfungsbedingungen:** 1.0 in Windows Vista. Versionen &lt; 2.0 sind auch gültig, um nicht breaking changes am Format zu unterstützen.
 
 ### <a name="documentation"></a>Dokumentation
 
-Profil Schema für Gamut-Karten Modell.
+Gamut Map Model Profile-Schema.
 
-Copyright (C) Microsoft. Alle Rechte vorbehalten.
+Copyright (C) Microsoft. All rights reserved.
 
-**Validierungs Bedingungen** : jedes untergeordnete Element wird anhand seines eigenen Typs überprüft.
+**Validierungsbedingungen:** Jedes Unterelement wird durch seinen eigenen Typ überprüft.
 
-### <a name="defaultbaselinegamutmapmodel-type"></a>Defaultbaselinegamutmapmodel-Typ
+### <a name="defaultbaselinegamutmapmodel-type"></a>DefaultBaselineGamutMapModel-Typ
 
-Uint-Typ
+UINT-Typ
 
 Enumerationswerte:
 
-<dl> "Mincd \_ absolute"  
-"Mincd \_ relative"  
-"SIG- \_ Knie"  
-"Huemap"  
+<dl> "MinCD \_ Absolute"  
+"MinCD \_ Relative"  
+\_"SIGSELECT"  
+"HueMap"  
 </dl>
 
-**Validierungs Bedingungen** : die Werte müssen mit einer der oben aufgeführten Enumerationen identisch sein.
+**Überprüfungsbedingungen:** Die Werte müssen mit einer der oben genannten Enumerationen übereinstimmen.
 
-### <a name="plugingamutmaptype"></a>Plugingamutmaptype
+### <a name="plugingamutmaptype"></a>PlugInGamutMapType
 
-Bei diesem Element handelt es sich um eine Sequenz eines GUID-guidtype und aller untergeordneten Elemente.
+Dieses Element ist eine Sequenz eines GUID GUIDType und aller Untergeordneten Elemente.
 
-Überprüfungs **Bedingungen** : die GUID wird verwendet, um die GUID der GMM-Plug-in-dll abzugleichen. Es sind maximal 100.000 benutzerdefinierte unter Elemente vorhanden.
+**Überprüfungsbedingungen:** Die GUID wird verwendet, um der GMM PlugIn DLL-GUID zu entsprechen. Es gibt maximal 100.000 benutzerdefinierte Unterelemente.
 
 ### <a name="extensiontype"></a>ExtensionType
 
-Dieses Element ist eine optionale Sequenz von untergeordneten Elementen.
+Dieses Element ist eine optionale Sequenz beliebiger Unterelemente.
 
-**Validierungs Bedingungen** : Es können maximal 100.000 unter Elemente vorhanden sein.
+**Überprüfungsbedingungen:** Es können maximal 100.000 Unterelemente vorhanden sein.
 
-## <a name="the-gmmp-baseline-algorithms"></a>Die GMMP-baselinealgorithmen
+## <a name="the-gmmp-baseline-algorithms"></a>Die GMMP-Baselinealgorithmen
 
 ## <a name="aligning-the-neutral-axes"></a>Ausrichten der neutralen Achsen
 
-Die meisten Farbskala-Zuordnungsalgorithmen haben das Ziel, die neutrale Achse des Quell Geräts der neutralen Achse des Zielgeräts zu ordnen, d. h. weiß, weiß, schwarz zu schwarz und grau nach grau. Dies wird teilweise behandelt, indem die Helligkeit der Quell Farben an die Helligkeit des Zielgeräts angepasst wird. Das Problem wird dabei jedoch nicht vollständig behandelt.
+Die meisten gamut-Zuordnungsalgorithmen haben das Ziel, die neutrale Achse des Quellgeräts der neutralen Achse des Zielgeräts zuzuordnen: Weiß wechselt also zu Weiß, Schwarz zu Schwarz und Grau zu Grau. Dies wird teilweise behoben, indem die Helligkeit der Quellfarben so skaliert wird, dass sie dem Helligkeitsbereich des Zielgeräts entspricht. Damit wird das Problem jedoch nicht vollständig behoben.
 
-Es handelt sich um eine physische Eigenschaft der meisten Bildverarbeitungsgeräte, die die Chromatizität des Geräts weiß nicht genau mit der Chromaticity des Geräts schwarz übereinstimmt. Beispielsweise hängt der Monitor weiß von der Summe der chromatitäten und der relativen Leuchtkraft der drei primären Replikate ab, während Monitor Black von der Reflektion der Anzeige Oberfläche abhängt. Der Drucker weiß ist von der papierstadt des Papiers abhängig, während der Drucker schwarz von der verwendeten Handschrift oder dem verwendeten Toner abhängig ist. Ein Darstellungs Modell, das das Gerät weiß exakt der neutralen Achse des Darstellungs Raums zuordnet (Chroma genau gleich null), wird das Gerät schwarz nicht der neutralen Achse zugeordnet. Da der Blick auf Chroma-Unterschiede sensibler ist, wenn die Helligkeit zunimmt, werden Mid-Grays als noch mehr als ein Gerät schwarz dargestellt. (In Abbildung 1 wird die Krümmung der neutralen Achsen in zwei Dimensionen veranschaulicht. Tatsächlich bilden die neutralen Achsen eine komplexere Kurve in drei Dimensionen.)
+Es ist eine physische Eigenschaft der meisten bildgebenden Geräte, dass die Empfindlichkeit des Geräts weiß nicht genau mit der Aggregatität des Geräts schwarz übereinstimmt. Monitor White hängt z. B. von der Summe der Zierlichkeiten und relativen Leuchtdichten der drei primären Primären ab, während monitor black von der Reflektion der Anzeigeoberfläche abhängt. Druckerwittchen hängt von der Sättigung des Papiers ab, während Druckerschwarz von der verwendeten Farbe oder dem verwendeten Toner abhängt. Ein Darstellungsmodell, das Das Gerät weiß genau der neutralen Achse des Darstellungsbereichs zuzuordnen (das Erscheinungsbild entspricht genau 0), ordnet das Gerät schwarz nicht der neutralen Achse zu. Da das Auge anfälliger für Farbunterschiede ist, wenn die Helligkeit zunimmt, werden Mittelgraue noch stärker als Geräteschwarz dargestellt. (Abbildung 1 veranschaulicht die Krümmung der neutralen Achsen in zwei Dimensionen. Tatsächlich bilden die neutralen Achsen eine komplexere Kurve in drei Dimensionen.)
 
-Obwohl die Cam vorhersagt, dass diese Geräte neutralen Farben als chromatisch angezeigt werden, scheinen die eigentlichen Beobachter dies zu kompensieren. Die meisten Benutzer sehen diese Geräte neutralen Werte nicht als "Chromatisch" an. Für die meisten gamingzuordnungs Modelle sollten Sie daher weiterhin Quell-und Geräte-Neutrals zuordnen.
+Während die REGEL vorhersagt, dass diese geräteneutralen Farben farbig erscheinen, scheinen tatsächliche Beobachter dies zu kompensieren. Die meisten Personen betrachten diese geräteneutralen Werte nicht als schädlich. Für die meisten gamut-Zuordnungsmodelle sollten Sie daher weiterhin Quellneutrale den Geräteneutralen zuordnen.
 
-Passen Sie die Quell-und Ziel-spielgrenzen und die einzelnen Pixel an, wenn Sie den Farbskala-Zuordnungs Algorithmus anwenden, um Quell-neutrale zu Geräte neutralen zuzuordnen. Passen Sie zuerst jeden Wert in der Quellfarbe an, sodass die neutrale Achse des Quell Geräts an der Helligkeit der Quellfarbe direkt auf der neutralen Achse des Darstellungs Raums liegt. (Weitere Informationen finden Sie auf der linken Seite von Abbildung 1.) Passen Sie dann die Beschreibung für die Beschreibung des Zielgeräts an, sodass jede Farbe auf der neutralen Achse des Zielgeräts an der Obergrenze der Begrenzungs Farbe des Zielgeräts direkt auf der neutralen Achse des Darstellungs Raums liegt. (Weitere Informationen finden Sie auf der rechten Seite von Abbildung 1.)
+Zum Zuordnen von Quellneutralen zu Geräteneutralen passen Sie die Gamutgrenzen für Quelle und Ziel und jedes Pixel an, wenn Sie den Gamutzuordnungsalgorithmus anwenden. Passen Sie zunächst jeden Wert in der Quellfarbe so an, dass die neutrale Achse des Quellgeräts bei der Helligkeit der Quellfarbe direkt auf die neutrale Achse des Darstellungsbereichs fällt. (Siehe linke Seite von Abbildung 1.) Passen Sie dann die Gamutbegrenzungsbeschreibung des Zielgeräts so an, dass jede Farbe auf der neutralen Achse des Zielgeräts an der Gamutbegrenzungsfarbe des Zielgeräts direkt auf die neutrale Achse des Darstellungsbereichs fällt. (Siehe die rechte Seite von Abbildung 1.)
 
-![Diagramm, das das Quell-Gamut-Begrenzungs Diagramm auf der linken Seite und die Ziel-spielbegrenzung auf der rechten Seite anzeigt.](images/gmmp-image004.png)
+![Diagramm, das das Diagramm Source Gamut Boundary (Gamut-Quellgrenze) auf der linken Seite und die Destination Gamut Boundary (Ziel gamut-Grenze) auf der rechten Seite zeigt.](images/gmmp-image004.png)
 
-**Abbildung 1** : Ausrichtung der neutralen Achsen wird veranschaulicht. Left: Anpassen der Quellpunkte in Bezug auf die neutrale Quell Geräte Achse. Right: passen Sie die Beschreibung der Ziel-changesehe in Bezug auf die Beschreibung der Ziel-changesehe an.
+**Abbildung 1:** Ausrichtung der neutralen Achsen veranschaulicht. Links: Anpassen von Quellpunkten relativ zur neutralen Achse des Quellgeräts. Rechts: Passen Sie die Beschreibung der Ziel-Gamutgrenze relativ zur Beschreibung der Ziel-Gamutgrenze an.
 
-Beachten Sie, dass Sie jeden quellpixelwert relativ zur neutralen Achse mit diesem Wert anpassen. Dadurch wird sichergestellt, dass Quell Geräte neutrale auf die neutrale Achse des Darstellungs Modells fallen. Außerdem verschieben Sie alle anderen Farben mit dieser Helligkeit um denselben Betrag, sodass keine Diskontinuitäten in der Darstellung des Quell-Gamut vorhanden sind. Sie müssen sich auf unterschiedlichen Ebenen um unterschiedliche Beträge bewegen, da die neutralen Quell Geräte nicht auf den unterschiedlichen Helligkeit-Ebenen als gleichzeitig auf den einzelnen Ebenen dargestellt werden. Dabei handelt es sich natürlich nicht um eine triviale Transformation.
+Beachten Sie, dass Sie jeden Quellpixelwert relativ zur neutralen Achse bei diesem Helligkeitswert anpassen. Dadurch wird sichergestellt, dass Quellgeräteneutrale auf die neutrale Achse des Darstellungsmodells fallen. Sie verschieben auch alle anderen Farben bei dieser Helligkeit um die gleiche Menge, sodass es keine Diskontinuitäten in der Darstellung der Quellpalette gibt. Sie müssen sich um unterschiedliche Mengen bei unterschiedlichen Helligkeitsstufen verschieben, da die Quellgeräteneutrale auf den unterschiedlichen Helligkeitsstufen nicht als gleich heiter dargestellt werden. Dies ist natürlich keine triviale Transformation.
 
-Die Verarbeitung der Zielgeräte Werte ist ein wenig komplizierter. Zunächst passen Sie die gesamte Ziel-Spiel Grenze auf ähnliche Weise an, aber relativ zur neutralen Zielgeräte Achse. Dies wird in Abbildung 1 auf der rechten Seite veranschaulicht. Diese Anpassung stellt sicher, dass graue Quell Werte den grauen Zielwerten zugeordnet werden. Dies ist der Speicherplatz, in dem die Farbskala-Mapping-Algorithmen funktionieren.
+Die Verarbeitung der Zielgerätewerte ist etwas komplizierter. Zunächst passen Sie die gesamte Gamutgrenze des Ziels auf ähnliche Weise an, jedoch relativ zur neutralen Achse des Zielgeräts. Dies ist in Abbildung 1 auf der rechten Seite dargestellt. Durch diese Anpassung wird sichergestellt, dass graue Quellwerte den grauen Zielwerten zugeordnet werden. Dies ist der Bereich, in dem die Gamutzuordnungsalgorithmen ausgeführt werden.
 
-Dieser Speicherplatz beschreibt jedoch nicht genau das tatsächliche Verhalten des Zielgeräts. Sie müssen die Zuordnung umkehren, bevor die zugeordneten Farben des Farbskala an das Darstellungs Modell und das Zielgeräte Modell übergeben werden. Alle zugeordneten Werte werden um das Gegenteil des Offsets versetzt, das zuvor auf die neutrale Zielgeräte Achse angewendet wurde. Dadurch wird die Ziel neutrale Achse wieder dem Wert zugeordnet, der ursprünglich von der Cam dargestellt wurde. Das gleiche gilt für die Spiel Grenze und alle Zwischenwerte.
+In diesem Bereich wird das tatsächliche Verhalten des Zielgeräts jedoch nicht genau beschrieben. Sie müssen die Zuordnung umkehren, bevor gamut-zugeordnete Farben an das Darstellungsmodell und das Zielgerätemodell übergeben werden. Sie versetzen alle zugeordneten Werte um das Gegenteil des Offsets, der zuvor auf die neutrale Achse des Zielgeräts angewendet wurde. Dadurch wird die neutrale Zielachse wieder dem Wert zugeordnet, der ursprünglich von DER ZIP-Datei dargestellt wurde. Dies gilt für die Gamutgrenze und alle Zwischenwerte.
 
-![Diagramm, das ein Diagramm zum abmachen der Ausrichtung der neutralen Zielgeräte Achse anzeigt.](images/gmmp-image008.png)
+![Diagramm, das ein Diagramm zum Rückgängig machen der Ausrichtung der neutralen Achse des Zielgeräts zeigt.](images/gmmp-image008.png)
 
-**Abbildung 2** : Deaktivieren der Ausrichtung der neutralen Zielgeräte Achse
+**Abbildung 2:** Rückgängig machen der Ausrichtung der neutralen Achse des Zielgeräts
 
-### <a name="minimum-color-difference-mincd"></a>Minimale Farbunterschiede (mincd)
+### <a name="minimum-color-difference-mincd"></a>Minimaler Farbunterschied (MinCD)
 
-Minimale Farbunterschiede (mincd) relative und absolute Versionen-Äquivalent zum Zweck des "ICC Color Metric".
+Minimum Color Difference(MinCD) Relative and Absolute versions ( Minimum Color Difference(MinCD) Relative and Absolute versions – equivalent to the COLORimetric intent.
 
 > [!Note]  
-> Der mincd-GMM eignet sich für die Zuordnung von Grafiken und Liniengrafiken mit "Logo"-Farben (Spotfarben), Farbverläufen für Logos mit einigen Farben und für die letzte Phase der Korrektur von Transformationen. Obwohl mincd GMM für Foto Bilder verwendet werden kann, die sich vollständig innerhalb des Ziel gamels befinden, wird das allgemeine Rendering von Fotobildern nicht empfohlen. Die Zuordnung von Farben, die sich nicht im Spiel befinden, zu Farben auf der Ziel-Farbskala-Oberfläche kann zu unerwünschten Artefakten führen, wie z. b. Tone-oder Chroma-Unregelmäßigkeiten in Smooth-Farbverläufen, die die Grenze überschreiten. Basicphoto wird für Foto Bilder empfohlen. Wenn für ein Foto-oder Contone-Image eine andere Farbskala-Zuordnung als basicphoto erforderlich ist, sollte die Alternative zum Erstellen eines Plug-in-GMM, das diese Zuordnung implementiert, anstelle von mincd verwendet werden.
+> MinCD GMM eignet sich für die Zuordnung von Grafiken und Liniengrafiken mit Logofarben (Spotfarben), Logofarbverläufen mit einigen out-of-gamut-Farben und für die letzte Phase der Korrekturtransformationen. MinCD GMM kann zwar für Bilder verwendet werden, die sich vollständig innerhalb des Zielformats befinden, es wird jedoch nicht für das allgemeine Rendern von Fotobildern empfohlen. Die Zuordnung von Nicht-Gamutfarben zu Farben auf der Gamutoberfläche des Ziels kann zu unerwünschten Artefakten führen, z. B. Ton- oder Farbverläufen in gleichmäßigen Farbverläufen, die die Gamutgrenze überschreiten. BasicPhoto wird für Bildbilder empfohlen. Wenn ein Foto- oder Contonebild eine andere Gamutzuordnung als BasicPhoto erfordert, sollte die Alternative darin sein, ein Plug-In zu erstellen, das diese Zuordnung implementiert, anstatt MinCD zu verwenden.
 
  
 
-Farben im Spiel bleiben unverändert. Für Out-of-Farbskala-Farben werden Helligkeit und Chroma angepasst, indem der Punkt im Ziel-Farbskala gefunden wird, der den minimalen Farb Abstand von nicht-in-Farbskala-Eingabe Punkten aufweist. Der Farb Abstand wird im Jch-Bereich berechnet. Allerdings wird der Abstand in den Helligkeit (J) und der Abstand in Chroma (C) oder Hue (h) anders gewichtet. Eine Chroma-abhängige Gewichtungsfunktion wird für den Abstand in der Helligkeit verwendet, sodass die Gewichtung für kleine Chroma kleiner ist und für große Chroma größer ist, bis ein Schwellenwert (Chroma) erreicht wird, bei dem die Gewichtung um 1 bleibt, d. h. die gleiche Gewichtung wie die Entfernung in Chroma oder Hue. Dies folgt der empfohlenen Verwendung für CMC und CIEDE2000. Es gibt zwei Varianten: relative farbige Metrik und absolute farbige Metrik.
+Unveränderliche Farben bleiben unverändert. Für Farben außerhalb des gamutigen Farbverlaufs werden Helligkeit und Glanz angepasst, indem der Punkt in der Ziel-Gamut ermittelt wird, der den minimalen Farbabstand von out-of-gamut-Eingabepunkten aufzuweisen hat. Der Farbabstand wird im JCh-Raum berechnet. Sie gewichten jedoch den Abstand in Helligkeit (J) und den Abstand in Kästchen (C) oder Farbton (h) anders. Für den Abstand in der Helligkeit wird eine von Eineme abhängige Gewichtungsfunktion verwendet, sodass das Gewicht für kleine Vergrößerungen kleiner und größer für großes Leinen ist, bis ein Schwellenwert erreicht wird, nach dem das Gewicht bei 1 bleibt, d. h. das gleiche Gewicht wie die Entfernung in Farbe oder Farbton. Dies entspricht der empfohlenen Verwendung für CMC und CIEDE2000. Es gibt zwei Varianten: relative farbmetrische und absolute farbmetrische.
 
-**Relative farbige Metrik:** Richten Sie zunächst die Quell-und Ziel neutralen Achsen wie zuvor beschrieben aus. Wählen Sie dann die angepasste Quellfarbe an die angepasste Ziel-Spiel Grenze aus. (Siehe Abbildung 4. Chroma-Zuordnung entlang konstanter Helligkeit.) Lesen Sie die Zielgeräte Werte wie zuvor beschrieben. Im Fall einer Schnittstelle für das monochrome Ziel bedeutet das Chroma-Clipping, dass der Chroma-Wert (C) auf 0 (null) festgelegt ist (0,0).
+**Relativ colorimetric:** Richten Sie zunächst die quell- und zielneutrale Achse wie zuvor beschrieben aus. Beschneiden Sie dann die angepasste Quellfarbe auf die angepasste Zielbereichsgrenze. (Siehe Abbildung 4. Zuordnung von Farben entlang konstanter Helligkeit.) Ändern Sie die Zielgerätewerte wie zuvor beschrieben neu. Bei einer monocoloren Ziel-Gamutgrenze bedeutet der Clipping von "clipping", dass der Farbwert (C) auf 0 (0,0) festgelegt ist.
 
-**Absolute farbige Metrik:** Dies ähnelt der relativen farbige Metrik, aber ohne die Ausrichtung der Quell-und Ziel neutralen Achse. Der Quellwert wird direkt an die Ziel neutrale Achse abgeschnitten. Beachten Sie, dass das Verhalten identisch mit der relativen farbige Metrik ist, wenn sowohl die Quell-als auch die Ziel-spielgrenzen monochrome sind. Das heißt, die Ausrichtung der neutralen Achse wird ausgeführt, und dann wird der Chroma-Wert auf 0 (null) gekürzt. Dadurch wird sichergestellt, dass eine sinnvolle Ausgabe erreicht wird, auch wenn sich die Medien und Colorants erheblich unterscheiden.
+**Absolute farbgebungsmetrik:** Dies ähnelt der relativen farbmetrischen, jedoch ohne die Ausrichtung der quell- und zielneutralen Achse. Der Quellwert wird direkt auf die neutrale Zielachse abgeschnitten. Beachten Sie, dass das Verhalten mit der relativen farbmetrischen Variante identisch ist, wenn sowohl die Quell- als auch die Ziel-Gamutgrenze monocolore sind. Das heißt, die Ausrichtung der neutralen Achsen wird ausgeführt, und dann wird die Folie auf 0 (null) abgeschnitten. Dadurch wird sichergestellt, dass eine angemessene Ausgabe erzielt wird, auch wenn sich die Medien und Farbmittel erheblich unterscheiden.
 
-![Diagramm, das ein Diagramm für das mincd-Clipping an die angepasste Spiel Palette zeigt.](images/gmmp-image010.png)
+![Diagramm, das ein Diagramm für minCD-Clipping auf die angepasste Gamut zeigt.](images/gmmp-image010.png)
 
-**Abbildung 3** : mincd-Clipping in den angepassten Farbskala
+**Abbildung 3:** MinCD-Clipping zum angepassten Gamut
 
-### <a name="basicphoto"></a>Basicphoto
+### <a name="basicphoto"></a>BasicPhoto
 
 ### <a name="overview"></a>Übersicht
 
-Basicphoto: entspricht der bevorzugten, malerischen oder perzeptive Absicht von ICC.
+BasicPhoto: entspricht der bevorzugten, bildlichen oder perzeptiven ABSICHT VON NAV.
 
-Dieser Algorithmus ist eine Variante der Chroma-abhängigen sigmoidal-Helligkeit-Zuordnung und der Cusp-Knie Skalierung (sgck), die von Cie TC8-03 in CIE156:2004 beschrieben wird. Dieser Variant-Algorithmus unterstützt Farbskala-Begrenzungs Deskriptoren (gbds) mit Dual-Farbskala-Shells. Das heißt, gbds mit einer verweisshell und eine plausible Shell. Der sgck-Algorithmus, der ursprünglich nur eine Farbskala-Shell in der Gbd annimmt, basiert auf dem SIG \_ -elgorithmus (braun 1999), der die sigmoidal-Helligkeit und die von Braun und Fairchild (1999) vorgeschlagene Skalierungs Funktion für die untergeordnete Funktion enthält, kombiniert mit der Chroma-Abhängigkeit von gcusp (Morovic, 1998) Sie behält die wahrgenommene Farbton Konstante bei, z. b. Hue Angle in Hue korrigiert und verwendet eine generische (Bild unabhängige) sigmoidal-Helligkeit-Skalierung, die auf eine vom Chroma abhängige Weise und eine 90-Prozent-Knie-Funktion Chroma angewendet wird. Die Variante wird entlang konstanter Helligkeit skaliert.
+Dieser Algorithmus ist eine Variante der vom CIE TC8-03 in CIE156:2004 beschriebenen Variante der sigmoidalen Sigmoidal lightness mapping und cusp scaling (SGCK). Dieser Variant-Algorithmus unterstützt GAMUT-Begrenzungsdeskriptoren (GBDs) mit dualen Gamut-Shells. Das heißt, GBDs mit einer Verweisshell und einer Shell für Shells. Der SGCK-Algorithmus, der ursprünglich nur eine gamutbasierte Shell in der GBD annimmt, basiert auf dem SIG \_ ALGORITHM-Algorithmus (Stumm 1999), der die sigmoidale Lightness-Zuordnung und die skalierungsbasierte Funktionsskalierung umfasst, die von Robin und Fairchild (1999) vorgeschlagen wurde, kombiniert mit der Abhängigkeit von GCUSP (Morweis, 1998). Sie behält die wahrgenommene Farbtonkonstante bei, z. B. den Farbtonwinkel in einem durch Farbton korrigierten Jab, und verwendet eine generische (bildunabhängige) sigmoidale Helligkeitsskalierung, die auf eine vom Farbton abhängige Weise angewendet wird, und ein 90-prozentiges Farbtonfunktionsskalieren. Die Variante skaliert entlang der Linien konstanter Helligkeit.
 
-### <a name="the-case-of-single-gamut-shell"></a>Die Groß-/Kleinschreibung einer einzelnen Farbskala-Shell
+### <a name="the-case-of-single-gamut-shell"></a>Fall einer einzelnen gamut-Shell
 
-Es ist hilfreich, den Algorithmus zu überprüfen, wenn sowohl die Quell-als auch die Ziel-gbds nur eine Farbskala-Shell haben. In diesem Fall besteht der Algorithmus aus den folgenden Berechnungen.
+Es ist hilfreich, den Algorithmus für den Fall zu überprüfen, dass sowohl Quell- als auch Ziel-GBDs nur eine gamut-Shell haben. In diesem Fall besteht der Algorithmus aus den folgenden Berechnungen.
 
-Führen Sie zuerst mit der folgenden Formel eine anfängliche Helligkeit-Zuordnung durch:
+Führen Sie zunächst die anfängliche Lightness-Zuordnung mithilfe der folgenden Formel aus:
 
-![Zeigt die Formel für die anfängliche Helligkeit-Zuordnung an.](images/gmmp-image012.png) (1)
+![Zeigt die Formel für die anfängliche Helligkeitszuordnung an.](images/gmmp-image012.png) (1)
 
-Dabei ist *j ₒ* die ursprüngliche Helligkeit, und *j <sub>R</sub>* ist die Helligkeit der Reproduktion.
+wobei *Jₒ* die ursprüngliche Helligkeit und *J <sub>R</sub>* die helligkeits lightness ist.
 
-![Zeigt die zweite Helligkeit für die Helligkeit-Zuordnung an.](images/gmmp-image014.png) (2)
+![Zeigt die zweite Formel für die Lightness-Zuordnung an.](images/gmmp-image014.png) (2)
 
-Wenn die Quell Spiel Grenze monochrom ist, wird der Chroma-Wert für die monochrome-Grenze aufgrund der neutralen Achsen Ausrichtung auf 0 (null) gesetzt. Dies führt zu einem degenerierten Fall, bei dem C gleich 0 (null) ist. In diesem Fall wird *p <sub>C</sub>* auf 1 festgelegt.
+Wenn die Gamutgrenze der Quelle monocolore ist, ist der Wert 0 (null) für die monocolore Grenze aufgrund einer neutralen Achsenausrichtung. Dies führt zu dem degenerieren Fall, in dem C gleich 0 (null) ist. In diesem Fall ist *p <sub>C</sub>* auf 1 festgelegt.
 
-*p <sub>C</sub>* ist ein Chroma-abhängiger Gewichtungsfaktor (Morovic, 1998), der vom Chroma der ursprünglichen Farbe abhängt, C und *J <sub>S</sub>* sind das Ergebnis der ursprünglichen Helligkeit, die mithilfe einer sigmoidal-Funktion zugeordnet wird.
+*p <sub>C</sub>* ist ein von einem Element abhängiger Gewichtungsfaktor (Mormil, 1998), der von der Ursprünglichen Farbe abhängt. C und *J <sub>S</sub>* sind das Ergebnis der ursprünglichen Helligkeit, die mit einer sigmoidalen Funktion zugeordnet wird.
 
  
 
-Zum Berechnen von *J <sub>S</sub>* (braun und Fairchild, 1999) wird zunächst eine eindimensionale Nachschlage Tabelle (LUT) zwischen ursprünglicher und Reproduktions Werten für die Reproduktion festgelegt.
+Zum Berechnen von *J <sub>S</sub>* (Neu und Fairchild, 1999) wird zunächst eine eindimensionale Lookuptabelle (ONE-Dimensional Lookup Table, JIT) zwischen ursprünglichen und reproduzierenden Helligkeitswerten auf der Grundlage einer diskreten kumulativen Normalfunktion (S) eingerichtet.
 
-![Zeigt eine Formel zur Berechnung von J s an.](images/gmmp-image016.png) (3)
+![Zeigt eine Formel zum Berechnen von J s an.](images/gmmp-image016.png) (3)
 
-Dabei sind x ₀ und S der Mittelwert und die Standardabweichung der normalen Verteilung und *i* = 0, 1, 2... *m*,*m* ist die Anzahl von Punkten, die im LUT verwendet werden. *S <sub>i</sub>* ist der Wert der kumulativen normalen Funktion für *i*  / *m* Prozent. Die Parameter hängen von der Leichtigkeit des schwarzen Punkts der Reproduktion ab und können aus Tabelle 1 interpoliert werden. Ausführliche Informationen zum Berechnen dieser Parameter finden Sie unter braun und Fairchild (1999, p). 391).
+wobei x ₀ und S die mittlere und Standardabweichung der Normalverteilung bzw. *i* = 0,1,2... *m*,*m* ist die Anzahl von Punkten, die in der BEZEICHNUNG verwendet werden. *S <sub>i</sub>* ist der Wert der kumulativen normal-Funktion für *i*  / *m* Prozent. Die Parameter hängen von der Helligkeit des schwarzen Punkts des Reproduktionsumfangs ab und können aus Tabelle 1 interpoliert werden. Ausführliche Informationen zum Berechnen dieser Parameter finden Sie unter Braun und Fairchild (1999, p. 391).
 
 :::row:::
     :::column:::
-        J <sub>minout</sub>
+        J <sub>minOut</sub>
     :::column-end:::
     :::column:::
        5.0
@@ -328,16 +328,16 @@ Dabei sind x ₀ und S der Mittelwert und die Standardabweichung der normalen Ve
         x ₀
     :::column-end:::
     :::column:::
-       53,7
+       53.7
     :::column-end:::
     :::column:::
-        56,8
+        56.8
     :::column-end:::
     :::column:::
-        58,2
+        58.2
     :::column-end:::
     :::column:::
-        60,6
+        60.6
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -359,645 +359,645 @@ Dabei sind x ₀ und S der Mittelwert und die Standardabweichung der normalen Ve
 :::row-end:::
 
 
-**Tabelle 1** : Berechnung der Berechnung von basicphoto-Helligkeit-Parametern
+**Tabelle 1:** Berechnung der Komprimierungsparameter "BasicPhoto Lightness"
 
-Um s als eine Helligkeit-Zuordnung (s, <sub>LUT) zu</sub> verwenden, muss Sie zunächst in den Bereich für die Helligkeit von 0100 normalisiert werden \[ \] . Die normalisierten Daten werden dann in den dynamischen Bereich des Zielgeräts skaliert, wie in Gleichung 4 dargestellt, wobei *j*<sub>Min \ *out*</sub> und *j*<sub>Max \ *out*</sub> die Werte der Helligkeit des schwarzen und des weißen Punkts des Reproduktions Mediums sind.
+Um S als Helligkeitszuordnungsmapping (S <sub>SOLL)</sub> zu verwenden, muss es zunächst in den Helligkeitsbereich von \[ 0.100 normalisiert \] werden. Die normalisierten Daten werden dann in den dynamischen Bereich des Zielgeräts skaliert, wie in Gleichung 4 gezeigt, wobei *J*<sub>min\ *Out*</sub> und *J*<sub>max\ *Out*</sub> die Werte der Helligkeit des schwarzen Punkts bzw. des weißen Punkts des Wiedergabemediums sind.
 
-![Zeigt die Formel für S als eine Helligkeit-Zuordnung an.](images/gmmp-image018.png) (4)
+![Zeigt die Formel für S als Helligkeitszuordnungs-CSV an.](images/gmmp-image018.png) (4)
 
-An diesem Punkt können die *J s* -Werte aus dem S- <sub>LUT</sub> abgerufen werden, indem zwischen den *m* Punkten der entsprechenden *j O* -und *j S* -Werte interpolieren und die folgende Gleichung als Eingabe verwendet wird.
+An diesem Punkt können die *J S-Werte* aus dem <sub>S-WERT</sub> abgerufen werden, indem zwischen den *m-Punkten* der entsprechenden *enthaltenen J O-* und *J S-Werte* interpoliert und die folgende Gleichung als Eingabe verwendet wird.
 
-![Zeigt die Formel zum Abrufen der J S-Werte.](images/gmmp-image020.png) (5)
+![Zeigt die Formel zum Abrufen der J S-Werte an.](images/gmmp-image020.png) (5)
 
-J <sub>Minin</sub> ist der Wert für die Helligkeit des schwarzen Punkts des ursprünglichen Mediums, j <sub>Maxin</sub> ist der Helligkeit-Wert des weißen Punkts des ursprünglichen Mediums, und j <sub>O</sub> ist die ursprüngliche Helligkeit. Zum späteren Zeitpunkt können Sie angeben, dass die sigmoidal-Funktion *in der eben* beschriebenen Weise definiert ist, wie in der folgenden Abbildung 4 dargestellt.
+J <sub>minIn</sub> ist der Helligkeitswert des schwarzen Punkts des ursprünglichen Mediums, J <sub>maxIn</sub> der Helligkeitswert des weißen Punkts des ursprünglichen Mediums und J <sub>O</sub> die ursprüngliche Helligkeit. Zur späteren Referenz können Sie durch *S* die sigmoidale Funktion bezeichnen, die wie in der folgenden Abbildung 4 dargestellt in der soeben beschriebenen Weise definiert ist.
 
-![Diagramm, das das Diagramm für die Chroma-Zuordnung entlang konstanter Helligkeit anzeigt.](images/gmmp-image024.png)
+![Diagramm, das das Diagramm für die Zuordnung von Karten entlang konstanter Helligkeit zeigt.](images/gmmp-image024.png)
 
-**Abbildung 4** : Chroma-Zuordnung entlang konstanter Helligkeit
+**Abbildung 4:** Zuordnung von Farben mit konstanter Helligkeit
 
-Zweitens: Wenn die Ziel-Spiel Grenze "Chromatisch" ist, komprimieren Sie Chroma entlang der Linien der Konstanten Helligkeit (l), und führen Sie die Komprimierung wie folgt aus.
+Wenn die Gamutgrenze des Ziels 1:0 ist, komprimieren Sie die Komprimierung entlang von Linien mit konstanter Helligkeit (l), und führen Sie die Komprimierung wie folgt aus.
 
-![Zeigt die Formel zum Durchführen der Chroma-Komprimierung.](images/gmmp-image026.png)  (6)
+![Zeigt die Formel zum Ausführen der Komprimierung an.](images/gmmp-image026.png)  (6)
 
-wobei *d* den Abstand von *E* in *l* darstellt. *g* stellt die Grenze für das mittlere Spiel dar. *r* stellt die Reproduktion dar. und *o* die ursprüngliche Abbildung 5.
+wobei *d* den Abstand von *E* auf *l* darstellt; *g* stellt die mittlere Gamutgrenze dar. *r* stellt die Reproduktion dar; und *o* die ursprüngliche Abbildung 5.
 
-![Diagramm, das das Diagramm für die Chroma-und die Helligkeit-Komprimierung in basicphoto anzeigt.](images/gmmp-image028.png)
+![Diagramm, das das Diagramm für die Komprimierung von Farben und Helligkeit in BasicPhoto zeigt.](images/gmmp-image028.png)
 
-**Abbildung 5** : Chroma-und Helligkeit-Komprimierung in basicphoto
+**Abbildung 5:** Farb- und Helligkeitskomprimierung in BasicPhoto
 
-Wenn die Ziel-Farbskala-Grenze monochrom ist, wird der Chroma-Wert auf 0 (null) gekürzt.
+Wenn die Gamutgrenze des Ziels monocolore ist, wird der Wert für die Klammer auf 0 (null) abgeschnitten.
 
-Verwenden Sie als drittes einen mincd-Clip (weiter oben beschrieben), um einen beliebigen Restfehler auszuschließen.
+Verwenden Sie drittens einen MinCD-Clip (weiter oben beschrieben), um Restfehler zu vermeiden.
 
-### <a name="black-enhancement"></a>Schwarze Erweiterung
+### <a name="black-enhancement"></a>Black-Erweiterung
 
-Der vorherige Algorithmus kann geändert werden, um die schwarze zu verbessern, wenn das Ziel ein Druckergerät ist. Das Problem ist mit der Wahl von *J <sub>minout</sub>* zu tun, was in der Regel nicht der dunkelsten Farbe entspricht, die ein Drucker verursachen kann.
+Der vorherige Algorithmus kann geändert werden, um schwarz zu verbessern, wenn das Ziel ein Druckergerät ist. Das Problem hat mit der Auswahl von *J <sub>minOut</sub>* zu tun, die in der Regel nicht der dunkelsten Farbe entspricht, die ein Drucker erzeugen kann.
 
-Genauer gesagt, ist die Farbe mit der höchsten Dichte, die durch das Platzieren von 100-Prozent-Inks (oder der maximalen möglichen Abdeckung, wenn die GCR-/Freihand-Begrenzung aktiviert ist), in der Regel nicht "neutral" im Farbdarstellung-Raum. Siehe Abbildung 6. Anders ausgedrückt: Wenn eine neutrale minimale Helligkeit für das Zielgerät verwendet wird, wird die erstellte Helligkeit Scaler einer minimalen Helligkeit zugeordnet, die nicht die höchste Dichte ist, die durch den Drucker erreicht werden kann. Beachten Sie den weiteren Anwendungsfall von Monitor auf Drucker. Der Monitor schwarz, R = G = B = 0, wird dann als nicht die höchste Dichte ausgegeben. Die Auswirkung auf die Bildqualität ist, dass es eine fehlende tiefe und einen Kontrast gibt.
+Genauer gesagt ist die Farbe mit der höchsten Dichte, die durch Das Setzen von 100 Prozent Farben (oder der maximal möglichen Abdeckung, wenn die GCR-/Freihandbegrenzung wirksam ist) erhalten wird, in der Regel nicht "neutral" im Farbdarstellungsbereich. Siehe Abbildung 6. Anders ausgedrückt: Wenn für das Zielgerät eine neutrale minimale Helligkeit verwendet wird, wird der erstellte Lightness Scaler einer minimalen Helligkeit zugeordnet, die nicht der höchsten Dichte entspricht, die vom Drucker erzielt werden kann. Berücksichtigen Sie den weiteren Anwendungsfall von Monitor zu Drucker. Der Monitor black, R=G=B=0, wird dann als nicht die höchste Dichte gedruckt. Der Einfluss auf die Imagequalität besteht darin, dass es an Tiefe und Kontrast fehlt.
 
-![Diagramm, das zeigt, wie der schwarze Punkt des Geräts dunkler als die neutrale minimale Helligkeit sein könnte.](images/gmmp-seqfigure01.png)
+![Diagramm, das zeigt, wie der schwarze Punkt des Geräts dunkler als die neutrale minimale Helligkeit sein kann.](images/gmmp-seqfigure01.png)
 
-**Abbildung 6** : der schwarze Punkt des Geräts ist möglicherweise dunkler als die neutrale minimale Helligkeit.
+**Abbildung 6:** Der schwarze Punkt des Geräts ist möglicherweise dunkler als die neutrale minimale Helligkeit.
 
-Angenommen, das Ziel "Schwarzes Gerät" des Geräts ist jkakbk/jkckh k. Wenn C k nicht 0 (null) ist, ist der schwarze Punkt des Geräts relativ zu CAM02 nicht neutral. Wenn Sie J k für das Ziel "neutrale minimale Helligkeit" in der Konstruktion der Helligkeit Scaler verwenden, Das heißt, es wird festgelegt
+Angenommen, das Ziel "Device Black Point" ist Jkakbk/JkCkh k. Wenn C k nicht 0 (null) ist, ist der schwarze Punkt des Geräts relativ zu CAB02 nicht neutral. Wenn Sie J k für das Ziel "neutrale minimale Helligkeit" bei der Erstellung des Lightness Scalers verwenden, d. b. festlegen
 
-*J <sub>minout</sub> = JK*
+*J <sub>minOut</sub> = Jₖ*
 
-und Sie auf die quellcodeshell anwenden, rufen Sie die in Abbildung 7 dargestellte Konfiguration ab. In der Abbildung entspricht die Hue-Ebene h k.
+und wenden Sie sie auf die allgemeine Quellshell an. Sie erhalten die in Abbildung 7 dargestellte Konfiguration. In der Abbildung entspricht die Farbtonebene h k.
 
-![Diagramm, das die geänderte Helligkeit Scaler mit dem Ziel Gerät Black Point anzeigt.](images/gmmp-seqfigure02.png)
+![Diagramm, das den geänderten Lightness Scaler mit dem schwarzen Punkt des Zielgeräts zeigt.](images/gmmp-seqfigure02.png)
 
-**Abbildung 7** : Geometrie mit der geänderten Helligkeit Scaler mit dem Ziel Gerät Black Point
+**Abbildung 7:** Geometrie mit dem geänderten Lightness Scaler mit schwarzem Punkt des Zielgeräts
 
-Damit der nachfolgende Chroma-Komprimierungs Algorithmus fortgesetzt werden kann, sollten Sie die maximalen und minimalen lightlichkeiten in den Quell-und Ziel Shells ausrichten. Dies kann erreicht werden, indem Sie die zielshell zwischen J <sub>neutralmin</sub> und j k anpassen, indem Sie die Punkte nach links verschieben. Außerdem muss diese Transformation auf den gesamten Speicherplatz des Speicherplatzes angewendet werden, nicht nur auf die Hue-Ebene, die h k entspricht.
+Damit der nachfolgende Komprimierungsalgorithmus fortgesetzt werden kann, möchten Sie die maximale und minimale Helligkeit auf den Quell- und Zielshells ausrichten. Dies kann erreicht werden, indem die Zielshell zwischen J <sub>neutralMin</sub> und J k durch Verschieben von Punkten nach links angepasst wird. Darüber hinaus muss diese Transformation auf den gesamten Jab-Raum angewendet werden, nicht nur auf die Farbtonebene, die h k entspricht.
 
 Die Transformation ist
 
 ![Zeigt die Formel für die Transformation an.](images/gmmp-seqfigure03.png)
 
-Abbildung 8 zeigt die Auswirkung der Transformation.
+Abbildung 8 zeigt die Auswirkungen der Transformation.
 
-![Diagramm, das die Auswirkung der geänderten Helligkeit Scaler mit dem Ziel Gerät Black Point anzeigt.](images/gmmp-seqfigure04.png)
+![Diagramm, das die Auswirkung des geänderten Lightness Scalers mit dem schwarzen Punkt des Zielgeräts zeigt.](images/gmmp-seqfigure04.png)
 
-**Abbildung 8** : Geometrie mit der geänderten Helligkeit Scaler mit dem Ziel Gerät Black Point
+**Abbildung 8:** Geometrie mit dem geänderten Lightness Scaler mit schwarzem Punkt des Zielgeräts
 
-Nachdem Sie den üblichen Chroma-Komprimierungs Algorithmus angewendet haben, muss der Punkt "zurück verschoben" werden, d. h., die umgekehrte Transformation muss angewendet werden, um die endgültige zugeordnete Farbe zu erhalten.
+Nach dem Anwenden des üblichen Algorithmus für die Komprimierung muss der Punkt "zurückversetzt" werden, d. h., die umgekehrte Transformation muss angewendet werden, um die endgültige zugeordnete Farbe zu erhalten.
 
-![Zeigt die Formel für die umgekehrte Transformation zum Abrufen der endgültigen zugeordneten Farbe an.](images/gmmp-seqfigure05.png)
+![Zeigt die Formel für die inverse Transformation an, um die endgültige zugeordnete Farbe abzurufen.](images/gmmp-seqfigure05.png)
 
-### <a name="the-case-of-dual-gamut-shells"></a>Die Groß-/Kleinschreibung von dualer Farbskala Shells
+### <a name="the-case-of-dual-gamut-shells"></a>Fall von dualen gamut-Shells
 
-Ziel ist es, SIG- \_ Knie für eine einzelne Farbskala-Shell zu generalisieren, wenn das Quellgerät Gbd oder das Ziel Gerät Gbd eine zwei-Shellstruktur aufweist. Die innere Shell wird als verweisshell bezeichnet, während die äußere Shell als plausible Shell bezeichnet wird. Sie sollten die folgenden Fälle in Erwägung gezogen werden.
+Das Ziel besteht darin, SIG \_ GIGABIT für eine einzelne gamut-Shell für den Fall zu generalisieren, dass entweder die Quellgeräte-GBD oder die Zielgeräte-GBD eine Zwei-Shell-Struktur aufweist. Die innere Shell wird als Verweisshell bezeichnet, während die äußere Shell als Shell shell bezeichnet wird. Berücksichtigen Sie die folgenden Fälle.
 
-(a) sowohl die Quell-als auch die Ziel-Gbd haben eine zwei-Shellstruktur.
+(a) Sowohl die Quell-GBD als auch die Ziel-GBD verfügen über eine Zwei-Shell-Struktur.
 
-(b) der Quell-Gbd hat eine zwei-Shellstruktur. die Ziel-Gbd verfügt nur über eine Shell.
+(b) Die Quell-GBD verfügt über eine Zwei-Shell-Struktur. Die Ziel-GBD verfügt nur über eine Shell.
 
-(c) der Quell-Gbd hat nur eine Shell. die Ziel-Gbd verfügt über eine zwei-Shellstruktur.
+(c) Die Quell-GBD verfügt nur über eine Shell. Die Ziel-GBD verfügt über eine Zwei-Shell-Struktur.
 
-(d) sowohl die Quell-als auch die Ziel-Gbd verfügen nur über eine Shell.
+(d) Sowohl die Quell-GBD als auch die Ziel-GBD verfügen nur über eine Shell.
 
-Case (d) ist die Groß-/Kleinschreibung der einzelnen Farbskala-Shell, die bereits erläutert wurde. In Fällen (a), (b) und (c) können Sie das Neuskalieren der Helligkeit verallgemeinern, um die zusätzlichen Informationen aus der Dual Shell-Struktur zu verwenden. In Fällen (b) und (c), in denen entweder die Quelle oder das Ziel nur eine Shell aufweist, führen Sie eine "induzierte verweisshell" ein, die im nachfolgenden Abschnitt "induzierte verweisshell" erläutert wird. Der allgemeine Algorithmus für zwei Shells wird für Case (a) beschrieben. Nachdem die Erstellung der induzierten Verweis Shell erläutert wurde, kann der Algorithmus auch auf Case (b) und (c) angewendet werden. Wie bei der Chroma-Komprimierung wird das Komprimierungs Verhältnis durch die größten verfügbaren Shells bestimmt. Anders ausgedrückt: Wenn sowohl die plausible Shell als auch die verweisshell verfügbar sind, wird die plausible Shell verwendet. Andernfalls wird die verweisshell verwendet.
+Fall (d) ist der Fall einer einzelnen gamut-Shell, die zuvor erläutert wurde. In den Fällen (a), (b) und (c) können Sie die Helligkeitsskalierung generalisieren, um die zusätzlichen Informationen aus der Dual Shell-Struktur zu verwenden. In Fällen (b) und (c), in denen entweder die Quelle oder das Ziel nur über eine Shell verfügt, führen Sie eine "abgeleitete Verweisshell" ein, die in einem nachfolgenden Abschnitt erläutert wird: "Induced Reference Shell". Der allgemeine Algorithmus für zwei Shells wird für den Fall (a) beschrieben. Nachdem die Induced Reference Shell-Konstruktion erläutert wurde, kann der Algorithmus auch auf fall (b) und (c) angewendet werden. Wie bei der Komprimierung wird das Komprimierungsverhältnis durch die größten verfügbaren Shells bestimmt. Anders ausgedrückt: Wenn sowohl die Shell Shell als auch die Verweisshell verfügbar sind, wird die Shell Shell verwendet. Andernfalls wird die Verweisshell verwendet.
 
-*Allgemeine Helligkeit-Neuskalierung*
+*Generalisierte Helligkeitsskalierung*
 
-Das vorhanden sein von zwei Shells für Quell-und Ziel-Gbd bedeutet, dass Sie einen Satz von vier Punkten aus dem Quell-Gbd einem entsprechenden Satz in der Ziel-Gbd zuordnen müssen.
+Das Vorhandensein von zwei Shells für Quell- und Ziel-GBD bedeutet, dass Sie einen Satz von vier Punkten aus der Quell-GBD einer entsprechenden Gruppe in der Ziel-GBD zuordnen müssen.
 
-![Zeigt, wie ein Satz von vier Punkten einem entsprechenden Satz zugeordnet wird.](images/gmmp-image030.png)
+![Zeigt, wie eine Gruppe von vier Punkten einer entsprechenden Menge zugeordnet wird.](images/gmmp-image030.png)
 
-Die Indizes haben die folgenden Bedeutungen.
+Die Tiefgestellten haben die folgende Bedeutung.
 
-o oder r: "Original" (Quelle) oder "Reproduktion" (Ziel)
+o oder r: "original" (Quelle) oder "reproduktion" (Ziel)
 
-min oder Max: minimale neutrale Helligkeit oder maximale neutrale Helligkeit
+min oder max: minimale neutrale Helligkeit oder maximale neutrale Helligkeit
 
-Pla oder Ref: plausible Shell oder verweisshell
+pla oder ref: Shell oder Verweisshell
 
-Die Reihenfolge in jedem Viereck ist auch die erwartete relative Größe dieser Punkte.
+Die Reihenfolge in jedem Vierfachen entspricht auch der erwarteten relativen Größe dieser Punkte.
 
-Das Bild für die Helligkeit-Neuzuordnung verwendet die gleichen ersten beiden Gleichungen wie die einzige Shell, aber *J S* wird wie folgt auf eine Weise definiert.
+Die Lightness Rescaling Map verwendet die gleichen ersten beiden Gleichungen wie die einzelne Shell, *J S* wird jedoch wie folgt stückweise definiert.
 
-![Zeigt die Formel für J S in einer schrittweisen Weise an.](images/gmmp-image032.png) (7)
+![Zeigt die Formel für J S stückweise an.](images/gmmp-image032.png) (7)
 
-Dies bedeutet, dass es sich um eine Signatur in der verweisshell handelt und lineare außerhalb von. Weitere Informationen in Abbildung 9.
+Anders ausgedrückt: Sie ist innerhalb der Verweisshell sigmoidal und außerhalb linear. Weitere Informationen in Abbildung 9.
 
-![Diagramm, das ein Diagramm für die Funktion für die Helligkeit-Neuskalierung für zwei-Shell-gbds anzeigt.](images/gmmp-image033.png)
+![Diagramm, das ein Diagramm für die Lightness Rescaling-Funktion für ZWEI-Shell-GBDs zeigt.](images/gmmp-image033.png)
 
-**Abbildung 9** : Funktion zum Neuskalieren für zwei-Shell-gbds
+**Abbildung 9:** Funktion zur Neuskalierung der Lichtheit für GBDs mit zwei Shells
 
-**induzierte verweisshell**
+**INDUZIERTE VERWEISSHELL**
 
-Wenn ein Gbd über eine Shell verfügt und die andere Gbd über zwei Shells verfügt, müssen Sie eine "verweisshell" für die Gbd mit nur einer Shell erstellen. Die vorhandene Shell, die als verweisshell bezeichnet wird, wird in die "plausible Shell" geändert. Tatsächlich müssen Sie keine Shell im vollständigen Speicherplatz erstellen. Da die Helligkeit nur *j Max* und *j min* verwendet, müssen Sie diese Werte nur für die induzierte verweisshell erstellen. Es gibt zwei Fälle, je nachdem, welcher Gbd über zwei Shells verfügt.
+Wenn eine GBD eine Shell und die andere GBD über zwei Shells verfügt, müssen Sie eine "Verweisshell" für die GBD mit nur einer Shell erstellen. Die vorhandene Shell, die als Verweisshell bezeichnet wird, wird in "Shell Shell" geändert. Tatsächlich müssen Sie keine Shell im vollständigen Jab-Bereich erstellen. Da bei der Neuskalierung der Lichtheit nur *J max* und *J min* verwendet werden, müssen Sie diese Werte nur für die ausgelöste Verweisshell auswerten. Es gibt zwei Fälle, je nachdem, welche GBD über zwei Shells verfügt.
 
-Fall 1: Quell-Gbd hat zwei Shells. Ziel-Gbd verfügt über eine Shell.
+Fall 1: Quell-GBD verfügt über zwei Shells; Die Ziel-GBD verfügt über eine Shell.
 
-Ermitteln der durch das Ziel verursachten verweisshell auf der neutralen Achse Das heißt, j <sub>r, \ min, \ Ref</sub> und j <sub>r, \ Max, \ Ref</sub> der Shell. Dies erfolgt mithilfe des folgenden Algorithmus.
+Bestimmen Sie die zielinduzierte Verweisshell auf der neutralen Achse. das heißt, der J <sub>r,\ min,\ ref</sub> und J <sub>r,\ max,\ ref</sub> der Shell. Dies erfolgt mit dem folgenden Algorithmus.
 
-![Zeigt den Algorithmus zum Ermitteln der durch das Ziel veranlassten verweisshell.](images/gmmp-induced01.png)
+![Zeigt den Algorithmus an, um die zielinduzierte Verweisshell zu bestimmen.](images/gmmp-induced01.png)
 
-Die Faktoren? <sub>niedrig</sub> und? <sub>hohe</sub> Kontrolle der Trennung zwischen der plausibler Shell und der verweisshell. Der Wert 1 bedeutet, dass die Werte für j <sub>Min</sub> -Werte oder j m ₐ ₓ übereinstimmen. Ihre Werte werden aus der quellverweisshell und der Quell-Quellcode-Shell "induziert".
+Die Faktoren ? <sub>niedrig</sub> und ? <sub>hohe</sub> Kontrolle über die Trennung zwischen der Shell Shell shell und der Reference Shell. Der Wert 1 bedeutet, dass die Werte J <sub>min</sub> oder J mₐₓ übereinstimmen. Ihre Werte werden von der Quellverweisshell und der Quellshell "abgeleitet".
 
-![Zeigt die Formel für die Werte der quellverweisshell und die plausible Quell-Shell.](images/gmmp-induced02.png)
+![Zeigt die Formel für die Werte der Quellverweisshell und der Quell-Shell an.](images/gmmp-induced02.png)
 
-Die "Fudge Factors" f <sub>Low</sub> und f <sub>High</sub> sind *anpassbare Parameter* , die zwischen 0 und 1 liegen müssen. Wenn der Wert 0 ist, werden die j <sub>Min</sub> -oder j m ₐ ₓ direkt aus den Quell Shells abgeleitet. Wählen Sie in diesem Fall f <sub>Low</sub> = 0,95 und f <sub>High</sub> = 0,1 aus.
+Die "Fudgefaktoren" F <sub>niedrig</sub> und F <sub>hoch</sub> sind *abstimmbare* Parameter, die zwischen 0 und 1 liegen müssen. Wenn der Wert 0 ist, werden die J <sub>min-</sub> oder J-mₐₓ direkt von den Quellshells abgeleitet. Wählen Sie in diesem Fall F <sub>low</sub> = 0,95 und F <sub>high</sub> = 0,1 aus.
 
-Fall 2: Quell-Gbd hat eine Shell. Ziel-Gbd verfügt über zwei Shells.
+Fall 2: Quell-GBD verfügt über eine Shell; Die Ziel-GBD verfügt über zwei Shells.
 
-Ermitteln der durch Quelle verursachten verweisshell auf der neutralen Achse; Das heißt, j <sub>o, \ min, \ Ref</sub> und j <sub>o, \ Max, \ Ref</sub> der Shell. Dies erfolgt mithilfe des folgenden Algorithmus.
+Bestimmen Sie die quellinduzierte Verweisshell auf der neutralen Achse. das heißt, der J <sub>o,\ min,\ ref</sub> und J <sub>o,\ max,\ ref</sub> der Shell. Dies erfolgt mit dem folgenden Algorithmus.
 
-![Zeigt den Algorithmus zum Ermitteln der durch das Ziel veranlassten verweisshell auf der neutralen Achse.](images/gmmp-induced03.png)
+![Zeigt den Algorithmus an, um die zielinduzierte Verweisshell auf der neutralen Achse zu bestimmen.](images/gmmp-induced03.png)
 
-Die Faktoren? <sub>niedrig</sub> und? <sub>hohe</sub> Kontrolle der Trennung zwischen der plausibler Shell und der verweisshell. Der Wert 1 bedeutet, dass die Werte für j <sub>Min</sub> -Werte oder j m ₐ ₓ übereinstimmen. Ihre Werte werden aus der quellverweisshell und der Quell-Quellcode-Shell "induziert":
+Auch hier sind die Faktoren ? <sub>niedrig</sub> und ? <sub>hohe</sub> Kontrolle über die Trennung zwischen shell und reference shell. Der Wert 1 bedeutet, dass die Werte für J <sub>min</sub> oder J mₐₓ übereinstimmen. Ihre Werte werden von der Quellverweisshell und der Quellshell "abgeleitet":
 
-![Zeigt den Algorithmus zum Steuern der Trennung zwischen der referenzshell und der kryptografiequellshell.](images/gmmp-induced04.png)
+![Zeigt den Algorithmus zum Steuern der Trennung zwischen der Verweisshell und der Quell-Shell an.](images/gmmp-induced04.png)
 
-### <a name="reasons-for-changes-from-the-cie-tc8-03-recommendations"></a>Gründe für Änderungen von den Cie TC8-03-Empfehlungen
+### <a name="reasons-for-changes-from-the-cie-tc8-03-recommendations"></a>Gründe für Änderungen aus den CIE TC8-03-Empfehlungen
 
-Basicphoto unterscheidet sich in den folgenden Punkten von den Cie TC8-03-Empfehlungen.
+BasicPhoto unterscheidet sich wie folgt von den CIE TC8-03-Empfehlungen.
 
-1.  Chroma wird nicht in Bezug auf den Cusp komprimiert, sondern entlang konstanter Helligkeit.
-2.  Der Bereich Helligkeit verwendet die Helligkeit der dunkelsten Farbe im Spielbereich anstelle des Punkts, an dem die Spiel Grenze die neutrale Achse überschreitet.
-3.  Basicphoto unterstützt sowohl eine Referenz-Farbskala-Shell als auch eine plausible Farbskala-Shell, wenn eine der beiden beiden Shells über zwei Shells verfügt.
-4.  Basicphoto verwendet CIECAM02; anstatt CIECAM97s zu verwenden, um 400 cd/m2 in D65 zu konvertieren, und verwenden Sie dann den "rit IPT"-Farbraum.
+1.  "List" wird nicht in Richtung des Cusp komprimiert, sondern entlang von Linien konstanter Lichtheit.
+2.  Der Lichtbereich verwendet die Lichtheit der dunkelsten Farbe im Gamut und nicht den Punkt, an dem die Gamutgrenze die neutrale Achse überkreuzt.
+3.  BasicPhoto unterstützt sowohl eine Gamut-Referenzshell als auch eine gamut-Shell, wenn eine der Gamutgrenzen in der Transformation über zwei Shells verfügt.
+4.  BasicPhoto verwendet CIECAM02; anstelle von CIECAM97s zum Konvertieren in D65 bei 400 cd/m2 und anschließendes Verwenden des RIT IPT-Farbraums.
 
-Die erste Änderung wurde vorgenommen, um Probleme bei der inversierung von Tone zu vermeiden, die bei der Verwendung der Komprimierung für eine Cusp auftreten Wie in Abbildung 10 dargestellt, kann die Cusp-Komprimierung zu Ton Versionen führen. Dies kann vorkommen, wenn Farben von hohem Chroma heller sind als Farben von niedrigerem Chroma. Da sgck jedes Pixel unabhängig in Helligkeit und Chroma komprimiert, ist es nicht garantiert, dass die Helligkeit-Beziehung zwischen den Pixelwerten nach der Komprimierung erhalten bleibt. Der Nachteil dieser Entscheidung für die Komprimierung in Linien konstanter Helligkeit besteht darin, dass Sie Verluste von Chroma erleiden können, insbesondere in Bereichen, in denen die Ziel Spiel Grenze sehr flach ist, was bei hellen gelbwerten der Fall ist.
+Die erste Änderung wurde vorgenommen, um Tonumkehrprobleme zu verhindern, die auftreten können, wenn die Komprimierung in Richtung einer Cusp verwendet wird. Wie in Abbildung 10 dargestellt, kann die Cusp-Komprimierung zu Tonumkehrungen führen. Dies kann passieren, wenn Farben von hohen Brillen heller sind als Farben von unteren Brillen. Da SGCK jedes Pixel unabhängig sowohl in der Lichtheit als auch in der Komprimierung komprimiert, ist es nicht garantiert, dass die Lichtheitsbeziehung zwischen den Pixelwerten nach der Komprimierung erhalten bleibt. Der bekannte Nachteil dieser Entscheidung, auf Linien konstanter Lichtheit zu komprimieren, ist, dass Sie Verluste von Glühbirnen einbußen können, insbesondere in Bereichen, in denen die Ziel-Gamutgrenze sehr flach ist, wie dies bei hell gelben Farben der Fall ist.
 
-![Diagramm, das die von sgck verursachte toninversion anzeigt.](images/gmmp-toneinversion.png)
+![Diagramm, das die Tonumkehr zeigt, die durch SGCK verursacht wird.](images/gmmp-toneinversion.png)
 
-**Abbildung 10** : durch sgck verursachte toninversion
+**Abbildung 10:** Tonumkehr durch SGCK
 
-![Zeigt ein ursprüngliches Bild von einer "Teapot" an.](images/originalteapot.jpg)![Zeigt das sgck-Ergebnis des Teekanne-Bilds an.](images/badteapot.jpg)![Zeigt das basicphoto-Ergebnis des "Teekanne"-Bilds an.](images/betterteapot.jpg)
+![Zeigt ein originales Bild einer Teekanne.](images/originalteapot.jpg)![Zeigt das SGCK-Ergebnis des Teekannenbilds an.](images/badteapot.jpg)![Zeigt das BasicPhoto-Ergebnis des Teekannenbilds an.](images/betterteapot.jpg)
 
-**Abbildung 11** : Ursprüngliches Bild, sgck-Ergebnis und basicphoto-Ergebnis
+**Abbildung 11:** Originalbild, SGCK-Ergebnis und BasicPhoto-Ergebnis
 
-In Abbildung 11 wird diese toninversion veranschaulicht. Auf der linken Seite befindet sich ein ursprüngliches Bild, das von einer digitalen Kamera erfasst wurde. in der Mitte ist das Bild wie von sgck reproduziert. und auf der rechten Seite das Bild wie von basicphoto reproduziert. Das Bild auf der linken Seite befindet sich im Farbraum der digitalen Kamera, das Mittelpunkt und das rechte Bild befinden sich im Farbraum einer LCD-Videoanzeige. In der ursprünglichen Abbildung ist der obere Teil der "Teekanne" dunkler als der untere Teil, da der untere Teil das tableklo reflektiert, auf dem es sich befindet. Im sgck-Bild ist der obere Teil aufgrund der toninversion tatsächlich heller als der untere Teil. Außerdem ist es schwierig, die Elemente im unteren Teil von "Teapot" anzuzeigen. Auf der rechten Seite hat basicphoto den Ton Inversion korrigiert, und die reflektierten Artikel sind deutlicher zu unterscheiden.
+Abbildung 11 veranschaulicht diese Tonumkehr. Auf der linken Seite befindet sich ein Originalbild, das von einer Digitalkamera aufgenommen wurde. in der Mitte das Von SGCK reproduzierte Bild; und auf der rechten Seite das Bild, wie von BasicPhoto reproduziert. Das Bild auf der linken Seite befindet sich im Farbraum der Digitalkamera, die Bilder in der Mitte und rechts befinden sich im Farbraum einer DISPLAY-Videoanzeige. In der ursprünglichen Abbildung ist der obere Teil der Teekanne dunkler als der untere, da der untere Teil die Tischdecken wiederspiegelt, auf denen sie sich befindet. Im SGCK-Bild ist der obere Teil aufgrund der Tonumkehr tatsächlich leichter als der untere Teil. Außerdem ist es schwierig, die Elemente im unteren Teil der Teekanne widergespiegelt zu sehen. Auf der rechten Seite hat BasicPhoto die Tonumkehr korrigiert, und die reflektierten Artikel sind eindeutiger zu unterscheiden.
 
-Die zweite Änderung wurde vorgenommen, um die Reproduktion von nahezu schwarzen Farben auf Druckern zu verbessern, bei denen der schwärzeste schwarze nicht direkt auf die CIECAM02 neutrale Achse fällt. Die folgende Abbildung 12 zeigt ein Bild, das in sRGB konvertiert wurde. für einen RGB-Inkjet-Drucker mit sgck reproduziert und mit basicphoto für denselben Drucker reproduziert. Das Bild in der Mitte verwendet nicht das vollständige schwarze Gerät, und daher fehlt der Kontrast in der ursprünglichen. Der Kontrast wird mit basicphoto wieder hergestellt.
+Die zweite Änderung wurde vorgenommen, um die Wiedergabe von fast schwarzen Farben auf Druckern zu verbessern, bei denen das schwarzste Schwarz nicht direkt auf die neutrale CIECAM02-Achse fällt. Die folgende Abbildung 12 zeigt ein in sRGB konvertiertes Bild. reproduziert für einen RGB-Drucker mit SGCK; und für denselben Drucker mit BasicPhoto reproduziert. Das Bild in der Mitte verwendet nicht das vollständige Schwarzgerät, sodass der im Original angezeigte Kontrast fehlt. Der Kontrast wird mit BasicPhoto wiederhergestellt.
 
-![Zeigt das ursprüngliche Bild eines Playsets an.](images/playstructure.jpg)![Zeigt das Bild des Playsets, das für einen R G B-Inkjet-Drucker mithilfe von sgck reproduziert wurde.](images/playstructurebad.jpg)![Zeigt das Bild des für einen R G B-Inkjet-Drucker mithilfe von basicphoto neu gegebenen Playsets an.](images/betterplaystructure.jpg)
+![Zeigt das originale Bild eines Playsets an.](images/playstructure.jpg)![Zeigt das Bild des Playsets, das für einen R G B-Drucker mit SGCK reproduziert wurde.](images/playstructurebad.jpg)![Zeigt das Bild des Playsets, das mit BasicPhoto für einen R G B-Drucker reproduziert wurde.](images/betterplaystructure.jpg)
 
-**Abbildung 12** : Verbessertes Schwarzes
+**Abbildung 12:** Erweitertes Schwarz
 
-Die dritte Änderung wurde vorgenommen, um die Farb Reproduktion für digitale Kameras zu verbessern. Insbesondere in Fällen, in denen die Profilerstellung für die digitale Kamera mithilfe eines Verweis Ziels durchgeführt wurde, enthält eine in den gemessenen Farben aufgebaute Beschreibung der Beschreibung des Farb verlauforts möglicherweise nicht alle Farben, die in einer realen Szene aufgezeichnet werden könnten. Anstatt alle Farben auf die Größe des gemessenen farbziels zu kürzen, können Sie mit der extrapolierungs Grenze eine plausible Spiel Grenze schaffen. Der basicphoto-Algorithmus ist so konzipiert, dass er eine derart extrapolierte Spiel Grenze unterstützt.
+Die dritte Änderung wurde vorgenommen, um die Farbwiedergabe für Digitalkameras zu verbessern. Insbesondere in Fällen, in denen die Digitalkamera mithilfe eines Referenzziels profiliert wurde, enthält eine gamut boundary description, die aus gemessenen Farben erstellt wurde, möglicherweise nicht alle Farben, die in einer realen Szene erfasst werden können. Anstatt alle Farben auf den Gamut des gemessenen Farbziels zu beschneiden, lassen Sie die Extrapolierung zu, um eine randlose Gamutgrenze zu erzeugen. Der BasicPhoto-Algorithmus ist so konzipiert, dass er eine solche extrapolierte Gamutgrenze unterstützt.
 
-Die vierte Änderung wurde vorgenommen, da CIECAM02 gut für die Zuordnung von Farbskala funktioniert. Der Prozess, der von TC8-03 zum Umrechnen von Geräte Farben in D65 bei 400 cd/m2 und anschließende Verwendung des "rit IPT"-Farbraum empfohlen wird, ist Rechen intensiv und zeitaufwändig.
+Die vierte Änderung wurde vorgenommen, da CIECAM02 gut für die Gamutzuordnung funktioniert. Der von TC8-03 empfohlene Prozess der Konvertierung von Gerätefarben in D65 bei 400 cd/m2 und der anschließenden Verwendung des RIT-IPT-Farbraums ist rechenintensiv und zeitaufwändig.
 
 ### <a name="hue-mapping"></a>Hue-Zuordnung
 
-Huemap entspricht der Absicht der IStGH-Sättigung.
+HueMap ist das Äquivalent zur ABSICHT FÜR DIE Sättigung durch DIE FARBMAP.
 
-Wenn die Quell-oder Ziel-Farbskala-Grenze keine primär Punkte enthält, wird dieses Modell auf das mincd (relative)-Modell zurückgesetzt, das in einem vorherigen Abschnitt beschrieben wurde. beispielsweise Geräte, für die die primären Replikate nicht bestimmt werden können ("ICC-Profile mit mehr als vier Kanälen") oder Chrome-ICC-Profile.
+Wenn entweder die Quell-Gamutgrenze oder die Ziel-Gamutgrenze keine primären Elemente enthält, wird dieses Modell auf das (relative) MinCD-Modell zurückverwendet, das in einem vorherigen Abschnitt beschrieben wurde. Beispielsweise Geräte, für die die primären Profile nicht bestimmt werden können (STELLUNGsprofile mit mehr als vier Kanälen) oder monotoneSTS-Profile.
 
-Dieser Algorithmus passt zuerst den Farbton des Eingabe Farbwerts an. Anschließend werden die Helligkeit und der Chroma mithilfe einer Scheren Zuordnung gleichzeitig angepasst. Schließlich wird der Farbwert durch Clips, um sicherzustellen, dass er sich innerhalb von Gamut befindet.
+Dieser Algorithmus passt zunächst den Farbton des Eingabefarbwerts an. Anschließend wird die Helligkeit und das Glühbirnen mithilfe einer Strichzuordnung gleichzeitig angepasst. Schließlich wird der Farbwert per Cliping sichergestellt, um sicherzustellen, dass er sich innerhalb des Gamut-Werts befindet.
 
-Der erste Schritt besteht darin, die "Hue Wheels" zu bestimmen. Suchen Sie nach den Jch-Werten für die primäre und die sekundäre Farbe für das Quell-und Zielgerät. Sie berücksichtigen nur die Hue-Komponenten. Dies führt zu einem primären oder sekundären Farbton mit sechs Farbpunkten für jedes Gerät. (Siehe Abbildung 13.)
+Der erste Schritt besteht in der Bestimmung der "Hue-Scheiben". Suchen Sie die JCh-Werte für primäre und sekundäre Farben für quell- und zielgerät. Sie berücksichtigen nur die Hue-Komponenten. Dies führt zu einem primären oder sekundären Farbrad mit sechs Farbpunkten für jedes Gerät. (Siehe Abbildung 13.)
 
-![Diagramm, in dem die Hue-Räder mit sechs Farbpunkten angezeigt werden.](images/gmmp-figure12.png)
+![Diagramm, das die Farbpaletten mit sechs Farbpunkten zeigt.](images/gmmp-figure12.png)
 
-**Abbildung 13** : Hue Wheels
+**Abbildung 13:** Hue-Rad
 
-Bessere Ergebnisse können erzielt werden, wenn das blaue Quell primäre Replikat nicht auf das blaue Ziel Ziel gedreht wird. Stattdessen wird der primäre Hue-Farbton als Ziel verwendet.
+Bessere Ergebnisse können erzielt werden, wenn die quellblaue primäre Quelle nicht zum blauen primären Ziel rotiert wird. Stattdessen wird der quellblaue primäre Farbtonwinkel als zielblauer primärer Farbtonwinkel verwendet.
 
-Führen Sie als nächstes die Farbton Farben für jede Eingabe Farbe aus dem Quell Abbild aus.
+Führen Sie als Nächstes die Farbtonrotation für jede Eingabefarbe aus dem Quellbild aus.
 
-a) Wenn Sie den Hue-Winkel der Eingabe Farbe verwenden, bestimmen Sie den Speicherort der Farbe auf dem quellfarbton in Bezug auf die beiden angrenzenden primär-oder Sekundärfarben. Der Speicherort kann als Prozentsatz der Entfernung zwischen den primären Replikaten betrachtet werden. Beispielsweise ist der Eingabe farbfarbton 40 Prozent der Methode vom Farbton-Wert von Magenta bis zum Farbton-Wert rot.
+a)Bestimmen Sie mithilfe des Farbtonwinkels der Eingabefarbe die Position der Farbe auf dem Quellfarbrad relativ zur zwei angrenzenden primären oder sekundären Farbe. Der Standort kann als Prozentsatz der Entfernung zwischen den primärerEntitäten bezeichnet werden. Beispielsweise beträgt der Farbton der Eingabefarbe 40 Prozent des Wegs vom Farbtonwert von Magenta bis zum Farbtonwert Rot.
 
-b) suchen Sie auf dem Zielfarbton den entsprechenden Hue-Winkel, z. b. 40 Prozent von Magenta bis rot. Dieser Wert ist der Zielfarbton.
+b) Suchen Sie auf dem Ziel-Farbrad den zugeordneten Farbtonwinkel, z. B. 40 Prozent von Magenta zu Rot. Dieser Wert ist der Zieltonwinkel.
 
-Im allgemeinen befinden sich die Quell Primär-und sekundären Replikate nicht in den gleichen Farbton wie die primären Primär-und sekundären Replikate. Das heißt, der Zielfarbton unterscheidet sich in der Regel vom Quell Farbton Winkel.
+Im Allgemeinen sind die Quellprimär- und -zweiten Quellen nicht mit den gleichen Farbtonwinkeln wie die Zielprimär- und -nachwahlen identisch. Das heißt, der Zieltonwinkel ist in der Regel anders als der Quelltonwinkel.
 
-Nehmen wir beispielsweise an, dass die Hue-Räder die folgenden Werte ergeben:
+Angenommen, die Hue-Rade erzeugen die folgenden Werte:
 
 Quelle M = 295 Grad, Quelle R = 355 Grad.
 
-Ziel M = 290 Grad, Ziel-R = 346 Grad.
+Ziel M = 290 Grad, Ziel R = 346 Grad.
 
-Wenn der Hue-Winkel der Eingabe Farbe 319 Grad beträgt, beträgt er 40 Prozent des Winkels (24 Grad) von der Quelle M bis zur Quelle R. Der Winkel zwischen m und R ist 60 Grad, und der Winkel zwischen m und Eingabe Farbton beträgt 24 Grad. Berechnen Sie den Winkel auf dem Ziel, der 40 Prozent vom Ziel M bis zum Ziel R (22 Grad) ist, sodass der Hue-Winkel der Zielfarbe 312 Grad beträgt.
+Wenn der Farbtonwinkel der Eingabefarbe 319 Grad beträgt, beträgt er 40 Prozent des Winkels (24 Grad) von Quelle M zu Quelle R. Der Winkel von M bis R beträgt 60 Grad, und der Winkel von M zum Eingabeton beträgt 24 Grad. Berechnen Sie den Winkel am Ziel, der 40 Prozent von Ziel M bis Ziel R (22 Grad) beträgt, sodass der Farbtonwinkel der Zielfarbe 312 Grad beträgt.
 
-Berechnen Sie als nächstes die Hue-Bezugspunkte für den quellfarbton und den Zielfarbton. Wenn Sie den Hue-Bezugspunkt für einen bestimmten h-Wert (Hue) berechnen möchten, finden Sie den Wert J (Helligkeit) und C (Chroma).
+Berechnen Sie als Nächstes die Hue-Referenzpunkte für den Quellton und den Zielton. Um den Farbton-Referenzpunkt für einen bestimmten h-Wert (Hue) zu berechnen, möchten Sie den J-Wert (Lichtheit) und den C-Wert (Hue) ermitteln.
 
--   Suchen Sie den j-Wert des Hue-Bezugspunkts durch Interpolation zwischen den j-Werten für die angrenzenden primären oder sekundären Punkte, und verwenden Sie dabei die relative Position von Hue. Beispiel: 40 Prozent in diesem Beispiel.
--   Suchen Sie den maximalen C-Wert mit diesem J-Wert und dem Wert h. Sie verfügen nun über den Jch-Wert des Hue-Bezugspunkts für diesen Farbton.
+-   Suchen Sie den J-Wert des Hue-Referenzpunkts, indem Sie zwischen den J-Werten für die angrenzenden primären oder sekundären Punkte interpolieren, indem Sie die relative Position des Farbtons verwenden. Beispiel: 40 Prozent in diesem Beispiel.
+-   Suchen Sie den maximalen C-Wert an diesem J-Wert und h-Wert. Sie verfügen nun über den JCh des Hue-Referenzpunkts für diesen Farbton.
 
-![Diagramm, das ein Farbton Blatt zeigt.](images/gmmp-figure13.png)
+![Diagramm, das ein Farbtonblatt zeigt.](images/gmmp-figure13.png)
 
-**Abbildung 14** : ein Hue-Blatt (Visualisierung eines Slice-Begrenzungs Slice in einem bestimmten Farbton)
+**Abbildung 14:** Ein Farbtonblatt (Visualisierung einer Gamutbegrenzungsslice bei einem bestimmten Farbton)
 
-Der nächste Schritt ist die Berechnung der Scheren Zuordnung für jedes Pixel. Visualisieren Sie zunächst ein Farbton Blatt aus dem Quell Spiel für den Farbton der Quellfarbe und ein Farbton Blatt aus dem Ziel-Farbskala für den Zielfarbton, der während der Farbton Drehung berechnet wird. Die Hue-Blätter werden erstellt, indem ein "Slice" von der Jch-Oberfläche für die Obergrenze in einem bestimmten Farbton erstellt wird (siehe Abbildung 14).
+Der nächste Schritt besteht darin, die Schubzuordnung für jedes Pixel zu berechnen. Visualisieren Sie zunächst ein Farbtonblatt aus der Quellfarbskala für den Farbtonwinkel der Quellfarbe und ein Farbtonblatt aus der Zielfarbskala für den Zielfarbwinkel, der während der Farbtonrotation berechnet wird. Die Farbtonblätter werden erstellt, indem ein "Slice" von der JCh-Gamutbegrenzungsoberfläche in einem bestimmten Farbtonwinkel entnommen wird (siehe Abbildung 14).
 
-Hinweis: aus Gründen der Leistungsoptimierung werden Hue-Blätter nicht erstellt. Sie werden hier nur zu Visualisierungs Zwecken beschrieben und angezeigt. Die Vorgänge werden direkt auf der Oberfläche für die Farbskala-Begrenzung am angegebenen Farbton ausgeführt. Anschließend berechnen Sie die Hue-Verweis Punkte, um die scherungs Zuordnung zu bestimmen.
+HINWEIS: Aus Leistungsoptimierungsgründen werden Farbtonblätter nicht tatsächlich erstellt. sie werden hier nur zu Visualisierungszwecken beschrieben und angezeigt. Die Vorgänge werden direkt auf der gamut-Begrenzungsoberfläche im angegebenen Farbton ausgeführt. Anschließend berechnen Sie die Farbtonverweispunkte, um die Schubzuordnung zu bestimmen.
 
--   Führen Sie eine Durchführung einer Helligkeit aus, um die schwarzen und weißen Punkte des Quell Blatts dem Ziel Blatt zuzuordnen (siehe Abbildung 15). Die schwarzen und weißen Punkte des Quell Blatt Blatts werden linear zu den schwarzen und weißen Punkten des Ziel-Hue-Blatts zugeordnet, indem alle J-Koordinaten der Quell Grenze skaliert werden. Der Farbton zugeordnete Eingabe Farbwert wird auf die gleiche Weise skaliert.
+-   Führen Sie eine Neuskalierung der Helligkeit durch, um die schwarz-weißen Punkte des Quellblatts dem Zielblatt zuzuordnen (siehe Abbildung 15). Die schwarz-weißen Punkte des Quelltonblatts werden linear den schwarzen und weißen Punkten des Zieltonblatts zugeordnet, indem alle J-Koordinaten der Quellgrenze skaliert werden. Der Farbton-zugeordnete Eingabefarbwert wird auf die gleiche Weise skaliert.
 
-![Diagramm, das die Helligkeit-Zuordnung anzeigt.](images/gmmp-figure14.png)
+![Diagramm, das die Helligkeitszuordnung zeigt.](images/gmmp-figure14.png)
 
-**Abbildung 15** : Helligkeit-Zuordnung
+**Abbildung 15:** Helligkeitszuordnung
 
--   Bestimmen Sie die Hue-Bezugspunkte für die einzelnen Hue-Blätter. Wenden Sie eine Scheren Zuordnung auf das Quell Blatt an, sodass die Quell-und Ziel Verweis Punkte übereinstimmen (siehe Abbildung 16). Der Bezugspunkt für ein Spiel in einem bestimmten Farbton ist der interpoliert Hue-Referenzpunkt zwischen den angrenzenden primären Replikaten. Der Bezugspunkt des Quell Farbton Blatts wird linear dem Bezugspunkt des Ziel-Hue-Blatts zugeordnet. dabei wird ein "Scheren"-Vorgang verwendet, der die J-Achse sperrt, wobei die schwarzen und die weißen Punkte stationär bleiben. Die schwarzen Punkte, weißen Punkte und Bezugspunkte der Quell-und zielhue sollten übereinstimmen.
--   Wenden Sie die Schere-Zuordnung auf den Wert für die Helligkeit-angepasste Eingabe Farbe an. Die J-und C-Koordinaten des Quell Farbwerts werden proportional zur Entfernung von der j-Achse proportional skaliert.
--   Im nächsten Schritt wird eine feine, von Chroma abhängige Helligkeit-Komprimierung für den J-Wert des Hue-Referenz Punkts auf dem durch Scheren zugeordneten Farbpunkt ausgeführt. Die Komprimierung in Bezug auf Hue Reference j erfolgt in einer Gamma ähnlichen Weise, bei der weiß, schwarz, Grays und Punkte auf der Hue-Referenz j nicht betroffen sind. Alle anderen Punkte neigen in gewisser Weise den Farbton Verweis j, was sich in der Nähe des Hue-Verweises j, mit der verbleibenden Chroma-Konstante, geringfügig nach oben bewegt. Die Chroma-Abhängigkeit gewährleistet, dass neutrale Farben nicht betroffen sind, und der Effekt erhöht sich bei Farben mit höherem Chroma.
+-   Bestimmen Sie die Farbtonverweispunkte für jedes Farbtonblatt. Wenden Sie eine Schubzuordnung auf das Quellblatt an, damit die Quell- und Zielverweispunkte übereinstimmen (siehe Abbildung 16). Der Bezugspunkt für eine Gamut bei einem bestimmten Farbton ist der interpolierte Farbtonverweispunkt zwischen den benachbarten primären Farbarten. Der Bezugspunkt des Quelltonblatts wird linear dem Bezugspunkt des Zieltonblatts zugeordnet. Dabei wird ein "Schubvorgang" verwendet, der die J-Achse sperrt, wobei die schwarzen Punkte und die weißen Punkte stationär bleiben. Die schwarzen Punkte, weißen Punkte und Bezugspunkte der Quell- und Zieltonblätter sollten übereinstimmen.
+-   Wenden Sie die Schubzuordnung auf den Lichtheits-angepassten Eingabefarbwert an. Die J- und C-Koordinaten des Quellfarbwerts werden proportional skaliert, relativ zum Abstand von der J-Achse.
+-   Als Nächstes wird eine dezente, von der Helligkeit abhängige Komprimierung in Richtung des J-Werts des Farbtonverweispunkts auf dem scharren zugeordneten Farbpunkt durchgeführt. Die Komprimierung für den Farbtonverweis J erfolgt gammaähnlicher Weise, wobei Weiß, Schwarz, Grau und Punkte auf dem Farbtonverweis J nicht betroffen sind. Alle anderen Punkte tendieren zu dem Farbtonverweis J in einer reibungslosen Weise, die sich leicht in der Nähe des Farbtonverweises J annähert, wobei der Farbton konstant bleibt. Die Abhängigkeit von der Färbung stellt sicher, dass neutrale Farben nicht betroffen sind, und die Auswirkung auf Farben mit höherem Farbton wird erhöht.
 
-Im folgenden finden Sie eine mathematische Beschreibung der Helligkeit-Komprimierung in Bezug auf den Hue-Verweis J oder die Anpassung des J-Werts des Ziel Punkts. Sie wird als Zielpunkt bezeichnet, da Sie im Ziel-Gamut eine Schere zugeordnet wurde.
+Im Folgenden finden Sie eine mathematische Beschreibung der Helligkeitskomprimierung für den Farbtonverweis J oder das Anpassen des J-Werts des Zielpunkts. Er wird als Zielpunkt bezeichnet, da er dem Ziel gamut zugeordnet wurde.
 
-Berechnen Sie zuerst "factorc" (Chroma-Abhängigkeits Faktor) für den Zielpunkt, der bestimmt, wie viele Auswirkungen die Helligkeit-Komprimierung hat. Punkte in der Nähe von oder auf der J-Achse haben nur wenig oder keine Komprimierung. für Punkte, die weiter Weg von der J-Achse (High-Chroma) liegen, wird eine höhere Komprimierung angewendet. Multiplizieren Sie um 0,5, um sicherzustellen, dass factoric kleiner als 1 ist, da es möglich ist, dass sourcec etwas größer als referencec ist, aber nicht doppelt so groß ist.
+Berechnen Sie zunächst "factorC" (Abhängigkeitsfaktor für Denkfaktor) für den Zielpunkt, der bestimmt, wie viel Auswirkung die Helligkeitskomprimierung haben wird. Punkte in der Nähe oder auf der J-Achse weisen nur wenige oder gar keine Komprimierung auf. An Punkten, die weiter von der J-Achse entfernt sind (hohe Färbung), wird mehr Komprimierung angewendet. Multiplizieren Sie mit 0,5, um sicherzustellen, dass factorC kleiner als 1 ist, da sourceC möglicherweise etwas größer als referenceC, aber nicht doppelt so groß sein kann.
 
-facktorc = (destinationc/referencec)? 0.5
-
-Dabei gilt:
-
-destinationc ist der C-Wert des Ziel Punkts.
-
-referencec ist der C-Wert des Hue-Referenz Punkts.
-
-Legen Sie als nächstes fest, ob sich der Zielpunkt j oberhalb oder unterhalb des Hue-Verweises j befindet. Wenn dies der Fall ist, gehen Sie wie folgt vor:
-
-1.  Compute "Factor" für den Zielpunkt relativ zum referencej. Dieser Factor-Wert liegt zwischen 0 und 1 (0 bei referencej; 1, wenn bei maxj).
-2.  factorij = (destinationj-referencej)/(maxj-referencej)
-
-    Dabei gilt:
-
-    destinationj ist der J-Wert des Ziel Punkts.
-
-    referencej ist der J-Wert des Hue-Referenz Punkts.
-
-    maxj ist der maximale J-Wert des Gamut.
-
-3.  Wenden Sie eine Gamma ähnliche Power-Funktion auf factorj an, wodurch factorj um eine bestimmte Menge reduziert wird. In diesem Beispiel wird die Potenz von 2 (dem Quadrat) verwendet. Subtrahieren Sie den reduzierten Faktor vom ursprünglichen Faktor, und multiplizieren Sie das Ergebnis mit dem gesamten J-Bereich oberhalb der primären referencej, um nach der "Delta-" zu suchen, die die Änderung in j nach der Helligkeit-Komprimierung, jedoch nicht mit der Chroma-Abhängigkeit darstellt.
-4.  Delta = (Factor j-(Factor) facktorj))? (maxj-referencej)
-
-5.  Wenden Sie Factor auf das Delta (je höher das Chroma, je größer die Auswirkung) an, und berechnen Sie den neuen J-Wert für den Zielpunkt.
-6.  destinationj = destinationj-(Delta? facktorc)
-
-Wenn der Wert für "j-Value" für den Zielpunkt unterhalb von "referencej" liegt, wird eine ähnliche Berechnung der vorangehenden Schritte a-C durchgeführt, wobei minj anstelle von maxj verwendet wird, um den Bereich in J zu ermitteln, in dem die facrenj berechnet werden soll, und die Polarität der Vorgänge "unterhalb" der referencej zu berücksichtigen.
-
-factorij = (referencej-destinationj)/(referencej-minj)
-
-Delta = (Factor j-(Factor) facktorj))? (referencej-minj)
-
-destinationj = destinationj + (Delta? facktorc)
+factorC = (destinationC/referenceC) ? 0,5
 
 Dabei gilt:
 
-minj ist der minimale J-Wert des Gamut.
+destinationC ist der C-Wert des Zielpunkts.
 
-Die Chroma für Eingabe Farbpunkte wird linear (sofern möglich) entlang konstanter Helligkeit erweitert, proportional zum maximalen Chroma-Wert der Quell-und Ziel-Gamuts an diesem Farbton und der Helligkeit. In Kombination mit der vorangehenden Chroma-abhängigen Helligkeit-Komprimierung wird dadurch die Sättigung bewahrt, da bei der Scheren Zuordnung mit den Verweis Punkten mitunter der Quellpunkt in Chroma überkomprimiert wird (siehe Abbildung 16).
+referenceC ist der C-Wert des Hue-Referenzpunkts.
 
-![Diagramm, das die zu Übereinstimmungs ung von Hue-Verweis Punkten vor der Schecke auf der rechten Seite anzeigt.](images/gmmp-shearmapping.png)
+Bestimmen Sie als Nächstes, ob der Zielpunkt J oberhalb oder unterhalb des Farbtonverweises J liegt. Gehen Sie im obigen Beispiel wie folgt vor:
 
-**Abbildung 16** : Scheren Zuordnung, Helligkeit-Komprimierung in Richtung Hue Reference J und Chroma-Erweiterung
-
-Im folgenden finden Sie eine mathematische Beschreibung des Chroma-Erweiterungsprozesses, oder Sie passen den C-Wert des Ziel Punkts an. Es wird als Zielpunkt bezeichnet, da es eine Schere zugeordnet wurde und die Helligkeit in den Ziel Gamut komprimiert wurde.
-
-1.  Stellen Sie vor der Scheren Zuordnung sourceextentc (den Block "Chroma" bei Helligkeit und Farbton des Quell Punkts).
-2.  Nachdem die schof-und die Helligkeit-Komprimierung den Quellpunkt in den Zielpunkt transformiert haben, bestimmen Sie den Wert für "destextentc" (der Chroma-Wertebereich mit Helligkeit und Farbton des Ziel Punkts).
-3.  Wenn die sourceextentc-Datei größer ist als der destextentc, ist keine Chroma-Anpassung am Zielpunkt erforderlich, und Sie können den nächsten Schritt überspringen.
-4.  Passen Sie destinationc (der Chroma des Ziel Punkts) so an, dass er mit dieser Helligkeit und dem Farbton in den Zielbereich für den Bereich passt.
-5.  destinationc = destinationc? (destextentc/sourceextentc)
+1.  Berechnen Sie "factorJ" für den Zielpunkt relativ zum referenceJ. Dieser FactorJ-Wert liegt zwischen 0 und 1 (0, wenn für referenceJ; 1 bei maxJ).
+2.  factorJ = (destinationJ - referenceJ) / (maxJ - referenceJ)
 
     Dabei gilt:
 
-    destinationc ist der Ziel Punkt C-Wert.
+    destinationJ ist der J-Wert des Zielpunkts.
 
-    sourceextentc ist der maximale C-Wert des Quellcodes bei Helligkeit und Farbton des Quell Punkts.
+    referenceJ ist der J-Wert des Hue-Bezugspunkts.
 
-    destextentc ist der maximale C-Wert des Ziel gamels mit Helligkeit und Farbton des Ziel Punkts.
+    maxJ ist der maximale J-Wert des Gamuts.
 
-Führen Sie schließlich das imimumentfernungs Clipping aus. Wenn die Eingedrehte, von Helligkeit angepasste und mit der Stift zugeordnete Eingabe Farbe weiterhin etwas außerhalb des Ziel gamels liegt, schneiden Sie Sie (verschieben) an den nächstgelegenen Punkt an der Ziel-Spiel Grenze aus (siehe Abbildung 17).
+3.  Wenden Sie eine gammaähnliche Potenzfunktion auf factorJ an, wodurch FactorJ um einen bestimmten Betrag reduziert wird. In diesem Beispiel wird die Potenz von 2 (das Quadrat) verwendet. Subtrahieren Sie den reduzierten FactorJ vom ursprünglichen FactorJ, und multiplizieren Sie das Ergebnis mit dem gesamten J-Bereich über dem primären ReferenceJ, um das "deltaJ" zu finden, das die Änderung in J nach der Helligkeitskomprimierung darstellt, aber nicht die Abhängigkeit der Potenz enthält.
+4.  deltaJ = (factorJ - (factorJ ? factorJ)) ? (maxJ – referenceJ)
 
-![Diagramm, das das minimale Entfernungs Clipping anzeigt.](images/gmmp-figure15.png)
+5.  Wenden Sie factorC auf das DeltaJ an (je höher der Füllungsfaktor, desto größer der Effekt), und berechnen Sie den neuen J-Wert für den Zielpunkt.
+6.  destinationJ = destinationJ – (deltaJ ? factorC)
 
-**Abbildung 17** : minimaler Entfernungs Clipping
+Wenn der J-Wert für den Zielpunkt unter referenceJ liegt, wird eine ähnliche Berechnung wie in den vorherigen Schritten A-C ausgeführt. Dabei wird minJ anstelle von maxJ verwendet, um den Bereich in J zu ermitteln, um den FactorJ zu berechnen, und die Polarität der Vorgänge "unterhalb" des referenceJ zu berücksichtigen.
 
-## <a name="gamut-boundary-description-and-gamut-shell-algorithms&quot;></a>Beschreibung von Gamut-Grenzen und Gamut-shellalgorithmen
+factorJ = (referenceJ - destinationJ) / (referenceJ - minJ)
 
-Die Funktion &quot;Geräte-Farbskala-Begrenzung&quot; verwendet die Gerätemodell-Engine und die analytischen Parameter, um eine Farb Geräte-Spiel Grenze abzuleiten, die als indizierte vertexliste der Hülle des Geräte gamzes beschrieben wird. Die Hülle wird unterschiedlich berechnet, je nachdem, ob Sie mit Additiven Geräten arbeiten, wie z. b. Monitoren, Projektoren oder subtraktive Geräte. Die indizierte Vertex-Liste wird in ciejab gespeichert. Die Struktur der indizierten Vertex-Liste ist für die Hardwarebeschleunigung durch DirectX optimiert.
+deltaJ = (factorJ - (factorJ ? factorJ)) ? (referenceJ – minJ)
 
-Dieser Ansatz verfügt über viele bekannte Lösungen. Wenn Sie im Web nach &quot;anvexen Hülle DirectX&quot; suchen, erhalten Sie mehr als 100 Treffer. Beispielsweise gibt es in diesem speziellen Thema einen Verweis von 1983 (Computer Grafik Theorie und-Anwendung, &quot;shiphulls, b-Spline-Oberflächen und CADCAM&quot;, &quot;PP. 34-49") mit Verweisen von 1970 bis 1982 im Thema.
+destinationJ = destinationJ + (deltaJ ? factorC)
 
-Die Sammlung der Punkte kann aus extern verfügbaren Informationen wie folgt ermittelt werden:
+Dabei gilt:
 
--   Punkte für die verweisshell für Monitore werden mithilfe einer Stichprobe des farbcubes im Colorant-Raum des Geräts generiert.
--   Punkte für die Referenz-Shell für Drucker und Erfassungsgeräte werden aus den Beispiel Daten abgerufen, die zum Initialisieren des Modells verwendet werden.
--   Punkte für die Referenz-Shell für ScRGB und sRGB werden mithilfe einer Stichprobe des farbcubes für sRGB generiert.
--   Punkte für die plausible Shell für Erfassungsgeräte werden mithilfe einer Stichprobe des farbcubes im Colorant-Raum des Geräts generiert.
--   Punkte für die verweisshell für Projektoren werden mithilfe einer Stichprobe eines Polyhedron im farbcube im Colorant-Raum des Geräts generiert.
--   Punkte für die mögliche Shell für Breite dynamische Bereichs Farbraum werden mithilfe einer Stichprobe des farbcubes im eigentlichen Bereich generiert.
+minJ ist der J-Mindestwert des Gamuts.
 
-Sie können eine Scheitelpunkt Liste erstellen, in der das Farb Geräte Spiel mit einem Geräte Profil und System Supportdiensten effizient beschrieben wird.
+Der Farbpunkt für Eingabefarbpunkte wird linear (wenn möglich) entlang konstanter Helligkeit proportional zum maximalen Farbwert der Quell- und Zielfarbwerte bei diesem Farbton und dieser Helligkeit erweitert. In Kombination mit der vorherigen, von der Helligkeit abhängigen Komprimierung trägt dies dazu bei, die Sättigung beizubehalten, da die Schubzuordnung mithilfe der Verweispunkte manchmal dazu führt, dass der Quellpunkt in der Färbung überkomprimiert wird (siehe Abbildung 16).
 
-Für Ausgabegeräte beschreibt die Roaminggrenze den Bereich von Farben, die vom Gerät angezeigt werden können. Eine Spiel Grenze wird aus denselben Daten generiert, die zum Modellieren des Verhaltens des Geräts verwendet werden. Konzeptionell geben Sie eine Stichprobe des Bereichs von Farben aus, die das Gerät erzeugen kann, messen die Farben, konvertieren die Messungen in Darstellungs Raum und verwenden dann die Ergebnisse zum Erstellen der spielbegrenzung.
+![Diagramm, das die Schubarzuordnung zeigt, die den Farbtonverweispunkten entspricht, vor dem Schub auf der linken Seite, nach dem Schub auf der rechten Seite.](images/gmmp-shearmapping.png)
 
-Eingabegeräte sind kniffliger. Jedes Pixel in einem Eingabebild muss über einen Wert verfügen. Jedes Pixel muss in der Praxis eine beliebige Farbe darstellen können, die in der realen Welt gefunden wurde. In diesem Sinne sind keine Farben für ein Eingabegerät "nicht im Spiel", da Sie immer dargestellt werden können.
+**Abbildung 16:** Shearzuordnung, Helligkeitskomprimierung in Richtung Farbtonverweis J und Glanzerweiterung
 
-Alle digitalen Bildformate haben einen dynamischen Bereich mit fester Größe. Aufgrund dieser Einschränkung sind immer einige unterschiedliche Reize vorhanden, die dem gleichen digitalen Wert zugeordnet werden. Daher ist es nicht möglich, eine eins-zu-Eins-Zuordnung zwischen realen Farben und digitalen Kamera Werten herzustellen. Stattdessen wird die Spiel Grenze gebildet, indem eine Reihe von echten Farben geschätzt wird, die die digitalen Reaktionen der Kamera liefern können. Sie verwenden diesen geschätzten Bereich als Farbskala für das Eingabegerät.
+Im Folgenden finden Sie eine mathematische Beschreibung des Vorgangs für die Erweiterung der Vergrößerung oder das Anpassen des C-Werts des Zielpunkts. Er wird als Zielpunkt bezeichnet, da er schubschnell zugeordnet und die Helligkeit in der Ziel-Gamut komprimiert wurde.
 
-Primäre Replikate sind enthalten, um die Zuordnung von Geschäftsgrafiken zu ermöglichen.
+1.  Bestimmen Sie vor der Schubzuordnung sourceExtentC (das Füllzeichen bei der Helligkeit und dem Farbton des Quellpunkts).
+2.  Bestimmen Sie nach der Schubzuordnungs- und Helligkeitskomprimierung, die den Quellpunkt in den Zielpunkt transformiert, den destExtentC (den Füllbereich bei der Helligkeit und dem Farbton des Zielpunkts).
+3.  Wenn sourceExtentC größer als der destExtentC ist, ist keine Anpassung des Zielpunkts erforderlich, und Sie können den nächsten Schritt überspringen.
+4.  Passen Sie destinationC (das Farbchen des Zielpunkts) so an, dass es bei dieser Helligkeit und diesem Farbton in den Ziel-Sgrad passt.
+5.  destinationC = destinationC ? (destExtentC/sourceExtentC)
 
-In der objektorientierten Art "true" abstrahieren Sie die zugrunde liegende Darstellung der Farbskala-Grenze. Dies ermöglicht Ihnen die Flexibilität, die Darstellung in Zukunft zu ändern. Um die im neuen allgemeinen Tabellen Ausdruck verwendete-Gbd (Farbskala Boundary Deskriptor) zu verstehen, müssen Sie zunächst verstehen, wie Farbskala-Mapping-Algorithmen (gmas) funktionieren. Bisher wurden die gmas so entworfen, dass Sie die Anforderungen der Grafik Grafik-Community erfüllen. Das heißt, um Bilder zu reproduzieren, die bereits ordnungsgemäß für das Gerät gerendert wurden, auf dem das Eingabe Image erstellt wurde. Das Ziel der Graphic Arts-gmas besteht darin, die bestmögliche Reproduktion des Eingabe Abbilds auf dem Ausgabegerät zu ermöglichen. Der neue CTE-Gbd ist so konzipiert, dass vier wichtige Probleme gelöst werden.
+    Dabei gilt:
 
-Da das Eingabebild für das Eingabegerät gerendert wird, passen alle Farben in den Bereich zwischen den weißen und schwarzen Punkten des Mediums. Angenommen, das Bild ist ein Foto einer Szene, in der es ein diffuses weiß ist, z. b. eine Person in einem weißen Tee-Shirt und eine Glanz Markierung, z. b. ein Licht, das ein Fenster oder eine Chrome-Stoßstange reflektiert. Die Szene wird auf dem Eingabe Medium gerendert, sodass die Glanz Markierung dem weißen Punkt des Mediums zugeordnet ist, und das diffuse weiß wird einer neutralen Farbe zugeordnet, die dunkler ist als der weiße Punkt des Mediums. Die Auswahl der Kartenfarben von der Szene zum Eingabe Medium ist sowohl eine Szenen abhängige Entscheidung als auch eine ästhetische Entscheidung. Wenn die Glanz Markierung in der ursprünglichen Szene fehlt, wird das diffuse weiß wahrscheinlich dem weißen Punkt des Mediums zugeordnet. In einer Szene mit vielen Hervorhebungs Details wird zwischen dem Glanz weißen und dem diffusen weißen Bereich mehr Bereich verbleiben. In einer Szene, in der die Hervorhebung nicht signifikant ist, kann nur sehr wenig Bereich verbleiben.
+    destinationC ist der C-Wert des Zielpunkts.
 
-Bei vorab gerenderten Images ist die Zuordnung von Farbskala relativ unkompliziert. Im Grunde ist der weiße Punkt des ursprünglichen Mediums dem weißen Punkt des Reproduktions Mediums zugeordnet, der schwarze Quellpunkt wird dem Ziel-Schwarzpunkt zugeordnet, und der größte Teil der Zuordnung ist fertiggestellt. Die verschiedenen gmas in der Existenz bieten Variationen für das Mapping anderer Punkte auf der Tonskala des Quell Mediums und verschiedene Möglichkeiten zur Behandlung von Out-of-Gamut-Chroma-Werten. Die Zuordnung von weiß zu weiß und schwarz zu schwarz ist in diesen Variationen jedoch einheitlich. Diese Implementierung erfordert, dass weiß oberhalb von j \* von 50 und schwarz unterhalb von j \* von 50 liegen muss.
+    sourceExtentC ist der maximale C-Wert der Quell gamut bei der Helligkeit und dem Farbton des Quellpunkts.
 
-Nicht alle Farb Codierungen schränken Farbbereiche für Eingabe Bilder ein. Die IEC-Standard Farbcodierung ScRGB (IEC 61966-2-2) stellt 16 Bits für jeden der drei Farbkanäle rot, grün und blau (RGB) bereit. In dieser Codierung wird der Verweis schwarz nicht als RGB-Triple (0,0) codiert, sondern als (4096, 4096, 4096). Der Verweis weiß wird als (12288, 12288, 12288) codiert. Mithilfe der ScRGB-Codierung können Glanzlichter und Schattendetails dargestellt werden. Sie enthält RGB-Tripel, die nicht physisch möglich sind, da Sie negative Mengen an Licht und Codierungen außerhalb des Cie-Spektral Lokus erfordern. Natürlich kann kein Gerät möglicherweise alle Farben im ScRGB-Gamut liefern. Tatsächlich kann kein Gerät alle Farben liefern, die ein Menschen sehen kann. Die Geräte können also den ScRGB-Farbskala nicht ausfüllen, und es wäre hilfreich, den Teil des gamches darzustellen, den Sie ausfüllen. Jedes Gerät verfügt über einen Bereich von Werten im ScRGB-Speicherplatz, den es verursachen kann. Dies sind die "erwarteten" Farben für das Gerät. Es wäre überraschend, dass das Gerät außerhalb dieses Gamut Farben erzeugt. Es gibt eine definierte Transformation zwischen ScRGB-Speicherplatz und Darstellungs Raum, sodass jedes Gerät auch über einen Bereich von Darstellungs Werten verfügt, die er reproduzieren soll.
+    destExtentC ist der maximale C-Wert der Ziel gamut bei der Helligkeit und dem Farbton des Zielpunkts.
 
-Sowohl in ScRGB als auch in der Eingabe von Erfassungs Geräten, die mit einem festgelegten Ziel gekennzeichnet sind, ist es möglich, einen Wert außerhalb des Bereichs der erwarteten Werte zu erhalten. Wenn jemand eine Kamera an ein Testziel kalibriert, und dann eine Szene mit Glanzlichtern aufzeichnet, gibt es möglicherweise Pixel, die heller als der weiße Punkt des Ziels sind. Das gleiche kann passieren, wenn ein auf natürliche Weise auftretendes rot mehr als das rote Ziel ist. Wenn ein Benutzer ein ScRGB-Image von einem Gerät annimmt und dann die Farben im Bild manuell bearbeitet, ist es möglich, Pixel zu erstellen, die außerhalb des erwarteten Bereichs des Geräte gamts liegen, auch wenn Sie sich innerhalb des gesamten ScRGB-Gamut befinden.
+Führen Sie abschließend den Mimimum-Abstandsclipping aus. Wenn sich die Farbtonrotierung, die Helligkeitseinstellung und die Schubarzuordnungseingabefarbe noch etwas außerhalb der Ziel gamut befindet, clippen Sie sie (verschieben Sie sie) an den nächstgelegenen Punkt an der Gamutgrenze des Ziels (siehe Abbildung 17).
 
-Ein zweites Problem ist möglicherweise zunächst mit diesem Problem verknüpft. Dies ist der Fall, wenn Sie ein farbziel verwenden, um ein Eingabegerät zu charakterisieren, z. b. eine Kamera oder einen Scanner. Reflektierenden Ziele werden in der Regel auf Papier erstellt und enthalten eine Reihe farbiger Patches. Manufaturer stellt Datendateien mit Farbmessungen bereit, die unter einer festgelegten Anzeige Bedingung für jeden farbpatch erstellt wurden. Farbprofilerstellungs-Tools erstellen eine Zuordnung zwischen diesen gemessenen Werten und den Werten, die von den Farbsensoren in den Geräten zurückgegeben werden. Das Problem ist, dass diese farbziele häufig nicht den vollständigen Bereich der Geräte Werte abdecken. Beispielsweise gibt der Scanner oder die Kamera möglicherweise den Wert (253, 253, 253) für den Verweis-weißen Punkt zurück, und ein Verweis rotes Patch hat möglicherweise den RGB-Wert (254, 12, 4). Diese stellen den Bereich der erwarteten Werte für das Eingabegerät dar, basierend auf den Zielwerten. Wenn Sie das Eingabegerät basierend auf den Antworten auf das Ziel bezeichnen, werden nur Farben in diesem schmalen Bereich erwartet. Dieser Bereich ist nicht nur kleiner als der Bereich von Farben, den Menschen sehen können, sondern kleiner als der Bereich von Farben, den das Gerät liefern kann.
+![Diagramm, das die Minimale Entfernungsabschneidung zeigt.](images/gmmp-figure15.png)
 
-In beiden Fällen ist es schwierig, die Größe des Eingabe Geräts oder-Bilds zu schätzen, trotz des Vorhandenseins eines Verweises oder von Messungen. Beim ersten Problem ist der plausible Spiel Aufwand für das Eingabegerät niedriger als der gesamte ScRGB-Wert. Beim zweiten Problem ist der Verweis Bereich des Ziels kleiner als der gesamte mögliche Bereich des Eingabe Geräts.
+**Abbildung 17:** Abschneiden des Mindestabstands
 
-Das dritte Problem betrifft die Tonzuordnung. Viele Modelle von spielgrenzen, die die in der Grafikkunst verwendeten vorgerenderten Bilder adäquat darstellen können, wurden vorgeschlagen, z. b. der braun-und Fairchild Mountain Range Gbd (braun \[ 97 \] ), und der Abschnitt Maxima-Begrenzungs Deskriptor (Morovic 98) von Morovic \[ \] . Diese Modelle enthalten jedoch nur Informationen zu den extremen des Geräts. Ihnen fehlen Informationen zu anderen Punkten in der klanglichen Zuordnung. Ohne diese Informationen können gmas nur grobe Schätzungen der optimalen Ton Zuordnung erstellen. Schlimmer noch: diese Modelle bieten keine Hilfe für den erweiterten dynamischen Bereich in ScRGB und in digitalen Kamerabildern.
+## <a name="gamut-boundary-description-and-gamut-shell-algorithms"></a>Gamut Boundary Description and Gamut Shell Algorithms
 
-Wie wird dieses Problem in der Fotobranche gelöst? Die Kamera erfasst ein Bild. Experten könnten erörtern, wie viel Rendering im Erfassungsgerät auftritt. Sie stimmen jedoch zu, dass es sich nicht um einen signifikanten Betrag handelt. Beide Technologien ordnen kein diffuses weiß in einer erfassten Szene dem weißen Punkt des Mediums zu. Ebenso wird der schwarze Punkt nicht aus der Szene dem schwarzen Punkt des Mediums zugeordnet. Das Verhalten von Fotofilmen wird unter Dichte Raum mithilfe einer charakteristivenkurve beschrieben, die oft als Hurter und Driffield bezeichnet wird, oder H&D-Kurve. Die Kurve zeigt die Dichte der ursprünglichen Szene und die resultierende Dichte für den Film an. Abbildung 18 zeigt eine typische H-&D-Kurve. Die x-Achse stellt eine erhöhte Protokoll Präsenz dar. Die y-Achse stellt die Dichte auf der Folie dar. Fünf Verweis Punkte werden in der Kurve markiert: schwarz ohne Detail, das die minimale Dichte im negativen darstellt. schwarz mit Detail; Verweis Mid-graue Karte; weiß mit Detail; und weiß ohne Detail. Beachten Sie, dass Leerzeichen zwischen schwarz ohne Detail (das schwarz dargestellt werden) und schwarz mit Detail (Schatten schwarz) vorhanden ist. Ebenso gibt es Leerraum zwischen weiß mit Detail (diffuses weiß) und weiß ohne Detail (steht für das weiß des Geräts).
+Die Gamutbegrenzungsfunktion des Geräts verwendet die Gerätemodell-Engine und analytische Parameter, um eine farbliche Gamutgrenze des Geräts abzuleiten, die als indizierte Scheitelpunktliste der Hülle der Geräte gamutbeschrieben wird. Die Hülle wird unterschiedlich berechnet, je nachdem, ob Sie mit additiven Geräten wie Monitoren und Projektoren oder subtrahierten Geräten arbeiten. Die indizierte Scheitelpunktliste wird in CIEJab gespeichert. Die Struktur der indizierten Scheitelpunktliste ist für die Hardwarebeschleunigung durch DirectX optimiert.
 
-![Diagramm, das die H-und D-Kurve für FolienFolie anzeigt.](images/gmmp-image079.png)
+Dieser Ansatz verfügt über viele bekannte Lösungen. Wenn Sie im Web nach "convex hull DirectX" suchen, erhalten Sie mehr als 100 Treffer. Es gibt z. B. einen Verweis aus 1983 zu diesem speziellen Thema (Computergrafiktheorie und -anwendung, "Ship untereinander, b-spline oberflächen, and cadcam", S. 34-49) mit Verweisen von 1970 bis 1982 zu diesem Thema.
 
-**Abbildung 18** : H&D-Kurve für FolienFolie
+Die Sammlung von Punkten kann anhand extern verfügbarer Informationen wie folgt bestimmt werden:
 
-Die Videobranche liefert "Headroom&quot; und &quot;fooorial&quot; in Bildern. In der ITU 709-Spezifikation wird die Leuchtkraft (&quot;Y") in 8 Bits mit einem Bereich von 0 bis 255 codiert. Allerdings wird der Verweis schwarz bei 15 codiert und der Verweis weiß als 235 codiert. Dadurch bleibt der Codierungs Bereich zwischen 236 und 255, um Glanzlichter darzustellen.
+-   Punkte für die Referenzshell für Monitore werden mithilfe einer Stichprobenentnahme des Farbcubes im Farbraum des Geräts generiert.
+-   Punkte für die Referenzshell für Drucker und Erfassungsgeräte werden aus den Beispieldaten abgerufen, die zum Initialisieren des Modells verwendet werden.
+-   Punkte für die Verweisshell für scRGB und sRGB werden mithilfe einer Stichprobenentnahme des Farbcubes für sRGB generiert.
+-   Punkte für die shell-Shell für Erfassungsgeräte werden mithilfe einer Stichprobenentnahme des Farbcubes im Farbraum des Geräts generiert.
+-   Punkte für die Referenzshell für Projektoren werden mithilfe einer Stichprobenentnahme eines Polyeders im Farbcube im Farbraum des Geräts generiert.
+-   Punkte für die mögliche Shell für breite Dynamische Bereichsfarbräume werden mithilfe einer Stichprobenentnahme des Farbcubes im Raum selbst generiert.
 
-Die Videobranche stellt ein im wesentlichen geschlossenes Schleifen System dar. Obwohl es viele verschiedene Gerätehersteller gibt, basieren Videosysteme auf Referenz Geräten. Es gibt eine Standard Codierung für Videobilder. Es ist nicht erforderlich, eine Spiel Grenze mit Videobildern zu kommunizieren, da alle Bilder für die Reproduktion auf demselben Referenzgerät codiert sind. Der Film ist auch eine geschlossene Schleife, da zwischen den verschiedenen Komponenten keine zwischen Daten vermittelt werden müssen. Sie benötigen eine Lösung, die Bilder von Geräten mit unterschiedlichen Gamuts ermöglicht und sowohl vorab gerenderte als auch ungerenderte Szenen darstellt, die bei der Ausgabe mit unterschiedlichen Gamuts reproduziert werden.
+Sie können eine Scheitelpunktliste erstellen, die die Farbgeräte-Gamut effizient beschreibt, wenn Sie ein Geräteprofil und Systemunterstützungsdienste verwenden.
 
-Ein viertes Problem, das durch den neuen allgemeinen Tabellen Ausdruck gelöst werden muss, besteht darin, dass die von einem Gerät erzeugten visuellen Farben, z. b. wenn rot = grün = blau, bei einem Monitor häufig nicht auf die neutrale Achse der CAM (bei Chroma = 0,0) fallen. Dies verursacht große Schwierigkeiten für gmas. Damit gmas ordnungsgemäß funktioniert, müssen Sie die Beschreibung der Art des Geräts und der Eingabepunkte anpassen, damit die neutrale Achse des Geräts auf der neutralen Achse des Erscheinungs Bilds liegt. Sie müssen Punkte an der neutralen Achse um eine ähnliche Menge anpassen. Andernfalls können Sie keine Glättung durch das Bild durchführen. Auf dem Weg aus dem GMA wird diese Zuordnung relativ zur neutralen Achse des Ausgabegeräts rückgängig gemacht. Dies wird als "Chiropractic"-Korrektur der Achse bezeichnet. Wie bei einem chirovorgang wird das Gerüst (neutrale Achse) nicht nur auf das Gerüst ausgerichtet, sondern auch auf den Rest des Texts, um zusammen mit dem Gerüst zu wechseln. Wie bei einem Chiropractor passen Sie das Gerüst nicht um denselben Betrag durch den gesamten Raum an. Stattdessen werden verschiedene Abschnitte anders angepasst.
+Bei Ausgabegeräten beschreibt die Gamutgrenze den Farbbereich, der vom Gerät angezeigt werden kann. Eine gamut-Grenze wird aus den gleichen Daten generiert, die zum Modellieren des Verhaltens des Geräts verwendet werden. Konzeptionell können Sie eine Stichprobenentnahme des Farbbereichs ausgeben, den das Gerät erzeugen kann, die Farben messen, die Messungen in den Darstellungsbereich konvertieren und dann die Ergebnisse verwenden, um die Gamutgrenze zu erstellen.
 
-![Diagramm, das die Krümmung der Geräte neutralen Achse relativ zur neutralen ciecam-Achse anzeigt.](images/gmmp-image081.png)
+Eingabegeräte sind schwieriger. Jedes Pixel in einem Eingabebild muss einen Wert aufweisen. Jedes Pixel muss in der Lage sein, jede Farbe in der realen Welt in irgendeiner Weise darzustellen. In diesem Sinn sind keine Farben für ein Eingabegerät "out of gamut", da sie immer dargestellt werden können.
 
-**Abbildung 19:** Krümmung der Geräte neutralen Achse relativ zur ciecam-neutralen Achse
+Alle digitalen Bildformate weisen einen festen dynamischen Bereich auf. Aufgrund dieser Einschränkung gibt es immer einige unterschiedliche Unterschiedliche, die dem gleichen digitalen Wert zugeordnet sind. Daher können Sie keine 1:1-Zuordnung zwischen realen Farben und Digitalkamerawerten einrichten. Stattdessen wird die Gamutgrenze gebildet, indem ein Bereich von realen Farben abschätzet wird, die die digitalen Antworten der Kamera erzeugen können. Sie verwenden diesen geschätzten Bereich als Gamut für das Eingabegerät.
 
-Der neue CTE erfordert ein Modell einer spielbegrenzung, das sowohl gerenderte als auch nicht gerenderte Quellbilder darstellen, Informationen zur Darstellung von Geräte neutralen bereitstellen und Informationen für Ton Zuordnungs Bilder mit einem breiten Glanz Bereich bereitstellen kann.
+Primäre Typen sind enthalten, um eine Gamutzuordnung vom Typ "Absichtstyp" für Geschäftsgrafiken bereitzustellen.
 
-![Diagramm, das die drei Farbskala Shells anzeigt.](images/gmmp-image083.png)
+Im echten objektorientierten Stil abstrahieren Sie die zugrunde liegende Darstellung der Gamutgrenze. Dadurch können Sie die Darstellung in Zukunft flexibel ändern. Um den gamut-Begrenzungsdeskriptor (GBD) zu verstehen, der im neuen allgemeinen Tabellenauswertungsmodul verwendet wird, müssen Sie zunächst verstehen, wie gamut-Zuordnungsalgorithmen (GAAs) funktionieren. Bisher wurden GMAs entwickelt, um die Anforderungen der Grafikcommunity zu erfüllen. das heißt, Bilder zu reproduzieren, die bereits ordnungsgemäß für das Gerät gerendert wurden, auf dem das Eingabebild erstellt wurde. Das Ziel grafischer GmAs besteht darin, die bestmögliche Wiedergabe des Eingabebilds auf dem Ausgabegerät zu ermöglichen. Die neue CTE-GBD wurde entwickelt, um vier wichtige Probleme zu lösen.
 
-**Abbildung 20** : drei Farbskala Shells
+Da das Eingabebild für das Eingabegerät gerendert wird, passen alle Farben in den Bereich zwischen dem weißen Punkt des Mediums und dem schwarzen Punkt. Angenommen, das Bild ist ein Foto einer Szene, in der ein diffuses Weiß vorliegt, z. B. eine Person in einem weißen T-Shirt, und ein Glanzlicht, z. B. Licht, das von einem Fenster oder einem Chrome-Bumper reflektiert wird. Die Szene wird auf dem Eingabemedium gerendert, sodass die Glanzlichter dem weißen Punkt des Mediums zugeordnet und das diffuse Weiß einer neutralen Farbe zugeordnet wird, die dunkler als der weißer Punkt des Mediums ist. Die Wahl, wie Farben aus der Szene dem Eingabemedium zugeordnet werden, ist sowohl eine szenenabhängige als auch eine optische Entscheidung. Wenn das Glanzlicht in der ursprünglichen Szene fehlt, wird das diffuse Weiß wahrscheinlich dem weißen Punkt des Mediums zugeordnet. In einer Szene mit vielen Hervorhebungsdetails würde mehr Bereich zwischen dem Glanzlicht und dem diffusen Weiß übrig bleiben. In einer Szene, in der die Hervorhebung nicht signifikant ist, kann nur ein sehr kleiner Bereich übrig bleiben.
 
-Die Spiel Grenze besteht aus drei Shells, die drei Bereiche definieren.
+Bei vorab gerenderten Bildern ist die Gamutzuordnung relativ einfach. Im Grunde wird der weißer Punkt des ursprünglichen Mediums dem weißen Punkt des Reproduktionsmediums zugeordnet, der schwarze Quellpunkt wird dem schwarzen Zielpunkt zugeordnet, und der großteil der Zuordnung ist abgeschlossen. Die verschiedenen vorhanden GMAs bieten Variationen für die Zuordnung anderer Punkte auf der Tonskala des Quellmediums und verschiedene Möglichkeiten, out-of-gamut-Werte zu verarbeiten. Die Zuordnung von Weiß zu Weiß und Schwarz zu Schwarz ist jedoch in diesen Variationen konsistent. Diese Implementierung erfordert, dass weiß über einem J \* von 50 und schwarz unter einem J \* von 50 liegt.
 
-Im neuen allgemeinen Tabellen Ausdruck wird die äußere Shell des Farbskala mit einer konvexen Hülle gebildet, die aus Beispiel Punkten im Geräte Spiel erstellt wurde. Eine Hülle wird gebildet, indem eine Reihe von Beispiel Punkten erstellt und durch eine Oberfläche umgeben wird. Eine anvexen Hülle verfügt über die zusätzliche Eigenschaft, die überall gleich ist. Daher ist dies nicht die kleinste mögliche Hülle, die an die Daten angepasst werden kann. Doch das Experimentieren hat gezeigt, dass das Anpassen der Beispiel Punkte zu unansprech enden Artefakten in Bildern, wie z. b. fehlende Glättung, nicht geeignet ist. Diese Probleme lassen sich durch die konforme Hülle lösen.
+Nicht alle Farbcodierungen beschränken Farbbereiche für Eingabebilder. Der IEC-Standardfarbcodierungs-scRGB (IEC 61966-2-2) bietet 16 Bits für jeden der drei Farbkanäle Rot, Grün und Blau (RGB). In dieser Codierung wird der Verweis schwarz nicht als RGB-Triple (0, 0, 0), sondern als (4096, 4096, 4096) codiert. Verweis weiß ist als codiert (12288, 12288, 12288). Die scRGB-Codierung kann verwendet werden, um Glanzlichter und Schattendetails darzustellen. Sie enthält RGB-Triples, die physisch nicht möglich sind, da sie negative Lichtmengen erfordern, sowie Codierungen, die sich außerhalb des CIE-Locus befinden. Natürlich kann kein Gerät möglicherweise alle Farben im scRGB-Gamut erzeugen. Tatsächlich kann kein Gerät alle Farben erzeugen, die ein Mensch sehen kann. Daher können Geräte den scRGB-Gamut nicht ausfüllen, und es wäre hilfreich, den Teil des Gamuts darstellen zu können, den sie füllen. Jedes Gerät verfügt über einen Bereich von Werten im scRGB-Bereich, den es erzeugen kann. Dies sind die "erwarteten" Farben für das Gerät. Es wäre überraschend, dass das Gerät Farben außerhalb dieses Gamuts erzeugt. Es gibt eine definierte Transformation vom scRGB-Raum zum Darstellungsbereich, sodass jedes Gerät auch über einen Bereich von Darstellungswerten verfügt, die es voraussichtlich reproduzieren wird.
 
-Im Algorithmus werden farbdarstellungs Werte für einen Satz von Punkten abgerufen, die vom Gerät abgetastet werden. Bei Monitoren und Druckern werden die farbdarstellungs Werte durch Ausgabe von Beispielen abgerufen und anschließend gemessen. Sie können auch ein Gerätemodell erstellen und dann mithilfe des Geräte Modells synthetische Daten ausführen, um gemessene Werte vorherzusagen. Die gemessenen Werte werden dann von dem Wert "farbige Metrik" (XYZ) in den Darstellungs Raum (Jab) konvertiert, und die Hülle wird um die Punkte umschlossen.
+Sowohl bei scRGB als auch bei Eingaben von Erfassungsgeräten, die mit einem festen Ziel gekennzeichnet sind, ist es möglich, einen Wert außerhalb des erwarteten Wertebereichs abzurufen. Wenn jemand eine Kamera an ein Testziel kalibriert, und erfasst dann eine Szene mit Glanzlichtern. Es gibt möglicherweise Pixel, die hell als der weiße Punkt des Ziels sind. Dasselbe kann passieren, wenn ein natürlich auftretendes Rot freundlicher als das Zielrot ist. Wenn ein Benutzer ein scRGB-Bild von einem Gerät übernimmt und dann die Farben im Bild manuell bearbeitet, ist es möglich, Pixel zu erstellen, die außerhalb des erwarteten Bereichs des Gerätebereichs liegen, obwohl sie sich innerhalb des vollständigen scRGB-Gamuts befinden.
 
-Der wichtigste Punkt für diesen Algorithmus besteht darin, dass der bei der Konvertierung von farbmetriken in Darstellungs Raum verwendete weiße Punkt nicht den weißen Punkt des Mediums enthalten muss. Stattdessen können Sie einen Punkt weiter unten im Spielbereich und am (oder in der Nähe) der neutralen Achse auswählen. Dieser Punkt hat dann einen J-Wert von 100. Beispiele mit einem gemessenen Y-Wert, der höher als der angenommene weiße Punkt ist, erhalten einen J-Wert größer als 100.
+Ein zweites Problem scheint zunächst nicht damit in Zusammenhang zu stehen. Sie tritt auf, wenn Sie ein Farbziel verwenden, um ein Eingabegerät wie eine Kamera oder einen Scanner zu charakterisieren. Reflektierende Ziele werden in der Regel auf Papier erzeugt und enthalten eine Reihe farbiger Patches. Manufaturer stellen Datendateien mit Farbmessungen bereit, die unter einer festen Anzeigebedingung für jeden Farbpatch durchgeführt werden. Farbprofilerstellungstools erstellen eine Zuordnung zwischen diesen gemessenen Werten und den Werten, die von den Farbsensoren auf den Geräten zurückgegeben werden. Das Problem besteht darin, dass diese Farbziele häufig nicht den gesamten Bereich der Gerätewerte abdecken. Beispielsweise kann der Scanner oder die Kamera den Wert (253, 253, 253) für den weißen Verweispunkt zurückgeben, und ein roter Verweispatch kann den RGB-Wert (254, 12, 4) aufweisen. Diese stellen den Bereich der erwarteten Werte für das Eingabegerät dar, basierend auf den Zielwerten. Wenn Sie das Eingabegerät basierend auf den Antworten auf das Ziel charakterisieren, erwarten Sie nur Farben innerhalb dieses schmalen Bereichs. Dieser Bereich ist nicht nur kleiner als der Farbbereich, den Menschen sehen können, sondern auch kleiner als der Farbbereich, den das Gerät erzeugen kann.
 
-Wenn Sie den diffusen weißen Punkt der Szene als den angenommenen weißen Punkt für die Farb Raum Konvertierung platzieren, werden Glanzlichter in der Szene leicht erkannt, wenn ein J-Wert größer als 100 ist.
+In beiden Fällen ist es schwierig, die Gamut des Eingabegeräts oder -bilds zu schätzen, obwohl eine Verweis-Gamut oder Messungen vorhanden sind. Im ersten Problem ist die skala Gamut des Eingabegeräts kleiner als die vollständige Gamut von scRGB. Im zweiten Problem ist die Verweis-Gamut des Ziels kleiner als die vollständige mögliche Gamut des Eingabegeräts.
 
-Da das CIECAM02-Farbmodell auf dem visuellen System des visuellen Elements basiert, wird nach dem Auswählen eines gefolgten weißen weiß, dass die Beleuchtungs Ebene des schwarzen Punkts (J = 0) automatisch durch das Modell bestimmt wird. Wenn das Eingabebild über einen breiten dynamischen Bereich verfügt, ist es möglich, dass Werte, die J-Werten zugeordnet sind, kleiner als 0 (null) sind.
+Das dritte Problem umfasst die Tonzuordnung. Es wurden viele Modelle von Gamutgrenzen vorgeschlagen, die vorab gerenderte Bilder, die in der Grafischen Grafik verwendet werden, angemessen darstellen können, z. B. die GBD der Stumm- und Fairchild Mountain Range (Stumm \[ 97) \] und Mordos Segment Maxima-Begrenzungsdeskriptor (Mor gigabyte \[ 98 \] ). Diese Modelle bieten jedoch nur Informationen über die Extreme der Gamut des Geräts. Es fehlen Informationen zu anderen Punkten in der Tonalitätszuordnung. Ohne solche Informationen können GMAs nur grobe Schätzungen der optimalen Tonzuordnung vornehmen. Schlechter noch: Diese Modelle bieten keine Hilfe für den erweiterten dynamischen Bereich in scRGB und in Digitalkamerabildern.
 
-In der folgenden Abbildung 21 sind die Geräte neutrale aufgeführt, die im Mittelpunkt der Programmier-und Verweis-Gamuts ausgeführt werden.
+Wie wird dieses Problem in der Foto- und Videographik behoben? Die Kamera erfasst ein Bild. Experten könnten darüber nachdenken, wie viel Rendering auf dem Erfassungsgerät erfolgt. sie stimmen jedoch zu, dass es sich nicht um einen signifikanten Betrag handelt. Beide Technologien ordnen dem weißen Punkt des Mediums kein diffuses Weiß in einer erfassten Szene zu. Ebenso ordnen sie den schwarzen Punkt aus der Szene nicht dem schwarzen Punkt des Mediums zu. Das Verhalten von Fotofolien wird im Dichteraum mithilfe einer Merkkurve beschrieben, die häufig als "Hurter" und "Driffield" oder "H&D"-Kurve bezeichnet wird. Die Kurve zeigt die Dichte der ursprünglichen Szene und die resultierende Dichte für den Film. Abbildung 18 zeigt eine typische H&D-Kurve. Die x-Achse stellt eine zunehmende Protokollbelichtung dar. Die y-Achse stellt die Dichte auf der Folie dar. Fünf Verweispunkte sind in der Kurve markiert: Schwarz ohne Detail, das die minimale Dichte auf dem Negativen darstellt; schwarz mit Details; Verweis auf mittelgraue Karte; weiß mit Details; und weiß ohne Details. Beachten Sie, dass zwischen Schwarz ohne Detail (das Geräteschwarz darstellt) und Schwarz mit Details (Schattenschwarz) Platz vorhanden ist. Auf ähnliche Weise gibt es Leerzeichen zwischen Weiß mit Details (diffuses Weiß) und Weiß ohne Detail (was Gerätewittchen darstellt).
 
-![Diagramm, das die Geräte neutrale Achse anzeigt, die der Grenze für das Spiel hinzugefügt wurde.](images/gmmp-image085.png)
+![Diagramm, das die H- und D-Kurve für Denkfolien zeigt.](images/gmmp-image079.png)
 
-**Abbildung 21** : Geräte neutrale Achse zur Farbskala-Begrenzung hinzugefügt
+**Abbildung 18:** H&D-Kurve für Folien
 
-Alle Farbskala-Zuordnungen umfassen entweder das Abschneiden eines Eingabe Bereichs in ein Ausgabe Spiel oder das Komprimieren des Eingabe-gamels, damit er in den Ausgabebereich passt. Komplexere Algorithmen werden durch Komprimieren und Abschneiden in verschiedene Richtungen oder durch Aufteilen des gamens in verschiedene Bereiche und anschließende durchführen von Clipping oder Komprimierung in den verschiedenen Regionen gebildet.
+Die Videobranche bietet "Headroom" und "Footroom" in Bildern. In der ITU 709-Spezifikation wird die Leuchtdichte (Y) in 8 Bits mit einem Bereich von 0 bis 255 codiert. Der Verweis black wird jedoch bei 15 codiert, und verweis white wird als 235 codiert. Dadurch bleibt der Codierungsbereich zwischen 236 und 255, um Glanzlichter darzustellen.
 
-Der neue CTE erweitert dieses Konzept, um die Bereiche eines möglichen Gamut, ein plausibles Spiel und einen Verweis Bereich zu unterstützen, und ermöglicht gmas, Sie auf unterschiedliche Weise zuzuordnen. Darüber hinaus enthalten die gmas Informationen zur Geräte neutralen Achse. Im folgenden wird erläutert, wie Situationen behandelt werden, in denen die plausiblen Gamuts und Verweis-Gamuts aufeinander reduziert wurden.
+Die Videobranche stellt ein im Wesentlichen geschlossenes Schleifensystem dar. Obwohl es viele verschiedene Gerätehersteller gibt, basieren Videosysteme auf Referenzgeräten. Es gibt eine Standardcodierung für Videobilder. Es ist nicht erforderlich, eine gamut-Grenze mit Videobildern zu kommunizieren, da alle Bilder für die Reproduktion auf demselben Referenzgerät codiert sind. Film ist auch eine geschlossene Schleife, da zwischen verschiedenen Komponenten keine Zwischendaten vermittelt werden müssen. Sie möchten eine Lösung, mit der Bilder von Geräten mit unterschiedlichen Gamuts und darstellungen vorab gerenderter und nicht gerenderter Szenen bei der Ausgabe mit unterschiedlichen Gamuts reproduziert werden können.
 
-![Diagramm, das das G M A mit zwei nicht reduzierten Spiel Deskriptoren anzeigt.](images/gmmp-image091.png)
+Ein viertes Problem, das der neue CTE lösen muss, besteht darin, dass die visuell grauen Farben, die von einem Gerät erzeugt werden, z. B. wenn red=green=blue auf einem Monitor angezeigt wird, häufig nicht auf die neutrale Achse des GERÄTs fallen (wenn die Farbe = 0,0 ist). Dies führt zu großen Schwierigkeiten bei GMAs. Damit GMAs gut funktionieren, müssen Sie die Beschreibung des Gamuts des Geräts und der Eingabepunkte so anpassen, dass die neutrale Achse des Geräts auf die neutrale Achse des Darstellungsbereichs fällt. Sie müssen Punkte von der neutralen Achse um einen ähnlichen Betrag anpassen. Andernfalls können Sie keine reibungslosen Abstufungen über das Bild vornehmen. Auf dem Weg aus dem GMA wird diese Zuordnung relativ zur neutralen Achse des Ausgabegeräts rückgängig machen. Dies wird als "chiropractische" Geradeung der Achse bezeichnet. Wie bei einem Chiropraktor richten Sie nicht nur das Gerüst (neutrale Achse) aus, sondern passen den Rest des Textkörpers so an, dass er zusammen mit dem Gerüst bewegt wird. Wie bei einem Chiropraktor passen Sie das Gerüst nicht um dieselbe Menge im gesamten Raum an. Stattdessen passen Sie verschiedene Abschnitte unterschiedlich an.
 
-**Abbildung 22** : GMA mit zwei nicht reduzierten Farbskala-Deskriptoren
+![Diagramm, das die Krümmung der geräteneutralen Achse relativ zur neutralen CIECAM-Achse zeigt.](images/gmmp-image081.png)
 
-Dieses Beispiel kann angezeigt werden, wenn Sie von einem Eingabegerät (z. b. einer Kamera oder einem Scanner, der mit einem reflektierenden Ziel gekennzeichnet ist) den ScRGB-Speicherplatz zuordnen. Hier sind die plausibler Farben, die heller als der Verweis weiß sind, Glanzlichter. In der Praxis generiert das Kennzeichnen einer Kamera mit einem Ziel möglicherweise nicht den vollständigen Bereich der in der Kamera möglichen Werte. Glanzlichter und sehr in der Natur gefundene Farben sind jedoch. (Bei Transaktions Zielen gibt es in der Regel einen Patch, der der auf dem Medium möglichen minimalen Dichte entspricht. Mit einem solchen Ziel würden Glanzlichter im Zielbereich liegen.) Der Verweis schwarz für ein reflektierendes Ziel wäre der Anfang des Schatten-schwarzen Bereichs. Das heißt, es gibt wahrscheinlich Farben in den Schatten, die dunkler als die schwarze auf dem Ziel sind. Wenn das Image viele interessante Inhalte in dieser Region enthält, kann es sinnvoll sein, diese klangliche Abweichung beizubehalten.
+**Abbildung 19:** Krümmung der geräteneutralen Achse relativ zur neutralen CIECAM-Achse
 
-![Diagramm, das das G M a mit einem reduzierten Ziel Gamut anzeigt.](images/gmmp-image095.png)
+Der neue allgemeine Domänenauszug erfordert ein Modell einer Gamutgrenze, mit dem sowohl gerenderte als auch nicht gerenderte Quellbilder dargestellt werden können, Informationen über die Darstellung von Geräteneutralen und Informationen für Tonzuordnungsbilder mit einem breiten Leuchtbereich zur Verfügung stehen.
 
-**Abbildung 23** : GMA mit reduziertem Ziel Farbskala
+![Diagramm, das die drei gamut-Shells zeigt.](images/gmmp-image083.png)
 
-Abbildung 23 zeigt einen möglichen Farbskala-Mapping-Algorithmus, wenn der Ziel Farbskala nur den Bereich von Gerät weiß bis schwarz bereitstellt und keine Farben außerhalb dieses gamels vorhanden sind. Dies geschieht wahrscheinlich für typische Ausgabegeräte, z. b. Drucker. Die möglichen Farben werden dem Rand des Ziel Gamut zugeordnet. Es fehlt jedoch eine Tonkurve für das Ausgabegerät. Das GMA muss einen neutralen Punkt der unteren Leuchtkraft auswählen, der als das Ziel der Referenz weiß verwendet werden soll. Ein ausgereifteter Algorithmus kann dies durch das histommen der lightpaces im Quell Bild erreichen und sehen, wie viele in den Bereich des erwarteten, aber heller als der Verweis weiß fallen. Umso komplexer ist, desto mehr Speicherplatz ist auf dem Zielgerät zwischen den zugeordneten Punkten für die Glanzlichter und den Verweis weiß erforderlich. Ein einfacherer Algorithmus könnte eine beliebige Entfernung der horizontalen Skalierung von Geräte weiß, z. b. 5 Prozent, auswählen. Ein ähnlicher Ansatz gilt für die Zuordnung der maximalen Schwarz-und Schatten-schwarz.
+**Abbildung 20:** Drei gamut-Shells
 
-Nachdem Sie die Ziel Tonkurve generiert haben, können Sie eine Zuordnung in einer Methode durchführen, die der in der obigen Abbildung 23 verwendeten ähnelt. Alle Punkte in der Ziel Tonkurve liegen innerhalb des Geräte gamels, und alle Punkte in der Zuordnung müssen in den Geräte Gamut fallen.
+Die Gamutgrenze besteht aus drei Shells, die drei Regionen definieren.
 
-Wenn Sie die linken und rechten Abbildungen und die Richtungen der Pfeile in Abbildung 23 umkehren, können Sie die Groß-/Kleinschreibung beschreiben, in der das Quell Abbild nur über einen Verweis Bereich verfügt und die drei Gamuts des Ausgabegeräts nicht ineinander reduziert sind. Ein Beispiel hierfür ist die Zuordnung von einem Monitor zu ScRGB. Auch hier muss das GMA die Steuerungs Punkte für die fünf Punkte in der Tonkurve des Quell Bilds synthetisieren. Bei manchen Zuordnungen werden möglicherweise alle Punkte der Tonkurve innerhalb des ScRGB-Geräte Diagramms eingefügt, während andere Zuordnungen einen größeren Teil des ScRGB-Diagramms verwenden können, indem diffuses weiß dem Verweis weiß zugeordnet wird und das Glanzlicht einem leichteren Wert zugeordnet werden kann.
+Im neuen Allgemeinen Allgemeinen wird die äußere Shell des Gamuts mit einer konvexen Hülle gebildet, die aus Beispielpunkten in der Gamut des Geräts besteht. Eine Hülle wird gebildet, indem eine Reihe von Beispielpunkten genommen und von einer Oberfläche um sie umgeben wird. Eine konvexe Hülle hat die zusätzliche Eigenschaft, überall konvex zu sein. Daher ist dies nicht die kleinstmögliche Hülle, die an die Daten angepasst werden kann. Experimente haben jedoch gezeigt, dass die zu enge Anpassung der Beispielpunkte dazu führt, dass Artefakte in Bildern nicht verwendet werden, z. B. eine fehlende reibungslose Schattierung. Die konvexe Hülle scheint diese Probleme zu lösen.
 
-Schließlich haben beide Geräte nur den Verweis Farbskala, d. h., wie die meisten Farbskala-Mapping-Algorithmen funktionieren. Dies können Sie beheben, indem Sie nur auf aktuelle Algorithmen zurückgreifen. Wenn Sie die fünf Bezugspunkte für die Quell-und Zielgeräte auf sinnvolle Weise ermitteln können, können Sie die Zuordnung der Referenzpunkte anordnen.
+Im Algorithmus werden Farbdarstellungswerte für eine Reihe von Punkten abgerufen, die vom Gerät entnommen werden. Für Monitore und Drucker werden die Farbdarstellungswerte abgerufen, indem Stichproben ausgegeben und anschließend gemessen werden. Sie können auch ein Gerätemodell erstellen und dann synthetische Daten über das Gerätemodell ausführen, um gemessene Werte vorherzusagen. Die gemessenen Werte werden dann vom farbmetrischen Raum (XYZ) in den Darstellungsbereich (Jab) konvertiert, und die Hülle wird um die Punkte umschlossen.
 
-Geräte-Gamuts enthalten mehr als die fünf Referenzpunkte auf der neutralen Achse. Diese stellen lediglich die Grenzen zwischen potenziellen Regionen im Image dar. Zwischen den einzelnen Referenzpunkten können Sie eine beliebige der vorhandenen Techniken zur Spielkarten Zuordnung verwenden. Sie können also den Bereich unerwarteter Farben abschneiden und alle Farben zwischen den erwarteten weißen und schwarzen Farben komprimieren, oder Sie können alle Farben außerhalb des Bezugsbereichs Ausschneiden und innerhalb dieses Bereichs komprimieren. Es gibt zahlreiche Möglichkeiten, die in verschiedenen gmas implementiert werden können. Außerdem können die gmas auf unterschiedliche Weise komprimiert und ausgeschaltet werden. Alle diese Kombinationen werden innerhalb dieser Erfindung behandelt.
+Der wichtigste Punkt für diesen Algorithmus ist, dass der verwendete Weißpunkt, der bei der Konvertierung von colorimetric in darstellungsraum verwendet wird, nicht der Weißpunkt des Mediums sein muss. Stattdessen können Sie einen Punkt weiter im Gamut und auf (oder in der Nähe) der neutralen Achse auswählen. Dieser Punkt hat dann den J-Wert 100. Stichproben mit einem gemessenen Y-Wert, der höher als der angenommene weiß punkt ist, erhalten einen J-Wert größer als 100.
 
-Bisher wurde in diesem Thema der Farbskala so behandelt, als wäre er nur eine Funktion des Geräts, auf dem das Image erstellt, aufgezeichnet oder angezeigt wurde. Es gibt jedoch keinen Grund, warum alle Images für ein Gerät denselben Gamut aufweisen müssen. Die gmas sind abhängig von den Daten in der Gbd. Wenn der Deskriptor zwischen Bildern geändert wird, gibt es keine Möglichkeit, die gmas zu kennen. Insbesondere wenn Bilder keine Glanzlichter aufweisen, erzielen gmas eine bessere Leistung, wenn der Farbskala-Deskriptor nicht anzeigt, dass Farben heller als diffuses weiß sind.
+Wenn Sie den diffusen weißen Punkt der Szene als übernommenen weißen Punkt für die Farbraumkonvertierung platzieren, werden Glanzlichter in der Szene leicht erkannt, wenn ein J-Wert größer als 100 ist.
 
-In der neuen CTE-Architektur ist es möglich, mehr als ein GMA zu verwenden. Die Verwendung mehrerer gmas ist von Natur aus falsch definiert. Wenn z. b. ein Aufzeichnungsgerät seine "Erscheinungsbild" mit dem "Aussehen und fühlen" verknüpft, wird dies in der Regel mit einem Ziel Gamut (Ziel) durchzuführen. Das gleiche gilt für Ausgabegeräte und Ziel Quell Gamuts. Der sRGB-Farbskala ist ein üblicherweise implizites Spiel. Daher wird dringend empfohlen, dass Sie ein einzelnes GMA verwenden, wenn Vorhersagbarkeit eine Priorität darstellt. Ein einzelner GMA-Workflow sollte der Standardwert für alle Workflows sein, insbesondere für Consumer-und Prosumer-Workflows. Während die Farbskala-Zuordnung für die bevorzugte Reproduktion einmalig erfolgen soll, gibt es Instanzen, in denen mehrere zuder Zuordnungsprozesse eingeschlossen werden. Als erstes machen Sie für die Absicherung eine bevorzugte Zuordnung zum Farbskala des endgültigen Zielgeräts und dann ein farmetriedaten-Rendering zum Spiel des Messgeräts. Zweitens werden einige Typen von Zuordnungen verwendet, um die Merkmale des Bilds zu ändern, aber nicht für die Zuordnung zu einem Geräte Spiel, z. b. zum Anpassen der Tonkurve oder der Chromatizität. Wenn mehrere gmas verwendet werden, nimmt die Transformations Schnittstelle ein Array von gebundenen gamingzuordnungen, d. h. Farbskala-Zuordnungen, die mit einem Paar von Farb Begrenzungs Beschreibungen initialisiert wurden. Wenn mehrere gamingzuordnungen vorhanden sind, muss die eingabegamut-Grenze für eine nachfolgende gamingzuordnung mit der Ausgabe Spiel Grenze des Vorgängers identisch sein.
+Da das CIECAM02-Farbmodell auf dem visuellen System des Menschen basiert, wird die Leuchtdichte des schwarzen Punkts (J = 0) automatisch vom Modell bestimmt, nachdem ein übernommenes Weiß ausgewählt wurde. Wenn das Eingabebild über einen breiten dynamischen Bereich verfügt, kann es vorkommen, dass J-Werten Werte zugeordnet sind, die kleiner als 0 (null) sind.
 
-Die Geräte-Farbskala-Begrenzungs Funktion nimmt die Gerätemodell-Engine und die analytischen Parameter an und leitet eine Farb Geräte-geclustergrenze ab, die als geordnete Vertex-Liste der einander zusammengestellten Hülle des Geräte gamzes beschrieben wird. Die geordnete Vertex-Liste wird in ciejab gespeichert. Die Struktur der geordneten Vertex-Liste ist für die Hardwarebeschleunigung durch DirectX optimiert. Bei diesem Ansatz gibt es viele bekannte Lösungen (suchen 100 Sie im Web nach "" mit "" der ""-"" "," "," "," "," " In diesem Thema finden Sie auch einen Verweis von 1983 (Computer Grafik Theorie und-Anwendung, "shiphulls, b-Spline-Oberflächen und CADCAM" PP. 34-49) mit Verweisen von 1970 bis 1982 im Thema.
+Die folgende Abbildung 21 zeigt die Geräteneutralen, die durch die Mitte der Skalar- und Referenz gamuts laufen.
 
-Zum Berechnen der Dreiecke in der Farbskala-Shell können zwei verschiedene Verfahren verwendet werden. Bei anderen Geräten als Additiven RGB-Geräten berechnen Sie eine konvexe Hülle. Wenn Sie direkten Zugriff auf solche Geräte haben, können Sie die Unterstützung der nicht-unterstützten Hülle für andere Geräte in Erwägung gezogen, um die Stabilität, Leistung und Genauigkeit der Algorithmen zu überprüfen. Dies ist ein bekannter Prozess, für den keine weitere Beschreibung erforderlich ist. Das Verfahren, das für Additive RGB-Geräte verwendet wird, wird wie folgt beschrieben.
+![Diagramm, das die geräteneutrale Achse zeigt, die der Gamutgrenze hinzugefügt wurde.](images/gmmp-image085.png)
 
-Unterschiedliche gbds haben vor-und Nachteile. Die Darstellung der Darstellung der Darstellung gewährleistet eine gute geometrische Eigenschaft, wie z. b. konforme Hue-Slices, die einen eindeutigen Schnittstellen Punkt mit einem Strahl darstellen, der von einem Punkt auf der neutralen Achse ausgeht. Der Nachteil der Darstellung der einander-Darstellung ist ebenfalls "". Es ist bekannt, dass viele Geräte, speziell Geräte anzeigen, über Gamuts verfügen, die weit von der Verwendung von "konform" sind. Wenn der tatsächliche Farbskala stark von der anvexity Annahme abweicht, wäre die Darstellung der Kontur Darstellung ungenau, möglicherweise in dem Ausmaß, in dem Sie die Realität nicht repräsentiert.
+**Abbildung 21:** Geräteneutrale Achse zur Gamutgrenze hinzugefügt
 
-Nachdem Sie eine Gbd übernommen haben, die eine ziemlich genaue Darstellung des tatsächlichen Gamut liefert, treten andere Probleme auf, was aufgrund des sehr großen Konzepts von Hue Slice der Grund ist. Es sind mindestens zwei pathologische Situationen vorhanden. In der folgenden Abbildung 24 gibt es mit einem CRT-Farbskala eine Zunahme von Hue Slices mit "Inseln". In Abbildung 25 wird ein Drucker Spiel in einem Hue-Slice angezeigt, dessen Teil der neutralen Achse fehlt. Die pathologischen Farbton werden in diesen Fällen nicht durch besonders pathologische spielgrenzen verursacht. Sie werden durch das Konzept von Hue Slice verursacht, da (a) es sich um einen konstanten Farbton handelt, und (b) es nimmt nur eine Hälfte der Ebene, die dem Hue-Winkel entspricht.
+Alle Gamutzuordnungen umfassen entweder das Ausschneiden eines Eingabebereichs auf eine Ausgabe gamut oder das Komprimieren der Eingabe gamut, damit sie in die Ausgabe gamut passt. Komplexere Algorithmen werden durch Komprimieren und Clipping in unterschiedliche Richtungen, durch Unterteilen der Gamut in verschiedene Regionen und anschließendes Ausführen von Clipping oder Komprimierung in den verschiedenen Regionen gebildet.
 
-![Diagramm, das eine obere Ansicht und eine neben Ansicht der "Cursor in" in den blauen Schattierungen anzeigt.](images/gmmp-image097.jpg)
+Der neue allgemeine Allgemeine Allgemeine Ansatz erweitert dieses Konzept, um die Regionen eines möglichen Gamuts, eines fähigen Gamuts und einer Referenz-Gamut zu unterstützen, und ermöglicht GMAs, sie auf unterschiedliche Weise zuzuordnen. Darüber hinaus verfügen die GMAs über Informationen zur geräteneutralen Achse. Die folgende Diskussion behandelt den Umgang mit Situationen, in denen die skalaren Gamuts und Verweis gamuts aufeinander reduziert wurden.
 
-**Abbildung 24** : ein typischer CRT-Monitor verfügt über eine Reihe von Farben, die sich in den blauen Farben als "Cursor" in den blauen Farben anzeigen. Wenn Hue Slices innerhalb dieses Farbton Bereichs entnommen werden, können isolierte Inseln in den Hue-Slices angezeigt werden.
+![Diagramm, das das G M A mit zwei nicht reduzierten Gamutdeskriptoren zeigt.](images/gmmp-image091.png)
 
-![Diagramm eines Farbskala mit einer "Lücke" in der neutralen Achse.](images/gmmp-image099.jpg)
+**Abbildung 22:** GMA mit zwei nicht reduzierten Gamutdeskriptoren
 
-**Abbildung 25** : ein Drucker kann über eine "Lücke" in seiner neutralen Achse verfügen. Wenn ein Hue-Slice (also nur eine Hälfte der Ebene) erstellt wird, gibt es einen "Dent" für den Teil der Grenze, bei dem es sich um die neutrale Achse handelt. Dies kann nur schwer algorithmisch aufgelöst werden.
+Dieses Beispiel wird möglicherweise angezeigt, wenn Sie von einem Eingabegerät, z. B. einer Kamera oder einem Scanner, die mit einem reflektierenden Ziel gekennzeichnet ist, scRGB-Raum zuordnen. Hier sind die glanzlichteren Farben, die leichter sind als Referenzfarben, Glanzlichter. In der Praxis generiert das Kennzeichnen einer Kamera mit einem Ziel möglicherweise nicht den vollständigen Wertebereich, der in der Kamera möglich ist. Glanzlichter und sehr heiterische Farben würden jedoch in der Natur gefunden werden. (Transmissive Ziele verfügen in der Regel über einen Patch, der die auf dem Medium mögliche Mindestdichte ist. Bei einem solchen Ziel würden Glanzlichter innerhalb des Zielbereichs liegen.) Der Verweis black für ein reflektierendes Ziel wäre der Anfang des schattenschwarzen Bereichs. Das heißt, es gibt wahrscheinlich Farben in den Schatten, die dunkler sind als schwarz auf dem Ziel. Wenn das Bild viele interessante Inhalte in dieser Region enthält, kann es sinnvoll sein, diese tonale Variation zu erhalten.
 
-Um diese Pathologien aufzulösen, wird ein neues Framework vorgeschlagen, das das Konzept von Hue Slice abbricht, das als Ausgangspunkt verwendet wird. Stattdessen verwendet das Framework den Satz von "Begrenzungs Linienelementen" oder Zeilen, die sich auf der Spiel Grenze befinden. Sie bieten nicht notwendigerweise eine kohärente geometrische Visualisierung wie Hue Slices, Sie unterstützen jedoch alle gängigen Spiel Vorgänge. Zusätzlich zu den oben erwähnten Problemen deutet dieser Ansatz auch darauf hin, dass die Erstellung von Hue-Slices, auch wenn möglich, Rechen bedingt verschwendet wird.
+![Diagramm, das die G M A mit reduzierter Ziel gamut zeigt.](images/gmmp-image095.png)
 
-### <a name="triangulation-of-the-gamut-boundary"></a>Die Untergrenze der spielbegrenzung.
+**Abbildung 23:** GMA mit reduzierter Ziel gamut
 
-Der Ausgangspunkt ist ein Gbd, das aus einer drei-und dreieckigen Begrenzung besteht. Bekannte Methoden zum Erstellen von gbds stellen in der Regel die drei Möglichkeiten zur Verfügung. Aus Gründen der Konkretheit wird hier eine Methode zum Erstellen von gbds für Additive Geräte beschrieben. Zu diesen Geräten gehören Monitore (sowohl CRT-als auch LCD-basiert) und Projektoren. Die einfache Geometrie des Cubes ermöglicht es Ihnen, ein reguläres Gitter auf dem Cube einzuführen. Die Begrenzungs Gesichter des Cubes können in einer Reihe von Fashions (z. b. in Abbildung 26) als Dreieck dargestellt werden. Die Architektur stellt entweder ein Gerätemodell für das Gerät bereit, sodass farbige Metrikwerte der Gitter Punkte algorithmisch abgerufen werden können oder dass für diese Punkte direkt Messungen durchgeführt wurden. Die Architektur bietet auch CIECAM02, sodass Sie annehmen können, dass die Anfangsdaten bereits im CIECAM02 Jab-Speicherplatz zugeordnet wurden. Dann hat jeder Gitterpunkt an den Begrenzungs Flächen des RGB-Cubes einen entsprechenden Punkt im Speicherplatz. Die Verbindungen von Punkten, die den Satz von Dreiecken in RGB-Raum bilden, verursachen auch eine Reihe von Dreiecken im Speicherplatz. Diese Gruppe von Dreiecken bildet eine sinnvolle Dreiecke der Farbskala-Begrenzung, wenn (a) das Gitter auf dem RGB-Cube ausreichend ist, und (b) die Transformation vom Gerätebereich zum einheitlichen farbliche farbliche Wert ist. Das heißt, Sie ordnet die Grenze der Grenze zu und schaltet den Bereich nicht in den Bereich ein, sodass die inneren Punkte zu Begrenzungs Punkten werden.
+Abbildung 23 zeigt einen möglichen Gamutzuordnungsalgorithmus, wenn die Ziel gamut nur den Bereich von Geräte weiß bis Schwarz bereitstellt und es keine möglichen Farben außerhalb dieser Gamut gibt. Dies ist wahrscheinlich bei typischen Ausgabegeräten wie Druckern der Fall. Die möglichen Farben werden dem Rand des Zielbereichs zugeordnet. Es fehlt jedoch eine Tonkurve für das Ausgabegerät. Das GMA muss einen neutralen Punkt mit geringerer Leuchtdichte auswählen, der als Zuordnungsziel für das Verweiswittchen verwendet werden soll. Ein ausgereifter Algorithmus kann dies erreichen, indem er die Helligkeiten im Quellbild histogrammiert und erkennt, wie viele in den Bereich der erwarteten, aber leichter als das Verweiswittchen fallen. Je mehr Helligkeiten erforderlich sind, desto mehr Platz ist auf dem Zielgerät zwischen den zugeordneten Punkten für die Glanzlichter und verweis white erforderlich. Ein einfacherer Algorithmus kann einen willkürlichen Abstand von der Helligkeitsskala von Geräte weiß auswählen, z. B. 5 Prozent. Ein ähnlicher Ansatz gilt für die Zuordnung der maximalen Schwarz- und Schattenschwarze.
 
-![Diagramm, das eine einfache Methode zeigt, um die Spiel Grenze eines Geräts mit R G B als Geräteraum zu überwiegen.](images/gmmp-image100.png)
+Nachdem Sie die Zieltonkurve generiert haben, können Sie sie in einer Methode zuordnen, die der in der vorherigen Abbildung 23 verwendeten Methode ähnelt. Alle Punkte in der Zieltonkurve fallen innerhalb der Geräte-Gamut, und alle Punkte in der Zuordnung müssen innerhalb der Geräte-Gamut liegen.
 
-**Abbildung 26** : eine einfache Methode, um die Spiel Grenze eines Geräts mit RGB als Geräte Speicherplatz zu ermitteln
+Wenn Sie die linken und rechten Abbildungen und die Richtungen der Pfeile in Abbildung 23 umkehren, können Sie den Fall beschreiben, in dem das Quellbild nur über einen Verweis gamut verfügt und die drei Gamuts des Ausgabegeräts nicht aufeinander reduziert wurden. Ein Beispiel hierfür ist die Zuordnung von einem Monitor zu scRGB. Auch hier muss das GMA die Kontrollpunkte für die fünf Punkte in der Tonkurve für das Quellbild synthetisieren. Einige Zuordnungen können alle Punkte der Tonkurve innerhalb des scRGB-Geräte-Gamuts setzen, während andere Zuordnungen möglicherweise mehr scRGB-Gamut verwenden, indem sie diffuses Weiß dem Verweis white zuordnen und es specular white ermöglichen, einem leichteren Wert zuzuordnen.
 
-### <a name="boundary-line-elements"></a>Begrenzungs Linien Elemente
+Schließlich haben Sie den Fall, dass beide Geräte nur über die Referenz-Gamut verfügen. Dies ist die Funktionsweise der meisten Gamutzuordnungsalgorithmen. Sie können dies beheben, indem Sie einfach auf aktuelle Algorithmen zurückgreifen. Wenn Sie alternativ eine sinnvolle Möglichkeit haben, die fünf Verweispunkte für die Quell- und Zielgeräte zu bestimmen, können Sie die Zuordnung der Verweispunkte anordnen.
 
-Die zentrale für dieses Framework ist das Konzept von Begrenzungs Linienelementen. eine Reihe von Liniensegmenten (a), die sich auf der Spiel Grenze befinden, und (b) auf einer Ebene. In diesem Fall ist die Ebene eine Farbton Ebene. Jedes Zeilen Segment ist das Ergebnis der Schnittmenge der Ebene mit einem Farbskala-Begrenzungs Dreieck. Obwohl viele Forscher die Konstruktion der Schnittmenge einer Ebene mit Begrenzungs Dreiecken verwendet haben, analysieren Sie im Allgemeinen die Beziehung zwischen diesen Liniensegmenten und versuchen, ein kohärentes geometrisches Objekt aus den Liniensegmenten zu konstruieren. Es wurden verschiedene Algorithmen entworfen, um die folgenden Liniensegmente nacheinander zu befolgen, bis ein ganzer Farbton abgerufen wird, und es wurden viele Versuche unternommen, den Suchvorgang zu beschleunigen.
+Geräte gamuts enthalten mehr als die fünf Verweispunkte auf der neutralen Achse. Diese stellen lediglich die Grenzen zwischen potenziellen Regionen im Bild dar. Zwischen den einzelnen Referenzpunkten können Sie alle vorhandenen Gamutzuordnungstechniken verwenden. Sie können also den Bereich unerwarteter Farben beschneiden und alle Farben zwischen dem erwarteten Weiß und Schwarz komprimieren, oder Sie können alle Farben außerhalb des Bezugsbereichs beschneiden und innerhalb dieses Bereichs komprimieren. Es gibt viele Möglichkeiten, die in verschiedenen GMAs implementiert werden können. Darüber hinaus können die GMAs auf unterschiedliche Weise komprimiert und abgeschnitten werden. Alle diese Kombinationen werden in dieser Erfindung behandelt.
 
-Diese Vorgehensweise ist unterschiedlich. Sie schneiden die Ebene mit den Dreiecken ab, um die Liniensegmente zu erhalten. Diese Liniensegmente werden dann als *grundlegende* konzeptionelle Objekte betrachtet. Die Beziehung zwischen den Liniensegmenten muss analysiert werden. Sie müssen nicht wissen, wie Sie miteinander verbunden sind. In dieser Sicht wird das Problem von Hue Slice mit Inseln gelöst. Die bekannten Ansätze, die versuchen, Hue Slice zu erstellen, nehmen an, dass, wenn eine Zeile mit einem Zeilen Segment beginnt und auf das nächste Zeilen Segment folgt, und so weiter. Schließlich führt Sie zurück zum Ausgangspunkt. an diesem Punkt würde ein ganzer Farbton erstellt werden. Leider würde diese Vorgehensweise die Insel übersehen (und im schlimmsten Szenario, auf dem Kontinent). Wenn Sie nicht darauf beharren, ein kohärentes geometrisches Bild zu erhalten, Das heißt, Sie können das inselproblem mühelos lösen. Ein weiterer wichtiger Unterschied bei diesem Ansatz besteht darin, dass zum beschleunigen der Konstruktion von Liniensegmenten ein "Dreiecks Filter" verwendet wird. Der Dreieck Filter löst bestimmte Dreiecke aus, die definitiv keine Liniensegmente erzeugt, die für den aktuellen gamingvorgang nützlich sind. Da das überschneiden eines Dreiecks mit der Ebene sehr teuer ist, wird dadurch die Geschwindigkeit erhöht. Ein Nebeneffekt ist, dass Sie Hue Slice nicht erstellen können, da einige Liniensegmente aufgrund der Dreiecks Filterung fehlen würden.
+Bisher wurde die Gamut in dieser Diskussion so behandelt, als wäre sie nur eine Funktion des Geräts, auf dem das Bild erstellt, erfasst oder angezeigt wurde. Es gibt jedoch keinen Grund, warum alle Images für ein Gerät dieselbe Gamut aufweisen müssen. Die GMAs hängen von den Daten in der GBD ab. Wenn der Deskriptor zwischen Bildern geändert wird, gibt es für die GMAs keine Möglichkeit, dies zu wissen. Insbesondere dann, wenn Bilder keine Glanzlichter aufweisen, sind GMAs besser, wenn der Gamutdeskriptor nicht zeigt, dass Farben leichter sind als diffuses Weiß.
 
-### <a name="gamut-operation-checkgamut"></a>Gamut-Vorgang: Prüfpunkt
+In der neuen CTE-Architektur ist es möglich, mehr als ein GMA zu verwenden. Die Verwendung mehrerer GMAs ist grundsätzlich falsch definiert. Wenn z. B. ein Erfassungsgerät ein GMA mit seinem "Aussehen und Gefühl" verknüpft, tendiert es dazu, dies mit einer "Zielziel-Gamut" zu tun. Dasselbe gilt für Ausgabegeräte und "zielorientierte" Quell-Gamuts. Der sRGB-Gamut ist ein allgemein implizierter Gamut. Daher wird dringend empfohlen, ein einzelnes GMA zu verwenden, wenn vorhersagbar ist. Ein einzelner GMA-Workflow sollte die Standardeinstellung für alle Workflows sein, insbesondere für Consumer- und Prosumerworkflows. Die Gamutzuordnung für die bevorzugte Reproduktion sollte zwar einmal durchgeführt werden, es gibt jedoch Instanzen, in denen mehrere Zuordnungsprozesse enthalten sind. Zum Nachweis erstellen Sie zunächst eine bevorzugte Zuordnung zur Gamut des endgültigen Zielgeräts und dann ein farbmetrisches Rendering zur Gamut des Nachweisgeräts. Zweitens werden einige Arten von Zuordnungen verwendet, um die Merkmale des Bilds zu ändern, aber nicht enthalten, um einer Geräte gamut zuzuordnen, z. B. zum Anpassen der Tonkurve oder der Farblichkeit. Wenn mehrere GMAs verwendet werden, verwendet die Transformationsschnittstelle ein Array von gebundenen Gamutzuordnungen, d. h. Gamutkarten, die mit einem Paar von Gamutbegrenzungsbeschreibungen initialisiert wurden. Wenn mehrere Gamutzuordnungen vorhanden sind, muss die Eingabe-Gamutgrenze für eine erfolgreiche Gamutzuordnung mit der Ausgabe-Gamutgrenze ihres Vorgängers identisch sein.
 
-Im folgenden Beispiel wird erläutert, wie das Framework funktioniert und wie checkgamut durchgeführt wird, d. h. der Vorgang der Überprüfung, ob eine Farbe im Spiel ist.
+Die Gamut-Begrenzungsfunktion des Geräts verwendet die Gerätemodell-Engine und analytische Parameter und leitet eine Farbgeräte-Gamutgrenze ab, die als sortierte Scheitelpunktliste der konvexen Hülle der Geräte gamutbeschrieben wird. Die Sortierte Scheitelpunktliste wird in CIEJab gespeichert. Die Struktur der geordneten Scheitelpunktliste ist für die Hardwarebeschleunigung durch DirectX optimiert. Dieser Ansatz verfügt über viele bekannte Lösungen (suchen Sie im Web nach "convex hull DirectX", und Sie erhalten weit über 100 Treffer). Es gibt auch einen Verweis aus 1983 zu diesem Thema (Computer graphics theory and application, "Ship datesls, b-spline surfaces and cadcam" pp. 34-49), mit Verweisen von 1970 bis 1982 zu diesem Thema.
 
-Das allgemeine Framework wird in der folgenden Abbildung 27 veranschaulicht. Es gibt verschiedene Komponenten. Bei den in kursiv gekennzeichneten Komponenten handelt es sich um Komponenten, die je nach dem fraglichen gamingvorgang in der Implementierung unterschiedlich sein können. Die anderen Komponenten sind in allen gamingvorgängen invariante. Zunächst ist die ***Eingabe*** ein Satz von Farb Attributen. Im Fall von checkgamut ist dies die Abfrage Farbe. In Abbildung 27 und der folgenden Erläuterung wird davon ausgegangen, dass der Hue-Winkel entweder aus den Eingabe Farb Attributen besteht oder von Ihnen abgerufen werden kann. Dies ist eindeutig der Fall, wenn es sich bei der Eingabe um den gesamten Farbpunkt handelt (entweder in Jab oder Jch), von dem aus Sie den Farbton berechnen können. Beachten Sie, dass der Hue-Winkel nur benötigt wird, da Hue-Flächen verwendet werden. Je nach dem fraglichen gamingvorgang ist es möglicherweise nicht erforderlich, die Hue-Ebene zu verwenden. Beispielsweise können Sie bei der Erstellung der Routine checkgamut die Ebenen der Konstanten J verwenden. Dies ist eine Generalität, die nicht weiter verwendet oder diskutiert wird. Es kann jedoch hilfreich sein, sich diese Flexibilität der Methodik zu merken, um andere Spiel Vorgänge zu unterstützen, wenn die Hue-Ebene möglicherweise nicht die beste Wahl ist.
+Zwei verschiedene Techniken können verwendet werden, um die Dreiecke in der gamut-Shell zu berechnen. Für andere Geräte als additive RGB-Geräte berechnen Sie eine konvexe Hülle. Sie können erwägen, die Unterstützung nicht konvexer Hüllen für andere Geräte zu untersuchen, wenn Sie direkten Zugriff auf solche Geräte haben, um die Stabilität, Leistung und Genauigkeit der Algorithmen zu überprüfen. Dies ist ein bekannter Prozess, der keine weitere Beschreibung erfordert. Die für additive RGB-Geräte verwendete Technik wird wie folgt beschrieben.
 
-![Diagramm, das den Flow zum unterstützen von Farbskala-Vorgängen anzeigt.](images/gmmp-image112.jpg)
+Verschiedene GBDs haben Vor- und Nachteile. Die konvexe Hüllendarstellung garantiert ansprechende geometrische Eigenschaften, z. B. konvexe Farbtonslices, die einen eindeutigen Schnittpunkt mit einem Strahl bereitstellen, der von einem Punkt auf der neutralen Achse aus strahlt. Der Nachteil der konvexen Hüllendarstellung ist auch die Konvexität. Es ist bekannt, dass viele Geräte, insbesondere Anzeigegeräte, gamuts aufweisen, die weit davon entfernt sind, konvex zu sein. Wenn die tatsächliche Gamut erheblich von der Konvexitätsannahme abweicht, wäre die konvexe Hüllendarstellung ungenau, möglicherweise in dem Maße, in dem sie nicht die Realität darstellt.
 
-**Abbildung 27** : das Framework zur Unterstützung von Farbskala-Vorgängen
+Nachdem Sie eine GBD verwendet haben, die eine relativ genaue Darstellung des tatsächlichen Gamuts bietet, treten andere Probleme auf, einige aufgrund des Konzepts des Farbtonslices. Es gibt mindestens zwei Situationen. In der folgenden Abbildung 24 führt eine CRT-Gamut zu Farbtonslices mit "Islands". In Abbildung 25 führt ein Drucker gamut zu einem Farbtonslice, bei dem ein Teil der neutralen Achse fehlt. Die Schattierungsslices werden in diesen Fällen nicht durch besonders stark veränderliche Gamutgrenzen verursacht. Sie werden durch das Konzept des Farbtonslices verursacht, da (a) es mit konstantem Farbton aufgenommen wird und (b) es nur die Hälfte der Ebene nimmt, die dem Farbtonwinkel entspricht.
 
-Der Hue-Winkel, der direkt aus den Eingaben abgerufen oder aus den Eingaben berechnet wird, wird verwendet, um die Hue-Ebene mit der Bezeichnung **Full Hue Plane** in der Abbildung zu initialisieren. "Full" wird hervorgehoben, da es sich hierbei um die vollständige Ebene handelt, nicht nur die Hälfte der Ebene, die den Farbton enthält. Die vollständige Ebene enthält sowohl den Eingabe Farbton Winkel als auch den Winkel von 180 Grad. Die Hauptfunktionalität der Hue-Ebene ist die Intersect-Funktion, die im folgenden unter Abschnitt "Full Hue Plane: Intersect" erläutert wird. Nehmen Sie an, dass die Gbd bereits erstellt wurde, und dass die Menge der **Gamut-Begrenzungs Dreiecke** verfügbar ist. Schneiden Sie die Dreiecke ab, die den **_Dreiecks Filter_* _ mit der Hue-Ebene mit Intersect noch nicht verwendet haben. Die _Komponente "Dreieck Filter *" ist kursiv gekennzeichnet, was bedeutet, dass die Komponente in der Implementierung für verschiedene Spiel Vorgänge variiert. Der *Dreieck Filter* für checkgamut wird im Abschnitt "Gamut-Vorgang: checkgamut (fortgesetzt)" erläutert. Das Ergebnis der Schnittmenge eines Dreiecks mit der Hue-Ebene ist entweder leer oder ein **Begrenzungs Linien Element** , d. h. ein paar von unterschiedlichen Punkten. Wenn das Ergebnis nicht leer ist, wird es an den *-*_Zeilen Element Prozessor_* weitergegeben_ , der wiederum unterschiedliche Aktionen in Abhängigkeit vom Spiel Vorgang durchführt. Der _Line-Element-Prozessor * aktualisiert die interne Datenstruktur (***interne verarbeitete Daten**_ ), deren Inhalt oder Layout auch vom Spiel Vorgang abhängig ist. Im allgemeinen _enthält die intern verarbeiteten Daten * die "Antwort" für das Problem, das ständig aktualisiert wird, wenn jedes neue Begrenzungs Linien Element gefunden wurde. Wenn alle Begrenzungs Linien Elemente verarbeitet wurden, wurde die Antwort gefunden. Über den *-**Ausgabe Adapter**_ kann darauf zugegriffen werden. Da es sich bei der _Internal verarbeiteten Daten * um einen speziellen Arbeits Aufgabentyp handelt, ist der *Ausgabe Adapter* ebenfalls für das Spiel.
+![Diagramm, das eine obere Ansicht und Eine-Seite-Ansicht des "curving in" in den blauen Farbtons zeigt.](images/gmmp-image097.jpg)
 
-### <a name="full-hue-plane-intersect"></a>Vollton-Ebene: Intersect
+**Abbildung 24:** Ein typischer CRT-Monitor weist einen Gamut auf, der eine typische "Einkrümmung" in den blauen Farbtons zeigt. Wenn Hue-Slices innerhalb dieses Farbtonbereichs aufgenommen werden, können isolierte Inseln in den Farbtonslices angezeigt werden.
 
-Die Intersect-Funktion berechnet die Schnittmenge der Hue-Ebene und eines Dreiecks. So einfach, wie es klingt, ist diese Funktion aus zwei Gründen wichtig.
+![Diagramm eines Gamuts mit einer "Lücke" auf der neutralen Achse.](images/gmmp-image099.jpg)
 
-Zuerst kann die überschneidende Schnittstelle des Dreiecks mit der Ebene drei Schnittstellen Punkte ergeben, eine nicht allzu mögliche Situation. Der Grund, warum dies in der Berechnung auftreten könnte, besteht darin, dass bei Berechnungen in Gleit Komma Zahlen (z. b. IEEE-Format) oder "numerischer Rauschen" in jedem Schritt, der sich auf den Schluss der überschneidet, ob ein Rand die Ebene überschneidet. Wenn die Ebene die Ränder in einer fast-Miss-Situation schneidet, sind die Schnittpunkte nah beieinander und die Bestimmung, ob ein Schnittpunkt innerhalb des Edge liegt, zufällig. Obwohl das Rauschen in den numerischen Werten der Punkte gering ist, ist der qualitative Schluss, dass es mehr als zwei Schnittstellen Punkte gibt, geometrisch unmöglich und schwierig, die ordnungsgemäße Behandlung im Algorithmus durchzuführen.
+**Abbildung 25:** Ein Drucker verfügt möglicherweise über einen Gamut mit "Lücke" auf seiner neutralen Achse. Wenn ein Hue-Slice (der nur die Hälfte der Ebene ist) verwendet wird, gibt es einen "Dent" auf dem Teil der Grenze, der die neutrale Achse ist. Dies kann schwierig sein, algorithmisch aufzulösen.
 
-Zweitens: Diese Funktion befindet sich in der kritischen Schleife für jeden Rand jedes gefilterten Dreiecks, daher ist es wichtig, dass Sie die Effizienz so weit wie möglich optimieren.
+Um diese Probleme zu beheben, wird ein neues Framework vorgeschlagen, das das Konzept des Hue-Slices abhebt, das als Ausgangspunkt verwendet wurde. Stattdessen verwendet das Framework den Satz von "Begrenzungslinienelementen" oder Linien, die sich an der Gamutgrenze befinden. Sie bieten nicht notwendigerweise eine konsistente geometrische Visualisierung wie Hue-Slices, unterstützen aber alle gängigen Gamutvorgänge. Neben der Lösung der zuvor erwähnten Probleme deutet dieser Ansatz auch darauf hin, dass die Konstruktion von Hue-Slices, selbst wenn dies möglich ist, rechenintensiv ist.
 
-Um das erste Problem des numerischen Rauschens zu beheben, führen Sie die Berechnungen in ganzen Zahlen aus. Um das zweite Problem bei der Optimierung der Effizienz zu beheben, müssen Sie das am häufigsten verwendete Attribut jedes Scheitel Punkts oder das "Punktprodukt" Zwischenspeichern, das jedem Scheitelpunkt zugeordnet ist. Das übergeben in ganze Zahlen ist eine typische Methode, um geometrische Konsistenz zu gewährleisten. Die grundlegende Idee ist, dass Sie, wenn Sie quantifisieren müssen, dies am Anfang tun müssen. Anschließend können nachfolgende Berechnungen in ganzen Zahlen durchgeführt werden, und wenn die ganzen Zahlen breit genug sind, sodass keine Überlauf Gefahr besteht, können die Berechnungen mit unbegrenzter Genauigkeit durchgeführt werden. Die folgende quantisierungsfunktion ist für diesen Zweck nützlich.
+### <a name="triangulation-of-the-gamut-boundary"></a>Triangulation der Gamut-Grenze
 
-Scaleandtruncate (x) = ganzzahliger Teil von x \* 10000
+Der Ausgangspunkt ist eine GBD, die aus einer Triangulation der Gamutgrenze besteht. Bekannte Methoden zum Erstellen von GBDs bieten in der Regel diese Triangulation. Aus Konkreten geht es hier um eine Methode zum Erstellen von GBDs für additive Geräte. Zu diesen Geräten gehören Monitore (sowohl CRT-basiert als auch WIES-basiert) und Projektoren. Mit der einfachen Geometrie des Cubes können Sie ein reguläres Lattice für den Cube einführen. Die Begrenzungsgesichter des Cubes können auf verschiedene Weise trianguliert werden, z. B. die in Abbildung 26 dargestellte. Die Architektur bietet entweder ein Gerätemodell für das Gerät, sodass farbmetrische Werte der Latticepunkte algorithmisch oder direkt für diese Punkte gemessen werden können. Die Architektur bietet auch CIECAM02, sodass Sie davon ausgehen können, dass die Startdaten bereits dem CIECAM02 Jab-Raum zugeordnet wurden. Anschließend hat jeder Latticepunkt auf den Begrenzungsflächen des RGB-Cubes einen entsprechenden Punkt im Jab-Raum. Die Verbindungen von Punkten, die die Reihe von Dreiecken im RGB-Raum bilden, lösen auch eine Reihe von Dreiecken im Jab-Raum aus. Diese Gruppe von Dreiecken bildet eine sinnvolle Triangulation der Gamutgrenze, wenn (a) das Lattice im RGB-Cube ausreichend groß genug ist und (b) die Transformation vom Geräteraum zum einheitlichen Farbraum topologisch gut ist; Das heißt, es ordnet Begrenzungen Begrenzungen zu, und der Gamut wird nicht innerhalb der Grenze heraus gewendet, sodass innere Punkte zu Begrenzungspunkten werden.
 
-Der Skalierungsfaktor 10000 bedeutet, dass die Eingabe Gleit Komma Zahl vier Dezimalstellen aufweist, die für diese Anwendung genau genug ist. Abhängig von dem Wertebereich des Farb Darstellungs Bereichs möchten Sie einen ganzzahligen Typ mit Bits für die Zwischenberechnungen auswählen. In den meisten Farbdarstellung liegt der Bereich der einzelnen Koordinaten im Bereich von-1.000 bis 1.000. Die quantifizierte Koordinate hat einen maximalen möglichen absoluten Wert von 1.000 \* 10.000 = 10 Millionen. Wie Sie sehen werden, ist die zwischen Menge ein Punktprodukt, bei dem es sich um eine Summe von zwei Koordinaten Werten handelt, sodass es einen maximalen möglichen absoluten Wert von 2 \* (10 Millionen) 2 () = 2? 10 ₁ ₄ hat. Die erforderliche Anzahl von Bits ist log CO2 (2? 10 ₁ ₄) = 47,51. Eine bequeme Wahl für den ganzzahligen Typ ist daher 64-Bit-Ganzzahlen.
+![Diagramm, das eine einfache Methode zum Triangluieren der Gamutgrenze eines Geräts mit R G B als Gerätebereich zeigt.](images/gmmp-image100.png)
 
-Um sicherzustellen, dass die Schnittmenge einer Ebene mit einem Dreieck immer entweder eine leere Menge oder einen Satz von zwei Punkten ergibt, müssen Sie das Dreieck als Ganzes betrachten, nicht als einzelne Ränder des Dreiecks getrennt. Zum besseren Verständnis der geometrischen Situation sollten Sie die "signierten Entfernungen" der Scheitel Punkte des Dreiecks von der Hue-Ebene in Erwägung gezogen haben. Diese signierten Entfernungen nicht direkt berechnen; Berechnen Sie stattdessen die Punkt Produkte der Positions Vektoren der Vertices mit dem quantifizierten normalen Vektor auf der Ebene. Genauer gesagt wird der quantifisierte normale Vektor während der Initialisierung der Hue-Ebene wie folgt berechnet.
+**Abbildung 26:** Eine einfache Methode zum Triangulieren der Gamutgrenze eines Geräts mit RGB als Geräteraum
 
-Normalvector = (scaleandtruncate (-Sin (Hue)), scaleandtruncate (COS (Hue)))
+### <a name="boundary-line-elements"></a>Begrenzungslinienelemente
 
-Beachten Sie, dass es sich bei diesem Vektor um einen zweidimensionalen Vektor handelt. Sie können einen zweidimensionalen Vektor verwenden, da die Hue-Ebene vertikal ist, sodass die dritte Komponente des normalen Vektors immer 0 (null) ist. Darüber hinaus wird eine Nachschlage Tabelle mit Punkt Produkten initialisiert, um einen Eintrag für jeden Scheitelpunkt von der Gamut-Begrenzungs Dreiecke und das entsprechende Punktprodukt auf einen ungültigen Wert festzulegen.
+Im Mittelpunkt dieses Frameworks steht das Konzept von Begrenzungslinienelementen. ein Satz von Liniensegmenten, die (a) an der Gamutgrenze liegen, und (b) auf einer Ebene liegen. In diesem Fall ist die Ebene eine Farbtonebene. Jedes Liniensegment ist das Ergebnis der Überschneidung der Ebene mit einem gamut-Begrenzungsdreieck. Obwohl viele Forscher die Konstruktion der Überschneidung einer Ebene mit Begrenzungsdreiecken verwendet haben, analysieren sie im Allgemeinen die Beziehung zwischen diesen Liniensegmenten und versuchen, ein zusammenhängendes geometrisches Objekt aus den Liniensegmenten zu erstellen. Es wurden verschiedene Algorithmen entwickelt, um diesen Liniensegmenten nacheinander zu folgen, bis ein ganzer Farbtonslice ermittelt wurde und viele Versuche unternommen wurden, den Suchvorgang zu beschleunigen.
 
-Bei einem Vorgang, der die Hue-Ebene mit einem Dreieck schneidet, wird das Punktprodukt der einzelnen Scheitel Punkte des Dreiecks gesucht. Wenn der Wert in der Nachschlage Tabelle der ungültige Wert ist, wird das Punktprodukt mit dem folgenden Ausdruck berechnet.
+Dieser Ansatz ist anders. Sie überschneiden die Ebene mit den Dreiecken, um die Liniensegmente zu erhalten. Anschließend betrachten Sie diese Liniensegmente als grundlegende *konzeptionelle* Objekte. Es ist erforderlich, die Beziehung zwischen den Liniensegmenten zu analysieren. Sie müssen nicht wissen, wie sie miteinander verbunden sind. Dieser Standpunkt löst das Problem der Farbtonslice mit Inseln. Bei den bekannten Ansätzen, die versuchen, einen Farbtonslice zu erstellen, wird davon ausgegangen, dass, wenn ein Segment mit einem Liniensegment beginnt und ihm das nächste Liniensegment folgt, und so weiter; Sie führt schließlich zurück zum Ausgangspunkt, an dem ein ganzer Farbtonslice erstellt wird. Leider würde dieser Ansatz die Insel (und im schlechtesten Szenario den Kontinent) übersehen. Indem sie sich nicht um die Beschaffung eines zusammenhängenden geometrischen Bilds zu verkningen; Das heißt, hue slice, Sie können das Problem der Insel mühelos behandeln. Ein weiterer wichtiger Unterschied bei diesem Ansatz besteht in der Verwendung eines "Dreiecksfilters", um die Konstruktion von Liniensegmenten zu beschleunigen. Der Dreiecksfilter löst bestimmte Dreiecke aus, die definitiv keine Liniensegmente erzeugen, die für den aktuellen Gamut-Vorgang nützlich wären. Da das Überschneiden eines Dreiecks mit der Ebene rechenintensiv ist, verbessert dies die Geschwindigkeit. Ein Nebeneffekt ist, dass Sie keinen Farbtonslice erstellen können, da einige Liniensegmente aufgrund der Dreiecksfilterung fehlen würden.
 
-Normvector. a \* scaleandtruncate (Vertex. a) + normalvector. b \* scaleandtruncate (Vertex. b)
+### <a name="gamut-operation-checkgamut"></a>Gamut-Vorgang: CheckGamut
 
-Auch hier wird die J-Komponente des Scheitel Punkts niemals verwendet, da der normale Vektor horizontal ist. Dieses Punktprodukt wird dann in der Nachschlage Tabelle gespeichert, damit es nicht erneut berechnet werden muss, wenn das Punktprodukt des Scheitel Punkts später abgefragt wird.
+Im folgenden Beispiel wird erläutert, wie das Framework funktioniert und wie CheckGamut ausgeführt wird, d.&a0;b. der Vorgang der Überprüfung, ob eine Farbe in Gamut ist.
 
-Mithilfe der Zwischenspeicherung können Sie schnell feststellen, ob sich der Rand der Ebene überschneidet, nachdem die Punkt Produkte in der Nachschlage Tabelle in der Tabelle angezeigt werden, die bei der Verarbeitung der Scheitel Punkte progressiv erstellt wird.
+Das allgemeine Framework ist in der folgenden Abbildung 27 dargestellt. Es gibt verschiedene Komponenten. Bei den italisch bezeichneten Komponenten handelt es sich um Komponenten, die sich je nach dem in Frage gestellten Gamutvorgang in der Implementierung unterscheiden können. Die anderen Komponenten sind für alle gamut-Vorgänge invariant. Zunächst handelt es sich ***bei der Eingabe*** um einen Satz von Farbattributen. Im Fall von CheckGamut ist dies die Abfragefarbe. In Abbildung 27 und der folgenden Diskussion wird davon ausgegangen, dass der Farbtonwinkel entweder zu den Eingabefarbattributen gehört oder daraus ermittelt werden kann. Dies ist eindeutig der Fall, wenn die Eingabe der gesamte Farbpunkt ist, entweder in Jab oder JCh, aus dem Sie dann den Farbtonwinkel berechnen können. Beachten Sie, dass der Farbtonwinkel nur erforderlich ist, da Farbtonebenen verwendet werden. Je nach dem in Frage gestellten Gamut-Vorgang ist es möglicherweise nicht erforderlich, die Farbtonebene zu verwenden. Bei der Konstruktion der Routine CheckGamut können Sie z. B. Ebenen der Konstante J verwenden. Dies ist eine Allgemeinheit, die nicht weiter verwendet oder erläutert wird. Aber es kann hilfreich sein, sich diese Flexibilität der Methodik zur Unterstützung anderer Gamutvorgänge zu merken, wenn die Farbtonebene möglicherweise nicht die beste Wahl ist.
 
-![Diagramm, das die Schnittmenge der Hue-Ebene mit einem Dreieck anzeigt.](images/gmmp-image114.jpg)
+![Diagramm, das den Ablauf zur Unterstützung von Gamutvorgängen zeigt.](images/gmmp-image112.jpg)
 
-**Abbildung 28** : überschneidende Hue-Ebene mit einem Dreieck
+**Abbildung 27:** Das Framework zur Unterstützung von gamut-Vorgängen
 
-Damit das Dreieck in Abbildung 28 die Hue-Ebene in einem nicht degenerierten Liniensegment schneidet, müssen sich die Punkt Produkte der Scheitel Punkte in einem der folgenden Muster befinden, wenn Sie in aufsteigender Reihenfolge sortiert werden.
+Der Farbtonwinkel, der direkt aus den Eingaben ermittelt oder aus den Eingaben berechnet wird, wird verwendet, um die Farbtonebene mit der Bezeichnung Full Hue Plane (Vollständige **Hue-Ebene)** in der Abbildung zu initialisieren. "Full" wird hervorgehoben, da dies die vollständige Ebene ist, nicht nur die halbe Ebene, die den Farbton enthält. Die vollständige Ebene enthält sowohl den Eingabetonwinkel als auch den 180 Grad umgekehrten Winkel. Die Hauptfunktionalität der Farbtonebene ist die Intersect-Funktion, die im folgenden Unterabschnitt, Full Hue Plane: Intersect, erläutert wird. Angenommen, die GBD wurde bereits erstellt, und der Satz von **Gamut-Begrenzungsdreiecken** ist verfügbar. Überschneiden Sie die Dreiecke, die den **_Dreiecksfilter_* _ überdauert haben, mit der Farbtonebene, indem Sie Intersect verwenden. The _Triangle Filter* component is labeled in italics, which means that the component varies in implementation for different gamut operations. The *Triangle Filter* for CheckGamut is explained in the section, Gamut Operation: CheckGamut (continued). The result of intersecting a triangle with the hue plane is either empty or a **Boundary Line Element** , that is, a pair of distinct points. If the result is non-empty, it is passed into the **_Line Element Processor_*_ , which again does different things depending on the gamut operation. Der _Line Element Processor* aktualisiert die_ interne Datenstruktur * Interne verarbeitete Daten , deren Inhalt oder Layout ebenfalls vom Gamut-Vorgang abhängt. Im Allgemeinen enthält die intern verarbeiteten Daten* die "Antwort" auf das Problem, das ständig mit jedem gefundenen neuen _Boundary Line-Element aktualisiert wird. Nachdem alle Begrenzungslinienelemente verarbeitet wurden, wurde die Antwort gefunden. Es bleibt bestehen, um über den ***Ausgabeadapter darauf zu zugreifen.**_ Da der _Internal Verarbeitete Daten* gamut-vorgangsspezifisch ist, ist der *Ausgabeadapter* auch gamut-vorgangsspezifisch.
 
-0, 0, +; -, 0, 0; -, 0, +; -,-,+; -,+,+
+### <a name="full-hue-plane-intersect"></a>Vollständige Hue-Ebene: Überschneiden
 
-Ein Endpunkt des Linien Segments wird angezeigt, wenn die Ebene von einem Rand mit Scheitel Punkten geschnitten wird, die im Punktprodukt verschiedene Vorzeichen aufweisen. Wenn das Vorzeichen NULL ist, befindet sich der Scheitelpunkt rechts auf der Ebene, und die Schnittmenge des Randes mit der Ebene ist der Scheitelpunkt selbst. Beachten Sie auch, dass die Fälle 0, 0, 0; -,-, 0; 0, +, + werden nicht gemeldet. Der erste Fall (0,0) bedeutet, dass das gesamte Dreieck auf der Ebene liegt. Dies wird nicht berichtet, weil jeder Rand des Dreiecks zu einem benachbarten Dreieck gehört, das nicht auch vollständig auf der Ebene liegt. Der Edge wird gemeldet, wenn das Dreieck berücksichtigt wird. Die anderen beiden Fälle (-,-, 0 und 0, +, +) entsprechen der geometrischen Konfiguration, dass das Dreieck die Ebene in einem Scheitelpunkt berührt. Diese Fälle werden nicht gemeldet, da Sie nicht auf ein nicht degeneriertes Liniensegment steigen.
+Die Intersect-Funktion berechnet die Schnittmenge der Farbtonebene und eines Dreiecks. Diese Funktion ist aus zwei Gründen wichtig, so einfach sie klingt.
 
-Der vorherige Algorithmus bestimmt, wann eine Schnittmenge zwischen einem Rand des Dreiecks und der Hue-Ebene berechnet werden soll. Nachdem eine Kante festgelegt wurde, wird die Schnittmenge mithilfe von parametrischen Gleichungen berechnet. Wenn eines der Punkt Produkte 0 (null) ist, ist die Schnittmenge der Scheitelpunkt selbst, sodass keine Berechnung notwendig ist. Wenn beide Punkt Produkte der Scheitel Punkte des edgeknotens ungleich NULL sind, ist vertex1 der Scheitelpunkt mit *negativem* Punkt Product dotProduct1; und vertex2 ist der Scheitelpunkt mit einem *positiven* Punkt Product dotProduct2. Diese Reihenfolge ist wichtig, um sicherzustellen, dass der berechnete Schnittstellen Punkt nicht davon abhängt, wie die Reihenfolge der Scheitel Punkte in der Darstellung des Edge erscheint. Das geometrische Konzept des Edge ist in Bezug auf seine Scheitel Punkte symmetrisch. Der Berechnungs Aspekt der Verwendung von parametrischen Gleichungen der Edge führt zu asymmetrischen Gleichungen (Auswahl des ersten Scheitel Punkts), die aufgrund des numerischen Rauschens und der Durchsetzung der zu lösenden linearen Gleichungen etwas unterschiedliche Schnittstellen aufweisen können. In diesem Beispiel wird der Schnittstellen Punkt (Schnittmenge) durch Folgendes angegeben.
+Erstens kann das Überschneiden der einzelnen Ränder des Dreiecks mit der Ebene drei Schnittpunkte ergeben, eine geometrisch unmögliche Situation. Dies kann bei der Berechnung der Grund dafür sein, dass bei Berechnungen im Gleitkommaformat, z. B. im IEEE-Format, in jedem Schritt Rauschen oder "numerisches Rauschen" vorliegen, die sich auf die Schlussfolgerung auswirken, ob eine Kante die Ebene überschneidet. Wenn die Ebene die Ränder in einer Situation überschneidet, in der sich die Schnittpunkte nahezu aus dem Nichts befinden, sind die Schnittpunkte nah beieinander, und die Bestimmung, ob ein Schnittpunkt innerhalb des Edge liegt, ist zufällig. Obwohl das Rauschen in den numerischen Werten der Punkte klein ist, ist die qualitative Schlussfolgerung, dass es mehr als zwei Schnittpunkte gibt, geometrisch unmöglich und schwierig, im Algorithmus richtig zu behandeln.
 
-t = dotProduct1/(dotProduct1-dotProduct2)
+Zweitens befindet sich diese Funktion in der kritischen Schleife für jeden Rand jedes gefilterten Dreiecks. Daher ist es wichtig, dass Sie die Effizienz so weit wie möglich optimieren.
 
-Kreuz. J = vertex1. J + t \* (vertex2. J-vertex1. IStGH
+Um das erste Problem des numerischen Rauschens zu beheben, führen Sie die Berechnungen in ganzen Zahlen aus. Um das zweite Problem der Optimierung der Effizienz zu beheben, speichern Sie das am häufigsten verwendete Attribut jedes Scheitelpunkts oder das jedem Scheitelpunkt zugeordnete "Punktprodukt" zwischen. Die Übergabe in ganze Zahlen ist eine typische Möglichkeit, geometrische Konsistenz zu gewährleisten. Die Grundidee ist, dass Sie dies am Anfang tun müssen, wenn Sie Quantisieren müssen. Anschließend können nachfolgende Berechnungen in ganzen Zahlen ausgeführt werden, und wenn die ganzen Zahlen breit genug sind, sodass keine Überlaufgefährdung besteht, können die Berechnungen mit unendlicher Genauigkeit durchgeführt werden. Die folgende Quantisierungsfunktion ist für diesen Zweck nützlich.
 
-Schnittmenge. a = vertex1. a + t \* (vertex2. a-vertex1. a)
+ScaleAndTruncate(x) = Ganzzahliger Teil von x \* 10000
 
-Schnittmenge. b = vertex1. b + t \* (vertex2. b-vertex1. b)
+Der Skalierungsfaktor 10000 bedeutet, dass die Eingabe-Gleitkommazahl vier Dezimalstellen hat, was für diese Anwendung genau genug ist. Abhängig vom Bereich der Werte des Farbbildraums möchten Sie einen ganzzahligen Typ mit Bits auswählen, die breit genug sind, um die Zwischenberechnungen zu speichern. In den meisten Farbflächen liegt der Bereich jeder Koordinate im Bereich von -1.000 bis 1.000. Die quantisierte Koordinate hat einen maximal möglichen absoluten Wert von 1.000 \* 10.000 = 10.000.000. Wie Sie sehen werden, ist die Zwischenmenge ein Punktprodukt, bei dem es sich um eine Summe von zwei Produkten von Koordinaten handelt, sodass sie einen maximal möglichen absoluten Wert von 2 \* (10.000.000) ₂ = 2?10 ₁₄. Die Erforderliche Anzahl von Bits ist log ₂ (2?10 ₁₄ ) = 47,51. Eine praktische Wahl für den Ganzzahltyp sind daher 64-Bit-Ganzzahlen.
 
-### <a name="gamut-operation-checkgamut-continued"></a>Gamut-Vorgang: checkgamut (fortgesetzt)
+Um zu gewährleisten, dass das Überschneiden einer Ebene mit einem Dreieck immer entweder eine leere Menge oder eine Gruppe von zwei Punkten ergibt, müssen Sie das Dreieck als Ganzes betrachten, nicht als einzelne Ränder des Dreiecks separat. Um die geometrische Situation zu verstehen, berücksichtigen Sie die "signierten Abstände" der Scheitelstellen des Dreiecks von der Farbtonebene. Berechnen Sie diese vorsignierte Entfernungen nicht direkt. berechnen Sie stattdessen die Punktprodukte der Positionsvektoren der Scheitelpunkte mit dem quantisierten Normalvektor zur Ebene. Genauer gesagt wird der quantisierte Normalvektor während der Initialisierung der Farbtonebene wie folgt berechnet.
 
-Der grundlegende geometrische Algorithmus, der für die Überprüfung der Überprüfung verwendet wird, ist das zählen der Anzahl von Strahl Übergängen Bei einem bestimmten Abfrage Punkt sollten Sie einen Strahl in Erwägung nehmen, der mit dem Abfrage Punkt beginnt und nach oben (J-Direction) zeigt. Zählt, wie oft dieser Strahl die Spiel Grenze überschreitet. Wenn diese Zahl gerade ist, dann ist der Abfrage Punkt nicht mehr im Spiel. Wenn diese Zahl ungerade ist, befindet sich der Punkt innerhalb von. Im Prinzip kann dieser Algorithmus in 3D implementiert werden. er wird in der Regel durch degenerierte Situationen, z. b. das strahlende (teilweise) auf einem Begrenzungs Dreieck, oder eine niedrigere dimensionale degenerität, wie z. b. das strahlende (teilweise) an einem Rand eines Begrenzungs Dreiecks, geplagt. Auch in 2D müssen Sie sich mit diesen degenerierten Situationen befassen. das Problem ist jedoch einfacher und wurde auf zufriedenstellende Weise gelöst. Weitere Informationen finden Sie unter "" \[ \] .
+NormalVector = (ScaleAndTruncate(-sin(hue)), ScaleAndTruncate(cos(hue)))
 
-Legen Sie für einen bestimmten Eingabe Punkt Jab wie folgt den Farbton Wert h fest.
+Beachten Sie, dass dieser Vektor ein zweidimensionaler Vektor ist. Sie können einen zweidimensionalen Vektor verwenden, da die Farbtonebene vertikal ist, sodass die dritte Komponente des normalen Vektors immer 0 (null) ist. Darüber hinaus wird eine Nachschlagetabelle mit Punktprodukten initialisiert, um einen Eintrag für jeden Scheitelpunkt aus den Gamut-Begrenzungsdreiecken zu erhalten, und das entsprechende Punktprodukt wird auf einen ungültigen Wert festgelegt.
 
-h = Atan (b/a),
+Während eines Vorgangs zum Überschneiden der Farbtonebene mit einem Dreieck wird das Punktprodukt jedes Scheitelpunkts des Dreiecks nachge sucht. Wenn der Wert in der Nachschlagetabelle der ungültige Wert ist, wird das Punktprodukt mit dem folgenden Ausdruck berechnet.
 
-Initialisieren Sie die Hue-Ebene, und bestimmen Sie dann die Begrenzungs Linien Elemente, die dieser Farbton Ebene entsprechen. Da die Begrenzungs Linien Elemente nur relevant sind, wenn Sie den aufwärts Strahl überschneiden, richten Sie einen Dreiecks Filter ein, um Dreiecke zu entfernen, die Linien Elemente, die definitiv den Pfeil nach oben nicht überschneiden. Beachten Sie in diesem Fall das umgebende Feld des Dreiecks. Der aufwärts Strahl überschneidet das Dreieck nicht, wenn sich der Abfrage Punkt außerhalb des "Schattens" befindet, der durch das umgebende Feld umgewandelt wird, wenn eine Lichtquelle direkt oberhalb von ist. Erhöhen Sie dies leicht mit einer Toleranz vor dem festgelegten Toleranz, damit Sie ein numerisches Rauschen zulassen, damit Sie nicht versehentlich Dreiecke auslassen, die möglicherweise nützliche Linien Elemente ergeben. Das Ergebnis ist der semiunendliche rechteckige Zylinder, der in Abbildung 29 dargestellt wird. Die Überprüfung, ob sich der Abfrage Punkt innerhalb oder außerhalb dieses Zylinders befindet, kann mithilfe einfacher Ungleichheiten effizient implementiert werden.
+NormalVector.a \* ScaleAndTruncate(vertex.a) + NormalVector.b \* ScaleAndTruncate(vertex.b)
 
-![Zeigt den Dreiecks Filter für checkgamut an.](images/gmmp-image116.jpg)
+Auch hier wird die J-Komponente des Scheitelpunkts nie verwendet, da der normale Vektor horizontal ist. Dieses Punktprodukt wird dann in der Nachschlagetabelle gespeichert, sodass es nicht erneut berechnet werden muss, wenn das Punktprodukt des Scheitelpunkts später abgefragt wird.
 
-**Abbildung 29** : Dreieck Filter für checkgamut
+Das Zwischenspeichern ermöglicht eine schnelle Ermittlung, ob ein Rand die Ebene überschneidet, nachdem die Punktprodukte in der Nachschlagetabelle tabellarisch sind, die progressiv erstellt wird, wenn die Scheitelpunkte verarbeitet werden.
 
-Checkgamut umfasst drei Komponenten für den gamingvorgang: *interne verarbeitete Daten*,*Zeilen Element Prozessor* und *Ausgabe Adapter*. Bei den *intern verarbeiteten Daten* handelt es sich um eine Liste der Zeilen Elemente, die vom *Zeilen Element Prozessor* verarbeitet wurden. In diesem Fall fügt der *Zeilen Element Prozessor* der Liste einfach ein Line-Element hinzu. Die interne Datenstruktur für die *intern verarbeiteten Daten* kann entweder eine verknüpfte Liste oder ein Array sein, das die Größe vergrößern kann.
+![Diagramm, das die Schnittmenge der Farbtonebene mit einem Dreieck zeigt.](images/gmmp-image114.jpg)
 
-Der *Ausgabe Adapter* ist ein Modul, das auf die Liste der Zeilen Elemente zugreift, bestimmt, ob ein Line-Element den aufwärts Strahl (count 1) oder nicht (count 0) überschreitet. Durch addieren all dieser Zahlen ergibt sich eine Gesamtzahl. Der *Ausgabe Adapter* gibt letztendlich eine Antwort mit dem Wert "yes" (in-Gamut) oder "No" (außerhalb des Gamut) aus, je nachdem, ob die Gesamtanzahl ungerade oder gerade ist. Der Schritt, in dem Sie bestimmen, ob ein Line-Element den aufwärts gerichteten Strahl überschreitet, verdient eine gewisse Aufmerksamkeit, da hier das Problem der herab Stellung auftritt und auch das Problem der überzähligen Zählung auftritt. Nach der Verwendung \[ von "o \] ..." für ein Line-Element, um das Strahl zu überschreiten, muss sich der Rechte Endpunkt (der Endpunkt mit größerem Chroma) strikt auf der rechten Seite des Strahls befinden. Dadurch wird sichergestellt, dass, wenn ein Endpunkt jemals genau auf dem Strahl liegt, nur einmal gezählt wird. Dieselbe Regel löst auch die degenerierte Situation, in der das Line-Element genau auf dem Strahl liegt. Sie erhöhen die Anzahl für dieses Zeilen Element nicht.
+**Abbildung 28:** Überschneiden der Farbtonebene mit einem Dreieck
 
-Abbildung 30 zeigt die resultierenden Linien Elemente eines Beispiel-Farbskala mit dem Abfrage Punkt an verschiedenen Positionen.
+Damit das Dreieck in Abbildung 28 die Farbtonebene in einem nicht degenerierten Liniensegment überschneidet, müssen sich die Punktprodukte der Scheitelpunkte in einem der folgenden Muster befinden, wenn sie in aufsteigender Reihenfolge sortiert werden.
 
-![Diagramm, das die sich ergebenden Linien Elemente eines Beispiel Diagramms mit dem Abfrage Punkt an verschiedenen Positionen anzeigt.](images/gmmp-image118.jpg)
+0,0,+; -,0,0; -,0,+; -,-,+; -,+,+
 
-**Abbildung 30** : Funktionsweise von checkgamut
+Ein Endpunkt des Liniensegments tritt auf, wenn die Ebene von einem Rand mit Scheitelpunkten überschneidet wird, die unterschiedliche Zeichen im Punktprodukt aufweisen. Wenn das Vorzeichen 0 (null) ist, liegt der Scheitelpunkt direkt auf der Ebene, und die Schnittmenge des Rands mit der Ebene ist der Scheitelpunkt selbst. Beachten Sie auch, dass die Fälle 0,0,0; -,-,0; 0,+,+ werden nicht gemeldet. Der erste Fall (0,0,0) bedeutet, dass das gesamte Dreieck auf der Ebene liegt. Dies wird nicht gemeldet, da jeder Rand des Dreiecks zu einem benachbarten Dreieck gehören sollte, das nicht auch vollständig auf der Ebene liegt. Der Rand wird gemeldet, wenn dieses Dreieck berücksichtigt wird. Die anderen beiden Fälle (-,-,0 und 0,+,+) entsprechen der geometrischen Konfiguration, dass das Dreieck die Ebene in einem Scheitelpunkt berührt. Diese Fälle werden nicht gemeldet, da sie nicht zu einem nicht degenerieren Liniensegment führen.
 
-### <a name="minimum-color-difference-gamut-mapping"></a>Minimale Farbunterschiede-Diagramm Zuordnung
+Der vorangehende Algorithmus bestimmt, wann eine Schnittmenge zwischen einem Rand des Dreiecks und der Farbtonebene berechnet werden soll. Nachdem ein Rand bestimmt wurde, wird die Schnittmenge mit parametrischen Gleichungen berechnet. Wenn eines der Punktprodukte 0 (null) ist, ist die Schnittmenge der Scheitelpunkt selbst, sodass keine Berechnung erforderlich ist. Vorausgesetzt, dass beide Punktprodukte der Scheitelpunkte des Edges ungleich 0 (null) sind, ist vertex1 der Scheitelpunkt mit dem *negativen* Punktprodukt dotProduct1; und vertex2 ist der Scheitelpunkt mit *positivem* Punktprodukt dotProduct2. Diese Reihenfolge ist wichtig, um sicherzustellen, dass der berechnete Schnittpunkt nicht davon abhängt, wie die Reihenfolge der Scheitelpunkte in der Darstellung des Rands angezeigt wird. Das geometrische Konzept des Edges ist in Bezug auf seine Scheitelpunkte symmetrisch. Der Berechnungsaspekt bei der Verwendung parametrischer Gleichungen des Rands führt zu einer Asymmetrie (Auswahl des Startpunkts), die aufgrund von numerischem Rauschen und der Konditionierung der zu lösenden linearen Gleichungen einen etwas anderen Schnittpunkt ergeben kann. In diesem Beispiel wird der Schnittpunkt (Schnittmenge) wie folgt angegeben.
 
-Die minimale Farbunterschiede-Zuordnungs Zuordnung, "mindemap", weist eine einfache Spezifikation auf: Wenn eine Farbe im Spiel ist, sollten Sie nichts tun. Wenn eine Farbe außerhalb des Farbskala ist, projizieren Sie Sie an den "nächstgelegenen" Punkt an der Spiel Grenze. Das Schlüsselwort "Next" ist nicht klar definiert, bis Sie angeben, welche Farbunterschied-Gleichung verwendet werden soll. In der Praxis wird zur Vereinfachung und schnelleren Berechnung der euklidischen Entfernung des ausgewählten Farb Darstellungs Raums oder eine Variante davon als Farbunterschied verwendet. Der Vorteil der euklidischen Metrik besteht darin, dass Sie mit dem Punktprodukt des Raums kompatibel ist, wodurch es möglich ist, lineare Algebra zu verwenden. Wenn im Raum ein "Punktprodukt" definiert ist, kann eine Distanz als Quadratwurzel des Punkt Produkts des Differenz Vektors mit sich selbst definiert werden. Ein Punktprodukt kann im Allgemeinen durch eine positive, definitive 3X3-Matrix a definiert werden.
+t = dotProduct1/(dotProduct1 - dotProduct2)
 
-u? v = u <sub>T</sub> AV
+Schnittpunkt. J = vertex1. J + t \* (vertex2. J – vertex1. J)
 
-Dabei ist die Rechte Seite die übliche Matrix Multiplikation. Wenn eine Identitätsmatrix ist, wird das Standard-Punktprodukt wieder hergestellt. Wenn Jab der Farbraum ist, sollten Sie die Komponenten in der Praxis nicht vermischen, sodass eine andere Diagonale Matrix als die Identitätsmatrix verwendet werden kann. Außerdem empfiehlt es sich, die Skalierung von a und b unverändert zu lassen, damit das Maß von Hue beibehalten wird. Eine nützliche Variante des standardmäßigen euklidischen Punkt Produkts ist die folgende.
+intersection.a = vertex1.a + t \* (vertex2.a - vertex1.a)
 
-w <sub>j</sub> (j-Komponente von Ihnen) (j-Komponente von v) + (eine Komponente von Ihnen) (eine Komponente von v) + (b-Komponente von Ihnen) (b-Komponente von v)
+intersection.b = vertex1.b + t \* (vertex2.b - vertex1.b)
 
-wobei w <sub>J</sub> eine positive Zahl ist. Eine weitere Variante besteht darin, w <sub>J</sub> mit dem Eingabe Abfrage Punkt zu unterscheiden:
+### <a name="gamut-operation-checkgamut-continued"></a>Gamut-Vorgang: CheckGamut (fortsetzung)
 
-w <sub>j \ =</sub> w <sub>(</sub> querypoint)
+Der grundlegende geometrische Algorithmus, der für die Gamutüberprüfung verwendet wird, ist die Zählung der Anzahl von Strahlübergängen. Betrachten Sie für einen bestimmten Abfragepunkt einen Strahl, der mit dem Abfragepunkt beginnt und nach oben zeigt (J-Richtung). Zählen Sie, wie oft dieser Strahl die Gamutgrenze überschreitet. Wenn diese Zahl gerade ist, ist der Abfragepunkt out-of-gamut. Wenn diese Zahl ungerade ist, befindet sich der Punkt darin. Im Prinzip kann dieser Algorithmus in 3D implementiert werden. Er wird in der Regel durch Schwierigkeiten ersetzt, die durch degenerierte Situationen verursacht werden, wie z. B. die Strahlgeschädigung (teilweise) auf einem Begrenzungsdreieck oder eine niedrigerdimensionale Degeneranz, z. B. die Strahlstrahlgeschädigung (teilweise) an einem Rand eines Begrenzungdreiecks. Selbst in 2D müssen Sie sich mit diesen degenerieren Situationen befassen. aber das Problem ist einfacher und wurde auf zufriedenstellende Weise behoben. Weitere Informationen finden Sie \[ unter O'Rourke \] .
 
-Das Endergebnis ist ein Measure der Entfernung, das in Bezug auf die beiden Punkte asymmetrisch ist, und mit unterschiedlichen relativen Gewichtungen bei Helligkeit und Chroma oder Hue, wenn der Eingabe Abfrage Punkt variiert. Dies entspricht einigen Beobachtungen hinsichtlich der menschlichen Farbwahrnehmung, dass Farbunterschiede nicht gleichmäßig in allen Dimensionen gewichtet werden. Es wurde festgestellt, dass Personen weniger sensibel sind als Unterschiede in Hue und Chroma.
+Bestimmen Sie für einen bestimmten Eingabepunkt Jab den Farbtonwinkel h wie folgt.
 
-Die folgende Gewichtungsfunktion ist hilfreich.
+h = atan(b/a),
 
-w <sub>J</sub> = k-k ₁ (c-C m ₐ ₓ) n
+Initialisieren Sie die Farbtonebene, und bestimmen Sie dann die Begrenzungslinienelemente, die dieser Farbtonebene entsprechen. Da die Begrenzungslinienelemente nur relevant sind, wenn sie den Aufwärtsstrahl überschneiden, richten Sie einen Dreiecksfilter ein, um Dreiecke zu entfernen, die Linienelemente enthalten, die den Aufwärtsstrahl definitiv nicht überschneiden. Betrachten Sie in diesem Fall das umgebende Feld des Dreiecks. Der Aufwärtsstrahl überschneidet sich nicht mit dem Dreieck, wenn sich der Abfragepunkt außerhalb des "Schattens" befindet, der vom begrenzungsfeld geworfen wird, wenn sich eine Lichtquelle direkt darüber befand. Erweitern Sie dies geringfügig mit einer vordefinierten Toleranz, um numerisches Rauschen zu ermöglichen, sodass Sie versehentlich keine Dreiecke wegwerfen, die nützliche Linienelemente liefern können. Das Ergebnis ist der halb unendliche rechteckige Zylinder in Abbildung 29. Die Überprüfung, ob sich der Abfragepunkt innerhalb oder außerhalb dieses Zylinders befindet, kann mithilfe einfacher Gleichung effizient implementiert werden.
 
-Where k. = 1, k ₁ = 0,75/(C m ₐ ₓ) n, C m ₐ ₓ = 100, n = 2 und c ist der kleinere von Chroma des Abfrage Punkts und c m ₐ ₓ.
+![Zeigt den Dreiecksfilter für CheckGamut an.](images/gmmp-image116.jpg)
 
-eine Gewichtung von 0,25 wird also auf den J-Begriff gesetzt, wenn Chroma NULL ist, und eine Gewichtung von 1, wenn Chroma 100 ist. Der Trend der Bedeutung von j, wenn Chroma gering ist, und der Bedeutung von j, wenn Chroma groß ist, folgt der empfohlenen Verwendung für CMC und CIEDE2000.
+**Abbildung 29:** Dreiecksfilter für CheckGamut
 
-![Diagramm, das die Gewichtungsfunktion in der J-Komponente der Metrik anzeigt.](images/gmmp-image119.png)
+CheckGamut verfügt über drei allgemeine Vorgangskomponenten: *Interne verarbeitete Daten,**Zeilenelementprozessor* und *Ausgabeadapter*. Die *intern verarbeiteten Daten* sind eine Liste von Zeilenelementen, die vom *Zeilenelementprozessor* verarbeitet wurden. In diesem Fall fügt der *Zeilenelementprozessor* der Liste einfach ein Linienelement hinzu. Die interne Datenstruktur für *intern verarbeitete Daten* kann entweder eine verknüpfte Liste oder ein Array sein, das größer werden kann.
 
-**Abbildung 31** : die Gewichtungsfunktion für die J-Komponente der Metrik
+Der *Ausgabeadapter* ist ein Modul, das auf die Liste der Zeilenelemente zugreift und bestimmt, ob ein Linienelement den Aufwärtsstrahl (Anzahl 1) überschreitet (Anzahl 0). Das Summieren all dieser Anzahlen ergibt eine Gesamtanzahl. Der *Ausgabeadapter* gibt letztendlich eine Antwort mit "ja" (in-gamut) oder "nein" (out-of-gamut) aus, je nachdem, ob die Gesamtanzahl ungerade oder gerade ist. Der Schritt, in dem Sie bestimmen, ob ein Linienelement den Aufwärtsstrahl überschreitet, ist ein gewisses Maß an Aufmerksamkeit, da hier das Problem der Degeneranz auftritt und auch das Problem der Überzählung auftritt. Nach \[ O'Rourke muss sich \] der rechte Endpunkt (der Endpunkt mit größerem Strahl) genau auf der rechten Seite des Strahls halten, damit ein Linienelement den Strahl kreuzt. Dadurch wird sichergestellt, dass ein Endpunkt nur einmal gezählt wird, wenn er jemals genau auf dem Strahl liegt. Dieselbe Regel löst auch die degenerate Situation, in der sich das Linienelement genau auf dem Strahl befindet. Sie erhöhen die Anzahl für dieses Zeilenelement nicht.
 
-Verwenden Sie den Speicherplatz für das folgende Beispiel. Es ist rechnerisch anspruchsvoll, alle Begrenzungs Dreiecke zu durchsuchen, um den nächstgelegenen Punkt der euklidischen Metrik zu ermitteln. Im folgenden finden Sie eine einfache Vorgehensweise, um diesen Prozess so effizient wie möglich zu gestalten, ohne dass zusätzliche Annahmen eingeführt werden, die den Prozess beschleunigen können, aber auch nur eine ungefähre Antwort erhalten. Zunächst ist es erforderlich, das geometrische Verfahren zum Projizieren eines Punkts auf das angegebene Dreieck zu verstehen. Hier wird eine Beschreibung angegeben.
+Abbildung 30 zeigt die resultierenden Linienelemente eines Beispiel-Gamuts mit dem Abfragepunkt an verschiedenen Positionen.
 
-Eine orthogonale Projektion auf die unendliche Ebene, die das Dreieck enthält, wird zuerst ausgeführt. Die kürzeste Entfernung des Abfrage Punkts von der Ebene kann in zwei Schritten festgelegt werden.
+![Diagramm, das die resultierenden Linienelemente eines Beispiel-Gamuts mit dem Abfragepunkt an verschiedenen Positionen zeigt.](images/gmmp-image118.jpg)
 
-**(a)** berechnen Sie den Einheiten normalen Vektor für das Dreieck.
+**Abbildung 30:** Funktionsweise von CheckGamut
 
-**(b)** berechnen Sie das Punktprodukt des Einheits normalen Vektors und einen Vektor, der sich aus dem Abfrage Punkt und einem Punkt auf dem Dreieck gebildet hat. Das heißt, einer seiner Scheitel Punkte. Da der normale Vektor über eine Einheitslänge verfügt, ist der absolute Wert dieses Punkt Produkts der Abstand des Abfrage Punkts von der Ebene.
+### <a name="minimum-color-difference-gamut-mapping"></a>Minimale Farbunterschiede – Gamutzuordnung
 
-Der projizierte Punkt ist möglicherweise nicht die Antwort, da er sich außerhalb des Dreiecks befinden könnte. Daher müssen Sie zuerst eine Überprüfung durchführen. Die Berechnung entspricht der Berechnung der barzentrischen Koordinaten des projizierten Punkts relativ zum Dreieck. Wenn der projizierte Punkt als innerhalb des Dreiecks festgelegt wird, ist dies die Antwort. Wenn dies nicht der Wert ist, wird der nächste Punkt an einem der Ränder des Dreiecks abgerufen. Führen Sie für jeden der drei Kanten eine Suche durch. Das Ermitteln der Projektion des Abfrage Punkts auf einen Edge ist ein Prozess, der der Projektion auf das Dreieck ähnelt, aber eine Dimension kleiner ist. Eine orthogonale Projektion wird zuerst berechnet. Wenn sich der projizierte Punkt auf dem Rand befindet, ist dies die Antwort. Wenn dies nicht der Wert ist, wird der nächste Punkt an einem der beiden Endpunkte abgerufen. Führt eine Suche an den beiden Endpunkten aus. Das heißt, Sie berechnen den Abstand eines Abfrage Punkts von jedem einzelnen und vergleichen, welcher kleiner ist.
+MinDEMap , Minimum Color Difference Gamut Mapping, verfügt über eine einfache Spezifikation: Wenn eine Farbe in gamut ist, tun Sie nichts. Wenn eine Farbe nicht gamutig ist, pro projectieren Sie sie auf den "nächstgelegenen" Punkt an der Gamutgrenze. Das Schlüsselwort "nearest" ist erst dann klar definiert, wenn Sie die zu verwendende Farbunterschiedsgleichung angeben. In der Praxis wird der euklidische Abstand des ausgewählten Farbdarstellungsbereichs oder eine Variante davon als Farbunterschiedsmetrik verwendet, um die Berechnung zu vereinfachen und zu beschleunigen. Der Vorteil der euklidischen Metrik besteht darin, dass sie mit dem Punktprodukt des Raumes kompatibel ist, wodurch es möglich ist, lineare Algebra zu verwenden. Wenn im Raum ein "Punktprodukt" definiert ist, kann ein Abstand als Quadratwurzel des Punktprodukts des Differenzvektors mit sich selbst definiert werden. Ein Punktprodukt kann im Allgemeinen durch eine positive eindeutige 3x3-Matrix A definiert werden.
 
-Die sorgfältige Untersuchung zeigt, dass es viele Wiederholungs Vorgänge gibt, wenn Sie alle Dreiecke durchlaufen, da eine Kante immer durch zwei Dreiecke und ein Scheitelpunkt von mindestens drei Kanten gemeinsam genutzt wird. Außerdem ist es nicht sehr interessant, den nächstgelegenen Punkt zu einem bestimmten Dreieck zu finden. Stattdessen sind Sie daran interessiert, den nächstgelegenen Punkt der gesamten Spiel Grenze zu finden. Dabei handelt es sich jedoch um ein bestimmtes Dreieck, in dem dies erreicht wird. Es gibt zwei Strategien, die Sie verwenden können, um die Suche zu beschleunigen.
+u?v = u <sub>T</sub> Av
+
+dabei ist die rechte Seite die übliche Matrixmultiplikation. Wenn A die Identitätsmatrix ist, wird das Standardpunktprodukt wiederhergestellt. In der Praxis möchten Sie, wenn Jab der Farbraum ist, die Komponenten nicht mischen, sodass eine andere diagonale Matrix als die Identitätsmatrix verwendet werden kann. Darüber hinaus sollten Sie die Skala auf a und b unverändert lassen, damit das Maß für den Farbton beibehalten wird. Daher ist eine nützliche Variante des euklidischen Standardpunktprodukts die folgende.
+
+w <sub>J</sub> (J-Komponente von Ihnen)(J-Komponente von v) + (eine Komponente von Ihnen)(eine Komponente von v) + (b Komponente von Ihnen)(b Komponente von v)
+
+wobei w <sub>J</sub> eine positive Zahl ist. Eine weitere Variante besteht darin, w <sub>J</sub> mit dem Eingabeabfragepunkt variieren zu lassen:
+
+w <sub>J\ =</sub> w <sub>J</sub> (queryPoint)
+
+Das Endergebnis ist ein Maß für die Entfernung, das in Bezug auf die beiden Punkte asymmetrisch ist, und mit unterschiedlichen relativen Gewichtungen für Helligkeit und Farbton oder Farbton, da der Eingabeabfragepunkt variiert. Dies entspricht einigen Beobachtungen zur menschlichen Farberkennung, dass Farbunterschiede nicht gleichmäßig in allen Dimensionen gewichtet werden. Es wurde festgestellt, dass Die Menschen weniger empfindlich auf Unterschiede bei der Helligkeit reagieren als auf Unterschiede in Farbton und Farbe.
+
+Die folgende Gewichtungsfunktion ist nützlich.
+
+w <sub>J</sub> = k ₂ – k ₁ (C – C mₐₓ ) n
+
+wobei k ₂ = 1, k ₁ = 0,75/(C mₐₓ ) n, C mₐₓ = 100, n = 2 und C der kleinere Teil des Abfragepunkts und C mₐₓ ist.
+
+, sodass eine Gewichtung von 0,25 auf den J-Begriff gesetzt wird, wenn Dasin null ist, und ein Gewicht von 1, wenn Dasin 100 beträgt. Der Trend, J bei geringem Gewichtungsgewicht weniger gewichtend zu verwenden, und mehr Gewichtung für J, wenn Dasin groß ist, entspricht der empfohlenen Verwendung für CMC und CIEDE2000.
+
+![Graph, der die Gewichtungsfunktion für die J-Komponente der Metrik anzeigt.](images/gmmp-image119.png)
+
+**Abbildung 31:** Gewichtungsfunktion für die J-Komponente der Metrik
+
+Verwenden Sie jab space für das folgende Beispiel. Es ist rechenintensiv, alle Begrenzungsdreiecke zu durchsuchen, um den nächstgelegenen Punkt in der euklidischen Metrik zu ermitteln. Im Folgenden finden Sie einen einfachen Ansatz, um diesen Prozess so effizient wie möglich zu gestalten, ohne zusätzliche Annahmen einzuführen, die den Prozess beschleunigen, aber auch nur eine ungefähre Antwort ergeben. Zunächst müssen Sie die geometrische Prozedur verstehen, mit der ein Punkt auf das angegebene Dreieck projiziert wird. Eine Beschreibung finden Sie hier.
+
+Zuerst wird eine orthogonale Projektion auf die unendliche Ebene durchgeführt, die das Dreieck enthält. Die kürzeste Entfernung des Abfragepunkts von der Ebene kann in zwei Schritten ermittelt werden.
+
+**(a)** Berechnen Sie den Normalenvektor der Einheit auf das Dreieck.
+
+**(b)** Berechnen Sie das Punktprodukt des Normalvektors der Einheit und einen Vektor, der aus dem Abfragepunkt und einem Punkt auf dem Dreieck gebildet wird. das heißt, einer seiner Scheitelpunkte. Da der normale Vektor eine Einheitenlänge hat, ist der absolute Wert dieses Punktprodukts der Abstand des Abfragepunkts von der Ebene.
+
+Der projizierte Punkt ist möglicherweise nicht die Antwort, da er sich außerhalb des Dreiecks befindet. Daher müssen Sie zuerst eine Überprüfung durchführen. Die Berechnung entspricht der Berechnung der baryzentrischen Koordinaten des projizierten Punkts relativ zum Dreieck. Wenn der projizierte Punkt bestimmt wird, dass er sich innerhalb des Dreiecks befindet, ist dies die Antwort. Falls nicht, wird der nächstgelegene Punkt an einem der Ränder des Dreiecks bezogen. Führen Sie eine Suche an jedem der drei Ränder durch. Das Bestimmen der Projektion des Abfragepunkts auf einen Rand ist ein Prozess, der der Projektion auf das Dreieck ähnelt, jedoch eine Dimension weniger. Zuerst wird eine orthogonale Projektion berechnet. Wenn der projizierte Punkt am Rand liegt, ist dies die Antwort. Falls nicht, wird der nächstgelegene Punkt an einem der beiden Endpunkte bezogen. Führen Sie eine Suche an den beiden Endpunkten aus. Das heißt, berechnen Sie den Abstand des Abfragepunkts zu jedem Abfragepunkt, und vergleichen Sie, welcher kleiner ist.
+
+Eine sorgfältige Untersuchung zeigt, dass es viele wiederholte Suchvorgänge gibt, wenn Sie alle Dreiecke durchlaufen, da ein Rand immer von zwei Dreiecken gemeinsam genutzt wird und ein Scheitelpunkt von mindestens drei Kanten gemeinsam genutzt wird. Darüber hinaus sind Sie nicht sehr daran interessiert, den nächstgelegenen Punkt zu einem bestimmten Dreieck zu finden. Stattdessen möchten Sie den nächstgelegenen Punkt der gesamten Gamutgrenze ermitteln. Ein bestimmtes Dreieck wäre jedoch das Dreieck, in dem dies erreicht wird. Es gibt zwei Strategien, mit denen Sie die Suche beschleunigen können.
 
 **Strategie I**. Jeder Scheitelpunkt wird höchstens einmal verarbeitet. Jeder Edge wird höchstens einmal verarbeitet.
 
-**Strategie II**. An jedem Punkt der Suche haben Sie einen besten Kandidaten mit der entsprechenden optimalen Entfernung. Wenn Sie durch eine schnell Überprüfung feststellen können, dass ein Dreieck nicht in der Lage ist, eine bessere Entfernung zu erzielen, muss die Berechnung nicht weiter fortgesetzt werden. Sie benötigen nicht den nächstgelegenen Punkt und die Entfernung für dieses Dreieck.
+**Strategie II**. Zu jedem Zeitpunkt der Suche haben Sie einen besten Kandidaten mit der entsprechenden besten Entfernung. Wenn Sie durch eine schnelle Überprüfung feststellen können, dass ein Dreieck keine bessere Entfernung bieten kann, ist es nicht erforderlich, die Berechnung fortzusetzen. Sie benötigen nicht den nächstgelegenen Punkt und Abstand für dieses Dreieck.
 
-![Diagramm, das den Fluss der minimalen Zuordnung von "de" anzeigt.](images/gmmp-image120.png)
+![Diagramm, das den Ablauf der Minimal-DE-Zuordnung zeigt.](images/gmmp-image120.png)
 
-**Abbildung 32** : minimale Zuordnung der de-Zuordnung
+**Abbildung 32:** Minimale DE-Zuordnungsschemata
 
-In Abbildung 32 wird der allgemeine Logik Fluss für die Registerkarte "Code Map" gezeigt. Bei einem Abfrage Punkt wird zuerst die checkgamut-Funktion aufgerufen. Wenn der Punkt im Spiel ist, ist die Zuordnung ein No-op. Wenn der Punkt außerhalb des Gamut ist, nennen Sie projectpointumboundary. Wechseln Sie nun zu Abbildung 33. An diesem Punkt wird davon ausgegangen, dass die folgenden Werte berechnet wurden.
+Abbildung 32 zeigt den allgemeinen Logikfluss für die Gamutkarte MinDEMap. Für einen Abfragepunkt wird zuerst die CheckGamut-Funktion aufgerufen. Wenn der Punkt in gamut ist, ist die Karte kein Op. Wenn der Punkt out-of-gamut ist, rufen Sie ProjectPointToBoundary auf. Fahren Sie nun mit Abbildung 33 fort. An diesem Punkt wird davon ausgegangen, dass die folgenden Werte berechnet wurden.
 
-**(a)** Einheiten normaler Vektor für jedes Gamut-Begrenzungs Dreieck in Bezug auf das Standard-Punktprodukt.
+**(a)** Unit normal vector to each Gamut Boundary Triangle in Bezug auf das Standardpunktprodukt.
 
-**(b)** Vertex-Liste und Rand Liste zusätzlich zur Dreiecks Liste.
+**(b)** Scheitelpunktliste und Kantenliste zusätzlich zur Dreiecksliste.
 
-![Diagramm, das die "projectpointchanboundary"-Routine anzeigt.](images/gmmp-image122.jpg)
+![Diagramm, das die Routine "ProjectPointToBoundary" zeigt.](images/gmmp-image122.jpg)
 
-**Abbildung 33** : die "projectpointchanboundary"-Routine
+**Abbildung 33:** Die ProjectPointToBoundary-Routine
 
-All dies ist ein konstanter Aufwand, der zu einer Verringerung der Kosten führt, wenn genügend Abfragen für diese Farbskala-Grenze vorgenommen werden. Dies ist normalerweise der Fall, wenn Sie eine Transformations-LUT von einem Gerät zu einem anderen erstellen, bei dem es nur zwei fixierte Gamuts gibt und der Transform-LUT durch Punkte im einheitlich erfassten Raster verläuft. Sie berechnen die normalen Vektoren in Bezug auf das Standard-Punktprodukt, auch wenn das Konzept der kalkularität auf dem gewichteten Punktprodukt basiert, das von dem Abfrage Punkt abhängig ist, wie bereits erläutert. Der Grund hierfür ist, dass ein normaler Vektor in Bezug auf das gewichtete Punktprodukt auf einfache Weise vom normalen Vektor in Bezug auf das Standard-Punktprodukt abgerufen werden kann. Wenn n ₀ ein normaler Vektor in Bezug auf das Standard-Punktprodukt ist, dann
+All dies ist ein konstanter Mehraufwand und würde die Kosten verringern, wenn genügend Abfragen an diese allgemeine Grenze durchgeführt werden. In der Regel ist dies der Fall, wenn Sie eine Transformations-CSV-Datei von einem Gerät zu einem anderen erstellen, bei der nur zwei feste Gamuts vorhanden sind, und die Transformations-MSI durch Punkte im einheitlichen Raster mit Stichproben ausgeführt wird. Sie berechnen die normalen Vektoren im Hinblick auf das Standardpunktprodukt vorab, obwohl das Konzept der Perpendity auf dem gewichteten Punktprodukt basiert, das vom Abfragepunkt abhängt, wie zuvor erläutert. Der Grund dafür ist, dass ein normaler Vektor in Bezug auf das gewichtete Punktprodukt leicht aus dem normalen Vektor in Bezug auf das Standardpunktprodukt abgerufen werden kann. Wenn n ₀ ein normaler Vektor in Bezug auf das Standardpunktprodukt ist, dann
 
-n = (J-Component von n ₀/w <sub>J</sub>, a-component of n ₀, b-Component of n ₀)
+n = (J-Komponente von n ₀ /w <sub>J</sub>, A-Komponente von n ₀, B-Komponente von n ₀ )
 
-ist für das Dreieck in Bezug auf das gewichtete Punktprodukt normal. Aufgrund dieser Beziehung ist es immer noch vorteilhaft, eine vorabberechnung von n ₀ durchzuführen, auch wenn es auf der Grundlage des Abfrage Punkts angepasst werden muss.
+ist für das Dreieck in Bezug auf das gewichtete Punktprodukt normal. Aufgrund dieser Beziehung ist es immer noch vorteilhaft, n ₀ vorab zu berechnen, obwohl sie basierend auf dem Abfragepunkt angepasst werden muss.
 
-Die "projectpointchanboundary"-Routine beginnt mit dem Zurücksetzen des verarbeitetes Verlaufs der Scheitel Punkte und Kanten. Dabei handelt es sich um Tabellen mit booleschen Flags, mit denen nachverfolgt wird, ob ein Scheitelpunkt oder Edge bereits besucht wurde. Außerdem setzt Sie die Variable "shortestdistance" auf "unendlich" zurück. Dies ist der maximale codierte Wert im verwendeten Gleit Komma Zahlensystem. Anschließend wird Sie durch eine Schleife ausgeführt, die mithilfe des processtriangle-Aufrufs den nächstgelegenen Punkt von jedem Dreieck aus sucht. Processtriangle ist die Routine zum Aktualisieren der shortestdistance-Variablen und ist in der Critical-Schleife eindeutig. Eine Optimierung besteht darin, zu beenden, wenn das Ergebnis ausreichend ist. Nach jedem Aufrufen von processtriangle wird die Variable "shortestdistance" untersucht. Wenn ein vordefinierter Schwellenwert erfüllt ist, können Sie den Vorgang abbrechen. Der vordefinierte Schwellenwert hängt von dem verwendeten Farbraum und der erforderlichen Genauigkeit des Farb Abbild Systems ab. Bei einer typischen Anwendung ist es nicht sinnvoll, unnötige Arbeiten durchzuführen, wenn der Farbunterschied kleiner ist, als von der menschlichen Vision erkannt werden kann. Für CIECAM02 ist dieser Farbunterschied 1. Verwenden Sie den Schwellenwert 0,005 in der Implementierung jedoch, um die Genauigkeit von Berechnungen beizubehalten, da dies nur ein Zwischenschritt in einer Kette von Transformationen sein kann.
+Die ProjectPointToBoundary-Routine beginnt mit dem Zurücksetzen des "verarbeiteten Verlaufs" der Scheitelpunkte und Kanten. Dies sind Tabellen mit BOOLESCHEN Flags, die nachverfolgen, ob zuvor ein Scheitelpunkt oder eine Kante besucht wurde. Außerdem wird die Variable ShortestDistance auf "INFINITY" zurückgesetzt. Dies ist der maximale codierte Wert im verwendeten Gleitkommazahlensystem. Anschließend wird eine Schleife durchlaufen, wobei mithilfe des ProcessTringle-Aufrufs von jedem Dreieck nach dem nächstgelegenen Punkt gesucht wird. ProcessTriangle ist die Routine zum Aktualisieren der ShortestDistance-Variablen und befindet sich eindeutig in der kritischen Schleife. Eine Optimierung besteht darin, zu beenden, wenn das Ergebnis gut genug ist. Nach jedem Aufruf von ProcessTringle wird die Variable ShortestDistance untersucht. Wenn sie einen vordefinierten Schwellenwert erfüllt, können Sie beenden. Der vordefinierte Schwellenwert hängt vom verwendeten Farbraum und von der erforderlichen Genauigkeit des Farbbildsystems ab. Bei einer typischen Anwendung möchten Sie keine unnötigen Arbeiten durchführen, wenn der Farbunterschied kleiner ist als das, was durch menschliches Sehen erkannt werden kann. Bei CIECAM02 beträgt dieser Farbunterschied 1. Verwenden Sie in der Implementierung jedoch einen Schwellenwert von 0,005, um die Genauigkeit von Berechnungen beizubehalten, da dies möglicherweise nur ein Zwischenschritt in einer Kette von Transformationen ist.
 
-Processtriangle implementiert die vorangehende Strategie II. Beim Abrufen eines normalen Vektors vom Standardvektor der vorab berechneten Einheit bis zum Dreieck in Bezug auf das Standard-Punktprodukt wird der Abstand des Abfrage Punkts auf die unendliche Ebene mit dem Dreieck berechnet, indem das Punktprodukt des Einheiten normalen Vektors und der queryvector, der Vektor von einer der Scheitel Punkte des Dreiecks, vertex1, zum Abfrage Punkt gebildet werden. , querypoint.
+ProcessTriangle implementiert die vorherige Strategie II. Beim Abrufen eines normalen Vektors vom vorberechnten Einheitennormalen Vektor zum Dreieck in Bezug auf das Standardpunktprodukt berechnet er den Abstand des Abfragepunkts zur Unendlichkeitsebene, die das Dreieck enthält, indem das Punktprodukt des Normalvektors der Einheit und der queryVector, der Vektor aus einem der Scheitelpunkte des Dreiecks, gebildet werden.  vertex1, bis zum Abfragepunkt queryPoint.
 
-queryvector = querypoint-vertex1
+queryVector = queryPoint – vertex1
 
-Distance = \| normvector \* queryvector- \| / \| \| Normal Vektor\|\|
+distance = \| normalVector \* queryVector \| / \| \| normalVector\|\|
 
-Dies ist eine relativ kostengünstige Berechnung, und die Entfernung ist erforderlich, um weitere Berechnungen auszuführen. Wenn diese Distanz nicht kleiner ist als die aktuelle beste Entfernung, shortestdistance, erzeugt dieses Dreieck keine bessere Distanz, da es nicht zu einer besseren Distanz als die Ebene mit der Ebene führt. In diesem Fall wird die Steuerung an die Dreiecks Schleife zurückgegeben. Wenn der Abstand kleiner als shortestdistance ist, haben Sie möglicherweise einen genaueren Punkt, wenn dieser Punkt innerhalb des Dreiecks liegt. Sie müssen einige "harte" Berechnungen durchführen, um dies zu bestimmen (allerdings ohne lineare Algebra). Wenn die beiden anderen Scheitel Punkte des Dreiecks vertex2 und vertex3 sind, bilden Sie die Basis Vektoren firstbasisvector und secondbasisvector.
+Dies ist eine relativ kostengünstige Berechnung, und die Entfernung ist erforderlich, um weitere Berechnungen durchzuführen. Wenn dieser Abstand nicht kleiner als die aktuelle beste Entfernung (ShortestDistance) ist, erzeugt dieses Dreieck keinen besseren Abstand, da es keinen besseren Abstand als die Ebene ergibt, die ihn enthält. In diesem Fall geben Sie die Steuerung an die Dreiecksschleife zurück. Wenn der Abstand kleiner als ShortestDistance ist, haben Sie möglicherweise einen näheren Punkt, wenn dieser Punkt im Dreieck liegt. Sie müssen einige "harte" Berechnungen durchführen (obwohl nichts über lineare Algebra hinausgeht), um dies zu bestimmen. Wenn die anderen beiden Scheitelpunkte des Dreiecks vertex2 und vertex3 sind, bilden Sie die Basisvektoren firstBasisVector und secondBasisVector.
 
-firstbasisvector = vertex2-vertex1
+firstBasisVector = vertex2 – vertex1
 
-secondbasisvector = vertex3-vertex1
+secondBasisVector = vertex3 – vertex1
 
-Verwenden Sie das folgende lineare System von Gleichungen, um Sie und v zu lösen.
+Verwenden Sie das folgende lineare System von Gleichungen, um für Unbekannte sie und v zu lösen.
 
-firstbasisvector \* queryvector = (firstbasisvector \* firstbasisvector) u + (firstbasisvector \* secondbasisvector) v
+firstBasisVector \* queryVector = (firstBasisVector \* firstBasisVector)u + (firstBasisVector \* secondBasisVector)v
 
-secondbasisvector \* queryvector = (secondbasisvector \* firstbasisvector) u + (secondbasisvector \* secondbasisvector) v
+secondBasisVector \* queryVector = (secondBasisVector \* firstBasisVector)u + (secondBasisVector \* secondBasisVector)v
 
 und die Bedingungen für den projizierten Punkt, der innerhalb des Dreiecks liegen soll, sind:
 
-0, u. 1, 0. v. 1, und Sie + v, 1
+0 ≤ u ≤ 1, 0 ≤ v ≤ 1 und Sie + v ≤ 1
 
-Wenn nach dieser Berechnung festgestellt wird, dass der projizierte Punkt innerhalb des Dreiecks liegt, haben Sie einen neuen nächsten Punkt gefunden. der Abstand, den Sie am Anfang berechnet haben, ist die neue kürzeste Entfernung. Aktualisieren Sie in diesem Fall die Variablen shortestdistance und closestpoint. Wenn der projizierte Punkt außerhalb des Dreiecks liegt, finden Sie möglicherweise einen genaueren Punkt an einem seiner Ränder. Daher können Sie die processdge-Routine für jeden der drei Kanten aufrufen.
+Wenn nach dieser Berechnung ermittelt wird, dass der projizierte Punkt innerhalb des Dreiecks liegt, haben Sie einen neuen nächstgelegenen Punkt gefunden. Der Abstand, den Sie am Anfang berechnet haben, ist die neue kürzeste Entfernung. Aktualisieren Sie in diesem Fall die Variablen ShortestDistance und ClosestPoint. Wenn der projizierte Punkt außerhalb des Dreiecks liegt, finden Sie möglicherweise einen näheren Punkt an einem seiner Ränder. Sie können also die ProcessEdge-Routine an jedem der drei Ränder aufrufen.
 
-![Diagramm, das den Fluss der processdge-und processvertex-Routinen anzeigt.](images/gmmp-image124.jpg)
+![Diagramm, das den Ablauf der ProcessEdge- und ProcessVertex-Routinen zeigt.](images/gmmp-image124.jpg)
 
-**Abbildung 34** : procesendge-und processvertex-Routinen
+**Abbildung 34:** ProcessEdge- und ProcessVertex-Routinen
 
-Die processdge-Routine implementiert Strategie I, wie in Abbildung 34 dargestellt. Procesmendge prüft zunächst, ob der Edge bereits verarbeitet wurde. Wenn dies der Fall ist, wird keine weitere Aktion durchgeführt. Wenn dies nicht der Fall ist, wird die orthogonale Projektion des Abfrage Punkts auf die unendliche Linie mit dem Rand berechnet. Die an der Berechnung beteiligte lineare Algebra ähnelt den vorherigen Dreiecks Gleichungen. Die Berechnung ist jedoch einfacher, Sie wird hier nicht beschrieben. Wenn der projizierte Punkt innerhalb des Edge liegt, finden Sie den Abstand des projizierten Punkts vom Abfrage Punkt aus. Wenn diese Entfernung kleiner als shortestdistance ist, haben Sie einen neuen nächsten Punkt gefunden. Aktualisieren Sie sowohl shortestdistance als auch closestpoint. Wenn der projizierte Punkt außerhalb des Edge liegt, wird processvertex für die beiden Endpunkte aufgerufen. Aktualisieren Sie vor dem Zurückgeben der Steuerung den Kanten Verlauf, sodass dieser Edge als "verarbeitet" gekennzeichnet ist.
+Die ProcessEdge-Routine implementiert Strategie I, wie in Abbildung 34 dargestellt. ProcessEdge beginnt mit der Überprüfung, ob der Edge zuvor verarbeitet wurde. In diesem Falle wird keine weitere Aktion ausgeführt. Falls nicht, wird die orthogonale Projektion des Abfragepunkts auf die unendliche Linie mit dem Rand berechnet. Die lineare Algebra, die an der Berechnung beteiligt ist, ähnelt den vorherigen Dreiecksgleichungen. Die Berechnung ist jedoch einfacher, sie wird hier nicht beschrieben. Wenn der projizierte Punkt innerhalb des Rands liegt, finden Sie den Abstand des projizierten Punkts vom Abfragepunkt. Wenn dieser Abstand kleiner als ShortestDistance ist, haben Sie einen neuen nächstgelegenen Punkt gefunden. Aktualisieren Sie ShortestDistance und ClosestPoint. Wenn der projizierte Punkt außerhalb des Rands liegt, rufen Sie ProcessVertex an den beiden Endpunkten auf. Bevor Sie das Steuerelement zurückgeben, aktualisieren Sie den Edgeverlauf, sodass dieser Edge als "PROCESSED" markiert ist.
 
-Abschließend wird eine Beschreibung von processvertex angezeigt. Die "projectvertex"-Routine implementiert auch Strategie "I" und unterhält eine Vertex-Vertex Wie in Abbildung 34 dargestellt, wird zuerst überprüft, ob der Scheitelpunkt bereits verarbeitet wurde. Wenn dies der Fall ist, wird keine weitere Aktion durchgeführt. Wenn dies nicht der Fall ist, wird der Abstand des Scheitel Punkts vom Abfrage Punkt aus berechnet. Wenn die Entfernung kleiner als shortestdistance ist, aktualisieren Sie sowohl shortestdistance als auch closestpoint. Am Ende aktualisiert Sie den vertexverlauf, sodass dieser Scheitelpunkt als "verarbeitet" gekennzeichnet ist.
+Abschließend geben Sie eine Beschreibung von ProcessVertex an. Die ProjectVertex-Routine implementiert auch Strategy I und verwaltet eine Scheitelpunktverlaufstabelle. Wie in Abbildung 34 dargestellt, wird zunächst überprüft, ob der Scheitelpunkt zuvor verarbeitet wurde. In diesem Falle wird keine weitere Aktion ausgeführt. Falls nicht, wird der Abstand des Scheitelpunkts vom Abfragepunkt berechnet. Wenn der Abstand kleiner als ShortestDistance ist, aktualisieren Sie ShortestDistance und ClosestPoint. Am Ende wird der Scheitelpunktverlauf aktualisiert, sodass dieser Scheitelpunkt als "PROCESSED" markiert ist.
 
-Wenn die äußere Steuerungs Schleife entweder alle Dreiecke erschöpft oder vor dem Erreichen des Farbunterschied-Schwellenwerts beendet wurde, wird auf die Variable closestpoint zugegriffen. Dies ist das Ergebnis von "mindemap". Der Aufrufer kann auch shortestdistance abrufen, wenn Sie interessiert sind, wie weit die zugeordnete Farbe von der Abfrage Farbe abgeleitet ist.
+Wenn die äußere Steuerelementschleife entweder alle Dreiecke erschöpft oder beendet wurde, bevor der Schwellenwert für farbliche Unterschiede erreicht wurde, wird auf die Variable ClosestPoint zugegriffen. Dies ist das Ergebnis von MinDEMap. Der Aufrufer kann auch ShortestDistance abrufen, wenn er daran interessiert ist, wie weit die zugeordnete Farbe von der Abfragefarbe entfernt ist.
 
-### <a name="hue-smoothing"></a>Farbton Glättung
+### <a name="hue-smoothing"></a>Farbtonglättung
 
-![Diagramm, das zwei obere Ansichten von Hue Glättung anzeigt, das Original oben und den Farbton im unteren Bereich.](images/gmmp-image125.png)
+![Diagramm, das zwei obere Ansichten der Farbtonglättung zeigt: den ursprünglichen oben und den farblich geglätteten Farbton am unteren Rand.](images/gmmp-image125.png)
 
-**Abbildung 35** : Hue Glättung
+**Abbildung 35:** Farbtonglättung
 
-Ein Problem tritt bei Vorgängen auf, die mit Hue eingeschränkt sind. Das heißt, der Vorgang berücksichtigt nur Variablen innerhalb einer Hue-Ebene. In Abbildung 35 wird ein Beispiel für einen "nicht kontinuierlichen" Farbton in den blauen Farben dargestellt. Innerhalb dieses Farbton Bereichs ist für bestimmte Hue-Winkel der Farbverlauf tangential. Dies bewirkt, dass die topologische Struktur der Hue Slices geändert wird. Im gezeigten Beispiel wird, wenn die Hue-Ebene über diesen Hue-Bereich hinausgeht, eine "Insel" und Teil Zusammenführungen. Diese Änderung in der Topologie führt dazu, dass Hue-spezifische Vorgänge nicht kontinuierlich sind. Beispielsweise ändert sich der Cusp bei festem Farbton abrupt, wenn sich der Hue-Winkel in diesem Bereich ändert.
+Ein Problem tritt bei Vorgängen auf, bei denen der Farbton eingeschränkt ist. Das heißt, der Vorgang berücksichtigt nur Variablen innerhalb einer Farbtonebene. Abbildung 35 zeigt ein Beispiel für eine Gamut mit "diskontinuen" Farbtonslices in den blauen Farbtons. Innerhalb dieses Farbtonbereichs ist die Gamutgrenze für bestimmte Farbtonwinkel tangential zur Farbtonebene. Dies führt tatsächlich zu einer Änderung der topologien Struktur der Farbtonslices. Im gezeigten Beispiel, während die Farbtonebene über diesen Farbtonbereich hinweg stürzt, entsteht eine "Insel" und wird untergemergt. Diese Änderung in der Topologie hat zur Diskontinuität bei hue-spezifischen Vorgängen führen. Beispielsweise ändert sich die Cusp bei festem Farbton plötzlich, wenn sich der Farbtonwinkel in diesem Bereich ändert.
 
-Es gibt einen Color Science-Grund, warum es wünschenswert ist, Hue in bestimmten Vorgängen beizubehalten. Um das vorherige Problem zu beheben, müssen die ursprünglichen Gamut-Begrenzungs Dreiecke "Hue gläoniert" lauten. Im Allgemeinen ist eine Farbton Glättung eines Satzes von Farbskala-Begrenzungs Dreiecken eine Menge von Dreiecken, sodass (a) die Begrenzung eines neuen "Farbskala" bildet, die möglicherweise nicht dem tatsächlichen Geräte Spiel entspricht, und das durch den ursprünglichen Satz von Dreiecken definierte Farbskala enthält. und (b) die Dreiecke in der neuen Menge sind von der parallelen zu den Hue-Ebenen begrenzt.
+Es gibt einen Grund für die Farbforschung, warum es wünschenswert ist, den Farbton in bestimmten Vorgängen zu erhalten. Um das vorherige Problem zu beheben, müssen die ursprünglichen Gamut Boundary Triangles "hue smoothed" sein. Im Allgemeinen ist eine Farbtonglättung einer Reihe von Gamut-Begrenzungsdreiecken eine Reihe von Dreiecken, die (a) die Grenze einer neuen "Gamut" bilden, die möglicherweise nicht der tatsächlichen Geräte gamut entspricht und die gamut enthält, die durch den ursprünglichen Satz von Dreiecken definiert ist; und (b) die Dreiecke in der neuen Menge sind von der Parallelität mit den Farbtonebenen entfernt.
 
-Eine praktische Möglichkeit zum Abrufen eines aus dem Farbton geglättenen Dreiecke besteht darin, die konforme Hülle der ursprünglichen Scheitel Punkte zu verwenden. Wie in Abbildung 35 dargestellt, unterscheiden sich die Hue-Slices der-Kontur im problematischen Farbton ohne plötzliche Änderung der Topologie nahtlos.
+Eine praktische Möglichkeit, einen geglätteten Satz von Dreiecken mit Farbton zu erhalten, besteht in der Konvexen Hülle der ursprünglichen Scheitelungen. Wie in Abbildung 35 dargestellt, variieren die Farbtonslices der konvexen Hülle im problematischen Farbtonbereich reibungslos, ohne dass sich die Topologie plötzlich ändert.
 
-### <a name="setting-primaries-and-secondaries-in-the-gamut-boundary-description"></a>Festlegen von primären und sekundären Replikaten in der Beschreibung der changesehe
+### <a name="setting-primaries-and-secondaries-in-the-gamut-boundary-description"></a>Festlegen von Primär- und Sekunden in der Gamut-Begrenzungsbeschreibung
 
-Bestimmte gamingzuordnungs Methoden, wie z. b. huemap, hängen vom Speicherort der Geräte Primär-und sekundären Replikate ab. Bei Additiven Geräten sind die primären Replikate rot, grün und blau (R, G und B); und die sekundären Datenbanken sind Cyan, Magenta und gelb (C, M und Y). Bei subtraktiven Geräten sind die primären Replikate C, M und Y. und die sekundären Datenbanken sind R, G und B. Mit dem Gbd werden alle sechs Werte sowie weiß und schwarz (W und K) in einem Array von JAB-Farbwerten nachverfolgt. Diese Werte werden bei der Erstellung in die Beschreibung der changesetengrenze festgelegt. Für Ausgabegeräte können die primären Replikate durch das Ausführen von Kombinationen von Geräte Steuerungs Werten durch das Gerätemodell ermittelt werden. Bei Erfassungs Geräten eignet sich dieser Ansatz nicht für die Erstellung des Referenz-Gbd, da es nahezu unmöglich ist, ein Abbild zu erfassen, das einen vollständig übersättigten reinen Geräte Wert ergibt, z. b. (0,0, 0,0, 1,0). WCS-Geräteprofile enthalten die Indizes der primären Replikate im Erfassungs Ziel. Da diese Werte nicht in einem "ICC"-Profil enthalten sind, verwenden Sie nach der Umstellung auf den "Jab"-Wert in Bezug auf die Bedingungen der ICC-Anzeige die Werte, die nach der
+Bestimmte Gamut-Zuordnungsmethoden, z. B. HueMap, hängen vom Standort der Primärgeräte und der zweiten Geräte ab. Bei additiven Geräten sind die Primärelemente rot, grün und blau (R, G und B). und die zweiten Sind Cyan, Magenta und Gelb (C, M und Y). Bei subtraktiven Geräten sind die Primärelemente C, M und Y. und die zweiten Sind R, G und B. Die GBD verfolgt alle sechs werte plus weiß und schwarz (W und K) in einem Array von Jab-Farbwerten nach. Diese Werte werden in der Gamut-Begrenzungsbeschreibung festgelegt, wenn sie erstellt werden. Für Ausgabegeräte können die Primärelemente bestimmt werden, indem Kombinationen von Gerätesteuerungswerten über das Gerätemodell ausgeführt werden. Bei Erfassungsgeräten eignet sich dieser Ansatz nicht gut für die Erstellung der Referenz-GBD, da es fast unmöglich ist, ein Bild zu erfassen, das einen vollständig verwertbare reinen Gerätewert ergibt, z. B. (0,0, 0,0, 1,0). WCS-Geräteprofile enthalten die Indizes der primärer Elemente im Erfassungsziel. Da diese Werte nicht in einemTASTE-Profil enthalten sind, verwenden Sie werte, die von einem typischen Scannerziel gemessen werden, nachdem sie in Jab konvertiert wurden, relativ zu den BEDINGUNGEN der ANZEIGE VONTB.
 
-### <a name="setting-the-neutral-axis-in-the-gamut-boundary-description"></a>Festlegen der neutralen Achse in der Beschreibung der Gamut-Grenze
+### <a name="setting-the-neutral-axis-in-the-gamut-boundary-description"></a>Festlegen der neutralen Achse in der Gamut-Begrenzungsbeschreibung
 
-Die huemap und die relativen mincd-Farbskala-Zuordnungs Methoden verwenden die Geräte neutrale Achse für die Nachrichten. Bei den baselineausgabegeräten kann die neutrale Achse durch das Ausführen von Geräte neutralen Werten (R = G = B oder C = M = Y) durch die devicedecolormetric-Methode und dann durch die Farbgebung-Methode des CIECAM02-Objekts ermittelt werden. Erfassungsgeräte geben jedoch nicht immer einen Geräte neutralen Wert zurück, wenn ein neutrales Beispiel angezeigt wird. Dies trifft vor allem dann zu, wenn die Umgebungsbeleuchtung nicht vollständig neutral ist. WCS-Geräteprofile enthalten die Indizes der neutralen Beispiele im Ziel. Verwenden Sie diese Beispiele, um die neutrale Achse festzulegen. Da diese Informationen für die ICC-Profile nicht verfügbar sind, müssen Sie dieselbe Methode verwenden, die auch für Ausgabegeräte verwendet wird. Führen Sie Geräte neutrale Beispiele durch die devicedecolormetric-Methode aus, und verknüpfen Sie dann die Eingabewerte und die Farb Metrikergebnisse.
+Die Gamutzuordnungsmethoden HueMap und Relative MinCD verwenden die geräteneutrale Achse zum Begradigen. Für die Baselineausgabegeräte kann die neutrale Achse bestimmt werden, indem geräteneutrale Werte (R=G=B oder C=M=Y) über die DeviceToColorimetric-Methode und dann über die ColorimetricToAppearance-Methode des CIECAM02-Objekts ausgeführt werden. Erfassungsgeräte geben jedoch nicht immer einen geräteneutralen Wert zurück, wenn eine neutrale Stichprobe angezeigt wird. Dies gilt insbesondere, wenn die Umgebungsbeleuchtung nicht vollkommen neutral ist. WCS-Geräteprofile enthalten die Indizes der neutralen Stichproben im Ziel. Verwenden Sie diese Beispiele, um die neutrale Achse zu setzen. Da diese Informationen für DIE-Profile nicht verfügbar sind, müssen Sie dieselbe Methode verwenden, die auch für Ausgabegeräte verwendet wird. Führen Sie geräteneutrale Stichproben über die DeviceToColorimetric-Methode aus, und paaren Sie dann die Eingabewerte und die Farbmetrikergebnisse.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Konzepte der grundlegenden Farbverwaltung](basic-color-management-concepts.md)
+[Grundlegende Konzepte der Farbverwaltung](basic-color-management-concepts.md)
 </dt> <dt>
 
 [Windows Color System: Schemas und Algorithmen](windows-color-system-schemas-and-algorithms.md)

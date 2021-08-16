@@ -1,15 +1,15 @@
 ---
-description: 'InkOverlay.CursorDown-Ereignis: Tritt auf, wenn die Cursorspitze mit der Digitalisieren-Tablet-Oberfläche in Kontakt tritt.'
+description: 'InkOverlay.CursorDown-Ereignis: Tritt auf, wenn die Cursorspitze mit der digitalisierenden Tablet-Oberfläche in Kontakt tritt.'
 ms.assetid: 753aa733-8d62-4983-b76d-d58844b79c35
 title: InkOverlay.CursorDown-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 56ed26c672aadc9fa19f6a6426fed7339752448d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 231af581edb8e01c397219b3c18e275436643c846110c5a1eaa2c83754ee0e73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117058"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118220861"
 ---
 # <a name="inkoverlaycursordown-event"></a>InkOverlay.CursorDown-Ereignis
 
@@ -49,7 +49,7 @@ Das [**IInkStrokeDisp-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinks
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Ereignismethode wird in den \_ IInkCollectorEvents, \_ IInkOverlayEvents und \_ IInkPictureEvents definiert. Die \_ Schnittstellen IInkCollectorEvents, \_ IInkOverlayEvents und IInkPictureEvents implementieren die IDispatch-Schnittstelle mit dem Bezeichner \_ DISPID [](/windows/win32/api/oaidl/nn-oaidl-idispatch) \_ ICECursorDown.
 
@@ -59,9 +59,9 @@ Verwenden Sie dieses Ereignis sorgfältig, da es sich negativ auf die Ink-Leistu
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps für Windows XP Tablet PC \[ Edition\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
 | Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |

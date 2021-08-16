@@ -1,9 +1,9 @@
 ---
-title: 'Texture2D:: gathercmpalpha (S, float, float, int2, int2, int2, int2)-Funktion'
-description: 'Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der Alpha Komponente mit einem Vergleichswert zurückgegeben. | Texture2D:: gathercmpalpha (S, float, float, int2, int2, int2, int2)-Funktion'
+title: Texture2D::GatherCmpAlpha(S,float,float,int2,int2,int2,int2)-Funktion
+description: Gibt für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, einen Vergleich ihrer Alphakomponente mit einem Vergleichswert zurück. | Texture2D::GatherCmpAlpha(S,float,float,int2,int2,int2,int2)-Funktion
 ms.assetid: C8325626-F281-4D10-9299-0E5DA01BB1BD
 keywords:
-- Gathercmpalpha-Funktion HLSL
+- GatherCmpAlpha-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f5095fdb83814ab8c7d52add0fba05cbbf876678
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: cbeb6a37abe3100a7709230769ab7c4afa5b246737c9a4d0c1c37337e9462eb2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117904543"
 ---
-# <a name="texture2dgathercmpalphasfloatfloatint2int2int2int2-function"></a>Texture2D:: gathercmpalpha (S, float, float, int2, int2, int2, int2)-Funktion
+# <a name="texture2dgathercmpalphasfloatfloatint2int2int2int2-function"></a>Texture2D::GatherCmpAlpha(S,float,float,int2,int2,int2,int2)-Funktion
 
-Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der Alpha Komponente mit einem Vergleichswert zurückgegeben.
+Gibt für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, einen Vergleich ihrer Alphakomponente mit einem Vergleichswert zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,81 +48,81 @@ TemplateType GatherCmpAlpha(
 *S* \[ in\]
 </dt> <dd>
 
-Typ: **samplerstate**
+Typ: **SamplerState**
 
-Der null basierte samplerindex.
+Der nullbasierte Samplerindex.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Die Beispiel Koordinaten (u, v).
+Die Beispielkoordinaten (u,v).
 
 </dd> <dt>
 
-*CompareValue* \[ in\]
+*CompareValue* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Ein Wert, der jeweils mit jedem Stichproben Wert verglichen werden soll.
+Ein -Wert, der mit jedem Stichprobenwert verglichen werden soll.
 
 </dd> <dt>
 
-*Offset1* \[ in\]
+*Offset1* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die erste Offset-Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die erste Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset2* \[ in\]
+*Offset2* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die zweite Offset Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die zweite Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset3* \[ in\]
+*Offset3* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die dritte Offset Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die dritte Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset4* \[ in\]
+*Offset4* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die vierte Offset-Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die vierte Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **TemplateType**
+Typ: **TemplateType**
 
-Ein vier komponentenwert, dessen Typ mit dem Vorlagentyp identisch ist.
+Ein Wert mit vier Komponenten, dessen Typ mit dem Vorlagentyp identisch ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Textur Beispiele können für bilineare Interpolationen verwendet werden.
+Die Texturbeispiele können für die bilineare Interpolation verwendet werden.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -134,7 +134,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Gathercmpalpha-Methoden](texture2d-gathercmpalpha.md)
+[GatherCmpAlpha-Methoden](texture2d-gathercmpalpha.md)
 </dt> </dl>
 
  

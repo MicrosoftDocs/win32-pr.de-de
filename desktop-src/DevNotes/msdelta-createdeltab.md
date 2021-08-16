@@ -1,5 +1,5 @@
 ---
-description: Erstellt ein Delta zwischen Quelle und Ziel (bereitgestellt als Puffer) und gibt das Ausgabe Delta als in Msdelta zugewiesener Puffer zurück.
+description: Erstellt ein Delta zwischen Quelle und Ziel (als Puffer bereitgestellt) und gibt das Ausgabedelta als von MSDelta zugeordneten Puffer zurück.
 title: CreateDeltaB-Funktion
 ms.topic: reference
 ms.date: 12/03/2020
@@ -15,19 +15,19 @@ api_type:
 - DllExport
 api_location:
 - msdelta.dll
-ms.openlocfilehash: a2142f26499514c24967e5334d782c2dee559cd9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ae13dfb82d4699bbb8cc222b4cd1aaa2615e8efaa578de60483f00552faf2086
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357526"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117826924"
 ---
 # <a name="createdeltab-function"></a>CreateDeltaB-Funktion
 
-Erstellt ein Delta zwischen Quelle und Ziel (bereitgestellt als Puffer) und gibt das Ausgabe Delta als in Msdelta zugewiesener Puffer zurück.
+Erstellt ein Delta zwischen Quelle und Ziel (als Puffer bereitgestellt) und gibt das Ausgabedelta als von MSDelta zugeordneten Puffer zurück.
 
 > [!NOTE]
-> Sie müssen [Delta Free](msdelta-deltafree.md) anrufen, um den Ausgabepuffer freizugeben, nachdem diese Funktion abgeschlossen wurde.
+> Sie müssen [DeltaFree](msdelta-deltafree.md) aufrufen, um den Ausgabepuffer freizugeben, nachdem diese Funktion abgeschlossen wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,67 +49,67 @@ BOOL  WINAPI  CreateDeltaB(
 
 ## <a name="parameters"></a>Parameter
 
-*Filetypeset*
+*FileTypeSet*
 
-in Der [DELTA_FILE_TYPE](/previous-versions/bb417345(v=msdn.10)#file-type-sets) -Wert, der den Dateityp angibt, der für den Erstellungs Prozess verwendet werden soll.
+[in] Der [DELTA_FILE_TYPE](/previous-versions/bb417345(v=msdn.10)#file-type-sets) Wert, der den dateityp angibt, der für den Erstellungsprozess verwendet werden soll.
 
 *SetFlags*
 
-in Mindestens ein [DELTA_FLAG_TYPE](/previous-versions/bb417345(v=msdn.10)#delta_flag_type-flags) -Wert, der die Flags angibt, die während des Erstellungs Prozesses verwendet werden sollen, zusätzlich zu den Standardflags.
+[in] Mindestens ein [DELTA_FLAG_TYPE](/previous-versions/bb417345(v=msdn.10)#delta_flag_type-flags) Werte, die zusätzlich zu den Standardflags die während des Erstellungsprozesses zu verwendenden Flags angeben.
 
-*Resetflags*
+*ResetFlags*
 
-in Mindestens ein [DELTA_FLAG_TYPE](/previous-versions/bb417345(v=msdn.10)#delta_flag_type-flags) -Wert, der die Standardflags angibt, die während des Erstellungs Vorgangs zurückgesetzt werden sollen.
+[in] Mindestens ein [](/previous-versions/bb417345(v=msdn.10)#delta_flag_type-flags) DELTA_FLAG_TYPE-Werte, die die Standardflags angeben, die während des Erstellungsprozesses zurückgesetzt werden sollen.
 
 *Quelle*
 
-in Eine [DELTA_INPUT](/previous-versions/bb417345(v=msdn.10)#delta-input-structure) -Struktur mit einem Zeiger auf den Puffer, der die Quelldaten enthält.
+[in] Eine [](/previous-versions/bb417345(v=msdn.10)#delta-input-structure) DELTA_INPUT-Struktur, die einen Zeiger auf den Puffer enthält, der die Quelldaten enthält.
 
 *Target*
 
-in Eine [DELTA_INPUT](/previous-versions/bb417345(v=msdn.10)#delta-input-structure) -Struktur mit einem Zeiger auf den Puffer, der die Zieldaten enthält.
+[in] Eine [](/previous-versions/bb417345(v=msdn.10)#delta-input-structure) DELTA_INPUT-Struktur, die einen Zeiger auf den Puffer enthält, der die Zieldaten enthält.
 
-*Sourceoptions*
+*SourceOptions*
 
-[in]: Reserviert Übergeben Sie eine [DELTA_INPUT](/previous-versions/bb417345(v=msdn.10)#delta-input-structure) -Struktur, bei der *editable* auf **false** festgelegt ist, *lpstart* auf **null** und *usize* auf 0 festgelegt ist.
+[in]: Reserviert Übergeben Sie eine [DELTA_INPUT-Struktur,](/previous-versions/bb417345(v=msdn.10)#delta-input-structure) wobei *Editable* auf **FALSE,** *lpStart* auf **NULL** und *uSize* auf 0 festgelegt ist.
 
-*Targetoptions*
+*TargetOptions*
 
-[in]: Reserviert Übergeben Sie eine [DELTA_INPUT](/previous-versions/bb417345(v=msdn.10)#delta-input-structure) -Struktur, bei der *editable* auf **false** festgelegt ist, *lpstart* auf **null** und *usize* auf 0 festgelegt ist.
+[in]: Reserviert Übergeben Sie eine [DELTA_INPUT-Struktur,](/previous-versions/bb417345(v=msdn.10)#delta-input-structure) wobei *Editable* auf **FALSE,** *lpStart* auf **NULL** und *uSize* auf 0 festgelegt ist.
 
 *GlobalOptions*
 
-[in]: Reserviert Übergeben Sie eine [DELTA_INPUT](/previous-versions/bb417345(v=msdn.10)#delta-input-structure) -Struktur, wobei *lpstart* auf **null** und *usize* auf 0 festgelegt ist.
+[in]: Reserviert Übergeben Sie eine [DELTA_INPUT-Struktur,](/previous-versions/bb417345(v=msdn.10)#delta-input-structure) bei der *lpStart* auf **NULL** und *uSize* auf 0 festgelegt ist.
 
-*lptargetfiletime*
+*lpTargetFileTime*
 
-in Der Zeitstempel, der für die Zieldatei festgelegt ist, nachdem Delta angewendet wurde. Wenn der Wert **null** ist, wird der Ziel Zeitstempel die aktuelle Zeit während des Erstellungs Prozesses sein.
+[in] Der Zeitstempel, der für die Zieldatei festgelegt ist, nachdem das Delta angewendet wurde. Bei **NULL** ist der Zielzeitstempel die aktuelle Zeit während des Erstellungsprozesses.
 
 *HashAlgId*
 
-in ALG_ID des Algorithmus, der zum Generieren der Ziel Signatur verwendet werden soll. Einige besondere Werte sind:
+[in] ALG_ID des Algorithmus, der zum Generieren der Zielsignatur verwendet werden soll. Einige besondere Werte sind:
 
-- 0 = keine Signatur
-- 32 = 32-Bit CRC in msdelta.dll definiert
+- 0 = Keine Signatur
+- 32 = in msdelta.dll definierte 32-Bit-CRC
 
-*lpdelta*
+*lpDelta*
 
-vorgenommen Ein Zeiger auf die [DELTA_OUTPUT](/previous-versions/bb417345(v=msdn.10)#delta-output-structure) Struktur, in die das Delta geschrieben werden soll.
+[out] Zeiger auf die [DELTA_OUTPUT](/previous-versions/bb417345(v=msdn.10)#delta-output-structure) Struktur, in die das Delta geschrieben werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt **true** zurück, wenn Sie erfolgreich ist. Andernfalls wird **false** zurückgegeben. Wenn die Funktion " **false**" zurückgibt, können Sie " [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) " aufrufen, um den entsprechenden Win32-Systemfehler Code zu erhalten.
+Diese Funktion gibt **TRUE** zurück, wenn sie erfolgreich ist. Andernfalls wird **FALSE** zurückgegeben. Wenn die Funktion **FALSE** zurückgibt, können Sie [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufrufen, um den entsprechenden Win32-Systemfehlercode abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |----------------|---------------------------------------------------------------------------------------|
-| Header | Msdelta. h |
+| Header | msdelta.h |
 | DLL | msdelta.dll |
 | Unicode | Nicht verfügbar |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Msdelta](msdelta.md)
+[MSDelta](msdelta.md)
 
-[Delta frei](msdelta-deltafree.md)
+[DeltaFree](msdelta-deltafree.md)

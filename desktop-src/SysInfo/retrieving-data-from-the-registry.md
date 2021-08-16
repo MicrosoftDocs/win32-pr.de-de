@@ -1,31 +1,31 @@
 ---
-description: Zum Abrufen von Daten aus der Registrierung listet eine Anwendung in der Regel die Unterschlüssel eines Schlüssels auf, bis eine bestimmte gefunden wird, und ruft dann Daten aus den zugeordneten Werten ab.
+description: Um Daten aus der Registrierung abzurufen, listet eine Anwendung in der Regel die Unterschlüssel eines Schlüssels auf, bis ein bestimmter Schlüssel gefunden wird, und ruft dann Daten aus dem oder den zugeordneten Werten ab.
 ms.assetid: ce4be388-5506-4d01-a73c-33372ef4ccd7
 title: Abrufen von Daten aus der Registrierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 45d8dd6f6e4d667cf2760c7cba441200755fb6c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8bedbe0631015188a8a9fe280ba17d929c83663e995f440f4528c0913fc69cb5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050426"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117763479"
 ---
 # <a name="retrieving-data-from-the-registry"></a>Abrufen von Daten aus der Registrierung
 
-Zum Abrufen von Daten aus der Registrierung listet eine Anwendung in der Regel die Unterschlüssel eines Schlüssels auf, bis eine bestimmte gefunden wird, und ruft dann Daten aus den zugeordneten Werten ab. Eine Anwendung kann die Funktion " [**RegEnumKeyEx**](/windows/desktop/api/Winreg/nf-winreg-regenumkeyexa) " aufrufen, um die Unterschlüssel eines bestimmten Schlüssels aufzulisten.
+Um Daten aus der Registrierung abzurufen, listet eine Anwendung in der Regel die Unterschlüssel eines Schlüssels auf, bis ein bestimmter Schlüssel gefunden wird, und ruft dann Daten aus dem oder den zugeordneten Werten ab. Eine Anwendung kann die [**RegEnumKeyEx-Funktion**](/windows/desktop/api/Winreg/nf-winreg-regenumkeyexa) aufrufen, um die Unterschlüssel eines bestimmten Schlüssels aufzuzählen.
 
-Um ausführliche Daten zu einem bestimmten Unterschlüssel abzurufen, kann eine Anwendung die [**regqueryinfokey**](/windows/desktop/api/Winreg/nf-winreg-regqueryinfokeya) -Funktion aufrufen. Die [**reggetkeysecurity**](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity) -Funktion Ruft eine Kopie der Sicherheits Beschreibung ab, die einen Schlüssel schützt.
+Um detaillierte Daten zu einem bestimmten Unterschlüssel abzurufen, kann eine Anwendung die [**RegQueryInfoKey-Funktion**](/windows/desktop/api/Winreg/nf-winreg-regqueryinfokeya) aufrufen. Die [**RegGetKeySecurity-Funktion**](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity) ruft eine Kopie des Sicherheitsdeskriptors ab, der einen Schlüssel schützt.
 
-Eine Anwendung kann mit der Funktion " [**RegEnumValue**](/windows/desktop/api/Winreg/nf-winreg-regenumvaluea) " die Werte für einen bestimmten Schlüssel auflisten und die Funktion " [**RegQueryValueEx**](/windows/desktop/api/Winreg/nf-winreg-regqueryvalueexa) " zum Abrufen eines bestimmten Werts für einen Schlüssel verwenden. Eine Anwendung ruft normalerweise " **regenenumvalue** " auf, um die Wertnamen zu ermitteln, und dann " **RegQueryValueEx** ", um die Daten für die Namen abzurufen.
+Eine Anwendung kann die [**RegEnumValue-Funktion**](/windows/desktop/api/Winreg/nf-winreg-regenumvaluea) verwenden, um die Werte für einen bestimmten Schlüssel aufzuzählen, und die [**RegQueryValueEx-Funktion,**](/windows/desktop/api/Winreg/nf-winreg-regqueryvalueexa) um einen bestimmten Wert für einen Schlüssel abzurufen. Eine Anwendung ruft in der Regel **RegEnumValue** auf, um die Wertnamen zu bestimmen, und dann **RegQueryValueEx,** um die Daten für die Namen abzurufen.
 
-Die [**regquerymultiplevalues**](/windows/desktop/api/Winreg/nf-winreg-regquerymultiplevaluesa) -Funktion Ruft den Typ und die Daten für eine Liste von Wert Namen ab, die einem geöffneten Registrierungsschlüssel zugeordnet sind. Diese Funktion ist für dynamische Schlüssel Anbieter nützlich, da Sie die Konsistenz der Daten gewährleistet, indem mehrere Werte in einer atomaren Operation abgerufen werden.
+Die [**RegQueryMultipleValues-Funktion**](/windows/desktop/api/Winreg/nf-winreg-regquerymultiplevaluesa) ruft den Typ und die Daten für eine Liste von Wertnamen ab, die einem geöffneten Registrierungsschlüssel zugeordnet sind. Diese Funktion ist für dynamische Schlüsselanbieter nützlich, da sie die Konsistenz der Daten gewährleistet, indem mehrere Werte in einem atomaren Vorgang abgerufen werden.
 
-Da andere Anwendungen die Daten in einem Registrierungs Wert zwischen dem Zeitpunkt, an dem die Anwendung einen Wert lesen und verwenden kann, ändern können, müssen Sie möglicherweise sicherstellen, dass Ihre Anwendung über die neuesten Daten verfügt. Sie können die [**RegNotifyChangeKeyValue**](/windows/desktop/api/Winreg/nf-winreg-regnotifychangekeyvalue) -Funktion verwenden, um den aufrufenden Thread zu benachrichtigen, wenn Änderungen an den Attributen oder an den Inhalten eines Registrierungsschlüssels vorgenommen werden oder wenn der Schlüssel gelöscht wird. Die-Funktion signalisiert einem Ereignis Objekt, den Aufrufer zu benachrichtigen. Wenn der Thread, der **RegNotifyChangeKeyValue** aufruft, beendet wird, wird das Ereignis signalisiert, und die Überwachung des Registrierungsschlüssels wird beendet.
+Da andere Anwendungen die Daten in einem Registrierungswert zwischen dem Zeitpunkt ändern können, zu dem Ihre Anwendung einen Wert lesen und verwenden kann, müssen Sie möglicherweise sicherstellen, dass Ihre Anwendung über die neuesten Daten verfügt. Sie können die [**RegNotifyChangeKeyValue-Funktion**](/windows/desktop/api/Winreg/nf-winreg-regnotifychangekeyvalue) verwenden, um den aufrufenden Thread zu benachrichtigen, wenn Änderungen an den Attributen oder Inhalten eines Registrierungsschlüssels vorgenommen werden oder der Schlüssel gelöscht wird. Die Funktion signalisiert einem Ereignisobjekt, dass der Aufrufer benachrichtigt wird. Wenn der Thread, der **RegNotifyChangeKeyValue** aufruft, beendet wird, wird das Ereignis signalisiert, und die Überwachung des Registrierungsschlüssels wird beendet.
 
-Sie können steuern oder angeben, welche Änderungen durch die Verwendung eines Benachrichtigungs Filters oder-Flags gemeldet werden sollen. Normalerweise werden Änderungen gemeldet, indem ein Ereignis signalisiert wird, das Sie für die Funktion angeben. Beachten Sie, dass die [**RegNotifyChangeKeyValue**](/windows/desktop/api/Winreg/nf-winreg-regnotifychangekeyvalue) -Funktion nicht mit Remote Handles funktioniert.
+Sie können steuern oder angeben, welche Änderungen mithilfe eines Benachrichtigungsfilters oder -flags gemeldet werden sollen. In der Regel werden Änderungen gemeldet, indem ein Ereignis signalisiert wird, das Sie für die Funktion angeben. Beachten Sie, dass die [**RegNotifyChangeKeyValue-Funktion**](/windows/desktop/api/Winreg/nf-winreg-regnotifychangekeyvalue) nicht mit Remotehandles funktioniert.
 
-Weitere Informationen zum Überwachen von Registrierungs Vorgängen finden Sie unter [**Registrierung**](/windows/desktop/ETW/registry).
+Ausführlichere Informationen zum Überwachen von Registrierungsvorgängen finden Sie unter [**Registrierung**](/windows/desktop/ETW/registry).
 
  
 

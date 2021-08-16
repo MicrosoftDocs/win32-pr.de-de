@@ -1,19 +1,19 @@
 ---
-description: Im folgenden Beispiel wird die initializeslisderad-Funktion verwendet, um eine einzeln verknüpfte Liste zu initialisieren, und die interlockedpushentryslist-Funktion, um 10 Elemente einzufügen.
+description: Im folgenden Beispiel wird die InitializeSListHead-Funktion verwendet, um eine singly verknüpfte Liste zu initialisieren, und die InterlockedPushEntrySList-Funktion zum Einfügen von 10 Elementen.
 ms.assetid: 5608f84f-9211-4043-bb53-60339191ee29
-title: Verwenden von einzeln verknüpften Listen
+title: Verwenden von einfach verknüpften Listen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 95af2e8da519026731bf6fc461b193978d179cd8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7fa3a99202637e7d7b0b64f964ca1452244d72f02d99770bcdc6cbe368d960be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352459"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117765011"
 ---
-# <a name="using-singly-linked-lists"></a>Verwenden von einzeln verknüpften Listen
+# <a name="using-singly-linked-lists"></a>Verwenden von einfach verknüpften Listen
 
-Im folgenden Beispiel wird die [**initializeslisderad**](/windows/win32/api/interlockedapi/nf-interlockedapi-initializeslisthead) -Funktion verwendet, um eine [einzeln verknüpfte Liste](interlocked-singly-linked-lists.md) zu initialisieren, und die [**interlockedpushentryslist**](/windows/win32/api/interlockedapi/nf-interlockedapi-interlockedpushentryslist) -Funktion, um 10 Elemente einzufügen. Im Beispiel wird die [**interlockedpopentryslist**](/windows/win32/api/interlockedapi/nf-interlockedapi-interlockedpopentryslist) -Funktion verwendet, um 10 Elemente zu entfernen, und die [**interlockedflushslist**](/windows/win32/api/interlockedapi/nf-interlockedapi-interlockedflushslist) -Funktion, um zu überprüfen, ob die Liste leer ist.
+Im folgenden Beispiel wird die [**InitializeSListHead-Funktion**](/windows/win32/api/interlockedapi/nf-interlockedapi-initializeslisthead) verwendet, um eine [singly](interlocked-singly-linked-lists.md) verknüpfte Liste zu initialisieren, und die [**InterlockedPushEntrySList-Funktion**](/windows/win32/api/interlockedapi/nf-interlockedapi-interlockedpushentryslist) zum Einfügen von 10 Elementen. Im Beispiel wird die [**InterlockedPopEntrySList-Funktion**](/windows/win32/api/interlockedapi/nf-interlockedapi-interlockedpopentryslist) verwendet, um 10 Elemente zu entfernen, und die [**InterlockedFlushSList-Funktion,**](/windows/win32/api/interlockedapi/nf-interlockedapi-interlockedflushslist) um zu überprüfen, ob die Liste leer ist.
 
 
 ```C++

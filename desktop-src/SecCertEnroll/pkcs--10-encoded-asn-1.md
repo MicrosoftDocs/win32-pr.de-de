@@ -1,19 +1,19 @@
 ---
-description: Das folgende Beispiel enthält eine PKCS \# 10-Anforderung, die im ASN. 1-Format angezeigt wird. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+description: Das folgende Beispiel enthält eine PKCS \# 10-Anforderung im ASN.1-Format. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
 ms.assetid: 5001d641-a121-421a-90bf-f2e6e5f88dc8
-title: PKCS \# 10-codierte ASN. 1
+title: PKCS \# 10-codierte ASN.1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e1699ce6b73fb22a38e74f570f848db70fabf38
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 21da0b55a9494bde480f00aea9d2b36f1ea0ecc6aebfa47d7d0268a90024c1cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117774693"
 ---
-# <a name="pkcs-10-encoded-asn1"></a>PKCS \# 10-codierte ASN. 1
+# <a name="pkcs-10-encoded-asn1"></a>PKCS \# 10-codierte ASN.1
 
-Das folgende Beispiel enthält eine PKCS \# 10-Anforderung, die im ASN. 1-Format angezeigt wird. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+Das folgende Beispiel enthält eine PKCS \# 10-Anforderung im ASN.1-Format. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
 
 ``` syntax
 [NewRequest]
@@ -24,11 +24,11 @@ RequestType=pkcs10
 CertificateTemplate=User
 ```
 
-Mit dieser Konfiguration wird die folgende Beispielausgabe generiert. Die Konfiguration gibt den Betreff, den Typ der Anforderung (PKCS \# 10) und die Zertifikat Vorlage (Benutzer) an. Die Benutzer Vorlage gibt Folgendes an:
+Diese Konfiguration generiert die folgende Beispielausgabe. Die Konfiguration gibt den Antragsteller, den Anforderungstyp (PKCS \# 10) und die Zertifikatvorlage (Benutzer) an. Die Benutzervorlage gibt Folgendes an:
 
--   Die Anforderung muss entweder den Kryptografieanbieter von Microsoft Base 1,0 oder den Microsoft Enhanced Cryptographic Provider 1,0 verwenden.
--   Der Antragsteller Name muss aus Active Directory erstellt werden.
--   Die Anforderung enthält den Namen der Zertifikat Vorlage, die erweiterte Schlüssel Verwendung (Enhanced Key Usage, EKU) und Schlüssel Verwendungs Erweiterungen. Die EKU-Erweiterung gibt an, dass das ausgestellte Zertifikat für Verschlüsselndes Dateisystem (EFS), sichere e-Mail und Client Authentifizierung verwendet werden kann.
+-   Die Anforderung muss entweder den Microsoft Base Cryptographic Provider 1.0 oder den Microsoft Enhanced Cryptographic Provider 1.0 verwenden.
+-   Der Antragstellername muss aus Active Directory erstellt werden.
+-   Die Anforderung umfasst den Namen der Zertifikatvorlage, die erweiterte Schlüsselverwendung (Enhanced Key Usage, EKU) und die Schlüsselverwendungserweiterungen. Die EKU-Erweiterung gibt an, dass das ausgestellte Zertifikat für verschlüsselndes Dateisystem (EFS), sichere E-Mail- und Clientauthentifizierung verwendet werden kann.
 
 ``` syntax
 0000: 30 82 03 19               ; SEQUENCE (319 Bytes)
@@ -201,7 +201,7 @@ CertUtil: -asn command completed successfully.
 
 <dl> <dt>
 
-[Beispiel Anforderungen](sample-requests.md)
+[Beispielanforderungen](sample-requests.md)
 </dt> </dl>
 
  

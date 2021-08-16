@@ -1,7 +1,7 @@
 ---
-description: Die addbeforei-Methode fügt ein Element vor der angegebenen Position ein.
+description: Die AddBeforeI-Methode fügt ein Element vor der angegebenen Position ein.
 ms.assetid: d310e303-889a-43a6-bda5-2e7b805b25d1
-title: Cbaselist. addbeforei-Methode (wxlist. h)
+title: CBaseList.AddBeforeI-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6996d2fd3ed0cad07a442530e3ae77470aaf6890
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cfb995e614904e807e67eeee9c0f344525fd701d039c596eb081b6ff3be4f078
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117823747"
 ---
-# <a name="cbaselistaddbeforei-method"></a>Cbaselist. addbeforei-Methode
+# <a name="cbaselistaddbeforei-method"></a>CBaseList.AddBeforeI-Methode
 
-Die- `AddBeforeI` Methode fügt ein Element vor der angegebenen Position ein.
+Die `AddBeforeI` -Methode fügt ein Element vor der angegebenen Position ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,11 +46,11 @@ POSITION AddBeforeI(
 *pos* 
 </dt> <dd>
 
-Die Position, vor der das Element hinzugefügt werden soll.
+Position, vor der das Element hinzugefügt werden soll.
 
 </dd> <dt>
 
-*pobj* 
+*pObj* 
 </dt> <dd>
 
 Zeiger auf das Element.
@@ -61,9 +61,9 @@ Zeiger auf das Element.
 
 Gibt den Positionsindikator für das eingefügte Element zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn *POS* **null** ist, fügt diese Methode das Element am Ende der Liste hinzu (entspricht dem Aufruf der [**cbaselist:: addtaili**](cbaselist-addtaili.md) -Methode).
+Wenn *pos* **NULL** ist, fügt diese Methode das Element am Ende der Liste hinzu (entspricht dem Aufruf der [**CBaseList::AddTailI-Methode).**](cbaselist-addtaili.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,16 +71,16 @@ Wenn *POS* **null** ist, fügt diese Methode das Element am Ende der Liste hinzu
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

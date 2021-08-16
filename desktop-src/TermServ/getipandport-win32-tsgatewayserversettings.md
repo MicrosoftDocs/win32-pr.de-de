@@ -1,12 +1,12 @@
 ---
-title: Getipandport-Methode der Win32_TSGatewayServerSettings-Klasse
-description: Ruft die Abhör-IP-Adresse und die Portnummer für den angegebenen Transport ab.
+title: GetIPAndPort-Methode der Win32_TSGatewayServerSettings-Klasse
+description: Erhält die lauschende IP-Adresse und Portnummer für den angegebenen Transport.
 ms.assetid: e12451c3-2641-49e1-bd35-f7cab37865ae
 ms.tgt_platform: multiple
 keywords:
-- Getipandport-Methode Remotedesktopdienste
-- Getipandport-Methode Remotedesktopdienste, Win32_TSGatewayServerSettings-Klasse
-- Win32_TSGatewayServerSettings-Klasse Remotedesktopdienste, getipandport-Methode
+- GetIPAndPort-Remotedesktopdienste
+- GetIPAndPort-Methode Remotedesktopdienste , Win32_TSGatewayServerSettings-Klasse
+- Win32_TSGatewayServerSettings klasse Remotedesktopdienste , GetIPAndPort-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 260cc45961720ae8d175d4df3e84edc7a0c15c13
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: faf1cb1d4f597e734ac66456cd515193afed5ad31b7b6543d4e52c09717346a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118353851"
 ---
-# <a name="getipandport-method-of-the-win32_tsgatewayserversettings-class"></a>Getipandport-Methode der Win32-Klasse "t- \_ gatewayserversettings"
+# <a name="getipandport-method-of-the-win32_tsgatewayserversettings-class"></a>GetIPAndPort-Methode der Win32 \_ TSGatewayServerSettings-Klasse
 
-Ruft die Abhör-IP-Adresse und die Portnummer für den angegebenen Transport ab.
+Erhält die lauschende IP-Adresse und Portnummer für den angegebenen Transport.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ uint32 GetIPAndPort(
 
 <dl> <dt>
 
-*TransportType* \[ in\]
+*TransportType* \[ In\]
 </dt> <dd>
 
-Gibt den Transporttyp an. Dabei muss es sich um einen der folgenden Werte handeln:
+Gibt den Transporttyp an. Dies muss einer der folgenden Werte sein.
 
 <dt>
 
 0
 </dt> <dd>
 
-RPC-über-HTTP-Transport.
+RPC über HTTP-Transport.
 
 </dd> <dt>
 
@@ -73,23 +73,23 @@ UDP-Transport.
 
 </dd> </dl> </dd> <dt>
 
-*IPAddress* \[ vorgenommen\]
+*IPAddress* \[ out\]
 </dt> <dd>
 
-Eine Zeichenfolge, die die Abhör-IP-Adresse im Oktett-Format empfängt (z. b. "192.168.1.1").
+Eine Zeichenfolge, die die lauschende IP-Adresse in Oktettform empfängt (z. B. "192.168.1.1").
 
 </dd> <dt>
 
-*Port* \[ vorgenommen\]
+*Port* \[ out\]
 </dt> <dd>
 
-Gibt die Abhör Portnummer an.
+Gibt die Lauschenportnummer an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -99,17 +99,17 @@ Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode ni
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                           |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-Datei- \_ gatewayserversettings**](win32-tsgatewayserversettings.md)
+[**Win32 \_ TSGatewayServerSettings**](win32-tsgatewayserversettings.md)
 </dt> </dl>
 
  

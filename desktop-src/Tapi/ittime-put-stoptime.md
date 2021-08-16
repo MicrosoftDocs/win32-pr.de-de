@@ -1,21 +1,21 @@
 ---
-description: Mit der Put \_ stopTime-Methode wird der Wert für die NTP-Endzeit (Netzwerk Zeitprotokoll) festgelegt. Wenn die Endzeit 0 (null) ist, wird die Sitzung nicht gebunden.
+description: Die put \_ StopTime-Methode legt den Endzeitwert von NTP (Network Time Protocol) fest. Wenn die Endzeit 0 (null) ist, ist die Sitzung nicht gebunden.
 ms.assetid: 6f07054c-5fb2-4ee4-9025-3acf9b51ddbd
-title: Ittime::p ut_StopTime-Methode (sdpblb. h)
+title: ITTime::p ut_StopTime-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 53446ea1d7ee93589987c42b005d7a84e7e728ae
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3e3aa32615988e52ccaa845a8fb7ec52f2e863c7193ee393d7d184e2b3002f59
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117762382"
 ---
-# <a name="ittimeput_stoptime-method"></a>Ittime::p UT \_ stopTime-Methode
+# <a name="ittimeput_stoptime-method"></a>ITTime::p ut \_ StopTime-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Mit der **Put \_ stopTime** -Methode wird der Wert für die NTP-Endzeit (Netzwerk Zeitprotokoll) festgelegt. Wenn die Endzeit 0 (null) ist, wird die Sitzung nicht gebunden.
+Die **put \_ StopTime-Methode** legt den Endzeitwert von NTP (Network Time Protocol) fest. Wenn die Endzeit 0 (null) ist, ist die Sitzung nicht gebunden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT put_StopTime(
 
 <dl> <dt>
 
-*Uhrzeit* \[ in\]
+*Zeit* \[ In\]
 </dt> <dd>
 
-Endzeit für die Sitzung.
+Die Stoppzeit für die Sitzung.
 
 </dd> </dl>
 
@@ -48,18 +48,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *Zeit* Parameter ist ungültig.<br/>                   |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *Time-Parameter* ist ungültig.<br/>                   |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion kann Daten in unverschlüsselter Form über das Netzwerk senden. aus diesem Grund kann ein Benutzer, der sich im Netzwerk befindet, möglicherweise die Daten lesen. Das Sicherheitsrisiko, dass Daten im Klartext gesendet werden, sollte vor der Verwendung dieser Methode berücksichtigt werden.
+Diese Funktion kann Daten unverschlüsselt über das Netzwerk senden. Aus diesem Grund kann eine Person, die im Netzwerk abhört, die Daten lesen. Das Sicherheitsrisiko des Sendens der Daten in Klartext sollte vor der Verwendung dieser Methode berücksichtigt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,21 +67,21 @@ Diese Funktion kann Daten in unverschlüsselter Form über das Netzwerk senden. 
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ittime**](ittime.md)
+[**ITTime**](ittime.md)
 </dt> <dt>
 
-[**Ittime:: get \_ stopTime**](ittime-get-stoptime.md)
+[**ITTime::get \_ StopTime**](ittime-get-stoptime.md)
 </dt> </dl>
 
  

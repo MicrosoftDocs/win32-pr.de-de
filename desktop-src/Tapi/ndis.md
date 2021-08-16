@@ -1,28 +1,28 @@
 ---
-description: Die NDIS-Geräteklasse besteht aus Geräten, die mit Network Driver Interface Specification (NDIS)-Media Access Control (Mac)-Treibern verknüpft werden können, um die Netzwerkkommunikation zu unterstützen. Sie greifen auf diese Geräte mithilfe von Funktionen zu.
+description: Die ndis-Geräteklasse besteht aus Geräten, die mac-Treibern (Network Driver Interface Specification) zur Netzwerkzugriffssteuerung (Media Access Control, MAC) zugeordnet werden können, um die Netzwerkkommunikation zu unterstützen. Sie greifen mithilfe von Funktionen auf diese Geräte zu.
 ms.assetid: 98cdd929-0bd7-4509-b2f5-4edd8d6a8080
-title: NDIS
+title: Ndis
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a0be1a69f98f9a4ff8cdc2f8ea173b208c0011d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4dda773591a3e3766a77b00925b9c15eacc5f45188900b12d6b9744c52f238ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343729"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117761339"
 ---
-# <a name="ndis"></a>NDIS
+# <a name="ndis"></a>Ndis
 
-Die NDIS-Geräteklasse besteht aus Geräten, die mit Network Driver Interface Specification (NDIS)-Media Access Control (Mac)-Treibern verknüpft werden können, um die Netzwerkkommunikation zu unterstützen. Sie greifen auf diese Geräte mithilfe von Funktionen zu.
+Die ndis-Geräteklasse besteht aus Geräten, die mac-Treibern (Network Driver Interface Specification) zur Netzwerkzugriffssteuerung (Media Access Control, MAC) zugeordnet werden können, um die Netzwerkkommunikation zu unterstützen. Sie greifen mithilfe von Funktionen auf diese Geräte zu.
 
-Die Funktionen " [**lineGetID**](/windows/desktop/api/Tapi/nf-tapi-linegetid) " und " [**phonegetid**](/windows/desktop/api/Tapi/nf-tapi-phonegetid) " füllen eine [**varstring**](/windows/desktop/api/Tapi/ns-tapi-varstring) -Struktur aus, indem Sie das Element " **dwstringformat** " auf den Binär Wert StringFormat festlegen \_ und diese zusätzlichen Member anhängen:
+Die [**Funktionen lineGetID**](/windows/desktop/api/Tapi/nf-tapi-linegetid) und [**phoneGetID**](/windows/desktop/api/Tapi/nf-tapi-phonegetid) füllen eine [**VARSTRING-Struktur**](/windows/desktop/api/Tapi/ns-tapi-varstring) aus, legen den **dwStringFormat-Member** auf den STRINGFORMAT BINARY-Wert und fügen diese \_ zusätzlichen Member an:
 
 ``` syntax
 HANDLE  hDevice;          // NDIS connection identifier
 CHAR    szDeviceType[1];  // name of device 
 ```
 
-Das **hdevice** -Mitglied ist der Bezeichner, der an einen Mac übergeben werden soll, z. b. der asynchrone Mac für das DFÜ-Netzwerk, um eine Netzwerkverbindung mit der Telefon-/Modem Verbindung zuzuordnen. Der **szenvicetype** -Member ist eine NULL-terminierte Zeichenfolge, die den Namen des Geräts angibt, das mit dem Bezeichner verknüpft ist.
+Das **hDevice-Mitglied** ist der Bezeichner, der an einen MAC übergeben werden soll, z. B. den asynchronen MAC für DFÜ-Netzwerke, um der Anruf-/Modemverbindung eine Netzwerkverbindung zu zuordnen. Der **szDeviceType-Member** ist eine auf NULL beendete Zeichenfolge, die den Namen des Geräts angibt, das dem Bezeichner zugeordnet ist.
 
  
 

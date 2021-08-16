@@ -1,11 +1,11 @@
 ---
 title: Win32_TSGatewayConnectionAuthorizationPolicy-Klasse
-description: Beschreibt eine Remotedesktop Verbindungs Autorisierungs Richtlinie (RD \ 160; Cap). RD \ 160; Mithilfe von Caps kann festgestellt werden, ob ein Benutzer eine Verbindung mit dem Remotedesktop Gateway-Server (RD-Gateway) herstellen darf.
+description: Beschreibt eine Remotedesktop Verbindungsautorisierungsrichtlinie (RD \ 160; CAP). RD \ 160; CAPs werden verwendet, um zu bestimmen, ob ein Benutzer eine Verbindung mit dem Remotedesktop Gateway-Server (RD-Gateway) herstellen darf.
 ms.assetid: 50ff3f97-0818-4e9c-9db7-a822cfed0e82
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSGatewayConnectionAuthorizationPolicy-Klasse Remotedesktopdienste
-- Win32_TSGatewayConnectionAuthorizationPolicy Klasse Remotedesktopdienste, beschrieben
+- Win32_TSGatewayConnectionAuthorizationPolicy-Klassen-Remotedesktopdienste
+- Win32_TSGatewayConnectionAuthorizationPolicy-Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -36,16 +36,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 27384ec3a5f17c3e41fe0ceccf0ee1f7f9d08044
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9bfaefb0a3062db27622afe90023928507c6d127c64edb60041347f73c1b261c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118349245"
 ---
-# <a name="win32_tsgatewayconnectionauthorizationpolicy-class"></a>Win32-Klasse "t- \_ gatewayconnectionauthorizationpolicy"
+# <a name="win32_tsgatewayconnectionauthorizationpolicy-class"></a>Win32 \_ TSGatewayConnectionAuthorizationPolicy-Klasse
 
-Beschreibt eine Remotedesktop Verbindungs Autorisierungs Richtlinie (RD-CAP). RD-CAPs werden verwendet, um zu bestimmen, ob ein Benutzer eine Verbindung mit dem Remotedesktop Gateway-Server (RD-Gateway) herstellen darf.
+Beschreibt eine Remotedesktop Verbindungsautorisierungsrichtlinie (RD CAP). RD-CAPs werden verwendet, um zu bestimmen, ob ein Benutzer eine Verbindung mit dem Remotedesktop Gateway-Server (RD-Gateway) herstellen darf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -78,45 +78,45 @@ class Win32_TSGatewayConnectionAuthorizationPolicy
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ zgatewayconnectionauthorizationpolicy** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSGatewayConnectionAuthorizationPolicy-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ zgatewayconnectionauthorizationpolicy** " verfügt über diese Methoden.
+Die **Win32 \_ TSGatewayConnectionAuthorizationPolicy-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                                                | BESCHREIBUNG                                                                                                                                                                     |
 |:----------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Addcomputergroupnames**](addcomputergroupnames-win32-tsgatewayconnectionauthorizationpolicy.md)                   | Fügt die angegebenen Computer Gruppennamen der **computergroupnames** -Eigenschaft hinzu.<br/>                                                                                      |
-| [**Addusergroupnames**](addusergroupnames-win32-tsgatewayconnectionauthorizationpolicy.md)                           | Fügt die angegebenen Benutzergruppen Namen der **usergroupnames** -Eigenschaft hinzu.<br/>                                                                                              |
-| [**Stelle**](create-win32-tsgatewayconnectionauthorizationpolicy.md)                                                 | Erstellt eine RD-Obergrenze.<br/>                                                                                                                                                   |
-| [**Lösch**](delete-win32-tsgatewayconnectionauthorizationpolicy.md)                                                 | Löscht die aktuelle RD-Obergrenze.<br/>                                                                                                                                          |
-| [**Disableclipboard**](disableclipboard-win32-tsgatewayconnectionauthorizationpolicy.md)                             | Legt die **clipboarddeaktiviert** -Eigenschaft fest.<br/>                                                                                                                             |
-| [**Disablediskdrives**](disablediskdrives-win32-tsgatewayconnectionauthorizationpolicy.md)                           | Legt die **diskdrivesdeaktivierte** Eigenschaft fest.<br/>                                                                                                                            |
-| [**Disableplugandplaydevices**](disableplugandplaydevices-win32-tsgatewayconnectionauthorizationpolicy.md)           | Legt die **plugandplaydevicesdeaktiviert** -Eigenschaft fest.<br/>                                                                                                                    |
-| [**Disableprinter**](disableprinters-win32-tsgatewayconnectionauthorizationpolicy.md)                               | Legt die **printersdeaktiviert** -Eigenschaft fest.<br/>                                                                                                                              |
-| [**Disableserialports**](disableserialports-win32-tsgatewayconnectionauthorizationpolicy.md)                         | Legt die **serialportsdeaktiviert** -Eigenschaft fest.<br/>                                                                                                                           |
-| [**Enablezugewonlysdrservers**](win32-tsgatewayconnectionauthorizationpolicy-enableallowonlysdrservers.md)           | Dient **zum Umschalten der Eigenschaft** "" der Eigenschaft "Eigenschaft".<br/> **Windows Server 2008:** Diese Methode ist vor Windows Server 2008 R2 nicht verfügbar.<br/>                  |
-| [**Nach unten**](movedown-win32-tsgatewayconnectionauthorizationpolicy.md)                                             | Verschiebt die aktuelle RD-Obergrenze in der Liste um eine Position nach unten.<br/>                                                                                                              |
-| [**MoveUp**](moveup-win32-tsgatewayconnectionauthorizationpolicy.md)                                                 | Verschiebt die aktuelle RD-Obergrenze in der Liste um eine Position nach oben.<br/>                                                                                                                |
-| [**Removecomputergroupnames**](removecomputergroupnames-win32-tsgatewayconnectionauthorizationpolicy.md)             | Entfernt die angegebenen Computer Gruppennamen aus der **computergroupnames** -Eigenschaft.<br/>                                                                                 |
-| [**Removeusergroupnames**](removeusergroupnames-win32-tsgatewayconnectionauthorizationpolicy.md)                     | Entfernt die angegebenen Benutzergruppen Namen aus der **usergroupnames** -Eigenschaft.<br/>                                                                                             |
-| [**Setcomputergroupnames**](setcomputergroupnames-win32-tsgatewayconnectionauthorizationpolicy.md)                   | Legt die **computergroupnames** -Eigenschaft fest.<br/>                                                                                                                            |
-| [**Setcookieauthenticationallowed**](setcookieauthenticationallowed-win32-tsgatewayconnectionauthorizationpolicy.md) | Legt die **cookieauthenticationallowed** -Eigenschaft fest.<br/> **Windows Server 2008:** Diese Methode ist nicht verfügbar.<br/>                                                 |
-| [**Setdeviceredirectiontype**](setdeviceredirectiontype-win32-tsgatewayconnectionauthorizationpolicy.md)             | Legt die **deviceredirectiontype** -Eigenschaft fest.<br/>                                                                                                                         |
-| [**Abgeleitete**](setenabled-win32-tsgatewayconnectionauthorizationpolicy.md)                                         | Aktiviert oder deaktiviert das aktuelle RD-CAP.<br/>                                                                                                                              |
-| [**"-Timeout"**](setidletimeout-win32-tsgatewayconnectionauthorizationpolicy.md)                                 | Legt die **IdleTimeout** -Eigenschaft fest.<br/> **Windows Server 2008:** Diese Methode ist vor Windows Server 2008 R2 nicht verfügbar.<br/>                                   |
-| [**SetName**](setname-win32-tsgatewayconnectionauthorizationpolicy.md)                                               | Legt einen neuen Namen für diese RD-Obergrenze fest. Mit dieser Methode wird sichergestellt, dass die Namen eindeutig sind.<br/>                                                                                      |
-| [**Setpasswordallowed**](setpasswordallowed-win32-tsgatewayconnectionauthorizationpolicy.md)                         | Legt die **passwordallowed** -Eigenschaft fest.<br/>                                                                                                                               |
-| [**Setsecureidallowed zulässig**](setsecureidallowed-win32-tsgatewayconnectionauthorizationpolicy.md)                         | Legt die Eigenschaft " **secureidallowed** " fest.<br/> **Windows Server 2008:** Diese Methode ist für die zukünftige Verwendung reserviert.<br/>                                                   |
-| [**-Sitzungs Timeout**](setsessiontimeout-win32-tsgatewayconnectionauthorizationpolicy.md)                           | Legt die Eigenschaften **sessiontimeout** und **sessiontimeoutaction** fest.<br/> **Windows Server 2008:** Diese Methode ist vor Windows Server 2008 R2 nicht verfügbar.<br/> |
-| [**"Abkto" ist zulässig.**](setsmartcardallowed-win32-tsgatewayconnectionauthorizationpolicy.md)                       | Legt die **smartcardallowed** -Eigenschaft fest.<br/>                                                                                                                              |
-| [**Setusergroupnames**](setusergroupnames-win32-tsgatewayconnectionauthorizationpolicy.md)                           | Legt die **usergroupnames** -Eigenschaft fest.<br/>                                                                                                                                |
-| [**Aktualisieren**](update-win32-tsgatewayconnectionauthorizationpolicy.md)                                                 | Aktualisiert das aktuelle RD-CAP.<br/>                                                                                                                                          |
+| [**AddComputerGroupNames**](addcomputergroupnames-win32-tsgatewayconnectionauthorizationpolicy.md)                   | Fügt der **ComputerGroupNames-Eigenschaft** die angegebenen Computergruppennamen hinzu.<br/>                                                                                      |
+| [**AddUserGroupNames**](addusergroupnames-win32-tsgatewayconnectionauthorizationpolicy.md)                           | Fügt der **UserGroupNames-Eigenschaft** die angegebenen Benutzergruppennamen hinzu.<br/>                                                                                              |
+| [**Erstellen**](create-win32-tsgatewayconnectionauthorizationpolicy.md)                                                 | Erstellt eine RD-CAP.<br/>                                                                                                                                                   |
+| [**Löschen**](delete-win32-tsgatewayconnectionauthorizationpolicy.md)                                                 | Löscht die aktuelle RD-CAP.<br/>                                                                                                                                          |
+| [**DisableClipboard**](disableclipboard-win32-tsgatewayconnectionauthorizationpolicy.md)                             | Legt die **ClipboardDisabled-Eigenschaft fest.**<br/>                                                                                                                             |
+| [**DisableDiskDrives**](disablediskdrives-win32-tsgatewayconnectionauthorizationpolicy.md)                           | Legt die **DiskDrivesDisabled-Eigenschaft fest.**<br/>                                                                                                                            |
+| [**DisablePlugAndPlayDevices**](disableplugandplaydevices-win32-tsgatewayconnectionauthorizationpolicy.md)           | Legt die **PlugAndPlayDevicesDisabled-Eigenschaft fest.**<br/>                                                                                                                    |
+| [**DisablePrinters**](disableprinters-win32-tsgatewayconnectionauthorizationpolicy.md)                               | Legt die **PrinterDisabled-Eigenschaft fest.**<br/>                                                                                                                              |
+| [**DisableSerialPorts**](disableserialports-win32-tsgatewayconnectionauthorizationpolicy.md)                         | Legt die **SerialPortsDisabled-Eigenschaft fest.**<br/>                                                                                                                           |
+| [**EnableAllowOnlySDRServers**](win32-tsgatewayconnectionauthorizationpolicy-enableallowonlysdrservers.md)           | Wird verwendet, um die **AllowOnlySDRServers-Eigenschaft** umzuschalten.<br/> **Windows Server 2008:** Diese Methode ist vor Windows Server 2008 R2 nicht verfügbar.<br/>                  |
+| [**Movedown**](movedown-win32-tsgatewayconnectionauthorizationpolicy.md)                                             | Verschiebt die aktuelle RD-CAP um eine Position nach unten in der Liste.<br/>                                                                                                              |
+| [**MoveUp**](moveup-win32-tsgatewayconnectionauthorizationpolicy.md)                                                 | Verschiebt die aktuelle RD-CAP um eine Position nach oben in der Liste.<br/>                                                                                                                |
+| [**RemoveComputerGroupNames**](removecomputergroupnames-win32-tsgatewayconnectionauthorizationpolicy.md)             | Entfernt die angegebenen Computergruppennamen aus der **ComputerGroupNames-Eigenschaft.**<br/>                                                                                 |
+| [**RemoveUserGroupNames**](removeusergroupnames-win32-tsgatewayconnectionauthorizationpolicy.md)                     | Entfernt angegebene Benutzergruppennamen aus der **UserGroupNames-Eigenschaft.**<br/>                                                                                             |
+| [**SetComputerGroupNames**](setcomputergroupnames-win32-tsgatewayconnectionauthorizationpolicy.md)                   | Legt die **ComputerGroupNames-Eigenschaft** fest.<br/>                                                                                                                            |
+| [**SetCookieAuthenticationAllowed**](setcookieauthenticationallowed-win32-tsgatewayconnectionauthorizationpolicy.md) | Legt die **CookieAuthenticationAllowed-Eigenschaft** fest.<br/> **Windows Server 2008:** Diese Methode ist nicht verfügbar.<br/>                                                 |
+| [**SetDeviceRedirectionType**](setdeviceredirectiontype-win32-tsgatewayconnectionauthorizationpolicy.md)             | Legt die **DeviceRedirectionType-Eigenschaft** fest.<br/>                                                                                                                         |
+| [**SetEnabled**](setenabled-win32-tsgatewayconnectionauthorizationpolicy.md)                                         | Aktiviert oder deaktiviert die aktuelle RD-CAP.<br/>                                                                                                                              |
+| [**SetIdleTimeout**](setidletimeout-win32-tsgatewayconnectionauthorizationpolicy.md)                                 | Legt die **IdleTimeout-Eigenschaft** fest.<br/> **Windows Server 2008:** Diese Methode ist vor Windows Server 2008 R2 nicht verfügbar.<br/>                                   |
+| [**SetName**](setname-win32-tsgatewayconnectionauthorizationpolicy.md)                                               | Legt einen neuen Namen für diese RD-CAP fest. Diese Methode stellt sicher, dass Namen eindeutig sind.<br/>                                                                                      |
+| [**SetPasswordAllowed**](setpasswordallowed-win32-tsgatewayconnectionauthorizationpolicy.md)                         | Legt die **PasswordAllowed-Eigenschaft** fest.<br/>                                                                                                                               |
+| [**SetSecureIdAllowed**](setsecureidallowed-win32-tsgatewayconnectionauthorizationpolicy.md)                         | Legt die **SecureIdAllowed-Eigenschaft** fest.<br/> **Windows Server 2008:** Diese Methode ist für die zukünftige Verwendung reserviert.<br/>                                                   |
+| [**SetSessionTimeout**](setsessiontimeout-win32-tsgatewayconnectionauthorizationpolicy.md)                           | Legt die **Eigenschaften SessionTimeout** und **SessionTimeoutAction** fest.<br/> **Windows Server 2008:** Diese Methode ist vor Windows Server 2008 R2 nicht verfügbar.<br/> |
+| [**SetSmartcardAllowed**](setsmartcardallowed-win32-tsgatewayconnectionauthorizationpolicy.md)                       | Legt die **SmartcardAllowed-Eigenschaft** fest.<br/>                                                                                                                              |
+| [**SetUserGroupNames**](setusergroupnames-win32-tsgatewayconnectionauthorizationpolicy.md)                           | Legt die **UserGroupNames-Eigenschaft** fest.<br/>                                                                                                                                |
+| [**Aktualisieren**](update-win32-tsgatewayconnectionauthorizationpolicy.md)                                                 | Aktualisiert die aktuelle RD-CAP.<br/>                                                                                                                                          |
 
 
 
@@ -124,70 +124,70 @@ Die Win32-Klasse " **\_ zgatewayconnectionauthorizationpolicy** " verfügt über
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse "t- **\_ gatewayconnectionauthorizationpolicy** " verfügt über diese Eigenschaften.
+Die **Win32 \_ TSGatewayConnectionAuthorizationPolicy-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**"Zuweisung der Server"**
+**AllowOnlySDRServers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob Verbindungen nur für die Sicherung von RDS-Servern (Geräte Umleitung) zulässig sind. Diese Eigenschaft kann mithilfe der [**enablezugewonlysdrservers**](win32-tsgatewayconnectionauthorizationpolicy-enableallowonlysdrservers.md) -Methode festgelegt werden.
+Gibt an, ob Verbindungen nur zum Sichern von SDR-RDS-Servern (Device Redirection) zulässig sind. Diese Eigenschaft kann mit der [**EnableAllowOnlySDRServers-Methode**](win32-tsgatewayconnectionauthorizationpolicy-enableallowonlysdrservers.md) festgelegt werden.
 
 **Windows Server 2008:** Diese Eigenschaft ist vor Windows Server 2008 R2 nicht verfügbar.
 
 </dd> <dt>
 
-**Clipboarddeaktiviert**
+**ClipboardDisabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Umleitung der Zwischenablage deaktiviert wird. Diese Eigenschaft hat nur dann Auswirkungen, wenn die **deviceredirectiontype** -Eigenschaft den Wert "2" aufweist.
+Gibt an, ob die Umleitung in der Zwischenablage deaktiviert wird. Diese Eigenschaft hat nur dann eine Auswirkung, wenn die **DeviceRedirectionType-Eigenschaft** den Wert "2" hat.
 
 </dd> <dt>
 
-**Computer groupnames**
+**ComputerGroupNames**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Liste von durch Semikolons getrennten Computer Gruppennamen. Dieser Wert kann leer sein. Die Namen weisen das Format *Domäne \\ computergroupname* auf. Wenn ein Wert angegeben wird, muss der Client Computer zu einer dieser Computer Gruppen gehören, damit der Benutzer auf den RD-Gateway Server zugreifen kann.
+Liste der durch Semikolons getrennten Computergruppennamen. Dieser Wert kann leer sein. Die Namen haben das Format *Domain \\ ComputerGroupName*. Wenn ein Wert angegeben wird, muss der Clientcomputer einer dieser Computergruppen angehören, damit der Benutzer auf den RD-Gatewayserver zugreifen kann.
 
 </dd> <dt>
 
-**Cookieauthenticationallowed**
+**CookieAuthenticationAllowed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob eine Cookie-Authentifizierung zum Herstellen einer Verbindung mit dem RD-Gateway Server verwendet werden kann. Diese Eigenschaft kann mit der [**setcookieauthenticationallowed**](setcookieauthenticationallowed-win32-tsgatewayconnectionauthorizationpolicy.md) -Methode festgelegt werden.
+Gibt an, ob die Cookieauthentifizierung verwendet werden kann, um eine Verbindung mit dem RD-Gatewayserver herzustellen. Diese Eigenschaft kann mithilfe der [**SetCookieAuthenticationAllowed-Methode**](setcookieauthenticationallowed-win32-tsgatewayconnectionauthorizationpolicy.md) festgelegt werden.
 
 **Windows Server 2008:** Diese Eigenschaft ist nicht verfügbar.
 
 </dd> <dt>
 
-**Deviceredirectiontype**
+**DeviceRedirectionType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -207,68 +207,68 @@ Alle Geräte werden umgeleitet.
 1
 </dt> <dd>
 
-Keine Geräte werden umgeleitet.
+Es werden keine Geräte umgeleitet.
 
 </dd> <dt>
 
 2
 </dt> <dd>
 
-Angegebene Geräte werden nicht umgeleitet. Die Eigenschaften **diskdrivesdeaktiviert**, **printersdeaktiviert**, **serialportsdeaktiviert**, **clipboarddeaktiviert** und **plugandplaydevicesdeaktiviert** steuern, welche Geräte nicht umgeleitet werden.
+Angegebene Geräte werden nicht umgeleitet. Die Eigenschaften **DiskDrivesDisabled,** **PrinterDisabled,** **SerialPortsDisabled,** **ClipboardDisabled** und **PlugAndPlayDevicesDisabled** steuern, welche Geräte nicht umgeleitet werden.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Diskdrivesdeaktivierte**
+**DiskDrivesDisabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Laufwerk Umleitung deaktiviert wird. Diese Eigenschaft hat nur dann Auswirkungen, wenn die **deviceredirectiontype** -Eigenschaft den Wert "2" aufweist.
+Gibt an, ob die Umleitung des Laufwerks deaktiviert wird. Diese Eigenschaft hat nur dann eine Auswirkung, wenn die **DeviceRedirectionType-Eigenschaft** den Wert "2" hat.
 
 </dd> <dt>
 
 **Aktiviert**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob dieses RD-CAP zum Auswerten eines Benutzers für die Autorisierung verwendet wird.
+Gibt an, ob diese RD-CAP verwendet wird, um einen Benutzer für die Autorisierung auszuwerten.
 
 </dd> <dt>
 
-**Hasnapattributes**
+**HasNapAttributes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die RD-Abdeckung Network Access Protection (NAP)-Attribute verwendet.
+Gibt an, ob die RD-CAP NAP-Attribute (Network Access Protection) verwendet.
 
 </dd> <dt>
 
 **IdleTimeout**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Wert für das Leerlauf Timeout (in Minuten). Der Wert 0 bedeutet, dass kein Timeout vorliegt. Diese Eigenschaft kann mit der [**setidletimeout**](setidletimeout-win32-tsgatewayconnectionauthorizationpolicy.md) -Methode festgelegt werden.
+Der Leerlauftimeoutwert in Minuten. Der Wert 0 bedeutet, dass kein Timeout vorhanden ist. Diese Eigenschaft kann mithilfe der [**SetIdleTimeout-Methode**](setidletimeout-win32-tsgatewayconnectionauthorizationpolicy.md) festgelegt werden.
 
 **Windows Server 2008:** Diese Eigenschaft ist nicht verfügbar.
 
@@ -277,126 +277,126 @@ Der Wert für das Leerlauf Timeout (in Minuten). Der Wert 0 bedeutet, dass kein 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Name der RD-Obergrenze.
+Name der RD-CAP.
 
 </dd> <dt>
 
 **Order**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Auswertungs Reihenfolge für die RD-CAP. Das erste ausgewertete RD-CAP weist den Wert "1" auf. Die **Order** -Eigenschaft kann geändert werden, wenn die Methoden [**Create**](create-win32-tsgatewayconnectionauthorizationpolicy.md), [**Delete**](delete-win32-tsgatewayconnectionauthorizationpolicy.md), [**moveUp**](moveup-win32-tsgatewayconnectionauthorizationpolicy.md)oder [**muvedown**](movedown-win32-tsgatewayconnectionauthorizationpolicy.md) aufgerufen werden.
+Auswertungsreihenfolge der RD-CAP. Die erste ausgewertete RD-CAP hat den Wert "1". Die **Order-Eigenschaft** kann geändert werden, wenn die Methoden [**Create,**](create-win32-tsgatewayconnectionauthorizationpolicy.md) [**Delete,**](delete-win32-tsgatewayconnectionauthorizationpolicy.md) [**MoveUp**](moveup-win32-tsgatewayconnectionauthorizationpolicy.md)oder [**MoveDown**](movedown-win32-tsgatewayconnectionauthorizationpolicy.md) aufgerufen werden.
 
 </dd> <dt>
 
-**Passwordallowed**
+**PasswordAllowed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob ein Kennwort zum Herstellen einer Verbindung mit dem RD-Gateway Server verwendet werden kann. Diese Eigenschaft kann mithilfe der [**setpasswordallowed**](setpasswordallowed-win32-tsgatewayconnectionauthorizationpolicy.md) -Methode geändert werden.
+Gibt an, ob ein Kennwort zum Herstellen einer Verbindung mit dem RD-Gatewayserver verwendet werden kann. Diese Eigenschaft kann mithilfe der [**SetPasswordAllowed-Methode**](setpasswordallowed-win32-tsgatewayconnectionauthorizationpolicy.md) geändert werden.
 
 </dd> <dt>
 
-**Plugandplaydevicesdeaktiviert**
+**PlugAndPlayDevicesDisabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Umleitung von Plug & Play Geräten deaktiviert wird. Diese Eigenschaft hat nur dann Auswirkungen, wenn die **deviceredirectiontype** -Eigenschaft den Wert "2" aufweist.
+Gibt an, ob die Umleitung von Plug & Play Geräten deaktiviert wird. Diese Eigenschaft hat nur dann eine Auswirkung, wenn die **DeviceRedirectionType-Eigenschaft** den Wert "2" hat.
 
 </dd> <dt>
 
-**"Printersdeaktiviert"**
+**DruckerDisabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Drucker Umleitung deaktiviert wird. Diese Eigenschaft hat nur dann Auswirkungen, wenn die **deviceredirectiontype** -Eigenschaft den Wert "2" aufweist.
+Gibt an, ob die Druckerumleitung deaktiviert wird. Diese Eigenschaft hat nur dann eine Auswirkung, wenn die **DeviceRedirectionType-Eigenschaft** den Wert "2" hat.
 
 </dd> <dt>
 
-**Secureidallowed zulässig**
+**SecureIdAllowed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob ein sicherer Bezeichner verwendet werden kann, um eine Verbindung mit dem RD-Gateway-Server herzustellen.
+Gibt an, ob ein sicherer Bezeichner zum Herstellen einer Verbindung mit dem RD-Gatewayserver verwendet werden kann.
 
 **Windows Server 2008:** Diese Eigenschaft wird nicht verwendet.
 
 </dd> <dt>
 
-**Serialportsdeaktiviert**
+**SerialPortsDisabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die serielle Port Umleitung deaktiviert wird. Diese Eigenschaft hat nur dann Auswirkungen, wenn die **deviceredirectiontype** -Eigenschaft den Wert "2" aufweist.
+Gibt an, ob die Umleitung des seriellen Ports deaktiviert wird. Diese Eigenschaft hat nur dann eine Auswirkung, wenn die **DeviceRedirectionType-Eigenschaft** den Wert "2" hat.
 
 </dd> <dt>
 
 **SessionTimeout**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Sitzungs Timeout Wert (in Minuten). Der Wert 0 bedeutet, dass kein Timeout vorliegt. Diese Eigenschaft kann mit der [**sezessiontimeout**](setsessiontimeout-win32-tsgatewayconnectionauthorizationpolicy.md) -Methode festgelegt werden.
+Der Sitzungstimeoutwert in Minuten. Der Wert 0 bedeutet, dass kein Timeout vorhanden ist. Diese Eigenschaft kann mithilfe der [**SetSessionTimeout-Methode**](setsessiontimeout-win32-tsgatewayconnectionauthorizationpolicy.md) festgelegt werden.
 
 **Windows Server 2008:** Diese Eigenschaft ist nicht verfügbar.
 
 </dd> <dt>
 
-**Sessiontimeoutaction**
+**SessionTimeoutAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Aktion an, die bei einem Sitzungs Timeout durchgeführt werden soll. Diese Eigenschaft kann mit der [**sezessiontimeout**](setsessiontimeout-win32-tsgatewayconnectionauthorizationpolicy.md) -Methode festgelegt werden.
+Gibt die Aktion an, die bei einem Sitzungstimeout ausgeführt werden soll. Diese Eigenschaft kann mithilfe der [**SetSessionTimeout-Methode**](setsessiontimeout-win32-tsgatewayconnectionauthorizationpolicy.md) festgelegt werden.
 
-Dies kann einer der folgenden Werte sein:
+Dies kann einer der folgenden Werte sein.
 
 **Windows Server 2008:** Diese Eigenschaft ist nicht verfügbar.
 
@@ -418,37 +418,37 @@ Versuchen Sie, die Sitzung erneut zu autorisieren.
 
 </dd> <dt>
 
-**Smartcardzulässig**
+**SmartcardAllowed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob eine Smartcard verwendet werden kann, um eine Verbindung mit dem RD-Gateway-Server herzustellen. Diese Eigenschaft kann mithilfe der Methode "* [**zmartcardallowed**](setsmartcardallowed-win32-tsgatewayconnectionauthorizationpolicy.md) " geändert werden.
+Gibt an, ob eine Smartcard zum Herstellen einer Verbindung mit dem RD-Gatewayserver verwendet werden kann. Diese Eigenschaft kann mithilfe der [**SetSmartcardAllowed-Methode**](setsmartcardallowed-win32-tsgatewayconnectionauthorizationpolicy.md) geändert werden.
 
 </dd> <dt>
 
-**Usergroupnames**
+**UserGroupNames**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Liste von durch Semikolon getrennten Benutzergruppen Namen. Die Namen weisen das Format *Domäne \\ usergroupname* auf. Wenn der Benutzer zu einer dieser Benutzergruppen gehört, erhält der Benutzer Zugriff auf den RD-Gateway Server.
+Liste der durch Semikolons getrennten Benutzergruppennamen. Die Namen haben das Format *Domain \\ UserGroupName*. Wenn der Benutzer einer dieser Benutzergruppen angehört, wird dem Benutzer der Zugriff auf den RD-Gatewayserver gewährt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Klasse verwenden zu können.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Klasse verwenden zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -458,32 +458,32 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-"- \_ gatewayconnection"**](win32-tsgatewayconnection.md)
+[**Win32 \_ TSGatewayConnection**](win32-tsgatewayconnection.md)
 </dt> <dt>
 
-[**Win32-"t- \_ gatewayloadbalancer"**](win32-tsgatewayloadbalancer.md)
+[**Win32 \_ TSGatewayLoadBalancer**](win32-tsgatewayloadbalancer.md)
 </dt> <dt>
 
-[**Win32-"t- \_ gatewayradiusserver"**](win32-tsgatewayradiusserver.md)
+[**Win32 \_ TSGatewayRADIUSServer**](win32-tsgatewayradiusserver.md)
 </dt> <dt>
 
-[**Win32- \_ faigatewayresourceauthorizationpolicy**](win32-tsgatewayresourceauthorizationpolicy.md)
+[**Win32 \_ TSGatewayResourceAuthorizationPolicy**](win32-tsgatewayresourceauthorizationpolicy.md)
 </dt> <dt>
 
-[**Win32-Datei " \_ zgatewayresourcegroup"**](win32-tsgatewayresourcegroup.md)
+[**Win32 \_ TSGatewayResourceGroup**](win32-tsgatewayresourcegroup.md)
 </dt> <dt>
 
-[**Win32-Datei- \_ gatewayserversettings**](win32-tsgatewayserversettings.md)
+[**Win32 \_ TSGatewayServerSettings**](win32-tsgatewayserversettings.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: 'Iuseridentitymanager:: manageidentities wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop.'
+description: IUserIdentityManager::ManageIdentities wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop.
 ms.assetid: 9a5a85bd-d007-4247-859b-e402ed290785
-title: 'Iuseridentitymanager:: manageidentities-Methode (Msident. h)'
+title: IUserIdentityManager::ManageIdentities-Methode (Msident.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Msident.dll
-ms.openlocfilehash: b5b782a56324faf19dd1527d2cd363d26f0e337c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a816ee16e128b992b18be274d814fe3369e1a59c0204201a9c6bd4a6cbc23857
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117859238"
 ---
-# <a name="iuseridentitymanagermanageidentities-method"></a>Iuseridentitymanager:: manageidentities-Methode
+# <a name="iuseridentitymanagermanageidentities-method"></a>IUserIdentityManager::ManageIdentities-Methode
 
-\[**Iuseridentitymanager:: manageidentities** wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop](fastuserswitching.md).\]
+\[**IUserIdentityManager::ManageIdentities** wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop](fastuserswitching.md).\]
 
-Zeigt dem Benutzer eine Benutzeroberfläche an und ermöglicht dem Benutzer die Verwaltung von Benutzer Identitäten.
+Zeigt dem Benutzer eine Benutzeroberfläche an, die es dem Benutzer ermöglicht, Benutzeridentitäten zu verwalten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,21 +42,21 @@ HRESULT ManageIdentities(
 
 <dl> <dt>
 
-*hwndParent* \[ in\]
+*hwndParent* \[ In\]
 </dt> <dd>
 
 Typ: **HWND**
 
-Ein **HWND** -Wert, der ein Fenster identifiziert, das nach dem verwerfen der Benutzeroberfläche in den Vordergrund gestellt wird.
+Ein **HWND-Wert,** der ein Fenster identifiziert, das in den Vordergrund gestellt wird, nachdem die Benutzeroberfläche verworfen wurde.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Typ: **DWORD**
 
-Optionale Flags, um zu definieren, wie sich die Benutzeroberfläche verhält. Legen Sie auf uimi \_ \_ neue \_ Identität erstellen fest, um den Benutzer zur Erstellung einer neuen Identität aufzufordern.
+Optionale Flags, um das Verhalten der Benutzeroberfläche zu definieren. Legen Sie auf UIMI \_ CREATE \_ NEW IDENTITY \_ fest, um den Benutzer zum Erstellen einer neuen Identität aufzugeben.
 
 </dd> </dl>
 
@@ -64,20 +64,20 @@ Optionale Flags, um zu definieren, wie sich die Benutzeroberfläche verhält. Le
 
 Typ: **HRESULT**
 
-Das Ergebnis des Verwaltungs Vorgangs. Bei erfolgreicher Ausführung wird S OK zurückgegeben \_ . Andernfalls wird einer der folgenden Fehlercodes zurückgegeben.
+Das Ergebnis des Verwaltungsvorgang. Wenn der Fehler erfolgreich ist, wird S \_ OK zurückgegeben. Andernfalls wird einer der folgenden Fehlercodes zurückgegeben.
 
 
 
 | Rückgabecode                                                                                            | Beschreibung                                               |
 |--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| <dl> <dt>**E- \_ Identitäten \_ deaktiviert**</dt> </dl> | Die Identitätsverwaltung ist im System deaktiviert.<br/> |
-| <dl> <dt>**E- \_ Benutzer \_ abgebrochen**</dt> </dl>      | Der Benutzer hat das Dialogfeld abgebrochen.<br/>                  |
+| <dl> <dt>**\_E-IDENTITÄTEN \_ DEAKTIVIERT**</dt> </dl> | Die Identitätsverwaltung ist auf dem System deaktiviert.<br/> |
+| <dl> <dt>**E \_ USER \_ CANCELLED**</dt> </dl>      | Der Benutzer hat das Dialogfeld abgebrochen.<br/>                  |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -87,8 +87,8 @@ Das Ergebnis des Verwaltungs Vorgangs. Bei erfolgreicher Ausführung wird S OK z
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Ende des Supports (Client)<br/>    | Windows 2000 Professional<br/>                                                   |
 | Ende des Supports (Server)<br/>    | Windows 2000 Server<br/>                                                         |
-| Header<br/>                   | <dl> <dt>Msident. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Msident. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msident.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Msident.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Msident.dll</dt> </dl> |
 
 
@@ -97,13 +97,13 @@ Das Ergebnis des Verwaltungs Vorgangs. Bei erfolgreicher Ausführung wird S OK z
 
 <dl> <dt>
 
-[**Iuseridentitymanager**](iuseridentitymanager.md)
+[**IUserIdentityManager**](iuseridentitymanager.md)
 </dt> <dt>
 
-[**Iuseridentitymanager:: LOGON**](iuseridentitymanager-logon.md)
+[**IUserIdentityManager::Logon**](iuseridentitymanager-logon.md)
 </dt> <dt>
 
-[**Iuseridentitymanager:: abmelden**](iuseridentitymanager-logoff.md)
+[**IUserIdentityManager::Logoff**](iuseridentitymanager-logoff.md)
 </dt> </dl>
 
  

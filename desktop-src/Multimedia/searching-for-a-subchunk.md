@@ -1,29 +1,29 @@
 ---
-title: Suchen nach einem subblock
-description: Suchen nach einem subblock
+title: Suchen nach einem Subchunk
+description: Suchen nach einem Subchunk
 ms.assetid: c494a57f-6395-40a4-a4f2-d200d7ad6223
 keywords:
-- Multimedia-Datei-e/a, suchen nach einem Riff Block
-- Datei-e/a, suchen nach einem Riff Block
-- Eingabe und Ausgabe (e/a), suchen nach einem Riff Block
-- E/a (Eingabe und Ausgabe), suchen nach einem Riff Block
-- Suchen nach einem Riff Block
-- Format der Ressourcenaustausch Datei (Riff)
-- Riff (Ressourcenaustausch-Dateiformat)
-- Riff-e/a
-- Riff Block
+- Multimediadatei-E/A, Suchen nach DEM SEGMENT
+- Datei-E/A, Suchen nach DEM SEGMENT
+- Eingabe und Ausgabe (E/A), Suchen nach EINEM SEGMENT
+- E/A (Eingabe und Ausgabe),Suchen nach EINEM SEGMENT
+- Suchen nach DEM SEGMENT
+- Resource Interchange File Format (DOSSIER)
+- PROTOKOLLDATEI (Resource Interchange File Format)
+- IGE E/A
+- UNK-Block
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d6cfb0ecc3223f4a883998e9f192bfbbb5ff276
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: f9f77cc4d3b9640e0d262a113d3c8f352bb30fce625737b1bf13dde24adbe578
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104315111"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118371138"
 ---
-# <a name="searching-for-a-subchunk"></a>Suchen nach einem subblock
+# <a name="searching-for-a-subchunk"></a>Suchen nach einem Subchunk
 
-Im folgenden Beispiel wird die [**mmioabstieg**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiodescend) -Funktion verwendet, um nach dem "fmt"-Block im Abschnitt "Riff" des vorherigen Beispiels zu suchen.
+Im folgenden Beispiel wird die [**mmioDescend-Funktion**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiodescend) verwendet, um nach dem "FMT"-Block im Abschnitt "CSV" des vorherigen Beispiels zu suchen.
 
 
 ```C++
@@ -39,11 +39,11 @@ else
 
 
 
-Um nach einem subblock (d. h. einem beliebigen Block, der kein "Riff" oder "List"-Block ist) zu suchen, identifizieren Sie seinen übergeordneten Block im *lpckparent* -Parameter der [**mmiodescen-**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiodescend) Funktion.
+Um nach einem Unterkunk zu suchen (d. h. nach einem beliebigen Block außer einem "CSV" oder "LIST"-Block), identifizieren Sie den übergeordneten Block im *lpckParent-Parameter* der [**mmioDescend-Funktion.**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiodescend)
 
-Wenn Sie keinen übergeordneten Block angeben, sollte sich die aktuelle Dateiposition am Anfang eines Segments befinden, bevor Sie die **mmiodescen-** Funktion aufruft. Wenn Sie einen übergeordneten Block angeben, kann die aktuelle Dateiposition an einer beliebigen Stelle in diesem Segment liegen.
+Wenn Sie keinen übergeordneten Block angeben, sollte sich die aktuelle Dateiposition am Anfang eines Blockes befinden, bevor Sie die **mmioDescend-Funktion** aufrufen. Wenn Sie einen übergeordneten Block angeben, kann sich die aktuelle Dateiposition an einer beliebigen Stelle in diesem Block befinden.
 
-Wenn bei der Suche nach einem subblock ein Fehler auftritt, ist die aktuelle Dateiposition nicht definiert. Sie können die [**mmioseek**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioseek) -Funktion und den **dwdataoffset** -Member der [**mmckinfo**](/windows/win32/api/mmiscapi/ns-mmiscapi-mmckinfo) -Struktur verwenden, die den übergeordneten Block beschreibt, um zum Anfang des übergeordneten Blocks zurückzukehren, wie im folgenden Beispiel gezeigt:
+Wenn bei der Suche nach einem Subchunk ein Fehler auftritt, ist die aktuelle Dateiposition nicht definiert. Sie können die [**mmioSeek-Funktion**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioseek) und den **dwDataOffset-Member** der [**MMCKINFO-Struktur**](/windows/win32/api/mmiscapi/ns-mmiscapi-mmckinfo) verwenden, die den übergeordneten Block beschreiben, um bis zum Anfang des übergeordneten Blöckes zurück zu suchen, wie im folgenden Beispiel:
 
 
 ```C++
@@ -52,8 +52,8 @@ mmioSeek(hmmio, mmckinfoParent.dwDataOffset + 4, SEEK_SET);
 
 
 
-Da **dwdataoffset** den Offset bis zum Anfang des Daten Teils des Blocks angibt, müssen Sie 4 Bytes nach dem **dwdataoffset** suchen, um die Dateiposition nach dem Formulartyp festzulegen.
+Da **dwDataOffset** den Offset bis zum Anfang des Datenteils des Blockes angibt, müssen Sie nach 4 Bytes nach **dwDataOffset** suchen, um die Dateiposition nach dem Formulartyp festzulegen.
 
- 
+ 
 
- 
+ 

@@ -1,9 +1,9 @@
 ---
-title: Open-Befehl (corecrt \_ IO. h)
-description: Der Open-Befehl initialisiert ein Gerät. Dieser Befehl wird von allen MCI-Geräten erkannt.
+title: open-Befehl (Corecrt \_ io.h)
+description: Mit dem Befehl open wird ein Gerät initialisiert. Dieser Befehl wird von allen MCI-Geräten erkannt.
 ms.assetid: 0bb97c8c-8222-4d4e-b20b-94e9f9095afe
 keywords:
-- Open-Befehl Windows Multimedia
+- Befehl "open" Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac8d31f1806a9c12f764c679548564aa053c3041
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3d2e585a44c19093fa0d20ab4870f579c67cd568c3a693523242b84910e6589d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741432"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118373269"
 ---
-# <a name="open-command"></a>Befehl Öffnen
+# <a name="open-command"></a>Befehl "open"
 
-Der Open-Befehl initialisiert ein Gerät. Dieser Befehl wird von allen MCI-Geräten erkannt.
+Mit dem Befehl open wird ein Gerät initialisiert. Dieser Befehl wird von allen MCI-Geräten erkannt.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion mit dem festgelegten *lpszcommand* -Parameter wie folgt an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) auf, wobei der *lpszCommand-Parameter* wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -41,50 +41,50 @@ _stprintf_s(
 
 <dl> <dt>
 
-<span id="lpszDevice"></span><span id="lpszdevice"></span><span id="LPSZDEVICE"></span>*lpszdevice*
+<span id="lpszDevice"></span><span id="lpszdevice"></span><span id="LPSZDEVICE"></span>*lpszDevice*
 </dt> <dd>
 
-Der Bezeichner eines MCI-Geräts oder Gerätetreibers. Dabei kann es sich entweder um einen Gerätenamen (wie in der Registrierung oder in der SYSTEM.INI-Datei angegeben) oder um den Dateinamen des Gerätetreibers handeln. Wenn Sie den Dateinamen des Gerätetreibers angeben, können Sie optional den einschließen. DRV-Erweiterung, Sie sollten jedoch nicht den Pfad zur Datei einschließen.
+Bezeichner eines MCI-Geräts oder -Gerätetreibers. Dies kann entweder ein Gerätename (wie in der Registrierung oder in der SYSTEM.INI-Datei angegeben) oder der Dateiname des Gerätetreibers sein. Wenn Sie den Dateinamen des Gerätetreibers angeben, können Sie optional einschließen. DRV-Erweiterung, aber Sie sollten den Pfad zur Datei nicht einschließen.
 
 </dd> <dt>
 
-<span id="lpszOpenFlags"></span><span id="lpszopenflags"></span><span id="LPSZOPENFLAGS"></span>*lpszopenflags*
+<span id="lpszOpenFlags"></span><span id="lpszopenflags"></span><span id="LPSZOPENFLAGS"></span>*lpszOpenFlags*
 </dt> <dd>
 
-Flag, das angibt, was initialisiert werden soll. In der folgenden Tabelle werden die Gerätetypen aufgelistet, die den **geöffneten** Befehl und die von den einzelnen Typen verwendeten Flags erkennen.
+Flag, das angibt, was initialisiert werden soll. In der folgenden Tabelle sind Gerätetypen aufgeführt, die den **geöffneten** Befehl und die von den einzelnen Typen verwendeten Flags erkennen.
 
 
 
 | Wert        | Bedeutung                                                        | Bedeutung                                                                         |
 |--------------|----------------------------------------------------------------|---------------------------------------------------------------------------------|
-| CDAudio      | Alias *- \_ geräteralias* freigegeben                                  | Typ des *Geräte \_ Typs*                                                             |
-| Digitalvideo | Alias *Gerät \_ aliaselementname* nostatic übergeordnetes *HWND* freigegeben | Stil für Stil des untergeordneten Stils im Stil *von \_ Popup Stil Typen Typ* *\_ Gerätetyp* |
-| overlay      | Alias *- \_ Gerätealias* übergeordnetes *HWND*-Element mit shardstil         | Stil des Stil Überlapp enden Stils *Stil \_ Typs* Typ *\_ Gerätetyp*             |
-| sequencer    | Alias *- \_ geräteralias* freigegeben                                 | Typ des *Geräte \_ Typs*                                                             |
-| VCR          | Alias *- \_ geräteralias* freigegeben                                  | Typ des *Geräte \_ Typs*                                                             |
-| Videodisk    | Alias *- \_ geräteralias* freigegeben                                  | Typ des *Geräte \_ Typs*                                                             |
-| waveaudiodatei    | Alias Puffer *\_ Größe* des Alias *Geräts \_*                     | *\_ Gerätetyp* "freigegeben Type"                                                    |
+| cdaudio      | alias *device \_ alias* sharable                                  | *Typ des \_ Gerätetyps*                                                             |
+| digitalvideo | alias *device \_ aliaselementname* nostatic parent *hwnd* sharable | stil child style overlapped style popup *style \_ style type* device type device *\_ type* |
+| overlay      | alias *device \_ alias* parent *hwnd* sharable style child         | Stil überlappender Stil popup style *\_ type type* device type *(Stiltyp des Stiltyps \_ gerätetyp* überlappend)             |
+| sequencer    | alias *device \_ alias* sharable                                 | *Typ des \_ Gerätetyps*                                                             |
+| Vcr          | alias *device \_ alias* sharable                                  | *Typ des \_ Gerätetyps*                                                             |
+| videodisk    | alias *device \_ alias* sharable                                  | *Typ des \_ Gerätetyps*                                                             |
+| Waveaudio    | Puffergröße für *\_ Aliasgerätealiaspuffer* *\_*                     | *\_ Gerätetyp* "Sharable"                                                    |
 
 
 
  
 
-In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszopenflags** -Parameter und deren Bedeutung angegeben werden können.
+Die folgende Tabelle enthält die Flags, die im **lpszOpenFlags-Parameter** angegeben werden können, und ihre Bedeutungen.
 
 
 
 | Wert                 | Bedeutung                                                                                                                                                                                                                                                                                                                                                              |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Alias *- \_ Gerätealias* | Gibt einen alternativen Namen für das angegebene Gerät an. Wenn dieser Wert angegeben ist, muss er in nachfolgenden Befehlen als *Geräte- \_ ID* verwendet werden.                                                                                                                                                                                                                                          |
-| *Elementname*         | Gibt den Namen des Geräte Elements (Datei) an, das beim Öffnen des Geräts geladen wird.                                                                                                                                                                                                                                                                                        |
-| Puffer *Puffer \_ Größe* | Legt die Größe des Puffers, der vom Waveform-Audiogerät verwendet wird, in Sekunden fest. Die Standardgröße des Puffers wird festgelegt, wenn das Waveform-Audiogerät installiert oder konfiguriert wird. In der Regel ist die Puffergröße auf 4 Sekunden festgelegt. Mit dem MCIWave-Gerät beträgt die Mindestgröße 2 Sekunden, und die maximale Größe beträgt 9 Sekunden.                                                |
-| übergeordnetes *HWND*         | Gibt das Fenster Handle des übergeordneten Fensters an.                                                                                                                                                                                                                                                                                                                    |
-| freigegeben              | Initialisiert das Gerät oder die Datei als Sharable. Bei nachfolgenden versuchen, das Gerät oder die Datei zu öffnen, tritt ein Fehler auf, es sei denn, Sie geben "sharable" in den ursprünglichen **und nachfolgenden** MCI gibt einen ungültigen Gerätefehler zurück, wenn das Gerät bereits geöffnet ist und nicht freigegeben werden kann.<br/> Die mciseq Sequencer-und MCIWave-Geräte unterstützen keine freigegebenen Dateien.<br/> |
-| untergeordnetes Stil           | Öffnet ein Fenster mit einem untergeordneten Fenster Stil.                                                                                                                                                                                                                                                                                                                            |
-| überschlender Stil      | Öffnet ein Fenster mit einem überlappenden Fenster Stil.                                                                                                                                                                                                                                                                                                                      |
-| Stil-Popup           | Öffnet ein Fenster mit einem Popup Fenster Stil.                                                                                                                                                                                                                                                                                                                           |
-| Stil *\_ Stiltyp*   | Gibt einen Fenster Stil an.                                                                                                                                                                                                                                                                                                                                            |
-| Typ des *Geräte \_ Typs*   | Gibt den Gerätetyp einer Datei an.                                                                                                                                                                                                                                                                                                                                 |
+| *\_ Aliasgerätealias* | Gibt einen alternativen Namen für das angegebene Gerät an. Falls angegeben, muss sie in nachfolgenden Befehlen als *\_ Geräte-ID* verwendet werden.                                                                                                                                                                                                                                          |
+| *Elementname*         | Gibt den Namen des Geräteelements (Datei) an, das beim Öffnen des Geräts geladen wird.                                                                                                                                                                                                                                                                                        |
+| *\_ Pufferpuffergröße* | Legt die Größe des Puffers in Sekunden fest, der vom Waveform-Audio-Gerät verwendet wird. Die Standardgröße des Puffers wird festgelegt, wenn das Waveform-Audio-Gerät installiert oder konfiguriert wird. In der Regel ist die Puffergröße auf 4 Sekunden festgelegt. Beim MCIWAVE-Gerät beträgt die Mindestgröße 2 Sekunden und die maximale Größe 9 Sekunden.                                                |
+| übergeordnetes *hwnd*         | Gibt das Fensterhandle des übergeordneten Fensters an.                                                                                                                                                                                                                                                                                                                    |
+| Freigebbar              | Initialisiert das Gerät oder die Datei als trennbar. Nachfolgende Versuche, das Gerät oder die Datei zu öffnen, schlagen fehl, es sei denn, Sie geben "sharable" in den ursprünglichen und nachfolgenden **geöffneten** Befehlen an. MCI gibt einen ungültigen Gerätefehler zurück, wenn das Gerät bereits geöffnet und nicht zu trennen ist.<br/> Die MCISEQ-Sequencer- und MCIWAVE-Geräte unterstützen keine freigegebenen Dateien.<br/> |
+| untergeordnetes Format           | Öffnet ein Fenster mit einem untergeordneten Fensterstil.                                                                                                                                                                                                                                                                                                                            |
+| Format überlappend      | Öffnet ein Fenster mit einem überlappend formatierten Fenster.                                                                                                                                                                                                                                                                                                                      |
+| Stil-Popup           | Öffnet ein Fenster mit einem Popupfensterstil.                                                                                                                                                                                                                                                                                                                           |
+| *Stiltyp \_*   | Gibt einen Fensterstil an.                                                                                                                                                                                                                                                                                                                                            |
+| *Typ des \_ Gerätetyps*   | Gibt den Gerätetyp einer Datei an.                                                                                                                                                                                                                                                                                                                                 |
 
 
 
@@ -92,24 +92,24 @@ In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszopenflags** 
 
 </dd> <dt>
 
-<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszflags*
+<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify" oder beides sein. Weitere Informationen zu diesen Flags finden Sie [unter warte-, Benachrichtigungs-und testflags](the-wait-notify-and-test-flags.md).
+Kann "wait", "notify" oder beides sein. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-MCI reserviert "CDAudio" für den CD-audiogerätetyp "Videodisk" für den Videodisk-Gerätetyp "Sequencer" für den Typ des MIDI Sequencer-Geräts, "AVIVideo" für den Gerätetyp Digital-Video und "waveaudiodatei" für den Typ "Waveform-Audiogerät".
+MCI reserviert "cdaudio" für den CD-Audiogerätetyp, "videodisc" für den Gerätetyp "videodisc", "sequencer" für den GERÄTEtyp "WAVE Sequencer", "AVIVideo" für den Gerätetyp "digital-video" und "waveaudio" für den Gerätetyp waveform-audio.
 
-Als Alternative zum Flag "Type" kann MCI das Gerät basierend auf der von der Datei verwendeten Erweiterung auswählen, wie in der Registrierung oder im \[ MCI-Erweiterungs \] Abschnitt der SYSTEM.INI Datei aufgezeichnet.
+Als Alternative zum Flag "type" kann MCI das Gerät basierend auf der von der Datei verwendeten Erweiterung auswählen, wie in der Registrierung oder im \[ Abschnitt mci-Erweiterung \] der SYSTEM.INI-Datei aufgezeichnet.
 
-MCI kann AVI-Dateien mithilfe eines Datei Schnittstellen Zeigers oder eines Stream-Schnittstellen Zeigers öffnen. Wenn Sie eine Datei mit einer der beiden Schnittstellen Zeiger Typen öffnen möchten, geben Sie ein @-Zeichen gefolgt vom Schnittstellen Zeiger anstelle des Datei-oder Geräte namens für den *lpszdevice* -Parameter an. Weitere Informationen über die Datei-und streamschnittstellen finden Sie unter " [avifile-Funktionen und-Makros](avifile-functions-and-macros.md)".
+MCI kann AVI-Dateien öffnen, indem ein Dateischnittstellenzeiger oder ein Streamschnittstellenzeiger verwendet wird. Um eine Datei mit einem der Schnittstellenzeigertypen zu öffnen, geben Sie ein at-Zeichen (@) gefolgt vom Schnittstellenzeiger anstelle der Datei oder des Gerätenamens für den *lpszDevice-Parameter* an. Weitere Informationen zu den Datei- und Streamschnittstellen finden Sie unter [AVIFile Functions and Macros](avifile-functions-and-macros.md).
 
 Mit dem folgenden Befehl wird das Gerät "mysound" geöffnet.
 
@@ -117,21 +117,21 @@ Mit dem folgenden Befehl wird das Gerät "mysound" geöffnet.
 open new type waveaudio alias mysound buffer 6
 ```
 
-Mit dem Gerätenamen "New" bereitet der Wellenform-Treiber eine neue Wellenform-Ressource vor. Der Befehl weist den Gerätealias "mysound" zu und gibt einen 6-Sekunden-Puffer an.
+Mit dem Gerätenamen "new" bereitet der Waveform-Treiber eine neue Waveformressource vor. Der Befehl weist den Gerätealias "mysound" zu und gibt einen Puffer von 6 Sekunden an.
 
-Sie können das Flag "Type" entfernen, wenn Sie den Gerätenamen mit dem Dateinamen kombinieren. MCI erkennt diese Kombination, wenn Sie die folgende Syntax verwenden:
+Sie können das Flag "type" entfernen, wenn Sie den Gerätenamen mit dem Dateinamen kombinieren. MCI erkennt diese Kombination, wenn Sie die folgende Syntax verwenden:
 
-*Geräte \_ Name* ! *Element \_ Name*
+*\_ Gerätename* ! *\_Elementname*
 
-Das Ausrufezeichen trennt den Gerätenamen vom Dateinamen. Das Ausrufezeichen sollte nicht durch Leerzeichen getrennt werden.
+Das Ausrufezeichen trennt den Gerätenamen vom Dateinamen. Das Ausrufezeichen darf nicht durch Leerzeichen getrennt werden.
 
-Im folgenden Beispiel wird das Recht geöffnet. WAV-Datei, die das Gerät "WaveAudio" verwendet.
+Im folgenden Beispiel wird right geöffnet. WAV-Datei mit dem Gerät "waveaudio".
 
 ``` syntax
 open waveaudio!right.wav
 ```
 
-Der MCIWave-Treiber erfordert ein asynchrones Waveform-Audiogerät.
+Der MCIWAVE-Treiber erfordert ein asynchrones Waveform-Audiogerät.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -141,18 +141,18 @@ Der MCIWave-Treiber erfordert ein asynchrones Waveform-Audiogerät.
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Corecrt \_ IO. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Corecrt \_ io.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
-[MCI-Befehls Zeichenfolgen](mci-command-strings.md)
+[MCI-Befehlszeichenfolgen](mci-command-strings.md)
 </dt> </dl>
 
  

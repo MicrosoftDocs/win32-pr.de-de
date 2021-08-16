@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. setcolumnwidth
-description: 'Die setcolumnwidth-Methode gibt die Spaltenbreite an und ändert den Größen Änderungs Modus der Spalte in \ 0034; Korrigiert: \ 0034;.'
+title: PLAYLIST.setColumnWidth
+description: Die setColumnWidth-Methode gibt die Spaltenbreite an und ändert den Größenänderungsmodus der Spalte in \0034; Behoben\ 0034;.
 ms.assetid: 6eebea0a-48f2-4300-b535-78744db6fea4
 keywords:
-- Wiedergabeliste. setcolumnwidth Windows Media Player
+- PLAYLIST.setColumnWidth Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a751285ee2eff615f6d5827d57deebac74f34305
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5805871facea0074b257934d9297f7f678598c6def56aad589bfe6a2b1b8fb87
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118335757"
 ---
-# <a name="playlistsetcolumnwidth"></a>Wiedergabeliste. setcolumnwidth
+# <a name="playlistsetcolumnwidth"></a>PLAYLIST.setColumnWidth
 
-Die **setcolumnwidth** -Methode gibt die Spaltenbreite an und ändert den Größen Änderungs Modus der Spalte in "Fixed".
+Die **setColumnWidth-Methode** gibt die Spaltenbreite an und ändert den Größenänderungsmodus der Spalte in "Fixed".
 
 ``` syntax
         elementID.setColumnWidth(column, width)
@@ -32,17 +32,17 @@ Die **setcolumnwidth** -Methode gibt die Spaltenbreite an und ändert den Größ
 
 <dl> <dt>
 
-<span id="column"></span><span id="COLUMN"></span>*Kolumne*
+<span id="column"></span><span id="COLUMN"></span>*Spalte*
 </dt> <dd>
 
-**Zahl** (**Long**), die den Index der Spalte angibt, die geändert wird.
+**Zahl** (**long**), die den Index der spalte angibt, die geändert wird.
 
 </dd> <dt>
 
 <span id="width"></span><span id="WIDTH"></span>*Breite*
 </dt> <dd>
 
-**Zahl** (**Long**), die die neue Breite in Pixel angibt.
+**Zahl** (**long**), die die neue Breite in Pixel angibt.
 
 </dd> </dl>
 
@@ -56,18 +56,18 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> <dt>
 
-[**Wiedergabeliste. setcolumnresizemode**](playlist-setcolumnresizemode.md)
+[**PLAYLIST.setColumnResizeMode**](playlist-setcolumnresizemode.md)
 </dt> </dl>
 
  

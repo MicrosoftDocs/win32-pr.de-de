@@ -1,9 +1,9 @@
 ---
-title: Delay (registrationtriggertype)-Element
-description: Gibt die Zeitspanne zwischen dem Registrieren der Aufgabe und dem Start der Aufgabe an.
+title: Delay-Element (registrationTriggerType)
+description: Gibt die Zeit zwischen dem Zeitpunkt der Registrierung und dem Start der Aufgabe an.
 ms.assetid: 8955d86c-8306-45e7-93cf-eacf50e10075
 keywords:
-- Verzögertes Element Taskplaner
+- Delay-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4fe1a580a0e69c8e4816022971b2d0bc143544cc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cd7ba3e9fd0fb71da628ee15bc0f1bdf6281e74ef20f259faf7a5a63504a6f12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743777"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118131849"
 ---
-# <a name="delay-registrationtriggertype-element"></a>Delay (registrationtriggertype)-Element
+# <a name="delay-registrationtriggertype-element"></a>Delay-Element (registrationTriggerType)
 
-Gibt die Zeitspanne zwischen dem Registrieren der Aufgabe und dem Start der Aufgabe an. Das Format dieser Zeichenfolge lautet pnynmndtnhnmns. dabei ist "NY" die Anzahl der Jahre, "nm" die Anzahl von Monaten, "ND" die Anzahl der Tage, "t" ist das Trennzeichen für Datum/Uhrzeit, "NH" die Anzahl von Stunden, "nm" die Anzahl der Minuten und "NS" die Anzahl von Sekunden (z Weitere Informationen zum Duration-Typ finden Sie unter <https://go.microsoft.com/fwlink/p/?linkid=106886> .
+Gibt die Zeit zwischen dem Zeitpunkt der Registrierung und dem Start der Aufgabe an. Das Format für diese Zeichenfolge ist PnYnMnDTnHnMnS, Dabei steht nY für die Anzahl von Jahren, nM für die Anzahl der Monate, nD für die Anzahl von Tagen, "T" für das Datums-/Uhrzeittrennzeichen, nH für die Anzahl von Stunden, nM für die Anzahl von Minuten und nS für die Anzahl von Sekunden (pt5M gibt beispielsweise 5 Minuten an, und P1M4DT2H5M gibt einen Monat, vier Tage, zwei Stunden und fünf Minuten an). Weitere Informationen zum Dauertyp finden Sie unter <https://go.microsoft.com/fwlink/p/?linkid=106886> .
 
 ``` syntax
 <xs:element name="Delay"
@@ -30,7 +30,7 @@ Gibt die Zeitspanne zwischen dem Registrieren der Aufgabe und dem Start der Aufg
  />
 ```
 
-Das **Delay** -Element wird durch den komplexen Typ [**registrationtriggertype**](taskschedulerschema-registrationtriggertype-complextype.md) definiert.
+Das **Delay-Element** wird durch den komplexen [**RegistrationTriggerType-Typ**](taskschedulerschema-registrationtriggertype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,19 +38,19 @@ Das **Delay** -Element wird durch den komplexen Typ [**registrationtriggertype**
 
 | Element                                                                                     | Abgeleitet von                                                                               | BESCHREIBUNG                                                                    |
 |---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| [**Registration-Auslösers**](taskschedulerschema-registrationtrigger-triggergroup-element.md) | [**registrationtriggertype**](taskschedulerschema-registrationtriggertype-complextype.md) | Gibt einen-Typ an, der einen Task startet, wenn der Task registriert wird.<br/> |
+| [**RegistrationTrigger**](taskschedulerschema-registrationtrigger-triggergroup-element.md) | [**registrationTriggerType**](taskschedulerschema-registrationtriggertype-complextype.md) | Gibt einen Trigger an, der eine Aufgabe startet, wenn die Aufgabe registriert wird.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skripterstellung wird die Verzögerung des Registrierungs Auslösers mithilfe der [**registrationauslöst. Delay**](registrationtrigger-delay.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird die Verzögerung des Registrierungstriggers mithilfe der [**RegistrationTrigger.Delay-Eigenschaft**](registrationtrigger-delay.md) angegeben.
 
-Bei der C++-Entwicklung wird die Verzögerung des Registrierungs Auslösers mithilfe der [**iregistration-:D Elay**](/windows/desktop/api/taskschd/nf-taskschd-iregistrationtrigger-get_delay) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird die Verzögerung des Registrierungstriggers mithilfe der [**IRegistrationTrigger::D elay-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iregistrationtrigger-get_delay) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert eine Registrierungs-Auslöserverzögerung, die eine 5-minütige Verzögerung zwischen dem Zeitpunkt der Registrierung und dem Start der Aufgabe zulässt.
+Der folgende XML-Code definiert eine Verzögerung des Registrierungstriggers, die eine Verzögerung von 5 Minuten zwischen der Registrierung des Task und dem Start des Task zulässt.
 
 
 ```XML
@@ -72,16 +72,16 @@ Der folgende XML-Code definiert eine Registrierungs-Auslöserverzögerung, die e
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

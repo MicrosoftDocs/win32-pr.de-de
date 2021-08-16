@@ -1,7 +1,7 @@
 ---
-description: 'Die isamplegrabbercb-Schnittstelle stellt Rückruf Methoden für die isamplegrabber:: SetCallback-Methode bereit. Wenn die Anwendung diese Methode aufruft, muss Sie diese Schnittstelle implementieren. Weitere Informationen finden Sie unter isamplegrabber.'
+description: Die ISampleGrabberCB-Schnittstelle stellt Rückrufmethoden für die ISampleGrabber::SetCallback-Methode bereit. Wenn Ihre Anwendung diese Methode aufruft, muss sie diese Schnittstelle implementieren. Weitere Informationen finden Sie unter ISampleGrabber.
 ms.assetid: 30166d1b-cc37-43c4-8f64-681d8f2013b9
-title: Isamplegrabbercb-Schnittstelle (qedit. h)
+title: ISampleGrabberCB-Schnittstelle (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,52 +14,52 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 5c39d11e6560bc5e50a4c8a9b42a1cbb095b4b71
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 822eef97ebd2ff169631f0e4d83cdfe3417388389e112851f5e77dcd7216acfd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358314"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117817502"
 ---
-# <a name="isamplegrabbercb-interface"></a>Isamplegrabbercb-Schnittstelle
+# <a name="isamplegrabbercb-interface"></a>ISampleGrabberCB-Schnittstelle
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `ISampleGrabberCB` Schnittstelle stellt Rückruf Methoden für die [**isamplegrabber:: SetCallback**](isamplegrabber-setcallback.md) -Methode bereit. Wenn die Anwendung diese Methode aufruft, muss Sie diese Schnittstelle implementieren. Weitere Informationen finden Sie unter [**isamplegrabber**](isamplegrabber.md).
+Die `ISampleGrabberCB` -Schnittstelle stellt Rückrufmethoden für die [**ISampleGrabber::SetCallback-Methode**](isamplegrabber-setcallback.md) bereit. Wenn Ihre Anwendung diese Methode aufruft, muss sie diese Schnittstelle implementieren. Weitere Informationen finden Sie unter [**ISampleGrabber**](isamplegrabber.md).
 
 ## <a name="members"></a>Member
 
-Die **isamplegrabbercb** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Isamplegrabbercb** verfügt auch über die folgenden Typen von Membern:
+Die **ISampleGrabberCB-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **ISampleGrabberCB** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **isamplegrabbercb** -Schnittstelle verfügt über diese Methoden.
+Die **ISampleGrabberCB-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                        | BESCHREIBUNG                                                              |
+| Methode                                        | Beschreibung                                                              |
 |:----------------------------------------------|:-------------------------------------------------------------------------|
-| [**Buffercb**](isamplegrabbercb-buffercb.md) | Rückruf Methode, die einen Zeiger auf den Beispiel Puffer empfängt.<br/> |
-| [**Samplecb**](isamplegrabbercb-samplecb.md) | Rückruf Methode, die einen Zeiger auf das Medien Beispiel empfängt.<br/>  |
+| [**BufferCB**](isamplegrabbercb-buffercb.md) | Rückrufmethode, die einen Zeiger auf den Beispielpuffer empfängt.<br/> |
+| [**SampleCB**](isamplegrabbercb-samplecb.md) | Rückrufmethode, die einen Zeiger auf das Medienbeispiel empfängt.<br/>  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -69,8 +69,8 @@ Die **isamplegrabbercb** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 

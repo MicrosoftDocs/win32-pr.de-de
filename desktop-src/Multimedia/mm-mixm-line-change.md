@@ -1,9 +1,9 @@
 ---
-title: MM_MIXM_LINE_CHANGE Meldung (MMSYSTEM. h)
-description: Die Meldung der mm \_ -mixm- \_ Zeilen \_ Änderung wird von einem Mischgerät gesendet, um eine Anwendung zu benachrichtigen, dass sich der Status einer audiozeile auf dem angegebenen Gerät geändert hat. Die Anwendung sollte die Anzeige und die zwischengespeicherten Werte für die angegebene Audiolinie aktualisieren.
+title: MM_MIXM_LINE_CHANGE Nachricht (Mmsystem.h)
+description: Die \_ MM MIXM \_ LINE \_ CHANGE-Nachricht wird von einem Mixergerät gesendet, um eine Anwendung darüber zu informieren, dass sich der Zustand einer Audiozeile auf dem angegebenen Gerät geändert hat. Die Anwendung sollte ihre Anzeige- und zwischengespeicherten Werte für die angegebene Audiozeile aktualisieren.
 ms.assetid: 68ada0be-9dc5-4edf-b924-ef0d10a1b79a
 keywords:
-- MM_MIXM_LINE_CHANGE-Nachricht (Multimedia)
+- MM_MIXM_LINE_CHANGE nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 92c4aa10d9934f8cf5f5747ecb4e4eb736af2655
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ed3bd1c122d5e0cf62aa39266da547cd3701e43e6afbf01b853c7d24040504d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345910"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118373579"
 ---
-# <a name="mm_mixm_line_change-message"></a>Meldung zur mm- \_ mixm- \_ Zeilen \_ Änderung
+# <a name="mm_mixm_line_change-message"></a>MM \_ MIXM \_ LINE \_ CHANGE-Meldung
 
-Die Meldung der **mm- \_ mixm- \_ Zeilen \_ Änderung** wird von einem Mischgerät gesendet, um eine Anwendung zu benachrichtigen, dass sich der Status einer audiozeile auf dem angegebenen Gerät geändert hat. Die Anwendung sollte die Anzeige und die zwischengespeicherten Werte für die angegebene Audiolinie aktualisieren.
+Die **MM \_ MIXM LINE \_ \_ CHANGE-Nachricht** wird von einem Mixergerät gesendet, um eine Anwendung darüber zu informieren, dass sich der Zustand einer Audiozeile auf dem angegebenen Gerät geändert hat. Die Anwendung sollte ihre Anzeige- und zwischengespeicherten Werte für die angegebene Audiozeile aktualisieren.
 
 
 ```C++
@@ -38,23 +38,23 @@ lParam = (LPARAM) dwLineID
 
 <dl> <dt>
 
-<span id="hMixer"></span><span id="hmixer"></span><span id="HMIXER"></span>*hmixer*
+<span id="hMixer"></span><span id="hmixer"></span><span id="HMIXER"></span>*hMixer*
 </dt> <dd>
 
-Handle für das Mischgerät, das die Benachrichtigungs Meldung gesendet hat.
+Handle für das Mixergerät, das die Benachrichtigungsmeldung gesendet hat.
 
 </dd> <dt>
 
-<span id="dwLineID"></span><span id="dwlineid"></span><span id="DWLINEID"></span>*dwlineid*
+<span id="dwLineID"></span><span id="dwlineid"></span><span id="DWLINEID"></span>*dwLineID*
 </dt> <dd>
 
-Zeilen Bezeichner für die audiozeile, die den Zustand geändert hat. Dieser Bezeichner ist identisch mit dem **dwlineid** -Member der **mixerline**-Struktur, die von der **mixergetlineinfo**-Funktion zurückgegeben wird.
+Zeilenbezeichner für die Audiozeile, deren Status geändert wurde. Dieser Bezeichner entspricht dem **dwLineID-Member** der **MIXERLINE-Struktur,** die von der **mixerGetLineInfo-Funktion** zurückgegeben wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung muss ein Mischgerät öffnen und ein Rückruf Fenster angeben, um die **mm- \_ mixm- \_ Zeilen \_ Änderungs** Meldung zu empfangen.
+Eine Anwendung muss ein Mixergerät öffnen und ein Rückruffenster angeben, um die **MM \_ MIXM \_ LINE \_ CHANGE-Meldung** zu empfangen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,18 +64,18 @@ Eine Anwendung muss ein Mischgerät öffnen und ein Rückruf Fenster angeben, um
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Audiomixer](audio-mixers.md)
 </dt> <dt>
 
-[Audiomischmeldungen](audio-mixer-messages.md)
+[Audio Mixer Nachrichten](audio-mixer-messages.md)
 </dt> </dl>
 
  

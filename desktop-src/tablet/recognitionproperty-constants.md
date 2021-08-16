@@ -1,21 +1,21 @@
 ---
-description: Definiert Werte, die die Eigenschaften einer Erkennungs Alternative angeben. Die Tablet PC-API (Application Programming Interface) verwendet Global Unique Bezeichner (GUIDs), um Paket Eigenschaften zu identifizieren, die in Automation Konstante Zeichen folgen sind.
+description: Definiert Werte, die die Eigenschaften eines Erkennungswechsels angeben. Die Anwendungsprogrammierschnittstelle (Application Programming Interface, API) von Tablet PC verwendet GUIDs (Globally Unique Identifiers), um Paketeigenschaften zu identifizieren, bei denen es sich in Automation um konstante Zeichenfolgen handelt.
 ms.assetid: 2bfb0cbf-73a3-4e83-a4e9-f0803bd3dee8
-title: Erkentionproperty-Konstanten (msink AUT. h)
+title: RecognitionProperty-Konstanten (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 62971276b6348af3d8ac971851d70b03f7b003c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cd18aeae50e0ae08337dd89a494292a7accbb389e6d02f0b990035fbf9644879
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117856421"
 ---
-# <a name="recognitionproperty-constants"></a>Erkentionproperty-Konstanten
+# <a name="recognitionproperty-constants"></a>RecognitionProperty-Konstanten
 
-Definiert Werte, die die Eigenschaften einer Erkennungs Alternative angeben. Die Tablet PC-API (Application Programming Interface) verwendet Global Unique Bezeichner (GUIDs), um Paket Eigenschaften zu identifizieren, die in Automation Konstante Zeichen folgen sind.
+Definiert Werte, die die Eigenschaften eines Erkennungswechsels angeben. Die Anwendungsprogrammierschnittstelle (Application Programming Interface, API) von Tablet PC verwendet GUIDs (Globally Unique Identifiers), um Paketeigenschaften zu identifizieren, bei denen es sich in Automation um konstante Zeichenfolgen handelt.
 
-In der folgenden Tabelle sind die verfügbaren Eigenschaften der alternativen Erkennungs Eigenschaft Globally Unique Identifier (GUID) aufgelistet. Verwenden Sie diese GUIDs, um auf Eigenschaften eines [**iinkrecognitionalternate**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternate) -Objekts zuzugreifen, indem Sie die [**GetPropertyValue**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognitionalternate-getpropertyvalue) -Methode aufrufen.
+In der folgenden Tabelle sind die verfügbaren Felder für die Erkennung alternativer Eigenschaften mit global eindeutigem Bezeichner (Globally Unique Identifier, GUID) aufgeführt. Verwenden Sie diese GUIDs für den Zugriff auf Eigenschaften eines [**IInkRecognitionAlternate-Objekts,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternate) indem Sie die [**GetPropertyValue-Methode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognitionalternate-getpropertyvalue) aufrufen.
 
 
 
@@ -27,22 +27,22 @@ In der folgenden Tabelle sind die verfügbaren Eigenschaften der alternativen Er
 <thead>
 <tr class="header">
 <th style="text-align: left;">Konstantenname</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
+<th style="text-align: left;">Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><span id="___________INKRECOGNITIONPROPERTY_LINENUMBER_________"></span><span id="___________inkrecognitionproperty_linenumber_________"></span><dl> <dt><strong>INKRECOGNITIONPROPERTY_LINENUMBER</strong></dt> </dl></td>
-<td style="text-align: left;">Der GUID, der die Eigenschaft für die Zeilennummer des <a href="/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternate"><strong>iinkrecognitionalternate</strong></a> -Objekts identifiziert. <br/> LineNumber gibt die Alternativen zu einer bestimmten Zeilennummer an.<br/>
+<td style="text-align: left;">Die GUID, die die Eigenschaft für die Zeilennummer des <a href="/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternate"><strong>IInkRecognitionAlternate-Objekts identifiziert.</strong></a> <br/> LineNumber gibt die Alternativen mit einer bestimmten Zeilennummer an.<br/>
 <blockquote>
 [!Note]<br />
-Dieses Feld wird für Erkennungs Modul von ostasiatischen Zeichen nicht unterstützt.
+Dieses Feld wird für die Erkennen ostasiatischer Zeichen nicht unterstützt.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span id="___________INKRECOGNITIONPROPERTY_SEGMENTATION_________"></span><span id="___________inkrecognitionproperty_segmentation_________"></span><dl> <dt><strong>INKRECOGNITIONPROPERTY_SEGMENTATION</strong></dt> </dl></td>
-<td style="text-align: left;">Der GUID, der die Eigenschaft für die Segmentierung des <a href="/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternate"><strong>iinkrecognitionalternate</strong></a> -Objekts identifiziert. <br/> Segmentierung gibt das grundlegende Freihand Fragment oder die Einheit an, die die Erkennung verwendet, um ein Erkennungs Ergebnis zu erhalten.<br/>
+<td style="text-align: left;">Die GUID, die die Eigenschaft für die Segmentierung des <a href="/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternate"><strong>IInkRecognitionAlternate-Objekts identifiziert.</strong></a> <br/> Segmentierung gibt das grundlegende Ink-Fragment oder die Basiseinheit an, das bzw. die die Erkennung verwendet, um ein Erkennungsergebnis zu erzeugen.<br/>
 <blockquote>
 [!Note]<br />
 Nicht implementiert.
@@ -51,11 +51,11 @@ Nicht implementiert.
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span id="___________INKRECOGNITIONPROPERTY_HOTPOINT_________"></span><span id="___________inkrecognitionproperty_hotpoint_________"></span><dl> <dt><strong>INKRECOGNITIONPROPERTY_HOTPOINT</strong></dt> </dl></td>
-<td style="text-align: left;">Der GUID, der die Eigenschaft für den Erkennungs-Hot Point des <a href="/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternate"><strong>iinkrecognitionalternate</strong></a> -Objekts identifiziert. <br/></td>
+<td style="text-align: left;">Die GUID, die die Eigenschaft für den Erkennungs-Hot Point des <a href="/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternate"><strong>IInkRecognitionAlternate-Objekts identifiziert.</strong></a> <br/></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span id="___________INKRECOGNITIONPROPERTY_MAXIMUMSTROKECOUNT_________"></span><span id="___________inkrecognitionproperty_maximumstrokecount_________"></span><dl> <dt><strong>INKRECOGNITIONPROPERTY_MAXIMUMSTROKECOUNT</strong></dt> </dl></td>
-<td style="text-align: left;">Die GUID, die die Eigenschaft für die maximale Anzahl der Striche des Erkennungs Ergebnisses für das <a href="/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternate"><strong>iinkrecognitionalternate</strong></a> -Objekt identifiziert. <br/>
+<td style="text-align: left;">Die GUID, die die Eigenschaft für die maximale Strichanzahl des Erkennungsergebnis für das <a href="/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternate"><strong>IInkRecognitionAlternate-Objekt identifiziert.</strong></a> <br/>
 <blockquote>
 [!Note]<br />
 Nicht implementiert.
@@ -64,7 +64,7 @@ Nicht implementiert.
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span id="___________INKRECOGNITIONPROPERTY_POINTSPERINCH_________"></span><span id="___________inkrecognitionproperty_pointsperinch_________"></span><dl> <dt><strong>INKRECOGNITIONPROPERTY_POINTSPERINCH</strong></dt> </dl></td>
-<td style="text-align: left;">Die GUID, die die Eigenschaft für die Metrik "Punkte pro Zoll" des <a href="/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternate"><strong>iinkrecognitionalternate</strong></a> -Objekts identifiziert. <br/>
+<td style="text-align: left;">Die GUID, die die Eigenschaft für die Punkt-pro-Zoll-Metrik des <a href="/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternate"><strong>IInkRecognitionAlternate-Objekts</strong></a> identifiziert. <br/>
 <blockquote>
 [!Note]<br />
 Nicht implementiert.
@@ -73,28 +73,28 @@ Nicht implementiert.
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span id="___________INKRECOGNITIONPROPERTY_CONFIDENCELEVEL_________"></span><span id="___________inkrecognitionproperty_confidencelevel_________"></span><dl> <dt><strong>INKRECOGNITIONPROPERTY_CONFIDENCELEVEL</strong></dt> </dl></td>
-<td style="text-align: left;">Die GUID, die die Eigenschaft für die Vertrauens Ebene identifiziert, die die Erkennung im Erkennungs Ergebnis aufweist.<br/>
+<td style="text-align: left;">Die GUID, die die Eigenschaft für die Vertrauensebene identifiziert, über die die Erkennung im Erkennungsergebnis verfügt.<br/>
 <blockquote>
 [!Note]<br />
-Die vertrauensbewertung ist nur für USA Englisch und alle Gesten Erkennungs Tools in Microsoft Windows XP Tablet PC Edition und Windows Vista verfügbar. Methoden, die die Eigenschaft Vertrauen für alle anderen Erkennungs Modul bereitstellen E_NOTIMPL zurückgeben.
+Die Konfidenzauswertung ist nur für USA Englisch und alle Gestenerkennungen in Microsoft Windows XP Tablet PC Edition und Windows Vista verfügbar. Methoden, die die Vertrauenseigenschaft für alle anderen Recognizer bereitstellen, geben E_NOTIMPL.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span id="___________INKRECOGNITIONPROPERTY_LINEMETRICS_________"></span><span id="___________inkrecognitionproperty_linemetrics_________"></span><dl> <dt><strong>INKRECOGNITIONPROPERTY_LINEMETRICS</strong></dt> </dl></td>
-<td style="text-align: left;">Die GUID, die die Eigenschaft für die linienmetriken des <a href="/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternate"><strong>iinkrecognitionalternate</strong></a> -Objekts identifiziert, d. h. die Zeile, für die Metriken abgerufen werden sollen. <br/></td>
+<td style="text-align: left;">Die GUID, die die -Eigenschaft für die Zeilenmetriken des <a href="/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternate"><strong>IInkRecognitionAlternate-Objekts</strong></a> identifiziert. Dies ist die Zeile, für die Metriken abgerufen werden. <br/></td>
 </tr>
 </tbody>
 </table>
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In C++ können Sie auf diese Konstanten in der Header Datei "msink AUT. h" zugreifen, die sich im <systemdrive> \\ Verzeichnis "Programme \\ Microsoft SDKs \\ Windows \\ v 6.0 include" befindet, \\ Wenn Sie das SDK am Standard Speicherort installiert haben.
+In C++ können Sie auf diese Konstanten in der Headerdatei Msinkaut.h zugreifen, die sich im Verzeichnis : Programme <systemdrive> \\ Microsoft \\ SDKs Windows \\ \\ v6.0 \\ Include befindet, wenn Sie das SDK am Standardspeicherort installiert haben.
 
 > [!Note]  
-> In C++ sind diese Konstanten WCHARs, nicht bstrins. Konvertieren Sie diese vor der Verwendung in bstraus. Weitere Informationen zum BSTR-Datentyp finden Sie unter [Verwenden der com-Bibliothek](using-the-com-library.md).
+> In C++ sind diese Konstanten WCHARs, nicht BSTRs. Konvertieren Sie sie vor der Verwendung in BSTRs. Weitere Informationen zum BSTR-Datentyp finden Sie unter [Verwenden der COM-Bibliothek](using-the-com-library.md).
 
  
 
@@ -104,26 +104,26 @@ In C++ können Sie auf diese Konstanten in der Header Datei "msink AUT. h" zugre
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Alternativen Methode (Alternativen withconstantpropertyvalues-Methode)**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognitionalternate-alternateswithconstantpropertyvalues)
+[**AlternatesWithConstantPropertyValues-Methode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognitionalternate-alternateswithconstantpropertyvalues)
 </dt> <dt>
 
-[**Conficealternativen-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognitionalternate-get_confidencealternates)
+[**ConfidenceAlternates-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognitionalternate-get_confidencealternates)
 </dt> <dt>
 
-[**Linealternativen (Eigenschaft)**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognitionalternate-get_linealternates)
+[**LineAlternates-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognitionalternate-get_linealternates)
 </dt> <dt>
 
-[**Iinkrecognitionalternativen-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternates)
+[**IInkRecognitionAlternates-Schnittstelle**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionalternates)
 </dt> </dl>
 
  

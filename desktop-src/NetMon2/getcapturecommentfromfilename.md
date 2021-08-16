@@ -1,7 +1,7 @@
 ---
-description: Die getcapturecommentfromfilename-Funktion extrahiert den Erfassungs Kommentar aus einer Erfassungs Datei.
+description: Die GetCaptureCommentFromFilename-Funktion extrahiert den Erfassungskommentar aus einer Aufzeichnungsdatei.
 ms.assetid: d3665cb0-d54d-45f7-aef9-c2e603d6f773
-title: Getcapturecommentfromfilename-Funktion (Netmon. h)
+title: GetCaptureCommentFromFilename-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 9dbfb086ccc27ad2f4c35018c3384a4b81ef0528
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1b92b81fa00834c3a4038a6a6bb9f295246a7c0b217c99779a5d2c569dbbf982
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345002"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118366811"
 ---
-# <a name="getcapturecommentfromfilename-function"></a>Getcapturecommentfromfilename-Funktion
+# <a name="getcapturecommentfromfilename-function"></a>GetCaptureCommentFromFilename-Funktion
 
-Die **getcapturecommentfromfilename** -Funktion extrahiert den Erfassungs Kommentar aus einer [*Erfassungs Datei*](c.md).
+Die **GetCaptureCommentFromFilename-Funktion** extrahiert den Aufzeichnungskommentar aus einer [*Aufzeichnungsdatei.*](c.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ DWORD  WINAPI GetCaptureCommentFromFilename(
 
 <dl> <dt>
 
-*lpFileName* \[ in\]
+*lpFilename* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Namen der Erfassungs Datei.
+Zeiger auf den Namen der Aufzeichnungsdatei.
 
 </dd> <dt>
 
-*lpcomment* \[ in\]
+*lpComment* \[ In\]
 </dt> <dd>
 
 Zeiger auf eine vorab zugeordnete Zeichenfolge für den Kommentar.
 
 </dd> <dt>
 
-*BufferSize* \[ in\]
+*BufferSize* \[ In\]
 </dt> <dd>
 
 Größe der Zeichenfolge.
@@ -64,7 +64,7 @@ Größe der Zeichenfolge.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist (d. h., wenn der Kommentar gefunden und kopiert wird oder kein Kommentar in der Erfassungs Datei vorhanden ist), ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist (d. h. wenn der Kommentar gefunden und kopiert wird oder kein Kommentar in der Aufzeichnungsdatei vorhanden ist), lautet der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode.
 
@@ -72,20 +72,20 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode.
 
 | Rückgabecode                                                                                                 | Beschreibung                                                                  |
 |-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr- \_ Datei \_ Lese \_ Fehler**</dt> </dl>     | Der Erfassungs Kommentar kann nicht gelesen werden.<br/>                               |
-| <dl> <dt>**Ungültiges nmerr- \_ \_ Datei \_ Format**</dt> </dl> | Der Kommentar Rahmen ist kein gültiges Dateiformat.<br/>                     |
-| <dl> <dt>**die nmerr- \_ Datei wurde \_ nicht \_ gefunden.**</dt> </dl>      | Die vom *lpFileName* -Parameter angegebene Datei kann nicht gefunden werden.<br/> |
-| <dl> <dt>**Ungültiger nmerr- \_ \_ Parameter**</dt> </dl>    | Einer der Parameter ist falsch angegeben.<br/>                   |
+| <dl> <dt>**NMERR \_ FILE READ ERROR (NMERR-DATEILESEFEHLER) \_ \_**</dt> </dl>     | Der Aufzeichnungskommentar kann nicht gelesen werden.<br/>                               |
+| <dl> <dt>**NMERR: \_ UNGÜLTIGES \_ \_ DATEIFORMAT**</dt> </dl> | Der Kommentarrahmen ist kein gültiges Dateiformat.<br/>                     |
+| <dl> <dt>**\_NMERR-DATEI \_ NICHT \_ GEFUNDEN**</dt> </dl>      | Die durch den *lpFilename-Parameter* angegebene Datei kann nicht gefunden werden.<br/> |
+| <dl> <dt>**NMERR \_ – UNGÜLTIGER \_ PARAMETER**</dt> </dl>    | Einer der Parameter wird falsch angegeben.<br/>                   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[*Experten*](e.md) und [*Parser*](p.md) können die **getcapturecommentfromfilename** -Funktion aufrufen.
+[*Experten*](e.md) und [*Parser*](p.md) können die **GetCaptureCommentFromFilename-Funktion** aufrufen.
 
-Um den Kommentar einer echt Zeiterfassung abzurufen, rufen Sie die [getcapturecomment](getcapturecomment.md) -Funktion auf.
+Um den Kommentar einer Echtzeiterfassung abzurufen, rufen Sie die [GetCaptureComment-Funktion](getcapturecomment.md) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,17 +95,17 @@ Um den Kommentar einer echt Zeiterfassung abzurufen, rufen Sie die [getcaptureco
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Getcapturecomment](getcapturecomment.md)
+[GetCaptureComment](getcapturecomment.md)
 </dt> </dl>
 
  

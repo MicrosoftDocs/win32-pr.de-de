@@ -1,11 +1,11 @@
 ---
-title: MS-spp-KMS-IDs-Attribut
-description: Vom Aktivierungs Objekt aktivierte KMS-IDs
+title: ms-SPP-KMS-Ids-Attribut
+description: KMS Vom Aktivierungsobjekt aktivierte IDs
 ms.assetid: b5e11081-202e-4b9a-bf23-8552475f01f0
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-spp-KMS-IDs
-- msspp-kmsids-Attribut AD-Schema
+- MS-SPP-KMS-Ids-Attribut AD-Schema
+- MSSPP-KMSIds-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 77e47103137a52fa2dbcc9cf4eb04ae073191115
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 4fd8296adf05a697f92abc70247681fea4776513c15d1c39c6592a2d15363889
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117838073"
 ---
-# <a name="ms-spp-kms-ids-attribute"></a>MS-spp-KMS-IDs-Attribut
+# <a name="ms-spp-kms-ids-attribute"></a>ms-SPP-KMS-Ids-Attribut
 
-Vom Aktivierungs Objekt aktivierte KMS-IDs
+KMS Vom Aktivierungsobjekt aktivierte IDs
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | MS-spp-KMS-IDs                                        |
-| LDAP-Display-Name | msspp-kmsids                                          |
+| CN                | ms-SPP-KMS-Ids                                        |
+| Ldap-Anzeigename | msSPP-KMSIds                                          |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.2082                               |
 | System-ID-GUID    | 9b663eda-3542-46d6-9df0-314025af2bac                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
@@ -52,16 +52,16 @@ Vom Aktivierungs Objekt aktivierte KMS-IDs
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Falsch                                                                   |
 | Ist indiziert             | Richtig                                                                    |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | 16                                                                      |
 | Range-Upper            | 16                                                                      |
 | Search-Flags           | 0x00000001                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**MS-spp-Activation-Object**](c-msspp-activationobject.md)<br/> |
+| In verwendete Klassen        | [**ms-SPP-Activation-Object**](c-msspp-activationobject.md)<br/> |
 
 
 

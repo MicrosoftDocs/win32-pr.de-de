@@ -1,9 +1,9 @@
 ---
-title: TB_GETBUTTONTEXT Meldung (kommstrg. h)
-description: Ruft den Anzeige Text einer Schaltfläche auf einer Symbolleiste ab.
+title: TB_GETBUTTONTEXT (Commctrl.h)
+description: Ruft den Anzeigetext einer Schaltfläche auf einer Symbolleiste ab.
 ms.assetid: 16dd7181-a404-4056-b084-05f49f5a4b14
 keywords:
-- Windows-Steuerelemente für TB_GETBUTTONTEXT Meldung
+- TB_GETBUTTONTEXT meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ac0b238574cc136f41959b57f3f0e1ec13e3ea1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2ec63815886ecc32f8f0b0759b9f6a8cf847bfe56e6c898fd6e3a3ae8e0f40ac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104181"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117829766"
 ---
-# <a name="tb_getbuttontext-message"></a>TB \_ getbuttontext-Nachricht
+# <a name="tb_getbuttontext-message"></a>TB \_ GETBUTTONTEXT-Nachricht
 
-Ruft den Anzeige Text einer Schaltfläche auf einer Symbolleiste ab.
+Ruft den Anzeigetext einer Schaltfläche auf einer Symbolleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,24 +34,24 @@ Ruft den Anzeige Text einer Schaltfläche auf einer Symbolleiste ab.
 *wParam* 
 </dt> <dd>
 
-Befehls Bezeichner der Schaltfläche, deren Text abgerufen werden soll.
+Befehlsbezeichner der Schaltfläche, deren Text abgerufen werden soll.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Zeiger auf einen Puffer, der den Schaltflächen Text empfängt.
+Zeiger auf einen Puffer, der den Schaltflächentext empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Länge der Zeichenfolge, auf die *LPARAM* zeigt, in Zeichen zurück. Die Länge enthält nicht das abschließende Null Zeichen. Wenn nicht erfolgreich, ist der Rückgabewert-1.
+Gibt die Länge der Zeichenfolge in Zeichen zurück, auf die *lParam zeigt.* Die Länge enthält nicht das beendende NULL-Zeichen. Wenn der Wert nicht erfolgreich ist, ist der Rückgabewert -1.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Sicherheitswarnung:** Wenn Sie diese Meldung falsch verwenden, kann dies die Sicherheit des Programms beeinträchtigen. Diese Meldung bietet keine Möglichkeit, die Größe des Puffers zu kennen. Wenn Sie diese Meldung verwenden, müssen Sie zuerst die Nachricht mit der Übergabe von **null** im *LPARAM*-Element aufzurufen. Dadurch wird die Anzahl der Zeichen zurückgegeben, ausgenommen **null** . Rufen Sie dann die Nachricht ein zweites Mal auf, um die Zeichenfolge abzurufen. Überprüfen Sie die [Sicherheitsaspekte: Microsoft Windows](sec-comctls.md) -Steuerelemente, bevor Sie fortfahren.
+**Sicherheitswarnung:** Wenn Sie diese Meldung falsch verwenden, kann dies die Sicherheit Ihres Programms gefährden. Diese Meldung bietet Ihnen keine Möglichkeit, die Größe des Puffers zu kennen. Wenn Sie diese Meldung verwenden, rufen Sie zuerst die Meldung auf, die **NULL** im *lParam* übergibt. Dadurch wird die Anzahl der zeichen zurückgegeben, mit Ausnahme von **NULL,** die erforderlich sind. Rufen Sie dann die Nachricht ein zweites Mal auf, um die Zeichenfolge abzurufen. Lesen Sie die [Sicherheitsüberlegungen: Microsoft Windows Controls,](sec-comctls.md) bevor Sie fortfahren.
 
 Die zurückgegebene Zeichenfolge entspricht dem Text, der derzeit von der Schaltfläche angezeigt wird.
 
@@ -61,27 +61,27 @@ Die zurückgegebene Zeichenfolge entspricht dem Text, der derzeit von der Schalt
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TB \_ Getbuttontextw** (Unicode) und **TB \_ getbuttontexta** (ANSI)<br/>         |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TB \_ GETBUTTONTEXTW** (Unicode) und **TB \_ GETBUTTONTEXTA** (ANSI)<br/>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**TB \_ getbuttoninfo**](tb-getbuttoninfo.md)
+[**TB \_ GETBUTTONINFO**](tb-getbuttoninfo.md)
 </dt> <dt>
 
-[**TB \_ GetString**](tb-getstring.md)
+[**TB \_ GETSTRING**](tb-getstring.md)
 </dt> <dt>
 
-[**TB \_ SetButtonInfo**](tb-setbuttoninfo.md)
+[**TB \_ SETBUTTONINFO**](tb-setbuttoninfo.md)
 </dt> </dl>
 
  

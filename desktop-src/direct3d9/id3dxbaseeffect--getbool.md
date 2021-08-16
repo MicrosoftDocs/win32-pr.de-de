@@ -1,7 +1,7 @@
 ---
-description: Ruft einen booleschen Wert ab.
+description: Ruft einen BOOL-Wert ab.
 ms.assetid: 9d61efcd-f267-4c45-b685-d363588796f7
-title: 'ID3DXBaseEffect:: getBool-Methode (D3DX9Shader. h)'
+title: ID3DXBaseEffect::GetBool-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 0476c62733379a7e92aca55c3cdc2c31a3526de2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 13fa69c8fd20798f683003bd561193a4079ba48c291248f7d4ce6fe1d0fc5fe4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367493"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118522319"
 ---
-# <a name="id3dxbaseeffectgetbool-method"></a>ID3DXBaseEffect:: getBool-Methode
+# <a name="id3dxbaseeffectgetbool-method"></a>ID3DXBaseEffect::GetBool-Methode
 
-Ruft einen booleschen Wert ab.
+Ruft einen BOOL-Wert ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,19 +41,19 @@ HRESULT GetBool(
 
 <dl> <dt>
 
-*hparameter* \[ in\]
+*hParameter* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9)](handles.md).
 
 </dd> <dt>
 
-*PB* \[ vorgenommen\]
+*pb* \[ out\]
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)\***
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)\***
 
 Gibt einen booleschen Wert zurück.
 
@@ -63,7 +63,7 @@ Gibt einen booleschen Wert zurück.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,12 +71,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

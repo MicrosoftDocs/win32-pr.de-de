@@ -1,9 +1,9 @@
 ---
-title: Mpmanageropen-Funktion (mpclient. h)
-description: Stellt eine Verbindung mit dem Malware Schutz-Manager auf dem lokalen Computer her.
+title: MpManagerOpen-Funktion (MpClient.h)
+description: Stellt eine Verbindung mit dem Malwareschutz-Manager auf dem lokalen Computer her.
 ms.assetid: 40513A74-AFCC-4E22-9B78-D46FEB575A00
 keywords:
-- Mpmanageropen-Funktion Legacy Funktionen der Windows-Umgebung
+- MpManagerOpen-Funktion – Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af432cc7d91530fd3d37176592f7f457b31b6314
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 324d013c46777ac48af32e6c91f557b7feda3a03fbdf0c21a7c79e8cf5e3d9dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743184"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117883365"
 ---
-# <a name="mpmanageropen-function"></a>Mpmanageropen-Funktion
+# <a name="mpmanageropen-function"></a>MpManagerOpen-Funktion
 
-Stellt eine Verbindung mit dem Malware Schutz-Manager auf dem lokalen Computer her.
+Stellt eine Verbindung mit dem Malwareschutz-Manager auf dem lokalen Computer her.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ HRESULT WINAPI MpManagerOpen(
 
 <dl> <dt>
 
-*dwReserved* \[ in\]
+*dwReserved* \[ In\]
 </dt> <dd>
 
 Typ: **DWORD**
@@ -50,12 +50,12 @@ Für die zukünftige Verwendung reserviert. Muss auf 0 festgelegt werden.
 
 </dd> <dt>
 
-*phmphandle* \[ vorgenommen\]
+*phMpHandle* \[ out\]
 </dt> <dd>
 
-Typ: **pmphandle**
+Typ: **PMPHANDLE**
 
-Handle für die Malware Protection Manager-Schnittstelle. Dieses Handle muss mit der [**mplenker close**](mphandleclose.md) -Funktion geschlossen werden.
+Behandeln Sie die Schnittstelle des Schadsoftwareschutz-Managers. Dieses Handle muss mit der [**MpHandleClose-Funktion**](mphandleclose.md) geschlossen werden.
 
 </dd> </dl>
 
@@ -63,9 +63,9 @@ Handle für die Malware Protection Manager-Schnittstelle. Dieses Handle muss mit
 
 Typ: **HRESULT**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert **S \_ OK**. Dieser Funktions Aufrufvorgang ist garantiert auch dann erfolgreich, wenn kein antischadsoftwaredienst ausgeführt wird.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert **S \_ OK.** Dieser Funktionsaufruf ist auch dann erfolgreich, wenn kein AntiMalware-Dienst ausgeführt wird.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT** -Code. Der Aufrufer kann die [**mperrormessageformat**](mperrormessageformat.md) -Funktion verwenden, um eine generische Beschreibung der Fehlermeldung zu erhalten.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT-Code.** Der Aufrufer kann die [**MpErrorMessageFormat-Funktion**](mperrormessageformat.md) verwenden, um eine generische Beschreibung der Fehlermeldung abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,21 +73,21 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>MpClient.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mperrormessageformat**](mperrormessageformat.md)
+[**MpErrorMessageFormat**](mperrormessageformat.md)
 </dt> <dt>
 
-[**Mplenker schließen**](mphandleclose.md)
+[**MpHandleClose**](mphandleclose.md)
 </dt> </dl>
 
  

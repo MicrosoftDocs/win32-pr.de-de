@@ -1,37 +1,37 @@
 ---
-description: Windows 8 deaktiviert standardmäßige Windows 2000-Anzeigetreiber Modell (XDDM)-Spiegelungs Treiber und bietet stattdessen die desktopduplikats-API.
+description: Windows 8 deaktiviert Standardspiegelungstreiber für Windows 2000 Display Driver Model (XDDM) und bietet stattdessen die Desktopduplizierungs-API an.
 ms.assetid: 523FBFAD-5D78-4EE3-A3B7-8FD5BA39DC46
 title: Desktopduplizierungs-API
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ad27f545318254404beb6372344d8dd0cdfdf604
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 93c1960d064d7fd1e34748dcc2efb3c86459b498df91b52c1384ef8698a37c01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104481078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118518496"
 ---
 # <a name="desktop-duplication-api"></a>Desktopduplizierungs-API
 
-Windows 8 deaktiviert standardmäßige Windows 2000-Anzeigetreiber Modell (XDDM)-Spiegelungs Treiber und bietet stattdessen die desktopduplikats-API. Die Desktop Duplizierungs-API bietet Remote Zugriff auf ein Desktop Image für Zusammenarbeits Szenarien. Apps können die Desktop Duplizierungs-API verwenden, um auf Frame-an-Frame-Aktualisierungen auf dem Desktop zuzugreifen. Da apps Aktualisierungen des Desktop Abbilds auf einer DXGI-Oberfläche erhalten, können die apps die gesamte Leistungsfähigkeit der GPU nutzen, um die Abbild Aktualisierungen zu verarbeiten.
+Windows 8 deaktiviert Standardspiegelungstreiber für Windows 2000 Display Driver Model (XDDM) und bietet stattdessen die Desktopduplizierungs-API an. Die Desktopduplizierungs-API bietet Remotezugriff auf ein Desktopimage für Zusammenarbeitsszenarien. Apps können die Desktopduplizierungs-API verwenden, um auf Frame-by-Frame-Updates für den Desktop zuzugreifen. Da Apps Updates für das Desktopimage auf einer DXGI-Oberfläche erhalten, können die Apps die volle Leistungsfähigkeit der GPU nutzen, um die Imageupdates zu verarbeiten.
 
--   [Aktualisieren der Desktop Image Daten](#updating-the-desktop-image-data)
--   [Drehen des Desktop Bilds](#rotating-the-desktop-image)
--   [Aktualisieren des Desktop Zeigers](#updating-the-desktop-pointer)
+-   [Aktualisieren der Desktopimagedaten](#updating-the-desktop-image-data)
+-   [Rotieren des Desktopbilds](#rotating-the-desktop-image)
+-   [Aktualisieren des Desktopzeigers](#updating-the-desktop-pointer)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="updating-the-desktop-image-data"></a>Aktualisieren der Desktop Image Daten
+## <a name="updating-the-desktop-image-data"></a>Aktualisieren der Desktopimagedaten
 
-DXGI bietet eine Oberfläche, die ein aktuelles Desktop Bild durch die neue [**idxgioutputdupli:: acquunesextframe**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-acquirenextframe) -Methode enthält. Das Format des Desktop Bilds lautet immer [**DXGI- \_ Format \_ B8G8R8A8 \_ unorm**](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) , unabhängig vom aktuellen Anzeigemodus. Zusammen mit dieser Oberfläche geben diese [**idxgioutputdupliduplizierungsmethoden**](/windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgioutputduplication) die angezeigten Arten von Informationen zurück, die Ihnen helfen zu bestimmen, welche Pixel auf der Oberfläche verarbeitet werden müssen:
+DXGI stellt über die neue [**IDXGIOutputDuplication::AcquireNextFrame-Methode**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-acquirenextframe) eine Oberfläche bereit, die ein aktuelles Desktopbild enthält. Das Format des Desktopbilds ist immer [**DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM,**](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) unabhängig vom aktuellen Anzeigemodus. Zusammen mit dieser Oberfläche geben diese [**IDXGIOutputDuplication-Methoden**](/windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgioutputduplication) die angegebenen Informationstypen zurück, mit denen Sie bestimmen können, welche Pixel innerhalb der Oberfläche verarbeitet werden müssen:
 
--   [**Idxgioutputdupli:: getframedirtyrects**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-getframedirtyrects) gibt geänderte Bereiche zurück, bei denen es sich um nicht überlappende Rechtecke handelt, die die Bereiche des Desktop Bilds angeben, die das Betriebssystem seit der Verarbeitung des vorherigen Desktop Abbilds aktualisiert hat.
--   [**Idxgioutputduplizierung:: getframemoverects**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-getframemoverects) gibt Verschiebungs Bereiche zurück, bei denen es sich um Rechtecke im Desktop Bild handelt, die das Betriebssystem an einen anderen Speicherort innerhalb desselben Bilds verschoben hat. Jeder Verschiebungs Bereich besteht aus einem Ziel Rechteck und einem Quellpunkt. Der Quellpunkt gibt den Speicherort an, von dem aus das Betriebssystem den Bereich kopiert hat, und das Ziel Rechteck gibt an, wohin das Betriebssystem diese Region verschoben hat. Verschiebungs Bereiche sind immer nicht gestreckte Bereiche, sodass die Quelle immer dieselbe Größe wie das Ziel hat.
+-   [**IDXGIOutputDuplication::GetFrameDirtyRects**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-getframedirtyrects) gibt geänderte Bereiche zurück. Dabei handelt es sich um nicht überlappende Rechtecke, die die Bereiche des Desktopimages angeben, die das Betriebssystem seit der Verarbeitung des vorherigen Desktopimages aktualisiert hat.
+-   [**IDXGIOutputDuplication::GetFrameMoveRects**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-getframemoverects) gibt Verschiebungsregionen zurück. Dabei handelt es sich um Rechtecke von Pixeln im Desktopimage, die das Betriebssystem an eine andere Position innerhalb desselben Images verschoben hat. Jeder Verschiebungsbereich besteht aus einem Zielrechteck und einem Quellpunkt. Der Quellpunkt gibt den Speicherort an, von dem aus das Betriebssystem den Bereich kopiert hat, und das Zielrechteck gibt an, wohin das Betriebssystem diesen Bereich verschoben hat. Verschiebungsregionen sind immer nicht gestreckte Bereiche, sodass die Quelle immer die gleiche Größe wie das Ziel hat.
 
-Angenommen, das Desktop Image wurde über eine langsame Verbindung mit der Remote Client-App übertragen. Die Menge der Daten, die über die Verbindung gesendet wird, wird verringert, indem nur Daten darüber empfangen werden, wie die Client-App Bereiche von Pixeln und nicht die eigentlichen Pixeldaten verschieben muss. Zum Verarbeiten der Verschiebungen muss Ihre Client-App das gesamte letzte Abbild gespeichert haben.
+Angenommen, das Desktopimage wurde über eine langsame Verbindung mit Ihrer Remoteclient-App übertragen. Die Datenmenge, die über die Verbindung gesendet wird, wird reduziert, indem nur Daten darüber empfangen werden, wie Ihre Client-App Bereiche von Pixeln anstatt tatsächlichen Pixeldaten verschieben muss. Um die Verschiebungen zu verarbeiten, muss Ihre Client-App das vollständige letzte Image gespeichert haben.
 
-Wenngleich das Betriebssystem nicht verarbeitete Desktop Abbild Aktualisierungen akkumuliert, kann es nicht mehr genügend Speicherplatz für die genaue Speicherung der Update Regionen gibt. In dieser Situation nimmt das Betriebssystem an, die Updates zu sammeln, indem Sie Sie mit vorhandenen Update Regionen zusammenfügen, um alle neuen Updates abzudecken. Folglich deckt das Betriebssystem Pixel ab, die in diesem Frame noch nicht aktualisiert wurden. Diese Situation erzeugt jedoch keine visuellen Probleme in Ihrer Client-App, da Sie das gesamte Desktop Image und nicht nur die aktualisierten Pixel erhalten.
+Während das Betriebssystem nicht verarbeitete Desktopimageupdates sammelt, ist möglicherweise nicht mehr viel Speicherplatz verfügbar, um die Updatebereiche genau zu speichern. In dieser Situation beginnt das Betriebssystem, die Updates zu sammeln, indem es sie mit vorhandenen Updateregionen zusammensingt, um alle neuen Updates abzudecken. Daher deckt das Betriebssystem Pixel ab, die in diesem Frame noch nicht aktualisiert wurden. Diese Situation erzeugt jedoch keine visuellen Probleme in Ihrer Client-App, da Sie das gesamte Desktopbild und nicht nur die aktualisierten Pixel erhalten.
 
-Um das korrekte Desktop Abbild zu rekonstruieren, muss Ihre Client-App zunächst alle Verschiebungs Regionen verarbeiten und dann alle geänderten Regionen verarbeiten. Diese Listen mit den geänderten und verschiebenden Regionen können vollständig leer sein. Der Beispielcode aus dem Beispiel für eine [Desktop Duplizierung](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/DXGI%20desktop%20duplication%20sample) zeigt, wie die Änderungs-und Verschiebungs Bereiche in einem einzelnen Frame verarbeitet werden:
+Um das richtige Desktopimage zu rekonstruieren, muss Ihre Client-App zuerst alle Verschiebungsregionen und dann alle geänderten Regionen verarbeiten. Eine dieser Listen mit geänderten und verschobenen Regionen kann vollständig leer sein. Der Beispielcode aus dem [Desktopduplizierungsbeispiel](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/DXGI%20desktop%20duplication%20sample) zeigt, wie sowohl die geänderten als auch die Verschiebungsregionen in einem einzelnen Frame verarbeitet werden:
 
 
 ```C++
@@ -164,42 +164,42 @@ HRESULT DUPLICATIONMANAGER::DoneWithFrame()
 
 
 
-## <a name="rotating-the-desktop-image"></a>Drehen des Desktop Bilds
+## <a name="rotating-the-desktop-image"></a>Rotieren des Desktopbilds
 
-Sie müssen Ihrer Client-App zur Desktop Duplizierung expliziten Code hinzufügen, um gedrehte Modi zu unterstützen In einem gedrehten Modus befindet sich die Oberfläche, die Sie von [**idxgioutputdupli:: acquunenextframe**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-acquirenextframe) erhalten, immer in der nicht gedrehten Ausrichtung, und das Desktop Bild wird innerhalb der Oberfläche gedreht. Wenn der Desktop z. b. auf 768x1024 bei 90 °-Drehung festgelegt ist, gibt **acquunenextframe** eine 1024 x 768-Oberfläche zurück, wobei das Desktop Bild darin gedreht wird. Hier finden Sie einige Beispiele für die Rotation.
+Sie müssen Ihrer Desktopduplizierungsclient-App expliziten Code hinzufügen, um rotierte Modi zu unterstützen. In einem gedrehten Modus befindet sich die Oberfläche, die Sie von [**IDXGIOutputDuplication::AcquireNextFrame**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-acquirenextframe) erhalten, immer in der nicht gedrehten Ausrichtung, und das Desktopbild wird innerhalb der Oberfläche gedreht. Wenn der Desktop beispielsweise auf 768 x 1024 bei einer Drehung von 90 Grad festgelegt ist, gibt **AcquireNextFrame** eine 1024 x 768-Oberfläche mit dem darin gedrehten Desktopbild zurück. Hier sind einige Rotationsbeispiele.
 
 
 
-| Anzeigemodus in der Anzeige-Systemsteuerung festgelegt | Von GDI oder DXGI zurückgegebener Anzeigemodus | Von " [ **acquunesextframe** " zurückgegebene Oberfläche](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-acquirenextframe)                |
+| Anzeigemodussatz über die Anzeigesteuerung | Von GDI oder DXGI zurückgegebener Anzeigemodus | Von [ **AcquireNextFrame zurückgegebene** Oberfläche](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-acquirenextframe)                |
 |---------------------------------------------|--------------------------------------|----------------------------------------------------------------------------------------------------------|
-| 1024 x 768-Querformat                          | -Drehung mit 1024 x 768 0 Grad           | 1024 x 768 Zeilen \[ zeiligen Zeilen\] ![nicht gedrehter Remote Desktop](images/dxgi-outdupl-0-rotate.png)<br/>            |
-| 1024 x 768-Hochformat                           | 768x 1024 90 Grad Drehung          | 1024 x 768 Zeilen \[ zeiligen Zeilen\] ![90-Grad-Remote Desktop gedreht](images/dxgi-outdupl-90-rotate.png)<br/>   |
-| 1024 x 768-Querformat (gekippt)                | 1024 x 768 180 Grad Drehung         | 1024 x 768 Zeilen \[ zeiligen Zeilen\] ![180-Grad-Remote Desktop gedreht](images/dxgi-outdupl-180-rotate.png)<br/> |
-| 1024 x 768-Hochformat (gekippt)                 | 768x 1024 270 Grad Drehung         | 1024 x 768 Zeilen \[ zeiligen Zeilen\] ![270-Grad-Remote Desktop gedreht](images/dxgi-outdupl-270-rotate.png)<br/> |
+| 1024 x 768 Querformat                          | Drehung von 1024 x 768 0 Grad           | 1024x768 \[ newline\] ![Nichtrotierter Remotedesktop](images/dxgi-outdupl-0-rotate.png)<br/>            |
+| 1024 x 768 Hochformat                           | Drehung von 768 x 1024 90 Grad          | 1024x768 \[ newline\] ![Gedreht um 90 Grad Remotedesktop](images/dxgi-outdupl-90-rotate.png)<br/>   |
+| 1024 x 768 Querformat (gekippt)                | Drehung von 1024 x 768 180 Grad         | 1024x768 \[ newline\] ![Remotedesktop um 180 Grad gedreht](images/dxgi-outdupl-180-rotate.png)<br/> |
+| 1024 x 768 Hochformat (gekippt)                 | Drehung von 768 x 1024 270 Grad         | 1024x768 \[ newline\] ![Remotedesktop um 270 Grad gedreht](images/dxgi-outdupl-270-rotate.png)<br/> |
 
 
 
  
 
-Der Code in der Client-App für die Desktop Duplizierung muss das Desktop Image entsprechend drehen, bevor Sie das Desktop Bild anzeigen.
+Der Code in Ihrer Desktopduplizierungsclient-App muss das Desktopimage entsprechend drehen, bevor Sie das Desktopbild anzeigen.
 
 > [!Note]  
-> In Szenarios mit mehreren Monitoren können Sie das Desktop Abbild für jeden Monitor unabhängig voneinander drehen.
+> In Szenarien mit mehreren Monitoren können Sie das Desktopimage für jeden Monitor unabhängig drehen.
 
  
 
-## <a name="updating-the-desktop-pointer"></a>Aktualisieren des Desktop Zeigers
+## <a name="updating-the-desktop-pointer"></a>Aktualisieren des Desktopzeigers
 
-Sie müssen die Desktop Duplizierungs-API verwenden, um zu bestimmen, ob Ihre Client-App die Mauszeiger Form auf das Desktop Bild zeichnen muss. Entweder ist der Mauszeiger bereits auf dem Desktop Bild gezeichnet, das [**idxgioutputdupliziert:: acquirren-extframe**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-acquirenextframe) bereitstellt, oder der Mauszeiger ist vom Desktop Bild getrennt. Wenn der Mauszeiger auf das Desktop Bild gezeichnet wird, zeigt der Zeiger Positionsdaten an, die von **acquunenextframe** (im **pointerposition** -Member der [**DXGI \_ outdupl- \_ Frame \_ Info**](/windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_outdupl_frame_info) , auf die der *pframeinfo* -Parameter verweist) gemeldet wird, um anzuzeigen, dass ein separater Zeiger nicht sichtbar ist. Wenn der Grafikadapter den Mauszeiger oberhalb des Desktop Bilds überlagert, meldet " **acquiriesextframe** ", dass ein separater Zeiger sichtbar ist. Daher muss Ihre Client-App die Mauszeiger Form auf das Desktop Bild zeichnen, um genau darzustellen, was dem aktuellen Benutzer auf dem Monitor angezeigt wird.
+Sie müssen die Desktopduplizierungs-API verwenden, um zu bestimmen, ob Ihre Client-App die Mauszeigerform auf das Desktopbild zeichnen muss. Entweder wird der Mauszeiger bereits auf das Desktopbild gezeichnet, das [**IDXGIOutputDuplication::AcquireNextFrame**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-acquirenextframe) bereitstellt, oder der Mauszeiger ist vom Desktopbild getrennt. Wenn der Mauszeiger auf das Desktopbild gezeichnet wird, geben die Zeigerpositionsdaten, die von **AcquireNextFrame** gemeldet werden (im **PointerPosition-Element** von [**DXGI \_ OUTDUPL \_ FRAME \_ INFO,**](/windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_outdupl_frame_info) auf das der *pFrameInfo-Parameter* zeigt), an, dass kein separater Zeiger sichtbar ist. Wenn der Grafikadapter den Mauszeiger über dem Desktopbild überlagert, meldet **AcquireNextFrame,** dass ein separater Zeiger sichtbar ist. Daher muss Ihre Client-App die Mauszeigerform auf das Desktopbild zeichnen, um genau darzustellen, was dem aktuellen Benutzer auf dem Monitor angezeigt wird.
 
-Um den Mauszeiger des Desktops zu zeichnen, verwenden Sie den **pointerposition** -Member der [**DXGI \_ outdupl- \_ Frame \_ Info**](/windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_outdupl_frame_info) aus dem *pframeinfo* -Parameter von [**acquunenextframe**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-acquirenextframe) , um zu bestimmen, wo die linke obere Ecke des Mauszeigers auf dem Desktop Bild zu finden ist. Wenn Sie den ersten Frame zeichnen, müssen Sie die [**idxgioutputdupli:: getframepointershape**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-getframepointershape) -Methode verwenden, um Informationen über die Form des Mauszeigers abzurufen. Jeder aufzurufende aufzurufende **Befehl zum Abrufen** des nächsten Frames liefert auch die aktuelle Zeigerposition für diesen Frame. Andererseits müssen Sie **getframepointershape** nur dann erneut verwenden, wenn sich die Form ändert. Behalten Sie also eine Kopie des letzten Zeiger Bilds bei, und verwenden Sie diese zum Zeichnen auf dem Desktop, es sei denn, die Form des Mauszeigers ändert sich.
+Um den Mauszeiger des Desktops zu zeichnen, verwenden Sie das **PointerPosition-Element** von [**DXGI \_ OUTDUPL \_ FRAME \_ INFO**](/windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_outdupl_frame_info) aus dem *pFrameInfo-Parameter* von [**AcquireNextFrame,**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-acquirenextframe) um zu bestimmen, wo sich die linke obere Ecke des Mauszeigers auf dem Desktopbild befindet. Wenn Sie den ersten Frame zeichnen, müssen Sie die [**IDXGIOutputDuplication::GetFramePointerShape-Methode**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-getframepointershape) verwenden, um Informationen über die Form des Mauszeigers abzurufen. Jeder Aufruf von **AcquireNextFrame** zum Abrufen des nächsten Frames stellt auch die aktuelle Zeigerposition für diesen Frame bereit. Andererseits müssen Sie **GetFramePointerShape** nur dann erneut verwenden, wenn sich die Form ändert. Behalten Sie also eine Kopie des letzten Zeigerbilds bei, und verwenden Sie es, um auf dem Desktop zu zeichnen, es sei denn, die Form des Mauszeigers ändert sich.
 
 > [!Note]  
-> Zusammen mit dem Zeiger Form Bild gibt [**getframepointershape**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-getframepointershape) die Größe der Hotspot Position an. Der Hotspot wird nur zu Informationszwecken angegeben. Der Speicherort, an dem das Zeiger Bild gezeichnet werden soll, ist unabhängig vom Hotspot.
+> Zusammen mit dem Zeigerformbild stellt [**GetFramePointerShape**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutputduplication-getframepointershape) die Größe des Hotspots bereit. Der Hot Spot wird nur zu Informationszwecken angegeben. Der Ort, an dem das Zeigerbild gezeichnet werden soll, ist unabhängig vom Hotspot.
 
  
 
-Dieser Beispielcode aus dem Beispiel für eine [Desktop Duplizierung](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/DXGI%20desktop%20duplication%20sample) zeigt, wie die Form des Mauszeigers angezeigt wird:
+Dieser Beispielcode aus dem [Desktopduplizierungsbeispiel](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/DXGI%20desktop%20duplication%20sample) zeigt, wie Sie die Form des Mauszeigers abrufen:
 
 
 ```C++
@@ -293,7 +293,7 @@ HRESULT DUPLICATIONMANAGER::GetMouse(_Out_ PTR_INFO* PtrInfo, _In_ DXGI_OUTDUPL_
 
 <dl> <dt>
 
-[DXGI 1,2-Verbesserungen](dxgi-1-2-improvements.md)
+[DXGI 1.2-Verbesserungen](dxgi-1-2-improvements.md)
 </dt> </dl>
 
  

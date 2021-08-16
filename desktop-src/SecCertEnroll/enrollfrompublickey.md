@@ -1,43 +1,43 @@
 ---
-description: Initialisiert ein PKCS \# 10-Zertifikat Anforderungs Objekt, umschließt es in ein Objekt vom Typ "CMC Request", übermittelt die Anforderung "CMC" an eine Unternehmens Zertifizierungsstelle (Certification Authority, ca) und speichert das von der Zertifizierungsstelle zurückgegebene Zertifikat in einer Datei.
+description: Initialisiert ein PKCS \# 10-Zertifikatanforderungsobjekt, umschließt es in einem CMC-Anforderungsobjekt, sendet die CMC-Anforderung an eine Unternehmenszertifizierungsstelle und speichert das von der Zertifizierungsstelle zurückgegebene Zertifikat in einer Datei.
 ms.assetid: 0231da3b-a183-4443-8735-5affd24b145a
-title: Registrierungs frompublickey
+title: enrollFromPublicKey
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 21b336d04727f4bb4b90674bad6bb6c429465a0f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a0346e2966dc9109ed9413022ead4eda487c37c2ac66ad9da42d2dcee2445032
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117780049"
 ---
-# <a name="enrollfrompublickey"></a>Registrierungs frompublickey
+# <a name="enrollfrompublickey"></a>enrollFromPublicKey
 
-Das Registrierungs frompublickey-Beispiel Initialisiert ein PKCS \# 10-Zertifikat Anforderungs Objekt, umschließt es in ein Objekt vom Typ "CMC Request", sendet die Anforderung "CMC" an eine Unternehmens Zertifizierungsstelle (Certification Authority, ca) und speichert das von der Zertifizierungsstelle zurückgegebene Zertifikat in einer Datei.
+Das Beispiel enrollFromPublicKey initialisiert ein PKCS \# 10-Zertifikatanforderungsobjekt, umschließt es in einem CMC-Anforderungsobjekt, sendet die CMC-Anforderung an eine Unternehmenszertifizierungsstelle und speichert das von der Zertifizierungsstelle zurückgegebene Zertifikat in einer Datei.
 
 ## <a name="location"></a>Standort
 
-Wenn Sie das Microsoft Windows Software Development Kit (SDK) installieren, wird das Beispiel standardmäßig im Ordner " *% Program Files%* \\ Microsoft SDKs \\ Windows \\ v 7.0 \\ Samples \\ Security \\ X509 Certificate Registrierung \\ VC Registrierungs \\ frompublickey" installiert.
+Wenn Sie das Microsoft Windows Software Development Kit (SDK) installieren, wird das Beispiel standardmäßig im Ordner *%ProgramFiles%* \\ Microsoft SDKs Windows \\ \\ v7.0 \\ Samples Security \\ \\ X509 Certificate Enrollment \\ VC \\ enrollFromPublicKey installiert.
 
-## <a name="discussion"></a>Diskussion
+## <a name="discussion"></a>Diskussion (Discussion)
 
-Das Beispiel "anmelfrompublickey":
+Das Beispiel enrollFromPublicKey:
 
 1.  Verarbeitet die folgenden Befehlszeilenargumente:
-    -   Der Name einer Zertifikat Vorlage.
+    -   Der Name einer Zertifikatvorlage.
     -   Der Name einer Datei, in der das installierte Zertifikat als Base64-codiertes Bytearray gespeichert werden soll.
-    -   Ein optionaler Name der Signaturzertifikat Vorlage. Die Vorlage wird verwendet, um ein Signaturzertifikat zu erstellen, wenn keine im Zertifikat Speicher vorhanden ist.
-2.  Erstellt ein privates [**IX509PrivateKey**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509privatekey) -Schlüsselobjekt und ruft die [**Create**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509privatekey-create) -Methode auf, um mithilfe des standardmäßigen Kryptografieanbieters, der Schlüsselgröße und der [**KeySpec**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509privatekey-get_keyspec) -Werte für den aktuellen Computer einen asymmetrischen privaten Schlüssel zu erstellen.
-3.  Ruft den Teil des öffentlichen Schlüssels des [**IX509PrivateKey**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509privatekey) -Objekts ab.
-4.  Erstellt ein [**IX509CertificateRequestPkcs10**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestpkcs10) -Objekt und initialisiert es mit der in der Befehlszeile angegebenen Vorlage und dem öffentlichen Schlüssel.
-5.  Erstellt ein [**IX509CertificateRequestCmc**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc) -Objekt und initialisiert es mit dem PKCS \# 10-Anforderungs Objekt.
-6.  Ruft ein vorhandenes Signaturzertifikat ab. wenn es nicht gefunden werden kann, wird von der in der Befehlszeile angegebenen Vorlage eine Zertifikat Anforderung erstellt, und es wird versucht, Sie zu registrieren. Findcertbykeyusage ist in der Datei "registricommon. cpp" definiert.
-7.  Überprüft die Zertifikat Kette.
-8.  Erstellt ein [**isignercertificate**](/windows/desktop/api/CertEnroll/nn-certenroll-isignercertificate) -Objekt, initialisiert es mit dem Signaturzertifikat, ruft die [**isignercertificate**](/windows/desktop/api/CertEnroll/nn-certenroll-isignercertificates) -Auflistung aus dem Objekt der CMC-Anforderung ab und fügt das Signaturzertifikat Objekt der Auflistung hinzu.
-9.  Codiert die CMC-Anforderung mithilfe von [*Distinguished Encoding Rules*](/windows/desktop/SecGloss/d-gly) (der).
-10. Erstellt ein [**ICertConfig**](/windows/desktop/api/certcli/nn-certcli-icertconfig) -Objekt und verwendet es, um eine Zeichenfolge abzurufen, die die Zertifizierungsstellen Konfiguration enthält.
-11. Erstellt ein CryptoAPI [**ICertRequest2**](/windows/desktop/api/certcli/nn-certcli-icertrequest2) -Objekt und verwendet es sowie die Zeichen folgen, die die Zertifizierungsstellen Konfiguration enthalten, und die Zertifikat Anforderung zum übermitteln der Anforderung an die Zertifizierungsstelle.
-12. Hiermit wird der Status des Registrierungsprozesses überprüft und das installierte Zertifikat in einer Datei gespeichert. Die encodedefilew-Funktion ist in der Datei "registricommon. cpp" definiert.
+    -   Ein optionaler Name der Signaturzertifikatvorlage. Die Vorlage wird verwendet, um ein Signaturzertifikat zu erstellen, wenn keines im Zertifikatspeicher vorhanden ist.
+2.  Erstellt ein privates [**IX509PrivateKey-Schlüsselobjekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509privatekey) und ruft die [**Create-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509privatekey-create) auf, um einen asymmetrischen privaten Schlüssel mithilfe des Standardmäßigen Kryptografieanbieters, der Schlüsselgröße und der [**KeySpec-Werte**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509privatekey-get_keyspec) für den aktuellen Computer zu erstellen.
+3.  Ruft den öffentlichen Schlüsselteil des [**IX509PrivateKey-Objekts**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509privatekey) ab.
+4.  Erstellt ein [**IX509CertificateRequestPkcs10-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestpkcs10) und initialisiert es mithilfe der in der Befehlszeile angegebenen Vorlage und des öffentlichen Schlüssels.
+5.  Erstellt ein [**IX509CertificateRequestCmc-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc) und initialisiert es mithilfe des PKCS \# 10-Anforderungsobjekts.
+6.  Ruft ein vorhandenes Signaturzertifikat ab oder erstellt, wenn es nicht gefunden werden kann, eine Zertifikatanforderung aus der in der Befehlszeile angegebenen Vorlage und versucht, es zu registrieren. FindCertByKeyUsage ist in enrollCommon.cpp definiert.
+7.  Überprüft die Zertifikatkette.
+8.  Erstellt ein [**ISignerCertificate-Objekt,**](/windows/desktop/api/CertEnroll/nn-certenroll-isignercertificate) initialisiert es mithilfe des Signaturzertifikats, ruft die [**ISignerCertificates-Auflistung**](/windows/desktop/api/CertEnroll/nn-certenroll-isignercertificates) aus dem CMC-Anforderungsobjekt ab und fügt der Auflistung das Signaturzertifikatobjekt hinzu.
+9.  Codiert die CMC-Anforderung [*mithilfe*](/windows/desktop/SecGloss/d-gly) von Distinguished Encoding Rules (DER).
+10. Erstellt ein [**ICertConfig-Objekt**](/windows/desktop/api/certcli/nn-certcli-icertconfig) und verwendet es, um eine Zeichenfolge abzurufen, die die Zertifizierungsstellenkonfiguration enthält.
+11. Erstellt ein [**CryptoAPI-ICertRequest2-Objekt**](/windows/desktop/api/certcli/nn-certcli-icertrequest2) und verwendet es sowie die Zeichenfolgen, die die Zertifizierungsstellenkonfiguration und die Zertifikatanforderung enthalten, um die Anforderung an die Zertifizierungsstelle zu übermitteln.
+12. Überprüft den Status des Registrierungsprozesses und speichert das installierte Zertifikat in einer Datei. Die EncodeToFileW-Funktion ist in enrollCommon.cpp definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,7 +1,7 @@
 ---
 description: Definiert die Schlüssellänge, die bei der Verschlüsselung verwendet werden soll.
 ms.assetid: a91e75db-f81e-4908-b795-34be7a1c242d
-title: CAPICOM_ENCRYPTION_KEY_LENGTH-Enumeration (CAPICOM. h)
+title: CAPICOM_ENCRYPTION_KEY_LENGTH -Enumeration (Capicom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,35 +13,35 @@ api_type:
 - HeaderDef
 api_location:
 - Capicom.h
-ms.openlocfilehash: 4f3e64df1e706ef20a83f4da5c81cda2a08ed331
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2957bd644fdf405fec7e82a487bf83af2cbae35ae305f10b9b168628a30b0749
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117772475"
 ---
-# <a name="capicom_encryption_key_length-enumeration"></a>CAPICOM- \_ Verschlüsselungs \_ Schlüssellänge- \_ Enumeration
+# <a name="capicom_encryption_key_length-enumeration"></a>CAPICOM \_ ENCRYPTION \_ KEY \_ LENGTH-Enumeration
 
-Der Enumerationstyp " **CAPICOM- \_ Verschlüsselungs \_ Schlüssel \_ Länge** " definiert die [*Schlüssellänge*](../secgloss/k-gly.md) , die bei der Verschlüsselung verwendet werden soll.
+Der **ENUMERATIONstyp CAPICOM \_ ENCRYPTION KEY \_ \_ LENGTH** definiert die [*Schlüssellänge,*](../secgloss/k-gly.md) die bei der Verschlüsselung verwendet werden soll.
 
 ## <a name="members"></a>Member
 
 
 
-| Member                                          | BESCHREIBUNG                                                                               | Wert     |
+| Member                                          | Beschreibung                                                                               | Wert     |
 |-------------------------------------------------|-------------------------------------------------------------------------------------------|-----------|
-| **\_ \_ \_ \_ maximal zulässige Länge von CAPICOM-Verschlüsselungsschlüsseln**   | Verwendet die maximale Schlüssellänge, die mit dem angegeben Verschlüsselungsalgorithmus verfügbar ist.<br/> | 0         |
-| **CAPICOM- \_ Verschlüsselungs \_ Schlüssel \_ Länge \_ 40 \_ Bits**  | Verwendet 40-Bit-Schlüssel.<br/>                                                              | 1         |
-| **CAPICOM- \_ Verschlüsselungs \_ Schlüssel \_ Länge \_ 56 \_ Bits**  | Verwendet 56-Bit-Schlüssel, falls verfügbar.<br/>                                                 | 2         |
-| **CAPICOM- \_ Verschlüsselungs \_ Schlüssel \_ Länge \_ 128 \_ Bits** | Verwendet 128-Bit-Schlüssel, falls verfügbar.<br/>                                                | 3         |
-| **CAPICOM- \_ Verschlüsselungs \_ Schlüssel \_ Länge \_ 192 \_ Bits** | Verwendet 192-Bit-Schlüssel. Diese Schlüssellänge ist nur für AES verfügbar.<br/>                  | 4//v 2.0 |
-| **CAPICOM- \_ Verschlüsselungs \_ Schlüssel \_ Länge \_ 256 \_ Bits** | Verwendet 256-Bit-Schlüssel. Diese Schlüssellänge ist nur für AES verfügbar.<br/>                  | 5//v 2.0 |
+| **MAXIMALE LÄNGE DES \_ CAPICOM-VERSCHLÜSSELUNGSSCHLÜSSELS \_ \_ \_**   | Verwendet die maximale Verfügbare Schlüssellänge mit dem angegebenen Verschlüsselungsalgorithmus.<br/> | 0         |
+| **CAPICOM \_ ENCRYPTION \_ KEY \_ LENGTH \_ 40 \_ BITS**  | Verwendet 40-Bit-Schlüssel.<br/>                                                              | 1         |
+| **CAPICOM \_ ENCRYPTION \_ KEY \_ LENGTH \_ 56 \_ BITS**  | Verwendet 56-Bit-Schlüssel, falls verfügbar.<br/>                                                 | 2         |
+| **\_CAPICOM-VERSCHLÜSSELUNGSSCHLÜSSELLÄNGE \_ \_ \_ 128 \_ BITS** | Verwendet 128-Bit-Schlüssel, falls verfügbar.<br/>                                                | 3         |
+| **CAPICOM \_ ENCRYPTION \_ KEY \_ LENGTH \_ 192 \_ BITS** | Verwendet 192-Bit-Schlüssel. Diese Schlüssellänge ist nur für AES verfügbar.<br/>                  | 4 / v2.0 |
+| **\_CAPICOM-VERSCHLÜSSELUNGSSCHLÜSSELLÄNGE \_ \_ \_ 256 \_ BITS** | Verwendet 256-Bit-Schlüssel. Diese Schlüssellänge ist nur für AES verfügbar.<br/>                  | 5 / v2.0 |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Enumerationstyp " **CAPICOM- \_ Verschlüsselungs \_ Schlüssel \_ Länge** " wird von der Eigenschaft " [**Algorithmus. keylength**](algorithm-keylength.md) " verwendet.
+Der **CAPICOM \_ ENCRYPTION KEY \_ LENGTH-Enumerationstyp \_** wird von der [**Algorithm.KeyLength-Eigenschaft**](algorithm-keylength.md) verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,8 +49,8 @@ Der Enumerationstyp " **CAPICOM- \_ Verschlüsselungs \_ Schlüssel \_ Länge** 
 
 | Anforderung | Wert |
 |----------------------------|--------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                |
-| Header<br/>          | <dl> <dt>CAPICOM. h</dt> </dl> |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                |
+| Header<br/>          | <dl> <dt>Capicom.h</dt> </dl> |
 
 
 

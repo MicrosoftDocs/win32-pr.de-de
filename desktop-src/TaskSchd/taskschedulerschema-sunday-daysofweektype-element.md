@@ -1,6 +1,6 @@
 ---
-title: Sunday (daysofweektype)-Element
-description: Gibt an, dass der Task am Sonntag ausgeführt wird.
+title: Sunday (daysOfWeekType)-Element
+description: Gibt an, dass die Aufgabe am Sonntag ausgeführt wird.
 ms.assetid: 856db869-2273-4bb8-88c8-c126bb16c87b
 keywords:
 - Sunday-Element Taskplaner
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 40efba31b392da5959853feeb1cae567cee25cc7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 25a184d16d5239f2294f02ddb6144fa4b886d1f83e11cbbd6e481f7fda77e1ac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105351"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118356261"
 ---
-# <a name="sunday-daysofweektype-element"></a>Sunday (daysofweektype)-Element
+# <a name="sunday-daysofweektype-element"></a>Sunday (daysOfWeekType)-Element
 
-Gibt an, dass der Task am Sonntag ausgeführt wird.
+Gibt an, dass die Aufgabe am Sonntag ausgeführt wird.
 
 ``` syntax
 <xs:element name="Sunday">
@@ -30,7 +30,7 @@ Gibt an, dass der Task am Sonntag ausgeführt wird.
 </xs:element>
 ```
 
-Das **Sunday** -Element wird durch den komplexen Typ [**daysofweektype**](taskschedulerschema-daysofweektype-complextype.md) definiert.
+Das **Sunday-Element** wird durch den komplexen [**DaysOfWeekType-Typ**](taskschedulerschema-daysofweektype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,14 +38,14 @@ Das **Sunday** -Element wird durch den komplexen Typ [**daysofweektype**](tasksc
 
 | Element                                                                                                                  | Abgeleitet von                                                             | BESCHREIBUNG                                                                                          |
 |--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [**DaysOfWeek (monthlydayosweekscheduletype)**](taskschedulerschema-daysofweek-monthlydayofweekscheduletype-element.md) | [**daysofweektype**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen der Task für einen monatlichen Wochentag ausgeführt wird.<br/> |
-| [**DaysOfWeek (weeklyscheduletype)**](taskschedulerschema-daysofweek-weeklyscheduletype-element.md)                     | [**daysofweektype**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen der Task für einen wöchentlichen Zeitplan ausgeführt wird.<br/>              |
+| [**DaysOfWeek (monthlyDayOfWeekScheduleType)**](taskschedulerschema-daysofweek-monthlydayofweekscheduletype-element.md) | [**daysOfWeekType**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen der Task für einen monatlichen Wochentag ausgeführt wird.<br/> |
+| [**DaysOfWeek (weeklyScheduleType)**](taskschedulerschema-daysofweek-weeklyscheduletype-element.md)                     | [**daysOfWeekType**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen der Task nach einem wöchentlichen Zeitplan ausgeführt wird.<br/>              |
 
 
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert einen Wochentag-Kalender, der eine Aufgabe am Sonntag startet.
+Der folgende XML-Code definiert einen Wochentagskalender, der eine Aufgabe am Sonntag startet.
 
 
 ```XML
@@ -62,16 +62,16 @@ Der folgende XML-Code definiert einen Wochentag-Kalender, der eine Aufgabe am So
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

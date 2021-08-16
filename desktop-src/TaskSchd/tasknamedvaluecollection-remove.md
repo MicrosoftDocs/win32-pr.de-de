@@ -1,11 +1,11 @@
 ---
-title: Tasknamedvaluecollection. Remove-Methode
-description: Entfernt bei der Skripterstellung ein ausgewähltes Name-Wert-Paar aus der Auflistung.
+title: TaskNamedValueCollection.Remove-Methode
+description: Für die Skripterstellung entfernt ein ausgewähltes Name-Wert-Paar aus der Auflistung.
 ms.assetid: 6499f85c-ab7a-474f-8277-43c045f9dbb4
 keywords:
-- Remove-Methode Taskplaner
-- Remove-Methode Taskplaner, tasknamedvaluecollection-Objekt
-- Tasknamedvaluecollection-Objekt Taskplaner, Remove-Methode
+- Entfernen der Taskplaner
+- Remove method Taskplaner , TaskNamedValueCollection object
+- TaskNamedValueCollection-Objekt Taskplaner , Remove-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 81974c00abc4bc4f1372827f38f41826314b2600
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0c43777de81f48004ed4f1ceaa515938285a8ecf2714c65066130780d6721172
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118357716"
 ---
-# <a name="tasknamedvaluecollectionremove-method"></a>Tasknamedvaluecollection. Remove-Methode
+# <a name="tasknamedvaluecollectionremove-method"></a>TaskNamedValueCollection.Remove-Methode
 
-Entfernt bei der Skripterstellung ein ausgewähltes Name-Wert-Paar aus der Auflistung.
+Für die Skripterstellung entfernt ein ausgewähltes Name-Wert-Paar aus der Auflistung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ TaskNamedValueCollection.Remove( _
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
 Der Index des Name-Wert-Paars, das entfernt werden soll.
@@ -59,9 +59,9 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

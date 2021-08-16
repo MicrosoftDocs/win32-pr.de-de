@@ -1,9 +1,9 @@
 ---
-title: Deleteexpiredtaskafter (settingstype)-Element
-description: Gibt die Zeitspanne an, die der Taskplaner wartet, bevor der Task nach Ablauf gelöscht wird.
+title: DeleteExpiredTaskAfter (settingsType)-Element
+description: Gibt die Zeit an, die der Taskplaner, bevor der Task nach ablaufen gelöscht wird.
 ms.assetid: 947a2fec-ceda-4726-aa1a-26fd1b258c1f
 keywords:
-- Deleteexpiredtaskafter-Element Taskplaner
+- DeleteExpiredTaskAfter-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cee7cfc48f62b58caf63125404fb07209b399fc1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e4f491d857eb4ca0fde629b780f22a7795b79f593f94332fb923003520cec706
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118357209"
 ---
-# <a name="deleteexpiredtaskafter-settingstype-element"></a>Deleteexpiredtaskafter (settingstype)-Element
+# <a name="deleteexpiredtaskafter-settingstype-element"></a>DeleteExpiredTaskAfter (settingsType)-Element
 
-Gibt die Zeitspanne an, die der Taskplaner wartet, bevor der Task nach Ablauf gelöscht wird. Wenn für dieses Element kein Wert angegeben wird, wird der Task vom Taskplaner-Dienst nicht gelöscht. Das Format dieser Zeichenfolge lautet pnynmndtnhnmns. dabei ist "NY" die Anzahl der Jahre, "nm" die Anzahl von Monaten, "ND" die Anzahl der Tage, "t" ist das Trennzeichen für Datum/Uhrzeit, "NH" die Anzahl von Stunden, "nm" die Anzahl der Minuten und "NS" die Anzahl von Sekunden (z Weitere Informationen zum Duration-Typ finden Sie unter <https://go.microsoft.com/fwlink/p/?linkid=106886> .
+Gibt die Zeit an, die der Taskplaner, bevor der Task nach ablaufen gelöscht wird. Wenn für dieses Element kein Wert angegeben wird, löscht der Taskplaner den Task nicht. Das Format für diese Zeichenfolge ist PnYnMnDTnHnMnS, Dabei steht nY für die Anzahl von Jahren, nM für die Anzahl der Monate, nD für die Anzahl von Tagen, "T" für das Datums-/Uhrzeittrennzeichen, nH für die Anzahl von Stunden, nM für die Anzahl von Minuten und nS für die Anzahl von Sekunden (pt5M gibt beispielsweise 5 Minuten an, und P1M4DT2H5M gibt einen Monat, vier Tage, zwei Stunden und fünf Minuten an). Weitere Informationen zum Dauertyp finden Sie unter <https://go.microsoft.com/fwlink/p/?linkid=106886> .
 
 ``` syntax
 <xs:element name="DeleteExpiredTaskAfter"
@@ -32,7 +32,7 @@ Gibt die Zeitspanne an, die der Taskplaner wartet, bevor der Task nach Ablauf ge
  />
 ```
 
-Das **deleteexpiredtaskafter** -Element wird durch den komplexen [**settingstype**](taskschedulerschema-settingstype-complextype.md) -Typ definiert.
+Das **DeleteExpiredTaskAfter-Element** wird durch den komplexen [**settingsType-Typ**](taskschedulerschema-settingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -40,19 +40,19 @@ Das **deleteexpiredtaskafter** -Element wird durch den komplexen [**settingstype
 
 | Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                                                        |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingstype**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.<br/> |
+| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingsType**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**deleteexpiredtaskafter-Eigenschaft von itasksettings**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_deleteexpiredtaskafter).
+Informationen zur C++-Entwicklung finden Sie unter [**DeleteExpiredTaskAfter-Eigenschaft von ITaskSettings.**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_deleteexpiredtaskafter)
 
-Informationen zur Skript Entwicklung finden Sie unter [**tasksettings. deleteexpiredtaskafter**](tasksettings-deleteexpiredtaskafter.md).
+Informationen zur Skriptentwicklung finden Sie [**unter TaskSettings.DeleteExpiredTaskAfter**](tasksettings-deleteexpiredtaskafter.md).
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert ein Einstellungs Element, das eine abgelaufene Aufgabe nach einer Woche löscht.
+Der folgende XML-Code definiert ein Einstellungselement, das eine abgelaufene Aufgabe nach einer Woche löscht.
 
 
 ```XML
@@ -69,16 +69,16 @@ Der folgende XML-Code definiert ein Einstellungs Element, das eine abgelaufene A
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> </dl>
 
  

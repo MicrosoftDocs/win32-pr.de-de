@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: fab501912c55aaaf6cab832bf76763672e830d33
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 41542f133961104180257b9c15b1843f3458bf6d9d2dd156fa3d97ea7b9ca87d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117857739"
 ---
 # <a name="shellnamespace-method"></a>Shell.NameSpace-Methode
 
-Erstellt ein [**Folder-Objekt für**](folder.md) den angegebenen Ordner und gibt es zurück.
+Erstellt ein [**Folder-Objekt**](folder.md) für den angegebenen Ordner und gibt es zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,7 +54,7 @@ Shell.NameSpace( _
 
 Typ: **Variant**
 
-Der Ordner, für den das Ordnerobjekt [**erstellt werden**](folder.md) soll. Dies kann eine Zeichenfolge sein, die den Pfad des Ordners oder einen der [**ShellSpecialFolderConstants-Werte angibt.**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) Beachten Sie, dass die konstanten Namen in **ShellSpecialFolderConstants** in Visual Basic, aber nicht in VBScript oder JScript verfügbar sind. In diesen Fällen müssen die numerischen Werte an ihrer Stelle verwendet werden.
+Der Ordner, für den das [**Folder-Objekt**](folder.md) erstellt werden soll. Dies kann eine Zeichenfolge sein, die den Pfad des Ordners oder einen der [**ShellSpecialFolderConstants-Werte**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) angibt. Beachten Sie, dass die konstanten Namen in **ShellSpecialFolderConstants** in Visual Basic, aber nicht in VBScript oder JScript verfügbar sind. In diesen Fällen müssen die numerischen Werte an ihrer Stelle verwendet werden.
 
 </dd> </dl>
 
@@ -74,9 +74,9 @@ Objektverweis auf das [**Folder-Objekt**](folder.md) für den angegebenen Ordner
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **NameSpace** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
+Im folgenden Beispiel wird **NameSpace** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -148,7 +148,7 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |

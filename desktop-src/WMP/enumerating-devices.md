@@ -6,24 +6,24 @@ keywords:
 - Windows Media Player,portable Geräte
 - Windows Media Player Objektmodell, portable Geräte
 - Objektmodell, portable Geräte
-- Windows Media Player ActiveX-Steuerelement, portable Geräte
-- ActiveX-Steuerelement, portable Geräte
+- Windows Media Player ActiveX,portable Geräte
+- ActiveX,portable Geräte
 - Windows Media Player Mobile ActiveX-Steuerelement, portable Geräte
-- Windows Media Player Mobile,portable Geräte
+- Windows Media Player Mobile, portable Geräte
 - Portable Geräte,Aufzählen
 - Enumerationen, portable Geräte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d44f71fa26f40983424ced70280d9c03e0892a00
-ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
+ms.openlocfilehash: 64f62ecc599e8a9610bf01b5f8a1651b330c9f8ed6abb4197fac89daeb751c4d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "112068437"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118339858"
 ---
 # <a name="enumerating-devices"></a>Aufzählen von Geräten
 
-Windows Media Player stellt portable Geräte mithilfe der **IWMPSyncDevice-Schnittstelle** dar. Der folgende Beispielcode zeigt eine Funktion, die ein Array von Zeigern auf **IWMPSyncDevice erstellt.** Jeder Zeiger im Array stellt ein Gerät dar, für das Windows Media Player gespeicherte Informationen enthält. Ein Gerät muss nicht mit dem Computer verbunden sein, und es ist auch keine Partnerschaft mit der aktuellen Windows Media Player erforderlich.
+Windows Media Player stellt portable Geräte mithilfe der **IWMPSyncDevice-Schnittstelle** dar. Der folgende Beispielcode zeigt eine Funktion, die ein Array von Zeigern auf **IWMPSyncDevice erstellt.** Jeder Zeiger im Array stellt ein Gerät dar, für das Windows Media Player gespeicherte Informationen enthält. Ein Gerät muss nicht mit dem Computer verbunden sein, und es ist auch keine Partnerschaft mit der aktuellen Instanz Windows Media Player erforderlich.
 
 Sie sollten Geräte aufzählen, wenn Sie das **DeviceConnect-Ereignis** oder das **DeviceDisconnect-Ereignis** erhalten.
 
@@ -121,7 +121,7 @@ STDMETHODIMP CMainDlg::EnumDevices(BOOL bConnectedOnly)
 
 
 
-Sie können ähnlichen Code verwenden, um andere solche Gerätelisten abzurufen. Beispielsweise können Sie [MITMPSyncDevice::get \_ status](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-get_status) verwenden, um ein Array von Geräten zu erstellen, für die eine Partnerschaft besteht.
+Sie können ähnlichen Code verwenden, um andere solche Gerätelisten abzurufen. Beispielsweise können Sie [MITMPSyncDevice::get \_ status](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-get_status) ein Array von Geräten erstellen, für die eine Partnerschaft besteht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c5f293b8026456618ad1196c491bce58cf481f07
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 93ba617ddb061a928236e9bbf7d7a411812809092efa8a71f5890ddeecb88328
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117823599"
 ---
 # <a name="cbaseoutputpinendofstream-method"></a>CBaseOutputPin.EndOfStream-Methode
 
@@ -44,7 +44,7 @@ Diese Methode hat keine Parameter.
 
 Gibt E \_ UNEXPECTED zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode sollte nur für Eingabepins aufgerufen werden, sodass die **CBaseOutputPin-Implementierung** E \_ UNEXPECTED zurückgibt.
 
@@ -52,9 +52,9 @@ Diese Methode sollte nur für Eingabepins aufgerufen werden, sodass die **CBaseO
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 

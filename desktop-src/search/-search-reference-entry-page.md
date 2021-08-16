@@ -1,26 +1,26 @@
 ---
-description: Referenz zur Windows-Suche
+description: Windows Suchreferenz
 ms.assetid: 3590cdab-5831-4372-adf7-61814031c931
-title: Referenz zur Windows-Suche
+title: Windows Suchreferenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: feff16b161a142e9f63b6ad14698f21c36c6f29f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5224937bdfaa3e0e4a87c2bfca94e54f40ebcb63c12684ba105997af9e6a9c1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117863703"
 ---
-# <a name="windows-search-reference"></a>Referenz zur Windows-Suche
+# <a name="windows-search-reference"></a>Windows Suchreferenz
 
 
-Diese Referenz besteht aus den folgenden Abschnitten:
+Dieser Verweis besteht aus den folgenden Abschnitten:
 
--   [Windows Search-Schnittstellen](-search-interfaces-entry-page.md)
--   [Windows Search-Strukturen](-search-structures-entry-page.md)
--   [Windows-Such Konstanten und-Enumerationen](-search-constants-and-enumerations-entry-page.md)
--   [Eigenschafts Zuordnungen](-search-3x-wds-propertymappings.md)
--   [Format der gespeicherten Such Datei](-search-savedsearchfileformat.md)
+-   [Windows Suchschnittstellen](-search-interfaces-entry-page.md)
+-   [Windows Suchstrukturen](-search-structures-entry-page.md)
+-   [Windows Suchen nach Konstanten und Enumerationen](-search-constants-and-enumerations-entry-page.md)
+-   [Eigenschaftenzuordnungen](-search-3x-wds-propertymappings.md)
+-   [Gespeichertes Suchdateiformat](-search-savedsearchfileformat.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -29,10 +29,10 @@ Diese Referenz besteht aus den folgenden Abschnitten:
 [Übersicht über Windows Search](-search-3x-wds-overview.md)
 </dt> <dt>
 
-[Entwicklerhandbuch für Windows Search](-search-developers-guide-entry-page.md)
+[Windows Search Developer es Guide (Entwicklerhandbuch durchsuchen)](-search-developers-guide-entry-page.md)
 </dt> <dt>
 
-[Code Beispiele für Windows Search](-search-samples-ovw.md)
+[Windows Suchen von Codebeispielen](-search-samples-ovw.md)
 </dt> <dt>
 
 [Verbundsuche in Windows 10](-search-federated-search-overview.md)
@@ -41,7 +41,7 @@ Diese Referenz besteht aus den folgenden Abschnitten:
 [Verwandte Suchtechnologien](-search-3x-wds-sampleentry.md)
 </dt> <dt>
 
-[Glossar für Windows-Suche](search-glossary.md)
+[Windows Search Glossary](search-glossary.md)
 </dt> </dl>
 
  

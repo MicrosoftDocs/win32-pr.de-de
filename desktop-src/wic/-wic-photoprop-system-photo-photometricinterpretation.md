@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. photomezcinterpretation-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.Photo.PhotometricInterpretation-Eigenschaft.
 ms.assetid: ff36b2c3-8763-4640-a049-b5880fd26929
-title: System. Photo. photomezcinterpretation-Foto-metadatenrichtlinie
+title: Richtlinie für System.Photo.PhotometricInterpretation-Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 35b371ce9257d526f941f3fdb33949e8788a7112
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a5479c747e2a1cc60a1867a7dc5906e5c4710abf9da33b5328980e0188403ecd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352615"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118204684"
 ---
-# <a name="systemphotophotometricinterpretation-photo-metadata-policy"></a>System. Photo. photomezcinterpretation-Foto-metadatenrichtlinie
+# <a name="systemphotophotometricinterpretation-photo-metadata-policy"></a>Richtlinie für System.Photo.PhotometricInterpretation-Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. Photo. photomezcinterpretation](../properties/props-system-photo-photometricinterpretation.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.Photo.PhotometricInterpretation-Eigenschaft.](../properties/props-system-photo-photometricinterpretation.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ Foto- \_ foequcinterpretation
+PKEY \_ Photo \_ PhotometricInterpretation
 
 ### <a name="containers"></a>Container
 
@@ -27,7 +27,7 @@ JPEG, TIFF
 
 Ja
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ UI2
 
@@ -35,46 +35,46 @@ VT \_ UI2
 
 UShort
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                                | Datenträger Format |
+| Auftrag | Pfad                                | Datenträgerformat |
 |-------|-------------------------------------|-------------|
-| 1     | /App1/IFD/{ushort = 262}              | ushort      |
-| 2     | /XMP/TIFF: photomezcinterpretation | Unicode     |
+| 1     | /app1/ifd/{ushort=262}              | ushort      |
+| 2     | /xmp/tiff:PhotometricInterpretation | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                                | Datenträger Format |
+| Auftrag | Pfad                                | Datenträgerformat |
 |-------|-------------------------------------|-------------|
-| 1     | /App1/IFD/{ushort = 262}              | ushort      |
-| 2     | /XMP/TIFF: photomezcinterpretation | Unicode     |
+| 1     | /app1/ifd/{ushort=262}              | ushort      |
+| 2     | /xmp/tiff:PhotometricInterpretation | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                                |
 |-------|-------------------------------------|
-| 1     | /App1/IFD/{ushort = 262}              |
-| 2     | /XMP/TIFF: photomezcinterpretation |
+| 1     | /app1/ifd/{ushort=262}              |
+| 2     | /xmp/tiff:photometricinterpretation |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                                    | Datenträger Format |
+| Auftrag | Pfad                                    | Datenträgerformat |
 |-------|-----------------------------------------|-------------|
-| 1     | /IFD/{ushort = 262}                       | ushort      |
-| 2     | /IFD/XMP/TIFF: photomezcinterpretation | Unicode     |
+| 1     | /ifd/{ushort=262}                       | ushort      |
+| 2     | /ifd/xmp/tiff:PhotometricInterpretation | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                                    | Datenträger Format |
+| Auftrag | Pfad                                    | Datenträgerformat |
 |-------|-----------------------------------------|-------------|
-| 1     | /IFD/{ushort = 262}                       | ushort      |
-| 2     | /IFD/XMP/TIFF: photomezcinterpretation | Unicode     |
+| 1     | /ifd/{ushort=262}                       | ushort      |
+| 2     | /ifd/xmp/tiff:PhotometricInterpretation | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                                    |
 |-------|-----------------------------------------|
-| 1     | /IFD/{ushort = 262}                       |
-| 2     | /IFD/XMP/TIFF: photomezcinterpretation |
+| 1     | /ifd/{ushort=262}                       |
+| 2     | /ifd/xmp/tiff:photometricinterpretation |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. photomezcinterpretation](../properties/props-system-photo-photometricinterpretation.md)
+[System.Photo.PhotometricInterpretation](../properties/props-system-photo-photometricinterpretation.md)
 </dt> </dl>
 
  

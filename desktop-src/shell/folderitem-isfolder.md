@@ -1,7 +1,7 @@
 ---
 description: Gibt an, ob das Element ein Ordner ist.
 ms.assetid: fb080c8f-04b1-4f9a-9219-0951a2e950ea
-title: FolderItem. isFolder-Eigenschaft (Shldisp. h)
+title: FolderItem.IsFolder-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 9bf0bd4eb9b7964620fe705d6e8f4d10644ca234
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d104d33e843d46cc63a0a960afa3d36b56ddbd28b5a563f8973ee957d82da87e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118223984"
 ---
-# <a name="folderitemisfolder-property"></a>FolderItem. isFolder (Eigenschaft)
+# <a name="folderitemisfolder-property"></a>FolderItem.IsFolder (Eigenschaft)
 
 Gibt an, ob das Element ein Ordner ist.
 
@@ -37,13 +37,13 @@ bIsFolder = FolderItem.IsFolder
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **boolescher** Wert, der **true** empfängt, wenn es sich bei dem Element um einen Ordner handelt, andernfalls **false** .
+Ein **boolescher Wert,** der **TRUE empfängt,** wenn das Element ein Ordner ist, oder **false,** wenn dies nicht der Fall ist.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **isFolder** verwendet, um zu bestimmen, ob das Windows-Verzeichnis ein Ordner ist. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **isFolder** verwendet, um zu bestimmen, ob Windows Verzeichnis ein Ordner ist. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -73,7 +73,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -142,17 +142,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

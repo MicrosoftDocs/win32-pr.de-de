@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_DLG_VIDEOFORMAT Meldung (VFW. h)
-description: Die Meldung "WM \_ Cap \_ DLG \_ Videoformat" zeigt ein Dialogfeld an, in dem der Benutzer das Videoformat auswählen kann.
+title: WM_CAP_DLG_VIDEOFORMAT Meldung (Vfw.h)
+description: Die MELDUNG WM \_ CAP \_ DLG \_ VIDEOFORMAT zeigt ein Dialogfeld an, in dem der Benutzer das Videoformat auswählen kann.
 ms.assetid: 3b44507e-3806-467f-877a-e9992d1337cb
 keywords:
-- WM_CAP_DLG_VIDEOFORMAT-Nachricht (Multimedia)
+- WM_CAP_DLG_VIDEOFORMAT nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d244c4c141845d4ede66804918514e091872e89
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fbaa58e99c6a07db9109a0b1a6dae25de8abd46fef2631eb539961de16455ec0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949753"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118135399"
 ---
-# <a name="wm_cap_dlg_videoformat-message"></a>WM \_ Cap \_ DLG- \_ Videoformat Meldung
+# <a name="wm_cap_dlg_videoformat-message"></a>WM \_ CAP \_ DLG \_ VIDEOFORMAT-Nachricht
 
-Die Meldung " **WM \_ Cap \_ DLG \_ Videoformat** " zeigt ein Dialogfeld an, in dem der Benutzer das Videoformat auswählen kann. Das Dialogfeld Video Format kann verwendet werden, um Bild Dimensionen, Bittiefe und Hardware Komprimierungs Optionen auszuwählen. Sie können diese Nachricht explizit oder mithilfe des [**capdlgvideoformat**](/windows/desktop/api/Vfw/nf-vfw-capdlgvideoformat) -Makros senden.
+Die **MELDUNG WM CAP \_ \_ DLG \_ VIDEOFORMAT** zeigt ein Dialogfeld an, in dem der Benutzer das Videoformat auswählen kann. Das Dialogfeld Videoformat kann verwendet werden, um Bilddimensionen, Bittiefe und Hardwarekomprimierungsoptionen auszuwählen. Sie können diese Nachricht explizit oder mithilfe des [**Makros capDlgVideoFormat**](/windows/desktop/api/Vfw/nf-vfw-capdlgvideoformat) senden.
 
 
 ```C++
@@ -36,13 +36,13 @@ lParam = 0L;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem diese Nachricht zurückgegeben wurde, müssen Anwendungen möglicherweise die [**capstatus**](/windows/win32/api/vfw/ns-vfw-capstatus) -Struktur aktualisieren, da der Benutzer möglicherweise die Bild Dimensionen geändert hat.
+Nachdem diese Meldung zurückgegeben wurde, müssen Anwendungen möglicherweise die [**CAPSTATUS-Struktur**](/windows/win32/api/vfw/ns-vfw-capstatus) aktualisieren, da der Benutzer möglicherweise die Bilddimensionen geändert hat.
 
-Das Dialogfeld Video Format ist für jeden Aufzeichnungs Treiber eindeutig. Einige Aufzeichnungs Treiber unterstützen möglicherweise kein Video Format-Dialogfeld. Anwendungen können ermitteln, ob der Erfassungs Treiber diese Nachricht unterstützt, indem Sie den Member **fhasdlgvideoformat** von [**capdrivercaps**](/windows/win32/api/vfw/ns-vfw-capdrivercaps)überprüfen.
+Das Dialogfeld Videoformat ist für jeden Aufzeichnungstreiber eindeutig. Einige Erfassungstreiber unterstützen möglicherweise kein Dialogfeld Videoformat. Anwendungen können ermitteln, ob der Erfassungstreiber diese Meldung unterstützt, indem sie den **Member fHasDlgVideoFormat** von [**CAPDRIVERCAPS**](/windows/win32/api/vfw/ns-vfw-capdrivercaps)überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,18 +52,18 @@ Das Dialogfeld Video Format ist für jeden Aufzeichnungs Treiber eindeutig. Eini
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Video Capture Messages](video-capture-messages.md)
 </dt> </dl>
 
  

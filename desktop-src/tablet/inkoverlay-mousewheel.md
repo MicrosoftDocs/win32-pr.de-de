@@ -4,16 +4,16 @@ ms.assetid: b7269e07-7001-48ca-8e20-a39cb02f3719
 title: InkOverlay.MouseWheel-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 468dbdac09fd40144768e8342791d5712a570bcc
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 4c2563ae898eff2b9541ac52d77626ddebb8259d8bb60a82b18f6460da55f7dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108116888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118219204"
 ---
 # <a name="inkoverlaymousewheel-event"></a>InkOverlay.MouseWheel-Ereignis
 
-Tritt ein, wenn sich das Mausrad bewegt, während [**das InkCollector-**](inkcollector-class.md) oder [**InkOverlay-Objekt**](inkoverlay-class.md) den Fokus besitzt.
+Tritt ein, wenn das Mausrad bewegt wird, während das [**InkCollector-**](inkcollector-class.md) oder [**InkOverlay-Objekt**](inkoverlay-class.md) den Fokus besitzt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ void MouseWheel(
 *Schaltfläche* \[ In\]
 </dt> <dd>
 
-Die gedrückte Maustaste.
+Die maustaste, die gedrückt wurde.
 
 </dd> <dt>
 
@@ -52,7 +52,7 @@ Der Zustand der UMSCHALTTASTE.
 *Delta* \[ In\]
 </dt> <dd>
 
-Eine Anzahl mit Vorzeichen für die Anzahl der Detenten, die das Mausrad gedreht hat. Eine Arretierung (Rastpunkt) ist eine Kerbe des Mausrades.
+Eine Anzahl mit Vorzeichen für die Anzahl von Detents, die das Mausrad gedreht hat. Eine Arretierung (Rastpunkt) ist eine Kerbe des Mausrades.
 
 </dd> <dt>
 
@@ -81,10 +81,10 @@ Gibt an, ob das Ereignis für das übergeordnete Steuerelement abgebrochen werde
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Eigenschaften *pX* und *pY* befinden sich in Pixeln und nicht in den HIMETRIC-Einheiten, die dem Freiraum zugeordnet sind. Dies liegt daran, dass dieses Ereignis das zugehörige Mausereignis einer Nicht-Stiftanwendung ersetzt und diese Art von Anwendung nur Pixel versteht.
+> Die Eigenschaften *pX* und *pY* sind in Pixel und nicht die HIMETRIC-Einheiten, die dem Freihandraum zugeordnet sind. Dies liegt daran, dass dieses Ereignis das zugehörige Mausereignis einer Anwendung ohne Stift ersetzt und diese Art von Anwendung nur Pixel versteht.
 
  
 
@@ -94,9 +94,9 @@ Diese Ereignismethode wird in den \_ \_ Dispatch-Only-Schnittstellen IInkCollect
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps der Windows XP Tablet PC Edition \[\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
 | Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |

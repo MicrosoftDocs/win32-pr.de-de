@@ -1,193 +1,193 @@
 ---
-description: Die skalaren Konstanten phonebuttonfunction \_ beschreiben die Funktionen, die in den Telefon Sätzen häufig den Schaltflächen zugewiesen werden.
+description: Die PHONEBUTTONFUNCTION-Skalarkonstten beschreiben die Funktionen, die häufig Schaltflächen in \_ Telefonsätzen zugewiesen werden.
 ms.assetid: 33d369d0-2221-403e-8fbc-a9a1cbd640ad
-title: PHONEBUTTONFUNCTION_ Konstanten (TAPI. h)
+title: PHONEBUTTONFUNCTION_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d4874fbfbd1e6900b58a604ba50c33c873eb5abc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3a7c7151018d7ff0146137d293aa1543b74a84c5e8ac11d6641b0fc408003854
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358197"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117761312"
 ---
-# <a name="phonebuttonfunction_-constants"></a>Phonebuttonfunction- \_ Konstanten
+# <a name="phonebuttonfunction_-constants"></a>PHONEBUTTONFUNCTION-Konstanten \_
 
-Die skalaren Konstanten **phonebuttonfunction \_** beschreiben die Funktionen, die in den Telefon Sätzen häufig den Schaltflächen zugewiesen werden.
+Die **\_ PHONEBUTTONFUNCTION-Skalarkonstten** beschreiben die Funktionen, die häufig Schaltflächen in Telefonsätzen zugewiesen werden.
 
 <dl> <dt>
 
-<span id="PHONEBUTTONFUNCTION_ABBREVDIAL"></span><span id="phonebuttonfunction_abbrevdial"></span>**phonebuttonfunction- \_ abbrevdial**
+<span id="PHONEBUTTONFUNCTION_ABBREVDIAL"></span><span id="phonebuttonfunction_abbrevdial"></span>**PHONEBUTTONFUNCTION \_ ABBREVDIAL**
 </dt> <dd> <dl> <dt>
 
 
 
-Die zu wählende Zahl wird mit einer kurzen, abgekürzten Zahl angegeben, die aus einer Ziffer oder einem paar Ziffern besteht.
+Die zu wählende Nummer wird mit einer kurzen, abgekürzten Zahl angegeben, die aus einer Ziffer oder einigen Ziffern besteht.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_BUSY"></span><span id="phonebuttonfunction_busy"></span>**phonebuttonfunction \_ ausgelastet**
+<span id="PHONEBUTTONFUNCTION_BUSY"></span><span id="phonebuttonfunction_busy"></span>**PHONEBUTTONFUNCTION \_ AUSGELASTET**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, dass das Telefon für eingehende Anrufe "ausgelastet" erscheint.
+Sorgt dafür, dass das Telefon bei eingehenden Anrufen "ausgelastet" ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_BRIDGEDAPP"></span><span id="phonebuttonfunction_bridgedapp"></span>**phonebuttonfunction \_ bridgedapp**
+<span id="PHONEBUTTONFUNCTION_BRIDGEDAPP"></span><span id="phonebuttonfunction_bridgedapp"></span>**PHONEBUTTONFUNCTION \_ BRIDGEDAPP**
 </dt> <dd> <dl> <dt>
 
 
 
-Wählt eine bestimmte Darstellung einer überbrücken Adresse aus.
+Wählt eine bestimmte Darstellung einer Überbrückungsadresse aus.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_CALLAPP"></span><span id="phonebuttonfunction_callapp"></span>**phonebuttonfunction \_ callapp**
+<span id="PHONEBUTTONFUNCTION_CALLAPP"></span><span id="phonebuttonfunction_callapp"></span>**PHONEBUTTONFUNCTION \_ CALLAPP**
 </dt> <dd> <dl> <dt>
 
 
 
-Wählt eine bestimmte Darstellung des Aufrufes aus.
+Wählt einen bestimmten Aufruf aus.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_CALLID"></span><span id="phonebuttonfunction_callid"></span>**phonebuttonfunction- \_ kallid**
+<span id="PHONEBUTTONFUNCTION_CALLID"></span><span id="phonebuttonfunction_callid"></span>**PHONEBUTTONFUNCTION \_ CALLID**
 </dt> <dd> <dl> <dt>
 
 
 
-Fordert die Anzeige von Aufruferkennung auf der Telefonanzeige an.
+Fordert die Anzeige der Anrufer-ID auf der Anzeige des Telefons an.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_CAMPON"></span><span id="phonebuttonfunction_campon"></span>**phonebuttonfunction- \_ Campon**
+<span id="PHONEBUTTONFUNCTION_CAMPON"></span><span id="phonebuttonfunction_campon"></span>**PHONEBUTTONFUNCTIONIGE \_ N**
 </dt> <dd> <dl> <dt>
 
 
 
-Camps: für eine Erweiterung, die eine ausgelastete Anzeige zurückgibt. Wenn die Remote Station in den Leerlauf zurückkehrt, wird das Telefon mit einem unterschiedlichen Muster gerentet. Wenn Sie das lokale Telefon abrufen, wird der Anruf erneut initiiert.
+Über eine Erweiterung, die eine ausgelastete Angabe zurückgibt. Wenn die Remotestation wieder in den Leerlauf zurückkehrt, wird das Telefon mit unterschiedlichen Mustern geleert. Wenn Sie das lokale Telefon aufnehmen, wird der Anruf erneut eingerichtet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_COVER"></span><span id="phonebuttonfunction_cover"></span>**phonebuttonfunction- \_ Abdeckung**
+<span id="PHONEBUTTONFUNCTION_COVER"></span><span id="phonebuttonfunction_cover"></span>**PHONEBUTTONFUNCTION \_ COVER**
 </dt> <dd> <dl> <dt>
 
 
 
-Leitet alle für dieses Telefon vorgesehenen Anrufe an ein anderes für die Abdeckung verwendetes Telefon weiter.
+Weitergeleitet alle Anrufe, die für dieses Telefon bestimmt sind, an ein anderes Telefon, das für die Abdeckung verwendet wird.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_CONFERENCE"></span><span id="phonebuttonfunction_conference"></span>**phonebuttonfunction- \_ Konferenz**
+<span id="PHONEBUTTONFUNCTION_CONFERENCE"></span><span id="phonebuttonfunction_conference"></span>**PHONEBUTTONFUNCTION \_ CONFERENCE**
 </dt> <dd> <dl> <dt>
 
 
 
-Initiiert einen Konferenz Rückruf oder fügt einen Telefon Rückruf hinzu.
+Initiiert einen Konferenzaufruf oder fügt einen Aufruf zu einem Konferenzaufruf hinzu.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_CONNECT"></span><span id="phonebuttonfunction_connect"></span>**phonebuttonfunction \_ Connect**
+<span id="PHONEBUTTONFUNCTION_CONNECT"></span><span id="phonebuttonfunction_connect"></span>**PHONEBUTTONFUNCTION \_ CONNECT**
 </dt> <dd> <dl> <dt>
 
 
 
-Stellt eine Verbindung zwischen einem-Rückruf und einem Beratungs aufrecht her.
+Verbindet einen Anruf erneut, der sich in der Beratung befindet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_DATAOFF"></span><span id="phonebuttonfunction_dataoff"></span>**phonebuttonfunction- \_ dataoff**
+<span id="PHONEBUTTONFUNCTION_DATAOFF"></span><span id="phonebuttonfunction_dataoff"></span>**PHONEBUTTONFUNKTIONSDATENOFF \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, dass der nächste-Befehl kein Daten Rückruf ist.
+Gibt an, dass der nächste Aufruf kein Datenaufruf ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_DATAON"></span><span id="phonebuttonfunction_dataon"></span>**phonebuttonfunction- \_ DataOn**
+<span id="PHONEBUTTONFUNCTION_DATAON"></span><span id="phonebuttonfunction_dataon"></span>**PHONEBUTTONFUNCTION \_ DATAON**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, dass der nächste-Befehl ein Daten Rückruf ist.
+Gibt an, dass der nächste Aufruf ein Datenaufruf ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_DATETIME"></span><span id="phonebuttonfunction_datetime"></span>**phonebuttonfunction ( \_ DateTime)**
+<span id="PHONEBUTTONFUNCTION_DATETIME"></span><span id="phonebuttonfunction_datetime"></span>**PHONEBUTTONFUNCTION \_ DATETIME**
 </dt> <dd> <dl> <dt>
 
 
 
-Bewirkt, dass das Telefon das aktuelle Datum und die Uhrzeit anzeigt. Diese Informationen werden vom Switch gesendet.
+Bewirkt, dass auf dem Telefon das aktuelle Datum und die aktuelle Uhrzeit angezeigt werden. diese Informationen werden vom Schalter gesendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_DIRECTORY"></span><span id="phonebuttonfunction_directory"></span>**phonebuttonfunction- \_ Verzeichnis**
+<span id="PHONEBUTTONFUNCTION_DIRECTORY"></span><span id="phonebuttonfunction_directory"></span>**PHONEBUTTONFUNCTION-VERZEICHNIS \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Ruft den Verzeichnisdienst über den Schalter auf.
+Ruft den Verzeichnisdienst über den Switch auf.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_DISCONNECT"></span><span id="phonebuttonfunction_disconnect"></span>**phonebuttonfunction \_ trennen**
+<span id="PHONEBUTTONFUNCTION_DISCONNECT"></span><span id="phonebuttonfunction_disconnect"></span>**PHONEBUTTONFUNCTION \_ DISCONNECT**
 </dt> <dd> <dl> <dt>
 
 
 
-Trennt einen-Befehl, z. b. nach dem Initiieren einer Übertragung.
+Trennt einen Aufruf, z. B. nach dem Initiieren einer Übertragung.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_DONOTDISTURB"></span><span id="phonebuttonfunction_donotdisturb"></span>**phonebuttonfunction \_ donotstören**
+<span id="PHONEBUTTONFUNCTION_DONOTDISTURB"></span><span id="phonebuttonfunction_donotdisturb"></span>**PHONEBUTTONFUNCTION \_ DONOTDISTURB**
 </dt> <dd> <dl> <dt>
 
 
 
-Versetzt das Telefon in den Modus "nicht stören". eingehende Aufrufe empfangen ein ausgelastete Signal oder werden an ein Operator-oder Voice-Mail-System weitergeleitet.
+Platziert das Telefon in den Modus "Nicht störend"; Eingehende Anrufe empfangen ein ausgelastes Signal oder werden an einen Operator oder ein Voicemailsystem weitergeleitet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_DROP"></span><span id="phonebuttonfunction_drop"></span>**phonebuttonfunction- \_ Drop**
+<span id="PHONEBUTTONFUNCTION_DROP"></span><span id="phonebuttonfunction_drop"></span>**PHONEBUTTONFUNCTION \_ DROP**
 </dt> <dd> <dl> <dt>
 
 
 
-Löscht den aktiven-Befehl.
+Löscht den aktiven Aufruf.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_FLASH"></span><span id="phonebuttonfunction_flash"></span>**phonebuttonfunction- \_ Flash**
+<span id="PHONEBUTTONFUNCTION_FLASH"></span><span id="phonebuttonfunction_flash"></span>**PHONEBUTTONFUNCTION \_ FLASH**
 </dt> <dd> <dl> <dt>
 
 
 
-Generiert das Äquivalent einer OnHook/OFFHOOK-Sequenz. Ein Flash weist in der Regel darauf hin, dass alle Ziffern, die als Nächstes eingegeben werden, als Befehle für den Switch verstanden werden. Bei vielen Switches wird von ein aktiver Rückruf für die Beratungs Aufbewahrung durchgesetzt.
+Generiert das Äquivalent einer Onhook-/Offhooksequenz. Ein Flash weist in der Regel darauf hin, dass alle als nächstes typisierten Ziffern als Befehle für den Schalter zu verstehen sind. Bei vielen Schaltern wird ein aktiver Anruf in der Beratung eingeschaltet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_FORWARD"></span><span id="phonebuttonfunction_forward"></span>**phonebuttonfunction \_ Vorwärts**
+<span id="PHONEBUTTONFUNCTION_FORWARD"></span><span id="phonebuttonfunction_forward"></span>**PHONEBUTTONFUNCTION \_ FORWARD**
 </dt> <dd> <dl> <dt>
 
 
@@ -197,87 +197,87 @@ Initiiert oder ändert die Anrufweiterleitung an dieses Telefon.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_HOLD"></span><span id="phonebuttonfunction_hold"></span>**phonebuttonfunction \_ halten**
+<span id="PHONEBUTTONFUNCTION_HOLD"></span><span id="phonebuttonfunction_hold"></span>**PHONEBUTTONFUNCTION \_ HOLD**
 </dt> <dd> <dl> <dt>
 
 
 
-Platziert den aktiven aufrufhalt.
+Legt den aktiven Aufruf zurück.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_INTERCOM"></span><span id="phonebuttonfunction_intercom"></span>**phonebuttonfunction- \_ Sprech Fläche**
+<span id="PHONEBUTTONFUNCTION_INTERCOM"></span><span id="phonebuttonfunction_intercom"></span>**PHONEBUTTONFUNCTION \_ INTERCOM**
 </dt> <dd> <dl> <dt>
 
 
 
-Stellt eine Verbindung mit der-Sprech-zur Übertragung einer Seite her
+Stellt eine Verbindung mit der Intercom-Verbindung zum Übertragen einer Seite auf.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_LASTNUM"></span><span id="phonebuttonfunction_lastnum"></span>**phonebuttonfunction \_ lastnum**
+<span id="PHONEBUTTONFUNCTION_LASTNUM"></span><span id="phonebuttonfunction_lastnum"></span>**PHONEBUTTONFUNCTION \_ LASTNUM**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, dass die letzte Zahl nicht gewählt wurde.
+Die letzte gewählte Nummer wird aktualisiert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_MSGINDICATOR"></span><span id="phonebuttonfunction_msgindicator"></span>**phonebuttonfunction \_ msgindicator**
+<span id="PHONEBUTTONFUNCTION_MSGINDICATOR"></span><span id="phonebuttonfunction_msgindicator"></span>**PHONEBUTTONFUNCTION \_ MSGINDICATOR**
 </dt> <dd> <dl> <dt>
 
 
 
-Steuert den Nachrichten Indikator Lamp.
+Steuert die Meldungsindikator-Lampe.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_MSGWAITOFF"></span><span id="phonebuttonfunction_msgwaitoff"></span>**phonebuttonfunction, \_ msgwai|**
+<span id="PHONEBUTTONFUNCTION_MSGWAITOFF"></span><span id="phonebuttonfunction_msgwaitoff"></span>**PHONEBUTTONFUNCTION \_ MSGWAITOFF**
 </dt> <dd> <dl> <dt>
 
 
 
-Deaktiviert eine Nachricht, die gewartet wird.
+Deaktiviert eine Wartelattelattenachricht.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_MSGWAITON"></span><span id="phonebuttonfunction_msgwaiton"></span>**phonebuttonfunction \_ msgwaiton**
+<span id="PHONEBUTTONFUNCTION_MSGWAITON"></span><span id="phonebuttonfunction_msgwaiton"></span>**PHONEBUTTONFUNCTION \_ MSGWAITON**
 </dt> <dd> <dl> <dt>
 
 
 
-Schaltet eine Meldungs Warteschlange ein.
+Aktiviert eine Wartelattelatte-Nachricht.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_MUTE"></span><span id="phonebuttonfunction_mute"></span>**phonebuttonfunction \_ stumm schalten**
+<span id="PHONEBUTTONFUNCTION_MUTE"></span><span id="phonebuttonfunction_mute"></span>**PHONEBUTTONFUNCTION \_ MUTE**
 </dt> <dd> <dl> <dt>
 
 
 
-Trauert gegen das Mikrofon Gerät des Telefons.
+Stummschaltung des Mikrofongeräts des Telefons.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_NIGHTSRV"></span><span id="phonebuttonfunction_nightsrv"></span>**phonebuttonfunction \_ Nacht-RV**
+<span id="PHONEBUTTONFUNCTION_NIGHTSRV"></span><span id="phonebuttonfunction_nightsrv"></span>**PHONEBUTTONFUNCTION \_ NIGHTSRV**
 </dt> <dd> <dl> <dt>
 
 
 
-Versetzt das Telefon in den Modus, für das es während der Nachtstunden konfiguriert wurde.
+Platziert das Telefon in den Modus, für den es während der Nacht konfiguriert ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_NONE"></span><span id="phonebuttonfunction_none"></span>**phonebuttonfunction \_ None**
+<span id="PHONEBUTTONFUNCTION_NONE"></span><span id="phonebuttonfunction_none"></span>**PHONEBUTTONFUNCTION \_ NONE**
 </dt> <dd> <dl> <dt>
 
 
@@ -287,177 +287,177 @@ Eine "Dummy"-Funktionszuweisung, die angibt, dass die Schaltfläche keine Funkti
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_PARK"></span><span id="phonebuttonfunction_park"></span>**phonebuttonfunction- \_ Park**
+<span id="PHONEBUTTONFUNCTION_PARK"></span><span id="phonebuttonfunction_park"></span>**PHONEBUTTONFUNCTION \_ PARK**
 </dt> <dd> <dl> <dt>
 
 
 
-Speichert den aktiven Anruf auf einem anderen Telefon, wobei er dort abgelegt wird.
+Halten Sie den aktiven Anruf auf einem anderen Telefon ab, und legen Sie ihn dort zurück.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_PICKUP"></span><span id="phonebuttonfunction_pickup"></span>**phonebuttonfunction \_ Pickup**
+<span id="PHONEBUTTONFUNCTION_PICKUP"></span><span id="phonebuttonfunction_pickup"></span>**PHONEBUTTONFUNCTION \_ PICKUP**
 </dt> <dd> <dl> <dt>
 
 
 
-Wählt einen Anruf auf einem anderen Telefon aus.
+Wählt einen Anruf, der auf einem anderen Telefon anruft.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_QUEUECALL"></span><span id="phonebuttonfunction_queuecall"></span>**phonebuttonfunction \_ queuecall**
+<span id="PHONEBUTTONFUNCTION_QUEUECALL"></span><span id="phonebuttonfunction_queuecall"></span>**PHONEBUTTONFUNCTION \_ QUEUECALL**
 </dt> <dd> <dl> <dt>
 
 
 
-Fügt einen Rückruf für eine externe Zahl in die Warteschlange ein, nachdem ein trunk ausgelastet-Hinweis gefunden wurde. Wenn ein trunk zu einem späteren Zeitpunkt verfügbar wird, wird das Telefon mit einem unterschiedlichen Muster behandelt. Wenn Sie das lokale Telefon abrufen, wird der Anruf erneut initiiert.
+Reiht einen Aufruf an eine externe Zahl in die Warteschlange ein, nachdem ein Trunk-Busy-Hinweis gefunden wurde. Wenn ein Trunk später verfügbar wird, wird das Telefon mit einem charakteristischen Muster geleert. Wenn Sie das lokale Telefon aufnehmen, wird der Anruf erneut eingerichtet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_RECALL"></span><span id="phonebuttonfunction_recall"></span>**phonebuttonfunction- \_ Rückruf**
+<span id="PHONEBUTTONFUNCTION_RECALL"></span><span id="phonebuttonfunction_recall"></span>**PHONEBUTTONFUNCTION \_ RECALL**
 </dt> <dd> <dl> <dt>
 
 
 
-Hält einen-Rückruf an.
+Hält einen Aufruf auf.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_REDIRECT"></span><span id="phonebuttonfunction_redirect"></span>**phonebuttonfunction- \_ Umleitung**
+<span id="PHONEBUTTONFUNCTION_REDIRECT"></span><span id="phonebuttonfunction_redirect"></span>**PHONEBUTTONFUNCTION \_ REDIRECT**
 </dt> <dd> <dl> <dt>
 
 
 
-Leitet einen eingehenden-Aufrufe an eine andere Erweiterung um, bevor der-Rückruf beantwortet wurde.
+Leitet einen eingehenden Aufruf an eine andere Erweiterung um, bevor der Anruf beantwortet wurde.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_REJECT"></span><span id="phonebuttonfunction_reject"></span>**phonebuttonfunction \_ ablehnen**
+<span id="PHONEBUTTONFUNCTION_REJECT"></span><span id="phonebuttonfunction_reject"></span>**PHONEBUTTONFUNCTION \_ REJECT**
 </dt> <dd> <dl> <dt>
 
 
 
-Lehnt einen eingehenden-Rückruf ab, bevor der-Rückruf beantwortet wurde.
+Lehnt einen eingehenden Anruf ab, bevor der Anruf beantwortet wurde.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_REPDIAL"></span><span id="phonebuttonfunction_repdial"></span>**phonebuttonfunction- \_ repdial**
+<span id="PHONEBUTTONFUNCTION_REPDIAL"></span><span id="phonebuttonfunction_repdial"></span>**PHONEBUTTONFUNCTION \_ REPDIAL**
 </dt> <dd> <dl> <dt>
 
 
 
-Das Repertory, das die zu wählende Zahl unterscheidet, wird als Kurzform und nach dem Drücken dieser Schaltfläche angegeben.
+Das erneute Wählen der zu wählenden Nummer wird als Kurzwahl bereitgestellt, nachdem Sie diese Schaltfläche gedrückt haben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_RINGAGAIN"></span><span id="phonebuttonfunction_ringagain"></span>**phonebuttonfunction- \_ Ring**
+<span id="PHONEBUTTONFUNCTION_RINGAGAIN"></span><span id="phonebuttonfunction_ringagain"></span>**PHONEBUTTONFUNCTION \_ RINGSTABIN**
 </dt> <dd> <dl> <dt>
 
 
 
-Initiiert eine Anforderung, um benachrichtigt zu werden, wenn ein Anruf aufgrund eines ausgelasteten Signals oder einer Antwort nicht ordnungsgemäß abgeschlossen werden kann.
+Initiiert eine Anforderung, um benachrichtigt zu werden, wenn ein Aufruf aufgrund eines ausgelastet signalisierten Signals oder einer nicht beantworteten Antwort nicht normal abgeschlossen werden kann.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_SAVEREPEAT"></span><span id="phonebuttonfunction_saverepeat"></span>**phonebuttonfunction \_ saveretorf**
+<span id="PHONEBUTTONFUNCTION_SAVEREPEAT"></span><span id="phonebuttonfunction_saverepeat"></span>**PHONEBUTTONFUNCTION \_ SAVEREPEAT**
 </dt> <dd> <dl> <dt>
 
 
 
-Wenn während eines Aufrufens oder eines Versuchs aufgerufen wird, wird die Anzahl oder der Befehl des Aufrufens in Erinnerung behalten. Wenn gedrückt, während kein-Rückruf aktiv ist (z. b. bei einem Wählton), wiederholt er den am häufigsten gespeicherten Befehl.
+Wenn sie gedrückt wird, während ein Aufruf oder Aufrufversuch aktiv ist, wird die Nummer oder der Befehl dieses Aufrufs daran erinnert. Wenn der Befehl gedrückt wird, während kein Anruf aktiv ist (z. B. während des Wähltons), wird der am meisten gespeicherte Befehl wiederholt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_SELECTRING"></span><span id="phonebuttonfunction_selectring"></span>**phonebuttonfunction \_ selectring**
+<span id="PHONEBUTTONFUNCTION_SELECTRING"></span><span id="phonebuttonfunction_selectring"></span>**PHONEBUTTONFUNCTION \_ SELECTRING**
 </dt> <dd> <dl> <dt>
 
 
 
-Ermöglicht es dem Benutzer, das Ring Muster des Telefons auszuwählen.
+Ermöglicht dem Benutzer, das Ringmuster des Telefons auszuwählen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_SETREPDIAL"></span><span id="phonebuttonfunction_setrepdial"></span>**phonebuttonfunction \_ .**
+<span id="PHONEBUTTONFUNCTION_SETREPDIAL"></span><span id="phonebuttonfunction_setrepdial"></span>**PHONEBUTTONFUNCTION \_ SETREPDIAL**
 </dt> <dd> <dl> <dt>
 
 
 
-Programme die Zuordnungen der Kurzwert-zu-Telefonnummern, auf die über das Unterdrücken von Repertory (die Schaltfläche "repdial") zugegriffen werden kann.
+Programmiert die Zuordnungen von Kurz- und Telefonnummern, auf die durch erneutes Wählen zugegriffen werden kann (die Schaltfläche "REPDIAL").
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_SENDCALLS"></span><span id="phonebuttonfunction_sendcalls"></span>**phonebuttonfunction \_ sendcalls**
+<span id="PHONEBUTTONFUNCTION_SENDCALLS"></span><span id="phonebuttonfunction_sendcalls"></span>**PHONEBUTTONFUNCTION \_ SENDCALLS**
 </dt> <dd> <dl> <dt>
 
 
 
-Sendet alle Aufrufe an ein anderes Telefon, die zur Abdeckung verwendet werden. identisch mit phonebuttonfunction \_ Abdeckung.
+Sendet alle Anrufe an ein anderes Telefon, das für die Abdeckung verwendet wird. identisch mit PHONEBUTTONFUNCTION \_ COVER.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_SPEAKEROFF"></span><span id="phonebuttonfunction_speakeroff"></span>**phonebuttonfunction \_ speakeroff**
+<span id="PHONEBUTTONFUNCTION_SPEAKEROFF"></span><span id="phonebuttonfunction_speakeroff"></span>**PHONEBUTTONFUNCTION \_ SPEAKEROFF**
 </dt> <dd> <dl> <dt>
 
 
 
-Schaltet den externen Redner des Telefons aus.
+Schaltet den externen Lautsprecher des Telefons aus.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_SPEAKERON"></span><span id="phonebuttonfunction_speakeron"></span>**phonebuttonfunction \_ speakeron**
+<span id="PHONEBUTTONFUNCTION_SPEAKERON"></span><span id="phonebuttonfunction_speakeron"></span>**PHONEBUTTONFUNCTION \_ SPEAKERON**
 </dt> <dd> <dl> <dt>
 
 
 
-Schaltet den externen Redner des Telefons ein.
+Schaltet den externen Lautsprecher des Telefons ein.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_STATIONSPEED"></span><span id="phonebuttonfunction_stationspeed"></span>**phonebuttonfunction- \_ Stations Geschwindigkeit**
+<span id="PHONEBUTTONFUNCTION_STATIONSPEED"></span><span id="phonebuttonfunction_stationspeed"></span>**PHONEBUTTONFUNCTION \_ STATIONSPEED**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Zahl, die gewählt werden soll, wird als Kurzform und nach dem Drücken dieser Schaltfläche angegeben. Die Zuordnungen für die Wahl der Stations Geschwindigkeit sind spezifisch für diese Station (Telefon).
+Die zu wählende Nummer wird nach dem Drücken dieser Schaltfläche als Kurzwahl angegeben. Die Zuordnungen für die Schnellwahl der Station sind für diese Station (Telefon) spezifisch.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_SYSTEMSPEED"></span><span id="phonebuttonfunction_systemspeed"></span>**phonebuttonfunction- \_ Systemgeschwindigkeit**
+<span id="PHONEBUTTONFUNCTION_SYSTEMSPEED"></span><span id="phonebuttonfunction_systemspeed"></span>**PHONEBUTTONFUNCTION \_ SYSTEMSPEED**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Zahl, die gewählt werden soll, wird als Kurzform und nach dem Drücken dieser Schaltfläche angegeben. Die Zuordnungen für die Wahl der Systemgeschwindigkeit werden innerhalb des Schalters konfiguriert.
+Die zu wählende Nummer wird nach dem Drücken dieser Schaltfläche als Kurzwahl angegeben. Die Zuordnungen für die Systemgeschwindigkeit werden innerhalb des Switches konfiguriert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_TRANSFER"></span><span id="phonebuttonfunction_transfer"></span>**phonebuttonfunction- \_ Übertragung**
+<span id="PHONEBUTTONFUNCTION_TRANSFER"></span><span id="phonebuttonfunction_transfer"></span>**PHONEBUTTONFUNCTION-ÜBERTRAGUNG \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Initiiert eine Übertragung oder schließt die Übertragung eines-Aufrufes ab.
+Initiiert eine Aufrufübertragung oder schließt die Übertragung eines Aufrufs ab.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_UNKNOWN"></span><span id="phonebuttonfunction_unknown"></span>**phonebuttonfunction \_ unbekannt**
+<span id="PHONEBUTTONFUNCTION_UNKNOWN"></span><span id="phonebuttonfunction_unknown"></span>**PHONEBUTTONFUNCTION \_ UNKNOWN**
 </dt> <dd> <dl> <dt>
 
 
@@ -467,31 +467,31 @@ Eine "Dummy"-Funktionszuweisung, die angibt, dass die genaue Funktion der Schalt
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_VOLUMEDOWN"></span><span id="phonebuttonfunction_volumedown"></span>**phonebuttonfunction- \_ volumedown**
+<span id="PHONEBUTTONFUNCTION_VOLUMEDOWN"></span><span id="phonebuttonfunction_volumedown"></span>**PHONEBUTTONFUNCTION \_ VOLUMEDOWN**
 </dt> <dd> <dl> <dt>
 
 
 
-Verringert die audiomenge über den Mobiltelefon Anruf oder das speakertelefon des Telefons.
+Verringert die Audiolautstärke über den Lautsprecher oder das Lautsprechertelefon des Telefons.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEBUTTONFUNCTION_VOLUMEUP"></span><span id="phonebuttonfunction_volumeup"></span>**phonebuttonfunction- \_ volumeup**
+<span id="PHONEBUTTONFUNCTION_VOLUMEUP"></span><span id="phonebuttonfunction_volumeup"></span>**PHONEBUTTONFUNCTION \_ VOLUMEUP**
 </dt> <dd> <dl> <dt>
 
 
 
-Erhöht die audiomenge über den Mobiltelefon Anruf oder das speakertelefon des Telefons.
+Erhöht die Audiolautstärke über den Lautsprecher oder das Lautsprechertelefon des Telefons.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Werte im Bereich 0x80000000 bis 0xffffffff können für gerätespezifische Erweiterungen zugewiesen werden. Werte im Bereich 0x00000000 bis 0x7FFFFFFF sind reserviert.
+Werte im Bereich 0x80000000 bis 0xFFFFFFFF können für gerätespezifische Erweiterungen zugewiesen werden. -Werte im Bereich 0x00000000 bis 0x7FFFFFFF sind reserviert.
 
-Die " **phonebuttonfunction"- \_ Konstanten** haben Werte, die in den aktuellen Telefon Sätzen häufig gefunden werden. Diese Schaltflächen Funktionen können verwendet werden, um die entsprechende Funktion über den Switch mithilfe von [**linedevspecificfeature**](/windows/desktop/api/Tapi/nf-tapi-linedevspecificfeature)aufzurufen. Beachten Sie, dass TAPI die Semantik der Schaltflächen Funktionen nicht definiert. Sie ermöglicht nur den Zugriff auf die entsprechende Funktion. Das Verhalten, das mit den einzelnen Funktionswerten verknüpft ist, ist generisch und kann je nach Telefonieumgebung variieren.
+Die **PHONEBUTTONFUNCTION-Konstanten \_** verfügen über Werte, die häufig in aktuellen Telefonsätzen zu finden sind. Diese Schaltflächenfunktionen können verwendet werden, um die entsprechende Funktion über den Schalter mit [**lineDevSpecificFeature aufrufen.**](/windows/desktop/api/Tapi/nf-tapi-linedevspecificfeature) Beachten Sie, dass TAPI die Semantik der Schaltflächenfunktionen nicht definiert. sie bietet nur Zugriff auf die entsprechende Funktion. Das verhalten, das jedem der oben genannten Funktionswerte zugeordnet ist, ist generisch und kann je nach Telefonieumgebung variieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -499,8 +499,8 @@ Die " **phonebuttonfunction"- \_ Konstanten** haben Werte, die in den aktuellen 
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Legt die Erfolgs Geschwindigkeit fest. Die Erfolgs Geschwindigkeit ähnelt einem Multiplikator, der verwendet wird, um die Wiedergabe des Titels zu beschleunigen oder zu verlangsamen.
+description: Legt die Spurgeschwindigkeit fest. Die Spurgeschwindigkeit ähnelt einem Multiplikator, der verwendet wird, um die Wiedergabe der Spur zu beschleunigen oder zu verlangsamen.
 ms.assetid: b3946b61-0676-4690-9844-639fabd8fd7c
-title: 'ID3DXAnimationController:: settrackspeed-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::SetTrackSpeed-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 6cf57df2db370921c633ab695c9f60b96d2183dc
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 62cd882dd95446c92dd4192528322ed54708496183a3557aa89d53bc5dac138b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118522359"
 ---
-# <a name="id3dxanimationcontrollersettrackspeed-method"></a>ID3DXAnimationController:: settrackspeed-Methode
+# <a name="id3dxanimationcontrollersettrackspeed-method"></a>ID3DXAnimationController::SetTrackSpeed-Methode
 
-Legt die Erfolgs Geschwindigkeit fest. Die Erfolgs Geschwindigkeit ähnelt einem Multiplikator, der verwendet wird, um die Wiedergabe des Titels zu beschleunigen oder zu verlangsamen.
+Legt die Spurgeschwindigkeit fest. Die Spurgeschwindigkeit ähnelt einem Multiplikator, der verwendet wird, um die Wiedergabe der Spur zu beschleunigen oder zu verlangsamen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,19 +41,19 @@ HRESULT SetTrackSpeed(
 
 <dl> <dt>
 
-Nach *verfolgen* \[ in\]
+*Nachverfolgen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der Bezeichner des Titels, auf den die Geschwindigkeit festgelegt wird.
+Bezeichner der Spur, für die die Geschwindigkeit festgelegt werden soll.
 
 </dd> <dt>
 
-*Geschwindigkeit* \[ in\]
+*Geschwindigkeit* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 Neue Geschwindigkeit.
 
@@ -63,7 +63,7 @@ Neue Geschwindigkeit.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,12 +71,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

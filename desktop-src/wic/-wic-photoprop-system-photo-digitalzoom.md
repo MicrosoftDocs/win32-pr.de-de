@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. Digitalzoom-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.Photo.DigitalZoom-Eigenschaft.
 ms.assetid: 22a69d3e-4ec3-4652-b4bb-dfcfffc2322b
-title: System. Photo. Digitalzoom-Foto-metadatenrichtlinie
+title: System.Photo.DigitalZoom Photo Metadata Policy
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9bf440e92243eb2102ac6abaa349ea83e58d9a2d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 19dfaf2838c8f321b1406d951fcc335076bcdfc00e3a17de0954f1a62022570e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118205376"
 ---
-# <a name="systemphotodigitalzoom-photo-metadata-policy"></a>System. Photo. Digitalzoom-Foto-metadatenrichtlinie
+# <a name="systemphotodigitalzoom-photo-metadata-policy"></a>System.Photo.DigitalZoom Photo Metadata Policy
 
-Die fotometadatenrichtlinie für die [System. Photo. Digitalzoom](../properties/props-system-photo-digitalzoom.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.Photo.DigitalZoom-Eigenschaft.](../properties/props-system-photo-digitalzoom.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ Foto \_ Digitalzoom
+PKEY \_ Photo \_ DigitalZoom
 
 ### <a name="containers"></a>Container
 
@@ -27,50 +27,50 @@ JPEG, TIFF
 
 Ja
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ R8
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Dieser Wert wird von System. Photo. digitalzoomzähler und System. Photo. digitalzoomnenner generiert. Sie kann nicht direkt geschrieben werden. Werte aus unterschiedlichen Schemas sind abgestimmt.
+Dieser Wert wird aus System.Photo.DigitalZoomNumerator und System.Photo.DigitalZoomDenominator generiert. Er kann nicht direkt geschrieben werden. Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 41988} |             |
-| 2     | /XMP/EXIF: DigitalZoomRatio    |             |
+| 1     | /app1/ifd/exif/{ushort=41988} |             |
+| 2     | /xmp/exif:DigitalZoomRatio    |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 41988} |             |
-| 2     | /XMP/EXIF: DigitalZoomRatio    |             |
+| 1     | /app1/ifd/exif/{ushort=41988} |             |
+| 2     | /xmp/exif:DigitalZoomRatio    |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                          |
 |-------|-------------------------------|
-| 1     | /App1/IFD/EXIF/{ushort = 41988} |
-| 2     | /XMP/EXIF: DigitalZoomRatio    |
+| 1     | /app1/ifd/exif/{ushort=41988} |
+| 2     | /xmp/exif:digitalzoomratio    |
 
 
 
@@ -78,52 +78,52 @@ Dieser Wert wird von System. Photo. digitalzoomzähler und System. Photo. digita
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                           | Datenträger Format |
+| Auftrag | Pfad                           | Datenträgerformat |
 |-------|--------------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 41988}       |             |
-| 2     | /IFD/XMP/EXIF: DigitalZoomRatio |             |
+| 1     | /ifd/exif/{ushort=41988}       |             |
+| 2     | /ifd/xmp/exif:DigitalZoomRatio |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                           | Datenträger Format |
+| Auftrag | Pfad                           | Datenträgerformat |
 |-------|--------------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 41988}       |             |
-| 2     | /IFD/XMP/EXIF: DigitalZoomRatio |             |
+| 1     | /ifd/exif/{ushort=41988}       |             |
+| 2     | /ifd/xmp/exif:DigitalZoomRatio |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                           |
 |-------|--------------------------------|
-| 1     | /IFD/EXIF/{ushort = 41988}       |
-| 2     | /IFD/XMP/EXIF: DigitalZoomRatio |
+| 1     | /ifd/exif/{ushort=41988}       |
+| 2     | /ifd/xmp/exif:digitalzoomratio |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. Digitalzoom](../properties/props-system-photo-digitalzoom.md)
+[System.Photo.DigitalZoom](../properties/props-system-photo-digitalzoom.md)
 </dt> </dl>
 
  

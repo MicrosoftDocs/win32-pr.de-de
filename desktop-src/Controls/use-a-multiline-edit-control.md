@@ -1,42 +1,42 @@
 ---
-title: Erstellen eines mehrzeiligen Bearbeitungs Steuer Elements
-description: In diesem Thema wird veranschaulicht, wie ein einfaches Textverarbeitungs Element implementiert wird, indem dem Client Bereich eines Fensters ein mehrzeilige Bearbeitungs Steuerelement hinzugefügt wird.
+title: Erstellen eines mehrzeiligen Bearbeitungssteuerelements
+description: In diesem Thema wird veranschaulicht, wie ein einfacher Textprozessor implementiert wird, indem dem Clientbereich eines Fensters ein mehrzeiliges Bearbeitungssteuerelement hinzugefügt wird.
 ms.assetid: B955CC42-F89F-48EB-A19A-ADA6E5273EF6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d05133707e9a47a632a70807177c6ec1b63bc842
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: d11100d4d6f82c7a352d4ddacaa7fc05694b4d54125febc766a6d3f1c68376e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103949232"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117829071"
 ---
-# <a name="how-to-create-a-multiline-edit-control"></a>Erstellen eines mehrzeiligen Bearbeitungs Steuer Elements
+# <a name="how-to-create-a-multiline-edit-control"></a>Erstellen eines mehrzeiligen Bearbeitungssteuerelements
 
-In diesem Thema wird veranschaulicht, wie ein einfaches Textverarbeitungs Element implementiert wird, indem dem Client Bereich eines Fensters ein mehrzeilige Bearbeitungs Steuerelement hinzugefügt wird. Wenn Sie das mehrzeilige Bearbeitungs Steuerelement verwenden, kann der Benutzer Befehle bearbeiten in einem Menü auswählen. Mit diesen Befehlen kann der Benutzer einfache Bearbeitungsvorgänge ausführen, z. b. eine vorherige Aktion rückgängig machen, die Auswahl in der Zwischenablage Ausschneiden oder kopieren, Text aus der Zwischenablage einfügen und die aktuelle Auswahl löschen.
+In diesem Thema wird veranschaulicht, wie ein einfacher Textprozessor implementiert wird, indem dem Clientbereich eines Fensters ein mehrzeiliges Bearbeitungssteuerelement hinzugefügt wird. Mithilfe des mehrzeiligen Bearbeitungssteuerelements kann der Benutzer In einem Menü Befehle bearbeiten auswählen. Mit diesen Befehlen kann der Benutzer einfache Bearbeitungsvorgänge ausführen, z. B. vorherige Aktionen rückgängig machen, Auswahlen in die Zwischenablage ausschneiden oder kopieren, Text aus der Zwischenablage einfügen und die aktuelle Auswahl löschen.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Die Anwendung muss Code enthalten, um eine Instanz von zu erstellen und ein mehrzeilige Bearbeitungs Steuerelement zu initialisieren und dann Befehle zum Bearbeiten von Benutzern zu verarbeiten.
+Ihre Anwendung muss Code enthalten, um eine Instanz von zu erstellen, ein mehrzeiliges Bearbeitungssteuerelement zu initialisieren und dann Benutzerbearbeitungsbefehle zu verarbeiten.
 
-Im folgenden C++-Codebeispiel wird ein Großteil der Funktionalität eines einfachen Textprozessors implementiert, indem dem Client Bereich eines Fensters ein mehrzeilige Bearbeitungs Steuerelement hinzugefügt wird. Das System führt automatisch WordWrap-Vorgänge für das Bearbeitungs Steuerelement aus und verarbeitet die Verarbeitung für die vertikale Schiebe Leiste (erstellt durch Angeben von [**es \_ autovscroll**](edit-control-styles.md) im Aufrufen der Funktion " [**deatewindow**](/windows/desktop/api/winuser/nf-winuser-createwindowa) ").
+Im folgenden C++-Codebeispiel wird ein Großteil der Funktionalität eines einfachen Textprozessors implementiert, indem dem Clientbereich eines Fensters ein mehrzeiliges Bearbeitungssteuerelement hinzugefügt wird. Das System führt automatisch Wordwrap-Vorgänge für das Bearbeitungssteuerelement aus und verarbeitet auch die Verarbeitung für die vertikale Scrollleiste (erstellt durch Angabe von [**ES \_ AUTOVSCROLL**](edit-control-styles.md) im Aufruf der [**CreateWindow-Funktion).**](/windows/desktop/api/winuser/nf-winuser-createwindowa)
 
-Benutzer Bearbeitungsbefehle werden über [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Benachrichtigungs Meldungen an den Fenster Prozess gesendet.
+Benutzerbearbeitungsbefehle werden über [**WM \_ COMMAND-Benachrichtigungsmeldungen**](/windows/desktop/menurc/wm-command) an den Fensterprozess gesendet.
 
 > [!Note]  
-> Wenn das Fenster das Windows-Menüband enthält, muss die Größe des Bearbeitungs Steuer Elements angepasst werden, um die Höhe des Menübands aufnehmen zu können. Weitere Informationen finden Sie unter [Windows-Menü Band Framework](/windows/desktop/windowsribbon/-uiplat-windowsribbon-entry).
+> Wenn das Fenster das Windows Menüband enthält, muss die Größe des Bearbeitungssteuerelements angepasst werden, um die Höhe des Menübands aufzunehmen. Weitere Informationen finden Sie unter [Windows Menübandframework.](/windows/desktop/windowsribbon/-uiplat-windowsribbon-entry)
 
  
 
@@ -160,13 +160,13 @@ LRESULT CALLBACK MainWndProc(HWND hwnd,      // window handle
 
 <dl> <dt>
 
-[Informationen zu Bearbeitungs Steuerelementen](about-edit-controls.md)
+[Informationen zum Bearbeiten von Steuerelementen](about-edit-controls.md)
 </dt> <dt>
 
-[Steuerelement Verweis bearbeiten](bumper-edit-control-edit-control-reference.md)
+[Steuerelementverweis bearbeiten](bumper-edit-control-edit-control-reference.md)
 </dt> <dt>
 
-[Verwenden von Bearbeitungs Steuerelementen](/windows/desktop/Controls/using-edit-controls)
+[Verwenden von Bearbeitungssteuerelementen](/windows/desktop/Controls/using-edit-controls)
 </dt> <dt>
 
 [Steuerelement bearbeiten](edit-controls.md)

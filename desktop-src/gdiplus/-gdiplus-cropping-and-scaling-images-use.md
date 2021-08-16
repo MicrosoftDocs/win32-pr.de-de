@@ -1,25 +1,25 @@
 ---
-title: Zuschneiden und Skalieren von GDI+-Images
-description: Die Grafikklasse stellt mehrere DrawImage-Methoden bereit, von denen einige über Quell-und Ziel Rechteck Parameter verfügen, die Sie zum Zuschneiden und Skalieren von Bildern verwenden können.
+title: Zuschneiden und Skalieren GDI+ Bildern
+description: Die Graphics-Klasse stellt mehrere DrawImage-Methoden bereit, von denen einige Quell- und Zielrechteckparameter aufweisen, die Sie zum Zuschneiden und Skalieren von Bildern verwenden können.
 ms.assetid: cad64615-d8e6-4c03-a6c7-c98267a8f159
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 18c70a7b4f7aa0374602326ab856a01bbadc0047
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1d3684089ddab4ba963a79b80aafa67e94f94d988de5aa7d7d9f65ad31e48bcb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104988211"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118067550"
 ---
-# <a name="cropping-and-scaling-gdi-images"></a>Zuschneiden und Skalieren von GDI+-Images
+# <a name="cropping-and-scaling-gdi-images"></a>Zuschneiden und Skalieren GDI+ Bildern
 
-Die [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse stellt mehrere **DrawImage** -Methoden bereit, von denen einige über Quell-und Ziel Rechteck Parameter verfügen, die Sie zum Zuschneiden und Skalieren von Bildern verwenden können.
+Die [**Graphics-Klasse**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) stellt mehrere **DrawImage-Methoden** bereit, von denen einige Quell- und Zielrechteckparameter aufweisen, die Sie zum Zuschneiden und Skalieren von Bildern verwenden können.
 
-Im folgenden Beispiel wird ein [**Image**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) -Objekt aus dem Datei Apple.gif erstellt. Der Code zeichnet das gesamte Apple-Image in seiner ursprünglichen Größe. Der Code ruft dann die **DrawImage** -Methode eines [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekts auf, um einen Teil des Apple-Bilds in einem Ziel Rechteck zu zeichnen, das größer ist als das ursprüngliche Apple-Image.
+Im folgenden Beispiel wird ein [**Image-Objekt**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) aus der Datei Apple.gif erstellt. Der Code zeichnet das gesamte Apple-Bild in seiner ursprünglichen Größe. Der Code ruft dann die **DrawImage-Methode** eines [**Graphics-Objekts**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) auf, um einen Teil des Apple-Bilds in einem Zielrechteck zu zeichnen, das größer als das ursprüngliche Apple-Bild ist.
 
-Mit der **DrawImage** -Methode wird bestimmt, welcher Teil des Apple gezeichnet werden soll, indem das Quell Rechteck betrachtet wird, das durch das dritte, vierte, fünfte und sechste Argument angegeben wird. In diesem Fall wird Apple auf 75 Prozent seiner Breite und 75 Prozent seiner Höhe zugeschnitten.
+Die **DrawImage-Methode** bestimmt, welcher Teil des Apples gezeichnet werden soll, indem das Quellrechteck betrachtet wird, das durch das dritte, vierte, fünfte und sechste Argument angegeben wird. In diesem Fall wird der Apple auf 75 Prozent seiner Breite und 75 Prozent seiner Höhe zugeschnitten.
 
-Mit der **DrawImage** -Methode wird festgelegt, wo der gezeichnete Apple gezeichnet werden soll und wie groß das abgeschnittene Apple ist, indem das Ziel Rechteck betrachtet wird, das durch das zweite Argument angegeben wird. In diesem Fall ist das Ziel Rechteck um 30 Prozent breiter und 30 Prozent höher als das ursprüngliche Bild.
+Die **DrawImage-Methode** bestimmt anhand des Zielrechtecks, das durch das zweite Argument angegeben wird, wo der zugeschnittene Apple gezeichnet werden soll und wie groß der zugeschnittene Apple sein soll. In diesem Fall ist das Zielrechteck 30 Prozent breiter und 30 Prozent größer als das ursprüngliche Bild.
 
 
 ```
@@ -46,9 +46,9 @@ graphics.DrawImage(
 
 
 
-Die folgende Abbildung zeigt das ursprüngliche Apple und das skalierte, ausgeschnittene Apple.
+Die folgende Abbildung zeigt den ursprünglichen Apple und den skalierten, zugeschnittenen Apple.
 
-![Abbildung zeigt ein Apple, dann ein vergrößerter Teil des ursprünglichen Apple](images/cropscale1.png)
+![Abbildung, die einen Apple und dann einen vergrößerten Teil des ursprünglichen Apple zeigt](images/cropscale1.png)
 
  
 

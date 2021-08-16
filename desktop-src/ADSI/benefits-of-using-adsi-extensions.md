@@ -1,45 +1,45 @@
 ---
 title: Vorteile der Verwendung von ADSI-Erweiterungen
-description: Die Art und Weise, in der Erweiterungs Methoden implementiert werden, hängt vom erweiterungswriter ab.
+description: Die Art und Weise, wie Erweiterungsmethoden implementiert werden, hängt vom Erweiterungswriter ab.
 ms.assetid: dbd1a203-b94c-4739-8c9d-aed1c9b43426
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e27e80e6c095fcc02ca02c57b0987d1e6ed410ff
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 11a680e1eefbc05dac84b3420bee23287eda2bd02325274532109544b04ff73a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036323"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118018143"
 ---
 # <a name="benefits-of-using-adsi-extensions"></a>Vorteile der Verwendung von ADSI-Erweiterungen
 
-Die Art und Weise, in der Erweiterungs Methoden implementiert werden, hängt vom erweiterungswriter ab. Ein erweiterungswriter kann sogar eine Methode vollständig außerhalb des Gültigkeits Bereichs des Verzeichnisses implementieren. Beispielsweise ist ein Entwickler von Sicherungs-und Wiederherstellungssoftware zum Erweitern eines Objekts mit dem Namen **Computer** vorgesehen. Der Entwickler muss zwei Methoden erstellen: **sichern** und **Wiederherstellen**. Diese Methoden arbeiten remote auf dem physischen Computer, auf den das **Computer** Objekt im Verzeichnis verweist. Durch das fungieren als Erweiterung greift die Komponente auf die ADSI-Infrastruktur zu und wird von ADSI-Clients als integraler Bestandteil des Objekts angezeigt.
+Die Art und Weise, wie Erweiterungsmethoden implementiert werden, hängt vom Erweiterungswriter ab. Ein Erweiterungswriter kann sogar eine Methode implementieren, die sich vollständig außerhalb des Bereichs des Verzeichnisses befindet. Ein Entwickler von Sicherungs- und Wiederherstellungssoftwareplänen beispielsweise, um ein Objekt namens Computer zu **erweitern.** Der Entwickler muss zwei Methoden erstellen: **BackUp** und **Restore.** Diese Methoden arbeiten remote auf dem physischen Computer, auf den **das Computerobjekt** im Verzeichnis verweist. Indem sie als Erweiterung agiert, greifen sie auf die ADSI-Infrastruktur zu und werden von ADSI-Clients als integraler Bestandteil des Objekts angezeigt.
 
-In den folgenden Szenarien werden Situationen beschrieben, in denen das Erstellen einer Erweiterung für ADSI von Vorteil sein könnte:
+In den folgenden Szenarien werden Situationen beschrieben, in denen das Erstellen einer Erweiterung für ADSI von Vorteil wäre:
 
--   Erstellen Sie eine Erweiterung, um eine Komponente in das Verzeichnis Objekt zu integrieren. Da es ein **Benutzer** Objekt im Verzeichnis gibt, möchte ein HR-Entwickler möglicherweise eine ADSI-Erweiterung erstellen, die andere Daten im Verzeichnis auffüllt, wenn ein **Benutzer** erstellt wird.
--   Erstellen Sie eine Erweiterung, wenn eine Komponente eine Verzeichnis Suche erfordert. Eine Komponente erfordert möglicherweise ein Verzeichnis als Ausgangspunkt für eine Suche. Beispielsweise beim Erstellen einer neuen Anwendung. Ein Anwendungs Objekt, **toolapp**, kann im Verzeichnis veröffentlicht werden. Die Anwendung unterstützt möglicherweise Status Benachrichtigungen für eine Sammlung von e-Mail-Servern. Sie beschließen, diese Anwendung zu einer ADSI-Erweiterung zu machen.
+-   Erstellen Sie eine Erweiterung, um eine Komponente in das Verzeichnisobjekt zu integrieren. Da im Verzeichnis ein **Benutzerobjekt** vorhanden ist, möchte ein HR-Entwickler möglicherweise eine ADSI-Erweiterung erstellen, die andere Daten im Verzeichnis auffüllt, wenn ein **Benutzer** erstellt wird.
+-   Erstellen Sie eine Erweiterung, wenn eine Komponente eine Verzeichnissuche erfordert. Eine Komponente erfordert möglicherweise ein Verzeichnis als Ausgangspunkt für eine Suche. Zum Beispiel beim Erstellen einer neuen Anwendung. Ein Anwendungsobjekt, **ToolApp,** kann im Verzeichnis veröffentlicht werden. Ihre Anwendung unterstützt möglicherweise Statusbenachrichtigungen auf einer Sammlung von E-Mail-Servern. Sie entscheiden sich dafür, diese Anwendung zu einer ADSI-Erweiterung zu machen.
 
-    Nun kann ein Benutzer im Verzeichnis nach allen Instanzen von **toolapp** suchen. Für jedes Objekt, das zurückgegeben wird, kann der Benutzer einen **callfynow-Rückruf ()** ausgeben. Eine Anwendung oder Erweiterung kann mehr aktuelle Objektdaten im Verzeichnis abrufen und jeden Server asynchron benachrichtigen.
+    Jetzt kann ein Benutzer nach allen Instanzen von **ToolApp** im Verzeichnis suchen. Für jedes zurückgegebene Objekt kann der Benutzer einen Aufruf von **NotifyNow() aus.** Eine Anwendung oder Erweiterung kann aktuellere Objektdaten im Verzeichnis abrufen und jeden Server asynchron benachrichtigen.
 
--   Erstellen Sie eine Erweiterung als Verknüpfung zwischen Namespaces und Programmier Modellen. Ein ISV stellt z. b. ein neues Objektmodell für Druckdienste dar. Das **PrintQueue** -Objekt ist bereits im Verzeichnis definiert. Der ISV kann eine ADSI-Erweiterung erstellen und dem **PrintQueue** -Objekt zuordnen. ADSI-Benutzer können eine Bindung an ein **PrintQueue** -Objekt herstellen und mit der Verwendung des Objektmodells für den ISV beginnen. Aus der ADSI-Client Perspektive ist dieser Verknüpfungs Punkt transparent.
--   Erstellen Sie eine Erweiterung, um Aufgaben zu vereinfachen. Viele Tasks im Verzeichnis können durchsuchen und Festlegen mehrerer Attribute in einem Objekt oder mehreren Objekten erreicht werden. Durch das Erstellen einer einzelnen Funktion zum Bearbeiten mehrerer Attribute wird die Entwicklung für Anwendungs-und Skript Schreiber vereinfacht.
+-   Erstellen Sie eine Erweiterung als Verbindung zwischen Namespaces und Programmiermodellen. Ein ISV erfindet beispielsweise ein neues Objektmodell für Druckdienste. Das **printQueue-Objekt** ist bereits im Verzeichnis definiert. Der ISV kann eine ADSI-Erweiterung erstellen und sie dem **printQueue-Objekt** zuordnen. ADSI-Benutzer können eine Bindung an ein **printQueue-Objekt** erstellen und mit der Verwendung des Objektmodells für den ISV beginnen. Aus Sicht des ADSI-Clients ist dieser Verbindungspunkt transparent.
+-   Erstellen Sie eine Erweiterung, um Aufgaben zu vereinfachen. Viele Aufgaben im Verzeichnis können durch Suchen und Festlegen mehrerer Attribute in einem Objekt oder mehreren Objekten ausgeführt werden. Durch das Erstellen einer einzelnen Funktion zum Bearbeiten mehrerer Attribute wird die Entwicklung für Anwendungs- und Skriptautoren vereinfacht.
 
-Bei ADSI-Clients erweitern Erweiterungen die ADSI-Programmierumgebung auf verschiedene Weise:
+Für ADSI-Clients erweitern Erweiterungen die ADSI-Programmierumgebung auf verschiedene Arten:
 
--   Entwickler, die ADSI-Clients erstellen, müssen kein neues Programmiermodell erlernen. Die Erweiterungen sind Teil von ADSI. Sie würden dasselbe Paradigma für die Suche, die Datenbearbeitung und das Sichern von Objekten verwenden.
--   Administratoren können verknüpfte Verzeichnis aktivierte Anwendungen mithilfe von Erweiterungen verwalten.
--   Erweiterungs Consumer können ein ADSI-Objekt und eine Erweiterung als ein integriertes Objekt anzeigen.
--   Vorhandene Komponenten können in ADSI integriert werden, wodurch Erweiterungen vorhandene Investitionen nutzen und Synergie zwischen Komponenten erstellen können.
+-   Entwickler, die ADSI-Clients erstellen, müssen kein neues Programmiermodell erlernen. Die Erweiterungen sind Teil von ADSI. Sie würden dasselbe Paradigma zum Suchen, Ändern von Daten und Sichern von Objekten verwenden.
+-   Administratoren können verwandte verzeichnisfähige Anwendungen mithilfe von Erweiterungen verwalten.
+-   Erweiterungsverbraucher können ein ADSI-Objekt und eine Erweiterung als ein integriertes Objekt anzeigen.
+-   Vorhandene Komponenten können in ADSI integriert werden, wodurch Erweiterungen vorhandene Investitionen nutzen und eine Verbindung zwischen den Komponenten schaffen können.
 
-ADSI-Erweiterungen wurden mit den folgenden Zielen entworfen:
+ADSI-Erweiterungen wurden mit den folgenden Zielen entwickelt:
 
--   Leicht zu implementieren. Mit den aktuellen vorhandenen Microsoft-Technologien, Microsoft Visual C++ Entwicklungssystem und Active Template Library kann eine Erweiterung schnell erstellt werden.
--   Clients zeigen eine IDispatch an. Aus der Perspektive von Skript-und Automatisierungs Writern werden die Erweiterungs Methoden und-Eigenschaften transparent in ein ADSI-Objekt gemischt.
--   Ständigen. Erweiterungs Schreiber können ADSI unabhängig von früheren Kenntnissen vorhandener Erweiterungen erweitern.
+-   Einfach zu implementieren. Mit den aktuellen microsoft-Technologien, Microsoft Visual C++ Entwicklungssystem und dem Active Template Library kann schnell eine Erweiterung erstellt werden.
+-   Clients zeigen ein IDispatch an. Aus Sicht von Skript- und Automatisierungsautoren werden die Erweiterungsmethoden und -eigenschaften transparent in ein ADSI-Objekt gemischt.
+-   Unabhängig. Erweiterungsautoren können ADSI unabhängig erweitern, ohne zuvor über vorhandene Erweiterungen zu wissen.
 
-Beachten Sie dieses Szenario: ein Unternehmensentwickler oder ein ISV muss ein Sicherungsprogramm entwickeln. Diese Sicherungs Anwendung ermöglicht es einem Administrator, alle Computer in einer Organisationseinheit zu sichern. Mit der Erweiterung ADSI ist das folgende Skript möglich.
+Stellen Sie sich dieses Szenario vor: Ein Unternehmensentwickler oder isv muss ein Sicherungsprogramm entwickeln. Mit dieser Sicherungsanwendung kann ein Administrator alle Computer in einer Organisationseinheit sichern. Bei einer ADSI-Erweiterung ist das folgende Skript möglich.
 
 
 ```VB
@@ -64,11 +64,11 @@ Next
 
 
 
-**LastBackup** ist eine Eigenschaft, und **backupnow** ist eine Methode, die der erweiterungswriter bereitstellt. Der Code zeigt die Vorteile für Erweiterungs Consumer und-Anbieter. Der erweiterungswriter muss keine neue Methode zum Filtern, suchen und Zugreifen auf das Verzeichnis erstellen. Der erweiterungsconsumer muss ein neues Programmierparadigma nicht erlernen. Neue Methoden und Eigenschaften, die der erweiterungswriter bereitstellt, werden als Teil von ADSI angezeigt.
+**LastBackUp ist** eine Eigenschaft, **und BackUpNow** ist eine Methode, die der Erweiterungswriter bietet. Der Code zeigt die Vorteile sowohl für Erweiterungsverbraucher als auch für Anbieter. Der Erweiterungswriter muss keine neue Methode zum Filtern, Suchen und Zugreifen auf das Verzeichnis erstellen. Der Erweiterungsverbraucher muss kein neues Programmierparadigma neu programmieren. Neue Methoden und Eigenschaften, die der Erweiterungswriter bietet, werden als Teil von ADSI angezeigt.
 
- 
+ 
 
- 
+ 
 
 
 

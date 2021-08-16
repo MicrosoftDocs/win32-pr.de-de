@@ -1,34 +1,34 @@
-- name: Tool Hilfe Bibliothek
+- name: Hilfebibliothek für Tools
   href: tool-help-library.md
   items:
-    - name: Informationen zu Tool Hilfefunktionen
+    - name: Informationen zu Toolhilfefunktionen
       href: about-tool-help-functions.md
       items:
         - name: Momentaufnahmen des Systems
           href: snapshots-of-the-system.md
-        - name: Prozess läuft
+        - name: Prozessablauf
           href: process-walking.md
-        - name: Thread-Walking
+        - name: Thread Walking
           href: thread-walking.md
-        - name: Modul läuft
+        - name: Modullauf
           href: module-walking.md
-        - name: Heap Listen und Heap-Walking
+        - name: Heaplisten und Heap-Walking
           href: heap-lists-and-heap-walking.md
-    - name: Verwenden der Tool Hilfefunktionen
+    - name: Verwenden der Toolhilfefunktionen
       href: using-the-tool-help-functions.md
       items:
-        - name: Erstellen von Momentaufnahmen und Anzeigen von Prozessen
+        - name: Erstellen einer Momentaufnahme und Anzeigen von Prozessen
           href: taking-a-snapshot-and-viewing-processes.md
-        - name: Durchlaufen der Thread Liste
+        - name: Durchlaufen der Threadliste
           href: traversing-the-thread-list.md
         - name: Durchlaufen der Modulliste
           href: traversing-the-module-list.md
-        - name: Durchlaufen der Heap Liste
+        - name: Durchlaufen der Heapliste
           href: traversing-the-heap-list.md
-    - name: Hilfe Referenz zu Tools
+    - name: Toolhilfereferenz
       href: tool-help-reference.md
       items:
-        - name: Tool Hilfefunktionen
+        - name: Toolhilfefunktionen
           href: tool-help-functions.md
           items:
             - name: CreateToolhelp32Snapshot
@@ -39,7 +39,7 @@
               href: /windows/desktop/api/TlHelp32/nf-tlhelp32-heap32listfirst
             - name: Heap32ListNext
               href: /windows/desktop/api/TlHelp32/nf-tlhelp32-heap32listnext
-            - name: Heap32Next
+            - name: Heap32Weiter
               href: /windows/desktop/api/TlHelp32/nf-tlhelp32-heap32next
             - name: Module32First
               href: /windows/desktop/api/TlHelp32/nf-tlhelp32-module32first
@@ -51,11 +51,11 @@
               href: /windows/desktop/api/TlHelp32/nf-tlhelp32-process32next
             - name: Thread32First
               href: /windows/desktop/api/TlHelp32/nf-tlhelp32-thread32first
-            - name: Thread32Next
+            - name: Thread32Weiter
               href: /windows/desktop/api/TlHelp32/nf-tlhelp32-thread32next
             - name: Toolhelp32ReadProcessMemory
               href: /windows/desktop/api/TlHelp32/nf-tlhelp32-toolhelp32readprocessmemory
-        - name: Tool Hilfe Strukturen
+        - name: Hilfestrukturen für Tools
           href: tool-help-structures.md
           items:
             - name: HEAPENTRY32

@@ -3,27 +3,27 @@ title: Verarbeiten des Videos
 description: Verarbeiten des Videos
 ms.assetid: 2fa337dd-34c0-4a09-8c20-21f6103627dd
 keywords:
-- Windows Media Player-Plug-ins, videodsp
-- Plug-ins, videodsp
-- Plug-Ins für die digitale Signalverarbeitung, Videoverarbeitung
-- DSP-Plug-ins, Videoverarbeitung
-- videodsp-Plug-ins, verarbeiten
+- Windows Media Player-Plug-Ins, Video-DSP
+- Plug-Ins, Video-DSP
+- Digitale Signalverarbeitungs-Plug-Ins, Videoverarbeitung
+- DSP-Plug-Ins, Videoverarbeitung
+- Video-DSP-Plug-Ins, Verarbeitung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a8d21aaa3999d05ea3628ff341c74379b07a6dd
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ea168199270cfe8029b7b9303a7745db2c255f4268252a5bd80472a73c6f2f29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039172"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118334023"
 ---
 # <a name="processing-the-video"></a>Verarbeiten des Videos
 
-Die Details des Verarbeitungs Videos variieren je nach Format. Diese Details werden über den Rahmen dieser Dokumentation hinausgehen. Im Allgemeinen ist das Ziel des Plug-ins, die Farbdaten im Eingabepuffer zu ändern und die Daten dann in den Ausgabepuffer zu kopieren.
+Die Details der Videoverarbeitung variieren je nach Format. es geht über den Rahmen dieser Dokumentation hinaus, diese Details anzugeben. Im Allgemeinen besteht das Ziel des Plug-Ins darin, die Farbdaten im Eingabepuffer zu ändern und dann die Daten in den Ausgabepuffer zu kopieren.
 
-Das Beispiel-Plug-in verarbeitet zwei Arten von Videoformaten: YUV und RGB.
+Das Beispiel-Plug-In verarbeitet zwei Arten von Videoformaten: YUV und RGB.
 
-Bei einem YUV-Video werden die roten und blauen Farbinformationen in den Werten "You" und "V" codiert, und die Leuchtkraft Ebene wird durch den Y-Wert dargestellt. der grüne Wert ist codiert und kann mithilfe eines Algorithmus wieder hergestellt werden. Das Beispiel-Plug-in ändert einfach die Werte von "You" und "V", um die Farbstufe zu beeinflussen Jedes U-oder V-Byte hat einen Wert zwischen 0 (null) und 255. Das Plug-in passt die einzelnen Werte zuerst so an, dass Sie durch einen Bereich von-128 bis 127 dargestellt werden, und skaliert den Wert dann mit dem angegebenen Skalierungsfaktor. Schließlich passt der Code den Wert für den ursprünglichen Bereich von 0 bis 255 erneut an und kopiert die Daten in den Ausgabepuffer. Im folgenden Beispielcode wird das-Video verarbeitet. In diesem Format ist jedes andere Byte ein U-oder Y-Wert.
+Für YUV-Videos werden die Rot- und Blaufarbeninformationen in den You- und V-Werten codiert, und die Leuchtdichteebene wird durch den Y-Wert dargestellt. der grüne Wert ist codiert und kann mithilfe eines Algorithmus wiederhergestellt werden. Das Beispiel-Plug-In ändert einfach die You- und V-Werte, um die Farbebene zu beeinflussen. Jedes U- oder V-Byte hat einen Wert zwischen 0 und 255. Das Plug-In passt zunächst jeden Wert so an, dass er durch einen Bereich von -128 bis 127 dargestellt wird, und skaliert den Wert dann nach dem angegebenen Skalierungsfaktor. Schließlich passt der Code den Wert erneut für den ursprünglichen Bereich von 0 bis 255 an und kopiert die Daten in den Ausgabepuffer. Im folgenden Beispielcode wird das UYVY-Video verarbeitet. In diesem Format ist jedes andere Byte ein U- oder Y-Wert.
 
 
 ```C++
@@ -62,7 +62,7 @@ while( dwHeight-- )
 
 
 
-Bei RGB-Videos werden die Farb-und Beleuchtungs Informationen als separate rote, grüne und blaue Werte codiert. Das Beispiel-Plug-in berechnet den Mittelwert der drei Werte, um den Wert für grau zu bestimmen, und passt dann die einzelnen Farbwerte mithilfe des bereitgestellten Skalierungsfaktors an. Auch hier müssen die Werte für den Bereich von-128 bis 127 vor der Skalierung normalisiert werden. Der folgende Code aus Process32Bit zeigt den Prozess für RGB32:
+Für RGB-Videos werden die Informationen zu Farbe und Leuchtdichte als separate Werte für Rot, Grün und Blau codiert. Das Beispiel-Plug-In berechnet den Durchschnitt der drei Werte, um den Wert für Grau zu bestimmen, und passt dann jeden Farbwert mithilfe des angegebenen Skalierungsfaktors an. Auch hier müssen die Werte vor der Skalierung für den Bereich -128 bis 127 normalisiert werden. Der folgende Code aus Process32Bit zeigt den Prozess für RGB32:
 
 
 ```C++
@@ -97,15 +97,15 @@ while( dwHeight-- )
 
 
 
-Weitere Informationen zu Videoformaten finden Sie auf der [FourCC-Website](../directshow/fourcc-codes.md).
+Weitere Informationen zu Videoformaten finden Sie auf der [FourCC-Website.](../directshow/fourcc-codes.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Implementieren eines Video DSP-Plug-ins**](implementing-a-video-dsp-plug-in.md)
+[**Implementieren eines Video-DSP-Plug-Ins**](implementing-a-video-dsp-plug-in.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,35 +1,35 @@
 ---
 title: Verknüpfte Attribute (AD DS)
-description: Verknüpfte Attribute sind Paare von Attributen, in denen das System die Werte eines Attributs (der Rücklink) basierend auf den Werten berechnet, die für das andere Attribut in der Gesamtstruktur festgelegt sind.
+description: Verknüpfte Attribute sind Attributpaare, in denen das System die Werte eines Attributs (des Backlinks) basierend auf den Werten berechnet, die für das andere Attribut (den Vorwärtslink) in der gesamtstruktur festgelegt sind.
 ms.assetid: 31b7e8f5-e46d-4aff-9b17-c8dec7f19bae
 ms.tgt_platform: multiple
 keywords:
-- Verknüpfte Attribute ad
-- Attribute ad, verknüpft
+- Verknüpfte Attribute AD
+- Attribute AD , verknüpft
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ee0e3f6706c797497fb1bb25ea82805385f9897e
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 2167169d6a9d2f8eabe69323054767ae66823d8e1fe954a232ed63fd31a9b845
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104390123"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118186993"
 ---
 # <a name="linked-attributes-ad-ds"></a>Verknüpfte Attribute (AD DS)
 
-Verknüpfte Attribute sind Paare von Attributen, in denen das System die Werte eines Attributs (der Rücklink) basierend auf den Werten berechnet, die für das andere Attribut in der Gesamtstruktur festgelegt sind. Ein backlinkwert für eine beliebige Objektinstanz besteht aus dem DNS aller Objekte, für die der DN des Objekts im entsprechenden Forward-Link festgelegt ist. "Manager" und "Reports" sind z. b. ein Paar verknüpfter Attribute, wobei "Manager" der Forward-Link und "Reports" der Rücklink ist. Nehmen wir nun an, dass Bill Joe der Manager ist. Wenn Sie den DN des Benutzer Objekts der Rechnung im "Manager"-Attribut des Benutzer Objekts von Joe speichern, wird der DN des Benutzer Objekts von Joe im "Reports"-Attribut des Benutzer Objekts der Rechnung angezeigt.
+Verknüpfte Attribute sind Attributpaare, in denen das System die Werte eines Attributs (des Backlinks) basierend auf den Werten berechnet, die für das andere Attribut (den Vorwärtslink) in der gesamtstruktur festgelegt sind. Ein Backlinkwert für jede Objektinstanz besteht aus den DNs aller Objekte, für die der DN des Objekts im entsprechenden Vorwärtslink festgelegt ist. Beispielsweise sind "Manager" und "Berichte" ein Paar verknüpfter Attribute, wobei "Manager" der Vorwärtslink und "Berichte" der Rücklink ist. Angenommen, Bill ist Joes Manager. Wenn Sie den DN des Benutzerobjekts von Bill im Attribut "Manager" des Benutzerobjekts von Joe speichern, wird der DN des Benutzerobjekts von Joe im Attribut "Reports" des Benutzerobjekts von Bill angezeigt.
 
-Ein Forward-Link-/backlinkpaar wird durch die [**linkid**](/windows/desktop/ADSchema/a-linkid) -Werte von zwei [**attributeSchema**](/windows/desktop/ADSchema/c-attributeschema) -Definitionen identifiziert. Das **linkid** der vorwärts Verknüpfung ist ein gerade, positiver Wert ungleich 0 (null), und das **linkid** der zugeordneten backverknüpfung ist das Forward- **linkid** plus eins. Beispielsweise ist das **linkid** für "Manager" 42, und das **linkid** für "Reports" ist 43.
+Ein ForwardLink/Back-Link-Paar wird durch die [**linkID-Werte**](/windows/desktop/ADSchema/a-linkid) von zwei [**attributeSchema-Definitionen**](/windows/desktop/ADSchema/c-attributeschema) identifiziert. Die **linkID des** Vorwärtslinks ist ein gleichmäßiger, positiver Wert ungleich null, und die **linkID** des zugeordneten Backlinks ist die Forward **linkID** plus one. Beispielsweise ist die **linkID** für "Manager" 42 und die **linkID** für "Reports" 43.
 
-Im folgenden finden Sie eine Liste der Richtlinien zum Definieren eines neuen Paars verknüpfter Attribute:
+Im Folgenden finden Sie eine Liste mit Richtlinien zum Definieren eines neuen Paars verknüpfter Attribute:
 
--   Die [**linkid**](/windows/desktop/ADSchema/a-linkid) -Werte müssen bei allen [**attributeSchema**](/windows/desktop/ADSchema/c-attributeschema) -Objekten eindeutig sein. Um Konflikte zu vermeiden, sollten Sie den **linkid** automatisch generieren, indem Sie die Anweisungen im Thema Abrufen [einer Link-ID](obtaining-a-link-id.md)befolgen.
--   Ein Backlink muss über einen entsprechenden vorwärts Link verfügen, d. h., der Forward-Link muss vorhanden sein, bevor ein entsprechendes Backlinkattribut erstellt werden kann.
--   Ein Backlink ist immer ein mehr wertiges Attribut. Ein vorwärts Link kann einwertig oder mehr wertig sein. Verwenden Sie einen mehrwertigen Forward-Link, wenn eine m:n-Beziehung besteht.
--   Der [**attributeSchema**](/windows/desktop/ADSchema/c-attributeschema) -Wert eines vorwärts Links muss 2.5.5.1, 2.5.5.7 oder 2.5.5.14 sein. Diese Werte entsprechen Syntaxen, die einen Distinguished Name enthalten, wie z. b. die [**Objekt Syntax (DS-DN)**](/windows/desktop/ADSchema/s-object-ds-dn) .
--   Der [**attributeSchema**](/windows/desktop/ADSchema/c-attributeschema) -Wert eines Backlinks muss 2.5.5.1 lauten, d. h. die [**Objekt Syntax (DS-DN)**](/windows/desktop/ADSchema/s-object-ds-dn) .
--   Gemäß der Konvention werden backlinkattribute dem Wert " [**mayare**](/windows/desktop/ADSchema/a-maycontain) " der [**obersten**](/windows/desktop/ADSchema/c-top) abstrakten Klasse hinzugefügt. Dadurch kann das Attribut für die Rück Verknüpfung aus Objekten jeder Klasse gelesen werden, da Sie nicht tatsächlich mit dem Objekt gespeichert werden, sondern basierend auf den Forward-Link Werten berechnet werden.
+-   Die [**linkID-Werte**](/windows/desktop/ADSchema/a-linkid) müssen für alle [**attributeSchema-Objekte eindeutig**](/windows/desktop/ADSchema/c-attributeschema) sein. Um Konflikte zu vermeiden, sollten Sie die **linkID** automatisch generieren, indem Sie die Anweisungen im Thema [Abrufen einer Link-ID befolgen.](obtaining-a-link-id.md)
+-   Ein Backlink muss über einen entsprechenden Vorwärtslink verfügen, d.&a0;b. der Forward-Link muss vorhanden sein, bevor ein entsprechendes Backlinkattribut erstellt werden kann.
+-   Ein Backlink ist immer ein mehrwertiges Attribut. Ein Vorwärtslink kann einwertige oder mehrwertige Verknüpfungen sein. Verwenden Sie einen mehrwertigen Vorwärtslink, wenn eine n:n-Beziehung besteht.
+-   Der [**attributSchema-Wert**](/windows/desktop/ADSchema/c-attributeschema) eines Forward-Links muss 2.5.5.1, 2.5.5.7 oder 2.5.5.14 sein. Diese Werte entsprechen Syntaxen, die einen Distinguished Name enthalten, z. B. die [**Object(DS-DN)-Syntax.**](/windows/desktop/ADSchema/s-object-ds-dn)
+-   Der [**attributeSchema-Wert**](/windows/desktop/ADSchema/c-attributeschema) eines Backlinks muss 2.5.5.1 sein. Dies ist die [**Object(DS-DN)-Syntax.**](/windows/desktop/ADSchema/s-object-ds-dn)
+-   Standardmäßig werden Backlinkattribute dem [**mayContain-Wert**](/windows/desktop/ADSchema/a-maycontain) der obersten [**abstrakten Klasse**](/windows/desktop/ADSchema/c-top) hinzugefügt. Dadurch kann das Backlinkattribut aus Objekten einer beliebigen Klasse gelesen werden, da sie nicht tatsächlich mit dem -Objekt gespeichert, sondern basierend auf den Vorwärtslinkwerten berechnet werden.
 
- 
+ 
 
- 
+ 

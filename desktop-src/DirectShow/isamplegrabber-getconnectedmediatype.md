@@ -1,7 +1,7 @@
 ---
-description: Die getconnectedmediatype-Methode ruft den Medientyp für die Verbindung mit der Eingabe-PIN der Sample Grabber ab.
+description: Die GetConnectedMediaType-Methode ruft den Medientyp für die Verbindung am Eingabepin des Beispielgrabbers ab.
 ms.assetid: 65f5603a-1151-4ffd-a662-84e265663b04
-title: 'Isamplegrabber:: getconnectedmediatype-Methode (qedit. h)'
+title: ISampleGrabber::GetConnectedMediaType-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 85e30820afdca865f438ac40521a9be540fd4a1d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 03dc0c9763bdea75569f9447becb749bf284ae2ad7d77427f6dfc2f0aac58382
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364595"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117818059"
 ---
-# <a name="isamplegrabbergetconnectedmediatype-method"></a>Isamplegrabber:: getconnectedmediatype-Methode
+# <a name="isamplegrabbergetconnectedmediatype-method"></a>ISampleGrabber::GetConnectedMediaType-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `GetConnectedMediaType` Methode ruft den Medientyp für die Verbindung mit der Eingabe-PIN der Sample Grabber ab.
+Die `GetConnectedMediaType` -Methode ruft den Medientyp für die Verbindung auf dem Eingabepin des Beispielgrabbers ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ HRESULT GetConnectedMediaType(
 *pType* 
 </dt> <dd>
 
-Zeiger auf eine vom Aufrufer zugeordnete Objekt- [**\_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur.
+Zeiger auf eine VOM Aufrufer zugeordnete [**AM \_ MEDIA \_ TYPE-Struktur.**](/windows/win32/api/strmif/ns-strmif-am_media_type)
 
 </dd> </dl>
 
@@ -60,25 +60,25 @@ Gibt einen der folgenden Werte zurück.
 
 | Rückgabecode                                                                                           | Beschreibung                             |
 |-------------------------------------------------------------------------------------------------------|-----------------------------------------|
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>             | **Null** -Zeigerargument.<br/>   |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>             | **NULL-Zeigerargument.**<br/>   |
 | <dl> <dt>**S \_ OK**</dt> </dl>                  | Erfolg.<br/>                     |
-| <dl> <dt>**VFW \_ E \_ nicht \_ verbunden**</dt> </dl> | Der Filter ist nicht verbunden.<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Der Filter ist nicht verbunden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Methode wird der Medientyp in die von " *pType*" angegebene **\_ Medientyp \_** -Struktur kopiert. Der Aufrufer muss den Format Block des Medientyps freigeben. Sie können die Funktion " **CoTaskMemFree** " oder die Funktion " [**freemediatype**](freemediatype.md) " in der Basisklassen Bibliothek verwenden.
+Diese Methode kopiert den Medientyp in die **AM \_ MEDIA \_ TYPE-Struktur,** die durch *pType* angegeben wird. Der Aufrufer muss den Formatblock des Medientyps freigeben. Sie können die **CoTaskMemFree-Funktion** oder die [**FreeMediaType-Funktion**](freemediatype.md) in der Basisklassenbibliothek verwenden.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -88,19 +88,19 @@ Mit dieser Methode wird der Medientyp in die von " *pType*" angegebene **\_ Medi
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden der Beispiel-Grabber](using-the-sample-grabber.md)
+[Verwenden des Beispielgrabbers](using-the-sample-grabber.md)
 </dt> <dt>
 
-[**Isamplegrabber-Schnittstelle**](isamplegrabber.md)
+[**ISampleGrabber-Schnittstelle**](isamplegrabber.md)
 </dt> </dl>
 
  

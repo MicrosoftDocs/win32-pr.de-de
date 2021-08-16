@@ -1,6 +1,6 @@
 ---
 title: CDN_SHAREVIOLATION Benachrichtigungscode (Commdlg.h)
-description: Wird über das Dialogfeld Öffnen oder Speichern unter im Explorer-Stil gesendet, wenn der Benutzer auf die Schaltfläche OK klickt und für die ausgewählte Datei ein Verstoß gegen die Netzwerkfreigabe auftritt.
+description: Wird von einem Dialogfeld Im Explorer-Stil öffnen oder speichern unter gesendet, wenn der Benutzer auf die Schaltfläche OK klickt und für die ausgewählte Datei ein Verstoß gegen die Netzwerkfreigabe auftritt.
 ms.assetid: a62ca550-0997-4379-aaaf-a5bc9414bd69
 keywords:
 - CDN_SHAREVIOLATION Benachrichtigungscode (Dialogfelder)
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 77cd862fa1c3598a4e81a776004f26ef02290477
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 5b319543a101a4004030fa2339f5432c52ed79d1685c4a09e3a033554f251051
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110548855"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117720977"
 ---
-# <a name="cdn_shareviolation-notification-code"></a>CDN \_ SHAREVIOLATION-Benachrichtigungscode
+# <a name="cdn_shareviolation-notification-code"></a>\_CDN SHAREVIOLATION-Benachrichtigungscode
 
-\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
+\[Ab Windows Vista wurden die  allgemeinen  Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
 
-Wird über das  Dialogfeld  Öffnen oder Speichern unter im Explorer-Stil gesendet, wenn der Benutzer auf die Schaltfläche **OK** klickt und für die ausgewählte Datei ein Verstoß gegen die Netzwerkfreigabe auftritt.
+Wird von einem  Dialogfeld Im Explorer-Stil öffnen oder speichern **unter** gesendet, wenn der Benutzer auf die Schaltfläche **OK** klickt und für die ausgewählte Datei ein Verstoß gegen die Netzwerkfreigabe auftritt.
 
 Ihre [*OFNHookProc-Hookprozedur*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc) empfängt diese Nachricht in Form einer [**WM \_ NOTIFY-Nachricht.**](../controls/wm-notify.md)
 
@@ -51,7 +51,7 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**OFNOTIFY-Struktur.**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifya) Der **pszFile-Member** dieser -Struktur ist ein Zeiger auf den Namen der Datei, die den Freigabeverstoß hatte. Die **OFNOTIFY-Struktur** enthält eine [**NMHDR-Struktur,**](/windows/win32/api/richedit/ns-richedit-nmhdr) deren **Code** member die **CDN \_ SHAREVIOLATION-Benachrichtigungsmeldung** angibt.
+Ein Zeiger auf eine [**OFNOTIFY-Struktur.**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifya) Der **pszFile-Member** dieser -Struktur ist ein Zeiger auf den Namen der Datei, die den Freigabeverstoß hatte. Die **OFNOTIFY-Struktur** enthält eine [**NMHDR-Struktur,**](/windows/win32/api/richedit/ns-richedit-nmhdr) deren Code **member** die CDN **\_ SHAREVIOLATION-Benachrichtigungsmeldung** angibt.
 
 </dd> </dl>
 
@@ -65,7 +65,7 @@ Um die Anzeige der Standardwarnmeldung zu verhindern, geben Sie einen Wert ungle
 
 
 
-| Rückgabecode/-wert                                                                                                                                           | Beschreibung                                                                                                     |
+| Rückgabecode/-wert                                                                                                                                           | BESCHREIBUNG                                                                                                     |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**OFN \_ SHAREFALLTHROUGH**</dt> <dt>2</dt> </dl> | Bewirkt, dass das Dialogfeld den Dateinamen zurück gibt, ohne den Benutzer vor dem Freigabeverstoß zu warnen.<br/>  |
 | <dl> <dt>**OFN \_ SHARENOWARN**</dt> <dt>1</dt> </dl>      | Bewirkt, dass das Dialogfeld den Dateinamen zurückweisen kann, ohne den Benutzer vor dem Freigabeverstoß zu warnen. <br/> |
@@ -76,7 +76,7 @@ Um die Anzeige der Standardwarnmeldung zu verhindern, geben Sie einen Wert ungle
 
 ## <a name="remarks"></a>Hinweise
 
-Das System sendet diese Benachrichtigung nur, wenn das Dialogfeld mit dem **\_ OFN-EXPLORER-Wert** erstellt wurde.
+Das System sendet diese Benachrichtigung nur, wenn das Dialogfeld mithilfe des **\_ OFN-EXPLORER-Werts erstellt** wurde.
 
 Das System sendet diese Benachrichtigung nur, wenn der **OFN \_ SHAREAWARE-Wert** beim Erstellen des Dialogfelds nicht angegeben wurde.
 
@@ -88,11 +88,11 @@ Das System sendet diese Benachrichtigung nur, wenn der **OFN \_ SHAREAWARE-Wert*
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Commdlg.h (windows.h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Legt den Speicherort des Symbols fest, das dem Link zugewiesen ist.
+description: Legt die Position des Symbols fest, das dem Link zugewiesen ist.
 ms.assetid: 257bb8e2-29fa-4d2f-ac2d-3497cf12959c
-title: Shelllinkobject. mentikonlocation-Methode (Shldisp. h)
+title: ShellLinkObject.SetIconLocation-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 996f9648e9b9f59e1e84871abac1d6b37e2592d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4d994e80721649121d0046e79661e849d34e454b7c07153714771a256b7b2e2a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104994910"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117857159"
 ---
-# <a name="shelllinkobjectseticonlocation-method"></a>Shelllinkobject. mentikonlocation-Methode
+# <a name="shelllinkobjectseticonlocation-method"></a>ShellLinkObject.SetIconLocation-Methode
 
-Legt den Speicherort des Symbols fest, das dem Link zugewiesen ist.
+Legt die Position des Symbols fest, das dem Link zugewiesen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ iRetVal = ShellLinkObject.SetIconLocation(
 
 <dl> <dt>
 
-*Spath* \[ in\]
+*sPath* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Der voll qualifizierte Pfad der Datei, die das Symbol enthält.
+Der vollqualifizierte Pfad der Datei, die das Symbol enthält.
 
 </dd> <dt>
 
-*iIndex* \[ in\]
+*iIndex* \[ In\]
 </dt> <dd>
 
-Type: **Integer**
+Typ: **Ganze Zahl**
 
-Der Index des Symbols in der durch *Spath* angegebenen Datei.
+Der Index des Symbols in der von *sPath* angegebenen Datei.
 
 </dd> </dl>
 
@@ -62,7 +62,7 @@ Der Index des Symbols in der durch *Spath* angegebenen Datei.
 
 Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -97,7 +97,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -167,17 +167,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: MCI_INFO_PARMS-Struktur (mciapi. h)
-description: Die Struktur der MCI-info-Parameter \_ \_ enthält Informationen zum MCI- \_ Befehl "Info".
+title: MCI_INFO_PARMS -Struktur (Mciapi.h)
+description: Die MCI \_ INFO \_ PARMS-Struktur enthält Informationen für den MCI \_ INFO-Befehl.
 ms.assetid: c64cff7d-a6d5-44b7-8cfb-9593f6328832
 keywords:
-- MCI_INFO_PARMS Struktur Windows Multimedia
+- MCI_INFO_PARMS-Struktur Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d23221d140aaf093525691d7127c8466f392b95
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8d2415fe0234c1a5b553a8b55d785febd82ebdd770f8c297bfc483549a1aa2a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479143"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118375015"
 ---
-# <a name="mci_info_parms-structure"></a>MCI-info-Parameter \_ \_ Struktur
+# <a name="mci_info_parms-structure"></a>MCI \_ INFO \_ PARMS-Struktur
 
-Die Struktur der **MCI- \_ Info \_** -Parameter enthält Informationen zum MCI-Befehl " [**\_ Info**](mci-info.md) ".
+Die **MCI \_ INFO \_ PARMS-Struktur** enthält Informationen für den [**MCI \_ INFO-Befehl.**](mci-info.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhand handle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**lpstraureturn**
+**lpstrReturn**
 </dt> <dd>
 
-Puffer für die Rückgabe Zeichenfolge.
+Puffer für die Rückgabezeichenfolge.
 
 </dd> <dt>
 
-**dwretsize**
+**dwRetSize**
 </dt> <dd>
 
-Die Größe der Rückgabe Zeichenfolge in Zeichen.
+Größe der Rückgabezeichenfolge in Zeichen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,21 +75,21 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Informationen**](mci-info.md)
+[**\_MCI-INFORMATIONEN**](mci-info.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

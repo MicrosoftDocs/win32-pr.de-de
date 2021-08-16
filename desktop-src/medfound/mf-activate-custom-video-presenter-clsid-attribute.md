@@ -1,35 +1,35 @@
 ---
-description: CLSID eines benutzerdefinierten Video Präsentators für die EVR-Medien Senke (Enhanced Video Renderer).
+description: CLSID einer benutzerdefinierten Videomoderator für die Mediensenke des erweiterten Videorenderers (Enhanced Video Renderer, EVR).
 ms.assetid: f035ee56-7582-45d3-bafe-dd9c821b6326
-title: MF_ACTIVATE_CUSTOM_VIDEO_PRESENTER_CLSID-Attribut (mspdl. h)
+title: MF_ACTIVATE_CUSTOM_VIDEO_PRESENTER_CLSID -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c0eb913a56671d5d2ac8d27c785e1cc1fbfc51a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5afd39cf31cd0efaff4dc4d32756e1e27433d87fac643e4058897babd0f4f50f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343719"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117877253"
 ---
-# <a name="mf_activate_custom_video_presenter_clsid-attribute"></a>MF \_ \_ benutzerdefiniertes \_ \_ CLSID-Attribut für Video Presenter \_ aktivieren
+# <a name="mf_activate_custom_video_presenter_clsid-attribute"></a>MF \_ ACTIVATE CUSTOM VIDEO \_ \_ \_ PRESENTER \_ CLSID-Attribut
 
-CLSID eines benutzerdefinierten Video Präsentators für die EVR-Medien Senke (Enhanced Video Renderer).
+CLSID einer benutzerdefinierten Videomoderator für die Mediensenke des erweiterten Videorenderers (Enhanced Video Renderer, EVR).
 
 ## <a name="data-type"></a>Datentyp
 
 **GUID**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den EVR mithilfe eines Aktivierungs Objekts erstellen, können Sie dieses Attribut verwenden, um eine benutzerdefinierte Videopräsentation für den EVR festzulegen. Verwenden Sie dieses Attribut wie folgt:
+Wenn Sie die EVR über ein Aktivierungsobjekt erstellen, können Sie dieses Attribut verwenden, um eine benutzerdefinierte Videowiedergabe auf der EVR festzulegen. Verwenden Sie dieses Attribut wie folgt:
 
-1.  Rufen Sie die [**mfkreatevideorendereractivation**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatevideorendereractivate) -Funktion auf, um ein Aktivierungs Objekt für den EVR zu erstellen. Die-Funktion gibt einen Zeiger auf die [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Schnittstelle zurück.
+1.  Rufen Sie die [**MFCreateVideoRendererActivate-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatevideorendereractivate) auf, um ein Aktivierungsobjekt für die EVR zu erstellen. Die Funktion gibt einen Zeiger auf die [**INTERFACESActivate-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) zurück.
 
-2.  Legen Sie diese Attribut für den [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Zeiger fest, indem Sie [**imfattributes:: SetGuid**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setguid)aufrufen. Der Wert des-Attributs ist die CLSID des benutzerdefinierten Video Presenter der Anwendung.
+2.  Legen Sie diese Verteilung auf den [**POINTERACTIVate-Zeiger fest,**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) indem Sie [**DIE ATTRIBUTEAttributes::SetGUID**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setguid)aufrufen. Der Wert des Attributs ist die CLSID der benutzerdefinierten Videowiedergabe der Anwendung.
 
-Wenn dieses Attribut festgelegt ist, ruft der EVR **cokreateinstance** mit der angegebenen CLSID auf, um den benutzerdefinierten Video Presenter zu erstellen. Die Videopräsentation muss die Schnittstelle [**IMF videopresenter**](/windows/desktop/api/evr/nn-evr-imfvideopresenter) verfügbar machen. Der Presenter wird als Prozess interner com-Server erstellt.
+Wenn dieses Attribut festgelegt ist, ruft der EVR **CoCreateInstance** mit der angegebenen CLSID auf, um die benutzerdefinierte Videowiedergabe zu erstellen. Die Videopräsentation muss die [**SCHNITTSTELLE "WFVideoPresenter"**](/windows/desktop/api/evr/nn-evr-imfvideopresenter) verfügbar machen. Der Presenter wird als prozessübergreifender COM-Server erstellt.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,35 +37,35 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Erweiterte Videorenderer-Attribute](enhanced-video-renderer-attributes.md)
+[Erweiterte Videorendererattribute](enhanced-video-renderer-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetGuid**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getguid)
+[**SPRECHATTRIBUTE::GetGUID**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getguid)
 </dt> <dt>
 
-[**Imfattributes:: SetGuid**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setguid)
+[**ATTRIBUTEAttributes::SetGUID**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setguid)
 </dt> <dt>
 
-[**Imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate)
+[**ÜBER DIE AKTIONAKTIVIEREN**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate)
 </dt> <dt>
 
-[Aktivierungs Objekte](activation-objects.md)
+[Aktivierungsobjekte](activation-objects.md)
 </dt> <dt>
 
-[Schreiben von EVR Presenter](how-to-write-an-evr-presenter.md)
+[Schreiben eines EVR-Presenters](how-to-write-an-evr-presenter.md)
 </dt> </dl>
 
  

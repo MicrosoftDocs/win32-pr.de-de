@@ -1,7 +1,7 @@
 ---
-description: Definiert ein kabelgebundenes (LAN-) Richtlinien Profil.
+description: Definiert ein langebundenes Richtlinienprofil.
 ms.assetid: 89331bd1-d447-482c-90de-e3a74c86bf4c
-title: LAN_policy-Schema
+title: LAN_policy Schema
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -9,21 +9,21 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 68b81aba17ff2310e6913f133aacb2ddc103b517
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 18352f525ab11995aa3236bb95bdab17377b1a1942b97c852803bf6687305340
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117798450"
 ---
-# <a name="lan_policy-schema"></a>LAN- \_ Richtlinien Schema
+# <a name="lan_policy-schema"></a>\_LAN-Richtlinienschema
 
-Das LAN- \_ Richtlinien Schema definiert ein kabelgebundenes (LAN-) Richtlinien Profil.
+Das \_ LAN-Richtlinienschema definiert ein langebundenes Richtlinienprofil.
 
-Das Stamm Element eines LAN-Richtlinien Profils ist das [**lanpolicy**](lan-policyschema-lanpolicy-element.md) -Element. Jedes Profil weist genau ein Stamm Element auf. Alle LAN- \_ Richtlinien Elemente befinden sich im-Namespace `https://www.microsoft.com/networking/LAN/policy/v1` .
+Das Stammelement eines LAN-Richtlinienprofils ist das [**LANPolicy-Element.**](lan-policyschema-lanpolicy-element.md) Jedes Profil verfügt über genau ein Stammelement. Alle \_ LAN-Richtlinienelemente befinden sich im Namespace `https://www.microsoft.com/networking/LAN/policy/v1` .
 
--   [LAN- \_ policyschema-Elemente](lan-policyschema-elements.md)
--   [Einfache LAN- \_ policyschema-Typen](lan-policyschema-simple-types.md)
+-   [\_LAN-RichtlinieSchemaelemente](lan-policyschema-elements.md)
+-   [\_LAN-RichtlinieSchema Simple Types](lan-policyschema-simple-types.md)
 
  
 

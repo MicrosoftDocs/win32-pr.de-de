@@ -1,9 +1,9 @@
 ---
-title: WM_INITMENUPOPUP-Nachricht (Winuser.h)
-description: 'WM_INITMENUPOPUP Meldung: Wird gesendet, wenn ein Dropdownmenü oder Untermenü aktiv wird. Dadurch kann eine Anwendung das Menü ändern, bevor es angezeigt wird, ohne das gesamte Menü zu ändern.'
+title: WM_INITMENUPOPUP (Winuser.h)
+description: 'WM_INITMENUPOPUP: Wird gesendet, wenn ein Dropdownmenü oder Untermenü aktiv wird. Dadurch kann eine Anwendung das Menü ändern, bevor es angezeigt wird, ohne das gesamte Menü zu ändern.'
 ms.assetid: 08ae1a78-5e68-488c-9b77-ee42044ca3ab
 keywords:
-- WM_INITMENUPOPUP Meldung Menüs und andere Ressourcen
+- WM_INITMENUPOPUP von Nachrichtenmenüs und anderen Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d850547d57596dd36b36b941d1782c2aee1f5b3
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 2ba23607dcb8da7fb282e380e87fe6a2cbb9a26a50850845a5877d036983665f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108092518"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117869599"
 ---
-# <a name="wm_initmenupopup-message"></a>WM \_ INITMENUPOPUP-Nachricht
+# <a name="wm_initmenupopup-message"></a>WM \_ INITMENUPOPUP-Meldung
 
 Wird gesendet, wenn ein Dropdownmenü oder Untermenü aktiv wird. Dadurch kann eine Anwendung das Menü ändern, bevor es angezeigt wird, ohne das gesamte Menü zu ändern.
 
@@ -39,16 +39,16 @@ Wird gesendet, wenn ein Dropdownmenü oder Untermenü aktiv wird. Dadurch kann e
 *wParam* 
 </dt> <dd>
 
-Ein Handle für das Dropdownmenü oder untermenü.
+Ein Handle für das Dropdownmenü oder Untermenü.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das Wort mit niedriger Reihenfolge gibt die nullbasierte relative Position des Menüelements an, das das Dropdownmenü oder Untermenü öffnet.
+Das Wort in niedriger Reihenfolge gibt die nullbasierte relative Position des Menüelements an, das das Dropdownmenü oder Untermenü öffnet.
 
-Das Wort in hoher Reihenfolge gibt an, ob das Dropdownmenü das Fenstermenü ist. Wenn das Menü das Fenstermenü ist, ist dieser Parameter **TRUE.** Andernfalls ist es **FALSE.**
+Das obere Wort gibt an, ob das Dropdownmenü das Fenstermenü ist. Wenn das Menü das Fenstermenü ist, ist dieser Parameter **TRUE;** Andernfalls ist dies **FALSE.**
 
 </dd> </dl>
 
@@ -60,11 +60,11 @@ Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgebe
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser.h (windows.h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgebe
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))
@@ -84,7 +84,7 @@ Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgebe
 [**WM \_ INITMENU**](wm-initmenu.md)
 </dt> <dt>
 
-**Konzept**
+**Konzeptionellen**
 </dt> <dt>
 
 [Tastaturkürzel](keyboard-accelerators.md)

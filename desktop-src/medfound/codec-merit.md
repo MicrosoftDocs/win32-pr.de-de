@@ -1,53 +1,53 @@
 ---
-description: Codec-Verdienst
+description: Codec-Vererzung
 ms.assetid: 4ed594a0-2cc2-40d2-9b5c-dee59916fa1b
-title: Codec-Verdienst
+title: Codec-Vererzung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ecd177c3c32084a030ce75c15cecd5d4c04fc3f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b56112942aa8378b2016616d0e090e17eb7225ca27b363c96e37eb7cccb6286e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104556796"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118065123"
 ---
-# <a name="codec-merit"></a>Codec-Verdienst
+# <a name="codec-merit"></a>Codec-Vererzung
 
-Ab Windows 7 kann einem Media Foundation Codec ein *Verdienst* Wert zugewiesen werden. Wenn Codecs aufgelistet werden, werden Codecs mit höherem Wert gegenüber Codecs bevorzugt, die einen niedrigeren Wert haben. Codecs mit einem beliebigen Wert werden gegenüber Codecs bevorzugt, ohne dass ein zugewiesener Verdienst zugewiesen wird. Ausführliche Informationen zur Codec-Enumeration finden Sie unter MF-Datei ( [**MF**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex)).
+Ab Windows 7 kann einem Media Foundation Codec ein *Wert* zugewiesen werden. Wenn Codecs aufzählt werden, werden Codecs mit höheren Vorteilen gegenüber Codecs mit geringeren Vorteilen bevorzugt. Codecs mit einem beliebigen Wert werden vor Codecs ohne zugewiesene Vorteile bevorzugt. Ausführliche Informationen zur Codecenumeration finden Sie unter [**MFTEnumEx**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex).
 
-Verdienst Werte werden von Microsoft zugewiesen. Derzeit sind nur Hardware Codecs berechtigt, einen Verdienst Wert zu erhalten. Der Codec-Anbieter hat auch ein digitales Zertifikat ausgestellt, das verwendet wird, um den Wert des Codec-Werts zu überprüfen. Zum Abrufen eines Zertifikats senden Sie eine e-Mail-Anforderung an wmla@microsoft.com . Zum Abrufen eines Zertifikats gehört das Signieren einer Lizenz und das Bereitstellen eines Satzes von Informationsdateien an Microsoft.
+Werte werden von Microsoft zugewiesen. Derzeit sind nur Hardwarecodecs berechtigt, einen Wert zu erhalten. Dem Codecanbieter wird auch ein digitales Zertifikat ausgestellt, mit dem der Wert des Codecs überprüft wird. Um ein Zertifikat zu erhalten, senden Sie eine E-Mail-Anforderung an wmla@microsoft.com . Der Prozess zum Abrufen eines Zertifikats umfasst das Signieren einer Lizenz und das Bereitstellen eines Satzes von Informationsdateien für Microsoft.
 
-Der Codec-Verdienst funktioniert wie folgt:
+Codec-Vorteile funktionieren wie folgt:
 
-1.  Der Codec-Anbieter implementiert eine der folgenden Aktionen:
-    -   Ein AVStream-Mini Treiber. Media Foundation stellt einen Standard Proxy-MFT für AVStream-Treiber bereit. Dies ist die empfohlene Option.
-    -   Eine Media Foundation Transformation (MFT), die als Proxy für die Hardware fungiert. Weitere Informationen finden Sie unter [Hardware-MFTs](hardware-mfts.md).
-2.  Der Verdienst Wert des Codecs wird in der Registrierung für die schnelle Suche gespeichert.
-3.  Die Funktion " [**MF-UMEX**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) " sortiert Codecs in der Reihenfolge der Vorzüge. Codecs mit Verdienst Werten werden in der Liste hinter lokal registrierten Codecs angezeigt (siehe [**MF tregisterlocal**](/windows/desktop/api/mfapi/nf-mfapi-mftregisterlocal)), jedoch vor anderen Codecs.
-4.  Wenn der MFT erstellt wird, wird der Codec-Verdienst mithilfe der OPM-API ( [Output Protection Manager](output-protection-manager.md) ) überprüft.
-5.  Bei einem Proxy-MFT implementiert der Codec die [**IOPMVideoOutput**](/windows/desktop/api/opmapi/nn-opmapi-iopmvideooutput) -Schnittstelle. Für einen AVStream-Treiber implementiert der Codec den \_ opmvideooutput-Eigenschaften Satz "kspropsetid".
+1.  Der Codecanbieter implementiert eine der folgenden Funktionen:
+    -   Ein AVStream-Minitreiber. Media Foundation stellt einen Standardproxy-MFT für AVStream-Treiber bereit. Dies ist die empfohlene Option.
+    -   Eine Media Foundation Transformation (MFT), die als Proxy für die Hardware fungiert. Weitere Informationen finden Sie unter [Hardware-MFTs.](hardware-mfts.md)
+2.  Der Wert des Codecs wird zur schnellen Suche in der Registrierung gespeichert.
+3.  Die [**MFTEnumEx-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) sortiert Codecs in der Reihenfolge der Vorteile. Codecs mit Mehrwertwerten werden in der Liste hinter lokal registrierten Codecs angezeigt (siehe [**MFTRegisterLocal**](/windows/desktop/api/mfapi/nf-mfapi-mftregisterlocal)), aber vor anderen Codecs.
+4.  Wenn der MFT erstellt wird, wird die Leistung des Codecs mithilfe der OPM-API [(Output Protection Manager)](output-protection-manager.md) überprüft.
+5.  Für einen Proxy-MFT implementiert der Codec die [**IOPMVideoOutput-Schnittstelle.**](/windows/desktop/api/opmapi/nn-opmapi-iopmvideooutput) Für einen AVStream-Treiber implementiert der Codec den KSPROPSETID \_ OPMVideoOutput-Eigenschaftensatz.
 
-Das folgende Diagramm zeigt, wie das Verdienst in beiden Fällen überprüft wird:
+Das folgende Diagramm zeigt, wie die Leistung in beiden Fällen überprüft wird:
 
-![das Diagramm zeigt zwei Prozesse: eine Leads durch den Media Foundation-Proxy-MFT und den AVStream-Treiber, die andere über den benutzerdefinierten Proxy-MFT](images/codecmerit.png)
+![Diagramm mit zwei Prozessen: einer führt über media foundation proxy mft und avstream driver, der andere über benutzerdefinierte Proxy mft](images/codecmerit.png)
 
 ## <a name="custom-proxy-mft"></a>Benutzerdefinierter Proxy-MFT
 
-Wenn Sie einen Proxy-MFT für den Hardwarecodec bereitstellen, implementieren Sie den Codec-Verdienst wie folgt:
+Wenn Sie einen Proxy-MFT für den Hardwarecodec bereitstellen, implementieren Sie den Codecwert wie folgt:
 
-1.  Implementieren Sie die [**IOPMVideoOutput**](/windows/desktop/api/opmapi/nn-opmapi-iopmvideooutput) -Schnittstelle in der MFT. Der Beispielcode wird im nächsten Abschnitt dieses Themas gezeigt.
-2.  Fügen Sie das Attribut Attribut " [MFT \_ Codec \_ Verdienst \_ ](mft-codec-merit-attribute.md) " der Registrierung wie folgt hinzu:
+1.  Implementieren Sie die [**IOPMVideoOutput-Schnittstelle**](/windows/desktop/api/opmapi/nn-opmapi-iopmvideooutput) im MFT. Beispielcode wird im nächsten Abschnitt dieses Themas gezeigt.
+2.  Fügen Sie der Registrierung das [Attribut MFT \_ CODEC ATTRIBUTE \_ \_ wie](mft-codec-merit-attribute.md) folgt hinzu:
 
-    1.  Rufen Sie [**mfkreateattributs**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes) auf, um einen neuen Attribut Speicher zu erstellen.
-    2.  Wenden Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32) an, um das Attribut Attribut Attribut für [MFT- \_ Codec \_ \_](mft-codec-merit-attribute.md) festzulegen. Der Wert des-Attributs ist der der Codec zugewiesene Verdienst.
-    3.  Wenden Sie sich an [**mftregister**](/windows/desktop/api/mfapi/nf-mfapi-mftregister) , um die MFT zu registrieren. Übergeben Sie den Attribut Speicher im *pattributes* -Parameter.
+    1.  Rufen Sie [**MFCreateAttributes**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes) auf, um einen neuen Attributspeicher zu erstellen.
+    2.  Rufen Sie [**DIE ATTRIBUTEAttributes::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32) auf, um das [Attribut MFT CODEC \_ \_ ATTRIBUTE \_](mft-codec-merit-attribute.md) festzulegen. Der Wert des Attributs ist der zugewiesene Vorteil des Codecs.
+    3.  Rufen Sie [**MFTRegister**](/windows/desktop/api/mfapi/nf-mfapi-mftregister) auf, um den MFT zu registrieren. Übergeben Sie den Attributspeicher im *pAttributes-Parameter.*
 
-3.  Die Anwendung ruft [**MF-UMEX**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex)auf. Diese Funktion gibt ein Array von [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Zeigern zurück, eines für jeden Codec, der mit den enumerationskriterien übereinstimmt.
-4.  Die Anwendung ruft [**imfaktivate:: activateobject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) auf, um die MFT zu erstellen.
-5.  Die [**activateobject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) -Methode ruft die [**mfgetmftmerit**](/windows/desktop/api/mfapi/nf-mfapi-mfgetmftmerit) -Funktion auf, um das Zertifikat und den Verdienst Wert zu überprüfen.
-6.  Die [**mfgetmftmerit**](/windows/desktop/api/mfapi/nf-mfapi-mfgetmftmerit) -Funktion ruft [**IOPMVideoOutput:: GetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-getinformation) auf und sendet eine [**OPM \_ get \_ Codec- \_ Informations**](opm-get-codec-info.md) Status Anforderung. Diese Status Anforderung gibt den zugewiesenen Verdienst Wert des Codecs zurück. Wenn dieser Wert nicht mit dem Registrierungs Wert identisch ist, kann [**activateobject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) fehlschlagen.
+3.  Die Anwendung ruft [**MFTEnumEx auf.**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) Diese Funktion gibt ein Array von [**POINTERActivate-Zeigern**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) zurück, eines für jeden Codec, der den Enumerationskriterien entspricht.
+4.  Die Anwendung ruft [**DIE AKTIONACTIVATE::ActivateObject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) auf, um den MFT zu erstellen.
+5.  Die [**ActivateObject-Methode**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) ruft die [**MFGetMFTMerit-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfgetmftmerit) auf, um das Zertifikat und den Wert zu überprüfen.
+6.  Die [**MFGetMFTMerit-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfgetmftmerit) ruft [**IOPMVideoOutput::GetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-getinformation) auf und sendet eine [**OPM \_ GET CODEC \_ INFO-Statusanforderung. \_**](opm-get-codec-info.md) Diese Statusanforderung gibt den zugewiesenen Wert des Codecs zurück. Wenn dieser Wert nicht mit dem Registrierungswert übereinstimmt, schlägt [**ActivateObject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) möglicherweise fehl.
 
-Der folgende Code zeigt, wie Sie den Verdienst Wert der Registrierung hinzufügen, wenn Sie die MFT registrieren:
+Der folgende Code zeigt, wie Sie der Registrierung beim Registrieren von MFT den Wert "value" hinzufügen:
 
 
 ```C++
@@ -105,16 +105,16 @@ HRESULT RegisterMFTWithMerit()
 
 
 
-### <a name="implementing-iopmvideooutput-for-codec-merit"></a>Implementieren von IOPMVideoOutput für Codec-Verdienste
+### <a name="implementing-iopmvideooutput-for-codec-merit"></a>Implementieren von IOPMVideoOutput für Codecs
 
-Der folgende Code zeigt, wie [**IOPMVideoOutput**](/windows/desktop/api/opmapi/nn-opmapi-iopmvideooutput) für Codec-Verdienste implementiert wird. Eine allgemeinere Erörterung der OPM-API finden Sie unter [Output Protection Manager](output-protection-manager.md).
+Der folgende Code zeigt, wie [**IOPMVideoOutput**](/windows/desktop/api/opmapi/nn-opmapi-iopmvideooutput) für Codecs implementiert wird. Eine allgemeinere Erläuterung der OPM-API finden Sie unter [Output Protection Manager](output-protection-manager.md).
 
 > [!Note]  
-> Der hier gezeigte Code hat keine Verschleierung oder andere Sicherheitsmechanismen. Es soll die grundlegende Implementierung des OPM-Handshake und der Status Anforderung zeigen.
+> Der hier gezeigte Code enthält keine Verschleierung oder andere Sicherheitsmechanismen. Es soll die grundlegende Implementierung des OPM-Handshakes und der Statusanforderung anzeigen.
 
  
 
-In diesem Beispiel wird davon ausgegangen, dass *g \_ testCert* ein Bytearray ist, das die Zertifikatskette des Codecs enthält, und *g \_ PrivateKey* ist ein Bytearray, das den privaten Schlüssel aus dem Zertifikat enthält:
+In diesem Beispiel wird davon ausgegangen, dass *g \_ TestCert* ein Bytearray ist, das die Zertifikatkette des Codecs enthält, und *g \_ PrivateKey* ein Bytearray, das den privaten Schlüssel aus dem Zertifikat enthält:
 
 
 ```C++
@@ -138,7 +138,7 @@ const BYTE g_PrivateKey[] =
 
 
 
-Generieren Sie in der [**IOPMVideoOutput:: startinitialization**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-startinitialization) -Methode eine Zufallszahl für den Handshake. Diese Nummer und das Zertifikat an den Aufrufer zurückgeben:
+Generieren Sie in der [**IOPMVideoOutput::StartInitialization-Methode**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-startinitialization) eine Zufallszahl für den Handshake. Geben Sie diese Nummer und das Zertifikat an den Aufrufer zurück:
 
 
 ```C++
@@ -185,7 +185,7 @@ STDMETHODIMP CodecMerit::StartInitialization(
 
 
 
-Die [**IOPMVideoOutput:: FinishInitialization**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-finishinitialization) -Methode schließt den OPM-Handshake ab:
+Die [**IOPMVideoOutput::FinishInitialization-Methode**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-finishinitialization) schließt den OPM-Handshake ab:
 
 
 ```C++
@@ -316,7 +316,7 @@ STDMETHODIMP CodecMerit::FinishInitialization(
 
 
 
-Implementieren Sie in der [**IOPMVideoOutput:: GetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-getinformation) -Methode die [**OPM \_ get \_ Codec \_ Info**](opm-get-codec-info.md) Status Request. Bei den Eingabedaten handelt es sich um eine [**OPM \_ get \_ Codec \_ Info \_ Parameters**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_get_codec_info_parameters) -Struktur, die die CLSID Ihres MFT enthält. Bei den Ausgabedaten handelt es sich um eine [**OPM \_ get- \_ Codec- \_ \_ Informations**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_get_codec_info_information) Struktur, die den Codec-Verdienst enthält.
+Implementieren Sie in der [**IOPMVideoOutput::GetInformation-Methode**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-getinformation) die [**Statusanforderung OPM \_ GET CODEC \_ \_ INFO.**](opm-get-codec-info.md) Die Eingabedaten sind eine [**OPM \_ GET CODEC \_ INFO \_ \_ PARAMETERS-Struktur,**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_get_codec_info_parameters) die die CLSID Ihres MFT enthält. Die Ausgabedaten sind eine [**OPM \_ GET CODEC \_ INFO \_ \_ INFORMATION-Struktur,**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_get_codec_info_information) die den Codecverwerter enthält.
 
 
 ```C++
@@ -428,11 +428,11 @@ STDMETHODIMP CodecMerit::GetInformation(
 
 
 
-Die [**GetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-getinformation) -Methode muss eine Nachrichtenauthentifizierungscode (Mac) mithilfe des OMAC-1-Algorithmus berechnen. Weitere [Informationen finden Sie unter Berechnen des OMAC-1-Werts](opm-example-code.md).
+Die [**GetInformation-Methode**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-getinformation) muss einen Nachrichtenauthentifizierungscode (MAC) mit dem OMAC-1-Algorithmus berechnen. siehe [Berechnen des OMAC-1-Werts.](opm-example-code.md)
 
-Es ist nicht erforderlich, andere OPM-Status Anforderungen zu unterstützen.
+Es ist nicht erforderlich, andere OPM-Statusanforderungen zu unterstützen.
 
-Die [**IOPMVideoOutput:: COPPCompatibleGetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-coppcompatiblegetinformation) -Methode und die [**IOPMVideoOutput:: Configure**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-configure) -Methode sind für Codec-Verdienste nicht erforderlich, sodass diese Methoden **E \_ notimpl** zurückgeben können.
+Die Methoden [**IOPMVideoOutput::COPPCompatibleGetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-coppcompatiblegetinformation) und [**IOPMVideoOutput::Configure**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-configure) sind für codec-Vorteile nicht erforderlich, sodass diese Methoden **E \_ NOTIMPL** zurückgeben können.
 
 
 ```C++

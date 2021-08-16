@@ -1,7 +1,7 @@
 ---
-description: Die parsertemporarylockframe-Funktion sperrt einen Frame, wenn er in einen Parser eintritt, und entsperrt den Frame, wenn die Funktion den Parser beendet.
+description: Die ParserTemporaryLockFrame-Funktion sperrt einen Frame, wenn er in einen Parser eintritt, und entsperrt den Frame, wenn die Funktion den Parser beendet.
 ms.assetid: c1c52f62-1974-47cc-8c37-61918fbce54a
-title: Funktion "parametertemporarylockframe" (Netmon. h)
+title: ParserTemporaryLockFrame-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 48fa646e709982d88093e0cbeb5e60375643351d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 47a8c02a29007084161897e34bd3ba6fbe3b5f53460aaced2acaf8e4924d67f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118364386"
 ---
-# <a name="parsertemporarylockframe-function"></a>Funktion "parametertemporarylockframe"
+# <a name="parsertemporarylockframe-function"></a>ParserTemporaryLockFrame-Funktion
 
-Die **parsertemporarylockframe** -Funktion sperrt einen Frame, wenn er in einen Parser eintritt, und entsperrt den Frame, wenn die Funktion den Parser beendet.
+Die **ParserTemporaryLockFrame-Funktion** sperrt einen Frame, wenn er in einen Parser eintritt, und entsperrt den Frame, wenn die Funktion den Parser beendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ LPBYTE WINAPI ParserTemporaryLockFrame(
 
 <dl> <dt>
 
-*hframe* \[ in\]
+*hFrame* \[ In\]
 </dt> <dd>
 
 Handle für den Frame, auf den der Parser zeigt.
@@ -50,11 +50,11 @@ Handle für den Frame, auf den der Parser zeigt.
 
 Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Zeiger auf das erste Byte der Daten im Frame.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **null**.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **NULL.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Parser sollten die **Lock Frame** -Funktion nicht aufzurufen. Wenn ein Parser eine Sperre annimmt und dann einen Fehler generiert oder zurückgibt, ohne den Frame zu entsperren, verlässt der Parser das System in einem Zustand, in dem er keine Protokolle ändern oder Frames Ausschneiden oder kopieren kann. Parser sollten die **parsertemporarylockframe** -Funktion verwenden, die eine Sperre nur im Kontext des Funktions Eintrags in den Parser erteilt. Beim Beenden des Parsers wird die Sperre für diesen Frame freigegeben. Folglich ist der Zeiger nur dann gültig, wenn der Parser vom Aufrufen der **attachproperties** -Funktion oder der **erkenzeframe** -Funktion zurückgegeben wird.
+Parser sollten die **LockFrame-Funktion nicht** aufrufen. Wenn ein Parser eine Sperre verwendet und dann einen Fehler generiert oder ohne Entsperren des Frames zurückgibt, verlässt der Parser das System in einem Zustand, in dem er keine Protokolle ändern oder Frames ausschneiden oder kopieren kann. Parser sollten die **ParserTemporaryLockFrame-Funktion** verwenden, die eine Sperre nur im Kontext des Funktionseintrags im Parser gewährt. Beim Beenden des Parsers wird die Sperre für diesen Frame freigegeben. Daher ist der Zeiger nur gültig, nachdem der Parser vom Aufruf der **AttachProperties-** oder **RecognizeFrame-Funktion zurückgegeben** wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,8 +64,8 @@ Parser sollten die **Lock Frame** -Funktion nicht aufzurufen. Wenn ein Parser ei
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

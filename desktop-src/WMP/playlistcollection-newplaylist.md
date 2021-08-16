@@ -1,11 +1,11 @@
 ---
-title: Playlistcollection. newwiedergabe-Methode
-description: Die newwiedergabe-Methode erstellt eine neue Wiedergabeliste in der Bibliothek.
+title: PlaylistCollection.newPlaylist-Methode
+description: Die newPlaylist-Methode erstellt eine neue Wiedergabeliste in der Bibliothek.
 ms.assetid: 428b5779-4dc0-466b-9834-6b2c43324013
 keywords:
-- newwiedergabe-Methode, Windows-Media Player
-- newwiedergabe-Methode, Windows Media Player, playlistcollection-Klasse
-- Playlistcollection-Klasse, Windows Media Player, newwiedergabe-Methode
+- newPlaylist-Methode Windows Media Player
+- newPlaylist-Methode Windows Media Player , PlaylistCollection-Klasse
+- PlaylistCollection-Klasse Windows Media Player , newPlaylist-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d94c25a8dfe6f1eb7c4dac40dd644433a5f0d7e6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: af40d4de424997cb943711d84bf62805f2036afeb551c5d397ce82ae0975e812
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371690"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118334595"
 ---
-# <a name="playlistcollectionnewplaylist-method"></a>Playlistcollection. newwiedergabe-Methode
+# <a name="playlistcollectionnewplaylist-method"></a>PlaylistCollection.newPlaylist-Methode
 
-Die **newwiedergabe** -Methode erstellt eine neue Wiedergabeliste in der Bibliothek.
+Die **newPlaylist-Methode** erstellt eine neue Wiedergabeliste in der Bibliothek.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ retVal = PlaylistCollection.newPlaylist(
 
 <dl> <dt>
 
-*Name* \[ in\]
+*name* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Namen der zu erstellenden Wiedergabeliste enthält.
+**Zeichenfolge,** die den Namen der zu erstellenden Wiedergabeliste enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt ein **Wiedergabe** Listen Objekt zurück.
+Diese Methode gibt ein **Playlist-Objekt** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode erstellt eine leere Wiedergabeliste in der Bibliothek. Verwenden Sie die *Wiedergabeliste*, um die Wiedergabeliste mit Medien Elementen auszufüllen. **appendItem** oder *Wiedergabeliste*. **InsertItem**.
+Diese Methode erstellt eine leere Wiedergabeliste in der Bibliothek. Um die Wiedergabeliste mit Medienelementen zu füllen, verwenden Sie *Wiedergabeliste*. **appendItem** oder *Playlist*. **insertItem**.
 
-In der Bibliothek sind mehrere Wiedergabelisten mit dem gleichen Namen zulässig. Verwenden Sie **getByName** und *playlistarray*, um zu vermeiden, dass ein doppelter Wiedergabelisten Name mit dieser Methode erstellt wird. **count** , um zu bestimmen, ob eine Wiedergabeliste mit einem bestimmten Namen bereits vorhanden ist.
+Mehrere Wiedergabelisten mit dem gleichen Namen sind in der Bibliothek zulässig. Verwenden Sie **getByName** und *PlaylistArray,* um zu vermeiden, dass mit dieser Methode ein doppelter Wiedergabelistenname erstellt wird. **count,** um zu bestimmen, ob bereits eine Wiedergabeliste mit einem bestimmten Namen vorhanden ist.
 
-Führende und nachfolgende Leerzeichen sind in Wiedergabelisten Namen nicht zulässig und werden automatisch aus dem für den *Name* -Parameter angegebenen Wert entfernt.
+Führende und nachfolgende Leerzeichen sind in Wiedergabelistennamen nicht zulässig und werden automatisch aus dem für den *name-Parameter* angegebenen Wert entfernt.
 
-Um diese Methode verwenden zu können, ist der vollständige Zugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist vollzugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird eine neue leere Wiedergabeliste mit dem Namen "threelist" erstellt. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird eine neue leere Wiedergabeliste namens "ThreeList" erstellt. Das **Player-Objekt** wurde mit ID="Player" erstellt.
 
 
 ```JScript
@@ -82,43 +82,43 @@ var NewList = Player.playlistCollection.newPlaylist("ThreeList");
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mediacollection. Add**](mediacollection-add.md)
+[**MediaCollection.add**](mediacollection-add.md)
 </dt> <dt>
 
-[**Wiedergabeliste. appendItem**](playlist-appenditem.md)
+[**Playlist.appendItem**](playlist-appenditem.md)
 </dt> <dt>
 
-[**Wiedergabeliste. InsertItem**](playlist-insertitem.md)
+[**Playlist.insertItem**](playlist-insertitem.md)
 </dt> <dt>
 
-[**Playlistarray. Count**](playlistarray-count.md)
+[**PlaylistArray.count**](playlistarray-count.md)
 </dt> <dt>
 
-[**Playlistcollection-Objekt**](playlistcollection-object.md)
+[**PlaylistCollection-Objekt**](playlistcollection-object.md)
 </dt> <dt>
 
-[**Playlistcollection. getByName**](playlistcollection-getbyname.md)
+[**PlaylistCollection.getByName**](playlistcollection-getbyname.md)
 </dt> <dt>
 
-[**Playlistcollection. importwiedergabe**](playlistcollection-importplaylist.md)
+[**PlaylistCollection.importPlaylist**](playlistcollection-importplaylist.md)
 </dt> <dt>
 
-[**Playlistcollection. Remove**](playlistcollection-remove.md)
+[**PlaylistCollection.remove**](playlistcollection-remove.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

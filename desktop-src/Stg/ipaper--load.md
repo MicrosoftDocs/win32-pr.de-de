@@ -1,23 +1,23 @@
 ---
-title: IPaper laden
-description: Der folgende C++-Beispielcode zeigt, wie der vorhandene Stream im Speicher geöffnet wird, welche neuen Papiereigenschaften in gelesen werden und wie die aktuellen Werte für copaper festgelegt werden.
+title: IPaper Load
+description: Der folgende C++-Beispielcode zeigt, wie Sie den vorhandenen Stream im Speicher öffnen, neue Papiereigenschaften in lesen und diese dann als aktuelle Werte für COPaper festlegen.
 ms.assetid: a1559d97-387f-4d1a-8a9d-fa5c27abd545
 keywords:
-- IPaper laden
+- IPaper Load
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 16b5f16b8fe649d08226b2cff5a4b1a5234bddb6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0b592573f016018d359b5e3e35911d92371892b98ebea70338844b7f8ef4b1f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117961380"
 ---
-# <a name="ipaperload"></a>IPaper:: Load
+# <a name="ipaperload"></a>IPaper::Load
 
-Der folgende C++-Beispielcode zeigt, wie der vorhandene Stream im Speicher geöffnet wird, welche neuen Papiereigenschaften in gelesen werden und wie die aktuellen Werte für copaper festgelegt werden.
+Der folgende C++-Beispielcode zeigt, wie Sie den vorhandenen Stream im Speicher öffnen, neue Papiereigenschaften in lesen und diese dann als aktuelle Werte für COPaper festlegen.
 
-Im folgenden finden Sie die **iPaper:: Load** -Methode von Paper. cpp.
+Im Folgenden ist die **IPaper::Load-Methode** aus Paper.cpp.
 
 
 ```
@@ -126,19 +126,19 @@ STDMETHODIMP COPaper::CImpIPaper::Load(
 
 
 
-Nun wird die [**IStorage:: OpenStream**](/windows/desktop/api/Objidl/nf-objidl-istorage-openstream) -Methode aufgerufen, um den vorhandenen Datenstrom im Speicher zu öffnen, der als "Taschen Daten" bezeichnet wird. Zugriffsmodus-Flags sind für einen schreibgeschützten, direkten und nicht freigegebenen exklusiven Zugriff vorgesehen. Wenn der Stream geöffnet ist, wird die [**IStream:: Read**](/windows/desktop/api/Objidl/nn-objidl-istream) -Methode aufgerufen, um die Papier \_ Eigenschafts Struktur zu lesen. Wenn der tatsächlich gelesene Betrag nicht gleich dem angeforderten Betrag ist, wird der Ladevorgang abgebrochen, und E \_ FAIL wird zurückgegeben. Wenn die Format Version in den neu gelesenen Papier \_ Eigenschaften nicht erkannt wird, wird der Ladevorgang abgebrochen, und **Load** gibt den Wert E \_ Fail zurück.
+Jetzt wird die [**IStorage::OpenStream-Methode**](/windows/desktop/api/Objidl/nf-objidl-istorage-openstream) aufgerufen, um den vorhandenen Stream im Speicher mit dem Namen "PAPERDATA" zu öffnen. Zugriffsmodusflags sind für schreibgeschützten, direkten und nicht freigegebenen exklusiven Zugriff vorgesehen. Wenn der Stream geöffnet ist, wird die [**IStream::Read-Methode**](/windows/desktop/api/Objidl/nn-objidl-istream) aufgerufen, um die PAPER \_ PROPERTIES-Struktur zu lesen. Wenn der tatsächlich gelesene Betrag nicht dem angeforderten Betrag entspricht, wird der Ladevorgang abgebrochen, und E \_ FAIL wird zurückgegeben. Wenn die Formatversion in den neu gelesenen PAPER \_ PROPERTIES nicht erkannt wird, wird der Ladevorgang abgebrochen, und **Load** gibt E \_ FAIL zurück.
 
-Bei einer gültigen Freihand-Datenformat Version wird die Größe des neuen frei Hand Daten Arrays aus den \_ gelesenen Papiereigenschaften verwendet, um ein neues frei Hand Daten Array mit der erforderlichen Größe zuzuweisen. Die vorhandenen frei Hand Daten werden gelöscht, und die Daten gehen verloren. Wenn diese Daten wertvoll waren, sollten Sie vor dem Aufrufen des **Lade** vorrufs gespeichert worden sein. Nachdem das neue Array zugewiesen wurde, wird [**IStream:: Read**](/windows/desktop/api/Objidl/nn-objidl-istream) erneut aufgerufen, um die Daten aus dem Stream in das Array zu lesen. Wenn dieser Vorgang erfolgreich ist, werden die Werte in den neu gelesenen Papiereigenschaften als aktuelle Werte für copaper angenommen.
+Bei einer gültigen Formatversion für Ink-Daten wird die Größe des neuen Ink-Datenarrays aus den \_ PAPER PROPERTIES verwendet, das eingelesen wurde, um ein neues Ink-Datenarray der erforderlichen Größe zuzuordnen. Die vorhandenen Ink-Daten werden gelöscht, und ihre Daten verloren. Wenn diese Daten nützlich waren, sollten sie gespeichert worden sein, bevor **Load** aufgerufen wurde. Nachdem das neue Array zugeordnet wurde, wird [**IStream::Read**](/windows/desktop/api/Objidl/nn-objidl-istream) erneut aufgerufen, um die Daten aus dem Stream in das Array zu lesen. Wenn dieser Aufruf erfolgreich ist, werden die Werte in den neu gelesenen Papiereigenschaften als aktuelle Werte für COPaper übernommen.
 
-Während dieses Ladevorgangs wurde eine temporäre Papier \_ Eigenschafts Struktur (NewProperties) zum Speichern der neuen Eigenschaften verwendet, die gelesen wurden. Wenn alle mit der Last erfolgreich sind, werden NewProperties in die Papier \_ Eigenschafts Struktur "m \_ paperproperties" kopiert. Wie zuvor wird der **IStream** -Zeiger freigegeben, nachdem der Ladevorgang abgeschlossen und der [**IStream**](/windows/desktop/api/Objidl/nn-objidl-istream) nicht mehr benötigt wird.
+Während dieses Ladevorgangs wurde die temporäre PAPER \_ PROPERTIES-Struktur NewProps verwendet, um die neuen eingelesenen Eigenschaften zu speichern. Wenn alle beim Laden erfolgreich sind, wird NewProps in die PAPER \_ PROPERTIES-Struktur m \_ PaperProperties kopiert. Wie zuvor wird der [**IStream-Zeiger**](/windows/desktop/api/Objidl/nn-objidl-istream) freigegeben, nachdem das Laden abgeschlossen ist und der **IStream** nicht mehr benötigt wird.
 
-Wenn am Ende der **Last** ein Fehler auftritt, wird das frei Hand Daten Array gelöscht, da es möglicherweise beschädigte Daten enthält.
+Wenn am Ende von **Laden** ein Fehler auftritt, wird das Ink-Datenarray gelöscht, da es beschädigte Daten enthalten kann.
 
-Wenn am Ende der **Auslastung** kein Fehler auftritt, wird die Client [**itaschen Sink:: Loaded**](ipapersink-methods.md) -Methode in der internen copaper-Methode aufgerufen, um den Client zu benachrichtigen, dass der Ladevorgang abgeschlossen ist. Dies ist eine wichtige Benachrichtigung für den Client, weil diese neuen geladenen frei Hand Daten angezeigt werden muss. Diese Benachrichtigung nutzt die Verbindungs fähigen-Objektfunktionen in copaper erheblich.
+Wenn am Ende des **Ladevorgangs** kein Fehler auftritt, wird die [**IPaperSink::Loaded-Methode**](ipapersink-methods.md) des Clients in der internen NotifySinks-Methode von COPaper aufgerufen, um den Client zu benachrichtigen, dass der Ladevorgang abgeschlossen ist. Dies ist eine wichtige Benachrichtigung für den Client, da er diese neuen geladenen Ink-Daten anzeigen muss. Diese Benachrichtigung nutzt in COPaper erheblich die Features von miteinander verbundenen Objekten.
 
- 
+ 
 
- 
+ 
 
 
 

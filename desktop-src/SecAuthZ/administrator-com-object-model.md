@@ -1,38 +1,38 @@
 ---
-description: Eine Anwendung, die als Standardbenutzer ausgeführt wird, führt Vorgänge aus, die Administratorrechte erfordern, indem ein Objekt mit Component Object Model erhöhten Rechten erstellt wird.
+description: Eine Anwendung, die als Standardbenutzer ausgeführt wird, führt Vorgänge aus, die Administratorrechte erfordern, indem ein Objekt mit erhöhten Component Object Model wird.
 ms.assetid: 246fdf74-cc5b-47b1-b3a8-20441544e7be
-title: COM-Objektmodell für Administratoren
+title: COM-Objektmodell des Administrators
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c6c7d73cf31ce86c4788675374f34d04f6acf106
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b331d71f83428ad821bc1c2f9de24984025aaf7f95874c2203ee9fb1f9158a88
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117784787"
 ---
-# <a name="administrator-com-object-model"></a>COM-Objektmodell für Administratoren
+# <a name="administrator-com-object-model"></a>COM-Objektmodell des Administrators
 
-Im COM-Objektmodell des Administrators führt eine Anwendung, die als Standardbenutzer ausgeführt wird, Vorgänge durch, die Administratorrechte erfordern, indem ein [Component Object Model](/windows/desktop/com/component-object-model--com--portal) Objekt mit erhöhten Rechten erstellt wird. Weitere Informationen zum Erstellen eines COM-Objekts mit erhöhten Rechten finden Sie [unter com-Erweiterungs Moniker](../com/the-com-elevation-moniker.md).
+Im COM-Objektmodell des Administrators führt eine Anwendung, die als Standardbenutzer ausgeführt wird, Vorgänge aus, die Administratorrechte erfordern, indem sie ein Objekt mit [Component Object Model](/windows/desktop/com/component-object-model--com--portal) erstellt. Informationen zum Erstellen eines COM-Objekts mit erhöhten Rechten finden Sie unter [Der COM-Moniker für erhöhte Rechte.](../com/the-com-elevation-moniker.md)
 
-Ein Nachteil bei der Verwendung des com-Objektmodells für den Administrator ist, dass der Benutzer jedes Mal aufgefordert wird, wenn ein privilegierter Vorgang durchgeführt wird.
+Ein Nachteil bei der Verwendung des COM-Objektmodells des Administrators ist, dass der Benutzer jedes Mal aufgefordert wird, wenn ein privilegierter Vorgang ausgeführt wird.
 
-Jede Benutzeroberfläche, die das COM-Objekt steuern kann, muss vom COM-Objekt selbst dargestellt werden. Andernfalls könnte ein nicht privilegierter Prozess bewirken, dass das COM-Objekt mit erhöhten Berechtigungen privilegierte Vorgänge durchführt, ohne dass der Benutzer dazu aufgefordert wird.
+Jede Benutzeroberfläche, die das COM-Objekt steuern kann, muss vom COM-Objekt selbst dargestellt werden. Andernfalls kann ein nicht privilegierter Prozess dazu führen, dass das COM-Objekt mit erhöhten Rechten privilegierte Vorgänge ausführen kann, ohne dass der Benutzer dazu aufgefordert wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Entwickeln von Anwendungen, für die Administrator Rechte erforderlich sind](developing-applications-that-require-administrator-privilege.md)
+[Entwickeln von Anwendungen, die Administratorrechte erfordern](developing-applications-that-require-administrator-privilege.md)
 </dt> <dt>
 
-[Administrator Broker Modell](administrator-broker-model.md)
+[Administratorbrokermodell](administrator-broker-model.md)
 </dt> <dt>
 
-[Modell mit erhöhten Rechten](elevated-task-model.md)
+[Aufgabenmodell mit erhöhten Rechten](elevated-task-model.md)
 </dt> <dt>
 
-[Betriebs System-Dienstmodell](operating-system-service-model.md)
+[Betriebssystemdienstmodell](operating-system-service-model.md)
 </dt> </dl>
 
  

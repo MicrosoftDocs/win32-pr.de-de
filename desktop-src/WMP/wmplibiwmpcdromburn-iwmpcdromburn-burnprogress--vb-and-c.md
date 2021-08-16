@@ -1,11 +1,11 @@
 ---
-title: Iwmpcdromburn-burnprogress (Eigenschaft)
-description: Die burnprogress-Eigenschaft ruft den Fortschritt der CD-brennen als Prozentsatz ab.
+title: IWMPC wie die burnProgress-Eigenschaft
+description: Die burnProgress-Eigenschaft ruft den Fortschritt der CD-Vererbung in Prozent ab.
 ms.assetid: 831cc55d-bd26-4328-a715-1a1fa48d7a40
 keywords:
-- burnprogress-Eigenschaften Fenster Media Player
-- burnprogress-Eigenschaft, Windows Media Player, iwmpcdromburn-Schnittstelle
-- Iwmpcdromburn Interface, Windows Media Player, burnprogress (Eigenschaft)
+- burnProgress-Windows Media Player
+- burnProgress-Eigenschaft Windows Media Player , IWMPCführungsschnittstelle
+- IWMPCwiederSchnittstellenschnittstelle Windows Media Player , burnProgress-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 835c8c1091941437c226427ddb3ef53e8c577b5d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 90b8e468bc57bb40d990c0b2aeaffc23e184ef2ffa04ab85c9f60cf0d6bced57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118332064"
 ---
-# <a name="iwmpcdromburnburnprogress-property"></a>Iwmpcdromburn:: burnprogress (Eigenschaft)
+# <a name="iwmpcdromburnburnprogress-property"></a>IWMPCwiedrigeEigenschaft::burnProgress
 
-Die **burnprogress** -Eigenschaft ruft den Fortschritt der CD-brennen als Prozentsatz ab.
+Die **burnProgress-Eigenschaft** ruft den Fortschritt der CD-Vererbung in Prozent ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,11 +49,11 @@ Public ReadOnly Property burnProgress As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der der Fortschritts Wert ist. Die Statuswerte liegen im Bereich von 0 bis 100.
+Ein **System.Int32,** das der Statuswert ist. Statuswerte liegen zwischen 0 und 100.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Statuswert stellt den abgeschlossenen Prozentsatz des gesamten Brennvorgangs dar, einschließlich aller stagingvorgänge.
+Der Statuswert stellt den abgeschlossenen Prozentsatz des gesamten Prozesses dar, einschließlich aller Stagingvorgänge.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,11 +67,11 @@ Der Statuswert stellt den abgeschlossenen Prozentsatz des gesamten Brennvorgangs
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpcdromburn-Schnittstelle (VB und c#)**](iwmpcdromburn--vb-and-c.md)
+[**IWMPCführungsschnittstelle (VB und C#)**](iwmpcdromburn--vb-and-c.md)
 </dt> </dl>
 
  

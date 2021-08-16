@@ -1,75 +1,75 @@
 ---
-title: Geräte Erweiterungen für Wiedergabelisten Objekt Einstellungen
-description: Geräte Erweiterungen für Wiedergabelisten Objekt Einstellungen
+title: Geräteerweiterungen für Wiedergabelistenobjekteinstellungen
+description: Geräteerweiterungen für Wiedergabelistenobjekteinstellungen
 ms.assetid: 33b3dd18-fda2-4bf9-a893-5d77cdde6b80
 keywords:
-- Windows Media Player, Geräte Erweiterungen
-- Windows-Media Player, Erweiterungen
-- Windows Media Player, Wiedergabelisten Objekt Einstellungen
-- Geräte Erweiterungen, Wiedergabelisten Objekt Einstellungen
-- Erweiterungen, Wiedergabelisten Objekt Einstellungen
-- Wiedergabelisten Objekt
+- Windows Media Player,Geräteerweiterungen
+- Windows Media Player,Erweiterungen
+- Windows Media Player,Playlist-Objekteinstellungen
+- Geräteerweiterungen, Wiedergabelistenobjekteinstellungen
+- Erweiterungen,Playlist-Objekteinstellungen
+- Wiedergabelistenobjekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7fd9c6301e33307fc49e50b8aa9042752e020e32
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0f2acb01de41b753a85fee1c69e0bf015c687da04f50a10531ee5c67b0a13cc7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118340919"
 ---
-# <a name="device-extensions-for-playlist-object-preferences"></a>Geräte Erweiterungen für Wiedergabelisten Objekt Einstellungen
+# <a name="device-extensions-for-playlist-object-preferences"></a>Geräteerweiterungen für Wiedergabelistenobjekteinstellungen
 
-Im Rahmen der Synchronisierung werden von Windows Media Player 10 oder höher Wiedergabelisten Objekte zu MTP-fähigen tragbaren Geräten kopiert. In Windows Media Player 11 werden neue Funktionen eingeführt, die es tragbaren Geräten ermöglichen, die Typen der kopierten Wiedergabelisten Objekte einzuschränken. (Windows Media Player synchronisiert den Wiedergabelisten Inhalt immer gemäß den Synchronisierungs Regeln. Diese Funktion wirkt sich nur auf die Synchronisierung von Wiedergabelisten Objekten aus.) Windows Media Player kopiert drei Arten von Wiedergabelisten Objekten vom Computer auf das Gerät:
+Im Rahmen des Synchronisierungsprozesses kopiert Windows Media Player 10 oder höher Wiedergabelistenobjekte auf MTP-fähige portable Geräte. Windows Media Player 11 führt neue Funktionen ein, mit denen portable Geräte die Typen der kopierten Wiedergabelistenobjekte einschränken können. (Windows Media Player synchronisiert wiedergabelistenden Inhalt immer gemäß den Synchronisierungsregeln. Dieses Feature wirkt sich nur auf die Synchronisierung von Wiedergabelistenobjekten aus.) Windows Media Player kopiert drei Arten von Wiedergabelistenobjekten vom Computer auf das Gerät:
 
--   **Gewöhnliche Wiedergabelisten.** Dabei handelt es sich um Wiedergabelisten, die in der **Bibliotheks** Funktion von Windows Media Player sichtbar sind. Hierzu zählen die vom Benutzer erstellten Wiedergabelisten, der Bibliothek hinzugefügte Wiedergabelisten von Online Stores und mit dem Player installierte Beispiel Wiedergabelisten. Windows Media Player kopiert nur diese Wiedergabelisten auf das Gerät, wenn der Benutzer Sie für die Synchronisierung ausgewählt hat.
--   **Wiedergabe Wiedergabe Wiedergabelisten.** Hierbei handelt es sich um besondere Wiedergabelisten, die mit Windows Media Player installiert und nur für die Synchronisierung verwendet werden. Diese Wiedergabelisten sind nur im Setup-Assistenten für Windows Media Player-Geräte sichtbar.
--   **Implizit erstellte Wiedergabelisten.** Diese Wiedergabelisten werden erstellt, wenn der Benutzer einen Kategorieordner (z. b. " **Artist** " oder " **Album**") auf den Bereich zieht, der die zu synchronisierenden Elemente auflistet.
+-   **Normale Wiedergabelisten.** Dies sind Wiedergabelisten, die im **Bibliotheksfeature** des Windows Media Player. Dazu gehören wiedergabelisten, die vom Benutzer erstellt wurden, Wiedergabelisten, die der Bibliothek von Onlineshops hinzugefügt wurden, und Beispielwiedergabelisten, die mit dem Player installiert wurden. Windows Media Player werden nur diese Wiedergabelisten auf das Gerät kopiert, wenn der Benutzer sie für die Synchronisierung ausgewählt hat.
+-   **Wiedergabelisten für die Synchronisierung auf Lager.** Hierbei handelt es sich um spezielle Wiedergabelisten, die mit Windows Media Player installiert und nur für die Synchronisierung verwendet werden. Diese Wiedergabelisten sind nur in der Windows Media Player Geräteliste Setup-Assistant.
+-   **Implizit erstellte Wiedergabelisten.** Diese Wiedergabelisten werden erstellt, wenn der Benutzer einen Kategorieordner, z. B. **Interpret** oder **Album,** in den Bereich mit den zu synchronisierenden Elementen zieht und abstürzt.
 
-Die Header Datei mit dem Namen "wmpdevices. h", die für diese Version aktualisiert wurde, definiert die Strukturen und Konstanten, die für die Unterstützung von Windows Media Player-Geräte Erweiterungen erforderlich sind.
+Die Headerdatei mit dem Namen wmpdevices.h, die für dieses Release aktualisiert wurde, definiert die Strukturen und Konstanten, die zur Unterstützung Windows Media Player Geräteerweiterungen erforderlich sind.
 
-Damit ein Gerät mithilfe des Windows Media Player MTP-Geräte Erweiterungs Satzes als unterstützende Wiedergabelisten Objekt Einstellungen erkannt wird, muss es die folgenden Informationen in das deviceInfo-DataSet einschließen. (Weitere Informationen zu diesem Dataset finden Sie im Abschnitt 4.6.1 der MTP-Spezifikation.)
+Damit ein Gerät über den MTP-Geräteerweiterungssatz Windows Media Player als unterstützende Wiedergabelistenobjekteinstellungen erkannt wird, muss es die folgenden Informationen im DeviceInfo-Dataset enthalten. (Weitere Informationen zu diesem Dataset finden Sie in Abschnitt 4.6.1 der MTP-Spezifikation.)
 
 
 
-| Datasetfeld          | Feld Reihenfolge | Datentyp  | Wert                       |
+| Datasetfeld          | Feld reihenfolge | Datentyp  | Wert                       |
 |------------------------|-------------|------------|-----------------------------|
-| Vendorextensionid      | 2           | **UINT32** | 0x00000006                  |
-| Vendorextensionversion | 3           | **UINT16** | 0x0064 (100)                |
-| Vendorextensiondesc    | 4           | **String** | "Microsoft.com/WMPPD: 11,0" |
+| VendorExtensionID      | 2           | **UINT32** | 0x00000006                  |
+| VendorExtensionVersion | 3           | **UINT16** | 0x0064 (100)                |
+| VendorExtensionDesc    | 4           | **String** | "microsoft.com/WMPPD: 11.0" |
 
 
 
- 
+ 
 
-In der folgenden Tabelle finden Sie Details zum MTP-Vorgang für Wiedergabelisten Objekt-Einstellungen.
+Die folgende Tabelle enthält Details zum MTP-Vorgang für Wiedergabelistenobjekteinstellungen.
 
 
 
 | Element                  | BESCHREIBUNG                                                                                                                                                                                                                                                                                     |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Vorgangs Code        | 0x9203                                                                                                                                                                                                                                                                                          |
-| Vorgangs Parameter 1 | 0                                                                                                                                                                                                                                                                                               |
-| Vorgangs Parameter 2 | 0                                                                                                                                                                                                                                                                                               |
-| Vorgangs Parameter 3 | 0                                                                                                                                                                                                                                                                                               |
-| Vorgangs Parameter 4 | 0                                                                                                                                                                                                                                                                                               |
-| Vorgangs Parameter 5 | 0                                                                                                                                                                                                                                                                                               |
-| Daten                  | Das Gerät gibt im Antwort Parameter 1 einen Wert zurück, der die Einstellung für die Wiedergabelisten Objekt Synchronisierung angibt.                                                                                                                                                                                      |
-| Daten Richtung        | R->I                                                                                                                                                                                                                                                                                         |
-| Antwort Code Optionen | MTP- \_ Antwort \_ OK (0x2001) oder gültiger Fehler Antwort Code.                                                                                                                                                                                                                                        |
-| Antwort Parameter 1  | 0 oder 1. Der Wert 0 gibt an, dass Windows-Media Player nur gewöhnliche Wiedergabelisten Objekte synchronisieren muss. Der Wert 1 gibt an, dass Windows-Media Player gewöhnliche Wiedergabelisten Objekte, Aktien und implizit erstellte Synchronisierungs Wiedergabelisten-Objekte synchronisieren müssen. Dies ist das Standardverhalten. |
-| Antwort Parameter 2  | 0                                                                                                                                                                                                                                                                                               |
-| Antwort Parameter 3  | 0                                                                                                                                                                                                                                                                                               |
-| Antwort Parameter 4  | 0                                                                                                                                                                                                                                                                                               |
-| Antwort Parameter 5  | 0                                                                                                                                                                                                                                                                                               |
+| Vorgangscode        | 0x9203                                                                                                                                                                                                                                                                                          |
+| Operation-Parameter 1 | 0                                                                                                                                                                                                                                                                                               |
+| Operation-Parameter 2 | 0                                                                                                                                                                                                                                                                                               |
+| Operation-Parameter 3 | 0                                                                                                                                                                                                                                                                                               |
+| Operation Parameter 4 | 0                                                                                                                                                                                                                                                                                               |
+| Operation Parameter 5 | 0                                                                                                                                                                                                                                                                                               |
+| Daten                  | Das Gerät gibt einen Wert in Antwortparameter 1 zurück, um die Synchronisierungseinstellung für Wiedergabelistenobjekt anzugeben.                                                                                                                                                                                      |
+| Datenrichtung        | R->I                                                                                                                                                                                                                                                                                         |
+| Antwortcodeoptionen | MTP \_ RESPONSE \_ OK (0x2001) oder gültiger Fehlerantwortcode.                                                                                                                                                                                                                                        |
+| Antwortparameter 1  | 0 oder 1. Der Wert 0 gibt an, dass Windows Media Player nur normale Wiedergabelistenobjekte synchronisieren müssen. Der Wert 1 gibt an, dass Windows Media Player normale Wiedergabelistenobjekte, Zusammengestellte und implizit erstellte Synchronisierungswiedergabelistenobjekte synchronisieren muss. Dies ist das Standardverhalten. |
+| Antwortparameter 2  | 0                                                                                                                                                                                                                                                                                               |
+| Antwortparameter 3  | 0                                                                                                                                                                                                                                                                                               |
+| Antwortparameter 4  | 0                                                                                                                                                                                                                                                                                               |
+| Antwortparameter 5  | 0                                                                                                                                                                                                                                                                                               |
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Implementierung dieses Features ist für tragbare Geräte optional. Windows Media Player synchronisiert normale Wiedergabelisten Objekte, Wiedergabelisten Objekte für die endsynchronisierung und implizit erstellte Wiedergabelisten Objekte standardmäßig.
+Die Implementierung dieses Features ist für portable Geräte optional. Windows Media Player synchronisiert standardmäßig normale Wiedergabelistenobjekte, Synchronisierungswiedergabelistenobjekte und implizit erstellte Wiedergabelistenobjekte.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -78,9 +78,9 @@ Die Implementierung dieses Features ist für tragbare Geräte optional. Windows 
 [**Windows Media Player**](windows-media-player.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

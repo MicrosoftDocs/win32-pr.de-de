@@ -4,72 +4,72 @@ ms.assetid: ae32b354-799e-4f9b-8989-02bd95968210
 title: Volume- und LUN-Bindung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c9f62e599f5b5e457a1ce6dbf6a52524d1b80d1
-ms.sourcegitcommit: 37f276b5d887a3aad04b1ba86e390dea9d87e591
+ms.openlocfilehash: 91014241014793b601c15c64ec19e5a2b1d153c71ba617cead54a5d68cf978b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "104218908"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118125567"
 ---
 # <a name="volume-and-lun-binding"></a>Volume- und LUN-Bindung
 
-\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [virtuellen Festplatten Dienstanbieter](virtual-disk-service-portal.md) durch die [Windows-Speicherverwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
+\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [Virtual Disk Service](virtual-disk-service-portal.md) durch die Windows Storage Verwaltungs-API. [](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)\]
 
-Die Bindung ist die Erstellung von Volumes oder LUNs. Volumes bestehen aus Datenträger Blöcken und LUNs bestehen aus Laufwerks Blöcken. Die Bindung wählt für einen Satz von Zuordnungen zu physischen Ressourcen aus und erfolgt innerhalb eines Subsystems, innerhalb eines Pakets oder in beiden. Alle Anbieter Programme unterstützen eine teilweise gesteuerte Bindung eines Modells, bei dem der Aufrufer nur die Bindungs Attribute eines bestimmten Interesses angibt und es dem Anbieter ermöglicht, den Rest auszuwählen. Die Vorgänge in VDS für das Binden von Volumes und LUNs sind ähnlich, aber nicht identisch. Hardware Anbieter können z. b. zusätzliche Bindungs Optionen anbieten.
+Bindung ist die Erstellung von Volumes oder LUNs. Volumes bestehen aus Datenträger-Extents und LUNs bestehen aus Laufwerksddungen. Die Bindung wählt für eine Reihe von Zuordnungen zu physischen Ressourcen aus und tritt innerhalb eines Subsystems, innerhalb eines Pakets oder in beiden Fällen auf. Alle Anbieterprogramme unterstützen die teilweise gerichtete Bindung eines Modells, bei dem der Aufrufer nur die Bindungsattribute angibt, die von besonderem Interesse sind, und dem Anbieter ermöglicht, den Rest zu wählen. Die Vorgänge in VDS für Bindungsvolumes und LUNs sind ähnlich, aber nicht identisch. Beispielsweise können Hardwareanbieter zusätzliche Bindungsoptionen anbieten.
 
-VDS unterstützt die folgenden fünf Volume-und LUN-Bindungs Typen für teilweise gesteuerte Konfigurationen. (Hardware Anbieter können viele andere Bindungen unterstützen und unterstützen.)
+VDS unterstützt die folgenden fünf Volume- und LUN-Bindungstypen für teilweise gerichtete Konfigurationen. (Hardwareanbieter können und unterstützen viele andere Bindungen.)
 
 
 
 | Begriff                                                                                                                                             | BESCHREIBUNG                                                                                    |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| <span id="Simple"></span><span id="simple"></span><span id="SIMPLE"></span>Einfache<br/>                                                     | Lineare Zuordnung mit nur einem zusammenhängenden Block.<br/>                             |
-| <span id="Spanned"></span><span id="spanned"></span><span id="SPANNED"></span>Übergreifende<br/>                                                 | Lineare Zuordnung mit mehreren nicht zusammenhängenden Blöcken auf mehreren Datenträgern oder Laufwerken.<br/> |
-| <span id="Striped"></span><span id="striped"></span><span id="STRIPED"></span>Tem<br/>                                                 | Eine Zuordnung, die zusammenhängende volumeblöcke auf mehrere Datenträger oder Laufwerke erweitert.<br/> |
-| <span id="Mirrored"></span><span id="mirrored"></span><span id="MIRRORED"></span>Verkehrt<br/>                                             | Zuordnung, die zwei oder mehr identische Datenkopien verwaltet.<br/>                           |
-| <span id="Striped_with_parity"></span><span id="striped_with_parity"></span><span id="STRIPED_WITH_PARITY"></span>Stripeset mit Parität<br/> | Zuordnung, mit der Paritäts Überprüfung-Informationen auf mehrere Datenträger oder Laufwerke verteilt werden.<br/>  |
+| <span id="Simple"></span><span id="simple"></span><span id="SIMPLE"></span>Einfach<br/>                                                     | Lineare Zuordnung mit einem und nur einem zusammenhängenden Extent.<br/>                             |
+| <span id="Spanned"></span><span id="spanned"></span><span id="SPANNED"></span>Übergreifende<br/>                                                 | Lineare Zuordnung mit mehreren nicht zusammenhängenden Speichereinheiten auf mehreren Datenträgern oder Laufwerken.<br/> |
+| <span id="Striped"></span><span id="striped"></span><span id="STRIPED"></span>Gestreift<br/>                                                 | Zuordnung, die zusammenhängende Volume-Extents über mehrere Datenträger oder Laufwerke hinweg überlagert.<br/> |
+| <span id="Mirrored"></span><span id="mirrored"></span><span id="MIRRORED"></span>Gespiegelten<br/>                                             | Zuordnung, die zwei oder mehr identische Datenkopien verwaltet.<br/>                           |
+| <span id="Striped_with_parity"></span><span id="striped_with_parity"></span><span id="STRIPED_WITH_PARITY"></span>Striping mit Parität<br/> | Zuordnung, die Paritätsüberprüfungsinformationen auf mehrere Datenträger oder Laufwerke verteilt.<br/>  |
 
 
 
  
 
-VDS erstellt gespiegelte, Stripesets und Stripesets mit Paritäts Bindungen von mehr als einem Element. Beispielsweise hat eine zwei-Wege-Spiegelung zwei Member. Jedes Mitglied kann Blöcke auf mehr als einem Datenträger oder Laufwerk belegen. VDS verkettet die Blöcke, um den Member zu bilden, und bindet dann das Volume oder die LUN an die Elemente. Ein Anbieter kann alle Bindungs Typen oder eine beliebige Teilmenge unterstützen. Im VDS-Objektmodell ist jedes Mitglied einer Spiegelung ein unabhängiges Objekt, das als Plex bezeichnet wird.
+VDS erstellt gespiegelte, gestreifte und gestreifte Konstrukte mit Paritätsbindungen aus mehr als einem Member. Beispielsweise verfügt eine zweigespiegelte -Spiegelung über zwei Member. Jedes Mitglied kann Aufdungen auf mehr als einem Datenträger oder Laufwerk belegen. VDS verkettet die Extent, um den Member zu bilden, und bindet dann das Volume oder die LUN an die Member. Ein Anbieter kann alle Bindungstypen oder eine beliebige Teilmenge unterstützen. Im VDS-Objektmodell ist jeder Member eines Spiegels ein unabhängiges Objekt, das als Plex bezeichnet wird.
 
-Auch hier sind Volume-und LUN-Typen ähnlich, aber nicht exakt. Eine Beschreibung der Volumetypen finden Sie im [Volume-Objekt](volume-object.md). Informationen zu LUN-Typen finden Sie unter dem [LUN-Objekt](lun-object.md). Bindungs Typen sind entweder nicht fehlertolerant oder fehlertolerant.
+Auch hier sind Volume- und LUN-Typen ähnlich, aber nicht genau. Eine Beschreibung der Volumetypen finden Sie im [Volume-Objekt](volume-object.md). Informationen zu LUN-Typen finden Sie im [LUN-Objekt](lun-object.md). Bindungstypen sind entweder nicht fehlertolerant oder fehlertolerant.
 
 ### <a name="non-fault-tolerant-binding"></a>Nicht fehlertolerante Bindung
 
-Nicht fehlertolerante Volumes und LUNs bieten keine Notfall Wiederherstellung. Wenn eines der Spindeln, das zu einem nicht fehlertoleranten Volume oder einer LUN beiträgt, fehlschlägt, schlägt das gesamte Volume oder die LUN fehl. In Exchange für das Risiko von Daten bieten nicht fehlertolerante Volumes und LUNs eine Eingabe-/Ausgabeleistung, die in der Regel der von fehlertoleranten Volumes und LUNs entspricht. VDS unterstützt die folgenden drei nicht fehlertoleranten Typen: einfache, übergreifende und stripesettypen.
+Nicht fehlertolerante Volumes und LUNs bieten keine Notfallwiederherstellung. Wenn eine der Achsen, die zu einem nicht fehlertoleranten Volume oder einer nicht fehlertoleranten LUN bei tragen, ausfällt, schlägt das gesamte Volume oder die gesamte LUN fehl. Im Gegenzug für das Risiko für Daten bieten nicht fehlertolerante Volumes und LUNs eine Eingabe-/Ausgabeleistung, die im Allgemeinen der Leistung fehlertoleranter Volumes und LUNs überlegen ist. VDS unterstützt die folgenden drei nicht fehlertoleranten Typen: "simple", "spanned" und "striped".
 
 Einfach
 
-![Diagramm, das einen einfachen nicht fehlertoleranten Typ mit 2 Paketen und 2 Subsystemen anzeigt.](images/vdssimplelunvol.png)
+![Diagramm, das einen einfachen, nicht fehlertoleranten Typ mit 2 Paketen und 2 Subsystemen zeigt.](images/vdssimplelunvol.png)
 
 Übergreifend
 
-![Diagramm, das einen übergreifenden, nicht fehlertoleranten Typ mit 1 Pack und 1 Subsystem anzeigt.](images/vdsspanlunvol.png)
+![Diagramm, das einen nicht fehlertoleranten übergreifenden Typ mit 1 Paket und 1 Subsystem zeigt.](images/vdsspanlunvol.png)
 
-Tem
+Gestreift
 
-![Diagramm, das einen nicht fehlertoleranten Datenträger mit 1 Pack und 1 Subsystem anzeigt.](images/vdsstripelunvol.png)
+![Diagramm, das einen nicht fehlertoleranten Striped-Typ mit 1 Paket und 1 Subsystem zeigt.](images/vdsstripelunvol.png)
 
 ### <a name="fault-tolerant-binding"></a>Fehlertolerante Bindung
 
-Die folgenden fehlertoleranten Volumes und LUNs bieten eine Notfall Wiederherstellung. Wenn eines der Spindeln, das zu einem fehlertoleranten Volume oder einer LUN beiträgt, fehlschlägt, können die Daten wieder hergestellt werden. In Exchange für die Datensicherheit ist die Eingabe-/Ausgabeleistung von fehlertoleranten Volumes und LUNs in der Regel geringer als bei nicht fehlertoleranten Volumes und LUNs. VDS unterstützt zwei fehlertolerante Typen: gespiegelt und Stripeset mit Parität.
+Die folgenden fehlertoleranten Volumes und LUNs bieten eine Notfallwiederherstellung. Wenn eine der Achsen, die zu einem fehlertoleranten Volume oder einer FEHLER-LUN bei tragen, ausfällt, können die Daten wiederhergestellt werden. Im Gegenzug für die Datensicherheit ist die Eingabe-/Ausgabeleistung von fehlertoleranten Volumes und LUNs im Allgemeinen mit der Leistung nicht fehlertoleranter Volumes und LUNs bzw. VDS unterstützt zwei fehlertolerante Typen: gespiegelt und mit Parität gestreift.
 
-Gespiegelt (drei-Wege-Spiegelung)
+Gespiegelt (Drei-Wege-Spiegelung)
 
-![Diagramm, das einen gespiegelten (3-Wege-Spiegel) fehlertoleranten Typ anzeigt.](images/vdsmirrorlunvol.png)
+![Diagramm, das einen fehlertoleranten Typ gespiegelt (3-Wege-Spiegelung) zeigt.](images/vdsmirrorlunvol.png)
 
-Stripeset mit Parität
+Striping mit Parität
 
-![Diagramm, das ein Stripeset mit einem Paritäts fehlertoleranten Typ anzeigt](images/vdsstripeparitylunvol.png)
+![Diagramm, das einen fehlertoleranten Striped-Typ mit Parität zeigt.](images/vdsstripeparitylunvol.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Konfigurations Übersicht](configuration.md)
+[Übersicht über die Konfiguration](configuration.md)
 </dt> <dt>
 
 [Volume-Objekt](volume-object.md)

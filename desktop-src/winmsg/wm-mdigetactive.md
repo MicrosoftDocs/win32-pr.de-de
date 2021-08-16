@@ -1,19 +1,19 @@
 ---
-description: Eine Anwendung sendet die WM- \_ mdigetactive-Nachricht an ein MDI-Client Fenster (Multiple Document Interface), um das Handle für das aktive untergeordnete MDI-Fenster abzurufen.
+description: Eine Anwendung sendet die WM MDIGETACTIVE-Nachricht an ein MDI-Clientfenster (Multiple Document Interface), um das Handle für das aktive untergeordnete \_ MDI-Fenster abzurufen.
 ms.assetid: 3ee445be-dd55-4825-8508-fa18a346ffcd
-title: WM_MDIGETACTIVE Meldung (Winuser. h)
+title: WM_MDIGETACTIVE (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c49f4ec321f526cd4c9766555e2361ef2cfbd040
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7716138028f7fe7447cc89d8feded7806f4f8757cd4a18b4bef6f2d812de3f17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118200140"
 ---
-# <a name="wm_mdigetactive-message"></a>WM- \_ mdigetactive-Meldung
+# <a name="wm_mdigetactive-message"></a>WM \_ MDIGETACTIVE-Nachricht
 
-Eine Anwendung sendet die **WM- \_ mdigetactive** -Nachricht an ein MDI-Client Fenster (Multiple Document Interface), um das Handle für das aktive untergeordnete MDI-Fenster abzurufen.
+Eine Anwendung sendet die **WM \_ MDIGETACTIVE-Nachricht** an ein MDI-Clientfenster (Multiple Document Interface), um das Handle für das aktive untergeordnete MDI-Fenster abzurufen.
 
 
 ```C++
@@ -36,7 +36,7 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Der maximierte Zustand. Wenn dieser Parameter nicht **null** ist, handelt es sich um einen Zeiger auf einen Wert, der den maximierten Zustand des untergeordneten MDI-Fensters angibt. Wenn der Wert **true** ist, wird das Fenster maximiert. der Wert **false** gibt an, dass dies nicht der Fall ist. Wenn dieser Parameter **null** ist, wird der-Parameter ignoriert.
+Der maximierte Zustand. Wenn dieser Parameter nicht **NULL ist,** ist er ein Zeiger auf einen Wert, der den maximierten Zustand des untergeordneten MDI-Fensters angibt. Wenn der Wert **TRUE ist,** wird das Fenster maximiert. Der Wert **FALSE gibt an,** dass dies nicht der Wert ist. Wenn dieser Parameter **NULL ist,** wird der -Parameter ignoriert.
 
 </dd> </dl>
 
@@ -44,7 +44,7 @@ Der maximierte Zustand. Wenn dieser Parameter nicht **null** ist, handelt es sic
 
 Typ: **HWND**
 
-Der Rückgabewert ist das Handle des aktiven untergeordneten MDI-Fensters.
+Der Rückgabewert ist das Handle für das aktive untergeordnete MDI-Fenster.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,15 +54,15 @@ Der Rückgabewert ist das Handle des aktiven untergeordneten MDI-Fensters.
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Übersicht über mehrere Dokument Schnittstellen](multiple-document-interface.md)
+[Übersicht über mehrere Dokumentschnittstellen](multiple-document-interface.md)
 </dt> </dl>
 
  

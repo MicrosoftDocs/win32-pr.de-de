@@ -1,33 +1,33 @@
 ---
-description: In diesem Beispiel werden erweiterte Funktionen der für die Handschrifterkennung verwendeten API (Application Programming Interface, API) für die Verwendung von mikrosofttablet-APIs veranschaulicht.
+description: In diesem Beispiel werden erweiterte Features der MicrosoftTablet-PC-Automatisierungs-API (Application Programming Interface, Anwendungsprogrammierschnittstelle) veranschaulicht, die für die Handschrifterkennung verwendet wird.
 ms.assetid: c9e6613c-5797-44c3-8ce1-92d4d1459ecf
-title: Beispiel für mehrere erkenzer
+title: Beispiel für mehrere Erkennungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a21d24001e3544be16dde4d288a8adc7ea0081f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a2d687f1bddd1f3c57cc482070b8e5826126b6e5b0f716fa3649df01ad6eab30
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117856549"
 ---
-# <a name="multiple-recognizers-sample"></a>Beispiel für mehrere erkenzer
+# <a name="multiple-recognizers-sample"></a>Beispiel für mehrere Erkennungen
 
-In diesem Beispiel werden erweiterte Funktionen der für die *Handschrift* Erkennung verwendeten API (Application Programming Interface, API) für die Verwendung von mikrosofttablet-APIs veranschaulicht.
+In diesem Beispiel werden erweiterte Features der MicrosoftTablet-PC-Automatisierungs-API (Application Programming Interface, Anwendungsprogrammierschnittstelle) veranschaulicht, die für *die Handschrifterkennung* verwendet wird.
 
 Dies umfasst Folgendes:
 
--   Auflisten der installierten erkenzer
--   Erstellen eines *Erkennungs Kontexts* mit einer bestimmten Spracherkennung
--   Serialisieren von Erkennungs Ergebnissen mit einer Stroke-Auflistung
--   Organisieren von Stroke Collections in eine benutzerdefinierte Sammlung innerhalb des [**InkDisp**](inkdisp-class.md) -Objekts
--   Serialisieren von frei *Hand Objekten in* und Abrufen von frei Hand Objekten aus einer ISF-Datei *(Ink serialisiert Format)*
--   Festlegen von Eingabe Handbüchern für Erkennungs Modul
+-   Aufzählen der installierten Erkennungen
+-   Erstellen eines *Erkennungskontexts* mit einer bestimmten Spracherkennung
+-   Serialisieren von Erkennungsergebnissen mit einer Strichsammlung
+-   Organisieren von Strichsammlungen in einer benutzerdefinierten Auflistung im [**InkDisp-Objekt**](inkdisp-class.md)
+-   Serialisieren von *Ink-Objekten* in und Abrufen aus einer *ISF-Datei (Ink Serialized Format)*
+-   Festlegen von Eingabehandbüchern für die Erkennung
 -   Verwenden der synchronen und asynchronen Erkennung
 
 ## <a name="ink-headers"></a>Ink-Header
 
-Fügen Sie zunächst die Header für die Schnittstellen von Tablet PC Automation ein. Diese werden mit dem Microsoft Windows XP Tablet PC Edition Software Development Kit (SDK) installiert.
+Schließen Sie zunächst die Header für Tablet PC Automation-Schnittstellen ein. Diese werden mit dem Microsoft Windows XP Tablet PC Edition Software Development Kit (SDK) installiert.
 
 
 ```C++
@@ -37,7 +37,7 @@ Fügen Sie zunächst die Header für die Schnittstellen von Tablet PC Automation
 
 
 
-Die Eventsinks. h-Datei definiert die Schnittstellen iinkeventsimpl und iinkrecognitioneventsimpl.
+Die Datei EventSinks.h definiert die Schnittstellen IInkEventsImpl und IInkRecognitionEventsImpl.
 
 
 ```C++
@@ -46,9 +46,9 @@ Die Eventsinks. h-Datei definiert die Schnittstellen iinkeventsimpl und iinkreco
 
 
 
-## <a name="enumerating-the-installed-recognizers"></a>Auflisten der installierten erkenzer
+## <a name="enumerating-the-installed-recognizers"></a>Aufzählen der installierten Erkennungen
 
-Die loadmenu-Methode der Anwendung füllt das Menü neue Striche erstellen mit den verfügbaren erkenungen auf. Es wird ein [**inkrecognizers**](/previous-versions/windows/desktop/legacy/ms702438(v=vs.85)) erstellt. Wenn die [**Languages**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizer-get_languages) -Eigenschaft eines **inkrecognizers** -Objekts nicht leer ist, ist die Erkennung eine *Texterkennung*, und der Wert der [**Name**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizer-get_name) -Eigenschaft wird dem Menü hinzugefügt.
+Die LoadMenu-Methode der Anwendung füllt das Menü Neue Striche erstellen mit den verfügbaren Erkennungen auf. Ein [**InkRecognizers**](/previous-versions/windows/desktop/legacy/ms702438(v=vs.85)) wird erstellt. Wenn die [**Languages-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizer-get_languages) eines **InkRecognizers-Objekts** nicht leer ist, ist die Erkennung eine *Texterkennung,* und der Wert der [**Name-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizer-get_name) wird dem Menü hinzugefügt.
 
 
 ```C++
@@ -75,9 +75,9 @@ hr = m_spIInkRecognizers.CoCreateInstance(CLSID_InkRecognizers);
 
 
 
-## <a name="creating-an-ink-collector"></a>Erstellen eines frei Hand Sammlers
+## <a name="creating-an-ink-collector"></a>Erstellen eines Ink Collectors
 
-Die OnCreate-Methode der Anwendung erstellt ein [**InkCollector**](inkcollector-class.md) -Objekt, verbindet es mit seiner Ereignis Quelle und aktiviert die frei Hand Auflistung.
+Die OnCreate-Methode der Anwendung erstellt ein [**InkCollector-Objekt,**](inkcollector-class.md) verbindet es mit seiner Ereignisquelle und aktiviert die Ink-Sammlung.
 
 
 ```C++
@@ -94,9 +94,9 @@ hr = m_spIInkCollector->put_Enabled(VARIANT_TRUE);
 
 
 
-## <a name="creating-a-recognizer-context"></a>Erstellen eines Erkennungs Kontexts
+## <a name="creating-a-recognizer-context"></a>Erstellen eines Erkennungskontexts
 
-Die Methode "kreaterecocontext" der Anwendung erstellt und initialisiert einen neuen Erkennungs Kontext und richtet die von der zugeordneten Sprache unterstützten Führungslinien ein. Die " [**kreaterecognizercontext**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizer-createrecognizercontext) "-Methode des [**iinkrecognizer**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognizer) -Objekts erstellt ein [**IInkRecognizerContext2**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognizercontext2) -Objekt für die Sprache. Bei Bedarf wird der alte Erkennungs Kontext ersetzt. Der Kontext ist mit seiner Ereignis Quelle verbunden. Zum Schluss wird die Eigenschaft " [**Funktionen**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizer-get_capabilities) " des erkentekontexts geprüft, welche Führungslinien der Erkennungs Kontext unterstützt.
+Die CreateRecoContext-Methode der Anwendung erstellt und initialisiert einen neuen Erkennungskontext und richtet die Leitfäden ein, die von der zugeordneten Sprache unterstützt werden. Die [**CreateRecognizerContext-Methode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizer-createrecognizercontext) des [**IInkRecognizer-Objekts**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognizer) erstellt ein [**IInkRecognizerContext2-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognizercontext2) für die Sprache. Bei Bedarf wird der alte Erkennungskontext ersetzt. Der Kontext ist mit seiner Ereignisquelle verbunden. Schließlich wird die [**Capabilities-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizer-get_capabilities) des Erkennungskontexts überprüft, für die vom Erkennungskontext unterstützte Leitfäden unterstützt werden.
 
 
 ```C++
@@ -126,9 +126,9 @@ if (SUCCEEDED(pIInkRecognizer->get_Capabilities(&dwCapabilities)))
 
 
 
-## <a name="collecting-strokes-and-displaying-recognition-results"></a>Erfassen von Strichen und Anzeigen von Erkennungs Ergebnissen
+## <a name="collecting-strokes-and-displaying-recognition-results"></a>Sammeln von Strichen und Anzeigen von Erkennungsergebnissen
 
-Die OnStroke-Methode der Anwendung aktualisiert die [**inkstriche**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) des Ink Collector, bricht vorhandene asynchrone Erkennungs Anforderungen ab und erstellt eine Erkennungs Anforderung für den Erkennungs Kontext.
+Die OnStroke-Methode der Anwendung aktualisiert die [**InkStrokes**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) des Ink-Collectors, bricht vorhandene asynchrone Erkennungsanforderungen ab und erstellt eine Erkennungsanforderung für den Erkennungskontext.
 
 
 ```C++
@@ -151,7 +151,7 @@ if (SUCCEEDED(hr))
 
 
 
-Die-Methode der Anwendung `OnRecognition` sendet die Ergebnisse der Erkennungs Anforderung an die-Methode des Ausgabe Fensters `UpdateString` .
+Die -Methode der Anwendung `OnRecognition` sendet die Ergebnisse der Erkennungsanforderung an die -Methode des Ausgabefensters. `UpdateString`
 
 
 ```C++
@@ -161,9 +161,9 @@ m_wndResults.UpdateString(bstrRecognizedString);
 
 
 
-## <a name="deleting-strokes-and-recognition-results"></a>Löschen von Strichen und Erkennungs Ergebnissen
+## <a name="deleting-strokes-and-recognition-results"></a>Löschen von Strichen und Erkennungsergebnissen
 
-Die OnClear-Methode der Anwendung löscht alle Striche und Erkennungsergebnisse aus dem [**InkDisp**](inkdisp-class.md) -Objekt und löscht die Fenster. Die Zuordnung der Erkennungs Kontext mit der [**inkstrokes**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung wird entfernt.
+Die OnClear-Methode der Anwendung löscht alle Striche und Erkennungsergebnisse aus dem [**InkDisp-Objekt**](inkdisp-class.md) und löscht die Fenster. Die Zuordnung des Erkennungskontexts zu seiner [**InkStrokes-Sammlung**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) wird entfernt.
 
 
 ```C++
@@ -194,9 +194,9 @@ if (SUCCEEDED(m_spIInkDisp->CreateStrokes(v, &m_spIInkStrokes)))
 
 
 
-## <a name="changing-recognizer-contexts"></a>Ändern von Erkennungs Kontext
+## <a name="changing-recognizer-contexts"></a>Ändern von Erkennungskontexten
 
-Die onnewstrokes-Methode der Anwendung wird aufgerufen, wenn der Benutzer im Menü neue Striche erstellen eine Erkennung auswählt. Die aktuellen [**inkstriche**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) werden gespeichert. Wenn eine andere Spracherkennung ausgewählt wurde, wird ein neuer Erkennungs Kontext erstellt. Anschließend wird ein neues **inkstrokes** an den neuen Erkennungs Kontext angefügt.
+Die OnNewStrokes-Methode der Anwendung wird aufgerufen, wenn der Benutzer im Menü Neue Striche erstellen eine Erkennung auswählt. Die aktuellen [**InkStrokes**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) werden gespeichert. Wenn eine andere Spracherkennung ausgewählt wurde, wird ein neuer Erkennungskontext erstellt. Anschließend wird ein neues **InkStrokes** an den neuen Erkennungskontext angefügt.
 
 
 ```C++
@@ -243,11 +243,11 @@ if (wID != m_nCmdRecognizer)
 
 
 
-Anschließend wird "startnewstrokecollection" aufgerufen, wodurch ein leeres [**inkstrokes**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) erstellt und an den Erkennungs Kontext angefügt wird.
+Anschließend ruft sie StartNewStrokeCollection auf, wodurch leere [**InkStrokes**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) erstellt und an den Erkennungskontext angefügt werden.
 
-## <a name="saving-the-strokes-collection-for-a-recognizer-context"></a>Speichern der Striche-Auflistung für einen Erkennungs Kontext
+## <a name="saving-the-strokes-collection-for-a-recognizer-context"></a>Speichern der Strichsammlung für einen Erkennungskontext
 
-Die-Methode der Anwendung `SaveStrokeCollection` überprüft, ob ein vorhandener Erkennungs Kontext vorhanden ist, und schließt die Erkennung der aktuellen Striche-Auflistung ab. Anschließend wird die Sammlung " [**inkstrokes**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) " den [**CustomStrokes**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdisp-get_customstrokes) des Ink-Objekts hinzugefügt.
+Die -Methode der Anwendung `SaveStrokeCollection` überprüft auf einen vorhandenen Erkennungskontext und finalisiert die Erkennung der aktuellen Strichauflistung. Anschließend wird die [**Sammlung InkStrokes**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) den [**CustomStrokes**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdisp-get_customstrokes) des Ink-Objekts hinzugefügt.
 
 
 ```C++

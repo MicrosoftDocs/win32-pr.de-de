@@ -1,11 +1,11 @@
 ---
-title: Iwmpclosedcaption samifilename (Eigenschaft)
-description: Die samifilename-Eigenschaft ruft den Namen einer Datei ab, die die für den Untertitel erforderlichen Informationen enthält, oder legt ihn fest.
+title: IWMPClosedCaption SAMIFileName (Eigenschaft)
+description: Die SAMIFileName-Eigenschaft ruft den Namen einer Datei ab, die die für die Untertitelung erforderlichen Informationen enthält, oder legt diesen fest.
 ms.assetid: c3162c5f-9d66-41d4-920c-ed9840742d9d
 keywords:
-- Samifilename-Eigenschaft, Windows-Media Player
-- Samifilename-Eigenschaft, Windows Media Player, iwmpclosedcaption-Schnittstelle
-- Iwmpclosedcaption-Schnittstelle, Windows Media Player, samifilename (Eigenschaft)
+- SAMIFileName-Windows Media Player
+- SAMIFileName-Eigenschaft Windows Media Player , IWMPClosedCaption-Schnittstelle
+- IWMPClosedCaption-Schnittstelle Windows Media Player , SAMIFileName-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d251f2bbf0c8839ab9a0005c69e1869c47af16ef
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 973b0757eca4251e74180d829205ee6c7080ca821db2eeada3abc825bb4b5073
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117930323"
 ---
-# <a name="iwmpclosedcaptionsamifilename-property"></a>Iwmpclosedcaption:: samifilename (Eigenschaft)
+# <a name="iwmpclosedcaptionsamifilename-property"></a>IWMPClosedCaption::SAMIFileName (Eigenschaft)
 
-Die **samifilename** -Eigenschaft ruft den Namen einer Datei ab, die die für den Untertitel erforderlichen Informationen enthält, oder legt ihn fest.
+Die **SAMIFileName-Eigenschaft** ruft den Namen einer Datei ab, die die für die Untertitelung erforderlichen Informationen enthält, oder legt diesen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +46,17 @@ Public Property SAMIFileName As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-" **System. String** " ist der Name der synchronisierten, zugänglichen Medienaustausch Datei (Sami).
+Die **System.String-Datei,** die der Name der SAMI-Datei (Synchronized Accessible Media Interchange) ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Sami-Datei muss eine SMI-oder. Sami-Dateinamenerweiterung verwenden.
+Die SAMI-Datei muss eine SMI- oder SAMI-Dateierweiterung verwenden.
 
-Wenn Sie keinen Wert mit **samifilename** festlegen, ruft diese Eigenschaft eine **Zeichenfolge** ab, die den Standard Dateinamen oder die URL enthält, die dem aktuellen Medien Element zugeordnet ist. Diese Zuordnung kann auftreten, wenn eine Sami-Datei mithilfe des *Sami* URL-Parameters angegeben wird, oder automatisch, wenn die Sami-Datei den gleichen Namen wie die digitale Mediendatei hat (mit Ausnahme der Dateinamenerweiterung). Wenn dem aktuellen Medium keine Standard-Sami-Datei zugeordnet ist, erhält diese Eigenschaft eine Zeichenfolge der Länge 0 (null) ("").
+Wenn Sie keinen Wert mit **SAMIFileName** festlegen,  ruft diese Eigenschaft eine Zeichenfolge ab, die den Standarddateinamen oder die URL enthält, die dem aktuellen Medienelement zugeordnet ist. Diese Zuordnung kann auftreten, wenn eine SAMI-Datei mithilfe des *sami-URL-Parameters* angegeben wird, oder automatisch, wenn die SAMI-Datei denselben Namen wie die digitale Mediendatei hat (mit Ausnahme der Dateierweiterung). Wenn dem aktuellen Medium keine SAMI-Standarddatei zugeordnet ist, erhält diese Eigenschaft eine Zeichenfolge der Länge 0 ("").
 
-Nachdem Sie einen Wert mit **samifilename** festgelegt haben, wird dieser Wert beibehalten, bis Sie einen neuen Wert festlegen (oder bis ein neues Medien Element mithilfe des Sami URL-Parameters geöffnet wird). Daher müssen Sie vor jedem neuen Medien Element einen neuen Wert für diese Eigenschaft festlegen. Auf diese Weise wird der neue Wert für **samifilename** wirksam, wenn das nächste Medien Element geöffnet wird (oder wenn **AxWindowsMediaPlayer. Close** aufgerufen wird). Das Angeben eines neuen Werts für **samifilename** hat keine Auswirkung auf das aktuelle Medium.
+Nachdem Sie einen Wert mithilfe von **SAMIFileName** festgelegt haben, wird dieser Wert beibehalten, bis Sie einen neuen Wert festlegen (oder bis ein neues Medienelement mithilfe des Sami-URL-Parameters geöffnet wird). Daher müssen Sie einen neuen Wert für diese Eigenschaft festlegen, bevor Sie jedes neue Medienelement wieder geben. Auf diese Weise wird der neue Wert für **SAMIFileName** wirksam, wenn das nächste Medienelement geöffnet wird (oder **wenn AxWindowsMediaPlayer.close** aufgerufen wird). Die Angabe eines neuen Werts **für SAMIFileName** hat keine Auswirkungen auf das aktuelle Medium.
 
-Legen Sie **samifilename** auf eine Zeichenfolge der Länge 0 ("") fest, bevor Sie das nächste Medien Element wiedergeben, damit Windows Media Player die einem bestimmten Medien Element zugeordnete standardmäßige Sami-Datei verwendet.
+Damit Windows Media Player SAMI-Standarddatei verwendet, die einem bestimmten Medienelement zugeordnet ist, legen Sie **SAMIFileName** auf eine Zeichenfolge der Länge 0 ("") fest, bevor Sie das nächste Medienelement wiedergibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,26 +64,26 @@ Legen Sie **samifilename** auf eine Zeichenfolge der Länge 0 ("") fest, bevor S
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Hinzufügen von Untertiteln zu digitalen Medien**](adding-closed-captions-to-digital-media.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. Close**](axwmplib-axwindowsmediaplayer-close.md)
+[**AxWindowsMediaPlayer.close**](axwmplib-axwindowsmediaplayer-close.md)
 </dt> <dt>
 
-[**Iwmpclosedcaption-Schnittstelle (VB und c#)**](iwmpclosedcaption--vb-and-c.md)
+[**IWMPClosedCaption-Schnittstelle (VB und C#)**](iwmpclosedcaption--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPClosedCaption2-Schnittstelle (VB und c#)**](iwmpclosedcaption2--vb-and-c.md)
+[**IWMPClosedCaption2-Schnittstelle (VB und C#)**](iwmpclosedcaption2--vb-and-c.md)
 </dt> </dl>
 
  

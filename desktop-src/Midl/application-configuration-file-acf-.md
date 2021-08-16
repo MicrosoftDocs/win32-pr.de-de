@@ -1,39 +1,39 @@
 ---
-title: Anwendungs Konfigurationsdatei (ACF)
-description: Es gibt möglicherweise Aspekte ihrer verteilten Anwendung, die sich auf eine Komponente auswirken, aber nichts mit einem anderen tun müssen.
+title: Anwendungskonfigurationsdatei (Application Configuration File, ACF)
+description: Es kann Aspekte Ihrer verteilten Anwendung geben, die sich auf eine Komponente auswirken, aber nichts mit einer anderen zu tun haben.
 ms.assetid: 017d93fd-1701-4713-a786-752a7695b5a6
 keywords:
-- ACF-Mittell
-- Microsoft Interface Definition Language mittlere, beschriebene Anwendungs Konfigurationsdatei
-- Anwendungs Konfigurationsdatei-Mittel l
+- ACF MIDL
+- Microsoft Interface Definition Language MIDL , beschrieben, Anwendungskonfigurationsdatei
+- Anwendungskonfigurationsdatei MIDL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7f9066e5641d6b71e68ba670984765661f1b9f6c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 56158267a11125a825442b4db98224d292fdfc309f79cb1562818dee9c08aa23
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117808342"
 ---
-# <a name="application-configuration-file-acf"></a>Anwendungs Konfigurationsdatei (ACF)
+# <a name="application-configuration-file-acf"></a>Anwendungskonfigurationsdatei (Application Configuration File, ACF)
 
-Es gibt möglicherweise Aspekte ihrer verteilten Anwendung, die sich auf eine Komponente auswirken, aber nichts mit einem anderen tun müssen. Ein-Objekt kann z. b. eine große, komplexe Datenstruktur enthalten und den Inhalt dieser Datenstruktur an ein anderes-Objekt übergeben. Das genaue Layout dieser Datenstruktur ist für die empfangende Anwendung möglicherweise bedeutungslos. Die Struktur kann auch Datentypen enthalten, die vom-compilercompiler nicht erkannt werden, und es kann kein Marshalling und kein Marshalling von Code generiert werden.
+Es kann Aspekte Ihrer verteilten Anwendung geben, die sich auf eine Komponente auswirken, aber nichts mit einer anderen zu tun haben. Beispielsweise kann ein Objekt eine große, komplexe Datenstruktur enthalten und den Inhalt dieser Datenstruktur an ein anderes Objekt übergeben. Das genaue Layout dieser Datenstruktur kann für die empfangende Anwendung bedeutungslos sein. Darüber hinaus kann die -Struktur Datentypen enthalten, die der MIDL-Compiler nicht erkennt und keinen Marshalling- und Unmarshalingcode generieren kann.
 
-Client Anwendungen können die gleiche Schnittstelle verwenden, aber auf unterschiedlichen Plattformen ausgeführt werden. Sie benötigen möglicherweise jeweils einen eigenen Satz von Marshallingroutinen. Schließlich benötigen einzelne Clients möglicherweise nicht immer denselben Funktions Satz. Es ist ineffizient, Stub-Code für Funktionen zu generieren, die nie in einer bestimmten Client Anwendung implementiert werden.
+Clientanwendungen verwenden möglicherweise dieselbe Schnittstelle, werden aber auf verschiedenen Plattformen ausgeführt. sie benötigen möglicherweise jeweils einen eigenen Satz von Marshallingroutinen. Schließlich benötigen einzelne Clients möglicherweise nicht immer den gleichen Satz von Funktionen. Es ist ineffizient, Stubcode für Funktionen zu generieren, die nie in einer bestimmten Clientanwendung implementiert werden.
 
-Wenn Sie diese lokalen Aspekte Ihrer Schnittstelle in einer Anwendungs Konfigurationsdatei (ACF) definieren, können Sie die Unterschiede zwischen den Client Schnittstellen von ihrer Netzwerkdarstellung trennen, sodass der Serverdaten in einem konsistenten Format senden und empfangen und den Stub-Code kompakter und effizienter gestalten kann.
+Indem Sie diese lokalen Aspekte Ihrer Schnittstelle in einer Anwendungskonfigurationsdatei (Application Configuration File, ACF) definieren, können Sie die Unterschiede zwischen den Clientschnittstellen von ihrer Netzwerkdarstellung trennen, sodass der Server Daten in einem konsistenten Format senden und empfangen kann, und Ihren Stubcode kompakter und effizienter gestalten.
 
-Die Struktur und die Syntax einer ACF-Schnittstellen Definition sind identisch mit der IDL-Definition:
+Struktur und Syntax einer ACF-Schnittstellendefinition sind identisch mit der IDL-Definition:
 
 ``` syntax
 [ interface-attribute-list] interface interface-name {. . .}
 ```
 
-Standardmäßig muss der Name der ACF-Schnittstelle mit dem Namen in der IDL-Definition identisch sein. Wenn Sie jedoch mit der kompil-Compileroption/ [**ACF**](-acf.md) einen ACF-Dateinamen explizit angeben, müssen die Schnittstellennamen nicht identisch sein. Diese Funktion ermöglicht es, dass mehrere Schnittstellen eine einzelne ACF-Spezifikation gemeinsam verwenden.
+Standardmäßig muss der Name der ACF-Schnittstelle mit dem Namen in der IDL-Definition übereinstimmen. Wenn Sie jedoch die MIDL-Compileroption [**/acf**](-acf.md) verwenden, um explizit einen ACF-Dateinamen anzugeben, müssen die Schnittstellennamen nicht übereinstimmen. Dieses Feature ermöglicht es mehreren Schnittstellen, eine einzelne ACF-Spezifikation gemeinsam zu nutzen.
 
- 
+ 
 
- 
+ 
 
 
 

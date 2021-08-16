@@ -1,7 +1,7 @@
 ---
-description: Die dumpgraph-Funktion sendet Informationen über ein Filter Diagramm an den debugausgabespeicherort. Wird in Einzelhandels Builds ignoriert.
+description: Die DumpGraph-Funktion sendet Informationen zu einem Filterdiagramm an den Debugausgabespeicherort. Wird in Einzelhandelsbuilds ignoriert.
 ms.assetid: c78f86bb-44d0-4904-b7f8-e756bda0151d
-title: Dumpgraph-Funktion (wxdebug. h)
+title: DumpGraph-Funktion (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 55c3adf793982b7b00ab44e26e7c34e08a1ac42b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9ac09cc3381ab1b5f85f523d1c822768b3e2f87b6bcf08f1877680349072c216
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358606"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117820959"
 ---
-# <a name="dumpgraph-function"></a>Dumpgraph-Funktion
+# <a name="dumpgraph-function"></a>DumpGraph-Funktion
 
-Die- `DumpGraph` Funktion sendet Informationen über ein Filter Diagramm an den debugausgabespeicherort. Wird in Einzelhandels Builds ignoriert.
+Die `DumpGraph` Funktion sendet Informationen zu einem Filterdiagramm an den Debugausgabespeicherort. Wird in Einzelhandelsbuilds ignoriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ void DumpGraph(
 
 <dl> <dt>
 
-*PGraph* 
+*pGraph* 
 </dt> <dd>
 
-Zeiger auf die [**ifiltergraph**](/windows/desktop/api/Strmif/nn-strmif-ifiltergraph) -Schnittstelle im Filter Diagramm-Manager.
+Zeiger auf die [**IFilterGraph-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ifiltergraph) im Filtergraph-Manager.
 
 </dd> <dt>
 
-*dwlevel* 
+*dwLevel* 
 </dt> <dd>
 
-Protokolliergrad. Die Funktion generiert eine Protokoll \_ Ablaufverfolgungs-Nachricht mit dem angegebenen Protokolliergrad.
+Protokolliergrad. Die Funktion generiert eine LOG \_ TRACE-Nachricht mit dem angegebenen Protokolliergrad.
 
 </dd> </dl>
 
@@ -67,16 +67,16 @@ Diese Funktion gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Debug-Ausgabefunktionen](debug-output-functions.md)
+[Debuggen von Ausgabefunktionen](debug-output-functions.md)
 </dt> </dl>
 
  
