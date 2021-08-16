@@ -53,7 +53,7 @@ Gerätebezeichner des MCI-Geräts, das die Befehlsnachricht empfangen soll.
 <span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-MCI \_ NOTIFY, MCI \_ WAIT oder für Digitalvideo- und VCR-Geräte MCI \_ TEST. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
+MCI \_ NOTIFY, MCI \_ WAIT oder bei Digitalvideo- und VCR-Geräten MCI \_ TEST. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> <dt>
 

@@ -1,21 +1,21 @@
 ---
-description: IContextMenu ist die leistungsfähigste, aber auch die komplizierteste Schnittstelle, die implementiert werden kann.
+description: IContextMenu ist die leistungsfähigste, aber auch die komplizierteste Zu implementierende Schnittstelle.
 ms.assetid: F0C1D60E-7A5A-4609-9136-F4E535E9F6F1
 title: Implementieren der IContextMenu-Schnittstelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f251b9a64c3f401239eeb7c88286c016f399cc39
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f44ec65d95a4f6d67a9f15e10f5720be21c3b6c57fba5d0cf920bd12be54f662
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118223467"
 ---
 # <a name="how-to-implement-the-icontextmenu-interface"></a>Implementieren der IContextMenu-Schnittstelle
 
-[**IContextMenu**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) ist die leistungsfähigste, aber auch die komplizierteste Schnittstelle, die implementiert werden kann. Es wird dringend empfohlen, dass Sie ein Verb mithilfe einer der statischen Verb-Methoden implementieren. Weitere Informationen finden Sie unter [Auswählen einer statischen oder dynamischen Kontextmenü Methode](shortcut-choose-method.md). [**IContextMenu**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) verfügt über drei Methoden: [**getcommandstring**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-getcommandstring), [**InvokeCommand**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-invokecommand)und [**querycontextmenu**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu), die hier ausführlich erläutert werden.
+[**IContextMenu ist**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) die leistungsfähigste, aber auch die komplizierteste Zu implementierende Schnittstelle. Es wird dringend empfohlen, ein Verb mithilfe einer der statischen Verbmethoden zu implementieren. Weitere Informationen finden Sie unter [Auswählen einer statischen oder dynamischen Kontextmenümethode.](shortcut-choose-method.md) [**IContextMenu verfügt**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) über drei Methoden, [**GetCommandString,**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-getcommandstring) [**InvokeCommand**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-invokecommand)und [**QueryContextMenu,**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu)die hier ausführlich erläutert werden.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
@@ -26,17 +26,17 @@ ms.locfileid: "103959691"
 -   Statisches Verb
 -   Kontextmenü
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
-### <a name="icontextmenugetcommandstring-method"></a>IContextMenu:: getcommandstring-Methode
+### <a name="icontextmenugetcommandstring-method"></a>IContextMenu::GetCommandString-Methode
 
-Die [**IContextMenu:: getcommandstring**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-getcommandstring) -Methode des Handlers wird verwendet, um den kanonischen Namen eines Verbs zurückzugeben. Diese Methode ist optional. In Windows XP und früheren Versionen von Windows wird diese Methode verwendet, um den Hilfetext abzurufen, der in der Statusleiste für ein Menü Element angezeigt wird, wenn Windows-Explorer über eine Status Leiste verfügt.
+Die [**IContextMenu::GetCommandString-Methode**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-getcommandstring) des Handlers wird verwendet, um den kanonischen Namen für ein Verb zurück zu geben. Diese Methode ist optional. Wenn Windows XP und frühere Versionen von Windows Windows über eine Statusleiste verfügt, wird diese Methode verwendet, um den Hilfetext abzurufen, der in der Statusleiste für ein Menüelement angezeigt wird.
 
-Der *idcmd* -Parameter enthält den bezeichneroffset des Befehls, der beim [**Aufrufen von IContextMenu:: querycontextmenu**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu) definiert wurde. Wenn eine Hilfe Zeichenfolge angefordert wird, wird *uFlags* auf **GCS \_ helptextw** festgelegt. Kopieren Sie die Hilfe Zeichenfolge in den *pszName* -Puffer, und wandeln Sie Sie in ein **pwstr** um. Die Verb Zeichenfolge wird angefordert, indem *uFlags* auf **GCS- \_ verbw** festgelegt wird. Kopieren Sie die entsprechende Zeichenfolge wie bei der Hilfe Zeichenfolge in *pszName*. Die **\_ validatew** -Flags für **GCS \_ validatea** und GCS werden von Kontextmenü Handlern nicht verwendet.
+Der *idCmd-Parameter* enthält den Bezeichneroffset des Befehls, der beim Aufrufen [**von IContextMenu::QueryContextMenu**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu) definiert wurde. Wenn eine Hilfezeichenfolge angefordert wird, *werden uFlags* auf **GCS \_ HELPTEXTW festgelegt.** Kopieren Sie die Hilfezeichenfolge in den *Puffer pszName,* und geben Sie sie in **pwstr um.** Die Verbzeichenfolge wird durch Festlegen von *uFlags auf* **GCS \_ VERBW angefordert.** Kopieren Sie die entsprechende Zeichenfolge wie bei der Hilfezeichenfolge in *pszName.* Die **GCS \_ VALIDATEA-** und **GCS \_ VALIDATEW-Flags** werden nicht von Kontextmenühandlern verwendet.
 
-Das folgende Beispiel zeigt eine einfache Implementierung von [**getcommandstring**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-getcommandstring) , die dem im Abschnitt [IContextMenu:: querycontextmenu-Methode](shortcut-menu-using-dynamic-verbs.md) in diesem Thema angegebenen [**querycontextmenu**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu) -Beispiel entspricht. Da der Handler nur ein Menü Element hinzufügt, gibt es nur einen Satz von Zeichen folgen, die zurückgegeben werden können. Die-Methode testet, ob *idcmd* gültig ist, und gibt, wenn dies der Fall ist, die angeforderte Zeichenfolge zurück.
+Das folgende Beispiel zeigt eine einfache Implementierung von [**GetCommandString,**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-getcommandstring) die dem [**QueryContextMenu-Beispiel**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu) entspricht, das im [Abschnitt IContextMenu::QueryContextMenu-Methode](shortcut-menu-using-dynamic-verbs.md) dieses Themas angegeben ist. Da der Handler nur ein Menüelement hinzufügt, kann nur ein Satz von Zeichenfolgen zurückgegeben werden. Die -Methode testet, *ob idCmd* gültig ist, und gibt die angeforderte Zeichenfolge zurück.
 
-Die [**StringCchCopy**](/windows/win32/api/strsafe/nf-strsafe-stringcchcopya) -Funktion wird verwendet, um die angeforderte Zeichenfolge nach *pszName* zu kopieren, um sicherzustellen, dass die kopierte Zeichenfolge die Größe des durch *cchName* angegebenen Puffers nicht überschreitet. In diesem Beispiel wird die Unterstützung nur für die Unicode-Werte von *uFlags* implementiert, da nur diese seit Windows 2000 in Windows-Explorer verwendet wurden.
+Die [**StringCchCopy-Funktion**](/windows/win32/api/strsafe/nf-strsafe-stringcchcopya) wird verwendet, um die angeforderte Zeichenfolge in *pszName* zu kopieren, um sicherzustellen, dass die kopierte Zeichenfolge nicht die größe des puffers überschreitet, die von *cchName angegeben wird.* In diesem Beispiel wird die Unterstützung nur für die Unicode-Werte von *uFlags* implementiert, da seit Windows 2000 nur diese im Windows-Explorer verwendet wurden.
 
 
 ```
@@ -76,22 +76,22 @@ IFACEMETHODIMP CMenuExtension::GetCommandString(UINT idCommand,
 
 
 
-### <a name="icontextmenuinvokecommand-method"></a>IContextMenu:: InvokeCommand-Methode
+### <a name="icontextmenuinvokecommand-method"></a>IContextMenu::InvokeCommand-Methode
 
-Diese Methode wird aufgerufen, wenn ein Benutzer auf ein Menü Element klickt, um den Handler anzuweisen, den zugehörigen Befehl auszuführen. Der *pici* -Parameter verweist auf eine-Struktur, die die zum Ausführen des Befehls erforderlichen Informationen enthält.
+Diese Methode wird aufgerufen, wenn ein Benutzer auf ein Menüelement klickt, um den Handler anweise, den zugeordneten Befehl auszuführen. Der *pici-Parameter* verweist auf eine -Struktur, die die informationen enthält, die zum Ausführen des Befehls erforderlich sind.
 
-Obwohl *pici* in shlobj. h als [**cminvokecommandinfo**](/windows/desktop/api/Shobjidl_core/ns-shobjidl_core-cminvokecommandinfo) -Struktur deklariert ist, verweist es in der Praxis häufig auf eine [**cminvokecommandinfoex**](/windows/desktop/api/Shobjidl_core/ns-shobjidl_core-cminvokecommandinfoex) -Struktur. Diese Struktur ist eine erweiterte Version von **cminvokecommandinfo** und verfügt über mehrere zusätzliche Member, die es ermöglichen, Unicode-Zeichen folgen zu übergeben.
+*Obwohl pici* in Shlobj.h als [**CMINVOKECOMMANDINFO-Struktur**](/windows/desktop/api/Shobjidl_core/ns-shobjidl_core-cminvokecommandinfo) deklariert ist, verweist sie in der Praxis häufig auf eine [**CMINVOKECOMMANDINFOEX-Struktur.**](/windows/desktop/api/Shobjidl_core/ns-shobjidl_core-cminvokecommandinfoex) Diese Struktur ist eine erweiterte Version von **CMINVOKECOMMANDINFO** und verfügt über mehrere zusätzliche Member, die es ermöglichen, Unicode-Zeichenfolgen zu übergeben.
 
-Überprüfen Sie das **CBSIZE** -Member von *pici* , um zu bestimmen, welche Struktur übergeben wurde. Wenn es sich um eine [**cminvokecommandinfoex**](/windows/desktop/api/Shobjidl_core/ns-shobjidl_core-cminvokecommandinfoex) -Struktur handelt und für den **fmask** -Member das **CMIC \_ mask- \_ Unicode** -Flag festgelegt ist, wandeln Sie *pici* in **cminvokecommandinfoex** um. Dadurch kann Ihre Anwendung die Unicode-Informationen verwenden, die in den letzten fünf Membern der Struktur enthalten sind.
+Überprüfen Sie **das cbSize-Member** von *pici,* um zu bestimmen, welche Struktur übergeben wurde. Wenn es sich um eine [**CMINVOKECOMMANDINFOEX-Struktur**](/windows/desktop/api/Shobjidl_core/ns-shobjidl_core-cminvokecommandinfoex) handelt und für das **fMask-Element** das **UNICODE-Flag CMIC \_ MASK \_** festgelegt ist, cast *pici* in **CMINVOKECOMMANDINFOEX.** Dadurch kann Ihre Anwendung die Unicode-Informationen verwenden, die in den letzten fünf Membern der -Struktur enthalten sind.
 
-Der **lpverb** -oder **lpverbw** -Member der Struktur wird verwendet, um den auszuführenden Befehl zu identifizieren. Befehle werden auf eine der beiden folgenden Arten identifiziert:
+Der **lpVerb-** oder **lpVerbW-Member** der -Struktur wird verwendet, um den auszuführenden Befehl zu identifizieren. Befehle werden auf eine der beiden folgenden Arten identifiziert:
 
--   Durch die Verb Zeichenfolge des Befehls
--   Nach dem bezeichneroffset des Befehls
+-   Durch die Verbzeichenfolge des Befehls
+-   Durch den Bezeichneroffset des Befehls
 
-Um zwischen diesen beiden Fällen zu unterscheiden, überprüfen Sie das höchst wertige Wort **lpverb** für die ANSI-Groß-/Kleinschreibung oder **lpverbw** für den Unicode-Fall. Wenn das hochwertige Wort nicht NULL ist, enthält **lpverb** oder **lpverbw** eine Verb Zeichenfolge. Wenn das hochwertige Wort 0 (null) ist, befindet sich der Befehls Offset im nieder wertigen Wort **lpverb**.
+Um zwischen diesen beiden Fällen zu unterscheiden, überprüfen Sie das obere Wort **lpVerb** für den ANSI-Fall oder **lpVerbW** für den Unicode-Fall. Wenn das hohe Wort ungleich null ist, enthält **lpVerb** oder **lpVerbW** eine Verbzeichenfolge. Wenn das hohe Wort 0 (null) ist, befindet sich der Befehlsoffset im niedrig geordneten Wort **lpVerb.**
 
-Das folgende Beispiel zeigt eine einfache Implementierung von [**IContextMenu:: InvokeCommand**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-invokecommand) , die den Beispielen " [**IContextMenu:: querycontextmenu**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu) " und " [**IContextMenu:: getcommandstring**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-getcommandstring) " entspricht, die vor und nach diesem Abschnitt angegeben werden. Die-Methode bestimmt zunächst, welche Struktur an Sie übermittelt wird. Anschließend bestimmt er, ob der Befehl durch seinen Offset oder sein Verb gekennzeichnet wird. Wenn **lpverb** oder **lpverbw** ein gültiges Verb oder einen gültigen Offset enthält, zeigt die Methode ein Meldungs Feld an.
+Das folgende Beispiel zeigt eine einfache Implementierung von [**IContextMenu::InvokeCommand,**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-invokecommand) die den Beispielen [**IContextMenu::QueryContextMenu**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu) und [**IContextMenu::GetCommandString**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-getcommandstring) entspricht, die vor und nach diesem Abschnitt angegeben wurden. Die -Methode bestimmt zuerst, welche Struktur übergeben wird. Anschließend wird bestimmt, ob der Befehl durch seinen Offset oder sein Verb identifiziert wird. Wenn **lpVerb oder** **lpVerbW ein** gültiges Verb oder offset enthält, zeigt die Methode ein Meldungsfeld an.
 
 
 ```
@@ -144,33 +144,33 @@ STDMETHODIMP CShellExtension::InvokeCommand(LPCMINVOKECOMMANDINFO lpcmi)
 
 
 
-### <a name="icontextmenuquerycontextmenu-method"></a>IContextMenu:: querycontextmenu-Methode
+### <a name="icontextmenuquerycontextmenu-method"></a>IContextMenu::QueryContextMenu-Methode
 
-Die Shell ruft [**IContextMenu:: querycontextmenu**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu) auf, damit der Kontextmenü Handler dem Menü die Menü Elemente hinzufügen kann. Sie übergibt den **HMENU** -Handle im *HMENU* -Parameter. Der *indexmenu* -Parameter wird auf den Index festgelegt, der für das erste hinzu zufügende Menü Element verwendet werden soll.
+Die Shell ruft [**IContextMenu::QueryContextMenu**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu) auf, um dem Kontextmenühandler das Hinzufügen seiner Menüelemente zum Menü zu ermöglichen. Er übergibt das **HMENU-Handle** im *hmenu-Parameter.* Der *indexMenu-Parameter* wird auf den Index festgelegt, der für das erste Menüelement verwendet werden soll, das hinzugefügt werden soll.
 
-Alle vom Handler hinzugefügten Menü Elemente müssen über Bezeichner verfügen, die zwischen den Werten in den Parametern *idcmdfirst* und *idcmdlast* liegen. In der Regel wird der erste Befehls Bezeichner auf *idcmdfirst* festgelegt, der für jeden zusätzlichen Befehl um eins (1) erhöht wird. Mit dieser Vorgehensweise können Sie die Überschreitung von *idcmdlast* vermeiden und die Anzahl der verfügbaren Bezeichner maximieren, falls die Shell mehr als einen Handler aufruft.
+Alle Vom Handler hinzugefügten Menüelemente müssen über Bezeichner verfügen, die zwischen den Werten in den Parametern *idCmdFirst* und *idCmdLast liegen.* In der Regel wird der erste Befehlsbezeichner auf *idCmdFirst* festgelegt, der für jeden zusätzlichen Befehl um eins (1) erhöht wird. Diese Vorgehensweise hilft Ihnen, eine Überschreitung *von idCmdLast* zu vermeiden, und maximiert die Anzahl der verfügbaren Bezeichner, falls die Shell mehr als einen Handler aufruft.
 
-Der *Befehls Offset* eines Element Bezeichners ist der Unterschied zwischen dem Bezeichner und dem Wert in *idcmdfirst*. Speichern Sie den Offset der einzelnen Elemente, die der Handler dem Kontextmenü hinzufügt, da die Shell den Offset verwenden kann, um das Element zu identifizieren, wenn es anschließend [**IContextMenu:: getcommandstring**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-getcommandstring) oder [**IContextMenu:: InvokeCommand**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-invokecommand)aufruft.
+Der Befehlsoffset eines *Elementbezeichners* ist der Unterschied zwischen dem Bezeichner und dem Wert in *idCmdFirst.* Store offset jedes Elements, das der Handler dem Kontextmenü hinzufügt, da die Shell möglicherweise den Offset zum Identifizieren des Elements verwendet, wenn sie anschließend [**IContextMenu::GetCommandString**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-getcommandstring) oder [**IContextMenu::InvokeCommand aufruft.**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-invokecommand)
 
-Sie sollten jedem Befehl, den Sie hinzufügen, auch ein [Verb](launch.md) zuweisen. Ein Verb ist eine Zeichenfolge, die anstelle des Offsets verwendet werden kann, um den Befehl zu identifizieren, wenn [**InvokeCommand**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-invokecommand) aufgerufen wird. Sie wird auch von Funktionen wie [**ShellExecuteEx**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa) zum Ausführen von Kontextmenü Befehlen verwendet.
+Außerdem sollten Sie jedem befehl, [den](launch.md) Sie hinzufügen, ein Verb zuweisen. Ein Verb ist eine Zeichenfolge, die anstelle des Offsets verwendet werden kann, um den Befehl zu identifizieren, wenn [**InvokeCommand**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-invokecommand) aufgerufen wird. Sie wird auch von Funktionen wie [**ShellExecuteEx**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa) verwendet, um Kontextmenübefehle auszuführen.
 
-Es gibt drei Flags, die über den *uFlags* -Parameter übergeben werden können, die für Kontextmenü Handler relevant sind. Diese werden in der folgenden Tabelle beschrieben.
+Es gibt drei Flags, die über den *uFlags-Parameter* übergeben werden können, die für Kontextmenühandler relevant sind. Diese werden in der folgenden Tabelle beschrieben.
 
 
 
 | Flag             | Beschreibung                                                                                                                                                                                                              |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CMF \_ DefaultOnly | Der Benutzer hat den Standardbefehl ausgewählt, in der Regel durch Doppelklicken auf das Objekt. [**IContextMenu:: querycontextmenu**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu) sollte die Steuerung an die Shell zurückgeben, ohne das Menü zu ändern. |
-| CMF- \_ NODEFAULT   | Kein Element im Menü sollte das Standardelement sein. Die-Methode sollte Ihre Befehle dem Menü hinzufügen.                                                                                                                          |
-| CMF \_ Normal      | Das Kontextmenü wird normal angezeigt. Die-Methode sollte Ihre Befehle dem Menü hinzufügen.                                                                                                                            |
+| CMF \_ DEFAULTONLY | Der Benutzer hat den Standardbefehl ausgewählt, in der Regel durch Doppelklicken auf das Objekt. [**IContextMenu::QueryContextMenu**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu) sollte die Steuerung an die Shell zurückgeben, ohne das Menü zu ändern. |
+| CMF \_ NODEFAULT   | Kein Element im Menü sollte das Standardelement sein. Die -Methode sollte ihre Befehle zum Menü hinzufügen.                                                                                                                          |
+| CMF \_ NORMAL      | Das Kontextmenü wird normal angezeigt. Die -Methode sollte ihre Befehle zum Menü hinzufügen.                                                                                                                            |
 
 
 
  
 
-Verwenden Sie entweder [**InsertMenu**](/windows/win32/api/winuser/nf-winuser-insertmenua) oder [**InsertMenuItem**](/windows/win32/api/winuser/nf-winuser-insertmenuitema) , um der Liste Menü Elemente hinzuzufügen. Geben Sie anschließend einen **HRESULT** -Wert mit dem Schweregrad \_ Success an. Legen Sie den Codewert auf den Offset des größten Befehls Bezeichners fest, der zugewiesen wurde, plus eins (1). Nehmen Sie beispielsweise an, dass *idcmdfirst* auf 5 festgelegt ist und Sie dem Menü drei Elemente mit den Befehls bezeichlern 5, 7 und 8 hinzufügen. Der Rückgabewert muss \_ HRESULT lauten (Schweregrad \_ Success, 0, 8 + 1).
+Verwenden Sie [**entweder InsertMenu**](/windows/win32/api/winuser/nf-winuser-insertmenua) oder [**InsertMenuItem,**](/windows/win32/api/winuser/nf-winuser-insertmenuitema) um der Liste Menüelemente hinzuzufügen. Geben Sie dann einen **HRESULT-Wert** zurück, bei dem der Schweregrad auf SCHWEREGRAD ERFOLGREICH \_ festgelegt ist. Legen Sie den Codewert auf den Offset des größten zugewiesenen Befehlsbezeichners plus einen (1) fest. Angenommen, *idCmdFirst* ist auf 5 festgelegt, und Sie fügen dem Menü drei Elemente mit befehlsbezeichnern 5, 7 und 8 hinzu. Der Rückgabewert sollte MAKE \_ HRESULT(SEVERITY \_ SUCCESS, 0, 8 + 1) sein.
 
-Das folgende Beispiel zeigt eine einfache Implementierung von [**querycontextmenu**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu) , die einen einzelnen Befehl einfügt. Der bezeichneroffset für den Befehl ist die IDM- \_ Anzeige, die auf 0 (null) festgelegt ist. Die Variablen **m \_ pszverb** und **m \_ pwszverb** sind private Variablen, die zum Speichern der zugeordneten sprachunabhängigen Verb Zeichenfolge im ANSI-und Unicode-Format verwendet werden.
+Das folgende Beispiel zeigt eine einfache Implementierung von [**QueryContextMenu,**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu) die einen einzelnen Befehl einfüge. Der Bezeichneroffset für den Befehl ist IDM \_ DISPLAY, der auf 0 (null) festgelegt ist. Die **Variablen m \_ pszVerb** und **m \_ pwszVerb** sind private Variablen, die zum Speichern der zugeordneten sprachunabhängigen Verbzeichenfolge sowohl im ANSI- als auch im Unicode-Format verwendet werden.
 
 
 ```
@@ -205,9 +205,9 @@ STDMETHODIMP CMenuExtension::QueryContextMenu(HMENU hMenu,
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zu anderen Verb Implementierungsaufgaben finden Sie unter Erstellen von Kontext [Menü Handlern](context-menu-handlers.md).
+Weitere Aufgaben zur Verbimplementierung finden Sie unter [Erstellen von Kontextmenühandlern.](context-menu-handlers.md)
 
  
 

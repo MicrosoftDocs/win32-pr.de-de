@@ -1,5 +1,5 @@
 ---
-description: Verwenden der Zertifikatregistrierungs-API zum Erweitern der Funktionen Active Directory-Zertifikatdienste.
+description: Erfahren Sie, wie Sie die Zertifikatregistrierungs-API verwenden, um die Funktionen von Active Directory-Zertifikatdienste zu erweitern.
 ms.assetid: a38c6974-609b-4a60-98da-ad8e0a8fd58f
 title: Verwenden der Zertifikatregistrierungs-API
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "117774255"
 ---
 # <a name="using-the-certificate-enrollment-api"></a>Verwenden der Zertifikatregistrierungs-API
 
-In den folgenden Abschnitten wird erläutert, wie Die Zertifikatregistrierungs-API verwendet wird, um die Funktionen von Active Directory-Zertifikatdienste.
+In den folgenden Abschnitten wird erläutert, wie Sie die Zertifikatregistrierungs-API verwenden, um die Funktionen von Active Directory-Zertifikatdienste zu erweitern.
 
 -   [Zuordnen Xenroll.dll zu CertEnroll.dll](mapping-xenroll-dll-to-certenroll-dll.md)
 -   [Verwenden der enthaltenen Beispiele](using-the-included-samples.md)

@@ -1,5 +1,5 @@
 ---
-description: 'InkOverlay.CursorOutOfRange-Ereignis: Tritt ein, wenn der Cursor den physischen Erkennungsbereich (Näherung) des Tabletkontexts verlässt.'
+description: 'InkOverlay.CursorOutOfRange-Ereignis: Tritt auf, wenn der Cursor den physischen Erkennungsbereich (Näherung) des Tablet-Kontexts verlässt.'
 ms.assetid: c696b2a9-dc47-4b73-a556-9bb222f5bf59
 title: InkOverlay.CursorOutOfRange-Ereignis (Msinkaut.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118219601"
 ---
 # <a name="inkoverlaycursoroutofrange-event"></a>InkOverlay.CursorOutOfRange-Ereignis
 
-Tritt ein, wenn der Cursor den physischen Erkennungsbereich (Nähe) des Tabletkontexts verlässt.
+Tritt ein, wenn der Cursor den physischen Erkennungsbereich (Näherung) des Tablet-Kontexts verlässt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,7 +33,7 @@ void CursorOutOfRange(
 *Cursor* \[ In\]
 </dt> <dd>
 
-Das [**IInkCursor-Schnittstellenobjekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das [**CursorOutOfRange-Ereignis**](inkcollector-cursoroutofrange.md) generiert hat.
+Das [**IInkCursor-Schnittstellenobjekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das [**CursorOutOfRange-Ereignis generiert**](inkcollector-cursoroutofrange.md) hat.
 
 </dd> </dl>
 
@@ -43,9 +43,9 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in den \_ \_ Dispatch-Only-Schnittstellen IInkCollectorEvents, IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ ICECursorOutOfRange definiert.
+Diese Ereignismethode wird in den \_ Dispatch-Schnittstellen IInkCollectorEvents, \_ IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ ICECursorOutOfRange definiert.
 
-Das [**CursorOutOfRange-Ereignis**](inkcollector-cursoroutofrange.md) wird auch dann ausgelöst, wenn es sich im Auswahl- oder Löschmodus befindet, nicht nur im Ink-Modus. Dies erfordert, dass Sie den Bearbeitungsmodus überwachen (den Sie festlegen müssen) und den Modus kennen, bevor Sie das Ereignis interpretieren. Der Vorteil dieser Anforderung ist eine größere Innovationsfähigkeit auf der Plattform durch ein höheres Bewusstsein für Plattformereignisse.
+Das [**CursorOutOfRange-Ereignis**](inkcollector-cursoroutofrange.md) wird auch dann ausgelöst, wenn es sich im Auswahl- oder Löschmodus befindet, nicht nur im Ink-Modus. Dies erfordert, dass Sie den Bearbeitungsmodus überwachen (den Sie festlegen müssen) und den Modus kennen, bevor Sie das Ereignis interpretieren. Der Vorteil dieser Anforderung ist eine größere Innovationsfähigkeit auf der Plattform durch ein größeres Bewusstsein für Plattformereignisse.
 
 ## <a name="requirements"></a>Anforderungen
 

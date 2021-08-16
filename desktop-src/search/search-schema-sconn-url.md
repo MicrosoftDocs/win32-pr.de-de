@@ -1,7 +1,7 @@
 ---
 description: Das <url> -Element gibt eine URL für den Speicherort für diesen Suchconnector an.
 ms.assetid: fdc9e138-2e98-4f01-ab7b-0c3dfad5a4dd
-title: simpleLocation url-Element (Connectorschema suchen)
+title: simpleLocation url-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: fce95943017f4905414f65b75086d4babdf3750505fece0b73255e0e63623e9b
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118226325"
 ---
-# <a name="simplelocation-url-element-search-connector-schema"></a>simpleLocation url-Element (Connectorschema suchen)
+# <a name="simplelocation-url-element-search-connector-schema"></a>simpleLocation url-Element (Search Connector Schema)
 
-Das <url> -Element gibt eine URL für den Speicherort für diesen Suchconnector an. Bei diesem Wert kann es sich um eine reguläre file:// URL handeln, wie im RFC 1738 definiert ( https://www.ietf.org/rfc/rfc1738.txt) Dokument oder eine URL, die das Protokoll knownfolders: verwendet. Dieses Element weist keine untergeordneten Elemente und keine Attribute auf.
+Das <url> -Element gibt eine URL für den Speicherort für diesen Suchconnector an. Dieser Wert kann eine reguläre file://-URL sein, wie im RFC 1738 (-Dokument oder einer URL, die das Protokoll https://www.ietf.org/rfc/rfc1738.txt) knownfolders: verwendet) definiert ist. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,7 +53,7 @@ Das <url> -Element gibt eine URL für den Speicherort für diesen Suchconnector 
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Liste bekannter Ordner-GUIDs finden Sie unter [KNOWNFOLDERID.](/windows/desktop/shell/knownfolderid) Verwenden Sie das folgende Format für den Wert dieses Elements, wenn Sie das protokoll knownfolder: verwenden.
+Eine Liste bekannter Ordner-GUIDs finden Sie unter [KNOWNFOLDERID.](/windows/desktop/shell/knownfolderid) Verwenden Sie das folgende Format für den Wert dieses Elements, wenn Sie den knownfolder verwenden: protocol.
 
 
 ```
@@ -71,7 +71,7 @@ Die folgende Tabelle zeigt die Windows 7 bekannten Ordner-GUIDs.
 | FOLDERID \_ AdminTools             | {724EF170-A42D-4FEF-9F-26-B6-0E-84-6F-BA-4F} |
 | FOLDERID \_ AppUpdates             | {a305ce99-f527-492b-8b-1a-7e-76-fa-98-d6-e4} |
 | FOLDERID \_ AddNewPrograms         | {de61d971-5ebc-4f02-a3-a9-6c-82-89-5e-5c-04} |
-| FOLDERID \_ CDAftering              | {9E52AB10-F80D-49DF-AC-B8-43-30-F5-68-78-55} |
+| FOLDERID \_ CDFrau              | {9E52AB10-F80D-49DF-AC-B8-43-30-F5-68-78-55} |
 | FOLDERID \_ ChangeRemovePrograms   | {df7266ac-9274-4867-8d-55-3b-d6-61-de-87-2d} |
 | FOLDERID \_ CommonAdminTools       | {D0384E7D-BAC3-4797-8F-14-CB-A2-29-B3-92-B5} |
 | FOLDERID \_ CommonOEMLinks         | {C1BAE2D0-10DF-4334-BE-DD-7A-A2-0B-22-7A-9D} |
@@ -82,17 +82,17 @@ Die folgende Tabelle zeigt die Windows 7 bekannten Ordner-GUIDs.
 | FOLDERID \_ ComputerFolder         | {0AC0837C-BBF8-452A-85-0D-79-D0-8E-66-7C-A7} |
 | FOLDERID \_ ConflictFolder         | {4bfefb45-347d-4006-a5-be-ac-0c-b0-56-71-92} |
 | FOLDERID \_ ConnectionsFolder      | {6F0CD92B-2E97-45D1-88-FF-B0-D1-86-B8-DE-DD} |
-| \_FOLDERID-Kontakte               | {56784854-c6cb-462b-81-69-88-e3-50-ac-b8-82} |
+| FOLDERID \_ Contacts               | {56784854-c6cb-462b-81-69-88-e3-50-ac-b8-82} |
 | FOLDERID \_ ControlPanelFolder     | {82A74AEB-AEB4-465C-A0-14-D0-97-EE-34-6D-63} |
 | \_FOLDERID-Cookies                | {2B0F765D-C0E9-4171-90-8E-08-A6-11-B8-4F-F6} |
 | FOLDERID \_ Desktop                | {B4BFCC3A-DB2C-424C-B0-29-7F-E9-9A-87-C6-41} |
 | FOLDERID \_ DeviceMetadataStore    | {5ce4a5e9-e4eb-479d-b8-9f-13-0c-02-88-61-55} |
 | \_FOLDERID-Dokumente              | {FDD39AD0-238F-46AF-AD-B4-6C-85-48-03-69-C7} |
 | FOLDERID \_ DocumentsLibrary       | {7b0db17d-9cd2-4a93-97-33-46-cc-89-02-2e-7c} |
-| \_FOLDERID-Downloads              | {374de290-123f-4565-91-64-39-c4-92-5e-46-7b} |
+| FOLDERID \_ Downloads              | {374de290-123f-4565-91-64-39-c4-92-5e-46-7b} |
 | \_FOLDERID-Favoriten              | {1777F761-68AD-4D8A-87-BD-30-B7-59-FA-33-DD} |
 | \_FOLDERID-Schriftarten                  | {FD228CB7-AE11-4AE3-86-4C-16-F3-91-0A-B8-FE} |
-| \_FOLDERID-Spiele                  | {cac52c1a-b53d-4edc-92-d7-6b-2e-8a-c1-94-34} |
+| FOLDERID \_ Games                  | {mail52c1a-b53d-4edc-92-d7-6b-2e-8a-c1-94-34} |
 | FOLDERID \_ GameTasks              | {54fae61-4dd8-4787-80-b6-9-2-20-c4-b7-0}     |
 | \_FOLDERID-Verlauf                | {D9DC8A3B-B784-432E-A7-81-5A-11-30-A7-59-63} |
 | FOLDERID \_ HomeGroup              | {52528a6b-b9e3-4add-b6-d-58-8c-2d-ba-84-2d}  |
@@ -104,12 +104,12 @@ Die folgende Tabelle zeigt die Windows 7 bekannten Ordner-GUIDs.
 | FOLDERID \_ LocalAppData           | {F1B32785-6FBA-4FCF-9D-55-7B-8E-7F-15-70-91} |
 | FOLDERID \_ LocalAppDataLow        | {A520A1A4-1780-4FF6-BD-18-16-73-43-C5-AF-16} |
 | FOLDERID \_ LocalizedResourcesDir  | {2A00375E-224C-49DE-B8-D1-44-0D-F7-EF-3D-DC} |
-| FOLDERID \_ Musik                  | {4BD8D571-6D19-48D3-BE-97-42-22-20-08-0E-43} |
+| \_FOLDERID-Musik                  | {4BD8D571-6D19-48D3-BE-97-42-22-20-08-0E-43} |
 | FOLDERID \_ MusicLibrary           | {2112ab0a-c86a-4ffe-a3-68-d-e9-6e-47-1-2e}   |
 | FOLDERID \_ NetHood                | {C5ABBF53-E17F-4121-89-00-86-62-6F-C2-C9-73} |
 | FOLDERID \_ NetworkFolder          | {D20BEEC4-5CA8-4905-AE-3B-BF-25-1E-A0-9B-53} |
 | FOLDERID \_ OriginalImages         | {2C36C0AA-5812-4b87-bf-d0-4c-d0-df-b1-9b-39} |
-| FOLDERID \_ PhotoKopies            | {69D2CF90-FC33-4FB7-9A-0C-EB-B0-F0-FC-B4-3C} |
+| FOLDERID \_ PhotoStopps            | {69D2CF90-FC33-4FB7-9A-0C-EB-B0-F0-FC-B4-3C} |
 | FOLDERID \_ Pictures               | {33E28130-4E1E-4676-83-5A-98-39-5C-3B-C3-BB} |
 | FOLDERID \_ PicturesLibrary        | {a990ae9f-a03b-4e80-94-bc-99-12-d7-50-41-4}  |
 | \_FOLDERID-Wiedergabelisten              | {DE92C1C7-837F-4F69-A3-BB-86-E6-31-20-4A-23} |
@@ -129,21 +129,21 @@ Die folgende Tabelle zeigt die Windows 7 bekannten Ordner-GUIDs.
 | FOLDERID \_ PublicDocuments        | {ED4824AF-DCE4-45A8-81-E2-FC-79-65-08-36-34} |
 | FOLDERID \_ PublicDownloads        | {3d644c9b-1fb8-4f30-9b-45-f6-70-23-5f-79-c0} |
 | FOLDERID \_ PublicGameTasks        | {debf2536-e1a8-4c59-b6-a2-41-45-86-47-6a-ea} |
-| FOLDERID \_ PublicAfter            | {3214FAB5-9757-4298-BB-61-92-A9-DE-AA-44-FF} |
+| FOLDERID \_ Public Soll            | {3214FAB5-9757-4298-BB-61-92-A9-DE-AA-44-FF} |
 | FOLDERID \_ PublicPictures         | {B6EBFB86-6907-413C-9A-F7-4F-C2-AB-F0-7C-C5} |
-| FOLDERID \_ PublicRafteres        | {E555AB60-153B-4D17-9F-04-A5-FE-99-FC-15-EC} |
+| FOLDERID \_ PublicRidoes        | {E555AB60-153B-4D17-9F-04-A5-FE-99-FC-15-EC} |
 | FOLDERID \_ PublicVideos           | {2400183A-6185-49FB-A2-D8-4A-39-2A-60-2B-A3} |
 | FOLDERID \_ QuickLaunch            | {52a4f021-7b75-48a9-9f-6b-4b-87-a2-10-bc-8f} |
 | FOLDERID \_ Recent                 | {AE50C081-EBD2-438A-86-55-8A-09-2E-34-98-7A} |
 | FOLDERID \_ RecordedTVLibrary      | {1a6fdba2-f42d-4358-a7-98-b7-4d-74-59-26-c5} |
 | FOLDERID \_ RecycleBinFolder       | {B7534046-3ECB-4C18-BE-4E-64-CD-4C-B7-D6-AC} |
 | FOLDERID \_ ResourceDir            | {8AD10C31-2ADB-4296-A8-F7-E4-70-12-32-C9-72} |
-| FOLDERID \_ Ringtones              | {C870044B-F49E-4126-A9-C3-B5-2A-1F-F4-11-E8} |
+| \_FOLDERID-Ringtone              | {C870044B-F49E-4126-A9-C3-B5-2A-1F-F4-11-E8} |
 | FOLDERID \_ RoamingAppData         | {3EB685DB-65F9-4CF6-A0-3A-E3-EF-65-72-9F-3D} |
 | FOLDERID \_ SamplePlaylists        | {15CA69B3-30EE-49C1-AC-E1-6B-5E-C3-72-AF-B5} |
-| FOLDERID \_ SampleSpeicher            | {B250C668-F57D-4EE1-A6-3C-29-0E-E7-D1-AA-1F} |
+| FOLDERID \_ Sample Aus            | {B250C668-F57D-4EE1-A6-3C-29-0E-E7-D1-AA-1F} |
 | FOLDERID \_ SamplePictures         | {C4900540-2379-4C75-84-4B-64-E6-FA-F8-71-6B} |
-| FOLDERID \_ SampleVideos           | {859EAD94-2E85-48AD-A7-1A-09-69-CB-56-A6-CD} |
+| \_FOLDERID-BeispielVideos           | {859EAD94-2E85-48AD-A7-1A-09-69-CB-56-A6-CD} |
 | FOLDERID \_ SavedGames             | {4c5c32ff-bb9d-43b0-b5-b4-2d-72-e5-4e-aa-a4} |
 | FOLDERID \_ SavedSearches          | {7d1d3a04-debb-4115-95-cf-2f-29-da-29-20-da} |
 | FOLDERID \_ SEARCH \_ CSC            | {ee32e446-31ca-4aba-81-4f-a5-eb-d2-fd-6d-5e} |

@@ -107,7 +107,7 @@ Definiert die Metadatentypen, die Sie im Metadatenabschnitt des Manifests defini
 
 | Element                                                                       | type                                                                       | BESCHREIBUNG                                                                                                                                                      |
 |-------------------------------------------------------------------------------|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Kanäle**](eventmanifestschema-channels-metadatatype-element.md)         | [**ChannelListType**](eventmanifestschema-channellisttype-complextype.md) | Definiert eine Liste von Kanälen, in denen Anbieter Ereignisse protokollieren können. Ein Anbieter kann dann einen oder mehrere Kanäle in sein Manifest importieren.<br/>               |
+| [**Kanäle**](eventmanifestschema-channels-metadatatype-element.md)         | [**ChannelListType**](eventmanifestschema-channellisttype-complextype.md) | Definiert eine Liste von Kanälen, an die Anbieter Ereignisse protokollieren können. Ein Anbieter kann dann einen oder mehrere Kanäle in sein Manifest importieren.<br/>               |
 | [**Schlüsselwörter**](eventmanifestschema-keywords-metadatatype-element.md)         | [**KeywordListType**](eventmanifestschema-keywordlisttype-complextype.md) | Definiert eine Liste von Schlüsselwörtern, die die Kategorie der Ereignisse bestimmen, die der Anbieter schreibt.<br/>                                                            |
 | [**Ebenen**](eventmanifestschema-levels-metadatatype-element.md)             | [**LevelListType**](eventmanifestschema-levellisttype-complextype.md)     | Definiert eine Liste von Ebenen, die den Schweregrad eines Ereignisses angeben.<br/>                                                                                       |
 | **Nachricht**                                                                   |                                                                            | Definiert eine Meldungszeichenfolge.<br/>                                                                                                                             |
@@ -135,7 +135,7 @@ Definiert die Metadatentypen, die Sie im Metadatenabschnitt des Manifests defini
 
 ## <a name="remarks"></a>Hinweise
 
-Obwohl Sie ein Manifest erstellen können, das einen Metadatenabschnitt enthält, verwendet der Dienst es nicht. Die einzigen Metadaten, die der Dienst erkennt, sind die Metadaten, die in der Winmeta.xml sind.
+Obwohl Sie ein Manifest erstellen können, das einen Metadatenabschnitt enthält, verwendet der Dienst es nicht. Die einzigen Metadaten, die der Dienst erkennt, sind die Metadaten, die in der Winmeta.xml gefunden werden.
 
 ## <a name="requirements"></a>Anforderungen
 

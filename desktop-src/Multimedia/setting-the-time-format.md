@@ -15,28 +15,28 @@ ms.locfileid: "118370888"
 ---
 # <a name="setting-the-time-format"></a>Festlegen des Zeitformats
 
-Verwenden Sie [**die MCI SET-Befehlsmeldung \_**](mci-set.md) zusammen mit der [**MCI SET \_ \_ PARMS-Struktur,**](mci-set-parms.md) um das Zeitformat für ein geöffnetes Gerät fest zu legen. Legen Sie **das dwTimeFormat-Member** auf eine der folgenden Konstanten fest.
+Verwenden Sie die [**MCI \_ SET-Befehlsmeldung**](mci-set.md) zusammen mit der [**MCI SET \_ \_ PARMS-Struktur,**](mci-set-parms.md) um das Zeitformat für ein geöffnetes Gerät festzulegen. Legen Sie den **dwTimeFormat-Member** auf eine der folgenden Konstanten fest.
 
 
 
 | Konstante                   | Zeitformat                                          |
 |----------------------------|------------------------------------------------------|
-| BYTES IM \_ \_ MCI-FORMAT         | Bytes (in modulierten \[ PCM-Formatdateien im \] Pulse-Code) |
-| \_MCI-FORMAT \_ IN MILLISEKUNDEN  | Millisekunden                                         |
-| MSF IM \_ \_ MCI-FORMAT           | Minute/Sekunde/Frame                                  |
+| \_MCI-FORMAT \_ BYTE         | Bytes (in modulierten \[ PCM-Formatdateien in Pulse \] Code) |
+| \_MCI-FORMAT \_ MILLISEKUNDEN  | Millisekunden                                         |
+| MCI \_ FORMAT \_ MSF           | Minute/Sekunde/Frame                                  |
 | \_ \_ MCI-FORMATBEISPIELE       | Beispiele                                              |
-| \_MCI-FORMAT \_ SMPTE \_ 24     | SMPTE, 24 Frame                                      |
-| \_MCI-FORMAT \_ SMPTE \_ 25     | SMPTE, 25 Frame                                      |
-| \_MCI-FORMAT \_ SMPTE \_ 30     | SMPTE, 30 Frame                                      |
-| \_MCI-FORMAT \_ SMPTE \_ 30DROP | SMPTE, 30 Frame drop                                 |
-| MCI \_ FORMAT \_ TMSF          | Track/Minute/Second/frame                            |
-| MCI \_ SEQ \_ FORMAT \_ SONGPTR  | SONG-Titelzeiger                                    |
+| MCI \_ FORMAT \_ SMPTE \_ 24     | SMPTE, 24 Frame                                      |
+| MCI \_ FORMAT \_ SMPTE \_ 25     | SMPTE, 25 Frame                                      |
+| MCI \_ FORMAT \_ SMPTE \_ 30     | SMPTE, 30 Frame                                      |
+| MCI \_ FORMAT \_ SMPTE \_ 30DROP | SMPTE, 30 Frame drop                                 |
+| MCI \_ FORMAT \_ TMSF          | Track/minute/second/frame                            |
+| MCI \_ SEQ \_ FORMAT \_ SONGPTR  | CURSOR-Titelzeiger                                    |
 
 
 
  
 
-Im folgenden Beispiel wird das Zeitformat auf dem Gerät, das von der Variablen wDeviceID angegeben wird, mithilfe der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) auf Millisekunden festgelegt.
+Im folgenden Beispiel wird das Zeitformat mithilfe der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) auf dem Von der wDeviceID-Variablen angegebenen Gerät auf Millisekunden festgelegt.
 
 
 ```C++

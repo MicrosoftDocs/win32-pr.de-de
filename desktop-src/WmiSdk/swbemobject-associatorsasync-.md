@@ -1,8 +1,8 @@
 ---
-description: Mit der associatorsasync- \_ Methode von "errbemubject" werden Objekte (Klassen oder Instanzen) abgerufen, die dem aktuellen Objekt zugeordnet sind. Diese Objekte werden als Endpunkte bezeichnet. Diese Methode führt die gleiche Funktion aus, die die assoziatoren der WQL-Abfrage ausführen.
+description: Die AssociatorsAsync-Methode von SWbemObject erhält Objekte (Klassen oder Instanzen), die \_ dem aktuellen Objekt zugeordnet sind. Diese Objekte werden als Endpunkte bezeichnet. Diese Methode führt dieselbe Funktion aus wie die ASSOCIATORS OF WQL-Abfrage.
 ms.assetid: c71e11cd-39a5-40d8-b279-f5ee9ff3ae04
 ms.tgt_platform: multiple
-title: SWbemObject.AssociatorsAsync_-Methode (wbemdisp. h)
+title: SWbemObject.AssociatorsAsync_ -Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: fe7a592327b6952308e44ac054fb94e21aa6d6b9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2b0a8cb6a3bf5099821e50e85699b1327462ee12ef6af10e3ebc3cc9fe0bf7f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347892"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118314108"
 ---
-# <a name="swbemobjectassociatorsasync_-method"></a>Errbemubject. associatorsasync- \_ Methode
+# <a name="swbemobjectassociatorsasync_-method"></a>SWbemObject.AssociatorsAsync-Methode \_
 
-Mit der **associatorsasync \_** -Methode von " [**errbemubject**](swbemobject.md) " werden Objekte (Klassen oder Instanzen) abgerufen, die dem aktuellen Objekt zugeordnet sind. Diese Objekte werden als Endpunkte bezeichnet. Diese Methode führt die gleiche Funktion aus, die die assoziatoren der WQL-Abfrage ausführen.
+Die **AssociatorsAsync-Methode \_** von [**SWbemObject**](swbemobject.md) erhält Objekte (Klassen oder Instanzen), die dem aktuellen Objekt zugeordnet sind. Diese Objekte werden als Endpunkte bezeichnet. Diese Methode führt dieselbe Funktion aus wie die ASSOCIATORS OF WQL-Abfrage.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,168 +55,168 @@ SWbemObject.AssociatorsAsync_( _
 
 <dl> <dt>
 
-*objwbemsink* \[ in\]
+*objWbemSink* \[ In\]
 </dt> <dd>
 
-Erforderlich. Objekt Senke, die die Objekte asynchron als Rückruf empfängt.
+Erforderlich. Objektsenke, die die Objekte asynchron als Rückruf empfängt.
 
 </dd> <dt>
 
-*strassocclass* \[ in, optional\]
+*strAssocClass* \[ in, optional\]
 </dt> <dd>
 
-Eine Zeichenfolge, die eine Association-Klasse enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Endpunkte mit der Quelle über die angegebene Zuordnungs Klasse oder eine von dieser Zuordnungs Klasse abgeleitete Klasse verknüpft werden müssen.
+Eine Zeichenfolge, die eine Zuordnungsklasse enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Endpunkte der Quelle über die angegebene Zuordnungsklasse oder eine von dieser Zuordnungsklasse abgeleitete Klasse zugeordnet werden müssen.
 
 </dd> <dt>
 
-" *strautclass* \[ " in, optional\]
+*strResultClass* \[ in, optional\]
 </dt> <dd>
 
-Eine Zeichenfolge, die einen Klassennamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Endpunkte der in diesem Parameter angegebenen Klasse angehören oder von dieser abgeleitet werden müssen.
+Eine Zeichenfolge, die einen Klassennamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Endpunkte zu der in diesem Parameter angegebenen Klasse gehören oder von dieser abgeleitet werden müssen.
 
 </dd> <dt>
 
-" *stringetrole* \[ " in, optional\]
+*strResultRole* \[ in, optional\]
 </dt> <dd>
 
-Eine Zeichenfolge, die einen Eigenschaftsnamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Endpunkte eine bestimmte Rolle in ihrer Zuordnung zum Quell Objekt spielen müssen. Die Rolle wird durch den Namen einer angegebenen Eigenschaft (die eine Verweis Eigenschaft sein muss) einer Zuordnung definiert.
+Eine Zeichenfolge, die einen Eigenschaftennamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Endpunkte in ihrer Zuordnung zum Quellobjekt eine bestimmte Rolle spielen müssen. Die Rolle wird durch den Namen einer angegebenen Eigenschaft (die eine Verweiseigenschaft sein muss) einer Zuordnung definiert.
 
 </dd> <dt>
 
-*Rolle "Rolle* \[ " in, optional\]
+*strRole* \[ in, optional\]
 </dt> <dd>
 
-Eine Zeichenfolge, die einen Eigenschaftsnamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Endpunkte an einer Zuordnung mit dem Quell Objekt teilnehmen müssen, in dem das Quell Objekt eine bestimmte Rolle spielt. Die Rolle wird durch den Namen einer angegebenen Eigenschaft (die eine Verweis Eigenschaft sein muss) einer Zuordnung definiert.
+Eine Zeichenfolge, die einen Eigenschaftennamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Endpunkte an einer Zuordnung zum Quellobjekt teilnehmen müssen, in dem das Quellobjekt eine bestimmte Rolle spielt. Die Rolle wird durch den Namen einer angegebenen Eigenschaft (die eine Verweiseigenschaft sein muss) einer Zuordnung definiert.
 
 </dd> <dt>
 
-*bclassesonly* \[ in, optional\]
+*bClassesOnly* \[ in, optional\]
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob eine Liste von Klassennamen anstelle tatsächlicher Instanzen der Klassen zurückgegeben werden soll. Dabei handelt es sich um die Klassen, zu denen die Endpunkt Instanzen gehören. Der Standardwert für diesen Parameter ist **false**.
+Ein boolescher Wert, der angibt, ob anstelle der tatsächlichen Instanzen der Klassen eine Liste von Klassennamen zurückgegeben werden soll. Dies sind die Klassen, zu denen die Endpunktinstanzen gehören. Der Standardwert für diesen Parameter ist **FALSE.**
 
 </dd> <dt>
 
-*bschemaonly* \[ in, optional\]
+*bSchemaOnly* \[ in, optional\]
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob die Abfrage auf das Schema und nicht auf die Daten angewendet wird. Der Standardwert für diesen Parameter ist **false**. Sie kann nur auf " **true** " festgelegt werden, wenn das Objekt, für das diese Methode aufgerufen wird, eine Klasse ist. Wenn der Wert auf **true** festgelegt ist, stellen die Menge der zurückgegebenen Endpunkte Klassen dar, die entsprechend der Quell Klasse im Schema zugeordnet sind.
+Boolescher Wert, der angibt, ob die Abfrage für das Schema und nicht für die Daten gilt. Der Standardwert für diesen Parameter ist **FALSE.** Sie kann nur auf **TRUE festgelegt werden,** wenn das Objekt, für das diese Methode aufgerufen wird, eine Klasse ist. Bei True **stellen** die zurückgegebenen Endpunkte Klassen dar, die der Quellklasse im Schema entsprechend zugeordnet sind.
 
 </dd> <dt>
 
-"otrequirements *dassocqualifizierer* \[ " in, optional\]
+*strRequiredAssocQualifier* \[ in, optional\]
 </dt> <dd>
 
-Eine Zeichenfolge, die einen Qualifizierernamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Endpunkte über eine Association-Klasse, die den angegebenen Qualifizierer enthält, dem Quell Objekt zugeordnet werden müssen.
+Eine Zeichenfolge, die einen Qualifizierernamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Endpunkte dem Quellobjekt über eine Zuordnungsklasse zugeordnet werden müssen, die den angegebenen Qualifizierer enthält.
 
 </dd> <dt>
 
-" *stringdqualifier* \[ " in, optional\]
+*strRequiredQualifier* \[ in, optional\]
 </dt> <dd>
 
-Eine Zeichenfolge, die einen Qualifizierernamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Endpunkte den angegebenen Qualifizierer einschließen müssen.
+Eine Zeichenfolge, die einen Qualifizierernamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Endpunkte den angegebenen Qualifizierer enthalten müssen.
 
 </dd> <dt>
 
-*IFlags* \[ in, optional\]
+*iFlags* \[ in, optional\]
 </dt> <dd>
 
-Eine ganze Zahl, die zusätzliche Flags für den Vorgang angibt. Dieser Parameter kann die folgenden Werte annehmen.
+Ganze Zahl, die zusätzliche Flags für den Vorgang angibt. Dieser Parameter kann die folgenden Werte akzeptieren.
 
 <dt>
 
 <span id="wbemFlagSendStatus"></span><span id="wbemflagsendstatus"></span><span id="WBEMFLAGSENDSTATUS"></span>
 
-<span id="wbemFlagSendStatus"></span><span id="wbemflagsendstatus"></span><span id="WBEMFLAGSENDSTATUS"></span>wbemflagsendstatus * * * * (128 (0x80))
+<span id="wbemFlagSendStatus"></span><span id="wbemflagsendstatus"></span><span id="WBEMFLAGSENDSTATUS"></span>wbemFlagSendStatus** (128 (0x80))
 
 
 </dt> <dd>
 
-Bewirkt, dass asynchrone Aufrufe Statusaktualisierungen an den " [**slibemsink. OnProgress**](swbemsink-onprogress.md) "-Ereignishandler für die Objekt Senke senden.
+Bewirkt, dass asynchrone Aufrufe Statusupdates an den [**SWbemSink.OnProgress-Ereignishandler**](swbemsink-onprogress.md) für die Objektsenke senden.
 
 </dd> <dt>
 
 <span id="wbemFlagDontSendStatus"></span><span id="wbemflagdontsendstatus"></span><span id="WBEMFLAGDONTSENDSTATUS"></span>
 
-<span id="wbemFlagDontSendStatus"></span><span id="wbemflagdontsendstatus"></span><span id="WBEMFLAGDONTSENDSTATUS"></span>wbemflagdontsendstatus * * * * (0 (0x0))
+<span id="wbemFlagDontSendStatus"></span><span id="wbemflagdontsendstatus"></span><span id="WBEMFLAGDONTSENDSTATUS"></span>wbemFlagDontSendStatus** (0 (0x0))
 
 
 </dt> <dd>
 
-Verhindert, dass asynchrone Aufrufe Statusaktualisierungen an den [**OnProgress**](swbemsink-onprogress.md) -Ereignishandler für die Objekt Senke senden.
+Verhindert, dass asynchrone Aufrufe Statusupdates an den [**OnProgress-Ereignishandler**](swbemsink-onprogress.md) für die Objektsenke senden.
 
 </dd> <dt>
 
 <span id="wbemFlagUseAmendedQualifiers"></span><span id="wbemflaguseamendedqualifiers"></span><span id="WBEMFLAGUSEAMENDEDQUALIFIERS"></span>
 
-<span id="wbemFlagUseAmendedQualifiers"></span><span id="wbemflaguseamendedqualifiers"></span><span id="WBEMFLAGUSEAMENDEDQUALIFIERS"></span>wbemflaguseamendedqualifizierer * * * * (131072 (0x20000))
+<span id="wbemFlagUseAmendedQualifiers"></span><span id="wbemflaguseamendedqualifiers"></span><span id="WBEMFLAGUSEAMENDEDQUALIFIERS"></span>wbemFlagUseAmendedQualifiers** (131072 (0x20000))
 
 
 </dt> <dd>
 
-Bewirkt, dass WMI die lokalisierten Klassen-und Eigenschafts Beschreibungen zurückgibt. Weitere Informationen finden Sie unter [Lokalisieren von WMI-Klassen Informationen](localizing-wmi-class-information.md).
+Bewirkt, dass WMI die lokalisierten Klassen- und Eigenschaftenbeschreibungen zurück gibt. Weitere Informationen finden Sie unter [Lokalisieren von WMI-Klasseninformationen.](localizing-wmi-class-information.md)
 
 </dd> </dl> </dd> <dt>
 
-*objwbemnamedvalueset* \[ in, optional\]
+*objwbemNamedValueSet* \[ in, optional\]
 </dt> <dd>
 
-Dies ist in der Regel nicht definiert. Andernfalls handelt es sich hierbei um ein-Objekt vom [**typswap namedvalueset**](swbemnamedvalueset.md) , dessen Elemente die Kontextinformationen darstellen, die von dem Anbieter verwendet werden können, der die Anforderung verarbeitet. Ein Anbieter, der solche Informationen unterstützt oder erfordert, muss die erkannten Wertnamen, den Datentyp des Werts, zulässige Werte und die Semantik dokumentieren.
+In der Regel ist dies nicht definiert. Andernfalls ist dies ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) dessen Elemente die Kontextinformationen darstellen, die vom Anbieter verwendet werden können, der die Anforderung bedient. Ein Anbieter, der solche Informationen unterstützt oder erfordert, muss die erkannten Wertnamen, den Datentyp des Werts, die zulässigen Werte und die Semantik dokumentieren.
 
 </dd> <dt>
 
-*objwbemasynccontext* \[ in, optional\]
+*objWbemAsyncContext* \[ in, optional\]
 </dt> <dd>
 
-Dabei handelt es sich um ein Objekt vom Typ " [**taubemnamedvalueset**](swbemnamedvalueset.md) ", das zur Objekt Senke zurückkehrt, um die Quelle für den ursprünglichen asynchronen aufzurufen. Verwenden Sie diesen Parameter, wenn Sie mehrere asynchrone Aufrufe mithilfe derselben Objekt Senke durchführen. Um diesen Parameter zu verwenden, erstellen Sie ein Objekt vom Typ " **Swap namedvalueset** ", und verwenden Sie die Methode " [**taubemnamedvalueset. Add**](swbemnamedvalueset-add.md) ", um einen Wert hinzuzufügen, der den von Ihnen ausgeführten asynchronen Befehl identifiziert. Dieses Objekt vom Typ " **Swap namedvalueset** " wird an die Objekt Senke zurückgegeben, und die Quelle des Aufrufes kann mithilfe der Methode " [**Swap Name. Item**](swbemnamedvalueset-item.md) " extrahiert werden. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+Dies ist ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) das zur Objektsenke zurückkehrt, um die Quelle des ursprünglichen asynchronen Aufrufs zu identifizieren. Verwenden Sie diesen Parameter, wenn Sie mehrere asynchrone Aufrufe mit derselben Objektsenke ausführen. Um diesen Parameter zu verwenden, erstellen Sie ein **SWbemNamedValueSet-Objekt,** und verwenden Sie die [**SWbemNamedValueSet.Add-Methode,**](swbemnamedvalueset-add.md) um einen Wert hinzuzufügen, der den von Ihnen ausgeführten asynchronen Aufruf identifiziert. Dieses **SWbemNamedValueSet-Objekt** wird an die Objektsenke zurückgegeben, und die Quelle des Aufrufs kann mithilfe der [**SWbemNamedValueSet.Item-Methode extrahiert**](swbemnamedvalueset-item.md) werden. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt keinen Wert zurück. Bei erfolgreicher Ausführung empfängt die Senke ein [**onobjectready**](swbemsink-onobjectready.md) -Ereignis pro Instanz. Nach der letzten Instanz empfängt die Objekt Senke ein [**onabgeschlossene**](swbemsink-oncompleted.md) -Ereignis.
+Diese Methode gibt keinen Wert zurück. Bei Erfolg empfängt die Senke ein [**OnObjectReady-Ereignis**](swbemsink-onobjectready.md) pro Instanz. Nach der letzten Instanz empfängt die Objektsenke ein [**OnCompleted-Ereignis.**](swbemsink-oncompleted.md)
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach Abschluss der **\_ associatorsasync** -Methode kann das [Err](/previous-versions//sbf5ze0e(v=vs.85)) -Objekt einen der Fehlercodes in der folgenden Liste enthalten.
+Nach Abschluss der **\_ AssociatorsAsync-Methode** kann das [Err-Objekt](/previous-versions//sbf5ze0e(v=vs.85)) einen der Fehlercodes in der folgenden Liste enthalten.
 
 <dl> <dt>
 
-**wbemErrAccessDenied** -2147749891 (0x80041003)
+**wbemErrAccessDenied** – 2147749891 (0x80041003)
 </dt> <dd>
 
-Der aktuelle Benutzer verfügt nicht über die Berechtigung zum Anzeigen einer oder mehrerer Klassen, die vom-Befehl zurückgegeben werden.
+Der aktuelle Benutzer verfügt nicht über die Berechtigung, eine oder mehrere der vom Aufruf zurückgegebenen Klassen anzeigen zu können.
 
 </dd> <dt>
 
-**wbemErrFailed** -2147449889 (0x7fff7c21)
+**wbemErrFailed** – 2147449889 (0x7FFF7C21)
 </dt> <dd>
 
 Unbekannter Fehler.
 
 </dd> <dt>
 
-**wbemErrInvalidParameter** -2147749896 (0x80041008)
+**wbemErrInvalidParameter** – 2147749896 (0x80041008)
 </dt> <dd>
 
 Ein angegebener Parameter ist ungültig.
 
 </dd> <dt>
 
-**wbemErrOutOfMemory** -2147749894 (0x80041006)
+**wbemErrOutOfMemory** : 2147749894 (0x80041006)
 </dt> <dd>
 
-Der Arbeitsspeicher reicht nicht aus, um den Vorgang abzuschließen.
+Nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Rückruf wird sofort zurückgegeben. Die angeforderten Objekte und der Status werden an den Aufrufer zurückgegeben, indem die Rückrufe an die Senke gesendet werden, die in *objwbemsink* angegeben ist. Um jedes Objekt zu verarbeiten, sobald es eintrifft, erstellen Sie eine *objwbemsink*. [**Onobjectready**](swbemsink-onobjectready.md) -Ereignis Unterroutine. Nachdem alle Objekte zurückgegeben wurden, können Sie die endgültige Verarbeitung in ihrer Implementierung von *objwbemsink* durchführen. [**Onabgeschlossene**](swbemsink-oncompleted.md) -Ereignis.
+Dieser Aufruf wird sofort zurückgegeben. Die angeforderten Objekte und der Status werden über Rückrufe an die Senke zurückgegeben, die in *objWbemSink angegeben ist.* Um jedes Objekt zu verarbeiten, wenn es eintrifft, erstellen Sie *einen objWbemSink*. [**OnObjectReady-Ereignisunterroutine.**](swbemsink-onobjectready.md) Nachdem alle -Objekte zurückgegeben wurden, können Sie die endgültige Verarbeitung in Ihrer Implementierung von *objWbemSink ausführen.* [**OnCompleted-Ereignis.**](swbemsink-oncompleted.md)
 
-Ein asynchroner Rückruf ermöglicht einem nicht authentifizierten Benutzer das Bereitstellen von Daten für die Senke. Dies birgt Sicherheitsrisiken für Ihre Skripts und Anwendungen. Um die Risiken auszuschließen, verwenden Sie entweder die semisynchrone Kommunikation oder die synchrone Kommunikation. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+Ein asynchroner Rückruf ermöglicht es einem nicht authentifizierten Benutzer, Daten für die Senke zur Verfügung zu stellen. Dies birgt Sicherheitsrisiken für Ihre Skripts und Anwendungen. Um die Risiken zu beseitigen, verwenden Sie entweder die semisynchrone Kommunikation oder die synchrone Kommunikation. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
-Weitere Informationen zu den assoziatoren von zugeordneten WQL-Abfragen, Quell Instanzen und Endpunkten finden Sie unter [ASSOCIATORS of Statement](associators-of-statement.md).
+Weitere Informationen zu den ASSOCIATORS OF associated WQL queries, source instances, and endpoints [(ASSOCIATORS DER](associators-of-statement.md)zugeordneten WQL-Abfragen, Quellinstanzen und Endpunkte) finden Sie unter ASSOCIATORS OF Statement .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -226,28 +226,28 @@ Weitere Informationen zu den assoziatoren von zugeordneten WQL-Abfragen, Quell I
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Austausch Objekt<br/>                                                           |
-| IID<br/>                      | IID \_ iswbemujekt<br/>                                                            |
+| CLSID<br/>                    | CLSID \_ SWbemObject<br/>                                                           |
+| IID<br/>                      | IID \_ ISWbemObject<br/>                                                            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Austausch Objekt**](swbemobject.md)
+[**Swbemobject**](swbemobject.md)
 </dt> <dt>
 
-[**Swap Services. associatorsofasync**](swbemservices-associatorsofasync.md)
+[**SWbemServices.AssociatorsOfAsync**](swbemservices-associatorsofasync.md)
 </dt> <dt>
 
-[**"Errbemubject. References"\_**](swbemobject-references-.md)
+[**SWbemObject.References\_**](swbemobject-references-.md)
 </dt> <dt>
 
-[**"Swap Services. referencesto"**](swbemservices-referencesto.md)
+[**SWbemServices.ReferencesTo**](swbemservices-referencesto.md)
 </dt> </dl>
 
  

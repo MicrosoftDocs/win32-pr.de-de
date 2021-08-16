@@ -23,7 +23,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118314412"
 ---
-# <a name="swbemmethodoutparameters-property"></a>SWbemMethod.OutParameters-Eigenschaft
+# <a name="swbemmethodoutparameters-property"></a>SWbemMethod.OutParameters (Eigenschaft)
 
 Die **OutParameters-Eigenschaft** des [**SWbemMethod-Objekts**](swbemmethod.md) ist ein [**SWbemObject-Objekt,**](swbemobject.md) dessen Eigenschaften die out-Parameter und den Rückgabetyp dieser Methode definieren. Diese Eigenschaft ist schreibgeschützt.
 
@@ -44,7 +44,7 @@ SWbemMethod.OutParameters As Object
 
 ## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zur Verwendung dieser Eigenschaft zum Abrufen von Ausgabeparametern aus Anbietermethoden finden Sie unter [Erstellen von InParameters-Objekten und Analysieren von OutParameters-Objekten.](constructing-inparameters-objects-and-parsing-outparameters-objects.md) Beachten Sie, dass alle an diesem Objekt vorgenommenen Änderungen nicht in der zugrunde liegenden Methodendefinition widergespiegelt werden.
+Weitere Informationen zur Verwendung dieser Eigenschaft zum Abrufen von Ausgabeparametern von Anbietermethoden finden Sie unter [Constructing InParameters Objects and Parsing OutParameters Objects](constructing-inparameters-objects-and-parsing-outparameters-objects.md). Beachten Sie, dass alle an diesem Objekt vorgenommenen Änderungen nicht in der zugrunde liegenden Methodendefinition widergespiegelt werden.
 
 ## <a name="requirements"></a>Anforderungen
 

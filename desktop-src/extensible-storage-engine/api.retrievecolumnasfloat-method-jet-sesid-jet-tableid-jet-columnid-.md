@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. retrievecolaufnasfloat-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)'
-title: API. retrievecolaufnasfloat-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)
+description: 'Weitere Informationen finden Sie unter: Api.RetrieveColumnAsFloat-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)'
+title: Api.RetrieveColumnAsFloat-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)
 TOCTitle: RetrieveColumnAsFloat method (JET_SESID, JET_TABLEID, JET_COLUMNID)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.RetrieveColumnAsFloat(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.JET_COLUMNID)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.retrievecolumnasfloat(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9022c53d384b6d92911a02797a684d11077987d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a388bd9d37d9502b512b59416ef9921f4eb5151369a181f3946e142b54285290
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484174"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118271731"
 ---
-# <a name="apiretrievecolumnasfloat-method-jet_sesid-jet_tableid-jet_columnid"></a>API. retrievecolaufnasfloat-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)
+# <a name="apiretrievecolumnasfloat-method-jet_sesid-jet_tableid-jet_columnid"></a>Api.RetrieveColumnAsFloat-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)
 
-Ruft einen float-Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der mit dem Index Eintrag an der aktuellen Position des Cursors verknüpft ist.
+Ruft einen float-Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der dem Indexeintrag an der aktuellen Position des Cursors zugeordnet ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,29 +63,29 @@ public static Nullable<float> RetrieveColumnAsFloat(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der Cursor, von dem die Spalte abgerufen werden soll.
+    Der Cursor, aus dem die Spalte abgerufen werden soll.
 
 <!-- end list -->
 
   - columnid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
     
-    Das abzurufende ColumnID.
+    Die abzurufende columnid.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Nullable](/dotnet/api/system.nullable-1)\<[Single](/dotnet/api/system.single)\>  
-Die Daten, die aus der Spalte als float abgerufen werden. NULL, wenn die Spalte NULL ist.  
+Typ: [System.Nullable](/dotnet/api/system.nullable-1)\<[Single](/dotnet/api/system.single)\>  
+Die aus der Spalte als float abgerufenen Daten. NULL, wenn die Spalte NULL ist.  
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -93,8 +93,8 @@ Die Daten, die aus der Spalte als float abgerufen werden. NULL, wenn die Spalte 
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Retrievecolübernasfloat-Überladung](./api.retrievecolumnasfloat-method.md)
+[RetrieveColumnAsFloat-Überladung](./api.retrievecolumnasfloat-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -52,7 +52,7 @@ Ein Pixelformat beschreibt das Speicherlayout jedes Pixels in einer Bitmap. Dies
 
 Die *Bittiefe* ist die Anzahl der Bits, die zum Codieren der einzelnen Farbkanäle verwendet werden. Heutzutage verwenden die meisten digitalen Bilder eine Bittiefe von 8. Dies bedeutet, dass jeder Farbkanal in einem Pixel durch 8 Bits dargestellt wird und 2⁸ (256) eindeutige Werte pro Kanal bereitstellt. Ein Bild mit einer Bittiefe von 8 und drei Farbkanälen (z. B. Rot, Grün und Blau) verwendet 24 Bits pro Pixel (bpp), wodurch 2issen⁴ (16.777.216) verschiedene Farben pro Pixel zur Verfügung steht.
 
-Für eine bessere Farbauflösung kann eine Bittiefe von 16 oder 32 verwendet werden. Dadurch wird jeder Farbkanal mit eindeutigen Werten von 2⁶ (65.536) oder 2.000 eindeutigen Werten auf Kosten von mehr Arbeitsspeicher pro Pixel zur Verfügung stellen.
+Für eine bessere Farbauflösung kann eine Bittiefe von 16 oder 32 verwendet werden. Dadurch wird jeder Farbkanal mit eindeutigen Werten von 2⁶ (65.536) oder 2:000 eindeutigen Werten auf Kosten von mehr Arbeitsspeicher pro Pixel geliefert.
 
 In einigen Formaten ist die Bittiefe kein Vielfaches von 8. Diese Formate werden als *gepackte* Formate bezeichnet, da die Farbkanäle in einem Pixel nicht an Bytegrenzen ausgerichtet sind. Wenn die Bittiefe beispielsweise 5 beträgt, können drei Farbkanäle in 16 Bits gespeichert werden (einschließlich 1 Bit Auffüllung, um Pixel bytebündig auszurichten). Gepackte Formate sind nützlich, wenn arbeitsspeicher- oder verarbeitungsleistungsbeschränkt sind.
 
@@ -117,7 +117,7 @@ Die Pixelformate in WIC werden mithilfe von GUIDs definiert, um Konflikte mit IH
 
 **\[GUID \_ WICPixelFormat \] \[ Bits Per Pixel \] \[ Channel Order Storage \] \[ Type\]**
 
-| Formatkomponente         | BESCHREIBUNG                                                                                                                                                                                                                                                                                                  |
+| Formatkomponente         | Beschreibung                                                                                                                                                                                                                                                                                                  |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GUID \_ WICPixelFormat** | Die beschreibende Identifikation für alle WIC-Pixelformate. Der Anzeigename für alle WIC-Pixel beginnt mit dieser Zeichenfolge.                                                                                                                                                                                       |
 | **Bits pro Pixel**       | Die Anzahl der Bits pro Pixel (bpp), die für das Pixelformat verwendet werden.                                                                                                                                                                                                                                                |
@@ -189,7 +189,7 @@ In der folgenden Tabelle sind die von WIC bereitgestellten gepackten Bitformate 
 | GUID \_ WICPixelFormat32bppR10G10B10A2      | 4             | 10(R)/10(G)/10(B)/2(A) | 32             | UINT         |
 | GUID \_ WICPixelFormat32bppR10G10B10A2HDR10 | 4             | 10(R)/10(G)/10(B)/2(A) | 32             | UINT         |
 
-Für die Formate GUID \_ WICPixelFormat32bppBGR101010 und GUID \_ WICPixelFormat32bppRGBA1010102 wird der rote Kanal in den am wenigsten wichtigen Bits gespeichert. Für die FORMATE GUID \_ WICPixelFormat32bppR10G10B10A2 und GUID \_ WICPixelFormat32bppR10G10B10A2HDR10 wird der rote Kanal in den wichtigsten Bits definiert, das gleiche Layout wie [DXGI_FORMAT_R10G10B10A2_UNORM](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format).
+Für die \_ Formate GUID WICPixelFormat32bppBGR101010 und GUID \_ WICPixelFormat32bppRGBA1010102 wird der rote Kanal in den am wenigsten signifikanten Bits gespeichert. Für die \_ Formate GUID WICPixelFormat32bppR10G10B10A2 und GUID \_ WICPixelFormat32bppR10G10B10A2HDR10 wird der rote Kanal in den wichtigsten Bits definiert, das gleiche Layout wie [DXGI_FORMAT_R10G10B10A2_UNORM](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format).
 
 Das \_ GUID-Format WICPixelFormat32bppR10G10B10A2HDR10 ist das 10-Bit-Pixelformat für HDR10 (BT.2020-Farbraum und SMPTE ST.2084 EOTF).
 
@@ -215,9 +215,9 @@ In der folgenden Tabelle sind die von WIC bereitgestellten Graustufenformate auf
 
  
 
-### <a name="rgbbgr-pixel-formats"></a>RGB/BGR-Pixelformate
+### <a name="rgbbgr-pixel-formats"></a>RGB-/BGR-Pixelformate
 
-In der folgenden Tabelle sind die RGB/BGR-Formate aufgeführt, die von WIC bereitgestellt werden. Diese Formate trennen die Primärfarbdaten in die Kanäle Rot (R), Grün (G) und Blau (B). Für Deckkraftinformationen in einigen Formaten wird ein zusätzlicher Alphakanal (A) bereitgestellt.
+In der folgenden Tabelle sind die RGB-/BGR-Formate aufgeführt, die von WIC bereitgestellt werden. Diese Formate trennen die Primären Farbdaten in rote (R), grüne (G) und blaue (B) Kanäle. Für Durchlässigkeitsinformationen in einigen Formaten wird ein zusätzlicher Alphakanal (A) bereitgestellt.
 
 
 
@@ -293,7 +293,7 @@ In der folgenden Tabelle sind die von WIC bereitgestellten CMYK-Formate aufgefü
 
  
 
-### <a name="n-channel-pixel-formats"></a>n-Kanal-Pixelformate
+### <a name="n-channel-pixel-formats"></a>N-Kanal-Pixelformate
 
 In der folgenden Tabelle sind die von WIC bereitgestellten n-kanal-Formate aufgeführt. Diese Formate stellen eine Reihe von nicht definierten Farbkanälen zum Speichern von Bilddaten zur Verfügung.
 
@@ -373,11 +373,11 @@ Wenn keine Farbrauminformationen für ein Bild vorliegen, ist die allgemeine Reg
 
 Jeder der Windows WIC-Codecs unterstützt eine Teilmenge der WIC-Pixelformate. Für jeden Codec können sich die unterstützten Decodierungsformate von den unterstützten Codierungsformaten unterscheiden.
 
-Wenn beim Decodieren eines Bilds Daten nativ in einem Pixelformat gespeichert werden, das vom Decoder nicht unterstützt wird, werden sie in ein unterstütztes Format konvertiert. Um das Ausgabepixelformat zu bestimmen, rufen [**Sie IWICBitmapFrameDecode::GetPixelFormat auf.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsource-getpixelformat)
+Wenn Beim Decodieren eines Bilds Daten nativ in einem Pixelformat gespeichert werden, das vom Decoder nicht unterstützt wird, werden sie in ein unterstütztes Format konvertiert. Um das Ausgabepixelformat zu bestimmen, rufen [**Sie IWICBitmapFrameDecode::GetPixelFormat auf.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsource-getpixelformat)
 
 Verwenden Sie beim Codieren eines Bilds [**IWICBitmapFrameEncode::SetPixelFormat,**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-setpixelformat) um an fordern, dass der Encoder ein bestimmtes Pixelformat verwendet. Der Encoder gibt das nächstgelegene unterstützte Pixelformat zurück, das sich von dem angeforderten Format unterscheiden kann.
 
-Die folgenden Tabellen zeigen die Pixelformate, die von den einzelnen bereitgestellten WIC Windows codecs unterstützt werden.
+Die folgenden Tabellen zeigen die Pixelformate, die von jedem der Windows bereitgestellten WIC-Codecs unterstützt werden.
 
 ### <a name="bmp-native-codec"></a>Nativer BMP-Codec
 
@@ -506,7 +506,7 @@ Die folgenden Tabellen zeigen die Pixelformate, die von den einzelnen bereitgest
  
 
 > [!Note]  
-> GUID \_ WICPixelFormat96bppRGBFloat wird nur in Windows 8, dem [Plattformupdate für Windows 7](/windows/desktop/direct3darticles/platform-update-for-windows-7)und höher unterstützt.
+> GUID \_ WICPixelFormat96bppRGBFloat wird nur in Windows 8, dem [Plattformupdate für Windows 7](/windows/desktop/direct3darticles/platform-update-for-windows-7)und höher, unterstützt.
 
  
 
@@ -532,10 +532,10 @@ Die folgenden Tabellen zeigen die Pixelformate, die von den einzelnen bereitgest
 | GUID \_ WICPixelFormat96bppRGBFixedPoint   | GUID \_ WICPixelFormat96bppRGBFixedPoint   |
 | GUID \_ WICPixelFormat96bppRGBFixedPoint   | GUID \_ WICPixelFormat128bppRGBAFloat      |
 | GUID \_ WICPixelFormat128bppRGBFloat       | GUID \_ WICPixelFormat128bppRGBFloat       |
-| GUID \_ WICPixelFormat32bppC JPG            | GUID \_ WICPixelFormat32bppC JPG            |
+| GUID \_ WICPixelFormat32bppCMYK            | GUID \_ WICPixelFormat32bppCMYK            |
 | GUID \_ WICPixelFormat64bppRGBAFixedPoint  | GUID \_ WICPixelFormat64bppRGBAFixedPoint  |
 | GUID \_ WICPixelFormat128bppRGBAFixedPoint | GUID \_ WICPixelFormat128bppRGBAFixedPoint |
-| GUID \_ WICPixelFormat64bppC JPG            | GUID \_ WICPixelFormat64bppC JPG            |
+| GUID \_ WICPixelFormat64bppCMYK            | GUID \_ WICPixelFormat64bppCMYK            |
 | GUID \_ WICPixelFormat24bpp3Channels       | GUID \_ WICPixelFormat24bpp3Channels       |
 | GUID \_ WICPixelFormat32bpp4Channels       | GUID \_ WICPixelFormat32bpp4Channels       |
 | GUID \_ WICPixelFormat40bpp5Channels       | GUID \_ WICPixelFormat40bpp5Channels       |
@@ -548,8 +548,8 @@ Die folgenden Tabellen zeigen die Pixelformate, die von den einzelnen bereitgest
 | GUID \_ WICPixelFormat96bpp6Channels       | GUID \_ WICPixelFormat96bpp6Channels       |
 | GUID \_ WICPixelFormat112bpp7Channels      | GUID \_ WICPixelFormat112bpp7Channels      |
 | GUID \_ WICPixelFormat128bpp8Channels      | GUID \_ WICPixelFormat128bpp8Channels      |
-| GUID \_ WICPixelFormat40bppCLANGAlpha       | GUID \_ WICPixelFormat40bppCLANGAlpha       |
-| GUID \_ WICPixelFormat80bppC ACHSEAlpha       | GUID \_ WICPixelFormat80bppC ACHSEAlpha       |
+| GUID \_ WICPixelFormat40bppCMYKAlpha       | GUID \_ WICPixelFormat40bppCMYKAlpha       |
+| GUID \_ WICPixelFormat80bppCMYKAlpha       | GUID \_ WICPixelFormat80bppCMYKAlpha       |
 | GUID \_ WICPixelFormat32bpp3ChannelsAlpha  | GUID \_ WICPixelFormat32bpp3ChannelsAlpha  |
 | GUID \_ WICPixelFormat64bpp7ChannelsAlpha  | GUID \_ WICPixelFormat40bpp4ChannelsAlpha  |
 | GUID \_ WICPixelFormat72bpp8ChannelsAlpha  | GUID \_ WICPixelFormat48bpp5ChannelsAlpha  |
@@ -592,7 +592,7 @@ Die folgenden Tabellen zeigen die Pixelformate, die von den einzelnen bereitgest
 
 -   DXGI \_ FORMAT \_ BC1 \_ UNORM
 -   DXGI \_ FORMAT \_ BC2 \_ UNORM
--   DXGI \_ FORMAT \_ BC3 \_ UNORM
+-   \_DXGI-FORMAT \_ BC3 \_ UNORM
 
 Diese werden als GUID \_ WICPixelFormat32bppBGRA oder GUID \_ WICPixelFormat32bppPBGRA decodiert und codiert. Weitere Informationen finden Sie unter Übersicht über [das DDS-Format.](dds-format-overview.md)
 

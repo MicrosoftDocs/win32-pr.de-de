@@ -24,7 +24,7 @@ ms.locfileid: "117817590"
 # <a name="isamplegrabbercbbuffercb-method"></a>ISampleGrabberCB::BufferCB-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
@@ -57,39 +57,39 @@ Startzeit des Beispiels in Sekunden.
 *pBuffer* 
 </dt> <dd>
 
-Zeiger auf einen Puffer, der die Beispieldaten enthält. Das Format der Daten hängt vom Medientyp des Eingabepins des Beispielgrabbers ab. Um den Medientyp zu erhalten, rufen Sie [**ISampleGrabber::GetConnectedMediaType auf.**](isamplegrabber-getconnectedmediatype.md)
+Zeiger auf einen Puffer, der die Beispieldaten enthält. Das Format der Daten hängt vom Medientyp des Eingabepins des Beispielgrabbers ab. Rufen Sie [**ISampleGrabber::GetConnectedMediaType**](isamplegrabber-getconnectedmediatype.md)auf, um den Medientyp abzurufen.
 
 </dd> <dt>
 
 *BufferLen* 
 </dt> <dd>
 
-Länge des Puffers, auf den *pBuffer zeigt,* in Bytes.
+Länge des Puffers, auf den *pBuffer* zeigt, in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK zurück, wenn erfolgreich, andernfalls ein **HRESULT-Fehlercode.**
+Gibt S \_ OK zurück, wenn erfolgreich, oder andernfalls einen **HRESULT-Fehlercode.**
 
 ## <a name="remarks"></a>Hinweise
 
 Diese Rückrufmethode empfängt einen Zeiger auf die Daten im letzten Medienbeispiel.
 
 > [!Note]  
-> Diese Methode empfängt einen Zeiger auf die ursprünglichen Beispieldaten, keine Kopie. In der ursprünglichen Dokumentation wurde fälschlicherweise angegeben, *dass pBuffer* eine Kopie der Daten enthält.
+> Diese Methode empfängt einen Zeiger auf die ursprünglichen Beispieldaten, keine Kopie. In der ursprünglichen Dokumentation wurde fälschlicherweise angegeben, dass *pBuffer* eine Kopie der Daten enthält.
 
  
 
-Rufen Sie zum Einrichten des Rückrufs [**ISampleGrabber::SetCallback auf.**](isamplegrabber-setcallback.md)
+Rufen Sie [**ISampleGrabber::SetCallback**](isamplegrabber-setcallback.md)auf, um den Rückruf einzurichten.
 
 > [!Note]  
-> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 

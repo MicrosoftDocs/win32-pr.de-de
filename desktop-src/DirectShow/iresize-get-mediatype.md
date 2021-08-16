@@ -58,7 +58,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn der Ausgabemedientyp nicht festgelegt wurde, geben Sie einen Standardmedientyp zurück. Der Filter muss seinen Ausgabemedientyp aktualisieren, wenn die **Put \_ MediaType-** oder **put \_ Size-Methoden** aufgerufen werden. Der von zurückgegebene Medientyp muss `get_MediaType` diese Änderungen widerspiegeln.
+Wenn der Ausgabemedientyp nicht festgelegt wurde, geben Sie einen Standardmedientyp zurück. Der Filter muss seinen Ausgabemedientyp aktualisieren, wenn die **Methoden put \_ MediaType** oder **put \_ Size** aufgerufen werden. Der von zurückgegebene Medientyp muss `get_MediaType` diese Änderungen widerspiegeln.
 
 > [!Note]  
 > Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.

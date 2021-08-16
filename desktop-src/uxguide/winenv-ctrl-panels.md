@@ -41,7 +41,7 @@ Systemsteuerungselemente werden mithilfe von [Aufgabenflüssen](glossary.md) ode
 Orientieren Sie sich an folgenden Fragen:
 
 -   **Sollen Features auf Systemebene konfiguriert werden?** Falls nicht, verwenden Sie einen anderen Integrationspunkt. Konfigurieren Sie Ihre Anwendungsfeatures direkt über die Benutzeroberfläche mithilfe von Dialogfeldern mit Optionen, anstatt Systemsteuerung zu verwenden. Verwenden Sie für Hilfsprogramme, die nicht für Setup-, Konfigurations- oder zugehörige Aufgaben (z. B. Problembehandlung) verwendet werden, die Startmenü als Integrationspunkt.
--   **Verfügt das Feature auf Systemebene über eine eigene Benutzeroberfläche?** Wenn ja, sollten Benutzer auf dieser Benutzeroberfläche Änderungen vornehmen. Beispielsweise sollte ein Hilfsprogramm für die Systemsicherung nicht über Systemsteuerung, sondern über seine Programmoptionen konfiguriert werden.
+-   **Verfügt das Feature auf Systemebene über eine eigene Benutzeroberfläche?** Wenn ja, sollten Benutzer auf dieser Benutzeroberfläche Änderungen vornehmen. Beispielsweise sollte ein Hilfsprogramm für die Systemsicherung über die Programmoptionen anstatt über Systemsteuerung konfiguriert werden.
 -   **Müssen Benutzer die Konfiguration häufig ändern?** In diesem Falle (z. B. mehrmals pro Woche) sollten Sie alternative Lösungen in Betracht ziehen, möglicherweise zusätzlich zur Verwendung von Systemsteuerung. Beispielsweise kann die Einstellung Windows Mastervolume direkt über das Symbol im Benachrichtigungsbereich konfiguriert werden. Einige Einstellungen können automatisch konfiguriert werden. In Windows Explorer ermöglicht die Registerkarte Kompatibilität für Anwendungseigenschaften beispielsweise die Ausführung einer Anwendung im Farbmodus 256, anstatt dass Benutzer den Videomodus manuell ändern müssen.
 -   **Sind die ZIELbenutzer IT-Experten?** Verwenden Sie in diesem Falle stattdessen ein MMC-Snap-In [(Microsoft Management Console),](/previous-versions/windows/desktop/mmc/microsoft-management-console-start-page) das speziell für Systemverwaltungsaufgaben entwickelt wurde. In einigen Fällen besteht die beste Lösung darin, sowohl ein Systemsteuerungselement für allgemeine Benutzer als auch ein MMC-Snap-In für IT-Experten zu verwenden.
 
@@ -112,11 +112,11 @@ Aufgabenflusselemente verwenden eine Hubseite, um die übergeordneten Optionen d
 
 ### <a name="property-sheet-patterns"></a>Eigenschaftenblattmuster
 
--   Eigenschaftenblätter werden am besten in älteren Elementen mit vielen Einstellungen für fortgeschrittene Benutzer verwendet. Neue Elemente können den gleichen Effekt erzielen, wenn ein Taskfluss das Formularseitenmuster verwendet.
+-   Eigenschaftenblätter werden am besten in älteren Elementen mit vielen Einstellungen für fortgeschrittene Benutzer verwendet. Neue Elemente können den gleichen Effekt erzielen, wenn ein Aufgabenfluss das Formularseitenmuster verwendet.
 
 ## <a name="guidelines"></a>Richtlinien
 
-### <a name="property-sheet-control-panel-items"></a>Systemsteuerungselemente für Eigenschaftenblätter
+### <a name="property-sheet-control-panel-items"></a>Systemsteuerungselemente des Eigenschaftenblatts
 
 -   **Verwenden Sie keine Eigenschaftenblätter für neue Systemsteuerungselemente.** Verwenden Sie stattdessen Aufgabenflüsse, um eine nahtlose Erfahrung zu schaffen und die Kategorisierungs- und Suchfunktionen der Startseite der Systemsteuerung vollständig zu nutzen.
 
@@ -124,29 +124,29 @@ Aufgabenflusselemente verwenden eine Hubseite, um die übergeordneten Optionen d
 
 **Allgemein**
 
--   **Halten Sie die wichtigsten Inhalte und Steuerelemente sichtbar, ohne zu scrollen.** Benutzer scrollen nicht, um Seiteninhalte anzuzeigen, es sei denn, sie haben einen Grund dafür. Sie können Commitschaltflächen immer sichtbar machen, indem Sie sie in einem [Befehlsbereich statt](glossary.md) im Inhaltsbereich platzieren. Unterbricht Seiten nicht nur, um Bildlauf zu vermeiden.
+-   **Halten Sie die wichtigsten Inhalte und Steuerelemente sichtbar, ohne zu scrollen.** Benutzer scrollen nicht, um Seiteninhalte anzuzeigen, es sei denn, sie haben einen Grund dafür. Sie können Commitschaltflächen immer sichtbar machen, indem Sie sie in einem [Befehlsbereich statt](glossary.md) im Inhaltsbereich platzieren. Zerlegen Sie Seiten nicht nur, um bildlaufvermeidende Seiten zu vermeiden.
     -   **Sie können lange Seiten vertikal scrollen,** solange die wichtigsten Steuerelemente sichtbar sind, ohne zu scrollen.
     -   **Verwenden Sie kein horizontales Scrollen.** Gestalten Sie stattdessen den Seiteninhalt neu, und verwenden Sie vertikales Scrollen. Seiten können nur dann horizontale Bildlaufleisten enthalten, wenn sie sehr schmal sind.
 -   **So navigieren Sie zwischen Seiten:**
     -   Verwenden [Sie Aufgabenlinks,](glossary.md) um eine Aufgabe zu starten.
     -   Verwenden Sie Aufgabenlinks oder eine Schaltfläche Weiter, um zur nächsten Seite in einer mehrstufigen Aufgabe zu navigieren.
     -   Verwenden Sie Commitschaltflächen, um eine Aufgabe auszuführen.
-    -   Verwenden Sie Schaltfläche "Zurück" in der Menüleiste, um zu zuvor angezeigten Seiten zurückzukehren. Fügen Sie dem Befehlsbereich keine Schaltfläche "Zurück" hinzu.
+    -   Verwenden Sie Schaltfläche "Zurück" menüleiste, um zu zuvor angezeigten Seiten zurückzukehren. Fügen Sie dem Befehlsbereich keine Schaltfläche "Zurück" hinzu.
     -   Verwenden Sie die Adressleiste, um direkt zur Startseite der Systemsteuerung zurückzukehren.
     -   Verwenden Sie auch Links im Aufgabenbereich, um zu Seiten in anderen Systemsteuerungselementen zu navigieren. Andernfalls sollte die Navigation innerhalb eines einzelnen Systemsteuerungselements bleiben.
 -   **Legen Sie nur die Startseite der Systemsteuerung in der Adressleiste ab.** Wenn Sie auf diesen Link klicken, wird die Startseite der Systemsteuerung wieder angezeigt, und alle in Bearbeitungen arbeitenden Arbeiten werden ohne Bestätigung [verabsendet.](https://msdn.microsoft.com/library/windows/desktop/aa511273.aspx)
--   **Legen Sie auf den Systemsteuerungsseiten keine Befehlsschaltfläche Schließen ab.** Benutzer können ein Systemsteuerungsfenster mithilfe der Schaltfläche Schließen auf der Titelleiste schließen.
+-   **Legen Sie keine Befehlsschaltfläche Schließen auf Systemsteuerungsseiten ab.** Benutzer können ein Systemsteuerungsfenster mithilfe der Schaltfläche Schließen auf der Titelleiste schließen.
 
 **Aufgabenlinks und Schaltflächen**
 
--   **Wenn eine Seite über einen kleinen Satz fester Optionen verfügt, verwenden Sie Aufgabenlinks anstelle einer Kombination aus Optionsfeldern und einer Schaltfläche Weiter.** Dadurch können Benutzer mit nur einem Klick eine Antwort auswählen.
+-   **Wenn eine Seite über einen kleinen Satz fester Optionen verfügt, verwenden Sie Aufgabenlinks anstelle einer Kombination aus Optionsfeldern und einer Schaltfläche Weiter.** Dadurch können Benutzer eine Antwort mit nur einem Klick auswählen.
 -   Sie können Aufgabenlinks und Schaltflächen an den folgenden Stellen (in der Reihenfolge der Aufholbarkeit) platziert werden:
     -   Der [Befehlsbereich](glossary.md) (nur für Befehlsschaltflächen auf Spoke-Seiten).
     -   Der [Inhaltsbereich:](glossary.md)
         -   Befehlsschaltflächen
         -   Aufgabenlinks
         -   Weitere Links
-    -   Links im [Aufgabenbereich](glossary.md) (nur Hubseiten).
+    -   Links im [Aufgabenbereich (nur](glossary.md) Hubseiten).
 -   **Legen Sie die Position von Aufgabenlinks und Schaltflächen auf der Wichtigkeit und der Notwendigkeit der Aufserfbarkeit fest.**
     -   **Legen Sie nur Commitschaltflächen im Befehlsbereich ab.**
     -   **Legen Sie wichtige Aufgaben im Inhaltsbereich ab.** Befehlsschaltflächen ziehen in der Regel die meiste Aufmerksamkeit auf sich, daher reservieren Sie sie für Befehle, die Benutzern angezeigt werden müssen. Aufgabenlinks ziehen auch Aufmerksamkeit, aber weniger als Befehlsschaltflächen.
@@ -155,9 +155,9 @@ Aufgabenflusselemente verwenden eine Hubseite, um die übergeordneten Optionen d
     -   **Wenn mehr als sieben Links enthalten sind, gruppen Sie die Links in Kategorien.** Geben Sie Überschriften für jede der Gruppen an.
     -   **Stellen Sie die Links für weniger als sieben Links in einer einzelnen Gruppe ohne Überschrift vor.**
 -   **Stellen Sie Aufgabenlinks und Schaltflächen in einer logischen Reihenfolge vor.** Aufgabenlinks vertikal auflisten, Befehlsschaltflächen horizontal.
--   Unterteilen Sie **die Befehle innerhalb von Kategorien in verknüpfte Gruppen.** Stellen Sie die Aufgabengruppen vor, indem Sie die am häufigsten verwendeten zuerst platzieren und innerhalb jeder Gruppe die am häufigsten verwendeten Aufgaben an erster Stelle platzieren. **Die resultierende Reihenfolge sollte ungefähr der Wahrscheinlichkeit der Verwendung folgen, aber auch einen logischen Fluss haben.**
+-   Unterteilen Sie die **Befehle innerhalb von Kategorien in verknüpfte Gruppen.** Stellen Sie die Aufgabengruppen vor, indem Sie die am häufigsten verwendeten zuerst platzieren und innerhalb jeder Gruppe die am häufigsten verwendeten Aufgaben an erster Stelle platzieren. **Die resultierende Reihenfolge sollte ungefähr der Wahrscheinlichkeit der Verwendung folgen, aber auch einen logischen Fluss haben.**
     -   **Ausnahme:** Aufgabenlinks, die dazu führen, dass alles gemacht wird, sollten zuerst platziert werden.
--   **Wenn viele Aufgabenlinks** zur Verfügung stehen, sollten Sie den wichtigsten Aufgaben ein 24 x 24 Pixel großes Symbol und zwei Textzeilen verwenden. Verwenden Sie für weniger wichtige Aufgaben ein 16 x 16 Pixel großes Symbol oder kein Symbol und eine einzelne Zeile mit Linktext.
+-   **Wenn viele Aufgabenlinks** zur Verfügung stehen, sollten Sie den wichtigsten Aufgaben ein 24 x 24 Pixel großes Symbol und zwei Textzeilen verwenden. Verwenden Sie für weniger wichtige Aufgaben ein Symbol mit 16 x 16 Pixel oder kein Symbol und eine einzelne Zeile mit Linktext.
 
     ![Screenshot von Elementen mit großen und kleinen Symbolen ](images/winenv-ctrl-panels-image4.png)
 
@@ -175,7 +175,7 @@ Aufgabenflusselemente verwenden eine Hubseite, um die übergeordneten Optionen d
 Bei der Verwendung von Aufgabenflüssen möchten Sie in der Regel, dass eine Aufgabe innerhalb eines einzelnen Fensters von Seite zu Seite fließen soll, aber die folgenden Umstände sind Ausnahmen. Verwenden Sie Dialogfelder unter den folgenden Umständen:
 
 -   Zum Auffordern von Benutzern zur Eingabe eines Administratorbenutzernamens und -kennworts. Verwenden Sie zu diesem Zweck immer das Dialogfeld Anmeldeinformations-Manager. (Sollte modal [sein.)](glossary.md)
--   Um einen befehlsbasierten Befehl mithilfe eines Aufgabendialogfelds oder eines Meldungsfelds zu bestätigen. (Sollte modal sein.)
+-   So bestätigen Sie einen befehlsbasierten Befehl mithilfe eines Aufgabendialogfelds oder Meldungsfelds. (Sollte modal sein.)
 -   So erhalten Sie Eingaben für die Befehle "Neu", "Hinzufügen", "Speichern unter", "Umbenennen" und "Drucken".
 
     ![Screenshot des Dialogfelds "Netzwerkstandorte löschen" ](images/winenv-ctrl-panels-image5.png)
@@ -192,7 +192,7 @@ Bei der Verwendung von Aufgabenflüssen möchten Sie in der Regel, dass eine Auf
     -   **Es gibt eine kleine Anzahl häufig verwendeter oder wichtiger Aufgaben.**
     -   **Die Konfiguration umfasst ein oder zwei Objekte** (Beispiele: Monitore, Tastatur, Maus, Gamecontroller).
     -   **Die Konfiguration wird systemweit angewendet** (Beispiele: Datum und Uhrzeit, Sicherheit, Energieoptionen).
--   Verwenden Sie objektbasierte Hubseiten in folgenden Folgenden:
+-   Verwenden Sie objektbasierte Hubseiten, wenn:
     -   **Die Konfiguration kann mehrere Objekte umfassen** (Beispiele: Benutzerkonten, Netzwerkverbindungen, Drucker).
     -   **Die Konfiguration gilt nur für das ausgewählte Objekt**.
 -   **Verwenden Sie keine Hubseite,** wenn das Systemsteuerungselement über eine einzelne Seite verfügt, die alle beteiligten Aufgaben und Eigenschaften enthält.
@@ -296,7 +296,7 @@ Dadurch wird die Bedeutung der Commitschaltflächen für die Hauptaufgabe klar u
 
 **Hinweis:** Schaltflächen zum Abbrechen werden als Commitschaltflächen betrachtet.
 
--   **Bestätigen Sie Aufgaben mithilfe von Commitschaltflächen, bei denen es sich um spezifische Antworten auf die Hauptanweisung handelt, anstatt mit generischen Bezeichnungen wie OK.** Die Bezeichnungen auf commit-Schaltflächen sollten selbst sinnvoll sein. Vermeiden Sie die Verwendung von OK, da es sich nicht um eine bestimmte Antwort auf die Main-Anweisung handelt und daher leichter falsch verstanden werden kann. Darüber hinaus wird OK in der Regel mit modalen Dialogfeldern verwendet und impliziert fälschlicherweise das Schließen des Fensters des Systemsteuerungselements.
+-   **Bestätigen Sie Aufgaben mithilfe von Commitschaltflächen, bei denen es sich um spezifische Antworten auf die Hauptanweisung handelt, anstatt mit generischen Bezeichnungen wie OK.** Die Bezeichnungen auf commit-Schaltflächen sollten selbst sinnvoll sein. Vermeiden Sie die Verwendung von OK, da es sich nicht um eine spezifische Antwort auf die Main-Anweisung handelt und daher leichter falsch verstanden werden kann. Darüber hinaus wird OK in der Regel mit modalen Dialogfeldern verwendet und impliziert fälschlicherweise das Schließen des Fensters des Systemsteuerungselements.
     -   **Ausnahmen:**
         -   Verwenden Sie OK für Seiten ohne Einstellungen.
         -   Verwenden Sie OK, wenn die spezifische Antwort immer noch generisch ist, z. B. Speichern, Auswählen oder Auswählen, z. B. beim Ändern einer bestimmten Einstellung oder einer Sammlung von Einstellungen.
@@ -307,7 +307,7 @@ Dadurch wird die Bedeutung der Commitschaltflächen für die Hauptaufgabe klar u
             In diesem Beispiel sind die Optionsfelder, nicht die Commitschaltflächen, Antworten auf die Main-Anweisung.
 -   **Geben Sie die Schaltfläche Abbrechen an, damit Benutzer Änderungen explizit abbrechen können.** Während Benutzer eine Aufgabe implizit abbrechen können, indem sie ihre Änderungen nicht bestätigen, können sie dies mit größerer Sicherheit über die Schaltfläche Abbrechen tun.
     -   **Ausnahme:** Geben Sie keine Schaltfläche Abbrechen für Aufgaben an, bei denen Benutzer keine Änderungen vornehmen können. Die Schaltfläche OK hat in diesem Fall die gleiche Wirkung wie Abbrechen.
--   **Verwenden Sie die Commitschaltflächen Schließen, Fertig oder Fertig stellen nicht.** Diese Schaltflächen werden in der Regel mit modalen Dialogfeldern verwendet und implizieren fälschlicherweise das Schließen des Systemsteuerungselementfensters. Benutzer können das Fenster mithilfe der Schaltfläche Schließen auf der Titelleiste schließen. Außerdem sind Fertig und Fertig stellen irreführend, da Benutzer auf die Seite zurückgegeben werden, auf der die Aufgabe gestartet wurde, sodass sie nicht wirklich fertig sind.
+-   **Verwenden Sie die Commitschaltflächen Schließen, Fertig oder Fertig stellen nicht.** Diese Schaltflächen werden in der Regel mit modalen Dialogfeldern verwendet und implizieren fälschlicherweise das Schließen des Elementfensters der Systemsteuerung. Benutzer können das Fenster mithilfe der Schaltfläche Schließen auf der Titelleiste schließen. Außerdem sind Fertig und Fertig stellen irreführend, da Benutzer auf die Seite zurückgegeben werden, auf der die Aufgabe gestartet wurde, sodass sie nicht wirklich fertig sind.
 -   **Deaktivieren Sie keine Commitschaltflächen.** Andernfalls müssen Benutzer die Gründe für die Deaktivierung der Commitschaltflächen ableiten. Es ist besser, commit-Schaltflächen aktiviert zu lassen und bei jedem Problem eine hilfreiche Fehlermeldung zu geben.
 -   **Stellen Sie sicher, dass die Commitschaltflächen auf der Seite angezeigt werden, ohne zu scrollen.** Wenn die Seite lang ist, können Sie Commitschaltflächen [](glossary.md)immer sichtbar machen, indem Sie sie in einem Befehlsbereich statt im Inhaltsbereich platzieren.
 
@@ -353,9 +353,9 @@ Ein Systemsteuerungselement verfügt über eine Livevorschau, wenn die Auswirkun
 
 ### <a name="control-panel-integration"></a>Integration der Systemsteuerung
 
-Zum Integrieren Ihres Systemsteuerungselements in Windows haben Sie dies:
+So integrieren Sie Ihr Systemsteuerungselement in Windows:
 
--   **Registrieren Sie Ihr Systemsteuerungselement (einschließlich Name,** Beschreibung und Symbol), damit Windows es kennt.
+-   **Registrieren Sie Ihr Systemsteuerungselement (einschließlich Name, Beschreibung** und Symbol), damit Windows es kennt.
 -   Wenn Sich ihr Systemsteuerungselement auf der obersten Ebene befindet (siehe unten):
     -   Ordnen Sie sie der entsprechenden **Kategorieseite zu.**
     -   **Stellen Sie Aufgabenlinks (einschließlich Name, Beschreibung,** Schlüsselwörter und Befehlszeile) zur Verfügung, um primäre Aufgaben anzugeben und Benutzern zu ermöglichen, direkt zu den Aufgaben zu navigieren.
@@ -387,7 +387,7 @@ Zum Integrieren Ihres Systemsteuerungselements in Windows haben Sie dies:
 
 **Aufgabenlinks**
 
--   **Ordnen Sie ihr Systemsteuerungselement den primären Aufgaben zu.** Sie können bis zu fünf Aufgaben auf einer Kategorieseite anzeigen, für die Systemsteuerungssuche werden jedoch zusätzliche Aufgaben verwendet. Verwenden Sie denselben Ausdruck wie für Aufgabenlinks, und entfernen Sie möglicherweise einige Wörter, um die Aufgabenlinks prägnanter zu machen.
+-   **Ordnen Sie ihr Systemsteuerungselement den primären Aufgaben zu.** Sie können bis zu fünf Aufgaben auf einer Kategorieseite anzeigen, aber zusätzliche Aufgaben werden für die Suche in der Systemsteuerung verwendet. Verwenden Sie denselben Ausdruck wie für Aufgabenlinks, und entfernen Sie möglicherweise einige Wörter, um die Aufgabenlinks prägnanter zu machen.
 -   **Es wird bevorzugt, dass Aufgabenlinks zu unterschiedlichen Stellen in Ihrem Systemsteuerungselement führen.** Mehrere Links zum gleichen Ort können verwirrend sein.
 
 **Suchbegriffe**
@@ -402,12 +402,12 @@ Zum Integrieren Ihres Systemsteuerungselements in Windows haben Sie dies:
 -   **Schließen Sie auch allgemeine Synonyme für diese Suchbegriffe ein.** Monitor und Anzeige sind beispielsweise Synonyme, daher sollten beide Wörter eingeschlossen werden.
 -   **Fügen Sie alternative Schreibweisen oder Wörterumbrüche ein.** Beispielsweise können Benutzer entweder nach Website und Website suchen. Erwägen Sie auch die Bereitstellung häufiger Falschschreibfehler.
 -   **Betrachten Sie Singular- und Plural nomen-Formen.** Das Suchfeature der Systemsteuerung sucht nicht automatisch nach beiden Formularen. stellt die Formulare zur Verfügung, nach denen Benutzer wahrscheinlich suchen werden.
--   **Verwenden Sie einfache Gegenwärtigkeitsverben.** Wenn Sie connect als Suchbegriff registrieren, sucht das Suchfeature nicht automatisch nach Verbindungen, Verbindungen und Verbunden.
+-   **Verwenden Einfacher vorhandener Tense-Verben.** Wenn Sie connect als Suchbegriff registrieren, sucht das Suchfeature nicht automatisch nach Verbindungen, Verbindungen und Verbunden.
 -   **Machen Sie sich keine Gedanken über den Fall.** Bei der Suchfunktion wird die Kleinschreibung nicht beachtet.
 
 ### <a name="standard-users-and-protected-administrators"></a>Standardbenutzer und geschützte Administratoren
 
-**Viele Einstellungen erfordern Administratorrechte, um sich zu ändern.** Wenn ein Prozess Administratorrechte erfordert, Windows Vista und höher [Standardbenutzer](glossary.md) und [geschützte](glossary.md) Administratoren ihre Berechtigungen explizit erhöhen. Dadurch wird verhindert, dass schädlicher Code mit Administratorrechten ausgeführt wird.
+**Viele Einstellungen erfordern Administratorrechte, um sich zu ändern.** Wenn ein Prozess Administratorrechte erfordert, Windows Vista und höher [Standardbenutzer](glossary.md) und [Geschützte](glossary.md) Administratoren ihre Berechtigungen explizit erhöhen. Dadurch wird verhindert, dass schädlicher Code mit Administratorrechten ausgeführt wird.
 
 Weitere Informationen und Beispiele finden Sie unter [Benutzerkontensteuerung.](winenv-uac.md)
 
@@ -431,15 +431,15 @@ Ein Schema ist eine benannte Sammlung visueller Einstellungen. Ein Design ist ei
 
 -   **Geben Sie die Befehle Speichern unter und Löschen an.** Ein Umbenennungsbefehl ist nicht erforderlich, benutzer können Schemas umbenennen, indem sie unter dem gewünschten Namen speichern und das ursprüngliche Schema löschen.
 -   Wenn die Einstellungen nicht ohne Schema angewendet werden können, dürfen Benutzer nicht alle **Schemas löschen.** Benutzer sollten kein eigenes Schema erstellen müssen.
--   Wenn die Schemas nicht vollständig unabhängig sind (z. B. sind Energieschemas vom aktuellen Laptopmodus abhängig), stellen Sie sicher, dass es eine einfache Möglichkeit gibt, Einstellungen zu ändern, die für alle **Schemas gelten.** Stellen Sie beispielsweise bei Energieschemas sicher, dass Benutzer festlegen können, was geschieht, wenn die Deckel eines portablen Computers an einem einzigen Ort geschlossen werden.
+-   Wenn die Schemas nicht vollständig unabhängig sind (z. B. sind Energieschemas vom aktuellen Laptopmodus abhängig), stellen Sie sicher, dass es eine einfache Möglichkeit gibt, Einstellungen zu ändern, die für alle **Schemas gelten.** Stellen Sie beispielsweise bei Energieschemas sicher, dass Benutzer festlegen können, was geschieht, wenn der Deckel eines portablen Computers an einem einzigen Ort geschlossen wird.
 
 ### <a name="miscellaneous"></a>verschiedene gefährliche Stoffe
 
--   **Verwenden Systemsteuerung Erweiterungen für Features, die vorhandene Funktionen ersetzen Windows erweitern.** Die folgenden Systemsteuerungselemente sind erweiterbar: Bluetooth Devices, Display, Internet, Keyboard, Mouse, Network, Power, System, Wireless (Wireless).
+-   **Verwenden Systemsteuerung Erweiterungen für Features, die vorhandene Funktionen ersetzen Windows erweitern.** Die folgenden Systemsteuerungselemente sind erweiterbar: Bluetooth Devices, Display, Internet, Keyboard, Mouse, Network, Power, System, Wireless (2017).
 
 ### <a name="default-values"></a>Standardwerte
 
--   **Die Einstellungen in einem Systemsteuerungselement müssen den aktuellen Zustand des Features widerspiegeln.** Andernfalls wäre dies irreführend und kann zu unerwünschten Ergebnissen führen. Wenn die Einstellungen beispielsweise die Empfehlungen, aber nicht den aktuellen Status widerspiegeln, können Benutzer auf Abbrechen klicken, anstatt Änderungen vorzunehmen, da sie denken, dass keine Änderungen erforderlich sind.
+-   **Die Einstellungen in einem Systemsteuerungselement müssen den aktuellen Zustand des Features widerspiegeln.** Andernfalls wäre dies irreführend und führt möglicherweise zu unerwünschten Ergebnissen. Wenn die Einstellungen beispielsweise die Empfehlungen, aber nicht den aktuellen Status widerspiegeln, können Benutzer auf Abbrechen klicken, anstatt Änderungen vorzunehmen, da sie denken, dass keine Änderungen erforderlich sind.
 -   **Wählen Sie den sichersten (um Datenverlust oder Systemzugriff zu verhindern) und den sichersten Anfangszustand aus.** Angenommen, die meisten Benutzer ändern die Einstellungen nicht.
 -   **Wenn Sicherheit und Sicherheit keine Faktoren sind, wählen Sie den Anfangszustand aus, der wahrscheinlich oder praktisch ist.**
 
@@ -495,19 +495,19 @@ Ein Schema ist eine benannte Sammlung visueller Einstellungen. Ein Design ist ei
 **Hinweis:** Wie bei allen Explorer-Fenstern werden titel der Systemsteuerungsseite auf der Adressleiste [angezeigt,](glossary.md)jedoch nicht in der Titelleiste.
 
 -   **Verwenden Sie für Hubseiten den Elementnamen der Systemsteuerung.**
--   **Verwenden Sie für Spoke-Seiten eine präzise Zusammenfassung des Zwecks der Seite.** Verwenden Sie die Hauptanweisung der Seite, wenn sie präzise ist. verwenden Sie andernfalls eine präzise Neuformtierung der Main-Anweisung.
+-   **Verwenden Sie für Spoke-Seiten eine präzise Zusammenfassung des Zwecks der Seite.** Verwenden Sie die Hauptanweisung der Seite, wenn sie präzise ist. verwenden Sie andernfalls eine präzise Neuformtierung der main-Anweisung.
 
     ![Screenshot des Dialogfelds "Energieoptionen" ](images/winenv-ctrl-panels-image6.png)
 
     In diesem Beispiel wird Energieoptionen für den Seitentitel anstelle der main-Anweisung verwendet.
 
--   Verwenden Sie die Groß-/Großschreibung im Titelstil.
+-   Verwenden Sie die Groß-/Groß-/Groß-/Formatvorlage.
 
 ### <a name="task-link-text"></a>Text des Aufgabenlinks
 
-Die folgenden Richtlinien gelten für Links zu Aufgabenseiten, z. B. Aufgabenlinks für Kategorieseiten und Links zu "Siehe auch".
+Die folgenden Richtlinien gelten für Links zu Aufgabenseiten, z. B. Links zu Kategorieseiten-Aufgaben und Siehe auch Links.
 
--   **Wählen Sie präzise Aufgabennamen aus, die die Aufgabe eindeutig kommunizieren und unterscheiden.** Benutzer sollten nicht herausfinden müssen, was die Aufgabe wirklich bedeutet oder wie sie sich von anderen Aufgaben unterscheidet.
+-   **Wählen Sie präzise Aufgabennamen aus, die eindeutig kommunizieren und die Aufgabe unterscheiden.** Benutzer sollten nicht herausfinden müssen, was die Aufgabe tatsächlich bedeutet oder wie sie sich von anderen Aufgaben unterscheidet.
 
     **Falsch:**
 
@@ -519,29 +519,29 @@ Die folgenden Richtlinien gelten für Links zu Aufgabenseiten, z. B. Aufgabenlin
 
     Im richtigen Beispiel vermittelt die Formulierung mehr Genauigkeit.
 
--   **Behalten Sie eine ähnliche Sprache zwischen Aufgabenlinks und den Seiten bei, auf die sie verweisen.** Benutzer sollten sich nicht von der Seite, die durch einen Link angezeigt wird, nicht überrumpeln lassen.
--   **Entwerfen Sie für Aufgabenseiten die Hauptanweisung, Commitschaltflächen und Aufgabenlinks als verwandten Textsatz.**
+-   **Behalten Sie eine ähnliche Sprache zwischen Aufgabenlinks und den Seiten bei, auf die sie zeigen.** Benutzer sollten nicht von der Seite, die durch einen Link angezeigt wird, nicht überraschend sein.
+-   **Entwerfen Sie für Aufgabenseiten die Hauptanweisung, Commitschaltflächen und Aufgabenlinks als zugehörigen Textsatz.**
     
 
     | Beispiel                             |    Anweisung                                                   |
     |------------------------------|-------------------------------------------------------|
     | Aufgabenlink:<br/>        | Herstellen der Verbindung mit einem WLAN<br/>              |
     | Hauptanweisung:<br/> | Auswählen eines Netzwerks, mit dem eine Verbindung hergestellt werden soll<br/>             |
-    | Schaltfläche "Commit":<br/>    | Verbinden<br/>                                    |
-    | Aufgabenlink:<br/>        | Einrichten der Jugendschutzmechanismen<br/>                   |
-    | Hauptanweisung:<br/> | Auswählen eines Benutzers und Einrichten der Jugendschutzmechanismen<br/> |
-    | Schaltfläche "Commit":<br/>    | Anwenden der Jugendschutz<br/>                     |
+    | Schaltfläche "Commit" (Commit):<br/>    | Verbinden<br/>                                    |
+    | Aufgabenlink:<br/>        | Einrichten von Jugendschutz<br/>                   |
+    | Hauptanweisung:<br/> | Auswählen eines Benutzers und Einrichten von Jugendschutz<br/> |
+    | Schaltfläche "Commit" (Commit):<br/>    | Anwenden der Jugendkontrolle<br/>                     |
     | Aufgabenlink:<br/>        | Lösen von Synchronisierungskonflikten<br/>                |
     | Hauptanweisung:<br/> | Wie möchten Sie diesen Konflikt lösen?<br/>  |
-    | Schaltfläche "Commit":<br/>    | Beheben<br/>                                    |
+    | Schaltfläche "Commit" (Commit):<br/>    | Beheben<br/>                                    |
 
     
 
      
 
-    Diese Beispiele zeigen die Beziehung zwischen dem Tasklinktext, der Hauptanweisung und dem Text der Commitschaltfläche.
+    Diese Beispiele zeigen die Beziehung zwischen dem Text des Aufgabenlinks, der Hauptanweisung und dem Text der Commitschaltfläche.
 
--   Während Aufgaben häufig mit Verben beginnen, **sollten Sie das Verb auf Kategorieseiten weglassen, wenn es sich um ein generisches, konfigurationsbezogenes Verb handelt, das die Kommunikation der Aufgabe nicht unterstützt.**
+-   Während Aufgaben häufig mit Verben beginnen, sollten Sie das Verb auf Kategorieseiten weglassen, wenn es sich um ein generisches, konfigurationsbezogenes Verb handelt, das die Kommunikation der **Aufgabe nicht unterstützt.**
 
     **Spezifische, hilfreiche Verben:**
 
@@ -597,23 +597,23 @@ Die folgenden Richtlinien gelten für Links zu Aufgabenseiten, z. B. Aufgabenlin
 
     Sicht
 
--   **Wenn der Task mehrere verwandte Features konfiguriert, listen Sie nur die Features auf, die für den Satz repräsentativ sind.** Lassen Sie Details aus, die leicht abgeleitet werden können.
+-   **Wenn der Task mehrere verwandte Features konfiguriert, listen Sie nur die Features auf, die für die Gruppe repräsentativ sind.** Lassen Sie Details weg, die leicht abgeleitet werden können.
 
     **Falsch:**
 
-    Lautstärke des Lautsprechers, Stummschalten, Lautstärkesymbol
+    Lautsprecherlautstärke, Stummschaltung, Lautstärkesymbol
 
-    Lautsprecher, Mikrofone, PARTS und Soundschemas
+    Lautsprecher, Mikrofone, PROGRAMME und Soundschemas
 
     **Richtig:**
 
-    Lautstärke des Lautsprechers
+    Sprecherlautstärke
 
     Lautsprecher und Mikrofone
 
     In den richtigen Beispielen werden nur die repräsentativen Features im Aufgabenlink angegeben.
 
--   **Sie sollten Aufgaben nur in Bezug auf die Technologie formulieren, wenn dies auch für Zielbenutzer derFall ist.**
+-   **Sie sollten Aufgaben nur dann in Bezug auf die Technologie ausdrücken, wenn dies auch für Zielbenutzer gilt.**
 
     **Falsch:**
 
@@ -631,21 +631,21 @@ Die folgenden Richtlinien gelten für Links zu Aufgabenseiten, z. B. Aufgabenlin
 
     Maus
 
-    Die richtigen Beispiele sind technologiebasierte Begriffe, die zielorientierte Benutzer wahrscheinlich verwenden, während dies nicht der Richtige ist.
+    Die richtigen Beispiele sind technologiebasierte Begriffe, die benutzerorientierte Benutzer wahrscheinlich verwenden, die falschen Beispiele hingegen nicht.
 
 -   Verwenden Sie Plural nomen nur, wenn das System mehr als eins unterstützen kann.
--   Verwenden Sie [die Groß-/Großschreibung im Satzformat.](glossary.md)
+-   Verwenden Sie [die Groß-/Groß-/Groß-](glossary.md)
 -   Verwenden Sie keine Interpunktion am Ende.
 
 ### <a name="main-instructions"></a>Hauptanweisungen
 
--   **Verwenden Sie für die Hubseite die Hauptanweisung, um das Ziel des Benutzers mit dem Systemsteuerungselement zu erläutern.** Die Hauptanweisung sollte Benutzern helfen, zu bestimmen, ob sie das richtige Systemsteuerungselement ausgewählt haben. Beachten Sie, dass Benutzer möglicherweise ihr Systemsteuerungselement mit einem Fehler ausgewählt haben und tatsächlich nach Einstellungen suchen, die Teil eines anderen Systemsteuerungselements sind.
+-   **Verwenden Sie für die Hubseite die Main-Anweisung, um das Ziel des Benutzers mit dem Systemsteuerungselement zu erläutern.** Die Main-Anweisung sollte Benutzern helfen zu bestimmen, ob sie das richtige Systemsteuerungselement ausgewählt haben. Beachten Sie, dass Benutzer ihr Systemsteuerungselement möglicherweise als Fehler ausgewählt haben und tatsächlich nach Einstellungen suchen, die Teil eines anderen Systemsteuerungselements sind.
 
     **Beispiele:**
 
-    Halten Sie Ihren Computer sicher und auf dem neuesten Stand.
+    Schützen und Auf dem neuesten Stand Ihres Computers
 
-    Optimieren Sie Ihren Computer, damit er leichter zu sehen, zu hören und zu steuern ist.
+    Optimieren Sie Ihren Computer, damit er leichter zu erkennen, zu hören und zu steuern ist.
 
 -   **Verwenden Sie für Spoke-Seiten die Hauptanweisung, um zu erläutern, was auf der Seite zu tun ist.** Die Anweisung sollte eine bestimmte Anweisung, imperative Richtung oder Frage sein. Gute Anweisungen kommunizieren das Ziel des Benutzers mit der Seite, anstatt sich ausschließlich auf die Mechanismen der Bearbeitung zu konzentrieren.
 
@@ -655,31 +655,31 @@ Die folgenden Richtlinien gelten für Links zu Aufgabenseiten, z. B. Aufgabenlin
 
     **Richtig:**
 
-    Angeben des Umgangs mit eingehenden Informationen
+    Angeben der Handhabung eingehender Informationen
 
-    Die richtige Version kommuniziert das von der Seite erreichten Ziel besser.
+    Die richtige Version kommuniziert besser das von der Seite erreichte Ziel.
 
 -   **Verwenden Sie nach Möglichkeit bestimmte Verben.** Bestimmte Verben sind für Benutzer aussagekräftiger als generische Verben.
--   Verwenden Sie [die Groß-/Großschreibung im Satzformat.](glossary.md)
--   **Schließen Sie keine abschließenden Zeiträume ein, wenn die Anweisung eine -Anweisung ist.** Wenn die Anweisung eine Frage ist, fügen Sie ein abschließendes Fragezeichen ein.
+-   Verwenden Sie [die Groß-/Groß-/Groß-](glossary.md)
+-   **Schließen Sie keine abschließenden Zeiträume ein, wenn die Anweisung eine -Anweisung ist.** Wenn es sich bei der Anweisung um eine Frage handelt, fügen Sie ein abschließendes Fragezeichen ein.
 
 ### <a name="supplemental-instructions"></a>Zusätzliche Anweisungen
 
--   **Verwenden Sie für die Hubseite die optionale zusätzliche Anweisung, um den Zweck des Systemsteuerungselements näher zu erläutern.**
--   **Verwenden Sie für Spoke-Seiten die optionale ergänzende Anweisung, um zusätzliche Informationen anzuzeigen, die hilfreich sind, um die Seite zu verstehen oder zu verwenden.** Sie können ausführlichere Informationen bereitstellen und Terminologie definieren.
--   Verwenden Sie vollständige Sätze und Großbuchstaben im [Satzstil.](glossary.md)
+-   **Verwenden Sie für die Hubseite die optionale zusätzliche Anweisung, um den Zweck des Systemsteuerungselements weiter zu erläutern.**
+-   **Verwenden Sie für Spoke-Seiten die optionale zusätzliche Anweisung, um zusätzliche Informationen anzuzeigen, die für das Verständnis oder die Verwendung der Seite hilfreich sind.** Sie können ausführlichere Informationen bereitstellen und Terminologie definieren.
+-   Verwenden Sie vollständige Sätze und [die Groß-/A-Sätze.](glossary.md)
 
 ### <a name="page-text"></a>Seitentext
 
--   **Geben Sie die Hauptanweisung nicht im Inhaltsbereich an.**
+-   **Geben Sie die Hauptanweisung nicht im Inhaltsbereich neu.**
 -   **Verwenden Sie das Wort "page", um auf die Seite selbst zu verweisen.**
--   **Verwenden Sie die zweite Person (Sie, Ihre), um Benutzern mitzuteilen, was** im Hauptbereich für Anweisungen und Inhalte zu tun ist. Häufig wird die zweite Person impliziert.
+-   **Verwenden Sie die zweite Person (Sie, Ihre),** um Benutzern zu sagen, was im Hauptanweisungs- und Inhaltsbereich zu tun ist. Häufig wird die zweite Person impliziert.
 
     **Beispiel:**
 
     Wählen Sie die Bilder aus, die Sie drucken möchten.
 
--   **Verwenden Sie die erste Person (I, me, my), damit Benutzer dem Systemsteuerungselement mitteilen können, was** im Inhaltsbereich zu tun ist, der auf die Hauptanweisung reagiert.
+-   **Verwenden Sie die erste Person (I, me, my),** damit Benutzer dem Systemsteuerungselement mitteilen können, was im Inhaltsbereich zu tun ist, der auf die Hauptanweisung reagiert.
 
     **Beispiel:**
 
@@ -687,44 +687,44 @@ Die folgenden Richtlinien gelten für Links zu Aufgabenseiten, z. B. Aufgabenlin
 
 ### <a name="task-links"></a>Aufgabenlinks
 
--   **Wählen Sie präzisen Linktext aus, der klar kommuniziert und unterscheidet, was der Tasklink macht.** Sie sollte selbsterklärend sein und der Hauptanweisung entsprechen. Benutzer sollten nicht herausfinden müssen, was der Link wirklich bedeutet oder wie er sich von anderen Links unterscheidet.
--   **Tasklinks immer mit einem Verb starten.**
--   Verwenden Sie [die Groß-/Großschreibung im Satzformat.](glossary.md)
+-   **Wählen Sie präzisen Linktext aus, der eindeutig kommuniziert und die Aufgabenverknüpfung unterscheidet.** Sie sollte selbsterklärend sein und der Main-Anweisung entsprechen. Benutzer sollten nicht herausfinden müssen, was der Link wirklich bedeutet oder wie er sich von anderen Links unterscheidet.
+-   **Tasklinks werden immer mit einem Verb gestartet.**
+-   Verwenden Sie [die Groß-/Groß-/Groß-](glossary.md)
 -   Verwenden Sie keine Interpunktion am Ende.
--   **Wenn der Aufgabenlink eine weitere Erläuterung erfordert, geben Sie die Erklärung in einem separaten Textsteuerelement** an, indem Sie vollständige Sätze und endende Interpunktion verwenden. Fügen Sie solche Erklärungen jedoch nur bei Bedarf hinzu, und fügen Sie nicht allen Aufgabenlinks Erklärungen hinzu, da eine andere Aufgabenverbindung benötigt wird.
+-   **Wenn der Aufgabenlink eine weitere Erläuterung erfordert, geben Sie** die Erklärung in einem separaten Textsteuerfeld an, indem Sie vollständige Sätze und Satzzeichen beenden. Fügen Sie solche Erklärungen jedoch nur bei Bedarf hinzu, fügen Sie nicht allen Aufgabenlinks Erklärungen hinzu, da ein anderer Aufgabenlink eine solche benötigt.
 
 Weitere Informationen und Beispiele finden Sie unter [Links](ctrl-command-links.md).
 
 ### <a name="commit-buttons"></a>Commitschaltflächen
 
--   **Verwenden Sie bestimmte Commitschaltflächenbezeichnungen, die eigenständig sinnvoll sind und mit der Hauptanweisung übereinstimmen.** Im Idealfall sollten Benutzer nichts anderes lesen müssen, um die Bezeichnung zu verstehen. Die Wahrscheinlichkeit, dass Benutzer Befehlsschaltflächenbezeichnungen lesen, ist weitaus wahrscheinlicher als statischer Text.
--   **Starten Sie immer Commit-Schaltflächenbezeichnungen mit einem Verb.**
+-   **Verwenden Sie bestimmte Commitschaltflächenbezeichnungen, die für sich allein sinnvoll sind und mit der Main-Anweisung übereinstimmen.** Im Idealfall sollten Benutzer nichts anderes lesen müssen, um die Bezeichnung zu verstehen. Benutzer lesen die Bezeichnungen der Befehlsschaltfläche viel wahrscheinlicher als statischen Text.
+-   **Starten Sie die Schaltflächenbezeichnungen für Commits immer mit einem Verb.**
 -   **Verwenden Sie nicht Schließen, Fertig oder Fertig stellen.** Diese Schaltflächenbezeichnungen eignen sich besser für andere Fenstertypen.
--   Verwenden Sie [die Groß-/Großschreibung im Satzformat.](glossary.md)
+-   Verwenden Sie [die Groß-/Groß-/Groß-](glossary.md)
 -   Verwenden Sie keine Interpunktion am Ende.
--   Weisen Sie einen eindeutigen [Zugriffsschlüssel zu.](glossary.md)
-    -   **Ausnahme:** Weisen Sie Den Schaltflächen "Abbrechen" keine Zugriffsschlüssel zu, da es sich bei ESC um den Zugriffsschlüssel handelt. Auf diese Weise können die anderen Zugriffsschlüssel einfacher zugewiesen werden.
+-   Weisen Sie einen [eindeutigen Zugriffsschlüssel zu.](glossary.md)
+    -   **Ausnahme:** Weisen Sie den Schaltflächen Abbrechen keine Zugriffsschlüssel zu, da esc sein Zugriffsschlüssel ist. Dadurch wird die Zuweisung der anderen Zugriffsschlüssel vereinfacht.
 
 ## <a name="documentation"></a>Dokumentation
 
-Wenn Sie auf die Startseite oder Kategorieseiten der Systemsteuerung verweisen:
+Beim Verweisen auf die Startseite oder Kategorieseiten der Systemsteuerung:
 
--   Lesen Sie in der Benutzerdokumentation Systemsteuerung, indem Sie großgeschriebene Titel verwenden und einen vorangehenden eindeutigen Artikel auslassen.
+-   Lesen Sie in der Benutzerdokumentation Systemsteuerung, indem Sie die Groß- und Groß-/Formatvorlage verwenden und einen vorherigen bestimmten Artikel auslassen.
 
     **Beispiel:**
 
-    Öffnen Sie in Systemsteuerung **Security Center**.
+    Öffnen Systemsteuerung in **Security Center**.
 
--   In der Programmierung und anderen technischen Dokumentationen finden Sie auf der Startseite der Systemsteuerung und auf der Seite mit der Systemsteuerungskategorie weitere Informationen, ohne die Wörter groß zu machen. Ein vorheriger bestimmter Artikel ist optional.
+-   Lesen Sie in der Programmierung und anderen technischen Dokumentationen die Startseite der Systemsteuerung und die Kategorieseite der Systemsteuerung, ohne eines der Wörter groß zu machen. Ein vorheriger definitiver Artikel ist optional.
 
 Für Systemsteuerungselemente:
 
--   Wenn Sie auf ein einzelnes Systemsteuerungselement verweisen, verwenden Sie \[ "Systemsteuerungselementname \] in Systemsteuerung" oder im Allgemeinen "Systemsteuerung Element" in der Benutzerdokumentation. Verwenden Sie applet, program oder control panel nicht, um auf einzelne Systemsteuerungselemente zu verweisen.
--   Wenn Sie auf die Hubseite eines Systemsteuerungselements verweisen, verwenden Sie "Main \[ Control Panel Item Name \] Page".
--   Formatieren Sie den Systemsteuerungsnamen nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie den Namen nur in Anführungszeichen, wenn dies erforderlich ist, um Verwechslungen zu vermeiden.
+-   Wenn Sie auf ein einzelnes Systemsteuerungselement verweisen, verwenden Sie "Systemsteuerungselementname in Systemsteuerung" oder im Allgemeinen \[ \] "Systemsteuerung Element" in der Benutzerdokumentation. Verwenden Sie applet, program oder control panel nicht, um auf einzelne Systemsteuerungselemente zu verweisen.
+-   Wenn Sie auf die Hubseite eines Systemsteuerungselements verweisen, verwenden Sie die "Hauptseite des \[ Elementnamens der \] Systemsteuerung".
+-   Formatieren Sie den Namen der Systemsteuerung nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie den Namen nur dann in Anführungszeichen, wenn dies erforderlich ist, um Verwirrung zu vermeiden.
 
 Beispiele:
 
--   Öffnen Sie in Systemsteuerung **Die Jugendschutzelemente.**
--   Kehren Sie zur Hauptseite **Der Jugendschutz** zurück.
+-   Öffnen Systemsteuerung in der Datei **"Jugendschutz".**
+-   Kehren Sie zur **Hauptseite Der Jugendschutz** zurück.
 

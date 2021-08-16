@@ -1,5 +1,5 @@
 ---
-description: 'Shell.ShutdownWindows-Methode: Zeigt das Dialogfeld Herunterfahren Windows an. Dies entspricht dem Klicken auf den Startmenü und dem Auswählen von Herunterfahren.'
+description: 'Shell.ShutdownWindows-Methode: Zeigt das Dialogfeld Herunterfahren Windows an. Dies ist identisch mit dem Klicken auf das Startmenü und dem Auswählen von Herunterfahren.'
 ms.assetid: 6fa8e2e0-a58f-4837-89f5-898cece2d80a
 title: Shell.ShutdownWindows-Methode (Shldisp.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "117857729"
 ---
 # <a name="shellshutdownwindows-method"></a>Shell.ShutdownWindows-Methode
 
-Zeigt das Dialogfeld **Herunterfahren Windows** an. Dies entspricht dem Klicken auf das **Menü Start** und dem Auswählen von **Herunterfahren.**
+Zeigt das **Dialogfeld Herunterfahren Windows** an. Dies ist identisch mit dem Klicken auf das **Startmenü** und dem Auswählen **von Herunterfahren.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel **wird ShutdownWindows** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **ShutdownWindows** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
 JScript:
 

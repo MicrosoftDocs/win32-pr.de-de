@@ -4,7 +4,7 @@ description: Die remove-Methode entfernt eine Wiedergabeliste aus der Bibliothek
 ms.assetid: 3327ba59-5f46-4df0-ba95-c338b019277d
 keywords:
 - Remove-Windows Media Player
-- remove method Windows Media Player , PlaylistCollection class
+- remove-Windows Media Player , PlaylistCollection-Klasse
 - PlaylistCollection-Klasse Windows Media Player , remove-Methode
 topic_type:
 - apiref

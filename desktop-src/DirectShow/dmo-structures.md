@@ -13,16 +13,16 @@ ms.locfileid: "117821064"
 ---
 # <a name="dmo-structures"></a>DMO Strukturen
 
-In diesem Abschnitt werden die DirectX-Medienobjektstrukturen (DMO) beschrieben.
+In diesem Abschnitt werden die DirectX Media Object-Strukturen (DMO beschrieben.
 
 
 
-| Struktur                                                   | BESCHREIBUNG                                                 |
+| Struktur                                                   | Beschreibung                                                 |
 |-------------------------------------------------------------|-------------------------------------------------------------|
-| [**\_DMO \_MEDIENTYP**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type)                  | Beschreibt das Format der Daten, die von einem Stream in einem DMO verwendet werden. |
-| [**\_DMO \_ \_ AUSGABEDATENPUFFER**](/previous-versions/windows/desktop/api/Mediaobj/ns-mediaobj-dmo_output_data_buffer) | Beschreibt einen Ausgabepuffer, der von einem DMO verwendet wird.                   |
-| [**\_DMO PARTIAL \_ MEDIATYPE**](/previous-versions/windows/desktop/api/Dmoreg/ns-dmoreg-dmo_partial_mediatype)    | Beschreibt teilweise einen Medientyp, der von einem DMO verwendet wird.             |
-| [**\_MP-UMSCHLAGSEGMENT \_**](/previous-versions/windows/desktop/api/Medparam/ns-medparam-mp_envelope_segment)        | Definiert ein Umschlagsegment, das von einem Medienparameter verwendet wird.      |
+| [**\_DMO \_MEDIENTYP**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type)                  | Beschreibt das Format der Daten, die von einem Stream in einem -DMO. |
+| [**\_DMO \_ \_ AUSGABEDATENPUFFER**](/previous-versions/windows/desktop/api/Mediaobj/ns-mediaobj-dmo_output_data_buffer) | Beschreibt einen Ausgabepuffer, der von einem -DMO.                   |
+| [**\_DMO PARTIAL \_ MEDIATYPE**](/previous-versions/windows/desktop/api/Dmoreg/ns-dmoreg-dmo_partial_mediatype)    | Beschreibt teilweise einen Medientyp, der von einem -DMO.             |
+| [**\_MP-UMSCHLAGSEGMENT \_**](/previous-versions/windows/desktop/api/Medparam/ns-medparam-mp_envelope_segment)        | Definiert ein von einem Medienparameter verwendetes Umschlagsegment.      |
 | [**MP \_ PARAMINFO**](/previous-versions/windows/desktop/api/Medparam/ns-medparam-mp_paraminfo)                       | Enthält Informationen zu einem Medienparameter.               |
 
 

@@ -1,7 +1,7 @@
 ---
-description: Holen Sie sich die Sprite-Projektions Matrix, die auf alle Sprites angewendet wird.
+description: Abrufen der Sprite-Projektionsmatrix, die auf alle Sprites angewendet wird.
 ms.assetid: aee65a9f-27f9-42d9-98eb-ae90fc18c7f5
-title: 'ID3DX10Sprite:: getprojectiontransform-Methode (d3dx10. h)'
+title: ID3DX10Sprite::GetProjectionTransform-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: eefd526fbe32158505db1edc73b9bbf527ad99be
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5c3f5b0a0dc60316398575855c79bdb8ac9b7113f953af75489d5b65d9ff8fb8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118301966"
 ---
-# <a name="id3dx10spritegetprojectiontransform-method"></a>ID3DX10Sprite:: getprojectiontransform-Methode
+# <a name="id3dx10spritegetprojectiontransform-method"></a>ID3DX10Sprite::GetProjectionTransform-Methode
 
-Holen Sie sich die Sprite-Projektions Matrix, die auf alle Sprites angewendet wird.
+Abrufen der Sprite-Projektionsmatrix, die auf alle Sprites angewendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT GetProjectionTransform(
 
 <dl> <dt>
 
-*pprojectiontransform* \[ vorgenommen\]
+*pProjectionTransform* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf ein [**D3DX10MATRIX**](d3d10-d3dxmatrix.md) -Wert, der auf die Projektions Matrix des Sprite festgelegt wird.
+Zeiger auf eine [**D3DX10MATRIX,**](d3d10-d3dxmatrix.md) die auf die Projektionsmatrix des Sprites festgelegt wird.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeiger auf ein [**D3DX10MATRIX**](d3d10-d3dxmatrix.md) -Wert, der auf die Projek
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

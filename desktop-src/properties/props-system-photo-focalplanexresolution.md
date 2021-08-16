@@ -1,5 +1,5 @@
 ---
-description: Gibt die Anzahl der Pixel in der Bildbreite (X-Richtung) pro FocalPlaneResolutionUnit auf der Fokuspunktebene der Kamera an. Berechnet aus PKEY \_ Photo \_ FocalPlaneXResolutionNumerator und PKEY \_ Photo \_ FocalPlaneXResolutionDenominator.
+description: Gibt die Anzahl der Pixel in der Bildbreite (X-Richtung) pro FocalPlaneResolutionUnit auf der Kamera-Fokusebene an. Berechnet aus PKEY \_ Photo \_ FocalPlaneXResolutionNumerator und PKEY \_ Photo \_ FocalPlaneXResolutionDenominator.
 ms.assetid: d1e94923-fdea-4894-813e-4617f3267bb7
 title: System.Photo.FocalPlaneXResolution
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118229524"
 ---
 # <a name="systemphotofocalplanexresolution"></a>System.Photo.FocalPlaneXResolution
 
-Gibt die Anzahl der Pixel in der Bildbreite (X-Richtung) pro FocalPlaneResolutionUnit auf der Fokuspunktebene der Kamera an. Berechnet aus PKEY \_ Photo \_ FocalPlaneXResolutionNumerator und PKEY \_ Photo \_ FocalPlaneXResolutionDenominator.
+Gibt die Anzahl der Pixel in der Bildbreite (X-Richtung) pro FocalPlaneResolutionUnit auf der Kamera-Fokusebene an. Berechnet aus PKEY \_ Photo \_ FocalPlaneXResolutionNumerator und PKEY \_ Photo \_ FocalPlaneXResolutionDenominator.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

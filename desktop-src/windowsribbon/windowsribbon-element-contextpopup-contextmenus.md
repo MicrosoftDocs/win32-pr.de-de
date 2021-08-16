@@ -1,5 +1,5 @@
 ---
-title: ContextPopup.ContextMenus-Eigenschaft
+title: ContextPopup.ContextMenus(Eigenschaft)
 description: Stellt einen Container für ContextMenu-Elemente dar.
 ms.assetid: 92633689-a892-421e-a5fb-e494f4cd1ea8
 keywords:
@@ -19,7 +19,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117851016"
 ---
-# <a name="contextpopupcontextmenus-property"></a>ContextPopup.ContextMenus-Eigenschaft
+# <a name="contextpopupcontextmenus-property"></a>ContextPopup.ContextMenus(Eigenschaft)
 
 Stellt einen Container für [**ContextMenu-Elemente**](windowsribbon-element-contextmenu.md) dar.
 
@@ -39,7 +39,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                             | BESCHREIBUNG                                        |
+| Element                                                             | Beschreibung                                        |
 |---------------------------------------------------------------------|----------------------------------------------------|
 | [**ContextMenu**](windowsribbon-element-contextmenu.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
@@ -59,7 +59,7 @@ Es gibt keine Attribute.
 
 Optional.
 
-Kann höchstens einmal für jede [**ContextPopup-Datei**](windowsribbon-element-contextpopup.md)auftreten.
+Kann für jedes [**ContextPopup--Ereignis mindestens einmal auftreten.**](windowsribbon-element-contextpopup.md)
 
 ## <a name="examples"></a>Beispiele
 
@@ -158,7 +158,7 @@ Dieser Codeabschnitt zeigt eine **ContextPopup.ContextMenus-Steuerelementdeklara
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 

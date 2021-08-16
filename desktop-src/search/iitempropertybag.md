@@ -1,5 +1,5 @@
 ---
-description: Definiert Methoden zum Abrufen von Informationen zu den Eigenschaften eines Suchelements. Diese Schnittstelle wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
+description: Definiert Methoden zum Abrufen von Informationen über die Eigenschaften eines Suchelements. Diese Schnittstelle wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 ms.assetid: 0fef34c5-f20f-475a-9223-5cb73079c842
 title: IItemPropertyBag-Schnittstelle
 ms.topic: reference
@@ -21,11 +21,11 @@ ms.locfileid: "118226561"
 ---
 # <a name="iitempropertybag-interface"></a>IItemPropertyBag-Schnittstelle
 
-Definiert Methoden zum Abrufen von Informationen zu den Eigenschaften eines Suchelements. Diese Schnittstelle wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
+Definiert Methoden zum Abrufen von Informationen über die Eigenschaften eines Suchelements. Diese Schnittstelle wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
 ## <a name="members"></a>Member
 
-Die **IItemPropertyBag-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IItemPropertyBag** verfügt auch über diese Membertypen:
+Die **IItemPropertyBag-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IItemPropertyBag** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
@@ -37,10 +37,10 @@ Die **IItemPropertyBag-Schnittstelle** verfügt über diese Methoden.
 
 | Methode                                                      | BESCHREIBUNG                                                                                  |
 |:------------------------------------------------------------|:---------------------------------------------------------------------------------------------|
-| [**CountProperties**](/previous-versions/windows/desktop/legacy/ff684387(v=vs.85)) | Ruft die Anzahl der Eigenschaften im Eigenschaften bag ab.<br/>                     |
-| [**GetPropertyInfo**](iitempropertybag-getpropertyinfo.md) | Ruft die Informationen ab, die zum Lesen oder Speichern der Eigenschaften in der Eigenschaftentüte erforderlich sind.<br/> |
-| [**Überwachungsdaten**](iitempropertybag-read.md)                       | Bewirkt, dass eine oder mehrere Eigenschaften aus dem Eigenschaften bag gelesen werden.<br/>                   |
-| [**Schreiben**](iitempropertybag-write.md)                     | Bewirkt, dass eine oder mehrere Eigenschaften in der Eigenschaftentüte gespeichert werden.<br/>                  |
+| [**CountProperties**](/previous-versions/windows/desktop/legacy/ff684387(v=vs.85)) | Ruft die Anzahl der Eigenschaften im Eigenschaftenbehälter ab.<br/>                     |
+| [**GetPropertyInfo**](iitempropertybag-getpropertyinfo.md) | Ruft die Informationen ab, die zum Lesen oder Speichern der Eigenschaften im Eigenschaftenbehälter erforderlich sind.<br/> |
+| [**Überwachungsdaten**](iitempropertybag-read.md)                       | Bewirkt, dass eine oder mehrere Eigenschaften aus dem Eigenschaftenbehälter gelesen werden.<br/>                   |
+| [**Schreiben**](iitempropertybag-write.md)                     | Bewirkt, dass eine oder mehrere Eigenschaften im Eigenschaftenbehälter gespeichert werden.<br/>                  |
 
 
 
@@ -50,7 +50,7 @@ Die **IItemPropertyBag-Schnittstelle** verfügt über diese Methoden.
 
 Die **IItemPropertyBag-Schnittstelle** wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
-Um eine Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern anzuzeigen, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die **IItemPropertyBag-Schnittstelle** und die folgenden APIs zu verwenden: die [**ISearchProtocolUI-,**](-search-isearchprotocolui.md) [**IItemPreviewerExt-**](-search-iitempreviewerext.md) und [**ISearchItem-Schnittstelle,**](-search-isearchitem.md) die [**LINKINFO-**](-search-linkinfo.md) und [**ITEMPROP-Strukturen**](/windows/desktop/api/subsmgr/ns-subsmgr-itemprop) und die [**LINKTYPE-Enumeration.**](-search-linktype.md)
+Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die **IItemPropertyBag-Schnittstelle** und die folgenden APIs zu verwenden: die Schnittstellen [**ISearchProtocolUI,**](-search-isearchprotocolui.md) [**IItemPreviewerExt**](-search-iitempreviewerext.md) und [**ISearchItem,**](-search-isearchitem.md) die [**LINKINFO-**](-search-linkinfo.md) und [**ITEMPROP-Strukturen**](/windows/desktop/api/subsmgr/ns-subsmgr-itemprop) sowie die [**LINKTYPE-Enumeration.**](-search-linktype.md)
 
 ## <a name="requirements"></a>Anforderungen
 

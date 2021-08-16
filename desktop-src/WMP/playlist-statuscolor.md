@@ -1,6 +1,6 @@
 ---
 title: PLAYLIST.statusColor
-description: Das attribut statusColor gibt die Farbe der Statuszeile im PLAYLIST-Element an oder ruft sie ab.
+description: Das statusColor-Attribut gibt die Farbe der Statuszeile im PLAYLIST-Element an oder ruft sie ab.
 ms.assetid: 31e32a69-1b77-42fe-9edc-45532ee51c27
 keywords:
 - PLAYLIST.statusColor-Windows Media Player
@@ -21,7 +21,7 @@ ms.locfileid: "118335658"
 ---
 # <a name="playliststatuscolor"></a>PLAYLIST.statusColor
 
-Das **attribut statusColor** gibt die Farbe der Statuszeile im **PLAYLIST-Element** an oder ruft sie ab.
+Das **statusColor-Attribut** gibt die Farbe der Statuszeile im PLAYLIST-Element an oder **ruft sie** ab.
 
 ``` syntax
         elementID.statusColor
@@ -29,7 +29,7 @@ Das **attribut statusColor** gibt die Farbe der Statuszeile im **PLAYLIST-Elemen
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer Farbwert enthält. Er verfügt über einen Standardwert, der dem Wert des **backgroundColor-Attributs** entspricht.
+Dieses Attribut ist eine  Lese-/Schreibzeichenfolge, die einen beliebigen Microsoft Internet Explorer-Farbwert enthält. Sie hat einen Standardwert, der dem Wert des **backgroundColor-Attributs** entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen be
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
 
 
 

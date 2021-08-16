@@ -1,7 +1,7 @@
 ---
-description: Entschlüsselt eine verschlüsselte und codierte Daten Zeichenfolge.
+description: Entschlüsselt eine verschlüsselte und codierte Datenzeichenfolge.
 ms.assetid: 7601083d-0adb-48e1-98a7-804a49f71206
-title: Verschlüsselteddata. entschlpt-Methode
+title: EncryptedData.Decrypt-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: aa702a5cefc46f6d0cbe5d7e0fba17ff03596b40
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8bf8a108efdc462a9f08a508a05b736817ec38ce43ee50dbd3fdd11aa2af9f74
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117766696"
 ---
-# <a name="encrypteddatadecrypt-method"></a>Verschlüsselteddata. entschlpt-Methode
+# <a name="encrypteddatadecrypt-method"></a>EncryptedData.Decrypt-Methode
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen den Platform invoationdienst (PInvoke), um die Win32-API-Funktionen [**cryptencryptmessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptencryptmessage) und [**cryptdecryptmessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdecryptmessage) aufzurufen, um Nachrichten zu verschlüsseln und zu entschlüsseln. Weitere Informationen zu PInvoke finden Sie unter [Tutorial zum Platt Form Aufruf](https://msdn.microsoft.com/library/aa288468.aspx). Die [.net-und CryptoAPI über p/aufrufen: Teil 1](/previous-versions/ms867087(v=msdn.10)#netcryptoapi_topic5) und [.net und CryptoAPI über p/aufrufen: Teil 2](/previous-versions/ms867087(v=msdn.10)#netcryptoapi_topic6) Unterabschnitte der [Erweiterung von .net-Kryptografie mit CAPICOM und p/aufrufen](/previous-versions/ms867087(v=msdn.10)) können ebenfalls hilfreich sein.\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen Platform Invocation Services (PInvoke) zum Aufrufen der Win32-API-Funktionen [**CryptEncryptMessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptencryptmessage) und [**CryptDecryptMessage,**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdecryptmessage) um Nachrichten zu verschlüsseln und zu entschlüsseln. Weitere Informationen zu PInvoke finden Sie unter [Tutorial zu Plattformaufrufen.](https://msdn.microsoft.com/library/aa288468.aspx) .NET und CryptoAPI über [P/Invoke:](/previous-versions/ms867087(v=msdn.10)#netcryptoapi_topic5) Teil 1 und .NET und [CryptoAPI über P/Invoke: Teil 2](/previous-versions/ms867087(v=msdn.10)#netcryptoapi_topic6) der Unterabschnitte [Extending .NET Cryptography with CAPICOM and P/Invoke](/previous-versions/ms867087(v=msdn.10)) (Erweitern der .NET-Kryptografie mit CAPICOM und P/Invoke) können ebenfalls hilfreich sein.\]
 
-Die **Entschlüsselungsmethode** entschlüsselt eine verschlüsselte und codierte Daten Zeichenfolge. Die sich daraus ergebenden Klartext-Daten werden zur [**Content**](encrypteddata-content.md) -Eigenschaft des [**verschlüsselteddata**](encrypteddata.md) -Objekts. Das Entschlüsseln des Inhalts schlägt fehl, es sei denn, der geheime Schlüssel, der von der [**setsecret**](encrypteddata-setsecret.md) -Methode festgelegt wird, ist identisch mit dem geheimen Schlüssel, der zum Ableiten des Schlüssels verwendet wurde
+Die **Decrypt-Methode** entschlüsselt eine verschlüsselte und codierte Datenzeichenfolge. Die resultierenden Klartextdaten werden zur [**Content-Eigenschaft**](encrypteddata-content.md) des [**EncryptedData-Objekts.**](encrypteddata.md) Die Entschlüsselung des Inhalts schlägt fehl, es sei denn, das geheimnis, das von der [**SetSecret-Methode**](encrypteddata-setsecret.md) festgelegt wird, ist genau dasselbe wie das Geheimnis, das zum Ableiten des Schlüssels verwendet wird, der zum Verschlüsseln des Inhalts verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ EncryptedData.Decrypt( _
 
 <dl> <dt>
 
-" *Verschlüsseltedmessage* \[ " in\]
+*EncryptedMessage* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die die verschlüsselten, verschlüsselten Daten enthält, die entschlüsselt werden sollen.
+Eine Zeichenfolge, die die codierten, verschlüsselten Daten enthält, die entschlüsselt werden sollen.
 
 </dd> </dl>
 
@@ -52,9 +52,9 @@ Eine Zeichenfolge, die die verschlüsselten, verschlüsselten Daten enthält, di
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der vom aktuellen geheimen Schlüssel abgeleitete Sitzungsschlüssel wird für die Entschlüsselung verwendet. Diese Methode erzeugt nicht den richtigen Klartext, es sei denn, das aktuelle Geheimnis stimmt genau mit dem geheimen Schlüssel überein, der zum Verschlüsseln der Nachricht verwendet wird.
+Der vom aktuellen Geheimnis abgeleitete Sitzungsschlüssel wird für die Entschlüsselung verwendet. Diese Methode erzeugt nur dann den richtigen Klartext, wenn das aktuelle Geheimnis genau mit dem geheimen Schlüssel zum Verschlüsseln der Nachricht entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,19 +64,19 @@ Der vom aktuellen geheimen Schlüssel abgeleitete Sitzungsschlüssel wird für d
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Kryptografieobjekte**](cryptography-objects.md)
 </dt> <dt>
 
-[**EncryptedData**](encrypteddata.md)
+[**Encrypteddata**](encrypteddata.md)
 </dt> </dl>
 
  

@@ -3,12 +3,12 @@
   items:
     - name: Rechtliche Informationen
       href: '-wia-legal-information.md'
-    - name: 'Sicherheitsüberlegungen: Windows Imageerfassung'
+    - name: 'Sicherheitsüberlegungen: Windows Bilderfassung'
       href: '-wia-security-considerations.md'
     - name: Verweis
       href: '-wia-reference.md'
       items:
-        - name: Neuerungen bei Windows Image Acquisition (WIA) 2.0
+        - name: Neues bei Windows Image Acquisition (WIA) 2.0
           href: '-wia-whatsnew-longhorn.md'
         - name: WIA-Anwendungsprogrammierschnittstelle
           href: '-wia-wia-application-programming-interface.md'
@@ -186,7 +186,7 @@
                       href: /windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-registereventcallbackprogram
                     - name: Wählen SieDeviceDlg aus.
                       href: /windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-selectdevicedlg
-                    - name: SelectDeviceDlgID
+                    - name: Wählen SieDeviceDlgID aus.
                       href: /windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-selectdevicedlgid
                 - name: IWiaDevMgr2
                   href: '-wia-iwiadevmgr2.md'
@@ -205,7 +205,7 @@
                       href: '-wia-iwiadevmgr2-registereventcallbackprogram.md'
                     - name: Wählen SieDeviceDlg aus.
                       href: '-wia-iwiadevmgr2-selectdevicedlg.md'
-                    - name: SelectDeviceDlgID
+                    - name: Wählen SieDeviceDlgID aus.
                       href: '-wia-iwiadevmgr2-selectdevicedlgid.md'
                 - name: IWiaErrorHandler
                   href: '-wia-iwiaerrorhandler.md'
@@ -332,7 +332,7 @@
                 - name: IWiaNotifyDevMgr
                   href: /windows/desktop/api/wia_xp/nn-wia_xp-iwianotifydevmgr
                   items:
-                    - name: NewDeviceArrarrarr
+                    - name: NewDevice Ausweichen
                       href: /windows/desktop/api/wia_xp/nf-wia_xp-iwianotifydevmgr-newdevicearrival
                 - name: IWiaPreview
                   href: '-wia-iwiapreview.md'
@@ -343,7 +343,7 @@
                       href: '-wia-iwiapreview-detectregions.md'
                     - name: GetNewPreview
                       href: '-wia-iwiapreview-getnewpreview.md'
-                    - name: UpdateVorschau
+                    - name: UpdatePreview
                       href: '-wia-iwiapreview-updatepreview.md'
                 - name: IWiaPropertyStorage
                   href: /windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage
@@ -414,9 +414,9 @@
                       href: /windows/desktop/api/Wiavideo/nf-wiavideo-iwiavideo-pause
                     - name: Abspielen
                       href: /windows/desktop/api/Wiavideo/nf-wiavideo-iwiavideo-play
-                    - name: PreviewVisible
+                    - name: VorschauVisible
                       href: /windows/desktop/api/Wiavideo/nf-wiavideo-iwiavideo-get_previewvisible
-                    - name: Größe ändernVideo
+                    - name: ResizeVideo
                       href: /windows/desktop/api/Wiavideo/nf-wiavideo-iwiavideo-resizevideo
                     - name: TakePicture
                       href: /windows/desktop/api/Wiavideo/nf-wiavideo-iwiavideo-takepicture
@@ -616,7 +616,7 @@
               href: '-wia-wia-minidriver-service-library.md'
             - name: WIA Minidriver
               href: '-wia-wia-minidriver.md'
-        - name: Verwenden Windows Bilderfassung
+        - name: Verwenden von Windows Image Acquisition
           href: '-wia-using-windows-image-acquisition.md'
           items:
             - name: Verwenden von WIA-Geräteobjekten
@@ -651,11 +651,11 @@
                   href: '-wia-item-properties.md'
                 - name: Zusätzliche WIA-Eigenschaften
                   href: '-wia-additional-wia-properties.md'
-                - name: Definieren benutzerdefinierter Eigenschaften
+                - name: Definieren von benutzerdefinierten Eigenschaften
                   href: '-wia-defining-custom-properties.md'
                 - name: Verwenden von benutzerdefinierten Eigenschaften
                   href: '-wia-using-custom-properties.md'
-                - name: Scan Profile Schema
+                - name: Scanprofilschema
                   href: '-wia-scan-profile-schema.md'
             - name: WIA-Fehlerinformationen
               href: '-wia-wia-error-information.md'
@@ -663,17 +663,17 @@
               href: '-wia-using-multiple-threads.md'
             - name: Kommunizieren mit einem WIA-Gerät in mehreren Threads oder Anwendungen
               href: '-wia-communicating-with-a-wia-device.md'
-            - name: Verwenden von WIA-Videos
+            - name: Verwenden von WIA-Video
               href: '-wia-using-wia-video.md'
               items:
-                - name: Vorschau des Videos
+                - name: Videovorschau
                   href: '-wia-previewing-video.md'
-                - name: Erfassen eines Still-Bilds aus einem Videostream
+                - name: Erfassen eines Stillbilds aus einem Videostream
                   href: '-wia-capturing-a-still-image-from-a-video-stream.md'
             - name: Verwenden des WIA-Skriptmodells
               href: '-wia-using-the-wia-scripting-model.md'
               items:
-                - name: Einrichten der Entwicklungsumgebung für Skriptmodelle
+                - name: Einrichten der Skriptmodellentwicklungsumgebung
                   href: '-wia-setting-up-the-scripting-model.md'
                 - name: Herstellen einer Verbindung mit einem Gerät
                   href: '-wia-connecting-to-a-device.md'
@@ -702,5 +702,5 @@
               href: '-wia-transferring-image-data-in-wia2.md'
             - name: Registrieren für Ereignisse
               href: '-wia-registering-for-events.md'
-            - name: Erfassen eines Still-Bilds aus dem Streamingvideo
+            - name: Erfassen eines Stillbilds aus dem Streamingvideo
               href: '-wia-capturing-a-still-image-from-streaming-video.md'

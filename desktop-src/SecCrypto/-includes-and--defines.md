@@ -1,19 +1,19 @@
 ---
-description: Bei allen Beispielen in der Cryptography SDK-Dokumentation wird davon ausgegangen, dass Sie die folgenden \# \# Compilerdirektiven einschließen und definieren.
+description: Bei allen Beispielen in der Cryptography SDK-Dokumentation wird davon ausgegangen, dass sie die folgenden \# \# Compilerdirektiven enthalten und definieren.
 ms.assetid: 98f85e7d-e557-4dde-b510-891b37daec87
-title: '#umfasst und #Defines'
+title: '#includes und #defines'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9834fd8103b9fd28a01e416bd1df8b03fb7ad680
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 6dbab2a3c33b510df99c9d2e0fa292af53c96fcc471dfe8180d9d4be06b3a5b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106364994"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117774275"
 ---
-# <a name="includes-and-defines"></a>\#umfasst und \# definiert
+# <a name="includes-and-defines"></a>\#includes and \# defines
 
-Bei allen Beispielen in der Cryptography SDK-Dokumentation wird davon ausgegangen, dass Sie die folgenden Compilerdirektiven **\# einschließen** und **\# definieren** .
+Bei allen Beispielen in der Cryptography SDK-Dokumentation wird davon ausgegangen, dass sie die folgenden Compilerdirektiven **\# enthalten** und **\# definieren.**
 
 
 ```C++
@@ -25,7 +25,7 @@ Bei allen Beispielen in der Cryptography SDK-Dokumentation wird davon ausgegange
 
 
 
-Außerdem muss die **\_ Win32- \_ Winnt** -Konstante entsprechend definiert werden. Weitere Informationen zu **\_ Win32 \_ Winnt** finden Sie unter [Verwenden der Windows-Header](../winprog/using-the-windows-headers.md).
+Darüber hinaus muss die **\_ WIN32 \_ WINNT-Konstante** entsprechend definiert werden. Weitere Informationen zu **\_ WIN32 \_ WINNT** finden Sie unter [Verwenden der Windows Header.](../winprog/using-the-windows-headers.md)
 
  
 

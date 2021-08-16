@@ -1,7 +1,7 @@
 ---
-description: 'Beispiel C-Programm: Zertifikats Store Vorgänge'
+description: 'C-Beispielprogramm: Certificate Store Operations'
 ms.assetid: cf87791c-b98c-4dd7-b346-336c4b1a88ca
-title: 'Beispiel C-Programm: Zertifikats Store Vorgänge'
+title: 'C-Beispielprogramm: Certificate Store Operations'
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: eba6a7634a5d3fbd6f1e4aab04c72d0c6eca0123fb037641f9625bb9900548b5
@@ -11,24 +11,24 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117765531"
 ---
-# <a name="example-c-program-certificate-store-operations"></a>Beispiel C-Programm: Zertifikats Store Vorgänge
+# <a name="example-c-program-certificate-store-operations"></a>C-Beispielprogramm: Certificate Store Operations
 
-Im folgenden Beispiel werden eine [](../secgloss/c-gly.md) Reihe gängiger Zertifikatspeichervorgänge sowie die folgenden Aufgaben und [*CryptoAPI-Funktionen*](../secgloss/c-gly.md) veranschaulicht:
+Im folgenden Beispiel werden eine Reihe allgemeiner [*Zertifikatspeichervorgänge*](../secgloss/c-gly.md) sowie die folgenden Aufgaben und [*CryptoAPI-Funktionen*](../secgloss/c-gly.md) veranschaulicht:
 
--   Öffnen und Schließen von Speicher- und Systemspeichern mit [**CertOpenStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore) und [**CertCloseStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore).
--   Duplizieren eines geöffneten Speichers [**mithilfe von CertDuplicateStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certduplicatestore)
--   Beim Suchen in werden Zertifikate gespeichert, die einige Kriterien [**mithilfe von CertFindCertificateInStore erfüllen.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore)
--   Erstellen eines neuen Zertifikatkontexts aus dem codierten Teil eines vorhandenen Zertifikats [**mithilfe von CertCreateCertificateContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-certcreatecertificatecontext).
--   Hinzufügen eines abgerufenen Zertifikats zu einem Speicher im Arbeitsspeicher [**mithilfe von CertAddCertificateContextToStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certaddcertificatecontexttostore)
--   Hinzufügen eines Links zu einem Zertifikat zu einem Speicher [**mithilfe von CertAddCertificateLinkToStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certaddcertificatelinktostore)
+-   Öffnen und Schließen von Arbeitsspeicher und Systemspeichern mit [**CertOpenStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore) und [**CertCloseStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore).
+-   Duplizieren eines geöffneten Speichers mit [**CertDuplicateStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certduplicatestore).
+-   Bei der Suche in werden Zertifikate gespeichert, die einige Kriterien erfüllen, indem [**CertFindCertificateInStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore)verwendet wird.
+-   Erstellen eines neuen Zertifikatkontexts aus dem codierten Teil eines vorhandenen Zertifikats mithilfe von [**CertCreateCertificateContext.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certcreatecertificatecontext)
+-   Hinzufügen eines abgerufenen Zertifikats zu einem Speicher im Arbeitsspeicher mithilfe von [**CertAddCertificateContextToStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certaddcertificatecontexttostore)
+-   Hinzufügen eines Links zu einem Zertifikat zu einem Speicher mithilfe von [**CertAddCertificateLinkToStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certaddcertificatelinktostore)
 -   Speichern des Speichers im Arbeitsspeicher in einer Datei auf dem Datenträger.
 -   Öffnen und Schließen eines dateibasierten Zertifikatspeichers.
 
-In diesem Beispiel wird die [**MyHandleError-Funktion verwendet.**](myhandleerror.md) Der Code für diese Funktion ist im Beispiel enthalten. Der Code für diese und andere Hilfsfunktionen ist auch unter Universell [Functions aufgeführt.](general-purpose-functions.md)
+In diesem Beispiel wird die Funktion [**MyHandleError verwendet.**](myhandleerror.md) Der Code für diese Funktion ist im Beispiel enthalten. Code für diese und andere Hilfsfunktionen ist auch unter [Universell Functions](general-purpose-functions.md)aufgeführt.
 
-In diesem Beispiel wird die **CreateMyDACL-Funktion** verwendet, die im Thema Erstellen einer [DACL](../secbp/creating-a-dacl.md) definiert ist, um sicherzustellen, dass die geöffnete Datei mit einer ordnungsgemäßen DACL erstellt wird.
+In diesem Beispiel wird die Im Thema [Erstellen einer DACL](../secbp/creating-a-dacl.md) definierte **CreateMyDACL-Funktion** verwendet, um sicherzustellen, dass die geöffnete Datei mit einer richtigen DACL erstellt wird.
 
-In diesem Beispiel wird ein Zertifikatspeicher im Arbeitsspeicher erstellt. Ein Systemspeicher wird geöffnet und dupliziert. Ein Zertifikat wird aus dem Systemspeicher abgerufen. Ein neues Zertifikat wird aus dem codierten Teil des abgerufenen Zertifikats erstellt. Das abgerufene Zertifikat wird dem Speicher hinzugefügt. Ein zweites Zertifikat wird aus dem Speicher Mein abgerufen, und dem Speicher wird ein Link zu diesem Zertifikat hinzugefügt. Das Zertifikat und der Link werden dann aus dem Speicher abgerufen, und der Arbeitsspeicher wird auf dem Datenträger gespeichert. Alle Speicher und Dateien werden geschlossen. Als Nächstes wird der Dateispeicher erneut geöffnet, und es wird nach dem Zertifikatlink gesucht. Der Erfolg dieses Programms hängt davon ab, ob ein My Store verfügbar ist. Dieser Speicher muss ein Zertifikat mit dem Betreff "Zertifikatssubjektname einfügen1" und ein zweites Zertifikat mit dem Betreff \_ \_ \_ "Zertifikatssubjektnamen \_ \_ \_ einfügen2" enthalten. Die Namen der Subjekte müssen in die Namen der Zertifikatsubjekte geändert werden, die bekannterd im Speicher "Mein" enthalten sind.
+In diesem Beispiel wird ein Zertifikatspeicher im Arbeitsspeicher erstellt. Ein Systemspeicher wird geöffnet und dupliziert. Ein Zertifikat wird aus dem Systemspeicher abgerufen. Ein neues Zertifikat wird aus dem codierten Teil des abgerufenen Zertifikats erstellt. Das abgerufene Zertifikat wird dem Speicher hinzugefügt. Ein zweites Zertifikat wird aus "Mein Speicher" abgerufen, und dem Speicherspeicher wird ein Link zu diesem Zertifikat hinzugefügt. Das Zertifikat und der Link werden dann aus dem Speicher abgerufen, und der Arbeitsspeicher wird auf dem Datenträger gespeichert. Alle Speicher und Dateien werden geschlossen. Als Nächstes wird der Dateispeicher erneut geöffnet, und es wird nach dem Zertifikatlink gesucht. Der Erfolg dieses Programms hängt davon ab, ob ein My store verfügbar ist. Dieser Speicher muss ein Zertifikat mit dem Antragsteller "Antragstellername des \_ Zertifikats \_ \_ einfügen1" und ein zweites Zertifikat mit dem Antragsteller \_ "Antragstellername des Zertifikats \_ \_ einfügen2" enthalten. Die Namen der Antragsteller müssen in die Namen der Zertifikatsubjekte geändert werden, die bekanntermaßen im Speicher "Mein" gespeichert sind.
 
 
 ```C++

@@ -1,7 +1,7 @@
 ---
-description: Ausstellen des GetNumObjects-Befehls
+description: Ausgeben des GetNumObjects-Befehls
 ms.assetid: d06690e4-f592-4b17-a5f1-baec2accc8dd
-title: Ausstellen des GetNumObjects-Befehls
+title: Ausgeben des GetNumObjects-Befehls
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: e3ece98e409ab4ee2774c4efdba0c84c06c60e373b5ed15aee77f5dee65d9101
@@ -11,11 +11,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118194010"
 ---
-# <a name="issuing-the-getnumobjects-command"></a>Ausstellen des GetNumObjects-Befehls
+# <a name="issuing-the-getnumobjects-command"></a>Ausgeben des GetNumObjects-Befehls
 
-Im Beispiel in diesem Abschnitt wird der **GetNumObjects MTP-Befehl** aufgerufen. (Eine vollständige Beschreibung dieses Befehls und seiner Parameter finden Sie in der [MTP-Spezifikation.)](https://www.usb.org/sites/default/files/MTPv1_1.zip)
+Im Beispiel in diesem Abschnitt wird der MTP-Befehl **GetNumObjects** aufgerufen. (Eine vollständige Beschreibung dieses Befehls und seiner Parameter finden Sie in der [MTP-Spezifikation.)](https://www.usb.org/sites/default/files/MTPv1_1.zip)
 
-Bevor Sie diesen Befehl aufrufen, müssen Sie zuerst die Befehlsparameter einrichten.
+Bevor Sie diesen Befehl aufrufen, müssen Sie zunächst die Befehlsparameter einrichten.
 
 
 ```
@@ -123,7 +123,7 @@ Nachdem die Parameter eingerichtet wurden, ruft die Anwendung den Befehl auf.
 
 
 
-Nachdem die Anwendung den Befehl aufgerufen hat, verarbeitet sie die Antwort des MTP-Treibers.
+Nachdem die Anwendung den Befehl aufgerufen hat, verarbeitet sie die Antwort vom MTP-Treiber.
 
 
 ```C++

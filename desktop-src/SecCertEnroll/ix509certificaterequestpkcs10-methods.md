@@ -1,30 +1,30 @@
 ---
-description: Die IX509CertificateRequestPkcs10-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IX509CertificateRequestPkcs10-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 85D24693-72CC-43B0-9F29-50C4536E5D3B
 title: IX509CertificateRequestPkcs10-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 42caf949f0095fb2113153683075683505c69e54
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e55159796e1ad48578bd52fa082233aa74330c814808a4746e92b3dfff2beff1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117776509"
 ---
 # <a name="ix509certificaterequestpkcs10-methods"></a>IX509CertificateRequestPkcs10-Methoden
 
-Die [**IX509CertificateRequestPkcs10**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestpkcs10) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IX509CertificateRequestPkcs10-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestpkcs10) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [**CheckSignature-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-checksignature)
--   [**Initializedecode-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-initializedecode)
--   [**Initializefromcertificate-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-initializefromcertificate)
--   [**Initializefromprivatekey-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-initializefromprivatekey)
--   [**Initializefrompublickey-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-initializefrompublickey)
--   [**Initializefromtemplatename-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-initializefromtemplatename)
--   [**Issmartcard-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-issmartcard)
--   [**Getcspstatus uses-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-getcspstatuses)
+-   [**InitializeDecode-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-initializedecode)
+-   [**InitializeFromCertificate-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-initializefromcertificate)
+-   [**InitializeFromPrivateKey-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-initializefromprivatekey)
+-   [**InitializeFromPublicKey-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-initializefrompublickey)
+-   [**InitializeFromTemplateName-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-initializefromtemplatename)
+-   [**IsSmartCard-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-issmartcard)
+-   [**GetCspStatuses-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-getcspstatuses)
 
  
 

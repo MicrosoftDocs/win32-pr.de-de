@@ -1,7 +1,7 @@
 ---
 description: Definiert ein blockiertes Netzwerk.
 ms.assetid: ccf24d45-cae0-4eb7-951a-004a5f71e04a
-title: Network (blocklist)-Element
+title: network (blockList)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: f58948573db281aacb00e227ff0fbc2f1cdf82b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 893c557ca5c20dd73f10f2a31d3b416d76116deb206f5d04420d35443d902130
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117984460"
 ---
-# <a name="network-blocklist-element"></a>Network (blocklist)-Element
+# <a name="network-blocklist-element"></a>network (blockList)-Element
 
-Das Network (blocklist)-Element definiert ein blockiertes Netzwerk. Ein Computer kann keine Verbindung mit einem blockierten Netzwerk herstellen.
+Das network-Element (blockList) definiert ein blockiertes Netzwerk. Ein Computer kann keine Verbindung mit einem blockierten Netzwerk herstellen.
 
 ``` syntax
 <xs:element name="network"
@@ -29,7 +29,7 @@ Das Network (blocklist)-Element definiert ein blockiertes Netzwerk. Ein Computer
  />
 ```
 
-Das **Network** -Element wird durch das [**Block List**](wlan-policyschema-blocklist-networkfilter-element.md) -Element definiert.
+Das **Netzwerkelement** wird durch das [**blockList-Element**](wlan-policyschema-blocklist-networkfilter-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,25 +37,25 @@ Das **Network** -Element wird durch das [**Block List**](wlan-policyschema-block
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Blocklisten**](wlan-policyschema-blocklist-networkfilter-element.md)
+[**Blocklist**](wlan-policyschema-blocklist-networkfilter-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**blocklist (NetworkFilter)**](wlan-policyschema-blocklist-networkfilter-element.md)
+[**blockList (networkFilter)**](wlan-policyschema-blocklist-networkfilter-element.md)
 </dt> </dl>
 
  

@@ -1,45 +1,45 @@
 ---
 title: Spinner
-description: Der Spinner ist ein zusammengesetztes Steuerelement, das aus einer Inkrement-Schaltfläche, einer Dekrement-Schaltfläche und einem Bearbeitungs Steuerelement besteht, die alle zum Bereitstellen von Dezimalwerten für die Anwendung verwendet werden.
+description: Der Spinner ist ein zusammengesetztes Steuerelement, das aus einer Inkrementschaltfläche, einer Dekrementschaltfläche und einem Bearbeitungssteuerfeld besteht, die alle zum Bereitstellen von Dezimalwerten für die Anwendung verwendet werden.
 ms.assetid: 63689ed3-7326-4f7a-b700-d89e9b501ef1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b0875fb31d0dac73c88f3bd502746c473dc1c2b1
-ms.sourcegitcommit: ae73f4dd3cf5a3c6a1ea7d191ca32a5b01f6686b
+ms.openlocfilehash: 30c4a6544c10634783b1671f586108a795d67d90c808943b08a2cfcbf6a476da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "106341970"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117851383"
 ---
 # <a name="spinner"></a>Spinner
 
-Der Spinner ist ein zusammengesetztes Steuerelement, das aus einer Inkrement-Schaltfläche, einer Dekrement-Schaltfläche und einem Bearbeitungs Steuerelement besteht, die alle zum Bereitstellen von Dezimalwerten für die Anwendung verwendet werden.
+Der Spinner ist ein zusammengesetztes Steuerelement, das aus einer Inkrementschaltfläche, einer Dekrementschaltfläche und einem Bearbeitungssteuerfeld besteht, die alle zum Bereitstellen von Dezimalwerten für die Anwendung verwendet werden.
 
 -   [Details](#details)
--   [Spineigenschaften](#spinner-properties)
+-   [Spinnereigenschaften](#spinner-properties)
 -   [Anmerkungen](#remarks)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="details"></a>Details
 
-Der folgende Screenshot veranschaulicht das Menüband Spinner.
+Der folgende Screenshot veranschaulicht das Menüband-Spinner.
 
-![Screenshot eines Spinner-Steuer Elements im Windows Live-Menüband von Windows Live Maker.](images/controls/spinner.png)
+![Screenshot eines Spinner-Steuerelements im Windows-Live-Moviemaker-Menüband.](images/controls/spinner.png)
 
-## <a name="spinner-properties"></a>Spineigenschaften
+## <a name="spinner-properties"></a>Spinnereigenschaften
 
-Das Menüband-Framework definiert eine Auflistung von [Eigenschafts Schlüsseln](windowsribbon-reference-properties.md) für das Spinner-Steuerelement.
+Das Menübandframework definiert eine Auflistung von [Eigenschaftsschlüsseln](windowsribbon-reference-properties.md) für das Spinner-Steuerelement.
 
-In der Regel wird eine Spinner-Eigenschaft in der Menüband-Benutzeroberfläche aktualisiert, indem der Befehl, der dem Steuerelement zugeordnet ist, durch einen Rückruf der [**iuiframework:: invalidateuicommand**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand) -Methode ungültig gemacht wird. Das Invalidierung-Ereignis wird durch die [**iuicommandhandler:: updateproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) -Rückruf Methode behandelt und die Eigenschaften Updates definiert.
+In der Regel wird eine Spinner-Eigenschaft in der Menübandbenutzeroberfläche aktualisiert, indem der befehl, der dem Steuerelement zugeordnet ist, durch einen Aufruf der [**IUIFramework::InvalidateUICommand-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand) ungültig wird. Das Invalidierungsereignis wird von der [**IUICommandHandler::UpdateProperty-Rückrufmethode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) behandelt und die Eigenschaft aktualisiert.
 
-Die [**iuicommandhandler:: updateproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) -Rückruf Methode wird nicht ausgeführt, und die Anwendung wird nach einem aktualisierten Eigenschafts Wert abgefragt, bis die Eigenschaft vom Framework benötigt wird. Wenn z. b. eine Registerkarte aktiviert ist und ein Steuerelement in der Menüband-Benutzeroberfläche angezeigt wird oder wenn eine QuickInfo angezeigt wird.
+Die [**IUICommandHandler::UpdateProperty-Rückrufmethode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) wird nicht ausgeführt, und die Anwendung fragt einen aktualisierten Eigenschaftswert ab, bis die Eigenschaft vom Framework benötigt wird. Beispielsweise, wenn eine Registerkarte aktiviert und ein Steuerelement auf der Menübandbenutzeroberfläche angezeigt wird oder wenn eine QuickInfo angezeigt wird.
 
 > [!Note]  
-> In einigen Fällen kann eine Eigenschaft durch die [**iuiframework:: getuicommandproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty) -Methode abgerufen und mit der [**iuiframework:: setuicommandproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty) -Methode festgelegt werden.
+> In einigen Fällen kann eine Eigenschaft über die [**IUIFramework::GetUICommandProperty-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty) abgerufen und mit der [**IUIFramework::SetUICommandProperty-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty) festgelegt werden.
 
  
 
-In der folgenden Tabelle sind die Eigenschafts Schlüssel aufgelistet, die dem Spinner-Steuerelement zugeordnet sind.
+In der folgenden Tabelle sind die Eigenschaftenschlüssel aufgeführt, die dem Spinner-Steuerelement zugeordnet sind.
 
 
 
@@ -50,79 +50,79 @@ In der folgenden Tabelle sind die Eigenschafts Schlüssel aufgelistet, die dem S
 </colgroup>
 <thead>
 <tr class="header">
-<th>Eigenschafts Schlüssel</th>
-<th>Notizen</th>
+<th>Eigenschaftsschlüssel</th>
+<th>Hinweise</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><a href="windowsribbon-reference-properties-uipkey-decimalplaces.md">UI_PKEY_DecimalPlaces</a></td>
-<td>Kann nur durch Invalidierung aktualisiert werden.</td>
+<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
 </tr>
 <tr class="even">
 <td><a href="windowsribbon-reference-properties-uipkey-decimalvalue.md">UI_PKEY_DecimalValue</a></td>
-<td>Unterstützt <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty"><strong>iuiframework:: getuicommandproperty</strong></a> und <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty"><strong>iuiframework:: abtuicommandproperty</strong></a>.
+<td>Unterstützt <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty"><strong>IUIFramework::GetUICommandProperty</strong></a> und <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty"><strong>IUIFramework::SetUICommandProperty.</strong></a>
 <blockquote>
 [!Note]<br />
-Wenn der Befehl, der dem Steuerelement zugeordnet ist, durch einen <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand"><strong>iuiframework:: invalidateuicommand</strong></a>-Befehl ungültig gemacht wird, fragt das Framework diese Eigenschaft ab, wenn <code>UI_INVALIDATIONS_VALUE</code> als Wert von <em>Flags</em>übergeben wird.
+Wenn der dem Steuerelement zugeordnete Befehl durch einen Aufruf von <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand"><strong>IUIFramework::InvalidateUICommand</strong></a>ungültig gemacht wird, fragt das Framework diese Eigenschaft ab, wenn als Wert von flags übergeben <code>UI_INVALIDATIONS_VALUE</code> <em>wird.</em>
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
 <td><a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled</a></td>
-<td>Unterstützt <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty"><strong>iuiframework:: getuicommandproperty</strong></a> und <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty"><strong>iuiframework:: abtuicommandproperty</strong></a>.</td>
+<td>Unterstützt <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty"><strong>IUIFramework::GetUICommandProperty</strong></a> und <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty"><strong>IUIFramework::SetUICommandProperty.</strong></a></td>
 </tr>
 <tr class="even">
 <td><a href="windowsribbon-reference-properties-uipkey-formatstring.md">UI_PKEY_FormatString</a></td>
-<td>Kann nur durch Invalidierung aktualisiert werden.</td>
+<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
 </tr>
 <tr class="odd">
 <td><a href="windowsribbon-reference-properties-uipkey-increment.md">UI_PKEY_Increment</a></td>
-<td>Kann nur durch Invalidierung aktualisiert werden.</td>
+<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
 </tr>
 <tr class="even">
 <td><a href="windowsribbon-reference-properties-uipkey-keytip.md">UI_PKEY_Keytip</a></td>
-<td>Kann nur durch Invalidierung aktualisiert werden.</td>
+<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
 </tr>
 <tr class="odd">
 <td><a href="windowsribbon-reference-properties-uipkey-label.md">UI_PKEY_Label</a></td>
-<td>Kann nur durch Invalidierung aktualisiert werden.</td>
+<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
 </tr>
 <tr class="even">
 <td><a href="windowsribbon-reference-properties-uipkey-largehighcontrastimage.md">UI_PKEY_LargeHighContrastImage</a></td>
-<td>Kann nur durch Invalidierung aktualisiert werden.</td>
+<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
 </tr>
 <tr class="odd">
 <td><a href="windowsribbon-reference-properties-uipkey-largeimage.md">UI_PKEY_LargeImage</a></td>
-<td>Kann nur durch Invalidierung aktualisiert werden.</td>
+<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
 </tr>
 <tr class="even">
 <td><a href="windowsribbon-reference-properties-uipkey-maxvalue.md">UI_PKEY_MaxValue</a></td>
-<td>Kann nur durch Invalidierung aktualisiert werden.</td>
+<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
 </tr>
 <tr class="odd">
 <td><a href="windowsribbon-reference-properties-uipkey-minvalue.md">UI_PKEY_MinValue</a></td>
-<td>Kann nur durch Invalidierung aktualisiert werden.</td>
+<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
 </tr>
 <tr class="even">
 <td><a href="windowsribbon-reference-properties-uipkey-representativestring.md">UI_PKEY_RepresentativeString</a></td>
-<td>Kann nur durch Invalidierung aktualisiert werden.</td>
+<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
 </tr>
 <tr class="odd">
 <td><a href="windowsribbon-reference-properties-uipkey-smallhighcontrastimage.md">UI_PKEY_SmallHighContrastImage</a></td>
-<td>Kann nur durch Invalidierung aktualisiert werden.</td>
+<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
 </tr>
 <tr class="even">
 <td><a href="windowsribbon-reference-properties-uipkey-smallimage.md">UI_PKEY_SmallImage</a></td>
-<td>Kann nur durch Invalidierung aktualisiert werden.</td>
+<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
 </tr>
 <tr class="odd">
 <td><a href="windowsribbon-reference-properties-uipkey-tooltipdescription.md">UI_PKEY_TooltipDescription</a></td>
-<td>Kann nur durch Invalidierung aktualisiert werden.</td>
+<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
 </tr>
 <tr class="even">
 <td><a href="windowsribbon-reference-properties-uipkey-tooltiptitle.md">UI_PKEY_TooltipTitle</a></td>
-<td>Kann nur durch Invalidierung aktualisiert werden.</td>
+<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
 </tr>
 </tbody>
 </table>
@@ -131,7 +131,7 @@ Wenn der Befehl, der dem Steuerelement zugeordnet ist, durch einen <a href="/win
 
  
 
-Der folgende Code Abschnitt veranschaulicht, wie verschiedene Eigenschaften des Spinner-Steuer Elements in der [**iuicommandhandler:: updateproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) -Methode aktualisiert werden.
+Im folgenden Codeabschnitt wird veranschaulicht, wie verschiedene Eigenschaften des Spinner-Steuerelements in der [**IUICommandHandler::UpdateProperty-Methode aktualisiert**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) werden.
 
 
 ```C++
@@ -210,12 +210,12 @@ STDMETHODIMP CCommandHandler::UpdateProperty(
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Mindestwert ([UI \_ pkey \_ MinValue](windowsribbon-reference-properties-uipkey-minvalue.md)) eines Spinner mit 0,0 initialisiert wird, muss die Anwendung sicherstellen, dass jeder nachfolgende Wert, der vom Steuerelement bereitgestellt wird, nicht gleich 0,0 (negative Null) ist. Wenn der Spinner den Wert-0,0 bereitstellt, sollte die Anwendung diesen Wert mit der [**iuiframework:: setuicommandproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty) -Methode auf 0,0 (positive NULL) zurücksetzen, wie im folgenden Beispiel für eine [**iuicommandhandler:: Execute**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-execute) -Methode für ein Spinner-Steuerelement gezeigt.
+Wenn der Mindestwert ([ \_ UI PKEY \_ MinValue](windowsribbon-reference-properties-uipkey-minvalue.md)) eines Spinners mit 0,0 initialisiert wird, sollte die Anwendung sicherstellen, dass alle nachfolgenden Werte, die vom Steuerelement bereitgestellt werden, nicht gleich -0,0 (negative Null) sind. Wenn der Spinner den Wert -0,0 liefert, sollte die Anwendung diesen Wert mithilfe der [**IUIFramework::SetUICommandProperty-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty) auf 0,0 (positive Null) zurücksetzen, wie im folgenden Beispiel einer [**IUICommandHandler::Execute-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-execute) für ein Spinner-Steuerelement gezeigt.
 
 > [!Note]  
-> Wenn dieser Test nicht ausgeführt wird und der Wert nicht korrigiert wurde, zeigt das Bearbeitungsfeld des Steuer Elements die Zeichenfolge "Auto" an.
+> Wenn dieser Test nicht ausgeführt wird und der Wert unkorrektiert bleibt, zeigt das Bearbeitungsfeld des Steuerelements die Zeichenfolge "Auto" an.
 
  
 
@@ -301,9 +301,9 @@ STDMETHODIMP CCommandHandler::Execute(
 
 <dl> <dt>
 
-[Windows-Menüband-Steuerelement Bibliothek](windowsribbon-controls-entry.md)
+[Windows Menüband-Framework-Steuerelementbibliothek](windowsribbon-controls-entry.md)
 </dt> <dt>
 
-[**Spinner-Markup Element**](windowsribbon-element-spinner.md)
+[**Spinner-Markupelement**](windowsribbon-element-spinner.md)
 </dt> </dl>
 

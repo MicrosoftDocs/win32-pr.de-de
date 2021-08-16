@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118206671"
 ---
-# <a name="iwiccomponentinfo_getauthor_proxy-function"></a>IWICComponentInfo \_ \_ GetAuthor-Proxyfunktion
+# <a name="iwiccomponentinfo_getauthor_proxy-function"></a>IWICComponentInfo-GetAuthor-Proxyfunktion \_ \_
 
 Proxyfunktion für die [**GetAuthor-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwiccomponentinfo-getauthor)
 
@@ -43,7 +43,7 @@ HRESULT IWICComponentInfo_GetAuthor_Proxy(
 
 <dl> <dt>
 
-*THIS \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
 Typ: **[ **IWICComponentInfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccomponentinfo)\***
@@ -68,7 +68,7 @@ Typ: **WCHAR \***
 
 Ein Zeiger, der den Namen des Autors der Komponente empfängt.
 
-Die zurückgegebene Zeichenfolge ist locale-spezifisch und standardmäßig 1033.
+Die zurückgegebene Zeichenfolge ist gebietsschemaspezifisch, standardmäßig 1033.
 
 </dd> <dt>
 
@@ -85,7 +85,7 @@ Ein Zeiger, der die tatsächliche Länge des Autorennamens der Komponente empfä
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -95,7 +95,7 @@ Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfall
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Client)<br/> | Windows NUR XP mit SP2, Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
 | DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 

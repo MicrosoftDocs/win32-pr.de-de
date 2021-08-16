@@ -1,7 +1,7 @@
 ---
-description: Vergleicht zwei Zugriffs Token und bestimmt, ob Sie hinsichtlich eines Aufrufens der AccessCheck-Funktion äquivalent sind.
+description: Vergleicht zwei Zugriffstoken und bestimmt, ob sie in Bezug auf einen Aufruf der AccessCheck-Funktion äquivalent sind.
 ms.assetid: 3a07ddc6-9748-4f96-a597-2af6b4282e56
-title: Ntcomparetokens-Funktion (ntabapi. h)
+title: NtCompareTokens-Funktion (Ntseapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ntdll.dll
-ms.openlocfilehash: d4d0f35bff8fa65e0e09be32a55281b5118f244c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a763f6f4238632c3bcc736ebacbd2ff133b1955da673a0397ba9a95ebb87c2fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106362410"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117780562"
 ---
-# <a name="ntcomparetokens-function"></a>Ntcomparetokens-Funktion
+# <a name="ntcomparetokens-function"></a>NtCompareTokens-Funktion
 
-Die **ntcomparetokens** -Funktion vergleicht zwei [*Zugriffs Token*](/windows/desktop/SecGloss/a-gly) und bestimmt, ob Sie hinsichtlich eines Aufrufens der [**AccessCheck**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-accesscheck) -Funktion äquivalent sind.
+Die **NtCompareTokens-Funktion** vergleicht zwei [*Zugriffstoken*](/windows/desktop/SecGloss/a-gly) und bestimmt, ob sie in Bezug auf einen Aufruf der [**AccessCheck-Funktion**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-accesscheck) äquivalent sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,43 +41,43 @@ NTSTATUS NTAPI NtCompareTokens(
 
 <dl> <dt>
 
-*Firsttokenhandle* \[ in\]
+*FirstTokenHandle* \[ In\]
 </dt> <dd>
 
-Ein Handle für das erste zu vergleichende Zugriffs Token. Das Token muss für den **\_ tokenabfragezugriff** geöffnet sein.
+Ein Handle für das erste zu vergleichende Zugriffstoken. Das Token muss für den **TOKEN \_ QUERY-Zugriff** geöffnet sein.
 
 </dd> <dt>
 
-*Secondtokenhandle* \[ in\]
+*SecondTokenHandle* \[ In\]
 </dt> <dd>
 
-Ein Handle für das zweite zu vergleichende Zugriffs Token. Das Token muss für den **\_ tokenabfragezugriff** geöffnet sein.
+Ein Handle für das zweite zu vergleichende Zugriffstoken. Das Token muss für den **TOKEN \_ QUERY-Zugriff** geöffnet sein.
 
 </dd> <dt>
 
-*Gleich* \[ vorgenommen\]
+*Gleich* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen Wert empfängt, der angibt, ob die von den Parametern *firsttokenhandle* und *secondtokenhandle* dargestellten Token gleichwertig sind.
+Ein Zeiger auf eine Variable, die einen Wert empfängt, der angibt, ob die durch die Parameter *FirstTokenHandle* und *SecondTokenHandle dargestellten* Token gleichwertig sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion Status \_ Erfolg zurück.
+Wenn die Funktion erfolgreich ist, gibt die Funktion STATUS \_ SUCCESS zurück.
 
-Wenn die Funktion fehlschlägt, wird ein **NTSTATUS** -Fehlercode zurückgegeben.
+Wenn die Funktion fehlschlägt, wird ein **NTSTATUS-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zwei Zugriffs Steuerungs Token werden als äquivalent betrachtet, wenn alle der folgenden Bedingungen zutreffen:
+Zwei Zugriffssteuerungstoken gelten als gleichwertig, wenn alle der folgenden Bedingungen zutreffen:
 
--   Jede [*Sicherheits*](/windows/desktop/SecGloss/s-gly) -ID (SID), die in einem der beiden Token vorhanden ist, ist auch im anderen Token vorhanden.
--   Keines oder beide Token sind beschränkt.
--   Wenn beide Token eingeschränkt sind, wird jede sid, die in einem Token eingeschränkt ist, auch im anderen Token eingeschränkt.
--   Alle in beiden Token vorhandenen Berechtigungen sind ebenfalls im anderen Token vorhanden.
+-   Jede [*Sicherheits-ID*](/windows/desktop/SecGloss/s-gly) (SID), die in beiden Token vorhanden ist, ist auch im anderen Token vorhanden.
+-   Weder noch beide Token sind eingeschränkt.
+-   Wenn beide Token eingeschränkt sind, wird jede SID, die in einem Token eingeschränkt ist, auch im anderen Token eingeschränkt.
+-   Jede Berechtigung, die in beiden Token vorhanden ist, ist auch im anderen Token vorhanden.
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,9 +85,9 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>NT*-API. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Ntseapi.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ntdll.dll</dt> </dl> |
 
 

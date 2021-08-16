@@ -26,7 +26,7 @@ Einer der folgenden **WMT \_ STATUS-Werte:**
 
 
 
-| Wert                         | BESCHREIBUNG                                                                                                       |
+| Wert                         | Beschreibung                                                                                                       |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | WMT \_ ERWERBEN \_ EINER LIZENZ         | Wird gesendet, wenn die DRM-Komponente den Lizenzerwerb entweder erfolgreich oder nicht erfolgreich abgeschlossen hat. |
 | WMT \_ INDIVIDUALIZE            | Der Sicherheitsupgradeprozess wurde entweder erfolgreich oder nicht erfolgreich abgeschlossen.                                |

@@ -1,7 +1,7 @@
 ---
 description: Die WinVerifyTrust-API kann verwendet werden, um die Signatur einer portierbaren ausführbaren Datei zu überprüfen.
 ms.assetid: dd53bd44-5dbf-44e9-9945-093995508f44
-title: 'Beispiel C-Programm: Überprüfen der Signatur einer PE-Datei'
+title: 'C-Beispielprogramm: Überprüfen der Signatur einer PE-Datei'
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: ec2f2aa5261924fcb9744848f4d9455b2aad69c28ad03360370f621886a9339d
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117765502"
 ---
-# <a name="example-c-program-verifying-the-signature-of-a-pe-file"></a>Beispiel C-Programm: Überprüfen der Signatur einer PE-Datei
+# <a name="example-c-program-verifying-the-signature-of-a-pe-file"></a>C-Beispielprogramm: Überprüfen der Signatur einer PE-Datei
 
 Die [**WinVerifyTrust-API**](/windows/desktop/api/Wintrust/nf-wintrust-winverifytrust) kann verwendet werden, um die Signatur einer portierbaren ausführbaren Datei zu überprüfen.
 

@@ -1,9 +1,9 @@
 ---
-title: Step-Befehl
-description: Mit dem Schrittbefehl wird ein oder mehrere Frames vorwärts oder umgekehrt wiedergegeben. Die Standardaktion besteht darin, einen Frame vorwärts zu gehen. Videodisc-Geräte im Digital-Video-, VCR- und CAV-Format erkennen diesen Befehl.
+title: Schrittbefehl
+description: Mit dem Schrittbefehl wird die Wiedergabe mindestens eines Frames vorwärts oder umgekehrt ausgeführt. Die Standardaktion besteht im Schrittweisen Vorwärtsschritt eines Frames. Videodisc-Geräte im Digital-Video-, VCR- und CAV-Format erkennen diesen Befehl.
 ms.assetid: 6017ace5-cde9-42a0-bb2f-f85d7847adc5
 keywords:
-- Schrittbefehl Windows Multimedia
+- Step-Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -19,11 +19,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118370830"
 ---
-# <a name="step-command"></a>Step-Befehl
+# <a name="step-command"></a>Schrittbefehl
 
-Mit dem Schrittbefehl wird ein oder mehrere Frames vorwärts oder umgekehrt wiedergegeben. Die Standardaktion besteht darin, einen Frame vorwärts zu gehen. Videodisc-Geräte im Digital-Video-, VCR- und CAV-Format erkennen diesen Befehl.
+Mit dem Schrittbefehl wird die Wiedergabe mindestens eines Frames vorwärts oder umgekehrt ausgeführt. Die Standardaktion besteht im Schrittweisen Vorwärtsschritt eines Frames. Videodisc-Geräte im Digital-Video-, VCR- und CAV-Format erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) auf, wobei der *lpszCommand-Parameter* wie folgt festgelegt ist.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) mit dem *lpszCommand-Parameter* auf, der wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -55,8 +55,8 @@ Eines oder beide der folgenden Flags.
 
 | Wert       | Bedeutung                                                                                                                  |
 |-------------|--------------------------------------------------------------------------------------------------------------------------|
-| by *frames* | Gibt die Anzahl der zu schrittden Frames an. Wenn Sie einen negativen *Frameswert* angeben, können Sie das Flag "reverse" nicht angeben. |
-| reverse     | Stufen Sie die Frames in umgekehrter Reihenfolge ein.                                                                                              |
+| nach *Frames* | Gibt die Anzahl der frames an, für die ein Schrittschritt verwendet werden soll. Wenn Sie einen negativen *Frameswert angeben,* können Sie das Flag "umgekehrt" nicht angeben. |
+| reverse     | Einzelschritt für die Frames in umgekehrter Reihenfolge.                                                                                              |
 
 
 
@@ -67,13 +67,13 @@ Eines oder beide der folgenden Flags.
 <span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify" oder beides sein. Für DigitalVideo- und VCR-Geräte kann auch "Test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
+Kann "wait", "notify" oder beides sein. Für digital-video- und VCR-Geräte kann auch "test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
 ## <a name="requirements"></a>Anforderungen
 

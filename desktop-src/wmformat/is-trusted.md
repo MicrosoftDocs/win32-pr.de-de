@@ -3,7 +3,7 @@ title: Is_Trusted
 description: Das Attribut Is Trusted ist ein Attribut auf Dateiebene, das an gibt, ob die \_ Lizenzerwerbs-URL in der Datei vertrauenswürdig ist.
 ms.assetid: 7b383b45-e992-4a07-af0b-9ef220ddd9af
 keywords:
-- Is_Trusted des Windows-Medienformats
+- Is_Trusted Windows-Medienformat
 topic_type:
 - apiref
 api_name:

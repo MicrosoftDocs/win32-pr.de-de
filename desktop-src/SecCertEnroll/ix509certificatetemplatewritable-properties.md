@@ -1,19 +1,19 @@
 ---
 description: Die IX509CertificateTemplateWritable-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: E4922FC4-0767-41A6-8F3C-199E307E3876
-title: IX509CertificateTemplateWritable-Eigenschaften
+title: IX509CertificateTemplateSchreibbare Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c2a9e68074ccfc5bf3bc2ab43a07fe9a9238c2eb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6eb67940fd260ea4eec57505b22f44fc1af8412b32eb93fdec4f519f952ae3a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117776208"
 ---
-# <a name="ix509certificatetemplatewritable-properties"></a>IX509CertificateTemplateWritable-Eigenschaften
+# <a name="ix509certificatetemplatewritable-properties"></a>IX509CertificateTemplateSchreibbare Eigenschaften
 
-Die [**IX509CertificateTemplateWritable**](/windows/desktop/api/Certenroll/nn-certenroll-ix509certificatetemplatewritable) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**IX509CertificateTemplateWritable-Schnittstelle**](/windows/desktop/api/Certenroll/nn-certenroll-ix509certificatetemplatewritable) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

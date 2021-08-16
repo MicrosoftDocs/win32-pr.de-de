@@ -17,7 +17,7 @@ Die folgenden Funktionen werden mit Windows Deployment Services-PXE-Server-API v
 
 
 
-| Funktion                                                           | BESCHREIBUNG                                                                                                                    |
+| Funktion                                                           | Beschreibung                                                                                                                    |
 |--------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | [**PxeAsyncRecvDone**](/windows/desktop/api/WdsPxe/nf-wdspxe-pxeasyncrecvdone)                       | Gibt asynchrone Ergebnisse der Clientanforderung zurück.                                                                                |
 | [**PxeDhcpAppendOption**](/windows/desktop/api/WdsPxe/nf-wdspxe-pxedhcpappendoption)                 | Fügt eine DHCP-Option an das Antwortpaket an.                                                                                     |
@@ -51,7 +51,7 @@ Die folgenden Funktionen werden mit Windows Deployment Services-PXE-Server-API v
 
 Folgendes ist ab Windows 8 und Windows Server 2012 verfügbar.
 
-| Funktion                                                               | BESCHREIBUNG                                                                                   |
+| Funktion                                                               | Beschreibung                                                                                   |
 |------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | [**PxeDhcpv6AppendOption**](/windows/desktop/api/WdsPxe/nf-wdspxe-pxedhcpv6appendoption)                 | Fügt eine DHCPv6-Option an das Antwortpaket an.                                                  |
 | [**PxeDhcpv6AppendOptionRaw**](/windows/desktop/api/WdsPxe/nf-wdspxe-pxedhcpv6appendoptionraw)           | Fügt eine DHCPv6-Option an das Antwortpaket an.                                                  |

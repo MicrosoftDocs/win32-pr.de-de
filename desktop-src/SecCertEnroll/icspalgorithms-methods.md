@@ -17,7 +17,7 @@ Die [**ICspAlgorithms-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Add-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithms-add)
+-   [**Methode hinzufügen**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithms-add)
 -   [**Clear-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithms-clear)
 -   [**Remove-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithms-remove)
 

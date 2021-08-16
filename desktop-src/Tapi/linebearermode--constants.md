@@ -32,7 +32,7 @@ Die alternative Übertragung von Sprache oder uneingeschränkten Daten bei demse
 
 
 
-Die uneingeschränkte Datenübertragung für den Aufruf. Die Datenrate wird separat angegeben.
+Die uneingeschränkte Datenübertragung beim Aufruf. Die Datenrate wird separat angegeben.
 
 
 </dt> </dl> </dd> <dt>
@@ -52,7 +52,7 @@ Der durch ISDN definierte Mehrfachnutzungsmodus.
 
 
 
-Dies entspricht einer nicht aufrufbasierten Signalverbindung zwischen der Anwendung und dem Dienstanbieter oder Switch (von TAPI als Medienstream behandelt).
+Dies entspricht einer nicht aufruf-zugeordneten Signalverbindung zwischen der Anwendung und dem Dienstanbieter oder Switch (von TAPI als Medienstream behandelt).
 
 
 </dt> </dl> </dd> <dt>
@@ -82,7 +82,7 @@ Bearerdienst für digitale Daten, bei denen nur die niedrigen sieben Bits jedes 
 
 
 
-Dies entspricht der G.711-Sprachübertragung beim Aufruf. Das Netzwerk kann Verarbeitungstechniken wie analoge Übertragung, Echoabbruch und Komprimierung/Dekomprimierung verwenden. Die Bitintegrität ist nicht gewährleistet. Die Spracherkennung ist nicht für die Unterstützung von Fax- und Modemmedien vorgesehen.
+Dies entspricht der G.711-Sprachübertragung beim Aufruf. Das Netzwerk kann Verarbeitungstechniken wie analoge Übertragung, Echoabbruch und Komprimierung/Dekomprimierung verwenden. Die Bitintegrität ist nicht gewährleistet. Spracherkennung ist nicht für die Unterstützung von Fax- und Modemmedien vorgesehen.
 
 
 </dt> </dl> </dd> <dt>

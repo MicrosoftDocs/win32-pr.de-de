@@ -4,60 +4,60 @@ description: Antischadsoftware-Frühstart
 ms.assetid: 4064CD44-FC50-48DE-8490-F592ED21CB7E
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 34c3e51d7fb009ffa0e85a59990b321fb38ad196
-ms.sourcegitcommit: a93d3abaf4d6d45a6f0b87faed3f576b222b1745
+ms.openlocfilehash: 0f1ca8e52f9d2465038e68b6b585bed70b974432566b3b67d080c97bb998103f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "104050650"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117852196"
 ---
 # <a name="early-launch-antimalware"></a>Antischadsoftware-Frühstart
 
 ## <a name="platforms"></a>Plattformen
 
- **Clients** -Windows 8  
-**Server** -Windows Server 2012  
+ **Clients** – Windows 8  
+**Server** – Windows Server 2012  
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Da Antischadsoftware (am) bei der Erkennung von Lauf Zeit Schadsoftware besser und besser geeignet ist, sind Angreifer auch besser in der Erstellung von Rootkits, die von der Erkennung ausblenden können. Das Erkennen von Schadsoftware, die früh im Start Zyklen gestartet wird, ist eine Herausforderung, die die meisten Anbieter sorgfältig beantworten. In der Regel erstellen Sie System-Hacks, die vom Host Betriebssystem nicht unterstützt werden, und können dazu führen, dass der Computer in einen instabilen Zustand versetzt wird. Bis zu diesem Punkt hat Windows keine gute Möglichkeit bereitgestellt, diese frühen Start Bedrohungen zu erkennen und zu beheben.
+Da Antischadsoftware (AM) immer besser zur Erkennung von Runtime-Schadsoftware geworden ist, werden Angreifer auch besser darin, Rootkits zu erstellen, die sich vor der Erkennung verbergen können. Die Erkennung von Schadsoftware, die früh im Startzyklus gestartet wird, ist eine Herausforderung, die die meisten AM-Anbieter sorgfältig bewältigen müssen. In der Regel erstellen sie System-Hacks, die vom Hostbetriebssystem nicht unterstützt werden und tatsächlich dazu führen können, dass der Computer in einem instabilen Zustand platziert wird. Bis zu diesem Zeitpunkt bietet Windows keine gute Möglichkeit für AM, diese Bedrohungen für den frühen Start zu erkennen und zu beheben.
 
-Windows 8 führt ein neues Feature mit dem Namen "sicherer Start" ein, das die Windows-Startkonfiguration und-Komponenten schützt und einen Early Launch Anti-Malware-Treiber (Elam) lädt. Dieser Treiber startet vor anderen Start Start Treibern und ermöglicht die Auswertung dieser Treiber und unterstützt den Windows-Kernel bei der Entscheidung, ob Sie initialisiert werden sollen.
+Windows 8 führt ein neues Feature namens Sicherer Start ein, das die Windows Bootkonfiguration und -komponenten schützt und einen Early Launch Anti-Malware (ELAM)-Treiber lädt. Dieser Treiber startet vor anderen Starttreibern und ermöglicht die Auswertung dieser Treiber und hilft dem Windows Kernel zu entscheiden, ob sie initialisiert werden sollen.
 
-## <a name="manifestation"></a>Ausstrahlung
+## <a name="manifestation"></a>Manifestation
 
-Da Elam zuerst durch den Kernel gestartet wird, wird er vor allen Drittanbieter Software gestartet und kann daher im Startprozess Schadsoftware erkennen und die Initialisierung verhindern.
+Durch den ersten Start durch den Kernel wird sichergestellt, dass ELAM vor Software von Drittanbietern gestartet wird und daher Schadsoftware im Startprozess erkennen und deren Initialisierung verhindern kann.
 
 ## <a name="mitigation"></a>Minderung
 
-Start Treiber werden basierend auf der Klassifizierung initialisiert, die vom Elam-Treiber gemäß einer Initialisierungs Richtlinie zurückgegeben wird. Standardmäßig initialisiert die Richtlinie bekannte, gute und unbekannte Treiber, initialisiert jedoch keine bekannten fehlerhaften Treiber. Ein Systemadministrator kann über Gruppenrichtlinie eine benutzerdefinierte Richtlinie angeben, die verhindern kann, dass unbekannte Treiber initialisiert werden, oder Treiber, die für den Startprozess wichtig sind, aber manipuliert wurden, damit der Start initialisiert wird.
+Starttreiber werden basierend auf der Klassifizierung initialisiert, die vom ELAM-Treiber gemäß einer Initialisierungsrichtlinie zurückgegeben wird. Standardmäßig initialisiert die Richtlinie bekannte gute und unbekannte Treiber, initialisiert jedoch keine bekannten fehlerhaften Treiber. Ein Systemadministrator kann eine benutzerdefinierte Richtlinie über Gruppenrichtlinie angeben, die die Initialisierung unbekannter Treiber verhindern oder die Initialisierung von Treibern ermöglichen kann, die für den Startprozess wichtig sind, aber manipuliert wurden.
 
 ## <a name="solution"></a>Lösung
 
-Ein Elam-Treiber muss sich für Kernel Rückrufe registrieren, um beim Initialisieren Informationen zu den einzelnen Start Start Treibern zu erhalten. Der Elam-Treiber kann dann für jeden Treiber eine Klassifizierung zurückgeben. Diese Funktionen sind erforderlich:
+Ein ELAM-Treiber muss sich für Kernelrückrufe registrieren, um Informationen zu jedem Starttreiber während der Initialisierung zu erhalten. Der ELAM-Treiber kann dann eine Klassifizierung für jeden Treiber zurückgeben. Diese Funktionen sind erforderlich:
 
--   [Ioregisterbootdrivercallback](/windows-hardware/drivers/ddi/ntddk/nf-ntddk-ioregisterbootdrivercallback)
--   [Iounregisterbootdrivercallback](/windows-hardware/drivers/ddi/ntddk/nf-ntddk-iounregisterbootdrivercallback)
+-   [IoRegisterBootDriverCallback](/windows-hardware/drivers/ddi/ntddk/nf-ntddk-ioregisterbootdrivercallback)
+-   [IoUnRegisterBootDriverCallback](/windows-hardware/drivers/ddi/ntddk/nf-ntddk-iounregisterbootdrivercallback)
 
-Ein Elam-Treiber kann auch für Registrierungs Rückrufe registriert werden. Dies ermöglicht es dem Elam-Treiber, die Konfigurationsdaten zu überprüfen, die von jedem Start Treiber verwendet werden. Der Elam-Treiber kann die Daten dann blockieren oder ändern, bevor Sie von den Start-Start Treibern verwendet werden, falls erforderlich. Diese Funktionen sind erforderlich:
+Ein ELAM-Treiber kann sich auch für Registrierungsrückrufe registrieren. Auf diese Weise kann der ELAM-Treiber die Konfigurationsdaten überprüfen, die von den einzelnen Starttreibern verwendet werden. Der ELAM-Treiber kann dann die Daten blockieren oder ändern, bevor sie bei Bedarf von den Starttreibern verwendet werden. Diese Funktionen sind erforderlich:
 
--   [Cmregistercallbackex](/windows-hardware/drivers/ddi/wdm/nf-wdm-cmregistercallbackex)
--   [Cmunregistercallback](/windows-hardware/drivers/ddi/wdm/nf-wdm-cmunregistercallback)
+-   [CmRegisterCallbackEx](/windows-hardware/drivers/ddi/wdm/nf-wdm-cmregistercallbackex)
+-   [CmUnRegisterCallback](/windows-hardware/drivers/ddi/wdm/nf-wdm-cmunregistercallback)
 
-Weitere Informationen zu den Elam-Treiber Anforderungen und zur API-Verwendung finden Sie unter [Antischadsoftware-Frühstart](/windows-hardware/drivers/install/early-launch-antimalware).
+Weitere Informationen zu den Anforderungen des ELAM-Treibers und zur API-Nutzung finden Sie unter [Early Launch Antimalware](/windows-hardware/drivers/install/early-launch-antimalware).
 
 ## <a name="tests"></a>Tests
 
-Elam-Treiber müssen von Microsoft speziell signiert werden, um sicherzustellen, dass Sie früh im Startprozess vom Windows-Kernel gestartet werden. Zum erhalten der Signatur müssen Elam-Treiber eine Reihe von Zertifizierungstests durchlaufen, um Leistung und anderes Verhalten zu überprüfen. Diese Tests sind im Windows-hardwarezertifizierungskit enthalten.
+ELAM-Treiber müssen speziell von Microsoft signiert werden, um sicherzustellen, dass sie vom Windows Kernel zu einem frühen Teil des Startprozesses gestartet werden. Um die Signatur zu erhalten, müssen ELAM-Treiber eine Reihe von Zertifizierungstests bestehen, um die Leistung und anderes Verhalten zu überprüfen. Diese Tests sind im Windows Hardware Certification Kit enthalten.
 
 ## <a name="resources"></a>Ressourcen
 
--   [Antischadsoftware-Frühstart](/windows-hardware/drivers/install/early-launch-antimalware)
--   [Cmregistercallbackex](/windows-hardware/drivers/ddi/wdm/nf-wdm-cmregistercallbackex)
--   [Cmunregistercallback](/windows-hardware/drivers/ddi/wdm/nf-wdm-cmunregistercallback)
--   [Ioregisterbootdrivercallback](/windows-hardware/drivers/ddi/ntddk/nf-ntddk-ioregisterbootdrivercallback)
--   [Iounregisterbootdrivercallback](/windows-hardware/drivers/ddi/ntddk/nf-ntddk-iounregisterbootdrivercallback)
--   [Zertifizierung von Hardware mit der Windows-Hardware Zertifizierung Build Conference Presentation](https://channel9.msdn.com/events/BUILD/BUILD2011/HW-659T)
+-   [Early Launch Antimalware](/windows-hardware/drivers/install/early-launch-antimalware)
+-   [CmRegisterCallbackEx](/windows-hardware/drivers/ddi/wdm/nf-wdm-cmregistercallbackex)
+-   [CmUnRegisterCallback](/windows-hardware/drivers/ddi/wdm/nf-wdm-cmunregistercallback)
+-   [IoRegisterBootDriverCallback](/windows-hardware/drivers/ddi/ntddk/nf-ntddk-ioregisterbootdrivercallback)
+-   [IoUnRegisterBootDriverCallback](/windows-hardware/drivers/ddi/ntddk/nf-ntddk-iounregisterbootdrivercallback)
+-   [Zertifizieren von Hardware mit der Präsentation Windows Hardware Certification Kit Build Conference](https://channel9.msdn.com/events/BUILD/BUILD2011/HW-659T)
 -   [Herunterladen von Kits und Tools](https://msdn.microsoft.com/windows/hardware/br259105)
 
  

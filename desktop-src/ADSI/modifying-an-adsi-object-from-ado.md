@@ -1,32 +1,32 @@
 ---
 title: Ändern eines ADSI-Objekts aus ADO
-description: ADSI für Windows 2000 und der DS-Client enthalten einen schreibgeschützten OLE DB Anbieter. Dies bedeutet, dass Sie derzeit nicht die Update-Anweisung im SQL-Dialekt ausgeben können.
+description: ADSI für Windows 2000 und DS-Client enthält einen schreibgeschützten OLE DB Anbieter. Dies bedeutet, dass Sie derzeit die UPDATE-Anweisung nicht im dialektischen SQL können.
 ms.assetid: b0a107ed-0271-45ab-b971-f589f34472e2
 ms.tgt_platform: multiple
 keywords:
 - Ändern eines ADSI-Objekts aus ADO ADSI
-- ActiveX-Datenobjekt-ADSI, Ändern eines ADSI-Objekts aus ADO
-- ADSI ADSI, Beispielcode C/C++, Ändern eines ADSI-Objekts
+- ActiveX Datenobjekt ADSI , ändern eines ADSI-Objekts aus ADO
+- ADSI ADSI , Beispielcode C/C++ , Ändern eines ADSI-Objekts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 53e7291088915a537231077e1d75161b57684caa
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e4562e67043ea168a0b158088ffe3c2772f3ae28a0a2fa8881e102574cf2eb97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117839450"
 ---
 # <a name="modifying-an-adsi-object-from-ado"></a>Ändern eines ADSI-Objekts aus ADO
 
-ADSI für Windows 2000 und der DS-Client enthalten einen schreibgeschützten OLE DB Anbieter. Dies bedeutet, dass Sie derzeit nicht die Update-Anweisung im SQL-Dialekt ausgeben können.
+ADSI für Windows 2000 und DS-Client enthält einen schreibgeschützten OLE DB Anbieter. Dies bedeutet, dass Sie derzeit die UPDATE-Anweisung nicht im dialektischen SQL können.
 
-**So ändern Sie ein von einer ADO-Abfrage zurück gegebenes Objekt**
+**So ändern Sie ein von einer ADO-Abfrage zurückgegebenes Objekt**
 
-1.  Fordern Sie den **ADsPath** beim Angeben eines Attribut namens an, wie in "Select ADsPath,...".
-2.  Führen Sie die Abfrage aus, und erhalten Sie das **ADsPath** -Attribut.
-3.  Binden Sie die Bindung an den Daten Satz Satz mithilfe von **ADsPath**, und ändern Sie die Attribute.
+1.  Fordern Sie **den ADsPath** an, wenn Sie einen Attributnamen angeben, wie in "SELECT ADsPath, ..."
+2.  Führen Sie die Abfrage aus, und erhalten Sie **das ADsPath-Attribut.**
+3.  Binden Sie mithilfe von **ADsPath** an den Datensatzsatz, und ändern Sie die Attribute.
 
-Im folgenden Codebeispiel wird gezeigt, wie ein ADSI-Objekt geändert wird, nachdem die im vorherigen Beispiel beschriebenen Schritte ausgeführt wurden.
+Das folgende Codebeispiel zeigt, wie Sie ein ADSI-Objekt ändern, nachdem Sie die im vorherigen Beispiel beschriebenen Schritte ausführen.
 
 
 ```VB
@@ -56,9 +56,9 @@ Wend
 
 
 
- 
+ 
 
- 
+ 
 
 
 

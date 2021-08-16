@@ -1,20 +1,20 @@
 ---
-description: Die Win32 \_ systemdriver-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die Win32 \_ SystemDriver-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 0DCAFE45-3FB0-47E8-BC11-26963075832F
 ms.tgt_platform: multiple
-title: Win32_SystemDriver Methoden
+title: Win32_SystemDriver-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eab4512b574d31f0889f92f48ce27add0453679f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 2ca1d5da13782c6eef893bf882b9c7fc4877a46b75ce7e559104fddbce8770e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861379"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117834136"
 ---
-# <a name="win32_systemdriver-methods"></a>Win32 \_ systemdriver-Methoden
+# <a name="win32_systemdriver-methods"></a>\_Win32-SystemDriver-Methoden
 
-Die [**Win32 \_ systemdriver**](win32-systemdriver.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**Win32 \_ SystemDriver-Klasse**](win32-systemdriver.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -26,7 +26,7 @@ Die [**Win32 \_ systemdriver**](win32-systemdriver.md) -Klasse stellt die folgen
 -   [**PauseService-Methode**](pauseservice-method-in-class-win32-systemdriver.md)
 -   [**ResumeService-Methode**](resumeservice-method-in-class-win32-systemdriver.md)
 -   [**StartService-Methode**](startservice-method-in-class-win32-systemdriver.md)
--   [**Stop Service-Methode**](stopservice-method-in-class-win32-systemdriver.md)
+-   [**StopService-Methode**](stopservice-method-in-class-win32-systemdriver.md)
 -   [**UserControlService-Methode**](usercontrolservice-method-in-class-win32-systemdriver.md)
 
  

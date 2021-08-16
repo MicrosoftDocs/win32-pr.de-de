@@ -1,5 +1,5 @@
 ---
-description: Das Windows Server 2008 R2-Logo-Programm konzentriert sich darauf, sicherzustellen, dass Geräte, Systeme und Anwendungen kompatibel, zuverlässig und leistungsfähig sind, um die Windows erfüllen.
+description: Das Windows Server 2008 R2-Logoprogramm konzentriert sich darauf, sicherzustellen, dass Geräte, Systeme und Anwendungen kompatibel und zuverlässig sind und die Leistung zur Erfüllung Windows erfüllen kann.
 ms.assetid: f90aed9d-db23-4b6b-9c4b-62f0e2730be2
 title: Windows Server 2008 R2 Logo Program for Software
 ms.topic: article
@@ -17,13 +17,13 @@ ms.locfileid: "118328092"
 
  **Server –** Windows Server 2008 R2  
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
 Das Windows Server 2008 R2 Logo Program wurde zurückgezogen.
 
-Windows Testübermittlungen von Server 2008 R2 2012 werden weder für Microsoft Partner Network-Kompetenzen (MPN) noch für das Certified for Windows Server-Logo akzeptiert.
+Windows Server 2008 R2 2012-Testübermittlungen werden weder für Microsoft Partner Network-Kompetenzen (MPN) noch für das Certified for Windows Server-Logo akzeptiert.
 
-Windows Server 2012 R2 ist derzeit die bevorzugte Plattform für das Certified for Windows Server-Logo. Weitere Informationen finden [Enterprise Cloud Application Logo Certification Program (CloudAnwendungslogo-Zertifizierungsprogramm).](https://azure.microsoft.com/overview/commercial-marketplace/)
+Windows Server 2012 R2 ist derzeit die bevorzugte Plattform für das Certified for Windows ServerLogo. Weitere Informationen finden sie Enterprise Cloud Application Logo Certification Program ( [Cloud Application Logo Certification Program).](https://azure.microsoft.com/overview/commercial-marketplace/)
 
  
 

@@ -13,7 +13,7 @@ ms.locfileid: "117761754"
 ---
 # <a name="linecallcomplmode_-constants"></a>LINECALLCOMPLMODE-Konstanten \_
 
-Die **\_ LINECALLCOMPLMODE-Bitflags-Konstanten** beschreiben verschiedene Möglichkeiten, wie ein Aufruf abgeschlossen werden kann.
+Die **\_ LINECALLCOMPLMODE-Bitflagkonst** constants beschreiben verschiedene Möglichkeiten, wie ein Aufruf abgeschlossen werden kann.
 
 <dl> <dt>
 
@@ -52,7 +52,7 @@ Fügt die Anwendung dem vorhandenen Aufruf an der aufgerufenen Station (Barge in
 
 
 
-Hinterlässt eine kurze vordefinierte Nachricht für die aufgerufene Station (Word Calling verlassen). Die zu sendende Nachricht wird separat angegeben.
+Hinterlässt eine kurze vordefinierte Meldung für die aufgerufene Station (Word Calling verlassen). Die zu sendende Nachricht wird separat angegeben.
 
 
 </dt> </dl> </dd> </dl>

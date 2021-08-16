@@ -1,34 +1,34 @@
 ---
-description: Auf 64-Bit-Fenstern werden Teile der Registrierungseinträge separat für die 32-Bit-Anwendung und 64-Bit-Anwendungen gespeichert und mithilfe des registrierungsredirectors und der Registrierungs Reflektion separaten logischen Registrierungs Sichten zugeordnet, da die 64-Bit-Version einer Anwendung andere Registrierungsschlüssel und-Werte als die 32-Bit-Version verwenden kann. Es gibt auch freigegebene Registrierungsschlüssel, die nicht umgeleitet oder reflektiert werden.
+description: Auf 64-Bit-Windows werden Teile der Registrierungseinträge separat für 32-Bit-Anwendungen und 64-Bit-Anwendungen gespeichert und mithilfe des Registrierungsumleitungs- und Registrierungsreflektions in separaten logischen Registrierungssichten zugeordnet, da die 64-Bit-Version einer Anwendung möglicherweise andere Registrierungsschlüssel und -werte als die 32-Bit-Version verwendet. Es gibt auch freigegebene Registrierungsschlüssel, die nicht umgeleitet oder widergespiegelt werden.
 ms.assetid: 08dc034c-15ce-41d9-8e74-a49b61ad40a6
-title: 32-Bit-und 64-Bit-Anwendungsdaten in der Registrierung
+title: 32-Bit- und 64-Bit-Anwendungsdaten in der Registrierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7bc82dfbf9b22cf90866e13109aeea2bcdb10e27
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d87d5177eb48a5497e321b47bb0da96874a0e6522360f2dc519dc72df3dcdf89
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865396"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117764984"
 ---
-# <a name="32-bit-and-64-bit-application-data-in-the-registry"></a>32-Bit-und 64-Bit-Anwendungsdaten in der Registrierung
+# <a name="32-bit-and-64-bit-application-data-in-the-registry"></a>32-Bit- und 64-Bit-Anwendungsdaten in der Registrierung
 
-Auf 64-Bit-Fenstern werden Teile der Registrierungseinträge separat für die 32-Bit-Anwendung und 64-Bit-Anwendungen gespeichert und mithilfe des [registrierungsredirectors](/windows/desktop/WinProg64/registry-redirector) und der [Registrierungs Reflektion](/windows/desktop/WinProg64/registry-reflection)separaten logischen Registrierungs Sichten zugeordnet, da die 64-Bit-Version einer Anwendung andere Registrierungsschlüssel und-Werte als die 32-Bit-Version verwenden kann. Es gibt auch frei [gegebene Registrierungsschlüssel](/windows/desktop/WinProg64/shared-registry-keys) , die nicht umgeleitet oder reflektiert werden.
+Auf 64-Bit-Windows werden Teile der Registrierungseinträge separat für 32-Bit-Anwendungen und 64-Bit-Anwendungen gespeichert und mithilfe des [Registrierungsumleitungs-](/windows/desktop/WinProg64/registry-redirector) und [Registrierungsreflektions](/windows/desktop/WinProg64/registry-reflection)in separaten logischen Registrierungssichten zugeordnet, da die 64-Bit-Version einer Anwendung möglicherweise andere Registrierungsschlüssel und -werte als die 32-Bit-Version verwendet. Es gibt auch [freigegebene Registrierungsschlüssel,](/windows/desktop/WinProg64/shared-registry-keys) die nicht umgeleitet oder widergespiegelt werden.
 
-Das übergeordnete Element der einzelnen 64-Bit-Registrierungs Knoten ist der Image-Specific Knoten oder isn. Der Registrierungs Redirector leitet den Registrierungs Zugriff einer Anwendung auf den entsprechenden isn-unter Knoten transparent um. Umleitungs unter Knoten in der Registrierungs Struktur werden automatisch von der WOW64-Komponente mit dem Namen **Wow6432Node** erstellt. Daher ist es von entscheidender Bedeutung, keinen Registrierungsschlüssel zu benennen, den Sie **Wow6432Node** erstellen.
+Das übergeordnete Element jedes 64-Bit-Registrierungsknotens ist der Image-Specific Node oder ISN. Der Registrierungs-Redirector leitet den Registrierungszugriff einer Anwendung transparent an den entsprechenden ISN-Unterknoten weiter. Umleitungsunterknoten in der Registrierungsstruktur werden automatisch von der WOW64-Komponente mit dem Namen **Wow6432Node** erstellt. Daher ist es wichtig, keinen Registrierungsschlüssel zu benennen, den Sie erstellen **Wow6432Node.**
 
-Die \_ Flags Key WOW64 \_ 64key und Key \_ WOW64 \_ 32key ermöglichen expliziten Zugriff auf die 64-Bit-Registrierungs Ansicht bzw. die 32-Bit-Sicht. Weitere Informationen finden Sie unter [zugreifen auf eine Alternative Registrierungs Ansicht](/windows/desktop/WinProg64/accessing-an-alternate-registry-view).
+Die \_ Flags KEY WOW64 \_ 64KEY und KEY \_ WOW64 \_ 32KEY ermöglichen den expliziten Zugriff auf die 64-Bit-Registrierungsansicht bzw. die 32-Bit-Ansicht. Weitere Informationen finden Sie unter [Zugreifen auf eine alternative Registrierungsansicht.](/windows/desktop/WinProg64/accessing-an-alternate-registry-view)
 
-Um die Registrierungs Reflektion für einen bestimmten Schlüssel zu deaktivieren und zu aktivieren, verwenden Sie die Funktionen [**regdisablereflectionkey**](/windows/desktop/api/Winreg/nf-winreg-regdisablereflectionkey) und [**regenablereflectionkey**](/windows/desktop/api/Winreg/nf-winreg-regenablereflectionkey) . Anwendungen sollten die Reflektion nur für die von Ihnen erstellten Registrierungsschlüssel deaktivieren und nicht versuchen, die Reflektion für die vordefinierten Schlüssel zu deaktivieren, wie z. b. **HKEY \_ local \_ Machine** oder **HKEY \_ Current \_ User**. Verwenden Sie die [**regqueryreflectionkey**](/windows/desktop/api/WinReg/nf-winreg-regqueryreflectionkey) -Funktion, um zu bestimmen, welche Schlüssel in der reflektionsliste enthalten sind.
+Verwenden Sie zum Deaktivieren und Aktivieren der Registrierungsreflektion für einen bestimmten Schlüssel die Funktionen [**RegDisableReflectionKey**](/windows/desktop/api/Winreg/nf-winreg-regdisablereflectionkey) und [**RegEnableReflectionKey.**](/windows/desktop/api/Winreg/nf-winreg-regenablereflectionkey) Anwendungen sollten die Reflektion nur für die Registrierungsschlüssel deaktivieren, die sie erstellen, und nicht versuchen, die Reflektion für die vordefinierten Schlüssel wie **HKEY \_ LOCAL \_ MACHINE** oder **HKEY \_ CURRENT \_ USER** zu deaktivieren. Verwenden Sie die [**RegQueryReflectionKey-Funktion,**](/windows/desktop/api/WinReg/nf-winreg-regqueryreflectionkey) um zu bestimmen, welche Schlüssel in der Reflektionsliste enthalten sind.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Registrierungs Redirector](/windows/desktop/WinProg64/registry-redirector)
+[Registrierungs-Redirector](/windows/desktop/WinProg64/registry-redirector)
 </dt> <dt>
 
-[Registrierungs Reflektion](/windows/desktop/WinProg64/registry-reflection)
+[Registrierungsreflektion](/windows/desktop/WinProg64/registry-reflection)
 </dt> </dl>
 
  

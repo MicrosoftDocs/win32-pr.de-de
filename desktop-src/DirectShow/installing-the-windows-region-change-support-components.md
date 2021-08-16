@@ -1,7 +1,7 @@
 ---
-description: Installieren der Unterstützungskomponenten für Windows Region Change
+description: Installieren der Windows Regionsänderungsunterstützungskomponenten
 ms.assetid: af0e5e19-f4de-4932-a42b-590a1131e0f6
-title: Installieren der Unterstützungskomponenten für Windows Region Change
+title: Installieren der Windows Regionsänderungsunterstützungskomponenten
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 36b56f8cc71298621f21b40b8b8d59764e4f6b9b6dfd17215c33a4a2f46ca4cb
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118398008"
 ---
-# <a name="installing-the-windows-region-change-support-components"></a>Installieren der Unterstützungskomponenten für Windows Region Change
+# <a name="installing-the-windows-region-change-support-components"></a>Installieren der Windows Regionsänderungsunterstützungskomponenten
 
 Anwendungsentwickler können die in Windows integrierte Dvd-Regionsänderungsunterstützung verwenden, um die Region innerhalb der DVD-Wiedergabeanwendungen zu ändern.
 

@@ -1,5 +1,5 @@
 ---
-description: Die GetPropById-Methode des Item-Objekts verwendet die ID einer Elementeigenschaft, um ihren Wert zurück zu geben.
+description: Die GetPropById-Methode des Item-Objekts verwendet die ID einer Elementeigenschaft, um ihren Wert zurückzugeben.
 ms.assetid: 00f7a91c-fd55-4016-a932-f710045a14b8
 title: Item.GetPropById-Methode
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118208374"
 ---
 # <a name="itemgetpropbyid-method"></a>Item.GetPropById-Methode
 
-Die **GetPropById-Methode** des [**Item-Objekts**](-wia-item.md) verwendet die ID einer Elementeigenschaft, um ihren Wert zurück zu geben.
+Die **GetPropById-Methode** des [**Item-Objekts**](-wia-item.md) verwendet die ID einer Elementeigenschaft, um ihren Wert zurückzugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,13 +52,13 @@ Gibt die ID der Eigenschaft an.
 
 Typ: **VARIANT**
 
-Diese Methode gibt den Wert der durch id angegebenen *Eigenschaft zurück.*
+Diese Methode gibt den Wert der Eigenschaft zurück, die durch *die ID* angegeben wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Methode, um den Wert einer Elementeigenschaft aus ihrer ID zu suchen. Eine Liste der Eigenschaften-IDs finden Sie unter [WIA Property Constant Definitions](-wia-wia-property-constant-definitions.md). Informationen zu den Eigenschaften selbst finden Sie unter [WIA-Eigenschaftenkonst constants](-wia-wia-property-constants.md).
+Verwenden Sie diese Methode, um den Wert einer Elementeigenschaft aus ihrer ID zu suchen. Eine Liste der Eigenschaften-IDs finden Sie unter [WIA-Eigenschaftskonstantendefinitionen.](-wia-wia-property-constant-definitions.md) Informationen zu den Eigenschaften selbst finden Sie unter [WIA-Eigenschaftenkonstanten.](-wia-wia-property-constants.md)
 
-Fügen Sie Visual Basic Microsoft-Anwendungen einen Verweis auf "Windows Image Acquisition 1.01 Type Library" hinzu. Die folgenden Konstanten, die in dieser Datei definiert sind, sind nur für Stammelemente (Geräteelemente) gültig:
+Fügen Sie für Microsoft Visual Basic-Anwendungen einen Verweis auf "Windows Image Acquisition 1.01 Type Library" hinzu. Die folgenden Konstanten, die in dieser Datei definiert sind, sind nur für Stammelemente (Geräteelemente) gültig:
 
 ``` syntax
 const FirmwareVersion = 1026

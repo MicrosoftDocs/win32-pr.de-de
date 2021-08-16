@@ -1,51 +1,51 @@
 ---
-description: Eine Dateizeit ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosekunden-Intervalle darstellt, die seit 12:00 Uhr vergangen sind. 1. Januar 1601 koordinierte Weltzeit (UTC). Das System zeichnet Datei Zeiten auf, wenn Anwendungen Dateien erstellen, darauf zugreifen und in Dateien schreiben.
+description: Eine Dateizeit ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen darstellt, die seit 12:00 Uhr verstrichen sind. 1. Januar 1601 koordinierte Weltzeit (UTC). Das System zeichnet Dateizeiten auf, wenn Anwendungen Dateien erstellen, darauf zugreifen und in diese schreiben.
 ms.assetid: 52d80b82-9ab0-4631-9e70-85df21da4946
-title: Datei Zeiten
+title: Dateizeiten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5919a2378e08798e4cd64d8f8357cb55692bd22e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1492597b4e71775974ed8b19f6109c5900a8a28720b769c1c10dcf2f70166b7d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103869220"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117764492"
 ---
-# <a name="file-times"></a>Datei Zeiten
+# <a name="file-times"></a>Dateizeiten
 
-Eine *Dateizeit* ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosekunden-Intervalle darstellt, die seit 12:00 Uhr vergangen sind. 1. Januar 1601 koordinierte Weltzeit (UTC). Das System zeichnet Datei Zeiten auf, wenn Anwendungen Dateien erstellen, darauf zugreifen und in Dateien schreiben.
+Eine *Dateizeit* ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen darstellt, die seit 12:00 Uhr verstrichen sind. 1. Januar 1601 koordinierte Weltzeit (UTC). Das System zeichnet Dateizeiten auf, wenn Anwendungen Dateien erstellen, darauf zugreifen und in diese schreiben.
 
-Das NTFS-Dateisystem speichert Zeitwerte im UTC-Format, sodass Sie von Änderungen in der Zeitzone oder der Sommerzeit nicht betroffen sind. Das FAT-Dateisystem speichert Zeitwerte basierend auf der lokalen Zeit des Computers. Beispielsweise wird eine Datei, die am 3.00PM PST in Washington gespeichert wird, als 6:00PM EST in New York auf einem NTFS-Volume angezeigt, aber Sie wird in New York auf einem FAT-Volume als "3:00PM EST" betrachtet.
+Das NTFS-Dateisystem speichert Zeitwerte im UTC-Format, sodass sie nicht von Änderungen der Zeitzone oder Sommerzeit betroffen sind. Das FAT-Dateisystem speichert Zeitwerte basierend auf der lokalen Zeit des Computers. Beispielsweise wird eine Datei, die um 15:00 Uhr PST in Washington gespeichert wird, als 18:00 Uhr EST in New York auf einem NTFS-Volume, aber auf einem FAT-Volume als 15:00 Uhr EST in New York angesehen.
 
-Zeitstempel werden zu verschiedenen Zeitpunkten und aus verschiedenen Gründen aktualisiert. Die einzige Garantie für einen Datei Zeitstempel ist, dass die Datei Zeit ordnungsgemäß widergespiegelt wird, wenn das Handle, das die Änderung vornimmt, geschlossen wird.
+Zeitstempel werden zu verschiedenen Zeitpunkten und aus verschiedenen Gründen aktualisiert. Die einzige Garantie für einen Dateizeitstempel ist, dass die Dateizeit richtig reflektiert wird, wenn das Handle, das die Änderung vorsteuert, geschlossen wird.
 
-Nicht alle Dateisysteme können Erstellungs-und letzten Zugriffszeiten aufzeichnen, und nicht alle Dateisysteme zeichnen Sie auf die gleiche Weise auf. Beispielsweise beträgt die Auflösung der Erstellungszeit auf FAT 10 Millisekunden, während die Schreibzeit eine Auflösung von 2 Sekunden und die Zugriffszeit eine Auflösung von 1 Tag hat, sodass Sie tatsächlich das Zugriffs Datum ist. Das NTFS-Dateisystem verzögert Updates zum Zeitpunkt des letzten Zugriffs für eine Datei um bis zu einer Stunde nach dem letzten Zugriff.
+Nicht alle Dateisysteme können Erstellungs- und letzte Zugriffszeiten aufzeichnen, und nicht alle Dateisysteme zeichnen sie auf die gleiche Weise auf. Beispielsweise beträgt die Auflösung der Erstellungszeit für FAT 10 Millisekunden, während die Schreibzeit eine Auflösung von 2 Sekunden hat und die Zugriffszeit eine Auflösung von 1 Tag hat, sodass es tatsächlich das Zugriffsdatum ist. Das NTFS-Dateisystem verzögert Aktualisierungen der letzten Zugriffszeit für eine Datei um bis zu 1 Stunde nach dem letzten Zugriff.
 
-Verwenden Sie die [**GetFileTime**](/windows/desktop/api/FileAPI/nf-fileapi-getfiletime) -Funktion, um die Datei Zeiten für eine angegebene Datei abzurufen. **GetFileTime** kopiert die Erstellungs-, letzten Zugriffs-und letzten Schreibzeiten in einzelne [**FILETIME**](/windows/win32/api/minwinbase/ns-minwinbase-filetime) -Strukturen. Sie können auch Datei Zeiten mithilfe der Funktionen " [**FindFirstFile**](/windows/desktop/api/fileapi/nf-fileapi-findfirstfilea) " und " [**FindNextFile**](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea) " abrufen. Diese Funktionen kopieren die Datei Zeiten in **FILETIME** -Strukturen in einer [**Win32- \_ \_ Datenstruktur suchen**](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Beim Schreiben in eine Datei wird der letzte Schreib Zeitpunkt nicht vollständig aktualisiert, bis alle Handles, die zum Schreiben verwendet werden, geschlossen werden.
+Verwenden Sie die [**GetFileTime-Funktion,**](/windows/desktop/api/FileAPI/nf-fileapi-getfiletime) um die Dateizeiten für eine angegebene Datei abzurufen. **GetFileTime kopiert** die Erstellung, den letzten Zugriff und die letzten Schreibzeiten in einzelne [**FILETIME-Strukturen.**](/windows/win32/api/minwinbase/ns-minwinbase-filetime) Sie können Dateizeiten auch mithilfe der [**Funktionen FindFirstFile**](/windows/desktop/api/fileapi/nf-fileapi-findfirstfilea) und [**FindNextFile**](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea) abrufen. Diese Funktionen kopieren die Dateizeiten in **FILETIME-Strukturen** in einer [**WIN32 \_ FIND \_ DATA-Struktur.**](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) Beim Schreiben in eine Datei wird der Zeitpunkt des letzten Schreibzugriffs erst vollständig aktualisiert, wenn alle Handles, die zum Schreiben verwendet werden, geschlossen sind.
 
-Verwenden Sie die [**SetFileTime**](/windows/desktop/api/FileAPI/nf-fileapi-setfiletime) -Funktion, um die Datei Zeiten für eine Datei festzulegen. Mit dieser Funktion können Sie die Erstellung, den letzten Zugriff und die letzten Schreibzeiten ändern, ohne den Inhalt der Datei zu ändern. Mit der [**comparefiletime**](/windows/desktop/api/FileAPI/nf-fileapi-comparefiletime) -Funktion können Sie die Zeiten verschiedener Dateien vergleichen. Die-Funktion vergleicht zwei Datei Zeiten und gibt einen Wert zurück, der angibt, welcher Zeitpunkt später ist, oder gibt 0 (null) zurück, wenn die Uhrzeiten gleich sind.
+Verwenden Sie zum Festlegen der Dateizeiten für eine Datei [**die SetFileTime-Funktion.**](/windows/desktop/api/FileAPI/nf-fileapi-setfiletime) Mit dieser Funktion können Sie die Erstellung, den letzten Zugriff und die letzten Schreibzeiten ändern, ohne den Inhalt der Datei zu ändern. Sie können die Zeiten verschiedener Dateien mithilfe der [**CompareFileTime-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-comparefiletime) vergleichen. Die Funktion vergleicht zwei Dateizeiten und gibt einen Wert zurück, der angibt, welche Zeit später ist, oder gibt 0 (null) zurück, wenn die Zeiten gleich sind.
 
-Wenn Sie die Datei Zeiten für angegebene Dateien ändern möchten, können Sie ein Datum und eine Uhrzeit in einen dateizeitpunkt konvertieren, indem Sie die [**systemtimedefiletime**](/windows/win32/api/timezoneapi/nf-timezoneapi-systemtimetofiletime) -Funktion verwenden. Sie können auch die Systemzeit in einer [**FILETIME**](/windows/win32/api/minwinbase/ns-minwinbase-filetime) -Struktur abrufen, indem Sie die [**GetSystemTimeAsFileTime**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) -Funktion aufrufen.
+Wenn Sie die Dateizeiten für angegebene Dateien ändern möchten, können Sie ein Datum und eine Uhrzeit mithilfe der [**SystemTimeToFileTime-Funktion**](/windows/win32/api/timezoneapi/nf-timezoneapi-systemtimetofiletime) in eine Dateizeit konvertieren. Sie können die Systemzeit auch in einer [**FILETIME-Struktur**](/windows/win32/api/minwinbase/ns-minwinbase-filetime) abrufen, indem Sie die [**GetSystemTimeAsFileTime-Funktion**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) aufrufen.
 
-Verwenden Sie die [**filetimedesystemtime**](/windows/win32/api/timezoneapi/nf-timezoneapi-filetimetosystemtime) -Funktion, damit eine Datei Zeit für Benutzer leicht angezeigt werden kann. **Filetimedesystemtime** konvertiert die Dateizeit und kopiert den Monat, den Tag, das Jahr und die Uhrzeit von der Dateizeit in eine [**SYSTEMTIME**](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) -Struktur.
+Verwenden Sie die [**FileTimeToSystemTime-Funktion,**](/windows/win32/api/timezoneapi/nf-timezoneapi-filetimetosystemtime) um die Anzeige einer Datei für einen Benutzer zu ermöglichen. **FileTimeToSystemTime konvertiert** die Dateizeit und kopiert Monat, Tag, Jahr und Uhrzeit aus der Dateizeit in eine [**SYSTEMTIME-Struktur.**](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)
 
-## <a name="file-times-and-daylight-saving-time"></a>Datei Zeiten und Sommerzeit
+## <a name="file-times-and-daylight-saving-time"></a>Dateizeiten und Sommerzeit
 
-Sie müssen bei der Verwendung von Datei Zeiten darauf achten, dass der Benutzer das System für die automatische Anpassung der Sommerzeit festgelegt hat.
+Sie müssen bei der Verwendung von Dateizeiten darauf achten, dass das System automatisch an die Sommerzeit angepasst wird.
 
-Verwenden Sie die [**filetimetolocalfiletime**](/windows/desktop/api/FileAPI/nf-fileapi-filetimetolocalfiletime) -Funktion, um eine Dateizeit in eine lokale Zeit zu konvertieren. Allerdings verwendet **filetimetolocalfiletime** die aktuellen Einstellungen für die Zeitzone und die Sommerzeit. Wenn es sich um Sommerzeit handelt, ist die Sommerzeit auch dann in Betracht gezogen, wenn die Dateizeit, die Sie umrechnen, normal ist.
+Verwenden Sie die [**FileTimeToLocalFileTime-Funktion,**](/windows/desktop/api/FileAPI/nf-fileapi-filetimetolocalfiletime) um eine Dateizeit in die lokale Zeit zu konvertieren. **FileTimeToLocalFileTime** verwendet jedoch die aktuellen Einstellungen für die Zeitzone und sommerliche Sommerzeit. Wenn es sich also um Sommerzeit handelt, wird die Sommerzeit berücksichtigt, auch wenn die Dateizeit, die Sie konvertieren, in der Standardzeit liegt.
 
-Im FAT-Dateisystem werden Zeiten auf dem Datenträger in der Ortszeit aufgezeichnet. [**GetFileTime**](/windows/desktop/api/FileAPI/nf-fileapi-getfiletime) ruft zwischengespeicherte UTC-Zeiten aus dem FAT-Dateisystem ab. Wenn es sich um Sommerzeit handelt, liegt die von **GetFileTime** abgerufene Zeit außerhalb einer Stunde, da der Cache nicht aktualisiert wird. Wenn Sie den Computer neu starten, ist die zwischengespeicherte Zeit, die **GetFileTime** abruft, richtig. [**FindFirstFile**](/windows/desktop/api/fileapi/nf-fileapi-findfirstfilea) Ruft die Ortszeit aus dem FAT-Dateisystem ab und konvertiert Sie mithilfe der aktuellen Einstellungen für die Zeitzone und die Sommerzeit in die UTC. Wenn es sich um die Sommerzeit handelt, nimmt **FindFirstFile** die Sommerzeit an, selbst wenn die Dateizeit, die Sie umrechnen, normal ist.
+Das FAT-Dateisystem zeichnet Uhrzeiten auf dem Datenträger in Ortszeit auf. [**GetFileTime ruft**](/windows/desktop/api/FileAPI/nf-fileapi-getfiletime) zwischengespeicherte UTC-Zeiten aus dem FAT-Dateisystem ab. Wenn es zur Sommerzeit wird, ist die von **GetFileTime** abgerufene Zeit eine Stunde nicht mehr, da der Cache nicht aktualisiert wird. Wenn Sie den Computer neu starten, ist die zwischengespeicherte Zeit, die **GetFileTime** abruft, richtig. [**FindFirstFile**](/windows/desktop/api/fileapi/nf-fileapi-findfirstfilea) ruft die Ortszeit aus dem FAT-Dateisystem ab und konvertiert sie mithilfe der aktuellen Einstellungen für die Zeitzone und die Sommerzeit in UTC. Wenn es sich um Sommerzeit handelt, berücksichtigt **FindFirstFile** daher die Sommerzeit, auch wenn die Dateizeit, die Sie konvertieren, in der Standardzeit liegt.
 
-Das NTFS-Dateisystem zeichnet Zeiten auf dem Datenträger in UTC auf. Verwenden Sie die folgende Abfolge von Funktionen anstelle von [**filetimetolocalfiletime**](/windows/desktop/api/FileAPI/nf-fileapi-filetimetolocalfiletime), um die Sommerzeit beim Umrechnen einer Datei Zeit in eine lokale Zeit zu berücksichtigen:
+Das NTFS-Dateisystem zeichnet die Zeiten auf dem Datenträger in UTC auf. Um die Sommerzeit beim Konvertieren einer Dateizeit in eine lokale Zeit zu berücksichtigen, verwenden Sie die folgende Funktionssequenz, anstatt [**FileTimeToLocalFileTime zu verwenden:**](/windows/desktop/api/FileAPI/nf-fileapi-filetimetolocalfiletime)
 
--   [**Filetimeto SYSTEMTIME**](/windows/win32/api/timezoneapi/nf-timezoneapi-filetimetosystemtime)
--   [**Systemtimeumtzspecificlocaltime**](/windows/win32/api/timezoneapi/nf-timezoneapi-systemtimetotzspecificlocaltime)
--   [**Fehler bei SystemTimeToFileTime**](/windows/win32/api/timezoneapi/nf-timezoneapi-systemtimetofiletime)
+-   [**FileTimeToSystemTime**](/windows/win32/api/timezoneapi/nf-timezoneapi-filetimetosystemtime)
+-   [**SystemTimeToTzSpecificLocalTime**](/windows/win32/api/timezoneapi/nf-timezoneapi-systemtimetotzspecificlocaltime)
+-   [**SystemTimeToFileTime**](/windows/win32/api/timezoneapi/nf-timezoneapi-systemtimetofiletime)
 
-## <a name="file-times-and-cdfs"></a>Datei Zeiten und CDFS
+## <a name="file-times-and-cdfs"></a>Dateizeiten und CDFS
 
-Die Datums-und Zeitstempel von Dateien, die sich auf dem bzw. von einem Medium mithilfe von CDFS (Compact Disk File System) befinden, werden für die lokale Zeitzone angepasst. ISO 9660 gibt an, dass CDFS die Datumsinformationen für die lokale Zeitzone korrekt anzeigen soll. Dies wird dadurch erreicht, dass Datumsangaben für Dateien auf CDFS identisch mit denen im Format Universal Disk Format (UDF) angezeigt werden. UDF ist der neuere Standard für Verteilungs Medien. Wenn Ihr Code von den nicht geänderten Datumsinformationen für eine Datei abhängig ist, die sich in einem oder aus einem Medium mithilfe von CDFS befindet, funktioniert Sie möglicherweise nicht ordnungsgemäß.
+Die Datums- und Zeitstempel von Dateien, die sich mithilfe des Compact Disc File System (CDFS) auf Medien befinden oder von diesen stammen, werden für die lokale Zeitzone angepasst. ISO 9660 besagt, dass CDFS die Datumsinformationen ordnungsgemäß für die lokale Zeitzone anzeigen soll. Dies erfolgt so, dass Datumsangaben für Dateien im CDFS mit denen im Universal Disk Format (UDF) angezeigt werden. UdF ist der neuere Standard für Verteilungsmedien. Wenn Ihr Code von den unveränderten Datumsinformationen für eine Datei abhängt, die sich mithilfe von CDFS auf einem Medium befindet oder von diesem stammt, funktioniert er möglicherweise nicht ordnungsgemäß.
 
  
 

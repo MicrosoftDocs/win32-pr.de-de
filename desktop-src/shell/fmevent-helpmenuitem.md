@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: 6298061d-7e24-45ab-8bc4-96b28e071080
-ms.openlocfilehash: 46cb246e91f9901204432527ba36fd8ac72beba4
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 69078274ccd8a7a7b91bbd7bd8e8d84b3b033cec6dbcf4ce495ac2ebfd0e8381
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109842311"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118224164"
 ---
 # <a name="fmevent_helpmenuitem-message"></a>FMEVENT \_ HELPMENUITEM-Meldung
 
-Wird an eine DLL-Prozedur der Datei-Manager-Erweiterung gesendet, wenn der Benutzer F1 in einem Menü- oder Symbolleistenbefehlselement drückt. Die Erweiterung sollte [**WinHelp**](/windows/desktop/api/Winuser/nf-winuser-winhelpa)aufrufen, bei dem der *hwnd-Parameter* dieser Funktion auf den Wert des *hwnd-Parameters der Erweiterung festgelegt* ist.
+Wird an eine DLL-Prozedur der Datei-Manager-Erweiterung gesendet, wenn der Benutzer F1 in einem Menü- oder Symbolleistenbefehlselement drückt. Die Erweiterung sollte [**WinHelp aufrufen,**](/windows/desktop/api/Winuser/nf-winuser-winhelpa)bei dem der *hwnd-Parameter* dieser Funktion auf den Wert des *hwnd-Parameters der Erweiterung festgelegt* ist.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,7 +34,7 @@ Wird an eine DLL-Prozedur der Datei-Manager-Erweiterung gesendet, wenn der Benut
 *uItem* 
 </dt> <dd>
 
-Ein -Wert, der das Menü- oder Symbolleistenbefehlselement identifiziert, für das Hilfe gewünscht ist. Die Erweiterungsprozedur verwendet diesen Wert, um zu bestimmen, wie WinHelp am besten [**aufruft.**](/windows/desktop/api/Winuser/nf-winuser-winhelpa)
+Ein -Wert, der das Menü- oder Symbolleistenbefehlselement identifiziert, für das Hilfe gewünscht ist. Die Erweiterungsprozedur verwendet diesen Wert, um zu bestimmen, wie WinHelp am besten [**aufrufen kann.**](/windows/desktop/api/Winuser/nf-winuser-winhelpa)
 
 </dd> </dl>
 
@@ -54,7 +54,7 @@ Eine DLL-Erweiterungsprozedur sollte 0 (null) zurückgeben, wenn diese Meldung v
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

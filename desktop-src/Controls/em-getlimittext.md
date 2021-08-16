@@ -1,9 +1,9 @@
 ---
-title: EM_GETLIMITTEXT Meldung (Winuser. h)
-description: Ruft den aktuellen Text Grenzwert für ein Bearbeitungs Steuerelement ab. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+title: EM_GETLIMITTEXT Meldung (Winuser.h)
+description: Ruft den aktuellen Textgrenzwert für ein Bearbeitungssteuerelement ab. Sie können diese Nachricht entweder an ein Bearbeitungssteuerelement oder ein Rich Edit-Steuerelement senden.
 ms.assetid: 778967f0-c090-46a2-9f27-194b17bbb1be
 keywords:
-- Windows-Steuerelemente für EM_GETLIMITTEXT Meldung
+- EM_GETLIMITTEXT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 53da76f43716fd7934011a96d449ffa37c254cfa
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: de2066bf03fd8ea05851a9cef58f4e308db49f82bdee94c2d503cadf1c20a2c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858688"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117831681"
 ---
-# <a name="em_getlimittext-message"></a>EM \_ getlimittext-Nachricht
+# <a name="em_getlimittext-message"></a>EM \_ GETLIMITTEXT-Nachricht
 
-Ruft den aktuellen Text Grenzwert für ein Bearbeitungs Steuerelement ab. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+Ruft den aktuellen Textgrenzwert für ein Bearbeitungssteuerelement ab. Sie können diese Nachricht entweder an ein Bearbeitungssteuerelement oder ein Rich Edit-Steuerelement senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,15 +45,15 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist das Text Limit.
+Der Rückgabewert ist der Textgrenzwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Bearbeitungs Steuerelemente, umfassende Bearbeitung 2,0 und höher:** Das Text Limit ist die maximale Text Menge in **TCHAR** s, die das Steuerelement enthalten kann. Bei ANSI-Text ist dies die Anzahl der Bytes. bei Unicode-Text ist dies die Anzahl der Zeichen. Zwei Dokumente mit der gleichen Zeichen Beschränkung führen zu demselben Text Limit, auch wenn "ANSI" und das andere "Unicode" sind.
+**Steuerelemente bearbeiten, Rich Edit 2.0 und höher:** Der Textgrenzwert ist die maximale Textmenge in **TCHAR** s, die das Steuerelement enthalten kann. Für ANSI-Text ist dies die Anzahl von Bytes. Für Unicode-Text ist dies die Anzahl der Zeichen. Zwei Dokumente mit dem gleichen Zeichenlimit ergeben den gleichen Textgrenzwert, auch wenn eines ANSI und das andere Unicode ist.
 
-**Rich Edit 1,0:** Das Text Limit ist die maximale Menge an Text (in Bytes), die das Rich Edit-Steuerelement enthalten kann.
+**Rich Edit 1.0:** Der Textgrenzwert ist die maximale Textmenge in Bytes, die das Rich Edit-Steuerelement enthalten kann.
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Rich Edit:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,17 +61,17 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**EM \_ SetLimitText**](em-setlimittext.md)
+[**EM \_ SETLIMITTEXT**](em-setlimittext.md)
 </dt> </dl>
 
  

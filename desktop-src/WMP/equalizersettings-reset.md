@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. Reset
-description: Die Reset-Methode setzt die Ersetzungs Ebenen aller Bänder auf NULL Dezimalstellen zurück.
+title: EQUALIZERSETTINGS.reset
+description: Die Reset-Methode setzt die Verstärkungsebenen aller Bänder auf null Dezibel zurück.
 ms.assetid: cb047a4a-57c7-45c6-84b7-c939d867141d
 keywords:
-- Equalizersettings. Reset Windows Media Player
+- EQUALIZERSETTINGS.reset Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9e6a98612a77f25b4f0722ebb483d47215ae2915
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2e5363e5d499ab037231c6a8eaf8e390a4219510bcd88529495ed1c3d0091a18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372740"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117935117"
 ---
-# <a name="equalizersettingsreset"></a>Equalizersettings. Reset
+# <a name="equalizersettingsreset"></a>EQUALIZERSETTINGS.reset
 
-Die **Reset** -Methode setzt die Ersetzungs Ebenen aller Bänder auf NULL Dezimalstellen zurück.
+Die **Reset-Methode** setzt die Verstärkungsebenen aller Bänder auf null Dezibel zurück.
 
 ``` syntax
         elementID.reset()
@@ -42,15 +42,15 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> </dl>
 
  

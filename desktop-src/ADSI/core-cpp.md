@@ -1,36 +1,36 @@
 ---
-title: Core. CPP
-description: In der Beispiel Anbieter Komponente ist das Codebeispiel, das verwendet wird, um eine generische Objekt Kern Eigenschaft zu initialisieren, in Core. cpp. In der folgenden Tabelle sind die unterstützten Methoden aufgeführt.
+title: Kern. Cpp
+description: In der Beispielanbieterkomponente befindet sich das Codebeispiel, das zum Initialisieren generischer Objektkerneigenschaften verwendet wird, in core.cpp. Die unterstützten Methoden sind in der folgenden Tabelle aufgeführt.
 ms.assetid: 32b195b6-6cc3-4c41-96a9-327b81fdf61a
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cfc5d1362a9fe77245c09ca2f568c8024388cac2
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 08f19a465c36847d9435be8d9595a2b69856c6a77406c196ee573afd1591ad6f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117840463"
 ---
-# <a name="corecpp"></a>Core. CPP
+# <a name="corecpp"></a>Kern. Cpp
 
-In der Beispiel Anbieter Komponente ist das Codebeispiel, das verwendet wird, um eine generische Objekt Kern Eigenschaft zu initialisieren, in Core. cpp. In der folgenden Tabelle sind die unterstützten Methoden aufgeführt.
+In der Beispielanbieterkomponente befindet sich das Codebeispiel, das zum Initialisieren generischer Objektkerneigenschaften verwendet wird, in core.cpp. Die unterstützten Methoden sind in der folgenden Tabelle aufgeführt.
 
 
 
-| Methode                                   | BESCHREIBUNG                                                                                              |
+| Methode                                   | Beschreibung                                                                                              |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| **Ccoreadsobject:: initializecoreobject** | Initialisieren Sie die grundlegenden [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) -Eigenschaften für dieses Objekt, um die Objekt Erstellung zu erleichtern. |
-| **Ccoreadsobject:: ccoreadsobject**       | Standard Ersteller.                                                                                        |
-| **Ccoreadsobject:: ~ ccoreadsobject**      | Standardedekonstruktor.                                                                                     |
+| **CCoreADsObject::InitializeCoreObject** | Initialisieren Sie die [**grundlegenden IADs-Eigenschaften**](/windows/desktop/api/Iads/nn-iads-iads) für dieses Objekt. Dies ist eine Vereinfachung für die Objekterstellung. |
+| **CCoreADsObject::CCoreADsObject**       | Standardersteller.                                                                                        |
+| **CCoreADsObject::~CCoreADsObject**      | Standard-Destruktor.                                                                                     |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

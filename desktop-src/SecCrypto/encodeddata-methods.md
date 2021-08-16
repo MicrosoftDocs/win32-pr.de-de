@@ -17,7 +17,7 @@ Das [**EncodedData-Objekt**](encodeddata.md) macht die folgenden Methoden verfü
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Decodermethode**](encodeddata-decoder.md)
+-   [**Decoder-Methode**](encodeddata-decoder.md)
 -   [**Format-Methode**](encodeddata-format.md)
 
  

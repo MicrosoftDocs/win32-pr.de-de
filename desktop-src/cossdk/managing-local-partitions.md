@@ -1,26 +1,26 @@
 ---
-description: Als Alternative zum Erstellen und Konfigurieren lokaler Partitionen über das Verwaltungs Programmkomponenten Dienste können Sie Partitionen Programm gesteuert verwalten, indem Sie Partitions spezifische com+-Verwaltungs Sammlungen und-Eigenschaften verwenden.
+description: Als Alternative zum Erstellen und Konfigurieren lokaler Partitionen über das Verwaltungstool komponentendienste können Sie Partitionen programmgesteuert verwalten, indem Sie partitionsspezifische COM+-Verwaltungssammlungen und -Eigenschaften verwenden.
 ms.assetid: 82f790cf-3f94-44d9-b722-89a6013d0300
-title: Verwalten von lokalen Partitionen
+title: Verwalten lokaler Partitionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ecd551fc73c76067c4ab2e988fba79ee702df53c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 124d0b9ef7bf54f07a6b28561428c57834a6e15ec11c4ed5c89fb92f95f0a950
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118306243"
 ---
-# <a name="managing-local-partitions"></a>Verwalten von lokalen Partitionen
+# <a name="managing-local-partitions"></a>Verwalten lokaler Partitionen
 
-Als Alternative zum Erstellen und Konfigurieren lokaler Partitionen über das Verwaltungs Programmkomponenten Dienste können Sie Partitionen Programm gesteuert verwalten, indem Sie Partitions spezifische com+-Verwaltungs Sammlungen und-Eigenschaften verwenden.
+Als Alternative zum Erstellen und Konfigurieren lokaler Partitionen über das Verwaltungstool komponentendienste können Sie Partitionen programmgesteuert verwalten, indem Sie partitionsspezifische COM+-Verwaltungssammlungen und -Eigenschaften verwenden.
 
 > [!Note]  
-> Der com+-Partitions Dienst ist standardmäßig nicht aktiviert. Um den com+-Partitions Dienst zu verwenden, müssen Sie ihn über das Verwaltungs Tool Komponenten Dienste oder durch Ändern der partitionsenabled-Eigenschaft in der [**LocalComputer**](localcomputer.md) -Sammlung auf true aktivieren.
+> Der COM+-Partitionsdienst ist standardmäßig nicht aktiviert. Um den COM+-Partitionsdienst verwenden zu können, müssen Sie ihn über das Verwaltungstool komponentendienste oder durch Ändern der PartitionsEnabled-Eigenschaft in der [**LocalComputer-Sammlung**](localcomputer.md) in True aktivieren.
 
  
 
-Die folgende Unterroutine, die in Visual Basic Skript geschrieben wurde, veranschaulicht das Erstellen einer Partition auf dem lokalen Computer:
+Die folgende Unterroutine, die in Visual Basic-Skript geschrieben wurde, veranschaulicht, wie eine Partition auf dem lokalen Computer erstellt wird:
 
 
 ```VB
@@ -42,7 +42,7 @@ End Sub
 
 
 
-Die folgende Unterroutine, die in Visual Basic Skript geschrieben wurde, veranschaulicht, wie eine Partition vom lokalen Computer gelöscht wird:
+Die folgende Unterroutine, die in Visual Basic-Skript geschrieben wurde, veranschaulicht, wie eine Partition vom lokalen Computer gelöscht wird:
 
 
 ```VB
@@ -65,7 +65,7 @@ End Sub
 
 
 
-Die folgende Unterroutine, die in Visual Basic Skript geschrieben wurde, veranschaulicht, wie die Standard Partition für einen Benutzer festgelegt wird:
+Die folgende Unterroutine, die in Visual Basic-Skript geschrieben wurde, veranschaulicht, wie die Standardpartition für einen Benutzer festgelegt wird:
 
 
 ```VB
@@ -84,7 +84,7 @@ End Sub
 
 
 
-Die folgende Unterroutine, die in Visual Basic Skript geschrieben wurde, veranschaulicht, wie die Standard Partition für einen Benutzer entfernt wird:
+Die folgende Unterroutine, die in Visual Basic-Skript geschrieben wurde, veranschaulicht, wie die Standardpartition für einen Benutzer entfernt wird:
 
 
 ```VB
@@ -111,10 +111,10 @@ End Sub
 
 <dl> <dt>
 
-[Sammeln von Partitions Metriken](collecting-partition-metrics.md)
+[Sammeln von Partitionsmetriken](collecting-partition-metrics.md)
 </dt> <dt>
 
-[Konfigurieren des Partitions Caches](configuring-the-partition-cache.md)
+[Konfigurieren des Partitionscaches](configuring-the-partition-cache.md)
 </dt> <dt>
 
 [Gruppieren von Anwendungen in Partitionen](grouping-applications-into-partitions.md)

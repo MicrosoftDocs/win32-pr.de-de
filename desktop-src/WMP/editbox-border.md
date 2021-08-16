@@ -3,7 +3,7 @@ title: EDITBOX.border
 description: Das Border-Attribut gibt einen Wert an, der angibt, ob das Bearbeitungsfeld-Steuerelement über einen Rahmen verfügt, oder ruft einen Wert ab. Kann nur zur Entwurfszeit festgelegt werden.
 ms.assetid: c2de5f45-af49-4780-8fda-2593a46669f5
 keywords:
-- EDITBOX.border-Windows Media Player
+- EDITBOX.border Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -29,11 +29,11 @@ Das **Border-Attribut** gibt einen Wert an, der angibt, ob das Bearbeitungsfeld-
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher Wert,** der zur Entwurfszeit angegeben wird und danach schreibgeschützt ist. Der Standardwert ist TRUE.
+Dieses Attribut ist ein **boolescher Wert,** der zur Entwurfszeit angegeben und danach schreibgeschützt ist. Er hat den Standardwert true.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Rahmen wird als zwei Pixel breiter, abgesenkter Rahmen um das Bearbeitungsfeld-Steuerelement mit Systemfarben angezeigt.
+Der Rahmen wird als zwei pixelweiter, eingesenkter Rahmen um das Bearbeitungsfeld-Steuerelement mit Systemfarben angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,7 +1,7 @@
 ---
-description: Bietet Zugriff auf Informationen zu einzelnen Aufrufern in einer Auflistung von Aufrufern. Die Auflistung stellt die Kette der Aufrufe dar, die mit dem aktuellen aufrufenden, und jeder Aufrufer in der Auflistung stellt die Identität eines Aufrufers dar.
+description: Bietet Zugriff auf Informationen zu einzelnen Aufrufern in einer Auflistung von Aufrufern. Die Auflistung stellt die Kette der Aufrufe dar, die mit dem aktuellen Aufruf enden, und jeder Aufrufer in der Auflistung stellt die Identität eines Aufrufers dar.
 ms.assetid: 164fe12d-eeb3-402f-8aa3-e3545904d9c4
-title: SecurityCaller-Klasse (Comsvcs. h)
+title: SecurityCallers-Klasse (ComSvcs.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,22 +11,22 @@ api_name:
 - SecurityCallers
 api_type:
 - COM
-ms.openlocfilehash: c757b11bba6a30e8951915e1eace0811b6b6f732
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a494e1421e443d2a6c3663bd7fa7c15eda898079477592e8df9958a2d5b87990
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342189"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117915894"
 ---
-# <a name="securitycallers-class"></a>SecurityCaller-Klasse
+# <a name="securitycallers-class"></a>SecurityCallers-Klasse
 
-Bietet Zugriff auf Informationen zu einzelnen Aufrufern in einer Auflistung von Aufrufern. Die Auflistung stellt die Kette der Aufrufe dar, die mit dem aktuellen aufrufenden, und jeder Aufrufer in der Auflistung stellt die Identität eines Aufrufers dar. Nur Aufrufer, die eine Grenze überschreiten, in der die Sicherheit geprüft wird, sind in der Kette der Aufru (In der com+-Umgebung wird die Sicherheit an den Anwendungsgrenzen geprüft.) Der Zugriff auf Informationen über die Identität eines bestimmten Aufrufers wird über die [**SecurityIdentity**](securityidentity.md) -Klasse, eine Identitäts Sammlung, bereitgestellt.
+Bietet Zugriff auf Informationen zu einzelnen Aufrufern in einer Auflistung von Aufrufern. Die Auflistung stellt die Kette der Aufrufe dar, die mit dem aktuellen Aufruf enden, und jeder Aufrufer in der Auflistung stellt die Identität eines Aufrufers dar. Nur Aufrufer, die eine Grenze überschreiten, an der die Sicherheit überprüft wird, sind in der Kette der Aufrufer enthalten. (In der COM+-Umgebung wird die Sicherheit an Anwendungsgrenzen überprüft.) Der Zugriff auf Informationen über die Identität eines bestimmten Aufrufers wird über die [**SecurityIdentity-Klasse,**](securityidentity.md) eine Identitätssammlung, bereitgestellt.
 
-Nur com+-Anwendungen, die rollenbasierte Sicherheit verwenden, können auf die **SecurityCaller** -Klasse zugreifen. Weitere Informationen zu Rollen finden Sie unter Rollen [basierte Sicherheitsverwaltung](role-based-security-administration.md).
+Nur COM+-Anwendungen, die rollenbasierte Sicherheit verwenden, können auf die **SecurityCallers-Klasse** zugreifen. Weitere Informationen zu Rollen finden Sie unter [Rollenbasierte Sicherheitsverwaltung.](role-based-security-administration.md)
 
 ## <a name="when-to-implement"></a>Gründe für die Implementierung
 
-Diese Klasse wird von com+ implementiert.
+Diese Klasse wird von COM+ implementiert.
 
 
 
@@ -40,13 +40,13 @@ Diese Klasse wird von com+ implementiert.
 
 ## <a name="when-to-use"></a>Verwendung
 
-Verwenden Sie diese Klasse, um auf die Methoden von [**ISecurityCallersColl**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallerscoll)zuzugreifen.
+Verwenden Sie diese Klasse, um auf die Methoden von [**ISecurityCallersColl zu zugreifen.**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallerscoll)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein **SecurityCaller** -Objekt kann nicht direkt erstellt werden. Um die Methoden von [**ISecurityCallersColl**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallerscoll)verwenden zu können, müssen Sie einen Verweis auf seine Implementierung abrufen, indem Sie [**CoGetCallContext**](/windows/desktop/api/combaseapi/nf-combaseapi-cogetcallcontext)aufrufen und IID \_ ISecurityCallContext für den *riid* -Parameter angeben. Rufen Sie als nächstes [**ISecurityCallContext:: get \_ Item**](/windows/desktop/api/ComSvcs/nf-comsvcs-isecuritycallcontext-get_item) auf, um ein Kontext Element für den Sicherheits Aufruf anzufordern, das eine Sammlung von Sicherheits Identitäten ist (z. b. "DirectCaller" oder "OriginalCaller").
+Sie können kein **SecurityCallers-Objekt direkt** erstellen. Um die Methoden von [**ISecurityCallersColl**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallerscoll)zu verwenden, müssen Sie einen Verweis auf seine Implementierung abrufen, indem Sie [**CoGetCallContext**](/windows/desktop/api/combaseapi/nf-combaseapi-cogetcallcontext)aufrufen und IID ISecurityCallContext für den \_ *riid-Parameter* angeben. Rufen Sie als Nächstes [**ISecurityCallContext::get \_ Item**](/windows/desktop/api/ComSvcs/nf-comsvcs-isecuritycallcontext-get_item) auf, um ein Kontextelement für einen Sicherheitsaufruf anfordern, das eine Sicherheitsidentitätssammlung ist (z. B. "DirectCaller" oder "OriginalCaller").
 
-Um diese Klasse von Microsoft Visual Basic zu verwenden, fügen Sie einen Verweis auf die com+-Diensttyp Bibliothek hinzu. Ein SecurityCaller-Objekt kann nicht direkt erstellt werden. Um die zugehörigen Eigenschaften verwenden zu können, müssen Sie mithilfe von [**getsecuritycallcontext**](/windows/desktop/api/ComSvcs/nf-comsvcs-igetsecuritycallcontext-getsecuritycallcontext)eine referenzce zu ihrer Implementierung abrufen. Anschließend erhalten Sie die Item-Eigenschaft des-Objekts, das ein Kontext Element für den Sicherheits Aufruf anfordert, bei dem es sich um eine Sammlung von Sicherheits Identitäten handelt (z.b. "DirectCaller" oder "OriginalCaller").
+Um diese Klasse von Microsoft Visual Basic verwenden zu können, fügen Sie einen Verweis auf die COM+-Diensttypbibliothek hinzu. Sie können kein SecurityCallers-Objekt direkt erstellen. Um seine Eigenschaften verwenden zu können, müssen Sie mit [**getSecurityCallContext**](/windows/desktop/api/ComSvcs/nf-comsvcs-igetsecuritycallcontext-getsecuritycallcontext)eine Referenz auf die Implementierung abrufen. Rufen Sie als Nächstes die Item-Eigenschaft des -Objekts ab, und fordern Sie ein Kontextelement für einen Sicherheitsaufruf an, bei dem es sich um eine Sicherheitsidentitätssammlung handelt (z. B. "DirectCaller" oder "OriginalCaller").
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,21 +56,21 @@ Um diese Klasse von Microsoft Visual Basic zu verwenden, fügen Sie einen Verwei
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>"Comsvcs. h"</dt> </dl> |
+| Header<br/>                   | <dl> <dt>ComSvcs.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Getsecuritycallcontext**](/windows/desktop/api/ComSvcs/nf-comsvcs-igetsecuritycallcontext-getsecuritycallcontext)
+[**GetSecurityCallContext**](/windows/desktop/api/ComSvcs/nf-comsvcs-igetsecuritycallcontext-getsecuritycallcontext)
 </dt> <dt>
 
 [**ISecurityCallersColl**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallerscoll)
 </dt> <dt>
 
-[Sicherheit für programmgesteuerte Komponenten](programmatic-component-security.md)
+[Programmgesteuerte Komponentensicherheit](programmatic-component-security.md)
 </dt> <dt>
 
 [Rollenbasierte Sicherheitsverwaltung](role-based-security-administration.md)

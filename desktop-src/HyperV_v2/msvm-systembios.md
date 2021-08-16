@@ -47,7 +47,7 @@ Die **\_ Msvm-SystemBIOS-Klasse** verfügt über die folgenden Membertypen:
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ Msvm-SystemBIOS-Klasse** verfügt über diese Eigenschaften.
+Die **Msvm \_ SystemBIOS-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -60,7 +60,7 @@ Datentyp: **[ **CIM \_ ComputerSystem**](msvm-computersystem.md)**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Aggregieren, Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1) [](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
 Der virtuelle Computer, der mit dem BIOS beginnt.

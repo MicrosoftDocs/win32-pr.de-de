@@ -1,29 +1,29 @@
 ---
-title: Festlegen der Sicherheit auf der Ebene des Schnittstellen Proxys
-description: Manchmal benötigt der Client eine präzisere Kontrolle über die Sicherheit bei Aufrufen bestimmter Schnittstellen.
+title: Festlegen der Sicherheit auf Schnittstellenproxyebene
+description: Manchmal benötigt der Client eine fein abgrenzende Kontrolle über die Sicherheit bei Aufrufen bestimmter Schnittstellen.
 ms.assetid: 72925ca2-78c9-47d9-8760-63f6379326d2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b38fe83e8ce8841cc9029808a6947ec67d4eaf4
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: f8ef969039dcfdc12449b7a8d0a3d63729ab5f84061ade1a743d21a1b6b34331
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106341559"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118309095"
 ---
-# <a name="setting-security-at-the-interface-proxy-level"></a>Festlegen der Sicherheit auf der Ebene des Schnittstellen Proxys
+# <a name="setting-security-at-the-interface-proxy-level"></a>Festlegen der Sicherheit auf Schnittstellenproxyebene
 
-Manchmal benötigt der Client eine präzisere Kontrolle über die Sicherheit bei Aufrufen bestimmter Schnittstellen. Beispielsweise kann die Sicherheit auf niedriger Ebene für den Prozess festgelegt werden, aber Aufrufe an eine bestimmte Schnittstelle erfordern möglicherweise eine höhere Authentifizierungs Ebene, z. b. die Verschlüsselung. Mit den Methoden der [**IClientSecurity**](/windows/desktop/api/ObjIdl/nn-objidl-iclientsecurity) -Schnittstelle kann der Client die Sicherheitseinstellungen ändern, die den Aufrufen einer bestimmten Schnittstelle zugeordnet sind, indem die Sicherheitseinstellungen auf der Schnittstellen-Proxy Ebene gesteuert werden.
+Manchmal benötigt der Client eine fein abgrenzende Kontrolle über die Sicherheit bei Aufrufen bestimmter Schnittstellen. Beispielsweise kann die Sicherheit auf einer niedrigen Ebene für den Prozess festgelegt werden, aber Aufrufe einer bestimmten Schnittstelle erfordern möglicherweise eine höhere Authentifizierungsebene, z. B. Verschlüsselung. Die Methoden der [**IClientSecurity-Schnittstelle**](/windows/desktop/api/ObjIdl/nn-objidl-iclientsecurity) ermöglichen es dem Client, die Sicherheitseinstellungen zu ändern, die Aufrufen einer bestimmten Schnittstelle zugeordnet sind, indem die Sicherheitseinstellungen auf Schnittstellenproxyebene kontrolliert werden.
 
-Der Client kann ein vorhandenes Objekt für [**IClientSecurity**](/windows/desktop/api/ObjIdl/nn-objidl-iclientsecurity) Abfragen und dann die [**IClientSecurity:: queryblanket**](/windows/win32/api/objidl/nf-objidl-iclientsecurity-queryblanket) -Methode aufzurufen, um herauszufinden, welche der aktuellen Sicherheitseinstellungen für einen bestimmten Schnittstellen Proxy vorhanden sind. Die [**IClientSecurity:: setblanket**](/windows/win32/api/objidl/nf-objidl-iclientsecurity-setblanket) -Methode kann verwendet werden, um die Sicherheitseinstellungen eines einzelnen Schnittstellen Proxys für das Objekt zu ändern, bevor eine der Methoden der Schnittstelle aufgerufen wird. Die neuen Einstellungen gelten für zukünftige Aufrufer dieser speziellen Schnittstelle. Die [**IClientSecurity:: copyproxy**](/windows/win32/api/objidl/nf-objidl-iclientsecurity-copyproxy) -Methode bietet dem Client die Möglichkeit, einen Schnittstellen Proxy zu kopieren, damit nachfolgende Aufrufe von **setblanket** für die Kopie keine Auswirkungen auf Aufrufer des ursprünglichen Proxys haben.
+Der Client kann ein vorhandenes Objekt für [**IClientSecurity**](/windows/desktop/api/ObjIdl/nn-objidl-iclientsecurity) abfragen und dann die [**IClientSecurity::QueryBlanket-Methode**](/windows/win32/api/objidl/nf-objidl-iclientsecurity-queryblanket) aufrufen, um herauszufinden, welche Sicherheitseinstellungen für einen bestimmten Schnittstellenproxy aktuell gelten. Die [**IClientSecurity::SetBlanket-Methode**](/windows/win32/api/objidl/nf-objidl-iclientsecurity-setblanket) kann verwendet werden, um die Sicherheitseinstellungen für einen einzelnen Schnittstellenproxy für das Objekt zu ändern, bevor eine der Methoden der Schnittstelle aufruft. Die neuen Einstellungen gelten für alle zukünftigen Aufrufer dieser bestimmten Schnittstelle. Die [**IClientSecurity::CopyProxy-Methode**](/windows/win32/api/objidl/nf-objidl-iclientsecurity-copyproxy) bietet dem Client die Möglichkeit, einen Schnittstellenproxy zu kopieren, damit nachfolgende Aufrufe von **SetBlanket** für die Kopie keine Aufrufe des ursprünglichen Proxys betreffen.
 
-[**Setblanket**](/windows/win32/api/objidl/nf-objidl-iclientsecurity-setblanket) wird häufig verwendet, um die Authentifizierungs Ebene für einen bestimmten Schnittstellen Proxy auf einen höheren Grad an Sicherheitsschutz zu erhöhen. In einigen Situationen kann es jedoch auch hilfreich sein, die Authentifizierungs Ebene für einen bestimmten Schnittstellen Proxy zu verringern. Nehmen wir beispielsweise an, die Standard Authentifizierungs Ebene für den Prozess ist ein anderer Wert als RPC \_ \_ -C-authn \_ -Ebene "None", \_ und der Client und der Server befinden sich in separaten Domänen, die sich nicht gegenseitig vertrauen. In diesem Fall können Aufrufe an den Server nicht ausgeführt werden, es sei denn, der Client ruft **setblanket** auf, um die Authentifizierungs Ebene auf RPC- \_ C- \_ authn- \_ Ebene " \_ None"
+[**SetBlanket**](/windows/win32/api/objidl/nf-objidl-iclientsecurity-setblanket) wird häufig verwendet, um die Authentifizierungsebene für einen bestimmten Schnittstellenproxy auf eine höhere Sicherheitsstufe zu erhöhen. In einigen Situationen kann es jedoch auch hilfreich sein, die Authentifizierungsebene für einen bestimmten Schnittstellenproxy zu senken. Angenommen, die Standardauthentifizierungsebene für den Prozess ist ein anderer Wert als RPC \_ C \_ AUTHN LEVEL NONE, und client und server befinden sich in separaten Domänen, die einander \_ \_ nicht vertrauen. In diesem Fall können Aufrufe des Servers nicht ausgeführt werden, es sei denn, der Client ruft **SetBlanket** auf, um die Authentifizierungsebene auf RPC \_ C \_ AUTHN \_ LEVEL NONE zu \_ senken.
 
-Clients, die die vom Proxy-Manager bereitgestellte Standard Implementierung von [**IClientSecurity**](/windows/desktop/api/ObjIdl/nn-objidl-iclientsecurity) verwenden, können die Hilfsfunktionen [**coqueryproxyblanket**](/windows/desktop/api/combaseapi/nf-combaseapi-coqueryproxyblanket), [**CoSetProxyBlanket**](/windows/desktop/api/combaseapi/nf-combaseapi-cosetproxyblanket)und [**cocopyproxy**](/windows/desktop/api/combaseapi/nf-combaseapi-cocopyproxy) aufrufen, anstatt die **IClientSecurity** -Methoden direkt aufzurufen. Die Hilfsfunktionen vereinfachen den Code, sind aber etwas weniger effizient, als die entsprechenden **IClientSecurity** -Methoden direkt aufrufen.
+Clients, die die vom Proxy-Manager bereitgestellte Standardimplementierung von [**IClientSecurity**](/windows/desktop/api/ObjIdl/nn-objidl-iclientsecurity) verwenden, können die [**Hilfsfunktionen CoQueryProxyBlanket,**](/windows/desktop/api/combaseapi/nf-combaseapi-coqueryproxyblanket) [**CoSetProxyBlanket**](/windows/desktop/api/combaseapi/nf-combaseapi-cosetproxyblanket)und [**CoCopyProxy**](/windows/desktop/api/combaseapi/nf-combaseapi-cocopyproxy) aufrufen, anstatt **IClientSecurity-Methoden** direkt auf aufruft. Die Hilfsfunktionen vereinfachen den Code, sind aber etwas weniger effizient als das direkte Aufrufen der entsprechenden **IClientSecurity-Methoden.**
 
-Die [**IClientSecurity**](/windows/desktop/api/ObjIdl/nn-objidl-iclientsecurity) -Schnittstelle wird vom Proxy-Manager lokal für den Client implementiert. Einige benutzerdefinierte gemarshallte Objekte unterstützen **IClientSecurity** möglicherweise nicht.
+Die [**IClientSecurity-Schnittstelle**](/windows/desktop/api/ObjIdl/nn-objidl-iclientsecurity) wird vom Proxy-Manager lokal für den Client implementiert. Einige benutzerdefinierte gemarshallte Objekte unterstützen **IClientSecurity möglicherweise nicht.**
 
-[**IClientSecurity**](/windows/desktop/api/ObjIdl/nn-objidl-iclientsecurity) funktioniert mit allen unterstützten Authentifizierungsdiensten (zurzeit NTLMSSP, SChannel und das Kerberos V5-Protokoll).
+[**IClientSecurity**](/windows/desktop/api/ObjIdl/nn-objidl-iclientsecurity) funktioniert mit allen unterstützten Authentifizierungsdiensten (derzeit NTLMSSP, Schannel und dem Kerberos v5-Protokoll).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -32,6 +32,6 @@ Die [**IClientSecurity**](/windows/desktop/api/ObjIdl/nn-objidl-iclientsecurity)
 [Festlegen der Sicherheit für COM-Anwendungen](setting-security-for-com-applications.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

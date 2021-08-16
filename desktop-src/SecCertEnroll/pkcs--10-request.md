@@ -1,5 +1,5 @@
 ---
-description: Das folgende Beispiel enthält eine PKCS \# 10-Anforderung. Das Beispiel wurde mithilfe der tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+description: Das folgende Beispiel enthält eine PKCS \# 10-Anforderung. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für die Certreq.exe enthält die folgende Konfiguration.
 ms.assetid: a71cd259-e5b0-42ee-a26c-fd949386ff9d
 title: PKCS \# 10-Anforderung
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "117774639"
 ---
 # <a name="pkcs-10-request"></a>PKCS \# 10-Anforderung
 
-Das folgende Beispiel enthält eine PKCS \# 10-Anforderung. Das Beispiel wurde mithilfe der tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+Das folgende Beispiel enthält eine PKCS \# 10-Anforderung. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für die Certreq.exe enthält die folgende Konfiguration.
 
 ``` syntax
 [NewRequest]
@@ -24,11 +24,11 @@ RequestType=pkcs10
 CertificateTemplate=User
 ```
 
-Diese Konfiguration generiert die folgende Beispielausgabe. Die Konfiguration gibt den Antragsteller, den Anforderungstyp (PKCS \# 10) und die Zertifikatvorlage (Benutzer) an. Die Benutzervorlage gibt Folgendes an:
+Diese Konfiguration generiert die folgende Beispielausgabe. Die Konfiguration gibt den Betreff, den Anforderungstyp (PKCS 10) und die \# Zertifikatvorlage (Benutzer) an. Die Benutzervorlage gibt An:
 
 -   Die Anforderung muss entweder den Microsoft Base Cryptographic Provider 1.0 oder den Microsoft Enhanced Cryptographic Provider 1.0 verwenden.
--   Der Antragstellername muss aus Active Directory erstellt werden.
--   Die Anforderung umfasst den Namen der Zertifikatvorlage, die erweiterte Schlüsselverwendung (Enhanced Key Usage, EKU) und die Schlüsselverwendungserweiterungen. Die EKU-Erweiterung gibt an, dass das ausgestellte Zertifikat für verschlüsselndes Dateisystem (EFS), sichere E-Mail- und Clientauthentifizierung verwendet werden kann.
+-   Der Name des Betreffs muss aus Active Directory erstellt werden.
+-   Die Anforderung enthält den Zertifikatvorlagennamen, die Erweiterte Schlüsselverwendung (Enhanced Key Usage, EKU) und die Schlüsselverwendungserweiterungen. Die EKU-Erweiterung gibt an, dass das ausgestellte Zertifikat für verschlüsselndes Dateisystem (EFS), sichere E-Mail-Adresse und Clientauthentifizierung verwendet werden kann.
 
 ``` syntax
 PKCS10 Certificate Request:

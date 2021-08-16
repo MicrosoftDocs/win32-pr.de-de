@@ -1,12 +1,12 @@
 ---
-title: Erweiterte Bearbeitungen
-description: Zeigen Sie die Landing Page für erweiterte Bearbeitungen für Anwendungen an. Links zu den Seiten "Übersicht", "Erweiterung", "Rotation" und "Übersetzung" finden Sie hier.
+title: Erweiterte Manipulationen
+description: Zeigen Sie die Landing Page für erweiterte Bearbeitungen für Anwendungen an. Weitere Informationen finden Sie unter Links zu den Seiten "Übersicht", "Erweiterung", "Drehung" und "Übersetzung".
 ms.assetid: 8a1cff27-b2c0-4e72-9f4c-df656059953f
 keywords:
-- Windows Toucheingabe, Bearbeitungen
-- Windows Toucheingabe, erweiterte Bearbeitungen
-- Windows Toucheingabe, komplexe Manipulationen
-- Manipulationen, erweitert
+- Windows Touch,Manipulationen
+- Windows Touch,erweiterte Manipulationen
+- Windows Touch, komplexe Manipulationen
+- Manipulationen,erweitert
 - Manipulationen, komplex
 ms.topic: article
 ms.date: 05/31/2018
@@ -17,11 +17,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118199643"
 ---
-# <a name="advanced-manipulations"></a>Erweiterte Bearbeitungen
+# <a name="advanced-manipulations"></a>Erweiterte Manipulationen
 
 In diesem Abschnitt werden erweiterte Bearbeitungen für Anwendungen erläutert.
 
-Aus Gründen der Benutzerfreundlichkeit sollten Sie Ihrer Anwendung komplexe Bearbeitungen hinzufügen, damit Objekte mit einem hohen Maß an Granularität bearbeitet werden können. In den folgenden Abschnitten werden erweiterte Bearbeitungen beschrieben.
+Aus Gründen der Benutzerfreundlichkeit sollten Sie Ihrer Anwendung komplexe Manipulationen hinzufügen, damit Objekte mit einem hohen Grad an Granularität bearbeitet werden können. In den folgenden Abschnitten werden erweiterte Bearbeitungen beschrieben.
 
 
 
@@ -29,8 +29,8 @@ Aus Gründen der Benutzerfreundlichkeit sollten Sie Ihrer Anwendung komplexe Bea
 |------------------------------------------------------------------------|-------------------------------------------------------|
 | [Übersicht über erweiterte Manipulationen](advanced-manipulations-overview.md) | Zeigt die verschiedenen erweiterten Bearbeitungen an.             |
 | [Erweiterte Erweiterung](advanced-expansion.md)                           | Zeigt, wie Die Unterstützung für erweiterte Erweiterungen aktiviert wird.   |
-| [Erweiterte Drehung](advanced-rotation.md)                             | Zeigt, wie Sie die Unterstützung für die erweiterte Rotation aktivieren.    |
-| [Erweiterte Übersetzung](advanced-translation.md)                       | Zeigt, wie Sie die Unterstützung für erweiterte Übersetzungen aktivieren. |
+| [Erweiterte Drehung](advanced-rotation.md)                             | Zeigt, wie Die Unterstützung für erweiterte Drehung aktiviert wird.    |
+| [Erweiterte Übersetzung](advanced-translation.md)                       | Zeigt, wie Die Unterstützung für die erweiterte Übersetzung aktiviert wird. |
 
 
 

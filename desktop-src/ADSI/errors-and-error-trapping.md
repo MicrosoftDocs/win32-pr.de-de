@@ -1,29 +1,29 @@
 ---
-title: Fehler und Fehler beim Abfangen
-description: ADSI löst eine Vielzahl von Fehlern aus, von ADSI-spezifischen zu com-bezogenen Standard-Win32-Fehlern.
+title: Fehler und Fehlerfangen
+description: ADSI löst eine Vielzahl von Fehlern aus, von ADSI-spezifisch über COM-bezogen bis zu Win32-Standardfehlern.
 ms.assetid: d1d22d4a-6485-4ee7-bd45-606834ae601a
 ms.tgt_platform: multiple
 keywords:
-- Fehler und Fehler beim Abfangen von ADSI
+- Fehler und Fehler beim Auffangen von ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d0669c6d859f4b160d8fa7d6e61ca8c8921d995
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 43f4ccde9bdfc0e1e6bea26d3186a0219bd42904d64dfffd719a7417c35c9fc0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855311"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117840064"
 ---
-# <a name="errors-and-error-trapping"></a>Fehler und Fehler beim Abfangen
+# <a name="errors-and-error-trapping"></a>Fehler und Fehlerfangen
 
-ADSI löst eine Vielzahl von Fehlern aus, von ADSI-spezifischen zu com-bezogenen Standard-Win32-Fehlern. In diesem Abschnitt des Tutorials werden Strategien für die Behandlung von Fehlern in ADSI-Skripts bereitgestellt, und Sie können die verschiedenen Fehlercodes besser verstehen. Die folgenden Themen werden erörtert:
+ADSI löst eine Vielzahl von Fehlern aus, von ADSI-spezifisch über COM-bezogen bis zu Win32-Standardfehlern. Dieser Abschnitt des Tutorials enthält Strategien zur Behandlung von Fehlern in ADSI-Skripts und hilft Ihnen, die verschiedenen Fehlercodes zu erkennen. Die folgenden Themen werden behandelt:
 
--   [Vorgehensweise beim Abfangen von ADSI-Fehlern](how-to-trap-adsi-errors.md)
+-   [Abfangen von ADSI-Fehlern](how-to-trap-adsi-errors.md)
 -   [Häufige Fehler](common-errors.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Prevelements
-description: Dies ist ein vordefiniertes ButtonElement mit den folgenden Standardwerten. | Prevelements
+title: PREVELEMENT
+description: Dies ist ein vordefiniertes BUTTONELEMENT mit den folgenden Standardwerten. | PREVELEMENT
 ms.assetid: 94300195-5b95-41c9-b16f-f7f66f551242
 keywords:
-- Prevelements-Fenster Media Player
+- PREVELEMENT Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c9c47a8351111d66677328da67a85f7b7fe9e255
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: af51220b831e005a2930a781f56c9b7a2f802acf0e6e7501fb1854f23c34b416
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370604"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118334463"
 ---
-# <a name="prevelement"></a>Prevelements
+# <a name="prevelement"></a>PREVELEMENT
 
-Dies ist ein vordefiniertes **ButtonElement** mit den folgenden Standardwerten.
+Dies ist ein vordefiniertes **BUTTONELEMENT** mit den folgenden Standardwerten.
 
 ``` syntax
 onclick="jscript:player.controls.previous()"
@@ -31,9 +31,9 @@ cursor="system"
 enabled="wmpenabled:player.controls.previous"
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Eigenschaften dieses **buttonelements** können überschrieben werden, indem Sie explizit angegeben werden.
+Alle Eigenschaften dieses **BUTTONELEMENT** können überschrieben werden, indem sie explizit angegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,15 +41,15 @@ Alle Eigenschaften dieses **buttonelements** können überschrieben werden, inde
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ButtonElement-Element**](buttonelement-element.md)
+[**BUTTONELEMENT-Element**](buttonelement-element.md)
 </dt> </dl>
 
  
