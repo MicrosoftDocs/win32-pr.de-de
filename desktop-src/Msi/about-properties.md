@@ -1,27 +1,27 @@
 ---
-description: Windows Installer können die Software Installation konfigurieren, indem Sie die Werte der Variablen verwenden, die in einem Installationspaket oder vom Benutzer definiert sind.
+description: Windows Das Installationsprogramm kann die Softwareinstallation mithilfe der Werte von Variablen konfigurieren, die in einem Installationspaket oder vom Benutzer definiert sind.
 ms.assetid: b7b715e7-e92c-4b84-b60d-a0ff8412749b
 title: Informationen zu Eigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3dc5d8154533cfebf4163983a149a547372ef4a5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fb4a7bdd5a70721520c4d2afb975aabaca312975dc3bf4b7d94215112f69a0a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118382077"
 ---
 # <a name="about-properties"></a>Informationen zu Eigenschaften
 
-Windows Installer können die Software Installation konfigurieren, indem Sie die Werte der Variablen verwenden, die in einem Installationspaket oder vom Benutzer definiert sind.
+Windows Das Installationsprogramm kann die Softwareinstallation mithilfe der Werte von Variablen konfigurieren, die in einem Installationspaket oder vom Benutzer definiert sind.
 
-Windows Installer verwendet während einer Installation drei Kategorien globaler Variablen:
+Windows Das Installationsprogramm verwendet während einer Installation drei Kategorien von globalen Variablen:
 
--   Private Eigenschaften: das Installationsprogramm verwendet intern private Eigenschaften, und ihre Werte müssen in der Installations Datenbank erstellt oder auf von der Betriebsumgebung festgelegte Werte festgelegt werden.
--   Öffentliche Eigenschaften: öffentliche Eigenschaften können in der Datenbank erstellt und durch einen Benutzer-oder Systemadministrator in der Befehlszeile geändert werden, durch Anwenden einer Transformation oder durch Interaktion mit einer erstellten Benutzeroberfläche.
--   Eingeschränkte öffentliche Eigenschaften: aus Sicherheitsgründen kann der Autor eines Installationspakets die öffentlichen Eigenschaften einschränken, die ein Benutzer ändern kann.
+-   Private Eigenschaften: Das Installationsprogramm verwendet intern private Eigenschaften, und ihre Werte müssen in der Installationsdatenbank erstellt oder auf Werte festgelegt werden, die von der Betriebsumgebung bestimmt werden.
+-   Öffentliche Eigenschaften: Öffentliche Eigenschaften können in der Datenbank erstellt und von einem Benutzer oder Systemadministrator über die Befehlszeile, durch Anwenden einer Transformation oder durch Interaktion mit einer erstellten Benutzeroberfläche geändert werden.
+-   Eingeschränkte öffentliche Eigenschaften: Aus Sicherheitsgründen kann der Autor eines Installationspakets die öffentlichen Eigenschaften einschränken, die ein Benutzer ändern kann.
 
-Nicht alle Eigenschaften müssen in jedem Paket definiert werden. es gibt einen kleinen Satz von erforderlichen Eigenschaften, die in jedem Paket definiert werden müssen. Der Installer legt die Werte von Eigenschaften in einer bestimmten Rangfolge fest.
+Nicht alle Eigenschaften müssen in jedem Paket definiert werden. Es gibt einen kleinen Satz erforderlicher Eigenschaften, die in jedem Paket definiert werden müssen. Das Installationsprogramm legt die Werte von Eigenschaften in einer bestimmten Rangfolge fest.
 
 [Private Eigenschaften](private-properties.md)
 
@@ -31,7 +31,7 @@ Nicht alle Eigenschaften müssen in jedem Paket definiert werden. es gibt einen 
 
 [Erforderliche Eigenschaften](required-properties.md)
 
-[Reihenfolge der Eigenschafts Rangfolge](order-of-property-precedence.md)
+[Rangfolge der Eigenschaften](order-of-property-precedence.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -40,7 +40,7 @@ Nicht alle Eigenschaften müssen in jedem Paket definiert werden. es gibt einen 
 [Verwenden von Eigenschaften](using-properties.md)
 </dt> <dt>
 
-[Eigenschafts Verweis](property-reference.md)
+[Eigenschaftenverweis](property-reference.md)
 </dt> </dl>
 
  

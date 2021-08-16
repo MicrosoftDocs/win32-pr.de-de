@@ -1,7 +1,7 @@
 ---
 description: Die Richtlinie für Fotometadaten für die System.GPS.Track-Eigenschaft.
 ms.assetid: ac9e14a0-55f1-437e-9d27-df0fa09671c1
-title: System.GPS.Track-Richtlinie für Fotometadaten
+title: Richtlinie für System.GPS.Track-Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: c89aee05d0c55e78fe4e55d7eacd8a8d0992fcb8d9f56312164c652cbc0bd81c
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118205531"
 ---
-# <a name="systemgpstrack-photo-metadata-policy"></a>System.GPS.Track-Richtlinie für Fotometadaten
+# <a name="systemgpstrack-photo-metadata-policy"></a>Richtlinie für System.GPS.Track-Fotometadaten
 
 Die Richtlinie für Fotometadaten für die [System.GPS.Track-Eigenschaft.](../properties/props-system-gps-track.md)
 

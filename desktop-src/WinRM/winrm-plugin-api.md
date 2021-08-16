@@ -1,32 +1,32 @@
 ---
-title: WinRM-Plug-in-API
-description: Die Plug-in-API (Application Programming Interface) des WinRM-Plug-ins stellt Funktionen bereit, mit denen ein Benutzer Plug-ins schreiben kann, indem er bestimmte APIs für unterstützte Ressourcen-URIs und Vorgänge implementiert
+title: WinRM-Plug-In-API
+description: Die Api (Application Programming Interface, Anwendungsprogrammierschnittstelle) des WinRM-Plug-Ins bietet Funktionen, die es einem Benutzer ermöglichen, Plug-Ins zu schreiben, indem bestimmte APIs für unterstützte Ressourcen-URIs und -Vorgänge implementiert werden.
 ms.assetid: d3e103c1-221b-441b-8bcb-883e3f2a4c1a
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9ccc8920f7df788b4df355b0cbc23478e97111d0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7359ed212e50b71343ce9a96832060e9ec8121cdf3e11f3f353698e1a4fa9dce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117742777"
 ---
-# <a name="winrm-plug-in-api"></a>WinRM-Plug-in-API
+# <a name="winrm-plug-in-api"></a>WinRM-Plug-In-API
 
-Windows-Remoteverwaltung-Plug-ins sind native Dynamic-Link-Bibliotheken (DLLs), die in die Funktionalität von WinRM einbinden und diese erweitern. Die Plug-in-API (Application Programming Interface) des WinRM-Plug-ins stellt Funktionen bereit, mit denen ein Benutzer Plug-ins schreiben kann, indem er bestimmte APIs für unterstützte [*Ressourcen-URIs*](windows-remote-management-glossary.md) und Vorgänge implementiert Nachdem die Plug-ins entweder für den WinRM-Dienst oder für Internetinformationsdienste (IIS) konfiguriert wurden, werden Sie in den WinRM-Host bzw. den IIS-Host geladen. Remote Anforderungen werden an diese Plug-in-Einstiegspunkte weitergeleitet, um Vorgänge auszuführen.
+Windows Remoteverwaltungs-Plug-Ins sind native DLLs (Dynamic Link Libraries), die die Funktionalität von WinRM verbinden und erweitern. Die Api (Application Programming Interface, Anwendungsprogrammierschnittstelle) des WinRM-Plug-Ins bietet Funktionen, die es einem Benutzer ermöglichen, Plug-Ins zu schreiben, indem bestimmte APIs für unterstützte [*Ressourcen-URIs*](windows-remote-management-glossary.md) und -Vorgänge implementiert werden. Nachdem die Plug-Ins entweder für den WinRM-Dienst oder Internetinformationsdienste (IIS) konfiguriert wurden, werden sie in den WinRM-Host bzw. IIS-Host geladen. Remoteanforderungen werden an diese Plug-In-Einstiegspunkte geroutet, um Vorgänge durchzuführen.
 
-Der Abschnitt "WinRM-Plug-in-API-Referenz" enthält ausführliche Informationen zu den folgenden API-Elementen:
+Der Referenzabschnitt zur WinRM-Plug-In-API enthält ausführliche Informationen zu den folgenden API-Elementen:
 
--   [Einstiegspunkte für Autorisierungs-Plug-ins](authorization-plug-in-entry-points.md)
--   [Autorisierungs-Plug-in-Methoden](authorization-plug-in-methods.md)
--   [Einstiegspunkte des Vorgangs-Plug-ins](operations-plug-in-entry-points.md)
--   [Vorgangs-Plug-in-Methoden](operations-plug-in-methods.md)
+-   [Einstiegspunkte für Autorisierungs-Plug-Ins](authorization-plug-in-entry-points.md)
+-   [Autorisierungs-Plug-In-Methoden](authorization-plug-in-methods.md)
+-   [Einstiegspunkte des Operations-Plug-Ins](operations-plug-in-entry-points.md)
+-   [Operations Plug-In-Methoden](operations-plug-in-methods.md)
 -   [Strukturen](winrm-plug-in-api-structures.md)
 
- 
+ 
 
- 
+ 
 
 
 

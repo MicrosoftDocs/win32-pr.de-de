@@ -1,9 +1,9 @@
 ---
-title: WM_DDE_UNADVISE Meldung (DDE. h)
-description: Eine DDE-Client Anwendung (dynamischer Datenaustausch) sendet eine "WM \_ DDE \_ unempfehlung"-Meldung, um eine DDE Server-Anwendung zu informieren, dass das angegebene Element oder ein bestimmtes Zwischenablage Format für das Element nicht mehr aktualisiert werden soll.
+title: WM_DDE_UNADVISE Meldung (Dde.h)
+description: Eine dynamische Daten Exchange-Clientanwendung (DDE) sendet eine WM \_ DDE \_ UNADVISE-Nachricht, um eine DDE-Serveranwendung darüber zu informieren, dass das angegebene Element oder ein bestimmtes Zwischenablageformat für das Element nicht mehr aktualisiert werden soll.
 ms.assetid: 9a5f9a86-e6fa-450e-b8bf-f20042c7e6d1
 keywords:
-- WM_DDE_UNADVISE Nachrichten Datenaustausch
+- WM_DDE_UNADVISE Nachricht Data Exchange
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dba83badcb689789d2654d99780bcb8cc503511d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9bbd0ac8e056cc43be764e745f824b50fc90b3cb2f0c50c9061d111fb3bc178d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478306"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117915104"
 ---
-# <a name="wm_dde_unadvise-message"></a>WM \_ DDE- \_ Meldung "nicht Empfehlung"
+# <a name="wm_dde_unadvise-message"></a>WM \_ DDE \_ UNADVISE-Nachricht
 
-Eine DDE-Client Anwendung (dynamischer Datenaustausch) sendet eine " **WM \_ DDE \_ unempfehlung** "-Meldung, um eine DDE Server-Anwendung zu informieren, dass das angegebene Element oder ein bestimmtes Zwischenablage Format für das Element nicht mehr aktualisiert werden soll. Dadurch wird der Daten Link warm oder Hot für das angegebene Element beendet.
+Eine dynamische Daten Exchange-Clientanwendung (DDE) sendet eine **WM \_ DDE \_ UNADVISE-Nachricht,** um eine DDE-Serveranwendung darüber zu informieren, dass das angegebene Element oder ein bestimmtes Zwischenablageformat für das Element nicht mehr aktualisiert werden soll. Dadurch wird der Warm- oder Hot-Datenlink für das angegebene Element beendet.
 
-Um diese Nachricht zu veröffentlichen, wenden Sie die [**PostMessage**](/windows/desktop/api/winuser/nf-winuser-postmessagea) -Funktion mit den folgenden Parametern an.
+Um diese Nachricht zu veröffentlichen, rufen Sie die [**PostMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-postmessagea) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -41,24 +41,24 @@ Um diese Nachricht zu veröffentlichen, wenden Sie die [**PostMessage**](/window
 *wParam* 
 </dt> <dd>
 
-Ein Handle für das Client Fenster, das die Nachricht sendet.
+Ein Handle für das Clientfenster, das die Nachricht sendet.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das nieder wertige Wort gibt das Zwischenablage Format des Elements an, für das die Aktualisierungs Anforderung zurückgezogen wird. Wenn dieser Wert **null** ist, werden alle aktiven [**WM- \_ DDE \_**](wm-dde-advise.md) -Konversationen für das Element beendet.
+Das Wort mit niedriger Reihenfolge gibt das Zwischenablageformat des Elements an, für das die Updateanforderung zurückgesetzt wird. Wenn dies **NULL** ist, müssen alle aktiven [**WM \_ DDE \_ ADVISE-Konversationen**](wm-dde-advise.md) für das Element beendet werden.
 
-Das höchst wertige Wort enthält ein globales Atom, das das Element identifiziert, für das die Aktualisierungs Anforderung zurückgezogen wird. Wenn dieser Wert **null** ist, werden alle aktiven [**WM- \_ DDE \_**](wm-dde-advise.md) -Links, die der Konversation zugeordnet sind, beendet.
+Das Wort in hoher Reihenfolge enthält ein globales Atom, das das Element identifiziert, für das die Updateanforderung zurückgesetzt wird. Wenn dies **NULL** ist, müssen alle aktiven [**WM \_ DDE \_ ADVISE-Links,**](wm-dde-advise.md) die der Konversation zugeordnet sind, beendet werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Client Anwendung ordnet das hochwertige Wort *LPARAM* zu, indem die [**globaladdatom**](/windows/desktop/api/Winbase/nf-winbase-globaladdatoma) -Funktion aufgerufen wird.
+Die Clientanwendung ordnet das Wort *lParam* in hoher Reihenfolge zu, indem die [**GlobalAddAtom-Funktion**](/windows/desktop/api/Winbase/nf-winbase-globaladdatoma) aufgerufen wird.
 
-Die Serveranwendung sendet die " [**WM \_ DDE \_ ACK**](wm-dde-ack.md) "-Nachricht, um positiv oder negativ zu reagieren. Beim Veröffentlichen der **WM- \_ DDE \_**-Bestätigung kann der Server entweder das Atom wieder verwenden oder das Atom löschen und ein neues erstellen.
+Die Serveranwendung sendet die [**WM \_ \_ DDE-ACK-Nachricht,**](wm-dde-ack.md) um positiv oder negativ zu reagieren. Beim Posten von **WM \_ DDE \_ ACK** kann der Server entweder das Atom wiederverwenden oder das Atom löschen und ein neues erstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,45 +68,45 @@ Die Serveranwendung sendet die " [**WM \_ DDE \_ ACK**](wm-dde-ack.md) "-Nachric
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>DDE. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Dde.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Globaladdatom**](/windows/desktop/api/Winbase/nf-winbase-globaladdatoma)
+[**GlobalAddAtom**](/windows/desktop/api/Winbase/nf-winbase-globaladdatoma)
 </dt> <dt>
 
-[**Packddelta param**](/windows/desktop/api/Dde/nf-dde-packddelparam)
+[**PackDDElParam**](/windows/desktop/api/Dde/nf-dde-packddelparam)
 </dt> <dt>
 
 [**PostMessage**](/windows/desktop/api/winuser/nf-winuser-postmessagea)
 </dt> <dt>
 
-[**Reuseddelta param**](/windows/desktop/api/Dde/nf-dde-reuseddelparam)
+[**ReuseDDElParam**](/windows/desktop/api/Dde/nf-dde-reuseddelparam)
 </dt> <dt>
 
 [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-sendmessage)
 </dt> <dt>
 
-[**Unpackddelta param**](/windows/desktop/api/Dde/nf-dde-unpackddelparam)
+[**UnpackDDElParam**](/windows/desktop/api/Dde/nf-dde-unpackddelparam)
 </dt> <dt>
 
-[**WM-DDE-Bestätigung \_ \_**](wm-dde-ack.md)
+[**WM \_ DDE \_ ACK**](wm-dde-ack.md)
 </dt> <dt>
 
-[**WM \_ DDE- \_ Empfehlung**](wm-dde-advise.md)
+[**WM \_ DDE \_ ADVISE**](wm-dde-advise.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Informationen zu dynamischer Datenaustausch](about-dynamic-data-exchange.md)
+[Informationen dynamische Daten Exchange](about-dynamic-data-exchange.md)
 </dt> </dl>
 
  

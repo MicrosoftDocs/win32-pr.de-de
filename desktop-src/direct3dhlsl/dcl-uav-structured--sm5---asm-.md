@@ -1,23 +1,23 @@
 ---
-title: dcl_uav_structured (SM5-ASM)
-description: Deklarieren Sie eine ungeordnete Zugriffs Ansicht (UAV) für die Verwendung durch einen Shader. | dcl_uav_structured (SM5-ASM)
+title: dcl_uav_structured (sm5 - asm)
+description: Deklarieren Sie eine ungeordnete Zugriffsansicht (UAV) für die Verwendung durch einen Shader. | dcl_uav_structured (sm5 - asm)
 ms.assetid: 40D6B8F7-8A41-4EFE-A8A3-44A646B4D43B
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3dc02396f4837a095506e736d81ea8c00eb0669f
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: b398dc8b59db6d8fc3a64effdf3cd93b56664881c4c7024a185ad6a212b9fb4b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219210"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117726798"
 ---
-# <a name="dcl_uav_structured-sm5---asm"></a>strukturierte DCL \_ -UAV \_ (SM5-ASM)
+# <a name="dcl_uav_structured-sm5---asm"></a>dcl \_ uav \_ structured (sm5 - asm)
 
-Deklarieren Sie eine ungeordnete Zugriffs Ansicht (UAV) für die Verwendung durch einen Shader.
+Deklarieren Sie eine ungeordnete Zugriffsansicht (UAV) für die Verwendung durch einen Shader.
 
 
 
-| DCL \_ UAV \_ strukturiert \[ \_ GLC \] dstuav, structbytestride |
+| dcl \_ uav \_ structured \[ \_ glc \] dstUAV, structByteStride |
 |--------------------------------------------------------|
 
 
@@ -28,41 +28,41 @@ Deklarieren Sie eine ungeordnete Zugriffs Ansicht (UAV) für die Verwendung durc
 
 | Element                                                                                                                                   | BESCHREIBUNG                                           |
 |----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| <span id="dstUAV"></span><span id="dstuav"></span><span id="DSTUAV"></span>*dstuav*<br/>                                         | \[in \] der UAV.<br/>                            |
-| <span id="structByteStride"></span><span id="structbytestride"></span><span id="STRUCTBYTESTRIDE"></span>*structbytestride*<br/> | \[in \] der Größe der Struktur in Bytes.<br/> |
+| <span id="dstUAV"></span><span id="dstuav"></span><span id="DSTUAV"></span>*dstUAV*<br/>                                         | \[im \] UAV.<br/>                            |
+| <span id="structByteStride"></span><span id="structbytestride"></span><span id="STRUCTBYTESTRIDE"></span>*structByteStride*<br/> | \[in \] Die Größe der Struktur in Bytes.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-*dstuav* ist ein u- \# Register, das als Verweis auf eine unorderedaccessview eines strukturierten Puffers mit dem angegebenen Schritt deklariert wurde, der an die API an den UAV-Slot gebunden werden muss \# .
+*dstUAV* ist ein U-Register, das als Verweis auf eine UnorderedAccessView eines strukturierten Puffers mit dem angegebenen Stride deklariert ist, der an den UAV-Slot in der API gebunden werden \# \# muss.
 
-Der Inhalt der-Struktur hat keinen Typ. für den Arbeitsspeicher ausgeführte Vorgänge können die Daten implizit als Typ interpretieren.
+Der Inhalt der -Struktur hat keinen Typ. Vorgänge, die für den Arbeitsspeicher ausgeführt werden, interpretieren die Daten möglicherweise implizit so, als ob sie einen Typ haben.
 
-*structbytestride* ist die Größe der Struktur in Bytes im Puffer, der deklariert wird. Dieser Wert muss größer als 0 sein. *structbytestride* ist vom Typ uint und muss ein Vielfaches von 4 sein.
+*structByteStride ist* die Größe der Struktur in Bytes im puffer, der deklariert wird. Dieser Wert muss größer als 0 sein. *structByteStride* ist vom Typ uint und muss ein Vielfaches von 4 sein.
 
-Anweisungen, die auf eine strukturierte u verweisen \# , nehmen eine 2D-Adresse auf, bei der die erste Komponente struct auswählt \[ \] und die zweite Komponente \[ Offset innerhalb von Struktur in ausgerichteten Bytes auswählt \] .
+Anweisungen, die auf ein strukturiertes u verweisen, nehmen eine 2D-Adresse an, wobei die erste Komponente die Struktur auswählt und die zweite Komponente offset innerhalb der Struktur in ausgerichteten Bytes \# \[ \] \[ auswählt. \]
 
-Das \_ GLC-Flag bedeutet "Global kohärent". Das Fehlen von \_ GLC bedeutet, dass die UAV im COMPUTE-Shader nur als "zusammenhängender Gruppe" oder "lokal kohärent" in einem einzelnen Pixelshader-Aufruf deklariert wird.
+Das \_ glc-Flag bedeutet für "global zusammenhängende". Das Fehlen von glc bedeutet, dass die UAV im Compute-Shader nur als "gruppenreigent" oder bei einem Aufruf eines Einzelnen Pixel-Shaders \_ als "lokal zusammenhängend" deklariert wird.
 
-Das \_ OPC-Flag ist der Wert für die Beibehaltung der Reihenfolge. Wenn eine UAV an Slot \# (u) gebunden ist \# , muss Sie mit dem Counter-Flag erstellt worden sein. Dies bedeutet, dass die Atomic- [ \_ \_ Zuordnungen von "imm Atomic](imm-atomic-alloc--sm5---asm-.md) " oder " [imm \_ Atomic \_ ](imm-atomic-consume--sm5---asm-.md) " im Shader einen Counter bearbeiten, dessen Werte im Shader als dauerhafter Verweis auf einen Speicherort in der UAV verwendet werden können. Die Daten können nicht neu angeordnet werden, nachdem der Shader vorbei ist.
+Das \_ opc-Flag ist der Zähler für die Beibehaltung der Reihenfolge. Sie gibt an, dass ein UAV mit dem COUNTER-Flag erstellt worden sein muss, wenn er an den Slot \# (u) \# gebunden ist. Dies bedeutet, dass [imm \_ atomic \_ alloc-](imm-atomic-alloc--sm5---asm-.md) oder [imm \_ \_ atomic-Vorgänge](imm-atomic-consume--sm5---asm-.md) im Shader einen Zähler bearbeiten, dessen Werte im Shader als permanenter Verweis auf eine Position im UAV verwendet werden können. Daten können nicht neu angeordnet werden, nachdem der Shader beendet wurde.
 
-Wenn das OPC- \_ Flag nicht vorhanden ist, bedeutet dies Folgendes: Wenn der Shader "[imm \_ Atomic \_ Zuweisungs](imm-atomic-alloc--sm5---asm-.md) Anweisungen" oder " [imm \_ Atomic \_ ](imm-atomic-consume--sm5---asm-.md) using Instructions" verwendet und eine UAV an Slot \# (u) gebunden ist, muss Sie mit dem Append-Flag erstellt worden sein, das einen gegen Wert bereitstellt, der nicht garantiert, dass die Reihenfolge nach dem Aufruf des Shaders
+Das Fehlen des opc-Flags bedeutet, dass, wenn der \_ Shader imm atomic[ \_ \_ alloc-](imm-atomic-alloc--sm5---asm-.md) oder [imm \_ atomic \_ consume-Anweisungen](imm-atomic-consume--sm5---asm-.md) verwendet und ein UAV an den Slot (u) gebunden ist, mit dem APPEND-Flag erstellt worden sein muss, das einen Zähler bietet, der nicht garantiert, dass die Reihenfolge nach dem \# Shaderaufruf beibehalten wird.
 
-Wenn das \_ OPC-Flag fehlt und der Shader keine " [imm \_ Atomic \_ Zuweisungs](imm-atomic-alloc--sm5---asm-.md) "-oder " [imm \_ Atomic \_ ](imm-atomic-consume--sm5---asm-.md) using"-Anweisungen enthält, ist es zulässig, dass ein an Slot (u) gebundenes UAV \# mit dem Counter-Flag erstellt wurde (der Counter wird von diesem Shader nicht verwendet), ohne Flag (kein Counter), aber nicht mit dem Append-Flag.
+Wenn das opc-Flag nicht vorhanden ist und der Shader keine Anweisungen für \_ [imm \_ atomic \_ alloc](imm-atomic-alloc--sm5---asm-.md) oder [imm \_ atomic \_ consume](imm-atomic-consume--sm5---asm-.md) enthält, darf ein UAV, das an Slot (u) gebunden ist, mit dem COUNTER-Flag erstellt worden sein (der Indikator wird von diesem Shader nicht verwendet), kein Flag (kein Indikator), aber nicht mit dem \# APPEND-Flag.
 
 > [!Note]  
-> CS \_ 4 \_ 0 und CS \_ 4 \_ 1 unterstützen die **strukturierte DCL- \_ TGSM \_**, aber nicht die [DCL- \_ TGSM- \_ Rohdaten](dcl-tgsm-raw--sm5---asm-.md).
+> cs \_ 4 \_ 0 und cs \_ 4 \_ 1 unterstützt **dcl \_ tgsm \_ structured**, aber [nicht dcl \_ tgsm \_ raw](dcl-tgsm-raw--sm5---asm-.md).
 
  
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | X     | X       |
 
@@ -70,11 +70,11 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-Da UAVs in allen Shader-Phasen für Direct3D 11,1 verfügbar sind, gilt diese Anweisung für alle Shader-Phasen für die Direct3D 11,1-Laufzeit, die ab Windows 8 verfügbar ist.
+Da UAVs in allen Shaderstufen für Direct3D 11.1 verfügbar sind, gilt diese Anweisung für alle Shaderstufen für die Direct3D 11.1-Runtime, die ab Windows 8.
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -82,27 +82,27 @@ Da UAVs in allen Shader-Phasen für Direct3D 11,1 verfügbar sind, gilt diese An
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | nein        |
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
 
 
 
  
 
 > [!Note]  
-> Diese Anweisung wird in CS \_ 4 \_ 0 und CS \_ 4 \_ 1 unterstützt.
+> Diese Anweisung wird in cs \_ 4 \_ 0 und cs \_ 4 \_ 1 unterstützt.
 
  
 

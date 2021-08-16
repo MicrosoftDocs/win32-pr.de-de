@@ -1,11 +1,11 @@
 ---
-title: Player. newmedia-Methode
-description: Die newmedia-Methode erstellt ein neues Medienobjekt.
+title: Player.newMedia-Methode
+description: Die newMedia-Methode erstellt ein neues Media-Objekt.
 ms.assetid: fccf1559-bac3-4edf-bd88-da2c72cdec21
 keywords:
-- newmedia-Methode, Windows-Media Player
-- newmedia-Methode, Windows Media Player, Player-Klasse
-- Player-Klasse, Windows Media Player, newmedia-Methode
+- newMedia-Windows Media Player
+- newMedia-Methode Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , newMedia-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aaafb97f836135aa9dd112372b1931c8561cb40b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f6e3ad30db7ec43bcc0ee6c1470dc608ccf1625390486d9fcd0fd4bf018affdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118338105"
 ---
-# <a name="playernewmedia-method"></a>Player. newmedia-Methode
+# <a name="playernewmedia-method"></a>Player.newMedia-Methode
 
-Die **newmedia** -Methode erstellt ein neues **Medien** Objekt.
+Die **newMedia-Methode** erstellt ein neues **Media-Objekt.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ retVal = Player.newMedia(
 
 <dl> <dt>
 
-*URL* \[ in\]
+*URL* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die die URL der digitalen Mediendatei enthält, mit der das **Medien** Objekt erstellt werden soll.
+**Eine Zeichenfolge,** die die URL der digitalen Mediendatei enthält, mit der das **Medienobjekt erstellt** werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt ein **Medien** Objekt zurück.
+Diese Methode gibt ein **Media-Objekt** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der *URL* -Parameter darf keine leere Zeichenfolge oder NULL sein.
+Der *URL-Parameter* darf keine leere Zeichenfolge oder NULL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,12 +63,12 @@ Der *URL* -Parameter darf keine leere Zeichenfolge oder NULL sein.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player 9-Serie oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

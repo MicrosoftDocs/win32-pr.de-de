@@ -1,9 +1,9 @@
 ---
-title: Attribut decodieren
-description: Das Attribut \ Decode \ ACF gibt an, dass eine Prozedur oder ein Typ die deserialisierungsunterstützung benötigt.
+title: Decodierungsattribut
+description: Das ACF-Attribut \decode\ gibt an, dass eine Prozedur oder ein Typ Deserialisierungsunterstützung benötigt.
 ms.assetid: 78cd855f-6731-4ef8-9097-e8da5a9b3bdc
 keywords:
-- Decodieren von attributmittell
+- Decodierungsattribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dca24b3a601b9fcafd8d78a0194b6b986813f38c
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 30c70c821906bcfa4dedb8dbe87aab882866a4f21b7d561b16d3613f9041e0f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314906"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118384725"
 ---
-# <a name="decode-attribute"></a>Attribut decodieren
+# <a name="decode-attribute"></a>Decodierungsattribut
 
-Das Attribut "ACF **\[ decodieren \]** " gibt an, dass eine Prozedur oder ein Typ die deserialisierungsunterstützung benötigt.
+Das **\[ Decodieren \]** des ACF-Attributs gibt an, dass eine Prozedur oder ein Typ Deserialisierungsunterstützung benötigt.
 
 ``` syntax
 [ 
@@ -42,68 +42,68 @@ typedef [decode [ , type-attribute-list] ] type-name;
 
 <dl> <dt>
 
-*Interface-Attribute-List* 
+*interface-attribute-list* 
 </dt> <dd>
 
-Gibt andere Attribute an, die auf die gesamte Schnittstelle angewendet werden.
+Gibt andere Attribute an, die für die gesamte Schnittstelle gelten.
 
 </dd> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
 Gibt den Namen der Schnittstelle an.
 
 </dd> <dt>
 
-*Schnittstellen Definition* 
+*Schnittstellendefinition* 
 </dt> <dd>
 
-Gibt IDL-Anweisungen an, die die Definition der-Schnittstelle bilden.
+Gibt IDL-Anweisungen an, die die Definition der Schnittstelle bilden.
 
 </dd> <dt>
 
-*OP-Attribute-List* 
+*op-attribute-list* 
 </dt> <dd>
 
-Gibt andere operative Attribute an, die für die Prozedur gelten, z **\[** . b. [**Codieren**](encode.md) **\]** .
+Gibt andere betriebsbereite Attribute an, die für die Prozedur gelten, z. B. **\[** [**codieren.**](encode.md) **\]**
 
 </dd> <dt>
 
-*proc-Name* 
+*proc-name* 
 </dt> <dd>
 
 Gibt den Namen der Prozedur an.
 
 </dd> <dt>
 
-*Type-Attribute-List* 
+*type-attribute-list* 
 </dt> <dd>
 
-Gibt andere Attribute an, z **\[** . b. [**Codieren**](encode.md) **\]** und **\[** [**zuordnen**](allocate.md) **\]** .
+Gibt andere Attribute an, z. B. **\[** [**codieren**](encode.md) **\]** und **\[** [**zuordnen.**](allocate.md) **\]**
 
 </dd> <dt>
 
-*Typname* 
+*type-name* 
 </dt> <dd>
 
-Gibt einen Typ an, der in der IDL-Datei definiert ist.
+Gibt einen in der IDL-Datei definierten Typ an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Attribut " **\[ decodieren \]** " bewirkt, dass der Mittell-Compiler Code generiert, mit dem eine Anwendung serialisierte Daten aus einem Puffer abrufen kann. Das **\[** [**Codieren**](encode.md) - **\]** Attribut bietet Serialisierungsunterstützung und erzeugt den Code zum Serialisieren von Daten in einen Puffer.
+Das **\[ \] Decodierungsattribut** bewirkt, dass der MIDL-Compiler Code generiert, mit dem eine Anwendung serialisierte Daten aus einem Puffer abrufen kann. Das **\[** [](encode.md) **\]** Codierungsattribut bietet Serialisierungsunterstützung und generiert den Code zum Serialisieren von Daten in einen Puffer.
 
-Verwenden **\[** Sie die Attribute [**Codieren**](encode.md) **\]** und **\[ decodieren \]** in einer ACF, um Serialisierungscode für Prozeduren oder Typen zu generieren, die in der IDL-Datei einer Schnittstelle definiert sind. Wenn die **\[ Decodierung \]** als Schnittstellen Attribut verwendet wird, gilt sie für alle Typen und Prozeduren, die in der IDL-Datei definiert sind. Wenn die **\[ Decodierung \]** als Type-Attribut verwendet wird, gilt sie nur für den angegebenen Typ. Wenn die **\[ Decodierung \]** als Betriebs Attribut verwendet wird, gilt sie nur für diese Prozedur.
+Verwenden Sie die **\[** [**Codierungs-**](encode.md) **\]** und **\[ \] Decodierungsattribute** in einem ACF, um Serialisierungscode für Prozeduren oder Typen zu generieren, die in der IDL-Datei einer Schnittstelle definiert sind. Bei Verwendung als Schnittstellenattribut gilt **\[ die Decodierung \]** für alle Typen und Prozeduren, die in der IDL-Datei definiert sind. Bei Verwendung als Typattribut gilt **\[ die Decodierung \]** nur für den angegebenen Typ. Bei Verwendung als operatives Attribut gilt **\[ die Decodierung \]** nur für diese Prozedur.
 
-Weitere Informationen zur Verwendung dieser Serialisierungsunterstützung finden Sie unter [Serialisierung Services](/windows/desktop/Rpc/serialization-services) und **\[** [**Codieren**](encode.md) **\]** .
+Weitere Informationen zur Verwendung dieser Serialisierungsunterstützung finden Sie unter [Serialisierungsdienste](/windows/desktop/Rpc/serialization-services) und **\[** [**Codieren**](encode.md) **\]** von .
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Anwendungs Konfigurationsdatei (ACF)](application-configuration-file-acf-.md)
+[Anwendungskonfigurationsdatei (Application Configuration File, ACF)](application-configuration-file-acf-.md)
 </dt> <dt>
 
 [**allocate**](allocate.md)
@@ -112,6 +112,6 @@ Weitere Informationen zur Verwendung dieser Serialisierungsunterstützung finden
 [**Codieren**](encode.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

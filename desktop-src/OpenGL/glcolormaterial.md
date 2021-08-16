@@ -1,9 +1,9 @@
 ---
-title: glcolormaterial-Funktion (GL. h)
-description: Die glcolormaterial-Funktion bewirkt, dass die aktuelle Farbe mit einer Material Farbe nachverfolgt wird.
+title: glColorMaterial-Funktion (Gl.h)
+description: Die glColorMaterial-Funktion bewirkt, dass eine Materialfarbe die aktuelle Farbe nachverfolgt.
 ms.assetid: 6dbef2c2-f902-4f25-8a87-9e3d710dd807
 keywords:
-- glcolormaterial-Funktion OpenGL
+- glColorMaterial-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d32823eaa82e6a260790dd6fa23747f2b4228649
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 55cc846cfbc400d2372186f9af4a09db08e5ad769d1e8fec5f5f6f757e1ff447
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391994"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118360471"
 ---
-# <a name="glcolormaterial-function"></a>glcolormaterial-Funktion
+# <a name="glcolormaterial-function"></a>glColorMaterial-Funktion
 
-Die **glcolormaterial** -Funktion bewirkt, dass die aktuelle Farbe mit einer Material Farbe nachverfolgt wird.
+Die **glColorMaterial-Funktion** bewirkt, dass eine Materialfarbe die aktuelle Farbe nachverfolgt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ void WINAPI glColorMaterial(
 
 <dl> <dt>
 
-*mit* 
+*Gesicht* 
 </dt> <dd>
 
-Gibt an, ob die Vorder-, Hintergrund-oder beide Vorder-und Hintergrundmaterial Parameter die aktuelle Farbe verfolgen sollen. Akzeptierte Werte sind GL \_ Front, GL \_ Back und GL \_ Front \_ und \_ Back. Der Standardwert ist GL \_ Front \_ und \_ Back.
+Gibt an, ob die materiale Parameter front, back oder front und back die aktuelle Farbe nachverfolgen sollen. Akzeptierte Werte sind GL \_ FRONT, GL \_ BACK und GL FRONT AND \_ \_ \_ BACK. Der Standardwert ist GL \_ FRONT \_ AND \_ BACK.
 
 </dd> <dt>
 
 *mode* 
 </dt> <dd>
 
-Gibt an, welche von mehreren Materialparametern die aktuelle Farbe nachverfolgen. Akzeptierte Werte sind GL \_ -Ausgabe, GL \_ Ambient, GL \_ diffus, GL \_ specarität und GL \_ Ambient \_ und \_ diffuse. Der Standardwert ist "GL \_ AMBIENT" und "diffuse" \_ \_ .
+Gibt an, welcher von mehreren Materialparametern die aktuelle Farbe nachverfolgt. Akzeptierte Werte sind GL \_ AMBIENT, GL \_ AMBIENT, GL \_ DIFFUSE, GL \_ SPECULAR und GL \_ AMBIENT UND \_ \_ DIFFUSE. Der Standardwert ist GL \_ AMBIENT \_ UND \_ DIFFUSE.
 
 </dd> </dl>
 
@@ -61,30 +61,30 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | der *Gesichts* -oder *Modus* war kein akzeptierter Wert.<br/>                                                                                |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *face* oder *mode* war kein akzeptierter Wert.<br/>                                                                                |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glcolormaterial** -Funktion gibt an, welche Materialparameter die aktuelle Farbe verfolgen. Wenn Sie das GL- \_ Farb \_ Material aktivieren, wird für jedes Material oder jedes Material, das durch das *Gesicht* angegeben wird, der Materialparameter oder die Parameter, die vom- *Modus* angegeben werden, die aktuelle Farbe jederzeit nachverfolgen. Aktivieren und deaktivieren \_ Sie das GL-Farb \_ Material mit den Funktionen [**glEnable**](glenable.md) und [**gldeaktivieren**](gldisable.md), die Sie mit dem GL- \_ Farb \_ Material als Argument aufzurufen. Standardmäßig ist das GL- \_ Farb \_ Material deaktiviert.
+Die **glColorMaterial-Funktion** gibt an, welche Materialparameter die aktuelle Farbe nachverfolgen. Wenn Sie GL COLOR MATERIAL aktivieren, wird die aktuelle Farbe für jedes material oder material, das bzw. das durch das Gesicht angegeben wird, durch den vom Modus angegebenen Materialparameter oder Parameter \_ \_ jederzeit nachverfolgt.   Aktivieren und deaktivieren Sie GL COLOR MATERIAL mit den Funktionen \_ \_ [**glEnable**](glenable.md) und [**glDisable**](gldisable.md), die Sie mit GL \_ COLOR MATERIAL als Argument \_ aufrufen. Standardmäßig ist GL \_ COLOR \_ MATERIAL deaktiviert.
 
-Mit **glcolormaterial** können Sie eine Teilmenge der Materialparameter für jeden Scheitelpunkt mithilfe der Funktion " [**glcolor**](glcolor-functions.md) " ändern, ohne " [**glmaterial**](glmaterial-functions.md)" aufrufen zu müssen. Wenn Sie nur eine solche Teilmenge von Parametern für jeden Scheitelpunkt angeben, ist es besser, dies mit **glcolormaterial** zu tun, als bei **glmaterial**.
+Mit **glColorMaterial** können Sie eine Teilmenge von Materialparametern für jeden Scheitelpunkt ändern, indem Sie nur die [**glColor-Funktion**](glcolor-functions.md) verwenden, ohne [**glMaterial auf aufruft.**](glmaterial-functions.md) Wenn Sie nur eine solche Teilmenge von Parametern für jeden Scheitelpunkt angeben möchten, ist es besser, **glColorMaterial** als **glMaterial zu verwenden.**
 
-Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glcolormaterial** ab:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glColorMaterial ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Color \_ Material \_ Parameter
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ COLOR \_ MATERIAL \_ PARAMETER
 
-**glget** mit dem Argument GL \_ Color \_ Material \_ Face
+**glGet** mit argument GL \_ COLOR \_ MATERIAL \_ FACE
 
-[**glisenabled**](glisenabled.md) mit dem Argument "GL \_ Color \_ Material"
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ COLOR \_ MATERIAL
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -94,23 +94,23 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glcolormateri
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glcolor**](glcolor-functions.md)
+[**glColor**](glcolor-functions.md)
 </dt> <dt>
 
-[**gldeaktivieren**](gldisable.md)
+[**glDisable**](gldisable.md)
 </dt> <dt>
 
 [**glEnable**](glenable.md)
@@ -119,19 +119,19 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glcolormateri
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glisenabled**](glisenabled.md)
+[**glIsEnabled**](glisenabled.md)
 </dt> <dt>
 
-[**gllight**](gllight-functions.md)
+[**glLight**](gllight-functions.md)
 </dt> <dt>
 
-[**gllightmodel**](gllightmodel-functions.md)
+[**glLightModel**](gllightmodel-functions.md)
 </dt> <dt>
 
-[**glmaterial**](glmaterial-functions.md)
+[**glMaterial**](glmaterial-functions.md)
 </dt> </dl>
 
  

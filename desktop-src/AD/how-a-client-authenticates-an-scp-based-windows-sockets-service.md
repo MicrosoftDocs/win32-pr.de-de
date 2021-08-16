@@ -1,24 +1,24 @@
 ---
-title: Authentifizieren eines SCP-basierten Windows Sockets-Dienstanbieter durch einen Client
-description: Dieses Thema zeigt den Code, der von einer Client Anwendung verwendet wird, um einen SPN für einen Dienst zu erstellen.
+title: Authentifizieren eines SCP-basierten Windows Sockets Service durch einen Client
+description: In diesem Thema wird der Code gezeigt, den eine Clientanwendung verwendet, um einen SPN für einen Dienst zu erstellen.
 ms.assetid: b5ef79c6-e321-435c-b3de-817fdea8836a
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 38471f48d8c80d0795b7176b95df0029d42325ac
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 40d35ad62e05ab925d2dedc10506ddb339c2aafd188487f2e1591713189f451a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118188664"
 ---
-# <a name="how-a-client-authenticates-an-scp-based-windows-sockets-service"></a>Authentifizieren eines SCP-basierten Windows Sockets-Dienstanbieter durch einen Client
+# <a name="how-a-client-authenticates-an-scp-based-windows-sockets-service"></a>Authentifizieren eines SCP-basierten Windows Sockets Service durch einen Client
 
-Dieses Thema zeigt den Code, der von einer Client Anwendung verwendet wird, um einen SPN für einen Dienst zu erstellen. Der Client bindet an den Dienst Verbindungspunkt (Service Connection Point, SCP) des Dienstanbieter, um die zum Herstellen einer Verbindung mit dem Dienst erforderlichen Daten abzurufen. Der SCP enthält auch Daten, die der Client zum Verfassen des Dienst Prinzipal namens verwenden kann. Weitere Informationen und ein Codebeispiel, das an den SCP gebunden wird und die erforderlichen Eigenschaften abruft, finden Sie unter [So suchen und verwenden Clients einen Dienst Verbindungspunkt](how-clients-find-and-use-a-service-connection-point.md).
+In diesem Thema wird der Code gezeigt, den eine Clientanwendung verwendet, um einen SPN für einen Dienst zu erstellen. Der Client wird an den Dienstverbindungspunkt (Service Connection Point, SCP) des Diensts gebunden, um die Daten abzurufen, die zum Herstellen einer Verbindung mit dem Dienst erforderlich sind. Der SCP enthält auch Daten, die der Client zum Erstellen des DIENST-SPN verwenden kann. Weitere Informationen und ein Codebeispiel, das an den SCP gebunden und die erforderlichen Eigenschaften abruft, finden Sie unter Suchen und Verwenden eines [Dienstverbindungspunkts](how-clients-find-and-use-a-service-connection-point.md)durch Clients.
 
-Außerdem wird in diesem Thema gezeigt, wie ein Client ein SSPI-Sicherheitspaket und den SPN des Diensts verwendet, um eine gegenseitig authentifizierte Verbindung mit dem Windows Sockets-Dienst herzustellen. Beachten Sie, dass dieser Code fast identisch mit dem Code ist, der in Microsoft Windows NT 4,0 und früher erforderlich ist, nur um den Client beim Server zu authentifizieren. Der einzige Unterschied besteht darin, dass der Client den SPN angeben und das ISC \_ req-Flag für die gegenseitige Authentifizierung angeben muss \_ \_ .
+In diesem Thema wird auch gezeigt, wie ein Client ein SSPI-Sicherheitspaket und den DIENST-SPN verwendet, um eine sich gegenseitig authentifizierte Verbindung mit dem Windows Sockets-Dienst herzustellen. Beachten Sie, dass dieser Code fast identisch mit dem Code ist, der in Microsoft Windows NT 4.0 und früher erforderlich ist, nur um den Client beim Server zu authentifizieren. Der einzige Unterschied ist, dass der Client den SPN angeben und das ISC \_ REQ \_ MUTUAL \_ AUTH-Flag angeben muss.
 
-## <a name="client-code-to-make-an-spn-for-a-service"></a>Client Code zum Erstellen eines SPN für einen Dienst
+## <a name="client-code-to-make-an-spn-for-a-service"></a>Clientcode zum Machen eines SPN für einen Dienst
 
 
 ```C++
@@ -56,15 +56,15 @@ if (!DoAuthentication (sockServer, szSpn)) {
 
 
 
-## <a name="client-code-to-authenticate-the-service"></a>Client Code zum Authentifizieren des Dienstanbieter
+## <a name="client-code-to-authenticate-the-service"></a>Clientcode zum Authentifizieren des Diensts
 
-Dieses Codebeispiel besteht aus zwei Routinen: **doauthentication** und **genclientcontext**. Nachdem Sie [**dsmakespn**](/windows/desktop/api/Dsparse/nf-dsparse-dsmakespna) aufgerufen haben, um einen SPN für den Dienst zu verfassen, übergibt der Client den SPN an die **doauthentication** -Routine, die den **genclientcontext** aufruft, um den Anfangs Puffer zu generieren, der an den Dienst gesendet werden soll. Die **doauthentication** verwendet das Sockethandle, um den Puffer zu senden, und empfängt die Antwort des dienstanders an das SSPI-Paket durch einen anderen Aufruf von **genclientcontext**. Diese Schleife wird wiederholt, bis die Authentifizierung fehlschlägt oder **genclientcontext** ein Flag festlegt, das angibt, dass die Authentifizierung erfolgreich war.
+Dieses Codebeispiel besteht aus zwei Routinen: **DoAuthentication** und **GenClientContext**. Nachdem [**DsMakeSpn**](/windows/desktop/api/Dsparse/nf-dsparse-dsmakespna) aufgerufen wurde, um einen SPN für den Dienst zu erstellen, übergibt der Client den SPN an die **DoAuthentication-Routine,** die **GenClientContext** aufruft, um den anfänglichen Puffer zu generieren, der an den Dienst gesendet werden soll. **DoAuthentication** verwendet das Sockethandl, um den Puffer zu senden und die Antwort des Diensts zu empfangen, die durch einen anderen Aufruf von **GenClientContext** an das SSPI-Paket übergeben wird. Diese Schleife wird wiederholt, bis die Authentifizierung fehlschlägt oder **GenClientContext** ein Flag festgibt, das angibt, dass die Authentifizierung erfolgreich war.
 
-Die **genclientcontext** -Routine interagiert mit dem SSPI-Paket, um die Authentifizierungsdaten zu generieren, die an den Dienst gesendet werden, und die vom Dienst empfangenen Daten zu verarbeiten. Die wichtigsten Komponenten der vom Client bereitgestellten Authentifizierungsdaten sind:
+Die **GenClientContext-Routine** interagiert mit dem SSPI-Paket, um die Authentifizierungsdaten zu generieren, die an den Dienst gesendet werden, und die vom Dienst empfangenen Daten zu verarbeiten. Die wichtigsten Komponenten der vom Client bereitgestellten Authentifizierungsdaten sind:
 
--   Der Dienst Prinzipal Name, der die Anmelde Informationen angibt, die der Dienst authentifizieren muss.
--   Die Anmelde Informationen des Clients. Die [**AcquireCredentialsHandle**](../SecAuthN/acquirecredentialshandle--general.md) -Funktion des Sicherheitspakets extrahiert diese Anmelde Informationen aus dem Sicherheitskontext des Clients, der bei der Anmeldung festgelegt wurde.
--   Um die gegenseitige Authentifizierung anzufordern, muss der Client das ISC req-Flag für die gegenseitige Authentifizierung angeben, \_ \_ \_ Wenn die [**InitializeSecurityContext**](../SecAuthN/initializesecuritycontext--general.md) -Funktion während der **genclientcontext** -Routine aufgerufen wird.
+-   Der Dienstprinzipalname, der die Anmeldeinformationen identifiziert, die der Dienst authentifizieren muss.
+-   Die Anmeldeinformationen des Clients. Die [**AcquireCredentialsHandle-Funktion**](../SecAuthN/acquirecredentialshandle--general.md) des Sicherheitspakets extrahiert diese Anmeldeinformationen aus dem Sicherheitskontext des Clients, der bei der Anmeldung eingerichtet wurde.
+-   Zum Anfordern der gegenseitigen Authentifizierung muss der Client das ISC REQ MUTUAL AUTH-Flag angeben, wenn er die InitializeSecurityContext-Funktion während der \_ \_ \_ **GenClientContext-Routine** aufruft. [](../SecAuthN/initializesecuritycontext--general.md)
 
 
 ```C++
@@ -266,9 +266,9 @@ return TRUE;
 
 
 
- 
+ 
 
- 
+ 
 
 
 

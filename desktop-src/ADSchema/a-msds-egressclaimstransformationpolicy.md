@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Egress-Claims-Transformation-Policy-Attribut
-description: Dies ist ein Link zu einem Anspruchs Transformations-Richtlinien Objekt für die ausgehenden Ansprüche (Ansprüche, die diese Gesamtstruktur verlässt) der vertrauenswürdigen Domäne.
+description: Dies ist ein Link zu einem Anspruchstransformationsrichtlinienobjekt für die ausgehenden Ansprüche (Ansprüche, die diese Gesamtstruktur verlassen) zur vertrauenswürdigen Domäne.
 ms.assetid: 693ebb45-e90c-4629-8afc-f048c83b4b95
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-Egress-Claims-Transformation-Policy-Attribut AD-Schema
-- MSDS-egressclaimstransformationpolicy-Attribut AD-Schema
+- MS-DS-Egress-Claims-Transformation-Policy-Attribut AD-Schema
+- MSDS-EgressClaimsTransformationPolicy-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f3978944b6ae85fcc5fd33682abec7dd3fff0057
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 99ec71308c0ebc17942b3400d8ddd9e87ff88ea29d4f21e93047c3aa80f77128
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957516"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118014653"
 ---
 # <a name="ms-ds-egress-claims-transformation-policy-attribute"></a>ms-DS-Egress-Claims-Transformation-Policy-Attribut
 
-Dies ist ein Link zu einem Anspruchs Transformations-Richtlinien Objekt für die ausgehenden Ansprüche (Ansprüche, die diese Gesamtstruktur verlässt) der vertrauenswürdigen Domäne. Dies gilt nur für eine eingehende oder bidirektionale Gesamtstruktur übergreifende Vertrauensstellung. Wenn dieser Link nicht vorhanden ist, können alle Ansprüche unverändert ausgehen.
+Dies ist ein Link zu einem Anspruchstransformationsrichtlinienobjekt für die ausgehenden Ansprüche (Ansprüche, die diese Gesamtstruktur verlassen) zur vertrauenswürdigen Domäne. Dies gilt nur für eine eingehende oder bidirektionale gesamtstrukturübergreifende Vertrauensstellung. Wenn dieser Link nicht vorhanden ist, dürfen alle Ansprüche im vorliegenden Moment ausgehend werden.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------|
 | CN                | ms-DS-Egress-Claims-Transformation-Policy |
-| LDAP-Display-Name | MSDS-egressclaimstransformationpolicy     |
+| Ldap-Anzeigename | msDS-EgressClaimsTransformationPolicy     |
 | Size              | \-                                        |
-| Berechtigung aktualisieren  | \-                                        |
-| Aktualisierungshäufigkeit  | \-                                        |
+| Aktualisieren von Berechtigungen  | \-                                        |
+| Updatehäufigkeit  | \-                                        |
 | Attribute-Id      | 1.2.840.113556.1.4.2192                   |
 | System-ID-GUID    | c137427e-9a73-b040-9190-1b095bb43288      |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md)   |
@@ -53,10 +53,10 @@ Dies ist ein Link zu einem Anspruchs Transformations-Richtlinien Objekt für die
 | Link-ID                | 2192                                                 |
 | MAPI-Id                | \-                                                   |
 | System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
+| Ist einwertig       | True                                                 |
 | Ist indiziert             | False                                                |
 | Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |

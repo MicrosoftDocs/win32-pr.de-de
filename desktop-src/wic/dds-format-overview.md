@@ -21,7 +21,7 @@ Die folgende Tabelle enthält Codec-Identifikationsinformationen.
 
 
 
-| Komponente              | BESCHREIBUNG        |
+| Komponente              | Beschreibung        |
 |------------------------|--------------------|
 | Formale Namen         | DirectDraw Surface |
 | Dateinamenerweiterung(en) | Dds                |
@@ -47,7 +47,7 @@ In der folgenden Tabelle sind die GUIDs aufgeführt, die zum Identifizieren der 
 
 ## <a name="pixel-format-support"></a>Pixelformatunterstützung
 
-Beachten Sie, dass das DDS-Format jeden gültigen [**DXGI \_ FORMAT-Wert**](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) unterstützt. Der WIC DDS-Codec unterstützt jedoch nur Decodierungs- und Codierungsdateien mit den folgenden Formaten:
+Beachten Sie, dass das DDS-Format jeden gültigen [**DXGI \_ FORMAT-Wert**](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) unterstützt. Der WIC DDS-Codec unterstützt jedoch nur Decodierungs- und Codierungsdateien, die die folgenden Formate enthalten:
 
 -   DXGI \_ FORMAT \_ BC1 \_ UNORM
 -   DXGI \_ FORMAT \_ BC2 \_ UNORM
@@ -61,7 +61,7 @@ Das DDS-Dateiformat hat besondere Anforderungen, die sich aus seiner Unterstütz
 
 ## <a name="decoding"></a>Decodierung
 
-Die WIC-Decodierungs-APIs sind codecunabhängig, und die Bilddecodierung für WIC-fähige Codecs ist im Wesentlichen identisch. Weitere Informationen zur Bilddecodierung finden Sie in der [Übersicht über die Decodierung.](-wic-creating-decoder.md) Weitere Informationen zur Verwendung von decodierten Bilddaten finden Sie in der [Übersicht über Bitmapquellen.](-wic-bitmapsources.md)
+Die WIC-Decodierungs-APIs sind codecunabhängig, und die Bilddecodierung für WIC-fähige Codecs ist im Wesentlichen identisch. Weitere Informationen zur Bilddecodierung finden Sie in der Übersicht [über die Decodierung.](-wic-creating-decoder.md) Weitere Informationen zur Verwendung von decodierten Bilddaten finden Sie in der [Übersicht über Bitmapquellen.](-wic-bitmapsources.md)
 
 ## <a name="block-compressed-data-access"></a>Blockieren des Zugriffs auf komprimierte Daten
 

@@ -226,7 +226,7 @@ int delta = GET_WHEEL_DELTA_WPARAM(wParam);
 
 
 
-Wenn das Mausrad eine hohe Auflösung auf hat, kann der absolute Wert des Deltas kleiner als 120 sein. Wenn es in diesem Fall sinnvoll ist, dass die Aktion in kleineren Schritten ausgeführt wird, können Sie dies tun. Beispielsweise kann Text in Schritten von weniger als einer Zeile scrollen. Andernfalls akkumulieren Sie das gesamte Delta, bis das Rad so lange gedreht wird, um die Aktion auszuführen. Store das nicht verwendete Delta in einer Variablen, und führen Sie die Aktion aus, wenn sich 120 Einheiten ansammeln (entweder positiv oder negativ).
+Wenn das Mausrad eine hohe Auflösung auf hat, kann der absolute Wert des Deltas kleiner als 120 sein. Wenn es in diesem Fall sinnvoll ist, dass die Aktion in kleineren Schritten ausgeführt wird, können Sie dies tun. Beispielsweise kann Text in Schritten von weniger als einer Zeile scrollen. Andernfalls akkumulieren Sie das gesamte Delta, bis das Rad so lange gedreht wird, um die Aktion auszuführen. Store das nicht verwendete Delta in einer Variablen, und wenn sich 120 Einheiten ansammeln (entweder positiv oder negativ), führen Sie die Aktion aus.
 
 ## <a name="next"></a>Nächste
 

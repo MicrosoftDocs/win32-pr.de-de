@@ -18,21 +18,21 @@ keywords:
 - Discard, HLSL-Schlüsselwort
 - Do, HLSL-Schlüsselwort
 - Double, HLSL-Schlüsselwort
-- Else, HLSL-Schlüsselwort
+- Andernfalls HLSL-Schlüsselwort
 - Export, HLSL-Schlüsselwort
 - Extern, HLSL-Schlüsselwort
 - False, HLSL-Schlüsselwort
 - Float, HLSL-Schlüsselwort
-- For, HLSL-Schlüsselwort
+- Für das HLSL-Schlüsselwort
 - GeometryShader, HLSL-Schlüsselwort
-- Half, HLSL-Schlüsselwort
+- Hälfte, HLSL-Schlüsselwort
 - If, HLSL-Schlüsselwort
-- In, HLSL-Schlüsselwort
+- In das HLSL-Schlüsselwort
 - Inline, HLSL-Schlüsselwort
 - Inout, HLSL-Schlüsselwort
 - Int, HLSL-Schlüsselwort
 - Schnittstelle, HLSL-Schlüsselwort
-- Line, HLSL-Schlüsselwort
+- Zeile, HLSL-Schlüsselwort
 - Lineadj, HLSL-Schlüsselwort
 - Matrix, HLSL-Schlüsselwort
 - Namespace, HLSL-Schlüsselwort
@@ -44,7 +44,7 @@ keywords:
 - Point, HLSL-Schlüsselwort
 - RasterizerState, HLSL-Schlüsselwort
 - RenderTargetView, HLSL-Schlüsselwort
-- Return, HLSL-Schlüsselwort
+- Rückgabe, HLSL-Schlüsselwort
 - Register, HLSL-Schlüsselwort
 - Sampler, HLSL-Schlüsselwort
 - Sampler1D, HLSL-Schlüsselwort
@@ -73,12 +73,12 @@ keywords:
 - Texture3D, HLSL-Schlüsselwort
 - TextureCube, HLSL-Schlüsselwort
 - TextureCubeArray, HLSL-Schlüsselwort
-- True, HLSL-Schlüsselwort
+- TRUE, HLSL-Schlüsselwort
 - Typedef, HLSL-Schlüsselwort
 - Dreieck, HLSL-Schlüsselwort
 - Triangleadj, HLSL-Schlüsselwort
 - Uniform, HLSL-Schlüsselwort
-- Vektor, HLSL-Schlüsselwort
+- Vector, HLSL-Schlüsselwort
 - VertexShader, HLSL-Schlüsselwort
 - Void, HLSL-Schlüsselwort
 - Volatile, HLSL-Schlüsselwort
@@ -90,12 +90,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 017647104d7cb7a71b400390a307a633666bc100
-ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
+ms.openlocfilehash: b6c3e52f03ac283af0dd89a67caeb46d884f47c7587917966cc3a89869fc5e8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113129888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117726660"
 ---
 # <a name="keywords"></a>Keywords
 
@@ -103,16 +103,16 @@ Die Microsoft High Level Shader Language (HLSL) erkennt die Wörter in diesem Ab
 
 - [**AppendStructuredBuffer,**](sm5-object-appendstructuredbuffer.md)asm, asm \_ fragment
 - BlendState, [bool](dx-graphics-hlsl-scalar.md), [break](dx-graphics-hlsl-break.md), [**Buffer**](dx-graphics-hlsl-buffer.md), [**ByteAddressBuffer**](sm5-object-byteaddressbuffer.md)
-- case, [cbuffer](dx-graphics-hlsl-constants.md), [centroid](dx-graphics-hlsl-struct.md), [class](overviews-direct3d-11-hlsl-dynamic-linking-class.md), [column \_ major](dx-graphics-hlsl-variable-syntax.md), [compile](dx-graphics-hlsl-shader.md), [**compile \_ fragment**](fragment-declaration-syntax.md), **CompileShader**, const, [continue](dx-graphics-hlsl-continue.md), ComputeShader, [**ConsumeStructuredBuffer**](sm5-object-consumestructuredbuffer.md)
-- default, DepthStencilState, DepthStencilView, [verwerfen](dx-graphics-hlsl-discard.md), [do](dx-graphics-hlsl-do.md), [double](dx-graphics-hlsl-scalar.md), [DomainShader](dx-graphics-hlsl-shader.md), dword
+- case, [cbuffer](dx-graphics-hlsl-constants.md), [schwerpunktid](dx-graphics-hlsl-struct.md), [class](overviews-direct3d-11-hlsl-dynamic-linking-class.md), [column \_ major](dx-graphics-hlsl-variable-syntax.md), [compile](dx-graphics-hlsl-shader.md), [**compile \_ fragment**](fragment-declaration-syntax.md), **CompileShader**, const, [continue](dx-graphics-hlsl-continue.md), ComputeShader, [**ConsumeStructuredBuffer**](sm5-object-consumestructuredbuffer.md)
+- default, DepthStencilState, DepthStencilView, [discard](dx-graphics-hlsl-discard.md), [do](dx-graphics-hlsl-do.md), [double](dx-graphics-hlsl-scalar.md), [DomainShader](dx-graphics-hlsl-shader.md), dword
 - [else](dx-graphics-hlsl-if.md), [export](#export), [extern](dx-graphics-hlsl-variable-syntax.md)
-- false, [float](dx-graphics-hlsl-scalar.md), [für](dx-graphics-hlsl-for.md), fxgroup
+- false, [float](dx-graphics-hlsl-scalar.md) [, für](dx-graphics-hlsl-for.md), fxgroup
 - [GeometryShader](dx-graphics-hlsl-shader.md), [groupshared](dx-graphics-hlsl-variable-syntax.md)
 - [half](dx-graphics-hlsl-scalar.md), [Hullshader](dx-graphics-hlsl-shader.md)
-- [,](dx-graphics-hlsl-if.md)wenn [, in](dx-graphics-hlsl-function-parameters.md), [inline](dx-graphics-hlsl-function-syntax.md), [inout](dx-graphics-hlsl-function-parameters.md), [**InputPatch**](sm5-object-inputpatch.md), [int](dx-graphics-hlsl-scalar.md), [interface](overviews-direct3d-11-hlsl-dynamic-linking-class.md)
+- [, wenn](dx-graphics-hlsl-if.md) [, in](dx-graphics-hlsl-function-parameters.md), [inline](dx-graphics-hlsl-function-syntax.md), [inout](dx-graphics-hlsl-function-parameters.md), [**InputPatch**](sm5-object-inputpatch.md), [int](dx-graphics-hlsl-scalar.md), [schnittstelle](overviews-direct3d-11-hlsl-dynamic-linking-class.md)
 - [line, lineadj,](dx-graphics-hlsl-geometry-shader.md) [linear,](dx-graphics-hlsl-struct.md) [LineStream](dx-graphics-hlsl-so-type.md)
 - [matrix](dx-graphics-hlsl-matrix.md), [min16float](dx-graphics-hlsl-scalar.md), [min10float](dx-graphics-hlsl-scalar.md), [min16int](dx-graphics-hlsl-scalar.md), [min12int](dx-graphics-hlsl-scalar.md), [min16uint](dx-graphics-hlsl-scalar.md)
-- namespace, [nointerpolation,](dx-graphics-hlsl-struct.md) [noperspective,](dx-graphics-hlsl-struct.md)NULL
+- namespace, [nointerpolation](dx-graphics-hlsl-struct.md), [noperspective](dx-graphics-hlsl-struct.md), NULL
 - [out](dx-graphics-hlsl-function-parameters.md), [ **OutputPatch**](sm5-object-outputpatch.md)
 - [**packoffset**](dx-graphics-hlsl-variable-packoffset.md), pass, [pixelfragment](fragment-declaration-syntax.md), [PixelShader](dx-graphics-hlsl-shader.md), [point](dx-graphics-hlsl-geometry-shader.md), [PointStream](dx-graphics-hlsl-so-type.md), [precise](dx-graphics-hlsl-variable-syntax.md)
 - RasterizerState, RenderTargetView, [return](dx-graphics-hlsl-return.md), [register](dx-graphics-hlsl-variable-register.md), [row \_ major](dx-graphics-hlsl-variable-syntax.md), [**RWBuffer**](sm5-object-rwbuffer.md), [**RWByteAddressBuffer**](sm5-object-rwbyteaddressbuffer.md), [**RWStructuredBuffer**](sm5-object-rwstructuredbuffer.md), [**RWTexture1D**](sm5-object-rwtexture1d.md), [**RWTexture1DArray**](sm5-object-rwtexture1darray.md), [**RWTexture2D**](sm5-object-rwtexture2d.md), [**RWTexture2DArray**](sm5-object-rwtexture2darray.md), [**RWTexture3D**](sm5-object-rwtexture3d.md)
@@ -122,7 +122,7 @@ Die Microsoft High Level Shader Language (HLSL) erkennt die Wörter in diesem Ab
 - [vector](dx-graphics-hlsl-vector.md), [vertexfragment](fragment-declaration-syntax.md), [VertexShader](dx-graphics-hlsl-shader.md), void, [volatile](dx-graphics-hlsl-variable-syntax.md)
 - [while](dx-graphics-hlsl-while.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese numerischen Typen verfügen über Skalar-, Vektor- und Matrixschlüsselworterweiterungen:
 
@@ -151,7 +151,7 @@ Die Erweiterungen dieser numerischen Typen folgen diesem Muster, das float als B
     float4x1, float4x2, float4x3, float4x4  
     </dl>
 
-HLSL unterstützt aus [](dx-graphics-hlsl-texture.md) älteren Gründen Eine-Kleinbuchstaben-Textur und [einen Sampler.](dx-graphics-hlsl-sampler.md) Stattdessen wird für Ihre neuen Apps empfohlen, die neuen Texturobjekte[(Texture2D,](sm5-object-texture2d.md) [Texture3D](sm5-object-texture3d.md)usw.) und sampler-Objekte[(SamplerState und SamplerComparisonState)](dx-graphics-hlsl-sampler.md)von HLSL zu verwenden.
+HLSL unterstützt aus Legacygründen eine [Kleinbuchstabentextur](dx-graphics-hlsl-texture.md) und [einen Sampler.](dx-graphics-hlsl-sampler.md) Stattdessen wird für Ihre neuen Apps empfohlen, die neuen Texturobjekte[(Texture2D,](sm5-object-texture2d.md) [Texture3D](sm5-object-texture3d.md)usw.) und sampler-Objekte[(SamplerState und SamplerComparisonState)](dx-graphics-hlsl-sampler.md)von HLSL zu verwenden.
 
 ### <a name="export"></a>Export
 
@@ -171,7 +171,7 @@ Indem Sie die **Identitätsfunktion** mit dem **Schlüsselwort export** markiere
 Der Compiler ignoriert das **Exportschlüsselwort** für die Nichtbibliothekskompilierung.
 
 > [!Note]  
-> Das **Exportschlüsselwort** erfordert den D3dcompiler \_47.dll oder eine höhere Version der DLL.
+> Das **Exportschlüsselwort** erfordert die D3dcompiler-47.dll \_ oder eine höhere Version der DLL.
 
  
 

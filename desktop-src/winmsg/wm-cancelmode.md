@@ -1,21 +1,21 @@
 ---
-description: Wird gesendet, um bestimmte Modi abzubrechen, z. b. die Maus Aufzeichnung
+description: Wird gesendet, um bestimmte Modi abzubricht, z. B. Mauserfassung.
 ms.assetid: c801233a-c4d8-4fd9-aaf0-3d4503bbce26
-title: WM_CANCELMODE Meldung (Winuser. h)
+title: WM_CANCELMODE (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c23b842dfdfde7dc550d8ec6d942bcc83ea25f3d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ae26cef4919ed93bb2a1c60376ab450560cd2142cef7b3040032f791c45ab09f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359163"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117849299"
 ---
-# <a name="wm_cancelmode-message"></a>WM \_ cancelmode-Meldung
+# <a name="wm_cancelmode-message"></a>WM \_ CANCELMODE-Nachricht
 
-Wird gesendet, um bestimmte Modi abzubrechen, z. b. die Maus Aufzeichnung Das System sendet diese Meldung z. b. an das aktive Fenster, wenn ein Dialogfeld oder ein Meldungs Feld angezeigt wird. Bestimmte Funktionen senden diese Nachricht auch explizit an das angegebene Fenster, unabhängig davon, ob es sich um das aktive Fenster handelt. Die [**EnableWindow**](/windows/win32/api/winuser/nf-winuser-enablewindow) -Funktion sendet diese Meldung z. b., wenn das angegebene Fenster deaktiviert wird.
+Wird gesendet, um bestimmte Modi abzubricht, z. B. Mauserfassung. Beispielsweise sendet das System diese Meldung an das aktive Fenster, wenn ein Dialogfeld oder Meldungsfeld angezeigt wird. Bestimmte Funktionen senden diese Nachricht auch explizit an das angegebene Fenster, unabhängig davon, ob es sich um das aktive Fenster handelt. Beispielsweise sendet die [**EnableWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-enablewindow) diese Meldung, wenn das angegebene Fenster deaktiviert wird.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -46,11 +46,11 @@ Dieser Parameter wird nicht verwendet.
 
 Typ: **LRESULT**
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die **WM \_ cancelmode** -Meldung gesendet wird, bricht die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion die interne Verarbeitung der Standardbild Lauf leisten Eingabe ab, bricht die interne Menü Verarbeitung ab und gibt die Maus Aufzeichnung frei.
+Wenn die **WM \_ CANCELMODE-Nachricht** gesendet wird, bricht die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) die interne Verarbeitung der Standardmäßig-Scrollleisteneingabe ab, bricht die interne Menüverarbeitung ab und gibt die Mauserfassung frei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,15 +60,15 @@ Wenn die **WM \_ cancelmode** -Meldung gesendet wird, bricht die [**defwindowpro
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)
@@ -77,10 +77,10 @@ Wenn die **WM \_ cancelmode** -Meldung gesendet wird, bricht die [**defwindowpro
 [**EnableWindow**](/windows/win32/api/winuser/nf-winuser-enablewindow)
 </dt> <dt>
 
-[**Releasecapture**](/windows/win32/api/winuser/nf-winuser-releasecapture)
+[**ReleaseCapture**](/windows/win32/api/winuser/nf-winuser-releasecapture)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Windows](windows.md)

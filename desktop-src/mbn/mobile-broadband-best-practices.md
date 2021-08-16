@@ -1,27 +1,27 @@
 ---
-description: Beim Arbeiten mit der mobilen Breitband-API sollten die folgenden bewährten Methoden verwendet werden, um die bestmögliche Leistung zu erzielen.
+description: Bei der Arbeit mit der Mobile Broadband-API sollten die folgenden bewährten Methoden verwendet werden, um die bestmögliche Leistung zu erzielen.
 ms.assetid: 523e3ea4-1d4e-45d1-bc24-93aa2fb14390
-title: Bewährte Methoden für die mobile Breitband-API
+title: Mobile Breitband-API – Bewährte Methoden
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 399c2ebc40a357eac9686bc3c2c9f471e3b853f8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e3a6c1e236a61dd2a5321be2edb7a68156f904605bd8a1da5fc169ea8b70e464
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214701"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117881654"
 ---
-# <a name="mobile-broadband-api-best-practices"></a>Bewährte Methoden für die mobile Breitband-API
+# <a name="mobile-broadband-api-best-practices"></a>Mobile Breitband-API – Bewährte Methoden
 
-Beim Arbeiten mit der mobilen Breitband-API sollten die folgenden bewährten Methoden verwendet werden, um die bestmögliche Leistung zu erzielen.
+Bei der Arbeit mit der Mobile Broadband-API sollten die folgenden bewährten Methoden verwendet werden, um die bestmögliche Leistung zu erzielen.
 
 ## <a name="do-not-cache-functional-objects"></a>Funktionale Objekte nicht zwischenspeichern
 
-Funktionale Objekte, wie z. [**b. imbninterface**](/windows/desktop/api/mbnapi/nn-mbnapi-imbninterface) und andere, werden von Manager-Objekten wie [**imbninterfacemanager**](/windows/desktop/api/mbnapi/nn-mbnapi-imbninterfacemanager)abgerufen, wobei die Enumerationsmethode für das entsprechende Manager-Objekt verwendet wird. Zwischenspeichern Sie diese funktionalen Objekte nicht, da zwischengespeicherte funktionale Objekte veraltete Daten enthalten. Bei synchronen Vorgängen, die für diese funktionalen Objekte ausgeführt werden, werden dieselben Daten zurückgegeben, bis die funktionalen Objekte erneut abgerufen werden.
+Funktionale Objekte, z. B. [**IMbnInterface**](/windows/desktop/api/mbnapi/nn-mbnapi-imbninterface) und andere, werden mithilfe der Enumerationsmethode für das entsprechende Managerobjekt von Managerobjekten wie [**IMbnInterfaceManager**](/windows/desktop/api/mbnapi/nn-mbnapi-imbninterfacemanager)abgerufen. Speichern Sie diese funktionalen Objekte nicht zwischen, da zwischengespeicherte funktionale Objekte veraltete Daten enthalten. Die synchronen Vorgänge, die für diese funktionalen Objekte ausgeführt werden, geben die gleichen Daten zurück, bis die funktionalen Objekte erneut erhalten werden.
 
-Zwischenspeichern Sie stattdessen die Manager-Objekte, und rufen Sie die funktionalen Objekte aus dem Manager-Objekt mithilfe der Enumerationsmethode für das entsprechende Manager-Objekt ab, um die neuesten Daten abzurufen.
+Speichern Sie stattdessen die Manager-Objekte zwischen, und beziehen Sie die funktionalen Objekte mithilfe der -Enumerationsmethode für das entsprechende Manager-Objekt erneut aus dem Manager-Objekt, um die neuesten Daten zu erhalten.
 
-Das folgende Codebeispiel veranschaulicht die richtige Methode zum Zwischenspeichern von Manager-Objekten.
+Im folgenden Codebeispiel wird die richtige Methode zum Zwischenspeichern von Manager-Objekten veranschaulicht.
 
 
 ```C++
@@ -120,29 +120,29 @@ int main()
 
 
 
-## <a name="handle-all-notifications"></a>Alle Benachrichtigungen behandeln
+## <a name="handle-all-notifications"></a>Behandeln aller Benachrichtigungen
 
-Befolgen und behandeln Sie alle Benachrichtigungen, auch wenn Sie nicht von Ihrer Anwendung ausgelöst werden. Dies ist erforderlich, um die Benutzeroberfläche mit dem tatsächlichen Status des Geräts synchron zu halten.
+Befolgen und verarbeiten Sie alle Benachrichtigungen, auch wenn sie nicht von Ihrer Anwendung ausgelöst werden. Dies ist erforderlich, um die Benutzeroberfläche mit dem tatsächlichen Zustand des Geräts synchron zu halten.
 
-Auf einem Computer können mehrere Verbindungs-Manager ausgeführt werden. Die von Windows 7 bereitgestellte Benutzeroberfläche für die native Anzeige verfügbarer Netzwerkschnittstellen ist ein Verbindungs-Manager. Alle anderen Verbindungs-Manager müssen auf alle Benachrichtigungen reagieren, damit Sie in der systemeigenen Windows-Benutzeroberfläche synchron bleiben. Ein Benutzer kann einen Vorgang für einen der Verbindungs-Manager ausführen, was zu einer Zustandsänderung des mobilen Breitband Geräts führen kann. Andere Verbindungs-Manager müssen jedoch aktualisiert werden, um den geänderten Zustand des Geräts korrekt anzugeben.
+Auf einem Computer können mehrere Verbindungs-Manager ausgeführt werden. Die native, von Windows 7 bereitgestellte Benutzeroberfläche für verfügbare Netzwerkschnittstellen anzeigen ist ein Verbindungs-Manager. Alle anderen Verbindungs-Manager müssen auf alle Benachrichtigungen reagieren, um die systemeigene Benutzeroberfläche Windows synchron zu halten. Ein Benutzer kann einen Vorgang für einen der Verbindungs-Manager durchführen, was zu einer Zustandsänderung des mobilen Breitbandgeräts führen kann. Andere Verbindungs-Manager müssen jedoch aktualisiert bleiben, um den geänderten Zustand des Geräts ordnungsgemäß anzugeben.
 
-Wenn Sie z. b. eine Verbindung mithilfe eines der Verbindungs-Manager herstellen, wird der Status des Geräts von "verfügbar" in "verbunden" geändert. Diese Änderung sollte für die Verbindungs-Manager sichtbar sein, die diese Aktion nicht initiiert haben. Alle Verbindungs-Manager, die über eine Benutzeroberfläche verfügen, die den Verbindungsstatus des Geräts angibt, müssen die Verbindungs Zustands Benachrichtigungen überwachen und verarbeiten, um die Benutzeroberfläche ordnungsgemäß aktualisieren zu können.
+Wenn Sie beispielsweise eine Verbindung mit einem der Verbindungs-Manager herstellen, ändert sich der Zustand des Geräts von verfügbar in verbunden. Diese Änderung sollte für die Verbindungs-Manager sichtbar sein, die diese Aktion nicht initiiert haben. Alle Verbindungs-Manager, die über eine Benutzeroberfläche verfügen, die den Verbindungsstatus des Geräts angibt, müssen die Verbindungsstatusbenachrichtigungen abhören und verarbeiten, um ihre Benutzeroberfläche ordnungsgemäß zu aktualisieren.
 
-## <a name="sending-and-receiving-bytes"></a>Senden und empfangen von Bytes
+## <a name="sending-and-receiving-bytes"></a>Senden und Empfangen von Bytes
 
-Verwenden Sie die IP-Hilfsfunktionen [getlfentry](/windows/win32/api/iphlpapi/nf-iphlpapi-getifentry) und [GetlfEntry2](/windows/win32/api/netioapi/nf-netioapi-getifentry2) , um Bytes zu senden und zu empfangen.
+Verwenden Sie die IP-Hilfsfunktionen [GetlfEntry](/windows/win32/api/iphlpapi/nf-iphlpapi-getifentry) und [GetlfEntry2,](/windows/win32/api/netioapi/nf-netioapi-getifentry2) um Bytes zu senden und zu empfangen.
 
-## <a name="using-the-pin-unblock-api"></a>Verwenden der PIN Unblock-API
+## <a name="using-the-pin-unblock-api"></a>Verwenden der API zum Entsperren von Pins
 
-Eine aufrufende Client Anwendung muss erhöht werden, damit [**imbnpin:: Unblock**](/windows/desktop/api/mbnapi/nf-mbnapi-imbnpin-unblock)erfolgreich aufgerufen werden konnte. Diese Methode ist der einzige Teil der mobilen Breitband-API, für die Administrator-oder NCO-Berechtigungen erforderlich sind. Weitere Informationen finden Sie [in der Beschreibung der Gruppe "Netzwerkkonfigurations-Operatoren]( https://support.microsoft.com/kb/297938/en-us) ".
+Eine aufrufende Clientanwendung muss erhöht werden, damit [**IMbnPin::Unblock erfolgreich aufgerufen werden kann.**](/windows/desktop/api/mbnapi/nf-mbnapi-imbnpin-unblock) Diese Methode ist der einzige Teil der mobile Breitband-API, der Administrator- oder NCO-Berechtigungen erfordert. Weitere Informationen finden Sie unter Eine Beschreibung der [Gruppe "Netzwerkkonfigurationsoperatoren".]( https://support.microsoft.com/kb/297938/en-us)
 
-## <a name="working-with-safearrays"></a>Arbeiten mit SAFEARRAYs
+## <a name="working-with-safearrays"></a>Arbeiten mit SafeArrays
 
--   Verwenden Sie ZeroMemory (), bevor Sie auf Elemente in einem SafeArray zugreifen.
+-   Verwenden Sie ZeroMemory(), bevor Sie auf Elemente in einem SafeArray zugreifen.
 
--   Überprüfen Sie die Indizes eines SAFEARRAY nicht. Sie können negativ sein.
+-   Überprüfen Sie nicht die Indizes eines SafeArray. Sie können negativ sein.
 
-Im folgenden Codebeispiel wird gezeigt, wie ein SAFEARRAY ordnungsgemäß behandelt wird.
+Im folgenden Codebeispiel wird die ordnungsgemäße Handhabung eines SafeArray veranschaulicht.
 
 
 ```C++

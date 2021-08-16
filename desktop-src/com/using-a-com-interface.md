@@ -4,16 +4,16 @@ description: Verwenden einer COM-Schnittstelle
 ms.assetid: 44e1aeac-585c-4856-8c4d-1adb5b307b74
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 78b5d402079debf5e0a565c6b91136605cec50fb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 40ddf507be3a71d3b00f99574b2153dafd21a6558ee20fa5c3f2108675bf9b24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118308926"
 ---
 # <a name="using-a-com-interface"></a>Verwenden einer COM-Schnittstelle
 
-Der Client Code ist der Benutzer der COM-Schnittstelle. Damit eine beliebige com-Schnittstelle, Benutzer definiert oder Standard verwendet werden kann, muss ein Client seine IID kennen. Im folgenden Beispiel übergibt der Treiber, der customrpt aufruft, den Namen des Objekts, das in ein breit Zeichenformat konvertiert wird. Der Objektname wird an den [](/windows/desktop/api/Objbase/nf-objbase-createfilemoniker) "anfügende"-dateimoniker übergeben, sodass ein dateimoniker erstellt werden kann, und der Client kann eine Bindung zum laufenden Objekt herstellen. Nachdem das-Objekt ausgeführt wird, kann customrpt auf einen Zeiger auf eine Schnittstelle im Standard-Proxy/Stub (z. b. [**IPersistFile**](/windows/desktop/api/ObjIdl/nn-objidl-ipersistfile)) oder auf die benutzerdefinierte Schnittstelle, icustominterface, zugreifen.
+Der Clientcode ist der Benutzer der COM-Schnittstelle. Um eine beliebige BENUTZERDEFINIERTE ODER STANDARD-COM-Schnittstelle verwenden zu können, muss ein Client seine IID kennen. Im folgenden Beispiel übergibt der Treiber, der CustomRpt aufruft, den Namen des Objekts, das in ein Breitzeichenformat konvertiert wird. Der Objektname wird an [**CreateFileMoniker**](/windows/desktop/api/Objbase/nf-objbase-createfilemoniker) gespeist, sodass ein Dateimoniker erstellt und der Client an das ausgeführte Objekt gebunden werden kann. Nachdem das Objekt ausgeführt wurde, kann CustomRpt entweder auf einen Zeiger auf eine Schnittstelle im Standardproxy/Stub wie [**IPersistFile**](/windows/desktop/api/ObjIdl/nn-objidl-ipersistfile)oder auf die benutzerdefinierte Schnittstelle ICustomInterface zugreifen.
 
 
 ```C++
@@ -93,9 +93,9 @@ void CustomRpt(char *pszObject)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

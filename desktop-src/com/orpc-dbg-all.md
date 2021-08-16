@@ -1,9 +1,9 @@
 ---
-title: ORPC_DBG_ALL Struktur
+title: ORPC_DBG_ALL-Struktur
 description: Die ORPC \_ DBG \_ ALL-Struktur wird verwendet, um Parameter an die Methoden der IOrpcDebugNotify-Schnittstelle zu übergeben.
 ms.assetid: 05371beb-9202-40a6-96d2-4b91497e2ee9
 keywords:
-- 'ORPC_DBG_ALL-Struktur: COM'
+- ORPC_DBG_ALL-Struktur:COM
 - LPORPC_DBG_ALL-Strukturzeiger COM
 topic_type:
 - apiref

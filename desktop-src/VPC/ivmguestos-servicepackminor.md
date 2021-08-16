@@ -1,11 +1,11 @@
 ---
-title: Ivmguestos servicepackminor-Eigenschaft (vpccominterfaces. h)
-description: Die neben Version der Service Pack des Gast Betriebssystems, das auf dem virtuellen Computer ausgeführt wird.
+title: IVMGuestOS ServicePackMinor-Eigenschaft (VPCCOMInterfaces.h)
+description: Die Nebenversion des Service Packs des Gastbetriebssystems, das auf dem virtuellen Computer ausgeführt wird.
 ms.assetid: f1413b5a-6a74-42a6-9671-b00b7c8912fa
 keywords:
-- Servicepackminor-Eigenschaft virtueller PC
-- Servicepackminor-Eigenschaft Virtual PC, ivmguestos-Schnittstelle
-- Ivmguestos Interface Virtual PC, servicepackminor (Eigenschaft)
+- ServicePackMinor-Eigenschaft Virtueller PC
+- ServicePackMinor-Eigenschaft Virtueller PC, IVMGuestOS-Schnittstelle
+- IVMGuestOS-Schnittstelle Virtueller PC, ServicePackMinor-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 22e7a94c5ed8de42cc2455160424246e899014cb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c7e35562c3648281cfee96aacbfc4fc6a9ede23139da92444a5fac41e9a02e9a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117938785"
 ---
-# <a name="ivmguestosservicepackminor-property"></a>Ivmguestos:: servicepackminor-Eigenschaft
+# <a name="ivmguestosservicepackminor-property"></a>IVMGuestOS::ServicePackMinor-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Die neben Version der Service Pack des Gast Betriebssystems, das auf dem virtuellen Computer ausgeführt wird.
+Die Nebenversion des Service Packs des Gastbetriebssystems, das auf dem virtuellen Computer ausgeführt wird.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ HRESULT get_ServicePackMinor(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die neben Versionsnummer des neuesten installierten Service Packs.
+Die Nebenversionsnummer des neuesten installierten Service Packs.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,10 +54,10 @@ Die neben Versionsnummer des neuesten installierten Service Packs.
 | Name/Wert                                                                                                                                                                       | Bedeutung                                                         |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                                          | Der Vorgang wurde durchgeführt.<br/>                        |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>                            | Der-Parameter ist **null**.<br/>                           |
-| <dl> <dt>VM \_ E \_ - \_ VM \_ führt</dt> <dt>0xa0040206</dt> nicht aus </dl>               | Der virtuelle Computer wird nicht ausgeführt.<br/>                               |
-| <dl> <dt>VM \_ E \_ ADDITIONS \_ - \_ Funktion \_ nicht</dt> " <dt>uxa0040505</dt> " </dl> | Integrations Komponenten sind auf diesem virtuellen Computer nicht installiert.<br/> |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl>                    | Ein unerwarteter Fehler ist aufgetreten.<br/>                    |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>                            | Der Parameter ist **NULL.**<br/>                           |
+| <dl> <dt>VM \_ E \_ VM WIRD NICHT \_ \_ ausgeführt</dt> <dt>0xA0040206</dt> </dl>               | Der virtuelle Computer wird nicht ausgeführt.<br/>                               |
+| <dl> <dt>VM \_ E \_ \_ ADDITIONSFUNKTION NICHT \_ \_ VERFÜGBAR</dt> <dt>0xA0040505</dt> </dl> | Integrationskomponenten werden auf dieser VM nicht installiert.<br/> |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl>                    | Ein unerwarteter Fehler ist aufgetreten.<br/>                    |
 
 
 
@@ -67,20 +67,20 @@ Die neben Versionsnummer des neuesten installierten Service Packs.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmguestos ist als 99fea0db-4880-499a-b6d8-73dff9bc91be definiert.<br/>                 |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMGuestOS ist als 99fea0db-4880-499a-b6d8-73dff9bc91be definiert.<br/>                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmguestos**](ivmguestos.md)
+[**IVMGuestOS**](ivmguestos.md)
 </dt> </dl>
 
  

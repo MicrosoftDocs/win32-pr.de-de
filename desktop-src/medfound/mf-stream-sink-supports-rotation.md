@@ -1,23 +1,23 @@
 ---
-description: Gibt an, ob die streamsenke die videodrehung unterstützt.
+description: Gibt an, ob die Streamsenke die Videorotation unterstützt.
 ms.assetid: 6CE17F9D-3BBB-4F4F-9F1A-495188F1815F
-title: MF_STREAM_SINK_SUPPORTS_ROTATION-Attribut (mspdl. h)
+title: MF_STREAM_SINK_SUPPORTS_ROTATION-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b6e460dd1229b2ba16ef25bd2a2bf9d2faefb792
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dcbdbca824a9da328dc675ad4b5ac85705bda641cfbadbad75f29305cad3c62d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117876005"
 ---
-# <a name="mf_stream_sink_supports_rotation-attribute"></a>MF \_ - \_ streamsenke \_ unterstützt das \_ Rotations Attribut
+# <a name="mf_stream_sink_supports_rotation-attribute"></a>MF \_ STREAM SINK SUPPORTS \_ \_ \_ ROTATION-Attribut
 
-Gibt an, ob die streamsenke die videodrehung unterstützt.
+Gibt an, ob die Streamsenke die Videorotation unterstützt.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL** als **UINT32** gespeichert
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -25,20 +25,20 @@ Gibt an, ob die streamsenke die videodrehung unterstützt.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> </dl>
 
  

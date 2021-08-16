@@ -64,7 +64,7 @@ Diese Objekte enthalten in der Regel die folgenden Ressourcen.
 
 
 
-| Ressourcenname                                          | Erforderlich oder optional | BESCHREIBUNG                     |
+| Ressourcenname                                          | Erforderlich oder optional | Beschreibung                     |
 |--------------------------------------------------------|----------------------|---------------------------------|
 | [**\_WPD-RESSOURCENSTANDARD \_**](wpd-resource-default.md) | Erforderlich             | Enthält das physische Dokument. |
 

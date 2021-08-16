@@ -1,5 +1,5 @@
 ---
-description: 'Shell.ExplorerPolicy-Methode: Ruft den Wert für eine angegebene Windows-Internet Explorer ab.'
+description: 'Shell.ExplorerPolicy-Methode: Ruft den Wert für eine angegebene Windows Internet Explorer Richtlinie ab.'
 ms.assetid: 47E17F6A-ED43-44cd-AF77-A6E49865E1B5
 title: Shell.ExplorerPolicy-Methode (Shldisp.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 765e1dc46edbe5a27292c5d8ff940e29b269f8dc
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 78a0e601e8093358ef05f259586726e840982d1a97d428b8453f26ecb878a4c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117857932"
 ---
 # <a name="shellexplorerpolicy-method"></a>Shell.ExplorerPolicy-Methode
 
-Ruft den Wert für eine angegebene Windows-Internet Explorer ab.
+Ruft den Wert für eine angegebene Windows Internet Explorer Richtlinie ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,25 +64,25 @@ Eine **Zeichenfolge,** die den Namen der Richtlinie angibt.
 
 Typ: **\* Variant**
 
-Der wert, der dem angegebenen Richtliniennamen zugeordnet ist.
+Der Wert, der dem angegebenen Richtliniennamen zugeordnet ist.
 
 ### <a name="vb"></a>VB
 
 Typ: **\* Variant**
 
-Der wert, der dem angegebenen Richtliniennamen zugeordnet ist.
+Der Wert, der dem angegebenen Richtliniennamen zugeordnet ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Netzwerkadministratoren können die Computerumgebung ihrer Benutzer steuern und verwalten, indem sie Richtlinien festlegen.
 
-Der angegebene Wertname muss innerhalb des **Unterschlüssels HKEY \_ CURRENT \_ USER** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **Policies** \\ **Explorer** sein. Wenn der Wertname nicht vorhanden ist, gibt die Methode NULL **zurück.**
+Der angegebene Wertname muss sich im Unterschlüssel **HKEY \_ CURRENT \_ USER** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **Policies** \\ **Explorer** befinden. Wenn der Wertname nicht vorhanden ist, gibt die Methode **NULL** zurück.
 
 ## <a name="examples"></a>Beispiele
 
 Die folgenden Beispiele zeigen die ordnungsgemäße Verwendung von **ExplorerPolicy** für JScript, VBScript und Visual Basic.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -140,10 +140,10 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6.0 oder höher)</dt> </dl> |

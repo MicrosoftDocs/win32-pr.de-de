@@ -1,9 +1,9 @@
 ---
-title: /ACF-Schalter
-description: Mit dem Schalter/ACF kann der Benutzer einen expliziten ACF-Dateinamen angeben. Der Switch ermöglicht außerdem die Verwendung verschiedener Schnittstellennamen in den IDL-und ACF-Dateien.
+title: /acf-Switch
+description: Mit dem Schalter /acf kann der Benutzer einen expliziten ACF-Dateinamen bereitstellen. Der Schalter ermöglicht auch die Verwendung verschiedener Schnittstellennamen in den IDL- und ACF-Dateien.
 ms.assetid: 8f0833ec-1dbc-4c8a-af7e-3de42169af8d
 keywords:
-- /ACF-Schalter-Mittel l
+- /acf switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e24d66982628fbd0052e8a3f573901c430e8b8b1
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 37248ac346350f618eebc5ca81af144ecee91ce2acf40c39b9e980b574df4764
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103948241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118386127"
 ---
-# <a name="acf-switch"></a>/ACF-Schalter
+# <a name="acf-switch"></a>/acf-Switch
 
-Mit dem Schalter **/ACF** kann der Benutzer einen expliziten ACF-Dateinamen angeben. Der Switch ermöglicht außerdem die Verwendung verschiedener Schnittstellennamen in den IDL-und ACF-Dateien.
+Mit dem Schalter **/acf** kann der Benutzer einen expliziten ACF-Dateinamen bereitstellen. Der Schalter ermöglicht auch die Verwendung verschiedener Schnittstellennamen in den IDL- und ACF-Dateien.
 
 ``` syntax
 midl /acf acf_filename
@@ -31,43 +31,43 @@ midl /acf acf_filename
 
 <dl> <dt>
 
-*ACF \_ Dateiname* 
+*acf \_ filename* 
 </dt> <dd>
 
-Gibt den Namen der ACF an. Zwischen dem **/ACF** -Switch und dem Dateinamen kann ein Leerzeichen stehen oder nicht vorhanden sein.
+Gibt den Namen des ACF an. Zwischen dem Schalter **/acf** und dem Dateinamen kann Leerraum vorhanden oder nicht vorhanden sein.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig erstellt der-compilercompiler den Namen der ACF, indem er die IDL-Dateinamenerweiterung (i. d. d. idl) durch. ACF ersetzt. Wenn der **/ACF** -Schalter vorhanden ist, nimmt die ACF den Namen des angegebenen Datei namens an. Der **/ACF** -Schalter gilt nur für die IDL-Datei, die in der Befehlszeile des compl-Compilers angegeben ist. Es gilt nicht für importierte Dateien.
+Standardmäßig erstellt der MIDL-Compiler den Namen des ACF, indem er die IDL-Dateinamenerweiterung (normalerweise .idl) durch .acf ersetzt. Wenn der Schalter **/acf** vorhanden ist, erhält der ACF seinen Namen aus dem angegebenen Dateinamen. Der Schalter **/acf** gilt nur für die IDL-Datei, die in der MIDL-Compilerbefehlszeile angegeben ist. Sie gilt nicht für importierte Dateien.
 
-Wenn der **/ACF** -Schalter verwendet wird, muss der Schnittstellen Name in der ACF nicht mit dem Namen der Mittell-Schnittstelle identisch sein. Diese Funktion ermöglicht es Schnittstellen, eine ACF-Spezifikation gemeinsam zu nutzen.
+Wenn der Schalter **/acf** verwendet wird, muss der Schnittstellenname im ACF nicht mit dem MIDL-Schnittstellennamen übereinstimmen. Mit diesem Feature können Schnittstellen eine ACF-Spezifikation gemeinsam nutzen.
 
-Wenn kein absoluter Pfad zu einer ACF angegeben ist, sucht der Mittelwert Compiler im aktuellen Verzeichnis, den Verzeichnissen, die von der [**/I**](-i.md) -Option bereitgestellt werden, und den Verzeichnissen im Include-Pfad.
+Wenn kein absoluter Pfad zu einem ACF angegeben ist, durchsucht der MIDL-Compiler das aktuelle Verzeichnis, die von der Option [**/I**](-i.md) bereitgestellten Verzeichnisse und die Verzeichnisse im INCLUDE-Pfad.
 
-Wenn die ACF nicht gefunden wird, geht der Mittelwert Compiler davon aus, dass für diese Schnittstelle keine ACF vorhanden ist. Weitere Informationen zur Reihenfolge der Verzeichnisse finden Sie in den Verweis Einträgen für die Schalter [**/I**](-i.md) und [**/No \_ DEF \_ Idir**](-no-def-idir.md) . Weitere Informationen zu **/ACF** finden Sie unter [Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md).
+Wenn der ACF nicht gefunden wird, geht der MIDL-Compiler davon aus, dass für diese Schnittstelle kein ACF vorhanden ist. Weitere Informationen zur Sequenz von Verzeichnissen finden Sie in den Referenzeinträgen für die Schalter [**/I**](-i.md) und [**/no \_ def \_ idir.**](-no-def-idir.md) Weitere Informationen im Zusammenhang mit **/acf** finden Sie unter [Schnittstellendefinitionsdatei (IDL).](interface-definition-idl-file.md)
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/ACF Bar. ACF Dateiname. idl**
+**midl /acf bar.acf filename.idl**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**/I**](-i.md)
 </dt> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
-[**/No \_ DEF \_ Idir**](-no-def-idir.md)
+[**/no \_ def \_ idir**](-no-def-idir.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

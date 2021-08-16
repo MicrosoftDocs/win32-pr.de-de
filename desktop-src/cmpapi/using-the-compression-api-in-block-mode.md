@@ -1,31 +1,31 @@
 ---
-description: Im folgenden Beispiel wird die Verwendung der Komprimierungs-API im Block Modus veranschaulicht.
+description: Im folgenden Beispiel wird die Verwendung der Komprimierungs-API im Blockmodus veranschaulicht.
 ms.assetid: 7483BCE4-3B85-4659-98E3-670D2F7EE52D
-title: Verwenden der Komprimierungs-API im Block Modus
+title: Verwenden der Komprimierungs-API im Blockmodus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ddd1ecaec03d332262ffb24462e73a9fcb789d2
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b4b739c1496b43f64f8ceab4312602e9b98f7faebbb29317998a93e8f27b6883
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117737455"
 ---
-# <a name="using-the-compression-api-in-block-mode"></a>Verwenden der Komprimierungs-API im Block Modus
+# <a name="using-the-compression-api-in-block-mode"></a>Verwenden der Komprimierungs-API im Blockmodus
 
-Im folgenden Beispiel wird die Verwendung der Komprimierungs-API im Block Modus veranschaulicht. Wenn Sie einen Kompressor oder Dekompressor mithilfe des Block Modus generieren möchten, muss die Anwendung das Flag zum **Komprimieren von \_ Rohdaten** enthalten, wenn Sie "up" oder " [**kreatedecompressor**](/windows/desktop/api/compressapi/nf-compressapi-createdecompressor) [**" aufruft.**](/windows/desktop/api/compressapi/nf-compressapi-createcompressor) Der Block Modus ermöglicht es dem Entwickler, die Blockgröße zu steuern, erfordert jedoch mehr Arbeit durch die Anwendung.
+Im folgenden Beispiel wird die Verwendung der Komprimierungs-API im Blockmodus veranschaulicht. Um eine Generierung oder Dekomprimierung im Blockmodus zu generieren, muss Ihre Anwendung beim Aufrufen von [**CreateCompressor**](/windows/desktop/api/compressapi/nf-compressapi-createcompressor) oder [**CreateDecompressor**](/windows/desktop/api/compressapi/nf-compressapi-createdecompressor)das **COMPRESS \_ RAW-Flag** enthalten. Mit dem Blockmodus kann der Entwickler die Blockgröße steuern, erfordert jedoch mehr Arbeit durch die Anwendung.
 
-Der Block Modus schlägt fehl, wenn die Größe des Eingabe Puffers größer als die interne Blockgröße des Komprimierungs Algorithmus ist. Die interne Blockgröße beträgt 32 KB für mszip und 1 GB für die Xpress-Komprimierungs Algorithmen. Die interne Blockgröße für lzms kann bis zu 64 GB mit einer entsprechenden Erhöhung der Arbeitsspeicher Nutzung konfiguriert werden. Der Wert des *uncompressedbuffersize* -Parameters von [**Decompress**](/windows/desktop/api/compressapi/nf-compressapi-decompress) muss genau gleich der ursprünglichen Größe der nicht komprimierten Daten und nicht nur der Größe des Ausgabepuffers sein. Dies bedeutet, dass Ihre Anwendung die Blockgröße angeben und die genaue ursprüngliche Größe der nicht komprimierten Daten für die Verwendung durch den-Debug speichern muss. Die Größe des komprimierten Puffers wird nicht automatisch gespeichert, und die Anwendung muss dies auch für die Komprimierung speichern.
+Der Blockmodus ist nicht möglich, wenn die Größe des Eingabepuffers größer als die interne Blockgröße des Komprimierungsalgorithmus ist. Die interne Blockgröße beträgt 32 KB für MSZIP und 1 GB für die XPRESS-Komprimierungsalgorithmen. Die interne Blockgröße für LZMS kann bis zu 64 GB bei entsprechender Zunahme der Arbeitsspeichernutzung konfiguriert werden. Der Wert des *UncompressedBufferSize-Parameters* von [**Decompress**](/windows/desktop/api/compressapi/nf-compressapi-decompress) muss genau der ursprünglichen Größe der nicht komprimierten Daten und nicht nur der Größe des Ausgabepuffers entspricht. Dies bedeutet, dass Ihre Anwendung die Blockgröße angeben und die genaue ursprüngliche Größe der unkomprimierten Daten für die Verwendung durch den Dekomprimator speichern muss. Die Größe des komprimierten Puffers wird nicht automatisch gespeichert, und die Anwendung muss diesen auch für die Dekomprimierung speichern.
 
-Der Puffer Modus wird in den meisten Fällen empfohlen, da er automatisch den Eingabepuffer in Blöcke einer Größe aufteilt, die für den ausgewählten Komprimierungs Algorithmus geeignet ist, speichert die nicht komprimierte Puffergröße im komprimierten Puffer. Informationen zur Verwendung des Puffer Modus finden [Sie unter Verwenden der Komprimierungs-API im Puffer Modus](using-the-compression-api-in-buffer-mode.md).
+Der Puffermodus wird in den meisten Fällen empfohlen, da er den Eingabepuffer automatisch in Blöcke mit einer Größe aufteilt, die für den ausgewählten Komprimierungsalgorithmus geeignet ist, um die unkomprimierte Puffergröße im komprimierten Puffer zu speichern. Informationen zur Verwendung des Puffermodus finden Sie unter [Verwenden der Komprimierungs-API im Puffermodus.](using-the-compression-api-in-buffer-mode.md)
 
-Anwendungen, die den Puffer-oder Block Modus verwenden, haben die Möglichkeit, eine benutzerdefinierte Speicher Belegungs Routine in dem Aufrufen von " [**anatecompressor**](/windows/desktop/api/compressapi/nf-compressapi-createcompressor) " oder " [**deedecompressor**](/windows/desktop/api/compressapi/nf-compressapi-createdecompressor)" anzugeben.
+Anwendungen, die den Puffer- oder Blockmodus verwenden, haben die Möglichkeit, eine benutzerdefinierte Speicherbelegungsroutine im Aufruf von [**CreateCompressor**](/windows/desktop/api/compressapi/nf-compressapi-createcompressor) oder [**CreateDecompressor anzugeben.**](/windows/desktop/api/compressapi/nf-compressapi-createdecompressor)
 
-**Windows 8 und Windows Server 2012:** Wenn Sie den folgenden Beispielcode verwenden möchten, müssen Sie Windows 8 oder Windows Server 2012 ausführen und über "compressapi. h" und "cabinet.dll" und einen Link zu "CAB. lib" verfügen.
+**Windows 8 und Windows Server 2012:** Um den folgenden Beispielcode verwenden zu können, müssen Sie Windows 8 oder Windows Server 2012 ausführen und "compressapi.h" und "cabinet.dll" sowie einen Link zur Datei "Cabinet.lib" haben.
 
-Im folgenden Beispiel wird die Verwendung der Komprimierungs-API im Block Modus veranschaulicht, um eine Datei mit dem lzms-Komprimierungs Algorithmus und einer angepassten Speicher Belegungs Routine zu komprimieren. Die Anwendung muss das **komprimieren- \_ RAW** -Flag enthalten, um die Komprimierungs-API im Block Modus zu verwenden. Zuerst Ruft die Anwendung " [**kreatecompressor**](/windows/desktop/api/compressapi/nf-compressapi-createcompressor) " mit dem **Komprimierungs \_ Algorithmus \_ lzms** \| **Compress \_ RAW** auf, um den Kompressor zu generieren. Der *allocationroutinen* -Parameter gibt die Speicher Belegungs Routine an. Die Anwendung legt dann die Blockgröße für den Kompressor mithilfe von [**setcompressorinformation**](/windows/desktop/api/compressapi/nf-compressapi-setcompressorinformation)fest.
+Im Folgenden wird die Verwendung der Komprimierungs-API im Blockmodus veranschaulicht, um eine Datei mit dem LZMS-Komprimierungsalgorithmus und einer benutzerdefinierten Speicherzuweisungsroutine zu komprimieren. Ihre Anwendung muss das **COMPRESS \_ RAW-Flag** enthalten, um die Komprimierungs-API im Blockmodus zu verwenden. Zuerst ruft die Anwendung [**CreateCompressor mit**](/windows/desktop/api/compressapi/nf-compressapi-createcompressor) **COMPRESS ALGORITHM \_ \_ LZMS** \| **COMPRESS \_ RAW** auf, um die Generierung zu generieren. Der *AllocationRoutines-Parameter* gibt die Speicherbelegungsroutine an. Die Anwendung legt dann mit [**setCompressorInformation**](/windows/desktop/api/compressapi/nf-compressapi-setcompressorinformation)die Blockgröße für die -Gruppe fest.
 
-Die Anwendung führt wiederholte Aufrufe von [**Compress**](/windows/desktop/api/compressapi/nf-compressapi-compress) aus, um den Datenblock nach Block zu komprimieren. Die Anwendung schreibt die nicht komprimierte Blockgröße, die komprimierte Blockgröße und die komprimierten Daten in den Ausgabepuffer.
+Die Anwendung ruft die Komprimierung wiederholt [**auf,**](/windows/desktop/api/compressapi/nf-compressapi-compress) um den Datenblock nach Block zu komprimieren. Die Anwendung schreibt die unkomprimierte Blockgröße, die komprimierte Blockgröße und die komprimierten Daten in den Ausgabepuffer.
 
 
 ```C++
@@ -358,7 +358,7 @@ done:
 
 
 
-Im folgenden Beispiel wird die Datei Dekomprimierung mithilfe der Komprimierungs-API im Block Modus veranschaulicht.
+Im Folgenden wird die Dateidekomprimierung mithilfe der Komprimierungs-API im Blockmodus veranschaulicht.
 
 
 ```C++
@@ -648,9 +648,9 @@ done:
 
 
 
-Eine Anwendung, die den Puffer-oder Block Modus verwendet, kann die Speicher Belegung anpassen, die von der Komprimierungs-API verwendet wird, wenn Sie " [**kreatecompressor**](/windows/desktop/api/compressapi/nf-compressapi-createcompressor) " oder " [**kreatedekompressor**](/windows/desktop/api/compressapi/nf-compressapi-createdecompressor)" aufruft Im Block Modus muss die Anwendung Komprimierungs Block Informationen verarbeiten, z. b. die komprimierte Datengröße und die unkomprimierte Datengröße. andernfalls kann [**dekomprimieren**](/windows/desktop/api/compressapi/nf-compressapi-decompress) die Informationen nicht dekomprimieren.
+Eine Anwendung, die den Puffer- oder Blockmodus verwendet, hat die Möglichkeit, die von der Komprimierungs-API verwendete Speicherbelegung anzupassen, wenn sie [**CreateCompressor**](/windows/desktop/api/compressapi/nf-compressapi-createcompressor) oder [**CreateDecompressor aufruft.**](/windows/desktop/api/compressapi/nf-compressapi-createdecompressor) Im Blockmodus muss die Anwendung Komprimierungsblockinformationen verarbeiten, z. B. komprimierte Datengröße und unkomprimierte Datengröße. Andernfalls kann [**Dekomprimieren**](/windows/desktop/api/compressapi/nf-compressapi-decompress) die Informationen nicht dekomprimieren.
 
-Der folgende Code Ausschnitt zeigt eine einfache angepasste Zuordnungs Routine.
+Der folgende Codeausschnitt zeigt eine einfache benutzerdefinierte Zuordnungsroutine.
 
 
 ```C++

@@ -1,7 +1,7 @@
 ---
-description: Gibt einen ID3DXPRTBuffer-Puffer für die Eingabe erneut aus und speichert ihn in einem Ausgabepuffer. Diese Methode kann verwendet werden, um einen Vertex-Puffer in einen Textur Puffer zu konvertieren und umgekehrt. Sie kann auch verwendet werden, um Puffer mit einem Kanal in 3-Kanal-Puffer zu konvertieren und umgekehrt.
+description: Resamples an input ID3DXPRTBuffer buffer and saves it to an output buffer. Diese Methode kann verwendet werden, um einen Scheitelpunktpuffer in einen Texturpuffer zu konvertieren und umgekehrt. Sie kann auch verwendet werden, um Einzelkanalpuffer in 3-Kanal-Puffer und umgekehrt zu konvertieren.
 ms.assetid: 78015044-38a9-4c08-a690-28f6427dae8c
-title: 'ID3DXPRTEngine:: resamplebuffer-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::ResampleBuffer-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: c8517d04be1d63159a2548935f3e09c12e646775
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: aa945be7b01c928a5dc8f5e44a6a31e8cb6d879be102145d25e03e7bef73f3b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117729614"
 ---
-# <a name="id3dxprtengineresamplebuffer-method"></a>ID3DXPRTEngine:: resamplebuffer-Methode
+# <a name="id3dxprtengineresamplebuffer-method"></a>ID3DXPRTEngine::ResampleBuffer-Methode
 
-Gibt einen [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Puffer für die Eingabe erneut aus und speichert ihn in einem Ausgabepuffer. Diese Methode kann verwendet werden, um einen Vertex-Puffer in einen Textur Puffer zu konvertieren und umgekehrt. Sie kann auch verwendet werden, um Puffer mit einem Kanal in 3-Kanal-Puffer zu konvertieren und umgekehrt.
+Resamples an input [**ID3DXPRTBuffer**](id3dxprtbuffer.md) buffer and saves it to an output buffer. Diese Methode kann verwendet werden, um einen Scheitelpunktpuffer in einen Texturpuffer zu konvertieren und umgekehrt. Sie kann auch verwendet werden, um Einzelkanalpuffer in 3-Kanal-Puffer und umgekehrt zu konvertieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT ResampleBuffer(
 
 <dl> <dt>
 
-*pbufferin* \[ in\]
+*pBufferIn* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf den [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Eingabepuffer.
+Zeiger auf den [**Eingabepuffer ID3DXPRTBuffer.**](id3dxprtbuffer.md)
 
 </dd> <dt>
 
-*pbufferout* \[ in, out\]
+*pBufferOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf den [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Ausgabepuffer.
+Zeiger auf den [**Id3DXPRTBuffer-Puffer**](id3dxprtbuffer.md) der Ausgabe.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Zeiger auf den [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Ausgabepuffer.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,12 +71,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

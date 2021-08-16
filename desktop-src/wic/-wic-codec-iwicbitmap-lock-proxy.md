@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Lock-Methode.
+description: Proxyfunktion für die Lock-Methode.
 ms.assetid: c9d67b35-092b-4f0b-a292-879576a046bf
 title: IWICBitmap_Lock_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: cf07a0afc0fbd2629ffe54b543271014d5817d71
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 98415428a020129d884a036fab121511e489ec96af3a5606e25283dfec69c21d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345693"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118207231"
 ---
-# <a name="iwicbitmap_lock_proxy-function"></a>IWICBitmap- \_ Sperr \_ Proxy Funktion
+# <a name="iwicbitmap_lock_proxy-function"></a>\_ \_ IWICBitmap-Sperrproxyfunktion
 
-Proxy Funktion für die [**Lock**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmap-lock) -Methode.
+Proxyfunktion für [](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmap-lock) die Lock-Methode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT IWICBitmap_Lock_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**IWICBitmap**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmap) \** _
+Typ: **[ **IWICBitmap**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmap)\***
 
-Zeiger auf dieses [_ *IWICBitmap* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmap) -Objekt.
+Zeiger auf dieses [**IWICBitmap-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmap)
 
 </dd> <dt>
 
-*prclock* \[ in\]
+*prcLock* \[ In\]
 </dt> <dd>
 
-Typ: * Konstante *[**WICRect**](/windows/desktop/api/Wincodec/ns-wincodec-wicrect) \** _
+Typ: **const [**WICRect**](/windows/desktop/api/Wincodec/ns-wincodec-wicrect) \***
 
 Das Rechteck, auf das zugegriffen werden soll.
 
 </dd> <dt>
 
-_FLAGS * \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Typ: **DWORD**
 
-Der Zugriffsmodus, den Sie für die Sperre erhalten möchten.
+Der Zugriffsmodus, den Sie für die Sperre abrufen möchten.
 
 </dd> <dt>
 
-*ppilock* \[ vorgenommen\]
+*ppILock* \[ out\]
 </dt> <dd>
 
-Typ: **[ **iwicbitmaplock**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock)\*\***
+Typ: **[ **IWICBitmapLock**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock)\*\***
 
-Ein Zeiger, der den gesperrten Speicher Speicherort empfängt.
+Ein Zeiger, der die gesperrte Speicherposition empfängt.
 
 </dd> </dl>
 
@@ -83,7 +83,7 @@ Ein Zeiger, der den gesperrten Speicher Speicherort empfängt.
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -93,9 +93,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows NUR XP mit SP2, Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

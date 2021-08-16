@@ -1,24 +1,24 @@
 ---
-description: Die currentsubpicturestream-Eigenschaft legt den aktuellen teilbildstream fest oder ruft ihn ab.
+description: Die CurrentSubpictureStream-Eigenschaft legt den aktuellen Unterbilddatenstrom fest oder ruft den Datenstrom ab.
 ms.assetid: 66473c87-ddfe-4555-89ad-90e210a75694
-title: Currentsubpicturestream (Eigenschaft)
+title: CurrentSubpictureStream-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c954ad7cfb7aba6dd9bc800ac983d86b6325843
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 56e9c4af677180d4893ef56a9d2bff1fb034971969e2e64d648d53e19d0814a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104522568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117821945"
 ---
-# <a name="currentsubpicturestream-property"></a>Currentsubpicturestream (Eigenschaft)
+# <a name="currentsubpicturestream-property"></a>CurrentSubpictureStream-Eigenschaft
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `CurrentSubpictureStream` Eigenschaft legt den aktuellen teilbildstream fest oder ruft ihn ab.
+Die `CurrentSubpictureStream` -Eigenschaft legt den aktuellen Unterbilddatenstrom fest oder ruft sie ab.
 
 ``` syntax
 [ iSPStream = ] MSWebDVD.CurrentSubpictureStream
@@ -26,35 +26,35 @@ Die- `CurrentSubpictureStream` Eigenschaft legt den aktuellen teilbildstream fes
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Integer-Wert zurück, der den Stream darstellt.
+Gibt einen ganzzahligen Wert zurück, der den Stream darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mögliche Werte für diese Eigenschaft:
+Die möglichen Werte dieser Eigenschaft sind:
 
 
 
-| Wert   | BESCHREIBUNG              |
+| Wert   | Beschreibung              |
 |---------|--------------------------|
-| 0 bis 31 | Der teilbildstream    |
-| 63      | Gedämpfter Datenstrom mit niedriger Bitrate |
+| 0 bis 31 | Der Subpicture-Datenstrom    |
+| 63      | Stummgeschalteter Datenstrom mit niedriger Bitrate |
 
 
 
  
 
-Diese Eigenschaft ist Lese-/Schreibzugriff und hat keinen Standardwert. Bevor Sie einen neuen teilbildstream festlegen, wenden Sie [**issubpicturestreamaktivian**](issubpicturestreamenabled-method.md) , um zu überprüfen, ob der Stream verfügbar ist.
+Diese Eigenschaft ist Lese-/Schreibzugriff ohne Standardwert. Rufen Sie vor dem Festlegen eines neuen Subpicture-Streams [**IsSubpictureStreamEnabled**](issubpicturestreamenabled-method.md) auf, um zu überprüfen, ob der Stream verfügbar ist.
 
-Das Festlegen dieser Eigenschaft bewirkt, dass die Eigenschaft " [**subpictureon**](subpictureon-property.md) " in " **true**" gewechselt wird.
+Wenn Sie diese Eigenschaft festlegen, wird die [**SubpictureOn-Eigenschaft**](subpictureon-property.md) auf **True** umgeschaltet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Subpictureon**](subpictureon-property.md)
+[**SubpictureOn**](subpictureon-property.md)
 </dt> <dt>
 
-[**Subpicturestreamsavailable**](subpicturestreamsavailable-property.md)
+[**SubpictureStreamsAvailable**](subpicturestreamsavailable-property.md)
 </dt> </dl>
 
  

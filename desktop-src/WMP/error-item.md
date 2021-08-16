@@ -1,11 +1,11 @@
 ---
-title: Error. Item-Methode
-description: Die Item-Methode ruft ein ErrorItem-Objekt aus der Fehler Warteschlange ab.
+title: Error.item-Methode
+description: Die item-Methode ruft ein ErrorItem-Objekt aus der Fehlerwarteschlange ab.
 ms.assetid: 3aca21ff-4c6b-4c24-a85d-3d015612a496
 keywords:
-- Element-Methoden Fenster Media Player
-- Element-Methode, Windows Media Player, Fehler Klasse
-- Error-Klasse, Windows-Media Player, Element-Methode
+- item-Methode Windows Media Player
+- item-Methode Windows Media Player , Error-Klasse
+- Error-Klasse Windows Media Player , Item-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5545df50fce05ff5a10a5f870d1ec07648434fe9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5e9fbd9f402a659af27db42c34cb0c58e2097270b73eb0eeff382544979dc0a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118339695"
 ---
-# <a name="erroritem-method"></a>Error. Item-Methode
+# <a name="erroritem-method"></a>Error.item-Methode
 
-Die **Item** -Methode ruft ein **ErrorItem** -Objekt aus der Fehler Warteschlange ab.
+Die **item-Methode** ruft ein **ErrorItem-Objekt** aus der Fehlerwarteschlange ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,26 +42,26 @@ retVal = Error.item(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-**Zahl** (**Long**), die den Index des abzurufenden **ErrorItem** -Objekts enthält.
+**Number** (**long**), die den Index des abzurufenden **ErrorItem-Objekts** enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt ein **ErrorItem** -Objekt zurück.
+Diese Methode gibt ein **ErrorItem-Objekt** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Windows Media Player kann als Reaktion auf eine Fehlerbedingung eine Reihe von Fehlern generieren. Diese Methode ermöglicht das Abrufen eines bestimmten Fehlers in der Warteschlange mithilfe einer Indexnummer. Die Indexnummern für die Fehler Warteschlange beginnen mit 0 (null).
+Windows Media Player können eine Reihe von Fehlern als Reaktion auf eine Fehlerbedingung generieren. Diese Methode ermöglicht das Abrufen eines bestimmten Fehlers in der Warteschlange mithilfe einer Indexnummer. Die Indexnummern für die Fehlerwarteschlange beginnen mit 0 (null).
 
-Sie sollten *Einstellungen* festlegen. **enableerrordialogs** auf false, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
+Sie sollten *Einstellungen* festlegen. **enableErrorDialogs** wird auf FALSE festgelegt, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
 
 ## <a name="examples"></a>Beispiele
 
-Der *Fehler* wird im folgenden JScript-Beispiel verwendet. **Item** -Objekt in einem Ereignishandler, um den Benutzer auf den letzten Fehler aufmerksam zu machen. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird der *Fehler* verwendet. **Elementobjekt** in einem Ereignishandler, um den Benutzer vor dem letzten Fehler zu warnen. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -92,12 +92,12 @@ alert(errNum + "\n" + errDesc);
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

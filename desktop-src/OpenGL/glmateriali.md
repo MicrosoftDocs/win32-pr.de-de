@@ -1,9 +1,9 @@
 ---
-title: glmateriali-Funktion (GL. h)
-description: Die Funktion "-glmateriali" gibt Materialparameter für das Beleuchtungsmodell an.
+title: glMateriali-Funktion (Gl.h)
+description: DieglMateriali-Funktion gibt Materialparameter für das Beleuchtungsmodell an.
 ms.assetid: e3722dfd-3bdd-4460-8226-e50580ca1d79
 keywords:
-- glmateriali-Funktion OpenGL
+- glMateriali-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4dc4f1bf6628f1674cf9c3534b9f0c9d028246d9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1e0d850bac6b27672c00dca9b1cafa7b4664dbde5fca0085381b4b166e2106b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338716"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118358864"
 ---
-# <a name="glmateriali-function"></a>glmateriali-Funktion
+# <a name="glmateriali-function"></a>glMateriali-Funktion
 
-Die **glmateriali** -Funktion gibt Materialparameter für das Beleuchtungsmodell an.
+Die **glMateriali-Funktion** gibt Materialparameter für das Beleuchtungsmodell an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ void WINAPI glMateriali(
 
 <dl> <dt>
 
-*mit* 
+*Gesicht* 
 </dt> <dd>
 
-Die Gesichter oder Gesichter, die aktualisiert werden. Muss eines der folgenden sein: GL \_ Front, GL \_ Back, GL \_ Front und GL \_ Back.
+Das Gesicht oder die Gesichter, die aktualisiert werden. Muss einer der folgenden Sein: GL \_ FRONT, GL \_ BACK oder GL FRONT und GL \_ \_ BACK.
 
 </dd> <dt>
 
-*pName* 
+*pname* 
 </dt> <dd>
 
-Der einwertige Materialparameter der Gesichts-oder Gesichter, die aktualisiert werden. Muss ein GL- \_ Glanz sein.
+Der einwertige Materialparameter des Gesichts oder der Gesichter, die aktualisiert werden. Muss \_ GLINESS sein.
 
 
 
 | Wert                                                                                                                                                      | Bedeutung                                                                                                                                                                                                                                                                                    |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_SHININESS"></span><span id="gl_shininess"></span><dl> <dt>**GL \_ .**</dt> </dl> | Der *param* -Parameter ist eine einzelne ganze Zahl, die den Glanz der RGBA-Darstellung des Materials angibt. Ganzzahlige Werte werden direkt zugeordnet. Nur Werte im Bereich von \[ 0, 128 \] werden akzeptiert. Der standardmäßige Glanz Exponent für die Vorder-und Hintergrundmaterialien ist 0. <br/> |
+| <span id="GL_SHININESS"></span><span id="gl_shininess"></span><dl> <dt>**\_GL-VERTRAUENSWÜRDIGKEIT**</dt> </dl> | Der *Parameter param* ist eine einzelne ganze Zahl, die den RGBA-Glanz exponenten des Materials angibt. Ganzzahlige Werte werden direkt zugeordnet. Nur Werte im Bereich \[ 0, 128 \] werden akzeptiert. Der Standardspekular exponent für vordere und hintere Materialien ist 0. <br/> |
 
 
 
@@ -69,7 +69,7 @@ Der einwertige Materialparameter der Gesichts-oder Gesichter, die aktualisiert w
 *param* 
 </dt> <dd>
 
-Der Wert, auf den der Parameter GL- \_ Glanz festgelegt wird.
+Der Wert, auf den der Parameter GL \_ CABINESS festgelegt wird.
 
 </dd> </dl>
 
@@ -79,30 +79,30 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                              | Bedeutung                                                                       |
 |---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>  | Entweder *Face* oder *PName* war kein akzeptierter Wert.<br/>                |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl> | Ein Glanz Exponent außerhalb des Bereichs von \[ 0, 128 \] wurde angegeben.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>  | Entweder *face* oder *pname* war kein akzeptierter Wert.<br/>                |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl> | Ein Glanz exponent außerhalb des Bereichs von \[ 0, 128 \] wurde angegeben.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glmateriali** " weist Materialparametern Werte zu. Es gibt zwei übereinstimmende Sätze von Materialparametern. Eine, die *Front-End-* Gruppe, wird zum Schattieren von Punkten, Linien, Bitmaps und allen Polygonen verwendet (wenn die zweiseitige Beleuchtung deaktiviert ist), oder nur mit Front-End-Polygonen (bei aktivierter zweiseitiger Beleuchtung). Der andere Satz, mit dem *Hintergrund*, wird verwendet, um nur rückwärts gerichtete Polygone zu schattieren, wenn die zweiseitige Beleuchtung aktiviert ist. Ausführliche Informationen zu einseitigen und zweiseitigen Beleuchtungsberechnungen finden Sie unter " [**gllightmodel**](gllightmodel-functions.md) ".
+Die **glMateriali-Funktion** weist Materialparametern Werte zu. Es gibt zwei übereinstimmende Sätze von Materialparametern. Eine , die *vordere* Gruppe, wird verwendet, um Punkte, Linien, Bitmaps und alle Polygone (wenn die zweiseitige Beleuchtung deaktiviert ist) oder einfach frontseitige Polygone (wenn die zweiseitige Beleuchtung aktiviert ist) zu beschatten. Der andere Satz, *rückwärts gerichtet,* wird nur verwendet, um rückwärts gerichtete Polygone zu schatten, wenn die zweiseitige Beleuchtung aktiviert ist. Ausführliche Informationen zu ein- und zweiseitigen Beleuchtungsberechnungen finden Sie unter [**glLightModel.**](gllightmodel-functions.md)
 
-Die **glmateriali** -Funktion erfordert drei Argumente. *Mit* dem ersten, dem Vordergrund, wird angegeben, ob die GL \_ -Front-Materialien, die GL \_ -Back-Materialien oder die \_ Vorder \_ -und \_ Hintergrundmaterialien von GL geändert werden. Der zweite Wert, *PName*, gibt an, welche von mehreren Parametern in einem oder beiden Sätzen geändert werden. Der dritte Parameter gibt *an, welcher* Wert dem angegebenen Parameter zugewiesen wird.
+Die **glMateriali-Funktion** verwendet drei Argumente. Die erste , *face*, gibt an, ob die GL \_ FRONT-Materialien, die GL \_ BACK-Materialien oder beide GL \_ FRONT AND \_ \_ BACK-Materialien geändert werden. Die zweite , *pname*, gibt an, welcher von mehreren Parametern in einem oder beiden Sätzen geändert wird. Der dritte *Parameter* gibt an, welcher Wert dem angegebenen Parameter zugewiesen wird.
 
-Material Parameter werden in der Beleuchtungs Gleichung verwendet, die optional auf jeden Scheitelpunkt angewendet wird. Die Gleichung wird in " [**gllightmodel**](gllightmodel-functions.md)" erläutert.
+Materialparameter werden in der Beleuchtungsgleichung verwendet, die optional auf jeden Scheitelpunkt angewendet wird. Die Gleichung wird in [**glLightModel**](gllightmodel-functions.md)erläutert.
 
-Die Materialparameter können jederzeit aktualisiert werden. Insbesondere kann **glmateriali** zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen werden. Wenn nur ein einzelner Materialparameter pro Scheitelpunkt geändert werden soll, wird [**glcolormaterial**](glcolormaterial.md) gegenüber **glmateriali** bevorzugt.
+Die Materialparameter können jederzeit aktualisiert werden. Insbesondere kann **glMateriali** zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen werden. Wenn jedoch nur ein einzelner Materialparameter pro Scheitelpunkt geändert werden soll, wird [**glColorMaterial**](glcolormaterial.md) gegenüber **glMateriali** bevorzugt.
 
-Die folgende Funktion Ruft Informationen im Zusammenhang mit **glmateriali** ab:
+Die folgende Funktion ruft Informationen im Zusammenhang mit **glMateriali** ab:
 
-[**glgetmaterial**](glgetmaterial.md)
+[**glGetMaterial**](glgetmaterial.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -112,23 +112,23 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **glmateriali** ab:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glcolormaterial**](glcolormaterial.md)
+[**glColorMaterial**](glcolormaterial.md)
 </dt> <dt>
 
-[**gllight**](gllight-functions.md)
+[**glLight**](gllight-functions.md)
 </dt> <dt>
 
-[**gllightmodel**](gllightmodel-functions.md)
+[**glLightModel**](gllightmodel-functions.md)
 </dt> </dl>
 
  

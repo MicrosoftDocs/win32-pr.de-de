@@ -1,32 +1,32 @@
 ---
-description: In der LSA-Authentifizierung werden die Teile der lokalen Sicherheits Autorität (Local Security Authority, LSA) beschrieben, die von Anwendungen zum Authentifizieren und Anmelden von Benutzern beim lokalen System verwendet werden können. Außerdem wird beschrieben, wie Authentifizierungs Pakete und Sicherheitspakete erstellt und aufgerufen werden.
+description: Die LSA-Authentifizierung beschreibt die Teile der lokalen Sicherheitsstelle (Local Security Authority, LSA), die Anwendungen zum Authentifizieren und Anmelden von Benutzern beim lokalen System verwenden können. Außerdem wird beschrieben, wie Authentifizierungspakete und Sicherheitspakete erstellt und aufruft werden.
 ms.assetid: a5bc4c5d-6e8e-4cdf-962e-4284997c75e7
 title: LSA-Authentifizierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 135d1d47189f2490029cb83ef3a4ffb5a3d4913e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b525c5af9ee48eecf954328d1ab36b5665a64953b8fdcabc111a0515eca3ace
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355302"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117787252"
 ---
 # <a name="lsa-authentication"></a>LSA-Authentifizierung
 
-In der LSA-Authentifizierung werden die Teile der [*lokalen Sicherheits Autorität (Local Security Authority*](../secgloss/l-gly.md) , LSA) beschrieben, die von Anwendungen zum Authentifizieren und Anmelden von Benutzern beim lokalen System verwendet werden können. Außerdem wird beschrieben, wie Authentifizierungs Pakete und Sicherheitspakete erstellt und aufgerufen werden.
+Die LSA-Authentifizierung beschreibt die Teile der lokalen Sicherheitsstelle [*(Local Security Authority,*](../secgloss/l-gly.md) LSA), die Anwendungen zum Authentifizieren und Anmelden von Benutzern beim lokalen System verwenden können. Außerdem wird beschrieben, wie Authentifizierungspakete und Sicherheitspakete erstellt und aufruft werden.
 
-Mit den LSA-Authentifizierungsfunktionen können Sie ein Authentifizierungs Paket, ein subauthentifizierungspaket oder ein kombiniertes Security Support Provider-/Authentifizierungspaket (SSP/AP) schreiben.
+Mit den LSA-Authentifizierungsfunktionen können Sie ein Authentifizierungspaket, ein Unterauthentifizierungspaket oder ein kombiniertes SSP/AP-Paket (Security Support Provider/Authentication Package) schreiben.
 
 Die folgenden Themen enthalten weitere Informationen zur LSA-Authentifizierung:
 
--   [LSA-Authentifizierungs Modell](lsa-authentication-model.md)
--   [LSA-Anmelde Sitzungen](lsa-logon-sessions.md)
--   [Authentifizierung von LSA-Benutzer Anmelde Authentifizierung](lsa-user-logon-authentication.md)
--   [Authentifizierungs Pakete](authentication-packages.md)
+-   [LSA-Authentifizierungsmodell](lsa-authentication-model.md)
+-   [LSA-Anmeldesitzungen](lsa-logon-sessions.md)
+-   [LSA-Benutzeranmeldungsauthentifizierung](lsa-user-logon-authentication.md)
+-   [Authentifizierungspakete](authentication-packages.md)
 
-Informationen zu den LSA-Authentifizierungsfunktionen finden Sie unter [Authentifizierungs Referenz](authentication-reference.md).
+Informationen zu den LSA-Authentifizierungsfunktionen finden Sie in der [Authentifizierungsreferenz.](authentication-reference.md)
 
-Weitere Informationen zu verwandten Technologien finden Sie unter [LSA Policy](../secmgmt/lsa-policy.md) und [Winlogon and Credential Providers](winlogon-and-credential-providers.md).
+Informationen zu verwandten Technologien finden Sie unter [LSA Policy](../secmgmt/lsa-policy.md) and [Winlogon and Credential Providers](winlogon-and-credential-providers.md).
 
  
 

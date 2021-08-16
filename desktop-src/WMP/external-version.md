@@ -1,9 +1,9 @@
 ---
-title: Extern. Version
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Die Version-Eigenschaft ruft die aktuelle Version von Windows Media Player ab. | Extern. Version
+title: External.version
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die Versionseigenschaft ruft die aktuelle Version von Windows Media Player ab. | External.version
 ms.assetid: c6747a33-d62c-44e3-98b5-1d74607b998d
 keywords:
-- Extern. Version Windows Media Player
+- External.version Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a8a4de5ba5fa521841a5c2de90b9ae39e7aa86d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0d50a7c21efa758f60aa70a6ac54d884768b3863f6de3b253843232fbbafe623
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118339191"
 ---
-# <a name="externalversion"></a>Extern. Version
+# <a name="externalversion"></a>External.version
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **Version** -Eigenschaft ruft die aktuelle Version von Windows Media Player ab.
+Die **version-Eigenschaft** ruft die aktuelle Version von Windows Media Player ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ window.external.version
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge**.
+Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,16 +46,16 @@ Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge**.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/>                                  |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/>                                  |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 2-Online Speicher**](external-object-for-type-2-online-stores.md)
+[**Externes Objekt für Onlineshops vom Typ 2**](external-object-for-type-2-online-stores.md)
 </dt> </dl>
 
  

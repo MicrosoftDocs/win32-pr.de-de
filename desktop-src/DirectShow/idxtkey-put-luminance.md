@@ -1,7 +1,7 @@
 ---
-description: Mit der Put- \_ Methode für die Leuchtkraft wird der Wert für die Leuchtkraft festgelegt. Diese Eigenschaft gilt nur, wenn der Schlüsseltyp dxtkey- \_ Beleuchtung ist.
+description: Die put \_ Luminance-Methode gibt den Ludominanzwert an, für den eine Schlüsseltaste festgelegt werden soll. Diese Eigenschaft gilt nur, wenn der Schlüsseltyp DXTKEY \_ LUMINANCE ist.
 ms.assetid: 3e255423-1724-49fe-b1a1-49bc1d5fa6ae
-title: Idxtkey::p ut_Luminance-Methode (qedit. h)
+title: IDxtKey::p ut_Luminance-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 100f2352b88e9aae2f31ce969302f4bee0905f27
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ae51fe72220355cb6e206ea437f547a0a8ca2d77633195debeb364f17e7f136f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117819383"
 ---
-# <a name="idxtkeyput_luminance-method"></a>Idxtkey::p UT-Methode "Leuchtkraft" \_
+# <a name="idxtkeyput_luminance-method"></a>IDxtKey::p ut \_ Luminance-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `put_Luminance` Methode gibt den Wert der Leuchtkraft an, für den der Schlüssel bestimmt wird. Diese Eigenschaft gilt nur, wenn der Schlüsseltyp dxtkey- \_ Beleuchtung ist.
+Die `put_Luminance` -Methode gibt den Luminanzwert an, für den eine Schlüsseltaste festgelegt werden soll. Diese Eigenschaft gilt nur, wenn der Schlüsseltyp DXTKEY \_ LUMINANCE ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,26 +45,26 @@ HRESULT put_Luminance(
 
 <dl> <dt>
 
-*NewVal* \[ in\]
+*newVal* \[ In\]
 </dt> <dd>
 
-Der Wert für die Leuchtkraft, auf den der Schlüssel fest. Der gültige Bereich liegt zwischen 0 und 100.
+Der Ludominanzwert, für den die Schlüsseltastenwerte schlüsselt werden. Der gültige Bereich liegt zwischen 0 und 100.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK-Update für Windows Vista und [.NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,19 +74,19 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Idxtkey-Schnittstelle**](idxtkey.md)
+[**IDxtKey-Schnittstelle**](idxtkey.md)
 </dt> <dt>
 
-[**Idxtkey::p UT- \_ KeyType**](idxtkey-put-keytype.md)
+[**IDxtKey::put \_ KeyType**](idxtkey-put-keytype.md)
 </dt> </dl>
 
  

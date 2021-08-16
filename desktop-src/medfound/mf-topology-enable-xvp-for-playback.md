@@ -1,36 +1,36 @@
 ---
-description: Gibt an, ob der topologielader den Transcode-Video Prozessor (xvp) aktiviert. für Konvertierungen, Aktivieren der Hardware beschleunigten Farbkonvertierung.
-title: MF_TOPOLOGY_ENABLE_XVP_FOR_PLAYBACK-Attribut (mspdl. h)
+description: Gibt an, ob das Topologieladeprogramm den Transcode Video Processor (XVP) aktiviert. für Konvertierungen, wodurch die hardwarebeschleunigte Farbkonvertierung aktiviert wird.
+title: MF_TOPOLOGY_ENABLE_XVP_FOR_PLAYBACK-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 02/22/2021
-ms.openlocfilehash: e36841db57e8343248ef5e369915d4bc357815bb
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 3f315463ce1719617c5a48066401219f4b971f0a555cadf2af43b055a2b0e9a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106350629"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117875730"
 ---
-# <a name="mf_topology_enable_xvp_for_playback-attribute"></a>MF- \_ Topologie \_ \_ xvp \_ für \_ Wiedergabe Attribut aktivieren
+# <a name="mf_topology_enable_xvp_for_playback-attribute"></a>MF \_ TOPOLOGY \_ ENABLE \_ XVP FOR \_ \_ PLAYBACK-Attribut
 
-Gibt an, ob der topologielader den Transcode-Video Prozessor (xvp) aktiviert. für Konvertierungen, Aktivieren der Hardware beschleunigten Farbkonvertierung.
+Gibt an, ob das Topologieladeprogramm den Transcode Video Processor (XVP) aktiviert. für Konvertierungen, wodurch die hardwarebeschleunigte Farbkonvertierung aktiviert wird.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL** als **UINT32** gespeichert
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**Imftopology**](/windows/desktop/api/mfidl/nn-mfidl-imftopology)
+[**TOPOLOGIE**](/windows/desktop/api/mfidl/nn-mfidl-imftopology)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn dieses Attribut festgelegt ist, ruft das topologielader ggf. bei Bedarf während der nicht-transcode-topologieauflösung einen Pull in den Videoprozessor ab. Wenn Sie die Topologie zum Erstellen einer eigenen [imftopologie](/windows/win32/api/mfidl/nn-mfidl-imftopology) verwenden, weist das Attribut das Lade Modul an, anstelle des Legacy Farb Konverters xvp für Konvertierungen zu verwenden, sodass die hardwarebeschleunigte Farbkonvertierung aktiviert werden kann. der Legacy Farb Konverter ist nur Software.
+Wenn dieses Attribut festgelegt ist, pullt das Topologieladeprogramm den Videoprozessor bei Bedarf während der Topologieauflösung ohne Transcodierung. Wenn Sie die Topologie verwenden, um ihre eigene [CONVERTERTopology](/windows/win32/api/mfidl/nn-mfidl-imftopology) zu erstellen, weist dieses Attribut das Ladeprogramm an, XVP für Konvertierungen anstelle des Legacyfarbkonverters zu verwenden, sodass die hardwarebeschleunigte Farbkonvertierung aktiviert wird. Der Legacyfarbkonverter ist nur Software.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,20 +38,20 @@ Wenn dieses Attribut festgelegt ist, ruft das topologielader ggf. bei Bedarf wä
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Direct3D Device Manager](direct3d-device-manager.md)
+[Direct3D-Geräte-Manager](direct3d-device-manager.md)
 </dt> <dt>
 
 [Topologieattribute](topology-attributes.md)

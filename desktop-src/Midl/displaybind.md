@@ -1,9 +1,9 @@
 ---
 title: displaybind-Attribut
-description: Das Attribut \ displaybind \ gibt eine Eigenschaft an, die dem Benutzer als Bindable angezeigt werden soll.
+description: Das Attribut \displaybind\ gibt eine Eigenschaft an, die dem Benutzer als bindbar angezeigt werden soll.
 ms.assetid: 047a58b2-3ae2-437a-992f-a9d1541decbe
 keywords:
-- Display BIND-Attribut (Mittell)
+- displaybind attribute MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f015954a7b1fe07d4ecf61e9a4ba4da4c932e65c
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 2f331ee62128501237671d01524c0f74df5ebc3b9da37dbf6ba3f71f9a5df460
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725433"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118384604"
 ---
 # <a name="displaybind-attribute"></a>displaybind-Attribut
 
-Das **\[ Display Bind \]** -Attribut gibt eine Eigenschaft an, die dem Benutzer als Bindable angezeigt werden soll.
+Das **\[ displaybind-Attribut \]** gibt eine Eigenschaft an, die dem Benutzer als bindbar angezeigt werden soll.
 
 ``` syntax
 [
@@ -37,55 +37,55 @@ interface | dispinterface interface-name
 
 <dl> <dt>
 
-*Interface-Attribute-List* 
+*interface-attribute-list* 
 </dt> <dd>
 
-Gibt eine optionale Liste der Schnittstellen Attribute an.
+Gibt eine optionale Liste von Schnittstellenattributen an.
 
 </dd> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
 Der Name der Schnittstelle.
 
 </dd> <dt>
 
-*Attribut-List* 
+*Attributliste* 
 </dt> <dd>
 
-Gibt eine Liste mit einem oder mehreren Attributen, die durch Kommas getrennt sind, an, die auf den Funktions Rückgabetyp angewendet werden.
+Gibt eine Durch Kommas getrennte Liste von Attributen an, die für den Funktions-Rückgabetyp gelten.
 
 </dd> <dt>
 
-*ReturnType* 
+*returntype* 
 </dt> <dd>
 
 Gibt den Rückgabetyp der Funktion an.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
-Gibt den Namen der Funktion an, auf die das **\[ Display Bind \]** -Attribut angewendet wird.
+Gibt den Namen der Funktion an, auf die das **\[ displaybind-Attribut \]** angewendet wird.
 
 </dd> <dt>
 
 *params* 
 </dt> <dd>
 
-Funktionsparameter Liste.
+Funktionsparameterliste.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eigenschaften, die über das **\[ Display Bind \]** -Attribut verfügen, müssen auch über das **\[** [**bindbare**](bindable.md) **\]** Attribut verfügen. Ein Objekt kann die Datenbindung unterstützen, aber nicht über dieses Attribut verfügen.
+Eigenschaften, die über das **\[ displaybind-Attribut \]** verfügen, müssen auch über das **\[** [**bindbare Attribut**](bindable.md) **\]** verfügen. Ein Objekt kann die Datenbindung unterstützen, aber nicht über dieses Attribut verfügen.
 
 ### <a name="flags"></a>Flags
 
-funcflag " \_ f Display BIND", varflag " \_ sbind"
+FUNCFLAG \_ FDISPLAYBIND, VARFLAG \_ FDISPLAYBIND
 
 ## <a name="examples"></a>Beispiele
 
@@ -112,18 +112,18 @@ interface MyObject : IUnknown
 [**bindable**](bindable.md)
 </dt> <dt>
 
-[FUNCFLAGS](/windows/win32/api/oaidl/ne-oaidl-typeflags)
+[Typeflags](/windows/win32/api/oaidl/ne-oaidl-typeflags)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

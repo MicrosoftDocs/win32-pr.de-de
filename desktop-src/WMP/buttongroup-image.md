@@ -1,9 +1,9 @@
 ---
-title: ButtonGroup. Image
-description: Das Image-Attribut gibt den Namen des Bilds an, das die Schaltflächen einer ButtonGroup darstellt, oder ruft ihn ab.
+title: BUTTONGROUP.image
+description: Das Imageattribut gibt den Namen des Bilds an, das die Schaltflächen einer BUTTONGROUP darstellt, oder ruft diesen ab.
 ms.assetid: dad50a1e-d147-4e0f-b5d6-8cbfeef32438
 keywords:
-- ButtonGroup. Image-Windows-Media Player
+- BUTTONGROUP.image Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1fa395edc149671ad05a38a5ff7c77053b6e3d82
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d2fcd8d76bd217087b6b948cec3216efc2bbc6c9845e9c18b5a7619d292232b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118342633"
 ---
-# <a name="buttongroupimage"></a>ButtonGroup. Image
+# <a name="buttongroupimage"></a>BUTTONGROUP.image
 
-Das **Image** -Attribut gibt den Namen des Bilds an, das die Schaltflächen einer **ButtonGroup** darstellt, oder ruft ihn ab.
+Das  Imageattribut gibt den Namen des Bilds an, das die Schaltflächen einer BUTTONGROUP darstellt, oder **ruft diesen ab.**
 
 ``` syntax
         elementID.image
@@ -29,13 +29,13 @@ Das **Image** -Attribut gibt den Namen des Bilds an, das die Schaltflächen eine
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die unterstützten Bildformate sind BMP, JPG, PNG und GIF. Wenn es sich bei dem Bild um eine 8-Bit-BMP-Datei handelt, können seine Farbton-und Sättigungswerte mithilfe der Attribute **hueshift** und **Sättigung** dynamisch geändert werden.
+Die unterstützten Bildformate sind BMP, JPG, PNG und GIF. Wenn es sich bei dem Bild um eine 8-Bit-BMP-Datei handelt, können die Farbton- und Sättigungswerte mithilfe der **Attribute hueShift** und **Sättigung** dynamisch geändert werden.
 
-Wenn das Bild des Steuer Elements größer als der definierte Bereich ist, wird das Bild beschnitten.
+Wenn das Bild des Steuerelements größer als der definierte Bereich ist, wird das Bild zugeschnitten.
 
 Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild) angezeigt.
 
@@ -45,21 +45,21 @@ Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ButtonGroup-Element**](buttongroup-element.md)
+[**BUTTONGROUP-Element**](buttongroup-element.md)
 </dt> <dt>
 
-[**ButtonGroup. hueshift**](buttongroup-hueshift.md)
+[**BUTTONGROUP.hueShift**](buttongroup-hueshift.md)
 </dt> <dt>
 
-[**ButtonGroup. Sättigung**](buttongroup-saturation.md)
+[**BUTTONGROUP.saturation**](buttongroup-saturation.md)
 </dt> </dl>
 
  

@@ -14,14 +14,14 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: d70d852adc8f810438ce46dc30345e68fa27e0fd
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ade363204d9edca08003d5bfef1295c4dabf52aafed037cd2e9ca69b56d02a07
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118206529"
 ---
-# <a name="iwicformatconverter_initialize_proxy-function"></a>IWICFormatConverter-Funktion \_ "Proxy initialisieren" \_
+# <a name="iwicformatconverter_initialize_proxy-function"></a>IWICFormatConverter Initialize \_ \_ Proxy-Funktion
 
 Proxyfunktion für die [**Initialize-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicformatconverter-initialize)
 
@@ -46,7 +46,7 @@ HRESULT IWICFormatConverter_Initialize_Proxy(
 
 <dl> <dt>
 
-*DIES \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
 Typ: **[ **IWICFormatConverter**](/windows/desktop/api/Wincodec/nn-wincodec-iwicformatconverter)\***
@@ -73,12 +73,12 @@ Die Zielpixelformat-GUID.
 
 </dd> <dt>
 
-*Dither* \[ In\]
+*dither* \[ In\]
 </dt> <dd>
 
 Typ: **[ **WICBitmapDitherType**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapdithertype)**
 
-Der für die Konvertierung verwendete [**WICBitmapDitherType.**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapdithertype)
+Der [**für die Konvertierung verwendete WICBitmapDitherType.**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapdithertype)
 
 </dd> <dt>
 
@@ -121,10 +121,10 @@ Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfall
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
 | DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 

@@ -1,9 +1,9 @@
 ---
-title: Button. Kurznotiz
-description: Mit dem Attribut "Kurznotiz" wird ein Wert angegeben oder abgerufen, der angibt, ob die Schaltfläche eine UMSCHALT Fläche ist, d. h. ob es sich um eine Schaltfläche mit zwei Zuständen oder einem Bundesstaat handelt
+title: BUTTON.sticky
+description: Das Sticky-Attribut gibt einen Wert an oder ruft einen Wert ab, der angibt, ob button ein Umschalter ist, d. h. ob es sich um eine SCHALTFLÄCHE mit zwei oder einem einzelnen Zustand handelt.
 ms.assetid: aa0b48b4-29ce-440c-aeb9-dce31ab3cb63
 keywords:
-- Button. Kurztaste für Windows Media Player
+- BUTTON.sticky Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8de9b4e1a8e4bab04e5729cb45662164e2dfa2e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ec9c6a2cf1523cf2384142bd6ffd47cb5e42e7851dc96b6e236343c5ba670aa1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372247"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118342746"
 ---
-# <a name="buttonsticky"></a>Button. Kurznotiz
+# <a name="buttonsticky"></a>BUTTON.sticky
 
-Mit **dem Attribut "** Kurznotiz" wird ein Wert angegeben oder abgerufen, der angibt, ob die **Schaltfläche** eine UMSCHALT Fläche ist, d. h. ob es sich um eine **Schaltfläche** mit zwei Zuständen oder einem Bundesstaat handelt
+Das **Sticky-Attribut** gibt einen Wert an oder ruft einen Wert ab, der angibt, ob es sich bei **BUTTON** um eine Umschaltfläche handelt, d. h. ob es sich um eine **SCHALTFLÄCHE** mit zwei oder einem einzelnen Zustand handelt.
 
 ``` syntax
         elementID.sticky
@@ -29,22 +29,22 @@ Mit **dem Attribut "** Kurznotiz" wird ein Wert angegeben oder abgerufen, der an
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
 
 
 
 | Wert | BESCHREIBUNG                        |
 |-------|------------------------------------|
-| true  | Die **Schaltfläche** ist kurz.              |
-| false | Standard. Die **Schaltfläche** ist nicht kurz. |
+| true  | **BUTTON** ist sticky.              |
+| false | Standard. **BUTTON** ist nicht sticky. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn **für** "Kurznotiz" der Wert "true" festgelegt ist, wechselt die **Schaltfläche** in den Zustand "nach unten" und bleibt so lange in diesem Zustand Wenn sich die **Schaltfläche** im Zustand "herunter" befindet, ist das Attribut " **nach unten** " auf "true" festgelegt, und das **Fenster Mage** wird angezeigt.
+Wenn **sticky** auf TRUE festgelegt ist, wechselt die **SCHALTFLÄCHE** beim Klicken in den Abwärtszustand und verbleibt in diesem Zustand, bis sie erneut angeklickt wird. Wenn **sich** button im Zustand "Down" befindet, ist das **Down-Attribut** true, und **downImage** wird angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,21 +52,21 @@ Wenn **für** "Kurznotiz" der Wert "true" festgelegt ist, wechselt die **Schaltf
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Button-Element**](button-element.md)
+[**BUTTON-Element**](button-element.md)
 </dt> <dt>
 
-[**Schaltfläche. nach unten**](button-down.md)
+[**BUTTON.down**](button-down.md)
 </dt> <dt>
 
-[**Button. downImage**](button-downimage.md)
+[**BUTTON.downImage**](button-downimage.md)
 </dt> </dl>
 
  
