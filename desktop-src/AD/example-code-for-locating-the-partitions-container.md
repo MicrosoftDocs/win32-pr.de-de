@@ -1,25 +1,25 @@
 ---
-title: Beispiel Code für die Suche nach dem Partitions Container
-description: Dieses Thema enthält Codebeispiele, in denen der Partitions Container gesucht wird.
+title: Beispielcode zum Suchen des Partitionscontainers
+description: Dieses Thema enthält Codebeispiele, die den Partitionscontainer suchen.
 ms.assetid: 7aa6ad5a-7baf-484a-9296-eafb61da5f4e
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code für die Suche nach dem Partitionen-Container AD
-- Anwendungsverzeichnis Partitionen AD, Beispiel Code für die Suche nach dem Partitions Container
+- Beispielcode zum Suchen des Partitionscontainers AD
+- Anwendungsverzeichnispartitionen AD , Beispielcode zum Suchen des Partitionscontainers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f3f10156894a71a3308b58d125c16782497e5f29
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 5757e638e046089d828ee1c681d04ec210986181cb74ec3b1253c05515eda2fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "106341920"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962308"
 ---
-# <a name="example-code-for-locating-the-partitions-container"></a>Beispiel Code für die Suche nach dem Partitions Container
+# <a name="example-code-for-locating-the-partitions-container"></a>Beispielcode zum Suchen des Partitionscontainers
 
-Dieses Thema enthält Codebeispiele, in denen der Partitions Container gesucht wird.
+Dieses Thema enthält Codebeispiele, die den Partitionscontainer suchen.
 
-Im folgenden C/C++-Codebeispiel wird der Distinguished Name des Partitions Containers abgerufen, indem der Konfigurations Container für das [**CrossRef Container**](/windows/desktop/ADSchema/c-crossrefcontainer) -Objekt durchsucht wird.
+Das folgende C/C++-Codebeispiel ruft den Distinguished Name des Partitions-Containers ab, indem der Konfigurationscontainer nach dem [**crossRefContainer-Objekt**](/windows/desktop/ADSchema/c-crossrefcontainer) durchsucht wird.
 
 
 ```C++
@@ -150,7 +150,7 @@ HRESULT GetPartitionsDNSearch(LPWSTR *ppwszPartitionsDN)
 
 
 
-Im folgenden Visual Basic Scripting Edition Codebeispiel wird der Distinguished Name des Partitions Containers abgerufen, indem der Konfigurations Container für das [**CrossRef Container**](/windows/desktop/ADSchema/c-crossrefcontainer) -Objekt durchsucht wird.
+Im folgenden Codebeispiel Visual Basic Scripting Edition wird der Distinguished Name des Partitionscontainers durch Durchsuchen des Konfigurationscontainers nach dem [**crossRefContainer-Objekt**](/windows/desktop/ADSchema/c-crossrefcontainer) ermittelt.
 
 
 ```VB
@@ -193,7 +193,7 @@ End Function
 
 
 
-Im folgenden C/C++-Codebeispiel wird der Distinguished Name des Partitions Containers abgerufen, indem der Distinguished Name manuell aufgebaut wird.
+Das folgende C/C++-Codebeispiel ruft den Distinguished Name des Partitions-Containers ab, indem der Distinguished Name manuell erstellt wird.
 
 
 ```C++
@@ -262,7 +262,7 @@ HRESULT GetPartitionsDNManual(LPWSTR *ppwszPartitionsDN)
 
 
 
-Im folgenden Visual Basic Codebeispiel wird der Distinguished Name des Partitions Containers abgerufen, indem der Distinguished Name manuell aufgebaut wird.
+Das folgende Visual Basic Codebeispiel ruft den Distinguished Name des Partitionscontainers ab, indem der Distinguished Name manuell erstellt wird.
 
 
 ```VB
@@ -283,7 +283,7 @@ End Function
 
 
 
-Im folgenden c#-Codebeispiel wird der Distinguished Name des Partitions Containers abgerufen, indem der Konfigurations Container für das [**CrossRef Container**](/windows/desktop/ADSchema/c-crossrefcontainer) -Objekt durchsucht wird. In diesem Beispiel wird c# mit System. Director yservices verwendet.
+Im folgenden C#-Codebeispiel wird der Distinguished Name des Partitionscontainers durch Durchsuchen des Konfigurationscontainers nach dem [**crossRefContainer-Objekt**](/windows/desktop/ADSchema/c-crossrefcontainer) ermittelt. In diesem Beispiel wird C# mit System.DirectoryServices verwendet.
 
 
 ```CSharp
@@ -317,7 +317,7 @@ static string GetPartitionsDN()
 
 
 
-Im folgenden Visual Basic .NET-Codebeispiel wird der Distinguished Name des Partitions Containers abgerufen, indem der Konfigurations Container für das [**crossrebcontainer**](/windows/desktop/ADSchema/c-crossrefcontainer) -Objekt durchsucht wird. In diesem Beispiel wird Visual Basic .net mit System. Director yservices verwendet.
+Im folgenden Visual Basic .NET-Codebeispiel wird der Distinguished Name des Partition-Containers durch Durchsuchen des Konfigurationscontainers nach dem [**crossRefContainer-Objekt**](/windows/desktop/ADSchema/c-crossrefcontainer) ermittelt. In diesem Beispiel wird Visual Basic .NET mit System.DirectoryServices verwendet.
 
 
 ```VB
@@ -352,6 +352,6 @@ End Function
 
 
 
- 
+ 
 
- 
+ 

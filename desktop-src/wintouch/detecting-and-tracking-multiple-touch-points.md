@@ -3,7 +3,7 @@ title: Erkennen und Nachverfolgen mehrerer Berührungspunkte
 description: Erkennen und Nachverfolgen mehrerer Berührungspunkte
 ms.assetid: 7a5c7595-f341-4e11-805f-ed0b9c63cbff
 keywords:
-- Windows Toucheingabe, mehrere Berührungspunkte
+- Windows Touch,mehrere Berührungspunkte
 - Erkennen mehrerer Berührungspunkte
 - Nachverfolgen mehrerer Berührungspunkte
 ms.topic: article
@@ -17,19 +17,19 @@ ms.locfileid: "118436065"
 ---
 # <a name="detecting-and-tracking-multiple-touch-points"></a>Erkennen und Nachverfolgen mehrerer Berührungspunkte
 
-In den folgenden Schritten wird erläutert, wie Sie mehrere Berührungspunkte mit Windows Touch nachverfolgen.
+In den folgenden Schritten wird erläutert, wie Sie mehrere Berührungspunkte mithilfe von touch Windows nachverfolgen.
 
 1.  Erstellen Sie eine Anwendung, und aktivieren Sie Windows Touch.
-2.  Fügen Sie einen Handler für [**WM \_ TOUCH**](wm-touchdown.md) und Verfolgungspunkte hinzu.
+2.  Fügen Sie einen Handler für [**WM \_ TOUCH und**](wm-touchdown.md) Verfolgungspunkte hinzu.
 3.  Zeichnen Sie die Punkte.
 
-Sobald Ihre Anwendung ausgeführt wird, werden bei jeder Berührung Kreise gerendert. Der folgende Screenshot zeigt, wie Ihre Anwendung während der Ausführung aussehen kann.
+Nachdem Ihre Anwendung ausgeführt wurde, rendert sie Kreise bei jeder Berührung. Der folgende Screenshot zeigt, wie Ihre Anwendung während der Ausführung aussehen kann.
 
 ![Screenshot einer Anwendung, die Berührungspunkte als grüne und gelbe Kreise rendert](images/multitouchpoints.png)
 
-## <a name="create-an-application-and-enable-windows-touch"></a>Erstellen einer Anwendung und Aktivieren von Windows Touch
+## <a name="create-an-application-and-enable-windows-touch"></a>Erstellen einer Anwendung und Aktivieren Windows Touch
 
-Beginnen Sie mit einer Microsoft Win32-Anwendung mithilfe des Assistenten für Microsoft Visual Studio. Nachdem Sie den Assistenten abgeschlossen haben, fügen Sie Unterstützung für Windows Touch-Nachrichten hinzu, indem Sie die Windows-Version in targetver.h festlegen und windows.h und windowsx.h in Ihre Anwendung einschließen. Der folgende Code zeigt, wie Sie die Windows Version in targetver.h festlegen.
+Beginnen Sie mit einer Microsoft Win32-Anwendung mithilfe des Microsoft Visual Studio Assistenten. Nachdem Sie den Assistenten abgeschlossen haben, fügen Sie Unterstützung für Windows Touch-Nachrichten hinzu, indem Sie die Windows-Version in targetver.h festlegen und windows.h und windowsx.h in Ihre Anwendung einfassen. Der folgende Code zeigt, wie sie die Windows in targetver.h festlegen.
 
 
 ```C++
@@ -52,7 +52,7 @@ Beginnen Sie mit einer Microsoft Win32-Anwendung mithilfe des Assistenten für M
 
 
 
-Der folgende Code zeigt, wie Die include-Anweisungen hinzugefügt werden sollen. Außerdem können Sie einige globale Variablen erstellen, die später verwendet werden.
+Der folgende Code zeigt, wie Die Include-Direktiven hinzugefügt werden sollen. Außerdem können Sie einige globale Variablen erstellen, die später verwendet werden.
 
 
 ```C++
@@ -93,7 +93,7 @@ COLORREF colors[] = { RGB(153,255,51),
 
 ## <a name="add-handler-for-wm_touch-and-track-points"></a>Hinzufügen eines Handlers für WM \_ TOUCH und Track Points
 
-Deklarieren Sie zunächst einige Variablen, die vom [**WM \_ TOUCH-Handler**](wm-touchdown.md) in [**WndProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))verwendet werden.
+Deklarieren Sie zunächst einige Variablen, die vom [**WM \_ TOUCH-Handler**](wm-touchdown.md) in [**WndProc verwendet werden.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -106,7 +106,7 @@ POINT ptInput;
 
 
 
-Initialisieren Sie nun die Variablen, die zum Speichern von Berührungspunkten verwendet werden, und registrieren Sie das Fenster für die Toucheingabe über die **InitInstance-Methode.**
+Initialisieren Sie nun die Variablen, die zum Speichern von Berührungspunkten verwendet werden, und registrieren Sie das Fenster für Toucheingaben aus der **InitInstance-Methode.**
 
 
 ```C++
@@ -142,7 +142,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
 
 
-Behandeln Sie als Nächstes die [**WM \_ TOUCH-Nachricht**](wm-touchdown.md) der [**WndProc-Methode.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) Der folgende Code zeigt eine Implementierung des Handlers für **WM \_ TOUCH**.
+Als Nächstes behandeln Sie die [**WM \_ TOUCH-Nachricht**](wm-touchdown.md) der [**WndProc-Methode.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) Der folgende Code zeigt eine Implementierung des Handlers für **WM \_ TOUCH**.
 
 
 ```C++
@@ -181,13 +181,13 @@ case WM_TOUCH:
 
 
 > [!Note]  
-> Um die [**ScreenToClient-Funktion**](/windows/desktop/api/winuser/nf-winuser-screentoclient) verwenden zu können, benötigen Sie eine hohe DPI-Unterstützung in Ihrer Anwendung. Weitere Informationen zur Unterstützung hoher DPI-Daten finden Sie im MSDN-Abschnitt [High DPI (Hohe DPI-Anzahl).]( ../hidpi/high-dpi-desktop-application-development-on-windows.md)
+> Um die [**ScreenToClient-Funktion verwenden zu**](/windows/desktop/api/winuser/nf-winuser-screentoclient) können, müssen Sie eine hohe DPI-Unterstützung in Ihrer Anwendung haben. Weitere Informationen zur Unterstützung hoher DPI-Daten finden Sie im [Msdn-Abschnitt Hohe DPI-Leistung.]( ../hidpi/high-dpi-desktop-application-development-on-windows.md)
 
  
 
-Wenn ein Benutzer nun den Bildschirm berührt, werden die Positionen, die er berührt, im Punktarray gespeichert. Der **dwID-Member** der [**TOUCHINPUT-Struktur**](/windows/win32/api/winuser/ns-winuser-touchinput) speichert einen Bezeichner, der hardwareabhängig sein wird.
+Wenn ein Benutzer nun den Bildschirm berührt, werden die Positionen, die er berührt, im Punktarray gespeichert. Das **dwID-Member** der [**TOUCHINPUT-Struktur**](/windows/win32/api/winuser/ns-winuser-touchinput) speichert einen Bezeichner, der hardwareabhängig ist.
 
-Um das Problem zu beheben, dass der dwID-Member von der Hardware abhängig ist, verwendet der [**WM \_ TOUCH-Fallhandler**](wm-touchdown.md) die Funktion **GetContactIndex,** die den **dwID-Member** der [**TOUCHINPUT-Struktur**](/windows/win32/api/winuser/ns-winuser-touchinput) einem Punkt zuweist, der auf dem Bildschirm gezeichnet wird. Der folgende Code zeigt eine Implementierung dieser Funktion.
+Um das Problem des dwID-Mitglieds zu beheben, das von der Hardware abhängig ist, verwendet der [**WM \_ TOUCH-Fallhandler**](wm-touchdown.md) die Funktion **GetContactIndex,** die das **dwID-Member** der [**TOUCHINPUT-Struktur**](/windows/win32/api/winuser/ns-winuser-touchinput) einem Punkt zuzeichnet, der auf dem Bildschirm gezeichnet wird. Der folgende Code zeigt eine Implementierung dieser Funktion.
 
 
 ```C++
@@ -231,7 +231,7 @@ Deklarieren Sie die folgenden Variablen für die Zeichnungsroutine.
 
 
 
-Der Arbeitsspeicheranzeigekontext *memDC* wird zum Speichern eines temporären Grafikkontexts verwendet, der mit dem gerenderten Anzeigekontext *hdc* ausgetauscht wird, um Flackern zu vermeiden. Implementieren Sie die Zeichnungsroutine, die die gespeicherten Punkte annimmt und einen Kreis an den Punkten zeichnet. Der folgende Code zeigt, wie Sie den [**WM \_ PAINT-Handler**](/windows/desktop/gdi/wm-paint) implementieren können.
+Der Speicheranzeigekontext *memDC* wird zum Speichern eines temporären Grafikkontexts verwendet, der mit dem gerenderten Anzeigekontext *hdc* ausgetauscht wird, um Flackern zu vermeiden. Implementieren Sie die Zeichnungsroutine, die die von Ihnen gespeicherten Punkte übernimmt und einen Kreis an den Punkten zeichnet. Der folgende Code zeigt, wie Sie den [**WM \_ PAINT-Handler**](/windows/desktop/gdi/wm-paint) implementieren können.
 
 
 ```C++
@@ -269,9 +269,9 @@ Der Arbeitsspeicheranzeigekontext *memDC* wird zum Speichern eines temporären G
 
 Wenn Sie Ihre Anwendung ausführen, sollte sie nun in etwa wie die Abbildung am Anfang dieses Abschnitts aussehen.
 
-Zum Spaß können Sie einige zusätzliche Linien um die Berührungspunkte zeichnen. Der folgende Screenshot zeigt, wie die Anwendung mit einigen zusätzlichen Linien aussehen kann, die um die Kreise gezeichnet werden.
+Zum Spaß können Sie einige zusätzliche Linien um die Berührungspunkte zeichnen. Der folgende Screenshot zeigt, wie die Anwendung mit einigen zusätzlichen Linien, die um die Kreise gezeichnet werden, aussehen könnte.
 
-![Screenshot einer Anwendung, die Berührungspunkte als Kreise mit Linien durch die Mittelpunkte rendert und die Kanten der Berührungspunkte überschneidet](images/multitouchpointsfun.png)
+![Screenshot einer Anwendung, die Berührungspunkte als Kreise mit Linien durch die Center rendert und die Ränder der Berührungspunkte überschneidet](images/multitouchpointsfun.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

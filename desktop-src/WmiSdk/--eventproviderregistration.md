@@ -93,7 +93,7 @@ Nur Administratoren können einen Ereignisanbieter registrieren oder löschen, i
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

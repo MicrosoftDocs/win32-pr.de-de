@@ -25,7 +25,7 @@ Wenn eine große Menge an Informationen geschrieben wird, kann die Ereignisproto
 
 Das Installationsprogramm kann die folgenden Einträge in das Ereignisprotokoll schreiben. Alle Ereignisprotokollmeldungen verfügen über eine eindeutige Ereignis-ID. Alle allgemeinen Fehler, die in der [Fehlertabelle](error-table.md) erstellt wurden und für eine installation zurückgegeben werden, bei der ein Fehler auftritt, werden im Anwendungsereignisprotokoll mit einer Meldungs-ID protokolliert, die dem Fehler + 10.000 entspricht. Die Fehlernummer in der Tabelle Fehler für eine erfolgreiche Installation lautet beispielsweise 1707. Die erfolgreiche Installation wird im Anwendungsereignisprotokoll mit der Meldungs-ID 11707 (1707 + 10.000) protokolliert.
 
-Informationen zum Aktivieren der ausführlichen Protokollierung auf dem Computer eines Benutzers bei der Problembehandlung bei der Bereitstellung finden Sie unter bewährte Methoden für [Windows Installer.](windows-installer-best-practices.md)
+Informationen zum Aktivieren der ausführlichen Protokollierung auf dem Computer eines Benutzers bei der Problembehandlung bei der Bereitstellung finden Sie unter [Windows Installer Best Practices](windows-installer-best-practices.md).
 
 
 
@@ -55,7 +55,7 @@ Informationen zum Aktivieren der ausführlichen Protokollierung auf dem Computer
 </tr>
 <tr class="even">
 <td>1004</td>
-<td>Fehler bei der Erkennung des Produkts "%1", Feature "%2", Komponente "%3"Hinweis: Ab Windows Installer Version 2.0 lautet diese Meldung: Fehler bei der Erkennung des Produkts "%1", Feature "%2", Komponente "%3". <strong></strong> Die Ressource '%4' ist nicht vorhanden.<br/></td>
+<td>Erkennung des Produkts "%1", Feature "%2", Komponente "%3" fehlgeschlagen <strong>Hinweis:</strong> Ab Windows Installer Version 2.0 lautet diese Meldung: Fehler bei der Erkennung des Produkts "%1", Feature "%2", Komponente "%3". Die Ressource '%4' ist nicht vorhanden.<br/></td>
 <td>Eine Warnmeldung. Siehe auch <a href="searching-for-a-broken-feature-or-component.md">Suchen nach einer fehlerhaften Funktion oder Komponente.</a></td>
 </tr>
 <tr class="odd">
@@ -70,7 +70,7 @@ Informationen zum Aktivieren der ausführlichen Protokollierung auf dem Computer
 </tr>
 <tr class="odd">
 <td>1007</td>
-<td>Die Installation von %1 ist durch die Softwareeinschränkungsrichtlinie nicht zulässig. Der Windows Installer lässt nur die Ausführung von uneingeschränkten Elementen zu. Die von der Softwareeinschränkungsrichtlinie zurückgegebene Autorisierungsebene war %2.</td>
+<td>Die Installation von %1 ist durch die Softwareeinschränkungsrichtlinie nicht zulässig. Der Windows Installer lässt nur die Ausführung uneingeschränkter Elemente zu. Die von der Softwareeinschränkungsrichtlinie zurückgegebene Autorisierungsebene war %2.</td>
 <td>Eine Fehlermeldung, die angibt, dass der Administrator die Softwareeinschränkungsrichtlinie konfiguriert hat, um diese Installation zu verhindern.</td>
 </tr>
 <tr class="even">
@@ -145,7 +145,7 @@ Informationen zum Aktivieren der ausführlichen Protokollierung auf dem Computer
 </tr>
 <tr class="even">
 <td>1025</td>
-<td>Produkt: %1. Die Datei %2 wird vom folgenden Prozess verwendet: Name: %3, Id %4.</td>
+<td>Produkt: %1. Die Datei %2 wird von folgendem Prozess verwendet: Name: %3, Id %4.</td>
 <td><strong>Windows Installer 2.0:</strong> Nicht verfügbar.<br/></td>
 </tr>
 <tr class="odd">
@@ -155,7 +155,7 @@ Informationen zum Aktivieren der ausführlichen Protokollierung auf dem Computer
 </tr>
 <tr class="even">
 <td>1027</td>
-<td>Windows Das Installationsprogramm hat festgestellt, dass ein Registrierungsunterschlüssel %1 in seinen Konfigurationsdaten nicht ordnungsgemäß gesichert wurde. Der Besitzer des Schlüssels muss entweder Lokales System oder Builtin\Administrators sein. Der vorhandene Unterschlüssel und sein sämtlicher Inhalt werden gelöscht.</td>
+<td>Windows Das Installationsprogramm hat festgestellt, dass ein Registrierungsunterschlüssel %1 innerhalb seiner Konfigurationsdaten nicht ordnungsgemäß gesichert wurde. Der Besitzer des Schlüssels muss entweder Lokales System oder Builtin\Administrators sein. Der vorhandene Unterschlüssel und sein sämtlicher Inhalt werden gelöscht.</td>
 <td>Warnmeldung. <strong> <a href="not-supported-in-windows-installer-version-3-1.md">Windows Installer 3.1 und früher:</a></strong> Nicht verfügbar.<br/></td>
 </tr>
 <tr class="odd">
@@ -171,7 +171,7 @@ Informationen zum Aktivieren der ausführlichen Protokollierung auf dem Computer
 <tr class="odd">
 <td>1030</td>
 <td>Produkt: %1. Die Anwendung hat versucht, eine neuere Version der geschützten Datei Windows %2 zu installieren. Möglicherweise müssen Sie Ihr Betriebssystem aktualisieren, damit diese Anwendung ordnungsgemäß funktioniert. (Paketversion: %3, Durch das Betriebssystem geschützte Version: %4).</td>
-<td>Warnmeldung, die angibt, dass bei der Installation versucht wurde, eine kritische Datei zu ersetzen, die durch <a href="windows-resource-protection-on-windows-vista.md">Windows Resource Protection geschützt ist.</a> Für die Verwendung dieser Anwendung ist möglicherweise ein Update des Betriebssystems erforderlich. <strong> <a href="not-supported-in-windows-installer-version-3-1.md">Windows Installer 3.1 und früher:</a></strong> Nicht verfügbar.<br/></td>
+<td>Warnmeldung, die angibt, dass bei der Installation versucht wurde, eine kritische Datei zu ersetzen, die durch Windows <a href="windows-resource-protection-on-windows-vista.md">Resource Protection geschützt ist.</a> Für die Verwendung dieser Anwendung ist möglicherweise ein Update des Betriebssystems erforderlich. <strong> <a href="not-supported-in-windows-installer-version-3-1.md">Windows Installer 3.1 und früher:</a></strong> Nicht verfügbar.<br/></td>
 </tr>
 <tr class="even">
 <td>1031</td>

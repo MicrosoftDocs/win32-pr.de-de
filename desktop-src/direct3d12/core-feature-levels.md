@@ -1,6 +1,6 @@
 ---
 title: Direct3D 12 Core 1.0-Featureebene
-description: Die Core 1.0-Featureebene ist eine Teilmenge des vollständigen Direct3D 12-Featuresets.
+description: Die Core 1.0-Featureebene ist eine Teilmenge des vollständigen Direct3D 12-Featuresatzes.
 ms.topic: article
 ms.date: 11/05/2019
 ms.openlocfilehash: 93eab39509074114bf2032cfb1cdea3e4e767dae9786241a34f970ca5cd51703
@@ -12,80 +12,80 @@ ms.locfileid: "118530720"
 ---
 # <a name="the-direct3d-12-core-10-feature-level"></a>Direct3D 12 Core 1.0-Featureebene
 
-Die Core 1.0-Featureebene ist eine Teilmenge des vollständigen Direct3D 12-Featuresets. Die Kern 1.0-Funktionsebene kann von einer Kategorie von Geräten verfügbar gemacht werden, die als *Nur-Compute-Geräte bezeichnet werden.* Das gesamte Treibermodell für ausschließlich computebasierte Geräte ist das Microsoft Compute Driver Model (MCDM). MCDM ist ein herunterskaliertes Peer des Windows Device Driver Model (WDDM), das einen größeren Umfang hat.
+Die Core 1.0-Featureebene ist eine Teilmenge des vollständigen Direct3D 12-Featuresatzes. Die Core 1.0-Featureebene kann durch eine Kategorie von Geräten verfügbar gemacht werden, die als *rein computebasierte Geräte* bezeichnet werden. Das allgemeine Treibermodell für Computer, die nur computebasierte Geräte sind, ist das Microsoft Compute Driver Model (MCDM). MCDM ist ein herunterskaliertes Peer des Windows Device Driver Model (WDDM), das über einen größeren Bereich verfügt.
 
-Ein Gerät, das *nur die* Features innerhalb einer Kernfunktionsebene unterstützt, wird als *Core-Gerät bezeichnet.*
+Ein Gerät, das *nur* die Features innerhalb einer Kernfunktionsebene unterstützt, wird als *Core-Gerät* bezeichnet.
 
 > [!NOTE]
-> *Nur-Compute-Gerät,* *MCDM-Gerät,* *Core Feature Level-Gerät* und *Core-Gerät* bedeuten dasselbe. Der Einfachheit halber *bevorzugen wir das Core-Gerät.*
+> *Nur Computegerät,* *MCDM-Gerät,* *Core Feature Level-Gerät* und *Core-Gerät* bedeuten das gleiche. Der Einfachheit halber wird das *Core-Gerät* bevorzugt.
 
-## <a name="creating-a-core-device"></a>Erstellen eines Kerngeräts
+## <a name="creating-a-core-device"></a>Erstellen eines Core-Geräts
 
 Im Allgemeinen rufen Sie zum Erstellen eines Direct3D 12-Geräts die [**Funktion D3D12CreateDevice**](/windows/desktop/api/d3d12/nf-d3d12-d3d12createdevice) auf und geben eine Mindestfunktionsebene an.
 
-Wenn Sie eine Featureebene von 9 bis 12 angeben, ist das zurückgegebene Gerät ein funktionsreiches Gerät, z. B. eine herkömmliche GPU (die eine Obermenge der Funktionalität eines Core-Geräts unterstützt). Für diesen Bereich von Featureebenen wird nie ein Core-Gerät zurückgegeben.
+Wenn Sie eine Featureebene von 9 bis 12 angeben, ist das zurückgegebene Gerät ein funktionsreiches Gerät, z. B. eine herkömmliche GPU (die eine Obermenge der Funktionalität eines Core-Geräts unterstützt). Ein Core-Gerät wird für diesen Bereich von Featureebenen nie zurückgegeben.
 
-Wenn Sie hingegen eine Kernfeatureebene angeben (z. B. [**D3D_FEATURE_LEVEL::D 3D_FEATURE_LEVEL_1_0_CORE),**](/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_feature_level)kann das zurückgegebene Gerät funktionsreich oder ein Core-Gerät sein.
+Wenn Sie andererseits eine Core-Featureebene angeben (z. B. [**D3D_FEATURE_LEVEL::D 3D_FEATURE_LEVEL_1_0_CORE),**](/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_feature_level)kann das zurückgegebene Gerät funktionsreich oder ein Core-Gerät sein.
 
 ```cpp
 // d3dcommon.h
 D3D_FEATURE_LEVEL_1_0_CORE = 0x1000
 ```
 
-Wenn Sie eine Funktionsebene angeben, überprüft die Runtime-/Debugebene, ob die von Ihrer Anwendung verwendeten Features `_CORE` von dieser `_CORE` Featureebene zugelassen werden. Dieser Satz von Features wird später in diesem Thema definiert.
+Wenn Sie eine `_CORE` Featureebene angeben, überprüft die Laufzeit-/Debugebene, ob die von Ihrer Anwendung verwendeten Features von dieser Featureebene zugelassen `_CORE` werden. Dieser Satz von Features wird weiter unten in diesem Thema definiert.
 
 ## <a name="shader-model-for-core-devices"></a>Shadermodell für Core-Geräte
 
-Ein Core-Gerät unterstützt shader Model 5.0 und mehr.
+Ein Core-Gerät unterstützt shader Model 5.0 oder mehr.
 
-Die Runtime führt die Konvertierung von 5.x nicht DXIL-Shadermodellen in 6.0 DXIL durch. Daher muss der Treiber nur 6.x unterstützen.
+Die Runtime führt die Konvertierung von 5.x-Nicht-DXIL-Shadermodellen in 6.0 DXIL durch. Daher muss der Treiber nur 6.x unterstützen.
 
 ## <a name="resource-management-model-for-core-devices"></a>Ressourcenverwaltungsmodell für Core-Geräte
 
-- Unterstützte Ressourcendimensionen: nur unformatierte und strukturierte Puffer (keine typierten Puffer, texture1d/2D usw.)
+- Unterstützte Ressourcendimensionen: nur rohe und strukturierte Puffer (keine typisierten Puffer, texture1d/2D usw.)
 - Keine Unterstützung für reservierte (gekachelte) Ressourcen
 - Keine Unterstützung für benutzerdefinierte Heaps
-- Diese Heapflags werden nicht unterstützt:
+- Keine Unterstützung für diese Heapflags:
   - D3D12_HEAP_FLAG_HARDWARE_PROTECTED
   - D3D12_HEAP_FLAG_ALLOW_WRITE_WATCH
   - D3D12_HEAP_FLAG_ALLOW_DISPLAY
-  - D3D12_HEAP_FLAG_ALLOW_SHADER_ATOMICS (Beachten Sie, dass Shader-Atomaren erforderlich sind, dieses Flag gilt für ein anderes Feature, adapterübergreifende Atomaren)
+  - D3D12_HEAP_FLAG_ALLOW_SHADER_ATOMICS (beachten Sie, dass Shader-Atomaren erforderlich sind, ist dieses Flag für ein anderes Feature, adapterübergreifende Atomaren)
 
 ## <a name="resource-binding-model-for-core-devices"></a>Ressourcenbindungsmodell für Core-Geräte
 
 - Unterstützung nur für Ressourcenbindungsebene 1
 - Ausnahmen:
-  - Keine Unterstützung für Texturs samplers
-  - Unterstützung für 64 UAVs wie Featureebene 11.1+ (im Gegensatz zu nur 8)
-  - Implementierungen müssen keine Begrenzungsprüfung für Shaderzugriffe auf Ressourcen über Deskriptoren implementieren, und Nicht-Begrenzungszugriffe erzeugen undefiniertes Verhalten.
-    - Als Nebenprodukt wird das Deskriptorbereichsflag D3D12_DESCRIPTOR_RANGE_FLAG_DESCRIPTORS_STATIC_KEEPING_BUFFER_BOUNDS_CHECKS Stammsignaturen nicht unterstützt.
-- UAV-/CBV-Deskriptoren können nur für Ressourcen aus Standardhaps erstellt werden (also keine Upload-/Readback-Heaps). Dies zwingt Ihre Anwendung, Kopien zu erstellen, um Daten über die CPU-< gpu >zu erhalten.
-- Obwohl es sich um die niedrigste Bindungsfunktionsebene handelt, sind auch in dieser Ebene noch einige Features erforderlich, die einen Aufruf wert sind:
-  - Deskriptor-Heaps können aktualisiert werden, nachdem Befehlslisten aufgezeichnet wurden (siehe D3D12_DESCRIPTOR_RANGE_FLAG_DESCRIPTORS_VOLATILE in der Ressourcenbindungsspezifikation).
-  - Stammdeskriptoren sind im Grunde GPUVA-Zeiger
-    - Obwohl keine MMU-/VA-Unterstützung verfügbar ist, können Puffer-VAs, die in Stammdeskriptoren verwendet werden, durch Implementierungen durch Adresspatching emuliert werden.
+  - Keine Unterstützung für Textur-Sampler
+  - Unterstützung für 64 UAVs wie Featureebene 11.1 und mehr (im Gegensatz zu nur 8)
+  - Implementierungen müssen keine Begrenzungen implementieren, die bei Shaderzugriffen auf Ressourcen über Deskriptoren überprüft werden. Zugriffe außerhalb der Grenzen führen zu undefiniertem Verhalten.
+    - Als Nebenprodukt wird das Deskriptorbereichsflag D3D12_DESCRIPTOR_RANGE_FLAG_DESCRIPTORS_STATIC_KEEPING_BUFFER_BOUNDS_CHECKS in Stammsignaturen nicht unterstützt.
+- UAV-/CBV-Deskriptoren können nur für Ressourcen aus Standardheaps erstellt werden (also keine Upload-/Rückschreibeheaps). Dadurch wird ihre Anwendung gezwungen, Kopien durchzuführen, um Daten über CPU-<->GPU abzurufen.
+- Obwohl es sich um die niedrigste Bindungsfunktionenebene handelt, sind auch in dieser Ebene noch einige Features erforderlich, die es wert sind, aufzurufen:
+  - Deskriptorheaps können aktualisiert werden, nachdem Befehlslisten aufgezeichnet wurden (siehe D3D12_DESCRIPTOR_RANGE_FLAG_DESCRIPTORS_VOLATILE in der Ressourcenbindungsspezifikation).
+  - Stammdeskriptoren sind im Grunde GPUVA-Zeiger.
+    - Obwohl keine MMU-/VA-Unterstützung vorhanden ist, können Puffer-VAs, die in Stammdeskriptoren verwendet werden, durch Implementierungen durch Adresspatches emuliert werden.
 
 ### <a name="structured-buffer-restrictions"></a>Einschränkungen für strukturierte Puffer
 
-Strukturierte Puffer müssen eine Basisadresse haben, die 4 Byte ausgerichtet ist, und stride muss 2 oder ein Vielfaches von 4 sein. Der Fall bei einem Schritt von 2 gilt für Apps mit 16-Bit-Daten, insbesondere wenn typierte Puffer in der D3D_FEATURE_LEVEL_1_0_CORE.
+Strukturierte Puffer müssen über eine Basisadresse verfügen, die auf 4 Byte ausgerichtet ist, und stride muss 2 oder ein Vielfaches von 4 sein. Der Fall für einen Schritt von 2 gilt für Apps mit 16-Bit-Daten, insbesondere wenn typisierte Puffer in D3D_FEATURE_LEVEL_1_0_CORE nicht unterstützt werden.
 
-Stride, das in Deskriptoren angegeben ist, muss mit dem in HLSL angegebenen Stride übereinstimmen.  
+Die in Deskriptoren angegebene Stride muss mit dem in HLSL angegebenen Schritt übereinstimmen.  
 
 ## <a name="command-queue-support-for-core-devices"></a>Unterstützung von Befehlswarteschlangen für Core-Geräte
 
-Berechnen und kopieren Sie nur Warteschlangen (keine 3D-, Video- usw. Warteschlangen).
+Nur Compute- und Kopierwarteschlangen (keine 3D-, Video- usw. Warteschlangen).
 
 ## <a name="shader-support-for-core-devices"></a>Shaderunterstützung für Core-Geräte
 
-Nur Compute-Shader, keine Grafik-Shader (Scheitelpunkt, Pixel-Shader usw.) oder zugehörige Funktionen wie Renderziele, Austauschketten, Eingabe-Assembler.
+Nur Compute-Shader, keine Grafik-Shader (Scheitelpunkt, Pixel-Shader usw.) oder verwandte Funktionen wie Renderziele, Austauschketten, Eingabeassemblierer.
 
 ### <a name="arithmetic-precision"></a>Arithmetische Genauigkeit
 
-Kerngeräte müssen keine Denormale für 16-Bit-Gleitkommavorgänge unterstützen.
+Kerngeräte müssen keine Denormen für 16-Bit-Gleitkommavorgänge unterstützen.
 
 ## <a name="supported-apis-for-core-devices"></a>Unterstützte APIs für Core-Geräte
 
-Die folgende Liste stellt die unterstützte Teilmenge der vollständigen Anwendungsprogrammierschnittstelle dar (APIs, die in Core 1.0 Featureebene nicht unterstützt *werden, werden nicht* aufgeführt). 
+Die folgende Liste stellt die unterstützte Teilmenge der vollständigen Anwendungsprogrammierschnittstelle dar (APIs, die in Core 1.0 Feature Level *nicht* unterstützt werden, sind *nicht* aufgeführt).
 
 ### <a name="id3d12device-methods"></a>ID3D12Device-Methoden
 

@@ -1,29 +1,29 @@
 ---
-title: Beispiel für einen strukturierten Speicher Server (stoservice)
-description: Das Tutorial zu strukturierten Speicher Servern für stoservice bietet umfassende Informationen und Codebeispiele zum Erstellen eines Modell Server Prozesses.
+title: Structured Storage Server-Beispiel (StoServe)
+description: Das Structured Storage Server-Tutorial für StoServe enthält vollständige Informationen und Codebeispiele zum Erstellen eines Modellserverprozesses.
 ms.assetid: 0607c77a-32c0-4b5a-b58d-f5fe56a3f614
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b54a0439d7d6024453fc0e6ed08d1cb4a2967244
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 4d7dfb0d1ceb5e082853ecbf7c31383125e2747396c0e5258872b450ca2f1f41
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339198"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119661680"
 ---
-# <a name="structured-storage-server-sample-stoserve"></a>Beispiel für einen strukturierten Speicher Server (stoservice)
+# <a name="structured-storage-server-sample-stoserve"></a>Structured Storage Server-Beispiel (StoServe)
 
-Das Tutorial zu strukturierten Speicher Servern für stoservice bietet umfassende Informationen und Codebeispiele zum Erstellen eines Modell Server Prozesses. **Stoservice** ist eine DLL, die in erster Linie als com-Server vorgesehen ist und ein in-Process-Server selbst Registrierender ist.
+Das Structured Storage Server-Tutorial für StoServe enthält vollständige Informationen und Codebeispiele zum Erstellen eines Modellserverprozesses. **StoServe ist** eine DLL, die hauptsächlich als COM-Server vorgesehen ist und sich selbst registriert.
 
-In den folgenden Abschnitten werden die Beispiel Anweisungen für das **stoservice** , Referenzinformationen und Links zum **stoservice** -Beispielcode bereitgestellt.
+Die folgenden Abschnitte enthalten die **StoServe-Beispielanweisungen,** Referenzinformationen und Links zum **StoServe-Beispielcode.**
 
--   [Übersicht über stoservice](stoserve-overview.md)
--   [Verwenden von stoservice](using-stoserve.md)
--   [Beispiel zum Erstellen und Ausführen von stoservice](create-and-run-stoserve-sample.md)
+-   [Übersicht über StoServe](stoserve-overview.md)
+-   [Verwenden von StoServe](using-stoserve.md)
+-   [Erstellen und Ausführen des StoServe-Beispiels](create-and-run-stoserve-sample.md)
 
- 
+ 
 
- 
+ 
 
 
 

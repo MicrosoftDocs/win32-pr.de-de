@@ -1,26 +1,26 @@
 ---
 description: Die in dieser Übersicht beschriebenen Funktionen rufen eine Vielzahl von Daten ab.
 ms.assetid: 869912f0-cb3b-402d-8445-3b1df6546da5
-title: Informationen zu System Informationen
+title: Informationen Systeminformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8313aea963855057e9ee7d78f56fd9e1263fbb49
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4aba65cfd4b8db15a4677510cb8524786d16b972b9d972c0b583fcf71a416a53
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117764974"
 ---
-# <a name="about-system-information"></a>Informationen zu System Informationen
+# <a name="about-system-information"></a>Informationen Systeminformationen
 
-Die in dieser Übersicht beschriebenen Funktionen rufen eine Vielzahl von Daten ab. Die System Konfigurationsinformationen beschreiben die Computer Hardware, den Computernamen und den Benutzernamen. In den Konfigurationsinformationen des Betriebssystems werden die Betriebssystemversion, die Schlüssel Verzeichnisse und die Umgebungsvariablen beschrieben. Die Systemparameter beschreiben Systemattribute. Die Systemmetriken stellen die Dimensionen der Elemente im Anzeigebereich bereit.
+Die in dieser Übersicht beschriebenen Funktionen rufen eine Vielzahl von Daten ab. Die Systemkonfigurationsinformationen beschreiben die Computerhardware, den Computernamen und den Benutzernamen. Die Informationen zur Betriebssystemkonfiguration beschreiben die Betriebssystemversion, Schlüsselverzeichnisse und Umgebungsvariablen. Die Systemparameter beschreiben Systemattribute. Die Systemmetriken stellen die Dimensionen der Elemente im Anzeigebereich bereit.
 
-In den folgenden Abschnitten wird beschrieben, wie Sie diese Arten von Informationen abrufen:
+In den folgenden Abschnitten wird beschrieben, wie diese Arten von Informationen erhalten werden:
 
--   [Hardware Konfiguration](hardware-configuration.md)
--   [Computer Namen](computer-names.md)
--   [Betriebs System Version](operating-system-version.md)
--   [Betriebs Systemkonfiguration](operating-system-configuration.md)
+-   [Hardwarekonfiguration](hardware-configuration.md)
+-   [Computernamen](computer-names.md)
+-   [Betriebssystemversion](operating-system-version.md)
+-   [Betriebssystemkonfiguration](operating-system-configuration.md)
 
  
 

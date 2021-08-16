@@ -1,11 +1,11 @@
 ---
-title: ms-DS-krbtgt-Link-Attribut
-description: Wird mit RODCs verwendet, um zu definieren, welches krbtgt \_ xxxx-Konto den einzelnen RODC entspricht.
+title: ms-DS-KrbTgt-Link-Attribut
+description: Wird mit RODCs verwendet, um zu definieren, welches krbtgt \_ XXXX-Konto jedem RODC entspricht.
 ms.assetid: 08c3e50f-7f2a-4746-86b6-77780316679c
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-krbtgt-Link\"-Attribut AD-Schema"
-- AD-Schema des msDS-krbtgtlink-Attributs
+- ms-DS-KrbTgt-Link-Attribut AD-Schema
+- MSDS-KrbTgtLink-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bcf8ddfee6f15532e4dad91fc1e34e1f136ea99b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8499af8941ebbdd37001e3f5a0d9ea3ebc98fd24dbeac96083fd5579b1872dde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960739"
 ---
-# <a name="ms-ds-krbtgt-link-attribute"></a>ms-DS-krbtgt-Link-Attribut
+# <a name="ms-ds-krbtgt-link-attribute"></a>ms-DS-KrbTgt-Link-Attribut
 
-Wird mit RODCs verwendet, um zu definieren, welches krbtgt \_ xxxx-Konto den einzelnen RODC entspricht.
+Wird mit RODCs verwendet, um zu definieren, welches krbtgt \_ XXXX-Konto jedem RODC entspricht.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-krbtgt-Link                       |
-| LDAP-Display-Name | MSDS-krbtgtlink                         |
+| CN                | ms-DS-KrbTgt-Link                       |
+| Ldap-Anzeigename | msDS-KrbTgtLink                         |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.1923                 |
 | System-ID-GUID    | 778ff5c9-6f4e-4b74-856a-d68383313910    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
@@ -55,10 +55,10 @@ Wird mit RODCs verwendet, um zu definieren, welches krbtgt \_ xxxx-Konto den ein
 | Link-ID                | 2100                                      |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
+| Ist einwertig       | True                                      |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -76,10 +76,10 @@ Wird mit RODCs verwendet, um zu definieren, welches krbtgt \_ xxxx-Konto den ein
 | Link-ID                | 2100                                      |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
+| Ist einwertig       | True                                      |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -97,10 +97,10 @@ Wird mit RODCs verwendet, um zu definieren, welches krbtgt \_ xxxx-Konto den ein
 | Link-ID                | 2100                                      |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
+| Ist einwertig       | True                                      |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |

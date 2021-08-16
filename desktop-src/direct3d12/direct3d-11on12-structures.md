@@ -20,9 +20,9 @@ Die folgenden Strukturen werden in d3d11on12.h deklariert.
 
 
 
-| Thema                                                             | Beschreibung                                                                                                                                                                                                                                                     |
+| Thema                                                             | BESCHREIBUNG                                                                                                                                                                                                                                                     |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**\_D3D11-RESSOURCENFLAGS \_**](/windows/desktop/api/d3d11on12/ns-d3d11on12-d3d11_resource_flags)<br/> | Wird mit [**ID3D11On12Device::CreateWrappedResource**](/windows/desktop/api/d3d11on12/nf-d3d11on12-id3d11on12device-createwrappedresource) verwendet, um Flags zu überschreiben, die von den Ressourceneigenschaften oder Heapeigenschaften abgeleitet werden, einschließlich Bindungsflags, Misc-Flags und CPU-Zugriffsflags. <br/> |
+| [**\_D3D11-RESSOURCENFLAGS \_**](/windows/desktop/api/d3d11on12/ns-d3d11on12-d3d11_resource_flags)<br/> | Wird mit [**ID3D11On12Device::CreateWrappedResource**](/windows/desktop/api/d3d11on12/nf-d3d11on12-id3d11on12device-createwrappedresource) verwendet, um Flags zu überschreiben, die von den Ressourceneigenschaften oder Heapeigenschaften abgeleitet werden, einschließlich Bindungsflags, Falschkennzeichen und CPU-Zugriffsflags. <br/> |
 
 
 

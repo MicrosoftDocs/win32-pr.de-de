@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_DBINFOMISC.logtimeDetach-Eigenschaft'
+description: 'Weitere Informationen zu: JET_DBINFOMISC.logtimeDetach-Eigenschaft'
 title: JET_DBINFOMISC.logtimeDetach-Eigenschaft
 TOCTitle: 'logtimeDetach property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.logtimeDetach
@@ -35,7 +35,7 @@ ms.locfileid: "118766174"
 ---
 # <a name="jet_dbinfomisclogtimedetach-property"></a>JET_DBINFOMISC.logtimeDetach-Eigenschaft
 
-Ruft den Zeitpunkt der letzten Trennung ab.
+Ruft die Zeit der letzten Trennung ab.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -68,6 +68,6 @@ Typ: [Microsoft.Isam.Esent.Interop.JET_LOGTIME](./jet-logtime-structure2.md)
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[JET_DBINFOMISC Member](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC-Member](./jet-dbinfomisc-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

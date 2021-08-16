@@ -1,27 +1,27 @@
 ---
-title: Beispiel Code für die Installation eines statischen Kontextmenü Elements
+title: Beispielcode für die Installation eines statischen Kontextmenüelements
 description: Im folgenden Codebeispiel werden zwei Skripts verwendet.
 ms.assetid: 22d6a220-7712-4b07-a6d9-67dd748358a6
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 33a8b6eb65706ad3adc9fd4c10b4c60f96a72848
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a16e4ff9890aa73b1107fe511c3e41480b5db7f1bb68a8a264a990cf58a94ea4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962319"
 ---
-# <a name="example-code-for-installing-a-static-context-menu-item"></a>Beispiel Code für die Installation eines statischen Kontextmenü Elements
+# <a name="example-code-for-installing-a-static-context-menu-item"></a>Beispielcode für die Installation eines statischen Kontextmenüelements
 
-Im folgenden Codebeispiel werden zwei Skripts verwendet. Das erste Skript (Frommenu.vbs) ist der Befehl, der ausgeführt wird, wenn das Menü Element ausgewählt wird. Das zweite Skript (Addmenu.vbs) installiert das Kontextmenü Element des Anzeige Spezifizierers, um das Skript Frommenu.vbs auszuführen. In diesem Beispiel wird das Gebiets Schema 409 (US-Englisch) angenommen und das Kontextmenü des Benutzer Objekts in Active Directory administrativen Snap-Ins erweitert.
+Im folgenden Codebeispiel werden zwei Skripts verwendet. Das erste Skript (Frommenu.vbs) ist der Befehl, der ausgeführt wird, wenn das Menüelement ausgewählt wird. Das zweite Skript (Addmenu.vbs) installiert das Kontextmenüelement des Anzeigebezeichners, um die Skriptdatei Frommenu.vbs. In diesem Beispiel wird das Lokale 409 (US-Englisch) angenommen und das Kontextmenü des Benutzerobjekts in Active Directory-Administrator-Snap-Ins erweitert.
 
 So führen Sie den Beispielcode aus
 
-1.  Kopieren Sie den Code für Frommenu.vbs unten, öffnen Sie den Editor, fügen Sie den Code in den Editor ein, speichern Sie die Datei als C: \\frommenu.vbs, und schließen Sie Notepad.
-2.  Kopieren Sie den Code für Addmenu.vbs unten, öffnen Sie den Editor, fügen Sie den Code in den Editor ein, speichern Sie die Datei als C: \\addmenu.vbs, und schließen Sie Notepad.
-3.  Führen Sie Addmenu.vbs aus.
-4.  Starten Sie das Snap-in Active Directory Benutzer und Computer.
+1.  Kopieren Sie den Code für Frommenu.vbs unten, öffnen Sie Editor, fügen Sie den Code in Editor ein, speichern Sie die Datei als C:frommenu.vbs, und schließen Sie \\ Editor.
+2.  Kopieren Sie den Code für Addmenu.vbs unten, öffnen Sie Editor, fügen Sie den Code in Editor ein, speichern Sie die Datei als C:addmenu.vbs, und schließen Sie \\ Editor.
+3.  Führen Sie Addmenu.vbs.
+4.  Starten Sie Active Directory-Benutzer und -Computer Snap-In.
 
 FROMMENU.VBS
 
@@ -126,9 +126,9 @@ End Sub
 
 
 
- 
+ 
 
- 
+ 
 
 
 

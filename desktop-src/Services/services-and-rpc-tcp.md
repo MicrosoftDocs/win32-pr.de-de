@@ -1,57 +1,57 @@
 ---
-description: Ab Windows Vista unterstützt der Dienststeuerungs-Manager (Service Control Manager, SCM) Remote Prozedur Aufrufe über RPC/TCP (Transmission Control Protocol) und Named Pipes (RPC/NP).
+description: Ab Windows Vista unterstützt der Dienststeuerungs-Manager (Service Control Manager, SCM) Remoteprozeduraufrufe sowohl über RPC/TCP (Transmission Control Protocol) als auch über Named Pipes (RPC/NP).
 ms.assetid: c51732f6-c22f-4726-afaa-13a8948ac44f
 title: Dienste und RPC/TCP
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3fdb2ef3b21f280ba4e5078d302813de41a5a43a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 49d4ddfe95e114a972c600c9bef44864aa99fbe4ec412312d03e08fa7d7fe15b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363715"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118888557"
 ---
 # <a name="services-and-rpctcp"></a>Dienste und RPC/TCP
 
-Ab Windows Vista unterstützt der Dienststeuerungs-Manager (Service Control Manager, SCM) Remote Prozedur Aufrufe über RPC/TCP (Transmission Control Protocol) und Named Pipes (RPC/NP). Client seitige SCM-Funktionen verwenden standardmäßig RPC/TCP.
+Ab Windows Vista unterstützt der Dienststeuerungs-Manager (Service Control Manager, SCM) Remoteprozeduraufrufe sowohl über RPC/TCP (Transmission Control Protocol) als auch über Named Pipes (RPC/NP). Clientseitige SCM-Funktionen verwenden standardmäßig RPC/TCP.
 
-RPC/TCP ist für die meisten Anwendungen geeignet, die SCM-Funktionen Remote verwenden, z. b. Remote Verwaltung oder Überwachungstools. Aus Kompatibilitätsgründen müssen einige Anwendungen jedoch möglicherweise RPC/TCP deaktivieren, indem Sie die in diesem Thema beschriebenen Registrierungs Werte festlegen.
+RPC/TCP ist für die meisten Anwendungen geeignet, die SCM-Funktionen remote verwenden, z. B. Remoteverwaltungs- oder Überwachungstools. Aus Kompatibilitäts- und Leistungssteigerungs-Grund müssen einige Anwendungen rpc/TCP jedoch möglicherweise deaktivieren, indem sie die in diesem Thema beschriebenen Registrierungswerte festlegen.
 
-Wenn ein Dienst eine Remote-SCM-Funktion aufruft, versucht der Client seitige SCM zunächst, RPC/TCP für die Kommunikation mit dem serverseitigen SCM zu verwenden. Wenn auf dem Server eine Version von Windows ausgeführt wird, die RPC/TCP unterstützt und RPC/TCP-Datenverkehr zulässt, wird die RPC/tcpp-Verbindung erfolgreich hergestellt. Wenn auf dem Server eine Version von Windows ausgeführt wird, die RPC/TCP nicht unterstützt, oder RPC/TCP unterstützt, aber eine Firewall verwendet, die nur Named Pipe-Datenverkehr zulässt, tritt für die RPC-/TCP-Verbindung ein Timeout auf, und der SCM versucht erneut, die Verbindung mit RPC/NP herzustellen. Dies ist zwar erfolgreich, kann jedoch einige Zeit in Anspruch nehmen (in der Regel mehr als 20 Sekunden), wodurch die [**OpenSCManager**](/windows/desktop/api/Winsvc/nf-winsvc-openscmanagera) -Funktion blockiert wird.
+Wenn ein Dienst eine Remote-SCM-Funktion aufruft, versucht der clientseitige SCM zunächst, RPC/TCP für die Kommunikation mit dem serverseitigen SCM zu verwenden. Wenn auf dem Server eine Version von Windows ausgeführt wird, die RPC/TCP unterstützt und RPC/TCP-Datenverkehr zulässt, wird die RPC/TCPP-Verbindung erfolgreich hergestellt. Wenn auf dem Server eine Version von Windows ausgeführt wird, die RPC/TCP nicht unterstützt oder RPC/TCP unterstützt, aber hinter einer Firewall ausgeführt wird, die nur Named Pipe-Datenverkehr zulässt, kommt es bei der RPC/TCP-Verbindung zu einem Zeitbruch, und der SCM unterstütz die Verbindung mit RPC/NP erneut. Dies wird letztendlich erfolgreich sein, kann jedoch einige Zeit (in der Regel mehr als 20 Sekunden) dauern, sodass die [**OpenSCManager-Funktion**](/windows/desktop/api/Winsvc/nf-winsvc-openscmanagera) blockiert erscheint.
 
-TCP führt keine Benutzer Anmelde Informationen ein, die mit einem **net use** -Befehl angegeben werden. Wenn RPC/TCP aktiviert ist und **sc.exe** verwendet wird, um auf den angegebenen Dienst zuzugreifen, schlägt der Befehl daher möglicherweise fehl, und der Zugriff wird verweigert. Das Deaktivieren von RPC/TCP auf der Clientseite bewirkt, dass der **sc.exe** Befehl eine Named Pipe verwendet, die Benutzer Anmelde Informationen enthält, sodass der Befehl erfolgreich ausgeführt wird. Weitere Informationen zu sc.exe finden [Sie Untersteuern eines Dienstanbieter mit SC](controlling-a-service-using-sc.md).
+TCP enthält keine Benutzeranmeldeinformationen, die mit einem **net use-Befehl angegeben** wurden. Wenn RPC/TCP aktiviert ist  undsc.exewird, um auf den angegebenen Dienst zu zugreifen, kann der Befehl daher fehlschlagen, wenn der Zugriff verweigert wird. Das Deaktivieren von RPC/TCP auf Clientseite bewirkt, dass der **sc.exe-Befehl** eine Named Pipe verwendet, die Benutzeranmeldeinformationen enthält, sodass der Befehl erfolgreich ausgeführt wird. Weitere Informationen zu sc.exe sie unter [Steuern eines Diensts mit sc](controlling-a-service-using-sc.md).
 
 > [!Note]  
-> Ein Dienst sollte keinen expliziten Anmelde Informationen für einen **net use** -Befehl bereitstellen, da diese Anmelde Informationen versehentlich außerhalb der Dienst Grenzen freigegeben werden können. Stattdessen sollte der Dienst [Client](/windows/desktop/SecAuthZ/client-impersonation) Identitätswechsel verwenden, um die Identität des Benutzers anzunehmen.
+> Ein Dienst sollte keine expliziten Anmeldeinformationen für einen **net use-Befehl** bereitstellen, da diese Anmeldeinformationen möglicherweise versehentlich außerhalb der Dienstgrenzen freigegeben werden. Stattdessen sollte der Dienst [clientpersonation verwenden,](/windows/desktop/SecAuthZ/client-impersonation) um die Identität des Benutzers zu imitieren.
 
  
 
-### <a name="rpctcp-registry-values"></a>RPC/TCP-Registrierungs Werte
+### <a name="rpctcp-registry-values"></a>RPC/TCP-Registrierungswerte
 
-RPC/TCP wird von den Registrierungs Werten " **scmapiconnectionparam**", " **disablerpcovertcp**" und " **disableremotescmendpoints** " gesteuert, die alle unter dem **HKEY \_ local \_ Machine** \\ **System** \\ **CurrentControlSet** \\ **Control** Key sind. Alle diese Werte haben einen reg \_ DWORD-Datentyp. In den folgenden Verfahren wird gezeigt, wie Sie diese Registrierungs Werte zum Steuern von RPC/TCP verwenden.
+RPC/TCP wird durch die Registrierungswerte **SCMApiConnectionParam,** **DisableRPCOverTCP** und **DisableRemoteScmEndpoints** gesteuert, die sich alle unter dem **HKEY \_ LOCAL \_ MACHINE** \\ **SYSTEM** \\ **CurrentControlSet** \\ **Control-Schlüssel** befinden. Alle diese Werte haben einen REG \_ DWORD-Datentyp. Die folgenden Verfahren zeigen, wie sie diese Registrierungswerte verwenden, um RPC/TCP zu steuern.
 
-Im folgenden Verfahren wird beschrieben, wie Sie RPC/TCP auf Clientseite deaktivieren.
+Im folgenden Verfahren wird beschrieben, wie RPC/TCP auf clientseitiger Seite deaktiviert wird.
 
 **So deaktivieren Sie RPC/TCP auf Clientseite**
 
-1.  Kombinieren Sie den **scmapiconnectionparam** -Registrierungs Wert mit dem Maskenwert 0x80000000.
-2.  Starten Sie die Anwendung neu, die die [**OpenSCManager**](/windows/desktop/api/Winsvc/nf-winsvc-openscmanagera) -Funktion aufruft.
+1.  Kombinieren Sie **den Registrierungswert SCMApiConnectionParam** mit dem Maskenwert 0x80000000.
+2.  Starten Sie die Anwendung neu, die die [**OpenSCManager-Funktion**](/windows/desktop/api/Winsvc/nf-winsvc-openscmanagera) aufruft.
 
-Im folgenden Verfahren wird beschrieben, wie Sie TCP auf Serverseite deaktivieren.
+Im folgenden Verfahren wird beschrieben, wie TCP auf Serverseite deaktiviert wird.
 
-**So deaktivieren Sie TCP auf der Serverseite**
+**So deaktivieren Sie TCP auf Serverseite**
 
-1.  Legen Sie den Registrierungs Wert **disablerpcovertcp** auf 1 fest.
+1.  Legen Sie **den Registrierungswert DisableRPCOverTCP** auf 1 fest.
 2.  Starten Sie den Server neu.
 
-Im folgenden Verfahren wird beschrieben, wie sowohl RPC/TCP als auch RPC/NP auf dem Server deaktiviert werden (z. b. um die Angriffsfläche zu verringern).
+Im folgenden Verfahren wird beschrieben, wie Sie sowohl RPC/TCP als auch RPC/NP auf dem Server deaktivieren (z. B. um die Angriffsfläche zu verringern).
 
 **So deaktivieren Sie sowohl RPC/TCP als auch RPC/NP auf dem Server**
 
-1.  Legen Sie den Registrierungs Wert **disableremotescmendpoints** auf 1 fest.
+1.  Legen Sie **den Registrierungswert DisableRemoteScmEndpoints auf** 1 fest.
 2.  Starten Sie den Server neu.
 
-Der **scmapiconnectionparam** -Registrierungs Wert kann auch verwendet werden, um das RPC/TCP-Timeout Intervall (in Millisekunden) anzugeben. Der Wert 30.000 gibt z. b. ein Timeout Intervall von 30 Sekunden an. Der Standardwert ist 21.000 (21 Sekunden).
+Der **Registrierungswert SCMApiConnectionParam** kann auch verwendet werden, um das RPC/TCP-Time out-Intervall in Millisekunden anzugeben. Beispielsweise gibt der Wert 30.000 ein Time out-Intervall von 30 Sekunden an. Der Standardwert ist 21.000 (21 Sekunden).
 
  
 

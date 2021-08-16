@@ -1,9 +1,9 @@
 ---
 title: Modulattribut
-description: Die Modul-Anweisung definiert eine Gruppe von Funktionen, in der Regel einen Satz von DLL-Einstiegspunkten.
+description: Die Modul-Anweisung definiert eine Gruppe von Funktionen, in der Regel eine Gruppe von DLL-Einstiegspunkten.
 ms.assetid: 4dec207f-98bc-4784-a3c9-506ffe7523fe
 keywords:
-- Midl-Modulattribut
+- Modulattribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118642808"
 ---
 # <a name="module-attribute"></a>Modulattribut
 
-Die **Modul-Anweisung** definiert eine Gruppe von Funktionen, in der Regel einen Satz von DLL-Einstiegspunkten.
+Die **Modul-Anweisung** definiert eine Gruppe von Funktionen, in der Regel eine Gruppe von DLL-Einstiegspunkten.
 
 ``` syntax
 [
@@ -40,7 +40,7 @@ module modulename
 *attributes* 
 </dt> <dd>
 
-Die Attribute \[ [**uuid**](uuid.md) \] , \[ [**version**](version.md) \] , \[ [**helpstring**](helpstring.md), \] \[ [**helpcontext**](helpcontext.md), \] \[ [**hidden**](hidden.md) \] und \[ [**dllname**](dllname-str-.md) werden vor einer \] Modulanweisung akzeptiert.  Weitere Informationen zu den Attributen, die vor einer Moduldefinition akzeptiert werden, finden Sie unter [Attributbeschreibungen](/previous-versions/windows/desktop/automat/attribute-descriptions)im Buch OLE-Automatisierung. Das \[ **attribut dllname** \] ist erforderlich. Wenn das \[ **uuid-Attribut** \] ausgelassen wird, wird das Modul im System nicht eindeutig angegeben.
+Die \[ [**Attribute uuid**](uuid.md) \] , \[ [**version**](version.md) \] , \[ [**helpstring**](helpstring.md), helpcontext , hidden und dllname werden vor einer \] \[ [](helpcontext.md) \] \[ [](hidden.md) \] \[ [](dllname-str-.md) \] **Modul-Anweisung** akzeptiert. Weitere [Informationen zu den Attributen,](/previous-versions/windows/desktop/automat/attribute-descriptions)die vor einer Moduldefinition akzeptiert werden, finden Sie unter Attributbeschreibungen im Ole Automation-Buch. Das \[ **dllname-Attribut** \] ist erforderlich. Wenn das \[ **uuid-Attribut** \] weggelassen wird, wird das Modul nicht eindeutig im System angegeben.
 
 </dd> <dt>
 
@@ -56,31 +56,31 @@ Der Name des Moduls.
 
 Liste der konstanten Definitionen und Funktionsprototypen für jede Funktion in der DLL. Eine beliebige Anzahl von Funktionsdefinitionen kann in der Funktionsliste angezeigt werden. Eine Funktion in der Funktionsliste hat die folgende Form:
 
-\[*Attribute* \] *returntype* \[ *calling convention funcname* \] (*params*);
+\[*Attribute* \] *returntype* \[ *aufrufkonvention funcname* \] (*params*);
 
 \[*Attribute* \] [**const**](const.md) constanttype *constname*  =  *constval*;
 
-Nur die \[ [**Attribute helpstring**](helpstring.md) \] und \[ [**helpcontext**](helpcontext.md) werden für eine \] [**const**](const.md)akzeptiert.
+Nur die \[ [**Attribute helpstring**](helpstring.md) \] und \[ [**helpcontext**](helpcontext.md) werden für eine const \] [**akzeptiert.**](const.md)
 
-Die folgenden Attribute werden für eine Funktion in einem Modul akzeptiert: \[ [**helpstring**](helpstring.md) \] , \[ [**helpcontext**](helpcontext.md) \] , \[ [**string**](string.md) \] , \[ [**entry**](entry.md) \] , \[ [**propget**](propget.md), \] \[ [**propput**](propput.md), \] \[ [**propputref**](propputref.md)und \] \[ [**lvarg**](vararg.md) \] . Wenn \[ **lvarg** \] angegeben wird, muss der letzte  Parameter ein sicheres Array vom Variant-Typ sein.
+Die folgenden Attribute werden für eine Funktion in einem Modul akzeptiert: \[ [**helpstring**](helpstring.md) \] , \[ [**helpcontext**](helpcontext.md) \] , \[ [**string**](string.md) \] , \[ [**entry**](entry.md) \] , \[ [**propget**](propget.md), \] \[ [**propput**](propput.md), \] \[ [**propputref**](propputref.md)und \] \[ [**triburg**](vararg.md) \] . Wenn \[ **fgrg** \] angegeben wird, muss der letzte Parameter ein sicheres Array vom Typ **VARIANT** sein.
 
-Die optionale Aufrufkonvention kann eine von \_ \_ \_ "pascal/pascal/pascal", \_ \_ "cdecl/cdecl/cdecl" \_ oder \_ \_ "stdcall/stdcall/stdcall" \_ sein. Der *Aufrufkonventionentyp paramname* kann bis zu zwei führende Unterstriche enthalten.
+Die optionale Aufrufkonvention kann \_ \_ \_ pascal/pascal/pascal, \_ \_ cdecl/cdecl/cdecl \_ oder \_ \_ stdcall/stdcall/stdcall \_ sein. Der *Aufrufkonventionentyp paramname* kann bis zu zwei führende Unterstriche enthalten.
 
-Die Parameterliste ist eine durch Kommas getrennte Liste von:
+Die Parameterliste ist eine durch Trennzeichen getrennte Liste von:
 
 \[*Attribute*\]
 
 Der Typ kann ein beliebiger zuvor deklarierter Typ oder integrierter Typ, ein Zeiger auf einen beliebigen Typ oder ein Zeiger auf einen integrierten Typ sein. Attribute für Parameter sind:
 
-\[[**in**](in.md) \] , \[ [**out**](out-idl.md) \] , \[ [**optional.**](optional.md) \]
+\[[**in**](in.md) \] , \[ [**out**](out-idl.md) \] , \[ [**optional**](optional.md) \] .
 
-Wenn \[ [**optional**](optional.md) \] verwendet wird, müssen die Typen dieser Parameter **VARIANT** oder **VARIANT** \* sein.
+Wenn \[ [**optional**](optional.md) \] verwendet wird, müssen die Typen dieser Parameter **VARIANT** oder **VARIANT sein.** \*
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die Ausgabe der Headerdatei (.h) für Module ist eine Reihe von Funktionsprototypen. Das **Modulschlüsselwort** und die umgebenden Klammern werden aus der Headerdateiausgabe (.h) entfernt, aber vor den Prototypen wird ein Kommentar (/ **Modulmodulname** ) eingefügt. Das Schlüsselwort **extern** wird vor den Deklarationen eingefügt.
+Die Ausgabe der Headerdatei (.h) für Module ist eine Reihe von Funktionsprototypen. Das **Modulschlüsselwort** und die umgebenden Klammern werden aus der Headerdateiausgabe (.h) entfernt, aber vor den Prototypen wird ein Kommentar **(/** *Modulname*) eingefügt. Das Schlüsselwort **extern** wird vor den Deklarationen eingefügt.
 
 ## <a name="examples"></a>Beispiele
 
@@ -141,7 +141,7 @@ module somemodule
 [**Propputref**](propputref.md)
 </dt> <dt>
 
-[**Zeichenfolge**](string.md)
+[**Schnur**](string.md)
 </dt> <dt>
 
 [**Typeflags**](/windows/win32/api/oaidl/ne-oaidl-typeflags)

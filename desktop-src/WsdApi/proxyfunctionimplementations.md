@@ -31,12 +31,12 @@ Es gibt keine Attribute.
 
 
 
-| Element                                     | Beschreibung                                                                                                             |
+| Element                                     | BESCHREIBUNG                                                                                                             |
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | [**Asynchrone**](async.md)<br/>           | Gibt an, ob asynchrone Vorgänge in den generierten Proxyfunktionen enthalten sind.<br/> <br/>         |
 | [**Ereignisse**](events.md)<br/>         | Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/>                        |
 | [**faultInfo**](faultinfo.md)<br/>   | Gibt an, ob Parameter, die zum Übergeben von Fehlerinformationen verwendet werden, in generierten Funktionen enthalten sind.<br/> <br/> |
-| [**operation**](operation.md)<br/>   | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                                        |
+| [**Vorgang**](operation.md)<br/>   | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                                        |
 | [**Porttype**](porttype.md)<br/>     | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                                       |
 | [**proxyClass**](proxyclass.md)<br/> | Gibt den Namen der clientseitigen Proxyklasse an.<br/> <br/>                                               |
 
@@ -59,7 +59,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                         | Beschreibung                                                    |
+| Element                         | BESCHREIBUNG                                                    |
 |---------------------------------|----------------------------------------------------------------|
 | [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 

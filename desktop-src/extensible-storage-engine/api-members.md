@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API-Member'
+description: 'Weitere Informationen zu: API-Mitglieder'
 title: API-Member
 TOCTitle: Api members
 ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.Api
@@ -16,10 +16,10 @@ ms.locfileid: "118784672"
 ---
 # <a name="api-members"></a>API-Member
 
-Geschützte Member enthalten  
-Geerbte Member enthalten  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-Verwaltete Versionen der ESENT-API. Diese Klasse enthält statische Methoden, die der nicht verwalteten ESENT-API entsprechen. Diese Methoden auslösen Ausnahmen, wenn Fehler zurückgegeben werden. Hilfsmethoden für die ESENT-API. Diese umschließen JetMakeKey. Nur interne Methoden der API. Hilfsmethoden für die ESENT-API. Diese datenkonvertierung für JetMakeKey. Hilfsmethoden für die ESENT-API. Diese Methoden behandeln Datenbankmetadaten. Hilfsmethoden für die ESENT-API. Dabei handelt es sich nicht um Interopversionen der API, sondern um sehr häufige Verwendungen der Funktionen. API-Member, die als veraltet markiert sind. Hilfsmethoden für die ESENT-API. Dabei handelt es sich nicht um Interopversionen der API, sondern um sehr häufige Verwendungen der Funktionen. Hilfsmethoden für die ESENT-API. Dies ist eine Datenkonvertierung zum Festlegen von Spalten.
+Verwaltete Versionen der ESENT-API. Diese Klasse enthält statische Methoden, die der nicht verwalteten ESENT-API entsprechen. Diese Methoden auslösen Ausnahmen, wenn Fehler zurückgegeben werden. Hilfsmethoden für die ESENT-API. Diese umschließen JetMakeKey. Rein interne Methoden der API. Hilfsmethoden für die ESENT-API. Dies sind Datenkonvertierungen für JetMakeKey. Hilfsmethoden für die ESENT-API. Diese Methoden behandeln Datenbankmetadaten. Hilfsmethoden für die ESENT-API. Dies sind keine Interop-Versionen der API, kapseln aber sehr häufige Verwendungsmöglichkeiten der Funktionen. API-Member, die als veraltet markiert sind. Hilfsmethoden für die ESENT-API. Dies sind keine Interop-Versionen der API, kapseln aber sehr häufige Verwendungsmöglichkeiten der Funktionen. Hilfsmethoden für die ESENT-API. Dies ist eine Datenkonvertierung zum Festlegen von Spalten.
 
 Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 
@@ -30,7 +30,7 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
@@ -47,42 +47,42 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292114(v=exchg.10).md">EscrowUpdate</a></td>
-<td>Führen Sie eine atomarer Addition für eine Spalte aus. Die Spalte muss vom Typ <a href="hh577895(v=exchg.10).md">Long sein.</a> Diese Funktion ermöglicht mehreren Sitzungen, denselben Datensatz ohne Konflikte gleichzeitig zu aktualisieren.</td>
+<td>Führen Sie eine atomare Addition für eine Spalte aus. Die Spalte muss vom Typ <a href="hh577895(v=exchg.10).md">Long</a>sein. Diese Funktion ermöglicht es mehreren Sitzungen, denselben Datensatz gleichzeitig ohne Konflikte zu aktualisieren.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292099(v=exchg.10).md">GetBookmark</a></td>
-<td>Ruft das Lesezeichen für den Datensatz ab, der dem Indexeintrag an der aktuellen Position eines Cursors zugeordnet ist. Dieses Lesezeichen kann dann verwendet werden, um den Cursor mit JetGotoBookmark wieder auf denselben Datensatz zu positionieren.</td>
+<td>Ruft das Lesezeichen für den Datensatz ab, der dem Indexeintrag an der aktuellen Position eines Cursors zugeordnet ist. Dieses Lesezeichen kann dann verwendet werden, um diesen Cursor mithilfe von JetGotoBookmark wieder auf denselben Datensatz zu positionieren.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292098(v=exchg.10).md">GetColumnDictionary</a></td>
-<td>Erstellt ein Wörterbuch, das Spaltennamen ihren Spalten-IDs zulädt.</td>
+<td>Erstellt ein Wörterbuch, das Spaltennamen ihren Spalten-IDs zulistet.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292101(v=exchg.10).md">GetTableColumnid</a></td>
-<td>Get the columnid of the specified column.</td>
+<td>Abrufen der columnid der angegebenen Spalte.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292090(v=exchg.10).md">GetTableColumns(JET_SESID, JET_TABLEID)</a></td>
-<td>Durch iteriert alle Spalten in der Tabelle und gibt Informationen zu den einzelnen Spalten zurück.</td>
+<td>Durchläuft alle Spalten in der Tabelle und gibt Informationen zu jeder Spalte zurück.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292089(v=exchg.10).md">GetTableColumns(JET_SESID, JET_DBID, String)</a></td>
-<td>Durch iteriert alle Spalten in der Tabelle und gibt Informationen zu den einzelnen Spalten zurück.</td>
+<td>Durchläuft alle Spalten in der Tabelle und gibt Informationen zu jeder Spalte zurück.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292093(v=exchg.10).md">GetTableIndexes(JET_SESID, JET_TABLEID)</a></td>
-<td>Durch iteriert alle Indizes in der Tabelle und gibt Informationen zu jedem Index zurück.</td>
+<td>Durchläuft alle Indizes in der Tabelle und gibt Informationen zu jedem Index zurück.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292092(v=exchg.10).md">GetTableIndexes(JET_SESID, JET_DBID, String)</a></td>
-<td>Durch iteriert alle Indizes in der Tabelle und gibt Informationen zu jedem Index zurück.</td>
+<td>Durchläuft alle Indizes in der Tabelle und gibt Informationen zu jedem Index zurück.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -92,7 +92,7 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292094(v=exchg.10).md">IntersectIndexes</a></td>
-<td>Überschneiden Sie eine Gruppe von Indexbereichen, und geben Sie die Lesezeichen der Datensätze zurück, die in allen Indexbereichen gefunden werden. Siehe auch <a href="dn292212(v=exchg.10).md">JetIntersectIndexes(JET_SESID, [], Int32, JET_RECORDLIST, IntersectIndexesGrbit)</a>.</td>
+<td>Schneidet eine Gruppe von Indexbereichen ab und gibt die Lesezeichen der Datensätze zurück, die sich in allen Indexbereichen befinden. Siehe auch <a href="dn292212(v=exchg.10).md">JetIntersectIndexes(JET_SESID, [], Int32, JET_RECORDLIST, IntersectIndexesGrbit).</a></td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -102,17 +102,17 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292096(v=exchg.10).md">JetAttachDatabase</a></td>
-<td>Angefügt eine Datenbankdatei zur Verwendung mit einer Datenbankinstanz. Um die Datenbank verwenden zu können, muss sie anschließend mit <a href="dn292219(v=exchg.10).md">JetOpenDatabase(JET_SESID, String, String, JET_DBID, OpenDatabaseGrbit) geöffnet werden.</a></td>
+<td>Fügt eine Datenbankdatei zur Verwendung mit einer Datenbankinstanz an. Um die Datenbank verwenden zu können, muss sie anschließend mit <a href="dn292219(v=exchg.10).md">JetOpenDatabase(JET_SESID, String, String, JET_DBID, OpenDatabaseGrbit)</a>geöffnet werden.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292100(v=exchg.10).md">JetAttachDatabase2</a></td>
-<td>Angefügt eine Datenbankdatei zur Verwendung mit einer Datenbankinstanz. Um die Datenbank verwenden zu können, muss sie anschließend mit <a href="dn292219(v=exchg.10).md">JetOpenDatabase(JET_SESID, String, String, JET_DBID, OpenDatabaseGrbit) geöffnet werden.</a></td>
+<td>Fügt eine Datenbankdatei zur Verwendung mit einer Datenbankinstanz an. Um die Datenbank verwenden zu können, muss sie anschließend mit <a href="dn292219(v=exchg.10).md">JetOpenDatabase(JET_SESID, String, String, JET_DBID, OpenDatabaseGrbit)</a>geöffnet werden.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292102(v=exchg.10).md">JetBackupInstance</a></td>
-<td>Führt eine Streamingsicherung einer Instanz, einschließlich aller angefügten Datenbanken, in einem Verzeichnis aus. Da mehrere Sicherungsmethoden von der Engine unterstützt werden, ist dies die einfachste und am meisten gekapselte Funktion.</td>
+<td>Führt eine Streamingsicherung einer Instanz einschließlich aller angefügten Datenbanken in einem Verzeichnis aus. Da die Engine mehrere Sicherungsmethoden unterstützt, ist dies die einfachste und am häufigsten gekapselte Funktion.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -127,12 +127,12 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292105(v=exchg.10).md">JetBeginTransaction</a></td>
-<td>Bewirkt, dass eine Sitzung eine Transaktion eingibt oder einen neuen Sicherungspunkt in einer vorhandenen Transaktion erstellt.</td>
+<td>Bewirkt, dass eine Sitzung eine Transaktion ein- oder einen neuen Speicherpunkt in einer vorhandenen Transaktion erstellt.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292106(v=exchg.10).md">JetBeginTransaction2</a></td>
-<td>Bewirkt, dass eine Sitzung eine Transaktion eingibt oder einen neuen Sicherungspunkt in einer vorhandenen Transaktion erstellt.</td>
+<td>Bewirkt, dass eine Sitzung eine Transaktion ein- oder einen neuen Speicherpunkt in einer vorhandenen Transaktion erstellt.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -152,27 +152,27 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292110(v=exchg.10).md">JetCommitTransaction</a></td>
-<td>Committet die Änderungen, die während des aktuellen Sicherungspunkts am Zustand der Datenbank vorgenommen wurden, und migriert sie zum vorherigen Sicherungspunkt. Wenn für den äußersten Sicherungspunkt ein Commit ausgeführt wird, werden die während dieses Speicherpunkts vorgenommenen Änderungen in den Zustand der Datenbank übernommen, und die Sitzung beendet die Transaktion.</td>
+<td>Commit für die Änderungen, die während des aktuellen Speicherpunkts am Zustand der Datenbank vorgenommen wurden, und migriert sie zum vorherigen Speicherpunkt. Wenn für den äußersten Speicherpunkt ein Committed ausgeführt wird, wird für die während dieses Speicherpunkts vorgenommenen Änderungen ein Committed in den Zustand der Datenbank ausgeführt, und die Sitzung beendet die Transaktion.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292112(v=exchg.10).md">JetCompact</a></td>
-<td>Erstellt eine Kopie einer vorhandenen Datenbank. Die Kopie wird für die Verwendung in einen optimalen Zustand komprimiert. Die Daten in den kopierten Daten werden entsprechend den Measures gepackt, die für die Indizes bei der Indexerstellung ausgewählt wurden. Auf diese Weise können komprimierte Daten so dichte wie möglich gespeichert werden. Alternativ können komprimierte Daten Speicherplatz für nachfolgende Datensatzvergrößerungen oder Indexeinfügungen reservieren.</td>
+<td>Erstellt eine Kopie einer vorhandenen Datenbank. Die Kopie wird in einen zustandsoptimierten Zustand komprimiert, der für die Verwendung optimal ist. Die Daten in den kopierten Daten werden entsprechend den Measures gepackt, die für die Indizes beim Erstellen des Indexes ausgewählt wurden. Auf diese Weise können komprimierte Daten so eng wie möglich gespeichert werden. Alternativ können komprimierte Daten Speicherplatz für nachfolgende Datensatzverfügungen oder Indexeinfügungen reservieren.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292113(v=exchg.10).md">JetComputeStats</a></td>
-<td>Führt jeden Index einer Tabelle durch, um die Anzahl der Einträge in einem Index und die Anzahl der unterschiedlichen Schlüssel in einem Index genau zu berechnen. Diese Informationen werden zusammen mit der Anzahl der Datenbankseiten, die einem Index zugeordnet sind, und der aktuellen Berechnungszeit in Indexmetadaten in der Datenbank gespeichert. Diese Daten können anschließend mit Informationsvorgängen abgerufen werden.</td>
+<td>Durchfingt jeden Index einer Tabelle, um die Anzahl der Einträge in einem Index und die Anzahl der unterschiedlichen Schlüssel in einem Index genau zu berechnen. Diese Informationen werden zusammen mit der Anzahl der Datenbankseiten, die einem Index zugeordnet sind, und der aktuellen Zeit der Berechnung in Indexmetadaten in der Datenbank gespeichert. Diese Daten können anschließend mit Informationsvorgängen abgerufen werden.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292118(v=exchg.10).md">JetCreateDatabase</a></td>
-<td>Erstellt eine Datenbankdatei und fügt sie an.</td>
+<td>Erstellt eine Datenbankdatei und hängt sie an.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292120(v=exchg.10).md">JetCreateDatabase2</a></td>
-<td>Erstellt eine Datenbankdatei mit einer angegebenen maximalen Datenbankgröße und fügt sie an.</td>
+<td>Erstellt und angefügt eine Datenbankdatei mit einer angegebenen maximalen Datenbankgröße.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -192,7 +192,7 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292126(v=exchg.10).md">JetCreateInstance2</a></td>
-<td>Zuordnen einer neuen Instanz der Datenbank-Engine zur Verwendung in einem einzelnen Prozess mit einem angegebenen Anzeigenamen.</td>
+<td>Ordnen Sie eine neue Instanz der Datenbank-Engine für die Verwendung in einem einzelnen Prozess mit einem angegebenen Anzeigenamen zu.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -277,7 +277,7 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292148(v=exchg.10).md">JetEnumerateColumns</a></td>
-<td>Ruft effizient eine Gruppe von Spalten und deren Werte aus dem aktuellen Datensatz eines Cursors oder des Kopierpuffers dieses Cursors ab. Die abgerufenen Spalten und Werte können durch eine Liste von Spalten-IDs, itagSequence-Zahlen und anderen Merkmalen eingeschränkt werden. Diese Spaltenabruf-API ist einzigartig, da sie Informationen in dynamisch zugeordneten Arbeitsspeicher zurückgibt, der mithilfe eines vom Benutzer bereitgestellten realloc-kompatiblen Rückrufs ermittelt wird. Diese neue Flexibilität ermöglicht den effizienten Abruf von Spaltendaten mit bestimmten Merkmalen (z. B. Größe und Multiplicität), die dem Aufrufer unbekannt sind. Dadurch entfällt die Notwendigkeit, die Ermittlungsmodi von JetRetrieveColumn zu verwenden, um diese Merkmale zu bestimmen, um einen abschließenden Aufruf von JetRetrieveColumn einzurichten, der die gewünschten Daten erfolgreich abruft.</td>
+<td>Ruft effizient eine Gruppe von Spalten und deren Werte aus dem aktuellen Datensatz eines Cursors oder des Kopierpuffers dieses Cursors ab. Die abgerufenen Spalten und Werte können durch eine Liste von Spalten-IDs, itagSequence-Zahlen und anderen Merkmalen eingeschränkt werden. Diese API zum Abrufen von Spalten ist einzigartig, da sie Informationen im dynamisch zugeordneten Speicher zurückgibt, der mithilfe eines vom Benutzer bereitgestellten, mit einem Realloc kompatiblen Rückrufs ermittelt wird. Diese neue Flexibilität ermöglicht den effizienten Abruf von Spaltendaten mit bestimmten Merkmalen (z. B. Größe und Multiplicität), die dem Aufrufer unbekannt sind. Dadurch entfällt die Notwendigkeit, die Ermittlungsmodi von JetRetrieveColumn zu verwenden, um diese Merkmale zu bestimmen, um einen abschließenden Aufruf von JetRetrieveColumn einzurichten, der die gewünschten Daten erfolgreich abruft.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -292,7 +292,7 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292154(v=exchg.10).md">JetGetAttachInfoInstance</a></td>
-<td>Wird während einer Sicherung verwendet, die von <a href="dn292104(v=exchg.10).md">JetBeginExternalBackupInstance(JET_INSTANCE, BeginExternalBackupGrbit)</a> initiiert wird, um eine Instanz nach den Namen von Datenbankdateien abfragt, die Teil des Sicherungsdateisets werden sollen. Es werden nur Datenbanken berücksichtigt, die derzeit mit <a href="dn292096(v=exchg.10).md">JetAttachDatabase(JET_SESID, String, AttachDatabaseGrbit)</a> an die Instanz angefügt sind. Diese Dateien können anschließend mit <a href="dn292230(v=exchg.10).md">JetOpenFileInstance(JET_INSTANCE, String, JET_HANDLE, Int64, Int64)</a> geöffnet und mit <a href="dn332987(v=exchg.10).md">JetReadFileInstance(JET_INSTANCE, JET_HANDLE, [], Int32, Int32) gelesen</a>werden.</td>
+<td>Wird während einer Sicherung verwendet, die von <a href="dn292104(v=exchg.10).md">JetBeginExternalBackupInstance(JET_INSTANCE, BeginExternalBackupGrbit)</a> initiiert wird, um eine Instanz nach den Namen von Datenbankdateien abfragt, die Teil des Sicherungsdateisets werden sollen. Es werden nur Datenbanken berücksichtigt, die derzeit mit <a href="dn292096(v=exchg.10).md">JetAttachDatabase(JET_SESID, String, AttachDatabaseGrbit)</a> an die Instanz angefügt sind. Diese Dateien können anschließend mit <a href="dn292230(v=exchg.10).md">JetOpenFileInstance(JET_INSTANCE, String, JET_HANDLE, Int64, Int64)</a> geöffnet und mit <a href="dn332987(v=exchg.10).md">JetReadFileInstance(JET_INSTANCE, JET_HANDLE, [], Int32, Int32) gelesen werden.</a></td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -402,7 +402,7 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292177(v=exchg.10).md">JetGetLS</a></td>
-<td>Ermöglicht es der Anwendung, das Kontexthandle abzurufen, das als Local Storage bezeichnet wird, das einem Cursor oder der tabelle zugeordnet ist, die diesem Cursor zugeordnet ist. Dieses Kontexthandle muss zuvor mit <a href="dn334015(v=exchg.10).md">JetSetLS(JET_SESID, JET_TABLEID, JET_LS, LsGrbit)</a>festgelegt worden sein. JetGetLS kann auch verwendet werden, um gleichzeitig das aktuelle Kontexthandle für einen Cursor oder eine Tabelle abzurufen und dieses Kontexthandle zurückzusetzen.</td>
+<td>Ermöglicht der Anwendung, das Kontexthandle abzurufen, das als Lokale Storage bezeichnet wird, das einem Cursor oder der tabelle zugeordnet ist, die diesem Cursor zugeordnet ist. Dieses Kontexthandle muss zuvor mit <a href="dn334015(v=exchg.10).md">JetSetLS (JET_SESID, JET_TABLEID, JET_LS, LsGrbit)</a>festgelegt worden sein. JetGetLS kann auch verwendet werden, um gleichzeitig das aktuelle Kontexthandle für einen Cursor oder eine Tabelle abzurufen und dieses Kontexthandle zurückzusetzen.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -507,7 +507,7 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292199(v=exchg.10).md">JetGetTruncateLogInfoInstance</a></td>
-<td>Wird während einer Sicherung verwendet, die von <a href="dn292104(v=exchg.10).md">JetBeginExternalBackupInstance(JET_INSTANCE, BeginExternalBackupGrbit)</a> initiiert wurde, um eine Instanz nach den Namen der Transaktionsprotokolldateien abfragt, die nach erfolgreichem Abschluss der Sicherung sicher gelöscht werden können.</td>
+<td>Wird während einer von <a href="dn292104(v=exchg.10).md">JetBeginExternalBackupInstance(JET_INSTANCE, BeginExternalBackupGrbit)</a> initiierten Sicherung verwendet, um eine Instanz nach den Namen der Transaktionsprotokolldateien abzufragen, die nach erfolgreichem Abschluss der Sicherung sicher gelöscht werden können.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -517,32 +517,32 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292200(v=exchg.10).md">JetGotoBookmark</a></td>
-<td>Positioniert einen Cursor an einem Indexeintrag für den Datensatz, der dem angegebenen Lesezeichen zugeordnet ist. Das Lesezeichen kann mit jedem Index verwendet werden, der für eine Tabelle definiert ist. Das Lesezeichen für einen Datensatz kann mit <a href="dn292149(v=exchg.10).md">JetGetBookmark(JET_SESID, JET_TABLEID, [], Int32, Int32) abgerufen werden.</a></td>
+<td>Positioniert einen Cursor auf einem Indexeintrag für den Datensatz, der dem angegebenen Lesezeichen zugeordnet ist. Das Lesezeichen kann mit einem beliebigen Index verwendet werden, der für eine Tabelle definiert ist. Das Lesezeichen für einen Datensatz kann mit <a href="dn292149(v=exchg.10).md">JetGetBookmark(JET_SESID, JET_TABLEID, [], Int32, Int32)</a>abgerufen werden.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292207(v=exchg.10).md">JetGotoPosition</a></td>
-<td>Verschiebt einen Cursor an eine neue Position, die ein Bruchteil des Wegs durch den aktuellen Index ist. Siehe auch <a href="dn292181(v=exchg.10).md">JetGetRecordPosition(JET_SESID, JET_TABLEID, JET_RECPOS)</a>.</td>
+<td>Verschiebt einen Cursor an eine neue Position, die einen Bruchteil des Wegs durch den aktuellen Index darstellt. Siehe auch <a href="dn292181(v=exchg.10).md">JetGetRecordPosition(JET_SESID, JET_TABLEID, JET_RECPOS)</a>.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292205(v=exchg.10).md">JetGotoSecondaryIndexBookmark</a></td>
-<td>Positioniert einen Cursor an einem Indexeintrag, der dem angegebenen sekundären Indexzeichen zugeordnet ist. Das sekundäre Indexzeichen muss mit demselben Index für dieselbe Tabelle verwendet werden, aus der es ursprünglich abgerufen wurde. Das sekundäre Indexzeichen für einen Indexeintrag kann mit <a href="dn292205(v=exchg.10).md">JetGotoSecondaryIndexBookmark(JET_SESID, JET_TABLEID, [], Int32, [], Int32, GotoSecondaryIndexBookmarkGrbit)</a>abgerufen werden.</td>
+<td>Positioniert einen Cursor auf einen Indexeintrag, der dem angegebenen sekundären Indexlesezeichen zugeordnet ist. Das sekundäre Indexlesezeichen muss mit demselben Index für dieselbe Tabelle verwendet werden, aus der es ursprünglich abgerufen wurde. Das sekundäre Indexlesezeichen für einen Indexeintrag kann mit <a href="dn292205(v=exchg.10).md">JetGotoSecondaryIndexBookmark(JET_SESID, JET_TABLEID, [], Int32, [], Int32, GotoSecondaryIndexBookmarkGrbit)</a>abgerufen werden.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292206(v=exchg.10).md">JetGrowDatabase</a></td>
-<td>Erweitert die Größe einer derzeit geöffneten Datenbank.</td>
+<td>Erweitert die Größe einer datenbank, die derzeit geöffnet ist.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292208(v=exchg.10).md">JetIdle</a></td>
-<td>Führt Leerlaufbereinigungsaufgaben aus oder überprüft den Status des Versionsspeichers in ESE.</td>
+<td>Führt Cleanuptasks im Leerlauf aus oder überprüft den Status des Versionsspeichers in ESE.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn292209(v=exchg.10).md">JetIndexRecordCount</a></td>
-<td>Zählt die Anzahl der Einträge im aktuellen Index von der aktuellen Position nach vorn. Die aktuelle Position ist in der Anzahl enthalten. Die Anzahl kann größer als die Gesamtzahl der Datensätze in der Tabelle sein, wenn sich der aktuelle Index über einer mehrwertigen Spalte befindet und Instanzen der Spalte mehrere Werte haben. Wenn die Tabelle leer ist, wird 0 für die Anzahl zurückgegeben.</td>
+<td>Zählt die Anzahl der Einträge im aktuellen Index aus der aktuellen Position vorwärts. Die aktuelle Position ist in der Anzahl enthalten. Die Anzahl kann größer als die Gesamtzahl der Datensätze in der Tabelle sein, wenn sich der aktuelle Index über einer mehrwertigen Spalte befindet und Instanzen der Spalte mehrere Werte aufweisen. Wenn die Tabelle leer ist, wird 0 für die Anzahl zurückgegeben.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -647,7 +647,7 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn332991(v=exchg.10).md">JetResetSessionContext</a></td>
-<td>Trennt eine Sitzung vom aktuellen Thread. Dies sollte in Verbindung mit <a href="dn334027(v=exchg.10).md">JetSetSessionContext(JET_SESID, IntPtr)</a>verwendet werden.</td>
+<td>Entfernt die Zuordnung einer Sitzung zum aktuellen Thread. Dies sollte in Verbindung mit <a href="dn334027(v=exchg.10).md">JetSetSessionContext(JET_SESID, IntPtr) verwendet werden.</a></td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -657,47 +657,47 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn332992(v=exchg.10).md">JetRestoreInstance</a></td>
-<td>Stellt eine Streamingsicherung einer Instanz einschließlich aller angefügten Datenbanken wieder her und stellt sie wieder her. Sie ist für die Arbeit mit einer Sicherung konzipiert, die mit der <a href="dn292102(v=exchg.10).md">JetBackupInstance(JET_INSTANCE-, String-, BackupGrbit-, JET_PFNSTATUS)-Funktion</a> erstellt wurde. Dies ist die einfachste und am häufigsten gekapselte Wiederherstellungsfunktion.</td>
+<td>Stellt eine Streamingsicherung einer Instanz einschließlich aller angefügten Datenbanken wieder her und stellt sie wieder her. Er ist für die Verwendung mit einer Sicherung konzipiert, die mit der <a href="dn292102(v=exchg.10).md">JetBackupInstance(JET_INSTANCE,String, BackupGrbit, JET_PFNSTATUS)-Funktion erstellt</a> wurde. Dies ist die einfachste und am häufigsten gekapselte Wiederherstellungsfunktion.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn332995(v=exchg.10).md">JetRetrieveColumn(JET_SESID, JET_TABLEID, JET_COLUMNID, [], Int32, Int32, RetrieveColumnGrbit, JET_RETINFO)</a></td>
-<td>Ruft einen einzelnen Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der dem Indexeintrag an der aktuellen Position des Cursors zugeordnet ist. Alternativ kann diese Funktion eine Spalte aus einem Datensatz abrufen, der im Cursorkopierpuffer erstellt wird. Diese Funktion kann auch Spaltendaten aus einem Indexeintrag abrufen, der auf den aktuellen Datensatz verweist. Neben dem Abrufen des tatsächlichen Spaltenwerts kann JetRetrieveColumn auch verwendet werden, um die Größe einer Spalte abzurufen, bevor die Spaltendaten selbst abgerufen werden, damit die Größe der Anwendungspuffer entsprechend angepasst werden kann.</td>
+<td>Ruft einen einzelnen Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der dem Indexeintrag an der aktuellen Position des Cursors zugeordnet ist. Alternativ kann diese Funktion eine Spalte aus einem Datensatz abrufen, der im Cursorkopierpuffer erstellt wird. Diese Funktion kann auch Spaltendaten aus einem Indexeintrag abrufen, der auf den aktuellen Datensatz verweist. Zusätzlich zum Abrufen des tatsächlichen Spaltenwerts kann JetRetrieveColumn auch verwendet werden, um die Größe einer Spalte abzurufen, bevor die Spaltendaten selbst abgerufen werden, damit die Größe der Anwendungspuffer entsprechend angepasst werden kann.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn332997(v=exchg.10).md">JetRetrieveColumn(JET_SESID, JET_TABLEID, JET_COLUMNID, [], Int32, Int32, Int32, RetrieveColumnGrbit, JET_RETINFO)</a></td>
-<td>Ruft einen einzelnen Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der dem Indexeintrag an der aktuellen Position des Cursors zugeordnet ist. Alternativ kann diese Funktion eine Spalte aus einem Datensatz abrufen, der im Cursorkopierpuffer erstellt wird. Diese Funktion kann auch Spaltendaten aus einem Indexeintrag abrufen, der auf den aktuellen Datensatz verweist. Neben dem Abrufen des tatsächlichen Spaltenwerts kann JetRetrieveColumn auch verwendet werden, um die Größe einer Spalte abzurufen, bevor die Spaltendaten selbst abgerufen werden, damit die Größe der Anwendungspuffer entsprechend angepasst werden kann.</td>
+<td>Ruft einen einzelnen Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der dem Indexeintrag an der aktuellen Position des Cursors zugeordnet ist. Alternativ kann diese Funktion eine Spalte aus einem Datensatz abrufen, der im Cursorkopierpuffer erstellt wird. Diese Funktion kann auch Spaltendaten aus einem Indexeintrag abrufen, der auf den aktuellen Datensatz verweist. Zusätzlich zum Abrufen des tatsächlichen Spaltenwerts kann JetRetrieveColumn auch verwendet werden, um die Größe einer Spalte abzurufen, bevor die Spaltendaten selbst abgerufen werden, damit die Größe der Anwendungspuffer entsprechend angepasst werden kann.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334004(v=exchg.10).md">JetRetrieveColumns</a></td>
-<td>Ruft mehrere Spaltenwerte aus dem aktuellen Datensatz in einem einzelnen Vorgang ab. Ein Array von JET_RETRIEVECOLUMN Strukturen wird verwendet, um den Satz der abzurufenden Spaltenwerte und ausgabepuffer für jeden abzurufenden Spaltenwert zu beschreiben.</td>
+<td>Ruft mehrere Spaltenwerte aus dem aktuellen Datensatz in einem einzelnen Vorgang ab. Ein Array von JET_RETRIEVECOLUMN-Strukturen wird verwendet, um den Satz der abzurufenden Spaltenwerte zu beschreiben und ausgabepuffer für jeden abzurufenden Spaltenwert zu beschreiben.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn334002(v=exchg.10).md">JetRetrieveKey</a></td>
-<td>Ruft den Schlüssel für den Indexeintrag an der aktuellen Position eines Cursors ab. Siehe auch <a href="dn334085(v=exchg.10).md">RetrieveKey(JET_SESID, JET_TABLEID, RetrieveKeyGrbit).</a></td>
+<td><a href="dn334002(v=exchg.10).md">JetRetrikey</a></td>
+<td>Ruft den Schlüssel für den Indexeintrag an der aktuellen Position eines Cursors ab. Siehe <a href="dn334085(v=exchg.10).md">auch RetrieveKey(JET_SESID, JET_TABLEID, RetrieveKeyGrbit).</a></td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334001(v=exchg.10).md">JetRollback</a></td>
-<td>Macht die am Zustand der Datenbank vorgenommenen Änderungen rückgängig und kehrt zum letzten Sicherungspunkt zurück. JetRollback schließt auch alle Cursor, die während des Sicherungspunkts geöffnet wurden. Wenn der äußerste Sicherungspunkt rückgängig ist, beendet die Sitzung die Transaktion.</td>
+<td>Machen Sie die Änderungen rückgängig, die am Zustand der Datenbank vorgenommen wurden, und kehrt zum letzten Speicherpunkt zurück. JetRollback schließt auch alle Cursor, die während des Speicherpunkts geöffnet wurden. Wenn der äußerste Speicherpunkt rückgängig gemacht wird, beendet die Sitzung die Transaktion.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334003(v=exchg.10).md">JetSeek</a></td>
-<td>Positioniert einen Cursor effizient auf einen Indexeintrag, der den durch den Suchschlüssel in diesem Cursor angegebenen Suchkriterien und der angegebenen Ungleichheit entspricht. Ein Suchschlüssel muss zuvor mit <a href="dn292216(v=exchg.10).md">JetMakeKey(JET_SESID, JET_TABLEID, [], Int32, MakeKeyGrbit)</a>erstellt worden sein. Siehe auch <a href="dn334145(v=exchg.10).md">TrySeek(JET_SESID, JET_TABLEID, SeekGrbit).</a></td>
+<td>Positioniert einen Cursor effizient an einem Indexeintrag, der den durch den Suchschlüssel in diesem Cursor angegebenen Suchkriterien und der angegebenen Ungleichheit entspricht. Ein Suchschlüssel muss zuvor mit <a href="dn292216(v=exchg.10).md">JetMakeKey(JET_SESID, JET_TABLEID, [], Int32, MakeKeyGrbit) erstellt worden sein.</a> Siehe auch <a href="dn334145(v=exchg.10).md">TrySeek(JET_SESID, JET_TABLEID, SeekGrbit).</a></td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334009(v=exchg.10).md">JetSetColumn(JET_SESID, JET_TABLEID, JET_COLUMNID, [], Int32, SetColumnGrbit, JET_SETINFO)</a></td>
-<td>Die JetSetColumn-Funktion ändert einen einzelnen Spaltenwert in einem geänderten Datensatz, um eingefügt oder den aktuellen Datensatz zu aktualisieren. Sie kann einen vorhandenen Wert überschreiben, einer Sequenz von Werten in einer mehrwertigen Spalte einen neuen Wert hinzufügen, einen Wert aus einer Sequenz von Werten in einer mehrwertigen Spalte entfernen oder einen ganz oder teilweise eines long-Werts aktualisieren (eine Spalte vom Typ <a href="hh577895(v=exchg.10).md">LongText</a> oder <a href="hh577895(v=exchg.10).md">LongBinary</a>).</td>
+<td>Die JetSetColumn-Funktion ändert einen einzelnen Spaltenwert in einem geänderten Datensatz, um eingefügt oder den aktuellen Datensatz zu aktualisieren. Sie kann einen vorhandenen Wert überschreiben, einer Sequenz von Werten in einer mehrwertigen Spalte einen neuen Wert hinzufügen, einen Wert aus einer Sequenz von Werten in einer mehrwertigen Spalte entfernen oder einen long-Wert (eine Spalte vom Typ <a href="hh577895(v=exchg.10).md">LongText</a> oder <a href="hh577895(v=exchg.10).md">LongBinary)</a>ganz oder teilweise aktualisieren.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334008(v=exchg.10).md">JetSetColumn(JET_SESID, JET_TABLEID, JET_COLUMNID, [], Int32, Int32, SetColumnGrbit, JET_SETINFO)</a></td>
-<td>Die JetSetColumn-Funktion ändert einen einzelnen Spaltenwert in einem geänderten Datensatz, um eingefügt oder den aktuellen Datensatz zu aktualisieren. Sie kann einen vorhandenen Wert überschreiben, einer Sequenz von Werten in einer mehrwertigen Spalte einen neuen Wert hinzufügen, einen Wert aus einer Sequenz von Werten in einer mehrwertigen Spalte entfernen oder einen ganz oder teilweise eines long-Werts aktualisieren (eine Spalte vom Typ <a href="hh577895(v=exchg.10).md">LongText</a> oder <a href="hh577895(v=exchg.10).md">LongBinary</a>).</td>
+<td>Die JetSetColumn-Funktion ändert einen einzelnen Spaltenwert in einem geänderten Datensatz, um eingefügt oder den aktuellen Datensatz zu aktualisieren. Sie kann einen vorhandenen Wert überschreiben, einer Sequenz von Werten in einer mehrwertigen Spalte einen neuen Wert hinzufügen, einen Wert aus einer Sequenz von Werten in einer mehrwertigen Spalte entfernen oder einen long-Wert (eine Spalte vom Typ <a href="hh577895(v=exchg.10).md">LongText</a> oder <a href="hh577895(v=exchg.10).md">LongBinary)</a>ganz oder teilweise aktualisieren.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -707,7 +707,7 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334006(v=exchg.10).md">JetSetColumns</a></td>
-<td>Ermöglicht einer Anwendung das Festlegen mehrerer Spaltenwerte in einem einzelnen Vorgang. Ein Array von <a href="dn335260(v=exchg.10).md">JET_SETCOLUMN</a> Strukturen wird verwendet, um den Satz der festzulegenden Spaltenwerte und Eingabepuffer für jeden festzulegenden Spaltenwert zu beschreiben.</td>
+<td>Ermöglicht einer Anwendung das Festlegen mehrerer Spaltenwerte in einem einzelnen Vorgang. Ein Array von <a href="dn335260(v=exchg.10).md">JET_SETCOLUMN-Strukturen</a> wird verwendet, um den Satz von spaltenwerten zu beschreiben, die festgelegt werden sollen, und um Eingabepuffer für jeden zu setzenden Spaltenwert zu beschreiben.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -732,17 +732,17 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334014(v=exchg.10).md">JetSetDatabaseSize</a></td>
-<td>Legt die Größe einer ungeöffneten Datenbankdatei fest.</td>
+<td>Legt die Größe einer nicht öffnenden Datenbankdatei fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334024(v=exchg.10).md">JetSetIndexRange</a></td>
-<td>Begrenzt vorübergehend den Satz von Indexeinträgen, die der Cursor mit <a href="dn292217(v=exchg.10).md">JetMove(JET_SESID, JET_TABLEID, Int32, MoveGrbit)</a> durchgehen kann, auf diejenigen, die ab dem aktuellen Indexeintrag beginnen und am Indexeintrag enden, der mit den Suchkriterien übereinstimmt, die vom Suchschlüssel in diesem Cursor und den angegebenen gebundenen Kriterien angegeben werden. Ein Suchschlüssel muss zuvor mit <a href="dn292216(v=exchg.10).md">JetMakeKey(JET_SESID, JET_TABLEID, [], Int32, MakeKeyGrbit)</a>erstellt worden sein. Siehe auch <a href="dn334099(v=exchg.10).md">TrySetIndexRange(JET_SESID, JET_TABLEID, SetIndexRangeGrbit).</a></td>
+<td>Schränkt den Satz von Indexeinträgen, die der Cursor mit <a href="dn292217(v=exchg.10).md">JetMove(JET_SESID, JET_TABLEID, Int32, MoveGrbit)</a> durchsucht, vorübergehend auf dieJenigen ein, die vom aktuellen Indexeintrag beginnen und an dem Indexeintrag enden, der den suchkriterien entspricht, die vom Suchschlüssel in diesem Cursor und den angegebenen gebundenen Kriterien angegeben werden. Ein Suchschlüssel muss zuvor mit <a href="dn292216(v=exchg.10).md">JetMakeKey(JET_SESID, JET_TABLEID, [], Int32, MakeKeyGrbit) erstellt worden sein.</a> Siehe auch <a href="dn334099(v=exchg.10).md">TrySetIndexRange(JET_SESID, JET_TABLEID, SetIndexRangeGrbit).</a></td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334015(v=exchg.10).md">JetSetLS</a></td>
-<td>Ermöglicht der Anwendung, einem Cursor oder der diesem Cursor zugeordneten Tabelle ein Kontexthandle zuzuordnen, das als Local Storage bezeichnet wird. Dieses Kontexthandle kann von der Anwendung verwendet werden, um zusätzliche Daten zu speichern, die einem Cursor oder einer Tabelle zugeordnet sind. Die Anwendung wird später mithilfe eines Laufzeitrückrufs benachrichtigt, wenn das Kontexthandle freigegeben werden muss. Dies ermöglicht das Zuordnen eines dynamisch zugeordneten Zustands zu einem Cursor oder einer Tabelle.</td>
+<td>Ermöglicht es der Anwendung, einem Cursor oder der tabelle, die diesem Cursor zugeordnet ist, Storage als lokales Handle bezeichnetes Kontexthand handle zu zuordnen. Dieses Kontexthandle kann von der Anwendung verwendet werden, um zusätzliche Daten zu speichern, die einem Cursor oder einer Tabelle zugeordnet sind. Die Anwendung wird später mithilfe eines Laufzeitrückrufs benachrichtigt, wenn das Kontexthandle freigegeben werden muss. Dies ermöglicht das Zuordnen eines dynamisch zugeordneten Zustands zu einem Cursor oder einer Tabelle.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -1042,7 +1042,7 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334075(v=exchg.10).md">RetrieveColumns</a></td>
-<td>Ruft Spalten in ColumnValue-Objekte ab.</td>
+<td>Ruft Spalten in ColumnValue-Objekten ab.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -1062,7 +1062,7 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334120(v=exchg.10).md">SerializeObjectToColumn</a></td>
-<td>Schreiben Sie eine serialisierte Form eines Objekts in eine Spalte.</td>
+<td>Schreiben sie eine serialisierte Form eines Objekts in eine Spalte.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
@@ -1152,22 +1152,22 @@ Der [API-Typ](./api-class.md) macht die folgenden Member verfügbar.
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334139(v=exchg.10).md">TryGetLock</a></td>
-<td>Reservieren Sie explizit die Möglichkeit, eine Zeile zu aktualisieren, eine Schreibsperre zu schreiben oder explizit zu verhindern, dass eine Zeile von einer anderen Sitzung aktualisiert wird. Lesesperre. Normalerweise werden Zeilen-Schreibsperren implizit durch aktualisierende Zeilen aktiviert. Lesesperren sind in der Regel nicht erforderlich, da die Datensatzversionsversionen nicht verfügbar sind. In einigen Fällen möchte eine Transaktion jedoch möglicherweise eine Zeile explizit sperren, um die Serialisierung zu erzwingen, oder um sicherzustellen, dass ein nachfolgender Vorgang erfolgreich ist.</td>
+<td>Reservieren Sie explizit die Möglichkeit, eine Zeile zu aktualisieren, eine Schreibsperre zu schreiben oder explizit zu verhindern, dass eine Zeile von einer anderen Sitzung aktualisiert wird. Lesen Sie die Sperre. Normalerweise werden Zeilenschreibsperren implizit als Ergebnis der Aktualisierung von Zeilen eingerichtet. Lesesperren sind aufgrund der Datensatzversionsierung in der Regel nicht erforderlich. In einigen Fällen möchte eine Transaktion jedoch möglicherweise explizit eine Zeile sperren, um die Serialisierung zu erzwingen oder sicherzustellen, dass ein nachfolgender Vorgang erfolgreich ist.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334094(v=exchg.10).md">TryMove</a></td>
-<td>Versuchen Sie, durch einen Index zu navigieren. Wenn die Navigation erfolgreich ist, gibt diese Methode TRUE zurück. Wenn kein Datensatz für die Navigation zu dieser Methode vorkommt, wird false zurückgegeben. Für andere Fehler wird eine Ausnahme ausgelöst.</td>
+<td>Versuchen Sie, durch einen Index zu navigieren. Wenn die Navigation erfolgreich ist, gibt diese Methode true zurück. Wenn kein Datensatz zum Navigieren zu dieser Methode vorhanden ist, wird FALSE zurückgegeben. Für andere Fehler wird eine Ausnahme ausgelöst.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334150(v=exchg.10).md">TryMoveFirst</a></td>
-<td>Versuchen Sie, zum ersten Datensatz in der Tabelle zu wechseln. Wenn die Tabelle leer ist, wird false zurückgegeben, wenn ein anderer Fehler auftritt, wird eine Ausnahme ausgelöst.</td>
+<td>Versuchen Sie, zum ersten Datensatz in der Tabelle zu wechseln. Wenn die Tabelle leer ist, wird false zurückgegeben. Wenn ein anderer Fehler auftritt, wird eine Ausnahme ausgelöst.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn334140(v=exchg.10).md">TryMoveLast</a></td>
-<td>Versuchen Sie, zum letzten Datensatz in der Tabelle zu wechseln. Wenn die Tabelle leer ist, wird false zurückgegeben, wenn ein anderer Fehler auftritt, wird eine Ausnahme ausgelöst.</td>
+<td>Versuchen Sie, zum letzten Datensatz in der Tabelle zu wechseln. Wenn die Tabelle leer ist, wird false zurückgegeben. Wenn ein anderer Fehler auftritt, wird eine Ausnahme ausgelöst.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>

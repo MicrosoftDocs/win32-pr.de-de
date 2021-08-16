@@ -1,7 +1,7 @@
 ---
-description: Ruft das folderitemverbs-Objekt des Elements ab. Bei diesem Objekt handelt es sich um eine Auflistung von Verben, die für das Element ausgeführt werden können.
+description: Ruft das FolderItemVerbs-Objekt des Elements ab. Dieses Objekt ist die Auflistung von Verben, die für das Element ausgeführt werden können.
 ms.assetid: e31160cd-093a-45a6-a066-58120c44eb2c
-title: FolderItem. Verbs-Methode (Shldisp. h)
+title: FolderItem.Verbs-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: f15c2471f749748f7928a45aa03037d955c75d4a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 963581431c35e2c63cbe9af4f5b37ef6d0709d01146a223253247ad2b8c37dda
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090600"
 ---
-# <a name="folderitemverbs-method"></a>FolderItem. Verbs-Methode
+# <a name="folderitemverbs-method"></a>FolderItem.Verbs-Methode
 
-Ruft das [**folderitemverbs**](folderitemverbs.md) -Objekt des Elements ab. Bei diesem Objekt handelt es sich um eine Auflistung von Verben, die für das Element ausgeführt werden können.
+Ruft das [**FolderItemVerbs-Objekt**](folderitemverbs.md) des Elements ab. Dieses Objekt ist die Auflistung von Verben, die für das Element ausgeführt werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,15 +39,15 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **[ **folderitemverbs**](folderitemverbs.md)\*\***
+Typ: **[ **FolderItemVerbs**](folderitemverbs.md)\*\***
 
-Ein Objekt Verweis auf das [**folderitemverbs**](folderitemverbs.md) -Objekt.
+Ein Objektverweis auf das [**FolderItemVerbs-Objekt.**](folderitemverbs.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel werden **Verben** verwendet, um das [**folderitemverbs**](folderitemverbs.md) -Objekt abzurufen, das den Satz von Verben darstellt, der im Windows-Ordner ausgeführt werden kann. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel werden **Verben** verwendet, um das [**FolderItemVerbs-Objekt**](folderitemverbs.md) abzurufen, das den Satz von Verben darstellt, die auf dem Windows Ordner ausgeführt werden können. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -81,7 +81,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -158,17 +158,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 
@@ -176,10 +176,10 @@ End Sub
 
 <dl> <dt>
 
-[**Von folderItem**](folderitem.md)
+[**FolderItem**](folderitem.md)
 </dt> <dt>
 
-[**Invokeverb**](folderitem-invokeverb.md)
+[**InvokeVerb**](folderitem-invokeverb.md)
 </dt> <dt>
 
 [**Doit**](folderitemverb-doit.md)

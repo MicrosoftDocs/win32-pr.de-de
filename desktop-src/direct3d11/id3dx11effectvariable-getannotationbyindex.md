@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectVariable getannotationbyindex-Methode (D3dx11effect. h)
-description: Eine Anmerkung nach Index erhalten. | ID3DX11EffectVariable getannotationbyindex-Methode (D3dx11effect. h)
+title: ID3DX11EffectVariable GetAnnotationByIndex-Methode (D3dx11effect.h)
+description: Abrufen einer Anmerkung nach Index. | ID3DX11EffectVariable GetAnnotationByIndex-Methode (D3dx11effect.h)
 ms.assetid: fc130098-0269-4c78-bc45-284aa0b77865
 keywords:
-- Getannotationbyindex-Methode Direct3D 11
-- Getannotationbyindex-Methode Direct3D 11, ID3DX11EffectVariable-Schnittstelle
-- ID3DX11EffectVariable Interface Direct3D 11, getannotationbyindex-Methode
+- GetAnnotationByIndex-Methode Direct3D 11
+- GetAnnotationByIndex-Methode Direct3D 11 , ID3DX11EffectVariable-Schnittstelle
+- ID3DX11EffectVariable-Schnittstelle Direct3D 11 , GetAnnotationByIndex-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e13cfcb27e94c64af132e5eec600941d0b41cd8
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4319038fefa6539bf40834bfc1f00f4ea4a0cfb8b12c1c6719c884e413b3ae07
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104132293"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118531144"
 ---
-# <a name="id3dx11effectvariablegetannotationbyindex-method"></a>ID3DX11EffectVariable:: getannotationbyindex-Methode
+# <a name="id3dx11effectvariablegetannotationbyindex-method"></a>ID3DX11EffectVariable::GetAnnotationByIndex-Methode
 
-Eine Anmerkung nach Index erhalten.
+Abrufen einer Anmerkung nach Index.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,9 +46,9 @@ ID3DX11EffectVariable* GetAnnotationByIndex(
 *Index* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Ein NULL basierter Index.
+Ein nullbasierter Index.
 
 </dd> </dl>
 
@@ -58,23 +58,23 @@ Typ: **[ **ID3DX11EffectVariable**](id3dx11effectvariable.md)\***
 
 Ein Zeiger auf eine [**ID3DX11EffectVariable**](id3dx11effectvariable.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anmerkungen können an eine Technik, einen Durchlauf oder eine globale Variable angefügt werden.
+Ierungen können an eine Technik, einen Durchlauf oder eine globale Variable angefügt werden.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 

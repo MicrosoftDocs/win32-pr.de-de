@@ -20,7 +20,7 @@ In diesem Abschnitt werden Direct3D 12-APIs behandelt, die in d3d11on12.h deklar
 
 
 
-| Thema                                                           | Beschreibung                                                       |
+| Thema                                                           | BESCHREIBUNG                                                       |
 |-----------------------------------------------------------------|-------------------------------------------------------------------|
 | [11on12-Schnittstellen](direct3d-11on12-interfaces.md)<br/>  | Die folgenden Schnittstellen werden in d3d11on12.h deklariert. <br/> |
 | [11on12-Funktionen](direct3d-11-on-12-functions-.md)<br/> | Die folgenden Funktionen werden in d3d11on12.h deklariert. <br/>  |

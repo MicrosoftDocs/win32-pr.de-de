@@ -1,7 +1,7 @@
 ---
 description: Gibt Attribute für eine Authenticode-Signatur an.
 ms.assetid: 1c1052c3-c5c5-48ae-8266-0b367800a84a
-title: SIGNER_ATTR_AUTHCODE Struktur
+title: SIGNER_ATTR_AUTHCODE-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,19 +12,19 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 952ed0f55a185d9a7ef9eeed3366f64c84423ddd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2cce522403e4b4e416bd3d1ecb9d6c4a551ef3bb67407f853f586bd061f3d8e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960898"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118898947"
 ---
-# <a name="signer_attr_authcode-structure"></a>Signer \_ attr \_ AuthCode-Struktur
+# <a name="signer_attr_authcode-structure"></a>SIGNER \_ ATTR \_ AUTHCODE-Struktur
 
-Die **Signer \_ attr \_ AuthCode** -Struktur gibt Attribute für eine [*Authenticode*](../secgloss/a-gly.md) -Signatur an.
+Die **SIGNER \_ ATTR \_ AUTHCODE-Struktur** gibt Attribute für eine [*Authenticode-Signatur*](../secgloss/a-gly.md) an.
 
 > [!Note]  
-> Diese Struktur ist nicht in einer Header Datei definiert. Um diese Struktur verwenden zu können, müssen Sie Sie selbst definieren, wie in diesem Thema gezeigt.
+> Diese Struktur ist in einer Headerdatei nicht definiert. Um diese Struktur zu verwenden, müssen Sie sie selbst definieren, wie in diesem Thema gezeigt.
 
  
 
@@ -47,38 +47,38 @@ typedef struct _SIGNER_ATTR_AUTHCODE {
 
 <dl> <dt>
 
-**CBSIZE**
+**cbSize**
 </dt> <dd>
 
-Die Größe der-Struktur in Bytes.
+Die Größe der -Struktur in Bytes.
 
 </dd> <dt>
 
-**gewerblich**
+**fCommercial**
 </dt> <dd>
 
-" **True** ", um den Betreff als kommerzieller Verleger zu signieren. andernfalls **false**.
+**TRUE,** um den Betreff als kommerziellen Herausgeber zu signieren; andernfalls **FALSE**.
 
 </dd> <dt>
 
-**findividual**
+**fIndividual**
 </dt> <dd>
 
-" **True** ", um den Betreff als einzelner Verleger zu signieren. andernfalls **false**.
+**TRUE,** um den Betreff als einzelnen Herausgeber zu signieren; andernfalls **FALSE**.
 
 </dd> <dt>
 
 **pwszName**
 </dt> <dd>
 
-Der Anzeige Name der Datei beim herunterladen.
+Der Anzeigename der Datei beim Download.
 
 </dd> <dt>
 
-**pwszinfo**
+**pwszInfo**
 </dt> <dd>
 
-Der Anzeige Name der URL der Datei beim herunterladen.
+Der Anzeigename der URL der Datei beim Download.
 
 </dd> </dl>
 
@@ -88,16 +88,16 @@ Der Anzeige Name der URL der Datei beim herunterladen.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_Signatur Informationen des Signatur Gebers \_**](signer-signature-info.md)
+[**SIGNATURINFORMATIONEN \_ FÜR \_ SIGNATUR**](signer-signature-info.md)
 </dt> </dl>
 
  

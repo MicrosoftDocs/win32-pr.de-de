@@ -1,32 +1,32 @@
 ---
-title: Ereignis Benachrichtigung WMT_STATUS in DirectShow
-description: WMT- \_ Status Ereignis Benachrichtigung in DirectShow
+title: WMT_STATUS Ereignisbenachrichtigung in DirectShow
+description: WMT \_ STATUS-Ereignisbenachrichtigung in DirectShow
 ms.assetid: 6b777c7e-2777-445b-88de-a9a28be6da9c
 keywords:
-- Windows Media-Format-SDK, Ereignis Benachrichtigungen WMT_STATUS in DirectShow
-- Windows Media-Format-SDK, Ereignis Benachrichtigungen
-- Windows Media-Format-SDK, DirectShow
-- Advanced Systems Format (ASF), WMT_STATUS Ereignis Benachrichtigungen in DirectShow
-- ASF (Advanced Systems Format), WMT_STATUS Ereignis Benachrichtigungen in DirectShow
-- Advanced Systems Format (ASF), Ereignis Benachrichtigungen
-- ASF (Advanced Systems Format), Ereignis Benachrichtigungen
+- Windows Medienformat-SDK, WMT_STATUS Ereignisbenachrichtigungen in DirectShow
+- Windows Medienformat-SDK, Ereignisbenachrichtigungen
+- Windows Medienformat-SDK, DirectShow
+- Advanced Systems Format (ASF),WMT_STATUS Ereignisbenachrichtigungen in DirectShow
+- ASF (Advanced Systems Format), WMT_STATUS Ereignisbenachrichtigungen in DirectShow
+- Advanced Systems Format (ASF), Ereignisbenachrichtigungen
+- ASF (Advanced Systems Format), Ereignisbenachrichtigungen
 - Advanced Systems Format (ASF), DirectShow
 - ASF (Advanced Systems Format), DirectShow
-- DirectShow, Ereignis Benachrichtigungen
-- DirectShow, WMT_STATUS Ereignis Benachrichtigungen
+- DirectShow, Ereignisbenachrichtigungen
+- DirectShow,WMT_STATUS Ereignisbenachrichtigungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e12c953b2c9b1509ad1b3adc2831d2276fcd474
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: fb4bbe430f16872baf94a0d47417381bc8bcd23d5c9fbbdb69ff2496cd873908
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104209270"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089630"
 ---
-# <a name="wmt_status-event-notification-in-directshow"></a>WMT- \_ Status Ereignis Benachrichtigung in DirectShow
+# <a name="wmt_status-event-notification-in-directshow"></a>WMT \_ STATUS-Ereignisbenachrichtigung in DirectShow
 
-Sowohl der ASF-Reader als auch der ASF-Writer leiten [**WMT- \_ Status**](/previous-versions/windows/desktop/api/Wmsdkidl/ne-wmsdkidl-wmt_status) Ereignisse an Anwendungen weiter. Der Writer leitet alle derartigen Ereignisse weiter, und der Reader leitet nur die Ereignisse weiter, die sich auf den DRM-Lizenzerwerb beziehen. Um diese Ereignis Benachrichtigungen in Ihrer Anwendung zu erhalten, fügen Sie einen Fall für das **EC \_ WMT- \_ Ereignis** in ihrer Ereignis Behandlungs Funktion hinzu. Der *lParam1* -Parameter, der dem Ereignis zugeordnet ist, enthält den **WMT- \_ Status** Code (der **WMT- \_ Fehler** sein kann), und lParam2 enthält die [**am \_ WMT- \_ Ereignis \_ Daten**](/previous-versions/windows/desktop/api/evcode/ns-evcode-am_wmt_event_data) , die das **HRESULT** enthalten.
+Sowohl der ASF-Reader als auch der ASF Writer leiten [**WMT \_ STATUS-Ereignisse**](/previous-versions/windows/desktop/api/Wmsdkidl/ne-wmsdkidl-wmt_status) an Anwendungen weiter. Der Writer leitet alle derartigen Ereignisse weiter, und der Reader leitet nur diejenigen weiter, die sich auf den DRM-Lizenzerwerb beziehen. Um diese Ereignisbenachrichtigungen in Ihrer Anwendung zu erhalten, fügen Sie in Ihrer Ereignisbehandlungsfunktion einen Fall für das **EC \_ WMT \_ EVENT** hinzu. Der *lParam1-Parameter,* der dem Ereignis zugeordnet ist, enthält den **WMT \_ STATUS-Code** (kann **WMT \_ ERROR** sein), und lParam2 enthält eine [**AM \_ WMT EVENT \_ \_ DATA,die**](/previous-versions/windows/desktop/api/evcode/ns-evcode-am_wmt_event_data) das **HRESULT** enthält.
 
- 
+ 
 
- 
+ 

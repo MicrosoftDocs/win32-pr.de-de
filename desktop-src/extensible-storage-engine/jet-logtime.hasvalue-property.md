@@ -68,7 +68,7 @@ Typ: [System.Boolean](/dotnet/api/system.boolean)
 
 #### <a name="reference"></a>Verweis
 
-[JET_LOGTIME Struktur](./jet-logtime-structure2.md)
+[JET_LOGTIME-Struktur](./jet-logtime-structure2.md)
 
 [JET_LOGTIME-Member](./jet-logtime-members.md)
 

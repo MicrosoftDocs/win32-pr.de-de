@@ -1,11 +1,11 @@
 ---
-title: Icdkbd setkeyboardlabeltext-Methode (Software BDC. h)
-description: Die isoftkbd setkeyboardlabeltext-Methode legt den Beschriftungs Text aus dem Layout für eine weiche Tastatur fest.
+title: ISoftKbd SetKeyboardLabelText-Methode (Softkbdc.h)
+description: Die ISoftKbd-Methode SetKeyboardLabelText legt den Bezeichnungstext aus dem Layout für eine weiche Tastatur fest.
 ms.assetid: 86c45c37-fe50-4596-b4c9-960de760a2e0
 keywords:
-- Setkeyboardlabeltext-Methode, Text Dienste-Framework
-- Setkeyboardlabeltext-Methode, Text Dienste-Framework, iSOFT kbd-Schnittstelle
-- ISOFT kbd Interface Text Services-Framework, setkeyboardlabeltext-Methode
+- SetKeyboardLabelText-Textdienstframework
+- SetKeyboardLabelText-Methode Textdienstframework , ISoftKbd-Schnittstelle
+- ISoftKbd-Schnittstelle Textdienstframework , SetKeyboardLabelText-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 862341182b9c97a751ba4a130566d5cf18437c2b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d15e81e2ff29affaa6bf6e87f87410d9c9d3ef7e913998a1bffa1ab6b0dff3fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118877415"
 ---
-# <a name="isoftkbdsetkeyboardlabeltext-method"></a>ISOFT kbd:: setkeyboardlabeltext-Methode
+# <a name="isoftkbdsetkeyboardlabeltext-method"></a>ISoftKbd::SetKeyboardLabelText-Methode
 
-Die **isoftkbd:: setkeyboardlabeltext** -Methode legt den Beschriftungs Text aus dem Layout für eine weiche Tastatur fest.
+Die **ISoftKbd::SetKeyboardLabelText-Methode** legt den Bezeichnungstext aus dem Layout für eine weiche Tastatur fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ HRESULT SetKeyboardLabelText(
 
 <dl> <dt>
 
-*HKL* \[ in\]
+*hKl* \[ In\]
 </dt> <dd>
 
-Handle, das zum Abrufen des installierten Layouts für die weiche Tastatur verwendet wird.
+Handle, das zum Abrufen des installierten Layouts für die Softtastatur verwendet wird.
 
 </dd> </dl>
 
@@ -58,7 +58,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Wert                                                                                        | BESCHREIBUNG                                |
 |----------------------------------------------------------------------------------------------|--------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Methode war erfolgreich.<br/>      |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Der *HKL* -Parameter ist ungültig.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der *hKl-Parameter* ist ungültig.<br/> |
 
 
 
@@ -72,21 +72,21 @@ Diese Methode kann einen dieser Werte zurückgeben.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Verteilbare Komponente<br/>          | TSF 1,0 unter Windows 2000 Professional<br/>                                        |
-| Header<br/>                   | <dl> <dt>Software-Domänen Controller. h</dt> </dl>  |
-| IDL<br/>                      | <dl> <dt>Software. idl</dt> </dl> |
+| Verteilbare Komponente<br/>          | TSF 1.0 auf Windows 2000 Professional<br/>                                        |
+| Header<br/>                   | <dl> <dt>Softkbdc.h</dt> </dl>  |
+| Idl<br/>                      | <dl> <dt>Softkbd.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Softkbd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iweichkbd**](isoftkbd.md)
+[**ISoftKbd**](isoftkbd.md)
 </dt> <dt>
 
-[**Icdkbd:: setkeyboardlabeltextkombination**](isoftkbd-setkeyboardlabeltextcombination.md)
+[**ISoftKbd::SetKeyboardLabelTextCombination**](isoftkbd-setkeyboardlabeltextcombination.md)
 </dt> </dl>
 
  

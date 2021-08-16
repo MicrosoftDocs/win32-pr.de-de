@@ -13,7 +13,7 @@ ms.locfileid: "118745942"
 ---
 # <a name="stopall-method"></a>StopAll-Methode
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
@@ -43,7 +43,7 @@ Beendet alle Animationsanforderungen oder angegebenen Anforderungstypen für das
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie den **Type-Parameter** nicht festlegen, beendet der Server alle Animationen für [](get-method.md) das Zeichen, einschließlich Get-Anforderungen in der Warteschlange und nicht in der Warteschlange, und entfernt seine Animationswarteschlange. Außerdem wird die Wiedergabe der Animation "Hiding" oder "Showing" eines Zeichens beendet.
+Wenn Sie den **Type-Parameter** nicht festlegen, beendet der Server alle Animationen für [](get-method.md) das Zeichen, einschließlich Get-Anforderungen in der Warteschlange und nicht in der Warteschlange, und entfernt seine Animationswarteschlange. Außerdem wird die Wiedergabe der Animation "Ausblenden" oder "Anzeigen" eines Zeichens beendet.
 
 Diese Methode generiert kein [**Request-Objekt.**](/windows/desktop/lwef/the-request-object)
 

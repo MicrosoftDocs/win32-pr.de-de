@@ -14,12 +14,12 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 7db15480906bee8181bb0fc589c4f3e30ce4753c
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 2796fd44016854d03322b8dfa0a11ce85d1afce16b9ae17cae02a6fc53804f97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963549"
 ---
 # <a name="iportabledevicevaluescollectionremoveat-method"></a>IPortableDeviceValuesCollection::RemoveAt-Methode
 
@@ -43,26 +43,26 @@ HRESULT RemoveAt(
 *dwIndex* \[ In\]
 </dt> <dd>
 
-Gibt den Index des zu entfernenden Elements an.
+Gibt den Index des elements an, das entfernt werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die -Methode gibt ein **HRESULT zurück.** Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                      |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Methode wurde erfolgreich ausgeführt.<br/>                 |
-| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der angegebene Index lag nicht im Bereich.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der angegebene Index lag außerhalb des Bereichs.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Sie müssen einen nullbasierten Index angeben.
 
@@ -70,7 +70,7 @@ Sie müssen einen nullbasierten Index angeben.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |

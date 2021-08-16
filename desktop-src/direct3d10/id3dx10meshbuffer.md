@@ -1,5 +1,5 @@
 ---
-description: Ein Gitternetzpuffer ist ein Puffer, der Daten über ein Gitternetz enthält.
+description: Ein Gitternetzpuffer ist ein Puffer, der Daten zu einem Gitternetz enthält.
 ms.assetid: a9fdfa22-531d-4da0-89f0-8766c2635e20
 title: ID3DX10MeshBuffer-Schnittstelle (D3DX10.h)
 ms.topic: reference
@@ -23,11 +23,11 @@ ms.locfileid: "118540154"
 ---
 # <a name="id3dx10meshbuffer-interface"></a>ID3DX10MeshBuffer-Schnittstelle
 
-Ein Gitternetzpuffer ist ein Puffer, der Daten über ein Gitternetz enthält. Sie kann einen von fünf verschiedenen Datentypen enthalten: Scheitelpunktdaten, Indexdaten, Adjacency-Daten, Attributdaten oder Punkt-Rep-Daten. Die -Struktur wird für den Zugriff auf diese fünf Datenteile über die folgenden fünf APIs verwendet: [**ID3DX10Mesh::GetVertexBuffer,**](id3dx10mesh-getvertexbuffer.md) [**ID3DX10Mesh::GetIndexBuffer,**](id3dx10mesh-getindexbuffer.md) [**ID3DX10Mesh::GetAdjacencyBuffer,**](id3dx10mesh-getadjacencybuffer.md) [**ID3DX10Mesh::GetAttributeBuffer**](id3dx10mesh-getattributebuffer.md)oder [**ID3DX10Mesh::GetPointRepBuffer**](id3dx10mesh-getpointrepbuffer.md).
+Ein Gitternetzpuffer ist ein Puffer, der Daten zu einem Gitternetz enthält. Sie kann einen von fünf verschiedenen Datentypen enthalten: Scheitelpunktdaten, Indexdaten, Adjacency-Daten, Attributdaten oder Punkt-Rep-Daten. Die -Struktur wird für den Zugriff auf diese fünf Datenteile über die folgenden fünf APIs verwendet: [**ID3DX10Mesh::GetVertexBuffer,**](id3dx10mesh-getvertexbuffer.md) [**ID3DX10Mesh::GetIndexBuffer,**](id3dx10mesh-getindexbuffer.md) [**ID3DX10Mesh::GetAdjacencyBuffer,**](id3dx10mesh-getadjacencybuffer.md) [**ID3DX10Mesh::GetAttributeBuffer**](id3dx10mesh-getattributebuffer.md)oder [**ID3DX10Mesh::GetPointRepBuffer**](id3dx10mesh-getpointrepbuffer.md).
 
 ## <a name="members"></a>Member
 
-Die **ID3DX10MeshBuffer-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **ID3DX10MeshBuffer** verfügt auch über diese Membertypen:
+Die **ID3DX10MeshBuffer-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **ID3DX10MeshBuffer verfügt** auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
@@ -37,10 +37,10 @@ Die **ID3DX10MeshBuffer-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                       | Beschreibung                                                                |
+| Methode                                       | BESCHREIBUNG                                                                |
 |:---------------------------------------------|:---------------------------------------------------------------------------|
 | [**GetSize**](id3dx10meshbuffer-getsize.md) | Gibt die Größe des Gitternetzpuffers in Bytes an.<br/>                      |
-| [**Karte**](id3dx10meshbuffer-map.md)         | Sie erhalten einen Zeiger auf den Gitternetzpufferspeicher, um dessen Inhalt zu ändern.<br/> |
+| [**Zuordnung**](id3dx10meshbuffer-map.md)         | Sie erhalten einen Zeiger auf den Gitternetzpufferspeicher, um dessen Inhalt zu ändern.<br/> |
 | [**Unmap**](id3dx10meshbuffer-unmap.md)     | Entzuordnung eines Puffers.<br/>                                                 |
 
 
@@ -58,7 +58,7 @@ Die **ID3DX10MeshBuffer-Schnittstelle** verfügt über diese Methoden.
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

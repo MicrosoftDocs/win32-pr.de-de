@@ -1,7 +1,7 @@
 ---
 description: Ruft Informationen zu den Eigenschaften ab, die von einer angegebenen Auflistung unterstützt werden.
 ms.assetid: 5e3963c0-6769-4b5b-8636-2d8c98a8776b
-title: PropertyInfo-Auflistung
+title: PropertyInfo-Sammlung
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -19,22 +19,22 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118547581"
 ---
-# <a name="propertyinfo-collection"></a>PropertyInfo-Auflistung
+# <a name="propertyinfo-collection"></a>PropertyInfo-Sammlung
 
-Ruft Informationen zu den Eigenschaften ab, die von einer angegebenen Auflistung unterstützt werden. Auf **die PropertyInfo-Auflistung** kann von jedem [**COMAdminCatalogCollection-Objekt**](comadmincatalogcollection.md) mithilfe der [**GetCollection-Methode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-getcollection) zugegriffen werden. Die **PropertyInfo-Auflistung** enthält ein -Objekt für jede Eigenschaft, die von der ursprünglichen Auflistung unterstützt wird.
+Ruft Informationen zu den Eigenschaften ab, die von einer angegebenen Auflistung unterstützt werden. Auf **die PropertyInfo-Auflistung** kann von jedem [**COMAdminCatalogCollection-Objekt aus zugegriffen**](comadmincatalogcollection.md) werden, indem die [**GetCollection-Methode verwendet**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-getcollection) wird. Die **PropertyInfo-Auflistung** enthält ein -Objekt für jede Eigenschaft, die von der ursprünglichen Auflistung unterstützt wird.
 
 ## <a name="members"></a>Member
 
-Die **PropertyInfo-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
+Die **PropertyInfo-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
-## <a name="related-collections"></a>Verwandte Auflistungen
+## <a name="related-collections"></a>Verwandte Sammlungen
 
 Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 
 -   **Propertyinfo**
 -   [**RelatedCollectionInfo**](relatedcollectioninfo.md)
 
-Sie können aus jeder Sammlung zu dieser Sammlung navigieren.
+Sie können von jeder Sammlung zu dieser Sammlung navigieren.
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -58,7 +58,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
  
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

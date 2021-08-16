@@ -1,23 +1,23 @@
 ---
-description: Mehrere Prozesse können über Handles zum gleichen Ereignis, Mutex, Semaphor oder Timer-Objekt verfügen, sodass diese Objekte verwendet werden können, um die prozessübergreifende Synchronisierung zu erreichen.
+description: Mehrere Prozesse können über Handles für das gleiche Ereignis-, Mutex-, Semaphor- oder Timerobjekt verfügen, sodass diese Objekte für die prozessübergreifende Synchronisierung verwendet werden können.
 ms.assetid: 1738e586-580f-4b74-95dc-ede300b6ac9a
 title: Prozessübergreifende Synchronisierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f7c18fb26d6a64fdc2d785d16c7bccb8b007c3f5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0caf4818a05d526a70a1e3257ec6f86d0279f39ce3cf05a4411e49991db6ba15
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357921"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118886350"
 ---
 # <a name="interprocess-synchronization"></a>Prozessübergreifende Synchronisierung
 
-Mehrere Prozesse können über Handles zum gleichen Ereignis, Mutex, Semaphor oder Timer-Objekt verfügen, sodass diese Objekte verwendet werden können, um die prozessübergreifende Synchronisierung zu erreichen. Der Prozess, mit dem ein Objekt erstellt wird, kann das Handle verwenden, das von der Erstellungs Funktion ("[**kreateevent**](/windows/win32/api/synchapi/nf-synchapi-createeventa)", " [**kreatemutex**](/windows/win32/api/synchapi/nf-synchapi-createmutexa)", " [**kreatesemaphore**](/windows/desktop/api/WinBase/nf-winbase-createsemaphorea)" oder " [**kreatewaitabletimer**](/windows/win32/api/synchapi/nf-synchapi-createwaitabletimerw)") Andere Prozesse können mithilfe Ihres Namens oder durch Vererbung oder Duplizierung ein Handle für das Objekt öffnen. Weitere Informationen finden Sie unter den folgenden Themen:
+Mehrere Prozesse können über Handles für das gleiche Ereignis-, Mutex-, Semaphor- oder Timerobjekt verfügen, sodass diese Objekte für die prozessübergreifende Synchronisierung verwendet werden können. Der Prozess, der ein -Objekt erstellt, kann das von der Erstellungsfunktion zurückgegebene Handle verwenden ([**CreateEvent**](/windows/win32/api/synchapi/nf-synchapi-createeventa), [**CreateMutex**](/windows/win32/api/synchapi/nf-synchapi-createmutexa), [**CreateSemaphore**](/windows/desktop/api/WinBase/nf-winbase-createsemaphorea)oder [**CreateWaitableTimer**](/windows/win32/api/synchapi/nf-synchapi-createwaitabletimerw)). Andere Prozesse können ein Handle für das Objekt öffnen, indem sie dessen Namen oder Vererbung oder Duplizierung verwenden. Weitere Informationen finden Sie in den folgenden Themen:
 
 -   [Objektnamen](object-names.md)
 -   [Objektvererbung](object-inheritance.md)
--   [Objekt Duplizierung](object-duplication.md)
+-   [Objektduplizierung](object-duplication.md)
 
  
 

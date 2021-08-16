@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_prep Enumeration'
-title: JET_prep Enumeration
+description: 'Weitere Informationen zu: JET_prep-Enumeration'
+title: JET_prep-Enumeration
 TOCTitle: JET_prep enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_prep
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_prep(v=EXCHG.10)
@@ -43,7 +43,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118765054"
 ---
-# <a name="jet_prep-enumeration"></a>JET_prep Enumeration
+# <a name="jet_prep-enumeration"></a>JET_prep-Enumeration
 
 Updatetypen für JetPrepareUpdate.
 
@@ -77,12 +77,12 @@ public enum JET_prep
 <tr class="odd">
 <td></td>
 <td>Einfügen</td>
-<td>Dieses Flag bewirkt, dass sich der Cursor auf ein Einfügen eines neuen Datensatzes vorbereitet. Alle Daten werden mit dem Standardzustand für den Datensatz initialisiert. Wenn die Tabelle über eine Spalte mit automatischer Inkremente verfügt, wird diesem Datensatz unabhängig davon, ob das Update letztendlich erfolgreich ist, fehlschlägt oder abgebrochen wird, ein neuer Wert zugewiesen.</td>
+<td>Dieses Flag bewirkt, dass der Cursor sich auf das Einfügen eines neuen Datensatzes vorbereitet. Alle Daten werden mit dem Standardzustand für den Datensatz initialisiert. Wenn die Tabelle über eine Spalte mit automatischer Inkrementierung verfügt, wird diesem Datensatz ein neuer Wert zugewiesen, unabhängig davon, ob das Update letztendlich erfolgreich ist, fehlschlägt oder abgebrochen wird.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Replace</td>
-<td>Dieses Flag bewirkt, dass sich der Cursor auf einen Austausch des aktuellen Datensatzes vorbereitet. Wenn die Tabelle über eine Versionsspalte verfügt, wird die Versionsspalte auf den nächsten Wert in ihrer Sequenz festgelegt. Wenn dieses Update nicht abgeschlossen wird, ist der Versionswert im Datensatz davon nicht betroffen. Es wird eine Updatesperre für den Datensatz ergriffen, um zu verhindern, dass andere Sitzungen diesen Datensatz aktualisieren, bevor diese Sitzung abgeschlossen wird.</td>
+<td>Dieses Flag bewirkt, dass der Cursor sich auf eine Ersetzung des aktuellen Datensatzes vorbereitet. Wenn die Tabelle über eine Versionsspalte verfügt, wird die Versionsspalte auf den nächsten Wert in ihrer Sequenz festgelegt. Wenn dieses Update nicht abgeschlossen ist, ist der Versionswert im Datensatz nicht betroffen. Es wird eine Updatesperre für den Datensatz eingerichtet, um zu verhindern, dass andere Sitzungen diesen Datensatz aktualisieren, bevor diese Sitzung abgeschlossen wird.</td>
 </tr>
 <tr class="odd">
 <td></td>
@@ -92,17 +92,17 @@ public enum JET_prep
 <tr class="even">
 <td></td>
 <td>ReplaceNoLock</td>
-<td>Dieses Flag ähnelt dem JET_prepReplace, es wird jedoch keine Sperre ergriffen, um zu verhindern, dass andere Sitzungen diesen Datensatz aktualisieren. Stattdessen erhält diese Sitzung möglicherweise JET_errWriteConflict, wenn jetUpdate zum Abschließen des Updates aufruft.</td>
+<td>Dieses Flag ähnelt JET_prepReplace, aber es wird keine Sperre eingerichtet, um zu verhindern, dass andere Sitzungen diesen Datensatz aktualisieren. Stattdessen erhält diese Sitzung möglicherweise JET_errWriteConflict, wenn Sie JetUpdate aufruft, um das Update abzuschließen.</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>InsertCopy</td>
-<td>Dieses Flag bewirkt, dass sich der Cursor auf das Einfügen einer Kopie des vorhandenen Datensatzes vorbereitet. Wenn diese Option verwendet wird, muss ein aktueller Datensatz verwendet werden. Der Anfangszustand des neuen Datensatzes wird aus dem aktuellen Datensatz kopiert. Lange Werte, die nicht im Datensatz gespeichert werden, werden virtuell kopiert.</td>
+<td>Dieses Flag bewirkt, dass der Cursor sich auf das Einfügen einer Kopie des vorhandenen Datensatzes vorbereitet. Wenn diese Option verwendet wird, muss ein aktueller Datensatz vorhanden sein. Der Anfangszustand des neuen Datensatzes wird aus dem aktuellen Datensatz kopiert. Lange Werte, die außerhalb des Datensatzes gespeichert werden, werden virtuell kopiert.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>InsertCopyDeleteOriginal</td>
-<td>Dieses Flag bewirkt, dass sich der Cursor auf ein Einfügen desselben Datensatzes und einen Lösch- oder den ursprünglichen Datensatz vorbereitet. Sie wird in Fällen verwendet, in denen sich der Primärschlüssel geändert hat.</td>
+<td>Dieses Flag bewirkt, dass der Cursor sich auf ein Einfügen desselben Datensatzes und einen Lösch- oder ursprünglichen Datensatz vorbereitet. Sie wird in Fällen verwendet, in denen sich der Primärschlüssel geändert hat.</td>
 </tr>
 </tbody>
 </table>

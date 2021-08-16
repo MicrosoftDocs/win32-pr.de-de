@@ -1,10 +1,10 @@
 ---
 title: IWMDRMEventGenerator-Schnittstelle
-description: Die IWMDRMEventGenerator-Schnittstelle ist eine Erweiterung der INTERFACESMediaEventGenerator-Schnittstelle, die eine Methode zum Abbrechen asynchroner Vorgänge bereitstellt.
+description: Die IWMDRMEventGenerator-Schnittstelle ist eine Erweiterung der ASYNCHRONOUSMediaEventGenerator-Schnittstelle, die eine Methode zum Abbrechen asynchroner Vorgänge bietet.
 ms.assetid: 38d8db83-b8f0-4cc2-b426-cb0e46bde51d
 keywords:
-- IWMDRMEventGenerator-Schnittstelle windows Media Format
-- IWMDRMEventGenerator-Schnittstelle windows Media Format , beschrieben
+- IWMDRMEventGenerator-Schnittstelle – Windows-Medienformat
+- IWMDRMEventGenerator interface windows Media Format , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118433679"
 ---
 # <a name="iwmdrmeventgenerator-interface"></a>IWMDRMEventGenerator-Schnittstelle
 
-Die **IWMDRMEventGenerator-Schnittstelle** ist eine Erweiterung der **INTERFACESMediaEventGenerator-Schnittstelle,** die eine Methode zum Abbrechen asynchroner Vorgänge bereitstellt.
+Die **IWMDRMEventGenerator-Schnittstelle** ist eine Erweiterung der **ASYNCHRONOUSMediaEventGenerator-Schnittstelle,** die eine Methode zum Abbrechen asynchroner Vorgänge bietet.
 
 ## <a name="members"></a>Member
 
@@ -37,7 +37,7 @@ Die **IWMDRMEventGenerator-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                    | Beschreibung                                   |
+| Methode                                                                    | BESCHREIBUNG                                   |
 |:--------------------------------------------------------------------------|:----------------------------------------------|
 | [**CancelAsyncOperation**](iwmdrmeventgenerator-cancelasyncoperation.md) | Bricht einen asynchronen Vorgang ab.<br/> |
 
@@ -49,7 +49,7 @@ Die **IWMDRMEventGenerator-Schnittstelle** verfügt über diese Methoden.
 
 <dl> <dt>
 
-[**Beispiel für die DRM-Individualisierung**](drm-individualization-example.md)
+[**DRM-Individualisierungsbeispiel**](drm-individualization-example.md)
 </dt> <dt>
 
 [**Schnittstellen**](drm-interfaces.md)

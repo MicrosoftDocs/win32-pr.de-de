@@ -76,7 +76,7 @@ Zeiger auf die [**IDirect3DVolume9-Schnittstelle,**](/windows/win32/api/d3d9help
 
 Typ: **const [**PALETTEENTRY**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) \***
 
-Zeiger auf eine [**PALETTEENTRY-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) die eine Palette mit 256 Farben enthält. Dieser Parameter kann **NULL** sein.
+Zeiger auf eine [**PALETTEENTRY-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) die eine Palette von 256 Farben enthält. Dieser Parameter kann **NULL** sein.
 
 </dd> <dt>
 

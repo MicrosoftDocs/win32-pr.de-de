@@ -1,5 +1,5 @@
 ---
-description: Hilft, als Symbol anzuzeigen, ob ein Speicherort der Standardspeicherort für Besitzer und/oder Nichtbesitzer einer Bibliothek ist.
+description: Hilft bei der Anzeige als Symbol, unabhängig davon, ob ein Speicherort der Standardspeicherort für Besitzer und/oder Nichtbesitzer einer Bibliothek ist.
 ms.assetid: 42375796-bf95-4092-bce0-c77e7b5bfeea
 title: System.DefaultSaveLocationDisplay
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118728998"
 ---
 # <a name="systemdefaultsavelocationdisplay"></a>System.DefaultSaveLocationDisplay
 
-Hilft, als Symbol anzuzeigen, ob ein Speicherort der Standardspeicherort für Besitzer und/oder Nichtbesitzer einer Bibliothek ist.
+Hilft bei der Anzeige als Symbol, unabhängig davon, ob ein Speicherort der Standardspeicherort für Besitzer und/oder Nichtbesitzer einer Bibliothek ist.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8
 

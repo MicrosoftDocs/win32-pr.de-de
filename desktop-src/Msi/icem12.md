@@ -15,7 +15,7 @@ ms.locfileid: "118634943"
 
 ICEM12 überprüft, ob standard-Aktionen in einer ModuleSequence-Tabelle Sequenznummern und benutzerdefinierte Aktionen BaseAction- und After-Werte aufweisen.
 
-Dieser ICEM ist in der Mergemod.cub-Datei verfügbar, die im Windows Installer 2.0 SDK und höher bereitgestellt wird. Weitere Informationen finden Sie unter [Windows SDK-Komponenten für Windows Installer-Entwickler.](platform-sdk-components-for-windows-installer-developers.md)
+Dieser ICEM ist in der Datei Mergemod.cub verfügbar, die im Windows Installer 2.0 SDK und höher bereitgestellt wird. Weitere Informationen finden Sie unter [Windows SDK-Komponenten für Windows Installer-Entwickler.](platform-sdk-components-for-windows-installer-developers.md)
 
 ## <a name="result"></a>Ergebnis
 

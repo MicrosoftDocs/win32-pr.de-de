@@ -1,27 +1,27 @@
 ---
 description: Legt den vom Videoprozessor verwendeten Algorithmus fest.
 ms.assetid: 68AA3D7A-787F-4F0A-A6C6-A1C7E5D99719
-title: MF_VIDEO_PROCESSOR_ALGORITHM-Attribut (mspdl. h)
+title: MF_VIDEO_PROCESSOR_ALGORITHM-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a37c588b798f0f61c70a84c479a987f9e63e1c9d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7317f1e472ca3e919c5323211d2a74c67e811c1276c05ba27a4a7426a20884ac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130129"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119599990"
 ---
-# <a name="mf_video_processor_algorithm-attribute"></a>Algorithmus des MF- \_ Video \_ Prozessor \_ Algorithmus
+# <a name="mf_video_processor_algorithm-attribute"></a>MF \_ VIDEO \_ PROCESSOR \_ ALGORITHM-Attribut
 
 Legt den vom Videoprozessor verwendeten Algorithmus fest.
 
 ## <a name="data-type"></a>Datentyp
 
-**[**MF \_ \_ \_ \_ Algorithmustyp des Video Prozessors**](mf-video-processor-algorithm-type.md)** , gespeichert als **UInt32**
+**[**MF \_ ALS UINT32 gespeichertER \_ \_ \_ VIDEOPROZESSORALGORITHMUSTYP**](mf-video-processor-algorithm-type.md)** 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert dieses Attributs ist ein [**MF \_ - \_ \_ \_ Parametertyp des MF-Video Prozessors**](mf-video-processor-algorithm-type.md).
+Der Wert dieses Attributs ist ein [**MF VIDEO PROCESSOR ALGORITHM \_ \_ \_ \_ TYPE**](mf-video-processor-algorithm-type.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -29,24 +29,24 @@ Der Wert dieses Attributs ist ein [**MF \_ - \_ \_ \_ Parametertyp des MF-Video 
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>MFI. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Mfidl.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring)
+[**ATTRIBUTEAttributes::GetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring)
 </dt> <dt>
 
-[**Imfattributes:: SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)
+[**ATTRIBUTEAttributes::SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)
 </dt> </dl>
 
  

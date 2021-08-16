@@ -13,11 +13,11 @@ ms.locfileid: "118744612"
 ---
 # <a name="mobile-broadband-profile-schema-v1"></a>Mobiles Breitbandprofilschema v1
 
-Das Windows 7Schema für mobiles Breitbandprofil v1 ist im Namespace `https://www.microsoft.com/networking/WWAN/profile/v1` verfügbar.
+Das Windows 7Mobile Breitbandprofilschema v1 ist im Namespace `https://www.microsoft.com/networking/WWAN/profile/v1` verfügbar.
 
--   [Schema v1-Elemente für mobiles Breitbandprofil](schema-elements.md)
--   [Einfache Typen des Schemas für mobile Breitbandprofile v1](schema-simple-types.md)
--   [Komplexe Typen des Mobilen Breitbandprofilschemas v1](schema-complex-types.md)
+-   [Elemente des Mobilen Breitbandprofilschemas v1](schema-elements.md)
+-   [Mobiles Breitbandprofilschema v1 – einfache Typen](schema-simple-types.md)
+-   [Mobiles Breitbandprofilschema v1 : Komplexe Typen](schema-complex-types.md)
 
 ``` syntax
 <?xml version="1.0" encoding="UTF-8" ?>

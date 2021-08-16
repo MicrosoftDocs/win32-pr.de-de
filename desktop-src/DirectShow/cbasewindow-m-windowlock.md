@@ -1,7 +1,7 @@
 ---
 description: Kritischer Abschnitt, um den Zugriff auf das Objekt zu serialisieren.
 ms.assetid: 24a5b1b2-209e-4262-aa48-fd4534b2da57
-title: 'Cbasewindow:: m_WindowLock Member (winutil. h)'
+title: CBaseWindow::m_WindowLock-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 38227e505f2e05e024c8cecf12ab3cb8c336bfe1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: af5c663ea055116a64dec597230fa289591b40b7f6b1c134b79dd66e845c34f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357986"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119567380"
 ---
-# <a name="cbasewindowm_windowlock-member"></a>Cbasewindow:: m \_ windowlock-Member
+# <a name="cbasewindowm_windowlock-member"></a>CBaseWindow::m \_ WindowLock-Member
 
 Kritischer Abschnitt, um den Zugriff auf das Objekt zu serialisieren.
 
@@ -42,16 +42,16 @@ CCritSec m_WindowLock;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

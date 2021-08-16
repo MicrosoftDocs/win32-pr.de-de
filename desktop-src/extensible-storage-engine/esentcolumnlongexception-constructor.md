@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentColumnLongException-Konstruktor'
+description: 'Weitere Informationen finden Sie unter: EsentColumnLongException-Konstruktor'
 title: EsentColumnLongException-Konstruktor
 TOCTitle: 'EsentColumnLongException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentColumnLongException.#ctor

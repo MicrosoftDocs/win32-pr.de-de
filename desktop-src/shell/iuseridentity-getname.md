@@ -1,7 +1,7 @@
 ---
-description: 'Iuseridentity:: GetName wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop.'
+description: IUserIdentity::GetName wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop.
 ms.assetid: 4db24dd2-d2b8-4a58-9c16-0e721bc195da
-title: 'Iuseridentity:: GetName-Methode (Msident. h)'
+title: IUserIdentity::GetName-Methode (Msident.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msident.dll
-ms.openlocfilehash: 88c0a3d08ff917c2cc9fd59f15e4c23fc22fc79d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 035f7c61290fb60e70821f0a43676c41dca0fc92cebc8ecfb963bb757ab47a5c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119661190"
 ---
-# <a name="iuseridentitygetname-method"></a>Iuseridentity:: GetName-Methode
+# <a name="iuseridentitygetname-method"></a>IUserIdentity::GetName-Methode
 
-\[**Iuseridentity:: GetName** wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop](fastuserswitching.md).\]
+\[**IUserIdentity::GetName** wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop](fastuserswitching.md).\]
 
 Ruft den Namen ab, der dieser Benutzeridentität zugeordnet ist.
 
@@ -42,21 +42,21 @@ HRESULT GetName(
 
 <dl> <dt>
 
-*pszName* \[ in\]
+*pszName* \[ In\]
 </dt> <dd>
 
-Typ: **WCHAR \** _
+Typ: **WCHAR \***
 
-Ein Zeiger auf eine breit Zeichen-Zeichenfolge, die den Namen dieser Benutzeridentität empfängt.
+Ein Zeiger auf eine Zeichenfolge mit Breitzeichen, die den Namen dieser Benutzeridentität empfängt.
 
 </dd> <dt>
 
-_ulBuffSize * \[ in\]
+*ulBuffSize* \[ In\]
 </dt> <dd>
 
-Typ: **ulong**
+Typ: **ULONG**
 
-Ein-Wert, der die Größe von *pszName* angibt.
+Ein -Wert, der die Größe von *pszName* angibt.
 
 </dd> </dl>
 
@@ -64,20 +64,20 @@ Ein-Wert, der die Größe von *pszName* angibt.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                  |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
-| Header<br/>                   | <dl> <dt>Msident. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Msident. idl</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
+| Header<br/>                   | <dl> <dt>Msident.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Msident.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Msident.dll</dt> </dl> |
 
 
@@ -86,7 +86,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Iuseridentity**](iuseridentity.md)
+[**IUserIdentity**](iuseridentity.md)
 </dt> <dt>
 
 [**SetName**](iuseridentity2-setname.md)

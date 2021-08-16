@@ -1,11 +1,11 @@
 ---
-title: PKI-Max-ausstell Endes tiefen Attribut
-description: Die maximale Länge der vom Zertifikat ausgestellten Zertifikat Kette.
+title: PKI-Max-Issuing-Depth-Attribut
+description: Die maximale Länge der vom Zertifikat ausgestellten Zertifikatkette.
 ms.assetid: 0281f05a-4066-4305-ab0a-d741f17c8f28
 ms.tgt_platform: multiple
 keywords:
-- PKI-Max-ausstell Endes tiefen Attribut AD-Schema
-- pkimaxissuingtiefe-Attribut AD-Schema
+- AD-Schema des PKI-Max-Issuing-Depth-Attributs
+- pKIMaxIssuingDepth-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e1a2273fd819faf9d89b66b830501c36b0ad61d3
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: fa2e71ddc8940786e83c9f15d458aca8ffae17bf305c1f1dc684b04d290640cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960119"
 ---
-# <a name="pki-max-issuing-depth-attribute"></a>PKI-Max-ausstell Endes tiefen Attribut
+# <a name="pki-max-issuing-depth-attribute"></a>PKI-Max-Issuing-Depth-Attribut
 
-Die maximale Länge der vom Zertifikat ausgestellten Zertifikat Kette.
+Die maximale Länge der vom Zertifikat ausgestellten Zertifikatkette.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | PKI-Max-ausstellende Tiefe                |
-| LDAP-Display-Name | pkimaxissuingtiefe                   |
+| CN                | PKI-Max-Issuing-Depth                |
+| Ldap-Anzeigename | pKIMaxIssuingDepth                   |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1329              |
-| System-ID-GUID    | f0bfdefa-3b9d-11d2-90cc-00c04fd91ab1 |
+| System-Id-Guid    | f0bfdefa-3b9d-11d2-90cc-00c04fd91ab1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Die maximale Länge der vom Zertifikat ausgestellten Zertifikat Kette.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Die maximale Länge der vom Zertifikat ausgestellten Zertifikat Kette.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Die maximale Länge der vom Zertifikat ausgestellten Zertifikat Kette.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Die maximale Länge der vom Zertifikat ausgestellten Zertifikat Kette.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Die maximale Länge der vom Zertifikat ausgestellten Zertifikat Kette.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Die maximale Länge der vom Zertifikat ausgestellten Zertifikat Kette.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Die maximale Länge der vom Zertifikat ausgestellten Zertifikat Kette.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 

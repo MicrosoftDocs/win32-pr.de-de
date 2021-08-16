@@ -1,31 +1,31 @@
 ---
-description: Dienste werden im Allgemeinen als Konsolen Anwendungen geschrieben.
+description: Dienste werden im Allgemeinen als Konsolenanwendungen geschrieben.
 ms.assetid: ed6945fc-ac08-4776-8d75-d33e8df3882a
-title: Dienst Einstiegspunkt
+title: Diensteinstiegspunkt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: de9e2683c4a69949b6f51c7d000c0ee3571fe118
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d8a8f44322048351161bb8f3b8afdd619129d18b5effb5dc850d8909afbb3673
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958864"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118888972"
 ---
-# <a name="service-entry-point"></a>Dienst Einstiegspunkt
+# <a name="service-entry-point"></a>Diensteinstiegspunkt
 
-Dienste werden im Allgemeinen als Konsolen Anwendungen geschrieben. Der Einstiegspunkt einer Konsolenanwendung ist die **Haupt** Funktion. Die **Main** -Funktion empfängt Argumente aus dem **ImagePath** -Wert aus dem Registrierungsschlüssel für den Dienst. Weitere Informationen finden Sie im Abschnitt "Hinweise" der Funktion "| [**ateservice**](/windows/desktop/api/Winsvc/nf-winsvc-createservicea) ".
+Dienste werden im Allgemeinen als Konsolenanwendungen geschrieben. Der Einstiegspunkt einer Konsolenanwendung ist die **Hauptfunktion.** Die **main-Funktion** empfängt Argumente vom **ImagePath-Wert** aus dem Registrierungsschlüssel für den Dienst. Weitere Informationen finden Sie im Abschnitt "Hinweise" der [**CreateService-Funktion.**](/windows/desktop/api/Winsvc/nf-winsvc-createservicea)
 
-Wenn der SCM ein Dienstprogramm startet, wartet er darauf, dass er die Funktion " [**StartServiceCtrlDispatcher**](/windows/desktop/api/Winsvc/nf-winsvc-startservicectrldispatchera) " aufruft. Verwenden Sie die folgenden Richtlinien.
+Wenn der SCM ein Dienstprogramm startet, wartet er darauf, dass er die [**Funktion StartServiceCtrlDispatcher**](/windows/desktop/api/Winsvc/nf-winsvc-startservicectrldispatchera) aufruft. Befolgen Sie die folgenden Richtlinien.
 
--   Ein Dienst vom Typ "Dienst \_ Win32- \_ eigener Prozess" \_ sollte [**StartServiceCtrlDispatcher**](/windows/desktop/api/Winsvc/nf-winsvc-startservicectrldispatchera) direkt aus seinem Haupt Thread aufrufen. Sie können nach dem Starten des Diensts eine beliebige Initialisierung ausführen, wie in der [Service Main-Funktion des Diensts](service-servicemain-function.md)beschrieben.
--   Wenn der Diensttyp ein \_ Win32-Freigabeprozess des Diensts ist \_ \_ und eine allgemeine Initialisierung für alle Dienste im Programm vorhanden ist, können Sie die Initialisierung im Haupt Thread ausführen, bevor Sie [**StartServiceCtrlDispatcher**](/windows/desktop/api/Winsvc/nf-winsvc-startservicectrldispatchera)aufrufen, solange Sie weniger als 30 Sekunden benötigt. Andernfalls müssen Sie einen weiteren Thread erstellen, um die allgemeine Initialisierung durchzuführen, während der Haupt Thread **StartServiceCtrlDispatcher** aufruft. Nach dem Starten des Diensts sollten Sie weiterhin eine beliebige Dienst spezifische Initialisierung ausführen.
+-   Ein Dienst vom Typ SERVICE \_ WIN32 \_ OWN PROCESS sollte \_ [**StartServiceCtrlDispatcher**](/windows/desktop/api/Winsvc/nf-winsvc-startservicectrldispatchera) sofort über seinen Hauptthread aufrufen. Sie können eine beliebige Initialisierung nach dem Start des Diensts ausführen, wie unter [Service ServiceMain-Funktion](service-servicemain-function.md)beschrieben.
+-   Wenn der Diensttyp SERVICE \_ WIN32 SHARE PROCESS lautet und es eine gemeinsame \_ \_ Initialisierung für alle Dienste im Programm gibt, können Sie die Initialisierung im Hauptthread ausführen, bevor [**Sie StartServiceCtrlDispatcher**](/windows/desktop/api/Winsvc/nf-winsvc-startservicectrldispatchera)aufrufen, sofern dies weniger als 30 Sekunden dauert. Andernfalls müssen Sie einen anderen Thread erstellen, um die allgemeine Initialisierung durchzuführen, während der Hauptthread **StartServiceCtrlDispatcher** aufruft. Sie sollten nach dem Start des Diensts weiterhin eine dienstspezifische Initialisierung ausführen.
 
-Die [**StartServiceCtrlDispatcher**](/windows/desktop/api/Winsvc/nf-winsvc-startservicectrldispatchera) -Funktion nimmt für jeden Dienst, der im Prozess enthalten ist, eine [**Dienst \_ Tabellen \_ Eintrags**](/windows/desktop/api/Winsvc/ns-winsvc-service_table_entrya) Struktur. Jede Struktur gibt den Dienstnamen und den Einstiegspunkt für den Dienst an. Ein Beispiel finden Sie unter [Schreiben der Hauptfunktion eines Dienstprogramms](writing-a-service-program-s-main-function.md).
+Die [**StartServiceCtrlDispatcher-Funktion**](/windows/desktop/api/Winsvc/nf-winsvc-startservicectrldispatchera) übernimmt eine [**SERVICE TABLE \_ \_ ENTRY-Struktur**](/windows/desktop/api/Winsvc/ns-winsvc-service_table_entrya) für jeden im Prozess enthaltenen Dienst. Jede -Struktur gibt den Dienstnamen und den Einstiegspunkt für den Dienst an. Ein Beispiel finden Sie unter [Schreiben der Hauptfunktion eines Dienstprogramms.](writing-a-service-program-s-main-function.md)
 
-Wenn [**StartServiceCtrlDispatcher**](/windows/desktop/api/Winsvc/nf-winsvc-startservicectrldispatchera) erfolgreich ist, gibt der aufrufende Thread erst dann zurück, wenn alle laufenden Dienste im Prozess den Status "beendet" eingegeben haben \_ . Der SCM sendet Steuerungsanforderungen über eine Named Pipe an diesen Thread. Der Thread fungiert als Steuerelement Verteiler und führt die folgenden Aufgaben aus:
+Wenn [**StartServiceCtrlDispatcher**](/windows/desktop/api/Winsvc/nf-winsvc-startservicectrldispatchera) erfolgreich ist, gibt der aufrufende Thread erst dann zurück, wenn alle ausgeführten Dienste im Prozess den Status SERVICE STOPPED erreicht \_ haben. Der SCM sendet Über eine Named Pipe Steuerungsanforderungen an diesen Thread. Der Thread fungiert als Steuerungsdisponent und führt die folgenden Aufgaben aus:
 
 -   Erstellen Sie einen neuen Thread, um den entsprechenden Einstiegspunkt aufzurufen, wenn ein neuer Dienst gestartet wird.
--   Ruft die entsprechende [Handlerfunktion](service-control-handler-function.md) auf, um Dienst Steuerungsanforderungen zu verarbeiten.
+-   Rufen Sie die entsprechende [Handlerfunktion](service-control-handler-function.md) auf, um Dienststeuerungsanforderungen zu verarbeiten.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

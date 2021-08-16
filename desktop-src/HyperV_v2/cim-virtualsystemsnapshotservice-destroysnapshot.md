@@ -1,7 +1,7 @@
 ---
 description: Zerstören sie eine vorhandene Momentaufnahme des virtuellen Systems. Diese Methode kann als Nebeneffekt andere Momentaufnahmen zerstören, die von der betroffenen Momentaufnahme abhängig sind.
 ms.assetid: 69f60d0e-50ef-4a38-ad4b-88534b7fb3f8
-title: DestroySnapshot-Methode der CIM_VirtualSystemSnapshotService Klasse
+title: DestroySnapshot-Methode der CIM_VirtualSystemSnapshotService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -53,7 +53,7 @@ Ein [**CIM \_ VirtualSystemSettingData-Verweis**](cim-virtualsystemsettingdata.m
 Wenn der Vorgang lange ausgeführt wird, kann optional ein [**CIM \_ ConcreteJob**](cim-concretejob.md) zurückgegeben werden, der den Auftrag darstellt.
 
 > [!Note]  
-> Dieser Parameter wurde in der -Windows 8.1.
+> Dieser Parameter wurde in Windows 8.1 gelesen/geschrieben.
 
  
 
@@ -61,7 +61,7 @@ Wenn der Vorgang lange ausgeführt wird, kann optional ein [**CIM \_ ConcreteJob
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
+Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
@@ -89,7 +89,7 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 **DMTF Reserved** (..)
 </dt> <dt>
 
-**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
 **Reservierte Methode** (4097..32767)
@@ -106,13 +106,13 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

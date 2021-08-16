@@ -1,29 +1,29 @@
 ---
-description: Sie können eine Sicherheits Beschreibung für eine anonyme Pipe angeben, wenn Sie die Funktion "-Funktion" aufrufen. Die Sicherheits Beschreibung steuert den Zugriff auf die Lese-und schreibenden der Pipe.
+description: Sie können eine Sicherheitsbeschreibung für eine anonyme Pipe angeben, wenn Sie die CreatePipe-Funktion aufrufen. Der Sicherheitsdeskriptor steuert den Zugriff auf die Lese- und Schreibenden der Pipe.
 ms.assetid: 17813ce1-b3f6-408f-9c55-5caa7eda6738
-title: Sicherheit und Zugriffsrechte für anonyme Pipe
+title: Sicherheit und Zugriffsrechte für anonyme Pipes
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 02935a3b2bc5ea31d88aab3f23f23c348c054e5b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7b54869584a70bfbe886740e979c44864d852de0df23e311eb4aad89c321662c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118756357"
 ---
-# <a name="anonymous-pipe-security-and-access-rights"></a>Sicherheit und Zugriffsrechte für anonyme Pipe
+# <a name="anonymous-pipe-security-and-access-rights"></a>Sicherheit und Zugriffsrechte für anonyme Pipes
 
-Mithilfe der Windows-Sicherheit können Sie den Zugriff auf anonyme Pipes steuern. Weitere Informationen zur Sicherheit finden Sie unter [Zugriffs Steuerungsmodell](/windows/desktop/SecAuthZ/access-control-model).
+mit Windows Sicherheit können Sie den Zugriff auf anonyme Pipes steuern. Weitere Informationen zur Sicherheit finden Sie unter [Access-Control Model](/windows/desktop/SecAuthZ/access-control-model).
 
-Sie können eine [Sicherheits Beschreibung](/windows/desktop/SecAuthZ/security-descriptors) für eine Pipe angeben, wenn [**Sie die Funktion**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-createpipe) "-Funktion" aufrufen. Die Sicherheits Beschreibung steuert den Zugriff auf die Lese-und schreibenden der Pipe. Wenn Sie **null** angeben, erhält die Pipe eine Standard Sicherheits Beschreibung. Die ACLs in der Standard Sicherheits Beschreibung für eine Pipe stammen aus dem primären Token oder dem Identitätswechsel Token des Erstellers.
+Sie können eine [Sicherheitsbeschreibung](/windows/desktop/SecAuthZ/security-descriptors) für eine Pipe angeben, wenn Sie die [**CreatePipe-Funktion**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-createpipe) aufrufen. Der Sicherheitsdeskriptor steuert den Zugriff auf die Lese- und Schreibenden der Pipe. Wenn Sie **NULL** angeben, ruft die Pipe einen Standardsicherheitsdeskriptor ab. Die ACLs im Standardsicherheitsdeskriptor für eine Pipe stammen aus dem primären Token oder Identitätswechseltoken des Erstellers.
 
-Um die Sicherheits Beschreibung eines Pipe abzurufen, rufen Sie die [**GetSecurityInfo**](/windows/desktop/api/aclapi/nf-aclapi-getsecurityinfo) -Funktion auf. Um die Sicherheits Beschreibung einer Pipe zu ändern, müssen Sie die Funktion [**setsecurityinfo**](/windows/desktop/api/aclapi/nf-aclapi-setsecurityinfo) aufrufen.
+Rufen Sie die [**GetSecurityInfo-Funktion**](/windows/desktop/api/aclapi/nf-aclapi-getsecurityinfo) auf, um die Sicherheitsbeschreibung einer Pipe abzurufen. Um die Sicherheitsbeschreibung einer Pipe zu ändern, rufen Sie die [**SetSecurityInfo-Funktion**](/windows/desktop/api/aclapi/nf-aclapi-setsecurityinfo) auf.
 
-Die Funktion " [**kreatepipe**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-createpipe) " gibt zwei Handles an die anonyme Pipe zurück: ein Lese Handle mit generischem \_ Lese-und Synchronisierungs Zugriff und ein Schreib Handle mit generischem \_ Schreib-und Synchronisierungs Zugriff. \_Für den generischen Lesezugriff und den generischen \_ Schreibzugriff wird dieselbe Zugriffsrechte Zuordnung wie für Named Pipes verwendet.
+Die [**CreatePipe-Funktion**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-createpipe) gibt zwei Handles an die anonyme Pipe zurück: ein Lesehandle mit GENERIC \_ READ- und SYNCHRONIZE-Zugriff und ein Schreibhandle mit GENERIC \_ WRITE- und SYNCHRONIZE-Zugriff. GENERIC \_ READ- und GENERIC \_ WRITE-Zugriff verwenden die gleiche Zugriffsberechtigungszuordnung wie für Named Pipes.
 
-Der generische \_ Lesezugriff für eine anonyme Pipe kombiniert die Rechte zum Lesen von Daten aus der Pipe, zum Lesen von Pipe-Attributen, zum Lesen erweiterter Attribute und zum Lesen der DACL der Pipe.
+Generischer \_ LESEzugriff für eine anonyme Pipe kombiniert die Rechte zum Lesen von Daten aus der Pipe, Lesen von Pipeattributen, Lesen erweiterter Attribute und Lesen der DACL der Pipe.
 
-\_Der generische Schreibzugriff für eine anonyme Pipe kombiniert die Rechte zum Schreiben von Daten in die Pipe, zum Anfügen von Daten an die Pipe, zum Schreiben von Pipe-Attributen, zum Schreiben erweiterter Attribute und zum Lesen der DACL der Pipe.
+Der GENERISCHE \_ WRITE-Zugriff für eine anonyme Pipe kombiniert die Rechte zum Schreiben von Daten in die Pipe, zum Anfügen von Daten, zum Schreiben von Pipeattributen, zum Schreiben erweiterter Attribute und zum Lesen der DACL der Pipe.
 
  
 

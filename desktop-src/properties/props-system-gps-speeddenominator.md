@@ -1,5 +1,5 @@
 ---
-description: Der Nenner von PKEY \_ GPS \_ Speed.
+description: Der Nenner der \_ PKEY-GPS-Geschwindigkeit. \_
 ms.assetid: cbe5b6cd-db27-47f0-9458-d2ed9a7aa882
 title: System.GPS.SpeedDenominator
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118727458"
 ---
 # <a name="systemgpsspeeddenominator"></a>System.GPS.SpeedDenominator
 
-Der Nenner von PKEY \_ GPS \_ Speed.
+Der Nenner der \_ PKEY-GPS-Geschwindigkeit. \_
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

@@ -1,5 +1,5 @@
 ---
-description: Um einen WMI-Eigenschaftenanbieter zu erstellen, müssen Sie die Win32Provider-Instanz registrieren, die Ihren Anbieter mithilfe einer Instanz von \_ \_ \_ \_ PropertyProviderRegistration darstellt.
+description: Zum Erstellen eines WMI-Eigenschaftenanbieters müssen Sie die \_ \_ Win32Provider-Instanz registrieren, die Ihren Anbieter darstellt, indem Sie eine Instanz von \_ \_ PropertyProviderRegistration verwenden.
 ms.assetid: e7e30acc-ea41-41e2-9bb3-cd931e8d799e
 ms.tgt_platform: multiple
 title: Registrieren eines Eigenschaftenanbieters
@@ -14,7 +14,7 @@ ms.locfileid: "118554208"
 ---
 # <a name="registering-a-property-provider"></a>Registrieren eines Eigenschaftenanbieters
 
-Um einen WMI-Eigenschaftenanbieter [*zu erstellen,*](gloss-p.md) müssen Sie die [**\_ \_ Win32Provider-Instanz**](--win32provider.md) registrieren, die Ihren Anbieter darstellt, indem Sie eine Instanz von [**\_ \_ PropertyProviderRegistration verwenden.**](--propertyproviderregistration.md) Als COM-Objekt muss sich Ihr Anbieter beim Betriebssystem und WMI registrieren. Beim folgenden Verfahren wird davon ausgegangen, dass Sie den Registrierungsprozess bereits implementiert haben, wie unter [Registrieren eines Anbieters beschrieben.](registering-a-provider.md)
+Zum Erstellen eines [*WMI-Eigenschaftenanbieters*](gloss-p.md) müssen Sie die [**\_ \_ Win32Provider-Instanz**](--win32provider.md) registrieren, die Ihren Anbieter darstellt, indem Sie eine Instanz von [**\_ \_ PropertyProviderRegistration**](--propertyproviderregistration.md)verwenden. Als COM-Objekt muss sich Ihr Anbieter beim Betriebssystem und WMI registrieren. Im folgenden Verfahren wird davon ausgegangen, dass Sie den Registrierungsprozess bereits implementiert haben, wie unter [Registrieren eines Anbieters](registering-a-provider.md)beschrieben.
 
 Im folgenden Verfahren wird beschrieben, wie Sie einen Eigenschaftenanbieter registrieren.
 
@@ -22,15 +22,15 @@ Im folgenden Verfahren wird beschrieben, wie Sie einen Eigenschaftenanbieter reg
 
 1.  Erstellen Sie eine Instanz der [**\_ \_ Win32Provider-Klasse,**](--win32provider.md) die den Eigenschaftenanbieter beschreibt.
 
-    Die [**\_ \_ Win32Provider-Klasse**](--win32provider.md) akzeptiert die Standardwerte für andere Eigenschaften, z. B. den **TRUE-Wert** für die **Pure-Eigenschaft.** Weitere Informationen finden Sie unter [**\_ \_ Win32Provider**](--win32provider.md).
+    Die [**\_ \_ Win32Provider-Klasse**](--win32provider.md) akzeptiert die Standardwerte für andere Eigenschaften, z. B. den **TRUE-Wert** für die **Pure-Eigenschaft.** Weitere Informationen finden Sie unter [**\_ \_ Win32Provider.**](--win32provider.md)
 
-2.  Erstellen Sie eine Instanz der [**\_ \_ PropertyProviderRegistration-Klasse,**](--propertyproviderregistration.md) die den Funktionssatz des Anbieters beschreibt.
+2.  Erstellen Sie eine Instanz der [**\_ \_ PropertyProviderRegistration-Klasse,**](--propertyproviderregistration.md) die den Featuresatz des Anbieters beschreibt.
 
-    Die [**\_ \_ PropertyProviderRegistration-Klasse**](--propertyproviderregistration.md) erbt viele Eigenschaften von der übergeordneten [**\_ \_ ObjectProviderRegistration-Klasse,**](--objectproviderregistration.md) die boolesche Werte zur Unterstützung bestimmter Features und ein Array von Zeichenfolgen zur Angabe der Abfrageunterstützung enthält.
+    Die [**\_ \_ PropertyProviderRegistration-Klasse**](--propertyproviderregistration.md) erbt viele Eigenschaften von der übergeordneten [**\_ \_ ObjectProviderRegistration-Klasse,**](--objectproviderregistration.md) die boolesche Werte bereitstellt, die die Unterstützung bestimmter Features angeben, und ein Array von Zeichenfolgen, um die Abfrageunterstützung anzugeben.
 
-    Achten Sie darauf, die Klasse sowohl mit den Qualifizierern [**Dynamic als**](dynamic-qualifier.md) auch [**Provider**](/windows/desktop/api/Provider/nl-provider-provider) zu kennzeichnen. Der **Dynamische** Qualifizierer signalisiert, dass WMI einen dynamischen Anbieter verwenden soll, um die Klasseninstanzen abzurufen, die die unterstützten Eigenschaften enthalten. Der  Anbieterqualifizierer gibt den Namen des Anbieters an, den WMI verwenden soll.
+    Achten Sie darauf, die -Klasse mit den [**Qualifizierern Dynamic**](dynamic-qualifier.md) und [**Provider**](/windows/desktop/api/Provider/nl-provider-provider) zu kennzeichnen. Der **dynamische** Qualifizierer signalisiert, dass WMI einen dynamischen Anbieter verwenden soll, um die Klasseninstanzen abzurufen, die die unterstützten Eigenschaften enthalten. Der **Anbieterqualifizierer** gibt den Namen des Anbieters an, den WMI verwenden soll.
 
-WMI ruft NewQuery für einen Ereignisanbieter auf, wenn ein Clientverbraucher eine Ereignisfilterabfrage registriert, die Verweise auf Ereignisse enthält, die von diesem Ereignisanbieter unterstützt werden. Daher kann der Ereignisanbieter, der für Instanzänderungsereignisse für die EmailClass-Klasse verantwortlich ist, so eingerichtet werden, dass nur Benachrichtigungen für den Absender generiert werden. Wenn der Anbieter eine Abfrage empfängt, die eine Benachrichtigung über Änderungen an der subject-Eigenschaft anfragt, kann der Anbieter mit der Generierung dieser Benachrichtigungen beginnen. In diesem Szenario ist WMI nicht erforderlich, um die Benachrichtigungen zu verwerfen, die nur Empfängeränderungen melden.
+WMI ruft NewQuery für einen Ereignisanbieter auf, wenn ein Clientverbraucher eine Ereignisfilterabfrage registriert, die Verweise auf Ereignisse enthält, die von diesem Ereignisanbieter unterstützt werden. Daher kann der Ereignisanbieter, der für Instanzänderungsereignisse für die EmailClass-Klasse verantwortlich ist, so eingerichtet werden, dass er nur Benachrichtigungen für den Absender generiert. Wenn der Anbieter eine Abfrage empfängt, die eine Benachrichtigung über Änderungen an der Subject-Eigenschaft anfordert, kann der Anbieter mit dem Generieren dieser Benachrichtigungen beginnen. In diesem Szenario ist WMI nicht erforderlich, um die Benachrichtigungen zu verwerfen, die nur Empfängeränderungen melden.
 
 Im folgenden MOF-Codebeispiel werden Instanzen beschrieben, die zum Registrieren eines Eigenschaftenanbieters verwendet werden können.
 
@@ -50,7 +50,7 @@ Im folgenden MOF-Codebeispiel werden Instanzen beschrieben, die zum Registrieren
 ```
 
 > [!Note]  
-> Nur Administratoren können einen Eigenschaftenanbieter registrieren oder löschen, indem sie eine Instanz von [**\_ \_ Win32Provider**](--win32provider.md) und [**\_ \_ PropertyProviderRegistration erstellen.**](--propertyproviderregistration.md)
+> Nur Administratoren können einen Eigenschaftenanbieter registrieren oder löschen, indem sie eine Instanz von [**\_ \_ Win32Provider**](--win32provider.md) und [**\_ \_ PropertyProviderRegistration**](--propertyproviderregistration.md)erstellen.
 
  
 

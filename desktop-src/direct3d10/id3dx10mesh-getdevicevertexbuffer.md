@@ -76,7 +76,7 @@ Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

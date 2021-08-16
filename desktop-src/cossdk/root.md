@@ -21,29 +21,29 @@ ms.locfileid: "118547017"
 ---
 # <a name="root-collection"></a>Stammsammlung
 
-Enthält die Auflistungen der obersten Ebene im Katalog. Er enthält keine [**COMAdminCatalogObject-Objekte**](comadmincatalogobject.md) oder unterstützt keine Eigenschaften.
+Enthält die Auflistungen der obersten Ebene im Katalog. Sie enthält keine [**COMAdminCatalogObject-Objekte**](comadmincatalogobject.md) und unterstützt keine Eigenschaften.
 
-Die **Stammsammlung** unterstützt die Add- [**und**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts**](comadmincatalogcollection.md) nicht.
+Die **Root-Auflistung** unterstützt die [**Add-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) und [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts**](comadmincatalogcollection.md) nicht.
 
-Sie können nicht aus einer **Sammlung zur Stammsammlung** navigieren.
+Sie können aus keiner Sammlung zur **Stammsammlung** navigieren.
 
 ## <a name="members"></a>Member
 
-Die **Root-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
+Die  Stammauflistung erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
 
-## <a name="related-collections"></a>Verwandte Sammlungen
+## <a name="related-collections"></a>Verwandte Auflistungen
 
-Im Folgenden finden Sie die Sammlungen der obersten Ebene im Katalog:
+Im Folgenden werden die Sammlungen der obersten Ebene im Katalog angezeigt:
 
 -   [**ApplicationCluster**](applicationcluster.md)
 -   [**ApplicationInstances**](applicationinstances.md)
--   [**Applications**](applications.md)
+-   [**Anwendungen**](applications.md)
 -   [**ComputerList**](computerlist.md)
 -   [**DCOMProtocols**](dcomprotocols.md)
 -   [**EventClassesForIID**](eventclassesforiid.md)
 -   [**FilesForImport**](filesforimport.md)
 -   [**InprocServers**](inprocservers.md)
--   [**LegacyServers**](legacyservers.md)
+-   [**LegacyServer**](legacyservers.md)
 -   [**LocalComputer**](localcomputer.md)
 -   [**Partitionen**](partitions.md)
 -   [**PartitionUsers**](partitionusers.md)
@@ -53,7 +53,7 @@ Im Folgenden finden Sie die Sammlungen der obersten Ebene im Katalog:
 -   [**WOWInprocServers**](wowinprocservers.md)
 -   [**WOWLegacyServers**](wowlegacyservers.md)
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

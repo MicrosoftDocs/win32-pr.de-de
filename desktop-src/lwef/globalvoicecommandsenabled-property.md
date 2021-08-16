@@ -33,7 +33,7 @@ Gibt zurück oder legt fest, ob die Stimme für die globalen Befehle des -Agents
 
 
 
-| Teil      | Beschreibung                                                                                                                                                                                                            |
+| Teil      | BESCHREIBUNG                                                                                                                                                                                                            |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | *boolean* | Ein boolescher Ausdruck, der angibt, ob Sprachparameter für globale Befehle des -Agents aktiviert sind. **True-Sprachparameter** (Standard) sind aktiviert. <br/> **False** Sprachparameter sind deaktiviert.<br/> |
 

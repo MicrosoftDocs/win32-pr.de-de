@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen finden Sie unter EsentException-Methoden.
+description: 'Weitere Informationen zu: EsentException-Methoden'
 title: EsentException-Methoden (Microsoft.Isam.Esent)
 TOCTitle: EsentException methods
 ms:assetid: Methods.T:Microsoft.Isam.Esent.EsentException
@@ -16,8 +16,8 @@ ms.locfileid: "118778947"
 ---
 # <a name="esentexception-methods"></a>EsentException-Methoden
 
-Geschützte Member enthalten  
-Geerbte Member enthalten  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 Der [EsentException-Typ](./esentexception-class.md) macht die folgenden Member verfügbar.
 
@@ -45,7 +45,7 @@ Der [EsentException-Typ](./esentexception-class.md) macht die folgenden Member v
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.getbaseexception#System_Exception_GetBaseException">Getbaseexception</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
@@ -55,12 +55,12 @@ Der [EsentException-Typ](./esentexception-class.md) macht die folgenden Member v
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.getobjectdata#System_Exception_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">GetObjectData</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.gettype#System_Exception_GetType">Gettype</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
@@ -70,7 +70,7 @@ Der [EsentException-Typ](./esentexception-class.md) macht die folgenden Member v
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.tostring#System_Exception_ToString">ToString</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 </tbody>
 </table>

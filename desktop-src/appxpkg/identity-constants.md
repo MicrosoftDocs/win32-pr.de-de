@@ -38,7 +38,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118552212"
 ---
-# <a name="identity-constants"></a>Identitätskonst constants
+# <a name="identity-constants"></a>Identitätskonst konstanten
 
 Gibt die Länge der Zeichenfolgen für die Identitätsfelder des Pakets an. Die Länge wird in Zeichen gemessen und darf Platz für das NULL-Abschlusszeichen enthalten.
 

@@ -16,10 +16,10 @@ ms.locfileid: "118545424"
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [Zwischenablagefunktionen](clipboard-functions.md)
--   [Nachrichten in der Zwischenablage](clipboard-messages.md)
--   [Benachrichtigungen in der Zwischenablage](clipboard-notifications.md)
+-   [Zwischenablagemeldungen](clipboard-messages.md)
+-   [Zwischenablagebenachrichtigungen](clipboard-notifications.md)
 -   [Zwischenablagestrukturen](clipboard-structures.md)
--   [**Standardformate der Zwischenablage**](standard-clipboard-formats.md)
+-   [**Standardformate für die Zwischenablage**](standard-clipboard-formats.md)
 
  
 

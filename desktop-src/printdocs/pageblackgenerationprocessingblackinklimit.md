@@ -1,21 +1,21 @@
 ---
-description: Erfahren Sie mehr über den PageBlackGenerationProcessingBlackInkLimit-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Erfahren Sie mehr über den PageBlackGenerationProcessingBlackInkLimit-Parameter. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: 96b48917-1fbc-467f-b2b4-1a9673f1ee99
 title: PageBlackGenerationProcessingBlackInkLimit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c753554b240a5fef0012a81c533b6efe938075e
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: a27d289ef82f5850a96d29bcb1d999c531a71bb3d9b7ce471abed3d4ac3d9d23
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113118425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120091900"
 ---
 # <a name="pageblackgenerationprocessingblackinklimit"></a>PageBlackGenerationProcessingBlackInkLimit
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Anwendungsinhalt mit der angegebenen benannten Farbe MUSS bei allen Farbtrennungen angezeigt werden.
+Anwendungsinhalt mit der angegebenen benannten Farbe MUSS in allen Farbtrennungen angezeigt werden.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -28,7 +28,7 @@ Anwendungsinhalt mit der angegebenen benannten Farbe MUSS bei allen Farbtrennung
 |----------------------------|------------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                    |
 | Bereichspräfix <br/> | Seite<br/>                                            |
-| Hinweise <br/>          | Verknüpft mit dem PageBlackGenerationProcessing-Element<br/> |
+| Hinweise <br/>          | Mit PageBlackGenerationProcessing-Element verknüpft<br/> |
 
 
 
@@ -36,7 +36,7 @@ Anwendungsinhalt mit der angegebenen benannten Farbe MUSS bei allen Farbtrennung
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageBlackGenerationProcessingBlackInkLimit">
@@ -66,7 +66,7 @@ Die XML-Struktur dieses Elements lautet:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-dfspath-Attribut
-description: Enthält den vollständigen Pfad des verknüpften verteiltes Dateisystem Links (DFS).
+title: ms-DFSR-DfsPath-Attribut
+description: Enthält den vollständigen Pfad des zugeordneten verteiltes Dateisystem (DFS).
 ms.assetid: bd596110-b156-4640-a6d0-ace9e4e30909
 ms.tgt_platform: multiple
 keywords:
-- MS-DFSR-dfspath-Attribut AD-Schema
-- "\"msdfsr-dfspath\"-Attribut AD-Schema"
+- AD-Schema des ms-DFSR-DfsPath-Attributs
+- AD-Schema des msDFSR-DfsPath-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 718c052ea89df9d8c237c4ef73a6d6d6af13ee49
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 24a8f1e1ae9f9baeaa134737d5f6b84777f99c283f7f7013828483b2e6751b7f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104123013"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960969"
 ---
-# <a name="ms-dfsr-dfspath-attribute"></a>MS-DFSR-dfspath-Attribut
+# <a name="ms-dfsr-dfspath-attribute"></a>ms-DFSR-DfsPath-Attribut
 
-Enthält den vollständigen Pfad des verknüpften verteiltes Dateisystem Links (DFS) für die DFS-Replikation Dienst Unterstützung.
+Enthält den vollständigen Pfad des zugeordneten verteiltes Dateisystem (DFS) für DFS-Replikation-Dienstunterstützung.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-DFSR-dfspath                             |
-| LDAP-Display-Name | msdfsr-dfspath                              |
+| CN                | ms-DFSR-DfsPath                             |
+| Ldap-Anzeigename | msDFSR-DfsPath                              |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.21                  |
-| System-ID-GUID    | 2cc903e2-398c-443b-ac86-ff6b01eac7ba        |
+| System-Id-Guid    | 2cc903e2-398c-443b-ac86-ff6b01eac7ba        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -56,15 +56,15 @@ Enthält den vollständigen Pfad des verknüpften verteiltes Dateisystem Links (
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | Richtig                                                         |
+| Is-Single-Valued       | True                                                         |
+| Ist indiziert             | True                                                         |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | 0                                                            |
 | Range-Upper            | 32767                                                        |
 | Search-Flags           | 0x00000001                                                   |
 | System-Flags           | 0x00000000                                                   |
-| In verwendete Klassen        | [**MS-DFSR-contentset**](c-msdfsr-contentset.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-ContentSet**](c-msdfsr-contentset.md)<br/> |
 
 
 
@@ -77,15 +77,15 @@ Enthält den vollständigen Pfad des verknüpften verteiltes Dateisystem Links (
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | Richtig                                                         |
+| Is-Single-Valued       | True                                                         |
+| Ist indiziert             | True                                                         |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | 0                                                            |
 | Range-Upper            | 32767                                                        |
 | Search-Flags           | 0x00000001                                                   |
 | System-Flags           | 0x00000000                                                   |
-| In verwendete Klassen        | [**MS-DFSR-contentset**](c-msdfsr-contentset.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-ContentSet**](c-msdfsr-contentset.md)<br/> |
 
 
 
@@ -98,15 +98,15 @@ Enthält den vollständigen Pfad des verknüpften verteiltes Dateisystem Links (
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | Richtig                                                         |
+| Is-Single-Valued       | True                                                         |
+| Ist indiziert             | True                                                         |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | 0                                                            |
 | Range-Upper            | 32767                                                        |
 | Search-Flags           | 0x00000001                                                   |
 | System-Flags           | 0x00000000                                                   |
-| In verwendete Klassen        | [**MS-DFSR-contentset**](c-msdfsr-contentset.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-ContentSet**](c-msdfsr-contentset.md)<br/> |
 
 
 
@@ -119,21 +119,21 @@ Enthält den vollständigen Pfad des verknüpften verteiltes Dateisystem Links (
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | Richtig                                                         |
+| Is-Single-Valued       | True                                                         |
+| Ist indiziert             | True                                                         |
 | Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | 0                                                            |
 | Range-Upper            | 32767                                                        |
 | Search-Flags           | 0x00000001                                                   |
 | System-Flags           | 0x00000000                                                   |
-| In verwendete Klassen        | [**MS-DFSR-contentset**](c-msdfsr-contentset.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-ContentSet**](c-msdfsr-contentset.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **MS-DFSR-dfspath-** Attribut ist Teil der Unterstützung für den verteiltes Dateisystem (DFS)-Replikations Dienst.
+Das **ms-DFSR-DfsPath-Attribut** ist Teil der Unterstützung verteiltes Dateisystem Replikationsdiensts (DFS).
 
  
 

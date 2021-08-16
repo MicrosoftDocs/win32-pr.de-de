@@ -1,11 +1,11 @@
 ---
-title: ms-DS-Quota-effektives Attribut
-description: Das effektive Kontingent für einen Sicherheits Prinzipal, der aus den zugewiesenen Kontingenten für eine Verzeichnis Partition berechnet wird.
+title: ms-DS-Quota-Effective-Attribut
+description: Das effektive Kontingent für einen Sicherheitsprinzipal, das aus den zugewiesenen Kontingenten für eine Verzeichnispartition berechnet wird.
 ms.assetid: 22422499-9b56-4d74-a30e-63917abacdd1
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ms-DS-Quota-effektives Attribut
-- AD-Schema des msDS-quotaeffective-Attributs
+- MS-DS-Quota-Effective-Attribut-AD-Schema
+- MSDS-QuotaEffective-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,42 +14,42 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6fe610c87c356431883cecded5eda3e0a9c42297
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 722daf2728992c441771830babf3b2b2bf9b4230367baae12a0d71264876ebc3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480362"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960589"
 ---
-# <a name="ms-ds-quota-effective-attribute"></a>ms-DS-Quota-effektives Attribut
+# <a name="ms-ds-quota-effective-attribute"></a>ms-DS-Quota-Effective-Attribut
 
-Das effektive Kontingent für einen Sicherheits Prinzipal, der aus den zugewiesenen Kontingenten für eine Verzeichnis Partition berechnet wird.
+Das effektive Kontingent für einen Sicherheitsprinzipal, das aus den zugewiesenen Kontingenten für eine Verzeichnispartition berechnet wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-Kontingent-effektiv                |
-| LDAP-Display-Name | MSDS-quotaeffective                  |
+| CN                | ms-DS-Quota-Effective                |
+| Ldap-Anzeigename | msDS-QuotaEffective                  |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1848              |
-| System-ID-GUID    | 6655b152-101C-48b4-B347-e1lbc60157 |
+| System-ID-GUID    | 6655b152-101c-48b4-b347-e1fcebc60157 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -58,10 +58,10 @@ Das effektive Kontingent für einen Sicherheits Prinzipal, der aus den zugewiese
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Ist einwertig       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |
@@ -79,10 +79,10 @@ Das effektive Kontingent für einen Sicherheits Prinzipal, der aus den zugewiese
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Ist einwertig       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |
@@ -100,10 +100,10 @@ Das effektive Kontingent für einen Sicherheits Prinzipal, der aus den zugewiese
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Ist einwertig       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |
@@ -121,10 +121,10 @@ Das effektive Kontingent für einen Sicherheits Prinzipal, der aus den zugewiese
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |
@@ -142,10 +142,10 @@ Das effektive Kontingent für einen Sicherheits Prinzipal, der aus den zugewiese
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |
@@ -163,10 +163,10 @@ Das effektive Kontingent für einen Sicherheits Prinzipal, der aus den zugewiese
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |

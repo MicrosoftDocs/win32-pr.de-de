@@ -1,5 +1,5 @@
 ---
-description: Rufen Sie die Nummer des Kontakts zurück.
+description: Rückrufnummer des Kontakts.
 ms.assetid: bcfd0f2b-317b-41de-88ab-acfde822e6fb
 title: System.Contact.CallbackTelephone
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118730164"
 ---
 # <a name="systemcontactcallbacktelephone"></a>System.Contact.CallbackTelephone
 
-Rufen Sie die Nummer des Kontakts zurück.
+Rückrufnummer des Kontakts.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

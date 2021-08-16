@@ -1,11 +1,11 @@
 ---
-title: Iresulttype GetProperty-Eigenschaft (wdssharedidl. h)
-description: Diese Eigenschaft enthält angegebene Eigenschafts Informationen.
+title: IResultType GetProperty-Eigenschaft (WdsSharedIDL.h)
+description: Diese Eigenschaft enthält angegebene Eigenschafteninformationen.
 ms.assetid: 04c810f2-c781-4384-93ae-1060466e2bc4
 keywords:
-- GetProperty-Eigenschaft Legacy-Windows-Umgebungs Features
-- GetProperty-Eigenschaft Legacy Windows-Umgebungs Features, iresulttype-Schnittstelle
-- Iresulttype-Schnittstelle Legacy Windows-Umgebungs Funktionen, GetProperty-Eigenschaft
+- GetProperty-Eigenschaft Legacy Windows-Umgebungsfeatures
+- GetProperty-Eigenschaft Legacy Windows Umgebungsfeatures, IResultType-Schnittstelle
+- IResultType-Schnittstelle Legacy Windows Umgebungsfeatures, GetProperty-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,19 +18,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fd62517e7db9fdc15841c443ba9010903ddea697
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f35a0f2bce8fb4e098a2452b6d5575fa9843283562f7f1d051b588d9a0c8cd05
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858795"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118481104"
 ---
-# <a name="iresulttypegetproperty-property"></a>Iresulttype:: GetProperty-Eigenschaft
+# <a name="iresulttypegetproperty-property"></a>IResultType::GetProperty-Eigenschaft
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows-Suche-API.](../search/-search-reference-entry-page.md) 
 
-Diese Eigenschaft enthält angegebene Eigenschafts Informationen.
+Diese Eigenschaft enthält angegebene Eigenschafteninformationen.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -51,7 +51,7 @@ HRESULT get_GetProperty(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt die Adresse der angegebenen Eigenschaften Informationen fest.
+Legt die Adresse der angegebenen Eigenschafteninformationen fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,10 +59,10 @@ Legt die Adresse der angegebenen Eigenschaften Informationen fest.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 mit SP1 \[ Desktop-Apps\]<br/>                             |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 2.6.5<br/>                                             |
-| Header<br/>                   | <dl> <dt>Wdssharedidl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 nur mit \[ SP1-Desktop-Apps\]<br/>                             |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 2.6.5<br/>                                             |
+| Header<br/>                   | <dl> <dt>WdsSharedIDL.h</dt> </dl> |
 
 
 

@@ -1,10 +1,10 @@
 ---
-description: Fordert die Frame Puffer-Ausgabe des angegebenen Renderziels, Ereignisses und Rahmens an.
+description: Fordert die Framepufferausgabe des angegebenen Renderziels, Ereignisses und Frames an.
 MS-HAID: vspixengine.IFrameBufferRequest\_RequestAsync\_DWORD\_EventID\_DWORD\_IFrameBufferCallback\_ptr\_DWORD\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Iframebufferrequest:: requestasync-Methode'
+title: IFrameBufferRequest::RequestAsync-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 93E9BDFE-3913-4242-A973-7C113B6663FB
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 35c50b78486f25051e14ce2811382875e1fab240
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f843a4ad0911f72c7b9aaf6ff51f8d4ff6953ff3baf2401d230bd1443739a88e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346604"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120094860"
 ---
-# <a name="span-idvspixengineiframebufferrequest_requestasync_dword_eventid_dword_iframebuffercallback_ptr_dword_dwordspaniframebufferrequestrequestasync-method"></a><span id="vspixengine.iframebufferrequest_requestasync_dword_eventid_dword_iframebuffercallback_ptr_dword_dword"></span>Iframebufferrequest:: requestasync-Methode
+# <a name="span-idvspixengineiframebufferrequest_requestasync_dword_eventid_dword_iframebuffercallback_ptr_dword_dwordspaniframebufferrequestrequestasync-method"></a><span id="vspixengine.iframebufferrequest_requestasync_dword_eventid_dword_iframebuffercallback_ptr_dword_dword"></span>IFrameBufferRequest::RequestAsync-Methode
 
-Fordert die Frame Puffer-Ausgabe des angegebenen Renderziels, Ereignisses und Rahmens an.
+Fordert die Framepufferausgabe des angegebenen Renderziels, Ereignisses und Frames an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,35 +44,35 @@ HRESULT RequestAsync(
 
 ## <a name="parameters"></a>Parameter
 
-*Framezahl*   
+*frameNumber*   
 Der angegebene Frame.
 
-*EventID*   
+*Eventid*   
 Das angegebene Ereignis.
 
-*rendertargetindex*   
+*renderTargetIndex*   
 Der Index des angegebenen Renderziels.
 
 *requestCallback*   
-Die Adresse eines Rückrufs, der zum Benachrichtigen des Hosts der Ergebnisse verwendet wird.
+Die Adresse eines Rückrufs, der verwendet wird, um den Host über Ergebnisse zu benachrichtigen.
 
-*requestcookie*   
-Ein Cookie, das die Anforderung eindeutig identifiziert, und kann verwendet werden, um zu signalisieren, dass es abgebrochen werden soll.
+*requestCookie*   
+Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
-*progressintervalmsekunden*   
-Nicht verwendet.
+*progressIntervalMsecs*   
+Wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Iframebufferrequest**](/windows/desktop/direct3dtools/iframebufferrequest)
+[**IFrameBufferRequest**](/windows/desktop/direct3dtools/iframebufferrequest)
 
  
 

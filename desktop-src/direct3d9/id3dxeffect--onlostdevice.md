@@ -1,5 +1,5 @@
 ---
-description: 'ID3DXEffect::OnLostDevice-Methode: Verwenden Sie diese Methode, um alle Verweise auf Videospeicherressourcen freizugeben und alle Zustandsblöcke zu löschen. Diese Methode sollte immer dann aufgerufen werden, wenn ein Gerät verloren geht oder bevor ein Gerät zurückgesetzt wird.'
+description: 'ID3DXEffect::OnLostDevice-Methode: Verwenden Sie diese Methode, um alle Verweise auf Videospeicherressourcen frei zu geben und alle Zustandsblocks zu löschen. Diese Methode sollte immer dann aufgerufen werden, wenn ein Gerät verloren geht oder bevor ein Gerät zurücksetzungen.'
 ms.assetid: f56925d8-17f7-44c5-a371-3cde41804613
 title: ID3DXEffect::OnLostDevice-Methode (D3DX9Effect.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118521216"
 ---
 # <a name="id3dxeffectonlostdevice-method"></a>ID3DXEffect::OnLostDevice-Methode
 
-Verwenden Sie diese Methode, um alle Verweise auf Videospeicherressourcen freizugeben und alle Zustandsblöcke zu löschen. Diese Methode sollte immer dann aufgerufen werden, wenn ein Gerät verloren geht oder bevor ein Gerät zurückgesetzt wird.
+Verwenden Sie diese Methode, um alle Verweise auf Videospeicherressourcen frei zu geben und alle Zustandsblocks zu löschen. Diese Methode sollte immer dann aufgerufen werden, wenn ein Gerät verloren geht oder bevor ein Gerät zurücksetzungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode sollte immer dann aufgerufen werden, wenn das Gerät verloren geht oder bevor der Benutzer [**IDirect3DDevice9::Reset**](/windows/desktop/api)aufruft. Auch wenn das Gerät nicht verloren gegangen ist, ist **ID3DXEffect::OnLostDevice** für das Freigeben von Zustandssperren und anderen Ressourcen verantwortlich, die vor dem Zurücksetzen des Geräts freigegeben werden müssen. Daher kann das Schriftartobjekt nicht erneut verwendet werden, bevor **IDirect3DDevice9::Reset** und dann [**ID3DXEffect::OnResetDevice**](id3dxeffect--onresetdevice.md)aufgerufen werden.
+Diese Methode sollte immer aufgerufen werden, wenn das Gerät verloren geht oder bevor der Benutzer [**IDirect3DDevice9::Reset aufruft.**](/windows/desktop/api) Selbst wenn das Gerät nicht verloren gegangen ist, ist **ID3DXEffect::OnLostDevice** für die Freigabe von Zustandsblocks und anderen Ressourcen verantwortlich, die möglicherweise freigegeben werden müssen, bevor das Gerät zurück gesetzt wird. Daher kann das Schriftartobjekt vor dem Aufruf von **IDirect3DDevice9::Reset** und [**id3DXEffect::OnResetDevice**](id3dxeffect--onresetdevice.md)nicht erneut verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 

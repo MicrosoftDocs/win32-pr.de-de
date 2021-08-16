@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen finden Sie unter Api.DeserializeObjectFromColumn-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)
+description: 'Weitere Informationen finden Sie unter: Api.DeserializeObjectFromColumn-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)'
 title: Api.DeserializeObjectFromColumn-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)
 TOCTitle: DeserializeObjectFromColumn method (JET_SESID, JET_TABLEID, JET_COLUMNID)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.DeserializeObjectFromColumn(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.JET_COLUMNID)

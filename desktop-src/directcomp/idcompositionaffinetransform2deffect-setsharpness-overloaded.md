@@ -1,9 +1,9 @@
 ---
-title: idcompositionaffinetransform2deffect setschärding-Methoden
+title: idcompositionaffinetransform2deffect SetSharpness-Methoden
 description: Legt die Schärfe des Effekts fest.
 ms.assetid: a18c61f6-f4cd-676b-bd5b-fcc952fa30f5
 keywords:
-- Setschärding-Methoden directcomposition
+- SetSharpness-Methoden DirectComposition
 topic_type:
 - apiref
 api_type:
@@ -12,14 +12,14 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 6aed2a554c0051d2ce78ffaf13f6d41205011a95
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 50d2c900ed8845fdf294c2e228db6da55ceff61bb49c9a962ffe1ca0dcbacfbe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101650"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119043308"
 ---
-# <a name="idcompositionaffinetransform2deffectsetsharpness-methods"></a>idcompositionaffinetransform2deffect:: setschärding-Methoden
+# <a name="idcompositionaffinetransform2deffectsetsharpness-methods"></a>idcompositionaffinetransform2deffect::SetSharpness-Methoden
 
 Legt die Schärfe des Effekts fest.
 
@@ -29,12 +29,12 @@ Legt die Schärfe des Effekts fest.
 
 | Methode                                                                                                  | BESCHREIBUNG                                  |
 |:--------------------------------------------------------------------------------------------------------|:---------------------------------------------|
-| [**Setschärding**](/windows/win32/api/dcomp/nf-dcomp-idcompositionaffinetransform2deffect-setsharpness(float))                               | Legt die Schärfe des Effekts fest.<br/> |
-| [**Setschärding (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionaffinetransform2deffect-setsharpness(idcompositionanimation)) | Legt die Schärfe des Effekts fest.<br/> |
+| [**SetSharpness**](/windows/win32/api/dcomp/nf-dcomp-idcompositionaffinetransform2deffect-setsharpness(float))                               | Legt die Schärfe des Effekts fest.<br/> |
+| [**SetSharpness (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionaffinetransform2deffect-setsharpness(idcompositionanimation)) | Legt die Schärfe des Effekts fest.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

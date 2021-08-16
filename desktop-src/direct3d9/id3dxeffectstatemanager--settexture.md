@@ -55,7 +55,7 @@ Die Stufe, der die Textur zugewiesen wird. Dies ist der Indexwert in [**IDirect3
 
 Typ: **[ **LPDIRECT3DBASETEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9)**
 
-Ein Zeiger auf das Texturobjekt. Dies kann jeder der Direct3D-Texturtypen (Cube, Volume usw.) sein. Siehe [**IDirect3DBaseTexture9.**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9)
+Ein Zeiger auf das Texturobjekt. Dies kann einer der Direct3D-Texturtypen (Cube, Volume usw.) sein. Siehe [**IDirect3DBaseTexture9.**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9)
 
 </dd> </dl>
 

@@ -1,49 +1,49 @@
 ---
-description: Bei Anwendungen können Probleme auftreten, wenn Sie auf Multiprozessorsystemen ausgeführt werden. Dies trifft auf Annahmen zu, die nur für Systeme mit nur einem Prozessor gültig sind.
+description: Anwendungen können probleme auftreten, wenn sie auf Multiprozessorsystemen ausgeführt werden, da sie Annahmen treffen, die nur für Einzelprozessorsysteme gültig sind.
 ms.assetid: b20a1d2c-b795-4ed8-ac33-539a347020c8
 title: Synchronisierungs- und Multiprozessorprobleme
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3896dc240e76f1506bac2a6a2e95f101b05beca7
-ms.sourcegitcommit: 9c8ddec1e955f181beecad0478c1fb79013b5e9d
+ms.openlocfilehash: 2d0e86a2c69cf0a0c0e56656475f73fb489f7433a94511703b3777302702bb32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "106361094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118886208"
 ---
 # <a name="synchronization-and-multiprocessor-issues"></a>Synchronisierungs- und Multiprozessorprobleme
 
-Bei Anwendungen können Probleme auftreten, wenn Sie auf Multiprozessorsystemen ausgeführt werden. Dies trifft auf Annahmen zu, die nur für Systeme mit nur einem Prozessor gültig sind.
+Anwendungen können probleme auftreten, wenn sie auf Multiprozessorsystemen ausgeführt werden, da sie Annahmen treffen, die nur für Einzelprozessorsysteme gültig sind.
 
 ## <a name="thread-priorities"></a>Threadprioritäten
 
-Stellen Sie sich ein Programm mit zwei Threads vor, eine mit einer höheren Priorität als die andere. Bei einem System mit einem einzelnen Prozessor übergibt der Thread mit höherer Priorität die Steuerung nicht an den Thread mit niedrigerer Priorität, da der Scheduler die Threads mit höherer Priorität bevorzugt. Auf einem Multiprozessorsystem können beide Threads gleichzeitig ausgeführt werden, jeweils auf dem eigenen Prozessor.
+Betrachten Sie ein Programm mit zwei Threads, eines mit einer höheren Priorität als der andere. In einem Einzelprozessorsystem gibt der Thread mit höherer Priorität die Kontrolle nicht an den Thread mit niedrigerer Priorität ab, da der Scheduler Threads mit höherer Priorität den Vorrang gibt. Auf einem Multiprozessorsystem können beide Threads gleichzeitig ausgeführt werden, jeweils auf einem eigenen Prozessor.
 
-Anwendungen sollten den Zugriff auf Datenstrukturen synchronisieren, um Racebedingungen zu vermeiden. Code, der davon ausgeht, dass Threads mit höherer Priorität ohne Störungen von Threads mit niedrigerer Priorität ausgeführt werden, schlagen auf Multiprozessorsystemen fehl
+Anwendungen sollten den Zugriff auf Datenstrukturen synchronisieren, um Racebedingungen zu vermeiden. Code, der annimmt, dass Threads mit höherer Priorität ohne Beeinträchtigung durch Threads mit niedrigerer Priorität ausgeführt werden, schlägt auf Multiprozessorsystemen fehl.
 
-## <a name="memory-ordering"></a>Speicher Anordnung
+## <a name="memory-ordering"></a>Speicherreihenfolge
 
-Wenn ein Prozessor in einen Speicherort schreibt, wird der Wert zwischengespeichert, um die Leistung zu verbessern. Ebenso versucht der Prozessor, Lese Anforderungen aus dem Cache zu erfüllen, um die Leistung zu verbessern. Außerdem beginnen Prozessoren mit dem Abrufen von Werten aus dem Arbeitsspeicher, bevor Sie von der Anwendung angefordert werden. Dies kann als Teil der spekulativen Ausführung oder aufgrund von Cache Zeilen Problemen auftreten.
+Wenn ein Prozessor an eine Speicherposition schreibt, wird der Wert zwischengespeichert, um die Leistung zu verbessern. Auf ähnliche Weise versucht der Prozessor, Leseanforderungen aus dem Cache zu erfüllen, um die Leistung zu verbessern. Darüber hinaus beginnen Prozessoren damit, Werte aus dem Arbeitsspeicher abzurufen, bevor sie von der Anwendung angefordert werden. Dies kann im Rahmen der spekulativen Ausführung oder aufgrund von Cachezeilenproblemen auftreten.
 
-CPU-Caches können in Banken partitioniert werden, auf die gleichzeitig zugegriffen werden kann. Dies bedeutet, dass Speichervorgänge außerhalb der Reihenfolge abgeschlossen werden können. Um sicherzustellen, dass Speichervorgänge in der richtigen Reihenfolge abgeschlossen werden, stellen die meisten Prozessoren Speicher Absperr Anweisungen bereit. Eine *vollständige Speicherbarriere* stellt sicher, dass Arbeitsspeicher Lese-und-Schreibvorgänge, die vor der Speicher Abbild Anweisung angezeigt werden, vor Lese-und Schreibvorgängen im Arbeitsspeicher, die nach der Speicher Abbild Anweisung angezeigt werden, Eine *Lese Speicherbarriere* ordnet nur die Speicher Lesevorgänge zu, und eine *Schreib Speicherbarriere* ordnet nur die Speicher Schreibvorgänge an. Diese Anweisungen stellen außerdem sicher, dass der Compiler alle Optimierungen deaktiviert, die Arbeitsspeicher Vorgänge über die Barrieren hinweg neu anordnen können.
+CPU-Caches können in Banken partitioniert werden, auf die parallel zugegriffen werden kann. Dies bedeutet, dass Speichervorgänge in nicht ordnungsgemäßer Reihenfolge abgeschlossen werden können. Um sicherzustellen, dass Speichervorgänge in der reihenfolge abgeschlossen werden, stellen die meisten Prozessoren Anweisungen zur Speicherbarriere bereit. Eine *vollständige Speicherbarriere* stellt sicher, dass Lese- und Schreibvorgänge im Arbeitsspeicher, die vor der Speicherbarrierenanweisung auftreten, in den Arbeitsspeicher übergeben werden, bevor Speicherlese- und Schreibvorgänge ausgeführt werden, die nach der Speicherbarrierenanweisung auftreten. Eine *Lesespeicherbarriere* ordnet nur die Speicherlesevorgänge und eine *Schreibspeicherbarriere* nur die Speicherschreibvorgänge an. Diese Anweisungen stellen außerdem sicher, dass der Compiler alle Optimierungen deaktiviert, die Speichervorgänge über die Barrieren hinweg neu anordnen könnten.
 
-Prozessoren können Anweisungen für Speicherbarrieren mit Abruf-, Release-und Fence Semantik unterstützen. Diese Semantik beschreibt die Reihenfolge, in der die Ergebnisse eines Vorgangs verfügbar werden. Bei der Semantik zum Abrufen sind die Ergebnisse des Vorgangs vor den Ergebnissen eines beliebigen Vorgangs verfügbar, der im Code angezeigt wird. Bei der releasesemantik sind die Ergebnisse des Vorgangs nach den Ergebnissen eines beliebigen Vorgangs verfügbar, der im Code vor ihm angezeigt wird. Die Fence-Semantik kombiniert die Semantik zum Abrufen und freigeben. Die Ergebnisse eines Vorgangs mit der Fence-Semantik sind vor den Vorgängen eines beliebigen Vorgangs verfügbar, der im Code nach dem Vorgang angezeigt wird, und nach dem eines beliebigen Vorgangs, der vor ihm angezeigt wird.
+Prozessoren können Anweisungen für Speicherbarrieren mit semantischer Erfassung, Freigabe und Umgrenzung unterstützen. Diese Semantik beschreibt die Reihenfolge, in der Ergebnisse eines Vorgangs verfügbar werden. Mit der Semantik "acquire" sind die Ergebnisse des Vorgangs vor den Ergebnissen eines Vorgangs verfügbar, der im Code nach ihm angezeigt wird. Mit der Releasesemantik sind die Ergebnisse des Vorgangs nach den Ergebnissen eines Vorgangs verfügbar, der im Code vor ihm angezeigt wird. Fence-Semantik kombiniert die Semantik zum Abrufen und Freigeben. Die Ergebnisse eines Vorgangs mit Fence-Semantik sind vor den Ergebnissen eines Vorgangs verfügbar, der im Code nach ihm und nach den Ergebnissen eines vorgangs vor ihm angezeigt wird.
 
-Auf x86-und x64-Prozessoren, die SSE2 unterstützen, sind die Anweisungen **mfence** (arbeitsspeicherfence), **lfence** (Load Fence) und **sfence** (Store Fence). Bei ARM-Prozessoren sind die instrumentierten **DMB** und **DSB**. Weitere Informationen finden Sie in der Dokumentation für den Prozessor.
+Auf x86- und x64-Prozessoren, die SSE2 unterstützen, sind die Anweisungen **Mfence** (Speicherfäufelung), **Lfence** (Ladezaun) und **Sfence** (Store Fence). Bei ARM-Prozessoren sind die Eindringungen **dmb** und **dsb.** Weitere Informationen finden Sie in der Dokumentation für den Prozessor.
 
-Die folgenden Synchronisierungs Funktionen verwenden die entsprechenden Barrieren, um die Arbeitsspeicher Anordnung sicherzustellen:
+Die folgenden Synchronisierungsfunktionen verwenden die entsprechenden Barrieren, um die Speicherreihenfolge sicherzustellen:
 
 -   Funktionen, die kritische Abschnitte eingeben oder verlassen
 -   Funktionen, die SRW-Sperren abrufen oder freigeben
--   Einmalige Initialisierung beginnt und Fertigstellung
--   **Entersynchronizationbarrier** -Funktion
--   Funktionen, die Synchronisierungs Objekten signalisieren
--   Wait-Funktionen
--   Interlocked-Funktionen (außer Funktionen mit einem _nofence_ -Suffix oder intrinsie mit dem _\_ NF_ -Suffix)
+-   Einmaliger Initialisierungsbeginn und -abschluss
+-   **EnterSynchronizationBarrier-Funktion**
+-   Funktionen, die Synchronisierungsobjekte signalisieren
+-   Wartefunktionen
+-   Interlocked-Funktionen (mit Ausnahme von Funktionen mit _dem NoFence-Suffix_ oder systeminterne Funktionen mit _\_ nf-Suffix)_
 
-## <a name="fixing-a-race-condition"></a>Reparieren einer Racebedingung
+## <a name="fixing-a-race-condition"></a>Beheben einer Racebedingung
 
-Der folgende Code hat eine Racebedingung auf einem Multiprozessorsystem, da der Prozessor, `CacheComputedValue` der zum ersten Mal ausgeführt wird, in den Hauptspeicher schreiben kann, `fValueHasBeenComputed` bevor er `iValue` in den Hauptspeicher geschrieben wird. Folglich liest ein zweiter Prozessor, der `FetchComputedValue` gleichzeitig ausgeführt wird `fValueHasBeenComputed` , **true**, aber der neue Wert von `iValue` befindet sich noch im Cache des ersten Prozessors und wurde nicht in den Arbeitsspeicher geschrieben.
+Der folgende Code weist eine Racebedingung auf einem Multiprozessorsystem auf, da der Prozessor, der zum ersten Mal ausgeführt wird, `CacheComputedValue` möglicherweise in den Hauptspeicher schreiben kann, `fValueHasBeenComputed` bevor er in den `iValue` Hauptspeicher schreibt. Folglich liest ein zweiter Prozessor, der gleichzeitig ausgeführt wird, `FetchComputedValue` `fValueHasBeenComputed` als **TRUE,** aber der neue Wert von befindet sich noch im Cache `iValue` des ersten Prozessors und wurde nicht in den Arbeitsspeicher geschrieben.
 
 ``` syntax
 int iValue;
@@ -71,9 +71,9 @@ BOOL FetchComputedValue(int *piResult)
 }
 ```
 
-Diese Racebedingung oben kann mithilfe des **volatile** -Schlüssel Worts oder der [**interlockedexchange**](/windows/desktop/api/winnt/nf-winnt-interlockedexchange.md) -Funktion repariert werden, um sicherzustellen, dass der Wert von `iValue` für alle Prozessoren aktualisiert wird, bevor der Wert von `fValueHasBeenComputed` auf **true** festgelegt wird.
+Diese Racebedingung oben kann mithilfe  des volatile-Schlüsselworts oder der [**InterlockedExchange-Funktion**](/windows/desktop/api/winnt/nf-winnt-interlockedexchange.md) repariert werden, um sicherzustellen, dass der Wert von `iValue` für alle Prozessoren aktualisiert wird, bevor der Wert von `fValueHasBeenComputed` auf **TRUE** festgelegt wird.
 
-Beim Starten von Visual Studio 2005 verwendet der Compiler bei der Kompilierung im **/volatile: ms** -Modus die erfassten Semantik für Lesevorgänge für **flüchtige** Variablen und releasesemantik für Schreibvorgänge für **flüchtige** Variablen (sofern von der CPU unterstützt). Aus diesem Grund können Sie das Beispiel wie folgt korrigieren:
+Ab Visual Studio 2005 verwendet der Compiler bei Kompilierung im **Modus /volatile:ms** die Semantik zum Abrufen von Lesevorgängen für **flüchtige** Variablen und die Releasesemantik für Schreibvorgänge **für flüchtige** Variablen (sofern von der CPU unterstützt). Daher können Sie das Beispiel wie folgt korrigieren:
 
 ``` syntax
 volatile int iValue;
@@ -101,7 +101,7 @@ BOOL FetchComputedValue(int *piResult)
 }
 ```
 
-Mit Visual Studio 2003 werden **flüchtige** und **flüchtige** Verweise angeordnet. der Compiler wird den Zugriff auf **flüchtige** Variablen nicht neu anordnen. Diese Vorgänge können jedoch vom Prozessor neu angeordnet werden. Aus diesem Grund können Sie das Beispiel wie folgt korrigieren:
+Mit Visual Studio 2003 werden **flüchtige** auf **flüchtige** Verweise sortiert. Der Compiler ordnen den Zugriff auf **flüchtige** Variablen nicht neu an. Diese Vorgänge können jedoch vom Prozessor neu sortiert werden. Daher können Sie das Beispiel wie folgt korrigieren:
 
 ``` syntax
 int iValue;
@@ -135,10 +135,10 @@ BOOL FetchComputedValue(int *piResult)
 
 <dl> <dt>
 
-[Kritische Abschnitts Objekte](critical-section-objects.md)
+[Kritische Abschnittsobjekte](critical-section-objects.md)
 </dt> <dt>
 
-[Interlocked-Variablen Zugriff](interlocked-variable-access.md)
+[Interlocked Variable Access](interlocked-variable-access.md)
 </dt> <dt>
 
 [Wait-Funktionen](wait-functions.md)

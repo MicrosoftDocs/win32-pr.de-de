@@ -1,11 +1,11 @@
 ---
 title: Group-Priority-Attribut
-description: Das Group-Priority-Attribut wird derzeit nicht verwendet.
+description: Das Group-Priority attribut wird derzeit nicht verwendet.
 ms.assetid: b16f644b-b9ef-4382-930b-344cf3de0190
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Group-Priority-Attribut
-- grouppriority-Attribut AD-Schema
+- Group-Priority AD-Schema des Attributs
+- groupPriority-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 554408f09c19db99c09afd995c5089f96e0d1944
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 936b70b7bb84412edc48d14953c2b9e2ea654067ec2b04082078b6a0a7d44746
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106339611"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961319"
 ---
 # <a name="group-priority-attribute"></a>Group-Priority-Attribut
 
-Das **Group-Priority-** Attribut wird derzeit nicht verwendet.
+Das **Group-Priority-Attribut** wird derzeit nicht verwendet.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Group-Priority                              |
-| LDAP-Display-Name | grouppriority                               |
+| Ldap-Anzeigename | groupPriority                               |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.345                      |
-| System-ID-GUID    | eea65905-8ac6-11d0-afda-00c04fd930c9        |
+| System-Id-Guid    | – 65905-8ac6-11d0-afda-00c04fd930c9        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Das **Group-Priority-** Attribut wird derzeit nicht verwendet.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Das **Group-Priority-** Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
+| Is-Single-Valued       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -70,7 +70,7 @@ Das **Group-Priority-** Attribut wird derzeit nicht verwendet.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Das **Group-Priority-** Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
+| Is-Single-Valued       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -100,10 +100,10 @@ Das **Group-Priority-** Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
+| Is-Single-Valued       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -121,10 +121,10 @@ Das **Group-Priority-** Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
+| Ist einwertig       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -142,10 +142,10 @@ Das **Group-Priority-** Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
+| Ist einwertig       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -163,10 +163,10 @@ Das **Group-Priority-** Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
+| Ist einwertig       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |

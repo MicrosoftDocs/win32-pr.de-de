@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_DBINFOMISC.logtimeRepair-Eigenschaft'
+description: 'Weitere Informationen zu: JET_DBINFOMISC.logtimeRepair-Eigenschaft'
 title: JET_DBINFOMISC.logtimeRepair-Eigenschaft
 TOCTitle: 'logtimeRepair property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.logtimeRepair
@@ -35,7 +35,7 @@ ms.locfileid: "118766194"
 ---
 # <a name="jet_dbinfomisclogtimerepair-property"></a>JET_DBINFOMISC.logtimeRepair-Eigenschaft
 
-Ruft den Zeitpunkt ab, zu dem die Reparatur für diese Datenbank zuletzt ausgeführt wurde.
+Ruft den Zeitpunkt der letzten Ausführung der Reparatur für diese Datenbank ab.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -68,6 +68,6 @@ Typ: [Microsoft.Isam.Esent.Interop.JET_LOGTIME](./jet-logtime-structure2.md)
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[JET_DBINFOMISC Member](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC-Member](./jet-dbinfomisc-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

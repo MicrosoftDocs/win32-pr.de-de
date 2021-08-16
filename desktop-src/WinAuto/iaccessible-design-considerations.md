@@ -1,6 +1,6 @@
 ---
-title: Überlegungen zum Entwurf von IAccessible
-description: In diesem Abschnitt werden die Probleme erläutert, mit denen Serverentwickler beim Entwerfen von Klassen auf der Grundlage der IAccessible-Schnittstelle konfrontiert werden.
+title: Überlegungen zum IAccessible-Entwurf
+description: In diesem Abschnitt werden die Probleme erläutert, die Serverentwickler beim Entwerfen von Klassen auf der Grundlage der IAccessible-Schnittstelle haben.
 ms.assetid: 240cdff1-a4c3-477a-b146-2ac295d7a148
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,18 +11,18 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118566134"
 ---
-# <a name="iaccessible-design-considerations"></a>Überlegungen zum Entwurf von IAccessible
+# <a name="iaccessible-design-considerations"></a>Überlegungen zum IAccessible-Entwurf
 
-In diesem Abschnitt werden die Probleme erläutert, mit denen Serverentwickler beim Entwerfen von Klassen auf der Grundlage der [**IAccessible-Schnittstelle konfrontiert**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) werden.
+In diesem Abschnitt werden die Probleme erläutert, die Serverentwickler beim Entwerfen von Klassen auf der Grundlage der [**IAccessible-Schnittstelle**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) haben.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Auswählen, wann barrierefreie Objekte erstellt werden](choosing-when-to-create-accessible-objects.md)
+-   [Auswählen, wann barrierefreie Objekte erstellt werden sollen](choosing-when-to-create-accessible-objects.md)
 -   [Auswählen der zu unterstützenden Eigenschaften](choosing-which-properties-to-support.md)
 -   [Auswählen des Inhalts für beschreibende Eigenschaften](choosing-the-content-for-descriptive-properties.md)
 -   [Festlegen von Eigenschaften für animierte oder verschiebende Objekte](setting-properties-for-animated-or-moving-objects.md)
 -   [Generieren geeigneter WinEvents](generating-appropriate-winevents.md)
--   [Verfügbar machen zusätzlicher Informationen, die nicht von der IAccessible-Schnittstelle abgedeckt werden](exposing-additional-information-not-covered-by-iaccessible-interface.md)
+-   [Verfügbarmachen zusätzlicher Informationen, die nicht von der IAccessible-Schnittstelle abgedeckt sind](exposing-additional-information-not-covered-by-iaccessible-interface.md)
 
  
 

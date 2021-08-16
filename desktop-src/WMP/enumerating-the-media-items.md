@@ -1,33 +1,33 @@
 ---
-title: Auflisten der Medienelemente
-description: Auflisten der Medienelemente
+title: Aufzählen der Medienelemente
+description: Aufzählen der Medienelemente
 ms.assetid: 1819b4c3-57ae-48fc-8a01-b699b5802b64
 keywords:
-- Windows Media Player, Synchronisierungs Wiedergabelisten
-- Windows Media Player-Objektmodell, Synchronisierungs Wiedergabelisten
-- Objektmodell, Synchronisierungs Wiedergabelisten
-- Windows Media Player Mobile, Synchronisierungs Wiedergabelisten
-- Windows Media Player ActiveX-Steuerelement, Synchronisierungs Wiedergabelisten
-- Windows Media Player Mobile ActiveX-Steuerelement, Synchronisierungs Wiedergabelisten
-- ActiveX-Steuerung, Synchronisierungs Wiedergabelisten
+- Windows Media Player, Synchronisierungswiedergabelisten
+- Windows Media Player Objektmodell, Synchronisierungswiedergabelisten
+- Objektmodell, Synchronisierungswiedergabelisten
+- Windows Media Player Mobile Wiedergabelisten, Synchronisierungswiedergabelisten
+- Windows Media Player ActiveX-Steuerelement, Synchronisierungswiedergabelisten
+- Windows Media Player Mobile ActiveX- und Synchronisierungswiedergabelisten
+- ActiveX-Steuerelement, Synchronisierungswiedergabelisten
 - Wiedergabelisten, Synchronisierung
-- Metadatei-Wiedergabelisten, Synchronisierung
-- Windows Media Metadatei-Wiedergabelisten, Synchronisierung
-- Synchronisierungs Wiedergabelisten, auflisten
-- Portable Geräte, auflisten
-- Enumerationen, Synchronisierungs Wiedergabelisten
+- Metafile-Wiedergabelisten, Synchronisierung
+- Windows Medienmetadatei-Wiedergabelisten, Synchronisierung
+- Synchronisierungswiedergabelisten, Auflisten
+- Portable Geräte, Aufzählen
+- Enumerationen, Synchronisierungswiedergabelisten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e8e07148ed6978355056febfb2ad920e4b1380a3
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 96f6afd6c209f96edd011b6b5829af07583057bd9220c61015d8e8ffa9fe4bfa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "106338243"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119650910"
 ---
-# <a name="enumerating-the-media-items"></a>Auflisten der Medienelemente
+# <a name="enumerating-the-media-items"></a>Aufzählen der Medienelemente
 
-Der folgende Code zeigt die Medienelemente an, die in einer einzelnen Wiedergabeliste enthalten sind. Dieser Code wird ausgeführt, wenn der Benutzer auf eine Wiedergabeliste im ListView-Steuerelement klickt, das von IDC \_ plview identifiziert wird.
+Der folgende Code zeigt die Medienelemente an, die in einer einzelnen Wiedergabeliste enthalten sind. Dieser Code wird ausgeführt, wenn der Benutzer im von IDC PLVIEW identifizierten ListView-Steuerelement auf eine Wiedergabeliste \_ klickt.
 
 
 ```C++
@@ -147,24 +147,24 @@ STDMETHODIMP CSyncSettings::ShowMedia(long lIndex)
 
 
 
-Informationen zur Implementierung der getpartnershipsyncstate-Funktion finden Sie unter [bestimmen des Synchronisierungs Status der Wiedergabeliste](determining-playlist-synchronization-state.md).
+Informationen zur Implementierung der GetPartnershipSyncState-Funktion finden Sie unter Bestimmen des [Wiedergabelistensynchronisierungsstatus.](determining-playlist-synchronization-state.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpmedia)
+[**IWMPMedia-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpmedia)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpplaylist)
+[**IWMPPlaylist-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpplaylist)
 </dt> <dt>
 
-[**Synchronisierungs Wiedergabelisten**](managing-synchronization-playlists.md)
+[**Verwalten von Synchronisierungswiedergabelisten**](managing-synchronization-playlists.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

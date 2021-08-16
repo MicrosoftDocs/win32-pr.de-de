@@ -19,7 +19,7 @@ Die [**IDeliveryOptimizationFile-Schnittstelle**](ideliveryoptimizationfile.md) 
 
 
 
-| Thema                                                                    | Beschreibung                                                       |
+| Thema                                                                    | BESCHREIBUNG                                                       |
 |--------------------------------------------------------------------------|-------------------------------------------------------------------|
 | [**GetStats-Methode**](ideliveryoptimizationfile-getstats.md)<br/> | Gibt Download- und Uploadstatistiken für eine bestimmte Datei zurück.<br/> |
 

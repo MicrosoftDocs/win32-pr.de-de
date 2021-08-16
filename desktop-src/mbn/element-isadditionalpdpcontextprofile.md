@@ -16,14 +16,14 @@ ms.locfileid: "118745122"
 ---
 # <a name="span-idwwan_profile_v3element_isadditionalpdpcontextprofilespanisadditionalpdpcontextprofile"></a><span id="WWAN_profile_v3.element_IsAdditionalPdpContextProfile"></span>IsAdditionalPdpContextProfile
 
-Das **IsAdditionalPdpContextProfile-Element** enthält einen **booleschen Wert,** der **true** ist, wenn dies ein "zusätzlicher PDP(Packet Data Protocol)"-Kontextprofil und **false** ist, andernfalls . Die Standardeinstellung lautet **false**.
+Das **IsAdditionalPdpContextProfile-Element** enthält einen  booleschen Wert, der true ist, wenn es sich um ein "zusätzliches PDP -Kontextprofil (Packet Data Protocol)" handelt, andernfalls **false.**  Die Standardeinstellung lautet **false**.
 
-Ein Profil mit "zusätzlichem PDP-Kontext" ist ein Profil, das nicht über den Standardport des physischen Adapters aktiviert wird. Durch Festlegen dieses Elements auf TRUE wird sichergestellt, dass dieses Profil nicht unangemessen auf der Benutzeroberfläche angezeigt wird.
+Ein "zusätzliches PDP-Kontextprofil" ist ein Profil, das nicht über den Standardport des physischen Adapters aktiviert wird. Wenn Sie dieses Element auf TRUE festlegen, wird sichergestellt, dass dieses Profil in der Benutzeroberfläche nicht falsch angezeigt wird.
 
-Beachten Sie Folgendes, wenn dieses Element auf TRUE festgelegt ist.
+Beachten Sie Folgendes: Wenn dieses Element auf TRUE festgelegt ist, muss auch Folgendes zutreffen.
 
 -   Das [**IsDefault-Element**](./schema-isdefault-mbnprofile-element.md) muss nicht angegeben oder auf **FALSE** festgelegt sein, damit das Profil gültig ist.
--   Das [**ConnectionMode-Element**](./schema-connectionmode-mbnprofile-element.md) muss nicht angegeben oder auf **manuell** festgelegt sein, damit das Profil gültig ist.
+-   Das [**ConnectionMode-Element**](./schema-connectionmode-mbnprofile-element.md) muss nicht angegeben oder auf manuell festgelegt **sein,** damit das Profil gültig ist.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 

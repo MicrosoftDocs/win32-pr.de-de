@@ -3,8 +3,8 @@ title: IDWriteTextLayout GetOverhangMetrics-Methode
 description: Gibt die Überhänge (in DIPs) des Layouts und aller darin enthaltenen Objekte zurück, einschließlich Textglyphen und Inlineobjekten.
 ms.assetid: 4b23f6c5-cacc-41e2-8934-6f95208b999a
 keywords:
-- GetOverhangMetrics-Methode Direct Write
-- GetOverhangMetrics-Methode Direct Write , IDWriteTextLayout-Schnittstelle
+- GetOverhangMetrics-Methode – Direkter Schreibzugriff
+- GetOverhangMetrics-Methode Direct Write, IDWriteTextLayout-Schnittstelle
 - IDWriteTextLayout-Schnittstelle Direct Write , GetOverhangMetrics-Methode
 topic_type:
 - apiref
@@ -45,9 +45,9 @@ virtual HRESULT GetOverhangMetrics(
 *Überhänge* \[ out\]
 </dt> <dd>
 
-Typ: **[ **DWRITE \_ OVERHANG \_ METRICS**](/windows/win32/api/dwrite/ns-dwrite-dwrite_overhang_metrics)\***
+Typ: **[ **DWRITE \_ OVERHANG-METRIKEN \_**](/windows/win32/api/dwrite/ns-dwrite-dwrite_overhang_metrics)\***
 
-Überschreitungen von sichtbaren Erweiterungen (in DIPs) außerhalb des Layouts.
+Überschreitungen sichtbarer Extent (in DIPs) außerhalb des Layouts.
 
 </dd> </dl>
 
@@ -55,11 +55,11 @@ Typ: **[ **DWRITE \_ OVERHANG \_ METRICS**](/windows/win32/api/dwrite/ns-dwrite-
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Unterstreichungen und Durchstreichungen tragen nicht zur Blackbox-Bestimmung bei, da diese tatsächlich vom Renderer gezeichnet werden, der sie in verschiedenen Stilen zeichnen darf.
+Unterstreichungen und Durchgestreichungen tragen nicht zur Blackbox-Bestimmung bei, da diese tatsächlich vom Renderer gezeichnet werden, der sie in jeder Vielzahl von Stilen zeichnen darf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,7 +72,7 @@ Unterstreichungen und Durchstreichungen tragen nicht zur Blackbox-Bestimmung bei
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

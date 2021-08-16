@@ -1,23 +1,23 @@
 ---
-description: Die Liste der zuletzt verwendeten (MRU) Quellen bleibt im Benutzersystem enthalten.
+description: Die Liste der zuletzt verwendeten Quellen (MRU) verbleibt im Benutzersystem.
 ms.assetid: 010f8f88-999e-4dde-bffb-ac1a07256d55
-title: Informationen zur MRU-Quell Liste
+title: Informationen zur MRU-Quellliste
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 062624057e7dd1a083ebf0eb152200fd3a7241b6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7766f15b0c9f1af29847ddad3db118db4b5329435f62e0d2d8df694cd68fe015
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958861"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118887916"
 ---
-# <a name="about-the-mru-source-list"></a>Informationen zur MRU-Quell Liste
+# <a name="about-the-mru-source-list"></a>Informationen zur MRU-Quellliste
 
-Die Liste der zuletzt verwendeten (MRU) Quellen bleibt auf dem System des Benutzers. Die Setup Funktionen behandeln intern die Erstellung neuer Quell Listen und deren Speicherort auf dem Computer des Benutzers. Die Setup Funktionen verwenden diese Liste zum Speichern von Informationen zu Quell Pfaden, die in vorherigen Installationen verwendet wurden.
+Die Liste der zuletzt verwendeten Quellen (MRU) verbleibt im System des Benutzers. Die Setupfunktionen behandeln intern die Erstellung neuer Quelllisten und deren Speicherort auf dem Computer des Benutzers. Die Setupfunktionen verwenden diese Liste, um Informationen zu Quellpfaden zu speichern, die in vorherigen Installationen verwendet wurden.
 
-Sie können diese Informationen verwenden, wenn Sie den Benutzer zur Eingabe eines Quell Pfads auffordern. Beispielsweise können Sie eine Dropdown Liste der Netzwerkverbindungen erstellen, die in vorherigen Installationen als Quell Pfade verwendet wurden.
+Sie können diese Informationen verwenden, wenn Sie den Benutzer zur Eingabe eines Quellpfads auffordern. Beispielsweise können Sie eine Dropdownliste der Netzwerkverbindungen erstellen, die in früheren Installationen als Quellpfade verwendet wurden.
 
-Abhängig von ihren Berechtigungen können Sie eine Benutzerliste erstellen, die für einen bestimmten Benutzer spezifisch ist, oder eine System Liste, die für alle Benutzer gleich ist. Zusätzlich zu den System-und Benutzer Quellen Listen können Sie eine temporäre Quell Liste erstellen, die verworfen wird, wenn die Setup Anwendung beendet wird.
+Abhängig von Ihren Berechtigungen können Sie eine Benutzerliste erstellen, die für einen bestimmten Benutzer spezifisch ist, oder eine Systemliste, die für alle Benutzer identisch ist. Zusätzlich zu System- und Benutzerquellenlisten können Sie eine temporäre Quellliste erstellen, die verworfen wird, wenn die Setupanwendung beendet wird.
 
  
 

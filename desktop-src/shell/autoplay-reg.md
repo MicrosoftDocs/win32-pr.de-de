@@ -1,38 +1,38 @@
 ---
-description: Es gibt viele Situationen, in denen Autorun möglicherweise temporär oder dauerhaft deaktiviert werden muss.
+description: Es gibt viele Situationen, in denen autoRun vorübergehend oder dauerhaft deaktiviert werden muss.
 ms.assetid: 5e65a3d8-04b9-46ba-b4e5-a976e1923bfd
-title: Aktivieren und Deaktivieren von Autorun
+title: Aktivieren und Deaktivieren von AutoRun
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a567f50db75cd129346e193e66ba0ae5f74fa955
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cbd14a1dfd3aadb94f3586dec783ea6d394f717f500b5ac103c65fcb813baf14
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393454"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090780"
 ---
-# <a name="enabling-and-disabling-autorun"></a>Aktivieren und Deaktivieren von Autorun
+# <a name="enabling-and-disabling-autorun"></a>Aktivieren und Deaktivieren von AutoRun
 
-Es gibt viele Situationen, in denen Autorun möglicherweise temporär oder dauerhaft deaktiviert werden muss. Autorun könnte z. b. den Betrieb einer laufenden Anwendung beeinträchtigen und muss für die Dauer deaktiviert werden. Das System bietet mehrere Möglichkeiten, Autorun zu deaktivieren.
+Es gibt viele Situationen, in denen autoRun vorübergehend oder dauerhaft deaktiviert werden muss. AutoRun kann z. B. den Betrieb einer ausgeführten Anwendung beeinträchtigen und muss für die Dauer deaktiviert werden. Das System bietet mehrere Möglichkeiten, autoRun zu deaktivieren.
 
--   [Programm gesteuertes unterdrücken von Autorun](#suppressing-autorun-programmatically)
--   [Verwenden der Registrierung zum Deaktivieren von Autorun](#using-the-registry-to-disable-autorun)
--   [Autorun für andere Typen von Speichermedien](#autorun-for-other-types-of-storage-media)
+-   [Programmgesteuertes Unterdrücken der automatischen Ausführen](#suppressing-autorun-programmatically)
+-   [Verwenden der Registrierung zum Deaktivieren der automatischen Verwendung](#using-the-registry-to-disable-autorun)
+-   [Automatisches Ausführen für andere Arten Storage Medien](#autorun-for-other-types-of-storage-media)
 
-## <a name="suppressing-autorun-programmatically"></a>Programm gesteuertes unterdrücken von Autorun
+## <a name="suppressing-autorun-programmatically"></a>Programmgesteuertes Unterdrücken der automatischen Ausführen
 
-Es gibt eine Vielzahl von Situationen, in denen Autorun möglicherweise Programm gesteuert unterdrückt werden muss. Zwei Beispiele:
+Es gibt eine Vielzahl von Situationen, in denen AutoRun programmgesteuert unterdrückt werden muss. Zwei Beispiele:
 
--   Die Anwendung verfügt über ein Setup Programm, mit dem der Benutzer einen anderen Datenträger einfügen muss, der möglicherweise eine Autorun. inf-Datei enthält.
--   Während der Ausführung der Anwendung muss der Benutzer möglicherweise eine andere CD einfügen, die eine Autorun. inf-Datei enthalten kann.
+-   Ihre Anwendung verfügt über ein Setupprogramm, bei dem der Benutzer einen anderen Datenträger einfügen muss, der eine Autorun.inf-Datei enthalten kann.
+-   Während des Anwendungsbetriebs muss der Benutzer möglicherweise einen weiteren Datenträger einfügen, der eine Autorun.inf-Datei enthalten kann.
 
-In beiden Fällen möchten Sie normalerweise nicht eine andere Anwendung starten, während das Original ausgeführt wird.
+In beiden Fällen möchten Sie normalerweise keine andere Anwendung starten, während die ursprüngliche Anwendung in Bearbeitung ist.
 
-Benutzer können Autorun manuell unterdrücken, indem Sie die UMSCHALTTASTE gedrückt halten, wenn Sie die CD-ROM einfügen. Es ist jedoch in der Regel besser, diesen Vorgang Programm gesteuert und nicht in Abhängigkeit vom Benutzer zu verarbeiten.
+Benutzer können AutoRun manuell unterdrücken, indem sie beim Einfügen der CD-ROM die UMSCHALTTASTE halten. Es ist jedoch in der Regel vorzuziehen, diesen Vorgang programmgesteuert und nicht abhängig vom Benutzer zu behandeln.
 
-Bei Systemen mit der Shell- [Version 4,70](versions.md) und höher wird von Windows eine "querycancelautoplay"-Meldung an das Vordergrund Fenster gesendet. Die Anwendung kann auf diese Meldung reagieren, um Autorun zu unterdrücken. Diese Vorgehensweise wird von System Dienstprogrammen wie dem Dialogfeld zum [Öffnen](../dlgbox/open-and-save-as-dialog-boxes.md) von Common verwendet, um Autorun zu deaktivieren.
+Bei Systemen mit [Shell-Version 4.70](versions.md) und höher sendet Windows eine "QueryCancelAutoPlay"-Nachricht an das Vordergrundfenster. Ihre Anwendung kann auf diese Meldung reagieren, um autoRun zu unterdrücken. Dieser Ansatz wird von Systemprogrammen wie dem Dialogfeld Allgemein [öffnen](../dlgbox/open-and-save-as-dialog-boxes.md) verwendet, um autoRun zu deaktivieren.
 
-Die folgenden Code Fragmente veranschaulichen, wie Sie diese Nachricht einrichten und behandeln. Die Anwendung muss im Vordergrund Fenster ausgeführt werden. Registrieren Sie zuerst "querycancelautoplay" als Windows-Meldung:
+Die folgenden Codefragmente veranschaulichen, wie diese Meldung eingerichtet und behandelt wird. Ihre Anwendung muss im Vordergrundfenster ausgeführt werden. Registrieren Sie zuerst "QueryCancelAutoPlay" als Windows Nachricht:
 
 
 ```C++
@@ -41,7 +41,7 @@ uMessage = RegisterWindowMessage(TEXT("QueryCancelAutoPlay"));
 
 
 
-Das Fenster Ihrer Anwendung muss sich im Vordergrund befinden, um diese Meldung zu empfangen. Der Nachrichten Handler sollte **true** zurückgeben, um Autorun abzubrechen, und **false** , um ihn zu aktivieren. Im folgenden Code Fragment wird veranschaulicht, wie diese Meldung verwendet wird, um Autorun zu deaktivieren.
+Das Fenster Ihrer Anwendung muss sich im Vordergrund befindet, um diese Nachricht zu empfangen. Der Meldungshandler sollte **TRUE zurückgeben,** um autoRun abzubricht, **und FALSE,** um es zu aktivieren. Das folgende Codefragment veranschaulicht, wie Diese Meldung verwendet wird, um autoRun zu deaktivieren.
 
 
 ```C++
@@ -67,7 +67,7 @@ LRESULT WndProc(HWND hwnd, UINT uMsg,  WPARAM wParam, LPARAM lParam)
 
 
 
-Wenn Ihre Anwendung ein Dialogfeld verwendet und auf eine "querycancelautoplay"-Meldung reagieren muss, kann Sie nicht einfach " **true** " oder " **false**" zurückgeben. Aufrufen Sie stattdessen [**SetWindowLong**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) , wobei *nIndex* auf **DWL \_ msgresult** festgelegt ist. Legen Sie für den Parameter " *dwnewlong* " den Wert " **true** " fest, um den **Vorgang zu beenden** . Beispielsweise wird beim Empfangen der Meldung "querycancelautoplay" die Autorun-Nachricht durch die folgende Beispiel Dialogfeld Prozedur abgebrochen.
+Wenn Ihre Anwendung ein Dialogfeld verwendet und auf eine "QueryCancelAutoPlay"-Meldung antworten muss, kann sie nicht einfach **TRUE** oder **FALSE zurückgeben.** Rufen Sie stattdessen [**SetWindowLong auf,**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) bei *dem nIndex* auf **DWL \_ MSGRESULT festgelegt ist.** Legen Sie *den dwNewLong-Parameter* auf **TRUE fest,** um autoRun abzubruchen, und **FALSE,** um ihn zu aktivieren. Die folgende Beispieldialogfeldprozedur bricht beispielsweise autoRun ab, wenn die Meldung "QueryCancelAutoPlay" empfangen wird.
 
 
 ```C++
@@ -93,16 +93,16 @@ BOOL DialogProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 
 
-## <a name="using-the-registry-to-disable-autorun"></a>Verwenden der Registrierung zum Deaktivieren von Autorun
+## <a name="using-the-registry-to-disable-autorun"></a>Verwenden der Registrierung zum Deaktivieren der automatischen Verwendung
 
-Es gibt zwei Registrierungs Werte, die verwendet werden können, um Autorun dauerhaft zu deaktivieren: NoDriveAutoRun und nodrivetypeer Autorun. Der erste Wert deaktiviert Autorun für angegebene Laufwerk Buchstaben, das zweite deaktiviert Autorun für eine Klasse von Laufwerken. Wenn einer dieser Werte so festgelegt ist, dass Autorun für ein bestimmtes Gerät deaktiviert wird, wird er deaktiviert. Weitere Informationen zum Deaktivieren der Autorun-Funktionalität finden Sie im Knowledge Base-Artikel [Deaktivieren der Autorun-Funktionalität in Windows](https://support.microsoft.com/kb/967715) . In diesem Artikel werden die verschiedenen Updates aufgelistet, die installiert sein müssen, um die Autorun-Funktionalität ordnungsgemäß zu deaktivieren.
+Es gibt zwei Registrierungswerte, mit denen AutoRun dauerhaft deaktiviert werden kann: NoDriveAutoRun und NoDriveTypeAutoRun. Der erste Wert deaktiviert AutoRun für angegebene Laufwerkbuchstaben, und der zweite Wert deaktiviert AutoRun für eine Klasse von Laufwerken. Wenn einer dieser Werte so festgelegt ist, dass autoRun für ein bestimmtes Gerät deaktiviert wird, wird er deaktiviert. Weitere Informationen zum Deaktivieren Windows AutoRun-Funktionalität finden Sie im Knowledge Base Deaktivieren der AutoRun-Funktion [in](https://support.microsoft.com/kb/967715) Windows In diesem Artikel. In diesem Artikel werden die verschiedenen Updates aufgeführt, die Sie installiert haben müssen, um die Funktion Autorun ordnungsgemäß zu deaktivieren.
 
 > [!Note]  
-> Die NoDriveAutoRun-und nodrivetypeer Autorun-Werte sollten nur von Systemadministratoren geändert werden, um den Wert für das gesamte System zu Test-oder Verwaltungszwecken zu ändern. Anwendungen sollten diese Werte nicht ändern, da es keine Möglichkeit gibt, Sie zuverlässig auf ihre ursprünglichen Werte wiederherzustellen.
+> Die Werte NoDriveAutoRun und NoDriveTypeAutoRun sollten nur von Systemadministratoren geändert werden, um den Wert für das gesamte System zu Test- oder Verwaltungszwecken zu ändern. Anwendungen sollten diese Werte nicht ändern, da es keine Möglichkeit gibt, sie zuverlässig auf ihre ursprünglichen Werte wiederherzustellen.
 
  
 
-Der NoDriveAutoRun-Wert deaktiviert Autorun für angegebene Laufwerk Buchstaben. Es handelt sich um einen reg \_ DWORD-Datenwert, der unter dem folgenden Schlüssel gefunden wird:
+Der Wert NoDriveAutoRun deaktiviert AutoRun für angegebene Laufwerkbuchstaben. Dabei handelt es sich um \_ einen REG DWORD-Datenwert, der sich unter dem folgenden Schlüssel befindet:
 
 ```
 HKEY_CURRENT_USER
@@ -114,9 +114,9 @@ HKEY_CURRENT_USER
                   Explorer
 ```
 
-Das erste Bit des Werts entspricht Laufwerk A:, der zweiten zu B: usw. Um Autorun für einen oder mehrere Laufwerk Buchstaben zu deaktivieren, legen Sie die entsprechenden Bits fest. Wenn Sie z. b. die Laufwerke A: und C: deaktivieren möchten, legen Sie NoDriveAutoRun auf fest `0x00000005` .
+Das erste Bit des Werts entspricht Laufwerk A:, das zweite B:, und so weiter. Legen Sie die entsprechenden Bits fest, um AutoRun für einen oder mehrere Laufwerkbuchstaben zu deaktivieren. Um beispielsweise die Laufwerke A: und C: zu deaktivieren, legen Sie NoDriveAutoRun auf `0x00000005` fest.
 
-Der nodrivetypeer Autorun-Wert deaktiviert Autorun für eine Klasse von Laufwerken. Dabei handelt es sich um einen reg \_ DWORD-oder 4-Byte-reg- \_ Binär Datenwert, der unter dem gleichen Schlüssel enthalten ist.
+Der Wert NoDriveTypeAutoRun deaktiviert AutoRun für eine Klasse von Laufwerken. Es handelt sich um einen REG \_ DWORD- oder 4-Byte-REG \_ BINARY-Datenwert, der unter demselben Schlüssel gefunden wird.
 
 ```
 HKEY_CURRENT_USER
@@ -128,41 +128,41 @@ HKEY_CURRENT_USER
                   Explorer
 ```
 
-Durch Festlegen der Bits des ersten Byte dieses Werts können unterschiedliche Laufwerke von der Arbeit mit Autorun ausgeschlossen werden.
+Durch Festlegen der Bits des ersten Byte dieses Werts können verschiedene Laufwerke von der Arbeit mit AutoRun ausgeschlossen werden.
 
-Die folgende Tabelle enthält die Bits-und Bitmasken Konstanten, die im ersten Byte von nodrivetypeer Autorun festgelegt werden können, um Autorun für einen bestimmten Laufwerkstyp zu deaktivieren. Sie müssen Windows-Explorer neu starten, damit die Änderungen wirksam werden.
+Die folgende Tabelle enthält die Bits- und Bitmaskenkonstituen, die im ersten Byte von NoDriveTypeAutoRun festgelegt werden können, um AutoRun für einen bestimmten Laufwerktyp zu deaktivieren. Sie müssen den Windows-Explorer neu starten, bevor die Änderungen wirksam werden.
 
 
 
-| Bitzahl | Bitmasken Konstante      | BESCHREIBUNG                                             |
+| Bitnummer | Bitmaskenkonst constant      | BESCHREIBUNG                                             |
 |------------|-----------------------|---------------------------------------------------------|
-| 0x04       | **Laufwerks \_ Removeable** | Der Datenträger kann von einem Laufwerk (z. b. einem Diskettenlaufwerk) entfernt werden. |
-| 0x08       | **Laufwerk \_ korrigiert**      | Der Datenträger kann nicht vom Laufwerk (einer Festplatte) entfernt werden.        |
-| 0x10       | **Laufwerk \_ Remote**     | Netzwerklaufwerk.                                          |
-| 0x20       | **Laufwerk- \_ CDROM**      | CD-ROM-Laufwerk                                           |
-| 0x40       | **Laufwerk \_ Ramdisk**    | RAM-Datenträger.                                               |
+| 0x04       | **LAUFWERK \_ ENTFERNBAR** | Der Datenträger kann vom Laufwerk entfernt werden (z. B. ein Diskettenlaufwerk). |
+| 0x08       | **LAUFWERK \_ FEST**      | Der Datenträger kann nicht vom Laufwerk (einer Festplatte) entfernt werden.        |
+| 0x10       | **LAUFWERK \_ REMOTE**     | Netzwerklaufwerk.                                          |
+| 0x20       | **\_LAUFWERKS-C LAUFWERK**      | CD-ROM-Laufwerk                                           |
+| 0x40       | **LAUFWERK \_ RAMDISK**    | RAM-Datenträger.                                               |
 
 
 
  
 
-## <a name="autorun-for-other-types-of-storage-media"></a>Autorun für andere Typen von Speichermedien
+## <a name="autorun-for-other-types-of-storage-media"></a>Automatisches Ausführen für andere Arten Storage Medien
 
-Autorun ist hauptsächlich für die öffentliche Verteilung von Anwendungen auf CD-ROM und DVD-ROM gedacht, und die Verwendung wird von anderen Speichermedien abgeraten. Es ist jedoch oft hilfreich, Autorun auf anderen Typen von Wechselmedien zu aktivieren. Diese Funktion wird normalerweise verwendet, um das Debuggen von Autorun-INF-Dateien zu vereinfachen. Autorun funktioniert nur auf Wechsel Datenträgern, wenn die folgenden Kriterien erfüllt sind:
+AutoRun ist hauptsächlich für die öffentliche Verteilung von Anwendungen auf CD-ROM und DVD-ROM vorgesehen, und von der Verwendung für andere Speichermedien wird abgeraten. Es ist jedoch häufig hilfreich, AutoRun auf anderen Wechselmedien zu aktivieren. Dieses Feature wird in der Regel verwendet, um das Debuggen von AutoRun.inf-Dateien zu vereinfachen. AutoRun funktioniert nur auf Wechselmedien, wenn die folgenden Kriterien erfüllt sind:
 
--   Das Gerät muss über Auto-kompatible Treiber verfügen. Damit ein Treiber nicht kompatibel ist, muss er vom System benachrichtigt werden, dass ein Datenträger eingefügt wurde, indem eine [**WM \_ devicechange**](../devio/wm-devicechange.md) -Nachricht gesendet wird.
--   Das Stammverzeichnis des eingefügten Mediums muss eine Autorun. inf-Datei enthalten.
--   Das Gerät darf nicht durch die [Registrierung](#using-the-registry-to-disable-autorun)deaktiviert werden.
--   Die Vordergrund Anwendung hat Autorun nicht unter [drückt](#suppressing-autorun-programmatically) .
+-   Das Gerät muss über AutoRun-kompatible Treiber verfügen. Um autoRun-kompatibel zu sein, muss ein Treiber das System benachrichtigen, dass ein Datenträger eingefügt wurde, indem er eine [**WM \_ DEVICECHANGE-Nachricht**](../devio/wm-devicechange.md) sendet.
+-   Das Stammverzeichnis des eingefügten Mediums muss eine Autorun.inf-Datei enthalten.
+-   Auf dem Gerät darf autoRun nicht über die Registrierung [deaktiviert sein.](#using-the-registry-to-disable-autorun)
+-   Die Vordergrundanwendung hat autoRun [nicht](#suppressing-autorun-programmatically) unterdrückt.
 
 > [!Note]  
-> Diese Funktion sollte nicht zum Verteilen von Anwendungen auf Wechselmedien verwendet werden. Da das Implementieren von Autorun auf Wechsel Datenträgern eine einfache Möglichkeit zum Verteilen von Computerviren darstellt, sollten die Benutzer für jede öffentlich verteilte Diskette, die eine Autorun. inf-Datei enthält, verdächtig sein.
+> Dieses Feature sollte nicht zum Verteilen von Anwendungen auf Wechselmedien verwendet werden. Da die Implementierung von AutoRun auf Wechselmedien eine einfache Möglichkeit zum Verteilen von Computerviren bietet, sollten Benutzer verdächtig gegenüber öffentlich verteilten Disketten sein, die eine Autorun.inf-Datei enthalten.
 
  
 
-Normalerweise startet Autorun automatisch, kann aber auch manuell gestartet werden. Wenn das Gerät die oben aufgeführten Kriterien erfüllt, enthält das Kontextmenü des Laufwerk Buchstabens einen **AutoPlay** -Befehl. Um Autorun manuell auszuführen, klicken Sie entweder mit der rechten Maustaste auf das Laufwerk Symbol, und wählen Sie im Kontextmenü die Option **AutoPlay** aus, oder Doppelklicken Sie auf das Laufwerk Symbol. Wenn die Treiber nicht automatisch kompatibel sind, enthält das Kontextmenü kein **AutoPlay** -Element, und Autorun kann nicht gestartet werden.
+Normalerweise wird AutoRun automatisch gestartet, kann aber auch manuell gestartet werden. Wenn das Gerät die oben aufgeführten Kriterien erfüllt, enthält das Kontextmenü des Laufwerkbuchstabens einen **AutoPlay-Befehl.** Klicken Sie zum manuellen Ausführen von AutoRun entweder mit der rechten Maustaste auf das Laufwerksymbol, und wählen Sie im Kontextmenü **AutoPlay** aus, oder doppelklicken Sie auf das Laufwerksymbol. Wenn die Treiber nicht autoRun-kompatibel sind, hat das Kontextmenü kein **AutoPlay-Element,** und AutoRun kann nicht gestartet werden.
 
-Auto-kompatible Treiber werden mit einigen Wechsel Datenträgern bereitgestellt, sowie einigen anderen Typen von Wechselmedien wie z. b. "CompactFlash Cards". Autorun funktioniert auch mit Netzwerklaufwerken, die einem Laufwerk Buchstaben mit Windows-Explorer zugeordnet sind oder mit der [Microsoft Management Console (MMC)](/previous-versions/windows/desktop/mmc/microsoft-management-console-start-page)eingebunden sind. Wie bei der bereitgestellten Hardware muss ein bereitgestelltes Netzwerklaufwerk über eine Autorun. inf-Datei im Stammverzeichnis verfügen, und es darf nicht über die [Registrierung](#using-the-registry-to-disable-autorun)deaktiviert werden.
+AutoRun-kompatible Treiber werden mit einigen Wechseldatenträgern sowie einigen anderen Wechselmedien wie CompactFlash-Karten bereitgestellt. AutoRun funktioniert auch mit Netzwerklaufwerken, die einem Laufwerkbuchstaben mit Windows Explorer zugeordnet oder mit dem Microsoft Management Console [(MMC)](/previous-versions/windows/desktop/mmc/microsoft-management-console-start-page)bereitgestellt werden. Wie bei der bereitgestellten Hardware muss ein bereitgestelltes Netzwerklaufwerk über die Datei Autorun.inf im Stammverzeichnis verfügen und darf nicht über die Registrierung deaktiviert [werden.](#using-the-registry-to-disable-autorun)
 
  
 

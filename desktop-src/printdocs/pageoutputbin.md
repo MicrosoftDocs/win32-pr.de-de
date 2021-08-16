@@ -15,7 +15,7 @@ ms.locfileid: "118732283"
 
 Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt die vollständige Liste der unterstützten Behälter für das Gerät. Ermöglicht die Angabe des Ausgabebehälters pro Seite. Die Schlüsselwörter JobOutputBin, DocumentOutputBin und PageOutputBin schließen sich gegenseitig aus, nur eines sollte in einem PrintTicket- oder Druckfunktionen-Dokument angegeben werden.
+Beschreibt die vollständige Liste der unterstützten Behälter für das Gerät. Ermöglicht die Angabe des Ausgabebehälters pro Seite. Die Schlüsselwörter JobOutputBin, DocumentOutputBin und PageOutputBin schließen sich gegenseitig aus. Nur eines sollte in einem PrintTicket- oder Druckfunktionen-Dokument angegeben werden.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)

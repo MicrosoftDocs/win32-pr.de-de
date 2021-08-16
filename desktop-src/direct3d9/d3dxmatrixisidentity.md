@@ -1,7 +1,7 @@
 ---
 description: Bestimmt, ob eine Matrix eine Identitätsmatrix ist.
 ms.assetid: 00f72d08-5d4b-4310-8167-e6b6371d24fd
-title: D3DXMatrixIsIdentity-Funktion (D3dx9math. h)
+title: D3DXMatrixIsIdentity-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 0c2ca91f74512b432d7cc18b28cef44d713cfc11
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 913034d9cf3781dce4bb8c1ee643eac90bd23054300fbaa8b0a55eab62914958
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355436"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119044868"
 ---
 # <a name="d3dxmatrixisidentity-function"></a>D3DXMatrixIsIdentity-Funktion
 
@@ -40,20 +40,20 @@ BOOL D3DXMatrixIsIdentity(
 
 <dl> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Ein Zeiger auf die [**D3DXMATRIX**](d3dxmatrix.md) -Struktur, die auf die Identität getestet wird.
+Zeiger auf die [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die auf Identität getestet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Wenn die Matrix eine Identitätsmatrix ist, gibt diese Funktion " **true**" zurück. Andernfalls gibt diese Funktion **false** zurück.
+Wenn die Matrix eine Identitätsmatrix ist, gibt diese Funktion **TRUE** zurück. Andernfalls gibt diese Funktion **FALSE** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Wenn die Matrix eine Identitätsmatrix ist, gibt diese Funktion " **true**" zur�
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

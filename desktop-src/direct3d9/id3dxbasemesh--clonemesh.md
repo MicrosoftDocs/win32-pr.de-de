@@ -48,7 +48,7 @@ HRESULT CloneMesh(
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine Kombination aus einem oder mehr [**D3DXMESH-Flags,**](./d3dxmesh.md) die Erstellungsoptionen für das Gitternetz angeben.
+Eine Kombination aus einem oder mehreren [**D3DXMESH-Flags,**](./d3dxmesh.md) die Erstellungsoptionen für das Gitternetz angeben.
 
 </dd> <dt>
 
@@ -83,13 +83,13 @@ Adresse eines Zeigers auf eine [**ID3DXMesh-Schnittstelle,**](id3dxmesh.md) die 
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="remarks"></a>Hinweise
 
-**ID3DXBaseMesh::CloneMesh** wird verwendet, um das Vertexdatenlayout neu zu erstellen und zu ändern. Dies erfolgt durch Erstellen eines neuen Gittermodellobjekts. Verwenden Sie es beispielsweise, um Platz für Normal- und Texturkoordinaten, Farben, Gewichtungen usw. hinzuzufügen, die zuvor nicht vorhanden waren.
+**ID3DXBaseMesh::CloneMesh** wird verwendet, um das Vertexdatenlayout neu zu formatiert und zu ändern. Dies erfolgt durch Erstellen eines neuen Gittermodellobjekts. Verwenden Sie es beispielsweise, um Platz für Normalitäten, Texturkoordinaten, Farben, Gewichtungen usw. hinzuzufügen, die zuvor nicht vorhanden waren.
 
-[**ID3DXBaseMesh::UpdateSemantics**](id3dxbasemesh--updatesemantics.md) aktualisiert die Scheitelpunktdeklaration mit anderen semantischen Informationen, ohne das Layout des Scheitelpunktpuffers zu ändern. Diese Methode ändert nicht den Inhalt des Scheitelpunktpuffers. Verwenden Sie ihn beispielsweise, um eine 3D-Texturkoordinate als binormaler Oder Tangens oder umgekehrt neu zu beschriften.
+[**ID3DXBaseMesh::UpdateSemantics**](id3dxbasemesh--updatesemantics.md) aktualisiert die Scheitelpunktdeklaration mit unterschiedlichen semantischen Informationen, ohne das Layout des Scheitelpunktpuffers zu ändern. Diese Methode ändert den Inhalt des Scheitelpunktpuffers nicht. Verwenden Sie sie beispielsweise, um eine 3D-Texturkoordinate als binormal oder Tangens neu zu bezeichnen oder umgekehrt.
 
 ## <a name="requirements"></a>Anforderungen
 

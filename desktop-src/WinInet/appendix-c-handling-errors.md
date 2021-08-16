@@ -13,11 +13,11 @@ ms.locfileid: "118562350"
 ---
 # <a name="handling-errors-windows-internet"></a>Behandeln von Fehlern (Windows Internet)
 
-Die [**GetLastError-Funktion**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) ruft den letzten Fehlercode für alle WinINet-Funktionen ab. Wenn [**ERROR INTERNET EXTENDED \_ \_ \_ ERROR**](wininet-errors.md) zurückgegeben wird, gibt es eine Zeichenfolge oder einen Puffer, die eine ausführliche Fehlermeldung enthält. Rufen Sie die [**Funktion InternetGetLastResponseInfo**](/windows/desktop/api/Wininet/nf-wininet-internetgetlastresponseinfoa) auf, um den erweiterten Fehlertext abzurufen.
+Die [**GetLastError-Funktion**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) ruft den letzten Fehlercode für alle WinINet-Funktionen ab. Wenn [**ERROR INTERNET EXTENDED \_ \_ \_ ERROR**](wininet-errors.md) zurückgegeben wird, gibt es eine Zeichenfolge oder einen Puffer, die eine ausführliche Fehlermeldung enthält. Rufen Sie die [**Funktion InternetGetLastResponseInfo auf,**](/windows/desktop/api/Wininet/nf-wininet-internetgetlastresponseinfoa) um den erweiterten Fehlertext abzurufen.
 
-Um den Fehlertext für einen Fehler abzurufen, rufen Sie die [**FormatMessage-Funktion**](/windows/desktop/api/winbase/nf-winbase-formatmessage) auf, und übergeben Sie ihr ein **HMODULE-Handle** an Wininet.dll, das mit der [GetModuleHandle-Funktion](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea) abgerufen werden kann.
+Um den Fehlertext für einen Fehler zu erhalten, rufen Sie die [**FormatMessage-Funktion**](/windows/desktop/api/winbase/nf-winbase-formatmessage) auf und übergeben ihr ein **HMODULE-Handle** an Wininet.dll, das mithilfe der [GetModuleHandle-Funktion abgerufen werden](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea) kann.
 
-Im Folgenden wird ein Beispiel für eine Fehlerbehandlungsfunktion angezeigt.
+Im Folgenden finden Sie ein Beispiel für eine Fehlerbehandlungsfunktion.
 
 
 ```C++
@@ -186,7 +186,7 @@ void WINAPI addLastErrorToMsg( LPTSTR szMsgBuffer, DWORD dwSize )
 
 
 > [!Note]  
-> WinINet unterstützt keine Serverimplementierungen. Darüber hinaus sollte sie nicht von einem Dienst verwendet werden. Verwenden Sie für Serverimplementierungen oder -dienste [Microsoft Windows HTTP-Dienste (WinHTTP).](/windows/desktop/WinHttp/winhttp-start-page)
+> WinINet unterstützt keine Serverimplementierung. Darüber hinaus sollte sie nicht von einem Dienst verwendet werden. Verwenden Sie für Serverimplementierungen oder -dienste [Microsoft Windows HTTP Services (WinHTTP).](/windows/desktop/WinHttp/winhttp-start-page)
 
  
 

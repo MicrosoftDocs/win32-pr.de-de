@@ -1,7 +1,7 @@
 ---
-description: Wird verwendet, um die Sammlung von Metriken für ein verwaltetes Element oder ein verwaltetes Element zu steuern.
+description: Wird verwendet, um die Auflistung von Metriken für ein oder mehrere verwaltete Elemente zu steuern.
 ms.assetid: 3DC043ED-A790-4322-BF80-55961E9946C2
-title: ControlMetrics-Methode der Msvm_MetricService-Klasse
+title: ControlMetrics-Methode der Msvm_MetricService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -22,7 +22,7 @@ ms.locfileid: "118645846"
 ---
 # <a name="controlmetrics-method-of-the-msvm_metricservice-class"></a>ControlMetrics-Methode der Msvm \_ MetricService-Klasse
 
-Wird verwendet, um die Sammlung von Metriken für ein verwaltetes Element oder ein verwaltetes Element zu steuern.
+Wird verwendet, um die Auflistung von Metriken für ein oder mehrere verwaltete Elemente zu steuern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ uint32 ControlMetrics(
 *Betreff* \[ In\]
 </dt> <dd>
 
-Eine [**CIM \_ ManagedElement-Instanz,**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) die die verwalteten Elemente identifiziert, für die Metriken gesammelt werden. Wenn dieser Parameter **NULL** ist, werden die Metriken für alle verwalteten Elemente erfasst, die dem *Definition-Parameter* zugeordnet sind.
+Eine [**CIM \_ ManagedElement-Instanz,**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) die die verwalteten Elemente identifiziert, für die Metriken gesammelt werden. Wenn dieser Parameter NULL **ist,** werden die Metriken für alle verwalteten Elemente erfasst, die dem *Definition-Parameter* zugeordnet sind.
 
 </dd> <dt>
 
 *Definition* \[ In\]
 </dt> <dd>
 
-Eine [**Msvm \_ BaseMetricDefinition-Instanz,**](msvm-basemetricdefinition.md) die angibt, welche Metriken gesammelt werden. Wenn dieser Parameter **NULL** ist, werden die Metriken für alle Definitionen erfasst, die dem vom *Subject-Parameter* identifizierten verwalteten Element zugeordnet sind.
+Eine [**Msvm \_ BaseMetricDefinition-Instanz,**](msvm-basemetricdefinition.md) die angibt, welche Metriken gesammelt werden. Wenn dieser Parameter NULL **ist,** werden die Metriken für alle Definitionen erfasst, die dem verwalteten Element zugeordnet sind, das durch den *Subject-Parameter* identifiziert wird.
 
 </dd> <dt>
 
 *MetricCollectionEnabled* \[ In\]
 </dt> <dd>
 
-Gibt den Vorgang an, der für die Metriksammlung ausgeführt werden soll. Dies muss einer der folgenden Werte sein.
+Gibt den Vorgang an, der für die Metriksammlung durchgeführt werden soll. Dies muss einer der folgenden Werte sein.
 
 <dt>
 
@@ -69,7 +69,7 @@ Gibt den Vorgang an, der für die Metriksammlung ausgeführt werden soll. Dies m
 
 </dt> <dd>
 
-Aktivieren Sie die Metriksammlung.
+Aktivieren Der Sammlung von Metriken.
 
 </dd> <dt>
 
@@ -80,7 +80,7 @@ Aktivieren Sie die Metriksammlung.
 
 </dt> <dd>
 
-Deaktivieren Sie die Metriksammlung.
+Deaktivieren Sie die Sammlung von Metriken.
 
 </dd> <dt>
 
@@ -132,11 +132,11 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode schlägt in den folgenden Instanzen fehl:
+Diese Methode kann in den folgenden Instanzen nicht verwendet werden:
 
--   Die Parameter *Subject* und *Definition* sind beide **NULL.**
--   Die Parameter *Subject* und *Definition* sind nicht **NULL,** und es gibt keine Instanz von [**Msvm \_ MetricDefForME,**](msvm-metricdefforme.md) die die beiden Instanzen zuweist.
--   Der *Definition-Parameter* ist ein Verweis auf eine Instanz von [**Msvm \_ BaseMetricDefinition,**](msvm-basemetricdefinition.md) die [**msvm \_ MetricService**](msvm-metricservice.md) nicht über [**Msvm \_ ServiceAffectsElement**](msvm-serviceaffectselement.md)zugeordnet ist.
+-   Die *Parameter Subject* und *Definition* sind beide **NULL.**
+-   Die *Parameter Subject* und *Definition* sind beide nicht **NULL,** und es gibt keine Instanz von [**Msvm \_ MetricDefForME,**](msvm-metricdefforme.md) die die beiden Instanzen zugibt.
+-   Der *Definition-Parameter* ist ein Verweis auf eine Instanz von [**Msvm \_ BaseMetricDefinition,**](msvm-basemetricdefinition.md) die [**msvm \_ MetricService**](msvm-metricservice.md) über [**Msvm \_ ServiceAffectsElement**](msvm-serviceaffectselement.md)nicht zugeordnet ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -152,7 +152,7 @@ Diese Methode schlägt in den folgenden Instanzen fehl:
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

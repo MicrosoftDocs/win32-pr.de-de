@@ -13,7 +13,7 @@ ms.locfileid: "118750191"
 ---
 # <a name="iagentcommandexsethelpcontextid"></a>IAgentCommandEx::SetHelpContextID
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT SetHelpContextID(
@@ -21,7 +21,7 @@ HRESULT SetHelpContextID(
 );
 ```
 
-Legt die [**HelpContextID**](helpcontextid-property-com.md) für ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) fest.
+Legt die [**HelpContextID für**](helpcontextid-property-com.md) ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) fest.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
@@ -30,11 +30,11 @@ Legt die [**HelpContextID**](helpcontextid-property-com.md) für ein [**Command-
 <span id="ulID"></span><span id="ulid"></span><span id="ULID"></span>*ulID*
 </dt> <dd>
 
-Die Kontextnummer des Hilfethemas, das dem [**Command-Objekt**](/windows/desktop/lwef/the-command-object) zugeordnet ist. wird verwendet, um kontextbezogene Hilfe für den Befehl bereitzustellen.
+Die Kontextnummer des Hilfethemas, das dem [**Command-Objekt zugeordnet**](/windows/desktop/lwef/the-command-object) ist. wird verwendet, um kontextsensitive Hilfe für den Befehl zur Verfügung zu stellen.
 
 </dd> </dl>
 
-Wenn Sie eine Windows Hilfedatei für Ihre Anwendung erstellt und in der [**HelpFile-Eigenschaft**](helpfile-property.md) des Zeichens festgelegt haben. Der Microsoft-Agent ruft die Hilfe automatisch auf, wenn [**HelpModeOn**](helpmodeon-property.md) auf **True** festgelegt ist und der Benutzer den Befehl auswählt. Wenn die [**HelpContextID**](helpcontextid-property-com.md)eine Kontextnummer enthält, ruft der -Agent die Hilfe auf und sucht nach dem Thema, das durch die aktuelle Kontextnummer identifiziert wird. Die aktuelle Kontextnummer ist der Wert von **HelpContextID** für den Befehl.
+Wenn Sie eine Hilfedatei Windows Anwendung erstellt und diese in der [**HelpFile-Eigenschaft**](helpfile-property.md) des Zeichens festgelegt haben. Microsoft Agent ruft die Hilfe automatisch auf, [**wenn HelpModeOn**](helpmodeon-property.md) auf **True** festgelegt ist und der Benutzer den Befehl auswählt. Wenn die [**HelpContextID**](helpcontextid-property-com.md)eine Kontextnummer enthält, ruft der -Agent die Hilfe auf und sucht nach dem Thema, das durch die aktuelle Kontextnummer identifiziert wird. Die aktuelle Kontextnummer ist der Wert von **HelpContextID** für den Befehl.
 
 > [!Note]  
 > Zum Erstellen einer Hilfedatei ist der Microsoft Windows Help Compiler erforderlich.

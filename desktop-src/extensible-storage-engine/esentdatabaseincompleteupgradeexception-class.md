@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentDatabaseIncompleteUpgradeException-Klasse'
+description: 'Weitere Informationen finden Sie unter: EsentDatabaseIncompleteUpgradeException-Klasse'
 title: EsentDatabaseIncompleteUpgradeException-Klasse
 TOCTitle: EsentDatabaseIncompleteUpgradeException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentDatabaseIncompleteUpgradeException
