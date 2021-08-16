@@ -1,9 +1,9 @@
 ---
-title: EM_GETEDITSTYLEEX Meldung (RichEdit. h)
-description: Ruft die aktuellen Flags für erweiterte Bearbeitungs Stile ab.
+title: EM_GETEDITSTYLEEX (Richedit.h)
+description: Ruft die aktuellen erweiterten Bearbeitungsstilflags ab.
 ms.assetid: 3E81F7BB-404D-4465-982A-3CF6FD9359DA
 keywords:
-- Windows-Steuerelemente für EM_GETEDITSTYLEEX Meldung
+- EM_GETEDITSTYLEEX meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bb4077abaedd0c5ec720603d6b23e77950fd5307
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ad3c011a162bbf0a1822e68be6bd60f662551b3a22ecfca62c64ef8d01a605a5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858950"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120049310"
 ---
-# <a name="em_geteditstyleex-message"></a>EM \_ geteditstyleex-Meldung
+# <a name="em_geteditstyleex-message"></a>EM \_ GETEDITSTYLEEX-Nachricht
 
-Ruft die aktuellen Flags für erweiterte Bearbeitungs Stile ab.
+Ruft die aktuellen erweiterten Bearbeitungsstilflags ab.
 
 
 ```C++
@@ -52,20 +52,20 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die erweiterten Flags für den Bearbeitungs Stil zurück, die einen oder mehrere der folgenden Werte enthalten können.
+Gibt die erweiterten Bearbeitungsstilflags zurück, die einen oder mehrere der folgenden Werte enthalten können.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                                                                                                                                                                                                                                  |
 |------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**SES \_ Ex- \_ handlerfriendlyurl**</dt> </dl>  | Anzeigen von anzeigen Amen mit derselben Textfarbe und Unterstreichung von automatischen Verknüpfungen, vorausgesetzt, dass die temporäre Formatierung nicht verwendet wurde oder die automatische Text Farbe verwendet (Standard: 0).<br/>                                                                       |
-| <dl> <dt>**SES \_ Ex \_ multiberühren**</dt> </dl>         | Aktivieren Sie die Berührungs Unterstützung in Rich Edit. Dies schließt Auswahl, Caretzeichen und Kontextmenü Aufrufe ein. Wenn dieses Flag nicht festgelegt ist, wird die Fingereingabe durch Maus Befehle emuliert, die keine Besonderheiten im Touchscreen berücksichtigen (Standard: 0). <br/>      |
-| <dl> <dt>**SES \_ Ex \_ noacetateselection**</dt> </dl> | Anzeigen von ausgewähltem Text mit klassischem Windows-Auswahl Text und Hintergrundfarben anstelle der Farbe für den Hintergrund (Standardwert: 0). <br/>                                                                                                               |
-| <dl> <dt>**SES \_ Ex \_ nomath**</dt> </dl>             | Einfügen von mathematischen Zonen deaktivieren (Standardwert: 1). Um die mathematische Bearbeitung und Anzeige zu aktivieren, senden Sie die Nachricht [**EM \_ seteditstyleex**](em-seteditstyleex.md) mit *wParam* auf 0 und *LPARAM* auf **SES \_ Ex \_ nomath**. <br/>                              |
-| <dl> <dt>**wichtige SES-Werte \_ \_**</dt> </dl>            | Deaktivieren Sie das Einfügen von Tabellen. Die [**\_ geinsertfähige Nachricht "em insertting**](em-inserttable.md) " gibt " **E \_ Fail** " und RTF-Tabellen übersprungen (Standard: 0). <br/>                                                                                                  |
-| <dl> <dt>**SES-Zeichen (USA) \_ \_**</dt> </dl>      | Aktivieren Sie ein mehrzeilige Steuerelement, das wie ein einzeilige Steuerelement ausgeführt werden kann, mit der Möglichkeit, vertikal scrollen, wenn die einzeilige Höhe größer als die Fensterhöhe ist (Standard: 0). <br/>                                                                   |
-| <dl> <dt>**SES \_ hidetempformat**</dt> </dl>         | Blenden Sie die temporäre Formatierung aus, die erstellt wird, wenn " [**itextfont. Reset**](/windows/desktop/api/Tom/nf-tom-itextfont-reset) " mit **tomapplytmp** aufgerufen wird. Beispielsweise wird eine solche Formatierung von Rechtschreibprüfungen verwendet, um einen Wellen Strich unter Umständen falsch geschriebene Wörter anzuzeigen.<br/> |
-| <dl> <dt>**SES \_ von \_ usemoust wParam**</dt> </dl>     | Verwenden Sie *wParam* , wenn Sie die [**WM- \_ mouanmove**](/windows/desktop/inputdev/wm-mousemove) -Nachricht verarbeiten und [**GetAsyncKeyState**](/windows/desktop/api/winuser/nf-winuser-getasynckeystate)nicht aufrufen.<br/>                                                                                              |
+| <dl> <dt>**SES \_ EX \_ HANDLEFRIENDLYURL**</dt> </dl>  | Anzeigen von Anzeigenamenlinks mit der gleichen Textfarbe und Gliederung wie automatische Links, vorausgesetzt, die temporäre Formatierung wird nicht verwendet oder verwendet text autocolor (Standard: 0).<br/>                                                                       |
+| <dl> <dt>**SES \_ EX \_ MULTITOUCH**</dt> </dl>         | Aktivieren Sie die Touchunterstützung in Rich Edit. Dies schließt Auswahl, Ein caretplatzierung und Kontextmenüaufrufe ein. Wenn dieses Flag nicht festgelegt ist, wird die Fingerbewegung durch Mausbefehle emuliert, die keine Besonderheiten des Touchmodus berücksichtigen (Standardeinstellung: 0). <br/>      |
+| <dl> <dt>**SES \_ EX \_ NOACETATESELECTION**</dt> </dl> | Anzeigen von ausgewähltem Text mit Windows Auswahltext und Hintergrundfarben anstelle der Hintergrund acetate-Farbe (Standardeinstellung: 0). <br/>                                                                                                               |
+| <dl> <dt>**SES \_ EX \_ NOMATH**</dt> </dl>             | Deaktivieren Sie das Einfügen von mathematischen Zonen (Standard: 1). Um die mathematische Bearbeitung und Anzeige zu aktivieren, senden Sie die [**EM \_ SETEDITSTYLEEX-Nachricht,**](em-seteditstyleex.md) bei der *wParam* auf 0 und *lParam* auf **SES \_ EX \_ NOMATH festgelegt ist.** <br/>                              |
+| <dl> <dt>**SES \_ EX \_ NOTABLE**</dt> </dl>            | Deaktivieren Sie das Einfügen von Tabellen. Die [**EM \_ INSERTTABLE-Meldung**](em-inserttable.md) gibt **E FAIL \_ zurück,** und RTF-Tabellen werden übersprungen (Standard: 0). <br/>                                                                                                  |
+| <dl> <dt>**SES \_ EX \_ VERWENDETINGLELINE**</dt> </dl>      | Aktivieren Sie ein mehrzeilenbasiertes Steuerelement, das wie ein einzeilenbasiertes Steuerelement mit der Möglichkeit, vertikal zu scrollen, wenn die Einzeilenhöhe größer als die Fensterhöhe ist (Standard: 0). <br/>                                                                   |
+| <dl> <dt>**SES \_ HIDETEMPFORMAT**</dt> </dl>         | Blenden Sie die temporäre Formatierung aus, die erstellt wird, wenn [**ITextFont.Reset**](/windows/desktop/api/Tom/nf-tom-itextfont-reset) mit **tomApplyTmp aufgerufen wird.** Eine solche Formatierung wird z. B. von Rechtschreibprüfungsoptionen verwendet, um unter möglicherweise falsch geschriebenen Wörtern eine gestrichelte Unterstreichung anzuzeigen.<br/> |
+| <dl> <dt>**SES \_ EX \_ USEMOUSEWPARAM**</dt> </dl>     | Verwenden *Sie wParam,* wenn Sie die [**WM \_ MOUSEMOVE-Nachricht**](/windows/desktop/inputdev/wm-mousemove) behandeln, und rufen Sie [**getAsyncKeyState nicht auf.**](/windows/desktop/api/winuser/nf-winuser-getasynckeystate)<br/>                                                                                              |
 
 
 
@@ -77,17 +77,17 @@ Gibt die erweiterten Flags für den Bearbeitungs Stil zurück, die einen oder me
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**EM- \_ Test-ditstyleex**](em-seteditstyleex.md)
+[**EM \_ SETEDITSTYLEEX**](em-seteditstyleex.md)
 </dt> </dl>
 
  

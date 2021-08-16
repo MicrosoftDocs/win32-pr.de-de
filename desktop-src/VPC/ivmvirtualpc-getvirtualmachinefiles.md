@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualpc getvirtualmachinefiles-Methode (vpccominterfaces. h)
-description: Ruft ein Array bekannter Konfigurationsdateien für virtuelle Maschinen ab.
+title: IVMVirtualPC GetVirtualMachineFiles-Methode (VPCCOMInterfaces.h)
+description: Ruft ein Array bekannter VM-Konfigurationsdateien ab.
 ms.assetid: 38771573-66fa-408a-95db-1281efdf8b73
 keywords:
-- Getvirtualmachinefiles-Methode virtueller PC
-- Getvirtualmachinefiles-Methode Virtual PC, ivmvirtualpc-Schnittstelle
-- Ivmvirtualpc Interface Virtual PC, getvirtualmachinefiles-Methode
+- GetVirtualMachineFiles-Methode Virtueller PC
+- GetVirtualMachineFiles-Methode Virtueller PC, IVMVirtualPC-Schnittstelle
+- IVMVirtualPC-Schnittstelle Virtueller PC , GetVirtualMachineFiles-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c5d1fe248b76756b39846d181341278f669d2f5f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 64ae2f96fb0c289f155158c77cdf3e4a8df1cb83aa8a51e0329d9fcd835ea4d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998600"
 ---
-# <a name="ivmvirtualpcgetvirtualmachinefiles-method"></a>Ivmvirtualpc:: getvirtualmachinefiles-Methode
+# <a name="ivmvirtualpcgetvirtualmachinefiles-method"></a>IVMVirtualPC::GetVirtualMachineFiles-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft ein Array bekannter Konfigurationsdateien für virtuelle Maschinen ab.
+Ruft ein Array bekannter VM-Konfigurationsdateien ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,24 +46,24 @@ HRESULT GetVirtualMachineFiles(
 
 <dl> <dt>
 
-*inadditionalsearchpath* \[ in\]
+*inAdditionalSearchPaths* \[ In\]
 </dt> <dd>
 
-Diese Pfade werden zusammen mit den Pfaden durchsucht, die in den Eigenschaften [**ivmvirtualpc:: SearchPath**](ivmvirtualpc-searchpaths.md) und [**ivmvirtualpc::D efaultvmconfigurationpath**](ivmvirtualpc-defaultvmconfigurationpath.md) festgelegt sind.
+Diese Pfade werden zusammen mit den Pfaden durchsucht, die in den Eigenschaften [**IVMVirtualPC::SearchPaths**](ivmvirtualpc-searchpaths.md) und [**IVMVirtualPC::D efaultVMConfigurationPath**](ivmvirtualpc-defaultvmconfigurationpath.md) festgelegt sind.
 
 </dd> <dt>
 
-*inexcluddregisteredvms* \[ in\]
+*inExcludedRegisteredVMs* \[ In\]
 </dt> <dd>
 
-**True** , wenn registrierte virtuelle Computer aus dem Array ausgeschlossen werden sollen, wenn der *outvirtualmachinefilelist* -Parameter zurückgegeben wird, andernfalls **false** .
+**TRUE,** wenn registrierte virtuelle Computer aus dem Array ausgeschlossen werden sollen, geben Sie im *outVirtualMachineFileList-Parameter* zurück, andernfalls **FALSE.**
 
 </dd> <dt>
 
-*outvirtualmachinefilelist* \[ Out, retval\]
+*outVirtualMachineFileList* \[ out, retval\]
 </dt> <dd>
 
-Ein Array von Pfad Zeichenfolgen für die Konfigurationsdateien der virtuellen Maschine, die in den angegebenen Suchpfaden gefunden wurden.
+Ein Array von Pfadzeichenfolgen für die Konfigurationsdateien des virtuellen Computers, die in den angegebenen Suchpfaden gefunden werden.
 
 </dd> </dl>
 
@@ -76,18 +76,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                                        | BESCHREIBUNG                                                                                     |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                              | Der Vorgang wurde durchgeführt.<br/>                                                        |
-| <dl> <dt>**E \_ Zeiger**</dt> <dt>0x80004003</dt> </dl>                                | Der *outvirtualmachinefilelist* -Parameter ist **null**.<br/>                               |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>0x80000003</dt> </dl>                             | Der *inadditionalsearchpath* -Parameter ist kein Array von Zeichen folgen.<br/>                  |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>                        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                    |
-| <dl> <dt>**VM \_ E \_ \_ Hardwarevirtualisierung \_ deaktiviert**</dt> <dt>0xa0040951</dt> </dl> | Der Prozessor bietet keine Unterstützung für hav-Erweiterungen (Hardware Beschleunigung Virtualization).<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> <dt>0x80004003</dt> </dl>                                | Der *outVirtualMachineFileList-Parameter* ist **NULL.**<br/>                               |
+| <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>                             | Der *inAdditionalSearchPaths-Parameter* ist kein Array von Zeichenfolgen.<br/>                  |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>                        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                    |
+| <dl> <dt>**VM \_ E \_ HARDWARE \_ VIRTUALIZATION \_ DISABLED**</dt> <dt>0xA0040951</dt> </dl> | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Suchpfade, die zum Abrufen des Arrays von Konfigurationsdateien verwendet werden, enthalten diejenigen, die zuvor von [**ivmvirtualpc:: SearchPath**](ivmvirtualpc-searchpaths.md) und [**ivmvirtualpc::D efaultvmconfigurationpath**](ivmvirtualpc-defaultvmconfigurationpath.md) festgelegt wurden, zusätzlich zu den vom *inadditionalsearchpath* -Parameter angegebenen.
+Die Suchpfade, die zum Abrufen des Arrays von Konfigurationsdateien verwendet werden, enthalten die zuvor von [**IVMVirtualPC::SearchPaths**](ivmvirtualpc-searchpaths.md) und [**IVMVirtualPC::D efaultVMConfigurationPath**](ivmvirtualpc-defaultvmconfigurationpath.md) festgelegten Pfade zusätzlich zu den durch den *InAdditionalSearchPaths-Parameter* angegebenen Pfaden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,20 +95,20 @@ Die Suchpfade, die zum Abrufen des Arrays von Konfigurationsdateien verwendet we
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmvirtualpc ist als 236ba0d9-a24a-4292-A132-27c1421dfd01 definiert.<br/>               |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMVirtualPC ist als 236ba0d9-a24a-4292-a132-27c1421dfd01 definiert.<br/>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmvirtualpc**](ivmvirtualpc.md)
+[**IVMVirtualPC**](ivmvirtualpc.md)
 </dt> </dl>
 
  

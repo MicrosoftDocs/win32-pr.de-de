@@ -1,23 +1,23 @@
 ---
-title: Beispiel Code für den Bereich mit IDirectoryObject
-description: Im folgenden Codebeispiel wird der Bereich verwendet, um die Mitglieder einer Gruppe mithilfe der IDirectoryObject-Schnittstelle abzurufen.
+title: Beispielcode für Ranging mit IDirectoryObject
+description: Im folgenden Codebeispiel wird ranging verwendet, um die Mitglieder einer Gruppe mithilfe der IDirectoryObject-Schnittstelle abzurufen.
 ms.assetid: 659b4c28-6534-45d2-80ee-14184433390d
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code für den Bereich mit IDirectoryObject ADSI
-- Bereichs Abruf ADSI, Beispielcode, verwenden von IDirectoryObject
+- Beispielcode für Ranging mit IDirectoryObject ADSI
+- Bereichsabruf ADSI , Beispielcode,Verwenden von IDirectoryObject
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 145314fa9c0c44c9b4865ea711e8533a8d1fcc59
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a0d049d629c347f0d85d8a4585436f4d7bbddf88b20186890643f7770070843a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707434"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082634"
 ---
-# <a name="example-code-for-ranging-with-idirectoryobject"></a>Beispiel Code für den Bereich mit IDirectoryObject
+# <a name="example-code-for-ranging-with-idirectoryobject"></a>Beispielcode für Ranging mit IDirectoryObject
 
-Im folgenden Codebeispiel wird der Bereich verwendet, um die Mitglieder einer Gruppe mithilfe der [**IDirectoryObject**](/windows/desktop/api/Iads/nn-iads-idirectoryobject) -Schnittstelle abzurufen.
+Im folgenden Codebeispiel wird ranging verwendet, um die Mitglieder einer Gruppe mithilfe der [**IDirectoryObject-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-idirectoryobject) abzurufen.
 
 
 ```C++
@@ -101,9 +101,9 @@ HRESULT EnumGroupWithIDirectoryObject(LPCWSTR pwszGroupDN,
 
 
 
- 
+ 
 
- 
+ 
 
 
 

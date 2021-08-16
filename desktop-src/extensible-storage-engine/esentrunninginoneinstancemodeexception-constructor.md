@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentrunninginoneinstancemodeexception-Konstruktor'
-title: Esentrunninginoneinstancemodeexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentRunningInOneInstanceModeException-Konstruktor'
+title: EsentRunningInOneInstanceModeException-Konstruktor
 TOCTitle: 'EsentRunningInOneInstanceModeException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentRunningInOneInstanceModeException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentrunninginoneinstancemodeexception.esentrunninginoneinstancemodeexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 71e6210f1395f0f213d7b44ae81417609c30b40c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8a4d482aaafc75f8d109b6332d3051a020f3d32616430aa01913fe72db111ca0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103757482"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118981810"
 ---
-# <a name="esentrunninginoneinstancemodeexception-constructor"></a>Esentrunninginoneinstancemodeexception-Konstruktor
+# <a name="esentrunninginoneinstancemodeexception-constructor"></a>EsentRunningInOneInstanceModeException-Konstruktor
 
-Initialisiert eine neue Instanz der esentrunninginoneinstancemodeexception-Klasse.
+Initialisiert eine neue Instanz der EsentRunningInOneInstanceModeException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentRunningInOneInstanceModeException()
 public EsentRunningInOneInstanceModeException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentrunninginoneinstancemodeexception-Klasse](./esentrunninginoneinstancemodeexception-class.md)
+[EsentRunningInOneInstanceModeException-Klasse](./esentrunninginoneinstancemodeexception-class.md)
 
-[Esentrunninginoneinstancemodeexception-Member](./esentrunninginoneinstancemodeexception-members.md)
+[EsentRunningInOneInstanceModeException-Member](./esentrunninginoneinstancemodeexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,24 +1,24 @@
 ---
-description: Die subpicturestreamsavailable-Eigenschaft ruft die Anzahl der im aktuellen Titel verfügbaren teilbildstreams ab.
+description: Die SubpictureStreamsAvailable-Eigenschaft ruft die Anzahl der im aktuellen Titel verfügbaren Unterbildstreams ab.
 ms.assetid: 6a6d9d15-2f56-47fc-a7bb-2cf33f384f41
-title: Subpicturestreamsavailable (Eigenschaft)
+title: SubpictureStreamsAvailable-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e34f780a726966580a72d87b6f7900bb73c1a85
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2349cb696c1f6d363fefb6a6e90a662fa7c3233b3b0aefcb57d381a604f41832
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360813"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119633440"
 ---
-# <a name="subpicturestreamsavailable-property"></a>Subpicturestreamsavailable (Eigenschaft)
+# <a name="subpicturestreamsavailable-property"></a>SubpictureStreamsAvailable-Eigenschaft
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `SubpictureStreamsAvailable` Eigenschaft ruft die Anzahl der im aktuellen Titel verfügbaren teilbildstreams ab.
+Die -Eigenschaft ruft die Anzahl der im aktuellen Titel verfügbaren `SubpictureStreamsAvailable` Unterbildstreams ab.
 
 ``` syntax
 [ iStreams = ] MSWebDVD.SubpictureStreamsAvailable
@@ -26,13 +26,13 @@ Die- `SubpictureStreamsAvailable` Eigenschaft ruft die Anzahl der im aktuellen T
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl der verfügbaren Streams als Ganzzahl zurück.
+Gibt die Anzahl der verfügbaren Streams als ganze Zahl zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist schreibgeschützt und weist keinen Standardwert auf. Um jeden Stream für sein sprach Attribut abzufragen, müssen Sie zuerst diese Methode zum Abrufen der oberen Grenze aufruft.
+Diese Eigenschaft ist schreibgeschützt und hat keinen Standardwert. Um jeden Stream nach seinem Sprachattribut abfragt, rufen Sie zuerst diese Methode auf, um die Obergrenze zu erhalten.
 
-Die Datenstrom Nummerierung ist NULL basiert.
+Die Datenstromnummerierung basiert auf null.
 
  
 

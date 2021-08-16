@@ -1,11 +1,11 @@
 ---
-title: Count. Width-Eigenschaft
-description: Ruft die Linienbreite ab, die zum Diagramm des Leistungsindikators verwendet wird, oder legt diese fest
+title: CounterItem.Width-Eigenschaft
+description: Ruft die Linienbreite ab, die zum Graphen des Indikatorwerts verwendet wird, oder legt diese fest.
 ms.assetid: 1f5c1e74-18d4-4005-b83f-bf7265d356cb
 keywords:
-- Width-Eigenschaft (Sysmon)
-- Width-Eigenschaft (Sysmon), ratteritem-Klasse
-- Namteritem Class sysmon, Width-Eigenschaft
+- Width-Eigenschaft SysMon
+- Width-Eigenschaft SysMon , CounterItem-Klasse
+- CounterItem-Klasse SysMon , Width-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e67892f9e4cf6799f1b9311bb2cd47ec02744cb6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5deca3d7fa188c834f2ca952c9b6c4760a3a1b56c83eb8250e343257b8108de5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741785"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118883506"
 ---
-# <a name="counteritemwidth-property"></a>Count. Width-Eigenschaft
+# <a name="counteritemwidth-property"></a>CounterItem.Width-Eigenschaft
 
-Ruft die Linienbreite ab, die zum Diagramm des Leistungsindikators verwendet wird, oder legt diese fest
+Ruft die Linienbreite ab, die zum Graphen des Indikatorwerts verwendet wird, oder legt diese fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -40,9 +40,9 @@ Property Width As Long
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-In einem Liniendiagramm verwendete Linienstärke. Gültige Werte reichen von 1 bis 3, wobei 1 (der Standardwert) die enge Breite ist.
+In einem Liniendiagramm verwendete Linienbreite. Gültige Werte liegen zwischen 1 und 3, wobei 1 (Standardwert) die kleinste Breite ist.
 
-**Vor Windows Vista:** Gültige Werte liegen zwischen 1 und 9. Verwenden Sie keinen Wert für die Breite, der größer als 3 ist, wenn Ihre Anwendung unter Windows Vista ausgeführt wird.
+**Vor Windows Vista:** Gültige Werte liegen zwischen 1 und 9. Verwenden Sie keinen Breitenwert größer als 3, wenn Ihre Anwendung auf Windows Vista ausgeführt wird.
 
 ## <a name="exceptions"></a>Ausnahmen
 
@@ -50,17 +50,17 @@ In einem Liniendiagramm verwendete Linienstärke. Gültige Werte reichen von 1 b
 
 | Ausnahmetyp               | Bedingung                              |
 |------------------------------|----------------------------------------|
-| **System.ArgumentException** | Die angegebene Zeilenbreite ist ungültig. |
+| **System.ArgumentException** | Die angegebene Linienbreite ist ungültig. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Standardlinien Stärke für die ersten 16 Leistungsindikatoren, die Sie hinzufügen, ist 1. Die Standardlinienbreite für die nächsten 16 Leistungsindikatoren (Zähler 17-32), die Sie hinzufügen, ist 2. Die Standardlinienbreite für die nächsten 16 Leistungsindikatoren (Zähler 33-48), die Sie hinzufügen, ist 3. Danach wählt sysmon die Linienbreite nach dem Zufallsprinzip aus. Weitere Informationen finden Sie unter " [**ratteritem. Color**](counteritem-color.md)".
+Die Standardlinienbreite für die ersten 16 Leistungsindikatoren, die Sie hinzufügen, ist 1. Die Standardlinienbreite für die nächsten 16 Indikatoren (Indikatoren 17 bis 32), die Sie hinzufügen, ist 2. Die Standardlinienbreite für die nächsten 16 Indikatoren (Indikatoren 33 bis 48), die Sie hinzufügen, ist 3. Anschließend wählt SYSMON nach dem Zufallsprinzip die Linienbreite aus. Weitere Informationen finden Sie unter [**CounterItem.Color**](counteritem-color.md).
 
-Um einen anderen [**Linienstil**](counteritem-linestyle.md) als Solid anzugeben, muss die Breite 1 lauten. Wenn Sie einen Wert größer als 1 angeben und einen nicht einstufigen Linienstil angeben, ignoriert sysmon die angegebene Linienbreite.
+Um einen anderen [**Linienstil**](counteritem-linestyle.md) als "solid" anzugeben, muss die Breite 1 sein. Wenn Sie einen Wert größer als 1 und einen nicht durchgezogenen Linienstil angeben, ignoriert SYSMON die angegebene Linienbreite.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,15 +70,15 @@ Um einen anderen [**Linienstil**](counteritem-linestyle.md) als Solid anzugeben,
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ratteritem**](counteritem.md)
+[**CounterItem**](counteritem.md)
 </dt> </dl>
 
  

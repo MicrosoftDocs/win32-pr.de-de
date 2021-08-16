@@ -1,29 +1,29 @@
 ---
-title: Multicastudpcliumtexample
-description: Dieses Beispiel zeigt einen UDP-Client, der eine Anforderung multiumwandelt und dann auf Antwort Nachrichten von Servern wartet.
+title: MulticastUdpClientExample
+description: Dieses Beispiel zeigt einen UDP-Client, der eine Anforderung multicastet und dann auf Antwortnachrichten von Servern wartet.
 ms.assetid: 61ca7e05-1a60-43b2-9ff7-cb355fae2f77
 keywords:
-- Multicastudpclieintexample Native Webdienste
-- Wwsapi
+- MulticastUdpClientExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c1697c49b83f0e43fa332e36943ebea6129795d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e96ab6b78b79525725cb5652fdd847bd27da4b413de974fae0136c96bdebc83b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206436"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119545890"
 ---
-# <a name="multicastudpclientexample"></a>Multicastudpcliumtexample
+# <a name="multicastudpclientexample"></a>MulticastUdpClientExample
 
-Dieses Beispiel zeigt einen UDP-Client, der eine Anforderung multiumwandelt und dann auf Antwort Nachrichten von Servern wartet.
+Dieses Beispiel zeigt einen UDP-Client, der eine Anforderung multicastet und dann auf Antwortnachrichten von Servern wartet.
 
--   [Multicastudpclient. cpp](#multicastudpclientcpp)
--   [PurchaseOrder. WSDL](#purchaseorderwsdl)
+-   [MulticastUdpClient.cpp](#multicastudpclientcpp)
+-   [PurchaseOrder.wsdl](#purchaseorderwsdl)
 -   [Makefile](#makefile)
 
-## <a name="multicastudpclientcpp"></a>Multicastudpclient. cpp
+## <a name="multicastudpclientcpp"></a>MulticastUdpClient.cpp
 
 
 ```C++
@@ -564,7 +564,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a>PurchaseOrder. WSDL
+## <a name="purchaseorderwsdl"></a>PurchaseOrder.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -708,9 +708,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

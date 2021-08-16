@@ -1,5 +1,5 @@
 ---
-description: Ein Chord ist ein Bereich, der durch die Schnittmenge einer Ellipse und eines Liniensegments begrenzt wird, das als Secant bezeichnet wird. Die folgende Abbildung zeigt einen gezeichneten Chord mithilfe der Chord-Funktion.
+description: Eine Ellipse ist ein Bereich, der durch die Schnittmenge einer Ellipse und eines Liniensegments, das als Secant bezeichnet wird, gebunden ist. Die folgende Abbildung zeigt eine mithilfe der Chord-Funktion gezeichnete Akkorde.
 ms.assetid: 9aa35b39-06f2-48bf-b32c-3e3e32fab68b
 title: Informationen zu Chords
 ms.topic: article
@@ -13,13 +13,13 @@ ms.locfileid: "119400530"
 ---
 # <a name="about-chords"></a>Informationen zu Chords
 
-Ein *Chord* ist ein Bereich, der durch die Schnittmenge einer Ellipse und eines Liniensegments begrenzt wird, das als *Secant* bezeichnet wird. Die folgende Abbildung zeigt einen gezeichneten Chord mithilfe der [**Chord-Funktion.**](/windows/desktop/api/Wingdi/nf-wingdi-chord)
+Eine *Ellipse* ist ein Bereich, der durch die Schnittmenge einer Ellipse und eines Liniensegments, das als secant bezeichnet *wird, umgebunden ist.* Die folgende Abbildung zeigt eine mithilfe der [**Chord-Funktion gezeichnete Akkorde.**](/windows/desktop/api/Wingdi/nf-wingdi-chord)
 
-![Abbildung einer Elipse mit zwei Radialen, einem Secant und einem Chord](images/csfsh-02.png)
+![Abbildung eines Auslassungsdiagramms mit zwei Radialen, einem Sekanten und einer Ader](images/csfsh-02.png)
 
-Beim Aufrufen von [**Chord**](/windows/win32/api/wingdi/nf-wingdi-chord)stellt eine Anwendung die Koordinaten der oberen linken und unteren rechten Ecken des umgrenzenden Rechtecks der Ellipse sowie die Koordinaten von zwei Punkten zur Verfügung, die zwei Radiale definieren. Ein radiales ist eine Linie, die aus der Mitte des umgrenzenden Rechtecks einer Ellipse an einen Punkt auf der Ellipse gezeichnet wird.
+Beim [**Aufrufen von Chord**](/windows/win32/api/wingdi/nf-wingdi-chord)stellt eine Anwendung die Koordinaten der oberen linken und unteren rechten Ecke des umgrenzenden Rechtecks der Ellipse sowie die Koordinaten von zwei Punkten zur Definition von zwei radialen Punkten zur Auswahl. Ein radiales ist eine Linie, die von der Mitte des umgebundenen Rechtecks einer Ellipse bis zu einem Punkt auf der Ellipse gezeichnet wird.
 
-Wenn das System den gekrümmten Teil des Chord zeichnet, wird hierfür die aktuelle Bogenrichtung für den angegebenen Gerätekontext verwendet. Die Standardrichtung des Bogens ist gegen den Uhrzeigersinn. Sie können ihre Anwendung die Arc-Richtung zurücksetzen lassen, indem Sie die [**SetArcDirection-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-setarcdirection) aufrufen.
+Wenn das System den gekrümmten Teil des Chord zeichnet, verwendet es die aktuelle Bogenrichtung für den angegebenen Gerätekontext. Die Standard arc-Richtung ist gegen den Uhrzeigersinn. Sie können ihre Anwendung die Richtung des Bogens zurücksetzen lassen, indem Sie die [**SetArcDirection-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-setarcdirection) aufrufen.
 
  
 

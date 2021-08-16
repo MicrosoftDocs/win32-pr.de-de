@@ -1,9 +1,9 @@
 ---
-title: Schieberegler. Max
-description: Das Maximum-Attribut gibt den maximalen Wert des Bereichs an oder ruft ihn ab, der durch das Schieberegler-Steuerelement definiert wird.
+title: SLIDER.max
+description: Das Max-Attribut gibt den maximalen Wert des bereichs an, der vom Schiebereglersteuerelement definiert wird, oder ruft es ab.
 ms.assetid: c38e7868-d144-4e40-871a-e70181a6dfb5
 keywords:
-- Schieberegler. Max. Windows-Media Player
+- SLIDER.max Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 67482943e33a553589e5a16d7ce1e2264022cdf5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5bff22d623729cec14afdfd44232217a748c4788e679ba3dd2b194b7197da901
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358740"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995180"
 ---
-# <a name="slidermax"></a>Schieberegler. Max
+# <a name="slidermax"></a>SLIDER.max
 
-Das **Maximum** -Attribut gibt den maximalen Wert des Bereichs an oder ruft ihn ab, der durch das Schieberegler-Steuerelement definiert wird.
+Das **Max-Attribut** gibt den maximalen Wert des bereichs an, der vom Schiebereglersteuerelement definiert wird, oder ruft es ab.
 
 ``` syntax
         elementID.max
@@ -29,13 +29,13 @@ Das **Maximum** -Attribut gibt den maximalen Wert des Bereichs an oder ruft ihn 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibnummer (**float**) mit dem Standardwert 100. 
+Dieses Attribut ist eine  Lese-/Schreibnummer **(float)** mit dem Standardwert 100.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der für " **Max** " angegebene Wert muss größer als der Wert für " **Min**" sein.
+Der für **max** angegebene Wert muss größer als der wert für **min** sein.
 
-Weitere Informationen finden Sie unter **customslider**. [positionImage](customslider-positionimage.md) -Attribut für ein Beispiel, das veranschaulicht, wie die Attribute des **Slider** -Elements verwendet werden.
+Weitere Informationen finden Sie unter **DEM UNTERENLIDER.** [das attribut positionImage](customslider-positionimage.md) für ein Beispiel, das veranschaulicht, wie die Attribute des **SLIDER-Elements** verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,21 +43,21 @@ Weitere Informationen finden Sie unter **customslider**. [positionImage](customs
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> <dt>
 
-[**Schieberegler. min.**](slider-min.md)
+[**SLIDER.min**](slider-min.md)
 </dt> <dt>
 
-[**Slider. Wert**](slider-value.md)
+[**SLIDER.value**](slider-value.md)
 </dt> </dl>
 
  

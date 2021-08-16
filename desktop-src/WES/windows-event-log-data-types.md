@@ -1,6 +1,6 @@
 ---
-title: Windows-Ereignisprotokoll-Datentypen (winevt. h)
-description: 'Das Windows-Ereignisprotokoll definiert die folgenden Datentypen:'
+title: Windows Ereignisprotokolldatentypen (WinEvt.h)
+description: Windows Das Ereignisprotokoll definiert die folgenden Datentypen.
 ms.assetid: 1aad25fe-7503-4ef8-a40a-63457bd9a007
 keywords:
 - EVT_HANDLE
@@ -8,16 +8,16 @@ keywords:
 - EVT_OBJECT_ARRAY_PROPERTY_HANDLE
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 71a93794d8cc3a254fe182c439698324dccdfc20
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5c309dd52471bd501aa2668220d39882ab8de7e1c23a646084364659df4ae4fe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741385"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119619990"
 ---
-# <a name="windows-event-log-data-types"></a>Windows-Ereignisprotokoll Datentypen
+# <a name="windows-event-log-data-types"></a>Windows Ereignisprotokolldatentypen
 
-Das Windows-Ereignisprotokoll definiert die folgenden Datentypen:
+Windows Das Ereignisprotokoll definiert die folgenden Datentypen:
 
 
 ```C++
@@ -30,24 +30,24 @@ typedef HANDLE EVT_OBJECT_ARRAY_PROPERTY_HANDLE;
 
 <dl> <dt>
 
-**EVT- \_ handle**
+**EVT \_ HANDLE**
 </dt> <dd>
 
-Ein Handle für ein Windows-Ereignisprotokoll Objekt.
+Ein Handle für ein Windows Ereignisprotokollobjekt.
 
 </dd> <dt>
 
-**Peer- \_ handle**
+**\_PEVT-HANDLE**
 </dt> <dd>
 
-Ein Zeiger auf das Handle eines Windows-Ereignisprotokoll Objekts.
+Ein Zeiger auf das Handle eines Windows Ereignisprotokollobjekts.
 
 </dd> <dt>
 
-**EVT- \_ Objekt \_ array- \_ Eigenschaften \_ handle**
+**EIGENSCHAFTENHANDLE DES \_ EVT-OBJEKTARRAYS \_ \_ \_**
 </dt> <dd>
 
-Ein Handle für ein Array von Windows-Ereignisprotokoll Objekten.
+Ein Handle für ein Array von Windows Ereignisprotokollobjekten.
 
 </dd> </dl>
 
@@ -57,9 +57,9 @@ Ein Handle für ein Array von Windows-Ereignisprotokoll Objekten.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Winevt. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>WinEvt.h</dt> </dl> |
 
 
 

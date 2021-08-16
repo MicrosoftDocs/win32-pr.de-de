@@ -13,7 +13,7 @@ ms.locfileid: "118901843"
 ---
 # <a name="cmc-extensions"></a>CMC-Erweiterungen
 
-Erweiterungen sind in einer CMC-Anforderung enthalten, indem sie der **Struktur TaggedAttributes** hinzugefügt werden, die im folgenden ASN.1-Syntaxbeispiel gezeigt wird. Weitere Informationen finden Sie im [Thema Attribute.](attributes.md)
+Erweiterungen sind in einer CMC-Anforderung enthalten, indem sie der **Struktur TaggedAttributes** hinzugefügt werden, die im folgenden ASN.1-Syntaxbeispiel gezeigt wird. Weitere Informationen finden Sie im Thema [Attribute.](attributes.md)
 
 ``` syntax
 CmcData ::= SEQUENCE 
@@ -70,7 +70,7 @@ Im folgenden Verfahren wird erläutert, wie Sie die Zertifikatregistrierungs-API
     -   Rufen Sie [**ein ICryptAttributes-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattributes) aus dem [**IX509CertificateRequestCmc-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc) ab.
     -   Erstellen und initialisieren Sie ein [**IX509AttributeExtensions-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributeextensions) mithilfe der [**IX509Extensions-Auflistung,**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509extensions) die in Schritt 2 abgerufen wurde.
     -   Erstellen Sie eine [**IX509Attributes-Auflistung,**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributes) und fügen Sie ihr das [**Objekt IX509AttributeExtensions**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributeextensions) hinzu.
-    -   Verwenden Sie [**die IX509Attributes-Auflistung,**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributes) um ein [**ICryptAttribute-Objekt zu**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattribute) initialisieren.
+    -   Verwenden Sie die [**IX509Attributes-Auflistung,**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributes) um ein [**ICryptAttribute-Objekt zu**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattribute) initialisieren.
     -   Fügen Sie [**das ICryptAttribute-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattribute) der [**ICryptAttributes-Auflistung**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattributes) hinzu.
 
 ## <a name="related-topics"></a>Zugehörige Themen

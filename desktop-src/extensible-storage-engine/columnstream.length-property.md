@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der columnstream. length-Eigenschaft.
-title: Columnstream. length (Eigenschaft)
+description: Weitere Informationen zur ColumnStream.Length-Eigenschaft
+title: ColumnStream.Length-Eigenschaft
 TOCTitle: 'Length property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.ColumnStream.Length
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.columnstream.length(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 11caba5a289000972f73a643e9c432659fd23414
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 18649e660079c3e5a8bd4501eb249846c4bebad0b69899871e3969bb487512f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214925"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118982650"
 ---
-# <a name="columnstreamlength-property"></a>Columnstream. length (Eigenschaft)
+# <a name="columnstreamlength-property"></a>ColumnStream.Length-Eigenschaft
 
 Ruft die aktuelle Länge des Streams ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public override long Length { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int64](/dotnet/api/system.int64)  
+Typ: [System.Int64](/dotnet/api/system.int64)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Columnstream-Klasse](./columnstream-class.md)
+[ColumnStream-Klasse](./columnstream-class.md)
 
-[Columnstream-Member](./columnstream-members.md)
+[ColumnStream-Member](./columnstream-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

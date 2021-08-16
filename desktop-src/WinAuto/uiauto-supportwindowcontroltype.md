@@ -1,52 +1,52 @@
 ---
-title: Fenster Steuerelement-Typ
-description: Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den Fenster Steuerelement-Typ.
+title: Fenster-Steuerelementtyp
+description: Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung-Unterstützung für den Steuerelementtyp "Fenster".
 ms.assetid: 521fb514-e083-48b3-b4a0-52c530154740
 keywords:
-- Benutzeroberflächenautomatisierungs, Unterstützung für Fenster Steuerelement Typen
-- Benutzeroberflächenautomatisierungs, Fenster Steuerelement-Typ
-- UI-Automatisierung, Baumstruktur für Window-Steuerelement Typen
-- Benutzeroberflächenautomatisierungs, Eigenschaften für Window-Steuerelement Typen
-- Benutzeroberflächenautomatisierungs, Steuerelement Muster für Window-Steuerelement Typen
-- Benutzeroberflächenautomatisierungs, Ereignisse für Window-Steuerelement Typen
-- Baumstrukturen, Fenster Steuerelement-Typ
-- Eigenschaften, Fenster Steuerelement-Typ
-- Steuerelement Muster, Fenster Steuerelement-Typ
-- Ereignisse, Fenster Steuerelement-Typ
-- Unterstützung für Window-Steuerelement Typen
+- Benutzeroberflächenautomatisierung,Unterstützung für den Steuerelementtyp "Fenster"
+- Benutzeroberflächenautomatisierung,Fenster-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Struktur für Fenster-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Eigenschaften für den Steuerelementtyp "Fenster"
+- Benutzeroberflächenautomatisierung,Steuerelementmuster für den Steuerelementtyp "Fenster"
+- Benutzeroberflächenautomatisierung,Ereignisse für den Steuerelementtyp "Fenster"
+- Strukturstrukturen,Fenster-Steuerelementtyp
+- Eigenschaften,Fenster-Steuerelementtyp
+- Steuerelementmuster, Fenster-Steuerelementtyp
+- events,Window-Steuerelementtyp
+- Unterstützung für den Steuerelementtyp "Fenster"
 - Window-Steuerelementtyp
-- Steuerelement Typen, Baumstruktur für Window-Steuerelement Typen
-- Steuerelement Typen, Steuerelement Muster für Window-Steuerelement Typen
-- Steuerelement Typen, Unterstützung für Fenster
-- Steuerelement Typen, Fenster
+- Steuerelementtypen,Struktur für Window-Steuerelementtyp
+- Steuerelementtypen,Steuerelementmuster für Den Fenster-Steuerelementtyp
+- Steuerelementtypen,Unterstützung für Window
+- Steuerelementtypen, Fenster
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 422742381cd501d295e4cb7e354ca07e10c13360
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a70ae728ded97bb68f3984b6fba323710d3582e984610ad6dec248d8509ea97f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310816"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118824575"
 ---
-# <a name="window-control-type"></a>Fenster Steuerelement-Typ
+# <a name="window-control-type"></a>Fenster-Steuerelementtyp
 
-Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den **Fenster** Steuerelement-Typ.
+Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung-Unterstützung für den **Fenster-Steuerelementtyp.**
 
 Das Window-Steuerelement besteht aus dem Fensterrahmen, der untergeordnete Objekte wie Titelleiste, Client sowie andere Objekte enthält.
 
-In den folgenden Abschnitten werden die erforderliche Benutzeroberflächenautomatisierungs-Struktur, Eigenschaften, Steuerelement Muster und Ereignisse für den **Fenster** Steuerelement-Typ definiert. Die Benutzeroberflächenautomatisierungs-Anforderungen gelten für alle Fenster Steuerelemente, bei denen das UI-Framework/die Plattform die Benutzeroberflächenautomatisierungs-Unterstützung für Steuerelement Typen
+In den folgenden Abschnitten werden die Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **Steuerelementtyp Window** definiert. Die Benutzeroberflächenautomatisierung gelten für alle Fenstersteuerelemente, bei denen das Benutzeroberflächenframework/die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Typische Baumstruktur](#typical-tree-structure)
+-   [Typische Strukturstruktur](#typical-tree-structure)
 -   [Relevante Eigenschaften](#relevant-properties)
--   [Erforderliche Steuerelement Muster](#required-control-patterns)
+-   [Erforderliche Steuerelementmuster](#required-control-patterns)
 -   [Erforderliche Ereignisse](#required-events)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="typical-tree-structure"></a>Typische Baumstruktur
+## <a name="typical-tree-structure"></a>Typische Strukturstruktur
 
-In der folgenden Tabelle ist eine typische Steuerelement-und Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur für Window-Steuerelemente sowie die möglichen Inhalte der Ansichten beschrieben. Weitere Informationen zur Benutzeroberflächenautomatisierungs-Struktur finden Sie unter [UI Automation Tree Overview](uiauto-treeoverview.md).
+Die folgende Tabelle zeigt ein typisches Steuerelement und eine Inhaltsansicht der Benutzeroberflächenautomatisierung, die sich auf Fenstersteuerelemente bezieht, und beschreibt, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Struktur Benutzeroberflächenautomatisierung Struktur finden Sie unter [Benutzeroberflächenautomatisierung Strukturübersicht.](uiauto-treeoverview.md)
 
 
 
@@ -75,82 +75,82 @@ In der folgenden Tabelle ist eine typische Steuerelement-und Inhaltsansicht der 
 
 
 
- 
+ 
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Eigenschaften aufgelistet, deren Wert oder Definition für Window-Steuerelemente besonders relevant ist. Weitere Informationen zu Eigenschaften von Benutzeroberflächen Automatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md).
+In der folgenden Tabelle sind die eigenschaften Benutzeroberflächenautomatisierung, deren Wert oder Definition für Fenstersteuerelemente besonders relevant ist. Weitere Informationen zu Eigenschaften Benutzeroberflächenautomatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements.](uiauto-propertiesforclients.md)
 
 
 
-| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert      | Notizen                                                                                                                                                   |
+| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert      | Hinweise                                                                                                                                                   |
 |---------------------------------------------------------------------------------------------------------------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationidpropertyid**](uiauto-automation-element-propids.md)                 | Siehe Hinweise. | Der Wert dieser Eigenschaft muss für alle Peer Elemente in der unformatierten Ansicht der Benutzeroberflächenautomatisierungs-Struktur eindeutig sein.                                            |
-| [**UIA \_ boundingrechglepropertyid**](uiauto-automation-element-propids.md)       | Siehe Hinweise. | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                |
-| [**UIA \_ clickablepointpropertyid**](uiauto-automation-element-propids.md)             | Siehe Hinweise. | Das Fenster Steuerelement muss über einen durch Klicken aktivierbaren Punkt verfügen, der bewirkt, dass das Fenster ausgewählt oder nicht ausgewählt wird.                                                 |
-| [**UIA \_ controltypepropertyid**](uiauto-automation-element-propids.md)                   | **Fenster** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                                           |
-| [**UIA \_ iscontentelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE       | Das Window-Steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                    |
-| [**UIA \_ iscontrolelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE       | Das Window-Steuerelement ist immer in der Steuerelement Ansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                    |
-| [**UIA \_ iskeyboardfocus ablepropertyid**](uiauto-automation-element-propids.md)   | Siehe Hinweise. | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                               |
-| [**UIA \_ labeledbypropertyid**](uiauto-automation-element-propids.md)                       | NULL       | Window-Steuerelemente haben keine statische Fenster Bezeichnung.                                                                                                      |
-| [**UIA \_ localizedcontroltypepropertyid**](uiauto-automation-element-propids.md) | Siehe Hinweise. | Lokalisierte Zeichenfolge, die dem **Fenster** Steuerelement-Typ entspricht. Der Standardwert ist "Window" für en-US oder Englisch (USA).                      |
-| [**UIA- \_ namepropertyid**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise. | Das Window-Steuerelement enthält immer ein primäres Fensterelement, das sich auf den Wert bezieht, den der Benutzer als den semantischen Bezeichner für das Element zuordnen würde. |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise. | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Benutzeroberflächenautomatisierung sein.                                            |
+| [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise. | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                |
+| [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Siehe Hinweise. | Das Fenster-Steuerelement muss über einen klickbaren Punkt verfügen, der bewirkt, dass das Fenster ausgewählt oder deaktiviert wird.                                                 |
+| [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **Fenster** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                                           |
+| [**UIA \_ IsContentElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE       | Das Fenster-Steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierung enthalten.                                                                    |
+| [**UIA \_ IsControlElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE       | Das Fenster-Steuerelement ist immer in der Steuerelementansicht der Benutzeroberflächenautomatisierung enthalten.                                                                    |
+| [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | Siehe Hinweise. | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                               |
+| [**UIA \_ LabeledByPropertyId**](uiauto-automation-element-propids.md)                       | NULL       | Fenstersteuerelemente verfügen nicht über eine statische Fensterbezeichnung.                                                                                                      |
+| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise. | Lokalisierte Zeichenfolge, die dem **Steuerelementtyp Window** entspricht. Der Standardwert ist "window" für en-US oder English (USA).                      |
+| [**UIA \_ NamePropertyId**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise. | Das Fenstersteuerelement enthält immer ein primäres Fensterelement, das sich darauf bezieht, was der Benutzer als semantischsten Bezeichner für das Element zuordnen würde. |
 
 
 
- 
+ 
 
-## <a name="required-control-patterns"></a>Erforderliche Steuerelement Muster
+## <a name="required-control-patterns"></a>Erforderliche Steuerelementmuster
 
-In der folgenden Tabelle werden die Steuerelement Muster für die Benutzeroberflächen Automatisierung aufgelistet, die von Fenster Steuerelementen unterstützt werden Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die von Fenstersteuerelementen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
 
 
 
-| Steuerelementmuster/Mustereigenschaft                        | Unterstützung/Wert | Notizen                                                                                                                                                                        |
+| Steuerelementmuster/Mustereigenschaft                        | Unterstützung/Wert | Hinweise                                                                                                                                                                        |
 |---------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**IDockProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-idockprovider)           | Bedingt   | Das [Dock](uiauto-implementingdock.md) -Steuerelement Muster muss unterstützt werden, wenn das Fenster angedockt werden kann.                                                                       |
-| [**ITransformProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itransformprovider) | Erforderlich      | Das [Transform](uiauto-implementingtransform.md) -Steuerelement Muster ermöglicht das Verschieben, Ändern der Größe oder Drehen des Fensters auf dem Bildschirm. (Gilt nicht für Windows Store-Apps.) |
-| [**IWindowProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iwindowprovider)       | Erforderlich      | Das [Window](uiauto-implementingwindow.md) -Steuerelement Muster ermöglicht bestimmte Vorgänge für das Fenster.                                                                      |
+| [**IDockProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-idockprovider)           | Bedingt   | Das [](uiauto-implementingdock.md) Dock-Steuerelementmuster muss unterstützt werden, wenn das Fenster angedockt werden kann.                                                                       |
+| [**ITransformProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itransformprovider) | Erforderlich      | Mit [dem Steuerelementmuster](uiauto-implementingtransform.md) Transformieren kann das Fenster auf dem Bildschirm verschoben, seine Größe geändert oder gedreht werden. (Gilt nicht für Windows Store-Apps.) |
+| [**IWindowProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iwindowprovider)       | Erforderlich      | Das [Fenster-Steuerelementmuster](uiauto-implementingwindow.md) ermöglicht bestimmte Vorgänge für das Fenster.                                                                      |
 
 
 
- 
+ 
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereignisse aufgeführt, die für die Unterstützung von **Fenster** Steuerelementen Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die **von Window-Steuerelementen** unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
-| Benutzeroberflächen-Automatisierungs Ereignis                                                                                                                                        | Notizen                                                                                                                                                                                                                     |
+| Benutzeroberflächenautomatisierung-Ereignis                                                                                                                                        | Hinweise                                                                                                                                                                                                                     |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ asynccontentloadedeventid**](uiauto-event-ids.md)                                                                   |                                                                                                                                                                                                                           |
-| [**UIA \_ automationfocuschangedebug-ID**](uiauto-event-ids.md)                                                           |                                                                                                                                                                                                                           |
-| [**UIA \_ Boundingrechglepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                      |                                                                                                                                                                                                                           |
-| [**UIA \_ Isenabledpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                                      | Wenn das Steuerelement die [**isaktivierte**](uiauto-automation-element-propids.md) Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.                                                                                                  |
-| [**UIA \_ Isoffscreenpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                                  | Wenn das Steuerelement die [**IsOffscreen**](uiauto-automation-element-propids.md) -Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.                                                                                                |
-| [**UIA \_ layoutinvalidatedeventid**](uiauto-event-ids.md)                                                                     |                                                                                                                                                                                                                           |
-| [**UIA \_ Namepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                                                |                                                                                                                                                                                                                           |
-| [**UIA \_ Scrollhorizontallyscrollablepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.   | Wenn das Steuerelement das [Scroll](uiauto-implementingscroll.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.                                                                                                          |
-| [**UIA \_ Scrollhorizontalscrollprozpropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis. | Wenn das Steuerelement das [Scroll](uiauto-implementingscroll.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.                                                                                                          |
-| [**UIA \_ Scrollhorizontalviewsizepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.           | Wenn das Steuerelement das [Scroll](uiauto-implementingscroll.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.                                                                                                          |
-| [**UIA \_ Scrollverticallyscrollablepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.       | Wenn das Steuerelement das [Scroll](uiauto-implementingscroll.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.                                                                                                          |
-| [**UIA \_ Scrollverticalscrollprozpropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.     | Wenn das Steuerelement das [Scroll](uiauto-implementingscroll.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.                                                                                                          |
-| [**UIA \_ Scrollverticalviewsizepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.               | Wenn das Steuerelement das [Scroll](uiauto-implementingscroll.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.                                                                                                          |
-| [**UIA \_ structurechangedebug**](uiauto-event-ids.md)                                                                       |                                                                                                                                                                                                                           |
-| [**UIA \_ \_ -Fenster windowclosedeventid**](uiauto-event-ids.md)                                                                |                                                                                                                                                                                                                           |
-| [**UIA \_ \_ -Fenster windowopenedeventid**](uiauto-event-ids.md)                                                                |                                                                                                                                                                                                                           |
-| [**UIA \_ Windowwindowvisualstatepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.             | Wenn das Steuerelement die [**WindowVisualState**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationwindowpattern-get_cachedwindowvisualstate) -Eigenschaft des [Window](uiauto-implementingwindow.md) -Steuerelement Musters unterstützt, muss dieses Ereignis unterstützt werden. |
+| [**UIA \_ AsyncContentLoadedEventId**](uiauto-event-ids.md)                                                                   |                                                                                                                                                                                                                           |
+| [**UIA \_ AutomationFocusChangedEventId**](uiauto-event-ids.md)                                                           |                                                                                                                                                                                                                           |
+| [**UIA \_ BoundingRectanglePropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                      |                                                                                                                                                                                                                           |
+| [**UIA \_ IsEnabledPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                                      | Wenn das Steuerelement die [**IsEnabled-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen.                                                                                                  |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                                  | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft**](uiauto-automation-element-propids.md) unterstützt, muss es dieses Ereignis unterstützen.                                                                                                |
+| [**UIA \_ LayoutInvalidatedEventId**](uiauto-event-ids.md)                                                                     |                                                                                                                                                                                                                           |
+| [**UIA \_ Das NamePropertyId-Eigenschaftswechselereignis.**](uiauto-automation-element-propids.md)                                                |                                                                                                                                                                                                                           |
+| [**UIA \_ ScrollHorizontallyScrollablePropertyId-Eigenschaftswechselereignis.**](uiauto-control-pattern-propids.md)   | Wenn das Steuerelement [](uiauto-implementingscroll.md) das Scroll-Steuerelementmuster unterstützt, muss es dieses Ereignis unterstützen.                                                                                                          |
+| [**UIA \_ ScrollHorizontalScrollPercentPropertyId-Eigenschaftswechselereignis.**](uiauto-control-pattern-propids.md) | Wenn das Steuerelement [](uiauto-implementingscroll.md) das Scroll-Steuerelementmuster unterstützt, muss es dieses Ereignis unterstützen.                                                                                                          |
+| [**UIA \_ ScrollHorizontalViewSizePropertyId-Eigenschaftswechselereignis.**](uiauto-control-pattern-propids.md)           | Wenn das Steuerelement [](uiauto-implementingscroll.md) das Scroll-Steuerelementmuster unterstützt, muss es dieses Ereignis unterstützen.                                                                                                          |
+| [**UIA \_ ScrollVerticallyScrollablePropertyId-Eigenschaftswechselereignis.**](uiauto-control-pattern-propids.md)       | Wenn das Steuerelement [](uiauto-implementingscroll.md) das Scroll-Steuerelementmuster unterstützt, muss es dieses Ereignis unterstützen.                                                                                                          |
+| [**UIA \_ ScrollVerticalScrollPercentPropertyId-Eigenschaftswechselereignis.**](uiauto-control-pattern-propids.md)     | Wenn das Steuerelement [](uiauto-implementingscroll.md) das Scroll-Steuerelementmuster unterstützt, muss es dieses Ereignis unterstützen.                                                                                                          |
+| [**UIA \_ ScrollVerticalViewSizePropertyId-Eigenschaftswechselereignis.**](uiauto-control-pattern-propids.md)               | Wenn das Steuerelement [](uiauto-implementingscroll.md) das Scroll-Steuerelementmuster unterstützt, muss es dieses Ereignis unterstützen.                                                                                                          |
+| [**UIA \_ StructureChangedEventId**](uiauto-event-ids.md)                                                                       |                                                                                                                                                                                                                           |
+| [**\_ \_ UIA-FensterFensterClosedEventId**](uiauto-event-ids.md)                                                                |                                                                                                                                                                                                                           |
+| [**\_ \_ UIA-FensterOpenedEventId**](uiauto-event-ids.md)                                                                |                                                                                                                                                                                                                           |
+| [**UIA \_ WindowWindowVisualStatePropertyId-Eigenschaftswechselereignis.**](uiauto-control-pattern-propids.md)             | Wenn das Steuerelement die [**WindowVisualState-Eigenschaft**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationwindowpattern-get_cachedwindowvisualstate) des [Window-Steuerelementmusters](uiauto-implementingwindow.md) unterstützt, muss dieses Ereignis unterstützt werden. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](uiauto-controltypesoverview.md)
@@ -159,9 +159,9 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereigniss
 [Übersicht über die Benutzeroberflächenautomatisierung](uiauto-uiautomationoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

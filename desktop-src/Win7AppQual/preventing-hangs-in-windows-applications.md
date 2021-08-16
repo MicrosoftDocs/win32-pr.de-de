@@ -1,22 +1,22 @@
 ---
-description: Erfahren Sie, wie Sie Abstürze in Windows-Anwendungen für Windows 7-und Windows Server 2008 R2-Plattformen vermeiden.
+description: Erfahren Sie, wie Sie das Hängen in Windows Anwendungen für Windows 7- und Windows Server 2008 R2-Plattformen verhindern.
 ms.assetid: 698a046b-1934-49cd-a717-d61e7e1ec534
 title: Verhindern von Blockaden in Windows-Anwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 35a2d8fac95039f20c8c684c50138933c54750c3
-ms.sourcegitcommit: af9983bab40fe0b042f177ce7ca79f2eb0f9d0e8
+ms.openlocfilehash: 5509b8733e45b105694a8bfdadddae0d67096b92c390ed98b3dd937817823b39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "104050656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118994822"
 ---
 # <a name="preventing-hangs-in-windows-applications"></a>Verhindern von Blockaden in Windows-Anwendungen
 
 ## <a name="affected-platforms"></a>Betroffene Plattformen
 
-**Clients** -Windows 7  
-**Server** -Windows Server 2008 R2  
+**Clients** – Windows 7  
+**Server** – Windows Server 2008 R2  
 
 
 
@@ -28,94 +28,94 @@ ms.locfileid: "104050656"
 
 ## <a name="description"></a>BESCHREIBUNG
 
-**Nicht mehr Benutzer Perspektive**
+**Hängt – Benutzerperspektive**
 
-Benutzer wie reaktionsfähige Anwendungen. Wenn Sie auf ein Menü klicken, soll die Anwendung sofort reagieren, auch wenn Sie gerade Ihre Arbeit druckt. Wenn Sie ein langes Dokument in Ihrem bevorzugten Textprozessor speichern, möchten Sie die Eingabe fortsetzen, während der Datenträger immer noch spinnt. Wenn die Anwendung nicht rechtzeitig auf Ihre Eingaben reagiert, treten die Benutzer ungeduldig auf.
+Benutzer wie reaktionsfähige Anwendungen. Wenn sie auf ein Menü klicken, soll die Anwendung sofort reagieren, auch wenn sie gerade ihre Arbeit druckt. Wenn sie ein langes Dokument in ihrer bevorzugten Textverarbeitung speichern, möchten sie weiterhin eingeben, während der Datenträger noch rotiert wird. Benutzer werden eher schnell ungeduldig, wenn die Anwendung nicht rechtzeitig auf ihre Eingabe reagiert.
 
-Ein Programmierer könnte viele legitime Gründe erkennen, wenn eine Anwendung nicht sofort auf Benutzereingaben reagiert. Die Anwendung ist möglicherweise ausgelastet, um einige Daten neu zu berechnen oder einfach darauf zu warten, dass die Datenträger-e/a vollständig ist. Aus der Benutzer Recherche wissen wir jedoch, dass Benutzer nach wenigen Sekunden nicht mehr Reaktionsfähigkeit verärgert sind und frustriert werden. Nach 5 Sekunden versuchen Sie, eine nicht reagierende Anwendung zu beenden. Neben abstürzen sind Anwendungs Abstürze bei der Arbeit mit Win32-Anwendungen die häufigste Quelle für die Benutzer Unterbrechung.
+Ein Programmierer erkennt möglicherweise viele legitime Gründe dafür, dass eine Anwendung nicht sofort auf Benutzereingaben reagiert. Möglicherweise ist die Anwendung damit beschäftigt, einige Daten neu zu berechnen, oder sie wartet einfach auf den Abschluss ihrer Datenträger-E/A. Aus der Benutzerforschung wissen wir jedoch, dass Benutzer nach nur wenigen Sekunden nicht reagierender Benutzer verärgert und frustriert werden. Nach 5 Sekunden wird versucht, eine hängende Anwendung zu beenden. Neben Abstürzen sind Anwendungsunterbrechungen die häufigste Ursache für Benutzerunterbrechungen bei der Arbeit mit Win32-Anwendungen.
 
-Es gibt viele verschiedene Hauptursachen für Anwendungs Abstürze, nicht alle, die sich in einer nicht reagierenden Benutzeroberfläche selbst manifestieren. Eine nicht reagierende Benutzeroberfläche ist jedoch eine der gängigsten Abstürze, und dieses Szenario erhält derzeit die meisten Betriebssystemunterstützung sowohl für die Erkennung als auch für die Wiederherstellung. Windows erkennt automatisch Debuginformationen, sammelt Sie und beendet oder startet nicht reagierende Anwendungen. Andernfalls muss der Benutzer den Computer möglicherweise neu starten, um eine nicht reagierende Anwendung wiederherzustellen.
+Es gibt viele verschiedene Ursachen für das Hängen der Anwendung, und nicht alle werden in einer nicht reagierenden Benutzeroberfläche angezeigt. Eine nicht reagierende Benutzeroberfläche ist jedoch eine der gängigsten Hängenderfahrungen, und dieses Szenario erhält derzeit die meisten Betriebssystemunterstützung sowohl für die Erkennung als auch für die Wiederherstellung. Windows erkennt automatisch Debuginformationen und beendet oder startet hängende Anwendungen optional neu. Andernfalls muss der Benutzer den Computer möglicherweise neu starten, um eine hängende Anwendung wiederherzustellen.
 
-**Abstürze: Betriebs System Perspektive**
+**Hängt – Perspektive des Betriebssystems**
 
-Wenn eine Anwendung (oder genauer, ein Thread) ein Fenster auf dem Desktop erstellt, wechselt Sie in einen impliziten Vertrag mit dem Desktopfenster-Manager (DWM), um Fenster Meldungen rechtzeitig zu verarbeiten. Der DWM stellt Nachrichten (Tastatur-/Maus-Eingaben und Meldungen von anderen Fenstern sowie selbst) in die Thread spezifische Nachrichten Warteschlange. Der Thread ruft diese Nachrichten über die Nachrichten Warteschlange ab und sendet Sie. Wenn der Thread die Warteschlange nicht durch den Aufruf von getMessage () verarbeitet, werden die Nachrichten nicht verarbeitet, und das Fenster hängt nicht aus: die Warteschlange kann nicht neu gezeichnet werden, und es kann keine Eingabe vom Benutzer akzeptiert werden. Das Betriebssystem erkennt diesen Zustand durch Anfügen eines Timers an ausstehende Nachrichten in der Nachrichten Warteschlange. Wenn eine Nachricht nicht innerhalb von 5 Sekunden abgerufen wurde, deklariert die DWM das Fenster, das nicht mehr reagiert. Sie können diesen speziellen Fenster Zustand über die ishungappwindow ()-API Abfragen.
+Wenn eine Anwendung (oder genauer gesagt ein Thread) ein Fenster auf dem Desktop erstellt, tritt sie in einen impliziten Vertrag mit dem Desktopfenster-Manager (DWM) ein, um Fenstermeldungen rechtzeitig zu verarbeiten. Der DWM sendet Nachrichten (Tastatur-/Mauseingaben und Nachrichten aus anderen Fenstern sowie selbst) in die threadspezifische Nachrichtenwarteschlange. Der Thread ruft diese Nachrichten über seine Nachrichtenwarteschlange ab und verteilt sie. Wenn der Thread die Warteschlange nicht durch Aufrufen von GetMessage() bedient, werden Nachrichten nicht verarbeitet, und das Fenster hängt: Es kann weder neu gezeichnet noch Eingaben vom Benutzer akzeptieren. Das Betriebssystem erkennt diesen Zustand, indem ein Timer an ausstehende Nachrichten in der Nachrichtenwarteschlange angefügt wird. Wenn eine Nachricht nicht innerhalb von 5 Sekunden abgerufen wurde, deklariert der DWM, dass das Fenster hängen bleibt. Sie können diesen bestimmten Fensterzustand über die IsHungAppWindow()-API abfragen.
 
-Die Erkennung ist nur der erste Schritt. An diesem Punkt kann der Benutzer die Anwendung immer noch nicht beenden. Wenn Sie auf die Schaltfläche "X (schließen)" klicken, wird eine "WM Close"- \_ Meldung angezeigt, die genau wie jede andere Nachricht in der Nachrichten Warteschlange hängen bleibt. Der Desktopfenster-Manager unterstützt durch das nahtlose ausblenden und anschließende ersetzen des angehängten Fensters durch eine "inaktive" Kopie, die eine Bitmap des vorherigen Client Bereichs des ursprünglichen Fensters anzeigt (und das Hinzufügen von "antwortet nicht" zur Titelleiste). Solange der Thread des ursprünglichen Fensters keine Nachrichten abruft, verwaltet der DWM beide Fenster gleichzeitig, ermöglicht aber nur die Interaktion mit der inaktiven Kopie. Mithilfe dieses inaktiven Fensters kann der Benutzer die nicht reagierende Anwendung nur verschieben, minimieren und am wichtigsten schließen, aber seinen internen Zustand nicht ändern.
+Die Erkennung ist nur der erste Schritt. An diesem Punkt kann der Benutzer die Anwendung noch nicht einmal beenden. Wenn sie auf die Schaltfläche X (Schließen) klicken, würde dies zu einer WM \_ CLOSE-Nachricht führen, die wie jede andere Nachricht in der Nachrichtenwarteschlange hängen bleibt. Der Desktopfenster-Manager hilft dabei, indem das hängende Fenster nahtlos ausgeblendet und dann durch eine Kopie des "Ghost" ersetzt wird, die eine Bitmap des vorherigen Clientbereichs des ursprünglichen Fensters anzeigt (und der Titelleiste "Nicht reagiert" hinzufügt). Solange der Thread des ursprünglichen Fensters keine Nachrichten abruft, verwaltet dwm beide Fenster gleichzeitig, ermöglicht dem Benutzer jedoch die Interaktion nur mit der inaktiven Kopie. Mithilfe dieses ingedekten Fensters kann der Benutzer die nicht reagierende Anwendung nur verschieben, minimieren und – vor allem – schließen, aber ihren internen Zustand nicht ändern.
 
-Die gesamte Ghost-Darstellung sieht wie folgt aus:
+Die gesamte Inspenderfahrung sieht wie folgt aus:
 
-![Screenshot, der das Dialogfeld "Notepad antwortet nicht" anzeigt](images/preventinghangs-ghostwindow.gif)
+![Screenshot: Dialogfeld "Editor reagiert nicht"](images/preventinghangs-ghostwindow.gif)
 
-Der Desktopfenster-Manager führt ein letztes Ergebnis aus. Sie wird in Windows-Fehlerberichterstattung integriert, sodass der Benutzer die Anwendung nicht nur schließen und optional neu starten kann, sondern auch wertvolle Debugdaten an Microsoft senden kann. Sie können diese systemstillstanddaten für Ihre eigenen Anwendungen erhalten, indem Sie sich auf der winqual-Website anmelden.
+Der Desktopfenster-Manager führt einen letzten Teil aus. Sie lässt sich in Windows-Fehlerberichterstattung integrieren, sodass der Benutzer die Anwendung nicht nur schließen und optional neu starten kann, sondern auch wertvolle Debugdaten an Microsoft zurücksenden kann. Sie können diese hängen bleibende Daten für Ihre eigenen Anwendungen erhalten, indem Sie sich auf der Winqual-Website anmelden.
 
-Windows 7 hat diesem Vorgang ein neues Feature hinzugefügt. Das Betriebssystem analysiert die nicht reagierende Anwendung und erteilt dem Benutzer unter bestimmten Umständen die Möglichkeit, einen blockierenden Vorgang abzubrechen und die Anwendung wieder in Reaktion zu nehmen. Die aktuelle Implementierung unterstützt den Abbruch von blockierenden socketaufrufen. weitere Vorgänge werden in zukünftigen Versionen vom Benutzer abgebrochen.
+Windows 7 wurde dieser Benutzeroberfläche ein neues Feature hinzugefügt. Das Betriebssystem analysiert die hängende Anwendung und gibt dem Benutzer unter bestimmten Umständen die Möglichkeit, einen Blockierungsvorgang abzubrechen und die Anwendung wieder reaktionsfähig zu machen. Die aktuelle Implementierung unterstützt den Abbruch von blockierenden Socketaufrufen. weitere Vorgänge können in zukünftigen Versionen vom Benutzer abgebrochen werden.
 
-Führen Sie die folgenden Schritte aus, um Ihre Anwendung in die Benutzeroberflächen-Wiederherstellung zu integrieren und die verfügbaren Daten optimal zu nutzen:
+Führen Sie die folgenden Schritte aus, um Ihre Anwendung in die Wiederherstellung nach Hängen zu integrieren und die verfügbaren Daten optimal zu nutzen:
 
--   Stellen Sie sicher, dass Ihre Anwendung für Neustart und Wiederherstellung registriert wird, sodass Sie für den Benutzer so einfach wie möglich ist. Eine ordnungsgemäß registrierte Anwendung kann automatisch neu gestartet werden, wenn die meisten nicht gespeicherten Daten intakt sind. Dies funktioniert sowohl für den Anwendungs Absturz als auch für Abstürze.
--   Erhalten Sie Informationen zu Häufigkeit und zum Debuggen von Daten für Ihre nicht abgestürzten und abgestürzten Anwendungen von der winqual-Website. Diese Informationen können auch während der Beta Version verwendet werden, um Ihren Code zu verbessern. Eine kurze Übersicht finden Sie unter "Einführung in Windows-Fehlerberichterstattung".
--   Sie können das Ghosting-Feature in der Anwendung mithilfe eines Aufrufens von disableprocesswindowsghosting () deaktivieren. Dadurch wird jedoch verhindert, dass der durchschnittliche Benutzer eine nicht reagierende Anwendung schließt und neu startet und häufig einen Neustart beendet.
+-   Stellen Sie sicher, dass sich Ihre Anwendung für Neustart und Wiederherstellung registriert, sodass der Benutzer so problemlos wie möglich hängen bleibt. Eine ordnungsgemäß registrierte Anwendung kann automatisch neu gestartet werden, wobei die meisten nicht gespeicherten Daten intakt sind. Dies funktioniert sowohl bei hängenden anwendungen als auch bei Abstürzen.
+-   Abrufen von Informationen zur Häufigkeit und Debuggen von Daten für Ihre hängende und abgestürzte Anwendung von der Winqual-Website. Sie können diese Informationen auch während der Betaphase verwenden, um Ihren Code zu verbessern. Eine kurze Übersicht finden Sie unter "Introducing Windows-Fehlerberichterstattung" (Einführung in Windows-Fehlerberichterstattung).
+-   Sie können das Inaktivierungsfeature in Ihrer Anwendung über einen Aufruf von DisableProcessWindowsGhosting () deaktivieren. Dies verhindert jedoch, dass der durchschnittliche Benutzer eine hängende Anwendung schließt und neu startet und häufig mit einem Neustart endet.
 
-**Hängt von der Entwickler Perspektive ab**
+**Hängt – Entwicklerperspektive**
 
-Das Betriebssystem definiert einen Anwendungs Absturz als Benutzeroberflächen-Thread, der Nachrichten mindestens 5 Sekunden lang nicht verarbeitet hat. Offensichtliche Fehler verursachen einige Probleme, z. b. einen Thread, der auf ein Ereignis wartet, das nie signalisiert wird, und zwei Threads, die jeweils eine Sperre haben und versuchen, die anderen zu erhalten. Sie können diese Fehler ohne zu viel Aufwand beheben. Viele Abstürze sind jedoch nicht so klar. Ja, der UI-Thread ruft keine Nachrichten ab, aber er ist gleichermaßen ausgelastet, um andere "wichtige" Aufgaben zu erledigen, und wird schließlich zur Verarbeitung von Nachrichten zurückkehren.
+Das Betriebssystem definiert, dass eine Anwendung als UI-Thread hängt, der nachrichten seit mindestens 5 Sekunden nicht verarbeitet hat. Offensichtliche Fehler führen dazu, dass einige hängen bleiben, z. B. ein Thread, der auf ein Ereignis wartet, das nie signalisiert wird, und zwei Threads, die jeweils eine Sperre halten und versuchen, die anderen zu erhalten. Sie können diese Fehler ohne zu großen Aufwand beheben. Viele Hängen sind jedoch nicht so klar. Ja, der BENUTZERoberflächenthread ruft keine Nachrichten ab, aber er ist ebenso beschäftigt mit anderen "wichtigen" Arbeiten und wird schließlich zur Verarbeitung von Nachrichten zurückkehren.
 
-Der Benutzer erkennt dies jedoch als Fehler. Der Entwurf sollte den Erwartungen des Benutzers entsprechen. Wenn der Entwurf der Anwendung zu einer nicht reagierenden Anwendung führt, muss sich der Entwurf ändern. Und das ist wichtig, und die Reaktionsfähigkeit kann nicht wie ein Code Fehler korrigiert werden. Hierfür müssen Sie während der Entwurfsphase vorab arbeiten durcharbeiten. Wenn Sie versuchen, die vorhandene Codebasis einer Anwendung zu reaktivieren, um die Benutzeroberfläche reaktionsfähiger zu machen, ist oft zu teuer. Die folgenden Entwurfs Richtlinien können hilfreich sein.
+Der Benutzer erkennt dies jedoch als Fehler. Der Entwurf sollte den Erwartungen des Benutzers entsprechen. Wenn der Entwurf der Anwendung zu einer nicht reagierenden Anwendung führt, muss sich der Entwurf ändern. Und dies ist wichtig, und schließlich kann die Nichtantwort nicht wie ein Codefehler behoben werden. Dies erfordert Vorlauf während der Entwurfsphase. Der Versuch, die vorhandene Codebasis einer Anwendung so zu gestalten, dass die Benutzeroberfläche reaktionsfähiger wird, ist häufig zu teuer. Die folgenden Entwurfsrichtlinien können hilfreich sein.
 
--   Stellen Sie die UI-Reaktionsfähigkeit zu einer Anforderung der obersten Ebene. der Benutzer sollte sich immer die Kontrolle über Ihre Anwendung fühlen.
--   Stellen Sie sicher, dass Benutzer Vorgänge abbrechen können, die länger als eine Sekunde dauern und/oder der Vorgang im Hintergrund ausgeführt werden kann. Bereitstellen der entsprechenden Fortschritts Benutzeroberfläche bei Bedarf
+-   Machen Sie die Reaktionsfähigkeit der Benutzeroberfläche zu einer Anforderung der obersten Ebene. Der Benutzer sollte immer die Kontrolle über Ihre Anwendung haben.
+-   Stellen Sie sicher, dass Benutzer Vorgänge abbrechen können, die länger als eine Sekunde dauern und/oder die Vorgänge im Hintergrund abgeschlossen werden können. Bereitstellen einer geeigneten Statusanzeige bei Bedarf
 
-![Screenshot, der das Dialogfeld "Elemente kopieren" anzeigt.](images/preventinghangs-progressbar.gif)
+![Screenshot: Dialogfeld "Elemente kopieren"](images/preventinghangs-progressbar.gif)
 
--   Lange Ausführungs-oder Blockierungs Vorgänge als Hintergrundaufgaben in die Warteschlange stellen (hierfür ist ein wohl gedachte Messaging Mechanismus erforderlich, um den UI-Thread zu informieren, wenn die Arbeit abgeschlossen wurde)
--   Den Code für UI-Threads einfach aufbewahren; so viele blockierende API-Aufrufe wie möglich entfernen
--   Fenster und Dialogfelder nur anzeigen, wenn Sie bereit und voll funktionstüchtig sind. Wenn im Dialogfeld Informationen angezeigt werden sollen, die zu viel ressourcenintensiv sind, zeigen Sie zuerst einige generische Informationen an, und aktualisieren Sie Sie im laufenden Betrieb, wenn weitere Daten verfügbar werden. Ein gutes Beispiel ist das Dialogfeld mit den Ordnereigenschaften aus Windows-Explorer. Es muss die Gesamtgröße des Ordners, Informationen, die nicht im Dateisystem verfügbar sind, anzeigen. Das Dialogfeld wird sofort angezeigt, und das Feld "size" wird von einem Arbeits Thread aktualisiert:
+-   Zeitintensive oder blockierende Vorgänge als Hintergrundaufgaben in die Warteschlange einreihen (dies erfordert einen gut durchdachten Messagingmechanismus, um den UI-Thread zu informieren, wenn die Arbeit abgeschlossen ist).
+-   Halten Sie den Code für Benutzeroberflächenthreads einfach. So viele blockierende API-Aufrufe wie möglich entfernen
+-   Fenster und Dialoge nur anzeigen, wenn sie bereit und vollständig betriebsbereit sind. Wenn das Dialogfeld Informationen anzeigen muss, die zu ressourcenintensiv für die Berechnung sind, zeigen Sie zunächst einige generische Informationen an, und aktualisieren Sie sie im laufenden Betrieb, wenn mehr Daten verfügbar sind. Ein gutes Beispiel ist das Dialogfeld "Ordnereigenschaften" aus Windows Explorer. Sie muss die Gesamtgröße des Ordners anzeigen, d. h. Informationen, die im Dateisystem nicht sofort verfügbar sind. Das Dialogfeld wird sofort angezeigt, und das Feld "size" wird von einem Arbeitsthread aktualisiert:
 
-![Screenshot, der die Seite "Allgemein" der Windows-Eigenschaften mit dem Text "size", "size on Disk" und "enthält" enthält.](images/preventinghangs-updatingdialog.gif)
+![Screenshot: Seite "Allgemein" Windows Eigenschaften mit eingekreisten Texten "Größe", "Größe auf Datenträger" und "Enthält"](images/preventinghangs-updatingdialog.gif)
 
-Leider gibt es keine einfache Möglichkeit, eine reaktionsfähige Anwendung zu entwerfen und zu schreiben. Windows bietet kein einfaches asynchrones Framework, das eine einfache Planung von Blockierungen oder lang andauernden Vorgängen ermöglicht. In den folgenden Abschnitten werden einige bewährte Methoden zum Verhindern von Abstürzen und zum Hervorheben einiger häufig verwendeter Fehler vorgestellt.
+Leider gibt es keine einfache Möglichkeit, eine reaktionsfähige Anwendung zu entwerfen und zu schreiben. Windows bietet kein einfaches asynchrones Framework, das eine einfache Planung von blockierenden oder lang andauernden Vorgängen ermöglichen würde. In den folgenden Abschnitten werden einige der bewährten Methoden zum Verhindern von Hängen vorgestellt, und es werden einige der häufigsten Fallstricke hervorgehoben.
 
-## <a name="best-practices"></a>Bewährte Methoden
+## <a name="best-practices"></a>Empfehlungen
 
-**UI-Thread einfach halten**
+**Benutzeroberflächenthread einfach halten**
 
-Die primäre Aufgabe der UI-Thread ist das Abrufen und Verteilen von Nachrichten. Jede andere Art von Arbeit stellt das Risiko dar, das Fenster zu hängen, das im Besitz dieses Threads ist.
+Der Ui-Thread ist in erster Linie dafür verantwortlich, Nachrichten abzurufen und zu senden. Jede andere Art von Arbeit birgt das Risiko, dass die Fenster im Besitz dieses Threads hängen.
 
-**Können**
+**tun:**
 
--   Verschieben Sie ressourcenintensive oder unbegrenzte Algorithmen, die zu Vorgängen mit langer Laufzeit in Arbeitsthreads führen.
--   Identifizieren Sie beliebig viele blockierende Funktionsaufrufe, und versuchen Sie, Sie in die Arbeitsthreads zu verschieben. jede Funktion, die eine andere DLL aufrufen, sollte verdächtig sein.
--   Führen Sie einen zusätzlichen Aufwand aus, um alle Datei-e/a-und Netzwerk-API-Aufrufe aus Ihrem Arbeits Thread zu entfernen. Diese Funktionen können viele Sekunden blockieren, wenn nicht Minuten. Wenn Sie im UI-Thread eine beliebige Art von e/a ausführen müssen, sollten Sie die Verwendung asynchroner e/a-Vorgänge in Erwägung ziehen.
--   Beachten Sie, dass der UI-Thread auch alle von Ihrem Prozess gehosteten STA-COM-Server (Single-Threaded Apartment) bedient. Wenn Sie einen blockierenden Rückruf ausführen, werden diese com-Server erst wieder reagiert, wenn Sie die Nachrichten Warteschlange erneut bedienen.
+-   Verschieben von ressourcenintensiven oder ungebundenen Algorithmen, die zu Vorgängen mit langer Ausführungslaufzeit in Arbeitsthreads führen
+-   Identifizieren Sie so viele blockierende Funktionsaufrufe wie möglich, und versuchen Sie, sie in Arbeitsthreads zu verschieben. Jede Funktion, die eine andere DLL aufruft, sollte verdächtig sein.
+-   Nehmen Sie zusätzlichen Aufwand vor, um alle Datei-E/A- und Netzwerk-API-Aufrufe aus Ihrem Arbeitsthread zu entfernen. Diese Funktionen können für viele Sekunden blockiert werden, wenn es sich nicht um Minuten handelt. Wenn Sie E/A-Vorgänge im UI-Thread durchführen müssen, sollten Sie asynchrone E/A verwenden.
+-   Beachten Sie, dass Ihr UI-Thread auch alle STA-COM-Server (Singlethread-Apartment) wartet, die von Ihrem Prozess gehostet werden. Wenn Sie einen blockierenden Aufruf durchführen, reagieren diese COM-Server nicht, bis Sie die Nachrichtenwarteschlange erneut warten.
 
 **Vermeiden Sie Folgendes:**
 
--   Warten Sie auf ein beliebiges Kernel Objekt (z. b. Ereignis oder Mutex), der länger als eine sehr kurze Zeitspanne ist. Wenn Sie überhaupt warten müssen, empfiehlt es sich, MsgWaitForMultipleObjects () zu verwenden, wodurch die Blockierung beim Eintreffen einer neuen Nachricht blockiert wird.
--   Freigeben der Fenster Nachrichten Warteschlange eines Threads mit einem anderen Thread mithilfe der attachthreadinput ()-Funktion. Es ist nicht nur äußerst schwierig, den Zugriff auf die Warteschlange ordnungsgemäß zu synchronisieren, sondern kann auch verhindern, dass das Windows-Betriebssystem ein nicht reagierendes Fenster ordnungsgemäß erkennt
--   Verwenden Sie TerminateThread () für alle Arbeitsthreads. Das Beenden eines Threads auf diese Weise lässt nicht zu, dass Sperren oder Signalereignisse freigegeben werden, und kann problemlos zu verwaisten Synchronisierungs Objekten führen.
--   Einen "unbekannten" Code aus dem UI-Thread aufzurufen. Dies trifft vor allem dann zu, wenn Ihre Anwendung über ein Erweiterbarkeits Modell verfügt. Es gibt keine Garantie, dass Code von Drittanbietern ihren Reaktions Richtlinien folgt.
--   Alle blockierenden Broadcast Aufrufe durchführen SendMessage (HWND- \_ Broadcast) versetzt Sie in die Gnade aller nicht geschriebenen Anwendungen, die zurzeit ausgeführt werden.
+-   Warten Sie länger als eine sehr kurze Zeit auf ein beliebiges Kernelobjekt (z. B. Event oder Mutex). Wenn Sie überhaupt warten müssen, erwägen Sie die Verwendung von MsgWaitForMultipleObjects(), wodurch die Blockierung aufgehoben wird, wenn eine neue Nachricht eintrifft.
+-   Geben Sie die Fenstermeldungswarteschlange eines Threads mithilfe der AttachThreadInput()-Funktion für einen anderen Thread frei. Es ist nicht nur äußerst schwierig, den Zugriff auf die Warteschlange ordnungsgemäß zu synchronisieren, sondern kann auch verhindern, dass das Windows Betriebssystem ein hängendes Fenster ordnungsgemäß erkennt.
+-   Verwenden Sie TerminateThread() für einen Ihrer Arbeitsthreads. Wenn ein Thread auf diese Weise beendet wird, kann er keine Sperren oder Signalereignisse freigeben und kann problemlos zu verwaisten Synchronisierungsobjekten führen.
+-   Rufen Sie einen beliebigen "unbekannten" Code aus Ihrem UI-Thread auf. Dies gilt insbesondere, wenn Ihre Anwendung über ein Erweiterbarkeitsmodell verfügt. es gibt keine Garantie dafür, dass Drittanbietercode Ihren Richtlinien zur Reaktionsfähigkeit entspricht.
+-   Nehmen Sie eine beliebige Art von blockierenden Broadcastaufruf vor. SendMessage (HWND \_ BROADCAST) versetzt Sie in den Mittelpunkt jeder derzeit ausgeführten falsch geschriebenen Anwendung.
 
-**Implementieren von asynchronen Mustern**
+**Implementieren asynchroner Muster**
 
-Zum Entfernen von Vorgängen mit langer Ausführungszeit oder Blockierung aus dem UI-Thread muss ein asynchrones Framework implementiert werden, das das Auslagern dieser Vorgänge an Arbeitsthreads ermöglicht.
+Zum Entfernen von zeitintensiven oder blockierenden Vorgängen aus dem UI-Thread muss ein asynchrones Framework implementiert werden, das das Auslagern dieser Vorgänge an Arbeitsthreads ermöglicht.
 
-**Können**
+**tun:**
 
--   Verwenden Sie asynchrone Fenster Nachrichten-APIs in Ihrem UI-Thread, insbesondere, indem Sie SendMessage durch einen der nicht blockierenden Peers ersetzen: PostMessage, sendnotifymess oder sendmessagecallback.
--   Verwenden Sie Hintergrundthreads zum Ausführen von Aufgaben mit langer Ausführungszeit oder Blockierung. Verwenden der neuen Thread Pool-API zum Implementieren von Arbeitsthreads
--   Bereitstellen von Abbruch Unterstützung für Hintergrundaufgaben mit langer Ausführungszeit. Für blockierende e/a-Vorgänge verwenden Sie den e/a-Abbruch, aber nur als letzten Ausweg. Es ist nicht einfach, den "Right"-Vorgang abzubrechen.
--   Implementieren eines asynchronen Entwurfs für verwalteten Code mithilfe des iasynkresult-Musters oder mithilfe von Ereignissen
+-   Verwenden Sie asynchrone Fenstermeldungs-APIs in Ihrem UI-Thread, insbesondere, indem Sie SendMessage durch einen seiner nicht blockierenden Peers ersetzen: PostMessage, SendNotifyMessage oder SendMessageCallback.
+-   Verwenden Sie Hintergrundthreads, um Aufgaben mit langer Ausführung oder Blockierung auszuführen. Verwenden der neuen Threadpool-API zum Implementieren Ihrer Arbeitsthreads
+-   Bereitstellen von Abbruchunterstützung für Hintergrundaufgaben mit langer Laufzeit. Verwenden Sie zum Blockieren von E/A-Vorgängen den E/A-Abbruch, aber nur als letzten Ausweg. Es ist nicht einfach, den "richtigen" Vorgang abzubricht.
+-   Implementieren eines asynchronen Entwurfs für verwalteten Code mithilfe des IAsyncResult-Musters oder mithilfe von Ereignissen
 
-**Verwenden von Sperren**
+**Verwenden von Sperren mit Bedacht**
 
-Die Anwendung oder dll benötigt sperren, um den Zugriff auf die internen Datenstrukturen zu synchronisieren. Die Verwendung mehrerer Sperren erhöht die Parallelität und sorgt für eine reaktionsfähigere Anwendung. Wenn Sie jedoch mehrere Sperren verwenden, erhöht sich auch die Wahrscheinlichkeit, dass diese Sperren in verschiedenen Reihen folgen abgerufen werden, sodass Ihre Threads Deadlock werden. Wenn zwei Threads jeweils eine Sperre aufweisen und dann versuchen, die Sperre des anderen Threads abzurufen, bilden Ihre Vorgänge eine zirkuläre Wartezeit, die den Fortschritt für diese Threads blockiert. Sie können diesen Deadlock nur vermeiden, indem Sie sicherstellen, dass alle Threads in der Anwendung immer alle Sperren in derselben Reihenfolge abrufen. Es ist jedoch nicht immer einfach, Sperren in der Reihenfolge "Right" zu erhalten. Software Komponenten können zusammengesetzt werden, aber Sperr Übernahmen sind nicht möglich. Wenn Ihr Code eine andere Komponente aufruft, werden die Sperren dieser Komponente nun Teil der impliziten Sperr Reihenfolge, selbst wenn Sie keine Einblicke in diese Sperren haben.
+Ihre Anwendung oder DLL benötigt Sperren, um den Zugriff auf ihre internen Datenstrukturen zu synchronisieren. Die Verwendung mehrerer Sperren erhöht die Parallelität und erhöht die Reaktionsfähigkeit Ihrer Anwendung. Durch die Verwendung mehrerer Sperren erhöht sich jedoch auch die Wahrscheinlichkeit, dass diese Sperren in unterschiedlichen Bestellungen verwendet werden und ihre Threads zu einem Deadlock führen. Wenn zwei Threads jeweils eine Sperre halten und dann versuchen, die Sperre des anderen Threads zu erhalten, bilden ihre Vorgänge einen kreisförmigen Wartevorgänge, der jeden Vorwärtsfortschritt für diese Threads blockiert. Sie können diesen Deadlock nur vermeiden, indem Sie sicherstellen, dass alle Threads in der Anwendung immer alle Sperren in der gleichen Reihenfolge erhalten. Es ist jedoch nicht immer einfach, Sperren in der richtigen Reihenfolge zu erhalten. Softwarekomponenten können zusammengestellt werden, Sperrenübernahmen jedoch nicht. Wenn Ihr Code eine andere Komponente aufruft, werden die Sperren dieser Komponente jetzt Teil Ihrer impliziten Sperr reihenfolge – auch wenn Sie keinen Einblick in diese Sperren haben.
 
-Es ist sogar noch schwieriger, da Sperr Vorgänge weit mehr als die üblichen Funktionen für kritische Abschnitte, Mutexen und andere herkömmliche Sperren enthalten. Alle blockierenden Aufrufe, die Thread Grenzen überschreiten, verfügen über Synchronisierungs Eigenschaften, die zu einem Deadlock führen können. Der aufrufende Thread führt einen Vorgang mit der Semantik "abrufen" aus und kann die Blockierung erst wieder entsperren, wenn der Ziel Thread "Releases" aufruft. Eine Reihe von User32-Funktionen (z. b. SendMessage) sowie viele blockierende com-Aufrufe fallen in diese Kategorie.
+Dies wird noch schwieriger, da Sperrvorgänge weit mehr als die üblichen Funktionen für kritische Abschnitte, Mutexe und andere herkömmliche Sperren umfassen. Jeder blockierende Aufruf, der Threadgrenzen überschreitet, verfügt über Synchronisierungseigenschaften, die zu einem Deadlock führen können. Der aufrufende Thread führt einen Vorgang mit "acquire"-Semantik aus und kann die Blockierung erst wieder aufsperren, wenn der Zielthread den Aufruf "freilässt". Einige User32-Funktionen (z. B. SendMessage) sowie viele blockierende COM-Aufrufe fallen in diese Kategorie.
 
-Noch schlimmer ist, dass das Betriebssystem über eine eigene interne prozessspezifische Sperre verfügt, die bei der Ausführung des Codes manchmal angehalten wird. Diese Sperre wird abgerufen, wenn DLLs in den Prozess geladen werden, und wird daher als "Loadersperre" bezeichnet. Die DllMain-Funktion wird immer unter der Loadersperre ausgeführt. Wenn Sie Sperren in DllMain erwerben (was nicht der Grund ist), müssen Sie das Lade Modul in der Sperr Reihenfolge sperren. Wenn Sie bestimmte Win32-APIs aufrufen, erhalten Sie möglicherweise auch die Loadersperre in ihren Namen, wie z. b. LoadLibraryEx, GetModuleHandle und vor allem CoCreateInstance.
+Noch schlechter ist, dass das Betriebssystem über eine eigene interne prozessspezifische Sperre verfügt, die manchmal gehalten wird, während Ihr Code ausgeführt wird. Diese Sperre wird beim Laden von DLLs in den Prozess und daher als "Ladesperre" bezeichnet. Die DllMain-Funktion wird immer unter der Loadersperre ausgeführt. Wenn Sie Sperren in DllMain erhalten (und dies nicht der Fall ist), müssen Sie die Loadersperre als Teil Ihrer Sperr reihenfolge verwenden. Das Aufrufen bestimmter Win32-APIs kann auch die Loadersperre in Ihrem Namen erhalten– Funktionen wie LoadLibraryEx, GetModuleHandle und insbesondere CoCreateInstance.
 
-Um dies zu verknüpfen, sehen Sie sich den unten stehenden Beispielcode an. Diese Funktion ruft mehrere Synchronisierungs Objekte ab und definiert implizit eine Sperr Reihenfolge, was bei der flüchtigen Überprüfung nicht unbedingt offensichtlich ist. Bei einem Funktions Eintrag erhält der Code einen kritischen Abschnitt und gibt ihn nicht bis zum Beenden der Funktion frei. Dadurch wird der Code zum obersten Knoten in unserer Sperr Hierarchie. Der Code ruft dann die Win32-Funktion "LoadIcon ()" auf, die unter den überdecken den Ladevorgang des Betriebssystems aufrufen kann, um diese Binärdatei zu laden. Dieser Vorgang würde die Loadersperre abrufen, die jetzt auch Teil dieser Sperr Hierarchie wird (stellen Sie sicher, dass die DllMain-Funktion die g CS-Sperre nicht erhält \_ ). Als Nächstes ruft der Code SendMessage () auf, einen blockierenden Thread übergreifenden Vorgang, der nicht zurückgegeben wird, wenn der UI-Thread antwortet. Stellen Sie erneut sicher, dass der UI-Thread niemals g \_ CS erhält.
+Sehen Sie sich den folgenden Beispielcode an, um all dies miteinander zu verknüpfen. Diese Funktion übernimmt mehrere Synchronisierungsobjekte und definiert implizit eine Sperr reihenfolge, die bei der Cursorüberprüfung nicht unbedingt offensichtlich ist. Beim Funktionseintrag erhält der Code einen kritischen Abschnitt und gibt ihn erst dann frei, wenn die Funktion beendet wird. Dadurch wird er zum obersten Knoten in unserer Sperrenhierarchie. Der Code ruft dann die Win32-Funktion LoadIcon() auf, die im Untergang möglicherweise das Betriebssystemlader aufruft, um diese Binärdatei zu laden. Dieser Vorgang würde die Loadersperre erhalten, die jetzt auch Teil dieser Sperrhierarchie wird (stellen Sie sicher, dass die DllMain-Funktion die g cs-Sperre \_ nicht erhält). Als Nächstes ruft der Code SendMessage() auf, einen blockierenden threadübergreifenden Vorgang, der nur dann zurück gibt, wenn der UI-Thread antwortet. Stellen Sie auch hier sicher, dass der UI-Thread nie g \_ cs erhält.
 
 ```
 bool foo::bar (char* buffer)  
@@ -130,29 +130,29 @@ bool foo::bar (char* buffer)
 }  
 ```
 
-Wenn Sie diesen Code betrachten, ist es offensichtlich, dass wir g \_ cs in der Sperr Hierarchie implizit die Sperre der obersten Ebene erstellt haben, auch wenn wir nur den Zugriff auf die Klassenmember-Variablen synchronisieren wollten.
+Bei diesem Code scheint klar zu sein, dass wir g cs implizit zur Sperre der obersten Ebene in unserer Sperrhierarchie gemacht haben, auch wenn wir nur den Zugriff auf die Klassenmitgliedsvariablen \_ synchronisieren wollten.
 
-**Können**
+**tun:**
 
--   Entwerfen Sie eine Sperr Hierarchie, und befolgen Sie Sie. Fügen Sie alle erforderlichen Sperren hinzu. Es gibt viele weitere Synchronisierungs primitive als nur Mutex und criticalabschnitts; Sie müssen alle eingeschlossen werden. Einschließen der Loadersperre in ihre Hierarchie, wenn Sie Sperren in DllMain () verwenden
--   Stimmen Sie dem Sperrprotokoll mit ihren Abhängigkeiten zu. Sämtlicher Code, der von der Anwendung aufgerufen wird oder der die Anwendung aufrufen kann, muss dieselbe Sperr Hierarchie verwenden.
--   Lock Data Structures not Functions. Verschieben Sie Sperr Käufe von Funktions Einstiegspunkten, und schützen Sie nur den Datenzugriff mit Sperren. Wenn weniger Code unter einer Sperre betrieben wird, besteht weniger Wahrscheinlichkeit für Deadlocks.
--   Analysieren Sie die Übernahmen und Releases von Sperren im Fehler Behandlungs Code. Häufig die Sperr Hierarchie, wenn Sie bei der Wiederherstellung nach einem Fehlerzustand vergessen wird
--   Ersetzen Sie die durch den Verweis Zähler erfallenen sperren, sodass Sie keinen Deadlock haben. Einzeln gesperrte Elemente in Listen und Tabellen sind gute Kandidaten.
--   Seien Sie vorsichtig, wenn Sie auf ein Thread Handle von einer DLL warten. Nehmen Sie immer an, dass der Code unter der Loadersperre aufgerufen werden kann. Es ist besser, auf Ihre Ressourcen zu verweisen, und der Arbeits Thread kann eine eigene Bereinigung durchführen (und dann FreeLibraryAndExitThread verwenden, um die Bereinigung zu beenden).
+-   Entwerfen Sie eine Sperrhierarchie, und befolgen Sie sie. Fügen Sie alle erforderlichen Sperren hinzu. Es gibt viel mehr Synchronisierungsprimitiven als nur Mutex und CriticalSections. sie müssen alle einbezogen werden. Schließen Sie die Loadersperre in Ihre Hierarchie ein, wenn Sie Sperren in DllMain() verwenden.
+-   Stimmen Sie dem Sperrprotokoll mit Ihren Abhängigkeiten zu. Jeder Code, den Ihre Anwendung aufruft oder der Ihre Anwendung aufrufen kann, muss dieselbe Sperrhierarchie verwenden.
+-   Sperren Von Datenstrukturen, nicht von Funktionen. Verschieben Sie Sperrkäufe von Funktionseinstiegspunkten weg, und schützen Sie nur den Datenzugriff mit Sperren. Wenn weniger Code unter einer Sperre arbeitet, besteht weniger Wahrscheinlichkeit für Deadlocks.
+-   Analysieren Von Sperrenkäufen und -releases in Ihrem Fehlerbehandlungscode. Häufig wird die Sperrhierarchie vergessen, wenn versucht wird, eine Wiederherstellung nach einem Fehlerzustand zu versuchen.
+-   Ersetzen Sie geschachtelte Sperren durch Verweiszähler– sie können nicht deadlocken. Einzeln gesperrte Elemente in Listen und Tabellen sind gute Kandidaten
+-   Seien Sie vorsichtig, wenn Sie auf ein Threadhand handle aus einer DLL warten. Gehen Sie immer davon aus, dass Ihr Code unter der Loadersperre aufgerufen werden kann. Es ist besser, ihre Ressourcen auf die Verweisanzahl zu verweisen und dem Arbeitsthread eine eigene Bereinigung zu ermöglichen (und dann FreeLibraryAndExitThread zu verwenden, um eine saubere Beendigung zu ermöglichen).
 -   Verwenden Sie die Wait Chain Traversal-API, wenn Sie Ihre eigenen Deadlocks diagnostizieren möchten.
 
 **Vermeiden Sie Folgendes:**
 
--   Führen Sie in der DllMain ()-Funktion etwas anderes als die sehr einfache Initialisierung aus. Weitere Informationen finden Sie unter DllMain-Rückruffunktion. Insbesondere nicht "LoadLibraryEx" oder "cokreateinstance" aufrufen
--   Schreiben Sie eigene Sperr primitive. Mit benutzerdefiniertem Synchronisierungs Code können Sie problemlos einfache Fehler in die Codebasis einbringen. Verwenden Sie stattdessen die umfangreiche Auswahl von Betriebssystem-Synchronisierungs Objekten.
--   Arbeiten in den Konstruktoren und Debuggern für globale Variablen, Sie werden unter der Loadersperre ausgeführt.
+-   Machen Sie alles andere als eine sehr einfache Initialisierung in Ihrer DllMain()-Funktion. Weitere Informationen finden Sie unter DllMain-Rückruffunktion. Rufen Sie insbesondere LoadLibraryEx oder CoCreateInstance nicht auf.
+-   Schreiben Sie ihre eigenen Sperrprimitiven. Benutzerdefinierter Synchronisierungscode kann leicht zu feinen Fehlern in Ihrer Codebasis führen. Verwenden Sie stattdessen die umfangreiche Auswahl von Betriebssystemsynchronisierungsobjekten.
+-   Führen Sie jede Arbeit in den Konstruktoren und Destruktoren für globale Variablen aus. Sie werden unter der Ladersperre ausgeführt.
 
-**Vorsicht bei Ausnahmen**
+**Seien Sie vorsichtig mit Ausnahmen**
 
-Ausnahmen ermöglichen die Trennung des normalen Programmflusses und der Fehlerbehandlung. Aufgrund dieser Trennung ist es möglicherweise schwierig, den genauen Zustand des Programms vor der Ausnahme zu erkennen, und der Ausnahmehandler könnte wichtige Schritte bei der Wiederherstellung eines gültigen Zustands übersehen. Dies gilt insbesondere für Sperr Käufe, die im Handler freigegeben werden müssen, um zukünftige Deadlocks zu verhindern.
+Ausnahmen ermöglichen die Trennung des normalen Programmablaufs und der Fehlerbehandlung. Aufgrund dieser Trennung kann es schwierig sein, den genauen Zustand des Programms vor der Ausnahme zu kennen, und der Ausnahmehandler kann wichtige Schritte zum Wiederherstellen eines gültigen Zustands übersehen. Dies gilt insbesondere für Sperrenabkäufe, die im Handler freigegeben werden müssen, um zukünftige Deadlocks zu verhindern.
 
-Der folgende Beispielcode veranschaulicht dieses Problem. Der unbegrenzte Zugriff auf die Variable "Buffer" führt gelegentlich zu einer Zugriffsverletzung (AV). Diese AV-Datei wird vom systemeigenen Ausnahmehandler abgefangen, aber es ist nicht einfach zu bestimmen, ob der kritische Abschnitt zum Zeitpunkt der Ausnahme bereits abgerufen wurde (die AV könnte sogar irgendwo im Code von EnterCriticalSection stattgefunden haben).
+Der folgende Beispielcode veranschaulicht dieses Problem. Der ungebundene Zugriff auf die Puffervariable führt gelegentlich zu einer Zugriffsverletzung (AV). Diese AV wird vom nativen Ausnahmehandler erfasst, kann jedoch nicht einfach feststellen, ob der kritische Abschnitt zum Zeitpunkt der Ausnahme bereits erfasst wurde (die AV hätte sogar irgendwo im EnterCriticalSection-Code stattfinden können).
 
 ```
  BOOL bar (char* buffer)  
@@ -171,38 +171,38 @@ Der folgende Beispielcode veranschaulicht dieses Problem. Der unbegrenzte Zugrif
 }  
 ```
 
-**Können**
+**tun:**
 
--   " \_ \_ Try/" entfernen \_ \_ , wenn dies möglich ist. verwenden Sie "Set-Filter" nicht.
--   Umschließen Sie Ihre Sperren in benutzerdefinierten automatischen \_ ptr-ähnlichen Vorlagen, wenn Sie C++-Ausnahmen verwenden. Die Sperre sollte im Dekonstruktor freigegeben werden. Freigabe der Sperren in der letzten Anweisung für Native Ausnahmen \_ \_
--   Seien Sie vorsichtig mit dem Code, der in einem nativen Ausnahmehandler ausgeführt wird. die Ausnahme hat möglicherweise viele Sperren kompromittiert, sodass der Handler keine
+-   Remove \_ \_ \_ \_ try/except whenever possible; do not use SetUnhandledExceptionFilter
+-   Umschließen Sie Ihre Sperren in \_ benutzerdefinierte, automatisch ptr-orientierte Vorlagen, wenn Sie C++-Ausnahmen verwenden. Die Sperre sollte im Destruktor freigegeben werden. Bei nativen Ausnahmen werden die Sperren in Ihrer \_ \_ finally-Anweisung wieder frei.
+-   Seien Sie vorsichtig mit dem Code, der in einem nativen Ausnahmehandler ausgeführt wird. Die Ausnahme hat möglicherweise viele Sperren geleert, sodass ihr Handler keines erhalten sollte.
 
 **Vermeiden Sie Folgendes:**
 
--   Behandeln Sie Native Ausnahmen, wenn dies nicht erforderlich oder für die Win32-APIs erforderlich ist. Wenn Sie Native Ausnahmehandler für die Berichterstellung oder die Datenwiederherstellung nach einem schwerwiegenden Fehler verwenden, sollten Sie stattdessen den standardmäßigen Betriebssystem Mechanismus von Windows-Fehlerberichterstattung verwenden.
--   Verwenden Sie C++-Ausnahmen mit beliebigen Arten von UI-Code (User32). eine Ausnahme, die in einem Rückruf ausgelöst wird, durchläuft die Ebenen des C-Codes, die vom Betriebssystem bereitgestellt werden. Dieser Code kennt die Semantik "C++ auflösen" nicht.
+-   Behandeln Sie native Ausnahmen, wenn dies nicht erforderlich ist oder für die Win32-APIs erforderlich ist. Wenn Sie native Ausnahmehandler für die Berichterstellung oder Datenwiederherstellung nach schwerwiegenden Fehlern verwenden, sollten Sie stattdessen den Standardbetriebssystemmechanismus von Windows-Fehlerberichterstattung verwenden.
+-   Verwenden Sie C++-Ausnahmen mit beliebigem Benutzeroberflächencode (user32). Eine in einem Rückruf ausgelöste Ausnahme durchfing ebenen von C-Code, der vom Betriebssystem bereitgestellt wird. Dieser Code kennt die C++-Semantik zum Entrollen nicht.
 
 ## <a name="links-to-resources"></a>Links zu Ressourcen
 
 -   [Windows-Fehlerberichterstattung](../wer/windows-error-reporting.md)
 -   [Asynchroner Entwurf](https://msdn.microsoft.com/library/ms228969(v=VS.80).aspx)
--   [Asynchrone e/a](../fileio/synchronous-and-asynchronous-i-o.md)
--   [**Attachthreadinput-Funktion**](/windows/win32/api/winuser/nf-winuser-attachthreadinput)
--   [**Auto \_ ptr-Klasse**](https://msdn.microsoft.com/library/ew3fk483(v=VS.71).aspx)
--   [**Disableprocesswindowsghosting-Funktion**](/windows/win32/api/winuser/nf-winuser-disableprocesswindowsghosting)
+-   [Asynchrone E/A](../fileio/synchronous-and-asynchronous-i-o.md)
+-   [**AttachThreadInput-Funktion**](/windows/win32/api/winuser/nf-winuser-attachthreadinput)
+-   [**auto \_ ptr-Klasse**](https://msdn.microsoft.com/library/ew3fk483(v=VS.71).aspx)
+-   [**DisableProcessWindowsGhosting-Funktion**](/windows/win32/api/winuser/nf-winuser-disableprocesswindowsghosting)
 -   [**DllMain-Rückruffunktion**](../dlls/dllmain.md)
 -   [Ereignisse](https://msdn.microsoft.com/library/wewwczdw(v=VS.80).aspx)
 -   [**GetMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-getmessage)
--   [E/a-Abbruch](../fileio/canceling-pending-i-o-operations.md)
--   [**Ishungappwindow-Funktion**](/windows/win32/api/winuser/nf-winuser-ishungappwindow)
--   [Nachrichten Warteschlange](../winmsg/using-messages-and-message-queues.md)
+-   [E/A-Abbruch](../fileio/canceling-pending-i-o-operations.md)
+-   [**IsHungAppWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-ishungappwindow)
+-   [Nachrichtenwarteschlange](../winmsg/using-messages-and-message-queues.md)
 -   [**MsgWaitForMultipleObjects-Funktion**](/windows/win32/api/winuser/nf-winuser-msgwaitformultipleobjects)
--   [Neue Thread Pool-API](../procthread/thread-pool-api.md)
+-   [Neue Threadpool-API](../procthread/thread-pool-api.md)
 -   [**PostMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-postmessagea)
 -   [Neustart und Wiederherstellung](../recovery/registering-for-application-restart.md)
--   [**Sendmessagecallback-Funktion**](/windows/win32/api/winuser/nf-winuser-sendmessagecallbacka)
--   [**Sendnotisymess Age-Funktion**](/windows/win32/api/winuser/nf-winuser-sendnotifymessagea)
--   [Synchronisierungs Objekte](../sync/about-synchronization.md)
+-   [**SendMessageCallback-Funktion**](/windows/win32/api/winuser/nf-winuser-sendmessagecallbacka)
+-   [**SendNotifyMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-sendnotifymessagea)
+-   [Synchronisierungsobjekte](../sync/about-synchronization.md)
 -   [**TerminateThread-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread)
 -   [Windows-Fehlerberichterstattung](../wer/windows-error-reporting.md)
 -   [Winqual](/windows-hardware/drivers/dashboard/winqual-submission-tool--winqualexe-)

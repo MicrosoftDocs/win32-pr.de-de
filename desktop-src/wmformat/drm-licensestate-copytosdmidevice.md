@@ -1,9 +1,9 @@
 ---
 title: DRM_LicenseState_CopyToSDMIDevice
-description: Die Eigenschaft "DRM \_ licenanstate \_ copytosdmidevice" enthält eine Datenstruktur mit dem Status "WM \_ License \_ State" \_ , die Details dazu enthält, wie dieses Recht auf den Inhalt angewendet wurde.
+description: Die DRM \_ LicenseState \_ CopyToSDMIDevice-Eigenschaft enthält eine WM \_ LICENSE STATE \_ \_ DATA-Struktur, die Details dazu enthält, wie dieses Recht auf den Inhalt angewendet wurde.
 ms.assetid: 16d6748f-7998-4239-925d-d9d3952aab1b
 keywords:
-- DRM_LicenseState_CopyToSDMIDevice Windows Media-Format
+- DRM_LicenseState_CopyToSDMIDevice Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,36 +12,36 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8e07974477bf7f265eef9a488e2bbfd8ddd0027
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1c2fda8dc1c857bea9e217ac5e4a2b6cde0b6ccb199c60204121aa62e900ee8f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039004"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119085987"
 ---
-# <a name="drm_licensestate_copytosdmidevice"></a>DRM \_ licenanstate \_ copytosdmidevice
+# <a name="drm_licensestate_copytosdmidevice"></a>DRM \_ LicenseState \_ CopyToSDMIDevice
 
-Die Eigenschaft " **DRM \_ licenanstate \_ copytosdmidevice** " enthält eine Datenstruktur mit dem [**Status "WM \_ License \_ State \_**](/previous-versions/windows/desktop/legacy/dd757942(v=vs.85)) ", die Details dazu enthält, wie dieses Recht auf den Inhalt angewendet wurde.
+Die **DRM \_ LicenseState \_ CopyToSDMIDevice-Eigenschaft** enthält eine [**WM LICENSE STATE \_ \_ \_ DATA-Struktur,**](/previous-versions/windows/desktop/legacy/dd757942(v=vs.85)) die Details dazu enthält, wie dieses Recht auf den Inhalt angewendet wurde.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmdrm \_ \_ licentarstate copytosdmidevice
+g \_ wszWMDRM \_ LicenseState \_ CopyToSDMIDevice
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ typbinär Datei**
+**\_WMT-TYP \_ BINARY**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist eine schreibgeschützte Eigenschaft, die mithilfe von [**iwmdrmreader:: getdrmproperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)abgerufen wird.
+Dies ist eine schreibgeschützte Eigenschaft, die mit [**IWMDRMReader::GetDRMProperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)abgerufen wird.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**DRM-Eigenschaften**](drm-properties.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

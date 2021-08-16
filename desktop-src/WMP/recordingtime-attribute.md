@@ -1,9 +1,9 @@
 ---
-title: Recordingtime-Attribut
-description: Das recordingtime-Attribut ist das Datum und die Uhrzeit der ursprünglichen Aufzeichnung für Elemente, bei denen dieses Datum vom Veröffentlichungsdatum abweicht.
+title: RecordingTime-Attribut
+description: Das RecordingTime-Attribut ist das Datum und die Uhrzeit der ursprünglichen Aufzeichnung für Elemente, deren Datum sich vom Veröffentlichungsdatum unterscheiden.
 ms.assetid: 39f7356b-b4b9-48cd-bd14-1336a2f4736a
 keywords:
-- Recordingtime-Attribut, Windows Media Player
+- RecordingTime-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a11f0ee588ed05f0a7ecf14e07bf20fc62039c4b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 035dbb8f2098a92826678eebb9ec08999c00989125edbd6f9c4d1852d0345e2b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995630"
 ---
-# <a name="recordingtime-attribute"></a>Recordingtime-Attribut
+# <a name="recordingtime-attribute"></a>RecordingTime-Attribut
 
-Das **recordingtime** -Attribut ist das Datum und die Uhrzeit der ursprünglichen Aufzeichnung für Elemente, bei denen dieses Datum vom Veröffentlichungsdatum abweicht.
+Das **RecordingTime-Attribut** ist das Datum und die Uhrzeit der ursprünglichen Aufzeichnung für Elemente, deren Datum sich vom Veröffentlichungsdatum unterscheiden.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
--   [Foto Elemente](photo-item-attributes.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Fotoelemente](photo-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur in der-Bibliothek gespeichert.
+Dieses Attribut wird nur in der Bibliothek gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,15 +41,15 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher (das Foto Element wird nur in Windows Media Player 10 oder höher unterstützt)<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher (Das Fotoelement wird nur in Windows Media Player 10 oder höher unterstützt)<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

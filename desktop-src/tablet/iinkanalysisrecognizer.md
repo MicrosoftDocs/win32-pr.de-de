@@ -1,5 +1,5 @@
 ---
-description: Ermöglicht den Zugriff auf Handschrifterkennungen für die Verwendung mit Freihandanalysen.
+description: Ermöglicht den Zugriff auf Handschrifterkennungen für die Verwendung mit der Ink-Analyse.
 ms.assetid: de536cca-889e-413e-a6f7-c2229a77c801
 title: IInkAnalysisRecognizer-Schnittstelle (IACom.h)
 ms.topic: reference
@@ -22,11 +22,11 @@ ms.locfileid: "119350880"
 ---
 # <a name="iinkanalysisrecognizer-interface"></a>IInkAnalysisRecognizer-Schnittstelle
 
-Ermöglicht den Zugriff auf Handschrifterkennungen für die Verwendung mit Freihandanalysen.
+Ermöglicht den Zugriff auf Handschrifterkennungen für die Verwendung mit der Ink-Analyse.
 
 ## <a name="members"></a>Member
 
-Die **IInkAnalysisRecognizer-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IInkAnalysisRecognizer** verfügt auch über diese Typen von Membern:
+Die **IInkAnalysisRecognizer-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IInkAnalysisRecognizer** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
@@ -38,12 +38,12 @@ Die **IInkAnalysisRecognizer-Schnittstelle** verfügt über diese Methoden.
 
 | Methode                                                                          | BESCHREIBUNG                                                                                                                    |
 |:--------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------|
-| [**GetCapabilities**](iinkanalysisrecognizer-getcapabilities.md)               | Ruft die Funktionen der Erkennung ab.<br/>                                                                       |
+| [**GetCapabilities**](iinkanalysisrecognizer-getcapabilities.md)               | Ruft die Funktionen der -Erkennen ab.<br/>                                                                       |
 | [**Getguid**](iinkanalysisrecognizer-getguid.md)                               | Ruft den GUID (Globally Unique Identifier) der Erkennung ab.<br/>                                                  |
-| [**GetLanguages**](iinkanalysisrecognizer-getlanguages.md)                     | Ruft die Bezeichner für die Gebietsschemas ab, die von **IInkAnalysisRecognizer** unterstützt werden.<br/>                            |
-| [**GetName**](iinkanalysisrecognizer-getname.md)                               | Ruft den Namen der Erkennung ab.<br/>                                                                               |
-| [**GetSupportedProperties**](iinkanalysisrecognizer-getsupportedproperties.md) | Ruft die GUIDs (Globally Unique Identifiers) für die Eigenschaften ab, die von **IInkAnalysisRecognizer** unterstützt werden.<br/> |
-| [**GetVendor**](iinkanalysisrecognizer-getvendor.md)                           | Ruft den Herstellernamen des **IInkAnalysisRecognizer** ab.<br/>                                                        |
+| [**GetLanguages**](iinkanalysisrecognizer-getlanguages.md)                     | Ruft die Bezeichner für die Von **IInkAnalysisRecognizer** unterstützten Locales ab.<br/>                            |
+| [**GetName**](iinkanalysisrecognizer-getname.md)                               | Ruft den Namen der Erkannten ab.<br/>                                                                               |
+| [**GetSupportedProperties**](iinkanalysisrecognizer-getsupportedproperties.md) | Ruft die GUIDs (Globally Unique Identifiers) für die Eigenschaften ab, die von **diesem IInkAnalysisRecognizer unterstützt** werden.<br/> |
+| [**GetVendor**](iinkanalysisrecognizer-getvendor.md)                           | Ruft den Herstellernamen von **IInkAnalysisRecognizer ab.**<br/>                                                        |
 
 
 
@@ -51,11 +51,11 @@ Die **IInkAnalysisRecognizer-Schnittstelle** verfügt über diese Methoden.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Erkennung verfügt über bestimmte Attribute und Eigenschaften, mit denen die Erkennung durchgeführt werden kann. Die Eigenschaften einer Erkennung müssen bestimmt werden, bevor die Erkennung erfolgen kann. Die Typen von Eigenschaften, die eine Erkennung unterstützt, bestimmen die Erkennungstypen, die sie ausführen kann. Wenn eine Erkennung z. B. keine cursive Handschrift unterstützt, gibt sie ungenaue Ergebnisse zurück, wenn ein Benutzer in cursive schreibt.
+Eine Erkennung verfügt über bestimmte Attribute und Eigenschaften, die die Erkennung ermöglichen. Die Eigenschaften einer Erkennung müssen bestimmt werden, bevor die Erkennung erfolgen kann. Die Typen von Eigenschaften, die von einer Erkennung unterstützt werden, bestimmen die Erkennungstypen, die sie ausführen kann. Wenn beispielsweise eine Recognizer-Funktion keine cursive Handschrift unterstützt, gibt sie ungenaue Ergebnisse zurück, wenn ein Benutzer in cursive schreibt.
 
-Eine Erkennung verfügt auch über integrierte Funktionen, die viele Aspekte der Handschrift automatisch verwalten. Beispielsweise werden die Metriken für die Linien bestimmt, auf denen Striche gezeichnet werden. Sie können die Zeilennummer eines Strichs zurückgeben, aber Sie müssen aufgrund der integrierten Funktionalität der Erkennung nie angeben, wie diese Linienmetriken bestimmt werden.
+Eine Recognizer-Funktion verfügt auch über integrierte Funktionen, mit denen viele Aspekte der Handschrift automatisch verwaltet werden. Beispielsweise werden die Metriken für die Linien bestimmt, auf denen Striche gezeichnet werden. Sie können die Zeilennummer eines Strichs zurückgeben, aber Sie müssen nie angeben, wie diese Zeilenmetriken aufgrund der integrierten Funktionen der -Wiedererkennung bestimmt werden.
 
-[**IInkAnalyzer**](iinkanalyzer.md) verwaltet eine Liste der verfügbaren Erkennungen. Um auf diese Liste zuzugreifen, verwenden Sie die [**IInkAnalyzer::GetInkAnalysisRecognizersByPriority-Methode.**](iinkanalyzer-getinkanalysisrecognizersbypriority.md)
+Der [**IInkAnalyzer**](iinkanalyzer.md) verwaltet eine Liste der verfügbaren Recognizer. Verwenden Sie für den Zugriff auf diese Liste die [**IInkAnalyzer::GetInkAnalysisRecognizersByPriority-Methode.**](iinkanalyzer-getinkanalysisrecognizersbypriority.md)
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,7 +1,7 @@
 ---
-description: Die getuserdata-Methode ruft die von der Anwendung definierten persistenten Daten ab.
+description: Die GetUserData-Methode ruft die anwendungsdefinierten persistenten Daten ab.
 ms.assetid: dd2cdb37-9c4f-4356-a35f-2d42b7588da6
-title: 'Iamtimelineobj:: getuserdata-Methode (qedit. h)'
+title: IAMTimelineObj::GetUserData-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 9dda74980dcdae9cd73e749d9cb4324b4c6357f7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 49ea93d80b63b82a0fce7f5f412820534ba207fedaf27c192bd5dd5c3468400e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120052710"
 ---
-# <a name="iamtimelineobjgetuserdata-method"></a>Iamtimelineobj:: getuserdata-Methode
+# <a name="iamtimelineobjgetuserdata-method"></a>IAMTimelineObj::GetUserData-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die `GetUserData` -Methode ruft die von der Anwendung definierten persistenten Daten ab.
+Die `GetUserData` -Methode ruft die anwendungsdefinierten persistenten Daten ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,14 +46,14 @@ HRESULT GetUserData(
 
 <dl> <dt>
 
-*pData* 
+*Pdata* 
 </dt> <dd>
 
-Zeiger auf einen Puffer, der die Daten empfängt. Legen Sie diesen Parameter auf **null** fest, um die Größe des zuzuordnenden Puffers zu bestimmen. Die erforderliche Größe wird in " *Psize*" zurückgegeben.
+Zeiger auf einen Puffer, der die Daten empfängt. Um die Zuteilungsgröße des Puffers zu bestimmen, legen Sie diesen Parameter auf **NULL fest.** Die erforderliche Größe wird in *pSize zurückgegeben.*
 
 </dd> <dt>
 
-*Psize* 
+*pSize* 
 </dt> <dd>
 
 Empfängt die Größe der Daten in Bytes.
@@ -62,17 +62,17 @@ Empfängt die Größe der Daten in Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -82,19 +82,19 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iamtimelineobj-Schnittstelle**](iamtimelineobj.md)
+[**IAMTimelineObj-Schnittstelle**](iamtimelineobj.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

@@ -1,24 +1,24 @@
 ---
-description: Die playattime-Methode startet die Wiedergabe im aktuellen Titel zur angegebenen Zeit.
+description: Die PlayAtTime-Methode startet die Wiedergabe im aktuellen Titel zum angegebenen Zeitpunkt.
 ms.assetid: 83e27c27-e402-43bc-8245-3a23dd49130b
-title: Playattime-Methode
+title: PlayAtTime-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 03fef548c50908e9ad8f2455e6f52de7a4077d27
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 12b9ce5bb84afe84dfa416ed1478a15eb76f901394c615b11e7bb1d0851d67a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106342723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119633550"
 ---
-# <a name="playattime-method"></a>Playattime-Methode
+# <a name="playattime-method"></a>PlayAtTime-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `PlayAtTime` Methode startet die Wiedergabe im aktuellen Titel zur angegebenen Zeit.
+Die `PlayAtTime` -Methode startet die Wiedergabe im aktuellen Titel zum angegebenen Zeitpunkt.
 
 ``` syntax
 MSWebDVD.PlayAtTime(sTime)
@@ -28,10 +28,10 @@ MSWebDVD.PlayAtTime(sTime)
 
 <dl> <dt>
 
-<span id="sTime"></span><span id="stime"></span><span id="STIME"></span>*stime*
+<span id="sTime"></span><span id="stime"></span><span id="STIME"></span>*sTime*
 </dt> <dd>
 
-Gibt die Uhrzeit an, zu der die Wiedergabe als Zeichenfolge gestartet werden soll. Die Zeichenfolge muss das Format "hh: mm: SS: FF" aufweisen (Stunden, Minuten, Sekunden, Rahmen angeben).
+Gibt den Zeitpunkt an, zu dem die Wiedergabe als Zeichenfolge beginnen soll. Die Zeichenfolge muss das Format "hh:mm:ss:ff" aufweisen (mit Angabe von Stunden, Minuten, Sekunden, Frames).
 
 </dd> </dl>
 
@@ -39,11 +39,11 @@ Gibt die Uhrzeit an, zu der die Wiedergabe als Zeichenfolge gestartet werden sol
 
 Kein Rückgabewert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Playattimeingetitle**](playattimeintitle-method.md)
+[**PlayAtTimeInTitle**](playattimeintitle-method.md)
 </dt> </dl>
 
  

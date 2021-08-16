@@ -66,7 +66,7 @@ Nicht alle Geräte können in jedem Modus ausgeführt werden. Das MCIAVI-Gerät 
 
 | Betriebsmodus | MCI-Konstante          |
 |----------------|-----------------------|
-| nicht bereit      | \_MCI-MODUS \_ NICHT \_ BEREIT |
+| nicht bereit      | MCI-MODUS \_ \_ NICHT \_ BEREIT |
 | öffnen           | \_MCI-MODUS \_ GEÖFFNET       |
 | angehalten         | PAUSE IM \_ \_ MCI-MODUS      |
 | Wiedergabe        | WIEDERGABE IM \_ \_ MCI-MODUS       |
@@ -90,7 +90,7 @@ Nicht alle Geräte können in jedem Modus ausgeführt werden. Das MCIAVI-Gerät 
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Überprüft, ob der aufrufende Prozess über Schreibzugriff auf einen Speicherblock verfügt. Andernfalls ruft das Makro das dbgbreak-Makro auf.
+description: Überprüft, ob der aufrufende Prozess Schreibzugriff auf einen Speicherblock hat. Falls nicht, ruft das Makro das DbgBreak-Makro auf.
 ms.assetid: efbb5ca6-0289-487d-b55a-f85b38d0515a
-title: Validatewrite-PTR-Makro (wxdebug. h)
+title: ValidateWritePtr-Makro (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,19 +13,19 @@ api_type:
 - HeaderDef
 api_location:
 - Wxdebug.h
-ms.openlocfilehash: e7c955f31cf9e0bf1050c52b680dfc9b32741bb2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f20739093692977b2560de465b916cac12aeb67e2dbf9a6b9488ef8cd61f544f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359822"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119072124"
 ---
-# <a name="validatewriteptr-macro"></a>Validatewrite-PTR-Makro
+# <a name="validatewriteptr-macro"></a>ValidateWritePtr-Makro
 
-Überprüft, ob der aufrufende Prozess über Schreibzugriff auf einen Speicherblock verfügt. Andernfalls ruft das Makro das [**dbgbreak**](dbgbreak.md) -Makro auf.
+Überprüft, ob der aufrufende Prozess Schreibzugriff auf einen Speicherblock hat. Falls nicht, ruft das Makro das [**DbgBreak-Makro**](dbgbreak.md) auf.
 
 > [!Note]  
-> Dieses Makro ist veraltet. Im Windows SDK für Windows Vista (und höher) führt dieses Makro nichts aus.
+> Dieses Makro ist veraltet. Im Windows SDK für Windows Vista (und höher) führt dieses Makro keine Aktion aus.
 
  
 
@@ -45,14 +45,14 @@ void ValidateWritePtr(
 
 <dl> <dt>
 
-*cker* 
+*P* 
 </dt> <dd>
 
 Zeiger auf einen Speicherblock.
 
 </dd> <dt>
 
-*betrieben* 
+*Cb* 
 </dt> <dd>
 
 Größe des Speicherblocks in Bytes.
@@ -63,9 +63,9 @@ Größe des Speicherblocks in Bytes.
 
 Dieses Makro gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Makro wird ignoriert, es sei denn, Debug, \_ Debug oder vfwrobust wird definiert, wenn die DirectShow-Basisklassen-Header Datei eingeschlossen wird. Dieses Makro kann einen erheblichen Leistungs Aufwand verursachen.
+Dieses Makro wird ignoriert, es sei denn, \_ DEBUG, DEBUG oder VFWROBUST wird definiert, wenn die DirectShow-Basisklassenheaderdatei enthalten ist. Dieses Makro kann erhebliche Leistungskosten haben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,15 +73,15 @@ Dieses Makro wird ignoriert, es sei denn, Debug, \_ Debug oder vfwrobust wird de
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Zeiger Validierungs Makros](pointer-validation-macros.md)
+[Zeigervalidierungsmakros](pointer-validation-macros.md)
 </dt> </dl>
 
  

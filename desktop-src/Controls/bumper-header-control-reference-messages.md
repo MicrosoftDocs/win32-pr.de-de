@@ -1,47 +1,47 @@
 ---
-title: Header Steuerungs Meldungen
-description: Header Steuerungs Meldungen
+title: Headersteuerelementmeldungen
+description: Headersteuerelementmeldungen
 ms.assetid: 77743235-fba5-472c-8a86-065e280c6eeb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 35ab0845e3287ca20b0a91dbf3258d9660d7a796
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 6d9b33a3981465d7d100a0df6a920d16a21cd2d9b7478468fd30254b5c0a8fb3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219350"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916800"
 ---
-# <a name="header-control-messages"></a>Header Steuerungs Meldungen
+# <a name="header-control-messages"></a>Headersteuerelementmeldungen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**HDM- \_ ClearFilter**](hdm-clearfilter.md)
--   [**HDM- \_ kreatedragimage**](hdm-createdragimage.md)
--   [**HDM \_ DeleteItem**](hdm-deleteitem.md)
--   [**HDM- \_ EditFilter**](hdm-editfilter.md)
--   [**HDM \_ getbitmapmargin**](hdm-getbitmapmargin.md)
--   [**HDM \_ getfocuseditem**](hdm-getfocuseditem.md)
--   [**HDM \_ GetImageList**](hdm-getimagelist.md)
--   [**HDM- \_ GetItem**](hdm-getitem.md)
--   [**HDM- \_ GetItemCount**](hdm-getitemcount.md)
--   [**HDM \_ getitemdropdownrect**](hdm-getitemdropdownrect.md)
--   [**HDM- \_ GetItemRect**](hdm-getitemrect.md)
--   [**HDM- \_ getor-Array**](hdm-getorderarray.md)
+-   [**HDM \_ CLEARFILTER**](hdm-clearfilter.md)
+-   [**HDM \_ CREATEDRAGIMAGE**](hdm-createdragimage.md)
+-   [**HDM \_ DELETEITEM**](hdm-deleteitem.md)
+-   [**HDM \_ EDITFILTER**](hdm-editfilter.md)
+-   [**HDM \_ GETBITMAPMARGIN**](hdm-getbitmapmargin.md)
+-   [**HDM \_ GETFOCUSEDITEM**](hdm-getfocuseditem.md)
+-   [**HDM \_ GETIMAGELIST**](hdm-getimagelist.md)
+-   [**HDM \_ GETITEM**](hdm-getitem.md)
+-   [**HDM \_ GETITEMCOUNT**](hdm-getitemcount.md)
+-   [**HDM \_ GETITEMDROPDOWNRECT**](hdm-getitemdropdownrect.md)
+-   [**HDM \_ GETITEMRECT**](hdm-getitemrect.md)
+-   [**HDM \_ GETORDERARRAY**](hdm-getorderarray.md)
 -   [**HDM \_ GETOVERFLOWRECT**](hdm-getoverflowrect.md)
--   [**HDM \_ getunicodeformat**](hdm-getunicodeformat.md)
--   [**HDM- \_ HitTest**](hdm-hittest.md)
--   [**HDM- \_ InsertItem**](hdm-insertitem.md)
--   [**HDM- \_ Layout**](hdm-layout.md)
--   [**HDM \_ Order$ Index**](hdm-ordertoindex.md)
--   [**HDM \_ setbitmapmargin**](hdm-setbitmapmargin.md)
--   [**HDM \_ setfilterchangetimeout**](hdm-setfilterchangetimeout.md)
--   [**HDM \_ setfocuseditem**](hdm-setfocuseditem.md)
--   [**HDM-Ziel \_ Teiler**](hdm-sethotdivider.md)
--   [**HDM \_ SetImageList**](hdm-setimagelist.md)
--   [**HDM \_ -Element**](hdm-setitem.md)
--   [**HDM- \_ abktorarray**](hdm-setorderarray.md)
--   [**HDM- \_ Code Format**](hdm-setunicodeformat.md)
--   [**HDM \_ TranslateAccelerator**](hdm-translateaccelerator.md)
+-   [**HDM \_ GETUNICODEFORMAT**](hdm-getunicodeformat.md)
+-   [**HDM \_ HITTEST**](hdm-hittest.md)
+-   [**HDM \_ INSERTITEM**](hdm-insertitem.md)
+-   [**\_HDM-LAYOUT**](hdm-layout.md)
+-   [**HDM \_ ORDERTOINDEX**](hdm-ordertoindex.md)
+-   [**HDM \_ SETBITMAPMARGIN**](hdm-setbitmapmargin.md)
+-   [**HDM \_ SETFILTERCHANGETIMEOUT**](hdm-setfilterchangetimeout.md)
+-   [**HDM \_ SETFOCUSEDITEM**](hdm-setfocuseditem.md)
+-   [**HDM \_ SETHOTDIVIDER**](hdm-sethotdivider.md)
+-   [**HDM \_ SETIMAGELIST**](hdm-setimagelist.md)
+-   [**HDM \_ SETITEM**](hdm-setitem.md)
+-   [**HDM \_ SETORDERARRAY**](hdm-setorderarray.md)
+-   [**HDM \_ SETUNICODEFORMAT**](hdm-setunicodeformat.md)
+-   [**HDM \_ TRANSLATEACCELERATOR**](hdm-translateaccelerator.md)
 
  
 

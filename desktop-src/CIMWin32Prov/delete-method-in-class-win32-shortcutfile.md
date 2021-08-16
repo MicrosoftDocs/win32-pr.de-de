@@ -1,5 +1,5 @@
 ---
-description: Die Delete WMI class-Methode löscht die im Objekt Pfad angegebene logische Verknüpfungs Datei (oder das Verzeichnis).
+description: Die Delete WMI-Klassenmethode löscht die logische Verknüpfungsdatei (oder das Verzeichnis), die im Objektpfad angegeben ist.
 ms.assetid: 4059eca3-44d9-48a7-b69f-e9598f939266
 ms.tgt_platform: multiple
 title: Delete-Methode der Win32_ShortcutFile-Klasse
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 46ad2ffcd768603d90c86a8d4751e76268a9e919
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b6eed363a10be0f56fa72146e5029ac60e68dd77d596d5fbc58bb7261d18b179
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343977"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119080104"
 ---
-# <a name="delete-method-of-the-win32_shortcutfile-class"></a>Delete-Methode der Win32- \_ shortcutfile-Klasse
+# <a name="delete-method-of-the-win32_shortcutfile-class"></a>Delete-Methode der Win32 \_ ShortcutFile-Klasse
 
-Die **Delete** [WMI class](/windows/desktop/WmiSdk/retrieving-a-class) -Methode löscht die im Objekt Pfad angegebene logische Verknüpfungs Datei (oder das Verzeichnis).
+Die  [Delete WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) löscht die logische Verknüpfungsdatei (oder das Verzeichnis), die im Objektpfad angegeben ist.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert 0 (null) zurück, wenn die Datei erfolgreich gelöscht wurde, und jede andere Zahl gibt einen Fehler an.
+Gibt den Wert 0 (null) zurück, wenn die Datei erfolgreich gelöscht wurde, und eine beliebige andere Zahl, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -63,7 +63,7 @@ Der Zugriff wurde verweigert.
 **8**
 </dt> <dd>
 
-Ein nicht angegebener Fehler ist aufgetreten.
+Es ist ein nicht angegebener Fehler aufgetreten.
 
 </dd> <dt>
 
@@ -112,7 +112,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist eine Freigabe Verletzung aufgetreten.
+Es ist ein Freigabeverstoß aufgetreten.
 
 </dd> <dt>
 
@@ -126,7 +126,7 @@ Die angegebene Startdatei war ungültig.
 **17**
 </dt> <dd>
 
-Eine für den Vorgang erforderliche Berechtigung wird nicht aufrechterhalten.
+Für den Vorgang ist keine Berechtigung erforderlich.
 
 </dd> <dt>
 
@@ -145,20 +145,20 @@ Ein angegebener Parameter ist ungültig.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ shortcutfile**](win32-shortcutfile.md)
+[**Win32 \_ ShortcutFile**](win32-shortcutfile.md)
 </dt> </dl>
 
  

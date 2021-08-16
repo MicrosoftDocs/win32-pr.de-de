@@ -1,7 +1,7 @@
 ---
-description: Bei einer Liste von Medientypen wird von der trymediatypes-Methode versucht, eine Verbindung mit einem dieser Typen abzuschließen.
+description: Bei einer Liste von Medientypen versucht die TryMediaTypes-Methode, eine Verbindung mit einem dieser Typen herzustellen.
 ms.assetid: cc437e44-bc59-494e-8669-7f539353a794
-title: Cbasepin. trymediatypes-Methode (amfilter. h)
+title: CBasePin.TryMediaTypes-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 19b8da39d07b8aae9401bdc6ccf2eecb5d3a1e88
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1a4d4e33ca339c1ade344bb2ca9531bea381d14b4381773673b07e522437e90a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351294"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108620"
 ---
-# <a name="cbasepintrymediatypes-method"></a>Cbasepin. trymediatypes-Methode
+# <a name="cbasepintrymediatypes-method"></a>CBasePin.TryMediaTypes-Methode
 
-Bei einer Liste von Medientypen versucht die- `TryMediaTypes` Methode, eine Verbindung mit einem dieser Typen abzuschließen.
+Bei einer Liste von Medientypen versucht die `TryMediaTypes` -Methode, eine Verbindung mit einem dieser Typen herzustellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,47 +44,47 @@ virtual HRESULT TryMediaTypes(
 
 <dl> <dt>
 
-*preceivepin* 
+*pReceivePin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der empfangenden PIN.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des empfangenden Pins.
 
 </dd> <dt>
 
-*PMT* 
+*Pmt* 
 </dt> <dd>
 
-Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das die möglichen Medientypen einschränkt, oder **null**.
+Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das die möglichen Medientypen einschränkt, oder **NULL**.
 
 </dd> <dt>
 
-*"-ID"* 
+*pEnum* 
 </dt> <dd>
 
-Zeiger auf eine [**ienummediatypes**](/windows/desktop/api/Strmif/nn-strmif-ienummediatypes) -Schnittstelle, die verwendet wird, um die Liste der Medientypen aufzuzählen.
+Zeiger auf eine [**IEnumMediaTypes-Schnittstelle,**](/windows/desktop/api/Strmif/nn-strmif-ienummediatypes) die zum Auflisten der Liste der Medientypen verwendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die werte in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                  | Beschreibung                                       |
 |--------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                         | Erfolg.<br/>                               |
-| <dl> <dt>**VFW \_ E \_ keine \_ akzeptablen \_ Typen**</dt> </dl> | Es wurde kein akzeptabler Medientyp gefunden.<br/> |
+| <dl> <dt>**VFW \_ E \_ KEINE \_ \_ AKZEPTABLEN TYPEN**</dt> </dl> | Es wurde kein zulässiger Medientyp gefunden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für jeden Medientyp, der von der **ienummediatypes** -Schnittstelle zurückgegeben wird, versucht diese Methode, eine Verbindung durch Aufrufen der [**cbasepin::-Verbindungs**](cbasepin-attemptconnection.md) Methode herzustellen.
+Für jeden Medientyp, der von der **IEnumMediaTypes-Schnittstelle** zurückgegeben wird, versucht diese Methode eine Verbindung, indem sie die [**CBasePin::AttemptConnection-Methode**](cbasepin-attemptconnection.md) aufruft.
 
-Wenn der *PMT* -Parameter nicht **null** ist, überspringt die PIN Medientypen, die nicht diesem Typ entsprechen. Der *PMT* -Parameter kann einen partiellen Medientyp angeben. Ein partieller Medientyp weist den Wert GUID \_ NULL für den Haupttyp, den Untertyp oder das Format auf. Der GUID- \_ NULL-Wert stimmt mit einem beliebigen Typ überein, ähnlich dem Wert "Platzhalter".
+Wenn der *pmt-Parameter* ungleich **NULL** ist, überspringt der Pin Medientypen, die nicht mit diesem Typ übereinstimmen. Der *pmt-Parameter* kann einen partiellen Medientyp angeben. Ein partieller Medientyp hat den Wert GUID \_ NULL für den Haupttyp, den Untertyp oder das Format. Der GUID \_ NULL-Wert entspricht einem beliebigen Typ, ähnlich einem Platzhalterwert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,16 +92,16 @@ Wenn der *PMT* -Parameter nicht **null** ist, überspringt die PIN Medientypen, 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

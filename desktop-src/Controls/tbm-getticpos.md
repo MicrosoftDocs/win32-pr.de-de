@@ -1,9 +1,9 @@
 ---
-title: TBM_GETTICPOS Meldung (kommstrg. h)
-description: Ruft die aktuelle physische Position eines Teil Strichs in einer TrackBar ab.
+title: TBM_GETTICPOS (Commctrl.h)
+description: Ruft die aktuelle physische Position eines Teilstrichs in einer Trackleiste ab.
 ms.assetid: a4b0ec32-ef4e-4607-ade1-5e2be02bebe4
 keywords:
-- Windows-Steuerelemente für TBM_GETTICPOS Meldung
+- TBM_GETTICPOS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5bb1346f63e9bb10b919c678373e0e8df0724861
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 56d191034fc1551d4ffc1840498e352e2f3cd82985f1bbc5a7ae8d5350a41fb1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046340"
 ---
-# <a name="tbm_getticpos-message"></a>TBM- \_ GetTicPos-Nachricht
+# <a name="tbm_getticpos-message"></a>TBM \_ GETTICPOS-Nachricht
 
-Ruft die aktuelle physische Position eines Teil Strichs in einer TrackBar ab.
+Ruft die aktuelle physische Position eines Teilstrichs in einer Trackleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Ruft die aktuelle physische Position eines Teil Strichs in einer TrackBar ab.
 *wParam* 
 </dt> <dd>
 
-NULL basierter Index, der einen Teil Strich identifiziert. Die Positionen des ersten und letzten Teil Strichs sind nicht direkt über diese Meldung verfügbar.
+Nullbasierter Index, der ein Teilstrich identifiziert. Die Positionen der ersten und letzten Teilstriche sind nicht direkt über diese Nachricht verfügbar.
 
 </dd> <dt>
 
@@ -45,13 +45,13 @@ Muss Null sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Entfernung in Client Koordinaten vom linken oder oberen Rand des Client Bereichs der TrackBar zum angegebenen Teil Strich zurück. Der Rückgabewert ist die x-Koordinate des Teil Strichs für eine horizontale Trackleiste oder die y-Koordinate für eine vertikale TrackBar. Wenn *wParam* kein gültiger Index ist, ist der Rückgabewert-1.
+Gibt den Abstand in Clientkoordinaten vom linken oder oberen Bereich des Clientbereichs der Trackleiste bis zum angegebenen Teilstrich zurück. Der Rückgabewert ist die x-Koordinate des Teilstrichs für eine horizontale Trackleiste oder die y-Koordinate für eine vertikale Trackbar. Wenn *wParam* kein gültiger Index ist, ist der Rückgabewert -1.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Da der erste und der letzte Teil Strich über diese Nachricht nicht verfügbar sind, werden gültige Indizes von der Tick-Position auf der TrackBar versetzt. Wenn der Unterschied zwischen [**TBM \_ getrangemin**](tbm-getrangemin.md) und [**TBM \_ getrangemax**](tbm-getrangemax.md) kleiner als zwei ist, gibt es keinen gültigen Index, und diese Meldung schlägt fehl.
+Da die ersten und letzten Teilstriche durch diese Meldung nicht verfügbar sind, werden gültige Indizes von ihrer Teilstrichposition auf der Trackleiste versetzt. Wenn der Unterschied [**zwischen TBM \_ GETRANGEMIN**](tbm-getrangemin.md) und [**TBM \_ GETRANGEMAX**](tbm-getrangemax.md) kleiner als zwei ist, gibt es keinen gültigen Index, und diese Meldung wird fehlschlagen.
 
-Im folgenden Beispiel wird die Beziehung zwischen den Ticks auf einer TrackBar, den in dieser Meldung verfügbaren Ticks und ihren Null basierten Indizes veranschaulicht.
+Im Folgenden wird die Beziehung zwischen den Ticks auf einer Trackbar, den durch diese Nachricht verfügbaren Ticks und ihren nullbasierten Indizes veranschaulicht.
 
 ``` syntax
 0 1 2 3 4 5 6 7 8 9    // Tick positions seen on the trackbar.
@@ -65,9 +65,9 @@ Im folgenden Beispiel wird die Beziehung zwischen den Ticks auf einer TrackBar, 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

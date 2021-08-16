@@ -1,6 +1,6 @@
 ---
-title: Zähler Methoden
-description: 'Die Counters-Klasse verfügt über die folgenden Methoden:'
+title: Indikatormethoden
+description: Die Counters-Klasse verfügt über die folgenden Methoden.
 ms.assetid: b6b99590-c992-4505-977d-6c79941137e5
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,23 +9,23 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 8a297680cc3cbbc5e5eabb1ae9bcae81a52e025b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ae1143bbd02bbfb82eb5cdd74e5ab7642e534174bea2c8cb5554b17a8562d2aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310267"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118883418"
 ---
-# <a name="counters-methods"></a>Zähler Methoden
+# <a name="counters-methods"></a>Indikatormethoden
 
-Die [**Counters**](counters.md) -Klasse verfügt über die folgenden Methoden:
+Die [**Counters-Klasse**](counters.md) verfügt über die folgenden Methoden:
 
--   [**Hinzufügen**](counters-add.md)
--   [**Aufgeh**](counters-remove.md)
+-   [**Add**](counters-add.md)
+-   [**Entfernen**](counters-remove.md)
 
- 
+ 
 
- 
+ 
 
 
 

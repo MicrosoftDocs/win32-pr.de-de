@@ -1,6 +1,6 @@
 ---
-title: Schnellstart verwaltetes tracelogging
-description: Im folgenden Abschnitt werden die grundlegenden Schritte zum Hinzufügen von tracelogging zu verwaltetem Code beschrieben.
+title: TraceLogging Managed Schnellstart
+description: Im folgenden Abschnitt werden die grundlegenden Schritte beschrieben, die zum Hinzufügen von TraceLogging zu verwaltetem Code erforderlich sind.
 ms.assetid: E144214D-8DCC-4263-8232-9F468C1A3CC0
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,24 +9,24 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 7108dfc094f3183950dd94e5398263f4bf7cfd5c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: be29e4a1bd6721b8f53dbe2394be3552ca4845143cf948f130ef55e11881b518
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119589240"
 ---
-# <a name="tracelogging-managed-quick-start"></a>Schnellstart verwaltetes tracelogging
+# <a name="tracelogging-managed-quick-start"></a>TraceLogging Managed Schnellstart
 
-Im folgenden Abschnitt werden die grundlegenden Schritte zum Hinzufügen von tracelogging zu verwaltetem Code beschrieben.
+Im folgenden Abschnitt werden die grundlegenden Schritte beschrieben, die zum Hinzufügen von TraceLogging zu verwaltetem Code erforderlich sind.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 -   Windows 10
 
-### <a name="simpletraceloggingexamplecs"></a>SimpleTraceLoggingExample. cs
+### <a name="simpletraceloggingexamplecs"></a>SimpleTraceLoggingExample.cs
 
-In diesem Beispiel wird veranschaulicht, wie tracelogging-Ereignisse protokolliert werden, ohne dass manuell eine separate XML-Datei des Instrumentierungs Manifests erstellt werden muss.
+In diesem Beispiel wird veranschaulicht, wie Ablaufverfolgungsprotokollierungsereignisse protokolliert werden, ohne dass manuell eine separate INSTRUMENTIERUNGsmanifest-XML-Datei erstellt werden muss.
 
 
 ```CSharp
@@ -59,9 +59,9 @@ namespace SimpleTraceLoggingExample
 
 
 
-### <a name="create-the-eventsource"></a>Erstellen der eventSource
+### <a name="create-the-eventsource"></a>Erstellen der EventSource
 
-Bevor Sie Ereignisse protokollieren können, müssen Sie eine Instanz der eventSource-Klasse erstellen. Der erste Konstruktorparameter identifiziert den Namen dieses Anbieters. Der Anbieter wird automatisch für Sie registriert, wie im Beispiel veranschaulicht.
+Bevor Sie Ereignisse protokollieren können, müssen Sie eine Instanz der EventSource-Klasse erstellen. Der erste Konstruktorparameter identifiziert den Namen dieses Anbieters. Der Anbieter wird automatisch für Sie registriert, wie im Beispiel gezeigt.
 
 
 ```CSharp
@@ -70,9 +70,9 @@ Bevor Sie Ereignisse protokollieren können, müssen Sie eine Instanz der eventS
 
 
 
-Die-Instanz ist statisch, da nur jeweils eine Instanz eines bestimmten Anbieters in der Anwendung vorhanden sein sollte.
+Die -Instanz ist statisch, da in Ihrer Anwendung jeweils nur eine Instanz eines bestimmten Anbieters vorhanden sein sollte.
 
-### <a name="log-tracelogging-events"></a>Protokollieren von tracelogging-Ereignissen
+### <a name="log-tracelogging-events"></a>Protokollieren von Ablaufverfolgungsprotokollierungsereignissen
 
 Nachdem der Anbieter erstellt wurde, protokolliert der folgende Code aus dem obigen Beispiel ein einfaches Ereignis.
 
@@ -83,9 +83,9 @@ Nachdem der Anbieter erstellt wurde, protokolliert der folgende Code aus dem obi
 
 
 
-### <a name="log-structured-event-payload-data"></a>Protokollieren strukturierter Ereignis Nutzlastdaten
+### <a name="log-structured-event-payload-data"></a>Protokollieren strukturierter Ereignisnutzlastdaten
 
-Sie können strukturierte Nutzlastdaten definieren, die mit dem Ereignis protokolliert werden. Stellen Sie strukturierte Nutzlastdaten entweder als anonymen Typ oder als Instanz einer Klasse bereit, die mit dem-Attribut kommentiert wurde, `[EventData]` wie im folgenden Beispiel gezeigt.
+Sie können strukturierte Nutzlastdaten definieren, die mit dem Ereignis protokolliert werden. Stellen Sie strukturierte Nutzlastdaten entweder als anonymen Typ oder als Instanz einer Klasse bereit, die mit dem -Attribut versehen wurde, `[EventData]` wie im folgenden Beispiel gezeigt.
 
 
 ```CSharp
@@ -97,7 +97,7 @@ Sie können strukturierte Nutzlastdaten definieren, die mit dem Ereignis protoko
 
 
 
-Sie müssen das- `[EventData]` Attribut zu den von Ihnen definierten Ereignis nutzlastklassen hinzufügen, wie unten gezeigt.
+Sie müssen das `[EventData]` Attribut den Ereignisnutzlastklassen hinzufügen, die Sie wie unten dargestellt definieren.
 
 
 ```CSharp
@@ -111,17 +111,17 @@ Sie müssen das- `[EventData]` Attribut zu den von Ihnen definierten Ereignis nu
 
 
 
-Das-Attribut ersetzt die Notwendigkeit, eine Manifest-Datei manuell zu erstellen, um die Ereignisdaten zu beschreiben. Nun müssen Sie lediglich eine Instanz der-Klasse an die eventSource. Write ()-Methode übergeben, um das Ereignis und zugehörige Nutzlastdaten zu protokollieren.
+Das -Attribut ersetzt die Notwendigkeit, manuell eine Manifestdatei zu erstellen, um die Ereignisdaten zu beschreiben. Nun müssen Sie nur noch eine Instanz der -Klasse an die EventSource.Write()-Methode übergeben, um das Ereignis und die entsprechenden Nutzlastdaten zu protokollieren.
 
 ## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
-Informationen zum Erfassen und Anzeigen von tracelogging-Daten mit den neuesten internen Versionen der Windows Performance Tools (WPT) finden Sie unter [aufzeichnen und anzeigen](tracelogging-record-and-display-tracelogging-events.md) von tracelogging-Ereignissen.
+Informationen zum Erfassen und Anzeigen von TraceLogging-Daten mithilfe der neuesten internen Versionen der Windows Performance Tools (WPT) finden Sie unter Aufzeichnen und Anzeigen von [TraceLogging-Ereignissen.](tracelogging-record-and-display-tracelogging-events.md)
 
-Weitere verwaltete tracelogging-Beispiele finden Sie unter [.net tracelogging-Beispiele](tracelogging-net-examples.md) .
+Weitere verwaltete TraceLogging-Beispiele finden Sie unter Beispiele für die [.NET-Ablaufverfolgung.](tracelogging-net-examples.md)
 
- 
+ 
 
- 
+ 
 
 
 

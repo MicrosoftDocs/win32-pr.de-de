@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie im esentoudef memoryexception-Konstruktor.
-title: Esentoudef memoryexception-Konstruktor
+description: 'Weitere Informationen zu: EsentOutOfMemoryException-Konstruktor'
+title: EsentOutOfMemoryException-Konstruktor
 TOCTitle: 'EsentOutOfMemoryException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentOutOfMemoryException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentoutofmemoryexception.esentoutofmemoryexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d5b047ce116ce40ef7c3d9becbffe8962e796eae
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8c7c4b0d080f335bcb0606ec3bce81460ce542a84ce39a928eaa02c4a25dc1f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352295"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119619890"
 ---
-# <a name="esentoutofmemoryexception-constructor"></a>Esentoudef memoryexception-Konstruktor
+# <a name="esentoutofmemoryexception-constructor"></a>EsentOutOfMemoryException-Konstruktor
 
-Initialisiert eine neue Instanz der esentouesf memoryexception-Klasse.
+Initialisiert eine neue Instanz der EsentOutOfMemoryException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentOutOfMemoryException()
 public EsentOutOfMemoryException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentoudef memoryexception-Klasse](./esentoutofmemoryexception-class.md)
+[EsentOutOfMemoryException-Klasse](./esentoutofmemoryexception-class.md)
 
-[Esentouto fmemoryexception-Member](./esentoutofmemoryexception-members.md)
+[EsentOutOfMemoryException-Member](./esentoutofmemoryexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,11 +1,11 @@
 ---
-title: Imsrdpextendedsettings-Schnittstelle
-description: Wird verwendet, um benannte Eigenschaften für das Client Steuerelement festzulegen und abzurufen.
+title: IMsRdpExtendedSettings-Schnittstelle
+description: Wird zum Festlegen und Abrufen benannter Eigenschaften für das Clientsteuersatz verwendet.
 ms.assetid: b78eebc1-e514-4201-becf-770ee4a15187
 ms.tgt_platform: multiple
 keywords:
-- Imsrdpextendedsettings-Schnittstelle Remotedesktopdienste
-- Imsrdpextendedsettings-Schnittstelle Remotedesktopdienste, beschrieben
+- IMsRdpExtendedSettings-Remotedesktopdienste
+- IMsRdpExtendedSettings-Schnittstelle Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,26 +16,26 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 57dd61a399176f70b66b46b6180d0e10756780f7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 16ec34087b7bb6e943029cb6051a91b30d1ba5e40f01f6cb620735ceb0d14e46
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119058898"
 ---
-# <a name="imsrdpextendedsettings-interface"></a>Imsrdpextendedsettings-Schnittstelle
+# <a name="imsrdpextendedsettings-interface"></a>IMsRdpExtendedSettings-Schnittstelle
 
-Wird verwendet, um benannte Eigenschaften für das Client Steuerelement festzulegen und abzurufen.
+Wird zum Festlegen und Abrufen benannter Eigenschaften für das Clientsteuersatz verwendet.
 
 ## <a name="members"></a>Member
 
-Die **imsrdpextendedsettings** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Imsrdpextendedsettings** verfügt auch über die folgenden Typen von Membern:
+Die **IMsRdpExtendedSettings-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IMsRdpExtendedSettings** verfügt auch über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **imsrdpextendedsettings** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IMsRdpExtendedSettings-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
@@ -57,8 +57,8 @@ Die **imsrdpextendedsettings** -Schnittstelle verfügt über diese Eigenschaften
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                                                                                                                                                                                                                                                                                                                                       |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>                                                                                                                                                                                                                                                                                                                               |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>                                                                                                                                                                                                                                                                                                                               |
-| CLSID<br/>                    | CLSID- \_ MsRdpClient10NotSafeForScripting ist als A0C63C30-F08D-4AB4-907C-34905D770C7D definiert.<br/> CLSID \_ MsRdpClient7NotSafeForScripting ist als 54d38bf 7-b1ef-4479-9674-1bd6ea465258 definiert.<br/> CLSID- \_ MsRdpClient8NotSafeForScripting ist als A3BC03A0-041D-42E3-AD22-882B7865C9C5 definiert.<br/> CLSID \_ MsRdpClient9NotSafeForScripting ist als 8b918b82-7985-4c24-89df-c33ad2bbfbcd definiert.<br/> |
-| IID<br/>                      | IID \_ imsrdpextendedsettings ist definiert als 302d8188-0052-4807-806a-362b628fi9ac5<br/>                                                                                                                                                                                                                                                                                                                            |
+| CLSID<br/>                    | CLSID \_ MsRdpClient10NotSafeForScripting ist als A0C63C30-F08D-4AB4-907C-34905D770C7D definiert.<br/> CLSID \_ MsRdpClient7NotSafeForScripting ist als 54d38bf7-b1ef-4479-9674-1bd6ea465258 definiert.<br/> CLSID \_ MsRdpClient8NotSafeForScripting ist als A3BC03A0-041D-42E3-AD22-882B7865C9C5 definiert.<br/> CLSID \_ MsRdpClient9NotSafeForScripting ist als 8B918B82-7985-4C24-89DF-C33AD2BBFBCD definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpExtendedSettings ist als 302D8188-0052-4807-806A-362B628F9AC5 definiert.<br/>                                                                                                                                                                                                                                                                                                                            |
 
 
 

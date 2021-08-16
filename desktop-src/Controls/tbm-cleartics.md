@@ -1,9 +1,9 @@
 ---
-title: TBM_CLEARTICS Meldung (kommstrg. h)
-description: Entfernt die aktuellen Teil Striche aus einer TrackBar. Diese Meldung entfernt nicht die ersten und letzten Teil Striche, die automatisch von der TrackBar erstellt werden.
+title: TBM_CLEARTICS Meldung (Commctrl.h)
+description: Entfernt die aktuellen Teilstriche aus einer Trackleiste. Diese Meldung entfernt nicht die ersten und letzten Teilstriche, die automatisch von der Trackleiste erstellt werden.
 ms.assetid: 2830497c-2cf0-4068-810c-c05d4e0abb8b
 keywords:
-- Windows-Steuerelemente für TBM_CLEARTICS Meldung
+- TBM_CLEARTICS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a1ecb4f9f931c976b2542a1f263fc069f1eca10
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9390fc45c5b96a7b85d3b1b366e34d24c3b4bf0bc60ec066ead28357bcec1439
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475921"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046770"
 ---
-# <a name="tbm_cleartics-message"></a>TBM- \_ ClearTics-Nachricht
+# <a name="tbm_cleartics-message"></a>TBM \_ CLEARTICS-Meldung
 
-Entfernt die aktuellen Teil Striche aus einer TrackBar. Diese Meldung entfernt nicht die ersten und letzten Teil Striche, die automatisch von der TrackBar erstellt werden.
+Entfernt die aktuellen Teilstriche aus einer Trackleiste. Diese Meldung entfernt nicht die ersten und letzten Teilstriche, die automatisch von der Trackleiste erstellt werden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Entfernt die aktuellen Teil Striche aus einer TrackBar. Diese Meldung entfernt n
 *wParam* 
 </dt> <dd>
 
-Flag neu zeichnen. Wenn dieser Parameter **true** ist, wird die TrackBar neu gezeichnet, nachdem die Teil Striche gelöscht wurden. Wenn dieser Parameter **false** ist, löscht die Nachricht die Teil Striche, aber die TrackBar wird nicht neu gezeichnet.
+Neu gezeichnetes Flag. Wenn dieser Parameter **TRUE** ist, wird die Trackleiste neu gezeichnet, nachdem die Teilstriche gelöscht wurden. Wenn dieser Parameter **FALSE** ist, löscht die Nachricht die Teilstriche, zeichnet die Trackleiste jedoch nicht neu.
 
 </dd> <dt>
 
@@ -49,9 +49,9 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

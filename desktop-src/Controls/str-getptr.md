@@ -3,7 +3,7 @@ title: Str_GetPtr-Funktion
 description: Kopiert eine Zeichenfolge von einem Puffer in einen anderen.
 ms.assetid: a3dd55a0-3f8b-4d6c-9956-666bebc3ab8d
 keywords:
-- Windows-Steuerelemente Str_GetPtr-Funktion
+- Str_GetPtr-Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fec99bb4d91bde86d901c0e7ed4761bafd15f3a5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 77c76ad276f6cb6dfc12bc272fbbc86c83617a0d00d36d77cf2ab0ca113811d7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740512"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919450"
 ---
 # <a name="str_getptr-function"></a>Str \_ GetPtr-Funktion
 
-\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Sie wird möglicherweise in nachfolgenden Versionen von Windows geändert oder ist nicht verfügbar.\]
+\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Sie kann in nachfolgenden Versionen von geändert oder nicht verfügbar Windows.\]
 
 Kopiert eine Zeichenfolge von einem Puffer in einen anderen.
 
@@ -46,30 +46,30 @@ int WINAPI Str_GetPtr(
 
 <dl> <dt>
 
-*pszsource* \[ in\]
+*pszSource* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCTSTR**](/windows/desktop/WinProg/windows-data-types)**
 
-Ein Zeiger auf eine Quell Zeichenfolge.
+Ein Zeiger auf eine Quellzeichenfolge.
 
 </dd> <dt>
 
-*pszdest* \[ in, out\]
+*pszDest* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](/windows/desktop/WinProg/windows-data-types)**
 
-Ein Zeiger auf den Ziel Puffer. Dieser Wert kann **null** sein.
+Ein Zeiger auf den Zielpuffer. Dieser Wert kann NULL **sein.**
 
 </dd> <dt>
 
-*cchdest* \[ in\]
+*cchDest* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Die Größe von *pszdest* in Zeichen.
+Die Größe von *pszDest* in Zeichen.
 
 </dd> </dl>
 
@@ -77,15 +77,15 @@ Die Größe von *pszdest* in Zeichen.
 
 Typ: **int**
 
-Wenn *pszdest* gleich NULL oder *cchdest* gleich NULL ist, wird die Größe des Puffers in Zeichen zurückgegeben, die eine mit NULL endenden Kopie der Zeichenfolge enthalten muss, auf die von *pszsource* **verwiesen wird.**
+Wenn *pszDest* NULL oder *cchDest* 0 (null) ist, gibt die Größe des Puffers in Zeichen zurück, die eine auf **NULL** terminierte Kopie der Zeichenfolge enthalten muss, auf die *pszSource zeigt.*
 
-Wenn *pszdest* nicht **null** ist, wird die Anzahl der erfolgreich kopierten Zeichen zurückgegeben, einschließlich des abschließenden NULL-Zeichens.
+Wenn *pszDest* nicht NULL **ist,** gibt die Anzahl der erfolgreich kopierten Zeichen zurück, einschließlich des beendenden NULL-Zeichens.
 
-Wenn *pszdest* nicht die gesamte Zeichenfolge enthalten kann, auf die *pszsource* zeigt, werden (*cchdest*-1) Zeichen kopiert, die Zeichenfolge mit NULL-terminiert und *cchdest* zurückgegeben.
+Wenn *pszDest* nicht die gesamte Zeichenfolge enthalten kann, auf die *pszSource* zeigt, werden (*cchDest*-1) Zeichen kopiert, die Zeichenfolge mit NULL-Terminierung und *cchDest* zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Str \_ GetPtr** ist als ANSI-(**Str \_ getptra**) und Unicode-Versionen (**Str \_ getptrw**) verfügbar. Diese Funktionen werden nicht nach Namen exportiert oder in einer öffentlichen Header Datei deklariert. Um Sie verwenden zu können, müssen Sie [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) und Request Ordnungszahl 233 (**Str \_ getptra**) oder 235 (**Str \_ getptrw**) aus ComCtl32.dll verwenden, um einen Funktionszeiger zu erhalten.
+**Str \_ GetPtr ist** als ANSI- (**Str \_ GetPtrA**) und Unicode-Versionen (**Str \_ GetPtrW**) verfügbar. Diese Funktionen werden nicht nach Namen exportiert oder in einer öffentlichen Headerdatei deklariert. Um sie zu verwenden, müssen Sie [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden und die Ordnungszahl 233 (**Str \_ GetPtrA**) oder 235 (**Str \_ GetPtrW**) von ComCtl32.dll anfordern, um einen Funktionszeiger zu erhalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,10 +93,10 @@ Wenn *pszdest* nicht die gesamte Zeichenfolge enthalten kann, auf die *pszsource
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>ComCtl32.dll</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Str \_ Getptrw** (Unicode) und **Str \_ getptra** (ANSI)<br/>                       |
+| Unicode- und ANSI-Name<br/>   | **Str \_ GetPtrW** (Unicode) und **Str \_ GetPtrA** (ANSI)<br/>                       |
 
 
 

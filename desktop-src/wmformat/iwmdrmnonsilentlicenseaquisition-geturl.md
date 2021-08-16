@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmnonsilentlicenseaquisition getURL-Methode (wmdrmsdk. h)
-description: Die getURL-Methode ruft die URL ab, an die die Lizenz Herausforderung gesendet werden soll.
+title: IWMDRMNonSilentLicenseAquisition GetURL-Methode (Wmdrmsdk.h)
+description: Die GetURL-Methode ruft die URL ab, an die die Lizenzaufforderung gesendet werden soll.
 ms.assetid: f65f1984-74bc-4cd0-957e-930aa6a6f6a5
 keywords:
-- GetURL-Methode Windows Media-Format
-- GetURL-Methode Windows Media-Format, iwmdrmnonsilentlicenseaquisition-Schnittstelle
-- Iwmdrmnonsilentlicenseaquisition-Schnittstelle Windows Media-Format, getURL-Methode
+- GetURL-Methode windows Media Format
+- GetURL-Methodenfenster Media Format , IWMDRMNonSilentLicenseAquisition-Schnittstelle
+- IWMDRMNonSilentLicenseAquisition-Schnittstelle windows Media Format , GetURL-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 79212d19d7dbf4a66e2b72dcbdeba9262a9aeddd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b7979d82363b21b58563a606c31a99d069a60a3bc5b2da162a7339513c2867bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364604"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119084707"
 ---
-# <a name="iwmdrmnonsilentlicenseaquisitiongeturl-method"></a>Iwmdrmnonsilentlicenseaquisition:: getURL-Methode
+# <a name="iwmdrmnonsilentlicenseaquisitiongeturl-method"></a>IWMDRMNonSilentLicenseAquisition::GetURL-Methode
 
-Die **getURL** -Methode ruft die URL ab, an die die Lizenz Herausforderung gesendet werden soll.
+Die **GetURL-Methode** ruft die URL ab, an die die Lizenzaufforderung gesendet werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ HRESULT GetURL(
 
 <dl> <dt>
 
-*pbstrinurl* \[ vorgenommen\]
+*pbstrURL* \[ out\]
 </dt> <dd>
 
 Adresse einer Variablen, die die URL empfängt.
@@ -52,7 +52,7 @@ Adresse einer Variablen, die die URL empfängt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -74,16 +74,16 @@ Keine.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmnonsilentlicenseaquisition-Schnittstelle**](iwmdrmnonsilentlicenseaquisition.md)
+[**IWMDRMNonSilentLicenseAquisition-Schnittstelle**](iwmdrmnonsilentlicenseaquisition.md)
 </dt> </dl>
 
  

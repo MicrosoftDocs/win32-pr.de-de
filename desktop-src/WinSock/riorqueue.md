@@ -1,19 +1,19 @@
 ---
-description: Gibt einen socketdeskriptor an, der von Sende-und Empfangs Anforderungen mit den Winsock-registrierten e/a-Erweiterungen verwendet wird.
+description: Gibt einen Socketdeskriptor an, der von Sende- und Empfangsanforderungen mit den bei Winsock registrierten E/A-Erweiterungen verwendet wird.
 ms.assetid: 50E9516C-6078-4466-A593-3F29E4783740
-title: RIO_RQ (mtausockdef. h)
+title: RIO_RQ (Mswsockdef.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c25abebbe40842532f3cca180868b5b3786e756d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 162b87d1ae320bfa0e74f08e5a0ef7493c053f39573249246e8b2884e74f599c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344739"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118993580"
 ---
-# <a name="rio_rq"></a>Rio \_ RQ
+# <a name="rio_rq"></a>RIO \_ RQ
 
-Die **Rio \_ RQ** -typedef gibt einen socketdeskriptor an, der von Sende-und Empfangs Anforderungen mit den Winsock-registrierten e/a-Erweiterungen verwendet wird.
+Die **\_ RQ-Typedef** von RIO gibt einen Socketdeskriptor an, der von Sende- und Empfangsanforderungen mit den bei Winsock registrierten E/A-Erweiterungen verwendet wird.
 
 
 ```C++
@@ -24,25 +24,25 @@ typedef struct RIO_RQ_t* RIO_RQ, **PRIO_RQ;
 
 <dl> <dt>
 
-**Rio \_ RQ**
+**RIO \_ RQ**
 </dt> <dd>
 
-Ein Datentyp, der einen von Sende-und Empfangs Anforderungen verwendeten socketdeskriptor angibt.
+Ein Datentyp, der einen Socketdeskriptor angibt, der von Sende- und Empfangsanforderungen verwendet wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die registrierten Winsock-e/a-Erweiterungen arbeiten hauptsächlich auf einem **Rio- \_ RQ** -Objekt und nicht auf einem Socket. Eine Anwendung erhält einen **Rio \_ RQ** für einen vorhandenen Socket mithilfe der " [**riokreaterequestqueue**](/windows/win32/api/mswsock/nc-mswsock-lpfn_riocreaterequestqueue) "-Funktion. Der Eingabe Socket muss durch Aufrufen der [**wsasocket**](/windows/desktop/api/Winsock2/nf-winsock2-wsasocketa) -Funktion erstellt worden sein, wobei das **WSA- \_ Flag " \_ Rio** " im Parameter " *dwFlags* " festgelegt ist.
+Die bei Winsock registrierten E/A-Erweiterungen arbeiten in erster Linie mit einem **\_ RQ-Objekt** von AME anstelle eines Sockets. Eine Anwendung erhält mithilfe der [**FUNKTION RIOCreateRequestQueue**](/windows/win32/api/mswsock/nc-mswsock-lpfn_riocreaterequestqueue) eine **RIO \_ RQ** für einen vorhandenen Socket. Der Eingabesocket muss erstellt worden sein, indem die [**WSASocket-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-wsasocketa) mit dem im *dwFlags-Parameter* festgelegten **Flag WSA \_ FLAG FLAG \_ ERSTELLT** wurde.
 
-Nachdem Sie ein **Rio- \_ RQ** -Objekt abgerufen haben, bleibt der zugrunde liegende socketdeskriptor gültig. Eine Anwendung kann den zugrunde liegenden Socket weiterhin verwenden, um Socketoptionen festzulegen und abzufragen, IOCTLs auszugeben und schließlich den Socket zu schließen.
+Nach dem Abrufen eines **RIO \_ RQ-Objekts** bleibt der zugrunde liegende Socketdeskriptor gültig. Eine Anwendung verwendet möglicherweise weiterhin den zugrunde liegenden Socket zum Festlegen und Abfragen von Socketoptionen, gibt IOCTLs aus und schließt schließlich den Socket.
 
 > [!Note]  
-> Der Zugriff auf die Vervollständigungs Warteschlangen ([**Rio- \_ CQ**](riocqueue.md) -Strukturen) und Anforderungs Warteschlangen (**Rio \_ RQ** -Strukturen) werden aus Gründen der Effizienz nicht durch Synchronisierungs primitive geschützt. Wenn Sie von mehreren Threads auf eine Vervollständigungs-oder Anforderungs Warteschlange zugreifen müssen, sollte der Zugriff durch einen kritischen Abschnitt, eine schlanke Schreibsperre für Lesevorgänge oder einen ähnlichen Mechanismus koordiniert werden. Diese Sperrung wird nicht für den Zugriff durch einen einzelnen Thread benötigt. Verschiedene Threads können ohne Sperren auf separate Anforderungen/Vervollständigungs Warteschlangen zugreifen. Die Synchronisierung ist nur dann erforderlich, wenn mehrere Threads versuchen, auf dieselbe Warteschlange zuzugreifen. Die Synchronisierung ist auch erforderlich, wenn von mehreren Threads im gleichen Socket gesendet und empfangen wird, da die Sende-und Empfangs Vorgänge die Anforderungs Warteschlange des Sockets verwenden.
+> Aus Effizienzgründen wird der Zugriff auf die Vervollständigungswarteschlangen [**(RIO \_ CQ-Strukturen)**](riocqueue.md) und Anforderungswarteschlangen **(RIO \_ RQ-Strukturen)** nicht durch Synchronisierungsprimitiven geschützt. Wenn Sie von mehreren Threads aus auf eine Abschluss- oder Anforderungswarteschlange zugreifen müssen, sollte der Zugriff von einem kritischen Abschnitt, einer Schreibsperre für Den Reader oder einem ähnlichen Mechanismus koordiniert werden. Diese Sperrung ist für den Zugriff durch einen einzelnen Thread nicht erforderlich. Verschiedene Threads können ohne Sperren auf separate Anforderungen/Vervollständigungswarteschlangen zugreifen. Die Synchronisierung ist nur erforderlich, wenn mehrere Threads versuchen, auf dieselbe Warteschlange zu zugreifen. Eine Synchronisierung ist auch erforderlich, wenn mehrere Threads über denselben Socket senden und empfangen, da die Sende- und Empfangsvorgänge die Anforderungswarteschlange des Sockets verwenden.
 
  
 
-Die [**Rio \_ RQ**](riocqueue.md) -TypeDef ist in der Header Datei " *mgosockdef. h* " definiert, die automatisch in der Header Datei " *mgosock. h* " enthalten ist. Die Header Datei " *mtausockdef. h* " sollte niemals direkt verwendet werden.
+Die [**\_ TYPDEFINITION FÜR DIE RQ**](riocqueue.md) wird in der *Headerdatei "Mswsockdef.h"* definiert, die automatisch in der *Headerdatei "Mswsock.h"* enthalten ist. Die *Headerdatei "Mswsockdef.h"* sollte nie direkt verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,35 +50,35 @@ Die [**Rio \_ RQ**](riocqueue.md) -TypeDef ist in der Header Datei " *mgosockdef
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                                  |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                        |
-| Header<br/>                   | <dl> <dt>Mtausockdef. h (Include mtausock. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                                  |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                        |
+| Header<br/>                   | <dl> <dt>Mswsockdef.h (einschließlich Mswsock.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Riokreaterequestqueue**](/windows/win32/api/mswsock/nc-mswsock-lpfn_riocreaterequestqueue)
+[**RIOCreateRequestQueue**](/windows/win32/api/mswsock/nc-mswsock-lpfn_riocreaterequestqueue)
 </dt> <dt>
 
-[**Rioreceive**](/windows/win32/api/mswsock/nc-mswsock-lpfn_rioreceive)
+[**RIOReceive**](/windows/win32/api/mswsock/nc-mswsock-lpfn_rioreceive)
 </dt> <dt>
 
-[**Rioreceiveex**](/windows/win32/api/mswsock/nc-mswsock-lpfn_rioreceiveex)
+[**RIOReceiveEx**](/windows/win32/api/mswsock/nc-mswsock-lpfn_rioreceiveex)
 </dt> <dt>
 
-[**Rioresizerequestqueue**](/previous-versions/windows/desktop/legacy/hh437204(v=vs.85))
+[**RIOResizeRequestQueue**](/previous-versions/windows/desktop/legacy/hh437204(v=vs.85))
 </dt> <dt>
 
-[**Randalisend**](/windows/win32/api/mswsock/nc-mswsock-lpfn_riosend)
+[**RIOSend**](/windows/win32/api/mswsock/nc-mswsock-lpfn_riosend)
 </dt> <dt>
 
-[**Riosendex**](/previous-versions/windows/desktop/legacy/hh437216(v=vs.85))
+[**RIOSendEx**](/previous-versions/windows/desktop/legacy/hh437216(v=vs.85))
 </dt> <dt>
 
-[**Wsasocket**](/windows/desktop/api/Winsock2/nf-winsock2-wsasocketa)
+[**WSASocket**](/windows/desktop/api/Winsock2/nf-winsock2-wsasocketa)
 </dt> </dl>
 
  

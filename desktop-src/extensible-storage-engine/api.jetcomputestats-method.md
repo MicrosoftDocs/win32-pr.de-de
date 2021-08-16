@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. jetcomputestats-Methode'
-title: API. jetcomputestats-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetComputeStats-Methode'
+title: Api.JetComputeStats-Methode
 TOCTitle: 'JetComputeStats method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetComputeStats(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetcomputestats(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2b102aca5971656232fae02684aeab30322d208b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 878265cb51614e8b3f56974882773de13fc8389fe8aa8522b018a6e50f3af433
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983450"
 ---
-# <a name="apijetcomputestats-method"></a>API. jetcomputestats-Methode
+# <a name="apijetcomputestats-method"></a>Api.JetComputeStats-Methode
 
-Führt jeden Index einer Tabelle aus, um die Anzahl der Einträge in einem Index und die Anzahl der unterschiedlichen Schlüssel in einem Index exakt zu berechnen. Diese Informationen werden in Verbindung mit der Anzahl von Datenbankseiten, die für einen Index zugeordnet sind, und dem aktuellen Zeitpunkt der Berechnung in den Index Metadaten in der Datenbank gespeichert. Diese Daten können anschließend mit Informations Vorgängen abgerufen werden.
+Durchfingt jeden Index einer Tabelle, um die Anzahl der Einträge in einem Index und die Anzahl der unterschiedlichen Schlüssel in einem Index genau zu berechnen. Diese Informationen werden zusammen mit der Anzahl der Datenbankseiten, die einem Index zugeordnet sind, und der aktuellen Zeit der Berechnung in Indexmetadaten in der Datenbank gespeichert. Diese Daten können anschließend mit Informationsvorgängen abgerufen werden.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,24 +60,24 @@ public static void JetComputeStats(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
     Die Tabelle, für die die Statistiken berechnet werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

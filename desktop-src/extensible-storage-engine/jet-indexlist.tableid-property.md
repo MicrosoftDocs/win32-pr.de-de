@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INDEXLIST. TableID-Eigenschaft'
-title: JET_INDEXLIST. TableID-Eigenschaft
+description: 'Weitere Informationen zu: JET_INDEXLIST.tableid-Eigenschaft'
+title: JET_INDEXLIST.tableid-Eigenschaft
 TOCTitle: 'tableid property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_INDEXLIST.tableid
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_indexlist.tableid(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b680562a9a43162ffb82a726a410632774e39c86
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a8c1da6b96f0ce842d7287e7f674db07bfd875a83669548de499ddc12de80825
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118980210"
 ---
-# <a name="jet_indexlisttableid-property"></a>JET_INDEXLIST. TableID-Eigenschaft
+# <a name="jet_indexlisttableid-property"></a>JET_INDEXLIST.tableid-Eigenschaft
 
-Ruft TableID der temporären Tabelle ab. Dies sollte geschlossen werden, wenn die Tabelle nicht mehr benötigt wird.
+Ruft tableid der temporären Tabelle ab. Dieser sollte geschlossen werden, wenn die Tabelle nicht mehr benötigt wird.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public JET_TABLEID tableid { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_INDEXLIST-Klasse](./jet-indexlist-class.md)
 
-[Mitglieder JET_INDEXLIST](./jet-indexlist-members.md)
+[JET_INDEXLIST-Member](./jet-indexlist-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

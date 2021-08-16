@@ -1,5 +1,5 @@
 ---
-description: WMI-Tasks für Ereignisprotokolle Abrufen von Ereignisdaten aus Ereignisprotokoll Dateien und Ausführen von Vorgängen wie sichern oder Löschen von Protokolldateien. Weitere Beispiele finden Sie im technet scriptcenter unter https://www.microsoft.com/technet .
+description: WMI-Tasks für Ereignisprotokolle beziehen Ereignisdaten aus Ereignisprotokolldateien und führen Vorgänge wie das Sichern oder Löschen von Protokolldateien aus. Weitere Beispiele finden Sie im TechNet ScriptCenter unter https://www.microsoft.com/technet .
 ms.assetid: f6d4e68e-d757-44aa-be74-3b26168626b8
 ms.tgt_platform: multiple
 title: 'WMI-Tasks: Ereignisprotokolle '
@@ -10,35 +10,35 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 8fdcfe3f547e58fa60e552abad9867f8556fc8b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ffdb05bd92a7e02c710fd91d73f947f980fc8a170e91871da5cc4284b6910c79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345869"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118815578"
 ---
 # <a name="wmi-tasks-event-logs"></a>WMI-Tasks: Ereignisprotokolle 
 
-WMI-Tasks für Ereignisprotokolle Abrufen von Ereignisdaten aus Ereignisprotokoll Dateien und Ausführen von Vorgängen wie sichern oder Löschen von Protokolldateien. Weitere Beispiele finden Sie im technet scriptcenter unter [https://www.microsoft.com/technet](https://technet.microsoft.com/default.aspx) .
+WMI-Tasks für Ereignisprotokolle beziehen Ereignisdaten aus Ereignisprotokolldateien und führen Vorgänge wie das Sichern oder Löschen von Protokolldateien aus. Weitere Beispiele finden Sie im TechNet ScriptCenter unter [https://www.microsoft.com/technet](https://technet.microsoft.com/default.aspx) .
 
-In den in diesem Thema gezeigten Skript Beispielen werden nur Daten vom lokalen Computer abgerufen. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remote Computern finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md).
+Die in diesem Thema gezeigten Skriptbeispiele beziehen nur Daten vom lokalen Computer. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remotecomputern finden Sie unter Herstellen einer Verbindung [mit WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md)
 
 
-Im folgenden Verfahren wird die Vorgehensweise zum Ausführen eines Skripts beschrieben.
+Im folgenden Verfahren wird das Ausführen eines Skripts beschrieben.
 
 **So führen Sie ein Skript aus**
 
-1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung. vb, z. b. *filename.vbs*. Stellen Sie sicher, dass der Text-Editor der Datei keine Erweiterung ". txt" hinzufügt.
-2.  Öffnen Sie ein Eingabe Aufforderungs Fenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
-3.  Geben Sie **cscript-filename.vbs** an der Eingabeaufforderung ein.
-4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie von einer Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokolle, z. b. das Sicherheits Ereignisprotokoll, werden möglicherweise durch die Benutzer Zugriffs Steuerung (User Access Control, UAC) geschützt.
+1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung .vbs, z. *B.filename.vbs*. Stellen Sie sicher, dass Ihr Text-Editor der .txt keine Erweiterung hinzufüge.
+2.  Öffnen Sie ein Eingabeaufforderungsfenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
+3.  Geben **Sie cscript filename.vbs** eingabeaufforderung ein.
+4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie über eine Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokollen, z. B. das Sicherheitsereignisprotokoll, können durch Benutzerzugriffssteuerungen (User Access Controls, UAC) geschützt werden.
 
 > [!Note]  
-> Cscript zeigt standardmäßig die Ausgabe eines Skripts im Eingabe Aufforderungs Fenster an. Da WMI-Skripts große Mengen an Ausgaben verursachen können, empfiehlt es sich, die Ausgabe in eine Datei umzuleiten. Geben Sie an der Eingabeaufforderung **cscript filename.vbs > outfile.txt** ein, um die Ausgabe des *filename.vbs* Skripts in *outfile.txt* umzuleiten.
+> Standardmäßig zeigt cscript die Ausgabe eines Skripts im Eingabeaufforderungsfenster an. Da WMI-Skripts große Mengen an Ausgabe erzeugen können, sollten Sie die Ausgabe an eine Datei umleiten. Geben **Sie cscript filename.vbs > outfile.txt** eingabeaufforderung ein, um  die Ausgabe des skriptsfilename.vbsan *outfile.txt.*
 
  
 
-In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen verschiedener Datentypen auf dem lokalen Computer verwendet werden können.
+In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen verschiedener Datentypen vom lokalen Computer verwendet werden können.
 
 
 
@@ -50,13 +50,13 @@ In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen vers
 <thead>
 <tr class="header">
 <th>Vorgehensweisen</th>
-<th>WMI-Klassen oder-Methoden</th>
+<th>WMI-Klassen oder -Methoden</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>... Abrufen von Informationen über das Sicherheits Ereignisprotokoll</td>
-<td>Fügen Sie beim Herstellen einer Verbindung mit der <a href="/previous-versions/windows/desktop/legacy/aa394225(v=vs.85)"><strong>Win32_NTEventlogFile</strong></a> -Klasse die <a href="privilege-constants.md">Sicherheits</a> Berechtigung ein. Weitere Informationen finden Sie unter <a href="executing-privileged-operations-using-vbscript.md">Ausführen von privilegierten Vorgängen mit VBScript</a>.<br/> <span data-codelanguage="VisualBasic"></span>
+<td>... Informationen zum Sicherheitsereignisprotokoll abrufen?</td>
+<td>Schließen Sie <a href="privilege-constants.md">die Sicherheitsberechtigung</a> ein, wenn Sie eine Verbindung mit der <a href="/previous-versions/windows/desktop/legacy/aa394225(v=vs.85)"><strong>Win32_NTEventlogFile</strong></a> herstellen. Weitere Informationen finden Sie unter <a href="executing-privileged-operations-using-vbscript.md">Ausführen privilegierter Vorgänge mit VBScript.</a><br/> <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -108,8 +108,8 @@ foreach ($objLogFile in $colLogFiles)
 </td>
 </tr>
 <tr class="even">
-<td>... Sichern eines Ereignis Protokolls</td>
-<td><p>Verwenden Sie die <a href="/previous-versions/windows/desktop/legacy/aa394225(v=vs.85)"><strong>Win32_NTEventlogFile</strong></a> -Klasse und die <a href="/previous-versions/windows/desktop/eventlogprov/backupeventlog-method-in-class-win32-nteventlogfile"><strong>backupeer-Log</strong></a> -Methode. Beim Herstellen einer Verbindung mit WMI müssen Sie möglicherweise die <a href="privilege-constants.md">Sicherungs</a> Berechtigung einschließen. Weitere Informationen finden Sie unter <a href="executing-privileged-operations-using-vbscript.md">Ausführen von privilegierten Vorgängen mit VBScript</a>.</p>
+<td>... Ein Ereignisprotokoll sichern?</td>
+<td><p>Verwenden Sie <a href="/previous-versions/windows/desktop/legacy/aa394225(v=vs.85)"><strong>Win32_NTEventlogFile</strong></a> -Klasse und die <a href="/previous-versions/windows/desktop/eventlogprov/backupeventlog-method-in-class-win32-nteventlogfile"><strong>BackupEventLog-Methode.</strong></a> Möglicherweise müssen Sie beim Herstellen <a href="privilege-constants.md">einer</a> Verbindung mit WMI die Sicherungsberechtigung verwenden. Weitere Informationen finden Sie unter <a href="executing-privileged-operations-using-vbscript.md">Ausführen privilegierter Vorgänge mit VBScript.</a></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -160,8 +160,8 @@ foreach ($objLogFile in $colLogFiles)
 </div></td>
 </tr>
 <tr class="odd">
-<td>... ein Ereignisprotokoll mehrmals sichern?</td>
-<td><p>Stellen Sie sicher, dass die Sicherungsdatei einen eindeutigen Namen hat, bevor Sie die <a href="/previous-versions/windows/desktop/legacy/aa394225(v=vs.85)"><strong>Win32_NTEventlogFile</strong></a> und die <a href="/previous-versions/windows/desktop/eventlogprov/backupeventlog-method-in-class-win32-nteventlogfile"><strong>backupeer-Log</strong></a> -Methode verwenden. Das Betriebssystem gestattet Ihnen nicht, eine vorhandene Sicherungsdatei zu überschreiben. Sie müssen die Sicherungsdatei entweder verschieben oder umbenennen, bevor Sie das Skript erneut ausführen können. Beim Herstellen einer Verbindung mit WMI müssen Sie möglicherweise die <a href="privilege-constants.md">Sicherungs</a> Berechtigung einschließen. Weitere Informationen finden Sie unter <a href="executing-privileged-operations-using-vbscript.md">Ausführen von privilegierten Vorgängen mit VBScript</a>.</p>
+<td>... ein Ereignisprotokoll mehr als einmal sichern?</td>
+<td><p>Stellen Sie sicher, dass die Sicherungsdatei einen eindeutigen Namen hat, bevor Sie <a href="/previous-versions/windows/desktop/legacy/aa394225(v=vs.85)"><strong>die</strong></a> Win32_NTEventlogFile und die <a href="/previous-versions/windows/desktop/eventlogprov/backupeventlog-method-in-class-win32-nteventlogfile"><strong>BackupEventLog-Methode</strong></a> verwenden. Das Betriebssystem lässt nicht zu, dass Sie eine vorhandene Sicherungsdatei überschreiben. Sie müssen die Sicherungsdatei verschieben oder umbenennen, bevor Sie das Skript erneut ausführen können. Möglicherweise müssen Sie beim Herstellen <a href="privilege-constants.md">einer</a> Verbindung mit WMI die Sicherungsberechtigung verwenden. Weitere Informationen finden Sie unter <a href="executing-privileged-operations-using-vbscript.md">Ausführen privilegierter Vorgänge mit VBScript.</a></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -220,7 +220,7 @@ foreach ($objLogFile in $colLogFiles)
 </tr>
 <tr class="even">
 <td>... bestimmen Sie die Anzahl der Datensätze in einem Ereignisprotokoll?</td>
-<td><p>Verwenden Sie die <a href="/previous-versions/windows/desktop/legacy/aa394225(v=vs.85)"><strong>Win32_NTEventlogFile</strong></a> -Klasse, und überprüfen Sie den Wert der Eigenschaft " <strong>numofrecords</strong> ".</p>
+<td><p>Verwenden Sie <a href="/previous-versions/windows/desktop/legacy/aa394225(v=vs.85)"><strong>Win32_NTEventlogFile</strong></a> -Klasse, und überprüfen Sie den Wert der <strong>NumberOfRecords-Eigenschaft.</strong></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -269,8 +269,8 @@ foreach ($objLogFile in $colLogFiles)
 </div></td>
 </tr>
 <tr class="odd">
-<td>... meine Ereignisprotokolle löschen?</td>
-<td><p>Verwenden Sie die <a href="/previous-versions/windows/desktop/legacy/aa394225(v=vs.85)"><strong>Win32_NTEventlogFile</strong></a> -Klasse und die <a href="/previous-versions/windows/desktop/eventlogprov/cleareventlog-method-in-class-win32-nteventlogfile"><strong>cleareventlog</strong></a> -Methode.</p>
+<td>... Meine Ereignisprotokolle löschen?</td>
+<td><p>Verwenden Sie <a href="/previous-versions/windows/desktop/legacy/aa394225(v=vs.85)"><strong>Win32_NTEventlogFile</strong></a> -Klasse und die <a href="/previous-versions/windows/desktop/eventlogprov/cleareventlog-method-in-class-win32-nteventlogfile"><strong>ClearEventLog-Methode.</strong></a></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -321,8 +321,8 @@ foreach ($objLogFile in $colLogFiles)
 </div></td>
 </tr>
 <tr class="even">
-<td>... Lesen Sie die Ereignisse aus den Ereignisprotokollen?</td>
-<td><p>Verwenden Sie die <a href="/previous-versions/windows/desktop/eventlogprov/win32-ntlogevent"><strong>Win32_NTLogEvent</strong></a> -Klasse.</p>
+<td>... Ereignisse aus den Ereignisprotokollen lesen?</td>
+<td><p>Verwenden Sie <a href="/previous-versions/windows/desktop/eventlogprov/win32-ntlogevent"><strong>die Win32_NTLogEvent-Klasse.</strong></a></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -401,12 +401,12 @@ foreach ($objEvent in $colLoggedEvents)
 
 <dl> <dt>
 
-[WMI-Tasks für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
+[WMI-Aufgaben für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
 </dt> <dt>
 
-[WMI C++ Anwendungsbeispiele](wmi-c---application-examples.md)
+[Beispiele für WMI-C++-Anwendungen](wmi-c---application-examples.md)
 </dt> <dt>
 
-[Technet scriptcenter](https://www.microsoft.com/technet/scriptcenter)
+[TechNet ScriptCenter](https://www.microsoft.com/technet/scriptcenter)
 </dt> </dl>
 

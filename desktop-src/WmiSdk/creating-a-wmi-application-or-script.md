@@ -25,7 +25,7 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine Verbindung mit dem WMI-Die
 
 Diese Vorgänge unterscheiden sich in C++, Visual Basic, .NET Framework Sprachen oder bei Verwendung eines Skripts. Skripts und Visual Basic Anwendungen müssen auf Klassen zugreifen, deren Instanzen von vorhandenen Anbietern mit Daten bereitgestellt werden. In C++ geschriebene Anwendungen können jedoch mehr erreichen. Beispielsweise kann eine in C++ geschriebene Anwendung Ereignisse senden, aber ein WMI-Skript kann nur das Empfangen von Ereignissen abonnieren.
 
-Ein WMI-Anbieter kann nur in C++ oder mithilfe der .NET Framework geschrieben werden. Weitere Informationen zum Schreiben von Anwendungen in C# oder Visual Basic .NET finden Sie unter [WMI .NET Overview](/previous-versions/bb404655(v=vs.90)).
+Ein WMI-Anbieter kann nur in C++ oder mithilfe des .NET Framework geschrieben werden. Weitere Informationen zum Schreiben von Anwendungen in C# oder Visual Basic .NET finden Sie unter [Übersicht über WMI .NET.](/previous-versions/bb404655(v=vs.90))
 
 Weitere Informationen zum Erstellen von Anwendungen und Skripts für WMI finden Sie unter:
 

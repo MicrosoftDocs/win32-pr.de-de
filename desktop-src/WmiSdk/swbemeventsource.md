@@ -1,8 +1,8 @@
 ---
-description: Das Objekt "slibemeventsource" ruft Ereignisse aus einer Ereignis Abfrage in Verbindung mit SWbemServices.Execnotificationquery ab.
+description: Das SWbemEventSource-Objekt ruft Ereignisse aus einer Ereignisabfrage in Verbindung mit SWbemServices.ExecNotificationQuery ab.
 ms.assetid: 7efd5e6a-4311-4d20-8b05-e9208eec098a
 ms.tgt_platform: multiple
-title: Errbemeventsource-Objekt (wbemdisp. h)
+title: SWbemEventSource-Objekt (Wbemdisp.h)
 ms.topic: reference
 ms.date: 09/25/2020
 topic_type:
@@ -15,33 +15,33 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 8da55a7b6722c263fe9a3fb0af7a8db07d672e12
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e38dab258ebccacb24cf92b7445752102b297ab1207b99e40355c30fde99113d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348886"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992140"
 ---
-# <a name="swbemeventsource-object"></a>"Errbemeventsource"-Objekt
+# <a name="swbemeventsource-object"></a>SWbemEventSource-Objekt
 
-Das Objekt " **slibemeventsource** " ruft Ereignisse aus einer Ereignis Abfrage in Verbindung mit [**SWbemServices.Execnotificationquery**](swbemservices-execnotificationquery.md)ab. Sie erhalten ein " **slibemeventsource** "-Objekt, wenn Sie **SWbemServices.Execnotificationquery** aufrufen, um eine Ereignis Abfrage durchführen. Sie können dann die [**NextEvent**](swbemeventsource-nextevent.md) -Methode verwenden, um Ereignisse abzurufen, sobald sie eintreffen. Dieses Objekt kann nicht durch den VBScript-Befehl "up- [Object](/previous-versions//xzysf6hc(v=vs.85)) " erstellt werden.
+Das **SWbemEventSource-Objekt** ruft Ereignisse aus einer Ereignisabfrage in Verbindung mit [**SWbemServices.ExecNotificationQuery**](swbemservices-execnotificationquery.md)ab. Sie erhalten ein **SWbemEventSource-Objekt,** wenn Sie **SWbemServices.ExecNotificationQuery** aufrufen, um eine Ereignisabfrage zu erstellen. Sie können dann die [**NextEvent-Methode**](swbemeventsource-nextevent.md) verwenden, um Ereignisse abzurufen, sobald sie eintreffen. Dieses Objekt kann nicht durch den [VBScript-CreateObject-Aufruf](/previous-versions//xzysf6hc(v=vs.85)) erstellt werden.
 
 ## <a name="members"></a>Member
 
-Das Objekt " **errbemeventsource** " verfügt über diese Typen von Membern:
+Das **SWbemEventSource-Objekt** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Das Objekt " **errbemeventsource** " verfügt über diese Methoden.
+Das **SWbemEventSource-Objekt** verfügt über diese Methoden.
 
 
 
 | Methode                                          | BESCHREIBUNG                                                                                                                                  |
 |:------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
-| [**NextEvent**](swbemeventsource-nextevent.md) | Wird zum Abrufen eines Ereignisses in Verbindung mit [**SWbemServices.Execnotificationquery**](swbemservices-execnotificationquery.md)verwendet.<br/> |
+| [**NextEvent**](swbemeventsource-nextevent.md) | Wird verwendet, um ein Ereignis in Verbindung mit [**SWbemServices.ExecNotificationQuery**](swbemservices-execnotificationquery.md)abzurufen.<br/> |
 
 
 
@@ -49,13 +49,13 @@ Das Objekt " **errbemeventsource** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das Objekt " **errbemeventsource** " verfügt über diese Eigenschaften.
+Das **SWbemEventSource-Objekt** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                    | Zugriffstyp          | BESCHREIBUNG                                              |
 |:------------------------------------------------------------|:---------------------|:---------------------------------------------------------|
-| [**Sicherheit\_**](swbemeventsource-security-.md)<br/> | Schreibgeschützt<br/> | Wird verwendet, um die Sicherheitseinstellungen zu lesen oder zu ändern.<br/> |
+| [**Sicherheit\_**](swbemeventsource-security-.md)<br/> | Schreibgeschützt<br/> | Wird zum Lesen oder Ändern der Sicherheitseinstellungen verwendet.<br/> |
 
 
 
@@ -63,7 +63,7 @@ Das Objekt " **errbemeventsource** " verfügt über diese Eigenschaften.
 
 ## <a name="examples"></a>Beispiele
 
-Dieses Skript verwendet die Methoden der Klasse " **errbemeventsource** " und die Klasse " [**Swap Services**](swbemservices.md) " in Verbindung mit einer WQL-Abfrage für Anwendungs Ereignisse. Weitere Informationen zur WMI-Ereignis Benachrichtigung und zu Abfragen finden Sie unter über [Wachen von Ereignissen](monitoring-events.md), [Ausführen eines Skripts auf der Grundlage eines Ereignisses](running-a-script-based-on-an-event.md)und [empfangen von asynchronen Ereignis Benachrichtigungen](receiving-asynchronous-event-notifications.md).
+Dieses Skript verwendet die Methoden der **SWbemEventSource-Klasse** und der [**SWbemServices-Klasse**](swbemservices.md) in Verbindung mit einer WQL-Abfrage für Anwendungsereignisse. Weitere Informationen zu WMI-Ereignisbenachrichtigungen und -Abfragen finden Sie unter [Überwachen von Ereignissen,](monitoring-events.md) [Ausführen eines Skripts basierend auf einem Ereignis](running-a-script-based-on-an-event.md)und Empfangen von [asynchronen Ereignisbenachrichtigungen.](receiving-asynchronous-event-notifications.md)
 
 
 ```VB
@@ -99,19 +99,19 @@ wend
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID-austauschen von " \_ errbemeventsource"<br/>                                                      |
-| IID<br/>                      | IID \_ iswbemeventsource<br/>                                                       |
+| CLSID<br/>                    | CLSID \_ SWbemEventSource<br/>                                                      |
+| IID<br/>                      | IID \_ ISWbemEventSource<br/>                                                       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[API-Skript Objekte](scripting-api-objects.md)
+[Skripterstellung für API-Objekte](scripting-api-objects.md)
 </dt> </dl>
 
  
