@@ -1,25 +1,25 @@
 ---
-description: Die vom System bereitgestellte standardmäßige duckingfunktion übernimmt alle nicht-Kommunikationsstreams, die im System verfügbar sind, wenn ein Kommunikationsstream geöffnet wird.
+description: Die vom System bereitgestellte Standardverhaltenserfahrung stiert alle im System verfügbaren Nichtkommunikationsstreams, wenn ein Kommunikationsstream geöffnet wird.
 ms.assetid: 1b92574e-7cde-49c0-a68e-223492412361
-title: Implementierungs Überlegungen für Ducking-Benachrichtigungen
+title: Überlegungen zur Implementierung von Benachrichtigungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3de07ea23b7cdc8d726ab68a5a6554bf1713a921
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: f61d7e67bd456e962442f62f59c3119c756258aadd75334e7736cbc69fba0867
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957319"
 ---
-# <a name="implementation-considerations-for-ducking-notifications"></a>Implementierungs Überlegungen für Ducking-Benachrichtigungen
+# <a name="implementation-considerations-for-ducking-notifications"></a>Überlegungen zur Implementierung von Benachrichtigungen
 
-Die vom System bereitgestellte [standardmäßige duckingfunktion](stream-attenuation.md) übernimmt alle nicht-Kommunikationsstreams, die im System verfügbar sind, wenn ein Kommunikationsstream geöffnet wird. Eine Medien Anwendung kann die Standardbehandlung überschreiben, wenn Sie weiß, wann die Kommunikationssitzung beginnt und endet.
+Die [vom System bereitgestellte](stream-attenuation.md) Standardverhaltenserfahrung stiert alle im System verfügbaren Nichtkommunikationsstreams, wenn ein Kommunikationsstream geöffnet wird. Eine Medienanwendung kann die Standardbehandlung überschreiben, wenn sie weiß, wann die Kommunikationssitzung gestartet und beendet wird.
 
-Sehen Sie sich das Szenario an, das von der Medien Anwendung im Beispiel " [duckingmediaplayer](duckingmediaplayer.md) " implementiert wird. Die Anwendung hält den Audiostream an, den Sie wieder gibt, wenn Sie eine Enten Benachrichtigung empfängt, und setzt die Wiedergabe fort, wenn eine unduck-Benachrichtigung empfangen wird. Die Ereignisse zum Anhalten und fortfahren werden in der Benutzeroberfläche der Medien Anwendung widergespiegelt. Dies wird durch zwei von der Anwendung definierte Fenster Meldungen unterstützt: die WM- \_ App- \_ Sitzung ist \_ geduckt und die WM- \_ App-Sitzung ist \_ \_ unverankert Die Ducking-Benachrichtigungen werden asynchron im Hintergrund empfangen, und die Medien Anwendung darf den Benachrichtigungs Thread nicht blockieren, um die Fenster Meldungen zu verarbeiten. Die Fenster Meldungen müssen im Benutzeroberflächen Thread verarbeitet werden.
+Betrachten Sie das Szenario, das von der Medienanwendung im [Beispiel "IngMediaPlayer" implementiert](duckingmediaplayer.md) wird. Die Anwendung hält den Abspieldatenstrom an, wenn sie eine Benachrichtigung empfängt, und setzt die Wiedergabe fort, wenn sie eine Benachrichtigung zum Abdrucken empfängt. Die Pausen- und Fortsetzungsereignisse werden auf der Benutzeroberfläche der Medienanwendung widergespiegelt. Dies wird durch zwei anwendungsdefinierte Fenstermeldungen unterstützt: WM APP SESSION UNBEsädigt \_ und WM APP SESSION \_ \_ \_ \_ \_ UNDUCKED. Die sendenden Benachrichtigungen werden asynchron im Hintergrund empfangen, und die Medienanwendung darf den Benachrichtigungsthread nicht blockieren, um die Fenstermeldungen zu verarbeiten. Die Fenstermeldungen müssen im Benutzeroberflächenthread verarbeitet werden.
 
-Das Ducking-Verhalten funktioniert über einen Benachrichtigungs Mechanismus. Um eine angepasste Benutzeroberfläche bereitzustellen, muss die Medien Anwendung die [**iaudiovolumeducknotification**](/windows/desktop/api/AudioPolicy/nn-audiopolicy-iaudiovolumeducknotification) -Schnittstelle implementieren und die Implementierung beim Audiosystem registrieren. Bei erfolgreicher Registrierung empfängt die Medien Anwendung Ereignis Benachrichtigungen in Form von Rückrufen durch die Methoden in der-Schnittstelle. Der Sitzungs-Manager, der die Kommunikationssitzung verarbeitet, ruft [**iaudiovolumeducknotification:: onvolumeducknotification**](/windows/desktop/api/AudioPolicy/nf-audiopolicy-iaudiovolumeducknotification-onvolumeducknotification) auf, wenn der Kommunikationsstream geöffnet wird, und ruft dann [**iaudiovolumeducknotification:: onvolumeunducknotification**](/windows/desktop/api/AudioPolicy/nf-audiopolicy-iaudiovolumeducknotification-onvolumeunducknotification) auf, wenn der Stream auf dem Kommunikationsgerät geschlossen wird.
+Das Benachrichtigungsverhalten funktioniert über einen Benachrichtigungsmechanismus. Um eine benutzerdefinierte Oberfläche zu bieten, muss die Medienanwendung die [**IAudioVolumeDuckNotification-Schnittstelle**](/windows/desktop/api/AudioPolicy/nn-audiopolicy-iaudiovolumeducknotification) implementieren und die Implementierung beim Audiosystem registrieren. Nach erfolgreicher Registrierung empfängt die Medienanwendung Ereignisbenachrichtigungen in Form von Rückrufen über die Methoden in der Schnittstelle. Der Sitzungs-Manager, der die Kommunikationssitzung verwendet, ruft [**IAudioVolumeDuckNotification::OnVolumeDuckNotification**](/windows/desktop/api/AudioPolicy/nf-audiopolicy-iaudiovolumeducknotification-onvolumeducknotification) auf, wenn der Kommunikationsstream geöffnet wird, und ruft dann [**IAudioVolumeDuckNotification::OnVolumeUnduckNotification**](/windows/desktop/api/AudioPolicy/nf-audiopolicy-iaudiovolumeducknotification-onvolumeunducknotification) auf, wenn der Stream auf dem Kommunikationsgerät geschlossen wird.
 
-Der folgende Code zeigt eine Beispiel Implementierung der [**iaudiovolumeducknotification**](/windows/desktop/api/AudioPolicy/nn-audiopolicy-iaudiovolumeducknotification) -Schnittstelle. Die Definition von cmediaplayer::D uckingoptout finden Sie unter erhalten von Ducking-Ereignissen von einem Kommunikationsgerät.
+Der folgende Code zeigt eine Beispielimplementierung der [**IAudioVolumeDuckNotification-Schnittstelle.**](/windows/desktop/api/AudioPolicy/nn-audiopolicy-iaudiovolumeducknotification) Die Definition von CMediaPlayer::D uckingOptOut finden Sie unter GettingIng Events from a Communication Device (Abrufen von Überschreitungsereignissen von einem Kommunikationsgerät).
 
 
 ```C++
@@ -123,19 +123,19 @@ IFACEMETHODIMP_(ULONG) CMediaPlayer::Release()
 
 <dl> <dt>
 
-[Verwenden eines kommunikationsgeräts](using-the-communication-device.md)
+[Verwenden eines Kommunikationsgeräts](using-the-communication-device.md)
 </dt> <dt>
 
-[Standardmäßiges ducken](stream-attenuation.md)
+[Standardeinstellung für die Beeinschnung](stream-attenuation.md)
 </dt> <dt>
 
-[Deaktivieren der Standardeinstellung für das ducken](disabling-the-ducking-experience.md)
+[Deaktivieren der Standardmäßigen Begeherfahrung](disabling-the-ducking-experience.md)
 </dt> <dt>
 
-[Bereitstellen eines benutzerdefinierten Ducking-Verhaltens](providing-a-custom-ducking-experience.md)
+[Bereitstellen eines benutzerdefinierten Verhaltens bei der Abschüssung](providing-a-custom-ducking-experience.md)
 </dt> <dt>
 
-[Erhalten von Ducking-Ereignissen](getting-ducking-events-from-a-communication-device.md)
+[Getting GettingIng Events (Getting GettingIng Events) (Abrufen](getting-ducking-events-from-a-communication-device.md)
 </dt> </dl>
 
  

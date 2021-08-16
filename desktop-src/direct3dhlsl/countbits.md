@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 357aceca6e2aea261a9e94212b58ff6308c99560
-ms.sourcegitcommit: 435ea8f5bf06808ffa7dce39afb0ee6de842ba2f
+ms.openlocfilehash: 5f3816152b91fd03348e64c7a36dd41e8b620bd5e5ef8f4463538c44ef974485
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2021
-ms.locfileid: "107925623"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118793968"
 ---
 # <a name="countbits-function"></a>countbits-Funktion
 
@@ -51,7 +51,7 @@ Typ: **uint**
 
 Die Anzahl der Bits.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die folgenden überladenen Versionen sind ebenfalls verfügbar:
 
@@ -70,7 +70,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher – Shadermodelle | ja       |
 
 
 
@@ -88,7 +88,7 @@ Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

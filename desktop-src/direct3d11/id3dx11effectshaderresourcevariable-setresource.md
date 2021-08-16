@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectShaderResourceVariable-Methode für die Ziel Quelle (D3dx11effect. h)
+title: ID3DX11EffectShaderResourceVariable SetResource-Methode (D3dx11effect.h)
 description: Legen Sie eine Shaderressource fest.
 ms.assetid: f85c33ff-dc00-4421-939c-74f9317faadc
 keywords:
-- Methode "-tretresource" Direct3D 11
-- Methode ' Direct3D 11 ', ID3DX11EffectShaderResourceVariable-Schnittstelle
-- ID3DX11EffectShaderResourceVariable-Schnittstelle Direct3D 11, Methode "Ziel Quelle"
+- SetResource-Methode Direct3D 11
+- SetResource-Methode Direct3D 11, ID3DX11EffectShaderResourceVariable-Schnittstelle
+- ID3DX11EffectShaderResourceVariable-Schnittstelle Direct3D 11 , SetResource-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ddec6c7daa2db552d6b5befee02bf57c6047dc5a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: cf0db2db1886298633ba70fa9af6ce1d475b5c511487b35e65d20373f8282f3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104356097"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118533438"
 ---
-# <a name="id3dx11effectshaderresourcevariablesetresource-method"></a>ID3DX11EffectShaderResourceVariable:: abtresource-Methode
+# <a name="id3dx11effectshaderresourcevariablesetresource-method"></a>ID3DX11EffectShaderResourceVariable::SetResource-Methode
 
 Legen Sie eine Shaderressource fest.
 
@@ -43,12 +43,12 @@ HRESULT SetResource(
 
 <dl> <dt>
 
-*vorab Quelle* 
+*pResource* 
 </dt> <dd>
 
 Typ: **[ **ID3D11ShaderResourceView**](/windows/desktop/api/D3D11/nn-d3d11-id3d11shaderresourceview)\***
 
-Die Adresse eines Zeigers auf eine Shader-Resource-View-Schnittstelle. Siehe [**ID3D11ShaderResourceView**](/windows/desktop/api/D3D11/nn-d3d11-id3d11shaderresourceview).
+Die Adresse eines Zeigers auf eine Shader-Ressourcenansicht-Schnittstelle. Siehe [**ID3D11ShaderResourceView.**](/windows/desktop/api/D3D11/nn-d3d11-id3d11shaderresourceview)
 
 </dd> </dl>
 
@@ -56,23 +56,23 @@ Die Adresse eines Zeigers auf eine Shader-Resource-View-Schnittstelle. Siehe [**
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 

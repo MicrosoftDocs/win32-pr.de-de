@@ -1,11 +1,11 @@
 ---
-title: Taskfoldercollection. Count-Eigenschaft
-description: Bei der Skripterstellung wird die Anzahl der Ordner in der Auflistung abgerufen.
+title: TaskFolderCollection.Count (Eigenschaft)
+description: Für die Skripterstellung ruft die Anzahl der Ordner in der Auflistung ab.
 ms.assetid: 7e9ef126-aae4-4a28-8313-a20729f30962
 keywords:
-- Count-Eigenschaft Taskplaner
-- Count-Eigenschaft Taskplaner, taskfoldercollection-Objekt
-- Taskfoldercollection-Objekt Taskplaner, Count-Eigenschaft
+- Count-Taskplaner
+- Count-Eigenschaft Taskplaner , TaskFolderCollection-Objekt
+- TaskFolderCollection-Objekt Taskplaner , Count-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a3e1748b8975df3860475627f33bbdd8b08e7573
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8638cc5a515a64d93ff36b47ab3d859d33fc605711da25e961ce799df1e229d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478402"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118858072"
 ---
-# <a name="taskfoldercollectioncount-property"></a>Taskfoldercollection. Count-Eigenschaft
+# <a name="taskfoldercollectioncount-property"></a>TaskFolderCollection.Count (Eigenschaft)
 
-Bei der Skripterstellung wird die Anzahl der Ordner in der Auflistung abgerufen.
+Für die Skripterstellung ruft die Anzahl der Ordner in der Auflistung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,14 +46,14 @@ Die Anzahl der Trigger in der Auflistung.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

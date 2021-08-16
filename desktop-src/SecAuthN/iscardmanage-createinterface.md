@@ -1,7 +1,7 @@
 ---
-description: Erstellt die angegebene-Schnittstelle.
+description: Erstellt die angegebene Schnittstelle.
 ms.assetid: f4cfc407-b006-46a2-9751-834b532309ec
-title: 'Iscardmanage:: up-Methode'
+title: ISCardManage::CreateInterface-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 99a3f7c1acd4266395917b47c81f044d5385b3d2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8c9b231ec7930b78c1693e38268638e7a24b26dfa32d8f25acb5a429dbcdedc1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217330"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118922659"
 ---
-# <a name="iscardmanagecreateinterface-method"></a>Iscardmanage:: up-Methode
+# <a name="iscardmanagecreateinterface-method"></a>ISCardManage::CreateInterface-Methode
 
-\[Die **Methode "** Methode" ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **CreateInterface-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **Methode "** Methode" erstellt die angegebene Schnittstelle.
+Die **CreateInterface-Methode** erstellt die angegebene Schnittstelle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,28 +43,28 @@ HRESULT CreateInterface(
 
 <dl> <dt>
 
-*pguidinterface* \[ in\]
+*pguidInterface* \[ In\]
 </dt> <dd>
 
-Der GUID-Wert der zu erstellenden Schnittstelle.
+Der GUID-Wert der zu erstellende Schnittstelle.
 
 </dd> <dt>
 
-*bstrinname* \[ in\]
+*bstrName* \[ In\]
 </dt> <dd>
 
-Der Name der Schnittstelle, die erstellt werden soll, wenn die GUID nicht verfügbar ist. Standard Werte sind "CryptoProvider".
+Der Name der Schnittstelle, die erstellt werden soll, wenn die GUID nicht verfügbar ist. Standardwerte sind "CryptoProvider".
 
 </dd> <dt>
 
-*puserdata* \[ in\]
+*pUserData* \[ In\]
 </dt> <dd>
 
-Zeiger auf benutzerspezifische Daten, die beim Erstellen einer Schnittstelle verwendet werden sollen.
+Zeiger auf benutzerspezifische Daten, die bei der Erstellung einer Schnittstelle verwendet werden sollen.
 
 </dd> <dt>
 
-*ppinterface* \[ vorgenommen\]
+*ppInterface* \[ out\]
 </dt> <dd>
 
 Zeiger auf die zurückgegebene Schnittstelle.
@@ -80,19 +80,19 @@ Folgende Rückgabewerte sind möglich:
 | Rückgabecode                                                                                   | Beschreibung                                                                                      |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/>                                                     |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Einer der angegebenen Parameter ist ungültig.<br/>                                         |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Ein fehlerhafter Zeiger wurde entweder im *pguidinterface* -oder im *puserdata* -Parameter übergeben.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                                                                        |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Einer der angegebenen Parameter ist ungültig.<br/>                                         |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein ungültiger Zeiger wurde entweder im *pguidInterface-* oder im *pUserData-Parameter* übergeben.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                                                                        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Liste aller Methoden, die von der [**iscardmanage**](iscardmanage.md) -Schnittstelle definiert werden, finden Sie unter **iscardmanage**.
+Eine Liste aller von der [**ISCardManage-Schnittstelle**](iscardmanage.md) definierten Methoden finden Sie unter **ISCardManage.**
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die [*Smartcard*](../secgloss/s-gly.md) zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Informationen zu smartcardfehlercodes finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen [*Smartcardfehlercode*](../secgloss/s-gly.md) zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Informationen zu Smartcard-Fehlercodes finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,18 +100,18 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscardmanage**](iscardmanage.md)
+[**ISCardManage**](iscardmanage.md)
 </dt> </dl>
 
  

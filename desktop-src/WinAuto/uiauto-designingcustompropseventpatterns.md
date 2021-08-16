@@ -73,7 +73,7 @@ Ein benutzerdefiniertes Ereignis sollte den folgenden Entwurfsrichtlinien entspr
 -   Das benutzerdefinierte Ereignis muss "zustandslos" sein. Sie kann keiner bestimmten Eigenschaft oder einem bestimmten Wert zugeordnet werden.
 -   Das benutzerdefinierte Ereignis darf sich nicht mit der Definition oder Rolle eines vorhandenen Ereignisses überschneiden.
 
-### <a name="custom-ui-automation-events-and-winevents"></a>Benutzerdefinierte Benutzeroberflächenautomatisierung Ereignisse und WinEvents
+### <a name="custom-ui-automation-events-and-winevents"></a>Benutzerdefinierte Benutzeroberflächenautomatisierung-Ereignisse und WinEvents
 
 [WinEvents](winevents-infrastructure.md) sind ein nützlicher prozessübergreifender Kommunikations- und Ereignismechanismus auf der Microsoft Windows-Plattform. Die Einführung einer neuen WinEvent-ID ist jedoch riskant, da sie Konflikte mit anderen Anwendungen oder dem Betriebssystem verursachen kann, was dazu führt, dass das System instabil wird. Um Konflikte zu vermeiden, hat Microsoft mehrere verschiedene Kategorien von WinEvents definiert und für jede Kategorie einen oder mehrere Wertebereiche für die Verwendung als WinEvent-IDs definiert. Weitere Informationen finden Sie unter [Zuordnung von WinEvent-IDs.](allocation-of-winevent-ids.md)
 
@@ -91,7 +91,7 @@ Ein benutzerdefiniertes Steuerelementmuster sollte den folgenden Entwurfsrichtli
 
 ## <a name="custom-control-types"></a>Benutzerdefinierte Steuerelementtypen
 
-Obwohl sich dieses Thema auf das Registrieren von benutzerdefinierten Benutzeroberflächenautomatisierung Eigenschaften, Ereignissen und Steuerelementmustern konzentriert, ist es auch möglich, neue Steuerelementtypen einzuführen. Im Gegensatz zu benutzerdefinierten Eigenschaften, Ereignissen und Steuerelementmustern kann ein benutzerdefinierter Steuerelementtyp zur Laufzeit nicht programmgesteuert registriert werden, da es sich tatsächlich nur um einen potenziellen Wert der ControlType-Eigenschaft Benutzeroberflächenautomatisierung handelt. Eine benutzerdefinierte Steuerelementtyp-ID kann jedoch definiert, veröffentlicht und für andere Clients und Anbieter zur Verwendung zur Verfügung gestellt werden. Weitere Informationen zu Steuerelementtypen finden Sie unter Benutzeroberflächenautomatisierung Control Types Overview ( [Übersicht über Steuerelementtypen).](uiauto-controltypesoverview.md)
+Obwohl sich dieses Thema auf das Registrieren von benutzerdefinierten Benutzeroberflächenautomatisierung Eigenschaften, Ereignissen und Steuerelementmustern konzentriert, ist es auch möglich, neue Steuerelementtypen einzuführen. Im Gegensatz zu benutzerdefinierten Eigenschaften, Ereignissen und Steuerelementmustern kann ein benutzerdefinierter Steuerelementtyp zur Laufzeit nicht programmgesteuert registriert werden, da es sich tatsächlich nur um einen potenziellen Wert der ControlType-Eigenschaft Benutzeroberflächenautomatisierung handelt. Eine benutzerdefinierte Steuerelementtyp-ID kann jedoch definiert, veröffentlicht und für andere Clients und Anbieter zur Verwendung zur Verfügung gestellt werden. Weitere Informationen zu Steuerelementtypen finden Sie unter [Benutzeroberflächenautomatisierung Control Types Overview](uiauto-controltypesoverview.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

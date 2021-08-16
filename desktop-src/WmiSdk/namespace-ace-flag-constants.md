@@ -1,5 +1,5 @@
 ---
-description: Die folgende Liste listet die möglichen Werte des Flags-Felds in einem WMI-Access Control Entry (ACE) auf.
+description: Die folgende Liste listet die möglichen Werte des Felds Flags in einem WMI-Access Control Entry (ACE) auf.
 ms.assetid: bd09691d-e285-40e0-8686-edd5a132a06e
 ms.tgt_platform: multiple
 title: Namespace-ACE-Flagkonstanten (Winnt.h)
@@ -27,7 +27,7 @@ ms.locfileid: "118555180"
 ---
 # <a name="namespace-ace-flag-constants"></a>Ace-Flagkonstanten für Namespaces
 
-In der folgenden Liste sind die möglichen Werte des **Felds Flags** in einem WMI-Access Control Entry (ACE) aufgeführt.
+Die folgende Liste listet die möglichen Werte des **Flags-Felds** in einem WMI-Access Control Entry (ACE) auf.
 
 <dl> <dt>
 
@@ -106,7 +106,7 @@ Dies wird nicht von Clients festgelegt, sondern an Clients gemeldet, wenn die Qu
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

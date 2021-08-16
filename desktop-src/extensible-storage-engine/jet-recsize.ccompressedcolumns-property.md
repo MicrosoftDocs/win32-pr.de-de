@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_RECSIZE. ccompressedcolumns-Eigenschaft'
-title: JET_RECSIZE. ccompressedcolumns-Eigenschaft (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen zu: JET_RECSIZE.cCompressedColumns-Eigenschaft'
+title: JET_RECSIZE.cCompressedColumns-Eigenschaft (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'cCompressedColumns property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE.cCompressedColumns
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_recsize.ccompressedcolumns(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 448a18afc5a986fb34128dc4113fddef4448486a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 80a058cc12174b9247524ccd88060a9aa17ba561a95b036010040a4786d0d47c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128209"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118763745"
 ---
-# <a name="jet_recsizeccompressedcolumns-property"></a>JET_RECSIZE. ccompressedcolumns-Eigenschaft
+# <a name="jet_recsizeccompressedcolumns-property"></a>JET_RECSIZE.cCompressedColumns-Eigenschaft
 
-Ruft die Gesamtzahl der Spalten im Datensatz ab, die komprimiert werden.
+Ruft die Gesamtzahl der Spalten im Datensatz ab, die komprimiert sind.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public long cCompressedColumns { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int64](/dotnet/api/system.int64)  
+Typ: [System.Int64](/dotnet/api/system.int64)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_RECSIZE Struktur](./jet-recsize-structure2.md)
+[JET_RECSIZE-Struktur](./jet-recsize-structure2.md)
 
-[Mitglieder JET_RECSIZE](./jet-recsize-members.md)
+[JET_RECSIZE-Member](./jet-recsize-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

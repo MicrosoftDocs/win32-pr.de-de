@@ -1,59 +1,59 @@
 ---
 title: Informationen zu IMAPI
-description: IMAPI ermöglicht die Erstellung von optischen Medien mithilfe verschiedener Dateisysteme.
+description: IMAPI ermöglicht die Erstellung optischer Medien mithilfe einer Vielzahl von Dateisystemen.
 ms.assetid: 12e99e39-8503-4f50-899a-d1ae69d5106d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 88994cd0e79cf65e4e743a8a83bcb58000fab1a0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d669c23899c1610cdb14d8d01e722defd794b1842b64017cc45523d1fd514300
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707109"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118758900"
 ---
 # <a name="about-imapi"></a>Informationen zu IMAPI
 
-IMAPI ermöglicht die Erstellung von optischen Medien mithilfe verschiedener Dateisysteme.
+IMAPI ermöglicht die Erstellung optischer Medien mithilfe einer Vielzahl von Dateisystemen.
 
 ## <a name="features"></a>Features
 
 IMAPI bietet die folgenden Funktionen:
 
--   Erstellt und verbrennt Single-Session-und Multisession-Festplatten.
--   Erstellt und verbrennt Start Bare-CDs.
--   Erstellt und verbrennt unformatierte CD-Disk-at-Once-Bilder.
--   Bietet Zugriff auf niedriger Ebene auf die Burn-Engine zum Entwickeln von Unterstützung für neue Geräte.
--   Bietet Zugriff auf Erweiterte Aufzeichnungs Eigenschaften zum Entwickeln von Unterstützung für neue Geräte.
--   Stellt Optionen für die Verbrauchs Überprüfung bereit.
+-   Erstellt und verwirft Einzelsitzungs- und Multisession-Datenträger.
+-   Erstellt und verwirft startbare Datenträger.
+-   Erstellt und verwirft UNFORMATierte CD-Disc-at-Once-Images.
+-   Bietet Low-Level-Zugriff auf das Burn-Engine für die Entwicklung von Unterstützung für neue Geräte.
+-   Bietet Zugriff auf erweiterte Aufzeichnungseigenschaften für die Entwicklung von Unterstützung für neue Geräte.
+-   Stellt Optionen für die Verätzungsüberprüfung bereit.
 
-IMAPI unterstützt die folgenden Formate. Weitere Informationen finden Sie unter [Disk Formats](disc-formats.md).
+IMAPI unterstützt die folgenden Formate. Weitere Informationen finden Sie unter [Datenträgerformate.](disc-formats.md)
 
--   ISO9660-Bildformat (einschließlich Redbook-Audiodatei).
+-   ISO9660-Bildformat (einschließlich Redbook Audio).
 -   Joliet-Format.
--   UDF (Universal Disk Format).
+-   Universelles Datenträgerformat (UDF).
 
 IMAPI unterstützt die folgenden Mediengeräte.
 
--   Recordable CD (CD-R). Früher als CD Write Once bezeichnet.
--   Reschreibbare CD (CD-RW)
--   Recordable DVD (DVD-R und DVD + R).
--   Reschreibbare DVD (DVD-RW und DVD + RW).
--   Random-Access-DVD (DVD-RAM).
--   Recordable-DVD für Dual Ebenen (in DVD-R-und DVD + R-Formaten).
--   Recordable BD (BD-R)
--   Neu beschreibbares BD (BD-RE)
--   Schreibt auf andere Datenträger-Medien.
+-   Beschreibbare CD (CD-R). Früher bekannt als CD Write Once.
+-   Rewritable CD (CD-RW)
+-   Beschreibbare DVD (DVD-R und DVD+R).
+-   Rewritable DVD (DVD-RW und DVD+RW).
+-   DVD mit wahlfreiem Zugriff (DVD-RAM).
+-   Beschreibbare Dual-Layer-DVD (im DVD-R- und DVD+R-Format).
+-   Beschreibbarer BD (BD-R)
+-   Rewritable BD (BD-RE)
+-   Schreibt auf andere datenträgerähnliche Medien.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Datenträger](disc-formats.md)
+[Datenträgerformate](disc-formats.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

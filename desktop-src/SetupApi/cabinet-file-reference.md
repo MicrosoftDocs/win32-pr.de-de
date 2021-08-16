@@ -1,23 +1,23 @@
 ---
-description: In den folgenden Abschnitten werden die Strukturen, Funktionen und Benachrichtigungen aufgeführt, die mit CAB-Dateien verwendet werden.
+description: In den folgenden Abschnitten werden die Strukturen, Funktionen und Benachrichtigungen aufgeführt, die mit Cab-Dateien verwendet werden.
 ms.assetid: 3edd7773-2f3c-4bd4-8162-8295c97bb11e
-title: CAB-Datei Verweis
+title: Referenz zur Cab-Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e3fc330765f48e09e3a6d269517917ccfbc72410
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2dba3ecad10832df324b4ae02cb0b93e806d36f9ed02ff7226c5b9b7f5549994
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373086"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118887801"
 ---
-# <a name="cabinet-file-reference"></a>CAB-Datei Verweis
+# <a name="cabinet-file-reference"></a>Referenz zur Cab-Datei
 
-In den folgenden Abschnitten sind die Strukturen, Funktionen und Benachrichtigungen aufgeführt, die mit CAB-Dateien verwendet werden:
+In den folgenden Abschnitten werden die Strukturen, Funktionen und Benachrichtigungen aufgeführt, die mit Cab-Dateien verwendet werden:
 
--   [Strukturen der CAB-Datei](cabinet-file-structures.md)
--   [Funktionen der CAB-Datei](cabinet-file-functions.md)
--   [CAB-Datei Benachrichtigungen](cabinet-file-notifications.md)
+-   [Cab-Dateistrukturen](cabinet-file-structures.md)
+-   [Cab-Dateifunktionen](cabinet-file-functions.md)
+-   [Benachrichtigungen zu Cab-Dateien](cabinet-file-notifications.md)
 
  
 

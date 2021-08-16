@@ -1,5 +1,5 @@
 ---
-description: Gibt einen Schlüssel zum Auswählen einer eindeutigen Zeile in einer Skalar- oder Tabellenauflistung an.
+description: Gibt einen Schlüssel zum Auswählen einer eindeutigen Zeile in einer Skalar- oder Tabellensammlung an.
 ms.assetid: 3c4edae0-55be-4804-b5fe-07458b918365
 ms.tgt_platform: multiple
 title: INDEX-Klausel
@@ -14,51 +14,51 @@ ms.locfileid: "118318742"
 ---
 # <a name="index-clause"></a>INDEX-Klausel
 
-Die INDEX-Klausel gibt einen Schlüssel zum Auswählen einer eindeutigen Zeile in einer Skalar- oder Tabellenauflistung an. Der SNMP-Anbieter wird je nach Typ der vom SNMP-Gerät verwendeten Tabelle einem anderen Cim-Klassentyp zugeordnet. Da ein Schlüssel mehrere Objekttypen aufweisen kann, verwendet der Anbieter je nach Objekttyp innerhalb des Schlüssels unterschiedliche Zuordnungsregeln. Weitere Informationen finden Sie unter [INDEX-Klauseldatentypen.](#index-clause-data-types)
+Die INDEX-Klausel gibt einen Schlüssel zum Auswählen einer eindeutigen Zeile in einer Skalar- oder Tabellensammlung an. Der SNMP-Anbieter wird abhängig vom Typ der Tabelle, die das SNMP-Gerät verwendet, einem anderen Typ von CIM-Klasse zu. Da ein Schlüssel mehrere Objekttypen haben kann, verwendet der Anbieter je nach Objekttyp innerhalb des Schlüssels unterschiedliche Zuordnungsregeln. Weitere Informationen finden Sie unter [INDEX-Klauseldatentypen](#index-clause-data-types).
 
 > [!Note]  
 > Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung.](setting-up-the-wmi-snmp-environment.md)
 
  
 
-Eine skalare Auflistung wird einer CIM-Singletonklasse zugeordnet, d.h. einer Klasse, die nur eine Instanz haben kann. Da eine Instanz nicht eindeutig von einer anderen identifiziert werden muss, legt eine Singletonklasse keine oder mehrere Eigenschaften als Schlüssel fest. Aus skalaren Auflistungen generierte Klassen:
+Eine skalare Auflistung wird einer CIM-Singletonklasse(n) zu einer Klasse, die nur eine Instanz haben kann. Da es nicht notwendig ist, eine Instanz eindeutig von einer anderen zu identifizieren, bestimmt eine Singletonklasse keine oder mehrere Eigenschaften als Schlüssel. Aus skalaren Auflistungen generierte Klassen:
 
--   Sie dürfen keine Key-Eigenschaftsqualifizierer enthalten. 
--   Enthalten Sie den CIM-Standardklassenqualifizierer **Singleton**, der vom Typ **Bool** ist.
+-   Enthalten keine  Schlüsseleigenschaftsqualifizierer.
+-   Enthalten Sie den STANDARDMÄßIGEN CIM-Klassenqualifizierer **Singleton** vom Typ **Bool.**
 
-Eine Tabellenauflistung wird einer CIM-Klasse zugeordnet, die über mehrere Instanzen verfügen kann. Daher muss die CIM-Klassendefinition mindestens eine Eigenschaft enthalten, die den Objektschlüssel definiert. Das heißt, eine Eigenschaft, die eine Instanz der -Klasse eindeutig identifiziert. Die [INDEX-Klausel des OBJECT-TYPE-Makros](object-type-macro.md) einer Tabellenauflistung gibt den Satz von Schlüsseleigenschaften der Sammlung an. Es gelten die folgenden Zuordnungsregeln:
+Eine Tabellensammlung wird einer CIM-Klasse mit mehr als einer Instanz angezeigt. Daher muss die CIM-Klassendefinition mindestens eine Eigenschaft enthalten, die den Objektschlüssel definiert. das heißt, eine Eigenschaft, die eine Instanz der -Klasse eindeutig identifiziert. Die INDEX-Klausel des [OBJECT-TYPE-Makros](object-type-macro.md) einer Tabellensammlung gibt den Satz von Schlüsseleigenschaften der Auflistung an. Es gelten die folgenden Zuordnungsregeln:
 
--   Der CIM-Qualifiziererschlüssel , Typ **Bool,** definiert eine Schlüsseleigenschaft. 
--   Die Reihenfolge der INDEX-Informationen in der Tabellenauflistung definiert die Reihenfolge der Schlüssel in der CIM-Klassendefinition.
+-   Der **CIM-Qualifiziererschlüssel**, typ **Bool**, definiert eine Schlüsseleigenschaft.
+-   Die Reihenfolge der INDEX-Informationen in der Tabellensammlung definiert die Reihenfolge der Schlüssel innerhalb der CIM-Klassendefinition.
 
-    Die **\_ Schlüsselreihenfolge** des CIM-Qualifizierers definiert die Reihenfolge der Schlüssel. Dieser Qualifizierer ist ein ganzzahliger 32-Bit-Wert ohne Vorzeichen, der für die MOF-Qualifizierersyntax mithilfe des Twos-Complement-Vorgangs in einen 32-Bit-Ganzzahlwert mit Vorzeichen konvertiert werden muss.
+    Die Schlüssel reihenfolge des **\_ CIM-Qualifizierers** definiert die Reihenfolge der Schlüssel. Dieser Qualifizierer ist ein 32-Bit-Ganzzahlwert ohne Vorzeichen, der im Rahmen der MOF-Qualifizierersyntax mithilfe des Twos-Complement-Vorgangs in einen ganzzahligen 32-Bit-Wert mit Vorzeichen konvertiert werden muss.
 
-Derzeit verarbeitet die Zuordnung der SNMPv2C INDEX-Klausel  nicht die Verwendung des IMPLIED-Qualifizierers. In diesem Fall wird keine CIM-Klassendefinition generiert.
+Die Zuordnung der SNMPv2C INDEX-Klausel behandelt derzeit  nicht die Verwendung des IMPLIED-Qualifizierers. In diesem Fall wird keine CIM-Klassendefinition generiert.
 
-## <a name="index-clause-data-types"></a>Datentypen der INDEX-Klausel
+## <a name="index-clause-data-types"></a>INDEX-Klauseldatentypen
 
-Aufgrund der Flexibilität der INDEX-Klausel innerhalb des [OBJECT-TYPE-Makros](object-type-macro.md) ist die Spezifikation von schlüsselbasierten Eigenschaften nicht einfach. Stattdessen sollten Sie die Möglichkeiten berücksichtigen, dass die INDEX-Klausel einen oder mehrere der folgenden Datentypen enthalten kann:
+Aufgrund der Flexibilität der INDEX-Klausel innerhalb des [OBJECT-TYPE-Makros](object-type-macro.md) ist die Angabe von schlüsselierten Eigenschaften nicht einfach. Stattdessen sollten Sie die Möglichkeiten berücksichtigen, dass die INDEX-Klausel einen oder mehrere der folgenden Datentypen enthalten kann:
 
--   Intern zugänglicher **Indexobject-Wert**
+-   Intern zugänglicher **Indexobjektwert**
 
-    Der **indexobject-Wert** ist ein benannter Wert, der auf eine MIB-Objektdefinition verweist, die in der konzeptionellen Zeile derselben Tabelle angezeigt wird, die die INDEX-Klausel enthält. Die MIB-Objektdefinition, auf die in der INDEX-Klausel verwiesen wird, wird einer Schlüsseleigenschaft der CIM-Klassendefinition zugeordnet.
+    Der **indexobject-Wert** ist ein benannter Wert, der auf eine MIB-Objektdefinition verweist, die in der konzeptionellen Zeile derselben Tabelle angezeigt wird, die die INDEX-Klausel enthält. Die MIB-Objektdefinition, auf die in der INDEX-Klausel verwiesen wird, wird einer Schlüsseleigenschaft der CIM-Klassendefinition zu.
 
--   Extern zugänglicher **Indexobject-Wert**
+-   Extern zugänglicher **Indexobjektwert**
 
     In diesem Fall ist **indexobject** ein benannter Wert, der auf eine MIB-Objektdefinition verweist, die in der konzeptionellen Zeile einer anderen Tabelle angezeigt wird.
 
--   Zugänglicher **Indextypwert**
+-   Barrierefreier **Indextypwert**
 
     Der **Indextypwert** ist ein benannter Typ, der auf einen der folgenden Datentypen verweist: **INTEGER,** **OCTET STRING,** **OBJECT IDENTIFIER,** **NetworkAddress** oder **IpAddress**. Wenn die INDEX-Klausel einen MIB-Typverweis enthält, gelten die folgenden Zuordnungsregeln:
 
-    -   Das MIB-Objekt, auf das verwiesen wird, wird einer Schlüsseleigenschaft der CIM-Klassendefinition zugeordnet. Die Typsyntax basiert auf dem angegebenen **Indextypwert,** der CIM-Eigenschaftsqualifizierern mithilfe der [standardmäßigen SYNTAX-Klauselzuordnungsprozessen](syntax-clause.md) zugeordnet wird.
-    -   Der Zuordnungsprozess generiert einen eindeutigen Eigenschaftennamen, indem der MIB-Tabellenobjektdeskriptor, ein Unterstrich ( \_ ) und die Rangfolge des **Indextypwerts** der INDEX-Klausel verkettet werden. Der Eigenschaftenname für den **Indextyp** der dritten Komponente der MIB-Tabelle **enterpriseIfTable** lautet beispielsweise **enterpriseIfTable \_ 3.**
-    -   Die CIM-Eigenschaft wird mit dem **Virtual Key-Qualifizierer \_** versehen. Dieser Qualifizierer gibt an, dass der SNMP-Anbieter den Wert der Eigenschaft basierend auf der Obermenge der Instanzinformationen berechnen soll, die allen barrierefreien MIB-Objektdefinitionen in der Klassendefinition zugeordnet sind.
-    -   Die CIM-Klassendefinition muss mindestens eine Eigenschaft enthalten, der kein **virtueller \_ Schlüsselqualifizierer** zugeordnet ist. Wenn diese Eigenschaft nicht angegeben wird, wird die Klassendefinition ungültig.
+    -   Das MIB-Objekt, auf das verwiesen wird, ist einer Schlüsseleigenschaft der CIM-Klassendefinition zuordnungsbegrenzt. Die Typsyntax basiert auf dem angegebenen **Indextypwert,** der CIM-Eigenschaftenqualifizierern mithilfe der standardmäßigen SYNTAX-Klauselzuordnungs-Prozeduren entspricht. [](syntax-clause.md)
+    -   Der Zuordnungsprozess generiert einen eindeutigen Eigenschaftennamen durch Verkettung des MIB-Tabellenobjektdeskriptors, eines Unterstrichs ( ) und der Rangfolge des Indextypwerts der \_ INDEX-Klausel.  Beispielsweise ist der Eigenschaftenname für  den Indextyp der dritten Komponente der MIB-Tabelle **enterpriseIfTable** **enterpriseIfTable \_ 3.**
+    -   Die CIM-Eigenschaft wird mit dem Qualifizierer **\_ für virtuelle** Schlüssel kommentiert. Dieser Qualifizierer gibt an, dass der SNMP-Anbieter den Wert der Eigenschaft basierend auf der Obermenge der Instanzinformationen berechnen soll, die allen zugänglichen MIB-Objektdefinitionen in der Klassendefinition zugeordnet sind.
+    -   Die CIM-Klassendefinition muss mindestens eine Eigenschaft enthalten, die nicht über einen zugeordneten Qualifizierer für virtuelle Schlüssel verfügt. Wenn diese Eigenschaft nicht angegeben wird, wird die Klassendefinition ungültig. **\_**
 
 -   Untertyp mit fester Länge
 
-    Wenn die INDEX-Klausel einer SNMP-Tabellenauflistung einen SNMP-unterstützten Typ enthält, der als OCTET STRING mit fester Länge subtypisiert ist, muss der CIM-Eigenschaftsqualifizierer **Fixed \_ Length** verwendet werden, um diesen Wert anzugeben.
+    Wenn die INDEX-Klausel einer SNMP-Tabellensammlung einen SNMP-unterstützten Typ enthält, der als OCTET STRING fester Länge untertypisiert ist, muss der CIM-Eigenschaftenqualifizierer **Feste \_** Länge verwendet werden, um diesen Wert anzugeben.
 
  
 

@@ -13,7 +13,7 @@ ms.locfileid: "118307842"
 ---
 # <a name="com-synchronization-tasks"></a>COM+-Synchronisierungsaufgaben
 
-Die folgenden Themen in diesem Abschnitt enthalten schritt-für-Schritt-Anweisungen für die Verwendung der COM+-Synchronisierung.
+Die folgenden Themen in diesem Abschnitt enthalten schrittweise Anweisungen für die Verwendung der COM+-Synchronisierung.
 
 
 

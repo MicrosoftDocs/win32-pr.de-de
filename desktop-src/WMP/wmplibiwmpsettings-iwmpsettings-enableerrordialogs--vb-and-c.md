@@ -1,9 +1,9 @@
 ---
-title: IWMPSettings enableErrorDialogs (Eigenschaft)
-description: Die enableErrorDialogs-Eigenschaft ruft einen Wert ab, der angibt, ob Fehlerdialogfelder automatisch angezeigt werden, oder legt diesen fest.
+title: IWMPSettings enableErrorDialogs-Eigenschaft
+description: Die enableErrorDialogs-Eigenschaft ruft einen Wert ab, der angibt, ob Fehlerdialogfelder automatisch angezeigt werden, oder legt einen Wert fest.
 ms.assetid: 5310864b-e250-4fb1-8351-d1d7de312f21
 keywords:
-- enableErrorDialogs-Windows Media Player
+- enableErrorDialogs-Eigenschaft Windows Media Player
 - enableErrorDialogs-Eigenschaft Windows Media Player , IWMPSettings-Schnittstelle
 - IWMPSettings-Schnittstelle Windows Media Player , enableErrorDialogs-Eigenschaft
 topic_type:
@@ -23,9 +23,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118568435"
 ---
-# <a name="iwmpsettingsenableerrordialogs-property"></a>IWMPSettings::enableErrorDialogs (Eigenschaft)
+# <a name="iwmpsettingsenableerrordialogs-property"></a>IWMPSettings::enableErrorDialogs-Eigenschaft
 
-Die **enableErrorDialogs-Eigenschaft** ruft einen Wert ab, der angibt, ob Fehlerdialogfelder automatisch angezeigt werden, oder legt diesen fest.
+Die **enableErrorDialogs-Eigenschaft** ruft einen Wert ab, der angibt, ob Fehlerdialogfelder automatisch angezeigt werden, oder legt einen Wert fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Public Property enableErrorDialogs As System.Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **boolescher System.Boolean-Wert,** der angibt, ob Fehlerdialogfelder automatisch angezeigt werden. Der Standardwert ist **true**.
+Ein **System.Boolean-Wert, der** angibt, ob Fehlerdialogfelder automatisch angezeigt werden. Der Standardwert ist **true**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Ein **boolescher System.Boolean-Wert,** der angibt, ob Fehlerdialogfelder automa
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

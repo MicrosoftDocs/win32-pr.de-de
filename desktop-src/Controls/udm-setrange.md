@@ -1,9 +1,9 @@
 ---
-title: UDM_SETRANGE Meldung (Commctrl.h)
+title: UDM_SETRANGE (Commctrl.h)
 description: Legt die minimalen und maximalen Positionen (Bereich) für ein Auf-Ab-Steuerelement fest.
 ms.assetid: 81875528-86cc-419a-a07c-f4f98baf1462
 keywords:
-- UDM_SETRANGE Windows-Steuerelemente für Nachrichten
+- UDM_SETRANGE von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Legt die minimalen und maximalen Positionen (Bereich) für ein Auf-Ab-Steuerelem
 *lParam* 
 </dt> <dd>
 
-[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist ein **Short,** der die maximale Position für das Auf-Ab-Steuerelement angibt, und [**hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) ist ein **Short,** der die Mindestposition angibt. Keine der Positionen darf größer als der UD \_ MAXVAL-Wert oder kleiner als der UD \_ MINVAL-Wert sein. Darüber hinaus darf der Unterschied zwischen den beiden Positionen UD MAXVAL nicht \_ überschreiten.
+Das [**LOWORD ist**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) eine **Kurzform,** die die maximale Position für das  Auf-Ab-Steuerelement angibt, und [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) ist eine kurz, die die Mindestposition angibt. Keine der Beiden Position kann größer als der UD \_ MAXVAL-Wert oder kleiner als der UD \_ MINVAL-Wert sein. Darüber hinaus darf der Unterschied zwischen den beiden Positionen UD \_ MAXVAL nicht überschreiten.
 
 </dd> </dl>
 
@@ -45,7 +45,7 @@ Kein Rückgabewert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die maximale Position kann kleiner als die Mindestposition sein. Wenn Sie auf die Schaltfläche mit dem Pfeil nach oben klicken, wird die aktuelle Position näher an die maximale Position verschoben, und durch Klicken auf die Schaltfläche mit dem Pfeil nach unten wird die Mindestposition erreicht.
+Die maximale Position kann kleiner als die minimale Position sein. Wenn Sie auf die Nach-oben-Schaltfläche klicken, wird die aktuelle Position näher an die maximale Position bewegt, und durch Klicken auf die Schaltfläche mit dem Pfeil nach unten wird die Minimale Position angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,7 +53,7 @@ Die maximale Position kann kleiner als die Mindestposition sein. Wenn Sie auf di
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

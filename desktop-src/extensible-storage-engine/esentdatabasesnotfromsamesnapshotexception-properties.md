@@ -1,25 +1,25 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdatabasesnotfromsamesnapshotexception-Eigenschaften'
-title: Esentdatabasesnotfromsamesnapshotexception-Eigenschaften
+description: 'Weitere Informationen zu: EsentDatabasesNotFromSameSnapshotException-Eigenschaften'
+title: EsentDatabasesNotFromSameSnapshotException-Eigenschaften
 TOCTitle: EsentDatabasesNotFromSameSnapshotException properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.EsentDatabasesNotFromSameSnapshotException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabasesnotfromsamesnapshotexception_properties(v=EXCHG.10)
 ms:contentKeyID: 55101446
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: 1b2862ff5c200d3d8154d8f4aaf022e6f3b0a30e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aebe2db5e25162f1217fc1eb6dc759d1298c9b237199b47936a2d766947a4a01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103754873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118780190"
 ---
-# <a name="esentdatabasesnotfromsamesnapshotexception-properties"></a>Esentdatabasesnotfromsamesnapshotexception-Eigenschaften
+# <a name="esentdatabasesnotfromsamesnapshotexception-properties"></a>EsentDatabasesNotFromSameSnapshotException-Eigenschaften
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Der [esentdatabasesnotfromsamesnapshotexception](./esentdatabasesnotfromsamesnapshotexception-class.md) -Typ macht die folgenden Member verfügbar.
+Der [EsentDatabasesNotFromSameSnapshotException-Typ](./esentdatabasesnotfromsamesnapshotexception-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -35,47 +35,47 @@ Der [esentdatabasesnotfromsamesnapshotexception](./esentdatabasesnotfromsamesnap
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.data#System_Exception_Data">Daten</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn274313(v=exchg.10).md">Fehler</a></td>
-<td>Ruft den zugrunde liegenden ESENT-Fehler für diese Ausnahme ab. (Geerbt von " <a href="dn274314(v=exchg.10).md">esenterrorexception</a>".)</td>
+<td>Ruft den zugrunde liegenden Esent-Fehler für diese Ausnahme ab. (Geerbt von <a href="dn274314(v=exchg.10).md">EsentErrorException</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.helplink#System_Exception_HelpLink">HelpLink</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.protproperty(exchg.10).gif" title="Geschützte Eigenschaft" alt="Protected property" /></td>
-<td><a href="/dotnet/api/system.exception.hresult#System_Exception_HResult">HRESULT</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td><a href="/dotnet/api/system.exception.hresult#System_Exception_HResult">Hresult</a></td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.innerexception#System_Exception_InnerException">InnerException</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.message#System_Exception_Message">Meldung</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.source#System_Exception_Source">Quelle</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.stacktrace#System_Exception_StackTrace">StackTrace</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.targetsite#System_Exception_TargetSite">TargetSite</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -83,10 +83,10 @@ Der [esentdatabasesnotfromsamesnapshotexception](./esentdatabasesnotfromsamesnap
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabasesnotfromsamesnapshotexception-Klasse](./esentdatabasesnotfromsamesnapshotexception-class.md)
+[EsentDatabasesNotFromSameSnapshotException-Klasse](./esentdatabasesnotfromsamesnapshotexception-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,6 +1,6 @@
 ---
 title: NM_NCHITTEST Benachrichtigungscode (Commctrl.h)
-description: 'NM_NCHITTEST Benachrichtigungscode: Wird von einem Steuerelement für die Neuleiste gesendet, wenn das Steuerelement eine WM \_ NCHITTEST-Nachricht empfängt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.'
+description: 'NM_NCHITTEST Benachrichtigungscode: Wird von einem Steuerelement für die Neuleiste gesendet, wenn das Steuerelement eine \_ WM-NCHITTEST-Nachricht empfängt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.'
 ms.assetid: 0e088b14-b912-4f60-9d25-cd0a0ba264c3
 keywords:
 - NM_NCHITTEST Benachrichtigungscode Windows-Steuerelemente

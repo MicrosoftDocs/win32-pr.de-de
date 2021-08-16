@@ -1,5 +1,5 @@
 ---
-description: Von XMUINT4 verfügbar gemachte Konstruktoren.
+description: Konstruktoren, die von XMUINT4 verfügbar gemacht werden.
 ms.assetid: f942a6a3-467c-4beb-964a-b1f066f30b36
 title: XMUINT4-Konstruktoren (Directxmath.h)
 ms.date: 07/02/2019
@@ -49,7 +49,7 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 </tr>
 <tr class="even">
 <td style="text-align: left;">[<strong>XMUINT4 (const uint32_t*)</strong>] (/windows/win32/api/directxmath/nf-directxmath-xmuint4-xmuint4(constuint32_t))</td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von aus einem Arrayargument mit <code>XMUINT4</code> vier <code>uint32_t</code> Elementen. <br/> Dieser Konstruktor initialisiert eine neue Instanz von [<strong>XMUINT4</strong>](/windows/win32/api/directxmath/ns-directxmath-xmuint4) von einem aus einem Arrayargument mit vier <code>uint32_t</code> Elementen. <br/>
+<td style="text-align: left;">Initialisiert eine neue Instanz von aus <code>XMUINT4</code> einem Arrayargument mit <code>uint32_t</code> vier Element. <br/> Dieser Konstruktor initialisiert eine neue Instanz von [<strong>XMUINT4</strong>](/windows/win32/api/directxmath/ns-directxmath-xmuint4) aus einem Arrayargument mit vier <code>uint32_t</code> Elementen. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.

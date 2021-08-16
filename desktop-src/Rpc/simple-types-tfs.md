@@ -1,19 +1,19 @@
 ---
 title: Einfache Typen
-description: Alle einfachen Typen werden durch ein einzelnes Formatierungszeichen dargestellt, das den Typ anhand des Namens angibt.
+description: Alle einfachen Typen werden durch ein einzelnes Formatzeichen dargestellt, das den Typ anhand seines Namens angibt.
 ms.assetid: 77c293a1-70c4-4825-bb2e-de36e01d3abb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: afe123ca7c06a0522a139dc0cca8a9e24d1d585d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1e265c24d1eaf4b85ab67c7f8997c656257522bfc8290e73596a8628bdd4215c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118925160"
 ---
 # <a name="simple-types"></a>Einfache Typen
 
-Alle einfachen Typen werden durch ein einzelnes Formatierungszeichen dargestellt, das den Typ anhand des Namens angibt. Dies schließt alle numerischen Typen und einige andere spezielle IDL-Typen ein. Die Liste lautet wie folgt:
+Alle einfachen Typen werden durch ein einzelnes Formatzeichen dargestellt, das den Typ anhand seines Namens angibt. Dies schließt alle numerischen Typen und einige andere spezielle IDL-Typen ein. Die Liste sieht wie folgt aus:
 
 ``` syntax
 FC_BYTE,                    // 0x01
@@ -35,13 +35,13 @@ FC_INT3264,                 // 0xb8
 FC_UINT3264,                // 0xb9
 ```
 
-Die Typen "Small", "WCHAR", "Hyper", "Error \_ Status \_ T" und "INT3264" sind eigen intrinsie systeminterne \_ \_ Funktionen mit speziellen Die Typen "int" und " \_ \_ Int32" werden den Typen "Long" \_ , "Ganzzahl ohne Vorzeichen int" und "Ganzzahl ohne Vorzeichen" \_ \_ Int32 Map to FC \_ ulong, \_ \_ Int64 und Ganzzahl ohne Vorzeichen \_ \_ Int64 Map to FC \_ Hyper zugeordnet.
+Die Typen SMALL, WCHAR, HYPER, ERROR \_ STATUS \_ T und \_ \_ INT3264 sind intrinsische MIDL-Funktionen mit speziellen RPC-Interpretationen. Die Typen INT und \_ \_ INT32 werden FC \_ LONG zugeordnet, unsigned INT und \_ \_ unsigned INT32 werden FC \_ ULONG, \_ \_ INT64 und \_ \_ unsigned INT64 FC HYPER \_ zugeordnet.
 
 Die \_ \_ Typen INT128, FLOAT128 und FLOAT80 werden nicht unterstützt.
 
- 
+ 
 
- 
+ 
 
 
 

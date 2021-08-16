@@ -1,5 +1,5 @@
 ---
-description: Die OpenModule-Methode des Mergeobjekts öffnet ein Windows Installer-Mergemodul im schreibgeschützten Modus. Ein Modul muss geöffnet werden, bevor es mit einer Installationsdatenbank zusammengeführt werden kann.
+description: Die OpenModule-Methode des Merge-Objekts öffnet ein Windows Installer-Mergemodul im schreibgeschützten Modus. Ein Modul muss geöffnet werden, bevor es mit einer Installationsdatenbank zusammengeführt werden kann.
 ms.assetid: fc976899-2c39-4314-b2fb-417e0dfc53b9
 title: Merge.OpenModule-Methode (Mergemod.h)
 ms.topic: reference
@@ -44,7 +44,7 @@ Merge.OpenModule(
 *FileName* 
 </dt> <dd>
 
-Vollqualifizierter Dateiname, der auf ein Mergemodul verweisen.
+Vollqualifizierte Dateiname, der auf ein Mergemodul verweist.
 
 </dd> <dt>
 
@@ -63,7 +63,7 @@ Diese Methode gibt keinen Wert zurück.
 
 Diese Funktion öffnet das Mergemodul im schreibgeschützten Modus und schließt andere Programme vom Schreiben in das Mergemodul aus, bis die [**CloseModule-Methode**](merge-closemodule.md) aufgerufen wird.
 
-Das Installationsprogramm versucht, das Modul in der sprache angegebenen Sprache oder einer allgemeineren Sprache zu öffnen. Wenn beispielsweise *Language* als 1033 angegeben ist, kann ein Modul mit der Standardsprache 1033, 9 oder 0 in der Standardsprache geöffnet werden. Mit *dem Sprachwert* 9 werden Module mit der Standardsprache 9 oder 0 geöffnet. Wenn die Standardsprache des Moduls die angegebenen Anforderungen nicht erfüllt, wird versucht, das Modul in die angeforderte Sprache zu transformieren. Wenn dies fehlschlägt, wird das Modul in immer allgemeinere Sprachen transformiert, bis hin zu sprachneutralen Sprachen. Wenn keine der Transformationen erfolgreich ist, kann das Modul nicht geöffnet werden. In diesem Fall wird der Fehlerliste vom Typ msmErrorLanguageUnsupported ein Fehler hinzugefügt. Wenn beim Transformieren des Moduls in die gewünschte Sprache ein Fehler auftritt, wird der Fehlerliste vom Typ msmErrorLanguageFailed ein Fehler hinzugefügt. Weitere Informationen finden Sie in [**der Type-Eigenschaft**](error-type.md) des [**Error-Objekts.**](error-object.md) Beim Öffnen eines Mergemoduls werden alle Fehler gelöscht, die noch nicht abgerufen wurden.
+Das Installationsprogramm versucht, das Modul in der *sprache* angegebenen Sprache oder einer allgemeineren Sprache zu öffnen. *Wenn* Language beispielsweise als 1033 angegeben ist, kann ein Modul mit der Standardsprache 1033, 9 oder 0 in der Standardsprache geöffnet werden. Der *Sprachwert* 9 öffnet Module mit einer Standardsprache von 9 oder 0. Wenn die Standardsprache des Moduls die angegebenen Anforderungen nicht erfüllt, wird versucht, das Modul in die angeforderte Sprache zu transformieren. Wenn dies fehlschlägt, wird das Modul in immer allgemeinere Sprachen bis hin zu sprachneutralen Sprachen transformiert. Wenn keine der Transformationen erfolgreich ist, kann das Modul nicht geöffnet werden. In diesem Fall wird der Fehlerliste vom Typ msmErrorLanguageUnsupported ein Fehler hinzugefügt. Wenn beim Transformieren des Moduls in die gewünschte Sprache ein Fehler auftritt, wird der Fehlerliste des Typs msmErrorLanguageFailed ein Fehler hinzugefügt. Weitere Informationen finden Sie in der [**Type-Eigenschaft**](error-type.md) des [**Error-Objekts.**](error-object.md) Beim Öffnen eines Mergemoduls werden alle Fehler gelöscht, die noch nicht abgerufen wurden.
 
 ### <a name="c"></a>C++
 

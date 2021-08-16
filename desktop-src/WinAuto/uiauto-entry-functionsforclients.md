@@ -19,9 +19,9 @@ In diesem Abschnitt werden die API-Funktionen beschrieben, die in Microsoft Benu
 
 
 
-| Funktion                                                                               | BESCHREIBUNG                                                                         |
+| Funktion                                                                               | Beschreibung                                                                         |
 |----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| [**UiaHasServerSideProvider**](/windows/desktop/api/UIAutomationCoreApi/nf-uiautomationcoreapi-uiahasserversideprovider)<br/> | Ermittelt, ob ein Fenster über eine Benutzeroberflächenautomatisierung Anbieterimplementierungen verfügt.<br/> |
+| [**UiaHasServerSideProvider**](/windows/desktop/api/UIAutomationCoreApi/nf-uiautomationcoreapi-uiahasserversideprovider)<br/> | Ermittelt, ob ein Fenster über eine Benutzeroberflächenautomatisierung verfügt.<br/> |
 
 
 

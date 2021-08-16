@@ -1,23 +1,23 @@
 ---
 title: Weitergeben von Fehlerinformationen
-description: Durch die Weitergabe erweiterter Fehlerinformationen können Server, die einen RPC- \_ \_ Fehler oder einen anderen Fehlercode erhalten, die von der RPC-Laufzeit empfangenen Informationen an die Aufrufer weitergeben.
+description: Durch die Weitergabe erweiterter Fehlerinformationen können Server, die einen RPC \_ S \_ \-Fehler oder einen anderen Fehlercode erhalten, der RPC-Laufzeit erlauben, die empfangenen Informationen an die Aufrufer weiterzuleiten.
 ms.assetid: f0395f19-ceb1-4249-892e-9b688464d0d2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fd20575cee304c0a1693ae4bc6442de4837caa0d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 510ecf011dbac01d2b4c931a463bebb3739a92322059eb3a7a342160c42a9e4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118927158"
 ---
 # <a name="propagating-error-information"></a>Weitergeben von Fehlerinformationen
 
-Das weitergeben erweiterter Fehlerinformationen ermöglicht Servern, die einen RPC- \_ \_ \* Fehler oder einen anderen Fehlercode erhalten, das Weitergeben der empfangenen Informationen an die Aufrufer durch die RPC-Laufzeit. Der Server muss beim Auftreten eines schwerwiegenden Fehlers [**rpcraiseexception**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcraiseexception) oder [**rpcasyncabortcallaufgerufen**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasyncabortcall) werden. Die RPC-Laufzeit übernimmt ggf. die Verkettung der erweiterten Fehlerinformationen, was den schwerwiegenden Fehler verursacht, um den schwerwiegenden Fehler zu melden, sofern der Fehlercode für **rpcraiseexception** oder **rpcasyncabortcallcenter** mit dem Fehlercode übereinstimmt, der den schwerwiegenden Fehler verursacht hat.
+Durch die Weitergabe erweiterter Fehlerinformationen können Server, die einen \_ RPC-S-Fehler \_ \* oder einen anderen Fehlercode erhalten, die RPC-Laufzeit in die Lage versetzen, die empfangenen Informationen an die Aufrufer weiterzuleiten. Der Server muss nur [**rpcRhouexception**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcraiseexception) oder [**RpcAsyncAbortCall**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasyncabortcall) aufrufen, wenn ein schwerwiegender Fehler auftritt. Die RPC-Laufzeit übernimmt die Verkettung der erweiterten Fehlerinformationen, sofern vorhanden, wodurch der schwerwiegende Fehler selbst gemeldet wird, solange der Fehlercode, der **an RpcRaisException** oder **RpcAsyncAbortCall** übergeben wird, mit dem Fehlercode identisch ist, der den schwerwiegenden Fehler verursacht.
 
- 
+ 
 
- 
+ 
 
 
 

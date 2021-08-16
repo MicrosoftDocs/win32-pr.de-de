@@ -1,21 +1,21 @@
 ---
-description: Erfahren Sie mehr über die System.PropGroup.Calendar-Eigenschaft. Verwenden Sie diese Eigenschaft nicht zum Abrufen oder Festlegen von Werten. Sie ist nur als Marker vorgesehen.
+description: Erfahren Sie mehr über die System.PropGroup.Calendar-Eigenschaft. Verwenden Sie diese Eigenschaft nicht zum Abrufen oder Festlegen von Werten. Es ist nur als Marker vorgesehen.
 ms.assetid: 88873d45-2f9b-477b-87d4-ea269afb42ae
 title: System.PropGroup.Calendar
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7bef2b32609b52a4a621193bb5d8a417967718d3
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: f05836cb6f7e0dec89947689748686884bdb2b80c86266de665aea532627a207
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112404893"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118723057"
 ---
 # <a name="systempropgroupcalendar"></a>System.PropGroup.Calendar
 
-Das Eigenschaftengruppentrennzeichen, das in Eigenschaftenlisten verwendet wird, um Audiodateien von anderen Typen zu trennen. Verwenden Sie diese Eigenschaft nicht zum Abrufen oder Festlegen von Werten. Sie ist nur als Marker vorgesehen.
+Das in Eigenschaftenlisten verwendete Eigenschaftengruppentrennzeichen, um Audiodateien von anderen Typen zu trennen. Verwenden Sie diese Eigenschaft nicht zum Abrufen oder Festlegen von Werten. Es ist nur als Marker vorgesehen.
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
 ```
 propertyDescription
@@ -30,7 +30,7 @@ propertyDescription
       type = Null
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

@@ -24,9 +24,9 @@ Dieser Abschnitt besteht aus den folgenden Themen.
 
 
 
-| Thema                                                   | BESCHREIBUNG                               |
+| Thema                                                   | Beschreibung                               |
 |---------------------------------------------------------|-------------------------------------------|
-| [Manipulationen](getting-started-with-manipulations.md) | Erläutert Bearbeitungen für Windows Touch. |
+| [Manipulationen](getting-started-with-manipulations.md) | Erläutert Manipulationen für Windows Touch. |
 | [Trägheit](getting-started-with-inertia.md)             | Erläutert die Trägheit für Windows Touch.       |
 
 

@@ -1,9 +1,9 @@
 ---
-title: Copyright-Element (msfeeds. h)
-description: Das Copyright-Element definiert eine Text Zeichenfolge, die die Copyright Informationen für ein ASX-oder Entry-Element angibt.
+title: COPYRIGHT-Element (Msfeeds.h)
+description: Das COPYRIGHT-Element definiert eine Textzeichenfolge, die die Copyrightinformationen für ein ASX- oder ENTRY-Element angibt.
 ms.assetid: 264b92de-b10c-41b9-b219-727879079f15
 keywords:
-- Copyright Element-Fenster Media Player
+- COPYRIGHT-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 83b757528cfb14a01854346854a342ee9faced65
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8e5a01e97364aa47182e38e3e3066895c771e2d5edb6c480e8108cb168e7f8cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358640"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997460"
 ---
-# <a name="copyright-element"></a>Copyright-Element
+# <a name="copyright-element"></a>COPYRIGHT-Element
 
-Das **Copyright** -Element definiert eine Text Zeichenfolge, die die Copyright Informationen für ein **ASX** -oder **Entry** -Element angibt.
+Das **COPYRIGHT-Element** definiert eine Textzeichenfolge, die die Copyrightinformationen für ein **ASX-** oder **ENTRY-Element** angibt.
 
 ``` syntax
 <COPYRIGHT>
@@ -35,13 +35,13 @@ Das **Copyright** -Element definiert eine Text Zeichenfolge, die die Copyright I
 
 Dieses Element weist keine Attribute auf.
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy       | Elemente           |
 |-----------------|--------------------|
-| Übergeordnete Elemente | **ASX**, **Eintrag** |
+| Übergeordnete Elemente | **ASX**, **ENTRY** |
 | Untergeordnete Elemente  | Keine               |
 
 
@@ -50,13 +50,13 @@ Dieses Element weist keine Attribute auf.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Dieses Element definiert eine Text Zeichenfolge, die die Copyright Informationen für ein **ASX** -oder **Entry** -Element angibt.
+Dieses Element definiert eine Textzeichenfolge, die die Copyrightinformationen für ein **ASX-** oder **ENTRY-Element** angibt.
 
-Wenn dieses Element in einem **ASX** -Element angezeigt wird, wird die Copyright Zeichenfolge nur als **Anzeige** Informationen angezeigt. Wenn dieses Element in einem **Entry** -Element angezeigt wird, wird der Text als Clip Informationen angezeigt. Jedes über **geordnete-** und- **Entry** -Element muss höchstens ein untergeordnetes **Copyright** Element enthalten. Mehrere **Copyright** Elemente nach dem ersten werden ignoriert und werden nicht angezeigt.
+Wenn dieses Element innerhalb eines **ASX-Elements** angezeigt wird, wird die Copyrightzeichenfolge nur als Show information **(Informationen anzeigen)** angezeigt. Wenn dieses Element in einem **ENTRY-Element angezeigt** wird, wird der Text als Clipinformationen angezeigt. Jedes übergeordnete **ASX-** **und ENTRY-Element** sollte mindestens ein untergeordnetes **COPYRIGHT-Element** enthalten. Mehrere **COPYRIGHT-Elemente** nach dem ersten werden ignoriert und nicht angezeigt.
 
-Die Zeichen für Copyright-und Marken Registrierungs Symbole (oder) werden möglicherweise nicht ordnungsgemäß angezeigt, wenn die Metadatei nicht mit dem UTF-8-Codierungsschema codiert ist. Wenn Sie in diesem Fall eines dieser Symbole für alle Benutzer ordnungsgemäß anzeigen möchten, können Sie stattdessen die ASCII-Entsprechungen (c) und (R) verwenden.
+Die Zeichen für Copyright- und Markenregistrierungssymbole ( oder ) werden möglicherweise nicht ordnungsgemäß angezeigt, wenn die Metadatei nicht mit dem UTF-8-Codierungsschema codiert ist. In diesem Fall können Sie die ASCII-Entsprechungen (c) und (R) verwenden, um eines dieser Symbole für alle Benutzer ordnungsgemäß anzuzeigen.
 
-Wenn die Metadatendatei mit UTF-8 codiert wird, werden Copyright-und Marken Symbole ordnungsgemäß angezeigt.
+Wenn die Metadatei mit UTF-8 codiert wird, werden Copyright- und Markensymbole ordnungsgemäß angezeigt.
 
 ## <a name="examples"></a>Beispiele
 
@@ -74,22 +74,22 @@ Wenn die Metadatendatei mit UTF-8 codiert wird, werden Copyright-und Marken Symb
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/>                                 |
-| Header<br/>  | <dl> <dt>Msfeeds. h</dt> </dl> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/>                                 |
+| Header<br/>  | <dl> <dt>Msfeeds.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Hinzufügen von Copyright Zeichen zu Metafiles**](adding-copyright-characters-to-metafiles.md)
+[**Hinzufügen von Copyrightzeichen zu Metadateien**](adding-copyright-characters-to-metafiles.md)
 </dt> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Metadateien**](windows-media-metafile-reference.md)
+[**Windows Referenz zur Medienmetadatei**](windows-media-metafile-reference.md)
 </dt> </dl>
 
  

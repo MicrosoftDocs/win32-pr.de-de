@@ -1,19 +1,19 @@
 ---
-title: Verwenden statischer Steuerelemente
-description: Dieser Abschnitt enthält ein Thema, in dem veranschaulicht wird, wie ein statisches Steuerelement erstellt wird.
+title: Verwenden von statischen Steuerelementen
+description: Dieser Abschnitt enthält ein Thema, das das Erstellen eines statischen Steuerelements veranschaulicht.
 ms.assetid: 2884d5e4-88fd-4f20-a1ff-ec345399adcc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ef78cfbb8c496c90da49264d57938fc502fd575f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d3c80db0dc48e96044d45a75ce365e4c27aceb4fc087b59ee86c7ba0d839a24b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036790"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957579"
 ---
-# <a name="using-static-controls"></a>Verwenden statischer Steuerelemente
+# <a name="using-static-controls"></a>Verwenden von statischen Steuerelementen
 
-Dieser Abschnitt enthält ein Thema, in dem veranschaulicht wird, wie ein statisches Steuerelement erstellt wird.
+Dieser Abschnitt enthält ein Thema, das das Erstellen eines statischen Steuerelements veranschaulicht.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

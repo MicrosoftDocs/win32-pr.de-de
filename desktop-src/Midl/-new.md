@@ -21,7 +21,7 @@ ms.locfileid: "118644109"
 ---
 # <a name="new-switch"></a>/new-Schalter
 
-Dieser Schalter ist veraltet und wurde durch die Option [**/newtlb**](-newtlb.md) ersetzt.
+Dieser Schalter ist veraltet und wurde durch die [**Option /newtlb**](-newtlb.md) ersetzt.
 
  
 

@@ -2,7 +2,7 @@
 description: Die AuthenticationLevel-Eigenschaft ist eine ganze Zahl, die die COM-Authentifizierungsebene definiert, die diesem Objekt zugewiesen ist.
 ms.assetid: 96c2e6a5-a91f-469d-bdd1-eaa20b176158
 ms.tgt_platform: multiple
-title: SWbemSecurity.AuthenticationLevel (Eigenschaft)
+title: SWbemSecurity.AuthenticationLevel-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -22,9 +22,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118312714"
 ---
-# <a name="swbemsecurityauthenticationlevel-property"></a>SWbemSecurity.AuthenticationLevel (Eigenschaft)
+# <a name="swbemsecurityauthenticationlevel-property"></a>SWbemSecurity.AuthenticationLevel-Eigenschaft
 
-Die **AuthenticationLevel-Eigenschaft** ist eine ganze Zahl, die die COM-Authentifizierungsebene definiert, die diesem Objekt zugewiesen ist. Diese Einstellung bestimmt, wie Sie von WMI gesendete Informationen schützen. Weitere Informationen zu Authentifizierungsebenen finden Sie unter [Setting Client Application Process \_ \_ Security](setting-client-application-process-security.md). Im Allgemeinen ist es nicht erforderlich, die Authentifizierungsebene für WMI-API-Aufrufe festlegen. Wenn Sie diese Eigenschaft nicht festlegen, wird die STANDARD-COM-Authentifizierungsebene für Ihr System verwendet.
+Die **AuthenticationLevel-Eigenschaft** ist eine ganze Zahl, die die COM-Authentifizierungsebene definiert, die diesem Objekt zugewiesen ist. Diese Einstellung bestimmt, wie Sie von WMI gesendete Informationen schützen. Weitere Informationen zu Authentifizierungsebenen finden Sie unter [Setting Client Application Process \_ \_ Security](setting-client-application-process-security.md). Im Allgemeinen ist es nicht erforderlich, die Authentifizierungsebene festzulegen, wenn WMI-API-Aufrufe vorgenommen werden. Wenn Sie diese Eigenschaft nicht festlegen, wird die STANDARDMÄßIGE COM-Authentifizierungsebene für Ihr System verwendet.
 
 Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
@@ -43,18 +43,18 @@ SWbemSecurity.AuthenticationLevel As Integer
 
 ## <a name="remarks"></a>Hinweise
 
-Mit der Einstellung authenticationLevel können Sie die DCOM-Authentifizierungsebene und den Datenschutz anfordern, die während einer Verbindung verwendet werden sollen. Einstellungen reichen von der Authentifizierung ohne Authentifizierung bis zur pro Paket verschlüsselten Authentifizierung.
+Mit der Einstellung authenticationLevel können Sie die Ebene der DCOM-Authentifizierung und des Datenschutzes anfordern, die während einer Verbindung verwendet werden soll. Einstellungen reichen von keiner Authentifizierung bis hin zur paketbasierten verschlüsselten Authentifizierung.
 
 
 
-| Wert        | BESCHREIBUNG                                                                                                                                                                                                                                                                                                            |
+| Wert        | Beschreibung                                                                                                                                                                                                                                                                                                            |
 |--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Keine         | Verwendet keine Authentifizierung. Alle Sicherheitseinstellungen werden ignoriert.<br/>                                                                                                                                                                                                                                         |
-| Standard      | Verwendet eine Standardsicherheitsaushandlung, um eine Authentifizierungsebene auszuwählen. Dies ist die empfohlene Einstellung, da der an der Transaktion beteiligte Client mit der vom Server angegebenen Authentifizierungsebene ausgehandelt wird.<br/> DCOM wählt während einer Aushandlungssitzung nicht den Wert None aus.<br/> |
-| Verbinden      | Authentifiziert die Anmeldeinformationen des Clients nur, wenn der Client versucht, eine Verbindung mit dem Server herzustellen. Nachdem eine Verbindung hergestellt wurde, werden keine weiteren Authentifizierungsprüfungen durchgeführt.<br/>                                                                                                                          |
-| Aufruf         | Authentifiziert die Anmeldeinformationen des Clients nur zu Beginn jedes Aufrufs, wenn der Server die Anforderung empfängt. Die Paketheader sind signiert, aber die zwischen Client und Server ausgetauschten Datenpakete sind weder signiert noch verschlüsselt.<br/>                                                     |
-| Pkt          | Authentifiziert, dass alle Datenpakete vom erwarteten Client empfangen werden. Ähnlich wie Aufruf; Paketheader werden signiert, aber nicht verschlüsselt. Pakete selbst sind weder signiert noch verschlüsselt.<br/>                                                                                                               |
-| PktIntegrity | Authentifiziert und überprüft, ob keines der Datenpakete, die zwischen dem Client und dem Server übertragen wurden, geändert wurde. Jedes Datenpaket wird signiert, um sicherzustellen, dass die Pakete während der Übertragung nicht geändert wurden. Keines der Datenpakete wird verschlüsselt.<br/>                                            |
+| Standard      | Verwendet eine Standardsicherheitsaushandlung, um eine Authentifizierungsebene auszuwählen. Dies ist die empfohlene Einstellung, da der an der Transaktion beteiligte Client auf die vom Server angegebene Authentifizierungsebene ausgehandelt wird.<br/> DCOM wählt während einer Aushandlungssitzung nicht den Wert None aus.<br/> |
+| Verbinden      | Authentifiziert die Anmeldeinformationen des Clients nur, wenn der Client versucht, eine Verbindung mit dem Server herzustellen. Nachdem eine Verbindung hergestellt wurde, werden keine weiteren Authentifizierungsüberprüfungen durchgeführt.<br/>                                                                                                                          |
+| Aufruf         | Authentifiziert die Anmeldeinformationen des Clients nur zu Beginn jedes Aufrufs, wenn der Server die Anforderung empfängt. Die Paketheader werden signiert, aber die zwischen dem Client und dem Server ausgetauschten Datenpakete sind weder signiert noch verschlüsselt.<br/>                                                     |
+| Pkt          | Authentifiziert, dass alle Datenpakete vom erwarteten Client empfangen werden. Ähnlich wie aufrufe; Paketheader werden signiert, aber nicht verschlüsselt. Pakete selbst sind weder signiert noch verschlüsselt.<br/>                                                                                                               |
+| PktIntegrity | Authentifiziert und überprüft, ob keines der zwischen dem Client und dem Server übertragenen Datenpakete geändert wurde. Jedes Datenpaket wird signiert, um sicherzustellen, dass die Pakete während der Übertragung nicht geändert wurden. Keines der Datenpakete wird verschlüsselt.<br/>                                            |
 | PktPrivacy   | Authentifiziert alle vorherigen Identitätswechselebenen und signiert und verschlüsselt jedes Datenpaket. Dadurch wird sichergestellt, dass die gesamte Kommunikation zwischen dem Client und dem Server vertraulich ist.<br/>                                                                                                                             |
 
 
@@ -63,7 +63,7 @@ Mit der Einstellung authenticationLevel können Sie die DCOM-Authentifizierungse
 
 Sie können die Authentifizierungsebene der [**Objekte SWbemServices,**](swbemservices.md) [**SWbemObject,**](swbemobject.md) [**SWbemObjectSet,**](swbemobjectset.md) [**SWbemObjectPath**](swbemobjectpath.md)und [**SwbemLocator**](swbemlocator.md) festlegen, indem Sie die **AuthenticationLevel-Eigenschaft** auf den gewünschten Wert festlegen.
 
-Das folgende Beispiel zeigt, wie die Authentifizierungsebene für ein **SwbemObject-Objekt festgelegt** wird.
+Das folgende Beispiel zeigt, wie die Authentifizierungsebene für ein **SwbemObject-Objekt** festgelegt wird.
 
 
 ```VB
@@ -72,7 +72,7 @@ objinstance.Security_.AuthenticationLevel = wbemAuthenticationLevelPkt
 
 
 
-Sie können auch Authentifizierungsebenen als Teil eines Monikers angeben. Im folgenden Beispiel werden die Authentifizierungsebene und die Identitätswechselebene und eine Instanz von [**Win32 \_ LogicalDisk abgerufen.**](/windows/desktop/CIMWin32Prov/win32-logicaldisk)
+Sie können Authentifizierungsebenen auch als Teil eines Monikers angeben. Im folgenden Beispiel werden die Authentifizierungsebene und die Identitätswechselebene festgelegt und eine Instanz von [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk)abgerufen.
 
 
 ```VB
@@ -100,7 +100,7 @@ Set objinst = GetObject("WinMgmts:{impersonationLevel=impersonate,authentication
 
 <dl> <dt>
 
-[Festlegen der Sicherheit \_ des \_ Clientanwendungsprozesses](setting-client-application-process-security.md)
+[Festlegen der \_ \_ Clientanwendungsprozesssicherheit](setting-client-application-process-security.md)
 </dt> <dt>
 
 [**WbemAuthenticationLevelEnum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemauthenticationlevelenum)

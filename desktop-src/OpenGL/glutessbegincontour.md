@@ -1,9 +1,9 @@
 ---
-title: glutess begincontour-Funktion (glu. h)
-description: Die Funktionen "glutess begincontour" und "gluTessEndContour" begrenzen eine Kontur Beschreibung. | glutess begincontour-Funktion (glu. h)
+title: gluTessBeginContour-Funktion (Glu.h)
+description: Die Funktionen gluTessBeginContour und gluTessEndContour begrenzen eine Konturbeschreibung. | gluTessBeginContour-Funktion (Glu.h)
 ms.assetid: 4008ce9c-86e7-4b24-9bda-5915f469596a
 keywords:
-- glutess begincontour-Funktion OpenGL
+- gluTessBeginContour-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fd28efc96c977e5e0483b4f3d87e9ce840b985cc
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 2edc46eb3aa1be6b37c9276bcfd1c2b951162722689b0d0affc358a71119736f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106354319"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118937471"
 ---
-# <a name="glutessbegincontour-function"></a>glutess begincontour-Funktion
+# <a name="glutessbegincontour-function"></a>gluTessBeginContour-Funktion
 
-Die Funktionen " **glutess begincontour** " und " [**gluTessEndContour**](glutessendcontour.md) " begrenzen eine Kontur Beschreibung.
+Die **Funktionen gluTessBeginContour** und [**gluTessEndContour**](glutessendcontour.md) begrenzen eine Konturbeschreibung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ void WINAPI gluTessBeginContour(
 
 <dl> <dt>
 
-*ATI* 
+*Tess* 
 </dt> <dd>
 
-Das Mosaik Objekt (mit [**glunewtess**](glunewtess.md)erstellt).
+Das Mosaikobjekt (erstellt mit [**gluNewTess**](glunewtess.md)).
 
 </dd> </dl>
 
@@ -51,9 +51,9 @@ Das Mosaik Objekt (mit [**glunewtess**](glunewtess.md)erstellt).
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktionen " **glutess begincontour** " und " [**glutessendpolygon**](glutessendpolygon.md) " trennen die Definition einer Polygon Kontur. Innerhalb jedes **glutessenbegincontour**-Paars " / **glutessendpolygon** " können NULL oder mehr Aufrufe an " [**glutess Vertex**](glutessvertex.md)" vorhanden sein. Die Eckpunkte geben eine geschlossene Kontur an (der letzte Scheitelpunkt jeder Kontur wird automatisch mit dem ersten-Element verknüpft). Sie können " **glutess begincontour** " nur zwischen " [**glutess beginpolygon**](glutessbeginpolygon.md) " und " **glutessendpolygon**" aufrufen.
+Die **Funktionen gluTessBeginContour** und [**gluTessEndPolygon**](glutessendpolygon.md) begrenzen die Definition einer Polygonkontur. In **jedem gluTessBeginContour-gluTessEndPolygon-Paar** können null oder mehr Aufrufe von /  [**gluTessVertex verwendet werden.**](glutessvertex.md) Die Scheitelpunkte geben eine geschlossene Kontur an (der letzte Scheitelpunkt jeder Kontur wird automatisch mit der ersten kontur verknüpft). Sie können **gluTessBeginContour nur zwischen** [**gluTessBeginPolygon**](glutessbeginpolygon.md) und **gluTessEndPolygon aufrufen.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,35 +63,35 @@ Die Funktionen " **glutess begincontour** " und " [**glutessendpolygon**](glutes
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glunewtess**](glunewtess.md)
+[**gluNewTess**](glunewtess.md)
 </dt> <dt>
 
-[**glutess beginpolygon**](glutessbeginpolygon.md)
+[**gluTessBeginPolygon**](glutessbeginpolygon.md)
 </dt> <dt>
 
-[*glutesscallback*](glutess.md)
+[*gluTessCallback*](glutess.md)
 </dt> <dt>
 
-[**glutessendpolygon**](glutessendpolygon.md)
+[**gluTessEndPolygon**](glutessendpolygon.md)
 </dt> <dt>
 
-[**glutess normal**](glutessnormal.md)
+[**gluTessNormal**](glutessnormal.md)
 </dt> <dt>
 
-[**glutessproperty**](glutessproperty.md)
+[**gluTessProperty**](glutessproperty.md)
 </dt> <dt>
 
-[**glutess Vertex**](glutessvertex.md)
+[**gluTessVertex**](glutessvertex.md)
 </dt> </dl>
 
  

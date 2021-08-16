@@ -1,5 +1,5 @@
 ---
-title: Active Accessibility Benutzeroberfläche Services Developer es Guide (Entwicklerhandbuch für Active Accessibility Benutzeroberfläche Services)
+title: entwicklerhandbuch für Active Accessibility Benutzeroberfläche Services
 description: 'In diesem Abschnitt werden die folgenden Themen erläutert:'
 ms.assetid: 91738bc9-0e33-4959-8f8a-ac4645e8511a
 ms.topic: article
@@ -11,12 +11,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118327040"
 ---
-# <a name="active-accessibility-user-interface-services-developers-guide"></a>Active Accessibility Benutzeroberfläche Services Developer es Guide (Entwicklerhandbuch für Active Accessibility Benutzeroberfläche Services)
+# <a name="active-accessibility-user-interface-services-developers-guide"></a>entwicklerhandbuch für Active Accessibility Benutzeroberfläche Services
 
-In diesem Abschnitt werden die folgenden Themen erläutert:
+In diesem Abschnitt werden die folgenden Themen behandelt:
 
 -   [Benutzeroberfläche-APIs](user-interface-apis.md)
--   [Aufrufen Active Accessibility-APIs](calling-active-accessibility-apis.md)
+-   [Aufrufen von Active Accessibility-APIs](calling-active-accessibility-apis.md)
 -   [Entwicklerhandbuch für Active Accessibility Clients](developer-s-guide-for-active-accessibility-clients.md)
 -   [Entwicklerhandbuch für Active Accessibility Server](developer-s-guide-for-active-accessibility-servers.md)
 

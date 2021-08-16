@@ -1,23 +1,23 @@
 ---
-description: Nachdem die Warteschlange den Commit für Ihre Vorgänge abgeschlossen hat, sollte Sie mithilfe der Funktion setupclosefilequeue mit dem Handle geschlossen werden, das von setupopenfilequeue erstellt wurde.
+description: Nachdem die Warteschlange den Commit für ihre Vorgänge abgeschlossen hat, sollte sie mithilfe der SetupCloseFileQueue-Funktion mit dem handle geschlossen werden, das von SetupOpenFileQueue erstellt wurde.
 ms.assetid: 4cb21699-e476-4832-9678-2bf36f3bda08
-title: Schließen der Datei Warteschlange und der INF-Datei
+title: Schließen der Dateiwarteschlange und der INF-Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 35b4005e3ce9d084d759612d70cd9fd256fe9ba4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ce5c81c75f7515acfb346b4277e416b0cb2c2a9be6e40464dcfdfc21c3b23bba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106361708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118887575"
 ---
-# <a name="closing-the-file-queue-and-inf-file"></a>Schließen der Datei Warteschlange und der INF-Datei
+# <a name="closing-the-file-queue-and-inf-file"></a>Schließen der Dateiwarteschlange und der INF-Datei
 
-Nachdem die Warteschlange den Commit für Ihre Vorgänge abgeschlossen hat, sollte Sie mithilfe der Funktion [**setupclosefilequeue**](/windows/desktop/api/Setupapi/nf-setupapi-setupclosefilequeue) mit dem Handle geschlossen werden, das von [**setupopenfilequeue**](/windows/desktop/api/Setupapi/nf-setupapi-setupopenfilequeue)erstellt wurde. Der Standard Warteschlangen Rückruf muss zerstört und neu erstellt werden, bevor ein Commit für eine andere Warteschlange ausgeführt werden kann.
+Nachdem die Warteschlange den Commit für ihre Vorgänge abgeschlossen hat, sollte sie mithilfe der [**SetupCloseFileQueue-Funktion**](/windows/desktop/api/Setupapi/nf-setupapi-setupclosefilequeue) mit dem Handle geschlossen werden, das von [**SetupOpenFileQueue erstellt wurde.**](/windows/desktop/api/Setupapi/nf-setupapi-setupopenfilequeue) Der Standardmäßige Warteschlangenrückruf muss zerstört und neu erstellt werden, bevor ein Committed für eine andere Warteschlange möglich ist.
 
-Wenn ein Standardkontext für die Verwendung durch die standardmäßige Rückruf Routine initiiert wurde, sollte Sie auch durch Aufrufen der [**setuptermdefaultqueuecallback**](/windows/desktop/api/Setupapi/nf-setupapi-setuptermdefaultqueuecallback) -Funktion beendet werden. Der *Kontext* ist ein Zeiger auf die-Struktur, die von der [**SetupInitDefaultQueueCallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupinitdefaultqueuecallback) -Funktion zurückgegeben wird.
+Wenn ein Standardkontext für die Verwendung durch die Standardrückrufroutine initiiert wurde, sollte er auch durch Aufrufen der [**SetupTermDefaultQueueCallback-Funktion beendet**](/windows/desktop/api/Setupapi/nf-setupapi-setuptermdefaultqueuecallback) werden. Der *Kontext* ist ein Zeiger auf die -Struktur, die von der [**SetupInitDefaultQueueCallback-Funktion zurückgegeben**](/windows/desktop/api/Setupapi/nf-setupapi-setupinitdefaultqueuecallback) wird.
 
-Wenn der Zugriff auf die INF-Informationen nicht mehr benötigt wird, rufen Sie die Funktion [**setupcloseinffile**](/windows/desktop/api/Setupapi/nf-setupapi-setupcloseinffile) mit dem Handle auf, das von [**setupopenfilequeue**](/windows/desktop/api/Setupapi/nf-setupapi-setupopenfilequeue) erstellt wurde, um Systemressourcen freizugeben.
+Wenn der Zugriff auf die INF-Informationen nicht mehr benötigt wird, rufen Sie die [**SetupCloseInfFile-Funktion**](/windows/desktop/api/Setupapi/nf-setupapi-setupcloseinffile) mit dem Handle auf, das von [**SetupOpenFileQueue**](/windows/desktop/api/Setupapi/nf-setupapi-setupopenfilequeue) erstellt wurde, um Systemressourcen frei zu machen.
 
  
 

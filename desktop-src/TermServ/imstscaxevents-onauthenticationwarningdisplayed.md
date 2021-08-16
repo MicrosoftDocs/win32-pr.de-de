@@ -1,12 +1,12 @@
 ---
-title: Imstscaxevents onauthenticationwarninggezeigte-Methode
-description: Wird aufgerufen, bevor ein ActiveX-Steuerelement ein Authentifizierungs Dialogfeld (z. b. das Dialogfeld Zertifikat Fehler) anzeigt.
+title: IMsTscAxEvents OnAuthenticationWarningDisplayed-Methode
+description: Wird aufgerufen, bevor ein ActiveX-Steuerelement ein Authentifizierungsdialogfeld anzeigt (z. B. das Dialogfeld zertifikatfehler).
 ms.assetid: ce307e5f-5e26-4041-bbd5-6871c0678da4
 ms.tgt_platform: multiple
 keywords:
-- Onauthenticationwarningangezeigte-Methode Remotedesktopdienste
-- Onauthenticationwarningangezeigte Methode Remotedesktopdienste, imstscaxevents-Schnittstelle
-- Imstscaxevents-Schnittstelle Remotedesktopdienste, onauthenticationwarninggezeigte-Methode
+- OnAuthenticationWarningDisplayed-Methode Remotedesktopdienste
+- OnAuthenticationWarningDisplayed-Methode Remotedesktopdienste , IMsTscAxEvents-Schnittstelle
+- IMsTscAxEvents-Schnittstelle Remotedesktopdienste , OnAuthenticationWarningDisplayed-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 33307adf103536cce5841effe2843a7c48fda357
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: df2de56a612c748db720e485d9f1e6e5750c9fc3281500dfddd751f41aed1641
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118854008"
 ---
-# <a name="imstscaxeventsonauthenticationwarningdisplayed-method"></a>Imstscaxevents:: onauthenticationwarninggezeigte-Methode
+# <a name="imstscaxeventsonauthenticationwarningdisplayed-method"></a>IMsTscAxEvents::OnAuthenticationWarningDisplayed-Methode
 
-Wird aufgerufen, bevor ein ActiveX-Steuerelement ein Authentifizierungs Dialogfeld (z. b. das Dialogfeld Zertifikat Fehler) anzeigt.
+Wird aufgerufen, bevor ein ActiveX-Steuerelement ein Authentifizierungsdialogfeld anzeigt (z. B. das Dialogfeld zertifikatfehler).
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,9 +45,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei Bedarf kann die [**uiparameentwindowhandle**](imsrdpclientnonscriptable2-uiparentwindowhandle.md) -Eigenschaft der [**IMsRdpClientNonScriptable2**](imsrdpclientnonscriptable2.md) -Schnittstelle verwendet werden, um sicherzustellen, dass das Dialogfeld für die modale Authentifizierung, das angezeigt wird, von einem angegebenen Fenster übergeordnet wird (Dies ist möglicherweise erforderlich, um zu verhindern, dass Benutzer andere Dialogfelder verwenden, während das Authentifizierungs Dialogfeld angezeigt wird). Standardmäßig ist das übergeordnete Element das Fenster "ActiveX-Steuerelement".
+Bei Bedarf kann die [**UIParentWindowHandle-Eigenschaft**](imsrdpclientnonscriptable2-uiparentwindowhandle.md) der [**IMsRdpClientNonScriptable2-Schnittstelle**](imsrdpclientnonscriptable2.md) verwendet werden, um sicherzustellen, dass das anzuzeigende modale Authentifizierungsdialogfeld von einem angegebenen Fenster übergeordnet wird (dies kann erforderlich sein, um zu verhindern, dass Benutzer andere Dialogfelder verwenden, während das Authentifizierungsdialogfeld angezeigt wird). Standardmäßig ist das übergeordnete Element das ActiveX Steuerelementfenster.
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -61,21 +61,21 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008, Windows Server 2008 mit SP1<br/>                           |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | Imstscaxevents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
+| IID<br/>                      | IMsTscAxEvents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Onauthenticationwarningverworfen**](imstscaxevents-onauthenticationwarningdismissed.md)
+[**OnAuthenticationWarningDismissed**](imstscaxevents-onauthenticationwarningdismissed.md)
 </dt> <dt>
 
-[**Uianentwindowhandle**](imsrdpclientnonscriptable2-uiparentwindowhandle.md)
+[**UIParentWindowHandle**](imsrdpclientnonscriptable2-uiparentwindowhandle.md)
 </dt> <dt>
 
-[**Imstscaxevents**](imstscaxevents-interface.md)
+[**IMsTscAxEvents**](imstscaxevents-interface.md)
 </dt> </dl>
 
  

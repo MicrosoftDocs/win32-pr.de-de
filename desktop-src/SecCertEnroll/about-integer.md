@@ -1,25 +1,25 @@
 ---
-description: Ganzzahlige Werte werden in ein TLV-Dreieck codiert, das mit dem Tagwert 0x02 beginnt.
+description: Ganzzahlige Werte werden in ein TLV-Triplet codiert, das mit dem Tagwert 0x02.
 ms.assetid: a6fed62f-af59-488c-a690-be8c3413086f
-title: Ganzzahl (Zertifikatregistrierungs-API)
+title: INTEGER (Zertifikatregistrierungs-API)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f0e8ed162d4cf4b2ac4909baf1cd7b5e94ddea6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 85151947653a66c98b7a030ade7b9ff7b4f5ee87fd84edc4cc52679be296a1a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104345438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118904342"
 ---
-# <a name="integer-certificate-enrollment-api"></a>Ganzzahl (Zertifikatregistrierungs-API)
+# <a name="integer-certificate-enrollment-api"></a>INTEGER (Zertifikatregistrierungs-API)
 
-Ganzzahlige Werte werden in ein TLV-Dreieck codiert, das mit dem **Tagwert** 0x02 beginnt. Das **Wertfeld** des TLV-Zweigs enthält die codierte Ganzzahl, wenn Sie positiv ist, oder die zwei Komplement, wenn Sie negativ ist. Wenn die ganze Zahl positiv ist, aber das hohe Bestell Bit auf 1 festgelegt ist, wird dem Inhalt eine führende 0x00 hinzugefügt, um anzugeben, dass die Zahl nicht negativ ist. Beispielsweise ist das hochwertigen Byte von 0x8F (10001111) 1. Daher wird dem Inhalt ein führendes NULL-Byte hinzugefügt, wie in der folgenden Abbildung dargestellt.
+Ganzzahlige Werte werden in ein TLV-Triplet codiert, das mit dem **Tagwert** 0x02. Das **Feld Wert** des TLV-Triplets enthält die codierte ganze Zahl, wenn sie positiv ist, oder das Komplement der beiden Werte, wenn sie negativ ist. Wenn die ganze Zahl positiv ist, das obere Bit jedoch auf 1 festgelegt ist, wird dem Inhalt eine führende 0x00 hinzugefügt, um anzugeben, dass die Zahl nicht negativ ist. Beispielsweise ist das obere Byte 0x8F (10001111) 1. Aus diesem Grund wird dem Inhalt ein führendes 0 Byte hinzugefügt, wie in der folgenden Abbildung dargestellt.
 
-![der-Codierung des booleschen Datentyps.](images/der-tlv-integer.png)
+![der Codierung des booleschen Datentyps](images/der-tlv-integer.png)
 
-Wenn die ganze Zahl weniger als 128 Bytes enthält, benötigt das *Längen* Feld nur ein Byte, um die Inhalts Länge anzugeben. Wenn die Ganzzahl mehr als 127 Bytes beträgt, wird Bit 7 des *Längen* Felds auf 1 festgelegt, und Bits 6 bis 0 geben Sie die Anzahl zusätzlicher Bytes an, die zum Identifizieren der Inhalts Länge verwendet werden. Weitere Informationen finden Sie unter [codierte Länge und Wert Bytes](about-encoded-length-and-value-bytes.md).
+Wenn die ganze Zahl weniger als 128 Bytes enthält, benötigt das *Feld Length* nur ein Byte, um die Inhaltslänge anzugeben. Wenn die ganze Zahl größer als 127 Bytes ist, wird Bit 7 des *Felds Length* auf 1 festgelegt, und die Bits 6 bis 0 geben die Anzahl zusätzlicher Bytes an, die zum Identifizieren der Inhaltslänge verwendet werden. Weitere Informationen finden Sie unter [Codierte Länge und Wertbytes.](about-encoded-length-and-value-bytes.md)
 
-Im folgenden Beispiel wird aus [PKCS \# 10-codiertem ASN. 1](pkcs--10-encoded-asn-1.md)die Codierung für einen öffentlichen Schlüssel mit 128 Byte veranschaulicht. Das erste Byte enthält den **Tagwert** des **ganzzahligen** Datentyps 0x02. Das zweite und das dritte Byte enthalten den **Längen** Wert. Bit 7 des zweiten Bytes ist auf 1 festgelegt, da mehr als 127 Bytes Inhalt vorhanden sind. Bits 0 bis 6 des zweiten Bytes geben Sie die Anzahl der nachfolgenden Bytes an, die in diesem Fall eine genaue Angabe der Inhalts Länge benötigen. Das dritte Byte gibt die Anzahl der Inhalts Bytes an, 0x81. Das vierte Byte, 0x00, wird dem-Inhalt hinzugefügt, um anzugeben, dass die ganze Zahl tatsächlich ein positiver Wert ist, auch wenn das Signier Bit des führenden Inhalts bytes (0x8F) auf 1 festgelegt ist.
+Das folgende Beispiel aus [PKCS \# 10 Encoded ASN.1](pkcs--10-encoded-asn-1.md)zeigt die Codierung für einen öffentlichen 128-Byte-Schlüssel. Das erste Byte enthält den **Tag-Wert** für den **INTEGER-Datentyp** 0x02. Das zweite und dritte Bytes enthalten den **Length-Wert.** Bit 7 des zweiten Byte wird auf 1 festgelegt, da mehr als 127 Bytes Inhalt enthalten. Bits 0 bis 6 des zweiten Byte geben die Anzahl der nach folgenden Bytes an, die in diesem Fall erforderlich sind, um die Inhaltslänge genau anzugeben. Das dritte Byte gibt die Anzahl der Inhaltsbytes an, 0x81. Das vierte Byte, 0x00, wird dem Inhalt hinzugefügt, um anzugeben, dass die ganze Zahl tatsächlich ein positiver Wert ist, obwohl das Vorzeichenbit des führenden Inhalts byte (0x8F) auf 1 festgelegt ist.
 
 ``` syntax
 02 81 81          ; INTEGER (81 Bytes)
@@ -34,7 +34,7 @@ Im folgenden Beispiel wird aus [PKCS \# 10-codiertem ASN. 1](pkcs--10-encoded-as
 |  31 5b b1 9c bc 20 55 bf  3a 37 42 45 75 dc 90 65
 ```
 
-Im folgenden Beispiel wird gezeigt, wie der ganzzahlige Wert 0x03 codiert wird. Das **tagbyte** enthält 0x02, und das **length** -Byte gibt an, dass ein Byte Inhalt vorhanden ist.
+Das folgende Beispiel zeigt, wie der ganzzahlige 0x03 codiert wird. Das  Tag-Byte enthält 0x02, und das **Length-Byte** gibt an, dass ein Byte Inhalt enthalten ist.
 
 ``` syntax
 02 01             ; INTEGER (1 Bytes)
@@ -45,10 +45,10 @@ Im folgenden Beispiel wird gezeigt, wie der ganzzahlige Wert 0x03 codiert wird. 
 
 <dl> <dt>
 
-[ASN. 1-Typsystem](about-asn-1-type-system.md)
+[ASN.1-Typsystem](about-asn-1-type-system.md)
 </dt> <dt>
 
-[Der-Codierung von ASN. 1-Typen](about-der-encoding-of-asn-1-types.md)
+[DER-Codierung von ASN.1-Typen](about-der-encoding-of-asn-1-types.md)
 </dt> </dl>
 
  

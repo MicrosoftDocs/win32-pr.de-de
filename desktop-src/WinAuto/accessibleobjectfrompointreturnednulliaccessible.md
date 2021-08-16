@@ -17,11 +17,11 @@ ms.locfileid: "118327696"
 
 AccessibleObjectFromPoint( {0} , ) hat NULL {1} zurückgegeben.
 
-## <a name="type"></a>type
+## <a name="type"></a>Typ
 
 Fehler
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Die Adresse der [**IAccessible-Schnittstelle**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) des Benutzeroberflächenelements, die für die angegebenen Koordinaten ermittelt wurde, ist NULL.
 

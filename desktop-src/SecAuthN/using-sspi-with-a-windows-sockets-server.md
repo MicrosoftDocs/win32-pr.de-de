@@ -1,31 +1,31 @@
 ---
-description: Dieses Beispielprogramm arbeitet mit dem Client Programm, das SSPI mit einem Windows Sockets-Client verwendet. Beide Beispiel Programme verwenden die Header Datei sspiexample. h, die in der Header Datei für SSPI-Client-und-Server Beispiele zu finden ist.
+description: Dieses Beispielprogramm funktioniert mit dem Clientprogramm Using SSPI with a Windows Sockets Client (Verwenden von SSPI mit einem Windows Sockets-Client). Beide Beispielprogramme verwenden die Headerdatei SspiExample.h, die sie unter Headerdatei für SSPI-Client- und Serverbeispiele finden.
 ms.assetid: 4fa044c7-cce2-4a43-8f68-16cf3a4daaee
 title: Verwenden von SSPI mit einem Windows Sockets-Server
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b4dde8f5ab88dbd0c1fd95f1fdfee8d192a55087
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d47a8aac18ea89f479b61e004c59131f1d2c312d34ddae01db2bd022377ea475
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355299"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118915173"
 ---
 # <a name="using-sspi-with-a-windows-sockets-server"></a>Verwenden von SSPI mit einem Windows Sockets-Server
 
-Dieses Beispielprogramm arbeitet mit dem Client Programm, das [SSPI mit einem Windows Sockets-Client verwendet](using-sspi-with-a-windows-sockets-client.md). Beide Beispiel Programme verwenden die Header Datei sspiexample. h, die in der [Header Datei für SSPI-Client-und-Server Beispiele](header-file-for-sspi-client-and-server.md)zu finden ist.
+Dieses Beispielprogramm funktioniert mit dem Clientprogramm [Using SSPI with a Windows Sockets Client](using-sspi-with-a-windows-sockets-client.md). Beide Beispielprogramme verwenden die Headerdatei SspiExample.h, die sich unter Headerdatei für [SSPI-Client und Serverbeispiele finden.](header-file-for-sspi-client-and-server.md)
 
-Dieses Programm umfasst Aufrufe von Funktionen in Secur32. lib und Ws2 \_ 32. lib, die in den Linkbibliotheken enthalten sein müssen.
+Dieses Programm umfasst Aufrufe von Funktionen in Secur32.lib und Ws2 \_ 32.lib, die in die Linkbibliotheken aufgenommen werden müssen.
 
 Dieses Programm veranschaulicht Folgendes:
 
--   Einrichten einer Windows Sockets-Verbindung mit einem Client.
+-   Herstellen einer Windows Sockets-Verbindung mit einem Client.
 -   Initialisieren einer Sitzung.
--   Herstellen einer Verbindung mit einem Client und Einrichten einer sicheren Kommunikationssitzung. Der Server bietet den Aushandlungs-SSP, der entweder mit NTLM oder Kerberos auf den Client reagieren kann.
--   Verwendet Client Identitätswechsel und kehrt auf sich selbst zurück.
+-   Herstellen einer Verbindung mit einem Client und Einrichten einer sicheren Kommunikationssitzung. Der Server bietet hier den Negotiate-SSP, der mit NTLM oder Kerberos auf den Client reagieren kann.
+-   Verwendet clientpersonation und reverting to self (Clientpersonwechsel und -wies auf sich selbst).
 -   Sendet dem Client eine verschlüsselte Nachricht.
 
-In diesem Beispielprogramm wird die eingeschränkte Fehlerbehandlung verwendet.
+Dieses Beispielprogramm verwendet eine eingeschränkte Fehlerbehandlung.
 
 
 ```C++

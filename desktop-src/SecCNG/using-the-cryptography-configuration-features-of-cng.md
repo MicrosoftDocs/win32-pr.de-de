@@ -1,30 +1,30 @@
 ---
-description: Stellt Funktionen zum Aufzählen und Abrufen von Informationen zu registrierten Anbietern bereit.
+description: Stellt Funktionen zum Aufzählen und Abrufen von Informationen zu registrierten Anbietern zur Verfügung.
 ms.assetid: 5b07060e-0c66-4bf2-b697-05231cb38375
-title: Verwenden der kryptografiekonfigurationsfeatures von CNG
+title: Verwenden der Kryptografiekonfigurationsfunktionen von CNG
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cd700b52810f43381722a315bec12216acd7b683
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0aa1845d7c1df7afb95b93446b1e86b3838aed7e0ef51bb0e53b6f7a83f3515b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118905399"
 ---
-# <a name="using-the-cryptography-configuration-features-of-cng"></a>Verwenden der kryptografiekonfigurationsfeatures von CNG
+# <a name="using-the-cryptography-configuration-features-of-cng"></a>Verwenden der Kryptografiekonfigurationsfunktionen von CNG
 
-Die CNG-API bietet Funktionen zum Auflisten und Abrufen von Informationen zu registrierten Anbietern.
+Die CNG-API stellt Funktionen zum Aufzählen und Abrufen von Informationen zu registrierten Anbietern bereit.
 
 -   [Auflisten von Anbietern](#enumerating-providers)
--   [Anbieter Registrierungsinformationen werden erhalten.](#getting-provider-registration-information)
+-   [Abrufen von Informationen zur Anbieterregistrierung](#getting-provider-registration-information)
 
 ## <a name="enumerating-providers"></a>Auflisten von Anbietern
 
-Sie verwenden die Funktion " [**bcryptenumregisteredproviders**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumregisteredproviders) ", um die registrierten Anbieter aufzuzählen. Die Funktion " **bcryptenreregisteredproviders** " kann auf zwei Arten aufgerufen werden:
+Sie verwenden die [**BCryptEnumRegisteredProviders-Funktion,**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumregisteredproviders) um die registrierten Anbieter zu aufzählen. Die **BCryptEnumRegisteredProviders-Funktion** kann auf zwei Arten aufgerufen werden:
 
-1.  Der erste besteht darin, dass die Funktion " [**bcryptenumschlag registeredproviders**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumregisteredproviders) " den Arbeitsspeicher zuweist. Dies wird erreicht, indem die Adresse eines **null** -Zeigers für den *ppbuffer* -Parameter übergeben wird. Mit diesem Code wird der erforderliche Arbeitsspeicher für die Struktur der [**crypt- \_ Anbieter**](/windows/desktop/api/Bcrypt/ns-bcrypt-crypt_providers) und die zugehörigen Zeichen folgen zugeordnet. Wenn die Funktion " **bcryptenreregisteredproviders** " auf diese Weise verwendet wird, müssen Sie den Arbeitsspeicher freigeben, wenn er nicht mehr benötigt wird, indem Sie *ppbuffer* an die Funktion " [**bcryptfreebuffer**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptfreebuffer) " übergeben.
+1.  Die erste besteht in der Zuweisung des Arbeitsspeichers durch die [**BCryptEnumRegisteredProviders-Funktion.**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumregisteredproviders) Dies wird erreicht, indem die Adresse eines **NULL-Zeigers** für den *ppBuffer-Parameter übergeben* wird. Mit diesem Code wird der erforderliche Arbeitsspeicher für die [**CRYPT \_ PROVIDERS-Struktur**](/windows/desktop/api/Bcrypt/ns-bcrypt-crypt_providers) und die zugeordneten Zeichenfolgen zugeordnet. Wenn die **BCryptEnumRegisteredProviders-Funktion** auf diese Weise verwendet wird, müssen Sie den Arbeitsspeicher frei geben, wenn er nicht mehr benötigt wird, indem Sie *ppBuffer* an die [**BCryptFreeBuffer-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptfreebuffer) übergeben.
 
-    Im folgenden Beispiel wird gezeigt, wie Sie die Funktion " [**bcryptenumschlag registeredproviders**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumregisteredproviders) " verwenden, um den Puffer für Sie zuzuweisen.
+    Das folgende Beispiel zeigt, wie Sie die [**BCryptEnumRegisteredProviders-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumregisteredproviders) verwenden, um den Puffer für Sie zu reservieren.
 
     ```C++
     #include <windows.h>
@@ -76,9 +76,9 @@ Sie verwenden die Funktion " [**bcryptenumregisteredproviders**](/windows/deskto
 
     
 
-2.  Die zweite Methode besteht darin, den erforderlichen Speicher selbst zuzuordnen. Dies wird erreicht, indem die Funktion " [**bcryptenumschlag registeredproviders**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumregisteredproviders) " mit **null** für den Parameter " *ppbuffer* " aufgerufen wird. Die Funktion " **bcryptenreregisteredproviders** " wird in den Wert eingefügt, auf den der Parameter " *pcbBuffer* " zeigt, die erforderliche Größe (in Bytes) der [**crypt- \_ Anbieter**](/windows/desktop/api/Bcrypt/ns-bcrypt-crypt_providers) Struktur und aller Zeichen folgen. Anschließend weisen Sie den erforderlichen Arbeitsspeicher zu und übergeben die Adresse dieses Puffer Zeigers für den *ppbuffer* -Parameter in einem zweiten Aufrufen der Funktion " **bcryptenumregisteredproviders** ".
+2.  Die zweite Methode besteht im Zuweisen des erforderlichen Arbeitsspeichers selbst. Dies wird erreicht, indem die [**BCryptEnumRegisteredProviders-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumregisteredproviders) mit **NULL für** den *ppBuffer-Parameter aufgerufen* wird. Die **BCryptEnumRegisteredProviders-Funktion** wird in den Wert, auf den durch den *parameterregistrBuffer* verwiesen wird, die erforderliche Größe der [**CRYPT \_ PROVIDERS-Struktur**](/windows/desktop/api/Bcrypt/ns-bcrypt-crypt_providers) und aller Zeichenfolgen in Byte platzieren. Anschließend weisen Sie den erforderlichen Arbeitsspeicher zu und übergeben die Adresse dieses Pufferzeigers für den *ppBuffer-Parameter* in einem zweiten Aufruf der **BCryptEnumRegisteredProviders-Funktion.**
 
-    Im folgenden Beispiel wird gezeigt, wie Sie die Funktion " [**bcryptenumschlag registeredproviders**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumregisteredproviders) " verwenden, um Ihren eigenen Puffer zuzuordnen und zu verwenden.
+    Das folgende Beispiel zeigt, wie Sie die [**BCryptEnumRegisteredProviders-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumregisteredproviders) verwenden, um Ihren eigenen Puffer zu zuordnen und zu verwenden.
 
     ```C++
     #include <windows.h>
@@ -126,9 +126,9 @@ Sie verwenden die Funktion " [**bcryptenumregisteredproviders**](/windows/deskto
 
     
 
-## <a name="getting-provider-registration-information"></a>Anbieter Registrierungsinformationen werden erhalten.
+## <a name="getting-provider-registration-information"></a>Abrufen von Anbieterregistrierungsinformationen
 
-Die Funktion " [**bcryptqueryproviderregistration**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptqueryproviderregistration) " dient zum Abrufen zusätzlicher Registrierungs spezifischer Informationen über einen Anbieter. Diese Funktion nimmt den Namen des Anbieters, für den Sie Informationen abrufen möchten, den gewünschten Anbieter Modus (Kernel Modus, Benutzermodus oder beides) und den Bezeichner der Anbieter Schnittstelle auf, für den die Registrierungsinformationen abgerufen werden sollen. Wenn Sie z. b. die Registrierungsinformationen für den Benutzermodus für die Verschlüsselungs Schnittstelle für den Anbieter "Microsoft primitiver Anbieter" abrufen möchten, würden Sie einen ähnlichen Befehl wie den folgenden erstellen.
+Die [**BCryptQueryProviderRegistration-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptqueryproviderregistration) wird verwendet, um zusätzliche registrierungsspezifische Informationen zu einem Anbieter zu erhalten. Diese Funktion verwendet den Namen des Anbieters, für den Sie Informationen abrufen möchten, den gewünschten Anbietermodus (Kernelmodus, Benutzermodus oder beides) und den Bezeichner der Anbieterschnittstelle, für den die Registrierungsinformationen abgerufen werden. Um beispielsweise die Registrierungsinformationen für den Benutzermodus für die Verschlüsselungsschnittstelle für den Anbieter "Microsoft Primitive Provider" zu erhalten, würden Sie einen Aufruf ähnlich dem folgenden ausführen.
 
 
 ```C++
@@ -143,7 +143,7 @@ BCryptQueryProviderRegistration(
 
 
 
-Wie die Funktion [**bcryptenreregisteredproviders**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumregisteredproviders) kann die Funktion [**bcryptqueryproviderregistration**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptqueryproviderregistration) entweder Arbeitsspeicher zuweisen, oder Sie können den Speicher selbst zuweisen. Der Prozess ist für die beiden Funktionen identisch.
+Wie die [**BCryptEnumRegisteredProviders-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumregisteredproviders) kann die [**BCryptQueryProviderRegistration-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptqueryproviderregistration) entweder Arbeitsspeicher für Sie zuweisen, oder Sie können den Arbeitsspeicher selbst zuweisen. Der Prozess ist für die beiden Funktionen identisch.
 
  
 

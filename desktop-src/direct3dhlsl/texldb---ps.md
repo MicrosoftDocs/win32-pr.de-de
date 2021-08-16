@@ -1,6 +1,6 @@
 ---
-title: texldb-PS
-description: Unausgewogene Textur Lade Anweisung. Diese Anweisung verwendet das vierte Element (. a oder. w), um die Detailstufe der Textur Stichprobe direkt vor der Stichprobenentnahme zu überdenken.
+title: texldb – ps
+description: Anweisung zum Laden einer voreingenommenen Textur. Diese Anweisung verwendet das vierte Element (.a oder .w), um die Textur-Samplingebene direkt vor der Stichprobenentnahme zu verzerren.
 ms.assetid: cafd72c9-b7bb-4e3f-8a8c-de26a4446864
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,94 +9,94 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 912c4c61f6c1f2b6bef46c7c5b6ea17223df5eb8
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ddf340840e377ee03641ae33c0731f27e90ce4760cad4ddb6c636c1831fa80ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101783"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118505793"
 ---
-# <a name="texldb---ps"></a>texldb-PS
+# <a name="texldb---ps"></a>texldb – ps
 
-Unausgewogene Textur Lade Anweisung. Diese Anweisung verwendet das vierte Element (. a oder. w), um die Detailstufe der Textur Stichprobe direkt vor der Stichprobenentnahme zu überdenken.
+Anweisung zum Laden einer voreingenommenen Textur. Diese Anweisung verwendet das vierte Element (.a oder .w), um die Textur-Samplingebene direkt vor der Stichprobenentnahme zu verzerren.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| texldb DST, src0, Quelle1 |
+| texldb dst, src0, src1 |
 |------------------------|
 
 
 
- 
+ 
 
 Hierbei gilt:
 
--   DST ist das Ziel Register.
--   src0 ist ein Quell Register, das die Texturkoordinaten für das Textur Beispiel bereitstellt. Siehe [Texturkoordinaten Register](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md).
--   Quelle1 identifiziert den [Sampler (Direct3D 9 ASM-PS)](dx9-graphics-reference-asm-ps-registers-sampler.md) \# , wobei \# angibt, welche Textur samplingnummer als Stichprobe angegeben wird. Der Sampler hat ihm eine Textur und einen samplerzustand zugeordnet, der durch [**D3DSAMPLERSTATETYPE**](/windows/desktop/direct3d9/d3dsamplerstatetype)definiert wird.
+-   dst ist das Zielregister.
+-   src0 ist ein Quellregister, das die Texturkoordinaten für das Texturbeispiel enthält. Weitere Informationen [finden Sie unter Texturkoordinatenregister.](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md)
+-   src1 identifiziert den [Sampler (Direct3D 9 asm-ps)](dx9-graphics-reference-asm-ps-registers-sampler.md) (s), wobei angibt, welche \# \# Texturs samplernummer entnommen werden soll. Der Sampler hat ihm eine Textur und einen durch [**D3DSAMPLERSTATETYPE**](/windows/desktop/direct3d9/d3dsamplerstatetype)definierten Samplerzustand zugeordnet.
 
-Informationen zu den Einschränkungen bei der Verwendung von texldb finden Sie in der [texld-PS \_ 2 \_ 0-und up-](texld---ps-2-0.md) Anweisung.
+Informationen zu den Einschränkungen bei der Verwendung von texldb finden Sie in der [Texld-Anweisung ps \_ 2 \_ 0 und up.](texld---ps-2-0.md)
 
-### <a name="ps_2_0-and-ps_2_x"></a>PS \_ 2 \_ 0 und PS \_ 2 \_ x
+### <a name="ps_2_0-and-ps_2_x"></a>ps \_ 2 \_ 0 und ps \_ 2 \_ x
 
-DST muss ein [temporäres Register](dx9-graphics-reference-asm-ps-registers-temporary.md) (r \# ) sein, und nur. xyzw Mask (Standard Maske) ist zulässig.
+dst muss ein [temporäres Register](dx9-graphics-reference-asm-ps-registers-temporary.md) (r) \# sein, und nur die XYZW-Maske (Standardmaske) ist zulässig.
 
-src0 muss entweder ein [Texturkoordinaten Register](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md) (t \# ) oder ein [temporäres Register](dx9-graphics-reference-asm-ps-registers-temporary.md) (r \# ) sein, ohne Modifizierer oder Swizzle.
+src0 muss entweder ein [Texturkoordinatenregister](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md) (t ) oder ein temporäres Register (r) ohne Modifizierer oder \# [](dx9-graphics-reference-asm-ps-registers-temporary.md) \# Swizzle sein.
 
-Quelle1 muss ein [Sampler (Direct3D 9 ASM-PS)](dx9-graphics-reference-asm-ps-registers-sampler.md) sein \# , ohne Modifizierer oder Swizzle.
+src1 muss ein [Sampler (Direct3D 9 asm-ps) (s)](dx9-graphics-reference-asm-ps-registers-sampler.md) ohne Modifizierer \# oder Swizzle sein.
 
-Wenn das D3DD3DPSHADERCAPS2 \_ 0 \_ nodependentleselimit-Cap-Bit nicht festgelegt ist (in D3DPSHADERCAPS2 \_ 0), ist eine angegebene Textur Anweisung (texld, texldp, texldb, texldd) möglicherweise höchstens in dritter Reihenfolge abhängig. Eine abhängige Textur Anweisung der ersten Bestellung ist eine Textur Anweisung, in der Folgendes gilt:
+Wenn das D3DD3DPSHADERCAPS2 \_ 0 \_ NODEPENDENTREADLIMIT-Cap-Bit nicht festgelegt ist (in D3DPSHADERCAPS2 0), kann eine bestimmte Texturanweisung \_ (texld, texldp, texldb, texldd) von der dritten Reihenfolge abhängen. Eine abhängige Texturanweisung der ersten Ordnung ist eine Texturanweisung, in der eine der beiden anweisungen gilt:
 
--   src0 ist ein [temporäres Register](dx9-graphics-reference-asm-ps-registers-temporary.md) (r \# ).
--   DST wurde bereits geschrieben und wird nun erneut geschrieben.
+-   src0 ist ein [temporäres Register](dx9-graphics-reference-asm-ps-registers-temporary.md) (r). \#
+-   dst wurde zuvor geschrieben und wird jetzt erneut geschrieben.
 
-Eine abhängige Textur Anweisung in zweiter Reihenfolge wird als Textur Anweisung definiert, die ein temporäres Register (r) liest oder in ein [temporäres Register](dx9-graphics-reference-asm-ps-registers-temporary.md) schreibt, \# dessen Inhalt vor dem Ausführen der Textur Anweisung (möglicherweise indirekt) auf das Ergebnis einer abhängigen Textur Anweisung der ersten Bestellung angewiesen ist. Eine (n) in der Reihenfolge abhängige Textur Anweisung wird von einer (n-1)<sup>th</sup>-<sup>Order-Textur</sup>Anweisung abgeleitet.
+Eine abhängige Texturanweisung der zweiten Ordnung wird als Texturanweisung definiert, die ein temporäres [Register](dx9-graphics-reference-asm-ps-registers-temporary.md) (r) liest oder schreibt, dessen Inhalt vor dem Ausführen der Texturanweisung (möglicherweise indirekt) vom Ergebnis einer abhängigen Texturanweisung der ersten Ordnung abhängig \# ist. Eine (n)<sup>th-order-abhängige</sup>Texturanweisung wird von einer (n - 1)<sup>th</sup>-order-Texturanweisung ableiten.
 
 ### <a name="ps_3_0"></a>PS \_ 3 \_ 0
 
-Quelle1 muss ein [Sampler (Direct3D 9 ASM-PS)](dx9-graphics-reference-asm-ps-registers-sampler.md) \# ohne Modifizierer sein. "Swizzle" ist auf Quelle1 zulässig. wenn diese Anwendung angewendet wird, werden die Ergebnisse der Textur Suche vor dem Schreiben in den DST vorgezeichnet.
+src1 muss ein [Sampler (Direct3D 9 asm-ps) (s)](dx9-graphics-reference-asm-ps-registers-sampler.md) \# ohne Modifizierer sein. Swizzle ist auf src1 zulässig, und wenn es angewendet wird, werden die Ergebnisse der Textursuche vor dem Schreiben in dst vorgefiltert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | texldb                |      |      |      |      | x    | x    | x     | x    | x     |
 
 
 
- 
+ 
 
-texldb Bias die MipMap-Detailebene, die normalerweise als Teil des Beispiel Prozesses durch den (signierten) Wert in src0. w berechnet wird. Positive Bias-Werte führen dazu, dass kleinere Mipmaps ausgewählt werden und umgekehrt. Für PS \_ 2 \_ 0 und PS \_ 2 \_ x können sich die biaswerte im Bereich von \[ -3,0, + 3,0 befinden \] . Bei PS \_ 3 \_ 0 können sich die Werte für die Anzahl der Werte im Bereich von \[ -16,0, + 15,0 befinden \] . Durch biaswerte außerhalb dieser Bereiche werden nicht definierte Ergebnisse erzeugt. Der samplerstatus D3DSAMP \_ mipmaplodbias wird immer noch berücksichtigt, und der texldb-Bias wird diesem hinzugefügt, jedoch pro Pixel. Nachdem der ebenengrad ausführlich berechnet wurde, \_ wird D3DSAMP MaxMipLevel weiterhin berücksichtigt, und das Textur Beispiel wird angezeigt. Nach der texldb ist der Inhalt von src0 nicht betroffen (es sei denn, DST ist dasselbe Register).
+texldb biases the mipmap level-of-detail, computed normal as part of the sample process by the (signed) value in src0.w. Positive Biaswerte führen dazu, dass kleinere Mipmaps ausgewählt werden und umgekehrt. Für ps 2 0 und ps 2 x können Biaswerte im Bereich \_ \_ \_ \_ \[ -3,0, +3,0 \] liegen. Für ps 3 0 können Die Biaswerte innerhalb des Bereichs \_ \_ \[ -16,0, + 15,0 \] liegen. Biaswerte außerhalb dieser Bereiche führen zu nicht definierten Ergebnissen. Der Samplerzustand D3DSAMP MIPMAPLODBIAS wird weiterhin verwendet, und der Texldb-Bias wird hinzugefügt, jedoch auf \_ Pixelbasis. Nachdem die voreingenommene Detailebene berechnet wurde, wird D3DSAMP \_ MAXMIPLEVEL weiterhin verwendet, und die Texturstichprobe tritt auf. Nach texldb sind die Inhalte von src0 nicht betroffen (es sei denn, dst ist dasselbe Register).
 
-Die Anzahl der Koordinaten, die erforderlich sind, damit src0 das Textur Beispiel durchführen kann, hängt davon ab, wie Quelle1 deklariert wurde, sowie der. w-Komponente. [ \_ Samplertypen werden mit DCL samplertype (SM2, SM3-PS ASM)](dcl-samplertype---ps.md)deklariert. Wenn Quelle1 als 2D-Sampler deklariert ist, muss src0. xyw-Koordinaten enthalten. Wenn Quelle1 entweder als Cube-Sampler oder als volumesampler deklariert ist, muss src0. xyzw-Koordinaten enthalten. Die Stichprobenentnahme einer 2D-Textur mit xyzw-Koordinaten ist zulässig (die. z-Koordinate wird ignoriert).
+Die Anzahl der Koordinaten, die src0 zum Ausführen des Texturbeispiels benötigt, hängt davon ab, wie src1 deklariert wurde, plus der W-Komponente. Samplertypen werden mit [dcl \_ samplerType (sm2, sm3 - ps asm) deklariert.](dcl-samplertype---ps.md) Wenn src1 als 2D-Sampler deklariert ist, muss src0 XYW-Koordinaten enthalten. Wenn src1 entweder als Cube-Sampler oder volume sampler deklariert ist, muss src0 XYZW-Koordinaten enthalten. Das Sampling einer 2D-Textur mit XYZW-Koordinaten ist zulässig (die Z-Koordinate wird ignoriert).
 
-Wenn die Quell Textur weniger als vier Komponenten enthält, werden die fehlenden Komponenten als Standardwerte festgelegt. Standardwerte hängen vom Textur Format ab, wie in der folgenden Tabelle gezeigt:
+Wenn die Quelltextur weniger als vier Komponenten enthält, werden Standardwerte in den fehlenden Komponenten platziert. Die Standardwerte hängen vom Texturformat ab, wie in der folgenden Tabelle gezeigt:
 
 
 
-| Textur Format                                                                                          | Standardwerte       |
+| Texturformat                                                                                          | Standardwerte       |
 |---------------------------------------------------------------------------------------------------------|----------------------|
 | D3DFMT \_ R5G6B5, D3DFMT \_ R8G8B8, D3DFMT \_ L8, D3DFMT \_ L16, D3DFMT \_ R3G3B2, D3DFMT \_ CxV8U8, D3DFMT \_ L6V5U5 | A = 1,0              |
-| D3DFMT \_ V8U8, D3DFMT \_ V16U16, D3DFMT \_ G16R16, D3DFMT \_ G16R16F, D3DFMT \_ G32R32F                          | B = a = 1,0          |
-| D3DFMT \_ a8                                                                                              | R = G = B = 0,0      |
-| D3DFMT \_ R16F, D3DFMT \_ R32F                                                                              | G = B = a = 1,0      |
-| Alle tiefen/Schablonen Formate                                                                               | R = B = 0,0, A = 1,0 |
+| D3DFMT \_ V8U8, D3DFMT \_ V16U16, D3DFMT \_ G16R16, D3DFMT \_ G16R16F, D3DFMT \_ G32R32F                          | B = A = 1,0          |
+| D3DFMT \_ A8                                                                                              | R = G = B = 0,0      |
+| D3DFMT \_ R16F, D3DFMT \_ R32F                                                                              | G = B = A = 1,0      |
+| Alle Tiefen-/Schablonenformate                                                                               | R = B = 0,0, A = 1,0 |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,7 @@
 ---
-description: Die Frame \_ deskriptorstruktur stellt beschreibende Informationen zu rohframes bereit.
+description: Die \_ FRAME-DESCRIPTOR-Struktur stellt beschreibende Informationen zu Unformatierungsframes zur Verfügung.
 ms.assetid: f2fc256e-8e64-49c1-b2ad-ef656762d5c7
-title: FRAME_DESCRIPTOR Struktur (Netmon. h)
+title: FRAME_DESCRIPTOR -Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: c327ce1568eec07aabe3334013dae8b720ab7446
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1e675c07eae46096878e7c0aa71b53ba5bf22194e82ad8cc5aa5b6070d7e27e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344404"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118938571"
 ---
-# <a name="frame_descriptor-structure"></a>Frame \_ deskriptorstruktur
+# <a name="frame_descriptor-structure"></a>FRAME \_ DESCRIPTOR-Struktur
 
-Die **Frame \_ deskriptorstruktur** stellt beschreibende Informationen zu rohframes bereit.
+Die **\_ FRAME-DESCRIPTOR-Struktur** bietet beschreibende Informationen zu Unformatierungsframes.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,73 +48,73 @@ typedef struct _FRAME_DESCRIPTOR {
 
 <dl> <dt>
 
-**Framezeiger**
+**FramePointer**
 </dt> <dd>
 
-Zeiger auf Frame-Daten.
+Zeiger auf Framedaten.
 
 </dd> <dt>
 
-**Zeitstempel**
+**Timestamp**
 </dt> <dd>
 
-Die System Zeit in Mikrosekunden, zu der der Frame aufgezeichnet wurde. Diese Zeit wird normalerweise verwendet, um das Intervall zwischen dem Erfassen von zwei Frames zu bestimmen.
+Systemzeit in Mikrosekunden, als der Frame erfasst wurde. Diese Zeit wird in der Regel verwendet, um das Intervall zwischen den Zeiten zu bestimmen, zu der zwei Frames erfasst wurden.
 
 </dd> <dt>
 
-**Framelength**
+**FrameLength**
 </dt> <dd>
 
-Die Länge des Frames.
+Länge des Frames.
 
 </dd> <dt>
 
-**nbytesnütz**
+**nBytesAvail**
 </dt> <dd>
 
-Die tatsächliche kopierte Frame Länge.
+Die tatsächliche Framelänge, die kopiert wurde.
 
 </dd> <dt>
 
-**ETYPE**
+**Etype**
 </dt> <dd>
 
-ETYPE-Name.
+Geben Sie den Namen ein.
 
 </dd> <dt>
 
-**SAP**
+**Sap**
 </dt> <dd>
 
 SAP-Wert.
 
 </dd> <dt>
 
-**Lowprotocol**
+**LowProtocol**
 </dt> <dd>
 
-Der Index des gefundenen Protokolls.
+Index des gefundenen Protokolls.
 
 </dd> <dt>
 
-**Lowprotocoloffset**
+**LowProtocolOffset**
 </dt> <dd>
 
-Offset für Protokolldaten, die aus **lowprotocol** abgerufen werden.
+Offset zu Protokolldaten, die von **LowProtocol erhalten wurden.**
 
 </dd> <dt>
 
-**Highport**
+**HighPort**
 </dt> <dd>
 
-Port des hohen Protokolls, identifiziert in **lowprotocol**.
+Port mit hohem Protokoll, der in **LowProtocol identifiziert wird.**
 
 </dd> <dt>
 
-**Highprotocoloffset**
+**HighProtocolOffset**
 </dt> <dd>
 
-Offset für Protokolldaten, die von **highport** abgerufen werden.
+Offset zu Protokolldaten, die von **HighPort erhalten wurden.**
 
 </dd> </dl>
 
@@ -126,7 +126,7 @@ Offset für Protokolldaten, die von **highport** abgerufen werden.
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

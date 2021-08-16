@@ -1,30 +1,30 @@
 ---
-description: Aufgaben in der com+-Warteschlange
+description: COM+-Komponententasks in der Warteschlange
 ms.assetid: 1f49ea1b-d65f-4166-a238-a9941b99735b
-title: Aufgaben in der com+-Warteschlange
+title: COM+-Komponententasks in der Warteschlange
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d4bac31111a3690383b7c65871c1adfd86678abc
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 0b309b35f73823a194c3bcd1d6508c6b74261e5ed157c1e3f0efd4c05a8bd9fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041385"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118307977"
 ---
-# <a name="com-queued-components-tasks"></a>Aufgaben in der com+-Warteschlange
+# <a name="com-queued-components-tasks"></a>COM+-Komponententasks in der Warteschlange
 
-Dieser Abschnitt enthält Themen, in denen beschrieben wird, wie bestimmte Aufgaben mithilfe des in der Warteschlange befindlichen Komponenten Dienstanbieter ausgeführt werden.
+Dieser Abschnitt enthält Themen, in denen beschrieben wird, wie bestimmte Aufgaben mit dem COM+-Komponentendienst in der Warteschlange ausgeführt werden.
 
 
 
 | Thema                                                                                           | BESCHREIBUNG                                                                                                                           |
 |-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| [Erstellen von Warteschlangen fähigen Komponenten](creating-queuable-components.md)<br/>                     | Beschreibt, wie Komponenten mithilfe der IDL als Warteschlangen fähig markiert werden.<br/>                                                                |
-| [Komponenten Warteschlangen erstellen](creating-component-queues.md)<br/>                           | Beschreibt das Erstellen von Komponenten Warteschlangen mit dem Verwaltungs Programmkomponenten Dienste.<br/>                                 |
-| [Angeben des Authentifizierungs Protokolls](specifying-the-authentication-protocol.md)<br/> | Beschreibt, wie die Warteschlangen Sicherheit konfiguriert wird.<br/>                                                                                 |
-| [Komponenten Warteschlangen](activating-component-queues.md)<br/>                       | Beschreibt, wie die Warteschlangen Verarbeitung gestartet wird, entweder mithilfe des Verwaltungs Programms Komponenten Dienste oder Programm gesteuert.<br/>   |
-| [Verwenden des Warteschlangen Monikers](using-the-queue-moniker.md)<br/>                               | Beschreibt, wie eine in der Warteschlange befindliche Komponente mithilfe von **GetObject** oder [**CoGetObject**](/windows/desktop/api/objbase/nf-objbase-cogetobject)Programm gesteuert aktiviert werden kann.<br/> |
-| [Behandeln von Fehlern in in der Warteschlange befindlichen Komponenten](handling-errors-in-queued-components.md)<br/>     | Beschreibt Verfahren zur Behandlung von Fehlern, die während der Verarbeitung der Warteschlange auftreten können.<br/>                                         |
+| [Erstellen von Warteschlangenkomponenten](creating-queuable-components.md)<br/>                     | Beschreibt, wie Komponenten mithilfe der IDL als warteschlangenfähig markiert werden.<br/>                                                                |
+| [Erstellen von Komponentenwarteschlangen](creating-component-queues.md)<br/>                           | Beschreibt, wie Komponentenwarteschlangen mithilfe des Component Services-Verwaltungstools erstellt werden.<br/>                                 |
+| [Angeben des Authentifizierungsprotokolls](specifying-the-authentication-protocol.md)<br/> | Beschreibt, wie die Warteschlangensicherheit konfiguriert wird.<br/>                                                                                 |
+| [Aktivieren von Komponentenwarteschlangen](activating-component-queues.md)<br/>                       | Beschreibt, wie die Warteschlangenverarbeitung gestartet wird, entweder mithilfe des Verwaltungstools "Komponentendienste" oder programmgesteuert.<br/>   |
+| [Verwenden des Warteschlangenmonikers](using-the-queue-moniker.md)<br/>                               | Beschreibt, wie eine warteschlangenfähige Komponente programmgesteuert mitHilfe von **GetObject** oder [**CoGetObject**](/windows/desktop/api/objbase/nf-objbase-cogetobject)aktiviert wird.<br/> |
+| [Behandeln von Fehlern in Komponenten in der Warteschlange](handling-errors-in-queued-components.md)<br/>     | Beschreibt Verfahren zur Behandlung von Fehlern, die während der Warteschlangenverarbeitung auftreten können.<br/>                                         |
 
 
 
@@ -34,7 +34,7 @@ Dieser Abschnitt enthält Themen, in denen beschrieben wird, wie bestimmte Aufga
 
 <dl> <dt>
 
-[Konzepte der com+-Warteschlangen](com--queued-components-concepts.md)
+[Konzepte für COM+-Komponenten in der Warteschlange](com--queued-components-concepts.md)
 </dt> </dl>
 
  

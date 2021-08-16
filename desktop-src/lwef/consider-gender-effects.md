@@ -1,27 +1,27 @@
 ---
-title: Auswirkungen auf das Geschlecht
-description: Auswirkungen auf das Geschlecht
+title: Berücksichtigen von Auswirkungen auf das Geschlecht
+description: Berücksichtigen von Auswirkungen auf das Geschlecht
 ms.assetid: 634c4b1a-b5c7-40fa-b607-58b27bb671ea
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e2ecdef2c80e1a5a5589ed04d937979965bdfd78
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7767100b1f1507eb790a2ed45e03794325841a9d42daf36ec5502567a8f47392
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118752171"
 ---
-# <a name="consider-gender-effects"></a>Auswirkungen auf das Geschlecht
+# <a name="consider-gender-effects"></a>Berücksichtigen von Auswirkungen auf das Geschlecht
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-Soziale Antworten können von Geschlecht beeinflusst werden. Beispielsweise ist die Arbeit von nass und Reeves ein Hinweis darauf, dass in den USA männliche Personen in der Regel Stereotyp sind, um mehr über technische Themen zu erfahren, während Frauen als bessere Experten in zwischenmenschlichen Themen wie Liebe und Beziehungen angesehen werden. Dies deutet nicht darauf hin, dass Sie die Geschlechts Stereotypen nicht fortsetzen sollten, sondern nur, dass Sie wissen, dass Sie möglicherweise vorhanden sind.
+Antworten sozialer Netzwerke können vom Geschlecht beeinflusst werden. Die Arbeit von Zum Beispiel weist darauf hin, dass in den USA die menschlichen Persönlichkeiten stereotypisch betrachtet werden, um mehr über technische Themen zu verstehen, während Frauen als bessere Experten in zwischenmenschlichen Subjekten wie "Love" und "Relationships" bezeichnet werden. Dies deutet nicht darauf hin, dass Sie gender stereotypes weiterbilden sollten, sondern nur, dass Sie wissen, dass sie möglicherweise vorhanden sind, und verstehen, wie sie sich auf die Interaktion mit Ihrem Zeichen auswirken können.
 
-Beachten Sie, dass das wahrgenommene Geschlecht eines Zeichens nicht allein durch seinen Namen oder seine Darstellung festgelegt wird. Selbst ein Geschlecht-neutrales Zeichen kann Geschlecht basierend auf den Sprachmerkmalen, Sprachmustern und Bewegungen vermitteln.
+Denken Sie daran, dass das wahrgenommene Geschlecht eines Zeichens nicht ausschließlich durch seinen Namen oder seine Darstellung festgelegt wird. Selbst ein geschlechtneutrales Zeichen kann das Geschlecht basierend auf seinen Stimmmerkmalen, Sprachmustern und Bewegungen vermitteln.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Zuordnungsklasse Win32 COMApplicationSettings verknüpft eine DCOM-Anwendung und ihre Konfigurationseinstellungen.
+description: Die \_ WMI-Zuordnungsklasse Win32 COMApplicationSettings bezieht sich auf eine DCOM-Anwendung und deren Konfigurationseinstellungen.
 ms.assetid: b08eaff1-b42a-42f3-abf7-3664b6195acd
 ms.tgt_platform: multiple
 title: Win32_COMApplicationSettings-Klasse
@@ -25,7 +25,7 @@ ms.locfileid: "118417910"
 ---
 # <a name="win32_comapplicationsettings-class"></a>Win32 \_ COMApplicationSettings-Klasse
 
-Die [WMI-Zuordnungsklasse](/windows/desktop/WmiSdk/retrieving-a-class) **Win32 \_ COMApplicationSettings** verknüpft eine DCOM-Anwendung und ihre Konfigurationseinstellungen.
+Die **WMI-Zuordnungsklasse \_ Win32 COMApplicationSettings** bezieht sich auf eine DCOM-Anwendung und deren Konfigurationseinstellungen. [](/windows/desktop/WmiSdk/retrieving-a-class)
 
 Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
@@ -42,7 +42,7 @@ class Win32_COMApplicationSettings : CIM_ElementSetting
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ COMApplicationSettings-Klasse** verfügt über diese Typen von Membern:
+Die **Win32 \_ COMApplicationSettings-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -64,7 +64,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Element"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ DCOMApplication")
 </dt> </dl>
 
-Eine [**\_ Win32-DCOMApplication,**](win32-dcomapplication.md) die die DCOM-Anwendung darstellt, auf die die Einstellungen angewendet werden.
+Eine [**Win32 \_ DCOMApplication,**](win32-dcomapplication.md) die die DCOM-Anwendung darstellt, auf die die Einstellungen angewendet werden.
 
 </dd> <dt>
 
@@ -77,7 +77,7 @@ Datentyp: **Win32 \_ DCOMApplicationSetting**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Einstellung"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ DCOMApplicationSetting")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Setting"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ DCOMApplicationSetting")
 </dt> </dl>
 
 Ein [**Win32 \_ DCOMApplicationSetting,**](win32-dcomapplicationsetting.md) das die Konfigurationseinstellungen darstellt, die der DCOM-Anwendung zugeordnet sind.
@@ -86,7 +86,7 @@ Ein [**Win32 \_ DCOMApplicationSetting,**](win32-dcomapplicationsetting.md) das 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ COMApplicationSettings-Klasse** wird von [**CIM \_ ElementSetting**](cim-elementsetting.md)abgeleitet.
+Die **Win32 \_ COMApplicationSettings-Klasse** wird von [**CIM \_ ElementSetting abgeleitet.**](cim-elementsetting.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -106,7 +106,7 @@ Die **Win32 \_ COMApplicationSettings-Klasse** wird von [**CIM \_ ElementSetting
 
 <dl> <dt>
 
-[**CIM \_ ElementSetting**](cim-elementsetting.md)
+[**\_CIM-ElementSetting**](cim-elementsetting.md)
 </dt> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))

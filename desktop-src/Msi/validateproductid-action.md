@@ -1,35 +1,35 @@
 ---
-description: Die Aktion "ValidateProductID" legt die ProductID-Eigenschaft auf den vollständigen Produkt Bezeichner fest.
+description: Die ValidateProductID-Aktion legt die ProductID-Eigenschaft auf den vollständigen Produktbezeichner fest.
 ms.assetid: 31b2f9d2-98d5-4cf3-af02-f12de2740bb8
 title: ValidateProductID-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f4d0f9f58641e8e24d73a1acae0b79cc0b875aba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: be241bddbafb8f963aea1e73a2750c9d45766eb06767b0b30142883fa1bcebac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118942230"
 ---
 # <a name="validateproductid-action"></a>ValidateProductID-Aktion
 
-Die Aktion "ValidateProductID" legt die [**ProductID-**](productid.md) Eigenschaft auf den vollständigen Produkt Bezeichner fest.
+Die ValidateProductID-Aktion legt die [**ProductID-Eigenschaft**](productid.md) auf den vollständigen Produktbezeichner fest.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Diese Aktion muss vor dem Assistenten für die Benutzeroberfläche in der [Tabelle InstallUISequence](installuisequence-table.md) und vor der [RegisterUser-Aktion](registeruser-action.md) in der [InstallExecuteSequence-Tabelle](installexecutesequence-table.md)sequenziert werden.
+Diese Aktion muss vor dem Assistenten für die Benutzeroberfläche in der [Tabelle InstallUISequence](installuisequence-table.md) und vor der [Aktion RegisterUser](registeruser-action.md) in der [Tabelle InstallExecuteSequence](installexecutesequence-table.md)sequenziert werden.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
-Es sind keine Aktions Daten Meldungen vorhanden.
+Es sind keine ActionData-Meldungen vorhanden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Installer überprüft, ob ein Produkt erfolgreich überprüft wurde, indem er die [**ProductID-**](productid.md) Eigenschaft überprüft. Der Installer legt die **ProductID-** Eigenschaft nach einer erfolgreichen Validierung auf den vollständigen Produkt Bezeichner fest. Die Aktion "ValidateProductID" führt keine Aktion aus, wenn die Eigenschaft " **ProductID** " bereits durch eine erfolgreiche Validierung oder eine andere Methode festgelegt wurde.
+Das Installationsprogramm überprüft durch Überprüfen der [**ProductID-Eigenschaft,**](productid.md) ob ein Produkt erfolgreich überprüft wurde. Das Installationsprogramm legt die **ProductID-Eigenschaft** nach einer erfolgreichen Überprüfung auf den vollständigen Produktbezeichner fest. Die ValidateProductID-Aktion führt keine Aktion aus, wenn die **ProductID-Eigenschaft** bereits durch eine erfolgreiche Validierung oder eine andere Methode festgelegt wurde.
 
-Die Aktion "ValidateProductID" gibt immer einen Erfolg zurück, unabhängig davon, ob der Produkt Bezeichner gültig ist, sodass der Product Identifier in der Befehlszeile eingegeben werden kann, wenn das Produkt zum ersten Mal ausgeführt wird.
+Die ValidateProductID-Aktion gibt immer einen Erfolg zurück, unabhängig davon, ob der Produktbezeichner gültig ist, sodass der Produktbezeichner bei der ersten Ausführung des Produkts in die Befehlszeile eingegeben werden kann.
 
-Der Produkt Bezeichner kann überprüft werden, ohne dass der Benutzer diese Informationen erneut eingeben muss, indem er die [**PIDKEY**](pidkey.md) -Eigenschaft in der Befehlszeile oder mithilfe einer Transformation festlegt. Die Anzeige des Dialog Felds, das den Benutzer zur Eingabe des Produkt Bezeichners anfordert, kann dann bedingt beim vorhanden sein der [**ProductID-**](productid.md) Eigenschaft festgelegt werden, die beim Validieren der **PIDKEY** -Eigenschaft festgelegt wird.
+Der Produktbezeichner kann überprüft werden, ohne dass der Benutzer diese Informationen erneut eingibt, indem die [**PIDKEY-Eigenschaft**](pidkey.md) in der Befehlszeile oder mithilfe einer Transformation festgelegt wird. Die Anzeige des Dialogfelds, in dem der Benutzer aufgefordert wird, den Produktbezeichner einzugeben, kann dann davon abhängig gemacht werden, dass die [**ProductID-Eigenschaft**](productid.md) vorhanden ist, die festgelegt wird, wenn die **PIDKEY-Eigenschaft** überprüft wird.
 
  
 

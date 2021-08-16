@@ -1,5 +1,5 @@
 ---
-title: /old switch
+title: /alter Schalter
 description: Dieser Schalter ist veraltet und wurde durch die Option /oldtlb ersetzt.
 ms.assetid: 7c38aebd-d2bb-4b2c-b515-66de6ada2cb1
 keywords:
@@ -19,9 +19,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118643892"
 ---
-# <a name="old-switch"></a>/old switch
+# <a name="old-switch"></a>/alter Schalter
 
-Dieser Schalter ist veraltet und wurde durch die [**Option /oldtlb**](-oldtlb.md) ersetzt.
+Dieser Schalter ist veraltet und wurde durch die Option [**/oldtlb**](-oldtlb.md) ersetzt.
 
  
 

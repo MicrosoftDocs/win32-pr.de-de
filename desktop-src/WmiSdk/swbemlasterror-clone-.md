@@ -1,8 +1,8 @@
 ---
-description: Die Clone-Methode des SWbemLastError-Objekts gibt ein neues -Objekt zurück, das ein Klon \_ des aktuellen SWbemLastError-Objekts ist.
+description: Die \_ Clone-Methode des SWbemLastError-Objekts gibt ein neues -Objekt zurück, das ein Klon des aktuellen SWbemLastError-Objekts ist.
 ms.assetid: 577be060-309f-40a2-a4db-c0a477c21f11
 ms.tgt_platform: multiple
-title: SWbemLastError.Clone_ -Methode (Wbemdisp.h)
+title: SWbemLastError.Clone_-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -45,7 +45,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die **\_ Clone-Methode** erfolgreich ist, wird ein neues [**SWbemLastError-Objekt**](swbemlasterror.md) zurückgegeben.
+Wenn die **Clone-Methode \_** erfolgreich ist, wird ein neues [**SWbemLastError-Objekt**](swbemlasterror.md) zurückgegeben.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -70,7 +70,7 @@ Ein angegebener Parameter ist ungültig.
 **wbemErrOutOfMemory** – 2147749894 (0x80041006)
 </dt> <dd>
 
-Nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs.
+Nicht genügend Arbeitsspeicher, um den Vorgang abzuschließen.
 
 </dd> </dl>
 
@@ -78,7 +78,7 @@ Nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs.
 
 Verwenden Sie die **\_ Clone-Methode,** um eine Klassendefinition oder -instanz zu duplizieren. Diese Methode ist nützlich, wenn Sie die ursprüngliche Kopie des Objekts sichern müssen, während Sie eine neue Kopie ändern. Verwenden Sie diese Methode auch, um viele neue Instanzen aus einer einzelnen Quellinstanz zu erstellen. Verwenden Sie beispielsweise [**SWbemObject.SpawnInstance, \_**](swbemobject-spawninstance-.md) um eine einzelne Startinstanz zu erstellen, und verwenden **Sie SWbemLastError.Clone, \_** um schnell 100 Kopien der Instanz zu erstellen. Anschließend können Sie die Objekte ändern und jedem Objekt bestimmte Werte geben.
 
-Es ist nicht möglich, diese Methode zu verwenden, um eine Klassendefinition in eine -Instanz oder eine -Instanz in eine Klassendefinition zu konvertieren.
+Es ist nicht möglich, diese Methode zum Konvertieren einer Klassendefinition in eine Instanz oder zum Konvertieren einer Instanz in eine Klassendefinition zu verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,31 +1,31 @@
 ---
-title: Allgemeine Dialog Feld Strukturen
-description: . | Allgemeine Dialog Feld Strukturen
+title: Allgemeine Dialogfeldstrukturen
+description: . | Allgemeine Dialogfeldstrukturen
 ms.assetid: 778dd2b8-a01e-4246-b51f-fddb8eae3d13
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fd9214a59fca1c9102d939ae84cd574ec8d22f14
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: db6ea17c6a4b121d874108172542a801b067b8f3483577c0f2c7b6048155e4fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106351901"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118786083"
 ---
-# <a name="common-dialog-box-structures"></a>Allgemeine Dialog Feld Strukturen
+# <a name="common-dialog-box-structures"></a>Allgemeine Dialogfeldstrukturen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [**CHOOSECOLOR**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1)
--   [**Auswahl Schriftart**](/windows/win32/api/commdlg/ns-commdlg-choosefonta)
+-   [**CHOOSEFONT**](/windows/win32/api/commdlg/ns-commdlg-choosefonta)
 -   [**DEVNAMES**](/windows/win32/api/commdlg/ns-commdlg-devnames)
--   [**FindReplace**](/windows/win32/api/commdlg/ns-commdlg-findreplacea)
--   [**Ofnotify**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifya)
--   [**Ofnotifyex**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifyexa)
--   [**OpenFileName**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)
--   [**OpenFileName \_ NT4**](/windows/win32/api/commdlg/ns-commdlg-openfilename_nt4a)
--   [**Pagesetupdlg**](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlga)
+-   [**FINDREPLACE**](/windows/win32/api/commdlg/ns-commdlg-findreplacea)
+-   [**OFNOTIFY**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifya)
+-   [**OFNOTIFYEX**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifyexa)
+-   [**OPENFILENAME**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)
+-   [**OPENFILENAME \_ NT4**](/windows/win32/api/commdlg/ns-commdlg-openfilename_nt4a)
+-   [**PAGESETUPDLG**](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlga)
 -   [**PRINTDLG**](/windows/win32/api/commdlg/ns-commdlg-printdlga)
--   [**Printdlgex**](/windows/win32/api/commdlg/ns-commdlg-printdlgexa)
+-   [**PRINTDLGEX**](/windows/win32/api/commdlg/ns-commdlg-printdlgexa)
 -   [**PRINTPAGERANGE**](/windows/win32/api/commdlg/ns-commdlg-printpagerange)
 
  

@@ -1,6 +1,6 @@
 ---
-title: Tabindexfehler bei ARIA
-description: Tabindexfehler bei ARIA
+title: ARIA– Tabindexfehler
+description: ARIA– Tabindexfehler
 ms.assetid: CCBC56E8-8899-4962-8315-762538CA666C
 keywords:
 - AriaTabIndexErrorId
@@ -13,21 +13,21 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118326745"
 ---
-# <a name="aria-tabindex-error"></a>Tabindexfehler bei ARIA
+# <a name="aria-tabindex-error"></a>ARIA– Tabindexfehler
 
 ## <a name="text"></a>Text
 
-Das Element ist nicht  deaktiviert und verfügt über einen Click-Ereignishandler, verfügt jedoch über **tabIndex** < 0 und befindet sich standardmäßig nicht in der Reihenfolge der Registerkarten.
+Das Element ist nicht  deaktiviert und verfügt über einen Click-Ereignishandler, verfügt jedoch über **tabIndex** < 0 und befindet sich standardmäßig nicht in der Tabstoppreihenfolge.
 
-## <a name="type"></a>type
+## <a name="type"></a>Typ
 
 Fehler
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Dieser Fehler gilt für Elemente, die über einen Click-Ereignishandler verfügen und nicht deaktiviert sind. Diese Elemente müssen in der Reihenfolge der Registerkarten sein. Dadurch wird sichergestellt, dass ein Element mithilfe der TAB-TASTE erreicht werden kann. Dies ist die Art und Weise, in der Benutzer der Sprachausgabe in der Regel durch die Benutzeroberfläche navigieren.
+Dieser Fehler gilt für Elemente, die über einen Click-Ereignishandler verfügen und nicht deaktiviert sind. Diese Elemente müssen in der Reihenfolge der Registerkarten sein. Dadurch wird sichergestellt, dass ein Element mithilfe der TAB-TASTE erreicht werden kann. Auf diese Weise navigieren Benutzer der Sprachausgabe in der Regel auf der Benutzeroberfläche.
 
-Um diesen Fehler zu beheben, legen Sie das [**tabindex-Attribut**](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/tabindex) auf einen Wert fest, der gleich oder größer als 0 ist. Sie müssen [](https://developer.mozilla.org/docs/Web/HTML/Element/textarea)das **tabindex-Attribut** nicht explizit für Tags festlegen, die sich standardmäßig in der Registerkarten reihenfolge befinden, z. B. ein -Element (mit [**href-Attribut),**](https://developer.mozilla.org/docs/Web/HTML/Attributes) eine Schaltfläche, eine Eingabe (ohne "ausgeblendet"), die Option [**,**](https://developer.mozilla.org/docs/Web/HTML/Element/select)den Textbereich und den Bereich [**(als**](https://developer.mozilla.org/docs/Web/HTML/Element/area) Teil der Bildzuordnung). [](https://developer.mozilla.org/docs/Web/HTML/Element/a) [](https://developer.mozilla.org/docs/Web/HTML/Element/button) [](https://developer.mozilla.org/docs/Web/HTML/Element/input)
+Um diesen Fehler zu beheben, legen Sie das [**tabindex-Attribut**](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/tabindex) auf einen Wert fest, der gleich oder größer als 0 ist. Sie müssen das **tabindex-Attribut** nicht explizit für Tags festlegen, die sich standardmäßig in der Tabstoppreihenfolge befinden, z. B. [**ein**](https://developer.mozilla.org/docs/Web/HTML/Element/a) -Element (mit [**href-Attribut),**](https://developer.mozilla.org/docs/Web/HTML/Attributes) [**Schaltfläche**](https://developer.mozilla.org/docs/Web/HTML/Element/button), [**Eingabe**](https://developer.mozilla.org/docs/Web/HTML/Element/input) (mit Ausnahme von "ausgeblendet"), [**Auswählen**](https://developer.mozilla.org/docs/Web/HTML/Element/select)von , [**Textbereich**](https://developer.mozilla.org/docs/Web/HTML/Element/textarea)und [**Bereich**](https://developer.mozilla.org/docs/Web/HTML/Element/area) (als Teil der Bilderkarte).
 
 ## <a name="example"></a>Beispiel
 

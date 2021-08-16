@@ -1,21 +1,21 @@
 ---
-title: Implementieren von Ausgabe Pipes auf dem Client
-description: Wenn Sie zum Übertragen von Daten vom Server an den Client eine ausgabepipe verwenden, müssen Sie eine pushprozedur in Ihrem Client implementieren.
+title: Implementieren von Ausgabepipes auf dem Client
+description: Wenn Sie eine Ausgabepipe verwenden, um Daten vom Server an den Client zu übertragen, müssen Sie eine Pushprozedur in Ihrem Client implementieren.
 ms.assetid: ab544daf-fbf7-4b00-95a8-55c149a86c27
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ff274491e2b665d86b550853d07c3ff6a4b2a83
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e959db9e505bb7dfe570552fe0385251485591fecb1f818ab4d5de402c2297b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103727792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118929129"
 ---
-# <a name="implementing-output-pipes-on-the-client"></a>Implementieren von Ausgabe Pipes auf dem Client
+# <a name="implementing-output-pipes-on-the-client"></a>Implementieren von Ausgabepipes auf dem Client
 
-Wenn Sie zum Übertragen von Daten vom Server an den Client eine ausgabepipe verwenden, müssen Sie eine pushprozedur in Ihrem Client implementieren. Die Push-Prozedur nimmt einen Zeiger auf einen Puffer und eine Element Anzahl aus dem Stub des Clients auf. wenn die Element Anzahl größer als 0 ist, werden die Daten von verarbeitet. Beispielsweise können die Daten aus dem Puffer des Stubs in ihren eigenen Arbeitsspeicher kopiert werden. Alternativ können die Daten im Puffer des Stubs verarbeitet und in einer Datei gespeichert werden. Wenn die Element Anzahl gleich 0 (null) ist, werden alle erforderlichen Cleanuptasks von der Push-Prozedur vor der Rückgabe abgeschlossen.
+Wenn Sie eine Ausgabepipe verwenden, um Daten vom Server an den Client zu übertragen, müssen Sie eine Pushprozedur in Ihrem Client implementieren. Die Pushprozedur verwendet einen Zeiger auf einen Puffer und eine Elementanzahl aus dem Clientstub und verarbeitet die Daten, wenn die Elementanzahl größer als 0 ist. Beispielsweise könnten die Daten aus dem Puffer des Stubs in den eigenen Arbeitsspeicher kopiert werden. Alternativ kann er die Daten im Puffer des Stubs verarbeiten und in einer Datei speichern. Wenn die Elementanzahl gleich 0 (null) ist, schließt die Pushprozedur alle erforderlichen Bereinigungsaufgaben vor der Rückgabe ab.
 
-Im folgenden Beispiel ordnet die Client Funktion receivelongs eine Pipe-Struktur und einen globalen Speicherpuffer zu. Sie initialisiert die-Struktur, führt den Remote Prozedur Rückruf durch und gibt dann den Arbeitsspeicher frei.
+Im folgenden Beispiel ordnet die Clientfunktion ReceiveLongs eine Pipestruktur und einen globalen Speicherpuffer zu. Sie initialisiert die -Struktur, macht den Remoteprozeduraufruf und gibt dann den Arbeitsspeicher frei.
 
 ## <a name="example"></a>Beispiel
 
@@ -95,28 +95,28 @@ void PipePush( rpc_ss_pipe_state_t stateInfo,
 
 
 
-Dieses Beispiel enthält die Header Datei, die vom-Mittell-Compiler generiert wurde. Weitere Informationen finden Sie [unter Definieren von Pipes in der IDL-Datei](defining-pipes-in-idl-files.md). Außerdem wird eine Variable, globalpipedata, deklariert, die als Daten Senke verwendet wird. Die Variable globalbuffer ist ein Puffer, den die pushprozedur zum Empfangen von Datenblöcken verwendet, die in globalpipedata gespeichert werden.
+Dieses Beispiel enthält die vom MIDL-Compiler generierte Headerdatei. Weitere Informationen finden Sie [unter Definieren von Pipes in der IDL-Datei](defining-pipes-in-idl-files.md). Außerdem wird die Variable globalPipeData deklariert, die als Datensenke verwendet wird. Die Variable globalBuffer ist ein Puffer, der von der Pushprozedur zum Empfangen von Datenblöcken verwendet wird, die in globalPipeData gespeichert werden.
 
-Die receivelongs-Funktion deklariert eine Pipe und ordnet Speicherplatz für die Variable der globalen Daten Senke zu. In Ihrem Client/Server-Programm kann die Daten Senke eine vom Client erstellte Datei-oder Datenstruktur sein. In diesem einfachen Beispiel ist die Datenquelle ein dynamisch zugewiesener Puffer mit langen ganzen Zahlen.
+Die ReceiveLongs-Funktion deklariert eine Pipe und weist Speicherplatz für die globale Datensenkenvariable zu. In Ihrem Client-/Serverprogramm kann die Datensenke eine Datei oder Datenstruktur sein, die der Client erstellt. In diesem einfachen Beispiel ist die Datenquelle ein dynamisch zugeordneter Puffer mit langen ganzen Zahlen.
 
-Bevor die Datenübertragung beginnen kann, muss das Client Programm die ausgabepipestruktur initialisieren. Sie muss Zeiger auf die Zustands Variable, die pushprozedur und die zuordnungsprozedur festlegen. In diesem Beispiel heißt die ausgabepipe-Variable outputpipe.
+Bevor die Datenübertragung beginnen kann, muss ihr Clientprogramm die Ausgabepipestruktur initialisieren. Sie muss Zeiger auf die Zustandsvariable, die Pushprozedur und die Alloc-Prozedur festlegen. In diesem Beispiel wird die Ausgabepipevariable als outputPipe bezeichnet.
 
-Clients signalisieren Servern, dass Sie bereit sind, Daten zu empfangen, indem Sie eine Remote Prozedur auf dem Server aufrufen. In diesem Beispiel wird die Remote Prozedur als outpipe bezeichnet. Wenn der Client die Remote Prozedur aufruft, beginnt der Server mit der Datenübertragung. Jedes Mal, wenn Daten eintreffen, ruft der Clientstub die Zustellungs-und pushprozeduren des Clients nach Bedarf auf.
+Clients signalisieren Servern, dass sie zum Empfangen von Daten bereit sind, indem sie eine Remoteprozedur auf dem Server aufrufen. In diesem Beispiel heißt die Remoteprozedur OutPipe. Wenn der Client die Remoteprozedur aufruft, beginnt der Server mit der Datenübertragung. Jedes Mal, wenn Daten eintreffen, ruft der Clientstub die Prozeduren "alloc" und "push" des Clients nach Bedarf auf.
 
-Anstatt Arbeitsspeicher jedes Mal zuzuweisen, wenn ein Puffer benötigt wird, legt die Zuordnungs Prozedur in diesem Beispiel einfach einen Zeiger auf die Variable globalbuffer fest. Der Pull-Vorgang wird dann bei jedem Datentransfer erneut verwendet. Komplexere Client Programme müssen möglicherweise jedes Mal einen neuen Puffer zuordnen, wenn der Serverdaten vom Client abruft.
+Anstatt jedes Mal, wenn ein Puffer benötigt wird, Speicher zu reservieren, legt die Zuordnungsprozedur in diesem Beispiel einfach einen Zeiger auf die Variable globalBuffer fest. Der Pullprozedur verwendet diesen Puffer dann bei jeder Übertragung von Daten erneut. Komplexere Clientprogramme müssen möglicherweise jedes Mal, wenn der Server Daten vom Client pullt, einen neuen Puffer zuordnen.
 
-Das Push-Verfahren in diesem Beispiel verwendet die State-Variable, um die nächste Position zu verfolgen, an der die Daten im globalen Daten Senke-Puffer gespeichert werden. Er schreibt Daten aus dem Pipe-Puffer in den Senke Puffer. Der Client-Stub empfängt dann den nächsten Datenblock vom Server und speichert ihn im Pipepuffer. Wenn alle Daten gesendet wurden, überträgt der Server einen Puffer der Größe 0 (null). Dies gibt die pushprozedur an, um den Empfang von Daten zu verhindern.
+Die Pushprozedur in diesem Beispiel verwendet die Zustandsvariable, um die nächste Position zu verfolgen, an der Daten im globalen Datensenkenpuffer gespeichert werden. Es schreibt Daten aus dem Pipepuffer in den Senkenpuffer. Der Clientstub empfängt dann den nächsten Datenblock vom Server und speichert ihn im Pipepuffer. Wenn alle Daten gesendet wurden, überträgt der Server einen Puffer der Größe 0 (null). Dadurch wird die Pushprozedur zum Beenden des Daten empfangenden Vorgangs angezeigt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Kanal](/windows/desktop/Midl/pipe)
+[Rohr](/windows/desktop/Midl/pipe)
 </dt> <dt>
 
 [**/Oi**](/windows/desktop/Midl/-oi)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

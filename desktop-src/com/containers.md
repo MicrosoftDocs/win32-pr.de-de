@@ -13,14 +13,14 @@ ms.locfileid: "118310717"
 ---
 # <a name="containers"></a>Container
 
-Ein ActiveX Control-Container ist ein OLE-Container, der die folgenden zusätzlichen Features unterstützt:
+Ein ActiveX-Steuerelementcontainer ist ein OLE-Container, der die folgenden zusätzlichen Features unterstützt:
 
 -   Eingebettete Objekte von Prozessservern
--   Aktivierung an Ort und Stelle
+-   In-Place-Aktivierung
 -   OLEMISC \_ ACTIVATEWHENVISIBLE
 -   Behandlung von Ereignissen
 
-ActiveX Steuerungscontainer müssen Unterstützung für all diese Features bereitstellen.
+ActiveX Steuerungscontainer müssen Unterstützung für alle diese Features bereitstellen.
 
 Weitere Informationen finden Sie in den folgenden Themen:
 
@@ -31,15 +31,15 @@ Weitere Informationen finden Sie in den folgenden Themen:
 -   [Storage Schnittstellen](storage-interfaces.md)
 -   [Umgebungseigenschaften](ambient-properties-for-controls.md)
 -   [Erweiterte Eigenschaften, Ereignisse und Methoden](extended-properties--events-and-methods.md)
--   [Nachrichtenreflektion](message-reflection.md)
+-   [Meldungslektion](message-reflection.md)
 -   [Automatisches Clipping](automatic-clipping.md)
--   [Ordnungsgemäß herabgestuft, wenn keine Schnittstelle vorhanden ist](degrading-gracefully-in-the-absence-of-an-interface.md)
+-   [Herabsetzen ordnungsgemäß bei Fehlen einer Schnittstelle](degrading-gracefully-in-the-absence-of-an-interface.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[ActiveX Steuerungs- und Steuerungscontainerrichtlinien](activex-control-and-control-container-guidelines.md)
+[ActiveX Richtlinien für Das Steuern und Steuern von Containern](activex-control-and-control-container-guidelines.md)
 </dt> </dl>
 
  

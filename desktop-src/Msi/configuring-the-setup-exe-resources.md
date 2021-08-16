@@ -15,7 +15,7 @@ ms.locfileid: "118638729"
 
 Eine konfigurierbare ausführbare Bootstrapdatei (Setup.exe) und ein Konfigurationstool ( [Msistuff.exe](msistuff-exe.md)) sind in den [Windows SDK-Komponenten für Windows Installer-Entwickler](platform-sdk-components-for-windows-installer-developers.md)enthalten. Mithilfe von Msistuff.exe zum Konfigurieren der Ressourcen in Setup.exe können Entwickler problemlos eine Webinstallation eines Windows Installer-Pakets erstellen. Weitere Informationen finden Sie unter [Internet Download Bootstrapping](internet-download-bootstrapping.md).
 
-Wenn Sie die folgende Befehlszeile eingeben, werden die Ressourcen für das beispiel konfiguriert, das unter [Ein URL-basierter Windows Installationsbeispiel](a-url-based-windows-installer-installation-example.md)für den Installer beschrieben wird.
+Wenn Sie die folgende Befehlszeile eingeben, werden die Ressourcen für das beispiel konfiguriert, das unter Beispiel für eine [URL-basierte Windows Installation des Installationsprogramms](a-url-based-windows-installer-installation-example.md)beschrieben wird.
 
 `MsiStuff setup.exe /u https://www.blueyonderairlines.com/Products/MySetup /d MySetup.msi /n MySetup /v 150 /i https://www.blueyonderairlines.com/Products/Common/InstMsi /a Ansi/Instmsi.exe /w Unicode/Instmsi.exe`
 

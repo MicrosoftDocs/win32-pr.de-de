@@ -120,7 +120,7 @@ Beachten Sie beim Portieren Ihres Codes die folgenden Punkte:
     ```
 
 - Übergeben Sie nicht `(HANDLE)0xFFFFFFFF` an Funktionen wie [**CreateFileMapping.**](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Verwenden Sie stattdessen **INVALID \_ HANDLE \_ VALUE**.
-- Verwenden Sie beim Drucken einer Zeichenfolge die richtigen Formatbezeichner. Verwenden Sie %p, um Zeiger in Hexadezimal zu drucken. Dies ist die beste Wahl für das Drucken von Zeigern. Microsoft Visual C++ unterstützt %I zum Drucken polymorpher Daten. Visual C++ unterstützt auch %I64 zum Drucken von Werten mit 64 Bits.
+- Verwenden Sie beim Drucken einer Zeichenfolge die richtigen Formatbezeichner. Verwenden Sie %p, um Zeiger in Hexadezimal zu drucken. Dies ist die beste Wahl für das Drucken von Zeigern. Microsoft Visual C++ unterstützt %I zum Drucken polymorpher Daten. Visual C++ unterstützt auch %I64 zum Drucken von Werten, die 64 Bits sind.
 
  
 

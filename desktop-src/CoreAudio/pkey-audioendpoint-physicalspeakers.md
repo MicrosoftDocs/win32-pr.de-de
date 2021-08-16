@@ -16,7 +16,7 @@ ms.locfileid: "118406416"
 Die **PKEY \_ AudioEndpoint \_ PhysicalSpeakers-Eigenschaft** gibt die Kanalkonfigurationsmaske für das Audioendpunktgerät an. Die Maske gibt die physische Konfiguration einer Gruppe von Sprechern an und gibt die Zuweisung von Kanälen zu Sprechern an. Weitere Informationen zu Kanalkonfigurationsmasken finden Sie in den folgenden Themen:
 
 1.  Die Beschreibung der KSPROPERTY \_ AUDIO \_ CHANNEL \_ CONFIG-Eigenschaft in der Windows DDK-Dokumentation.
-2.  Das Whitepaper "Audio Driver Support for Home Home Speaker Speaker Configurations" (Audiotreiberunterstützung für Home-Lautsprecher-Sprecherkonfigurationen) auf der Website [audio device technologies for Windows (Audiogerätetechnologien für](https://www.microsoft.com/whdc/device/audio/default.mspx) Windows Website).
+2.  Das Whitepaper "Audio Driver Support for Home Speaker Speaker Configurations" (Audiotreiberunterstützung für Home-Lautsprecher-Sprecherkonfigurationen) auf der Website [audio device technologies for Windows (Audiogerätetechnologien für](https://www.microsoft.com/whdc/device/audio/default.mspx) Windows Website).
 
 Der **vt-Member** der **PROPVARIANT-Struktur** ist auf VT \_ UI4 festgelegt.
 

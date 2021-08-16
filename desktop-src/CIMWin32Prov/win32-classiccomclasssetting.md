@@ -1,5 +1,5 @@
 ---
-description: Stellt die Einstellungen einer Component Object Model-Komponente (com) dar.
+description: Stellt die Einstellungen einer Component Object Model (COM) dar.
 ms.assetid: 18d9ddf2-184d-4680-8d56-f012c608ff7d
 ms.tgt_platform: multiple
 title: Win32_ClassicCOMClassSetting-Klasse
@@ -40,18 +40,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 5f263a888ce9dea80444023faff57998bc3f2c1c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 4aa3a60b68902bbcf7728866d24e5cedd831eac35ba629a3e2516a885a28efaf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118418241"
 ---
-# <a name="win32_classiccomclasssetting-class"></a>Win32 \_ classiccomclasssetting-Klasse
+# <a name="win32_classiccomclasssetting-class"></a>Win32 \_ ClassicCOMClassSetting-Klasse
 
-Die **Win32 \_ classiccomclasssetting** - [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) stellt die Einstellungen einer Component Object Model (com)-Komponente dar.
+Die **WMI-Klasse Win32 \_ ClassicCOMClassSetting** stellt die Einstellungen einer Component Object Model (COM)-Komponente dar. [](/windows/desktop/WmiSdk/retrieving-a-class)
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -90,92 +90,92 @@ class Win32_ClassicCOMClassSetting : Win32_COMSetting
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ classiccomclasssetting** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ ClassicCOMClassSetting-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ classiccomclasssetting** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ ClassicCOMClassSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AppID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \[ AppID \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \[ AppID \] ")
 </dt> </dl>
 
-GUID (Global Unique Identifier) für die COM-Anwendung, die diese COM-Komponente verwendet.
+GuiD (Globally Unique Identifier) für die COM-Anwendung, die diese COM-Komponente verwendet.
 
 </dd> <dt>
 
-**Autoconvertumclsid**
+**AutoConvertToClsid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ autoconvertto \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ AutoConvertTo Default \[ \] ")
 </dt> </dl>
 
-GUID der com-Klasse, in die diese COM-Komponente automatisch konvertiert wird.
+GUID der COM-Klasse, in die diese COM-Komponente automatisch konvertiert wird.
 
 </dd> <dt>
 
 **AutoTreatAsClsid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ AutoTreatAs \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ AutoTreatAs Default \[ \] ")
 </dt> </dl>
 
-GUID für die COM-Komponente, die Instanzen dieser Klasse automatisch emuliert.
+GUID für die COM-Komponente, die automatisch Instanzen dieser Klasse emuliert.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Textbeschreibung des aktuellen-Objekts.
+Kurze Textbeschreibung des aktuellen Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
 
 </dd> <dt>
 
 **ComponentId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes Software Classes \\ \\ CLSID \\ \\ {GUID} \[ Default \] ")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} Default \[ \] ")
 </dt> </dl>
 
 GUID dieser COM-Komponente.
@@ -185,140 +185,140 @@ GUID dieser COM-Komponente.
 **Steuerung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID}- \\ \\ Steuerelement")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ Control")
 </dt> </dl>
 
-COM-Komponente ist ein OLE-Steuerelement.
+Die COM-Komponente ist ein OLE-Steuerelement.
 
 </dd> <dt>
 
 **DefaultIcon**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ DefaultIcon \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ DefaultIcon Default \[ \] ")
 </dt> </dl>
 
-Pfad zur ausführbaren Datei und zum Ressourcen Bezeichner des Standard Symbols, das von der-Klasse verwendet wird.
+Pfad zur ausführbaren Datei und ressourcenbezeichner des Standardsymbols, das von der -Klasse verwendet wird.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Textbeschreibung des aktuellen-Objekts.
+Textbeschreibung des aktuellen -Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
 
 </dd> <dt>
 
 **InprocHandler**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ InprocHandler \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ InprocHandler Default \[ \] ")
 </dt> </dl>
 
-Vollständiger Pfad, einschließlich Dateiname oder nur Dateiname zu einem benutzerdefinierten 16-Bit-Handler für die COM-Komponente Der Anbieter gibt nicht immer den vollständigen Pfad zurück.
+Vollständiger Pfad einschließlich Dateiname oder nur Dateiname zu einem benutzerdefinierten 16-Bit-Handler für die COM-Komponente. Der Anbieter gibt nicht immer den vollständigen Pfad zurück.
 
 </dd> <dt>
 
 **InprocHandler32**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ InprocHandler32 \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ InprocHandler32 Default \[ \] ")
 </dt> </dl>
 
-Vollständiger Pfad, einschließlich Dateiname oder nur Dateiname zu einem benutzerdefinierten 32-Bit-Handler für die COM-Komponente Der Anbieter gibt nicht immer den vollständigen Pfad zurück.
+Vollständiger Pfad einschließlich Dateiname oder nur Dateiname zu einem benutzerdefinierten 32-Bit-Handler für die COM-Komponente. Der Anbieter gibt nicht immer den vollständigen Pfad zurück.
 
 </dd> <dt>
 
 **InprocServer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ InprocServer \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ InprocServer Default \[ \] ")
 </dt> </dl>
 
-Vollständiger Pfad, einschließlich Dateiname oder nur Dateiname zu einer 16-Bit-Prozess internen Server-DLL für diese COM-Komponente. Der Anbieter gibt nicht immer den vollständigen Pfad zurück.
+Vollständiger Pfad einschließlich Dateiname oder nur Dateiname zu einer 16-Bit-Prozessserver-DLL für diese COM-Komponente. Der Anbieter gibt nicht immer den vollständigen Pfad zurück.
 
 </dd> <dt>
 
-**InprocServer32**
+**Inprocserver32**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ InProcServer32 \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ InprocServer32 Default \[ \] ")
 </dt> </dl>
 
-Vollständiger Pfad, einschließlich Dateiname oder nur Dateiname zu einer 32-Bit-Prozess internen Server-DLL für diese COM-Komponente. Der Anbieter gibt nicht immer den vollständigen Pfad zurück.
+Vollständiger Pfad einschließlich Dateiname oder nur Dateiname zu einer 32-Bit-Prozessserver-DLL für diese COM-Komponente. Der Anbieter gibt nicht immer den vollständigen Pfad zurück.
 
 </dd> <dt>
 
-**Einfügbar**
+**Insertierbaren**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ Insertable")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ Insertable")
 </dt> </dl>
 
-COM-Komponente kann in OLE-Container Anwendungen eingefügt werden.
+Die COM-Komponente kann in OLE-Containeranwendungen eingefügt werden.
 
 </dd> <dt>
 
-**JAVACLASS**
+**JavaClass**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ InProcServer32 \[ JAVACLASS \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ InprocServer32 \[ JavaClass \] ")
 </dt> </dl>
 
 Die COM-Komponente ist eine Java-Komponente.
@@ -328,124 +328,124 @@ Die COM-Komponente ist eine Java-Komponente.
 **LocalServer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ LocalServer \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ LocalServer Default \[ \] ")
 </dt> </dl>
 
-Vollständiger Pfad, einschließlich Dateiname oder nur Dateiname für eine 16-Bit-Anwendung für einen lokalen Der Anbieter gibt nicht immer den vollständigen Pfad zurück.
+Vollständiger Pfad einschließlich Dateiname oder nur Dateiname zu einer lokalen 16-Bit-Serveranwendung. Der Anbieter gibt nicht immer den vollständigen Pfad zurück.
 
 </dd> <dt>
 
 **LocalServer32**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ LocalServer32 \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ LocalServer32 Default \[ \] ")
 </dt> </dl>
 
-Vollständiger Pfad, einschließlich Dateiname oder nur Dateiname für eine lokale 32-Bit-Serveranwendung. Der Anbieter gibt nicht immer den vollständigen Pfad zurück.
+Vollständiger Pfad einschließlich Dateiname oder nur Dateiname zu einer lokalen 32-Bit-Serveranwendung. Der Anbieter gibt nicht immer den vollständigen Pfad zurück.
 
 </dd> <dt>
 
 **LongDisplayName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ auxusertype \\ \\ 3 \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ AuxUserType \\ \\ 3 Default \[ \] ")
 </dt> </dl>
 
-Der vollständige Name der com-Anwendung. Sie wird in Bereichen wie dem **Ergebnis** Feld des OLE-Dialog Felds " **speziell einfügen** " verwendet.
+Vollständiger Name der COM-Anwendung. Sie wird in Bereichen wie dem Feld **Ergebnisse** des Dialogfelds **OLE Paste Special** verwendet.
 
 </dd> <dt>
 
-**ProgID**
+**Progid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ ProgID \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ ProgID Default \[ \] ")
 </dt> </dl>
 
-Programm Bezeichner, der der COM-Komponente zugeordnet ist. Das Format einer ProgID ist <Vendor. <Component. <Version. Es ist nicht garantiert, dass dieser Bezeichner eindeutig ist.
+Programmgesteuerter Bezeichner, der der COM-Komponente zugeordnet ist. Das Format einer ProgID lautet <Vendor.<Component.<Version. Dieser Bezeichner ist nicht garantiert eindeutig.
 
 </dd> <dt>
 
 **SettingID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Bezeichner, durch den das aktuelle-Objekt bekannt ist.
+Bezeichner, durch den das aktuelle Objekt bekannt ist.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
 **ShortDisplayName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ auxusertype \\ \\ 2 \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ AuxUserType \\ \\ 2 Default \[ \] ")
 </dt> </dl>
 
-Kurzname der com-Anwendung (wird in Menüs und Popups verwendet).
+Kurzname der COM-Anwendung (wird in Menüs und Popups verwendet).
 
 </dd> <dt>
 
 **ThreadingModel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ InProcServer32 \[ ThreadingModel \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ InprocServer32 \[ ThreadingModel \] ")
 </dt> </dl>
 
-Threading Modell, das von in-Process-COM-Klassen verwendet wird. Wenn diese Eigenschaft **null** ist, wird kein Threading Modell verwendet. Die Komponente wird im Haupt Thread des Clients erstellt, und Aufrufe von anderen Threads werden an diesen Thread gemarshallt.
+Threadingmodell, das von prozessübergreifenden COM-Klassen verwendet wird. Wenn diese Eigenschaft **NULL** ist, wird kein Threadingmodell verwendet. Die Komponente wird im Hauptthread des Clients erstellt, und Aufrufe von anderen Threads werden an diesen Thread gemarshallt.
 
-Das Apartment Modell gibt an, dass Komponenten nur von einem einzigen Thread eingegeben werden dürfen. Allgemeine Daten, die von diesen Objekt Server Typen gespeichert werden, müssen vor Thread Kollisionen geschützt werden, da der Objekt Server mehrere Komponenten unterstützt. Jede Komponente kann gleichzeitig von verschiedenen Threads eingegeben werden.
+Das Apartment-Modell gibt an, dass Komponenten von nur einem Thread eingegeben werden können. Allgemeine Daten, die von diesen Objektservertypen gespeichert werden, müssen vor Threadkonflikten geschützt werden, da der Objektserver mehrere Komponenten unterstützt. Jede Komponente kann gleichzeitig von verschiedenen Threads eingegeben werden.
 
-Das kostenlose Modell gibt an, dass die Komponenten keine Einschränkungen für die Threads oder die Anzahl der Threads haben, die das Objekt eingeben können. Das Objekt kann keine Thread spezifischen Daten enthalten und muss seine Daten vor gleichzeitigem Zugriff durch mehrere Threads schützen. Auf frei Thread Komponenten kann jedoch nicht direkt von Apartment Threads zugegriffen werden, und Aufrufe an diese Komponenten werden über das Client Apartment gemarshallt.
+Das Free-Modell gibt an, dass Komponenten keine Einschränkungen hinsichtlich der Threads und der Anzahl von Threads, die in das Objekt gelangen können, unterliegen. Das -Objekt darf keine threadspezifischen Daten enthalten und muss seine Daten vor dem gleichzeitigen Zugriff durch mehrere Threads schützen. Auf Freethreadkomponenten kann jedoch nicht direkt von Apartmentthreads zugegriffen werden, und Aufrufe an sie werden über das Clientapartment gemarshallt.
 
-Wenn beides angegeben ist, können Komponenten entweder im Apartment Thread-oder im Free Thread-Modus verwendet werden. Diese Komponenten können von mehreren Threads eingegeben werden, Ihre Daten vor Thread Kollisionen schützen und keine Thread spezifischen Daten enthalten.
+Wenn Beide angegeben ist, können Komponenten entweder im Apartmentthreadmodus oder im Freethreadmodus verwendet werden. Diese Komponenten können von mehreren Threads eingegeben werden, schützen ihre Daten vor Threadkonflikten und enthalten keine threadspezifischen Daten.
 
 Die Werte sind:
 
-<dl> <dd>Apartment</dd> <dd>Kosten</dd> <dd>Zwar</dd> </dl>
+<dl> <dd>"Apartment"</dd> <dd>"Free"</dd> <dd>"Beide"</dd> </dl>
 
 <dt>
 
@@ -458,14 +458,14 @@ Die Werte sind:
 
 <span id="Free"></span><span id="free"></span><span id="FREE"></span>
 
-**Kostenlos** ("kostenlos")
+**Free** ("Free")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Both"></span><span id="both"></span><span id="BOTH"></span>
 
-**Beides** ("beides")
+**Beide** ("beide")
 
 
 </dt> <dd></dd> </dl>
@@ -475,29 +475,29 @@ Die Werte sind:
 **ToolBoxBitmap32**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ ToolBoxBitmap32 \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ ToolBoxBitmap32 Default \[ \] ")
 </dt> </dl>
 
-Modulname und Ressourcen Bezeichner für eine kleine (16x16) Bitmap, die für das Gesicht einer Symbolleiste oder Toolbox Schaltfläche verwendet wird. Wird verwendet, wenn die COM-Komponente ein OLE-oder ActiveX-Steuerelement ist.
+Modulname und Ressourcenbezeichner für eine kleine Bitmap (16 x 16), die für das Gesicht einer Symbolleisten- oder Toolboxschaltfläche verwendet wird. Wird verwendet, wenn die COM-Komponente ein OLE- oder ActiveX-Steuerelement ist.
 
 </dd> <dt>
 
 **TreatAsClsid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ TreatAs \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ TreatAs Default \[ \] ")
 </dt> </dl>
 
 GUID einer COM-Komponente, die Instanzen dieser Komponente emulieren kann.
@@ -507,13 +507,13 @@ GUID einer COM-Komponente, die Instanzen dieser Komponente emulieren kann.
 **TypeLibraryId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ typelib \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ TypeLib Default \[ \] ")
 </dt> </dl>
 
 GUID für die Typbibliothek für diese COM-Komponente.
@@ -523,38 +523,38 @@ GUID für die Typbibliothek für diese COM-Komponente.
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ Version \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} Version Default \\ \\ \[ \] ")
 </dt> </dl>
 
-Versionsnummer dieser com-Klasse.
+Versionsnummer dieser COM-Klasse.
 
 </dd> <dt>
 
 **VersionIndependentProgId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ local \_ Machine \\ \\ \\ \\ Classes \\ \\ CLSID \\ \\ {GUID} \\ \\ VersionIndependentProgId \[ Default \] ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ CLSID \\ \\ {GUID} \\ \\ VersionIndependentProgId Default \[ \] ")
 </dt> </dl>
 
-Programm Bezeichner, der für alle Versionen desselben Programms konsistent ist.
+Programmbezeichner, der für alle Versionen desselben Programms konsistent ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ classiccomclasssetting** -Klasse wird von [**Win32 \_ comsetting**](win32-comsetting.md)abgeleitet.
+Die **Win32 \_ ClassicCOMClassSetting-Klasse** wird von [**Win32 \_ COMSetting**](win32-comsetting.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -564,17 +564,17 @@ Die **Win32 \_ classiccomclasssetting** -Klasse wird von [**Win32 \_ comsetting*
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ comsetting**](win32-comsetting.md)
+[**Win32 \_ COMSetting**](win32-comsetting.md)
 </dt> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))

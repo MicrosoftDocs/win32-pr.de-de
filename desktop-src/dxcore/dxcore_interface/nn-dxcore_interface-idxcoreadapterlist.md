@@ -1,20 +1,20 @@
 ---
 title: IDXCoreAdapterList
-description: Die **idxcoreadapterlist**-   Schnittstelle implementiert Methoden zum Abrufen von Adapter Elementen aus einer generierten Liste sowie Details zur Liste.
+description: Die **IDXCoreAdapterList-Schnittstelle** implementiert Methoden zum Abrufen von Adapterelementen aus einer generierten Liste sowie Details zur Liste.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 06/20/2019
-ms.openlocfilehash: f9de1a5cf0ce8aab5267051d360917f35866ba85
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9ee3b87903a7f015698dbeba685f0494280d28a8c46e4e2aded964f72fbce54f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390493"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118502435"
 ---
-# <a name="idxcoreadapterlist-interface"></a>Idxcoreadapterlist-Schnittstelle
+# <a name="idxcoreadapterlist-interface"></a>IDXCoreAdapterList-Schnittstelle
 
-Die **idxcoreadapterlist**-   Schnittstelle implementiert Methoden zum Abrufen von Adapter Elementen aus einer generierten Liste sowie Details zur Liste. **Idxcoreadapterlist** erbt von der [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. Programmieranleitungen und Codebeispiele finden [Sie unter Verwenden von DXCore zum Aufzählen von Adaptern](../dxcore-enum-adapters.md).
+Die **IDXCoreAdapterList-Schnittstelle** implementiert Methoden zum Abrufen von Adapterelementen aus einer generierten Liste sowie Details zur Liste. **IDXCoreAdapterList** erbt von der [IUnknown-Schnittstelle.](/windows/win32/api/unknwn/nn-unknwn-iunknown) Programmierleitfäden und Codebeispiele finden Sie unter [Verwenden von DXCore zum Aufzählen von Adaptern.](../dxcore-enum-adapters.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Auflisten von Adaptern](../dxcore-enum-adapters.md)
+[DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Aufzählen von Adaptern](../dxcore-enum-adapters.md)

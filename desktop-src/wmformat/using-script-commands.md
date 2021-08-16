@@ -30,7 +30,7 @@ In den folgenden Abschnitten wird beschrieben, wie Skriptbefehle in eine ASF-Dat
 |------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
 | [So verwenden Sie einen Skriptstream](to-use-a-script-stream.md)                                                                   | Beschreibt, wie Skriptbefehle in einen Skriptstream enthalten sind. |
 | [So fügen Sie dem Header Skriptdaten hinzu](to-add-script-data-to-the-header.md)                                               | Beschreibt das Hinzufügen von Skriptbefehlen in den Dateiheader. |
-| [Verwenden von Skriptbefehlen, die von Windows Media Player](using-script-commands-supported-by-windows-media-player.md) | Beschreibt die Skriptbefehle, die von Windows Media Player.  |
+| [Verwenden von Skriptbefehlen, die von Windows Media Player](using-script-commands-supported-by-windows-media-player.md) | Beschreibt die skriptbefehle, die von Windows Media Player.  |
 
 
 

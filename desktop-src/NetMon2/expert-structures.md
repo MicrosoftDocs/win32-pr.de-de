@@ -1,50 +1,50 @@
 ---
-description: Die von Netzwerkmonitor und allgemeinen Hilfsfunktionen bereitgestellten Funktionen des expertenhilfsobjekts verwenden die in der folgenden Tabelle beschriebenen Strukturen.
+description: Expertenhilfsfunktionen, die von Netzwerkmonitor und allgemeinen Hilfsfunktionen bereitgestellt werden, verwenden die in der folgenden Tabelle beschriebenen Strukturen.
 ms.assetid: 3c49dd0a-836f-43f1-b383-357e8ba6545f
 title: Expertenstrukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 34b9da00a71c3cdb9defe4396f4339f750cca359
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 16accf769b0983b782a6e6dbd723dd08df27415220bda1d59122b951439bac65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958729"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118939017"
 ---
 # <a name="expert-structures"></a>Expertenstrukturen
 
-Die von Netzwerkmonitor und allgemeinen Hilfsfunktionen bereitgestellten Funktionen des expertenhilfsobjekts verwenden die in der folgenden Tabelle beschriebenen Strukturen.
+Expertenhilfsfunktionen, die von Netzwerkmonitor und allgemeinen Hilfsfunktionen bereitgestellt werden, verwenden die in der folgenden Tabelle beschriebenen Strukturen.
 
 
 
 | Struktur                                              | BESCHREIBUNG                                                                                            |
 |--------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| [**Konfigurieren von "Konfigurieren"**](configuredexpert.md)           | Ordnet eine Experten-dll der Konfiguration zu.                                                       |
-| [**Expertconfig**](expertconfig.md)                   | Stellt rohkonfigurations Daten bereit.                                                                       |
-| [**Experteninfo**](expertenuminfo.md)               | Enthält Informationen über die Experten-dll. In Netzwerkmonitor werden die Informationen verwendet.                       |
-| [**Expertframedescriptor**](expertframedescriptor.md) | Stellt Informationen zu einem Frame bereit.                                                                    |
-| [**Expertstartupinfo**](expertstartupinfo.md)         | Stellt Startinformationen über den Experten bereit.                                                         |
-| [**Expertenstatus**](expertstatus.md)                   | Gibt den aktuellen Status eines laufenden Experten an.                                                       |
-| [**Filter Object**](filterobject.md)                   | Definiert die Anzeige Filter Merkmale für einen Experten.                                              |
-| [**Nmeventdata**](nmeventdata.md)                     | Enthält Informationen zu einer im expertenviewer angezeigten Zeile.                                      |
-| [**Nmcolumninfo**](nmcolumninfo.md)                   | Stellt Informationen bereit, die eine Spalte in der Ereignisanzeige definieren.                                        |
-| [**Nmcolumnvariant**](nmcolumnvariant.md)             | Stellt einen Container für alle möglichen Daten bereit, die in eine Spalte in einer Zeile in der Ereignisanzeige eingefügt werden.     |
-| [**Nmcolumntype**](nmcolumntype.md)                   | Der Einstiegspunkt in der Variante, der angibt, welches Element der Union verwendet werden soll, und wie es formatiert werden soll. |
+| [**CONFIGUREDEXPERT**](configuredexpert.md)           | Ordnet der Konfiguration eine Experten-DLL zu.                                                       |
+| [**EXPERTCONFIG**](expertconfig.md)                   | Stellt Unformatierte Konfigurationsdaten bereit.                                                                       |
+| [**EXPERTENUMINFO**](expertenuminfo.md)               | Stellt Informationen zur Experten-DLL bereit. Netzwerkmonitor verwendet die Informationen.                       |
+| [**EXPERTFRAMEDESCRIPTOR**](expertframedescriptor.md) | Stellt Informationen zu einem Frame bereit.                                                                    |
+| [**EXPERTSTARTUPINFO**](expertstartupinfo.md)         | Stellt Startinformationen über den Experten bereit.                                                         |
+| [**EXPERTSTATUS**](expertstatus.md)                   | Stellt den aktuellen Status eines ausgeführten Experten bereit.                                                       |
+| [**FILTEROBJECT**](filterobject.md)                   | Definiert die Anzeigefiltermerkmale für einen Experten.                                              |
+| [**NMEVENTDATA**](nmeventdata.md)                     | Stellt Informationen zu einer Zeile bereit, die im Expertenviewer angezeigt wird.                                      |
+| [**NMCOLUMNINFO**](nmcolumninfo.md)                   | Stellt Informationen bereit, die eine Spalte im Ereignisanzeige definieren.                                        |
+| [**NMCOLUMNVARIANT**](nmcolumnvariant.md)             | Stellt einen Container für alle möglichen Daten bereit, die in einer Zeile im Ereignisanzeige in eine Spalte eingefügt werden.     |
+| [**NMCOLUMNTYPE**](nmcolumntype.md)                   | Der Einstiegspunkt in der Variante, der angibt, welches Element der Union verwendet werden soll und wie es formatiert werden soll. |
 
 
 
  
 
-Netzwerkmonitor bietet auch Exportfunktionen (Hilfsfunktionen, die der Experte aufgerufen werden kann) und Enumerationen.
+Netzwerkmonitor stellt auch Exportfunktionen (Hilfsfunktionen, die der Experte aufrufen kann) und Enumerationen bereit.
 
 
 
 | Informationen über                                          | Finden Sie unter                                                                          |
 |----------------------------------------------------------------|------------------------------------------------------------------------------|
-| Exportieren Sie Funktionen, die Einstiegspunkte für Ihre expertendll bereitstellen. | [Export Funktionen der Experten-dll](expert-dll-export-functions.md)               |
-| Hilfsfunktionen, die von Experten und Parser aufgerufen werden können.    | [Allgemeine Funktionen für Experten und Parser](expert-and-parser-common-functions.md) |
+| Exportieren Sie Funktionen, die Einstiegspunkte für Ihre Experten-DLL bereitstellen. | [Experten-DLL-Exportfunktionen](expert-dll-export-functions.md)               |
+| Hilfsfunktionen, die von Experten und Parsern aufgerufen werden können.    | [Allgemeine Funktionen für Experten und Parser](expert-and-parser-common-functions.md) |
 | Hilfsfunktionen, die nur von Experten aufgerufen werden.              | [Expertenfunktionen](expert-functions.md)                                     |
-| Enumerationen, die von expertenstrukturen und-Funktionen verwendet werden.          | [Expertenenumerationen](expert-enumerations.md)                               |
+| Enumerationen, die von Expertenstrukturen und -funktionen verwendet werden.          | [Expertenenumerationen](expert-enumerations.md)                               |
 
 
 

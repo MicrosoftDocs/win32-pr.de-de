@@ -1,11 +1,11 @@
 ---
-title: Systemmonitor-Kopiermethode
-description: Kopiert die Eigenschafts Einstellungen des Steuer Elements, die Liste der Leistungsindikatoren und die Indikator Daten als HTML-Objekt in die Zwischenablage.
+title: SystemMonitor-Kopiermethode
+description: Kopiert die Eigenschafteneinstellungen, die Liste der Indikatoren und die Indikatordaten des Steuerelements als HTML-Objekt in die Zwischenablage.
 ms.assetid: 0e045372-71ef-4142-9863-48e6a9331782
 keywords:
-- Copy-Methode (Sysmon)
-- Copy-Methode (Sysmon), Systemmonitor-Schnittstelle
-- Systemmonitor-Schnittstelle (Sysmon), Kopiermethode
+- Kopiermethode SysMon
+- Kopiermethode SysMon , SystemMonitor-Schnittstelle
+- SystemMonitor-Schnittstelle SysMon , Copy-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 34f6346fd6c594c98b6eb23c37e371b878ddd3b4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9ef8e7f76231dc65dcf27d898e9b4f2b9aa5187253e8ccc081657221bbca7cbb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118882615"
 ---
-# <a name="systemmonitorcopy-method"></a>System Monitor:: Copy-Methode
+# <a name="systemmonitorcopy-method"></a>SystemMonitor::Copy-Methode
 
-Kopiert die Eigenschafts Einstellungen des Steuer Elements, die Liste der Leistungsindikatoren und die Indikator Daten als HTML-Objekt in die Zwischenablage.
+Kopiert die Eigenschafteneinstellungen, die Liste der Indikatoren und die Indikatordaten des Steuerelements als HTML-Objekt in die Zwischenablage.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es kann nur eine Kopie in der Zwischenablage vorhanden sein.
+In der Zwischenablage kann nur eine Kopie vorhanden sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,18 +56,18 @@ Es kann nur eine Kopie in der Zwischenablage vorhanden sein.
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**System Monitor**](systemmonitor.md)
+[**SystemMonitor**](systemmonitor.md)
 </dt> <dt>
 
-[**Systemmonitor. Einfügen**](systemmonitor-paste.md)
+[**SystemMonitor.Paste**](systemmonitor-paste.md)
 </dt> </dl>
 
  

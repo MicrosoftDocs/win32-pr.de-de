@@ -1,5 +1,5 @@
 ---
-description: Die ApplyMultiplePatches-Methode wendet ein oder mehrere Patches auf Produkte an, die für den Patch berechtigt sind. Die -Methode legt die PATCH-Eigenschaft fest.
+description: Die ApplyMultiplePatches-Methode wendet ein oder mehrere Patches auf Produkte an, die zum Empfangen des Patches berechtigt sind. Die -Methode legt die PATCH-Eigenschaft fest.
 ms.assetid: 40c40e2c-60ef-4492-a4ab-0bb6b874fe80
 title: Installer.ApplyMultiplePatches-Methode
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118633207"
 ---
 # <a name="installerapplymultiplepatches-method"></a>Installer.ApplyMultiplePatches-Methode
 
-Die **ApplyMultiplePatches-Methode** wendet ein oder mehrere Patches auf Produkte an, die für den Patch berechtigt sind. Die -Methode legt die [**PATCH-Eigenschaft**](patch.md) fest.
+Die **ApplyMultiplePatches-Methode** wendet ein oder mehrere Patches auf Produkte an, die zum Empfangen des Patches berechtigt sind. Die -Methode legt die [**PATCH-Eigenschaft**](patch.md) fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ Installer.ApplyMultiplePatches(
 *PatchPackagesList* 
 </dt> <dd>
 
-Eine Zeichenfolge, die eine durch Semikolons getrennte Liste der Pfade zum Patchen von Dateien enthält. Beispiel: ""c: \\ sus \\ download cache Office \\ \\ \\ sp1.msp; c: \\ sus \\ download cache \\ Office \\ \\ QFE1.msp;c: \\ sus download cache Office \\ \\ \\ \\ SELECTEn.msp""
+Eine Zeichenfolge, die eine durch Semikolons getrennte Liste der Pfade für Patchdateien enthält. Beispiel: ""c: \\ sus \\ download cache Office \\ \\ \\ sp1.msp; c: \\ sus \\ download cache \\ Office \\ \\ QFE1.msp;c: \\ sus download cache Office \\ \\ \\ \\ QFEn.msp""
 
 </dd> <dt>
 
 *Produkt* 
 </dt> <dd>
 
-Dieser Parameter stellt den [**ProductCode**](productcode.md) des Produkts bereit, das gepatcht wird. Dieser Parameter ist optional. Wenn dieser Parameter NULL ist, werden die Patches auf alle Produkte angewendet, die für den Empfang dieser Patches berechtigt sind.
+Dieser Parameter stellt den [**ProductCode des**](productcode.md) produkts, das gepatcht wird, zurEntschlüsselung. Dieser Parameter ist optional. Wenn dieser Parameter NULL ist, werden die Patches auf alle Produkte angewendet, die für den Empfang dieser Patches berechtigt sind.
 
 </dd> <dt>
 
 *szPropertiesList* 
 </dt> <dd>
 
-Eine auf NULL endende Zeichenfolge, die Befehlszeileneigenschafteneinstellungen angibt. Dieser Parameter ist optional. Weitere Informationen finden Sie unter [Informationen zu Eigenschaften](about-properties.md) und Festlegen öffentlicher [Eigenschaftswerte in der Befehlszeile.](setting-public-property-values-on-the-command-line.md) Diese Eigenschaften werden von allen Zielprodukten gemeinsam genutzt.
+Eine auf NULL beendete Zeichenfolge, die Die Einstellungen der Befehlszeileneigenschaft angibt. Dieser Parameter ist optional. Weitere [Informationen finden Sie unter Informationen zu](about-properties.md) Eigenschaften und Festlegen öffentlicher [Eigenschaftswerte in der Befehlszeile.](setting-public-property-values-on-the-command-line.md) Diese Eigenschaften werden von allen Zielprodukten gemeinsam genutzt.
 
 </dd> </dl>
 
@@ -72,13 +72,13 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm 3.0 oder höher auf Windows Server 2003 oder Windows XP.<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installer 3.0 oder höher auf Windows Server 2003 oder Windows XP.<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                                    |
-| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                                         |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                                         |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -91,7 +91,7 @@ Diese Methode gibt keinen Wert zurück.
 [**Patch**](patch.md)
 </dt> <dt>
 
-[Festlegen öffentlicher Eigenschaftswerte in der Befehlszeile](setting-public-property-values-on-the-command-line.md)
+[Festlegen von öffentlichen Eigenschaftswerten in der Befehlszeile](setting-public-property-values-on-the-command-line.md)
 </dt> <dt>
 
 [**MsiApplyMultiplePatches**](/windows/desktop/api/Msi/nf-msi-msiapplymultiplepatchesa)

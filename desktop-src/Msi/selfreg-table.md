@@ -15,7 +15,7 @@ ms.locfileid: "118625506"
 
 Die Tabelle SelfReg enthält Informationen zu Modulen, die selbst registriert werden müssen. Das Installationsprogramm ruft die [**DllRegisterServer-Funktion**](/windows/win32/api/olectl/nf-olectl-dllregisterserver) während der Installation des Moduls auf. Sie ruft [**DllUnregisterServer während**](/windows/win32/api/olectl/nf-olectl-dllunregisterserver) der Deinstallation des Moduls auf. Das Installationsprogramm registriert exe-Dateien nicht selbst.
 
-Die SelfReg-Tabelle enthält die folgenden Spalten.
+Die Tabelle SelfReg enthält die folgenden Spalten.
 
 
 
@@ -59,11 +59,11 @@ Autoren von Installationspaketen wird dringend davon abgeraten, die Selbstregist
 -   Selbstregistrierungs-DLLs können manchmal mit Hilfs-DLLs verknüpfen, die nicht vorhanden sind oder die falsche Version sind. Im Gegensatz dazu kann das Installationsprogramm die DLLs mithilfe der Registrierungstabellen ohne Abhängigkeit vom aktuellen Systemstatus registrieren.
 
 > [!Note]  
-> Sie können nicht die Reihenfolge angeben, in der das Installationsprogramm selbstregistrierungsbasierte DLLs registriert oder die Registrierung mithilfe der [SelfRegModules-](selfregmodules-action.md) und [SelfUnRegModules-Aktionen](selfunregmodules-action.md) auflistet. Weitere Informationen [finden Sie unter Angeben der Reihenfolge der Selbstregistrierung.](specifying-the-order-of-self-registration.md)
+> Sie können nicht die Reihenfolge angeben, in der das Installationsprogramm selbstregistrierungsbasierte DLLs mithilfe der [SelfRegModules-](selfregmodules-action.md) und [SelfUnRegModules-Aktionen](selfunregmodules-action.md) registriert oder die Registrierung aufheben soll. Weitere Informationen [finden Sie unter Angeben der Reihenfolge der Selbstregistrierung.](specifying-the-order-of-self-registration.md)
 
  
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

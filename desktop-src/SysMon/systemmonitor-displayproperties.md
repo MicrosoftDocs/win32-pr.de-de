@@ -1,11 +1,11 @@
 ---
-title: Systemmonitor DisplayProperties-Methode
-description: Zeigt das Dialogfeld Diagramm Eigenschaften an.
+title: SystemMonitor DisplayProperties-Methode
+description: Zeigt das dialogfeld Graph Eigenschaften an.
 ms.assetid: a3b04b3b-4c9b-4454-8d46-2001caf23bb6
 keywords:
-- DisplayProperties-Methode (Sysmon)
-- DisplayProperties-Methode (Sysmon), Systemmonitor-Schnittstelle
-- Systemmonitor-Schnittstelle sysmon, DisplayProperties-Methode
+- DisplayProperties-Methode SysMon
+- DisplayProperties-Methode SysMon, SystemMonitor-Schnittstelle
+- SystemMonitor-Schnittstelle SysMon , DisplayProperties-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 674ebab6bc94eef797fce2376d53aa589a196c7e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ad58234377f3dd66f8a7d3ae49ec40baf53407b5b6b62c05ad8bfc3259b38661
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118882635"
 ---
-# <a name="systemmonitordisplayproperties-method"></a>System Monitor::D isplayproperties-Methode
+# <a name="systemmonitordisplayproperties-method"></a>SystemMonitor::D isplayProperties-Methode
 
-Zeigt das Dialogfeld **Diagramm Eigenschaften** an.
+Zeigt das **dialogfeld Graph Eigenschaften** an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In diesem Dialogfeld können Benutzer die Eigenschaften des System Monitor-Steuer Elements ändern.
+In diesem Dialogfeld kann der Benutzer die Eigenschaften des Systemmonitor-Steuerelements ändern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,15 +56,15 @@ In diesem Dialogfeld können Benutzer die Eigenschaften des System Monitor-Steue
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**System Monitor**](systemmonitor.md)
+[**SystemMonitor**](systemmonitor.md)
 </dt> </dl>
 
  

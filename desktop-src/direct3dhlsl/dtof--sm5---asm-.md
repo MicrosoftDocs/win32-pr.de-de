@@ -1,23 +1,23 @@
 ---
-title: dtof (SM5-ASM)
-description: Komponenten Weise Konvertierung von Gleit Komma Daten mit doppelter Genauigkeit in Gleit Komma Daten mit einfacher Genauigkeit.
+title: dtof (sm5 - asm)
+description: Komponentenweise Konvertierung von Gleitkommadaten mit doppelter Genauigkeit in Gleitkommadaten mit nur einer Genauigkeit.
 ms.assetid: 1D2EF05C-06EF-44F0-AA0F-22D3057FF43E
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a66e72cf4c2cb1ac49adc492a586b4cbb9eef3b4
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 3d16ddf79b1a201bf78e0b45d1206169576bee4193b8c8158469055131768efc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104313626"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118792327"
 ---
-# <a name="dtof-sm5---asm"></a>dtof (SM5-ASM)
+# <a name="dtof-sm5---asm"></a>dtof (sm5 - asm)
 
-Komponenten Weise Konvertierung von Gleit Komma Daten mit doppelter Genauigkeit in Gleit Komma Daten mit einfacher Genauigkeit.
+Komponentenweise Konvertierung von Gleitkommadaten mit doppelter Genauigkeit in Gleitkommadaten mit nur einer Genauigkeit.
 
 
 
-| dtof dest \[ . mask \] , \[ - \] src \[ . Swizzle \] , |
+| dtof dest \[ .mask \] , \[ - \] src \[ .swizzle \] , |
 |-------------------------------------------|
 
 
@@ -26,34 +26,34 @@ Komponenten Weise Konvertierung von Gleit Komma Daten mit doppelter Genauigkeit 
 
 
 
-| Element                                                            | BESCHREIBUNG                                          |
+| Element                                                            | Beschreibung                                          |
 |-----------------------------------------------------------------|------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[in \] der Adresse der konvertierten Daten.<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] den zu konvertierenden Daten.<br/>          |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Die Adresse der konvertierten Daten.<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die zu konvertierten Daten.<br/>          |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jede Komponente der Quelle wird von der Darstellung mit doppelter Genauigkeit in die Darstellung mit einfacher Genauigkeit konvertiert und verwendet gleichmäßige Rundung.
+Jede Komponente der Quelle wird von der Darstellung mit doppelter Genauigkeit in die Darstellung mit einzelner Genauigkeit konvertiert, indem round-to-nearest-even-Rundung verwendet wird.
 
-Die gültigen Streifen für den Quellparameter lauten. xyzw,. xyxy,. zwxy,. zwzw.
+Die gültigen Swizzles für den Quellparameter sind .xyzw, .xyxy, .zwxy, .zwzw.
 
-Die gültigen *dest* -Masken sind eine oder zwei Komponenten. Das heißt:. x,. y,. z,. w,. XY,. XZ,. XW,. YZ,. yw,. zw das Ergebnis der ersten Konvertierung wird an die erste Komponente in der Maske weitergeleitet, und das Ergebnis der zweiten Komponente wechselt in die zweite Komponente in der Maske, falls vorhanden.
+Die *gültigen Dest-Masken* sind eine oder zwei Komponenten. Das heißt: .x, .y, .z, .w, .xy, .xz, .xw, .yz, .yw, .zw Das Ergebnis der ersten Konvertierung geht an die erste Komponente in der Maske, und das Ergebnis der zweiten Komponente geht in die zweite Komponente in der Maske, falls vorhanden.
 
-die *dest* -Komponenten sind float32.
+*Dest-Komponenten* sind float32.
 
-*src* ist eine doppelte vec2 über (x 32lsb, y 32msb) und (z 32lsb, w 32msb) Post-Swizzle.
+*src* ist ein double vec2 über (x 32LSB, y 32MSB) und (z 32LSB, w 32MSB) nach swizzle.
 
-Bei<->Double-Konvertierungen können Implementierungen entweder float32 denorms beachten oder Sie leeren.
+Für float32<->double-Konvertierungen können Implementierungen float32-Denormale entweder unterstützen oder leeren.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -61,20 +61,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | nein        |
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
 
 
 

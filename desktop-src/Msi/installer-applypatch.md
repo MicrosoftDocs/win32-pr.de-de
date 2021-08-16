@@ -69,7 +69,7 @@ Dieser Parameter gibt den Typ der installation an, die gepatcht werden soll. Der
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <span id="msiInstallTypeNetworkImage"></span><span id="msiinstalltypenetworkimage"></span><span id="MSIINSTALLTYPENETWORKIMAGE"></span><dl> <dt>**msiInstallTypeNetworkImage**</dt> </dl> | Gibt eine Administratorinstallation an. In diesem Fall muss *InstallPackage* auf einen Paketpfad festgelegt werden. Der Wert 1 für msiInstallTypeNetworkImage gibt eine Administratorinstallation an.<br/>                                                                                                                                                                                                                    |
 | <span id="msiInstallTypeDefault"></span><span id="msiinstalltypedefault"></span><span id="MSIINSTALLTYPEDEFAULT"></span><dl> <dt>**msiInstallTypeDefault**</dt> </dl>                     | Durchsucht das System nach zu patchende Produkte. In diesem Fall muss *InstallPackage* eine leere Zeichenfolge sein.<br/>                                                                                                                                                                                                                                                                                                                 |
-| <span id="msiInstallSingleInstance"></span><span id="msiinstallsingleinstance"></span><span id="MSIINSTALLSINGLEINSTANCE"></span><dl> <dt>**msiInstallSingleInstance**</dt> </dl>         | Patchen Sie das von *InstallPackage* angegebene Produkt. *InstallPackage* ist der Produktcode der instanz, die gepatcht werden soll. Für diese Art der Installation ist die Windows Installer-Version erforderlich, die mit Windows Server 2003 oder höher oder Windows Installer XP SP1 oder höher ausgeliefert wird. Weitere Informationen finden Sie unter [Installieren mehrerer Instanzen von Produkten und Patches.](installing-multiple-instances-of-products-and-patches.md)<br/> |
+| <span id="msiInstallSingleInstance"></span><span id="msiinstallsingleinstance"></span><span id="MSIINSTALLSINGLEINSTANCE"></span><dl> <dt>**msiInstallSingleInstance**</dt> </dl>         | Patchen Sie das von *InstallPackage* angegebene Produkt. *InstallPackage* ist der Produktcode der instanz, die gepatcht werden soll. Diese Art der Installation erfordert die Windows Installer-Version, die mit Windows Server 2003 oder höher oder Windows Installer XP SP1 oder höher ausgeliefert wird. Weitere Informationen finden Sie unter [Installieren mehrerer Instanzen von Produkten und Patches.](installing-multiple-instances-of-products-and-patches.md)<br/> |
 
 
 
@@ -110,7 +110,7 @@ Die [**REINSTALL-Eigenschaft**](reinstall.md) ist erforderlich, wenn ein [kleine
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

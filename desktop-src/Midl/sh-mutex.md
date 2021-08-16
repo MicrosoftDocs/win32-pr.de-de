@@ -1,8 +1,8 @@
 ---
 title: sh_mutex-Schlüsselwort
-description: Das \_ \sh mutex\-Schlüsselwort gibt an, dass das Systemobjekt ein Handle für einen Mutex ist.
+description: Das Schlüsselwort \sh \_ mutex\ gibt an, dass das Systemobjekt ein Handle für einen Mutex ist.
 keywords:
-- sh_mutex-Schlüsselwort MIDL
+- sh_mutex MIDL-Schlüsselwort
 topic_type:
 - apiref
 api_name:
@@ -20,7 +20,7 @@ ms.locfileid: "118641365"
 ---
 # <a name="sh_mutex-keyword"></a>sh \_ mutex-Schlüsselwort
 
-Das **\_ sh mutex-Schlüsselwort** gibt an, dass `system_handle` ein ein Handle für einen Mutex enthält.
+Das **sh \_ mutex-Schlüsselwort** gibt an, dass `system_handle` ein ein Handle für einen Mutex enthält.
 
 ``` syntax
 [system_handle(sh_mutex)]
@@ -32,11 +32,11 @@ Das **\_ sh mutex-Schlüsselwort** gibt an, dass `system_handle` ein ein Handle 
 
 Dieses Schlüsselwort ist ein Parameter für [**system_handle**](system-handle.md).
 
-Die [**system_handle-Dokumentation**](system-handle.md) enthält auch Details zur optionalen Verwendung des *Access-Rights-Parameters.* Das Standardverhalten entspricht `DUPLICATE_SAME_ACCESS` den [ **DuplicateHandle-Funktionsspezifikationen.**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)
+Die [**system_handle**](system-handle.md) dokumentation enthält auch Details zur optionalen Verwendung des *Access Rights-Parameters.* Das Standardverhalten entspricht `DUPLICATE_SAME_ACCESS` den [ **Spezifikationen der DuplicateHandle-Funktion.**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)
 
 ## <a name="remarks"></a>Hinweise
 
-Um dieses Schlüsselwort mit dem -Attribut verwenden zu `system_handle` können, muss das `-target` Flag auf `NT100` (oder höher) festgelegt werden, wenn midl.exe ausgeführt wird.
+Um dieses Schlüsselwort mit dem -Attribut verwenden zu können, muss das Flag auf (oder höher) festgelegt werden, `system_handle` `-target` wenn sie `NT100` midl.exe.
 
 ## <a name="examples"></a>Beispiele
 
@@ -54,7 +54,7 @@ interface MyInterface : IUnknown
 | Unterstützte Mindestversion (Client) | Windows 10 Anniversary Update (Version 1607, Build 14393) |
 | Unterstützte Mindestversion (Server) | Windows Server 2016 (Build 14393) |
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -64,7 +64,7 @@ interface MyInterface : IUnknown
 [Mutex-Objekte](../sync/mutex-objects.md)
 </dt> <dt>
 
-[Sicherheit und Zugriffsrechte für Synchronisierungsobjekte](../sync/synchronization-object-security-and-access-rights.md)
+[Sicherheit und Zugriffsrechte für Synchronisierungsobjekt](../sync/synchronization-object-security-and-access-rights.md)
 </dt> <dt>
 
 [**CreateMutex-Funktion**](/windows/win32/api/synchapi/nf-synchapi-createmutexa)

@@ -1,5 +1,5 @@
 ---
-description: Der standardmäßige WIA-Videotreiber (Windows Image Acquisition) (wiavusd.dll) unterstützt die folgenden Eigenschaften für Streamingvideogeräte.
+description: Der STANDARDMÄßIGE WIA-Videotreiber (Windows Image Acquisition) (wiavusd.dll) unterstützt die folgenden Eigenschaften für Das Streamen von Videogeräten.
 ms.assetid: 24fa7e02-c409-49ec-b1a9-309f7c95e292
 title: WIA-Geräteeigenschaftskonstanten für Video (Wiadef.h)
 ms.topic: reference
@@ -25,10 +25,10 @@ ms.locfileid: "118207368"
 ---
 # <a name="video-wia-device-property-constants"></a>WIA-Geräteeigenschaftskonstanten für Video
 
-Der standardmäßige WIA-Videotreiber (Windows Image Acquisition) (wiavusd.dll) unterstützt die folgenden Eigenschaften für Streamingvideogeräte.
+Der STANDARDMÄßIGE WIA-Videotreiber (Windows Image Acquisition) (wiavusd.dll) unterstützt die folgenden Eigenschaften für Das Streamen von Videogeräten.
 
 > [!Note]  
-> WIA unterstützt keine Videogeräte in Windows Server 2003, Windows Vista oder höher. Verwenden Sie für diese Versionen der Windows [DirectShow,](/previous-versions//ms783323(v=vs.85)) um Bilder aus Videos zu erhalten.
+> WIA unterstützt keine Videogeräte in Windows Server 2003, Windows Vista oder höher. Verwenden Sie für diese Versionen des Windows [DirectShow,](/previous-versions//ms783323(v=vs.85)) um Bilder aus Videos zu erhalten.
 
  
 
@@ -36,7 +36,7 @@ Das Präfix "WIA \_ \_ DPV" gibt eine Geräteeigenschaft für Videogeräte an un
 
 
 
-| Konstante/Wert                                                                                                                                                                                                                                                                           | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                          |
+| Konstante/Wert                                                                                                                                                                                                                                                                           | Beschreibung                                                                                                                                                                                                                                                                                                                                                                          |
 |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <span id="WIA_DPV_LAST_PICTURE_TAKEN"></span><span id="wia_dpv_last_picture_taken"></span><dl> <dt>**WIA \_ DPV \_ LAST \_ PICTURE \_ TAKEN**</dt> <dt>VideoDeviceLastPictureTaken</dt> </dl> | Diese Eigenschaft wird verwendet, um den WIA-Treiber zu benachrichtigen, dass ein neues Image hinzugefügt wurde. Anwendungen sollten den Wert dieser Eigenschaft auf den Namen der Imagedatei festlegen, die als Ergebnis eines erfolgreichen Aufrufs der [**IWiaVideo::TakePicture-Methode**](/windows/desktop/api/Wiavideo/nf-wiavideo-iwiavideo-takepicture) erstellt wurde. <br/> Typ: VT \_ BSTR, Zugriff: Lesen/Schreiben<br/>                                    |
 | <span id="WIA_DPV_IMAGES_DIRECTORY"></span><span id="wia_dpv_images_directory"></span><dl> <dt>**WIA \_ DPV \_ IMAGES \_ DIRECTORY**</dt> <dt>VideoDeviceImagesDirectory</dt> </dl>         | Diese Eigenschaft wird vom standardmäßigen WIA-Videobenutzermodustreiber (wiavusd.dll) verfügbar gemacht. Der Wert dieser Eigenschaft ist der vollständige Pfad des Verzeichnisses, in dem der WIA-Videotreiber standardmäßig Bilder ablegt. Anwendungen sollten die [**IWiaVideo::ImagesDirectory-Eigenschaft**](/windows/desktop/api/Wiavideo/nf-wiavideo-iwiavideo-get_imagesdirectory) auf diesen Wert festlegen. <br/> Typ: VT \_ BSTR, Zugriff: Schreibgeschützte<br/> |

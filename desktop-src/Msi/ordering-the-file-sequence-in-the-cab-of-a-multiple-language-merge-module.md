@@ -1,60 +1,60 @@
 ---
-description: Mergemodule, sprach Transformationen und CAB-Dateien mit mehreren Sprachen müssen so verfasst werden, dass die Reihenfolge der Dateien mit der in der Dateitabelle angegebenen Reihenfolge übereinstimmt.
+description: Mergemodule, Sprachtransformationen und Cab-Dateien mit mehreren Sprachen müssen so erstellt werden, dass die Reihenfolge der Dateien mit der in der Dateitabelle angegebenen Reihenfolge übereinstimmt.
 ms.assetid: c6ddf5fc-a7c5-49c1-899b-ff9fdff9c028
-title: Anordnen der Datei Sequenz im CAB eines Moduls mit mehreren Sprachen
+title: Sortieren der Dateisequenz im CAB eines Mergemoduls mit mehreren Sprachen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 01bdd00d8b09c0605b7ddcf656d87d41e3f53776
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 96e0d7d5efc3c4599f7a3f0eecce2101d1a7db034be6e0f80eda30245a95204d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118942807"
 ---
-# <a name="ordering-the-file-sequence-in-the-cab-of-a-multiple-language-merge-module"></a>Anordnen der Datei Sequenz im CAB eines Moduls mit mehreren Sprachen
+# <a name="ordering-the-file-sequence-in-the-cab-of-a-multiple-language-merge-module"></a>Sortieren der Dateisequenz im CAB eines Mergemoduls mit mehreren Sprachen
 
-Mergemodule, sprach Transformationen und CAB-Dateien mit mehreren Sprachen müssen so verfasst werden, dass die Reihenfolge der Dateien in der CAB-Datei mit der Installations Reihenfolge der in der [Dateitabelle](file-table.md)angegebenen Dateien übereinstimmt, auch nach der Anwendung der sprach Transformation. Wenn die Reihenfolge im Modul und im CAB nicht stimmt, kann das Mergemodul nicht verwendet werden.
+Mergemodule, Sprachtransformationen und Cab-Dateien in mehreren Sprachen müssen so erstellt werden, dass die Reihenfolge der Dateien im .cab mit der Installationsreihenfolge der in der [Dateitabelle](file-table.md)angegebenen Dateien übereinstimmt, auch nach der Anwendung der Sprachtransformation. Wenn die Reihenfolge im Modul und im .cab nicht übereinstimmt, kann das Mergemodul nicht verwendet werden.
 
-Weisen Sie jeder Datei im Modul eine eindeutige Sequenznummer zu, die unabhängig von Ihrer Sprache ist, und verwenden Sie dann immer diese Sequenznummer für die Datei. Verwenden Sie dieselbe Sequenz, wenn Sie die CAB-Datei erstellen und eine sprach Transformation erstellen.
+Weisen Sie jeder Datei im Modul eine eindeutige Sequenznummer zu, die unabhängig von ihrer Sprache ist, und verwenden Sie dann immer diese Sequenznummer für die Datei. Verwenden Sie dieselbe Sequenz, wenn Sie die Cab-Datei erstellen und eine Sprachtransformation erstellen.
 
-Da das Installationsprogramm nur die Dateien installiert, die in der [Dateitabelle](file-table.md)aufgeführt sind, ermöglicht die Verwendung einer globalen Datei Sequenz in CAB, [File Table](file-table.md)und Language Transform dem Merge-Tool das Überspringen zusätzlicher Dateien, die in der CAB-Datei gespeichert sind, die nicht in der [Dateitabelle](file-table.md)aufgeführt sind. Möglicherweise sind andere Dateien in der CAB-Datei vorhanden, Sie dürfen jedoch nicht in der [Dateitabelle](file-table.md)aufgeführt werden. Ein Modul, das Code.dll, English. dat, Deutsch. dat und Französisch. dat installiert, kann beispielsweise die folgende globale Datei Sequenz Reihenfolge verwenden.
+Da das Installationsprogramm nur die in der [Dateitabelle](file-table.md)aufgeführten Dateien installiert, ermöglicht die Verwendung einer globalen Dateisequenz im Cab, [dateitabellen](file-table.md)und sprachtransformation dem Mergetool das Überspringen aller zusätzlichen Dateien, die im Schränk gespeichert sind, die nicht in der [Dateitabelle](file-table.md)aufgeführt sind. Andere Dateien sind möglicherweise im Cab vorhanden, dürfen aber nicht in der [Dateitabelle](file-table.md)aufgeführt werden. Beispielsweise kann ein Modul, das Code.dll, English.dat, German.dat und French.dat installiert, die folgende globale Dateisequenzreihenfolge verwenden.
 
 
 
-| File        | Sequenz |
+| Datei        | Sequenz |
 |-------------|----------|
 | Code.Dll    | 1        |
-| Englisch. dat | 2        |
-| Deutsch. dat  | 3        |
-| Französisch. dat  | 4        |
+| English.Dat | 2        |
+| German.Dat  | 3        |
+| French.Dat  | 4        |
 
 
 
  
 
-Sprach Transformationen können dann erstellt werden, um die [Dateitabelle](file-table.md) des Moduls für Englisch, Deutsch oder Französisch zu ändern.
+Sprachtransformationen können dann erstellt werden, um die [Dateitabelle](file-table.md) des Moduls für Englisch, Deutsch oder Französisch zu ändern.
 
-[Dateitabelle](file-table.md) (partiell für Englisch)
+[Dateitabelle](file-table.md) (teilweise für Englisch)
 
 
 
-| File        | Sequenz |
+| Datei        | Sequenz |
 |-------------|----------|
 | Code.Dll    | 1        |
-| Englisch. dat | 2        |
+| English.Dat | 2        |
 
 
 
  
 
-[Dateitabelle](file-table.md) (partiell für Deutsch)
+[Dateitabelle](file-table.md) (teilweise für Deutsch)
 
 
 
-| File       | Sequenz |
+| Datei       | Sequenz |
 |------------|----------|
 | Code.Dll   | 1        |
-| Deutsch. dat | 3        |
+| German.Dat | 3        |
 
 
 
@@ -64,16 +64,16 @@ Sprach Transformationen können dann erstellt werden, um die [Dateitabelle](file
 
 
 
-| File       | Sequenz |
+| Datei       | Sequenz |
 |------------|----------|
 | Code.Dll   | 1        |
-| Französisch. dat | 4        |
+| French.Dat | 4        |
 
 
 
  
 
-Weitere Informationen finden Sie unter [Erstellen einer sprach Transformation für ein Mergemodul mehrerer Sprachen](authoring-a-language-transform-for-a-multiple-language-merge-module.md) und [Erstellen von Mergemodul-Datei Tabellen](authoring-merge-module-file-tables.md).
+Weitere Informationen finden Sie unter [Authoring a Language Transform for a Multiple Language Merge Module (Erstellen einer Sprachtransformation für ein Mergemodul mit mehreren Sprachen)](authoring-a-language-transform-for-a-multiple-language-merge-module.md) und [Authoring Merge Module File Tables (Erstellen von Mergemoduldateitabellen).](authoring-merge-module-file-tables.md)
 
  
 

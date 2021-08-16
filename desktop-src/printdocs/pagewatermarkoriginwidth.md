@@ -1,19 +1,19 @@
 ---
-description: Hier finden Sie Informationen zum PageWatermarkOriginWidth-Parameter. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Abrufen von Informationen zum PageWatermarkOriginWidth-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: e1bea06b-11b9-4652-915a-deb563ad59f8
 title: PageWatermarkOriginWidth
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bffe6457496972231877af2a51e03bc5109083d0
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: 57533d7d7322eedf586c86bfbfd28a82b9cc143aedd7c6318c6c1f6ecb36451f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112396005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118731910"
 ---
 # <a name="pagewatermarkoriginwidth"></a>PageWatermarkOriginWidth
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Gibt den Ursprung eines Wasserzeichens relativ zum Ursprung von PageImageableSize an.
 
@@ -28,7 +28,7 @@ Gibt den Ursprung eines Wasserzeichens relativ zum Ursprung von PageImageableSiz
 |----------------------------|--------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                    |
 | Bereichspräfix <br/> | Seite<br/>                            |
-| Hinweise <br/>          | Mit PageWatermark-Element verknüpft<br/> |
+| Hinweise <br/>          | Verknüpft mit dem PageWatermark-Element<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt den Ursprung eines Wasserzeichens relativ zum Ursprung von PageImageableSiz
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements ist:
+Die XML-Struktur dieses Elements lautet:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageWatermarkOriginWidth">
@@ -67,7 +67,7 @@ Die XML-Struktur dieses Elements ist:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
@@ -75,7 +75,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 |-------------------------|--------------------|------------------------------------------------------------------------|
 | DataType<br/>     | Zeichenfolge<br/>  | xs:integer<br/>                                                  |
 | DefaultValue<br/> | integer<br/> | nicht definiert<br/>                                                   |
-| MaxValue<br/>     | integer<br/> | Kleiner als oder gleich PageImageableSize– ExtentWidth-Wert<br/> |
+| MaxValue<br/>     | integer<br/> | Kleiner oder gleich PageImageableSize – ExtentWidth-Wert<br/> |
 | Minvalue<br/>     | integer<br/> | 0<br/>                                                           |
 | Mehrere<br/>     | integer<br/> | 1<br/>                                                           |
 | Obligatorisch.<br/>    | Zeichenfolge<br/>  | psk:Conditional<br/>                                             |

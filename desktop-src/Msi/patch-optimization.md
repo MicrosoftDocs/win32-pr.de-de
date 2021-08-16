@@ -1,5 +1,5 @@
 ---
-description: Windows Das Installationsprogramm kann das Patchen optimieren, um die Zeit zu reduzieren, die zum Anwenden von Patches auf installierte Anwendungen erforderlich ist.
+description: Windows Das Installationsprogramm kann das Patchen optimieren, um die Zeit zu verkürzen, die erforderlich ist, um Patches auf installierte Anwendungen anzuwenden.
 ms.assetid: 2bb1c94a-55b6-4aee-b86d-ee9e1f8ed290
 title: Patchoptimierung
 ms.topic: article
@@ -13,15 +13,15 @@ ms.locfileid: "118627643"
 ---
 # <a name="patch-optimization"></a>Patchoptimierung
 
-Windows Das Installationsprogramm kann das Patchen optimieren, um die Zeit zu reduzieren, die zum Anwenden von Patches auf installierte Anwendungen erforderlich ist.
+Windows Das Installationsprogramm kann das Patchen optimieren, um die Zeit zu verkürzen, die erforderlich ist, um Patches auf installierte Anwendungen anzuwenden.
 
-**Windows Installer 2.0:** Nicht unterstützt. Für Versionen des Windows Installers, die vor Windows Installer 3.0 veröffentlicht wurden, wird beim Patchen eine vollständige Reparaturinstallation der Anwendung ausgeführt, die erheblich mehr Zeit in Dauern kann.
+**Windows Installer 2.0:** Wird nicht unterstützt. Bei Versionen von Windows Installer, die vor Windows Installer 3.0 veröffentlicht wurden, führt das Patchen eine vollständige Reparaturinstallation der Anwendung aus, was deutlich mehr Zeit in Anspruch nehmen kann.
 
-**Windows Installer 3.0 und höher:** Der Patchprozess ändert nur die Teile einer Anwendung, die durch einen Patch geändert werden.
+**Windows Installer 3.0 und höher:** Der Patchvorgang ändert nur die Teile einer Anwendung, die durch einen Patch geändert werden.
 
 **Windows Installer 3.1 und höher:** Ab Windows Installer 3.1 erfordert die Patchoptimierung, dass für alle Patches in der Transaktion die OptimizedInstallMode-Eigenschaft in der [MsiPatchMetadata-Tabelle](msipatchmetadata-table.md)auf 1 (eins) festgelegt ist.
 
-Wenn ein Patch nur die folgenden Tabellen ändert, überspringt Windows Installer 3.0 oder höher die Aktionen, die allen anderen Tabellen zugeordnet sind, auch wenn diese Aktionen in den Sequenztabellen des ursprünglichen Anwendungsinstallationspakets (.msi-Datei) aufgeführt sind.
+Wenn ein Patch nur die folgenden Tabellen ändert, überspringt Windows Installer 3.0 oder höher die Aktionen, die allen anderen Tabellen zugeordnet sind, selbst wenn diese Aktionen in den Sequenztabellen des ursprünglichen Anwendungsinstallationspakets (.msi-Datei) aufgeführt sind.
 
 -   [AdminExecuteSequence](adminexecutesequence-table.md)
 -   [AdminUISequence](adminuisequence-table.md)
@@ -51,7 +51,7 @@ Wenn ein Patch nur die folgenden Tabellen ändert, überspringt Windows Installe
 -   [\_TransformView-Tabelle](-transformview-table.md)
 -   [\_Überprüfung](-validation-table.md)
 
-Verwenden Sie die [DisableFlyWeightPatching-Richtlinie,](disableflyweightpatching.md) um die Patchoptimierungsoption zu deaktivieren.
+Verwenden Sie die [Richtlinie DisableFlyWeightPatching,](disableflyweightpatching.md) um die Patchoptimierungsoption zu deaktivieren.
 
  
 

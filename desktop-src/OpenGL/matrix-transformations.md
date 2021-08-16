@@ -1,28 +1,28 @@
 ---
-title: Matrix Transformationen
-description: Vertices und normale werden von Modelview und Projektions Matrizen transformiert, bevor Sie zum Entwickeln eines Bilds im Framebuffer verwendet werden.
+title: Matrixtransformationen
+description: Scheitelungen und Normals werden von den Matrizen modelview und projection transformiert, bevor sie zum Erstellen eines Bilds im Framepuffer verwendet werden.
 ms.assetid: 9fd0b236-9152-4494-b5c7-dadb5943269e
 keywords:
-- OpenGL-Verarbeitungs Pipeline, Matrizen
+- OpenGL-Verarbeitungspipeline,Matrizen
 - Matrizen OpenGL
-- Modelview-Matrix
-- Projektions Matrix
+- ModelView-Matrix
+- Projektionsmatrix
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3db0ebd8bd13b8d2cee32b8873f697ab073140bd
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a0e3c88ffcfebc989400cfa9a85c16f355c0a7090ff4d16531cf03c3697ee869
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206659"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118937319"
 ---
-# <a name="matrix-transformations"></a>Matrix Transformationen
+# <a name="matrix-transformations"></a>Matrixtransformationen
 
-Vertices und normale werden von Modelview und Projektions Matrizen transformiert, bevor Sie zum Entwickeln eines Bilds im Framebuffer verwendet werden. Verwenden Sie Funktionen wie z. b. [**glMatrixMode**](glmatrixmode.md) [**, \* glmultmatrix**](glmultmatrix.md), [**glrotation \***](glrotate.md), [**gltranslate \***](gltranslate.md)und [**glscale \***](glscale.md) , um die gewünschten Transformationen zu verfassen. Oder Sie geben Matrizen direkt mit " [**glloadmatrix \***](glloadmatrix.md) " und " [**glLoadIdentity**](glloadidentity.md)" an. Verwenden Sie [**glPushMatrix**](glpushmatrix.md) und [**glPopMatrix**](glpopmatrix.md) , um Modelview-und Projektions Matrizen auf ihren jeweiligen Stapeln zu speichern und wiederherzustellen.
+Scheitelungen und Normals werden von den Matrizen modelview und projection transformiert, bevor sie zum Erstellen eines Bilds im Framepuffer verwendet werden. Verwenden Sie Funktionen wie [**glMatrixMode,**](glmatrixmode.md) [ * *glMultMatrix \** _](glmultmatrix.md), [_*glRotate, \**_](glrotate.md) [_*glTranslate \**_](gltranslate.md)und [_*glScale, \**_](glscale.md) um die gewünschten Transformationen zu erstellen. Oder geben Sie Matrizen direkt mit [_*glLoadMatrix \**_](glloadmatrix.md) und [_ *glLoadIdentity an.* *](glloadidentity.md) Verwenden [**Sie glPushMatrix**](glpushmatrix.md) und [**glPopMatrix,**](glpopmatrix.md) um Modellansichts- und Projektionsmatrizen auf ihren jeweiligen Stapeln zu speichern und wiederherzustellen.
 
- 
+ 
 
- 
+ 
 
 
 

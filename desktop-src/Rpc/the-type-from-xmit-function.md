@@ -1,21 +1,21 @@
 ---
 title: Die type_from_xmit-Funktion
-description: Die Stubdateien nennen den Typ \_ von der \_ xmit-Funktion, um Daten aus dem übertragenen Typ in den Typ zu konvertieren, der der Anwendung angezeigt wird.
+description: Die Stubs rufen den Typ \_ der \_ xmit-Funktion auf, um Daten von ihrem übertragenen Typ in den Typ zu konvertieren, der der Anwendung präsentiert wird.
 ms.assetid: 679a2738-a166-4e73-bca7-950f979ed97a
 keywords:
 - type_from_xmit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e594e8586522dd3697f5ae62c95851917741f73c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b1a38e372467208c76111728080037c65f5dca2856304a49f06e7e33426277eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118923699"
 ---
-# <a name="the-type_from_xmit-function"></a>Der Typ \_ aus der \_ xmit-Funktion
+# <a name="the-type_from_xmit-function"></a>Der Typ \_ der \_ xmit-Funktion
 
-Die Stubdateien nennen den **Typ \_ von der \_ xmit** -Funktion, um Daten aus dem übertragenen Typ in den Typ zu konvertieren, der der Anwendung angezeigt wird. Die-Funktion ist wie folgt definiert:
+Die Stubs rufen den **Typ \_ der \_ xmit-Funktion** auf, um Daten von ihrem übertragenen Typ in den Typ zu konvertieren, der der Anwendung präsentiert wird. Die Funktion ist wie folgt definiert:
 
 ``` syntax
 void __RPC_USER <type>_from_xmit ( 
@@ -23,11 +23,11 @@ void __RPC_USER <type>_from_xmit (
     <type> __RPC_FAR *);
 ```
 
-Der erste Parameter ist ein Zeiger auf die übertragenen Daten. Die-Funktion legt den zweiten Parameter fest, um auf die dargestellten Daten zu verweisen.
+Der erste Parameter ist ein Zeiger auf die übertragenen Daten. Die -Funktion legt den zweiten Parameter so fest, dass er auf die dargestellten Daten zeigt.
 
-Der **Typ \_ aus der \_ xmit** -Funktion muss den Arbeitsspeicher für den dargestellten Typ verwalten. Die-Funktion muss für die gesamte Datenstruktur, die bei der durch den zweiten Parameter angegebenen Adresse beginnt, Arbeitsspeicher zuweisen, mit Ausnahme des-Parameters selbst (der Stub weist Speicher für den Stamm Knoten zu und übergibt ihn an die-Funktion). Der Wert des zweiten Parameters kann während des Aufrufes nicht geändert werden. Die Funktion kann den Inhalt an dieser Adresse ändern.
+Der **Typ \_ der \_ xmit-Funktion** muss den Arbeitsspeicher für den dargestellten Typ verwalten. Die Funktion muss Arbeitsspeicher für die gesamte Datenstruktur zuordnen, die an der durch den zweiten Parameter angegebenen Adresse beginnt, mit Ausnahme des Parameters selbst (der Stub belegt Speicher für den Stammknoten und übergibt ihn an die Funktion). Der Wert des zweiten Parameters kann während des Aufrufs nicht geändert werden. Die Funktion kann den Inhalt an dieser Adresse ändern.
 
-In diesem Beispiel konvertiert der Double \_ \_ -Linktyp der Funktion \_ von \_ xmit das Array der Größenangabe in eine doppelt verknüpfte Liste. Die Funktion behält den gültigen Zeiger am Anfang der Liste bei, gibt den dem Rest der Liste zugeordneten Arbeitsspeicher frei und erstellt dann eine neue Liste, die mit dem gleichen Zeiger beginnt. Die Funktion verwendet die Utility-Funktion **insertnewnode**, um einen Listen Knoten an das Ende der Liste anzufügen und die *pNext* -und *pprevious* -Zeiger den entsprechenden Werten zuzuweisen.
+In diesem Beispiel konvertiert die Funktion DOUBLE \_ LINK \_ TYPE von \_ \_ xmit das Array der Größe in eine doppelt verknüpfte Liste. Die Funktion behält den gültigen Zeiger auf den Anfang der Liste bei, gibt Arbeitsspeicher frei, der dem Rest der Liste zugeordnet ist, und erstellt dann eine neue Liste, die mit demselben Zeiger beginnt. Die Funktion verwendet die Hilfsprogrammfunktion **InsertNewNode**, um einen Listenknoten an das Ende der Liste anzufügen und die *pNext-* und *pPrevious-Zeiger* den entsprechenden Werten zuzuweisen.
 
 
 ```C++
@@ -63,9 +63,9 @@ void __RPC_USER DOUBLE_LINK_TYPE_from_xmit(
 
 
 
- 
+ 
 
- 
+ 
 
 
 

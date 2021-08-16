@@ -1,24 +1,24 @@
 ---
 description: 'Die folgenden Makros werden bei der Synchronisierung verwendet:'
 ms.assetid: d62901dd-c897-4f5e-8049-f69375bb7d8e
-title: Synchronisierungs Makros
+title: Synchronisierungsmakros
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8dae10856ada5bcdb75c5bb2876e828382b77478
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9a857ae4b2ca4ffdd1bd41d67412fafee213258176ac3cf329c5ef97565b5208
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118885962"
 ---
-# <a name="synchronization-macros"></a>Synchronisierungs Makros
+# <a name="synchronization-macros"></a>Synchronisierungsmakros
 
 Die folgenden Makros werden bei der Synchronisierung verwendet:
 
--   [**Hasoverlappedioabgeschlossen**](/windows/desktop/api/WinBase/nf-winbase-hasoverlappediocompleted)
+-   [**HasOverlappedIoCompleted**](/windows/desktop/api/WinBase/nf-winbase-hasoverlappediocompleted)
 -   [**MemoryBarrier**](/windows/win32/api/winnt/nf-winnt-memorybarrier)
--   [**Prefetchcacheline**](/windows/desktop/api/Winnt/nf-winnt-prefetchcacheline)
--   [**Yieldprocessor**](/windows/win32/api/winnt/nf-winnt-yieldprocessor)
+-   [**PreFetchCacheLine**](/windows/desktop/api/Winnt/nf-winnt-prefetchcacheline)
+-   [**YieldProcessor**](/windows/win32/api/winnt/nf-winnt-yieldprocessor)
 
  
 

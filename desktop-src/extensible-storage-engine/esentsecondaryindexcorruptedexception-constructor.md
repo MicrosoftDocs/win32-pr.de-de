@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentsecondaryindexverdertedexception-Konstruktor'
-title: Esentsecondaryindexverdertedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentSecondaryIndexCorruptedException-Konstruktor'
+title: EsentSecondaryIndexCorruptedException-Konstruktor
 TOCTitle: 'EsentSecondaryIndexCorruptedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSecondaryIndexCorruptedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentsecondaryindexcorruptedexception.esentsecondaryindexcorruptedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 190e6deff5cc9c95e0a080026a59bcc128656ae4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 30c184d998890907633845f235a8b5c569d56b708955e572345d89ca8b38f0a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118773583"
 ---
-# <a name="esentsecondaryindexcorruptedexception-constructor"></a>Esentsecondaryindexverdertedexception-Konstruktor
+# <a name="esentsecondaryindexcorruptedexception-constructor"></a>EsentSecondaryIndexCorruptedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentsecondaryindexverdertedexception-Klasse.
+Initialisiert eine neue Instanz der EsentSecondaryIndexCorruptedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentSecondaryIndexCorruptedException()
 public EsentSecondaryIndexCorruptedException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentsecondaryindexverdertedexception-Klasse](./esentsecondaryindexcorruptedexception-class.md)
+[EsentSecondaryIndexCorruptedException-Klasse](./esentsecondaryindexcorruptedexception-class.md)
 
-[Esentsecondaryindexverdertedexception-Elemente](./esentsecondaryindexcorruptedexception-members.md)
+[EsentSecondaryIndexCorruptedException-Member](./esentsecondaryindexcorruptedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -29,11 +29,11 @@ g \_ wszWMOriginalArtist
 
 ## <a name="data-type"></a>Datentyp
 
-**\_ \_ WMT-TYPZEICHENFOLGE**
+**\_WMT-TYPZEICHENFOLGE \_**
 
 ## <a name="remarks"></a>Hinweise
 
-Der ursprüngliche Interpret wird in der Regel für Diebstäbchen von Musiktiteln verwendet. Für solche Dateien. verwenden Sie den [**Autornamen**](author.md) der Band, die den Titel ursprünglich aufgezeichnet hat.
+Der ursprüngliche Interpret wird in der Regel für die Neuverarbeitung von Titeln verwendet. Für solche Dateien. verwenden Sie [**den Autornamen**](author.md) der Band, die den Titel ursprünglich aufgezeichnet hat.
 
 ## <a name="see-also"></a>Weitere Informationen
 

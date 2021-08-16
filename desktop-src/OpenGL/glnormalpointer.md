@@ -1,9 +1,9 @@
 ---
-title: glnormalpointer-Funktion (GL. h)
-description: Die glnormalpointer-Funktion definiert ein Array von normalen.
+title: glNormalPointer-Funktion (Gl.h)
+description: Die glNormalPointer-Funktion definiert ein Array von Normalitäten.
 ms.assetid: 6ffb0522-87cc-4be1-a5b1-f6fd30e04b43
 keywords:
-- glnormalpointer-Funktion OpenGL
+- glNormalPointer-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c2f3abbfbd989351af647557ec64f8ee3172dc5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4f188a65a0a2bff0438188ae7521615de45341147b138a849d2fd375ed8a959b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957207"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118938409"
 ---
-# <a name="glnormalpointer-function"></a>glnormalpointer-Funktion
+# <a name="glnormalpointer-function"></a>glNormalPointer-Funktion
 
-Die **glnormalpointer** -Funktion definiert ein Array von normalen.
+Die **glNormalPointer-Funktion** definiert ein Array von Normalitäten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ void WINAPI glNormalPointer(
 *type* 
 </dt> <dd>
 
-Der Datentyp der einzelnen Koordinaten im Array mit den folgenden symbolischen Konstanten: GL \_ Byte, GL \_ Short, GL \_ int, GL \_ float und GL \_ Double.
+Der Datentyp jeder Koordinate im Array unter Verwendung der folgenden symbolischen Konstanten: GL \_ BYTE, GL \_ SHORT, GL \_ INT, GL \_ FLOAT und GL \_ DOUBLE.
 
 </dd> <dt>
 
 *Schritt* 
 </dt> <dd>
 
-Der Byte Offset zwischen aufeinander folgenden normalen. Wenn *Stride* 0 (null) ist, werden die normale eng im Array verpackt.
+Der Byteoffset zwischen aufeinander folgenden Normalitäten. Wenn *stride* 0 (null) ist, sind die Normalitäten eng im Array gepackt.
 
 </dd> <dt>
 
 *Zeiger* 
 </dt> <dd>
 
-Ein Zeiger auf den ersten normal im Array.
+Ein Zeiger auf die erste Normale im Array.
 
 </dd> </dl>
 
@@ -69,40 +69,40 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                      |
 |-------------------------------------------------------------------------------------------------------|----------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | der *Typ* war kein akzeptierter Wert.<br/> |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | " *Stride* " oder " *count* " war negativ.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *type* war kein akzeptierter Wert.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | *stride* oder *count* war negativ.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glnormalpointer** -Funktion gibt den Speicherort und die Daten eines Arrays von normalen an, die beim Rendern verwendet werden sollen. Der *Typparameter* gibt den Datentyp der einzelnen normalen Koordinaten an. Der *Stride* -Parameter bestimmt den Byte Offset von einem normalen zum nächsten und ermöglicht das Packen von Vertices und Attributen in einem einzelnen Array oder Speicher in separaten Arrays. In einigen Implementierungen, die die Scheitel Punkte und Attribute in einem einzelnen Array speichern, kann es effizienter sein, als separate Arrays zu verwenden. Weitere Informationen finden Sie unter [**glinterleavedarrays**](glinterleavedarrays.md) .
+Die **glNormalPointer-Funktion** gibt die Position und die Daten eines Arrays von Normalwerten an, die beim Rendern verwendet werden sollen. Der *Typparameter* gibt den Datentyp jeder normalen Koordinate an. Der *stride-Parameter* bestimmt den Byteoffset von einem normalen zum nächsten, wodurch das Packen von Scheitelpunkten und Attributen in einem einzelnen Array oder Speicher in separaten Arrays ermöglicht wird. In einigen Implementierungen kann das Speichern der Scheitelpunkte und Attribute in einem einzelnen Array effizienter sein als die Verwendung separater Arrays. Weitere Informationen finden Sie unter [**glInterleavedArrays.**](glinterleavedarrays.md)
 
-Ein normales Array wird aktiviert, wenn Sie die reguläre GL- \_ \_ Array Konstante mit [**glenableclientstate**](glenableclientstate.md)angeben. Wenn diese Option aktiviert ist, verwenden [**gldrawarrays**](gldrawarrays.md), [**gldrawelements**](gldrawelements.md) und [**glarrayelement**](glarrayelement.md) das normale Array. Standardmäßig ist das normale Array deaktiviert.
+Ein normales Array wird aktiviert, wenn Sie die GL \_ NORMAL \_ ARRAY-Konstante mit [**glEnableClientState**](glenableclientstate.md)angeben. Wenn diese Option aktiviert ist, verwenden [**glDrawArrays,**](gldrawarrays.md) [**glDrawElements**](gldrawelements.md) und [**glArrayElement**](glarrayelement.md) das normale Array. Standardmäßig ist das normale Array deaktiviert.
 
-Sie können **glnormalpointer** nicht in Anzeigelisten einschließen.
+Sie können **glNormalPointer** nicht in Anzeigelisten einschließen.
 
-Wenn Sie ein normales Array mit **glnormalpointer** angeben, werden die Werte aller normalen Array Parameter der Funktion in einem Client seitigen Zustand gespeichert. Da die normalen Array Parameter in einem Client seitigen Zustand gespeichert werden, werden ihre Werte von [**glpushatpub**](glpushattrib.md) und [**glpopatpub**](glpopattrib.md)nicht gespeichert oder wieder hergestellt.
+Wenn Sie mit **glNormalPointer** ein normales Array angeben, werden die Werte aller normalen Arrayparameter der Funktion in einem clientseitigen Zustand gespeichert. Da die normalen Arrayparameter in einem clientseitigen Zustand gespeichert werden, werden ihre Werte nicht von [**glPushAttrib**](glpushattrib.md) und [**glPopAttrib**](glpopattrib.md)gespeichert oder wiederhergestellt.
 
-Obwohl beim Abrufen von **glnormalpointer** innerhalb von [**glBegin**](glbegin.md) -und [**glEnd**](glend.md) -Paaren kein Fehler generiert wird, sind die Ergebnisse nicht definiert.
+Obwohl beim Aufrufen von **glNormalPointer** innerhalb der Paare [**glBegin**](glbegin.md) und [**glEnd**](glend.md) kein Fehler generiert wird, sind die Ergebnisse nicht definiert.
 
-Die folgenden Funktionen sind mit **glnormalpointer** verknüpft:
+Die folgenden Funktionen sind **glNormalPointer** zugeordnet:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ normales \_ array \_ Stride
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ NORMAL \_ ARRAY \_ STRIDE
 
-**glget** mit Argument GL \_ normale \_ array \_ Anzahl
+**glGet** mit dem Argument GL \_ NORMAL \_ ARRAY \_ COUNT
 
-**glget** mit Argument GL \_ normaler \_ \_ Arraytyp
+**glGet** mit dem Argument GL \_ NORMAL \_ ARRAY \_ TYPE
 
-**glgetpointerv** mit Argument GL \_ normaler \_ array \_ Zeiger
+**glGetPointerv** mit argument GL \_ NORMAL \_ ARRAY \_ POINTER
 
-[**glisenabled**](glisenabled.md) mit Argument GL \_ Normal \_ Array
+[**glIsEnabled**](glisenabled.md) mit dem Argument GL \_ NORMAL \_ ARRAY
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -112,53 +112,53 @@ Die folgenden Funktionen sind mit **glnormalpointer** verknüpft:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glarrayelement**](glarrayelement.md)
+[**glArrayElement**](glarrayelement.md)
 </dt> <dt>
 
-[**glcolorpointer**](glcolorpointer.md)
+[**glColorPointer**](glcolorpointer.md)
 </dt> <dt>
 
 [**glDrawElements**](gldrawelements.md)
 </dt> <dt>
 
-[**gldrawarrays**](gldrawarrays.md)
+[**glDrawArrays**](gldrawarrays.md)
 </dt> <dt>
 
 [**glEnable**](glenable.md)
 </dt> <dt>
 
-[**gledgeflagpointer**](gledgeflagpointer.md)
+[**glEdgeFlagPointer**](gledgeflagpointer.md)
 </dt> <dt>
 
-[**glgetpointerv**](glgetpointerv.md)
+[**glGetPointerv**](glgetpointerv.md)
 </dt> <dt>
 
-[**glindexpointer**](glindexpointer.md)
+[**glIndexPointer**](glindexpointer.md)
 </dt> <dt>
 
-[**glisenabled**](glisenabled.md)
+[**glIsEnabled**](glisenabled.md)
 </dt> <dt>
 
-[**glinterleavedarrays**](glinterleavedarrays.md)
+[**glInterleavedArrays**](glinterleavedarrays.md)
 </dt> <dt>
 
-[**gltexcoordpointer**](gltexcoordpointer.md)
+[**glTexCoordPointer**](gltexcoordpointer.md)
 </dt> <dt>
 
-[**glvertexpointer**](glvertexpointer.md)
+[**glVertexPointer**](glvertexpointer.md)
 </dt> <dt>
 
-[**glgetstring**](glgetstring.md)
+[**glGetString**](glgetstring.md)
 </dt> </dl>
 
  

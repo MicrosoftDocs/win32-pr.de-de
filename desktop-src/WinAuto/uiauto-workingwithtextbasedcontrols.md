@@ -6,7 +6,7 @@ keywords:
 - Clients, arbeiten mit textbasierten Steuerelementen
 - Clients,textbasierte Steuerelemente
 - Clients,Textbereiche
-- clients,Text-Steuerelementmuster
+- Clients,Textsteuermuster
 - clients,TextRange-Steuerelementmuster
 ms.topic: article
 ms.date: 05/31/2018

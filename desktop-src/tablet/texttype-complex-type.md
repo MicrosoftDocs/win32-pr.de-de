@@ -1,5 +1,5 @@
 ---
-description: Definiert den Typ, der den Textwert in einem Inhalts Element- \[ Journal Reader enthält \] .
+description: Definiert den Typ, der den Textwert in einem Content-Element Journal \[ Reader \] enthält.
 ms.assetid: f0969da4-2557-4f43-97e6-e8ab5da3a0a5
 title: Komplexer TextType-Typ
 ms.topic: reference
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: f13c97836a5428c08c3b6be73a9d2f352bd0de1d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a8013e3720c388f1c2bc456167b010de58ff32045fb2956143fd4d03613a287e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118715416"
 ---
 # <a name="texttype-complex-type"></a>Komplexer TextType-Typ
 
-Definiert den Typ, der den Textwert in einem [Inhalts Element- \[ Journal \] Reader](content-element--journal-reader.md)enthält.
+Definiert den Typ, der den Textwert in einem [Content-Element Journal \[ Reader enthält. \] ](content-element--journal-reader.md)
 
 ``` syntax
 <xs:complexType name="TextType" />
@@ -33,7 +33,7 @@ Definiert den Typ, der den Textwert in einem [Inhalts Element- \[ Journal \] Rea
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                     |
 
 

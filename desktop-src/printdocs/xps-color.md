@@ -1,19 +1,19 @@
 ---
-description: Eine-Struktur, die einen einzelnen Farbwert beschreibt.
+description: Eine -Struktur, die einen einzelnen Farbwert beschreibt.
 ms.assetid: 710f3ef1-bbc3-416d-9faf-aa4a716007c2
-title: XPS_COLOR (xpsobjectmodel. h)
+title: XPS_COLOR (Xpsobjectmodel.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 34c148c2a5452154bfe33b0c74d695fe78f0cdad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f771bcbb516352b2ef689060c11003808d434be8059d16af78fe8db646c97000
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362662"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118971149"
 ---
-# <a name="xps_color"></a>XPS- \_ Farbe
+# <a name="xps_color"></a>XPS \_ COLOR
 
-Eine-Struktur, die einen einzelnen Farbwert beschreibt.
+Eine -Struktur, die einen einzelnen Farbwert beschreibt.
 
 ``` syntax
 typedef union switch (XPS_COLOR_TYPE colorType) value
@@ -34,15 +34,15 @@ typedef union switch (XPS_COLOR_TYPE colorType) value
 } XPS_COLOR;
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Format der Struktur hängt vom Wert von *ColorType* ab.
+Das Format der Struktur hängt vom Wert von *colorType* ab.
 
 <dl>
 
-[**XPS \_ - \_ Farbtyp \_ sRGB**](/previous-versions/windows/desktop/dd372944(v=vs.85))  
-[**XPS \_ - \_ Farbtyp \_ ScRGB**](/previous-versions/windows/desktop/dd372943(v=vs.85))  
-[**XPS \_ - \_ Farbtyp \_ Kontext**](/windows/win32/api/xpsobjectmodel/ns-xpsobjectmodel-xps_color)  
+[**XPS \_ COLOR \_ TYPE \_ SRGB**](/previous-versions/windows/desktop/dd372944(v=vs.85))  
+[**XPS \_ COLOR \_ TYPE \_ SCRGB**](/previous-versions/windows/desktop/dd372943(v=vs.85))  
+[**\_ \_ XPS-FARBTYPKONTEXT \_**](/windows/win32/api/xpsobjectmodel/ns-xpsobjectmodel-xps_color)  
 </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -51,14 +51,14 @@ Das Format der Struktur hängt vom Wert von *ColorType* ab.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7, Windows Vista mit SP2 und Platt Form Update für Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Platt Form Update für Windows Server 2008 \[ Desktop Apps \| UWP-apps\]<br/> |
-| Header<br/>                   | <dl> <dt>Xpsobjectmodel. h</dt> </dl>                                              |
-| IDL<br/>                      | <dl> <dt>Xpsobjectmodel. idl</dt> </dl>                                            |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7, Windows Vista mit SP2 und Plattformupdate für UWP-Apps für Windows \[ \| Vista-Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Plattformupdate für Windows Server \[ 2008-Desktop-Apps \| UWP-Apps\]<br/> |
+| Header<br/>                   | <dl> <dt>Xpsobjectmodel.h</dt> </dl>                                              |
+| Idl<br/>                      | <dl> <dt>XpsObjectModel.idl</dt> </dl>                                            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

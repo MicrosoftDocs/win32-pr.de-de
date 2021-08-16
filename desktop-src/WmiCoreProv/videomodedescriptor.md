@@ -1,5 +1,5 @@
 ---
-description: Enthält Modedeskriptorelemente für das MonitorSourceModes-Array in der WmiMonitorListedSupportedSourceModes-Klasse.
+description: Enthält Modusdeskriptorelemente für das MonitorSourceModes-Array in der WmiMonitorListedSupportedSourceModes-Klasse.
 ms.assetid: 6d6c846d-caec-41a8-8a88-1c1e14bc0473
 title: VideoModeDescriptor-Klasse
 ms.topic: reference
@@ -48,7 +48,7 @@ ms.locfileid: "118558405"
 ---
 # <a name="videomodedescriptor-class"></a>VideoModeDescriptor-Klasse
 
-Die WMI-Klasse **VideoModeDescriptorVideo** enthält Modedeskriptorelemente für das **MonitorSourceModes-Array** in der [**WmiMonitorListedSupportedSourceModes-Klasse.**](wmimonitorlistedsupportedsourcemodes.md) Zu diesen Elementen gehören Überwachungsfunktionen wie Aktualisierungsrate, Pixelmerkmale oder Bildgröße. Die **VideoModeDescriptorVideo-Klasse** enthält Informationen, die eine Obermenge der Daten sind, die von festgelegten, Standard- und detaillierten Zeitsteuerungsblöcken verfügbar sind.
+Die **WMI-Klasse VideoModeDescriptorVideo** enthält Modusdeskriptorelemente für das **MonitorSourceModes-Array** in der [**WmiMonitorListedSupportedSourceModes-Klasse.**](wmimonitorlistedsupportedsourcemodes.md) Zu diesen Elementen gehören Monitorfeatures wie Aktualisierungsrate, Pixelmerkmale oder Bildgröße. Die **VideoModeDescriptorVideo-Klasse** enthält Informationen, die eine Obermenge der Daten sind, die aus eingerichteten, standardmäßigen und detaillierten Zeitsteuerungsblöcken verfügbar sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -86,7 +86,7 @@ class VideoModeDescriptor : WmiMonitorSupportedVideoModes
 
 ## <a name="members"></a>Member
 
-Die **VideoModeDescriptor-Klasse** verfügt über folgende Typen von Membern:
+Die **VideoModeDescriptor-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -96,7 +96,7 @@ Die **VideoModeDescriptor-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**CompositePolarityType**
+**CompositeVerbundenheitstyp**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **uint8**
@@ -111,8 +111,8 @@ Zusammengesetzter Polaritätstyp. Dies ist die Polarität horizontaler Synchroni
 
 | Wert                                                                              | Bedeutung                                                                    |
 |------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| <dl> <dt>0 (0x0)</dt> </dl> | Zusammengesetzte Polarität ist positiv.<br/>                                 |
-| <dl> <dt>1 (0x1)</dt> </dl> | Zusammengesetzte Polarität ist negativ.<br/>                                 |
+| <dl> <dt>0 (0x0)</dt> </dl> | Die zusammengesetzte Polarität ist positiv.<br/>                                 |
+| <dl> <dt>1 (0x1)</dt> </dl> | Die zusammengesetzte Polarität ist negativ.<br/>                                 |
 | <dl> <dt>2 (0x2)</dt> </dl> | Nicht zutreffend Der Signalsynchronisierungstyp muss digital zusammengesetzt sein.<br/> |
 
 
@@ -130,7 +130,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der horizontal aktiven Pixel.
+Anzahl horizontal aktiver Pixel.
 
 </dd> <dt>
 
@@ -143,7 +143,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl horizontal leerender Pixel
+Anzahl horizontal leerer Pixel
 
 </dd> <dt>
 
@@ -173,7 +173,7 @@ Horizontale Bildgröße in Millimeter (mm).
 
 </dd> <dt>
 
-**HorizontalPolarityType**
+**HorizontalPolitityType**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **uint8**
@@ -207,7 +207,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nenner der horizontalen Aktualisierungsrate.
+Horizontaler Aktualisierungsraten-Nenner.
 
 </dd> <dt>
 
@@ -237,7 +237,7 @@ Horizontaler Synchronisierungsoffset.
 
 </dd> <dt>
 
-**HorizontalSyncSynchronisierungWidth**
+**HorizontalSyncSyncSynceWidth**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **uint16**
@@ -246,7 +246,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Breite des horizontalen Synchronisierungsimimens.
+Horizontale Synchronisierungs-Pulsbreite.
 
 </dd> <dt>
 
@@ -259,7 +259,7 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Anzeigemodus übersprungen wird.
+Gibt an, ob der Anzeigemodus geschachtelt ist.
 
 </dd> <dt>
 
@@ -272,15 +272,15 @@ Datentyp: **uint8**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt ggf. an, welcher Typ von Serration erforderlich ist.
+Gibt an, welcher Serrationstyp gegebenenfalls erforderlich ist.
 
 
 
 | Wert                                                                              | Bedeutung                                                                                                  |
 |------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| <dl> <dt>0 (0x0)</dt> </dl> | Der Controller muss während der vertikalen Synchronisierung eine horizontale Synchronisierung bereitstellen.<br/>                                 |
-| <dl> <dt>1 (0x1)</dt> </dl> | Der Controller darf während der vertikalen Synchronisierung keine horizontale Synchronisierung bereitstellen.<br/>                             |
-| <dl> <dt>2 (0x2)</dt> </dl> | Nicht zutreffend Der Signalsynchronisierungstyp muss "1", "Analog Composite" oder "Digital Composite" sein.<br/> |
+| <dl> <dt>0 (0x0)</dt> </dl> | Der Controller muss während der vertikalen Synchronisierung eine horizontale Synchronisierung gewährleisten.<br/>                                 |
+| <dl> <dt>1 (0x1)</dt> </dl> | Der Controller darf während der vertikalen Synchronisierung keine horizontale Synchronisierung gewährleisten.<br/>                             |
+| <dl> <dt>2 (0x2)</dt> </dl> | Nicht zutreffend Der Signalsynchronisierungstyp muss vom Typ "Automatisch", "Analog Composite" oder "Digital Composite" sein.<br/> |
 
 
 
@@ -297,14 +297,14 @@ Datentyp: **uint8**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt ggf. an, welche Videosignallinien synchronisiert werden sollen.
+Gibt an, welche Videosignallinien gegebenenfalls synchronisiert werden sollen.
 
 
 
 | Wert                                                                              | Bedeutung                                                                           |
 |------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| <dl> <dt>0 (0x0)</dt> </dl> | Der Synchronisierungsim pulse sollte auf allen drei Videosignallinien angezeigt werden.<br/>                  |
-| <dl> <dt>1 (0x1)</dt> </dl> | Der Synchronisierungsim pulse sollte nur auf der grünen Videosignallinie angezeigt werden.<br/>          |
+| <dl> <dt>0 (0x0)</dt> </dl> | Sync pulse should appear on all 3 video signal lines. (Der Synchronisierungsim pulse sollte in allen drei Videosignallinien angezeigt werden.)<br/>                  |
+| <dl> <dt>1 (0x1)</dt> </dl> | Sync pulse sollte nur in der grünen Videosignallinie angezeigt werden.<br/>          |
 | <dl> <dt>2 (0x2)</dt> </dl> | Nicht zutreffend Der Signalsynchronisierungstyp muss analog zusammengesetzt sein.<br/> |
 
 
@@ -527,7 +527,7 @@ Videostandardtyp.
 |--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>0 (0x0)</dt> </dl>   | Andere<br/>                                                                                               |
 | <dl> <dt>1 (0x1)</dt> </dl>   | VESA DMT. Aus der Spezifikation der Video Electronics Standard Association (VESA) Display Monitor Timings.<br/> |
-| <dl> <dt>2 (0x2)</dt> </dl>   | VESA GTF. Aus VESA Generalized Timing Formula Standard.<br/>                                            |
+| <dl> <dt>2 (0x2)</dt> </dl>   | VESA GTF. Von VESA Generalized Timing Formula standard.<br/>                                            |
 | <dl> <dt>3 (0x3)</dt> </dl>   | VESA CVT/Von VESA Coordinated Video Timings Standard.<br/>                                             |
 | <dl> <dt>4 (0x4)</dt> </dl>   | IBM<br/>                                                                                                 |
 | <dl> <dt>5 (0x5)</dt> </dl>   | Apple<br/>                                                                                               |
@@ -574,7 +574,7 @@ Videostandardtyp.
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

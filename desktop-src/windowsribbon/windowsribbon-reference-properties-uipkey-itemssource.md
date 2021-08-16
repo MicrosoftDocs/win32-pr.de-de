@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118201570"
 ---
-# <a name="ui_pkey_itemssource"></a>UI \_ PKEY \_ ItemsSource
+# <a name="ui_pkey_itemssource"></a>\_PKEY-Elemente der \_ BenutzeroberflächeQuelle
 
 Identifiziert die \_ PKEY \_ ItemsSource-Eigenschaft der Benutzeroberfläche.
 
@@ -27,17 +27,17 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Ui \_ PKEY \_ ItemsSource wird von einer Anwendung verwendet, um die Sammlung von Elementen in einem Katalogsteuerelement abzufragen, z. B. die Schnellzugriffssymbolleiste (Quick Access Toolbar, QAT).
+Ui PKEY ItemsSource wird von einer Anwendung verwendet, um die Sammlung von Elementen in einem Katalogsteuerelementen wie der Symbolleiste für den Schnellzugriff \_ \_ (QAT) abfragt.
 
 Der Eigenschaftswert ist ein [**IUICollection-Objekt.**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection)
 
-Jedes Element in dieser [**IUICollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) muss [**IUISimplePropertySet**](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) implementieren, um die schreibgeschützten Eigenschaften verfügbar zu machen, die dem Element zugeordnet sind, z. B. die Bezeichnung oder das Bild.
+Jedes Element in dieser [**IUICollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) muss [**IUISimplePropertySet**](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) implementieren, um die dem Element zugeordneten schreibgeschützten Eigenschaften verfügbar zu machen, z. B. die Bezeichnung oder das Bild.
 
-Verwenden Sie zum Hinzufügen oder Löschen von Elementen in einem Katalogsteuerelement zur Laufzeit die [**IUICollection-Methoden.**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection)
+Verwenden Sie zum Hinzufügen oder Löschen von Elementen in einem Katalogsteuerelementen zur Laufzeit [**die IUICollection-Methoden.**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection)
 
-Der folgende Screenshot veranschaulicht eine Auflistung von Elementen in einem [**SplitButtonGallery-Menü.**](windowsribbon-element-splitbuttongallery.md)
+Der folgende Screenshot veranschaulicht eine Sammlung von Elementen in einem [**SplitButtonGallery-Menü.**](windowsribbon-element-splitbuttongallery.md)
 
-![Screenshot: Kategorien in einem Menübandkatalog](images/markup/splitbutton-gallery-control.png)
+![Screenshot, der Kategorien in einem Menübandkatalog zeigt.](images/markup/splitbutton-gallery-control.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

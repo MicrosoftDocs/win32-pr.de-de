@@ -30,7 +30,7 @@ In diesem Thema werden die folgenden Abschnitte erläutert:
 <span id="Symptom"></span><span id="symptom"></span><span id="SYMPTOM"></span>Symptom
 </dt> <dd>
 
-Die Verbindung ist mit dem Fehler "DCOM-Zugriff verweigert" zusammen mit dem Dezimalwert -2147024891 oder hexadezimalen Wert0x80070005 fehlgeschlagen.
+Für Ihre Verbindung ist der Fehler "DCOM-Zugriff verweigert" zusammen mit dem Dezimalwert -2147024891 oder hexadezimalen Wert0x80070005 aufgetreten.
 
 </dd> <dt>
 
@@ -44,7 +44,7 @@ DCOM ist möglicherweise nicht so konfiguriert, dass eine WMI-Verbindung zuläss
 <span id="Resolution"></span><span id="resolution"></span><span id="RESOLUTION"></span>Auflösung
 </dt> <dd>
 
-Sie können DCOM-Einstellungen für WMI mithilfe des DCOM-Konfigurationsprogramms (**DCOMCnfg.exe**) konfigurieren, das sich unter **Verwaltung** **in** Systemsteuerung. Dieses Hilfsprogramm macht die Einstellungen verfügbar, die es bestimmten Benutzern ermöglichen, eine Remoteverbindung mit dem Computer über DCOM herzustellen. Mitglieder der Gruppe Administratoren dürfen standardmäßig eine Remoteverbindung mit dem Computer herstellen. Mit diesem Hilfsprogramm können Sie die Sicherheit so festlegen, dass der WMI-Dienst gestartet, darauf zugreifen und konfiguriert wird.
+Sie können DCOM-Einstellungen für WMI mithilfe des DCOM-Konfigurations-Hilfsprogramms (**DCOMCnfg.exe**) konfigurieren, das sich unter **Verwaltung** **in** Systemsteuerung. Dieses Hilfsprogramm macht die Einstellungen verfügbar, die es bestimmten Benutzern ermöglichen, eine Remoteverbindung mit dem Computer über DCOM herzustellen. Mitglieder der Gruppe Administratoren dürfen standardmäßig eine Remoteverbindung mit dem Computer herstellen. Mit diesem Hilfsprogramm können Sie die Sicherheit so festlegen, dass der WMI-Dienst gestartet, darauf zugreifen und konfiguriert wird.
 
 Weitere Informationen finden Sie unter [Sichern einer WMI-Remoteverbindung.](securing-a-remote-wmi-connection.md)
 
@@ -100,7 +100,7 @@ Aufgrund von Netzwerkverzögerungsproblemen kann der Computer einfach nicht zeit
 <span id="Resolution"></span><span id="resolution"></span><span id="RESOLUTION"></span>Auflösung
 </dt> <dd>
 
-Wenn Sie eine Verbindung mit WMI über einen Aufruf von [**SWbemLocator.ConnectServer**](swbemlocator-connectserver.md) oder [**IWbemLocator::ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver)herstellen, können Sie das **wbemConnectFlagUseMaxWait-Flag** (Skripterstellung) oder den **WBEM-FLAG \_ CONNECT USE MAX \_ \_ \_ \_ WAIT** in C++-Wert auf 128 (0x80) festlegen, um ein Time out von zwei (2) Minuten für den Aufruf zu erzwingen.
+Wenn Sie eine Verbindung mit WMI über einen Aufruf von [**SWbemLocator.ConnectServer**](swbemlocator-connectserver.md) oder [**IWbemLocator::ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver)herstellen, können Sie das **Flag wbemConnectFlagUseMaxWait** (Skripterstellung) oder das **WBEM-FLAG \_ CONNECT USE MAX \_ \_ \_ \_ WAIT** in C++ auf den Wert 128 (0x80) festlegen, um ein Time out von zwei (2) Minuten für den Aufruf zu erzwingen.
 
 </dd> </dl>
 
