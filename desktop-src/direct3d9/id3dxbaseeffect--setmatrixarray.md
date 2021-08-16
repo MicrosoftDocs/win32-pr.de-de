@@ -23,7 +23,7 @@ ms.locfileid: "118522017"
 ---
 # <a name="id3dxbaseeffectsetmatrixarray-method"></a>ID3DXBaseEffect::SetMatrixArray-Methode
 
-Legt ein Array von nicht übersetzten Matrizen fest.
+Legt ein Array von nicht transposierten Matrizen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ HRESULT SetMatrixArray(
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9).](handles.md)
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9)](handles.md).
 
 </dd> <dt>
 
@@ -56,7 +56,7 @@ Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9).](handles.md)
 
 Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Array von nicht übersetzten Matrizen. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
+Array von nicht transposed Matrizen. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
 
 </dd> <dt>
 
@@ -73,11 +73,11 @@ Anzahl der Matrizen im Array.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine nicht übersetzte Matrix enthält Zeilen-Hauptdaten. Das heißt, jeder Vektor ist in einer Zeile enthalten.
+Eine nicht transposed Matrix enthält Zeilen-Hauptdaten. Das heißt, jeder Vektor ist in einer Zeile enthalten.
 
 Wenn die Zielmatrizen kleiner als die Quellmatrizen sind, werden die zusätzlichen Komponenten der Quellmatrizen ignoriert.
 

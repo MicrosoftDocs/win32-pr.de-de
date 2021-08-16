@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: vistaapi. jedessnapshotend-Methode'
-title: Vistaapi. jedessnapshotend-Methode (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen zu: VistaApi.JetOSSnapshotEnd-Methode'
+title: VistaApi.JetOSSnapshotEnd-Methode (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'JetOSSnapshotEnd method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Vista.VistaApi.JetOSSnapshotEnd(Microsoft.Isam.Esent.Interop.JET_OSSNAPID,Microsoft.Isam.Esent.Interop.Vista.SnapshotEndGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistaapi.jetossnapshotend(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 291d83929940a9f66f4e16c5088e6ec08187f908
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f8aa385dbba241a631bc7bc29c5ca7905c4a609f6eb2231a984b4c0e9d1db8eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119106817"
 ---
-# <a name="vistaapijetossnapshotend-method"></a>Vistaapi. jedessnapshotend-Methode
+# <a name="vistaapijetossnapshotend-method"></a>VistaApi.JetOSSnapshotEnd-Methode
 
-Benachrichtigt die Engine, dass die Momentaufnahme Sitzung abgeschlossen wurde.
+Benachrichtigt die Engine, dass die Momentaufnahmesitzung abgeschlossen wurde.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,23 +62,23 @@ public static void JetOSSnapshotEnd(
 #### <a name="parameters"></a>Parameter
 
   - Momentaufnahme  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_OSSNAPID](./jet-ossnapid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_OSSNAPID](./jet-ossnapid-structure.md)  
     
-    Der Bezeichner der Momentaufnahme Sitzung.
+    Der Bezeichner der Momentaufnahmesitzung.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. Vista. snapshotendgrbit](./snapshotendgrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.Vista.SnapshotEndGrbit](./snapshotendgrbit-enumeration.md)  
     
-    Optionen für Momentaufnahme Ende.
+    Optionen für das Momentaufnahmeende.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistaapi-Klasse](./vistaapi-class.md)
+[VistaApi-Klasse](./vistaapi-class.md)
 
-[Vistaapi-Member](./vistaapi-members.md)
+[VistaApi-Member](./vistaapi-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

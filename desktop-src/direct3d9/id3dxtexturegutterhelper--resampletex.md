@@ -1,5 +1,5 @@
 ---
-description: Resamples für eine Textur in die Parametrisierung dieses Gutterhelpers.
+description: Resamples a texture into this gutterhelper es parametrisiert.
 ms.assetid: a5ace0e4-2e89-471b-bdfb-67d5e85c6f46
 title: ID3DXTextureGutterHelper::ResampleTex-Methode (D3DX9Mesh.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118800319"
 ---
 # <a name="id3dxtexturegutterhelperresampletex-method"></a>ID3DXTextureGutterHelper::ResampleTex-Methode
 
-Resamples für eine Textur in die Parametrisierung dieses Gutterhelpers.
+Resamples a texture into this gutterhelper es parametrisiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ HRESULT ResampleTex(
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)**
 
-Textur, die der ursprünglichen Parametrisierung in pMeshIn entspricht. Diese Textur wird zum Erstellen von pTextureOut verwendet.
+Textur, die der ursprünglichen Parametrisierung in pMeshIn entspricht. Diese Textur wird verwendet, um pTextureOut zu erstellen.
 
 </dd> <dt>
 
@@ -67,7 +67,7 @@ Mesh, das die ursprünglichen und neuen Parametrisierungen enthält. Die neue Pa
 
 Typ: **[ **D3DDECLUSAGE**](./d3ddeclusage.md)**
 
-Vertexdatenverwendung (in Kombination mit UsageIndex), die die Komponente der Scheitelpunktdeklaration identifiziert, die die ursprüngliche Parametrisierung in pMeshIn enthält. Siehe [**D3DDECLUSAGE**](./d3ddeclusage.md).
+Vertexdatenverwendung (in Kombination mit UsageIndex verwendet), die die Komponente der Scheitelpunktdeklaration identifiziert, die die ursprüngliche Parametrisierung in pMeshIn enthält. Siehe [**D3DDECLUSAGE**](./d3ddeclusage.md).
 
 </dd> <dt>
 
@@ -76,7 +76,7 @@ Vertexdatenverwendung (in Kombination mit UsageIndex), die die Komponente der Sc
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Nullbasierter Index (wird in Kombination mit Usage verwendet), der die Komponente der Scheitelpunktdeklaration identifiziert, die die ursprüngliche Parametrisierung in pMeshIn enthält. Die Kombination aus D3DDECLUSAGE TEXCOORD und Index 0 ist für die neue Parametrisierung erforderlich. Es kann jede andere Kombination aus Verwendung und \_ Index verwendet werden.
+Nullbasierter Index (wird in Kombination mit Usage verwendet), der die Komponente der Scheitelpunktdeklaration identifiziert, die die ursprüngliche Parametrisierung in pMeshIn enthält. Die Kombination aus D3DDECLUSAGE \_ TEXCOORD und Index 0 ist für die neue Parametrisierung erforderlich. Jede andere Kombination aus Verwendung und Index kann verwendet werden.
 
 </dd> <dt>
 
@@ -85,7 +85,7 @@ Nullbasierter Index (wird in Kombination mit Usage verwendet), der die Komponent
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)**
 
-Resampled-Textur.
+Neu ampelte Textur.
 
 </dd> </dl>
 
@@ -93,19 +93,19 @@ Resampled-Textur.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Parametrisierung im Fall dieser Funktion ist eine Reihe von Texturkoordinaten, die die Dreiecke eines Gitters den Dreiecken einer Textur zustellen. Bei der neuen Parametrisierung handelt es sich um den Satz von Texturkoordinaten, die in der Bundsten-Hilfsschnittstelle enthalten sind, und die ursprüngliche Parametrisierung ist der Satz von Texturkoordinaten, die im Eingabegitternetz enthalten sind.
+Eine Parametrisierung im Fall dieser Funktion ist eine Reihe von Texturkoordinaten, die die Dreiecke eines Gitternetzes den Dreiecken auf einer Textur ordnen. Die neue Parametrisierung ist der Satz von Texturkoordinaten, die in der Schnittstelle des Bundsteghilfs enthalten sind, und die ursprüngliche Parametrisierung ist der Satz von Texturkoordinaten, die im Eingabegitternetz enthalten sind.
 
-Es wird davon ausgegangen, dass Texturkoordinaten zwischen 0 und 1 (einschließlich) liegen, und die neue Parametrisierung muss in der Scheitelpunktdeklaration als Texturkoordinatenindex 0 deklariert werden. Die ursprüngliche Textur und die Neusampledertextur müssen die gleiche Breite und Höhe aufweisen.
+Es wird davon ausgegangen, dass Texturkoordinaten zwischen 0 und 1 liegen, einschließlich, und die neue Parametrisierung muss in der Scheitelpunktdeklaration als Texturkoordinatenindex 0 deklariert werden. Die ursprüngliche Textur und die resampled-Textur müssen die gleiche Breite und Höhe aufweisen.
 
-So bereiten Sie beispielsweise das Resampling einer Textur vor:
+So bereiten Sie sich beispielsweise auf das Resampling einer Textur vor:
 
--   Erstellen Sie die ursprüngliche Texturschnittstelle (pOriginalTex unten) mithilfe einer Funktion wie [**D3DXCreateTextureFromFile.**](d3dxcreatetexturefromfile.md)
--   Erstellen Sie die neue Texturschnittstelle für die Neusampledtextur (pResampledTex unten). Die Größe dieser Textur muss mit der Größe (Breite und Höhe) der Textur des Bundster-Hilfsers übereinstimmen.
--   Rufen [**Sie D3DXCreateTextureGutterHelper auf,**](d3dxcreatetexturegutterhelper.md) um die neue Parametrisierung wie hier gezeigt zu erhalten:
+-   Erstellen Sie die ursprüngliche Texturschnittstelle (unten pOriginalTex) mithilfe einer Funktion wie [**D3DXCreateTextureFromFile.**](d3dxcreatetexturefromfile.md)
+-   Erstellen Sie die neue Texturschnittstelle für die resampled-Textur (unten pResampledTex). Die Größe dieser Textur muss mit der Größe (Breite und Höhe) der Bundsteghilfstextur übereinstimmen.
+-   Rufen Sie [**D3DXCreateTextureGutterHelper**](d3dxcreatetexturegutterhelper.md) auf, um die neue Parametrisierung wie hier gezeigt abzurufen:
 
 
 ```
@@ -136,7 +136,7 @@ hr = pGutterHelper->ResampleTex(pOriginalTex, pMesh, D3DDECLUSAGE_TEXCOORD,
 
 
 
-Ein häufiges Szenario ist die Verwendung von UVAtlas zum Erstellen eines Texturatlas und anschließendes Verwenden von ResampleTex, um die Textur in die neue Parametrisierung neu zu sampeln. Weitere Informationen zu Atlass finden Sie unter [Verwenden von UVAtlas (Direct3D 9).](using-uvatlas.md)
+Ein häufiges Szenario kann die Verwendung von UVAtlas sein, um einen Texturat atlas zu erstellen, und dann ResampleTex verwenden, um die Textur erneut in die neue Parametrisierung zu integrieren. Weitere Informationen zu Atlases finden Sie unter [Verwenden von UVAtlas (Direct3D 9).](using-uvatlas.md)
 
 ## <a name="requirements"></a>Anforderungen
 

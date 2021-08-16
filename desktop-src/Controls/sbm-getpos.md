@@ -1,9 +1,9 @@
 ---
-title: SBM_GETPOS Meldung (Winuser.h)
-description: Die SBM \_ GETPOS-Nachricht wird gesendet, um die aktuelle Position des Bildlauffelds eines Bildlaufleisten-Steuerelements abzurufen.
+title: SBM_GETPOS (Winuser.h)
+description: Die SBM GETPOS-Nachricht wird gesendet, um die aktuelle Position des Bildlauffelds \_ eines Bildlaufleisten-Steuerelements abzurufen.
 ms.assetid: 00344d93-f205-4cda-aa25-6dd065f41b6e
 keywords:
-- SBM_GETPOS Windows-Steuerelemente für Nachrichten
+- SBM_GETPOS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -23,9 +23,9 @@ ms.locfileid: "118408893"
 ---
 # <a name="sbm_getpos-message"></a>SBM \_ GETPOS-Nachricht
 
-Die **SBM \_ GETPOS-Nachricht** wird gesendet, um die aktuelle Position des Bildlauffelds eines Bildlaufleisten-Steuerelements abzurufen. Die aktuelle Position ist ein relativer Wert, der vom aktuellen Bildlaufbereich abhängt. Wenn der Bildlaufbereich beispielsweise 0 bis 100 beträgt und sich das Bildlauffeld in der Mitte der Leiste befindet, ist die aktuelle Position 50.
+Die **SBM \_ GETPOS-Nachricht** wird gesendet, um die aktuelle Position des Bildlauffelds eines Bildlaufleisten-Steuerelements abzurufen. Die aktuelle Position ist ein relativer Wert, der vom aktuellen Bildlaufbereich abhängt. Wenn der Bildlaufbereich beispielsweise zwischen 0 und 100 liegt und sich das Bildlauffeld in der Mitte der Leiste befindet, ist die aktuelle Position 50.
 
-Anwendungen sollten diese Nachricht nicht direkt senden. Stattdessen sollten sie die [**GetScrollPos-Funktion**](/windows/desktop/api/Winuser/nf-winuser-getscrollpos) verwenden. Ein Fenster empfängt diese Meldung über seine [*WindowProc-Funktion.*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) Anwendungen, die ein benutzerdefiniertes Scrollleisten-Steuerelement implementieren, müssen auf diese Meldungen reagieren, damit die **GetScrollPos-Funktion** ordnungsgemäß funktioniert.
+Anwendungen sollten diese Nachricht nicht direkt senden. Stattdessen sollten sie die [**GetScrollPos-Funktion**](/windows/desktop/api/Winuser/nf-winuser-getscrollpos) verwenden. Ein Fenster empfängt diese Nachricht über seine [*WindowProc-Funktion.*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) Anwendungen, die ein benutzerdefiniertes Scrollleisten-Steuerelement implementieren, müssen auf diese Meldungen reagieren, damit die **GetScrollPos-Funktion** ordnungsgemäß funktioniert.
 
 ## <a name="parameters"></a>Parameter
 
@@ -55,7 +55,7 @@ Der Rückgabewert ist die aktuelle Position des Bildlauffelds in der Scrollleist
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
 | Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 

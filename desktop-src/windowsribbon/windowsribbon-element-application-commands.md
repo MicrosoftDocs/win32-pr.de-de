@@ -1,9 +1,9 @@
 ---
-title: Application. Commands-Eigenschaft
+title: Application.Commands-Eigenschaft
 description: Stellt einen Container für alle Befehle dar, die von der Anwendung definiert werden.
 ms.assetid: 160d7d28-2d64-4cbc-b2b9-2da6b2f5b3c8
 keywords:
-- Application. Commands-Eigenschaft, Windows-Menüband
+- Application.Commands-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,14 +12,14 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8de2b88b97dda96636a9c5da3ad078f678091d8d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6c23d7b30b45a6023c547904adbcaaacb13b8777f9047133cd8d617a1a58c32d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964319"
 ---
-# <a name="applicationcommands-property"></a>Application. Commands-Eigenschaft
+# <a name="applicationcommands-property"></a>Application.Commands-Eigenschaft
 
 Stellt einen Container für alle Befehle dar, die von der Anwendung definiert werden.
 
@@ -41,7 +41,7 @@ Es gibt keine Attribute.
 
 | Element                                                     | BESCHREIBUNG                                        |
 |-------------------------------------------------------------|----------------------------------------------------|
-| [**S**](windowsribbon-element-command.md)<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**Befehl**](windowsribbon-element-command.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -51,19 +51,19 @@ Es gibt keine Attribute.
 
 | Element                                                             |
 |---------------------------------------------------------------------|
-| [**Application**](windowsribbon-element-application.md)<br/> |
+| [**Anwendung**](windowsribbon-element-application.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jedes [**Anwendungs**](windowsribbon-element-application.md) Element auftreten.
+Kann für jedes [**Application-Element mindestens einmal**](windowsribbon-element-application.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt ein **Application. Commands** -Element, das ein Manifest von Zwischenablage Befehlen enthält.
+Das folgende Beispiel zeigt ein **Application.Commands-Element,** das ein Manifest von Zwischenablagebefehlen enthält.
 
 
 ```C++
@@ -151,16 +151,16 @@ Das folgende Beispiel zeigt ein **Application. Commands** -Element, das ein Mani
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Application. views**](windowsribbon-element-application-views.md)
+[**Application.Views**](windowsribbon-element-application-views.md)
 </dt> </dl>
 
  

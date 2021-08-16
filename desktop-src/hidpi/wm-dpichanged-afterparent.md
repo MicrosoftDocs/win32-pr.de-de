@@ -1,9 +1,9 @@
 ---
-title: WM_DPICHANGED_AFTERPARENT-Nachricht (Winuser.h)
-description: Bei Fenstern der obersten Ebene pro Monitor v2 wird diese Meldung an alle HWNDs in der untergeordneten HWDN-Struktur des Fensters gesendet, für das eine DPI-Änderung erfolgt. | WM_DPICHANGED_AFTERPARENT-Nachricht (Winuser.h)
+title: WM_DPICHANGED_AFTERPARENT Meldung (Winuser.h)
+description: Bei Fenstern der obersten Ebene pro Monitor v2 wird diese Meldung an alle HWNDs in der untergeordneten HWDN-Struktur des Fensters gesendet, für das eine DPI-Änderung erfolgt. | WM_DPICHANGED_AFTERPARENT Meldung (Winuser.h)
 ms.assetid: FEA1BF07-55B6-4584-ABD3-340515831E0A
 keywords:
-- 'WM_DPICHANGED_AFTERPARENT Meldung : Hoher DPI-Anteil'
+- WM_DPICHANGED_AFTERPARENT Meldung Hoher DPI-Anteil
 topic_type:
 - apiref
 api_name:

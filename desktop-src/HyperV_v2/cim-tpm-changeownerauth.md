@@ -50,7 +50,7 @@ Stellt die alten Anmeldeinformationen für die Besitzerautorisierung dar, die er
 *NewOwnerAuth* \[ In\]
 </dt> <dd>
 
-Stellt die neuen Anmeldeinformationen für die Besitzerautorisierung dar, die erforderlich sind, um den Besitz des TPM-Geräts zu übernehmen. Die **CIM \_ SharedCredential-Unterklasse** ist möglicherweise mit einem Wert von nicht NULL des **CIM \_ SharedCredential-Werts erforderlich.****Secret-Eigenschaft** für den Parameter.
+Stellt die neuen Anmeldeinformationen für die Besitzerautorisierung dar, die erforderlich sind, um den Besitz des TPM-Geräts zu übernehmen. Die **CIM \_ SharedCredential-Unterklasse** ist möglicherweise mit einem Wert von nicht NULL des **CIM \_ SharedCredential-Werts erforderlich.****Secret-Eigenschaft** für den -Parameter.
 
 </dd> </dl>
 
@@ -92,7 +92,7 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

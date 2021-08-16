@@ -1,5 +1,5 @@
 ---
-description: Durch Festlegen der DISABLEMEDIA-Eigenschaft wird verhindert, dass das Installationsprogramm eine Beliebige Medienquelle, z. B. eine CD-ROM, als gültige Quelle für das Produkt registriert. Wenn das Durchsuchen aktiviert ist, kann ein Benutzer jedoch weiterhin zu einer Medienquelle navigieren.
+description: Durch Festlegen der DISABLEMEDIA-Eigenschaft wird verhindert, dass das Installationsprogramm Medienquellen wie cd-ROM als gültige Quelle für das Produkt registriert. Wenn das Durchsuchen aktiviert ist, kann ein Benutzer jedoch weiterhin zu einer Medienquelle navigieren.
 ms.assetid: 83c4e7f6-fced-447f-bfa2-847dce660139
 title: DISABLEMEDIA-Eigenschaft
 ms.topic: reference
@@ -13,13 +13,13 @@ ms.locfileid: "118640455"
 ---
 # <a name="disablemedia-property"></a>DISABLEMEDIA-Eigenschaft
 
-Durch Festlegen [**der DISABLEMEDIA-Eigenschaft**](disablemedia.md) wird verhindert, dass das Installationsprogramm eine Beliebige Medienquelle, z. B. eine CD-ROM, als gültige Quelle für das Produkt registriert. Wenn das Durchsuchen aktiviert ist, kann ein Benutzer jedoch weiterhin zu einer Medienquelle navigieren.
+Durch Festlegen der [**DISABLEMEDIA-Eigenschaft**](disablemedia.md) wird verhindert, dass das Installationsprogramm Medienquellen wie cd-ROM als gültige Quelle für das Produkt registriert. Wenn das Durchsuchen aktiviert ist, kann ein Benutzer jedoch weiterhin zu einer Medienquelle navigieren.
 
 ## <a name="remarks"></a>Hinweise
 
-Beachten Sie, [**dass die DISABLEMEDIA-Eigenschaft**](disablemedia.md) eine andere Auswirkung als das Festlegen der DisableMedia-Richtlinie hat. Durch **das Festlegen von DISABLEMEDIA** wird die Registrierung von Medienquellen verhindert, und dies verhindert auch die erstmalige Installation einer Anwendung aus einer Medienquelle.
+Beachten Sie, dass die [**DISABLEMEDIA-Eigenschaft**](disablemedia.md) eine andere Auswirkung als das Festlegen der DisableMedia-Richtlinie hat. Durch festlegen von **DISABLEMEDIA** wird die Registrierung von Medienquellen verhindert, und dies verhindert auch die erstmalige Installation einer Anwendung aus einer Medienquelle.
 
-Weitere Informationen zum Schützen der [](m-gly.md) Medienquellen verwalteter Anwendungen vor dem Durchsuchen und Installieren durch Nicht-Administratorbenutzer finden Sie unter [Quellresilienz](source-resiliency.md).
+Ausführliche Informationen zum Schützen der Medienquellen einer [*verwalteten Anwendung*](m-gly.md) vor dem Durchsuchen und Installieren durch Benutzer ohne Administratorrechte finden Sie unter [Quellresilienz.](source-resiliency.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -27,7 +27,7 @@ Weitere Informationen zum Schützen der [](m-gly.md) Medienquellen verwalteter A
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zu den mindestens erforderlichen Windows Service Packs, die für eine Windows Installer-Version erforderlich sind, finden Sie unter Run-Time [Anforderungen](windows-installer-portal.md) für Windows Installer.<br/> |
 
 
 

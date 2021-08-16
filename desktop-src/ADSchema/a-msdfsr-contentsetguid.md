@@ -1,11 +1,11 @@
 ---
 title: ms-DFSR-ContentSetGuid-Attribut
-description: Enthält die VERTEILTES DATEISYSTEM(DFS)-Replikationsinhaltssatz-GUID.
+description: Enthält die GUID des verteiltes Dateisystem (DFS)-Replikationsinhaltssatzes.
 ms.assetid: 69b2a293-f80e-4af5-b06c-27d373994318
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ms-DFSR-ContentSetGuid-Attributs
-- AD-Schema des msDFSR-ContentSetGuid-Attributs
+- MS-DFSR-ContentSetGuid-Attribut-AD-Schema
+- msDFSR-ContentSetGuid-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118685964"
 ---
 # <a name="ms-dfsr-contentsetguid-attribute"></a>ms-DFSR-ContentSetGuid-Attribut
 
-Enthält die VERTEILTES DATEISYSTEM(DFS)-Replikationsinhaltssatz-GUID.
+Enthält die GUID des verteiltes Dateisystem (DFS)-Replikationsinhaltssatzes.
 
 
 
@@ -35,7 +35,7 @@ Enthält die VERTEILTES DATEISYSTEM(DFS)-Replikationsinhaltssatz-GUID.
 | Aktualisieren von Berechtigungen  | \-                                                    |
 | Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.18                            |
-| System-Id-Guid    | 1035a8e1-67a8-4c21-b7bb-031cdf99d7a0                  |
+| System-ID-GUID    | 1035a8e1-67a8-4c21-b7bb-031cdf99d7a0                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -56,7 +56,7 @@ Enthält die VERTEILTES DATEISYSTEM(DFS)-Replikationsinhaltssatz-GUID.
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | Falsch                                                            |
-| Is-Single-Valued       | Richtig                                                             |
+| Ist einwertig       | Richtig                                                             |
 | Ist indiziert             | Falsch                                                            |
 | Im globalen Katalog      | Falsch                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
@@ -77,7 +77,7 @@ Enthält die VERTEILTES DATEISYSTEM(DFS)-Replikationsinhaltssatz-GUID.
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | Falsch                                                            |
-| Is-Single-Valued       | Richtig                                                             |
+| Ist einwertig       | Richtig                                                             |
 | Ist indiziert             | Falsch                                                            |
 | Im globalen Katalog      | Falsch                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
@@ -98,7 +98,7 @@ Enthält die VERTEILTES DATEISYSTEM(DFS)-Replikationsinhaltssatz-GUID.
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | Falsch                                                            |
-| Is-Single-Valued       | Richtig                                                             |
+| Ist einwertig       | Richtig                                                             |
 | Ist indiziert             | Falsch                                                            |
 | Im globalen Katalog      | Falsch                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
@@ -119,7 +119,7 @@ Enthält die VERTEILTES DATEISYSTEM(DFS)-Replikationsinhaltssatz-GUID.
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | Falsch                                                            |
-| Is-Single-Valued       | Richtig                                                             |
+| Ist einwertig       | Richtig                                                             |
 | Ist indiziert             | Falsch                                                            |
 | Im globalen Katalog      | Falsch                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
@@ -133,7 +133,7 @@ Enthält die VERTEILTES DATEISYSTEM(DFS)-Replikationsinhaltssatz-GUID.
 
 ## <a name="remarks"></a>Hinweise
 
-Das **ms-DFSR-ContentSetGuid-Attribut** ist Teil der DFS-Replikation Dienstunterstützung.
+Das **Attribut ms-DFSR-ContentSetGuid** ist Teil der DFS-Replikation Dienstunterstützung.
 
  
 

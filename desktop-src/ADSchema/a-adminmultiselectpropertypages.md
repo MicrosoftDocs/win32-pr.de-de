@@ -120,7 +120,7 @@ Dies ist ein mehrwertiges Attribut, dessen Werte eine Zahl sind, die die Reihenf
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | Falsch                                                      |
-| Ist einwertig       | Falsch                                                      |
+| Is-Single-Valued       | Falsch                                                      |
 | Ist indiziert             | Falsch                                                      |
 | Im globalen Katalog      | Falsch                                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                               |
@@ -141,7 +141,7 @@ Dies ist ein mehrwertiges Attribut, dessen Werte eine Zahl sind, die die Reihenf
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | Falsch                                                      |
-| Ist einwertig       | Falsch                                                      |
+| Is-Single-Valued       | Falsch                                                      |
 | Ist indiziert             | Falsch                                                      |
 | Im globalen Katalog      | Falsch                                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                               |

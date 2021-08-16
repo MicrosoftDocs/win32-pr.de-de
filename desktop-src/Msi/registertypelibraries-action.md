@@ -17,7 +17,7 @@ Die Aktion RegisterTypeLibraries registriert Typbibliotheken beim System. Diese 
 
 ## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die Aktion RegisterTypeLibraries muss nach der [Aktion InstallFiles angegeben](installfiles-action.md) werden.
+Die Aktion RegisterTypeLibraries muss nach der [InstallFiles-Aktion angegeben](installfiles-action.md) werden.
 
 ## <a name="actiondata-messages"></a>ActionData-Meldungen
 

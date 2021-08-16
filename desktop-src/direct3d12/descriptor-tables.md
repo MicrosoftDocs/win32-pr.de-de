@@ -20,7 +20,7 @@ Eine Deskriptortabelle ist logisch ein Array von Deskriptoren.
 
 
 
-| Thema                                                                                 | Beschreibung                                                                                                                                                                                                             |
+| Thema                                                                                 | BESCHREIBUNG                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Übersicht über Deskriptortabellen](descriptor-tables-overview.md)<br/>               | In jeder Deskriptortabelle werden Deskriptoren eines oder mehrere Typen gespeichert: SRVs, UAVs, CBVs und Sampler. Eine Deskriptortabelle ist keine Speicherzuweisung. es handelt sich lediglich um einen Offset und eine Länge in einem Deskriptorhap.<br/> |
 | [Verwenden von Deskriptortabellen](using-descriptor-tables.md)<br/>                     | Deskriptortabellen, die jeweils einen Bereich in einem Deskriptorhap identifizieren, werden an Slots gebunden, die von der aktuellen Stammsignatur in einer Befehlsliste definiert werden. <br/>                                                               |

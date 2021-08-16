@@ -1,67 +1,67 @@
 ---
-description: Der Hersteller Wrapper dient dazu, die COM-Schnittstellen auf niedriger Ebene (die von den Smartcardherstellern bereitgestellt werden) für eine bestimmte Smartcard zu kapseln und zu verwenden. Diese Schnittstellen werden nicht von Microsoft bereitgestellt.
+description: Der Zweck des Anbieterwrappers besteht darin, die (von den Smartcardherstellern bereitgestellten) COM-Schnittstellen auf niedriger Ebene für eine bestimmte Smartcard zu kapseln und zu verwenden. Diese Schnittstellen werden nicht von Microsoft bereitgestellt.
 ms.assetid: 7bc26f7b-c355-448a-9f23-4ccfffea2fef
-title: Anbieter-Wrapper Dienstanbieter
+title: Anbieterwrapper-Dienstanbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 37b7d22fea8e450111e1611f2ec069697c229a32
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aeec4a8a5125e8fe19201a6c810eb87705eb7b5614b49fb455e8a96af63c8d26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128905"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117785844"
 ---
-# <a name="vendor-wrapper-service-provider"></a>Anbieter-Wrapper Dienstanbieter
+# <a name="vendor-wrapper-service-provider"></a>Anbieterwrapper-Dienstanbieter
 
-Der Hersteller Wrapper dient dazu, die COM-Schnittstellen auf niedriger Ebene (die von den Smartcardherstellern bereitgestellt werden) für eine bestimmte Smartcard zu kapseln und zu verwenden. Diese Schnittstellen werden nicht von Microsoft bereitgestellt.
+Der Zweck des Anbieterwrappers besteht darin, die (von den Smartcardherstellern bereitgestellten) COM-Schnittstellen auf niedriger Ebene für eine bestimmte Smartcard zu kapseln und zu verwenden. Diese Schnittstellen werden nicht von Microsoft bereitgestellt.
 
-![Hersteller Wrapper](images/scspart1.png)
+![Anbieterwrapper](images/scspart1.png)
 
-Wie in Teil 6 der *Interoperabilitäts Spezifikation für ICCS und Personal Computer Systeme* (siehe Spezifikationen unter [https://www.pcscworkgroup.com/](https://www.pcscworkgroup.com/) ) beschrieben, ist die Funktionalität, die von diesem Wrapper verfügbar gemacht wird, einfacher zu verwenden als die Funktionalität von vier separaten Dienstanbietern. Die Wrapper Funktion kann in vier Hauptbereiche unterteilt werden:
+Wie in Teil 6 der *Interoperabilitätsspezifikation für ICCs und Pc-Systeme* (siehe Spezifikationen unter ) beschrieben, [https://www.pcscworkgroup.com/](https://www.pcscworkgroup.com/) ist die von diesem Wrapper verfügbar gemachte Funktionalität einfacher zu verwenden als die Funktionalität von vier separaten Dienstanbietern. Die Funktionalität des Wrappers kann in vier Hauptbereiche unterteilt werden:
 
--   Dienste für die Smartcard-Authentifizierung, z. b. Get Challenge und Card Authentication.
--   Zugriff auf smartcarddateien oder Dateisystem Dienste, z. b. öffnen, schließen, lesen und schreiben.
--   Smartcardverwaltung, z. b. Anfügen und trennen.
--   Smartcard-Überprüfungs Dienste, z. b. überprüfen und Ändern von Code.
+-   Smartcard-Authentifizierungsdienste, z. B. Abrufen der Abfrage und Kartenauthentifizierung.
+-   Smartcard-Dateizugriff oder Dateisystemdienste wie Öffnen, Schließen, Lesen und Schreiben.
+-   Smartcardverwaltung, z. B. Anfügen und Trennen.
+-   Smartcard-Überprüfungsdienste, z. B. Überprüfen und Ändern des Codes.
 
 > [!Note]  
-> Diese Spezifikation ist möglicherweise in einigen Sprachen und Ländern oder Regionen nicht verfügbar.
+> Diese Spezifikation ist in einigen Sprachen und Ländern oder Regionen möglicherweise nicht verfügbar.
 
  
 
-Die Funktionalität ist spezifisch für den Typ der verwendeten Karte (die von der Karte unterstützten Funktionen, Protokolle usw.) und unterscheidet sich für jede Karte.
+Die Funktionalität ist spezifisch für den Typ der verwendeten Karte (welche Funktionen die Karte unterstützt, Protokolle usw.) und unterscheidet sich für jede Karte.
 
-Der Wrapper für den Microsoft scardcom-Beispiel verwendet die ATL-COM-Bibliothek, um einen einfachen Wrapper zu implementieren und eine Vorlage für andere Wrapper anzulegen. Die folgenden Schnittstellen werden implementiert.
+Der Microsoft SCardCOM-Beispielwrapper verwendet die ATL-COM-Bibliothek, um einen einfachen Wrapper zu implementieren und eine Vorlage für andere Wrapper zu erstellen. Es implementiert die folgenden Schnittstellen.
 
 
 
-| Schnittstelle oder Objekt                                     | BESCHREIBUNG                         |
+| Schnittstelle oder Objekt                                     | Beschreibung                         |
 |---------------------------------------------------------|-------------------------------------|
-| [**Iscardauth**](iscardauth.md)<br/>             | Authentifizierungsdienste.<br/> |
-| [**Iscardfileaccess**](iscardfileaccess.md)<br/> | Dateisystem Dienste.<br/>    |
-| [**Iscardmanage**](iscardmanage.md)<br/>         | Verwaltungsdienste.<br/>     |
-| [**Iscardverify**](iscardverify.md)<br/>         | Überprüfungs Dienste.<br/>   |
+| [**ISCardAuth**](iscardauth.md)<br/>             | Authentifizierungsdienste.<br/> |
+| [**ISCardFileAccess**](iscardfileaccess.md)<br/> | Dateisystemdienste.<br/>    |
+| [**ISCardManage**](iscardmanage.md)<br/>         | Verwaltungsdienste.<br/>     |
+| [**ISCardVerify**](iscardverify.md)<br/>         | Überprüfungsdienste.<br/>   |
 
 
 
  
 
 > [!Note]  
-> Das Beispiel "scardcom" wird nur als Beispiel für das Implementieren der Wrapper Schnittstellen bereitgestellt. Um einen DLL-namens Konflikt mit anderen Anbietern zu vermeiden, dürfen Sie SCardCOM.dll nicht als Namen von DLLs verwenden, die Sie erstellen.
+> Das SCardCOM-Beispiel wird nur als Beispiel für die Implementierung der Wrapperschnittstellen bereitgestellt. Um DLL-Namenskonflikte mit anderen Anbietern zu vermeiden, dürfen Sie SCardCOM.dll nicht als Namen von DLLs verwenden, die Sie erstellen.
 
  
 
-Im folgenden finden Sie eine typische Verwendung des Hersteller Wrappers. In diesem Beispiel wird die [**iscardmanage**](iscardmanage.md) -Schnittstelle verwendet, um Instanzen der Schnittstellen zu erstellen, die in den Dienstanbieter und die [**iscardverify**](iscardverify.md) -Schnittstelle integriert werden, um Ihren Vorgang zu überprüfen.
+Es folgt eine typische Verwendung des Anbieterwrappers. In diesem Beispiel wird die [**ISCardManage-Schnittstelle**](iscardmanage.md) verwendet, um Instanzen der Schnittstellen zu erstellen, die vom Dienstanbieter umschlossen werden, und die [**ISCardVerify-Schnittstelle,**](iscardverify.md) um deren Betrieb zu überprüfen.
 
-**So erstellen Sie einen Wrapper Dienstanbieter**
+**So erstellen Sie einen Wrapper-Dienstanbieter**
 
-1.  Erstellen Sie eine Instanz der [**iscardmanage**](iscardmanage.md) -Schnittstelle. Verwenden Sie diese Schnittstelle, um eine Instanz der erforderlichen Schnittstellen (z. b. [**iscardfileaccess**](iscardfileaccess.md) oder [**iscardverify**](iscardverify.md)) zu erstellen. Wenn diese Schnittstellen erstellt werden, werden auch alle entsprechenden COM-Schnittstellen auf niedriger Ebene erstellt.
-2.  Fügen Sie eine Karte mithilfe der entsprechenden [**iscardmanage**](iscardmanage.md) -Methode an/Stellen Sie eine Verbindung her.
-3.  Führen Sie erforderliche Vorgänge über die entsprechende [**iscardverify**](iscardverify.md) -Methode aus (die möglicherweise mehrere COM-Schnittstellen auf niedriger Ebene aufruft, und Methoden zum Abschluss).
+1.  Erstellen Sie eine Instanz der [**ISCardManage-Schnittstelle.**](iscardmanage.md) Verwenden Sie diese Schnittstelle, um eine Instanz der erforderlichen Schnittstellen zu erstellen (z. B. [**ISCardFileAccess**](iscardfileaccess.md) oder [**ISCardVerify**](iscardverify.md)). Beim Erstellen dieser Schnittstellen werden auch alle entsprechenden COM-Schnittstellen auf niedriger Ebene erstellt.
+2.  Anfügen/Herstellen einer Verbindung mit einer Karte über die entsprechende [**ISCardManage-Methode.**](iscardmanage.md)
+3.  Führen Sie erforderliche Vorgänge über die entsprechende [**ISCardVerify-Methode**](iscardverify.md) aus (die möglicherweise mehrere COM-Schnittstellen und -Methoden auf niedriger Ebene aufruft, um sie abzuschließen).
 4.  Wiederholen Sie dies für andere Vorgänge.
 5.  Release nach Abschluss des Vorgangs.
 
-Der Name und der Schnittstellen Bezeichner (GUID) der COM-Schnittstelle dürfen sich nicht von den im Code-oder Beispiel Wrapper verwendeten Änderungen unterscheiden. Allerdings muss die Klassen-GUID (d. h., in der sich eine tatsächliche Implementierung einer Schnittstelle befindet) von den verwendeten geändert werden. Dies ist besonders wichtig, wenn ein Hersteller Wrapper implementiert wird. Ein Beispiel wäre die Verwendung mehrerer Hersteller-Wrapper auf einem bestimmten Computer. Diese Wrapper sollten die gleichen com-Schnittstellen implementieren, verwenden jedoch immer verschiedene Implementierungs Strategien. Daher sind verschiedene Klassen (und Klassen-IDs) erforderlich.
+Der Name der COM-Schnittstelle und der Schnittstellenbezeichner (GUID) dürfen sich nicht von denen ändern, die im Code oder Beispielwrapper verwendet werden. Die Klassen-GUID (d. h., in der sich eine tatsächliche Implementierung einer Schnittstelle befindet) muss jedoch von der verwendeten geändert werden. Dies ist besonders wichtig bei der Implementierung eines Anbieterwrappers. Ein Beispiel wäre die Verwendung mehrerer Anbieterwrapper auf einem bestimmten Computer. Diese Wrapper sollten die gleichen COM-Schnittstellen implementieren, verwenden jedoch immer unterschiedliche Implementierungsstrategien. Daher sind verschiedene Klassen (und Klassen-IDs) erforderlich.
 
  
 

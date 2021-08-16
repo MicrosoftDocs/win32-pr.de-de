@@ -1,7 +1,7 @@
 ---
-description: Enthält die Beschreibung einer Drahtlos-LAN-Richtlinie.
+description: Enthält die Beschreibung einer WLAN-Richtlinie.
 ms.assetid: eaee5ff7-cef3-4bd2-bd60-2713d25894f5
-title: Description-Element (wlanpolicy)
+title: description (WLANPolicy)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 5bcc38ca0d89430c03cf254892a54b80cb2a2eb4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 53526f57956ecaca65712b2abffacbba71ad049857b6a0fbddb9502cfdb05ff7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347736"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119064770"
 ---
-# <a name="description-wlanpolicy-element"></a>Description-Element (wlanpolicy)
+# <a name="description-wlanpolicy-element"></a>description (WLANPolicy)-Element
 
-Das Description-Element (wlanpolicy) enthält die Beschreibung einer Drahtlos-LAN-Richtlinie.
+Das Element description (WLANPolicy) enthält die Beschreibung einer WLAN-Richtlinie.
 
 ``` syntax
 <xs:element name="description"
@@ -29,7 +29,7 @@ Das Description-Element (wlanpolicy) enthält die Beschreibung einer Drahtlos-LA
  />
 ```
 
-Das **Description** -Element wird durch das [**wlanpolicy**](wlan-policyschema-wlanpolicy-element.md) -Element definiert.
+Das **description-Element** wird durch das [**WLANPolicy-Element**](wlan-policyschema-wlanpolicy-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,25 +37,25 @@ Das **Description** -Element wird durch das [**wlanpolicy**](wlan-policyschema-w
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Wlanpolicy**](wlan-policyschema-wlanpolicy-element.md)
+[**WLANPolicy**](wlan-policyschema-wlanpolicy-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Wlanpolicy**](wlan-policyschema-wlanpolicy-element.md)
+[**WLANPolicy**](wlan-policyschema-wlanpolicy-element.md)
 </dt> </dl>
 
  

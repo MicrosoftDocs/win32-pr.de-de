@@ -50,7 +50,7 @@ Im folgenden Verfahren wird beschrieben, wie Sie einen asynchronen Aufruf mit VB
 
     
 
-2.  Erstellen Sie die Objektsenke entweder mit [CreateObject](/previous-versions//xzysf6hc(v=vs.85)) oder (nur für Windows Script Host 2.0) das OBJECT-Tag mit einem ereignisattribut, das auf **TRUE festgelegt ist.**
+2.  Erstellen Sie die Objektsenke entweder mit [CreateObject](/previous-versions//xzysf6hc(v=vs.85)) oder (nur für Windows Script Host 2.0) mit dem OBJECT-Tag, bei dem ein Ereignisattribut auf **TRUE festgelegt ist.**
 
     ```VB
     Set sink = WScript.CreateObject("WbemScripting.SWbemSink","SINK_")
@@ -96,7 +96,7 @@ Im folgenden Verfahren wird beschrieben, wie Sie einen asynchronen Aufruf mit VB
 
     
 
-5.  Nehmen Sie einen Aufruf vor, der verhindert, dass das Skript beendet wird, bevor alle Ereignisse empfangen werden. Wenn Ihr Skript mit einer Bildschirmschnittstelle ausgeführt werden kann, besteht eine einfache Möglichkeit in der Verwendung eines WSH-Befehls (Windows Script Host), wie im folgenden Beispiel `Echo` gezeigt.
+5.  Nehmen Sie einen Aufruf vor, der verhindert, dass das Skript beendet wird, bevor alle Ereignisse empfangen werden. Wenn Ihr Skript mit einer Bildschirmschnittstelle ausgeführt werden kann, besteht eine einfache Möglichkeit in der Verwendung eines WSH-Befehls (Windows Script Host), der im folgenden Beispiel `Echo` gezeigt wird.
 
     ```VB
     WScript.Echo "Waiting for instances."
@@ -104,7 +104,7 @@ Im folgenden Verfahren wird beschrieben, wie Sie einen asynchronen Aufruf mit VB
 
     
 
-    Wenn Sie dieses Skript ausführen, wird die erste Instanz möglicherweise vor der Meldung **Warten** auf Instanzen oder danach angezeigt. Dies ist die Art der asynchronen Verarbeitung. Wenn Sie das **Meldungsfeld Warten auf Instanzen** zu früh schließen, werden möglicherweise nicht alle Instanzen angezeigt.
+    Wenn Sie dieses Skript ausführen, wird die erste Instanz möglicherweise vor der Meldung **Warten** auf Instanzen oder danach angezeigt. Dies ist die Art der asynchronen Verarbeitung. Wenn Sie das **Meldungsfeld Warten auf** Instanzen zu früh schließen, werden möglicherweise nicht alle Instanzen angezeigt.
 
 6.  Wenn Sie Ergebnisse aus mehreren verschiedenen asynchronen Aufrufen haben, die an dieselbe Senke zurückgegeben werden, speichern Sie alle erforderlichen unterscheidenden Daten im *Kontextparameter objWbemAsyncContext.*
 

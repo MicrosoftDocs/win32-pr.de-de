@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 5545ea64da914188226fbdabf7cc6301baa695af
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 985ab6eb9508d57a7dd38616108bb0fdb58e7244623d90db435ca0a7022a570c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108089548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090590"
 ---
-# <a name="folderitemverbscount-property"></a>FolderItemVerbs.Count (Eigenschaft)
+# <a name="folderitemverbscount-property"></a>FolderItemVerbs.Count-Eigenschaft
 
 Enthält die Anzahl der Elemente in der Auflistung.
 
@@ -41,9 +41,9 @@ Eine **ganze Zahl,** die die **Count-Eigenschaft** empfängt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **Count verwendet,** um die Anzahl der verben abzurufen, die für den Systemsteuerung sind. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
+Im folgenden Beispiel wird **Count** verwendet, um die Anzahl der verben abzurufen, die für den ordner Systemsteuerung verfügbar sind. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -146,9 +146,9 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |

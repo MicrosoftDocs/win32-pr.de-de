@@ -60,7 +60,7 @@ Weisen Sie einer [**IAsyncActionAction**](/windows/win32/api/windows.foundation/
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -18,7 +18,7 @@ Eine Handschrifterkennungs-Engine oder -Erkennung ist eine Software, die Ink ver
 In diesem Abschnitt werden die verschiedenen Möglichkeiten beschrieben, wie Sie den Kontext in Ihrer Tablet PC-Anwendung nutzen können. Dabei liegt der Schwerpunkt auf der bevorzugten programmgesteuerten Technik für Anwendungen, die nicht ink aktiviert sind.
 
 > [!Note]  
-> In den Abschnitten zur Tablet PC-Technologie des Windows Vista Software Development Kit (SDK) wird der Begriff "Context" in Bezug auf das [**RecognizerContext-Objekt**](inkrecognizercontext-class.md) und dessen [**Eigenschaften PrefixText**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_prefixtext) und [**SuffixText**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_suffixtext) verwendet. Verwechseln Sie diese anderen Verwendungen von "context" nicht mit der Definition in diesem Abschnitt.
+> In den Abschnitten der Tablet PC-Technologie des Windows Vista Software Development Kit (SDK) wird der Begriff "Context" in Bezug auf das [**RecognizerContext-Objekt**](inkrecognizercontext-class.md) und dessen [**Eigenschaften PrefixText**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_prefixtext) und [**SuffixText**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_suffixtext) verwendet. Verwechseln Sie diese anderen Verwendungen von "context" nicht mit der Definition in diesem Abschnitt.
 
  
 

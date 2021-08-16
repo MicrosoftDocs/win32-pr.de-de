@@ -13,7 +13,7 @@ ms.locfileid: "118751992"
 ---
 # <a name="description-property-legacy-windows-environment-features"></a>Description-Eigenschaft (Legacy Windows Umgebungsfeatures)
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
@@ -31,7 +31,7 @@ Gibt eine Zeichenfolge zurück, die die Beschreibung für das angegebene Zeichen
 
 
 
-| Teil     | Beschreibung                                                                                    |
+| Teil     | BESCHREIBUNG                                                                                    |
 |----------|------------------------------------------------------------------------------------------------|
 | *string* | Ein Zeichenfolgenwert, der der Beschreibung des Zeichens (in der aktuellen Spracheinstellung) entspricht. |
 

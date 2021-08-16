@@ -1,7 +1,7 @@
 ---
-description: Diese Methode gibt eine-Schnittstelle zurück, die Zugriff auf die Videodaten bereitstellt.
+description: Diese Methode gibt eine Schnittstelle zurück, die Zugriff auf die Videodaten bietet.
 ms.assetid: 084F020F-A6F5-4982-BA4B-A8F8D6182868
-title: 'Ivideoframenative:: GetData-Methode'
+title: IVideoFrameNative::GetData-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - windows.media.core.interop.h
-ms.openlocfilehash: c612d2d34e23b393921f83f7dbe9e189aa366b30
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 832b2e300887699b926362ce9cbfc6f334c181805bacb3546532920c684251d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958933"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118993770"
 ---
-# <a name="ivideoframenativegetdata-method"></a>Ivideoframenative:: GetData-Methode
+# <a name="ivideoframenativegetdata-method"></a>IVideoFrameNative::GetData-Methode
 
-Diese Methode gibt eine-Schnittstelle zurück, die Zugriff auf die Videodaten bereitstellt.
+Diese Methode gibt eine Schnittstelle zurück, die Zugriff auf die Videodaten bietet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,29 +40,29 @@ HRESULT GetData(
 
 <dl> <dt>
 
-*riid* \[ in\]
+*riid* \[ In\]
 </dt> <dd>
 
 Die IID der abzurufenden Schnittstelle.
 
 </dd> <dt>
 
-*PPV* \[ vorgenommen\]
+*ppv* \[ out\]
 </dt> <dd>
 
-Wenn diese Methode erfolgreich zurückgegeben wird, enthält Sie den im *riid* -Parameter angeforderten Schnittstellen Zeiger.
+Enthält nach erfolgreicher Rückgabe dieser Methode den schnittstellenzeiger, der im *riid-Parameter angefordert* wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ beim erfolgreichen Abschluss S OK zurück. Gibt E \_ nointerface zurück, wenn die angeforderte Schnittstelle nicht gefunden werden kann.
+Gibt S \_ OK nach erfolgreichem Abschluss zurück. Gibt E \_ NOINTERFACE zurück, wenn die angeforderte Schnittstelle nicht gefunden werden kann.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivideoframenative**](/windows/desktop/api/windows.media.core.interop/nn-windows-media-core-interop-ivideoframenative)
+[**IVideoFrameNative**](/windows/desktop/api/windows.media.core.interop/nn-windows-media-core-interop-ivideoframenative)
 </dt> </dl>
 
  

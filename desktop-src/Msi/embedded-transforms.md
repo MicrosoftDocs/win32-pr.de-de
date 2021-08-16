@@ -1,5 +1,5 @@
 ---
-description: Eingebettete Transformationen werden in der .msi-Datei des Pakets gespeichert. Dadurch wird benutzern sichergestellt, dass die Transformation immer verfügbar ist, wenn das Installationspaket verfügbar ist. Alternativ können Transformationen für Benutzer als eigenständige MST-Dateien bereitgestellt werden.
+description: Eingebettete Transformationen werden in der .msi-Datei des Pakets gespeichert. Dadurch wird benutzern garantiert, dass die Transformation immer verfügbar ist, wenn das Installationspaket verfügbar ist. Alternativ können Transformationen für Benutzer als eigenständige MST-Dateien bereitgestellt werden.
 ms.assetid: f7b265df-4b34-44ea-85ab-8dbca4797517
 title: Eingebettete Transformationen
 ms.topic: article
@@ -13,9 +13,9 @@ ms.locfileid: "118637462"
 ---
 # <a name="embedded-transforms"></a>Eingebettete Transformationen
 
-Eingebettete Transformationen werden in der .msi-Datei des Pakets gespeichert. Dadurch wird benutzern sichergestellt, dass die Transformation immer verfügbar ist, wenn das Installationspaket verfügbar ist. Alternativ können Transformationen für Benutzer als eigenständige MST-Dateien bereitgestellt werden.
+Eingebettete Transformationen werden in der .msi-Datei des Pakets gespeichert. Dadurch wird benutzern garantiert, dass die Transformation immer verfügbar ist, wenn das Installationspaket verfügbar ist. Alternativ können Transformationen für Benutzer als eigenständige MST-Dateien bereitgestellt werden.
 
-Um der Transformationsliste eine eingebettete Transformation hinzuzufügen, fügen Sie einen Doppelpunkt hinzu (:) dem Dateinamen vorangestellt. Da das Installationsprogramm die Transformation immer aus dem Speicher in der .msi-Datei abrufen kann, werden eingebettete Transformationen nicht auf dem Computer des Benutzers zwischengespeichert. Eingebettete Transformationen können in Kombination mit [geschützten Transformationen](secured-transforms.md) oder [ungesicherten Transformationen](unsecured-transforms.md)verwendet werden. Weitere Informationen finden Sie unter [Anwenden von Transformationen.](applying-transforms.md)
+Um der Transformationsliste eine eingebettete Transformation hinzuzufügen, fügen Sie einen Doppelpunkt (:) Präfix des Dateinamens. Da das Installationsprogramm die Transformation immer aus dem Speicher in der .msi abrufen kann, werden eingebettete Transformationen nicht auf dem Computer des Benutzers zwischengespeichert. Eingebettete Transformationen können in Kombination mit geschützten [Transformationen](secured-transforms.md) oder [ungesicherten Transformationen verwendet werden.](unsecured-transforms.md) Weitere Informationen finden Sie unter [Anwenden von Transformationen.](applying-transforms.md)
 
  
 

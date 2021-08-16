@@ -13,7 +13,7 @@ ms.locfileid: "118749517"
 ---
 # <a name="iagentuserinputgetcount"></a>IAgentUserInput::GetCount
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT GetCount(
@@ -30,11 +30,11 @@ Ruft die Anzahl der [**Befehlsalternativen**](command-event.md) ab, die an einen
 <span id="pdwCount"></span><span id="pdwcount"></span><span id="PDWCOUNT"></span>*pdwCount*
 </dt> <dd>
 
-Adresse einer Variablen, die die Anzahl der vom [**Server**](command-event.md) identifizierten Befehlsalternativen empfängt.
+Adresse einer Variablen, die die Anzahl der vom Server [**identifizierten Befehlsalternativen**](command-event.md) empfängt.
 
 </dd> </dl>
 
-Wenn die Spracheingabe nicht die Quelle für den Befehl war, z. B. wenn der Benutzer den Befehl aus dem Popupmenü des Zeichens ausgewählt hat, gibt **GetCount** 1 zurück. Wenn **GetCount** null (0) zurückgibt, hat die Spracherkennungs-Engine gesprochene Eingaben erkannt, aber festgestellt, dass kein passender Befehl vorkommt.
+Wenn die Spracheingabe nicht die Quelle für den Befehl war, z. B. wenn der Benutzer den Befehl im Popupmenü des Zeichens ausgewählt hat, gibt **GetCount** 1 zurück. Wenn **GetCount** null (0) zurückgibt, hat die Spracherkennungs-Engine gesprochene Eingaben erkannt, aber festgestellt, dass kein übereinstimmender Befehl vorhanden war.
 
  
 

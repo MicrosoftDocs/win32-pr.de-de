@@ -1,7 +1,7 @@
 ---
-description: Ruft das umgebende Rechteck des ianalysisregion-Elements ab.
+description: Ruft das umgebundene Rechteck von IAnalysisRegion ab.
 ms.assetid: 6b9deff7-12e9-4b30-86cb-25b94737d28d
-title: 'Ianalysisregion:: GetBounds-Methode (iacom. h)'
+title: IAnalysisRegion::GetBounds-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 12bbb8163aa866648a83effc75d668bc4032c8d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8481ddda9d0d278d2f24873a0c7d8a993c924c816d58153c38de8ef1063e986b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119092331"
 ---
-# <a name="ianalysisregiongetbounds-method"></a>Ianalysisregion:: GetBounds-Methode
+# <a name="ianalysisregiongetbounds-method"></a>IAnalysisRegion::GetBounds-Methode
 
-Ruft das umgebende Rechteck des [**ianalysisregion**](ianalysisregion.md)-Elements ab.
+Ruft das umgebundene Rechteck der [**IAnalysisRegion ab.**](ianalysisregion.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,24 +39,24 @@ HRESULT GetBounds(
 
 <dl> <dt>
 
-*pboundingrechteck* \[ vorgenommen\]
+*pBoundingRectangle* \[ out\]
 </dt> <dd>
 
-Das umgebende Rechteck von [**ianalysisregion**](ianalysisregion.md) in frei Hand Raumkoordinaten.
+Das umgebundene Rechteck der [**IAnalysisRegion**](ianalysisregion.md) in Freiraumkoordinaten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Begrenzungen befinden sich in frei Hand Raumkoordinaten.
+Die Begrenzungen befinden sich in Freiraumkoordinaten.
 
-Wenn [**ianalysisregion**](ianalysisregion.md) einen unendlichen Bereich darstellt, sind die linken und oberen Begrenzungen **int \_ Min**, und die Rechte und unteren Begrenzungen sind **int \_ Max**.
+Wenn [**IAnalysisRegion**](ianalysisregion.md) einen unendlichen Bereich darstellt, sind die linke und die obere Grenze **INT \_ MIN,** und die rechte und die untere Grenze sind **INT \_ MAX.**
 
-Wenn [**ianalysisregion**](ianalysisregion.md) einen leeren Bereich darstellt, sind alle Begrenzungen des Rechtecks 0.
+Wenn [**IAnalysisRegion einen**](ianalysisregion.md) leeren Bereich darstellt, sind alle Begrenzungen des Rechtecks 0.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,24 +64,24 @@ Wenn [**ianalysisregion**](ianalysisregion.md) einen leeren Bereich darstellt, s
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ianalysisregion**](ianalysisregion.md)
+[**IAnalysisRegion**](ianalysisregion.md)
 </dt> <dt>
 
-[**Ianalysisregion:: GetRegionScans-Methode**](ianalysisregion-getregionscans.md)
+[**IAnalysisRegion::GetRegionScans-Methode**](ianalysisregion-getregionscans.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

@@ -1,49 +1,49 @@
 ---
 title: Remotezugriff
-description: Verwenden Sie RAS (Remote Access Service), um Client Anwendungen zu erstellen.
+description: Verwenden Sie den RAS(Remote Access Service), um Clientanwendungen zu erstellen.
 ms.assetid: 4e6c04d4-f989-4248-901f-ec15f61582da
 keywords:
-- RAS-Dienst RAS
-- RAS-RAS
-- RAS-Dienst-RAS, Startseite
-- RAS-RAS, siehe Remote Zugriff
+- RAS des Ras-Diensts
+- RAS RAS
+- RAS des Ras-Ras-Diensts, Startseite
+- RAS RAS , siehe Remotezugriff
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 95a4b1c06656b51395c8c4fc666e59d6115bd839
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: 7e300061c328751f288634faf2f36ab0391ba41d7079e4f42c842d31b3e29397
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "104101298"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117788285"
 ---
 # <a name="remote-access"></a>Remotezugriff
 
 ## <a name="purpose"></a>Zweck
 
-Verwenden Sie RAS (Remote Access Service), um Client Anwendungen zu erstellen. Diese Anwendungen zeigen allgemeine RAS-Dialogfelder an, verwalten RAS-Verbindungen und-Geräte und bearbeiten Telefonbucheinträge. RAS bietet auch die nächste Generation von Serverfunktionen für den RAS-Dienst (RAS) für Windows. Die RRAS-Server Funktion folgt und baut auf dem RAS-Dienst (Remote Access Service) auf.
+Verwenden Sie den RAS(Remote Access Service), um Clientanwendungen zu erstellen. Diese Anwendungen zeigen gängige RAS-Dialogfelder an, verwalten Remotezugriffsverbindungen und -geräte und bearbeiten Telefonbucheinträge. RAS bietet auch die nächste Generation von Serverfunktionen für den Ras-Ras-Dienst (RAS) für Windows. Die RRAS-Serverfunktionalität folgt und baut auf dem RAS (Remote Access Service) auf.
 
 ## <a name="where-applicable"></a>Anwendungsbereich
 
-Der RAS-Dienst ist in jeder Computerumgebung anwendbar, in der eine WAN-Verbindung (Wide Area Network) oder ein virtuelles privates Netzwerk (VPN) verwendet wird. RAS ermöglicht das Herstellen einer Verbindung zwischen einem Remote Client Computer und einem Netzwerkserver über eine WAN-Verbindung oder ein VPN. Der Remote Computer fungiert dann im LAN des Servers, als wäre der Remote Computer direkt mit dem LAN verbunden. Mithilfe der RAS-API können Programmierer Programm gesteuert auf die Features von RAS zugreifen.
+Der Remotezugriffsdienst ist in jeder Computerumgebung anwendbar, die eine WAN-Verbindung (Wide Area Network) oder ein VPN (Virtual Private Network) verwendet. Ras ermöglicht es, einen Remoteclientcomputer über eine WAN-Verbindung oder ein VPN mit einem Netzwerkserver zu verbinden. Der Remotecomputer funktioniert dann im LAN des Servers, als ob der Remotecomputer direkt mit dem LAN verbunden wäre. Die RAS-API ermöglicht Programmierern den programmgesteuerten Zugriff auf die Features von RAS.
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
-Die RAS-API ist für die Verwendung durch C/C++-Programmierer konzipiert. Microsoft Visual Basic Programmierer können die API auch nützlich finden. Programmierer sollten mit den Netzwerk Konzepten vertraut sein.
+Die RAS-API ist für die Verwendung durch C/C++-Programmierer konzipiert. Microsoft Visual Basic-Programmierer finden die API möglicherweise auch nützlich. Programmierer sollten mit Netzwerkkonzepten vertraut sein.
 
 ## <a name="run-time-requirements"></a>Laufzeitanforderungen
 
-Einige der Funktionen in der RAS-API werden nur auf Netzwerkservern unterstützt, und andere Funktionen werden nur auf Netzwerk Clients unterstützt. Spezifischere Informationen dazu, welche Betriebssysteme eine bestimmte Funktion unterstützen, finden Sie in den Abschnitten zu den Anforderungen in der-Dokumentation.
+Einige der Funktionen in der RAS-API werden nur auf Netzwerkservern und andere Funktionen nur auf Netzwerkclients unterstützt. Ausführlichere Informationen dazu, welche Betriebssysteme eine bestimmte Funktion unterstützen, finden Sie in den Abschnitten zu Anforderungen in der Dokumentation.
 
-Die [erweiterte RAS-Funktionalität](function-comparison-windows-2000-versus-rras-redistributable.md) von RRAS ist für Windows NT Server 4,0 verfügbar, indem die [weitervertreibbare RRAS](https://www.microsoft.com/ntserver/nts/downloads/winfeatures/rras/rrasdown.asp)-Datei installiert wird. Die gesamte Funktionalität von RRAS ist in Windows 2000 Server, Windows Server 2003 und Windows Server 2008 integriert. RRAS-Anwendungen können nicht auf Windows NT-Arbeitsstationen 4,0 oder Client Betriebssystemen wie Windows 95 ausgeführt werden. Spezifischere Informationen dazu, welche Betriebssysteme eine bestimmte Funktion unterstützen, finden Sie in den Abschnitten zu den Anforderungen in der-Dokumentation.
+Die [erweiterte RAS-Funktionalität](function-comparison-windows-2000-versus-rras-redistributable.md) von RRAS ist für Windows NT Server 4.0 verfügbar, indem [RRAS Redistributable](https://www.microsoft.com/ntserver/nts/downloads/winfeatures/rras/rrasdown.asp)installiert wird. Alle Funktionen von RRAS sind in Windows 2000 Server, Windows Server 2003 und Windows Server 2008 integriert. RRAS-Anwendungen können nicht auf Windows NT Workstation 4.0 oder auf Clientbetriebssystemen wie Windows 95 ausgeführt werden. Ausführlichere Informationen dazu, welche Betriebssysteme eine bestimmte Funktion unterstützen, finden Sie in den Abschnitten zu Anforderungen in der Dokumentation.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                             | BESCHREIBUNG                                                                                                                                                                                                              |
+| Thema                                                                                             | Beschreibung                                                                                                                                                                                                              |
 |---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [RAS-Dienst](about-remote-access-service.md)<br/>                               | RAS-Dienst (RAS) bietet Remote Zugriffs Funktionen für Client Anwendungen auf Computern, auf denen Windows ausgeführt wird.<br/>                                                                                          |
-| [Remote Zugriffs Dienst-Verwaltung](about-remote-access-service-administration.md)<br/> | Die Remote Zugriffs-Dienst Verwaltung bietet eine Reihe von Funktionen zum Verwalten von Benutzerberechtigungen und Ports auf RAS-Servern. Mithilfe dieser Funktionen können Sie eine RAS-Server-Verwaltungs Anwendung entwickeln.<br/> |
+| [Remotezugriffsdienst](about-remote-access-service.md)<br/>                               | Remotezugriffsdienst (RAS) bietet Remotezugriffsfunktionen für Clientanwendungen auf Computern, auf denen Windows ausgeführt wird.<br/>                                                                                          |
+| [Remotezugriffsdienstverwaltung](about-remote-access-service-administration.md)<br/> | Die Remotezugriffsdienstverwaltung bietet eine Reihe von Funktionen zum Verwalten von Benutzerberechtigungen und Ports auf RAS-Servern. Mit diesen Funktionen können Sie eine RAS-Serververwaltungsanwendung entwickeln.<br/> |
 
 
 
@@ -56,7 +56,7 @@ Die [erweiterte RAS-Funktionalität](function-comparison-windows-2000-versus-rra
 [Routing](routing-start-page.md)
 </dt> <dt>
 
-[Routing Protokolle](routing-protocols-start-page.md)
+[Routingprotokolle](routing-protocols-start-page.md)
 </dt> </dl>
 
  

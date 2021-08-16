@@ -1,10 +1,10 @@
 ---
-title: Beispiel Code für das Erstellen von Benutzern auf einem Mitglieds Server oder Windows 2000 Professional
-description: Im folgenden Visual Basic Codebeispiel wird ein Benutzer auf einem Mitglieds Server oder Windows 2000 Professional erstellt.
+title: Beispielcode zum Erstellen von Benutzern auf einem Mitgliedsserver oder Windows 2000 Professional
+description: Im folgenden Visual Basic Codebeispiel wird ein Benutzer auf einem Mitgliedsserver oder Windows 2000 Professional erstellt.
 ms.assetid: 0a0800d6-eb2c-4d88-b9d4-91640206fe7b
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Erstellen von Benutzern auf einem Mitglieds Server oder Windows 2000 Professional
+- Active Directory-Beispiele für Active Directory, Erstellen von Benutzern auf einem Mitgliedsserver oder Windows 2000 Professional
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: dcdefd10bfef4f0b41f00e71b311295a9ed4b09e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e42a7ebeeb37e8a39ae660b28da630f242052a3631bb1e072809662ecdaa3827
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962289"
 ---
-# <a name="example-code-for-creating-users-on-a-member-server-or-windows-2000-professional"></a>Beispiel Code für das Erstellen von Benutzern auf einem Mitglieds Server oder Windows 2000 Professional
+# <a name="example-code-for-creating-users-on-a-member-server-or-windows-2000-professional"></a>Beispielcode zum Erstellen von Benutzern auf einem Mitgliedsserver oder Windows 2000 Professional
 
-Im folgenden Visual Basic Codebeispiel wird ein Benutzer auf einem Mitglieds Server oder Windows 2000 Professional erstellt.
+Im folgenden Visual Basic Codebeispiel wird ein Benutzer auf einem Mitgliedsserver oder Windows 2000 Professional erstellt.
 
 
 ```VB
@@ -100,9 +100,9 @@ Cleanup:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -33,7 +33,7 @@ Wenn dieses Bit für ein [ProgressBar-Steuerelement festgelegt ist,](progressbar
 
 ## <a name="remarks"></a>Hinweise
 
-Um dieses Attribut für ein Steuerelement festlegen zu können, schließen Sie das Progress95-Bit in die Spalte Attribute des Datensatzes des Steuerelements in die [Control-Tabelle ein.](control-table.md)
+Wenn Sie dieses Attribut für ein Steuerelement festlegen möchten, schließen Sie das Progress95-Bit in die Spalte Attribute des Datensatzes des Steuerelements in der [Control-Tabelle ein.](control-table.md)
 
 Weitere [Informationen finden Sie unter Steuerelementattribute](control-attributes.md) und das Steuerelement, das Sie unter Steuerelemente erstellen [müssen.](controls.md)
 

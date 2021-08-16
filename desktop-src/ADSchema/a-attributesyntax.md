@@ -58,10 +58,10 @@ Die OID für die Syntax für dieses Attribut.
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
-| System-Only            | Richtig                                                     |
-| Ist einwertig       | Richtig                                                     |
-| Ist indiziert             | Falsch                                                    |
-| Im globalen Katalog      | Falsch                                                    |
+| System-Only            | True                                                     |
+| Ist einwertig       | True                                                     |
+| Ist indiziert             | False                                                    |
+| Im globalen Katalog      | False                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
@@ -79,10 +79,10 @@ Die OID für die Syntax für dieses Attribut.
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
-| System-Only            | Richtig                                                     |
-| Ist einwertig       | Richtig                                                     |
-| Ist indiziert             | Falsch                                                    |
-| Im globalen Katalog      | Falsch                                                    |
+| System-Only            | True                                                     |
+| Ist einwertig       | True                                                     |
+| Ist indiziert             | False                                                    |
+| Im globalen Katalog      | False                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
@@ -100,10 +100,10 @@ Die OID für die Syntax für dieses Attribut.
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
-| System-Only            | Richtig                                                     |
-| Ist einwertig       | Richtig                                                     |
-| Ist indiziert             | Falsch                                                    |
-| Im globalen Katalog      | Falsch                                                    |
+| System-Only            | True                                                     |
+| Ist einwertig       | True                                                     |
+| Ist indiziert             | False                                                    |
+| Im globalen Katalog      | False                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
@@ -121,10 +121,10 @@ Die OID für die Syntax für dieses Attribut.
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
-| System-Only            | Richtig                                                     |
-| Is-Single-Valued       | Richtig                                                     |
-| Ist indiziert             | Falsch                                                    |
-| Im globalen Katalog      | Falsch                                                    |
+| System-Only            | True                                                     |
+| Ist einwertig       | True                                                     |
+| Ist indiziert             | False                                                    |
+| Im globalen Katalog      | False                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
@@ -142,10 +142,10 @@ Die OID für die Syntax für dieses Attribut.
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
-| System-Only            | Richtig                                                     |
-| Is-Single-Valued       | Richtig                                                     |
-| Ist indiziert             | Falsch                                                    |
-| Im globalen Katalog      | Falsch                                                    |
+| System-Only            | True                                                     |
+| Ist einwertig       | True                                                     |
+| Ist indiziert             | False                                                    |
+| Im globalen Katalog      | False                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
@@ -163,10 +163,10 @@ Die OID für die Syntax für dieses Attribut.
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
-| System-Only            | Richtig                                                     |
-| Is-Single-Valued       | Richtig                                                     |
-| Ist indiziert             | Falsch                                                    |
-| Im globalen Katalog      | Falsch                                                    |
+| System-Only            | True                                                     |
+| Ist einwertig       | True                                                     |
+| Ist indiziert             | False                                                    |
+| Im globalen Katalog      | False                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
@@ -184,10 +184,10 @@ Die OID für die Syntax für dieses Attribut.
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
-| System-Only            | Richtig                                                     |
-| Is-Single-Valued       | Richtig                                                     |
-| Ist indiziert             | Falsch                                                    |
-| Im globalen Katalog      | Falsch                                                    |
+| System-Only            | True                                                     |
+| Ist einwertig       | True                                                     |
+| Ist indiziert             | False                                                    |
+| Im globalen Katalog      | False                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |

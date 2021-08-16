@@ -1,6 +1,6 @@
 ---
 title: WM/PlaylistDelay
-description: Das WM/PlaylistDelay-Attribut enthält die Anzahl der Millisekundenverzögerung, die der Wiedergabe der Datei in einer Wiedergabeliste vorangehen sollte.
+description: Das WM/PlaylistDelay-Attribut enthält die Anzahl der Millisekundenverzögerung, die der Wiedergabe der Datei in einer Wiedergabeliste voranstellen soll.
 ms.assetid: 5d39a805-65fa-4e1a-988b-6e605481903a
 keywords:
 - WM/PlaylistDelay windows Media Format
@@ -21,7 +21,7 @@ ms.locfileid: "118698478"
 ---
 # <a name="wmplaylistdelay"></a>WM/PlaylistDelay
 
-Das **WM/PlaylistDelay-Attribut** enthält die Anzahl der Millisekundenverzögerung, die der Wiedergabe der Datei in einer Wiedergabeliste vorangehen sollte.
+Das **WM/PlaylistDelay-Attribut** enthält die Anzahl der Millisekundenverzögerung, die der Wiedergabe der Datei in einer Wiedergabeliste voranstellen soll.
 
 ## <a name="global-constant"></a>Globale Konstante
 
@@ -29,11 +29,11 @@ g \_ wszWMPlaylistDelay
 
 ## <a name="data-type"></a>Datentyp
 
-**\_ \_ WMT-TYPZEICHENFOLGE**
+**\_WMT-TYPZEICHENFOLGE \_**
 
 ## <a name="remarks"></a>Hinweise
 
-Nicht alle Medienplayer halten sich an die Wiedergabelistenverzögerung.
+Nicht alle Medienplayer sehen die Wiedergabelistenverzögerung.
 
 ## <a name="see-also"></a>Weitere Informationen
 

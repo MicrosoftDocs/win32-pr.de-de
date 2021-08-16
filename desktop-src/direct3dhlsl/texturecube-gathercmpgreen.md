@@ -27,7 +27,7 @@ Analysiert und vergleicht eine Textur und gibt die grüne Komponente zurück.
 
 
 
-| Methode                                                                                 | Beschreibung                                                                                                      |
+| Methode                                                                                 | BESCHREIBUNG                                                                                                      |
 |:---------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|
 | [**GatherCmpGreen(S,float,float,uint)**](tcube-gathercmpgreen-s-float-float-uint-.md) | Durchmustert und vergleicht eine Textur und gibt die grüne Komponente zusammen mit dem Status des Vorgangs zurück.<br/> |
 

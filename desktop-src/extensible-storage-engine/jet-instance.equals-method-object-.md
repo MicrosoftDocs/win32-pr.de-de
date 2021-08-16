@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_INSTANCE. Equals-Methode (Objekt)'
+description: 'Erfahren Sie mehr über: JET_INSTANCE. Equals-Methode (Objekt)'
 title: JET_INSTANCE. Equals-Methode (Objekt)
 TOCTitle: Equals method (Object)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_INSTANCE.Equals(System.Object)
@@ -65,15 +65,15 @@ public override bool Equals(
 #### <a name="return-value"></a>Rückgabewert
 
 Typ: [System.Boolean](/dotnet/api/system.boolean)  
-TRUE, wenn die beiden Instanzen gleich sind.  
+True, wenn die beiden Instanzen gleich sind.  
 
 ## <a name="see-also"></a>Weitere Informationen
 
 #### <a name="reference"></a>Verweis
 
-[JET_INSTANCE-Struktur](./jet-instance-structure.md)
+[JET_INSTANCE Struktur](./jet-instance-structure.md)
 
-[JET_INSTANCE Member](./jet-instance-members.md)
+[JET_INSTANCE-Member](./jet-instance-members.md)
 
 [Equals-Überladung](./jet-instance.equals-method.md)
 

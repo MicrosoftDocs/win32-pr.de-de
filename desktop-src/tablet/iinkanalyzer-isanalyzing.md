@@ -1,7 +1,7 @@
 ---
-description: Ruft einen Wert ab, der angibt, ob iinkanalyzer eine Handschrift Analyse ausführt.
+description: Ruft einen Wert ab, der angibt, ob der IInkAnalyzer eine Ink-Analyse vorgibt.
 ms.assetid: 3f3f6f29-0c90-47e1-938c-f1ce6ed8df47
-title: 'Iinkanalyzer:: isanalytics-Methode (iacom. h)'
+title: IInkAnalyzer::IsAnalyzing-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 94275d157b2936b7ad0ae16d4d70b62475f19af9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1dc0a10bfcafb5972413eb1d1d0880a63db69498c38481cc0cbf6bb58e5f69f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119092050"
 ---
-# <a name="iinkanalyzerisanalyzing-method"></a>Iinkanalyzer:: isanalysierungsmethode
+# <a name="iinkanalyzerisanalyzing-method"></a>IInkAnalyzer::IsAnalyzing-Methode
 
-Ruft einen Wert ab, der angibt, ob [**iinkanalyzer**](iinkanalyzer.md) eine Handschrift Analyse ausführt.
+Ruft einen Wert ab, der angibt, ob [**der IInkAnalyzer**](iinkanalyzer.md) eine Ink-Analyse vorgibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,28 +39,28 @@ HRESULT IsAnalyzing(
 
 <dl> <dt>
 
-*pbanalyalisierung* \[ vorgenommen\]
+*pbAnalyzing* \[ out\]
 </dt> <dd>
 
-**Variant \_ TRUE** , wenn [**iinkanalyzer**](iinkanalyzer.md) eine Handschrift Analyse ausführt. Andernfalls ist der Wert **\_ false**.
+**VARIANT \_ TRUE,** wenn [**der IInkAnalyzer**](iinkanalyzer.md) eine Ink-Analyse durchfing; andernfalls **VARIANT \_ FALSE**.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist **Variant \_ true** , wenn [**iinkanalyzer**](iinkanalyzer.md) eine synchrone oder asynchrone Analyse ausführt.
+Diese Eigenschaft ist **VARIANT \_ TRUE,** wenn [**der IInkAnalyzer**](iinkanalyzer.md) synchrone oder asynchrone Analysen vorsteuert.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt eine Methode, die die [**icontextnode**](icontextnode.md) -Ergebnis Struktur der Ink Analyzer durchläuft. Wenn die frei Hand Analyse zurzeit keine frei Hand Analyse durchführt, führt die-Methode Folgendes aus.
+Das folgende Beispiel zeigt eine Methode, die die [**IContextNode-Ergebnisstruktur**](icontextnode.md) des Ink Analyzers durchfingt. Wenn die Ink-Analyse derzeit keine Ink-Analyse durchfing, führt die -Methode Folgendes aus.
 
--   Ruft die Top-Erkennungs Zeichenfolge ab.
--   Ruft den Stamm Knoten der Ink Analyzer ab.
--   Ruft die Hilfsmethode `ExploreContextNode` auf, um den Stamm Knoten und seine untergeordneten Knoten zu untersuchen.
+-   Ruft die oberste Erkennungszeichenfolge ab.
+-   Ruft den Stammknoten des Ink Analyzers ab.
+-   Ruft die Hilfsmethode auf, `ExploreContextNode` um den Stammknoten und seine untergeordneten Knoten zu untersuchen.
 
 
 ```C++
@@ -122,27 +122,27 @@ HRESULT CMyClass::ExploreAnalysisResults(
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: analysierungsmethode**](iinkanalyzer-analyze.md)
+[**IInkAnalyzer::Analyze-Methode**](iinkanalyzer-analyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
+[**IInkAnalyzer::BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

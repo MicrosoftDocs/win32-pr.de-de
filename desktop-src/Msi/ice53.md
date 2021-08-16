@@ -1,5 +1,5 @@
 ---
-description: ICE53 sucht nach Einträgen in der Registrierungstabelle, die private Installerinformationen oder Richtlinienwerte in die Systemregistrierung schreiben.
+description: ICE53 sucht nach Einträgen in der Registrierungstabelle, die Informationen zum privaten Installationsprogramm oder Richtlinienwerte in die Systemregistrierung schreiben.
 ms.assetid: f5afca1f-bd36-4f95-a62a-f6b2e37238a6
 title: ICE53
 ms.topic: article
@@ -13,11 +13,11 @@ ms.locfileid: "118635131"
 ---
 # <a name="ice53"></a>ICE53
 
-ICE53 sucht nach Einträgen in der Registrierungstabelle, die private Installerinformationen oder Richtlinienwerte in die Systemregistrierung schreiben.
+ICE53 sucht nach Einträgen in der Registrierungstabelle, die Informationen zum privaten Installationsprogramm oder Richtlinienwerte in die Systemregistrierung schreiben.
 
 ## <a name="result"></a>Ergebnis
 
-ICE53 gibt eine Warnung aus, wenn die Registrierungstabelle das Schreiben interner oder Richtlinieninformationen in die Registrierung angibt.
+ICE53 gibt eine Warnung aus, wenn die Registrierungstabelle angibt, dass interne oder Richtlinieninformationen in die Registrierung geschrieben werden.
 
 ## <a name="example"></a>Beispiel
 
@@ -33,13 +33,13 @@ Registry Key 'Registry1' writes Installer internal or policy information.
 
 | Registrierung             | Root         | Key                                                                                                   |
 |----------------------|--------------|-------------------------------------------------------------------------------------------------------|
-| Registry1<br/> | 1<br/> | **Software** \\ **Richtlinien** \\ **Microsoft** \\ **Windows** \\ **Installer** \\ **DisableRollback**<br/> |
+| Registry1<br/> | 1<br/> | **Software** \\ **Richtlinien** \\ **Microsoft** \\ **Windows** \\ **Installationsprogramm** \\ **DisableRollback**<br/> |
 
 
 
  
 
-Die Registrierungstabellenzeile "Registry1" schreibt einen Systemrichtlinienwert in die Registrierung, der die Installation aller Pakete beeinflusst. Je nach Paket kann es möglich sein, den Rollback für dieses Paket allein zu deaktivieren, indem Sie die [**DISABLEROLLBACK-Eigenschaft**](-disablerollback.md) in der [Property-Tabelle festlegen.](property-table.md) Weitere Informationen [finden Sie unter Rollbackinstallation.](rollback-installation.md)
+Die Registrierungstabellenzeile "Registry1" schreibt einen Systemrichtlinienwert in die Registrierung, der sich auf die Installation aller Pakete auswirkt. Je nach Paket kann es möglich sein, das Rollback für dieses Paket allein durch Festlegen der [**DISABLEROLLBACK-Eigenschaft**](-disablerollback.md) in der [Property-Tabelle](property-table.md)zu deaktivieren. Weitere Informationen finden Sie unter [Rollbackinstallation.](rollback-installation.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

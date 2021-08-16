@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: SystemParameters-Felder'
+description: 'Weitere Informationen zu: SystemParameters-Felder'
 title: SystemParameters-Felder
 TOCTitle: SystemParameters fields
 ms:assetid: Fields.T:Microsoft.Isam.Esent.Interop.SystemParameters
@@ -7,19 +7,19 @@ ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.syst
 ms:contentKeyID: 55104029
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: e25d03cd1ee1e76c08d08e81e7573a2c732dbd69
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dc2174a31a937ddc99530865848ca2d7bcdc6d1b8f25d1cc631ab374cd4b8068
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104558758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119107144"
 ---
 # <a name="systemparameters-fields"></a>SystemParameters-Felder
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-Der [System Parameters](./systemparameters-class.md) -Typ macht die folgenden Member verfügbar.
+Der [SystemParameters-Typ](./systemparameters-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="fields"></a>Felder
 
@@ -28,54 +28,54 @@ Der [System Parameters](./systemparameters-class.md) -Typ macht die folgenden Me
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn351208(v=exchg.10).md">Basenamelength</a></td>
-<td>Die Länge des Präfixes, das verwendet wird, um die von der Datenbank-Engine verwendeten Dateien zu benennen.</td>
+<td><a href="dn351208(v=exchg.10).md">BaseNameLength</a></td>
+<td>Die Länge des Präfixes, das zum Benennen von Dateien verwendet wird, die von der Datenbank-Engine verwendet werden.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn351146(v=exchg.10).md">Columlichlichste</a></td>
-<td>Maximale Größe für Spalten, die nicht JET_coltyp werden. LONGBINARY oder JET_coltyp. LongText.</td>
+<td><a href="dn351146(v=exchg.10).md">ColumnMost</a></td>
+<td>Maximale Größe für Spalten, die nicht JET_coltyp sind. LongBinary oder JET_coltyp. LongText.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn351210(v=exchg.10).md">Columnsfixedmost</a></td>
-<td>Die maximal zulässige Anzahl fester Spalten in einer Tabelle.</td>
+<td><a href="dn351210(v=exchg.10).md">ColumnsFixedMost</a></td>
+<td>Maximale Anzahl fester Spalten, die in einer Tabelle zulässig sind.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn351140(v=exchg.10).md">Columnsmost</a></td>
-<td>Die maximal zulässige Anzahl von Spalten in einer Tabelle.</td>
+<td><a href="dn351140(v=exchg.10).md">ColumnsMost</a></td>
+<td>Maximale Anzahl von Spalten, die in einer Tabelle zulässig sind.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn351148(v=exchg.10).md">Columnstaggedmost</a></td>
-<td>Die maximal zulässige Anzahl von markierten Spalten in einer Tabelle.</td>
+<td><a href="dn351148(v=exchg.10).md">ColumnsTaggedMost</a></td>
+<td>Maximale Anzahl von markierten Spalten, die in einer Tabelle zulässig sind.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn351212(v=exchg.10).md">Columnsvarmost</a></td>
+<td><a href="dn351212(v=exchg.10).md">ColumnsVarMost</a></td>
 <td>Maximale Anzahl von Spalten variabler Länge, die in einer Tabelle zulässig sind.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn351141(v=exchg.10).md">Localenamemaxlength</a></td>
-<td>Die maximale Länge eines Gebiets Schema namens (LOCALE_NAME_MAX_LENGTH aus "Winnt. h").</td>
+<td><a href="dn351141(v=exchg.10).md">LocaleNameMaxLength</a></td>
+<td>Die maximale Länge eines Gebietsschemanamens (LOCALE_NAME_MAX_LENGTH aus winnt.h).</td>
 </tr>
 <tr class="even">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn351213(v=exchg.10).md">Namemost</a></td>
-<td>Maximale Größe eines Tabellen-/Spalten-/Indexnamens.</td>
+<td><a href="dn351213(v=exchg.10).md">NameMost</a></td>
+<td>Maximale Größe eines Tabellen-,Spalten-/Indexnamens.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn351211(v=exchg.10).md">Pagetempdbkleinsten</a></td>
-<td>Die Anzahl der Seiten, die die kleinstmögliche temporäre Datenbank liefert.</td>
+<td><a href="dn351211(v=exchg.10).md">PageTempDBSmallest</a></td>
+<td>Die Anzahl der Seiten, die die kleinstmögliche temporäre Datenbank erhalten.</td>
 </tr>
 </tbody>
 </table>
@@ -83,10 +83,10 @@ Der [System Parameters](./systemparameters-class.md) -Typ macht die folgenden Me
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [SystemParameters-Klasse](./systemparameters-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

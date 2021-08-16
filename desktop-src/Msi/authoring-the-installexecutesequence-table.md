@@ -13,7 +13,7 @@ ms.locfileid: "118639171"
 ---
 # <a name="authoring-the-installexecutesequence-table"></a>Erstellen der InstallExecuteSequence-Tabelle
 
-Die benutzerdefinierten Aktionen ProcessAccounts und UninstallAccounts generieren die zurückgestellten benutzerdefinierten Aktionen, die Benutzerkonten erstellen, entfernen oder rollbacken. Die benutzerdefinierten Aktionen ProcessAccounts und UninstallAccounts müssen in die [InstallExecuteSequence-Tabelle](installexecutesequence-table.md) eingegeben werden, um ausgeführt werden zu können. Fügen Sie der [Tabelle InstallExecuteSequence die folgenden Einträge hinzu.](installexecutesequence-table.md) Da diese benutzerdefinierten Aktionen Teil der Skriptgenerierung sein müssen, müssen beide benutzerdefinierten Aktionen nach der [InstallInitialize-Aktion sequenziert werden.](installinitialize-action.md)
+Die benutzerdefinierten Aktionen ProcessAccounts und UninstallAccounts generieren die zurückgestellten benutzerdefinierten Aktionen, die Benutzerkonten erstellen, entfernen oder rollbacken. Die benutzerdefinierten Aktionen ProcessAccounts und UninstallAccounts müssen in die [Tabelle InstallExecuteSequence](installexecutesequence-table.md) eingegeben werden, um ausgeführt werden zu können. Fügen Sie der [Tabelle InstallExecuteSequence die folgenden Einträge hinzu.](installexecutesequence-table.md) Da diese benutzerdefinierten Aktionen Teil der Skriptgenerierung sein müssen, müssen beide benutzerdefinierten Aktionen nach der [InstallInitialize-Aktion sequenziert werden.](installinitialize-action.md)
 
 Die Bedingung für ProcessAccounts stellt Folgendes sicher. Weitere Informationen finden [Sie unter Syntax für bedingte Anweisungen.](conditional-statement-syntax.md)
 

@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3f22756aa8a2c3888ef9ba180e12c32c3dda5249
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f5e899aefc26fbb0518c1ddc91362dbaf2c6cdbe56512f20d9bce057cbd13cdf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119110091"
 ---
 # <a name="jet_indexcreate-class"></a>JET_INDEXCREATE-Klasse
 
-Enthält die Informationen, die erforderlich sind, um einen Index über Daten in einer ESE-Datenbank zu erstellen. Enthält die Informationen, die erforderlich sind, um einen Index über Daten in einer ESE-Datenbank zu erstellen.
+Enthält die Informationen, die zum Erstellen eines Indexes für Daten in einer ESE-Datenbank erforderlich sind. Enthält die Informationen, die zum Erstellen eines Indexes für Daten in einer ESE-Datenbank erforderlich sind.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   Microsoft.Isam.Esent.Interop.JET_INDEXCREATE  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,10 +64,10 @@ public sealed class JET_INDEXCREATE : IContentEquatable<JET_INDEXCREATE>,
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Mitglieder JET_INDEXCREATE](./jet-indexcreate-members.md)
+[JET_INDEXCREATE Member](./jet-indexcreate-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

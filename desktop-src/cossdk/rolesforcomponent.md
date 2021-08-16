@@ -23,13 +23,13 @@ ms.locfileid: "118547007"
 
 Enthält ein -Objekt für jede Rolle, die der Komponente zugewiesen ist, mit der die Auflistung verknüpft ist. Die Rollen müssen bereits auf Anwendungsebene zugewiesen sein.
 
-Diese Sammlung unterstützt die [**Add- und**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
+Diese Auflistung unterstützt die [**Add-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) und [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
 ## <a name="members"></a>Member
 
-Die **RolesForComponent-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
+Die **RolesForComponent-Auflistung erbt** von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
 
-## <a name="related-collections"></a>Verwandte Sammlungen
+## <a name="related-collections"></a>Verwandte Auflistungen
 
 Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 
@@ -37,7 +37,7 @@ Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 -   [**Propertyinfo**](propertyinfo.md)
 -   [**RelatedCollectionInfo**](relatedcollectioninfo.md)
 
-Sie können von den folgenden Sammlungen zu dieser Sammlung navigieren:
+Sie können aus den folgenden Sammlungen zu dieser Sammlung navigieren:
 
 -   [**Komponenten**](components.md)
 
@@ -53,7 +53,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Beschreibung    | Der Name der Rolle. Muss der Anwendung bereits eine Rolle zugewiesen sein (wird in der Sammlung Rollen angezeigt). Zusätzliche Leerzeichen am Anfang und Ende der Zeichenfolge werden entfernt. Diese Eigenschaft wird zurückgegeben, wenn die [**Key-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) oder [**Name-Eigenschaftsmethode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) für ein Objekt dieser Auflistung aufgerufen wird. |
+| Beschreibung    | Der Name der Rolle. Muss der Anwendung bereits eine Rolle zugewiesen sein (die in der Sammlung Rollen angezeigt wird). Zusätzliche Leerzeichen am Anfang und Ende der Zeichenfolge werden entfernt. Diese Eigenschaft wird zurückgegeben, wenn die [**Key-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) oder [**Name-Eigenschaftsmethode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) für ein Objekt dieser Auflistung aufgerufen wird. |
 | Zugriff         | WriteOnce                                                                                                                                                                                                                                                                                                                                           |
 | type           | String                                                                                                                                                                                                                                                                                                                                              |
 | Standard        | "Neue Rolle"                                                                                                                                                                                                                                                                                                                                          |
@@ -63,7 +63,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
  
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

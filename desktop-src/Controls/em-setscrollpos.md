@@ -1,9 +1,9 @@
 ---
-title: EM_SETSCROLLPOS Nachricht (Richedit.h)
-description: Führt einen Bildlauf des Inhalts eines Rich-Edit-Steuerelements bis zum angegebenen Punkt durch.
+title: EM_SETSCROLLPOS (Richedit.h)
+description: Scrollt den Inhalt eines Rich-Edit-Steuerelements zum angegebenen Punkt.
 ms.assetid: 9ec514a4-97b1-44ab-b2ca-973b1f6fc404
 keywords:
-- EM_SETSCROLLPOS Windows-Steuerelemente für Nachrichten
+- EM_SETSCROLLPOS von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118412335"
 ---
 # <a name="em_setscrollpos-message"></a>EM \_ SETSCROLLPOS-Nachricht
 
-Führt einen Bildlauf des Inhalts eines Rich-Edit-Steuerelements bis zum angegebenen Punkt durch.
+Scrollt den Inhalt eines Rich-Edit-Steuerelements zum angegebenen Punkt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,9 +39,9 @@ Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**POINT-Struktur,**](/previous-versions//dd162805(v=vs.85)) die einen Punkt im virtuellen Textbereich des Dokuments in Pixel angibt. Das Dokument wird gescrollt, bis sich dieser Punkt in der oberen linken Ecke des Bearbeitungssteuerelementfensters befindet. Wenn Sie die Ansicht so ändern möchten, dass die obere linke Ecke der Ansicht zwei Zeilen nach unten und ein Zeichen vom linken Rand entfernt ist. Sie würden einen Punkt von (7, 22) übergeben.
+Zeiger auf eine [**POINT-Struktur,**](/previous-versions//dd162805(v=vs.85)) die einen Punkt im virtuellen Textraum des Dokuments in Pixel angibt. Das Dokument wird gescrollt, bis sich dieser Punkt in der oberen linken Ecke des Bearbeitungssteuerfelds befindet. Wenn Sie die Ansicht so ändern möchten, dass die obere linke Ecke der Ansicht zwei Zeilen nach unten und ein Zeichen in vom linken Rand ist. Sie würden einen Punkt von (7, 22) übergeben.
 
-Das Rich-Edit-Steuerelement überprüft die x- und y-Koordinaten und passt sie bei Bedarf an, sodass oben eine vollständige Linie angezeigt wird. Außerdem wird sichergestellt, dass der Text nie vollständig aus dem Ansichtsrechteck gescrollt wird.
+Das Rich-Edit-Steuerelement überprüft die x- und y-Koordinaten und passt sie bei Bedarf an, sodass oben eine vollständige Linie angezeigt wird. Außerdem wird sichergestellt, dass der Text nie vollständig aus dem Ansichtrechteck gescrollt wird.
 
 </dd> </dl>
 
@@ -55,7 +55,7 @@ Diese Meldung gibt immer 1 zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Verteilbare Komponente<br/>          | Rich Edit 3.0<br/>                                                              |
 | Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |

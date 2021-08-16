@@ -76,13 +76,13 @@ Aktueller Wert aus der Verweisdatenbank oder Spalte einer Zahl.
 
 ## <a name="remarks"></a>Hinweise
 
-\_TransformView wird durch eine Sperre im Arbeitsspeicher gehalten, die mit dem folgenden Befehl SQL freigegeben werden kann.
+\_TransformView wird durch eine Sperre im Arbeitsspeicher gespeichert, die mit dem folgenden Befehl SQL freigegeben werden kann.
 
 "ALTER TABLE \_ TransformView FREE".
 
 Auf die Daten in der Tabelle kann mithilfe SQL Abfragen zugegriffen werden. Die SQL-Sprache verfügt über zwei Hauptbereiche: DDL (Data Definition Language), die zum Definieren aller Objekte in einer SQL Datenbank verwendet wird, und Data Manipulation Language (DML), die zum Auswählen, Einfügen, Aktualisieren und Löschen von Daten in den mit DDL definierten Objekten verwendet wird.
 
-Die DmL-Transformationsvorgänge (Data Manipulation Language) sind wie folgt angegeben. Die Datenbearbeitungssprache (Data Manipulation Language, DML) sind anweisungen in SQL, die Daten bearbeiten und nicht definieren.
+Die DmL-Transformationsvorgänge (Data Manipulation Language) sind wie folgt angegeben. Die Datenbearbeitungssprache (Data Manipulation Language, DML) sind anweisungen in SQL, die Daten bearbeiten, anstatt sie zu definieren.
 
 
 
@@ -96,7 +96,7 @@ Die DmL-Transformationsvorgänge (Data Manipulation Language) sind wie folgt ang
 
  
 
-Die DDL-Transformationsvorgänge (Data Definition Language) sind wie folgt angegeben. Die Datendefinitionssprache (Data Definition Language, DDL) sind anweisungen in SQL, die Daten definieren, anstatt sie zu bearbeiten.
+Die DDL-Transformationsvorgänge (Data Definition Language) sind wie folgt angegeben. Die Datendefinitionssprache (Data Definition Language, DDL) sind die Anweisungen in SQL, die Daten definieren, anstatt sie zu bearbeiten.
 
 
 
@@ -119,10 +119,10 @@ Wenn die Anwendung einer Transformation diese Tabelle hinzufügt, empfängt das 
 | <span id="Bits_07"></span><span id="bits_07"></span><span id="BITS_07"></span>Bits 0 7<br/>         | Hexadezimal: 0x0000 0x0100<br/> Dezimal: 0 255<br/> Spaltenbreite<br/>                                                                                                                                                                                                                                  |
 | <span id="Bit_8"></span><span id="bit_8"></span><span id="BIT_8"></span>Bit 8<br/>                  | Hexadezimal: 0x0100<br/> Dezimal: 256<br/> Eine persistente Spalte. 0 (null) bedeutet eine temporäre Spalte. <br/>                                                                                                                                                                                                   |
 | <span id="Bit_9"></span><span id="bit_9"></span><span id="BIT_9"></span>Bit 9<br/>                  | Hexadezimal: 0x0200<br/> Dezimal: 1023<br/> Eine lokalisierbare Spalte. Null bedeutet, dass die Spalte nicht lokalisiert werden kann.<br/>                                                                                                                                                                                      |
-| <span id="Bits_1011"></span><span id="bits_1011"></span><span id="BITS_1011"></span>Bits 10 11<br/> | Hexadezimal: 0x0000<br/> Dezimal: 0<br/> Lange ganze Zahl<br/> Hexadezimal: 0x0400<br/> Dezimal: 1024<br/> Kurze ganze Zahl<br/> Hexadezimal: 0x0800<br/> Dezimalzahl: 2048<br/> Binäres Objekt<br/> Hexadezimal: 0x0C00<br/> Dezimal: 3072<br/> String<br/> |
-| <span id="Bit_12"></span><span id="bit_12"></span><span id="BIT_12"></span>Bit 12<br/>              | Hexadezimal: 0x1000<br/> Dezimalzahl: 4096<br/> Nullable-Spalte. Null bedeutet, dass die Spalte nicht NULL-Werte zu enthalten hat.<br/>                                                                                                                                                                                               |
+| <span id="Bits_1011"></span><span id="bits_1011"></span><span id="BITS_1011"></span>Bits 10 11<br/> | Hexadezimal: 0x0000<br/> Dezimal: 0<br/> Lange ganze Zahl<br/> Hexadezimal: 0x0400<br/> Decimal: 1024<br/> Kurze ganze Zahl<br/> Hexadezimal: 0x0800<br/> Decimal: 2048<br/> Binäres Objekt<br/> Hexadezimal: 0x0C00<br/> Dezimalzahl: 3072<br/> String<br/> |
+| <span id="Bit_12"></span><span id="bit_12"></span><span id="BIT_12"></span>Bit 12<br/>              | Hexadezimal: 0x1000<br/> Decimal: 4096<br/> Nullable-Spalte. 0 (null) bedeutet, dass die Spalte nicht NULL-Werte zugibt.<br/>                                                                                                                                                                                               |
 | <span id="Bit_13"></span><span id="bit_13"></span><span id="BIT_13"></span>Bit 13<br/>              | Hexadezimal: 0x2000<br/> Dezimalzahl: 8192<br/> Primärschlüsselspalte. Null bedeutet, dass diese Spalte kein Primärschlüssel ist.<br/>                                                                                                                                                                                      |
-| <span id="Bits_1415"></span><span id="bits_1415"></span><span id="BITS_1415"></span>Bits 14 15<br/> | Hexadezimal: 0x4000 0x8000<br/> Dezimalzahl: 16384 32768<br/> Reserviert<br/>                                                                                                                                                                                                                                |
+| <span id="Bits_1415"></span><span id="bits_1415"></span><span id="BITS_1415"></span>Bits 14 15<br/> | Hexadezimal: 0x4000 0x8000<br/> Decimal: 16384 32768<br/> Reserviert<br/>                                                                                                                                                                                                                                |
 
 
 

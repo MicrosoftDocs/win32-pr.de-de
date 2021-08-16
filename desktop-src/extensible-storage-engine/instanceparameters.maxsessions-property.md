@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: InstanceParameters.MaxSessions-Eigenschaft'
-title: InstanceParameters.MaxSessions-Eigenschaft
+description: 'Weitere Informationen: InstanceParameters.MaxSessions-Eigenschaft'
+title: InstanceParameters.MaxSessions(Eigenschaft)
 TOCTitle: 'MaxSessions property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.InstanceParameters.MaxSessions
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.instanceparameters.maxsessions(v=EXCHG.10)
@@ -33,9 +33,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118767881"
 ---
-# <a name="instanceparametersmaxsessions-property"></a>InstanceParameters.MaxSessions-Eigenschaft
+# <a name="instanceparametersmaxsessions-property"></a>InstanceParameters.MaxSessions(Eigenschaft)
 
-Ruft die Anzahl der für diese Instanz reservierten Sitzungsressourcen ab oder legt diese fest. Eine Sitzungsressource entspricht direkt einem JET_SESID.
+Ruft die Anzahl der Sitzungsressourcen ab, die für diese Instanz reserviert sind, oder legt diese fest. Eine Sitzungsressource entspricht direkt einem JET_SESID.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)

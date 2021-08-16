@@ -1,9 +1,9 @@
 ---
-title: UDM_GETRANGE (Commctrl.h)
+title: UDM_GETRANGE Meldung (Commctrl.h)
 description: Ruft die minimalen und maximalen Positionen (Bereich) für ein Auf-Ab-Steuerelement ab.
 ms.assetid: fd42538a-8d96-4a9c-a1db-07c3e9afef84
 keywords:
-- UDM_GETRANGE meldungssteuerelemente Windows
+- UDM_GETRANGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -37,7 +37,7 @@ Ruft die minimalen und maximalen Positionen (Bereich) für ein Auf-Ab-Steuerelem
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein 32-Bit-Wert, der die minimalen und maximalen Positionen enthält. LoWORD [**ist**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) die maximale Position für das Steuerelement, und [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) ist die Mindestposition.
+Der Rückgabewert ist ein 32-Bit-Wert, der die minimalen und maximalen Positionen enthält. [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist die maximale Position für das Steuerelement, und [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) ist die Mindestposition.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Der Rückgabewert ist ein 32-Bit-Wert, der die minimalen und maximalen Positione
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

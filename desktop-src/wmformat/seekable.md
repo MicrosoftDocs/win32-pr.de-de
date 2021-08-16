@@ -1,9 +1,9 @@
 ---
-title: Seekable
-description: Das Seekable-Attribut ist ein Attribut auf Dateiebene, das angibt, ob eine Anwendung nach Punkten innerhalb des Inhalts suchen kann.
+title: Suchbar
+description: Das Seekable-Attribut ist ein Attribut auf Dateiebene, das an gibt, ob eine Anwendung nach Punkten innerhalb des Inhalts suchen kann.
 ms.assetid: 9653e368-4782-4506-9c44-54c9406b61b5
 keywords:
-- Suchbare Fenster – Medienformat
+- Suchbares Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -19,9 +19,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118699986"
 ---
-# <a name="seekable"></a>Seekable
+# <a name="seekable"></a>Suchbar
 
-Das **Seekable-Attribut** ist ein Attribut auf Dateiebene, das angibt, ob eine Anwendung nach Punkten innerhalb des Inhalts suchen kann.
+Das **Seekable-Attribut** ist ein Attribut auf Dateiebene, das an gibt, ob eine Anwendung nach Punkten innerhalb des Inhalts suchen kann.
 
 ## <a name="global-constant"></a>Globale Konstante
 
@@ -37,7 +37,7 @@ Dies ist ein codiertes Attribut.
 
 Dieses Attribut kann nicht auf Dateiebene dupliziert werden. Wenn dieses Attribut für einen einzelnen Stream verwendet wird, wird es als benutzerdefinierte Metadaten behandelt und vermittelt den Objekten des Windows Media Format SDK nicht seine normale Bedeutung.
 
-Der Wert dieses Attributs für eine Datei kann abhängig von dem Objekt variieren, das die [**IWMHeaderInfo-**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmheaderinfo) oder [**IWMHeaderInfo3-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmheaderinfo3) verfügbar macht, die zum Abrufen verwendet wird. Dies liegt daran, dass die Readerobjekte (sowohl synchron als auch asynchron) eine gründlichere Überprüfung durchführen als das Metadaten-Editor-Objekt, um festzustellen, ob Sie zu einem Punkt in einer Datei suchen können. Der von einem Readerobjekt zurückgegebene **Seekable-Attributwert** ist genauer.
+Der Wert dieses Attributs für eine Datei kann je nach Objekt variieren, das die ZUM Abrufen verwendete [**IWMHeaderInfo-**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmheaderinfo) oder [**IWMHeaderInfo3-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmheaderinfo3) verfügbar machen. Dies liegt daran, dass die Readerobjekte (synchron und asynchron) eine gründlichere Überprüfung durchführen als das Metadaten-Editor-Objekt, um festzustellen, ob Sie einen Punkt in einer Datei suchen können. Der **von einem Readerobjekt** zurückgegebene Seekable-Attributwert ist genauer.
 
 ## <a name="see-also"></a>Weitere Informationen
 

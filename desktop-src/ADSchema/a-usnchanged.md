@@ -1,11 +1,11 @@
 ---
 title: USN-Changed-Attribut
-description: Die vom lokalen Verzeichnis zugewiesene Update Sequenznummer (Update Sequence Number, US-v) für die letzte Änderung, einschließlich der Erstellung. Siehe auch.
+description: Die vom lokalen Verzeichnis zugewiesene Updatesequenznummer (USN) für die letzte Änderung, einschließlich erstellung. Siehe auch , USN-created.
 ms.assetid: ccd61940-2c0a-4d46-af9f-5f23f577a1ad
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für USN-Changed-Attribut
-- AD-Schema für das Attribut "Attribut"
+- USN-Changed AD-Attributschema
+- AD-Schema des uSNChanged-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a0c00f30a2ba7ca38f78246cd14b33ea358da6fa
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 2b6dba5a70417c06a1ce7a5db72621d36bdc6279c4d4ebc0582e9fb6b8fd9644
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922880"
 ---
 # <a name="usn-changed-attribute"></a>USN-Changed-Attribut
 
-Die vom lokalen Verzeichnis zugewiesene Update Sequenznummer (Update Sequence Number, US-v) für die letzte Änderung, einschließlich der Erstellung. Siehe [**auch.**](a-usncreated.md)
+Die vom lokalen Verzeichnis zugewiesene Updatesequenznummer (USN) für die letzte Änderung, einschließlich erstellung. Siehe auch , [**USN-erstellt.**](a-usncreated.md)
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | USN-Changed                          |
-| LDAP-Display-Name | uSNChanged                           |
+| Ldap-Anzeigename | uSNChanged                           |
 | Size              | 8 Bytes                              |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.     |
-| Aktualisierungshäufigkeit  | Wenn das Objekt geändert wird.          |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.     |
+| Updatehäufigkeit  | Wenn das Objekt geändert wird.          |
 | Attribute-Id      | 1.2.840.113556.1.2.120               |
 | System-ID-GUID    | bf967a6f-0de6-11d0-a285-00aa003049e2 |
 | Syntax            | [**Intervall**](s-interval.md)       |
@@ -43,7 +43,7 @@ Die vom lokalen Verzeichnis zugewiesene Update Sequenznummer (Update Sequence Nu
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,11 +58,11 @@ Die vom lokalen Verzeichnis zugewiesene Update Sequenznummer (Update Sequence Nu
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x8029                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | Richtig                            |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
+| Ist indiziert             | True                            |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000009                      |
@@ -71,7 +71,7 @@ Die vom lokalen Verzeichnis zugewiesene Update Sequenznummer (Update Sequence Nu
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,11 +79,11 @@ Die vom lokalen Verzeichnis zugewiesene Update Sequenznummer (Update Sequence Nu
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x8029                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | Richtig                            |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
+| Ist indiziert             | True                            |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000009                      |
@@ -100,11 +100,11 @@ Die vom lokalen Verzeichnis zugewiesene Update Sequenznummer (Update Sequence Nu
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x8029                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | Richtig                            |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
+| Ist indiziert             | True                            |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000009                      |
@@ -121,11 +121,11 @@ Die vom lokalen Verzeichnis zugewiesene Update Sequenznummer (Update Sequence Nu
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x8029                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | Richtig                            |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | True                            |
+| Is-Single-Valued       | True                            |
+| Ist indiziert             | True                            |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000009                      |
@@ -142,11 +142,11 @@ Die vom lokalen Verzeichnis zugewiesene Update Sequenznummer (Update Sequence Nu
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x8029                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | Richtig                            |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | True                            |
+| Is-Single-Valued       | True                            |
+| Ist indiziert             | True                            |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000009                      |
@@ -163,11 +163,11 @@ Die vom lokalen Verzeichnis zugewiesene Update Sequenznummer (Update Sequence Nu
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x8029                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | Richtig                            |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | True                            |
+| Is-Single-Valued       | True                            |
+| Ist indiziert             | True                            |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000009                      |
@@ -184,11 +184,11 @@ Die vom lokalen Verzeichnis zugewiesene Update Sequenznummer (Update Sequence Nu
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x8029                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | Richtig                            |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | True                            |
+| Is-Single-Valued       | True                            |
+| Ist indiziert             | True                            |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000009                      |

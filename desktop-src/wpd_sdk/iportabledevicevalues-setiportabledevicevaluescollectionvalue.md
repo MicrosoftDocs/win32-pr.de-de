@@ -1,5 +1,5 @@
 ---
-description: Die SetIPortableDeviceValuesCollectionValue-Methode fügt einen neuen IPortableDeviceValuesCollection-Wert (Typ VT UNKNOWN) hinzu oder überschreibt einen \_ vorhandenen.
+description: Die SetIPortableDeviceValuesCollectionValue-Methode fügt einen neuen IPortableDeviceValuesCollection-Wert (Typ VT UNKNOWN) hinzu \_ oder überschreibt einen vorhandenen Wert.
 ms.assetid: 29bdecaa-4820-4b1d-be59-ae82f7715a53
 title: IPortableDeviceValues::SetIPortableDeviceValuesCollectionValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118697088"
 ---
 # <a name="iportabledevicevaluessetiportabledevicevaluescollectionvalue-method"></a>IPortableDeviceValues::SetIPortableDeviceValuesCollectionValue-Methode
 
-Die **SetIPortableDeviceValuesCollectionValue-Methode** fügt einen neuen **IPortableDeviceValuesCollection-Wert** (Typ VT UNKNOWN) hinzu oder überschreibt einen \_ vorhandenen.
+Die **SetIPortableDeviceValuesCollectionValue-Methode** fügt einen neuen **IPortableDeviceValuesCollection-Wert** (Typ VT UNKNOWN) hinzu \_ oder überschreibt einen vorhandenen Wert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ HRESULT SetIPortableDeviceValuesCollectionValue(
 
 <dl> <dt>
 
-*Key* \[ In\]
+*key* \[ In\]
 </dt> <dd>
 
-Ein **REFPROPERTYKEY-Objekt,** das das zu erstellende oder zu überschreibende Element angibt.
+Ein **REFPROPERTYKEY,** der das zu erstellende oder zu überschreibende Element angibt.
 
 </dd> <dt>
 
 *pValue* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine **IPortableDeviceValuesCollection-Schnittstelle,** die den neuen Wert angibt. Das SDK kopiert einen Verweis auf die übermittelte Schnittstelle und ruft **AddRef darauf** auf.
+Zeiger auf eine **IPortableDeviceValuesCollection-Schnittstelle,** die den neuen Wert angibt. Das SDK kopiert einen Verweis auf die übermittelte Schnittstelle und ruft **AddRef** darauf auf.
 
 </dd> </dl>
 
@@ -71,7 +71,7 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn ein vorhandener Wert über denselben  Schlüssel verfügt, der vom Schlüsselparameter angegeben wird, überschreibt er den vorhandenen Wert ohne Warnung. Der vorhandene Schlüsselspeicher wird entsprechend freigegeben.
+Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der vom *Schlüsselparameter* angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben. Der vorhandene Schlüsselspeicher wird entsprechend freigegeben.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -45,7 +45,7 @@ HRESULT GetTexelMap(
 
 Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***
 
-Zeiger auf die Position in Pixeltexturkoordinaten (u, v), an der sich jedes Texel befindet.
+Zeiger auf die Position in Pixel-Texturkoordinaten (u, v), an der sich die einzelnen Texel befinden.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Zeiger auf die Position in Pixeltexturkoordinaten (u, v), an der sich jedes Texe
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben. D3DERR \_ INVALIDCALL
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, wird der folgende Wert zurückgegeben. D3DERR \_ INVALIDCALL
 
 ## <a name="remarks"></a>Hinweise
 
-Für [**die Texel der Klasse 2 und 4**](id3dxtexturegutterhelper.md)entsprechen die zurückgegebenen Texturkoordinaten (u, v) dem nächstgelegenen Punkt auf dem nächsten Dreieck.
+Für Die Texturkoordinaten der Klassen 2 und [**4**](id3dxtexturegutterhelper.md)entsprechen die zurückgegebenen Texturkoordinaten (u, v) dem nächstgelegenen Punkt am nächsten Dreieck.
 
 Die Anwendung muss pTexelData zuordnen und verwalten.
 

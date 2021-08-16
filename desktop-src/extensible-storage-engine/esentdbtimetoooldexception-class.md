@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentDbTimeTooOldException-Klasse'
+description: 'Weitere Informationen zu: EsentDbTimeTooOldException-Klasse'
 title: EsentDbTimeTooOldException-Klasse
 TOCTitle: EsentDbTimeTooOldException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentDbTimeTooOldException

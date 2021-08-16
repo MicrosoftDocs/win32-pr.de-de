@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_INSTANCE_INFO.cDatabases-Eigenschaft'
+description: 'Weitere Informationen zu: JET_INSTANCE_INFO.cDatabases-Eigenschaft'
 title: JET_INSTANCE_INFO.cDatabases-Eigenschaft
 TOCTitle: 'cDatabases property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_INSTANCE_INFO.cDatabases
@@ -68,6 +68,6 @@ Typ: [System.Int32](/dotnet/api/system.int32)
 
 [JET_INSTANCE_INFO-Klasse](./jet-instance-info-class.md)
 
-[JET_INSTANCE_INFO Member](./jet-instance-info-members.md)
+[JET_INSTANCE_INFO-Member](./jet-instance-info-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

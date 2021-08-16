@@ -1,34 +1,34 @@
 ---
-description: Massen Verschlüsselung und Mac-Schlüssel werden von einem Hauptschlüssel abgeleitet, können aber auch andere Quellen enthalten, je nach verwendetem Protokoll und Chiffre Sammlung.
+description: Massenverschlüsselung und MAC-Schlüssel werden von einem Hauptschlüssel abgeleitet, können aber abhängig vom verwendeten Protokoll und der verwendeten Verschlüsselungssammlung auch andere Quellen enthalten.
 ms.assetid: f78acb54-c32a-46a8-b465-855251069a57
-title: Ableiten von Massen Verschlüsselung und Mac-Schlüsseln
+title: Ableiten von Massenverschlüsselung und MAC-Schlüsseln
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 97cbf216fd850c7b98c638d4fdc10a84087d91ac
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 602419be7cdddea27c190806f0d03e087b8aac63eeeee2d80e96e2b3bcfae561
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106354927"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117767704"
 ---
-# <a name="deriving-bulk-encryption-and-mac-keys"></a>Ableiten von Massen Verschlüsselung und Mac-Schlüsseln
+# <a name="deriving-bulk-encryption-and-mac-keys"></a>Ableiten von Massenverschlüsselung und MAC-Schlüsseln
 
-[*Massen Verschlüsselung*](../secgloss/b-gly.md) und [*Mac-Schlüssel*](../secgloss/m-gly.md) werden von einem [*Hauptschlüssel*](../secgloss/m-gly.md) abgeleitet, können aber auch andere Quellen enthalten, je nach verwendetem Protokoll und Chiffre Sammlung.
+[*Massenverschlüsselung und*](../secgloss/b-gly.md) [*MAC-Schlüssel*](../secgloss/m-gly.md) werden von einem [*Hauptschlüssel abgeleitet,*](../secgloss/m-gly.md) können aber abhängig vom verwendeten Protokoll und der verwendeten Verschlüsselungssammlung auch andere Quellen enthalten.
 
-Der Prozess der Ableitung von Massen Verschlüsselung und Mac-Schlüsseln ist für Client und Server identisch:
+Der Prozess der Ableitung von Massenverschlüsselung und MAC-Schlüsseln ist für Client und Server identisch:
 
-1.  Die Protokoll-Engine ruft " [**cryptsetkeyparam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsetkeyparam) " einmal oder mehrmals für den Hauptschlüssel auf, um dem CSP die zum Erstellen der Schlüssel erforderlichen Informationen bereitzustellen.
-2.  Da [*kryptoapi*](../secgloss/c-gly.md) -Schlüssel nicht direkt von anderen Schlüsseln abgeleitet werden können, wird mithilfe von [**cryptkreatehash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash)ein Hash Objekt aus dem Hauptschlüssel erstellt. Dieser [*Hash*](../secgloss/h-gly.md) wird verwendet, um die neuen Schlüssel zu erstellen.
-3.  Die beiden Massen Verschlüsselungsschlüssel und die beiden Mac-Schlüssel werden aus dem "Master Hash"-Objekt mithilfe von vier Aufrufen von " [**CryptDeriveKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptderivekey)" erstellt.
+1.  Die Protokoll-Engine ruft [**CryptSetKeyParam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsetkeyparam) mindestens einmal auf dem Hauptschlüssel auf, um dem CSP die Informationen zur Verfügung zu stellen, die zum Erstellen der Schlüssel erforderlich sind.
+2.  Da [*CryptoAPI-Schlüssel*](../secgloss/c-gly.md) nicht direkt von anderen Schlüsseln abgeleitet werden können, wird mithilfe von [**CryptCreateHash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash)ein Hashobjekt aus dem Hauptschlüssel erstellt. Dieser [*Hash*](../secgloss/h-gly.md) wird verwendet, um die neuen Schlüssel zu erstellen.
+3.  Die beiden Massenverschlüsselungsschlüssel und die beiden MAC-Schlüssel werden aus dem Masterhashobjekt mit vier Aufrufen von [**CryptDeriveKey erstellt.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptderivekey)
 
 > [!Note]
-> Beim Durchführen der SSL-erneuten Verbindungs Herstellung kann eine Protokoll-Engine das oben beschriebene Verfahren mehrmals mit demselben Hauptschlüssel ausführen. Dies ermöglicht es dem Client und dem Server, mehrere, häufig gleichzeitige Verbindungen zu verwenden, die jeweils unterschiedliche [*Massen Verschlüsselung*](../secgloss/b-gly.md) und Mac-Schlüssel ohne zusätzliche RSA-oder Diffie-Hellman Vorgänge verwenden.
+> Bei erneuten SSL-Verbindungen kann eine Protokoll-Engine das oben beschriebene Verfahren mehrmals mit demselben Hauptschlüssel ausführen. Dadurch können Client und Server über mehrere, häufig gleichzeitige Verbindungen verfügen, die jeweils unterschiedliche Massenverschlüsselungs- und MAC-Schlüssel ohne zusätzliche RSA- oder Diffie-Hellman verwenden. [](../secgloss/b-gly.md)
 > 
-> Alle CSPs müssen gute Thread sichere Verfahren verwenden. Die Thread Anzahl von mehreren Dutzend ist nicht ungewöhnlich.
+> Alle CSPs müssen gute threadsichere Methoden verwenden. Die Threadanzahl von mehreren Dutzenden ist nicht ungewöhnlich.
 
  
 
-Der folgende Code ist der typische Quellcode für die Protokoll-Engine:
+Im Folgenden finden Sie einen typischen Quellcode für die Protokoll-Engine:
 
 
 ```C++

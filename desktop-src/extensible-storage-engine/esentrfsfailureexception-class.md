@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentRfsFailureException-Klasse'
+description: 'Weitere Informationen finden Sie unter: EsentRfsFailureException-Klasse'
 title: EsentRfsFailureException-Klasse
 TOCTitle: EsentRfsFailureException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentRfsFailureException

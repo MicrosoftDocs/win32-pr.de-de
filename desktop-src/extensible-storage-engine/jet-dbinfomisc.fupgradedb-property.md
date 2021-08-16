@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_DBINFOMISC.fUpgradeDb-Eigenschaft'
+description: 'Weitere Informationen zu: JET_DBINFOMISC.fUpgradeDb-Eigenschaft'
 title: JET_DBINFOMISC.fUpgradeDb-Eigenschaft
 TOCTitle: 'fUpgradeDb property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.fUpgradeDb
@@ -35,7 +35,7 @@ ms.locfileid: "118766392"
 ---
 # <a name="jet_dbinfomiscfupgradedb-property"></a>JET_DBINFOMISC.fUpgradeDb-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob die Datenbank aktualisiert wird. Dieser Wert ist nur für die interne Verwendung.
+Ruft einen Wert ab, der angibt, ob die Datenbank aktualisiert wird. Dieser Wert ist nur für die interne Verwendung vorgesehen.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -68,6 +68,6 @@ Typ: [System.Boolean](/dotnet/api/system.boolean)
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[JET_DBINFOMISC Mitglieder](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC-Member](./jet-dbinfomisc-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

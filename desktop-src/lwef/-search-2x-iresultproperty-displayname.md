@@ -27,7 +27,7 @@ ms.locfileid: "118755162"
 # <a name="iresultpropertydisplayname-property"></a>IResultProperty::D isplayName-Eigenschaft
 
 > [!NOTE]
-> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API.](../search/-search-reference-entry-page.md) 
+> Windows DesktopSuche 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows-Suche-API.](../search/-search-reference-entry-page.md) 
 
 Lokalisierter Anzeigename der Eigenschaft.
 

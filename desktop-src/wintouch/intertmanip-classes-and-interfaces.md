@@ -1,42 +1,42 @@
 ---
 title: Klassen und Schnittstellen
-description: Dieser Abschnitt enthält Klassen-und Schnittstellen Verweise für Trägheit und Manipulationen.
+description: Dieser Abschnitt enthält Klassen- und Schnittstellenverweise für Trägheit und Manipulationen.
 ms.assetid: 056bcaa2-580a-457c-a0a6-e01a316dc21a
 keywords:
-- Windows-Fingereingabe, Trägheit
-- Windows-Fingereingabe, Manipulationen
-- Windows-Touchscreen, Klassen
-- Windows-Fingereingabe, Schnittstellen
+- Windows Touch,Trägheit
+- Windows Touch,Manipulationen
+- Windows Touch,Klassen
+- Windows Touch,Schnittstellen
 - Trägheit, Klassen
 - Trägheit, Schnittstellen
 - Manipulationen, Klassen
-- Manipulationen, Schnittstellen
+- Manipulationen,Schnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 91a6699f1334f46dec1da378b5424a43376d0d50
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 71b641e393a195a0ad536a415513be6f183cdc59724e44aac5cb5213838d25ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036601"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119086503"
 ---
 # <a name="classes-and-interfaces"></a>Klassen und Schnittstellen
 
-Dieser Abschnitt enthält Klassen-und Schnittstellen Verweise für Trägheit und Manipulationen.
+Dieser Abschnitt enthält Klassen- und Schnittstellenverweise für Trägheit und Manipulationen.
 
 Die folgenden Klassen und Schnittstellen werden für Trägheit und Manipulationen verwendet.
 
 
 
-| Klasse/Schnittstelle                                          | BESCHREIBUNG                                                                  |
+| Klasse/Schnittstelle                                          | Beschreibung                                                                  |
 |----------------------------------------------------------|------------------------------------------------------------------------------|
-| [**\_Imanipulationevents**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents)    | Behandelt Bearbeitungs Ereignisse.                                                 |
-| [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor)           | Behandelt Berechnungen bezüglich der Objektbewegung für Windows-Finger Eingaben.              |
-| [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) | Bietet Funktionen zum Überwachen von und reagieren auf die Eingabe von Windows-Eingaben. |
+| [**\_IManipulationEvents**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents)    | Behandelt Bearbeitungsereignisse.                                                 |
+| [**Iinertiaprocessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor)           | Verarbeitet Berechnungen zur Objektbewegung für Windows Touch.              |
+| [**Imanipulationprocessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) | Stellt Funktionen zum Überwachen und Reagieren auf Toucheingaben Windows zur Verfügung. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -45,9 +45,9 @@ Die folgenden Klassen und Schnittstellen werden für Trägheit und Manipulatione
 [Trägheit und Manipulation](inertia-and-manipulation-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

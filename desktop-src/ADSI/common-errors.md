@@ -1,6 +1,6 @@
 ---
 title: Häufige Fehler (ADSI)
-description: Alle ADSI-spezifischen Fehler haben eine Hexadezimalform von 80005xxx. Die am häufigsten aufgetretenen Fehlercodes sind in der folgenden Tabelle aufgeführt.
+description: Alle ADSI-spezifischen Fehler haben die Hexadezimalform 80005xxx. Die am häufigsten aufgetretenen Fehlercodes sind in der folgenden Tabelle aufgeführt.
 ms.assetid: fdee4f0a-b39e-4011-af4f-9fe408f6ca6c
 ms.tgt_platform: multiple
 ms.topic: article
@@ -14,11 +14,11 @@ ms.locfileid: "118692194"
 ---
 # <a name="common-errors-adsi"></a>Häufige Fehler (ADSI)
 
-Alle ADSI-spezifischen Fehler haben eine Hexadezimalform von 80005xxx. Die am häufigsten aufgetretenen Fehlercodes sind in der folgenden Tabelle aufgeführt.
+Alle ADSI-spezifischen Fehler haben die Hexadezimalform 80005xxx. Die am häufigsten aufgetretenen Fehlercodes sind in der folgenden Tabelle aufgeführt.
 
 
 
-| ADSI hexadezimaler Fehlercode | Beschreibung                                                                                                                                         |
+| Hexadezimaler ADSI-Fehlercode | Beschreibung                                                                                                                                         |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | 80005000<br/> | Ein ungültiger ADSI-Pfadname wurde übergeben. Dieser Fehler resultiert aus der Übergabe eines schlecht gebildeten ADsPath an **GetObject bei** der Bindung an ein Objekt.<br/> |
 | 8000500D<br/> | Die ADSI-Eigenschaft wurde im Eigenschaftencache nicht gefunden.<br/>                                                                                 |
@@ -53,7 +53,7 @@ Jeder Fehlercode der Hexadezimalform 8007xxxx ist ein Win32-Standardfehlercode. 
 
 **net helpmsg <number>**
 
-In der obigen Befehlszeile ist " number " die Dezimalzahl, die durch Konvertieren der letzten vier Ziffern des Fehlercodes aus &lt; &gt; hexadezimalen Zahlen ermittelt wird. Diese Befehlszeile enthält eine nützlichere Beschreibung des Win32-Fehlers, was beim Debuggen Ihres Skripts hilfreich sein kann.
+In der obigen Befehlszeile ist " number " die Dezimalzahl, die durch Konvertieren der letzten vier Ziffern des Fehlercodes aus &lt; &gt; hexadezimalen Zahlen ermittelt wird. Diese Befehlszeile enthält eine nützlichere Beschreibung des Win32-Fehlers, die beim Debuggen Ihres Skripts hilfreich sein kann.
 
  
 

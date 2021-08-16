@@ -106,7 +106,7 @@ In der folgenden Tabelle sind mögliche Parameter für das Konfigurationstool au
 </tr>
 <tr class="even">
 <td>1</td>
-<td>Standardeinstellung. Zeigt Netzwerkdatenverkehr im ansi-Format (American National Standards Institute) an.</td>
+<td>Standardeinstellung. Zeigt den Netzwerkdatenverkehr im ansi-Format (American National Standards Institute) an.</td>
 </tr>
 <tr class="odd">
 <td>2</td>

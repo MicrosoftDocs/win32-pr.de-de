@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_OPENTEMPORARYTABLE-Klasse'
-title: JET_OPENTEMPORARYTABLE-Klasse (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen zu: JET_OPENTEMPORARYTABLE-Klasse'
+title: JET_OPENTEMPORARYTABLE-Klasse (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: JET_OPENTEMPORARYTABLE class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Vista.JET_OPENTEMPORARYTABLE
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_opentemporarytable(v=EXCHG.10)
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b0fbd84c0fdd1d88f7bde3cfa95323ad6a730dcd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 421b15cb3a09716702bf05aa556565f929c7ca7740b8612caee736b25912e23f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118979657"
 ---
 # <a name="jet_opentemporarytable-class"></a>JET_OPENTEMPORARYTABLE-Klasse
 
-Eine Auflistung von Parametern für die jetopertemporarytable-Methode.
+Eine Auflistung von Parametern für die JetOpenTemporaryTable-Methode.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   Microsoft.Isam.Esent.Interop.Vista.JET_OPENTEMPORARYTABLE  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,10 +60,10 @@ public class JET_OPENTEMPORARYTABLE
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Mitglieder JET_OPENTEMPORARYTABLE](./jet-opentemporarytable-members.md)
+[JET_OPENTEMPORARYTABLE-Member](./jet-opentemporarytable-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

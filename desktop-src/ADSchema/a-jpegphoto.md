@@ -1,6 +1,6 @@
 ---
 title: jpegPhoto-Attribut
-description: Wird verwendet, um ein oder mehrere Bilder einer Person mithilfe des JPEG-Dateiaustauschformats \JFIF\ zu speichern.
+description: Wird verwendet, um ein oder mehrere Bilder einer Person mit dem JPEG-Dateiaustauschformat \ JFIF\ zu speichern.
 ms.assetid: c9257acd-366c-4839-a8c6-0ef9d6b7e671
 ms.tgt_platform: multiple
 keywords:
@@ -22,7 +22,7 @@ ms.locfileid: "119303900"
 ---
 # <a name="jpegphoto-attribute"></a>jpegPhoto-Attribut
 
-Wird verwendet, um ein oder mehrere Bilder einer Person mit dem JFIF-Format des JPEG-Dateiaustauschs \[ zu \] speichern.
+Wird verwendet, um ein oder mehrere Bilder einer Person mit dem JPEG-Dateiaustauschformat \[ JFIF zu \] speichern.
 
 
 
@@ -34,7 +34,7 @@ Wird verwendet, um ein oder mehrere Bilder einer Person mit dem JFIF-Format des 
 | Aktualisieren von Berechtigungen  | \-                                                    |
 | Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 0.9.2342.19200300.100.1.60                            |
-| System-Id-Guid    | bac80572-09c4-4fa9-9ae6-7628d7adbe0e                  |
+| System-ID-GUID    | bac80572-09c4-4fa9-9ae6-7628d7adbe0e                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -56,7 +56,7 @@ Wird verwendet, um ein oder mehrere Bilder einer Person mit dem JFIF-Format des 
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Is-Single-Valued       | False                                                                                 |
+| Ist einwertig       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
@@ -77,7 +77,7 @@ Wird verwendet, um ein oder mehrere Bilder einer Person mit dem JFIF-Format des 
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Is-Single-Valued       | False                                                                                 |
+| Ist einwertig       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
@@ -98,7 +98,7 @@ Wird verwendet, um ein oder mehrere Bilder einer Person mit dem JFIF-Format des 
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Is-Single-Valued       | False                                                                                 |
+| Ist einwertig       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |

@@ -1,5 +1,5 @@
 ---
-description: Die Aktion IsolateComponents installiert eine Kopie einer Komponente (im Allgemeinen eine freigegebene DLL) an einem privaten Speicherort zur Verwendung durch eine bestimmte Anwendung (in der Regel eine .exe).
+description: Die IsolateComponents-Aktion installiert eine Kopie einer Komponente (üblicherweise eine freigegebene DLL) an einem privaten Speicherort zur Verwendung durch eine bestimmte Anwendung (in der Regel ein .exe).
 ms.assetid: 3f39ad5d-5539-48cc-8369-bd4d3127fbdd
 title: IsolateComponents-Aktion
 ms.topic: article
@@ -13,21 +13,21 @@ ms.locfileid: "118629733"
 ---
 # <a name="isolatecomponents-action"></a>IsolateComponents-Aktion
 
-Die Aktion IsolateComponents installiert eine Kopie einer Komponente (im Allgemeinen eine freigegebene DLL) an einem privaten Speicherort zur Verwendung durch eine bestimmte Anwendung (in der Regel eine .exe). Dadurch wird die Anwendung von anderen Kopien der Komponente isoliert, die an einem freigegebenen Speicherort auf dem Computer installiert werden können. Weitere Informationen finden Sie unter [Isolierte Komponenten.](isolated-components.md)
+Die IsolateComponents-Aktion installiert eine Kopie einer Komponente (üblicherweise eine freigegebene DLL) an einem privaten Speicherort zur Verwendung durch eine bestimmte Anwendung (in der Regel ein .exe). Dadurch wird die Anwendung von anderen Kopien der Komponente isoliert, die möglicherweise an einem freigegebenen Speicherort auf dem Computer installiert werden. Weitere Informationen finden Sie unter [Isolierte Komponenten.](isolated-components.md)
 
-Die Aktion bezieht sich auf jeden Datensatz der [IsolatedComponent-Tabelle](isolatedcomponent-table.md) und ordnet die Dateien der Komponente, die im Feld Freigegebene Komponente aufgeführt sind, der komponente zu, die im Feld \_ Komponentenanwendung \_ aufgeführt ist. Das Installationsprogramm installiert die Dateien von Component \_ Shared im gleichen Verzeichnis wie die \_ Komponentenanwendung. Das Installationsprogramm generiert eine Datei in diesem Verzeichnis mit einer Länge von 0 Bytes, bei der der kurze Dateiname der Schlüsseldatei für die Komponentenanwendung (in der Regel der gleiche Dateiname wie die .exe) mit \_ .local angefügt wird. Die IsolatedComponent-Aktion wirkt sich nicht auf die Installation der Komponentenanwendung \_ aus. Durch das Deinstallieren \_ der Komponentenanwendung werden auch die freigegebenen \_ Komponentendateien und die LOCAL-Datei aus dem Verzeichnis entfernt.
+Die Aktion bezieht sich auf jeden Datensatz der [Tabelle IsolatedComponent](isolatedcomponent-table.md) und ordnet die Dateien der Komponente, die im Feld Komponente freigegeben aufgeführt ist, \_ der Komponente zu, die im Feld Komponentenanwendung aufgeführt \_ ist. Das Installationsprogramm installiert die Dateien von Component \_ Shared in demselben Verzeichnis wie die \_ Komponentenanwendung. Das Installationsprogramm generiert eine Datei in diesem Verzeichnis mit einer Länge von 0 Byte, wobei der kurze Dateiname der Schlüsseldatei für \_ komponentenanwendung (in der Regel ist dies derselbe Dateiname wie der .exe) mit .local angefügt wird. Die IsolatedComponent-Aktion wirkt sich nicht auf die Installation der \_ Komponentenanwendung aus. Durch das Deinstallieren der \_ Komponentenanwendung werden auch die \_ freigegebenen Komponentendateien und die LOKALE DATEI aus dem Verzeichnis entfernt.
 
 ## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die IsolateComponents-Aktion kann nur in der [InstallUISequence-Tabelle](installuisequence-table.md) und der [InstallExecuteSequence-Tabelle verwendet werden.](installexecutesequence-table.md) Diese Aktion muss nach der [CostInitialize-Aktion](costinitialize-action.md) und vor der [CostFinalize-Aktion stehen.](costfinalize-action.md)
+Die IsolateComponents-Aktion kann nur in der [Tabelle InstallUISequence](installuisequence-table.md) und der [Tabelle InstallExecuteSequence](installexecutesequence-table.md)verwendet werden. Diese Aktion muss nach der [CostInitialize-Aktion](costinitialize-action.md) und vor der [CostFinalize-Aktion](costfinalize-action.md)erfolgen.
 
-## <a name="actiondata-messages"></a>ActionData-Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
-Es sind keine ActionData-Meldungen enthalten.
+Es sind keine ActionData-Meldungen vorhanden.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die Spalte Bedingung für die Aktion IsolateComponents als TRUE ausgewertet wird oder leer gelassen wird, isoliert das Installationsprogramm alle Komponenten, die in der [IsolatedComponent-Tabelle aufgeführt sind.](isolatedcomponent-table.md) Wenn die Spalte Bedingung falseist, ignoriert das Installationsprogramm die Tabelle IsolatedComponent und gibt die Komponenten wie gewohnt weiter. Die [**RedirectedDllSupport-Eigenschaft**](redirecteddllsupport.md) kann verwendet werden, um diese Aktion bedingungsbar zu machen. Weitere Informationen finden Sie unter [Verwenden einer Sequenztabelle.](using-a-sequence-table.md)
+Wenn die Spalte Bedingung für die IsolateComponents-Aktion zu True ausgewertet wird oder leer gelassen wird, isoliert das Installationsprogramm alle Komponenten, die in der [Tabelle IsolatedComponent](isolatedcomponent-table.md)aufgeführt sind. Wenn die Spalte Bedingung als False ausgewertet wird, ignoriert das Installationsprogramm die Tabelle IsolatedComponent und gibt die üblichen Komponenten gemeinsam. Die [**RedirectedDllSupport-Eigenschaft**](redirecteddllsupport.md) kann verwendet werden, um diese Aktion zu bedingungslos zu machen. Weitere Informationen finden Sie unter [Verwenden einer Sequenztabelle.](using-a-sequence-table.md)
 
  
 

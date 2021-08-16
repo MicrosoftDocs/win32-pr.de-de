@@ -1,33 +1,33 @@
 ---
-description: Zum Erstellen eines WMI- \_ \_ Ereignisconsumeranbieters müssen Sie die Win32Provider-Instanz, die den Anbieter darstellt, mithilfe einer Instanz von \_ \_ eventconsumerproviderregistration registrieren.
+description: Zum Erstellen eines WMI-Ereignisconsumeranbieters müssen Sie die \_ \_ Win32Provider-Instanz registrieren, die Ihren Anbieter darstellt, indem Sie eine Instanz von \_ \_ EventConsumerProviderRegistration verwenden.
 ms.assetid: d1aa035c-f9ee-46b5-9fa5-8af77156f904
 ms.tgt_platform: multiple
-title: Registrieren eines Ereignisconsumeranbieters
+title: Registrieren eines Ereignisverbraucheranbieters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: df6bf47e11b1b9df072f9efbca0ba0f620e96d78
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1922970838b99e2a4a371ed7b00ae0f506a0381f0018509bfd6874074e0dd8f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992541"
 ---
-# <a name="registering-an-event-consumer-provider"></a>Registrieren eines Ereignisconsumeranbieters
+# <a name="registering-an-event-consumer-provider"></a>Registrieren eines Ereignisverbraucheranbieters
 
-Zum Erstellen eines WMI- [*Ereignisconsumeranbieters*](gloss-e.md) müssen Sie die [**\_ \_ Win32Provider**](--win32provider.md) -Instanz, die den Anbieter darstellt, mithilfe einer Instanz von [**\_ \_ eventconsumerproviderregistration**](--eventconsumerproviderregistration.md)registrieren. Als COM-Objekt muss sich Ihr Anbieter beim Betriebssystem und WMI registrieren. Im folgenden Verfahren wird davon ausgegangen, dass Sie den Registrierungsprozess bereits implementiert haben, wie unter [Registrieren eines Anbieters](registering-a-provider.md)beschrieben.
+Zum Erstellen eines [*WMI-Ereignisconsumeranbieters*](gloss-e.md) müssen Sie die [**\_ \_ Win32Provider-Instanz**](--win32provider.md) registrieren, die Ihren Anbieter darstellt, indem Sie eine Instanz von [**\_ \_ EventConsumerProviderRegistration**](--eventconsumerproviderregistration.md)verwenden. Als COM-Objekt muss sich Ihr Anbieter beim Betriebssystem und WMI registrieren. Im folgenden Verfahren wird davon ausgegangen, dass Sie den Registrierungsprozess bereits implementiert haben, wie unter [Registrieren eines Anbieters](registering-a-provider.md)beschrieben.
 
-Im folgenden Verfahren wird beschrieben, wie ein Ereignisconsumeranbieter registriert wird.
+Im folgenden Verfahren wird beschrieben, wie Sie einen Ereignisverbraucheranbieter registrieren.
 
-**So registrieren Sie einen Ereignisconsumeranbieter**
+**So registrieren Sie einen Ereignisverbraucheranbieter**
 
-1.  Erstellen Sie eine Instanz der [**\_ \_ Win32Provider**](--win32provider.md) -Klasse, die den Anbieter beschreibt.
-2.  Erstellen Sie eine Instanz der [**\_ \_ eventconsumerproviderregistration**](--eventconsumerproviderregistration.md) -Klasse, die den Funktions Satz des Anbieters beschreibt.
+1.  Erstellen Sie eine Instanz der [**\_ \_ Win32Provider-Klasse,**](--win32provider.md) die den Anbieter beschreibt.
+2.  Erstellen Sie eine Instanz der [**\_ \_ EventConsumerProviderRegistration-Klasse,**](--eventconsumerproviderregistration.md) die den Featuresatz des Anbieters beschreibt.
 
-    Die Eigenschaften, die von [**\_ \_ eventconsumerproviderregistration**](--eventconsumerproviderregistration.md) definiert werden, enthalten den Objekt Pfad zum Anbieter und die Namen der logischen Consumerklassen, die vom Ereignisconsumeranbieter unterstützt werden.
+    Die von [**\_ \_ EventConsumerProviderRegistration definierten**](--eventconsumerproviderregistration.md) Eigenschaften enthalten den Objektpfad zum Anbieter und die Namen der logischen Consumerklassen, die der Ereignisconsumeranbieter unterstützt.
 
-    Stellen Sie sicher, dass Sie die-Klasse mit dem **dynamischen** und dem [**Anbieter Qualifizierer**](/windows/desktop/api/Provider/nl-provider-provider) markieren. Der **dynamische** Qualifizierer signalisiert, dass WMI einen Anbieter zum Abrufen der Klassen Instanzen verwenden soll. Der **Anbieter Qualifizierer** gibt den Namen des Anbieters an, der von WMI verwendet werden soll.
+    Achten Sie darauf, die -Klasse mit den **Qualifizierern Dynamic** und [**Provider**](/windows/desktop/api/Provider/nl-provider-provider) zu kennzeichnen. Der **dynamische** Qualifizierer signalisiert, dass WMI einen Anbieter verwenden soll, um die Klasseninstanzen abzurufen. Der **Anbieterqualifizierer** gibt den Namen des Anbieters an, den WMI verwenden soll.
 
-Im folgenden Codebeispiel wird gezeigt, wie ein Ereignisconsumeranbieter registriert wird.
+Das folgende Codebeispiel zeigt, wie sie einen Ereignisverbraucheranbieter registrieren.
 
 ``` syntax
 // Provider registration.

@@ -1,5 +1,5 @@
 ---
-description: Der Modus für den Weißabgleich zum Zeitpunkt der Aufnahme des Fotos, der aus den ExIF-Informationen (Exchangeable Image File) übernommen wurde.
+description: Der Weißabgleichmodus zum Zeitpunkt der Aufnahme des Fotos, wie aus den EXIF-Informationen (Exchangeable Image File) entnommen.
 ms.assetid: efa1f1db-b99e-49c1-b9ff-3e9e0e98905c
 title: System.Photo.WhiteBalance
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118723168"
 ---
 # <a name="systemphotowhitebalance"></a>System.Photo.WhiteBalance
 
-Der Modus für den Weißabgleich zum Zeitpunkt der Aufnahme des Fotos, der aus den ExIF-Informationen (Exchangeable Image File) übernommen wurde.
+Der Weißabgleichmodus zum Zeitpunkt der Aufnahme des Fotos, wie aus den EXIF-Informationen (Exchangeable Image File) entnommen.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7
 

@@ -37,7 +37,7 @@ void Store4(
 
 <dl> <dt>
 
-*address* \[ In\]
+*Adresse* \[ In\]
 </dt> <dd>
 
 Typ: **uint**

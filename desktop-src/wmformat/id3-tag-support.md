@@ -1,12 +1,12 @@
 ---
-title: UNTERSTÜTZUNG FÜR ID3-Tags
-description: UNTERSTÜTZUNG FÜR ID3-Tags
+title: ID3-Tagunterstützung
+description: ID3-Tagunterstützung
 ms.assetid: 57119b88-5901-4bea-abf6-a67fe71afd1b
 keywords:
 - Windows Medienformat-SDK, Attribute
 - Advanced Systems Format (ASF), Attribute
 - ASF (Advanced Systems Format), Attribute
-- Attribute,ID3-Tags
+- Attribute, ID3-Tags
 - ID3-Tags
 ms.topic: article
 ms.date: 05/31/2018
@@ -17,9 +17,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118703025"
 ---
-# <a name="id3-tag-support"></a>UNTERSTÜTZUNG FÜR ID3-Tags
+# <a name="id3-tag-support"></a>ID3-Tagunterstützung
 
-In der folgenden Tabelle sind alle Attribute aufgeführt, die ID3-Tags entsprechen. Wenn Sie die ID3-Tags als Attribute anstelle der Standardattributnamen verwenden möchten, fügen Sie dem Tagnamen das Präfix "ID3/" hinzu. Beispielsweise entspricht "ID3/TPE2" **author**.
+In der folgenden Tabelle sind alle Attribute aufgeführt, die ID3-Tags entsprechen. Wenn Sie die ID3-Tags als Attribute anstelle der Standardattributnamen verwenden möchten, fügen Sie dem Tagnamen das Präfix "ID3/" hinzu. Beispielsweise entspricht "ID3/TPE2" dem **Autor**.
 
 
 
@@ -31,7 +31,7 @@ In der folgenden Tabelle sind alle Attribute aufgeführt, die ID3-Tags entsprech
 | **Beschreibung**                | Kommentar | COM     | COMM         |
 | **Dauer**                   |         | Tle     | TLEN         |
 | **FileSize**                   |         |         | TSIZ         |
-| **Titel**                      | Titel   | TT2     | TIZ2         |
+| **Titel**                      | Titel   | TT2     | HIER IST DER 2.         |
 | **WM/AlbumArtist**             |         | TP2     | TPE2         |
 | **WM/AlbumSortOrder**          |         |         | TSOA         |
 | **WM/AlbumTitle**              | Album   | TAL     | TALB         |
@@ -43,8 +43,8 @@ In der folgenden Tabelle sind alle Attribute aufgeführt, die ID3-Tags entsprech
 | **WM/Binary**                  |         | GEOGRAFISCH     | GEOB         |
 | **WM/Kommentare**                |         | COM     | COMM         |
 | **WM/Composer**                |         | TCM     | TCOM         |
-| **WM/2016**               |         | TP3     | TPE3         |
-| **WM/ContentGroupDescription** |         | TT1     | TI1         |
+| **WM/Enumer**               |         | TP3     | TPE3         |
+| **WM/ContentGroupDescription** |         | TT1     | HIER IST DER 1.         |
 | **WM/EncodedBy**               |         | Zehn     | TENC         |
 | **WM/EncodingSettings**        |         | Tss     | TSSE         |
 | **WM/EncodingTime**            |         |         | TDEN         |
@@ -52,7 +52,7 @@ In der folgenden Tabelle sind alle Attribute aufgeführt, die ID3-Tags entsprech
 | **WM/InitialKey**              |         |         | Tkey         |
 | **WM/ISRC**                    |         |         | TSRC         |
 | **WM/Sprache**                |         | Tla     | TLAN         |
-| **WM/Synchronisierung \_**    |         | Slt     | Sylt         |
+| **WM/Synchronisierte Wm/Wm-Synchronisierung \_**    |         | Slt     | Sylt         |
 | **WM/MCDI**                    |         |         | MCDI         |
 | **WM/ModifiedBy**              |         |         | TPE4         |
 | **WM/Stimmung**                    |         |         | TMOO         |
@@ -68,7 +68,7 @@ In der folgenden Tabelle sind alle Attribute aufgeführt, die ID3-Tags entsprech
 | **WM/RadioStationName**        |         | Trn     | TRSN         |
 | **WM/RadioStationOwner**       |         | Tro     | TRSO         |
 | **WM/SetSubTitle**             |         |         | TSST         |
-| **WM/SubTitle**                |         | TT3     | TI3         |
+| **WM/Untertitel**                |         | TT3     | TI3         |
 | **WM/Text**                    |         | TXX     | TXXX         |
 | **WM/TitleSortOrder**          |         |         | TSOT         |
 | **WM/TrackNumber**             | Track   | TRK     | TRCK         |

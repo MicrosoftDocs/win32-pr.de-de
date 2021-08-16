@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Instance.Init-Methode (initgrbit)'
-title: Instance.Init-Methode (initgrbit)
+description: 'Weitere Informationen finden Sie unter: Instance.Init-Methode (InitGrbit).'
+title: Instance.Init-Methode (InitGrbit)
 TOCTitle: Init method (InitGrbit)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Instance.Init(Microsoft.Isam.Esent.Interop.InitGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.instance.init(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3f87247a77cb89e6e5e9e20048b04f8d9fae36ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b2ce0ba3edd115802c07a0df2a3cc454f9953f7548692bce7aab7734da2a17fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217100"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119112549"
 ---
-# <a name="instanceinit-method-initgrbit"></a>Instance.Init-Methode (initgrbit)
+# <a name="instanceinit-method-initgrbit"></a>Instance.Init-Methode (InitGrbit)
 
-Initialisieren Sie die JET_INSTANCE.
+Initialisieren Sie JET_INSTANCE.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,18 +59,18 @@ public void Init(
 #### <a name="parameters"></a>Parameter
 
   - grbit  
-    Type: [Microsoft.Isam.Esent.Interop.Initgrbit](./initgrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.InitGrbit](./initgrbit-enumeration.md)  
     
-    Initialisierungs Optionen.
+    Initialisierungsoptionen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Instanzklasse](./instance-class.md)
 
-[Instanzmember](./instance-members.md)
+[Instanzmitglieder](./instance-members.md)
 
 [Init-Überladung](./instance.init-method2.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

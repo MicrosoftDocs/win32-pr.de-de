@@ -1,7 +1,7 @@
 ---
-description: Der Nenner der \_ PKEY-GPS-Höhe. \_
+description: Der Nenner von PKEY \_ GPS \_ Height.
 ms.assetid: 75eaec65-d042-4873-8be4-9778e2d0a432
-title: System.GPS.AltitudeDenominator
+title: System.GPS.HeightDenominator
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: d323e3d6ff1a18b5d804fc72c27ce04a4b58247e0bc51446345f281f0b6ce8cd
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118727473"
 ---
-# <a name="systemgpsaltitudedenominator"></a>System.GPS.AltitudeDenominator
+# <a name="systemgpsaltitudedenominator"></a>System.GPS.HeightDenominator
 
-Der Nenner der \_ PKEY-GPS-Höhe. \_
+Der Nenner von PKEY \_ GPS \_ Height.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

@@ -53,9 +53,9 @@ m_d2dContext->EndDraw();
 
 
 
-| Anzeigename und Indexenumeration                | Typ und Standardwert                                              | Beschreibung                                                                                                                                        |
+| Anzeigename und Indexenumeration                | Typ und Standardwert                                              | BESCHREIBUNG                                                                                                                                        |
 |---------------------------------------------------|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Rect<br/> D2D1 \_ TILE \_ PROP \_ RECT<br/> | D2D1 \_ VECTOR \_ 4F<br/> {0.0f, 0.0f, 100.0f, 100.0f}<br/> | Der Bereich des Bilds, das gekachelt werden soll. Diese Eigenschaft ist ein D2D1 \_ VECTOR \_ 4F, der wie: (links, oben, rechts, unten) definiert ist. Die Einheiten befinden sich in DIPs.<br/> |
+| Rect<br/> D2D1 \_ TILE \_ PROP \_ RECT<br/> | D2D1 \_ VECTOR \_ 4F<br/> {0.0f, 0.0f, 100.0f, 100.0f}<br/> | Der Bereich des bilds, das gekachelt werden soll. Diese Eigenschaft ist ein D2D1 \_ VECTOR \_ 4F, der wie folgt definiert ist: (links, oben, rechts, unten). Die Einheiten befinden sich in DIPs.<br/> |
 
 
 
@@ -63,9 +63,9 @@ m_d2dContext->EndDraw();
 
 ## <a name="output-bitmap"></a>Ausgabebitmap
 
-Dieser Effekt generiert eine Bitmap mit logisch unendlicher Größe.
+Dieser Effekt generiert eine logisch unendlich große Bitmap.
 
-Sie können ein Bild kacheln und eine bestimmte Größe ohne zusätzliche Auswirkungen ausgegeben, indem Sie die Größe festlegen, wenn Sie [**ID2D1DeviceContext::D rawImage aufrufen.**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-drawimage(id2d1image_constd2d1_point_2f_constd2d1_rect_f_d2d1_interpolation_mode_d2d1_composite_mode))
+Sie können ein Bild kacheln und eine bestimmte Größe ohne zusätzliche Auswirkungen ausgeben, indem Sie die Größe beim Aufrufen von [**ID2D1DeviceContext::D rawImage**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-drawimage(id2d1image_constd2d1_point_2f_constd2d1_rect_f_d2d1_interpolation_mode_d2d1_composite_mode))festlegen.
 
 ## <a name="requirements"></a>Anforderungen
 

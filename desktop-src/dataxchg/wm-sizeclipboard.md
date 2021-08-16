@@ -3,7 +3,7 @@ title: WM_SIZECLIPBOARD (Winuser.h)
 description: Wird von einem Zwischenablage-Viewerfenster an den Besitzer der Zwischenablage gesendet, wenn die Zwischenablage Daten im CF OWNERDISPLAY-Format enthält und sich die Größe des Clientbereichs des Zwischenablage-Viewers \_ geändert hat.
 ms.assetid: 95991d03-8677-4dde-b72a-082dec4834b3
 keywords:
-- WM_SIZECLIPBOARD der Exchange
+- WM_SIZECLIPBOARD-Nachricht Data Exchange
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118545319"
 ---
-# <a name="wm_sizeclipboard-message"></a>WM \_ SIZECLIPBOARD-Nachricht
+# <a name="wm_sizeclipboard-message"></a>WM \_ SIZECLIPBOARD-Meldung
 
 Wird von einem Zwischenablage-Viewerfenster an den Besitzer der Zwischenablage gesendet, wenn die Zwischenablage Daten im [**CF \_ OWNERDISPLAY-Format**](standard-clipboard-formats.md) enthält und sich die Größe des Clientbereichs des Zwischenablage-Viewers geändert hat.
 
@@ -72,7 +72,7 @@ Der Besitzer der Zwischenablage muss die [**GlobalLock-Funktion**](/windows/desk
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

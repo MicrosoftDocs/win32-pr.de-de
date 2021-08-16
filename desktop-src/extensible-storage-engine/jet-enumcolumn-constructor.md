@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: JET_ENUMCOLUMN-Konstruktor'
-title: JET_ENUMCOLUMN-Konstruktor
+description: 'Weitere Informationen finden Sie unter: JET_ENUMCOLUMN Konstruktor'
+title: JET_ENUMCOLUMN Konstruktor
 TOCTitle: 'JET_ENUMCOLUMN constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_ENUMCOLUMN.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_enumcolumn.jet_enumcolumn(v=EXCHG.10)
@@ -31,7 +31,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119475180"
 ---
-# <a name="jet_enumcolumn-constructor"></a>JET_ENUMCOLUMN-Konstruktor
+# <a name="jet_enumcolumn-constructor"></a>JET_ENUMCOLUMN Konstruktor
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -56,6 +56,6 @@ public JET_ENUMCOLUMN()
 
 [JET_ENUMCOLUMN-Klasse](./jet-enumcolumn-class.md)
 
-[JET_ENUMCOLUMN-Member](./jet-enumcolumn-members.md)
+[JET_ENUMCOLUMN Member](./jet-enumcolumn-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

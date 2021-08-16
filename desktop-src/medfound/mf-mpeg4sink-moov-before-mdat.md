@@ -1,31 +1,31 @@
 ---
-description: Gibt an, dass die Datei vor dem mdat-Feld in der generierten Datei geschrieben wird.
+description: Gibt an, dass moov vor dem Feld mdat in der generierten Datei geschrieben wird.
 ms.assetid: 97B68B0A-8266-4FCF-8CD9-35890E1AC774
-title: MF_MPEG4SINK_MOOV_BEFORE_MDAT-Attribut (mspdl. h)
+title: MF_MPEG4SINK_MOOV_BEFORE_MDAT -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b5d345dc027c457ceb6123ce3854fff4b74f987
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e98614484beee5187364570e3c5517ba0f61e0d77161484b59af93a9f5a6512c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348055"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119104736"
 ---
-# <a name="mf_mpeg4sink_moov_before_mdat-attribute"></a>MF \_ MPEG4SINK \_ vor dem \_ \_ mdat-Attribut
+# <a name="mf_mpeg4sink_moov_before_mdat-attribute"></a>MF \_ MPEG4SINK \_ MOOV \_ BEFORE \_ MDAT-Attribut
 
-Gibt an, dass "muov" vor dem Feld "mdat" in der generierten Datei geschrieben wird.
+Gibt an, dass "moov" vor dem Feld "mdat" in der generierten Datei geschrieben wird.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Standardverhalten der MPEG4 Media-Senke ist das Schreiben von "muov" nach dem Feld "mdat". Das Festlegen dieses Attributs bewirkt, dass die generierte Datei "muov" vor dem Feld "mdat" schreibt.
+Das Standardverhalten der mpeg4-Mediensenke ist das Schreiben von "moov" nach dem Feld "mdat". Das Festlegen dieses Attributs bewirkt, dass die generierte Datei "moov" vor das Feld "mdat" schreibt.
 
-Damit die MPEG4-Senke dieses Attribut verwenden kann, darf der weiter gegebene Bytestream nicht langsam suchen oder Remote für sein.
+Damit die mpeg4-Senke dieses Attribut verwenden kann, darf der übergebene Bytestream weder langsame Such- noch Remotedatenstrom für sein.
 
-Diese Funktion umfasst ein zusätzliches Kopieren/remuxing von Dateien.
+Dieses Feature umfasst ein zusätzliches Kopieren/Neuverfingen von Dateien.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,20 +33,20 @@ Diese Funktion umfasst ein zusätzliches Kopieren/remuxing von Dateien.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Desktop-Apps \| UWP-Apps\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> </dl>
 
  

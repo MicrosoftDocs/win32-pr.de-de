@@ -1,9 +1,9 @@
 ---
-title: Texture2DArray::Texture2DArray-Beispielmethoden
-description: Beispiel für ein Texture2DArray.
+title: Texture2DArray::Texture2DArray Sample-Methoden
+description: Probieren Sie ein Texture2DArray aus.
 ms.assetid: 30798438-3599-49DD-8E84-40CEB4AA9BEB
 keywords:
-- Beispielmethoden HLSL
+- HLSL-Beispielmethoden
 topic_type:
 - apiref
 api_type:
@@ -21,17 +21,17 @@ ms.locfileid: "118787136"
 ---
 # <a name="texture2darraysample-methods"></a>Texture2DArray::Sample-Methoden
 
-Samples a [**Texture2DArray**](sm5-object-texture2darray.md).
+Probieren Sie ein [**Texture2DArray**](sm5-object-texture2darray.md)aus.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                            | Beschreibung                                                                                                                               |
+| Methode                                                                            | BESCHREIBUNG                                                                                                                               |
 |:----------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Sample(S,float,int)**](dx-graphics-hlsl-to-sample.md)                         | Stichproben einer Textur.<br/>                                                                                                             |
-| [**Sample(S,float,int,float)**](t2darray-sample-s-float-int-float-.md)           | Samples a texture with an optional value to clamp sample level-of-detail (LOD) values to .<br/>                                      |
-| [**Sample(S,float,int,float,uint)**](t2darray-sample-s-float-int-float-uint-.md) | Samples a texture with an optional value to clamp sample level-of-detail (LOD) values to, and returns status of the operation.<br/> |
+| [**Sample(S,float,int)**](dx-graphics-hlsl-to-sample.md)                         | Probieren Sie eine Textur aus.<br/>                                                                                                             |
+| [**Sample(S,float,int,float)**](t2darray-sample-s-float-int-float-.md)           | Stichproben einer Textur mit einem optionalen Wert zum Zusammenschnaufen von LOD-Werten (Sample Level of Detail).<br/>                                      |
+| [**Sample(S,float,int,float,uint)**](t2darray-sample-s-float-int-float-uint-.md) | Stichproben einer Textur mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail) und Rückgabe des Status des Vorgangs.<br/> |
 
 
 

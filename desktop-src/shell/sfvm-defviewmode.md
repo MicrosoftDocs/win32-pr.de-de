@@ -1,6 +1,6 @@
 ---
-description: 'Ermöglicht dem Rückruf Objekt, den Ansichtsmodus anzugeben. Wird von ishellfolderviewcb:: messagesfvcb verwendet.'
-title: SFVM_DEFVIEWMODE Meldung (shlobj. h)
+description: Ermöglicht dem Rückrufobjekt, den Ansichtsmodus anzugeben. Wird von IShellFolderViewCB::MessageSFVCB verwendet.
+title: SFVM_DEFVIEWMODE Meldung (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 5118fc81-490f-4d76-9361-0d6af0c4b4c0
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 8d57bb61b2b938947d0290345215e3735d9d8763
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 28958fd992f70924ebbd51c06090d3a55c0ef8e6418d1ee055c5eb534acb9d3d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104995110"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090160"
 ---
-# <a name="sfvm_defviewmode-message"></a>Sfvm \_ defviewmode-Meldung
+# <a name="sfvm_defviewmode-message"></a>SFVM \_ DEFVIEWMODE-Nachricht
 
-Ermöglicht dem Rückruf Objekt, den Ansichtsmodus anzugeben. Wird von [**ishellfolderviewcb:: messagesfvcb**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
+Ermöglicht dem Rückrufobjekt, den Ansichtsmodus anzugeben. Wird von [**IShellFolderViewCB::MessageSFVCB**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
 
 
 ```C++
@@ -39,14 +39,14 @@ SFVM_DEFVIEWMODE
 
 <dl> <dt>
 
-*pviewmode* \[ vorgenommen\]
+*pViewMode* \[ out\]
 </dt> <dd>
 
-Einer der Werte aus dem [**folderviewmode**](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-folderviewmode) -Enumerationstyp.
+Einer der Werte aus dem [**aufgezählten FOLDERVIEWMODE-Typ.**](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-folderviewmode)
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -54,7 +54,7 @@ Einer der Werte aus dem [**folderviewmode**](/windows/desktop/api/shobjidl_core/
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

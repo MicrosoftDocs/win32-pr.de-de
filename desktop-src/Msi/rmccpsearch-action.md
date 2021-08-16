@@ -27,7 +27,7 @@ Es sind keine ActionData-Meldungen enthalten.
 
 Für die RMCCPSearch-Aktion muss die [**EIGENSCHAFT DRIVE \_ DRIVE**](ccp-drive.md) auf [](v-gly.md) den Stammpfad auf dem Wechseldatenträger festgelegt werden, auf dem die Installation für eines der qualifizierenden Produkte installiert ist.
 
-Jede Dateisignatur in der TABELLE "SIGNATURESearch" wird mithilfe der [DrLocator-Tabelle](drlocator-table.md) unter dem Pfad gesucht, auf den durch die [**EIGENSCHAFT DRIVE drive \_**](ccp-drive.md) verwiesen wird. Das Fehlen der Signatur in der [Signaturtabelle](signature-table.md) gibt ein Verzeichnis an. Wenn festgestellt wird, dass eine Signatur vorhanden ist, wird die RMCCPSearch-Aktion beendet.
+Jede Dateisignatur in der TABELLE "SIGNATURESearch" wird mithilfe der [DrLocator-Tabelle](drlocator-table.md) unter dem Pfad gesucht, auf den durch die [**EIGENSCHAFT DRIVE DRIVE \_**](ccp-drive.md) verwiesen wird. Das Fehlen der Signatur in der [Signaturtabelle](signature-table.md) gibt ein Verzeichnis an. Wenn festgestellt wird, dass eine Signatur vorhanden ist, wird die RMCCPSearch-Aktion beendet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

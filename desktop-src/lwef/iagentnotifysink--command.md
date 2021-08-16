@@ -1,19 +1,19 @@
 ---
-title: Iagentnotifysink-Befehl
-description: Iagentnotifysink-Befehl
+title: IAgentNotifySink-Befehl
+description: IAgentNotifySink-Befehl
 ms.assetid: d54fb2e8-27d6-47a4-8a1e-5419a94ea26d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9690d2914db9d284cd4ba4b826905d3169b83f2c
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 9d9c20de96c1bb14cf003ad7beff98e716e272ad3de39532d9b455e279d97af3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119105202"
 ---
-# <a name="iagentnotifysinkcommand"></a>Iagentnotifysink:: Command
+# <a name="iagentnotifysinkcommand"></a>IAgentNotifySink::Command
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT Command(
@@ -22,35 +22,35 @@ HRESULT Command(
 );                          
 ```
 
-Benachrichtigt eine Client Anwendung, dass ein [**Befehl**](/windows/desktop/lwef/the-command-object) vom Benutzer ausgewählt wurde.
+Benachrichtigt eine Clientanwendung, dass vom Benutzer ein [**Befehl**](/windows/desktop/lwef/the-command-object) ausgewählt wurde.
 
 -   Kein Rückgabewert.
 
 <dl> <dt>
 
-<span id="dwCommandID"></span><span id="dwcommandid"></span><span id="DWCOMMANDID"></span>*dwcommandid*
+<span id="dwCommandID"></span><span id="dwcommandid"></span><span id="DWCOMMANDID"></span>*dwCommandID*
 </dt> <dd>
 
-Der Bezeichner der optimalen Übereinstimmungs-Befehls Alternativen.
+Bezeichner der Befehlsalternative für die beste Übereinstimmung.
 
 </dd> <dt>
 
-<span id="punkUserInput"></span><span id="punkuserinput"></span><span id="PUNKUSERINPUT"></span>*punkuserinput*
+<span id="punkUserInput"></span><span id="punkuserinput"></span><span id="PUNKUSERINPUT"></span>*punUserInput*
 </dt> <dd>
 
-Adresse der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle für das [**iagentuserinput**](iagentuserinput.md) -Objekt.
+Adresse der [**IUnknown-Schnittstelle**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) für das [**IAgentUserInput-Objekt.**](iagentuserinput.md)
 
 </dd> </dl>
 
-Verwenden Sie [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) , um die [**iagentuserinput**](iagentuserinput.md) -Schnittstelle abzurufen.
+Verwenden Sie [**QueryInterface,**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) um die [**IAgentUserInput-Schnittstelle**](iagentuserinput.md) abzurufen.
 
-Der Server benachrichtigt den Eingabe aktiven Client, wenn der Benutzer einen Befehl per Stimme auswählt, oder indem er im Popup Menü des Zeichens einen Befehl auswählt. Das Ereignis tritt auch dann auf, wenn der Benutzer einen der Befehle des Servers auswählt. In diesem Fall gibt der Server eine NULL-Befehls-ID, die vertrauensbewertung und den von der Sprach-Engine für diesen Eintrag zurückgegebenen sprach Text zurück.
+Der Server benachrichtigt den eingabeaktiven Client, wenn der Benutzer einen Befehl per Stimme oder durch Auswählen eines Befehls im Popupmenü des Zeichens auswählt. Das Ereignis tritt auch dann auf, wenn der Benutzer einen der Serverbefehle auswählt. In diesem Fall gibt der Server eine NULL-Befehls-ID, die Zuverlässigkeitsbewertung und den Sprachtext zurück, der von der Sprach-Engine für diesen Eintrag zurückgegeben wird.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentuserinput**](iagentuserinput.md)
+[**IAgentUserInput**](iagentuserinput.md)
 
 
- 
+ 
 
- 
+ 

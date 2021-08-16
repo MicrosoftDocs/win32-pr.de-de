@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: cimmufdeserializer. getincludedfilecontent-Delegat (String)'
-title: Cimmufdeserializer. getincludedfilecontent-Delegat (Microsoft. Management. Infrastructure. Serialization)
+description: 'Weitere Informationen finden Sie unter: CimMofDeserializer.GetIncludedFileContent-Delegat (String)'
+title: CimMofDeserializer.GetIncludedFileContent-Delegat (Microsoft.Management.Infrastructure.Serialization)
 TOCTitle: CimMofDeserializer.GetIncludedFileContent delegate (Microsoft.Management.Infrastructure.Serialization)
 ms:assetid: T:Microsoft.Management.Infrastructure.Serialization.CimMofDeserializer.GetIncludedFileContent
 ms.date: 11/13/2019
@@ -27,19 +27,19 @@ topic_type:
 - apiref
 product_family_name: VS
 ms.topic: reference
-ms.openlocfilehash: cb922d785da7d01de93adec56cefee29785210d6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f8b34b9c96f418bc0facf615c86a69ea1a958726407a93bf97e7421a1582f997
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345190"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992870"
 ---
-# <a name="cimmofdeserializergetincludedfilecontent-delegate-string"></a>Cimmufdeserializer. getincludedfilecontent-Delegat (Zeichenfolge)
+# <a name="cimmofdeserializergetincludedfilecontent-delegate-string"></a>CimMofDeserializer.GetIncludedFileContent-Delegat (String)
 
-Stellt einen Rückruf zum Abrufen des Datei Inhalts in Form eines Bytearrays dar.
+Stellt einen Rückruf dar, um den Inhalt der Datei in Form eines Bytearrays abzurufen.
 
-**Namespace:**   [Microsoft. Management. Infrastructure. Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))  
-**Assembly:**  Microsoft. Management. Infrastructure (in Microsoft.Management.Infrastructure.dll)  
+**Namespace:**   [Microsoft.Management.Infrastructure.Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))  
+**Assembly:**  Microsoft.Management.Infrastructure (in Microsoft.Management.Infrastructure.dll)  
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,16 +70,16 @@ Public Delegate Function GetIncludedFileContent (
 #### <a name="parameters"></a>Parameter
 
   - fileName  
-    Typ: [System. String](/dotnet/api/system.string?view=netframework-4.8)
+    Typ: [System.String](/dotnet/api/system.string?view=netframework-4.8)
     
-    Dateiname, einschließlich des Pfads.
+    Dateiname, einschließlich Pfad.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Byte](/dotnet/api/system.byte?view=netframework-4.8)\[\]
+Typ: [System.Byte](/dotnet/api/system.byte?view=netframework-4.8)\[\]
 
 Gibt den Inhalt der Datei in Form eines Bytearrays zurück.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Microsoft. Management. Infrastructure. Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))
+[Microsoft.Management.Infrastructure.Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))

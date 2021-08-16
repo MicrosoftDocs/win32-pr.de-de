@@ -21,7 +21,7 @@ ms.locfileid: "118528108"
 ---
 # <a name="reporthit-function"></a>ReportHit-Funktion
 
-Wird von einem [Schnittpunkt-Shader aufgerufen,](intersection-shader.md) um eine Schnittmenge des Strahls zu melden.
+Wird von einem [Schnittpunkt-Shader](intersection-shader.md) aufgerufen, um eine Strahlschnittmenge zu melden.
 
 ## <a name="syntax"></a>Syntax
 Diese systeminterne Funktionsdefinition entspricht der folgenden Funktionsvorlage:
@@ -37,19 +37,19 @@ bool ReportHit(float THit, uint HitKind, attr_t Attributes);
 
 `THit`
 
-Ein float-Wert, der den parametrischen Abstand der Schnittmenge an..
+Ein float-Wert, der den parametrischen Abstand der Schnittmenge angibt.
 
 `HitKind`
 
-Eine ganze Zahl ohne Vorzeichen, die den Typ des aufgetretenen Treffers angibt.  Dies ist ein vom Benutzer angegebener Wert im Bereich von 0 bis 127.  Der Wert kann von jedem Treffer- [oder](any-hit-shader.md) [nächstgelegenen](closest-hit-shader.md) Treffer-Shader mit der **Systeminternen HitKind gelesen** werden.
+Eine ganze Zahl ohne Vorzeichen, die den Typ des aufgetretenen Treffers angibt.  Dies ist ein vom Benutzer angegebener Wert im Bereich von 0 bis 127.  Der Wert kann von [jedem Treffer-](any-hit-shader.md) oder [nächstgelegenen](closest-hit-shader.md) Treffer-Shader mit der intrinsischen **HitKind-Eigenschaft** gelesen werden.
 
 `Attributes`
 
-Die benutzerdefinierte Struktur der [**Schnittmengenattributstruktur,**](intersection-attributes.md) die die Schnittmengenattribute an gibt.  
+Die benutzerdefinierte [**Struktur der Schnittpunktattributstruktur,**](intersection-attributes.md) die die Schnittmengenattribute angibt.  
 
 ## <a name="return-value"></a>Rückgabewert
 
-**bool** TRUE, wenn der Treffer akzeptiert wurde.  Ein Treffer wird abgelehnt, wenn *THit* außerhalb des aktuellen Rayintervalls liegt oder der beliebige Treffer-Shader [**IgnoreHit aufruft.**](ignorehit-function.md)  Das aktuelle Rayintervall wird durch **RayTMin und** **RayTCurrent definiert.**
+**bool** True, wenn der Treffer akzeptiert wurde.  Ein Treffer wird abgelehnt, wenn *THit* außerhalb des aktuellen Strahlintervalls liegt oder der Treffer-Shader [**IgnoreHit aufruft.**](ignorehit-function.md)  Das aktuelle Strahlintervall wird von **RayTMin** und **RayTCurrent** definiert.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -61,7 +61,7 @@ Diese Funktion kann von den folgenden Raytracing-Shadertypen aufgerufen werden:
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

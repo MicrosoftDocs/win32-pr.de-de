@@ -40,13 +40,13 @@ Diese Klasse wird von COM+ implementiert.
 
 ## <a name="when-to-use"></a>Verwendung
 
-Verwenden Sie diese Klasse, um auf die Methoden von [**ISecurityCallContext zuzugreifen.**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallcontext)
+Verwenden Sie diese Klasse, um auf die Methoden von [**ISecurityCallContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallcontext)zuzugreifen.
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können kein **SecurityCallContext-Objekt direkt** erstellen. Um die Methoden von [**ISecurityCallContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallcontext)zu verwenden, müssen Sie einen Verweis auf seine Implementierung abrufen, indem Sie [**CoGetCallContext**](/windows/desktop/api/combaseapi/nf-combaseapi-cogetcallcontext)aufrufen und IID ISecurityCallContext für den \_ *riid-Parameter* angeben.
+Sie können kein **SecurityCallContext-Objekt** direkt erstellen. Um die Methoden von [**ISecurityCallContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallcontext)zu verwenden, müssen Sie einen Verweis auf seine Implementierung abrufen, indem Sie [**CoGetCallContext**](/windows/desktop/api/combaseapi/nf-combaseapi-cogetcallcontext)aufrufen und IID \_ ISecurityCallContext für den *riid-Parameter* angeben.
 
-Um diese Klasse von Microsoft Visual Basic verwenden zu können, fügen Sie einen Verweis auf die COM+-Diensttypbibliothek hinzu. Ein SecurityCallContext-Objekt kann mit "COMSVCSLib.SecurityCallContext" als Klassenname deklariert werden. sie wird durch Aufrufen von [**GetSecurityCallContext erstellt.**](/windows/desktop/api/ComSvcs/nf-comsvcs-igetsecuritycallcontext-getsecuritycallcontext)
+Um diese Klasse von Microsoft Visual Basic zu verwenden, fügen Sie einen Verweis auf die COM+-Diensttypbibliothek hinzu. Ein SecurityCallContext-Objekt kann mit "COMSVCSLib.SecurityCallContext" als Klassenname deklariert werden. Sie wird durch Aufrufen von [**GetSecurityCallContext**](/windows/desktop/api/ComSvcs/nf-comsvcs-igetsecuritycallcontext-getsecuritycallcontext)erstellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Um diese Klasse von Microsoft Visual Basic verwenden zu können, fügen Sie eine
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Die providor \_ Info \_ 2-Struktur fügt einen Druckanbieter an die Auftragsliste des Druck Anbieters an.
+description: Die PROVIDOR \_ INFO \_ 2-Struktur fügt einen Druckanbieter an die Auftragsliste des Druckanbieters an.
 ms.assetid: 840523ca-22d0-460f-81fb-e0a9e2d4f5d6
-title: PROVIDOR_INFO_2 Struktur (winspool. h)
+title: PROVIDOR_INFO_2-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: d40f5843bf68254b92e3d814d9f308ba4f058889
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 969af36fe0a64bb586fbf62912ca27c6ebba9ba0a627701e4bc57f6202bfe1b5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350827"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120091680"
 ---
-# <a name="providor_info_2-structure"></a>Providor \_ Info \_ 2-Struktur
+# <a name="providor_info_2-structure"></a>PROVIDOR \_ INFO \_ 2-Struktur
 
-Die **providor \_ Info \_ 2** -Struktur fügt einen Druckanbieter an die Auftragsliste des Druck Anbieters an.
+Die **PROVIDOR \_ INFO \_ 2-Struktur** fügt einen Druckanbieter an die Auftragsliste des Druckanbieters an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ typedef struct _PROVIDOR_INFO_2 {
 
 <dl> <dt>
 
-**Porder**
+**pOrder**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen des Druck Anbieters angibt.
+Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Druckanbieters angibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird beim Aufrufen von [**addprintprovidor**](addprintprovidor.md), Ebene 2, zum Hinzufügen des angegebenen Druck Anbieters am Ende der Auftragsliste des Druck Anbieters verwendet. Der Anbieter wird sofort für das Routing verwendet, wenn der-Befehl erfolgreich ausgeführt wird.
+Diese Struktur wird beim Aufrufen von [**AddPrintProvidor**](addprintprovidor.md), Ebene 2, verwendet, um den angegebenen Druckanbieter am Ende der Auftragsliste des Druckanbieters hinzuzufügen. Der Anbieter wird sofort für das Routing verwendet, wenn der Aufruf erfolgreich ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,22 +60,22 @@ Diese Struktur wird beim Aufrufen von [**addprintprovidor**](addprintprovidor.md
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Providor \_ Info \_ 2W** (Unicode) und **\_ providor \_ Info \_ 2a** (ANSI)<br/>                         |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ PROVIDOR \_ INFO \_ 2W** (Unicode) und **\_ PROVIDOR \_ INFO \_ 2A** (ANSI)<br/>                         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
-[**Addprintprovidor**](addprintprovidor.md)
+[**AddPrintProvidor**](addprintprovidor.md)
 </dt> </dl>
 
  

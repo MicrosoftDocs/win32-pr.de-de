@@ -18,7 +18,7 @@ Dieser Abschnitt enthält Informationen zu den HLSL-Konstrukten, die die Direct3
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | Beschreibung |
+| Thema | BESCHREIBUNG |
 |-|-|
 | [Direct3D 12-Raytracing HLSL-Enumerationen](direct3d-12-raytracing-hlsl-enumerations.md) | Beschreibt die HLSL-Enumerationen, die die Direct3D 12-Raytracingpipeline unterstützen.  |
 | [Intrinsische HLSL-Funktionen für Direct3D 12-Raytracing](direct3d-12-raytracing-hlsl-intrinsics.md) | Beschreibt die HLSL-Intrinsik, die die Direct3D 12-Raytracingpipeline unterstützen. |

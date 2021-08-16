@@ -82,12 +82,12 @@ Der Rückgabewert ist **S \_ OK bei** Erfolg oder andernfalls ein Fehlerwert.
 
 ## <a name="remarks"></a>Hinweise
 
-Ermöglicht der aufrufenden Anwendung die Angabe der Verwendung von Standardproxyinformationen (konfiguriert durch das Proxykonfigurationstool) oder das Überschreiben [Proxycfg.exe. ](proxycfg-exe--a-proxy-configuration-tool.md) Diese Methode muss aufgerufen werden, bevor die [**Send-Methode aufgerufen**](iwinhttprequest-send.md) wird. Wenn diese Methode nach der [**Send-Methode aufgerufen**](iwinhttprequest-send.md) wird, hat sie keine Auswirkungen.
+Ermöglicht es der aufrufenden Anwendung, die Verwendung von Standardproxyinformationen (konfiguriert durch das Proxykonfigurationstool) anzugeben oder [Proxycfg.exe. ](proxycfg-exe--a-proxy-configuration-tool.md) Diese Methode muss aufgerufen werden, bevor die [**Send-Methode aufgerufen**](iwinhttprequest-send.md) wird. Wenn diese Methode nach der [**Send-Methode aufgerufen**](iwinhttprequest-send.md) wird, hat sie keine Auswirkungen.
 
 [**IWinHttpRequest übergibt**](iwinhttprequest-interface.md) diese Parameter an Microsoft Windows HTTP Services (WinHTTP).
 
 > [!Note]  
-> Informationen Windows XP und Windows 2000 finden Sie im Abschnitt Laufzeitanforderungen der [WinHTTP-Startseite.](winhttp-start-page.md)
+> Informationen Windows XP und Windows 2000 finden [](winhttp-start-page.md) Sie im Abschnitt Laufzeitanforderungen der WinHTTP-Startseite.
 
  
 
@@ -245,7 +245,7 @@ WScript.Echo( WinHttpReq.ResponseText);
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

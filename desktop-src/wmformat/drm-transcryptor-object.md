@@ -1,34 +1,34 @@
 ---
-title: DRM-transryptorobjekt
-description: DRM-transryptorobjekt
+title: DRM-Transcryptorobjekt
+description: DRM-Transcryptorobjekt
 ms.assetid: 50c041b3-6621-4618-843f-6ef9b8e741ab
 keywords:
-- Windows Media-Format-SDK, DRM-transryptorobjekte
-- Advanced Systems Format (ASF), DRM-transzenryptorobjekte
-- ASF (Advanced Systems Format), DRM-transzenryptorobjekte
-- Objekte, DRM-transryptorobjekte
-- DRM-transzenryptorobjekte
-- Windows Media-Format-SDK, transryptor-Objekte
-- Advanced Systems Format (ASF), transcryptor Objects
-- ASF (Advanced Systems Format), transcryptor Objects
-- Objekte, transzenryptorobjekte
-- transzenryptorobjekte
-- Digital Rights Management (DRM), transcryptor-Objekte
-- DRM (Digital Rights Management), transzenryptorobjekte
+- Windows Medienformat-SDK, DRM-Transcryptorobjekte
+- Advanced Systems Format (ASF), DRM-Transcryptorobjekte
+- ASF (Advanced Systems Format), DRM-Transcryptorobjekte
+- Objekte, DRM-Transcryptorobjekte
+- DRM-Transcryptorobjekte
+- Windows Medienformat-SDK, Transcryptorobjekte
+- Advanced Systems Format (ASF), Transcryptorobjekte
+- ASF (Advanced Systems Format), Transcryptorobjekte
+- objects,transcryptor objects
+- Transcryptorobjekte
+- Digital Rights Management (DRM), Transcryptorobjekte
+- DRM (Digital Rights Management), Transcryptorobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d46213dd7ebfbe48ff22039c201dbff3aab462f5
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 0e5a6503a4ae95f44cac512966b0fe1612828d4d44d1db34d7724b1f764ba4d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104101270"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119085892"
 ---
-# <a name="drm-transcryptor-object"></a>DRM-transryptorobjekt
+# <a name="drm-transcryptor-object"></a>DRM-Transcryptorobjekt
 
-Das DRM-transryptor-Objekt konvertiert DRM-geschützte DRM-Dateien in Datenströme, die an Netzwerkgeräte mit Windows Media DRM 10 für Netzwerkgeräte gesendet werden können.
+Das DRM-Transcryptorobjekt konvertiert DRM-geschützte ASF-Dateien in Datenströme, die an Netzwerkgeräte gesendet werden können, die Windows Media DRM 10 für Netzwerkgeräte verwenden.
 
-Das DRM-transryptor-Objekt wird von der [**wmkreatedrmtranscryptor**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatedrmtranscryptor) -Funktion erstellt, die einen Zeiger auf die [**iwmdrmtranscryptor**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmdrmtranscryptor) -Schnittstelle festlegt. **IUnknown** und **iwmdrmtranszenryptor** sind die einzigen Schnittstellen, die von diesem Objekt unterstützt werden.
+Das DRM-Transcryptorobjekt wird von der [**WMCreateDRMTranscryptor-Funktion**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatedrmtranscryptor) erstellt, die einen Zeiger auf die [**IWMDRMTranscryptor-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmdrmtranscryptor) festlegt. **IUnknown** und **IWMDRMTranscryptor** sind die einzigen Schnittstellen, die von diesem Objekt unterstützt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -37,9 +37,9 @@ Das DRM-transryptor-Objekt wird von der [**wmkreatedrmtranscryptor**](/previous-
 [**Objekte**](objects.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,74 +1,74 @@
 ---
-description: Die Kommunikation umfasst häufig große Datenmengen oder Daten mit unbekannter Länge.
+description: Die Kommunikation umfasst häufig potenziell große Datenmengen oder Daten unbekannter Länge.
 ms.assetid: e7b12b9e-8caa-4dad-b81f-b609ccb92c9f
-title: Verwenden von secbufferde SC und secbuffer
+title: Verwenden von SecBufferDesc und SecBuffer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ca7d8155a610263838d2baf2a7d1c8fc96ec874
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 06ad12120414a1e0acb7a6b1cfe211b0ed1787d9e676e8329df1e16ecfef17cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867236"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117785910"
 ---
-# <a name="using-secbufferdesc-and-secbuffer"></a>Verwenden von secbufferde SC und secbuffer
+# <a name="using-secbufferdesc-and-secbuffer"></a>Verwenden von SecBufferDesc und SecBuffer
 
-Die Kommunikation umfasst häufig große Datenmengen oder Daten mit unbekannter Länge. Das Senden und empfangen von Daten erfolgt in beiden Fällen ähnlich oder identisch. Für den Umgang mit unbekannter Länge und potenziell großen Datenmengen erfolgt die SSPI-Kommunikation mithilfe der beiden Strukturen [**secbufferdesc**](/windows/desktop/api/Sspi/ns-sspi-secbufferdesc) und [**secbuffer**](/windows/desktop/api/Sspi/ns-sspi-secbuffer).
+Die Kommunikation umfasst häufig potenziell große Datenmengen oder Daten unbekannter Länge. Das Senden und Empfangen von Daten erfolgt in beiden Fällen auf ähnliche oder identische Weise. Für den Umgang mit unbekannter Länge und potenziell großen Datenmengen erfolgt die SSPI-Kommunikation mithilfe der beiden Strukturen [**SecBufferDesc**](/windows/desktop/api/Sspi/ns-sspi-secbufferdesc) und [**SecBuffer.**](/windows/desktop/api/Sspi/ns-sspi-secbuffer)
 
-Eine [**secbufferdebug**](/windows/desktop/api/Sspi/ns-sspi-secbufferdesc) -Struktur ist ein Container für ein Array von [**secbuffer**](/windows/desktop/api/Sspi/ns-sspi-secbuffer) -Strukturen. Eine **secbufferdebug** -Struktur verfügt über die folgenden Member:
+Eine [**SecBufferDesc-Struktur**](/windows/desktop/api/Sspi/ns-sspi-secbufferdesc) ist ein Container für ein Array von [**SecBuffer-Strukturen.**](/windows/desktop/api/Sspi/ns-sspi-secbuffer) Eine **SecBufferDesc-Struktur** verfügt über die folgenden Member:
 
 -   Versionsnummer
--   Anzahl der [**secbuffer**](/windows/desktop/api/Sspi/ns-sspi-secbuffer) -Elemente
--   Adresse des Arrays der [**secbuffer**](/windows/desktop/api/Sspi/ns-sspi-secbuffer) -Strukturen
+-   Anzahl von [**SecBuffer-Elementen**](/windows/desktop/api/Sspi/ns-sspi-secbuffer)
+-   Adresse des Arrays von [**SecBuffer-Strukturen**](/windows/desktop/api/Sspi/ns-sspi-secbuffer)
 
-Eine [**secbuffer**](/windows/desktop/api/Sspi/ns-sspi-secbuffer) -Struktur enthält die folgenden drei Elemente:
+Eine [**SecBuffer-Struktur**](/windows/desktop/api/Sspi/ns-sspi-secbuffer) enthält die folgenden drei Member:
 
--   Anzahl von Bytes im Puffer
--   Der Typ der Informationen, die im Datenelement enthalten sind.
+-   Anzahl der Bytes im Puffer
+-   Typ der im Datenelement enthaltenen Informationen
 -   Die Bytes selbst
 
-Eine gesamte SSPI-Nachricht besteht häufig aus einem Array von [**secbuffer**](/windows/desktop/api/Sspi/ns-sspi-secbuffer) -Strukturen.
+Eine gesamte SSPI-Nachricht besteht häufig aus einem Array von [**SecBuffer-Strukturen.**](/windows/desktop/api/Sspi/ns-sspi-secbuffer)
 
-Die folgenden Puffer Datentypen werden wie folgt definiert.
+Die folgenden Pufferdatentypen sind wie folgt definiert.
 
 
 
 | Puffertyp                | Bedeutung                                                                                                                                |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| secbuffer ist \_ leer.           | Nicht definiert, ersetzt durch die Funktion des [*Sicherheitspakets*](../secgloss/s-gly.md) |
-| secbuffer- \_ Daten            | Paketdaten                                                                                                                            |
-| secbuffer- \_ Token           | Sicherheits Token                                                                                                                         |
-| secbuffer \_ pkg-Parameter \_     | Paket spezifische Parameter                                                                                                            |
-| secbuffer \_ fehlt.         | Fehlender Daten Indikator                                                                                                                 |
-| secbuffer- \_ Zusatz           | Zusätzliche Daten                                                                                                                             |
-| secbuffer- \_ Stream          | Sicherheitsstreamdaten                                                                                                                   |
-| secbuffer- \_ streamnachspann \_ | Sicherheitsstreamnachspann                                                                                                                |
-| secbuffer \_ - \_ Streamheader  | Sicherheitsstreamheader                                                                                                                 |
+| SECBUFFER \_ EMPTY           | Nicht definiert, ersetzt durch die [*Sicherheitspaketfunktion*](../secgloss/s-gly.md) |
+| \_SECBUFFER-DATEN            | Paketdaten                                                                                                                            |
+| SECBUFFER-TOKEN \_           | Sicherheitstoken                                                                                                                         |
+| \_SECBUFFER-PKG-PARAMS \_     | Paketspezifische Parameter                                                                                                            |
+| SECBUFFER \_ FEHLT         | Fehlender Datenindikator                                                                                                                 |
+| SECBUFFER \_ EXTRA           | Zusätzliche Daten                                                                                                                             |
+| SECBUFFER \_ STREAM          | Sicherheitsstreamdaten                                                                                                                   |
+| SECBUFFER \_ STREAM \_ TRAILER | Sicherheitsstream-Nachspann                                                                                                                |
+| \_SECBUFFER-STREAMHEADER \_  | Sicherheitsstreamheader                                                                                                                 |
 
 
 
  
 
-Die Puffer Typen oben können mit einem bitweisen **or** -Vorgang mit einem der folgenden Puffer Typen kombiniert werden.
+Die oben genannten Puffertypen können mithilfe einer bitweise-OR-Operation mit einem der folgenden Puffertypen kombiniert werden.
 
 
 
 | Puffertyp         | Bedeutung                                                                          |
 |---------------------|----------------------------------------------------------------------------------|
-| secbuffer- \_ attrmask | Maskieren von Sicherheits Attributen Durchtrennen der Attributflags vom Puffertyp. |
-| secbuffer \_ schreibgeschützt | Der Puffer ist schreibgeschützt.                                                              |
+| SECBUFFER \_ ATTRMASK | Maskieren Sie Sicherheitsattribute, indem Sie die Attributflags vom Puffertyp trennen. |
+| SECBUFFER \_ READONLY | Puffer ist schreibgeschützt                                                              |
 
 
 
  
 
-Vor jedem Aufrufen einer SSPI-API, die einen [**secbufferdesc**](/windows/desktop/api/Sspi/ns-sspi-secbufferdesc) -Parameter erfordert, werden ein oder mehrere [**secbuffer**](/windows/desktop/api/Sspi/ns-sspi-secbuffer) -Array Elemente deklariert und initialisiert. Es können z. b. zwei Sicherheitspuffer vorhanden sein: eine mit Eingabe Nachrichten Daten und die andere für das vom Sicherheitspaket zurückgegebene, nicht transparente Sicherheits Token. Die Reihenfolge der Sicherheitspuffer im Sicherheitspuffer Deskriptor ist nicht wichtig, aber jeder Puffer muss mit dem entsprechenden Typ gekennzeichnet werden. Ein Schreib geschütztes-Tag kann mit jedem Eingabepuffer verwendet werden, der nicht vom [*Sicherheitspaket*](../secgloss/s-gly.md)geändert werden darf.
+Vor jedem Aufruf einer SSPI-API, die einen [**SecBufferDesc-Parameter**](/windows/desktop/api/Sspi/ns-sspi-secbufferdesc) erfordert, werden mindestens ein [**SecBuffer-Array-Element**](/windows/desktop/api/Sspi/ns-sspi-secbuffer) deklariert und initialisiert. Beispielsweise kann es zwei Sicherheitspuffer geben: einen, der Eingabenachrichtendaten enthält, und den anderen für das nicht transparente Ausgabesicherheitstoken, das vom Sicherheitspaket zurückgegeben wird. Die Reihenfolge der Sicherheitspuffer im Sicherheitspufferdeskriptor ist nicht wichtig, aber jeder Puffer muss mit dem entsprechenden Typ gekennzeichnet werden. Ein schreibgeschütztes Tag kann mit jedem Eingabepuffer verwendet werden, der nicht vom Sicherheitspaket [*geändert werden darf.*](../secgloss/s-gly.md)
 
-Die Größe des Ausgabepuffers, der das Sicherheits Token enthalten soll, ist wichtig. Eine Anwendung kann die maximale Tokengröße für ein Sicherheitspaket während des ersten Setups ermitteln. Der- [**enumeratesecuritypackages-Enumerationstyp**](/windows/desktop/api/Sspi/nf-sspi-enumeratesecuritypackagesa) gibt ein Array von Zeigern auf Sicherheitspaket Informationen zurück. Die Struktur der Sicherheitspaket Informationen enthält die maximale Tokengröße für jedes Paket. In diesem Beispiel befinden sich die Informationen im **cbmaxtoken** -Member der [**secpkginfo**](/windows/desktop/api/Sspi/ns-sspi-secpkginfoa) -Struktur. Die gleichen Informationen können später mithilfe von [**querysecuritypackageinfo**](/windows/desktop/api/Sspi/nf-sspi-querysecuritypackageinfoa)abgerufen werden.
+Die Größe des Ausgabepuffers, der das Sicherheitstoken enthalten soll, ist wichtig. Eine Anwendung kann die maximale Tokengröße für ein Sicherheitspaket während der ersten Einrichtung finden. Der Aufruf von [**EnumerateSecurityPackages**](/windows/desktop/api/Sspi/nf-sspi-enumeratesecuritypackagesa) gibt ein Array von Zeigern auf Sicherheitspaketinformationen zurück. Die Sicherheitspaket-Informationsstruktur enthält die maximale Tokengröße für jedes Paket. Im Beispiel sind die Informationen im **cbMaxToken-Member** der [**SecPkgInfo-Struktur**](/windows/desktop/api/Sspi/ns-sspi-secpkginfoa) enthalten. Die gleichen Informationen können später mithilfe von [**QuerySecurityPackageInfo ermittelt werden.**](/windows/desktop/api/Sspi/nf-sspi-querysecuritypackageinfoa)
 
-Die Anwendung initialisiert die Puffer Zeiger und-Größen in der Puffer Beschreibung, um anzugeben, wo Nachrichten Daten und andere Informationen gefunden werden können.
+Die Anwendung initialisiert die Pufferzeker und -größen in der Pufferbeschreibung, um anzugeben, wo Nachrichtendaten und andere Informationen gefunden werden können.
 
-Weitere Informationen finden Sie unter [Beispiel Code für secbuffer und secbufferdesc](secbuffer-and-secbufferdesc-example-code.md).
+Weitere Informationen finden Sie unter [SecBuffer- und SecBufferDesc-Beispielcode.](secbuffer-and-secbufferdesc-example-code.md)
 
  
 

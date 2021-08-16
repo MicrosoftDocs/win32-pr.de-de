@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118627663"
 ---
-# <a name="passing-null-as-the-argument-of-windows-installer-functions"></a>Übergeben von NULL als Argument von Windows Installer-Funktionen
+# <a name="passing-null-as-the-argument-of-windows-installer-functions"></a>Übergeben von NULL als Argument Windows Installer-Funktionen
 
-Windows Installerfunktionen, die Daten an einem vom Benutzer bereitgestellten Speicherort zurückgeben, sollten nicht mit NULL als Wert für den Zeiger aufgerufen werden. Diese Funktionen geben eine Zeichenfolge oder Daten als ganzzahlige Zeiger zurück, geben jedoch inkonsistente Werte zurück, wenn NULL als Wert für das Ausgabeargument übergeben wird.
+Windows Installerfunktionen, die Daten an einem vom Benutzer bereitgestellten Speicherort zurückgeben, sollten nicht mit NULL als Wert für den Zeiger aufgerufen werden. Diese Funktionen geben eine Zeichenfolge oder Daten als Ganzzahlzeiger zurück, geben jedoch inkonsistente Werte zurück, wenn NULL als Wert für das Ausgabeargument übergeben wird.
 
 Übergeben Sie null nicht als Wert des Ausgabearguments für eine der folgenden Funktionen:
 
