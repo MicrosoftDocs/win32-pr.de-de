@@ -1,30 +1,30 @@
 ---
-description: Verwenden Sie die folgenden Richtlinien, um eine Windows Installer Installation zu erstellen, die ein Meldungs Feld anzeigt, in dem der Benutzer zum Einfügen eines Datenträgers
+description: Verwenden Sie die folgenden Richtlinien, um eine installation Windows Installer zu erstellen, die ein Meldungsfeld anzeigt, in dem der Benutzer aufgefordert wird, einen Datenträger einzufügen.
 ms.assetid: 8b53a490-921f-4d89-83b7-dbc62231ef92
-title: Erstellen von Datenträger Aufforderungs Meldungen
+title: Erstellen von Datenträgereingabeaufforderungsmeldungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f536a27c2adb5896992eb19a86bff64b9498d83
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0a27b324600b7098c4b11dd94528ce0f3aa624e6859df8d02ef43ee90d632068
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118381375"
 ---
-# <a name="authoring-disk-prompt-messages"></a>Erstellen von Datenträger Aufforderungs Meldungen
+# <a name="authoring-disk-prompt-messages"></a>Erstellen von Datenträgereingabeaufforderungsmeldungen
 
-Verwenden Sie die folgenden Richtlinien, um eine Windows Installer Installation zu erstellen, die ein Meldungs Feld anzeigt, in dem der Benutzer zum Einfügen eines Datenträgers
+Verwenden Sie die folgenden Richtlinien, um eine installation Windows Installer zu erstellen, die ein Meldungsfeld anzeigt, in dem der Benutzer aufgefordert wird, einen Datenträger einzufügen.
 
-**So zeigen Sie ein Meldungs Feld an, das den Benutzer auffordert, einen Datenträger einzufügen**
+**So zeigen Sie ein Meldungsfeld an, in dem der Benutzer aufgefordert wird, einen Datenträger einzufügen**
 
-1.  Verwenden Sie die Erstellungs Funktionen des Installers, um die Zeichenfolge der [**diskprompt**](diskprompt.md) -Eigenschaft in der [Eigenschaften](property-table.md) Tabelle festzulegen. Dies sollte den Namen des installierten Produkts und einen Platzhalter Parameter innerhalb der Zeichenfolge für den auf dem Datenträger gedruckten Titel einschließen. Für Microsoft Publisher könnte die **diskprompt** -Eigenschaft z. b. "Microsoft Publisher: Disk \[ 1 \] " lauten, wobei " \[ 1" \] der Platzhalter für den Datenträger Titel ist.
-2.  Geben Sie die Titel der einzelnen Datenträger ein, für die in separate Zeilen der Spalte "diskprompt" der [Medien](media-table.md) Tabelle aufgefordert werden. Der erste und einzige Eintrag in der Medien Tabelle könnte z. b. "1 – install" lauten.
-3.  Während der [InstallFiles](installfiles-action.md) -Aktion wird der Wert aus der diskprompt-Spalte der [Medien](media-table.md) Tabelle durch den Platzhalter in der Zeichenfolge der [**diskprompt**](diskprompt.md) -Eigenschaft ersetzt.
-4.  Die Meldung, die im Meldungs Feld angezeigt wird, wird aus einer integrierten Vorlagen Zeichenfolge in der [Fehler Tabelle](error-table.md)erstellt. Dies ist der Fehler 1302, und die Vorlagen Zeichenfolge lautet: "Bitte legen Sie den Datenträger \[ ein: 2 \] " und \[ 2 \] steht für einen Platzhalter für die [**diskprompt**](diskprompt.md) -Eigenschaft.
+1.  Verwenden Sie die Erstellungsfunktionen des Installationsprogramms, um die [**DiskPrompt-Eigenschaftenzeichenfolge**](diskprompt.md) in der [Property-Tabelle](property-table.md) festzulegen. Dies sollte den Namen des zu installierenden Produkts und einen Platzhalterparameter in der Zeichenfolge für den titel enthalten, der auf dem Datenträger ausgegeben wird. Für Microsoft Publisher könnte die **DiskPrompt-Eigenschaft** beispielsweise "Microsoft Publisher: Datenträger \[ \] 1" sein, wobei \[ 1 \] der Platzhalter für den Datenträgertitel ist.
+2.  Geben Sie die Titel der einzelnen Datenträger, für die eine Eingabeaufforderung angezeigt wird, in separate Zeilen der DiskPrompt-Spalte der [Tabelle Media](media-table.md) ein. Beispielsweise könnte der erste und einzige Eintrag in der Media-Tabelle "1–Install" sein.
+3.  Während der [InstallFiles-Aktion](installfiles-action.md) wird der Wert aus der DiskPrompt-Spalte der [Media-Tabelle](media-table.md) durch den Platzhalter in der Zeichenfolge der [**DiskPrompt-Eigenschaft**](diskprompt.md) ersetzt.
+4.  Die im Meldungsfeld angezeigte Meldung wird aus einer integrierten Vorlagenzeichenfolge in der [Fehlertabelle](error-table.md)erstellt. Dies ist Fehler 1302, und die Vorlagenzeichenfolge lautet: "Please insert the disk: \[ 2 \] ", and the \[ 2 \] represents a placeholder for the [**DiskPrompt**](diskprompt.md) property.
 
-Im Beispiel wird dem Benutzer die folgende Meldung angezeigt: "legen Sie den Datenträger ein: Microsoft Publisher: Disk 1 – install".
+Im Beispiel wird dem Benutzer die folgende Meldung angezeigt: "Please insert the disk: Microsoft Publisher: Disk 1 – Install."
 
-Beachten Sie, dass Datenträger-prompt-Meldungen von allen [Benutzeroberflächen Ebenen](user-interface-levels.md) angezeigt werden, ausgenommen keine.
+Beachten Sie, dass Datenträgereingabeaufforderungsmeldungen von allen [Benutzeroberfläche Ebenen](user-interface-levels.md) mit Ausnahme von "None" angezeigt werden.
 
  
 

@@ -21,7 +21,7 @@ ms.locfileid: "118342131"
 
 OEMs für Personalcomputer, die keinen Musikspeicher betreiben, können eine Co-Marke mit Onlineshopanbietern verwenden. Windows Media Player Setup unterstützt den ServiceExtra-Befehlszeilenparameter, um Hardware-OEMs das Festlegen eines benutzerdefinierten Attributs zu ermöglichen, mit dem der Onlineshop ermitteln kann, welcher OEM den ursprünglichen Onlineshop installiert hat.
 
-Wenn beispielsweise ein Computerersteller namens Fabrikam den ersten Onlineshop auf den Proseware-Musikspeicher festlegen möchte, kann er die folgende Befehlszeile verwenden, um Windows Media Player 10 zu installieren:
+Wenn beispielsweise ein Computerhersteller namens Fabrikam den ersten Onlineshop auf den Proseware-Musikspeicher festlegen möchte, kann er die folgende Befehlszeile verwenden, um Windows Media Player 10 zu installieren:
 
 
 ```C++

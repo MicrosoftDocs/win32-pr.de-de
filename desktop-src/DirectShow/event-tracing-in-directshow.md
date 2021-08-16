@@ -1,23 +1,23 @@
 ---
-description: Ereignis Ablauf Verfolgung in DirectShow
+description: Ereignisablaufverfolgung in DirectShow
 ms.assetid: e78c4514-25f4-441d-bfd0-6dac4f7567fd
-title: Ereignis Ablauf Verfolgung in DirectShow
+title: Ereignisablaufverfolgung in DirectShow
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c567d8a2e75d838570323d8ad6be04f11502c9c4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 6afdeabfb13608453fc6b84bbefb36cca79265739c049cc0e5d35e997ebaf902
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345605"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117819582"
 ---
-# <a name="event-tracing-in-directshow"></a>Ereignis Ablauf Verfolgung in DirectShow
+# <a name="event-tracing-in-directshow"></a>Ereignisablaufverfolgung in DirectShow
 
-DirectShow unterstützt die Ereignis Ablauf Verfolgung für Windows (ETW), die zum Erstellen von Ereignisprotokollen für die Instrumentation oder das Debuggen verwendet werden kann. Weitere Informationen zu etw finden Sie in der Windows SDK-Dokumentation. Um etw-Ereignisse in einer DirectShow-Anwendung zu nutzen, müssen Sie die Ablauf Verfolgung aktivieren und dann die Ablauf Verfolgungs Ereignisse verarbeiten. Führen Sie die folgenden Schritte aus.
+DirectShow unterstützt die Ereignisablaufverfolgung für Windows (ETW), die zum Erstellen von Ereignisprotokollen für die Instrumentierung oder das Debuggen verwendet werden kann. Weitere Informationen zu ETW finden Sie in der dokumentation Windows SDK. Um ETW-Ereignisse in einer DirectShow-Anwendung zu nutzen, müssen Sie die Ablaufverfolgung aktivieren und dann die Ablaufverfolgungsereignisse verarbeiten. Führen Sie die folgenden Schritte aus.
 
 **Festlegen der erforderlichen Registrierungsschlüssel**
 
-Um die Ablauf Verfolgung auf dem Computer des Benutzers zu aktivieren, legen Sie zunächst die folgenden Registrierungsschlüssel fest:
+Um die Ablaufverfolgung auf dem Computer des Benutzers zu aktivieren, legen Sie zunächst die folgenden Registrierungsschlüssel fest:
 
 
 ```C++
@@ -29,28 +29,28 @@ HKEY_LOCAL_MACHINE\SOFTWARE\DEBUG\Quartz.dll
 
 
 
-Diese Schlüssel gelten sowohl für Release-als auch für Debug-Binärdateien.
+Diese Schlüssel gelten sowohl für Release- als auch für Debugbinärdateien.
 
-**Aktivieren der Ablauf Verfolgung in der Anwendung**
+**Aktivieren der Ablaufverfolgung in Ihrer Anwendung**
 
-Führen Sie die folgenden Schritte aus, um die Ablauf Verfolgung in der Anwendung zu aktivieren:
+Führen Sie die folgenden Schritte aus, um die Ablaufverfolgung in Ihrer Anwendung zu aktivieren:
 
-1.  Aufrufen von **starttrace** , um eine neue Ablauf Verfolgungs Sitzung zu starten.
-2.  Ruft **EnableTrace** zum Aktivieren der Ablauf Verfolgung auf. Die Anbieter-GUID für DirectShow ist GUID \_ DShow \_ CTL.
-3.  Bevor die Anwendung beendet wird, wird **stoptrace** aufgerufen, um die Ablauf Verfolgungs Sitzung zu schließen.
+1.  Rufen Sie **StartTrace auf,** um eine neue Ablaufverfolgungssitzung zu starten.
+2.  Rufen Sie **EnableTrace auf,** um die Ablaufverfolgung zu aktivieren. Die Anbieter-GUID für DirectShow ist GUID \_ DSHOW \_ CTL.
+3.  Rufen Sie vor dem Beenden der Anwendung **StopTrace auf,** um die Ablaufverfolgungssitzung zu schließen.
 
 **Verarbeiten der Ereignisse**
 
-Um die Ereignisse zu verarbeiten, führen Sie die folgenden Schritte aus:
+Führen Sie die folgenden Schritte aus, um die Ereignisse zu verarbeiten:
 
-1.  Ruft **opentrace** auf, um die Ablauf Verfolgung für die Verarbeitung zu öffnen.
-2.  Aufrufen von **processtrace** , um die Ereignisse zu verarbeiten.
-3.  Verwenden Sie im **processtrace** -Rückruf die Ereignis-GUID, um den Ereignistyp zu suchen. Die Ereignis-GUID gibt die Struktur an, die für die Ereignisdaten verwendet wird. Siehe [Trace-Ereignis-GUIDs](trace-guids.md).
-4.  Beenden Sie **closetrace** , um das Ablauf Verfolgungs Handle zu schließen.
+1.  Rufen Sie **OpenTrace auf,** um die Ablaufverfolgung für die Verarbeitung zu öffnen.
+2.  Rufen **Sie ProcessTrace auf,** um die Ereignisse zu verarbeiten.
+3.  Verwenden Sie **im ProcessTrace-Rückruf** die Ereignis-GUID, um den Ereignistyp zu suchen. Die Ereignis-GUID gibt die Struktur an, die für die Ereignisdaten verwendet wird. Weitere Informationen finden [Sie unter Ablaufverfolgungsereignis-GUIDs.](trace-guids.md)
+4.  Rufen **Sie CloseTrace auf,** um das Ablaufverfolgungshand handle zu schließen.
 
-**Beispiel Code**
+**Beispielcode**
 
-Der folgende Code zeigt eine Hilfsklasse, die die Ablauf Verfolgung aktiviert. Dieser Code zeigt, wie Ereignisse in eine Protokolldatei geschrieben werden, die nach Abschluss der Sitzung verarbeitet werden kann. Sie können Ereignisse auch in Echtzeit verarbeiten. Weitere Informationen finden Sie in der etw-Dokumentation in der Windows SDK.
+Der folgende Code zeigt eine Hilfsklasse, die die Ablaufverfolgung ermöglicht. Dieser Code zeigt, wie Ereignisse in eine Protokolldatei geschrieben werden, die nach Abschluss der Sitzung verarbeitet werden kann. Sie können Ereignisse auch in Echtzeit verarbeiten. Weitere Informationen finden Sie in der ETW-Dokumentation im Windows SDK.
 
 
 ```C++
@@ -178,7 +178,7 @@ protected:
 
 
 
-Der folgende Code zeigt, wie das Ereignisprotokoll verarbeitet wird:
+Der folgende Code zeigt, wie sie das Ereignisprotokoll verarbeiten:
 
 
 ```C++

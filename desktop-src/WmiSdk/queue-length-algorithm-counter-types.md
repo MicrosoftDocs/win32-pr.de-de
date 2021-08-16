@@ -1,5 +1,5 @@
 ---
-description: Algorithmuszählertypen mit Warteschlangenlänge erhöhen die Anzahl der Elemente in einer Warteschlange in jedem Stichprobenintervall gemäß der entsprechenden frequency-Eigenschaft&\# 8212; Frequency \_ PerfTime, und so weiter.
+description: Algorithmuszählertypen mit Warteschlangenlänge erhöhen die Anzahl der Elemente in einer Warteschlange bei jedem Stichprobenintervall gemäß der entsprechenden frequency-Eigenschaft&\# 8212; Frequency \_ PerfTime, und so weiter.
 ms.assetid: 514b1a79-ed9d-4ec6-a6ea-b3490291ce18
 ms.tgt_platform: multiple
 title: Algorithmuszählertypen mit Warteschlangenlänge
@@ -20,7 +20,7 @@ Ein Beispiel hierfür ist die **AvgDiskQueueLength-Eigenschaft** im [**logischen
 
 
 
-| CounterType-Konstante                                                                                                 | BESCHREIBUNG                                                                                                                                                                                                       |
+| CounterType-Konstante                                                                                                 | Beschreibung                                                                                                                                                                                                       |
 |----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [PERF \_ COUNTER \_ QUEUELEN \_ TYPE](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))Decimal 4523008<br/>            | Durchschnittliche Länge einer Warteschlange für eine Ressource im Laufe der Zeit. Er zeigt den Quotienten aus der Differenz der während der letzten zwei Messintervalle beobachteten Warteschlangenlängen und der Dauer des Intervalls an.                       |
 | [PERF \_ COUNTER \_ LARGE \_ QUEUELEN \_ TYPE](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))Decimal 4523264<br/>     | Durchschnittliche Länge einer Warteschlange für eine Ressource im Laufe der Zeit. Zähler dieses Typs zeigen den Quotienten aus der Differenz der während der letzten zwei Messintervalle beobachteten Warteschlangenlängen und der Dauer des Intervalls an. |

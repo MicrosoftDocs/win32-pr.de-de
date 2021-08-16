@@ -14,9 +14,9 @@ ms.locfileid: "118315674"
 ---
 # <a name="select-statement-for-schema-queries"></a>SELECT-Anweisung für Schemaabfragen
 
-Schemadatenabfragen verwenden die SELECT-Anweisung mit einer Syntax ähnlich der für [Datenabfragen.](select-statement-for-data-queries.md) Der Unterschied besteht in der Verwendung einer speziellen Klasse namens "meta class", die die Abfrage \_ als Schemaabfrage identifiziert.
+Schemadatenabfragen verwenden die SELECT-Anweisung mit einer Syntax ähnlich der für [Datenabfragen.](select-statement-for-data-queries.md) Der Unterschied besteht in der Verwendung einer speziellen Klasse namens \_ "Metaklasse", die die Abfrage als Schemaabfrage identifiziert.
 
-Im folgenden Beispiel werden alle Klassendefinitionen innerhalb des aktuellen Namespaces anforderungen.
+Im folgenden Beispiel werden alle Klassendefinitionen angefordert, die sich im aktuellen Namespace befinden.
 
 
 ```sql
@@ -25,9 +25,9 @@ SELECT * FROM meta_class
 
 
 
-Schemaabfragen unterstützen nur " \* ". Ein Anbieter kann eine WHERE-Klausel hinzufügen, die eine bestimmte Klasse angibt, um den Gültigkeitsbereich der zurückgegebenen Definitionen zu spezifizieren.
+Schemaabfragen unterstützen nur \* "". Um den Bereich der zurückgegebenen Definitionen einzugrenzen, kann ein Anbieter eine WHERE-Klausel hinzufügen, die eine bestimmte Klasse angibt.
 
-Das folgende Beispiel zeigt, wie eine WHERE-Klausel hinzugefügt wird, um eine bestimmte Klasse anzugeben.
+Das folgende Beispiel zeigt, wie Sie eine WHERE-Klausel hinzufügen, um eine bestimmte Klasse anzugeben.
 
 
 ```sql
@@ -36,9 +36,9 @@ SELECT * FROM meta_class WHERE __this ISA "Win32_LogicalDisk"
 
 
 
-Die spezielle Eigenschaft namens **\_ \_ identifiziert** die Zielklasse für eine Schemaabfrage. Beachten Sie, dass der ISA-Operator mit dieser Eigenschaft verwendet werden muss, um Definitionen für die Unterklassen der Zielklasse an fordern zu können. **\_ \_** Die vorherige Abfrage gibt die Definition für die [**Win32 \_ LogicalDisk-Klasse**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) und Definitionen für alle ihre Unterklassen zurück.
+Die spezielle Eigenschaft **\_ \_ namens this** identifiziert die Zielklasse für eine Schemaabfrage. Beachten Sie, dass der ISA-Operator mit **dieser \_ \_** Eigenschaft verwendet werden muss, um Definitionen für die Unterklassen der Zielklasse anzufordern. Die vorherige Abfrage gibt die Definition für die [**Win32 \_ LogicalDisk-Klasse**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) und Definitionen für alle ihre Unterklassen zurück.
 
-Das folgende Beispiel zeigt, wie sie eine Klassendefinition für eine einzelne Klasse mithilfe der **\_ \_ Class-Systemeigenschaft** anfordern.
+Im folgenden Beispiel wird gezeigt, wie eine Klassendefinition für eine einzelne Klasse mithilfe der **\_ \_ Systemeigenschaft Klasse** angefordert wird.
 
 
 ```sql
@@ -47,9 +47,9 @@ SELECT * FROM meta_class WHERE __Class = "Win32_LogicalDisk"
 
 
 
-Diese Abfrage entspricht dem Aufrufen der [**IWbemServices::GetObject-**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) oder [**IWbemServices::GetObjectAsync-Methode,**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) bei der der Objektpfadparameter auf "Win32 \_ LogicalDisk" festgelegt ist.
+Diese Abfrage entspricht dem Aufrufen von [**IWbemServices::GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) oder der [**IWbemServices::GetObjectAsync-Methode,**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) wobei der Objektpfadparameter auf "Win32 \_ LogicalDisk" festgelegt ist.
 
-Im folgenden VBScript-Codebeispiel werden alle untergeordneten Klassen einer WMI-Klasse der obersten Ebene abgerufen. Die \_ WMI-Systemeigenschaft Desi- enthält den Namen der Klasse der obersten Ebene, von der eine Klasse abgeleitet wird, mit der Sie alle Klassen in einem Namespace abrufen können, der von einer Klasse der obersten Ebene abgeleitet wurde, einschließlich dieser \_ Klasse.
+Im folgenden VBScript-Codebeispiel werden alle untergeordneten Klassen einer WMI-Klasse der obersten Ebene abgerufen. Die \_ \_ WMI-Systemeigenschaft "Dinnery" enthält den Namen der Klasse der obersten Ebene, von der eine Klasse abgeleitet wird. Mit dieser Klasse können Sie alle Klassen in einem Namespace abrufen, der von einer Klasse der obersten Ebene abgeleitet wurde, einschließlich dieser Klasse.
 
 
 ```VB
@@ -87,7 +87,7 @@ Next
 
 
 
-Das folgende VBScript ruft Klassen der obersten Ebene ab. Für alle Klassen der obersten Ebene in einem WMI-Namespace ist die \_ \_ Superclass-Systemeigenschaft NULL. Daher ist es möglich, die Klassen der obersten Ebene abzurufen, indem Sie nach einer NULL-Übergeordneten Klasse suchen.
+Der folgende VBScript-Code ruft Klassen der obersten Ebene ab. Für alle Klassen der obersten Ebene in einem WMI-Namespace ist die \_ \_ Superclass-Systemeigenschaft NULL. Daher ist es möglich, die Klassen der obersten Ebene abzurufen, indem Sie nach einer NULL-Oberklasse suchen.
 
 
 ```VB

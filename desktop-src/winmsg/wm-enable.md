@@ -1,7 +1,7 @@
 ---
 description: Wird gesendet, wenn eine Anwendung den aktivierten Zustand eines Fensters ändert.
 ms.assetid: df2cf953-121f-43bb-a06c-d10e445bfb5e
-title: WM_ENABLE (Winuser.h)
+title: WM_ENABLE Meldung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.openlocfilehash: 5e01477de7cf1b9052bba752929210a1bc7553445f81f971aec67d7b510653a9
@@ -13,9 +13,9 @@ ms.locfileid: "118200481"
 ---
 # <a name="wm_enable-message"></a>WM \_ ENABLE-Meldung
 
-Wird gesendet, wenn eine Anwendung den aktivierten Zustand eines Fensters ändert. Sie wird an das Fenster gesendet, dessen aktivierter Zustand sich ändert. Diese Meldung wird gesendet, bevor die [**EnableWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-enablewindow) zurückgegeben wird, aber nachdem sich der aktivierte Zustand ([**WS \_ DISABLED**](window-styles.md) style bit) des Fensters geändert hat.
+Wird gesendet, wenn eine Anwendung den aktivierten Zustand eines Fensters ändert. Sie wird an das Fenster gesendet, dessen aktivierter Zustand sich ändert. Diese Meldung wird gesendet, bevor die [**EnableWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-enablewindow) zurückgegeben wird, aber nachdem sich der aktivierte Zustand [**(WS DISABLED-Formatbit) \_**](window-styles.md) des Fensters geändert hat.
 
-Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
+Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++

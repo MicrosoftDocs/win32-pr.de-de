@@ -1,8 +1,8 @@
 ---
 title: sh_semaphore-Schlüsselwort
-description: Das \ SH \_ Semaphore \-Schlüsselwort gibt an, dass das Systemobjekt ein Handle für ein Semaphor ist.
+description: Das Schlüsselwort \sh \_ semaphore\ gibt an, dass das Systemobjekt ein Handle für ein Semaphor ist.
 keywords:
-- sh_semaphore-Schlüsselwort-Mittel l
+- sh_semaphore-Schlüsselwort MIDL
 topic_type:
 - apiref
 api_name:
@@ -11,16 +11,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 02/05/2021
-ms.openlocfilehash: 2a5c33e4c44b67e3106a48cde244abaf13f41ad5
-ms.sourcegitcommit: af9983bab40fe0b042f177ce7ca79f2eb0f9d0e8
+ms.openlocfilehash: a48d0b085f3653679c7399ad0f234e7b7a1ecf1b1532480c003923967ac4830a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "106354251"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118383220"
 ---
-# <a name="sh_semaphore-keyword"></a>SH \_ Semaphor-Schlüsselwort
+# <a name="sh_semaphore-keyword"></a>\_sh-Semaphorschlüsselwort
 
-Das **SH \_ Semaphor** -Schlüsselwort gibt an, dass ein ein `system_handle` Handle für ein Semaphor enthält.
+Das **Schlüsselwort sh \_ semaphore** gibt an, dass `system_handle` ein ein Handle für ein Semaphor enthält.
 
 ``` syntax
 [system_handle(sh_semaphore)]
@@ -32,11 +32,11 @@ Das **SH \_ Semaphor** -Schlüsselwort gibt an, dass ein ein `system_handle` Han
 
 Dieses Schlüsselwort ist ein Parameter für [**system_handle**](system-handle.md).
 
-Die [**system_handle**](system-handle.md) Dokumentation enthält auch Details zur optionalen Verwendung des *Zugriffsrechte* Parameters. Das Standardverhalten entspricht den `DUPLICATE_SAME_ACCESS` Spezifikationen für [ **Duplikat-andle** -Funktionen](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle) .
+Die [**system_handle-Dokumentation**](system-handle.md) enthält auch Details zur optionalen Verwendung des *Access-Rights-Parameters.* Das Standardverhalten entspricht `DUPLICATE_SAME_ACCESS` den [ **DuplicateHandle-Funktionsspezifikationen.**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Schlüsselwort mit dem-Attribut zu verwenden `system_handle` , `-target` muss das-Flag `NT100` beim Ausführen von midl.exe auf (oder höher) festgelegt werden.
+Um dieses Schlüsselwort mit dem -Attribut zu `system_handle` verwenden, muss das `-target` Flag bei der Ausführung von midl.exe auf `NT100` (oder höher) festgelegt werden.
 
 ## <a name="examples"></a>Beispiele
 
@@ -54,21 +54,21 @@ interface MyInterface : IUnknown
 | Unterstützte Mindestversion (Client) | Windows 10 Anniversary Update (Version 1607, Build 14393) |
 | Unterstützte Mindestversion (Server) | Windows Server 2016 (Build 14393) |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**system_handle**](system-handle.md)
 </dt> <dt>
 
-[Semaphore-Objekte](../sync/semaphore-objects.md)
+[Semaphorobjekte](../sync/semaphore-objects.md)
 </dt> <dt>
 
-[Sicherheits-und Zugriffsrechte für das Synchronisierungs Objekt](../sync/synchronization-object-security-and-access-rights.md)
+[Sicherheit und Zugriffsrechte für Synchronisierungsobjekte](../sync/synchronization-object-security-and-access-rights.md)
 </dt> <dt>
 
-[Funktion " **kreatesemaphore** "](/windows/win32/api/winbase/nf-winbase-createsemaphorea)
+[**CreateSemaphore-Funktion**](/windows/win32/api/winbase/nf-winbase-createsemaphorea)
 </dt> <dt>
 
-[Funktion " **kreatesemaphoreex** "](/windows/win32/api/winbase/nf-winbase-createsemaphoreexa)
+[**CreateSemaphoreEx-Funktion**](/windows/win32/api/winbase/nf-winbase-createsemaphoreexa)
 </dt> </dl>

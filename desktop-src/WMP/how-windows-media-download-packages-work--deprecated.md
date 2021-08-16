@@ -3,9 +3,9 @@ title: Funktionsweise Windows Mediendownloadpakete (veraltet)
 description: Funktionsweise Windows Mediendownloadpakete (veraltet)
 ms.assetid: 8bab1764-93da-4abc-a8b7-17bc44b381ce
 keywords:
-- Windows Medienmetadateien,Windows Mediendownloadpakete
+- Windows Medienmetadateien, Windows Mediendownloadpakete
 - Windows Media Player,Windows Mediendownloadpakete
-- Metadateien, Windows Mediendownloadpakete
+- Metadateien,Windows Mediendownloadpakete
 - Windows Medien Windows Mediendownloadpakete
 - Windows Mediendownloadpakete, Informationen
 - Windows Mediendownloadpakete,Funktionsweise von Paketen
@@ -25,9 +25,9 @@ ms.locfileid: "118338970"
 ---
 # <a name="how-windows-media-download-packages-work-deprecated"></a>Funktionsweise Windows Mediendownloadpakete (veraltet)
 
-Auf dieser Seite wird ein Feature dokumentiert, das in zukünftigen Versionen von Windows Media Player und dem Windows Media Player SDK möglicherweise nicht verfügbar ist.
+Auf dieser Seite wird ein Feature dokumentiert, das in zukünftigen Versionen von Windows Media Player und des Windows Media Player SDK möglicherweise nicht verfügbar ist.
 
-Ein Windows Mediendownloadpaket wird von einer Website aus gestartet, wenn ein Benutzer in einem Webbrowser auf einen Link klickt, z. B. microsoft Internet Explorer. Diese Aktion öffnet Windows Media Player und lädt dann das Paket Windows Mediendownloads auf die Festplatte des Benutzers in einem Standardordner herunter und entpackt es.
+Ein Windows Mediendownloadpaket wird von einer Website aus gestartet, wenn ein Benutzer in einem Webbrowser auf einen Link klickt, z. B. microsoft Internet Explorer. Diese Aktion wird Windows Media Player geöffnet und lädt dann das Windows Mediendownloadpaket auf der Festplatte des Benutzers in einem Standardordner herunter und entpackt es.
 
 Nachdem die Dateien aus dem Windows Mediendownloadpaket extrahiert wurden, sucht Windows Media Player eine Windows Media-Metadateiwiedergabeliste mit der Dateinamenerweiterung ASX unter den gepackten Dateien. Wenn eine gefunden wird, erstellt der Player eine Wiedergabeliste basierend auf der enthaltenen Metadatei. Dateien, die Multimediainhalte enthalten, werden dann der Bibliothek hinzugefügt.
 

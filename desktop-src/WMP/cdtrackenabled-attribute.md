@@ -41,7 +41,7 @@ Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player Serie 9 oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 

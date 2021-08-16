@@ -1,10 +1,10 @@
 ---
-title: WMDRMNET_POLICY_MINIMUM_ENVIRONMENT Struktur (wmdrmsdk. h)
-description: Die minimale Umgebungs Struktur der wmdrmnet- \_ Richtlinie \_ \_ enthält die minimalen Sicherheitsanforderungen für Windows Media DRM für Netzwerkgeräte.
+title: WMDRMNET_POLICY_MINIMUM_ENVIRONMENT-Struktur (Wmdrmsdk.h)
+description: Die WMDRMNET \_ POLICY \_ MINIMUM \_ ENVIRONMENT-Struktur enthält die Mindestsicherheitsanforderungen für Windows Medien-DRM für Netzwerkgeräte.
 ms.assetid: b1bc9a8d-197e-45fe-a152-0b81add977eb
 keywords:
-- WMDRMNET_POLICY_MINIMUM_ENVIRONMENT Struktur-Windows Media-Format
-- Struktur des Windows-Medien Formats
+- WMDRMNET_POLICY_MINIMUM_ENVIRONMENT Strukturfenster Medienformat
+- Strukturfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4bf53fdec186a44eff375dd2e9cf9badfe0ba715
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 26c11cf02d7cfcd2e3ab62c4e6b110e2c20b77cf6f79251a23f642b38d4df553
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118027461"
 ---
-# <a name="wmdrmnet_policy_minimum_environment-structure"></a>\_ \_ Minimale \_ Umgebungs Struktur der wmdrmnet-Richtlinie
+# <a name="wmdrmnet_policy_minimum_environment-structure"></a>WMDRMNET POLICY MINIMUM ENVIRONMENT structure (WMDRMNET \_ POLICY \_ MINIMUM \_ ENVIRONMENT-Struktur)
 
-Die **\_ \_ minimale \_ Umgebungs Struktur der wmdrmnet-Richtlinie** enthält die minimalen Sicherheitsanforderungen für Windows Media DRM für Netzwerkgeräte.
+Die **WMDRMNET \_ POLICY MINIMUM \_ \_ ENVIRONMENT-Struktur** enthält die Mindestsicherheitsanforderungen für Windows Medien-DRM für Netzwerkgeräte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ typedef struct WMDRMNET_POLICY_MINIMUM_ENVIRONMENT {
 
 <dl> <dt>
 
-**wminimumsecuritylevel**
+**wMinimumSecurityLevel**
 </dt> <dd>
 
-Mindestens erforderliche Anwendungs Sicherheitsstufe.
+Mindestens erforderliche Anwendungssicherheitsstufe.
 
 </dd> <dt>
 
-**dwminimumapprevocationlistversion**
+**dwMinimumAppRevocationListVersion**
 </dt> <dd>
 
-Mindestens erforderliche Version für die Sperr Liste für das Anwendungs Zertifikat.
+Mindestens erforderliche Version der Anwendungszertifikatsperrliste.
 
 </dd> <dt>
 
-**dwminimumdevicerevocationlistversion**
+**dwMinimumDeviceRevocationListVersion**
 </dt> <dd>
 
-Mindestens erforderliche Sperr Liste für das Gerätezertifikat.
+Mindestens erforderliche Sperrliste für Gerätezertifikate.
 
 </dd> </dl>
 
@@ -74,18 +74,18 @@ Keine.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Strukturen**](drm-structures.md)
 </dt> <dt>
 
-[**wmdrmnet- \_ Richtlinie**](wmdrmnet-policy.md)
+[**\_WMDRMNET-RICHTLINIE**](wmdrmnet-policy.md)
 </dt> </dl>
 
  

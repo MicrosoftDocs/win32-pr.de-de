@@ -37,7 +37,7 @@ Die **IWbemEventSink-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                | BESCHREIBUNG                                                           |
+| Methode                                                                | Beschreibung                                                           |
 |:----------------------------------------------------------------------|:----------------------------------------------------------------------|
 | [**GetRestrictedSink**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemeventsink-getrestrictedsink)         | Wird vom Consumer aufgerufen, um eingeschränkte Ereignisabfragen zu erstellen.<br/> |
 | [**IsActive**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemeventsink-isactive)                           | Überprüft den Status der Ereignissenke.<br/>                               |

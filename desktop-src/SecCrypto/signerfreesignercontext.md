@@ -1,7 +1,7 @@
 ---
-description: Gibt eine Signatur Geber \_ Kontext Struktur frei, die durch einen vorherigen-Befehl der signersignetx-Funktion zugeordnet wurde.
+description: Gibt eine SIGNER \_ CONTEXT-Struktur frei, die durch einen vorherigen Aufruf der SignerSignEx-Funktion zugeordnet wurde.
 ms.assetid: 190de302-50fe-488e-90ed-c9efd39dae70
-title: Signerfresignercontext-Funktion
+title: SignerFreeSignerContext-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,19 +13,19 @@ api_type:
 - DllExport
 api_location:
 - Mssign32.dll
-ms.openlocfilehash: 284b1cbf5755da06e9454b86ac9eacef5fbf613f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8338e346db49b21f9eccfca11a7e1a1fff0c42f0a013139a097385fbbe90c76f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349526"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117973191"
 ---
-# <a name="signerfreesignercontext-function"></a>Signerfresignercontext-Funktion
+# <a name="signerfreesignercontext-function"></a>SignerFreeSignerContext-Funktion
 
-Die **signerfresignercontext** -Funktion gibt eine [**Signatur Geber \_ Kontext**](signer-context.md) Struktur frei, die durch einen vorherigen-Befehl der [**signersignetx**](signersignex.md) -Funktion zugeordnet wurde.
+Die **SignerFreeSignerContext-Funktion** gibt eine [**SIGNER \_ CONTEXT-Struktur**](signer-context.md) frei, die durch einen vorherigen Aufruf der [**SignerSignEx-Funktion zugeordnet**](signersignex.md) wurde.
 
 > [!Note]  
-> Diese Funktion verfügt über keine zugeordnete Header Datei oder Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Header Datei erstellen und die [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Mssign32.dll zu verknüpfen.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um eine dynamische Verknüpfung mit Mssign32.dll.
 
  
 
@@ -44,18 +44,18 @@ HRESULT WINAPI SignerFreeSignerContext(
 
 <dl> <dt>
 
-*psignercontext* \[ in\]
+*pSignerContext* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die frei verfügbaren Signatur Geber- [**\_ Kontext**](signer-context.md) Struktur.
+Ein Zeiger auf die [**frei zu gebende SIGNER \_ CONTEXT-Struktur.**](signer-context.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion S \_ OK zurück.
+Wenn die Funktion erfolgreich ist, gibt sie S \_ OK zurück.
 
-Wenn die Funktion fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
+Wenn die Funktion fehlschlägt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,20 +63,20 @@ Wenn die Funktion fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der d
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Mssign32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Signatur Geber \_ Kontext**](signer-context.md)
+[**\_SIGNER-KONTEXT**](signer-context.md)
 </dt> <dt>
 
-[**Signersignetx**](signersignex.md)
+[**SignerSignEx**](signersignex.md)
 </dt> </dl>
 
  

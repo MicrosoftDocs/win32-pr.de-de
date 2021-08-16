@@ -1,6 +1,6 @@
 ---
 title: UI_PKEY_Pinned
-description: Identifiziert die \_ \_ PKEY-Eigenschaft der Benutzeroberfläche.
+description: Identifiziert die \_ \_ PKEY-Pinned-Eigenschaft der Benutzeroberfläche.
 ms.assetid: 906b2ab9-1ed7-46a6-88bc-e8f9160ab60c
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118201485"
 ---
-# <a name="ui_pkey_pinned"></a>\_Benutzeroberflächen-PKEY \_ angeheftet
+# <a name="ui_pkey_pinned"></a>\_ \_ PKEY-Benutzeroberfläche angeheftet
 
-Identifiziert die \_ \_ PKEY-Eigenschaft der Benutzeroberfläche.
+Identifiziert die \_ \_ PKEY-Pinned-Eigenschaft der Benutzeroberfläche.
 
 ```
 propertyDescription
@@ -29,7 +29,7 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Benutzeroberflächen-PKEY angeheftet wird von einer Anwendung verwendet, um zu abfragen, ob ein Element im Anwendungsmenü anwendungsinstanzübergreifend "angeheftet" oder persistent \_ \_ ist. [](windowsribbon-controls-applicationmenu.md) Beispielsweise kann auf ein Element in der Liste der zuletzt verwendeten Elemente (MRU) zugegriffen werden, und die LISTE der MRU-Elemente wird erst dann aus der Liste der MRU-Elemente entfernt, wenn es "entpinnt" ist.
+Ui \_ PKEY \_ Pinned wird von einer Anwendung verwendet, um abzufragen, ob ein Element im [Anwendungsmenü](windowsribbon-controls-applicationmenu.md) anwendungsinstanzübergreifend "angeheftet" oder persistent ist. Beispielsweise kann auf ein Element in der Liste der zuletzt verwendeten Elemente (MRU) zugegriffen werden, und die MRU-Elementliste wird erst gelöscht, wenn es "entpinnt" ist.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -41,7 +41,7 @@ Benutzeroberflächen-PKEY angeheftet wird von einer Anwendung verwendet, um zu a
 [UI \_ PKEY \_ RecentItems](windowsribbon-reference-properties-uipkey-recentitems.md)
 </dt> <dt>
 
-[Zuletzt enthaltene Elemente](windowsribbon-controls-recentitems.md)
+[Zuletzt durchgeführte Elemente](windowsribbon-controls-recentitems.md)
 </dt> </dl>
 
  

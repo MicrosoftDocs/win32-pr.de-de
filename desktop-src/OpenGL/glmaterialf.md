@@ -45,7 +45,7 @@ void WINAPI glMaterialf(
 *Gesicht* 
 </dt> <dd>
 
-Das Gesicht oder die Gesichter, die aktualisiert werden. Dies muss einer der folgenden Sein: GL \_ FRONT, GL \_ BACK oder GL FRONT und GL \_ \_ BACK.
+Das oder die Gesichter, die aktualisiert werden. Dies muss einer der folgenden Sein: GL \_ FRONT, GL \_ BACK oder GL FRONT und GL \_ \_ BACK.
 
 </dd> <dt>
 
@@ -58,7 +58,7 @@ Der einwertige Materialparameter des oder der Gesichter, die aktualisiert werden
 
 | Wert                                                                                                                                                      | Bedeutung                                                                                                                                                                                                                                                                                                 |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_SHININESS"></span><span id="gl_shininess"></span><dl> <dt>**\_GL-GL-SCHLÄFRIGKEIT**</dt> </dl> | Der *Parameter param* ist ein einzelner Gleitkommawert, der den RGBA-Exponenten des Materials angibt. Ganzzahlige Werte werden direkt zugeordnet. Nur Werte im Bereich \[ 0 und 128 \] werden akzeptiert. Der Standardspezifikations exponent für front- und back-facing materials ist 0. <br/> |
+| <span id="GL_SHININESS"></span><span id="gl_shininess"></span><dl> <dt>**\_GL-GL-SCHLÄFRIGKEIT**</dt> </dl> | Der *Parameter param* ist ein einzelner Gleitkommawert, der den RGBA-Exponenten des Materials angibt. Ganzzahlige Werte werden direkt zugeordnet. Nur Werte im Bereich \[ 0, 128 \] werden akzeptiert. Der Standardspezifikations exponent für front- und back-facing materials ist 0. <br/> |
 
 
 

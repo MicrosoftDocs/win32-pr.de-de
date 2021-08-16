@@ -3,7 +3,7 @@ title: ClosedCaption.SAMILang
 description: Die SAMILang-Eigenschaft gibt die Sprache an, die für Untertitel angezeigt wird, oder ruft sie ab.
 ms.assetid: 990fb180-cb37-4022-b236-03f5acfd3ad3
 keywords:
-- ClosedCaption.SAMILang-Windows Media Player
+- ClosedCaption.SAMILang Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -31,11 +31,11 @@ player.closedCaption.SAMILang
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
+Diese Eigenschaft ist eine **Zeichenfolge** mit Lese-/Schreibzugriff.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine SAMI-Datei kann Text für eine oder mehrere Sprachen enthalten. Die für Untertitel verfügbaren Sprachen werden zwischen den Tags <STYLE> und </STYLE> in der SAMI-Datei definiert. Ein Sprachbezeichner wird mit einer eindeutigen alphanumerischen Zeichenfolge angegeben, der ein Zeitraum (.) voran steht. Der für eine Sprache angegebene Name kann eine beliebige Zeichenfolge sein. Beispielsweise kann folgendes verwendet werden, um englisch (USA) zu definieren:
+Eine SAMI-Datei kann Text für eine oder mehrere Sprachen enthalten. Die sprachen, die für Untertitel verfügbar sind, werden zwischen den Tags <STYLE> und </STYLE> in der SAMI-Datei definiert. Ein Sprachbezeichner wird mit einer eindeutigen alphanumerischen Zeichenfolge angegeben, der ein Punkt (.) vorangestellt ist. Der für eine Sprache angegebene Name kann eine beliebige Zeichenfolge sein. Beispielsweise kann Folgendes verwendet werden, um englisch (USA) zu definieren:
 
 
 ```
@@ -45,15 +45,15 @@ Eine SAMI-Datei kann Text für eine oder mehrere Sprachen enthalten. Die für Un
 
 
 
-Wenn keine SAMI-Sprache angegeben ist, wird standardmäßig die erste sprache verwendet, die in der SAMI-Datei definiert ist.
+Wenn keine SAMI-Sprache angegeben ist, wird standardmäßig die erste in der SAMI-Datei definierte Sprache verwendet.
 
-Der Wert, den Sie mit *ClosedCaption übergeben.* **SAMILang muss** mit dem **Name-Attribut** im Sprachspezifizierer übereinstimmen.
+Der Wert, den Sie mit *ClosedCaption* übergeben. **SAMILang** muss mit dem **Name-Attribut** im Sprachspezifizierer übereinstimmen.
 
-**Windows Media Player 10 Mobile:** Diese Eigenschaft ist schreibgeschützt und gibt immer eine leere Zeichenfolge zurück.
+**Windows Media Player 10 Mobile:** Diese Eigenschaft ist schreibgeschützter Typ und gibt immer eine leere Zeichenfolge zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden beispiel JScript *ClosedCaption verwendet.* **SAMILang** in einem HTML SELECT-Element, um die Sprache für Untertitel anzugeben. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird *ClosedCaption* verwendet. **SAMILang** in einem HTML SELECT-Element, um die Untertitelsprache anzugeben. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript

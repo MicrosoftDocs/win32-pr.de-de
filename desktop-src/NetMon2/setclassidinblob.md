@@ -1,7 +1,7 @@
 ---
-description: Die setclassidinblob-Funktion legt den Wert der benannten Klassen Kennung eines BLOBs fest.
+description: Die SetClassIDInBlob-Funktion legt den Bezeichnerwert der benannten Klasse eines BLOB fest.
 ms.assetid: d17dd48b-2e35-4c57-ba33-688180910b63
-title: Setclassidinblob-Funktion (Netmon. h)
+title: SetClassIDInBlob-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Npptools.dll
-ms.openlocfilehash: b617c39767038bac51d749a640ebcf2301e0c63f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 70e68d3a0d9d105b765ee6cd0ae1a6422f48e3dd6776cf144b302c9e1c5ff951
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106351617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118364159"
 ---
-# <a name="setclassidinblob-function"></a>Setclassidinblob-Funktion
+# <a name="setclassidinblob-function"></a>SetClassIDInBlob-Funktion
 
-Die **setclassidinblob** -Funktion legt den Wert der benannten Klassen Kennung eines BLOBs fest.
+Die **SetClassIDInBlob-Funktion** legt den Bezeichnerwert der benannten Klasse eines BLOB fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,46 +43,46 @@ DWORD SetClassIDInBlob(
 
 <dl> <dt>
 
-*hblob* \[ in\]
+*hBlob* \[ In\]
 </dt> <dd>
 
 Handle für ein BLOB.
 
 </dd> <dt>
 
-*pownername* \[ in\]
+*pOwnerName* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Namen des BLOB- **Besitzers** , der festgelegt wird.
+Zeiger auf den **Blobbesitzernamen,** der festgelegt ist.
 
 </dd> <dt>
 
-*pcategoryname* \[ in\]
+*pCategoryName* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Namen der BLOB- **Kategorie** , die festgelegt wird.
+Zeiger auf den **Blobkategorienamen,** der festgelegt ist.
 
 </dd> <dt>
 
-*ptagname* \[ in\]
+*pTagName* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Namen des BLOB- **Tags** , der festgelegt wird.
+Zeiger auf den **blob-Tagnamen,** der festgelegt ist.
 
 </dd> <dt>
 
-*pclsid* \[ in\]
+*pClsID* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Klassen Bezeichner des festgelegten BLOBs.
+Zeiger auf den Klassenbezeichner des BLOB, das festgelegt ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, der den Fehler angibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,41 +92,41 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, d
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Npptools. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Npptools.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Npptools.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Getclassidfromblob](getclassidfromblob.md)
+[GetClassIDFromBlob](getclassidfromblob.md)
 </dt> <dt>
 
-[Setboolinblob](setboolinblob.md)
+[SetBoolInBlob](setboolinblob.md)
 </dt> <dt>
 
-[Setdwordinblob](setdwordinblob.md)
+[SetDwordInBlob](setdwordinblob.md)
 </dt> <dt>
 
-[Setmacaddressinblob](setmacaddressinblob.md)
+[SetMacAddressInBlob](setmacaddressinblob.md)
 </dt> <dt>
 
-[Setnetworkinfoinblob](setnetworkinfoinblob.md)
+[SetNetworkInfoInBlob](setnetworkinfoinblob.md)
 </dt> <dt>
 
-[Setnppaddressfilterinblob](setnppaddressfilterinblob.md)
+[SetNPPAddressFilterInBlob](setnppaddressfilterinblob.md)
 </dt> <dt>
 
-[Setnpppatternfilterinblob](setnpppatternfilterinblob.md)
+[SetNPPPatternFilterInBlob](setnpppatternfilterinblob.md)
 </dt> <dt>
 
-[Setnpptriggerinblob](setnpptriggerinblob.md)
+[SetNPPTriggerInBlob](setnpptriggerinblob.md)
 </dt> <dt>
 
-[Setstringinblob](setstringinblob.md)
+[SetStringInBlob](setstringinblob.md)
 </dt> </dl>
 
  

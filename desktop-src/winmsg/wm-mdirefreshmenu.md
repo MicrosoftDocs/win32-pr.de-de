@@ -1,7 +1,7 @@
 ---
 description: Eine Anwendung sendet die \_ WM-MDMAKERFRESHMENU-Nachricht an ein MDI-Clientfenster (Multiple Document Interface), um das Fenstermenü des MDI-Rahmenfensters zu aktualisieren.
 ms.assetid: 6450d84a-a0b9-45d0-9e0c-757d26502059
-title: WM_MDIREFRESHMENU Meldung (Winuser.h)
+title: WM_MDIREFRESHMENU-Nachricht (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.openlocfilehash: 707059d3cc51703819968f929f9692dbb2422ee3f9fa77e2edb697f12257faf9

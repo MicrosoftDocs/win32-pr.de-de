@@ -34,7 +34,7 @@ Die [**Funktionen RadiusExtensionInit**](/windows/desktop/api/authif/nc-authif-p
 
 Die Erweiterungs-DLL exportiert [**möglicherweise RadiusExtensionProcess2**](/windows/desktop/api/authif/nc-authif-pradius_extension_process_2) anstelle von [**RadiusExtensionProcess**](/windows/desktop/api/authif/nc-authif-pradius_extension_process) oder [**RadiusExtensionProcessEx.**](/windows/desktop/api/authif/nc-authif-pradius_extension_process_ex)
 
-Wenn die Erweiterungs-DLL [**RadiusExtensionProcessEx**](/windows/desktop/api/authif/nc-authif-pradius_extension_process_ex)exportiert, muss sie auch [**RadiusExtensionFreeAttributes exportieren.**](/windows/desktop/api/authif/nc-authif-pradius_extension_free_attributes)
+Wenn die Erweiterungs-DLL [**RadiusExtensionProcessEx exportiert,**](/windows/desktop/api/authif/nc-authif-pradius_extension_process_ex)muss sie auch [**RadiusExtensionFreeAttributes exportieren.**](/windows/desktop/api/authif/nc-authif-pradius_extension_free_attributes)
 
 ## <a name="system-defined"></a>Systemdefiniert
 

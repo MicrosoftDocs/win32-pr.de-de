@@ -13,15 +13,15 @@ ms.locfileid: "118193831"
 ---
 # <a name="retrieving-device-information"></a>Abrufen von Geräteinformationen
 
-Die WPD-API bietet einen großen Satz von Schnittstellen und Methoden, mit denen Sie Informationen für ein bestimmtes Gerät abrufen können. Im Allgemeinen können Gerätedaten in drei Kategorien unterteilt werden, wie in der folgenden Tabelle beschrieben.
+Die WPD-API bietet einen umfangreichen Satz von Schnittstellen und Methoden, mit denen Sie Informationen für ein bestimmtes Gerät abrufen können. Im Allgemeinen können Gerätedaten in drei Kategorien unterteilt werden, wie in der folgenden Tabelle beschrieben.
 
 
 
-| Gerätedaten                                                                             | BESCHREIBUNG                                                                               |
+| Gerätedaten                                                                             | Beschreibung                                                                               |
 |-----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [Funktionale Kategorien](retrieving-the-functional-categories-supported-by-a-device.md) | Die Funktionalen Kategorien beschreiben die Vorgänge, die ein Gerät ausführen kann. |
-| [Inhaltstypen](retrieving-the-content-types-supported-by-a-device.md)                 | Die Inhaltstypen geben an, welche Inhaltstypen ein Gerät rendern kann.         |
-| [Ereignisse](retrieving-the-events-supported-by-a-device.md)                               | Einige Geräte können Ereignisse aus denen Ihre Anwendung nachverfolgen und darauf reagieren kann. |
+| [Funktionale Kategorien](retrieving-the-functional-categories-supported-by-a-device.md) | Die Funktionskategorien beschreiben die Vorgänge, die ein Gerät ausführen kann. |
+| [Inhaltstypen](retrieving-the-content-types-supported-by-a-device.md)                 | Die Inhaltstypen bezeichnen, welche Inhaltstypen ein Gerät rendern kann.         |
+| [Ereignisse](retrieving-the-events-supported-by-a-device.md)                               | Einige Geräte können Ereignisse auslösen, die Ihre Anwendung nachverfolgen und darauf reagieren kann. |
 
 
 

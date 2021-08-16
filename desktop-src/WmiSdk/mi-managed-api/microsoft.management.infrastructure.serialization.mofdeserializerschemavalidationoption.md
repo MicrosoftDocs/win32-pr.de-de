@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: MofDeserializerSchemaValidationOption-Enumeration'
+description: 'Weitere Informationen finden Sie unter: MofDeserializerSchemaValidationOption-Enumeration'
 title: MofDeserializerSchemaValidationOption-Enumeration (Microsoft.Management.Infrastructure.Serialization)
 TOCTitle: MofDeserializerSchemaValidationOption enumeration (Microsoft.Management.Infrastructure.Serialization)
 ms:assetid: T:Microsoft.Management.Infrastructure.Serialization.MofDeserializerSchemaValidationOption
@@ -74,9 +74,9 @@ Friend Enumeration MofDeserializerSchemaValidationOption
 
 |Membername|Beschreibung|
 |-|-|
-|Standard|Gibt die Standardmäßige Schemavalidierung an.|
-|Strict|Gibt eine strenge Schemavalidierung an.|
-|Lose|Gibt die lose Schemavalidierung an.|
+|Standard|Gibt die Standardschemaüberprüfung an.|
+|Strict|Gibt die strenge Schemavalidierung an.|
+|Lose|Gibt eine lose Schemavalidierung an.|
 |IgnorePropertyType|Gibt an, dass die Schemavalidierung Eigenschaftstypen ignorieren soll.|
 |Ignorieren|Gibt an, dass die Schemavalidierung ignoriert werden soll.|
 

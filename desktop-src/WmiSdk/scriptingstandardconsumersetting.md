@@ -1,5 +1,5 @@
 ---
-description: Die Singleton ScriptingStandardConsumerSetting-Klasse stellt Registrierungsdaten bereit, die allen Instanzen der ActiveScriptEventConsumer-Standardconsumer-Consumerklasse gemeinsam sind.
+description: Die Singleton-Klasse ScriptingStandardConsumerSetting stellt Registrierungsdaten zur Anwendung, die für alle Instanzen der Standardconsumerklasse ActiveScriptEventConsumer verwendet werden.
 ms.assetid: d217e058-3529-4173-b896-ebff3d7b05c6
 ms.tgt_platform: multiple
 title: ScriptingStandardConsumerSetting-Klasse
@@ -28,9 +28,9 @@ ms.locfileid: "118316204"
 ---
 # <a name="scriptingstandardconsumersetting-class"></a>ScriptingStandardConsumerSetting-Klasse
 
-Die Singleton **ScriptingStandardConsumerSetting-Klasse** stellt Registrierungsdaten bereit, die allen Instanzen der [**ActiveScriptEventConsumer-Standardconsumer-Consumerklasse**](activescripteventconsumer.md) gemeinsam sind. Eine **ActiveScriptEventConsumer-Instanz** verwendet die **Eigenschaften MaximumScripts** und **Timeout.** Weitere Informationen finden Sie unter [Überwachen und Reagieren auf Ereignisse mit Standard-Consumern.](monitoring-and-responding-to-events-with-standard-consumers.md)
+Die **Singleton-Klasse ScriptingStandardConsumerSetting** stellt Registrierungsdaten zur Anwendung, die für alle Instanzen der [**Standardconsumerklasse ActiveScriptEventConsumer**](activescripteventconsumer.md) verwendet werden. Eine **ActiveScriptEventConsumer-Instanz** verwendet die **Eigenschaften MaximumScripts** und **Timeout.** Weitere Informationen finden Sie unter [Überwachen und Reagieren auf Ereignisse mit Standardverbrauchern.](monitoring-and-responding-to-events-with-standard-consumers.md)
 
-Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge sortiert.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ class ScriptingStandardConsumerSetting : CIM_Setting
 
 ## <a name="members"></a>Member
 
-Die **ScriptingStandardConsumerSetting-Klasse** verfügt über folgende Typen von Membern:
+Die **ScriptingStandardConsumerSetting-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -70,7 +70,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MaxLen**](standard-qualifiers.md) (64)
 </dt> </dl>
 
-Eine kurze Beschreibung eines Objekts, eine einzeilige Zeichenfolge. Enthält die Zeichenfolge **ScriptingStandardConsumerSetting,** da dies eine Singletonklasse ist.
+Eine kurze Beschreibung eines Objekts einer Zeichenfolge mit einer Zeile. Enthält die **Zeichenfolge ScriptingStandardConsumerSetting,** da es sich um eine Singletonklasse handelt.
 
 </dd> <dt>
 
@@ -96,7 +96,7 @@ Datentyp: **uint32**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Maximale Anzahl von Skripts, die ausgeführt werden, bevor ein Consumer eine neue Instanz startet. Fahren Sie den Consumer regelmäßig herunter, um Speicherverluste durch Skripts zu löschen. Der Standardwert ist 300.
+Maximale Anzahl von Skripts, die ausgeführt werden, bevor ein Consumer eine neue Instanz startet. Um Speicherverlusten durch Skripts zu löschen, fahren Sie den Consumer regelmäßig herunter. Der Standardwert ist 300.
 
 </dd> <dt>
 
@@ -128,13 +128,13 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: [**Einheiten**](standard-qualifiers.md) ("Minuten")
 </dt> </dl>
 
-Maximale Anzahl von Minuten, bevor ein Consumer eine neue Instanz startet. Bei 0 (null) steuert die **MaximumScripts-Eigenschaft** die Lebensdauer des Consumers. Der gültige Bereich für **Timeout** ist 0 bis 71.000, und der Standardwert ist 0 (null).
+Maximale Anzahl von Minuten, bevor ein Consumer eine neue Instanz startet. Bei 0 (null) steuert **die MaximumScripts-Eigenschaft** die Lebensdauer des Consumers. Der gültige Bereich für **Timeout** ist 0 bis 71.000, und der Standardwert ist 0 (null).
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die einzelne Instanz der **ScriptingStandardConsumerSetting-Klasse** befindet sich im \\ cimv2-Stammnamespace.
+Die einzelne Instanz der **ScriptingStandardConsumerSetting-Klasse** befindet sich im \\ Cimv2-Stammnamespace.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -166,7 +166,7 @@ Die einzelne Instanz der **ScriptingStandardConsumerSetting-Klasse** befindet si
 [Erstellen eines logischen Consumers](creating-a-logical-consumer.md)
 </dt> <dt>
 
-[Empfangen von Ereignissen zu jedem Zeitpunkt](receiving-events-at-all-times.md)
+[Jederzeites Empfangen von Ereignissen](receiving-events-at-all-times.md)
 </dt> <dt>
 
 [**\_\_EventConsumer**](--eventconsumer.md)

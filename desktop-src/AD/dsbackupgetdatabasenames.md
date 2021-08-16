@@ -1,10 +1,10 @@
 ---
-title: Dsbackupgetdatabasenames-Funktion (ntdsbcli. h)
-description: Ruft die Liste der Datenbankdateien ab, die für den angegebenen Sicherungs Kontext gesichert werden sollen.
+title: DsBackupGetDatabaseNames-Funktion (Ntdsbcli.h)
+description: Ruft die Liste der Datenbankdateien ab, die für den angegebenen Sicherungskontext gesichert werden sollen.
 ms.assetid: ba0447a1-38b0-4c0a-8c63-abaefb5b908f
 ms.tgt_platform: multiple
 keywords:
-- Dsbackupgetdatabasenames-Funktion Active Directory
+- DsBackupGetDatabaseNames-Funktion Active Directory
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6643b17a85727f6e0df4e8deea9609f73afd1e76
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 620ad77f84aa2cb52a7bd99a96a22e7de560b53b2c3ba2022598609dde3737fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118191856"
 ---
-# <a name="dsbackupgetdatabasenames-function"></a>Dsbackupgetdatabasenames-Funktion
+# <a name="dsbackupgetdatabasenames-function"></a>DsBackupGetDatabaseNames-Funktion
 
-\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie ab Windows Vista [Volumeschattenkopie-Dienst (VSS)](../vss/volume-shadow-copy-service-overview.md) .\]
+\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie ab Windows Vista stattdessen [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
 
-Die **dsbackupgetdatabasenames** -Funktion Ruft die Liste der Datenbankdateien ab, die für den angegebenen Sicherungs Kontext gesichert werden sollen.
+Die **DsBackupGetDatabaseNames-Funktion** ruft die Liste der Datenbankdateien ab, die für den angegebenen Sicherungskontext gesichert werden sollen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,96 +47,96 @@ HRESULT DsBackupGetDatabaseNames(
 
 <dl> <dt>
 
-*HBC* \[ in\]
+*hbc* \[ In\]
 </dt> <dd>
 
-Enthält das Sicherungs Kontext Handle, das mit der [**dsbackupprepare**](dsbackupprepare.md) -Funktion abgerufen wurde.
+Enthält das Sicherungskontexthandle, das mit der [**DsBackupPrepare-Funktion**](dsbackupprepare.md) abgerufen wurde.
 
 </dd> <dt>
 
-*pszattachmentinfo* \[ vorgenommen\]
+*pszAttachmentInfo* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen Zeichen folgen Zeiger, der die Liste der Daten Bank Dateinamen als UNC-Pfade empfängt. Dieser Wert muss vor dem Aufrufen von **dsbackupgetdatabasenames** mit **null** initialisiert werden.
+Zeiger auf einen Zeichenfolgenzeiger, der die Liste der Datenbankdateinamen als UNC-Pfade empfängt. Dieser Wert muss vor dem Aufrufen von **DsBackupGetDatabaseNames** mit **NULL** initialisiert werden.
 
-Diese Liste empfängt eine mit NULL endend beendete Liste mit einzelnen null-terminierten Zeichen folgen.
+Diese Liste empfängt eine doppelt auf NULL endende Liste einzelner null-terminierte Zeichenfolgen.
 
-Dieser Puffer wird von der **dsbackupgetdatabasenames** -Funktion zugeordnet und muss freigegeben werden, wenn er durch Aufrufen der [**dsbackupfree**](dsbackupfree.md) -Funktion nicht mehr benötigt wird.
+Dieser Puffer wird von der **DsBackupGetDatabaseNames-Funktion** zugeordnet und muss freigegeben werden, wenn er nicht mehr benötigt wird, indem die [**DsBackupFree-Funktion**](dsbackupfree.md) aufgerufen wird.
 
-Das erste Zeichen jedes Datei namens enthält eine der [**bft-Konstanten**](bft-constants.md) , die den Typ des Namens identifiziert. Die [**dsrestoregetdatabaselocations**](dsrestoregetdatabaselocations.md) -Funktion liefert nur die folgenden Typen von Namen.
+Das erste Zeichen jedes Dateinamens enthält eine der [**BFT-Konstanten,**](bft-constants.md) die den Typ des Namens identifiziert. Die [**DsRestoreGetDatabaseLocations-Funktion**](dsrestoregetdatabaselocations.md) stellt nur die folgenden Namentypen bereit.
 
 <dt>
 
 <span id="BFT_NTDS_DATABASE"></span><span id="bft_ntds_database"></span>
 
-<span id="BFT_NTDS_DATABASE"></span><span id="bft_ntds_database"></span>**bft- \_ NTDS- \_ Datenbank**
+<span id="BFT_NTDS_DATABASE"></span><span id="bft_ntds_database"></span>**BFT \_ NTDS \_ DATABASE**
 
 
 </dt> <dd>
 
-Die Datei ist eine NTDS-Datenbankdatei. Diese Datei muss in die als **bft \_ NTDS- \_ Datenbank** identifizierte Datei kopiert werden, wenn die Daten wieder hergestellt werden.
+Die Datei ist eine NTDS-Datenbankdatei. Diese Datei sollte in die Datei kopiert werden, die beim Wiederherstellen der Daten als **BFT \_ NTDS \_ DATABASE** identifiziert wird.
 
 </dd> <dt>
 
 <span id="BFT_LOG"></span><span id="bft_log"></span>
 
-<span id="BFT_LOG"></span><span id="bft_log"></span>**bft- \_ Protokoll**
+<span id="BFT_LOG"></span><span id="bft_log"></span>**BFT \_ LOG**
 
 
 </dt> <dd>
 
-Bei der Datei handelt es sich um eine Protokolldatei. Alle Protokolldateien werden in das Verzeichnis kopiert, das beim Wiederherstellen der Daten als **bft- \_ Protokoll \_** Verzeichnis identifiziert wird.
+Die Datei ist eine Protokolldatei. Alle Protokolldateien werden in das Verzeichnis kopiert, das beim Wiederherstellen der Daten als **BFT \_ LOG \_ DIR** identifiziert wird.
 
 </dd> <dt>
 
 <span id="BFT_PATCH_FILE"></span><span id="bft_patch_file"></span>
 
-<span id="BFT_PATCH_FILE"></span><span id="bft_patch_file"></span>**bft \_ - \_ Patchdatei**
+<span id="BFT_PATCH_FILE"></span><span id="bft_patch_file"></span>**\_BFT-PATCHDATEI \_**
 
 
 </dt> <dd>
 
-Bei der Datei handelt es sich um eine Patchdatei. Alle Patchdateien werden beim Wiederherstellen der Daten in **\_ das als \_ bft** -Prüf Punkt Verzeichnis identifizierte Verzeichnis kopiert.
+Die Datei ist eine Patchdatei. Alle Patchdateien werden in das Verzeichnis kopiert, das beim Wiederherstellen der Daten als **BFT \_ CHECKPOINT \_ DIR** identifiziert wird.
 
 </dd> </dl> </dd> <dt>
 
-*pcbSize* \[ vorgenommen\]
+*layoutSize* \[ out\]
 </dt> <dd>
 
-Zeiger auf den **DWORD** -Wert, der die Größe des *pszattachmentinfo* -Puffers in Bytes empfängt.
+Zeiger auf den **DWORD-Wert,** der die Größe des *pszAttachmentInfo-Puffers* in Bytes empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **S \_ OK** zurück, wenn die Funktion erfolgreich ist, andernfalls ein Win32-oder RPC-Fehlercode. In der folgenden Liste sind andere mögliche Fehlercodes aufgeführt.
+Gibt **S \_ OK** zurück, wenn die Funktion erfolgreich ist oder andernfalls ein Win32- oder RPC-Fehlercode vorliegt. In der folgenden Liste sind weitere mögliche Fehlercodes aufgeführt.
 
 <dl> <dt>
 
-**Fehler \_ Zugriff \_ verweigert**
+**FEHLERZUGRIFF \_ \_ VERWEIGERT**
 </dt> <dd>
 
-Der Aufrufer verfügt nicht über die erforderlichen Zugriffsberechtigungen, um diese Funktion aufzurufen. Die [**dssetauthidentity**](dssetauthidentity.md) -Funktion kann verwendet werden, um die Anmelde Informationen festzulegen, die für die Sicherungs-und Wiederherstellungs Funktionen verwendet werden sollen.
+Der Aufrufer verfügt nicht über die richtigen Zugriffsberechtigungen zum Aufrufen dieser Funktion. Die [**DsSetAuthIdentity-Funktion**](dssetauthidentity.md) kann verwendet werden, um die Anmeldeinformationen festzulegen, die für die Sicherungs- und Wiederherstellungsfunktionen verwendet werden sollen.
 
 </dd> <dt>
 
-**Fehler bei \_ ungültigem \_ Parameter**
+**FEHLER: \_ UNGÜLTIGER \_ PARAMETER**
 </dt> <dd>
 
-*HBC*, *pszattachmentinfo* oder *pcbSize* sind ungültig.
+*hbc,* *pszAttachmentInfo* oder *designsSize* sind ungültig.
 
 </dd> <dt>
 
-**Fehler \_ nicht \_ genügend Arbeits \_ Speicher**
+**FEHLER \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**
 </dt> <dd>
 
-Es ist ein Fehler bei der Speicher Belegung aufgetreten.
+Fehler bei der Speicherbelegung.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **dsbackupgetdatabasenames** -Funktion stellt eine Liste der für eine Sicherung erforderlichen Datenbankdateien bereit. Eine vollständige Sicherung besteht aus den Datenbankdateien und den Protokolldateien, die von der [**dsbackupgetbackuplogs**](dsbackupgetbackuplogs.md) -Funktion bereitgestellt werden. Inkrementelle Sicherungen von Active Directory Servern werden nicht unterstützt.
+Die **DsBackupGetDatabaseNames-Funktion** stellt eine Liste der Datenbankdateien bereit, die für eine Sicherung erforderlich sind. Eine vollständige Sicherung besteht aus den Datenbankdateien und den Protokolldateien, die von der [**DsBackupGetBackupLogs-Funktion**](dsbackupgetbackuplogs.md) bereitgestellt werden. Inkrementelle Sicherungen von Active Directory-Servern werden nicht unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -146,33 +146,33 @@ Die **dsbackupgetdatabasenames** -Funktion stellt eine Liste der für eine Siche
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                              |
-| Header<br/>                   | <dl> <dt>Ntdsbcli. h</dt> </dl>       |
-| Bibliothek<br/>                  | <dl> <dt>Ntdsbcli. lib</dt> </dl>     |
+| Header<br/>                   | <dl> <dt>Ntdsbcli.h</dt> </dl>       |
+| Bibliothek<br/>                  | <dl> <dt>Ntdsbcli.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Ntdsbcli.dll</dt> </dl>     |
-| Unicode- und ANSI-Name<br/>   | **Dsbackupgetdatabasenamesw** (Unicode) und **dsbackupgetdatabasenamesa** (ANSI)<br/> |
+| Unicode- und ANSI-Name<br/>   | **DsBackupGetDatabaseNamesW** (Unicode) und **DsBackupGetDatabaseNamesA** (ANSI)<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Dsbackupprepare**](dsbackupprepare.md)
+[**DsBackupPrepare**](dsbackupprepare.md)
 </dt> <dt>
 
-[**Dsbackupfree**](dsbackupfree.md)
+[**DsBackupFree**](dsbackupfree.md)
 </dt> <dt>
 
-[**Dsbackupgetbackuplogs**](dsbackupgetbackuplogs.md)
+[**DsBackupGetBackupLogs**](dsbackupgetbackuplogs.md)
 </dt> <dt>
 
-[**Bft-Konstanten**](bft-constants.md)
+[**BFT-Konstanten**](bft-constants.md)
 </dt> <dt>
 
-[Sichern eines Active Directory Servers](backing-up-an-active-directory-server.md)
+[Sichern eines Active Directory-Servers](backing-up-an-active-directory-server.md)
 </dt> <dt>
 
-[Verzeichnis Sicherungsfunktionen](directory-backup-functions.md)
+[Verzeichnissicherungsfunktionen](directory-backup-functions.md)
 </dt> </dl>
 
  

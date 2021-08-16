@@ -13,33 +13,33 @@ ms.locfileid: "118308249"
 ---
 # <a name="com-administration-operations-within-transactions"></a>COM+-Verwaltungsvorgänge innerhalb von Transaktionen
 
-Die COM+-Registrierungsdatenbank (RegDB) ist ein transaktiver Ressourcen-Manager, der an COM+-Transaktionen teilnehmen kann. Auf diese Weise können Sie Verwaltungsvorgänge innerhalb einer Transaktion ausführen und alle Konfigurationsänderungen als atomaren Vorgang ausführen oder abbrechen, auch auf mehreren Computern. In einigen Fällen kann es sehr vorteilhaft sein, dies zu tun, obwohl es Isolations- und Blockierungsverhalten gibt, das Sie berücksichtigen sollten, und das Ausführen von Verwaltungsaufgaben innerhalb von Transaktionen umfasst geringfügige Änderungen am normalen Verwaltungsprogrammiermodell.
+Die COM+-Registrierungsdatenbank (RegDB) ist ein transaktiver Ressourcen-Manager, der an COM+-Transaktionen teilnehmen kann. Auf diese Weise können Sie Verwaltungsvorgänge innerhalb einer Transaktion ausführen und alle Konfigurationsänderungen selbst auf mehreren Computern als atomaren Vorgang übertragen oder abgebrochen werden. In einigen Fällen kann es sehr vorteilhaft sein, dies zu tun, obwohl Sie isolations- und blockierungsverhalten berücksichtigen sollten, und das Ausführen von Verwaltungsaufgaben innerhalb von Transaktionen bringt geringfügige Änderungen am normalen Verwaltungsprogrammiermodell mit sich.
 
 ## <a name="benefits-of-doing-administration-operations-within-transactions"></a>Vorteile von Verwaltungsvorgängen innerhalb von Transaktionen
 
--   **Konsistenz der Daten–** Verwaltungsvorgänge, die innerhalb einer Transaktion ausgeführt werden, werden als Ganzes ausgeführt oder abgebrochen, obwohl es einige nicht transaktionale COM+-Katalogressourcen gibt, für die dies möglicherweise nicht der Fall ist. (Siehe nicht transaktionale COM+-Katalogressourcen weiter unten.)
--   **Konsistente Bereitstellung auf mehreren Computern–** Wenn Sie COM+-Anwendungen auf mehreren Servern bereitstellen, können Sie garantieren, dass alle Server identische Konfigurationen haben.
--   **Skalierung und Leistung–** Wenn Sie mehrere Vorgänge innerhalb einer Transaktion ausführen, werden alle Schreibvorgänge in RegDB gleichzeitig ausgeführt. Persistente Schreibvorgänge in RegDB sind relativ aufwändig. Wenn Sie viele Schreibvorgänge in RegDB ausführen, können Sie einen großen Leistungsvorteil erzielen, wenn Sie alle gleichzeitig ausführen, anstatt jedes Mal, wenn [**Sie SaveChanges aufrufen.**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges)
+-   **Datenkonsistenz:** Verwaltungsvorgänge, die innerhalb einer Transaktion ausgeführt werden, werden als Ganzes ausgeführt oder abgebrochen, obwohl es einige nicht transaktionale COM+-Katalogressourcen gibt, für die dies möglicherweise nicht der Fall ist. (Siehe nicht transaktionale COM+-Katalogressourcen weiter unten.)
+-   **Konsistente Bereitstellung auf mehreren Computern:** Wenn Sie COM+-Anwendungen auf mehreren Servern bereitstellen, können Sie sicherstellen, dass alle Server identische Konfigurationen haben.
+-   **Skalierung und Leistung:** Wenn Sie mehrere Vorgänge innerhalb einer Transaktion durchführen, werden alle Schreibvorgänge in RegDB gleichzeitig ausgeführt. Persistente Schreibvorgänge in RegDB sind ein relativ aufwendiger Vorgang. Wenn Sie viele Schreibvorgänge in RegDB durchführen, können Sie einen großen Leistungsvorteil erzielen, wenn Sie sie alle gleichzeitig durchführen, anstatt jedes Mal, wenn Sie [**SaveChanges**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges)aufrufen.
 
 ## <a name="isolation-behavior-of-regdb"></a>Isolationsverhalten von RegDB
 
 Um eine ordnungsgemäße Datenkonsistenz und serialisierbare Transaktionen sicherzustellen, erzwingt RegDB ein bestimmtes Blockierungs- und Isolationsverhalten, wenn Verwaltungsvorgänge innerhalb von Transaktionen ausgeführt werden.
 
-Jedes Mal, wenn eine Komponente, die innerhalb einer Transaktion arbeitet, eine Methode aufruft, die einen Schreibzugriff auf den COM+-Katalog verursacht , z. B. [**SaveChanges,**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges) [**InstallApplication**](/windows/desktop/api/ComAdmin/nf-comadmin-icomadmincatalog-installapplication)oder [**InstallComponent,**](/windows/desktop/api/ComAdmin/nf-comadmin-icomadmincatalog-installcomponent)wird eine Writersperre für COM+-Katalogservercode verwendet, der das Einlassen anderer Writer blockiert, bis die aktuelle Transaktion commits oder abbricht. Das heißt, Writer können nur in kommen, wenn sie über die richtige Transaktionsaffinität verfügen und an der aktuellen Transaktion teilnehmen.
+Immer wenn eine Komponente, die innerhalb einer Transaktion arbeitet, eine Methode aufruft, die einen Schreibvorgang in den COM+-Katalog verursacht , z. B. [**SaveChanges,**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges) [**InstallApplication**](/windows/desktop/api/ComAdmin/nf-comadmin-icomadmincatalog-installapplication)oder [**InstallComponent,**](/windows/desktop/api/ComAdmin/nf-comadmin-icomadmincatalog-installcomponent)wird eine Writersperre für COM+-Katalogservercode eingerichtet, die verhindert, dass alle anderen Writer eingehen, bis die aktuelle Transaktion committet oder abgebrochen wird. Das heißt, Writer können nur dann eintreffen, wenn sie über die richtige Transaktionsaffinität verfügen und an der aktuellen Transaktion teilnehmen.
 
-Leser werden nicht blockiert. Die Daten, die Lesern angezeigt werden, spiegeln jedoch keine Zwischenänderungen wider, die innerhalb der Transaktion vorgenommen wurden, bis diese Transaktion tatsächlich einen Commit ausgeführt hat. Alle An dieser Transaktion beteiligten Komponenten sehen beim Lesen von Daten Zwischendatenzustände, aber alle Komponenten außerhalb der Transaktion sehen diese Änderungen erst, nachdem die Transaktion abgeschlossen wurde.
+Leser werden nicht blockiert. Die Daten, die lesern angezeigt werden, spiegeln jedoch keine Zwischenänderungen wider, die innerhalb der Transaktion vorgenommen wurden, bis diese Transaktion tatsächlich einen Commit ausgeführt hat. Alle Komponenten, die an dieser Transaktion teilnehmen, sehen Zwischendatenzustände, wenn sie Daten lesen, aber alle Komponenten außerhalb der Transaktion sehen diese Änderungen erst nach Abschluss der Transaktion.
 
 ## <a name="savechanges-behavior"></a>SaveChanges-Verhalten
 
-Um das oben beschriebene Isolationsverhalten zu erreichen, stellt RegDB effektiv einen Cache zur Anwendung, der von Komponenten innerhalb der Transaktion ausgeführt wird. Dadurch wird das Verhalten der [**SaveChanges-Methode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges) geändert.
+Um das oben beschriebene Isolationsverhalten zu erreichen, stellt RegDB effektiv einen Cache bereit, auf den von Komponenten innerhalb der Transaktion reagiert wird. Dadurch wird das Verhalten der [**SaveChanges-Methode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges) geändert.
 
-Normalerweise werden alle ausstehenden Änderungen ohne das Vorhandensein einer Transaktion in den Katalog geschrieben, wenn Sie [**SaveChanges**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges)aufrufen, und **SaveChanges** gibt erst dann zurück, wenn alle Schreibvorgänge abgeschlossen sind. Dadurch wird sichergestellt, dass Sie [**StartApplication**](/windows/desktop/api/ComAdmin/nf-comadmin-icomadmincatalog-startapplication) aufrufen können, wenn ein Aufruf von **SaveChanges** erfolgreich zurückgegeben wird, und die Anwendung mit neuen Daten aktiviert wird.
+Normalerweise werden alle ausstehenden Änderungen ohne Vorhandensein einer Transaktion in den Katalog geschrieben, wenn Sie [**SaveChanges**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges)aufrufen, und **SaveChanges** gibt erst dann zurück, wenn alle Schreibvorgänge abgeschlossen sind. Dadurch wird sichergestellt, dass Sie [**StartApplication**](/windows/desktop/api/ComAdmin/nf-comadmin-icomadmincatalog-startapplication) aufrufen können, wenn ein Aufruf von **SaveChanges** erfolgreich zurückgegeben wird, und die Anwendung mit neuen Daten aktiviert wird.
 
-Innerhalb einer Transaktion wirkt sich [**SaveChanges**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges) jedoch nur auf den Cache aus, nicht auf die RegDB selbst, und **SaveChanges** gibt sofort zurück, ob alle Änderungen transaktional in RegDB übertragen wurden. Es gibt keine Garantie, [**dass StartApplication**](/windows/desktop/api/ComAdmin/nf-comadmin-icomadmincatalog-startapplication) nach der Rückgabe von **SaveChanges** neue Daten verwendet. Wenn Sie in diesem Kontext **StartApplication** aufrufen müssen, ist es ratsam, einige Zeit zu warten, bevor Sie dies tun.
+Innerhalb einer Transaktion wirkt sich [**SaveChanges**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges) jedoch nur auf den Cache und nicht auf die RegDB selbst aus, und **SaveChanges** gibt sofort zurück, ob für alle Änderungen ein Commit an RegDB ausgeführt wurde. Es gibt keine Garantie dafür, dass [**StartApplication**](/windows/desktop/api/ComAdmin/nf-comadmin-icomadmincatalog-startapplication) nach der Rückgabe von **SaveChanges** neue Daten verwendet. Wenn Sie **StartApplication** in diesem Kontext aufrufen müssen, ist es ratsam, einige Zeit zu warten, bevor Sie dies tun.
 
-## <a name="transaction-time-out-period"></a>Transaktionszeit Time-Out Zeitraum
+## <a name="transaction-time-out-period"></a>Transaktion Time-Out Zeitraum
 
-Wenn Sie innerhalb einer Transaktion zahlreiche Verwaltungsvorgänge ausführen, kann es sich um eine Transaktion mit langer Ausführungslauf handelt. In diesem Fall kann der Wert für das Transaktions-Time out ein Problem sein. Dies wird entweder durch den Transaktions-Time out-Wert bestimmt, der für die Komponente festgelegt wurde, die die Transaktion initiiert, oder durch die computerweite Time out-Einstellung für den Computer, auf dem diese Komponente ausgeführt wird. Wenn Sie innerhalb einer Transaktion zahlreiche Vorgänge unternehmen, ist es ratsam, den entsprechenden Time outzeitraum für Transaktionen auf einen ausreichend langen Wert zu setzen und bei Bedarf die ursprüngliche Einstellung wiederherzustellen, wenn Sie fertig sind.
+Wenn Sie zahlreiche Verwaltungsvorgänge innerhalb einer Transaktion ausführen, kann es sich um eine Transaktion mit langer Ausführungslaufzeit handeln. In diesem Fall kann der Transaktionstime out-Wert ein Problem sein. Dies wird entweder durch den Transaktionstime out-Wert bestimmt, der für die Komponente festgelegt ist, die die Transaktion initiiert, oder durch die computerweite Time out-Einstellung für den Computer, auf dem diese Komponente ausgeführt wird. Wenn Sie zahlreiche Vorgänge innerhalb einer Transaktion ausführen, empfiehlt es sich, den entsprechenden Transaktionstime out-Zeitraum auf einen ausreichend langen Wert festzulegen und ggf. die ursprüngliche Einstellung wiederherzustellen, wenn Sie fertig sind.
 
 ## <a name="non-transactional-com-catalog-resources"></a>Nicht transaktionale COM+-Katalogressourcen
 
@@ -50,15 +50,15 @@ Die Registrierung, das Dateisystem und Windows Installer (MSI) sind COM+-Katalog
 
  
 
-Wenn beim Installieren einer vorhandenen COM+-Anwendung aus einer .msi-Datei ein Fehler auftritt, wird die Anwendung nicht im Komponentendienste-Snap-In angezeigt. Sie wird jedoch möglicherweise unter Softwareprogramme hinzufügen/entfernen angezeigt. In diesem Fall müssen Sie sie manuell entfernen.
+Wenn beim Installieren einer vorhandenen COM+-Anwendung aus einer .msi-Datei ein Fehler auftritt, wird die Anwendung nicht im Komponentendienste-Snap-In angezeigt, aber möglicherweise unter Programme hinzufügen/entfernen. In diesem Fall müssen Sie sie manuell entfernen.
 
-## <a name="recovering-in-the-event-of-system-hangs"></a>Wiederherstellung bei Hängen des Systems
+## <a name="recovering-in-the-event-of-system-hangs"></a>Wiederherstellung bei Systemhängen
 
-Wenn eine Komponente, die Verwaltungsvorgänge innerhalb einer Transaktion ausgeführt hat, nicht mehr reagieren würde, während sie eine Writersperre für den Katalogservercode auftrat, würde sie alle anderen am Vornehmen von Änderungen am Katalog blockieren. In diesem Fall können Sie die Sperre für den Katalog löschen, indem Sie die Systemanwendung herunterfahren und neu starten.
+Wenn eine Komponente, die Verwaltungsvorgänge innerhalb einer Transaktion vornimmt, hängen bleibt, während sie eine Writer-Sperre für den Katalogservercode enthält, würde sie alle anderen Benutzer daran hindern, Änderungen am Katalog vorzunehmen. In diesem Fall können Sie die Sperre für den Katalog deaktivieren, indem Sie die Systemanwendung herunterfahren und neu starten.
 
 ## <a name="scripting-with-a-transactioncontext-object"></a>Skripterstellung mit einem TransactionContext-Objekt
 
-Eine einfache Möglichkeit zum Durchführen von Verwaltungsvorgängen innerhalb von Transaktionen ist die Verwendung eines [**TransactionContext-Objekts**](transactioncontext.md) zum Steuern der Transaktion. Das folgende Skript Visual Basic veranschaulicht beispielsweise, wie zwei neue Anwendungen transaktional hinzugefügt werden, sodass entweder beide Anwendungen oder keine Anwendung erstellt wird:
+Eine einfache Möglichkeit zum Ausführen von Verwaltungsvorgängen innerhalb von Transaktionen ist die Verwendung eines [**TransactionContext-Objekts,**](transactioncontext.md) um die Transaktion zu steuern. Im folgenden Visual Basic Skript wird beispielsweise veranschaulicht, wie zwei neue Anwendungen transaktional hinzugefügt werden, sodass entweder beide Anwendungen oder keine Anwendung erstellt wird:
 
 
 ```VB
@@ -93,7 +93,7 @@ txctx.Commit
 [Behandeln von COM+-Verwaltungsfehlern](handling-com--administration-errors.md)
 </dt> <dt>
 
-[Einführendes Beispiel mit dem COM+-Verwaltungskatalog](introductory-example-using-the-com--administration-catalog.md)
+[Einführungsbeispiel für die Verwendung des COM+-Verwaltungskatalogs](introductory-example-using-the-com--administration-catalog.md)
 </dt> <dt>
 
 [Übersicht über die COMAdmin-Objekte](overview-of-the-comadmin-objects.md)
@@ -102,7 +102,7 @@ txctx.Commit
 [Abrufen von Sammlungen im COM+-Katalog](retrieving-collections-on-the-com--catalog.md)
 </dt> <dt>
 
-[Festlegen von Eigenschaften und Speichern von Änderungen am COM+-Katalog](setting-properties-and-saving-changes-to-the-com--catalog.md)
+[Festlegen von Eigenschaften und Speichern von Änderungen im COM+-Katalog](setting-properties-and-saving-changes-to-the-com--catalog.md)
 </dt> </dl>
 
  

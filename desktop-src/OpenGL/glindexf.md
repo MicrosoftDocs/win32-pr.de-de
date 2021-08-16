@@ -63,7 +63,7 @@ Der aktuelle Index kann jederzeit aktualisiert werden. Insbesondere kann **glInd
 
 Die folgende Funktion ruft Informationen im Zusammenhang mit **glIndexf ab:**
 
-[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ CURRENT \_ INDEX
+[**glGet mit**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) argument GL \_ CURRENT \_ INDEX
 
 ## <a name="requirements"></a>Anforderungen
 

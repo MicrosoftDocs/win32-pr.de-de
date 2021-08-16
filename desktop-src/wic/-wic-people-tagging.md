@@ -13,7 +13,7 @@ ms.locfileid: "118205704"
 ---
 # <a name="people-tagging-overview"></a>Übersicht über Personentags
 
-In diesem Thema werden das neue XMP-Schema (Extensible Metadata Platform) und die Windows 7-Fotoeigenschaft [System.Photo.PeopleNames](../properties/props-system-photo-peoplenames.md) beschrieben, die das Markieren von Personen in einem digitalen Foto ermöglicht. In diesem Thema wird auch erläutert, wie die Windows Imaging Component (WIC)-API verwendet wird, um die Metadaten zu lesen und zu schreiben, die für das Tagging von Personen erforderlich sind.
+In diesem Thema werden das neue XMP-Schema (Extensible Metadata Platform) und die Windows 7-Fotoeigenschaft [System.Photo.PeopleNames](../properties/props-system-photo-peoplenames.md) beschrieben, die das Markieren von Personen in einem digitalen Foto ermöglicht. In diesem Thema wird auch erläutert, wie sie die Windows Imaging Component (WIC)-API zum Lesen und Schreiben der Metadaten verwendet, die für personentagging erforderlich sind.
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -39,13 +39,13 @@ Microsoft hat ein neues XMP-Schema zum Markieren von Personen in einem digitalen
 
 ## <a name="people-tagging"></a>Personentagging
 
-WIC stellt Anwendungsentwicklern COM-Komponenten bereit, die Bilddaten sowie Bildmetadaten lesen. Zum Lesen und Schreiben von Metadaten, z. B. dem neuen People-Tagging-Feature, stellt WIC die [**Schnittstellen IWICMetadataQueryReader**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataqueryreader) und [**IWICMetadataQueryWriter**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataquerywriter) bereit. Mithilfe dieser Schnittstellen können Anwendungen die [Metadatenabfragesprache verwenden,](-wic-codec-metadataquerylanguage.md) um Metadaten in die einzelnen Frames eines Bilds zu schreiben. Im folgenden Abschnitt wird veranschaulicht, wie sie mithilfe von WIC-Abfragelesern und Writern die Metadaten für das People-Tagging in die Metadaten eines Bilds lesen und schreiben.
+WIC stellt Anwendungsentwicklern COM-Komponenten bereit, die Bilddaten sowie Bildmetadaten lesen. Zum Lesen und Schreiben von Metadaten, z. B. dem neuen People-Tagging-Feature, stellt WIC die [**Schnittstellen IWICMetadataQueryReader**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataqueryreader) und [**IWICMetadataQueryWriter**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataquerywriter) bereit. Diese Schnittstellen ermöglichen es Anwendungen, die [Metadatenabfragesprache zu verwenden,](-wic-codec-metadataquerylanguage.md) um Metadaten in die einzelnen Frames eines Bilds zu schreiben. Im folgenden Abschnitt wird veranschaulicht, wie sie mithilfe von WIC-Abfragelesern und Writern die Metadaten für das People-Tagging in die Metadaten eines Bilds lesen und schreiben.
 
 ### <a name="people-names"></a>Personennamen
 
 Ein Teil des People-Tagging-Features ist die Möglichkeit, einfach eine Liste der Namen der Personen zu erhalten, die im Bild markiert sind. Dieser Teil des Features wird von den [Metadatenhandlern System.Photo.PeopleNames](../properties/props-system-photo-peoplenames.md) und WIC unterstützt. Die [**IWICMetadataQueryReader-Schnittstelle**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataqueryreader) wird in Verbindung mit der System.Photo.PeopleNames-Eigenschaft verwendet, um die Namen von Personen zu lesen, die in einem Bild identifiziert und in den Bildmetadaten gespeichert werden.
 
-Im folgenden Codebeispiel wird ein Abfrageleser veranschaulicht, der aus einem Bildrahmen zum Abfragen der Metadaten eines Bilds für markierte Namen der [System.Photo.PeopleNames-Eigenschaft ermittelt](../properties/props-system-photo-peoplenames.md) wurde.
+Im folgenden Codebeispiel wird ein Abfrageleser veranschaulicht, der aus einem Bildrahmen ermittelt wurde, um die Metadaten eines Bilds nach markierten Namen der [System.Photo.PeopleNames-Eigenschaft](../properties/props-system-photo-peoplenames.md) abfragt.
 
 
 ```C++
@@ -137,7 +137,7 @@ if(SUCCEEDED(hr))
 
 
 
-Beachten Sie den Schritt zum Erstellen der XMP-Struktur und zum Festlegen unter `MPRI:Regions/{ulong=0}` . Ohne diesen Schritt kann der WIC nicht ermitteln, wo das spätere platzieren `PersonDisplayName` wird. Beachten Sie auch, dass der explizite Abfragepfad anstelle von [System.Photo.PeopleNames](-wic-photoprop-system-photo-peoplenames.md)verwendet wird, dessen Metadatenrichtlinie das Schreiben von Metadaten nicht unterstützt.
+Beachten Sie den Schritt zum Erstellen der XMP-Struktur und festlegen sie unter `MPRI:Regions/{ulong=0}` . Ohne diesen Schritt kann der WIC nicht ermitteln, wo das spätere platzieren `PersonDisplayName` wird. Beachten Sie auch, dass der explizite Abfragepfad anstelle von [System.Photo.PeopleNames](-wic-photoprop-system-photo-peoplenames.md)verwendet wird, dessen Metadatenrichtlinie das Schreiben von Metadaten nicht unterstützt.
 
 ### <a name="people-rectangles"></a>Personenrechtecke
 
@@ -194,7 +194,7 @@ Das Microsoft Photo 1.2-Schema stellt einen Satz von Eigenschaften für Bildregi
 
 
 
-| Eigenschaft      | Werttyp | Kategorie | BESCHREIBUNG                                                                                                                     |
+| Eigenschaft      | Werttyp | Kategorie | Beschreibung                                                                                                                     |
 |---------------|------------|----------|---------------------------------------------------------------------------------------------------------------------------------|
 | MP:RegionInfo | Regioninfo | Intern | **required:** Speichert den Stamm der People-Tagging-Metadaten. Weitere Informationen finden Sie im Abschnitt Microsoft Photo RegionInfo Schema (Microsoft Photo RegionInfo-Schema). |
 
@@ -211,10 +211,10 @@ Das Microsoft Photo RegionInfo 1.2-Schema stellt einen Satz von Eigenschaften f�
 
 
 
-| Eigenschaft              | Werttyp | Kategorie | BESCHREIBUNG                                                                                                    |
+| Eigenschaft              | Werttyp | Kategorie | Beschreibung                                                                                                    |
 |-----------------------|------------|----------|----------------------------------------------------------------------------------------------------------------|
 | MPRI:DateRegionsValid | Date       | Extern | **optional:** Datum, an dem die letzte Region erstellt wurde.                                                          |
-| MPRI:Regionen          | Bag-Bereich | Extern | **required:** Speichert die Personentagingregionen. Weitere Informationen finden Sie im Folgenden im Abschnitt Schema der Microsoft-Fotoregion. |
+| MPRI: Regionen          | Bag-Bereich | Extern | **required:** Speichert die Personentagingregionen. Weitere Informationen finden Sie im Folgenden im Abschnitt Schema der Microsoft-Fotoregion. |
 
 
 
@@ -229,7 +229,7 @@ Das Microsoft Photo Region 1.2-Schema stellt eine Reihe von Eigenschaften für B
 
 
 
-| MPReg:Property          | Werttyp | Kategorie | BESCHREIBUNG                                                                                                                                                                                                                                                                                                     |
+| MPReg:Property          | Werttyp | Kategorie | Beschreibung                                                                                                                                                                                                                                                                                                     |
 |-------------------------|------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | MPReg:PersonDisplayName | Text       | Extern | **required:** Speichert den Namen der Person im angegebenen Rechteck.                                                                                                                                                                                                                                            |
 | MPReg:Rectangle         | Text       | Extern | **optional:** Speichert das Rechteck, das die Person innerhalb des Fotos identifiziert. Das Rechteck wird als vier durch Trennzeichen getrennte Dezimalwerte gespeichert. Die ersten beiden Werte geben die obere linke Koordinate an. Die letzten beiden geben die Höhe und Breite des Rechtecks an. Die Dezimalwerte müssen auf 1 normalisiert werden. |

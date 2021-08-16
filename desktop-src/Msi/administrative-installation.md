@@ -1,35 +1,35 @@
 ---
-description: Der Windows Installer kann eine administrative Installation einer Anwendung oder eines Produkts in einem Netzwerk ausführen, das von einer Arbeitsgruppe verwendet werden kann.
+description: Der Windows Installer kann eine Administrative Installation einer Anwendung oder eines Produkts in einem Netzwerk für die Verwendung durch eine Arbeitsgruppe ausführen.
 ms.assetid: 5840cfab-a127-4b1f-a7af-a2d8e2786928
-title: Administrative Installation
+title: Administratorinstallation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c3958bdc81ee43cd1a36e0d464f3e77032b4c2d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 26968b6b81c1c2aafedfd74151b139f61062baa29c44b04977a119b14ab1a8f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118381850"
 ---
-# <a name="administrative-installation"></a>Administrative Installation
+# <a name="administrative-installation"></a>Administratorinstallation
 
-Der Windows Installer kann eine administrative Installation einer Anwendung oder eines Produkts in einem Netzwerk ausführen, das von einer Arbeitsgruppe verwendet werden kann. Bei einer administrativen Installation wird ein Quell Abbild der Anwendung auf dem Netzwerk installiert, das einem Quell Abbild auf einer CD-ROM ähnelt. Benutzer in einer Arbeitsgruppe, die Zugriff auf dieses administrative image haben, können dann das Produkt aus dieser Quelle installieren. Ein Benutzer muss zuerst das Produkt aus dem Netzwerk installieren, um die Anwendung auszuführen. Der Benutzer kann auswählen, ob er bei der Installation von der Quelle ausgeführt wird, und das Installationsprogramm verwendet den größten Teil der Produktdatei direkt aus dem Netzwerk.
+Der Windows Installer kann eine Administrative Installation einer Anwendung oder eines Produkts in einem Netzwerk für die Verwendung durch eine Arbeitsgruppe ausführen. Bei einer Administratorinstallation wird ein Quellimage der Anwendung im Netzwerk installiert, das einem Quellimage auf einer CD-ROM ähnelt. Benutzer in einer Arbeitsgruppe, die Zugriff auf dieses Administratorimage haben, können das Produkt dann aus dieser Quelle installieren. Ein Benutzer muss das Produkt zunächst aus dem Netzwerk installieren, um die Anwendung auszuführen. Der Benutzer kann bei der Installation von der Quelle ausführen, und der Installer verwendet den Großteil der Produktdatei direkt aus dem Netzwerk.
 
-Administratoren können eine administrative Installation über die Befehlszeile ausführen, indem Sie die [Befehlszeilenoption](command-line-options.md)/a verwenden.
+Administratoren können eine Administratorinstallation über die Befehlszeile ausführen, indem sie die [Befehlszeilenoption](command-line-options.md)/a verwenden.
 
-Die [Administrator Aktion](admin-action.md) ist die Aktion der obersten Ebene, mit der eine administrative Installation initiiert wird. Wenn diese Aktion ausgeführt wird, ruft das Installationsprogramm die Aktionen in den Tabellen " [AdminExecuteSequence](adminexecutesequence-table.md) " und " [AdminUISequence](adminuisequence-table.md) " auf, um die administrative Installation durchzuführen.
+Die [ADMIN-Aktion](admin-action.md) ist die Aktion der obersten Ebene, die zum Initiieren einer Administratorinstallation verwendet wird. Wenn diese Aktion ausgeführt wird, ruft das Installationsprogramm die Aktionen in den Tabellen [AdminExecuteSequence](adminexecutesequence-table.md) und [AdminUISequence](adminuisequence-table.md) auf, um die Administratorinstallation durchzuführen.
 
-Die [**adminproperties**](adminproperties.md) -Eigenschaft ist eine durch Semikolons getrennte Liste der Eigenschaften, die zum Zeitpunkt der Installation der-Verwaltung festgelegt werden. Das Installationsprogramm verwendet diese Eigenschaften während einer Installation der Anwendung nach der Verwaltung über das administrative image.
+Die [**AdminProperties-Eigenschaft**](adminproperties.md) ist eine durch Semikolons getrennte Liste von Eigenschaften, die zum Zeitpunkt einer Administratorinstallation festgelegt werden. Das Installationsprogramm verwendet diese Eigenschaften während einer Installation der Anwendung nach der Verwaltung aus dem Administratorimage.
 
-Benutzer, die keinen kontinuierlichen Zugriff auf das Netzwerk haben, können eine Anwendung von einem Administrator Abbild installieren und sich dann manchmal auf Medien wie CD-ROM-Datenträgern als Sicherungs Quelle verlassen. In diesen Fällen muss die Länge der Dateinamen im administrativen Image und auf dem Medium Stimmen. Beide müssen lange Dateinamen verwenden, oder beide müssen kurze Dateinamen verwenden. Beispielsweise könnte eine CD-ROM, die nur kurze Dateinamen unterstützt, sowohl die ursprünglichen Medien für die Installation des administrativen Abbilds als auch eine Sicherungs Quelle bereitstellen.
+Benutzer, die keinen kontinuierlichen Zugriff auf das Netzwerk haben, können eine Anwendung über ein Administratorimage installieren und müssen sich dann manchmal auf Medien wie CD-ROM-Datenträger als Sicherungsquelle verlassen. In diesen Fällen muss die Länge der Dateinamen im administrativen Image und auf den Medien übereinstimmen. Beide müssen lange Dateinamen oder beide kurze Dateinamen verwenden. Beispielsweise könnte eine CD-ROM, die nur kurze Dateinamen unterstützt, sowohl das ursprüngliche Medium für die Installation des Administrativen Images als auch eine Sicherungsquelle bereitstellen.
 
-Wenn die Eigenschaft [**shortfile Ames**](shortfilenames.md) während einer administrativen Installation festgelegt wird, muss diese Eigenschaft möglicherweise erneut von einem Benutzer festgelegt werden, der anschließend einen Patch auf das administrative image anwendet. Wenn Sie Windows Installer zum Anwenden des Patches verwenden, legt das Installationsprogramm automatisch die **shortfileames** -Eigenschaft fest, wenn das administrative image kurze Dateinamen verwendet.
+Wenn die [**SHORTFILENAMES-Eigenschaft**](shortfilenames.md) während einer Administratorinstallation festgelegt wird, muss diese Eigenschaft möglicherweise erneut von einem Benutzer festgelegt werden, der anschließend einen Patch auf das Administrative Image anwendet. Wenn Windows Installer zum Anwenden des Patches verwendet wird, legt das Installationsprogramm automatisch die **SHORTFILENAMES-Eigenschaft** fest, wenn das Administrative Image kurze Dateinamen verwendet.
 
-Wenn ein Administrator ein Paket mit der Eigenschaft " [**Anzahl der Wort Zählung**](word-count-summary.md) " 2 oder 3 verwendet, um eine administrative Installation durchzuführen, können Benutzer des administrativen Abbilds aus der ursprünglichen Medienquelle nicht automatisch neu installieren. Wenn das administrative image nicht mehr verfügbar ist, können Benutzer, die über das administrative Abbild installiert haben, nicht auf die ursprünglichen Medien zurückkehren.
+Wenn ein Administrator ein Paket mit der [**Word Count Summary-Eigenschaft**](word-count-summary.md) 2 oder 3 verwendet, um eine Administratorinstallation durchzuführen, können Benutzer des Administrativen Images nicht automatisch aus der ursprünglichen Medienquelle neu installieren. Wenn das Administratorimage nicht mehr verfügbar ist, können Benutzer, die über das Administratorimage installiert haben, nicht auf die ursprünglichen Medien zurückgesetzt werden.
 
-Die Anwendung von [*Transformationen*](t-gly.md) während der Erstellung eines administrativen Abbilds hat keine gültige Auswirkung. Wenn Sie einer Arbeitsgruppe eine angepasste Version eines Produkts zur Verfügung stellen möchten, wenden Sie die Transformation während der Installation des Produkts aus dem administrativen Image an.
+Die Anwendung von Transformationen während der Erstellung eines [*administrativen*](t-gly.md) Images hat keine gültigen Auswirkungen. Um einer Arbeitsgruppe eine angepasste Version eines Produkts zur Verfügung zu stellen, wenden Sie die Transformation während der Installation des Produkts aus dem Administratorimage an.
 
-Während einer administrativen Installation erstellt das Installationsprogramm ein Quell Abbild für alle Features im Produkt, ausgenommen diese Features mit 0 in der Spalte Ebene der [Featuretabelle](feature-table.md).
+Während einer Administratorinstallation erstellt das Installationsprogramm ein Quellimage für alle Features im Produkt, mit Ausnahme der Features mit 0 (0) in der Spalte Ebene der [Featuretabelle](feature-table.md).
 
  
 

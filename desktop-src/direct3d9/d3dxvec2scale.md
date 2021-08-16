@@ -1,7 +1,7 @@
 ---
 description: Skaliert einen 2D-Vektor.
 ms.assetid: 1887bc48-3766-42d7-840b-1e29d78db4ce
-title: D3DXVec2Scale-Funktion (D3dx9math. h)
+title: D3DXVec2Scale-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 941e85763b15724e3c810c0416b5b142c9d95913
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 72972655710ef470120801608fbbac7809a4a692d25b2167a5fadb35cf4bc39c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118298179"
 ---
 # <a name="d3dxvec2scale-function"></a>D3DXVec2Scale-Funktion
 
@@ -42,30 +42,30 @@ D3DXVECTOR2* D3DXVec2Scale(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***
 
-Ein Zeiger auf die [**D3DXVECTOR2**](d3dxvector2.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](d3dxvector2.md) \***
 
-Ein Zeiger auf die Quell- [**D3DXVECTOR2**](d3dxvector2.md) -Struktur.
+Zeiger auf die [**D3DXVECTOR2-Quellstruktur.**](d3dxvector2.md)
 
 </dd> <dt>
 
 *s* \[ in\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Skalierungs Wert.
+Skalierungswert.
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Skalierungs Wert.
 
 Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***
 
-Zeiger auf eine [**D3DXVECTOR2**](d3dxvector2.md) -Struktur, die der skalierte Vektor ist.
+Zeiger auf eine [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) bei der es sich um den skalierten Vektor handelt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXVec2Scale** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXVec2Scale-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,8 +85,8 @@ Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Paramete
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

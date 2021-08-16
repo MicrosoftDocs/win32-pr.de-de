@@ -1,6 +1,6 @@
 ---
 title: PLAYLIST.toolbarVisible
-description: Das ToolbarVisible-Attribut gibt einen Wert an, der angibt, ob die Wiedergabelistensymbolleiste angezeigt wird, oder ruft einen Wert ab.
+description: Das toolbarVisible-Attribut gibt einen Wert an, der angibt, ob die Wiedergabelistensymbolleiste angezeigt wird, oder ruft einen Wert ab.
 ms.assetid: cf5d1d53-ed0a-4018-8b07-758d6790260e
 keywords:
 - PLAYLIST.toolbarVisible Windows Media Player
@@ -21,7 +21,7 @@ ms.locfileid: "118335677"
 ---
 # <a name="playlisttoolbarvisible"></a>PLAYLIST.toolbarVisible
 
-Das **ToolbarVisible-Attribut** gibt einen Wert an, der angibt, ob die Wiedergabelistensymbolleiste angezeigt wird, oder ruft einen Wert ab.
+Das **toolbarVisible-Attribut** gibt einen Wert an, der angibt, ob die Wiedergabelistensymbolleiste angezeigt wird, oder ruft einen Wert ab.
 
 ``` syntax
         elementID.toolbarVisible
@@ -29,11 +29,11 @@ Das **ToolbarVisible-Attribut** gibt einen Wert an, der angibt, ob die Wiedergab
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.** Der Standardwert ist „FALSE“.
+Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert. Der Standardwert ist „FALSE“.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Symbolleiste Wiedergabeliste stellt Benutzeroberflächenelemente bereit, die die Arbeit mit Wiedergabelisten ermöglichen.
+Die Symbolleiste Wiedergabeliste stellt Benutzeroberflächenelemente bereit, die das Arbeiten mit Wiedergabelisten erleichtern.
 
 ## <a name="requirements"></a>Anforderungen
 

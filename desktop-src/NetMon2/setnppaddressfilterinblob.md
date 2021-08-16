@@ -50,13 +50,13 @@ Handle für ein BLOB.
 *pAddressTable* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine [**ADDRESSTABLE-Struktur,**](addresstable.md) die die vom Benutzer zugewiesene Adresstabelle definiert.
+Zeiger auf eine [**ADDRESSTABLE-Struktur,**](addresstable.md) die die vom Benutzer zugeordnete Adresstabelle definiert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler angibt.
 

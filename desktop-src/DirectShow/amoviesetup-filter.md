@@ -1,7 +1,7 @@
 ---
-description: Die amoviesetup- \_ Filter Struktur enthält Informationen zum Registrieren eines Filters.
+description: Die AMOVIESETUP \_ FILTER-Struktur enthält Informationen zum Registrieren eines Filters.
 ms.assetid: 72e58f33-e480-4b32-b3d5-8f6c8eb2d5a3
-title: AMOVIESETUP_FILTER-Struktur (ComBase. h)
+title: AMOVIESETUP_FILTER-Struktur (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - combase.h
-ms.openlocfilehash: 55a225185733a822591d8f93c2eca3674d51a340
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fe50295f87e2932d3eb0fe53aac4896343a31441f8fa832bbaa69d5256846414
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117824790"
 ---
-# <a name="amoviesetup_filter-structure"></a>Amoviesetup- \_ Filter Struktur
+# <a name="amoviesetup_filter-structure"></a>\_AMOVIESETUP-FILTERstruktur
 
-Die **amoviesetup- \_ Filter** Struktur enthält Informationen zum Registrieren eines Filters.
+Die **AMOVIESETUP \_ FILTER-Struktur** enthält Informationen zum Registrieren eines Filters.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ typedef struct _AMOVIESETUP_FILTER {
 
 <dl> <dt>
 
-**clsID**
+**Clsid**
 </dt> <dd>
 
-Klassen Bezeichner des Filters.
+Klassenbezeichner des Filters.
 
 </dd> <dt>
 
@@ -57,33 +57,33 @@ Name des Filters.
 
 </dd> <dt>
 
-**dwmerit**
+**dwMerit**
 </dt> <dd>
 
-Filter Verdienst. Wird von der [**igraphbuilder**](/windows/desktop/api/Strmif/nn-strmif-igraphbuilder) -Schnittstelle beim Erstellen eines Filter Diagramms verwendet. Eine Liste der Verdienst Werte finden Sie unter [Verdienst](merit.md).
+Filtervererz. Wird von der [**IGraphBuilder-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-igraphbuilder) beim Erstellen eines Filterdiagramms verwendet. Eine Liste mit Denkwerten finden Sie unter [Vererz.](merit.md)
 
 </dd> <dt>
 
-**npins**
+**nPins**
 </dt> <dd>
 
-Anzahl der Elemente im *lppin* -Array. Wenn *lppin* **null** ist, legen Sie diesen Member auf NULL fest.
+Anzahl der Elemente im *lpPin-Array.* Wenn *lpPin* **NULL** ist, legen Sie diesen Member auf 0 (null) fest.
 
 </dd> <dt>
 
-**lppin**
+**lpPin**
 </dt> <dd>
 
-Zeiger auf ein Array von [**amoviesetup- \_ Pin**](amoviesetup-pin.md) -Strukturen der Größe *npins*. Jedes Element dieses Arrays beschreibt eine PIN für den Filter.
+Zeiger auf ein Array von [**AMOVIESETUP-PIN-Strukturen \_**](amoviesetup-pin.md) der Größe *nPins*. Jedes Element dieses Arrays beschreibt eine Stecknadel für den Filter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zur Verwendung dieser Struktur finden Sie unter [Registrieren von DirectShow-Filtern](how-to-register-directshow-filters.md). Verwenden Sie diese Struktur nur für Filter, die in der Standardfilter Kategorie (CLSID \_ legacyamfiltercategory) registriert sind. Um einen Filter in einer anderen Kategorie zu registrieren, verwenden Sie die [**IFilterMapper2:: registerfilter**](/windows/desktop/api/Strmif/nf-strmif-ifiltermapper2-registerfilter) -Methode, wie unter [Implementieren von DllRegisterServer](implementing-dllregisterserver.md)beschrieben.
+Informationen zur Verwendung dieser Struktur finden Sie unter Registrieren von [DirectShow-Filtern.](how-to-register-directshow-filters.md) Verwenden Sie diese Struktur nur für Filter, die in der Standardfilterkategorie (CLSID \_ LegacyAmFilterCategory) registriert sind. Um einen Filter in einer anderen Kategorie zu registrieren, verwenden Sie die [**IFilterMapper2::RegisterFilter-Methode,**](/windows/desktop/api/Strmif/nf-strmif-ifiltermapper2-registerfilter) wie unter [Implementieren von DllRegisterServer](implementing-dllregisterserver.md)beschrieben.
 
 > [!Note]  
-> Die Header Datei "ComBase. h" wird mit den [DirectShow-Basisklassen](directshow-base-classes.md)bereitgestellt.
+> Die Headerdatei combase.h wird mit den [DirectShow-Basisklassen](directshow-base-classes.md)bereitgestellt.
 
  
 
@@ -93,11 +93,11 @@ Weitere Informationen zur Verwendung dieser Struktur finden Sie unter [Registrie
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Combase.h (include Streams.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

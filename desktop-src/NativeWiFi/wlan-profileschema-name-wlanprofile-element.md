@@ -1,7 +1,7 @@
 ---
-description: Enthält den Namen eines drahtlosen LAN-Profils.
+description: Enthält den Namen eines WLAN-Profils.
 ms.assetid: b8977183-7b5d-4c79-9065-ade85ed45716
-title: Name (wlanprofile)-Element
+title: name (WLANProfile)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 79174d1cb24fff1841b3022fa06e201794415ce5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6a6d19c043f7cc2e42ca8221e98b05e4afe7628b143bd572465f00e1d3652275
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117984113"
 ---
-# <a name="name-wlanprofile-element"></a>Name (wlanprofile)-Element
+# <a name="name-wlanprofile-element"></a>name (WLANProfile)-Element
 
-Das Elementname (wlanprofile) enthält den Namen eines drahtlosen LAN-Profils.
+Das Element name (WLANProfile) enthält den Namen eines WLAN-Profils.
 
 ``` syntax
 <xs:element name="name"
@@ -29,19 +29,19 @@ Das Elementname (wlanprofile) enthält den Namen eines drahtlosen LAN-Profils.
  />
 ```
 
-Das **Name** -Element wird durch das [**wlanprofile**](wlan-profileschema-wlanprofile-element.md) -Element definiert.
+Das **Name-Element** wird durch das [**WLANProfile-Element**](wlan-profileschema-wlanprofile-element.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei Namen wird Groß-/Kleinschreibung beachtet.
+Bei Namen wird die Groß-/Kleinschreibung beachtet.
 
-Für Windows XP mit Service Pack 3 (SP3) und Wireless LAN API für Windows XP mit Service Pack 2 (SP2) wird das Name-Element ignoriert, wenn das Profil im Profil Speicher gespeichert wird. Der Name des Profils wird von der SSID des Netzwerks abgeleitet. Bei Infrastrukturnetzwerk Profilen ist der Name des Profils die SSID des Netzwerks. Bei Ad-hoc-Netzwerk Profilen ist der Name des Profils die SSID des Ad-hoc-Netzwerks gefolgt von `-adhoc` . XML-Escapezeichen, wie z. b. &, werden nicht angezeigt. Vermeiden Sie die Verwendung von XML-Escapezeichen in SSID-Namen für Profile, die unter Windows XP mit SP3 oder Wireless LAN API für Windows XP mit SP2 bereitgestellt werden
+Bei Windows XP mit Service Pack 3 (SP3) und der Wlan-API für Windows XP mit Service Pack 2 (SP2) wird das Name-Element ignoriert, wenn das Profil im Profilspeicher gespeichert wird. Der Name des Profils wird von der SSID des Netzwerks abgeleitet. Bei Infrastrukturnetzwerkprofilen ist der Name des Profils die SSID des Netzwerks. Bei Ad-hoc-Netzwerkprofilen ist der Name des Profils die SSID des Ad-hoc-Netzwerks gefolgt von `-adhoc` . XML-Escapezeichen wie & werden nicht angezeigt. Vermeiden Sie die Verwendung von XML-Escapezeichen in SSID-Namen für Profile, die auf Windows XP mit SP3 oder der Wireless LAN-API für Windows XP mit SP2 bereitgestellt werden.
 
-Für alle Netzwerk Profile, die ausschließlich für Windows Vista oder Windows Server 2008 vorgesehen sind, kann der Name eine beliebige Zeichenfolge sein.
+Für jedes Netzwerkprofil, das nur für Windows Vista oder Windows Server 2008 vorgesehen ist, kann der Name eine beliebige Zeichenfolge sein.
 
 ## <a name="examples"></a>Beispiele
 
-Beispiel Profile, die das **Name** -Element verwenden, finden Sie unter [Beispiele für Funk profile](wireless-profile-samples.md).
+Beispielprofile, die das **Name-Element** verwenden, finden Sie unter [Beispiele für Funkprofile.](wireless-profile-samples.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,23 +49,23 @@ Beispiel Profile, die das **Name** -Element verwenden, finden Sie unter [Beispie
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista, Windows XP mit SP3 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                |
-| Verteilbare Komponente<br/>          | Drahtlose LAN-API für Windows XP mit SP2<br/>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista, Windows XP nur mit \[ SP3-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                |
+| Verteilbare Komponente<br/>          | WLAN-API für Windows XP mit SP2<br/>                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
 [**WLANProfile**](wlan-profileschema-wlanprofile-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
 [**WLANProfile**](wlan-profileschema-wlanprofile-element.md)

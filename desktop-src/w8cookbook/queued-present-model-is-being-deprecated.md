@@ -19,7 +19,7 @@ ms.locfileid: "118211345"
 **Server** – Nach Windows Server 2012  
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Im Windows Release nach Windows 8 geben diese APIs E \_ NOTIMPL zurück:
 
@@ -45,7 +45,7 @@ Entwickler müssen den DXGI-Flip-Präsentationsmodus anstelle der in der Wartesc
 
 ## <a name="tests"></a>Tests
 
-Führen Sie allgemeine Tests aus, um sicherzustellen, dass posteingangs- Windows Komponenten und Hauptprodukte weiterhin mit der nächsten Version von Windows funktionieren.
+Führen Sie allgemeine Tests aus, um sicherzustellen, dass der Posteingang Windows Komponenten und Hauptprodukte weiterhin mit der nächsten Version von Windows funktioniert.
 
  
 

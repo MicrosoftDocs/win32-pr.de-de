@@ -1,6 +1,6 @@
 ---
 title: PLAYLIST.setColumnResizeMode
-description: Die setColumnResizeMode-Methode gibt an, wie sich die indizierte Spalte selbst formatiert.
+description: Die setColumnResizeMode-Methode gibt die Größe der indizierten Spalte selbst an.
 ms.assetid: 84ca0e60-ca24-4058-ae08-5b9cf3d7c38f
 keywords:
 - PLAYLIST.setColumnResizeMode Windows Media Player
@@ -22,7 +22,7 @@ ms.locfileid: "118335802"
 ---
 # <a name="playlistsetcolumnresizemode"></a>PLAYLIST.setColumnResizeMode
 
-Die **setColumnResizeMode-Methode** gibt an, wie sich die indizierte Spalte selbst formatiert.
+Die **setColumnResizeMode-Methode** gibt die Größe der indizierten Spalte selbst an.
 
 ``` syntax
         elementID.setColumnResizeMode(column, mode)
@@ -42,16 +42,16 @@ Die **setColumnResizeMode-Methode** gibt an, wie sich die indizierte Spalte selb
 <span id="mode"></span><span id="MODE"></span>*Modus*
 </dt> <dd>
 
-**Eine Zeichenfolge,** die den Größenmodus angibt. Enthält einen der folgenden Werte.
+**Zeichenfolge,** die den Größenmodus angibt. Enthält einen der folgenden Werte.
 
 
 
-| Wert          | BESCHREIBUNG                                                                                                    |
+| Wert          | Beschreibung                                                                                                    |
 |----------------|----------------------------------------------------------------------------------------------------------------|
-| AutoizeHeader | Die Größe der Spalte wird so geändert, dass alle Daten sowohl in der Spalte als auch im Header berücksichtigt werden.                                  |
-| AutoizeData   | Die Größe der Spalte wird so geändert, dass nur alle Daten in der Spalte berücksichtigt werden.                                                 |
+| AutosizeHeader | Die Spaltengröße wird so angepasst, dass alle Daten in der Spalte und der Kopfzeile berücksichtigt werden.                                  |
+| AutoizeData   | Die Spaltengröße wird so angepasst, dass nur alle Daten in der Spalte berücksichtigt werden.                                                 |
 | Fest          | Die Spalte ist eine feste Größe.                                                                                    |
-| Erstreckt sich      | Die Größe der Spalte wird so geändert, dass der verbleibende Speicherplatz im **PLAYLIST-Element** verwendet wird, nachdem die Größe aller anderen Spalten geändert wurde. |
+| Erstreckt sich      | Die Spaltengröße wird so geändert, dass der verbleibende Platz im **PLAYLIST-Element** verwendet wird, nachdem die Größe aller anderen Spalten geändert wurde. |
 
 
 

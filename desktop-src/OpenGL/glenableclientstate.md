@@ -23,7 +23,7 @@ ms.locfileid: "118360417"
 ---
 # <a name="glenableclientstate-function"></a>glEnableClientState-Funktion
 
-Die **Funktionen glEnableClientState** und [**glDisableClientState**](gldisableclientstate.md) aktivieren bzw. deaktivieren Arrays.
+Die Funktionen **glEnableClientState** und [**glDisableClientState**](gldisableclientstate.md) aktivieren bzw. deaktivieren Arrays.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,18 +43,18 @@ void WINAPI glEnableClientState(
 *array* 
 </dt> <dd>
 
-Eine symbolische Konstante für das Array, das Sie aktivieren oder deaktivieren möchten. Dieser Parameter kann einen der folgenden Werte annehmen.
+Eine symbolische Konstante für das Array, das Sie aktivieren oder deaktivieren möchten. Für diesen Parameter kann einer der folgenden Werte angenommen werden.
 
 
 
 | Wert                                                                                                                                                                                      | Bedeutung                                                                                                                                                                                                                                                             |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <span id="GL_COLOR_ARRAY"></span><span id="gl_color_array"></span><dl> <dt>**GL \_ COLOR \_ ARRAY**</dt> </dl>                          | Wenn diese Option aktiviert ist, verwenden Sie Farbarrays mit Aufrufen von [**glArrayElement,**](glarrayelement.md) [**glDrawElements**](gldrawelements.md)oder [**glDrawArrays.**](gldrawarrays.md)<br/> Siehe auch [**glColorPointer**](glcolorpointer.md).<br/>                    |
-| <span id="GL_EDGE_FLAG_ARRAY"></span><span id="gl_edge_flag_array"></span><dl> <dt>**GL \_ \_ EDGE-FLAGARRAY \_**</dt> </dl>             | Wenn aktiviert, verwenden Sie Edgeflagarrays mit Aufrufen von [**glArrayElement,**](glarrayelement.md) [**glDrawElements**](gldrawelements.md)oder [**glDrawArrays**](gldrawarrays.md).<br/> Siehe auch [**glEdgeFlagPointer**](gledgeflagpointer.md).<br/>          |
-| <span id="GL_INDEX_ARRAY"></span><span id="gl_index_array"></span><dl> <dt>**GL \_ INDEX \_ ARRAY**</dt> </dl>                          | Wenn diese Option aktiviert ist, verwenden Sie Indexarrays mit Aufrufen von [**glArrayElement,**](glarrayelement.md) [**glDrawElements**](gldrawelements.md)oder [**glDrawArrays.**](gldrawarrays.md)<br/> Siehe auch [**glIndexPointer**](glindexpointer.md).<br/>                    |
-| <span id="GL_NORMAL_ARRAY"></span><span id="gl_normal_array"></span><dl> <dt>**GL \_ NORMAL \_ ARRAY**</dt> </dl>                       | Wenn aktiviert, verwenden Sie normale Arrays mit Aufrufen von [**glArrayElement,**](glarrayelement.md) [**glDrawElements**](gldrawelements.md)oder [**glDrawArrays**](gldrawarrays.md).<br/> Siehe auch [**glNormalPointer**](glnormalpointer.md).<br/>                 |
-| <span id="GL_TEXTURE_COORD_ARRAY"></span><span id="gl_texture_coord_array"></span><dl> <dt>**GL \_ TEXTURE \_ COORD \_ ARRAY**</dt> </dl> | Wenn aktiviert, verwenden Sie Texturkoordinatenarrays mit Aufrufen von [**glArrayElement,**](glarrayelement.md) [**glDrawElements**](gldrawelements.md)oder [**glDrawArrays**](gldrawarrays.md).<br/> Siehe auch [**glTexCoordPointer**](gltexcoordpointer.md).<br/> |
-| <span id="GL_VERTEX_ARRAY"></span><span id="gl_vertex_array"></span><dl> <dt>**GL \_ VERTEX \_ ARRAY**</dt> </dl>                       | Wenn diese Option aktiviert ist, verwenden Sie Vertexarrays mit Aufrufen von [**glArrayElement,**](glarrayelement.md) [**glDrawElements**](gldrawelements.md)oder [**glDrawArrays.**](gldrawarrays.md)<br/> Siehe auch [**glVertexPointer**](glvertexpointer.md).<br/>                 |
+| <span id="GL_EDGE_FLAG_ARRAY"></span><span id="gl_edge_flag_array"></span><dl> <dt>**GL \_ EDGE \_ FLAG \_ ARRAY**</dt> </dl>             | Wenn aktiviert, verwenden Sie Edgeflagarrays mit Aufrufen von [**glArrayElement,**](glarrayelement.md) [**glDrawElements**](gldrawelements.md)oder [**glDrawArrays**](gldrawarrays.md).<br/> Siehe auch [**glEdgeFlagPointer**](gledgeflagpointer.md).<br/>          |
+| <span id="GL_INDEX_ARRAY"></span><span id="gl_index_array"></span><dl> <dt>**GL \_ INDEX \_ ARRAY**</dt> </dl>                          | Wenn aktiviert, verwenden Sie Indexarrays mit Aufrufen von [**glArrayElement,**](glarrayelement.md) [**glDrawElements**](gldrawelements.md)oder [**glDrawArrays.**](gldrawarrays.md)<br/> Siehe auch [**glIndexPointer**](glindexpointer.md).<br/>                    |
+| <span id="GL_NORMAL_ARRAY"></span><span id="gl_normal_array"></span><dl> <dt>**GL \_ NORMAL \_ ARRAY**</dt> </dl>                       | Wenn diese Option aktiviert ist, verwenden Sie normale Arrays mit Aufrufen von [**glArrayElement,**](glarrayelement.md) [**glDrawElements**](gldrawelements.md)oder [**glDrawArrays.**](gldrawarrays.md)<br/> Siehe auch [**glNormalPointer.**](glnormalpointer.md)<br/>                 |
+| <span id="GL_TEXTURE_COORD_ARRAY"></span><span id="gl_texture_coord_array"></span><dl> <dt>**GL \_ TEXTURE \_ COORD \_ ARRAY**</dt> </dl> | Wenn diese Option aktiviert ist, verwenden Sie Texturkoordinatenarrays mit Aufrufen von [**glArrayElement,**](glarrayelement.md) [**glDrawElements**](gldrawelements.md)oder [**glDrawArrays.**](gldrawarrays.md)<br/> Siehe auch [**glTexCoordPointer**](gltexcoordpointer.md).<br/> |
+| <span id="GL_VERTEX_ARRAY"></span><span id="gl_vertex_array"></span><dl> <dt>**GL \_ VERTEX \_ ARRAY**</dt> </dl>                       | Wenn diese Option aktiviert ist, verwenden Sie Scheitelpunktarrays mit Aufrufen von [**glArrayElement,**](glarrayelement.md) [**glDrawElements**](gldrawelements.md)oder [**glDrawArrays.**](gldrawarrays.md)<br/> Siehe auch [**glVertexPointer**](glvertexpointer.md).<br/>                 |
 
 
 
@@ -68,24 +68,24 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                             | Bedeutung                                       |
 |--------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl> | *array* war kein akzeptierter Wert.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl> | *Array* war kein akzeptierter Wert.<br/> |
 
 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Funktionen glEnableClientState** und **glDisableClientState** aktivieren und deaktivieren verschiedene einzelne Arrays. Verwenden [**Sie glIsEnabled oder**](glisenabled.md) [**glGet,**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) um die aktuelle Einstellung einer Funktion zu bestimmen.
+Die Funktionen **glEnableClientState** und **glDisableClientState** aktivieren und deaktivieren verschiedene einzelne Arrays. Verwenden Sie [**glIsEnabled**](glisenabled.md) oder [**glGet,**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) um die aktuelle Einstellung jeder Funktion zu bestimmen.
 
-Das **Aufrufen von glEnableClientState** und **glDisableClientState** zwischen Aufrufen von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md) kann einen Fehler verursachen. Wenn kein Fehler generiert wird, ist das Verhalten nicht definiert.
+Das Aufrufen **von glEnableClientState** und **glDisableClientState** zwischen Aufrufen von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md) kann einen Fehler verursachen. Wenn kein Fehler generiert wird, ist das Verhalten nicht definiert.
 
 > [!Note]  
-> Die **Funktionen glEnableClientState** und **glDisableClientState** sind nur in OpenGL Version 1.1 oder höher verfügbar.
+> Die Funktionen **glEnableClientState** und **glDisableClientState** sind nur in OpenGL Version 1.1 oder höher verfügbar.
 
  
 

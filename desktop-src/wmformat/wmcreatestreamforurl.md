@@ -1,9 +1,9 @@
 ---
-title: Wmkreatestreamforurl-Funktion
-description: Die wmkreatestreamforurl-Funktion wird von der Anwendung implementiert, um ein COM-IStream-Objekt für eine bestimmte URL zu erstellen.
+title: WMCreateStreamForURL-Funktion
+description: Die WMCreateStreamForURL-Funktion wird von der Anwendung implementiert, um ein COM IStream-Objekt für eine bestimmte URL zu erstellen.
 ms.assetid: df8d0e57-9f71-4be3-a0b0-cf61b68611bc
 keywords:
-- Wmkreatestreamforurl-Funktion Windows Media-Format
+- WMCreateStreamForURL-Funktion windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -13,25 +13,25 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 05fddd6d5359f1eada6a2691b51a692217d4a9dd
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 9c32302147eeb814c211a77555ab1c9bb3614eddf3d8001015479461e05d40ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389210"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117653453"
 ---
-# <a name="wmcreatestreamforurl-function"></a>Wmkreatestreamforurl-Funktion
+# <a name="wmcreatestreamforurl-function"></a>WMCreateStreamForURL-Funktion
 
-Die **wmkreatestreamforurl** -Funktion wird von der Anwendung implementiert, um ein com- **IStream** -Objekt für eine bestimmte URL zu erstellen.
+Die **WMCreateStreamForURL-Funktion** wird von der Anwendung implementiert, um ein COM **IStream-Objekt** für eine bestimmte URL zu erstellen.
 
 ## <a name="syntax"></a>Syntax
 
 
 ```C++
 HRESULT WMCreateStreamForURL(
-  _In_  LPCWSTR pwszURL,
-  _Out_ BOOL    *pfCorrectSource,
-  _Out_ IStream **ppStream
+  _In_  LPCWSTR pwszURL,
+  _Out_ BOOL    *pfCorrectSource,
+  _Out_ IStream **ppStream
 );
 ```
 
@@ -41,41 +41,41 @@ HRESULT WMCreateStreamForURL(
 
 <dl> <dt>
 
-*pwszurl* \[ in\]
+*pwszURL* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine breit Zeichen-Zeichenfolge, die die URL enthält.
+Zeiger auf eine Breitzeichenzeichenfolge, die die URL enthält.
 
 </dd> <dt>
 
-*pfcorrectsource* \[ vorgenommen\]
+*pfCorrectSource* \[ out\]
 </dt> <dd>
 
-Zeiger auf ein Flag, "true" verhindert, dass das SDK andere Quell-Plug-Ins für diese URL ausprobiert.
+Der Zeiger auf ein Flag true verhindert, dass das SDK andere Quell-Plug-Ins für diese URL versucht.
 
 </dd> <dt>
 
-*PPStream* \[ vorgenommen\]
+*ppStream* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen Zeiger auf das **IStream** -Objekt, das von der-Methode erstellt wurde.
+Zeiger auf einen Zeiger auf das von der -Methode erstellte **IStream-Objekt.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, muss Sie S OK zurückgeben \_ . Wenn dies nicht möglich ist, muss ein entsprechender **HRESULT** -Fehlercode zurückgegeben werden, und \* *PPStream* sollte auf **null** festgelegt werden.
+Wenn die Funktion erfolgreich ist, muss sie S \_ OK zurückgeben. Wenn ein Fehler auftritt, muss ein entsprechender **HRESULT-Fehlercode** zurückgegeben werden, und \* *ppStream* sollte auf NULL festgelegt **werden.**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Quell-Plug-ins**](source-plug-ins.md)
+[**Quell-Plug-Ins**](source-plug-ins.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

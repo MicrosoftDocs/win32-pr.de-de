@@ -27,16 +27,16 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Ui \_ PKEY \_ QuickAccessToolbarDock wird von einer Anwendung verwendet, um den Andockzustand der Schnellzugriffssymbolleiste (Quick Access Toolbar, QAT) abzufragen.
+Ui PKEY QuickAccessToolbarDock wird von einer Anwendung verwendet, um den Andockzustand der Symbolleiste für den Schnellzugriff \_ \_ (QAT) abfragt.
 
-Der Eigenschaftswert stammt aus der [**UI \_ CONTROLDOCK-Enumeration.**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_controldock)
+Der Eigenschaftswert ist aus der [**\_ CONTROLDOCK-Enumeration der UI.**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_controldock)
 
 
 
 |    Enumeration                     |    Beschreibung                                                                                                                                                                                                                                                   |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| UI \_ CONTROLDOCK \_ TOP    | Die QAT wird im Nichtclientbereich der Menübandhostanwendung angedockt, wie im folgenden Screenshot gezeigt.![Screenshot der Symbolleiste für den Schnellzugriff, die über dem Menüband im Nichtclientbereich angedockt ist.](images/properties/qat-docktop.png)<br/> |
-| UI \_ CONTROLDOCK \_ BOTTOM | Die QAT ist wie im folgenden Screenshot gezeigt als visuell integrales Band unterhalb des Menübands angedockt. ![Screenshot der Symbolleiste für den Schnellzugriff, die unter dem Menüband angedockt ist.](images/properties/qat-dockbottom.png)<br/>                           |
+| \_UI-STEUERELEMENTDOCK \_ TOP    | Die QAT wird im Nicht-Clientbereich der Menübandhostanwendung angedockt, wie im folgenden Screenshot gezeigt.![Screenshot der Symbolleiste für den Schnellzugriff, die über dem Menüband im Nicht-Clientbereich angedockt ist.](images/properties/qat-docktop.png)<br/> |
+| UI \_ CONTROLDOCK \_ BOTTOM | Die QAT wird wie im folgenden Screenshot gezeigt als visuell integrales Band unterhalb des Menübands angedockt. ![Screenshot der Symbolleiste für den Schnellzugriff, die unter dem Menüband angedockt ist.](images/properties/qat-dockbottom.png)<br/>                           |
 
 
 

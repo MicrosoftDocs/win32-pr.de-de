@@ -3,14 +3,14 @@ title: CD-Wiedergabelistenattribute
 description: CD-Wiedergabelistenattribute
 ms.assetid: 3f447fa8-2d09-49c3-8efd-6bf048429a6b
 keywords:
-- Windows Media Player,CD-Wiedergabelistenattribute
-- Windows Media Player Mobile,CD-Wiedergabelistenattribute
-- Windows Media Player-Objektmodell, CD-Wiedergabelistenattribute
-- Objektmodell,CD-Wiedergabelistenattribute
-- ActiveX,CD-Wiedergabelistenattribute
-- Windows Media Player ActiveX,CD-Wiedergabelistenattribute
-- Windows Media Player Mobile ActiveX-Steuerelement, CD-Wiedergabelistenattribute
-- Referenz für Objektmodell,CD-Wiedergabelistenattribute
+- Windows Media Player, CD-Wiedergabelistenattribute
+- Windows Media Player Mobile, CD-Wiedergabelistenattribute
+- Windows Media Player Objektmodell, CD-Wiedergabelistenattribute
+- Objektmodell, CD-Wiedergabelistenattribute
+- ActiveX-Steuerelement, CD-Wiedergabelistenattribute
+- Windows Media Player ActiveX-Steuerelement, CD-Wiedergabelistenattribute
+- Windows Media Player Mobiles ActiveX-Steuerelement, CD-Wiedergabelistenattribute
+- Referenz für Objektmodell, CD-Wiedergabelistenattribute
 - Attribute, Wiedergabelisten
 - CD-Wiedergabelistenattribute
 ms.topic: article
@@ -24,13 +24,13 @@ ms.locfileid: "118342653"
 ---
 # <a name="cd-playlist-attributes"></a>CD-Wiedergabelistenattribute
 
-Die folgenden Attribute und Attributaliase sind für eine CD verfügbar. Diese Attribute gelten für die CD-Wiedergabeliste, die mit *Cinnen abgerufen wurde.* **Wiedergabeliste**.
+Die folgenden Attribute und Attributaliase sind für eine CD verfügbar. Diese Attribute gelten für die CD-Wiedergabeliste, die mit *Credo* abgerufen wurde. **Wiedergabeliste**.
 
--   [Alias des Interpreten](author-attribute.md)
+-   [Interpretenalias](author-attribute.md)
 -   [Author-Attribut](author-attribute.md)
 -   [BuyNow-Attribut](buynow-attribute.md)
 -   [Composer Alias](wm-composer-attribute.md)
--   [Copyrightattribut](copyright-attribute.md)
+-   [Copyright-Attribut](copyright-attribute.md)
 -   [Genrealias](wm-genre-attribute.md)
 -   [Bezeichnungsalias](wm-publisher-attribute.md)
 -   [MoreInfo-Attribut](moreinfo-attribute.md)
@@ -48,10 +48,10 @@ Die folgenden Attribute und Attributaliase sind für eine CD verfügbar. Diese A
 
 <dl> <dt>
 
-[**Attributreferenz**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> <dt>
 
-[**Cplay.playlist**](cdrom-playlist.md)
+[**Corpora.playlist**](cdrom-playlist.md)
 </dt> <dt>
 
 [**CD-Spuren**](cd-track-attributes.md)

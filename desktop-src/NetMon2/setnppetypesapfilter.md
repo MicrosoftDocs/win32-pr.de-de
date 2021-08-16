@@ -1,5 +1,5 @@
 ---
-description: Legt den BLOB-Filter Etype/Sap fest.
+description: Legt den BLOB-Etype/Sap-Filter fest.
 ms.assetid: cd659c93-3415-4737-b848-936e80318544
 title: SetNPPEtypeSapFilter-Funktion (Netmon.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118363826"
 ---
 # <a name="setnppetypesapfilter-function"></a>SetNPPEtypeSapFilter-Funktion
 
-Die **SetNPPEtypeSapFilter-Funktion** legt den BLOB-Filter Etype/Sap fest.
+Die **SetNPPEtypeSapFilter-Funktion** legt den BLOB-Etype/Sap-Filter fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -90,13 +90,13 @@ Die festgelegten Filterflags.
 *hErrorBlob* \[ out\]
 </dt> <dd>
 
-Das Handle für ein Fehler-BLOB, das angibt, wo im ursprünglichen BLOB der Fehler aufgetreten ist (falls vorhanden).
+Das Handle für ein Fehlerblob, das angibt, wo im ursprünglichen BLOB der Fehler aufgetreten ist (sofern ein Fehler aufgetreten ist).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler angibt.
 

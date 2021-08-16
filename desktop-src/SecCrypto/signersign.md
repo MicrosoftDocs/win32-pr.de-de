@@ -1,7 +1,7 @@
 ---
 description: Signiert die angegebene Datei.
 ms.assetid: 5a59e663-057b-4380-aa14-536030e4051d
-title: Signersign-Funktion
+title: SignerSign-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,19 +13,19 @@ api_type:
 - DllExport
 api_location:
 - Mssign32.dll
-ms.openlocfilehash: 9aa8ecc15e38c4a502b363898d5845cba5b0e47e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d9756fba3a931ddf09715b5086e613a9395c10c57c82fa18c64007aeb02b615c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349340"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117973134"
 ---
-# <a name="signersign-function"></a>Signersign-Funktion
+# <a name="signersign-function"></a>SignerSign-Funktion
 
-Die **signersign** -Funktion signiert die angegebene Datei.
+Die **SignerSign-Funktion** signiert die angegebene Datei.
 
 > [!Note]  
-> Diese Funktion verfügt über keine zugeordnete Header Datei oder Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Header Datei erstellen und die [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Mssign32.dll zu verknüpfen.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um eine dynamische Verknüpfung mit Mssign32.dll.
 
  
 
@@ -50,62 +50,62 @@ HRESULT WINAPI SignerSign(
 
 <dl> <dt>
 
-*psubjetinfo* \[ in\]
+*pSubjectInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die [**\_ \_ Info**](signer-subject-info.md) -Struktur des Signatur Gebers, die den Betreff angibt, der signiert werden soll.
+Ein Zeiger auf eine [**SIGNER \_ SUBJECT \_ INFO-Struktur,**](signer-subject-info.md) die das zu signierende Subjekt angibt.
 
 </dd> <dt>
 
-*psignercert* \[ in\]
+*pSignerCert* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**Signatur Geber \_**](signer-cert.md) -Zertifikat Struktur, die das Zertifikat angibt, das zum Erstellen der digitalen Signatur verwendet werden soll.
+Ein Zeiger auf eine [**SIGNER \_ CERT-Struktur,**](signer-cert.md) die das Zertifikat angibt, das zum Erstellen der digitalen Signatur verwendet werden soll.
 
 </dd> <dt>
 
-*psignatureinfo* \[ in\]
+*pSignatureInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**\_ Signatur \_**](signer-signature-info.md) Informationsstruktur, die Informationen zur digitalen Signatur enthält.
+Ein Zeiger auf eine [**SIGNER \_ SIGNATURE \_ INFO-Struktur,**](signer-signature-info.md) die Informationen über die digitale Signatur enthält.
 
 </dd> <dt>
 
-*pproviderinfo* \[ in, optional\]
+*pProviderInfo* \[ in, optional\]
 </dt> <dd>
 
-Ein Zeiger auf eine Informationsstruktur des [**Signatur Gebers \_ Anbieters \_**](signer-provider-info.md) , die die Informationen zum [*Kryptografiedienstanbieter*](../secgloss/c-gly.md) (CSP) und zum [*privaten Schlüssel*](../secgloss/p-gly.md) angibt, die zum Erstellen der digitalen Signatur verwendet werden.
+Ein Zeiger auf eine [**SIGNER \_ PROVIDER \_ INFO-Struktur,**](signer-provider-info.md) die den [](../secgloss/p-gly.md) Kryptografiedienstanbieter (Cryptographic [*Service Provider,*](../secgloss/c-gly.md) CSP) und informationen zum privaten Schlüssel angibt, die zum Erstellen der digitalen Signatur verwendet werden.
 
-Wenn der Wert dieses Parameters **null** ist, muss der Wert des *psignercert* -Parameters ein Zertifikat angeben, das einem CSP zugeordnet ist.
+Wenn der Wert dieses Parameters **NULL ist,** muss der Wert des *pSignerCert-Parameters* ein Zertifikat angeben, das einem CSP zugeordnet ist.
 
 </dd> <dt>
 
-*pwszhttptimestamp* \[ in, optional\]
+*pwszHttpTimeStamp* \[ in, optional\]
 </dt> <dd>
 
-Die URL eines Zeitstempel Servers.
+Die URL eines Zeitstempelservers.
 
 </dd> <dt>
 
-*psrequest* \[ in, optional\]
+*psRequest* \[ in, optional\]
 </dt> <dd>
 
-Ein Zeiger auf ein Array von [**crypt- \_ Attribut**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_attribute) Strukturen, die einer Signierungs Anforderung hinzugefügt werden. Dieser Parameter wird ignoriert, wenn der *pwszhttptimestamp* -Parameter keinen gültigen Wert enthält, der nicht **null** ist.
+Ein Zeiger auf ein Array von [**CRYPT \_ ATTRIBUTE-Strukturen,**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_attribute) die einer Vorzeichenanforderung hinzugefügt werden. Dieser Parameter wird ignoriert, wenn der *pwszHttpTimeStamp-Parameter* keinen gültigen Wert enthält, der nicht **NULL ist.**
 
 </dd> <dt>
 
-*psipdata* \[ in, optional\]
+*pSipData* \[ in, optional\]
 </dt> <dd>
 
-Ein 32-Bit-Wert, der als zusätzliche Daten an SIP-Funktionen weitergeleitet wird. Das Format und der Inhalt dieser werden vom SIP-Anbieter definiert.
+Ein 32-Bit-Wert, der als zusätzliche Daten an DIE SIP-Funktionen übergeben wird. Das Format und der Inhalt dieses wird vom SIP-Anbieter definiert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion S \_ OK zurück.
+Wenn die Funktion erfolgreich ist, gibt sie S \_ OK zurück.
 
-Wenn die Funktion fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
+Wenn die Funktion fehlschlägt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -113,17 +113,17 @@ Wenn die Funktion fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der d
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Mssign32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Signersignetx**](signersignex.md)
+[**SignerSignEx**](signersignex.md)
 </dt> </dl>
 
  

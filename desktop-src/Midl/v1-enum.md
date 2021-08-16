@@ -1,9 +1,9 @@
 ---
 title: v1_enum-Attribut
-description: Das Attribut \v1 \_ enum\ weist an, dass der angegebene Enumerationstyp als 32-Bit-Entität und nicht als 16-Bit-Standard übertragen wird.
+description: Das \v1 enum\-Attribut gibt an, dass der angegebene enumerierte Typ als \_ 32-Bit-Entität und nicht als 16-Bit-Standard übertragen wird.
 ms.assetid: 46016131-b78e-4a7f-94c8-41ff1780b0b8
 keywords:
-- v1_enum-Attribut MIDL
+- v1_enum MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -19,9 +19,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118382784"
 ---
-# <a name="v1_enum-attribute"></a>\_v1-Enumerationsattribut
+# <a name="v1_enum-attribute"></a>\_v1-Enum-Attribut
 
-Das **\[ v1-Enumerationsattribut \_ \]** weist an, dass der angegebene Enumerationstyp nicht als 16-Bit-Standard, sondern als 32-Bit-Entität übertragen wird.
+Das **\[ \_ \] v1-Enum-Attribut** gibt an, dass der angegebene aufzählte Typ als 32-Bit-Entität und nicht als 16-Bit-Standard übertragen wird.
 
 ``` syntax
 [v1_enum] enum 
@@ -36,9 +36,9 @@ Dieses Attribut verfügt über keine Parameter.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Verwendung des **\[ v1-Enumerationsattributs \_ \]** zum Übertragen eines aufzählenden Typs als 32-Bit-Entität erhöht die Effizienz des Marshallings und Desmarshalings von Daten, wenn eine solche Enumeration in Strukturen oder Unions eingebettet ist.
+Die Verwendung des **\[ \_ \] v1-Enumerationsattributs** zum Übertragen eines enumerationsbasierten Typs als 32-Bit-Entität erhöht die Effizienz des Marshallings und Desmarshalings von Daten, wenn eine solche Enumeration in Strukturen oder Unions eingebettet ist.
 
-Zur Verbesserung der Leistung wird empfohlen, das **\[ v1-Enumerationsattribut \_ \]** auf Enumeratoren in 32-Bit-Anwendungen anzuwenden. Beachten Sie jedoch, dass der C-Compiler auf 16-Bit-Plattformen einen enumerierten Typ [](int.md)als 16-Bit-Int behandelt. Daher müssen 16-Bit-Clientanwendungen [**Enumerationstypen**](enum.md) für die Remoteübertragung in [**long**](long.md) konvertieren, um das Überschreiben von Daten oder das Senden falscher Werte zu vermeiden.
+Zur Verbesserung der Leistung wird empfohlen, das **\[ \_ \] Enumeratorattribut v1** auf Enumeratoren in 32-Bit-Anwendungen zu anwenden. Beachten Sie jedoch, dass der C-Compiler auf 16-Bit-Plattformen einen aufzählten Typ als 16-Bit-Int [**behandelt.**](int.md) Daher müssen 16-Bit-Clientanwendungen [**Enum-Typen**](enum.md) für die Remoteübertragung in long konvertieren, um zu vermeiden, dass Daten überschreiben oder falsche Werte senden. [](long.md)
 
 ## <a name="examples"></a>Beispiele
 

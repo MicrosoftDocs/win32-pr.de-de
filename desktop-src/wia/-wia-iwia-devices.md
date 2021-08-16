@@ -1,5 +1,5 @@
 ---
-description: Sammlung von DeviceInfo-Objekten, die alle auf dem Computer installierten Geräte darstellen.
+description: Sammlung von DeviceInfo-Objekten, die alle auf dem Computer installierten Geräte darstellt.
 ms.assetid: 2f124188-2b66-46cc-9b26-bfef3709a1af
 title: Wia.Devices-Eigenschaft
 ms.topic: reference
@@ -23,10 +23,10 @@ ms.locfileid: "118208923"
 ---
 # <a name="wiadevices-property"></a>Wia.Devices-Eigenschaft
 
-Sammlung von [**DeviceInfo-Objekten,**](-wia-deviceinfo.md) die alle auf dem Computer installierten Geräte darstellen. Schreibgeschützt.
+Sammlung von [**DeviceInfo-Objekten,**](-wia-deviceinfo.md) die alle auf dem Computer installierten Geräte darstellt. Schreibgeschützt.
 
 > [!Note]  
-> Diese Auflistung basiert auf 0.
+> Diese Auflistung ist 0-basiert.
 
  
 
@@ -45,7 +45,7 @@ propVal = Wia.Devices
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel veranschaulicht die Verwendung der **Sammlung Geräte** zum Aufzählen der Geräte auf einem System.
+Das folgende Beispiel veranschaulicht die Verwendung der Sammlung **Geräte** zum Aufzählen der Geräte auf einem System.
 
 
 ```JScript
@@ -72,7 +72,7 @@ Next
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 

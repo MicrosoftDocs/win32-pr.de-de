@@ -1,5 +1,5 @@
 ---
-description: Enumeriert alle Scanprofile im System erneut.
+description: Enumeriert alle Scanprofile im System neu.
 ms.assetid: f5e49645-e81a-4750-8ea5-f0c698a61752
 title: IScanProfileMgr::Refresh-Methode (Scanprofilemgr.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118208943"
 ---
 # <a name="iscanprofilemgrrefresh-method"></a>IScanProfileMgr::Refresh-Methode
 
-Enumeriert alle Scanprofile im System erneut.
+Enumeriert alle Scanprofile im System neu.
 
 ## <a name="syntax"></a>Syntax
 

@@ -1,7 +1,7 @@
 ---
-description: Gibt die Energie des Blitzes zum Zeitpunkt der Aufnahme des Bilds an, gemessen in "Balkenstromleistung Sekunden". Wird aus PKEY \_ Photo \_ Flash HotNumerator und PKEY \_ Photo \_ FlashKeyDenominator berechnet.
+description: Gibt die Energie des Atomstroms zum Zeitpunkt der Aufnahme des Bilds an, gemessen in "Balken der Stromversorgungssekunden". Berechnet aus PKEY \_ Photo \_ FlashEn enumerationNumerator und PKEY \_ Photo \_ FlashEn enumerationDenominator.
 ms.assetid: afdd1bc6-87c3-4c47-9d29-43422fd699b3
-title: System.Photo.FlashStopp
+title: System.Photo.FlashEnreal
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 431d311725717d9da0b696b79567d12908f7c48f867bc0a105304b389e23de94
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118229965"
 ---
-# <a name="systemphotoflashenergy"></a>System.Photo.FlashStopp
+# <a name="systemphotoflashenergy"></a>System.Photo.FlashEnreal
 
-Gibt die Energie des Blitzes zum Zeitpunkt der Aufnahme des Bilds an, gemessen in "Balkenstromleistung Sekunden". Wird aus PKEY \_ Photo \_ Flash HotNumerator und PKEY \_ Photo \_ FlashKeyDenominator berechnet.
+Gibt die Energie des Atomstroms zum Zeitpunkt der Aufnahme des Bilds an, gemessen in "Balken der Stromversorgungssekunden". Berechnet aus PKEY \_ Photo \_ FlashEn enumerationNumerator und PKEY \_ Photo \_ FlashEn enumerationDenominator.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

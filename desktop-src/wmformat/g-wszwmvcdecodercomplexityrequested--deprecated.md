@@ -1,6 +1,6 @@
 ---
 title: g_wszWMVCDecoderComplexityRequested (Wmcodecdsp.h)
-description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | g_wszWMVCDecoderComplexityRequested (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | g_wszWMVCDecoderComplexityRequested (Wmcodecdsp.h)
 ms.assetid: 188f13de-6643-4fd9-939b-1afe15aa75e5
 keywords:
 - g_wszWMVCDecoderComplexityRequested Windows-Medienformat
@@ -23,7 +23,7 @@ ms.locfileid: "118199111"
 ---
 # <a name="g_wszwmvcdecodercomplexityrequested"></a>g \_ wszWMVCDecoderComplexityRequested
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 

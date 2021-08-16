@@ -22,7 +22,7 @@ ms.locfileid: "118316844"
 ---
 # <a name="pragma-deleteinstance"></a>pragma deleteinstance
 
-Der **Befehl pragma deleteinstance** löscht eine vorhandene Instanz einer Klasse aus dem Repository.
+Mit **dem Befehl pragma deleteinstance** wird eine vorhandene Instanz einer Klasse aus dem Repository gelöscht.
 
 Im Folgenden wird die Syntax für diesen Befehl beschrieben:
 
@@ -35,7 +35,7 @@ Im Folgenden wird die Syntax für diesen Befehl beschrieben:
 
 *InstanceId* ist ein eindeutiger Bezeichner der Instanz, die der MOF-Compiler aus dem aktuellen Namespace löscht.
 
-*\[ Das \] Flag* muss eines der folgenden Argumente sein.
+*\[ Das \]* Flag muss eines der folgenden Argumente sein.
 
 
 

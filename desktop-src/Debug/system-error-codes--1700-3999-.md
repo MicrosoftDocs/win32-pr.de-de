@@ -16,11 +16,11 @@ ms.locfileid: "118405601"
 > [!NOTE]
 > Diese Informationen sind für Entwickler gedacht, die Systemfehler debuggen. Für andere Fehler, z. B. Probleme mit Windows Update, finden Sie eine Liste der Ressourcen auf der [Seite Fehlercodes.](system-error-codes.md)
 
-In der folgenden Liste werden [die Systemfehlercodes für](system-error-codes.md) die Fehler 1700 bis 3999 beschrieben. Sie werden von der [**GetLastError-Funktion zurückgegeben,**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) wenn viele Funktionen fehlschlagen. Verwenden Sie zum Abrufen des Beschreibungstexts für den Fehler in Ihrer Anwendung die [**Funktion FormatMessage**](/windows/desktop/api/WinBase/nf-winbase-formatmessage) mit dem **Flag FORMAT MESSAGE FROM \_ \_ \_ SYSTEM.**
+In der folgenden Liste werden [die Systemfehlercodes für die](system-error-codes.md) Fehler 1700 bis 3999 beschrieben. Sie werden von der [**GetLastError-Funktion**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) zurückgegeben, wenn viele Funktionen fehlschlagen. Verwenden Sie zum Abrufen des Beschreibungstexts für den Fehler in Ihrer Anwendung die [**Funktion FormatMessage**](/windows/desktop/api/WinBase/nf-winbase-formatmessage) mit dem **Flag FORMAT MESSAGE FROM \_ \_ \_ SYSTEM.**
 
 <dl> <dt>
 
-<span id="RPC_S_INVALID_STRING_BINDING"></span><span id="rpc_s_invalid_string_binding"></span>**\_RPC-S \_ UNGÜLTIGE \_ \_ ZEICHENFOLGENBINDUNG**
+<span id="RPC_S_INVALID_STRING_BINDING"></span><span id="rpc_s_invalid_string_binding"></span>**RPC \_ S \_ UNGÜLTIGE \_ \_ ZEICHENFOLGENBINDUNG**
 </dt> <dd> <dl> <dt>
 
 1700 (0x6A4)
@@ -306,7 +306,7 @@ Es sind nicht genügend Ressourcen verfügbar, um diesen Vorgang abschließen zu
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_SERVER_UNAVAILABLE"></span><span id="rpc_s_server_unavailable"></span>**RPC \_ S SERVER NICHT \_ \_ VERFÜGBAR**
+<span id="RPC_S_SERVER_UNAVAILABLE"></span><span id="rpc_s_server_unavailable"></span>**\_ \_ RPC-S-SERVER \_ NICHT VERFÜGBAR**
 </dt> <dd> <dl> <dt>
 
 1722 (0x6BA)
@@ -332,7 +332,7 @@ Der RPC-Server ist zu ausgelastet, um diesen Vorgang abschließen zu können.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_INVALID_NETWORK_OPTIONS"></span><span id="rpc_s_invalid_network_options"></span>**RPC \_ S \_ – \_ UNGÜLTIGE \_ NETZWERKOPTIONEN**
+<span id="RPC_S_INVALID_NETWORK_OPTIONS"></span><span id="rpc_s_invalid_network_options"></span>**\_RPC-S \_ \_ UNGÜLTIGE \_ NETZWERKOPTIONEN**
 </dt> <dd> <dl> <dt>
 
 1724 (0x6BC)
@@ -397,7 +397,7 @@ Ein RPC-Protokollfehler (Remote Procedure Call, Remoteprozeduraufruf) ist aufget
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_PROXY_ACCESS_DENIED"></span><span id="rpc_s_proxy_access_denied"></span>**RPC \_ S PROXY ACCESS DENIED (RPC-S-PROXYZUGRIFF \_ \_ \_ VERWEIGERT)**
+<span id="RPC_S_PROXY_ACCESS_DENIED"></span><span id="rpc_s_proxy_access_denied"></span>**\_ \_ RPC-S-PROXYZUGRIFF \_ \_ VERWEIGERT**
 </dt> <dd> <dl> <dt>
 
 1729 (0x6C1)
@@ -852,7 +852,7 @@ Es ist kein Sicherheitskontext verfügbar, um den Identitätswechsel zuzulassen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_INTERNAL_ERROR"></span><span id="rpc_s_internal_error"></span>**INTERNER RPC \_ \_ \_ S-FEHLER**
+<span id="RPC_S_INTERNAL_ERROR"></span><span id="rpc_s_internal_error"></span>**INTERNER \_ \_ \_ RPC-FEHLER**
 </dt> <dd> <dl> <dt>
 
 1766 (0x6E6)
@@ -873,7 +873,7 @@ Interner Fehler bei einem Remoteprozeduraufruf (RPC).
 
 
 
-Der RPC-Server hat versucht, eine ganzzahlige Division durch 0 (null) zu erzielen.
+Der RPC-Server hat versucht, eine ganzzahlige Division durch 0 (null) zu versuchen.
 
 
 </dt> </dl> </dd> <dt>
@@ -886,7 +886,7 @@ Der RPC-Server hat versucht, eine ganzzahlige Division durch 0 (null) zu erziele
 
 
 
-Ein Adressierungsfehler ist auf dem RPC-Server aufgetreten.
+Auf dem RPC-Server ist ein Adressierungsfehler aufgetreten.
 
 
 </dt> </dl> </dd> <dt>
@@ -899,7 +899,7 @@ Ein Adressierungsfehler ist auf dem RPC-Server aufgetreten.
 
 
 
-Ein Gleitkommavorgang auf dem RPC-Server hat eine Division durch 0 (null) verursacht.
+Ein Gleitkommavorgang auf dem RPC-Server hat eine Division durch 0 verursacht.
 
 
 </dt> </dl> </dd> <dt>
@@ -912,7 +912,7 @@ Ein Gleitkommavorgang auf dem RPC-Server hat eine Division durch 0 (null) verurs
 
 
 
-Auf dem RPC-Server ist ein Gleitkommaunterlauf aufgetreten.
+Auf dem RPC-Server ist ein Gleitkomma-Unterlauf aufgetreten.
 
 
 </dt> </dl> </dd> <dt>
@@ -930,7 +930,7 @@ Auf dem RPC-Server ist ein Gleitkommaüberlauf aufgetreten.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_X_NO_MORE_ENTRIES"></span><span id="rpc_x_no_more_entries"></span>**RPC \_ X KEINE WEITEREN \_ \_ \_ EINTRÄGE**
+<span id="RPC_X_NO_MORE_ENTRIES"></span><span id="rpc_x_no_more_entries"></span>**RPC \_ X KEINE EINTRÄGE \_ \_ \_ MEHR**
 </dt> <dd> <dl> <dt>
 
 1772 (0x6EC)
@@ -977,12 +977,12 @@ Die Datei, die die Zeichenübersetzungstabelle enthält, hat weniger als 512 Byt
 
 
 
-Ein NULL-Kontexthandle wurde während eines Remoteprozeduraufrufs vom Client an den Host übergeben.
+Ein NULL-Kontexthand handle wurde während eines Remoteprozeduraufrufs vom Client an den Host übergeben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_X_SS_CONTEXT_DAMAGED"></span><span id="rpc_x_ss_context_damaged"></span>**RPC \_ \_ X-SS-KONTEXT \_ \_ BESCHÄDIGT**
+<span id="RPC_X_SS_CONTEXT_DAMAGED"></span><span id="rpc_x_ss_context_damaged"></span>**RPC \_ X \_ SS \_ CONTEXT \_ DAMAGED**
 </dt> <dd> <dl> <dt>
 
 1777 (0x6F1)
@@ -990,7 +990,7 @@ Ein NULL-Kontexthandle wurde während eines Remoteprozeduraufrufs vom Client an 
 
 
 
-Das Kontexthandle wurde während eines Remoteprozeduraufrufs geändert.
+Das Kontexthand handle wurde während eines Remoteprozeduraufrufs geändert.
 
 
 </dt> </dl> </dd> <dt>
@@ -1003,12 +1003,12 @@ Das Kontexthandle wurde während eines Remoteprozeduraufrufs geändert.
 
 
 
-Die bindungshandles, die an einen Remoteprozeduraufruf übergeben werden, stimmen nicht überein.
+Die bindungshandles, die an einen Remoteprozeduraufruf übergeben werden, sind nicht übereinstimmend.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_X_SS_CANNOT_GET_CALL_HANDLE"></span><span id="rpc_x_ss_cannot_get_call_handle"></span>**RPC \_ X \_ SS KANN KEIN \_ \_ \_ \_ AUFRUFHANDLE ABRUFEN**
+<span id="RPC_X_SS_CANNOT_GET_CALL_HANDLE"></span><span id="rpc_x_ss_cannot_get_call_handle"></span>**RPC \_ X \_ SS KANN CALL HANDLE NICHT \_ \_ \_ \_ ERHALTEN**
 </dt> <dd> <dl> <dt>
 
 1779 (0x6F3)
@@ -1016,12 +1016,12 @@ Die bindungshandles, die an einen Remoteprozeduraufruf übergeben werden, stimme
 
 
 
-Der Stub kann das Aufrufhandle der Remoteprozedur nicht abrufen.
+Der Stub kann das Remoteprozeduraufrufhand handle nicht erhalten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_X_NULL_REF_POINTER"></span><span id="rpc_x_null_ref_pointer"></span>**RPC \_ X \_ NULL \_ REF \_ POINTER**
+<span id="RPC_X_NULL_REF_POINTER"></span><span id="rpc_x_null_ref_pointer"></span>**RPC \_ X \_ \_ NULL-VERWEISZEIGER \_**
 </dt> <dd> <dl> <dt>
 
 1780 (0x6F4)
@@ -1034,7 +1034,7 @@ Ein NULL-Verweiszeiger wurde an den Stub übergeben.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_X_ENUM_VALUE_OUT_OF_RANGE"></span><span id="rpc_x_enum_value_out_of_range"></span>**RPC \_ \_ X-ENUMERATIONSWERT \_ \_ AUßERHALB DES \_ \_ BEREICHS**
+<span id="RPC_X_ENUM_VALUE_OUT_OF_RANGE"></span><span id="rpc_x_enum_value_out_of_range"></span>**RPC \_ \_ X-ENUM-WERT \_ LIEGT NICHT IM \_ \_ \_ BEREICH**
 </dt> <dd> <dl> <dt>
 
 1781 (0x6F5)
@@ -1047,7 +1047,7 @@ Der Enumerationswert liegt außerhalb des Bereichs.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_X_BYTE_COUNT_TOO_SMALL"></span><span id="rpc_x_byte_count_too_small"></span>**RPC \_ X \_ \_ BYTEANZAHL ZU \_ \_ KLEIN**
+<span id="RPC_X_BYTE_COUNT_TOO_SMALL"></span><span id="rpc_x_byte_count_too_small"></span>**RPC \_ \_ X-BYTEANZAHL \_ \_ ZU \_ KLEIN**
 </dt> <dd> <dl> <dt>
 
 1782 (0x6F6)
@@ -1060,7 +1060,7 @@ Die Byteanzahl ist zu klein.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_X_BAD_STUB_DATA"></span><span id="rpc_x_bad_stub_data"></span>**RPC \_ X \_ BAD \_ STUB \_ DATA**
+<span id="RPC_X_BAD_STUB_DATA"></span><span id="rpc_x_bad_stub_data"></span>**RPC \_ X – FEHLERHAFTE \_ \_ \_ STUBDATEN**
 </dt> <dd> <dl> <dt>
 
 1783 (0x6F7)
@@ -1068,12 +1068,12 @@ Die Byteanzahl ist zu klein.
 
 
 
-Der Stub hat ungültige Daten empfangen.
+Der Stub hat fehlerhafte Daten empfangen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_USER_BUFFER"></span><span id="error_invalid_user_buffer"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ BENUTZERPUFFER**
+<span id="ERROR_INVALID_USER_BUFFER"></span><span id="error_invalid_user_buffer"></span>**FEHLER: \_ \_ UNGÜLTIGER \_ BENUTZERPUFFER**
 </dt> <dd> <dl> <dt>
 
 1784 (0x6F8)
@@ -1086,7 +1086,7 @@ Der angegebene Benutzerpuffer ist für den angeforderten Vorgang ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_UNRECOGNIZED_MEDIA"></span><span id="error_unrecognized_media"></span>**FEHLER \_ BEI NICHT ERKANNTEN \_ MEDIEN**
+<span id="ERROR_UNRECOGNIZED_MEDIA"></span><span id="error_unrecognized_media"></span>**FEHLER: \_ UNBEKANNTE \_ MEDIEN**
 </dt> <dd> <dl> <dt>
 
 1785 (0x6F9)
@@ -1094,12 +1094,12 @@ Der angegebene Benutzerpuffer ist für den angeforderten Vorgang ungültig.
 
 
 
-Das Datenträgermedium wird nicht erkannt. Es ist möglicherweise nicht formatiert.
+Das Datenträgermedium wird nicht erkannt. Sie ist möglicherweise nicht formatiert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_TRUST_LSA_SECRET"></span><span id="error_no_trust_lsa_secret"></span>**\_FEHLER: \_ \_ LSA-GEHEIMNIS "NO TRUST" \_**
+<span id="ERROR_NO_TRUST_LSA_SECRET"></span><span id="error_no_trust_lsa_secret"></span>**FEHLER: \_ KEIN \_ VERTRAUENSWÜRDIGER \_ LSA-GEHEIMER \_ SCHLÜSSEL**
 </dt> <dd> <dl> <dt>
 
 1786 (0x6FA)
@@ -1112,7 +1112,7 @@ Die Arbeitsstation verfügt nicht über ein Vertrauensgeheimnis.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_TRUST_SAM_ACCOUNT"></span><span id="error_no_trust_sam_account"></span>**FEHLER: \_ KEIN \_ \_ VERTRAUENSSTELLUNGS-SAM-KONTO \_**
+<span id="ERROR_NO_TRUST_SAM_ACCOUNT"></span><span id="error_no_trust_sam_account"></span>**FEHLER: \_ KEIN \_ \_ SAM-KONTO VERTRAUEN \_**
 </dt> <dd> <dl> <dt>
 
 1787 (0x6FB)
@@ -1125,7 +1125,7 @@ Die Sicherheitsdatenbank auf dem Server verfügt nicht über ein Computerkonto f
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_TRUSTED_DOMAIN_FAILURE"></span><span id="error_trusted_domain_failure"></span>**FEHLER: \_ FEHLER BEI VERTRAUENSWÜRDIGER \_ DOMÄNE \_**
+<span id="ERROR_TRUSTED_DOMAIN_FAILURE"></span><span id="error_trusted_domain_failure"></span>**FEHLER: \_ FEHLER BEI FEHLER BEI \_ \_ VERTRAUENSWÜRDIGER DOMÄNE**
 </dt> <dd> <dl> <dt>
 
 1788 (0x6FC)
@@ -1133,12 +1133,12 @@ Die Sicherheitsdatenbank auf dem Server verfügt nicht über ein Computerkonto f
 
 
 
-Fehler bei der Vertrauensstellung zwischen der primären Domäne und der vertrauenswürdigen Domäne.
+Die Vertrauensstellung zwischen der primären Domäne und der vertrauenswürdigen Domäne ist fehlgeschlagen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_TRUSTED_RELATIONSHIP_FAILURE"></span><span id="error_trusted_relationship_failure"></span>**FEHLER: \_ FEHLER BEI \_ VERTRAUENSWÜRDIGER BEZIEHUNG \_**
+<span id="ERROR_TRUSTED_RELATIONSHIP_FAILURE"></span><span id="error_trusted_relationship_failure"></span>**FEHLER: \_ FEHLER BEI \_ VERTRAUENSWÜRDIGER \_ BEZIEHUNG**
 </dt> <dd> <dl> <dt>
 
 1789 (0x6FD)
@@ -1151,7 +1151,7 @@ Bei der Vertrauensstellung zwischen der Arbeitsstation und der primären Domäne
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_TRUST_FAILURE"></span><span id="error_trust_failure"></span>**FEHLER \_ BEI \_ VERTRAUENSSTELLUNGSFEHLER**
+<span id="ERROR_TRUST_FAILURE"></span><span id="error_trust_failure"></span>**FEHLER BEI \_ \_ VERTRAUENSSTELLUNGSFEHLER**
 </dt> <dd> <dl> <dt>
 
 1790 (0x6FE)
@@ -1164,7 +1164,7 @@ Fehler bei der Netzwerkanmeldung.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_CALL_IN_PROGRESS"></span><span id="rpc_s_call_in_progress"></span>**\_ \_ RPC-S-AUFRUF \_ WIRD \_ AUSGEFÜHRT**
+<span id="RPC_S_CALL_IN_PROGRESS"></span><span id="rpc_s_call_in_progress"></span>**\_ \_ \_ RPC-S-AUFRUF WIRD \_ AUSGEFÜHRT**
 </dt> <dd> <dl> <dt>
 
 1791 (0x6FF)
@@ -1203,7 +1203,7 @@ Das Konto des Benutzers ist abgelaufen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_REDIRECTOR_HAS_OPEN_HANDLES"></span><span id="error_redirector_has_open_handles"></span>**\_FEHLERUMLEITUNG \_ MIT \_ \_ GEÖFFNETEN HANDLES**
+<span id="ERROR_REDIRECTOR_HAS_OPEN_HANDLES"></span><span id="error_redirector_has_open_handles"></span>**\_FEHLERUMLEITUNG \_ VERFÜGT ÜBER \_ GEÖFFNETE \_ HANDLES**
 </dt> <dd> <dl> <dt>
 
 1794 (0x702)
@@ -1255,7 +1255,7 @@ Der Druckertreiber ist unbekannt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_UNKNOWN_PRINTPROCESSOR"></span><span id="error_unknown_printprocessor"></span>**FEHLER \_ UNBEKANNTER \_ PRINTPROCESSOR**
+<span id="ERROR_UNKNOWN_PRINTPROCESSOR"></span><span id="error_unknown_printprocessor"></span>**FEHLER \_ \_ UNBEKANNTER PRINTPROCESSOR**
 </dt> <dd> <dl> <dt>
 
 1798 (0x706)
@@ -1268,7 +1268,7 @@ Der Druckprozessor ist unbekannt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_SEPARATOR_FILE"></span><span id="error_invalid_separator_file"></span>**FEHLER: \_ UNGÜLTIGE \_ \_ TRENNZEICHENDATEI**
+<span id="ERROR_INVALID_SEPARATOR_FILE"></span><span id="error_invalid_separator_file"></span>**FEHLER: \_ \_ UNGÜLTIGE \_ TRENNZEICHENDATEI**
 </dt> <dd> <dl> <dt>
 
 1799 (0x707)
@@ -1281,7 +1281,7 @@ Die angegebene Trennzeichendatei ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_PRIORITY"></span><span id="error_invalid_priority"></span>**FEHLER: \_ UNGÜLTIGE \_ PRIORITÄT**
+<span id="ERROR_INVALID_PRIORITY"></span><span id="error_invalid_priority"></span>**FEHLER \_ UNGÜLTIGE \_ PRIORITÄT**
 </dt> <dd> <dl> <dt>
 
 1800 (0x708)
@@ -1294,7 +1294,7 @@ Die angegebene Priorität ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_PRINTER_NAME"></span><span id="error_invalid_printer_name"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ DRUCKERNAME**
+<span id="ERROR_INVALID_PRINTER_NAME"></span><span id="error_invalid_printer_name"></span>**FEHLER: \_ \_ UNGÜLTIGER \_ DRUCKERNAME**
 </dt> <dd> <dl> <dt>
 
 1801 (0x709)
@@ -1307,7 +1307,7 @@ Der Druckername ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRINTER_ALREADY_EXISTS"></span><span id="error_printer_already_exists"></span>**\_FEHLERDRUCKER \_ BEREITS \_ VORHANDEN**
+<span id="ERROR_PRINTER_ALREADY_EXISTS"></span><span id="error_printer_already_exists"></span>**\_FEHLERDRUCKER \_ IST BEREITS \_ VORHANDEN**
 </dt> <dd> <dl> <dt>
 
 1802 (0x70A)
@@ -1320,7 +1320,7 @@ Der Drucker ist bereits vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_PRINTER_COMMAND"></span><span id="error_invalid_printer_command"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ DRUCKERBEFEHL**
+<span id="ERROR_INVALID_PRINTER_COMMAND"></span><span id="error_invalid_printer_command"></span>**FEHLER: \_ \_ UNGÜLTIGER \_ DRUCKERBEFEHL**
 </dt> <dd> <dl> <dt>
 
 1803 (0x70B)
@@ -1333,7 +1333,7 @@ Der Druckerbefehl ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_DATATYPE"></span><span id="error_invalid_datatype"></span>**ERROR \_ INVALID \_ DATATYPE**
+<span id="ERROR_INVALID_DATATYPE"></span><span id="error_invalid_datatype"></span>**FEHLER \_ \_ UNGÜLTIGER DATENTYP**
 </dt> <dd> <dl> <dt>
 
 1804 (0x70C)
@@ -1359,7 +1359,7 @@ Die angegebene Umgebung ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_NO_MORE_BINDINGS"></span><span id="rpc_s_no_more_bindings"></span>**RPC \_ S KEINE WEITEREN \_ \_ \_ BINDUNGEN**
+<span id="RPC_S_NO_MORE_BINDINGS"></span><span id="rpc_s_no_more_bindings"></span>**RPC \_ S \_ KEINE \_ \_ BINDUNGEN MEHR**
 </dt> <dd> <dl> <dt>
 
 1806 (0x70E)
@@ -1380,12 +1380,12 @@ Es gibt keine Bindungen mehr.
 
 
 
-Das verwendete Konto ist ein Domänenübergreifendes Vertrauensstellungskonto. Verwenden Sie Ihr globales Benutzerkonto oder ihr lokales Benutzerkonto, um auf diesen Server zuzugreifen.
+Das verwendete Konto ist ein domänenübergreifendes Vertrauensstellungskonto. Verwenden Sie Ihr globales Benutzerkonto oder lokales Benutzerkonto, um auf diesen Server zu zugreifen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NOLOGON_WORKSTATION_TRUST_ACCOUNT"></span><span id="error_nologon_workstation_trust_account"></span>**FEHLER \_ NOLOGON \_ WORKSTATION TRUST \_ \_ ACCOUNT**
+<span id="ERROR_NOLOGON_WORKSTATION_TRUST_ACCOUNT"></span><span id="error_nologon_workstation_trust_account"></span>**FEHLER: \_ NOLOGON \_ WORKSTATION TRUST \_ \_ ACCOUNT**
 </dt> <dd> <dl> <dt>
 
 1808 (0x710)
@@ -1393,12 +1393,12 @@ Das verwendete Konto ist ein Domänenübergreifendes Vertrauensstellungskonto. V
 
 
 
-Das verwendete Konto ist ein Computerkonto. Verwenden Sie Ihr globales Benutzerkonto oder ihr lokales Benutzerkonto, um auf diesen Server zuzugreifen.
+Das verwendete Konto ist ein Computerkonto. Verwenden Sie Ihr globales Benutzerkonto oder lokales Benutzerkonto, um auf diesen Server zu zugreifen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NOLOGON_SERVER_TRUST_ACCOUNT"></span><span id="error_nologon_server_trust_account"></span>**FEHLER \_ NOLOGON \_ SERVER TRUST \_ \_ ACCOUNT**
+<span id="ERROR_NOLOGON_SERVER_TRUST_ACCOUNT"></span><span id="error_nologon_server_trust_account"></span>**FEHLER: \_ SERVERVERTRAUENSKONTO \_ \_ "NOLOGON" \_**
 </dt> <dd> <dl> <dt>
 
 1809 (0x711)
@@ -1406,12 +1406,12 @@ Das verwendete Konto ist ein Computerkonto. Verwenden Sie Ihr globales Benutzerk
 
 
 
-Das verwendete Konto ist ein Serververtrauenskonto. Verwenden Sie Ihr globales Benutzerkonto oder ihr lokales Benutzerkonto, um auf diesen Server zuzugreifen.
+Das verwendete Konto ist ein Serververtrauensstellungskonto. Verwenden Sie Ihr globales Benutzerkonto oder lokales Benutzerkonto, um auf diesen Server zu zugreifen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_DOMAIN_TRUST_INCONSISTENT"></span><span id="error_domain_trust_inconsistent"></span>**\_ \_ FEHLERDOMÄNENVERTRAUEN \_ INKONSISTENT**
+<span id="ERROR_DOMAIN_TRUST_INCONSISTENT"></span><span id="error_domain_trust_inconsistent"></span>**FEHLER: \_ \_ DOMÄNENVERTRAUEN \_ INKONSISTENT**
 </dt> <dd> <dl> <dt>
 
 1810 (0x712)
@@ -1419,12 +1419,12 @@ Das verwendete Konto ist ein Serververtrauenskonto. Verwenden Sie Ihr globales B
 
 
 
-Der Name oder die Sicherheits-ID (SID) der angegebenen Domäne stimmt nicht mit den Vertrauensinformationen für diese Domäne überein.
+Der Name oder die Sicherheits-ID (SID) der angegebenen Domäne ist inkonsistent mit den Vertrauensinformationen für diese Domäne.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SERVER_HAS_OPEN_HANDLES"></span><span id="error_server_has_open_handles"></span>**FEHLERSERVER \_ \_ VERFÜGT ÜBER \_ \_ GEÖFFNETE HANDLES**
+<span id="ERROR_SERVER_HAS_OPEN_HANDLES"></span><span id="error_server_has_open_handles"></span>**FEHLERSERVER \_ \_ VERFÜGT ÜBER \_ GEÖFFNETE \_ HANDLES**
 </dt> <dd> <dl> <dt>
 
 1811 (0x713)
@@ -1437,7 +1437,7 @@ Der Server wird verwendet und kann nicht entladen werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_RESOURCE_DATA_NOT_FOUND"></span><span id="error_resource_data_not_found"></span>**FEHLER: \_ \_ RESSOURCENDATEN \_ NICHT \_ GEFUNDEN**
+<span id="ERROR_RESOURCE_DATA_NOT_FOUND"></span><span id="error_resource_data_not_found"></span>**\_FEHLER: \_ \_ RESSOURCENDATEN WURDEN NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 1812 (0x714)
@@ -1445,12 +1445,12 @@ Der Server wird verwendet und kann nicht entladen werden.
 
 
 
-Die angegebene Imagedatei enthielt keinen Ressourcenabschnitt.
+Die angegebene Imagedatei enthält keinen Ressourcenabschnitt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_RESOURCE_TYPE_NOT_FOUND"></span><span id="error_resource_type_not_found"></span>**FEHLER: \_ \_ RESSOURCENTYP \_ NICHT \_ GEFUNDEN**
+<span id="ERROR_RESOURCE_TYPE_NOT_FOUND"></span><span id="error_resource_type_not_found"></span>**\_FEHLER: \_ \_ RESSOURCENTYP NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 1813 (0x715)
@@ -1463,7 +1463,7 @@ Der angegebene Ressourcentyp wurde in der Imagedatei nicht gefunden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_RESOURCE_NAME_NOT_FOUND"></span><span id="error_resource_name_not_found"></span>**FEHLER: \_ \_ RESSOURCENNAME \_ NICHT \_ GEFUNDEN**
+<span id="ERROR_RESOURCE_NAME_NOT_FOUND"></span><span id="error_resource_name_not_found"></span>**\_FEHLER: \_ \_ RESSOURCENNAME NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 1814 (0x716)
@@ -1476,7 +1476,7 @@ Der angegebene Ressourcenname wurde in der Imagedatei nicht gefunden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_RESOURCE_LANG_NOT_FOUND"></span><span id="error_resource_lang_not_found"></span>**\_FEHLERRESSOURCE \_ LANG NICHT \_ \_ GEFUNDEN**
+<span id="ERROR_RESOURCE_LANG_NOT_FOUND"></span><span id="error_resource_lang_not_found"></span>**\_ \_ FEHLERRESSOURCE LANG NICHT \_ \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 1815 (0x717)
@@ -1484,7 +1484,7 @@ Der angegebene Ressourcenname wurde in der Imagedatei nicht gefunden.
 
 
 
-Die angegebene Ressourcensprach-ID wurde in der Imagedatei nicht gefunden.
+Die angegebene Ressourcensprachen-ID wurde in der Imagedatei nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
@@ -1502,7 +1502,7 @@ Das Kontingent reicht für die Verarbeitung dieses Befehls nicht aus.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_NO_INTERFACES"></span><span id="rpc_s_no_interfaces"></span>**RPC \_ S \_ KEINE \_ SCHNITTSTELLEN**
+<span id="RPC_S_NO_INTERFACES"></span><span id="rpc_s_no_interfaces"></span>**RPC \_ S \_ NO \_ INTERFACES**
 </dt> <dd> <dl> <dt>
 
 1817 (0x719)
@@ -1515,7 +1515,7 @@ Es wurden keine Schnittstellen registriert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_CALL_CANCELLED"></span><span id="rpc_s_call_cancelled"></span>**RPC \_ S \_ CALL \_ CANCELLED**
+<span id="RPC_S_CALL_CANCELLED"></span><span id="rpc_s_call_cancelled"></span>**\_ \_ RPC-S-AUFRUF \_ ABGEBROCHEN**
 </dt> <dd> <dl> <dt>
 
 1818 (0x71A)
@@ -1536,12 +1536,12 @@ Der Remoteprozeduraufruf wurde abgebrochen.
 
 
 
-Das Bindungshandle enthält nicht alle erforderlichen Informationen.
+Das Bindungshand handle enthält nicht alle erforderlichen Informationen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_COMM_FAILURE"></span><span id="rpc_s_comm_failure"></span>**RPC \_ \_ S-COMM-FEHLER \_**
+<span id="RPC_S_COMM_FAILURE"></span><span id="rpc_s_comm_failure"></span>**\_RPC-S \_ COMM-FEHLER \_**
 </dt> <dd> <dl> <dt>
 
 1820 (0x71C)
@@ -1554,7 +1554,7 @@ Während eines Remoteprozeduraufrufs ist ein Kommunikationsfehler aufgetreten.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_UNSUPPORTED_AUTHN_LEVEL"></span><span id="rpc_s_unsupported_authn_level"></span>**NICHT UNTERSTÜTZTE RPC \_ \_ \_ S-AUTHENTIFIZIERUNGSEBENE \_**
+<span id="RPC_S_UNSUPPORTED_AUTHN_LEVEL"></span><span id="rpc_s_unsupported_authn_level"></span>**NICHT \_ UNTERSTÜTZTE \_ \_ RPC-AUTHENTIFIZIERUNGSEBENE \_**
 </dt> <dd> <dl> <dt>
 
 1821 (0x71D)
@@ -1593,7 +1593,7 @@ Der angegebene Fehler ist kein gültiger Windows RPC-Fehlercode.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_UUID_LOCAL_ONLY"></span><span id="rpc_s_uuid_local_only"></span>**NUR RPC \_ S \_ UUID \_ LOCAL \_**
+<span id="RPC_S_UUID_LOCAL_ONLY"></span><span id="rpc_s_uuid_local_only"></span>**NUR RPC \_ S \_ UUID \_ \_ LOCAL**
 </dt> <dd> <dl> <dt>
 
 1824 (0x720)
@@ -1606,7 +1606,7 @@ Eine UUID, die nur auf diesem Computer gültig ist, wurde zugeordnet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_SEC_PKG_ERROR"></span><span id="rpc_s_sec_pkg_error"></span>**\_RPC S SEC \_ \_ \_ PKG-FEHLER**
+<span id="RPC_S_SEC_PKG_ERROR"></span><span id="rpc_s_sec_pkg_error"></span>**RPC \_ S \_ SEC \_ \_ PKG-FEHLER**
 </dt> <dd> <dl> <dt>
 
 1825 (0x721)
@@ -1619,7 +1619,7 @@ Ein sicherheitspaketspezifischer Fehler ist aufgetreten.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_NOT_CANCELLED"></span><span id="rpc_s_not_cancelled"></span>**RPC \_ S \_ NICHT \_ ABGEBROCHEN**
+<span id="RPC_S_NOT_CANCELLED"></span><span id="rpc_s_not_cancelled"></span>**RPC \_ S \_ NOT \_ CANCELLED**
 </dt> <dd> <dl> <dt>
 
 1826 (0x722)
@@ -1627,7 +1627,7 @@ Ein sicherheitspaketspezifischer Fehler ist aufgetreten.
 
 
 
-Der Thread wird nicht abgebrochen.
+Thread wird nicht abgebrochen.
 
 
 </dt> </dl> </dd> <dt>
@@ -1640,12 +1640,12 @@ Der Thread wird nicht abgebrochen.
 
 
 
-Ungültiger Vorgang für das Codierungs-/Decodierungshandle.
+Ungültiger Vorgang für das Codierungs-/Decodierungshand handle.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_X_WRONG_ES_VERSION"></span><span id="rpc_x_wrong_es_version"></span>**RPC \_ X \_ FALSCHE \_ \_ ES-VERSION**
+<span id="RPC_X_WRONG_ES_VERSION"></span><span id="rpc_x_wrong_es_version"></span>**RPC \_ X \_ WRONG \_ ES \_ VERSION**
 </dt> <dd> <dl> <dt>
 
 1828 (0x724)
@@ -1653,12 +1653,12 @@ Ungültiger Vorgang für das Codierungs-/Decodierungshandle.
 
 
 
-Inkompatible Version des Serialisierungspakets.
+Inkompatible Version des serialisierenden Pakets.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_X_WRONG_STUB_VERSION"></span><span id="rpc_x_wrong_stub_version"></span>**\_RPC X FALSCHE \_ \_ \_ STUBVERSION**
+<span id="RPC_X_WRONG_STUB_VERSION"></span><span id="rpc_x_wrong_stub_version"></span>**RPC X WRONG STUB VERSION (RPC \_ X \_ FALSCHE \_ \_ STUBVERSION)**
 </dt> <dd> <dl> <dt>
 
 1829 (0x725)
@@ -1671,7 +1671,7 @@ Inkompatible Version des RPC-Stubs.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_X_INVALID_PIPE_OBJECT"></span><span id="rpc_x_invalid_pipe_object"></span>**RPC \_ X \_ UNGÜLTIGES \_ \_ PIPEOBJEKT**
+<span id="RPC_X_INVALID_PIPE_OBJECT"></span><span id="rpc_x_invalid_pipe_object"></span>**RPC \_ X \_ INVALID \_ PIPE \_ OBJECT**
 </dt> <dd> <dl> <dt>
 
 1830 (0x726)
@@ -1684,7 +1684,7 @@ Das RPC-Pipeobjekt ist ungültig oder beschädigt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_X_WRONG_PIPE_ORDER"></span><span id="rpc_x_wrong_pipe_order"></span>**RPC \_ X \_ FALSCHE \_ \_ PIPEREIHENFOLGE**
+<span id="RPC_X_WRONG_PIPE_ORDER"></span><span id="rpc_x_wrong_pipe_order"></span>**RPC \_ \_ X: FALSCHE \_ \_ PIPE-REIHENFOLGE**
 </dt> <dd> <dl> <dt>
 
 1831 (0x727)
@@ -1692,7 +1692,7 @@ Das RPC-Pipeobjekt ist ungültig oder beschädigt.
 
 
 
-Ein ungültiger Vorgang wurde für ein RPC-Pipeobjekt versucht.
+Für ein RPC-Pipeobjekt wurde ein ungültiger Vorgang versucht.
 
 
 </dt> </dl> </dd> <dt>
@@ -1710,7 +1710,7 @@ Nicht unterstützte RPC-Pipeversion.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_COOKIE_AUTH_FAILED"></span><span id="rpc_s_cookie_auth_failed"></span>**FEHLER BEI \_ RPC-S-COOKIEAUTHENTIFIZIERUNG \_ \_ \_**
+<span id="RPC_S_COOKIE_AUTH_FAILED"></span><span id="rpc_s_cookie_auth_failed"></span>**FEHLER BEI RPC \_ \_ S-COOKIE-AUTHENTIFIZIERUNG \_ \_**
 </dt> <dd> <dl> <dt>
 
 1833 (0x729)
@@ -1718,12 +1718,12 @@ Nicht unterstützte RPC-Pipeversion.
 
 
 
-Der HTTP-Proxyserver hat die Verbindung abgelehnt, weil die Cookieauthentifizierung fehlgeschlagen ist.
+Der HTTP-Proxyserver hat die Verbindung abgelehnt, weil bei der Cookieauthentifizierung ein Fehler aufgetreten ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_GROUP_MEMBER_NOT_FOUND"></span><span id="rpc_s_group_member_not_found"></span>**\_ \_ RPC-S-GRUPPENMITGLIED \_ NICHT \_ \_ GEFUNDEN**
+<span id="RPC_S_GROUP_MEMBER_NOT_FOUND"></span><span id="rpc_s_group_member_not_found"></span>**RPC \_ \_ S-GRUPPENMITGLIED \_ \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 1898 (0x76A)
@@ -1749,7 +1749,7 @@ Der Endpunktzuordnungs-Datenbankeintrag konnte nicht erstellt werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_INVALID_OBJECT"></span><span id="rpc_s_invalid_object"></span>**RPC \_ S \_ INVALID \_ OBJECT**
+<span id="RPC_S_INVALID_OBJECT"></span><span id="rpc_s_invalid_object"></span>**RPC \_ S \_ UNGÜLTIGES \_ OBJEKT**
 </dt> <dd> <dl> <dt>
 
 1900 (0x76C)
@@ -1757,7 +1757,7 @@ Der Endpunktzuordnungs-Datenbankeintrag konnte nicht erstellt werden.
 
 
 
-Der UUID (Universal Unique Identifier) des Objekts ist die NULL-UUID.
+Die Objekt-UUID (Universal Unique Identifier) ist die Null-UUID.
 
 
 </dt> </dl> </dd> <dt>
@@ -1775,7 +1775,7 @@ Die angegebene Zeit ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_FORM_NAME"></span><span id="error_invalid_form_name"></span>**FEHLER: \_ \_ UNGÜLTIGER \_ FORMULARNAME**
+<span id="ERROR_INVALID_FORM_NAME"></span><span id="error_invalid_form_name"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ FORMULARNAME**
 </dt> <dd> <dl> <dt>
 
 1902 (0x76E)
@@ -1788,7 +1788,7 @@ Der angegebene Formularname ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_FORM_SIZE"></span><span id="error_invalid_form_size"></span>**FEHLER \_ \_ UNGÜLTIGE \_ FORMULARGRÖßE**
+<span id="ERROR_INVALID_FORM_SIZE"></span><span id="error_invalid_form_size"></span>**FEHLER: \_ \_ UNGÜLTIGE \_ FORMULARGRÖßE**
 </dt> <dd> <dl> <dt>
 
 1903 (0x76F)
@@ -1801,7 +1801,7 @@ Die angegebene Formulargröße ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_ALREADY_WAITING"></span><span id="error_already_waiting"></span>**FEHLER, \_ DER BEREITS \_ WARTET**
+<span id="ERROR_ALREADY_WAITING"></span><span id="error_already_waiting"></span>**FEHLER \_ BEREITS \_ WARTE**
 </dt> <dd> <dl> <dt>
 
 1904 (0x770)
@@ -1809,12 +1809,12 @@ Die angegebene Formulargröße ist ungültig.
 
 
 
-Auf den angegebenen Druckerhandpunkt wird bereits gewartet.
+Auf das angegebene Druckerhandle wird bereits gewartet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRINTER_DELETED"></span><span id="error_printer_deleted"></span>**\_ \_ FEHLERDRUCKER GELÖSCHT**
+<span id="ERROR_PRINTER_DELETED"></span><span id="error_printer_deleted"></span>**\_FEHLERDRUCKER \_ GELÖSCHT**
 </dt> <dd> <dl> <dt>
 
 1905 (0x771)
@@ -1827,7 +1827,7 @@ Der angegebene Drucker wurde gelöscht.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_PRINTER_STATE"></span><span id="error_invalid_printer_state"></span>**FEHLER: \_ \_ UNGÜLTIGER \_ DRUCKERSTATUS**
+<span id="ERROR_INVALID_PRINTER_STATE"></span><span id="error_invalid_printer_state"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ DRUCKERSTATUS**
 </dt> <dd> <dl> <dt>
 
 1906 (0x772)
@@ -1840,7 +1840,7 @@ Der Zustand des Druckers ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PASSWORD_MUST_CHANGE"></span><span id="error_password_must_change"></span>**FEHLER: \_ \_ KENNWORT MUSS GEÄNDERT \_ WERDEN**
+<span id="ERROR_PASSWORD_MUST_CHANGE"></span><span id="error_password_must_change"></span>**\_ \_ FEHLERKENNWORT MUSS \_ GEÄNDERT WERDEN**
 </dt> <dd> <dl> <dt>
 
 1907 (0x773)
@@ -1853,7 +1853,7 @@ Das Kennwort des Benutzers muss vor der Anmeldung geändert werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_DOMAIN_CONTROLLER_NOT_FOUND"></span><span id="error_domain_controller_not_found"></span>**FEHLER: \_ \_ DOMÄNENCONTROLLER \_ WURDE NICHT \_ GEFUNDEN**
+<span id="ERROR_DOMAIN_CONTROLLER_NOT_FOUND"></span><span id="error_domain_controller_not_found"></span>**FEHLER \_ \_ DOMÄNENCONTROLLER \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 1908 (0x774)
@@ -1861,12 +1861,12 @@ Das Kennwort des Benutzers muss vor der Anmeldung geändert werden.
 
 
 
-Der Domänencontroller für diese Domäne wurde nicht finden.
+Der Domänencontroller für diese Domäne wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_ACCOUNT_LOCKED_OUT"></span><span id="error_account_locked_out"></span>**\_FEHLERKONTO \_ \_ GESPERRT**
+<span id="ERROR_ACCOUNT_LOCKED_OUT"></span><span id="error_account_locked_out"></span>**FEHLERKONTO \_ \_ GESPERRT \_**
 </dt> <dd> <dl> <dt>
 
 1909 (0x775)
@@ -1879,7 +1879,7 @@ Das Konto, auf das verwiesen wird, ist derzeit gesperrt und möglicherweise nich
 
 </dt> </dl> </dd> <dt>
 
-<span id="OR_INVALID_OXID"></span><span id="or_invalid_oxid"></span>**ODER \_ \_ UNGÜLTIGE ANTIE**
+<span id="OR_INVALID_OXID"></span><span id="or_invalid_oxid"></span>**ODER \_ UNGÜLTIGE \_ DOMINANZ**
 </dt> <dd> <dl> <dt>
 
 1910 (0x776)
@@ -1905,7 +1905,7 @@ Das angegebene Objekt wurde nicht gefunden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="OR_INVALID_SET"></span><span id="or_invalid_set"></span>**ODER \_ INVALID \_ SET**
+<span id="OR_INVALID_SET"></span><span id="or_invalid_set"></span>**ODER \_ UNGÜLTIGER \_ SATZ**
 </dt> <dd> <dl> <dt>
 
 1912 (0x778)
@@ -1913,7 +1913,7 @@ Das angegebene Objekt wurde nicht gefunden.
 
 
 
-Der angegebene Objektrelösersatz wurde nicht gefunden.
+Der angegebene Objekt resolver-Satz wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
@@ -1926,12 +1926,12 @@ Der angegebene Objektrelösersatz wurde nicht gefunden.
 
 
 
-Einige Daten müssen noch im Anforderungspuffer gesendet werden.
+Einige Daten müssen weiterhin im Anforderungspuffer gesendet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_INVALID_ASYNC_HANDLE"></span><span id="rpc_s_invalid_async_handle"></span>**RPC \_ S \_ INVALID \_ ASYNC \_ HANDLE**
+<span id="RPC_S_INVALID_ASYNC_HANDLE"></span><span id="rpc_s_invalid_async_handle"></span>**RPC \_ S \_ UNGÜLTIGES \_ ASYNCHRONES \_ HANDLE**
 </dt> <dd> <dl> <dt>
 
 1914 (0x77A)
@@ -1939,12 +1939,12 @@ Einige Daten müssen noch im Anforderungspuffer gesendet werden.
 
 
 
-Ungültiges asynchrones Remoteprozeduraufrufhand handle.
+Ungültiges Aufrufhandle für asynchrone Remoteprozedur.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_INVALID_ASYNC_CALL"></span><span id="rpc_s_invalid_async_call"></span>**RPC \_ S \_ INVALID \_ ASYNC \_ CALL**
+<span id="RPC_S_INVALID_ASYNC_CALL"></span><span id="rpc_s_invalid_async_call"></span>**RPC \_ S \_ UNGÜLTIGER \_ ASYNCHRONER \_ AUFRUF**
 </dt> <dd> <dl> <dt>
 
 1915 (0x77B)
@@ -1952,7 +1952,7 @@ Ungültiges asynchrones Remoteprozeduraufrufhand handle.
 
 
 
-Ungültiges asynchrones RPC-Aufrufhand handle für diesen Vorgang.
+Ungültiges asynchrones RPC-Aufrufhandle für diesen Vorgang.
 
 
 </dt> </dl> </dd> <dt>
@@ -1970,7 +1970,7 @@ Das RPC-Pipeobjekt wurde bereits geschlossen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_X_PIPE_DISCIPLINE_ERROR"></span><span id="rpc_x_pipe_discipline_error"></span>**RPC X PIPE DISCIPLINE ERROR (RPC \_ X \_ \_ PIPE-DISZIPLINFEHLER) \_**
+<span id="RPC_X_PIPE_DISCIPLINE_ERROR"></span><span id="rpc_x_pipe_discipline_error"></span>**RPC \_ X \_ PIPE \_ DISCIPLINE \_ ERROR**
 </dt> <dd> <dl> <dt>
 
 1917 (0x77D)
@@ -1991,12 +1991,12 @@ Der RPC-Aufruf wurde abgeschlossen, bevor alle Pipes verarbeitet wurden.
 
 
 
-Von der RPC-Pipe sind keine Daten mehr verfügbar.
+Über die RPC-Pipe sind keine weiteren Daten verfügbar.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_SITENAME"></span><span id="error_no_sitename"></span>**FEHLER \_ NO \_ SITENAME**
+<span id="ERROR_NO_SITENAME"></span><span id="error_no_sitename"></span>**FEHLER: \_ KEIN \_ STANDORTNAME**
 </dt> <dd> <dl> <dt>
 
 1919 (0x77F)
@@ -2022,7 +2022,7 @@ Das System kann nicht auf die Datei zugreifen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CANT_RESOLVE_FILENAME"></span><span id="error_cant_resolve_filename"></span>**FEHLER: \_ CANT \_ RESOLVE \_ FILENAME**
+<span id="ERROR_CANT_RESOLVE_FILENAME"></span><span id="error_cant_resolve_filename"></span>**FEHLER \_ KANN \_ DATEINAME NICHT AUFLÖSEN \_**
 </dt> <dd> <dl> <dt>
 
 1921 (0x781)
@@ -2035,7 +2035,7 @@ Der Name der Datei kann vom System nicht aufgelöst werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_ENTRY_TYPE_MISMATCH"></span><span id="rpc_s_entry_type_mismatch"></span>**KONFLIKT ZWISCHEN \_ RPC-S-EINTRAGSTYP \_ \_ \_**
+<span id="RPC_S_ENTRY_TYPE_MISMATCH"></span><span id="rpc_s_entry_type_mismatch"></span>**RPC \_ S ENTRY TYPE MISMATCH \_ (RPC S-EINTRAGSTYPKONFLIKT) \_ \_**
 </dt> <dd> <dl> <dt>
 
 1922 (0x782)
@@ -2043,12 +2043,12 @@ Der Name der Datei kann vom System nicht aufgelöst werden.
 
 
 
-Der Eintrag ist nicht vom erwarteten Typ.
+Der Eintrag hat nicht den erwarteten Typ.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="RPC_S_NOT_ALL_OBJS_EXPORTED"></span><span id="rpc_s_not_all_objs_exported"></span>**RPC \_ S \_ NOT \_ ALL \_ OBJS \_ EXPORTED**
+<span id="RPC_S_NOT_ALL_OBJS_EXPORTED"></span><span id="rpc_s_not_all_objs_exported"></span>**RPC \_ S NICHT ALLE \_ \_ \_ OBJS \_ EXPORTIERT**
 </dt> <dd> <dl> <dt>
 
 1923 (0x783)
@@ -2139,7 +2139,7 @@ Das Group-Element konnte nicht entfernt werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_KM_DRIVER_BLOCKED"></span><span id="error_km_driver_blocked"></span>**FEHLER: \_ \_ KM-TREIBER \_ BLOCKIERT**
+<span id="ERROR_KM_DRIVER_BLOCKED"></span><span id="error_km_driver_blocked"></span>**FEHLER \_ \_ KM-TREIBER \_ BLOCKIERT**
 </dt> <dd> <dl> <dt>
 
 1930 (0x78A)
@@ -2147,7 +2147,7 @@ Das Group-Element konnte nicht entfernt werden.
 
 
 
-Der Druckertreiber ist nicht mit einer Richtlinie kompatibel, die auf Ihrem Computer aktiviert ist, die NT 4.0-Treiber blockiert.
+Der Druckertreiber ist nicht kompatibel mit einer auf Ihrem Computer aktivierten Richtlinie, die NT 4.0-Treiber blockiert.
 
 
 </dt> </dl> </dd> <dt>
@@ -2165,7 +2165,7 @@ Der Kontext ist abgelaufen und kann nicht mehr verwendet werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PER_USER_TRUST_QUOTA_EXCEEDED"></span><span id="error_per_user_trust_quota_exceeded"></span>**FEHLER \_ PRO \_ KONTINGENT FÜR \_ BENUTZERVERTRAUEN \_ \_ ÜBERSCHRITTEN**
+<span id="ERROR_PER_USER_TRUST_QUOTA_EXCEEDED"></span><span id="error_per_user_trust_quota_exceeded"></span>**KONTINGENT \_ FÜR FEHLER PRO \_ \_ BENUTZERVERTRAUEN \_ \_ ÜBERSCHRITTEN**
 </dt> <dd> <dl> <dt>
 
 1932 (0x78C)
@@ -2178,7 +2178,7 @@ Das Kontingent für die Erstellung delegierter Vertrauensstellungen des aktuelle
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_ALL_USER_TRUST_QUOTA_EXCEEDED"></span><span id="error_all_user_trust_quota_exceeded"></span>**FEHLER: \_ ALLE \_ KONTINGENTE \_ FÜR DIE \_ BENUTZERVERTRAUENSSTELLUNG \_ ÜBERSCHRITTEN**
+<span id="ERROR_ALL_USER_TRUST_QUOTA_EXCEEDED"></span><span id="error_all_user_trust_quota_exceeded"></span>**FEHLER: \_ KONTINGENT FÜR ALLE \_ \_ BENUTZERVERTRAUENSSTELLUNGEN \_ \_ ÜBERSCHRITTEN**
 </dt> <dd> <dl> <dt>
 
 1933 (0x78D)
@@ -2186,12 +2186,12 @@ Das Kontingent für die Erstellung delegierter Vertrauensstellungen des aktuelle
 
 
 
-Das gesamt Kontingent für die Erstellung delegierter Vertrauensstellungen wurde überschritten.
+Das gesamte Kontingent für die Erstellung delegierter Vertrauensstellungen wurde überschritten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_USER_DELETE_TRUST_QUOTA_EXCEEDED"></span><span id="error_user_delete_trust_quota_exceeded"></span>**FEHLER: \_ \_ KONTINGENT FÜR \_ VERTRAUENSSTELLUNG \_ DURCH \_ BENUTZERLÖSCHUNG ÜBERSCHRITTEN**
+<span id="ERROR_USER_DELETE_TRUST_QUOTA_EXCEEDED"></span><span id="error_user_delete_trust_quota_exceeded"></span>**FEHLER: KONTINGENT FÜR \_ \_ \_ VERTRAUENSWÜRDIGKEIT BEIM LÖSCHEN DES BENUTZERS \_ \_ ÜBERSCHRITTEN**
 </dt> <dd> <dl> <dt>
 
 1934 (0x78E)
@@ -2204,7 +2204,7 @@ Das Kontingent für das Löschen delegierter Vertrauensstellungen des aktuellen 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_AUTHENTICATION_FIREWALL_FAILED"></span><span id="error_authentication_firewall_failed"></span>**FEHLER: \_ FEHLER BEI DER FIREWALL FÜR DIE \_ \_ AUTHENTIFIZIERUNG**
+<span id="ERROR_AUTHENTICATION_FIREWALL_FAILED"></span><span id="error_authentication_firewall_failed"></span>**FEHLER: \_ \_ FEHLER BEI AUTHENTIFIZIERUNGSFIREWALL \_**
 </dt> <dd> <dl> <dt>
 
 1935 (0x78F)
@@ -2217,7 +2217,7 @@ Der Computer, bei dem Sie sich anmelden, wird durch eine Authentifizierungsfirew
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_REMOTE_PRINT_CONNECTIONS_BLOCKED"></span><span id="error_remote_print_connections_blocked"></span>**FEHLER: \_ \_ \_ REMOTEDRUCKVERBINDUNGEN \_ BLOCKIERT**
+<span id="ERROR_REMOTE_PRINT_CONNECTIONS_BLOCKED"></span><span id="error_remote_print_connections_blocked"></span>**\_FEHLER: \_ \_ REMOTEDRUCKVERBINDUNGEN \_ BLOCKIERT**
 </dt> <dd> <dl> <dt>
 
 1936 (0x790)
@@ -2225,7 +2225,7 @@ Der Computer, bei dem Sie sich anmelden, wird durch eine Authentifizierungsfirew
 
 
 
-Remoteverbindungen mit dem Druckspooler werden durch eine Richtlinie blockiert, die auf Ihrem Computer festgelegt ist.
+Remoteverbindungen mit dem Druckspooler werden durch eine auf Ihrem Computer festgelegte Richtlinie blockiert.
 
 
 </dt> </dl> </dd> <dt>
@@ -2256,7 +2256,7 @@ Anmeldefehler: Die EAS-Richtlinie erfordert, dass der Benutzer sein Kennwort än
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_PIXEL_FORMAT"></span><span id="error_invalid_pixel_format"></span>**FEHLER: \_ \_ UNGÜLTIGES \_ PIXELFORMAT**
+<span id="ERROR_INVALID_PIXEL_FORMAT"></span><span id="error_invalid_pixel_format"></span>**FEHLER: \_ UNGÜLTIGES \_ \_ PIXELFORMAT**
 </dt> <dd> <dl> <dt>
 
 2000 (0x7D0)
@@ -2269,7 +2269,7 @@ Das Pixelformat ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_BAD_DRIVER"></span><span id="error_bad_driver"></span>**FEHLER: \_ \_ FEHLERHAFTER TREIBER**
+<span id="ERROR_BAD_DRIVER"></span><span id="error_bad_driver"></span>**FEHLER \_ \_ UNGÜLTIGER TREIBER**
 </dt> <dd> <dl> <dt>
 
 2001 (0x7D1)
@@ -2282,7 +2282,7 @@ Der angegebene Treiber ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_WINDOW_STYLE"></span><span id="error_invalid_window_style"></span>**FEHLER: \_ \_ UNGÜLTIGER \_ FENSTERSTIL**
+<span id="ERROR_INVALID_WINDOW_STYLE"></span><span id="error_invalid_window_style"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ FENSTERSTIL**
 </dt> <dd> <dl> <dt>
 
 2002 (0x7D2)
@@ -2290,12 +2290,12 @@ Der angegebene Treiber ist ungültig.
 
 
 
-Der Fensterstil oder das Klassenattribut ist für diesen Vorgang ungültig.
+Das Fensterstil- oder Klassenattribut ist für diesen Vorgang ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_METAFILE_NOT_SUPPORTED"></span><span id="error_metafile_not_supported"></span>**\_FEHLERMETADATEI \_ WIRD NICHT \_ UNTERSTÜTZT**
+<span id="ERROR_METAFILE_NOT_SUPPORTED"></span><span id="error_metafile_not_supported"></span>**\_FEHLERMETADATEI \_ NICHT \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
 2003 (0x7D3)
@@ -2321,7 +2321,7 @@ Der angeforderte Transformationsvorgang wird nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CLIPPING_NOT_SUPPORTED"></span><span id="error_clipping_not_supported"></span>**\_FEHLERBESCHNEIDUNG \_ WIRD NICHT \_ UNTERSTÜTZT**
+<span id="ERROR_CLIPPING_NOT_SUPPORTED"></span><span id="error_clipping_not_supported"></span>**FEHLER \_ CLIPPING \_ WIRD NICHT \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
 2005 (0x7D5)
@@ -2334,7 +2334,7 @@ Der angeforderte Clippingvorgang wird nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_CMM"></span><span id="error_invalid_cmm"></span>**FEHLER \_ \_ UNGÜLTIGER CMM**
+<span id="ERROR_INVALID_CMM"></span><span id="error_invalid_cmm"></span>**FEHLER: \_ UNGÜLTIGER \_ CMM**
 </dt> <dd> <dl> <dt>
 
 2010 (0x7DA)
@@ -2386,7 +2386,7 @@ Ein erforderliches Tag ist nicht vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_DUPLICATE_TAG"></span><span id="error_duplicate_tag"></span>**\_FEHLERDUPLIZIERTES \_ TAG**
+<span id="ERROR_DUPLICATE_TAG"></span><span id="error_duplicate_tag"></span>**ERROR \_ DUPLICATE \_ TAG**
 </dt> <dd> <dl> <dt>
 
 2014 (0x7DE)
@@ -2399,7 +2399,7 @@ Das angegebene Tag ist bereits vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PROFILE_NOT_ASSOCIATED_WITH_DEVICE"></span><span id="error_profile_not_associated_with_device"></span>**\_FEHLERPROFIL, DAS DEM GERÄT NICHT ZUGEORDNET \_ \_ \_ \_ IST**
+<span id="ERROR_PROFILE_NOT_ASSOCIATED_WITH_DEVICE"></span><span id="error_profile_not_associated_with_device"></span>**FEHLERPROFIL \_ \_ NICHT DEM \_ \_ GERÄT ZUGEORDNET \_**
 </dt> <dd> <dl> <dt>
 
 2015 (0x7DF)
@@ -2425,7 +2425,7 @@ Das angegebene Farbprofil wurde nicht gefunden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_COLORSPACE"></span><span id="error_invalid_colorspace"></span>**FEHLER: \_ \_ UNGÜLTIGER COLORSPACE**
+<span id="ERROR_INVALID_COLORSPACE"></span><span id="error_invalid_colorspace"></span>**FEHLER: \_ UNGÜLTIGER \_ COLORSPACE**
 </dt> <dd> <dl> <dt>
 
 2017 (0x7E1)
@@ -2485,12 +2485,12 @@ Die angegebene Farbtransformation ist ungültig.
 
 
 
-Die angegebene Transformation passt nicht zum Farbraum der Bitmap.
+Die angegebene Transformation stimmt nicht mit dem Farbraum der Bitmap überein.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_COLORINDEX"></span><span id="error_invalid_colorindex"></span>**FEHLER \_ \_ UNGÜLTIGER COLORINDEX**
+<span id="ERROR_INVALID_COLORINDEX"></span><span id="error_invalid_colorindex"></span>**ERROR \_ INVALID \_ COLORINDEX**
 </dt> <dd> <dl> <dt>
 
 2022 (0x7E6)
@@ -2503,7 +2503,7 @@ Der angegebene benannte Farbindex ist im Profil nicht vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PROFILE_DOES_NOT_MATCH_DEVICE"></span><span id="error_profile_does_not_match_device"></span>**FEHLERPROFIL \_ \_ NICHT MIT GERÄT \_ \_ \_ ÜBEREINSTIMMEN**
+<span id="ERROR_PROFILE_DOES_NOT_MATCH_DEVICE"></span><span id="error_profile_does_not_match_device"></span>**FEHLERPROFIL \_ \_ STIMMT NICHT MIT \_ \_ GERÄT ÜBEREIN \_**
 </dt> <dd> <dl> <dt>
 
 2023 (0x7E7)
@@ -2511,12 +2511,12 @@ Der angegebene benannte Farbindex ist im Profil nicht vorhanden.
 
 
 
-Das angegebene Profil ist für ein Gerät vorgesehen, das einen anderen Typ als das angegebene Gerät hat.
+Das angegebene Profil ist für ein Gerät eines anderen Typs als das angegebene Gerät vorgesehen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CONNECTED_OTHER_PASSWORD"></span><span id="error_connected_other_password"></span>**FEHLER \_ : ANDERES KENNWORT \_ \_ VERBUNDEN**
+<span id="ERROR_CONNECTED_OTHER_PASSWORD"></span><span id="error_connected_other_password"></span>**FEHLER \_ BEI VERBINDUNG MIT ANDEREM \_ \_ KENNWORT**
 </dt> <dd> <dl> <dt>
 
 2108 (0x83C)
@@ -2524,12 +2524,12 @@ Das angegebene Profil ist für ein Gerät vorgesehen, das einen anderen Typ als 
 
 
 
-Die Netzwerkverbindung wurde erfolgreich hergestellt, aber der Benutzer musste zur Eingabe eines anderen Kennworts aufgefordert werden als das ursprünglich angegebene.
+Die Netzwerkverbindung wurde erfolgreich hergestellt, aber der Benutzer musste zur Eingabe eines anderen Kennworts als dem ursprünglich angegebenen aufgefordert werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CONNECTED_OTHER_PASSWORD_DEFAULT"></span><span id="error_connected_other_password_default"></span>**FEHLER \_ CONNECTED OTHER PASSWORD \_ \_ \_ DEFAULT**
+<span id="ERROR_CONNECTED_OTHER_PASSWORD_DEFAULT"></span><span id="error_connected_other_password_default"></span>**FEHLER \_ BEI VERBINDUNG MIT ANDEREN \_ \_ \_ KENNWÖRTERN (STANDARDEINSTELLUNG)**
 </dt> <dd> <dl> <dt>
 
 2109 (0x83D)
@@ -2537,12 +2537,12 @@ Die Netzwerkverbindung wurde erfolgreich hergestellt, aber der Benutzer musste z
 
 
 
-Die Netzwerkverbindung wurde erfolgreich mithilfe der Standardanmeldeinformationen hergestellt.
+Die Netzwerkverbindung wurde erfolgreich mit standardanmeldeinformationen hergestellt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_BAD_USERNAME"></span><span id="error_bad_username"></span>**FEHLER: \_ \_ FEHLERHAFTER BENUTZERNAME**
+<span id="ERROR_BAD_USERNAME"></span><span id="error_bad_username"></span>**FEHLER: \_ \_ UNGÜLTIGER BENUTZERNAME**
 </dt> <dd> <dl> <dt>
 
 2202 (0x89A)
@@ -2576,12 +2576,12 @@ Diese Netzwerkverbindung ist nicht vorhanden.
 
 
 
-Diese Netzwerkverbindung verfügt über geöffnete Dateien oder ausstehende Anforderungen.
+Bei dieser Netzwerkverbindung sind Dateien geöffnet, oder Anforderungen stehen aus.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_ACTIVE_CONNECTIONS"></span><span id="error_active_connections"></span>**FEHLER \_ AKTIVE \_ VERBINDUNGEN**
+<span id="ERROR_ACTIVE_CONNECTIONS"></span><span id="error_active_connections"></span>**FEHLER \_ BEI AKTIVEN \_ VERBINDUNGEN**
 </dt> <dd> <dl> <dt>
 
 2402 (0x962)
@@ -2594,7 +2594,7 @@ Aktive Verbindungen sind weiterhin vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_DEVICE_IN_USE"></span><span id="error_device_in_use"></span>**FEHLER \_ \_ BEIM VERWENDEN DES \_ GERÄTS**
+<span id="ERROR_DEVICE_IN_USE"></span><span id="error_device_in_use"></span>**\_VERWENDETES \_ \_ FEHLERGERÄT**
 </dt> <dd> <dl> <dt>
 
 2404 (0x964)
@@ -2620,7 +2620,7 @@ Der angegebene Druckmonitor ist unbekannt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRINTER_DRIVER_IN_USE"></span><span id="error_printer_driver_in_use"></span>**VERWENDETER \_ \_ FEHLERDRUCKERTREIBER \_ \_**
+<span id="ERROR_PRINTER_DRIVER_IN_USE"></span><span id="error_printer_driver_in_use"></span>**\_VERWENDETER \_ \_ FEHLERDRUCKERTREIBER \_**
 </dt> <dd> <dl> <dt>
 
 3001 (0xBB9)
@@ -2654,7 +2654,7 @@ Die Spooldatei wurde nicht gefunden.
 
 
 
-Es wurde kein StartDocPrinter-Aufruf ausgegeben.
+Ein StartDocPrinter-Aufruf wurde nicht ausgegeben.
 
 
 </dt> </dl> </dd> <dt>
@@ -2667,12 +2667,12 @@ Es wurde kein StartDocPrinter-Aufruf ausgegeben.
 
 
 
-Ein AddJob-Aufruf wurde nicht ausgegeben.
+Es wurde kein AddJob-Aufruf ausgegeben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRINT_PROCESSOR_ALREADY_INSTALLED"></span><span id="error_print_processor_already_installed"></span>**\_ \_ FEHLERDRUCKPROZESSOR BEREITS \_ \_ INSTALLIERT**
+<span id="ERROR_PRINT_PROCESSOR_ALREADY_INSTALLED"></span><span id="error_print_processor_already_installed"></span>**FEHLER \_ BEIM \_ \_ DRUCKPROZESSOR, DER BEREITS INSTALLIERT \_ IST**
 </dt> <dd> <dl> <dt>
 
 3005 (0xBBD)
@@ -2685,7 +2685,7 @@ Der angegebene Druckprozessor wurde bereits installiert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRINT_MONITOR_ALREADY_INSTALLED"></span><span id="error_print_monitor_already_installed"></span>**\_ \_ FEHLERDRUCKMONITOR BEREITS \_ \_ INSTALLIERT**
+<span id="ERROR_PRINT_MONITOR_ALREADY_INSTALLED"></span><span id="error_print_monitor_already_installed"></span>**\_ \_ FEHLERAUSGABEMONITOR BEREITS \_ \_ INSTALLIERT**
 </dt> <dd> <dl> <dt>
 
 3006 (0xBBE)
@@ -2698,7 +2698,7 @@ Der angegebene Druckmonitor wurde bereits installiert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_PRINT_MONITOR"></span><span id="error_invalid_print_monitor"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ DRUCKMONITOR**
+<span id="ERROR_INVALID_PRINT_MONITOR"></span><span id="error_invalid_print_monitor"></span>**FEHLER: \_ \_ UNGÜLTIGER \_ DRUCKMONITOR**
 </dt> <dd> <dl> <dt>
 
 3007 (0xBBF)
@@ -2711,7 +2711,7 @@ Der angegebene Druckmonitor verfügt nicht über die erforderlichen Funktionen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRINT_MONITOR_IN_USE"></span><span id="error_print_monitor_in_use"></span>**VERWENDETER \_ \_ FEHLERDRUCKMONITOR \_ \_**
+<span id="ERROR_PRINT_MONITOR_IN_USE"></span><span id="error_print_monitor_in_use"></span>**\_VERWENDETER \_ \_ FEHLERDRUCKMONITOR \_**
 </dt> <dd> <dl> <dt>
 
 3008 (0xBC0)
@@ -2724,7 +2724,7 @@ Der angegebene Druckmonitor wird derzeit verwendet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRINTER_HAS_JOBS_QUEUED"></span><span id="error_printer_has_jobs_queued"></span>**\_FEHLERDRUCKER HAT AUFTRÄGE IN DIE \_ \_ \_ WARTESCHLANGE EINGEREIHT**
+<span id="ERROR_PRINTER_HAS_JOBS_QUEUED"></span><span id="error_printer_has_jobs_queued"></span>**FEHLER \_ BEIM DRUCKER MIT \_ \_ \_ AUFTRÄGEN IN DER WARTESCHLANGE**
 </dt> <dd> <dl> <dt>
 
 3009 (0xBC1)
@@ -2732,12 +2732,12 @@ Der angegebene Druckmonitor wird derzeit verwendet.
 
 
 
-Der angeforderte Vorgang ist nicht zulässig, wenn Aufträge in der Warteschlange des Druckers stehen.
+Der angeforderte Vorgang ist nicht zulässig, wenn Aufträge in die Warteschlange des Druckers gestellt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SUCCESS_REBOOT_REQUIRED"></span><span id="error_success_reboot_required"></span>**FEHLER \_ BEI \_ ERFOLGREICHEM NEUSTART \_ ERFORDERLICH**
+<span id="ERROR_SUCCESS_REBOOT_REQUIRED"></span><span id="error_success_reboot_required"></span>**FEHLER: \_ \_ NEUSTART ERFOLGREICH \_ ERFORDERLICH**
 </dt> <dd> <dl> <dt>
 
 3010 (0xBC2)
@@ -2745,12 +2745,12 @@ Der angeforderte Vorgang ist nicht zulässig, wenn Aufträge in der Warteschlang
 
 
 
-Der angeforderte Vorgang ist erfolgreich. Änderungen sind erst wirksam, wenn das System neu gestartet wurde.
+Der angeforderte Vorgang ist erfolgreich. Änderungen werden erst wirksam, wenn das System neu gestartet wird.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SUCCESS_RESTART_REQUIRED"></span><span id="error_success_restart_required"></span>**FEHLER \_ BEI \_ ERFOLGREICHEM NEUSTART \_ ERFORDERLICH**
+<span id="ERROR_SUCCESS_RESTART_REQUIRED"></span><span id="error_success_restart_required"></span>**FEHLER: \_ NEUSTART \_ ERFOLGREICH \_ ERFORDERLICH**
 </dt> <dd> <dl> <dt>
 
 3011 (0xBC3)
@@ -2776,7 +2776,7 @@ Es wurden keine Drucker gefunden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRINTER_DRIVER_WARNED"></span><span id="error_printer_driver_warned"></span>**\_ \_ FEHLERDRUCKERTREIBER \_ GEWARNT**
+<span id="ERROR_PRINTER_DRIVER_WARNED"></span><span id="error_printer_driver_warned"></span>**FEHLER: \_ \_ DRUCKERTREIBER \_ GEWARNT**
 </dt> <dd> <dl> <dt>
 
 3013 (0xBC5)
@@ -2784,12 +2784,12 @@ Es wurden keine Drucker gefunden.
 
 
 
-Der Druckertreiber ist bekanntermaßen unzuverlässig.
+Es ist bekannt, dass der Druckertreiber unzuverlässig ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRINTER_DRIVER_BLOCKED"></span><span id="error_printer_driver_blocked"></span>**\_ \_ FEHLERDRUCKERTREIBER \_ BLOCKIERT**
+<span id="ERROR_PRINTER_DRIVER_BLOCKED"></span><span id="error_printer_driver_blocked"></span>**FEHLER: \_ \_ DRUCKERTREIBER \_ BLOCKIERT**
 </dt> <dd> <dl> <dt>
 
 3014 (0xBC6)
@@ -2797,12 +2797,12 @@ Der Druckertreiber ist bekanntermaßen unzuverlässig.
 
 
 
-Es ist bekannt, dass der Druckertreiber das System beeinträchtigt.
+Es ist bekannt, dass der Druckertreiber das System schadet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRINTER_DRIVER_PACKAGE_IN_USE"></span><span id="error_printer_driver_package_in_use"></span>**ERROR \_ PRINTER DRIVER PACKAGE IN USE (FEHLERDRUCKERTREIBERPAKET \_ IN \_ \_ \_ GEBRAUCH)**
+<span id="ERROR_PRINTER_DRIVER_PACKAGE_IN_USE"></span><span id="error_printer_driver_package_in_use"></span>**FEHLER \_ BEIM VERWENDEN DES \_ \_ \_ DRUCKERTREIBERPAKETS \_**
 </dt> <dd> <dl> <dt>
 
 3015 (0xBC7)
@@ -2815,7 +2815,7 @@ Das angegebene Druckertreiberpaket wird derzeit verwendet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CORE_DRIVER_PACKAGE_NOT_FOUND"></span><span id="error_core_driver_package_not_found"></span>**\_ \_ FEHLERKERNTREIBERPAKET \_ NICHT \_ \_ GEFUNDEN**
+<span id="ERROR_CORE_DRIVER_PACKAGE_NOT_FOUND"></span><span id="error_core_driver_package_not_found"></span>**ERROR \_ CORE DRIVER PACKAGE NOT FOUND (FEHLERKERNTREIBERPAKET \_ NICHT \_ \_ \_ GEFUNDEN)**
 </dt> <dd> <dl> <dt>
 
 3016 (0xBC8)
@@ -2823,12 +2823,12 @@ Das angegebene Druckertreiberpaket wird derzeit verwendet.
 
 
 
-Es konnte kein Kerntreiberpaket gefunden werden, das für das Druckertreiberpaket erforderlich ist.
+Ein für das Druckertreiberpaket erforderliches Kerntreiberpaket wurde nicht finden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_FAIL_REBOOT_REQUIRED"></span><span id="error_fail_reboot_required"></span>**FEHLER: \_ \_ NEUSTARTFEHLER \_ ERFORDERLICH**
+<span id="ERROR_FAIL_REBOOT_REQUIRED"></span><span id="error_fail_reboot_required"></span>**FEHLER: \_ \_ NEUSTART NICHT \_ ERFORDERLICH**
 </dt> <dd> <dl> <dt>
 
 3017 (0xBC9)
@@ -2836,12 +2836,12 @@ Es konnte kein Kerntreiberpaket gefunden werden, das für das Druckertreiberpake
 
 
 
-Der angeforderte Vorgang ist fehlgeschlagen. Ein Systemneustart ist erforderlich, um die vorgenommenen Änderungen rückgängig zu machen.
+Der angeforderte Vorgang ist fehlgeschlagen. Zum Rollback der vorgenommenen Änderungen ist ein Systemneustart erforderlich.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_FAIL_REBOOT_INITIATED"></span><span id="error_fail_reboot_initiated"></span>**\_FEHLER: \_ \_ NEUSTARTFEHLER INITIIERT**
+<span id="ERROR_FAIL_REBOOT_INITIATED"></span><span id="error_fail_reboot_initiated"></span>**FEHLER: \_ \_ NEUSTART NICHT \_ INITIIERT**
 </dt> <dd> <dl> <dt>
 
 3018 (0xBCA)
@@ -2849,12 +2849,12 @@ Der angeforderte Vorgang ist fehlgeschlagen. Ein Systemneustart ist erforderlich
 
 
 
-Der angeforderte Vorgang ist fehlgeschlagen. Ein Systemneustart wurde initiiert, um die vorgenommenen Änderungen rückgängig zu machen.
+Der angeforderte Vorgang ist fehlgeschlagen. Ein Systemneustart wurde initiiert, um ein Rollback der vorgenommenen Änderungen vorzunehmen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRINTER_DRIVER_DOWNLOAD_NEEDED"></span><span id="error_printer_driver_download_needed"></span>**FEHLER \_ BEIM HERUNTERLADEN DES \_ \_ DRUCKERTREIBERS \_ ERFORDERLICH**
+<span id="ERROR_PRINTER_DRIVER_DOWNLOAD_NEEDED"></span><span id="error_printer_driver_download_needed"></span>**FEHLER \_ BEIM HERUNTERLADEN DES \_ \_ \_ DRUCKERTREIBERS ERFORDERLICH**
 </dt> <dd> <dl> <dt>
 
 3019 (0xBCB)
@@ -2867,7 +2867,7 @@ Der angegebene Druckertreiber wurde auf dem System nicht gefunden und muss herun
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRINT_JOB_RESTART_REQUIRED"></span><span id="error_print_job_restart_required"></span>**FEHLER: NEUSTART DES \_ \_ \_ \_ DRUCKAUFTRAGS ERFORDERLICH**
+<span id="ERROR_PRINT_JOB_RESTART_REQUIRED"></span><span id="error_print_job_restart_required"></span>**FEHLER: \_ \_ NEUSTART DES \_ \_ DRUCKAUFTRAGS ERFORDERLICH**
 </dt> <dd> <dl> <dt>
 
 3020 (0xBCC)
@@ -2875,12 +2875,12 @@ Der angegebene Druckertreiber wurde auf dem System nicht gefunden und muss herun
 
 
 
-Der angeforderte Druckauftrag konnte nicht gedruckt werden. Für eine Aktualisierung des Drucksystems muss der Auftrag erneut übermittelt werden.
+Der angeforderte Druckauftrag konnte nicht gedruckt werden. Ein Drucksystemupdate erfordert, dass der Auftrag erneut übermittelt wird.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_PRINTER_DRIVER_MANIFEST"></span><span id="error_invalid_printer_driver_manifest"></span>**FEHLER: \_ UNGÜLTIGES \_ \_ \_ DRUCKERTREIBERMANIFEST**
+<span id="ERROR_INVALID_PRINTER_DRIVER_MANIFEST"></span><span id="error_invalid_printer_driver_manifest"></span>**FEHLER: \_ \_ UNGÜLTIGES \_ \_ DRUCKERTREIBERMANIFEST**
 </dt> <dd> <dl> <dt>
 
 3021 (0xBCD)
@@ -2893,7 +2893,7 @@ Der Druckertreiber enthält kein gültiges Manifest oder zu viele Manifeste.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRINTER_NOT_SHAREABLE"></span><span id="error_printer_not_shareable"></span>**\_FEHLERDRUCKER KANN NICHT FREIGEGEBEN \_ \_ WERDEN**
+<span id="ERROR_PRINTER_NOT_SHAREABLE"></span><span id="error_printer_not_shareable"></span>**\_FEHLERDRUCKER KANN NICHT GEMEINSAM VERWENDET \_ \_ WERDEN**
 </dt> <dd> <dl> <dt>
 
 3022 (0xBCE)
@@ -2919,7 +2919,7 @@ Der Vorgang wurde angehalten.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_IO_REISSUE_AS_CACHED"></span><span id="error_io_reissue_as_cached"></span>**FEHLER: \_ \_ E/A ERNEUT \_ ALS \_ ZWISCHENGESPEICHERT**
+<span id="ERROR_IO_REISSUE_AS_CACHED"></span><span id="error_io_reissue_as_cached"></span>**FEHLER \_ BEI \_ E/A-NEUAUFLAGE \_ ALS \_ ZWISCHENGESPEICHERT**
 </dt> <dd> <dl> <dt>
 
 3950 (0xF6E)
@@ -2939,7 +2939,7 @@ Geben Sie den angegebenen Vorgang erneut als zwischengespeicherten E/A-Vorgang a
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>WinError.h</dt> </dl> |
 

@@ -1,5 +1,5 @@
 ---
-description: 'Die meisten wia-Eigenschaftskonstanten (Windows Image Acquisition) sind in einem enumerationierten Datentyp gruppiert: WiaItemPropertyId für Skriptautoren.'
+description: 'Die meisten wia-Eigenschaftskonstanten (Windows Image Acquisition) sind in einem aufzählten Datentyp gruppiert: WiaItemPropertyId für Skriptautoren.'
 ms.assetid: d0fd6bd1-c646-4ed8-a6b2-43b424af8288
 title: WiaItemPropertyId
 ms.topic: article
@@ -18,7 +18,7 @@ ms.locfileid: "118207507"
 ---
 # <a name="wiaitempropertyid"></a>WiaItemPropertyId
 
-Die meisten wia-Eigenschaftskonstanten (Windows Image Acquisition) sind in einem enumerationierten Datentyp gruppiert: WiaItemPropertyId für Skriptautoren.
+Die meisten wia-Eigenschaftskonstanten (Windows Image Acquisition) sind in einem aufzählten Datentyp gruppiert: WiaItemPropertyId für Skriptautoren.
 
 In der folgenden Tabelle wird die Zuordnung zwischen den benennungskonventionen dargestellt, die in der Skripterstellung und in C++ verwendet werden. Beispielsweise wird im Skript das Präfix "CameraDevice" dem Präfix "WIA \_ DPC" für die entsprechende C++-Konstante zugeordnet. In einem spezifischeren Beispiel entspricht die Eigenschaft "CameraDeviceFlashMode" der C++-Konstante "WIA \_ DPC \_ FLASH \_ MODE". Beschreibungen der einzelnen Eigenschaften finden Sie in den entsprechenden Themen zu Eigenschaftenkonstanten. 
 

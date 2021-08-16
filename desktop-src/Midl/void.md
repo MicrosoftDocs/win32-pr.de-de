@@ -3,7 +3,7 @@ title: void-Attribut
 description: Der Basistyp void gibt eine Prozedur ohne Argumente oder eine Prozedur an, die keinen Ergebniswert zurückgibt.
 ms.assetid: a3eebfe7-bf43-4bab-b87b-9188a54ab9bf
 keywords:
-- void-Attribut-Mittel l
+- void-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,12 +12,12 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c4b14a5ae4a2325f840d8a840cb0a1bc5283bb4a
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 7ad758ba334114e13493e7b082f45f37dc6e68efba16dc3a55f14fa57a772d63
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106339249"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118382436"
 ---
 # <a name="void-attribute"></a>void-Attribut
 
@@ -42,34 +42,34 @@ return-type function-name(
 *Funktionsname* 
 </dt> <dd>
 
-Gibt den Namen der Remote Prozedur an.
+Gibt den Namen der Remoteprozedur an.
 
 </dd> <dt>
 
-*Parameter-List* 
+*parameter-list* 
 </dt> <dd>
 
-Gibt die Liste der Parameter an, die an die Funktion übergeben werden, zusammen mit den zugeordneten Parametertypen und Parameter Attributen.
+Gibt die Liste der Parameter an, die zusammen mit den zugeordneten Parametertypen und Parameterattributen an die Funktion übergeben werden.
 
 </dd> <dt>
 
-*Rückgabetyp* 
+*rückgabetyp* 
 </dt> <dd>
 
-Gibt den Namen des Typs an, der von der Funktion zurückgegeben wird.
+Gibt den Namen des typs an, der von der Funktion zurückgegeben wird.
 
 </dd> <dt>
 
-*Context-Handle-type* 
+*context-handle-type* 
 </dt> <dd>
 
-Gibt den Namen des Typs an, der das **\[** [**Kontext \_ handle**](context-handle.md) - **\]** Attribut annimmt.
+Gibt den Namen des Typs an, der das **\[** [**\_ Kontexthandleattribut**](context-handle.md) **\]** annimmt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zeigertyp " **void \***", der in C einen generischen Zeiger beschreibt, der in einen beliebigen Zeigertyp umgewandelt werden kann, ist in der mittleren l auf seine Verwendung mit dem **\[ Kontext \_ handle \]** -Schlüsselwort begrenzt.
+Der Zeigertyp **void _, der in C einen generischen Zeiger beschreibt, der zur Darstellung jedes \* *Zeigertyps typisiert werden kann, ist in MIDL auf seine Verwendung mit dem* \[ _context \_ \] handle-Schlüsselwort beschränkt.**
 
 ## <a name="examples"></a>Beispiele
 
@@ -84,18 +84,18 @@ HRESULT InitHandle([out] MY_CX_HNDL_TYPE * ppCxHndl);
 
 <dl> <dt>
 
-[Mittel l-Basis Typen](midl-base-types.md)
+[MIDL-Basistypen](midl-base-types.md)
 </dt> <dt>
 
-[**Kontext \_ handle**](context-handle.md)
+[**\_Kontexthandle**](context-handle.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

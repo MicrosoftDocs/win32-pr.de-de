@@ -15,7 +15,7 @@ ms.locfileid: "118211087"
 
 ## <a name="purpose"></a>Zweck
 
-Windows-Sofortverbindung (WCN) ermöglicht mobilen und eingebetteten Geräten, 802.11 Zugriffspunkten (Access Points, APs) und Computern das sichere Verbinden und Austauschen von Einstellungen untereinander. WCN ist für Heimbenutzer oder kleine Unternehmen konzipiert und bietet einen angemessenen Kompromiss zwischen Benutzerfreundlichkeit und stabiler Sicherheit.
+Windows-Sofortverbindung (WCN) ermöglicht mobilen und eingebetteten Geräten, 802.11 Zugriffspunkten (Access Points, APs) und Computern das sichere Verbinden und Austauschen von Einstellungen untereinander. WCN ist für heim- oder kleine Geschäftskunden konzipiert und bietet einen angemessenen Kompromiss zwischen Benutzerfreundlichkeit und stabiler Sicherheit.
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
@@ -29,7 +29,7 @@ Windows-Sofortverbindung wird ab Windows 7 unterstützt.
 
 
 
-| Thema                                                                         | BESCHREIBUNG                                                                                                             |
+| Thema                                                                         | Beschreibung                                                                                                             |
 |-------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | [Informationen Windows-Sofortverbindung](about-windows-connect-now.md)<br/>         | Eine kurze Übersicht über die Windows-Sofortverbindung-API.<br/>                                                             |
 | [Windows-Sofortverbindung Verweis](windows-connect-now-reference.md)<br/> | Ausführliche Beschreibungen der Programmierelemente, die in der Windows-Sofortverbindung-API (WCNAPI) enthalten sind.<br/> |

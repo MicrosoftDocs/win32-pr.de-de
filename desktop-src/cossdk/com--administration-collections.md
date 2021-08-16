@@ -40,7 +40,7 @@ Die folgenden Sammlungen werden von der COMAdmin-Bibliothek unterstützt.
 
 
 
-| Sammlung                                                             | BESCHREIBUNG                                                                                                                                           |
+| Sammlung                                                             | Beschreibung                                                                                                                                           |
 |------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**ApplicationCluster**](applicationcluster.md)                       | Enthält eine Liste der Server im Anwendungscluster.                                                                                            |
 | [**ApplicationInstances**](applicationinstances.md)                   | Enthält ein -Objekt für jede Instanz einer ausgeführten COM+-Anwendung.                                                                                   |

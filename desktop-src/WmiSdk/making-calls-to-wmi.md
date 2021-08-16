@@ -14,11 +14,11 @@ ms.locfileid: "118317674"
 ---
 # <a name="making-calls-to-wmi"></a>Aufrufen von WMI
 
-Anbieter können von WMI implementierte Methoden aus ihren Methodenimplementierungen aufrufen. Es gibt jedoch besondere Überlegungen, wenn ein Anbieter die WMI-Implementierung einer [**IWbemServices-Methode**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) innerhalb seiner eigenen Implementierung derselben Methode aufruft. Diese Überlegungen sind unabhängig davon wichtig, ob der Anbieter die synchrone oder asynchrone Version der Methode aufruft.
+Anbieter können von WMI implementierte Methoden aus ihren Methodenimplementierungen aufrufen. Es gibt jedoch besondere Überlegungen, wenn ein Anbieter die WMI-Implementierung einer [**IWbemServices-Methode**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) innerhalb seiner eigenen Implementierung derselben Methode aufruft. Diese Überlegungen sind wichtig, unabhängig davon, ob der Anbieter die synchrone oder asynchrone Version der Methode aufruft.
 
-Jede [**IWbemServices-Methode,**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) die ein Anbieter implementieren kann, verfügt über einen *pCtx-Parameter,* einen Zeiger auf eine [**IWbemContext-Schnittstellenimplementierung.**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) Wenn WMI den Anbieter aufruft, übergibt WMI einen gültigen Zeiger in diesem Parameter. Ein Anbieter muss immer denselben Zeiger in allen Aufrufen an WMI übergeben, die er bei der Wartung von Anforderungen vor sich hat. Wenn *pCtx nicht ordnungsgemäß festgelegt* wird, kann WMI eine Endlosschleife starten.
+Jede [**IWbemServices-Methode,**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) die ein Anbieter implementieren kann, verfügt über einen *pCtx-Parameter,* einen Zeiger auf eine Implementierung der [**IWbemContext-Schnittstelle.**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) Wenn WMI den Anbieter aufruft, übergibt WMI einen gültigen Zeiger in diesem Parameter. Ein Anbieter muss diesen Zeiger immer in allen Aufrufen von WMI übergeben, die er während der Wartung von Anforderungen vorgibt. Wenn Sie *pCtx* nicht ordnungsgemäß festlegen, kann dies dazu führen, dass WMI eine Endlosschleife startet.
 
-Im folgenden Codebeispiel wird die richtige Methode zum Aufrufen der WMI-Implementierung von [**GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) aus einer Implementierung von [**GetObjectAsync gezeigt.**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync)
+Das folgende Codebeispiel zeigt die richtige Methode zum Aufrufen der WMI-Implementierung von [**GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) aus einer Implementierung von [**GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync).
 
 
 ```C++
@@ -38,7 +38,7 @@ STDMETHODIMP CClassProv::GetObjectAsync (BSTR ObjectPath,
 
 
 
-Das C++-Codebeispiel in diesem Thema erfordert die folgenden Verweise und \# Include-Anweisungen, um ordnungsgemäß zu kompilieren.
+Das C++-Codebeispiel in diesem Thema erfordert die folgenden Verweise und \# include-Anweisungen, um ordnungsgemäß zu kompilieren.
 
 
 ```C++
@@ -52,9 +52,9 @@ using namespace std;
 
 
 
-Instanz-, Klassen- und Eigenschaftsanbieter dürfen keine Aufrufe an WMI senden, die die Änderung von Daten anfordern, während eine Leseanforderung bedient wird. Die einzigen Anbieter, die Ausnahmen von dieser Regel sind, sind Pushanbieter. Ein Pushanbieter ist ein Klassenanbieter, der Daten im WMI-Repository speichert und WMI verwendet, um Anforderungen von Clients zu verarbeiten. Bei der Wartung einer Leseanforderung kann ein Pushanbieter das WMI-Repository aktualisieren, muss jedoch den *Parameter lFlags* im entsprechenden [**IWbemServices-Aufruf**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) auf **WBEM \_ FLAG OWNER \_ \_ UPDATE** festlegen.
+Instanz-, Klassen- und Eigenschaftenanbieter dürfen keine Aufrufe von WMI ausstellen, die die Änderung von Daten während der Wartung einer Leseanforderung anfordern. Die einzigen Anbieter, die Ausnahmen von dieser Regel sind, sind Pushanbieter. Ein Pushanbieter ist ein Klassenanbieter, der Daten im WMI-Repository speichert und WMI für die Verarbeitung von Anforderungen von Clients verwendet. Während der Wartung einer Leseanforderung kann ein Pushanbieter das WMI-Repository aktualisieren, muss jedoch den *lFlags-Parameter* im entsprechenden [**IWbemServices-Aufruf**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) auf **WBEM \_ FLAG OWNER \_ \_ UPDATE** festlegen.
 
-Ereignisanbieter dürfen während der Wartung eines Aufrufs keine Klassenänderungen vornehmen. Sie können auch keine ereignisbezogenen Aufrufe wie das Ändern eines Ereignisfilters ausrufen.
+Ereignisanbieter dürfen während der Wartung eines Aufrufs keine Klassenänderungen vornehmen. Sie können auch keine ereignisbezogenen Aufrufe ausstellen, z. B. das Ändern eines Ereignisfilters.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -63,7 +63,7 @@ Ereignisanbieter dürfen während der Wartung eines Aufrufs keine Klassenänderu
 [Entwickeln eines WMI-Anbieters](developing-a-wmi-provider.md)
 </dt> <dt>
 
-[Festlegen von Namepace-Sicherheitsdeskriptoren](setting-namespace-security-descriptors.md)
+[Festlegen von Namepace-Sicherheitsbeschreibungen](setting-namespace-security-descriptors.md)
 </dt> <dt>
 
 [Schützen Ihres Anbieters](securing-your-provider.md)

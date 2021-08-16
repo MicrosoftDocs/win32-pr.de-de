@@ -27,7 +27,7 @@ ms.locfileid: "118314755"
 
 Die **GetVarDate-Methode** des [**SWbemDateTime-Objekts**](swbemdatetime.md) konvertiert einen Datums- und Uhrzeitwert im CIM [**DATETIME-Format**](datetime.md) in das **VT \_ DATE-Format.**
 
-Das **VT \_ DATE-Format** ist eine Automatisierungsvariante des [**DATETIME-Werts,**](datetime.md) Visual Basic und ActiveX wird.
+Das **VT \_ DATE-Format** ist ein DATETIME-Automatisierungsvariante, der Visual Basic und ActiveX verwendet wird. [](datetime.md)
 
 Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
@@ -49,7 +49,7 @@ vdate = .GetVarDate( _
 *bIsLocal* \[ in, optional\]
 </dt> <dd>
 
-Gibt an, ob der zurückgegebene Wert als Ortszeit interpretiert wird. Die koordinierte Weltzeit (UTC) enthält die lokale Zeit, die in den richtigen UTC-Offset konvertiert wurde. Wenn der Wert **FALSE ist,** wird der Wert als UTC mit einem Nulloffset (0) interpretiert.
+Gibt an, ob der zurückgegebene Wert als Ortszeit interpretiert wird. Die eigenschaft koordinierte Weltzeit (UTC) enthält die in den richtigen UTC-Offset konvertierte Ortszeit. Wenn der Wert **FALSE** ist, wird der Wert als UTC mit einem Nulloffset (0) interpretiert.
 
 </dd> </dl>
 
@@ -59,9 +59,9 @@ Der Datums- und Uhrzeitwert im **VT \_ DATE-Format.**
 
 ## <a name="remarks"></a>Hinweise
 
-**VT \_ DATE-** **und FILETIME-Werte** dürfen keine Platzhalterfelder enthalten.
+**VT \_ DATE-** und **FILETIME-Werte** dürfen keine Platzhalterfelder enthalten.
 
-Die **GetVarDate-Methode** schlägt fehl (**wbemErrFailed**), wenn eine der folgenden Eigenschaften **FALSE ist:**
+Die **GetVarDate-Methode** schlägt fehl (**wbemErrFailed**), wenn eine der folgenden Eigenschaften **FALSE** ist:
 
 -   [**YearSpecified**](swbemdatetime-yearspecified.md)
 -   [**MonthSpecified**](swbemdatetime-monthspecified.md)
@@ -69,16 +69,16 @@ Die **GetVarDate-Methode** schlägt fehl (**wbemErrFailed**), wenn eine der folg
 -   [**HoursSpecified**](swbemdatetime-hoursspecified.md)
 -   [**MinutesSpecified**](swbemdatetime-minutesspecified.md)
 -   [**SecondsSpecified**](swbemdatetime-secondsspecified.md)
--   [**MicrosecondsSpecified**](swbemdatetime-microsecondsspecified.md)
+-   [**MikrosekundenSpecified**](swbemdatetime-microsecondsspecified.md)
 -   [**UTCSpecified**](swbemdatetime-utcspecified.md)
 
-Bei erfolgreicher Rückgabe [**von SetVarDate**](swbemdatetime-setvardate.md)werden alle diese Eigenschaften auf **TRUE festgelegt.**
+Bei erfolgreicher Rückgabe von [**SetVarDate**](swbemdatetime-setvardate.md)werden alle diese Eigenschaften auf **TRUE** festgelegt.
 
-Nach einem erfolgreichen Aufruf von [**SetVarDate**](swbemdatetime-setvardate.md)wird der [**DATETIME-Wert**](datetime.md) immer als absoluter **DATETIME-Wert** und nicht als Intervall interpretiert, und [**IsInterval**](swbemdatetime-isinterval.md) wird auf **FALSE festgelegt.**
+Nach einem erfolgreichen Aufruf von [**SetVarDate**](swbemdatetime-setvardate.md)wird der [**DATETIME-Wert**](datetime.md) immer als absoluter **DATETIME-Wert** anstelle eines Intervalls interpretiert, und [**IsInterval**](swbemdatetime-isinterval.md) wird auf **FALSE** festgelegt.
 
 Wenn [**IsInterval**](swbemdatetime-isinterval.md) auf **TRUE** festgelegt ist, führt ein Aufruf von **GetVarDate** zum **wbemErrFailed-Fehler.**
 
-Beim Aufrufen von **GetVarDate** tritt ein Genauigkeitsverlust auf, da [datetime-Werte](datetime.md) eine Auflösung von 1 Mikrosekunden (s) und **VT \_ DATE-Werte** eine Auflösung von 500 Millisekunden haben.
+Ein Genauigkeitsverlust tritt auf, wenn Sie **GetVarDate** aufrufen, da [datetime-Werte](datetime.md) eine Auflösung von einer Mikrosekunde (s) und **VT \_ DATE-Werte** eine Auflösung von 500 Millisekunden aufweisen.
 
 ## <a name="examples"></a>Beispiele
 

@@ -1,6 +1,6 @@
 ---
 title: EFFECTS.settings
-description: Die Einstellungsmethode zeigt die Attributseite für die aktuelle Visualisierung an, falls vorhanden.
+description: Die Einstellungsmethode zeigt ggf. die Attributseite für die aktuelle Visualisierung an.
 ms.assetid: d5c858d4-b5ee-4490-bc58-1fd38bd6a250
 keywords:
 - EFFECTS.settings Windows Media Player
@@ -22,7 +22,7 @@ ms.locfileid: "118339965"
 ---
 # <a name="effectssettings"></a>EFFECTS.settings
 
-Die **Einstellungsmethode** zeigt die Attributseite für die aktuelle Visualisierung an, falls vorhanden.
+Die **Einstellungsmethode** zeigt ggf. die Attributseite für die aktuelle Visualisierung an.
 
 ``` syntax
         elementID.settings()

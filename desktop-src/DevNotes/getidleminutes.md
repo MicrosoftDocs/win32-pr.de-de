@@ -1,7 +1,7 @@
 ---
-description: Ruft die Zeitdauer in Minuten seit der letzten Aktivität des Benutzers ab.
+description: Ruft die Zeitspanne in Minuten seit der letzten Aktivität des Benutzers ab.
 ms.assetid: 2d1e68ad-6f65-4e64-afbf-505b2c9d3423
-title: Getidleminutes-Funktion
+title: GetIdleMinutes-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Msidle.dll
-ms.openlocfilehash: da3064ea96eb8e9835ed1e9d2f564bf922d2f091
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d3397de5d792181958891eef9693d29b2d7d4e56f9bbc7f7e1cfef19171625b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118404583"
 ---
-# <a name="getidleminutes-function"></a>Getidleminutes-Funktion
+# <a name="getidleminutes-function"></a>GetIdleMinutes-Funktion
 
-\[Diese Funktion wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen die **getlastinputinfo** -Funktion.\]
+\[Diese Funktion wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen die **GetLastInputInfo-Funktion.**\]
 
-Ruft die Zeitdauer in Minuten seit der letzten Aktivität des Benutzers ab.
+Ruft die Zeitspanne in Minuten seit der letzten Aktivität des Benutzers ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,9 +52,9 @@ Dieser Parameter muss auf 0 (null) festgelegt werden.
 
 Gibt die Anzahl von Minuten seit der letzten Aktivität des Benutzers zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen. Diese Funktion wird nicht nach dem Namen exportiert. Geben Sie beim Aufruf von **GetProcAddress** die Ordinalzahl 8 an.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen. Diese Funktion wird nicht anhand des Namens exportiert. Geben Sie beim Aufrufen von **GetProcAddress** die Ordnungszahl 8 an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,11 +66,11 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Getlastinputinfo**](/windows/win32/api/winuser/nf-winuser-getlastinputinfo)
+[**GetLastInputInfo**](/windows/win32/api/winuser/nf-winuser-getlastinputinfo)
 </dt> </dl>
 
  

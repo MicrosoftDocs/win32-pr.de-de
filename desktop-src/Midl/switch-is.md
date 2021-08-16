@@ -1,9 +1,9 @@
 ---
 title: switch_is-Attribut
-description: Der \switch is\-Attribut gibt den Ausdruck oder Bezeichner an, der bzw. der als Union diskriminant dient, der \_ den Union-Member auswählt.
+description: Das \_ \switch is\-Attribut gibt den Ausdruck oder Bezeichner an, der als Union-Diskriminant fungiert, der das Union-Element auswählt.
 ms.assetid: 93552bdf-6a14-47ce-877e-32ed976bb895
 keywords:
-- switch_is MIDL-Attribut
+- switch_is-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118382841"
 ---
 # <a name="switch_is-attribute"></a>switch \_ is attribute
 
-Der **\[ Schalter \_ \] is-Attribut** gibt den Ausdruck oder Bezeichner an, der bzw. der als Union-Diskriminant dient, der den Union-Member auswählt.
+Der **\[ Schalter \_ ist \]** das -Attribut, das den Ausdruck oder Bezeichner angibt, der als Union-Diskriminant fungiert, der das Union-Element auswählt.
 
 ``` syntax
 typedef struct [[ struct-tag ]] 
@@ -49,25 +49,25 @@ Gibt ein optionales Tag für eine -Struktur an.
 *limited-expr* 
 </dt> <dd>
 
-Gibt einen von MIDL unterstützten C-Sprachausdruck an. Fast alle C-Sprachausdrücke werden unterstützt. Der MIDL-Compiler unterstützt bedingte Ausdrücke, logische Ausdrücke, relationale Ausdrücke und arithmetische Ausdrücke. MIDL lässt keine Funktionsaufrufe in Ausdrücken zu und lässt keine Prä- und Nachinkrementoperatoren sowie Prä- und Nachdekrementoperatoren zu.
+Gibt einen von MIDL unterstützten C-Sprachausdruck an. Fast alle C-Sprachausdrücke werden unterstützt. Der MIDL-Compiler unterstützt bedingte Ausdrücke, logische Ausdrücke, relationale Ausdrücke und arithmetische Ausdrücke. MIDL lässt keine Funktionsaufrufe in Ausdrücken zu und lässt keine Operatoren vor und nach dem Inkrement sowie vor und nach der Dekrementierung zu.
 
 </dd> <dt>
 
 *field-attr-list* 
 </dt> <dd>
 
-Gibt null oder mehr Feldattribute an, die für ein Union-Element gelten. Zu den gültigen Feldattributen zählen zuerst ist , last ist , length ist , max ist , size ist ; die Verwendungsattribute string , ignore und context **\[** [**\_**](first-is.md)handle; das **\]** **\[** [**\_**](last-is.md) **\]** **\[** [**\_**](length-is.md) **\]** **\[** [**\_**](max-is.md) **\]** **\[** [**\_**](size-is.md) **\]** **\[** [](string.md) **\]** **\[** [](ignore.md) **\]** **\[** [**\_**](context-handle.md) **\]** Zeigerattribut **\[** [**ref**](ref.md) **\]** , **\[** [**unique**](unique.md), **\]** oder **\[** [**ptr;**](ptr.md) **\]** **\[** [**\_**](switch-type.md) **\]** und für Member, die selbst Unions sind, wird der Union-Attributschaltertyp verwendet. Trennen Sie mehrere Feldattribute durch Kommas.
+Gibt null oder mehr Feldattribute an, die für einen Union-Member gelten. Gültige Feldattribute **\[** [**sind: zuerst \_ ist**](first-is.md) **\]** , last **\[** [**\_ ist**](last-is.md) **\]** , length **\[** [**\_ ist**](length-is.md) **\]** , max **\[** [**\_ ist**](max-is.md) **\]** , size **\[** [**\_ ist**](size-is.md) **\]** ; die Verwendungsattribute **\[** [**Zeichenfolge**](string.md) **\]** , **\[** [**ignorieren**](ignore.md) **\]** und **\[** [**\_ Kontexthandle;**](context-handle.md) **\]** das Zeigerattribut **\[** [**ref**](ref.md) **\]** , **\[** [**eindeutig**](unique.md) **\]** oder **\[** [**ptr;**](ptr.md)und für **\]** Member, die selbst Unions sind, der Union-Attributswitchtyp **\[** [**\_**](switch-type.md) **\]** . Trennen Sie mehrere Feldattribute durch Kommas.
 
 </dd> <dt>
 
 *union-type-specifier* 
 </dt> <dd>
 
-Gibt den [**Union-Typbezeichner**](union.md) an. Eine optionale Speicherspezifikation kann dem *Typspezifizierer vorangestellt werden.*
+Gibt den [](union.md) Union-Typbezeichner an. Eine optionale Speicherspezifikation kann dem *Typspezifizierer* vorangestellt werden.
 
 </dd> <dt>
 
-*Deklarator und Deklaratorliste* 
+*deklarator und declarator-list* 
 </dt> <dd>
 
 Gibt einen C-Standarddeklarator an, z. B. einen Bezeichner, einen Zeigerdeklarator und einen Arraydeklarator. (Funktionsdeklaratoren und Bitfelddeklarationen sind in Unions, die in Remoteprozeduraufrufen übertragen werden, nicht zulässig. Diese Deklaratoren sind in Unions zulässig, die nicht übertragen werden.) Trennen Sie mehrere Deklaratoren durch Kommas.
@@ -77,21 +77,21 @@ Gibt einen C-Standarddeklarator an, z. B. einen Bezeichner, einen Zeigerdeklarat
 *function-attribute-list* 
 </dt> <dd>
 
-Gibt null oder mehr Attribute an, die für die Funktion gelten. Gültige Funktionsattribute sind rückruf , local, das **\[** [](callback.md) **\]** **\[** [](local.md) **\]** Zeigerattribut **\[ ref, \]** **\[ \] unique** oder **\[ \]** **\[ ptr \]** und die Verwendungsattribute **\[ \]** **\[ \_ \]** Zeichenfolge , ignorieren und Kontexthand handle .
+Gibt null oder mehr Attribute an, die für die Funktion gelten. Gültige Funktionsattribute sind **\[** [**rückruf,**](callback.md) **\]** **\[** [**local,**](local.md) **\]** das Zeigerattribut **\[ ref, \]** **\[ eindeutig \]** oder **\[ ptr \]** und die Verwendungsattribute **\[ Zeichenfolge \]**, **\[ ignorieren \]** und **\[ \_ Kontexthandle \]**.
 
 </dd> <dt>
 
 *Typspezifizierer* 
 </dt> <dd>
 
-Gibt einen [Basistyp, eine](midl-base-types.md) [**Struktur,**](struct.md)eine [**Union,**](union.md) [**einen enum-Typ**](enum.md) oder einen Typbezeichner an. Eine optionale Speicherspezifikation kann dem *Typspezifizierer vorangestellt werden.*
+Gibt einen [Basistyp,](midl-base-types.md) [**eine Struktur,**](struct.md) [**einen Union-,**](union.md) [**Enumerations-**](enum.md) oder Typbezeichner an. Eine optionale Speicherspezifikation kann dem *Typspezifizierer* vorangestellt werden.
 
 </dd> <dt>
 
 *Zeigerdeklarator* 
 </dt> <dd>
 
-Gibt null oder mehr Zeigerdeklaratoren an. Ein Zeigerdeklarator ist mit dem in C verwendeten Zeigerdeklarator identisch. sie wird aus dem \* Designator, Modifizierern wie **far** und dem Qualifizierer [**const erstellt.**](const.md)
+Gibt null oder mehr Zeigerdeklaratoren an. Ein Zeigerdeklarator entspricht dem in C verwendeten Zeigerdeklarator. sie wird aus dem \* Bezeichner, Modifizierern wie **far** und dem Qualifizierer [**const**](const.md)erstellt.
 
 </dd> <dt>
 
@@ -105,7 +105,7 @@ Gibt den Namen der Remoteprozedur an.
 *param-attr-list* 
 </dt> <dd>
 
-Gibt null oder mehr Attribute an, die für den angegebenen Parametertyp geeignet sind. Parameterattribute können die direktionalen Attribute **\[ \] in** **\[ \]** **\[ \_ \]** **\[ \]** **\[ \_ \]** **\[ \_ \]** **\[ \_ \]** **\[ \_ \]** **\[ \]** und aus **\[ \_ \]** übernehmen, die Feldattribute sind zuerst , last ist , length ist , max ist , size ist , und **\[ switch \_ type, \]** das Zeigerattribut **\[ ref, \]** unique oder **\[ ptr \]** sowie das Kontexthand handle und die Zeichenfolge der Verwendungsattribute. Das ignorierte **\[ \] Verwendungsattribut** kann nicht als Parameterattribut verwendet werden. Trennen Sie mehrere Attribute durch Kommas.
+Gibt null oder mehr Attribute an, die für den angegebenen Parametertyp geeignet sind. Parameterattribute können die direktionalen Attribute **\[ in \]** und **\[ aus \]** aufnehmen, die Feldattribute **\[ sind zuerst \_ \]**, die letzte **\[ \_ ist \]**, die Länge ist , max **\[ \_ \]** **\[ \_ ist \]**, die Größe **\[ \_ ist \]**, und der **\[ \_ Schaltertyp \]**; das Zeigerattribut **\[ ref \]**, **\[ eindeutig \]** oder **\[ ptr \]**; und das **\[ \_ Kontexthandle \]** der Verwendungsattribute und die **\[ Zeichenfolge \]**. Das Verwendungsattribut **\[ ignore \]** kann nicht als Parameterattribut verwendet werden. Trennen Sie mehrere Attribute durch Kommas.
 
 </dd> <dt>
 
@@ -118,14 +118,14 @@ Identifiziert den [](union.md) Union-Typspezifizierer.
 
 ## <a name="remarks"></a>Hinweise
 
-Die dem Switch zugeordnete Diskriminanz **\[ \_ muss \]** auf der gleichen logischen Ebene wie die Union definiert werden:
+Das diskriminante, dem Switch zugeordnete **\[ \_ Attribut is \]** muss auf der gleichen logischen Ebene wie die Union definiert werden:
 
--   Wenn die Union ein Parameter ist, muss die Union diskriminant ein anderer Parameter sein.
--   Wenn die Union ein Feld einer -Struktur ist, muss die Diskriminanz ein anderes Feld derselben Struktur sein.
+-   Wenn die Union ein Parameter ist, muss die Union-Unterscheidung ein anderer Parameter sein.
+-   Wenn die Union ein Feld einer -Struktur ist, muss der diskriminante ein anderes Feld derselben Struktur sein.
 
-Die Sequenz in einer Struktur oder einer Funktionsparameterliste ist nicht von Bedeutung. Die Union kann entweder dem Diskriminanten voran- oder folgen.
+Die Sequenz in einer Struktur oder einer Funktionsparameterliste ist nicht von Bedeutung. Die Union kann der Diskriminanz entweder vorangehen oder ihr folgen.
 
-Der **\[ Schalter ist \_ ein \]** Attribut, das als Feldattribut oder als Parameterattribut angezeigt werden kann.
+Der **\[ Schalter is \_ attribute \]** kann als Feldattribut oder als Parameterattribut angezeigt werden.
 
 ## <a name="examples"></a>Beispiele
 
@@ -160,7 +160,7 @@ typedef struct _WINNER_TYPE
 [**const**](const.md)
 </dt> <dt>
 
-[**Kontexthand \_ handle**](context-handle.md)
+[**\_Kontexthandle**](context-handle.md)
 </dt> <dt>
 
 [Gekapselte Unions](encapsulated-unions.md)
@@ -169,13 +169,13 @@ typedef struct _WINNER_TYPE
 [**Enum**](enum.md)
 </dt> <dt>
 
-[**ersten \_ ist**](first-is.md)
+[**\_first ist**](first-is.md)
 </dt> <dt>
 
 [**Ignorieren**](ignore.md)
 </dt> <dt>
 
-[**last \_ is**](last-is.md)
+[**last \_ ist**](last-is.md)
 </dt> <dt>
 
 [**length \_ ist**](length-is.md)
@@ -184,10 +184,10 @@ typedef struct _WINNER_TYPE
 [**lokal**](local.md)
 </dt> <dt>
 
-[**max \_ is**](max-is.md)
+[**max \_ ist**](max-is.md)
 </dt> <dt>
 
-[Nicht kapselte Unions](nonencapsulated-unions.md)
+[Nicht gekapselte Unions](nonencapsulated-unions.md)
 </dt> <dt>
 
 [**Ptr**](ptr.md)

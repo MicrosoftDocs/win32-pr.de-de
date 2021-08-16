@@ -21,7 +21,7 @@ ms.locfileid: "118198491"
 ---
 # <a name="how-do-i-decompress-streams-from-an-avi-file-or-other-file-about-which-i-have-no-format-information"></a>Gewusst wie Datenströme aus einer AVI-Datei oder einer anderen Datei dekomprimieren, zu der ich keine Formatinformationen habe
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und [DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
  
 

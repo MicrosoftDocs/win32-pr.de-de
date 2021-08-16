@@ -25,7 +25,7 @@ ms.locfileid: "118403449"
 ---
 # <a name="cbaserenderergetpincount-method"></a>CBaseRenderer.GetPinCount-Methode
 
-Die `GetPinCount` -Methode ruft die Anzahl der Pins ab.
+Die `GetPinCount` -Methode ruft die Anzahl der Stecknadeln ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Diese Methode implementiert die [**CBaseFilter::GetPinCount-Methode,**](cbasefil
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

@@ -22,14 +22,14 @@ Dieses Thema enthält Informationen zum nativen DNG-Codec, der über Windows Ima
 
 ## <a name="codec-identity"></a>Codec-Identität
 
-Die folgende Tabelle enthält Codec-Identifikationsinformationen.
+Die folgende Tabelle enthält Informationen zur Codecidentifikation.
 
 
 
-|     Komponente          |  BESCHREIBUNG                                         |
+|     Komponente          |  Beschreibung                                         |
 |------------------------|------------------------------------------------------|
 | Formale Namen         | Digital Negative (DNG)                               |
-| Dateinamenerweiterung(en) | .dng                                                 |
+| Dateinamenerweiterungen | .dng                                                 |
 | MIME-Typen           | image/DNG                                            |
 | Spezifikationsunterstützung  | Digital Negative (DNG) Specification Version 1.4.0.0 |
 
@@ -52,9 +52,9 @@ In der folgenden Tabelle sind die GUIDs aufgeführt, die zum Identifizieren der 
 
 ## <a name="decoding"></a>Decodierung
 
-Die WIC-Decodierungs-API ist codecunabhängig, und die Bilddecodierung für WIC-fähige Codecs ist im Wesentlichen identisch. Weitere Informationen zur Bilddecodierung finden Sie in der [Übersicht über die Decodierung.](-wic-creating-decoder.md) Weitere Informationen zur Verwendung von decodierten Bilddaten finden Sie in der [Übersicht über Bitmapquellen.](-wic-bitmapsources.md)
+Die WIC-Decodierungs-API ist so konzipiert, dass sie codecunabhängig ist, und die Bilddecodierung für WIC-fähige Codecs ist im Wesentlichen identisch. Weitere Informationen zur Bilddecodierung finden Sie in der Übersicht über die [Decodierung.](-wic-creating-decoder.md) Weitere Informationen zur Verwendung von decodierten Bilddaten finden Sie in der [Übersicht über Bitmapquellen.](-wic-bitmapsources.md)
 
-Der Decoder unterstützt keine Decodierung von Sensorrohdaten und unterstützt nur Dateien mit einer nicht unformatierten Bilddarstellung, die in eine IFD mit NewSubFileType gleich 1 eingebettet ist.
+Der Decoder unterstützt keine Decodierung von Sensorrohdaten und nur Dateien mit einer nicht rohen Bilddarstellung, die in eine IFD mit NewSubFileType gleich 1 eingebettet ist.
 
  
 

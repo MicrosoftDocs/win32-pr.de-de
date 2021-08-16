@@ -1,6 +1,6 @@
 ---
 title: Attribute (Netzwerkrichtlinienserver)
-description: Dieser Artikel enthält Links zu den Attributenumerationstypen, die beim Bearbeiten von RADIUS-Wörterbuchattributen auf dem SDO-Computer verwendet werden sollen.
+description: Dieser Artikel enthält Links zu den Attributenumerationstypen, die beim Bearbeiten von RADIUS-Wörterbuchattributen auf dem SDO-Computer verwendet werden.
 ms.assetid: af7d220d-f920-4480-9cf1-72a2cb542e4e
 ms.tgt_platform: multiple
 ms.topic: article
@@ -25,7 +25,7 @@ Verwenden Sie die folgenden Enumerationstypen, wenn Sie RADIUS-Wörterbuchattrib
 -   [**\_AUTHENTIFIZIERUNGSTYP**](/windows/desktop/api/SdoIas/ne-sdoias-authentication_type)
 -   [**CLIENTEIGENSCHAFTEN**](/windows/desktop/api/sdoias/ne-sdoias-clientproperties)
 -   [**CONDITIONPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-conditionproperties)
--   [**DICTIONARYPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-dictionaryproperties)
+-   [**WÖRTERBUCHEIGENSCHAFTEN**](/windows/desktop/api/sdoias/ne-sdoias-dictionaryproperties)
 -   [**EAPWRAPPROPERTIES**](/previous-versions/ms717032(v=vs.85))
 -   [**IASCOMMONPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-iascommonproperties)
 -   [**POLICYPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-policyproperties)

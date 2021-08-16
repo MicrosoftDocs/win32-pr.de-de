@@ -1,6 +1,6 @@
 ---
 title: WMT_VIDEOIMAGE_TRANSITION_STAR (Wmsdkidl.h)
-description: Der Sternübergang zeigt das neue Bild in einem fünfzackigen Stern innerhalb des Frames an.
+description: Der Sternübergang zeigt das neue Bild in einem Fünf-Punkte-Stern im Rahmen an.
 ms.assetid: d16f73ce-0fa8-47b4-8146-32f276e6d16c
 keywords:
 - WMT_VIDEOIMAGE_TRANSITION_STAR windows Media Format
@@ -23,11 +23,11 @@ ms.locfileid: "118195170"
 ---
 # <a name="wmt_videoimage_transition_star"></a>WMT \_ VIDEOIMAGE \_ TRANSITION \_ STAR
 
-Der Sternübergang zeigt das neue Bild in einem fünfzackigen Stern innerhalb des Frames an.
+Der Sternübergang zeigt das neue Bild in einem Fünf-Punkte-Stern im Rahmen an.
 
 ## <a name="parameters"></a>Parameter
 
-In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter beschrieben und die Elemente der [**WMT \_ VIDEOIMAGE \_ SAMPLE2-Struktur**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) aufgelistet, der sie zugewiesen sind.
+In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter beschrieben und die Member der [**WMT \_ VIDEOIMAGE \_ SAMPLE2-Struktur**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) aufgeführt, der sie zugewiesen sind.
 
 
 
@@ -40,7 +40,7 @@ In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter b
 <thead>
 <tr class="header">
 <th>Parameter</th>
-<th>Strukturmember</th>
+<th>Struktur-Member</th>
 <th>BESCHREIBUNG</th>
 </tr>
 </thead>
@@ -48,24 +48,24 @@ In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter b
 <tr class="odd">
 <td>X zentrieren</td>
 <td><strong>fEffectPara0</strong></td>
-<td>X-Koordinate relativ zum Videorahmen der Mitte des Sterns.</td>
+<td>X-Koordinate, relativ zum Videoframe, der Mitte des Sterns.</td>
 </tr>
 <tr class="even">
 <td>Y zentrieren</td>
 <td><strong>fEffectPara1</strong></td>
-<td>Y-Koordinate relativ zum Videorahmen der Mitte des Sterns.</td>
+<td>Y-Koordinate, relativ zum Videoframe, der Mitte des Sterns.</td>
 </tr>
 <tr class="odd">
 <td>Radius</td>
 <td><strong>fEffectPara2</strong></td>
-<td>Radius des durch die Punkte des Sterns definierten Kreises in Pixel.</td>
+<td>Radius des Kreises, der durch die Punkte des Sterns definiert wird, in Pixel.</td>
 </tr>
 <tr class="even">
 <td>Aufbau</td>
 <td><strong>fEffectPara3</strong></td>
 <td>Legen Sie auf einen der folgenden Werte fest:
 <ul>
-<li>0 : Gibt die normale Komposition an, bei der das vorherige Bild den Hintergrund und das aktuelle Bild den Vordergrund darstellt.</li>
+<li>0 : Gibt die normale Komposition an, bei der das vorherige Bild der Hintergrund und das aktuelle Bild der Vordergrund ist.</li>
 <li>1 : Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li>
 </ul></td>
 </tr>

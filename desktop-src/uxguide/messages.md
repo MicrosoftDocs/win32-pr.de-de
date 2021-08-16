@@ -1,6 +1,6 @@
 ---
 title: Nachrichten (Grundlagen des Entwurfs)
-description: Nachrichten sind jede Art von Nachricht, die Benutzer benötigen oder anzeigen möchten, wenn sie Ihre App verwenden. Erfahren Sie, wie Sie Fehler, Warnungen, Bestätigungen und Benachrichtigungen in Ihrer App darstellen.
+description: Nachrichten sind alle Arten von Nachrichten, die Benutzer bei der Verwendung Ihrer App benötigen oder anzeigen möchten. Erfahren Sie, wie Sie Fehler, Warnungen, Bestätigungen und Benachrichtigungen in Ihrer App präsentieren.
 ms.assetid: 700F1F1F-B41D-4C0A-B2EC-91C84E46E526
 ms.topic: article
 ms.date: 10/20/2020
@@ -14,20 +14,20 @@ ms.locfileid: "118211974"
 # <a name="messages-design-basics"></a>Nachrichten (Grundlagen des Entwurfs)
 
 > [!NOTE]
-> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
+> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
 
-Nachrichten sind jede Art von Nachricht, die Benutzer benötigen oder anzeigen möchten, wenn sie Ihre App verwenden. Erfahren Sie, wie Sie Fehler, Warnungen, Bestätigungen und Benachrichtigungen in Ihrer App darstellen.
+Nachrichten sind alle Arten von Nachrichten, die Benutzer bei der Verwendung Ihrer App benötigen oder anzeigen möchten. Erfahren Sie, wie Sie Fehler, Warnungen, Bestätigungen und Benachrichtigungen in Ihrer App präsentieren.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                        | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                     |
+| Thema                                        | Beschreibung                                                                                                                                                                                                                                                                                                                                     |
 |----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Fehlermeldungen](mess-error.md)<br/>  | Eine Fehlermeldung warnt Benutzer über ein Problem, das bereits aufgetreten ist. Im Gegensatz dazu werden Benutzer in einer Warnmeldung über eine Bedingung benachrichtigt, die in Zukunft ein Problem verursachen kann. Fehlermeldungen können mithilfe modaler Dialogfelder, direkt vorhandener Nachrichten, Benachrichtigungen oder Sprechblasen angezeigt werden.<br/>                                                  |
-| [Warnmeldungen](mess-warn.md)<br/> | Eine Warnmeldung ist ein modales Dialogfeld, eine ortsbezogene Nachricht, eine Benachrichtigung oder eine Sprechblase, mit der der Benutzer über eine Bedingung benachrichtigt wird, die in Zukunft zu einem Problem führen kann.<br/>                                                                                                                                                                    |
-| [Bestätigungen](mess-confirm.md)<br/> | Eine Bestätigung ist ein modales Dialogfeld, in dem gefragt wird, ob der Benutzer mit einer Aktion fortfahren möchte.<br/>                                                                                                                                                                                                                                          |
-| [Benachrichtigungen](mess-notif.md)<br/>   | Eine Benachrichtigung informiert Benutzer über Ereignisse, die nicht mit der aktuellen Benutzeraktivität in Zusammenhang stehen, indem kurz eine Sprechblase von einem Symbol im Infobereich angezeigt wird. Die Benachrichtigung kann sich aus einer Benutzeraktion oder einem signifikanten Systemereignis ergeben oder potenziell nützliche Informationen von Microsoft Windows oder einer Anwendung liefern.<br/> |
+| [Fehlermeldungen](mess-error.md)<br/>  | Eine Fehlermeldung warnt Benutzer über ein Problem, das bereits aufgetreten ist. Im Gegensatz dazu warnt eine Warnmeldung Benutzer über eine Bedingung, die in Zukunft zu einem Problem führen kann. Fehlermeldungen können über modale Dialogfelder, in-place-Nachrichten, Benachrichtigungen oder Sprechblasen angezeigt werden.<br/>                                                  |
+| [Warnmeldungen](mess-warn.md)<br/> | Eine Warnmeldung ist ein modales Dialogfeld, eine in-place-Nachricht, eine Benachrichtigung oder ein Balloon, das den Benutzer über eine Bedingung benachrichtigt, die in Zukunft ein Problem verursachen kann.<br/>                                                                                                                                                                    |
+| [Bestätigungen](mess-confirm.md)<br/> | Eine Bestätigung ist ein modales Dialogfeld, in dem sie gefragt wird, ob der Benutzer mit einer Aktion fortfahren möchte.<br/>                                                                                                                                                                                                                                          |
+| [Benachrichtigungen](mess-notif.md)<br/>   | Eine Benachrichtigung informiert Benutzer über Ereignisse, die nicht mit der aktuellen Benutzeraktivität in Zusammenhang stehen, indem kurz ein Balloon von einem Symbol im Benachrichtigungsbereich angezeigt wird. Die Benachrichtigung kann sich aus einer Benutzeraktion oder einem signifikanten Systemereignis ergeben oder potenziell nützliche Informationen von Microsoft Windows anwendung enthalten.<br/> |
 
 
 

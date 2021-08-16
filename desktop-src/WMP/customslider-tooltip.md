@@ -1,9 +1,9 @@
 ---
-title: Customslider. ToolTip
-description: Das ToolTip-Attribut gibt den QuickInfo-Text für den Schieberegler an oder ruft ihn ab.
+title: CABLIDER.toolTip
+description: Das toolTip-Attribut gibt den QuickInfo-Text für den Schieberegler an oder ruft den Text ab.
 ms.assetid: ac82b811-8396-4a02-b617-627e808b8faf
 keywords:
-- Windows-Media Player "customslider. ToolTip"
+- WINDOWS MEDIA PLAYER
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e56159f18f4011b934f8ab2c611f703450268f13
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3881cab3f5e818a4d6c244b9b2e951711202f38cdb86ee9ce5856747defeacc6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372684"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118340909"
 ---
-# <a name="customslidertooltip"></a>Customslider. ToolTip
+# <a name="customslidertooltip"></a>CABLIDER.toolTip
 
-Das **ToolTip** -Attribut gibt den QuickInfo-Text für den Schieberegler an oder ruft ihn ab.
+Das **toolTip-Attribut** gibt den QuickInfo-Text für den Schieberegler an oder ruft den Text ab.
 
 ``` syntax
         elementID.toolTip
@@ -29,15 +29,15 @@ Das **ToolTip** -Attribut gibt den QuickInfo-Text für den Schieberegler an oder
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einer maximalen Länge von 1024 Zeichen. Er besitzt keinen Standardwert.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff mit einer maximalen Länge von 1024 Zeichen. Er besitzt keinen Standardwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn dieses Attribut auf "" (leere Zeichenfolge) festgelegt ist, wird keine QuickInfo angezeigt.
 
 ## <a name="examples"></a>Beispiele
 
-Unter dem [positionImage](customslider-positionimage.md) -Attribut finden Sie ein Beispiel, das veranschaulicht, wie die Attribute des **customslider** -Elements verwendet werden.
+Ein Beispiel zur Veranschaulichung der Verwendung der Attribute des **ELEMENTS AUSLLIDER** finden Sie unter dem [attribut positionImage.](customslider-positionimage.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,15 +45,15 @@ Unter dem [positionImage](customslider-positionimage.md) -Attribut finden Sie ei
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Customslider-Element**](customslider-element.md)
+[**ELEMENTSLIDER-Element**](customslider-element.md)
 </dt> </dl>
 
  

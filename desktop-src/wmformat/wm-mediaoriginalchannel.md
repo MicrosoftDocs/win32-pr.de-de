@@ -3,7 +3,7 @@ title: WM/MediaOriginalChannel
 description: Das WM/MediaOriginalChannel-Attribut enthält den Kanal, über den der Inhalt übertragen wurde.
 ms.assetid: 5f8bb055-a071-44d4-8d7c-58aeb2a8bd34
 keywords:
-- WM/MediaOriginalChannel-Windows-Medienformat
+- WM/MediaOriginalChannel windows Media Format
 topic_type:
 - apiref
 api_name:

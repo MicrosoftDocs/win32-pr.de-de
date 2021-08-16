@@ -47,13 +47,13 @@ objPrivilege = .Item( _
 *iPrivilege* 
 </dt> <dd>
 
-Erforderlich. Eine der WMI-Konstanten aus der [**WbemPrivilegeEnum-Gruppe.**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum) Diese Konstanten sind im Wesentlichen ganze Zahlen, die bestimmte Berechtigungen darstellen. Verwenden Sie beispielsweise die **Konstante wbemPrivilegeShutdown** oder die numerische Entsprechung 23 (0x17), um die Berechtigung abzurufen, mit der Sie ein Windows System herunterfahren können.
+Erforderlich. Eine der WMI-Konstanten aus der [**Gruppe WbemPrivilegeEnum.**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum) Diese Konstanten sind im Wesentlichen ganze Zahlen, die bestimmte Berechtigungen darstellen. Um beispielsweise die Berechtigung zu erhalten, mit der Sie ein Windows-System herunterfahren können, verwenden Sie die **wbemPrivilegeShutdown-Konstante** oder die numerische Entsprechung 23 (0x17).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird das [**angeforderte SWbemPrivilege-Objekt**](swbemprivilege.md) zurückgegeben.
+Bei Erfolg wird das angeforderte [**SWbemPrivilege-Objekt**](swbemprivilege.md) zurückgegeben.
 
 ## <a name="error-codes"></a>Fehlercodes
 

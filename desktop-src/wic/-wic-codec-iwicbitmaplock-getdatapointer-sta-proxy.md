@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118206746"
 ---
-# <a name="iwicbitmaplock_getdatapointer_sta_proxy-function"></a>STA-Proxyfunktion "IWICBitmapLock \_ GetDataPointer" \_ \_
+# <a name="iwicbitmaplock_getdatapointer_sta_proxy-function"></a>IWICBitmapLock \_ \_ GetDataPointer-STA-Proxyfunktion \_
 
 Proxyfunktion für die [**GetDataPointer-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmaplock-getdatapointer)
 
@@ -42,7 +42,7 @@ HRESULT IWICBitmapLock_GetDataPointer_STA_Proxy(
 
 <dl> <dt>
 
-*DIES \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
 Typ: **[ **IWICBitmapLock**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock)\***
@@ -51,7 +51,7 @@ Zeiger auf dieses [**IWICBitmapLock-Objekt.**](/windows/desktop/api/Wincodec/nn-
 
 </dd> <dt>
 
-*pwBufferSize* \[ out\]
+*bluBufferSize* \[ out\]
 </dt> <dd>
 
 Typ: **UINT \***
@@ -65,7 +65,7 @@ Ein Zeiger, der die Größe des Puffers empfängt.
 
 Typ: **BYTE \* \***
 
-Ein Zeiger, der einen Zeiger auf das obere linke Pixel im gesperrten Rechteck empfängt.
+Ein Zeiger, der einen Zeiger auf das linke obere Pixel im gesperrten Rechteck empfängt.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Ein Zeiger, der einen Zeiger auf das obere linke Pixel im gesperrten Rechteck em
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 

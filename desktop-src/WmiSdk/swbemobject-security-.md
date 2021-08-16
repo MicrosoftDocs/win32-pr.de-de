@@ -1,8 +1,8 @@
 ---
-description: Die \_ Security-Eigenschaft des SWbemObject-Objekts wird verwendet, um die Sicherheitseinstellungen für ein SWbemObject-Objekt zu lesen oder festzulegen.
+description: Die Security-Eigenschaft des SWbemObject-Objekts wird zum Lesen oder Festlegen der Sicherheitseinstellungen für ein \_ SWbemObject-Objekt verwendet.
 ms.assetid: add77267-d62f-4ee4-a0ff-8ca06a6bf7cd
 ms.tgt_platform: multiple
-title: SWbemObject.Security_-Eigenschaft (Wbemdisp.h)
+title: SWbemObject.Security_ -Eigenschaft (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -23,12 +23,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118313784"
 ---
-# <a name="swbemobjectsecurity_-property"></a>SWbemObject.Security-Eigenschaft \_
+# <a name="swbemobjectsecurity_-property"></a>SWbemObject.Security \_ (Eigenschaft)
 
-Die **\_ Security-Eigenschaft** des [**SWbemObject-Objekts**](swbemobject.md) wird verwendet, um die Sicherheitseinstellungen für ein **SWbemObject-Objekt** zu lesen oder festzulegen. Diese Eigenschaft ist ein [**SWbemSecurity-Objekt.**](swbemsecurity.md) Die Sicherheitseinstellungen in diesem Objekt geben weder die Authentifizierungs-, Identitätswechsel- oder Berechtigungseinstellungen an, die für eine Verbindung mit Windows Management Instrumentation (WMI) vorgenommen wurden, noch die sicherheit, die für den Proxy gilt, wenn ein Objekt in einem asynchronen Aufruf an eine Senke übermittelt wird. Weitere Informationen finden Sie unter [Verwalten der WMI-Sicherheit.](maintaining-wmi-security.md)
+Die **\_ Security-Eigenschaft** des [**SWbemObject-Objekts**](swbemobject.md) wird zum Lesen oder Festlegen der Sicherheitseinstellungen für ein **SWbemObject-Objekt** verwendet. Diese Eigenschaft ist ein [**SWbemSecurity-Objekt.**](swbemsecurity.md) Die Sicherheitseinstellungen in diesem Objekt geben nicht die Authentifizierungs-, Identitätswechsel- oder Berechtigungseinstellungen an, die für eine Verbindung mit der Windows-Verwaltungsinstrumentation (WMI) vorgenommen wurden, oder die Sicherheit, die für den Proxy wirksam ist, wenn ein Objekt in einem asynchronen Aufruf an eine Senke übermittelt wird. Weitere Informationen finden Sie unter [Verwalten der WMI-Sicherheit.](maintaining-wmi-security.md)
 
 > [!Note]  
-> Wenn Sie die **Security-Eigenschaft \_** eines [**SWbemObject-Objekts**](swbemobject.md) auf **NULL** festlegen, wird jedem jederzeit unbegrenzter Zugriff gewährt. Weitere Informationen finden Sie unter [**SWbemSecurity**](swbemsecurity.md).
+> Wenn Sie **die Security-Eigenschaft \_** eines [**SWbemObject-Objekts**](swbemobject.md) auf **NULL** festlegen, erhalten alle Benutzer uneingeschränkten Zugriff. Weitere Informationen finden Sie unter [**SWbemSecurity**](swbemsecurity.md).
 
  
 
@@ -70,10 +70,10 @@ SWbemObject.Security_ As Object
 [**Swbemobject**](swbemobject.md)
 </dt> <dt>
 
-[Erstellen einer WMI-Anwendung oder eines WMI-Skripts](creating-a-wmi-application-or-script.md)
+[Erstellen einer WMI-Anwendung oder eines Skripts](creating-a-wmi-application-or-script.md)
 </dt> <dt>
 
-[Festlegen der \_ \_ Clientanwendungsprozesssicherheit](setting-client-application-process-security.md)
+[Festlegen der Sicherheit \_ des \_ Clientanwendungsprozesses](setting-client-application-process-security.md)
 </dt> <dt>
 
 [**SWbemSecurity**](swbemsecurity.md)
@@ -88,7 +88,7 @@ SWbemObject.Security_ As Object
 [**WbemPrivilegeEnum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum)
 </dt> <dt>
 
-[**Berechtigungskonstanten**](privilege-constants.md)
+[**Berechtigungskonst constants**](privilege-constants.md)
 </dt> </dl>
 
  

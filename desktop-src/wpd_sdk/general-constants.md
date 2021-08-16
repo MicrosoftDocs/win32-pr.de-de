@@ -1,5 +1,5 @@
 ---
-description: Windows Portable Geräte definieren die folgenden Konstanten.
+description: Windows Portable Geräte definiert die folgenden Konstanten.
 ms.assetid: ad7ad1d1-53da-41b7-a847-852ecfeaff20
 title: Allgemeine Konstanten (PortableDevice.h)
 ms.topic: reference
@@ -23,14 +23,14 @@ ms.locfileid: "118194730"
 ---
 # <a name="general-constants"></a>Allgemeine Konstanten
 
-Windows Portable Geräte definieren die folgenden Konstanten.
+Windows Portable Geräte definiert die folgenden Konstanten.
 
 
 
 | Konstante                                                                                                                                                                             | BESCHREIBUNG                                                                        |
 |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
 | <span id="WPD_MESSAGE"></span><span id="wpd_message"></span><dl> <dt>**\_WPD-NACHRICHT**</dt> </dl>                              | Treiber verwenden diese Konstante, um zu überprüfen, ob ein Befehl ein WPD-Befehl ist.<br/>    |
-| <span id="WPD_DEVICE_OBJECT_ID"></span><span id="wpd_device_object_id"></span><dl> <dt>**\_ \_ WPD-GERÄTEOBJEKT-ID \_**</dt> </dl> | Ein konstanter Wert, der als Bezeichner für das angegebene Gerät fungiert.<br/> |
+| <span id="WPD_DEVICE_OBJECT_ID"></span><span id="wpd_device_object_id"></span><dl> <dt>**\_ \_ WPD-GERÄTEOBJEKT-ID \_**</dt> </dl> | Ein konstanter Wert, der als Bezeichner für das gegebene Gerät fungiert.<br/> |
 
 
 

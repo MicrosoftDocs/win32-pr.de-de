@@ -1,6 +1,6 @@
 ---
 title: ProxyStubClsid32
-description: Karten einer IID in 32-Bit-Proxy-DLLs eine CLSID.
+description: Karten eine IID zu einer CLSID in 32-Bit-Proxy-DLLs.
 ms.assetid: 8d63d2b1-c8ba-4fe8-8025-e7ceee422ee7
 keywords:
 - ProxyStubClsid32-Registrierungswert COM
@@ -15,7 +15,7 @@ ms.locfileid: "118309896"
 ---
 # <a name="proxystubclsid32"></a>ProxyStubClsid32
 
-Karten einer IID in 32-Bit-Proxy-DLLs eine CLSID.
+Karten eine IID zu einer CLSID in 32-Bit-Proxy-DLLs.
 
 ## <a name="registry-entry"></a>Registrierungseintrag
 
@@ -29,9 +29,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Interface
 
 Dies ist ein **REG \_ SZ-Wert,** der die CLSID für die IID angibt.
 
-Dies ist ein erforderlicher Eintrag, da sich die IID-zu-CLSID-Zuordnung für 16-Bit- und 32-Bit-Schnittstellen unterscheiden kann. Die IID-zu-CLSID-Zuordnung hängt davon ab, wie die Schnittstellenproxys in einen Satz von Proxy-DLLs gepackt werden.
+Dies ist ein erforderlicher Eintrag, da sich die IID-zu-CLSID-Zuordnung bei 16-Bit- und 32-Bit-Schnittstellen unterscheiden kann. Die IID-zu-CLSID-Zuordnung hängt davon ab, wie die Schnittstellenproxys in einen Satz von Proxy-DLLs gepackt werden.
 
-Wenn Sie Schnittstellen hinzufügen, müssen Sie diesen Eintrag verwenden, um sie (32-Bit-Systeme) zu registrieren, damit OLE den entsprechenden Remotingcode finden kann, um eine prozessübergreifende Kommunikation zu ermöglichen.
+Wenn Sie Schnittstellen hinzufügen, müssen Sie diesen Eintrag verwenden, um sie (32-Bit-Systeme) zu registrieren, damit OLE den entsprechenden Remotingcode finden kann, um eine prozessübergreifende Kommunikation herzustellen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

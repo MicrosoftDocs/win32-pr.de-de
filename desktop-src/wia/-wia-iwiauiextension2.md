@@ -1,5 +1,5 @@
 ---
-description: Die IWiaUIExtension2-Schnittstelle stellt Methoden bereit, die die vom System bereitgestellte Standard-Benutzeroberfläche durch eine benutzerdefinierte Benutzeroberfläche ersetzen und ein benutzerdefiniertes Gerätesymbol bereitstellen.
+description: Die IWiaUIExtension2-Schnittstelle stellt Methoden bereit, die die vom System bereitgestellte Standardbenutzeroberfläche durch eine benutzerdefinierte Benutzeroberfläche ersetzen und ein benutzerdefiniertes Gerätesymbol bereitstellen.
 ms.assetid: 1a747ea3-2476-438b-baf0-903b86cbbb16
 title: IWiaUIExtension2-Schnittstelle (Wiadevd.h)
 ms.topic: reference
@@ -22,11 +22,11 @@ ms.locfileid: "118208143"
 ---
 # <a name="iwiauiextension2-interface"></a>IWiaUIExtension2-Schnittstelle
 
-Die IWiaUIExtension2-Schnittstelle stellt Methoden bereit, die die vom System bereitgestellte Standard-Benutzeroberfläche durch eine benutzerdefinierte Benutzeroberfläche ersetzen und ein benutzerdefiniertes Gerätesymbol bereitstellen. Gerätehersteller können diese Schnittstelle implementieren, um benutzerdefinierte Benutzeroberflächen für ihre Geräte zur Verfügung zu stellen.
+Die IWiaUIExtension2-Schnittstelle stellt Methoden bereit, die die vom System bereitgestellte Standardbenutzeroberfläche durch eine benutzerdefinierte Benutzeroberfläche ersetzen und ein benutzerdefiniertes Gerätesymbol bereitstellen. Gerätehersteller können diese Schnittstelle implementieren, um benutzerdefinierte Benutzeroberflächen für ihre Geräte bereitzustellen.
 
 ## <a name="members"></a>Member
 
-Die **IWiaUIExtension2-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IWiaUIExtension2** verfügt auch über diese Membertypen:
+Die **IWiaUIExtension2-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IWiaUIExtension2** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
@@ -36,9 +36,9 @@ Die **IWiaUIExtension2-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                       | BESCHREIBUNG                                                                                  |
+| Methode                                                       | Beschreibung                                                                                  |
 |:-------------------------------------------------------------|:---------------------------------------------------------------------------------------------|
-| [**DeviceDialog**](-wia-iwiauiextension2-devicedialog.md)   | Stellt eine benutzerdefinierte Benutzeroberfläche bereit, die die Standard-Benutzeroberfläche des Systems ersetzt.<br/> |
+| [**DeviceDialog**](-wia-iwiauiextension2-devicedialog.md)   | Stellt eine benutzerdefinierte Benutzeroberfläche bereit, die die Standardsystem-Benutzeroberfläche ersetzt.<br/> |
 | [**GetDeviceIcon**](-wia-iwiauiextension2-getdeviceicon.md) | Ruft ein benutzerdefiniertes Gerätesymbol ab.<br/>                                                        |
 
 
@@ -49,7 +49,7 @@ Die **IWiaUIExtension2-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| IUnknown-Methoden                                        | BESCHREIBUNG                               |
+| IUnknown-Methoden                                        | Beschreibung                               |
 |---------------------------------------------------------|-------------------------------------------|
 | [IUnknown::QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) | Gibt Zeiger auf unterstützte Schnittstellen zurück. |
 | [IUnknown::AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)                 | Inkrementiert Verweiszähler.               |
@@ -65,7 +65,7 @@ Die **IWiaUIExtension2-Schnittstelle** verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
 | Header<br/>                   | <dl> <dt>Wiadevd.h</dt> </dl> |
 

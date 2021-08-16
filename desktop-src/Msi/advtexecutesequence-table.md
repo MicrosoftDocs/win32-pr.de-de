@@ -84,7 +84,7 @@ Ein positiver Wert gibt die Sequenzposition der Aktion an. Die folgenden negativ
 
 
 
-| Beendigungsflag          | Wert | BESCHREIBUNG                                                                          |
+| Beendigungsflag          | Wert | Beschreibung                                                                          |
 |---------------------------|-------|--------------------------------------------------------------------------------------|
 | msiDoActionStatusSuccess  | –1    | Erfolgreicher Abschluss. Wird mit den Dialogfeldern [Beenden](exit-dialog.md) verwendet.               |
 | msiDoActionStatusUserExit | –2    | Der Benutzer beendet die Installation. Wird mit [UserExit-Dialogfeldern](userexit-dialog.md) verwendet.     |
@@ -99,7 +99,7 @@ Null, alle anderen negativen Zahlen oder ein NULL-Wert geben an, dass die Aktion
 
 </dd> </dl>
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

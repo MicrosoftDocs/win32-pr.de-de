@@ -13,7 +13,7 @@ ms.locfileid: "118309321"
 ---
 # <a name="service-identity"></a>Dienstidentität
 
-Wenn Sie diese Identität auswählen, wird die Anwendung als Dienst ausgeführt. Sie können Dienstkonten festlegen, indem Sie im **Systemsteuerung** die Option **Dienste** auswählen. Weitere Informationen finden Sie unter [Installing as a Service Application](installing-as-a-service-application.md).
+Wenn Sie diese Identität auswählen, wird die Anwendung als Dienst ausgeführt. Sie können Dienstkonten festlegen, indem Sie die **Option Dienste** im **Systemsteuerung.** Weitere Informationen finden Sie unter [Installieren als Dienstanwendung.](installing-as-a-service-application.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

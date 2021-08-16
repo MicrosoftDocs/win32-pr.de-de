@@ -1,19 +1,19 @@
 ---
-title: Allgemeine Steuerelement Parameter
-description: Im folgenden wird die allgemeine Syntax für eine Control Resource-Definition-Anweisung beschrieben.
+title: Allgemeine Steuerelementparameter
+description: Im Folgenden wird die allgemeine Syntax für eine Ressourcendefinitions-Anweisung des Steuerelements beschrieben.
 ms.assetid: e7a49a9f-93b5-4221-8006-3d1864b7a6a1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 261c71163276ed39841d6f6d7e125d4eb5420072
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: abbdbf707e1ee72f62c7c08cb7065f4d1a4b8f2f4c000d52f3a28c9806a21a0f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117870561"
 ---
-# <a name="common-control-parameters"></a>Allgemeine Steuerelement Parameter
+# <a name="common-control-parameters"></a>Allgemeine Steuerelementparameter
 
-Im folgenden wird die allgemeine Syntax für eine Control Resource-Definition-Anweisung beschrieben. Die Bedeutung der einzelnen Parameter ist unten angegeben. Gelegentlich verwendet eine-Anweisung einen-Parameter anders, oder es kann ein Parameter ignoriert werden. Die Anweisungs spezifische Variation wird in der Dokumentation für die-Anweisung beschrieben.
+Im Folgenden wird die allgemeine Syntax für eine Ressourcendefinitions-Anweisung des Steuerelements beschrieben. Die Bedeutung der einzelnen Parameter wird unten angegeben. Gelegentlich verwendet eine Anweisung einen Parameter anders oder ignoriert möglicherweise einen Parameter. Die anweisungsspezifische Variante wird in der Dokumentation für die -Anweisung beschrieben.
 
 ``` syntax
 control [[text,]] id, x, y, width, height[[, style[[, extended-style]]]][, helpId]
@@ -25,83 +25,83 @@ control [[text,]] id, x, y, width, height[[, style[[, extended-style]]]][, helpI
 <span id="text"></span><span id="TEXT"></span>*Text*
 </dt> <dd>
 
-Text, der mit dem-Steuerelement angezeigt werden soll. Der Text wird im-Steuerelement oder neben dem-Steuerelement positioniert.
+Text, der mit dem -Steuerelement angezeigt werden soll. Der Text wird innerhalb des Steuerelements oder neben dem Steuerelement positioniert.
 
-Dieser Parameter muss NULL oder mehr Zeichen enthalten, die in doppelten Anführungszeichen (") eingeschlossen sind. Zeichen folgen werden automatisch mit null-terminierter und in die resultierende Ressourcen Datei in Unicode konvertiert.
+Dieser Parameter muss 0 (null) oder mehr Zeichen enthalten, die in doppelte Anführungszeichen () eingeschlossen sind. Zeichenfolgen werden automatisch mit NULL beendet und in der resultierenden Ressourcendatei in Unicode konvertiert.
 
-Standardmäßig sind die zwischen den doppelten Anführungszeichen aufgelisteten Zeichen ANSI-Zeichen, und Escapesequenzen werden als Byte-Escapesequenzen interpretiert. Wenn der Zeichenfolge das Präfix "L" vorangestellt ist, ist die Zeichenfolge eine Zeichenfolge mit breit Zeichen, und Escapesequenzen werden als 2-Byte-Escapesequenzen interpretiert, die Unicode-Zeichen angeben Wenn im Text ein doppeltes Anführungszeichen erforderlich ist, müssen Sie das doppelte Anführungszeichen zweimal einschließen.
+Standardmäßig sind die zeichen, die zwischen den doppelten Anführungszeichen aufgeführt sind, ANSI-Zeichen, und Escapesequenzen werden als Byte-Escapesequenzen interpretiert. Wenn der Zeichenfolge das Präfix "L" vorangestellt ist, ist die Zeichenfolge eine Breitzeichenzeichenfolge, und Escapesequenzen werden als 2-Byte-Escapesequenzen interpretiert, die Unicode-Zeichen angeben. Wenn ein doppeltes Anführungszeichen im Text erforderlich ist, müssen Sie das doppelte Anführungszeichen zweimal verwenden.
 
-Ein kaufmännisches und-Zeichen (&) im Text gibt an, dass das folgende Zeichen als mnetmonisches Zeichen für das-Steuerelement verwendet wird. Wenn das Steuerelement angezeigt wird, wird das kaufmännische und-Zeichen nicht angezeigt, aber das mnetmonische Zeichen wird unterstrichen. Der Benutzer kann das Steuerelement auswählen, indem er die Taste drückt, die dem unterstrichenen mnetmonischen Zeichen entspricht. Um das kaufmännische und-Zeichen als Zeichen in einer Zeichenfolge zu verwenden, fügen Sie zwei kaufmännische und-Zeichen (&&) ein.
-
-</dd> <dt>
-
-<span id="id"></span><span id="ID"></span>*Name*
-</dt> <dd>
-
-Steuerelement Bei diesem Wert muss es sich um eine 16-Bit-Ganzzahl ohne Vorzeichen im Bereich 0 bis 65.535 oder um einen einfachen arithmetischen Ausdruck handeln, der zu einem Wert in diesem Bereich ausgewertet wird.
+Ein ampersand-Zeichen (&) im Text gibt an, dass das folgende Zeichen als mnemonisches Zeichen für das Steuerelement verwendet wird. Wenn das Steuerelement angezeigt wird, wird das ampersand-Zeichen nicht angezeigt, aber das mnemonische Zeichen wird unterstrichen. Der Benutzer kann das Steuerelement auswählen, indem er die Taste drückt, die dem unterstrichenen mnemonischen Zeichen entspricht. Um das ampersand-Zeichen als Zeichen in einer Zeichenfolge zu verwenden, fügen Sie zwei ampersands (&&) ein.
 
 </dd> <dt>
 
-<span id="x"></span><span id="X"></span>*Stuben*
+<span id="id"></span><span id="ID"></span>*Id*
 </dt> <dd>
 
-X-Koordinate des linken Rands des Steuer Elements relativ zur linken Seite des Dialog Felds. Dieser Wert muss eine 16-Bit-Ganzzahl ohne Vorzeichen im Bereich zwischen 0 und 65.535 sein. Die Koordinate befindet sich in Dialogfeld Einheiten und ist relativ zum Ursprung des Dialog Felds, Fensters oder Steuer Elements, das das angegebene Steuerelement enthält.
+Steuerelement Dieser Wert muss eine 16-Bit-Ganzzahl ohne Vorzeichen im Bereich von 0 bis 65.535 oder ein einfacher arithmetischer Ausdruck sein, der zu einem Wert in diesem Bereich ausgewertet wird.
 
 </dd> <dt>
 
-<span id="y"></span><span id="Y"></span>*Teenie*
+<span id="x"></span><span id="X"></span>*X*
 </dt> <dd>
 
-Y-Koordinate des oberen Rands des Steuer Elements relativ zum oberen Rand des Dialog Felds. Dieser Wert muss eine 16-Bit-Ganzzahl ohne Vorzeichen im Bereich zwischen 0 und 65.535 sein. Die Koordinate befindet sich in Dialog Einheiten relativ zum Ursprung des Dialog Felds, Fensters oder Steuer Elements, das das angegebene Steuerelement enthält.
+X-Koordinate der linken Seite des Steuerelements relativ zur linken Seite des Dialogfelds. Dieser Wert muss eine 16-Bit-Ganzzahl ohne Vorzeichen im Bereich von 0 bis 65.535 sein. Die Koordinate befindet sich in Dialogeinheiten und ist relativ zum Ursprung des Dialogfelds, Fensters oder Steuerelements, das bzw. das das angegebene Steuerelement enthält.
+
+</dd> <dt>
+
+<span id="y"></span><span id="Y"></span>*Y*
+</dt> <dd>
+
+Y-Koordinate der oberen Seite des Steuerelements relativ zum oberen Rand des Dialogfelds. Dieser Wert muss eine 16-Bit-Ganzzahl ohne Vorzeichen im Bereich von 0 bis 65.535 sein. Die Koordinate befindet sich in Dialogeinheiten relativ zum Ursprung des Dialogfelds, Fensters oder Steuerelements, das bzw. das das angegebene Steuerelement enthält.
 
 </dd> <dt>
 
 <span id="width"></span><span id="WIDTH"></span>*Breite*
 </dt> <dd>
 
-Breite des Steuer Elements. Dieser Wert muss eine 16-Bit-Ganzzahl ohne Vorzeichen im Bereich zwischen 1 und 65.535 sein. Die Breite liegt bei Einheiten von 1/4 Zeichen.
+Breite des Steuerelements. Dieser Wert muss eine 16-Bit-Ganzzahl ohne Vorzeichen im Bereich von 1 bis 65.535 sein. Die Breite beträgt 1/4 Zeichen.
 
 </dd> <dt>
 
-<span id="height"></span><span id="HEIGHT"></span>*Flugh*
+<span id="height"></span><span id="HEIGHT"></span>*Höhe*
 </dt> <dd>
 
-Die Höhe des Steuer Elements. Dieser Wert muss eine 16-Bit-Ganzzahl ohne Vorzeichen im Bereich zwischen 1 und 65.535 sein. Die Höhe ist in Einheiten von 1/8 Zeichen.
+Höhe des Steuerelements. Dieser Wert muss eine 16-Bit-Ganzzahl ohne Vorzeichen im Bereich von 1 bis 65.535 sein. Die Höhe beträgt 1/8 Zeichen.
 
 </dd> <dt>
 
-<span id="style"></span><span id="STYLE"></span>*Vorbild*
+<span id="style"></span><span id="STYLE"></span>*Stil*
 </dt> <dd>
 
-Steuerelement Stile. Verwenden Sie den bitweisen or ( \| )-Operator, um Stile zu kombinieren. Weitere Informationen finden Sie unter [Fenster Stile](../winmsg/window-styles.md).
+Steuerelementstile. Verwenden Sie den bitweisen OR \| ()-Operator, um Stile zu kombinieren. Weitere Informationen finden Sie unter [Fensterstile.](../winmsg/window-styles.md)
 
 </dd> <dt>
 
 <span id="extended-style"></span><span id="EXTENDED-STYLE"></span>*Erweiterter Stil*
 </dt> <dd>
 
-Erweiterte Fenster Stile. Sie müssen *Style* angeben, um den *erweiterten Stil* anzugeben. Weitere Informationen finden Sie unter [**ExStyle**](exstyle-statement.md).
+Erweiterte Fensterstile. Sie müssen style *angeben,* um erweiterte *Stile anzugeben.* Weitere Informationen finden Sie unter [**EXSTYLE**](exstyle-statement.md).
 
 </dd> <dt>
 
-<span id="helpId"></span><span id="helpid"></span><span id="HELPID"></span>*HelpID*
+<span id="helpId"></span><span id="helpid"></span><span id="HELPID"></span>*helpId*
 </dt> <dd>
 
-Numerischer Ausdruck, der die ID angibt, mit der das Steuerelement während der [**WM- \_ Hilfe**](../shell/wm-help.md) verarbeitet wird.
+Numerischer Ausdruck, der die ID angibt, mit der das Steuerelement während der [**WM \_ HELP-Verarbeitung identifiziert**](../shell/wm-help.md) wird.
 
 </dd> <dt>
 
 <span id="controlData"></span><span id="controldata"></span><span id="CONTROLDATA"></span>*controlData*
 </dt> <dd>
 
-Steuerelement spezifische Daten für das Steuerelement. Wenn ein Dialogfeld erstellt wird und ein Steuerelement in diesem Dialogfeld, das Steuerelement spezifische Daten enthält, erstellt wird, wird ein Zeiger auf diese Daten über den *LPARAM* der [**WM \_ Create**](../winmsg/wm-create.md) -Meldung für dieses Steuerelement an die Fenster Prozedur des Steuer Elements übermittelt.
+Steuerelementspezifische Daten für das Steuerelement. Wenn ein Dialogfeld erstellt wird und ein Steuerelement in diesem Dialogfeld mit steuerelementspezifischen Daten erstellt wird, wird ein Zeiger auf diese Daten über die *lParam-Nachricht* der [**WM \_ CREATE-Nachricht**](../winmsg/wm-create.md) für dieses Steuerelement an die Fensterprozedur des Steuerelements übergeben.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Horizontale Dialog Einheiten sind 1/4 der Dialogfeld Basis-breiten Einheit. Vertikale Einheiten sind 1/8 der Dialogfeld Basis-Höheneinheit. Die aktuellen Dialogfeld Basiseinheiten werden aus der Höhe und Breite der aktuellen System Schriftart berechnet. Die [**GetDialogBaseUnits**](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) -Funktion gibt die Dialog Basiseinheiten in Pixel zurück. Die Koordinaten sind relativ zum Ursprung des Dialog Felds.
+Horizontale Dialogeinheiten sind 1/4 der Basisbreiteneinheit des Dialogs. Vertikale Einheiten sind 1/8 der Basishöheneinheit des Dialogs. Die aktuellen Dialogbasiseinheiten werden aus der Höhe und Breite der aktuellen Systemschriftart berechnet. Die [**GetDialogBaseUnits-Funktion**](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) gibt die Basiseinheiten des Dialogs in Pixel zurück. Die Koordinaten sind relativ zum Ursprung des Dialogfelds.
 
- 
+ 
 
- 
+ 

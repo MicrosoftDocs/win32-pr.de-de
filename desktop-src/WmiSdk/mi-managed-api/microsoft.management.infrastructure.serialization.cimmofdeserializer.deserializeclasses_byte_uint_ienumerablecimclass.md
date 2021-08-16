@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: CimMofDeserializer.DeserializeClasses-Methode (Byte[], UInt32, IEnumerable <CimClass> )'
+description: 'Weitere Informationen finden Sie unter: CimMofDeserializer.DeserializeClasses-Methode (Byte[], UInt32, IEnumerable <CimClass> )'
 title: CimMofDeserializer.DeserializeClasses-Methode (Byte[], UInt32, IEnumerable(CimClass)) (Microsoft.Management.Infrastructure.Serialization)
 TOCTitle: CimMofDeserializer.DeserializeClasses method (Byte[], UInt32, IEnumerable(CimClass)) (Microsoft.Management.Infrastructure.Serialization)
 ms:assetid: M:Microsoft.Management.Infrastructure.Serialization.CimMofDeserializer.DeserializeClasses(System.Byte[],System.UInt32@,System.Collections.Generic.IEnumerable{Microsoft.Management.Infrastructure.CimClass})
@@ -80,14 +80,14 @@ Public Function DeserializeClasses (
   - offset  
     Typ: [System.UInt32](/dotnet/api/system.uint32?view=netframework-4.8)
     
-    Der Byteoffset zu der Position, an der mit dem Lesen der Daten begonnen werden soll. Wenn die Methode zurückgegeben wird, verweist der Offset auf das nächste Byte nach den deserialisierten Klassen.
+    Der Byteoffset zu der Position, an der mit dem Lesen der Daten begonnen werden soll. Wenn die Methode zurückgegeben wird, wird der Offset auf das nächste Byte nach den deserialisierten Klassen zeigen.
 
 <!-- end list -->
 
   - Klassen  
     Typ: [System.Collections.Generic.IEnumerable](/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.8)\<[CimClass](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832269(v=vs.85))\>
     
-    Ein optionaler Cache übergeordneter CIM-Klassen.
+    Ein optionaler Cache von übergeordneten CIM-Klassen.
 
 #### <a name="return-value"></a>Rückgabewert
 

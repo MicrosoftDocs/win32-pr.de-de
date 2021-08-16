@@ -3,7 +3,7 @@ title: WM/SubTitle
 description: Das WM/SubTitle-Attribut enthält den Untertitel des Inhalts.
 ms.assetid: 290ec571-3bb9-4817-8f63-3d6c3c9802bf
 keywords:
-- WM/Untertitelfenster-Medienformat
+- WM/SubTitle windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -29,7 +29,7 @@ g \_ wszWMSubTitle
 
 ## <a name="data-type"></a>Datentyp
 
-**\_WMT-TYPZEICHENFOLGE \_**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
 ## <a name="see-also"></a>Weitere Informationen
 

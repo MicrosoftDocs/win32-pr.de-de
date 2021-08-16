@@ -1,11 +1,11 @@
 ---
-title: Downloader. Pause-Methode
-description: In diesem Abschnitt werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Die Pause-Methode hält den Download an.
+title: DownloadItem.pause-Methode
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die pause-Methode hält den Download an.
 ms.assetid: 763d85da-1044-4a8c-98e7-8889bee6c2c7
 keywords:
-- Windows-Media Player für die Methoden Pause
-- Pause-Methode, Windows Media Player, Downloader-Klasse
-- Download Item-Klasse, Windows Media Player, Pause-Methode
+- pause-Methode Windows Media Player
+- pause-Methode Windows Media Player , DownloadItem-Klasse
+- DownloadItem-Klasse Windows Media Player , pause-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 875e06c221a20088b43d9902775238426dd0c5b7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8f0ff1bec36635f980ab630628a3e2ab1bd32a521afccb7debc984c4c29e851c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118340740"
 ---
-# <a name="downloaditempause-method"></a>Downloader. Pause-Methode
+# <a name="downloaditempause-method"></a>DownloadItem.pause-Methode
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **Pause** -Methode hält den Download an.
+Die **pause-Methode** hält den Download an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,9 +49,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Pause** -Methode hat keine Auswirkungen auf Echt Zeit Downloads.
+Die **Pause-Methode** hat keine Auswirkungen auf Echtzeitdownloads.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,19 +59,19 @@ Die **Pause** -Methode hat keine Auswirkungen auf Echt Zeit Downloads.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player serie 9 oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Download Item-Objekt**](downloaditem-object.md)
+[**DownloadItem-Objekt**](downloaditem-object.md)
 </dt> <dt>
 
-[**Download Item. Resume**](downloaditem-resume.md)
+[**DownloadItem.resume**](downloaditem-resume.md)
 </dt> </dl>
 
  

@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118207221"
 ---
-# <a name="iwicbitmapdecoder_getpreview_proxy-function"></a>\_IWICBitmapDecoder-GetPreview-Proxyfunktion \_
+# <a name="iwicbitmapdecoder_getpreview_proxy-function"></a>IWICBitmapDecoder \_ \_ GetPreview-Proxyfunktion
 
 Proxyfunktion für die [**GetPreview-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getpreview)
 
@@ -41,7 +41,7 @@ HRESULT IWICBitmapDecoder_GetPreview_Proxy(
 
 <dl> <dt>
 
-*THIS \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
 Typ: **[ **IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)\***
@@ -55,7 +55,7 @@ Zeiger auf dieses [**IWICBitmapDecoder-Objekt.**](/windows/desktop/api/Wincodec/
 
 Typ: **[ **IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)\*\***
 
-Ein Zeiger, der bei Unterstützung einen Zeiger auf die Vorschaubitmap empfängt.
+Ein Zeiger, der einen Zeiger auf die Vorschaubitmap empfängt, sofern unterstützt.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Ein Zeiger, der bei Unterstützung einen Zeiger auf die Vorschaubitmap empfängt
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 

@@ -1,22 +1,22 @@
 ---
-description: Windows stellt Standardsymbole für alle Elemente bereit, die auf dem Desktop und im Windows-Explorer angezeigt werden.
+description: Windows stellt Standardsymbole für jedes Element zur Anwendung, das auf dem Desktop und im Windows angezeigt wird.
 ms.assetid: 1827239c-0588-45aa-b7be-f96fb7affa65
 title: Anpassen von Symbolen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4ea304e2dfdba22d8ad470142f9854b895e2d89
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c2fad8ede85c27e730369d99e3ab3a58ec215c3d350e93d4171635481dce6927
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979512"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117678964"
 ---
 # <a name="customizing-icons"></a>Anpassen von Symbolen
 
-Windows stellt Standardsymbole für alle Elemente bereit, die auf dem Desktop und im Windows-Explorer angezeigt werden. Massenspeicher Geräten, z. b. Festplattenlaufwerke, werden auch Standardsymbole zugewiesen. Diese Symbole bieten jedoch häufig wenig Einblicke in den Inhalt der Datei oder das zugeordnete Programm. Sie können einem Dateisystem Ordner ein benutzerdefiniertes Symbol zuweisen, indem Sie eine [Desktop.ini](how-to-customize-folders-with-desktop-ini.md) Datei erstellen. In den folgenden Dokumenten wird beschrieben, wie Sie die Registrierung verwenden, um benutzerdefinierte Symbole mit Dateitypen und Laufwerk Buchstaben zu verknüpfen.
+Windows stellt Standardsymbole für jedes Element zur Anwendung, das auf dem Desktop und im Windows angezeigt wird. Massenspeichergeräten, z. B. Laufwerken, werden ebenfalls Standardsymbole zugewiesen. Diese Symbole bieten dem Benutzer jedoch häufig nur wenig Einblick in den Inhalt der Datei oder das zugeordnete Programm. Sie können einem Dateisystemordner ein benutzerdefiniertes Symbol zuweisen, indem Sie [ eine ](how-to-customize-folders-with-desktop-ini.md)Desktop.inierstellen. In den folgenden Dokumenten erfahren Sie, wie Sie mithilfe der Registrierung benutzerdefinierte Symbole Dateitypen und Laufwerkbuchstaben zuordnen.
 
 -   [Zuweisen eines benutzerdefinierten Symbols zu einem Dateityp](how-to-assign-a-custom-icon-to-a-file-type.md)
--   [Zuweisen eines benutzerdefinierten Symbols und einer Bezeichnung zu einem Laufwerk Buchstaben](how-to-assign-a-custom-icon-and-label-to-a-drive-letter.md)
+-   [Zuweisen eines benutzerdefinierten Symbols und einer bezeichnung zu einem Laufwerkbuchstaben](how-to-assign-a-custom-icon-and-label-to-a-drive-letter.md)
 
  
 

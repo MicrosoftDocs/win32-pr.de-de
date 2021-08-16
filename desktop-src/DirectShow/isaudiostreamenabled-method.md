@@ -41,7 +41,7 @@ Gibt einen booleschen Wert zurück, der angibt, ob der angegebene Audiostream f�
 
 ## <a name="remarks"></a>Hinweise
 
-Obwohl ein Datenträger bis zu acht unabhängige Audiostreams enthalten kann, ist nicht unbedingt jeder Stream für jeden Titel verfügbar. Ein Haupttitel eines Films kann beispielsweise drei Audiostreams für Englisch, Spanisch und Japanisch haben, aber der Titel "ComingEntspricht" kann nur einen Audiostream auf Englisch haben. Überprüfen Sie immer, ob ein Stream für einen Titel verfügbar ist, bevor Sie die [**CurrentAudioStream-Eigenschaft**](currentaudiostream-property.md) festlegen.
+Obwohl ein Datenträger bis zu acht unabhängige Audiostreams enthalten kann, ist nicht unbedingt jeder Stream für jeden Titel verfügbar. Ein Haupttitel eines Films kann beispielsweise drei Audiostreams für Englisch, Spanisch und Japanisch haben, aber der Titel "Coming Japanese" kann nur einen Audiostream auf Englisch haben. Überprüfen Sie immer, ob ein Stream für einen Titel verfügbar ist, bevor Sie die [**CurrentAudioStream-Eigenschaft**](currentaudiostream-property.md) festlegen.
 
  
 

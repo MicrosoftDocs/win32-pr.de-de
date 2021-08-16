@@ -1,7 +1,7 @@
 ---
-description: Die notifyendofstream-Methode sendet ein EC \_ Complete-Ereignis an den Filter Graph-Manager.
+description: Die NotifyEndOfStream-Methode sendet ein EC \_ COMPLETE-Ereignis an den Filtergraph-Manager.
 ms.assetid: 9eec5b65-654d-4b2e-be39-93225a7674a5
-title: Cbaserderderer. notifyendobstream-Methode (renbase. h)
+title: CBaseRenderer.NotifyEndOfStream-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2f1187705bfa678252237bd95d9a4cb21a0f97d4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 05504b2ca1520320777b93c1c066e91edd5135798e4710c6514dbe858737760b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368653"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118402811"
 ---
-# <a name="cbaserenderernotifyendofstream-method"></a>Cbaserderderer. notifyendobstream-Methode
+# <a name="cbaserenderernotifyendofstream-method"></a>CBaseRenderer.NotifyEndOfStream-Methode
 
-Die- `NotifyEndOfStream` Methode sendet ein [**EC \_ Complete**](ec-complete.md) -Ereignis an den Filter Graph-Manager.
+Die `NotifyEndOfStream` -Methode sendet ein [**EC \_ COMPLETE-Ereignis**](ec-complete.md) an den Filtergraph-Manager.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,22 +50,22 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> <dt>
 
-[**Cbaserderderer:: EndOf-Stream**](cbaserenderer-endofstream.md)
+[**CBaseRenderer::EndOfStream**](cbaserenderer-endofstream.md)
 </dt> <dt>
 
-[**Cbaserderderer:: sendendof-Stream**](cbaserenderer-sendendofstream.md)
+[**CBaseRenderer::SendEndOfStream**](cbaserenderer-sendendofstream.md)
 </dt> </dl>
 
  

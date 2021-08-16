@@ -1,7 +1,7 @@
 ---
-description: Beschreibt ein Effect-Objekt.
+description: Beschreibt ein Effektobjekt.
 ms.assetid: 161d3e7a-213a-4a83-a1b5-837b0aab96bf
-title: D3DXEFFECT_DESC-Struktur (D3dx9effect. h)
+title: D3DXEFFECT_DESC-Struktur (D3dx9effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9effect.h
-ms.openlocfilehash: c8e7a3a2adf19514e2e4d1c6f61dbea888ce033d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0b30ad0348a5c799690d668e036724d30808c2998eee9d762fa2ad3fc8106c91
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762054"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118298593"
 ---
-# <a name="d3dxeffect_desc-structure"></a>D3DXEFFECT- \_ Struktur
+# <a name="d3dxeffect_desc-structure"></a>D3DXEFFECT \_ DESC-Struktur
 
-Beschreibt ein Effect-Objekt.
+Beschreibt ein Effektobjekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,46 +49,46 @@ Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Eine Zeichenfolge, die den Namen des Effekts Erstellers enthält.
+Zeichenfolge, die den Namen des Effekterstellers enthält.
 
 </dd> <dt>
 
 **Parameter**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Anzahl der Parameter, die für die Auswirkung verwendet werden.
+Anzahl der für effect verwendeten Parameter.
 
 </dd> <dt>
 
-**O**
+**Techniken**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl der Techniken, die den Effekt darstellen können.
+Anzahl von Techniken, die den Effekt rendern können.
 
 </dd> <dt>
 
 **Funktionen**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl von Funktionen, die den Effekt darstellen können.
+Anzahl der Funktionen, die den Effekt rendern können.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Effect-Objekt kann mehrere renderingtechniken und-Parameter für denselben Effekt enthalten.
+Ein Effektobjekt kann mehrere Renderingtechniken und Parameter für denselben Effekt enthalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,7 +96,7 @@ Ein Effect-Objekt kann mehrere renderingtechniken und-Parameter für denselben E
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9effect. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9effect.h</dt> </dl> |
 
 
 
@@ -104,7 +104,7 @@ Ein Effect-Objekt kann mehrere renderingtechniken und-Parameter für denselben E
 
 <dl> <dt>
 
-[Effekt Strukturen](dx9-graphics-reference-effects-structures.md)
+[Effektstrukturen](dx9-graphics-reference-effects-structures.md)
 </dt> </dl>
 
  

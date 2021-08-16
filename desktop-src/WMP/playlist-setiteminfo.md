@@ -3,7 +3,7 @@ title: Playlist.setItemInfo-Methode
 description: Die setItemInfo-Methode gibt den Wert eines Wiedergabelistenattributs an.
 ms.assetid: ffecb43f-343d-4a4f-9356-0e3cfa85ce77
 keywords:
-- setItemInfo-Methode Windows Media Player
+- setItemInfo-Windows Media Player
 - setItemInfo-Methode Windows Media Player , Playlist-Klasse
 - Playlist-Klasse Windows Media Player , setItemInfo-Methode
 topic_type:
@@ -43,17 +43,17 @@ Playlist.setItemInfo(
 
 <dl> <dt>
 
-*name* \[ In\]
+*Name* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge,** die den Namen des festzulegenden Attributs enthält. Informationen zu den attributen, die von Windows Media Player unterstützt werden, finden Sie im Windows Media Player [Attributverweis.](attribute-reference.md)
+**Eine Zeichenfolge,** die den Namen des attributs enthält, das festgelegt werden soll. Informationen zu den attributes, die von Windows Media Player unterstützt werden, finden Sie in der Windows Media Player [Attribute Reference](attribute-reference.md).
 
 </dd> <dt>
 
-*wert* \[ In\]
+*value* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge,** die den neuen Wert für das Attribut enthält.
+**Eine Zeichenfolge,** die den neuen Wert für das Attribut enthält.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine besondere Verwendung der **setItemInfo-Methode** besteht darin, die Elemente in der Wiedergabeliste mithilfe des SortAttribute-Attributs zu sortieren. Im folgenden JScript Beispiel wird eine Wiedergabeliste nach den Werten des UserLastPlayedTime-Attributs sortiert. Die Variablenwiedergabeliste ist ein Verweis auf ein **Wiedergabelistenobjekt.**
+Eine besondere Verwendung der **setItemInfo-Methode** besteht in der Sortierung der Elemente in der Wiedergabeliste mithilfe des SortAttribute-Attributs. Im folgenden JScript wird eine Wiedergabeliste nach den Werten des UserLastPlayedTime-Attributs sortiert. Die Variablenwiedergabeliste ist ein Verweis auf ein **Playlist-Objekt.**
 
 
 ```JScript
@@ -72,13 +72,13 @@ playlist.setItemInfo("SortAttribute", "UserLastPlayedTime")
 
 
 
-Um diese Methode verwenden zu können, ist vollzugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
+Um diese Methode verwenden zu können, ist Vollzugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Beispielcode, der diese Eigenschaft verwendet, finden Sie in der [attributeCount-Eigenschaft.](playlist-attributecount.md)
+[Beispielcode, der diese Eigenschaft](playlist-attributecount.md) verwendet, finden Sie in der attributeCount-Eigenschaft.
 
 ## <a name="requirements"></a>Anforderungen
 

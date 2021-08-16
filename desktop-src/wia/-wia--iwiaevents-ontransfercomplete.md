@@ -43,14 +43,14 @@ Wia.OnTransferComplete(
 *Element* 
 </dt> <dd>
 
-Das übertragene [**Item-Objekt.**](-wia-item.md)
+Das [**übertragene**](-wia-item.md) Item-Objekt.
 
 </dd> <dt>
 
 *Path* 
 </dt> <dd>
 
-Der Pfad und der Dateiname des übertragenen Images.
+Der Pfad und Dateiname des übertragenen Bilds.
 
 </dd> </dl>
 
@@ -60,9 +60,9 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-WIA benachrichtigt das Skript oder die Anwendung, wenn eine Datenübertragung, ein Bild oder ein Sound erfolgreich abgeschlossen wurde. Implementieren Sie die **ObjWia** \_ **OnTransferComplete()-Unterroutine,** damit Ihr Skript oder Ihre Anwendung auf den Abschluss der Datenübertragung reagieren kann.
+WIA benachrichtigt das Skript oder die Anwendung, wenn eine Datenübertragung, ein Bild oder ein Sound erfolgreich abgeschlossen wurde. Implementieren Sie **die Unterroutine objWia** \_ **OnTransferComplete(),** damit Ihr Skript oder Ihre Anwendung auf den Abschluss der Datenübertragung reagieren kann.
 
-Angenommen, Sie möchten, dass ein Skript ein Bild anzeigt, nachdem es übertragen wurde.
+Beispielsweise können Sie ein Skript verwenden, um ein Bild nach der Übertragung anzuzeigen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Angenommen, Sie möchten, dass ein Skript ein Bild anzeigt, nachdem es übertrag
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 

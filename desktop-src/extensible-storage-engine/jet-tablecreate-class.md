@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_TABLECREATE-Klasse'
+description: 'Weitere Informationen zu: JET_TABLECREATE-Klasse'
 title: JET_TABLECREATE-Klasse
 TOCTitle: JET_TABLECREATE class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_TABLECREATE
@@ -24,12 +24,12 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a7f422e0d5eb8cb7fe28edb7d3139a073776f06b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d3bc04a6aad8d0d4c2b36d483f9d8b022a392e4d2bb8a8322fb2899ce364b413
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117892619"
 ---
 # <a name="jet_tablecreate-class"></a>JET_TABLECREATE-Klasse
 
@@ -40,8 +40,8 @@ Enthält die Informationen, die zum Erstellen einer Tabelle in einer ESE-Datenba
 [System.Object](/dotnet/api/system.object)  
   Microsoft.Isam.Esent.Interop.JET_TABLECREATE  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,10 +64,10 @@ public class JET_TABLECREATE : IContentEquatable<JET_TABLECREATE>,
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Mitglieder JET_TABLECREATE](./jet-tablecreate-members.md)
+[JET_TABLECREATE-Member](./jet-tablecreate-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,5 +1,5 @@
 ---
-description: Beim Zugriff auf einen WMI-Server (Windows Management Instrumentation) mit einem Skript können Sie zwischen NT LAN-Manager (NTLM) oder Kerberos-Authentifizierungsprotokollen wählen.
+description: Beim Zugriff auf einen WMI-Server (Windows Management Instrumentation) mit einem Skript können Sie zwischen NT LAN Manager (NTLM) oder Kerberos-Authentifizierungsprotokollen wählen.
 ms.assetid: db2dc750-bfdd-4f6c-859b-e104814f0800
 ms.tgt_platform: multiple
 title: Festlegen des Authentifizierungsdiensts mit VBScript
@@ -19,7 +19,7 @@ ms.locfileid: "118315387"
 ---
 # <a name="setting-the-authentication-service-using-vbscript"></a>Festlegen des Authentifizierungsdiensts mit VBScript
 
-Beim Zugriff auf einen WMI-Server (Windows Management Instrumentation) mit einem Skript können Sie zwischen NT LAN-Manager (NTLM) oder Kerberos-Authentifizierungsprotokollen wählen. Die Angabe von Kerberos ist nur bei Verwendung der Delegierung erforderlich. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer dritten Computerdelegierung.](connecting-to-a-3rd-computer-delegation.md)
+Beim Zugriff auf einen WMI-Server (Windows Management Instrumentation) mit einem Skript können Sie zwischen NT LAN Manager (NTLM) oder Kerberos-Authentifizierungsprotokollen wählen. Die Angabe von Kerberos ist nur bei Verwendung der Delegierung erforderlich. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer dritten Computerdelegierung.](connecting-to-a-3rd-computer-delegation.md)
 
 Da sich die Betriebssystemversionen darin unterscheiden, welcheN Authentifizierungsdienst sie verwenden, wird empfohlen, beim Herstellen einer Verbindung mit einem Remotesystem keinen Wert für das Autoritätsfeld anzugeben. Lassen Sie stattdessen zu, dass das Betriebssystem und die verteilte Version von Component Object Model (DCOM) NTLM oder Kerberos auswählen. Wenn ein Authentifizierungsdienst angegeben wird, erfordert die Syntax den Serverprinzipalnamen, d. h. den Namen des Zielcomputers anstelle des Domänencontrollers.
 

@@ -19,7 +19,7 @@ Das Format einer Datei auf einem Gerät kann mit einem GUID-Wert beschrieben wer
 
 Wenn ein Gerätehersteller ein vom Hersteller erweitertes Format unterstützt, kombiniert der Treiber den Formatcode des Herstellers (UINT16) mit den höchsten 16 Bits der **WPD \_ OBJECT FORMAT \_ \_ UNSPECIFIED** GUID.
 
-Wenn der vom Anbieter erweiterte Code beispielsweise 0xB001 ist, würde die resultierende GUID wie im folgenden Beispiel gezeigt sein:
+Wenn der vom Hersteller erweiterte Code beispielsweise 0xB001 ist, würde die resultierende GUID wie im folgenden Beispiel gezeigt sein:
 
 
 ```C++

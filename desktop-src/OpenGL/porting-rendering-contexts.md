@@ -3,8 +3,8 @@ title: Portieren von Renderingkontexten
 description: Portieren von Renderingkontexten
 ms.assetid: 8655a81b-9f13-4ee5-ba0d-9aa9da1bfd09
 keywords:
-- Renderingkontexte OpenGL, Portieren
-- OpenGL für Windows,Renderingkontexte
+- Renderingkontexte OpenGL , portieren
+- OpenGL auf Windows,Renderingkontexte
 - Portieren zu OpenGL, Rendern von Kontexten
 - OpenGL-Portierung, Renderingkontexte
 ms.topic: article
@@ -18,28 +18,28 @@ ms.locfileid: "118358340"
 ---
 # <a name="porting-rendering-contexts"></a>Portieren von Renderingkontexten
 
-Das X-Fenstersystem und Windows über Renderingkontexte gerendert. Sechs GLX-Funktionen verwalten Renderingkontexte, und fünf davon verfügen über eine entsprechende Windows Funktion.
+Das X-Fenstersystem und Windows durch Renderingkontexte gerendert werden. Sechs GLX-Funktionen verwalten Renderingkontexte, und fünf davon verfügen über eine Windows Funktion.
 
-In der folgenden Tabelle sind die GLX-Renderingfunktionen und die entsprechenden Windows Funktionen aufgeführt.
+In der folgenden Tabelle sind die GLX-Renderingfunktionen und die entsprechenden Windows aufgeführt.
 
 
 
 | GLX-Renderingkontextfunktion                                                                            | Windows Renderingkontextfunktion                                      |
 |-----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| GLXContext **glXCopyContext**( Display *\* dpy*, GLXContext *src*, GLXContext *dst*, GLuint *mask*)            | Nicht zutreffend                                                         |
-| GLXContext **glXCreateContext**( Anzeigen *\* von dpy*, XVisualInfo *\* vis*,GLXContext *shareList*, Bool *direct*) | HGLRC [**wglCreateContext**](/windows/desktop/api/wingdi/nf-wingdi-wglcreatecontext)( HDC *hdc*)          |
-| void **glXDeleteContext**( Display *\* dpy*,GLXContext *ctx*)                                              | BOOL [**wglDeleteContext**](/windows/desktop/api/wingdi/nf-wingdi-wgldeletecontext)( HGLRC *hglrc*)       |
+| GLXContext **glXCopyContext**( *\* Dpy* anzeigen , GLXContext *src*, GLXContext *dst*, GLuint *mask*)            | Nicht zutreffend                                                         |
+| GLXContext **glXCreateContext**( *\* Dpy* anzeigen , XVisualInfo *\* gegenüber*, GLXContext *shareList*, Bool *direct*) | HGLRC [**wglCreateContext**](/windows/desktop/api/wingdi/nf-wingdi-wglcreatecontext)( HDC *hdc*)          |
+| void **glXDeleteContext**( *\* dpy* anzeigen , GLXContext *ctx*)                                              | BOOL [**wglDeleteContext**](/windows/desktop/api/wingdi/nf-wingdi-wgldeletecontext)( HGLRC *hglrc*)       |
 | GLXContext **glXGetCurrentContext**(*void*)                                                               | HGLRC [**wglGetCurrentContext**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentcontext)(*VOID*)      |
 | GLXDrawable **glXGetCurrentDrawable**(*void*)                                                             | HDC [**wglGetCurrentDC**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentdc)(*VOID*)                  |
-| Bool **glXMakeCurrent**( Display *\* dpy*, GLXDrawable *draw*, GLXContext *ctx*)                              | BOOL [**wglMakeCurrent**](/windows/desktop/api/wingdi/nf-wingdi-wglmakecurrent)( HDC *hdc*, HGLRC *hglrc*) |
+| Bool **glXMakeCurrent**( *\* Dpy* anzeigen , GLXDrawable *zeichnen*, GLXContext *ctx*)                              | BOOL [**wglMakeCurrent**](/windows/desktop/api/wingdi/nf-wingdi-wglmakecurrent)( HDC *hdc*, HGLRC *hglrc*) |
 
 
 
  
 
-Rückgabetypen und andere Typen haben im X-Fenstersystem andere Namen als in Windows. Sie können nach Vorkommen von GLXContext suchen, um Teile Ihres Codes zu finden, die portiert werden müssen.
+Rückgabetypen und andere Typen haben im X-Fenstersystem andere Namen als in Windows. Sie können nach Vorkommen von GLXContext suchen, um Teile des Codes zu finden, die portiert werden müssen.
 
-In den folgenden Abschnitten werden Codebeispiele für den Renderingkontext in einem X-Fenstersystemprogramm mit dem gleichen Code verglichen, nachdem er zu Windows portiert wurde.
+In den folgenden Abschnitten werden Renderingkontext-Codebeispiele in einem X Window System-Programm mit demselben Code verglichen, nachdem dieser portiert Windows.
 
 Weitere Informationen zu Renderingkontexten finden Sie unter [Renderingkontexte.](rendering-contexts.md)
 

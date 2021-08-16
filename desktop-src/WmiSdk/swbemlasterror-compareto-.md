@@ -2,7 +2,7 @@
 description: Die \_ CompareTo-Methode des SWbemLastError-Objekts vergleicht zwei SWbemObject-Objekte. Dieser Vergleich unterliegt bestimmten Einschränkungen, die auf den im iFlags-Parameter angegebenen Werten basieren.
 ms.assetid: 541510e4-ef8d-4436-966f-19c5df422281
 ms.tgt_platform: multiple
-title: SWbemLastError.CompareTo_ -Methode (Wbemdisp.h)
+title: SWbemLastError.CompareTo_-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -25,7 +25,7 @@ ms.locfileid: "118314594"
 ---
 # <a name="swbemlasterrorcompareto_-method"></a>SWbemLastError.CompareTo-Methode \_
 
-Die **CompareTo-Methode \_** des [**SWbemLastError-Objekts**](swbemlasterror.md) vergleicht zwei [**SWbemObject-Objekte.**](swbemobject.md) Dieser Vergleich unterliegt bestimmten Einschränkungen, die auf den im *iFlags-Parameter angegebenen Werten* basieren.
+Die **\_ CompareTo-Methode** des [**SWbemLastError-Objekts**](swbemlasterror.md) vergleicht zwei [**SWbemObject-Objekte.**](swbemobject.md) Dieser Vergleich unterliegt bestimmten Einschränkungen, die auf den im *iFlags-Parameter* angegebenen Werten basieren.
 
 Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
@@ -55,7 +55,7 @@ Erforderlich. Ein [**SWbemObject-Klassenobjekt.**](swbemobject.md) Dieser Parame
 *iFlags* \[ in, optional\]
 </dt> <dd>
 
-Eine ganze Zahl, die zusätzliche Flags für den Vorgang angibt. Dieser Parameter gibt die Objektmerkmale an, die bei Objektvergleichen zu berücksichtigen sind. Sie können **wbemComparisonFlagIncludeAll** verwenden, um alle Features (Standard) oder eine beliebige Kombination der folgenden Werte zu berücksichtigen.
+Eine ganze Zahl, die zusätzliche Flags für den Vorgang angibt. Dieser Parameter gibt die Objektmerkmale an, die bei Objektvergleichen berücksichtigt werden sollen. Sie können **wbemComparisonFlagIncludeAll** verwenden, um alle Features (Standard) oder eine beliebige Kombination der folgenden Werte zu berücksichtigen.
 
 <dt>
 
@@ -72,12 +72,12 @@ Bewirkt, dass alle Eigenschaften, Qualifizierer und Varianten verglichen werden.
 
 <span id="wbemComparisonFlagIgnoreQualifiers"></span><span id="wbemcomparisonflagignorequalifiers"></span><span id="WBEMCOMPARISONFLAGIGNOREQUALIFIERS"></span>
 
-<span id="wbemComparisonFlagIgnoreQualifiers"></span><span id="wbemcomparisonflagignorequalifiers"></span><span id="WBEMCOMPARISONFLAGIGNOREQUALIFIERS"></span>wbemComparisonFlagIgnoreQualifiers** (1 (0x1))
+<span id="wbemComparisonFlagIgnoreQualifiers"></span><span id="wbemcomparisonflagignorequalifiers"></span><span id="WBEMCOMPARISONFLAGIGNOREQUALIFIERS"></span>wbemComparisonFlagIgnoreQualifiers" (1 (0x1))
 
 
 </dt> <dd>
 
-Bewirkt, dass alle Qualifizierer (einschließlich **Key** und **Dynamic**) im Vergleich ignoriert werden.
+Bewirkt, dass alle Qualifizierer (einschließlich **Schlüssel** und **dynamischer**) im Vergleich ignoriert werden.
 
 </dd> <dt>
 
@@ -88,7 +88,7 @@ Bewirkt, dass alle Qualifizierer (einschließlich **Key** und **Dynamic**) im Ve
 
 </dt> <dd>
 
-Bewirkt, dass die Quelle der Objekte, d. h. der Server und der Namespace, von dem sie stammen, im Vergleich zu anderen Objekten ignoriert wird.
+Bewirkt, dass die Quelle der Objekte, nämlich der Server und der Namespace, von dem sie stammen, im Vergleich zu anderen Objekten ignoriert werden.
 
 </dd> <dt>
 
@@ -105,29 +105,29 @@ Bewirkt, dass die Standardwerte von Eigenschaften ignoriert werden. Dieses Flag 
 
 <span id="wbemComparisonFlagIgnoreClass"></span><span id="wbemcomparisonflagignoreclass"></span><span id="WBEMCOMPARISONFLAGIGNORECLASS"></span>
 
-<span id="wbemComparisonFlagIgnoreClass"></span><span id="wbemcomparisonflagignoreclass"></span><span id="WBEMCOMPARISONFLAGIGNORECLASS"></span>wbemComparisonFlagIgnoreClass** (8 (0x8))
+<span id="wbemComparisonFlagIgnoreClass"></span><span id="wbemcomparisonflagignoreclass"></span><span id="WBEMCOMPARISONFLAGIGNORECLASS"></span>wbemComparisonFlagIgnoreClass( (8 (0x8))
 
 
 </dt> <dd>
 
-Weist das System an, davon auszugehen, dass die verglichenen Objekte Instanzen derselben Klasse sind. Folglich vergleicht dieses Flag nur instanzbezogene Informationen. Mithilfe dieses Flags können Sie die Leistung optimieren. Wenn die Objekte nicht zu derselben Klasse gehören, sind die Ergebnisse undefiniert.
+Weist das System an, davon auszugehen, dass es sich bei den verglichenen Objekten um Instanzen derselben Klasse handelt. Folglich vergleicht dieses Flag nur instanzbezogene Informationen. Mithilfe dieses Flags können Sie die Leistung optimieren. Wenn die Objekte nicht zu derselben Klasse gehören, sind die Ergebnisse undefiniert.
 
 </dd> <dt>
 
 <span id="wbemComparisonFlagIgnoreCase"></span><span id="wbemcomparisonflagignorecase"></span><span id="WBEMCOMPARISONFLAGIGNORECASE"></span>
 
-<span id="wbemComparisonFlagIgnoreCase"></span><span id="wbemcomparisonflagignorecase"></span><span id="WBEMCOMPARISONFLAGIGNORECASE"></span>wbemComparisonFlagIgnoreCase** (16 (0x10))
+<span id="wbemComparisonFlagIgnoreCase"></span><span id="wbemcomparisonflagignorecase"></span><span id="WBEMCOMPARISONFLAGIGNORECASE"></span>wbemComparisonFlagIgnoreCase( (16 (0x10))
 
 
 </dt> <dd>
 
-Bewirkt, dass Zeichenfolgenwerte ohne Unterscheidung nach Groß-/Kleinschreibung verglichen werden. Dies gilt sowohl für Zeichenfolgen als auch für Qualifiziererwerte. Unabhängig davon, ob dieses Flag angegeben ist, werden Eigenschaften- und Qualifizierernamen immer ohne Berücksichtigung von Groß- und Kleinschreibung verglichen.
+Bewirkt, dass Zeichenfolgenwerte ohne Überschreitung der Groß-/Kleinschreibung verglichen werden. Dies gilt sowohl für Zeichenfolgen als auch für Qualifiziererwerte. Unabhängig davon, ob dieses Flag angegeben ist, werden Eigenschaften- und Qualifizierernamen immer ohne Berücksichtigung von Groß- und Kleinschreibung verglichen.
 
 </dd> <dt>
 
 <span id="wbemComparisonFlagIgnoreFlavor"></span><span id="wbemcomparisonflagignoreflavor"></span><span id="WBEMCOMPARISONFLAGIGNOREFLAVOR"></span>
 
-<span id="wbemComparisonFlagIgnoreFlavor"></span><span id="wbemcomparisonflagignoreflavor"></span><span id="WBEMCOMPARISONFLAGIGNOREFLAVOR"></span>wbemComparisonFlagIgnoreFlavor** (32 (0x20))
+<span id="wbemComparisonFlagIgnoreFlavor"></span><span id="wbemcomparisonflagignoreflavor"></span><span id="WBEMCOMPARISONFLAGIGNOREFLAVOR"></span>wbemComparisonFlagIgnoreFlavor( (32 (0x20))
 
 
 </dt> <dd>
@@ -138,7 +138,7 @@ Bewirkt, dass Qualifizierer-Varianten ignoriert werden. Dieses Flag berücksicht
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **CompareTo-Methode \_** gibt den booleschen Wert TRUE **zurück,** wenn die Objekte übereinstimmen. Andernfalls wird FALSE **zurückgegeben.**
+Die **CompareTo-Methode \_** gibt den booleschen Wert **TRUE** zurück, wenn die Objekte übereinstimmen. Andernfalls wird **FALSE** zurückgegeben.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -163,7 +163,7 @@ Ein angegebener Parameter ist ungültig.
 **wbemErrOutOfMemory** – 2147749894 (0x80041006)
 </dt> <dd>
 
-Nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs.
+Nicht genügend Arbeitsspeicher, um den Vorgang abzuschließen.
 
 </dd> </dl>
 
