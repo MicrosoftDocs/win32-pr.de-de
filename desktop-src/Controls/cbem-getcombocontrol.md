@@ -1,9 +1,9 @@
 ---
-title: CBEM_GETCOMBOCONTROL Meldung (kommstrg. h)
-description: Ruft das Handle für das untergeordnete Kombinations Feld-Steuerelement ab.
+title: CBEM_GETCOMBOCONTROL (Commctrl.h)
+description: Ruft das Handle für das untergeordnete Kombinationsfeld-Steuerelement ab.
 ms.assetid: b7eb8607-79c5-4dc8-b835-4014093532e4
 keywords:
-- Windows-Steuerelemente für CBEM_GETCOMBOCONTROL Meldung
+- CBEM_GETCOMBOCONTROL message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ef61e949ff8fb63d9113b0a1ecbfebc76424a3f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2295812303a1c459dea70619dfe43e466f5e3ebaa09d77c421451be7526107ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117832258"
 ---
-# <a name="cbem_getcombocontrol-message"></a>CBEM \_ getcombocontrol-Meldung
+# <a name="cbem_getcombocontrol-message"></a>CBEM \_ GETCOMBOCONTROL-Nachricht
 
-Ruft das Handle für das untergeordnete Kombinations Feld-Steuerelement ab.
+Ruft das Handle für das untergeordnete Kombinationsfeld-Steuerelement ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft das Handle für das untergeordnete Kombinations Feld-Steuerelement ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für das Kombinations Feld-Steuerelement innerhalb des ComboBoxEx-Steuer Elements zurück.
+Gibt das Handle an das Kombinationsfeld-Steuerelement innerhalb des ComboBoxEx-Steuerelements zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt das Handle für das Kombinations Feld-Steuerelement innerhalb des ComboBoxE
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -14,11 +14,11 @@ ms.locfileid: "118406920"
 # <a name="device-roles-for-legacy-windows-multimedia-applications"></a>Geräterollen für Legacy-Windows Multimediaanwendungen
 
 > [!Note]  
-> Die MMDevice-API unterstützt Geräterollen. Die Benutzeroberfläche in Windows Vista implementiert jedoch keine Unterstützung für dieses Feature. Die Unterstützung der Benutzeroberfläche für Geräterollen kann in einer zukünftigen Version von Windows implementiert werden. Weitere Informationen finden Sie unter [Geräterollen in Windows Vista](device-roles-in-windows-vista.md).
+> Die MMDevice-API unterstützt Geräterollen. Die Benutzeroberfläche in Windows Vista implementiert jedoch keine Unterstützung für dieses Feature. Die Benutzeroberflächenunterstützung für Geräterollen kann in einer zukünftigen Version von Windows implementiert werden. Weitere Informationen finden Sie unter [Geräterollen in Windows Vista](device-roles-in-windows-vista.md).
 
  
 
-Die älteren Windows Multimediafunktionen **waveOutXxx** und **waveInXxx** bieten keine Möglichkeit für eine Anwendung, das [Audioendpunktgerät](audio-endpoint-devices.md) auszuwählen, das der Benutzer einer bestimmten [Geräterolle](device-roles.md)zugewiesen hat. In Windows Vista können die Kernaudio-APIs jedoch in Verbindung mit einer Windows Multimediaanwendung verwendet werden, um die Geräteauswahl basierend auf der Geräterolle zu aktivieren. Beispielsweise kann eine **waveOutXxx-Anwendung** mithilfe der [MMDevice-API](mmdevice-api.md)das Audioendpunktgerät identifizieren, das einer Rolle zugewiesen ist, das entsprechende Waveformausgabegerät identifizieren und die **waveOutOpen-Funktion** aufrufen, um eine Instanz des Geräts zu öffnen. Weitere Informationen zu **waveOutXxx** und **waveInXxx** finden Sie in der Windows SDK-Dokumentation.
+Die Legacyfunktionen Windows **Multimediafunktionen waveOutXxx** und **waveInXxx** bieten keine Möglichkeit für eine Anwendung, das [Audioendpunktgerät](audio-endpoint-devices.md) auszuwählen, das der Benutzer einer bestimmten [Geräterolle](device-roles.md)zugewiesen hat. In Windows Vista können die Kernaudio-APIs jedoch in Verbindung mit einer Windows Multimediaanwendung verwendet werden, um die Geräteauswahl basierend auf der Geräterolle zu aktivieren. Beispielsweise kann eine **waveOutXxx-Anwendung** mithilfe der [MMDevice-API](mmdevice-api.md)das Audioendpunktgerät identifizieren, das einer Rolle zugewiesen ist, das entsprechende Waveformausgabegerät identifizieren und die **waveOutOpen-Funktion** aufrufen, um eine Instanz des Geräts zu öffnen. Weitere Informationen zu **waveOutXxx** und **waveInXxx** finden Sie in der Windows SDK-Dokumentation.
 
 Das folgende Codebeispiel zeigt, wie Sie die Waveform-Geräte-ID für das Renderingendpunktgerät abrufen, das einer bestimmten Geräterolle zugewiesen ist:
 
@@ -161,7 +161,7 @@ Die Funktion im vorherigen Codebeispiel ruft die Waveform-Geräte-ID für ein Re
 -   Ändern Sie den Handletyp HWAVEOUT in HWAVEIN.
 -   Ersetzen Sie die ERole-Enumerationskonstante eRender durch eCapture. [](/windows/win32/api/mmdeviceapi/ne-mmdeviceapi-erole)
 
-In Windows Vista weisen die **WaveOutOpen-** und **waveInOpen-Funktionen** der Standardsitzung immer die audiostreams zu, die sie erstellen – die prozessspezifische Sitzung, die durch den GUID-Wert DER Sitzung ALS NULL identifiziert \_ wird.
+In Windows Vista weisen die **WaveOutOpen-** und **waveInOpen-Funktionen** immer die Audiostreams zu, die sie erstellen, der Standardsitzung – der prozessspezifischen Sitzung, die durch den GUID-Wert der Sitzung GUID NULL identifiziert \_ wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

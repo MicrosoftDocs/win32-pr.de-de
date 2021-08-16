@@ -1,9 +1,9 @@
 ---
-title: PBM_SETBARCOLOR Meldung (kommstrg. h)
-description: Legt die Farbe der Statusanzeige Leiste im Statusanzeige-Steuerelement fest.
+title: PBM_SETBARCOLOR (Commctrl.h)
+description: Legt die Farbe der Statusanzeige im Statusanzeige-Steuerelement fest.
 ms.assetid: 4b512420-04ec-4884-ab13-4c58304b95f6
 keywords:
-- Windows-Steuerelemente für PBM_SETBARCOLOR Meldung
+- PBM_SETBARCOLOR meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1387e69622e84990a197dc5a374d1c3449393408
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: babff5ad74d943d64f5ad61354447498e91e1325c99c82b32183fbc62eabafdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117830201"
 ---
-# <a name="pbm_setbarcolor-message"></a>PBM- \_ setbarcolor-Meldung
+# <a name="pbm_setbarcolor-message"></a>PBM \_ SETBARCOLOR-Meldung
 
-Legt die Farbe der Statusanzeige Leiste im Statusanzeige-Steuerelement fest.
+Legt die Farbe der Statusanzeige im Statusanzeige-Steuerelement fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,17 +39,17 @@ Muss Null sein.
 *lParam* 
 </dt> <dd>
 
-Der **COLORREF** -Wert, der die neue Statusanzeige leisten Farbe angibt. Wenn Sie den CLR- \_ Standardwert angeben, wird in der Statusleiste die standardmäßige Statusanzeige leisten Farbe verwendet.
+Der **COLORREF-Wert,** der die neue Statusanzeigenfarbe angibt. Die Angabe des CLR \_ DEFAULT-Werts bewirkt, dass die Statusanzeige ihre Standardfarbe für die Statusanzeige verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die vorherige Status Indikator leisten Farbe oder CLR-Standardwert zurück, \_ Wenn die Statusanzeige leisten Farbe die Standardfarbe ist.
+Gibt die vorherige Statusanzeigenfarbe oder CLR DEFAULT zurück, wenn \_ die Statusanzeigefarbe die Standardfarbe ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn visuelle Stile aktiviert sind, hat diese Nachricht keine Auswirkung.
+Wenn visuelle Stile aktiviert sind, hat diese Meldung keine Auswirkungen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Wenn visuelle Stile aktiviert sind, hat diese Nachricht keine Auswirkung.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

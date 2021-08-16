@@ -4,12 +4,12 @@ description: Identifiziert die \_ PKEY \_ FontProperties \_ Strikethrough-Eigens
 ms.assetid: 18ee653d-db01-4615-a85d-ad4ac6a0f422
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b684704fdd90a8dd1b88b14db2b52540b15fccb
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 746172ec2209861615375e73dee3f2336950a2dd93e76b33893190e9f7e8bc18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443791"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117850305"
 ---
 # <a name="ui_pkey_fontproperties_strikethrough"></a>UI \_ PKEY \_ FontProperties \_ Strikethrough
 
@@ -27,25 +27,25 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-PKEY FontProperties Strikethrough der Benutzeroberfläche wird von einer Anwendung verwendet, um den Zustand der \_ \_ Schaltfläche \_ **Durchgestreichen** abfragt.
+Ui \_ PKEY \_ FontProperties \_ Strikethrough wird von einer Anwendung verwendet, um den Zustand der Schaltfläche **Durchgestrichen** abzufragen.
 
-Der -Eigenschaftswert ist aus der [**\_ FONTPROPERTIES-Enumeration der Benutzeroberfläche.**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontproperties)
+Der Eigenschaftswert stammt aus der [**\_ FONTPROPERTIES-Enumeration der Benutzeroberfläche.**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontproperties)
 
-Standardwert: `UI_FONTPROPERTIES_NOTSET`.
+Der Standardwert ist `UI_FONTPROPERTIES_NOTSET`.
 
-Der folgende Screenshot zeigt die Schaltfläche **Durchstreichen** des [**FontControl-Menübands.**](windowsribbon-element-fontcontrol.md)
+Der folgende Screenshot zeigt die Schaltfläche **Durchgestrichen** des [**Menübands FontControl**](windowsribbon-element-fontcontrol.md).
 
 ![Screenshot des fontcontrol-Elements mit dem richfont-Attribut, das auf TRUE festgelegt ist.](images/markup/fontcontrol-strikethrough.png)
 
-In der folgenden Tabelle werden die Eigenschaften und das Ergebnis der Benutzeroberfläche beschrieben.
+In der folgenden Tabelle werden die Eigenschaften und das Benutzeroberflächenergebnis beschrieben.
 
 
 
 |   Eigenschaft                       |    Ergebnis der Benutzeroberfläche                                                                 |
 |----------------------------------|------------------------------------------------------------------------------|
-| `UI_FONTPROPERTIES_NOTAVAILABLE` | **Die Schaltfläche** "Durchgestreichen" ist deaktiviert und kann nur von der Anwendung festgelegt werden. |
-| `UI_FONTPROPERTIES_NOTSET`       | **Die Durchstreichschaltfläche** ist nicht ausgewählt.                                    |
-| `UI_FONTPROPERTIES_SET`          | **Die Schaltfläche Durchgestreichen** ist ausgewählt.                                        |
+| `UI_FONTPROPERTIES_NOTAVAILABLE` | Die Schaltfläche **"Durchgestrichen"** ist deaktiviert und kann nur von der Anwendung festgelegt werden. |
+| `UI_FONTPROPERTIES_NOTSET`       | Die Schaltfläche **"Durchgestrichen"** ist nicht ausgewählt.                                    |
+| `UI_FONTPROPERTIES_SET`          | Die Schaltfläche **"Durchgestrichen"** ist ausgewählt.                                        |
 
 
 
@@ -55,13 +55,13 @@ In der folgenden Tabelle werden die Eigenschaften und das Ergebnis der Benutzero
 
 <dl> <dt>
 
-[Eigenschaften des Schriftart-Steuerelements](windowsribbon-reference-properties-fontcontrol.md)
+[Eigenschaften des Schriftartsteuerelements](windowsribbon-reference-properties-fontcontrol.md)
 </dt> <dt>
 
-[**SCHRIFTARTEIGENSCHAFTEN \_ DER BENUTZEROBERFLÄCHE**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontproperties)
+[**UI \_ FONTPROPERTIES**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontproperties)
 </dt> <dt>
 
-[Schriftart-Steuerelement](windowsribbon-controls-fontcontrol.md)
+[Schriftartsteuerelement](windowsribbon-controls-fontcontrol.md)
 </dt> </dl>
 
  

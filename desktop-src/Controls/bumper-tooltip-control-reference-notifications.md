@@ -1,6 +1,6 @@
 ---
-title: QuickInfo-Steuerelementbenachrichtigungen
-description: QuickInfo-Steuerelementbenachrichtigungen
+title: QuickInfo-Steuerungsbenachrichtigungen
+description: QuickInfo-Steuerungsbenachrichtigungen
 ms.assetid: 181390f8-359c-41be-9010-b302b22fb878
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118415264"
 ---
-# <a name="tooltip-control-notifications"></a>QuickInfo-Steuerelementbenachrichtigungen
+# <a name="tooltip-control-notifications"></a>QuickInfo-Steuerungsbenachrichtigungen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

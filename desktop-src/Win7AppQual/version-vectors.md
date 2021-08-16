@@ -1,5 +1,5 @@
 ---
-description: Ein Versionsvektor verarbeitet bedingte Kommentare auf einer HTML-Webseite. Versionsvektoren ermöglichen Es Ihnen also, Markup basierend auf der Browserversion zu erstellen.
+description: Ein Versionsvektor verarbeitet bedingte Kommentare auf einer HTML-Webseite. Versionsvektoren ermöglichen es Ihnen, Markup basierend auf der Browserversion zu erstellen.
 ms.assetid: 526080CD-CE76-48B8-AEBC-6A135FD95BB0
 title: Versionsvektoren
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118328606"
 ---
 # <a name="version-vectors"></a>Versionsvektoren
 
-Ein *Versionsvektor* verarbeitet bedingte Kommentare auf einer HTML-Webseite. Versionsvektoren ermöglichen Es Ihnen also, Markup basierend auf der Browserversion zu erstellen.
+Ein *Versionsvektor* verarbeitet bedingte Kommentare auf einer HTML-Webseite. Versionsvektoren ermöglichen es Ihnen, Markup basierend auf der Browserversion zu erstellen.
 
 Betrachten Sie das folgende Codebeispiel.
 
@@ -35,15 +35,15 @@ Betrachten Sie das folgende Codebeispiel.
 
 
 
-Wenn die Windows Internet Explorer Browserversion in diesem Fall mindestens 5.5 ist, wird der entsprechende Absatz auf der Webseite angezeigt. Obwohl die erste Bedingung in diesem Beispiel die Funktion von bedingten Kommentaren veranschaulicht, werden diese Kommentare in der Regel nicht verwendet, um Markup wie die erste Bedingung anzuzeigen. Stattdessen sind die verbleibenden bedingten Kommentare im vorherigen Beispiel häufiger. In diesen verbleibenden Kommentaren verwenden die bedingten Kommentare ein anderes Stylesheet für jede unterschiedliche Version des Browsers.
+Wenn in diesem Fall Windows Internet Explorer Browserversion mindestens 5.5 ist, wird der entsprechende Absatz auf der Webseite angezeigt. Obwohl die erste Bedingung in diesem Beispiel die Funktion bedingter Kommentare veranschaulicht, werden diese Kommentare in der Regel nicht verwendet, um Markup wie die erste Bedingung anzuzeigen. Stattdessen sind die restlichen bedingten Kommentare im vorherigen Beispiel häufiger. In diesen verbleibenden Kommentaren verwenden die bedingten Kommentare ein anderes Stylesheet für jede andere Version des Browsers.
 
-Im obigen Codebeispiel wird auch auf Gleichheit für Microsoft Internet Explorer 6 und Windows Internet Explorer 7 überprüft. Für Windows Internet Explorer 8 verwendet das Beispiel jedoch den Gte-Operator (größer als oder gleich). Dieser Operator hilft dabei, das Beispiel für die Zukunft zu sichern, sodass die standardkonformste Version des Stylesheets verwendet wird, wenn eine neue Version des Browsers veröffentlicht wird (anstatt das falsche Stylesheet oder kein Stylesheet zu verwenden). Vorhandene Anwendungen berücksichtigen häufig keine Version von Internet Explorer 7 (oder die neueste Version von Internet Explorer, für die der Standort erstellt wurde). Weitere Informationen zu Versionsvektoren finden Sie unter [Versionsvektoren](/previous-versions/cc817577(v=msdn.10)) in der MSDN Library.
+Im obigen Codebeispiel wird auch auf Gleichheit für Microsoft Internet Explorer 6 und Windows Internet Explorer 7 überprüft. Für Windows Internet Explorer 8 wird im Beispiel jedoch der gte-Operator (größer als oder gleich) verwendet. Dieser Operator hilft, das Beispiel in der Zukunft zu sichern, sodass die standardskonformste Version des Stylesheets verwendet wird, wenn eine neue Version des Browsers veröffentlicht wird (anstatt das falsche Stylesheet oder kein Stylesheet zu verwenden). Vorhandene Anwendungen berücksichtigen häufig keine Version von Internet Explorer 7 (oder die neueste Version von Internet Explorer, für die der Standort erstellt wurde). Weitere Informationen zu Versionsvektoren finden Sie unter [Versionsvektoren](/previous-versions/cc817577(v=msdn.10)) in der MSDN Library.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Beheben von Kompatibilitätsproblemen in Webanwendungen mithilfe von Kompatibilitätsansicht](remediating-web-applications-and-add-ons.md)
+[Beheben von Kompatibilitätsproblemen in Webanwendungen mit Kompatibilitätsansicht](remediating-web-applications-and-add-ons.md)
 </dt> </dl>
 
  

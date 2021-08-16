@@ -1,32 +1,32 @@
 ---
 title: Wörterbücher
-description: Wörterbücher ermöglichen die Tokenisierung von allgemeinen Knoten Daten, z. b. Element-/Attributnamen, Namespaces und allgemeinen Text in einem binären XML-Format.
+description: Wörterbücher ermöglichen die Tokenisierung von allgemeinen Knotendaten wie Element-/Attributnamen, Namespaces und allgemeinem Text in einem binären XML-Format.
 ms.assetid: 6f25366c-0e81-479b-930e-ff088d425562
 keywords:
-- Wörterbücher Webdienste für Windows
-- Wwsapi
+- Wörterbücher-Webdienste für Windows
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75ba13760a1ff1a1cef61ff6015c5630ab0e134c
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 8ea9ac022ab88f70b304b65581fbcdf294e9aee45c52e3ffd888138b82815230
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104391242"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117841760"
 ---
 # <a name="dictionaries"></a>Wörterbücher
 
-Wörterbücher ermöglichen die Tokenisierung von allgemeinen Knoten Daten, z. b. Element-/Attributnamen, Namespaces und allgemeinen Text in einem binären XML-Format.
+Wörterbücher ermöglichen die Tokenisierung von allgemeinen Knotendaten wie Element-/Attributnamen, Namespaces und allgemeinem Text in einem binären XML-Format.
 
 
-Ein [**Wörterbuch>**](/windows/desktop/api/WebServices/ns-webservices-ws_xml_dictionary) kann als Teil des WS- [**\_ XML- \_ Zeichen**](/windows/desktop/api/WebServices/ns-webservices-ws_xml_string) folgen Typs angegeben werden. Alle Zeichen folgen in einem einzelnen **Wörterbuch>** müssen eindeutig sein.
+Ein [**Wörterbuch->**](/windows/desktop/api/WebServices/ns-webservices-ws_xml_dictionary) kann als Teil des [**WS XML STRING-Typs \_ \_ angegeben**](/windows/desktop/api/WebServices/ns-webservices-ws_xml_string) werden. Alle Zeichenfolgen innerhalb eines einzelnen **Wörterbuchs>** eindeutig sein.
 
-Wörterbuch-IDs werden für alle Codierungen unterstützt (nicht nur für das binäre XML-Format).
+Wörterbuch-IDs werden für alle Codierungen unterstützt (nicht nur das binäre XML-Format).
 
 Die folgende Funktion wird mit Wörterbüchern verwendet:
 
--   [**Wsgetdictionary**](/windows/desktop/api/WebServices/nf-webservices-wsgetdictionary)
+-   [**WsGetDictionary**](/windows/desktop/api/WebServices/nf-webservices-wsgetdictionary)
 
  
 

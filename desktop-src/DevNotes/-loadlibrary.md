@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Msmdun80.dll
 - Sqlunirl.dll
-ms.openlocfilehash: ce4502813c1ca2a292486a18f1946f4c605c96cd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 67755d96d87530f450627714de7c1526750967b87bdf51901b788662c4534045
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117827981"
 ---
 # <a name="_loadlibrary-function"></a>\_LoadLibrary-Funktion
 
-\[Diese Funktion ist ein Wrapper über die **LoadLibrary** -Funktion. Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **LoadLibrary** direkt aufzurufen.\]
+\[Diese Funktion ist ein Wrapper für die **LoadLibrary-Funktion.** Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **LoadLibrary** direkt aufrufen.\]
 
 Lädt eine Bibliothek. Siehe [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya).
 
@@ -55,7 +55,7 @@ HMODULE _LoadLibrary(
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

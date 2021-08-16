@@ -1,5 +1,5 @@
 ---
-description: 'Erfahren Sie mehr über: JET_BKLOGTIME Operatoren'
+description: Weitere Informationen zu JET_BKLOGTIME Operatoren
 title: JET_BKLOGTIME Operatoren
 TOCTitle: JET_BKLOGTIME operators
 ms:assetid: 633be928-2fde-b1cf-2761-b64764fd01b4
@@ -16,10 +16,10 @@ ms.locfileid: "118487837"
 ---
 # <a name="jet_bklogtime-operators"></a>JET_BKLOGTIME Operatoren
 
-Geschützte Member enthalten  
-Geerbte Member enthalten  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-Der [JET_BKLOGTIME](./jet-bklogtime-structure2.md) macht die folgenden Member verfügbar.
+Der [JET_BKLOGTIME-Typ](./jet-bklogtime-structure2.md) macht die folgenden Member verfügbar.
 
 ## <a name="operators"></a>Operatoren
 
@@ -28,19 +28,19 @@ Der [JET_BKLOGTIME](./jet-bklogtime-structure2.md) macht die folgenden Member ve
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn350944.puboperator(exchg.10).gif" title="Öffentlicher Operator" alt="Public operator" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="hh596626(v=exchg.10).md">Gleichheit</a></td>
-<td>Bestimmt, ob zwei angegebene Instanzen JET_BKLOGTIME gleich sind.</td>
+<td>Bestimmt, ob zwei angegebene Instanzen von JET_BKLOGTIME gleich sind.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn350944.puboperator(exchg.10).gif" title="Öffentlicher Operator" alt="Public operator" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="hh578879(v=exchg.10).md">Ungleichheit</a></td>
-<td>Bestimmt, ob zwei angegebene Instanzen von JET_BKLOGTIME gleich sind.</td>
+<td>Bestimmt, ob zwei angegebene Instanzen von JET_BKLOGTIME ungleich sind.</td>
 </tr>
 </tbody>
 </table>

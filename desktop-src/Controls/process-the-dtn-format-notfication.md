@@ -1,37 +1,37 @@
 ---
 title: Verarbeiten der DTN_FORMAT Benachrichtigung
-description: In diesem Thema wird veranschaulicht, wie eine vom Steuerelement für die Datums-und Zeitauswahl (DTP) gesendete Format Benachrichtigung verarbeitet wird.
+description: In diesem Thema wird veranschaulicht, wie Sie eine Formatbenachrichtigung verarbeiten, die vom DTP-Steuerelement (Date and Time Picker) gesendet wird.
 ms.assetid: 7B559846-FE52-4181-B25D-888BE90EB038
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 25271ff33ee6978ebcb0bc474492f884ed7faaa2
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 070d1234dbd9d09159335539309deec86e2d3e1e05547d933cd18f16b9d7162d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103858555"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117829911"
 ---
-# <a name="how-to-process-the-dtn_format-notification"></a>Verarbeiten der Dtn- \_ Format Benachrichtigung
+# <a name="how-to-process-the-dtn_format-notification"></a>Verarbeiten der \_ DTN-FORMATbenachrichtigung
 
-In diesem Thema wird veranschaulicht, wie eine vom Steuerelement für die Datums-und Zeitauswahl (DTP) gesendete Format Benachrichtigung verarbeitet wird.
+In diesem Thema wird veranschaulicht, wie Sie eine Formatbenachrichtigung verarbeiten, die vom DTP-Steuerelement (Date and Time Picker) gesendet wird.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Ein DTP-Steuerelement sendet die [Dtn- \_ Format](dtn-format.md) Benachrichtigung an den Anforderungs Text, der in einem Rückruf Feld des Steuer Elements angezeigt wird. Diese Benachrichtigung muss von Ihrer Anwendung verarbeitet werden, damit das DTP-Steuerelement Informationen anzeigen kann, die nicht System intern unterstützt werden.
+Ein DTP-Steuerelement sendet die [DTN \_ FORMAT-Benachrichtigung](dtn-format.md) an den Anforderungstext, der in einem Rückruffeld des Steuerelements angezeigt wird. Ihre Anwendung muss diese Benachrichtigung verarbeiten, damit das DTP-Steuerelement Informationen anzeigen kann, die nicht nativ unterstützt werden.
 
-Das folgende C++-Codebeispiel ist eine Anwendungs definierte Funktion (**DoFormat**), die [Dtn- \_ Format](dtn-format.md) -Benachrichtigungs Codes verarbeitet, indem eine Text Zeichenfolge für ein Rückruf Feld bereitgestellt wird. Die Anwendung ruft die Anwendungs definierte **getdaynum** -Funktion auf, um die in der Rückruf Zeichenfolge zu verwendende Tagnummer anzufordern.
+Das folgende C++-Codebeispiel ist eine anwendungsdefinierte Funktion (**DoFormat**), die [DTN FORMAT-Benachrichtigungscodes \_](dtn-format.md) verarbeitet, indem eine Textzeichenfolge für ein Rückruffeld zur Verfügung steht. Die Anwendung ruft die **anwendungsdefinierte GetDayNum-Funktion** auf, um die Tagnummer an fordern, die in der Rückrufzeichenfolge verwendet werden soll.
 
 
 ```C++
@@ -61,9 +61,9 @@ else
 
 
 
-**Die Anwendungs definierte getdaynum-Funktion**
+**Die anwendungsdefinierte GetDayNum-Funktion**
 
-Die Anwendungs definierte Beispiel Funktion " **DoFormat** " Ruft die folgende, von der Anwendung definierte **getdaynum** -Funktion auf, um die Tagesnummer basierend auf dem aktuellen Datum anzufordern. **Getdaynum** gibt einen **int** -Wert zurück, der den aktuellen Tag des Jahres darstellt (von 0 bis 366). Diese Funktion ruft während der Verarbeitung eine andere Anwendungs definierte **isleapyr**-Funktion auf.
+Die anwendungsdefinierte Beispielfunktion **DoFormat** ruft die folgende **anwendungsdefinierte GetDayNum-Funktion** auf, um die Tagesnummer basierend auf dem aktuellen Datum an fordern. **GetDayNum gibt** einen **INT-Wert** zurück, der den aktuellen Tag des Jahres von 0 bis 366 darstellt. Diese Funktion ruft während der Verarbeitung eine andere anwendungsdefinierte Funktion auf, **IsLeapYr.**
 
 
 ```C++
@@ -92,9 +92,9 @@ int WINAPI GetDayNum(SYSTEMTIME *st)
 
 
 
-**Die Anwendungs definierte isleapyr-Funktion**
+**Die anwendungsdefinierte IsLeapYr-Funktion**
 
-Die Anwendungs definierte Funktion **getdaynum** Ruft die **isleapyr** -Funktion auf, um zu bestimmen, ob das aktuelle Jahr ein Schaltjahr ist. **Isleapyr** gibt einen **booleschen** Wert zurück, der **true** ist, wenn es sich um ein Schaltjahr handelt, andernfalls **false** .
+Die anwendungsdefinierte **Funktion GetDayNum ruft** die **IsLeapYr-Funktion** auf, um zu bestimmen, ob das aktuelle Jahr ein Schaltjahr ist. **IsLeapYr gibt** einen **BOOL-Wert** zurück, der **TRUE ist,** wenn es sich um ein Schaltjahr handelt, andernfalls **FALSE.**
 
 
 ```C++
@@ -123,13 +123,13 @@ BOOL WINAPI IsLeapYr(int iYear)
 
 <dl> <dt>
 
-[Verwenden von Steuerelementen für Datums-und Zeitauswahl](using-date-and-time-picker.md)
+[Verwenden von Steuerelementen für die Datums- und Uhrzeitauswahl](using-date-and-time-picker.md)
 </dt> <dt>
 
-[Steuerelement Verweis für Datums-und Zeitauswahl](bumper-date-and-time-picker-date-and-time-picker-control-reference.md)
+[Datums- und Uhrzeitauswahl-Steuerelementreferenz](bumper-date-and-time-picker-date-and-time-picker-control-reference.md)
 </dt> <dt>
 
-[Datums-und Zeitauswahl](date-and-time-picker-control-reference.md)
+[Datums- und Uhrzeitauswahl](date-and-time-picker-control-reference.md)
 </dt> </dl>
 
  

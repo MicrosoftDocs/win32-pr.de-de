@@ -1,6 +1,6 @@
 ---
-description: Wird von einer Datei-Manager-Erweiterung gesendet, um zu bewirken, dass der Datei-Manager entweder das aktive Fenster oder alle Fenster neu malt.
-title: FM_REFRESH_WINDOWS Nachricht (Wfext.h)
+description: Wird von einer Datei-Manager-Erweiterung gesendet, um zu bewirken, dass der Datei-Manager entweder sein aktives Fenster oder alle seine Fenster neu anpaint.
+title: FM_REFRESH_WINDOWS (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,9 +20,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118224266"
 ---
-# <a name="fm_refresh_windows-message"></a>FM \_ REFRESH \_ WINDOWS-Nachricht
+# <a name="fm_refresh_windows-message"></a>FM \_ REFRESH \_ WINDOWS-Meldung
 
-Wird von einer Datei-Manager-Erweiterung gesendet, um zu bewirken, dass der Datei-Manager entweder das aktive Fenster oder alle Fenster neu malt.
+Wird von einer Datei-Manager-Erweiterung gesendet, um zu bewirken, dass der Datei-Manager entweder sein aktives Fenster oder alle seine Fenster neu anpaint.
 
 ## <a name="parameters"></a>Parameter
 
@@ -31,7 +31,7 @@ Wird von einer Datei-Manager-Erweiterung gesendet, um zu bewirken, dass der Date
 *fRepaint* 
 </dt> <dd>
 
-Ein -Wert, der angibt, ob der Datei-Manager das aktive Fenster oder alle Fenster neu malt. Wenn dieser Parameter **TRUE** ist, zeichnet der Datei-Manager alle Fenster neu. Andernfalls bemalt der Datei-Manager nur das aktive Fenster neu.
+Ein -Wert, der angibt, ob der Datei-Manager sein aktives Fenster oder alle fenster neu gepaint. Wenn dieser Parameter **TRUE ist,** werden alle Fenster im Datei-Manager neu gepaint. Andernfalls wird vom Datei-Manager nur das aktive Fenster neu gepaint.
 
 </dd> <dt>
 
@@ -44,7 +44,7 @@ Kein Rückgabewert.
 
 ## <a name="remarks"></a>Hinweise
 
-Dateisystemänderungen, die durch eine Erweiterung verursacht werden, werden automatisch vom Datei-Manager erkannt. Eine Erweiterung sollte diese Nachricht nur in Situationen verwenden, in denen Laufwerkverbindungen hergestellt oder abgebrochen werden.
+Dateisystemänderungen, die durch eine Erweiterung verursacht werden, werden automatisch vom Datei-Manager erkannt. Eine Erweiterung sollte diese Meldung nur in Situationen verwenden, in denen Laufwerkverbindungen hergestellt oder abgebrochen werden.
 
 ## <a name="requirements"></a>Anforderungen
 

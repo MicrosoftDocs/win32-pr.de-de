@@ -1,6 +1,6 @@
 ---
 title: DDS-Bitflagwerte
-description: Der Inhalt für diese Seite wurde auf die entsprechende Referenzseite verschoben. Wenn Sie Direct3D 10 verwenden, werden die Flags von DDS \_ HEADER verwendet.
+description: Der Inhalt dieser Seite wurde auf die entsprechende Referenzseite verschoben. Wenn Sie Direct3D 10 verwenden, werden die Flags von DDS \_ HEADER verwendet.
 ms.assetid: f86ececd-1d45-4ac8-bbaa-bcf7ff5dad21
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118518411"
 ---
 # <a name="dds-bit-flag-values"></a>DDS-Bitflagwerte
 
-Der Inhalt für diese Seite wurde auf die entsprechende Referenzseite verschoben. Wenn Sie Direct3D 10 verwenden, werden die Flags von [**DDS \_ HEADER**](dds-header.md)verwendet.
+Der Inhalt dieser Seite wurde auf die entsprechende Referenzseite verschoben. Wenn Sie Direct3D 10 verwenden, werden die Flags von [**DDS \_ HEADER verwendet.**](dds-header.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

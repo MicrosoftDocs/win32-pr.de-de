@@ -15,7 +15,7 @@ ms.locfileid: "118319994"
 ---
 # <a name="chstringfind-methods"></a>CHString::Find-Methoden
 
-\[Die [**CHString-Klasse**](chstring.md) ist Teil des WMI-Anbieterframework, das jetzt als endgültig betrachtet wird, und es sind keine weiteren Entwicklungen, Erweiterungen oder Updates für nicht sich sicherheitsbezogene Probleme verfügbar, die sich auf diese Bibliotheken betreffen. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
+\[Die [**CHString-Klasse**](chstring.md) ist Teil des WMI-Anbieterframeworks, das jetzt als endgültiger Zustand betrachtet wird. Für nicht sicherheitsrelevante Probleme, die sich auf diese Bibliotheken auswirken, sind keine weiteren Entwicklungen, Erweiterungen oder Updates verfügbar. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle Neuentwicklungen verwendet werden.\]
 
 Die **Find-Methode** durchsucht eine Zeichenfolge nach der ersten Übereinstimmung einer Teilzeichenfolge.
 
@@ -23,10 +23,10 @@ Die **Find-Methode** durchsucht eine Zeichenfolge nach der ersten Übereinstimmu
 
 
 
-| Methode                                          | BESCHREIBUNG                                             |
+| Methode                                          | Beschreibung                                             |
 |:------------------------------------------------|:--------------------------------------------------------|
-| [**Find(WCHAR)**](/windows/win32/api/chstring/nf-chstring-chstring-find(lpcwstr))     | Sucht in dieser **Zeichenfolge nach dem WSTR.**<br/>    |
-| [**Find(LPCWSTR)**](/windows/win32/api/chstring/nf-chstring-chstring-find(lpcwstr)) | Sucht in dieser **Zeichenfolge nach LPCWSTR.**<br/> |
+| [**Find(WCHAR)**](/windows/win32/api/chstring/nf-chstring-chstring-find(lpcwstr))     | Sucht in dieser Zeichenfolge nach **dem WSTR.**<br/>    |
+| [**Find(LPCWSTR)**](/windows/win32/api/chstring/nf-chstring-chstring-find(lpcwstr)) | Sucht in dieser Zeichenfolge nach **LPCWSTR.**<br/> |
 
 
 

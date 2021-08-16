@@ -1,9 +1,9 @@
 ---
-title: TB_GETPRESSEDIMAGELIST Meldung (kommstrg. h)
-description: Ruft die Bildliste ab, die ein ToolBar-Steuerelement verwendet, um Schaltflächen in einem gedrückten Zustand anzuzeigen.
+title: TB_GETPRESSEDIMAGELIST-Nachricht (Commctrl.h)
+description: Ruft die Bildliste ab, die ein Symbolleistensteuerelement verwendet, um Schaltflächen in einem gedrückten Zustand anzuzeigen.
 ms.assetid: 116d4212-48ea-4b00-a752-21e5e1f10e36
 keywords:
-- Windows-Steuerelemente für TB_GETPRESSEDIMAGELIST Meldung
+- TB_GETPRESSEDIMAGELIST Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3028b119eb7f84a66caf0b6978382cee569b4a21
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 34093db3899205249fce934335e7aefa6393bc5bc588c8e797400e9359d9c54e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106442"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117829661"
 ---
-# <a name="tb_getpressedimagelist-message"></a>TB \_ getpressedimagelist-Meldung
+# <a name="tb_getpressedimagelist-message"></a>TB \_ GETPRESSEDIMAGELIST-Nachricht
 
-Ruft die Bildliste ab, die ein ToolBar-Steuerelement verwendet, um Schaltflächen in einem gedrückten Zustand anzuzeigen.
+Ruft die Bildliste ab, die ein Symbolleistensteuerelement verwendet, um Schaltflächen in einem gedrückten Zustand anzuzeigen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,7 +45,7 @@ Muss Null sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für die Bildliste zurück, oder **null** , wenn keine Bildliste festgelegt ist.
+Gibt das Handle für die Bildliste zurück, oder **NULL,** wenn keine Bildliste festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt das Handle für die Bildliste zurück, oder **null** , wenn keine Bildliste
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

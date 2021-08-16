@@ -1,9 +1,9 @@
 ---
-title: LVM_SETWORKAREAS Meldung (kommstrg. h)
-description: Legt die Arbeitsbereiche in einem Listenansicht-Steuerelement fest. Sie können diese Nachricht explizit senden oder das ListView \_ setworkareas-Makro verwenden.
+title: LVM_SETWORKAREAS (Commctrl.h)
+description: Legt die Arbeitsbereiche in einem Listenansicht-Steuerelement fest. Sie können diese Nachricht explizit senden oder das \_ ListView-Makro SetWorkAreas verwenden.
 ms.assetid: 87ac192d-f481-43ac-b8a5-c754cf33e487
 keywords:
-- Windows-Steuerelemente für LVM_SETWORKAREAS Meldung
+- LVM_SETWORKAREAS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4166238c97b5766a5f2bbb19e0de853526d83385
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8f1060377fd9aec9014d18d206444355b052f4aafb796403e3e47fa92a0a7aaa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117830661"
 ---
-# <a name="lvm_setworkareas-message"></a>LVM- \_ setworkareas-Meldung
+# <a name="lvm_setworkareas-message"></a>LVM \_ SETWORKAREAS-Meldung
 
-Legt die Arbeitsbereiche in einem Listenansicht-Steuerelement fest. Sie können diese Nachricht explizit senden oder das [**ListView \_ setworkareas**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setworkareas) -Makro verwenden.
+Legt die Arbeitsbereiche in einem Listenansicht-Steuerelement fest. Sie können diese Nachricht explizit senden oder das [**\_ ListView-Makro SetWorkAreas**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setworkareas) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,20 +32,20 @@ Legt die Arbeitsbereiche in einem Listenansicht-Steuerelement fest. Sie können 
 *wParam* 
 </dt> <dd>
 
-Die Anzahl der Strukturen im Array bei *LPRC*. Die maximal zulässige Anzahl von Arbeitsbereichen wird durch den Wert für die maximale Arbeitsbereiche von LV definiert \_ \_ .
+Die Anzahl der Strukturen im Array bei *lprc*. Die maximale Anzahl zulässiger Arbeitsbereiche wird durch den LV \_ MAX \_ WORKAREAS-Wert definiert.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Zeiger auf ein Array von [**Rect**](/previous-versions//dd162897(v=vs.85)) -Strukturen, die die neuen Arbeitsbereiche des Listenansicht-Steuer Elements enthalten. Werte in diesen Strukturen befinden sich in Client Koordinaten. Wenn dieser Parameter **null** ist, wird der Arbeitsbereich auf den Client Bereich des Steuer Elements festgelegt. *wParam* gibt die Anzahl der Strukturen in diesem Array an.
+Zeiger auf ein Array von [**RECT-Strukturen,**](/previous-versions//dd162897(v=vs.85)) die die neuen Arbeitsbereiche des Listenansicht-Steuerelements enthalten. Werte in diesen Strukturen befinden sich in Clientkoordinaten. Wenn dieser Parameter **NULL ist,** wird der Arbeitsbereich auf den Clientbereich des Steuerelements festgelegt. *wParam* gibt die Anzahl der Strukturen in diesem Array an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert für diese Nachricht wird nicht verwendet.
+Der Rückgabewert für diese Meldung wird nicht verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,17 +53,17 @@ Der Rückgabewert für diese Nachricht wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden von List-View Steuerelementen](using-list-view-controls.md)
+[Verwenden List-View-Steuerelementen](using-list-view-controls.md)
 </dt> </dl>
 
  

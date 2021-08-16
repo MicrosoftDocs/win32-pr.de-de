@@ -21,7 +21,7 @@ Eine Fensterklasse ist ein Satz von Attributen, die das System als Vorlage zum E
 
 
 
-| Name                                                 | BESCHREIBUNG                                                                                                                                                                                                                                                    |
+| Name                                                 | Beschreibung                                                                                                                                                                                                                                                    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Informationen zu Fensterklassen](about-window-classes.md)     | Erläutert Fensterklassen. Jede Fensterklasse verfügt über eine zugeordnete Fensterprozedur, die von allen Fenstern derselben Klasse gemeinsam genutzt wird. Die Fensterprozedur verarbeitet Meldungen für alle Fenster dieser Klasse und steuert daher deren Verhalten und Darstellung.<br/> |
 | [Verwenden von Fensterklassen](using-window-classes.md)     | Veranschaulicht, wie ein lokales Fenster registriert und zum Erstellen eines Hauptfensters verwendet wird.<br/>                                                                                                                                                                     |
@@ -35,7 +35,7 @@ Eine Fensterklasse ist ein Satz von Attributen, die das System als Vorlage zum E
 
 
 
-| Name                                         | BESCHREIBUNG                                                                                                                                                                                                                   |
+| Name                                         | Beschreibung                                                                                                                                                                                                                   |
 |----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**GetClassInfoEx**](/windows/win32/api/winuser/nf-winuser-getclassinfoexa)     | Ruft Informationen zu einer Fensterklasse ab, einschließlich eines Handles für das kleine Symbol, das der Fensterklasse zugeordnet ist. Die [**GetClassInfo-Funktion**](/windows/win32/api/winuser/nf-winuser-getclassinfoa) ruft kein Handle für das kleine Symbol ab.<br/> |
 | [**GetClassLong**](/windows/win32/api/winuser/nf-winuser-getclasslonga)         | Ruft den angegebenen 32-Bit-Wert **(long)** aus der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) ab, die dem angegebenen Fenster zugeordnet ist. <br/>                                                                         |
@@ -49,7 +49,7 @@ Eine Fensterklasse ist ein Satz von Attributen, die das System als Vorlage zum E
 | [**SetClassWord**](/windows/win32/api/winuser/nf-winuser-setclassword)         | Ersetzt den 16-Bit-Wert (**WORD**) am angegebenen Offset in den zusätzlichen Klassenspeicher für die Fensterklasse, zu der das angegebene Fenster gehört.<br/>                                                               |
 | [**SetWindowLong**](/windows/win32/api/winuser/nf-winuser-setwindowlonga)       | Ändert ein Attribut des angegebenen Fensters. Die -Funktion legt auch den 32-Bit-Wert (long) am angegebenen Offset in den zusätzlichen Fensterspeicher fest.<br/>                                                                 |
 | [**SetWindowLongPtr**](/windows/win32/api/winuser/nf-winuser-setwindowlongptra) | Ändert ein Attribut des angegebenen Fensters. Die Funktion legt auch einen Wert am angegebenen Offset im zusätzlichen Fensterspeicher fest.<br/>                                                                                   |
-| [**UnregisterClass**](/windows/win32/api/winuser/nf-winuser-unregisterclassa)   | Die Registrierung einer Fensterklasse wird aufgehoben, und der für die Klasse erforderliche Arbeitsspeicher wird frei. <br/>                                                                                                                                            |
+| [**UnregisterClass**](/windows/win32/api/winuser/nf-winuser-unregisterclassa)   | Die Registrierung einer Fensterklasse wird aufgehoben, und der für die -Klasse erforderliche Arbeitsspeicher wird frei. <br/>                                                                                                                                            |
 
 
 
@@ -67,7 +67,7 @@ Die folgenden Funktionen sind veraltet.
 <thead>
 <tr class="header">
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -85,13 +85,13 @@ Die <a href="/windows/desktop/api/winuser/nf-winuser-getclassinfoa"><strong>GetC
 <td>Ruft den 16-Bit-Wert (<strong>WORD</strong>) am angegebenen Offset in den zusätzlichen Klassenspeicher für die Fensterklasse ab, zu der das angegebene Fenster gehört.
 <blockquote>
 [!Note]<br />
-Diese Funktion ist für jede andere Verwendung als <em>nIndex veraltet, die auf</em> GCW_ATOM. Die Funktion wird nur zur Kompatibilität mit 16-Bit-Versionen von Windows. Anwendungen sollten die <a href="/windows/desktop/api/winuser/nf-winuser-getclasslonga"><strong>GetClassLong-Funktion</strong></a> verwenden.
+Diese Funktion ist für jede andere Verwendung als <em>nIndex veraltet, die</em> auf GCW_ATOM. Die Funktion wird nur zur Kompatibilität mit 16-Bit-Versionen von Windows. Anwendungen sollten die <a href="/windows/desktop/api/winuser/nf-winuser-getclasslonga"><strong>GetClassLong-Funktion</strong></a> verwenden.
 </blockquote>
 <br/> <br/></td>
 </tr>
 <tr class="odd">
 <td><a href="/windows/desktop/api/winuser/nf-winuser-setclasslonga"><strong>SetClassLong</strong></a></td>
-<td>Ersetzt den angegebenen 32-Bit-Wert (<strong>long</strong>) am angegebenen Offset in den zusätzlichen Klassenspeicher oder die <a href="/windows/win32/api/winuser/ns-winuser-wndclassexa"><strong>WNDCLASSEX-Struktur</strong></a> für die Klasse, zu der das angegebene Fenster gehört.
+<td>Ersetzt den angegebenen 32-Bit-Wert<strong>(long)</strong>am angegebenen Offset in den zusätzlichen Klassenspeicher oder die <a href="/windows/win32/api/winuser/ns-winuser-wndclassexa"><strong>WNDCLASSEX-Struktur</strong></a> für die Klasse, zu der das angegebene Fenster gehört.
 <blockquote>
 [!Note]<br />
 Diese Funktion wurde durch die <a href="/windows/desktop/api/winuser/nf-winuser-setclasslongptra"><strong>SetClassLongPtr-Funktion</strong></a> ersetzt. Verwenden Sie <strong>SetClassLongPtr,</strong>um Code zu schreiben, der sowohl mit 32-Bit- als auch mit 64-Bit-Versionen von Windows kompatibel ist.
@@ -109,7 +109,7 @@ Diese Funktion wurde durch die <a href="/windows/desktop/api/winuser/nf-winuser-
 
 
 
-| Name                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Name                             | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**WNDCLASS**](/windows/win32/api/winuser/ns-winuser-wndclassa)     | Enthält die Fensterklassenattribute, die von der [**RegisterClass-Funktion registriert**](/windows/win32/api/winuser/nf-winuser-registerclassa) werden. <br/> Diese Struktur wurde durch die [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) ersetzt, die mit der [**RegisterClassEx-Funktion verwendet**](/windows/win32/api/winuser/nf-winuser-registerclassexa) wird. Sie können weiterhin [**WNDCLASS und**](/windows/win32/api/winuser/ns-winuser-wndclassa) [**RegisterClass**](/windows/win32/api/winuser/nf-winuser-registerclassa) verwenden, wenn Sie das kleine Symbol, das der Fensterklasse zugeordnet ist, nicht festlegen müssen.<br/>                                                  |
 | [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) | Enthält Fensterklasseninformationen. Sie wird mit den [**Funktionen RegisterClassEx**](/windows/win32/api/winuser/nf-winuser-registerclassexa) und [**GetClassInfoEx**](/windows/win32/api/winuser/nf-winuser-getclassinfoexa)  verwendet. <br/> Die [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) ähnelt der [**WNDCLASS-Struktur.**](/windows/win32/api/winuser/ns-winuser-wndclassa) Es gibt zwei Unterschiede. **WNDCLASSEX** enthält den **cbSize-Member,** der die Größe der Struktur angibt, und den **hIconSm-Member,** der ein Handle für ein kleines Symbol enthält, das der Fensterklasse zugeordnet ist.<br/> |

@@ -1,5 +1,5 @@
 ---
-description: 'CDrawImage::m_pMediaType Member: Die m \_ pMediaType-Membervariable ist ein Zeiger auf den aktuellen Medientyp.'
+description: 'CDrawImage::m_pMediaType-Member: Die m pMediaType-Membervariable ist ein Zeiger \_ auf den aktuellen Medientyp.'
 ms.assetid: 51a33fc4-1496-43ed-9b68-842f4c2cf0a1
 title: CDrawImage::m_pMediaType-Member (Winutil.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 127801850ed008d65015d277ad3e1dbdfdb5c1bf
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 4461d6d2be35522fabf630af31e608f1b7fe8358dd1730bd6f3a79e6674eb288
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117822102"
 ---
 # <a name="cdrawimagem_pmediatype-member"></a>CDrawImage::m \_ pMediaType-Member
 
@@ -40,9 +40,9 @@ CMediaType *m_pMediaType;
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 

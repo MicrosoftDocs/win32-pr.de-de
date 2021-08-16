@@ -4,34 +4,34 @@ ms.assetid: 0686ba54-4782-42a4-8fdb-2325fc8d8bc2
 title: Festlegen von Eigenschaften für mehrere Objekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e951662d9920cb22db0a417f1af94f3eb7eb4d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 14517e26843265d8273785657e98b691c155821c10f57b92d53e374c20d34ede
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350824"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117842682"
 ---
 # <a name="setting-properties-for-multiple-objects"></a>Festlegen von Eigenschaften für mehrere Objekte
 
-Einige Gerätetreiber unterstützen das Festlegen von Eigenschaften für mehrere Objekte in einem einzelnen Funktions Aufruf– Dies wird als Massen Schreibvorgang bezeichnet. Die Anwendung kann mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen einen Massen Schreibvorgang ausführen.
+Einige Gerätetreiber unterstützen das Festlegen von Eigenschaften für mehrere Objekte in einem einzelnen Funktionsaufruf. Dies wird als Massenschreibvorgang bezeichnet. Ihre Anwendung kann einen Massenschreibvorgang mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen ausführen.
 
 
 
-| Schnittstelle                                                                                      | BESCHREIBUNG                                                  |
+| Schnittstelle                                                                                      | Beschreibung                                                  |
 |------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
-| [**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)                             | Ermöglicht den Zugriff auf die Inhalts spezifischen Methoden.             |
-| [**Iportabledeviceproperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties)                       | Bietet Zugriff auf die Eigenschaften spezifischen Methoden.            |
-| [**Iportabledevicepropertiesbulk-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicepropertiesbulk)               | Unterstützt den Massen Schreibvorgang.                           |
-| [**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Wird zum Speichern der Objekt Bezeichner für den Massen Vorgang verwendet. |
-| [**Iportableabvicevaluescollection-Schnittstelle**](iportabledevicevaluescollection.md)           | Wird verwendet, um die Eigenschaften zu identifizieren, die geschrieben werden sollen.               |
+| [**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)                             | Ermöglicht den Zugriff auf die inhaltsspezifischen Methoden.             |
+| [**IPortableDeviceProperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties)                       | Ermöglicht den Zugriff auf die eigenschaftenspezifischen Methoden.            |
+| [**IPortableDevicePropertiesBulk-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicepropertiesbulk)               | Unterstützt den Massenschreibvorgang.                           |
+| [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Wird verwendet, um die Objektbezeichner für den Massenvorgang zu speichern. |
+| [**IPortableDeviceValuesCollection-Schnittstelle**](iportabledevicevaluescollection.md)           | Wird verwendet, um die zu schreibenden Eigenschaften zu identifizieren.               |
 
 
 
  
 
-Die `WriteContentPropertiesBulk` Funktion im Modul contentproperties. cpp der Beispielanwendung veranschaulicht einen Massen Schreibvorgang.
+Die `WriteContentPropertiesBulk` Funktion im ContentProperties.cpp-Modul der Beispielanwendung veranschaulicht einen Massenschreibvorgang.
 
-Die erste Aufgabe, die in diesem Beispiel ausgeführt wird, besteht darin, zu bestimmen, ob der angegebene Treiber Massen Vorgänge unterstützt. Dies erfolgt durch Aufrufen von QueryInterface für ein **iportabledeviceproperties** -Objekt und überprüfen, ob **iportabledevicepropertiesbulk** vorhanden ist.
+Die erste Aufgabe in diesem Beispiel besteht darin, zu bestimmen, ob der angegebene Treiber Massenvorgänge unterstützt. Dies wird erreicht, indem QueryInterface für ein **IPortableDeviceProperties-Objekt** aufgerufen und überprüft wird, ob **IPortableDevicePropertiesBulk** vorhanden ist.
 
 
 ```C++
@@ -79,7 +79,7 @@ if (SUCCEEDED(hr))
 
 
 
-Die nächste Aufgabe umfasst das Erstellen eines **iportabledevicevaluescollection** -Objekts. Dies ist das Objekt, das die Eigenschaftswerte enthält, die vom Beispiel geschrieben werden.
+Die nächste Aufgabe umfasst das Erstellen eines **IPortableDeviceValuesCollection-Objekts.** Dies ist das -Objekt, das die Eigenschaftswerte enthält, die im Beispiel geschrieben werden.
 
 
 ```C++
@@ -109,7 +109,7 @@ if (SUCCEEDED(hr))
 
 
 
-Danach erstellt das Beispiel eine Instanz der [**iportabledevicepropertiesbulkcallback-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicepropertiesbulk). Die Anwendung verwendet die Methoden in dieser Schnittstelle, um den Fortschritt des asynchronen Massen Schreibvorgangs zu verfolgen.
+Danach erstellt das Beispiel eine Instanz der [**IPortableDevicePropertiesBulkCallback-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicepropertiesbulk). Die Anwendung verwendet die Methoden in dieser Schnittstelle, um den Fortschritt des asynchronen Massenschreibvorgangs nachzuverfolgen.
 
 
 ```C++
@@ -136,7 +136,7 @@ if (SUCCEEDED(hr))
 
 
 
-Die nächste Funktion, die von der Beispielanwendung aufgerufen wird, ist die `CreateIPortableDevicePropVariantCollectionWithAllObjectIDs` Hilfsfunktion. Diese Funktion listet rekursiv alle Objekte auf einem bestimmten Gerät auf und gibt eine [**iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md) zurück, die einen Bezeichner für jedes gefundene Objekt enthält. Diese Funktion wird im Modul "contentenumeration. cpp" definiert.
+Die nächste Funktion, die die Beispielanwendung aufruft, ist die `CreateIPortableDevicePropVariantCollectionWithAllObjectIDs` Hilfsfunktion. Diese Funktion listet rekursiv alle Objekte auf einem bestimmten Gerät auf und gibt eine [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) zurück, die einen Bezeichner für jedes gefundene Objekt enthält. Diese Funktion wird im Modul ContentEnumeration.cpp definiert.
 
 
 ```C++
@@ -153,11 +153,11 @@ if (SUCCEEDED(hr))
 
 
 
-Das **iportabledevicepropvariantcollection** -Objekt enthält eine Auflistung von indizierten **PROPVARIANT** -Werten desselben VarType. In diesem Fall enthalten diese Werte einen angegebenen Objekt Bezeichner für jedes Objekt, das auf dem Gerät gefunden wurde.
+Das **IPortableDevicePropVariantCollection-Objekt** enthält eine Auflistung indizierter **PROPVARIANT-Werte** desselben VARTYPE. In diesem Fall enthalten diese Werte einen angegebenen Objektbezeichner für jedes auf dem Gerät gefundene Objekt.
 
-Die Objekt-IDs und deren jeweilige Name-Eigenschaften werden in einem [**iportableabvicevaluescollection**](iportabledevicevalues.md) -Objekt gespeichert. Die Name-Eigenschaften sind so organisiert, dass dem ersten Objekt eine Name-Eigenschaft von "NewName0" zugewiesen wird, dem zweiten Objekt eine Name-Eigenschaft von "NewName1" zugewiesen wird usw.
+Die Objektbezeichner und ihre jeweiligen Namenseigenschaften werden in einem [**IPortableDeviceValuesCollection-Objekt**](iportabledevicevalues.md) gespeichert. Die Namenseigenschaften sind so organisiert, dass dem ersten Objekt die Namenseigenschaft "NewName0" zugewiesen wird, dem zweiten Objekt die Namenseigenschaft "NewName1" usw.
 
-Der folgende Auszug aus dem Beispiel veranschaulicht, wie das **iportabledebug** -Objekt mit Objekt Bezeichner und neuen Namens Zeichenfolgen initialisiert wurde.
+Der folgende Auszug aus dem Beispiel veranschaulicht, wie das **IPortableDeviceValuesCollection-Objekt** mit Objektbezeichnern und zeichenfolgen neuen Namen initialisiert wurde.
 
 
 ```C++
@@ -248,9 +248,9 @@ if (SUCCEEDED(hr))
 
 
 
-Sobald das Beispiel das **iportabledevicevaluescollection** -Objekt erstellt hat, das den Objekt Bezeichner und die namens Paare enthält, kann der asynchrone Vorgang gestartet werden.
+Nachdem das Beispiel das **IPortableDeviceValuesCollection-Objekt** erstellt hat, das die Objektbezeichner- und Namenspaare enthält, kann der asynchrone Vorgang gestartet werden.
 
-Der asynchrone Schreibvorgang beginnt, wenn das Beispiel die [**iportabledevicepropertiesbulk:: queuesetvaluesbyobjectlist**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicepropertiesbulk-queuesetvaluesbyobjectlist) -Methode aufruft. Diese Methode benachrichtigt den Treiber, dass ein Massen Vorgang beginnt. Danach ruft das Beispiel die [**iportabledevicebulk:: Start**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicepropertiesbulk-start) -Methode auf, um zu beginnen, die neuen Namens Werte tatsächlich zu schreiben.
+Der asynchrone Schreibvorgang beginnt, wenn das Beispiel die [**IPortableDevicePropertiesBulk::QueueSetValuesByObjectList-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicepropertiesbulk-queuesetvaluesbyobjectlist) aufruft. Diese Methode benachrichtigt den Treiber, dass ein Massenvorgang beginnen wird. Danach ruft das Beispiel die [**IPortableDeviceBulk::Start-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicepropertiesbulk-start) auf, um tatsächlich mit dem Schreiben der neuen Namenswerte zu beginnen.
 
 
 ```C++
@@ -309,25 +309,25 @@ Der asynchrone Schreibvorgang beginnt, wenn das Beispiel die [**iportabledevicep
 
 
 
-Beachten Sie, dass das Beispiel eine unendlich lange Zeitspanne für den Abschluss des Vorgangs wartet. Wenn dies eine Produktionsanwendung wäre, müsste der Code geändert werden.
+Beachten Sie, dass das Beispiel unendlich lange auf den Abschluss des Vorgangs wartet. Wenn es sich um eine Produktionsanwendung handelt, muss der Code geändert werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
+[**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
 </dt> <dt>
 
-[**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
+[**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
 </dt> <dt>
 
-[**Iportabledeviceproperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties)
+[**IPortableDeviceProperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties)
 </dt> <dt>
 
-[**Iportabledevicepropertiesbulk-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicepropertiesbulk)
+[**IPortableDevicePropertiesBulk-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicepropertiesbulk)
 </dt> <dt>
 
-[**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
+[**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

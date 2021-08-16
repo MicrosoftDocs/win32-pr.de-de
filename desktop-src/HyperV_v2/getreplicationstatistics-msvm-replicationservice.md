@@ -1,7 +1,7 @@
 ---
 description: Ruft Replikationsstatistiken für einen virtuellen Computer ab und fungiert für die primäre Replikationsbeziehung des virtuellen Computers.
 ms.assetid: 24f3f572-fa85-4680-be77-7e835e6471c5
-title: GetReplicationStatistics-Methode der Msvm_ReplicationService Klasse
+title: GetReplicationStatistics-Methode der Msvm_ReplicationService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -25,7 +25,7 @@ ms.locfileid: "118392915"
 Ruft Replikationsstatistiken für einen virtuellen Computer ab und fungiert für die primäre Replikationsbeziehung des virtuellen Computers.
 
 > [!Note]  
-> Ab Windows 8.1 wird empfohlen, **GetReplicationStatistics** nicht mehr zum Abrufen von Replikationsstatistiken zu verwenden. Verwenden Sie stattdessen [**GetReplicationStatisticsEx.**](getreplicationstatisticsex-msvm-replicationservice.md)
+> Ab Windows 8.1 wird empfohlen, **getReplicationStatistics** nicht mehr zum Abrufen von Replikationsstatistiken zu verwenden. Verwenden Sie stattdessen [**GetReplicationStatisticsEx.**](getreplicationstatisticsex-msvm-replicationservice.md)
 
  
 
@@ -50,28 +50,28 @@ uint32 GetReplicationStatistics(
 *ComputerSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine [**\_ CIM-ComputerSysteminstanz,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die den virtuellen Computer darstellt, für den die Replikationsstatistiken abgerufen werden.
+Ein Verweis auf eine [**CIM \_ ComputerSystem-Instanz,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die den virtuellen Computer darstellt, für den die Replikationsstatistiken abgerufen werden sollen.
 
 </dd> <dt>
 
 *ReplicationStatistics* \[ out\]
 </dt> <dd>
 
-Bei Erfolg empfängt eine eingebettete Instanz der [**Msvm \_ ReplicationStatistics-Klasse,**](msvm-replicationstatistics.md) die die Replikationsstatistiken für den angeforderten virtuellen Computer enthält.
+Wenn erfolgreich, empfängt eine eingebettete Instanz der [**Msvm \_ ReplicationStatistics-Klasse,**](msvm-replicationstatistics.md) die die Replikationsstatistiken für den angeforderten virtuellen Computer enthält.
 
 </dd> <dt>
 
 *ReplicationHealthIssues* \[ out\]
 </dt> <dd>
 
-Wenn erfolgreich, empfängt ein Array eingebetteter Instanzen der [**Msvm \_ Error-Klasse,**](msvm-error.md) die replikationswarnungen oder -fehler für den angeforderten virtuellen Computer angeben.
+Wenn erfolgreich, empfängt ein Array von eingebetteten Instanzen der [**Msvm \_ Error-Klasse,**](msvm-error.md) die replikationswarnungen oder -fehler für den angeforderten virtuellen Computer angeben.
 
 </dd> <dt>
 
 *Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -84,7 +84,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
 **Fehler** (32768)
@@ -102,7 +102,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger** Parameter (32773)
+**Ungültiger Parameter** (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)

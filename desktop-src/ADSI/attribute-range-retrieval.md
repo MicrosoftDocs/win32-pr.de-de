@@ -1,26 +1,26 @@
 ---
-title: Attribut Bereichs Abruf
-description: Ein mehr wertiges Attribut kann fast eine beliebige Anzahl von Werten aufweisen. In vielen Fällen kann es vorteilhaft oder sogar notwendig sein, den Wertebereich einzuschränken, der von einer Abfrage abgerufen wird.
+title: Attributbereichsabruf
+description: Ein mehrwertiges Attribut kann über fast eine beliebige Anzahl von Werten verfügen. In vielen Fällen kann es vorteilhaft oder sogar notwendig sein, den Von einer Abfrage abgerufenen Wertebereich einzuschränken.
 ms.assetid: 3a0eb764-fca9-4ca6-9991-b85f293961af
 ms.tgt_platform: multiple
 keywords:
-- Attribut Bereichs Abruf ADSI
+- Attributbereichsabruf ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 47f8787eb0b2aba30d1926b4d9cbb7e566e0f59c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 994b1c4535ebce264386b088a53b730e679147f07b4bef9fe99d3a45a63461fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947359"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117840577"
 ---
-# <a name="attribute-range-retrieval"></a>Attribut Bereichs Abruf
+# <a name="attribute-range-retrieval"></a>Attributbereichsabruf
 
-Ein mehr wertiges Attribut kann fast eine beliebige Anzahl von Werten aufweisen. In vielen Fällen kann es vorteilhaft oder sogar notwendig sein, den Wertebereich einzuschränken, der von einer Abfrage abgerufen wird.
+Ein mehrwertiges Attribut kann über fast eine beliebige Anzahl von Werten verfügen. In vielen Fällen kann es vorteilhaft oder sogar notwendig sein, den Von einer Abfrage abgerufenen Wertebereich einzuschränken.
 
-Der Bereichs Abruf umfasst das Anfordern einer begrenzten Anzahl von Attributwerten in einer einzelnen Abfrage. Die Anzahl der angeforderten Werte muss kleiner oder gleich der maximalen Anzahl von Werten sein, die vom Server unterstützt werden. Um die Häufigkeit zu verringern, mit der die Abfrage den Server kontaktieren muss, sollte die Anzahl der angeforderten Werte so nah wie möglich an diesem Maximum liegen. Damit eine Anwendung ordnungsgemäß mit allen Windows-Servern funktioniert, sollte eine maximale Anzahl von 1000 verwendet werden.
+Der Bereichsabruf umfasst das Anfordern einer begrenzten Anzahl von Attributwerten in einer einzelnen Abfrage. Die Anzahl der angeforderten Werte muss kleiner oder gleich der maximalen Anzahl von Werten sein, die vom Server unterstützt werden. Um zu reduzieren, wie oft die Abfrage den Server kontaktieren muss, sollte die Anzahl der angeforderten Werte so nahe wie möglich an diesem Maximum liegen. Damit eine Anwendung ordnungsgemäß mit allen Windows-Servern funktioniert, sollte eine maximale Anzahl von 1.000 verwendet werden.
 
-Die bereichsspezifier für eine Eigenschaften Abfrage muss folgende Form haben:
+Die Bereichsspezifizierer für eine Eigenschaftenabfrage erfordern die folgende Form:
 
 
 ```C++
@@ -29,32 +29,32 @@ range=<low range>-<high range>
 
 
 
-dabei &lt; ist "Low Range &gt; " der null basierte Index des ersten Eigenschafts Werts, der abgerufen werden soll, und " &lt; High Range &gt; " ist der null basierte Index des letzten Eigenschafts Werts, der abgerufen werden soll. NULL wird für " &lt; niedriger Bereich &gt; " verwendet, um den ersten Eintrag anzugeben. Das Platzhalter Zeichen ( \* ) kann für " &lt; High Range" verwendet werden &gt; , um alle verbleibenden Einträge anzugeben.
+wobei &lt; "low &gt; range" der nullbasierte Index des ersten abzurufenden Eigenschaftswerts und &lt; "hoher &gt; Bereich" der nullbasierte Index des letzten abzurufenden Eigenschaftswerts ist. 0 (null) wird für &lt; "niedriger &gt; Bereich" verwendet, um den ersten Eintrag anzugeben. Das Platzhalterzeichen ( \* ) kann für "hoher Bereich" verwendet &lt; &gt; werden, um alle verbleibenden Einträge anzugeben.
 
-In der folgenden Tabelle sind Beispiele für Bereichs Bearbeiter aufgeführt.
+In der folgenden Tabelle sind Beispiele für Bereichsspezifizierer aufgeführt.
 
 
 
-| Beispiel      | BESCHREIBUNG                                                                                   |
+| Beispiel      | Beschreibung                                                                                   |
 |--------------|-----------------------------------------------------------------------------------------------|
-| Bereich = 0-\*   | Ruft alle Eigenschaftswerte ab. Dies unterliegt den vom Server vorgegebenen Grenzwerten.                |
-| Bereich = 0-500  | Abrufen von 1. bis 501st-Werten.                                                |
-| Bereich = 2-3    | Abrufen von 3-und 4-Werten.                                                                  |
-| Bereich = 501-\* | Rufen Sie das 502nd und alle verbleibenden Werte ab. Dies unterliegt den vom Server vorgegebenen Grenzwerten. |
+| range=0-\*   | Rufen Sie alle Eigenschaftswerte ab. Dies unterliegt den vom Server vorgegebenen Grenzwerten.                |
+| range=0-500  | Abrufen von Werten vom 1. bis zum 501. Inklusive.                                                |
+| range=2-3    | Ruft den dritten und den 4. Wert ab.                                                                  |
+| range=501-\* | Rufen Sie den 502. und alle verbleibenden Werte ab. Dies unterliegt den vom Server vorgegebenen Grenzwerten. |
 
 
 
- 
+ 
 
-Es gibt verschiedene Möglichkeiten zum Abrufen eines Bereichs von Eigenschafts Werten. Die [**IADs. GetInfoEx**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) -Methode kann entweder in einer Automatisierungs Sprache oder in C++ verwendet werden. Die **IADs. GetInfoEx** -Methode ist die bevorzugte Methode zur Durchführung des Bereichs Abrufs. Weitere Informationen zur Verwendung von **IADs. GetInfoEx** für den Bereichs Abruf finden Sie unter [using IADs:: GetInfoEx for Range Abruf](using-iads--getinfoex-for-range-retrieval.md).
+Es gibt verschiedene Möglichkeiten, einen Bereich von Eigenschaftswerten abzurufen. Die [**IADs.GetInfoEx-Methode**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) kann entweder in einer Automatisierungssprache oder in C++ verwendet werden. Die **IADs.GetInfoEx-Methode** ist die bevorzugte Methode für den Bereichsabruf. Weitere Informationen zur Verwendung von **IADs.GetInfoEx** für den Bereichsabruf finden Sie unter [Verwenden von IADs::GetInfoEx für den Bereichsabruf.](using-iads--getinfoex-for-range-retrieval.md)
 
-Wenn eine Automatisierungs Sprache verwendet wird, können die ActiveX-Verzeichnisobjekte (ADO) zum Abrufen eines Bereichs von Eigenschafts Werten verwendet werden. Weitere Informationen zur Verwendung von ADO für den Bereichs Abruf finden Sie unter [Verwenden von ADO für den Bereichs Abruf](using-ado-for-range-retrieval.md).
+Wenn eine Automatisierungssprache verwendet wird, kann der ActiveX Directory Objects (ADO) verwendet werden, um einen Bereich von Eigenschaftswerten abzurufen. Weitere Informationen zur Verwendung von ADO für den Bereichsabruf finden Sie unter [Verwenden von ADO für den Bereichsabruf.](using-ado-for-range-retrieval.md)
 
-Wenn C++ verwendet wird, können die Schnittstellen [**IDirectorySearch**](/windows/desktop/api/Iads/nn-iads-idirectorysearch) und [**IDirectoryObject**](/windows/desktop/api/Iads/nn-iads-idirectoryobject) zum Abrufen eines Bereichs von Eigenschafts Werten verwendet werden. Weitere Informationen zur Verwendung von **IDirectorySearch** und **IDirectoryObject** für den Bereichs Abruf finden [Sie unter Verwenden von IDirectorySearch und IDirectoryObject für den Bereichs Abruf](using-idirectorysearch-and-idirectoryobject-for-range-retrieval.md).
+Wenn C++ verwendet wird, können die Schnittstellen [**IDirectorySearch**](/windows/desktop/api/Iads/nn-iads-idirectorysearch) und [**IDirectoryObject**](/windows/desktop/api/Iads/nn-iads-idirectoryobject) verwendet werden, um einen Bereich von Eigenschaftswerten abzurufen. Weitere Informationen zur Verwendung von **IDirectorySearch** und **IDirectoryObject** für den Bereichsabruf finden Sie unter [Verwenden von IDirectorySearch und IDirectoryObject für den Bereichsabruf.](using-idirectorysearch-and-idirectoryobject-for-range-retrieval.md)
 
- 
+ 
 
- 
+ 
 
 
 

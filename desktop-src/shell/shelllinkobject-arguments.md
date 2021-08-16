@@ -42,7 +42,7 @@ die Argumente des Links.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel werden **Argumente verwendet,** um die Argumente für einen Link abzurufen, Internet Explorer in der -Datei des Benutzers Startmenü. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
+Im folgenden Beispiel werden **Argumente** verwendet, um die Argumente für einen Link zu Internet Explorer abzurufen, die im Startmenü des Benutzers gefunden wurden. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
 JScript:
 

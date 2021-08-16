@@ -1,9 +1,9 @@
 ---
-title: headerFieldsType Complex Type
+title: komplexer headerFieldsType-Typ
 description: Definiert die Elemente, die die Felder für einen E-Mail-Header angeben.
 ms.assetid: 1ad1b62d-5aca-4be4-b956-6f8c64761b2b
 keywords:
-- Komplexe HeaderFieldsType-Taskplaner
+- komplexer headerFieldsType-Typ Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118356362"
 ---
-# <a name="headerfieldstype-complex-type"></a>headerFieldsType Complex Type
+# <a name="headerfieldstype-complex-type"></a>komplexer headerFieldsType-Typ
 
 Definiert die Elemente, die die Felder für einen E-Mail-Header angeben.
 
@@ -52,7 +52,7 @@ Definiert die Elemente, die die Felder für einen E-Mail-Header angeben.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

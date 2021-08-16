@@ -1,9 +1,9 @@
 ---
-title: PGM_GETBUTTONSTATE Meldung (kommstrg. h)
-description: Ruft den Zustand der angegebenen Schaltfläche in einem Pager-Steuerelement ab. Sie können diese Nachricht explizit senden oder das Pager \_ GetButtonState-Makro verwenden.
+title: PGM_GETBUTTONSTATE Meldung (Commctrl.h)
+description: Ruft den Zustand der angegebenen Schaltfläche in einem Pagersteuerelement ab. Sie können diese Nachricht explizit senden oder das \_ Pager-Makro GetButtonState verwenden.
 ms.assetid: 58f99b67-fef7-4695-86e2-0579a2f6de2f
 keywords:
-- Windows-Steuerelemente für PGM_GETBUTTONSTATE Meldung
+- PGM_GETBUTTONSTATE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d8c9eebbc0aa91651a01de1fe193544f0c8afcf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2014b6e36a0ab883155d786760ef54f02c89ee0d17192d6082d40ad19eec95a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956807"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117830191"
 ---
-# <a name="pgm_getbuttonstate-message"></a>PGM- \_ GetButtonState-Meldung
+# <a name="pgm_getbuttonstate-message"></a>PGM \_ GETBUTTONSTATE-Nachricht
 
-Ruft den Zustand der angegebenen Schaltfläche in einem Pager-Steuerelement ab. Sie können diese Nachricht explizit senden oder das [**Pager \_ GetButtonState**](/windows/desktop/api/Commctrl/nf-commctrl-pager_getbuttonstate) -Makro verwenden.
+Ruft den Zustand der angegebenen Schaltfläche in einem Pagersteuerelement ab. Sie können diese Nachricht explizit senden oder das [**\_ Pager-Makro GetButtonState**](/windows/desktop/api/Commctrl/nf-commctrl-pager_getbuttonstate) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -41,8 +41,8 @@ Gibt an, für welche Schaltfläche der Status abgerufen werden soll. Mögliche W
 
 | Wert                                                                                                                                                                     | Bedeutung                                                                                                                                                                                                  |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="PGB_TOPORLEFT"></span><span id="pgb_toporleft"></span><dl> <dt>**PGB- \_ toporleft**</dt> </dl>             | Gibt die oberste Schaltfläche in einem [**PGS \_**](pager-control-styles.md) -Steuerelement "Pager" oder die linke Schaltfläche in einem [**PGS- \_ Horz**](pager-control-styles.md) -Pager-Steuerelement an <br/>     |
-| <span id="PGB_BOTTOMORRIGHT"></span><span id="pgb_bottomorright"></span><dl> <dt>**PGB \_ bottomorright**</dt> </dl> | Gibt die untere Schaltfläche in einem [**PGS \_**](pager-control-styles.md) -Steuerelement des Pager-Steuer Elements oder die Rechte Taste in einem [**PGS- \_ Horz**](pager-control-styles.md) -Pager-Steuerelement <br/> |
+| <span id="PGB_TOPORLEFT"></span><span id="pgb_toporleft"></span><dl> <dt>**PGB \_ TOPORLEFT**</dt> </dl>             | Gibt die obere Schaltfläche in einem [**PGS \_ VERT**](pager-control-styles.md) Pager-Steuerelement oder die linke Schaltfläche in einem [**PGS HORZ-Pager-Steuerelement \_**](pager-control-styles.md) an. <br/>     |
+| <span id="PGB_BOTTOMORRIGHT"></span><span id="pgb_bottomorright"></span><dl> <dt>**PGB \_ BOTTOMORRIGHT**</dt> </dl> | Gibt die untere Schaltfläche in einem [**\_ PGS-VERT-Pager-Steuerelement**](pager-control-styles.md) oder die rechte Schaltfläche in einem [**PGS HORZ-Pager-Steuerelement \_**](pager-control-styles.md) an. <br/> |
 
 
 
@@ -52,17 +52,17 @@ Gibt an, für welche Schaltfläche der Status abgerufen werden soll. Mögliche W
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Zustand der in *LPARAM* angegebenen Schaltfläche zurück. Dabei handelt es sich um einen oder mehrere der folgenden Werte (wenn mehr als ein Wert zurückgegeben wird, werden Sie mit einem bitweisen OR kombiniert):
+Gibt den Zustand der in *lParam* angegebenen Schaltfläche zurück. Dies ist mindestens einer der folgenden Werte (wenn mehr als ein Wert zurückgegeben wird, werden sie mithilfe eines bitweisen OR kombiniert):
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                 |
 |-----------------------------------------------------------------------------------------------|---------------------------------------------|
-| <dl> <dt>**pgf \_ unsichtbar**</dt> </dl> | Die Schaltfläche ist nicht sichtbar. <br/>      |
-| <dl> <dt>**pgf \_ Normal**</dt> </dl>    | Die Schaltfläche befindet sich im normalen Zustand. <br/>  |
-| <dl> <dt>**pgf-abgeblendet \_**</dt> </dl>    | Die Schaltfläche befindet sich in einem ausgefallenen Zustand. <br/>  |
-| <dl> <dt>**pgf- \_ depressiv**</dt> </dl> | Die Schaltfläche befindet sich im gedrückten Zustand. <br/> |
-| <dl> <dt>**pgf- \_ heiß**</dt> </dl>       | Die Schaltfläche befindet sich im aktiven Zustand. <br/>     |
+| <dl> <dt>**PGF \_ INVISIBLE**</dt> </dl> | Die Schaltfläche ist nicht sichtbar. <br/>      |
+| <dl> <dt>**PGF \_ NORMAL**</dt> </dl>    | Die Schaltfläche befindet sich im normalen Zustand. <br/>  |
+| <dl> <dt>**PGF \_ ABGEBLENDET**</dt> </dl>    | Die Schaltfläche befindet sich im grauen Zustand. <br/>  |
+| <dl> <dt>**PGF \_ ÜBERLASTET**</dt> </dl> | Die Schaltfläche befindet sich im gedrückten Zustand. <br/> |
+| <dl> <dt>**PGF \_ HOT**</dt> </dl>       | Die Schaltfläche befindet sich im zustand "Heiß". <br/>     |
 
 
 
@@ -74,9 +74,9 @@ Gibt den Zustand der in *LPARAM* angegebenen Schaltfläche zurück. Dabei handel
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_OPENINTERFACE-Nachricht (Vfw.h)
+title: MCIWNDM_OPENINTERFACE Nachricht (Vfw.h)
 description: Die MCIWNDM \_ OPENINTERFACE-Nachricht fügt den Datenstrom oder die Datei, der bzw. die der angegebenen Schnittstelle zugeordnet ist, an ein MCIWnd-Fenster an. Sie können diese Nachricht explizit oder mithilfe des MCIWndOpenInterface-Makros senden.
 ms.assetid: 73cbd637-d315-4b39-a978-2b72aed1f303
 keywords:
-- MCIWNDM_OPENINTERFACE Nachricht Windows Multimedia
+- MCIWNDM_OPENINTERFACE nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:

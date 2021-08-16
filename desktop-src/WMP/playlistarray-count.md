@@ -3,7 +3,7 @@ title: PlaylistArray.count
 description: Die count-Eigenschaft ruft die Anzahl der Wiedergabelisten im Wiedergabelistenarray ab.
 ms.assetid: 6409d089-d635-4dc1-8502-7bb65de0a01f
 keywords:
-- PlaylistArray.count Windows Media Player
+- PlaylistArray.count-Windows Media Player
 topic_type:
 - apiref
 api_name:

@@ -1,48 +1,48 @@
 ---
-title: Verwenden von Pager-Steuerelementen
-description: In diesem Abschnitt wird beschrieben, wie Sie das Pager-Steuerelement in Ihrer Anwendung implementieren.
+title: Verwenden von Pagersteuerelementen
+description: In diesem Abschnitt wird beschrieben, wie Sie das Pagersteuerelement in Ihrer Anwendung implementieren.
 ms.assetid: 5703FE4B-987E-49DA-9741-F8B45AD26467
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 586bfff0c8d8097c4b0e861506bb73f55467b711
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: b917943f5f86498bb3cbea2c58842049c4618caf64a66a6b8db1cb2ab86a315b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104039690"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117828641"
 ---
-# <a name="how-to-use-pager-controls"></a>Verwenden von Pager-Steuerelementen
+# <a name="how-to-use-pager-controls"></a>Verwenden von Pagersteuerelementen
 
-In diesem Abschnitt wird beschrieben, wie Sie das Pager-Steuerelement in Ihrer Anwendung implementieren.
+In diesem Abschnitt wird beschrieben, wie Sie das Pagersteuerelement in Ihrer Anwendung implementieren.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="initialize-a-pager-control"></a>Pager-Steuerelement initialisieren
+### <a name="initialize-a-pager-control"></a>Initialisieren eines Pager-Steuerelements
 
-Um das Pager-Steuerelement zu verwenden, müssen Sie die [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) -Funktion mit dem \_ \_ im **dwicc** -Member der [**InitCommonControlsEx**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) -Struktur festgelegten Flag für die-Klasse "pagescroller Class" aufzurufen.
+Um das Pagersteuerelement zu verwenden, müssen Sie die [**InitCommonControlsEx-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) aufrufen, wobei im \_ \_ **dwICC-Member** der [**INITCOMMONCONTROLSEX-Struktur**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) das FLAGPAGESCROLLER CLASS festgelegt ist.
 
-### <a name="create-a-pager-control"></a>Erstellen eines Pager-Steuer Elements
+### <a name="create-a-pager-control"></a>Erstellen eines Pager-Steuerelements
 
-Verwenden Sie die API " [**kreatewindow**](/windows/desktop/api/winuser/nf-winuser-createwindowa) " oder " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) ", um ein Pager-Steuerelement zu erstellen. Der Klassenname für das Steuerelement ist " [**WC \_ pagescroller**](common-control-window-classes.md)", das in "kommctrl. h" definiert ist. Der [**PGS- \_ Horz**](pager-control-styles.md) -Stil wird zum Erstellen eines horizontalen Pager verwendet, und der PGS-Format " [**\_ Vert**](pager-control-styles.md) " wird zum Erstellen eines vertikalen Pager verwendet. Da es sich hierbei um ein untergeordnetes Steuerelement handelt, sollte auch der untergeordnete [**WS \_**](/windows/desktop/winmsg/window-styles) -Stil verwendet werden.
+Verwenden Sie [**createWindow**](/windows/desktop/api/winuser/nf-winuser-createwindowa) oder die [**CreateWindowEx-API,**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) um ein Pagersteuerelement zu erstellen. Der Klassenname für das Steuerelement ist [**WC \_ PAGESCROLLER**](common-control-window-classes.md), der in Commctrl.h definiert ist. Der [**PGS \_ HORZ-Stil**](pager-control-styles.md) wird verwendet, um einen horizontalen Pager zu erstellen, und der [**\_ PGS-VERT-Stil**](pager-control-styles.md) wird verwendet, um einen vertikalen Pager zu erstellen. Da es sich um ein untergeordnetes Steuerelement handelt, sollte auch der [**WS \_ CHILD-Stil**](/windows/desktop/winmsg/window-styles) verwendet werden.
 
-Nachdem das Pager-Steuerelement erstellt wurde, möchten Sie wahrscheinlich ein enthaltenes Fenster zuweisen. Wenn das enthaltene Fenster ein untergeordnetes Fenster ist, sollten Sie das untergeordnete Fenster als untergeordnetes Element des Pager-Steuer Elements festlegen, sodass Größe und Position ordnungsgemäß berechnet werden. Anschließend weisen Sie das Fenster dem Pager-Steuerelement mit der [**PGM- \_ setchild**](pgm-setchild.md) -Nachricht zu. Beachten Sie, dass diese Meldung das übergeordnete Fenster des enthaltenen Fensters nicht tatsächlich ändert. Er weist lediglich das enthaltene Fenster zu. Wenn das enthaltene Fenster eines der allgemeinen Steuerelemente ist, muss es den [**CCS \_ NORESIZE**](common-control-styles.md) -Stil aufweisen, um zu verhindern, dass das Steuerelement versucht, die Größe der Größe des Pager-Steuer Elements zu ändern.
+Nachdem das Pagersteuerelement erstellt wurde, möchten Sie ihm wahrscheinlich ein enthaltenes Fenster zuweisen. Wenn das enthaltene Fenster ein untergeordnetes Fenster ist, sollten Sie das untergeordnete Fenster zu einem untergeordneten Element des Pagersteuerelements machen, damit Größe und Position richtig berechnet werden. Anschließend weisen Sie das Fenster dem Pagersteuerelement mit der [**PGM \_ SETCHILD-Meldung**](pgm-setchild.md) zu. Beachten Sie, dass diese Meldung das übergeordnete Fenster des enthaltenen Fensters nicht tatsächlich ändert. es weist einfach das enthaltene Fenster zu. Wenn das enthaltene Fenster eines der allgemeinen Steuerelemente ist, muss es den [**CCS \_ NORESIZE-Stil**](common-control-styles.md) aufweisen, um zu verhindern, dass das Steuerelement versucht, die Größe des Pagersteuerelements selbst zu ändern.
 
-### <a name="process-pager-control-notifications"></a>Pager-Steuerelement Benachrichtigungen verarbeiten
+### <a name="process-pager-control-notifications"></a>Verarbeiten von Pager-Steuerelementbenachrichtigungen
 
-Es ist mindestens erforderlich, dass die [PGN \_ calcsize](pgn-calcsize.md) -Benachrichtigung verarbeitet wird. Wenn Sie diese Benachrichtigung nicht verarbeiten und einen Wert für die Breite oder Höhe eingeben, werden die Bild Lauf Pfeile im Pager-Steuerelement nicht angezeigt. Dies liegt daran, dass das Pager-Steuerelement die Breite oder Höhe verwendet, die in der PGN \_ calcsize-Benachrichtigung angegeben ist, um die "ideale" Größe des enthaltenen Fensters zu ermitteln.
+Es ist mindestens erforderlich, die [PGN-CALCSIZE-Benachrichtigung \_ ](pgn-calcsize.md) zu verarbeiten. Wenn Sie diese Benachrichtigung nicht verarbeiten und einen Wert für die Breite oder Höhe eingeben, werden die Bildlaufpfeile im Pagersteuerelement nicht angezeigt. Dies liegt daran, dass das Pagersteuerelement die in der PGN-CALCSIZE-Benachrichtigung angegebene Breite oder Höhe \_ verwendet, um die "ideale" Größe des enthaltenen Fensters zu bestimmen.
 
-Im folgenden Beispiel wird veranschaulicht, wie die [PGN \_ calcsize](pgn-calcsize.md) -Benachrichtigungs Fälle verarbeitet werden. In diesem Beispiel ist das enthaltene Fenster ein Symbolleisten-Steuerelement, das eine unbekannte Anzahl von Schaltflächen mit einer unbekannten Größe enthält. Im Beispiel wird gezeigt, wie die [**TB \_ getmaxsize**](tb-getmaxsize.md) -Nachricht verwendet wird, um die Größe aller Elemente in der Symbolleiste zu ermitteln. Im Beispiel wird dann die Breite aller Elemente in den **iWidth** -Member der [**nmpgcalcsize**](/windows/desktop/api/Commctrl/ns-commctrl-nmpgcalcsize) -Struktur eingefügt, die an die Benachrichtigung übergeben wird.
+Im folgenden Beispiel wird veranschaulicht, wie der [PGN \_ CALCSIZE-Benachrichtigungsfall](pgn-calcsize.md) verarbeitet wird. In diesem Beispiel ist das enthaltene Fenster ein Symbolleisten-Steuerelement, das eine unbekannte Anzahl von Schaltflächen mit unbekannter Größe enthält. Das Beispiel zeigt, wie die [**TB \_ GETMAXSIZE-Nachricht**](tb-getmaxsize.md) verwendet wird, um die Größe aller Elemente in der Symbolleiste zu bestimmen. Im Beispiel wird dann die Breite aller Elemente in das **iWidth-Element** der [**NMPGCALCSIZE-Struktur**](/windows/desktop/api/Commctrl/ns-commctrl-nmpgcalcsize) platziert, das an die Benachrichtigung übergeben wird.
 
 
 ```C++
@@ -72,12 +72,12 @@ return 0;
 
 <dl> <dt>
 
-[Verwenden von Pager-Steuerelementen](using-pager-controls.md)
+[Verwenden von Pagersteuerelementen](using-pager-controls.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Demo Windows allgemeinen Steuerelementen (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

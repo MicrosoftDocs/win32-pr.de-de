@@ -1,9 +1,9 @@
 ---
-title: Playlistindex-Attribut
-description: Das playlistindex-Attribut ist der Index des Medien Elements in der übergeordneten Wiedergabeliste.
+title: PlaylistIndex-Attribut
+description: Das PlaylistIndex-Attribut ist der Index des Medienelements in der übergeordneten Wiedergabeliste.
 ms.assetid: 65b629d4-115c-487c-b260-4bbea38dcea7
 keywords:
-- Playlistindex-Attribut, Windows Media Player
+- PlaylistIndex-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,29 +12,29 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d03edc8a33fb854aa8790de2415a7039b2792698
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 56dcb57c6572ee8ea9fd10ba753d6d0ffb0149e759cb2250bae7d07ecbfa474f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359385"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118334521"
 ---
-# <a name="playlistindex-attribute"></a>Playlistindex-Attribut
+# <a name="playlistindex-attribute"></a>PlaylistIndex-Attribut
 
-Das **playlistindex** -Attribut ist der Index des Medien Elements in der übergeordneten Wiedergabeliste.
+Das **PlaylistIndex-Attribut** ist der Index des Medienelements in der übergeordneten Wiedergabeliste.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
 -   [CD-Spuren](cd-track-attributes.md)
 -   [Andere Elemente](other-item-attributes.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist ein temporäres Attribut. Er wird nicht in der Bibliothek oder in der digitalen Mediendatei gespeichert.
+Dieses Attribut ist ein temporäres Attribut. Sie wird nicht in der Bibliothek oder in der digitalen Mediendatei gespeichert.
 
-Medienelemente können Wiedergabelisten Elemente sein. Dieses Attribut ist der null basierte Index, der die Position des Medien Elements in der Wiedergabeliste darstellt. Wenn das Medien Element nicht Teil einer Wiedergabeliste ist, ist der Wert dieses Attributs eine leere Zeichenfolge ("").
+Medienelemente können Wiedergabelistenelemente sein. Dieses Attribut ist der nullbasierte Index, der die Position des Medienelements in der Wiedergabeliste darstellt. Wenn das Medienelement nicht Teil einer Wiedergabeliste ist, ist der Wert dieses Attributs eine leere Zeichenfolge ("").
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,11 +46,11 @@ Medienelemente können Wiedergabelisten Elemente sein. Dieses Attribut ist der n
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: TBN_DRAGOVER Benachrichtigungs Code (kommctrl. h)
-description: Gibt an, ob eine TB- \_ markbutton-Nachricht für eine Schaltfläche gesendet werden soll, die gezogen wird. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TBN_DRAGOVER Benachrichtigungscode (Commctrl.h)
+description: Ermittelt, ob eine TB MARKBUTTON-Nachricht für eine Schaltfläche gesendet werden \_ soll, die gezogen wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 2bb5c52e-0c90-4662-8ffd-045ecc7ed7e5
 keywords:
-- Windows-Steuerelemente für TBN_DRAGOVER Benachrichtigungs
+- TBN_DRAGOVER Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cfa02aa8fabf89ea27fce628d3d63165255bbd66
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 718a51f14f096edbd8df72b0c5fc33ca65ec0c303a095f108981482c9fb3cda5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117829344"
 ---
-# <a name="tbn_dragover-notification-code"></a>TBN- \_ DragOver-Benachrichtigungs Code
+# <a name="tbn_dragover-notification-code"></a>TBN \_ DRAGOVER-Benachrichtigungscode
 
-Gibt an, ob eine [**TB- \_ markbutton**](tb-markbutton.md) -Nachricht für eine Schaltfläche gesendet werden soll, die gezogen wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Ermittelt, ob eine [**TB \_ MARKBUTTON-Nachricht**](tb-markbutton.md) für eine Schaltfläche gesendet werden soll, die gezogen wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,13 +41,13 @@ TBN_DRAGOVER
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**nmtbhutitem**](/windows/win32/api/commctrl/ns-commctrl-nmtbhotitem) -Struktur, die angibt, auf welches Element gezogen wird.
+Ein Zeiger auf eine [**NMTBHOTITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmtbhotitem) der angibt, welches Element gezogen wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-**False** , wenn die Symbolleiste eine TB- \_ markbutton-Nachricht senden soll; andernfalls **true**.
+**FALSE,** wenn die Symbolleiste eine TB \_ MARKBUTTON-Nachricht senden soll, **andernfalls TRUE**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Ein Zeiger auf eine [**nmtbhutitem**](/windows/win32/api/commctrl/ns-commctrl-nm
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

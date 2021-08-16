@@ -19,7 +19,7 @@ In den folgenden Themen werden die Konstanten beschrieben, die mit den NLS-Funkt
 -   [Kalendertypinformationen](calendar-type-information.md)
 -   [Bilder im Format "Tag", "Monat", "Jahr" und "Zeit"](day--month--year--and-era-format-pictures.md)
 -   [Bilder im Format "Stunde", "Minute" und "Sekunde"](hour--minute--and-second-format-pictures.md)
--   [Sprachbezeichnerkonstten und -zeichenfolgen](language-identifier-constants-and-strings.md)
+-   [Sprachbezeichnerkonstatoren und Zeichenfolgen](language-identifier-constants-and-strings.md)
 -   [Locale Information Constants](locale-information-constants.md)
 -   [**Papiergrößen**](paper-sizes.md)
 -   [Bezeichner der Sortierreihenfolge](sort-order-identifiers.md)

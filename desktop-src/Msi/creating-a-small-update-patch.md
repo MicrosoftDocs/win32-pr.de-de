@@ -1,5 +1,5 @@
 ---
-description: Befolgen Sie die folgenden Richtlinien, wenn Sie einen Patch für ein kleines Update für Windows Installer erstellen.
+description: Halten Sie sich an die folgenden Richtlinien, wenn Sie einen Patch für ein kleines update Windows Installer erstellen.
 ms.assetid: 0e57c2aa-e86a-4161-9749-c7963182a6d5
 title: Erstellen eines kleinen Updatepatches
 ms.topic: article
@@ -13,17 +13,17 @@ ms.locfileid: "118379395"
 ---
 # <a name="creating-a-small-update-patch"></a>Erstellen eines kleinen Updatepatches
 
-Beim Erstellen eines Patches für [kleine Updates](small-updates.md)sollten Autoren die folgenden Richtlinien einhalten:
+Beim Erstellen eines Patches [für kleine Updates](small-updates.md)sollten Autoren die folgenden Richtlinien einhalten:
 
 -   Kleine Updatepatches müssen für eine einzelne Zielinstallation entworfen werden.
--   Kleine Updatepatches sollten die früheste Version als Zielinstallation verwenden.
+-   Für kleine Updatepatches sollte die früheste Version als Zielinstallation verwendet werden.
 -   Ein kleiner Updatepatch sollte alle früheren kleinen Updatepatches ersetzen und veraltet machen.
 
-Das folgende Szenario veranschaulicht, wann ein kleiner Updatepatch am besten geeignet ist.
+Das folgende Szenario veranschaulicht, wann ein kleiner Updatepatch am besten ist.
 
-Ihr Unternehmen liefert Version 1.0 von Myproduct.msi. Kurz darauf versenden Sie einen [kleinen Updatepatch](small-updates.md) für Myproduct.msi namens QFE1. Dadurch wird weder die [**ProductCode-Eigenschaft**](productcode.md) noch die [**ProductVersion-Eigenschaft**](productversion.md) geändert.
+Ihr Unternehmen liefert Version 1.0 der Myproduct.msi. Kurz darauf versenden Sie einen kleinen [Updatepatch](small-updates.md) für Myproduct.msi QFE1. Dadurch wird weder die [**ProductCode-Eigenschaft**](productcode.md) noch die [**ProductVersion-Eigenschaft**](productversion.md) geändert.
 
-Später erstellen Sie einen zweiten [kleinen Updatepatch](small-updates.md) für Myproduct.msi namens QFE2. Dieser zweite Patch muss auf Myproduct.msi Version 1.0 ausgerichtet sein. Dieser zweite Patch darf nicht auf Myproduct.msi Version 1.0 und Myproduct.msi Version 1.0 + QFE1 ausgerichtet sein. Wenn QFE2 angewendet wird, sollte QFE1 entfernt werden.
+Später erstellen Sie einen zweiten kleinen [Updatepatch](small-updates.md) für Myproduct.msi QFE2. Dieser zweite Patch muss auf Myproduct.msi 1.0. Dieser zweite Patch darf nicht sowohl auf Myproduct.msi 1.0 als auch auf Myproduct.msi 1.0 + QFE1. Wenn QFE2 angewendet wird, sollte QFE1 entfernt werden.
 
  
 

@@ -1,9 +1,9 @@
 ---
-title: EM_SETPALETTE Meldung (RichEdit. h)
-description: Ändert die Palette, die von einem Rich-Edit-Steuerelement für das Anzeige Fenster verwendet wird.
+title: EM_SETPALETTE Nachricht (Richedit.h)
+description: Ändert die Palette, die ein Rich-Edit-Steuerelement für sein Anzeigefenster verwendet.
 ms.assetid: c1dc0c24-eaf2-47a8-9bb1-59f37b206feb
 keywords:
-- Windows-Steuerelemente für EM_SETPALETTE Meldung
+- EM_SETPALETTE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 026a0a85001818b6f69366e8dba80ef56a7a8f20
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 93225a7a550f86bb8b32bf5939a8c7b7aa862ac96c8459bd6bcceb4c6b76e516
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117831151"
 ---
-# <a name="em_setpalette-message"></a>EM- \_ SetPalette-Nachricht
+# <a name="em_setpalette-message"></a>EM \_ SETPALETTE-Meldung
 
-Ändert die Palette, die von einem Rich-Edit-Steuerelement für das Anzeige Fenster verwendet wird.
+Ändert die Palette, die ein Rich-Edit-Steuerelement für sein Anzeigefenster verwendet.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ ms.locfileid: "104040508"
 *wParam* 
 </dt> <dd>
 
-Handle für die neue Palette, die vom Rich Edit-Steuerelement verwendet wird.
+Handle für die neue Palette, die vom Rich-Edit-Steuerelement verwendet wird.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet. Er muss NULL sein.
+Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 
 </dd> </dl>
 
@@ -47,9 +47,9 @@ Dieser Parameter wird nicht verwendet. Er muss NULL sein.
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Rich Edit-Steuerelement prüft nicht, ob die neue Palette gültig ist.
+Das Rich-Edit-Steuerelement überprüft nicht, ob die neue Palette gültig ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Das Rich Edit-Steuerelement prüft nicht, ob die neue Palette gültig ist.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 

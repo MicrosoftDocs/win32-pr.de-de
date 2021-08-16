@@ -1,9 +1,9 @@
 ---
-title: LVN_GETINFOTIP Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Listenansicht-Steuerelement mit einer großen Symbol Ansicht gesendet, das über den erweiterten LVS- \_ \_ infotip-Stil verfügt.
+title: LVN_GETINFOTIP Benachrichtigungscode (Commctrl.h)
+description: Wird von einem großen Listenansicht-Listenansicht-Steuerelement gesendet, das den erweiterten Stil LVS \_ EX \_ INFOTIP auflistet.
 ms.assetid: 62be5087-7e49-4722-a63a-1768e030af48
 keywords:
-- Windows-Steuerelemente für LVN_GETINFOTIP Benachrichtigungs
+- LVN_GETINFOTIP Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c2b4552456a575e2f03e02b2bfb78f7fcc1d8ca1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8f7477230913ec5efd0827bc48e1a6021619aa4cdbbad252426d1af364b5b36b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117830441"
 ---
-# <a name="lvn_getinfotip-notification-code"></a>LVN \_ getinfotip-Benachrichtigungs Code
+# <a name="lvn_getinfotip-notification-code"></a>LVN \_ GETINFOTIP-Benachrichtigungscode
 
-Wird von einem Listenansicht-Steuerelement mit einer großen Symbol Ansicht gesendet, das über den erweiterten [**LVS- \_ \_ infotip**](extended-list-view-styles.md) -Stil verfügt. Dieser Benachrichtigungs Code wird gesendet, wenn das Listenansicht-Steuerelement zusätzliche Textinformationen anfordert, die in einer QuickInfo angezeigt werden sollen. Sie wird in Form einer [**WM- \_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem großen Listenansicht-Listenansicht-Steuerelement gesendet, das den erweiterten [**Stil LVS \_ EX \_ INFOTIP**](extended-list-view-styles.md) auflistet. Dieser Benachrichtigungscode wird gesendet, wenn das Listenansicht-Steuerelement zusätzliche Textinformationen an fordert, die in einer QuickInfo angezeigt werden sollen. Er wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,7 +43,7 @@ LVN_GETINFOTIP
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmlvgetinfotip**](/windows/win32/api/commctrl/ns-commctrl-nmlvgetinfotipa) -Struktur, die Informationen zu diesem Benachrichtigungs Code enthält.
+Zeiger auf eine [**NMLVGETINFOTIP-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmlvgetinfotipa) die Informationen zu diesem Benachrichtigungscode enthält.
 
 </dd> </dl>
 
@@ -51,9 +51,9 @@ Zeiger auf eine [**nmlvgetinfotip**](/windows/win32/api/commctrl/ns-commctrl-nml
 
 Der Rückgabewert für diese Benachrichtigung wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Benachrichtigungs Code wird nur von Listenansicht-Steuerelementen gesendet, die über die erweiterte [**LVS- \_ \_ infotip**](extended-list-view-styles.md) -Art verfügen. Der LVN \_ getinfotip-Benachrichtigungs Code wird nur für Unterelement 0 gesendet.
+Dieser Benachrichtigungscode wird nur von Listenansichtssteuerelementen gesendet, die den [**erweiterten STIL LVS \_ EX \_ INFOTIP**](extended-list-view-styles.md) haben. Der LVN \_ GETINFOTIP-Benachrichtigungscode wird nur für Unteritem 0 gesendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,10 +61,10 @@ Dieser Benachrichtigungs Code wird nur von Listenansicht-Steuerelementen gesende
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **LVN \_ Getinfotipw** (Unicode) und **LVN \_ getinfotipa** (ANSI)<br/>             |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **LVN \_ GETINFOTIPW** (Unicode) und **LVN \_ GETINFOTIPA** (ANSI)<br/>             |
 
 
 

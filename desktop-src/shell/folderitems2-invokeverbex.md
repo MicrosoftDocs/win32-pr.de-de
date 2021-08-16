@@ -54,17 +54,17 @@ Eine **Variante** mit der Verbzeichenfolge, die dem auszuführenden Befehl entsp
 
 Typ: **Variant**
 
-Eine **Variante,** die aus einer Zeichenfolge mit einem oder mehreren Argumenten für den von *vVerb* angegebenen Befehl besteht. Das Format dieser Zeichenfolge hängt vom jeweiligen Verb ab.
+Eine **Variante,** die aus einer Zeichenfolge mit mindestens einem Argument für den von *vVerb angegebenen Befehl besteht.* Das Format dieser Zeichenfolge hängt vom jeweiligen Verb ab.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Verb ist eine Zeichenfolge, die verwendet wird, um eine bestimmte Aktion anzugeben, die einem Element oder einer Auflistung von Elementen zugeordnet ist. In der Regel wird beim Aufrufen eines Verbs eine verwandte Anwendung gestartet. Wenn Sie z. B. das **geöffnete** Verb für eine .txt Datei aufrufen, wird die Datei normalerweise mit einem Text-Editor geöffnet, in der Regel microsoft Editor. Weitere Informationen zu Verben finden Sie unter [Starten von Anwendungen.](launch.md)
+Ein Verb ist eine Zeichenfolge, die verwendet wird, um eine bestimmte Aktion anzugeben, die einem Element oder einer Auflistung von Elementen zugeordnet ist. In der Regel wird durch aufrufen eines Verbs eine zugehörige Anwendung gestartet. Wenn Sie z. B. das **geöffnete** Verb für eine .txt-Datei aufrufen, wird die Datei normalerweise mit einem Text-Editor geöffnet, in der Regel microsoft Editor. Weitere Informationen zu Verben finden Sie unter [Starten von Anwendungen](launch.md).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **InvokeVerbEx** verwendet, um das Standardverb ("open") für **Arbeitsplatz** aufzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **InvokeVerbEx** verwendet, um das Standardverb ("open") für **Arbeitsplatz.** Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
 JScript:
 
@@ -161,7 +161,7 @@ End Sub
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |

@@ -1,23 +1,23 @@
 ---
-description: Dieses Thema enthält ein Codebeispiel, das zeigt, wie ein lokales Fenster registriert und zum Erstellen eines Hauptfensters verwendet wird.
+description: Dieses Thema enthält ein Codebeispiel, das zeigt, wie Ein lokales Fenster registriert und zum Erstellen eines Hauptfensters verwendet wird.
 ms.assetid: ea9e36c9-b10d-441e-b1b5-1ab93e009e1d
-title: Verwenden von Fenster Klassen
+title: Verwenden von Fensterklassen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d23f49e431aa6f980d16fc7a9df5c4f98951498
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8ac7edfaf89ee336534e2cca8e25a3222b3fddd159fa6c52d34a3832a44f03a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117849576"
 ---
-# <a name="using-window-classes"></a>Verwenden von Fenster Klassen
+# <a name="using-window-classes"></a>Verwenden von Fensterklassen
 
-Dieses Thema enthält ein Codebeispiel, das zeigt, wie ein lokales Fenster registriert und zum Erstellen eines Hauptfensters verwendet wird.
+Dieses Thema enthält ein Codebeispiel, das zeigt, wie Ein lokales Fenster registriert und zum Erstellen eines Hauptfensters verwendet wird.
 
-Jeder Prozess muss seine eigenen Fenster Klassen registrieren. Verwenden Sie die [**RegisterClassEx**](/windows/win32/api/winuser/nf-winuser-registerclassexa) -Funktion, um eine lokale Anwendungsklasse zu registrieren. Sie müssen die Fenster Prozedur definieren, die Elemente der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur ausfüllen und dann einen Zeiger zur-Struktur an die **RegisterClassEx** -Funktion übergeben.
+Jeder Prozess muss seine eigenen Fensterklassen registrieren. Um eine lokale Anwendungsklasse zu registrieren, verwenden Sie die [**RegisterClassEx-Funktion.**](/windows/win32/api/winuser/nf-winuser-registerclassexa) Sie müssen die Fensterprozedur definieren, die Member der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) ausfüllen und dann einen Zeiger auf die Struktur an die **RegisterClassEx-Funktion** übergeben.
 
-Im folgenden Beispiel wird gezeigt, wie eine lokale Fenster Klasse registriert und zum Erstellen eines Hauptfensters verwendet wird.
+Das folgende Beispiel zeigt, wie Sie eine lokale Fensterklasse registrieren und verwenden, um ein Hauptfenster zu erstellen.
 
 
 ```
@@ -129,7 +129,7 @@ BOOL InitInstance(HINSTANCE hinstance, int nCmdShow)
 
 
 
-Das Registrieren einer globalen Anwendungsklasse ähnelt dem Registrieren einer lokalen Anwendungsklasse, mit der Ausnahme, dass der **Style** -Member der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur den **CS \_ Global Class** -Stil angeben muss.
+Das Registrieren einer globalen Anwendungsklasse ähnelt dem Registrieren einer lokalen Anwendungsklasse, mit der Ausnahme, dass der **Stilmember** der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) den **CS \_ GLOBALCLASS-Stil** angeben muss.
 
  
 

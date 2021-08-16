@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shldisp.h
 ms.assetid: 863aa667-454c-40cd-8091-9bb456047b6c
-ms.openlocfilehash: a1b2a79c7ea323c36371e08d3519e71e4c537935
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 36b40d0831c18a7931f3f29492dd4c7769440a76ddcec2aa33ba3e840e97950d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109842621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117859123"
 ---
 # <a name="webwizardhostsetwizardbuttons-method"></a>WebWizardHost.SetWizardButtons-Methode
 
-Aktualisiert die Schaltflächen **Zurück,** **Weiter** und **Fertig stellen** im Assistentenframe des Clients.
+Aktualisiert die **Schaltflächen Zurück,** **Weiter** und **Fertig stellen** im Assistentenframe des Clients.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ iRetVal = WebWizardHost.SetWizardButtons(
 *vbEnableBack* \[ In\]
 </dt> <dd>
 
-Typ: **Boolean**
+Typ: **Boolesch**
 
 Aktiviert die Schaltfläche **Zurück.**
 
@@ -53,7 +53,7 @@ Aktiviert die Schaltfläche **Zurück.**
 *vbEnableNext* \[ In\]
 </dt> <dd>
 
-Typ: **Boolescher Wert**
+Typ: **Boolesch**
 
 Hiermit wird die Schaltfläche **Weiter** aktiviert.
 
@@ -62,15 +62,15 @@ Hiermit wird die Schaltfläche **Weiter** aktiviert.
 *vbLastPage* \[ In\]
 </dt> <dd>
 
-Typ: **Boolescher Wert**
+Typ: **Boolesch**
 
-Aktiviert die Schaltfläche **Fertig stellen.** Gibt an, dass dies die letzte serverseitige Seite ist.
+Aktiviert die Schaltfläche **Fertig** stellen. Gibt an, dass dies die letzte serverseitige Seite ist.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Stellen Sie sicher, dass Sie Handlerfunktionen auf jeder serverseitigen Seite für OnBack() und OnNext() implementieren, die den Assistentenschaltflächen **Zurück** und **Weiter** entsprechen. Die Funktionen OnBack() und OnNext() reagieren auf **SetWizardButtons**. Zur entsprechenden Zeit ruft die OnNext()-Funktion **SetWizardButtons** mit *vbLastPage* = **true** auf, wodurch eine **Fertig stellen-Schaltfläche** aktiviert werden kann. OnNext() ruft auch [**FinalNext**](iwebwizardhost-finalnext.md) auf, wenn ein Benutzer auf die Schaltfläche **Fertig stellen** klickt.
+Achten Sie darauf, handler-Funktionen auf jeder serverseitigen Seite für OnBack() und OnNext() zu implementieren, die den Assistentenschaltflächen **Zurück** und **Weiter entspricht.** Die Funktionen OnBack() und OnNext() reagieren auf **SetWizardButtons.** Zum entsprechenden Zeitpunkt ruft die OnNext()-Funktion **SetWizardButtons** mit *vbLastPage* true auf, wodurch die Schaltfläche = Fertig stellen **aktiviert werden** kann. OnNext() ruft auch [**FinalNext**](iwebwizardhost-finalnext.md) auf, wenn ein Benutzer auf die Schaltfläche **Fertig stellen** klickt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,8 +78,8 @@ Stellen Sie sicher, dass Sie Handlerfunktionen auf jeder serverseitigen Seite f�
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl> |
 

@@ -43,7 +43,7 @@ DWORD WINAPI ExpertGetStartupInfo(
 *hExpertKey* \[ In\]
 </dt> <dd>
 
-Eindeutiger Expertenbezeichner. Netzwerkmonitor *hExpertKey* an den Experten übergeben, wenn er die [Run-Funktion](run.md) aufruft.
+Eindeutiger Expertenbezeichner. Netzwerkmonitor übergibt *hExpertKey* an den Experten, wenn er die [Run-Funktion](run.md) aufruft.
 
 </dd> <dt>
 
@@ -56,13 +56,13 @@ Zeiger auf eine [EXPERTSTARTUPINFO-Struktur,](expertstartupinfo.md) die Startinf
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
+Wenn die Funktion erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert NMERR.
+Wenn die Funktion nicht erfolgreich ist, lautet der Rückgabewert NMERR.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **ExpertGetStartupInfo-Funktion** wird verwendet, wenn der Experte die verwendeten Startinformationen ermitteln muss.
+Die **ExpertGetStartupInfo-Funktion** wird verwendet, wenn der Experte die verwendeten Startinformationen bestimmen muss.
 
 ## <a name="requirements"></a>Anforderungen
 

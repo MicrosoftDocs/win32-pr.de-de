@@ -1,36 +1,36 @@
 ---
-title: Erstellen von Grund leisten-Steuerelementen
-description: Eine Anwendung erstellt durch Aufrufen der CreateWindowEx-Funktion ein Grund leisten-Steuerelement, wobei rebarclassname als Fenster Klasse angegeben wird.
+title: Erstellen von Rebar-Steuerelementen
+description: Eine Anwendung erstellt ein Rebar-Steuerelement, indem die CreateWindowEx-Funktion aufruft und REBARCLASSNAME als Fensterklasse angegeben wird.
 ms.assetid: F17CC2A4-BDC6-48A6-9AF5-19FCF65CC39A
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 19b38cd49e8e6016dafad5ec07c77be570a5a430
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 0ebd6063f8921453a5c71e1c2467bf803c67c0a1b4f66e98006b9118e6a588b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103730441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117831772"
 ---
-# <a name="how-to-create-rebar-controls"></a>Erstellen von Grund leisten-Steuerelementen
+# <a name="how-to-create-rebar-controls"></a>Erstellen von Rebar-Steuerelementen
 
-Eine Anwendung erstellt durch Aufrufen der [**CreateWindowEx**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) -Funktion ein Grund leisten-Steuerelement, wobei [**rebarclassname**](common-control-window-classes.md) als Fenster Klasse angegeben wird. Die Anwendung muss zuerst die Fenster Klasse registrieren, indem Sie die [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) -Funktion aufrufen und \_ dabei den Wert für das cool-Klassen- \_ Bit in der zugehörigen [**InitCommonControlsEx**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) -Struktur angibt.
+Eine Anwendung erstellt ein Rebar-Steuerelement, indem die [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) aufruft und [**REBARCLASSNAME**](common-control-window-classes.md) als Fensterklasse angegeben wird. Die Anwendung muss zuerst die Window-Klasse registrieren, indem sie die [**InitCommonControlsEx-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) aufruft und dabei das BIT FÜR COOL CLASSES in der zugehörigen \_ \_ [**INITCOMMONCONTROLSEX-Struktur**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) an gibt.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="create-a-rebar-control"></a>Erstellen eines Grund leisten-Steuer Elements
+### <a name="create-a-rebar-control"></a>Erstellen eines Rebar-Steuerelements
 
-Im folgenden Beispiel wird ein Grund leisten-Steuerelement mit zwei Bändern erstellt – eines mit einem Kombinations Feld und ein weiteres, das eine Symbolleiste enthält. (Weitere Informationen finden Sie in der Abbildung unter [Informationen zu](rebar-controls.md)Grund leisten-Steuerelementen Diese Steuerelemente werden separat erstellt und als Parameter an die Beispiel Funktion übermittelt.
+Im folgenden Beispiel wird ein Rebar-Steuerelement mit zwei Bändern erstellt– eines, das ein Kombinationsfeld enthält, und ein weiteres, das eine Symbolleiste enthält. (Weitere Informationen finden Sie in der Abbildung unter [About Rebar Controls](rebar-controls.md).) Diese Steuerelemente werden separat erstellt und als Parameter an die Beispielfunktion übergeben.
 
 
 ```C++
@@ -117,15 +117,15 @@ HWND CreateRebar(HWND hwndOwner, HWND hwndToolbar, HWND hwndCombo)
 
 <dl> <dt>
 
-[Verwenden von Grund leisten-Steuerelementen](using-rebar-controls.md)
+[Verwenden von Rebar-Steuerelementen](using-rebar-controls.md)
 </dt> <dt>
 
-[Informationen über Grund leisten-Steuerelemente](rebar-controls.md)
+[Informationen zu Rebar-Steuerelementen](rebar-controls.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Windows demo (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

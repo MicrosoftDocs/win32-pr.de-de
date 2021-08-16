@@ -13,7 +13,7 @@ ms.locfileid: "118322033"
 ---
 # <a name="using-winsock"></a>Verwenden von Winsock
 
-In diesem Abschnitt werden Verfahren und Programmiertechniken beschrieben, die mit Winsock verwendet werden. Es umfasst grundlegende Winsock-Programmiertechniken, z. [B. Erste Schritte Mit Winsock,](getting-started-with-winsock.md)sowie erweiterte Techniken, die für erfahrene Winsock-Entwickler nützlich sind.
+In diesem Abschnitt werden Verfahren und Programmiertechniken beschrieben, die mit Winsock verwendet werden. Sie umfasst grundlegende Winsock-Programmiertechniken, z. [B. Erste Schritte Mit Winsock,](getting-started-with-winsock.md)sowie erweiterte Techniken, die für erfahrene Winsock-Entwickler nützlich sind.
 
 In der folgenden Liste werden die Themen in diesem Abschnitt beschrieben:
 

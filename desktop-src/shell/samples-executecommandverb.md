@@ -28,15 +28,15 @@ Dieses Thema enthält folgende Abschnitte:
 -   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Diese Methode wird für Verbimplementierungen bevorzugt, da sie die größte Flexibilität bietet, einfach ist und die Out-of-Process-Aktivierung unterstützt. In diesem Beispiel wird ein eigenständiges, lokales Server-Component Object Model -Objekt (COM) implementiert, es wird jedoch erwartet, dass die Verbimplementierungen in vorhandene Anwendungen integriert werden. Zu diesem Zweck muss Ihr Hauptanwendungsobjekt eine Klassenfactory für sich selbst registrieren. Dieses Objekt implementiert [**IDropTarget**](/windows/win32/api/oleidl/nn-oleidl-idroptarget) für die Verben Ihrer Anwendung. Beachten Sie, dass COM Ihre Anwendung startet, wenn sie nicht bereits ausgeführt wird, aber eine Verbindung mit einer ausgeführten Instanz Ihrer Anwendung herstellt, sofern vorhanden.
+Diese Methode wird für Verbimplementierungen bevorzugt, da sie die größte Flexibilität bietet, einfach ist und die Out-of-Process-Aktivierung unterstützt. In diesem Beispiel wird ein eigenständiges, lokales COMPONENT OBJECT MODEL(COM)-Objekt implementiert, aber es wird erwartet, dass die Verbimplementierung in vorhandene Anwendungen integriert wird. Zu diesem Grund muss ihr Hauptanwendungsobjekt eine Klassen factory für sich selbst registrieren. Dieses Objekt implementiert [**IDropTarget**](/windows/win32/api/oleidl/nn-oleidl-idroptarget) für die Verben Ihrer Anwendung. Beachten Sie, dass COM Ihre Anwendung startet, wenn sie noch nicht ausgeführt wird, aber eine Verbindung mit einer ausgeführten Instanz Ihrer Anwendung herstellt, sofern vorhanden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Product (Produkt)                                | Mindestversion des Produkts |
+| Product (Produkt)                                | Mindestproduktversion |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows 7               |
 | Windows Software Development Kit (SDK) | 7.0                     |
@@ -55,19 +55,19 @@ Diese Methode wird für Verbimplementierungen bevorzugt, da sie die größte Fle
 
 So erstellen Sie das Beispiel über die Eingabeaufforderung:
 
-1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum Projektverzeichnis **ExecuteCommandVerb.**
+1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum **Projektverzeichnis ExecuteCommandVerb.**
 2.  Geben Sie `msbuild ExecuteCommand.sln` ein.
 
 So erstellen Sie das Beispiel mit Microsoft Visual Studio (bevorzugt):
 
-1.  Öffnen Sie Windows Explorer, und navigieren Sie zum Projektverzeichnis **ExecuteCommandVerb.**
-2.  Doppelklicken Sie auf das Symbol für die Datei ExecuteCommand.sln, um das Projekt in Visual Studio zu öffnen.
+1.  Öffnen Windows Explorer, und navigieren Sie zum **Projektverzeichnis ExecuteCommandVerb.**
+2.  Doppelklicken Sie auf das Symbol für die Datei ExecuteCommand.sln, um das Projekt in Visual Studio.
 3.  Klicken Sie im Menü **Build** (Erstellen) auf **Build Solution** (Projektmappe erstellen).
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-1.  Navigieren Sie über die Eingabeaufforderung oder Windows Explorer zu dem Verzeichnis, das die neue ausführbare Datei enthält.
-2.  Geben Sie in der Befehlszeile `ExecuteCommand.exe` ein. Alternativ können Sie Windows Explorer auf das Symbol für ExecuteCommand.exe doppelklicken.
+1.  Navigieren Sie über die Eingabeaufforderung oder den Explorer zu dem Verzeichnis, das die neue ausführbare Windows enthält.
+2.  Geben Sie in der Befehlszeile `ExecuteCommand.exe` ein. Doppelklicken Sie alternativ Windows Explorer auf das Symbol für ExecuteCommand.exe.
 3.  Befolgen Sie die Anweisungen im angezeigten Dialogfeld.
 
  

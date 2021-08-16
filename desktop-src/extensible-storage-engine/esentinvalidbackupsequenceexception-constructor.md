@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentinvalidbackupsequenceexception-Konstruktor'
-title: Esentinvalidbackupsequenceexception-Konstruktor
+description: 'Weitere Informationen zu: EsentInvalidBackupSequenceException-Konstruktor'
+title: EsentInvalidBackupSequenceException-Konstruktor
 TOCTitle: 'EsentInvalidBackupSequenceException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidBackupSequenceException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidbackupsequenceexception.esentinvalidbackupsequenceexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1a1ade6f81a962d7b10365f269f3681c57b9ce4f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3399bffeb1f6422012b69d086469599e837d49390703da4368a34996a0f2b60e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368207"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118494556"
 ---
-# <a name="esentinvalidbackupsequenceexception-constructor"></a>Esentinvalidbackupsequenceexception-Konstruktor
+# <a name="esentinvalidbackupsequenceexception-constructor"></a>EsentInvalidBackupSequenceException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidbackupsequenceexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidBackupSequenceException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentInvalidBackupSequenceException()
 public EsentInvalidBackupSequenceException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidbackupsequenceexception-Klasse](./esentinvalidbackupsequenceexception-class.md)
+[EsentInvalidBackupSequenceException-Klasse](./esentinvalidbackupsequenceexception-class.md)
 
-[Esentinvalidbackupsequenceexception-Member](./esentinvalidbackupsequenceexception-members.md)
+[EsentInvalidBackupSequenceException-Member](./esentinvalidbackupsequenceexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

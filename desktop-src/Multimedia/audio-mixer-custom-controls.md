@@ -20,7 +20,7 @@ ms.locfileid: "118375689"
 ---
 # <a name="audio-mixer-custom-controls"></a>Audio Mixer Benutzerdefinierte Steuerelemente
 
-Benutzerdefinierte Steuerelemente sind die generischsten mixer-Steuerelemente. Diese Steuerelemente ermöglichen es einem Mixertreiber, die Merkmale des Steuerelements und die visuelle Darstellung des Steuerelements zu definieren.
+Benutzerdefinierte Steuerelemente sind die generischsten mixer-Steuerelemente. Diese Steuerelemente ermöglichen es einem Mixertreiber, die Merkmale des Steuerelements und damit die visuelle Darstellung des Steuerelements zu definieren.
 
  
 

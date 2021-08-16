@@ -4,12 +4,12 @@ description: Direct2D
 ms.assetid: 03b3b91c-9751-4f8d-af24-85067f06930b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8223ec5e98db3e45b0087073b4eb68baeae81280
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c4d685c62819fe97e7ca52a566a0e2d442f5e4be14d6b7ae0a252b2778c0bae5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108089178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117825421"
 ---
 # <a name="direct2d"></a>Direct2D
 
@@ -33,7 +33,7 @@ Direct2D ist in erster Linie für die Verwendung durch die folgenden Klassen von
 
 > [!Note]
 >
-> Platform Update für Windows Vista und Platform Update für Windows Server 2008 sind eine Reihe von Laufzeitbibliotheken, mit denen Entwickler Anwendungen auf Windows 7, Windows Vista, Windows Server 2008 R2 und Windows Server 2008 ausrichten können. Diese Updates sind für alle Windows Vista- und Windows Server 2008-Kunden über Windows Update verfügbar. Drittanbieteranwendungen, die Platform Update für Windows Vista oder Platform Update für Windows Server 2008 erfordern, können Windows Update erkennen, ob das erforderliche update installiert ist. Andernfalls werden Windows Update sie im Hintergrund herunterladen und installieren. Weitere Informationen zu beiden Updates finden Sie unter [Plattformupdate für Windows Vista.](https://support.microsoft.com/kb/971644)
+> Das Plattformupdate für Windows Vista und das Plattformupdate für Windows Server 2008 sind eine Reihe von Laufzeitbibliotheken, mit denen Entwickler Anwendungen auf Windows 7, Windows Vista, Windows Server 2008 R2 und Windows Server 2008 ausrichten können. Diese Updates stehen allen Kunden von Windows Vista und Windows Server 2008 über Windows Update zur Verfügung. Drittanbieteranwendungen, die Plattformupdates für Windows Vista oder Plattformupdates für Windows Server 2008 erfordern, können Windows Update erkennen lassen, ob das erforderliche Update installiert ist. Andernfalls wird Windows Update heruntergeladen und im Hintergrund installiert. Weitere Informationen zu beiden Updates finden Sie unter [Plattformupdate für Windows Vista.](https://support.microsoft.com/kb/971644)
 
  
 
@@ -41,7 +41,7 @@ Direct2D ist in erster Linie für die Verwendung durch die folgenden Klassen von
 
 
 
-| Thema                                                                                          | BESCHREIBUNG                                                                                                                                                                   |
+| Thema                                                                                          | Beschreibung                                                                                                                                                                   |
 |------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Neuerungen in Direct2D](what-s-new-in-direct2d-for-windows-8-consumer-preview.md)<br/> | Hier sind einige der neuen Ergänzungen zu Direct2D. <br/>                                                                                                                   |
 | [Informationen zu Direct2D](direct2d-overview.md)<br/>                                             | Führt Direct2D ein, eine API, die Win32-Entwicklern die Möglichkeit bietet, 2D-Grafikrenderingaufgaben mit höherer Leistung und visueller Qualität auszuführen. <br/> |
@@ -49,7 +49,7 @@ Direct2D ist in erster Linie für die Verwendung durch die folgenden Klassen von
 | [Erste Schritte mit Direct2D](getting-started-with-direct2d-nav.md)<br/>              | Beschreibt die ersten Schritte beim Erstellen von Direct2D-Anwendungen und stellt Beispielcode bereit.<br/>                                                                             |
 | [Programmierhandbuch](programming-guide.md)<br/>                                          | Dieser Abschnitt enthält themen zur konzeptionellen Programmierung, in denen die Verwendung der Direct2D-API beschrieben wird. <br/>                                                                    |
 | [Direct2D-Referenz](reference.md)<br/>                                                      | Beschreibt die Direct2D-API im Detail.<br/>                                                                                                                              |
-| [Tools und Hilfsprogramme](tools-and-utilities.md)<br/>                                      | Tools und Hilfsprogramme, die für Direct2D bereitgestellt werden.<br/>                                                                                                                         |
+| [Tools und Hilfsprogramme](tools-and-utilities.md)<br/>                                      | Für Direct2D bereitgestellte Tools und Hilfsprogramme.<br/>                                                                                                                         |
 | [Beispiele](d2d-samples.md)<br/>                                                          | Beispielanwendungen, die die Direct2D-API veranschaulichen.<br/>                                                                                                             |
 | [Direct2D-Glossar](direct2d-glossary.md)<br/>                                          | Beschreibt Begriffe, die häufig in der Direct2D-Dokumentation verwendet werden. <br/>                                                                                                      |
 

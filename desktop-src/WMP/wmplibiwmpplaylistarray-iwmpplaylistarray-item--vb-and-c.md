@@ -3,8 +3,8 @@ title: IWMPPlaylistArray Item-Methode
 description: Die Item-Methode gibt eine IWMPPlaylist-Schnittstelle zurück, die die Wiedergabeliste am angegebenen Index darstellt.
 ms.assetid: 5cb4b89f-b679-4d92-a5f9-5d0fe686775d
 keywords:
-- Elementmethode Windows Media Player
-- Item-Windows Media Player , IWMPPlaylistArray-Schnittstelle
+- Item-Methode Windows Media Player
+- Item-Methode Windows Media Player , IWMPPlaylistArray-Schnittstelle
 - IWMPPlaylistArray-Schnittstelle Windows Media Player , Item-Methode
 topic_type:
 - apiref
@@ -66,7 +66,7 @@ Eine **WMPLib.IWMPPlaylist-Schnittstelle** für die abgerufene Wiedergabeliste.
 
 ## <a name="remarks"></a>Hinweise
 
-Bevor Sie diese Methode aufrufen, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
+Vor dem Aufrufen dieser Methode benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,7 +74,7 @@ Bevor Sie diese Methode aufrufen, müssen Sie über Lesezugriff auf die Biblioth
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher.<br/>                                                                     |
+| Version<br/>   | Windows Media Player serie 9 oder höher.<br/>                                                                     |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 

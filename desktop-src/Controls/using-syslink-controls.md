@@ -19,7 +19,7 @@ Dieser Abschnitt enthält Beispielcode und Informationen zum Erstellen und Verwe
 
 
 
-| Thema                                                                          | BESCHREIBUNG                                                                                                                                                                                                  |
+| Thema                                                                          | Beschreibung                                                                                                                                                                                                  |
 |--------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Erstellen von SysLink-Steuerelementen](create-syslink-controls.md)<br/>       | Sie implementieren die Links des SysLink-Steuerelements über Markup in der Initialisierungszeichenfolge des Steuerelements oder durch Senden einer [**LM \_ SETITEM-Nachricht.**](lm-setitem.md) <br/>                              |
 | [Verwenden von SysLink-Benachrichtigungen](use-syslihnk-notifications.md)<br/> | Dem SysLink-Steuerelement sind zwei Benachrichtigungsmeldungen zugeordnet: eine für die Maus ([NM \_ CLICK (syslink) )](nm-click-syslink.md)und eine für die Tastatur ( NM[ \_ RETURN](nm-return.md)). <br/> |

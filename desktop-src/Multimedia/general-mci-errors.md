@@ -63,20 +63,20 @@ Die folgenden Fehlerwerte können entweder von der [**mciSendCommand-**](/previo
 | UNGÜLTIGER \_ \_ MCIERR-GERÄTENAME \_    | Das angegebene Gerät ist nicht geöffnet und wird von MCI nicht erkannt.                                                                                                     |
 | \_UNGÜLTIGE \_ MCIERR-DATEI            | Die angegebene Datei kann nicht auf dem angegebenen MCI-Gerät wiedergegeben werden. Die Datei ist möglicherweise beschädigt oder verwendet möglicherweise ein falsches Dateiformat.                               |
 | MCIERR \_ MISSING \_ PARAMETER       | Der angegebene Befehl erfordert einen Parameter, den Sie angeben müssen.                                                                                          |
-| MCIERR \_ MULTIPLE                 | Fehler sind auf mehr als einem Gerät aufgetreten. Geben Sie jeden Befehl und jedes Gerät separat an, um die Geräte zu identifizieren, die die Fehler verursachen.                             |
-| MCIERR \_ MUSS \_ \_ FREIGABEFÄHIG VERWENDEN     | Der Gerätetreiber wird bereits verwendet. Sie müssen den Parameter "sharable" mit jedem geöffneten Befehl angeben, um das Gerät frei zu geben.                                  |
-| MCIERR: \_ KEIN \_ ELEMENT \_ ZULÄSSIG     | Das angegebene Gerät verwendet keinen Dateinamen.                                                                                                               |
+| MCIERR \_ MULTIPLE                 | Fehler sind auf mehreren Geräten aufgetreten. Geben Sie jeden Befehl und jedes Gerät separat an, um die Geräte zu identifizieren, die die Fehler verursachen.                             |
+| MCIERR \_ MUSS \_ FREIGABEFÄHIG VERWENDEN. \_     | Der Gerätetreiber wird bereits verwendet. Sie müssen den Parameter "sharable" mit jedem geöffneten Befehl angeben, um das Gerät freizugeben.                                  |
+| MCIERR \_ NO \_ ELEMENT \_ ALLOWED     | Das angegebene Gerät verwendet keinen Dateinamen.                                                                                                               |
 | MCIERR \_ NO \_ INTEGER              | Der Parameter für diesen MCI-Befehl muss ein ganzzahliger Wert sein.                                                                                                |
-| MCIERR \_ KEIN \_ FENSTER               | Es gibt kein Anzeigefenster.                                                                                                                                 |
-| NICHT APPLIZIERBARE \_ MCIERR-FUNKTION \_  | Die angegebene MCI-Befehlssequenz kann nicht in der angegebenen Reihenfolge ausgeführt werden. Korrigieren Sie die Befehlssequenz. Versuchen Sie es dann erneut.                                   |
+| MCIERR \_ NO \_ WINDOW               | Es ist kein Anzeigefenster vorhanden.                                                                                                                                 |
+| \_NICHT UMSETZBARE MCIERR-FUNKTION \_  | Die angegebene MCI-Befehlssequenz kann nicht in der angegebenen Reihenfolge ausgeführt werden. Korrigieren Sie die Befehlssequenz. Versuchen Sie es dann erneut.                                   |
 | MCIERR \_ NULL \_ PARAMETER \_ BLOCK   | Ein NULL-Parameterblock (Struktur) wurde an MCI übergeben.                                                                                                       |
 | MCIERR \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER          | Ihr System verfügt nicht über genügend Arbeitsspeicher für diese Aufgabe. Beenden Sie eine oder mehrere Anwendungen, um den verfügbaren Arbeitsspeicher zu erhöhen, und versuchen Sie dann erneut, die Aufgabe auszuführen. |
-| MCIERR \_ OUTOFRANGE               | Der angegebene Parameterwert liegt für den angegebenen MCI-Befehl nicht im Bereich.                                                                                |
-| MCIERR \_ SET \_ CD                  | Auf die angegebene Datei oder das MCI-Gerät kann nicht zugegriffen werden, da die Anwendung die Verzeichnisse nicht ändern kann.                                                         |
-| MCIERR \_ SET \_ DRIVE               | Auf die angegebene Datei oder das MCI-Gerät kann nicht zugegriffen werden, da die Anwendung die Laufwerke nicht ändern kann.                                                              |
-| UNBENANNTE \_ MCIERR-RESSOURCE \_        | Sie können keine unbenannte Datei speichern. Geben Sie einen Dateinamen an.                                                                                                       |
-| MCIERR \_ UNRECOGNIZED \_ COMMAND    | Der Treiber kann den angegebenen Befehl nicht erkennen.                                                                                                          |
-| NICHT UNTERSTÜTZTE \_ MCIERR-FUNKTION \_    | Der MCI-Gerätetreiber, den das System verwendet, unterstützt den angegebenen Befehl nicht.                                                                           |
+| MCIERR \_ OUTOFRANGE               | Der angegebene Parameterwert liegt für den angegebenen MCI-Befehl außerhalb des Bereichs.                                                                                |
+| MCIERR \_ SET \_ CD                  | Auf die angegebene Datei oder das angegebene MCI-Gerät kann nicht zugegriffen werden, da die Anwendung keine Verzeichnisse ändern kann.                                                         |
+| MCIERR \_ SET \_ DRIVE               | Auf die angegebene Datei oder das angegebene MCI-Gerät kann nicht zugegriffen werden, da die Anwendung die Laufwerke nicht ändern kann.                                                              |
+| \_NICHT BENANNTE MCIERR-RESSOURCE \_        | Sie können keine unbenannte Datei speichern. Geben Sie einen Dateinamen an.                                                                                                       |
+| \_MCIERR-BEFEHL "UNRECOGNIZED" \_    | Der Treiber kann den angegebenen Befehl nicht erkennen.                                                                                                          |
+| \_NICHT UNTERSTÜTZTE MCIERR-FUNKTION \_    | Der vom System verwendete MCI-Gerätetreiber unterstützt den angegebenen Befehl nicht.                                                                           |
 
 
 

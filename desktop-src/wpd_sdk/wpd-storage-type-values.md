@@ -1,7 +1,7 @@
 ---
-description: Der \_ \_ Enumerationstyp "WPD-Speichertyp \_ Werte" beschreibt die verschiedenen Speichertypen für tragbare Windows-Geräte.
+description: Der \_ WPD STORAGE \_ TYPE \_ VALUES-Enumerationstyp beschreibt die verschiedenen Speichertypen Windows Portable Device.
 ms.assetid: 52c34458-e64e-4355-9231-7457a6dff5c5
-title: WPD_STORAGE_TYPE_VALUES-Enumeration (portabledevice. h)
+title: WPD_STORAGE_TYPE_VALUES-Enumeration (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: b741feb1cb9a834e16a35627fe98718ac8acf30f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1aad78833f9e5baa0d3c7da3ab37d39f4159672b85d5c01c54ae8b034c5b43d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117842076"
 ---
-# <a name="wpd_storage_type_values-enumeration"></a>WPD \_ - \_ Speichertyp \_ Values-Enumeration
+# <a name="wpd_storage_type_values-enumeration"></a>WPD \_ STORAGE \_ TYPE \_ VALUES-Enumeration
 
-Der Enumerationstyp " **WPD- \_ \_ Speichertyp \_ Werte** " beschreibt die verschiedenen Speichertypen für tragbare Windows-Geräte.
+Der **WPD \_ STORAGE TYPE \_ VALUES-Enumerationstyp \_** beschreibt die verschiedenen Speichertypen Windows Portable Device.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,38 +43,38 @@ typedef enum tagWPD_STORAGE_TYPE_VALUES {
 
 <dl> <dt>
 
-<span id="WPD_STORAGE_TYPE_UNDEFINED"></span><span id="wpd_storage_type_undefined"></span>**WPD \_ - \_ Speichertyp nicht \_ definiert**
+<span id="WPD_STORAGE_TYPE_UNDEFINED"></span><span id="wpd_storage_type_undefined"></span>**\_WPD-SPEICHERTYP \_ \_ UNDEFINED**
 </dt> <dd>
 
-Der Speicher weist einen nicht definierten Typ auf.
+Der Speicher hat einen nicht definierten Typ.
 
 </dd> <dt>
 
-<span id="WPD_STORAGE_TYPE_FIXED_ROM"></span><span id="wpd_storage_type_fixed_rom"></span>**Festes Rom für WPD- \_ \_ Speichertyp \_ \_**
+<span id="WPD_STORAGE_TYPE_FIXED_ROM"></span><span id="wpd_storage_type_fixed_rom"></span>**\_FESTES ROM DES WPD-SPEICHERTYPS \_ \_ \_**
 </dt> <dd>
 
-Der Speicher kann nicht entfernt werden und ist schreibgeschützt.
+Der Speicher ist nicht wechselbar und schreibgeschützt.
 
 </dd> <dt>
 
-<span id="WPD_STORAGE_TYPE_REMOVABLE_ROM"></span><span id="wpd_storage_type_removable_rom"></span>**Wechsel-Rom für WPD- \_ \_ Speichertyp \_ \_**
+<span id="WPD_STORAGE_TYPE_REMOVABLE_ROM"></span><span id="wpd_storage_type_removable_rom"></span>**\_WECHSELDATENTRÄGER DES WPD-SPEICHERTYPS \_ \_ \_**
 </dt> <dd>
 
-Der Speicher ist austauschbar und schreibgeschützt.
+Der Speicher ist wechselbar und schreibgeschützt.
 
 </dd> <dt>
 
-<span id="WPD_STORAGE_TYPE_FIXED_RAM"></span><span id="wpd_storage_type_fixed_ram"></span>**Arbeitsspeicher für den WPD- \_ \_ Speichertyp \_ \_**
+<span id="WPD_STORAGE_TYPE_FIXED_RAM"></span><span id="wpd_storage_type_fixed_ram"></span>**\_ \_ WPD-SPEICHERTYP \_ FESTER \_ RAM**
 </dt> <dd>
 
-Der Speicher kann nicht entfernt werden und ist Lese-/schreibfähig.
+Der Speicher ist nicht wechselbar und lese-/schreibfähig.
 
 </dd> <dt>
 
-<span id="WPD_STORAGE_TYPE_REMOVABLE_RAM"></span><span id="wpd_storage_type_removable_ram"></span>**WPD \_ - \_ Speichertyp Wechsel- \_ \_ RAM**
+<span id="WPD_STORAGE_TYPE_REMOVABLE_RAM"></span><span id="wpd_storage_type_removable_ram"></span>**\_WPD-SPEICHERTYP \_ \_ \_ WECHSELDATENTRÄGER**
 </dt> <dd>
 
-Der Speicher ist austauschbar und ist Lese-/schreibfähig.
+Der Speicher ist wechselbar und lese-/schreibfähig.
 
 </dd> </dl>
 
@@ -88,11 +88,11 @@ Keine.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

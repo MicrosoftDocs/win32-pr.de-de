@@ -1,7 +1,7 @@
 ---
-description: Die Zeitspanne, die zum Decodieren des neuesten Beispiels benötigt wurde (in Millisekunden).
+description: Die Dauer der Decodierung des letzten Beispiels in Millisekunden.
 ms.assetid: e9cac411-f327-4750-9129-0bc2885eedd7
-title: 'Cvideotransformfilter:: m_tDecodeStart Member (vtrans. h)'
+title: CVideoTransformFilter::m_tDecodeStart-Member (Vtrans.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3948b37c2efeb7d21e664da354571c2bdf9ab298
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a162103a8a67cfcb4589c7f030db8ca7d93a89ee6fb7f12f1c0e2a40a4841ef6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117821597"
 ---
-# <a name="cvideotransformfilterm_tdecodestart-member"></a>Cvideotransformfilter:: m \_ tdecodestart-Member
+# <a name="cvideotransformfilterm_tdecodestart-member"></a>CVideoTransformFilter::m \_ tDecodeStart-Member
 
-Die Zeitspanne, die zum Decodieren des neuesten Beispiels benötigt wurde (in Millisekunden).
+Die Dauer der Decodierung des letzten Beispiels in Millisekunden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ int m_tDecodeStart;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Vtrans. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Vtrans.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cvideotransformfilter-Klasse**](cvideotransformfilter.md)
+[**CVideoTransformFilter-Klasse**](cvideotransformfilter.md)
 </dt> </dl>
 
  

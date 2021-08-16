@@ -24,10 +24,10 @@ ms.locfileid: "117861555"
 
 \[**CharUpperBuffWrapW** ist für die Verwendung in Windows XP verfügbar. In nachfolgenden Versionen ist sie möglicherweise nicht verfügbar. Sie sollten [**CharUpperBuffW**](/windows/win32/api/winuser/nf-winuser-charupperbuffa) an seiner Stelle verwenden.\]
 
-Konvertiert Kleinbuchstaben in einem Puffer in Großbuchstaben. Die Funktion konvertiert die Zeichen an Ort und Stelle.
+Konvertiert Kleinbuchstaben in einem Puffer in Großbuchstaben. Die -Funktion konvertiert die Zeichen an Ort und Stelle.
 
 > [!Note]  
-> **CharUpperBuffWrapW** ist ein Wrapper für die **CharUpperBuffW-Funktion.** Weitere Nutzungshinweise finden Sie auf der [**CharUpperBuff-Seite.**](/windows/win32/api/winuser/nf-winuser-charupperbuffa)
+> **CharUpperBuffWrapW** ist ein Wrapper für die **CharUpperBuffW-Funktion.** Weitere Hinweise zur Verwendung finden Sie auf der Seite [**CharUpperBuff.**](/windows/win32/api/winuser/nf-winuser-charupperbuffa)
 
  
 
@@ -61,7 +61,7 @@ Ein Zeiger auf einen Puffer, der ein oder mehrere zu verarbeitende Unicode-Zeich
 
 Typ: **DWORD**
 
-Gibt die Größe des Puffers in Zeichen an, auf den *pch* zeigt.
+Gibt die Größe des Puffers in Zeichen an, auf den *pch zeigt.*
 
 </dd> </dl>
 
@@ -73,9 +73,9 @@ Die Anzahl der verarbeiteten Zeichen.
 
 ## <a name="remarks"></a>Hinweise
 
-Die bevorzugte Methode ist die Verwendung von [**CharUpperBuffW**](/windows/win32/api/winuser/nf-winuser-charupperbuffa) in Verbindung mit der Microsoft Layer for Unicode (MSLU).
+Die bevorzugte Methode ist die Verwendung [**von CharUpperBuffW**](/windows/win32/api/winuser/nf-winuser-charupperbuffa) in Verbindung mit der Microsoft Layer for Unicode (MSLU).
 
-**CharUpperBuffWrapW** muss direkt über Shlwapi.dll aufgerufen werden, wobei Ordinalzahl 44 verwendet wird.
+**CharUpperBuffWrapW** muss mithilfe der Ordnungszahl 44 direkt Shlwapi.dll aufgerufen werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,7 +83,7 @@ Die bevorzugte Methode ist die Verwendung von [**CharUpperBuffW**](/windows/win3
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | DLL<br/>                      | <dl> <dt>Shlwapi.dll (Version 5.0 oder höher)</dt> </dl> |
 

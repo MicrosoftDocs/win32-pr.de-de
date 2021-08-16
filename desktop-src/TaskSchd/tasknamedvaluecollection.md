@@ -3,8 +3,8 @@ title: TaskNamedValueCollection-Objekt
 description: Skriptobjekt, das eine Auflistung von Name-Wert-Paaren des TaskNamedValuePair-Objekts enthält.
 ms.assetid: 4cc7ce8a-a352-4092-b001-071f9c5cd864
 keywords:
-- TaskNamedValueCollection-Objekt Taskplaner
-- TaskNamedValueCollection-Objekt Taskplaner beschrieben
+- TaskNamedValueCollection-Taskplaner
+- TaskNamedValueCollection-Objekt Taskplaner , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -28,7 +28,7 @@ Skriptobjekt, das eine Auflistung von Name-Wert-Paaren des [**TaskNamedValuePair
 
 ## <a name="members"></a>Member
 
-Das **TaskNamedValueCollection-Objekt** verfügt über diese Typen von Membern:
+Das **TaskNamedValueCollection-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
@@ -41,7 +41,7 @@ Das **TaskNamedValueCollection-Objekt** verfügt über diese Methoden.
 
 | Methode                                            | BESCHREIBUNG                                                        |
 |:--------------------------------------------------|:-------------------------------------------------------------------|
-| [**Klar**](tasknamedvaluecollection-clear.md)   | Löscht die gesamte Auflistung von Name-Wert-Paaren.<br/>       |
+| [**Klar**](tasknamedvaluecollection-clear.md)   | Löschen der gesamten Auflistung von Name-Wert-Paaren.<br/>       |
 | [**Erstellen**](tasknamedvaluecollection-create.md) | Erstellt ein Name-Wert-Paar in der Auflistung.<br/>            |
 | [**Entfernen**](tasknamedvaluecollection-remove.md) | Entfernt ein ausgewähltes Name-Wert-Paar aus der Auflistung.<br/> |
 
@@ -70,7 +70,7 @@ Das **TaskNamedValueCollection-Objekt** verfügt über diese Eigenschaften.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |

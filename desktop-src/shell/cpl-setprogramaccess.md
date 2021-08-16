@@ -30,7 +30,7 @@ In diesem Thema wird das Feature **Programmzugriff und Computerstandardeinstellu
 ## <a name="using-the-set-program-access-and-computer-defaults-tool"></a>Verwenden des Tools "Programmzugriff und Computerstandardeinstellungen festlegen"
 
 > [!Note]  
-> Ab Windows 8 konfiguriert SPAD die Standardwerte pro Benutzer für den aktuellen Benutzer. Vor Windows 8 wird für SPAD die Standardwerte pro Computer festgelegt. Wenn vom Benutzer noch keine Standardeinstellung pro Benutzer konfiguriert wurde, fordert das System sie auf, einen Standardwert pro Benutzer festzulegen, anstatt auf einen Standardwert pro Computer zurückzusetzen. Es ist möglich, dass benutzerspezifische Standardwerte in Windows Vista und Windows 7 nie angezeigt wurden, wenn sie zuvor Standardwerte pro Benutzer festgelegt hatten, da die Standardwerte pro Benutzer in diesen Betriebssystemen die Standardwerte pro Computer überschreiben.
+> Ab Windows 8 konfiguriert SPAD Standardeinstellungen pro Benutzer für den aktuellen Benutzer. Vor Windows 8 wird für SPAD die Standardwerte pro Computer festgelegt. Wenn vom Benutzer noch keine Standardeinstellung pro Benutzer konfiguriert wurde, fordert das System sie auf, einen Standardwert pro Benutzer festzulegen, anstatt auf einen Standardwert pro Computer zurückzusetzen. Es ist möglich, dass benutzerspezifische Standardwerte in Windows Vista und Windows 7 nie angezeigt wurden, wenn sie zuvor Standardwerte pro Benutzer festgelegt hatten, da die Standardwerte pro Benutzer in diesen Betriebssystemen die Standardwerte pro Computer überschreiben.
 
  
 
@@ -90,14 +90,14 @@ Mit der **benutzerdefinierten** Konfiguration, die im folgenden Screenshot gezei
 
 Alle Optionen, die in den Microsoft [Windows-](#microsoft-windows) und [Nicht-Microsoft-Konfigurationen](#non-microsoft) angezeigt werden, stehen dem Benutzer im Abschnitt **Benutzerdefiniert** sowie alle zusätzlich installierten Microsoft-Anwendungen zur Verfügung, die nicht Teil Windows sind. Das Optionsfeld **Use my current web browser (Aktuellen Webbrowser** verwenden) ist vorab ausgewählt, wie im vorherigen Screenshot gezeigt. Es gibt keine Möglichkeit, den aktuellen Standardbrowser über die Benutzeroberfläche zu bestimmen. Das Aufrufen von Weblinks oder Dateien in Windows ist die einzige Möglichkeit, den aktuellen Standardbrowser zu ermitteln.
 
-Wenn ein Benutzer das Kontrollkästchen **Zugriff auf dieses Programm aktivieren** für ein Programm aktiviert, werden die Symbole, Verknüpfungen und Menüeinträge dieses Programms im Startmenü oder Startbildschirm, auf dem Desktop oder an einem anderen Speicherort angezeigt, an dem sie installiert wurden. Wenn Sie diese Option deaktivieren, sollten diese Symbole, Verknüpfungen und Menüeinträge entfernt werden. Das Verhalten dieser Optionen liegt jedoch vollständig beim Anwendungsanbieter. Windows steuert nicht, wie der Zugriff auf der gesamten Benutzeroberfläche aktiviert oder entfernt wird. Es ist auch wichtig zu verstehen, dass Anwendungen nicht für **Programmzugriff festlegen und Computerstandardeinstellungen** registriert werden müssen.
+Wenn ein Benutzer das Kontrollkästchen **Zugriff auf dieses Programm aktivieren** für ein Programm aktiviert, werden die Symbole, Tastenkombinationen und Menüeinträge dieses Programms im Startmenü oder Startbildschirm, auf dem Desktop oder an einem anderen Speicherort angezeigt, an dem sie installiert wurden. Wenn Sie diese Option deaktivieren, sollten diese Symbole, Verknüpfungen und Menüeinträge entfernt werden. Das Verhalten dieser Optionen liegt jedoch vollständig beim Anwendungsanbieter. Windows steuert nicht, wie der Zugriff auf der benutzeroberfläche aktiviert oder entfernt wird. Es ist auch wichtig zu verstehen, dass Anwendungen nicht für **Programmzugriff festlegen und Computerstandardeinstellungen** registriert werden müssen.
 
 ### <a name="computer-manufacturer"></a>Computerhersteller
 
 Eine vierte Kategorie mit dem Titel "Computerhersteller" kann auf einigen Systemen im SPAD-Fenster angezeigt werden. Computerhersteller können ihre Computer mit einem benutzerdefinierten Satz von Standardwerten vorkonfigurieren und dabei aus der gleichen Auswahl wählen, die in der [benutzerdefinierten](#custom) Konfiguration verfügbar ist. (Zur Veranschaulichung wird ein fiktiver Satz von Anwendungen namens LitWare für die Verwendung mit allen Clienttypen registriert.) Ein Benutzer kann jederzeit zur Standardkonfiguration des Computerherstellers zurückkehren, indem er die Option **Computerhersteller** auswählt, wie im folgenden Screenshot Windows XP gezeigt.
 
 > [!Note]  
-> Diese Konfiguration wird nicht auf allen Systemen angezeigt. Ausführliche Informationen finden Sie im OEM Preinstallation Kit (OPK).
+> Diese Konfiguration wird nicht auf allen Systemen angezeigt. Weitere Informationen finden Sie im OEM Preinstallation Kit (OPK).
 
  
 
@@ -141,7 +141,7 @@ In Windows XP und Windows Server 2003 kann die Liste der Anwendungen, die auf de
 
 In Windows Vista und höher werden Anwendungsupdates auf einer separaten Seite in Systemsteuerung nur für Updates reserviert angezeigt. Diese Seite wird angezeigt, wenn der Benutzer auf den Task **Installierte Updates anzeigen klickt.** Es gibt keine vom Benutzer auswählbare Option zum Anzeigen von Updates auf der gleichen Seite wie installierte Programme. Trotz der Änderung der Benutzeroberfläche bleibt der Mechanismus für die Registrierung als Update für ein installiertes Programm unverändert wie in früheren Versionen von Windows.
 
-Microsoft- und Nicht-Microsoft-Anwendungen, die den Windows Installer verwenden, müssen nichts weiter tun, damit ihre Updates als Updates erkannt werden. Nicht-Microsoft-Anwendungen, die nicht Windows Installer verwenden, müssen bestimmte Werte in der Registrierung als Teil ihrer Installation deklarieren, um als Update für ein vorhandenes Programm erkannt zu werden.
+Microsoft- und Nicht-Microsoft-Anwendungen, die den Windows Installer verwenden, müssen nichts weiter tun, damit ihre Updates als Updates erkannt werden. Nicht-Microsoft-Anwendungen, die Windows Installer nicht verwenden, müssen bestimmte Werte in der Registrierung als Teil ihrer Installation deklarieren, um als Update für ein vorhandenes Programm erkannt zu werden.
 
 Das folgende Beispiel veranschaulicht, welche Registrierungswerte deklariert werden müssen, damit eine Installation als Update für ein vorhandenes Programm erkannt wird.
 
@@ -154,7 +154,7 @@ Das folgende Beispiel veranschaulicht, welche Registrierungswerte deklariert wer
     -   Sechs Ziffern, z. B. "123456"
 3.  Zusätzlich zu den standardmäßigen Deinstallationsinformationen, die für die übergeordnete Anwendung hinzugefügt wurden, müssen die Unterschlüssel für jedes Update zusätzlich zwei der folgenden drei Einträge enthalten. Ihre Werte sind vom Typ REG \_ SZ.
     -   **ParentKeyName**. Dieser Wert ist erforderlich. Dies ist der Name des Unterschlüssels des übergeordneten Elements, der in Schritt 1 deklariert wurde. Dies ordnet das Update dem Programm zu.
-    -   **ParentDisplayName**. Dieser Wert ist erforderlich. Wenn kein Unterschlüssel mit dem in ParentKeyName benannten entspricht, wird dieser Wert als übergeordnetes Platzhalterprogramm verwendet, das in Programme hinzufügen oder **entfernen angezeigt werden soll.**
+    -   **ParentDisplayName**. Dieser Wert ist erforderlich. Wenn kein Unterschlüssel mit dem in ParentKeyName benannten entspricht, wird dieser Wert als übergeordnetes Platzhalterprogramm verwendet, das in **Programme hinzufügen oder entfernen angezeigt werden soll.**
     -   **InstallDate**. Dieser Wert ist optional. Sie sollte das Formular verwenden, `yyyymmdd` um das Datum anzugeben. Dieses Datum wird für die **Informationen installiert bei** verwendet, die neben dem Updateeintrag auf der Benutzeroberfläche angezeigt werden. Wenn kein **InstallDate-Eintrag** vorhanden ist oder wenn er vorhanden ist, ihm aber kein Wert zugewiesen ist, geschieht Folgendes:
         -   Andere Betriebssystemversionen als Windows Vista und Windows 7: **Es** werden keine Informationen unter Installiert angezeigt.
         -   Windows Vista und höher: Es wird ein Standarddatum verwendet. Dies ist das Datum der letzten Änderung für alle Einträge unter dem Unterschlüssel dieses Updates. Dies ist normalerweise der Tag, an dem das Update zur Registrierung hinzugefügt wurde. Da es sich jedoch um ein Datum der letzten Änderung handelt, bewirkt jede nachfolgende Änderung an den Einträgen des Unterschlüssels, dass der InstallDate-Wert in das Datum dieser Änderung geändert wird.
@@ -211,7 +211,7 @@ Dieser Wert ist vom Typ REG \_ DWORD und wird wie folgt interpretiert.
 DontGroupPatches hat in Windows Vista und Windows 7 keine Auswirkungen, wenn die Benutzeroberfläche kein Kontrollkästchen enthält und registrierte Updates immer gefiltert werden.
 
 > [!Note]  
-> Richtlinien werden nur von Administratoren festgelegt. Anwendungen sollten diesen Wert nicht ändern. Weitere Informationen zum Festlegen einer registrierungsbasierten Gruppenrichtlinie finden Sie [unter](/previous-versions/windows/desktop/Policy/group-policy-start-page) Gruppenrichtlinie oder Windows [Server Gruppenrichtlinie](/windows/deployment/deploy-whats-new).
+> Richtlinien werden nur von Administratoren festgelegt. Anwendungen sollten diesen Wert nicht ändern. Weitere Informationen zum Festlegen eines registrierungsbasierten Gruppenrichtlinie finden Sie [unter](/previous-versions/windows/desktop/Policy/group-policy-start-page) Gruppenrichtlinie oder Windows [Server Gruppenrichtlinie](/windows/deployment/deploy-whats-new).
 
  
 
@@ -219,7 +219,7 @@ DontGroupPatches hat in Windows Vista und Windows 7 keine Auswirkungen, wenn die
 
 -   [Registrieren von Programmen mit Clienttypen](reg-middleware-apps.md)
 -   [Installation](/previous-versions/ms997548(v=msdn.10))
--   [Konfigurieren von Programmen zum Hinzufügen/Entfernen mit Windows Installer](../msi/configuring-add-remove-programs-with-windows-installer.md)
+-   [Konfigurieren von Software zum Hinzufügen/Entfernen von Programmen mit Windows Installer](../msi/configuring-add-remove-programs-with-windows-installer.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -231,7 +231,7 @@ DontGroupPatches hat in Windows Vista und Windows 7 keine Auswirkungen, wenn die
 [Beispielszenario für dateiassoz](fa-sample-scenarios.md)
 </dt> <dt>
 
-[Richtlinien zum Verwalten von Standardanwendungen in Windows Vista und höher](vista-managing-defaults.md)
+[Richtlinien für die Verwaltung von Standardanwendungen in Windows Vista und höher](vista-managing-defaults.md)
 </dt> <dt>
 
 [Standardprogramme](default-programs.md)

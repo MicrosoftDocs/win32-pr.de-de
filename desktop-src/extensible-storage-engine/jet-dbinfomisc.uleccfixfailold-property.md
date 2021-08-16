@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_DBINFOMISC. uleccfixfailold-Eigenschaft.
-title: JET_DBINFOMISC. uleccfixfailold (Eigenschaft)
+description: 'Weitere Informationen zu: JET_DBINFOMISC.ulECCFixFailOld-Eigenschaft'
+title: JET_DBINFOMISC.ulECCFixFailOld-Eigenschaft
 TOCTitle: 'ulECCFixFailOld property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.ulECCFixFailOld
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_dbinfomisc.uleccfixfailold(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d4e9f863feba0ee1c2f29cb0c9141a87babf20ff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b39a744f8f62abe86f2784a2e51696b8d73aa11791f9671fc2ff60d47f06f0e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484899"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118486065"
 ---
-# <a name="jet_dbinfomisculeccfixfailold-property"></a>JET_DBINFOMISC. uleccfixfailold (Eigenschaft)
+# <a name="jet_dbinfomisculeccfixfailold-property"></a>JET_DBINFOMISC.ulECCFixFailOld-Eigenschaft
 
-Ruft ab, wie oft ein nicht korrigier barer 1-Bit-Fehler aufgetreten ist.
+Ruft ab, wie oft ein nicht bekorrekturbarer Ein-Bit-Fehler aufgetreten ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public int ulECCFixFailOld { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[Mitglieder JET_DBINFOMISC](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC-Member](./jet-dbinfomisc-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

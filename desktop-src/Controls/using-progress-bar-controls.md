@@ -1,27 +1,27 @@
 ---
 title: Verwenden von Statusanzeige-Steuerelementen
-description: Dieser Abschnitt enthält Beispielcode und Informationen zum Erstellen eines Statusanzeige-Steuer Elements.
+description: Dieser Abschnitt enthält Beispielcode und Informationen zum Erstellen eines Statusanzeige-Steuerelements.
 ms.assetid: 64432698-913D-41E6-BD5E-7F5CCAAF7631
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b2f887f05960dfca95f82bea5b616889aa65262e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a120fc2aef30e942c91392386ce00007becfc09929d70c51b55522cec93ce77b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117828511"
 ---
 # <a name="using-progress-bar-controls"></a>Verwenden von Statusanzeige-Steuerelementen
 
-Dieser Abschnitt enthält Beispielcode und Informationen zum Erstellen eines Statusanzeige-Steuer Elements.
+Dieser Abschnitt enthält Beispielcode und Informationen zum Erstellen eines Statusanzeige-Steuerelements.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                           | BESCHREIBUNG                                                                                                             |
+| Thema                                                                           | Beschreibung                                                                                                             |
 |---------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [Vorgehensweise beim Verwenden von Statusanzeige-Steuerelementen](create-progress-bar-controls.md)<br/> | In diesem Thema wird erläutert, wie Sie eine Statusanzeige verwenden, um den Fortschritt eines langen Datei Verarbeitungsvorgangs anzuzeigen. <br/> |
+| [Verwenden von Statusanzeige-Steuerelementen](create-progress-bar-controls.md)<br/> | In diesem Thema wird erläutert, wie eine Statusanzeige verwendet wird, um den Fortschritt eines längeren Dateiparsingvorgangs anzugeben. <br/> |
 
 
 

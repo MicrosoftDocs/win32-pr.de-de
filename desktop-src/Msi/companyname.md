@@ -1,5 +1,5 @@
 ---
-description: Die COMPANYNAME-Eigenschaft ist die Organisation oder das Unternehmen des Benutzers, der die Installation ausführt.
+description: Die COMPANYNAME-Eigenschaft ist die Organisation oder das Unternehmen des Benutzers, der die Installation vorsteuert.
 ms.assetid: 714a9910-ae78-4429-bb19-72e74f8f3c5e
 title: COMPANYNAME-Eigenschaft
 ms.topic: reference
@@ -13,15 +13,15 @@ ms.locfileid: "118379935"
 ---
 # <a name="companyname-property"></a>COMPANYNAME-Eigenschaft
 
-Die **COMPANYNAME-Eigenschaft** ist die Organisation oder das Unternehmen des Benutzers, der die Installation ausführt.
+Die **COMPANYNAME-Eigenschaft** ist die Organisation oder das Unternehmen des Benutzers, der die Installation vorsteuert.
 
 ## <a name="default-value"></a>Standardwert
 
-Ein Standardwert kann in die [Property-Tabelle](property-table.md)gesetzt werden. Wenn die **COMPANYNAME-Eigenschaft** nicht festgelegt ist, legt das Installationsprogramm sie automatisch mithilfe von Werten aus der Registrierung fest.
+Ein Standardwert kann in der [Property-Tabelle festgelegt werden.](property-table.md) Wenn die **COMPANYNAME-Eigenschaft** nicht festgelegt ist, legt das Installationsprogramm sie automatisch mithilfe von Werten aus der Registrierung fest.
 
 ## <a name="remarks"></a>Hinweise
 
-Legen Sie die [**NOCOMPANYNAME-Eigenschaft**](nocompanyname.md) fest, um die automatische Einstellung von **COMPANYNAME** zu unterdrücken.
+Legen Sie die [**NOCOMPANYNAME-Eigenschaft**](nocompanyname.md) fest, um die automatische Einstellung von **COMPANYNAME zu unterdrücken.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -29,7 +29,7 @@ Legen Sie die [**NOCOMPANYNAME-Eigenschaft**](nocompanyname.md) fest, um die aut
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Unter [Windows Installer Run-Time Requirements (Anforderungen für](windows-installer-portal.md) Windows Installer) finden Sie Informationen zu den mindestens erforderlichen Windows Service Packs, die für eine Windows Installer-Version erforderlich sind.<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

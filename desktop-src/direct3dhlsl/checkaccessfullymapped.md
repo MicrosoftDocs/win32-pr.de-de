@@ -49,7 +49,7 @@ Der Statuswert, der von einem **Sample-,** **Gather- oder** **Load-Vorgang zurü
 
 Typ: **bool**
 
-Gibt einen **booleschen Wert** zurück, der angibt, ob alle Werte aus einem **Sample-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource zugegriffen haben.](/windows/desktop/direct3d11/direct3d-11-2-features) Gibt **TRUE zurück,** wenn auf alle Werte des Vorgangs zugegriffen wird, auf die zugeordnete Kacheln zugegriffen haben. andernfalls gibt **FALSE zurück,** wenn Werte aus einer nicht zugeordneten Kachel übernommen wurden.
+Gibt einen **booleschen Wert** zurück, der angibt, ob alle Werte aus einem **Sample-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource zugegriffen haben.](/windows/desktop/direct3d11/direct3d-11-2-features) Gibt **TRUE zurück,** wenn auf alle Werte aus dem Vorgang zugegriffen wird, auf die zugeordnete Kacheln zugegriffen haben. andernfalls gibt **FALSE zurück,** wenn Werte aus einer nicht zugeordneten Kachel übernommen wurden.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -61,7 +61,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher – Shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | ja       |
 
 
 

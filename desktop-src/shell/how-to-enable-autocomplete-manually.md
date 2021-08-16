@@ -1,27 +1,27 @@
 ---
-description: Um eine ausführlichere Kontrolle über das Auto Vervollständigen-Verhalten zu erhalten oder eine benutzerdefinierte Quelle von Auto Vervollständigen-Zeichen folgen hinzuzufügen, müssen Sie das Auto Vervollständigen-Objekt selbst verwalten.
+description: Um eine detailliertere Kontrolle über das AutoVervollständigen-Verhalten zu erhalten oder eine benutzerdefinierte Quelle von AutoVervollständigen-Zeichenfolgen hinzuzufügen, müssen Sie das AutoVervollständigen-Objekt selbst verwalten.
 ms.assetid: E1A7B1B0-2879-452E-9EBB-73F02B932200
-title: Manuelles Aktivieren von AutoComplete
+title: Manuelles Aktivieren der automatischen Vervollständigung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aee4b327c6ccdd62fd921c56cfb046edb8527bc2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c7df686e4c5a4a6e96b1faf82e4926dffc73398b360e3e6235d6a61451eae189
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117859707"
 ---
-# <a name="how-to-enable-autocomplete-manually"></a>Manuelles Aktivieren von AutoComplete
+# <a name="how-to-enable-autocomplete-manually"></a>Manuelles Aktivieren der automatischen Vervollständigung
 
-Um eine ausführlichere Kontrolle über das Auto Vervollständigen-Verhalten zu erhalten oder eine benutzerdefinierte Quelle von Auto Vervollständigen-Zeichen folgen hinzuzufügen, müssen Sie das Auto Vervollständigen-Objekt selbst verwalten. Die automatische Vervollständigung kann auf folgende Weise manuell aktiviert werden.
+Um eine detailliertere Kontrolle über das AutoVervollständigen-Verhalten zu erhalten oder eine benutzerdefinierte Quelle von AutoVervollständigen-Zeichenfolgen hinzuzufügen, müssen Sie das AutoVervollständigen-Objekt selbst verwalten. Sie können die automatische Vervollständigung auf folgende Weise manuell aktivieren.
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
-### <a name="creating-a-simple-autocomplete-object"></a>Erstellen eines einfachen AutoComplete-Objekts
+### <a name="creating-a-simple-autocomplete-object"></a>Erstellen eines einfachen AutoVervollständigen-Objekts
 
-In den folgenden Schritten wird gezeigt, wie ein einfaches Auto Vervollständigen-Objekt erstellt und initialisiert wird. Ein einfaches Auto Vervollständigen-Objekt schließt Zeichen folgen aus einer einzelnen Quelle ab. Die Fehlerüberprüfung wurde in diesem Beispiel absichtlich ausgelassen.
+Die folgenden Schritte zeigen, wie Sie ein einfaches AutoVervollständigen-Objekt erstellen und initialisieren. Ein einfaches AutoVervollständigen-Objekt schließt Zeichenfolgen aus einer einzelnen Quelle ab. Die Fehlerüberprüfung wurde in diesem Beispiel absichtlich ausgelassen.
 
-1.  Erstellen Sie das Auto Vervollständigen-Objekt.
+1.  Erstellen Sie das AutoVervollständigen-Objekt.
 
     ```C++
     IAutoComplete *pac;
@@ -34,9 +34,9 @@ In den folgenden Schritten wird gezeigt, wie ein einfaches Auto Vervollständige
 
     
 
-2.  Erstellen Sie die Auto Vervollständigen-Quelle. Sie können eine [vordefinierte Auto Vervollständigen-Quelle](ac-ovw.md) verwenden, oder Sie können eine eigene benutzerdefinierte Quelle schreiben.
+2.  Erstellen Sie die AutoVervollständigen-Quelle. Sie können eine [vordefinierte AutoVervollständigen-Quelle](ac-ovw.md) verwenden oder Eine eigene benutzerdefinierte Quelle schreiben.
 
-    Im folgenden Code wird eine der vordefinierten Auto Vervollständigen-Quellen verwendet.
+    Im folgenden Code wird eine der vordefinierten AutoVervollständigen-Quellen verwendet.
 
     ```C++
     IUnknown *punkSource;
@@ -49,7 +49,7 @@ In den folgenden Schritten wird gezeigt, wie ein einfaches Auto Vervollständige
 
     
 
-    Im folgenden Code wird eine benutzerdefinierte Auto Vervollständigen-Quelle verwendet. Sie können Ihre eigene Auto Vervollständigen-Quelle schreiben, indem Sie ein-Objekt implementieren, das die [**IEnumString**](/windows/win32/api/objidlbase/nn-objidlbase-ienumstring) -Schnittstelle verfügbar macht. Das-Objekt kann optional auch die [**iaclist**](/windows/win32/api/shlobj_core/nn-shlobj_core-iaclist) -und [**IACList2**](/windows/win32/api/shlobj_core/nn-shlobj_core-iaclist2) -Schnittstellen implementieren.
+    Im folgenden Code wird eine benutzerdefinierte AutoVervollständigen-Quelle verwendet. Sie können Ihre eigene AutoVervollständigen-Quelle schreiben, indem Sie ein Objekt implementieren, das die [**IEnumString-Schnittstelle**](/windows/win32/api/objidlbase/nn-objidlbase-ienumstring) verfügbar macht. Das -Objekt kann optional auch die [**Schnittstellen LIAList**](/windows/win32/api/shlobj_core/nn-shlobj_core-iaclist) und [**LIAList2**](/windows/win32/api/shlobj_core/nn-shlobj_core-iaclist2) implementieren.
 
     ```C++
     CCustomAutoCompleteSource *pcacs = new CCustomAutoCompleteSource();
@@ -65,9 +65,9 @@ In den folgenden Schritten wird gezeigt, wie ein einfaches Auto Vervollständige
 
     
 
-3.  Legen Sie die Optionen für die Auto Vervollständigen-Quelle fest (optional).
+3.  Legen Sie die Optionen für die AutoVervollständigen-Quelle fest (optional).
 
-    Sie können das Verhalten der Auto Vervollständigen-Quelle anpassen, indem Sie deren Optionen festlegen, wenn die Quelle die [**IACList2**](/windows/win32/api/shlobj_core/nn-shlobj_core-iaclist2) -Schnittstelle verfügbar macht. Bei Verwendung der vordefinierten Auto Vervollständigen-Quellen exportiert nur CLSID \_ aclistisf **IACList2**. Eine umfassende Liste der Optionen und deren Werte finden Sie unter [**IACList2:: * toptions**](/windows/win32/api/shlobj_core/nf-shlobj_core-iaclist2-setoptions).
+    Sie können das Verhalten der AutoVervollständigen-Quelle anpassen, indem Sie deren Optionen festlegen, wenn die Quelle die [**CSVList2-Schnittstelle**](/windows/win32/api/shlobj_core/nn-shlobj_core-iaclist2) verfügbar macht. Wenn Sie die vordefinierten AutoVervollständigen-Quellen verwenden, exportiert nur CLSID \_ ACListISF **LIAList2.** Eine vollständige Liste der Optionen und deren Werte finden Sie unter [**LIAList2::SetOptions**](/windows/win32/api/shlobj_core/nf-shlobj_core-iaclist2-setoptions).
 
     ```C++
     IACList2 *pal2;
@@ -82,9 +82,9 @@ In den folgenden Schritten wird gezeigt, wie ein einfaches Auto Vervollständige
 
     
 
-4.  Initialisieren Sie das Auto Vervollständigen-Objekt.
+4.  Initialisieren Sie das AutoVervollständigen-Objekt.
 
-    In diesem Beispiel ist **hwndedit** das Handle des Fensters Bearbeitungs Steuerelement, für das Auto Vervollständigen aktiviert werden soll. Eine Beschreibung der letzten beiden nicht verwendeten Parameter finden Sie unter [**iautocomplete:: init**](/windows/desktop/api/Shldisp/nf-shldisp-iautocomplete-init) .
+    In diesem Beispiel ist **hwndEdit** das Handle des Bearbeitungssteuerelementfensters, für das die automatische Vervollständigung aktiviert werden soll. Eine Beschreibung der letzten beiden nicht verwendeten Parameter finden Sie unter [**IAutoComplete::Init.**](/windows/desktop/api/Shldisp/nf-shldisp-iautocomplete-init)
 
     ```C++
     hr = pac->Init(hwndEdit, punkSource, NULL, NULL);
@@ -92,9 +92,9 @@ In den folgenden Schritten wird gezeigt, wie ein einfaches Auto Vervollständige
 
     
 
-5.  Legen Sie die Optionen für das Auto Vervollständigen-Objekt fest (optional).
+5.  Legen Sie die Optionen des AutoVervollständigen-Objekts fest (optional).
 
-    Sie können das Verhalten des Objekts Auto Vervollständigen anpassen, indem Sie dessen Optionen festlegen. Eine umfassende Liste der Optionen und deren Werte finden Sie in der Dokumentation zu [**IACList2::-toptions**](/windows/win32/api/shlobj_core/nf-shlobj_core-iaclist2-setoptions).
+    Sie können das Verhalten des AutoVervollständigen-Objekts anpassen, indem Sie dessen Optionen festlegen. Eine vollständige Liste der Optionen und deren Werte finden Sie in der Dokumentation zu [**INSTALLERList2::SetOptions.**](/windows/win32/api/shlobj_core/nf-shlobj_core-iaclist2-setoptions)
 
     ```C++
     IAutoComplete2 *pac2;
@@ -113,7 +113,7 @@ In den folgenden Schritten wird gezeigt, wie ein einfaches Auto Vervollständige
 6.  Geben Sie die Objekte frei.
 
     > [!Note]  
-    > Das Auto Vervollständigen-Objekt bleibt auch nach der Freigabe an das Bearbeitungs Steuerelement angefügt. Wenn Sie einen späteren Zugriff auf diese Objekte vorsehen – wenn Sie die Auto Vervollständigen-Optionen zu einem späteren Zeitpunkt ändern möchten, z. b. –, ist es nicht erforderlich, dass Sie Sie an diesem Punkt freigeben.
+    > Das AutoVervollständigen-Objekt bleibt auch nach der Freigabe an das Bearbeitungssteuerelement angefügt. Wenn Sie beabsichtigen, später auf diese Objekte zugreifen zu müssen , z. B. wenn Sie die Optionen für die automatische Vervollständigung zu einem späteren Zeitpunkt ändern möchten, ist es nicht erforderlich, dass Sie sie an diesem Punkt freigeben.
 
      
 
@@ -124,15 +124,15 @@ In den folgenden Schritten wird gezeigt, wie ein einfaches Auto Vervollständige
 
     
 
-### <a name="creating-a-compound-autocomplete-object"></a>Erstellen eines Verbund Objekts mit automatischer Vervollständigung
+### <a name="creating-a-compound-autocomplete-object"></a>Erstellen eines zusammengesetzten AutoVervollständigen-Objekts
 
-Ein zusammengesetztes Auto Vervollständigen-Objekt entspricht Zeichen folgen aus mehreren Quellen. Beispielsweise wird in der Windows Internet Explorer-Adressleiste ein Verbund Objekt für das automatische vervollständigen verwendet, da der Benutzer möglicherweise mit der Eingabe des Namens einer Datei oder einer URL beginnt. Die meisten Schritte zum Erstellen eines Verbund Objekts mit automatischer Vervollständigung sind identisch mit den Schritten unter "Erstellen eines einfachen Auto Vervollständigen-Objekts". Diese Schritte werden als solche Schritte angezeigt.
+Ein zusammengesetztes AutoVervollständigen-Objekt stimmt mit Zeichenfolgen aus mehreren Quellen überein. Beispielsweise verwendet die Windows Internet Explorer Adressleiste ein zusammengesetztes AutoVervollständigen-Objekt, da der Benutzer möglicherweise mit der Eingabe des Namens einer Datei oder einer URL beginnt. Die meisten Schritte beim Erstellen eines zusammengesetzten AutoVervollständigen-Objekts sind identisch mit den Schritten in "Erstellen eines einfachen AutoVervollständigen-Objekts". Diese Schritte werden als solche angegeben.
 
-1.  Erstellen Sie das Auto Vervollständigen-Objekt. Dies ist das gleiche wie in Schritt 1 oben.
+1.  Erstellen Sie das AutoVervollständigen-Objekt. Dies entspricht Schritt 1 oben.
 
-2.  Erstellen Sie den Auto Vervollständigen-Verbund Quell Objekt-Manager.
+2.  Erstellen Sie den AutoVervollständigen-Verbundquellobjekt-Manager.
 
-    Das Auto Vervollständigen-Verbund Quell Objekt ermöglicht das Kombinieren mehrerer Auto Vervollständigen-Quellen zu einer einzelnen Auto Vervollständigen-Quelle.
+    Mit dem zusammengesetzten AutoVervollständigen-Quellobjekt können mehrere AutoVervollständigen-Quellen zu einer einzelnen AutoVervollständigen-Quelle kombiniert werden.
 
     ```C++
     IObjMgr *pom;
@@ -145,9 +145,9 @@ Ein zusammengesetztes Auto Vervollständigen-Objekt entspricht Zeichen folgen au
 
     
 
-3.  Erstellen und Festlegen von Optionen für jede der Auto Vervollständigen-Quellen Wiederholen Sie die Schritte 2 und 3 für jede Quelle.
+3.  Erstellen und Festlegen von Optionen für jede AutoVervollständigen-Quelle. Wiederholen Sie die obigen Schritte 2 und 3 für jede Quelle.
 
-4.  Fügen Sie jede Auto Vervollständigen-Quelle an den Quell Objekt-Manager an.
+4.  Fügen Sie jede AutoVervollständigen-Quelle an den Quellobjekt-Manager an.
 
     ```C++
     hr = pom->Append(punkSource1);
@@ -156,9 +156,9 @@ Ein zusammengesetztes Auto Vervollständigen-Objekt entspricht Zeichen folgen au
 
     
 
-5.  Initialisieren Sie das Auto Vervollständigen-Objekt.
+5.  Initialisieren Sie das AutoVervollständigen-Objekt.
 
-    Dies entspricht Schritt 4 oben, mit der Ausnahme, dass Sie den Verbund Quell Objekt-Manager übergeben, anstatt die einfache Auto Vervollständigen-Quelle an [**iautocomplete:: init**](/windows/desktop/api/Shldisp/nf-shldisp-iautocomplete-init)zu übergeben.
+    Dies ist identisch mit Schritt 4 oben, außer dass Sie den Verbundquellobjekt-Manager übergeben, anstatt die einfache AutoVervollständigen-Quelle an [**IAutoComplete::Init**](/windows/desktop/api/Shldisp/nf-shldisp-iautocomplete-init)zu übergeben.
 
     ```C++
     hr = pac->Init(hwndEdit, pom, NULL, NULL);
@@ -166,11 +166,11 @@ Ein zusammengesetztes Auto Vervollständigen-Objekt entspricht Zeichen folgen au
 
     
 
-6.  Legen Sie die Optionen des Objekts Auto Vervollständigen fest. Dies entspricht dem oben beschriebenen Schritt 5.
+6.  Legen Sie die Optionen des AutoVervollständigen-Objekts fest. Dies entspricht Schritt 5 oben.
 
 7.  Geben Sie die Objekte frei.
 
-    Wie im einfachen Fall können Sie die Objekte freigeben, sobald Sie Sie verwenden, aber Sie können Sie auch später beibehalten, um die Optionen zu ändern.
+    Wie im einfachen Fall können Sie die Objekte freigeben, sobald Sie die Verwendung abgeschlossen haben. Sie können sie aber auch beibehalten, um die Optionen später zu ändern.
 
     ```C++
     pac->Release();

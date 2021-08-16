@@ -28,7 +28,7 @@ Der [EsentSLVDatabaseMissingException-Typ](./esentslvdatabasemissingexception-cl
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>

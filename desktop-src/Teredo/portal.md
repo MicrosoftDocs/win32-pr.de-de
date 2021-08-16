@@ -19,7 +19,7 @@ Teredo ist eine IPv6-Übergangstechnologie, die die Adresszuweisung und das auto
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
-Teredo ist für die Verwendung durch C/C++-Entwickler mit IPv6-Netzwerkprogrammiererfahrung konzipiert.
+Teredo ist für die Verwendung durch C/C++-Entwickler mit IPv6-Netzwerkprogrammierung konzipiert.
 
 ## <a name="run-time-requirements"></a>Laufzeitanforderungen
 

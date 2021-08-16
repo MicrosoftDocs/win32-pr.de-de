@@ -21,7 +21,7 @@ Um dieses Attributfeature zu verwenden, fügen Sie die folgenden **REG \_ DWORD-
 
 ### <a name="step-1"></a>Schritt 1:
 
-Der AttributeMask-Wert gibt den [**SFGAO-Wert**](sfgao.md) der Bitwerte der Maske an, mit der der Test durchgeführt werden soll.
+Der AttributeMask-Wert gibt den [**SFGAO-Wert**](sfgao.md) der Bitwerte der Maske an, mit der getestet werden soll.
 
 ### <a name="step-2"></a>Schritt 2:
 
@@ -29,11 +29,11 @@ Der AttributeValue-Wert gibt den [**SFGAO-Wert**](sfgao.md) der getesteten Bits 
 
 ### <a name="step-3"></a>Schritt 3:
 
-ImpliedSelectionModel gibt 0 (null) für Elementverben oder ungleich 0 (null) für Verben im Kontextmenü im Hintergrund an.
+Das ImpliedSelectionModel gibt 0 (null) für Elementverben oder einen Wert ungleich 0 (null) für Verben im Kontextmenü im Hintergrund an.
 
 ## <a name="remarks"></a>Hinweise
 
-Im folgenden Beispielregistrierungseintrag wird AttributeMask auf [**SFGAO \_ READONLY**](sfgao.md) (0x40000) festgelegt.
+Im folgenden Beispielregistrierungseintrag ist AttributeMask auf [**SFGAO \_ READONLY**](sfgao.md) (0x40000) festgelegt.
 
 ```
 HKEY_CLASSES_ROOT

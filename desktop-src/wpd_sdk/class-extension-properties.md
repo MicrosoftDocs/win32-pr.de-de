@@ -1,7 +1,7 @@
 ---
-description: Tragbare Windows-Geräte unterstützen die folgenden Klassen Erweiterungs Eigenschaften.
+description: Windows Portable Geräte unterstützen die folgenden Klassenerweiterungseigenschaften.
 ms.assetid: 9b8983ba-5824-495d-868f-fd22b98e1954
-title: Klassen Erweiterungs Eigenschaften (portabledevice. h)
+title: Klassenerweiterungseigenschaften (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,27 +13,27 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: c7e961b80ae990653e6c354640b35c28f8bcf8b8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4c7215a383aec582f576cb64a6781068034bb7fa8df03b5a404368482f1c1619
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371027"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117843404"
 ---
-# <a name="class-extension-properties"></a>Klassen Erweiterungs Eigenschaften
+# <a name="class-extension-properties"></a>Klassenerweiterungseigenschaften
 
-Tragbare Windows-Geräte unterstützen die folgenden Klassen Erweiterungs Eigenschaften.
+Windows Portable Geräte unterstützen die folgenden Klassenerweiterungseigenschaften.
 
 
 
-| Eigenschaft                                                                      | VarType         | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Eigenschaft                                                                      | VarType         | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------------------------------------------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **\_ \_ \_ \_ unterstützte \_ Inhalts \_ Typen für WPD-Klassen Erweiterungsoptionen**                 | **VT \_ unbekannt** | Ein-Wert, der die (Superset)-Liste der vom Treiber unterstützten Inhaltstypen angibt (ähnlich wie das Aufrufen von WPD- \_ Befehls \_ Funktionen, \_ werden \_ unterstützte \_ Inhalts \_ Typen in der **WPD- \_ Funktions \_ Kategorie \_ alle** angezeigt).                                                                                                                                                                                                                                                                                                                                             |
-| **WPD- \_ Klassen \_ Erweiterungsoptionen keine \_ \_ \_ \_ WPD- \_ Geräte \_ Schnittstelle registrieren**    | **VT \_ bool**    | Ein Wert, der angibt, ob der Aufrufer die WPD-Klassen-Erweiterungs Bibliothek zum Registrieren der WPD-Geräteklassen Schnittstelle benötigt. Wenn dieser Wert true ist, übernimmt der Aufrufer die Verantwortung für die Registrierung.<br/> Wenn dieser Wert false ist, gibt dies an, dass der Aufrufer erwartet, dass die Klassen Erweiterungs Bibliothek die Registrierung durchführt.<br/>Die meisten Treiber sollten der Klassen Erweiterungs Bibliothek gestatten, die Registrierung auszuführen, außer wenn das Registrieren der WPD-Geräteklassen Schnittstelle durch die Klassen Erweiterungs Bibliothek zu negativen Auswirkungen führen kann. |
-| **WPD- \_ Klassen \_ Erweiterungs \_ Optionen Registrieren der \_ \_ privaten WPD- \_ \_ Geräte \_ Schnittstelle** | **VT \_ bool**    | Gibt an, dass der Aufrufer möchte, dass die WPD-Klassen Erweiterungs Bibliothek die private WPD-Geräteklassen Schnittstelle registriert. Dies ist für die meisten Treiber nicht empfehlenswert. Sie sollte nur in Fällen verwendet werden, in denen die Registrierung der WPD-Geräteklassen Schnittstelle durch die Klassen Erweiterungs Bibliothek zu negativen Auswirkungen führt. Diese Option wird in der Regel in Verbindung mit **WPD- \_ Klassen \_ Erweiterungs \_ Optionen nicht \_ \_ registrieren \_ WPD- \_ Geräte \_ Schnittstelle** auf **true** festgelegt.                                                                                          |
-| **WPD- \_ Klassen \_ Erweiterungs \_ Optionen \_ Geräte \_ Identifikations \_ Werte**            | **VT \_ unbekannt** | Dies ist ein [iportabledevicevalues](iportabledevicevalues.md) -Element, das die Geräte Identifikations Werte (**WPD- \_ Geräte \_ Hersteller**, **WPD-Geräte \_ \_ Modell**, **WPD- \_ Geräte \_ \_** Firmwareversion und **eindeutige WPD- \_ Geräte Funktions- \_ \_ \_ ID**) enthält. Diese bei der Initialisierung mit anderen Klassen Erweiterungsoptionen einschließen                                                                                                                                                                                                                               |
-| **WPD- \_ Klassen \_ Erweiterungs \_ Optionen \_ Transport \_ Bandbreite**                      | **VT \_ UI4**     | Gibt die theoretische maximale Bandbreite des Transports in Kbit pro Sekunde an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **WPD- \_ Klassen \_ Erweiterungs \_ Optionen \_ Geräte \_ Identifikations \_ Werte**            | **VT \_ unbekannt** | Dies ist ein [iportabledevicevalues](iportabledevicevalues.md) -Element, das die Geräte Identifikations Werte (**WPD- \_ Geräte \_ Hersteller**, **WPD-Geräte \_ \_ Modell**, **WPD- \_ Geräte \_ \_** Firmwareversion und **eindeutige WPD- \_ Geräte Funktions- \_ \_ \_ ID**) enthält. Schließen Sie dies mit anderen Klassen Erweiterungsoptionen bei der Initialisierung ein.                                                                                                                                                                                                                              |
+| **\_ \_ \_ WPD-KLASSENERWEITERUNGSOPTIONEN \_ UNTERSTÜTZTE \_ \_ INHALTSTYPEN**                 | **VT \_ UNKNOWN** | Ein -Wert, der die (obere) Liste der vom Treiber unterstützten Inhaltstypen angibt (ähnlich dem Aufrufen von \_ WPD-BEFEHLSFUNKTIONEN \_ GET SUPPORTED CONTENT TYPES on \_ \_ \_ \_ **WPD FUNCTIONAL CATEGORY \_ \_ \_ ALL**).                                                                                                                                                                                                                                                                                                                                             |
+| **\_WPD-KLASSENERWEITERUNGSOPTIONEN \_ \_ REGISTRIEREN KEINE \_ \_ \_ \_ WPD-GERÄTESCHNITTSTELLE \_**    | **VT \_ BOOL**    | Ein -Wert, der angibt, ob der Aufrufer möchte, dass die WPD-Klassenerweiterungsbibliothek die WPD-Geräteklassenschnittstelle registriert. Wenn dieser Wert true ist, übernimmt der Aufrufer die Verantwortung für die Registrierung.<br/> Wenn dieser Wert FALSE ist, gibt er an, dass der Aufrufer erwartet, dass die Klassenerweiterungsbibliothek die Registrierung ausführt.<br/>Die meisten Treiber sollten es der Klassenerweiterungsbibliothek ermöglichen, die Registrierung durchzuführen, es sei denn, die Registrierung der WPD-Geräteklassenschnittstelle durch die Klassenerweiterungsbibliothek kann negative Auswirkungen haben. |
+| **\_WPD-KLASSENERWEITERUNGSOPTIONEN \_ \_ REGISTER \_ \_ WPD PRIVATE DEVICE \_ \_ \_ INTERFACE** | **VT \_ BOOL**    | Gibt an, dass der Aufrufer möchte, dass die WPD-Klassenerweiterungsbibliothek die private WPD-Geräteklassenschnittstelle registriert. Dies wird für die meisten Treiber nicht empfohlen. Sie sollte nur in Fällen verwendet werden, in denen die Registrierung der WPD-Geräteklassenschnittstelle durch die Klassenerweiterungsbibliothek negative Auswirkungen hat. Diese Option wird in der Regel in Verbindung mit **WPD \_ CLASS EXTENSION OPTIONS \_ \_ \_ DONT REGISTER \_ \_ WPD DEVICE \_ \_ INTERFACE** set to **TRUE** verwendet.                                                                                          |
+| **\_WPD-KLASSENERWEITERUNGSOPTIONEN \_ \_ \_ \_ GERÄTEIDENTIFIKATIONSWERTE \_**            | **VT \_ UNKNOWN** | Dies ist ein [IPortableDeviceValues-Objekt,](iportabledevicevalues.md) das die Geräteidentifikationswerte enthält (**\_ WPD-GERÄTEHERSTELLER, \_** **\_ WPD-GERÄTEMODELL, \_** **\_ WPD-GERÄTEFIRMWAREVERSION \_ \_** und **WPD \_ DEVICE FUNCTIONAL UNIQUE \_ \_ \_ ID**). Schließen Sie dies bei der Initialisierung mit anderen Klassenerweiterungsoptionen ein.                                                                                                                                                                                                                               |
+| **\_WPD-KLASSENERWEITERUNGSOPTIONEN \_ \_ \_ \_ TRANSPORTBANDBREITE**                      | **VT \_ UI4**     | Gibt die theoretische maximale Bandbreite des Transports in Kilobits pro Sekunde an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **\_WPD-KLASSENERWEITERUNGSOPTIONEN \_ \_ \_ \_ GERÄTEIDENTIFIKATIONSWERTE \_**            | **VT \_ UNKNOWN** | Dies ist ein [IPortableDeviceValues-Objekt,](iportabledevicevalues.md) das die Geräteidentifikationswerte enthält (**\_ WPD-GERÄTEHERSTELLER, \_** **\_ WPD-GERÄTEMODELL, \_** **\_ WPD-GERÄTEFIRMWAREVERSION \_ \_** und **WPD \_ DEVICE FUNCTIONAL UNIQUE \_ \_ \_ ID**). Schließen Sie dies bei der Initialisierung mit anderen Klassenerweiterungsoptionen ein.                                                                                                                                                                                                                              |
 
 
 
@@ -45,15 +45,15 @@ Tragbare Windows-Geräte unterstützen die folgenden Klassen Erweiterungs Eigens
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**WPD-Eigenschaften und-Attribute**](properties-and-attributes.md)
+[**WPD-Eigenschaften und -Attribute**](properties-and-attributes.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Die Win32- \_ Freigabe Klasse stellt eine freigegebene Ressource auf einem Computersystem dar, auf dem Windows ausgeführt wird. Hierbei kann es sich um ein Laufwerk, einen Drucker, eine prozessübergreifende Kommunikation oder ein anderes shardgerät handeln. Weitere Informationen zum Abrufen von WMI-Klassen finden Sie unter Abrufen einer Klasse.
+description: Die Win32 \_ Share-Klasse stellt eine freigegebene Ressource auf einem Computersystem dar, auf dem Windows. Dies kann ein Laufwerk, ein Drucker, eine prozessübergreifende Kommunikation oder ein anderes sharable-Gerät sein. Weitere Informationen zum Abrufen von WMI-Klassen finden Sie unter Abrufen einer Klasse.
 ms.assetid: 2d47b726-a0fe-47f3-9e96-d1d507655e56
 ms.tgt_platform: multiple
 title: Win32_Share-Klasse
@@ -24,18 +24,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: e871880da5aa9819de4a9eaaf3c6f074bd198d23
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 258116c3d6f01db938033056069aa036a3eaad23e44b31d80838ad26f570faa7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117834152"
 ---
-# <a name="win32_share-class"></a>Win32- \_ Freigabe Klasse
+# <a name="win32_share-class"></a>Win32 \_ Share-Klasse
 
-Die **Win32- \_ Freigabe** Klasse stellt eine freigegebene Ressource auf einem Computersystem dar, auf dem Windows ausgeführt wird. Hierbei kann es sich um ein Laufwerk, einen Drucker, eine prozessübergreifende Kommunikation oder ein anderes shardgerät handeln. Weitere Informationen zum Abrufen von WMI-Klassen finden Sie unter [Abrufen einer Klasse](../wmisdk/retrieving-a-class.md).
+Die **Win32 \_ Share-Klasse** stellt eine freigegebene Ressource auf einem Computersystem dar, auf dem Windows. Dies kann ein Laufwerk, ein Drucker, eine prozessübergreifende Kommunikation oder ein anderes sharable-Gerät sein. Weitere Informationen zum Abrufen von WMI-Klassen finden Sie unter [Abrufen einer Klasse.](../wmisdk/retrieving-a-class.md)
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,23 +58,23 @@ class Win32_Share : CIM_LogicalElement
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ Freigabe** Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ Share-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Win32- \_ Freigabe** Klasse verfügt über diese Methoden.
+Die **Win32 \_ Share-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                             | BESCHREIBUNG                                                                                                                                                                                                         |
+| Methode                                                             | Beschreibung                                                                                                                                                                                                         |
 |:-------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Stelle**](create-method-in-class-win32-share.md)               | Klassenmethode, die die Freigabe für eine Server Ressource initiiert.<br/>                                                                                                                                               |
-| [**Lösch**](delete-method-in-class-win32-share.md)               | Class-Methode, die einen Freigabe Namen aus der Liste der freigegebenen Ressourcen eines Servers löscht, wobei Verbindungen mit der freigegebenen Ressource getrennt werden.<br/>                                                                       |
-| [**Getaccessmask**](getaccessmask-method-in-class-win32-share.md) | Gibt die Zugriffsrechte für die Freigabe zurück, die der Benutzer oder die Gruppe hat, in dessen Namen die Instanz zurückgegeben wird. Sie sollten diese Methode anstelle der **AccessMask** -Eigenschaft verwenden, die immer **null** ist.<br/> |
-| [**Setshareingefo**](setshareinfo-method-in-class-win32-share.md)   | Klassenmethode, mit der die Parameter einer freigegebenen Ressource festgelegt werden.<br/>                                                                                                                                              |
+| [**Erstellen**](create-method-in-class-win32-share.md)               | Klassenmethode, die die Freigabe für eine Serverressource initiiert.<br/>                                                                                                                                               |
+| [**Löschen**](delete-method-in-class-win32-share.md)               | Klassenmethode, die einen Freigabenamen aus der Liste der freigegebenen Ressourcen eines Servers löscht und verbindungen mit der freigegebenen Ressource trennt.<br/>                                                                       |
+| [**GetAccessMask**](getaccessmask-method-in-class-win32-share.md) | Gibt die Zugriffsrechte für die Freigabe zurück, die von dem Benutzer oder der Gruppe gehalten werden, für den bzw. die die Instanz zurückgegeben wird. Sie sollten diese Methode statt der **AccessMask-Eigenschaft** verwenden, die immer **NULL ist.**<br/> |
+| [**SetShareInfo**](setshareinfo-method-in-class-win32-share.md)   | Klassenmethode, die die Parameter einer freigegebenen Ressource festgelegt.<br/>                                                                                                                                              |
 
 
 
@@ -82,165 +82,165 @@ Die **Win32- \_ Freigabe** Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ Freigabe** Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ Share-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**AccessMask**
+**Accessmask**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **veraltet**](../wmisdk/standard-wmi-qualifiers.md)
+Qualifizierer: [ **VERALTET**](../wmisdk/standard-wmi-qualifiers.md)
 </dt> </dl>
 
-Diese Eigenschaft ist veraltet und wird nicht mehr verwendet. Verwenden Sie stattdessen die Win32-Methode " [**\_ share. getaccessmask**](getaccessmask-method-in-class-win32-share.md) ". Der Wert der **AccessMask** -Eigenschaft wird von WMI auf **null** festgelegt. Weitere Informationen zum Festlegen des Zugriffs beim Erstellen einer Freigabe finden Sie unter der [**Create**](create-method-in-class-win32-share.md) -Methode.
+Diese Eigenschaft ist veraltet und wird nicht mehr verwendet. Verwenden Sie [**stattdessen die \_ Win32 Share.GetAccessMask-Methode.**](getaccessmask-method-in-class-win32-share.md) Der Wert der **AccessMask-Eigenschaft** wird von WMI **auf NULL** festgelegt. Weitere Informationen zum Festlegen des Zugriffs beim Erstellen einer Freigabe finden Sie unter [**Create-Methode.**](create-method-in-class-win32-share.md)
 
 </dd> <dt>
 
 **AllowMaximum**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**share \_ Info \_ 502**](/windows/win32/api/lmshare/ns-lmshare-share_info_502) \| shi502 \_ Max \_ uses")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures SHARE INFO \| [**\_ \_ 502**](/windows/win32/api/lmshare/ns-lmshare-share_info_502) \| shi502 \_ max \_ uses")
 </dt> </dl>
 
-Die Anzahl von gleichzeitigen Benutzern für diese Ressource ist beschränkt. **True** gibt an, dass der Wert in der **MaximumAllowed** -Eigenschaft ignoriert wird.
+Die Anzahl gleichzeitiger Benutzer für diese Ressource wurde eingeschränkt. True **gibt an,** dass der Wert in der **MaximumAllowed-Eigenschaft** ignoriert wird.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Caption")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Caption")
 </dt> </dl>
 
-Eine kurze Textbeschreibung des-Objekts.
+Eine kurze Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](../wmisdk/standard-qualifiers.md) ("Description")
+Qualifizierer: [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Description")
 </dt> </dl>
 
-Eine Textbeschreibung des-Objekts.
+Eine Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](../wmisdk/standard-qualifiers.md) (" Install Date ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Installation date")
 </dt> </dl>
 
-Gibt an, wann das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Gibt an, wann das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **MaximumAllowed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**share \_ Info \_ 502**](/windows/win32/api/lmshare/ns-lmshare-share_info_502) \| shi502 \_ Max \_ uses")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures SHARE INFO \| [**\_ \_ 502**](/windows/win32/api/lmshare/ns-lmshare-share_info_502) \| shi502 \_ max \_ uses")
 </dt> </dl>
 
-Limit für die maximale Anzahl von Benutzern, die diese Ressource gleichzeitig verwenden dürfen. Der Wert ist nur gültig, wenn die **AllowMaximum** -Eigenschaft auf **false** festgelegt ist.
+Begrenzen Sie die maximale Anzahl von Benutzern, die diese Ressource gleichzeitig verwenden dürfen. Der Wert ist nur gültig, wenn die **AllowMaximum-Eigenschaft** auf **FALSE festgelegt ist.**
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**override**](../wmisdk/standard-qualifiers.md) ("Name"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**share \_ Info \_ 1**](/windows/win32/api/lmshare/ns-lmshare-share_info_1) \| shi1 \_ NetName")
+Qualifizierer: [**schlüssel**](../wmisdk/key-qualifier.md), [**Override**](../wmisdk/standard-qualifiers.md) ("Name"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures SHARE INFO \| [**\_ \_ 1**](/windows/win32/api/lmshare/ns-lmshare-share_info_1) \| shi1 \_ netname")
 </dt> </dl>
 
-Alias, der an einen Pfad übergeben wird, der als Freigabe auf einem Computersystem mit Windows eingerichtet ist.
+Alias für einen Pfad, der als Freigabe auf einem Computersystem eingerichtet ist, auf dem Windows.
 
-Windows 2008-Beispiel: " \\ Server01 \\ Public"-Windows Server 2008 erfordert, dass Sie die UNC-Datei im Namen platzieren.
+Windows 2008: \\ "SERVER01 \\ public" – Windows Server 2008 erfordert, dass Sie die UNC in den Namen eingeben.
 
 </dd> <dt>
 
-**Pfad**
+**Path**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**share \_ Info \_ 502**](/windows/win32/api/lmshare/ns-lmshare-share_info_502) \| shi502 \_ path")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures SHARE INFO \| [**\_ \_ 502**](/windows/win32/api/lmshare/ns-lmshare-share_info_502) \| shi502 \_ path")
 </dt> </dl>
 
-Lokaler Pfad der Windows-Freigabe.
+Lokaler Pfad der Windows Freigabe.
 
-Beispiel: "C: \\ Programmdateien"
+Beispiel: "C: \\ Programme"
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (10), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Status")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (10), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Status")
 </dt> </dl>
 
-Eine Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebliche Status können definiert werden. Der Betriebsstatus kann "OK", "heruntergestuft" und "pred Fail" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. b. ein intelligent-fähiges Festplattenlaufwerk).
+Eine Zeichenfolge, die den aktuellen Status des Objekts angibt. Betriebsstatus und nicht betriebsbereiter Status können definiert werden. Der Betriebsstatus kann "OK", "Heruntergestuft" und "Fehler vor dem Ausfall" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. B. eine SMART-fähige Festplatte).
 
-Der nicht betriebliche Status kann "Error", "Starting", "Stop" und "Service" enthalten. "Service" kann während der Datenträger Spiegelung angewendet werden, indem eine Benutzer Berechtigungs Liste oder eine andere administrative Arbeit neu geladen wird. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Nicht betriebsbereite Status können "Error", "Starting", "Stopping" und "Service" sein. "Dienst" kann während der Spiegelung des Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen administrativen Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 Folgende Werte sind gültig:
 
@@ -262,35 +262,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird** gestartet ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -304,60 +304,60 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**share \_ Info \_ 502**](/windows/win32/api/lmshare/ns-lmshare-share_info_502) \| shi502 \_ Type")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| SHARE INFO \| [**\_ \_ 502**](/windows/win32/api/lmshare/ns-lmshare-share_info_502) \| shi502-Typ") \_
 </dt> </dl>
 
-Der Typ der freigegebenen Ressource. Zu den Typen zählen: Laufwerke, Druck Warteschlangen, prozessübergreifende Kommunikation (prozessübergreifende Communications, IPC) und allgemeine Geräte.
+Typ der Ressource, die freigegeben wird. Zu den Typen gehören Datenträgerlaufwerke, Druckwarteschlangen, prozessübergreifende Kommunikation (Interprocess Communications, IPC) und allgemeine Geräte.
 
 <dt>
 
 <span id="Disk_Drive"></span><span id="disk_drive"></span><span id="DISK_DRIVE"></span>
 
-**Laufwerk (0** )
+**Laufwerk** (0)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Print_Queue"></span><span id="print_queue"></span><span id="PRINT_QUEUE"></span>
 
-**Druck Warteschlange** (1)
+**Druckwarteschlange** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -378,47 +378,47 @@ Der Typ der freigegebenen Ressource. Zu den Typen zählen: Laufwerke, Druck Wart
 
 <span id="Disk_Drive_Admin"></span><span id="disk_drive_admin"></span><span id="DISK_DRIVE_ADMIN"></span>
 
-**Laufwerks Administrator** (2147483648)
+**Datenträgeradministrator** (2147483648)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Print_Queue_Admin"></span><span id="print_queue_admin"></span><span id="PRINT_QUEUE_ADMIN"></span>
 
-**Administrator der Druck Warteschlange** (2147483649)
+**Druckwarteschlangenadministrator** (2147483649)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Device_Admin"></span><span id="device_admin"></span><span id="DEVICE_ADMIN"></span>
 
-**Geräte Administrator** (2147483650)
+**Geräteadministrator** (2147483650)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IPC_Admin"></span><span id="ipc_admin"></span><span id="IPC_ADMIN"></span>
 
-**IPC admin** (2147483651)
+**IPC-Administrator** (2147483651)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32- \_ Freigabe** Klasse wird von [**CIM \_ LogicalElement**](cim-logicalelement.md)abgeleitet.
+Die **Win32 \_ Share-Klasse** wird von [**CIM \_ LogicalElement**](cim-logicalelement.md)abgeleitet.
 
-Die Create-Methode in dieser Klasse ist eine statische Methode. Die Methoden **Delete**, **getaccessmask** und **setshareinfo** sind alle Instanzmethoden.
+Die Create-Methode in dieser Klasse ist eine statische Methode. Die Methoden **Delete,** **GetAccessMask** und **SetShareInfo** sind alle Instanzmethoden.
 
-Abhängig von den Sicherheits Berechtigungen können Sie möglicherweise nicht alle Eigenschaften dieser Klasse abrufen. Beispielsweise können die Eigenschaften " **AllowMaximum**", " **MaximumAllowed**", " **path**" und " **Type** " NULL zurückgeben. Im Allgemeinen können Poweruser und Administratoren alle Eigenschaftswerte abrufen.
+Abhängig von Ihren Sicherheitsberechtigungen können Sie möglicherweise nicht alle Eigenschaften dieser Klasse abrufen. Beispielsweise können die Eigenschaften **AllowMaximum,** **MaximumAllowed,** **Path** und **Type** NULL zurückgeben. Im Allgemeinen können Power Users und Administratoren alle Eigenschaftswerte abrufen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Skript Center-[Codebeispiel](https://Gallery.TechNet.Microsoft.Com/scriptcenter/List-Share-Permissions-83f8c419) werden alle Freigaben auf einem Computer aufgelistet und alle Freigabe Berechtigungen für die einzelnen Freigaben aufgelistet.
+Im folgenden[Skriptcenter-Codebeispiel](https://Gallery.TechNet.Microsoft.Com/scriptcenter/List-Share-Permissions-83f8c419) werden alle Freigaben auf einem Computer und alle Freigabeberechtigungen für jede Freigabe aufgelistet.
 
-Die [Informationen zur Freigabe von Freigabe Informationen ähnlich wie Win32 \_ share](https://Gallery.TechNet.Microsoft.Com/Get-Share-Information-5cc71b2c) PowerShell Sample Queries Win32 \_ share und liefert die Ergebnisse.
+Das PowerShell-Beispiel [Get Share Information similar to Win32 \_ Share](https://Gallery.TechNet.Microsoft.Com/Get-Share-Information-5cc71b2c) fragt Win32 Share ab \_ und stellt die Ergebnisse bereit.
 
 Im folgenden PowerShell-Beispiel werden die Freigaben auf dem lokalen System angezeigt.
 
@@ -431,7 +431,7 @@ $shares | sort name | ft -auto
 
 
 
-Wenn Sie den Filter genauer filtern möchten, können Sie alternativ den folgenden PowerShell-Code Ausschnitt verwenden:
+Wenn Sie genauer filtern möchten, können Sie alternativ den folgenden PowerShell-Codeausschnitt verwenden:
 
 
 ```PowerShell
@@ -465,13 +465,13 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -481,7 +481,7 @@ Next
 [Betriebssystemklassen](./operating-system-classes.md)
 </dt> <dt>
 
-[WMI-Tasks: Dateien und Ordner](../wmisdk/wmi-tasks--files-and-folders.md)
+[WMI-Aufgaben: Dateien und Ordner](../wmisdk/wmi-tasks--files-and-folders.md)
 </dt> </dl>
 
  

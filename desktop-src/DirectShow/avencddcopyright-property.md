@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118403762"
 ---
-# <a name="avencddcopyright-property"></a>AVEncDDCopyright-Eigenschaft
+# <a name="avencddcopyright-property"></a>AVEncDDCopyright(Eigenschaft)
 
 Gibt das Copyrightflag in einem Dolby Digital-Audiostream an. Diese Eigenschaft gilt für Dolby Digital-Audioencoder.
 

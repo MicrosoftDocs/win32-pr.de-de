@@ -40,7 +40,7 @@ Die [**IUICommandHandler::UpdateProperty-Rückrufmethode**](/windows/desktop/api
 
  
 
-In der folgenden Tabelle sind die Eigenschaftenschlüssel aufgeführt, die dem steuerelement Drop-Down Button zugeordnet sind.
+In der folgenden Tabelle sind die Eigenschaftenschlüssel aufgeführt, die dem Drop-Down Button-Steuerelement zugeordnet sind.
 
 
 
@@ -62,7 +62,7 @@ In der folgenden Tabelle sind die Eigenschaftenschlüssel aufgeführt, die dem s
 </tr>
 <tr class="even">
 <td><a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled</a></td>
-<td>Unterstützt <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty"><strong>IUIFramework::GetUICommandProperty</strong></a> und <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty"><strong>IUIFramework::SetUICommandProperty.</strong></a><br/> Wenn alle untergeordneten Elemente deaktiviert sind, legt das Framework <a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled</a> auf FALSE (0) fest. Andernfalls wird UI_PKEY_Enabled auf TRUE (-1) festgelegt, wenn mindestens ein untergeordnetes Element aktiviert ist.
+<td>Unterstützt <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty"><strong>IUIFramework::GetUICommandProperty</strong></a> und <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty"><strong>IUIFramework::SetUICommandProperty.</strong></a><br/> Wenn alle untergeordneten Elemente deaktiviert sind, legt das Framework <a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled</a> auf FALSE (0) fest. Wenn ein oder mehrere untergeordnete Elemente aktiviert sind, wird UI_PKEY_Enabled andernfalls auf TRUE (-1) festgelegt.
 <blockquote>
 [!Important]<br />
 Die <a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled-Eigenschaft</a> für das Drop-Down Button-Steuerelement sollte ungültig werden, nachdem mindestens ein untergeordnetes Element aktiviert oder deaktiviert wurde. Dadurch wird sichergestellt, dass das Framework den aktualisierten Eigenschaftswert abfragt und den Status des Drop-Down Button-Steuerelements auf der Menübandbenutzeroberfläche aktualisiert.

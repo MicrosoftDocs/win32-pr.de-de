@@ -24,16 +24,16 @@ LPFNInitRoutine            m_lpfnInit;            // Initialization function (op
 const AMOVIESETUP_FILTER * m_pAMovieSetup_Filter; // Set-up information (for filters)
 ```
 
-Die beiden Funktionszeigener [**m \_ lpfnNew**](cfactorytemplate-m-lpfnnew.md) und [**m \_ lpfnInit**](cfactorytemplate-m-lpfninit.md)verwenden die folgenden Typdefinitionen:
+Die beiden Funktionszeiger [**m \_ lpfnNew**](cfactorytemplate-m-lpfnnew.md) und [**m \_ lpfnInit**](cfactorytemplate-m-lpfninit.md)verwenden die folgenden Typdefinitionen:
 
 ``` syntax
 typedef CUnknown *(CALLBACK *LPFNNewCOMObject)(LPUNKNOWN pUnkOuter, HRESULT *phr);
 typedef void (CALLBACK *LPFNInitRoutine)(BOOL bLoading, const CLSID *rclsid);
 ```
 
-Die erste ist die Instanziierungsfunktion für die Komponente. Die zweite ist eine optionale Initialisierungsfunktion. Wenn Sie eine Initialisierungsfunktion bereitstellen, wird sie innerhalb der DLL-Einstiegspunktfunktion aufgerufen. (Die DLL-Einstiegspunktfunktion wird weiter oben in diesem Artikel erläutert.)
+Der erste ist die Instanziierungsfunktion für die Komponente. Die zweite ist eine optionale Initialisierungsfunktion. Wenn Sie eine Initialisierungsfunktion bereitstellen, wird sie aus der DLL-Einstiegspunktfunktion aufgerufen. (Die DLL-Einstiegspunktfunktion wird weiter unten in diesem Artikel erläutert.)
 
-Angenommen, Sie erstellen eine DLL, die eine Komponente namens CMyComponent enthält, die von [**CUnknown erbt.**](cunknown.md) Sie müssen die folgenden Elemente in Ihrer DLL bereitstellen:
+Angenommen, Sie erstellen eine DLL, die eine Komponente namens CMyComponent enthält, die von [**CUnknown**](cunknown.md)erbt. Sie müssen die folgenden Elemente in ihrer DLL angeben:
 
 -   Die Initialisierungsfunktion, eine öffentliche Methode, die eine neue Instanz von CMyComponent zurückgibt.
 -   Ein globales Array von Factoryvorlagen mit dem Namen *g \_ Templates.* Dieses Array enthält die Factoryvorlage für CMyComponent.
@@ -68,11 +68,11 @@ int g_cTemplates = sizeof(g_Templates) / sizeof(g_Templates[0]);
 
 
 
-Die `CreateInstance` -Methode ruft den Klassenkonstruktor auf und gibt einen Zeiger auf die neue Klasseninstanz zurück. Der Parameter *pUnk* ist ein Zeiger auf die aggregierende [**IUnknown-**](/windows/desktop/api/unknwn/nn-unknwn-iunknown). Sie können diesen Parameter einfach an den Klassenkonstruktor übergeben. Der Parameter *pHr* ist ein Zeiger auf einen HRESULT-Wert. Der Klassenkonstruktor legt dies auf einen entsprechenden Wert fest. Wenn der Konstruktor jedoch fehlschlägt, legen Sie den Wert auf E \_ OUTOFMEMORY fest.
+Die `CreateInstance` -Methode ruft den Klassenkonstruktor auf und gibt einen Zeiger auf die neue Klasseninstanz zurück. Der *Parameter pUnk* ist ein Zeiger auf die aggregierende [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown). Sie können diesen Parameter einfach an den Klassenkonstruktor übergeben. Der *Parameter pHr* ist ein Zeiger auf einen HRESULT-Wert. Der Klassenkonstruktor legt diesen auf einen entsprechenden Wert fest. Wenn der Konstruktor jedoch fehlschlägt, legen Sie den Wert auf E \_ OUTOFMEMORY fest.
 
-Das [**NAME-Makro**](name.md) generiert eine Zeichenfolge in Debugbuilds, wird jedoch in **Verkaufsbuilds** in NULL auflösen. Sie wird in diesem Beispiel verwendet, um der Komponente einen Namen zu geben, der in Debugprotokollen angezeigt wird, aber in der endgültigen Version keinen Arbeitsspeicher belegt.
+Das [**NAME-Makro**](name.md) generiert eine Zeichenfolge in Debugbuilds, wird aber in Verkaufsbuilds in **NULL** aufgelöst. Sie wird in diesem Beispiel verwendet, um der Komponente einen Namen zu geben, der in Debugprotokollen angezeigt wird, aber in der endgültigen Version keinen Arbeitsspeicher belegt.
 
-Die `CreateInstance` Methode kann einen beliebigen Namen haben, da die Klassen factory auf den Funktionszeiger in der Factoryvorlage verweist. g Templates *\_ und* *g \_ cTemplates* sind jedoch globale Variablen, die von der Klassen factory erwartet werden, sodass sie genau diese Namen haben müssen.
+Die `CreateInstance` -Methode kann einen beliebigen Namen haben, da die Klassenfactory auf den Funktionszeiger in der Factoryvorlage verweist. g *\_ Templates* und *g \_ cTemplates* sind jedoch globale Variablen, die von der Klassenfactory erwartet werden, sodass sie genau diese Namen aufweisen müssen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

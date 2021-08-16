@@ -18,7 +18,7 @@ ms.locfileid: "117860851"
 ---
 # <a name="extending-the-ribbon"></a>Erweitern des Menübands
 
-In Windows Explorer hilft das Menüband dabei, allgemeine Dateiverwaltungsaktivitäten von Endbenutzern einfacher und leichter auffindbar zu machen, aber es gibt Änderungen für App-Entwickler. Beispielsweise war die alte Befehlsleiste frei erweiterbar, aber das Menüband ist zu diesem Zeitpunkt stärker eingeschränkt. Außerdem wird das Menüband nicht standardmäßig für alle Namespaceerweiterungen angezeigt, sodass Sie sich für das Abrufen des Menübands entscheiden müssen. Andernfalls wird die ältere Befehlsleiste angezeigt.
+In Windows Explorer erleichtert das Menüband allgemeine Dateiverwaltungsaktivitäten von Endbenutzern einfacher und besser erkennbar, es gibt jedoch Änderungen für App-Entwickler. Beispielsweise war die alte Befehlsleiste frei erweiterbar, aber das Menüband ist zu diesem Zeitpunkt stärker eingeschränkt. Außerdem wird das Menüband nicht standardmäßig für alle Namespaceerweiterungen angezeigt, sodass Sie sich für das Abrufen des Menübands entscheiden müssen. Andernfalls wird die ältere Befehlsleiste angezeigt.
 
 Aktionen, die Benutzern im Menüband zur Verfügung stehen, lassen sich in drei Erweiterbarkeitskategorien unterteilen:
 

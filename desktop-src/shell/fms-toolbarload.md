@@ -1,5 +1,5 @@
 ---
-description: Enthält Informationen zu benutzerdefinierten Schaltflächen, die der Symbolleiste des Datei-Managers hinzugefügt werden sollen. Die Schaltflächen werden von einer Datei-Manager-Erweiterungs-DLL bereitgestellt.
+description: Enthält Informationen zu benutzerdefinierten Schaltflächen, die der Datei-Manager-Symbolleiste hinzugefügt werden sollen. Die Schaltflächen werden von einer Datei-Manager-Erweiterungs-DLL bereitgestellt.
 title: FMS_TOOLBARLOAD -Struktur (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
@@ -22,7 +22,7 @@ ms.locfileid: "118224109"
 ---
 # <a name="fms_toolbarload-structure"></a>\_FMS-SYMBOLLEISTELOAD-Struktur
 
-Enthält Informationen zu benutzerdefinierten Schaltflächen, die der Symbolleiste des Datei-Managers hinzugefügt werden sollen. Die Schaltflächen werden von einer Datei-Manager-Erweiterungs-DLL bereitgestellt.
+Enthält Informationen zu benutzerdefinierten Schaltflächen, die der Datei-Manager-Symbolleiste hinzugefügt werden sollen. Die Schaltflächen werden von einer Datei-Manager-Erweiterungs-DLL bereitgestellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -106,7 +106,7 @@ Typ: **HBITMAP**
 
 </dd> <dd>
 
-Ein Handle für eine Bitmap, die der Datei-Manager zum Abrufen und Anzeigen von Schaltflächenbildern verwendet, wenn **idBitmap** 0 ist.
+Ein Handle für eine Bitmap, die der Datei-Manager verwendet, um Schaltflächenbilder zu erhalten und anzuzeigen, wenn **idBitmap** 0 ist.
 
 </dd> </dl>
 

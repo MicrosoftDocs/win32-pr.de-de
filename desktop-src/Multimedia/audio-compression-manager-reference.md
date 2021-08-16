@@ -63,7 +63,7 @@ In diesem Abschnitt werden die Funktionen, Strukturen und Meldungen beschrieben,
 
 ## <a name="messages"></a>Meldungen
 
--   [**MM \_ ACM \_ FILTERCHOOSE**](mm-acm-filterchoose.md)
+-   [**\_ \_ MM-ACM-FILTERCHOOSE**](mm-acm-filterchoose.md)
 -   [**MM \_ ACM \_ FORMATCHOOSE**](mm-acm-formatchoose.md)
 
 ## <a name="streams"></a>Datenströme

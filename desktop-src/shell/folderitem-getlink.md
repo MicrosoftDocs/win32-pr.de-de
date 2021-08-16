@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118224064"
 ---
-# <a name="folderitemgetlink-property"></a>FolderItem.GetLink-Eigenschaft
+# <a name="folderitemgetlink-property"></a>FolderItem.GetLink(Eigenschaft)
 
 Enthält das [**ShellLinkObject-Objekt**](shelllinkobject-object.md) des Elements, wenn das Element eine Verknüpfung ist.
 
@@ -41,7 +41,7 @@ Eine Variable vom Typ [**IDispatch,**](/windows/win32/api/oaidl/nn-oaidl-idispat
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **GetLink** verwendet, um das [**ShellLinkObject-Objekt**](shelllinkobject-object.md) für eine Verknüpfung zum Internet Explorer abzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **GetLink verwendet,** um das [**ShellLinkObject-Objekt**](shelllinkobject-object.md) für eine Verknüpfung zum Internet Explorer. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
 JScript:
 

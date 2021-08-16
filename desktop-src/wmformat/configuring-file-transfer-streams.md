@@ -1,31 +1,31 @@
 ---
-title: Konfigurieren von Datei Übertragungsdaten strömen
-description: Konfigurieren von Datei Übertragungsdaten strömen
+title: Konfigurieren von Streams
+description: Konfigurieren von Streams
 ms.assetid: faed54ae-9e80-492a-9602-e726bdb3b54a
 keywords:
-- Streams, Konfigurieren von Datei Übertragungsdaten strömen
-- Codecs, Konfigurieren von Datei Übertragungsdaten strömen
-- Datei Übertragungsdaten Ströme
-- Streams, Dateneinheiten Erweiterungen
-- Codecs, Dateneinheiten Erweiterungen
-- dateneinheits Erweiterungen, Datei Übertragungsdaten Ströme
+- Streams,Konfigurieren von Dateiübertragungsstreams
+- Codecs,Konfigurieren von Dateiübertragungsstreams
+- Dateiübertragungsstreams
+- Streams, Dateneinheitenerweiterungen
+- Codecs, Dateneinheitserweiterungen
+- Dateneinheitenerweiterungen, Datenübertragungsdatenströme
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75fac7d2270da82f1f9e82ed9123611ae608dd3c
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 9c0be95c9760a02275e223f56785149f6867d4aaf2462d07d158991b3cd21c01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104038593"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117849063"
 ---
-# <a name="configuring-file-transfer-streams"></a>Konfigurieren von Datei Übertragungsdaten strömen
+# <a name="configuring-file-transfer-streams"></a>Konfigurieren von Streams
 
-Für Datei Übertragungs Datenströme sind keine speziellen Einstellungen in der [**WM \_ - \_ Medientyp**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_media_type) Struktur erforderlich. Sie benötigen eine Erweiterung für Dateneinheiten, um jedem Beispiel einen Dateinamen zuzuordnen. Um einen Namen mit Datei Übertragungs Beispielen zu senden, müssen Sie ein dateneinheits-Erweiterungssystem für den Stream implementieren.
+Dateiübertragungsstreams erfordern keine besonderen Einstellungen in der [**WM \_ MEDIA \_ TYPE-Struktur.**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_media_type) Sie erfordern eine Dateneinheitserweiterung, um jedem Beispiel einen Dateinamen zuzuordnen. Um einen Namen mit Dateiübertragungsbeispielen zu senden, müssen Sie ein Dateneinheiterweiterungssystem für den Stream implementieren.
 
-Führen Sie die folgenden Schritte aus, um eine Dateneinheiten Erweiterung für den Stream festzulegen:
+Führen Sie die folgenden Schritte aus, um eine Dateneinheitenerweiterung für den Stream festzulegen:
 
-1.  Abrufen eines Zeigers auf die [**IWMStreamConfig2**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig2) -Schnittstelle des Stream-Konfigurations Objekts durch Aufrufen von **iwmstreamconfig:: QueryInterface**.
-2.  Fügen Sie eine dateneinheits Erweiterung für den Stream hinzu, indem Sie [**IWMStreamConfig2:: adddataunitextension**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstreamconfig2-adddataunitextension) wie folgt aufrufen:
+1.  Rufen Sie einen Zeiger auf die [**IWMStreamConfig2-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig2) des Streamkonfigurationsobjekts ab, indem **Sie IWMStreamConfig::QueryInterface** aufrufen.
+2.  Fügen Sie eine Dateneinheitenerweiterung für den Stream hinzu, indem [**Sie IWMStreamConfig2::AddDataUnitExtension**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstreamconfig2-adddataunitextension) wie folgt aufrufen:
     ```C++
     hr = pStreamConfig2->AddDataUnitExtension(CLSID_WMTPropertyFileName,
                                               -1, NULL, 0);
@@ -37,18 +37,18 @@ Führen Sie die folgenden Schritte aus, um eine Dateneinheiten Erweiterung für 
 
 <dl> <dt>
 
-[**Allgemeine Konfiguration für alle Streams**](configuration-common-to-all-streams.md)
+[**Configuration Common to All Streams**](configuration-common-to-all-streams.md)
 </dt> <dt>
 
 [**Konfigurieren beliebiger Streamtypen**](configuring-arbitrary-stream-types.md)
 </dt> <dt>
 
-[**Dateistreams**](file-streams.md)
+[**Datei-Streams**](file-streams.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
