@@ -1,6 +1,6 @@
 ---
-title: Hinzufügen eines ActiveX-Steuerelements zu Visual C++ Project
-description: Mit dem folgenden Verfahren werden dispatch-Klassen- und Headerdateien für ein ActiveX-Steuerelement einem Visual C++ werden.
+title: Hinzufügen eines ActiveX-Steuerelements zu einem Visual C++ Project
+description: Das folgende Verfahren fügt einem Visual C++ Projekt Dispatchklassen- und Headerdateien für ein ActiveX-Steuerelement hinzu.
 ms.assetid: f342d6af-2835-446f-8628-8b1008a2e613
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,16 +11,16 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118311344"
 ---
-# <a name="adding-an-activex-control-to-a-visual-c-project"></a>Hinzufügen eines ActiveX-Steuerelements zu Visual C++ Project
+# <a name="adding-an-activex-control-to-a-visual-c-project"></a>Hinzufügen eines ActiveX-Steuerelements zu einem Visual C++ Project
 
-Mit dem folgenden Verfahren werden dispatch-Klassen- und Headerdateien für ein ActiveX-Steuerelement einem Visual C++ werden.
+Das folgende Verfahren fügt einem Visual C++ Projekt Dispatchklassen- und Headerdateien für ein ActiveX-Steuerelement hinzu.
 
-**So fügen Sie einem ActiveX steuerelement ein Visual C++ Project**
+**So fügen Sie einem Visual C++ Project ein ActiveX-Steuerelement hinzu**
 
-1.  Klicken Sie **Project** Menü auf **Hinzufügen, um Project.** Ein Kontextmenü wird angezeigt.
-2.  Klicken Sie **auf Komponenten und Steuerelemente**. Das **Dialogfeld Components and Controls Gallery** (Komponenten- und Steuerelementkatalog) wird angezeigt.
-3.  Klicken Sie auf die Komponente, die Dem Projekt hinzugefügt werden soll. Visual C++ wird ein Dialogfeld angezeigt, in dem Sie eine Teilmenge der Klassen der Komponente auswählen können, die Dem Projekt hinzugefügt werden soll.
-4.  Klicken Sie auf diese Option, um die Kontrollkästchen der Klassen zu aktivieren, die Sie hinzufügen möchten, und klicken Sie auf **OK.**
+1.  Klicken Sie im **Menü Project** auf **Hinzufügen, um Project**. Ein Kontextmenü wird angezeigt.
+2.  Klicken Sie auf **Komponenten und Steuerelemente.** Das Dialogfeld **Komponenten- und Steuerelementkatalog** wird angezeigt.
+3.  Klicken Sie auf die Komponente, die Dem Projekt hinzugefügt werden soll. Visual C++ zeigt ein Dialogfeld an, in dem Sie eine Teilmenge der Klassen der Komponente auswählen können, die Ihrem Projekt hinzugefügt werden sollen.
+4.  Klicken Sie auf , um die Kontrollkästchen der Klassen auszuwählen, die Sie hinzufügen möchten, und klicken Sie auf **OK.**
 
 Visual C++ generiert Dispatchklassen- und Headerdateien für die Komponente und fügt sie Ihrem Projekt hinzu.
 

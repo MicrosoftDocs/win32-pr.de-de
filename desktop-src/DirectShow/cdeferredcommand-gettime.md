@@ -1,7 +1,7 @@
 ---
-description: Die getTime-Methode ruft den Zeitpunkt ab, zu dem die Methode ausgeführt wird.
+description: Die GetTime-Methode ruft den Zeitpunkt ab, zu dem die Methode ausgeführt wird.
 ms.assetid: 40f00f21-6c35-4de6-b75a-ee6b14b0439f
-title: Cdeferredcommand. getTime-Methode (ctlutil. h)
+title: CDeferredCommand.GetTime-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8673c16364f005f4169a940ddb6fee8b304fafbb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2c07765eabc87fe56b7ddfd69635d2cec087bd68f48167bac4f3262484ae44fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117822093"
 ---
-# <a name="cdeferredcommandgettime-method"></a>Cdeferredcommand. getTime-Methode
+# <a name="cdeferredcommandgettime-method"></a>CDeferredCommand.GetTime-Methode
 
-Die- `GetTime` Methode ruft den Zeitpunkt ab, zu dem die Methode ausgeführt wird.
+Die `GetTime` -Methode ruft den Zeitpunkt ab, zu dem die Methode ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein "up" [**-Objekt zurück, das eine Verweis**](creftime.md) Zeit enthält.
+Gibt ein [**CRefTime-Objekt**](creftime.md) zurück, das eine Verweiszeit enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,16 +50,16 @@ Gibt ein "up" [**-Objekt zurück, das eine Verweis**](creftime.md) Zeit enthält
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdeferredcommand-Klasse**](cdeferredcommand.md)
+[**CDeferredCommand-Klasse**](cdeferredcommand.md)
 </dt> </dl>
 
  

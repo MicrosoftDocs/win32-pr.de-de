@@ -1,7 +1,7 @@
 ---
-description: Die imediadet-Schnittstelle ruft Informationen über eine Mediendatei ab, wie z. b. die Anzahl der Streams sowie den Medientyp, die Dauer und die Framerate der einzelnen Datenströme.
+description: Die IMediaDet-Schnittstelle ruft Informationen zu einer Mediendatei ab, z. B. die Anzahl der Streams, den Medientyp, die Dauer und die Bildfrequenz jedes Streams.
 ms.assetid: 596fc84e-a88a-4e1b-aa48-b6dc9031db31
-title: Imediadet-Schnittstelle (qedit. h)
+title: IMediaDet-Schnittstelle (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,87 +14,87 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: ca5c87a1424872491aba5dcf4e01011872e9ff36
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: abdf913ab74e6f0f988449a14b84b5be109b9380ebbfb2473edd4a9980f3c577
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369415"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117819032"
 ---
-# <a name="imediadet-interface"></a>Imediadet-Schnittstelle
+# <a name="imediadet-interface"></a>IMediaDet-Schnittstelle
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die `IMediaDet` -Schnittstelle ruft Informationen zu einer Mediendatei ab, z. b. die Anzahl der Streams und den Medientyp, die Dauer und die Framerate der einzelnen Datenströme. Sie enthält auch Methoden zum Abrufen einzelner Frames aus einem Videostream. Das [Media Detector-Objekt (mediadet)](media-detector--mediadet.md) macht diese Schnittstelle verfügbar.
+Die -Schnittstelle ruft Informationen zu einer Mediendatei ab, z. B. die Anzahl der Streams, den Medientyp, die Dauer und die `IMediaDet` Bildfrequenz jedes Streams. Sie enthält auch Methoden zum Abrufen einzelner Frames aus einem Videostream. Das [Media Detector-Objekt (MediaDet)](media-detector--mediadet.md) macht diese Schnittstelle verfügbar.
 
-Führen Sie die folgenden Schritte aus, um Informationen zu einer Datei zu erhalten, die diese Schnittstelle verwendet:
+Führen Sie die folgenden Schritte aus, um Informationen zu einer Datei über diese Schnittstelle zu erhalten:
 
-1.  Erstellen Sie eine Instanz des mediadet-Objekts durch Aufrufen von **CoCreateInstance**. Die Klassen-ID ist CLSID \_ mediadet.
-2.  Nennen Sie [**imediadet::p UT \_ filename**](imediadet-put-filename.md) , um den Namen der Quelldatei anzugeben.
-3.  Rufen Sie [**imediadet:: get \_ outputstreams**](imediadet-get-outputstreams.md) auf, um die Anzahl der Ausgabedaten Ströme in der Quelle abzurufen.
-4.  Nennen Sie [**imediadet::p UT \_ currentstream**](imediadet-put-currentstream.md) , um einen bestimmten Stream anzugeben.
-5.  Wenden Sie eine der folgenden Methoden an:
-    -   [**Imediadet:: get \_ Framerate**](imediadet-get-framerate.md)
-    -   [**Imediadet:: get \_ streamlength**](imediadet-get-streamlength.md)
-    -   [**Imediadet:: get \_ streammediatype**](imediadet-get-streammediatype.md)
-    -   [**Imediadet:: get \_ Streamtype**](imediadet-get-streamtype.md)
+1.  Erstellen Sie eine Instanz des MediaDet-Objekts, indem Sie **CoCreateInstance aufrufen.** Die Klassen-ID ist CLSID \_ MediaDet.
+2.  Rufen [**Sie IMediaDet::p ut \_ Filename**](imediadet-put-filename.md) auf, um den Namen der Quelldatei anzugeben.
+3.  Rufen [**Sie IMediaDet::get \_ OutputStreams auf,**](imediadet-get-outputstreams.md) um die Anzahl der Ausgabestreams in der Quelle zu erhalten.
+4.  Rufen [**Sie IMediaDet::p ut \_ CurrentStream auf,**](imediadet-put-currentstream.md) um einen bestimmten Stream anzugeben.
+5.  Rufen Sie eine der folgenden Methoden auf:
+    -   [**IMediaDet::get \_ FrameRate**](imediadet-get-framerate.md)
+    -   [**IMediaDet::get \_ StreamLength**](imediadet-get-streamlength.md)
+    -   [**IMediaDet::get \_ StreamMediaType**](imediadet-get-streammediatype.md)
+    -   [**IMediaDet::get \_ StreamType**](imediadet-get-streamtype.md)
 
-Um einen Videorahmen abzurufen, rufen Sie [**imediadet:: getbitmapbits**](imediadet-getbitmapbits.md) oder [**imediadet:: Write-Bitmapbits**](imediadet-writebitmapbits.md)auf. Der zurückgegebene Frame weist immer das 24-Bit-RGB-Format auf.
+Rufen Sie zum Abrufen eines [**Videoframes IMediaDet::GetBitmapBits**](imediadet-getbitmapbits.md) oder [**IMediaDet::WriteBitmapBits auf.**](imediadet-writebitmapbits.md) Der zurückgegebene Frame hat immer das 24-Bit-RGB-Format.
 
 > [!Note]  
-> Verwenden Sie nicht dasselbe mediadet-Objekt mit mehreren Dateien. Um Informationen oder Video Frames aus mehr als einer Datei zu erhalten, verwenden Sie separate mediadet-Instanzen.
+> Verwenden Sie nicht dasselbe MediaDet-Objekt mit mehreren Dateien. Verwenden Sie separate MediaDet-Instanzen, um Informationen oder Videoframes aus mehr als einer Datei zu erhalten.
 
  
 
-Die **imediadet** -Schnittstelle unterstützt keine [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) -Formate, sodass Sie diese Schnittstelle nicht verwenden können, um Zeilen Sprung Felder oder Informationen über das Durchschneiden zu erhalten. Auch wenn der upstreamdecoder nur **VIDEOINFOHEADER2** unterstützt, können Sie nicht verwenden `IMediaDet` . Dies kann beispielsweise bei einem MPEG-2-Decoder der Fall sein. Außerdem ignoriert die- `IMediaDet` Schnittstelle alle Streams in der Datei, die keine Video-oder Audiodaten sind. Wenn die Datei z. b. einen Audiostream, einen Datenstrom und einen Videostream enthält, meldet die **get \_ outputstreams** -Methode nur zwei Streams (Audiodaten und Videos).
+Die **IMediaDet-Schnittstelle** unterstützt [**keine VIDEOINFOHEADER2-Formate,**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) daher können Sie diese Schnittstelle nicht verwenden, um Interlacingfelder oder Informationen zum Interlacing zu erhalten. Wenn der Upstreamdecoder nur **VIDEOINFOHEADER2 unterstützt,** können Sie auch nicht `IMediaDet` verwenden. Dies kann beispielsweise bei einem MPEG-2-Decoder der Fall sein. Außerdem ignoriert die Schnittstelle alle Streams in der Datei, `IMediaDet` die keine Video- oder Audiodaten sind. Wenn die Datei z. B. einen Audiostream, einen Datenstrom und einen Videostream enthält, werden von der **\_ Get OutputStreams-Methode** nur zwei Streams (Audio und Video) ausgegeben.
 
 ## <a name="members"></a>Member
 
-Die **imediadet** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Imediadet** verfügt auch über die folgenden Typen von Membern:
+Die **IMediaDet-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IMediaDet verfügt** auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **imediadet** -Schnittstelle verfügt über diese Methoden.
+Die **IMediaDet-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                        | BESCHREIBUNG                                                                                                |
+| Methode                                                        | Beschreibung                                                                                                |
 |:--------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|
-| [**Enterbitmapgrabmode**](imediadet-enterbitmapgrabmode.md)  | Schaltet den Medien Detektor in den bitmapingmodus um und sucht das Filter Diagramm zu einem bestimmten Zeitpunkt.<br/> |
-| [**\_currentstream erhalten**](imediadet-get-currentstream.md)     | Ruft die streamnummer ab, die derzeit vom Medien Erkennungs Modul verwendet wird.<br/>                               |
-| [**\_Dateiname erhalten**](imediadet-get-filename.md)               | Ruft den Namen der Quelldatei ab, die derzeit vom Medien Erkennungs Modul verwendet wird.<br/>                     |
-| [**\_Filter erhalten**](imediadet-get-filter.md)                   | Ruft einen Zeiger auf den Quell Filter ab, der derzeit vom Medien Erkennungs Modul verwendet wird.<br/>                  |
-| [**\_Framerate erhalten**](imediadet-get-framerate.md)             | Ruft die Framerate des aktuellen Streams ab.<br/>                                                 |
-| [**get \_ outputstreams**](imediadet-get-outputstreams.md)     | Ruft die Anzahl der in der Medienquelle enthaltenen Audiodaten und Videostreams ab.<br/>                  |
-| [**\_streamlength erhalten**](imediadet-get-streamlength.md)       | Ruft die Dauer des aktuellen Streams ab.<br/>                                                   |
-| [**get \_ streammediatype**](imediadet-get-streammediatype.md) | Ruft den Medientyp des aktuellen Streams ab.<br/>                                                 |
-| [**\_Streamtype aufrufen**](imediadet-get-streamtype.md)           | Ruft den Globally Unique Identifier (GUID) für den Medientyp des aktuellen Streams ab.<br/>       |
-| [**\_streamtypeb aufrufen**](imediadet-get-streamtypeb.md)         | Ruft eine Zeichenfolge ab, die die GUID des Medientyps für den aktuellen Stream darstellt.<br/>              |
-| [**Getbitmapbits**](imediadet-getbitmapbits.md)              | Ruft einen Videoframe zum angegebenen Zeitpunkt der Medien ab.<br/>                                            |
-| [**Getsamplegrabber**](imediadet-getsamplegrabber.md)        | Ruft einen Zeiger auf die [**isamplegrabber**](isamplegrabber.md) -Schnittstelle ab.<br/>                  |
-| [**\_currentstream platzieren**](imediadet-put-currentstream.md)     | Gibt die Datenstrom Nummer an, die vom Medien Detektor verwendet werden soll.<br/>                                      |
-| [**\_Dateiname einfügen**](imediadet-put-filename.md)               | Gibt den Namen der Quelldatei an, die vom Medien Detektor verwendet werden soll.<br/>                            |
-| [**\_Filter platzieren**](imediadet-put-filter.md)                   | Gibt einen Quell Filter für das zu verwendende Medien Erkennungs Modul an.<br/>                                        |
-| [**"Beschreib tebitmapbits"**](imediadet-writebitmapbits.md)          | Ruft einen Videoframe zum angegebenen Zeitpunkt der Medien ab und schreibt ihn in eine Datei.<br/>                    |
+| [**EnterBitmapGrabMode**](imediadet-enterbitmapgrabmode.md)  | Schaltet die Medienerkennung in den Bitmap-Greifmodus um und sucht das Filterdiagramm zu einem angegebenen Zeitpunkt.<br/> |
+| [**Get \_ CurrentStream**](imediadet-get-currentstream.md)     | Ruft die Datenstromnummer ab, die derzeit von der Medienerkennung verwendet wird.<br/>                               |
+| [**Get \_ Filename**](imediadet-get-filename.md)               | Ruft den Namen der Quelldatei ab, die derzeit von der Medienerkennung verwendet wird.<br/>                     |
+| [**Filter \_ "get"**](imediadet-get-filter.md)                   | Ruft einen Zeiger auf den Quellfilter ab, der derzeit von der Medienerkennung verwendet wird.<br/>                  |
+| [**Get \_ FrameRate**](imediadet-get-framerate.md)             | Ruft die Framerate des aktuellen Streams ab.<br/>                                                 |
+| [**Get \_ OutputStreams**](imediadet-get-outputstreams.md)     | Ruft die Anzahl der Audio- und Videostreams ab, die in der Medienquelle enthalten sind.<br/>                  |
+| [**Get \_ StreamLength**](imediadet-get-streamlength.md)       | Ruft die Dauer des aktuellen Streams ab.<br/>                                                   |
+| [**get \_ StreamMediaType**](imediadet-get-streammediatype.md) | Ruft den Medientyp des aktuellen Streams ab.<br/>                                                 |
+| [**get \_ StreamType**](imediadet-get-streamtype.md)           | Ruft den GUID (Globally Unique Identifier) für den Medientyp des aktuellen Streams ab.<br/>       |
+| [**Get \_ StreamTypeB**](imediadet-get-streamtypeb.md)         | Ruft eine Zeichenfolge ab, die die GUID des Medientyps für den aktuellen Stream darstellt.<br/>              |
+| [**GetBitmapBits**](imediadet-getbitmapbits.md)              | Ruft einen Videoframe zur angegebenen Medienzeit ab.<br/>                                            |
+| [**GetSampleGrabber**](imediadet-getsamplegrabber.md)        | Ruft einen Zeiger auf die [**ISampleGrabber-Schnittstelle**](isamplegrabber.md) ab.<br/>                  |
+| [**put \_ CurrentStream**](imediadet-put-currentstream.md)     | Gibt die Datenstromnummer an, die von der Medienerkennung verwendet werden soll.<br/>                                      |
+| [**put \_ Filename**](imediadet-put-filename.md)               | Gibt den Namen der Quelldatei an, die von der Medienerkennung verwendet werden soll.<br/>                            |
+| [**Put \_ Filter**](imediadet-put-filter.md)                   | Gibt einen Quellfilter an, der von der Medienerkennung verwendet werden soll.<br/>                                        |
+| [**WriteBitmapBits**](imediadet-writebitmapbits.md)          | Ruft einen Videoframe zur angegebenen Medienzeit ab und schreibt ihn in eine Datei.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK-Update für Windows Vista und [.NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -104,8 +104,8 @@ Die **imediadet** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 

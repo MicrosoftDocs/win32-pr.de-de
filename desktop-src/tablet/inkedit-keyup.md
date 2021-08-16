@@ -1,5 +1,5 @@
 ---
-description: Tritt ein, wenn der Benutzer einen Schlüssel freigibt, während das InkEdit-Steuerelement den Fokus besitzt.
+description: Tritt ein, wenn der Benutzer einen Schlüssel frei gibt, während das InkEdit-Steuerelement den Fokus besitzt.
 ms.assetid: 973d99f2-df09-4315-aaab-72877272100b
 title: InkEdit.KeyUp-Ereignis (Inked.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118220755"
 ---
 # <a name="inkeditkeyup-event"></a>InkEdit.KeyUp-Ereignis
 
-Tritt ein, wenn der Benutzer einen Schlüssel freigibt, während das [InkEdit-Steuerelement](inkedit-control-reference.md) den Fokus besitzt.
+Tritt ein, wenn der Benutzer einen Schlüssel frei gibt, während das [InkEdit-Steuerelement](inkedit-control-reference.md) den Fokus besitzt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,22 +34,22 @@ HRESULT KeyUp(
 *pKey* 
 </dt> <dd>
 
-Der Code der virtuellen Taste, die vom Benutzer gedrückt wird.
+Der virtuelle Schlüsselcode der Taste, die vom Benutzer gedrückt wird.
 
 </dd> <dt>
 
-*UMSCHALTTASTE* 
+*UMSCHALTTASTETASTE* 
 </dt> <dd>
 
-Ein Member der [**InkShiftKeyModifierFlags-Enumeration,**](/windows/desktop/api/msinkaut/ne-msinkaut-inkshiftkeymodifierflags) der angibt, welche Modifiziererschlüssel zum Zeitpunkt des Ereignisses verwendet werden.
+Ein Member der [**InkShiftKeyModifierFlags-Enumeration,**](/windows/desktop/api/msinkaut/ne-msinkaut-inkshiftkeymodifierflags) der angibt, welche Modifiziererschlüssel zum Zeitpunkt des Ereignisses geschwenken werden.
 
 
 
 | Wert                                                                                                                                                                                     | Bedeutung                                                          |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
-| <span id="IKM_Shift"></span><span id="ikm_shift"></span><span id="IKM_SHIFT"></span><dl> <dt>**\_IKM-Umschalt**</dt> </dl>             | Gibt an, dass die UMSCHALTTASTE als Modifizierer verwendet wurde. <br/> |
+| <span id="IKM_Shift"></span><span id="ikm_shift"></span><span id="IKM_SHIFT"></span><dl> <dt>**IKM \_ Shift**</dt> </dl>             | Gibt an, dass die UMSCHALTTASTE als Modifizierer verwendet wurde. <br/> |
 | <span id="IKM_Control_"></span><span id="ikm_control_"></span><span id="IKM_CONTROL_"></span><dl> <dt>**IKM \_ Steuerelement**</dt> </dl> | Gibt an, dass die STRG-Taste als Modifizierer verwendet wurde. <br/>  |
-| <span id="IKM_Alt_"></span><span id="ikm_alt_"></span><span id="IKM_ALT_"></span><dl> <dt>**IKM \_ ALT**</dt> </dl>                 | Gibt an, dass der ALT-Schlüssel als Modifizierer verwendet wurde. <br/>   |
+| <span id="IKM_Alt_"></span><span id="ikm_alt_"></span><span id="IKM_ALT_"></span><dl> <dt>**IKM \_ ALT**</dt> </dl>                 | Gibt an, dass die ALT-TASTE als Modifizierer verwendet wurde. <br/>   |
 
 
 
@@ -59,7 +59,7 @@ Ein Member der [**InkShiftKeyModifierFlags-Enumeration,**](/windows/desktop/api/
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn dieses Ereignis erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn dieses Ereignis erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -91,7 +91,7 @@ Diese Ereignismethode wird in der **\_ IInkEditEvents-Schnittstelle** definiert.
 [**KeyDown-Ereignis \[ inkEdit-Steuerelement\]**](inkedit-keydown.md)
 </dt> <dt>
 
-[**KeyPress-Ereignis \[ inkEdit-Steuerelement\]**](inkedit-keypress.md)
+[**\[KeyPress-Ereignis-InkEdit-Steuerelement\]**](inkedit-keypress.md)
 </dt> </dl>
 
  

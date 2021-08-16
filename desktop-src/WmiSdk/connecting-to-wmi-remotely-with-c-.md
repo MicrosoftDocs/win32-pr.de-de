@@ -19,10 +19,10 @@ ms.locfileid: "118319438"
 ---
 # <a name="connecting-to-wmi-remotely-with-c"></a>Herstellen einer Remoteverbindung mit WMI mit C #
 
-Wie bei anderen Sprachen wie PowerShell, VBScript oder C++ können Sie C# verwenden, um die Hardware und Software auf Remotecomputern remote zu überwachen. Remoteverbindungen für verwalteten Code werden über den [Namespace Microsoft.Management.Infrastructure](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832958(v=vs.85)) durchgeführt. (In früheren Versionen von WMI wurde der [Namespace System.Management](/dotnet/api/system.management) verwendet, der der Vollständigkeit halber hier enthalten ist.)
+Wie bei anderen Sprachen wie PowerShell, VBScript oder C++ können Sie C# verwenden, um die Hardware und Software auf Remotecomputern remote zu überwachen. Remoteverbindungen für verwalteten Code werden über den [Namespace Microsoft.Management.Infrastructure](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832958(v=vs.85)) hergestellt. (In früheren Versionen von WMI wurde der [System.Management-Namespace](/dotnet/api/system.management) verwendet, der aus Gründen der Vollständigkeit hier enthalten ist.)
 
 > [!Note]  
-> **System.Management war** der ursprüngliche .NET-Namespace, der für den Zugriff auf WMI verwendet wurde. Die APIs in diesem Namespace sind jedoch im Allgemeinen langsamer und werden im Vergleich zu ihren moderneren **Microsoft.Management.Infrastructure-Entsprechungen** nicht so gut skaliert.
+> **System.Management** war der ursprüngliche .NET-Namespace, der für den Zugriff auf WMI verwendet wurde. die APIs in diesem Namespace sind jedoch im Allgemeinen langsamer und werden nicht so gut skaliert, relativ zu ihren moderneren **Microsoft.Management.Infrastructure-Entsprechungen.**
 
  
 
@@ -32,7 +32,7 @@ Beim Herstellen einer Remoteverbindung mithilfe von Klassen im [Namespace Micros
 
 1.  Erstellen Sie eine Sitzung auf dem Remotecomputer mit einem Aufruf von [CimSession.Create.](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832539(v=vs.85))
 
-    Wenn Sie eine Verbindung mit einem Remotecomputer mit den gleichen Anmeldeinformationen (Domäne und Benutzername) herstellen, mit dem Sie angemeldet sind, können Sie den Namen des Computers im [Create-Aufruf](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832539(v=vs.85)) angeben. Sobald Sie über das [zurückgegebene CimSession-Objekt](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832509(v=vs.85)) verfügen, können Sie Ihre WMI-Abfrage erstellen.
+    Wenn Sie eine Verbindung mit einem Remotecomputer mit den gleichen Anmeldeinformationen (Domäne und Benutzername) herstellen, mit denen Sie angemeldet sind, können Sie den Namen des Computers im [Aufruf erstellen](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832539(v=vs.85)) angeben. Sobald Sie das [zurückgegebene CimSession-Objekt](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832509(v=vs.85)) haben, können Sie ihre WMI-Abfrage erstellen.
 
     ```CSharp
     using Microsoft.Management.Infrastructure;
@@ -47,9 +47,9 @@ Beim Herstellen einer Remoteverbindung mithilfe von Klassen im [Namespace Micros
 
     Weitere Informationen zum Erstellen von WMI-Abfragen mit der **Microsoft.Management.Infrastructure-API** in C# finden Sie unter [Abrufen von WMI-Klassen- oder Instanzdaten.](retrieving-class-or-instance-data.md)
 
-2.  Wenn Sie verschiedene Optionen für Ihre Verbindung festlegen möchten, z. B. unterschiedliche Anmeldeinformationen, Ein- oder Identitätswechselebenen, müssen Sie ein [CimSessionOptions-Objekt](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832510(v=vs.85)) in Ihrem Aufruf von [CimSession.Create verwenden.](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832529(v=vs.85))
+2.  Wenn Sie verschiedene Optionen für Ihre Verbindung festlegen möchten, z. B. verschiedene Anmeldeinformationen, Gebietsschema- oder Identitätswechselebenen, müssen Sie ein [CimSessionOptions-Objekt](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832510(v=vs.85)) in Ihrem Aufruf von [CimSession.Create](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832529(v=vs.85))verwenden.
 
-    [CimSessionOptions ist](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832510(v=vs.85)) eine Basisklasse für [WSManSessionOptions](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh833297(v=vs.85)) und [DComSessionOptions.](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832688(v=vs.85)) Sie können entweder verwenden, um die Optionen für Ihre WS-Man bzw. DCOM-Sitzungen festlegen. Im folgenden Codebeispiel wird die Verwendung eines [DComSessionOptions-Objekts](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832688(v=vs.85)) beschrieben, um die Identitätswechselebene auf Impersonate (Identitätswechsel) zu setzen.
+    [CimSessionOptions](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832510(v=vs.85)) ist eine Basisklasse für [WSManSessionOptions](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh833297(v=vs.85)) und [DComSessionOptions.](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832688(v=vs.85)) Sie können entweder verwenden, um die Optionen für Ihre WS-Man- bzw. DCOM-Sitzungen festzulegen. Im folgenden Codebeispiel wird die Verwendung eines [DComSessionOptions-Objekts](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832688(v=vs.85)) beschrieben, um die Identitätswechselebene auf Identitätswechsel festzulegen.
 
     ```CSharp
     string computer = "Computer_B"
@@ -61,9 +61,9 @@ Beim Herstellen einer Remoteverbindung mithilfe von Klassen im [Namespace Micros
 
     
 
-3.  Wenn Sie die Anmeldeinformationen für Ihre Verbindung festlegen möchten, müssen Sie ein [CimCredentials-Objekt](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832293(v=vs.85)) erstellen und Ihrem [CimSessionOptions-Objekt hinzufügen.](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832510(v=vs.85))
+3.  Wenn Sie die Anmeldeinformationen für Ihre Verbindung festlegen möchten, müssen Sie ein [CimCredentials-Objekt](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832293(v=vs.85)) erstellen und zu [CimSessionOptions](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832510(v=vs.85))hinzufügen.
 
-    Im folgenden Codebeispiel wird das Erstellen einer [WSManSessionOptions-Klasse](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh833297(v=vs.85)) beschrieben, die mit der richtigen [CimSessionOptions-Klasse](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832510(v=vs.85))gefüllt und in einem [CimSession.Create-Aufruf verwendet](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832529(v=vs.85)) wird.
+    Im folgenden Codebeispiel wird beschrieben, wie Sie eine [WSManSessionOptions-Klasse](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh833297(v=vs.85)) erstellen, sie mit den [richtigen CimSessionOptions auffüllen](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832510(v=vs.85))und sie in einem [CimSession.Create-Aufruf](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832529(v=vs.85)) verwenden.
 
     ```CSharp
     string computer = “Computer_B”;
@@ -85,15 +85,15 @@ Beim Herstellen einer Remoteverbindung mithilfe von Klassen im [Namespace Micros
 
     
 
-    Es wird im Allgemeinen empfohlen, ein Kennwort nicht hartcodieren. wie das obige Codebeispiel zeigt, versuchen Sie nach Möglichkeit, ihren Benutzer nach dem Kennwort zu fragen und es sicher zu speichern.
+    Es wird im Allgemeinen empfohlen, ein Kennwort in Ihren Anwendungen nicht hartcodieren. Wie im obigen Codebeispiel angegeben, versuchen Sie nach Möglichkeit, Ihren Benutzer nach dem Kennwort abzufragen und sicher zu speichern.
 
-WMI dient der Überwachung von Hardware und Software auf Remotecomputern. Remoteverbindungen für WMI v1 werden über das [ManagementScope-Objekt](/dotnet/api/system.management.managementscope) durchgeführt.
+WMI dient der Überwachung von Hardware und Software auf Remotecomputern. Remoteverbindungen für WMI v1 werden über das [ManagementScope-Objekt](/dotnet/api/system.management.managementscope) hergestellt.
 
 **So stellen Sie eine Remoteverbindung mit WMI mit C# her (System.Management)**
 
 1.  Erstellen Sie unter Verwendung des Namens des Computers und des WMI-Pfads ein [ManagementScope-Objekt,](/dotnet/api/system.management.managementscope) und stellen Sie mithilfe eines Aufrufs von ManagementScope eine Verbindung mit Ihrem Ziel her. Verbinden().
 
-    Wenn Sie eine Verbindung mit einem Remotecomputer mit den gleichen Anmeldeinformationen (Domäne und Benutzername) herstellen, mit dem Sie angemeldet sind, müssen Sie nur den WMI-Pfad angeben. Nachdem Sie eine Verbindung erstellt haben, können Sie Ihre WMI-Abfrage erstellen.
+    Wenn Sie eine Verbindung mit einem Remotecomputer mit den gleichen Anmeldeinformationen (Domäne und Benutzername) herstellen, mit denen Sie angemeldet sind, müssen Sie nur den WMI-Pfad angeben. Nachdem Sie die Verbindung hergestellt haben, können Sie Ihre WMI-Abfrage ausführen.
 
     ```CSharp
     using System.Management;
@@ -108,9 +108,9 @@ WMI dient der Überwachung von Hardware und Software auf Remotecomputern. Remote
 
     Weitere Informationen zum Erstellen von WMI-Abfragen mit der [System.Management-API](/dotnet/api/system.management) in C# finden Sie unter [Abrufen von WMI-Klassen- oder Instanzdaten.](retrieving-class-or-instance-data.md)
 
-2.  Wenn Sie eine Verbindung mit einem Remotecomputer in einer anderen Domäne herstellen oder einen anderen Benutzernamen und ein anderes Kennwort verwenden, müssen Sie ein [ConnectionOptions-Objekt](/dotnet/api/system.management.connectionoptions) im Aufruf von [ManagementScope verwenden.](/dotnet/api/system.management.managementscope)
+2.  Wenn Sie eine Verbindung mit einem Remotecomputer in einer anderen Domäne herstellen oder einen anderen Benutzernamen und ein anderes Kennwort verwenden, müssen Sie im Aufruf von [ManagementScope](/dotnet/api/system.management.managementscope)ein [ConnectionOptions-Objekt](/dotnet/api/system.management.connectionoptions) verwenden.
 
-    [ConnectionOptions enthält Eigenschaften](/dotnet/api/system.management.connectionoptions) zum Beschreiben der Optionen Authentifizierung, Identitätswechsel, Benutzername, Kennwort und andere Verbindungsoptionen. Im folgenden Codebeispiel wird die Verwendung von [ConnectionOptions](/dotnet/api/system.management.connectionoptions) zum Festlegen der Identitätswechselebene auf Identitätswechsel beschrieben.
+    [ConnectionOptions](/dotnet/api/system.management.connectionoptions) enthält Eigenschaften zum Beschreiben der Authentifizierung, des Identitätswechsels, des Benutzernamens, des Kennworts und anderer Verbindungsoptionen. Im folgenden Codebeispiel wird die Verwendung von [ConnectionOptions](/dotnet/api/system.management.connectionoptions) beschrieben, um die Identitätswechselebene auf Identitätswechsel festzulegen.
 
     ```CSharp
     ConnectionOptions options = new ConnectionOptions();
@@ -125,13 +125,13 @@ WMI dient der Überwachung von Hardware und Software auf Remotecomputern. Remote
 
     
 
-    Im Allgemeinen empfiehlt es sich, die Identitätswechselebene auf Impersonate (Identitätswechsel) zu setzen, sofern nicht explizit anders angegeben. Vermeiden Sie außerdem, Ihren Namen und Ihr Kennwort in C#-Code zu schreiben. (Wenn möglich, sehen Sie, ob Sie den Benutzer abfragen können, um ihn zur Laufzeit dynamisch zur Bereitstellung zu verwenden.)
+    Im Allgemeinen empfiehlt es sich, die Identitätswechselebene auf Identitätswechsel festzulegen, sofern nichts anderes explizit erforderlich ist. Versuchen Sie außerdem, das Schreiben Ihres Namens und Kennworts in C#-Code zu vermeiden. (Wenn möglich, sollten Sie prüfen, ob Sie den Benutzer abfragen können, um diesen zur Laufzeit dynamisch zur Verfügung zu stellen.)
 
     Weitere Beispiele zum Festlegen verschiedener Eigenschaften für eine WMI-Remoteverbindung finden Sie im Abschnitt Beispiele der [Referenzseite ConnectionOptions.](/dotnet/api/system.management.connectionoptions)
 
-## <a name="microsoftmanagementinfrastructure-example"></a>Beispiel für Microsoft.Management.Infrastructure
+## <a name="microsoftmanagementinfrastructure-example"></a>Microsoft.Management.Infrastructure-Beispiel
 
-Im folgenden C#-Codebeispiel wird basierend auf dem folgenden Blogbeitrag auf [TechNet](/archive/blogs/josebda/sample-c-code-for-using-the-latest-wmi-classes-to-manage-windows-storage)beschrieben, wie [CimCredentials](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832293(v=vs.85)) und [WSManSessionOptions](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh833297(v=vs.85)) zum Festlegen von Anmeldeinformationen für eine Remoteverbindung verwendet werden.
+Im folgenden C#-Codebeispiel, das auf dem folgenden [Blogbeitrag auf TechNet](/archive/blogs/josebda/sample-c-code-for-using-the-latest-wmi-classes-to-manage-windows-storage)basiert, wird beschrieben, wie [CimCredentials](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832293(v=vs.85)) und [WSManSessionOptions](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh833297(v=vs.85)) verwendet werden, um Anmeldeinformationen für eine Remoteverbindung festzulegen.
 
 
 ```CSharp

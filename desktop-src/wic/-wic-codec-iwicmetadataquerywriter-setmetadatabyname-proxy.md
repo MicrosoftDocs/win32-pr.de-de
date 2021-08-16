@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118206385"
 ---
-# <a name="iwicmetadataquerywriter_setmetadatabyname_proxy-function"></a>IWICMetadataQueryWriter \_ SetMetadataByName-Proxyfunktion \_
+# <a name="iwicmetadataquerywriter_setmetadatabyname_proxy-function"></a>Proxyfunktion \_ "SetMetadataByName" von IWICMetadataQueryWriter \_
 
 Proxyfunktion für die [**SetMetadataByName-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicmetadataquerywriter-setmetadatabyname)
 
@@ -42,7 +42,7 @@ HRESULT IWICMetadataQueryWriter_SetMetadataByName_Proxy(
 
 <dl> <dt>
 
-*THIS \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
 Typ: **[ **IWICMetadataQueryWriter**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataquerywriter)\***
@@ -65,7 +65,7 @@ Der Name des Metadatenelements.
 
 Typ: **const [PROPVARIANT](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) \***
 
-Die festgelegten Metadaten.
+Die festzulegende Metadaten.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Die festgelegten Metadaten.
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 

@@ -1,28 +1,28 @@
 ---
-title: Einstieg in die Skripterstellung für ADSI
-description: Die Skripterstellung ist hilfreich für Systemadministratoren, die Batch Skripts für häufig verwendete Aufgaben erstellen möchten.
+title: Erste Schritte mit Skripterstellung für ADSI
+description: Skripterstellung ist nützlich für Systemadministratoren, die Batchskripts für häufig verwendete Aufgaben erstellen möchten.
 ms.assetid: ae479d6b-75cf-4659-8a91-c2cbdcf56091
 ms.tgt_platform: multiple
 keywords:
-- Einstieg in die Skripterstellung für ADSI ADSI
+- Erste Schritte mit Skripterstellung für ADSI ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a8a85a9ea110ca80f45c3a0f0f1917e8d25c08ee
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c1a83da0194fb03cdb31430f389dbfbf64327806b1b142be3b9c1c5813696548
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117839953"
 ---
-# <a name="getting-started-with-scripting-for-adsi"></a>Einstieg in die Skripterstellung für ADSI
+# <a name="getting-started-with-scripting-for-adsi"></a>Erste Schritte mit Skripterstellung für ADSI
 
-Die Skripterstellung ist hilfreich für Systemadministratoren, die Batch Skripts für häufig verwendete Aufgaben erstellen möchten.
+Skripterstellung ist nützlich für Systemadministratoren, die Batchskripts für häufig verwendete Aufgaben erstellen möchten.
 
-Um mit der Skripterstellung mit ADSI zu beginnen, müssen Sie über einen Computer verfügen, auf dem Windows ausgeführt wird oder der bei einer Domäne angemeldet ist, die Daten für Computer Konten im Verzeichnis enthält.
+Um mit der Skripterstellung mit ADSI zu beginnen, benötigen Sie einen Computer, auf dem Windows ausgeführt wird oder der bei einer Domäne angemeldet ist, die Daten für Computerkonten im Verzeichnis enthält.
 
-## <a name="a-simple-scripting-sample-finding-names-and-locations-of-computer-accounts"></a>Ein einfaches Beispiel für die Skripterstellung: Suchen nach Namen und Speicherorten von Computer Konten
+## <a name="a-simple-scripting-sample-finding-names-and-locations-of-computer-accounts"></a>Ein einfaches Skriptbeispiel: Suchen von Namen und Speicherorten von Computerkonten
 
-Erstellen Sie eine neue Textdatei mit einem Text-Editor. Im folgenden Codebeispiel wird gezeigt, wie Namen und Speicherorte von Computer Konten gefunden werden.
+Erstellen Sie eine neue Textdatei mithilfe eines Text-Editors. Im folgenden Codebeispiel wird veranschaulicht, wie Namen und Speicherorte von Computerkonten gesucht werden.
 
 
 ```VB
@@ -52,13 +52,13 @@ Loop
 
 
 
-Speichern Sie die Datei als First.vbs. Ändern Sie die Zeile, die mit "objCommand. CommandText" beginnt, um den Pfad zu Ihrer Domäne zu ändern. Geben Sie an der Eingabeaufforderung **cscript-First.vbs** für eine Befehlszeile oder First.vbs für die Windows-Skripterstellung ein. Die Ergebnisse sollten an der Eingabeaufforderung zurückgegeben werden.
+Speichern Sie die Datei als First.vbs. Ändern Sie die Zeile, die mit "objCommand.CommandText" beginnt, um den Pfad zu Ihrer Domäne zu ändern. Geben Sie an der Eingabeaufforderung **cscript First.vbs** für eine Befehlszeile oder First.vbs für Windows Skripterstellung ein. Die Ergebnisse sollten an der Eingabeaufforderung zurückgegeben werden.
 
-Weitere Informationen zur Skripterstellung für ADSI finden Sie unter [Active Directory-Dienst Schnittstellen Skript](adsi-scripting-tutorial.md)Erstellung.
+Weitere Informationen zur Skripterstellung für ADSI finden Sie unter Skripterstellung für [Active Directory-Dienstschnittstellen.](adsi-scripting-tutorial.md)
 
- 
+ 
 
- 
+ 
 
 
 

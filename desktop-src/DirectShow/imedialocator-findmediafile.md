@@ -94,7 +94,7 @@ BSTR filter = SysAllocStringLen(L"Video\0*.avi\0", 12);
 
 Wenn der Benutzer das Dialogfeld Datei öffnen abbricht, gibt die Methode E \_ FAIL zurück.
 
-Die -Methode weist Speicher für den **BSTR** in *pOutput zu.* Die Anwendung muss **SysFreeString aufrufen,** um den Arbeitsspeicher frei zu machen.
+Die -Methode weist Arbeitsspeicher für den **BSTR** in *pOutput zu.* Die Anwendung muss **SysFreeString aufrufen,** um den Arbeitsspeicher frei zu machen.
 
 > [!Note]  
 > Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
@@ -102,7 +102,7 @@ Die -Methode weist Speicher für den **BSTR** in *pOutput zu.* Die Anwendung mus
  
 
 > [!Note]  
-> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK-Update für Windows Vista und [.NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 

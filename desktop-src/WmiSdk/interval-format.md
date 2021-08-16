@@ -26,7 +26,7 @@ In der folgenden Tabelle sind die Felder des Datums-/Uhrzeitintervalls aufgefüh
 
 
 
-| Feld    | BESCHREIBUNG                                                                                                                                                                                                                                  |
+| Feld    | Beschreibung                                                                                                                                                                                                                                  |
 |----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ddddddddd | Acht Ziffern, die eine Anzahl von Tagen darstellen (000000000 bis 99999999).                                                                                                                                                                    |
 | HH       | Zweistellige Stunde des Tages, die die 24-Stunden-Uhr verwendet (00 bis 23).                                                                                                                                                                       |

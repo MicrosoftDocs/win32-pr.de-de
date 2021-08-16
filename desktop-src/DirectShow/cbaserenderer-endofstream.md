@@ -1,7 +1,7 @@
 ---
-description: Die EndOfStream-Methode benachrichtigt den Filter, dass die Eingabe-PIN eine Benachrichtigung über das Ende des Datenstroms erhalten hat.
+description: Die EndOfStream-Methode benachrichtigt den Filter, dass der Eingabepin eine Benachrichtigung vom Streamende empfangen hat.
 ms.assetid: bdfd03f9-81e0-4d52-959e-82fd1a67e1c3
-title: Cbaserderderer. EndOf Stream-Methode (renbase. h)
+title: CBaseRenderer.EndOfStream-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6e12da02ffbce99b29d324c1166b3d4cdf2265c6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9ff047865aa4f52dee6c03411cddb0c957327851f0f6ca1b7a03f0b6adaacfe5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364762"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117822731"
 ---
-# <a name="cbaserendererendofstream-method"></a>Cbaserderderer. EndOf Stream-Methode
+# <a name="cbaserendererendofstream-method"></a>CBaseRenderer.EndOfStream-Methode
 
-Die- `EndOfStream` Methode benachrichtigt den Filter, dass die Eingabe-PIN eine Benachrichtigung über das Ende des Datenstroms erhalten hat.
+Die `EndOfStream` -Methode benachrichtigt den Filter, dass der Eingabepin eine Benachrichtigung vom Streamende empfangen hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Eingabe-PIN des Filters ruft diese Methode auf, wenn Sie eine Benachrichtigung über das Ende des Datenstroms empfängt.
+Der Eingabepin des Filters ruft diese Methode auf, wenn er eine Benachrichtigung über das Ende des Streams empfängt.
 
-Diese Methode legt das Flag " [**cbaserrederer:: m \_ BeOS**](cbaserenderer-m-beos.md) " auf " **true** " fest und ruft die [**cbasererentiderer:: sendendofstream**](cbaserenderer-sendendofstream.md) -Methode auf, um ein [**EC \_ Complete**](ec-complete.md) -Ereignis zu planen. Wenn der Filter angehalten wurde und auf eine Stichprobe wartet, schließt diese Methode den Zustandsübergang ab.
+Diese Methode legt das [**Flag CBaseRenderer::m \_ bEOS**](cbaserenderer-m-beos.md) auf **TRUE** fest und ruft die [**CBaseRenderer::SendEndOfStream-Methode**](cbaserenderer-sendendofstream.md) auf, um ein [**EC \_ COMPLETE-Ereignis**](ec-complete.md) zu planen. Wenn der Filter angehalten ist und auf ein Beispiel wartet, schließt diese Methode den Zustandsübergang ab.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,16 +56,16 @@ Diese Methode legt das Flag " [**cbaserrederer:: m \_ BeOS**](cbaserenderer-m-be
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

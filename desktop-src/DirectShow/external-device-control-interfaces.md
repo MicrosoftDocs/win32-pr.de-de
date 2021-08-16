@@ -17,7 +17,7 @@ Diese Schnittstellen unterstützen die Anwendungssteuerung über externe Geräte
 
 
 
-| Schnittstelle                                            | BESCHREIBUNG                                                                             |
+| Schnittstelle                                            | Beschreibung                                                                             |
 |------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | [**IAMCameraControl**](/windows/desktop/api/Strmif/nn-strmif-iamcameracontrol)         | Steuern einer Kamera.                                                                       |
 | [**IAMExtDevice**](/windows/desktop/api/Strmif/nn-strmif-iamextdevice)                 | Steuern sie ein externes Gerät, z. B. einen VCR oder Einser.                                  |

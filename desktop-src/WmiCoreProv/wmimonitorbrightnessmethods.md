@@ -49,7 +49,7 @@ Die **WmiMonitorBrightnessMethods-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                         | BESCHREIBUNG                                                    |
+| Methode                                                                                                         | Beschreibung                                                    |
 |:---------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------|
 | [**WmiRevertToPolicyBrightness**](wmireverttopolicybrightness-method-in-class-wmimonitorbrightnessmethods.md) | Legt die Helligkeit wieder auf die Richtlinieneinstellung fest.<br/>     |
 | [**WmiSetALSBrightness**](wmisetalsbrightness-method-in-class-wmimonitorbrightnessmethods.md)                 | Legt den Helligkeitswert des Umgebungslichtsensors fest.<br/>     |

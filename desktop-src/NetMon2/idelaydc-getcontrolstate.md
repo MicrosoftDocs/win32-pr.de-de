@@ -1,5 +1,5 @@
 ---
-description: 'IDelaydC::GetControlState-Methode: Die GetControlState-Methode ruft den Zustand der Erfassung ab, der angibt, ob die Erfassung ausgeführt wird oder angehalten wurde.'
+description: 'IDelaydC::GetControlState-Methode: Die GetControlState-Methode ruft den Zustand der Erfassung ab, der angibt, ob die Erfassung ausgeführt oder angehalten wird.'
 ms.assetid: 21b7faaa-591f-4e15-b4e9-453ea690ab4a
 title: IDelaydC::GetControlState-Methode (Netmon.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118365893"
 ---
 # <a name="idelaydcgetcontrolstate-method"></a>IDelaydC::GetControlState-Methode
 
-Die **GetControlState-Methode** ruft den Zustand der Erfassung [*ab,*](c.md)der angibt, ob die Erfassung ausgeführt wird oder angehalten wird.
+Die **GetControlState-Methode** ruft den Zustand der [*Erfassung*](c.md)ab, der angibt, ob die Erfassung ausgeführt oder angehalten wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,20 +44,20 @@ HRESULT STDMETHODCALLTYPE GetControlState(
 *IsRunnning* \[ out\]
 </dt> <dd>
 
-Gibt an, dass die aktuelle Erfassung ausgeführt wird, einschließlich, ob die Erfassung angehalten wurde.
+Indikator, dass die aktuelle Erfassung ausgeführt wird, einschließlich, wenn die Erfassung angehalten wird.
 
 </dd> <dt>
 
 *IsPaused* \[ out\]
 </dt> <dd>
 
-Gibt an, dass die aktuelle Erfassung angehalten wurde.
+Indikator, dass die aktuelle Erfassung angehalten wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -65,8 +65,8 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                          | Beschreibung                                                                                                                           |
 |------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl> | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen [Sie IDelaydC::Verbinden](idelaydc-connect.md) auf, um das NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**NMERR \_ NICHT \_ VERZÖGERT**</dt> </dl>   | Das NPP ist mit dem Netzwerk verbunden, aber nicht mit der [IDelaydC::Verbinden-Methode.](idelaydc-connect.md)<br/>                     |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl> | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [IDelaydC::Verbinden](idelaydc-connect.md) auf, um das NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NICHT \_ VERZÖGERT**</dt> </dl>   | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IDelaydC::Verbinden-Methode.](idelaydc-connect.md)<br/>                     |
 
 
 
@@ -74,9 +74,9 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode kann jedes Mal aufgerufen werden, wenn der NPP über die [IDelaydC-Schnittstelle](idelaydc.md) mit dem Netzwerk verbunden ist. Mit dieser Methode können Sie herausfinden, ob eine Erfassung ausgeführt wird, ob die Erfassung angehalten wurde oder ob die Erfassung beendet wurde, die NPP jedoch nicht getrennt ist.
+Diese Methode kann jedes Mal aufgerufen werden, wenn das NPP mit dem Netzwerk verbunden ist, indem die [IDelaydC-Schnittstelle](idelaydc.md) verwendet wird. Sie können diese Methode verwenden, um herauszufinden, ob eine Erfassung ausgeführt wird, ob die Erfassung angehalten wird oder ob die Erfassung beendet wurde, das NPP jedoch nicht getrennt ist.
 
-Die Methoden, die zum Starten, Anhalten und Beenden der Erfassung verwendet werden, sind unten in der Liste Siehe auch aufgeführt.
+Die Methoden zum Starten, Anhalten und Beenden der Erfassung sind unten in der Liste Siehe auch aufgeführt.
 
 ## <a name="requirements"></a>Anforderungen
 

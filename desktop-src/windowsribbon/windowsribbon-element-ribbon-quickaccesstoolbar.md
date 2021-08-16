@@ -1,6 +1,6 @@
 ---
-title: Ribbon.QuickAccessToolbar-Eigenschaft
-description: Stellt einen Container für die Quick Access Toolbar (QAT) dar.
+title: Ribbon.QuickAccessToolbar (Eigenschaft)
+description: Stellt einen Container für die Symbolleiste für den Schnellzugriff (QAT) dar.
 ms.assetid: 8a873a48-4f8b-439d-acad-7da2081fbf40
 keywords:
 - Ribbon.QuickAccessToolbar-Eigenschaft Windows Menüband
@@ -19,9 +19,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118202317"
 ---
-# <a name="ribbonquickaccesstoolbar-property"></a>Ribbon.QuickAccessToolbar-Eigenschaft
+# <a name="ribbonquickaccesstoolbar-property"></a>Ribbon.QuickAccessToolbar (Eigenschaft)
 
-Stellt einen Container für die Quick Access Toolbar (QAT) dar.
+Stellt einen Container für die Symbolleiste für den Schnellzugriff (QAT) dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -39,7 +39,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                                           | BESCHREIBUNG                                    |
+| Element                                                                           | Beschreibung                                    |
 |-----------------------------------------------------------------------------------|------------------------------------------------|
 | [**QuickAccessToolbar**](windowsribbon-element-quickaccesstoolbar.md)<br/> | Muss genau einmal auftreten<br/> <br/> |
 
@@ -59,7 +59,7 @@ Es gibt keine Attribute.
 
 Erforderlich.
 
-Kann ein oder mehrere Male für jedes [**Menüband**](windowsribbon-element-ribbon.md)auftreten.
+Kann ein oder mehrere Male für jedes Menüband [**auftreten.**](windowsribbon-element-ribbon.md)
 
 ## <a name="examples"></a>Beispiele
 
@@ -87,7 +87,7 @@ Im folgenden Beispiel wird das grundlegende Markup für das **Ribbon.QuickAccess
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 

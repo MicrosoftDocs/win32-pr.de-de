@@ -1,6 +1,6 @@
 ---
 title: WinRM-Dienst-Plug-In-Konfiguration
-description: Ein winRM-Plug-In (Windows Remote Management) muss im WinRM-Katalog registriert werden, damit die Infrastruktur die verfügbaren Plug-Ins und ressourcen-URIs, die sie unterstützen, dynamisch bestimmen kann.
+description: Ein WinRM-Plug-In (Windows Remote Management) muss im WinRM-Katalog registriert werden, damit die Infrastruktur den Satz der verfügbaren Plug-Ins und ressourcen-URIs, die sie unterstützen, dynamisch bestimmen kann.
 ms.assetid: d71cd244-3f10-40e3-a756-36cdf41b9cad
 ms.tgt_platform: multiple
 ms.topic: article
@@ -83,7 +83,7 @@ Gibt den Anzeigenamen an, der für das Plug-In verwendet werden soll. Wenn vom P
 <span id="PlugInConfiguration_Architecture"></span><span id="pluginconfiguration_architecture"></span><span id="PLUGINCONFIGURATION_ARCHITECTURE"></span>**PlugInConfiguration** / **Architektur**
 </dt> <dd>
 
-Gibt an, ob das Betriebs-Plug-In 32-Bit oder 64-Bit ist. Wenn dieses Element nicht angegeben ist, wird der Wert auf x86-Systemen standardmäßig auf "32" und auf 64-Bit-Systemen auf "64" festgelegt. Für x86-Systeme ist der einzige gültige Wert "32". Wenn der Wert in einem 64-Bit-System "32" ist, muss bei der Eingabe der **Dateinameninformationen** die Wow64-Umleitung berücksichtigt werden. Das zugrunde liegende Dateisystem verwendet die Wow64-Umleitung, um system32 in syswow64 zu übersetzen. Wenn der **Dateiname** beispielsweise "%windir% \\ system32 \\myplugin.dll" und die **Architektur** "32" lautet, befindet sich die tatsächliche Plug-In-Datei unter "%windir% \\ syswow64 \\myplugin.dll".
+Gibt an, ob das Betriebs-Plug-In 32-Bit oder 64-Bit ist. Wenn dieses Element nicht angegeben ist, wird der Wert auf x86-Systemen standardmäßig auf "32" und auf 64-Bit-Systemen auf "64" festgelegt. Für x86-Systeme ist der einzige gültige Wert "32". Wenn der Wert in einem 64-Bit-System "32" ist, muss bei der Eingabe der **Dateinameninformationen** die Wow64-Umleitung berücksichtigt werden. Das zugrunde liegende Dateisystem verwendet die Wow64-Umleitung, um system32 in syswow64 zu übersetzen. Wenn der **Dateiname** beispielsweise "%windir% \\ system32myplugin.dll" und die \\ **Architektur** "32" lautet, befindet sich die tatsächliche Plug-In-Datei unter "%windir% \\ syswow64 \\myplugin.dll".
 
 </dd> <dt>
 
@@ -207,11 +207,11 @@ Shellvorgänge werden für den [*Ressourcen-URI*](windows-remote-management-glos
 <span id="PlugInConfiguration_Resources_Resource_Security"></span><span id="pluginconfiguration_resources_resource_security"></span><span id="PLUGINCONFIGURATION_RESOURCES_RESOURCE_SECURITY"></span>**PlugInConfiguration** / **Ressourcen** / **Ressource** / **Sicherheit**
 </dt> <dd>
 
-Dieses Element definiert den Sicherheitsdeskriptor (über das **Sddl-Attribut),** der angewendet werden soll, um den Zugriff auf einen bestimmten [*Ressourcen-URI*](windows-remote-management-glossary.md) (über das **URI-Attribut)** zu bestimmen. Wenn **ExactMatch** nicht vorhanden ist, wird das **Security-Element** standardmäßig auf **False** festgelegt. Dies bedeutet, dass die **Sddl** für alle *Ressourcen-URIs* gilt, die **den URI** als Präfix verwenden. Wenn **ExactMatch** auf TRUE festgelegt ist, gilt **die Sddl** nur für den genauen angegebenen **URI.** Wenn mehrere **Sicherheitseinträge** vorhanden sind, die auf eine bestimmte *Ressourcen-URIs* angewendet werden können, wird die längste Präfixübereinsprechung verwendet, um die entsprechende **Sddl** zu bestimmen. Wenn ein **URI-Eintrag** mit exakter Übereinstimmung vorhanden ist, wird er aufgrund der längsten Präfixübereinführung immer als entsprechendes Security-Element ausgewählt.
+Dieses Element definiert den Sicherheitsdeskriptor (über das **Sddl-Attribut),** der angewendet werden soll, um den Zugriff auf einen bestimmten [*Ressourcen-URI*](windows-remote-management-glossary.md) (über das **URI-Attribut)** zu bestimmen. Wenn **ExactMatch** nicht vorhanden ist, wird das **Security-Element** standardmäßig auf **False** festgelegt. Dies bedeutet, dass die **Sddl** für alle *Ressourcen-URIs* gilt, die **den URI** als Präfix verwenden. Wenn **ExactMatch** auf TRUE festgelegt ist, gilt **die Sddl** nur für den genauen angegebenen **URI.** Wenn mehrere Sicherheitseinträge **für** bestimmte *Ressourcen-URIs* gelten können, wird die längste Präfix-Übereinstimmung verwendet, um die entsprechende **Sddl zu bestimmen.** Wenn ein **URI-Eintrag** mit exakter Übereinstimmung vorhanden ist, wird er aufgrund der längsten Präfix-Übereinstimmung immer als entsprechendes Security-Element ausgewählt.
 
 </dd> </dl>
 
-Im Folgenden wird das Plug-In-Konfigurationsschema als XSD angegeben.
+Im Folgenden finden Sie das Als XSD angegebene Plug-In-Konfigurationsschema.
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8"?>

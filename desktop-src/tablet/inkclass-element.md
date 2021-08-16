@@ -1,5 +1,5 @@
 ---
-description: 'InkClass-Element: Stellt die gesammelten Freitstriche innerhalb eines Freiraums dar.'
+description: 'InkClass-Element: Stellt die gesammelten Freihandstriche innerhalb eines Freihandraums dar.'
 ms.assetid: 7c064ff9-e0d9-4be4-be83-c10bbfd71134
 title: InkClass-Element
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118220847"
 ---
 # <a name="inkclass-element"></a>InkClass-Element
 
-Stellt die gesammelten Freitstriche innerhalb eines Freiraums dar.
+Stellt die gesammelten Freihandstriche innerhalb eines Freihandraums dar.
 
 ## <a name="definition"></a>Definition
 

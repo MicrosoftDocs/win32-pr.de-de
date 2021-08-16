@@ -1,10 +1,10 @@
 ---
-title: uniquemember-Attribut
-description: Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupof uniquumames verwendet.
+title: uniqueMember-Attribut
+description: Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupOfUniqueNames verwendet.
 ms.assetid: a299d2c9-bf45-435c-9868-b1ffdbaa96d2
 ms.tgt_platform: multiple
 keywords:
-- uniquemember-Attribut AD-Schema
+- UNIQUEMEMBER-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,41 +13,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a9cf5ade98d14d61920649bfe7f1cf895761042
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 9cd4b57a60b776a0141561ffb99a3604f793e6233977df106ace5c851bf1cf6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117836483"
 ---
-# <a name="uniquemember-attribute"></a>uniquemember-Attribut
+# <a name="uniquemember-attribute"></a>uniqueMember-Attribut
 
-Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupof uniquumames verwendet.
+Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupOfUniqueNames verwendet.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | uniquemember                            |
-| LDAP-Display-Name | uniquemember                            |
+| CN                | uniqueMember                            |
+| Ldap-Anzeigename | uniqueMember                            |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 2.5.4.50                                |
-| System-ID-GUID    | 8f 888726-b-44d7-b1ee-cb9df21392c8    |
+| System-ID-GUID    | 8f888726-f80a-44d7-b1ee-cb9df21392c8    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -55,16 +55,16 @@ Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupof uniquuma
 |------------------------|---------------------------------------------------------------|
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
-| System-Only            | False                                                         |
-| Ist-einwertig       | False                                                         |
-| Ist indiziert             | False                                                         |
-| Im globalen Katalog      | False                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                  |
+| System-Only            | Falsch                                                         |
+| Ist einwertig       | Falsch                                                         |
+| Ist indiziert             | Falsch                                                         |
+| Im globalen Katalog      | Falsch                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
 | Search-Flags           | 0x00000000                                                    |
 | System-Flags           | 0x00000000                                                    |
-| In verwendete Klassen        | [**groupof uniquumames**](c-groupofuniquenames.md)<br/> |
+| In verwendete Klassen        | [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> |
 
 
 
@@ -76,16 +76,16 @@ Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupof uniquuma
 |------------------------|---------------------------------------------------------------|
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
-| System-Only            | False                                                         |
-| Ist-einwertig       | False                                                         |
-| Ist indiziert             | False                                                         |
-| Im globalen Katalog      | False                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                  |
+| System-Only            | Falsch                                                         |
+| Ist einwertig       | Falsch                                                         |
+| Ist indiziert             | Falsch                                                         |
+| Im globalen Katalog      | Falsch                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
 | Search-Flags           | 0x00000000                                                    |
 | System-Flags           | 0x00000000                                                    |
-| In verwendete Klassen        | [**groupof uniquumames**](c-groupofuniquenames.md)<br/> |
+| In verwendete Klassen        | [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> |
 
 
 
@@ -97,16 +97,16 @@ Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupof uniquuma
 |------------------------|---------------------------------------------------------------|
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
-| System-Only            | False                                                         |
-| Ist-einwertig       | False                                                         |
-| Ist indiziert             | False                                                         |
-| Im globalen Katalog      | False                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                  |
+| System-Only            | Falsch                                                         |
+| Ist einwertig       | Falsch                                                         |
+| Ist indiziert             | Falsch                                                         |
+| Im globalen Katalog      | Falsch                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
 | Search-Flags           | 0x00000000                                                    |
 | System-Flags           | 0x00000000                                                    |
-| In verwendete Klassen        | [**groupof uniquumames**](c-groupofuniquenames.md)<br/> |
+| In verwendete Klassen        | [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> |
 
 
 
@@ -118,16 +118,16 @@ Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupof uniquuma
 |------------------------|---------------------------------------------------------------|
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
-| System-Only            | False                                                         |
-| Ist-einwertig       | False                                                         |
-| Ist indiziert             | False                                                         |
-| Im globalen Katalog      | False                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                  |
+| System-Only            | Falsch                                                         |
+| Ist einwertig       | Falsch                                                         |
+| Ist indiziert             | Falsch                                                         |
+| Im globalen Katalog      | Falsch                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
 | Search-Flags           | 0x00000000                                                    |
 | System-Flags           | 0x00000000                                                    |
-| In verwendete Klassen        | [**groupof uniquumames**](c-groupofuniquenames.md)<br/> |
+| In verwendete Klassen        | [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> |
 
 
 
@@ -139,16 +139,16 @@ Der Distinguished Name für das Mitglied einer Gruppe. Wird von groupof uniquuma
 |------------------------|---------------------------------------------------------------|
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
-| System-Only            | False                                                         |
-| Ist-einwertig       | False                                                         |
-| Ist indiziert             | False                                                         |
-| Im globalen Katalog      | False                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                  |
+| System-Only            | Falsch                                                         |
+| Ist einwertig       | Falsch                                                         |
+| Ist indiziert             | Falsch                                                         |
+| Im globalen Katalog      | Falsch                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
 | Search-Flags           | 0x00000000                                                    |
 | System-Flags           | 0x00000000                                                    |
-| In verwendete Klassen        | [**groupof uniquumames**](c-groupofuniquenames.md)<br/> |
+| In verwendete Klassen        | [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> |
 
 
 

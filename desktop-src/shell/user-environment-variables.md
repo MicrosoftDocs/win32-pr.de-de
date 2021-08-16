@@ -1,27 +1,27 @@
 ---
 description: Umgebungsvariablen geben Suchpfade für Dateien, Verzeichnisse für temporäre Dateien, anwendungsspezifische Optionen und andere ähnliche Informationen an.
 ms.assetid: 6180e54e-4bd9-4692-83fd-f3f7f1d8f8d7
-title: Benutzer Umgebungsvariablen
+title: Benutzerumgebungsvariablen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bf4f898c7a9135c0421fdd67a7bed1d97655556f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 41bbe37cdbe7dd82268b2166ed625a9baf1d2502df4c26208bca51a89cd782df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104994782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117857042"
 ---
-# <a name="user-environment-variables"></a>Benutzer Umgebungsvariablen
+# <a name="user-environment-variables"></a>Benutzerumgebungsvariablen
 
-Umgebungsvariablen geben Suchpfade für Dateien, Verzeichnisse für temporäre Dateien, anwendungsspezifische Optionen und andere ähnliche Informationen an. Das System verwaltet einen Umgebungsblock für jeden Benutzer und einen für den Computer. Der System Umgebungsblock stellt Umgebungsvariablen für alle Benutzer des jeweiligen Computers dar. Der Umgebungsblock eines Benutzers stellt die Umgebungsvariablen dar, die das System für diesen bestimmten Benutzer verwaltet, einschließlich der Gruppe von System Umgebungsvariablen.
+Umgebungsvariablen geben Suchpfade für Dateien, Verzeichnisse für temporäre Dateien, anwendungsspezifische Optionen und andere ähnliche Informationen an. Das System verwaltet einen Umgebungsblock für jeden Benutzer und einen für den Computer. Der Systemumgebungsblock stellt Umgebungsvariablen für alle Benutzer des jeweiligen Computers dar. Der Umgebungsblock eines Benutzers stellt die Umgebungsvariablen dar, die das System für diesen bestimmten Benutzer verwaltet, einschließlich der Systemumgebungsvariablen.
 
-Standardmäßig erhält jeder Prozess eine Kopie des Umgebungs Blocks für seinen übergeordneten Prozess. In der Regel handelt es sich hierbei um den Umgebungsblock für den angemeldeten Benutzer. Von einem Prozess können unterschiedliche Umgebungs Blöcke für die untergeordneten Prozesse mithilfe der Funktion "- [**Prozess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) " oder " [**kreateprocessasuser**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) " angegeben werden.
+Standardmäßig erhält jeder Prozess eine Kopie des Umgebungsblocks für seinen übergeordneten Prozess. In der Regel ist dies der Umgebungsblock für den angemeldeten Benutzer. Ein Prozess kann mithilfe der [**CreateProcess-**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) oder [**CreateProcessAsUser-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) verschiedene Umgebungsblöcke für seine untergeordneten Prozesse angeben.
 
-Um Umgebungsvariablen hinzuzufügen oder zu ändern, wählt der Benutzer in der System **Steuerung** **System** aus und wählt dann die Registerkarte **Umgebung** aus. Der Benutzer kann mithilfe des **Set** -Befehls auch Umgebungsvariablen an der Eingabeaufforderung hinzufügen oder ändern. Umgebungsvariablen, die mit dem **Set** -Befehl erstellt werden, gelten nur für das Befehlsfenster, in dem Sie festgelegt sind, und für die untergeordneten Prozesse. Weitere Informationen erhalten Sie, wenn Sie **Set/?** eingeben. an einer Eingabeaufforderung.
+Um Umgebungsvariablen hinzuzufügen oder zu ändern, wählt der Benutzer **system** aus der Systemsteuerung **und** dann die Registerkarte **Umgebung** aus. Der Benutzer kann umgebungsvariablen auch über eine Eingabeaufforderung mithilfe des Befehls **set hinzufügen oder** ändern. Umgebungsvariablen, die mit dem **Set-Befehl** erstellt werden, gelten nur für das Befehlsfenster, in dem sie festgelegt sind, und für die untergeordneten Prozesse. Geben Sie für weitere Informationen set **/? ein.** an einer Eingabeaufforderung.
 
-Verwenden Sie die Funktion " [**kreateenvironment Block**](/windows/desktop/api/Userenv/nf-userenv-createenvironmentblock) ", um eine Kopie des Umgebungs Blocks für einen bestimmten Benutzer abzurufen. Verwenden Sie die [**destroyenvironment Block**](/windows/desktop/api/Userenv/nf-userenv-destroyenvironmentblock) -Funktion, um einen von " **kreateenvironment Block**" erstellten Umgebungsblock freizugeben. Diese Funktionen verweisen auf einen Zeiger auf einen Umgebungsblock. Der Umgebungsblock ist ein Array von Unicode-Zeichen folgen, die auf Null enden. Die Liste endet mit zwei Nullen ( \\ 0 \\ 0).
+Verwenden Sie die [**CreateEnvironmentBlock-Funktion,**](/windows/desktop/api/Userenv/nf-userenv-createenvironmentblock) um eine Kopie des Umgebungsblocks für einen bestimmten Benutzer abzurufen. Um einen von **CreateEnvironmentBlock erstellten Umgebungsblock** frei zu geben, verwenden Sie die [**DestroyEnvironmentBlock-Funktion.**](/windows/desktop/api/Userenv/nf-userenv-destroyenvironmentblock) Diese Funktionen verweisen auf einen Zeiger auf einen Umgebungsblock. Der Umgebungsblock ist ein Array von Unicode-Zeichenfolgen mit NULL-Terminierung. Die Liste endet mit zwei NULL-Werten ( \\ 0 \\ 0).
 
-Um eine Zeichenfolge zu erweitern, die Umgebungsvariablen enthält, indem Sie den Umgebungsblock für einen angegebenen Benutzer verwenden, verwenden Sie die [**expandumgebstringsforuser**](/windows/desktop/api/Userenv/nf-userenv-expandenvironmentstringsforusera) -Funktion.
+Verwenden Sie die [**ExpandEnvironmentStringsForUser-Funktion,**](/windows/desktop/api/Userenv/nf-userenv-expandenvironmentstringsforusera) um eine Zeichenfolge zu erweitern, die Umgebungsvariablen enthält, indem Sie den Umgebungsblock für einen angegebenen Benutzer verwenden.
 
  
 

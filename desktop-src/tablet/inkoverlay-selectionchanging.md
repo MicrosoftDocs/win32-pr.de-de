@@ -13,7 +13,7 @@ ms.locfileid: "118218953"
 ---
 # <a name="inkoverlayselectionchanging-event"></a>InkOverlay.SelectionChanging-Ereignis
 
-Tritt ein, wenn sich die Auswahl der Freifläche im Steuerelement ändert, z. B. durch Änderungen [](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection) an der Benutzeroberfläche, Durchschneide- und Einfügevorgänge oder die Selection-Eigenschaft.
+Tritt ein, wenn sich die Auswahl der Freifläche im Steuerelement ändert, z. B. durch Änderungen [](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection) an der Benutzeroberfläche, durch Ausschneide- und Einfügevorgänge oder durch die Selection-Eigenschaft.
 
 ## <a name="syntax"></a>Syntax
 

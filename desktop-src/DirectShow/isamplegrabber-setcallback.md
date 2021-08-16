@@ -1,7 +1,7 @@
 ---
-description: Die SetCallback-Methode gibt eine Rückruf Methode an, die für eingehende Stichproben aufgerufen wird.
+description: Die SetCallback-Methode gibt eine Rückrufmethode zum Aufrufen eingehender Stichproben an.
 ms.assetid: b84d3f52-b986-492a-a8b9-1d98618dcdd3
-title: 'Isamplegrabber:: SetCallback-Methode (qedit. h)'
+title: ISampleGrabber::SetCallback-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 46e0565c314bab86967ee0d5dabee6ba449a87dd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6e6d61d60a4664386cded025d2b7bcea82353602c7f7f8c0fb5bc4c53779ae2f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117817917"
 ---
-# <a name="isamplegrabbersetcallback-method"></a>Isamplegrabber:: SetCallback-Methode
+# <a name="isamplegrabbersetcallback-method"></a>ISampleGrabber::SetCallback-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die **SetCallback** -Methode gibt eine Rückruf Methode an, die für eingehende Stichproben aufgerufen wird.
+Die **SetCallback-Methode** gibt eine Rückrufmethode zum Aufrufen eingehender Stichproben an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,21 +49,21 @@ HRESULT SetCallback(
 *pCallback* 
 </dt> <dd>
 
-Zeiger auf eine [**isamplegrabbercb**](isamplegrabbercb.md) -Schnittstelle, die die Rückruf Methode enthält, oder **null** , um den Rückruf abzubrechen.
+Zeiger auf eine [**ISampleGrabberCB-Schnittstelle,**](isamplegrabbercb.md) die die Rückrufmethode enthält, oder **NULL** zum Abbrechen des Rückrufs.
 
 </dd> <dt>
 
-*Whichmethodumcallback* 
+*WhichMethodToCallback* 
 </dt> <dd>
 
-Der Index, der die Rückruf Methode angibt. Muss einen der folgenden Werte aufweisen.
+Index, der die Rückrufmethode an gibt. Dabei muss es sich um einen der folgenden Werte handeln.
 
 
 
-| Wert | BESCHREIBUNG                                                                                                                                                                                     |
+| Wert | Beschreibung                                                                                                                                                                                     |
 |-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0     | Der Beispiel-Grabber Filter Ruft die [**isamplegrabbercb:: samplecb**](isamplegrabbercb-samplecb.md) -Methode auf. Diese Methode empfängt einen [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Zeiger.               |
-| 1     | Der Beispiel-Grabber Filter Ruft die [**isamplegrabbercb:: buffercb**](isamplegrabbercb-buffercb.md) -Methode auf. Diese Methode empfängt einen Zeiger auf den Puffer, der im Medien Beispiel enthalten ist. |
+| 0     | Der Beispielgrabberfilter ruft die [**ISampleGrabberCB::SampleCB-Methode**](isamplegrabbercb-samplecb.md) auf. Diese Methode empfängt einen [**IMediaSample-Zeiger.**](/windows/desktop/api/Strmif/nn-strmif-imediasample)               |
+| 1     | Der Beispielgrabberfilter ruft die [**ISampleGrabberCB::BufferCB-Methode**](isamplegrabbercb-buffercb.md) auf. Diese Methode empfängt einen Zeiger auf den Puffer, der im Medienbeispiel enthalten ist. |
 
 
 
@@ -73,21 +73,21 @@ Der Index, der die Rückruf Methode angibt. Muss einen der folgenden Werte aufwe
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Datenverarbeitungs Thread wird blockiert, bis die Rückruf Methode zurückgibt. Wenn der Rückruf nicht schnell zurückgegeben wird, kann er die Wiedergabe beeinträchtigen.
+Der Datenverarbeitungsthread wird blockiert, bis die Rückrufmethode zurückgegeben wird. Wenn der Rückruf nicht schnell zurückkehrt, kann dies die Wiedergabe beeinträchtigen.
 
-Der Filter ruft nicht die Rückruffunktion für ein Vorlauf ausgeführt-Beispiele oder Beispiele auf, bei denen das **dwstreamid** -Element der " [**am \_ SAMPLE2 \_ Properties**](/windows/win32/api/strmif/ns-strmif-am_sample2_properties) "-Struktur etwas anderes als "am-Stream-Medien" ist \_ \_ .
+Der Filter ruft die Rückruffunktion nicht für Vorabrollbeispiele oder für Beispiele auf, in denen das **dwStreamId-Member** der [**AM \_ SAMPLE2 \_ PROPERTIES-Struktur**](/windows/win32/api/strmif/ns-strmif-am_sample2_properties) etwas anderes als AM \_ STREAM MEDIA \_ ist.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -97,19 +97,19 @@ Der Filter ruft nicht die Rückruffunktion für ein Vorlauf ausgeführt-Beispiel
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden der Beispiel-Grabber](using-the-sample-grabber.md)
+[Verwenden des Beispielgrabbers](using-the-sample-grabber.md)
 </dt> <dt>
 
-[**Isamplegrabber-Schnittstelle**](isamplegrabber.md)
+[**ISampleGrabber-Schnittstelle**](isamplegrabber.md)
 </dt> </dl>
 
  

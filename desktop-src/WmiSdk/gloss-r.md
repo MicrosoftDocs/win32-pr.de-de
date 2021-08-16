@@ -15,7 +15,7 @@ ms.locfileid: "118318986"
 ---
 # <a name="r-wmi"></a>R (WMI)
 
-[A](gloss-a.md) B [C](gloss-c.md) [D](gloss-d.md) [E](gloss-e.md) [F G](gloss-f.md) [H](gloss-h.md) [I](gloss-i.md) J [K](gloss-k.md) [L](gloss-l.md) [M](gloss-m.md) [N](gloss-n.md) [O](gloss-o.md) [P](gloss-p.md) [Q](gloss-q.md) R [S](gloss-s.md) T [U](gloss-t.md) V [W](gloss-w.md) X Y Z
+[A](gloss-a.md) B [C](gloss-c.md) [D](gloss-d.md) [E](gloss-e.md) [F](gloss-f.md) G [H](gloss-h.md) [I](gloss-i.md) J [K](gloss-k.md) [L](gloss-l.md) [M](gloss-m.md) [N](gloss-n.md) [O](gloss-o.md) [P](gloss-p.md) [Q](gloss-q.md) R [S](gloss-s.md) [T](gloss-t.md) U V [W](gloss-w.md) X Y Z
 
 <dl> <dt>
 
@@ -29,11 +29,11 @@ Eine [*Eigenschaft,*](gloss-p.md) die eine der benutzerdefinierten Klassen als T
 <span id="wmi.gloss_refresher"></span><span id="WMI.GLOSS_REFRESHER"></span>**Auffrischung**
 </dt> <dd>
 
-Ein Objekt, das Instanzen von [*MOF-Klassen*](gloss-m.md) enthält, sodass die Daten aktualisiert werden können. [*Leistungsklassen,*](gloss-p.md) die von [**Win32 \_ Perf**](/windows/desktop/CIMWin32Prov/win32-perf) ableiten, erfordern die Verwendung eines Auffrischungsobjekts, um Leistungsdaten zu erhalten.
+Ein Objekt, das Instanzen von [*MOF-Klassen*](gloss-m.md) enthält, sodass die Daten aktualisiert werden können. [*Leistungsklassen,*](gloss-p.md) die von [**Win32 \_ Perf**](/windows/desktop/CIMWin32Prov/win32-perf) abgeleitet werden, erfordern die Verwendung eines Aktualisierungsobjekts, um Leistungsdaten abzurufen.
 
 </dd> <dt>
 
-<span id="wmi.gloss_required_property"></span><span id="WMI.GLOSS_REQUIRED_PROPERTY"></span>**Erforderliche Eigenschaft**
+<span id="wmi.gloss_required_property"></span><span id="WMI.GLOSS_REQUIRED_PROPERTY"></span>**required-Eigenschaft**
 </dt> <dd>
 
 Eine [*Eigenschaft,*](gloss-p.md) die einen Wert erfordert.

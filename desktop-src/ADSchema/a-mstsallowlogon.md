@@ -1,11 +1,11 @@
 ---
-title: MS-TS-Allow-Logon-Attribut
-description: Gibt an, ob der Benutzer sich am Terminal Server anmelden darf. Der Wert ist 1, wenn die Anmeldung zulässig ist, und 0, wenn die Anmeldung nicht zulässig ist.
+title: ms-TS-Allow-Logon-Attribut
+description: Gibt an, ob sich der Benutzer beim Terminalserver anmelden darf. Der Wert ist 1, wenn die Anmeldung zulässig ist, und 0, wenn die Anmeldung nicht zulässig ist.
 ms.assetid: 9cd6edbc-f8e7-4933-9f62-1e34e3d31fb7
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-TS-Allow-Logon-Attribut
-- AD-Schema des mstsallowlogon-Attributs
+- MS-TS-Allow-Logon-Attribut AD-Schema
+- MSTSAllowLogon-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,29 +14,29 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6bcd78662167e281ea720f2ad5d98f25c2f5c4ae
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 1a5707f2f18ae4a2da1768090d9ebd1126c72411fc6b79212f459996ecbce080
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859627"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117837870"
 ---
-# <a name="ms-ts-allow-logon-attribute"></a>MS-TS-Allow-Logon-Attribut
+# <a name="ms-ts-allow-logon-attribute"></a>ms-TS-Allow-Logon-Attribut
 
-Gibt an, ob der Benutzer sich am Terminal Server anmelden darf. Der Wert ist 1, wenn die Anmeldung zulässig ist, und 0, wenn die Anmeldung nicht zulässig ist.
+Gibt an, ob sich der Benutzer beim Terminalserver anmelden darf. Der Wert ist 1, wenn die Anmeldung zulässig ist, und 0, wenn die Anmeldung nicht zulässig ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-TS-Allow-LOGON                    |
-| LDAP-Display-Name | mstsallowlogon                       |
+| CN                | ms-TS-Allow-Logon                    |
+| Ldap-Anzeigename | msTSAllowLogon                       |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1979              |
-| System-ID-GUID    | 3a0cd464-bc54-40e7-93ae-a646a6ecc4b4 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-Id-Guid    | 3a0cd464-bc54-40e7-93ae-a646a6ecc4b4 |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
@@ -54,11 +54,11 @@ Gibt an, ob der Benutzer sich am Terminal Server anmelden darf. Der Wert ist 1, 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -75,11 +75,11 @@ Gibt an, ob der Benutzer sich am Terminal Server anmelden darf. Der Wert ist 1, 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -96,11 +96,11 @@ Gibt an, ob der Benutzer sich am Terminal Server anmelden darf. Der Wert ist 1, 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |

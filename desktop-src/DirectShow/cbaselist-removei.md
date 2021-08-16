@@ -1,7 +1,7 @@
 ---
-description: Die removei-Methode entfernt das Element an der angegebenen Position.
+description: Die RemoveI-Methode entfernt das Element an der angegebenen Position.
 ms.assetid: 6a6d54ce-7ab3-48dd-8d5d-1315816bcbb9
-title: Cbaselist. removei-Methode (wxlist. h)
+title: CBaseList.RemoveI-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a4511a9867f61596572c959a3d763eb56d862311
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ac3277f30e959e42cf2fd2d1aeeb13f81cb17515abb8434a8ae13406d244aaec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365701"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117823737"
 ---
-# <a name="cbaselistremovei-method"></a>Cbaselist. removei-Methode
+# <a name="cbaselistremovei-method"></a>CBaseList.RemoveI-Methode
 
-Die- `RemoveI` Methode entfernt das Element an der angegebenen Position.
+Die `RemoveI` -Methode entfernt das Element an der angegebenen Position.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ void* RemoveI(
 *pos* 
 </dt> <dd>
 
-Positionswert, der das zu entfern gende Element angibt.
+POSITION-Wert, der das zu entfernende Element angibt.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Positionswert, der das zu entfern gende Element angibt.
 
 Gibt einen Zeiger auf das Element zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode löscht den Knoten aus der Liste, löscht jedoch nicht das Element, das in diesem Knoten enthalten ist.
+Diese Methode löscht den Knoten aus der Liste, aber nicht das in diesem Knoten enthaltene Element.
 
-Wenn *POS* **null** ist, gibt die Methode **null** zurück.
+Wenn *pos* **NULL** ist, gibt die Methode **NULL** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,16 +65,16 @@ Wenn *POS* **null** ist, gibt die Methode **null** zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

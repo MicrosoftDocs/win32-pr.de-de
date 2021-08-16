@@ -26,7 +26,7 @@ Ihre Anwendung darf beim Senden von Datagrammen nicht den Ce-Codepunkt (Congesti
 
 [**WSAGetRecvIPEcn ist**](/windows/win32/api/ws2tcpip/nf-ws2tcpip-wsagetrecvipecn) eine in definierte Inlinefunktion. `ws2tcpip.h`
 
-Rufen **Sie WSAGetRecvIPEcn** auf, um die aktuelle Aktivierung des Empfangs der IP_ECN-Steuerungsnachricht (oder **IPV6_ECN)** über [**LPFN_WSARECVMSG (WSARecvMsg) zu**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg)abfragen. 
+Rufen Sie **WSAGetRecvIPEcn** auf, um die aktuelle Aktivierung des Empfangs der **IP_ECN-Steuernachricht** (oder **IPV6_ECN)** über LPFN_WSARECVMSG [**(WSARecvMsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg)zu abfragen.
 
 Siehe auch die [**WSAMSG-Struktur.**](/windows/win32/api/ws2def/ns-ws2def-wsamsg)
 

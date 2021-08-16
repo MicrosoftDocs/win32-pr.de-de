@@ -1,7 +1,7 @@
 ---
-description: Die Methode "beenden" beendet den Filter.
+description: Die Stop-Methode beendet den Filter.
 ms.assetid: 80eac207-5db3-4b06-bbae-eca72e37d09d
-title: Cbaserenderer. stoppt-Methode (renbase. h)
+title: CBaseRenderer.Stop-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ddd8194bbf76c4a4311aa90335f94d1e7548a356
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 942fae3ee1ea2c7481f475dc2d8dba421fd21d44290c98b822b9bc489ee25334
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367113"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117822620"
 ---
-# <a name="cbaserendererstop-method"></a>Cbaserenderer. stoppt-Methode
+# <a name="cbaserendererstop-method"></a>CBaseRenderer.Stop-Methode
 
-Die- `Stop` Methode beendet den Filter.
+Die `Stop` -Methode beendet den Filter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode überschreibt die [**cbasefilter:: stopmethode**](cbasefilter-stop.md) . Es führt die folgenden Aktionen aus:
+Diese Methode überschreibt die [**CBaseFilter::Stop-Methode.**](cbasefilter-stop.md) Es führt die folgenden Aktionen aus:
 
--   Ruft [**cbasefilter:: Beendigung**](cbasefilter-stop.md)auf.
--   Führt einen Commit für die Zuweisung aus. (Weitere Informationen finden Sie unter [**imemzuzukator::D ecommit**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-decommit).)
--   Bricht das geplante Rendering ab und gibt den streamingingthread frei.
--   Wartet, bis alle ausstehenden **Empfangs** Aufrufe abgeschlossen sind.
+-   Ruft [**CBaseFilter::Stop auf.**](cbasefilter-stop.md)
+-   Dekommitiert die Zuweisung. (Siehe [**IMemAllocator::D ecommit**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-decommit).)
+-   Bricht alle geplanten Renderings ab und gibt den Streamingthread frei.
+-   Wartet auf den  Abschluss eines ausstehenden Empfangsaufrufs.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,16 +59,16 @@ Diese Methode überschreibt die [**cbasefilter:: stopmethode**](cbasefilter-stop
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

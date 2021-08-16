@@ -19,7 +19,7 @@ Die folgenden Elemente werden verwendet, um Platzhalterdateien und -verzeichniss
 
 
 
-| Thema                                                                     | BESCHREIBUNG                                                                                                   |
+| Thema                                                                     | Beschreibung                                                                                                   |
 |---------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | [Cloudfilterenumerationen](/windows/desktop/cfApi/cloud-files-enumerations)<br/> | Die folgenden Enumerationen werden zum Erstellen und Verwalten von Platzhalterdateien und Verzeichnissen verwendet.<br/> |
 | [Cloudfilterfunktionen](/windows/desktop/cfApi/cloud-files-functions)<br/>       | Die folgenden Funktionen werden zum Erstellen und Verwalten von Platzhalterdateien und Verzeichnissen verwendet.<br/>    |

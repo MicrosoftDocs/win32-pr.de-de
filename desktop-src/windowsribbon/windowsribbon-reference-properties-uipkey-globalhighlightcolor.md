@@ -27,9 +27,9 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Ui \_ PKEY \_ GlobalHighlightColor wird von einer Anwendung verwendet, um die globale Hervorhebungsfarbe für ein benutzerdefiniertes Menüband abzufragen.
+Ui PKEY GlobalHighlightColor wird von einer Anwendung verwendet, um die globale Hervorhebungsfarbe für \_ \_ ein benutzerdefiniertes Menüband abfragt.
 
-**Eingeführt in Windows 8:** UI \_ PKEY \_ GlobalHighlightColor kann nicht unabhängig von [ui \_ PKEY \_ GlobalBackgroundColor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md)festgelegt werden.
+**Eingeführt in Windows 8:** Ui \_ PKEY \_ GlobalHighlightColor kann nicht unabhängig von ui [ \_ PKEY \_ GlobalBackgroundColor festgelegt werden.](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,10 +1,10 @@
 ---
-title: Iadsreplicapointer-Eigenschaften Methoden (IADs. h)
-description: Die-Eigenschaften Methode der iadsreplicapointer-Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsReplicaPointer-Eigenschaftsmethoden (Iads.h)
+description: Die -Eigenschaftsmethode der IADsReplicaPointer-Schnittstelle legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: fc520ea4-b2c2-44c0-8bec-25f8d4a77074
 ms.tgt_platform: multiple
 keywords:
-- Iadsreplicapointer-Eigenschaften Methoden ADSI
+- IADsReplicaPointer-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -30,16 +30,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 044d5a5f1b87d42accb7e8e6e6c83eeda69eb5e0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9d4e232edf2fb64ec7e560d34d5a6b5c1a498e03c348e601230ced07a585f6dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117839720"
 ---
-# <a name="iadsreplicapointer-property-methods"></a>Iadsreplicapointer-Eigenschaften Methoden
+# <a name="iadsreplicapointer-property-methods"></a>IADsReplicaPointer-Eigenschaftsmethoden
 
-Die-Eigenschaften Methode der [**iadsreplicapointer**](/windows/desktop/api/Iads/nn-iads-iadsreplicapointer) -Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die -Eigenschaftsmethode der [**IADsReplicaPointer-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsreplicapointer) legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -48,14 +48,14 @@ Die-Eigenschaften Methode der [**iadsreplicapointer**](/windows/desktop/api/Iads
 **Count**
 </dt> <dd> <dl>
 
-Die Anzahl vorhandener Replikate.
+Die Anzahl der vorhandenen Replikate.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -73,17 +73,17 @@ HRESULT put_Count(
 
 </dt> </dl> </dd> <dt>
 
-**Replicaadresssshints**
+**ReplicaAddressHints**
 </dt> <dd> <dl>
 
-Eine Netzwerkadresse, die als wahrscheinlichste Verweis auf einen Knoten vorgeschlagen wird, der zum Namen Server führt.
+Eine Netzwerkadresse, die als wahrscheinlicher Verweis auf einen Knoten vorgeschlagen wird, der zum Namenserver führt.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -101,7 +101,7 @@ HRESULT put_ReplicaAddressHints(
 
 </dt> </dl> </dd> <dt>
 
-**Replikannummer**
+**ReplicaNumber**
 </dt> <dd> <dl>
 
 ID des Replikats.
@@ -111,7 +111,7 @@ ID des Replikats.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -129,17 +129,17 @@ HRESULT put_ReplicaNumber(
 
 </dt> </dl> </dd> <dt>
 
-**Replialisier Type**
+**ReplicaType**
 </dt> <dd> <dl>
 
-Typ des Replikats (Master, Sekundär oder schreibgeschützt)
+Replikattyp (master, sekundär oder schreibgeschützt)
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -160,14 +160,14 @@ HRESULT put_ReplicaType(
 **ServerName**
 </dt> <dd> <dl>
 
-Name des Namen Servers, der das Replikat enthält.
+Name des Namensservers, der das Replikat enthält.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -195,20 +195,20 @@ HRESULT put_ServerName(
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadsreplicapointer ist als F60FB803-4080-11d1-A3AC-00C04FB950DC definiert.<br/>   |
+| IID<br/>                      | IID \_ IADsReplicaPointer ist als F60FB803-4080-11D1-A3AC-00C04FB950DC definiert.<br/>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IADsReplicaPointer**](/windows/desktop/api/Iads/nn-iads-iadsreplicapointer)
 </dt> <dt>
 
-[**ADS \_ replicapointer**](/windows/win32/api/iads/ns-iads-ads_replicapointer)
+[**ADS \_ REPLICAPOINTER**](/windows/win32/api/iads/ns-iads-ads_replicapointer)
 </dt> </dl>
 
  

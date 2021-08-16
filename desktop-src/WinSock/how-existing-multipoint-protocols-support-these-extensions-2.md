@@ -1,6 +1,6 @@
 ---
 title: Unterstützung dieser Erweiterungen durch Multipointprotokolle
-description: Die folgenden Themen zeigen, wie über die Multipointfunktionen Windows Sockets 2 auf IP-Multicast- und ATM-Point-to-Multipoint-Funktionen zugegriffen werden kann.
+description: In den folgenden Themen wird angegeben, wie auf IP-Multicast- und ATM-Punkt-zu-Multipoint-Funktionen über die Windows Sockets 2-Multipointfunktionen zugegriffen werden kann.
 ms.assetid: f6f1dcfa-c316-455b-a993-e09f02c2eedb
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,10 +13,10 @@ ms.locfileid: "118322190"
 ---
 # <a name="how-multipoint-protocols-support-these-extensions"></a>Unterstützung dieser Erweiterungen durch Multipointprotokolle
 
-Die folgenden Themen zeigen, wie über die Multipointfunktionen Windows Sockets 2 auf IP-Multicast- und ATM-Point-to-Multipoint-Funktionen zugegriffen werden kann. Wir haben diese beiden Beispiele ausgewählt, da sie beliebt und gut verstanden sind.
+In den folgenden Themen wird angegeben, wie auf IP-Multicast- und ATM-Punkt-zu-Multipoint-Funktionen über die Windows Sockets 2-Multipointfunktionen zugegriffen werden kann. Wir haben diese beiden Als Beispiele ausgewählt, da sie beliebt und gut verständlich sind.
 
 -   [IP-Multicast](ip-multicast-2.md)
--   [ATM Point to Multipoint](atm-point-to-multipoint-2.md)
+-   [Punkt-zu-Multipoint des Geldautomaten](atm-point-to-multipoint-2.md)
 
  
 

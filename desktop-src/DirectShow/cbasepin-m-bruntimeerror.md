@@ -1,7 +1,7 @@
 ---
 description: Flag, das angibt, ob ein Laufzeitfehler aufgetreten ist.
 ms.assetid: 917bcb21-a11e-4ac5-af96-565f61c155cd
-title: 'Cbasepin:: m_bRunTimeError Member (amfilter. h)'
+title: CBasePin::m_bRunTimeError-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5e8b0c5548d3089a6e619f88db5e4eed19b12be8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ffc07a15f7c34744be52c5e2c7b5233e1885b58c5b9b7d078871277f8fc0efd1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117823332"
 ---
-# <a name="cbasepinm_bruntimeerror-member"></a>Cbasepin:: m- \_ Member von bruntimeerror
+# <a name="cbasepinm_bruntimeerror-member"></a>CBasePin::m \_ bRunTimeError-Member
 
 Flag, das angibt, ob ein Laufzeitfehler aufgetreten ist.
 
@@ -36,9 +36,9 @@ bool m_bRunTimeError;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Flag ist standardmäßig auf **false** eingestellt. Legen Sie das-Flag auf **true** fest, wenn beim Streaming ein Laufzeitfehler auftritt. Die [**cbasepin:: inaktive**](cbasepin-inactive.md) -Methode setzt das Flag auf **false** zurück.
+Dieses Flag ist standardmäßig auf **FALSE festgelegt.** Legen Sie das Flag auf **TRUE** fest, wenn während des Streamings ein Laufzeitfehler auftritt. Die [**CBasePin::Inactive-Methode**](cbasepin-inactive.md) setzt das Flag auf **FALSE zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,16 +46,16 @@ Dieses Flag ist standardmäßig auf **false** eingestellt. Legen Sie das-Flag au
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

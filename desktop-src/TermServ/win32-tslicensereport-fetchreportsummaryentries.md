@@ -6,7 +6,7 @@ ms.tgt_platform: multiple
 keywords:
 - FetchReportSummaryEntries-Methode Remotedesktopdienste
 - FetchReportSummaryEntries-Methode Remotedesktopdienste , Win32_TSLicenseReport-Klasse
-- Win32_TSLicenseReport Klasse Remotedesktopdienste , FetchReportSummaryEntries-Methode
+- Win32_TSLicenseReport-Klasse Remotedesktopdienste , FetchReportSummaryEntries-Methode
 topic_type:
 - apiref
 api_name:
@@ -76,7 +76,7 @@ Dies ist keine statische Methode. Diese Methode muss von einem Benutzerlizenznut
 
 Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
 
-Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation -Klassen (WMI). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 

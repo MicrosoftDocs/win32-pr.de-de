@@ -1,12 +1,12 @@
 ---
-title: SetStringProperty-Methode der Win32_RDMSVirtualDesktopCollection-Klasse (CertEnroll. h)
-description: Aktualisiert eine Zeichen folgen Eigenschaft einer Sammlung virtueller Desktops.
+title: SetStringProperty-Methode der Win32_RDMSVirtualDesktopCollection-Klasse (Certenroll.h)
+description: Aktualisiert eine Zeichenfolgeneigenschaft einer Sammlung virtueller Desktops.
 ms.assetid: d76d5f77-3b51-41b9-8ec5-a737ddc0a9d3
 ms.tgt_platform: multiple
 keywords:
 - SetStringProperty-Methode Remotedesktopdienste
-- SetStringProperty-Methode Remotedesktopdienste, Win32_RDMSVirtualDesktopCollection-Klasse
-- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste, setStringProperty-Methode
+- SetStringProperty-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktopCollection-Klasse
+- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste , SetStringProperty-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 97fd85ef6611cd02dc80ca66816c5c4ce13f6cd9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8fa0f8302ca2b4c843e552bed8de9145d74c6492626694bb9da0b127d0a07d2f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345907"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118349354"
 ---
-# <a name="setstringproperty-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>SetStringProperty-Methode der Win32 \_ rdmsvirtualdesktopcollection-Klasse
+# <a name="setstringproperty-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>SetStringProperty-Methode der Win32 \_ RDMSVirtualDesktopCollection-Klasse
 
-Aktualisiert eine Zeichen folgen Eigenschaft einer Sammlung virtueller Desktops.
+Aktualisiert eine Zeichenfolgeneigenschaft einer Sammlung virtueller Desktops.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ uint32 SetStringProperty(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
-Ein Schlüssel, der die zu Aktualisier enswerte Eigenschaft identifiziert.
+Ein Schlüssel, der die zu aktualisierende Eigenschaft identifiziert.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*Wert* \[ In\]
 </dt> <dd>
 
 Der neue Eigenschaftswert.
@@ -60,7 +60,7 @@ Der neue Eigenschaftswert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,18 +70,18 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| Header<br/>                   | <dl> <dt>CertEnroll. h</dt> </dl>     |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| Header<br/>                   | <dl> <dt>Certenroll.h</dt> </dl>     |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32 \_ rdmsvirtualdesktopcollection**](win32-rdmsvirtualdesktopcollection.md)
+[**Win32 \_ RDMSVirtualDesktopCollection**](win32-rdmsvirtualdesktopcollection.md)
 </dt> </dl>
 
  

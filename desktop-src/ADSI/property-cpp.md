@@ -1,38 +1,38 @@
 ---
-title: Property. CPP
-description: In der Beispiel Anbieter Komponente sind Codebeispiele zum Speichern verschiedener Datentypen in Variant-Datentypen, sodass Sie als Eigenschaften eines Objekts gespeichert werden können, in der Eigenschaft. cpp. In der folgenden Tabelle sind die unterstützten Routinen aufgeführt.
+title: Eigenschaft. Cpp
+description: In der Beispielanbieterkomponente befinden sich Codebeispiele zum Speichern verschiedener Datentypen in VARIANT-Datentypen, sodass sie als Eigenschaften eines Objekts in property.cpp gespeichert werden können. Unterstützte Routinen sind in der folgenden Tabelle aufgeführt.
 ms.assetid: 3cd6b5b7-48c7-4e9c-b8bf-5910b992433f
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 491d7874aee37a80e14bca52e9baf20d9cbb39a7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 4902463d133d021b2b2b760e8d0f7c4fd3f6dd6d7316846dab1db2dc9ce23211
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340403"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117838846"
 ---
-# <a name="propertycpp"></a>Property. CPP
+# <a name="propertycpp"></a>Eigenschaft. Cpp
 
-In der Beispiel Anbieter Komponente sind Codebeispiele zum Speichern verschiedener Datentypen in **Variant** -Datentypen, sodass Sie als Eigenschaften eines Objekts gespeichert werden können, in der Eigenschaft. cpp. In der folgenden Tabelle sind die unterstützten Routinen aufgeführt.
+In der Beispielanbieterkomponente befinden sich Codebeispiele zum Speichern verschiedener Datentypen in VARIANT-Datentypen, sodass sie als Eigenschaften eines Objekts in property.cpp gespeichert werden können.  Unterstützte Routinen sind in der folgenden Tabelle aufgeführt.
 
 
 
-| -Routine zurückgegebener Wert                                                           | BESCHREIBUNG                  |
+| -Routine zurückgegebener Wert                                                           | Beschreibung                  |
 |-------------------------------------------------------------------|------------------------------|
-| **get \_ BSTR- \_ Eigenschaft** / **Put \_ BSTR- \_ Eigenschaft**                   | Für Zeichen folgen Eigenschaften.       |
-| **get \_ Long- \_ Eigenschaft** / **Put Long- \_ \_ Eigenschaft**                   | Für lange ganzzahlige Eigenschaften. |
-| **get \_ Date- \_ Eigenschaft**"Date"- / **\_ \_ Eigenschaft**                   | Für Datumsformat Eigenschaften.  |
-| **get \_ Variant \_ bool \_ Eigenschaft** / **Put \_ Variant \_ bool \_ Property** | Für boolesche Eigenschaften.      |
-| **get \_ Variant- \_ Eigenschaft**" / **Put \_ Variant \_** "             | Für **Variant** -Eigenschaften.  |
+| **get \_ \_BSTR-Eigenschaft** / **put \_ \_ BSTR-Eigenschaft**                   | Für Zeichenfolgeneigenschaften.       |
+| **get \_ \_LONG-Eigenschaft** / **put \_ \_ LONG-Eigenschaft**                   | Für long integer-Eigenschaften. |
+| **get \_ DATE \_ Property** / **put DATE \_ \_ Property**                   | Für Datumsformateigenschaften.  |
+| **get \_ VARIANT \_ \_ BOOL-Eigenschaft** / **put VARIANT \_ \_ \_ BOOL-Eigenschaft** | Für boolesche Eigenschaften.      |
+| **get \_ \_VARIANT-Eigenschaft** / **put \_ \_ VARIANT-Eigenschaft**             | Für **VARIANT-Eigenschaften.**  |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -16,24 +16,24 @@ ms.locfileid: "118202491"
 Die Schaltfläche Teilen ist ein zusammengesetztes Steuerelement, mit dem der Benutzer einen Standardwert auswählen kann, der an eine primäre Schaltfläche gebunden ist, oder aus einer Liste von sich gegenseitig ausschließenden Werten auswählen kann, die in einer Dropdownliste angezeigt werden, die an eine sekundäre Schaltfläche gebunden ist.
 
 -   [Introduction (Einführung)](#introduction)
--   [Unterteilte Schaltflächeneigenschaften](#split-button-properties)
+-   [Eigenschaften der geteilten Schaltfläche](#split-button-properties)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="introduction"></a>Einführung
 
-Dieses Steuerelement ist nützlich, um eng verwandte Elemente in Fällen verfügbar zu machen, in denen ein offensichtlicher Standardwert verfügbar ist und die einzelnen Elemente durch ein Bild, text oder beides dargestellt werden können.
+Dieses Steuerelement ist nützlich, um eng verwandte Elemente in Fällen verfügbar zu machen, in denen ein offensichtlicher Standardwert verfügbar ist und die einzelnen Elemente durch ein Bild, Text oder beides dargestellt werden können.
 
 Der folgende Screenshot veranschaulicht die Schaltfläche zum Teilen des Menübands.
 
 ![Screenshot eines Splitbutton-Steuerelements in einem Beispielband.](images/controls/splitbutton.png)
 
-## <a name="split-button-properties"></a>Unterteilte Schaltflächeneigenschaften
+## <a name="split-button-properties"></a>Eigenschaften der geteilten Schaltfläche
 
-Das Menübandframework definiert eine Auflistung von [Eigenschaftsschlüsseln](windowsribbon-reference-properties.md) für das Steuerelement Schaltfläche teilen.
+Das Menübandframework definiert eine Auflistung von [Eigenschaftsschlüsseln für](windowsribbon-reference-properties.md) das Split Button-Steuerelement.
 
-In der Regel wird eine Split Button-Eigenschaft auf der Menübandbenutzeroberfläche aktualisiert, indem der dem Steuerelement zugeordnete Befehl durch einen Aufruf der [**IUIFramework::InvalidateUICommand-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand) ungültig wird. Das Invalidierungsereignis wird von der [**IUICommandHandler::UpdateProperty-Rückrufmethode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) behandelt und die Eigenschaft aktualisiert.
+In der Regel wird eine Split Button-Eigenschaft in der Menübandbenutzeroberfläche aktualisiert, indem der befehl, der dem Steuerelement zugeordnet ist, durch einen Aufruf der [**IUIFramework::InvalidateUICommand-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand) ungültig wird. Das Invalidierungsereignis wird von der [**IUICommandHandler::UpdateProperty-Rückrufmethode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) behandelt und die Eigenschaft aktualisiert.
 
-Die [**IUICommandHandler::UpdateProperty-Rückrufmethode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) wird nicht ausgeführt, und die Anwendung fragt einen aktualisierten Eigenschaftswert ab, bis die Eigenschaft vom Framework benötigt wird. Beispielsweise, wenn eine Registerkarte aktiviert und ein Steuerelement auf der Menüband-Benutzeroberfläche angezeigt wird oder wenn eine QuickInfo angezeigt wird.
+Die [**IUICommandHandler::UpdateProperty-Rückrufmethode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) wird nicht ausgeführt, und die Anwendung fragt einen aktualisierten Eigenschaftswert ab, bis die Eigenschaft vom Framework benötigt wird. Beispielsweise, wenn eine Registerkarte aktiviert und ein Steuerelement auf der Menübandbenutzeroberfläche angezeigt wird oder wenn eine QuickInfo angezeigt wird.
 
 > [!Note]  
 > In einigen Fällen kann eine Eigenschaft über die [**IUIFramework::GetUICommandProperty-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty) abgerufen und mit der [**IUIFramework::SetUICommandProperty-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty) festgelegt werden.
@@ -51,17 +51,17 @@ In der folgenden Tabelle sind die Eigenschaftenschlüssel aufgeführt, die dem S
 </colgroup>
 <thead>
 <tr class="header">
-<th>Eigenschaftenschlüssel</th>
+<th>Eigenschaftsschlüssel</th>
 <th>Hinweise</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled</a></td>
-<td>Unterstützt <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty"><strong>IUIFramework::GetUICommandProperty</strong></a> und <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty"><strong>IUIFramework::SetUICommandProperty.</strong></a><br/> Wenn alle untergeordneten Elemente deaktiviert sind, legt das Framework <a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled</a> auf FALSE (0) fest. Wenn ein oder mehrere untergeordnete Elemente aktiviert sind, wird UI_PKEY_Enabled andernfalls auf TRUE (-1) festgelegt.
+<td>Unterstützt <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty"><strong>IUIFramework::GetUICommandProperty</strong></a> und <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty"><strong>IUIFramework::SetUICommandProperty.</strong></a><br/> Wenn alle untergeordneten Elemente deaktiviert sind, legt das Framework <a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled</a> false (0) fest. Wenn ein oder mehrere untergeordnete Elemente aktiviert sind, wird UI_PKEY_Enabled auf true (-1) festgelegt.
 <blockquote>
 [!Important]<br />
-Die <a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled-Eigenschaft</a> für das Steuerelement Schaltfläche teilen sollte ungültig werden, nachdem mindestens ein untergeordnetes Element aktiviert oder deaktiviert wurde. Dadurch wird sichergestellt, dass das Framework den aktualisierten Eigenschaftswert abfragt und den Zustand des Steuerelements Schaltfläche teilen auf der Menübandbenutzeroberfläche aktualisiert.
+Die <a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled-Eigenschaft</a> für das Split Button-Steuerelement sollte ungültig gemacht werden, nachdem mindestens ein untergeordnetes Objekt aktiviert oder deaktiviert wurde. Dadurch wird sichergestellt, dass das Framework den aktualisierten Eigenschaftswert abfragt und den Zustand des Split Button-Steuerelements in der Menübandbenutzeroberfläche aktualisiert.
 </blockquote>
 <br/> <br/></td>
 </tr>

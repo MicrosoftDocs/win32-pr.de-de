@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren von Streams
-description: Konfigurieren von Streams
+title: Konfigurieren von Web-Streams
+description: Konfigurieren von Web-Streams
 ms.assetid: 1eeb6243-5095-4dba-994c-2083beda7b78
 keywords:
 - Streams,Konfigurieren von Webstreams
@@ -15,13 +15,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118199121"
 ---
-# <a name="configuring-web-streams"></a>Konfigurieren von Streams
+# <a name="configuring-web-streams"></a>Konfigurieren von Web-Streams
 
-Webstreams sind ein spezieller Typ von Dateiübertragungsstream, der verwendet wird, um die dateien zu übertragen, die einer Website in einem einzelnen Stream zugeordnet sind. Die Webstreamkonfiguration wird in der folgenden Tabelle zusammengefasst.
+Webstreams sind ein spezieller Typ von Dateiübertragungsstream, der verwendet wird, um die dateien, die einer Website zugeordnet sind, in einem einzelnen Stream zu übermitteln. Die Webstreamkonfiguration ist in der folgenden Tabelle zusammengefasst.
 
 
 
-| Einstellung                                            | BESCHREIBUNG                                                                       |
+| Einstellung                                            | Beschreibung                                                                       |
 |----------------------------------------------------|-----------------------------------------------------------------------------------|
 | **WM \_ MEDIA \_ TYPE.majortype**                      | Legen Sie auf WMMEDIATYPE \_ FileTransfer fest.                                                 |
 | **WM \_ MEDIA \_ TYPE.subtype**                        | Legen Sie auf WMMEDIASUBTYPE \_ WebStream fest.                                                 |
@@ -29,7 +29,7 @@ Webstreams sind ein spezieller Typ von Dateiübertragungsstream, der verwendet w
 | **WM \_ MEDIA \_ TYPE.bTemporalCompression**           | Legen Sie auf True fest.                                                                      |
 | **WM \_ MEDIA \_ TYPE.lSampleSize**                    | Auf 0 festlegen.                                                                         |
 | **WM \_ MEDIA \_ TYPE.formattype**                     | Legen Sie auf WMFORMAT \_ WebStream fest.                                                       |
-| **WM \_ MEDIA \_ TYPE.pUnk**                           | Legen Sie auf **NULL fest.**                                                                  |
+| **WM \_ MEDIA \_ TYPE.pUnk**                           | Legen Sie auf **NULL** fest.                                                                  |
 | **WM \_ MEDIA \_ TYPE.cbFormat**                       | Legen Sie diese Option auf `sizeof(WMT_WEBSTREAM_FORMAT)` fest.                                            |
 | **WM \_ MEDIA \_ TYPE.pbFormat**                       | Legen Sie auf die Adresse einer ordnungsgemäß konfigurierten **WMT \_ WEBSTREAM \_ FORMAT-Struktur** fest. |
 | **WMT \_ WEBSTREAM \_ FORMAT.cbSampleHeaderFixedData** | Legen Sie diese Option auf `sizeof(WMT_WEBSTREAM_SAMPLE_HEADER)` fest.                                     |

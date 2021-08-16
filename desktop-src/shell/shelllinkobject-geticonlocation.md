@@ -50,9 +50,9 @@ Wenn diese Methode zurückgegeben wird, enthält sie den vollqualifizierten Pfad
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **\* Integer**
+Typ: **\* Ganze Zahl**
 
-Gibt den Index des Symbols in der durch *sPath angegebenen Datei zurück.*
+Gibt den Index des Symbols in der durch sPath angegebenen Datei *zurück.*
 
 ## <a name="examples"></a>Beispiele
 

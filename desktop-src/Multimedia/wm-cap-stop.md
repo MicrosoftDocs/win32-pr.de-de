@@ -3,7 +3,7 @@ title: WM_CAP_STOP (Vfw.h)
 description: Die WM \_ CAP \_ STOP-Meldung beendet den Erfassungsvorgang. Sie können diese Nachricht explizit oder mithilfe des Makros capCaptureStop senden.
 ms.assetid: 0fea82f5-f381-485a-82ae-b081b3a5e402
 keywords:
-- WM_CAP_STOP-Nachricht Windows Multimedia
+- WM_CAP_STOP von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -25,7 +25,7 @@ ms.locfileid: "118369329"
 
 Die **WM \_ CAP \_ STOP-Meldung** beendet den Erfassungsvorgang. Sie können diese Nachricht explizit oder mithilfe des [**Makros capCaptureStop**](/windows/desktop/api/Vfw/nf-vfw-capcapturestop) senden.
 
-Bei der Schrittframeerfassung werden die Bilddaten, die vor dem Senden dieser Nachricht gesammelt wurden, in der Erfassungsdatei beibehalten. Eine gleichwertige Dauer von Audiodaten wird auch in der Erfassungsdatei beibehalten, wenn die Audioaufnahme aktiviert wurde.
+Bei der Schrittframeerfassung werden die Bilddaten, die vor dem Senden dieser Nachricht gesammelt wurden, in der Erfassungsdatei beibehalten. Eine äquivalente Dauer von Audiodaten wird auch in der Erfassungsdatei beibehalten, wenn die Audioaufnahme aktiviert wurde.
 
 
 ```C++

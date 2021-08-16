@@ -48,7 +48,7 @@ using Microsoft.Ink;
 
 
 
-Als Nächstes wird in der AutoClaims-Klasse eine geschachtelte Klasse definiert und ein `InkLayer` Array von vier `InkLayer` -Objekten deklariert. (InkLayer enthält ein [Microsoft.Ink.Ink-Objekt](/previous-versions/ms583670(v=vs.100)) zum Speichern von Freidruck sowie [System.Drawing.Color](/dotnet/api/system.drawing.color?view=netcore-3.1) und **boolesche** Werte zum Speichern der Farbe und des ausgeblendeten Zustands der Ebene.) Ein fünftes Ink-Objekt wird deklariert, um InkPicture zu verarbeiten, wenn alle [InkPicture-Ebenen](/previous-versions/ms583740(v=vs.100)) ausgeblendet sind.
+Als Nächstes wird in der AutoClaims-Klasse eine geschachtelte Klasse definiert und ein `InkLayer` Array von vier `InkLayer` -Objekten deklariert. (InkLayer enthält ein [Microsoft.Ink.Ink-Objekt](/previous-versions/ms583670(v=vs.100)) zum Speichern von Freidruck sowie [System.Drawing.Color](/dotnet/api/system.drawing.color?view=netcore-3.1) und **boolesche** Werte zum Speichern der Farbe und des ausgeblendeten Zustands der Ebene.) Ein fünftes Ink-Objekt wird für die Verarbeitung von InkPicture deklariert, wenn alle [InkPicture-Ebenen](/previous-versions/ms583740(v=vs.100)) ausgeblendet sind.
 
 
 ```VB
@@ -160,7 +160,7 @@ inkPictVehicle.DefaultDrawingAttributes.Color = inkLayers[lstAnnotationLayer.Sel
 
 ## <a name="redrawing-the-inkpicture-control"></a>Neuzeichnung des InkPicture-Steuerelements
 
-Im [geerbten](/previous-versions/ms583740(v=vs.100)) Paint des InkPicture-Steuerelements werden die Ink-Ebenen überprüft, um zu bestimmen, welche ausgeblendet sind. [](/dotnet/api/system.windows.forms.control.paint?view=netcore-3.1) Wenn eine Ebene nicht ausgeblendet ist, zeigt die Ereignisprozedur sie mithilfe der Draw-Methode der [Renderer-Eigenschaft](/previous-versions/ms582196(v=vs.100)) an. [](/previous-versions/ms828488(v=msdn.10)) Wenn Sie im Objektbrowser nachschauen, sehen Sie, dass die Microsoft.Ink.InkPicture.Renderer-Eigenschaft als [Microsoft.Ink.Renderer-Objekt definiert](/previous-versions/ms828481(v=msdn.10)) ist:
+Im geerbten Paint des InkPicture-Steuerelements werden die [InkPicture-Ebenen](/previous-versions/ms583740(v=vs.100)) überprüft, um zu bestimmen, welche ausgeblendet sind. [](/dotnet/api/system.windows.forms.control.paint?view=netcore-3.1) Wenn eine Ebene nicht ausgeblendet ist, zeigt die Ereignisprozedur sie mithilfe der Draw-Methode der [Renderer-Eigenschaft](/previous-versions/ms582196(v=vs.100)) an. [](/previous-versions/ms828488(v=msdn.10)) Wenn Sie im Objektbrowser nachschauen, sehen Sie, dass die Microsoft.Ink.InkPicture.Renderer-Eigenschaft als [Microsoft.Ink.Renderer-Objekt definiert](/previous-versions/ms828481(v=msdn.10)) ist:
 
 
 ```VB
@@ -284,7 +284,7 @@ private void lstAnnotationLayer_SelectedIndexChanged(object sender, System.Event
 
 ## <a name="changing-the-visibility-of-an-ink-layer"></a>Ändern der Sichtbarkeit einer Ink-Schicht
 
-Der Ereignishandler überprüft zunächst, ob sich die Auswahl geändert hat und ob das InkPicture-Steuerelement derzeit keine `CheckedChanged` [InkPicture-Funktion](/previous-versions/ms583740(v=vs.100)) sammelt. Anschließend wird der ausgeblendete Status der ausgewählten InkPicture-Ebene aktualisiert, und das InkEnabled-Steuerelement des InkPicture-Steuerelements wird auf **FALSE**, festgelegt.
+Der Ereignishandler überprüft zunächst, ob sich die Auswahl geändert hat und ob das `CheckedChanged` InkPicture-Steuerelement derzeit keine [InkPicture-Daten](/previous-versions/ms583740(v=vs.100)) sammelt. Anschließend wird der ausgeblendete Status der ausgewählten InkPicture-Ebene aktualisiert, und das InkEnabled-Steuerelement des InkPicture-Steuerelements wird auf **FALSE**, festgelegt.
 
 Als Nächstes wird die InkEnabled-Eigenschaft des InkPicture-Steuerelements auf **FALSE** festgelegt, bevor die Ink-Eigenschaft aktualisiert wird.
 

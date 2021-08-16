@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Preferred-GC-Site-Attribut
-description: Das Attribut "ms-DS-Preferred-GC-Site" wird vom Sicherheits Konten-Manager für die Gruppen Erweiterung während der tokenbewertung verwendet.
+description: Das attribut ms-DS-Preferred-GC-Site wird vom Sicherheitskonten-Manager für die Gruppenerweiterung während der Tokenauswertung verwendet.
 ms.assetid: f42d3787-4063-4804-a7b5-4798516ad47e
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-Preferred-GC-Site-Attribut AD-Schema
-- "\"msDS-Preferred-GC-Site Attribute ad Schema\""
+- MS-DS-Preferred-GC-Site-Attribut AD-Schema
+- AD-Schema des msDS-Preferred-GC-Site-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,42 +14,42 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 172e12758ba0b365fa195cb4e1384c161cea3d14
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e9ed4dc19bd3e75caad7f2fb0edd90584ec9e157942de441a873a170eee41766
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104213771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117838140"
 ---
 # <a name="ms-ds-preferred-gc-site-attribute"></a>ms-DS-Preferred-GC-Site-Attribut
 
-Das Attribut " **ms-DS-Preferred-GC-Site** " wird vom Sicherheits Konten-Manager für die Gruppen Erweiterung während der tokenbewertung verwendet.
+Das **attribut ms-DS-Preferred-GC-Site** wird vom Sicherheitskonten-Manager für die Gruppenerweiterung während der Tokenauswertung verwendet.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-bevorzugt-GC-Site                 |
-| LDAP-Display-Name | MSDS-bevorzugt-GC-Site                  |
+| CN                | ms-DS-Preferred-GC-Site                 |
+| Ldap-Anzeigename | msDS-Preferred-GC-Site                  |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | Domänen Administrator                    |
-| Aktualisierungshäufigkeit  | Nach Ermessen des Administrators.      |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                    |
+| Updatehäufigkeit  | Nach Ermessen des Administrators.      |
 | Attribute-Id      | 1.2.840.113556.1.4.1444                 |
-| System-ID-GUID    | d921b50a-0ab2-42cd-87f6-09cf83a91854    |
+| System-Id-Guid    | d921b50a-0ab2-42cd-87f6-09cf83a91854    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,16 +57,16 @@ Das Attribut " **ms-DS-Preferred-GC-Site** " wird vom Sicherheits Konten-Manager
 |------------------------|-------------------------------------------------------------|
 | Link-ID                | \-                                                          |
 | MAPI-Id                | \-                                                          |
-| System-Only            | False                                                       |
-| Ist-einwertig       | Richtig                                                        |
-| Ist indiziert             | False                                                       |
-| Im globalen Katalog      | False                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                |
+| System-Only            | Falsch                                                       |
+| Is-Single-Valued       | Richtig                                                        |
+| Ist indiziert             | Falsch                                                       |
+| Im globalen Katalog      | Falsch                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                |
 | Range-Lower            | \-                                                          |
 | Range-Upper            | \-                                                          |
 | Search-Flags           | 0x00000000                                                  |
 | System-Flags           | 0x00000010                                                  |
-| In verwendete Klassen        | [**NTDS-Site-Settings**](c-ntdssitesettings.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Site-Einstellungen**](c-ntdssitesettings.md)<br/> |
 
 
 
@@ -78,16 +78,16 @@ Das Attribut " **ms-DS-Preferred-GC-Site** " wird vom Sicherheits Konten-Manager
 |------------------------|-------------------------------------------------------------|
 | Link-ID                | \-                                                          |
 | MAPI-Id                | \-                                                          |
-| System-Only            | False                                                       |
-| Ist-einwertig       | Richtig                                                        |
-| Ist indiziert             | False                                                       |
-| Im globalen Katalog      | False                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                |
+| System-Only            | Falsch                                                       |
+| Is-Single-Valued       | Richtig                                                        |
+| Ist indiziert             | Falsch                                                       |
+| Im globalen Katalog      | Falsch                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                |
 | Range-Lower            | \-                                                          |
 | Range-Upper            | \-                                                          |
 | Search-Flags           | 0x00000000                                                  |
 | System-Flags           | 0x00000010                                                  |
-| In verwendete Klassen        | [**NTDS-Site-Settings**](c-ntdssitesettings.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Site-Einstellungen**](c-ntdssitesettings.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Das Attribut " **ms-DS-Preferred-GC-Site** " wird vom Sicherheits Konten-Manager
 |------------------------|-------------------------------------------------------------|
 | Link-ID                | \-                                                          |
 | MAPI-Id                | \-                                                          |
-| System-Only            | False                                                       |
-| Ist-einwertig       | Richtig                                                        |
-| Ist indiziert             | False                                                       |
-| Im globalen Katalog      | False                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                |
+| System-Only            | Falsch                                                       |
+| Is-Single-Valued       | Richtig                                                        |
+| Ist indiziert             | Falsch                                                       |
+| Im globalen Katalog      | Falsch                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                |
 | Range-Lower            | \-                                                          |
 | Range-Upper            | \-                                                          |
 | Search-Flags           | 0x00000000                                                  |
 | System-Flags           | 0x00000010                                                  |
-| In verwendete Klassen        | [**NTDS-Site-Settings**](c-ntdssitesettings.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Site-Einstellungen**](c-ntdssitesettings.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Das Attribut " **ms-DS-Preferred-GC-Site** " wird vom Sicherheits Konten-Manager
 |------------------------|-------------------------------------------------------------|
 | Link-ID                | \-                                                          |
 | MAPI-Id                | \-                                                          |
-| System-Only            | False                                                       |
-| Ist-einwertig       | Richtig                                                        |
-| Ist indiziert             | False                                                       |
-| Im globalen Katalog      | False                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                |
+| System-Only            | Falsch                                                       |
+| Is-Single-Valued       | Richtig                                                        |
+| Ist indiziert             | Falsch                                                       |
+| Im globalen Katalog      | Falsch                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                |
 | Range-Lower            | \-                                                          |
 | Range-Upper            | \-                                                          |
 | Search-Flags           | 0x00000000                                                  |
 | System-Flags           | 0x00000010                                                  |
-| In verwendete Klassen        | [**NTDS-Site-Settings**](c-ntdssitesettings.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Site-Einstellungen**](c-ntdssitesettings.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Das Attribut " **ms-DS-Preferred-GC-Site** " wird vom Sicherheits Konten-Manager
 |------------------------|-------------------------------------------------------------|
 | Link-ID                | \-                                                          |
 | MAPI-Id                | \-                                                          |
-| System-Only            | False                                                       |
-| Ist-einwertig       | Richtig                                                        |
-| Ist indiziert             | False                                                       |
-| Im globalen Katalog      | False                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                |
+| System-Only            | Falsch                                                       |
+| Is-Single-Valued       | Richtig                                                        |
+| Ist indiziert             | Falsch                                                       |
+| Im globalen Katalog      | Falsch                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                |
 | Range-Lower            | \-                                                          |
 | Range-Upper            | \-                                                          |
 | Search-Flags           | 0x00000000                                                  |
 | System-Flags           | 0x00000010                                                  |
-| In verwendete Klassen        | [**NTDS-Site-Settings**](c-ntdssitesettings.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Site-Einstellungen**](c-ntdssitesettings.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Das Attribut " **ms-DS-Preferred-GC-Site** " wird vom Sicherheits Konten-Manager
 |------------------------|-------------------------------------------------------------|
 | Link-ID                | \-                                                          |
 | MAPI-Id                | \-                                                          |
-| System-Only            | False                                                       |
-| Ist-einwertig       | Richtig                                                        |
-| Ist indiziert             | False                                                       |
-| Im globalen Katalog      | False                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                |
+| System-Only            | Falsch                                                       |
+| Is-Single-Valued       | Richtig                                                        |
+| Ist indiziert             | Falsch                                                       |
+| Im globalen Katalog      | Falsch                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                |
 | Range-Lower            | \-                                                          |
 | Range-Upper            | \-                                                          |
 | Search-Flags           | 0x00000000                                                  |
 | System-Flags           | 0x00000010                                                  |
-| In verwendete Klassen        | [**NTDS-Site-Settings**](c-ntdssitesettings.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Site-Einstellungen**](c-ntdssitesettings.md)<br/> |
 
 
 

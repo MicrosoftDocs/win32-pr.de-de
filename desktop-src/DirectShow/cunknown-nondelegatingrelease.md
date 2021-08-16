@@ -1,7 +1,7 @@
 ---
-description: 'Dekremente den Verweis Zähler für das Objekt. Diese Methode implementiert die inondelegatingunknown:: nondelegatingrelease-Methode.'
+description: Dekrementt den Verweiszähler für das -Objekt. Diese Methode implementiert die INonDelegatingUnknown::NonDelegatingRelease-Methode.
 ms.assetid: 58610f7d-5524-450f-a0f8-b299944abc78
-title: Cunknown. nondelegatingrelease-Methode (ComBase. h)
+title: CUnknown.NonDelegatingRelease-Methode (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ec709d4b636eea6a145f9a24a868ad5c495e4477
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1ac5145e1776602c5bb358805c45ec271766fe918b7924d948e286ae32b31794
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372667"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117821954"
 ---
-# <a name="cunknownnondelegatingrelease-method"></a>Cunknown. nondelegatingrelease-Methode
+# <a name="cunknownnondelegatingrelease-method"></a>CUnknown.NonDelegatingRelease-Methode
 
-Dekremente den Verweis Zähler für das Objekt. Diese Methode implementiert die **inondelegatingunknown:: nondelegatingrelease** -Methode.
+Dekrementt den Verweiszähler für das -Objekt. Diese Methode implementiert die **INonDelegatingUnknown::NonDelegatingRelease-Methode.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Verweis Zähler zurück.
+Gibt den Verweiszähler zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Verweis Zähler Null erreicht, löscht das Objekt sich selbst.
+Wenn der Verweiszähler 0 (null) erreicht, löscht sich das Objekt selbst.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Wenn der Verweis Zähler Null erreicht, löscht das Objekt sich selbst.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

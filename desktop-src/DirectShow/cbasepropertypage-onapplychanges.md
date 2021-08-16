@@ -46,7 +46,7 @@ Die Basisklassenimplementierung gibt S \_ OK zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die [**CBasePropertyPage::Apply-Methode**](cbasepropertypage-apply.md) ruft auf, wenn `OnApplyChanges` das [**CBasePropertyPage::m \_ bDirty-Flag**](cbasepropertypage-m-bdirty.md) **TRUE ist.** Überschreiben `OnApplyChanges` Sie , um die Änderungen zu verarbeiten und m **\_ bDirty auf** FALSE **zurückzusetzen.**
+Die [**CBasePropertyPage::Apply-Methode**](cbasepropertypage-apply.md) ruft auf, wenn `OnApplyChanges` das [**CBasePropertyPage::m \_ bDirty-Flag**](cbasepropertypage-m-bdirty.md) **TRUE ist.** Überschreiben Sie , um die Änderungen zu verarbeiten, und `OnApplyChanges` setzen Sie m **\_ bDirty auf** FALSE **zurück.**
 
 ## <a name="examples"></a>Beispiele
 

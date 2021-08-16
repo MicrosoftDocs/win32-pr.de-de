@@ -1,7 +1,7 @@
 ---
 description: Die LABELED \_ DWORD-Struktur definiert eine Bezeichnung, die angezeigt wird, wenn ein bestimmter DWORD-Eigenschaftswert erkannt wird.
 ms.assetid: 1aed3226-6d69-41b0-860b-4ffb5b905f1a
-title: LABELED_DWORD -Struktur (Netmon.h)
+title: LABELED_DWORD-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118364845"
 ---
-# <a name="labeled_dword-structure"></a>LABELED \_ DWORD-Struktur
+# <a name="labeled_dword-structure"></a>BEZEICHNETE \_ DWORD-Struktur
 
 Die **LABELED \_ DWORD-Struktur** definiert eine Bezeichnung, die angezeigt wird, wenn ein bestimmter DWORD-Eigenschaftswert erkannt wird.
 
@@ -56,7 +56,7 @@ Textbeschreibung oder Bezeichnung, die angezeigt wird, wenn der im **Value-Membe
 
 ## <a name="remarks"></a>Hinweise
 
-Der **lpLabeledDwordTable-Member** der [SET-Struktur](set.md) verweist auf ein Array von **SET-Strukturen,** die einen oder mehrere **Label-Member** der DWORD-Wertpaare definieren. Die Paare werden verwendet, wenn Sie eine Bezeichnung statt eines bestimmten DWORD-Werts anzeigen möchten, der im Protokollpaket gefunden wird.
+Der **lpLabeledDwordTable-Member** der [SET-Struktur](set.md) verweist auf ein Array von **SET-Strukturen,** die ein oder mehrere **Label-Member** der DWORD-Wertpaare definieren. Die Paare werden verwendet, wenn Sie anstelle eines bestimmten DWORD-Werts, der sich im Protokollpaket befindet, eine Bezeichnung anzeigen möchten.
 
 ## <a name="requirements"></a>Anforderungen
 

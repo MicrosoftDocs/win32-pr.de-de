@@ -122,7 +122,7 @@ Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Virtua
 **VDS_H_DEGRADED**  
 
 
-[**VDS_HWPROVIDER_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_hwprovider_type) Hinzugefügte Enumerationswerte:
+[**VDS_HWPROVIDER_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_hwprovider_type) Enumeration hinzugefügte Werte:
 
 **VDS_HWT_SAS**  
 **VDS_HWT_HYBRID**  
@@ -174,7 +174,7 @@ Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Virtua
 **VDS_LT_RAID61**  
 
 
-[**VDS_OBJECT_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_object_type) Enumerations-Mehrwerte:
+[**VDS_OBJECT_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_object_type) Enumeration hinzugefügte Werte:
 
 **VDS_OT_STORAGE_POOL**  
 **VDS_OT_VDISK**  
@@ -186,25 +186,25 @@ Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Virtua
 **VDS_DRS_REMOVED**  
 
 
-[**VDS_PROVIDER_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_provider_flag) enumeration added values (Enumerationserumeration hinzugefügte Werte):
+[**VDS_PROVIDER_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_provider_flag) Hinzugefügte Enumerationswerte:
 
 **VDS_PF_SUPPORT_MIRROR**  
 **VDS_PF_SUPPORT_RAID5**  
 
 
-[**VDS_PROVIDER_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_provider_type) Enumerations-Mehrwerte:
+[**VDS_PROVIDER_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_provider_type) Hinzugefügte Enumerationswerte:
 
 **VDS_PT_VIRTUALDISK**  
 **VDS_PT_MAX**  
 
 
-[**VDS_SERVICE_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_service_flag) Enumerations-Mehrwerte:
+[**VDS_SERVICE_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_service_flag) Hinzugefügte Enumerationswerte:
 
 **VDS_SVF_SUPPORT_MIRROR**  
 **VDS_SVF_SUPPORT_RAID5**  
 
 
-[**VDS_SUB_SYSTEM_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_sub_system_flag) Enumerations-Mehrwerte:
+[**VDS_SUB_SYSTEM_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_sub_system_flag) Hinzugefügte Enumerationswerte:
 
 **VDS_SF_SUPPORTS_LUN_NUMBER**  
 **VDS_SF_SUPPORTS_MIRRORED_CACHE**  
@@ -219,7 +219,7 @@ Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Virtua
 **VDS_TS_RESTRIPING**  
 
 
-[**VDS_VERSION_SUPPORT_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_version_support_flag) Enumerations-Mehrwerte:
+[**VDS_VERSION_SUPPORT_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_version_support_flag) Hinzugefügte Enumerationswerte:
 
 **VDS_VSF_2_0**  
 **VDS_VSF_2_1**  
@@ -233,18 +233,18 @@ Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Virtua
 
 ## <a name="modifications-to-existing-vds-structures"></a>Änderungen an vorhandenen VDS-Strukturen
 
-[**VDS_CONTROLLER_NOTIFICATION-Struktur**](/windows/desktop/api/Vds/ns-vds-vds_controller_notification) wurden **ulEvent-Werte** hinzugefügt:
+[**VDS_CONTROLLER_NOTIFICATION**](/windows/desktop/api/Vds/ns-vds-vds_controller_notification) Struktur wurden **ulEvent-Werte** hinzugefügt:
 
 VDS_NF_CONTROLLER_MODIFY  
 VDS_NF_CONTROLLER_REMOVED  
 
 
-[**VDS_DRIVE_NOTIFICATION-Struktur**](/windows/desktop/api/Vds/ns-vds-vds_drive_notification) wurde **ulEvent-Wert** hinzugefügt:
+[**VDS_DRIVE_NOTIFICATION-Struktur**](/windows/desktop/api/Vds/ns-vds-vds_drive_notification) wurde **ein ulEvent-Wert** hinzugefügt:
 
 VDS_NF_DRIVE_REMOVED  
 
 
-[**VDS_PORT_NOTIFICATION-Struktur**](/windows/desktop/api/Vds/ns-vds-vds_port_notification) wurden **ulEvent-Werte** hinzugefügt:
+[**VDS_PORT_NOTIFICATION-Struktur**](/windows/desktop/api/Vds/ns-vds-vds_port_notification) **wurden ulEvent-Werte** hinzugefügt:
 
 VDS_NF_PORT_MODIFY  
 VDS_NF_PORT_REMOVED  

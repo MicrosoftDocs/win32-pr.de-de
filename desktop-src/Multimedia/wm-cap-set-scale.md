@@ -3,7 +3,7 @@ title: WM_CAP_SET_SCALE (Vfw.h)
 description: Die WM \_ CAP \_ SET \_ SCALE-Meldung aktiviert oder deaktiviert die Skalierung der Vorschauvideobilder.
 ms.assetid: f15f1d18-2c5a-40c1-baa1-0d18549bee23
 keywords:
-- WM_CAP_SET_SCALE-Nachricht Windows Multimedia
+- WM_CAP_SET_SCALE von Windows Multimedia
 topic_type:
 - apiref
 api_name:

@@ -1,7 +1,7 @@
 ---
-description: Sucht das Ziel eines shelllinks, auch wenn das Ziel verschoben oder umbenannt wurde.
+description: Sucht nach dem Ziel eines Shelllinks, auch wenn das Ziel verschoben oder umbenannt wurde.
 ms.assetid: 60e119be-8e45-4f63-a381-cad048de0765
-title: Shelllinkobject. Resolve-Methode (Shldisp. h)
+title: ShellLinkObject.Resolve-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: b1cb0760f1ee19acfa10208711e73919fd084ecf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fdff3fd1a606b8dbec35476988497dd14892692a42e6502343716264873c184d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980800"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117857493"
 ---
-# <a name="shelllinkobjectresolve-method"></a>Shelllinkobject. Resolve-Methode
+# <a name="shelllinkobjectresolve-method"></a>ShellLinkObject.Resolve-Methode
 
-Sucht das Ziel eines shelllinks, auch wenn das Ziel verschoben oder umbenannt wurde.
+Sucht nach dem Ziel eines Shelllinks, auch wenn das Ziel verschoben oder umbenannt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,12 +39,12 @@ iRetVal = ShellLinkObject.Resolve(
 
 <dl> <dt>
 
-*fFlags* \[ in\]
+*fFlags* \[ In\]
 </dt> <dd>
 
-Type: **Integer**
+Typ: **Integer**
 
-Flags, die die auszuführende Aktion angeben. Dies kann eine Kombination der folgenden Werte sein:
+Flags, die die zu ergreifende Aktion angeben. Dies kann eine Kombination der folgenden Werte sein:
 
 <dt>
 
@@ -55,7 +55,7 @@ Flags, die die auszuführende Aktion angeben. Dies kann eine Kombination der fol
 
 </dt> <dd>
 
-Wenn der Link nicht aufgelöst werden kann, wird kein Dialogfeld angezeigt. Wenn dieses Flag festgelegt ist, gibt das hochwertige Wort von *fFlags* eine Timeout Dauer in Millisekunden an. Die Methode gibt zurück, wenn der Link nicht innerhalb der Timeout Dauer aufgelöst werden kann. Wenn das höchst wertige Wort auf 0 (null) festgelegt ist, wird die Timeout Dauer standardmäßig auf 3000 Millisekunden (3 Sekunden) festgelegt.
+Zeigt kein Dialogfeld an, wenn der Link nicht aufgelöst werden kann. Wenn dieses Flag festgelegt ist, gibt das obere Wort *fFlags* eine Time out-Dauer in Millisekunden an. Die Methode gibt zurück, wenn der Link nicht innerhalb der Time outdauer aufgelöst werden kann. Wenn das hohe Wort auf 0 (null) festgelegt ist, beträgt die Time outdauer standardmäßig 3.000 Millisekunden (3 Sekunden).
 
 </dd> <dt>
 
@@ -77,7 +77,7 @@ Wenn sich der Link geändert hat, aktualisieren Sie den Pfad und die Liste der B
 
 </dt> <dd>
 
-Aktualisieren Sie die Link Informationen nicht.
+Aktualisieren Sie die Linkinformationen nicht.
 
 </dd> <dt>
 
@@ -88,7 +88,7 @@ Aktualisieren Sie die Link Informationen nicht.
 
 </dt> <dd>
 
-Führen Sie die Suchheuristik nicht aus.
+Führen Sie die Suchhuristik nicht aus.
 
 </dd> <dt>
 
@@ -99,7 +99,7 @@ Führen Sie die Suchheuristik nicht aus.
 
 </dt> <dd>
 
-Verwenden Sie die Nachverfolgung verteilter Links nicht.
+Verwenden Sie keine Verteilte Linknachverfolgung.
 
 </dd> <dt>
 
@@ -110,7 +110,7 @@ Verwenden Sie die Nachverfolgung verteilter Links nicht.
 
 </dt> <dd>
 
-Deaktivieren Sie die Überwachung verteilter Links. Standardmäßig verfolgt die verteilte Link Verfolgung Wechselmedien auf der Grundlage des Volumenamens auf mehrere Geräte. Außerdem wird der UNC-Pfad verwendet, um Remote Dateisysteme zu verfolgen, deren Laufwerk Buchstabe geändert wurde. Wenn Sie dieses Flag festlegen, werden beide Arten der Nachverfolgung deaktiviert.
+Deaktivieren Sie die Nachverfolgung verteilter Links. Standardmäßig verfolgt die Nachverfolgung verteilter Links Wechselmedien auf mehreren Geräten basierend auf dem Volumenamen nach. Außerdem wird der UNC-Pfad zum Nachverfolgen von Remotedateisystemen verwendet, deren Laufwerkbuchstaben geändert wurden. Wenn Sie dieses Flag festlegen, werden beide Nachverfolgungstypen deaktiviert.
 
 </dd> <dt>
 
@@ -121,19 +121,19 @@ Deaktivieren Sie die Überwachung verteilter Links. Standardmäßig verfolgt die
 
 </dt> <dd>
 
-Nennen Sie die Windows Installer.
+Rufen Sie den Windows Installer auf.
 
 </dd> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ist im Grunde identisch [**mit den zu**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishelllinka-resolve)lösenden Funktionen. Weitere Informationen zur Link Auflösung finden Sie im Abschnitt "Hinweise" auf dieser Seite.
+Diese Methode ist in der Funktionalität im Wesentlichen identisch mit [**resolve**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishelllinka-resolve). Weitere Informationen zur Linkauflösung finden Sie im Abschnitt "Hinweise" auf dieser Seite.
 
 ## <a name="examples"></a>Beispiele
 
 Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -167,7 +167,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -235,17 +235,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

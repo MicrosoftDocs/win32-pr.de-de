@@ -38,7 +38,7 @@ Die **InkDivider-Klasse** definiert diese Schnittstellen.
 
 
 
-| Schnittstelle       | BESCHREIBUNG                                                          |
+| Schnittstelle       | Beschreibung                                                          |
 |:----------------|:---------------------------------------------------------------------|
 | **IInkDivider** | Dieses Objekt implementiert die **IInkDivider-COM-Schnittstelle.**<br/> |
 
@@ -52,7 +52,7 @@ Die **InkDivider-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                              | BESCHREIBUNG                                                                                                                                                        |
+| Methode                              | Beschreibung                                                                                                                                                        |
 |:------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Dividieren**](/windows/win32/api/msinkaut15/nf-msinkaut15-iinkdivider-divide) | Gibt ein [**IInkDivisionResult-Objekt**](/windows/desktop/api/msinkaut15/nn-msinkaut15-iinkdivisionresult) zurück, das strukturelle Informationen zu den Strichen im **InkDivider-Objekt** enthält.<br/> |
 
@@ -66,11 +66,11 @@ Die **InkDivider-Klasse** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                             | Zugriffstyp           | BESCHREIBUNG                                                                                                                     |
+| Eigenschaft                                                             | Zugriffstyp           | Beschreibung                                                                                                                     |
 |:---------------------------------------------------------------------|:----------------------|:--------------------------------------------------------------------------------------------------------------------------------|
 | [**LineHeight**](/windows/win32/api/msinkaut15/nf-msinkaut15-iinkdivider-get_lineheight)<br/>               | Lesen/Schreiben<br/> | Ruft die erwartete Schrifthöhe in HIMETRIC-Einheiten ab oder legt diese fest.<br/>                                                      |
 | [**Recognizercontext**](/windows/win32/api/msinkaut15/nf-msinkaut15-iinkdivider-get_recognizercontext)<br/> | Lesen/Schreiben<br/> | Ruft das für die [**Handschrifterkennung verwendete InkRecognizerContext-Objekt**](inkrecognizercontext-class.md) ab oder legt dieses fest.<br/> |
-| [**Striche**](/windows/win32/api/msinkaut15/nf-msinkaut15-iinkdivider-get_strokes)<br/>                     | Lesen/Schreiben<br/> | Ruft die im **InkDivider-Objekt** enthaltene [**InkStrokes-Auflistung**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) ab oder legt diese fest. <br/>     |
+| [**Striche**](/windows/win32/api/msinkaut15/nf-msinkaut15-iinkdivider-get_strokes)<br/>                     | Lesen/Schreiben<br/> | Ruft die im **InkDivider-Objekt** enthaltene [**InkStrokes-Auflistung**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) ab oder legt sie fest. <br/>     |
 
 
 

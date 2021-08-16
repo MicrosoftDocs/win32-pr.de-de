@@ -1,10 +1,10 @@
 ---
-title: Validierte-ms-DS-Behavior-Version-überprüfte Schreibvorgänge
-description: Validierte Schreib-in ms DS-Verhaltens Version.
+title: Überprüfte Schreibvorgänge für MS-DS-Behavior-Version
+description: Überprüfung des Schreibzugriffs auf die MS DS-Verhaltensversion.
 ms.assetid: f0d82a95-6bb9-4704-ab8f-96d1f3c6aedf
 ms.tgt_platform: multiple
 keywords:
-- Validierte-ms-DS-Behavior-Version überprüft AD-Schema
+- Validated-MS-DS-Behavior-Version validated writes AD Schema
 topic_type:
 - apiref
 api_name:
@@ -13,24 +13,24 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3175c2ec3a1dd589a4b75654cb134cb853d954ee
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 1584fd9aa773aa8bd51e32b21f971f31cdb9792dd52d26e9bea58c8d624da5b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117835737"
 ---
-# <a name="validated-ms-ds-behavior-version-validated-writes"></a>Validierte-ms-DS-Behavior-Version-überprüfte Schreibvorgänge
+# <a name="validated-ms-ds-behavior-version-validated-writes"></a>Überprüfte Schreibvorgänge für MS-DS-Behavior-Version
 
-Validierte Schreib-in ms DS-Verhaltens Version.
+Überprüfung des Schreibzugriffs auf die MS DS-Verhaltensversion.
 
 
 
 | Eingabe | Wert |
 |--------------|-------------------------------------------|
-| CN           | Validiert-ms-DS-Behavior-Version          |
-| Anzeigename | Validierte Schreib-in ms DS-Verhaltens Version |
-| Rights-GUID  | d31a8757-2447-4545-8081-3bb610cacbf2      |
+| CN           | Validated-MS-DS-Behavior-Version          |
+| Anzeigename | Überprüfung des Schreibzugriffs auf die MS DS-Verhaltensversion |
+| Rechte-GUID  | d31a8757-2447-4545-8081-3bb610cacbf2      |
 
 
 
@@ -45,7 +45,7 @@ Validierte Schreib-in ms DS-Verhaltens Version.
 | Eingabe | Wert |
 |-------------------------|------------------------------------------|
 | Applies-To              | [**NTDS-DSA**](c-ntdsdsa.md)<br/> |
-| Lokalisierung-Display-ID | 81                                       |
+| Lokalisierungsanzeige-ID | 81                                       |
 
 
 

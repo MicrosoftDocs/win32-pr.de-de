@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_SET_CALLBACK_FRAME-Nachricht (Vfw.h)
-description: Die \_ WM CAP \_ SET \_ CALLBACK \_ FRAME-Nachricht legt eine Vorschaurückruffunktion in der Anwendung fest. AVICap ruft dieses Verfahren auf, wenn das Erfassungsfenster Vorschauframes erfasst. Sie können diese Nachricht explizit oder mithilfe des Makros capSetCallbackOnFrame senden.
+title: WM_CAP_SET_CALLBACK_FRAME (Vfw.h)
+description: Die MELDUNG WM \_ CAP \_ SET \_ CALLBACK FRAME legt eine \_ Vorschaurückruffunktion in der Anwendung fest. AVICap ruft dieses Verfahren auf, wenn das Erfassungsfenster Vorschauframes erfasst. Sie können diese Nachricht explizit oder mithilfe des Makros capSetCallbackOnFrame senden.
 ms.assetid: 3882e6f6-c48c-4e50-9697-cbdf5b9342a5
 keywords:
-- WM_CAP_SET_CALLBACK_FRAME nachricht Windows Multimedia
+- WM_CAP_SET_CALLBACK_FRAME-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118369508"
 ---
 # <a name="wm_cap_set_callback_frame-message"></a>WM \_ CAP \_ SET \_ CALLBACK \_ FRAME-Meldung
 
-Die **WM CAP SET \_ \_ \_ CALLBACK \_ FRAME-Nachricht** legt eine Vorschaurückruffunktion in der Anwendung fest. AVICap ruft dieses Verfahren auf, wenn das Erfassungsfenster Vorschauframes erfasst. Sie können diese Nachricht explizit oder mithilfe des [**Makros capSetCallbackOnFrame**](/windows/desktop/api/Vfw/nf-vfw-capsetcallbackonframe) senden.
+Die **MELDUNG WM CAP SET \_ \_ \_ CALLBACK \_ FRAME** legt eine Vorschaurückruffunktion in der Anwendung fest. AVICap ruft dieses Verfahren auf, wenn das Erfassungsfenster Vorschauframes erfasst. Sie können diese Nachricht explizit oder mithilfe des [**Makros capSetCallbackOnFrame**](/windows/desktop/api/Vfw/nf-vfw-capsetcallbackonframe) senden.
 
 
 ```C++
@@ -41,17 +41,17 @@ lParam = (LPARAM) (LPVOID) (fpProc);
 <span id="fpProc"></span><span id="fpproc"></span><span id="FPPROC"></span>*fpProc*
 </dt> <dd>
 
-Zeiger auf die Vorschaurückruffunktion vom Typ [**capVideoStreamCallback.**](/windows/desktop/api/Vfw/nc-vfw-capvideocallback) Geben Sie **NULL** für diesen Parameter an, um eine zuvor installierte Rückruffunktion zu deaktivieren.
+Zeiger auf die Vorschaurückruffunktion vom Typ [**capVideoStreamCallback**](/windows/desktop/api/Vfw/nc-vfw-capvideocallback). Geben **Sie NULL** für diesen Parameter an, um eine zuvor installierte Rückruffunktion zu deaktivieren.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **TRUE** zurück, wenn erfolgreich, oder **FALSE,** wenn die Streamingerfassung oder eine Singleframe-Erfassungssitzung ausgeführt wird.
+Gibt **TRUE zurück,** wenn erfolgreich, **oder FALSE,** wenn streaming capture oder eine Singleframe-Erfassungssitzung in Bearbeitung ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Das Erfassungsfenster ruft die Rückruffunktion auf, bevor Vorschauframes angezeigt werden. Dadurch kann eine Anwendung den Frame bei Bedarf ändern. Diese Rückruffunktion wird während der Videoaufzeichnung im Streaming nicht verwendet.
+Das Erfassungsfenster ruft die Rückruffunktion auf, bevor Vorschauframes angezeigt werden. Dadurch kann eine Anwendung den Frame bei Wunsch ändern. Diese Rückruffunktion wird während der Streamingvideoaufnahme nicht verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,7 +72,7 @@ Das Erfassungsfenster ruft die Rückruffunktion auf, bevor Vorschauframes angeze
 [Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Capture Messages](video-capture-messages.md)
+[Videoaufnahmenachrichten](video-capture-messages.md)
 </dt> </dl>
 
  

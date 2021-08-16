@@ -1,43 +1,43 @@
 ---
-title: Objekt. CPP
-description: In der Beispiel Anbieter Komponente befindet sich ein Codebeispiel für Objektlisten, einschließlich der Verwendung eines Filters, in Object. cpp. In der folgenden Tabelle sind die unterstützten Methoden aufgeführt.
+title: Objekt. Cpp
+description: In der Beispielanbieterkomponente befindet sich ein Codebeispiel für Objektlisten, einschließlich der Verwendung eines Filters, in Object.cpp. Die unterstützten Methoden sind in der folgenden Tabelle aufgeführt.
 ms.assetid: cb59ab96-c58e-47cb-9031-5432e83771bd
 ms.tgt_platform: multiple
 keywords:
-- Objekt. CPP
+- Objekt. Cpp
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 400cce3ec4be4e7597a87aac2fe9d70fc29957dd
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d0051fc69b5bf5ca4375ad30349abd518db1326dee04178c839d7ac0df7dd920
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100562"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117839380"
 ---
-# <a name="objectcpp"></a>Objekt. CPP
+# <a name="objectcpp"></a>Objekt. Cpp
 
-In der Beispiel Anbieter Komponente befindet sich ein Codebeispiel für Objektlisten, einschließlich der Verwendung eines Filters, in Object. cpp. In der folgenden Tabelle sind die unterstützten Methoden aufgeführt.
+In der Beispielanbieterkomponente befindet sich ein Codebeispiel für Objektlisten, einschließlich der Verwendung eines Filters, in Object.cpp. Die unterstützten Methoden sind in der folgenden Tabelle aufgeführt.
 
 
 
-| Object                               | BESCHREIBUNG                                 |
+| Object                               | Beschreibung                                 |
 |--------------------------------------|---------------------------------------------|
-| **Objecttypelist:: objecttypelist**   | Ersteller: Erstellen Sie eine Liste mit dem Filter.     |
-| **Objecttypelist:: ~ objecttypelist**  | Standardedekonstruktor.                        |
-| **Objecttypelist:: getcurrentobject** | Rufen Sie das aktuelle-Objekt aus der Liste ab.  |
-| **Objecttypelist:: Next**             | Überstürzt den Index.                             |
-| **Objecttypelist:: Reset**            | Setzen Sie den Index zurück.                            |
-| **Isvalidfilter**                    | Überprüfen Sie die Integrität des Filters.          |
-| **Builddefaultobjectarray**          | Erstellen Sie mithilfe des Filters ein Array von-Objekten. |
-| **Buildobjectarray**                 | Erstellen Sie ein Objekt Array.                      |
+| **ObjectTypeList::ObjectTypeList**   | Ersteller: Erstellen Sie eine Liste mithilfe des Filters.     |
+| **ObjectTypeList::~ObjectTypeList**  | Standard-Destruktor.                        |
+| **ObjectTypeList::GetCurrentObject** | Rufen Sie das aktuelle -Objekt aus der Liste ab.  |
+| **ObjectTypeList::Next**             | Der Index wird gewertet.                             |
+| **ObjectTypeList::Reset**            | Setzen Sie den Index zurück.                            |
+| **IsValidFilter**                    | Überprüfen Sie die Integrität des Filters.          |
+| **BuildDefaultObjectArray**          | Erstellen Sie mithilfe des Filters ein Array von -Objekten. |
+| **BuildObjectArray**                 | Erstellen Sie ein Objektarray.                      |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

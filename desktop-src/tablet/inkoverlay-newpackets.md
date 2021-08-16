@@ -1,5 +1,5 @@
 ---
-description: Tritt ein, wenn das Ink-Collecto ein Paket empfängt.
+description: Tritt ein, wenn der Ink Collecto ein Paket rreceive.
 ms.assetid: 26d5a3eb-430a-4e21-8a3f-fdec5005cd6e
 title: InkOverlay.NewPackets-Ereignis (Msinkaut.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118219197"
 ---
 # <a name="inkoverlaynewpackets-event"></a>InkOverlay.NewPackets-Ereignis
 
-Tritt auf, wenn der Ink collecto rreceives ein Paket empfängt.
+Tritt ein, wenn der Ink Collecto ein Paket rreceive
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,7 +36,7 @@ void NewPackets(
 *Cursor* \[ In\]
 </dt> <dd>
 
-Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das [**NewInAirPackets-Ereignis**](inkcollector-newinairpackets.md) generiert hat.
+Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das [**NewInAirPackets-Ereignis generiert**](inkcollector-newinairpackets.md) hat.
 
 </dd> <dt>
 
@@ -59,7 +59,7 @@ Die Anzahl der empfangenen Pakete für ein [**IInkStrokeDisp-Objekt.**](/windows
 
 Ein Array, das die ausgewählten Daten für das Paket enthält.
 
-Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der COM-Bibliothek.](using-the-com-library.md)
+Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der COM-Bibliothek](using-the-com-library.md).
 
 </dd> </dl>
 
@@ -69,13 +69,13 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Pakete werden empfangen, während ein Strich erfasst wird. Paketereignisse treten schnell auf, und ein [**NewPackets-Ereignishandler**](inkcollector-newpackets.md) muss schnell sein oder die Leistung beeinträchtigt werden.
+Pakete werden empfangen, während ein Strich erfasst wird. Paketereignisse treten schnell auf, und ein [**NewPackets-Ereignishandler**](inkcollector-newpackets.md) muss schnell sein oder die Leistung beeinträchtigen.
 
-Diese Ereignismethode wird in den \_ \_ Dispatch-Only-Schnittstellen IInkCollectorEvents, IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ ICENewPackets definiert.
+Diese Ereignismethode wird in den \_ Dispatch-Schnittstellen IInkCollectorEvents, \_ IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ ICENewPackets definiert.
 
-Dieses Ereignis sollte sorgfältig verwendet werden, da es negative Auswirkungen auf die Ink-Leistung haben kann, wenn zu viel Code in den Ereignishandlern ausgeführt wird.
+Dieses Ereignis sollte sorgfältig verwendet werden, da es sich negativ auf die Ink-Leistung auswirken kann, wenn in den Ereignishandlern zu viel Code ausgeführt wird.
 
-Verwenden Sie die [**DesiredPacketDescription-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-get_desiredpacketdescription) des Ink-Collectorobjekts, um festzulegen, welche Eigenschaften in diesem Array enthalten sind. Das Array, das der *PacketData-Parameter* zurückgibt, enthält die Daten für diese Eigenschaften.
+Verwenden Sie zum Festlegen der in diesem Array enthaltenen Eigenschaften die [**DesiredPacketDescription-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-get_desiredpacketdescription) des Ink-Collectorobjekts. Das Array, das der *PacketData-Parameter* zurückgibt, enthält die Daten für diese Eigenschaften.
 
 > [!Note]  
 > Obwohl Sie die Paketdaten ändern können, werden diese Änderungen nicht beibehalten oder verwendet.

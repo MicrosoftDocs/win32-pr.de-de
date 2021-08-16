@@ -31,11 +31,11 @@ Es gibt keine Attribute.
 
 
 
-| Element                                   | BESCHREIBUNG                                                                                                             |
+| Element                                   | Beschreibung                                                                                                             |
 |-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | [**Asynchrone**](async.md)<br/>         | Gibt an, ob asynchrone Vorgänge in den generierten Proxyfunktionen enthalten sind.<br/> <br/>         |
 | [**eventArg**](eventarg.md)<br/>   | Gibt an, ob verwandte Ereignisargumente in den generierten Funktionen enthalten sind.<br/> <br/>               |
-| [**Ereignisse**](events.md)<br/>       | Gibt an, ob verknüpfte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/>                        |
+| [**Ereignisse**](events.md)<br/>       | Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/>                        |
 | [**faultInfo**](faultinfo.md)<br/> | Gibt an, ob Parameter, die zum Übergeben von Fehlerinformationen verwendet werden, in generierten Funktionen enthalten sind.<br/> <br/> |
 | [**Vorgang**](operation.md)<br/> | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                                        |
 | [**Porttype**](porttype.md)<br/>   | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                                       |
@@ -59,7 +59,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                         | BESCHREIBUNG                                                    |
+| Element                         | Beschreibung                                                    |
 |---------------------------------|----------------------------------------------------------------|
 | [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
@@ -67,7 +67,7 @@ Es gibt keine Attribute.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieses Element generiert Deklarationen von Memberfunktionen, die den vom Vertrag aufgerufenen Vorgängen entsprechen. Diese Deklarationen sind in einer Form enthalten, die für die Verwendung durch den MIDL-Compiler geeignet ist und in der Regel in IDL-Dateien verwendet werden.
+Dieses Element generiert Deklarationen von Memberfunktionen, die vorgängen entsprechen, die vom Vertrag aufgerufen werden. Diese Deklarationen sind in einer Für den MIDL-Compiler geeigneten Form und werden im Allgemeinen in IDL-Dateien verwendet.
 
 Beispiel:
 

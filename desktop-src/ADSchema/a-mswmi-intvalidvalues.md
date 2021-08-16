@@ -1,11 +1,11 @@
 ---
-title: MS-WMI-intvalidvalues-Attribut
-description: Die gültigen Werte für ein WMI-32-Bit-Ganzzahl-Parameter Objekt.
+title: ms-WMI-intValidValues-Attribut
+description: Die gültigen Werte für ein WMI-32-Bit-Ganzzahlparameterobjekt.
 ms.assetid: 1371b8ee-5712-471b-a1c9-aafe44517dfb
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-WMI-intvalidvalues\"-Attribut, AD-Schema"
-- AD-Schema für das Attribut "mswap-intvalidvalues"
+- MS-WMI-intValidValues-Attribut AD-Schema
+- MSWMI-IntValidValues-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ef1d2a0dc13d25f6fa428f5558132ebaf81f94b5
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 52539ccbb0625383546e4ec53223404c04e36044ee78a7931ab5303261d163c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117837347"
 ---
-# <a name="ms-wmi-intvalidvalues-attribute"></a>MS-WMI-intvalidvalues-Attribut
+# <a name="ms-wmi-intvalidvalues-attribute"></a>ms-WMI-intValidValues-Attribut
 
-Die gültigen Werte für ein WMI-32-Bit-Ganzzahl-Parameter Objekt.
+Die gültigen Werte für ein WMI-32-Bit-Ganzzahlparameterobjekt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-WMI-intvalidvalues                |
-| LDAP-Display-Name | mswap-intvalidvalues                 |
+| CN                | ms-WMI-intValidValues                |
+| Ldap-Anzeigename | msWMI-IntValidValues                 |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | Gruppenrichtlinie-Administrator           |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Gruppenrichtlinie Administrator           |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1631              |
-| System-ID-GUID    | 6af565b6-A749-4b72-9634-3c5d47e6b4e0 |
+| System-ID-GUID    | 6af565f6-a749-4b72-9634-3c5d47e6b4e0 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,11 +56,11 @@ Die gültigen Werte für ein WMI-32-Bit-Ganzzahl-Parameter Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -77,11 +77,11 @@ Die gültigen Werte für ein WMI-32-Bit-Ganzzahl-Parameter Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -98,11 +98,11 @@ Die gültigen Werte für ein WMI-32-Bit-Ganzzahl-Parameter Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -119,11 +119,11 @@ Die gültigen Werte für ein WMI-32-Bit-Ganzzahl-Parameter Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -140,11 +140,11 @@ Die gültigen Werte für ein WMI-32-Bit-Ganzzahl-Parameter Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |

@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht eine Miniaturansichtssymbolleiste, ein aktives Symbolleisten-Steuerelement, das in die Miniaturansichtsvorschau eines Fensters eingebettet ist und verwendet wird, um Zugriff auf die Schlüsselbefehle eines Fensters zu ermöglichen, ohne dass der Benutzer das Fenster der Anwendung wiederherstellen oder aktivieren muss.
+description: Veranschaulicht eine Miniaturansichtssymbolleiste, ein aktives Symbolleisten-Steuerelement, das in die Miniaturansicht eines Fensters eingebettet ist und verwendet wird, um Zugriff auf die wichtigsten Befehle eines Fensters zu ermöglichen, ohne dass der Benutzer das Fenster der Anwendung wiederhergestellt oder aktiviert.
 title: Symbolleistenbeispiel für die Miniaturbild-Taskleiste
 ms.topic: article
 ms.date: 05/31/2018
@@ -18,7 +18,7 @@ ms.locfileid: "118219629"
 ---
 # <a name="taskbar-thumbnail-toolbar-sample"></a>Symbolleistenbeispiel für die Miniaturbild-Taskleiste
 
-Veranschaulicht eine Miniaturansichtssymbolleiste, ein aktives Symbolleisten-Steuerelement, das in die Miniaturansichtsvorschau eines Fensters eingebettet ist und verwendet wird, um Zugriff auf die Schlüsselbefehle eines Fensters zu ermöglichen, ohne dass der Benutzer das Fenster der Anwendung wiederherstellen oder aktivieren muss.
+Veranschaulicht eine Miniaturansichtssymbolleiste, ein aktives Symbolleisten-Steuerelement, das in die Miniaturansicht eines Fensters eingebettet ist und verwendet wird, um Zugriff auf die wichtigsten Befehle eines Fensters zu ermöglichen, ohne dass der Benutzer das Fenster der Anwendung wiederhergestellt oder aktiviert.
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -29,9 +29,9 @@ Dieses Thema enthält folgende Abschnitte:
 -   [Ausführen des Beispiels](#running-the-sample)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-In diesem Beispiel wird gezeigt, wie Sie eine einfache Symbolleiste für eine Vorschau der Taskleistenminiatur bereitstellen. Die Symbolleiste besteht aus drei Schaltflächen. Wenn Sie auf eine Schaltfläche klicken, wird ein Fenster angezeigt, um zu bestätigen, dass die Schaltfläche aktiviert wurde. Die folgenden APIs werden veranschaulicht:
+In diesem Beispiel wird gezeigt, wie Sie eine einfache Symbolleiste für eine Miniaturansicht einer Taskleiste bereitstellen. Die Symbolleiste besteht aus drei Schaltflächen. Wenn Sie auf eine Schaltfläche klicken, wird ein Fenster angezeigt, um zu bestätigen, dass die Schaltfläche aktiviert wurde. Die folgenden APIs werden gezeigt:
 
 -   [**ITaskbarList3::ThumbBarAddButtons**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-itaskbarlist3-thumbbaraddbuttons)
 -   [**ITaskbarList3::ThumbBarSetImageList**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-itaskbarlist3-thumbbarsetimagelist)
@@ -41,7 +41,7 @@ In diesem Beispiel wird gezeigt, wie Sie eine einfache Symbolleiste für eine Vo
 
 
 
-| Product (Produkt)                                | Mindestversion des Produkts |
+| Product (Produkt)                                | Mindestproduktversion |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows 7               |
 | Windows Software Development Kit (SDK) | 7.0                     |
@@ -60,26 +60,26 @@ In diesem Beispiel wird gezeigt, wie Sie eine einfache Symbolleiste für eine Vo
 
 So erstellen Sie das Beispiel über die Eingabeaufforderung:
 
-1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum Projektverzeichnis **TaskbarThumbnailToolbar.**
+1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum **Projektverzeichnis TaskbarThumbnailToolbar.**
 2.  Geben Sie `msbuild ThumbnailToolbar.sln` ein.
 
 So erstellen Sie das Beispiel mit Microsoft Visual Studio (bevorzugt):
 
-1.  Öffnen Sie Windows Explorer, und navigieren Sie zum Projektverzeichnis **TaskbarThumbnailToolbar.**
-2.  Doppelklicken Sie auf das Symbol für die Datei ThumbnailToolbar.sln, um das Projekt in Visual Studio zu öffnen.
+1.  Öffnen Windows Explorer, und navigieren Sie zum **Projektverzeichnis TaskbarThumbnailToolbar.**
+2.  Doppelklicken Sie auf das Symbol für die Datei ThumbnailToolbar.sln, um das Projekt in der Visual Studio.
 3.  Klicken Sie im Menü **Build** (Erstellen) auf **Build Solution** (Projektmappe erstellen).
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-1.  Navigieren Sie mithilfe der Eingabeaufforderung oder Windows Explorer zu dem Verzeichnis, das die neue ausführbare Datei enthält (z. `C:\Program Files\Microsoft SDKs\Windows\v7.0\Samples\WinUI\Shell\AppShellIntegration\TaskbarThumbnailToolbar\Debug` B. ).
+1.  Navigieren Sie über die Eingabeaufforderung oder den Explorer zu dem Verzeichnis, das die neue ausführbare `C:\Program Files\Microsoft SDKs\Windows\v7.0\Samples\WinUI\Shell\AppShellIntegration\TaskbarThumbnailToolbar\Debug` Datei enthält (z. Windows B. ).
 
     -   Wenn Sie die Befehlszeile verwenden, geben Sie `ThumbnailToolbar.exe` ein.
-    -   Doppelklicken Sie bei Verwendung Windows Explorers auf das Symbol für ThumbnailToolbar.exe.
+    -   Wenn Sie Windows Explorer verwenden, doppelklicken Sie auf das Symbol für ThumbnailToolbar.exe.
 
-    Ein neues Fenster mit einer zugeordneten Taskleistenschaltfläche wird geöffnet.
+    Ein neues Fenster wird mit einer zugeordneten Taskleistenschaltfläche geöffnet.
 
-2.  Zeigen Sie mit dem Mauszeiger auf die Taskleistenschaltfläche **ThumbnailToolbar,** damit die Vorschau angezeigt wird. Klicken Sie auf eine der drei Schaltflächen (grün, gelb, rot), die in der Symbolleiste der Vorschau angezeigt werden.
-3.  Klicken Sie im Menü **Datei** des Fensters auf **Beenden,** um das Programm zu beenden.
+2.  Zeigen Sie mit dem Cursor auf die **Taskleistenschaltfläche ThumbnailToolbar,** damit die Vorschau angezeigt wird. Klicken Sie auf eine der drei Schaltflächen (grün, gelb, rot), die auf der Symbolleiste der Vorschau angezeigt werden.
+3.  Klicken **Sie im** Menü Datei des Fensters auf **Beenden,** um das Programm zu beenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

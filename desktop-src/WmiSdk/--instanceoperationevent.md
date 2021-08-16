@@ -26,7 +26,7 @@ ms.locfileid: "118320807"
 ---
 # <a name="__instanceoperationevent-class"></a>\_\_InstanceOperationEvent-Klasse
 
-Die **\_ \_ InstanceOperationEvent-Systemklasse** dient als Basisklasse für alle systeminternen Ereignisse, die sich auf eine -Instanz beziehen.
+Die **\_ \_ InstanceOperationEvent-Systemklasse** dient als Basisklasse für alle systeminternen Ereignisse, die sich auf eine Instanz beziehen.
 
 Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
@@ -43,7 +43,7 @@ class __InstanceOperationEvent : __Event
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ InstanceOperationEvent-Klasse** verfügt über die folgenden Membertypen:
+Die **\_ \_ InstanceOperationEvent-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -53,33 +53,33 @@ Die **\_ \_ InstanceOperationEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**\_SICHERHEITSDESKRIPTOR**
+**\_SICHERHEITSBESCHREIBUNG**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **uint8 array**
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
+Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von [**\_ \_ Ereignis**](--event.md)geerbt.
 
 </dd> <dt>
 
 **TargetInstance**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Objekt**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Instanz, die vom Ereignis betroffen ist. Bei Erstellungsereignissen ist dies die neu erstellte Instanz. Bei Änderungsereignissen ist dies die neue Version der geänderten Instanz. Bei Löschereignissen ist dies die gelöschte Instanz.
+Die vom Ereignis betroffene Instanz. Bei Erstellungsereignissen ist dies die neu erstellte Instanz. Bei Änderungsereignissen ist dies die neue Version der geänderten Instanz. Bei Löschereignissen ist dies die gelöschte Instanz.
 
 </dd> <dt>
 
-**ZEIT \_ ERSTELLT**
+**TIME \_ CREATED**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **uint64**
@@ -88,7 +88,7 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der den Zeitpunkt angibt, zu dem das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen sind im UTC-Format (Coordinated Universal Times) angegeben. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
+Eindeutiger Wert, der den Zeitpunkt angibt, zu dem das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (Coordinated Universal Times) vor. Diese Eigenschaft wird von [**\_ \_ Ereignis**](--event.md)geerbt.
 
 Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
@@ -96,9 +96,9 @@ Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie
 
 ## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ InstanceOperationEvent-Klasse** wird von Event [**\_ \_ abgeleitet.**](--event.md)
+Die **\_ \_ InstanceOperationEvent-Klasse** wird von [**\_ \_ Event**](--event.md)abgeleitet.
 
-Instanzen von **\_ \_ InstanceOperationEvent** werden nicht erstellt, sondern nur Instanzen ihrer Unterklassen. Die folgenden Klassen werden von **\_ \_ InstanceOperationEvent ableiten:**
+Instanzen von **\_ \_ InstanceOperationEvent** werden nicht erstellt, sondern nur Instanzen der zugehörigen Unterklassen. Die folgenden Klassen werden von **\_ \_ InstanceOperationEvent** abgeleitet:
 
 [**\_\_InstanceCreationEvent**](--instancecreationevent.md)
 
@@ -108,29 +108,29 @@ Instanzen von **\_ \_ InstanceOperationEvent** werden nicht erstellt, sondern nu
 
 **Übersicht**
 
-Genau wie es eine WMI-Klasse gibt, die jeden Typ von Systemressource darstellt, der mit WMI verwaltet werden kann, gibt es eine WMI-Klasse, die jeden Typ von WMI-Ereignis darstellt. Wenn ein Ereignis auftritt, das von WMI überwacht werden kann, wird eine Instanz der entsprechenden WMI-Ereignisklasse erstellt. Ein WMI-Ereignis tritt auf, wenn diese Instanz erstellt wird.
+Ebenso wie es eine WMI-Klasse gibt, die jeden Typ von Systemressource darstellt, der mithilfe von WMI verwaltet werden kann, gibt es eine WMI-Klasse, die jeden Typ von WMI-Ereignis darstellt. Wenn ein Ereignis auftritt, das von WMI überwacht werden kann, wird eine Instanz der entsprechenden WMI-Ereignisklasse erstellt. Ein WMI-Ereignis tritt auf, wenn diese Instanz erstellt wird.
 
-Es gibt drei Haupttypen von WMI-Ereignisklassen, die alle von der [**\_ \_**](--event.md) WMI-Ereignisklasse abgeleitet werden: Systeminterne Ereignisse, extrinsische Ereignisse und Timerereignisse. Systeminterne Ereignisse werden wiederum durch drei unterschiedliche Klassen dargestellt, die von der **\_ \_ Event-Klasse** abgeleitet werden: [**\_ \_ NamespaceOperationEvent,**](--namespaceoperationevent.md) **\_ \_ InstanceOperationEvent** und [**\_ \_ ClassOperationEvent**](--classoperationevent.md).
+Es gibt drei Haupttypen von WMI-Ereignisklassen, die alle von der [**\_ \_ Ereignis-WMI-Klasse**](--event.md) abgeleitet sind: Systeminterne Ereignisse, extrinsische Ereignisse und Timerereignisse. Systeminterne Ereignisse werden wiederum durch drei von der **\_ \_ Ereignisklasse** abgeleitete Klassen dargestellt: [**\_ \_ NamespaceOperationEvent,**](--namespaceoperationevent.md) **\_ \_ InstanceOperationEvent** und [**\_ \_ ClassOperationEvent.**](--classoperationevent.md)
 
 Systeminterne Ereignisse
 
-Systeminterne Ereignisse werden verwendet, um eine Ressource zu überwachen, die durch eine Klasse im CIM-Repository dargestellt wird. Jede Ressource wird durch eine Instanz einer Klasse dargestellt. Dies bedeutet, dass die Überwachung einer Ressource mit WMI tatsächlich die Überwachung der Instanzen umfasst, die der Ressource entsprechen.
+Systeminterne Ereignisse werden verwendet, um eine Ressource zu überwachen, die durch eine Klasse im CIM-Repository dargestellt wird. Jede Ressource wird durch eine Instanz einer Klasse dargestellt. Dies bedeutet, dass die Überwachung einer Ressource mithilfe von WMI tatsächlich die Überwachung der Instanzen umfasst, die der Ressource entsprechen.
 
 Systeminterne Ereignisse können auch verwendet werden, um Änderungen an einem Namespace oder einer Klasse im Repository zu überwachen. Die Überwachung von Änderungen an Namespaces oder Klassen ist für Systemadministratoren jedoch von begrenztem Nutzen.
 
-Ein systeminternes Ereignis wird durch eine Instanz einer Klasse dargestellt, die von \_ \_ InstanceOperationEvent, \_ \_ NamespaceOperationEvent oder \_ \_ ClassOperationEvent abgeleitet wird. Alle Änderungen an Instanzen in WMI werden durch die InstanceOperationEvent-Klasse und die von ihr abgeleiteten Klassen \_ \_ dargestellt: \_ \_ InstanceCreationEvent, \_ \_ InstanceModificationEvent und \_ \_ InstanceDeletionEvent.
+Ein systeminternes Ereignis wird durch eine Instanz einer Klasse dargestellt, die von \_ \_ InstanceOperationEvent, \_ \_ NamespaceOperationEvent oder \_ \_ ClassOperationEvent abgeleitet wird. Alle Änderungen an Instanzen in WMI werden durch die \_ \_ InstanceOperationEvent-Klasse und die von ihr abgeleiteten Klassen dargestellt: \_ \_ InstanceCreationEvent, \_ \_ InstanceModificationEvent und \_ \_ InstanceDeletionEvent.
 
-Die Überwachung von Ressourcen mithilfe von WMI umfasst die Überwachung von -Instanzen, und alle Änderungen an -Instanzen werden durch InstanceOperationEvent und die daraus \_ \_ abgeleiteten Klassen dargestellt. Dies bedeutet, dass die Überwachung von Ressourcen letztendlich die Überwachung von Instanzen von \_ \_ von InstanceOperationEvent abgeleiteten Klassen umfasst.
+Die Überwachung von Ressourcen mithilfe von WMI umfasst die Überwachung von Instanzen, und alle Änderungen an Instanzen werden durch \_ \_ InstanceOperationEvent und die von ihr abgeleiteten Klassen dargestellt. Dies bedeutet, dass die Überwachung von Ressourcen letztendlich die Überwachung von Instanzen von \_ \_ von InstanceOperationEvent abgeleiteten Klassen umfasst.
 
-Sie registrieren Interesse an Instanzen einer dieser Klassen, indem Sie eine in WQL ausgedrückte Benachrichtigungsabfrage ausführen. Die Abfrage verwendet eine Syntax ähnlich der folgenden:
+Sie registrieren Interesse an Instanzen einer dieser Klassen, indem Sie eine in WQL ausgedrückte Benachrichtigungsabfrage ausgeben. Die Abfrage verwendet eine Syntax ähnlich der folgenden:
 
 `SELECT * FROM __InstanceOperationEventOrDerivedClass WITHIN PollingInterval WHERE TargetInstance ISA WMIClassName AND TargetInstance.WMIClassPropertyName = Value`
 
-Eine längere Erörterung der Verwendung der WMI-Instanzereignisse zum Überwachen der Computeraktivität finden Sie unter How Can I Monitor for Different Types of Events With Just One Script? (Wie kann ich mit nur einem Skript auf verschiedene [Ereignistypen überwachen?).](https://blogs.technet.com/b/heyscriptingguy/archive/2005/04/04/how-can-i-monitor-for-different-types-of-events-with-just-one-script.aspx)
+Eine längere Erläuterung der Verwendung der WMI-Instanzereignisse zum Überwachen der Computeraktivität finden Sie unter [How Can I Monitor for Different Types of Events With Just One Script?](https://blogs.technet.com/b/heyscriptingguy/archive/2005/04/04/how-can-i-monitor-for-different-types-of-events-with-just-one-script.aspx)
 
 ## <a name="examples"></a>Beispiele
 
-Das [](https://Gallery.TechNet.Microsoft.Com/94c7dc4c-813a-411d-aa3f-f98982cd2a2f) VBScript-Codebeispiel für das Monitorprozessereignis im TechNet-Katalog verwendet **\_ \_ InstanceOperationEvent,** um das erste WMI-Instanzereignis für [**den Win32-Prozess zu \_ überwachen.**](/windows/desktop/CIMWin32Prov/win32-process)
+Das VBScript-Codebeispiel für das [Monitorprozessereignis](https://Gallery.TechNet.Microsoft.Com/94c7dc4c-813a-411d-aa3f-f98982cd2a2f) im TechNet-Katalog verwendet **\_ \_ InstanceOperationEvent,** um das erste WMI-Instanzereignis für [**win32 \_ Process**](/windows/desktop/CIMWin32Prov/win32-process)zu überwachen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -154,7 +154,7 @@ Das [](https://Gallery.TechNet.Microsoft.Com/94c7dc4c-813a-411d-aa3f-f98982cd2a2
 [WMI-Systemklassen](wmi-system-classes.md)
 </dt> <dt>
 
-[Bestimmen des Zu empfangenden Ereignistyps](determining-the-type-of-event-to-receive.md)
+[Bestimmen des Typs des zu empfangenden Ereignisses](determining-the-type-of-event-to-receive.md)
 </dt> <dt>
 
 [Schreiben in eine Protokolldatei basierend auf einem Ereignis](writing-to-a-log-file-based-on-an-event.md)

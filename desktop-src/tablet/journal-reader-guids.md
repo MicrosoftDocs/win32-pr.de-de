@@ -1,23 +1,23 @@
 ---
-description: In diesem Abschnitt werden die von der ijournalreader-Schnittstelle verwendeten Global Unique Identifier (GUIDs) zum Identifizieren von benutzerdefinierten Eigenschaften für Striche oder Zeichnungs Attribute dokumentiert.
+description: In diesem Abschnitt werden die GUIDs (Globally Unique Identifiers) beschrieben, die von der IJournalReader-Schnittstelle verwendet werden, um benutzerdefinierte Eigenschaften für Striche oder Zeichnungsattribute zu identifizieren.
 ms.assetid: 9b3a0fb3-7f66-4efe-81ba-413a562d54b8
-title: Journal Leser-GUIDs
+title: Journalreader-GUIDs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 489194a21055bde6eccf7d3e665905e3288907a4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1e0a72c83d1983b3a13b9da6ca830388809e773f54824da1d09a8a1c73b2514b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117856586"
 ---
-# <a name="journal-reader-guids"></a>Journal Leser-GUIDs
+# <a name="journal-reader-guids"></a>Journalreader-GUIDs
 
-In diesem Abschnitt werden die von der [**ijournalreader-Schnittstelle**](ijournalreader.md) verwendeten Global Unique Identifier (GUIDs) zum Identifizieren von benutzerdefinierten Eigenschaften für Striche oder Zeichnungs Attribute dokumentiert.
+In diesem Abschnitt werden die GUIDs (Globally Unique Identifiers) beschrieben, die von der [**IJournalReader-Schnittstelle**](ijournalreader.md) verwendet werden, um benutzerdefinierte Eigenschaften für Striche oder Zeichnungsattribute zu identifizieren.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[GUIDs der benutzerdefinierten Eigenschaft](custom-property-guids.md)
+[Benutzerdefinierte Eigenschaften-GUIDs](custom-property-guids.md)
 
  
 

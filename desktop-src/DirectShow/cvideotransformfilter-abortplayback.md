@@ -1,5 +1,5 @@
 ---
-description: Die AbortPlayback-Methode wird verwendet, um einen Streamingfehler zu signalisieren. Es sendet ein EC ERRORABORT-Ereignis an den Filter Graph Manager und sendet eine \_ End-of-Stream-Benachrichtigung nachgeschaltet.
+description: Die AbortPlayback-Methode wird verwendet, um einen Streamingfehler zu signalisieren. Es sendet ein EC \_ ERRORABORT-Ereignis an den Filter-Graph-Manager und sendet eine End-of-Stream-Benachrichtigung nachgeschaltet.
 ms.assetid: b48ec72f-d220-4b27-98fc-88eaa4f663eb
 title: CVideoTransformFilter.AbortPlayback-Methode (Vtrans.h)
 ms.topic: reference
@@ -59,7 +59,7 @@ Gibt den Wert des *hr-Parameters* zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Vtrans.h (include Streams.h)</dt> </dl>                                                                                    |
+| Header<br/>  | <dl> <dt>Vtrans.h (einschließlich Streams.h)</dt> </dl>                                                                                    |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 

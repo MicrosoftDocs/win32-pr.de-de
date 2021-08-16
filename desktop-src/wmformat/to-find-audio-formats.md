@@ -18,7 +18,7 @@ ms.locfileid: "118196506"
 ---
 # <a name="to-find-audio-formats"></a>So suchen Sie Nach Audioformaten
 
-Der folgende Beispielcode veranschaulicht, wie Sie ein Audioformat finden, das den von Ihnen angegebenen Kriterien entspricht. Die **FindAudioFormat-Funktion** akzeptiert einen Zeiger auf eine [**WAVEFORMATEX-Struktur,**](/previous-versions/windows/desktop/legacy/dd757720(v=vs.85)) die die Anzahl der Kanäle, Bits pro Stichprobe und abtastrate enthält, die Sie verwenden möchten. Die Funktion sucht das Format, das diesen Anforderungen entspricht, und hat die höchste Bitrate, die den *dwMaxRate-Parameter nicht* überschreitet. Wenn Sie *fAVSync auf* **TRUE festlegen,** überprüft die Funktion nur Formate, die mit Video synchronisiert werden können. Der Einfachheit halber funktioniert diese Funktion nur mit 1-Pass-CBR-Formaten.
+Der folgende Beispielcode veranschaulicht, wie Sie ein Audioformat finden, das den von Ihnen angegebenen Kriterien entspricht. Die **FindAudioFormat-Funktion** akzeptiert einen Zeiger auf eine [**WAVEFORMATEX-Struktur,**](/previous-versions/windows/desktop/legacy/dd757720(v=vs.85)) die die Anzahl von Kanälen, Bits pro Stichprobe und Abtastrate enthält, die Sie verwenden möchten. Die Funktion sucht das Format, das diesen Anforderungen entspricht, und hat die höchste Bitrate, die den *dwMaxRate-Parameter nicht* überschreitet. Wenn Sie *fAVSync auf* **TRUE festlegen,** überprüft die Funktion nur Formate, die mit Video synchronisiert werden können. Der Einfachheit halber funktioniert diese Funktion nur mit 1-Pass-CBR-Formaten.
 
 
 ```C++

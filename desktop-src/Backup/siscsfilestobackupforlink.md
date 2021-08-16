@@ -1,9 +1,9 @@
 ---
-title: Siscsfilestobackupforlink-Funktion (Sisbkup. h)
-description: Gibt Informationen zurück, die die gemeinsamen Speicherdateien beschreiben, auf die der angegebene SIS-Link verweist.
+title: SisCSFilesToBackupForLink-Funktion (Sisbkup.h)
+description: Gibt Informationen zurück, die die common-store-Dateien beschreiben, auf die der angegebene SIS-Link verweist.
 ms.assetid: 0580c34e-195a-4a2c-893f-bc339dcc88d7
 keywords:
-- Siscsfilestobackupforlink-Funktions Sicherung
+- SisCSFilesToBackupForLink-Funktionssicherung
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 27d4f52728d662f43efed85d662874bd4b008947
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2e39d4370e68b67a5c05c1f259c52190be3b931dd02164da191bacf879cd6cb0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340989"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117835558"
 ---
-# <a name="siscsfilestobackupforlink-function"></a>Siscsfilestobackupforlink-Funktion
+# <a name="siscsfilestobackupforlink-function"></a>SisCSFilesToBackupForLink-Funktion
 
-Die **siscsfilestobackupforlink** -Funktion gibt Informationen zurück, die die gemeinsamen Speicherdateien beschreiben, auf die der angegebene SIS-Link verweist.
+Die **SisCSFilesToBackupForLink-Funktion** gibt Informationen zurück, die die Common Store-Dateien beschreiben, auf die der angegebene SIS-Link verweist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,72 +46,72 @@ BOOL SisCSFilesToBackupForLink(
 
 <dl> <dt>
 
-*sisbackupstructure* \[ in\]
+*sisBackupStructure* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die SIS-Sicherungs Struktur, die von [**siscreatebackupstructure**](siscreatebackupstructure.md)zurückgegeben wurde.
+Zeiger auf die SIS-Sicherungsstruktur, die von [**SisCreateBackupStructure zurückgegeben wird.**](siscreatebackupstructure.md)
 
 </dd> <dt>
 
-*Analysedaten* \[ in\]
+*reparseData* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Inhalt des SIS-Analyse Punkts. Dieser Analyse Punkt enthält Daten, die einen SIS-Link beschreiben. Um die Analyse Punktdaten für eine Datei abzurufen, verwenden Sie den [**FSCTL \_ Get Analyse \_ \_ Point**](/windows/desktop/api/winioctl/ni-winioctl-fsctl_get_reparse_point) -Steuerungs Code.
+Zeiger auf den Inhalt des SIS-Reparsepunkts. Dieser Aufbereitungspunkt enthält Daten, die einen SIS-Link beschreiben. Um die Reparse point-Daten für eine Datei abzurufen, verwenden Sie den [**FSCTL \_ GET \_ REPARSE \_ POINT-Steuerungscode.**](/windows/desktop/api/winioctl/ni-winioctl-fsctl_get_reparse_point)
 
 </dd> <dt>
 
-*Analyse DataSize* \[ in\]
+*reparseDataSize* \[ In\]
 </dt> <dd>
 
-Größe des Inhalts des SIS-Analyse Punkts, auf den von Analyse *Daten* verwiesen wird (in Bytes).
+Größe des Inhalts des SIS-Reparsepunkts, auf den *reparseData* zeigt, in Bytes.
 
 </dd> <dt>
 
-*thisfilecontext* \[ vorgenommen\]
+*thisFileContext* \[ out\]
 </dt> <dd>
 
-Zeiger auf eine von der Sicherungs Anwendung bereitgestellte Kontext Zeichenfolge, die diese Funktion aufgerufen hat. Der Inhalt dieser Inhalts Zeichenfolge wird von dieser Sicherungs Anwendung vollständig bestimmt und nicht von der SIS-Sicherungs-API interpretiert. Dieser Parameter ist optional. Wenn Sie nicht verwendet wird, legen Sie den Wert dieses Parameters auf **null** fest. Der Wert dieses Parameters wird in diesem Fall nicht verarbeitet.
+Zeiger auf eine Kontextzeichenfolge, die von der Sicherungsanwendung bereitgestellt wird, die diese Funktion aufruft. Der Inhalt dieser Inhaltszeichenfolge wird vollständig von dieser Sicherungsanwendung bestimmt und von der SIS-Sicherungs-API nicht interpretiert. Dieser Parameter ist optional. Wenn sie nicht verwendet wird, legen Sie den Wert dieses Parameters auf **NULL fest.** Der Wert dieses Parameters wird in diesem Fall nicht verarbeitet.
 
 </dd> <dt>
 
-*matchingfilecontext* \[ vorgenommen\]
+*matchingFileContext* \[ out\]
 </dt> <dd>
 
-Doppelter indirekter Zeiger auf die Kontext Zeichenfolge des SIS-Links, der durch die Informationen identifiziert wird, die in den ersten vier Parametern dieser Funktion übermittelt wurden. Dieser Parameter ist optional. Wenn keine Kontext Zeichenfolge als Wert des *thisfilecontext* -Parameters angegeben wird, legen Sie den Wert dieses Parameters auf **null** fest. Der Wert dieses Parameters wird in diesem Fall nicht verarbeitet.
+Doppelt indirekter Zeiger auf die Kontextzeichenfolge des SIS-Links, der durch die Informationen identifiziert wird, die in den ersten vier Parametern dieser Funktion übergeben werden. Dieser Parameter ist optional. Wenn keine Kontextzeichenfolge als Wert des *thisFileContext-Parameters* angegeben wird, legen Sie den Wert dieses Parameters auf **NULL fest.** Der Wert dieses Parameters wird in diesem Fall nicht verarbeitet.
 
 </dd> <dt>
 
-"count" für " *Anf. commonstorefilestobackup* \[ vorgenommen\]
+*countOfCommonStoreFilesToBackUp* \[ out\]
 </dt> <dd>
 
-Anzahl der Dateien, die im Parameter " *commonstorefilestobackup* " aufgelistet sind.
+Anzahl der Dateien, die im *commonStoreFilesToBackUp-Parameter aufgeführt* sind.
 
 </dd> <dt>
 
-*commonstorefilestobackup* \[ vorgenommen\]
+*commonStoreFilesToBackUp* \[ out\]
 </dt> <dd>
 
-Zeiger auf ein Array von Dateinamen. Diese Dateien müssen gleichzeitig und auf die gleiche Weise gesichert werden wie die von [**siscreatebackupstructure**](siscreatebackupstructure.md)angeforderten Dateien des Common Stores.
+Zeiger auf ein Array von Dateinamen. Diese Dateien sollten gleichzeitig und auf die gleiche Weise wie die common-store-Dateien, die von [**SisCreateBackupStructure angefordert werden, sichern.**](siscreatebackupstructure.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt **true** zurück, wenn Sie erfolgreich abgeschlossen wurde, andernfalls **false** . Aufrufen von [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) zum Abrufen von weiteren Informationen über den Grund, warum der Fehler aufgetreten ist.
+Diese Funktion gibt **TRUE zurück,** wenn sie erfolgreich abgeschlossen wurde, andernfalls **FALSE.** Rufen [**Sie GetLastError auf,**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) um weitere Informationen zum Grund für den Fehler des Aufrufs zu erhalten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Sicherungs Anwendung sollte diese Funktion für jede zu sichernde SIS-Linkdatei nur einmal aufzurufen.
+Die Sicherungsanwendung sollte diese Funktion nur einmal für jede zu sichernde SIS-Linkdatei aufrufen.
 
-Die Sicherungs Anwendung kann einen SIS-Analyse Punkt anhand ihres Tags, e/a- \_ \_ Analyse Tags, identifizieren \_ . Dieses Tag wird in "Winnt. h" definiert.
+Die Sicherungsanwendung kann einen SIS-Reparsepunkt anhand des Tags IO \_ REPARSE \_ TAG \_ SIS identifizieren. Dieses Tag wird in Winnt.h definiert.
 
-Wenn dieser Analyse Punkt, der durch den Wert des Parameters " *paramesedata* " identifiziert wird, die erste Instanz einer zu sichernden Datei beschreibt, gibt diese Funktion **null** als Wert des *matchingfilecontext* -Parameters zurück und initialisiert den Wert des *commonstorefilestobackup* -Arrays von Zeichen folgen mit den Namen der zu sichernden Datei im allgemeinen Speicher. Andernfalls legt diese Funktion den Wert des *matchingfilecontext* -Parameters auf die Kontext Zeichenfolge fest, die der ersten Instanz der angegebenen Datei entspricht, und legt den Wert des Parameters " *zähltofcommonstorefilestobackup* " auf "0" fest. Wenn mehrere Common-Store-Dateien vorhanden sind, die dem angegebenen Link entsprechen, entspricht der Wert des *thisfilecontext* -Parameters der Kontext Zeichenfolge, die der ersten Common-Store-Datei entspricht, die im-Array mit commonstorefilestobackup 0 zurückgegeben wird \[ \] .
+Wenn dieser durch den Wert des *parameters reparseData* identifizierte Reparse Point die erste Instanz einer zu sichernden Datei beschreibt, gibt diese Funktion **NULL** als Wert des *matchingFileContext-Parameters* zurück und initialisiert den Wert des *commonStoreFilesToBackUp-Arrays* von Zeichenfolgen mit den Namen der zu sichernden Common Store-Datei bzw. der zu sichernden Dateien. Andernfalls wird der Wert des *parameters matchingFileContext* auf die Kontextzeichenfolge festgelegt, die der ersten Instanz der angegebenen Datei entspricht, und der Wert des *countOfCommonStoreFilesToBackUp-Parameters* auf 0 festgelegt. Wenn mehrere Common Store-Dateien dem angegebenen Link entspricht, ist der Wert des *thisFileContext-Parameters* die Kontextzeichenfolge, die der ersten common-store-Datei entspricht, die im Array zurückgegeben wird, also commonStoreFilesToBackUp \[ \] 0.
 
-Die aktuelle Version dieser Funktion gibt höchstens eine Common-Store-Datei zurück. es ist jedoch möglich, dass in zukünftigen Versionen ein einzelner Link durch mehrere Dateien im allgemeinen Speicher gestützt wird, z. b. für jeden Stream in der Datei, damit die Sicherungs Anwendung mehrere Dateien in jedem aufrufungs Vorgang unterstützt. In jedem Fall wird jede Common Store-Datei für jeden Sicherungs Durchlauf höchstens einmal zurückgegeben.
+Die aktuelle Version dieser Funktion gibt nur eine Datei mit allgemeinem Speicher zurück. Es ist jedoch möglich, dass in zukünftigen Versionen ein einzelner Link von mehreren Dateien mit allgemeinem Speicher gesichert werden kann, z. B. einer für jeden Stream in der Datei, sodass Ihre Sicherungsanwendung bei jedem Aufruf dieser Funktion mehrere Dateien unterstützen sollte. In jedem Fall wird jede Common Store-Datei für jeden Sicherungspass mindestens einmal zurückgegeben.
 
-Die Sicherungs Anwendung sollte die Datei "Common-Store", die durch den Dateinamen oder die Dateinamen identifiziert wird, die im Parameter " *commonstorefilestobackup* " zurückgegeben werden, sichern oder wiederherstellen. Unabhängig davon, ob es eine entsprechende Datei mit dem gemeinsamen Speicher gibt, sollte die Sicherungs Anwendung die SIS-Verknüpfungs Datei wie auf dem Datenträger sichern, z. b. als Analyse Punkt und als sparsesdatei, und höchstwahrscheinlich ohne eingefüge Bereiche. Die Sicherungs Anwendung kann die Datei oder Dateien des Common Stores sofort sichern oder wiederherstellen, die Sicherung verzögern oder Sie nach Bedarf miteinander vermischen.
+Ihre Sicherungsanwendung sollte die Common Store-Datei oder -Dateien sichern oder wiederherstellen, die durch den Dateinamen oder die Dateinamen identifiziert werden, die im *commonStoreFilesToBackUp-Parameter zurückgegeben* werden. Unabhängig davon, ob eine entsprechende Common Store-Datei vorhanden ist, sollte Ihre Sicherungsanwendung die SIS-Linkdatei so sichern, wie sie auf dem Datenträger vorhanden ist, z. B. als Einsparpunkt und Sparsedatei und höchstwahrscheinlich ohne ausgefüllte Bereiche. Ihre Sicherungsanwendung kann die Common Store-Dateien sofort sichern oder wiederherstellen, deren Sicherung verschieben oder sie bei Bedarf kombinieren.
 
-Nachdem der Sicherungs Vorgang beendet wurde, müssen Sie die Zuordnung des vom *commonstorefilestobackup* -Array von Zeichen folgen verwendeten Speichers durch Aufrufen von [**sisfrealloeredmemory**](sisfreeallocatedmemory.md)aufgehoben.
+Nachdem der Sicherungsvorgang abgeschlossen ist, geben Sie den vom *commonStoreFilesToBackUp-Array* von Zeichenfolgen verwendeten Arbeitsspeicher frei, indem Sie [**SisFreeAllocatedMemory aufrufen.**](sisfreeallocatedmemory.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -119,22 +119,22 @@ Nachdem der Sicherungs Vorgang beendet wurde, müssen Sie die Zuordnung des vom 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Sisbkup. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Sisbkup. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Sisbkup.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Sisbkup.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Sisbkup.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Sisfrezuden Speicher**](sisfreeallocatedmemory.md)
+[**SisFreeAllocatedMemory**](sisfreeallocatedmemory.md)
 </dt> <dt>
 
-[**Siscreatebackupstructure**](siscreatebackupstructure.md)
+[**SisCreateBackupStructure**](siscreatebackupstructure.md)
 </dt> </dl>
 
  

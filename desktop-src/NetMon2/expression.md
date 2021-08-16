@@ -22,7 +22,7 @@ ms.locfileid: "118366838"
 ---
 # <a name="expression-structure"></a>EXPRESSION-Struktur
 
-Die **EXPRESSION-Struktur** enthält eine Gruppe von **ANDEXP-Arrays,** die als Peers in logischen AND-Ausdrücken ausgewertet werden, die das Format aufweisen.
+Die **EXPRESSION-Struktur** enthält eine Gruppe von **ANDEXP-Arrays,** die als Peers in logischen AND-Ausdrücken ausgewertet werden, die das Format haben.
 
 (ANDEXP 1 && ANDEXP 2 && ANDEXP 3).
 
@@ -52,7 +52,7 @@ Anzahl von **ANDEXP-Mustern.**
 **AndExp**
 </dt> <dd>
 
-Array von **ANDEXP-Mustern.** Der Erfassungsfilter ordnet alle Zeilen dieses Arrays als logische AND-Anweisungen an. Beachten Sie, dass jede EXPRESSION-Struktur maximal vier **ANDEXP-Muster** enthalten kann.
+Array von **ANDEXP-Mustern.** Der Erfassungsfilter ordnet alle Zeilen dieses Arrays als logische AND-Anweisungen an. Beachten Sie, dass jede EXPRESSION-Struktur maximal vier **ANDEXP-Muster enthalten** kann.
 
 </dd> </dl>
 

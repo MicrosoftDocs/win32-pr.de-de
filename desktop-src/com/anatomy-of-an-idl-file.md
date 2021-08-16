@@ -121,7 +121,7 @@ interface IFace4 : IDispatch
  
 ```
 
-Das [**helpstring-Attribut**](/windows/desktop/Midl/helpstring) ist optional. Sie verwenden es, um das Objekt kurz zu beschreiben oder um eine Statuszeile bereitzustellen. Diese Hilfezeichenfolgen sind mit einem Objektbrowser lesbar, z. B. dem, der mit Microsoft Visual Basic bereitgestellt wird.
+Das [**helpstring-Attribut**](/windows/desktop/Midl/helpstring) ist optional. Sie verwenden es, um das Objekt kurz zu beschreiben oder um eine Statuszeile bereitzustellen. Diese Hilfezeichenfolgen sind mit einem Objektbrowser lesbar, z. B. dem mit Microsoft Visual Basic bereitgestellten.
 
 Das [**duale**](/windows/desktop/Midl/dual) Attribut in IFace3 erstellt eine Schnittstelle, die sowohl eine Dispatchschnittstelle als auch eine COM-Schnittstelle ist. Da sie von **IDispatch** abgeleitet ist, unterstützt eine duale Schnittstelle Automation, was vom [**oleautomation-Attribut**](/windows/desktop/Midl/oleautomation) angegeben wird. IFace3 importiert Oaidl.idl, um die Definition von **IDispatch** abzurufen.
 

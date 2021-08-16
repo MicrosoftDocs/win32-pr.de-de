@@ -1,14 +1,14 @@
 ---
-title: Streampriorisierung
-description: Streampriorisierung
+title: Priorisierung von Datenströmen
+description: Priorisierung von Datenströmen
 ms.assetid: 6b3e9b03-62ef-422b-97ab-197d1cd15beb
 keywords:
 - Windows Medienformat-SDK, Streampriorisierung
 - Advanced Systems Format (ASF), Streampriorisierung
 - ASF (Advanced Systems Format), Streampriorisierung
-- Windows Medienformat-SDK, Prioritätsreihenfolge für Streams
-- Advanced Systems Format (ASF), Prioritätsreihenfolge für Streams
-- ASF (Advanced Systems Format), Prioritätsreihenfolge für Streams
+- Windows Medienformat-SDK, Prioritäts reihenfolge für Streams
+- Advanced Systems Format (ASF), Prioritäts reihenfolge für Streams
+- ASF (Advanced Systems Format), Prioritäts reihenfolge für Streams
 - Streams,Priorisierung
 ms.topic: article
 ms.date: 05/31/2018
@@ -19,9 +19,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118197276"
 ---
-# <a name="stream-prioritization"></a>Streampriorisierung
+# <a name="stream-prioritization"></a>Priorisierung von Datenströmen
 
-Wenn Sie eine ASF-Datei erstellen, können Sie eine Prioritätsreihenfolge für die zugehörigen Datenströme angeben. Wenn Sie eine priorisierte Datei streamen und die verfügbare Bandbreite nicht ausreicht, um alle Datenströme bereitzustellen, werden Streams vom Reader in umgekehrter Prioritätsreihenfolge abgeschrieben. Auf diese Weise können Sie garantieren, dass die wichtigsten Datenströme in Ihrer Datei aufgrund von Netzwerkproblemen nicht gelöscht werden.
+Wenn Sie eine ASF-Datei erstellen, können Sie eine Prioritäts reihenfolge für ihre konstituierenden Streams angeben. Wenn Sie eine priorisierte Datei streamen und die verfügbare Bandbreite nicht ausreicht, um alle Datenströme zu liefern, gibt der Reader Datenströme in umgekehrter Prioritäts reihenfolge ab. Auf diese Weise können Sie garantieren, dass die wichtigsten Streams in Ihrer Datei aufgrund von Netzwerkproblemen nicht gelöscht werden.
 
 Die Streampriorisierung wird mit einem Streampriorisierungsobjekt konfiguriert und dem Profil hinzugefügt. Ein Profil kann nur ein Streampriorisierungsobjekt enthalten.
 

@@ -1,10 +1,10 @@
 ---
-title: Object (DS-DN)-Syntax
+title: Object(DS-DN)-Syntax
 description: Eine Zeichenfolge, die einen Distinguished Name (DN) enthält.
 ms.assetid: 089104c4-ff82-49ea-a8db-a6dadc3a18bc
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema der Object (DS-DN)-Syntax
+- Objektsyntax (DS-DN) AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 45154985fa7fbfc4d95d563196357d43eac2ea72
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ad0c9adf4138de56d90ac89743c3b428a1f25b45027bc19f0b5dccc2e005b143
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519351"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117835683"
 ---
-# <a name="objectds-dn-syntax"></a>Object (DS-DN)-Syntax
+# <a name="objectds-dn-syntax"></a>Object(DS-DN)-Syntax
 
-Eine Zeichenfolge, die einen Distinguished Name (DN) enthält. Für Attribute mit dieser Syntax verarbeitet Active Directory Attributwerte als Verweise auf das Objekt, das durch den DN identifiziert wird, und aktualisiert den Wert automatisch, wenn das Objekt verschoben oder umbenannt wird. Geben Sie für Abfragen, die Attribute der DN-Syntax in einem Filter enthalten, vollständige Distinguished Names an. Platzhalter (z. b. CN = John \* ) werden nicht unterstützt.
+Eine Zeichenfolge, die einen Distinguished Name (DN) enthält. Bei Attributen mit dieser Syntax behandelt Active Directory Attributwerte als Verweise auf das vom DN identifizierte Objekt und aktualisiert den Wert automatisch, wenn das Objekt verschoben oder umbenannt wird. Geben Sie für Abfragen, die Attribute der DN-Syntax in einem Filter enthalten, vollständige Distinguished Names an. Platzhalter (z. B. cn=John \* ) werden nicht unterstützt.
 
 
 
@@ -32,13 +32,13 @@ Eine Zeichenfolge, die einen Distinguished Name (DN) enthält. Für Attribute mi
 | Syntax-ID    | 2.5.5.1                                                                |
 | OM-ID        | 127                                                                    |
 | MAPI-Typ    | OBJECT                                                                 |
-| ADS-Typ     | adstype- \_ DN- \_ Zeichenfolge                                                    |
-| Varianttyp | VT \_ BSTR                                                               |
+| ADS-Typ     | ADSTYPE \_ DN \_ STRING                                                    |
+| Variant-Typ | VT \_ BSTR                                                               |
 | SDS-Typ     | [System.String](/dotnet/api/system.string) |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-description: Tritt ein, wenn sich die Auswahl von Freihand innerhalb des Steuerelements geändert hat, z. B. durch Änderungen an der Benutzeroberfläche, Ausschneide- und Einfügeverfahren oder die Selection-Eigenschaft.
+description: Tritt ein, wenn sich die Auswahl der Freifläche innerhalb des Steuerelements geändert hat, z. B. durch Änderungen an der Benutzeroberfläche, durch Ausschneide- und Einfügevorgänge oder durch die Selection-Eigenschaft.
 ms.assetid: 6b4cd9fe-b09f-4a70-9aa5-92ef9409ff1b
 title: InkOverlay.SelectionChanged-Ereignis (Msinkaut.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118218973"
 ---
 # <a name="inkoverlayselectionchanged-event"></a>InkOverlay.SelectionChanged-Ereignis
 
-Tritt ein, wenn sich die Auswahl von Freihand innerhalb des Steuerelements geändert hat, z. [](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection) B. durch Änderungen an der Benutzeroberfläche, Ausschneide- und Einfügeverfahren oder die Selection-Eigenschaft.
+Tritt ein, wenn sich die Auswahl der Freifläche innerhalb des Steuerelements geändert hat, z. B. durch Änderungen an der Benutzeroberfläche, durch Ausschneide- und Einfügevorgänge oder durch die [**Selection-Eigenschaft.**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection)
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,9 +34,9 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Es sind keine Ereignisdaten vorhanden.
+Es gibt keine Ereignisdaten.
 
-Diese Ereignismethode wird in den \_ Dispatch-Only-Schnittstellen IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ IOESelectionChanged definiert.
+Diese Ereignismethode wird in den \_ \_ dispatch-only-Schnittstellen (dispinterfaces) von IInkOverlayEvents und IInkPictureEvents mit der ID DISPID \_ IOESelectionChanged definiert.
 
 ## <a name="requirements"></a>Anforderungen
 

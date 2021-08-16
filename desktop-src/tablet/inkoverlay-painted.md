@@ -41,7 +41,7 @@ Der Gerätekontext, in dem das Ereignis aufgetreten ist.
 *Rect* \[ In\]
 </dt> <dd>
 
-Das [**InkRectangle,**](inkrectangle-class.md) das neu maliert wurde.
+Der [**neu gepainte InkRectangle.**](inkrectangle-class.md)
 
 </dd> </dl>
 
@@ -51,7 +51,7 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in den \_ Dispatch-only-Schnittstellen IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ IOEPainted definiert.
+Diese Ereignismethode wird in den \_ \_ dispatch-only-Schnittstellen (dispinterfaces) von IInkOverlayEvents und IInkPictureEvents mit der ID DISPID \_ IOEPainted definiert.
 
 ## <a name="requirements"></a>Anforderungen
 

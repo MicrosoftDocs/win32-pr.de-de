@@ -1,29 +1,29 @@
 ---
-description: In diesem Abschnitt wird beschrieben, wie häufige Aufgaben mit dem mathematischen Eingabe Steuerelement ausgeführt werden.
+description: In diesem Abschnitt wird beschrieben, wie allgemeine Aufgaben mit dem mathematischen Eingabesteuerelement ausgeführt werden.
 ms.assetid: 22e524d9-4091-4f8c-8763-4da54b60e63c
-title: Programmieren des mathematischen Eingabe Steuer Elements
+title: Programmieren des Steuerung für mathematische Eingaben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 55c4423873ba6f401c7d656a8f12dca9081e57ad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fc3fb8f9422154578b468dd58b78d1dba4b78338eac4a71dec157c92fff856cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218354"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117856465"
 ---
-# <a name="programming-the-math-input-control"></a>Programmieren des mathematischen Eingabe Steuer Elements
+# <a name="programming-the-math-input-control"></a>Programmieren des Steuerung für mathematische Eingaben
 
-In diesem Abschnitt wird beschrieben, wie häufige Aufgaben mit dem mathematischen Eingabe Steuerelement ausgeführt werden.
+In diesem Abschnitt wird beschrieben, wie allgemeine Aufgaben mit dem mathematischen Eingabesteuerelement ausgeführt werden.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                          | BESCHREIBUNG                                                                   |
+| Thema                                                                                          | Beschreibung                                                                   |
 |------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| [Erstellen eines mathematischen Eingabe Steuer Elements](creating-a-math-input-control.md)                             | Erläutert, wie das mathematische Eingabe Steuerelement erstellt wird.                                |
-| [Anpassen des mathematischen Eingabe Steuer Elements](customizing-the-math-input-control.md)                   | Erläutert, wie Sie das Erscheinungsbild des mathematischen Eingabe Steuer Elements ändern können.           |
-| [Empfangen von Eingaben aus dem mathematischen Eingabe Steuerelement](receiving-input-from-the-math-input-control.md) | Erläutert das Abrufen von Eingaben aus dem mathematischen Eingabe Steuerelement mithilfe von ATL und com. |
+| [Erstellen eines Steuerung für mathematische Eingaben](creating-a-math-input-control.md)                             | Erläutert, wie das mathematische Eingabesteuerelement erstellt wird.                                |
+| [Anpassen der Steuerung für mathematische Eingaben](customizing-the-math-input-control.md)                   | Erläutert, wie das Aussehen und Das gefühlt des mathematischen Eingabesteuerelements geändert wird.           |
+| [Empfangen von Eingaben vom Steuerung für mathematische Eingaben](receiving-input-from-the-math-input-control.md) | Erläutert das Abrufen von Eingaben aus dem mathematischen Eingabesteuerelement mit ATL und COM. |
 
 
 

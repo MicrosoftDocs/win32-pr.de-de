@@ -1,5 +1,5 @@
 ---
-description: Private Nachricht, die das Fenster in den Vordergrund versetzt.
+description: Private Nachricht, die das Fenster in den Vordergrund bringt.
 ms.assetid: 88b28888-d729-4cf3-8b9d-618dbe150926
 title: CBaseWindow::m_ShowStageMessage-Member (Winutil.h)
 ms.topic: reference
@@ -25,7 +25,7 @@ ms.locfileid: "117822360"
 ---
 # <a name="cbasewindowm_showstagemessage-member"></a>CBaseWindow::m \_ ShowStageMessage-Member
 
-Private Nachricht, die das Fenster in den Vordergrund versetzt.
+Private Nachricht, die das Fenster in den Vordergrund bringt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ Die [**CBaseWindow::D oSetWindowForeground-Methode**](cbasewindow-dosetwindowfor
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

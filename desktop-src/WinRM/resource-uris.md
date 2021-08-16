@@ -19,7 +19,7 @@ ms.locfileid: "118323727"
 ---
 # <a name="resource-uris"></a>Ressourcen-URIs
 
-Ein [*Ressourcen-URI*](windows-remote-management-glossary.md) ist ein Bezeichner für einen eindeutigen Typ von Verwaltungsvorgang oder -wert, der von Verwaltungsdiensten verwendet wird, die das WS-Management implementieren. Ein Verwaltungswert kann die Temperatur innerhalb eines Computers sein. Ein Beispiel für einen Verwaltungsvorgang ist das Starten eines beendeten Diensts oder das Festlegen eines Datenträger-Volumebenutzerkontingents.
+Ein [*Ressourcen-URI*](windows-remote-management-glossary.md) ist ein Bezeichner für einen bestimmten Typ von Verwaltungsvorgang oder -wert, der von Verwaltungsdiensten verwendet wird, die das WS-Management implementieren. Ein Verwaltungswert kann die Temperatur innerhalb eines Computers sein. Ein Beispiel für einen Verwaltungsvorgang ist das Starten eines beendeten Diensts oder das Festlegen eines Datenträger-Volumebenutzerkontingents.
 
 ## <a name="resource-uri-format"></a>Ressourcen-URI-Format
 
@@ -27,7 +27,7 @@ Ein URI besteht aus einem Präfix und einem Pfad zu einer Ressource, wie im folg
 
 "http://schemas.microsoft.com/wbem/wsman/1/wmi/root/cimv2/Win32\_LogicalDisk"
 
-Diese Schemaspezifikation gibt an, dass der URI auf Version 1 des offiziellen WS-Management-Protokolls basiert und dass die Ressource ein [**logischer \_ Win32-Datenträger**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) im Namespace "root \\ cimv2" des WMI-Repositorys ist. URI-Präfixe enthalten eine Schemaspezifikation wie "schemas.microsoft.com/wbem/wsman/1/wmi" und einen bestimmten Ressourcentyp, z. B. **Win32 \_ LogicalDisk**. Weitere Informationen zum Identifizieren einer bestimmten Instanz einer WMI-Klasse finden Sie unter Windows [Remoteverwaltung und WMI.](windows-remote-management-and-wmi.md)
+Diese Schemaspezifikation gibt an, dass der URI auf Version 1 des offiziellen WS-Management-Protokolls basiert und dass die Ressource ein [**logischer Win32-Datenträger \_**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) im Namespace "root \\ cimv2" des WMI-Repositorys ist. URI-Präfixe enthalten eine Schemaspezifikation wie "schemas.microsoft.com/wbem/wsman/1/wmi" und einen bestimmten Ressourcentyp, z. B. **Win32 \_ LogicalDisk**. Weitere Informationen zum Identifizieren einer bestimmten Instanz einer WMI-Klasse finden Sie unter Windows [Remoteverwaltung und WMI.](windows-remote-management-and-wmi.md)
 
 Weitere Informationen finden Sie unter [URI-Präfixe.](uri-prefixes.md)
 

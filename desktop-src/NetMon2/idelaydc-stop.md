@@ -49,7 +49,7 @@ Zeiger auf eine [STATISTICS-Struktur,](statistics.md) die Netzwerkstatistiken en
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -57,9 +57,9 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                          | Beschreibung                                                                                                                           |
 |------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl> | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [IDelaydC::Verbinden](idelaydc-connect.md) auf, um das NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**NMERR \_ NICHT \_ ERFASSEN**</dt> </dl> | Das NPP erfasst keine Daten. Rufen Sie [IDelaydC::Start](idelaydc-start.md) auf, um die Erfassung zu starten.<br/>                            |
-| <dl> <dt>**NMERR \_ NICHT \_ VERZÖGERT**</dt> </dl>   | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IDelaydC::Verbinden-Methode.](idelaydc-connect.md)<br/>                     |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl> | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen [Sie IDelaydC::Verbinden](idelaydc-connect.md) auf, um das NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR NOT CAPTURING (NMERR \_ WIRD NICHT \_ ERFASST)**</dt> </dl> | Der NPP erfasst keine Daten. Rufen [Sie IDelaydC::Start auf,](idelaydc-start.md) um die Erfassung zu starten.<br/>                            |
+| <dl> <dt>**NMERR \_ NICHT \_ VERZÖGERT**</dt> </dl>   | Das NPP ist mit dem Netzwerk verbunden, aber nicht mit der [IDelaydC::Verbinden-Methode.](idelaydc-connect.md)<br/>                     |
 
 
 
@@ -67,9 +67,9 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn **IDelaydC::Stop** aufgerufen wird, beendet Netzwerkmonitor die Erfassung von Daten und schließt die [*Erfassungsdatei*](c.md). (Der Name der Erfassungsdatei wurde zurückgegeben, als [IDelaydC::Start](idelaydc-start.md) aufgerufen wurde.) Sie können sich nun den Inhalt der Erfassungsdatei ansehen.
+Wenn **IDelaydC::Stop** aufgerufen wird, beendet Netzwerkmonitor die Erfassung von Daten und schließt die [*Erfassungsdatei*](c.md). (Der Name der Erfassungsdatei wurde zurückgegeben, als [IDelaydC::Start](idelaydc-start.md) aufgerufen wurde.) Sie können sich nun den Inhalt der Erfassungsdatei anzeigen lassen.
 
-Wenn Sie die Erfassung beenden und starten, stellen Sie sicher, dass Sie jedes Mal die [IDelaydC::Configure-Methode](idelaydc-configure.md) aufrufen, wenn Sie [IDelaydC::Start](idelaydc-start.md) aufrufen, um die Erfassung neu zu starten.
+Wenn Sie die Erfassung beenden und starten, stellen Sie sicher, dass Sie jedes Mal, wenn Sie [IDelaydC::Start](idelaydc-start.md) aufrufen, die [IDelaydC::Configure-Methode](idelaydc-configure.md) aufrufen, um die Erfassung neu zu starten.
 
 ## <a name="requirements"></a>Anforderungen
 

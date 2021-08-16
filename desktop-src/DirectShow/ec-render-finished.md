@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117820041"
 ---
-# <a name="ec_render_finished"></a>EC \_ RENDER \_ FINISHED (EC-RENDER ABGESCHLOSSEN)
+# <a name="ec_render_finished"></a>EC \_ RENDER \_ FINISHED
 
 Dieses Ereignis wird nicht unterstützt.
 

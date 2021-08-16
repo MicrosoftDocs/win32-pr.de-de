@@ -1,21 +1,21 @@
 ---
-description: Auflisten von Filtern
+description: Aufzählen von Filtern
 ms.assetid: 57bcaa4d-37bf-457d-937e-f9d24fb5784f
-title: Auflisten von Filtern
+title: Aufzählen von Filtern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2de0f979973d339b790b04a8a5d4d98fc52c95c6
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 4d584ddf74a13b06e99d9a7e0a34ac802c6da881d87cb163411100ea7772e1df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106340073"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117819663"
 ---
-# <a name="enumerating-filters"></a>Auflisten von Filtern
+# <a name="enumerating-filters"></a>Aufzählen von Filtern
 
-Der Filter Graph-Manager unterstützt die [**ifiltergraph:: enumfilters**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-enumfilters) -Methode, die alle Filter im Filter Diagramm auflistet. Er gibt einen Zeiger auf die [**ienumfilters**](/windows/desktop/api/Strmif/nn-strmif-ienumfilters) -Schnittstelle zurück. Die [**ienumfilters:: Next**](/windows/desktop/api/Strmif/nf-strmif-ienumfilters-next) -Methode ruft [**ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) -Schnittstellen Zeiger ab.
+Der Filter Graph Manager unterstützt die [**IFilterGraph::EnumFilters-Methode,**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-enumfilters) die alle Filter im Filterdiagramm aufzählt. Sie gibt einen Zeiger auf die [**IEnumFilters-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ienumfilters) zurück. Die [**IEnumFilters::Next-Methode**](/windows/desktop/api/Strmif/nf-strmif-ienumfilters-next) ruft [**IBaseFilter-Schnittstellenzeiger**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) ab.
 
-Das folgende Beispiel zeigt eine Funktion, die die Filter in einem Diagramm auflistet und ein Meldungs Feld mit den Namen der einzelnen Filter anzeigt. Er verwendet die [**ibasefilter:: queryfilterinfo**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-queryfilterinfo) -Methode, um den Namen des Filters abzurufen. Beachten Sie die stellen, an denen die Funktion **Release** für eine Schnittstelle aufruft, um den Verweis Zähler zu verringern.
+Das folgende Beispiel zeigt eine Funktion, die die Filter in einem Diagramm aufzählt und ein Meldungsfeld mit dem Namen jedes Filters anzeigt. Er verwendet die [**IBaseFilter::QueryFilterInfo-Methode,**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-queryfilterinfo) um den Namen des Filters abzurufen. Beachten Sie die Stellen, an denen die Funktion **Release** für eine Schnittstelle aufruft, um den Verweiszähler zu dekrementieren.
 
 
 ```C++
@@ -69,7 +69,7 @@ HRESULT EnumFilters (IFilterGraph *pGraph)
 
 <dl> <dt>
 
-[Auflisten von Objekten in einem Filter Diagramm](enumerating-objects-in-a-filter-graph.md)
+[Aufzählen von Objekten in einem Filter Graph](enumerating-objects-in-a-filter-graph.md)
 </dt> </dl>
 
  

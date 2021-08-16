@@ -1,6 +1,6 @@
 ---
 title: Strukturansichten
-description: Mit einer Strukturansicht können Benutzer eine hierarchisch angeordnete Auflistung von Objekten anzeigen und mit ihnen interagieren, indem sie entweder eine einzelne Auswahl oder eine Mehrfachauswahl verwenden.
+description: Mit einer Strukturansicht können Benutzer eine hierarchisch angeordnete Auflistung von Objekten anzeigen und mit ihr interagieren, indem sie entweder eine einzelne Auswahl oder eine Mehrfachauswahl verwenden.
 ms.assetid: f0206485-e028-41d8-9be2-5d59f0a0b677
 ms.topic: article
 ms.date: 10/20/2020
@@ -14,33 +14,33 @@ ms.locfileid: "118217648"
 # <a name="tree-views"></a>Strukturansichten
 
 > [!NOTE]
-> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
+> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
 
-Mit einer Strukturansicht können Benutzer eine hierarchisch angeordnete Auflistung von Objekten anzeigen und mit ihnen interagieren, indem sie entweder eine einzelne Auswahl oder eine Mehrfachauswahl verwenden.
+Mit einer Strukturansicht können Benutzer eine hierarchisch angeordnete Auflistung von Objekten anzeigen und mit ihr interagieren, indem sie entweder eine einzelne Auswahl oder eine Mehrfachauswahl verwenden.
 
-In einer Struktur werden Objekte, die Daten enthalten, als Blattknoten bezeichnet, und Objekte, die andere Objekte enthalten, werden als Containerknoten bezeichnet. Ein einzelner, oberster Containerknoten wird als Stammknoten bezeichnet. Benutzer können Containerknoten erweitern und reduzieren, indem sie auf die Plus- und Minus-Erweiterungsschaltflächen klicken.
+In einer Struktur werden Objekte, die Daten enthalten, als Blattknoten und Objekte, die andere Objekte enthalten, als Containerknoten bezeichnet. Ein einzelner oberster Containerknoten wird als Stammknoten bezeichnet. Benutzer können Containerknoten erweitern und reduzieren, indem sie auf die Schaltflächen plus und minus des Expanders klicken.
 
-![Screenshot der Fenster-Explorer-Strukturansicht ](images/ctrl-tree-views-image1.png)
+![Screenshot der Windows-Explorer-Strukturansicht ](images/ctrl-tree-views-image1.png)
 
 Eine typische Strukturansicht.
 
 > [!Note]  
-> Richtlinien im Zusammenhang mit [Layout](vis-layout.md) und [Menüs](cmd-menus.md) werden in separaten Artikeln vorgestellt.
+> Richtlinien im Zusammenhang [mit Layout](vis-layout.md) [und Menüs](cmd-menus.md) werden in separaten Artikeln vorgestellt.
 
  
 
 ## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
-**Hierarchische Daten bedeuten nicht, dass Sie eine Strukturansicht verwenden müssen.** Häufig ist eine [Listenansicht](ctrl-list-views.md) eine einfachere, aber leistungsfähigere Wahl. Listenansichten:
+**Hierarchische Daten bedeuten nicht, dass Sie eine Strukturansicht verwenden müssen.** Sehr oft ist [eine Listenansicht](ctrl-list-views.md) eine einfachere, aber leistungsfähigere Wahl. Listenansichten:
 
--   Unterstützung mehrerer verschiedener Ansichten.
--   Unterstützt das Sortieren von Daten nach einer der Spalten in der Detailansicht.
--   Unterstützt das Organisieren von Daten in Gruppen und bildet eine Hierarchie mit zwei Ebenen.
+-   Unterstützen Sie mehrere verschiedene Ansichten.
+-   Unterstützung für das Sortieren von Daten nach einer der Spalten in der Detailansicht.
+-   Unterstützung der Organisation von Daten in Gruppen, die eine Hierarchie mit zwei Ebenen bilden.
 
-**Um eine Listenansicht zu verwenden, können Sie hierarchische Informationen mithilfe der folgenden Verfahren abschwächen:**
+**Um eine Listenansicht zu verwenden, können Sie hierarchische Informationen mithilfe der folgenden Techniken abflachen:**
 
--   Entfernen Sie ggf. den Stammknoten, da er häufig nicht erforderlich ist.
--   Verwenden Sie Listenansichtsgruppen, Registerkarten, [Dropdownlisten](/windows/desktop/uxguide/ctrl-drop)oder [erweiterbare Überschriften,](glossary.md) um die Container der obersten Ebene zu ersetzen.
+-   Entfernen Sie den Stammknoten, falls vorhanden, da er häufig nicht erforderlich ist.
+-   Verwenden Sie Listenansichtsgruppen, [](/windows/desktop/uxguide/ctrl-drop)Registerkarten, Dropdownlisten oder [erweiterbare](glossary.md) Überschriften, um die Container der obersten Ebene zu ersetzen.
 
     ![Screenshot von Listenansichtsgruppen mit Listen ](images/ctrl-tree-views-image2.png)
 
@@ -60,17 +60,17 @@ Eine typische Strukturansicht.
 
     In diesem Beispiel werden Container auf niedriger Ebene im Dokumentfenster angezeigt.
 
-**Sie müssen eine Strukturansicht verwenden, wenn Sie eine Hierarchie mit mehr als zwei Ebenen anzeigen müssen (ohne den Stammknoten).**
+**Sie müssen eine Strukturansicht verwenden, wenn Sie eine Hierarchie mit mehr als zwei Ebenen (ohne den Stammknoten) anzeigen müssen.**
 
 Berücksichtigen Sie die folgenden Fragen, um zu entscheiden, ob eine Strukturansicht das richtige Steuerelement ist:
 
 -   **Sind die Daten hierarchisch?** Wenn dies nicht erwünscht ist, verwenden Sie ein anderes Steuerelement.
--   **Verfügt die Hierarchie über mindestens drei Ebenen (ohne Stamm)?** Wenn dies nicht der Fall ist, sollten Sie Alternativen wie Listenansichtsgruppen, Registerkarten, Dropdownlisten oder erweiterbare Überschriften in Betracht ziehen.
--   **Verfügen die Elemente über zusätzliche Daten?** Falls ja, sollten Sie eine Listenansicht im Detailansichtsmodus verwenden, um die zusätzlichen Daten in vollem Umfang zu nutzen.
--   **Beziehen sich die Daten auf niedrigerer Ebene auf unabhängige Subtasks?** Falls ja, sollten Sie die Informationen in einem zugeordneten Steuerelement oder in einem separaten Fenster anzeigen (angezeigt über [Befehlsschaltflächen](ctrl-command-buttons.md) oder [Links).](ctrl-command-links.md)
--   **Sind die Zielbenutzer erweitert?** Fortgeschrittene Benutzer sind mit der Verwendung von Strukturen vertrauter. Wenn Ihre Anwendung auf Benutzer ausgerichtet ist, vermeiden Sie die Verwendung von Strukturansichten.
--   **Verfügen die Elemente über eine einzelne, natürliche, hierarchische Kategorisierung, die den meisten Benutzern vertraut ist?** In diesem Falle eignen sich die Daten ideal für eine Strukturansicht. Wenn mehrere Ansichten oder Sortierungen erforderlich sind, verwenden Sie stattdessen eine Listenansicht.
--   **Müssen Benutzer die Daten auf niedrigerer Ebene in einigen, aber nicht in allen Szenarien oder in einigen, aber nicht immer sehen?** In diesem Falle eignen sich die Daten ideal für eine Strukturansicht.
+-   **Verfügt die Hierarchie über mindestens drei Ebenen (ohne den Stamm)?** Wenn dies nicht der Fall ist, sollten Sie Alternativen wie Listenansichtsgruppen, Registerkarten, Dropdownlisten oder erweiterbare Überschriften in Betracht ziehen.
+-   **Verfügen die Elemente über zusätzliche Daten?** Falls ja, sollten Sie eine Listenansicht im Ansichtsmodus Details verwenden, um die zusätzlichen Daten vollständig zu nutzen.
+-   **Beziehen sich die Daten auf niedrigerer Ebene auf unabhängige Subtasks?** Falls ja, sollten Sie die Informationen in einem zugeordneten Steuerelement oder in einem separaten Fenster (mithilfe von Befehlsschaltflächen [oder](ctrl-command-buttons.md) Links) [anzeigen.](ctrl-command-links.md)
+-   **Sind die Zielbenutzer erweitert?** Fortgeschrittene Benutzer sind mit der Verwendung von Strukturen vertrauter. Wenn Ihre Anwendung auf erfahrene Benutzer ausgerichtet ist, vermeiden Sie die Verwendung von Strukturansichten.
+-   **Verfügen die Elemente über eine einzelne, natürliche, hierarchische Kategorisierung, die den meisten Benutzern vertraut ist?** Wenn ja, sind die Daten ideal für eine Strukturansicht. Wenn mehrere Ansichten oder Sortierungen benötigt werden, verwenden Sie stattdessen eine Listenansicht.
+-   **Müssen Benutzer die Daten auf niedrigerer Ebene in einigen, aber nicht in allen Szenarien oder in einigen, aber nicht in der ganzen Zeit sehen?** Wenn ja, sind die Daten ideal für eine Strukturansicht.
 
 > [!Note]  
 > Manchmal wird ein Steuerelement, das wie eine Strukturansicht aussieht, mithilfe einer Listenansicht implementiert. Wenden Sie in solchen Fällen die Richtlinien basierend auf der Verwendung und nicht auf der Implementierung an.
@@ -79,44 +79,44 @@ Berücksichtigen Sie die folgenden Fragen, um zu entscheiden, ob eine Strukturan
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-Strukturen sollen Daten organisieren und die Suche erleichtern, aber es ist schwierig, Daten innerhalb einer Struktur leicht auffindbar zu machen. Beachten Sie bei der Entscheidung über Strukturansichten und deren Organisation die folgenden Prinzipien.
+Strukturen dienen dazu, Daten zu organisieren und leicht zu finden, aber es ist schwierig, Daten innerhalb einer Struktur leicht zu erkennen. Beachten Sie bei der Entscheidung über Strukturansichten und deren Organisation die folgenden Prinzipien.
 
-### <a name="predictability-and-discoverability"></a>Vorhersagbarkeit und Auffindbarkeit
+### <a name="predictability-and-discoverability"></a>Vorhersagbarkeit und Aufholbarkeit
 
-**Eine Strukturansicht basiert auf den Beziehungen zwischen Objekten.** Strukturen funktionieren am besten, wenn die Objekte eine klare, bekannte, sich gegenseitig ausschließende Beziehung bilden, in der jedes Objekt einem einzelnen, leicht zu bestimmenden Container zugeordnet ist.
+**Eine Strukturansicht basiert auf den Beziehungen zwischen Objekten.** Strukturen funktionieren am besten, wenn die Objekte eine klare, bekannte, sich gegenseitig ausschließende Beziehung bilden, in der jedes Objekt einem einzelnen, leicht zu bestimmenden Container zu ordnet.
 
-**Ein erhebliches Problem besteht darin, dass ein Objekt auf verschiedenen Knoten angezeigt werden kann.** Wo würden Benutzer beispielsweise erwarten, ein Hardwaregerät zu finden, das Musik spielt, über eine große Festplatte verfügt und einen USB-Anschluss verwendet? Möglicherweise in einem von mehreren verschiedenen Containerknoten, z. B. Multimedia, Storage, USB und möglicherweise in Hardwareressourcen. Eine Lösung besteht darin, jedes Objekt unabhängig von den Umständen unter dem jeweils am besten geeigneten Container zu platzieren. Ein anderer Ansatz besteht darin, jedes Objekt unter allen containern zu platzieren, die angewendet werden. Erstere höher gestuft eine einfache, saubere Hierarchie und die zweite höher erfindbarkeit jeder hat Vorteile und potenzielle Probleme.
+**Ein erhebliches Problem ist, dass ein Objekt auf verschiedenen Knoten angezeigt werden kann.** Wo erwarten Benutzer beispielsweise, ein Hardwaregerät zu finden, das Musik abspielt, über eine große Festplatte verfügt und einen USB-Anschluss verwendet? Möglicherweise in einem von mehreren verschiedenen Containerknoten, z. B. Multimedia, Storage, USB und möglicherweise in Hardwareressourcen. Eine Lösung besteht im Platzieren jedes Objekts unter dem am besten geeigneten Container, unabhängig von den Umständen. Ein weiterer Ansatz besteht im Platzieren jedes Objekts unter allen containern, die angewendet werden. Erstere fördern eine einfache, saubere Hierarchie, und letztere fördert die Aufholbarkeit, die jeweils Vorteile und potenzielle Probleme hat.
 
-**Benutzer verstehen das Layout der Struktur möglicherweise nicht vollständig, bilden aber ein mentales Modell der Beziehungen, nachdem sie eine Weile mit der Struktur interagiert haben.** Wenn dieses mentale Modell falsch ist, führt dies zu Verwirrung. Angenommen, ein Musikplayer ist in den Containern Multimedia, Storage und USB zu finden. Diese Anordnung verbessert die Auffindbarkeit. Wenn ein Benutzer das Gerät zum ersten Mal in Multimedia findet, kann der Benutzer daraus schließen, dass alle Geräte wie Musikplayer im Multimediacontainer angezeigt werden. Der Benutzer erwartet dann, dass ähnliche Geräte, z. B. Digitalkameras, im Multimediacontainer angezeigt werden, und wird verwechselt, wenn dies nicht der Fall ist.
+**Benutzer verstehen das Layout der Struktur möglicherweise nicht vollständig, aber sie bilden ein mentales Modell der Beziehungen, nachdem sie eine Weile mit der Struktur interagiert haben.** Wenn dieses mentale Modell falsch ist, führt dies zu Verwirrung. Angenommen, ein Musikplayer ist in den Containern Multimedia, Storage und USB zu finden. Diese Anordnung verbessert die Aufholbarkeit. Wenn ein Benutzer das Gerät erstmals in Multimedia findet, kann der Benutzer daraus schließen, dass alle Geräte wie Musikplayer im Multimediacontainer angezeigt werden. Der Benutzer erwartet dann, dass ähnliche Geräte, z. B. Digitalkameras, im Multimediacontainer angezeigt werden, und wird verwirrend, wenn dies nicht der Fall ist.
 
-**Die Herausforderung beim Entwerfen einer Struktur besteht darin, die Auffindbarkeit mit einem vorhersagbaren Benutzermodell in Einklang zu bringen, das Verwechslungen minimiert.**
+**Die Herausforderung beim Entwerfen einer Struktur besteht darin, die Aufholbarkeit mit einem vorhersagbaren Benutzermodell zu ausgleichen, das Verwirrung minimiert.**
 
-### <a name="breadth-vs-depth"></a>Breite und Tiefe
+### <a name="breadth-vs-depth"></a>Breite im Vergleich zu Tiefe
 
-Benutzerfreundlichkeitsstudien haben gezeigt, dass **Benutzer objekte in einer Struktur, die breit ist, erfolgreicher finden als in einer Struktur, die tief ist.** Wenn Sie also eine Struktur entwerfen, sollten Sie die Breite über die Tiefe bevorzugen. Im Idealfall sollte eine Struktur nicht mehr als vier Ebenen (ohne Zählung des Stammknotens) aufweisen, und die am häufigsten verwendeten Objekte sollten in den ersten beiden Ebenen angezeigt werden.
+Benutzerfreundlichkeitsstudien haben gezeigt, dass Benutzer bei der Suche nach Objekten in einer Struktur, die breit ist, erfolgreicher sind als **in** einer Struktur, die tief ist. Daher sollten Sie beim Entwerfen einer Struktur die Breite gegenüber der Tiefe bevorzugen. Im Idealfall sollte eine Struktur nicht mehr als vier Ebenen (ohne Zählung des Stammknotens) haben, und die objekte, auf die am häufigsten zugegriffen wird, sollten auf den ersten beiden Ebenen angezeigt werden.
 
-### <a name="other-principles"></a>Weitere Prinzipien
+### <a name="other-principles"></a>Andere Prinzipien
 
--   Wenn Benutzer das gesuchte Suchen finden, werden sie nicht mehr danach suchen. Sie suchen nicht, wo sonst ein Objekt gefunden werden kann, da sie dies nicht benötigen. Diese Benutzer können davon ausgehen, dass der erste Pfad, den sie finden, der einzige Pfad ist.
--   Benutzer haben Probleme, Objekte in großen, komplexen Strukturen zu finden. Benutzer führen keine umfassende manuelle Suche durch, um Objekte in solchen Strukturen zu finden. sie beenden, sobald sie der Meinung sind, dass sie einen angemessenen Aufwand unternommen haben. Daher müssen große, komplexe Strukturen durch andere Zugriffsmethoden wie die Wortsuche, einen Index oder die Filterung ergänzt werden.
--   Einige Programme ermöglichen Es Benutzern, ihre eigenen Strukturen zu erstellen. Obwohl solche selbst entworfenen Strukturen möglicherweise auf das mentale Modell eines Benutzers ausgerichtet sind, werden sie häufig zufällig und schlecht verwaltet. Während z. B. ein Dateisystem, ein E-Mail-Programm und eine Favoritenliste in der Regel ähnliche Arten von Informationen speichern, machen sich Benutzer selten die Mühe, sie auf die gleiche Weise zu organisieren.
+-   Wenn Benutzer das finden, was sie suchen, werden sie nicht mehr gesucht. Sie suchen nicht, wo sonst ein Objekt gefunden werden könnte, da sie dies nicht benötigen. Diese Benutzer können davon ausgehen, dass der erste Pfad, den sie finden, der einzige Pfad ist.
+-   Benutzer haben Probleme, Objekte in großen, komplexen Strukturen zu finden. Benutzer führen keine vollständige, manuelle Suche durch, um Objekte in solchen Strukturen zu finden. Sie halten an, sobald sie der Meinung sind, dass sie einen angemessenen Aufwand unternommen haben. Daher müssen große, komplexe Strukturen durch andere Zugriffsmethoden wie die Wortsuche, einen Index oder die Filterung ergänzt werden.
+-   Einige Programme ermöglichen Es Benutzern, eigene Strukturen zu erstellen. Solche selbst entworfenen Strukturen können zwar am mentalen Modell eines Benutzers ausgerichtet sein, sie werden jedoch häufig willkürlich erstellt und schlecht gepflegt. Während beispielsweise ein Dateisystem, ein E-Mail-Programm und eine Favoritenliste in der Regel ähnliche Arten von Informationen speichern, ist es für Benutzer selten so, dass sie auf die gleiche Weise organisiert werden.
 
-**Wenn Sie nur eine Sache durchführen...**
+**Wenn Sie nur eins tun...**
 
-Wägen Sie sorgfältig die Vor- und Nachteile der Verwendung von Strukturansichten ab. Hierarchisch angeordnete Daten bedeuten nicht, dass Sie eine Strukturansicht verwenden müssen.
+Abwägen Sie sorgfältig die Vor- und Nachteile der Verwendung von Strukturansichten. Hierarchisch angeordnete Daten bedeuten nicht, dass Sie eine Strukturansicht verwenden müssen.
 
 ## <a name="usage-patterns"></a>Verwendungsmuster
 
-Strukturansichten weisen mehrere Verwendungsmuster auf:
+Strukturansichten haben mehrere Verwendungsmuster:
 
 
 
 | Verwendung                           |    Beispiel                         |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Strukturansichten nur mit Containerknoten**<br/> Benutzer können jeweils einen Container anzeigen und mit diesem interagieren. <br/>                        | In der Regel verfügen diese Strukturansichten über ein zugeordnetes Steuerelement, das den Inhalt des ausgewählten Containers anzeigt, sodass Benutzer jeweils nur mit einem Container interagieren können. <br/> ![Screenshot des Container- und Inhaltsbereichs ](images/ctrl-tree-views-image6.png)<br/> In diesem Beispiel enthält die Strukturansicht nur Containerknoten. Der Inhalt des ausgewählten Knotens wird im zugeordneten Listenansicht-Steuerelement angezeigt.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Strukturansichten mit nur Containerknoten**<br/> Benutzer können einen Container nach dem anderen anzeigen und mit ihm interagieren. <br/>                        | In der Regel verfügen diese Strukturansichten über ein zugeordnetes Steuerelement, das den Inhalt des ausgewählten Containers anzeigt, sodass Benutzer immer nur mit einem Container gleichzeitig interagieren können. <br/> ![Screenshot des Containerbereichs und des Inhaltsbereichs ](images/ctrl-tree-views-image6.png)<br/> In diesem Beispiel verfügt die Strukturansicht nur über Containerknoten. Der Inhalt des ausgewählten Knotens wird im zugeordneten Listenansicht-Steuerelement angezeigt.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | **Strukturansichten mit Container- und Blattknoten**<br/> Benutzer können Container und Blätter anzeigen und mit ihnen interagieren.<br/>                       | In der Regel verfügen diese Strukturansichten über ein zugeordnetes Steuerelement, das den Inhalt des ausgewählten Containers oder Blatts anzeigt. Wenn Benutzer mit Blättern interagieren können, ist es häufig erforderlich, die Mehrfachauswahl zu unterstützen. <br/> ![Screenshot des Strukturansichtsbereichs und des Inhaltsbereichs ](images/ctrl-tree-views-image7.png)<br/> In diesem Beispiel enthält die Strukturansicht sowohl Containerknoten als auch Blattknoten. Da die Mehrfachauswahl unterstützt wird, wird der Inhalt der geöffneten Elemente mithilfe von Registerkarten im [zugeordneten](ctrl-tabs.md) Steuerelement angezeigt.<br/> Alternativ kann die Strukturansicht über eine geordnete Liste verfügen, in der die Container Überschriften und die Blätter Optionen sind. <br/> ![Screenshot der Strukturansicht mit Überschriften und Optionen ](images/ctrl-tree-views-image8.png)<br/> In diesem Beispiel sind die Strukturblätter Optionen, und die Container sind Optionskategorien.<br/> |
 | **Kontrollkästchenstrukturansichten**<br/> Benutzer können eine beliebige Anzahl von Elementen auswählen, einschließlich keiner.<br/>                                             | Die Kontrollkästchen geben deutlich an, dass eine Mehrfachauswahl möglich ist. Verwenden Sie dieses Strukturmuster, wenn die Mehrfachauswahl wichtig oder häufig verwendet wird. <br/> ![Screenshot der Strukturansicht mit Kontrollkästchen ](images/ctrl-tree-views-image9.png)<br/> In diesem Beispiel ermöglicht eine Kontrollkästchen-Strukturansicht die Auswahl von Features, die aktiviert oder deaktiviert werden können.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| **Strukturansichts-Generatoren**<br/> Benutzer können eine Struktur erstellen, indem sie jeweils einen Container oder ein Blatt hinzufügen und optional die Reihenfolge festlegen.<br/> | Viele Strukturen können von Benutzern erstellt oder geändert werden. Einige Strukturen werden direkt über Kontextmenüs und Drag & Drop (z. B. die Ordner im Windows-Explorer) erstellt, während andere Strukturen mithilfe eines spezialisierten Dialogfelds erstellt werden (z. B. die Favoritenliste in Windows Internet Explorer). <br/> ![Screenshot des Dialogfelds "Favoriten" ](images/ctrl-tree-views-image10.png)<br/> In diesem Beispiel aus Internet Explorer können Benutzer mithilfe eines Dialogfelds eine eigene Favoritenliste erstellen.<br/>                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Strukturansichts-Generatoren**<br/> Benutzer können eine Struktur erstellen, indem sie jeweils einen Container oder ein Blatt hinzufügen und optional die Reihenfolge festlegen.<br/> | Viele Strukturen können von Benutzern erstellt oder geändert werden. Einige Strukturen werden direkt über Kontextmenüs und Drag & Drop (z. B. die Ordner im Windows-Explorer) erstellt, während andere Strukturen mithilfe eines spezialisierten Dialogfelds erstellt werden (z. B. die Favoritenliste in Windows Internet Explorer). <br/> ![Screenshot des Dialogfelds "Favoriten" ](images/ctrl-tree-views-image10.png)<br/> In diesem Beispiel aus Internet Explorer können Benutzer mithilfe eines Dialogfelds eine eigene Liste von Favoriten erstellen.<br/>                                                                                                                                                                                                                                                                                                                                                                                     |
 | **Strukturansichten mit alternativen Zugriffsmethoden**<br/> Benutzer können Objekte auf andere Weise als mithilfe einer hierarchischen Struktur suchen.<br/>        | Wie bereits erwähnt, haben Benutzer Probleme beim Suchen von Objekten in großen, komplexen Strukturen, sodass diese Strukturen durch andere Zugriffsmethoden wie eine Wortsuche, einen Index oder filtert ergänzt werden sollten. <br/> ![Screenshot der Registerkarten "Inhalt", "Index" und "Favoriten" ](images/ctrl-tree-views-image11.png)<br/> In diesem Beispiel können Benutzer auch über ein Inhaltsverzeichnis, einen Index und Favoriten auf Informationen zugreifen. Für einige Benutzer können die Index- und Suchregisterkarten nützlicher sein als die Registerkarte "Inhalt".<br/> ![Screenshot des Windows-Startmenüs und des Suchfelds ](images/ctrl-tree-views-image12.png)<br/> In diesem Beispiel ermöglicht die Windows Startmenü Benutzern auch den Zugriff auf Programme, Dateien und Webseiten, indem sie einen Teil des Namens in das Feld Suchen eingeben.<br/>                                                                                                             |
 
 
@@ -210,44 +210,44 @@ Strukturansichten weisen mehrere Verwendungsmuster auf:
 Empfohlene Größen- und Abstandseinstellungen für Strukturansichtssteuerelemente.
 
 -   Wählen Sie eine Breite der **Strukturansicht aus, die das horizontale Scrollen** für die meisten Elemente vermeidet, wenn die Struktur vollständig erweitert ist.
--   **Fügen Sie zusätzliche 30 Prozent hinzu, um die Lokalisierung zu ermöglichen.**
--   **Wählen Sie eine Strukturansichtshöhe aus, die unnötiges vertikales Scrollen überflüssig macht.** Erwägen Sie, eine Strukturansicht etwas länger zu gestalten (oder sogar noch mehr, wenn Platz verfügbar ist), wenn dies die Notwendigkeit einer vertikalen Bildlaufleiste reduziert.
+-   **Schließen Sie zusätzliche 30 Prozent ein, um die Lokalisierung zu bieten.**
+-   **Wählen Sie eine Strukturansichtshöhe aus, die unnötiges vertikales Scrollen verhindert.** Erwägen Sie, eine Strukturansicht etwas länger zu machen (oder sogar noch mehr, wenn Platz verfügbar ist), wenn dies die Notwendigkeit einer vertikalen Scrollleiste reduziert.
 
     **Falsch:**
 
-    ![Screenshot des kurzen, schmalen Strukturansichtssteuerelements ](images/ctrl-tree-views-image21.png)
+    ![Screenshot des kurzen Steuerelements für die schmale Strukturansicht ](images/ctrl-tree-views-image21.png)
 
-    In diesem Beispiel würden die Bildlaufleisten in den meisten Fällen entfernt, wenn die Strukturansicht etwas breiter und länger wäre. In dieser bestimmten Struktur kann jeweils nur ein Container geöffnet werden.
+    In diesem Beispiel würden die Bildlaufleisten in den meisten Fällen entfernt, wenn die Strukturansicht etwas breiter und länger wäre. In dieser bestimmten Struktur kann nur ein Container gleichzeitig geöffnet werden.
 
--   **Wenn Benutzer davon profitieren, die Strukturansicht zu vergrößern, können Sie die Größe der Strukturansicht und des übergeordneten Fensters ändern.** Auf diese Weise können Benutzer die Größe der Strukturansicht nach Bedarf anpassen.
+-   **Wenn Benutzer davon profitieren, die Strukturansicht zu vergrößern, können Sie die Größe der Strukturansicht und des übergeordneten Fensters ändern.** Auf diese Weise können Benutzer die Strukturansichtsgröße nach Bedarf anpassen.
 
 ## <a name="labels"></a>Bezeichnungen
 
 ### <a name="control-labels"></a>Steuerelementbezeichnungen
 
 -   Alle Strukturansichten benötigen Bezeichnungen. Schreiben Sie die Bezeichnung als Wort oder Ausdruck, nicht als Satz, der mit einem Doppelpunkt endet und [statischen Text verwendet.](glossary.md)
--   Weisen Sie einen eindeutigen Zugriffsschlüssel zu. Zuweisungsrichtlinien finden Sie unter [Tastatur.](inter-keyboard.md)
+-   Weisen Sie einen eindeutigen Zugriffsschlüssel zu. Zuweisungsrichtlinien finden Sie unter [Tastatur](inter-keyboard.md).
 -   Verwenden Sie für Überschriften die Standardgroß- und kleinschreibung.
 -   Positionieren Sie die Bezeichnung über dem Steuerelement, und richten Sie die Bezeichnung am linken Rand des Steuerelements aus.
--   Schreiben Sie für Strukturansichten mit mehrfacher Auswahl die Bezeichnung, damit klar ist, dass eine Mehrfachauswahl möglich ist. Bezeichnungen der Kontrollkästchenstrukturansicht können weniger explizit sein.
+-   Schreiben Sie für Mehrfachauswahl-Strukturansichten die Bezeichnung, damit klar ist, dass mehrere Auswahlen möglich sind. Bezeichnungen der Kontrollkästchenstrukturansicht können weniger explizit sein.
 
     **Falsch:**
 
     ![Screenshot der Strukturansicht mit Komponentenbezeichnung ](images/ctrl-tree-views-image22.png)
 
-    In diesem Beispiel stellt die Bezeichnung keine Informationen zur Mehrfachauswahl bereit.
+    In diesem Beispiel stellt die Bezeichnung keine Informationen zur Mehrfachauswahl zur Verfügung.
 
     **Besser:**
 
-    ![Screenshot der Strukturansicht mit einer oder mehreren Bezeichnungen ](images/ctrl-tree-views-image23.png)
+    ![Screenshot der Strukturansicht mit der Bezeichnung "eine oder mehrere" ](images/ctrl-tree-views-image23.png)
 
-    In diesem Beispiel gibt die Bezeichnung deutlich an, dass eine Mehrfachauswahl möglich ist.
+    In diesem Beispiel gibt die Bezeichnung eindeutig an, dass eine Mehrfachauswahl möglich ist.
 
     **Beste:**
 
     ![Screenshot der Strukturansicht mit Kontrollkästchen ](images/ctrl-tree-views-image24.png)
 
-    In diesem Beispiel weisen die Kontrollkästchen deutlich darauf hin, dass mehrere Auswahlmöglichkeiten möglich sind, sodass die Bezeichnung nicht explizit sein muss.
+    In diesem Beispiel weisen die Kontrollkästchen eindeutig darauf hin, dass eine Mehrfachauswahl möglich ist, sodass die Bezeichnung nicht explizit sein muss.
 
 ### <a name="data-text"></a>Datentext
 
@@ -257,29 +257,29 @@ Empfohlene Größen- und Abstandseinstellungen für Strukturansichtssteuerelemen
 
 -   Wenn Sie Anweisungstext zu einer Strukturansicht hinzufügen müssen, fügen Sie ihn über der Bezeichnung hinzu. Verwenden Sie vollständige Sätze mit endender Interpunktion.
 -   Verwenden Sie für Überschriften die Standardgroß- und kleinschreibung.
--   Ergänzende Erklärungen, die hilfreich, aber nicht notwendig sind, sollten kurz gehalten werden. Platzieren Sie diese Informationen entweder in Klammern zwischen der Bezeichnung und dem Doppelpunkt, nach der Main-Anweisung, wenn sie anstelle einer Bezeichnung verwendet wird, oder unterhalb des Steuerelements.
+-   Ergänzende Erläuterungen, die hilfreich, aber nicht notwendig sind, sollten kurz gehalten werden. Platzieren Sie diese Informationen entweder in Klammern zwischen der Bezeichnung und dem Doppelpunkt, nach der Main-Anweisung, wenn sie anstelle einer Bezeichnung verwendet wird, oder unterhalb des Steuerelements.
 
     ![Screenshot der Erklärung unterhalb der Strukturansicht ](images/ctrl-tree-views-image8.png)
 
-    In diesem Beispiel liegt die ergänzende Erklärung unterhalb des -Steuerelements.
+    In diesem Beispiel befindet sich die ergänzende Erklärung unterhalb des Steuerelements.
 
 ## <a name="documentation"></a>Dokumentation
 
 Beim Verweisen auf Strukturansichten:
 
--   Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Großschreibung, aber nicht den Unterstrich oder Doppelpunkt des Zugriffsschlüssels. Schließen Sie die Wortliste oder hierarchische Liste ein, wenn der Kontext eine Unterscheidung von regulären Listen erfordert.
--   Verwenden Sie für Strukturelemente den genauen Elementtext, einschließlich der Groß-/Großschreibung.
--   Strukturansichten werden nur in der Programmierung und anderen technischen Dokumentationen als Strukturansichten bezeichnet. Verwenden Sie überall sonst listen- oder hierarchische Listen, da der Begriff Struktur für die meisten Benutzer verwirrend ist.
--   Verwenden Sie zum Beschreiben der Benutzerinteraktion select für die Daten, und erweitern und reduzieren Sie die Schaltflächen Plus und Minus.
--   Formatieren Sie nach Möglichkeit die Bezeichnung und die Strukturelemente mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnung und die Elemente nur in Anführungszeichen, wenn dies erforderlich ist, um Verwechslungen zu vermeiden.
+-   Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Unterstriche, aber schließen Sie nicht den Unterstrich oder Doppelpunkt des Zugriffsschlüssels ein. Schließen Sie die Wortliste oder hierarchische Liste ein, wenn der Kontext eine Unterscheidung von regulären Listen erfordert.
+-   Verwenden Sie für Strukturelemente den genauen Elementtext, einschließlich der Groß-/Groß-/Groß-/Unterform.
+-   Strukturansichten werden nur in der Programmierung und in anderen technischen Dokumentationen als Strukturansichten bezeichnet. Verwenden Sie überall sonst Listen oder hierarchische Listen, da die Begriffsstruktur für die meisten Benutzer verwirrend ist.
+-   Um die Benutzerinteraktion zu beschreiben, verwenden Sie select für die Daten, und erweitern und reduzieren Sie für die Plus- und Minusschaltflächen.
+-   Formatieren Sie die Bezeichnung und die Strukturelemente nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnung und die Elemente nur dann in Anführungszeichen, wenn dies erforderlich ist, um Verwirrung zu vermeiden.
 
-Beispiel: Wählen Sie in der Liste **Inhalt** **Benutzeroberfläche Entwerfen** aus.
+Beispiel: Wählen Sie in **der Liste** Inhalt Benutzeroberfläche **Design aus.**
 
 Beim Verweisen auf Kontrollkästchen in einer Strukturansicht:
 
--   Verwenden Sie den genauen Bezeichnungstext einschließlich der Groß-/Großschreibung, und schließen Sie das Kontrollkästchen Wörter ein. Schließen Sie den Zugriffsschlüsselunterstrich nicht ein.
--   Um die Benutzerinteraktion zu beschreiben, verwenden Sie select und clear.
--   Formatieren Sie die Bezeichnung nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnung nur in Anführungszeichen, wenn dies erforderlich ist, um Verwechslungen zu vermeiden.
+-   Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Unterschrift, und schließen Sie das Kontrollkästchen Wörter ein. Schließen Sie den Unterstrich der Zugriffsschlüssel nicht ein.
+-   Verwenden Sie select und clear, um die Benutzerinteraktion zu beschreiben.
+-   Formatieren Sie die Bezeichnung nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnung nur dann in Anführungszeichen, wenn dies erforderlich ist, um Verwirrung zu vermeiden.
 
-Beispiel: Aktivieren Sie in der Liste **Zu sichernde Elemente** das **Kontrollkästchen Eigene Dokumente.**
+Beispiel: Aktivieren Sie in **der Liste Zu sichernde** Elemente das **Eigene Dokumente** Kontrollkästchen.
 

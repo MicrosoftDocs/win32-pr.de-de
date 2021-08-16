@@ -1,23 +1,23 @@
 ---
 title: WinNT ADsPath
-description: Dieses Thema enthält Beispiele für Zeichen folgen, die für den WinNT ADsPath verwendet werden.
+description: Dieses Thema enthält Beispiele für Zeichenfolgen, die für WinNT ADsPath verwendet werden.
 ms.assetid: 0fad4b34-5287-43a0-a172-a08955b8b132
 ms.tgt_platform: multiple
 keywords:
-- WinNT-Dienstanbieter ADSI, WinNT ADsPath
-- ADsPath ADSI, WinNT, Description
+- WinNT-Dienstanbieter ADSI , WinNT ADsPath
+- ADsPath ADSI , WinNT, description
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 906ea2c3db1b5234fb07045d921858766a105c4c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b4971209a516d9e0c759e892322c99db1807a4bf88e771281299af30abc47d47
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947318"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117838370"
 ---
 # <a name="winnt-adspath"></a>WinNT ADsPath
 
-Die ADsPath-Zeichenfolge für den ADSI WinNT-Anbieter kann eine der folgenden Formen aufweisen:
+Die ADsPath-Zeichenfolge für den ADSI WinNT-Anbieter kann eine der folgenden Formen haben:
 
 
 ```C++
@@ -34,19 +34,19 @@ WinNT://<server>/<object name>,<object class>
 
 
 
-Der Domänen Name kann entweder ein NetBIOS-Name oder ein DNS-Name sein.
+Der Domänenname kann entweder ein NETBIOS-Name oder ein DNS-Name sein.
 
 Der Server ist der Name eines bestimmten Servers innerhalb der Domäne.
 
-Der Pfad ist der Pfad für ein Objekt, z. b. "printserver1/printer2".
+Der Pfad ist der Pfad von für das Objekt, z. B. "printserver1/printer2".
 
 Der Objektname ist der Name eines bestimmten Objekts.
 
-Die Objektklasse ist der Klassenname des benannten Objekts. Ein Beispiel für diese Verwendung wäre "Winnt://MyServer/JeffSmith,User". Die Angabe eines Klassen namens kann die Leistung des Bindungs Vorgangs verbessern.
+Die Objektklasse ist der Klassenname des benannten Objekts. Ein Beispiel für diese Verwendung wäre "WinNT://MyServer/JeffSmith,user". Das Angeben eines Klassennamens kann die Leistung des Bindungsvorgang verbessern.
 
- 
+ 
 
- 
+ 
 
 
 

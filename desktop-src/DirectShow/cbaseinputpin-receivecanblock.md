@@ -1,7 +1,7 @@
 ---
-description: 'Die receivecanblock-Methode bestimmt, ob Aufrufe der IMemInputPin:: Receive-Methode blockiert werden könnten. Diese Methode implementiert die IMemInputPin:: receivecanblock-Methode.'
+description: Die ReceiveCanBlock-Methode bestimmt, ob Aufrufe der IMemInputPin::Receive-Methode blockiert werden können. Diese Methode implementiert die IMemInputPin::ReceiveCanBlock-Methode.
 ms.assetid: db96e389-e1bc-4b38-8d0a-a20f0d3a4460
-title: Cbaseinputpin. receivecanblock-Methode (amfilter. h)
+title: CBaseInputPin.ReceiveCanBlock-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 93c80d6c8f834b45381b89e80d2e0acc392bf25a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4ece7243c145d34ed06e29b2a29ae9847e682981337b96a47976c20eb76272d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369274"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117823852"
 ---
-# <a name="cbaseinputpinreceivecanblock-method"></a>Cbaseinputpin. receivecanblock-Methode
+# <a name="cbaseinputpinreceivecanblock-method"></a>CBaseInputPin.ReceiveCanBlock-Methode
 
-Die- `ReceiveCanBlock` Methode bestimmt, ob Aufrufe der [**IMemInputPin:: Receive**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) -Methode blockiert werden könnten. Diese Methode implementiert die [**IMemInputPin:: receivecanblock**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receivecanblock) -Methode.
+Die `ReceiveCanBlock` -Methode bestimmt, ob Aufrufe der [**IMemInputPin::Receive-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) blockiert werden können. Diese Methode implementiert die [**IMemInputPin::ReceiveCanBlock-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receivecanblock)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                                                 |
 |-----------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl> | Die PIN wird bei einem empfangenden **Empfang** nicht blockiert.<br/> |
-| <dl> <dt>**S \_ OK**</dt> </dl>    | Die PIN kann bei einem **Empfangs Empfang** blockiert werden.<br/>    |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Die Stecknadel wird bei einem Aufruf von **Receive** nicht blockiert.<br/> |
+| <dl> <dt>**S \_ OK**</dt> </dl>    | Die Stecknadel kann bei einem Aufruf von Receive blockiert **werden.**<br/>    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Gibt false zurück, \_ Wenn der Aufruf der **Receive** -Methode garantiert nicht blockiert wird. Andernfalls wird S \_ OK oder ein Fehlercode zurückgegeben. Wenn die **Receive** -Methode **Receive** -Befehle für eine nachgeschaltete Pin aufruft, kann die downstreampin blockiert werden. `ReceiveCanBlock` muss diesen Faktor berücksichtigen.
+Gibt S \_ FALSE zurück, wenn Aufrufe der **Receive-Methode** garantiert nicht blockiert werden. Andernfalls wird S \_ OK oder ein Fehlercode zurückgegeben. Wenn die **Receive-Methode** **Receive** für einen Downstreampin aufruft, wird der Downstreampin möglicherweise blockiert. `ReceiveCanBlock` muss diesen Faktor berücksichtigen.
 
-Mit dieser Methode kann ein upstreamfilter die Threading Strategie bestimmen. Wenn die **Receive** -Methode blockiert werden kann, kann der upstreamfilter entscheiden, einen Arbeits Thread zu verwenden, der Daten puffert. Eine Implementierung dieser Strategie finden Sie unter der [**coutputqueue**](coutputqueue.md) -Klasse.
+Ein Upstreamfilter kann diese Methode verwenden, um seine Threadingstrategie zu bestimmen. Wenn die **Receive-Methode** blockiert werden kann, entscheidet sich der Upstreamfilter möglicherweise für die Verwendung eines Arbeitsthreads, der Daten puffert. Eine Implementierung dieser Strategie finden Sie in der [**COutputQueue-Klasse.**](coutputqueue.md)
 
-In der Basisklasse gibt diese Methode S OK zurück, \_ Wenn einer der folgenden Punkte zutrifft:
+In der Basisklasse gibt diese Methode S OK zurück, wenn eine der folgenden Punkte \_ zutrifft:
 
--   Der Filter hat keine Ausgabe Pins.
--   Eine mit diesem Filter verbundene Eingabe-PIN signalisiert, dass Sie blockiert werden kann.
--   Die [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) -Schnittstelle wird von einer mit diesem Filter verbundenen Eingabe-PIN nicht unterstützt.
+-   Der Filter verfügt über keine Ausgabepins.
+-   Ein Eingabepin, der mit diesem Filter verbunden ist, signalisiert, dass er möglicherweise blockiert wird.
+-   Ein Eingabepin, der mit diesem Filter verbunden ist, unterstützt die [**IMemInputPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) nicht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,16 +73,16 @@ In der Basisklasse gibt diese Methode S OK zurück, \_ Wenn einer der folgenden 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseingeputpin-Klasse**](cbaseinputpin.md)
+[**CBaseInputPin-Klasse**](cbaseinputpin.md)
 </dt> </dl>
 
  

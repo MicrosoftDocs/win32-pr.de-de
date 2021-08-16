@@ -1,7 +1,7 @@
 ---
-description: Die \_ Member-Variable m startsample gibt die Startzeit des neuesten Beispiels an.
+description: Die m \_ StartSample-Membervariable gibt die Startzeit des letzten Beispiels an.
 ms.assetid: 2e6d6893-d57b-4009-a6ec-40dc0878d9c4
-title: 'Cdrawimage:: m_StartSample Member (winutil. h)'
+title: CDrawImage::m_StartSample-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4fd8039b1d37d0e61a150ed6c6944f0052089b0c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a418b076b296b1aee21dfabb04350b8fd989b0d26b180486a4b1382730d9b1a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117822078"
 ---
-# <a name="cdrawimagem_startsample-member"></a>Cdrawimage:: m \_ startsample-Member
+# <a name="cdrawimagem_startsample-member"></a>CDrawImage::m \_ StartSample-Member
 
-Die Member-Variable **m \_ startsample** gibt die Startzeit des neuesten Beispiels an.
+Die **m \_ StartSample-Membervariable** gibt die Startzeit des letzten Beispiels an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ CRefTime m_StartSample;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert ist nur innerhalb der [**cdrawimage::D isplaysampletimes**](cdrawimage-displaysampletimes.md) -Methode gültig.
+Der Wert ist nur innerhalb der [**CDrawImage::D isplaySampleTimes-Methode**](cdrawimage-displaysampletimes.md) gültig.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,16 +46,16 @@ Der Wert ist nur innerhalb der [**cdrawimage::D isplaysampletimes**](cdrawimage-
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> </dl>
 
  

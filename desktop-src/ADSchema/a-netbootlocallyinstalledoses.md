@@ -1,11 +1,11 @@
 ---
-title: NetBoot-lokal-installiertes-OSes-Attribut
-description: Das netboot-lokal-installierte-OSes-Attribut ist für die interne Verwendung reserviert.
+title: netboot-Locally-Installed-OSes-Attribut
+description: Das Attribut netboot-Locally-Installed-OSes ist für die interne Verwendung reserviert.
 ms.assetid: fb59183b-26dd-4f51-955e-32f7a706a59c
 ms.tgt_platform: multiple
 keywords:
-- NetBoot-lokal-installiert-OSes-Attribut AD-Schema
-- netbootlocallyinstalledose-Attribut, AD-Schema
+- netboot-Locally-Installed-OSes-Attribut AD-Schema
+- netbootLocallyInstalledOSes-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eff07c4e4ab605a90eb2f828443c8111fd30d009
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 98e0155c9e4d187fc38143d2bfaccb9e77e66083471a40f0701d6ed3dc511b4a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106345560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117837060"
 ---
-# <a name="netboot-locally-installed-oses-attribute"></a>NetBoot-lokal-installiertes-OSes-Attribut
+# <a name="netboot-locally-installed-oses-attribute"></a>netboot-Locally-Installed-OSes-Attribut
 
-Das **netboot-lokal-installierte-OSes-** Attribut ist für die interne Verwendung reserviert.
+Das **Attribut netboot-Locally-Installed-OSes** ist für die interne Verwendung reserviert.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | NetBoot-lokal-installiert-Betriebssysteme              |
-| LDAP-Display-Name | netbootlocallyinstalledose                 |
+| CN                | netboot-Locally-Installed-OSes              |
+| Ldap-Anzeigename | netbootLocallyInstalledOSes                 |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.            |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.            |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.859                      |
-| System-ID-GUID    | 07383080-91df-11d1-AEbc-0000e80367c1        |
+| System-Id-Guid    | 07383080-91df-11d1-aebc-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Das **netboot-lokal-installierte-OSes-** Attribut ist für die interne Verwendun
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Das **netboot-lokal-installierte-OSes-** Attribut ist für die interne Verwendun
 |------------------------|------------------------------------------------------------|
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
-| System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
-| Ist indiziert             | False                                                      |
-| Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| System-Only            | Falsch                                                      |
+| Is-Single-Valued       | Falsch                                                      |
+| Ist indiziert             | Falsch                                                      |
+| Im globalen Katalog      | Falsch                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Das **netboot-lokal-installierte-OSes-** Attribut ist für die interne Verwendun
 |------------------------|------------------------------------------------------------|
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
-| System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
-| Ist indiziert             | False                                                      |
-| Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| System-Only            | Falsch                                                      |
+| Is-Single-Valued       | Falsch                                                      |
+| Ist indiziert             | Falsch                                                      |
+| Im globalen Katalog      | Falsch                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Das **netboot-lokal-installierte-OSes-** Attribut ist für die interne Verwendun
 |------------------------|------------------------------------------------------------|
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
-| System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
-| Ist indiziert             | False                                                      |
-| Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| System-Only            | Falsch                                                      |
+| Is-Single-Valued       | Falsch                                                      |
+| Ist indiziert             | Falsch                                                      |
+| Im globalen Katalog      | Falsch                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Das **netboot-lokal-installierte-OSes-** Attribut ist für die interne Verwendun
 |------------------------|------------------------------------------------------------|
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
-| System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
-| Ist indiziert             | False                                                      |
-| Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| System-Only            | Falsch                                                      |
+| Ist einwertig       | Falsch                                                      |
+| Ist indiziert             | Falsch                                                      |
+| Im globalen Katalog      | Falsch                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Das **netboot-lokal-installierte-OSes-** Attribut ist für die interne Verwendun
 |------------------------|------------------------------------------------------------|
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
-| System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
-| Ist indiziert             | False                                                      |
-| Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| System-Only            | Falsch                                                      |
+| Ist einwertig       | Falsch                                                      |
+| Ist indiziert             | Falsch                                                      |
+| Im globalen Katalog      | Falsch                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Das **netboot-lokal-installierte-OSes-** Attribut ist für die interne Verwendun
 |------------------------|------------------------------------------------------------|
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
-| System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
-| Ist indiziert             | False                                                      |
-| Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| System-Only            | Falsch                                                      |
+| Ist einwertig       | Falsch                                                      |
+| Ist indiziert             | Falsch                                                      |
+| Im globalen Katalog      | Falsch                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 

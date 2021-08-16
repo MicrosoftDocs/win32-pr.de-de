@@ -55,21 +55,21 @@ Adresse einer Variablen, die einen Zeiger auf die [**IMediaSample-Schnittstelle*
 *pStartTime* 
 </dt> <dd>
 
-Zeiger auf die Startzeit des Beispiels oder **NULL.**
+Zeiger auf die Startzeit des Beispiels oder **NULL**.
 
 </dd> <dt>
 
 *pEndTime* 
 </dt> <dd>
 
-Zeiger auf die Endzeit des Beispiels oder **NULL.**
+Zeiger auf die Endzeit des Beispiels oder **NULL**.
 
 </dd> <dt>
 
 *dwFlags* 
 </dt> <dd>
 
-Bitweise Kombination von Flags, die von der [**IMemAllocator::GetBuffer-Schnittstelle unterstützt**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-getbuffer) werden.
+Bitweise Kombination von Flags, die von der [**IMemAllocator::GetBuffer-Schnittstelle**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-getbuffer) unterstützt werden.
 
 </dd> </dl>
 
@@ -99,7 +99,7 @@ Diese Methode ruft die **IMemAllocator::GetBuffer-Methode** für die Zuweisung a
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

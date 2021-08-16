@@ -13,9 +13,9 @@ ms.locfileid: "118218529"
 ---
 # <a name="instantiating-the-peninputpanel-class"></a>Instanziieren der PenInputPanel-Klasse
 
-\[[**PenInputPanel**](peninputpanel-class.md) wurde durch [Microsoft.Ink.TextInput](/previous-versions/dotnet/netframework-3.5/ms581554(v=vs.90))ersetzt. Weitere Informationen finden Sie unter [Programmieren des Texteingabebereichs.](programming-the-text-input-panel.md)\]
+\[[**PenInputPanel**](peninputpanel-class.md) wurde durch [Microsoft.Ink.TextInput ersetzt.](/previous-versions/dotnet/netframework-3.5/ms581554(v=vs.90)) Weitere Informationen finden Sie unter [Programmieren des Texteingabebereichs.](programming-the-text-input-panel.md)\]
 
-Sie können mehrere [**PenInputPanel-Objekte**](peninputpanel-class.md) instanziieren, an jedes Steuerelement in einem Formular anfügen, oder Sie können ein **PenInputPanel-Objekt** instanziieren und es zwischen Steuerelementen in Fokusereignishandlern verschieben. Da jeweils nur ein Bearbeitungssteuerelement den Fokus haben kann, kann die zweite Methode Arbeitsspeicher sparen. Eine Version des Beispiels für automatische Ansprüche namens [PenInputPanel Sample](peninputpanel-sample.md) wurde implementiert, die beide Techniken zeigt.
+Sie können mehrere [**PenInputPanel-Objekte**](peninputpanel-class.md) instanziieren, eins an jedes Steuerelement in einem Formular anfügen, oder Sie können ein **PenInputPanel-Objekt** instanziieren und zwischen Steuerelementen in Fokusereignishandlern verschieben. Da nur ein Bearbeitungssteuer steuerelement den Fokus gleichzeitig haben kann, kann die zweite Methode Arbeitsspeicher sparen. Es wurde eine Version des Beispiels für automatische Ansprüche namens [PenInputPanel-Beispiel](peninputpanel-sample.md) implementiert, die beide Techniken zeigt.
 
 In den folgenden Abschnitten wird das Erstellen und Anzeigen von [**PenInputPanel-Objekten**](peninputpanel-class.md) beschrieben.
 

@@ -5,7 +5,7 @@ ms.assetid: AAC3DA65-222D-498F-B9C3-A8CBCB722D9D
 ms.tgt_platform: multiple
 keywords:
 - MsRdpClient10NotSafeForScripting-Klasse Remotedesktopdienste
-- MsRdpClient10NotSafeForScripting-Klasse Remotedesktopdienste beschrieben
+- MsRdpClient10NotSafeForScripting-Klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -51,7 +51,7 @@ Diese Klasse implementiert die folgenden Schnittstellen.
 -   [**IMsRdpPreferredRedirectionInfo**](imsrdppreferredredirectioninfo.md)
 -   [**IMsRdpExtendedSettings**](imsrdpextendedsettings.md)
 
-**MsRdpClient10NotSafeForScripting** verfügt über diese Typen von Membern:
+**MsRdpClient10NotSafeForScripting** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
@@ -64,33 +64,33 @@ Die **MsRdpClient10NotSafeForScripting-Klasse** verfügt über diese Methoden.
 
 | Methode                                                                                      | BESCHREIBUNG                                                                                                                                                                                                                                                                                   |
 |:--------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Attachevent**](imsrdpclient9-attachevent.md)                                            | Fügt ein Ereignis an. <br/>                                                                                                                                                                                                                                                                |
-| [**Verbinden**](imstscax-connect.md)                                                         | Initiiert eine Verbindung mithilfe der Eigenschaften, die derzeit für das Steuerelement festgelegt sind.<br/>                                                                                                                                                                                                          |
+| [**Attachevent**](imsrdpclient9-attachevent.md)                                            | Angefügt ein Ereignis. <br/>                                                                                                                                                                                                                                                                |
+| [**Verbinden**](imstscax-connect.md)                                                         | Initiiert eine Verbindung mithilfe der Eigenschaften, die derzeit für das -Steuerelement festgelegt sind.<br/>                                                                                                                                                                                                          |
 | [**CreateVirtualChannels**](imstscax-createvirtualchannels.md)                             | Erstellt ein clientseitiges virtuelles Kanalobjekt für jeden angegebenen Namen des virtuellen Kanals.<br/>                                                                                                                                                                                              |
 | [**Detachevent**](imsrdpclient9-detachevent.md)                                            | Trennt ein Ereignis. <br/>                                                                                                                                                                                                                                                                |
 | [**Trennen**](imstscax-disconnect.md)                                                   | Trennt die aktive Verbindung.<br/>                                                                                                                                                                                                                                                 |
 | [**GetErrorDescription**](imsrdpclient5-geterrordescription.md)                            | Ruft die Fehlercodes und Fehlermeldungen ab.<br/>                                                                                                                                                                                                                                      |
 | [**GetStatusText**](imsrdpclient7-getstatustext.md)                                        | Ruft den Statustext für den angegebenen Statuscode ab.<br/>                                                                                                                                                                                                                           |
 | [**GetVirtualChannelOptions**](imsrdpclient-getvirtualchanneloptions.md)                   | Ruft die für einen virtuellen Kanal festgelegten Optionen ab.<br/>                                                                                                                                                                                                                                   |
-| [**NotifyRedirectDeviceChange**](imsrdpclientnonscriptable-notifyredirectdevicechange.md)  | Benachrichtigt das Modul für die Geräteumleitung über das Remotedesktop ActiveX-Steuerelement, dass eine Geräteänderung auf dem System aufgetreten ist. Diese Methode übergibt [**WM \_ DEVICECHANGE-Benachrichtigungen**](/windows/desktop/DevIO/wm-devicechange) an das Steuerelement.<br/>                                                        |
-| [**OnAuthenticationWarningDismissed**](imstscaxevents-onauthenticationwarningdismissed.md) | Wird aufgerufen, nachdem ein ActiveX-Steuerelement ein Authentifizierungsdialogfeld anzeigt (z. B. das Dialogfeld "Zertifikatfehler").<br/>                                                                                                                                                             |
-| [**OnAuthenticationWarningDisplayed**](imstscaxevents-onauthenticationwarningdisplayed.md) | Wird aufgerufen, bevor ein ActiveX-Steuerelement ein Authentifizierungsdialogfeld anzeigt (z. B. das Dialogfeld zertifikatfehler).<br/>                                                                                                                                                            |
-| [**OnAutoReconnected**](imstscaxevents-onautoreconnected.md)                               | Wird aufgerufen, wenn das Clientsteuerelement automatisch wieder eine Verbindung mit einer Remotesitzung hergestellt hat.<br/>                                                                                                                                                                                                  |
-| [**OnAutoReconnecting**](-imstscaxevents--onautoreconnecting.md)                           | Wird aufgerufen, wenn ein Client gerade eine Sitzung automatisch mit einem RD-Sitzungshost Server verbindet.<br/>                                                                                                                                                                      |
-| [**OnAutoReconnecting2**](imstscaxevents-onautoreconnecting2.md)                           | Wird aufgerufen, wenn ein Client gerade eine Sitzung automatisch mit einem RD-Sitzungshost Server verbindet.<br/>                                                                                                                                                                      |
-| [**OnChannelReceivedData**](imstscaxevents-onchannelreceiveddata.md)                       | Wird aufgerufen, wenn der Client Daten in einem skriptfähigen virtuellen Kanal empfängt.<br/>                                                                                                                                                                                                              |
+| [**NotifyRedirectDeviceChange**](imsrdpclientnonscriptable-notifyredirectdevicechange.md)  | Benachrichtigt das Geräteumleitungsmodul des Remotedesktop ActiveX, dass eine Geräteänderung auf dem System aufgetreten ist. Diese Methode übergibt [**WM \_ DEVICECHANGE-Benachrichtigungen**](/windows/desktop/DevIO/wm-devicechange) an das Steuerelement.<br/>                                                        |
+| [**OnAuthenticationWarningDismissed**](imstscaxevents-onauthenticationwarningdismissed.md) | Wird aufgerufen, ActiveX-Steuerelement ein Authentifizierungsdialogfeld anzeigt (z. B. das Zertifikatfehlerdialogfeld).<br/>                                                                                                                                                             |
+| [**OnAuthenticationWarningDisplayed**](imstscaxevents-onauthenticationwarningdisplayed.md) | Wird aufgerufen, bevor ActiveX-Steuerelement ein Authentifizierungsdialogfeld anzeigt (z. B. das Zertifikatfehlerdialogfeld).<br/>                                                                                                                                                            |
+| [**OnAutoReconnected**](imstscaxevents-onautoreconnected.md)                               | Wird aufgerufen, wenn das Clientsteuer steuerelement automatisch erneut eine Verbindung mit einer Remotesitzung hergestellt hat.<br/>                                                                                                                                                                                                  |
+| [**OnAutoReconnecting**](-imstscaxevents--onautoreconnecting.md)                           | Wird aufgerufen, wenn ein Client eine Sitzung automatisch erneut mit einem RD-Sitzungshost verbindet.<br/>                                                                                                                                                                      |
+| [**OnAutoReconnecting2**](imstscaxevents-onautoreconnecting2.md)                           | Wird aufgerufen, wenn ein Client eine Sitzung automatisch erneut mit einem RD-Sitzungshost verbindet.<br/>                                                                                                                                                                      |
+| [**OnChannelReceivedData**](imstscaxevents-onchannelreceiveddata.md)                       | Wird aufgerufen, wenn der Client Daten in einem skriptierbaren virtuellen Kanal empfängt.<br/>                                                                                                                                                                                                              |
 | [**OnConfirmClose**](imstscaxevents-onconfirmclose.md)                                     | Wird aufgerufen, wenn der Client die [**IMsRdpClient::RequestClose-Methode**](imsrdpclient-requestclose.md) aufruft.<br/>                                                                                                                                                                           |
-| [**OnConnected**](imstscaxevents-onconnected.md)                                           | Wird aufgerufen, wenn das Clientsteuerelement gerade eine Verbindung mit einem RD-Sitzungshost Server herstellen soll.<br/>                                                                                                                                                                       |
-| [**OnConnecting**](imstscaxevents-onconnecting.md)                                         | Wird aufgerufen, wenn das Clientsteuerelement als Reaktion auf einen Aufruf von [**IMsTscAx::Verbinden**](imstscax-connect.md)eine Verbindung mit einem Server herstellt.<br/>                                                                                                                                               |
+| [**OnConnected**](imstscaxevents-onconnected.md)                                           | Wird aufgerufen, wenn das Clientsteuer steuerelement eine Verbindung mit einem serverseitigen RD-Sitzungshost wird.<br/>                                                                                                                                                                       |
+| [**Beim Herstellen einer Verbindung**](imstscaxevents-onconnecting.md)                                         | Wird aufgerufen, wenn das Clientsteuerelemente als Reaktion auf einen Aufruf von [**IMsTscAx::Verbinden.**](imstscax-connect.md)<br/>                                                                                                                                               |
 | [**OnConnectionBarPullDown**](imstscaxevents-onconnectionbarpulldown.md)                   | Wird aufgerufen, wenn der Benutzer auf der Verbindungsleiste nach unten gezogen wurde.<br/>                                                                                                                                                                                                                       |
 | [**OnDevicesButtonPressed**](imstscaxevents-ondevicesbuttonpressed.md)                     | Wird aufgerufen, wenn die Geräteschaltfläche in der Verbindungsleiste gedrückt wurde.<br/>                                                                                                                                                                                                             |
-| [**OnDisconnected**](imstscaxevents-ondisconnected.md)                                     | Wird aufgerufen, wenn das Clientsteuerelement vom RD-Sitzungshost Server getrennt wurde.<br/>                                                                                                                                                                                              |
-| [**OnEnterFullScreenMode**](imstscaxevents-onenterfullscreenmode.md)                       | Wird aufgerufen, wenn der Client in den Vollbildmodus wechselt. Dieses Ereignis wird beispielsweise aufgerufen, wenn der Benutzer die [Tastenkombination](terminal-services-shortcut-keys.md) im Vollbildmodus drückt (STRG+ALT+BREAK).<br/>                                                                     |
-| [**OnFatalError**](imstscaxevents-onfatalerror.md)                                         | Wird aufgerufen, wenn beim Clientsteuerelement ein schwerwiegender Fehler auftritt.<br/>                                                                                                                                                                                                                           |
-| [**OnFocusReleased**](imstscaxevents-onfocusreleased.md)                                   | Wird aufgerufen, wenn die Tastenkombination des Releasefokus gedrückt wird. Dieses Ereignis wird beispielsweise aufgerufen, wenn der Benutzer strg+ALT+NACH-LINKS-TASTE oder die Tastenkombination STRG+ALT+NACH-RECHTS drückt.<br/>                                                                                             |
-| [**OnIdleTimeoutNotification**](imstscaxevents-onidletimeoutnotification.md)               | Wird aufgerufen, wenn der Benutzer während des zeitraums, der von der [**IMsRdpClientAdvancedSettings::p ut \_ MinutesToIdleTimeout-Methode**](imsrdpclientadvancedsettings-minutestoidletimeout.md) festgelegt wurde, keine Maus- oder Tastatureingaben vorgenommen hat.<br/>                                                |
-| [**OnLeaveFullScreenMode**](imstscaxevents-onleavefullscreenmode.md)                       | Wird aufgerufen, wenn der Client den Vollbildmodus verlässt. Dieses Ereignis wird beispielsweise aufgerufen, wenn der Benutzer die [Tastenkombination](terminal-services-shortcut-keys.md) im Vollbildmodus drückt (STRG+ALT+BREAK).<br/>                                                                     |
-| [**OnLoginComplete**](imstscaxevents-onlogincomplete.md)                                   | Wird aufgerufen, wenn sich das Clientsteuerelement erfolgreich bei einem RD-Sitzungshost-Server angemeldet hat, nachdem das Dialogfeld Windows Anmeldung angezeigt wurde.<br/>                                                                                                                                      |
+| [**OnDisconnected**](imstscaxevents-ondisconnected.md)                                     | Wird aufgerufen, wenn die Verbindung zwischen dem Clientsteuer steuerelement und dem serverseitigen RD-Sitzungshost wurde.<br/>                                                                                                                                                                                              |
+| [**OnEnterFullScreenMode**](imstscaxevents-onenterfullscreenmode.md)                       | Wird aufgerufen, wenn der Client in den Vollbildmodus eintritt. Dieses Ereignis wird beispielsweise aufgerufen, wenn der Benutzer [](terminal-services-shortcut-keys.md) die Tastenkombination für den Vollbildmodus drückt (STRG+ALT+BREAK).<br/>                                                                     |
+| [**OnFatalError**](imstscaxevents-onfatalerror.md)                                         | Wird aufgerufen, wenn das Clientsteuer steuerelement einen schwerwiegenden Fehler trifft.<br/>                                                                                                                                                                                                                           |
+| [**OnFocusReleased**](imstscaxevents-onfocusreleased.md)                                   | Wird aufgerufen, wenn die Tastenkombination für den Releasefokus gedrückt wird. Dieses Ereignis wird beispielsweise aufgerufen, wenn der Benutzer die Tastenkombination STRG+ALT+NACH-LINKS oder STRG+ALT+NACH-RECHTS-TASTE drückt.<br/>                                                                                             |
+| [**OnIdleTimeoutNotification**](imstscaxevents-onidletimeoutnotification.md)               | Wird aufgerufen, wenn der Benutzer während des von der [**IMsRdpClientAdvancedSettings::p ut \_ MinutesToIdleTimeout-Methode**](imsrdpclientadvancedsettings-minutestoidletimeout.md) festgelegten Zeitraums keine Maus- oder Tastatureingaben erhalten hat.<br/>                                                |
+| [**OnLeaveFullScreenMode**](imstscaxevents-onleavefullscreenmode.md)                       | Wird aufgerufen, wenn der Client den Vollbildmodus verlässt. Dieses Ereignis wird beispielsweise aufgerufen, wenn der Benutzer [](terminal-services-shortcut-keys.md) die Tastenkombination für den Vollbildmodus drückt (STRG+ALT+BREAK).<br/>                                                                     |
+| [**OnLoginComplete**](imstscaxevents-onlogincomplete.md)                                   | Wird aufgerufen, wenn sich das Clientsteuerfeld erfolgreich bei einem RD-Sitzungshost server angemeldet hat. Folgen Sie der Anzeige des Dialogfelds Windows Anmeldung.<br/>                                                                                                                                      |
 | [**OnLogonError**](imstscaxevents-onlogonerror.md)                                         | Wird aufgerufen, wenn ein Anmeldefehler oder ein anderes Anmeldeereignis auftritt.<br/>                                                                                                                                                                                                                             |
 | [**OnMouseInputModeChanged**](imstscaxevents-onmouseinputmodechanged.md)                   | Wird aufgerufen, wenn sich der Mauseingabemodus geändert hat.<br/>                                                                                                                                                                                                                                      |
 | [**OnNetworkStatusChanged**](imstscaxevents-onnetworkstatuschanged.md)                     | Wird aufgerufen, wenn sich der Netzwerkstatus geändert hat.<br/>                                                                                                                                                                                                                                        |
@@ -104,12 +104,12 @@ Die **MsRdpClient10NotSafeForScripting-Klasse** verfügt über diese Methoden.
 | [**OnRequestLeaveFullScreen**](imstscaxevents-onrequestleavefullscreen.md)                 | Wird aufgerufen, wenn der Client den Vollbildmodus verlassen möchte und die [**Eigenschaft IMsTscAdvancedSettings::p ut \_ ContainerHandledFullScreen**](imstscadvancedsettings-containerhandledfullscreen.md) auf einen Wert ungleich 0 festgelegt wurde.<br/>                                                   |
 | [**OnServiceMessageReceived**](imstscaxevents-onservicemessagereceived.md)                 | Wird aufgerufen, wenn der Client eine Systemmeldung empfängt.<br/>                                                                                                                                                                                                                                  |
 | [**OnUserNameAcquired**](imstscaxevents-onusernameacquired.md)                             | Wird aufgerufen, wenn der Benutzername vom -Steuerelement übernommen wurde.<br/>                                                                                                                                                                                                                        |
-| [**OnWarning**](imstscaxevents-onwarning.md)                                               | Wird aufgerufen, wenn das Clientsteuer steuerelement eine Fehlerbedingung trifft, die nicht schwerwiegender ist.<br/>                                                                                                                                                                                                    |
+| [**OnWarning**](imstscaxevents-onwarning.md)                                               | Wird aufgerufen, wenn das Clientsteuer steuerelement einen Fehlerzustand trifft, der nicht schwerwiegender ist.<br/>                                                                                                                                                                                                    |
 | [**Verbindung wiederherstellen**](imsrdpclient8-reconnect.md)                                                | Verbindet sich mit der neuen Desktopbreite und -höhe erneut mit der Remotesitzung.<br/>                                                                                                                                                                                                            |
 | [**RequestClose**](imsrdpclient-requestclose.md)                                           | Fordert ein ordnungsgemäßes Herunterfahren des Clientsteuer steuerelements an.<br/>                                                                                                                                                                                                                                |
 | [**Resetpassword**](imstscnonscriptable-resetpassword.md)                                  | Setzt alle Kennwortzustände im Steuerelement zurück.<br/>                                                                                                                                                                                                                                         |
 | [**SendKeys**](imsrdpclientnonscriptable-sendkeys.md)                                      | Sendet eine Reihe von Tastatureingaben an das Steuerelement. Die Tastatureingaben sind in Scancodeform, d.&a0;b. den Tastaturdaten der tatsächlichen physischen Tasten.<br/>                                                                                                                                       |
-| [**SendOnVirtualChannel**](imstscax-sendonvirtualchannel.md)                               | Sendet Daten über einen RD-Sitzungshost, der zuvor mithilfe der [**IMsTscAx::CreateVirtualChannels-Methode**](imstscax-createvirtualchannels.md) erstellt wurde, an den RD-Sitzungshost-Server.<br/>                                                                                         |
+| [**SendOnVirtualChannel**](imstscax-sendonvirtualchannel.md)                               | Sendet Daten an den RD-Sitzungshost-Server über einen virtuellen Kanal, der zuvor mithilfe der [**IMsTscAx::CreateVirtualChannels-Methode erstellt**](imstscax-createvirtualchannels.md) wurde.<br/>                                                                                         |
 | [**SendRemoteAction**](imsrdpclient8-sendremoteaction.md)                                  | Bewirkt, dass eine Aktion in der Remotesitzung ausgeführt wird.<br/>                                                                                                                                                                                                                            |
 | [**SetVirtualChannelOptions**](imsrdpclient-setvirtualchanneloptions.md)                   | Legt die Optionen für den virtuellen Kanal für das Clientsteuer steuerelement fest.<br/>                                                                                                                                                                                                                           |
 | [**SyncSessionDisplaySettings**](imsrdpclient9-syncsessiondisplaysettings.md)              | Synchronisiert Einstellungen für die Sitzungsanzeige. <br/>                                                                                                                                                                                                                                            |
@@ -167,7 +167,7 @@ Die **MsRdpClient10NotSafeForScripting-Klasse** verfügt über diese Eigenschaft
 <tr class="even">
 <td style="text-align: left;"><a href="imsrdpclient5-advancedsettings6.md"><strong>AdvancedSettings6</strong></a><br/></td>
 <td style="text-align: left;">Schreibgeschützt<br/></td>
-<td style="text-align: left;">Die Schnittstelle zu <a href="imsrdpclientadvancedsettings5.md"><strong>IMsRdpClientAdvancedSettings5.</strong></a><br/></td>
+<td style="text-align: left;">Die Schnittstelle zu <a href="imsrdpclientadvancedsettings5.md"><strong>IMsRdpClientAdvancedSettings5</strong></a>.<br/></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="imsrdpclient6-advancedsettings7.md"><strong>AdvancedSettings7</strong></a><br/></td>
@@ -187,7 +187,7 @@ Die **MsRdpClient10NotSafeForScripting-Klasse** verfügt über diese Eigenschaft
 <tr class="even">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable4-allowcredentialsaving.md"><strong>AllowCredentialSaving</strong></a><br/></td>
 <td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Gibt an, ob im Dialogfeld Anmeldeinformationen ein Kontrollkästchen zum Speichern von Anmeldeinformationen angezeigt wird.<br/></td>
+<td style="text-align: left;">Gibt an, ob im Dialogfeld "Anmeldeinformationen" ein Kontrollkästchen zum Speichern von Anmeldeinformationen angezeigt wird.<br/></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable5-allowpromptingforcredentials.md"><strong>AllowPromptingForCredentials</strong></a><br/></td>
@@ -232,7 +232,7 @@ Die **MsRdpClient10NotSafeForScripting-Klasse** verfügt über diese Eigenschaft
 <tr class="odd">
 <td style="text-align: left;"><a href="imstscax-connectingtext.md"><strong>ConnectingText</strong></a><br/></td>
 <td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Der Text, der im Steuerelement zentriert angezeigt wird, während das Steuerelement eine Verbindung herstellt.<br/></td>
+<td style="text-align: left;">Der Text, der zentriert im -Steuerelement angezeigt wird, während das Steuerelement eine Verbindung verbindet.<br/></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable3-connectionbartext.md"><strong>ConnectionBarText</strong></a><br/></td>
@@ -242,12 +242,12 @@ Die **MsRdpClient10NotSafeForScripting-Klasse** verfügt über diese Eigenschaft
 <tr class="odd">
 <td style="text-align: left;"><a href="imstscax-desktopheight.md"><strong>DesktopHeight</strong></a><br/></td>
 <td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Die Höhe des aktuellen Steuerelements auf dem ersten Remotedesktop in Pixel.<br/></td>
+<td style="text-align: left;">Die Höhe des aktuellen Steuerelements auf dem ursprünglichen Remotedesktop in Pixel.<br/></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="imstscax-desktopwidth.md"><strong>DesktopWidth</strong></a><br/></td>
 <td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Die Breite des aktuellen Steuerelements auf dem ersten Remotedesktop in Pixel.<br/></td>
+<td style="text-align: left;">Die Breite des aktuellen Steuerelements auf dem ursprünglichen Remotedesktop in Pixel.<br/></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable3-devicecollection.md"><strong>DeviceCollection</strong></a><br/></td>
@@ -257,17 +257,17 @@ Die **MsRdpClient10NotSafeForScripting-Klasse** verfügt über diese Eigenschaft
 <tr class="even">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable5-disableconnectionbar.md"><strong>DisableConnectionBar</strong></a><br/></td>
 <td style="text-align: left;">Lesegeschützt<br/></td>
-<td style="text-align: left;">Gibt an, ob das Remotedesktop ActiveX-Steuerelement die Verbindungsleiste deaktivieren soll.<br/></td>
+<td style="text-align: left;">Gibt an, ob das Remotedesktop ActiveX die Verbindungsleiste deaktivieren soll.<br/></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable5-disableremoteappcapscheck.md"><strong>DisableRemoteAppCapsCheck</strong></a><br/></td>
 <td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Gibt an, ob das Remotedesktop ActiveX-Steuerelement den Server nicht auf RemoteApp-Funktionen überprüfen soll.<br/></td>
+<td style="text-align: left;">Gibt an, ob Remotedesktop ActiveX-Steuerelement den Server nicht auf RemoteApp-Funktionen überprüfen soll.<br/></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="imstscax-disconnectedtext.md"><strong>DisconnectedText</strong></a><br/></td>
 <td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Der Text, der im Steuerelement zentriert angezeigt wird, bevor eine Verbindung beendet wird.<br/></td>
+<td style="text-align: left;">Der Text, der im -Steuerelement zentriert angezeigt wird, bevor eine Verbindung beendet wird.<br/></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="imstscax-domain.md"><strong>Domain</strong></a><br/></td>
@@ -277,7 +277,7 @@ Die **MsRdpClient10NotSafeForScripting-Klasse** verfügt über diese Eigenschaft
 <tr class="even">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable3-drivecollection.md"><strong>DriveCollection</strong></a><br/></td>
 <td style="text-align: left;">Schreibgeschützt<br/></td>
-<td style="text-align: left;">Die Auflistung der Laufwerke, die für die Umleitung verfügbar sind.<br/></td>
+<td style="text-align: left;">Die Auflistung der Datenträgerlaufwerke, die für die Umleitung verfügbar sind.<br/></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable3-enablecredsspsupport.md"><strong>EnableCredSspSupport</strong></a><br/></td>
@@ -287,7 +287,7 @@ Die **MsRdpClient10NotSafeForScripting-Klasse** verfügt über diese Eigenschaft
 <tr class="even">
 <td style="text-align: left;"><a href="imsrdpclient-extendeddisconnectreason.md"><strong>ExtendedDisconnectReason</strong></a><br/></td>
 <td style="text-align: left;">Schreibgeschützt<br/></td>
-<td style="text-align: left;">Erweiterte Informationen zum Grund der Trennung des Clientsteuerelements.<br/></td>
+<td style="text-align: left;">Erweiterte Informationen zum Grund für die Trennung der Verbindung des Clientsteuer steuerelements.<br/></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="imsrdpclient-fullscreen.md"><strong>Fullscreen</strong></a><br/></td>
@@ -302,7 +302,7 @@ Die **MsRdpClient10NotSafeForScripting-Klasse** verfügt über diese Eigenschaft
 <tr class="odd">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable5-getremotemonitorsboundingbox.md"><strong>GetRemoteMonitorsBoundingBox</strong></a><br/></td>
 <td style="text-align: left;">Schreibgeschützt<br/></td>
-<td style="text-align: left;">Gibt das umgrenzende Rechteck des Remotemonitors an.<br/></td>
+<td style="text-align: left;">Gibt das umgebundene Rechteck des Remotemonitors an.<br/></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="imstscax-horizontalscrollbarvisible.md"><strong>HorizontalScrollBarVisible</strong></a><br/></td>
@@ -312,7 +312,7 @@ Die **MsRdpClient10NotSafeForScripting-Klasse** verfügt über diese Eigenschaft
 <tr class="odd">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable4-launchedviaclientshellinterface.md"><strong>LaunchedViaClientShellInterface</strong></a><br/></td>
 <td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Gibt an, ob der Benutzer das Clientsteuerelement mithilfe der RD-Webzugriff-Schnittstelle gestartet hat.<br/></td>
+<td style="text-align: left;">Gibt an, ob der Benutzer das Clientsteuer steuerelement mithilfe der RD-Webzugriff gestartet hat.<br/></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable4-markrdpsettingssecure.md"><strong>MarkRdpSettingsSecure</strong></a><br/></td>
@@ -322,7 +322,7 @@ Die **MsRdpClient10NotSafeForScripting-Klasse** verfügt über diese Eigenschaft
 <tr class="odd">
 <td style="text-align: left;"><a href="imsrdpclient5-msrdpclientshell.md"><strong>MsRdpClientShell</strong></a><br/></td>
 <td style="text-align: left;">Schreibgeschützt<br/></td>
-<td style="text-align: left;">Die Clienteinstellungen für das Webportalstarter.<br/></td>
+<td style="text-align: left;">Die Clienteinstellungen für das Webportal-Startfeld.<br/></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable3-negotiatesecuritylayer.md"><strong>NegotiateSecurityLayer</strong></a><br/></td>
@@ -330,7 +330,7 @@ Die **MsRdpClient10NotSafeForScripting-Klasse** verfügt über diese Eigenschaft
 <td style="text-align: left;">Gibt an, ob die NegotiateSecurityLayer-Einstellung für diese Verbindung unterstützt wird.<br/>
 <blockquote>
 [!Note]<br />
-Wenn <a href="imsrdpclientnonscriptable3-enablecredsspsupport.md"><strong>CredSspSupport</strong></a> auf dem Client aktiviert und vorhanden ist oder Secure Sockets Layer (SSL) mit Benutzerauthentifizierung aktiviert ist, wird NegotiateSecurityLayer ignoriert.
+Wenn <a href="imsrdpclientnonscriptable3-enablecredsspsupport.md"><strong>CredSspSupport aktiviert</strong></a> und auf dem Client vorhanden ist, oder wenn Secure Sockets Layer (SSL) mit Benutzerauthentifizierung aktiviert ist, wird NegotiateSecurityLayer ignoriert.
 </blockquote>
 <br/></td>
 </tr>
@@ -347,12 +347,12 @@ Wenn <a href="imsrdpclientnonscriptable3-enablecredsspsupport.md"><strong>CredSs
 <tr class="odd">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable3-promptforcredentials.md"><strong>PromptForCredentials</strong></a><br/></td>
 <td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Gibt an, ob die Aufforderung zum Eingeben von Anmeldeinformationen angezeigt werden soll.<br/></td>
+<td style="text-align: left;">Gibt an, ob das Dialogfeld "Eingabeaufforderung für Anmeldeinformationen" angezeigt werden soll.<br/></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable4-promptforcredsonclient.md"><strong>PromptForCredsOnClient</strong></a><br/></td>
 <td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Gibt an, ob das Clientsteuerelement ein Dialogfeld anzeigt, in dem zur Eingabe von Anmeldeinformationen aufgefordert wird.<br/></td>
+<td style="text-align: left;">Gibt an, ob das Clientsteuerfeld ein Dialogfeld anzeigt, das zur Eingabe von Anmeldeinformationen aufgefordert wird.<br/></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="imsrdppreferredredirectioninfo-useredirectionservername.md"><strong>Eigenschaft</strong></a><br/></td>
@@ -362,12 +362,12 @@ Wenn <a href="imsrdpclientnonscriptable3-enablecredsspsupport.md"><strong>CredSs
 <tr class="even">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable4-publishercertificatechain.md"><strong>PublisherCertificateChain</strong></a><br/></td>
 <td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Gibt die Zertifikatkette des Herausgebers an. Die Kette wird in einer Variante vom Typ VT_BYREF gespeichert, die einen Zeiger auf eine <a href="/windows/desktop/api/wincrypt/ns-wincrypt-cert_chain_context"><strong>CERT_CHAIN_CONTEXT-Struktur</strong></a> enthält.<br/></td>
+<td style="text-align: left;">Gibt die Herausgeberzertifikatkette an. Die Kette wird in einer Variante des Typs VT_BYREF gespeichert, die einen Zeiger auf eine <a href="/windows/desktop/api/wincrypt/ns-wincrypt-cert_chain_context"><strong>CERT_CHAIN_CONTEXT</strong></a> enthält.<br/></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable3-redirectdynamicdevices.md"><strong>RedirectDynamicDevices</strong></a><br/></td>
 <td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Gibt an, ob dynamisch angefügte PnP-Geräte, die während einer Sitzung aufzählt werden, für die Umleitung verfügbar sind.<br/></td>
+<td style="text-align: left;">Gibt an, ob dynamisch angeschlossene PnP-Geräte, die während einer Sitzung aufzählt werden, für die Umleitung verfügbar sind.<br/></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable3-redirectdynamicdrives.md"><strong>RedirectDynamicDrives</strong></a><br/></td>
@@ -387,7 +387,7 @@ Wenn <a href="imsrdpclientnonscriptable3-enablecredsspsupport.md"><strong>CredSs
 <tr class="odd">
 <td style="text-align: left;"><a href="imsrdpclientnonscriptable5-remotemonitorlayoutmatcheslocal.md"><strong>RemoteMonitorLayoutMatchesLocal</strong></a><br/></td>
 <td style="text-align: left;">Schreibgeschützt<br/></td>
-<td style="text-align: left;">Gibt an, ob das Remotemonitorlayout mit dem Layout des lokalen Monitors identisch ist.<br/></td>
+<td style="text-align: left;">Gibt an, ob das Layout des Remotemonitors mit dem Layout des lokalen Monitors identisch ist.<br/></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="imsrdpclient5-remoteprogram.md"><strong>RemoteProgram</strong></a><br/></td>
@@ -539,6 +539,6 @@ Wenn <a href="imsrdpclientnonscriptable3-enablecredsspsupport.md"><strong>CredSs
 
 <dl> <dt>
 
-[Remotedesktop ActiveX-Steuerelementklassen](remote-desktop-activex-control-classes.md)
+[Remotedesktop ActiveX Steuerelementklassen](remote-desktop-activex-control-classes.md)
 </dt> </dl>
 

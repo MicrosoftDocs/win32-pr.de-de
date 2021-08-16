@@ -61,7 +61,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                | Der Vorgang wurde durchgeführt.<br/>       |
 | <dl> <dt>**E \_ POINTER**</dt> <dt>0x80004003</dt> </dl>                  | Der Parameter ist **NULL.**<br/>          |
-| <dl> <dt>**VM \_ E \_ VM WIRD NICHT \_ \_ AUSGEFÜHRT**</dt> <dt>0xA0040206</dt> </dl>     | Der virtuelle Computer wird nicht ausgeführt.<br/> |
+| <dl> <dt>**VM \_ E \_ VM WIRD NICHT \_ \_ AUSGEFÜHRT,**</dt> <dt>0xA0040206</dt> </dl>     | Der virtuelle Computer wird nicht ausgeführt.<br/> |
 | <dl> <dt>**VM \_ E \_ USB \_ DETACH \_ FAILED**</dt> <dt>0xA00400927</dt> </dl> | Fehler beim Trennen.<br/>        |
 | <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>          | Ein unerwarteter Fehler ist aufgetreten.<br/>   |
 
