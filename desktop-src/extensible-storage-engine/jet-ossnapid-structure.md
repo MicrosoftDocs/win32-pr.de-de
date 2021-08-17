@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_OSSNAPID Struktur'
-title: JET_OSSNAPID Struktur
+description: Weitere Informationen finden Sie unter JET_OSSNAPID Struktur.
+title: JET_OSSNAPID-Struktur
 TOCTitle: JET_OSSNAPID structure
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_OSSNAPID
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_ossnapid(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 215bd8f096ba9c1788f4db70a014cab48b74afa7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 13c68c7e441df06d1c51ddfbf0da66226b42c453183e82c5bda79e8a472c7928
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369004"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118073909"
 ---
-# <a name="jet_ossnapid-structure"></a>JET_OSSNAPID Struktur
+# <a name="jet_ossnapid-structure"></a>JET_OSSNAPID-Struktur
 
-Ein JET_OSSNAPID der ein Handle für eine Momentaufnahme einer Datenbank enthält.
+Ein JET_OSSNAPID enthält ein Handle für eine Momentaufnahme einer Datenbank.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,10 +57,10 @@ public struct JET_OSSNAPID : IEquatable<JET_OSSNAPID>,
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Mitglieder JET_OSSNAPID](./jet-ossnapid-members.md)
+[JET_OSSNAPID Member](./jet-ossnapid-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

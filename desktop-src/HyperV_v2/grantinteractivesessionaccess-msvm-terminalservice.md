@@ -1,7 +1,7 @@
 ---
-description: Ermöglicht den Zugriff auf die interaktive Sitzung des virtuellen Computers auf die angegebene Liste von Treuhändern.
+description: Gewährt Zugriff auf die interaktive Sitzung des virtuellen Computers auf die angegebene Liste von Vertrauensnehmern.
 ms.assetid: 8a82170d-067b-47e5-a15f-21d6c04128d2
-title: Grantinteractivesessionaccess-Methode der Msvm_TerminalService-Klasse
+title: GrantInteractiveSessionAccess-Methode der Msvm_TerminalService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: b8bd49805b5fdc5545a81e4f0b816fe35a6c37b0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 39fd1e77eeea7429a2ef225226b964e44f1384295dc798c1b93611f282674fb2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682330"
 ---
-# <a name="grantinteractivesessionaccess-method-of-the-msvm_terminalservice-class"></a>Grantinteractivesessionaccess-Methode der MSVM \_ Terminalservice-Klasse
+# <a name="grantinteractivesessionaccess-method-of-the-msvm_terminalservice-class"></a>GrantInteractiveSessionAccess-Methode der Msvm \_ TerminalService-Klasse
 
-Ermöglicht den Zugriff auf die interaktive Sitzung des virtuellen Computers auf die angegebene Liste von Treuhändern.
+Gewährt Zugriff auf die interaktive Sitzung des virtuellen Computers auf die angegebene Liste von Vertrauensnehmern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ uint32 GrantInteractiveSessionAccess(
 
 <dl> <dt>
 
-*Computersystem* \[ in\]
+*ComputerSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine Instanz der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse, die den virtuellen Computer darstellt, dem der Zugriff gewährt wird.
+Ein Verweis auf eine Instanz der [**Msvm \_ ComputerSystem-Klasse, die**](msvm-computersystem.md) den virtuellen Computer darstellt, auf den Zugriff gewährt wird.
 
 </dd> <dt>
 
-*Treuhänder* \[ in\]
+*Vertrauensnehmer* \[ In\]
 </dt> <dd>
 
-Ein Array von Zeichen folgen, das jeweils einen Vertrauens nehmer identifiziert, dem Zugriff auf die interaktive Sitzung des virtuellen Computers gewährt wird. Die Treuhänder-IDs müssen im Windows Sam-kompatiblen Format oder im Windows-SID-Zeichen folgen Format angegeben werden.
+Ein Array von Zeichenfolgen, die jeweils einen Vertrauensnehmer identifizieren, dem Zugriff auf die interaktive Sitzung des virtuellen Computers gewährt wird. Die Vertrauensnehmerbezeichner sollten in Windows SAM-kompatiblen Format oder Windows SID-Zeichenfolgenformat angegeben werden.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -74,7 +74,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -83,22 +83,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-Nicht **kompatible Parameter** (6)
+**Inkompatible Parameter** (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -107,19 +107,19 @@ Nicht **kompatible Parameter** (6)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ Terminalservice**](msvm-terminalservice.md)
+[**Msvm \_ TerminalService**](msvm-terminalservice.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Berechnet die umgebende Kugel aller Netze in der Frame Hierarchie.
+description: Berechnet die umschließende Kugel aller Gitternetze in der Rahmenhierarchie.
 ms.assetid: 8c3f5a9e-73ff-4d83-8f85-a3fc2a9a53f7
-title: D3DXFrameCalculateBoundingSphere-Funktion (D3dx9anim. h)
+title: D3DXFrameCalculateBoundingSphere-Funktion (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: f10043d2c897bf6ab24c442b8e134f31221c498e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a8a4706fcbd421072e2b82cd9e228fe24c35651c17ce4ab0f48e05b946946fb4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119123216"
 ---
 # <a name="d3dxframecalculateboundingsphere-function"></a>D3DXFrameCalculateBoundingSphere-Funktion
 
-Berechnet die umgebende Kugel aller Netze in der Frame Hierarchie.
+Berechnet die umschließende Kugel aller Gitternetze in der Rahmenhierarchie.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,28 +42,28 @@ HRESULT D3DXFrameCalculateBoundingSphere(
 
 <dl> <dt>
 
-*pframeroot* \[ in\]
+*pFrameRoot* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXFRAME**](d3dxframe.md) \***
+Typ: **const [**D3DXFRAME**](d3dxframe.md) \***
 
-Zeiger auf den Stamm Knoten.
+Zeiger auf den Stammknoten.
 
 </dd> <dt>
 
-*pobjectcenter* \[ vorgenommen\]
+*pObjectCenter* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXVECTOR3**](d3dxvector3.md)**
 
-Gibt den Mittelpunkt der umgebenden Kugel zurück.
+Gibt die Mitte der umgebenden Kugel zurück.
 
 </dd> <dt>
 
-*pobjectradius* \[ vorgenommen\]
+*pObjectRadius* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
 Gibt den Radius der umgebenden Kugel zurück.
 
@@ -73,7 +73,7 @@ Gibt den Radius der umgebenden Kugel zurück.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,16 +81,16 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Animations Funktionen](dx9-graphics-reference-d3dx-functions-animation.md)
+[Animationsfunktionen](dx9-graphics-reference-d3dx-functions-animation.md)
 </dt> </dl>
 
  

@@ -26,7 +26,7 @@ Die [**XMUINT2-Struktur**](/windows/win32/api/directxmath/ns-directxmath-xmuint2
 
 | Methoden                                              | BESCHREIBUNG                                                                                                       |
 |------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| [**operator =**](/windows/win32/api/directxmath/nf-directxmath-xmuint2-operator-assign)<br/> | Weist die Vektorkomponentendaten aus einer Instanz von `XMUINT2` der aktuellen Instanz von `XMUINT2` zu.<br/> |
+| [**operator =**](/windows/win32/api/directxmath/nf-directxmath-xmuint2-operator-assign)<br/> | Weist der aktuellen Instanz von die Vektorkomponentendaten von `XMUINT2` einer Instanz von `XMUINT2` zu.<br/> |
 
 
 

@@ -1,25 +1,25 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RECSIZE-Methoden'
-title: JET_RECSIZE Methoden (Microsoft. ISAM. ESENT. Interop. Vista)
+description: Weitere Informationen finden Sie unter JET_RECSIZE Methoden.
+title: JET_RECSIZE (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: JET_RECSIZE methods
 ms:assetid: Methods.T:Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_recsize_methods(v=EXCHG.10)
 ms:contentKeyID: 39514154
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: 8923abab88710c519bc6500d1794a6748093a62c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3108fdb6fbc1965c60abb2af710453c009a1eafb95afa74f1268f1437ceb837d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104550365"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119107499"
 ---
 # <a name="jet_recsize-methods"></a>JET_RECSIZE Methoden
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Der [JET_RECSIZE](./jet-recsize-structure2.md) -Typ macht die folgenden Member verfügbar.
+Der [JET_RECSIZE](./jet-recsize-structure2.md) macht die folgenden Member verfügbar.
 
 ## <a name="methods"></a>Methoden
 
@@ -28,49 +28,49 @@ Der [JET_RECSIZE](./jet-recsize-structure2.md) -Typ macht die folgenden Member v
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="hh538879(v=exchg.10).md">Add (Hinzufügen)</a></td>
-<td>Fügen Sie die Größen in zwei JET_RECSIZE Strukturen hinzu.</td>
+<td>Fügen Sie die Größen in zwei JET_RECSIZE hinzu.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="hh558506(v=exchg.10).md">Ist gleich(Objekt)</a></td>
-<td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist. (Überschreibt <a href="/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType. gleich (Object)</a>.)</td>
+<td><a href="hh558506(v=exchg.10).md">Equals(Object)</a></td>
+<td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist. (Überschreibt <a href="/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType.Equals(Object)</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="hh577992(v=exchg.10).md">Ist gleich(JET_RECSIZE)</a></td>
+<td><a href="hh577992(v=exchg.10).md">Equals(JET_RECSIZE)</a></td>
 <td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
 <td><a href="/dotnet/api/system.object.finalize#System_Object_Finalize">Finalize</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="hh557078(v=exchg.10).md">GetHashCode</a></td>
-<td>Gibt den Hashcode für diese Instanz zurück. (Überschreibt <a href="/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType. GetHashCode ()</a>.)</td>
+<td>Gibt den Hashcode für diese Instanz zurück. (Überschreibt <a href="/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="/dotnet/api/system.object.gettype#System_Object_GetType">GetType</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td><a href="/dotnet/api/system.object.gettype#System_Object_GetType">Gettype</a></td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Mitgliedglieder Klon</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">MemberwiseClone</a></td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="hh579561(v=exchg.10).md">Subtrahieren</a></td>
-<td>Berechnen Sie den Unterschied in den Größen zwischen zwei JET_RECSIZE Strukturen.</td>
+<td>Berechnen Sie den Größenunterschied zwischen zwei JET_RECSIZE Strukturen.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
@@ -83,10 +83,10 @@ Der [JET_RECSIZE](./jet-recsize-structure2.md) -Typ macht die folgenden Member v
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_RECSIZE Struktur](./jet-recsize-structure2.md)
+[JET_RECSIZE-Struktur](./jet-recsize-structure2.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

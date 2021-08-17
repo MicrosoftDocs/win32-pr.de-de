@@ -1,7 +1,7 @@
 ---
-description: Ein Zeiger auf die Zuweisung, die dieses Beispiel erstellt hat.
+description: Zeiger auf die Zuweisung, die dieses Beispiel erstellt hat.
 ms.assetid: b4faccec-9124-4ae6-8662-ac5eb017328a
-title: 'Cmediasample:: m_pAllocator Member (amfilter. h)'
+title: CMediaSample::m_pAllocator-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ac2943c08b881badd8e15ea0633952ccc973a534
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 646c6fb7f8236aca87b5aebd1d30fd67750d960da4445d45bf45d8b601320274
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367555"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118156542"
 ---
-# <a name="cmediasamplem_pallocator-member"></a>Cmediasample:: m \_ pallocator-Member
+# <a name="cmediasamplem_pallocator-member"></a>CMediaSample::m \_ pAllocator-Member
 
-Ein Zeiger auf die Zuweisung, die dieses Beispiel erstellt hat.
+Zeiger auf die Zuweisung, die dieses Beispiel erstellt hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ CBaseAllocator *m_pAllocator;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Obwohl das Beispiel einen Zeiger auf die Zuweisung beibehält, enthält es keinen Verweis Zähler. Stattdessen erhöht die Zuweisung ihren eigenen Verweis Zähler in der [**imemzuzucator:: GetBuffer**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-getbuffer) -Methode und gibt sich selbst in der [**imemzuzucator:: ReleaseBuffer**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-releasebuffer) -Methode frei. Dadurch wird sichergestellt, dass die Zuweisung verfügbar ist, solange das Beispiel von einem anderen Objekt verwendet wird.
+Das Beispiel behält zwar einen Zeiger auf die Zuweisung bei, enthält jedoch keinen Verweiszähler. Stattdessen erhöht die Zuweisung ihren eigenen Verweiszähler in der [**IMemAllocator::GetBuffer-Methode**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-getbuffer) und gibt sich selbst in der [**IMemAllocator::ReleaseBuffer-Methode**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-releasebuffer) frei. Dadurch wird sichergestellt, dass die Zuweisung verfügbar ist, solange das Beispiel von einem anderen Objekt verwendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,16 +46,16 @@ Obwohl das Beispiel einen Zeiger auf die Zuweisung beibehält, enthält es keine
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

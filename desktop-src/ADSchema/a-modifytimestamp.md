@@ -58,10 +58,10 @@ Ein berechnetes Attribut, das das Datum der letzten Änderung dieses Objekts dar
 |------------------------|-----------------------------------------------------------------------------|
 | Link-ID                | \-                                                                          |
 | MAPI-Id                | \-                                                                          |
-| System-Only            | True                                                                        |
-| Is-Single-Valued       | True                                                                        |
-| Ist indiziert             | False                                                                       |
-| Im globalen Katalog      | False                                                                       |
+| System-Only            | Richtig                                                                        |
+| Is-Single-Valued       | Richtig                                                                        |
+| Ist indiziert             | Falsch                                                                       |
+| Im globalen Katalog      | Falsch                                                                       |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                |
 | Range-Lower            | \-                                                                          |
 | Range-Upper            | \-                                                                          |
@@ -79,10 +79,10 @@ Ein berechnetes Attribut, das das Datum der letzten Änderung dieses Objekts dar
 |------------------------|-----------------------------------------------------------------------------|
 | Link-ID                | \-                                                                          |
 | MAPI-Id                | \-                                                                          |
-| System-Only            | True                                                                        |
-| Is-Single-Valued       | True                                                                        |
-| Ist indiziert             | False                                                                       |
-| Im globalen Katalog      | False                                                                       |
+| System-Only            | Richtig                                                                        |
+| Is-Single-Valued       | Richtig                                                                        |
+| Ist indiziert             | Falsch                                                                       |
+| Im globalen Katalog      | Falsch                                                                       |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                |
 | Range-Lower            | \-                                                                          |
 | Range-Upper            | \-                                                                          |
@@ -100,10 +100,10 @@ Ein berechnetes Attribut, das das Datum der letzten Änderung dieses Objekts dar
 |------------------------|-----------------------------------------------------------------------------|
 | Link-ID                | \-                                                                          |
 | MAPI-Id                | \-                                                                          |
-| System-Only            | True                                                                        |
-| Is-Single-Valued       | True                                                                        |
-| Ist indiziert             | False                                                                       |
-| Im globalen Katalog      | False                                                                       |
+| System-Only            | Richtig                                                                        |
+| Is-Single-Valued       | Richtig                                                                        |
+| Ist indiziert             | Falsch                                                                       |
+| Im globalen Katalog      | Falsch                                                                       |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                |
 | Range-Lower            | \-                                                                          |
 | Range-Upper            | \-                                                                          |
@@ -121,10 +121,10 @@ Ein berechnetes Attribut, das das Datum der letzten Änderung dieses Objekts dar
 |------------------------|-----------------------------------------------------------------------------|
 | Link-ID                | \-                                                                          |
 | MAPI-Id                | \-                                                                          |
-| System-Only            | True                                                                        |
-| Ist einwertig       | True                                                                        |
-| Ist indiziert             | False                                                                       |
-| Im globalen Katalog      | False                                                                       |
+| System-Only            | Richtig                                                                        |
+| Is-Single-Valued       | Richtig                                                                        |
+| Ist indiziert             | Falsch                                                                       |
+| Im globalen Katalog      | Falsch                                                                       |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                |
 | Range-Lower            | \-                                                                          |
 | Range-Upper            | \-                                                                          |
@@ -142,10 +142,10 @@ Ein berechnetes Attribut, das das Datum der letzten Änderung dieses Objekts dar
 |------------------------|-----------------------------------------------------------------------------|
 | Link-ID                | \-                                                                          |
 | MAPI-Id                | \-                                                                          |
-| System-Only            | True                                                                        |
-| Ist einwertig       | True                                                                        |
-| Ist indiziert             | False                                                                       |
-| Im globalen Katalog      | False                                                                       |
+| System-Only            | Richtig                                                                        |
+| Is-Single-Valued       | Richtig                                                                        |
+| Ist indiziert             | Falsch                                                                       |
+| Im globalen Katalog      | Falsch                                                                       |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                |
 | Range-Lower            | \-                                                                          |
 | Range-Upper            | \-                                                                          |
@@ -163,10 +163,10 @@ Ein berechnetes Attribut, das das Datum der letzten Änderung dieses Objekts dar
 |------------------------|-----------------------------------------------------------------------------|
 | Link-ID                | \-                                                                          |
 | MAPI-Id                | \-                                                                          |
-| System-Only            | True                                                                        |
-| Ist einwertig       | True                                                                        |
-| Ist indiziert             | False                                                                       |
-| Im globalen Katalog      | False                                                                       |
+| System-Only            | Richtig                                                                        |
+| Is-Single-Valued       | Richtig                                                                        |
+| Ist indiziert             | Falsch                                                                       |
+| Im globalen Katalog      | Falsch                                                                       |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                |
 | Range-Lower            | \-                                                                          |
 | Range-Upper            | \-                                                                          |
@@ -184,10 +184,10 @@ Ein berechnetes Attribut, das das Datum der letzten Änderung dieses Objekts dar
 |------------------------|-----------------------------------------------------------------------------|
 | Link-ID                | \-                                                                          |
 | MAPI-Id                | \-                                                                          |
-| System-Only            | True                                                                        |
-| Ist einwertig       | True                                                                        |
-| Ist indiziert             | False                                                                       |
-| Im globalen Katalog      | False                                                                       |
+| System-Only            | Richtig                                                                        |
+| Is-Single-Valued       | Richtig                                                                        |
+| Ist indiziert             | Falsch                                                                       |
+| Im globalen Katalog      | Falsch                                                                       |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                |
 | Range-Lower            | \-                                                                          |
 | Range-Upper            | \-                                                                          |

@@ -53,10 +53,10 @@ Enthält alle Einstellungen und Daten, aus denen eine Gruppenrichtlinie 802.3-Ka
 |------------------------|-----------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                |
 | MAPI-Id                | \-                                                                                |
-| System-Only            | False                                                                             |
-| Is-Single-Valued       | True                                                                              |
-| Ist indiziert             | False                                                                             |
-| Im globalen Katalog      | False                                                                             |
+| System-Only            | Falsch                                                                             |
+| Is-Single-Valued       | Richtig                                                                              |
+| Ist indiziert             | Falsch                                                                             |
+| Im globalen Katalog      | Falsch                                                                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                      |
 | Range-Lower            | \-                                                                                |
 | Range-Upper            | \-                                                                                |
@@ -74,10 +74,10 @@ Enthält alle Einstellungen und Daten, aus denen eine Gruppenrichtlinie 802.3-Ka
 |------------------------|-----------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                |
 | MAPI-Id                | \-                                                                                |
-| System-Only            | False                                                                             |
-| Is-Single-Valued       | True                                                                              |
-| Ist indiziert             | False                                                                             |
-| Im globalen Katalog      | False                                                                             |
+| System-Only            | Falsch                                                                             |
+| Is-Single-Valued       | Richtig                                                                              |
+| Ist indiziert             | Falsch                                                                             |
+| Im globalen Katalog      | Falsch                                                                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                      |
 | Range-Lower            | \-                                                                                |
 | Range-Upper            | \-                                                                                |
@@ -95,10 +95,10 @@ Enthält alle Einstellungen und Daten, aus denen eine Gruppenrichtlinie 802.3-Ka
 |------------------------|-----------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                |
 | MAPI-Id                | \-                                                                                |
-| System-Only            | False                                                                             |
-| Is-Single-Valued       | True                                                                              |
-| Ist indiziert             | False                                                                             |
-| Im globalen Katalog      | False                                                                             |
+| System-Only            | Falsch                                                                             |
+| Is-Single-Valued       | Richtig                                                                              |
+| Ist indiziert             | Falsch                                                                             |
+| Im globalen Katalog      | Falsch                                                                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                      |
 | Range-Lower            | \-                                                                                |
 | Range-Upper            | \-                                                                                |

@@ -1,7 +1,7 @@
 ---
-description: Die formatType-Methode ruft den Formattyp ab.
+description: Die FormatType-Methode ruft den Formattyp ab.
 ms.assetid: 7a4c38be-0f6e-430c-aca4-012cf33f6e5b
-title: Cmediatype. formatType-Methode (mtype. h)
+title: CMediaType.FormatType-Methode (Mtype.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fd67280b0dd40662898bb32fa39732e06e4b750d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8f7cea7c46f58e9f8387e6976d8df1305eddb954c5de98602a01e5df05eb4232
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354431"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016358"
 ---
-# <a name="cmediatypeformattype-method"></a>Cmediatype. formatType-Methode
+# <a name="cmediatypeformattype-method"></a>CMediaType.FormatType-Methode
 
-Die- `FormatType` Methode ruft den Formattyp ab.
+Die `FormatType` -Methode ruft den Formattyp ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf den **Format Type** -Member zurück.
+Gibt einen Zeiger auf den **Formattypmember zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,16 +50,16 @@ Gibt einen Zeiger auf den **Format Type** -Member zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  

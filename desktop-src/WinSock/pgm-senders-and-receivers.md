@@ -1,38 +1,38 @@
 ---
-description: Das Einrichten einer PGM-Sitzung ähnelt der Verbindung, die mit einer TCP-Sitzung verknüpft ist.
+description: Das Einrichten einer PGM-Sitzung ähnelt der Verbindungseinrichtungsroutine, die einer TCP-Sitzung zugeordnet ist.
 ms.assetid: 777e0106-0314-4ec8-b064-88ceb694614b
-title: PGM-Absender und-Empfänger
+title: PGM-Absender und -Empfänger
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e300a0c9de199e1f836e71407caf6487812cf7b4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 559ac30ace4374b48c86efeb579e1426cc455b00adb803e97244a37d8df7fda5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117741067"
 ---
-# <a name="pgm-senders-and-receivers"></a>PGM-Absender und-Empfänger
+# <a name="pgm-senders-and-receivers"></a>PGM-Absender und -Empfänger
 
-Das Einrichten einer PGM-Sitzung ähnelt der Verbindung, die mit einer TCP-Sitzung verknüpft ist. Der bedeutende Abbruch von einer TCP-Sitzung ist jedoch, dass die Client-und Server Semantik umgekehrt ist. der Server (der PGM-Sender) stellt eine Verbindung mit einer Multicast Gruppe her, während der Client (der PGM-Empfänger) darauf wartet, eine Verbindung zu akzeptieren. In den folgenden Abschnitten werden die programmgesteuerten Schritte erläutert, die zum Erstellen eines PGM-Senders und eines PGM-Empfängers erforderlich sind Auf dieser Seite werden auch die verfügbaren Daten Modi für PGM-Sitzungen beschrieben.
+Das Einrichten einer PGM-Sitzung ähnelt der Verbindungseinrichtungsroutine, die einer TCP-Sitzung zugeordnet ist. Die wesentliche Abweichung von einer TCP-Sitzung besteht jedoch darin, dass die Client- und Serversemantik umgekehrt wird. Der Server (der PGM-Absender) stellt eine Verbindung mit einer Multicastgruppe her, während der Client (der PGM-Empfänger) auf die Annahme einer Verbindung wartet. In den folgenden Absätzen werden die programmgesteuerten Schritte beschrieben, die zum Erstellen eines PGM-Absenders und eines PGM-Empfängers erforderlich sind. Auf dieser Seite werden auch die verfügbaren Datenmodi für PGM-Sitzungen beschrieben.
 
 ## <a name="pgm-sender"></a>PGM-Absender
 
-**Führen Sie die folgenden Schritte aus, um einen PGM-Sender zu erstellen:**
+**Führen Sie die folgenden Schritte aus, um einen PGM-Absender zu erstellen.**
 
 1.  Erstellen Sie einen PGM-Socket.
-2.  [**binden**](/windows/desktop/api/winsock/nf-winsock-bind) Sie den Socket an inaddr \_ any.
-3.  Stellen Sie eine [**Verbindung**](/windows/desktop/api/Winsock2/nf-winsock2-connect) mit der Multicast Gruppen-Übertragungs Adresse her.
+2.  [**Binden Sie**](/windows/desktop/api/winsock/nf-winsock-bind) den Socket an INADDR \_ ANY.
+3.  [**Stellen Sie eine Verbindung mit**](/windows/desktop/api/Winsock2/nf-winsock2-connect) der Multicastgruppenübertragungsadresse her.
 
-Es werden keine formellen Sitzungs Handler für Clients ausgeführt. Der Verbindungsprozess ähnelt einer UDP- [**Verbindung**](/windows/desktop/api/Winsock2/nf-winsock2-connect), da er eine Endpunkt Adresse (die Multicast Gruppe) dem Socket zuordnet. Nach Abschluss des Vorgangs können Daten auf dem Socket gesendet werden.
+Für Clients wird kein formaler Sitzungshandshake ausgeführt. Der Verbindungsprozess ähnelt einer [**UDP-Verbindung,**](/windows/desktop/api/Winsock2/nf-winsock2-connect)da dem Socket eine Endpunktadresse (die Multicastgruppe) zugeordnet wird. Nach Abschluss des Abschlusses können Daten an den Socket gesendet werden.
 
-Wenn ein Absender einen PGM-Socket erstellt und ihn mit einer Multicast Adresse verbindet, wird eine PGM-Sitzung erstellt. Eine zuverlässige Multicast Sitzung wird durch eine Kombination aus dem Globally Unique Identifier (GUID) und dem Quellport definiert. Die GUID wird vom Transport generiert. Der sSource-Port wird vom Transport festgelegt, und es wird kein Steuerelement bereitgestellt, über den der Quellport verwendet wird.
+Wenn ein Absender einen PGM-Socket erstellt und mit einer Multicastadresse verbindet, wird eine PGM-Sitzung erstellt. Eine zuverlässige Multicastsitzung wird durch eine Kombination aus GUID (Globally Unique Identifier) und Quellport definiert. Die GUID wird vom Transport generiert. Der sSource-Port wird vom Transport angegeben, und es wird keine Kontrolle darüber bereitgestellt, welcher Quellport verwendet wird.
 
 > [!Note]  
-> Das Empfangen von Daten auf einem Absender Socket ist nicht zulässig und führt zu einem Fehler.
+> Das Empfangen von Daten auf einem Absendersocket ist nicht zulässig und führt zu einem Fehler.
 
  
 
-Der folgende Code Ausschnitt veranschaulicht das Einrichten eines PGM-Senders:
+Der folgende Codeausschnitt veranschaulicht das Einrichten eines PGM-Absenders:
 
 
 ```C++
@@ -81,20 +81,20 @@ connect (s, (SOCKADDR *)&sasession, sizeof(sasession));
 **Führen Sie die folgenden Schritte aus, um einen PGM-Empfänger zu erstellen.**
 
 1.  Erstellen Sie einen PGM-Socket.
-2.  [**binden**](/windows/desktop/api/winsock/nf-winsock-bind) Sie den Socket an die Multicast Gruppen Adresse, über die der Absender überträgt.
-3.  Ruft die Funktion " [**lauschen**](/windows/desktop/api/Winsock2/nf-winsock2-listen) " im Socket auf, um den Socket in den Empfangsmodus zu versetzen. Die Funktion "lauschen" gibt zurück, wenn eine PGM-Sitzung für die angegebene Multicast Gruppen Adresse und den Port erkannt wird.
-4.  Rufen Sie die [**Accept**](/windows/desktop/api/Winsock2/nf-winsock2-accept) -Funktion auf, um ein neues Sockethandle zu erhalten, das der Sitzung entspricht.
+2.  [**Binden Sie**](/windows/desktop/api/winsock/nf-winsock-bind) den Socket an die Multicastgruppenadresse, an die der Absender übermittelt.
+3.  Rufen Sie die [**Lauschenfunktion**](/windows/desktop/api/Winsock2/nf-winsock2-listen) für den Socket auf, um den Socket in den Überwachungsmodus zu versetzen. Die listen-Funktion gibt zurück, wenn eine PGM-Sitzung an der angegebenen Multicastgruppenadresse und dem angegebenen Port erkannt wird.
+4.  Rufen Sie die [**accept-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-accept) auf, um ein neues Sockethandle zu erhalten, das der Sitzung entspricht.
 
-Nur ursprüngliche PGM-Daten (odata) lösen die Annahme einer neuen Sitzung aus. Daher kann ein anderer PGM-Datenverkehr (z. b. SPM-oder rdata-Pakete) vom Transport empfangen werden, dies führt jedoch nicht dazu, dass die Funktion " [**lauschen**](/windows/desktop/api/Winsock2/nf-winsock2-listen) " zurückgibt.
+Nur ursprüngliche PGM-Daten (ODATA) lösen die Annahme einer neuen Sitzung aus. Daher kann anderer PGM-Datenverkehr (z. B. SPM- oder RDATA-Pakete) vom Transport empfangen werden, führt jedoch nicht dazu, dass die [**Lauschenfunktion**](/windows/desktop/api/Winsock2/nf-winsock2-listen) zurückgibt.
 
-Nachdem eine Sitzung akzeptiert wurde, wird das zurückgegebene Sockethandle zum Empfangen von Daten verwendet.
+Sobald eine Sitzung akzeptiert wird, wird das zurückgegebene Sockethandle zum Empfangen von Daten verwendet.
 
 > [!Note]  
-> Das Senden von Daten in einem Empfangs Socket ist nicht zulässig und führt zu einem Fehler.
+> Das Senden von Daten an einen Empfangssocket ist nicht zulässig und führt zu einem Fehler.
 
  
 
-Der folgende Code Ausschnitt veranschaulicht das Einrichten eines PGM-Empfängers:
+Der folgende Codeausschnitt veranschaulicht das Einrichten eines PGM-Empfängers:
 
 
 ```C++
@@ -138,13 +138,13 @@ sclient = accept (s, (SOCKADDR *)&sasession, &sasessionsz);
 
 
 
-## <a name="data-modes"></a>Daten Modi
+## <a name="data-modes"></a>Datenmodi
 
-PGM-Sitzungen verfügen über zwei Optionen für Daten Modi: Nachrichten Modus und Streammodus.
+PGM-Sitzungen haben zwei Optionen für Datenmodi: Nachrichtenmodus und Streammodus.
 
-Der Nachrichten Modus ist für Anwendungen geeignet, die diskrete Nachrichten senden müssen, und wird durch den Sockettyp Sock \_ RDM angegeben. Der Streammodus eignet sich für Anwendungen, die Streamingdaten an Empfänger (z. b. Video-oder Sprachanwendungen) senden müssen, und die durch einen Sockettyp von Sock Stream angegeben werden \_ . Die Auswahl des Modus hat Auswirkungen auf die Verarbeitung von Daten durch Winsock.
+Der Nachrichtenmodus eignet sich für Anwendungen, die diskrete Nachrichten senden müssen, und wird durch einen Sockettyp von SOCK \_ RDM angegeben. Der Streammodus eignet sich für Anwendungen, die Streamingdaten an Empfänger senden müssen, z. B. Video- oder Sprachanwendungen, und wird durch einen Sockettyp von SOCK \_ STREAM angegeben. Die Wahl des Modus wirkt sich darauf aus, wie Winsock Daten verarbeitet.
 
-Sehen Sie sich das folgende Beispiel an: ein PGM-Absender im Nachrichten Modus führt drei Aufrufe an die [**wsasend**](/windows/desktop/api/Winsock2/nf-winsock2-wsasend) -Funktion mit jeweils einem 100-Byte-Puffer aus. Dieser Vorgang wird im Netzwerk als drei diskrete PGM-Pakete angezeigt. Auf der Empfängerseite gibt jeder Aufrufe der [**WSARecv**](/windows/desktop/api/Winsock2/nf-winsock2-wsarecv) -Funktion nur 100 Bytes zurück, auch wenn ein größerer Empfangs Puffer bereitgestellt wird. Im Gegensatz dazu können bei einem PGM-Absender im Streammodus diese 3 100-Byte-Übertragungen in weniger als drei physische Pakete übertragen werden (oder in ein BLOB von Daten auf der Empfängerseite zusammen geschrieben werden). Wenn der Empfänger z. b. eine der Windows Sockets-Empfangsfunktionen aufruft, kann jede Menge von Daten, die vom PGM-Transport empfangen wurde, an die Anwendung zurückgegeben werden, ohne dass dabei berücksichtigt wird, wie die Daten physisch übertragen oder empfangen werden.
+Betrachten Sie das folgende Beispiel: Ein PGM-Absender im Nachrichtenmodus führt drei Aufrufe an die [**WSASend-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-wsasend) aus, die jeweils einen 100-Byte-Puffer haben. Dieser Vorgang wird als drei diskrete PGM-Pakete angezeigt. Auf empfängerseitiger Seite gibt jeder Aufruf der [**WSARecv-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-wsarecv) nur 100 Bytes zurück, auch wenn ein größerer Empfangspuffer bereitgestellt wird. Im Gegensatz dazu können diese drei 100-Byte-Übertragungen bei einem PGM-Sender im Streammodus in weniger als drei physische Pakete im Netzwerk zusammengeknüpft werden (oder in einem Datenblob auf empfängerseitiger Seite zusammengeführt). Wenn der Empfänger also eine der Windows Sockets-Empfangsfunktionen aufruft, kann jede Datenmenge, die vom PGM-Transport empfangen wurde, an die Anwendung zurückgegeben werden, unabhängig davon, wie die Daten physisch übertragen oder empfangen wurden.
 
  
 

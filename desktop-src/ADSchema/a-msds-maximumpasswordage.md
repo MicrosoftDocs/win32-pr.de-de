@@ -1,10 +1,10 @@
 ---
 title: ms-DS-Maximum-Password-Age-Attribut
-description: Maximales Alter für Kenn Wörter von Benutzerkonten.
+description: Maximales Alter für Benutzerkontenkennwörter.
 ms.assetid: 411efe45-3a62-41f9-99e7-8a0a804a4854
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-Maximum-Password-Age\"-Attribut AD-Schema"
+- AD-Schema des ms-DS-Maximum-Password-Age-Attributs
 - AD-Schema des msDS-MaximumPasswordAge-Attributs
 topic_type:
 - apiref
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 223c263f5701aa74a1e983159abb985dcad55e17
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 254de7c2bc581920fd328fb7dca5afdcd58756a9f9f2aef6b695eaf415465e0d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106338841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960699"
 ---
 # <a name="ms-ds-maximum-password-age-attribute"></a>ms-DS-Maximum-Password-Age-Attribut
 
-Maximales Alter für Kenn Wörter von Benutzerkonten.
+Maximales Alter für Benutzerkontenkennwörter.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | ms-DS-Maximum-Password-Age           |
-| LDAP-Display-Name | msDS-MaximumPasswordAge              |
+| Ldap-Anzeigename | msDS-MaximumPasswordAge              |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2011              |
-| System-ID-GUID    | fdd337f5-4999-4fce-b252-8ff9c9b43875 |
+| System-Id-Guid    | fdd337f5-4999-4fce-b252-8ff9c9b43875 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -54,16 +54,16 @@ Maximales Alter für Kenn Wörter von Benutzerkonten.
 |------------------------|-----------------------------------------------------------------------|
 | Link-ID                | \-                                                                    |
 | MAPI-Id                | \-                                                                    |
-| System-Only            | False                                                                 |
-| Ist-einwertig       | Richtig                                                                  |
-| Ist indiziert             | False                                                                 |
-| Im globalen Katalog      | False                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                          |
+| System-Only            | Falsch                                                                 |
+| Is-Single-Valued       | Richtig                                                                  |
+| Ist indiziert             | Falsch                                                                 |
+| Im globalen Katalog      | Falsch                                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                          |
 | Range-Lower            | \-                                                                    |
 | Range-Upper            | \-                                                                    |
 | Search-Flags           | 0x00000000                                                            |
 | System-Flags           | 0x00000010                                                            |
-| In verwendete Klassen        | [**ms-DS-Password-Settings**](c-msds-passwordsettings.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Password-Einstellungen**](c-msds-passwordsettings.md)<br/> |
 
 
 
@@ -75,16 +75,16 @@ Maximales Alter für Kenn Wörter von Benutzerkonten.
 |------------------------|-----------------------------------------------------------------------|
 | Link-ID                | \-                                                                    |
 | MAPI-Id                | \-                                                                    |
-| System-Only            | False                                                                 |
-| Ist-einwertig       | Richtig                                                                  |
-| Ist indiziert             | False                                                                 |
-| Im globalen Katalog      | False                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                          |
+| System-Only            | Falsch                                                                 |
+| Is-Single-Valued       | Richtig                                                                  |
+| Ist indiziert             | Falsch                                                                 |
+| Im globalen Katalog      | Falsch                                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                          |
 | Range-Lower            | \-                                                                    |
 | Range-Upper            | \-                                                                    |
 | Search-Flags           | 0x00000000                                                            |
 | System-Flags           | 0x00000010                                                            |
-| In verwendete Klassen        | [**ms-DS-Password-Settings**](c-msds-passwordsettings.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Password-Einstellungen**](c-msds-passwordsettings.md)<br/> |
 
 
 
@@ -96,16 +96,16 @@ Maximales Alter für Kenn Wörter von Benutzerkonten.
 |------------------------|-----------------------------------------------------------------------|
 | Link-ID                | \-                                                                    |
 | MAPI-Id                | \-                                                                    |
-| System-Only            | False                                                                 |
-| Ist-einwertig       | Richtig                                                                  |
-| Ist indiziert             | False                                                                 |
-| Im globalen Katalog      | False                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                          |
+| System-Only            | Falsch                                                                 |
+| Is-Single-Valued       | Richtig                                                                  |
+| Ist indiziert             | Falsch                                                                 |
+| Im globalen Katalog      | Falsch                                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                          |
 | Range-Lower            | \-                                                                    |
 | Range-Upper            | \-                                                                    |
 | Search-Flags           | 0x00000000                                                            |
 | System-Flags           | 0x00000010                                                            |
-| In verwendete Klassen        | [**ms-DS-Password-Settings**](c-msds-passwordsettings.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Password-Einstellungen**](c-msds-passwordsettings.md)<br/> |
 
 
 

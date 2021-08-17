@@ -1,9 +1,9 @@
 ---
-title: nonemptystringtype simple-Typ
-description: Definiert die Werte, die für eine nicht leere Text Zeichenfolge verwendet werden.
+title: nonEmptyStringType Simple Type
+description: Definiert die Werte, die für eine nicht leere Textzeichenfolge verwendet werden.
 ms.assetid: cb3b1ca6-4531-467c-a27a-b27a62233514
 keywords:
-- nonEmptyString Simple Type Taskplaner
+- 'nonEmptyString: einfache Taskplaner'
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ab9c9fa84c510fc4e67f6f63664a58d6d4093709
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6359240c2baba14460ab4478c31c490725646130ea2181efdcb8e92a94090d5d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392037"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117758416"
 ---
-# <a name="nonemptystringtype-simple-type"></a>nonemptystringtype simple-Typ
+# <a name="nonemptystringtype-simple-type"></a>nonEmptyStringType Simple Type
 
-Definiert die Werte, die für eine nicht leere Text Zeichenfolge verwendet werden.
+Definiert die Werte, die für eine nicht leere Textzeichenfolge verwendet werden.
 
 ``` syntax
 <xs:simpleType name="nonEmptyString">
@@ -38,11 +38,11 @@ Definiert die Werte, die für eine nicht leere Text Zeichenfolge verwendet werde
 
 ## <a name="enumeration-values"></a>Enumerationswerte
 
-Der einfache Typ **nonEmptyString** definiert den folgenden Wert.
+Der **einfache NonEmptyString-Typ** definiert den folgenden Wert.
 
 
 
-| Wert | BESCHREIBUNG                                            |
+| Wert | Beschreibung                                            |
 |-------|--------------------------------------------------------|
 | 1     | Die Zeichenfolge enthält mindestens ein Zeichen.<br/> |
 
@@ -54,8 +54,8 @@ Der einfache Typ **nonEmptyString** definiert den folgenden Wert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

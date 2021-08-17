@@ -1,7 +1,7 @@
 ---
-description: Die Methode "Methode" aktiviert oder deaktiviert Repaint-Ereignisse.
+description: Die SetRepaintStatus-Methode aktiviert oder deaktiviert Neupaintereignisse.
 ms.assetid: 94ae4935-459e-4009-9f64-c7c5b14504ae
-title: Cbasererererer. abtrepaintstatus-Methode (renbase. h)
+title: CBaseRenderer.SetRepaintStatus-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 39822b535680a699654e969abc316c10c54ba51b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 748d0091bd3d2eae11773a9f94b62ceeb92b2d3ca64049f1a1981e38bf222e8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364465"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016848"
 ---
-# <a name="cbaserenderersetrepaintstatus-method"></a>Cbasererererer. abtrepaintstatus-Methode
+# <a name="cbaserenderersetrepaintstatus-method"></a>CBaseRenderer.SetRepaintStatus-Methode
 
-Die- `SetRepaintStatus` Methode aktiviert oder deaktiviert Repaint-Ereignisse.
+Die `SetRepaintStatus` -Methode aktiviert oder deaktiviert Neupaintereignisse.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void SetRepaintStatus(
 
 <dl> <dt>
 
-*brepaint* 
+*bRepaint* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob Repaint-Ereignisse aktiviert sind. **True** gibt an, dass der Filter [**EC \_ Repaint**](ec-repaint.md) -Ereignisse an den Filter Graph-Manager sendet. Andernfalls werden keine EC- \_ Repaint-Ereignisse gesendet.
+Boolescher Wert, der angibt, ob neu gepaint-Ereignisse aktiviert sind. True **gibt an,** dass der Filter [**EC \_ REPAINT-Ereignisse**](ec-repaint.md) an den Filterdiagramm-Manager gesendet hat. Andernfalls werden keine EC \_ REPAINT-Ereignisse gesendet.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Boolescher Wert, der angibt, ob Repaint-Ereignisse aktiviert sind. **True** gibt
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode stellt sicher, dass der Filter Graph-Manager nicht mit redundanten EC Repaint-Ereignissen überflutet wird \_ . Nachdem der Filter ein [**EC \_ Repaint**](ec-repaint.md) -Ereignis gesendet hat, wird diese Methode mit dem Wert " **true**" aufgerufen. Der Filter sendet keine weiteren EC \_ Repaint-Ereignisse, bis mehr Daten empfangen werden.
+Diese Methode stellt sicher, dass der Filterdiagramm-Manager nicht mit redundanten EC \_ REPAINT-Ereignissen überflutet wird. Nachdem der Filter ein [**EC \_ REPAINT-Ereignis**](ec-repaint.md) sendet, ruft er diese Methode mit dem Wert **TRUE auf.** Der Filter sendet erst dann mehr EC \_ REPAINT-Ereignisse, wenn er mehr Daten empfängt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Diese Methode stellt sicher, dass der Filter Graph-Manager nicht mit redundanten
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Registeredtask. SETSECURITYDESCRIPTOR-Methode
-description: Bei der Skripterstellung wird die Sicherheits Beschreibung festgelegt, die als Anmelde Informationen für die registrierte Aufgabe verwendet wird.
+title: RegisteredTask.SetSecurityDescriptor-Methode
+description: Legt für die Skripterstellung den Sicherheitsdeskriptor fest, der als Anmeldeinformationen für den registrierten Task verwendet wird.
 ms.assetid: 2dc10df0-5827-4199-940e-865a03a694f5
 keywords:
-- SETSECURITYDESCRIPTOR-Methode Taskplaner
-- SETSECURITYDESCRIPTOR-Methode Taskplaner, registeredtask-Objekt
-- Registeredtask-Objekt Taskplaner, SETSECURITYDESCRIPTOR-Methode
+- SetSecurityDescriptor-Taskplaner
+- SetSecurityDescriptor-Methode Taskplaner , RegisteredTask-Objekt
+- RegisteredTask-Taskplaner , SetSecurityDescriptor-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 386c97c470b94686c0a1f654313c6ef1e0bca5a3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c7ac6845624ab2032b9b90d742c1346081c3ba4719d0814cfd257d3787c2bf70
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117759591"
 ---
-# <a name="registeredtasksetsecuritydescriptor-method"></a>Registeredtask. SETSECURITYDESCRIPTOR-Methode
+# <a name="registeredtasksetsecuritydescriptor-method"></a>RegisteredTask.SetSecurityDescriptor-Methode
 
-Bei der Skripterstellung wird die Sicherheits Beschreibung festgelegt, die als Anmelde Informationen für die registrierte Aufgabe verwendet wird.
+Legt für die Skripterstellung den Sicherheitsdeskriptor fest, der als Anmeldeinformationen für den registrierten Task verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,22 +43,22 @@ RegisteredTask.SetSecurityDescriptor( _
 
 <dl> <dt>
 
-*SDDL* \[ in\]
+*sddl* \[ In\]
 </dt> <dd>
 
-Die Sicherheits Beschreibung, die als Anmelde Informationen für die registrierte Aufgabe verwendet wird.
+Der Sicherheitsdeskriptor, der als Anmeldeinformationen für den registrierten Task verwendet wird.
 
 > [!Note]  
-> Wenn dem lokalen System Konto der Zugriff auf eine Aufgabe verweigert wird, kann der Taskplaner Dienst unerwartete Ergebnisse liefern.
+> Wenn dem lokalen Systemkonto der Zugriff auf eine Aufgabe verweigert wird, kann Taskplaner Dienst zu unerwarteten Ergebnissen führen.
 
  
 
 </dd> <dt>
 
-*Flags* \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Flags, die angeben, wie die Sicherheits Beschreibung festgelegt wird. Der Task \_ " \_ \_ Prinzipal- \_ ACE-Flag (0x10)" aus der [**\_ Taskerstellungs**](/windows/desktop/api/taskschd/ne-taskschd-task_creation) -Enumeration kann nicht hinzugefügt werden.
+Flags, die angeben, wie der Sicherheitsdeskriptor festgelegt wird. Das TASK \_ DONT \_ ADD PRINCIPAL \_ ACE-Flag (0x10) aus der TASK \_ [**\_ CREATION-Enumeration**](/windows/desktop/api/taskschd/ne-taskschd-task_creation) kann angegeben werden.
 
 </dd> </dl>
 
@@ -66,9 +66,9 @@ Flags, die angeben, wie die Sicherheits Beschreibung festgelegt wird. Der Task \
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können die Zugriffs Steuerungs Liste (ACL) in der Sicherheits Beschreibung für eine Aufgabe angeben, um bestimmten Benutzern und Gruppen den Zugriff auf eine Aufgabe zu gewähren oder zu verweigern.
+Sie können die Zugriffssteuerungsliste (Access Control List, ACL) im Sicherheitsdeskriptor für eine Aufgabe angeben, um bestimmten Benutzern und Gruppen den Zugriff auf eine Aufgabe zu ermöglichen oder zu verweigern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,24 +76,24 @@ Sie können die Zugriffs Steuerungs Liste (ACL) in der Sicherheits Beschreibung 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Registeredtask**](registeredtask.md)
+[**RegisteredTask**](registeredtask.md)
 </dt> <dt>
 
-[**Taskfolder. getsecuritydescriptor**](taskfolder-getsecuritydescriptor.md)
+[**TaskFolder.GetSecurityDescriptor**](taskfolder-getsecuritydescriptor.md)
 </dt> <dt>
 
-[**Registeredtask. SETSECURITYDESCRIPTOR**](registeredtask-setsecuritydescriptor.md)
+[**RegisteredTask.SetSecurityDescriptor**](registeredtask-setsecuritydescriptor.md)
 </dt> </dl>
 
  

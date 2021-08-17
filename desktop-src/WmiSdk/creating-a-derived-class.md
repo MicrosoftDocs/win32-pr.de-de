@@ -1,65 +1,65 @@
 ---
-description: Das Erstellen einer abgeleiteten Klasse in WMI ähnelt stark dem Erstellen einer Basisklasse. Wie bei einer Basisklasse müssen Sie zuerst die abgeleitete Klasse definieren und dann die abgeleitete Klasse bei WMI registrieren.
+description: Das Erstellen einer abgeleiteten Klasse in WMI ähnelt dem Erstellen einer Basisklasse. Wie bei einer Basisklasse müssen Sie zuerst die abgeleitete Klasse definieren und dann die abgeleitete Klasse bei WMI registrieren.
 ms.assetid: 8dd483b8-8bc2-4a5c-b981-6c2ffaccdb95
 ms.tgt_platform: multiple
 title: Erstellen einer abgeleiteten WMI-Klasse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b65079d206cb7a0a490622018f6d2e2df98867d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3cddc2b381346b2765e836bb3606cc06845280c41a7505b872098f383ac0409c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119374870"
 ---
 # <a name="creating-a-wmi-derived-class"></a>Erstellen einer abgeleiteten WMI-Klasse
 
-Das Erstellen einer abgeleiteten Klasse in WMI ähnelt stark dem Erstellen einer Basisklasse. Wie bei einer Basisklasse müssen Sie zuerst die abgeleitete Klasse definieren und dann die abgeleitete Klasse bei WMI registrieren. Der Hauptunterschied besteht darin, dass Sie zuerst die übergeordnete Klasse suchen müssen, von der abgeleitet werden soll. Weitere Informationen finden Sie unter [Schreiben eines Klassen Anbieters](writing-a-class-provider.md) und [Schreiben eines Instanzanbieters](writing-an-instance-provider.md).
+Das Erstellen einer abgeleiteten Klasse in WMI ähnelt dem Erstellen einer Basisklasse. Wie bei einer Basisklasse müssen Sie zuerst die abgeleitete Klasse definieren und dann die abgeleitete Klasse bei WMI registrieren. Der Hauptunterschied besteht darin, dass Sie zuerst die übergeordnete Klasse suchen müssen, von der Sie ableiten möchten. Weitere Informationen finden Sie unter [Schreiben eines Klassenanbieters](writing-a-class-provider.md) und [Schreiben eines Instanzanbieters.](writing-an-instance-provider.md)
 
-Die empfohlene Vorgehensweise zum Erstellen von Klassen für einen-Anbieter ist in Managed Object Format Dateien (MOF). Mehrere abgeleitete Klassen, die miteinander verknüpft sind, sollten zusammen mit allen Basisklassen, von denen Eigenschaften oder Methoden abgeleitet werden, in eine MOF-Datei gruppiert werden. Wenn Sie jede Klasse in einer separaten MOF-Datei platzieren, muss jede Datei kompiliert werden, bevor der Anbieter ordnungsgemäß funktionieren kann.
+Es wird empfohlen, Klassen für einen Anbieter in MOF-Dateien (Managed Object Format) zu erstellen. Mehrere abgeleitete Klassen, die miteinander in Beziehung stehen, sollten zusammen mit allen Basisklassen, von denen sie Eigenschaften oder Methoden ableiten, in einer MOF-Datei gruppiert werden. Wenn Sie jede Klasse in einer separaten MOF-Datei platzieren, muss jede Datei kompiliert werden, bevor der Anbieter ordnungsgemäß funktioniert.
 
-Nachdem Sie die Klasse erstellt haben, müssen Sie alle Instanzen der Klasse löschen, bevor Sie eine der folgenden Aktivitäten in der abgeleiteten Klasse ausführen können:
+Nachdem Sie die Klasse erstellt haben, müssen Sie alle Instanzen der Klasse löschen, bevor Sie eine der folgenden Aktivitäten für Die abgeleitete Klasse ausführen können:
 
 -   Ändern Sie die übergeordnete Klasse ihrer abgeleiteten Klasse.
--   Eigenschaften hinzufügen oder entfernen.
--   Ändern Sie die Eigenschafts Typen.
--   [**Schlüssel**](key-qualifier.md) oder **indizierte** Qualifizierer hinzufügen oder entfernen.
--   Fügen Sie [**Singleton**](standard-wmi-qualifiers.md)-, **dynamische** oder [**abstrakte**](standard-qualifiers.md) Qualifizierer hinzu oder entfernen Sie Sie.
+-   Hinzufügen oder Entfernen von Eigenschaften.
+-   Ändern Von Eigenschaftstypen.
+-   Hinzufügen oder Entfernen von [**Schlüssel-**](key-qualifier.md) oder **indizierten** Qualifizierern.
+-   Hinzufügen oder Entfernen von [**Singleton-,**](standard-wmi-qualifiers.md) **Dynamic-** oder Abstract-Qualifizierern. [](standard-qualifiers.md)
 
 > [!Note]  
-> Um eine Eigenschaft oder einen Qualifizierer hinzuzufügen, zu entfernen oder zu ändern, nennen Sie [**IWbemServices::P utclass**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putclass) oder [**errbemubject. Put \_**](swbemobject-put-.md) , und legen Sie den Flag-Parameter auf "Force Mode" fest. Der [**abstrakte**](standard-qualifiers.md) Qualifizierer kann nur verwendet werden, wenn die übergeordnete Klasse abstrakt ist.
+> Um eine Eigenschaft oder einen Qualifizierer hinzuzufügen, zu entfernen oder zu ändern, rufen [**Sie IWbemServices::P utClass**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putclass) oder [**SWbemObject.Put \_**](swbemobject-put-.md) auf, und legen Sie den Flagparameter auf "Force Mode" fest. Der [](standard-qualifiers.md) Abstract-Qualifizierer kann nur verwendet werden, wenn die übergeordnete Klasse abstrakt ist.
 
  
 
-Wenn Sie die abgeleitete Klasse deklarieren, beachten Sie die folgenden Regeln und Einschränkungen:
+Beachten Sie beim Deklarieren der abgeleiteten Klasse die folgenden Regeln und Einschränkungen:
 
 -   Die übergeordnete Klasse der abgeleiteten Klasse muss bereits vorhanden sein.
 
-    Die Deklaration der übergeordneten Klasse kann in derselben MOF-Datei wie die abgeleitete Klasse oder in einer anderen Datei vorkommen. Wenn die übergeordnete Klasse unbekannt ist, generiert der Compiler einen Laufzeitfehler.
+    Die Deklaration der übergeordneten Klasse kann in derselben MOF-Datei wie die abgeleitete Klasse oder in einer anderen Datei angezeigt werden. Wenn die übergeordnete Klasse unbekannt ist, generiert der Compiler einen Laufzeitfehler.
 
--   Eine abgeleitete Klasse kann nur über eine einzige übergeordnete Klasse verfügen.
+-   Eine abgeleitete Klasse kann nur über eine einzelne übergeordnete Klasse verfügen.
 
-    WMI unterstützt keine Mehrfachvererbung. Eine übergeordnete Klasse kann jedoch viele abgeleitete Klassen aufweisen.
+    WMI unterstützt keine mehrfache Vererbung. Eine übergeordnete Klasse kann jedoch über viele abgeleitete Klassen verfügen.
 
 -   Sie können Indizes für abgeleitete Klassen definieren, aber WMI verwendet diese Indizes nicht.
 
-    Daher wird durch die Angabe eines Indexes für eine abgeleitete Klasse die Leistung von Abfragen für Instanzen der abgeleiteten Klasse nicht verbessert. Sie können die Leistung einer Abfrage für eine abgeleitete Klasse verbessern, indem Sie indizierte Eigenschaften für die übergeordnete Klasse der abgeleiteten Klasse angeben.
+    Daher verbessert das Angeben eines Indexes für eine abgeleitete Klasse die Leistung von Abfragen für Instanzen der abgeleiteten Klasse nicht. Sie können die Leistung einer Abfrage für eine abgeleitete Klasse verbessern, indem Sie indizierte Eigenschaften für die übergeordnete Klasse der abgeleiteten Klasse angeben.
 
--   Abgeleitete Klassendefinitionen können komplexer sein und Funktionen wie Aliase, Qualifizierer und qualifizierervarianten enthalten.
+-   Abgeleitete Klassendefinitionen können komplexer sein und Features wie Aliase, Qualifizierer und Qualifizierer-Varianten enthalten.
 
-    Weitere Informationen finden Sie unter [Erstellen eines Alias](creating-an-alias.md) und [Hinzufügen eines Qualifizierers](adding-a-qualifier.md).
+    Weitere Informationen finden Sie unter [Erstellen eines Alias](creating-an-alias.md) und Hinzufügen eines [Qualifizierers.](adding-a-qualifier.md)
 
--   Wenn Sie einen Qualifizierer ändern, den Standardwert einer Basisklassen Eigenschaft ändern oder eine Verweis-oder eingebettete Objekt Eigenschaft einer Basisklasse stark eingeben möchten, müssen Sie die gesamte Basisklasse erneut deklarieren.
+-   Wenn Sie einen Qualifizierer ändern, den Standardwert einer Basisklasseneigenschaft ändern oder einen Verweis oder eine eingebettete Objekteigenschaft einer Basisklasse stärker eingeben möchten, müssen Sie die gesamte Basisklasse erneut deklarieren.
 -   Die maximale Anzahl von Eigenschaften, die Sie in einer WMI-Klasse definieren können, ist 1024.
 
 > [!Note]  
-> Klassen können während der Ausführung von Anbietern nicht geändert werden. Sie müssen die Aktivität abbrechen, die Klasse ändern und dann den Windows-Verwaltungsdienst neu starten. Es ist derzeit nicht möglich, eine Klassen Änderung zu erkennen.
+> Klassen können während der Ausführung von Anbietern nicht geändert werden. Sie müssen die Aktivität beenden, die -Klasse ändern und dann den Windows-Verwaltungsdienst neu starten. Das Erkennen einer Klassenänderung ist derzeit nicht möglich.
 
  
 
-Wie bei der Basisklasse wird diese Technik am häufigsten von Client Anwendungen verwendet. Ein Anbieter kann jedoch auch eine abgeleitete Klasse erstellen. Weitere Informationen finden Sie unter [Erstellen einer Basisklasse](creating-a-base-class.md) und [Schreiben eines Klassen Anbieters](writing-a-class-provider.md).
+Wie bei der Basisklasse wird dieses Verfahren am häufigsten von Clientanwendungen verwendet. Ein Anbieter kann jedoch auch eine abgeleitete Klasse erstellen. Weitere Informationen finden Sie unter [Erstellen einer Basisklasse](creating-a-base-class.md) und [Schreiben eines Klassenanbieters.](writing-a-class-provider.md)
 
-Das Codebeispiel in diesem Thema erfordert, dass die folgende \# include-Anweisung ordnungsgemäß kompiliert wird.
+Das Codebeispiel in diesem Thema erfordert die folgende \# include-Anweisung, um ordnungsgemäß zu kompilieren.
 
 
 ```C++
@@ -68,13 +68,13 @@ Das Codebeispiel in diesem Thema erfordert, dass die folgende \# include-Anweisu
 
 
 
-Im folgenden Verfahren wird beschrieben, wie eine abgeleitete Klasse mit C++ erstellt wird.
+Im folgenden Verfahren wird beschrieben, wie Sie eine abgeleitete Klasse mit C++ erstellen.
 
-**So erstellen Sie eine abgeleitete Klasse mithilfe von C++**
+**So erstellen Sie eine abgeleitete Klasse mit C++**
 
-1.  Suchen Sie die Basisklasse mit einem Befehl von [**IWbemServices:: GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject).
+1.  Suchen Sie die Basisklasse mit einem Aufruf von [**IWbemServices::GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject).
 
-    Im folgenden Codebeispiel wird gezeigt, wie Sie die Beispiel Basisklasse finden.
+    Das folgende Codebeispiel zeigt, wie Sie die Beispielbasisklasse suchen.
 
     ```C++
     // The pSv variable is of type IWbemServices *
@@ -91,9 +91,9 @@ Im folgenden Verfahren wird beschrieben, wie eine abgeleitete Klasse mit C++ ers
 
     
 
-2.  Erstellen Sie ein abgeleitetes Objekt aus der Basisklasse mit einem-Befehl, der [**IWbemClassObject:: spawnderivedclass**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-spawnderivedclass)aufruft.
+2.  Erstellen Sie ein abgeleitetes Objekt aus der Basisklasse mit einem Aufruf von [**IWbemClassObject::SpawnDerivedClass**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-spawnderivedclass).
 
-    Im folgenden Codebeispiel wird gezeigt, wie ein abgeleitetes Klassenobjekt erstellt wird.
+    Das folgende Codebeispiel zeigt, wie ein abgeleitetes Klassenobjekt erstellt wird.
 
     ```C++
     pExampleClass->SpawnDerivedClass(0, &pNewDerivedClass);
@@ -102,9 +102,9 @@ Im folgenden Verfahren wird beschrieben, wie eine abgeleitete Klasse mit C++ ers
 
     
 
-3.  Richten Sie einen Namen für die Klasse ein, indem Sie die **\_ \_ Klassen** System Eigenschaft mit einem-Befehl für die [**IWbemClassObject::P UT**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-put) -Methode festlegen.
+3.  Richten Sie einen Namen für die Klasse ein, indem Sie die **\_ \_ CLASS-Systemeigenschaft** mit einem Aufruf der [**IWbemClassObject::P ut-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-put) festlegen.
 
-    Im folgenden Codebeispiel wird gezeigt, wie der abgeleiteten Klasse ein Name zugewiesen wird.
+    Das folgende Codebeispiel zeigt, wie der abgeleiteten Klasse ein Name zugewiesen wird.
 
     ```C++
     VARIANT v;
@@ -120,9 +120,9 @@ Im folgenden Verfahren wird beschrieben, wie eine abgeleitete Klasse mit C++ ers
 
     
 
-4.  Erstellen Sie zusätzliche Eigenschaften mit [**IWbemClassObject::P UT**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-put).
+4.  Erstellen Sie zusätzliche Eigenschaften mit [**IWbemClassObject::P ut**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-put).
 
-    Im folgenden Codebeispiel wird gezeigt, wie zusätzliche Eigenschaften erstellt werden.
+    Das folgende Codebeispiel zeigt, wie zusätzliche Eigenschaften erstellt werden.
 
     ```C++
     BSTR OtherProp = SysAllocString(L"OtherInfo2");
@@ -132,9 +132,9 @@ Im folgenden Verfahren wird beschrieben, wie eine abgeleitete Klasse mit C++ ers
 
     
 
-5.  Speichern Sie die neue Klasse durch Aufrufen von [**IWbemServices::P utclass**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putclass).
+5.  Speichern Sie die neue Klasse, indem [**Sie IWbemServices::P utClass**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putclass)aufrufen.
 
-    Im folgenden Codebeispiel wird gezeigt, wie die neue abgeleitete Klasse gespeichert wird.
+    Das folgende Codebeispiel zeigt, wie die neue abgeleitete Klasse gespeichert wird.
 
     ```C++
     hRes = pSvc->PutClass(pNewDerivedClass, 0, pCtx, &pResult);
@@ -143,7 +143,7 @@ Im folgenden Verfahren wird beschrieben, wie eine abgeleitete Klasse mit C++ ers
 
     
 
-Im folgenden Codebeispiel werden die Codebeispiele kombiniert, die im vorherigen Verfahren erläutert wurden, um das Erstellen einer abgeleiteten Klasse mithilfe der WMI-API zu beschreiben.
+Im folgenden Codebeispiel werden die in der vorherigen Prozedur beschriebenen Codebeispiele kombiniert, um zu beschreiben, wie eine abgeleitete Klasse mithilfe der WMI-API erstellt wird.
 
 
 ```C++
@@ -194,13 +194,13 @@ void CreateDerivedClass(IWbemServices *pSvc)
 
 
 
-Im folgenden Verfahren wird beschrieben, wie eine abgeleitete Klasse mithilfe von MOF-Code definiert wird.
+Das folgende Verfahren beschreibt, wie eine abgeleitete Klasse mithilfe von MOF-Code definiert wird.
 
-**So definieren Sie eine abgeleitete Klasse mithilfe von MOF-Code**
+**So definieren Sie eine abgeleitete Klasse mit MOF-Code**
 
-1.  Definieren Sie Ihre abgeleitete Klasse mit dem Schlüsselwort **Class** , gefolgt vom Namen der abgeleiteten Klasse und dem Namen der übergeordneten Klasse, getrennt durch einen Doppelpunkt.
+1.  Definieren Sie Ihre abgeleitete Klasse mit dem **Schlüsselwort Class,** gefolgt vom Namen der abgeleiteten Klasse und dem Namen der übergeordneten Klasse, die durch einen Doppelpunkt getrennt ist.
 
-    Im folgenden Codebeispiel wird die Implementierung einer abgeleiteten Klasse beschrieben.
+    Im folgenden Codebeispiel wird eine Implementierung einer abgeleiteten Klasse beschrieben.
 
     ``` syntax
     class MyClass 
@@ -217,9 +217,9 @@ Im folgenden Verfahren wird beschrieben, wie eine abgeleitete Klasse mithilfe vo
     };
     ```
 
-2.  Kompilieren Sie den MOF-Code nach Abschluss des Vorgangs mit dem MOF-Compiler.
+2.  Kompilieren Sie nach Abschluss des Vorgangs Ihren MOF-Code mit dem MOF-Compiler.
 
-    Weitere Informationen finden Sie unter [Kompilieren von MOF-Dateien](compiling-mof-files.md).
+    Weitere Informationen finden Sie unter [Kompilieren von MOF-Dateien.](compiling-mof-files.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

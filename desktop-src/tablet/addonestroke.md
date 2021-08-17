@@ -1,7 +1,7 @@
 ---
-description: Fügt dem InkDivider-Objekt ein neues IInkStrokeDisp-Objekt hinzu, das weitergegeben wurde.
+description: Fügt dem übergebenen InkDivider-Objekt ein neues IInkStrokeDisp-Objekt hinzu.
 ms.assetid: d5b82244-68d5-4137-aaf4-d3232f7c0779
-title: Addonestroke-Funktion
+title: AddOneStroke-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - InkDiv.dll
 - InkDiv.dll.dll
-ms.openlocfilehash: 0af3913f2579363afbb0c3985ad0f40f58051eac
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 431043b261b3e6fa67e8c6c9e45df27bb6c252dfd92b18e0e4127d4795533c0f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483998"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117857129"
 ---
-# <a name="addonestroke-function"></a>Addonestroke-Funktion
+# <a name="addonestroke-function"></a>AddOneStroke-Funktion
 
-Fügt dem [**InkDivider**](inkdivider-class.md) -Objekt ein neues [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekt hinzu, das weitergegeben wurde.
+Fügt dem [**übergebenen InkDivider-Objekt**](inkdivider-class.md) ein neues [**IInkStrokeDisp-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) hinzu.
 
-Diese Funktion ist nicht für die Verwendung durch den Anwendungscode vorgesehen.
+Diese Funktion ist nicht für die Verwendung durch Anwendungscode vorgesehen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,31 +45,31 @@ HRESULT WINAPI AddOneStroke(
 
 <dl> <dt>
 
-*hdivider* \[ in\]
+*hDivider* \[ In\]
 </dt> <dd>
 
-Ein Handle für das [**InkDivider**](inkdivider-class.md) -Objekt.
+Ein Handle für das [**InkDivider-Objekt.**](inkdivider-class.md)
 
 </dd> <dt>
 
-*strokeid* \[ in\]
+*strokeId* \[ In\]
 </dt> <dd>
 
-Die [**ID**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) des [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekts, das dem [**InkDivider**](inkdivider-class.md) -Objekt hinzugefügt werden soll.
+Die [**ID**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) des [**IInkStrokeDisp-Objekts,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) das dem [**InkDivider-Objekt**](inkdivider-class.md) hinzugefügt werden soll.
 
 </dd> <dt>
 
-*CPoints* \[ in\]
+*cPoints* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Pakete, die das neue [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekt bilden.
+Die Anzahl der Pakete, aus denen das neue [**IInkStrokeDisp-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) besteht.
 
 </dd> <dt>
 
-*apoints* \[ in\]
+*aPoints* \[ In\]
 </dt> <dd>
 
-Das Array von Paketen, die das [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekt in *strokeid* bilden.
+Das Array von Paketen, aus denen das [**IInkStrokeDisp-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) in *strokeId* besteht.
 
 </dd> </dl>
 
@@ -82,7 +82,7 @@ Diese Funktion kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                  | Beschreibung                                     |
 |----------------------------------------------------------------------------------------------|-------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Funktion wurde erfolgreich ausgeführt.<br/>              |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Der *hdivider* -Parameter ist ungültig.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der *hDivider-Parameter* ist ungültig.<br/> |
 
 
 
@@ -94,7 +94,7 @@ Diese Funktion kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
 | Bibliothek<br/>                  | <dl> <dt>InkDiv.dll</dt> </dl> |
 

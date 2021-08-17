@@ -1,21 +1,21 @@
 ---
 description: Wird in Windows 7 und höher nicht unterstützt. Gibt an, welches Steuerelement im Abfrage-Generator verwendet werden soll.
 ms.assetid: 7d79c2fe-c63d-4ac5-8dd6-1a6103e53245
-title: querycontrol
+title: queryControl
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 448b47038f82afb9f860209bfe89eb9e6eecb890
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 34f05800fc026c61a4ea50098fb1d8f4deb98d971c9eecfed478d71bd3c01033
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119823560"
 ---
-# <a name="querycontrol"></a>querycontrol
+# <a name="querycontrol"></a>queryControl
 
-Wird in Windows 7 und höher nicht unterstützt. Gibt an, welches Steuerelement im Abfrage-Generator verwendet werden soll. Es darf nur ein [querycontrol]() -Element für jedes [DisplayInfo](./propdesc-schema-displayinfo.md) -Element vorhanden sein.
+Wird in Windows 7 und höher nicht unterstützt. Gibt an, welches Steuerelement im Abfrage-Generator verwendet werden soll. Es sollte nur ein [queryControl-Element]() für jedes [displayInfo-Element geben.](./propdesc-schema-displayinfo.md)
 
-Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [querycontrol]() -Element bereitgestellt wird, werden die Standard Attribut Einstellungen auf die Eigenschafts Beschreibung angewendet.
+Wenn mehrere Elemente enthalten sind, wird das letzte verwendet. Wenn kein [queryControl-Element]() angegeben wird, werden die Standardattributeinstellungen auf die Eigenschaftenbeschreibung angewendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [quer
 
 | Übergeordnetes Element                                   | Untergeordnete Elemente |
 |--------------------------------------------------|----------------|
-| [Display Info](./propdesc-schema-displayinfo.md) | Keine           |
+| [displayInfo](./propdesc-schema-displayinfo.md) | Keine           |
 
 
 
@@ -68,14 +68,14 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [quer
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>BESCHREIBUNG</th>
+<th>attribute</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Steuerung</td>
-<td>Öffentlich. Dies ist optional. Der Standardwert ist Default &quot; &quot; . Die folgenden Werte sind gültig. 
+<td>Öffentlich. Optional. Der Standardwert ist &quot; Default &quot; . Die folgenden Werte sind gültig. 
 <table>
 <colgroup>
 <col style="width: 50%" />
@@ -90,7 +90,7 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [quer
 <tbody>
 <tr class="odd">
 <td>Standard</td>
-<td>Standard. Verwendet das Standard Steuerelement auf Grundlage des- <typeInfo type=&quot;&quot;> Attributs. Die Standardtypen sind unten aufgeführt. Jeder andere Typ führt zur Verwendung des &quot; Text- &quot; Steuer Elements. 
+<td>Standard. Verwendet das standard-Steuerelement, das auf dem -Attribut <typeInfo type=&quot;&quot;> basiert. Die Standardtypen sind unten aufgeführt. Jeder andere Typ führt zur Verwendung des &quot; &quot; Text-Steuerelements. 
 <table>
 <thead>
 <tr class="header">
@@ -104,15 +104,15 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [quer
 <td>Text</td>
 </tr>
 <tr class="even">
-<td>Zeichenfolge (mehrere Werte)</td>
-<td>Multivaluetext</td>
+<td>Zeichenfolge (Mehrwert)</td>
+<td>MultiValueText</td>
 </tr>
 <tr class="odd">
-<td>Anzahl oder Größe</td>
-<td>Numerictext</td>
+<td>Zahl oder Größe</td>
+<td>NumericText</td>
 </tr>
 <tr class="even">
-<td>Number oder size (Enum)</td>
+<td>Zahl oder Größe (enum)</td>
 <td>List</td>
 </tr>
 <tr class="odd">
@@ -134,31 +134,31 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [quer
 </tr>
 <tr class="odd">
 <td>Kalender</td>
-<td>Verwendet das Dropdown-Kalender Steuerelement.</td>
+<td>Verwendet das Dropdownkalender-Steuerelement.</td>
 </tr>
 <tr class="even">
-<td>Checkboxdroplist</td>
-<td>Verwendet das Listen Steuerelement mit Kontrollkästchen.</td>
+<td>CheckboxDropList</td>
+<td>Verwendet das Listensteuerfeld mit Kontrollkästchen.</td>
 </tr>
 <tr class="odd">
-<td>Droplist</td>
-<td>Verwendet das Dropdown Listen-Steuerelement.</td>
+<td>DropList</td>
+<td>Verwendet das Dropdownlisten-Steuerelement.</td>
 </tr>
 <tr class="even">
-<td>Multivaluetext</td>
-<td>Verwendet das mehrwertige Text Bearbeitungs Steuerelement.</td>
+<td>MultiValueText</td>
+<td>Verwendet das mehrwertige Textbearbeitungssteuerfeld.</td>
 </tr>
 <tr class="odd">
-<td>Numerictext</td>
-<td>Verwendet das numerische Textbearbeitungs-Steuerelement.</td>
+<td>NumericText</td>
+<td>Verwendet das Numerische Textbearbeitungssteuerfeld.</td>
 </tr>
 <tr class="even">
 <td>Rating</td>
-<td>Verwendet das 5-Sterne-Bewertungs Steuerelement.</td>
+<td>Verwendet das 5-Stern-Bewertungssteuer steuerelement.</td>
 </tr>
 <tr class="odd">
 <td>Text</td>
-<td>Verwendet das Steuerelement für die Textbearbeitung.</td>
+<td>Verwendet das Textbearbeitungssteuerfeld.</td>
 </tr>
 </tbody>
 </table>

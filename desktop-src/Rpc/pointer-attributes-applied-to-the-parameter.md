@@ -1,35 +1,35 @@
 ---
-title: Zeiger Attribute, die auf den Parameter angewendet werden
-description: Jedes Zeiger Attribut (\ Ref \, \ Unique \ und \ PTR \) verfügt über Eigenschaften, die die Speicher Belegung beeinflussen. In der folgenden Tabelle werden diese Eigenschaften zusammengefasst.
+title: Zeigerattribute, die auf den Parameter angewendet werden
+description: Jedes Zeigerattribut (\ ref\ , \ unique\ und \ ptr\ ) weist Merkmale auf, die sich auf die Speicherbelegung auswirken. In der folgenden Tabelle sind diese Merkmale zusammengefasst.
 ms.assetid: 25a609cd-efe7-4cbb-b80e-b6a3ad8cda38
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c7710fb3c39702b2b2fdb789ed1218dc88d44ea
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0bcc6649dc663d7b029a7d7f345719330719d2eb19b6b7a63fa02797c17df16c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039437"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118927495"
 ---
-# <a name="pointer-attributes-applied-to-the-parameter"></a>Zeiger Attribute, die auf den Parameter angewendet werden
+# <a name="pointer-attributes-applied-to-the-parameter"></a>Zeigerattribute, die auf den Parameter angewendet werden
 
-Jedes Zeiger Attribut ( \[ [ref](/windows/desktop/Midl/ref) \] , \[ [Unique](/windows/desktop/Midl/unique) \] und \[ [ptr](/windows/desktop/Midl/ptr) \] ) verfügt über Eigenschaften, die die Speicher Belegung beeinflussen. In der folgenden Tabelle werden diese Eigenschaften zusammengefasst.
+Jedes Zeigerattribut ( \[ [ref](/windows/desktop/Midl/ref) \] , \[ [unique](/windows/desktop/Midl/unique) \] und \[ [ptr](/windows/desktop/Midl/ptr)) weist Merkmale \] auf, die sich auf die Speicherbelegung auswirken. In der folgenden Tabelle sind diese Merkmale zusammengefasst.
 
 
 
-| Zeiger Attribut       | Client                                                                                                                                                                                                            | Server                                                              |
+| Zeigerattribut       | Client                                                                                                                                                                                                            | Server                                                              |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
-| Verweis ( \[ **ref** \] ) | Die Client Anwendung muss zuordnen.                                                                                                                                                                                 | Spezielle Behandlung **\[ , \]** die nur für nicht auf oberster Ebene basierende Zeiger erforderlich ist. |
-| Eindeutig ( \[ **eindeutig** \] ) | Wenn ein Parameter ist, muss die Client Anwendung Wenn eingebettet, kann NULL sein. Wenn Sie von NULL in einen nicht-NULL-Wert wechseln, weist der Clientstub zu. Das Ändern von ungleich NULL in NULL kann zu einem verwaisen führen.<br/> |                                                                     |
-| Vollständig ( \[ **ptr** \] )      | Wenn ein Parameter ist, muss die Client Anwendung Wenn eingebettet, kann NULL sein. Wenn Sie von NULL in einen nicht-NULL-Wert wechseln, weist der Clientstub zu. Das Ändern von ungleich NULL in NULL kann zu einem verwaisen führen.<br/> |                                                                     |
+| Referenz ( \[ **ref** \] ) | Clientanwendung muss zuordnen.                                                                                                                                                                                 | Spezielle Behandlung, die für **\[ \]** Out-Only-Zeiger auf nichttopebene erforderlich ist. |
+| Eindeutig ( \[ **eindeutig** \] ) | Wenn ein Parameter vorhanden ist, muss die Clientanwendung zuordnen. wenn eingebettet, kann NULL sein. Wenn Sie von NULL in Nicht-NULL ändern, wird der Clientstub zugeordnet. Die Änderung von ungleich NULL in NULL kann zu Verwaisten führen.<br/> |                                                                     |
+| Full ( \[ **ptr** \] )      | Wenn ein Parameter vorhanden ist, muss die Clientanwendung zuordnen. wenn eingebettet, kann NULL sein. Wenn Sie von NULL in Nicht-NULL ändern, wird der Clientstub zugeordnet. Die Änderung von ungleich NULL in NULL kann zu Verwaisten führen.<br/> |                                                                     |
 
 
 
  
 
-Das **\[ ref \]** -Attribut gibt an, dass der Zeiger auf einen gültigen Speicher zeigt. Definitionsgemäß muss die Client Anwendung den gesamten Arbeitsspeicher zuordnen, der für die Verweis Zeiger erforderlich ist.
+Das **\[ \] ref-Attribut** gibt an, dass der Zeiger auf gültigen Arbeitsspeicher zeigt. Definitionsgemäß muss die Clientanwendung den gesamten Arbeitsspeicher zuordnen, den die Verweiszeiger benötigen.
 
-Der eindeutige Zeiger kann von NULL in einen nicht-NULL-Wert geändert werden. Wenn der eindeutige Zeiger von NULL in einen nicht-NULL-Wert geändert wird, wird auf dem Client neuer Arbeitsspeicher zugeordnet. Wenn sich der eindeutige Zeiger von einem nicht-NULL-Wert in NULL ändert, kann das verwaisen Ergebnis sein. Weitere Informationen finden Sie unter Arbeits [Speicher verwaisen](memory-orphaning.md).
+Der eindeutige Zeiger kann von NULL in Nicht-NULL geändert werden. Wenn sich der eindeutige Zeiger von NULL in Nicht-NULL ändert, wird auf dem Client neuer Arbeitsspeicher zugeordnet. Wenn sich der eindeutige Zeiger von ungleich NULL in NULL ändert, kann verwaist werden. Weitere Informationen finden Sie unter [Verwaister Speicher.](memory-orphaning.md)
 
  
 

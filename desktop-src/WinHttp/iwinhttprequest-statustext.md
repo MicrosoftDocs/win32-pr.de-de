@@ -1,7 +1,7 @@
 ---
-description: Ruft den HTTP-Status Text ab.
+description: Ruft den HTTP-Statustext ab.
 ms.assetid: 480babbd-432c-4722-98df-a73ba5928e1f
-title: 'Iwinhttprequest:: statusText-Eigenschaft'
+title: IWinHttpRequest::StatusText-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - COM
 api_location:
 - Winhttp.dll
-ms.openlocfilehash: 41288d87b8194caf3a2a14cc89cd5acbffec902c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a200e4e4988d5e75b3a605fe9b7b37bb316832ed6d986842e15c3cac1c73bac6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050595"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117744385"
 ---
-# <a name="iwinhttprequeststatustext-property"></a>Iwinhttprequest:: statusText-Eigenschaft
+# <a name="iwinhttprequeststatustext-property"></a>IWinHttpRequest::StatusText-Eigenschaft
 
-Die **Statustext** -Eigenschaft ruft den HTTP-Status Text ab.
+Die **StatusText-Eigenschaft** ruft den HTTP-Statustext ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,24 +49,24 @@ StatusText = WinHttpRequest.StatusText
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-**BSTR** , das den HTTP-Status Text empfängt.
+**BSTR,** der den HTTP-Statustext empfängt.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der Rückgabewert ist bei Erfolg **S \_ OK** oder andernfalls ein Fehlerwert.
+Der Rückgabewert ist bei Erfolg **S \_ OK,** andernfalls ein Fehlerwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ruft den Textteil der Serverantwort Zeile ab und stellt die "benutzerfreundliche"-Entsprechung für den numerischen HTTP-Statuscode bereit. Die Ergebnisse dieser Eigenschaft sind nur gültig, nachdem die [**Send**](iwinhttprequest-send.md) -Methode erfolgreich abgeschlossen wurde.
+Ruft den Textteil der Serverantwortzeile ab und stellt die "benutzerfreundliche" Entsprechung zum numerischen HTTP-Statuscode zur Verfügung. Die Ergebnisse dieser Eigenschaft sind erst gültig, nachdem die [**Send-Methode**](iwinhttprequest-send.md) erfolgreich abgeschlossen wurde.
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Lauf Zeitanforderungen](winhttp-start-page.md) auf der WinHTTP-Start Seite.
+> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Laufzeitanforderungen](winhttp-start-page.md) der WinHTTP-Startseite.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt, wie Sie eine HTTP-Verbindung öffnen, eine HTTP-Anforderung senden, den [**Status**](iwinhttprequest-status.md) und den Status **anzeigen und den** Antworttext lesen. Dieses Beispiel muss von einer Eingabeaufforderung aus ausgeführt werden.
+Das folgende Beispiel zeigt, wie sie eine HTTP-Verbindung öffnen, eine HTTP-Anforderung senden, [**status**](iwinhttprequest-status.md) und **StatusText** anzeigen und den Antworttext lesen. Dieses Beispiel muss über eine Eingabeaufforderung ausgeführt werden.
 
 
 ```C++
@@ -165,7 +165,7 @@ int main()
 
 
 
-Im folgenden Beispielskript wird veranschaulicht, wie eine HTTP-Verbindung geöffnet, eine HTTP-Anforderung gesendet, der [**Status**](iwinhttprequest-status.md) und der Status angezeigt und die Antwortheader **gelesen werden.**
+Das folgende Skriptbeispiel zeigt, wie sie eine HTTP-Verbindung öffnen, eine HTTP-Anforderung senden, [**status**](iwinhttprequest-status.md) und **StatusText** anzeigen und die Antwortheader lesen.
 
 
 ```JScript
@@ -193,20 +193,20 @@ WScript.Echo( WinHttpReq.GetAllResponseHeaders());
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5,0 und Internet Explorer 5,01 oder höher unter Windows XP und Windows 2000.<br/> |
-| IDL<br/>                      | <dl> <dt>HttpRequest. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WinHTTP. lib</dt> </dl>     |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher auf Windows XP und Windows 2000.<br/> |
+| Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwinhttprequest**](iwinhttprequest-interface.md)
+[**IWinHttpRequest**](iwinhttprequest-interface.md)
 </dt> <dt>
 
 [**WinHttpRequest**](winhttprequest.md)

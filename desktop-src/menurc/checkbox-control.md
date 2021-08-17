@@ -3,7 +3,7 @@ title: CHECKBOX-Steuerelement (Ressourcencompiler)
 description: Definiert ein Kontrollkästchen-Steuerelement.
 ms.assetid: 24ee25e5-9de2-4843-a55e-96b897f6ae8e
 keywords:
-- Menüs und andere Ressourcen des CHECKBOX-Steuerelements
+- CHECKBOX-Steuerelementmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "119461330"
 ---
 # <a name="checkbox-control"></a>CHECKBOX-Steuerelement
 
-Definiert ein Kontrollkästchen-Steuerelement. Das Steuerelement ist ein kleines Rechteck (Kontrollkästchen), neben dem der angegebene Text angezeigt wird (normalerweise rechts). Wenn der Benutzer das Steuerelement auswählt, hebt das Steuerelement das Rechteck hervor und sendet eine Nachricht an das übergeordnete Fenster.
+Definiert ein Kontrollkästchen-Steuerelement. Das Steuerelement ist ein kleines Rechteck (Kontrollkästchen), neben dem der angegebene Text angezeigt wird (in der Regel rechts). Wenn der Benutzer das Steuerelement auswählt, hebt das Steuerelement das Rechteck hervor und sendet eine Nachricht an das übergeordnete Fenster.
 
 Die **CHECKBOX-Anweisung,** die nur in einer [**DIALOGEX-Anweisung**](dialogex-resource.md) verwendet werden kann, definiert den Text, bezeichner, Dimensionen und Attribute des Steuerelements.
 
@@ -34,20 +34,20 @@ CHECKBOX text, id, x, y, width, height [, style [, extended-style]]
 <span id="text"></span><span id="TEXT"></span>*Text*
 </dt> <dd>
 
-Text, der rechts neben dem Steuerelement angezeigt werden soll.
+Text, der rechts vom Steuerelement angezeigt werden soll.
 
 </dd> <dt>
 
 <span id="style"></span><span id="STYLE"></span>*Stil*
 </dt> <dd>
 
-Steuerelementstile. Dieser Wert kann eine Kombination aus dem **BS \_ CHECKBOX-Stil** der Schaltflächenklasse und den **Stilen WS \_ TABSTOP** und **WS \_ GROUP** sein.
+Steuerelementstile. Dieser Wert kann eine Kombination aus den Stilen **BS \_ CHECKBOX** der Schaltflächenklasse und **WS \_ TABSTOP** und **WS \_ GROUP** sein.
 
-Wenn Sie keinen Stil angeben, lautet der Standardstil `BS_CHECKBOX | WS_TABSTOP` .
+Wenn Sie keinen Stil angeben, ist der Standardstil `BS_CHECKBOX | WS_TABSTOP` .
 
 </dd> </dl>
 
-Weitere Informationen zur allgemeinen Syntax einer Control-Anweisung finden Sie unter [Allgemeine Steuerungsparameter.](common-control-parameters.md)
+Weitere Informationen zur allgemeinen Syntax einer Steuerelement-Anweisung finden Sie unter [Allgemeine Steuerelementparameter](common-control-parameters.md).
 
 ## <a name="examples"></a>Beispiele
 

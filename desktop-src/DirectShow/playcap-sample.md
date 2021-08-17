@@ -13,13 +13,13 @@ ms.locfileid: "119982590"
 ---
 # <a name="playcap-sample"></a>PlayCap-Beispiel
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Einfache Erfassungsanwendung.
 
-Diese Anwendung erstellt ein Vorschaufenster für das erste Videoaufnahmegerät, das auf dem System des Benutzers (sofern verfügbar) gefunden wird. Es zeigt ein einfaches Beispiel für die Verwendung der [**Schnittstellen ICaptureGraphBuilder2**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) und [**ICreateDevEnum**](/windows/desktop/api/Strmif/nn-strmif-icreatedevenum) zum Erstellen eines Erfassungsdiagramms.
+Diese Anwendung erstellt ein Vorschaufenster für das erste Videoaufnahmegerät, das im System des Benutzers (sofern verfügbar) gefunden wird. Es zeigt ein einfaches Beispiel für die Verwendung der [**Schnittstellen ICaptureGraphBuilder2**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) und [**ICreateDevEnum**](/windows/desktop/api/Strmif/nn-strmif-icreatedevenum) zum Erstellen eines Erfassungsdiagramms.
 
-Eine Beispielerfassungsanwendung, die weitere Features unterstützt, finden Sie unter [AmCap-Beispiel](amcap-sample.md).
+Eine Beispielerfassungsanwendung, die weitere Funktionen unterstützt, finden Sie unter [AmCap-Beispiel](amcap-sample.md).
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 

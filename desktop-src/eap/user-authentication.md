@@ -13,9 +13,9 @@ ms.locfileid: "119978370"
 ---
 # <a name="user-authentication"></a>Benutzerauthentifizierung
 
-Das Authentifizierungsprotokoll selbst kann den Benutzer über protected EAP (PEAP) authentifizieren. Es gibt auch zwei Authentifizierungsanbieter, die in das Betriebssystem integriert sind: Windows Domänenauthentifizierung (Zugriff über Verzeichnisdienste) und REMOTE ACCESS DIAL-In User Service (RADIUS).
+Das Authentifizierungsprotokoll selbst kann den Benutzer über protected EAP (PEAP) authentifizieren. Es gibt auch zwei Authentifizierungsanbieter, die in das Betriebssystem integriert sind: Windows-Domänenauthentifizierung (zugriff über Verzeichnisdienste) und REMOTE Access Dial-In User Service (RADIUS).
 
-Wenn RADIUS der Authentifizierungsanbieter ist, wird das EAP-Plug-In auf dem RADIUS-Server und nicht auf dem DRAHTLOSEN Zugriffspunktserver (z. B. einem RAS-Server) installiert. Der AP-Server übergibt EAP-Pakete direkt vom Client an den Authentifizierungsdienst auf dem RADIUS-Server. Der AP-Server verarbeitet keine der Informationen in den EAP-Paketen, muss jedoch die serverseitigen, vollständigen PeAP-verschlüsselungsschlüssel (256 Bit) akzeptieren, um die sichere Verbindung herzustellen.
+Für den Fall, dass RADIUS der Authentifizierungsanbieter ist, wird das EAP-Plug-In auf dem RADIUS-Server und nicht auf dem Drahtlosen Zugriffspunktserver (AP) installiert, z. B. auf einem RAS-Server. Der AP-Server übergibt EAP-Pakete direkt vom Client an den Authentifizierungsdienst auf dem RADIUS-Server. Der AP-Server verarbeiten keine der Informationen in den EAP-Paketen, muss jedoch die serverseitigen PEAP-Verschlüsselungsschlüssel mit voller Stärke (256 Bit) akzeptieren, um die sichere Verbindung zu erstellen.
 
  
 

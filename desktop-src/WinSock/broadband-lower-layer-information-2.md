@@ -1,19 +1,19 @@
 ---
-description: In diesem Abschnitt wird die Typdefinition für die Informationen der niedrigeren Ebene für Breitband aufgeführt.
+description: In diesem Abschnitt wird die Typdefinition für die Informationen der unteren Breitbandebene aufgelistet.
 ms.assetid: b987dd6b-a611-4297-abaa-fd080cc94f6f
-title: Informationen zu Informationen auf niedrigerer Ebene
+title: Informationen zur unteren Breitbandebene
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9af52d508bb80c8d2ad350fd56760eb094d06545
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6fbad3cb209ab8f04417b0bbb89192ed63476b78fd72e3e2a955f72af51b2152
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117741560"
 ---
-# <a name="broadband-lower-layer-information"></a>Informationen zu Informationen auf niedrigerer Ebene
+# <a name="broadband-lower-layer-information"></a>Informationen zur unteren Breitbandebene
 
-In diesem Abschnitt wird die Typdefinition für die Informationen der niedrigeren Ebene für Breitband aufgeführt.
+In diesem Abschnitt wird die Typdefinition für die Informationen der unteren Breitbandebene aufgelistet.
 
 ``` syntax
 #include <windows.h>

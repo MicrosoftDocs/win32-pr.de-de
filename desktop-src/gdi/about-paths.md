@@ -1,5 +1,5 @@
 ---
-description: Ein Pfad ist eines der Einem Gerätekontext (DC) zugeordneten Objekte. Im Gegensatz zu den Standardobjekten (Stift, Pinsel und Schriftart), die Teil eines neuen Domänencontrollers sind, gibt es jedoch keinen Standardpfad. Weitere Informationen zu DCs finden Sie unter Gerätekontexte.
+description: Ein Pfad ist eines der Objekte, die einem Gerätekontext (DC) zugeordnet sind. Im Gegensatz zu den Standardobjekten (Stift, Pinsel und Schriftart), die Teil eines neuen Domänencontrollers sind, gibt es jedoch keinen Standardpfad. Weitere Informationen zu DCs finden Sie unter Gerätekontexte.
 ms.assetid: 67fdff34-6585-45c7-8627-91d126faad8c
 title: Informationen zu Pfaden
 ms.topic: article
@@ -13,14 +13,14 @@ ms.locfileid: "119355230"
 ---
 # <a name="about-paths"></a>Informationen zu Pfaden
 
-Ein Pfad ist eines der Einem Gerätekontext (DC) zugeordneten Objekte. Im Gegensatz zu den Standardobjekten (Stift, Pinsel und Schriftart), die Teil eines neuen Domänencontrollers sind, gibt es jedoch keinen Standardpfad. Weitere Informationen zu DCs finden Sie unter [Gerätekontexte.](device-contexts.md)
+Ein Pfad ist eines der Objekte, die einem Gerätekontext (DC) zugeordnet sind. Im Gegensatz zu den Standardobjekten (Stift, Pinsel und Schriftart), die Teil eines neuen Domänencontrollers sind, gibt es jedoch keinen Standardpfad. Weitere Informationen zu DCs finden Sie unter [Gerätekontexte.](device-contexts.md)
 
 -   [Pfaderstellung](path-creation.md)
--   [Umrissene und ausgefüllte Pfade](outlined-and-filled-paths.md)
+-   [Umrandete und ausgefüllte Pfade](outlined-and-filled-paths.md)
 -   [Transformationen von Pfaden](transformations-of-paths.md)
--   [ClipPfade und grafische Effekte](clip-paths-and-graphic-effects.md)
+-   [Clippfade und grafikgrafische Effekte](clip-paths-and-graphic-effects.md)
 -   [Konvertierung von Pfaden in Regionen](conversion-of-paths-to-regions.md)
--   [Gekrümmte Pfade](curved-paths.md)
+-   [Kurvenpfade](curved-paths.md)
 
  
 

@@ -14,11 +14,11 @@ ms.locfileid: "118928649"
 ---
 # <a name="l-rpc"></a>L (RPC)
 
-[A](a-glos.md) [B](b-glos.md) [C](c-glos.md) [D](d-glos.md) [E](e-glos.md) F [G](f-glos.md) H [I](i-glos.md) J K L [M](m-glos.md) [N](n-glos.md) [O](o-glos.md) [P](p-glos.md) [Q](q.md) [R](r-glos.md) [S](s-glos.md) T [U](t-glos.md) [](u-glos.md) [V](v-glos.md) [W](w-glos.md) X Y Z
+[A](a-glos.md) [B](b-glos.md) [C](c-glos.md) [D](d-glos.md) [E](e-glos.md) [F](f-glos.md) G H [I](i-glos.md) J K L [M](m-glos.md) [N](n-glos.md) [O](o-glos.md) [P](p-glos.md) [Q](q.md) [R](r-glos.md) [S](s-glos.md) [T](t-glos.md) [U](u-glos.md) [V](v-glos.md) [W](w-glos.md) X Y Z
 
 <dl> <dt>
 
-<span id="_rpc_lrpc_glos"></span><span id="_RPC_LRPC_GLOS"></span>**Lokaler Remoteprozeduraufruf (LRPC)**
+<span id="_rpc_lrpc_glos"></span><span id="_RPC_LRPC_GLOS"></span>**Aufruf der lokalen Remoteprozedur (LRPC)**
 </dt> <dd>
 
 Remoteprozeduraufruf an einen anderen Prozess auf demselben Computer wie der aufrufende Prozess.
@@ -28,7 +28,7 @@ Remoteprozeduraufruf an einen anderen Prozess auf demselben Computer wie der auf
 <span id="_rpc_locator_glos"></span><span id="_RPC_LOCATOR_GLOS"></span>**Locator**
 </dt> <dd>
 
-Microsoft Windows Name-Service-Anbieter. Siehe auch [*Name service*](n-glos.md).
+Microsoft Windows Name-Service-Anbieter. Weitere Informationen finden Sie unter [*name service (Name des Diensts).*](n-glos.md)
 
 </dd> </dl>
 

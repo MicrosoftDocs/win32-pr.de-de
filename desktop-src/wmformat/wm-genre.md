@@ -3,7 +3,7 @@ title: WM/Genre
 description: Das WM/Genre-Attribut enthält das Genre des Inhalts.
 ms.assetid: 50279c96-e8f2-40a3-9d5b-5827eb91b61e
 keywords:
-- WM/Genre windows Media Format
+- WM/Genre-Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -29,13 +29,13 @@ g \_ wszWMGenre
 
 ## <a name="data-type"></a>Datentyp
 
-**\_ \_ WMT-TYPZEICHENFOLGE**
+**\_WMT-TYPZEICHENFOLGE \_**
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist das bevorzugte Attribut zum Angeben des Genres von Inhalten.
+Dies ist das bevorzugte Attribut zum Angeben des Genre des Inhalts.
 
-Wenn Sie **WM/Genre** oder **WM/GenreID** in einer MP3-Datei ändern, wird das andere Attribut entsprechend geändert.
+Wenn Sie entweder **WM/Genre oder** **WM/GenreID** in einer MP3-Datei ändern, wird das andere Attribut geändert, um eine Übereinstimmung zu finden.
 
 ### <a name="example"></a>Beispiel
 
@@ -44,7 +44,7 @@ Wenn Sie **WM/Genre** oder **WM/GenreID** in einer MP3-Datei ändern, wird das a
 | Dateityp | Beispielwert |
 |-----------|---------------|
 | Audio     | "Rock"        |
-| Video     | "Soll"       |
+| Video     | "Gegenstück"       |
 
 
 

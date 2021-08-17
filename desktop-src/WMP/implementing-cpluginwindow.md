@@ -3,10 +3,10 @@ title: Implementieren von CPluginWindow
 description: Implementieren von CPluginWindow
 ms.assetid: b22723ce-f373-43b1-a098-86a8dbcf485e
 keywords:
-- Windows Media Player-Plug-Ins, CPluginWindow-Klasse
+- Windows Media Player-Plug-Ins,CPluginWindow-Klasse
 - Plug-Ins, CPluginWindow-Klasse
+- Benutzeroberflächen-Plug-Ins,CPluginWindow-Klasse
 - Benutzeroberflächen-Plug-Ins, CPluginWindow-Klasse
-- UI-Plug-Ins, CPluginWindow-Klasse
 - CPluginWindow-Klasse
 - Programmierhandbuch, Benutzeroberflächen-Plug-Ins
 ms.topic: article
@@ -20,11 +20,11 @@ ms.locfileid: "117748135"
 ---
 # <a name="implementing-cpluginwindow"></a>Implementieren von CPluginWindow
 
-Die CPluginWindow-Klasse stellt die Benutzeroberfläche für das Plug-In bereit. Im Fall des Plug-Ins für die Benutzeroberfläche für die Suche enthält diese Klasse den Code für die Schaltfläche **Suchen** und den Code, der die Suchseite startet, wenn auf die Schaltfläche geklickt wird.
+Die CPluginWindow-Klasse stellt die Benutzeroberfläche für das Plug-In zur Verfügung. Im Fall des Suchbenutzeroberflächen-Plug-Ins enthält  diese Klasse den Code für die Schaltfläche Suchen und den Code, der die Suchseite startet, wenn auf die Schaltfläche geklickt wird.
 
-Der Assistent stellt eine grundlegende Implementierung von CPluginWindow in der Headerdatei CPluginWindow.h bereit. Um dies einfach zu halten, ändert das Plug-In für die Suchbenutzeroberfläche diese Datei direkt, obwohl umfangreiche Ergänzungen normalerweise in einer separaten CPluginWindow.cpp-Datei platziert werden.
+Der Assistent bietet eine grundlegende Implementierung von CPluginWindow in der Headerdatei CPluginWindow.h. Um dies einfach zu halten, ändert das Plug-In für die Benutzeroberfläche für die Suche diese Datei direkt, obwohl umfangreiche Ergänzungen normalerweise in einer separaten CPluginWindow.cpp-Datei platziert würden.
 
-In den folgenden Abschnitten wird beschrieben, was Sie tun müssen, um CPluginWindow zu implementieren:
+In den folgenden Abschnitten wird beschrieben, was Sie zum Implementieren von CPluginWindow tun müssen:
 
 -   [Die Meldungszuordnung](the-message-map.md)
 -   [Der Konstruktor](the-constructor.md)
@@ -37,7 +37,7 @@ In den folgenden Abschnitten wird beschrieben, was Sie tun müssen, um CPluginWi
 
 <dl> <dt>
 
-[**Programmierhandbuch für Benutzeroberfläche Plug-Ins**](user-interface-plug-ins-programming-guide.md)
+[**Benutzeroberfläche Plug-Ins -Programmierhandbuch**](user-interface-plug-ins-programming-guide.md)
 </dt> </dl>
 
  

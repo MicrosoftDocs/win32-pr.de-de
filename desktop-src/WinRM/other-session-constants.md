@@ -1,6 +1,6 @@
 ---
-title: Andere Sitzungs Konstanten (WSManDisp. h)
-description: Geben Sie den Port für Codierung, Verschlüsselung und Dienst Prinzipal Name an.
+title: Andere Sitzungskonstanten (WSManDisp.h)
+description: Geben Sie Codierung, Verschlüsselung und Dienstprinzipalnamenport an.
 ms.assetid: a921b7bc-1f40-427c-971f-c0bc9c9f6887
 ms.tgt_platform: multiple
 topic_type:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 236e69d80db2ad30b8cc2934b6b2016d7eecbed6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fcd9d2cf44063dfb1a7ec1bfcbb0fe785d1747d34e84ef2c2d8c78598e6e6b0e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117743325"
 ---
-# <a name="other-session-constants"></a>Andere Sitzungs Konstanten
+# <a name="other-session-constants"></a>Andere Sitzungskonstanten
 
-Konstanten, die in der folgenden Liste aufgeführt sind, in der **\_ \_ wsmansessionflags** -Enumeration, die den Port für Codierung, Verschlüsselung und Dienst Prinzipal Name angeben.
+Konstanten, die in der folgenden Liste aufgeführt sind, in der **\_ \_ WSManSessionFlags-Enumeration,** die Codierung, Verschlüsselung und Dienstprinzipalnamenport angeben.
 
 <dl> <dt>
 
@@ -39,12 +39,12 @@ Konstanten, die in der folgenden Liste aufgeführt sind, in der **\_ \_ wsmanses
 
 Sendet die Anforderung in UTF8 anstelle von UTF16.
 
-Die zugeordnete Skript Methode ist [**WSMAN. SessionFlagUTF8**](wsman-sessionflagutf8.md) und die C++-Methode ist [**iwsmanex. SessionFlagUTF8**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanex-sessionflagutf8).
+Die zugeordnete Skriptmethode ist [**WSMan.SessionFlagUTF8,**](wsman-sessionflagutf8.md) und die C++-Methode ist [**IWSManEx.SessionFlagUTF8.**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanex-sessionflagutf8)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WSManFlagNoEncryption"></span><span id="wsmanflagnoencryption"></span><span id="WSMANFLAGNOENCRYPTION"></span>**Wsmanflagnoencryption**
+<span id="WSManFlagNoEncryption"></span><span id="wsmanflagnoencryption"></span><span id="WSMANFLAGNOENCRYPTION"></span>**WSManFlagNoEncryption**
 </dt> <dd> <dl> <dt>
 
 1048576 (0x100000)
@@ -52,14 +52,14 @@ Die zugeordnete Skript Methode ist [**WSMAN. SessionFlagUTF8**](wsman-sessionfla
 
 
 
-Verschlüsseln Sie die über das Netzwerk gesendeten Nachrichten nicht. Diese Einstellung ist nur zulässig, wenn der [*Listener*](windows-remote-management-glossary.md) so konfiguriert ist, dass " **zugwunverschlüsselt** " auf " **true**" festgelegt ist.
+Verschlüsseln Sie die über das Netzwerk gesendeten Nachrichten nicht. Diese Einstellung ist nur zulässig, wenn der [*Listener*](windows-remote-management-glossary.md) so konfiguriert ist, dass **AllowUnencrypted** auf **True** festgelegt ist.
 
-Die zugeordnete Skript Methode lautet " [**WSMAN. sessionflagnoencryption**](wsman-sessionflagnoencryption.md) ", und die C++-Methode ist " [**iwsmanex. sessionflagnoencryption**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanex-sessionflagnoencryption)".
+Die zugeordnete Skriptmethode ist [**WSMan.SessionFlagNoEncryption,**](wsman-sessionflagnoencryption.md) und die C++-Methode ist [**IWSManEx.SessionFlagNoEncryption.**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanex-sessionflagnoencryption)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WSManFlagEnableSPNServerPort"></span><span id="wsmanflagenablespnserverport"></span><span id="WSMANFLAGENABLESPNSERVERPORT"></span>**Wsmanflagenablespnserverport**
+<span id="WSManFlagEnableSPNServerPort"></span><span id="wsmanflagenablespnserverport"></span><span id="WSMANFLAGENABLESPNSERVERPORT"></span>**WSManFlagEnableSPNServerPort**
 </dt> <dd> <dl> <dt>
 
 4194304 (0x400000)
@@ -67,9 +67,9 @@ Die zugeordnete Skript Methode lautet " [**WSMAN. sessionflagnoencryption**](wsm
 
 
 
-Geben Sie den Dienst Prinzipal Namen (SPN) an, wenn Sie eine direkte Verbindung mit der Remote BMC-Hardware herstellen, die auch als [*out-of-Band-*](windows-remote-management-glossary.md) Verbindung bezeichnet wird. Da sowohl der WinRM-Server Computer als auch die BMC-Hardware dieselbe IP-Adresse gemeinsam verwenden können, gibt dieses Flag an, dass die SPN-Portnummer verwendet werden muss, um zu bestimmen, ob die Verbindung mit dem Dienst oder direkt mit dem BMC hergestellt werden soll. Weitere Informationen finden Sie unter [namens Formate für eindeutige SPNs](/windows/desktop/AD/name-formats-for-unique-spns).
+Geben Sie den SPN-Port (Service Principal Name) an, wenn Sie eine direkte Verbindung mit BMC-Remotehardware herstellen, die auch als [*Out-of-Band-Verbindung*](windows-remote-management-glossary.md) bezeichnet wird. Da sowohl der WinRM-Servercomputer als auch die BMC-Hardware dieselbe IP-Adresse gemeinsam verwenden können, gibt dieses Flag an, dass die SPN-Portnummer verwendet werden muss, um zu bestimmen, ob die Verbindung mit dem Dienst oder direkt mit dem BMC hergestellt wird. Weitere Informationen finden Sie unter [Namensformate für eindeutige SPNs.](/windows/desktop/AD/name-formats-for-unique-spns)
 
-Die zugeordnete Skript Methode lautet [**WSMAN. sessionflagenablespnserverport**](wsman-sessionflagenablespnserverport.md) , und die C++-Methode ist [**iwsmanex. sessionflagenablespnserverport**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanex-sessionflagenablespnserverport).
+Die zugeordnete Skriptmethode ist [**WSMan.SessionFlagEnableSPNServerPort,**](wsman-sessionflagenablespnserverport.md) und die C++-Methode ist [**IWSManEx.SessionFlagEnableSPNServerPort.**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanex-sessionflagenablespnserverport)
 
 
 </dt> </dl> </dd> <dt>
@@ -95,16 +95,16 @@ Sendet die Anforderung in UTF16.
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>WSManDisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WSManDisp. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WSManDisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WSManDisp.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Sitzungs Konstanten](session-constants.md)
+[Sitzungskonstanten](session-constants.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
 title: GetRenderTargetSampleCount
-description: Ruft die Anzahl der Stichproben für ein Renderziel ab.
+description: Ruft die Anzahl der Beispiele für ein Renderziel ab.
 ms.assetid: e813134e-c58c-4845-b519-c1074993801e
 keywords:
 - GetRenderTargetSampleCount HLSL
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 96c159a2ed63684b4bad2cbc6fa789c2dbd76edf
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
-ms.translationtype: HT
+ms.openlocfilehash: 54414d7af326c1a069585f9d5deaa3e728d421a65490c5b9f5322b98e06f531e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104471997"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119120134"
 ---
 # <a name="getrendertargetsamplecount"></a>GetRenderTargetSampleCount
 
-Ruft die Anzahl der Stichproben für ein Renderziel ab.
+Ruft die Anzahl der Beispiele für ein Renderziel ab.
 
 
 
-| *Uint* GetRenderTargetSampleCount() |
+| *UINT* GetRenderTargetSampleCount() |
 |-------------------------------------|
 
 
@@ -37,9 +37,9 @@ Ruft die Anzahl der Stichproben für ein Renderziel ab.
 
 
 
-| Element                                                                                 | BESCHREIBUNG |
+| Element                                                                                 | Beschreibung |
 |--------------------------------------------------------------------------------------|-------------|
-| <span id="None"></span><span id="none"></span><span id="NONE"></span>Gar<br/> |             |
+| <span id="None"></span><span id="none"></span><span id="NONE"></span>nichts<br/> |             |
 
 
 
@@ -47,24 +47,24 @@ Ruft die Anzahl der Stichproben für ein Renderziel ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der Stichproben.
+Die Anzahl der Beispiele.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Funktion und [**GetRenderTargetSamplePosition**](dx-graphics-hlsl-getrendertargetsampleposition.md) , um die Anzahl und Position der Stichproben Speicherorte für ein Renderziel zu ermitteln.
+Verwenden Sie diese Funktion und [**GetRenderTargetSamplePosition,**](dx-graphics-hlsl-getrendertargetsampleposition.md) um die Anzahl und Position der Samplingspeicherorte für ein Renderziel zu ermitteln.
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                        | Unterstützt |
 |---------------------------------------------------------------------|-----------|
-| [Shader Model 4](dx-graphics-hlsl-sm4.md) und höhere shadermodelle | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md)           | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md)           | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)           | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md) und höhere Shadermodelle | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md)           | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md)           | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)           | Nein        |
 
 
 
@@ -74,7 +74,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

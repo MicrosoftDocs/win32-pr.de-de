@@ -13,7 +13,7 @@ ms.locfileid: "117745111"
 ---
 # <a name="server-annotation-sample"></a>Beispiel für Serveranmerkungen
 
-Im Folgenden finden Sie ein Beispiel für die Serveranmerkung. Befolgen Sie die Anweisungen in Kommentaren, die mit \* /TODO \* / markiert sind.
+Es folgt ein Beispiel für eine Serveranmerkung. Befolgen Sie die Anweisungen in Kommentaren, die mit \* /TODO / markiert \* sind.
 
 
 ```C++

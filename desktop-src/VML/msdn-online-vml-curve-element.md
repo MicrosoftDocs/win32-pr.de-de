@@ -1,30 +1,30 @@
 ---
-title: VML-Kurven Element
-description: VML-Kurven Element
+title: VML Curve-Element
+description: VML Curve-Element
 ms.assetid: 37197ef0-7597-465a-bc37-7ffcde2e736b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 15b9e04086652bf9dde7d7e7f5ebdea0992f774c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f0fd06480b0d4bcf062f1f64eb9fa0b22862cf2b338b2c2f5ea0bf1c3cd2a1b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104209262"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119655530"
 ---
-# <a name="vml-curve-element"></a>VML-Kurven Element
+# <a name="vml-curve-element"></a>VML Curve-Element
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
 Vordefinierte Kurvenform.
 
-Die **Kurve** verwendet die Attribute [to](to-attribute--curve--vml.md), [from](from-attribute--curve--vml.md), [Control1](msdn-online-vml-control1-attribute.md)und [Control2](msdn-online-vml-control2-attribute.md) .
+**Die Kurve** verwendet die [attribute to](to-attribute--curve--vml.md) [, von](from-attribute--curve--vml.md), [control1](msdn-online-vml-control1-attribute.md)und [control2.](msdn-online-vml-control2-attribute.md)
 
-Im folgenden finden Sie den minimalen Code, der zum Entwickeln eines Bilds erforderlich ist.
+Der folgende Code ist der Mindestcode, der zum Erstellen eines Bilds erforderlich ist.
 
 
 ```HTML
@@ -38,6 +38,6 @@ Im folgenden finden Sie den minimalen Code, der zum Entwickeln eines Bilds erfor
 
 
 
- 
+ 
 
- 
+ 

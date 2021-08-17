@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixPerspectiveOffCenterRH-Funktion (D3dx9math.h): Erstellt eine benutzerdefinierte, rechtshändige Perspektivische Projektionsmatrix.'
+description: 'D3DXMatrixPerspectiveOffCenterRH-Funktion (D3dx9math.h): Erstellt eine angepasste, rechtshändige Projektionsmatrix für die Perspektive.'
 ms.assetid: e6826e46-fc80-41fa-b0d8-45b6797df76f
 title: D3DXMatrixPerspectiveOffCenterRH-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 3d051894a6706cf8d58b81a85003666513f2a956
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d86aa735f8bafba6da5d697dc89b5e97469a6181de30862515ba8b94190d9cab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119122840"
 ---
 # <a name="d3dxmatrixperspectiveoffcenterrh-function-d3dx9mathh"></a>D3DXMatrixPerspectiveOffCenterRH-Funktion (D3dx9math.h)
 
-Erstellt eine angepasste, rechtshändige Perspektivprojektionsmatrix.
+Erstellt eine angepasste, rechtshändige Projektionsmatrix für die Perspektive.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,7 +60,7 @@ Zeiger auf die [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die das Ergebnis des Vo
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimaler x-Wert des Ansichtsvolumens.
+Minimaler x-Wert des Ansichtsvolumes.
 
 </dd> <dt>
 
@@ -69,7 +69,7 @@ Minimaler x-Wert des Ansichtsvolumens.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Maximaler x-Wert des Ansichtsvolumens.
+Maximaler x-Wert des Ansichtsvolumes.
 
 </dd> <dt>
 
@@ -78,7 +78,7 @@ Maximaler x-Wert des Ansichtsvolumens.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimaler y-Wert des Ansichtsvolumens.
+Minimaler y-Wert des Ansichtsvolumes.
 
 </dd> <dt>
 
@@ -87,7 +87,7 @@ Minimaler y-Wert des Ansichtsvolumens.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Maximaler y-Wert des Ansichtsvolumens.
+Maximaler y-Wert des Ansichtsvolumes.
 
 </dd> <dt>
 
@@ -100,7 +100,7 @@ Minimaler Z-Wert des Ansichtsvolumes.
 
 </dd> <dt>
 
-*NSD* \[ In\]
+*NSDR* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -113,9 +113,9 @@ Maximaler Z-Wert des Ansichtsvolumes.
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die eine angepasste, rechtshändige perspektivische Projektionsmatrix ist.
+Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die eine angepasste, rechtshändige Projektionsmatrix für die Perspektive ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Alle Parameter der **D3DXMatrixPerspectiveOffCenterRH-Funktion** sind Entfernungen im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumes.
 
@@ -137,7 +137,7 @@ Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu b
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
