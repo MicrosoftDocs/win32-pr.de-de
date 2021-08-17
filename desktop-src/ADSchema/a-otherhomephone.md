@@ -1,10 +1,10 @@
 ---
 title: Telefon-Home-Other-Attribut
-description: Eine Liste alternativer Telefonnummern zu Hause.
+description: Eine Liste alternativer Heimtelefonnummern.
 ms.assetid: 502e0a9d-301c-4c2e-98c3-8efe75c8b0cf
 ms.tgt_platform: multiple
 keywords:
-- Telefon-Home-Other-Attribut-AD-Schema
+- Telefon-Home-Other-Attribut AD-Schema
 - otherHomePhone-Attribut AD-Schema
 topic_type:
 - apiref
@@ -23,7 +23,7 @@ ms.locfileid: "118960149"
 ---
 # <a name="phone-home-other-attribute"></a>Telefon-Home-Other-Attribut
 
-Eine Liste alternativer Telefonnummern zu Hause.
+Eine Liste alternativer Heimtelefonnummern.
 
 
 
@@ -33,9 +33,9 @@ Eine Liste alternativer Telefonnummern zu Hause.
 | Ldap-Anzeigename | otherHomePhone                                                                   |
 | Size              | \-                                                                               |
 | Aktualisieren von Berechtigungen  | Domänenadministrator oder Kontobesitzer.                                           |
-| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und die Telefonnummer geändert werden muss. |
+| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und wann immer sich die Telefonnummer ändern muss. |
 | Attribute-Id      | 1.2.840.113556.1.2.277                                                           |
-| System-ID-GUID    | f0f8ffa2-1191-11d0-a060-00aa006c33ed                                             |
+| System-Id-Guid    | f0f8ffa2-1191-11d0-a060-00aa006c33ed                                             |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                      |
 
 
@@ -57,10 +57,10 @@ Eine Liste alternativer Telefonnummern zu Hause.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | 0x3A2F                                                             |
-| System-Only            | False                                                              |
-| Ist einwertig       | False                                                              |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
+| System-Only            | Falsch                                                              |
+| Is-Single-Valued       | Falsch                                                              |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
@@ -78,10 +78,10 @@ Eine Liste alternativer Telefonnummern zu Hause.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | 0x3A2F                                                             |
-| System-Only            | False                                                              |
-| Ist einwertig       | False                                                              |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
+| System-Only            | Falsch                                                              |
+| Is-Single-Valued       | Falsch                                                              |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
@@ -99,10 +99,10 @@ Eine Liste alternativer Telefonnummern zu Hause.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | 0x3A2F                                                             |
-| System-Only            | False                                                              |
-| Ist einwertig       | False                                                              |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
+| System-Only            | Falsch                                                              |
+| Is-Single-Valued       | Falsch                                                              |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
@@ -120,10 +120,10 @@ Eine Liste alternativer Telefonnummern zu Hause.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | 0x3A2F                                                             |
-| System-Only            | False                                                              |
-| Ist einwertig       | False                                                              |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
+| System-Only            | Falsch                                                              |
+| Ist einwertig       | Falsch                                                              |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
@@ -141,10 +141,10 @@ Eine Liste alternativer Telefonnummern zu Hause.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | 0x3A2F                                                             |
-| System-Only            | False                                                              |
-| Ist einwertig       | False                                                              |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
+| System-Only            | Falsch                                                              |
+| Ist einwertig       | Falsch                                                              |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
@@ -162,10 +162,10 @@ Eine Liste alternativer Telefonnummern zu Hause.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | 0x3A2F                                                             |
-| System-Only            | False                                                              |
-| Ist einwertig       | False                                                              |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
+| System-Only            | Falsch                                                              |
+| Ist einwertig       | Falsch                                                              |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |

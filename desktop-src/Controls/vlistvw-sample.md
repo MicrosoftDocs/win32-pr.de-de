@@ -21,9 +21,9 @@ In diesem Thema wird das VListVW-Beispielcodebeispiel beschrieben. Sie enthält 
 -   [Erstellen des Beispiels](#building-the-sample)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Im VListVW-Beispiel wird veranschaulicht, wie sie ein einfaches virtuelles Listenansicht-Steuerelement in einer Anwendung implementieren. Ein virtuelles Listenansicht-Steuerelement ist ein Standard-Listenansicht-Steuerelement mit **dem LVS \_ OWNERDATA-Stil.** In diesem Beispiel wird ein Listenansicht-Steuerelement erstellt, das "virtuell" 100.000 Elemente enthält. Die Elemente werden nie tatsächlich hinzugefügt. Stattdessen wird dem virtuellen Listenansicht-Steuerelement mitgeteilt, wie viele Elemente es mit der [**LVM \_ SETITEMCOUNT-Meldung enthält.**](lvm-setitemcount.md) Wenn ein Element gezeichnet werden muss, fragt das Listenansichtssteuerelement das übergeordnete Fenster mit der [LVN \_ GETDISPINFO-Benachrichtigung](lvn-getdispinfo.md) nach Anzeigeinformationen ab.
+Das VListVW-Beispiel zeigt, wie Sie ein einfaches virtuelles Listenansichtssteuerelement in einer Anwendung implementieren. Ein virtuelles Listenansichtssteuerelement ist ein standardbasiertes Listenansichtssteuerelement im **LVS \_ OWNERDATA-Stil.** In diesem Beispiel wird ein Listenansichtssteuerelement erstellt, das "virtuell" 100.000 Elemente enthält. Die Elemente werden nie tatsächlich hinzugefügt. Stattdessen wird dem virtuellen Listenansichtssteuerelement mitgeteilt, wie viele Elemente es mit der [**LVM \_ SETITEMCOUNT-Nachricht**](lvm-setitemcount.md) enthält. Wenn ein Element gezeichnet werden muss, fragt das Listenansichtssteuerelement das übergeordnete Fenster mit der [LVN \_ GETDISPINFO-Benachrichtigung](lvn-getdispinfo.md) nach Anzeigeinformationen ab.
 
 ## <a name="minimum-requirements"></a>Mindestanforderungen
 
@@ -40,28 +40,28 @@ Im VListVW-Beispiel wird veranschaulicht, wie sie ein einfaches virtuelles Liste
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Das VListVW-Beispiel ist auf GitHub im repository Windows [Klassische Beispiele verfügbar.](https://github.com/microsoft/Windows-classic-samples) Beispiele für Listenansichtssteuerelemente finden Sie [hier.](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/controls/common/vlistvw)
+Das VListVW-Beispiel ist auf GitHub im [Repository Windows klassischen Beispiele](https://github.com/microsoft/Windows-classic-samples)verfügbar. Beispiele für Listenansichtssteuerelemente finden Sie [hier.](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/controls/common/vlistvw)
 
  
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-So erstellen Sie das Beispiel mithilfe der Eingabeaufforderung:
+So erstellen Sie das Beispiel über die Eingabeaufforderung:
 
 1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum Projektverzeichnis.
 2.  Geben Sie `msbuild [project file]` ein.
 
-So erstellen Sie das Beispiel mithilfe Visual Studio:
+So erstellen Sie das Beispiel mit Visual Studio:
 
-1.  Öffnen Windows Explorer, und navigieren Sie zum Projektverzeichnis.
-2.  Doppelklicken Sie auf das Symbol für die VCPROJ-Datei, um das Projekt in Visual Studio.
-3.  Wählen Sie **im Menü Erstellen** die Option **Projektmappe erstellen aus,** um die Projektmappe zu erstellen.
+1.  Öffnen Sie Windows Explorer, und navigieren Sie zum Projektverzeichnis.
+2.  Doppelklicken Sie auf das Symbol für die VCPROJ-Datei, um das Projekt in Visual Studio zu öffnen.
+3.  Wählen **Sie** im Menü Erstellen die Option **Projektmappe erstellen** aus, um die Projektmappe zu erstellen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Informationen List-View Steuerelementen](list-view-controls-overview.md)
+[Informationen zu List-View-Steuerelementen](list-view-controls-overview.md)
 </dt> </dl>
 
  

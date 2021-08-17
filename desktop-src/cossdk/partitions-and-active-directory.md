@@ -13,7 +13,7 @@ ms.locfileid: "119462140"
 ---
 # <a name="partitions-and-active-directory"></a>Partitionen und Active Directory
 
-Zusätzlich zu Partitionen, die eine oder mehrere Anwendungen enthalten, enthält COM+ auch Partitionssätze, die eine oder mehrere Partitionen enthalten. Partitionssätze, die in Active Directory erstellt wurden, ermöglichen Benutzern in einer Domäne den Zugriff auf COM+-Anwendungen in der gesamten Domäne. Während der Erstellung wird jeder bestimmte Benutzer oder jede Organisationseinheit (OE) einem Partitionssatz zugewiesen oder zugeordnet.
+Zusätzlich zu Partitionen, die eine oder mehrere Anwendungen enthalten, enthält COM+ auch Partitionssätze, die eine oder mehrere Partitionen enthalten. Partitionssätze, die in Active Directory erstellt wurden, ermöglichen Benutzern in einer Domäne den Zugriff auf COM+-Anwendungen in der gesamten Domäne. Während der Erstellung wird jeder bestimmte Benutzer oder jede Organisationseinheit (OE) einer Partitionsgruppe zugewiesen oder zugeordnet.
 
 Ein einzelner Benutzer oder eine Organisationseinheit kann auf mehrere Partitionen und deren Anwendungen zugreifen, da eine 1:1-Korrelation zwischen einer Benutzeridentität oder Organisationseinheit und einem Partitionssatz besteht. Ohne einen Partitionssatz benötigt ein Benutzer oder eine Organisationseinheit mehrere Benutzeridentitäten, um auf Anwendungen in verschiedenen Partitionen zugreifen zu können.
 
@@ -43,7 +43,7 @@ Benutzer und Organisationsgruppen können partitionssätzen zugeordnet werden. D
 -   Unterstützt COM+ bei der Bestimmung der Partition, in der sich eine Anwendung befindet.
 -   Legt das Recht eines Benutzers fest, auf eine bestimmte Anwendung zu zugreifen.
 
-Zum Zuordnen von Partitionen zu Partitionssätzen in Active Directory und zum Zuordnen von Benutzern und Organisationsgruppen zu diesen Partitionssätzen verwenden Administratoren die verwaltungstools Active Directory-Benutzer und -Computer und Komponentendienste. Wenn eine Partition in Active Directory erstellt wird, muss ein Administrator diese Partition lokal auf dem Computer konfigurieren, auf dem die entsprechende COM+-Anwendung installiert werden soll. Diese lokale Konfiguration von Partitionen, die in Active Directory erstellt werden, erfolgt über das Verwaltungstool Komponentendienste.
+Zum Zuordnen von Partitionen zu Partitionssätzen in Active Directory und zum Zuordnen von Benutzern und Organisationsgruppen zu diesen Partitionssätzen verwenden Administratoren die verwaltungstools Active Directory-Benutzer und -Computer und Komponentendienste. Wenn eine Partition in Active Directory erstellt wird, muss ein Administrator diese Partition lokal auf dem Computer konfigurieren, auf dem die entsprechende COM+-Anwendung installiert werden soll. Diese lokale Konfiguration von Partitionen, die in Active Directory erstellt werden, erfolgt über das Verwaltungstool komponentendienste.
 
 Wenn eine Domänenbenutzeridentität nicht einem Partitionssatz zugeordnet ist, erhält der Benutzer Zugriff von der Organisationseinheit des Benutzers, die der Partition zugeordnet ist. Wenn die Organisationseinheit des Benutzers nicht einem Partitionssatz zugeordnet ist, aber die nächste höchste Organisationseinheit in der Hierarchie diesem Partitionssatz zugeordnet ist, kann der Benutzer auf die Partition zugreifen.
 

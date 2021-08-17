@@ -1,9 +1,9 @@
 ---
-title: MCM_GETFIRSTDAYOFWEEK Nachricht (Commctrl.h)
-description: Ruft den ersten Tag der Woche für ein Monatskalender-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ GetFirstDayOfWeek-Makros senden.
+title: MCM_GETFIRSTDAYOFWEEK Meldung (Commctrl.h)
+description: Ruft den ersten Tag der Woche für ein Monatskalender-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des \_ MonthCal GetFirstDayOfWeek-Makros senden.
 ms.assetid: bbbc1c45-5693-4a79-908a-ec6e8ef8b218
 keywords:
-- MCM_GETFIRSTDAYOFWEEK Windows-Steuerelemente für Nachrichten
+- MCM_GETFIRSTDAYOFWEEK Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:

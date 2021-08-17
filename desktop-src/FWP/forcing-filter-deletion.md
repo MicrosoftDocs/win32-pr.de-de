@@ -1,24 +1,24 @@
 ---
-title: Erzwingen der Löschung von Filtern
-description: Der folgende Beispielcode veranschaulicht, wie ein Benutzer mit dem Take Ownership-Privileg einen Filter löschen kann.
+title: Erzwingen des Löschens von Filtern
+description: Im folgenden Beispielcode wird veranschaulicht, wie Sie einen Benutzer mit der Berechtigung TakeOwnership in die Lage machen, einen Filter zu löschen.
 ms.assetid: f0a3de8e-6d3f-45d3-af42-b8ae62278667
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d05c1b75b41c6f71abe508e53e478f4978f50bd
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 37410958c0f602b929ff319b98faa4f88074a94f760508bac473bbf348f0ff3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069310"
 ---
-# <a name="forcing-filter-deletion"></a>Erzwingen der Löschung von Filtern
+# <a name="forcing-filter-deletion"></a>Erzwingen des Löschens von Filtern
 
-Der folgende Beispielcode veranschaulicht, wie ein Benutzer mit dem Take Ownership-Privileg einen Filter löschen kann.
+Der folgende Beispielcode veranschaulicht, wie Sie einen Benutzer mit der Berechtigung TakeOwnership in die Lage machen, einen Filter zu löschen.
 
 > [!Note]  
-> Diese Funktion kann von einer Setup Anwendung bei einer Deinstallation verwendet werden, um sicherzustellen, dass alle Objekte erfolgreich gelöscht werden.
+> Eine Setupanwendung kann dieses Feature während einer Deinstallation verwenden, um sicherzustellen, dass alle Objekte erfolgreich gelöscht werden.
 
- 
+ 
 
 
 ```C++
@@ -249,9 +249,9 @@ CLEANUP:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

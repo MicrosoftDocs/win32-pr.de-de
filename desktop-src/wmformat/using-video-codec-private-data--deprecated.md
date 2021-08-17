@@ -1,9 +1,9 @@
 ---
 title: Verwenden privater Videocodec-Daten (Windows Media Format 11 SDK)
-description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | Verwenden privater Videocodec-Daten (Windows Media Format 11 SDK)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | Verwenden privater Videocodec-Daten (Windows Media Format 11 SDK)
 ms.assetid: 75dda656-8f5e-4677-9a9b-a80b34aea507
 keywords:
-- Verwenden des Medienformats für private Videocodec-Datenfenster
+- Verwenden von privaten Videocodec-Datenfenstern – Medienformat
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118963899"
 ---
 # <a name="using-video-codec-private-data-windows-media-format-11-sdk"></a>Verwenden privater Videocodec-Daten (Windows Media Format 11 SDK)
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und Digitalsignalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
  
 

@@ -34,7 +34,7 @@ Für die zukünftige Verwendung reserviert.
 | Aktualisieren von Berechtigungen  | \-                                                    |
 | Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.1956                               |
-| System-Id-Guid    | d3c527c7-2606-4deb-8cfd-18426feec8ce                  |
+| System-ID-GUID    | d3c527c7-2606-4deb-8cfd-18426feec8ce                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -53,10 +53,10 @@ Für die zukünftige Verwendung reserviert.
 |------------------------|-----------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                |
 | MAPI-Id                | \-                                                                                |
-| System-Only            | False                                                                             |
-| Is-Single-Valued       | True                                                                              |
-| Ist indiziert             | False                                                                             |
-| Im globalen Katalog      | False                                                                             |
+| System-Only            | Falsch                                                                             |
+| Ist einwertig       | Richtig                                                                              |
+| Ist indiziert             | Falsch                                                                             |
+| Im globalen Katalog      | Falsch                                                                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                      |
 | Range-Lower            | \-                                                                                |
 | Range-Upper            | \-                                                                                |
@@ -74,10 +74,10 @@ Für die zukünftige Verwendung reserviert.
 |------------------------|-----------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                |
 | MAPI-Id                | \-                                                                                |
-| System-Only            | False                                                                             |
-| Is-Single-Valued       | True                                                                              |
-| Ist indiziert             | False                                                                             |
-| Im globalen Katalog      | False                                                                             |
+| System-Only            | Falsch                                                                             |
+| Ist einwertig       | Richtig                                                                              |
+| Ist indiziert             | Falsch                                                                             |
+| Im globalen Katalog      | Falsch                                                                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                      |
 | Range-Lower            | \-                                                                                |
 | Range-Upper            | \-                                                                                |
@@ -95,10 +95,10 @@ Für die zukünftige Verwendung reserviert.
 |------------------------|-----------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                |
 | MAPI-Id                | \-                                                                                |
-| System-Only            | False                                                                             |
-| Is-Single-Valued       | True                                                                              |
-| Ist indiziert             | False                                                                             |
-| Im globalen Katalog      | False                                                                             |
+| System-Only            | Falsch                                                                             |
+| Ist einwertig       | Richtig                                                                              |
+| Ist indiziert             | Falsch                                                                             |
+| Im globalen Katalog      | Falsch                                                                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                      |
 | Range-Lower            | \-                                                                                |
 | Range-Upper            | \-                                                                                |

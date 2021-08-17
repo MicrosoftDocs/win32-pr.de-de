@@ -13,17 +13,17 @@ ms.locfileid: "119315600"
 ---
 # <a name="volume-management-reference"></a>Referenz zur Volumeverwaltung
 
-Die folgenden Elemente werden bei der Volumeverwaltung verwendet.
+Die folgenden Elemente werden in der Volumeverwaltung verwendet.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                             | BESCHREIBUNG                                                 |
+| Thema                                                                             | Beschreibung                                                 |
 |-----------------------------------------------------------------------------------|-------------------------------------------------------------|
 | [Volumeverwaltungs-Steuerungscodes](volume-management-control-codes.md)<br/> | Steuerungscodes, die in der Volumeverwaltung verwendet werden.<br/>         |
-| [Volume Management-Enumerationen](volume-management-enumerations.md)<br/>   | Enumerationstypen werden in der Volumeverwaltung verwendet:<br/> |
-| [VolumeVerwaltungsfunktionen](volume-management-functions.md)<br/>         | Funktionen, die in der Volumeverwaltung verwendet werden.<br/>             |
+| [VolumeVerwaltungsenumeration](volume-management-enumerations.md)<br/>   | Enumerationstypen werden in der Volumeverwaltung verwendet:<br/> |
+| [Volumeverwaltungsfunktionen](volume-management-functions.md)<br/>         | Funktionen, die in der Volumeverwaltung verwendet werden.<br/>             |
 | [Volumeverwaltungsstrukturen](volume-management-structures.md)<br/>       | Strukturen, die in der Volumeverwaltung verwendet werden.<br/>            |
 
 

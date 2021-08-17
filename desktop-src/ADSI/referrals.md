@@ -16,7 +16,7 @@ ms.locfileid: "119444020"
 ---
 # <a name="referrals-adsi"></a>Empfehlungen (ADSI)
 
-Empfehlungen treten auf, wenn der Server, den Sie abfragen, diese Daten nicht enthält, sie aber finden kann. Der Zielserver gibt das Ergebnisset zurück, das sowohl die tatsächlichen Daten als auch eine Empfehlung an einen anderen Server enthalten kann, um die zusätzlichen Daten abzurufen. Durch Aktivieren der *Empfehlungsausführung* verwendet der zugrunde liegende ADSI-Clientcode diese Verweisdaten, um zu versuchen, das Zielobjekt von dem in den Verweisdaten beschriebenen Server abzurufen. Beachten Sie, dass die Deaktivierung der Verweisausweitung zu einem kleineren Ergebnisergebnis führen kann, während die Aktivierung der Verweisausweitung dazu führen kann, dass eine Abfrage viele Server umfasst. Die empfohlene Lösung ist nach Möglichkeit die Verwendung des globalen Katalogs.
+Empfehlungen treten auf, wenn der Server, den Sie abfragen, diese Daten nicht enthält, sie aber finden kann. Der Zielserver gibt das Ergebnisset zurück, das sowohl die tatsächlichen Daten als auch eine Empfehlung an einen anderen Server enthalten kann, um die zusätzlichen Daten abzurufen. Durch Aktivieren der *Empfehlungsausführung* verwendet der zugrunde liegende ADSI-Clientcode diese Verweisdaten, um zu versuchen, das Zielobjekt von dem in den Verweisdaten beschriebenen Server abzurufen. Beachten Sie, dass die deaktivierungsverursachende Empfehlung zu einem kleineren Resultset führen kann, während die Aktivierung der Verweisausweitung dazu führen kann, dass eine Abfrage viele Server umfasst. Die empfohlene Lösung ist nach Möglichkeit die Verwendung des globalen Katalogs.
 
 Weitere Informationen zu Empfehlungen und Zur Referenzierung in Active Directory finden Sie unter [Empfehlungen](/windows/desktop/AD/referrals).
 
@@ -28,7 +28,7 @@ Active Directory bietet Suchempfehlungsdienste. Ein Client kann eine der folgend
 -   Extern: Der Server sollte Empfehlungen generieren, wenn die Anforderung auf einem anderen Server einer anderen Verzeichnisstruktur aufgelöst werden kann. Beispielsweise fragt ein Client "OU=Sales,DC=Fabrikam,DC=COM" auf dem Server "fab01" in der Domäne "Fabrikam.com" ab. Das Objekt gehört jedoch nicht zu "fab01", aber es ist bekannt, dass es sich auf dem Server "arc01" in der Domäne "Fabrikam.com" befindet. Daher bezieht "fab01" den Client auf "arc01".
 -   Untergeordneter Server: Der Server sollte Empfehlungen generieren, wenn die Anforderung auf einem Server aufgelöst werden kann, dessen Name einen zusammenhängenden Pfad vom Ursprungsserver bildet. Der Suchbereich muss auf der Unterstrukturebene sein.
 
-    Beispielsweise enthält Server A Objekte in "DC=Sales,DC=Fabrikam,DC=Com". Server B enthält Objekte in "DC=Seattle,DC=Sales,DC=Fabrikam,DC=Com". Beachten Sie, dass der Name von Server B einen zusammenhängenden Pfad von Server A bildet. Wenn ein Client server A kontaktiert, eine Unterstruktursuche nach "DC=Sales,DC=Fabrikam,DC=Com" angibt und die Empfehlung als untergeordneten Typ angibt, tritt das folgende Ereignis auf:
+    Server A enthält beispielsweise Objekte in "DC=Sales,DC=Fabrikam,DC=Com". Server B enthält Objekte in "DC=Seattle,DC=Sales,DC=Fabrikam,DC=Com". Beachten Sie, dass der Name von Server B einen zusammenhängenden Pfad von Server A bildet. Wenn ein Client server A kontaktiert, eine Unterstruktursuche nach "DC=Sales,DC=Fabrikam,DC=Com" angibt und die Empfehlung als untergeordneten Typ angibt, tritt das folgende Ereignis auf:
 
     -   Server A gibt alle Objekte zurück, die ihm innerhalb seines Bereichs bekannt sind.
     -   Server A informiert den Client darüber, dass Objekte in "DC=Seattle,DC=Sales,DC=Fabrikam,DC=COM" auf Server B zu finden sind.
@@ -41,7 +41,7 @@ Active Directory bietet Suchempfehlungsdienste. Ein Client kann eine der folgend
 -   Immer: Der Server generiert Empfehlungen, wenn die Suche basierend auf dem externen Typ oder dem untergeordneten Typ aufgelöst werden kann.
 
 > [!Note]  
-> In Active Directory enthält der globale Katalog alle Objekte in einem bestimmten Unternehmen. Das Durchsuchen eines globalen Katalogservers führt zu einer besseren Leistung als das Übertragen von Empfehlungen von einem Server zu einem anderen.
+> In Active Directory enthält der globale Katalog alle Objekte in einem bestimmten Unternehmen. Das Durchsuchen eines globalen Katalogservers führt zu einer besseren Leistung als das Übertragen von Empfehlungen von einem Server auf einen anderen.
 
  
 

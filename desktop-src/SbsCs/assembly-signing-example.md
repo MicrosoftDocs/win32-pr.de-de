@@ -1,27 +1,27 @@
 ---
-description: Im folgenden Beispiel wird erläutert, wie eine signierte parallele Assembly generiert wird, die aus dem Assemblymanifest, dem Überprüfungs Katalog und den Assemblydateien besteht.
+description: Im folgenden Beispiel wird erläutert, wie eine signierte side-by-side-Assembly generiert wird, die aus dem Assemblymanifest, dem Überprüfungskatalog und den Assemblydateien besteht.
 ms.assetid: fa95f292-36e6-4e88-8a0d-aa8bd08def2b
 title: Beispiel für die Assemblysignierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e4c47482074f7decdc44af6b94bc7df31df6969
-ms.sourcegitcommit: 6515eef99ca0d1bbe3e27d4575e9986f5255f277
+ms.openlocfilehash: 3896da43b846edfd09348c6515fbf5e44fdd45dd2911b9fcdcf25e99f63fb6ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "106355777"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119142463"
 ---
 # <a name="assembly-signing-example"></a>Beispiel für die Assemblysignierung
 
-Im folgenden Beispiel wird erläutert, wie eine signierte parallele Assembly generiert wird, die aus dem Assemblymanifest, dem Überprüfungs Katalog und den Assemblydateien besteht. Freigegebene parallele Assemblys sollten signiert werden. Das Betriebssystem überprüft die Assemblysignatur vor der Installation einer freigegebenen Assembly im globalen parallelen Speicher (WinSxS). Dadurch wird es schwierig, den Herausgeber der Seite-an-Seite-Assembly zu spoomachen.
+Im folgenden Beispiel wird erläutert, wie eine signierte side-by-side-Assembly generiert wird, die aus dem Assemblymanifest, dem Überprüfungskatalog und den Assemblydateien besteht. Freigegebene nebeneinander verwendete Assemblys sollten signiert werden. Das Betriebssystem überprüft die Assemblysignatur, bevor eine freigegebene Assembly im globalen side-by-side-Speicher (WinSxS) installiert wird. Dies erschwert das Spoofing des Herausgebers der nebeneinanderseitigen Assembly.
 
-Beachten Sie, dass das Ändern der Assemblydateien oder der Inhalt des Manifests nach der Erstellung des assemblykatalogs den Katalog und die Assembly für ungültig erklärt. Wenn Sie die Assemblydateien oder das Manifest nach dem Erstellen und Signieren des Katalogs aktualisieren müssen, müssen Sie die Assembly erneut signieren und einen neuen Katalog generieren.
+Beachten Sie, dass das Ändern der Assemblydateien oder des Manifestinhalts nach dem Generieren des Assemblykatalogs den Katalog und die Assembly ungültig macht. Wenn Sie die Assemblydateien oder das Manifest nach dem Erstellen und Signieren des Katalogs aktualisieren müssen, müssen Sie die Assembly erneut signieren und einen neuen Katalog generieren.
 
-Beginnen Sie mit den Assemblydateien, dem Assemblymanifest und der Zertifikatsdatei, die Sie zum Signieren der Assembly verwenden. Die Zertifikatsdatei muss 2048 Bit oder größer sein. Sie müssen kein vertrauenswürdiges Zertifikat verwenden. Das Zertifikat wird nur verwendet, um zu überprüfen, ob die Assembly nicht beschädigt wurde.
+Beginnen Sie mit den Assemblydateien, dem Assemblymanifest und der Zertifikatdatei, die Sie zum Signieren der Assembly verwenden. Die Zertifikatdatei muss 2048 Bit oder größer sein. Sie müssen kein vertrauenswürdiges Zertifikat verwenden. Das Zertifikat wird nur verwendet, um zu überprüfen, ob die Assembly nicht beschädigt wurde.
 
-Führen Sie das im Microsoft Windows Software Development Kit (SDK) bereitgestellte [Pktextract.exe](pktextract-exe.md) Hilfsprogramm aus, um das öffentliche Schlüssel Token aus der Zertifikatsdatei zu extrahieren. Damit pktextract ordnungsgemäß funktioniert, muss die Zertifikat Datei im selben Verzeichnis wie das-Hilfsprogramm vorhanden sein. Verwenden Sie den extrahierten Wert des öffentlichen Schlüssel Tokens, um das **PublicKeyToken** -Attribut des **assemblyIdentity** -Elements in der Manifest-Datei zu aktualisieren.
+Führen Sie das [hilfsprogrammPktextract.exe](pktextract-exe.md) aus, das im Microsoft Windows Software Development Kit (SDK) bereitgestellt wird, um das öffentliche Schlüsseltoken aus der Zertifikatdatei zu extrahieren. Damit Pktextract ordnungsgemäß funktioniert, muss die Zertifikatdatei im selben Verzeichnis wie das Hilfsprogramm vorhanden sein. Verwenden Sie den extrahierten Tokenwert des öffentlichen Schlüssels, um das **publicKeyToken-Attribut** des **assemblyIdentity-Elements** in der Manifestdatei zu aktualisieren.
 
-Im folgenden finden Sie ein Beispiel für eine Manifest-Datei mit dem Namen mysampleassembly. manifest. Die Assembly mysampleassembly enthält nur eine Datei, MYFILE.DLL. Beachten Sie, dass der Wert für das **PublicKeyToken** -Attribut des **assemblyIdentity** -Elements mit dem Wert des öffentlichen Schlüssel Tokens aktualisiert wurde.
+Hier sehen Sie ein Beispiel für eine Manifestdatei mit dem Namen MySampleAssembly.manifest. Die MySampleAssembly-Assembly enthält nur eine Datei, MYFILE.DLL. Beachten Sie, dass der Wert für das **publicKeyToken-Attribut** des **assemblyIdentity-Elements** mit dem Wert des öffentlichen Schlüsseltokens aktualisiert wurde.
 
 ``` syntax
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -36,11 +36,11 @@ Im folgenden finden Sie ein Beispiel für eine Manifest-Datei mit dem Namen mysa
 </assembly>
 ```
 
-Führen Sie als nächstes das in der Windows SDK bereitgestellte [Mt.exe](mt-exe.md) Hilfsprogramm aus. Die Assemblydateien müssen sich im gleichen Verzeichnis befinden wie das Manifest. In diesem Beispiel ist dies das Verzeichnis mysampleassembly. Nennen Sie Mt.exe für das Beispiel wie folgt:
+Führen Sie als Nächstes das [hilfsprogrammMt.exe](mt-exe.md) aus, das im Windows SDK bereitgestellt wird. Die Assemblydateien müssen sich im gleichen Verzeichnis wie das Manifest befinden. In diesem Beispiel ist dies das Verzeichnis MySampleAssembly. Rufen Sie Mt.exe für das Beispiel wie folgt auf:
 
-**c: \\ mysampleassembly>mt.exe-Manifest mysampleassembly. Manifest-hashupdate-makecdfs**
+**c: \\ MySampleAssembly>mt.exe -manifest MySampleAssembly.manifest -hashupdate -makecdfs**
 
-Im folgenden wird gezeigt, wie das Beispiel Manifest nach dem Ausführen Mt.exe aussieht. Beachten Sie, dass durch das Ausführen von Mt.exe mit der Option hashupdate der SHA-1-Hash der Datei hinzugefügt wird. Ändern Sie diesen Wert nicht.
+Das Beispielmanifest sieht wie folgt aus, nachdem Mt.exe ausgeführt wurde. Beachten Sie, dass die Ausführung von Mt.exe mit der Hashupdateoption den SHA-1-Hash der Datei hinzufügt. Ändern Sie diesen Wert nicht.
 
 ``` syntax
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -56,19 +56,19 @@ hash="a1d362d6278557bbe965a684ac7adb4e57427a29" hashalg="SHA1"/>
 </assembly>
 ```
 
-Wenn Sie Mt.exe mit der Option-makecdfs ausführen, wird eine Datei mit dem Namen mysampleassembly. manifest. CDF generiert, in der die Inhalte des Sicherheits Katalogs beschrieben werden, der zum Validieren des Manifests verwendet wird.
+Wenn Sie Mt.exe mit der Option -makecdfs ausführen, wird eine Datei mit dem Namen MySampleAssembly.manifest.cdf generiert, die den Inhalt des Sicherheitskatalogs beschreibt, der zum Überprüfen des Manifests verwendet wird.
 
-Der nächste Schritt besteht darin, Makecat.exe über dieser. CDF auszuführen, um den Sicherheits Katalog für die Assembly zu erstellen. Der Makecat.exe für dieses Beispiel würde wie folgt aussehen:
+Der nächste Schritt besteht darin, Makecat.exe über diese CDF-Datei auszuführen, um den Sicherheitskatalog für die Assembly zu erstellen. Der Aufruf von Makecat.exe für dieses Beispiel würde wie folgt aussehen:
 
-**c: \\ mysampleassembly>MakeCat mysampleassembly. manifest. CDF**
+**c: \\ MySampleAssembly>Makecat MySampleAssembly.manifest.cdf**
 
-Der letzte Schritt besteht darin, SignTool.exe auszuführen, um die Katalog Datei mit dem Zertifikat zu signieren. Dabei sollte es sich um das Zertifikat handeln, das in der vorhergehenden verwendet wurde, um das Token des öffentlichen Schlüssels zu generieren. Weitere Informationen zu SignTool.exe finden Sie im Thema [**SignTool**](../seccrypto/signtool.md) . Der " **SignTool** "-Befehl für das Beispiel sieht wie folgt aus:
+Der letzte Schritt besteht darin, SignTool.exe auszuführen, um die Katalogdatei mit dem Zertifikat zu signieren. Dies sollte dasselbe Zertifikat sein, das im vorherigen zum Generieren des öffentlichen Schlüsseltokens verwendet wurde. Weitere Informationen zu SignTool.exe finden Sie im Thema [**SignTool.**](../seccrypto/signtool.md) Der Aufruf von **SignTool** für das Beispiel würde wie folgt aussehen:
 
-**c: \\ mysampleassembly>SignTool Sign/f \<fullpath> MyCompany. pfx/du https: \/ /www.mycompany.com/MySampleAssembly/t https: \/ /timestamp.Digicert.com MySampleAssembly.cat**
+**c: \\ MySampleAssembly>signtool sign /f \<fullpath> mycompany.pfx /du https: \/ /www.mycompany.com/MySampleAssembly /t https: \/ /timestamp.digicert.com MySampleAssembly.cat**
 
-Wenn Sie über ein authentifiziertes digitales Zertifikat verfügen und Ihre Zertifizierungsstelle das PVK-Dateiformat verwendet, um den privaten Schlüssel zu speichern, können Sie den PVK Digital Certificate files-Import Programm (pvkimprt.exe) verwenden, um den Schlüssel in ihren Kryptografiedienstanbieter (kryptografischen Service Provider, CSP) zu importieren. Mit diesem Hilfsprogramm können Sie in das Industriestandard Format von PFX/P12 exportieren. Weitere Informationen zum Import Programm für digitale PVK-Zertifikate finden Sie im Abschnitt Bereitstellungs Ressourcen der MSDN Library, oder wenden Sie sich an Ihre Zertifizierungsstelle. Möglicherweise können Sie pvkimprt.exe von abrufen https://office.microsoft.com/downloads/2000/pvkimprt.aspx .
+Wenn Sie über ein authentifiziertes digitales Zertifikat verfügen und Ihre Zertifizierungsstelle das PVK-Dateiformat zum Speichern des privaten Schlüssels verwendet, können Sie den PvK Digital Certificate Files Importer (pvkimprt.exe) verwenden, um den Schlüssel in Ihren Kryptografiedienstanbieter (Cryptographic Service Provider, CSP) zu importieren. Mit diesem Hilfsprogramm können Sie das Branchenstandardformat PFX/P12 exportieren. Weitere Informationen zum PVK Digital Certificate Files Importer finden Sie im Abschnitt Bereitstellungsressourcen der MSDN-Bibliothek, oder wenden Sie sich an Ihre Zertifizierungsstelle. Möglicherweise können Sie pvkimprt.exe von https://office.microsoft.com/downloads/2000/pvkimprt.aspx abrufen.
 
-Weitere Informationen finden Sie [unter Erstellen signierter Dateien und Kataloge](creating-signed-files-and-catalogs.md).
+Siehe auch [Erstellen von signierten Dateien und Katalogen.](creating-signed-files-and-catalogs.md)
 
  
 

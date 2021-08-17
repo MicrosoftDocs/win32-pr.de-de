@@ -1,6 +1,6 @@
 ---
 title: ReadWriteArrayExample
-description: In diesem Beispiel wird ein Array von Elementen gelesen und schreibt.
+description: In diesem Beispiel wird ein Array von Elementen gelesen und geschrieben.
 ms.assetid: 3c4851b5-1c31-4de7-929e-03a8199b273a
 keywords:
 - ReadWriteArrayExample-Webdienste für Windows
@@ -17,7 +17,7 @@ ms.locfileid: "119344660"
 ---
 # <a name="readwritearrayexample"></a>ReadWriteArrayExample
 
-In diesem Beispiel wird ein Array von Elementen gelesen und schreibt.
+In diesem Beispiel wird ein Array von Elementen gelesen und geschrieben.
 
 ## <a name="readwritearraycpp"></a>ReadWriteArray.cpp
 

@@ -1,7 +1,7 @@
 ---
 description: Da Sie in vielen Fällen nur einen Teil der Komponentenfunktionen in der Microsoft Visual Basic-Umgebung debuggen können, müssen Sie Komponenten debuggen, die mit Visual Basic erstellt wurden, nachdem sie kompiliert wurden. Da die Visual Basic-Umgebung dies nicht aktiviert, müssen Sie stattdessen die Microsoft Visual C++-Umgebung verwenden.
 ms.assetid: a58c5884-3c2d-4699-8b19-277003912dfd
-title: Debuggen von kompilierten Visual Basic Komponenten
+title: Debuggen kompilierter Visual Basic-Komponenten
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 2eac784808602d3554e4610e70a8d8a22ef2ca1594062599ec6acd43db68b98a
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119128782"
 ---
-# <a name="debugging-compiled-visual-basic-components"></a>Debuggen von kompilierten Visual Basic Komponenten
+# <a name="debugging-compiled-visual-basic-components"></a>Debuggen kompilierter Visual Basic-Komponenten
 
 Da Sie in vielen Fällen nur einen Teil der Funktionalität Ihrer Komponente in der Microsoft Visual Basic-Umgebung debuggen können, müssen Sie Komponenten debuggen, die mit Visual Basic erstellt wurden, nachdem sie kompiliert wurden. Da die Visual Basic-Umgebung dies nicht aktiviert, müssen Sie stattdessen die Microsoft Visual C++-Umgebung verwenden.
 
@@ -21,7 +21,7 @@ Da Sie in vielen Fällen nur einen Teil der Funktionalität Ihrer Komponente in 
 
 2.  Klicken Sie im Menü **Datei** auf **Make YourProject.dll**.
 
-3.  Klicken Sie im Dialogfeld **Make Project (Project** erstellen) auf **Optionen**.
+3.  Klicken Sie im Dialogfeld **Make Project (Project erstellen)** auf **Optionen**.
 
 4.  Klicken Sie im Dialogfeld **Project Eigenschaften** auf der Registerkarte **Kompilieren** auf **In nativen Code kompilieren** und **keine Optimierung,** und aktivieren Sie das Kontrollkästchen **Symbolische Debuginformationen erstellen.**
 

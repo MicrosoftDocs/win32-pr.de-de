@@ -1,7 +1,7 @@
 ---
-description: Die Treiber \_ Info \_ 4-Struktur enthält Druckertreiber Informationen.
+description: Die \_ DRIVER INFO \_ 4-Struktur enthält Druckertreiberinformationen.
 ms.assetid: 63000de6-74e7-4427-98d7-7bbd2dd61080
-title: DRIVER_INFO_4 Struktur (winspool. h)
+title: DRIVER_INFO_4-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: b737947b19e93a6b8de0563128a0f1be412101ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d42f74ce58c126130bd28820283c0b4262d3e3ce6b05106ae9ff74bc280ae234
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119353930"
 ---
-# <a name="driver_info_4-structure"></a>Treiber \_ Info \_ 4-Struktur
+# <a name="driver_info_4-structure"></a>DRIVER \_ INFO \_ 4-Struktur
 
-Die **Treiber \_ Info \_ 4** -Struktur enthält Druckertreiber Informationen.
+Die **DRIVER \_ INFO \_ 4-Struktur** enthält Druckertreiberinformationen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ typedef struct _DRIVER_INFO_4 {
 
 <dl> <dt>
 
-**cversion**
+**cVersion**
 </dt> <dd>
 
 Die Betriebssystemversion, für die der Treiber geschrieben wurde. Der unterstützte Wert ist 3.
@@ -61,70 +61,70 @@ Die Betriebssystemversion, für die der Treiber geschrieben wurde. Der unterstü
 **pName**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen des Treibers angibt (z. b. "QMS 810").
+Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Treibers angibt (z. B. "QMS 810").
 
 </dd> <dt>
 
-**nach-oben**
+**pEnvironment**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die die Umgebung angibt, für die der Treiber geschrieben wurde (z. b. Windows x86, Windows ia64 und Windows x64).
+Zeiger auf eine auf NULL endende Zeichenfolge, die die Umgebung angibt, für die der Treiber geschrieben wurde (z. B. Windows x86, Windows IA64 und Windows x64).
 
 </dd> <dt>
 
-**pdriverpath**
+**pDriverPath**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die einen Dateinamen oder vollständigen Pfad und Dateinamen für die Datei angibt, die den Gerätetreiber enthält (z. b. C: \\ Drivers \\Pscript.dll).
+Zeiger auf eine auf NULL endende Zeichenfolge, die einen Dateinamen oder einen vollständigen Pfad und Dateinamen für die Datei angibt, die den Gerätetreiber enthält (z. B. C: \\ DRIVERS \\Pscript.dll).
 
 </dd> <dt>
 
-**pdatafile**
+**pDataFile**
 </dt> <dd>
 
-Ein Zeiger auf eine mit NULL endenden Zeichenfolge, die einen Dateinamen oder einen vollständigen Pfad und Dateinamen für die Datei angibt, die Treiber Daten enthält (z. b. C: \\ Drivers \\ Qms810. PPD).
+Zeiger auf eine auf NULL endende Zeichenfolge, die einen Dateinamen oder einen vollständigen Pfad und Dateinamen für die Datei angibt, die Treiberdaten enthält (z. B. C: \\ DRIVERS \\ Qms810.ppd).
 
 </dd> <dt>
 
-**pconfigfile**
+**pConfigFile**
 </dt> <dd>
 
-Ein Zeiger auf eine mit NULL endenden Zeichenfolge, die einen Dateinamen oder einen vollständigen Pfad und Dateinamen für die Konfigurations-Dynamic Link Library des Gerätetreibers angibt (z. b. C: \\ Drivers \\Pscrptui.dll).
+Zeiger auf eine auf NULL endende Zeichenfolge, die einen Dateinamen oder einen vollständigen Pfad und Dateinamen für die Dynamic Link-Bibliothek des Gerätetreibers angibt (z. B. C: \\ DRIVERS \\Pscrptui.dll).
 
 </dd> <dt>
 
-**phelpfile**
+**pHelpFile**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die einen Dateinamen oder einen vollständigen Pfad und Dateinamen für die Hilfedatei des Gerätetreibers angibt.
+Zeiger auf eine auf NULL endende Zeichenfolge, die einen Dateinamen oder einen vollständigen Pfad und Dateinamen für die Hilfedatei des Gerätetreibers angibt.
 
 </dd> <dt>
 
-**pdependentfiles**
+**pDependentFiles**
 </dt> <dd>
 
-Ein Zeiger auf einen MultiSZ-Puffer, der eine Sequenz von null-terminierten Zeichen folgen enthält. Jede mit NULL endenden Zeichenfolge im Puffer enthält den Namen einer Datei, von der der Treiber abhängt. Die Sequenz von Zeichen folgen wird durch eine leere Zeichenfolge der Länge 0 (null) beendet. Wenn **pdependentfiles** nicht **null** ist und keine Dateinamen enthält, wird auf einen Puffer mit zwei leeren Zeichen folgen angezeigt.
+Ein Zeiger auf einen MultiSZ-Puffer, der eine Sequenz von auf NULL endende Zeichenfolgen enthält. Jede auf NULL endende Zeichenfolge im Puffer enthält den Namen einer Datei, von der der Treiber abhängt. Die Zeichenfolgensequenz wird durch eine leere Zeichenfolge der Länge 0 (null) beendet. Wenn **pDependentFiles** nicht **NULL** ist und keine Dateinamen enthält, verweist es auf einen Puffer, der zwei leere Zeichenfolgen enthält.
 
 </dd> <dt>
 
-**pmonitorname**
+**pMonitorName**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die einen sprach Monitor angibt (z. b. PJL-Monitor). Dieser Member kann **null** sein und sollte nur für Drucker angegeben werden, die bidirektionale Kommunikation unterstützen.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die einen Sprachmonitor angibt (z. B. PJL-Monitor). Dieser Member kann **NULL** sein und sollte nur für Drucker angegeben werden, die bidirektionale Kommunikation ermöglichen.
 
 </dd> <dt>
 
-**pdefaultdatatype**
+**pDefaultDataType**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Standard Datentyp des Druckauftrags angibt (z. b. EMF).
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Standarddatentyp des Druckauftrags angibt (z. B. EMF).
 
 </dd> <dt>
 
-**pszzpreviousnames**
+**pszzPreviousNames**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die vorherige Druckertreiber Namen angibt, die mit diesem Treiber kompatibel sind. Beispiel: OldName1 \\ 0oldname2 \\ 0 \\ 0.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die vorherige Druckertreibernamen angibt, die mit diesem Treiber kompatibel sind. Beispiel: OldName1 \\ 0OldName2 \\ 0 \\ 0.
 
 </dd> </dl>
 
@@ -136,28 +136,28 @@ Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die vorherige Druckertreiber 
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Treiber \_ Info \_ 4W** (Unicode) und **\_ Treiber \_ Info \_ 4a** (ANSI)<br/>                             |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ DRIVER \_ INFO \_ 4W** (Unicode) und **\_ DRIVER INFO \_ \_ 4A** (ANSI)<br/>                             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
-[**Addprinterdriver**](addprinterdriver.md)
+[**AddPrinterDriver**](addprinterdriver.md)
 </dt> <dt>
 
-[**Enumprinterdrivers**](enumprinterdrivers.md)
+[**EnumPrinterDrivers**](enumprinterdrivers.md)
 </dt> <dt>
 
-[**Getprinterdriver**](getprinterdriver.md)
+[**GetPrinterDriver**](getprinterdriver.md)
 </dt> </dl>
 
  

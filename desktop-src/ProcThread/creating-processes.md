@@ -1,21 +1,21 @@
 ---
-description: Die Funktion "Funktion erstellen" erstellt einen neuen Prozess, der unabhängig vom Erstellungs Prozess ausgeführt wird. Der Einfachheit halber wird die Beziehung jedoch als über-/Unterordnungsbeziehung bezeichnet.
+description: Die CreateProcess-Funktion erstellt einen neuen Prozess, der unabhängig vom Erstellungsprozess ausgeführt wird. Der Einfachheit halber wird die Beziehung jedoch als über- und untergeordnete Beziehung bezeichnet.
 ms.assetid: 4c3f76a3-e9f5-4d73-b5ef-eabfa9d6e4d4
 title: Erstellen von Prozessen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75606a3006bf63359b3e52cf2172b8bc2d77ed56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: be8e5e4340f5c956e964b74ab134a7618a4c4bf0fa44eee1989a0457741d7bc6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959730"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119143103"
 ---
 # <a name="creating-processes"></a>Erstellen von Prozessen
 
-Die [**Funktion "**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) Funktion erstellen" erstellt einen neuen Prozess, der unabhängig vom Erstellungs Prozess ausgeführt wird. Der Einfachheit halber wird die Beziehung jedoch als über-/Unterordnungsbeziehung bezeichnet.
+Die [**CreateProcess-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) erstellt einen neuen Prozess, der unabhängig vom Erstellungsprozess ausgeführt wird. Der Einfachheit halber wird die Beziehung jedoch als über- und untergeordnete Beziehung bezeichnet.
 
-Der folgende Code veranschaulicht, wie ein Prozess erstellt wird.
+Der folgende Code veranschaulicht das Erstellen eines Prozesses.
 
 
 ```C++
@@ -66,9 +66,9 @@ void _tmain( int argc, TCHAR *argv[] )
 
 
 
-Wenn " [**forateprocess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) " erfolgreich ist, wird eine [**Prozess \_ Informations**](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information) Struktur mit Handles und bezeichlern für den neuen Prozess und seinen primären Thread zurückgegeben. Die Thread-und Prozess Handles werden mit vollständigen Zugriffsrechten erstellt, obwohl der Zugriff eingeschränkt werden kann, wenn Sie Sicherheits Deskriptoren angeben. Wenn diese Handles nicht mehr benötigt werden, schließen Sie Sie mithilfe der [**CloseHandle**](/windows/desktop/api/handleapi/nf-handleapi-closehandle) -Funktion.
+Wenn [**CreateProcess erfolgreich**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) ist, wird eine [**PROCESS \_ INFORMATION-Struktur**](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information) zurückgegeben, die Handles und Bezeichner für den neuen Prozess und seinen primären Thread enthält. Der Thread und die Prozesshandles werden mit Vollzugriffsrechten erstellt, obwohl der Zugriff eingeschränkt werden kann, wenn Sie Sicherheitsdeskriptoren angeben. Wenn Sie diese Handles nicht mehr benötigen, schließen Sie sie mithilfe der [**CloseHandle-Funktion.**](/windows/desktop/api/handleapi/nf-handleapi-closehandle)
 
-Sie können auch einen Prozess erstellen, indem Sie die Funktion " [**kreateprocessasuser**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) " oder " [**kreateprocesswithlogonw**](/windows/desktop/api/WinBase/nf-winbase-createprocesswithlogonw) " verwenden. Dies ermöglicht es Ihnen, den Sicherheitskontext des Benutzerkontos anzugeben, in dem der Prozess ausgeführt wird.
+Sie können einen Prozess auch mithilfe der [**Funktion CreateProcessAsUser**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) oder [**CreateProcessWithLogonW**](/windows/desktop/api/WinBase/nf-winbase-createprocesswithlogonw) erstellen. Dadurch können Sie den Sicherheitskontext des Benutzerkontos angeben, in dem der Prozess ausgeführt wird.
 
  
 

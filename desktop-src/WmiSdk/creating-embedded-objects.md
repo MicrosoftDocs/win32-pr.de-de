@@ -21,14 +21,14 @@ ms.locfileid: "119464170"
 
 Führen Sie beim Erstellen einer Instanz mit eingebetteten Objekten die folgenden Aufgaben aus:
 
--   Sie müssen ein eingebettetes Objekt als stark typisch oder schwach typisch deklarieren.
+-   Sie müssen ein eingebettetes Objekt als stark typisiert oder schwach typisiert deklarieren.
 
-    Ein stark typiertes Objekt verweist auf ein Objekt einer bestimmten Klasse und verwendet den Klassennamen. Ein schwach typisiertes Objekt verweist auf ein Objekt einer nicht angegebenen Klasse und verwendet das **Object-Schlüsselwort.** Beide Objekte sind dem **VT \_ UNKNOWN-Typ** zuordnen.
+    Ein stark typisiertes Objekt verweist auf ein Objekt einer bestimmten Klasse und verwendet den Klassennamen. Ein schwach typisiertes Objekt zeigt auf ein Objekt einer  nicht angegebenen Klasse und verwendet das Object-Schlüsselwort. Beide Objekte werden dem **VT \_ UNKNOWN-Typ** zugeordnet.
 
--   Sie können **NULL für** den Standardwert eingebetteter Objekte und Pfade in Initialisierungen und Deklarationen verwenden.
--   Platzieren Sie beim Einbetten eines Objektpfads keinen Leerraum zwischen den Elementen des eingebetteten Pfads. Beispielsweise enthält der Objektpfad "Class1Index=3;" kein Leerzeichen zwischen dem Eigenschaftennamen "Class1index" und dem zugewiesenen Wert, der "3" ist.
+-   Sie können **NULL** für den Standardwert eingebetteter Objekte und Pfade in Initialisierungen und Deklarationen verwenden.
+-   Platzieren Sie beim Einbetten eines Objektpfads keinen Leerraum zwischen den Elementen des eingebetteten Pfads. Beispielsweise enthält der Objektpfad "Class1Index=3;" keinen Leerzeichen zwischen dem Eigenschaftennamen "Class1index" und dem zugewiesenen Wert , der "3" ist.
 
-Die folgende Klassendeklaration zeigt, wie Sie stark typierte und schwach typierte eingebettete Objekte deklarieren.
+Die folgende Klassendeklaration zeigt, wie Sie stark typisierte und schwach typisierte eingebettete Objekte deklarieren.
 
 ``` syntax
 Class MyClass
@@ -38,7 +38,7 @@ Class MyClass
 };
 ```
 
-In den folgenden Beispielen wird beschrieben, wie eingebettete Objekte in einer Klassendeklaration deklariert werden.
+In den folgenden Beispielen wird beschrieben, wie eingebettete Objekte innerhalb einer Klassendeklaration deklariert werden.
 
 ``` syntax
 Class Class1 
@@ -59,7 +59,7 @@ Class Class3
 };
 ```
 
-Im folgenden Beispiel wird die Initialisierung einer Eigenschaft beschrieben, bei der es sich um ein stark typiertes Objekt handelt, und einer anderen Eigenschaft, bei der es sich um ein Array von schwach typierten Objekten handelt.
+Im folgenden Beispiel wird die Initialisierung einer Eigenschaft beschrieben, die ein stark typisiertes Objekt ist, und einer anderen Eigenschaft, die ein Array schwach typisierter Objekte ist.
 
 ``` syntax
 Class EmbedClass1

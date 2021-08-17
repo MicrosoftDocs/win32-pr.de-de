@@ -26,13 +26,13 @@ Führen Sie zum Konfigurieren des COM+-Anwendungspoolings für eine COM+-Anwendu
 
 1.  Klicken Sie in der Konsolenstruktur des Komponentendienste-Verwaltungstools mit der rechten Maustaste auf die COM+-Anwendung, die Sie in einen Pool einpoolen möchten, und klicken Sie dann auf **Eigenschaften.**
 
-2.  Geben Sie auf der Registerkarte **Pooling &** Wiederverwendung unter **Anwendungspooling** einen Wert für **Poolgröße** ein, abhängig von der Anzahl der Instanzen Ihrer Anwendung, die ausgeführt werden soll.
+2.  Geben Sie auf der Registerkarte **&** Wiederverwendung unter **Anwendungspooling** einen Wert für **Poolgröße** ein, abhängig von der Anzahl der Instanzen Ihrer Anwendung, die ausgeführt werden soll.
 
 3.  Klicken Sie auf **OK**.
 
 ## <a name="visual-basic"></a>Visual Basic
 
-Die folgende Funktion in Visual Basic veranschaulicht, wie Sie den COM+-Anwendungspoolingwert (dargestellt durch die ConcurrentApps-Eigenschaft) für jede com+-Serveranwendung festlegen können, die Sie auswählen. Fügen Sie einen Verweis auf die COM+-Administratortypbibliothek hinzu, um sie über Visual Basic verwenden zu können.
+Die folgende Funktion in Visual Basic veranschaulicht, wie Sie den COM+-Anwendungspoolingwert (dargestellt durch die ConcurrentApps-Eigenschaft) für jede com+-Serveranwendung festlegen können, die Sie auswählen. Fügen Sie einen Verweis auf Visual Basic COM+-Administratortypbibliothek hinzu, um sie aus der Datei zu verwenden.
 
 
 ```VB
@@ -78,7 +78,7 @@ End Function
 
 
 
-Um die Funktion zu verwenden, geben Sie einen Zeichenfolgenwert für den COM+-Serveranwendungsnamen und einen ganzzahligen Wert für die gewünschte Anwendungspooleinstellung an. Der folgende Visual Basic zeigt, wie Der Wert des Anwendungspoolings für die Anwendung mit dem Namen "MyApplication" auf 15 festgelegt wird:
+Um die Funktion zu verwenden, geben Sie einen Zeichenfolgenwert für den COM+-Serveranwendungsnamen und einen ganzzahligen Wert für die gewünschte Anwendungspooleinstellung an. Der folgende Visual Basic zeigt, wie Der Wert des Anwendungspoolings für die Anwendung namens "MyApplication" auf 15 festgelegt wird:
 
 
 ```VB

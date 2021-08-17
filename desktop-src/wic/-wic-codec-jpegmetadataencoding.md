@@ -1,39 +1,39 @@
 ---
-description: Im folgenden Beispiel wird veranschaulicht, wie ein Bild und seine Metadaten erneut in eine neue Datei mit demselben Format codiert werden.
+description: Im folgenden Beispiel wird veranschaulicht, wie ein Bild und dessen Metadaten in eine neue Datei im gleichen Format neu codiert werden.
 ms.assetid: a7cfaa6d-e17d-458a-ae63-72963615bef8
-title: 'Gewusst wie: Erneutes Codieren eines JPEG-Bilds mit Metadaten'
+title: Erneutes Codieren eines JPEG-Bilds mit Metadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c023defb760faeab2bc6ea92232fcc916ef15126
-ms.sourcegitcommit: af120ad5c30da2fc5eb717ca2a1c4c45878efd71
+ms.openlocfilehash: 13851af04c6af742dbc68acc31fd674c3602ebeb16bec6903a3570f8cb1e0400
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "106365146"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119088162"
 ---
-# <a name="how-to-re-encode-a-jpeg-image-with-metadata"></a>Gewusst wie: Erneutes Codieren eines JPEG-Bilds mit Metadaten
+# <a name="how-to-re-encode-a-jpeg-image-with-metadata"></a>Erneutes Codieren eines JPEG-Bilds mit Metadaten
 
-Im folgenden Beispiel wird veranschaulicht, wie ein Bild und seine Metadaten erneut in eine neue Datei mit demselben Format codiert werden. Außerdem werden in diesem Beispiel Metadaten hinzugefügt, um einen einzelnen Element Ausdruck zu veranschaulichen, der von einem Abfrage-Writer verwendet wird.
+Im folgenden Beispiel wird veranschaulicht, wie ein Bild und dessen Metadaten in eine neue Datei im gleichen Format neu codiert werden. Darüber hinaus werden in diesem Beispiel Metadaten hinzugefügt, um einen ausdruck mit einem einzelnen Element zu veranschaulichen, der von einem Abfragewriter verwendet wird.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Voraussetzungen](#prerequisites)
 -   [Teil 1: Decodieren eines Bilds](#part-1-decode-an-image)
--   [Teil 2: Erstellen und Initialisieren des Image Encoders](#part-2-create-and-initialize-the-image-encoder)
--   [Teil 3: Kopieren von decodierten Frame Informationen](#part-3-copy-decoded-frame-information)
+-   [Teil 2: Erstellen und Initialisieren des Imageencoders](#part-2-create-and-initialize-the-image-encoder)
+-   [Teil 3: Kopieren von decodierten Frameinformationen](#part-3-copy-decoded-frame-information)
 -   [Teil 4: Kopieren der Metadaten](#part-4-copy-the-metadata)
 -   [Teil 5: Hinzufügen zusätzlicher Metadaten](#part-5-add-additional-metadata)
 -   [Teil 6: Finalisieren des codierten Bilds](#part-6-finalize-the-encoded-image)
--   [JPEG Umcodieren von Beispiel Code](#jpeg-re-encode-example-code)
+-   [Beispielcode für die neu codierte JPEG-Datei](#jpeg-re-encode-example-code)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Um dieses Thema zu verstehen, sollten Sie sich mit dem Metadatensystem der Windows Imaging Component (WIC) vertraut machen, wie in der [WIC-Metadatenübersicht](-wic-about-metadata.md)beschrieben. Sie sollten auch mit den WIC-Codec-Komponenten vertraut sein, wie in der [Übersicht über Windows Imaging](-wic-about-windows-imaging-codec.md)-Komponenten beschrieben.
+Um dieses Thema zu verstehen, sollten Sie mit dem WIC-Metadatensystem (Windows Imaging Component) vertraut sein, wie in der [Übersicht über WIC-Metadaten](-wic-about-metadata.md)beschrieben. Sie sollten auch mit den WIC-Codeckomponenten vertraut sein, wie in der [Übersicht über Windows Imaging Component](-wic-about-windows-imaging-codec.md)beschrieben.
 
 ## <a name="part-1-decode-an-image"></a>Teil 1: Decodieren eines Bilds
 
-Bevor Sie Bilddaten oder Metadaten in eine neue Bilddatei kopieren können, müssen Sie zuerst einen Decoder für das vorhandene Abbild erstellen, das Sie erneut codieren möchten. Der folgende Code veranschaulicht, wie ein WIC-Decoder für die Bilddatei test.jpg erstellt wird.
+Bevor Sie Bilddaten oder Metadaten in eine neue Bilddatei kopieren können, müssen Sie zunächst einen Decoder für das vorhandene Bild erstellen, das Sie neu codieren möchten. Der folgende Code veranschaulicht das Erstellen eines WIC-Decoders für die Imagedatei test.jpg.
 
 
 ```C++
@@ -62,11 +62,11 @@ Bevor Sie Bilddaten oder Metadaten in eine neue Bilddatei kopieren können, müs
 
 
 
-Beim Aufrufen von " **anatedecoderfromfilename** " wurde der Wert WICDecodeMetadataCacheOnDemand aus der [**wicdecodeoptions**](/windows/desktop/api/Wincodec/ne-wincodec-wicdecodeoptions) -Enumeration als vierter Parameter verwendet. Dadurch wird der Decoder aufgefordert, die Metadaten zwischenzuspeichern, wenn die Metadaten benötigt werden, entweder durch Abrufen eines Abfrage Readers oder durch Verwendung des zugrunde liegenden metadatenreaders. Wenn Sie diese Option verwenden, können Sie den Datenstrom in den Metadaten beibehalten. Dies ist für die schnelle metadatencodierung erforderlich und ermöglicht die Verlust lose Decodierung und Codierung von JPEG-Bildern. Alternativ können Sie auch den anderen **wicdecodeoptions** -Wert, WICDecodeMetadataCacheOnLoad, verwenden, der die eingebetteten Bild Metadaten zwischenspeichert, sobald das Bild geladen wird.
+Beim Aufruf von **CreateDecoderFromFilename** wurde der Wert WICDecodeMetadataCacheOnDemand aus der [**WICDecodeOptions-Enumeration**](/windows/desktop/api/Wincodec/ne-wincodec-wicdecodeoptions) als vierter Parameter verwendet. Dadurch wird der Decoder angewiesen, die Metadaten zwischenzuspeichern, wenn die Metadaten benötigt werden, indem entweder ein Abfrageleser oder der zugrunde liegende Metadatenreader verwendet wird. Mit dieser Option können Sie den Datenstrom in den Metadaten beibehalten, was für die schnelle Metadatencodierung erforderlich ist und die verlustfreie Decodierung und Codierung von JPEG-Bildern ermöglicht. Alternativ können Sie den anderen **WICDecodeOptions-Wert** WICDecodeMetadataCacheOnLoad verwenden, der die eingebetteten Bildmetadaten zwischenspeichert, sobald das Image geladen wird.
 
-## <a name="part-2-create-and-initialize-the-image-encoder"></a>Teil 2: Erstellen und Initialisieren des Image Encoders
+## <a name="part-2-create-and-initialize-the-image-encoder"></a>Teil 2: Erstellen und Initialisieren des Imageencoders
 
-Der folgende Code veranschaulicht die Erstellung des Encoders, den Sie verwenden, um das Image zu codieren, das Sie zuvor decodiert haben.
+Der folgende Code veranschaulicht die Erstellung des Encoders, den Sie zum Codieren des zuvor decodierten Bilds verwenden.
 
 
 ```C++
@@ -107,14 +107,14 @@ Der folgende Code veranschaulicht die Erstellung des Encoders, den Sie verwenden
 
 
 
-Ein WIC-Datei Datenstrom: pifilestream wird erstellt und zum Schreiben in die Bilddatei "test2.jpg" initialisiert. pifilestream wird dann verwendet, um den Encoder zu initialisieren und den Encoder darüber zu informieren, wo die Abbild Bits geschrieben werden sollen, wenn die Codierung beendet ist.
+Ein WIC-Dateistream piFileStream wird zum Schreiben in die Imagedatei "test2.jpg" erstellt und initialisiert. piFileStream wird dann verwendet, um den Encoder zu initialisieren und den Encoder darüber zu informieren, wo die Bildbits geschrieben werden sollen, wenn die Codierung abgeschlossen ist.
 
-## <a name="part-3-copy-decoded-frame-information"></a>Teil 3: Kopieren von decodierten Frame Informationen
+## <a name="part-3-copy-decoded-frame-information"></a>Teil 3: Kopieren von decodierten Frameinformationen
 
-Der folgende Code kopiert jeden Frame eines Bilds in einen neuen Frame des Encoders. Diese Kopie umfasst Größe, Auflösung und Pixel Format. Alle sind erforderlich, um einen gültigen Frame zu erstellen.
+Der folgende Code kopiert jeden Frame eines Bilds in einen neuen Frame des Encoders. Diese Kopie enthält Größe, Auflösung und Pixelformat. alle sind erforderlich, um einen gültigen Frame zu erstellen.
 
 > [!Note]  
-> JPEG-Bilder verfügen nur über einen Frame, und die nachfolgende Schleife ist technisch nicht erforderlich, ist jedoch enthalten, um die Multi-Frame-Verwendung für Formate zu veranschaulichen, die diese unterstützen.
+> JPEG-Bilder verfügen nur über einen Frame, und die folgende Schleife ist technisch nicht erforderlich, ist jedoch enthalten, um die Verwendung mehrerer Frames für Formate zu veranschaulichen, die sie unterstützen.
 
  
 
@@ -182,7 +182,7 @@ Der folgende Code kopiert jeden Frame eines Bilds in einen neuen Frame des Encod
 
 
 
-Der folgende Code führt eine schnelle Überprüfung durch, um zu bestimmen, ob die Quell-und Ziel Bildformate identisch sind. Dies ist erforderlich, da Teil 4 einen Vorgang anzeigt, der nur unterstützt wird, wenn das Quell-und Zielformat identisch sind.
+Der folgende Code führt eine schnelle Überprüfung durch, um zu ermitteln, ob die Quell- und Zielbildformate identisch sind. Dies ist erforderlich, da Teil 4 einen Vorgang anzeigt, der nur unterstützt wird, wenn das Quell- und das Zielformat identisch sind.
 
 
 ```C++
@@ -213,13 +213,13 @@ Der folgende Code führt eine schnelle Überprüfung durch, um zu bestimmen, ob 
 ## <a name="part-4-copy-the-metadata"></a>Teil 4: Kopieren der Metadaten
 
 > [!Note]  
-> Der Code in diesem Abschnitt ist nur gültig, wenn die Quell-und Ziel Image Formate identisch sind. Wenn Sie in ein anderes Bildformat codieren, können Sie nicht alle Metadaten eines Bilds in einem einzelnen Vorgang kopieren.
+> Der Code in diesem Abschnitt ist nur gültig, wenn die Quell- und Zielbildformate identisch sind. Sie können nicht alle Metadaten eines Bilds in einem einzigen Vorgang kopieren, wenn sie in ein anderes Bildformat codieren.
 
  
 
-Zum Beibehalten von Metadaten beim erneuten Codieren eines Bilds in dasselbe Bildformat stehen Methoden zum Kopieren aller Metadaten in einem einzelnen Vorgang zur Verfügung. Jeder dieser Vorgänge folgt einem ähnlichen Muster: jede legt die Metadaten des decodierten Frames direkt in den neuen Frame fest, der codiert wird. Beachten Sie, dass dies für jeden einzelnen Bild Rahmen erfolgt.
+Zum Beibehalten von Metadaten während der erneuten Codierung eines Bilds in dasselbe Bildformat stehen Methoden zum Kopieren aller Metadaten in einem einzigen Vorgang zur Verfügung. Jeder dieser Vorgänge folgt einem ähnlichen Muster. legt die Metadaten des decodierten Frames direkt in den neuen Frame fest, der codiert wird. Beachten Sie, dass dies für jeden einzelnen Bildrahmen erfolgt.
 
-Die bevorzugte Methode zum Kopieren von Metadaten besteht darin, den blockwriter des neuen Frames mit dem Block Reader des decodierten Frames zu initialisieren. Der folgende Code veranschaulicht diese Methode.
+Die bevorzugte Methode zum Kopieren von Metadaten besteht darin, den Blockwriter des neuen Frames mit dem Blockreader des decodierten Frames zu initialisieren. Der folgende Code veranschaulicht diese Methode.
 
 
 ```C++
@@ -243,13 +243,13 @@ Die bevorzugte Methode zum Kopieren von Metadaten besteht darin, den blockwriter
 
 
 
-In diesem Beispiel rufen Sie einfach den Block Reader und den blockwriter aus dem Quellframe bzw. dem Zielframe ab. Der blockwriter wird dann vom Block Reader initialisiert. Dadurch wird der blockwriter mit den vorab aufgefüllten Metadaten des Block Readers initialisiert. Weitere Methoden zum Kopieren von Metadaten finden Sie im Abschnitt Schreiben von Metadaten in der [Übersicht über das Lesen und Schreiben von Bild Metadaten](-wic-codec-readingwritingmetadata.md).
+In diesem Beispiel rufen Sie einfach den Blockreader und den Blockwriter aus dem Quellframe bzw. Zielframe ab. Der Blockwriter wird dann vom Blockreader initialisiert. Dadurch wird der Blockwriter mit den vorab aufgefüllten Metadaten des Blockreaders initialisiert. Weitere Methoden zum Kopieren von Metadaten finden Sie im Abschnitt Schreiben von Metadaten in [der Übersicht über das Lesen und Schreiben von Bildmetadaten.](-wic-codec-readingwritingmetadata.md)
 
-Auch dieser Vorgang funktioniert nur, wenn die Quell-und Ziel Images das gleiche Format aufweisen. Dies liegt daran, dass unterschiedliche Bildformate die Metadatenblöcke an verschiedenen Speicherorten speichern. Beispielsweise unterstützen sowohl JPEG als auch Tagged Image File Format (TIFF) Extensible Metadata Platform (XMP)-Metadatenblöcke. In JPEG-Bildern befindet sich der XMP-Block im stammmetadatenblock, wie in der [WIC-Metadatenübersicht](-wic-about-metadata.md)veranschaulicht. In einem TIFF-Bild wird der XMP-Block jedoch in den IFD-Stammblock eingebettet.
+Auch hier funktioniert dieser Vorgang nur, wenn die Quell- und Zielimages das gleiche Format aufweisen. Dies liegt daran, dass die Metadatenblöcke von verschiedenen Bildformaten an unterschiedlichen Speicherorten gespeichert werden. Jpeg und Tagged Image File Format (TIFF) unterstützen beispielsweise XMP-Metadatenblöcke (Extensible Metadata Platform). In JPEG-Bildern befindet sich der XMP-Block im Stammmetadatenblock, wie in der [Übersicht über WIC-Metadaten](-wic-about-metadata.md)veranschaulicht. In einem TIFF-Image ist der XMP-Block jedoch in den IFD-Stammblock eingebettet.
 
 ## <a name="part-5-add-additional-metadata"></a>Teil 5: Hinzufügen zusätzlicher Metadaten
 
-Im folgenden Beispiel wird veranschaulicht, wie dem Zielbild Metadaten hinzugefügt werden. Dies erfolgt durch Aufrufen der **SetMetadataByName** -Methode des Abfrage Writers mithilfe eines Abfrage Ausdrucks und der in einem [PROPVARIANT](/windows/win32/api/propidlbase/ns-propidlbase-propvariant)gespeicherten Daten.
+Im folgenden Beispiel wird veranschaulicht, wie Dem Zielimage Metadaten hinzugefügt werden. Dazu wird die **SetMetadataByName-Methode** des Abfragewriters mithilfe eines Abfrageausdrucks und der in einem [PROPVARIANT](/windows/win32/api/propidlbase/ns-propidlbase-propvariant)gespeicherten Daten aufgerufen.
 
 
 ```C++
@@ -269,11 +269,11 @@ Im folgenden Beispiel wird veranschaulicht, wie dem Zielbild Metadaten hinzugef�
 
 
 
-Weitere Informationen zum Abfrage Ausdruck finden Sie in der [Übersicht über die Metadaten-Abfragesprache](-wic-codec-metadataquerylanguage.md).
+Weitere Informationen zum Abfrageausdruck finden Sie in der Übersicht über die [Metadatenabfragesprache.](-wic-codec-metadataquerylanguage.md)
 
 ## <a name="part-6-finalize-the-encoded-image"></a>Teil 6: Finalisieren des codierten Bilds
 
-Die abschließenden Schritte zum Kopieren des Bilds sind das Schreiben der Pixeldaten für den Frame, das Ausführen eines Commit für den Frame an den Encoder und das Ausführen eines Commit für den Encoder. Durch das committen des Encoders wird der Bildstream in die Datei geschrieben.
+Die letzten Schritte zum Kopieren des Bilds sind das Schreiben der Pixeldaten für den Frame, das Committen des Frames an den Encoder und das Committen des Encoders. Durch committen des Encoders wird der Bilddatenstrom in die Datei geschrieben.
 
 
 ```C++
@@ -342,13 +342,13 @@ Die abschließenden Schritte zum Kopieren des Bilds sind das Schreiben der Pixel
 
 
 
-Die "Write **tesource** "-Methode des Frames dient zum Schreiben der Pixeldaten für das Bild. Beachten Sie, dass dies geschieht, nachdem die Metadaten geschrieben wurden. Dies ist erforderlich, um sicherzustellen, dass die Metadaten über ausreichend Speicherplatz innerhalb der Bilddatei verfügen. Nachdem die Pixeldaten geschrieben wurden, wird der Frame mithilfe der **Commit** -Methode von Frame in den Stream geschrieben. Nachdem alle Frames verarbeitet wurden, wird der Encoder (und damit das Bild) mithilfe der **Commit** -Methode des Encoders fertiggestellt.
+Die **WriteSource-Methode** des Frames wird verwendet, um die Pixeldaten für das Bild zu schreiben. Beachten Sie, dass dies erfolgt, nachdem die Metadaten geschrieben wurden. Dies ist erforderlich, um sicherzustellen, dass die Metadaten in der Bilddatei über genügend Speicherplatz verfügt. Nachdem die Pixeldaten geschrieben wurden, wird der Frame mithilfe der **Commit-Methode** des Frames in den Stream geschrieben. Nachdem alle Frames verarbeitet wurden, wird der Encoder (und somit das Bild) mithilfe der **Commit-Methode** des Encoders abgeschlossen.
 
-Nachdem Sie einen Commit für den Frame durchgeführt haben, müssen Sie die in der-Schleife erstellten COM-Objekte freigeben.
+Nachdem Sie den Frame committen, müssen Sie die in der Schleife erstellten COM-Objekte freigeben.
 
-## <a name="jpeg-re-encode-example-code"></a>JPEG Umcodieren von Beispiel Code
+## <a name="jpeg-re-encode-example-code"></a>Beispielcode für die neu codierte JPEG-Datei
 
-Im folgenden finden Sie den Code von den Teilen 1 bis 6 in einem convienient-Block.
+Im Folgenden ist der Code aus den Teilen 1 bis 6 in einem konvektiven Block.
 
 
 ```C++
@@ -593,19 +593,19 @@ int main()
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über WIC-Metadaten](-wic-about-metadata.md)
 </dt> <dt>
 
-[Übersicht über die Metadaten-Abfragesprache](-wic-codec-metadataquerylanguage.md)
+[Übersicht über die Metadatenabfragesprache](-wic-codec-metadataquerylanguage.md)
 </dt> <dt>
 
-[Übersicht über das Lesen und Schreiben von Bild Metadaten](-wic-codec-readingwritingmetadata.md)
+[Übersicht über das Lesen und Schreiben von Bildmetadaten](-wic-codec-readingwritingmetadata.md)
 </dt> <dt>
 
-[Übersicht über die metadatenerweiterbarkeit](-wic-codec-metadatahandlers.md)
+[Übersicht über die Metadatenerweiterbarkeit](-wic-codec-metadatahandlers.md)
 </dt> </dl>
 
  

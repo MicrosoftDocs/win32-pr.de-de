@@ -1,9 +1,9 @@
 ---
-title: MaintenanceSettings-Element (maintenanceSettingsType)
+title: MaintenanceSettings(maintenanceSettingsType)-Element
 description: Gibt an, wie die Taskplaner während der automatischen Wartung Aufgaben ausführt.
 ms.assetid: 6A204980-851D-4487-A6CC-01BE262A517A
 keywords:
-- MaintenanceSettings-Taskplaner
+- MaintenanceSettings-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119309340"
 ---
-# <a name="maintenancesettings-maintenancesettingstype-element"></a>MaintenanceSettings-Element (maintenanceSettingsType)
+# <a name="maintenancesettings-maintenancesettingstype-element"></a>MaintenanceSettings(maintenanceSettingsType)-Element
 
 Gibt an, wie die Taskplaner während der automatischen Wartung Aufgaben ausführt.
 
@@ -31,13 +31,13 @@ Gibt an, wie die Taskplaner während der automatischen Wartung Aufgaben ausführ
  />
 ```
 
-Das **MaintenanceSettings-Element** wird durch den komplexen [**MaintenanceSettingsType-Typ**](taskschedulerschema-maintenancesettingstype-complextype.md) definiert.
+Das **MaintenanceSettings-Element** wird vom komplexen [**MaintenanceSettingsType-Typ**](taskschedulerschema-maintenancesettingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                                                        |
+| Element                                                           | Abgeleitet von                                                         | Beschreibung                                                                        |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingsType**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/> |
 
@@ -47,10 +47,10 @@ Das **MaintenanceSettings-Element** wird durch den komplexen [**MaintenanceSetti
 
 
 
-| Element                                                    | type    | BESCHREIBUNG                                                                                                                                                                                     |
+| Element                                                    | type    | Beschreibung                                                                                                                                                                                     |
 |------------------------------------------------------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Stichtag**](taskschedulerschema-deadline-element.md)   |         | Gibt die Zeit an, nach der der Taskplaner versucht, den Task während der automatischen Notfallwartung zu starten, wenn er während der regulären Wartung nicht abgeschlossen werden konnte. <br/> |
-| [**Exklusiv**](taskschedulerschema-exclusive-element.md) | boolean | Wenn auf TRUE festgelegt, wird der Task ausschließlich unter anderen Wartungsaufgaben gestartet. <br/>                                                                                                 |
+| [**Stichtag**](taskschedulerschema-deadline-element.md)   |         | Gibt die Zeitspanne an, nach der der Taskplaner versucht, den Task während der automatischen Notfallwartung zu starten, wenn er während der regulären Wartung nicht abgeschlossen werden konnte. <br/> |
+| [**Exklusiv**](taskschedulerschema-exclusive-element.md) | boolean | Wenn diese Einstellung auf TRUE festgelegt ist, wird der Task ausschließlich mit anderen Wartungstasks gestartet. <br/>                                                                                                 |
 | [**Zeitraum**](taskschedulerschema-period-element.md)       |         | Gibt an, wie oft der Task während der automatischen Wartung gestartet werden muss. <br/>                                                                                                      |
 
 
@@ -61,7 +61,7 @@ Für die C++-Programmierung wird diese Leerlaufeinstellung mithilfe der [**ITask
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert ein Einstellungselement, das Taskplaner anweisen soll, den Task während der regelmäßigen automatischen Wartung einmal in 5 Tagen auszuführen, und bei einem Fehler von 15 Tagen den Task während der automatischen Notfallwartung zu starten.
+Der folgende XML-Code definiert ein Einstellungselement, das Taskplaner anweist, den Task während der regulären automatischen Wartung innerhalb von fünf Tagen auszuführen. Wenn 15 Tage lang ein Fehler aufgetreten ist, starten Sie den Task während der automatischen Notfallwartung.
 
 
 ```XML

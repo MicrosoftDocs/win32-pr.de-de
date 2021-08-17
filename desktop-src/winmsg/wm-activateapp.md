@@ -1,21 +1,21 @@
 ---
-description: Wird gesendet, wenn ein Fenster, das zu einer anderen Anwendung als das aktive Fenster gehört, aktiviert wird. Die Nachricht wird an die Anwendung gesendet, deren Fenster aktiviert wird, und an die Anwendung, deren Fenster deaktiviert wird.
+description: Wird gesendet, wenn ein Fenster, das zu einer anderen Anwendung als das aktive Fenster gehört, aktiviert wird. Die Meldung wird an die Anwendung gesendet, deren Fenster aktiviert wird, und an die Anwendung, deren Fenster deaktiviert wird.
 ms.assetid: fc3626ac-8f19-4aa6-8fe9-5020d00c09db
-title: WM_ACTIVATEAPP Meldung (Winuser. h)
+title: WM_ACTIVATEAPP Meldung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ee2d64b90426e004a3c18fdc60538fd21862c42f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c9afeabe12dfcc36ae7bf2403a7757004847bcf58370f4a0a0904c9bf008e6c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363595"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119931890"
 ---
-# <a name="wm_activateapp-message"></a>WM \_ activateapp-Meldung
+# <a name="wm_activateapp-message"></a>WM \_ ACTIVATEAPP-Nachricht
 
-Wird gesendet, wenn ein Fenster, das zu einer anderen Anwendung als das aktive Fenster gehört, aktiviert wird. Die Nachricht wird an die Anwendung gesendet, deren Fenster aktiviert wird, und an die Anwendung, deren Fenster deaktiviert wird.
+Wird gesendet, wenn ein Fenster, das zu einer anderen Anwendung als das aktive Fenster gehört, aktiviert wird. Die Meldung wird an die Anwendung gesendet, deren Fenster aktiviert wird, und an die Anwendung, deren Fenster deaktiviert wird.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -31,14 +31,14 @@ Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versi
 *wParam* 
 </dt> <dd>
 
-Gibt an, ob das Fenster aktiviert oder deaktiviert wird. Dieser Parameter ist **true** , wenn das Fenster aktiviert wird. der Wert ist **false** , wenn das Fenster deaktiviert wird.
+Gibt an, ob das Fenster aktiviert oder deaktiviert wird. Dieser Parameter ist **TRUE,** wenn das Fenster aktiviert wird. ist **FALSE,** wenn das Fenster deaktiviert wird.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Der Threadbezeichner. Wenn der *wParam* -Parameter **true** ist, ist *LPARAM* der Bezeichner des Threads, der das Fenster besitzt, das deaktiviert wird. Wenn *wParam* den Wert **false** hat, ist *LPARAM* der Bezeichner des Threads, der das Fenster besitzt, das aktiviert wird.
+Der Threadbezeichner. Wenn der *wParam-Parameter* **TRUE** ist, ist *lParam* der Bezeichner des Threads, der das zu deaktivierende Fenster besitzt. Wenn *wParam* **FALSE** ist, ist *lParam* der Bezeichner des Threads, der das aktivierte Fenster besitzt.
 
 </dd> </dl>
 
@@ -46,7 +46,7 @@ Der Threadbezeichner. Wenn der *wParam* -Parameter **true** ist, ist *LPARAM* de
 
 Typ: **LRESULT**
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,21 +56,21 @@ Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgebe
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**WM \_ aktivieren**](../inputdev/wm-activate.md)
+[**WM \_ ACTIVATE**](../inputdev/wm-activate.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Windows](windows.md)

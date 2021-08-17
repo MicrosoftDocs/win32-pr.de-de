@@ -1,23 +1,23 @@
 ---
-description: Um die Eigenschaften einer Ereignis Ablauf Verfolgungs Sitzung zu aktualisieren, müssen Sie die controltrace-Funktion mit dem \_ \_ \_ Aktualisierungs Steuerungs Code des Ereignis Ablauf Verfolgungs Steuer Elements abrufen.
+description: Um die Eigenschaften einer Ereignisablaufverfolgungssitzung zu aktualisieren, rufen Sie die ControlTrace-Funktion mithilfe des STEUERELEMENTcodes EVENT \_ TRACE CONTROL \_ UPDATE \_ auf.
 ms.assetid: 1496bf88-a989-4fa1-888a-90385c4ca8ee
-title: Aktualisieren einer Ereignis Ablauf Verfolgungs Sitzung
+title: Aktualisieren einer Ereignisablaufverfolgungssitzung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e580c2e84dec6682e5fad323fe0cad427300a21
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dfa4f092211d59dda080906f01380f8751fbc099f79dc8f1cd8ea1f7a2ba36fd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119383340"
 ---
-# <a name="updating-an-event-tracing-session"></a>Aktualisieren einer Ereignis Ablauf Verfolgungs Sitzung
+# <a name="updating-an-event-tracing-session"></a>Aktualisieren einer Ereignisablaufverfolgungssitzung
 
-Um die Eigenschaften einer Ereignis Ablauf Verfolgungs Sitzung zu aktualisieren, müssen Sie die [**controltrace**](/windows/win32/api/evntrace/nf-evntrace-controltracea) -Funktion mit dem **\_ \_ \_ Aktualisierungs** Steuerungs Code des Ereignis Ablauf Verfolgungs Steuer Elements abrufen. Sie können die Sitzung angeben, die aktualisiert werden soll, indem Sie ein Sitzungs Handle verwenden, das von einem früheren Aufrufen von [**starttrace**](/windows/win32/api/evntrace/nf-evntrace-starttracea)abgerufen wurde, oder einen Sitzungs Namen. Die Eigenschaften der Ereignis Ablauf Verfolgungs Sitzung werden mithilfe der Werte aktualisiert, die in der Struktur der Ereignis Ablauf Verfolgungs [**\_ \_ Eigenschaften**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) angegeben sind. Sie können nur eine Teilmenge der Eigenschaften aktualisieren. Eine Liste der Eigenschaften, die Sie aktualisieren können, finden Sie unter dem *Properties* -Parameter der **controltrace** -Funktion.
+Um die Eigenschaften einer Ereignisablaufverfolgungssitzung zu aktualisieren, rufen Sie die [**ControlTrace-Funktion**](/windows/win32/api/evntrace/nf-evntrace-controltracea) mithilfe des **STEUERELEMENTcodes EVENT \_ TRACE CONTROL \_ \_ UPDATE** auf. Sie können die zu aktualisierende Sitzung mithilfe eines Sitzungshandle angeben, das aus einem früheren Aufruf von [**StartTrace**](/windows/win32/api/evntrace/nf-evntrace-starttracea)oder einem Sitzungsnamen abgerufen wurde. Die Eigenschaften der Ereignisablaufverfolgungssitzung werden mithilfe der in der [**EVENT \_ TRACE \_ PROPERTIES-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) angegebenen Werte aktualisiert. Sie können nur eine Teilmenge der Eigenschaften aktualisieren. Eine Liste der Eigenschaften, die Sie aktualisieren können, finden Sie im *Properties-Parameter* der **ControlTrace-Funktion.**
 
-Wenn der [**controltrace**](/windows/win32/api/evntrace/nf-evntrace-controltracea) -Befehl erfolgreich ist, wird die Eigenschaften Struktur der [**Ereignis Ablauf \_ Verfolgung \_**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) aktualisiert, um die neuen Eigenschaftswerte widerzuspiegeln. Die Struktur enthält auch die neue Ausführungs Statistik für die Ereignis Ablauf Verfolgungs Sitzung.
+Wenn der [**ControlTrace-Aufruf**](/windows/win32/api/evntrace/nf-evntrace-controltracea) erfolgreich ist, wird die [**EVENT TRACE \_ \_ PROPERTIES-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) aktualisiert, um die neuen Eigenschaftswerte widerzuspiegeln. Die -Struktur enthält auch die neuen Ausführungsstatistiken für die Ereignisablaufverfolgungssitzung.
 
-Das folgende Beispiel zeigt, wie die Kernel-Ereignis Ablauf Verfolgungs Sitzung aktualisiert wird. Im Beispiel werden die aktuellen Eigenschaftswerte abgefragt und die-Struktur vor dem Aktualisieren der Sitzung aktualisiert.
+Das folgende Beispiel zeigt, wie die Kernelereignisablaufverfolgungssitzung aktualisiert wird. Im Beispiel werden die aktuellen Eigenschaftswerte abgefragt und die Struktur vor dem Aktualisieren der Sitzung aktualisiert.
 
 
 ```C++
@@ -105,19 +105,19 @@ cleanup:
 
 <dl> <dt>
 
-[Konfigurieren und Starten einer Sitzung für private Logger](configuring-and-starting-a-private-logger-session.md)
+[Konfigurieren und Starten einer privaten Protokollierungssitzung](configuring-and-starting-a-private-logger-session.md)
 </dt> <dt>
 
-[Konfigurieren und Starten einer systemtraceprovider-Sitzung](configuring-and-starting-a-systemtraceprovider-session.md)
+[Konfigurieren und Starten einer SystemTraceProvider-Sitzung](configuring-and-starting-a-systemtraceprovider-session.md)
 </dt> <dt>
 
-[Konfigurieren und Starten einer autologger-Sitzung](configuring-and-starting-an-autologger-session.md)
+[Konfigurieren und Starten einer AutoLogger-Sitzung](configuring-and-starting-an-autologger-session.md)
 </dt> <dt>
 
-[Konfigurieren und Starten einer Ereignis Ablauf Verfolgungs Sitzung](configuring-and-starting-an-event-tracing-session.md)
+[Konfigurieren und Starten einer Ereignisablaufverfolgungssitzung](configuring-and-starting-an-event-tracing-session.md)
 </dt> <dt>
 
-[Konfigurieren und Starten der NT Kernel Logger-Sitzung](configuring-and-starting-the-nt-kernel-logger-session.md)
+[Konfigurieren und Starten der NT-Kernelprotokollierungssitzung](configuring-and-starting-the-nt-kernel-logger-session.md)
 </dt> </dl>
 
  

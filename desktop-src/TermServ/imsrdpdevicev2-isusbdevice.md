@@ -1,12 +1,12 @@
 ---
-title: IMsRdpDeviceV2 isusbdevice (Eigenschaft)
-description: Gibt an, ob das Gerät für die USB-Umleitung vorgesehen ist.
+title: IMsRdpDeviceV2 IsUSBDevice (Eigenschaft)
+description: Gibt an, ob das Gerät für die USB-Umleitung bestimmt ist.
 ms.assetid: df4c9764-ad96-4f35-9537-3890293a944c
 ms.tgt_platform: multiple
 keywords:
-- Isusbdevice-Eigenschaft Remotedesktopdienste
-- Isusbdevice-Eigenschaft Remotedesktopdienste, IMsRdpDeviceV2-Schnittstelle
-- IMsRdpDeviceV2-Schnittstelle Remotedesktopdienste, isusbdevice-Eigenschaft
+- IsUSBDevice-Remotedesktopdienste
+- IsUSBDevice-Eigenschaft Remotedesktopdienste , IMsRdpDeviceV2-Schnittstelle
+- IMsRdpDeviceV2-Schnittstelle Remotedesktopdienste , IsUSBDevice-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3741972fdd81887713e75ed5b596e0ba1a10fd3f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e03e2572912487cb924f65350dbdd7818d07d2a7b172d18cb28fab87335a00dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391521"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119138563"
 ---
-# <a name="imsrdpdevicev2isusbdevice-property"></a>IMsRdpDeviceV2:: isusbdevice-Eigenschaft
+# <a name="imsrdpdevicev2isusbdevice-property"></a>IMsRdpDeviceV2::IsUSBDevice (Eigenschaft)
 
-Gibt an, ob das Gerät für die USB-Umleitung vorgesehen ist.
+Gibt an, ob das Gerät für die USB-Umleitung bestimmt ist.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -44,7 +44,7 @@ HRESULT get_IsUSBDevice(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-**true** , wenn das Gerät für die USB-Umleitung vorgesehen ist. andernfalls **false**.
+**TRUE,** wenn das Gerät für die USB-Umleitung verwendet wird; andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,11 +56,11 @@ HRESULT get_IsUSBDevice(
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 mit SP1<br/>                                             |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IMsRdpDeviceV2 wird als 5b94466-7661-42a8-98b7-01904c11668f definiert.<br/>      |
+| IID<br/>                      | IID \_ IMsRdpDeviceV2 ist als 5fb94466-7661-42a8-98b7-01904c11668f definiert.<br/>      |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esenttestinjectionnotsupportedexception-Konstruktor'
-title: Esenttestinjectionnotsupportedexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentTestInjectionNotSupportedException-Konstruktor'
+title: EsentTestInjectionNotSupportedException-Konstruktor
 TOCTitle: 'EsentTestInjectionNotSupportedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentTestInjectionNotSupportedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esenttestinjectionnotsupportedexception.esenttestinjectionnotsupportedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ad7a629b4d400fa2c0a3d06ca4b42d0385431c38
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a50e750f368da93120a52bb61394c470fb7843a1a2e7e7a22a728fa1be638506
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759847"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119363120"
 ---
-# <a name="esenttestinjectionnotsupportedexception-constructor"></a>Esenttestinjectionnotsupportedexception-Konstruktor
+# <a name="esenttestinjectionnotsupportedexception-constructor"></a>EsentTestInjectionNotSupportedException-Konstruktor
 
-Initialisiert eine neue Instanz der esenttestinjectionnotsupportedexception-Klasse.
+Initialisiert eine neue Instanz der EsentTestInjectionNotSupportedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentTestInjectionNotSupportedException()
 public EsentTestInjectionNotSupportedException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esenttestinjectionnotsupportedexception-Klasse](./esenttestinjectionnotsupportedexception-class.md)
+[EsentTestInjectionNotSupportedException-Klasse](./esenttestinjectionnotsupportedexception-class.md)
 
-[Esenttestinjectionnotsupportedexception-Elemente](./esenttestinjectionnotsupportedexception-members.md)
+[EsentTestInjectionNotSupportedException-Member](./esenttestinjectionnotsupportedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

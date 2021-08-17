@@ -57,10 +57,10 @@ Das **dhcp-Unique-Key-Attribut** wird derzeit nicht verwendet.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Is-Single-Valued       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -78,10 +78,10 @@ Das **dhcp-Unique-Key-Attribut** wird derzeit nicht verwendet.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Is-Single-Valued       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -99,10 +99,10 @@ Das **dhcp-Unique-Key-Attribut** wird derzeit nicht verwendet.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Is-Single-Valued       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -120,10 +120,10 @@ Das **dhcp-Unique-Key-Attribut** wird derzeit nicht verwendet.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist einwertig       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -141,10 +141,10 @@ Das **dhcp-Unique-Key-Attribut** wird derzeit nicht verwendet.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist einwertig       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -162,10 +162,10 @@ Das **dhcp-Unique-Key-Attribut** wird derzeit nicht verwendet.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist einwertig       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |

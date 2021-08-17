@@ -1,9 +1,9 @@
 ---
-title: TB_SETHOTITEM (Commctrl.h)
+title: TB_SETHOTITEM Meldung (Commctrl.h)
 description: 'TB_SETHOTITEM Meldung: Legt das heiße Element in einer Symbolleiste fest.'
 ms.assetid: 15005741-29d2-48c6-b5f0-15178a49b917
 keywords:
-- TB_SETHOTITEM meldungssteuerelemente Windows
+- TB_SETHOTITEM Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -32,7 +32,7 @@ Legt das heiße Element in einer Symbolleiste fest.
 *wParam* 
 </dt> <dd>
 
-Index des Elements, das als hot -Element verwendet wird. Wenn dieser Wert -1 ist, ist keines der Elemente heiß.
+Index des Elements, das heiß gemacht wird. Wenn dieser Wert -1 ist, ist keines der Elemente heiß.
 
 </dd> <dt>
 
@@ -41,11 +41,11 @@ Index des Elements, das als hot -Element verwendet wird. Wenn dieser Wert -1 ist
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Index des vorherigen heißen Elements zurück, oder -1, wenn kein heißes Element vorkommt.
+Gibt den Index des vorherigen heißen Elements oder -1 zurück, wenn kein heißes Element vorhanden war.
 
 ## <a name="remarks"></a>Hinweise
 
-Das Verhalten dieser Meldung ist nicht für Symbolleisten definiert, die nicht das [**TBSTYLE \_ FLAT-Format**](toolbar-control-and-button-styles.md) haben.
+Das Verhalten dieser Meldung ist nicht für Symbolleisten definiert, die nicht über den [**TBSTYLE \_ FLAT-Stil**](toolbar-control-and-button-styles.md) verfügen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,7 +53,7 @@ Das Verhalten dieser Meldung ist nicht für Symbolleisten definiert, die nicht d
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

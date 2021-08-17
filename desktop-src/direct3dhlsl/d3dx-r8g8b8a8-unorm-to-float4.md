@@ -3,7 +3,7 @@ title: D3DX_R8G8B8A8_UNORM_to_FLOAT4-Funktion
 description: Entpackt DXGI \_ FORMAT \_ R8G8B8A8 \_ UNORM-Shaderdaten in XMFLOAT4. | D3DX_R8G8B8A8_UNORM_to_FLOAT4-Funktion
 ms.assetid: 94430f29-4872-4ecd-99b9-72f3b77c47f2
 keywords:
-- D3DX_R8G8B8A8_UNORM_to_FLOAT4 HlSL-Funktion
+- D3DX_R8G8B8A8_UNORM_to_FLOAT4-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -65,7 +65,7 @@ Die entpackten Shaderdaten.
 [Funktionen](format-conversion-functions.md)
 </dt> <dt>
 
-[Entpacken und Packen von DXGI \_ FORMAT für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen des \_ DXGI-FORMATS für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
  

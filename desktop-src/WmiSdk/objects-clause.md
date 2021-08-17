@@ -1,48 +1,48 @@
 ---
-description: Die Objects-Klausel des Notification-Type-Makros listet den Satz von-Objekten auf, die dem Benachrichtigungs Objekt zugeordnet sind.
+description: Die OBJECTS-Klausel des NOTIFICATION-TYPE-Makros enumeriert den Satz von Objekten, die dem Benachrichtigungsobjekt zugeordnet sind.
 ms.assetid: 0cb4776f-aae2-452d-9472-caf6d28fb870
 ms.tgt_platform: multiple
-title: Objects-Klausel
+title: OBJECTS-Klausel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 19e25848e0fc98ca79ef96e25423ba7872296e57
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9a9289be0a3fa228e74a720ec385a5b13354f849710a88287a9911f470e40758
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214365"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119131042"
 ---
-# <a name="objects-clause"></a>Objects-Klausel
+# <a name="objects-clause"></a>OBJECTS-Klausel
 
-Die Objects-Klausel des [Notification-Type-](notification-type-macro.md) Makros listet den Satz von-Objekten auf, die dem Benachrichtigungs Objekt zugeordnet sind.
+Die OBJECTS-Klausel des [NOTIFICATION-TYPE-Makros](notification-type-macro.md) enumeriert den Satz von Objekten, die dem Benachrichtigungsobjekt zugeordnet sind.
 
 > [!Note]  
-> Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung](setting-up-the-wmi-snmp-environment.md).
+> Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung.](setting-up-the-wmi-snmp-environment.md)
 
  
 
 Die folgenden Regeln gelten für die Zuordnung zu CIM-Klassen:
 
--   Jeder Member der Objects-Klausel wird einer Eigenschaft der CIM-Klassendefinition zugeordnet. Der Objekt Deskriptor des Elements wird dem CIM-Eigenschaftsnamen wörtlich zugeordnet. **Ifindex** beispielsweise wird in **ifindex** übersetzt.
--   Jede vom Mapping-Prozess generierte CIM-Eigenschaft enthält den **varbindindex** -Qualifizierer.
+-   Jeder Member der OBJECTS-Klausel wird einer Eigenschaft der CIM-Klassendefinition zu ordnet. Der Objektdeskriptor des -Members wird dem CIM-Eigenschaftennamen ausführlich zuordnt. IfIndex **wird z. B.** in **ifIndex übersetzt.**
+-   Jede vom Zuordnungsprozess generierte CIM-Eigenschaft enthält den VarBindIndex-Qualifizierer. 
 
-    **Varbindindex** ist ein **UInt32** obligatorischer Qualifizierer, der die Position des Objekts beschreibt, wie er in der Objects [-Klausel des Trap-Type-](trap-type-macro.md) oder [Notification-Type](notification-type-macro.md) -Makros angezeigt wird. Die Ganzzahl gibt auch die Position der Eigenschaft an, wie Sie in der Variablen Bindungs Liste von SNMPv1 bzw. SNMPv2C Trap PDU (Protokolldaten Einheit) angezeigt wird. (Da die ersten beiden Variablen Bindungen immer timestamp und Identification sind, werden alle zusätzlichen Variablen nach dem Wert 2 nummeriert.)
+    **VarBindIndex ist** ein **obligatorischer uint32-Qualifizierer,** der die Position des Objekts beschreibt, wie sie in der [OBJECTS-Klausel des TRAP-TYPE-](trap-type-macro.md) oder [NOTIFICATION-TYPE-Makros angezeigt](notification-type-macro.md) wird. Die ganze Zahl gibt auch die Position der Eigenschaft an, wie sie in der Variablenbindungsliste von SNMPv1 bzw. SNMPv2C TRAP PDU (Protokolldateneinheit) angezeigt wird. (Da die ersten beiden Variablenbindungen immer TimeStamp und Identification sind, werden alle zusätzlichen Variablen nach dem Wert 2 nummeriert.)
 
-    Wenn die CIM-Ereignisklasse aus einem SNMPv1 [Trap-Type-](trap-type-macro.md) Makro generiert wird, hat der **varbindindex** -Qualifizierer den Anfangswert 1 für die erste Variable in der Variablen Bindungs Liste.
+    Wenn die CIM-Ereignisklasse aus einem [SNMPv1-TRAP-TYPE-Makro](trap-type-macro.md) generiert wird, hat der **VarBindIndex-Qualifizierer** den Anfangswert 1 für die erste Variable in der Variablenbindungsliste.
 
-    Wenn die CIM-Ereignisklasse aus einem SNMPv2C [-Benachrichtigungstyp-](notification-type-macro.md) Makro generiert wird, hat der **varbindindex** -Qualifizierer für die erste Variable in der Liste der Variablen Bindungen den Anfangswert 3.
+    Wenn die CIM-Ereignisklasse aus einem SNMPv2C [NOTIFICATION-TYPE-Makro](notification-type-macro.md) generiert wird, hat der **VarBindIndex-Qualifizierer** den Anfangswert 3 für die erste Variable in der Variablenbindungsliste.
 
-Beim Zuordnen einer gekapselten CIM-Klasse wird jeder Member der Objects-Klausel einer CIM-Eigenschaft zugeordnet, die den Namen, den Typ und den Wert des entsprechenden MIB-Objekts widerspiegelt. Die verwendeten Mapping-Prozeduren werden in den folgenden Themen angegeben:
+Beim Zuordnen einer gekapselten CIM-Klasse wird jeder Member der OBJECTS-Klausel einer CIM-Eigenschaft zu, die den Namen, Typ und Wert des entsprechenden MIB-Objekts widerspiegelt. Die verwendeten Zuordnungsverfahren werden in den folgenden Themen angegeben:
 
--   [Syntax Klausel](syntax-clause.md)
--   [Text Konvention-Makro](textual-convention-macro.md)
--   [Access-und Max-Access-Klauseln](access-and-max-access-clauses.md)
+-   [SYNTAX-Klausel](syntax-clause.md)
+-   [TEXTUAL-CONVENTION-Makro](textual-convention-macro.md)
+-   [ACCESS- und MAX-ACCESS-Klauseln](access-and-max-access-clauses.md)
 
-Wenn Sie eine Referent-CIM-Klasse verwenden, wird jedes Element der Objects-Klausel wie folgt zugeordnet:
+Bei Verwendung einer REFERENZ-CIM-Klasse wird jeder Member der OBJECTS-Klausel wie folgt zueinander zuordnungen:
 
--   Jeder Member der Objects-Klausel wird einer einzelnen Eigenschaft der CIM-Klasse zugeordnet. Die-Eigenschaft ist stark typisiert als eingebettetes Objekt.
--   Die Klasse des eingebetteten Objekts wird durch die standardmäßige Objekt zuordnungsprozedur generiert. Weitere Informationen finden Sie unter [Object-Type-Makro](object-type-macro.md). Beispielsweise ist **iftable** einer eingebetteten Klasse mit dem Namen **SNMP \_ RFC1213 \_ MIB \_ iftable** zugeordnet.
--   Die Werte, die den Variablen Bindungen eines Trap-PDU zugeordnet sind, werden als eingebettete Objekte eines Objekts der Referent-Klasse instanziiert. Jedes eingebettete Objekt enthält Werte für jede der Schlüssel gebundenen Eigenschaften des Objekts und den Wert der-Eigenschaft in der Variablen Bindung, die zugeordnet wird.
+-   Jeder Member der OBJECTS-Klausel wird einer einzelnen Eigenschaft der CIM-Klasse zuordnungen. Die -Eigenschaft ist stark als eingebettetes Objekt typiert.
+-   Die Klasse des eingebetteten Objekts wird über die Standardmäßige Objektzuordnungsprozedur generiert. Weitere Informationen finden Sie unter [OBJECT-TYPE-Makro](object-type-macro.md). Beispielsweise wird **ifTable** einer eingebetteten Klasse mit dem Namen **SNMP \_ RFC1213 \_ MIB \_ ifTable zu.**
+-   Die Werte, die den Variablenbindungen eines TRAP-PDU zugeordnet sind, werden als eingebettete Objekte eines Objekts der Referenzklasse instanziiert. Jedes eingebettete Objekt enthält Werte für jede der schlüsselierten Eigenschaften des Objekts und den Wert der Eigenschaft in der variablen Bindung, die zugeordnet wird.
 
  
 

@@ -3,26 +3,26 @@ title: Zugreifen auf Medien
 description: Zugreifen auf Medien
 ms.assetid: 18ea844d-98c9-4168-9af2-161dda52f6bd
 keywords:
-- Windows Media Metadatei-Wiedergabelisten, zugreifen auf Medien
-- Wiedergabelisten, zugreifen auf Medien
-- Metadatendatei-Wiedergabelisten, zugreifen auf Medien
-- Windows Media Metadatei-Wiedergabelisten, Medien Zugriff
-- Wiedergabelisten, Medien Zugriff
-- Metadatei-Wiedergabelisten, Medien Zugriff
-- Windows Media Metadatei-Wiedergabelisten, Steuern der Wiedergabe
+- Windows Medienmetadatei-Wiedergabelisten,Zugreifen auf Medien
+- Wiedergabelisten, Zugreifen auf Medien
+- Metadatei-Wiedergabelisten,Zugreifen auf Medien
+- Windows Medienmetadatei-Wiedergabelisten, Medienzugriff
+- Wiedergabelisten, Medienzugriff
+- Metadateiwiedergabelisten, Medienzugriff
+- Windows Medienmetadatei-Wiedergabelisten, Steuern der Wiedergabe
 - Wiedergabelisten, Steuern der Wiedergabe
-- Metadatei-Wiedergabelisten, Steuern der Wiedergabe
-- Windows Media Metadatei-Wiedergabelisten, Einstellungs Dauer
-- Wiedergabelisten, Einstellungs Dauer
-- Metadatei-Wiedergabelisten, Einstellungs Dauer
-- Windows Media Player, zugreifen auf Medien
-- Windows Media Player, Medien Zugriff
-- Windows Media Player, Steuern der Wiedergabe
-- Windows Media Player, Einstellungs Dauer
+- Metafile-Wiedergabelisten,Steuern der Wiedergabe
+- Windows Medienmetadatei-Wiedergabelisten, Festlegen der Dauer
+- Wiedergabelisten, Dauer festlegen
+- Metafile-Wiedergabelisten, Festlegen der Dauer
+- Windows Media Player,Zugreifen auf Medien
+- Windows Media Player,Medienzugriff
+- Windows Media Player,Steuern der Wiedergabe
+- Windows Media Player,Festlegen der Dauer
 - Zugreifen auf Medien
-- Medien Zugriff
+- Medienzugriff
 - Steuern der Wiedergabe
-- Einstellungs Dauer
+- Festlegen der Dauer
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -30,31 +30,31 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: c5a995a6816e3c46a002bd1ea924c9ea9a207000
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c1a0846be4e8b9b62e424ce24d1b1800bc361c6a28f52a323c6bfa8511ae040b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338003"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119956400"
 ---
 # <a name="accessing-media"></a>Zugreifen auf Medien
 
-Verwenden Sie Wiedergabelisten, um die Streamingmedien oder Mediendateien anzugeben, die von Windows Media Player abgespielt werden.
+Verwenden Sie Wiedergabelisten, um die Streamingmedien oder Mediendateien anzugeben und zu steuern, die Windows Media Player wiedergegeben werden.
 
-Verwenden Sie das **Entry** -Element, um ein einzelnes Medien Element (eine Mediendatei oder einen Livestream) und alle untergeordneten Elemente (z. b. Bilder, **moreinfo** -Links und **abstrakten** Text) anzugeben. Verwenden Sie ein **ENTRYREF** -Element, um eine Wiedergabeliste anzugeben. Eine Wiedergabeliste kann ein oder mehrere **Entry** -oder **ENTRYREF** -Elemente enthalten. Windows Media Player führt eine Wiedergabeliste aus, indem Sie mit dem ersten Eintrag beginnt und dann jeden Eintrag nacheinander wieder gibt, bis die Liste abgeschlossen ist.
+Verwenden  Sie das ENTRY-Element, um ein einzelnes Medienelement (eine Mediendatei oder einen Livestream) und alle untergeordneten Elemente (z. B. Bilder, **MOREINFO-Links** und **ABSTRACT-Text)** anzugeben. Verwenden Sie ein **ENTRYREF-Element,** um eine Wiedergabeliste anzugeben. Eine Wiedergabeliste kann ein oder mehrere **ENTRY-** oder **ENTRYREF-Elemente** enthalten. Windows Media Player führt eine Wiedergabeliste aus, indem sie mit dem ersten Eintrag beginnt und dann jeden Eintrag nacheinander abspielt, bis die Liste abgeschlossen ist.
 
-Ein **Eintrags** Element kann auf beliebige Medientypen verweisen, die von Windows Media Player wiedergegeben werden können. Dies schließt nicht nur die Dateien. WMA,. WMV,. ASF und. AVI ein, um nur ein paar, sondern auch Livestreams zu benennen. Indem Sie eine Reihe von **Entry** -oder **ENTRYREF** -Elementen verwenden, um auf Medieninhalte zu verweisen, können Sie eine Wiedergabeliste verwenden, um einen einzelnen Datenstrom zu senden, der aus mehreren Quellen besteht. Die referenzierten Streams werden sequenziell abgespielt und als ein fortlaufender Stream des Viewers angezeigt. Die Wiedergabeliste kann z. b. zwei **Einstiegs** Elemente enthalten: eine Standard Einführung aus einer Windows Media-Datei mit der Erweiterung ". wma" und ein Live-Windows Media-Stream.
+Ein **ENTRY-Element** kann auf einen beliebigen Medientyp verweisen, den Windows Media Player wiedergeben können. Dies schließt nicht nur WMA-, WMV-, ASF- und .avi-Dateien ein, um nur einige zu nennen, sondern auch Livestreams. Indem Sie eine Reihe von **ENTRY-** oder **ENTRYREF-Elementen** verwenden, um auf Medieninhalte zu verweisen, können Sie eine Wiedergabeliste verwenden, um einen einzelnen Stream zu senden, der aus mehreren Quellen besteht. Die Referenzdatenströme werden sequenziell wiedergegeben und vom Viewer als ein kontinuierlicher Stream betrachtet. Die Wiedergabeliste kann beispielsweise zwei **ENTRY-Elemente** enthalten: eine Standardeinführung aus einer Windows Mediendatei mit der Erweiterung ".wma" und einen Live-Windows Medienstream.
 
 > [!Note]  
-> Eine Wiedergabeliste darf keine Links zu Mediendateien enthalten, die Inhalte enthalten, die mit verschiedenen Versionen von Digital Rights Management (DRM) erstellt wurden. Wenn in einer metadateiwiedergabe Links für Mediendateien mit DRM-Inhalt der Version 1 und Mediendateien vorhanden sind, die mit neueren DRM-Versionen erstellt wurden, gibt Windows Media Player nur den DRM-Inhalt der Version 1 wieder.
+> Eine Wiedergabeliste darf keine Links zu Mediendateien enthalten, deren Inhalt mit verschiedenen Versionen von Digital Rights Management (DRM) erstellt wurde. Wenn in einer Metadateiwiedergabeliste Links für Mediendateien mit DRM-Inhalten der Version 1 und für Mediendateien vorhanden sind, die mit späteren DRM-Versionen erstellt wurden, wird Windows Media Player nur den Inhalt der DRM-Version 1 wiedergeben.
 
- 
+ 
 
 ## <a name="controlling-playback"></a>Steuern der Wiedergabe
 
-Verwenden Sie Wiedergabelisten, um nicht nur zu steuern, welche Medienclips abgespielt werden, sondern auch welche Teile des Clips abgespielt werden und wie. Mithilfe von Wiedergabelisten können Sie eine Reihe von Clips definieren, die Schleifen oder wiederholt werden sollen, um die Dauer der Wiedergabe festzulegen und Startzeiten sowie Start-und Endmarker für jeden Eintrag festzulegen. Die Elemente **StartTime**, **Startmarker** und **Endmarker** funktionieren in Verbindung mit Markern in der Mediendatei.
+Verwenden Sie Wiedergabelisten, um nicht nur zu steuern, welcher Medienclip wiedergegeben wird, sondern auch, welche Teile des Clips wiedergegeben werden und wie. Sie können Wiedergabelisten verwenden, um einen Satz von Clips zu definieren, die in schleifen- oder wiederholt werden sollen, um die Dauer der Wiedergabe festzulegen und Startzeiten sowie Start- und Endmarker für jeden Eintrag zuzuweisen. Die Elemente **STARTTIME,** **STARTMARKER** und **ENDMARKER** funktionieren in Verbindung mit Markern in der Mediendatei.
 
-Beispielsweise verwendet die folgende Wiedergabeliste ein Werbebanner und den zugehörigen **moreinfo** -Link in einem **Eintrag** und verweist auf ein **Startmarker** und einen **Endmarker**.
+Die folgende Wiedergabeliste verwendet beispielsweise ein Werbebanner und den zugehörigen **MOREINFO-Link** in einem **EINTRAG** und verweist auf **EINEN STARTMARKER** und **ENDMARKER.**
 
 
 ```XML
@@ -91,9 +91,9 @@ Beispielsweise verwendet die folgende Wiedergabeliste ein Werbebanner und den zu
 
 
 
-## <a name="setting-duration"></a>Einstellungs Dauer
+## <a name="setting-duration"></a>Festlegen der Dauer
 
-Verwenden Sie das **Duration** -Element, um anzugeben, wie lange ein Clip oder eine Reihe von Clips wiedergegeben werden soll. Sie können auch das **PreviewMode** -Attribut des **ASX** -Elements in Verbindung mit dem **previewduration** -Element verwenden, um anzugeben, wie lange ein Clip oder eine Reihe von Clips wiedergegeben werden soll. Legen Sie das **PreviewMode** -Attribut auf "yes" fest, um mit dem **previewduration** -Element anzugeben, wie lange der zugeordnete Clip wiedergegeben werden soll Die Elemente " **previewduration** " und " **Duration** " weisen das gleiche Verhalten auf.
+Verwenden  Sie das DURATION-Element, um anzugeben, wie lange ein Clip oder eine Gruppe von Clips wiedergegeben werden soll. Sie können auch das **PREVIEWMODE-Attribut** des **ASX-Elements** in Verbindung mit dem **PREVIEWDURATION-Element** verwenden, um anzugeben, wie lange ein Clip oder eine Gruppe von Clips wiedergegeben werden soll. Legen Sie das **PREVIEWMODE-Attribut** auf YES fest, um das **PREVIEWDURATION-Element** zu verwenden, um anzugeben, wie lange der zugeordnete Clip wiedergegeben werden soll. Die Elemente **PREVIEWDURATION** und **DURATION** weisen das gleiche Verhalten auf.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -105,15 +105,15 @@ Verwenden Sie das **Duration** -Element, um anzugeben, wie lange ein Clip oder e
 [**Verwenden von Metafile-Wiedergabelisten**](using-metafile-playlists.md)
 </dt> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Leitfaden für Windows Media-Metadateien**](windows-media-metafile-guide.md)
+[**Windows Media Metafile Guide**](windows-media-metafile-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

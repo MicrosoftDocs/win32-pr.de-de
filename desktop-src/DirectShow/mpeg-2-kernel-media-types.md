@@ -1,38 +1,38 @@
 ---
-description: Für mehrere MPEG-2-Medientyp-GUIDs definiert das Windows-DDK Namen, die sich von den in DirectShow verwendeten Namen unterscheiden. In der folgenden Tabelle sind die DirectShow-Namen (in "ksuuids. h" definiert) und die entsprechenden kernelmodusnamen (in "ksmedia. h" definiert) aufgeführt.
+description: Für mehrere MPEG-2-Medientyp-GUIDs definiert das Windows DDK Namen, die sich von den in DirectShow verwendeten Namen unterscheiden. Die folgende Tabelle zeigt die DirectShow-Namen (definiert in Ksuuids.h) und die entsprechenden Kernelmodusnamen (definiert in Ksmedia.h).
 ms.assetid: ecf94552-5a0f-464c-9f9b-4861faa38d05
-title: MPEG-2-Kernel Medientypen (DShow. h)
+title: MPEG-2-Kernelmedientypen (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 37b03e6d3cbc32c987110ceac98e6aeef6617d6d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 41cfbbd93bfb4d9c21a7ab2b496e69458e2754d95ae4427ad163c4f2a06e4165
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361369"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118952259"
 ---
-# <a name="mpeg-2-kernel-media-types"></a>MPEG-2-Kernel-Medientypen
+# <a name="mpeg-2-kernel-media-types"></a>MPEG-2-Kernelmedientypen
 
-Für mehrere MPEG-2-Medientyp-GUIDs definiert das Windows-DDK Namen, die sich von den in DirectShow verwendeten Namen unterscheiden. In der folgenden Tabelle sind die DirectShow-Namen (in "ksuuids. h" definiert) und die entsprechenden kernelmodusnamen (in "ksmedia. h" definiert) aufgeführt.
+Für mehrere MPEG-2-Medientyp-GUIDs definiert das Windows DDK Namen, die sich von den in DirectShow verwendeten Namen unterscheiden. Die folgende Tabelle zeigt die DirectShow-Namen (definiert in Ksuuids.h) und die entsprechenden Kernelmodusnamen (definiert in Ksmedia.h).
 
 
 
-| Name in "ksuuids. h"              | Name in ksmedia. h                          |
+| Name in "Ksuuids.h"              | Name in Ksmedia.h                          |
 |--------------------------------|--------------------------------------------|
-| Formatieren von \_ WaveFormatEx           | ksdataformat- \_ Spezifizierer \_ WaveFormatEx      |
-| MPEG2Video formatieren \_             | Video zur ksdataformat- \_ Spezifizierer-Klasse \_ \_      |
-| mediasubtype \_ ATSC \_ Si         | ksdataformat- \_ Untertyp \_ ATSC \_ Si            |
-| Mediasubtype \_ Dolby \_ AC3       | Ksdataformat \_ -Untertyp \_ AC3 \_ -Audiodatei          |
-| mediasubtype- \_ DVB \_ Si          | ksdataformat- \_ Untertyp \_ DVB \_ Si             |
-| mediasubtype \_ DVD \_ LPCM \_ -Audiodatei | ksdataformat \_ -Untertyp \_ LPCM \_ -Audiodatei         |
-| Mediasubtype \_ \_ -Audiodatei     | "Ksdataformat" \_ -Untertyp " \_ MPEG2" \_        |
-| Mediasubtype \_ - \_ Programm   | Statischer \_ ksdataformat- \_ Typ " \_ MPEG2 \_ " |
-| Mediasubtype \_ MPEG2- \_ Transport | Ksdataformat- \_ Typ " \_ MPEG2- \_ Transport"       |
-| Video zu mediasubtype \_ MPEG2 \_     | Ksdataformat- \_ Untertyp "MPEG2"- \_ \_ Video        |
-| Abschnitte zu "MediaType" \_ \_     | "Ksdataformat"- \_ Typ " \_ MPEG2" \_        |
-| MediaType \_ -Audiodatei               | ksdataformat \_ \_ -typaudiodatei                  |
-| MediaType \_ MPEG2 \_          | Ksdataformat- \_ Typ " \_ MPEG2" \_             |
-| MediaType- \_ Video               | Video zu ksdataformat- \_ Typ \_                  |
+| FORMAT \_ WaveFormatEx           | \_KSDATAFORMAT-SPEZIFIZIERER \_ WAVEFORMATEX      |
+| FORMAT \_ MPEG2Video             | \_KSDATAFORMAT-BEZEICHNER \_ MPEG2 \_ VIDEO      |
+| MEDIASUBTYPE \_ ATSC \_ SI         | \_KSDATAFORMAT-UNTERTYP \_ ATSC \_ SI            |
+| MEDIASUBTYPE \_ DOLBY \_ AC3       | KSDATAFORMAT \_ SUBTYPE \_ AC3 \_ AUDIO          |
+| MEDIASUBTYPE \_ DVB \_ SI          | \_KSDATAFORMAT-UNTERTYP \_ : SI \_             |
+| MEDIASUBTYPE \_ DVD \_ LPCM \_ AUDIO | KSDATAFORMAT \_ SUBTYPE \_ LPCM \_ AUDIO         |
+| MEDIASUBTYPE \_ \_ MPEG2-AUDIO     | KSDATAFORMAT \_ SUBTYPE \_ MPEG2 \_ AUDIO        |
+| MEDIASUBTYPE \_ \_ MPEG2-PROGRAMM   | STATIC \_ KSDATAFORMAT \_ TYPE \_ MPEG2 \_ PROGRAM |
+| MEDIASUBTYPE \_ \_ MPEG2-TRANSPORT | KSDATAFORMAT-TYP \_ \_ \_ MPEG2-TRANSPORT       |
+| MEDIASUBTYPE \_ MPEG2 \_ VIDEO     | KSDATAFORMAT \_ SUBTYPE \_ MPEG2 \_ VIDEO        |
+| MEDIATYPE \_ \_ MPEG2-ABSCHNITTE     | \_MPEG2-ABSCHNITTE DES KSDATAFORMAT-TYPS \_ \_        |
+| MEDIATYPE \_ Audio               | KSDATAFORMAT-AUDIO \_ \_                  |
+| MEDIATYPE \_ MPEG2 \_ PES          | KSDATAFORMAT-TYP \_ \_ MPEG2 \_ PES             |
+| \_MEDIATYPE-Video               | KSDATAFORMAT-TYP \_ \_ VIDEO                  |
 
 
 
@@ -44,11 +44,11 @@ Für mehrere MPEG-2-Medientyp-GUIDs definiert das Windows-DDK Namen, die sich vo
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

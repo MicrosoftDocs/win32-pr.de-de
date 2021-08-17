@@ -1,5 +1,5 @@
 ---
-description: 'InkPicture.SelectionResizing-Ereignis: Tritt auf, wenn sich die Größe der aktuellen Auswahl ändern wird, z. B. durch Änderungen an der Benutzeroberfläche, Durchschneide- und Einfügevorgänge oder die Selection-Eigenschaft.'
+description: 'InkPicture.SelectionResizing-Ereignis: Tritt ein, wenn sich die Größe der aktuellen Auswahl ändert, z. B. durch Änderungen an der Benutzeroberfläche, Ausschneide- und Einfügeprozeduren oder die Selection-Eigenschaft.'
 ms.assetid: da708712-2773-45f5-9d9b-49fabe7fdb5a
 title: InkPicture.SelectionResizing-Ereignis (Msinkaut.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118966959"
 ---
 # <a name="inkpictureselectionresizing-event"></a>InkPicture.SelectionResizing-Ereignis
 
-Tritt ein, wenn sich die Größe der aktuellen Auswahl ändern wird, z. B. durch Änderungen [](/windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_selection) an der Benutzeroberfläche, durch Ausschneide- und Einfügevorgänge oder durch die Selection-Eigenschaft.
+Tritt ein, wenn sich die Größe der aktuellen Auswahl ändert, z. B. durch Änderungen [](/windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_selection) an der Benutzeroberfläche, Prozeduren zum Ausschneiden und Einfügen oder die Selection-Eigenschaft.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,10 +33,10 @@ void SelectionResizing(
 *CurSelectionRect* \[ In\]
 </dt> <dd>
 
-Das umgebundene Rechteck der Auswahl nach dem **SelectionResizing-Ereignis.**
+Das umgrenzende Rechteck der Auswahl nach dem **SelectionResizing-Ereignis.**
 
 > [!Note]  
-> Dieses Rechteck wird in Clientfensterkoordinaten angegeben, was Szenarien wie das Beibehalten des Seitenverhältnisses beim Ändern der Größe ermöglicht.
+> Dieses Rechteck wird in Clientfensterkoordinaten angegeben, was Szenarien wie die Beibehaltung des Seitenverhältnisses bei der Größenänderung ermöglicht.
 
  
 
@@ -48,7 +48,7 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in den dispatch-only-Schnittstellen (dispinterfaces) **\_ von IInkOverlayEvents** und **\_ IInkPictureEvents** mit der ID DISPID \_ IOESelectionResizing definiert.
+Diese Ereignismethode wird in den Dispatch-only-Schnittstellen **\_ IInkOverlayEvents** und **\_ IInkPictureEvents** (dispinterfaces) mit der ID DISPID \_ IOESelectionResizing definiert.
 
 ## <a name="requirements"></a>Anforderungen
 

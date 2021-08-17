@@ -1,7 +1,7 @@
 ---
-description: Testet, ob das BoundingBox-Objekt ein angegebenes Objekt enthält.
+description: Testet, ob boundingBox ein angegebenes -Objekt enthält.
 ms.assetid: 876c7764-9378-48e5-812c-3646930900c5
-title: BoundingBox. enthält Methoden
+title: BoundingBox.Contains-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,29 +11,29 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 485dbbaf5ab4522eb50fe598325e5ecbb48fff57
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fe3f9164a403971b8c0ba0fed38ef256037324698487003e4aa52932ddb1463c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528121"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119118607"
 ---
-# <a name="boundingboxcontains-methods"></a>BoundingBox. enthält Methoden
+# <a name="boundingboxcontains-methods"></a>BoundingBox.Contains-Methoden
 
-Testet, ob das BoundingBox-Objekt ein angegebenes Objekt enthält.
+Testet, ob boundingBox ein angegebenes -Objekt enthält.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                               | BESCHREIBUNG                                                                                                                                |
+| Methode                                                                               | Beschreibung                                                                                                                                |
 |:-------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
-| [**BoundingBox:: enthält (xmvector)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingbox-contains)                   | Testet, ob das BoundingBox-Feld einen angegebenen Punkt enthält.<br/>                                                                   |
-| [**BoundingBox:: enthält (const BoundingBox-&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingbox-contains(constboundingbox_))         | Testet, ob das BoundingBox-Feld eine andere BoundingBox enthält.<br/>                                                                     |
-| [**BoundingBox:: enthält (const boundingsphere&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingbox-contains(constboundingsphere_))      | Testet, ob das BoundingBox-Feld eine angegebene boundingsphere enthält.<br/>                                                              |
-| [**BoundingBox:: enthält (const boundingfrustum-&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingbox-contains(constboundingfrustum_))     | Testet, ob das [**BoundingBox-Feld**](/windows/desktop/api/DirectXCollision/ns-directxcollision-boundingbox) die angegebene [**boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)-Klasse enthält.<br/>         |
-| [**BoundingBox:: enthält (xmvector, xmvector, xmvector)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingbox-contains(fxmvector_fxmvector_fxmvector)) | Testet, ob das BoundingBox-Feld ein angegebenes Dreieck enthält.<br/>                                                                     |
-| [**BoundingBox:: enthält (const boundingorientedbox-&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingbox-contains(constboundingorientedbox_)) | Testet, ob das [**BoundingBox**](/windows/desktop/api/DirectXCollision/ns-directxcollision-boundingbox) -Feld das angegebene [**boundingorientedbox-Feld**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)enthält.<br/> |
+| [**BoundingBox::Contains (XMVECTOR)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingbox-contains)                   | Testet, ob boundingBox einen angegebenen Punkt enthält.<br/>                                                                   |
+| [**BoundingBox::Contains (const BoundingBox&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingbox-contains(constboundingbox_))         | Testet, ob BoundingBox ein anderes BoundingBox-Feld enthält.<br/>                                                                     |
+| [**BoundingBox::Contains (const BoundingSphere&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingbox-contains(constboundingsphere_))      | Testet, ob BoundingBox eine angegebene BoundingSphere enthält.<br/>                                                              |
+| [**BoundingBox::Contains (const BoundingFrustum&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingbox-contains(constboundingfrustum_))     | Testet, ob [**boundingBox**](/windows/desktop/api/DirectXCollision/ns-directxcollision-boundingbox) das angegebene [**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)enthält.<br/>         |
+| [**BoundingBox::Contains (XMVECTOR,XMVECTOR,XMVECTOR)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingbox-contains(fxmvector_fxmvector_fxmvector)) | Testen Sie, ob boundingBox ein angegebenes Dreieck enthält.<br/>                                                                     |
+| [**BoundingBox::Contains (const BoundingOrientedBox&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingbox-contains(constboundingorientedbox_)) | Testet, ob [**boundingBox**](/windows/desktop/api/DirectXCollision/ns-directxcollision-boundingbox) das angegebene [**BoundingOrientedBox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)enthält.<br/> |
 
 
 
@@ -44,10 +44,10 @@ Testet, ob das BoundingBox-Objekt ein angegebenes Objekt enthält.
 [Methoden](boundingbox-methods.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**BoundingBox**](/windows/desktop/api/DirectXCollision/ns-directxcollision-boundingbox)
+[**Boundingbox**](/windows/desktop/api/DirectXCollision/ns-directxcollision-boundingbox)
 </dt> </dl>
 
  

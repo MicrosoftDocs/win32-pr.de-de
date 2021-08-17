@@ -1,19 +1,19 @@
 ---
-description: Die xmcolor-Struktur macht die folgenden Operatoren verfügbar.
+description: Die XMCOLOR-Struktur macht die folgenden Operatoren verfügbar.
 ms.assetid: 1ffa02ad-4a7e-474e-9e7f-d2148ca42d57
-title: Xmcolor-Operatoren
+title: XMCOLOR-Operatoren
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0569b4f3113cb5aafe0d9b15728803acf73eaf84
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0e6626b0fa105cdb846b15ed2e0cc2a7b9d0eeed42c4826aa6bf4811d29ebc6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215099"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119841640"
 ---
-# <a name="xmcolor-operators"></a>Xmcolor-Operatoren
+# <a name="xmcolor-operators"></a>XMCOLOR-Operatoren
 
-Die [**xmcolor**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor) -Struktur macht die folgenden Operatoren verfügbar.
+Die [**XMCOLOR-Struktur**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor) macht die folgenden Operatoren verfügbar.
 
 > [!Note]  
 > Die hier aufgeführten Operatoren sind nur unter C++ verfügbar.
@@ -26,8 +26,8 @@ Die [**xmcolor**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvecto
 
 | Methoden                                                            | BESCHREIBUNG                                                                                                           |
 |--------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| [**Operator UInt32 \_ t**](/windows/win32/api/directxpackedvector/nf-directxpackedvector-xmcolor-operatoruint32_t)<br/> | Gibt eine Instanz von zurück, `uint32_t` die die Komponenten der- `XMCOLOR` Instanz in einem gepackten Format enthält. <br/> |
-| [**Operator =**](xmcolor-operator-eq.md)<br/>               | Weist der aktuellen Instanz von Vektor Komponenten Daten zu `XMCOLOR` .<br/>                                        |
+| [**operator uint32 \_ t**](/windows/win32/api/directxpackedvector/nf-directxpackedvector-xmcolor-operatoruint32_t)<br/> | Gibt eine Instanz von `uint32_t` zurück, die die Komponenten der `XMCOLOR` Instanz in einem gepackten Format enthält. <br/> |
+| [**operator =**](xmcolor-operator-eq.md)<br/>               | Weist der aktuellen Instanz von Vektorkomponentendaten `XMCOLOR` zu.<br/>                                        |
 
 
 
@@ -37,13 +37,13 @@ Die [**xmcolor**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvecto
 
 <dl> <dt>
 
-[Xmcolor-Erweiterungen](ovw-xmcolor-extensions.md)
+[XMCOLOR-Erweiterungen](ovw-xmcolor-extensions.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Xmcolor**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor)
+[**XMCOLOR**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor)
 </dt> </dl>
 
  

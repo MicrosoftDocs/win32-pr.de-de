@@ -1,28 +1,28 @@
 ---
-description: Com+-Low-Memory Aktivierungs Gates
+description: COM+ Low-Memory Activation Gates
 ms.assetid: 9805dc94-da38-4b2c-b18c-5f494b49691b
-title: Com+-Low-Memory Aktivierungs Gates
+title: COM+ Low-Memory Activation Gates
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ad955cb1ed47008f52f1cf9b17edfc43b92aa674
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: bfa35b162b760c818436b62e889277e374d416e2d75292192b2a639d8609390c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119129162"
 ---
-# <a name="com-low-memory-activation-gates"></a>Com+-Low-Memory Aktivierungs Gates
+# <a name="com-low-memory-activation-gates"></a>COM+ Low-Memory Activation Gates
 
-Der Gatewaydienst für die com+-Aktivierungs Überprüfung überprüft automatisch den Arbeitsspeicher, bevor ein com+-Server oder-Objekt erstellt wird. Wenn der Prozentsatz des für die Anwendung verfügbaren virtuellen Speichers unter einen festgelegten Schwellenwert fällt, schlägt die Aktivierung fehl, bevor das Objekt erstellt wird. Auf diese Weise wird die Zuverlässigkeit des Systems durch den Aktivierungs Dienst für niedrige Arbeitsspeicher erheblich erhöht.
+Der COM+-Aktivierungsgatedienst mit geringem Arbeitsspeicher überprüft den Arbeitsspeicher automatisch, bevor ein COM+-Server oder -Objekt erstellt wird. Wenn der Prozentsatz des für die Anwendung verfügbaren virtuellen Arbeitsspeichers unter einen festen Schwellenwert fällt, schlägt die Aktivierung fehl, bevor das Objekt erstellt wird. Auf diese Weise verbessert der Aktivierungsgatedienst mit geringem Arbeitsspeicher die Zuverlässigkeit des Systems erheblich.
 
-Die folgenden Themen enthalten Hintergrundinformationen und Aufgabeninformationen über den com+-Aktivierungs Dienst für niedrige Arbeitsspeicher.
+Die folgenden Themen enthalten Hintergrund- und Aufgabeninformationen zum COM+-Aktivierungsgatedienst mit geringem Arbeitsspeicher.
 
 
 
-| Thema                                                                                                 | BESCHREIBUNG                                                                            |
+| Thema                                                                                                 | Beschreibung                                                                            |
 |-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| [Konzepte der com+-Low-Memory Activation Gates](com--low-memory-activation-gates-concepts.md)<br/> | Bietet eine Übersicht über den com+-Aktivierungs Dienst für niedrig Arbeitsspeicher.<br/>       |
-| [Aufgaben der com+-Low-Memory Aktivierungs Gates](com--low-memory-activation-gates-tasks.md)<br/>       | Diese Funktion kann nicht konfiguriert werden, sodass ihr keine Aufgaben zugeordnet sind.<br/> |
+| [COM+ Low-Memory Activation Gates-Konzepte](com--low-memory-activation-gates-concepts.md)<br/> | Bietet eine Übersicht über den COM+-Aktivierungsgatedienst mit geringem Arbeitsspeicher.<br/>       |
+| [COM+ Low-Memory Activation Gates Tasks](com--low-memory-activation-gates-tasks.md)<br/>       | Dieses Feature kann nicht konfiguriert werden, sodass ihm keine Aufgaben zugeordnet sind.<br/> |
 
 
 

@@ -2,7 +2,7 @@
 description: Versucht, den Dienst fortzusetzen.
 ms.assetid: df582402-d932-4132-a1ad-257b2993bbf6
 ms.tgt_platform: multiple
-title: ResumeService-Methode der Win32_BaseService-Klasse
+title: ResumeService-Methode der Win32_BaseService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: bba09180121d5649542f70a01adf2cb3acd7b142
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: bff71de077049df78718f6a4a12a0e3dc1e208bb3448ef6995a492fd518e75b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922910"
 ---
-# <a name="resumeservice-method-of-the-win32_baseservice-class"></a>ResumeService-Methode der Win32 \_ baseservice-Klasse
+# <a name="resumeservice-method-of-the-win32_baseservice-class"></a>ResumeService-Methode der Win32 \_ BaseService-Klasse
 
-Die **ResumeService** - [WMI-Klassen](/windows/desktop/WmiSdk/retrieving-a-class) Methode versucht, den Dienst in den Status "wieder aufgenommen" zu versetzen.
+Die **ResumeService** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) versucht, den Dienst in den Status "Fortgesetzt" zu setzen.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,11 +69,11 @@ Die Anforderung wird nicht unterstützt.
 
 2
 
-Der Benutzer verfügte nicht über die erforderlichen Zugriffsrechte.
+Der Benutzer hatte nicht den erforderlichen Zugriff.
 
 </dd> <dt>
 
-**Abhängige Dienste werden ausgeführt**
+**Ausgeführte abhängige Dienste**
 </dt> <dd>
 
 3
@@ -82,7 +82,7 @@ Der Dienst kann nicht beendet werden, da andere ausgeführte Dienste davon abhä
 
 </dd> <dt>
 
-**Ungültige Dienst Kontrolle.**
+**Ungültige Dienststeuerung**
 </dt> <dd>
 
 4
@@ -91,12 +91,12 @@ Der angeforderte Steuerungscode ist nicht gültig, oder es ist für den Dienst n
 
 </dd> <dt>
 
-**Der Dienst kann keine Steuerung akzeptieren.**
+**Der Dienst kann die Steuerung nicht akzeptieren**
 </dt> <dd>
 
 5
 
-Der angeforderte Steuerungs Code kann nicht an den Dienst gesendet werden, weil der Status des Diensts ([**Win32 \_ baseservice**](win32-baseservice.md)[**State**](win32-baseservice.md) -Eigenschaft) gleich 0, 1 oder 2 ist.
+Der angeforderte Steuerungscode kann nicht an den Dienst gesendet werden, da der Zustand des Diensts ([**Win32 \_ BaseService**](win32-baseservice.md)[**State-Eigenschaft)**](win32-baseservice.md) gleich 0, 1 oder 2 ist.
 
 </dd> <dt>
 
@@ -109,7 +109,7 @@ Der Dienst wurde nicht gestartet.
 
 </dd> <dt>
 
-**Service Request-Timeout**
+**Timeout für Dienstanforderungen**
 </dt> <dd>
 
 7
@@ -118,7 +118,7 @@ Der Dienst hat auf die Startanforderung nicht rechtzeitig reagiert.
 
 </dd> <dt>
 
-**Unbekannter Fehler.**
+**Unbekannter Fehler**
 </dt> <dd>
 
 8
@@ -132,11 +132,11 @@ Interaktiver Prozess.
 
 9
 
-Der Verzeichnispfad zur ausführbaren Dienst Datei wurde nicht gefunden.
+Der Verzeichnispfad zur ausführbaren Dienstdatei wurde nicht gefunden.
 
 </dd> <dt>
 
-**Dienst wird bereits ausgeführt.**
+**Dienst wird bereits ausgeführt**
 </dt> <dd>
 
 10
@@ -145,7 +145,7 @@ Der Dienst wird schon ausgeführt.
 
 </dd> <dt>
 
-**Dienst Datenbank gesperrt**
+**Dienstdatenbank gesperrt**
 </dt> <dd>
 
 11
@@ -154,7 +154,7 @@ Die Datenbank zum Hinzufügen eines neuen Diensts ist gesperrt.
 
 </dd> <dt>
 
-**Dienst Abhängigkeit gelöscht**
+**Dienstabhängigkeit gelöscht**
 </dt> <dd>
 
 12
@@ -163,7 +163,7 @@ Eine Abhängigkeit, von der dieser Dienst abhängt, wurde aus dem System entfern
 
 </dd> <dt>
 
-**Dienst Abhängigkeitsfehler**
+**Dienstabhängigkeitsfehler**
 </dt> <dd>
 
 13
@@ -181,7 +181,7 @@ Der Dienst wurde vom System deaktiviert.
 
 </dd> <dt>
 
-**Fehler bei der Dienst Anmeldung**
+**Dienstanmeldung fehlgeschlagen**
 </dt> <dd>
 
 15
@@ -190,7 +190,7 @@ Der Dienst hat nicht die richtige Authentifizierung, um im System ausgeführt zu
 
 </dd> <dt>
 
-**Der Dienst wurde zum Löschen markiert.**
+**Dienst zum Löschen markiert**
 </dt> <dd>
 
 16
@@ -199,7 +199,7 @@ Dieser Dienst wird aus dem System entfernt.
 
 </dd> <dt>
 
-**Dienst ohne Thread**
+**Dienst kein Thread**
 </dt> <dd>
 
 17
@@ -208,7 +208,7 @@ Es gibt keinen Ausführungsthread für den Dienst.
 
 </dd> <dt>
 
-**Status zirkuläre Abhängigkeit**
+**Statuskreisabhängigkeit**
 </dt> <dd>
 
 18
@@ -226,34 +226,34 @@ Es wird ein Dienst unter dem gleichen Namen ausgeführt.
 
 </dd> <dt>
 
-**Ungültiger Name**
+**Status Ungültiger Name**
 </dt> <dd>
 
 20
 
-Der Name des diensdienstanbieter enthält ungültige Zeichen.
+Der Name des Diensts enthält ungültige Zeichen.
 
 </dd> <dt>
 
-**Ungültiger Parameter.**
+**Ungültiger Statusparameter**
 </dt> <dd>
 
 21
 
-An den Dienst wurden ungültige Parameter übermittelt.
+Ungültige Parameter wurden an den Dienst übergeben.
 
 </dd> <dt>
 
-**Ungültiges Dienst Konto.**
+**Status Ungültiges Dienstkonto**
 </dt> <dd>
 
 22
 
-Das Konto, unter dem dieser Dienst ausgeführt werden soll, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Dienstanbieter.
+Das Konto, unter dem dieser Dienst ausgeführt werden soll, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Diensts.
 
 </dd> <dt>
 
-**Status Dienst vorhanden**
+**Statusdienst vorhanden**
 </dt> <dd>
 
 23
@@ -262,7 +262,7 @@ Der Dienst ist in der Datenbank der im System verfügbaren Dienste vorhanden.
 
 </dd> <dt>
 
-**Der Dienst wurde bereits angehalten.**
+**Dienst wurde bereits angehalten**
 </dt> <dd>
 
 24
@@ -286,20 +286,20 @@ Der Dienst ist im System derzeitig angehalten.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ baseservice**](win32-baseservice.md)
+[**Win32 \_ BaseService**](win32-baseservice.md)
 </dt> </dl>
 
  

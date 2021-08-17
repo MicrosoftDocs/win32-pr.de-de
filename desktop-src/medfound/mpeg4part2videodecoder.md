@@ -15,7 +15,7 @@ ms.locfileid: "118973019"
 
 Der MPEG4 Part 2 Video-Decoder decodiert Videostreams, die gemäß dem MPEG4 Part 2-Standard codiert wurden.
 
-Sie können eine Instanz des MPEG4 Part 2 Video-Decoders erstellen, indem Sie **CoCreateInstance** aufrufen. Verwenden Sie den Klassenbezeichner **CLSID \_ CMpeg4sDecMediaObject,** um eine Instanz des Decoders zu erstellen, die sich als DirectX-Medienobjekt (DMO) verhält. Verwenden Sie den Klassenbezeichner **CLSID \_ CMpeg4sDecMFT,** um einen Decoder zu erstellen, der sich als Media Foundation Transform (MFT) verhält.
+Sie können eine Instanz des MPEG4 Part 2 Video-Decoders erstellen, indem Sie **CoCreateInstance aufrufen.** Verwenden Sie den Klassenbezeichner **CLSID \_ CMpeg4sDecMediaObject,** um eine Instanz des Decoders zu erstellen, die sich als DirectX Media Object (DMO) verhält. Verwenden Sie den Klassenbezeichner **CLSID \_ CMpeg4sDecMFT,** um eine Vererbung des Decoders zu erstellen, der sich wie eine Media Foundation Transform (MFT) verhält.
 
 ## <a name="input-types"></a>Eingabetypen
 
@@ -30,13 +30,13 @@ Der MPEG4 Part 2 Video-Decoder unterstützt die folgenden Eingabemedientypen.
 
 ## <a name="output-types"></a>Ausgabetypen
 
-Der MPEG4 Part 2 Video-Decoder unterstützt die folgenden Ausgabemedienuntertypen, wenn er als DMO fungiert.
+Der MPEG4 Part 2 Video-Decoder unterstützt die folgenden Ausgabemedienuntertypen, wenn er als DMO.
 
 -   MEDIASUBTYPE \_ YV12
 -   MEDIASUBTYPE \_ NV12
 -   MEDIASUBTYPE \_ YUY2
--   MEDIASUBTYPE \_ UYVY
--   MEDIASUBTYPE \_ YVYO
+-   MEDIASUBTYPE \_ UY WIE
+-   MEDIASUBTYPE \_ YVINNEN
 -   MEDIASUBTYPE \_ NV11
 -   MEDIASUBTYPE \_ RGB32
 -   MEDIASUBTYPE \_ RGB24
@@ -44,7 +44,7 @@ Der MPEG4 Part 2 Video-Decoder unterstützt die folgenden Ausgabemedienuntertype
 -   MEDIASUBTYPE \_ RGB555
 -   MEDIASUBTYPE \_ RGB8
 
-Der MPEG4 Part 2 Video-Decoder unterstützt die folgenden Ausgabemedienuntertypen, wenn er als MFT fungiert.
+Der MPEG4 Part 2 Video-Decoder unterstützt die folgenden Ausgabemedienuntertypen, wenn er als MFT agiert.
 
 -   MEDIASUBTYPE \_ NV12
 -   MEDIASUBTYPE \_ YV12
@@ -58,35 +58,35 @@ Der MPEG4 Part 2 Video-Decoder akzeptiert die folgenden Formate.
 -   [**MFVideoInfo**](/windows/desktop/api/mfobjects/ns-mfobjects-mfvideoinfo)
 -   [**MPEG2VIDEOINFO**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-mpeg2videoinfo) (Nur der VIH2-Teil des Headers wird verwendet.)
 
-## <a name="interfaces-for-the-dmo"></a>Schnittstellen für die DMO
+## <a name="interfaces-for-the-dmo"></a>Schnittstellen für DMO
 
 Wenn Sie eine Instanz des MPEG4 Part 2 Video-Decoders als DMO erstellen, macht der Decoder die folgenden Schnittstellen verfügbar.
 
 -   [**IMediaObject**](/previous-versions/windows/desktop/api/mediaobj/nn-mediaobj-imediaobject)
 -   [**ICodecAPI**](/windows/win32/api/strmif/nn-strmif-icodecapi)
 
-Sie können eine [**IMediaObject-Schnittstelle**](/previous-versions/windows/desktop/api/mediaobj/nn-mediaobj-imediaobject) abrufen, indem **Sie CoCreateInstance** aufrufen, und Sie können eine [**ICodecAPI-Schnittstelle**](/windows/win32/api/strmif/nn-strmif-icodecapi) abrufen, indem Sie **QueryInterface** aufrufen.
+Sie können eine [**IMediaObject-Schnittstelle**](/previous-versions/windows/desktop/api/mediaobj/nn-mediaobj-imediaobject) abrufen, indem Sie **CoCreateInstance** aufrufen, und Sie können eine [**ICodecAPI-Schnittstelle**](/windows/win32/api/strmif/nn-strmif-icodecapi) abrufen, indem **Sie QueryInterface aufrufen.**
 
 ## <a name="interfaces-for-the-mft"></a>Schnittstellen für MFT
 
 Wenn Sie eine Instanz des MPEG2 Part 2 Video-Decoders als MFT erstellen, macht der Decoder die folgenden Schnittstellen verfügbar.
 
--   [**ÜBERTRANSFORM**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)
--   [**ATTRIBUTEAttributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)
--   [**HAPQualityAdvise**](/windows/desktop/api/mfidl/nn-mfidl-imfqualityadvise)
--   [**HAPQualityAdvise2**](/windows/desktop/api/mfidl/nn-mfidl-imfqualityadvise2)
--   [**THICKNESSRateControl**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)
--   [**1000000000**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport)
+-   [**VORRÜBERSETZUNGTransform**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)
+-   [**ATTRIBUTATTRIBUTES**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)
+-   [**BEFIEQualityAdvise**](/windows/desktop/api/mfidl/nn-mfidl-imfqualityadvise)
+-   [**BEFIEQualityAdvise2**](/windows/desktop/api/mfidl/nn-mfidl-imfqualityadvise2)
+-   [**DURCHSCHN.RateControl**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)
+-   [**VERRATRateSupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport)
 
-Sie können einen Zeiger auf die [**INTERFACESTransform-Schnittstelle**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) abrufen, indem Sie **CoCreateInstance** aufrufen, und Sie können einen Zeiger auf die [**INTERFACESAttributes-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) abrufen, indem [**Sie DENTRANSFORM::GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes)aufrufen. Sie können einen Zeiger auf die [**SCHNITTSTELLE "POINTERQualityAdvise"**](/windows/desktop/api/mfidl/nn-mfidl-imfqualityadvise) oder [**"POINTERQualityAdvise2"**](/windows/desktop/api/mfidl/nn-mfidl-imfqualityadvise2) abrufen, indem Sie **QueryInterface** für den MFT aufrufen. Sie können einen Zeiger auf die [**INTERFACESRateControl-**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol) oder [**DIETRATESupport-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) abrufen, indem Sie [**MFGetService**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice) aufrufen und den Dienstbezeichner **MF RATE CONTROL \_ \_ \_ SERVICE** übergeben.
+Sie können durch Aufrufen von **CoCreateInstance** einen Zeiger auf die [**INTERFACE-Schnittstelle VON DERTTRANSFORM**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) abrufen, und Sie können einen Zeiger auf die [**SCHNITTSTELLE DER ATTRIBUTEAttribute abrufen,**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) indem Sie [**DIETRANSFORM::GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes)aufrufen. Sie können durch Aufrufen von **QueryInterface** auf dem MFT einen Zeiger auf [**die BEFIDQualityAdvise-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfqualityadvise) oder [**DIE BEFI-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfqualityadvise2) abrufen. Sie können einen Zeiger auf die [**BENUTZEROBERFLÄCHENTRATEControl**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol) oder [**DIE BEZEICHNERUNTERSTÜTZUNG**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) abrufen, indem Sie [**MFGetService**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice) aufrufen und den Dienstbezeichner **MF \_ RATE CONTROL \_ SERVICE \_ übergeben.**
 
 ## <a name="profiles-and-levels"></a>Profile und Ebenen
 
-Die MPEG4-Spezifikation definiert mehrere Profile, von denen jedes die Tools angibt, die ein Encoder zum Generieren eines codierten Streams verwenden kann. Der MPEG4 Part2 Video Decoder unterstützt zwei dieser Profile: Einfaches visuelles Profil und Erweitertes einfaches Profil. Anders ausgedrückt: Der MPEG4 Part 2 Video-Decoder kann Streams decodieren, die entweder gemäß dem einfachen visuellen Profil oder dem erweiterten einfachen Profil codiert wurden.
+Die MPEG4-Spezifikation definiert mehrere Profile, von denen jedes die Tools angibt, mit denen ein Encoder einen codierten Stream generieren kann. Der MPEG4 Part2-Videodecoder unterstützt zwei dieser Profile: Einfaches visuelles Profil und Erweitertes einfaches Profil. Anders ausgedrückt: Der MPEG4 Part 2 Video-Decoder kann Streams decodieren, die entweder gemäß dem einfachen visuellen Profil oder dem erweiterten einfachen Profil codiert wurden.
 
-Das einfache visuelle Profil unterstützt die einfache Übertragung von Videos mit niedriger Bitrate im progressiven Modus. Es unterstützt nur Intra- und Prediction-Bilder. Es unterstützt auch den kurzen Headermodus, der abwärtskompatibel mit dem H.263-Baselineprofil ist. Ab Windows 10 unterstützt der MPEG-4 Part 2 Video Decoder auch H.263v2 (H.263+), der benutzerdefinierte Bildgrößen unterstützt.
+Das einfache visuelle Profil unterstützt die grundlegende Übertragung von Videos mit niedriger Bitrate im progressiven Modus. Es werden nur Intra- und Prediction-Bilder unterstützt. Außerdem wird der Kurze-Header-Modus unterstützt, der abwärtskompatibel mit dem H.263-Baselineprofil ist. Ab Windows 10 unterstützt der MPEG-4 Part 2 Video Decoder auch H.263v2 (H.263+), das benutzerdefinierte Bildgrößen unterstützt.
 
-Advanced Simple Profile unterstützt alle Tools des einfachen visuellen Profils und darüber hinaus Videointerlacing, B-Frames, Quarter-Motion-Kompensierung, zusätzliche Quantisierungstabellen und globale Bewegungskompensierung.
+Das erweiterte einfache Profil unterstützt alle Tools des einfachen visuellen Profils und unterstützt darüber hinaus Interlacingvideos, B-Frames, Kompensation für 14-prozentig-Bewegungen, zusätzliche Quantisierungstabellen und globale Bewegungsentsprechung.
 
 Die MPEG4-Spezifikation definiert auch mehrere Ebenen, von denen jede Einschränkungen für den von einem Encoder generierten Ausgabestream angibt.
 

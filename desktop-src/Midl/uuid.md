@@ -1,9 +1,9 @@
 ---
 title: uuid-Attribut
-description: Das \ UUID \ Interface-Attribut kennzeichnet einen universellen eindeutigen Bezeichner (UUID), der der-Schnittstelle zugewiesen ist und von anderen Schnittstellen unterschieden wird.
+description: Das \uuid\-Schnittstellenattribut legt einen UUID (Universally Unique Identifier) fest, der der Schnittstelle zugewiesen ist und ihn von anderen Schnittstellen unterscheidet.
 ms.assetid: 72cf12f5-49cd-440d-9665-73211509d050
 keywords:
-- uuid-Attribut-Mittel l
+- uuid-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5688bafe8343bdc1ab508a4e65984cc15c88b124
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 7ce85ad2014e1f0563e2c20af7abec3cc476fab330b38340162f28fd390a5f8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119066640"
 ---
 # <a name="uuid-attribute"></a>uuid-Attribut
 
-Das **\[ UUID \]** Interface-Attribut kennzeichnet einen universellen eindeutigen Bezeichner (UUID), der der-Schnittstelle zugewiesen ist und von anderen Schnittstellen unterschieden wird.
+Das **\[ \] uuid-Schnittstellenattribut** kennzeichnet einen UUID (Universally Unique Identifier), der der Schnittstelle zugewiesen ist und ihn von anderen Schnittstellen unterscheidet.
 
 ``` syntax
 uuid (string-uuid) 
@@ -32,28 +32,28 @@ uuid ("string-uuid")
 
 <dl> <dt>
 
-*Zeichenfolge-UUID* 
+*string-uuid* 
 </dt> <dd>
 
-Gibt eine Zeichenfolge an, die aus 8 hexadezimalen Ziffern gefolgt von einem Bindestrich und dann drei Gruppen von vier hexadezimalen Ziffern gefolgt von einem Bindestrich und dann 12 hexadezimal Ziffern besteht. Sie können die UUID-Zeichenfolge in Anführungszeichen einschließen, es sei denn, Sie verwenden den Mittel l-Compilerschalter [**/OSF**](-osf.md).
+Gibt eine Zeichenfolge an, die aus acht Hexadezimalziffern gefolgt von einem Bindestrich und dann aus drei Gruppen von jeweils vier Hexadezimalziffern gefolgt von einem Bindestrich und dann 12 Hexadezimalziffern besteht. Sie können die UUID-Zeichenfolge in Anführungszeichen einschließen, außer wenn Sie den MIDL-Compilerschalter [**/osf**](-osf.md)verwenden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Lauf Zeit Bibliothek verwendet die von dem **\[ UUID \]** -Attribut Festlegung-Schnittstellen-UUID, um die Kommunikation zwischen Client-und Server Anwendungen zu unterstützen. Das **\[ UUID \]** -Attribut kann in der Liste der Schnittstellen Attribute entweder für eine RPC-Schnittstelle oder eine COM-Schnittstelle angezeigt werden.
+Die Laufzeitbibliothek verwendet die Schnittstellen-UUID, die das **\[ \] uuid-Attribut** festlegt, um die Kommunikation zwischen den Client- und Serveranwendungen herzustellen. Das **\[ \] uuid-Attribut** kann in der Schnittstellenattributliste für eine RPC-Schnittstelle oder eine COM-Schnittstelle angezeigt werden.
 
-Für eine RPC-Schnittstelle muss die Liste der Schnittstellen Attribute entweder das **\[ \] UUID** -Attribut oder das **\[** [**lokale**](local.md) **\]** Attribut enthalten, und das von Ihnen gewählte muss genau einmal erfolgen. Wenn die Liste das **\[ UUID \]** -Attribut enthält, kann Sie auch das **\[** [**Versions**](version.md) **\]** Attribut enthalten.
+Für eine RPC-Schnittstelle muss die Schnittstellenattributliste entweder das **\[ \] uuid-Attribut** oder das **\[** [**lokale**](local.md) **\]** Attribut enthalten, und das von Ihnen verwendete Attribut muss genau einmal auftreten. Wenn die Liste das **\[ \] uuid-Attribut** enthält, kann sie auch das **\[** [](version.md) **\]** Versionsattribut enthalten.
 
-Für eine COM-Schnittstelle (identifiziert durch das **\[** [**Objekt**](object.md) **\]** Schnittstellen Attribut) muss die Schnittstellen Attribut Liste das **\[ UUID \]** -Attribut enthalten, aber es kann nicht das **\[ Versions \]** Attribut enthalten. Die Liste für eine COM-Schnittstelle kann das **\[ lokale \]** Attribut enthalten, auch wenn das **\[ UUID \]** -Attribut vorhanden ist.
+Für eine COM-Schnittstelle (die durch das **\[** [](object.md) **\]** Objektschnittstellenattribut identifiziert wird) muss die Schnittstellenattributliste das **\[ \] uuid-Attribut** enthalten, kann jedoch nicht das **\[ \] Versionsattribut** enthalten. Die Liste für eine COM-Schnittstelle kann das **\[ lokale \]** Attribut enthalten, obwohl das **\[ uuid-Attribut \]** vorhanden ist.
 
-Microsoft RPC unterstützt eine Erweiterung der DCE-IDL, die es ermöglicht, dass die UUID in doppelte Anführungszeichen ("" "") eingeschlossen wird. Das Formular in Anführungszeichen wird für C-Compiler-Präprozessoren benötigt, die UUID-Nummern als Gleit Komma Zahlen interpretieren.
+Microsoft RPC unterstützt eine Erweiterung für DCE-IDL, mit der die UUID in doppelte Anführungszeichen ("" " ") eingeschlossen werden kann. Das Formular in Anführungszeichen wird für C-Compiler-Präprozessoren benötigt, die UUID-Zahlen als Gleitkommazahlen interpretieren.
 
-Alle UUID-Werte sollten Computer generiert werden, um Eindeutigkeit sicherzustellen. Verwenden Sie das Hilfsprogramm uuidgen, um eindeutige UUID-Werte zu generieren.
+Alle UUID-Werte sollten computergeneriert werden, um eindeutig zu sein. Verwenden Sie das Hilfsprogramm Uuidgen, um eindeutige UUID-Werte zu generieren.
 
-Die UUID und die Versionsnummern der-Schnittstelle werden verwendet, um zu bestimmen, ob der Client an den Server gebunden werden kann. Damit der Client an den Server gebunden wird, muss die in den Client-und Server Schnittstellen angegebene UUID identisch sein.
+Die UUID und die Versionsnummern der Schnittstelle werden verwendet, um zu bestimmen, ob der Client eine Bindung an den Server herstellen kann. Damit der Client an den Server gebunden werden kann, muss die in den Client- und Serverschnittstellen angegebene UUID identisch sein.
 
-Beachten Sie, dass eine Schnittstelle ohne Attribute in eine Basis-IDL-Datei importiert werden kann. Allerdings darf die-Schnittstelle nur Datentypen ohne Prozeduren enthalten. Wenn auch eine Prozedur in der Schnittstelle enthalten ist, muss ein lokales Attribut oder ein uuid-Attribut angegeben werden.
+Beachten Sie, dass eine Schnittstelle ohne Attribute in eine IDL-Basisdatei importiert werden kann. Die Schnittstelle darf jedoch nur Datentypen ohne Prozeduren enthalten. Wenn selbst eine Prozedur in der Schnittstelle enthalten ist, muss ein lokales attribut oder ein UUID-Attribut angegeben werden.
 
 ## <a name="examples"></a>Beispiele
 
@@ -67,13 +67,13 @@ uuid("6B29FC40-CA47-1067-B31D-00DD010662DA")
 
 <dl> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**berfläche**](interface.md)
+[**Schnittstelle**](interface.md)
 </dt> <dt>
 
-[**nah**](local.md)
+[**lokal**](local.md)
 </dt> <dt>
 
 [**Objekt (object)**](object.md)
@@ -82,12 +82,12 @@ uuid("6B29FC40-CA47-1067-B31D-00DD010662DA")
 [**/osf**](-osf.md)
 </dt> <dt>
 
-[**version**](version.md)
+[**Version**](version.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

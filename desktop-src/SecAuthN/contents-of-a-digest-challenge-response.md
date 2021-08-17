@@ -1,52 +1,52 @@
 ---
-description: Der Client muss dem Server eine digestaufforderungs-Antwort senden, wenn er eine Digest-Abfrage als Reaktion auf eine Anforderung für eine Ressource empfängt.
+description: Der Client muss dem Server eine Digest-Challenge-Antwort senden, wenn er eine Digest-Anforderung als Antwort auf eine Anforderung für eine Ressource empfängt.
 ms.assetid: a9a30255-a78a-41aa-9dfd-340902f4c550
-title: Inhalt einer digestaufforderungs-Antwort
+title: Inhalt einer Digest-Challenge-Antwort
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b7168a7e6a468ecc7d573ef0bd853ec6db255b19
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: af2a4fd199dfe9e97d69628adb0e6012bc4941929b9c1e96e00de8c42d53eba7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119141153"
 ---
-# <a name="contents-of-a-digest-challenge-response"></a>Inhalt einer digestaufforderungs-Antwort
+# <a name="contents-of-a-digest-challenge-response"></a>Inhalt einer Digest-Challenge-Antwort
 
-Der Client muss dem Server eine digestaufforderungs-Antwort senden, wenn er eine Digest-Abfrage als Reaktion auf eine Anforderung für eine Ressource empfängt. Der Client muss die Anforderung erneut senden und einen Autorisierungs Header mit der Challenge-Antwort bereitstellen. In der folgenden Tabelle werden die Direktiven beschrieben, die eine digestaufforderungs-Antwort bilden.
+Der Client muss dem Server eine Digest-Challenge-Antwort senden, wenn er eine Digest-Anforderung als Antwort auf eine Anforderung für eine Ressource empfängt. Der Client muss die Anforderung erneut senden und einen Autorisierungsheader mit der Antwort auf die Aufforderung angeben. In der folgenden Tabelle werden die Anweisungen beschrieben, aus denen eine Digest-Challenge-Antwort besteht.
 
 
 
 | Anweisung          | Beschreibung                                                                                                                                                                                                                |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| username           | Der Kontoname des [*Sicherheits Prinzipals*](/windows/desktop/SecGloss/s-gly) , der die Ressource anfordert.                                                                  |
-| Bereich              | Der Name der Domäne, die das durch username festgestellte Konto enthält.                                                                                                                                                    |
-| nonce              | Die Nonce, die in der Digest-Herausforderung empfangen wurde.                                                                                                                                                                                |
+| username           | Der Kontoname des [*Sicherheitsprinzipals, der*](/windows/desktop/SecGloss/s-gly) die Ressource an fordert.                                                                  |
+| Realm              | Der Name der Domäne, die das durch den Benutzernamen angegebene Konto enthält.                                                                                                                                                    |
+| nonce              | Die nonce, die in der Digest-Herausforderung empfangen wurde.                                                                                                                                                                                |
 | uri                | Der URI (Universal Resource Identifier) der angeforderten Ressource.                                                                                                                                                         |
-| QoP                | Die [Qualität des Schutzes](quality-of-protection.md).                                                                                                                                                                    |
-| CS                 | Die Nonce-Anzahl. Gibt an, wie oft der Client eine Abfrage Antwort mithilfe der Nonce gesendet hat. Weitere Informationen finden Sie unter der Nonce-Direktive.                                                                              |
-| cnonce             | Ein eindeutiger codierter Wert, der vom Client für jede Abfrage Antwort generiert wurde.                                                                                                                                                |
-| Antwort           | Ein Wert, der gemäß der Digest-Zugriffs Spezifikation ([RFC 2617](https://www.ietf.org/rfc/rfc2617.txt)) berechnet wird. Eine genaue Antwort ist ein eindeutiger Nachweis dafür, dass das Kennwort des Benutzers auf der Clientseite bekannt ist. |
-| Algorithmus          | Der in der Digest-Abfrage empfangene Algorithmus.                                                                                                                                                                            |
-| lässige             | Der in der Digest-Abfrage empfangene nicht transparente Wert.                                                                                                                                                                         |
-| (Nur SASL) Chiffre | Einer der Verschlüsselungs Werte, die in der Digestherausforderung empfangen wurden. Weitere Informationen zur Verschlüsselung finden Sie unter [Qualität von Schutz und Chiffren](quality-of-protection-and-ciphers.md).                                                             |
+| qop                | Die [Qualität des Schutzes.](quality-of-protection.md)                                                                                                                                                                    |
+| Nc                 | Die Nonce-Anzahl. Gibt an, wie oft der Client mithilfe der Nonce eine Antwort auf die Herausforderung gesendet hat. Weitere Informationen finden Sie unter nonce-Direktive.                                                                              |
+| cnonce             | Ein eindeutiger codierter Wert, der vom Client für jede Antwort auf die Herausforderung generiert wird.                                                                                                                                                |
+| Antwort           | Ein Gemäß der Digestzugriffsspezifikation berechneter Wert ([RFC 2617](https://www.ietf.org/rfc/rfc2617.txt)). Eine genaue Antwort ist ein eindeutiger Nachweis dafür, dass das Kennwort des Benutzers auf clientseitiger Seite bekannt ist. |
+| Algorithmus          | Der in der Digest-Herausforderung empfangene Algorithmus.                                                                                                                                                                            |
+| Undurchsichtig             | Der nicht transparente Wert, der in der Digest-Challenge empfangen wurde.                                                                                                                                                                         |
+| Verschlüsselung (nur SASL) | Einer der Verschlüsselungswerte, die in der Digest-Herausforderung empfangen wurden. Weitere Informationen zu Verschlüsselungen finden Sie [unter Quality of Protection und Ciphers](quality-of-protection-and-ciphers.md).                                                             |
 
 
 
  
 
-Microsoft Digest unterstützt die folgenden Benutzername/Bereich-Formulare:
+Microsoft Digest unterstützt die folgenden Benutzernamen-/Bereichsformulare:
 
--   Benutzername Bereich
--   Accountname-Domäne (flach)
+-   Benutzernamesbereich
+-   AccountName-Domäne (flach)
 -   UPN "" (leer)
 -   NetBIOS "" (leer)
 
-Obwohl Großbuchstaben unterstützt werden, wird die Verwendung von Kleinbuchstaben empfohlen, um eine optimale Leistung zu erzielen, die den im Voraus berechneten Hash Werten des Servers entspricht.
+Obwohl Großbuchstaben unterstützt werden, wird die Verwendung von Kleinbuchstaben empfohlen, um eine optimale Leistung mit den vorab berechneten Hashwerten des Servers zu erzielen.
 
-Die Verwendung von vorab berechneten Hashes ist ein neues Feature, mit dem System Operatoren die Verwendung umkehrbarer verschlüsselter Kenn Wörter auf dem Domänen Controller überspringen können. Ein vorab berechneter Hash wird für einen Benutzer erstellt, wenn das Kennwort des Benutzers geändert wird.
+Die Verwendung von vorab berechneten Hashes ist ein neues Feature, mit dem Systemoperatoren die Verwendung umkehrbarer verschlüsselter Kennwörter auf dem Domänencontroller überspringen können. Ein vorab berechneter Hash wird für einen Benutzer gebildet, wenn das Kennwort des Benutzers geändert wird.
 
-Microsoft Digest generiert die digestaufforderungs-Antwort Zeichenfolge für Client Anwendungen. Weitere Informationen finden Sie unter [Erstellen der Digest](generating-the-digest-challenge-response.md)-Abfrage Antwort.
+Microsoft Digest generiert die Digest-Abfrageantwortzeichenfolge für Clientanwendungen. Weitere Informationen finden Sie unter [Generieren der Digest-Challenge-Antwort](generating-the-digest-challenge-response.md).
 
  
 

@@ -1,25 +1,25 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdatabasecorruptedexception-Eigenschaften'
-title: Esentdatabasecorruptedexception-Eigenschaften
+description: 'Weitere Informationen zu: EsentDatabaseCorruptedException-Eigenschaften'
+title: EsentDatabaseCorruptedException-Eigenschaften
 TOCTitle: EsentDatabaseCorruptedException properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.EsentDatabaseCorruptedException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabasecorruptedexception_properties(v=EXCHG.10)
 ms:contentKeyID: 55101334
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: 92533e163b0743b547936cd0a83179de3aa3717f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b88ad63c8bac6e2ce1877f395a325cf37acf1802a39dedb3dcc4be57d680c037
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104554790"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119116430"
 ---
-# <a name="esentdatabasecorruptedexception-properties"></a>Esentdatabasecorruptedexception-Eigenschaften
+# <a name="esentdatabasecorruptedexception-properties"></a>EsentDatabaseCorruptedException-Eigenschaften
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Der [esentdatabasecorruptedexception](./esentdatabasecorruptedexception-class.md) -Typ macht die folgenden Member verfügbar.
+Der [EsentDatabaseCorruptedException-Typ](./esentdatabasecorruptedexception-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -28,54 +28,54 @@ Der [esentdatabasecorruptedexception](./esentdatabasecorruptedexception-class.md
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.data#System_Exception_Data">Daten</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn274313(v=exchg.10).md">Fehler</a></td>
-<td>Ruft den zugrunde liegenden ESENT-Fehler für diese Ausnahme ab. (Geerbt von " <a href="dn274314(v=exchg.10).md">esenterrorexception</a>".)</td>
+<td>Ruft den zugrunde liegenden Esent-Fehler für diese Ausnahme ab. (Geerbt von <a href="dn274314(v=exchg.10).md">EsentErrorException</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.helplink#System_Exception_HelpLink">HelpLink</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.protproperty(exchg.10).gif" title="Geschützte Eigenschaft" alt="Protected property" /></td>
-<td><a href="/dotnet/api/system.exception.hresult#System_Exception_HResult">HRESULT</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td><a href="/dotnet/api/system.exception.hresult#System_Exception_HResult">Hresult</a></td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.innerexception#System_Exception_InnerException">InnerException</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.message#System_Exception_Message">Meldung</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.source#System_Exception_Source">Quelle</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.stacktrace#System_Exception_StackTrace">StackTrace</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.targetsite#System_Exception_TargetSite">TargetSite</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -83,10 +83,10 @@ Der [esentdatabasecorruptedexception](./esentdatabasecorruptedexception-class.md
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabasecorruptedexception-Klasse](./esentdatabasecorruptedexception-class.md)
+[EsentDatabaseCorruptedException-Klasse](./esentdatabasecorruptedexception-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -66,7 +66,7 @@ Datentyp: **CIM \_ FileSystem**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Max(**](/windows/desktop/WmiSdk/standard-qualifiers) 1), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
+Qualifizierer: [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Min.**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
 </dt> </dl>
 
 Ein [**\_ CIM-Dateisystem,**](cim-filesystem.md) das das Dateisystem beschreibt.

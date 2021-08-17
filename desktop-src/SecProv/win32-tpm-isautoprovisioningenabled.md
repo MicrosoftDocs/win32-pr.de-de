@@ -1,7 +1,7 @@
 ---
 description: Gibt an, ob die automatische Bereitstellung des TPM aktiviert ist.
 ms.assetid: C908673C-8BDB-4541-85C6-65FED1EBB535
-title: 'Win32_Tpm:: isautoprovisioningenabled-Methode'
+title: Win32_Tpm::IsAutoProvisioningEnabled-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Win32_tpm.dll
-ms.openlocfilehash: cb269247292646464c6126a2588a50d77b19db9f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 53541922b803a7898b66ce363a5718114b6c5f6d3913a6cde86650200ae76770
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866947"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118890855"
 ---
-# <a name="win32_tpmisautoprovisioningenabled-method"></a>Win32 \_ TPM:: isautoprovisioningenabled-Methode
+# <a name="win32_tpmisautoprovisioningenabled-method"></a>Win32 \_ Tpm::IsAutoProvisioningEnabled-Methode
 
 Gibt an, ob die automatische Bereitstellung des TPM aktiviert ist. Standardmäßig ist die automatische Bereitstellung für Windows 8 und Windows Server 2012 aktiviert.
 
-Diese Methode ist nur für lokale Administratoren zugänglich.
+Auf diese Methode können nur lokale Administratoren zugreifen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ uint32 IsAutoProvisioningEnabled(
 
 <dl> <dt>
 
-*Isautoprovisioningenabled* \[ vorgenommen\]
+*IsAutoProvisioningEnabled* \[ out\]
 </dt> <dd>
 
-Legen Sie diese Einstellung auf **true** fest, wenn die automatische TPM-Bereitstellung aktiviert ist.
+Legen Sie auf **TRUE** fest, wenn die automatische TPM-Bereitstellung aktiviert ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Alle TPM-Fehler sowie Fehler, die für die [TPM-Basisdienste](../tbs/tbs-return-codes.md) spezifisch sind, können zurückgegeben werden.
+Alle TPM-Fehler sowie Fehler, die spezifisch für [TPM-Basisdienste](../tbs/tbs-return-codes.md) sind, können zurückgegeben werden.
 
 Allgemeine Rückgabecodes sind unten aufgeführt.
 
@@ -64,9 +64,9 @@ Allgemeine Rückgabecodes sind unten aufgeführt.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,19 +74,19 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                      |
-| Namespace<br/>                | \\\\.\\ root \\ CIMV2 \\ Security- \\ mikrosofttpm<br/>                                     |
-| MOF<br/>                      | <dl> <dt>Win32- \_ TPM. MOF</dt> </dl> |
-| DLL<br/>                      | <dl> <dt>Win32- \_tpm.dll</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                      |
+| Namespace<br/>                | \\\\.\\ root \\ CIMV2 \\ Security \\ MicrosoftTpm<br/>                                     |
+| MOF<br/>                      | <dl> <dt>Win32 \_ tpm.mof</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Win32 \_tpm.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ TPM**](win32-tpm.md)
+[**Win32 \_ Tpm**](win32-tpm.md)
 </dt> </dl>
 
  

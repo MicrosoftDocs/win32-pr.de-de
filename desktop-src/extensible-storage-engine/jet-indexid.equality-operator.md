@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INDEXID. Gleichheits Operator'
-title: JET_INDEXID. Gleichheits Operator
+description: 'Weitere Informationen finden Sie unter: JET_INDEXID. Gleichheitsoperator'
+title: JET_INDEXID. Gleichheitsoperator
 TOCTitle: 'Equality operator '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_INDEXID.op_Equality(Microsoft.Isam.Esent.Interop.JET_INDEXID,Microsoft.Isam.Esent.Interop.JET_INDEXID)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_indexid.op_equality(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9fa7574aeed52377b516f63549a6f690dc168d72
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: befbbf7a9b4af61d5435cad60bb09fbcc17a3c6e22dd1db9e34d25f5df15948a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118980230"
 ---
-# <a name="jet_indexidequality-operator"></a>JET_INDEXID. Gleichheits Operator
+# <a name="jet_indexidequality-operator"></a>JET_INDEXID. Gleichheitsoperator
 
-Bestimmt, ob zwei angegebene Instanzen von JET_INDEXID gleich sind.
+Bestimmt, ob zwei angegebene Instanzen JET_INDEXID gleich sind.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,29 +64,29 @@ public static bool operator ==(
 
 #### <a name="parameters"></a>Parameter
 
-  - LHS  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INDEXID](./jet-indexid-structure2.md)  
+  - Lhs  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INDEXID](./jet-indexid-structure2.md)  
     
     Die erste zu vergleichende Instanz.
 
 <!-- end list -->
 
   - rhs  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INDEXID](./jet-indexid-structure2.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INDEXID](./jet-indexid-structure2.md)  
     
     Die zweite zu vergleichende Instanz.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
-True, wenn die beiden Instanzen gleich sind.  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
+TRUE, wenn die beiden Instanzen gleich sind.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_INDEXID Struktur](./jet-indexid-structure2.md)
+[JET_INDEXID-Struktur](./jet-indexid-structure2.md)
 
-[Mitglieder JET_INDEXID](./jet-indexid-members.md)
+[JET_INDEXID Mitglieder](./jet-indexid-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

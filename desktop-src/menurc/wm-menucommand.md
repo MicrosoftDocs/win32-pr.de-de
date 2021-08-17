@@ -1,5 +1,5 @@
 ---
-title: WM_MENUCOMMAND Meldung (Winuser.h)
+title: WM_MENUCOMMAND-Nachricht (Winuser.h)
 description: Wird gesendet, wenn der Benutzer eine Auswahl aus einem Menü trifft.
 ms.assetid: 1ed702ef-8d32-4d4c-a68a-ffd199112ced
 keywords:

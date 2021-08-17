@@ -25,7 +25,7 @@ VT \_ I4
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können diesen Wert und die [MFPKEY \_ FORCEFRAMEWIDTH-Eigenschaft](mfpkey-forceframewidthproperty.md) festlegen, um den Encoder zu zwingen, den Videostream mit einer Framegröße zu codieren, die kleiner als die Größe des Eingabe- oder Ausgabeframes ist. Beim Decodieren wird die Größe des Videos in die ursprüngliche Eingabeauflösung geändert.
+Sie können diesen Wert und die [MFPKEY \_ FORCEFRAMEWIDTH-Eigenschaft](mfpkey-forceframewidthproperty.md) festlegen, um zu erzwingen, dass der Encoder den Videostream mit einer Framegröße codiert, die kleiner als die Größe des Eingabe- oder Ausgabeframes ist. Bei der Decodierung wird die Größe des Videos auf die ursprüngliche Eingabeauflösung geändert.
 
 Gültige Rahmendimensionen auf beiden Achsen sind 2 bis 8192 Pixel. Rahmendimensionen müssen durch 2 teilbar sein.
 
@@ -35,7 +35,7 @@ Gültige Rahmendimensionen auf beiden Achsen sind 2 bis 8192 Pixel. Rahmendimens
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
@@ -45,7 +45,7 @@ Gültige Rahmendimensionen auf beiden Achsen sind 2 bis 8192 Pixel. Rahmendimens
 
 <dl> <dt>
 
-[Media Foundation Eigenschaften](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

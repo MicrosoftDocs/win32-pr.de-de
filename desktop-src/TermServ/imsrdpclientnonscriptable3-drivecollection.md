@@ -1,26 +1,26 @@
 ---
-title: IMsRdpClientNonScriptable3 drivecollection (Eigenschaft)
-description: Ruft die Auflistung der zu umgeleiteten Laufwerks Objekte ab.
+title: IMsRdpClientNonScriptable3 DriveCollection-Eigenschaft
+description: Ruft die Auflistung der Laufwerkobjekte ab, die umgeleitet werden sollen.
 ms.assetid: 5aaac605-584b-442e-9d67-1cb8213a70b3
 ms.tgt_platform: multiple
 keywords:
-- Drivecollection-Eigenschaft Remotedesktopdienste
-- Drivecollection-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3 Interface Remotedesktopdienste, drivecollection (Eigenschaft)
-- Drivecollection-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, drivecollection (Eigenschaft)
-- Drivecollection-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, drivecollection (Eigenschaft)
-- Drivecollection-Eigenschaft Remotedesktopdienste, MsRdpClient5-Objekt
-- MsRdpClient5-Objekt Remotedesktopdienste, drivecollection-Eigenschaft
-- Drivecollection-Eigenschaft Remotedesktopdienste, MsRdpClient6-Objekt
-- MsRdpClient6-Objekt Remotedesktopdienste, drivecollection-Eigenschaft
-- Drivecollection-Eigenschaft Remotedesktopdienste, MsRdpClient7-Objekt
-- MsRdpClient7-Objekt Remotedesktopdienste, drivecollection-Eigenschaft
-- Drivecollection-Eigenschaft Remotedesktopdienste, MsRdpClient8-Objekt
-- MsRdpClient8-Objekt Remotedesktopdienste, drivecollection-Eigenschaft
-- Drivecollection-Eigenschaft Remotedesktopdienste, MsRdpClient9-Objekt
-- MsRdpClient9-Objekt Remotedesktopdienste, drivecollection-Eigenschaft
+- DriveCollection-Eigenschaft Remotedesktopdienste
+- DriveCollection-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , DriveCollection-Eigenschaft
+- DriveCollection-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , DriveCollection-Eigenschaft
+- DriveCollection-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , DriveCollection-Eigenschaft
+- DriveCollection-Eigenschaft Remotedesktopdienste , MsRdpClient5-Objekt
+- MsRdpClient5-Objekt Remotedesktopdienste , DriveCollection-Eigenschaft
+- DriveCollection-Eigenschaft Remotedesktopdienste , MsRdpClient6-Objekt
+- MsRdpClient6-Objekt Remotedesktopdienste , DriveCollection-Eigenschaft
+- DriveCollection-Eigenschaft Remotedesktopdienste , MsRdpClient7-Objekt
+- MsRdpClient7-Objekt Remotedesktopdienste , DriveCollection-Eigenschaft
+- DriveCollection-Eigenschaft Remotedesktopdienste , MsRdpClient8-Objekt
+- MsRdpClient8-Objekt Remotedesktopdienste , DriveCollection-Eigenschaft
+- DriveCollection-Eigenschaft Remotedesktopdienste , MsRdpClient9-Objekt
+- MsRdpClient9-Objekt Remotedesktopdienste , DriveCollection-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -41,16 +41,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 37d4bfcaa52d483adc8b0d0885d8316f10ce01d1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 95cc25d53014936e3adab4f12d5c92cfcbb7b35c7b663c4a2c1f7f77fb467fb4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475783"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001140"
 ---
-# <a name="imsrdpclientnonscriptable3drivecollection-property"></a>IMsRdpClientNonScriptable3::D rivecollection (Eigenschaft)
+# <a name="imsrdpclientnonscriptable3drivecollection-property"></a>IMsRdpClientNonScriptable3::D riveCollection-Eigenschaft
 
-Ruft die Auflistung der zu umgeleiteten Laufwerks Objekte ab.
+Ruft die Auflistung der Laufwerkobjekte ab, die umgeleitet werden sollen.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -67,7 +67,7 @@ HRESULT get_DriveCollection(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ruft die Auflistung der Laufwerks Objekte des Typs [**imsrdpdrive**](imsrdpdrive.md)ab.
+Ruft die Auflistung von Laufwerkobjekten vom Typ [**IMSRdpDrive**](imsrdpdrive.md)ab.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,7 +83,7 @@ Ruft die Auflistung der Laufwerks Objekte des Typs [**imsrdpdrive**](imsrdpdrive
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

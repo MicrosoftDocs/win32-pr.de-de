@@ -1,19 +1,19 @@
 ---
 title: WinSNMP-Programmieraufgaben
-description: In der folgenden Tabelle sind die grundlegenden Programmierverfahren zusammengefasst, die Sie zum Codieren einer WinSNMP-Anwendung ausführen müssen, sowie die Themen, die Informationen zu diesen Aufgaben bereitstellen.
+description: In der folgenden Tabelle sind die grundlegenden Programmierverfahren zusammengefasst, die Sie ausführen müssen, um eine WinSNMP-Anwendung zu codieren, sowie die Themen, die Informationen zu diesen Aufgaben bereitstellen.
 ms.assetid: 70c24042-bf44-4484-8e5e-d117e2ba28d5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7543a0fef8fff3f2ef1672ee29d72b0f82b75af7
-ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
+ms.openlocfilehash: 007ed1a50688ceff7cdd3bfd9916c1726773cf5ecb2e175af99880950c5c3db8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "114436619"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119142793"
 ---
 # <a name="winsnmp-programming-tasks"></a>WinSNMP-Programmieraufgaben
 
-In der folgenden Tabelle sind die grundlegenden Programmierverfahren zusammengefasst, die Sie zum Codieren einer WinSNMP-Anwendung ausführen müssen, sowie die Themen, die Informationen zu diesen Aufgaben bereitstellen.
+In der folgenden Tabelle sind die grundlegenden Programmierverfahren zusammengefasst, die Sie ausführen müssen, um eine WinSNMP-Anwendung zu codieren, sowie die Themen, die Informationen zu diesen Aufgaben bereitstellen.
 
 
 
@@ -31,11 +31,11 @@ In der folgenden Tabelle sind die grundlegenden Programmierverfahren zusammengef
 <tbody>
 <tr class="odd">
 <td>Öffnen Sie die WinSNMP-Anwendung.</td>
-<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartup"><strong>SnmpStartup.</strong></a> Weitere Informationen finden Sie unter <a href="opening-and-closing-a-winsnmp-application.md">Öffnen und Schließen einer WinSNMP-Anwendung.</a><br/></td>
+<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartup"><strong>SnmpStartup.</strong></a> Siehe <a href="opening-and-closing-a-winsnmp-application.md">Öffnen und Schließen einer WinSNMP-Anwendung.</a><br/></td>
 </tr>
 <tr class="even">
 <td>Öffnen Sie mindestens eine WinSNMP-Sitzung.</td>
-<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession"><strong>SnmpCreateSession.</strong></a> Weitere Informationen finden Sie unter <a href="opening-and-closing-a-winsnmp-session.md">Öffnen und Schließen einer WinSNMP-Sitzung.</a><br/></td>
+<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession"><strong>SnmpCreateSession</strong></a>. Weitere Informationen finden Sie unter <a href="opening-and-closing-a-winsnmp-session.md">Öffnen und Schließen einer WinSNMP-Sitzung.</a><br/></td>
 </tr>
 <tr class="odd">
 <td>Registrieren Sie sich, um Traps oder Benachrichtigungen zu empfangen.</td>
@@ -77,7 +77,7 @@ Die Anwendung muss möglicherweise andere <a href="winsnmp-functions.md">PDU-Fun
 </tr>
 <tr class="even">
 <td>Schließen Sie die WinSNMP-Anwendung.</td>
-<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcleanup"><strong>SnmpCleanup.</strong></a> Weitere Informationen finden Sie unter <a href="opening-and-closing-a-winsnmp-application.md">Öffnen und Schließen einer WinSNMP-Anwendung.</a><br/></td>
+<td>Verwenden Sie <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcleanup"><strong>SnmpCleanup.</strong></a> Siehe <a href="opening-and-closing-a-winsnmp-application.md">Öffnen und Schließen einer WinSNMP-Anwendung.</a><br/></td>
 </tr>
 </tbody>
 </table>

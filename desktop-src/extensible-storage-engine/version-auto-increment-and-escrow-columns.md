@@ -1,6 +1,6 @@
 ---
 description: 'Weitere Informationen finden Sie unter: Versions-, Auto-Increment- und Escrow-Spalten'
-title: Spalten "Version", "Auto-Increment" und "Escrow"
+title: Versions-, Auto-Increment- und Escrow-Spalten
 TOCTitle: Version, Auto-Increment and Escrow Columns
 ms:assetid: b12724a4-6846-49a7-9223-43895f91427e
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294059(v=EXCHG.10)
@@ -14,18 +14,18 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119471280"
 ---
-# <a name="version-auto-increment-and-escrow-columns"></a>Spalten "Version", "Auto-Increment" und "Escrow"
+# <a name="version-auto-increment-and-escrow-columns"></a>Versions-, Auto-Increment- und Escrow-Spalten
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="version-auto-increment-and-escrow-columns"></a>Spalten "Version", "Auto-Increment" und "Escrow"
+## <a name="version-auto-increment-and-escrow-columns"></a>Versions-, Auto-Increment- und Escrow-Spalten
 
 ESE bietet Spaltentypen für Version, automatisches Inkrementen und Stirnrunzeln, die besondere Fähigkeiten haben. Die Spaltenoptionen, die im **Grbit-Member** der [JET_COLUMNDEF-Struktur](./jet-columndef-structure.md) festgelegt sind, die im Aufruf von [JetAddColumn](./jetaddcolumn-function.md) verwendet werden, geben an, ob die Spalte einer der hier notierten spezialisierten Typen ist.
 
 ### <a name="version-jet_bitcolumnversion"></a>Version (JET_bitColumnVersion)
 
-Die Versionsspaltenoption, die nur auf JET_coltypLong-Spalten angewendet wird, gibt an, dass die Spalte Versionsinformationen zum Datensatz enthält, mit denen bestimmt werden kann, ob eine Speicherkopie eines bestimmten Datensatzes aktualisiert werden muss. Versionsspalten werden automatisch von ESE erhöht, wenn die Spalte von der Anwendung über [JetUpdate geändert wird.](./jetupdate-function.md)
+Die Versionsspaltenoption, die nur auf JET_coltypLong-Spalten angewendet wird, gibt an, dass die Spalte Versionsinformationen zum Datensatz enthält, mit denen bestimmt werden kann, ob eine In-Memory-Kopie eines bestimmten Datensatzes aktualisiert werden muss. Versionsspalten werden automatisch von ESE erhöht, wenn die Spalte von der Anwendung über [JetUpdate geändert wird.](./jetupdate-function.md)
 
 ### <a name="auto-increment-jet_bitcolumnautoincrement"></a>Automatisches Inkrement (JET_bitColumnAutoincrement)
 

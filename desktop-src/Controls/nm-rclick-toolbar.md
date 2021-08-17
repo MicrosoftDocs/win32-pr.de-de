@@ -3,7 +3,7 @@ title: NM_RCLICK (Symbolleiste) Benachrichtigungscode (Commctrl.h)
 description: Wird von einem Symbolleisten-Steuerelement gesendet, wenn der Benutzer mit der rechten Maustaste auf die Symbolleiste klickt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: e9d2d871-e922-444d-a76c-e73f249ed410
 keywords:
-- NM_RCLICK -Benachrichtigungscode (Symbolleiste) Windows-Steuerelemente
+- NM_RCLICK -Benachrichtigungscode (Symbolleiste) Windows Steuerelementen
 topic_type:
 - apiref
 api_name:

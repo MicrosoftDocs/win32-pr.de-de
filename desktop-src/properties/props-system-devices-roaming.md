@@ -1,19 +1,19 @@
 ---
-description: Gibt an, ob das Gerät roamingbasiert.
+description: Gibt an, ob das Gerät roamingt.
 ms.assetid: d2382e96-7ca4-42e4-8e5b-89f1da736904
-title: System. Devices. Roaming
+title: System.Devices.Roaming
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f482bb306eeeed03592ae18bb7a8f63c109f2f0d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d2f13e9de3eb6c4b1d71bcfc0ac541ea5311cdf7160c3f18c0711aa3f76993ed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865292"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119097199"
 ---
-# <a name="systemdevicesroaming"></a>System. Devices. Roaming
+# <a name="systemdevicesroaming"></a>System.Devices.Roaming
 
-Gibt an, ob das Gerät roamingbasiert.
+Gibt an, ob das Gerät roamingt.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7
 
@@ -51,54 +51,54 @@ propertyDescription
             defineToken = ROAMING_UNKNOWN_STATUS
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

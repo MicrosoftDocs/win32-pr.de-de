@@ -1,5 +1,5 @@
 ---
-description: Erfahren Sie mehr über die IShellDispatch.RefreshMenu-Methode, die den Inhalt des Startmenü. Wird nur mit Systemen vor Windows XP verwendet.
+description: Erfahren Sie mehr über die IShellDispatch.RefreshMenu-Methode, die den Inhalt der Startmenü aktualisiert. Wird nur bei Systemen vor Windows XP verwendet.
 ms.assetid: D36FA5A0-AF03-4627-86E0-869BF1440958
 title: IShellDispatch.RefreshMenu-Methode (Shldisp.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118969059"
 ---
 # <a name="ishelldispatchrefreshmenu-method"></a>IShellDispatch.RefreshMenu-Methode
 
-Aktualisiert den Inhalt des **Startmenüs.** Wird nur mit Systemen vor Windows XP verwendet.
+Aktualisiert den Inhalt  des Startmenüs. Wird nur bei Systemen vor Windows XP verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,9 +57,9 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode wird implementiert und über die [**Shell.TrayProperties-Methode aufgerufen.**](shell-trayproperties.md)
+Diese Methode wird implementiert und über die [**Shell.TrayProperties-Methode**](shell-trayproperties.md) aufgerufen.
 
-Die funktionalität, die **RefreshMenu** bietet, wird automatisch unter xp Windows höher behandelt. Rufen Sie diese Methode nicht auf Windows XP oder höher auf.
+Die Funktionen von **RefreshMenu** werden automatisch unter Windows XP oder höher behandelt. Rufen Sie diese Methode nicht auf Windows XP oder höher auf.
 
 ## <a name="examples"></a>Beispiele
 

@@ -22,7 +22,7 @@ Enumerationen werden verwendet, um Informationen darüber anzugeben, wie Ressour
 
 
 
-| Thema                                                                                                               | BESCHREIBUNG                                                                                                                                                                                   |
+| Thema                                                                                                               | Beschreibung                                                                                                                                                                                   |
 |---------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**D3D11 \_ \_ BIND-FLAG**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_bind_flag)<br/>                                                             | Gibt an, wie eine Ressource an die Pipeline gebunden wird.<br/>                                                                                                                                 |
 | [**D3D11 \_ BUFFEREX \_ \_ SRV-FLAG**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_bufferex_srv_flag)<br/>                                            | Gibt an, wie eine Pufferressource angezeigt wird.<br/>                                                                                                                                          |

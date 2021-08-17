@@ -1,5 +1,5 @@
 ---
-description: Definiert den Typ, der Informationen zum Titel in einer Journalnotiz enthält.
+description: Definiert den Typ, der Informationen über den Titel in einer Journalnotiz enthält.
 ms.assetid: 8289456b-c969-4079-bcb5-36949faa65e0
 title: Komplexer TitleInfoType-Typ
 ms.topic: reference
@@ -21,7 +21,7 @@ ms.locfileid: "118966749"
 ---
 # <a name="titleinfotype-complex-type"></a>Komplexer TitleInfoType-Typ
 
-Definiert den Typ, der Informationen zum Titel in einer Journalnotiz enthält.
+Definiert den Typ, der Informationen über den Titel in einer Journalnotiz enthält.
 
 ``` syntax
 <xs:complexType name="TitleInfoType" />

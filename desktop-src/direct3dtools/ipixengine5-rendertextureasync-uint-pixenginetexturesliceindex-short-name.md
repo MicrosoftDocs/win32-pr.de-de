@@ -1,22 +1,22 @@
 ---
-description: Rendert eine Textur in eine Datei und gibt das Ergebnis asynchron an den Host zurück.
+description: Rendert eine Textur in einer Datei und gibt das Ergebnis asynchron an den Host zurück.
 MS-HAID: vspixengine.IPixEngine5\_RenderTextureAsync\_UINT\_PixEngineTextureSliceIndex\_int\_float\_arr4\_float\_arr4\_BSTR\_UINT\_BSTR\_arr\_float\_arr\_UINT\_BSTR\_arr\_BOOL\_arr\_BSTR\_IPixEngine5Callbacks\_ptr\_DWORD\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'IPixEngine5:: rendertextureasync-Methode'
+title: IPixEngine5::RenderTextureAsync-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd16214887514fa348a672c45d5eb85c2df6bca5
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 41189637fd741d22fc566f913b25ddba1109854ed12a0336ffac899c10fd3147
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521523"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119405680"
 ---
-# <a name="span-idvspixengineipixengine5_rendertextureasync_uint_pixenginetexturesliceindex_int_float_arr4_float_arr4_bstr_uint_bstr_arr_float_arr_uint_bstr_arr_bool_arr_bstr_ipixengine5callbacks_ptr_dword_dwordspanipixengine5rendertextureasync-method"></a><span id="vspixengine.ipixengine5_rendertextureasync_uint_pixenginetexturesliceindex_int_float_arr4_float_arr4_bstr_uint_bstr_arr_float_arr_uint_bstr_arr_bool_arr_bstr_ipixengine5callbacks_ptr_dword_dword"></span>IPixEngine5:: rendertextureasync-Methode
+# <a name="span-idvspixengineipixengine5_rendertextureasync_uint_pixenginetexturesliceindex_int_float_arr4_float_arr4_bstr_uint_bstr_arr_float_arr_uint_bstr_arr_bool_arr_bstr_ipixengine5callbacks_ptr_dword_dwordspanipixengine5rendertextureasync-method"></a><span id="vspixengine.ipixengine5_rendertextureasync_uint_pixenginetexturesliceindex_int_float_arr4_float_arr4_bstr_uint_bstr_arr_float_arr_uint_bstr_arr_bool_arr_bstr_ipixengine5callbacks_ptr_dword_dword"></span>IPixEngine5::RenderTextureAsync-Methode
 
-Rendert eine Textur in eine Datei und gibt das Ergebnis asynchron an den Host zurück.
+Rendert eine Textur in einer Datei und gibt das Ergebnis asynchron an den Host zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,59 +44,59 @@ HRESULT RenderTextureAsync(
 
 ## <a name="parameters"></a>Parameter
 
-*textureid*   
-Die ID der zu Rendering enden Textur.
+*textureId*   
+Die ID der zu rendernden Textur.
 
-*slicabdex*   
-Der Index des Slice innerhalb der zu Rendering enden Textur.
+*sliceIndex*   
+Der Index des Zu rendernden Slices innerhalb der Textur.
 
-*formatoverride*   
-Das Farb Format Überschreibung.
+*formatOverride*   
+Die Überschreibung des Farbformats.
 
-*günstigere*   
+*Niedriger*   
 
-*weite*   
+*Oberen*   
 
-*shaderdateiname*   
-Eine com-Zeichenfolge, die den Pfadnamen der Shader-Datei enthält.
+*shaderFileName*   
+Eine COM-Zeichenfolge, die den Pfadnamen der Shaderdatei enthält.
 
-*numfloatshadervars*   
-Die Anzahl von Gleit Komma-Shader-Variablen.
+*numFloatShaderVars*   
+Die Anzahl der Gleitkomma-Shadervariablen
 
-*count6 \_ shaderfloatvarname*   
-COM-Zeichen folgen, die die Namen der Gleit Komma-Shader-Variablen zusammenhängender.
+*count6 \_ shaderFloatVarName*   
+COM-Zeichenfolgen, die die Namen der Gleitkomma-Shadervariablen aufeinander folgen.
 
-*count6 \_ shaderfloatvarvalue*   
-Die Gleit Komma-Shader-Variablen.
+*count6 \_ shaderFloatVarValue*   
+Die Gleitkomma-Shadervariablen.
 
-*numboolshadervars*   
-Die Anzahl der booleschen Shader-Variablen.
+*numBoolShaderVars*   
+Die Anzahl der booleschen Shadervariablen.
 
-*count9 \_ shaderboolvarname*   
-COM-Zeichen folgen, die die Namen der booleschen shadervariablen zusammen hänchern.
+*count9 \_ shaderBoolVarName*   
+COM-Zeichenfolgen, die die Namen der booleschen Shadervariablen aufeinander folgen.
 
-*count9 \_ shaderboolvarvalue*   
-Die booleschen Shader-Variablen.
+*count9 \_ shaderBoolVarValue*   
+Die booleschen Shadervariablen.
 
-*rendercontentfilename*   
-Eine com-Zeichenfolge, die den Pfadnamen der Datei enthält, in die die gerenderte Textur geschrieben wurde.
+*renderContentFileName*   
+Eine COM-Zeichenfolge, die den Pfadnamen der Datei enthält, in die die gerenderte Textur geschrieben wurde.
 
 *Rückrufe*   
-Die Adresse eines Objekts, das die IPixEngine5 Rückrufe-Schnittstelle bereitstellt.
+Die Adresse eines Objekts, das die IPixEngine5-Rückrufschnittstelle anordnt.
 
-*requestcookie*   
-Ein Cookie, das die Anforderung eindeutig identifiziert, und kann verwendet werden, um zu signalisieren, dass es abgebrochen werden soll.
+*requestCookie*   
+Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
-*progressintervalmsekunden*   
-Nicht verwendet.
+*progressIntervalMsecs*   
+Wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

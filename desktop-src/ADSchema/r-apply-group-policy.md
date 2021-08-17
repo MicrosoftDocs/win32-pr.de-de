@@ -1,10 +1,10 @@
 ---
 title: Erweitertes Recht "Apply-Group-Policy"
-description: Erweitertes Recht, das von Gruppenrichtlinie Engine verwendet wird, um zu bestimmen, ob ein Gruppenrichtlinienobjekt für einen Benutzer oder Computer gilt.
+description: Erweitertes Recht, das Gruppenrichtlinie-Engine verwendet wird, um zu bestimmen, ob ein Gruppenrichtlinienobjekt für einen Benutzer oder Computer gilt.
 ms.assetid: f6b09ecc-0fcd-409b-adeb-a8744f811427
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema mit erweiterten rechten Rechten für Apply-Group-Policy
+- Ad-Schema mit erweiterter Rechte "Apply-Group-Policy"
 topic_type:
 - apiref
 api_name:
@@ -22,7 +22,7 @@ ms.locfileid: "118959509"
 ---
 # <a name="apply-group-policy-extended-right"></a>Erweitertes Recht "Apply-Group-Policy"
 
-Erweitertes Recht, das von Gruppenrichtlinie Engine verwendet wird, um zu bestimmen, ob ein Gruppenrichtlinienobjekt für einen Benutzer oder Computer gilt.
+Erweitertes Recht, das Gruppenrichtlinie-Engine verwendet wird, um zu bestimmen, ob ein Gruppenrichtlinienobjekt für einen Benutzer oder Computer gilt.
 
 
 
@@ -30,7 +30,7 @@ Erweitertes Recht, das von Gruppenrichtlinie Engine verwendet wird, um zu bestim
 |--------------|--------------------------------------|
 | CN           | Apply-Group-Policy                   |
 | Anzeigename | Anwenden Gruppenrichtlinie                   |
-| Rechte-GUID  | edacfd8f-ffb3-11d1-b41d-00a0c968f939 |
+| Rights-GUID  | edacfd8f-ffb3-11d1-b41d-00a0c968f939 |
 
 
 
@@ -49,7 +49,7 @@ Erweitertes Recht, das von Gruppenrichtlinie Engine verwendet wird, um zu bestim
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
-| Applies-To              | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| Applies-To              | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 | Lokalisierungsanzeige-ID | 47                                                                  |
 
 
@@ -60,7 +60,7 @@ Erweitertes Recht, das von Gruppenrichtlinie Engine verwendet wird, um zu bestim
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
-| Applies-To              | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| Applies-To              | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 | Lokalisierungsanzeige-ID | 47                                                                  |
 
 
@@ -71,7 +71,7 @@ Erweitertes Recht, das von Gruppenrichtlinie Engine verwendet wird, um zu bestim
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
-| Applies-To              | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| Applies-To              | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 | Lokalisierungsanzeige-ID | 47                                                                  |
 
 
@@ -82,7 +82,7 @@ Erweitertes Recht, das von Gruppenrichtlinie Engine verwendet wird, um zu bestim
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
-| Applies-To              | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| Applies-To              | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 | Lokalisierungsanzeige-ID | 47                                                                  |
 
 
@@ -93,7 +93,7 @@ Erweitertes Recht, das von Gruppenrichtlinie Engine verwendet wird, um zu bestim
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
-| Applies-To              | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| Applies-To              | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 | Lokalisierungsanzeige-ID | 47                                                                  |
 
 
@@ -104,7 +104,7 @@ Erweitertes Recht, das von Gruppenrichtlinie Engine verwendet wird, um zu bestim
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
-| Applies-To              | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| Applies-To              | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 | Lokalisierungsanzeige-ID | 47                                                                  |
 
 

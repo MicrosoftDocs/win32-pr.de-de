@@ -1,5 +1,5 @@
 ---
-description: 'TcpIp_V0_TypeGroup1-Klasse: Diese Klasse ist die Ereignistypklasse für TCP/IP-Ereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
+description: 'TcpIp_V0_TypeGroup1-Klasse: Diese Klasse ist die Ereignistypklasse für TCP/IP-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 007f0744-8b74-4c57-85bc-f6bdb20bffa7
 title: TcpIp_V0_TypeGroup1-Klasse
 ms.topic: reference
@@ -18,18 +18,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 96df2214aff9b5be6f10a1f08f6e6ea2e015c6b5
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 29211ae7a5aca5abc33af545ba581c4baf82f1dac51c72b910f8251560ea92d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069570"
 ---
 # <a name="tcpip_v0_typegroup1-class"></a>TcpIp \_ V0 \_ TypeGroup1-Klasse
 
 Diese Klasse ist die Ereignistypklasse für TCP/IP-Ereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -109,7 +109,7 @@ Bezeichner des Prozesses, der der Anforderung zugeordnet ist.
 saddr
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Objekt**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -141,7 +141,7 @@ Größe des Pakets.
 Sport
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Objekt**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -158,9 +158,9 @@ Quellportnummer.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                   |
 
 

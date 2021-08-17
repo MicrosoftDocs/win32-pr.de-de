@@ -4,12 +4,12 @@ ms.assetid: c3047706-affd-4feb-9d48-cfb4c7dd6fa0
 title: Margin-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 547177a10fc3724f3b9bf3dde65f857d03f0f2a4
-ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
+ms.openlocfilehash: b0ff764585919ff144ebc25ac568caf1af74410a2f337beb03d5ce484f7d1abe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111432132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119350440"
 ---
 # <a name="margin-element"></a>Margin-Element
 
@@ -49,9 +49,9 @@ nichts..
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 <th>Mögliche Werte</th>
 </tr>
 </thead>

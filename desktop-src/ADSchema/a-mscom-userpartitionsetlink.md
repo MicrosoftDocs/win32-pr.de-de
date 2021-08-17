@@ -56,10 +56,10 @@ Ein Link zum Zuordnen eines Benutzers zu einem COM+-Partitionssatz.
 |------------------------|--------------------------------------------------------------------------------------------------|
 | Link-ID                | 1048                                                                                             |
 | MAPI-Id                | \-                                                                                               |
-| System-Only            | False                                                                                            |
-| Is-Single-Valued       | True                                                                                             |
-| Ist indiziert             | False                                                                                            |
-| Im globalen Katalog      | False                                                                                            |
+| System-Only            | Falsch                                                                                            |
+| Is-Single-Valued       | Richtig                                                                                             |
+| Ist indiziert             | Falsch                                                                                            |
+| Im globalen Katalog      | Falsch                                                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                     |
 | Range-Lower            | \-                                                                                               |
 | Range-Upper            | \-                                                                                               |
@@ -77,10 +77,10 @@ Ein Link zum Zuordnen eines Benutzers zu einem COM+-Partitionssatz.
 |------------------------|--------------------------------------------------------------------------------------------------|
 | Link-ID                | 1048                                                                                             |
 | MAPI-Id                | \-                                                                                               |
-| System-Only            | False                                                                                            |
-| Is-Single-Valued       | True                                                                                             |
-| Ist indiziert             | False                                                                                            |
-| Im globalen Katalog      | False                                                                                            |
+| System-Only            | Falsch                                                                                            |
+| Is-Single-Valued       | Richtig                                                                                             |
+| Ist indiziert             | Falsch                                                                                            |
+| Im globalen Katalog      | Falsch                                                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                     |
 | Range-Lower            | \-                                                                                               |
 | Range-Upper            | \-                                                                                               |
@@ -98,10 +98,10 @@ Ein Link zum Zuordnen eines Benutzers zu einem COM+-Partitionssatz.
 |------------------------|--------------------------------------------------------------------------------------------------|
 | Link-ID                | 1048                                                                                             |
 | MAPI-Id                | \-                                                                                               |
-| System-Only            | False                                                                                            |
-| Is-Single-Valued       | True                                                                                             |
-| Ist indiziert             | False                                                                                            |
-| Im globalen Katalog      | False                                                                                            |
+| System-Only            | Falsch                                                                                            |
+| Is-Single-Valued       | Richtig                                                                                             |
+| Ist indiziert             | Falsch                                                                                            |
+| Im globalen Katalog      | Falsch                                                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                     |
 | Range-Lower            | \-                                                                                               |
 | Range-Upper            | \-                                                                                               |
@@ -119,10 +119,10 @@ Ein Link zum Zuordnen eines Benutzers zu einem COM+-Partitionssatz.
 |------------------------|--------------------------------------------------------------------------------------------------|
 | Link-ID                | 1048                                                                                             |
 | MAPI-Id                | \-                                                                                               |
-| System-Only            | False                                                                                            |
-| Ist einwertig       | True                                                                                             |
-| Ist indiziert             | False                                                                                            |
-| Im globalen Katalog      | False                                                                                            |
+| System-Only            | Falsch                                                                                            |
+| Is-Single-Valued       | Richtig                                                                                             |
+| Ist indiziert             | Falsch                                                                                            |
+| Im globalen Katalog      | Falsch                                                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                     |
 | Range-Lower            | \-                                                                                               |
 | Range-Upper            | \-                                                                                               |
@@ -140,10 +140,10 @@ Ein Link zum Zuordnen eines Benutzers zu einem COM+-Partitionssatz.
 |------------------------|--------------------------------------------------------------------------------------------------|
 | Link-ID                | 1048                                                                                             |
 | MAPI-Id                | \-                                                                                               |
-| System-Only            | False                                                                                            |
-| Ist einwertig       | True                                                                                             |
-| Ist indiziert             | False                                                                                            |
-| Im globalen Katalog      | False                                                                                            |
+| System-Only            | Falsch                                                                                            |
+| Is-Single-Valued       | Richtig                                                                                             |
+| Ist indiziert             | Falsch                                                                                            |
+| Im globalen Katalog      | Falsch                                                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                     |
 | Range-Lower            | \-                                                                                               |
 | Range-Upper            | \-                                                                                               |

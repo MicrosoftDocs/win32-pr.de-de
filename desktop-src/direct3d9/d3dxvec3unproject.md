@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 2c3ea6ec1aa60f48589b10575e279bed81b2c94f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e213cfd4daa3af2d903f64d7caa1b76e349818c8de5bc50ad4cdb42dc381dbbc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108115558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119122527"
 ---
 # <a name="d3dxvec3unproject-function-d3dx9mathh"></a>D3DXVec3Unproject-Funktion (D3dx9math.h)
 
-Projektiert einen Vektor aus dem Bildschirmbereich in den Objektraum.
+Projiziert einen Vektor aus dem Bildschirmbereich in den Objektbereich.
 
 ## <a name="syntax"></a>Syntax
 
@@ -105,7 +105,7 @@ Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
 Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) bei der es sich um den Vektor handelt, der vom Bildschirmbereich in den Objektbereich projiziert wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXVec3Unproject-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
@@ -113,7 +113,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Paramet
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

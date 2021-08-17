@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. Sättigung-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Photo.Saturation-Eigenschaft.
 ms.assetid: 1dbb7515-7022-404c-928a-9eb09e43e7a7
-title: System. Photo. Sättigung-Foto-metadatenrichtlinie
+title: System.Photo.Saturation-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dcb2b199458f063f2c28d7f6780a6ea907f76f90
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1be1c5be7a0663d5f57823dcb704b843f56e6076713de3682e4b12d6b533ff48
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119087013"
 ---
-# <a name="systemphotosaturation-photo-metadata-policy"></a>System. Photo. Sättigung-Foto-metadatenrichtlinie
+# <a name="systemphotosaturation-photo-metadata-policy"></a>System.Photo.Saturation-Richtlinie für Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. Photo. Sättigung](../properties/props-system-photo-saturation.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.Photo.Saturation-Eigenschaft.](../properties/props-system-photo-saturation.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ Foto \_ Sättigung
+\_PKEY-Fotosättigung \_
 
 ### <a name="containers"></a>Container
 
@@ -27,7 +27,7 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ UI4
 
@@ -35,46 +35,46 @@ VT \_ UI4
 
 UShort
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 41993} | ushort      |
-| 2     | /XMP/EXIF: Sättigung          | Unicode     |
+| 1     | /app1/ifd/exif/{ushort=41993} | ushort      |
+| 2     | /xmp/exif:Sättigung          | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 41993} | ushort      |
-| 2     | /XMP/EXIF: Sättigung          | Unicode     |
+| 1     | /app1/ifd/exif/{ushort=41993} | ushort      |
+| 2     | /xmp/exif:Sättigung          | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                          |
 |-------|-------------------------------|
-| 1     | /App1/IFD/EXIF/{ushort = 41993} |
-| 2     | /XMP/EXIF: Sättigung          |
+| 1     | /app1/ifd/exif/{ushort=41993} |
+| 2     | /xmp/exif:Sättigung          |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 41993} | ushort      |
-| 2     | /IFD/XMP/EXIF: Sättigung | Unicode     |
+| 1     | /ifd/exif/{ushort=41993} | ushort      |
+| 2     | /ifd/xmp/exif:Sättigung | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 41993} | ushort      |
-| 2     | /IFD/XMP/EXIF: Sättigung | Unicode     |
+| 1     | /ifd/exif/{ushort=41993} | ushort      |
+| 2     | /ifd/xmp/exif:Sättigung | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                     |
 |-------|--------------------------|
-| 1     | /IFD/EXIF/{ushort = 41993} |
-| 2     | /IFD/XMP/EXIF: Sättigung |
+| 1     | /ifd/exif/{ushort=41993} |
+| 2     | /ifd/xmp/exif:Sättigung |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. Sättigung](../properties/props-system-photo-saturation.md)
+[System.Photo.Saturation](../properties/props-system-photo-saturation.md)
 </dt> </dl>
 
  

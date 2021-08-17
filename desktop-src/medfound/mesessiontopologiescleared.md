@@ -1,29 +1,29 @@
 ---
-description: 'Wird von der Medien Sitzung ausgelöst, wenn die imfmediasession:: cleartopologien-Methode asynchron abgeschlossen wird.'
+description: Wird von der Mediensitzung ausgelöst, wenn die METHODE VONMEDIASESSION::ClearTopologies asynchron abgeschlossen wird.
 ms.assetid: 2017d13b-8dc2-48f9-a21e-7b826e174edf
-title: Mesessiontopologieslöschte-Ereignis (mfobjects. h)
+title: MESessionTopologiesCleared-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 551e98607a8d23d9333527337bbd7d038ed0b340
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cee6b9107f6584de3f9621aeaecc95ffb6bf7bbb8741e59d5e32d3efe33d5ae6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130733"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119357120"
 ---
-# <a name="mesessiontopologiescleared-event"></a>Mesessiontopologieslöschte-Ereignis
+# <a name="mesessiontopologiescleared-event"></a>MESessionTopologiesCleared-Ereignis
 
-Wird von der Medien Sitzung ausgelöst, wenn die [**imfmediasession:: cleartopologien**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-cleartopologies) -Methode asynchron abgeschlossen wird.
+Wird von der Mediensitzung ausgelöst, wenn die [**METHODE VONMEDIASESSION::ClearTopologies**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-cleartopologies) asynchron abgeschlossen wird.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -33,17 +33,17 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

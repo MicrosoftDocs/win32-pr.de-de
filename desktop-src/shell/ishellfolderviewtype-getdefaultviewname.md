@@ -22,7 +22,7 @@ ms.locfileid: "119443270"
 ---
 # <a name="ishellfolderviewtypegetdefaultviewname-method"></a>IShellFolderViewType::GetDefaultViewName-Methode
 
-Ruft den Namen der Standardansicht ab. Rufen [**Sie GetDisplayNameOf auf,**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getdisplaynameof) um die Namen der anderen Ansichten abzurufen.
+Ruft den Namen der Standardansicht ab. Rufen [**Sie GetDisplayNameOf**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getdisplaynameof) auf, um die Namen der anderen Ansichten abzurufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,7 +54,7 @@ Optionale Flags; sollte auf 0 festgelegt werden.
 
 Typ: **LPWSTR \***
 
-Die Adresse eines Zeichenfolgenzeigers, der den Standardansichtsnamen empfängt. Der Arbeitsspeicher für die Zeichenfolge wird mit [**SHStrDup zugeordnet.**](/windows/desktop/api/Shlwapi/nf-shlwapi-shstrdupa)
+Die Adresse eines Zeichenfolgenzeigers, der den Standardansichtsnamen empfängt. Der Arbeitsspeicher für die Zeichenfolge wird mit [**SHStrDup**](/windows/desktop/api/Shlwapi/nf-shlwapi-shstrdupa)zugeordnet.
 
 </dd> </dl>
 
@@ -62,7 +62,7 @@ Die Adresse eines Zeichenfolgenzeigers, der den Standardansichtsnamen empfängt.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 

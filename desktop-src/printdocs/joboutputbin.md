@@ -19,7 +19,7 @@ Beschreibt den installierten Ausgabebehälter auf einem Gerät oder die vollstä
 
 -   [Elementinformationen](#element-information)
 -   [Strukturell](#structural-content)
--   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 

@@ -1,10 +1,10 @@
 ---
-title: CB_RESOURCE_TYPE-Enumeration (cbclient. h)
+title: CB_RESOURCE_TYPE-Enumeration (Cbclient.h)
 description: Gibt den Typ der Ressource an, mit der die eingehende Verbindung eine Verbindung herstellt.
 ms.assetid: 80D921BF-2D84-4A18-9544-50087B81F177
 ms.tgt_platform: multiple
 keywords:
-- CB_RESOURCE_TYPE Enumeration Remotedesktopdienste
+- CB_RESOURCE_TYPE Enumerations-Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 60561e4af54c6d27288d8df311693d51c0b9fc77
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 63dfce0f575147233735dd943645eb51c26141cacaaa61c044698b29b8d118e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119139113"
 ---
-# <a name="cb_resource_type-enumeration"></a>CB \_ - \_ Ressourcentyp Enumeration
+# <a name="cb_resource_type-enumeration"></a>CB \_ RESOURCE \_ TYPE-Enumeration
 
-Gibt den Typ der Ressource an, mit der die eingehende Verbindung eine Verbindung herstellt. Diese Enumeration wird mit der [**CB- \_ Verbindungs \_ Informations**](cb-connection-info.md) Struktur verwendet.
+Gibt den Typ der Ressource an, mit der die eingehende Verbindung eine Verbindung herstellt. Diese Enumeration wird mit der [**CB \_ CONNECTION \_ INFO-Struktur**](cb-connection-info.md) verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,21 +43,21 @@ typedef enum _CB_RESOURCE_TYPE {
 
 <dl> <dt>
 
-<span id="CB_RESOURCE_UNDEFINED"></span><span id="cb_resource_undefined"></span>**CB- \_ Ressource nicht \_ definiert**
+<span id="CB_RESOURCE_UNDEFINED"></span><span id="cb_resource_undefined"></span>**\_CB-RESSOURCE \_ UNDEFINED**
 </dt> <dd>
 
 Der Ressourcentyp ist nicht definiert.
 
 </dd> <dt>
 
-<span id="CB_RESOURCE_SESSION"></span><span id="cb_resource_session"></span>**CB- \_ Ressourcen \_ Sitzung**
+<span id="CB_RESOURCE_SESSION"></span><span id="cb_resource_session"></span>**\_ \_ CB-RESSOURCENSITZUNG**
 </dt> <dd>
 
-Die Ressource ist eine Remote Sitzung.
+Die Ressource ist eine Remotesitzung.
 
 </dd> <dt>
 
-<span id="CB_RESOURCE_VM"></span><span id="cb_resource_vm"></span>**CB- \_ Ressourcen- \_ VM**
+<span id="CB_RESOURCE_VM"></span><span id="cb_resource_vm"></span>**\_CB-RESSOURCEN-VM \_**
 </dt> <dd>
 
 Die Ressource ist ein virtueller Computer.
@@ -72,15 +72,15 @@ Die Ressource ist ein virtueller Computer.
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                        |
-| Header<br/>                   | <dl> <dt>Cbclient. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Cbclient.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CB- \_ Verbindungs \_ Informationen**](cb-connection-info.md)
+[**\_ \_ CB-VERBINDUNGSINFORMATIONEN**](cb-connection-info.md)
 </dt> </dl>
 
  

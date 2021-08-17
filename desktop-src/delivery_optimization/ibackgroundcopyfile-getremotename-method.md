@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopyfile getremutename-Methode (deliveryoptimization. h)
-description: Ruft den Remote Namen der Datei ab.
+title: IBackgroundCopyFile GetRemoteName-Methode (Deliveryoptimization.h)
+description: Ruft den Remotenamen der Datei ab.
 ms.assetid: 518857E0-C16A-400B-8F3D-5264B3CB43FF
 keywords:
-- Getremutename-Methode
-- Getremutename-Methode, ibackgroundcopyfile-Schnittstelle
-- Ibackgroundcopyfile-Schnittstelle, getremutename-Methode
+- GetRemoteName-Methode
+- GetRemoteName-Methode, IBackgroundCopyFile-Schnittstelle
+- IBackgroundCopyFile-Schnittstelle, GetRemoteName-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9984ed9971fdfb91279dabc5810490b62804b7e3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e84827f4c1144c4242f382aff822984b24dd83610c1ebd5d2540ba7c4ca65d2a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040521"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118810332"
 ---
-# <a name="ibackgroundcopyfilegetremotename-method"></a>Ibackgroundcopyfile:: getremutename-Methode
+# <a name="ibackgroundcopyfilegetremotename-method"></a>IBackgroundCopyFile::GetRemoteName-Methode
 
-Ruft den Remote Namen der Datei ab.
+Ruft den Remotenamen der Datei ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,20 +43,20 @@ HRESULT GetRemoteName(
 
 <dl> <dt>
 
-*ppName* \[ vorgenommen\]
+*ppName* \[ out\]
 </dt> <dd>
 
-Eine auf NULL endenden Zeichenfolge, die den Remote Namen der zu übertragenden Datei enthält. Der Name ist voll qualifiziert. Wenn Sie die Funktion " [**CoTaskMemFree**](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) " aufrufen, wird " *ppName* " freigegeben.
+Auf NULL endende Zeichenfolge, die den Remotenamen der zu übertragenden Datei enthält. Der Name ist vollqualifiziert. Rufen Sie die [**CoTaskMemFree-Funktion**](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) auf, um *ppName* frei zu machen, wenn Sie fertig sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt **S_OK** bei Erfolg oder einen der standardmäßigen com **HRESULT** -Werte bei einem Fehler zurück.
+Diese Methode gibt **S_OK** bei Erfolg oder einen der COM **HRESULT-Standardwerte** bei Einem Fehler zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um den Remote Dateinamen zu ändern, nennen Sie die [**IBackgroundCopyFile2::**](ibackgroundcopyfile2-setremotename-method.md) Setup-Methode.
+Um den Remotedateinamen zu ändern, rufen Sie die [**IBackgroundCopyFile2::SetRemoteName-Methode**](ibackgroundcopyfile2-setremotename-method.md) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,24 +64,24 @@ Um den Remote Dateinamen zu ändern, nennen Sie die [**IBackgroundCopyFile2::**]
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyFile ist als 01b7bd23-B88-4a77-8490-5891d3e4653a definiert.<br/>              |
+| IID<br/>                      | IID_IBackgroundCopyFile ist als 01B7BD23-FB88-4A77-8490-5891D3E4653A definiert.<br/>              |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ibackgroundcopyfile**](ibackgroundcopyfile.md)
+[**IBackgroundCopyFile**](ibackgroundcopyfile.md)
 </dt> <dt>
 
-[**Ibackgroundcopyfile:: getLocalName**](ibackgroundcopyfile-getlocalname-method.md)
+[**IBackgroundCopyFile::GetLocalName**](ibackgroundcopyfile-getlocalname-method.md)
 </dt> </dl>
 
  

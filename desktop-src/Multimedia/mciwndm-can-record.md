@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_CAN_RECORD-Nachricht (Vfw.h)
-description: Die MCIWNDM \_ CAN \_ RECORD-Nachricht bestimmt, ob ein MCI-Gerät die Aufzeichnung unterstützt. Sie können diese Nachricht explizit oder mithilfe des MCIWndCanRecord-Makros senden.
+title: MCIWNDM_CAN_RECORD (Vfw.h)
+description: Die MCIWNDM \_ CAN \_ RECORD-Meldung bestimmt, ob ein MCI-Gerät die Aufzeichnung unterstützt. Sie können diese Nachricht explizit oder mithilfe des Makros MCIWndCanRecord senden.
 ms.assetid: b5a789fa-6a88-487d-a374-8f4798ee5a62
 keywords:
-- MCIWNDM_CAN_RECORD Windows Multimedia
+- MCIWNDM_CAN_RECORD-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -21,9 +21,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119429650"
 ---
-# <a name="mciwndm_can_record-message"></a>MCIWNDM \_ CAN \_ RECORD message
+# <a name="mciwndm_can_record-message"></a>MCIWNDM \_ CAN \_ RECORD-Nachricht
 
-Die **MCIWNDM \_ CAN \_ RECORD-Nachricht** bestimmt, ob ein MCI-Gerät die Aufzeichnung unterstützt. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndCanRecord-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndcanrecord) senden.
+Die **MCIWNDM \_ CAN \_ RECORD-Meldung** bestimmt, ob ein MCI-Gerät die Aufzeichnung unterstützt. Sie können diese Nachricht explizit oder mithilfe des [**Makros MCIWndCanRecord**](/windows/desktop/api/Vfw/nf-vfw-mciwndcanrecord) senden.
 
 
 ```C++
@@ -36,7 +36,7 @@ lParam = 0;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **TRUE** zurück, wenn das Gerät die Aufzeichnung unterstützt, andernfalls **FALSE.**
+Gibt **TRUE zurück,** wenn das Gerät die Aufzeichnung unterstützt, andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,7 +50,7 @@ Gibt **TRUE** zurück, wenn das Gerät die Aufzeichnung unterstützt, andernfall
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

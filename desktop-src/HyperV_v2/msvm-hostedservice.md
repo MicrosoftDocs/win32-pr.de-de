@@ -1,5 +1,5 @@
 ---
-description: Ordnet dem hostingcomputersystem einen Dienst zu.
+description: Ordnet einen Dienst dem Hostcomputersystem zu.
 ms.assetid: 888ABA71-6D67-4933-89E6-40F731AA7153
 title: Msvm_HostedService-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 284254d32e788e374d56b3822f5c00868552e1f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7ab9ddb6326d594253ab1ef7f810140ac463c32fcb62367b03b656004b861e4e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360073"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014508"
 ---
-# <a name="msvm_hostedservice-class"></a>MSVM- \_ Klasse "hustedservice"
+# <a name="msvm_hostedservice-class"></a>Msvm \_ HostedService-Klasse
 
-Ordnet dem hostingcomputersystem einen Dienst zu. Instanzen von [**MSVM \_ virtualizationmanagementservice**](msvm-virtualsystemmanagementservice.md) können durch ihre Zuordnung zu einem Host ermittelt werden.
+Ordnet einen Dienst dem Hostcomputersystem zu. Instanzen von [**Msvm \_ VirtualizationManagementService**](msvm-virtualsystemmanagementservice.md) können über ihre Zuordnung zu einem Host gefunden werden.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,49 +41,49 @@ class Msvm_HostedService : CIM_HostedService
 
 ## <a name="members"></a>Member
 
-Die **MSVM-Klasse " \_ hustedservice** " verfügt über diese Typen von Membern:
+Die **Msvm \_ HostedService-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM-Klasse " \_ hustedservice** " verfügt über diese Eigenschaften.
+Die **Msvm \_ HostedService-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
+Datentyp: **[ **CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Verweis auf das hostingcomputersystem. Diese Eigenschaft wird von [**CIM- \_ hustedservice**](/windows/desktop/CIMWin32Prov/cim-hostedservice)geerbt.
+Ein Verweis auf das Hostcomputersystem. Diese Eigenschaft wird von [**CIM \_ HostedService geerbt.**](/windows/desktop/CIMWin32Prov/cim-hostedservice)
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM- \_ Dienst**](/windows/desktop/CIMWin32Prov/cim-service)**
+Datentyp: **[ **\_ CIM-Dienst**](/windows/desktop/CIMWin32Prov/cim-service)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Verweis auf den gehosteten Dienst. Diese Eigenschaft wird von [**CIM- \_ hustedservice**](/windows/desktop/CIMWin32Prov/cim-hostedservice)geerbt.
+Ein Verweis auf den gehosteten Dienst. Diese Eigenschaft wird von [**CIM \_ HostedService geerbt.**](/windows/desktop/CIMWin32Prov/cim-hostedservice)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM-Klasse " \_ hustedservice** " kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ HostedService-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
-Weitere Informationen finden Sie unter [Abfragen von Netzwerk Objekten](querying-networking-objects.md).
+Weitere Informationen [finden Sie unter Abfragen von Netzwerkobjekten.](querying-networking-objects.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,25 +91,25 @@ Weitere Informationen finden Sie unter [Abfragen von Netzwerk Objekten](querying
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Dienst**](cim-hostedservice.md)
+[**CIM \_ HostedService**](cim-hostedservice.md)
 </dt> <dt>
 
-[**CIM- \_ Dienst**](/windows/desktop/CIMWin32Prov/cim-hostedservice)
+[**CIM \_ HostedService**](/windows/desktop/CIMWin32Prov/cim-hostedservice)
 </dt> <dt>
 
-[Verwaltungs Klassen für virtuelle Systeme](virtual-system-management-classes.md)
+[Verwaltungsklassen für virtuelle Systeme](virtual-system-management-classes.md)
 </dt> </dl>
 
  

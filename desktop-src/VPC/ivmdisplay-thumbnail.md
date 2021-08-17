@@ -61,7 +61,7 @@ Eine Variante vom Typ VT \_ ARRAY \| VT \_ VARIANT, die Einträge vom Typ VT \_ 
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Schnittstelle gibt die Miniaturansicht weniger effizient als die [**\_ GenerateThumbnail-Methode**](ivmdisplay--generatethumbnail.md) zurück, kann aber von Skriptclients verwendet werden. Die Miniaturansicht ist immer 64 Pixel breit und 48 Pixel hoch. Jedes Pixel ist 32 Bits. Die ersten 64 Elemente im Array sind die erste Zeile mit Pixeln in der Miniaturansicht, die nächsten 64 Elemente die zweite Zeile usw.
+Diese Schnittstelle gibt die Miniaturansicht weniger effizient als die [**\_ GenerateThumbnail-Methode**](ivmdisplay--generatethumbnail.md) zurück, kann aber von Skriptclients verwendet werden. Die Miniaturansicht ist immer 64 Pixel breit und 48 Pixel hoch. Jedes Pixel ist 32 Bits. Die ersten 64 Elemente im Array sind die erste Pixelzeile in der Miniaturansicht, die nächsten 64 Elemente die zweite Zeile usw.
 
 ## <a name="requirements"></a>Anforderungen
 
