@@ -1,182 +1,182 @@
 ---
-description: Zum Arbeiten mit implizit ausgewählten Komponenten ist sowohl der Zugriff auf das Dokument mit den Sicherungs Komponenten als auch auf das Schreiben von Dokumenten erforderlich
+description: Das Arbeiten mit implizit ausgewählten Komponenten erfordert Zugriff auf das Sicherungskomponentendokument und die WriterMetadatendokumente.
 ms.assetid: ede51931-be50-4286-818b-0e6122247bdd
-title: Selekabilität und arbeiten mit Komponenteneigenschaften
+title: Auswählbarkeit und Arbeiten mit Komponenteneigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 83d06683bafb02802d84f152f1ceb662eb7491f2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a735481d4bd0d7fdaa4102026b74ca78be947afbab24858d88d9210dd7bd4e6f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117751652"
 ---
-# <a name="selectability-and-working-with-component-properties"></a>Selekabilität und arbeiten mit Komponenteneigenschaften
+# <a name="selectability-and-working-with-component-properties"></a>Auswählbarkeit und Arbeiten mit Komponenteneigenschaften
 
-Zum Arbeiten mit implizit ausgewählten Komponenten ist sowohl der Zugriff auf das Dokument mit den Sicherungs Komponenten als auch auf das Schreiben von Dokumenten erforderlich
+Das Arbeiten mit implizit ausgewählten Komponenten erfordert Zugriff auf das Sicherungskomponentendokument und die WriterMetadatendokumente.
 
 Hierfür gibt es zwei Gründe:
 
--   Die Komponenten Daten, die im Dokument mit den Sicherungs Komponenten (dargestellt durch die [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle) gespeichert werden, haben keinen Zugriff auf Komponenten Datei Satz Informationen – Datei Angabe, Pfad und Rekursions Flag. (Weitere Informationen finden Sie [unter Arbeiten mit dem Sicherungs Komponenten Dokument](working-with-the-backup-components-document.md).)
--   Nur Komponenten, die während der Sicherung explizit im Sicherungs Komponenten Dokument [*enthalten*](vssgloss-e.md) sind, werden direkt im Dokument mit den Sicherungs Komponenten gespeichert. Anforderer und Writer müssen die Informationen, die über die [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle verfügbar sind, zusammen mit [*logischen Pfad*](vssgloss-l.md) Informationen und Writer-Metadatendokumenten verwenden, um Informationen zu erhalten und die Eigenschaften von [*implizit*](vssgloss-i.md) eingeschlossenen Komponenten festzulegen.
+-   Die im Sicherungskomponentendokument gespeicherten Komponentendaten (dargestellt durch die [**IVssComponent-Schnittstelle)**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) haben keinen Zugriff auf Komponentendateisatzinformationen – Dateispezifikation, Pfad und Rekursionsflag. (Weitere Informationen finden Sie [unter Arbeiten mit dem Dokument "Sicherungskomponenten".)](working-with-the-backup-components-document.md)
+-   Nur Komponenten, die während der Sicherung explizit im Sicherungskomponentendokument [*enthalten*](vssgloss-e.md) sind, haben ihre Informationen direkt im Sicherungskomponentendokument gespeichert. Anforderer und Writer müssen die über die [**IVssComponent-Schnittstelle verfügbaren**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) Informationen in Verbindung mit [*logischen Pfadinformationen*](vssgloss-l.md) und WriterMetadatendokumenten verwenden, um Informationen zu [*implizit eingeschlossenen*](vssgloss-i.md) Komponenten abzurufen und Deren Eigenschaften festzulegen.
 
-Der Fall "myWriter", der in [logischen Komponenten von Komponenten](logical-pathing-of-components.md) erläutert wird, kann verwendet werden, um die Auswahlmöglichkeiten für die Sicherung zu veranschaulichen.
+Der unter [Logisches Pfading von Komponenten beschriebene](logical-pathing-of-components.md) Fall "MyWriter" kann verwendet werden, um die Auswählbarkeit für die Sicherung zu veranschaulichen.
 
 
 
-| Komponentenname | Logischer Pfad            | Für Sicherung auswählbar | Zur Wiederherstellung ausgewählt | Explizit eingeschlossen |
+| Komponentenname | Logischer Pfad            | Für die Sicherung auswählbar | Für die Wiederherstellung auswählbar | Explizit eingeschlossen |
 |----------------|-------------------------|-----------------------|------------------------|---------------------|
-| Ausführbare Dateien  | ""                      | N                     | N                      | J                   |
-| "Configfiles"  | Ausführbare Dateien           | N                     | N                      | J                   |
-| "Licenseingefo"  | ""                      | J                     | N                      | J                   |
+| "Ausführbare Dateien"  | ""                      | N                     | N                      | J                   |
+| "ConfigFiles"  | "Ausführbare Dateien"           | N                     | N                      | J                   |
+| "LicenseInfo"  | ""                      | J                     | N                      | J                   |
 | "Security"     | ""                      | J                     | N                      | J                   |
-| UserInfo     | "Security"              | N                     | N                      | N                   |
-| Abschluss | "Security"              | N                     | N                      | N                   |
-| "beschreibdaten"   | ""                      | J                     | J                      | J                   |
-| Set1         | "beschreibdaten"            | N                     | J                      | N                   |
-| Jan          | "Schreibdaten \\ set1"      | N                     | N                      | N                   |
-| 31.12.2012          | "Schreibdaten \\ set1"      | N                     | N                      | N                   |
-| Set2         | "beschreibdaten"            | N                     | J                      | N                   |
-| Jan          | "Schreibdaten \\ set2"      | N                     | N                      | N                   |
-| 31.12.2012          | "Schreibdaten \\ set2"      | N                     | N                      | N                   |
-| Such        | "Write Data \\ querylogs" | N                     | N                      | N                   |
-| Ungs        | "beschreibdaten"            | J                     | J                      | N                   |
-| Jan          | "Verwendung von" Schreib Daten \\ "     | N                     | N                      | N                   |
-| 31.12.2012          | "Verwendung von" Schreib Daten \\ "     | N                     | N                      | N                   |
+| "UserInfo"     | "Security"              | N                     | N                      | N                   |
+| "Zertifikate" | "Security"              | N                     | N                      | N                   |
+| "writerData"   | ""                      | J                     | J                      | J                   |
+| "Set1"         | "writerData"            | N                     | J                      | N                   |
+| "Jan"          | "writerData \\ Set1"      | N                     | N                      | N                   |
+| "Dec"          | "writerData \\ Set1"      | N                     | N                      | N                   |
+| "Set2"         | "writerData"            | N                     | J                      | N                   |
+| "Jan"          | "writerData \\ Set2"      | N                     | N                      | N                   |
+| "Dec"          | "writerData \\ Set2"      | N                     | N                      | N                   |
+| "Abfrage"        | "writerData \\ QueryLogs" | N                     | N                      | N                   |
+| "Nutzung"        | "writerData"            | J                     | J                      | N                   |
+| "Jan"          | "writerData \\ Usage"     | N                     | N                      | N                   |
+| "Dec"          | "writerData \\ Usage"     | N                     | N                      | N                   |
 
 
 
  
 
-## <a name="implicitly-included-components-in-the-backup-set"></a>Implizit enthaltene Komponenten in den Sicherungs Satz
+## <a name="implicitly-included-components-in-the-backup-set"></a>Implizit eingeschlossene Komponenten im Sicherungssatz
 
-Bei der Untersuchung eines Writer-Metadatendokuments (siehe [**IVssBackupComponents:: getschreitermetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritermetadata)) während der Sicherung sollte ein Anforderer eine Liste aller Komponenten, der [*logischen Pfade*](vssgloss-l.md)und der zugehörigen Datei Satz Informationen speichern.
+Beim Überprüfen des Writer-Metadatendokuments eines Writers (siehe [**IVssBackupComponents::GetWriterMetadata)**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritermetadata)während der Sicherung sollte ein Anforderer eine Liste aller Komponenten, ihrer [*logischen Pfade*](vssgloss-l.md)und ihrer Dateisatzinformationen speichern.
 
-Informationen zu Datei Satz und ausgeschlossenen Dateien sind erforderlich, um eine Liste der Dateien für jede (explizit oder implizit) enthaltene Komponente zu ermitteln.
+Dateisatz- und ausgeschlossene Dateiinformationen werden benötigt, um eine Liste von Dateien für jede (explizit oder implizit) enthaltene Komponente zu bestimmen.
 
-Für nicht auswählbare Sicherungs Komponenten ohne auswählbare Sicherungs-und auswählbare Sicherungs Komponenten, die keinen [*Komponenten Satz*](vssgloss-c.md)definieren, werden nur Datei Satz-und ausgeschlossene Dateiinformationen benötigt, um alle Kandidaten für die Sicherung zu identifizieren, da diese Komponenten keine unter Komponenten definieren.
+Bei Sicherungskomponenten, die für Sicherungskomponenten nicht auswählbar und für Sicherungskomponenten, die keinen [*Komponentensatz*](vssgloss-c.md)definieren, auswählbar sind, werden nur Dateisatz- und ausgeschlossene Dateiinformationen benötigt, um alle Kandidaten der Komponente für die Sicherung zu identifizieren, da diese Komponenten keine Unterkomponenten definieren.
 
-Um explizit für Sicherungs Komponenten ausgewählt zu werden, die einen Komponenten Satz definieren, legt die Dateiinformationen sowohl für die definierende Komponente als auch für alle [*unter Komponenten*](vssgloss-s.md) fest, die zum Auswählen von Dateien für die Sicherung verwendet werden müssen.
+Für explizit eingeschlossene, für Sicherungskomponenten auswählbare Komponenten, die einen Komponentensatz definieren, müssen die Dateisätze und Dateiinformationen sowohl für die definierende Komponente als auch alle [*Unterkomponenten*](vssgloss-s.md) verwendet werden, um Dateien für die Sicherung auszuwählen.
 
-Dies bedeutet, dass Sicherungs Sätze für die Komponenten "Executables", "configfiles" und "LicenseInfo" nur gefunden werden können, indem die Writer-Metadaten nur für diese Komponenten mithilfe ihrer Instanzen der [**ivsswmcomponent**](/windows/desktop/api/VsBackup/nl-vsbackup-ivsswmcomponent) -Schnittstelle überprüft werden.
+Dies bedeutet, dass Sicherungssätze für die Komponenten "Executables", "ConfigFiles" und "LicenseInfo" nur gefunden werden können, indem die Writer-Metadaten nur für diese Komponenten mit ihren Instanzen der [**IVssWMComponent-Schnittstelle**](/windows/desktop/api/VsBackup/nl-vsbackup-ivsswmcomponent) untersucht werden.
 
-Wenn "Write Data" jedoch explizit in der Sicherung enthalten ist, müssen Sie die zugehörige Instanz der [**ivsswmcomponent**](/windows/desktop/api/VsBackup/nl-vsbackup-ivsswmcomponent) -Schnittstelle und die für "set1", "Jan" (mit dem logischen Pfad "schreiterdata \\ set1"), "Dec" (mit dem logischen Pfad "beschreiterdaten set1") "untersuchen. \\ set2", "Jan" (mit dem logischen Pfad "Write Data \\ set2"), "Dec" (mit dem logischen Pfad "beschreiterdaten \\ set2"), "Query", "Usage", "Jan" (mit dem logischen Pfad "Schreib Daten \\ Verwendung") und "Dec" (mit dem logischen Pfad "Schreib Daten \\ Verwendung").
+Wenn writerData jedoch explizit in der Sicherung enthalten ist, müssen Sie die Instanz der [**IVssWMComponent-Schnittstelle**](/windows/desktop/api/VsBackup/nl-vsbackup-ivsswmcomponent) und die Instanzen für "Set1" überprüfen. "Jan" (mit logischem Pfad "writerData \\ Set1"), "Dec" (mit logischem Pfad "writerData \\ Set1"), "Set2", "Jan" (mit logischem Pfad "writerData \\ Set2"), "Dec" (mit logischem Pfad "writerData \\ Set2"), "Query", "Usage", "Jan" (mit logischem Pfad "writerData \\ Usage") und "Dec" (mit logischem Pfad "writerData \\ Usage").
 
-Zu diesem Zweck muss eine anfordernde Person zunächst feststellen, dass die Komponente "Write Data" (logischer Pfad "") ausgewählt werden kann. Anschließend muss er alle anderen vom Writer verwalteten Komponenten scannen, um zu bestimmen, ob das erste Element im logischen Pfad "Schreib Daten" ist. Die Komponenten, die "Write Data" als führende Member Ihres logischen Pfades aufweisen, werden als unter Komponenten von "beschreiterdaten" identifiziert und werden implizit ausgewählt, wenn Sie explizit ausgewählt werden.
+Hierzu muss ein Anforderer zunächst identifizieren, dass die Komponente "writerData" (logischer Pfad "") auswählbar ist. Anschließend müssen alle anderen vom Writer verwalteten Komponenten überprüft werden, um zu bestimmen, ob das erste Element in ihrem logischen Pfad "writerData" ist. Die Komponenten, die "writerData" als führende Member ihres logischen Pfads aufweisen, werden als Unterkomponenten von "writerData" identifiziert und implizit ausgewählt, wenn sie explizit ausgewählt werden.
 
-Tatsächlich muss eine ähnliche Überprüfung durchgeführt werden, um zu bestimmen, dass keine Komponente "LicenseInfo" als führender Member Ihres logischen Pfads aufweist und dass "LicenseInfo" keine unter Komponenten aufweist.
+Tatsächlich muss eine ähnliche Überprüfung durchgeführt werden, um zu bestimmen, dass keine Komponente "LicenseInfo" als führendes Element ihres logischen Pfads hat und daher "LicenseInfo" über keine Unterkomponenten verfügt.
 
-Aufgrund der Komplexität dieses Mechanismus in VSS finden viele Anforderer Writer möglicherweise die Möglichkeit, eigene Strukturen zum Speichern von Komponenten-und Sicherungs Satz Informationen für explizit und implizit hinzugefügte Komponenten zu erstellen.
+Aufgrund der Komplexität dieses Mechanismus in VSS kann es für viele Anfordernde Writer nützlich sein, eigene Strukturen zum Speichern von Komponenten- und Sicherungssatzinformationen für explizite und implizit hinzugefügte Komponenten zu erstellen.
 
-## <a name="properties-of-implicitly-included-components"></a>Eigenschaften von implizit enthaltenen Komponenten
+## <a name="properties-of-implicitly-included-components"></a>Eigenschaften implizit eingeschlossener Komponenten
 
-Während der Wiederherstellungs-und Sicherungs Vorgänge werden Instanzen der [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle und der [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) -Schnittstelle verwendet, um Informationen zu Komponenten abzurufen und Komponenteneigenschaften festzulegen oder zu ändern. Allerdings verfügen nur Komponenten, die explizit eingeschlossen werden, über Instanzen der **IVssComponent** -Schnittstelle oder über die **IVssBackupComponents** -Schnittstelle.
+Bei Wiederherstellungs- und Sicherungsvorgängen werden Instanzen der [**Schnittstellen IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) und [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) sowohl zum Abrufen von Informationen über Komponenten als auch zum Festlegen oder Ändern von Komponenteneigenschaften verwendet. Allerdings verfügen nur explizit enthaltene Komponenten über Instanzen der **IVssComponent-Schnittstelle** oder sind für die **IVssBackupComponents-Schnittstelle** zugänglich.
 
-Einige Eigenschaften sind im Gültigkeitsbereich Komponenten Satz weit. Diese Eigenschaften umfassen Folgendes:
+Einige Eigenschaften sind komponentenweit im Bereich festgelegt. Diese Eigenschaften umfassen Folgendes:
 
--   Sicherungs-und Wiederherstellungs Status: <dl>
+-   Sicherungs- und Wiederherstellungsstatus: <dl>
 
-[**IVssBackupComponents:: setbackupwar**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupsucceeded)  
-    [**IVssComponent:: getbackupwar**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupsucceeded)  
-    [**IVssBackupComponents:: setfilerestorestatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setfilerestorestatus)  
-    [**IVssComponent:: getfilerestorestatus**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getfilerestorestatus)  
+[**IVssBackupComponents::SetBackupSucceeded**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupsucceeded)  
+    [**IVssComponent::GetBackupSucceeded**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupsucceeded)  
+    [**IVssBackupComponents::SetFileRestoreStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setfilerestorestatus)  
+    [**IVssComponent::GetFileRestoreStatus**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getfilerestorestatus)  
     </dl>
--   Sicherungs-und Wiederherstellungsoptionen: <dl>
+-   Sicherungs- und Wiederherstellungsoptionen: <dl>
 
-[**IVssBackupComponents:: setbackupoptions**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupoptions)  
-    [**IVssComponent:: getbackupoptions**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupoptions)  
-    [**IVssBackupComponents:: abtrestoreoptions**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setrestoreoptions)  
-    [**IVssComponent:: getrestoreoptions**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoreoptions)  
+[**IVssBackupComponents::SetBackupOptions**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupoptions)  
+    [**IVssComponent::GetBackupOptions**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupoptions)  
+    [**IVssBackupComponents::SetRestoreOptions**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setrestoreoptions)  
+    [**IVssComponent::GetRestoreOptions**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoreoptions)  
     </dl>
 -   Fehlermeldungen: <dl>
 
-[**IVssComponent:: setpostrestorefailuremsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setpostrestorefailuremsg)  
-    [**IVssComponent:: setprerestorefailuremsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setprerestorefailuremsg)  
-    [**IVssComponent:: setpostrestorefailuremsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setpostrestorefailuremsg)  
-    [**IVssComponent:: setprerestorefailuremsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setprerestorefailuremsg)  
+[**IVssComponent::SetPostRestoreFailureMsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setpostrestorefailuremsg)  
+    [**IVssComponent::SetPreRestoreFailureMsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setprerestorefailuremsg)  
+    [**IVssComponent::SetPostRestoreFailureMsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setpostrestorefailuremsg)  
+    [**IVssComponent::SetPreRestoreFailureMsg**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setprerestorefailuremsg)  
     </dl>
--   Wiederherstellungs Ziele: <dl>
+-   Wiederherstellungsziele: <dl>
 
-[**IVssComponent:: abtrestoretarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setrestoretarget)  
-    [**IVssComponent:: getrestoretarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoretarget)  
+[**IVssComponent::SetRestoreTarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setrestoretarget)  
+    [**IVssComponent::GetRestoreTarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoretarget)  
     </dl>
--   Sicherungs Stempel: <dl>
+-   Sicherungsstempel: <dl>
 
-[**IVssComponent:: setbackupstamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setbackupstamp)  
-    [**IVssComponent:: getbackupstamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupstamp)  
+[**IVssComponent::SetBackupStamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setbackupstamp)  
+    [**IVssComponent::GetBackupStamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupstamp)  
     </dl>
 -   Zusätzliche Metadaten: <dl>
 
-[**IVssComponent:: abtrestoremetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setrestoremetadata)  
-    [**IVssComponent:: getrestoremetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoremetadata)  
-    [**IVssComponent:: setbackupmetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setbackupmetadata)  
-    [**IVssComponent:: getbackupmetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupmetadata)  
+[**IVssComponent::SetRestoreMetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setrestoremetadata)  
+    [**IVssComponent::GetRestoreMetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoremetadata)  
+    [**IVssComponent::SetBackupMetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setbackupmetadata)  
+    [**IVssComponent::GetBackupMetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupmetadata)  
     </dl>
 
-Daher verwenden Sie die Instanz der [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle des definierenden Members eines Komponentensets, oder verwenden Sie den Namen, den Typ und den logischen Pfad des definierenden Members mit einer [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) -Methode, um Eigenschaften für alle Member des Komponenten Satzes festzulegen oder abzurufen.
+Daher verwenden Sie die Instanz der [**IVssComponent-Schnittstelle**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) des definierenden Members einer Komponentengruppe oder den Namen, typ und logischen Pfad des definierenden Members mit einer [**IVssBackupComponents-Methode,**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) um Eigenschaften für alle Member der Komponentengruppe festzulegen oder abzurufen.
 
-Aus diesem Grund werden Komponenten Sätze als Einheiten behandelt. Beispielsweise ist eine Sicherung eines Komponenten Satzes nur erfolgreich, wenn die Sicherung aller Datei Sätze aller zugehörigen Komponenten erfolgreich ist.
+Aus diesem Grund werden Komponentensätze als Einheiten behandelt. Beispielsweise ist eine Sicherung eines Komponentensatzes nur erfolgreich, wenn die Sicherung aller Dateisätze aller komponenten erfolgreich ist.
 
-Im vorherigen Beispiel wird angenommen, dass eine Datei in der Komponente "Jan" (mit dem logischen Pfad "Write Data \\ set2") ein Member des durch "Write Data" definierten Komponenten Satzes ist. Wenn eine der Dateien des "Jan"-Datentyps nicht gesichert werden konnte, verwendet eine anfordernde Person beim Festlegen von [**IVssBackupComponents:: setbackupall**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupsucceeded) mit **false** die Informationen von "Write Data" (der Name "schreiterdata", den Pfad "" und den Komponententyp) als Argumente, um den Fehler des Komponenten Satzes anzugeben.
+Nehmen wir im vorherigen Beispiel an, dass eine Datei in der Komponente "Jan" (mit dem logischen Pfad "writerData \\ Set2") ein Member der durch "writerData" definierten Komponentenmenge ist. Wenn eine der Dateien von "Jan" nicht gesichert werden konnte, verwendet ein Anforderer beim Festlegen von [**IVssBackupComponents::SetBackupSucceeded**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupsucceeded) mit **false** die Informationen von "writerData" als Argumente, um den Fehler des Komponentensatzes anzugeben.
 
-Ebenso gilt der von [**IVssComponent:: getbackupwar**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupsucceeded) für die Instanz der [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle zurückgegebene Status nicht nur für "Write Data", sondern auch für alle seine unter Komponenten.
+Auf ähnliche Weise gilt der von [**IVssComponent::GetBackupSucceededed**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupsucceeded) für die Instanz von "writerData" der [**IVssComponent-Schnittstelle**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) zurückgegebene Zustand nicht nur für "writerData", sondern auch für alle zugehörigen Unterkomponenten.
 
-Wenn ein Writer das Wiederherstellungs Ziel mithilfe von [**IVssComponent:: setrestoretarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setrestoretarget) der "schreiterdata"-Instanz von [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent)geändert hat, ändert sich außerdem das Wiederherstellungs Ziel für alle Datei Sätze aller "beschreiterdata"-unter Komponenten.
+Wenn ein Writer das Wiederherstellungsziel mithilfe von [**IVssComponent::SetRestoreTarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-setrestoretarget) der Instanz von "writerData" von [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent)geändert hat, würde dies das Wiederherstellungsziel für alle Dateisätze aller Unterkomponenten von "writerData" ändern.
 
-Die folgenden Eigenschaften gelten nicht für Komponenten, sondern für bestimmte Dateien oder Dateigruppen:
+Die folgenden Eigenschaften gelten nicht komponentenweit, sondern für bestimmte Dateien oder Dateisätze:
 
--   Alternativen Speicherort Zuordnungen: <dl>
+-   Alternative Standortzuordnungen: <dl>
 
-[**IVssBackupComponents:: addalternativelocationmapping**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addalternativelocationmapping)  
-    [**IVssComponent:: getalternatelocationmapping**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getalternatelocationmapping)  
-    [**IVssComponent:: getalternatelocationmappingcount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getalternatelocationmappingcount)  
+[**IVssBackupComponents::AddAlternativeLocationMapping**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addalternativelocationmapping)  
+    [**IVssComponent::GetAlternateLocationMapping**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getalternatelocationmapping)  
+    [**IVssComponent::GetAlternateLocationMappingCount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getalternatelocationmappingcount)  
     </dl>
 -   Differenzierte Dateien: <dl>
 
-[**IVssComponent:: AddDifferencedFilesByLastModifyTime**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-adddifferencedfilesbylastmodifytime)  
-    [**IVssComponent:: getdifferencedfile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getdifferencedfile)  
-    [**IVssComponent:: getdifferencedfilescount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getdifferencedfilescount)  
+[**IVssComponent::AddDifferencedFilesByLastModifyTime**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-adddifferencedfilesbylastmodifytime)  
+    [**IVssComponent::GetDifferencedFile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getdifferencedfile)  
+    [**IVssComponent::GetDifferencedFilesCount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getdifferencedfilescount)  
     </dl>
--   Partielle Dateien: <dl>
+-   Teildateien: <dl>
 
-[**IVssComponent:: addpartialfile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-addpartialfile)  
-    [**IVssComponent:: GetPartialFile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfile)  
-    [**IVssComponent:: GetPartialFileCount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfilecount)  
+[**IVssComponent::AddPartialFile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-addpartialfile)  
+    [**IVssComponent::GetPartialFile**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfile)  
+    [**IVssComponent::GetPartialFileCount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpartialfilecount)  
     </dl>
--   Gesteuerte Ziele: <dl>
+-   Gerichtete Ziele: <dl>
 
-[**IVssComponent:: adddirectedtarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-adddirectedtarget)  
-    [**IVssComponent:: getdirectedtarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getdirectedtarget)  
-    [**IVssComponent:: getdirectedtargetcount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getdirectedtargetcount)  
+[**IVssComponent::AddDirectedTarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-adddirectedtarget)  
+    [**IVssComponent::GetDirectedTarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getdirectedtarget)  
+    [**IVssComponent::GetDirectedTargetCount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getdirectedtargetcount)  
     </dl>
 -   Neue Ziele: <dl>
 
-[**IVssBackupComponents:: addnewtarget**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addnewtarget)  
-    [**IVssComponent:: getnewtarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getnewtarget)  
-    [**IVssComponent:: getnewtargetcount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getnewtargetcount)  
+[**IVssBackupComponents::AddNewTarget**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addnewtarget)  
+    [**IVssComponent::GetNewTarget**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getnewtarget)  
+    [**IVssComponent::GetNewTargetCount**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getnewtargetcount)  
     </dl>
 
-Wenn ein Anforderer mithilfe der [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) -Schnittstelle auf diese Funktionen für eine Unterkomponente zugreift, verwendet er die Komponenten Informationen für die definierende Komponente des Komponenten Satzes, aber die Datei-oder Datei Satz Informationen für die Unterkomponente.
+Wenn ein Anforderer über die [**IVssBackupComponents-Schnittstelle**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) auf diese Features für eine Unterkomponente zugreift, verwendet er die Komponenteninformationen für die definierende Komponente des Komponentensatzes, aber die Datei- oder Dateisatzinformationen für die Unterkomponente.
 
-Ebenso gilt: Wenn auf die Eigenschaft über die [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle zugegriffen werden kann, wird die Instanz verwendet, die der definierenden Unterkomponente entspricht, aber die Datei-oder Datei Satz Argumente werden von der Unterkomponente entnommen.
+Wenn auf die Eigenschaft über die [**IVssComponent-Schnittstelle**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) zugegriffen werden kann, wird auch die -Instanz verwendet, die der definierenden Unterkomponente entspricht, aber die Datei- oder Dateisatzargumente werden aus der Unterkomponente übernommen.
 
-Nehmen wir beispielsweise an, dass für die Teilkomponente "Jan" (mit dem logischen Pfad "Beschreibungsdaten \\ set2") ein Dateisatz mit dem Pfad "c: \\ Fred", die Datei Spezifikation " \* . dat" und das rekursive Flag **true** an einem alternativen Speicherort wieder hergestellt werden müssen.
+Angenommen, die Unterkomponente "Jan" (mit dem logischen Pfad "writerData \\ Set2") hat eine Datei mit dem Pfad "c: \\ fred", der Dateispezifikation \* ".dat" und dem rekursiven Flag **true** muss möglicherweise an einem alternativen Speicherort wiederhergestellt werden.
 
-Wenn dies der Fall wäre, würde ein Anforderer [**IVssBackupComponents:: addalternativelocationmapping**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addalternativelocationmapping). dabei werden die Informationen zu "beschreibenden Daten" (Komponententyp, Komponenten Name "beschreibenden Daten" und der logische Pfad "") zusammen mit den Datei Satz Informationen von "Jan" (Pfad "c: \\ Fred", Datei Spezifikation " \* . dat" und Rekursion gleich " **true**") verwendet.
+Wenn dies der Fall wäre, würde ein Anforderer [**IVssBackupComponents::AddAlternativeLocationMapping**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addalternativelocationmapping)aufrufen, wobei er die Informationen von "writerData" (Komponententyp, den Komponentennamen "writeData" und den logischen Pfad "") zusammen mit den Dateisatzinformationen von "Jan" (Pfad "c: \\ fly", Dateispezifikation \* ".dat" und Rekursion gleich **TRUE)** verwendet.
 
-Beachten Sie, dass die Datei Satz Informationen in diesem Fall genau mit den Datei Satz Informationen übereinstimmen müssen, die von [**ivsskreateschreitermetadata:: addfilestofilegroup**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-addfilestofilegroup), [**ivsskreateschreitermetadata:: adddatabasefiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-adddatabasefiles)oder [**ivsskreateschreitermetadata:: adddatabaselogfiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-adddatabaselogfiles) zum Hinzufügen von Dateien zu Jan verwendet werden
+Beachten Sie, dass in diesem Fall die Dateisatzinformationen genau mit den Dateisatzinformationen übereinstimmen müssen, die von [**IVssCreateWriterMetadata::AddFilesToFileGroup,**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-addfilestofilegroup) [**IVssCreateWriterMetadata::AddDatabaseFiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-adddatabasefiles)oder [**IVssCreateWriterMetadata::AddDatabaseLogFiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-adddatabaselogfiles) verwendet werden, um Dateien zu Jan hinzuzufügen.
 
-Ebenso gilt: Wenn ein Writer ein gerichtetes Ziel zu einer Datei mit dem Pfad "c: \\ Ethel" und dem Namen "Lucy. dat", die von "Jan" verwaltet wird (mit dem logischen Pfad "beschreiterdata \\ set2"), verwenden würde, würde er die [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Instanz verwenden, die "Write Data" entspricht, aber die Dateiinformationen von "Jan"
+Wenn ein Writer einer Datei mit dem Pfad "c: \\ ethel" und dem Von "Jan" verwalteten Namen "lucy.dat" (mit dem logischen Pfad "writerData Set2") ein gerichtetes Ziel hinzufügen \\ möchte, würde er die [**IVssComponent-Instanz**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) verwenden, die "writerData" entspricht, aber die Dateiinformationen von "Jan".
 
-## <a name="implicitly-included-components-in-the-restore-set"></a>Implizit enthaltene Komponenten in den Wiederherstellungs Satz
+## <a name="implicitly-included-components-in-the-restore-set"></a>Implizit eingeschlossene Komponenten im Wiederherstellungssatz
 
-Komponenten, die implizit in einer Sicherung enthalten waren, können explizit in eine Wiederherstellung eingeschlossen werden, wenn Sie für die Wiederherstellung ausgewählt werden können. Wie bereits in [Arbeiten mit selektselabilität für Wiederherstellung und unter Komponenten](working-with-selectability-for-restore-and-subcomponents.md)erläutert, werden diese Komponenten dem Dokument mit den Sicherungs Komponenten mithilfe der [**IVssBackupComponents:: adressstoresubcomponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addrestoresubcomponent) -Methode hinzugefügt.
+Komponenten, die implizit in eine Sicherung eingeschlossen wurden, können explizit in eine Wiederherstellung eingeschlossen werden, wenn sie für die Wiederherstellung ausgewählt werden können. Wie unter [Working with Selectability for Restore and Subcomponents (Arbeiten mit Der Auswählbarkeit für Wiederherstellung und Unterkomponenten)](working-with-selectability-for-restore-and-subcomponents.md)erwähnt, werden diese Komponenten dem Dokument sicherungskomponenten mithilfe der [**IVssBackupComponents::AddRestoreSubcomponent-Methode**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addrestoresubcomponent) hinzugefügt.
 
-Dadurch wird jedoch keine neue Instanz der [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle erstellt, und die Komponente ist nicht direkt über die [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) -Schnittstelle zugänglich.
+Dadurch wird jedoch weder eine neue Instanz der [**IVssComponent-Schnittstelle**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) erstellt, noch kann auf die Komponente direkt über die [**IVssBackupComponents-Schnittstelle**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) zugegriffen werden.
 
-Stattdessen muss eine Komponente, die explizit für die Wiederherstellung eingeschlossen ist, aber implizit für die Sicherung eingeschlossen wird, über eine Instanz der [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle aufgerufen werden, die der Komponente entspricht, von der der Komponenten Satz definiert wurde, von dem Sie bei der Sicherung Mitglied war.
+Stattdessen muss auf eine Komponente, die explizit für die Wiederherstellung, aber implizit für die Sicherung eingeschlossen ist, über eine Instanz der [**IVssComponent-Schnittstelle**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) zugegriffen werden, die der Komponente entspricht, die den Komponentensatz definiert hat, dessen Member sie bei der Sicherung war.
 
-Wenn Sie z. b. explizit for Restore "set1" einschließen möchten, eine Unterkomponente der auswählbaren for Backup-Komponente "beschreiterdata", erhalten Sie Informationen dazu, indem Sie die [**IVssComponent:: getrestoresubcomponent**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoresubcomponent) -Methode der Instanz "" von "beschreiterdata" der [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle aufrufen.
+Wenn Sie beispielsweise explizit für die Wiederherstellung von "Set1" einschließen möchten, eine Unterkomponente der für die Sicherungskomponente "writerData" auswählbaren Komponente, rufen Sie die [**IVssComponent::GetRestoreSubcomponent-Methode**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getrestoresubcomponent) der Instanz der [**IVssComponent-Schnittstelle**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) von "writerData" auf.
 
  
 

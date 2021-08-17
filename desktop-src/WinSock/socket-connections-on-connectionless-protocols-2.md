@@ -1,5 +1,5 @@
 ---
-description: In den folgenden Abschnitten wird die Semantik der Verwendung von Verbindungsvorgängen für verbindungslose Protokolle wie UDP und IPX beschrieben. Herstellen einer Verbindung mit einem Standard-PeerReconnecting und DisconnectingUsing Sendto While Connected
+description: In den folgenden Abschnitten wird die Semantik der Verwendung von Verbindungsvorgängen für verbindungslose Protokolle wie UDP und IPX beschrieben. Herstellen einer Verbindung mit einem Standard-PeerReconnecting und DisconnectingUsing Sendto while Connected
 ms.assetid: 7d69c82e-51cb-4e54-8097-744e211eb032
 title: Socketverbindungen für verbindungslose Protokolle
 ms.topic: article
@@ -15,8 +15,8 @@ ms.locfileid: "117740338"
 
 In den folgenden Abschnitten wird die Semantik der Verwendung von Verbindungsvorgängen für verbindungslose Protokolle wie UDP und IPX beschrieben.
 
--   [Herstellen einer Verbindung mit einem Standardspeer](connecting-to-a-default-peer-2.md)
--   [Erneutes Verbinden und Trennen](reconnecting-and-disconnecting-2.md)
+-   [Herstellen einer Verbindung mit einem Standard-Peer](connecting-to-a-default-peer-2.md)
+-   [Erneutes Herstellen einer Verbindung und Trennen der Verbindung](reconnecting-and-disconnecting-2.md)
 -   [Verwenden von Sendto während der Verbindung](using-sendto-while-connected-2.md)
 
  

@@ -1,6 +1,6 @@
 ---
-title: IVMVirtualPC UpTime-Eigenschaft (VPCCOMInterfaces.h)
-description: Ruft die Anzahl von Sekunden ab, Windows die Virtuelle PC-Anwendung ausgeführt wurde.
+title: IVMVirtualPC-UpTime-Eigenschaft (VPCCOMInterfaces.h)
+description: Ruft die Anzahl der Sekunden ab, die die Windows Virtual PC-Anwendung ausgeführt wurde.
 ms.assetid: 3007a961-2e8c-4674-aab6-4424d0d73eca
 keywords:
 - UpTime-Eigenschaft Virtueller PC
@@ -26,9 +26,9 @@ ms.locfileid: "117752009"
 ---
 # <a name="ivmvirtualpcuptime-property"></a>IVMVirtualPC::UpTime-Eigenschaft
 
-\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft die Anzahl von Sekunden ab, Windows die Virtuelle PC-Anwendung ausgeführt wurde.
+Ruft die Anzahl der Sekunden ab, die die Windows Virtual PC-Anwendung ausgeführt wurde.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ HRESULT get_UpTime(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Anzahl von Sekunden, die die Windows Virtual PC-Anwendung ausgeführt wurde.
+Die Anzahl von Sekunden, in denen die Windows Virtual PC-Anwendung ausgeführt wurde.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,9 +54,9 @@ Die Anzahl von Sekunden, die die Windows Virtual PC-Anwendung ausgeführt wurde.
 | Name/Wert                                                                                                                                                                           | Bedeutung                                                                                         |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                                              | Der Vorgang wurde durchgeführt.<br/>                                                        |
-| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl>                                | Der Parameter ist **NULL.**<br/>                                                           |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>                                | Der Parameter ist **NULL.**<br/>                                                           |
 | <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl>                        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                    |
-| <dl> <dt>VM \_ E \_ \_ HARDWAREVIRTUALISIERUNG \_ DEAKTIVIERT</dt> <dt>0XA0040951</dt> </dl> | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/> |
+| <dl> <dt>VM \_ E \_ HARDWARE \_ VIRTUALIZATION \_ DISABLED</dt> <dt>0xA0040951</dt> </dl> | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/> |
 
 
 
@@ -66,7 +66,7 @@ Die Anzahl von Sekunden, die die Windows Virtual PC-Anwendung ausgeführt wurde.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |

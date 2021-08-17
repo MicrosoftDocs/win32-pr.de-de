@@ -1,6 +1,6 @@
 ---
 title: dcl_usage ausgabe (sm1, sm2, sm3 – vs asm)
-description: Die verschiedenen Arten von Ausgaberegistern wurden zu zwölf Ausgaberegistern reduziert (zwei für Farbe, acht für Textur, eines für position und eines für Dies und Punktgröße).
+description: Die verschiedenen Arten von Ausgaberegistern wurden zu zwölf Ausgaberegistern reduziert (zwei für Farbe, acht für Textur, eines für position und eines für die Größe von 2007 Und Punkt).
 ms.assetid: 500ca6b3-0f8a-446e-b1b9-edc51f006ad4
 ms.topic: reference
 ms.date: 05/31/2018
@@ -18,7 +18,7 @@ ms.locfileid: "117726717"
 ---
 # <a name="dcl_usage-output-sm1-sm2-sm3---vs-asm"></a>dcl \_ usage output (sm1, sm2, sm3 – vs asm)
 
-Die verschiedenen Arten von Ausgaberegistern wurden zu zwölf Ausgaberegistern reduziert (zwei für Farbe, acht für Textur, eines für position und eines für Dies und Punktgröße). Diese können für alles verwendet werden, was der Benutzer für den Pixel-Shader interpolieren möchte: Texturkoordinaten, Farben, Blau und so weiter.
+Die verschiedenen Arten von Ausgaberegistern wurden zu zwölf Ausgaberegistern reduziert (zwei für Farbe, acht für Textur, eines für position und eines für die Größe von 2007 Und Punkt). Diese können für alles verwendet werden, was der Benutzer für den Pixel-Shader interpolieren möchte: Texturkoordinaten, Farben, Schnee und so weiter.
 
 Ausgaberegister erfordern Deklarationen, die Semantik enthalten. Beispielsweise werden die alten Register für Position und Punktgröße ersetzt, indem ein Ausgaberegister mit einer Positions- oder Punktgrößensemantik deklariert wird.
 
@@ -40,7 +40,7 @@ Die Syntax zum Deklarieren von Ausgaberegistern ähnelt den Deklarationen für d
 
 Hierbei gilt:
 
--   Die \_ dcl-Semantik kann denselben Semantiksatz wie für die Eingabedeklaration verwenden. Semantische Namen stammen [**aus D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage) (und sind mit einem Index gekoppelt, z. B. position3). Es muss immer ein Ausgaberegister mit der positiont0-Semantik geben, wenn es nicht für die Verarbeitung von Scheiteltices verwendet wird. Die semantische Position 0 und die pointsize0-Semantik sind die einzigen Semantik, die eine Bedeutung haben, über das einfache Zulassen der Verknüpfung von Scheitelpunkt zu Pixel-Shadern hinaus. Bei Shadern mit Flusssteuerung wird davon ausgegangen, dass die Ausgabe im ungünstigsten Fall deklariert ist. Es gibt keine Standardwerte, wenn ein Shader nicht tatsächlich aus gibt, was er deklarieren sollte (aufgrund der Flusssteuerung).
+-   Die \_ dcl-Semantik kann denselben Semantiksatz wie für die Eingabedeklaration verwenden. Semantische Namen stammen [**aus D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage) (und sind mit einem Index gekoppelt, z. B. position3). Es muss immer ein Ausgaberegister mit der positiont0-Semantik geben, wenn es nicht für die Verarbeitung von Scheitelten verwendet wird. Die semantische Position 0 und die pointsize0-Semantik sind die einzigen Semantik, die eine Bedeutung haben, über das einfache Zulassen der Verknüpfung von Scheitelpunkt zu Pixel-Shadern hinaus. Bei Shadern mit Flusssteuerung wird davon ausgegangen, dass die Ausgabe im ungünstigsten Fall deklariert ist. Es gibt keine Standardwerte, wenn ein Shader nicht tatsächlich aus gibt, was er deklarieren sollte (aufgrund der Flusssteuerung).
 -   o ist ein Ausgaberegister. Weitere Informationen [finden Sie \_ unter Ausgaberegister.](dx9-graphics-reference-asm-vs-registers-vs-3-0.md)
 -   Die Schreibmaske gibt dasselbe Ausgaberegister an, das mehrmals deklariert werden kann (sodass unterschiedliche Semantik auf einzelne Komponenten angewendet werden kann), jedes Mal mit einer eindeutigen \_ Schreibmaske. Die gleiche Semantik kann jedoch nicht mehrmals in einer Deklaration verwendet werden. Dies bedeutet, dass Vektoren vier Komponenten oder weniger sein müssen und nicht über Vier-Komponenten-Registergrenzen (einzelne Register) hinweg gehen können. Wenn die Semantik der Punktgröße verwendet wird, sollte sie über eine vollständige Schreibmaske verfügen, da sie als Skalar betrachtet wird. Wenn die Positionssemantik verwendet wird, sollte sie über eine vollständige Schreibmaske verfügen, da alle vier Komponenten geschrieben werden müssen.
 

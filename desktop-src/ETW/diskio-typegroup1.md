@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Datenträger-e/a-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Datenträger-E/A-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: fe7d4efa-3d39-4438-a1a6-af3f65ea3deb
 title: DiskIo_TypeGroup1-Klasse
 ms.topic: reference
@@ -21,18 +21,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 9d20f80eb840283600f5d106f89c6cf8032ee746
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 3a69643602a59fa7be8cd844f3f2908c92e2e08545f7444d1002ec1542b36730
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526867"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117814976"
 ---
-# <a name="diskio_typegroup1-class"></a>Diskio \_ TypeGroup1-Klasse
+# <a name="diskio_typegroup1-class"></a>DiskIo \_ TypeGroup1-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Datenträger-e/a-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Datenträger-E/A-Ereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,17 +54,17 @@ class DiskIo_TypeGroup1 : DiskIo
 
 ## <a name="members"></a>Member
 
-Die **diskio \_ TypeGroup1** -Klasse verfügt über diese Typen von Membern:
+Die **DiskIo \_ TypeGroup1-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **diskio \_ TypeGroup1** -Klasse verfügt über diese Eigenschaften.
+Die **DiskIo \_ TypeGroup1-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Byte Offset**
+**ByteOffset**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint64**
@@ -73,153 +73,153 @@ Datentyp: **sint64**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**wmidataid**](event-tracing-mof-qualifiers.md) (5)
+Qualifizierer: [**WmiDataId**](event-tracing-mof-qualifiers.md) (5)
 </dt> </dl>
 
-Byte Offset vom Anfang des physischen Datenträgers.
+Byteoffset vom Anfang des physischen Datenträgers.
 
 </dd> <dt>
 
-**Disknumber**
+**DiskNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**wmidataid**](event-tracing-mof-qualifiers.md) (1)
+Qualifizierer: [**WmiDataId**](event-tracing-mof-qualifiers.md) (1)
 </dt> </dl>
 
 Zahl, die den physischen Datenträger identifiziert.
 
 </dd> <dt>
 
-**File Object**
+**FileObject**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**wmidataid**](event-tracing-mof-qualifiers.md) (6), [**Zeiger**](event-tracing-mof-qualifiers.md)
+Qualifizierer: [**WmiDataId**](event-tracing-mof-qualifiers.md) (6), [**Zeiger**](event-tracing-mof-qualifiers.md)
 </dt> </dl>
 
-Vergleichen Sie den Wert dieses Zeigers mit dem **FileObject** -Zeiger Wert in einem [**FileIO- \_ namens**](fileio-name.md) Ereignis, um die am e/a-Vorgang beteiligte Datei zu bestimmen.
+Übereinstimmung mit dem Wert dieses Zeigers auf den **FileObject-Zeigerwert** in einem [**FileIo \_ Name-Ereignis,**](fileio-name.md) um die am E/A-Vorgang beteiligte Datei zu bestimmen.
 
 </dd> <dt>
 
-**Highresresponse Time**
+**HighResResponseTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**wmidataid**](event-tracing-mof-qualifiers.md) (8)
+Qualifizierer: [**WmiDataId**](event-tracing-mof-qualifiers.md) (8)
 </dt> </dl>
 
-Die Zeit zwischen der e/a-Initiierung und dem Abschluss des Partitions-Managers (in den Tick-Einheiten von [**KeQueryPerformanceCounter**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-kequeryperformancecounter) ).
+Die Vom Partitions-Manager gemessene Zeit zwischen der E/A-Initiierung und dem Abschluss (in den [**Tick-Einheiten von KeQueryPerformanceCounter).**](/windows-hardware/drivers/ddi/ntifs/nf-ntifs-kequeryperformancecounter)
 
-**Windows Server 2003:** Diese Eigenschaft verfügt über einen [**wmidataid**](event-tracing-mof-qualifiers.md) -Wert von 7.
+**Windows Server 2003:** Diese Eigenschaft hat den [**WmiDataId-Wert**](event-tracing-mof-qualifiers.md) 7.
 
 **Windows 2000 Server und Windows 2000 Professional:** Diese Eigenschaft wird nicht unterstützt.
 
 </dd> <dt>
 
-**IRP**
+**Irp**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**wmidataid**](event-tracing-mof-qualifiers.md) (7), [**Zeiger**](event-tracing-mof-qualifiers.md)
+Qualifizierer: [**WmiDataId**](event-tracing-mof-qualifiers.md) (7), [**Zeiger**](event-tracing-mof-qualifiers.md)
 </dt> </dl>
 
-Das e/a-Anforderungspaket, das die e/a-Aktivität identifiziert.
+Das E/A-Anforderungspaket, das die E/A-Aktivität identifiziert.
 
 **Windows Server 2003, Windows 2000 Server und Windows 2000 Professional:** Diese Eigenschaft wird nicht unterstützt.
 
 </dd> <dt>
 
-**Unpflags**
+**IrpFlags**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**wmidataid**](event-tracing-mof-qualifiers.md) (2), [**Format**](event-tracing-mof-qualifiers.md) ("x")
+Qualifizierer: [**WmiDataId**](event-tracing-mof-qualifiers.md) (2), [**Format**](event-tracing-mof-qualifiers.md) ("x")
 </dt> </dl>
 
-Kann mindestens eines der folgenden e/a-Anforderungs Paketflags enthalten (definiert in "ntddk. h", bei dem es sich um eine DDK-Header Datei handelt):
+Kann mindestens eines der folgenden E/A-Anforderungspaketflags enthalten (definiert in Ntddk.h, einer DDK-Headerdatei):
 
 <dl><span id="__IRP_NOCACHE"></span><span id="__irp_nocache"></span><dt>
 
- **"unp \_ NoCache"**
+ **IRP \_ NOCACHE**
 </dt><span id="__IRP_PAGING_IO"></span><span id="__irp_paging_io"></span><dt>
 
- **Auslagerungs-e/a \_ \_**
+ **\_ \_ IRP-PAGING-E/A**
 </dt><span id="__IRP_MOUNT_COMPLETION"></span><span id="__irp_mount_completion"></span><dt>
 
- **Beendigung der unp- \_ \_ Einstellung**
+ **ABSCHLUSS DER \_ \_ IRP-BEREITSTELLUNG**
 </dt><span id="__IRP_SYNCHRONOUS_API"></span><span id="__irp_synchronous_api"></span><dt>
 
- **synchrone unp- \_ \_ API**
+ **SYNCHRONE \_ \_ IRP-API**
 </dt><span id="__IRP_ASSOCIATED_IRP"></span><span id="__irp_associated_irp"></span><dt>
 
- **Mit unp \_ verknüpfte \_ unp**
+ **\_IRP-ZUGEORDNETES \_ IRP**
 </dt><span id="__IRP_BUFFERED_IO"></span><span id="__irp_buffered_io"></span><dt>
 
- **nicht- \_ gepufferte e/a \_**
+ **IRP \_ BUFFERED \_ IO**
 </dt><span id="IRP_DEALLOCATE_BUFFER"></span><span id="irp_deallocate_buffer"></span><dt>
 
-**unp- \_ \_ Puffer Freigabe**
+**IRP \_ DEALLOCATE \_ BUFFER**
 </dt><span id="__IRP_INPUT_OPERATION"></span><span id="__irp_input_operation"></span><dt>
 
- **unp- \_ Eingabe \_ Vorgang**
+ **\_IRP-EINGABEVORGANG \_**
 </dt><span id="__IRP_SYNCHRONOUS_PAGING_IO"></span><span id="__irp_synchronous_paging_io"></span><dt>
 
- **unp-e/a für \_ synchrone \_ Auslagerung \_**
+ **SYNCHRONE \_ \_ IRP-PAGING-E/A \_**
 </dt><span id="__IRP_CREATE_OPERATION"></span><span id="__irp_create_operation"></span><dt>
 
- **Vorgang zum \_ Erstellen von irren \_**
+ **\_ \_ IRP-ERSTELLUNGSVORGANG**
 </dt><span id="IRP_READ_OPERATION"></span><span id="irp_read_operation"></span><dt>
 
-**unp- \_ Lese \_ Vorgang**
+**\_IRP-LESEVORGANG \_**
 </dt><span id="__IRP_WRITE_OPERATION"></span><span id="__irp_write_operation"></span><dt>
 
- **unp- \_ Schreib \_ Vorgang**
+ **\_IRP-SCHREIBVORGANG \_**
 </dt><span id="__IRP_CLOSE_OPERATION"></span><span id="__irp_close_operation"></span><dt>
 
- **unp-Schließ \_ \_ Vorgang**
+ **IRP- \_ \_ CLOSE-VORGANG**
 </dt><span id="__IRP_DEFER_IO_COMPLETION"></span><span id="__irp_defer_io_completion"></span><dt>
 
- **e/a- \_ \_ \_ Abschluss der Antwort**
+ **IRP \_ DEFER \_ IO \_ COMPLETION**
 </dt> </dl>
 
 </dd> <dt>
 
-**Issuingthreadid**
+**IssuingThreadId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**wmidataid**](event-tracing-mof-qualifiers.md) (9)
+Qualifizierer: [**WmiDataId**](event-tracing-mof-qualifiers.md) (9)
 </dt> </dl>
 
 Der Bezeichner des ausstellenden Threads.
@@ -231,42 +231,42 @@ Der Bezeichner des ausstellenden Threads.
 **Reserved**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**wmidataid**](event-tracing-mof-qualifiers.md) (4)
+Qualifizierer: [**WmiDataId**](event-tracing-mof-qualifiers.md) (4)
 </dt> </dl>
 
 Reserviert.
 
-**Windows Server 2008 R2, Windows Server 2008 und Windows 7:** Der Name der Eigenschaft ist **queuetiefe**, die die CPU-Takt Anzahl vom Beginn des Vorgangs bis zum Ende des Vorgangs enthält. Beachten Sie, dass dieser Wert einen Überlauf verursachen kann.
+**Windows Server 2008 R2, Windows Server 2008 und Windows 7:** Der Name der Eigenschaft ist **QueueDepth,** die die CPU-Tickanzahl vom Anfang des Vorgangs bis zum Ende des Vorgangs enthält. Beachten Sie, dass dieser Wert überlaufen kann.
 
-**Windows Vista, Windows Server 2003 mit SP1, Windows Server 2003, Windows 2000 Server und Windows 2000 Professional:** Der Name der Eigenschaft ist **Response Time**, die die CPU-Takt Anzahl vom Beginn des Vorgangs bis zum Ende des Vorgangs enthält. Beachten Sie, dass dieser Wert einen Überlauf verursachen kann.
+**Windows Vista, Windows Server 2003 mit SP1, Windows Server 2003, Windows 2000 Server und Windows 2000 Professional:** Der Name der Eigenschaft ist **ResponseTime,** die die CPU-Tickanzahl vom Anfang des Vorgangs bis zum Ende des Vorgangs enthält. Beachten Sie, dass dieser Wert überlaufen kann.
 
 </dd> <dt>
 
 **TransferSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**wmidataid**](event-tracing-mof-qualifiers.md) (3)
+Qualifizierer: [**WmiDataId**](event-tracing-mof-qualifiers.md) (3)
 </dt> </dl>
 
-Größe der Daten, die vom Datenträger gelesen oder geschrieben werden (in Bytes).
+Größe der auf den Datenträger gelesenen oder von diesem geschriebenen Daten in Bytes.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Windows Server 2003 verwendet die folgende Definition für die **diskio \_ TypeGroup1** -Ereignistyp Klasse.
+Windows Server 2003 verwendet die folgende Definition für die **DiskIo \_ TypeGroup1-Ereignistypklasse.**
 
 ``` syntax
 [EventType{10, 11}, EventTypeName{"Read", "Write"}]
@@ -282,11 +282,11 @@ class DiskIo_TypeGroup1 : DiskIo
 };
 ```
 
-Die **ResponseTime** -Eigenschaft enthält die CPU-Takt Anzahl vom Beginn des Vorgangs bis zum Ende des Vorgangs. Beachten Sie, dass dieser Wert einen Überlauf verursachen kann.
+Die **ResponseTime-Eigenschaft** enthält die CPU-Tickanzahl vom Anfang des Vorgangs bis zum Ende des Vorgangs. Beachten Sie, dass dieser Wert überlaufen kann.
 
-Die **highresresponse Time** -Eigenschaft wird nicht unterstützt.
+Die **HighResResponseTime-Eigenschaft** wird nicht unterstützt.
 
-Windows Server 2003 mit SP1 und Windows Vista verwendet die folgende Definition für die Klasse **diskio \_ TypeGroup1** Event Type.
+Windows Server 2003 mit SP1 und Windows Vista verwendet die folgende Definition für die **DiskIo \_ TypeGroup1-Ereignistypklasse.**
 
 ``` syntax
 [EventType{10, 11}, EventTypeName{"Read", "Write"}]
@@ -303,11 +303,11 @@ class DiskIo_TypeGroup1 : DiskIo
 };
 ```
 
-Die Eigenschaft " **unp** " ist das e/a-Anforderungspaket. Diese Eigenschaft identifiziert die e/a-Aktivität. Sie können diese Eigenschaft mit den [**diskio \_ TypeGroup2**](diskio-typegroup2.md) -Ereignissen verwenden, um die Antwortzeit zu korrelieren.
+Die **Irp-Eigenschaft** ist das E/A-Anforderungspaket. Diese Eigenschaft identifiziert die E/A-Aktivität. Sie können diese Eigenschaft mit den [**DiskIo \_ TypeGroup2-Ereignissen**](diskio-typegroup2.md) verwenden, um die Antwortzeit zu korrelieren.
 
-Die **highresresponse Time** -Eigenschaft wird unterstützt. Die-Eigenschaft enthält die Zeit zwischen der e/a-Initiierung und der Vervollständigung, die von PartitionManager gemessen wird (in den KeQueryPerformanceCounter-Einheiten). Verwenden Sie diese Eigenschaft anstelle der Response **time** -Eigenschaft, um die Datenträger-e/a-Antwortzeit zu bestimmen.
+Die **HighResResponseTime-Eigenschaft** wird unterstützt. Die -Eigenschaft enthält die Zeit zwischen der E/A-Initiierung und dem Abschluss, die von PartitionManager gemessen wird (in den KeQueryPerformanceCounter-Einheiten). Verwenden Sie diese Eigenschaft anstelle der **ResponseTime-Eigenschaft,** um die E/A-Antwortzeit des Datenträgers zu bestimmen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -322,7 +322,7 @@ Die **highresresponse Time** -Eigenschaft wird unterstützt. Die-Eigenschaft ent
 
 <dl> <dt>
 
-[**Sowie**](diskio.md)
+[**DiskIo**](diskio.md)
 </dt> </dl>
 
  

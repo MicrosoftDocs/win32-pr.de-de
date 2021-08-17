@@ -1,10 +1,10 @@
 ---
-title: IVMUSBDeviceCollection-Elementeigenschaft (VPCCOMInterfaces.h)
+title: IVMUSBDeviceCollection Item-Eigenschaft (VPCCOMInterfaces.h)
 description: Ruft das USB-Geräteobjekt ab, das dem angegebenen Index entspricht.
 ms.assetid: 664a038e-7c86-43a9-a376-c913d431dc93
 keywords:
-- Elementeigenschaft Virtueller PC
-- Elementeigenschaft Virtueller PC, IVMUSBDeviceCollection-Schnittstelle
+- Item-Eigenschaft Virtueller PC
+- Item-Eigenschaft Virtual PC, IVMUSBDeviceCollection-Schnittstelle
 - IVMUSBDeviceCollection-Schnittstelle Virtueller PC, Item-Eigenschaft
 topic_type:
 - apiref
@@ -26,7 +26,7 @@ ms.locfileid: "117752549"
 ---
 # <a name="ivmusbdevicecollectionitem-property"></a>IVMUSBDeviceCollection::Item-Eigenschaft
 
-\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Ruft das USB-Geräteobjekt ab, das dem angegebenen Index entspricht.
 
@@ -55,8 +55,8 @@ Das [**IVMUSBDevice-Objekt.**](ivmusbdevice.md)
 | Name/Wert                                                                                                                                                    | Bedeutung                                                                                        |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt. <br/>                                                      |
-| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>         | Der *usbDevice-Parameter* ist **NULL.** <br/>                                             |
-| <dl> <dt>DISP \_ E \_ BADINDEX</dt> <dt>0x8002000B</dt> </dl>  | Der Index des angeforderten Elements entspricht keinem Element in dieser Auflistung. <br/> |
+| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl>         | Der *usbDevice-Parameter* ist **NULL.** <br/>                                             |
+| <dl> <dt>DISP \_ E \_ BADINDEX-0x8002000B</dt> <dt></dt> </dl>  | Der Index des angeforderten Elements entspricht keinem Element in dieser Auflistung. <br/> |
 | <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                   |
 
 
@@ -67,7 +67,7 @@ Das [**IVMUSBDevice-Objekt.**](ivmusbdevice.md)
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |

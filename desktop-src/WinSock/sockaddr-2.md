@@ -1,5 +1,5 @@
 ---
-description: Die sockaddr-Struktur variiert je nach ausgewähltem Protokoll.
+description: Die Sockaddr-Struktur variiert je nach ausgewähltem Protokoll.
 ms.assetid: d1392e1c-2b20-425a-8adf-38e665fb6275
 title: sockaddr
 ms.topic: reference
@@ -12,22 +12,22 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: ccd4b98efc987630ab625e5c9788f0be16018e88
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: afdacd0b4579bcb73bfaaa2da0b3714c7d597d94c0d25020e7353e3afd168d71
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117927321"
 ---
 # <a name="sockaddr"></a>sockaddr
 
-Die sockaddr-Struktur variiert je nach ausgewähltem Protokoll. Mit Ausnahme des Parameters der *Sin- \* \_ Familie* werden sockaddr-Inhalte in der Netzwerk-Byte Reihenfolge ausgedrückt.
+Die Sockaddr-Struktur variiert je nach ausgewähltem Protokoll. Mit Ausnahme des *\* \_ Sin-Family-Parameters* werden sockaddr-Inhalte in Netzwerk-Bytereihenfolge ausgedrückt.
 
-Winsock-Funktionen, die sockaddr verwenden, werden nicht streng als Zeiger auf eine sockaddr-Struktur interpretiert. Die Struktur wird im Kontext verschiedener Adressfamilien anders interpretiert. Die einzige Anforderung ist, dass die erste **u \_ Short** die Adressfamilie und die Gesamtgröße des Arbeitsspeicher Puffers in Bytes *namge* ist.
+Winsock-Funktionen, die sockaddr verwenden, werden nicht streng als Zeiger auf eine Sockaddr-Struktur interpretiert. Die Struktur wird im Kontext verschiedener Adressfamilien unterschiedlich interpretiert. Die einzige Anforderung besteht darin, dass das erste **u \_ short** die Adressfamilie und die Gesamtgröße des Arbeitsspeicherpuffers in Bytes *namelen* ist.
 
-Die [**sockaddr- \_ Speicher**](/previous-versions/windows/desktop/legacy/ms740504(v=vs.85)) Struktur speichert auch socketadressinformationen, und die Struktur ist ausreichend groß, um IPv4-oder IPv6-Adressinformationen zu speichern. Die Verwendung der **sockaddr- \_ Speicher** Struktur fördert die Unabhängigkeit von Protokoll Familien und Protokoll Versionen und vereinfacht die Entwicklung. Es wird empfohlen, die **sockaddr- \_ Speicher** Struktur anstelle der sockaddr-Struktur zu verwenden. Die **sockaddr- \_ Speicher** Struktur wird unter Windows Server 2003 und höher unterstützt.
+Die [**SOCKADDR \_ STORAGE-Struktur**](/previous-versions/windows/desktop/legacy/ms740504(v=vs.85)) speichert auch Socketadresseninformationen, und die Struktur ist ausreichend groß, um IPv4- oder IPv6-Adressinformationen zu speichern. Die Verwendung der **SOCKADDR \_ STORAGE-Struktur** fördert die Unabhängigkeit von Protokollfamilie und Protokollversion und vereinfacht die Entwicklung. Es wird empfohlen, die **SOCKADDR \_ STORAGE-Struktur** anstelle der sockaddr-Struktur zu verwenden. Die **SOCKADDR \_ STORAGE-Struktur** wird auf Windows Server 2003 und höher unterstützt.
 
-Die sockaddr-Struktur und sockaddr \_ in den folgenden Strukturen werden mit IPv4 verwendet. Andere Protokolle verwenden ähnliche Strukturen.
+Die Struktur "sockaddr" und "sockaddr" \_ in den folgenden Strukturen werden mit IPv4 verwendet. Andere Protokolle verwenden ähnliche Strukturen.
 
 ``` syntax
 struct sockaddr {
@@ -43,7 +43,7 @@ struct sockaddr_in {
 };
 ```
 
-Die folgenden sockaddr \_ -IN6 und sockaddr \_ IN6 \_ alte Strukturen werden mit IPv6 verwendet.
+Der sockaddr \_ in6 und der sockaddr \_ in6 \_ alten Strukturen unten werden mit IPv6 verwendet.
 
 ``` syntax
 struct sockaddr_in6 {
@@ -67,7 +67,7 @@ struct sockaddr_in6_old {
 };
 ```
 
-Auf dem Microsoft Windows Software Development Kit (SDK), das für Windows Vista und höher veröffentlicht wurde, werden **sockaddr** -und **sockaddr-Tags \_ in** typedef-Tags wie folgt für sockaddr und sockaddr \_ in Strukturen definiert:
+Auf dem Microsoft Windows Software Development Kit (SDK), das für Windows Vista und höher veröffentlicht wurde, werden **SOCKADDR-** und **SOCKADDR IN-Typdefinitionstags \_** wie folgt für sockaddr und sockaddr \_ in Strukturen definiert:
 
 ``` syntax
 typedef struct sockaddr {
@@ -92,11 +92,11 @@ typedef struct sockaddr_in {
 } SOCKADDR_IN, *PSOCKADDR_IN;
 ```
 
-Auf der Windows SDK, die für Windows Vista und höher veröffentlicht wurden, hat sich die Organisation der Header Dateien geändert, und die sockaddr-und sockaddr- \_ Struktur in Strukturen sind in der Header Datei " *Ws2def. h* " und nicht in der Header Datei " *Winsock2. h* " definiert. Die Header Datei " *Ws2def. h* " wird automatisch von der *Winsock2. h* -Header Datei eingeschlossen. Die sockaddr \_ IN6-Struktur wird in der *Ws2ipdef. h* -Header Datei definiert, nicht in der Header Datei *Ws2tcpip. h* . Die Header Datei " *Ws2ipdef. h* " wird automatisch von der *Ws2tcpip. h* -Header Datei eingeschlossen. Die Header Dateien *Ws2def. h* und *Ws2ipdef. h* sollten niemals direkt verwendet werden.
+Auf dem Windows SDK, das für Windows Vista und höher veröffentlicht wurde, hat sich die Organisation der Headerdateien geändert, und die Sockaddr und sockaddr \_ in Strukturen werden in der *Headerdatei Ws2def.h* definiert, nicht in der *Winsock2.h-Headerdatei.* Die *Headerdatei Ws2def.h* wird automatisch in die *Winsock2.h-Headerdatei* eingefügt. Die sockaddr \_ in6-Struktur wird in der *Headerdatei Ws2ipdef.h* und nicht in der *Headerdatei Ws2tcpip.h* definiert. Die *Headerdatei Ws2ipdef.h* wird automatisch in die *Headerdatei Ws2tcpip.h* eingefügt. Die *Headerdateien "Ws2def.h"* und *"Ws2ipdef.h"* sollten nie direkt verwendet werden.
 
 ## <a name="example-code"></a>Beispielcode
 
-Im folgenden Beispiel wird die Verwendung der **sockaddr** -Struktur veranschaulicht.
+Im folgenden Beispiel wird die Verwendung der **Sockaddr-Struktur** veranschaulicht.
 
 
 ```C++
@@ -130,7 +130,7 @@ bind( ListenSocket,(SOCKADDR*) &saServer, sizeof(saServer) );
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**sockaddr- \_ Speicher**](/previous-versions/windows/desktop/legacy/ms740504(v=vs.85))
+[**SOCKADDR-SPEICHER \_**](/previous-versions/windows/desktop/legacy/ms740504(v=vs.85))
 
 
  

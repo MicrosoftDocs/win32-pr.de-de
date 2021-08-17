@@ -27,7 +27,7 @@ Gibt die Alphakomponenten der vier Texelwerte eines [**Texture2DArray**](sm5-obj
 
 
 
-| Methode                                                                                                          | BESCHREIBUNG                                                                                                                                       |
+| Methode                                                                                                          | Beschreibung                                                                                                                                       |
 |:----------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**GatherAlpha(S,float,int)**](sm5-object-texture2darray-gatheralpha.md)                                        | Gibt die Alphakomponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.<br/>                                 |
 | [**GatherAlpha(S,float,int,uint)**](t2darray-gatheralpha-s-float-int-uint-.md)                                  | Gibt die Alphakomponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang zusammen mit dem Kachelzuordnungsstatus verwendet werden.<br/> |

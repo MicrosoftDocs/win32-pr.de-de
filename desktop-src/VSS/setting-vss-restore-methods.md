@@ -1,43 +1,43 @@
 ---
-description: Die Konfiguration von Wiederherstellungs Vorgängen beginnt tatsächlich während der Datensicherung, wenn Writer in ihren Writer-Metadatendokumenten angeben, wie Ihre Daten wieder hergestellt werden sollen.
+description: Die Konfiguration von Wiederherstellungsvorgängen beginnt tatsächlich während der Datensicherung, wenn Writer in ihren WriterMetadatendokumenten angeben, wie ihre Daten wiederhergestellt werden sollen.
 ms.assetid: b1f948cd-d3b0-4637-b76d-b54a74bb5948
 title: Festlegen von VSS-Wiederherstellungsmethoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 412cb699fb791a973e280f63fec03bd2854ccd1d
-ms.sourcegitcommit: 37f276b5d887a3aad04b1ba86e390dea9d87e591
+ms.openlocfilehash: 27f7b0d138555b1e10dba55483c694c08a649e97e59cb66ed65c1a276187d3c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "104218911"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117751726"
 ---
 # <a name="setting-vss-restore-methods"></a>Festlegen von VSS-Wiederherstellungsmethoden
 
-Die Konfiguration von Wiederherstellungs Vorgängen beginnt tatsächlich während der Datensicherung, wenn Writer in ihren Writer-Metadatendokumenten angeben, wie Ihre Daten wieder hergestellt werden sollen.
+Die Konfiguration von Wiederherstellungsvorgängen beginnt tatsächlich während der Datensicherung, wenn Writer in ihren WriterMetadatendokumenten angeben, wie ihre Daten wiederhergestellt werden sollen.
 
-Diese Spezifikationen, die als [*Wiederherstellungsmethoden*](vssgloss-r.md) oder ursprüngliche [*Wiederherstellungs Ziele*](vssgloss-r.md)bezeichnet werden, können während der Wiederherstellung durch Writer geändert werden, indem neue Wiederherstellungs Ziele festgelegt werden oder wenn anfordernde Personen an neuen Speicherorten wieder hergestellt werden (siehe [nicht standardmäßige Sicherungs-und Wiederherstellungs](non-default-backup-and-restore-locations.md)Pfade
+Diese Spezifikationen, die entweder als [*Wiederherstellungsmethoden*](vssgloss-r.md) oder ursprüngliche [*Wiederherstellungsziele*](vssgloss-r.md)bezeichnet werden, können während der Wiederherstellung durch Writer, die neue Wiederherstellungsziele festlegen, oder durch Anfordernde geändert werden, die neue Speicherorte wiederherstellen (siehe [Nicht standardmäßige Sicherungs- und Wiederherstellungsspeicherorte).](non-default-backup-and-restore-locations.md)
 
-Durch den Aufruf von [**ivsscreateschreitermetadata:: abtrestoremethod**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-setrestoremethod)gibt ein Writer an, welche Wiederherstellungsmethode in seinem Writer-Metadatendokument verwendet werden soll. Die Restore-Methode wird als Writer breit festgelegt und auf alle Dateien in allen von einem Writer verwalteten Komponenten angewendet.
+Durch Aufrufen von [**IVssCreateWriterMetadata::SetRestoreMethod**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-setrestoremethod)gibt ein Writer an, welche Wiederherstellungsmethode im Writer Metadata Document verwendet werden soll. Die Wiederherstellungsmethode wird schreibgeweitet festgelegt und auf alle Dateien in allen Komponenten angewendet, die von einem Writer verwaltet werden.
 
-Ein Anforderer erhält diese Informationen (und muss Sie berücksichtigen), indem [**ivssexamineschreitermetadata:: getrestoremethod**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-getrestoremethod)aufgerufen wird.
+Ein Anforderer ruft diese Informationen ab (und muss diese berücksichtigen), indem [**er IVssExmostWriterMetadata::GetRestoreMethod aufruft.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-getrestoremethod)
 
-Die Restore-Methode wird durch eine [**VSS \_ restoremethod \_**](/windows/desktop/api/VsWriter/ne-vswriter-vss_restoremethod_enum) -Enumeration definiert, die an [**ivsskreateschreitermetadata:: abtrestoremethod**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-setrestoremethod) übergeben und von [**ivssexamineschreitermetadata:: getrestoremethod**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-getrestoremethod)zurückgegeben wird.
+Die Wiederherstellungsmethode wird durch eine [**VSS \_ \_ RESTOREMETHOD-ENUM-Enumeration**](/windows/desktop/api/VsWriter/ne-vswriter-vss_restoremethod_enum) definiert, die an [**IVssCreateWriterMetadata::SetRestoreMethod**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-setrestoremethod) übergeben und von [**IVssExfiltrWriterMetadata::GetRestoreMethod**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-getrestoremethod)zurückgegeben wird.
 
-Das Writer-Metadatendokument unterstützt die folgenden gültigen Wiederherstellungsmethoden (eine Wiederherstellungsmethode von VSS \_ RME ist \_ undefiniert und weist auf einen Schreiber Fehler hin) In den Abbildungen wird zusammengefasst, wie die verschiedenen unterstützten und definierten Wiederherstellungsmethoden implementiert werden sollten (VSS \_ RME \_ Custom hat keine Abbildung, da sie definitionsgemäß für den Writer spezifisch ist und den jeweiligen Writer-APIs und-Dokumentationen folgen muss):
+Das Writer Metadata Document unterstützt die folgenden gültigen Wiederherstellungsmethoden (eine Wiederherstellungsmethode von VSS \_ RME \_ UNDEFINED weist auf einen Writerfehler hin). Die Abbildungen fassen zusammen, wie die verschiedenen unterstützten und definierten Wiederherstellungsmethoden implementiert werden sollen (VSS \_ RME \_ CUSTOM ist keine Abbildung zugeordnet, da sie definitionsgemäß spezifisch für den Writer ist und den spezifischen Writer-APIs und der Dokumentation folgen muss):
 
--   VSS \_ RME \_ Restore, wenn dies nicht der Fall \_ ist \_ \_ . Stellen Sie Komponenten Dateien auf dem Datenträger wieder her, wenn sich keine der Dateien bereits auf dem Datenträger befinden. Der Ziel Dateistatus sollte nach einem [**vorab**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prerestore) Ereignis geprüft werden.
-    ![Diagramm, das eine Problem Behandlungs Struktur für VSS_RME_RESTORE_IF_NOT_THERE zeigt.](images/rint.png)
--   VSS \_ RME \_ Restore, \_ Wenn von \_ ersetzt werden kann \_ . Stellen Sie Dateien auf dem Datenträger wieder her, wenn alle Dateien ersetzt werden können. Der Ziel Dateistatus sollte nach einem [**vorab**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prerestore) Ereignis geprüft werden.
-    ![Diagramm, das eine Problem Behandlungs Struktur für VSS_RME_RESTORE_IF_CAN_REPLACE zeigt.](images/ricr.png)
--   der VSS- \_ RME \_ beendet die \_ Wiederherstellung \_ . Ein Dienst wird beendet, bevor die Dateien wieder hergestellt werden.
-    ![Diagramm, das eine Problem Behandlungs Struktur für VSS_RME_STOP_RESTORE_START zeigt.](images/srr.png)
--   VSS- \_ RME \_ \_ an einem \_ Alternativen \_ Speicherort wiederherstellen. Wiederherstellen von Dateien auf einem Datenträger an einem alternativen Speicherort. Die alternativen Speicherort Zuordnungen werden im Writer-Metadatendokument angegeben.
-    ![Diagramm, das eine Problem Behandlungs Struktur für VSS_RME_RESTORE_TO_ALTERNATE_LOCATION zeigt.](images/rtal.png)
--   VSS- \_ RME- \_ Wiederherstellung \_ beim \_ Neustart. Bewirkt, dass Dateien wieder hergestellt (überschrieben) werden, wenn der Computer neu gestartet wird.
-    ![Diagramm, das eine Problem Behandlungs Struktur für VSS_RME_RESTORE_AT_REBOOT zeigt.](images/rar.png)
--   VSS- \_ RME- \_ Wiederherstellung \_ beim \_ Neustart, \_ Wenn \_ nicht \_ ersetzen kann. Wenn eine Datei nicht auf dem Datenträger auf einem laufenden System wieder hergestellt werden konnte, wird Sie beim Neustart des Computers wieder hergestellt (überschrieben).
-    ![Diagramm, das eine Problem Behandlungs Struktur forVSS_RME_RESTORE_AT_REBOOT_IF_CANNOT_REPLACE zeigt. ](images/raricr.png)
--   VSS- \_ RME \_ Benutzer definiert. Keine der vordefinierten Methoden funktioniert. die Sicherungs Anwendung muss spezielle APIs verwenden, um den Wiederherstellungs Vorgang auszuführen. Bei dieser Sicherungsmethode muss der Anforderer den fraglichen Writer vollständig verstehen. Siehe [spezielle VSS-Verwendungs Fälle](special-vss-usage-cases.md) für derzeit unterstützte Instanzen.
+-   VSS \_ RME \_ \_ RESTORE, FALLS \_ NICHT \_ VORHANDEN. Stellen Sie Komponentendateien auf dem Datenträger wieder her, wenn sich keine der Dateien bereits auf dem Datenträger befindet. Der Zieldateistatus sollte nach einem [**PreRestore-Ereignis**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prerestore) überprüft werden.
+    ![Diagramm, das eine Problembehandlungsstruktur für VSS_RME_RESTORE_IF_NOT_THERE zeigt.](images/rint.png)
+-   VSS \_ RME \_ \_ RESTORE, WENN \_ ERSETZT WERDEN \_ KANN. Stellen Sie Dateien auf dem Datenträger wieder her, wenn alle Dateien ersetzt werden können. Der Zieldateistatus sollte nach einem [**PreRestore-Ereignis**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prerestore) überprüft werden.
+    ![Diagramm, das eine Problembehandlungsstruktur für VSS_RME_RESTORE_IF_CAN_REPLACE zeigt.](images/ricr.png)
+-   VSS \_ RME \_ BEENDET DEN \_ WIEDERHERSTELLUNGSSTART. \_ Ein Dienst wird vor dem Wiederherstellen der Dateien beendet.
+    ![Diagramm, das eine Problembehandlungsstruktur für VSS_RME_STOP_RESTORE_START zeigt.](images/srr.png)
+-   VSS \_ RME RESTORE TO ALTERNATE LOCATION (VSS RME-WIEDERHERSTELLUNG \_ AN EINEM ALTERNATIVEN \_ \_ \_ SPEICHERORT). Stellen Sie Dateien an einem alternativen Speicherort auf dem Datenträger wieder her. Die alternativen Speicherortzuordnungen werden im Writer Metadata Document angegeben.
+    ![Diagramm, das eine Problembehandlungsstruktur für VSS_RME_RESTORE_TO_ALTERNATE_LOCATION zeigt.](images/rtal.png)
+-   VSS \_ RME RESTORE AT REBOOT (VSS RME-WIEDERHERSTELLUNG \_ BEIM \_ \_ NEUSTART). Bewirkt, dass Dateien wiederhergestellt (überschrieben) werden, wenn der Computer neu gestartet wird.
+    ![Diagramm, das eine Problembehandlungsstruktur für VSS_RME_RESTORE_AT_REBOOT zeigt.](images/rar.png)
+-   VSS \_ RME \_ RESTORE AT REBOOT IF CANNOT REPLACE (VSS RME-WIEDERHERSTELLUNG \_ BEIM \_ \_ NEUSTART, WENN NICHT ERSETZT WERDEN \_ \_ KANN). Wenn eine Datei auf einem ausgeführten System nicht auf dem Datenträger wiederhergestellt werden konnte, wird sie beim Neustart des Computers wiederhergestellt (überschrieben).
+    ![Diagramm, das eine Problembehandlungsstruktur forVSS_RME_RESTORE_AT_REBOOT_IF_CANNOT_REPLACE zeigt. ](images/raricr.png)
+-   VSS \_ RME \_ CUSTOM. Keine der vordefinierten Methoden funktioniert. Die Sicherungsanwendung muss spezialisierte APIs verwenden, um den Wiederherstellungsvorgang auszuführen. Für diese Sicherungsmethode muss der Anforderer den betreffenden Writer vollständig verstehen. Informationen zu derzeit unterstützten Instanzen finden Sie unter [Spezielle VSS-Anwendungsfälle.](special-vss-usage-cases.md)
 
  
 

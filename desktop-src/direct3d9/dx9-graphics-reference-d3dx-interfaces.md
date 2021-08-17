@@ -1,15 +1,15 @@
 ---
-description: Dieser Abschnitt enthält Referenzinformationen zu den COM-Schnittstellen (Component Object Model), die von der D3DX-Hilfsprogrammbibliothek in Direct3D 9 Graphics bereitgestellt werden.
+description: Dieser Abschnitt enthält Referenzinformationen für die COM-Schnittstellen (Component Object Model), die von der D3DX-Hilfsprogrammbibliothek in Direct3D 9 Graphics bereitgestellt werden.
 ms.assetid: 4b8cdbf8-650c-4dd8-a730-b7ba7dad638b
 title: D3DX-Schnittstellen (Direct3D 9-Grafiken)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5705b37c1089cd965213339f50486a6f1c4f8fd7
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: c55e974cf82ad5375e463f9b7cbdb8081de266befffe3f965d6b406dec6a1b08
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112408173"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117730380"
 ---
 # <a name="d3dx-interfaces-direct3d-9-graphics"></a>D3DX-Schnittstellen (Direct3D 9-Grafiken)
 

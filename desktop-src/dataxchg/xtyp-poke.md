@@ -1,9 +1,9 @@
 ---
-title: XTYP_POKE Transaktion (Ddeml. h)
-description: Ein Client verwendet die XYP \_ Poke-Transaktion, um nicht angeforderte Daten an den Server zu senden. Eine dynamischer Datenaustausch (DDE)-Server Rückruffunktion (DDE Callback) empfängt diese Transaktion, wenn ein Client xType \_ poke in der DDE clienttransaction-Funktion angibt.
+title: XTYP_POKE Transaktion (Ddeml.h)
+description: Ein Client verwendet die \_ XTYP-TRANSAKTION, um nicht angeforderte Daten an den Server zu senden. Eine dynamische Daten Exchange (DDE)-Serverrückruffunktion, DdeCallback, empfängt diese Transaktion, wenn ein Client XTYP \_ CSVE in der DdeClientTransaction-Funktion angibt.
 ms.assetid: 63c6115e-24f8-4f35-8397-8be63110b21f
 keywords:
-- XTYP_POKE Transaktionsdaten Austausch
+- XTYP_POKE transaktion Exchange
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e538f72b7a736ed9be5cf3e1d83e8729f42ef83d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a179f4130ae06c4548b52586d6086201c2d832a158cef877d9aaf524160f4b16
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117914750"
 ---
-# <a name="xtyp_poke-transaction"></a>XYP- \_ Poke-Transaktion
+# <a name="xtyp_poke-transaction"></a>\_XTYP-TRANSACTIONE-Transaktion
 
-Ein Client verwendet die **XYP \_ Poke** -Transaktion, um nicht angeforderte Daten an den Server zu senden. Eine dynamischer Datenaustausch (DDE)-Server Rückruffunktion ( [*DDE Callback*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)) empfängt diese Transaktion, wenn ein Client **xType \_ Poke** in der [**DDE clienttransaction**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction) -Funktion angibt.
+Ein Client verwendet die **\_ XTYP-TRANSAKTION,** um nicht angeforderte Daten an den Server zu senden. Eine dynamische Daten Exchange (DDE)-Serverrückruffunktion, [*DdeCallback,*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)empfängt diese Transaktion, wenn ein Client **XTYP \_ CABE** in der [**DdeClientTransaction-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction) angibt.
 
 
 ```C++
@@ -44,14 +44,14 @@ Der Transaktionstyp:
 
 </dd> <dt>
 
-*UF* 
+*uFmt* 
 </dt> <dd>
 
 Das Format der vom Server gesendeten Daten.
 
 </dd> <dt>
 
-*has* 
+*hconv* 
 </dt> <dd>
 
 Ein Handle für die Konversation.
@@ -61,7 +61,7 @@ Ein Handle für die Konversation.
 *hsz1* 
 </dt> <dd>
 
-Ein Handle für den Themen Namen.
+Ein Handle für den Themennamen.
 
 </dd> <dt>
 
@@ -75,31 +75,31 @@ Ein Handle für den Elementnamen.
 *hdata* 
 </dt> <dd>
 
-Ein Handle für die Daten, die vom Client an den Server gesendet werden.
+Ein Handle für die Daten, die der Client an den Server sendet.
 
 </dd> <dt>
 
 *dwData1* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *dwData2* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Server Rückruffunktion sollte das **DDE- \_ faktorflag** zurückgeben, wenn diese Transaktion verarbeitet wird, das **DDE \_ fbusy** -Flag, wenn es zu stark ausgelastet ist, um diese Transaktion zu verarbeiten, oder das **DDE \_ fnotverarbeitete** -Flag, wenn es diese Transaktion ablehnt.
+Eine Serverrückruffunktion sollte das **\_ DDE-FACK-Flag** zurückgeben, wenn diese Transaktion verarbeitet wird, das **\_ DDE-FBUSY-Flag,** wenn es zu ausgelastet ist, um diese Transaktion zu verarbeiten, oder das **DDE \_ FNOTPROCESSED-Flag,** wenn diese Transaktion abgelehnt wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Transaktion wird gefiltert, wenn von der Serveranwendung das Flag " **CBF \_ Fail \_ Pokes** " in der [**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) -Funktion angegeben wurde.
+Diese Transaktion wird gefiltert, wenn die Serveranwendung in der [**DdeInitialize-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) das **CBF \_ FAIL FAIL \_ FAILES-Flag** angegeben hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -109,27 +109,27 @@ Diese Transaktion wird gefiltert, wenn von der Serveranwendung das Flag " **CBF 
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>Ddeml. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ddeml.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**DDE clienttransaction**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction)
+[**DdeClientTransaction**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction)
 </dt> <dt>
 
-[**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea)
+[**DdeInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[dynamischer Datenaustausch-Verwaltungs Bibliothek](dynamic-data-exchange-management-library.md)
+[dynamische Daten Exchange-Verwaltungsbibliothek](dynamic-data-exchange-management-library.md)
 </dt> </dl>
 
  

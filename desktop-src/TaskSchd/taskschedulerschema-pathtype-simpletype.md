@@ -1,9 +1,9 @@
 ---
-title: pfadtype simple-Typ
+title: pathType Simple Type
 description: Definiert die minimale und maximale Anzahl von Zeichen für eine Zeichenfolge, die einen Dateipfad definiert.
 ms.assetid: 09908f75-ba7b-4e31-877e-80fabea6bd27
 keywords:
-- pfadtype-Typ "Simple" Taskplaner
+- pathType simple type Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4a75ef7d85eba2aa39e0c3c768fec0908c7ea16b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 289e91b3d7139001bfab22c81bfb0f9e9871033f6296286373c5bde18fdc366d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342880"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117758379"
 ---
-# <a name="pathtype-simple-type"></a>pfadtype simple-Typ
+# <a name="pathtype-simple-type"></a>pathType Simple Type
 
-Definiert die minimale und maximale Anzahl von Zeichen für eine Zeichenfolge, die einen Dateipfad definiert. Der Pfad darf keine leere Zeichenfolge sein und muss weniger als 260 Zeichen umfassen.
+Definiert die minimale und maximale Anzahl von Zeichen für eine Zeichenfolge, die einen Dateipfad definiert. Der Pfad darf keine leere Zeichenfolge sein und darf weniger als 260 Zeichen lang sein.
 
 ``` syntax
 <xs:simpleType name="pathType">
@@ -42,8 +42,8 @@ Definiert die minimale und maximale Anzahl von Zeichen für eine Zeichenfolge, d
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

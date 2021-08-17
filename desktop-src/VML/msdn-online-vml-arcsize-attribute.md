@@ -1,26 +1,26 @@
 ---
-title: VML-arcsize-Attribut
-description: VML-arcsize-Attribut
+title: VML ArcSize-Attribut
+description: VML ArcSize-Attribut
 ms.assetid: e67d1bae-2f54-4c43-8445-1f5109e4afde
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d4a4027f079ffb284125032570dd2293b1ab69e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8715440f56625d16ed5b4386120dbf50588ce861c1ba59772e3ec8f35a077dd6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117755124"
 ---
-# <a name="vml-arcsize-attribute"></a>VML-arcsize-Attribut
+# <a name="vml-arcsize-attribute"></a>VML ArcSize-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die Menge der roundness für ein abgerundetes Rechteck. Lese-/Schreibzugriff. [Vgbruchteile](msdn-online-vml-vgfraction-data-type.md) .
+Definiert die Rundungsmenge für ein abgerundetes Rechteck. Lese-/Schreibzugriff. [VgFraction](msdn-online-vml-vgfraction-data-type.md) .
 
 **Gilt für**
 
@@ -28,19 +28,19 @@ Definiert die Menge der roundness für ein abgerundetes Rechteck. Lese-/Schreibz
 
 **Tagsyntax**
 
-<v: *Element* arcsize = " *Ausdruck* " >
+<v: *element* arcsize=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . arcsize = "*Ausdruck*"
+*element* .arcSize="*expression*"
 
-*Ausdruck* = *Element*. arcsize
+*expression* = *.arcSize-Element*
 
 **Anmerkungen**
 
-Definiert die abgerundeten Ecken eines gerundeten Rechtecks als Prozentsatz der Hälfte der kleineren Dimension der Länge und Breite eines Rechtecks. 0% hätte quadratische Ecken, und 100% würde kreisförmige Ecken bilden. Ein Quadrat mit einem **arcsize** -Wert von 1,0 wäre ein Kreis. Der Standardwert ist 0,2 (20%).
+Definiert die abgerundeten Ecken eines abgerundeten Rechtecks als Prozentsatz der Hälfte der kleineren Dimension der Länge und Breite eines Rechtecks. 0 % verfügen über quadratische Ecken, und 100 % bilden kreisförmige Ecken. Ein Quadrat mit einem **ArcSize-Wert** von 1,0 wäre ein Kreis. Der Standardwert ist 0,2 (20 %).
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
@@ -57,6 +57,6 @@ Das abgerundete Rechteck wird mit engen, aber abgerundeten Ecken gezeichnet.
 
 
 
- 
+ 
 
- 
+ 

@@ -1,9 +1,9 @@
 ---
 title: Matrixtyp
-description: Eine Matrix ist ein spezieller Datentyp, der zwischen einer und sechzehn Komponenten enthält. Jede Komponente einer Matrix muss denselben Typ aufweisen.
+description: Eine Matrix ist ein spezieller Datentyp, der zwischen einer und 16 Komponenten enthält. Jede Komponente einer Matrix muss denselben Typ aufweisen.
 ms.assetid: 728eb472-103d-4c7f-b6f6-e515fc024801
 keywords:
-- Matrixtyp "HLSL"
+- Matrixtyp HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,22 +13,22 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c580706a2ddae3e4a94c138a1ca0f6932457732a
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: b9e6b98309c760a3da4d1e9c488e4aed049aa34f0b449042e8f00a02426cc513
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037772"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117726170"
 ---
 # <a name="matrix-type"></a>Matrixtyp
 
-Eine Matrix ist ein spezieller Datentyp, der zwischen einer und sechzehn Komponenten enthält. Jede Komponente einer Matrix muss denselben Typ aufweisen.
+Eine Matrix ist ein spezieller Datentyp, der zwischen einer und 16 Komponenten enthält. Jede Komponente einer Matrix muss denselben Typ aufweisen.
 
 
 
 |                         |
 |-------------------------|
-| **Typecomponents-Name** |
+| **TypeComponents-Name** |
 
 
 
@@ -38,10 +38,10 @@ Eine Matrix ist ein spezieller Datentyp, der zwischen einer und sechzehn Kompone
 
 
 
-| Element                                                                                                                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                       |
+| Element                                                                                                                             | Beschreibung                                                                                                                                                                                                                                                                                       |
 |----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="TypeComponents"></span><span id="typecomponents"></span><span id="TYPECOMPONENTS"></span>**Typecomponents**<br/> | Ein einzelner Name, der drei Teile enthält. Der erste Teil ist einer der [skalaren](dx-graphics-hlsl-data-types.md) Typen. Der zweite Teil ist die Anzahl der Zeilen. Der dritte Teil ist die Anzahl der Spalten. Die Anzahl der Zeilen und Spalten ist eine positive ganze Zahl zwischen 1 und 4 einschließlich.<br/> |
-| <span id="Name"></span><span id="name"></span><span id="NAME"></span>**Benennen**<br/>                                         | Eine ASCII-Zeichenfolge, die den Variablennamen eindeutig identifiziert.<br/>                                                                                                                                                                                                                            |
+| <span id="TypeComponents"></span><span id="typecomponents"></span><span id="TYPECOMPONENTS"></span>**TypeComponents**<br/> | Ein einzelner Name, der drei Teile enthält. Der erste Teil ist einer der [skalaren](dx-graphics-hlsl-data-types.md) Typen. Der zweite Teil ist die Anzahl der Zeilen. Der dritte Teil ist die Anzahl der Spalten. Die Anzahl der Zeilen und Spalten ist eine positive ganze Zahl zwischen 1 und 4 einschließlich.<br/> |
+| <span id="Name"></span><span id="name"></span><span id="NAME"></span>**Namen**<br/>                                         | Eine ASCII-Zeichenfolge, die den Variablennamen eindeutig identifiziert.<br/>                                                                                                                                                                                                                            |
 
 
 
@@ -49,7 +49,7 @@ Eine Matrix ist ein spezieller Datentyp, der zwischen einer und sechzehn Kompone
 
 ## <a name="examples"></a>Beispiele
 
-Hier einige Beispiele:
+Hier sind einige Beispiele:
 
 
 ```
@@ -65,7 +65,7 @@ float2x2 fMatrix = { 0.0f, 0.1, // row 1
 
 
 
-Eine Matrix kann auch mit der folgenden Syntax deklariert werden:
+Eine Matrix kann auch mit dieser Syntax deklariert werden:
 
 
 ```
@@ -74,7 +74,7 @@ matrix <Type, Number> VariableName
 
 
 
-Der Matrixtyp verwendet die spitzen Klammern, um den Typ, die Anzahl der Zeilen und die Anzahl der Spalten anzugeben. In diesem Beispiel wird eine Gleit Komma Matrix mit zwei Zeilen und zwei Spalten erstellt. Alle skalaren Datentypen können verwendet werden.
+Der Matrixtyp verwendet die spitzen Klammern, um den Typ, die Anzahl der Zeilen und die Anzahl der Spalten anzugeben. In diesem Beispiel wird eine Gleitkommamatrix mit zwei Zeilen und zwei Spalten erstellt. Jeder der skalaren Datentypen kann verwendet werden.
 
 Beispiel:
 

@@ -1,6 +1,6 @@
 ---
-title: FRC-vs
-description: Gibt den Bruchteil der einzelnen Eingabe Komponenten zurück. | FRC-vs
+title: frc – vs
+description: Gibt den Bruchteil jeder Eingabekomponente zurück. | frc – vs
 ms.assetid: 6b6a4475-b665-4de0-9423-88ea8103e606
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 6990d5489058d217888f34caf0305badc4cab46d
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: b2ecc6a1c903f78fb7c03442809f792e3ddb984d04975d3f5ecb0b5c918f7ab4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117907643"
 ---
-# <a name="frc---vs"></a>FRC-vs
+# <a name="frc---vs"></a>frc – vs
 
-Gibt den Bruchteil der einzelnen Eingabe Komponenten zurück.
+Gibt den Bruchteil jeder Eingabekomponente zurück.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| FRC-DST, src |
+| frc dst, src |
 |--------------|
 
 
@@ -33,22 +33,22 @@ Gibt den Bruchteil der einzelnen Eingabe Komponenten zurück.
 
 where
 
--   DST ist das Ziel Register.
--   src ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| FRC                    | x    | x    | x    | x     | x    | x     |
+| Frc                    | x    | x    | x    | x     | x    | x     |
 
 
 
  
 
-Das folgende Code Fragment zeigt konzeptionell, wie die Anweisung funktioniert.
+Das folgende Codefragment zeigt konzeptionell, wie die Anweisung funktioniert.
 
 
 ```
@@ -60,15 +60,15 @@ dest.w = src.w - (float)floor(src.w);
 
 
 
-Die Floor-Funktion konvertiert das Argument, das an die größte Ganzzahl, die kleiner oder gleich dem Argument ist, an die größte Ganzzahl. Diese wird in einen float-Wert konvertiert und dann den ursprünglichen Wert von Abbildung subtrahiert. Der resultierende Bruch Wert liegt zwischen 0,0 und 1,0.
+Die floor-Funktion konvertiert das übergebene Argument in die größte ganze Zahl, die kleiner als (oder gleich) dem Argument ist. Dies wird in einen float-Wert konvertiert und dann für den ursprünglichen Wert subtrahiert. Der resultierende Bruchwert liegt zwischen 0,0 und 1,0.
 
-Bei Version 1 \_ 1 sind die zulässigen Schreib Masken. y und. XY (. x ist nicht zulässig).
+Für Version 1 \_ 1 sind die zulässigen Schreibmasken .y und .xy (.x ist nicht zulässig).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  

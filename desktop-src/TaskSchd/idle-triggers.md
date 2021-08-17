@@ -1,6 +1,6 @@
 ---
 title: Leerlauftrigger für Taskplaner 1.0
-description: Ein Leerlauftrigger ist ein ereignisbasierter Trigger, der eine bestimmte Anzahl von Malen ausgelöst wird, nachdem der Computer in den Leerlauf gerät. Es gibt mehrere Bedingungen, die definieren, wann sich ein Computer im Leerlauf befindet, z. B. wenn keine Tastatur- oder Mauseingabe erfolgt.
+description: Ein Trigger im Leerlauf ist ein ereignisbasierter Trigger, der nach dem Leerlauf des Computers eine bestimmte Anzahl von Malen ausgelöst wird. Es gibt mehrere Bedingungen, die definieren, wann ein Computer in den Leerlauf eintritt, z. B. wenn keine Tastatur- oder Mauseingabe erfolgt.
 ms.assetid: f2e0b120-dadc-470f-8349-42843149bb60
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,16 +13,16 @@ ms.locfileid: "117760086"
 ---
 # <a name="idle-triggers-for-task-scheduler-10"></a>Leerlauftrigger für Taskplaner 1.0
 
-Ein Leerlauftrigger ist ein ereignisbasierter Trigger, der eine bestimmte Anzahl von Malen ausgelöst wird, nachdem der Computer in den Leerlauf gerät. Es gibt mehrere Bedingungen, die definieren, wann sich ein Computer im Leerlauf befindet, z. B. wenn keine Tastatur- oder Mauseingabe erfolgt.
+Ein Trigger im Leerlauf ist ein ereignisbasierter Trigger, der nach dem Leerlauf des Computers eine bestimmte Anzahl von Malen ausgelöst wird. Es gibt mehrere Bedingungen, die definieren, wann ein Computer in den Leerlauf eintritt, z. B. wenn keine Tastatur- oder Mauseingabe erfolgt.
 
-Leerlauftrigger werden erstellt, indem \_ TASK EVENT TRIGGER ON IDLE im TASK TRIGGER \_ \_ \_ [**\_ \_ TYPE-Member**](/windows/desktop/api/Mstask/ne-mstask-task_trigger_type) der [**TASK \_ TRIGGER-Struktur**](/windows/desktop/api/Mstask/ns-mstask-task_trigger) angegeben wird. Der Leerlauftrigger wird ausgelöst, wenn sich das System für den Zeitraum im Leerlauf befindet, der durch die Leerlaufwartezeit des Arbeitselements angegeben wird.
+Leerlauftrigger werden erstellt, indem TASK \_ EVENT TRIGGER ON IDLE im TASK TRIGGER \_ \_ \_ [**\_ \_ TYPE-Member**](/windows/desktop/api/Mstask/ne-mstask-task_trigger_type) der [**TASK \_ TRIGGER-Struktur angegeben**](/windows/desktop/api/Mstask/ns-mstask-task_trigger) wird. Der Leerlauftrigger wird ausgelöst, wenn das System für die Zeit, die durch die Leerlaufwartezeit des Arbeitselements angegeben wird, in den Leerlauf überläuft.
 
 > [!Note]  
-> Wenn TASK \_ EVENT TRIGGER ON IDLE angegeben \_ \_ \_ wird, werden die Member **wStartHour,** **wStartMinute** und **Type** der [**TASK \_ TRIGGER-Struktur**](/windows/desktop/api/Mstask/ns-mstask-task_trigger) ignoriert.
+> Wenn TASK EVENT TRIGGER ON IDLE angegeben wird, werden die \_ \_ Member \_ \_ **wStartHour**, **wStartMinute** und **Type** der [**TASK \_ TRIGGER-Struktur**](/windows/desktop/api/Mstask/ns-mstask-task_trigger) ignoriert.
 
  
 
-Sie können die Leerlaufwartezeit eines Arbeitselements festlegen, indem Sie die [**IScheduledWorkItem::SetIdleWait-Methode**](/windows/desktop/api/Mstask/nf-mstask-ischeduledworkitem-setidlewait) aufrufen. Diese Methode legt die Zeitspanne (in Minuten) fest, die das System im Leerlauf bleiben muss, bevor der Trigger ausgelöst und das Arbeitselement ausgeführt wird.
+Sie können die Leerlaufwartezeit eines Arbeitselements festlegen, indem Sie die [**IScheduledWorkItem::SetIdleWait-Methode**](/windows/desktop/api/Mstask/nf-mstask-ischeduledworkitem-setidlewait) aufrufen. Diese Methode legt die Zeit (in Minuten) fest, die das System im Leerlauf bleiben muss, bevor der Trigger ausgelöst und das Arbeitselement ausgeführt wird.
 
 Um die Leerlaufzeit einer Aufgabe abzurufen, rufen Sie die [**IScheduledWorkItem::GetIdleWait-Methode**](/windows/desktop/api/Mstask/nf-mstask-ischeduledworkitem-getidlewait) auf.
 

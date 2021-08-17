@@ -1,56 +1,56 @@
 ---
-description: Die ccpsearch-Aktion verwendet Datei Signaturen, um zu überprüfen, ob qualifizierte Produkte auf einem System installiert sind, bevor eine Upgrade-Installation durchgeführt wird.
+description: Die AKTION DURCHSUCHE verwendet Dateisignaturen, um zu überprüfen, ob qualifizierende Produkte auf einem System installiert sind, bevor eine Upgradeinstallation durchgeführt wird.
 ms.assetid: 0aa7bf8b-de76-464d-8e7b-3aa4f609fe19
-title: Ccpsearch-Aktion
+title: ACTION FORSEARCH (AKTION)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a8b1f01462ac0ba9dcf8838b9a043d95aef8cefe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 201af22dd557541825dcf2c47f06e7cf67cd8785fa85e0b78a28c25a570ffc89
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356679"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118145693"
 ---
-# <a name="ccpsearch-action"></a>Ccpsearch-Aktion
+# <a name="ccpsearch-action"></a>ACTION FORSEARCH (AKTION)
 
-Die ccpsearch-Aktion verwendet Datei Signaturen, um zu überprüfen, ob qualifizierte Produkte auf einem System installiert sind, bevor eine Upgrade-Installation durchgeführt wird.
+Die AKTION DURCHSUCHE verwendet Dateisignaturen, um zu überprüfen, ob qualifizierende Produkte auf einem System installiert sind, bevor eine Upgradeinstallation durchgeführt wird.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die ccpsearch-Aktion sollte in der Tabelle " [InstallUISequence](installuisequence-table.md) " und der [Tabelle "InstallExecuteSequence](installexecutesequence-table.md)" erstellt werden. Das Installationsprogramm verhindert, dass die ccpsearch-Aktion in der InstallExecuteSequence-Sequenz ausgeführt wird, wenn die Aktion bereits in der InstallUISequence-Sequenz ausgeführt wurde. Die ccpsearch-Aktion muss vor der [RMCCPSEARCH](rmccpsearch-action.md) -Aktion erfolgen.
+DIEAKTIONSEARCH-Aktion sollte in der [InstallUISequence-Tabelle](installuisequence-table.md) und der [InstallExecuteSequence-Tabelle erstellt werden.](installexecutesequence-table.md) Das Installationsprogramm verhindert, dass die AKTION "INSTALLERSearch" in der Sequenz InstallExecuteSequence ausgeführt wird, wenn die Aktion bereits in der InstallUISequence-Sequenz ausgeführt wurde. Die AKTION RMSearch muss vor der [RMCCPSearch-Aktion](rmccpsearch-action.md) kommen.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
-Es sind keine Aktions Daten Meldungen vorhanden.
+Es sind keine ActionData-Meldungen enthalten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die ccpsearch-Aktion sucht in der folgenden Tabelle nach Datei Signaturen, die in der Tabelle ccpsearch auf dem System aufgeführt sind: Signature, complocator, reglocator, inilocator und drlocator.
+Mit der AKTION SIGNATURESearch wird anhand der folgenden Tabellen nach dateisignierten Signaturen gesucht, die in der TABELLE DES SYSTEMS aufgeführt sind: Signature, CompLocator, RegLocator, IniLocator und DrLocator.
 
-Wenn eine Signatur als vorhanden festgelegt wird, wird die Eigenschaft **CCP \_ Success** auf 1 festgelegt, und die ccpsearch-Aktion wird beendet.
+Wenn festgestellt wird, dass eine Signatur vorhanden ist, wird die **SUCCESS \_ Success-Eigenschaft** auf 1 festgelegt, und die AKTION VOM SUCH-Objekt wird beendet.
 
-Das Fehlen der Signatur aus der Signatur Tabelle deutet auf ein Verzeichnis hin.
+Das Fehlen der Signatur in der Signaturtabelle gibt ein Verzeichnis an.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ccpsearch](ccpsearch-table.md)
+[CCPSearch](ccpsearch-table.md)
 </dt> <dt>
 
 [Signature](signature-table.md)
 </dt> <dt>
 
-[Complocator](complocator-table.md)
+[CompLocator](complocator-table.md)
 </dt> <dt>
 
-[Reglocator](reglocator-table.md)
+[RegLocator](reglocator-table.md)
 </dt> <dt>
 
-[Inilocator](inilocator-table.md)
+[IniLocator](inilocator-table.md)
 </dt> <dt>
 
-[Drlocator](drlocator-table.md)
+[DrLocator](drlocator-table.md)
 </dt> </dl>
 
  

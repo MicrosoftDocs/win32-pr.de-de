@@ -1,19 +1,19 @@
 ---
-description: Das folgende Beispiel zeigt einen typischen serverseitigen Diffie-Hellman/SChannel-Code zum Erstellen eines Haupt Schlüssels.
+description: Das folgende Beispiel zeigt typischen serverseitigen Diffie-Hellman/Schannel-Code zum Erstellen eines Hauptschlüssels.
 ms.assetid: 1ef0a2ea-8684-425c-abfe-9f65d8df7bbd
-title: Diffie-Hellman Server Code zum Erstellen des Haupt Schlüssels
+title: Diffie-Hellman Servercode zum Erstellen des Hauptschlüssels
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 31dd93f06e4675123e3bb1a6981c0135cc229513
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1f8b074c0069e325d7bd2b0e383fa2fe44beff2b3d10429b3af5aa396205270a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349407"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117767623"
 ---
-# <a name="diffie-hellman-server-code-for-creating-the-master-key"></a>Diffie-Hellman Server Code zum Erstellen des Haupt Schlüssels
+# <a name="diffie-hellman-server-code-for-creating-the-master-key"></a>Diffie-Hellman Servercode zum Erstellen des Hauptschlüssels
 
-Das folgende Beispiel zeigt den typischen [*Diffie-Hellman-*](../secgloss/d-gly.md)/SChannel serverseitigen Code zum Erstellen eines [*Haupt Schlüssels*](../secgloss/m-gly.md).
+Das folgende Beispiel zeigt typischen [*serverseitigen Diffie-Hellman/Schannel-Code*](../secgloss/d-gly.md)zum Erstellen eines [*Hauptschlüssels.*](../secgloss/m-gly.md)
 
 
 ```C++

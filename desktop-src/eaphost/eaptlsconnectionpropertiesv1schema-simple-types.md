@@ -1,6 +1,6 @@
 ---
-title: einfache eaptlsconnectionpropertiesv1 Schema Typen
-description: Erfahren Sie mehr über das eaptlsconnectionpropertiesv1-Schema. Dieses Schema definiert den einfachen emptystring-Typ.
+title: eaptlsconnectionpropertiesv1 Schema Simple Types
+description: Erfahren Sie mehr über das eaptlsconnectionpropertiesv1-Schema. Dieses Schema definiert den einfachen EmptyString-Typ.
 ms.assetid: 70e57e9d-cc21-44be-b7ee-217e56d44c98
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 75ab5cb06c32ffd31cf367eb69f5e44abf57a268
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 5e5d5f3275e87106802482b410646c6e2ec33e51f7142c528f155db36c25b468
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104316497"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117720278"
 ---
-# <a name="eaptlsconnectionpropertiesv1-schema-simple-types"></a>einfache eaptlsconnectionpropertiesv1 Schema Typen
+# <a name="eaptlsconnectionpropertiesv1-schema-simple-types"></a>eaptlsconnectionpropertiesv1 Schema Simple Types
 
-Das [eaptlsconnectionpropertiesv1](eaptlsconnectionpropertiesv1schema-schema.md) -Schema definiert den folgenden einfachen Typ.
+Das [eaptlsconnectionpropertiesv1-Schema](eaptlsconnectionpropertiesv1schema-schema.md) definiert den folgenden einfachen Typ.
 
 -   [**emptyString**](eaptlsconnectionpropertiesv1schema-emptystring-simpletype.md)
 
@@ -26,7 +26,7 @@ Das [eaptlsconnectionpropertiesv1](eaptlsconnectionpropertiesv1schema-schema.md)
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaptlsconnectionpropertiesv1-Schema](eaptlsconnectionpropertiesv1schema-schema.md)
@@ -35,9 +35,9 @@ Das [eaptlsconnectionpropertiesv1](eaptlsconnectionpropertiesv1schema-schema.md)
 [eaptlsconnectionpropertiesv2-Schema](eaptlsconnectionpropertiesv2schema-schema.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

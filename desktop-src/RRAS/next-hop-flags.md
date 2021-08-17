@@ -20,7 +20,7 @@ ms.locfileid: "117790393"
 
 
 
-| Konstante                     | Wert | BESCHREIBUNG                              |
+| Konstante                     | Wert | Beschreibung                              |
 |------------------------------|-------|------------------------------------------|
 | RTM \_ NEXTHOP \_ STATE \_ CREATED | 0     | Gibt an, dass der nächste Hop erstellt wurde. |
 | RTM \_ NEXTHOP \_ STATE \_ DELETED | 1     | Gibt an, dass der nächste Hop gelöscht wurde. |
@@ -33,9 +33,9 @@ ms.locfileid: "117790393"
 
 
 
-| Konstante                    | Wert  | BESCHREIBUNG                                                                                                                                           |
+| Konstante                    | Wert  | Beschreibung                                                                                                                                           |
 |-----------------------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| RTM \_ NEXTHOP \_ FLAGS \_ REMOTE | 0x0001 | Dieser nächste Hop verweist auf ein Remoteziel, das nicht direkt erreichbar ist. Um den vollständigen Pfad abzurufen, muss der Client eine rekursive Suche ausführen. |
+| RTM \_ NEXTHOP \_ FLAGS \_ REMOTE | 0x0001 | Dieser nächste Hop zeigt auf ein Remoteziel, das nicht direkt erreichbar ist. Um den vollständigen Pfad zu erhalten, muss der Client eine rekursive Suche ausführen. |
 | RTM \_ NEXTHOP \_ FLAGS \_ DOWN   | 0x0002 | Dieses Flag ist für die zukünftige Verwendung reserviert.                                                                                                                 |
 
 
@@ -46,7 +46,7 @@ ms.locfileid: "117790393"
 
 
 
-| Konstante                  | Wert | BESCHREIBUNG                 |
+| Konstante                  | Wert | Beschreibung                 |
 |---------------------------|-------|-----------------------------|
 | RTM \_ NEXTHOP \_ CHANGE \_ NEW | 0x01  | Ein neuer nächster Hop wurde erstellt. |
 

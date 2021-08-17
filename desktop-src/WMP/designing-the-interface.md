@@ -17,24 +17,24 @@ ms.locfileid: "117749861"
 ---
 # <a name="designing-the-interface"></a>Entwerfen der Schnittstelle
 
-Nachdem die Funktionen ausgewählt wurden, kann die Schnittstelle entworfen werden. Es wurde eine einfache Schnittstelle ausgewählt, die mit der Funktionalität übereinstimmen soll. Symbole für die Steuerelemente wurden aus VCR-Standardsteuerelementen ausgewählt.
+Nachdem die Funktionen ausgewählt wurden, kann die Schnittstelle entworfen werden. Es wurde eine einfache Schnittstelle ausgewählt, die der Funktionalität entspricht. Symbole für die Steuerelemente wurden aus VCR-Standardsteuerelementen ausgewählt.
 
-Die folgende Abbildung zeigt, wie die Schnittstelle aussehen wird.
+Die folgende Abbildung zeigt, wie die Schnittstelle aussieht.
 
 ![Beispielschnittstelle](images/ceswmful.png)
 
--   **PlayPause oder PlayPauseStop-Schaltfläche.** Der Benutzer tippt am meisten darauf, daher können Sie eine größere Schaltfläche in Betracht ziehen. Die obere rechte Ecke ist ein guter Ort, den der Benutzer schnell finden kann. Ein durchkn solider Pfeil wird verwendet, um die Wiedergabe anzugeben, und zwei vertikale Balken (hier nicht dargestellt) werden verwendet, um die Pause anzugeben.
+-   **PlayPause- oder PlayPauseStop-Schaltfläche.** Der Benutzer tippt am meisten darauf, sodass Sie eine größere Schaltfläche in Betracht ziehen können. Die obere rechte Ecke ist eine gute Position, die der Benutzer schnell finden kann. Ein durchgezogener Pfeil wird verwendet, um die Wiedergabe anzugeben, und zwei vertikale Balken (hier nicht gezeigt) werden verwendet, um die Pause anzugeben.
     > [!Note]  
-    > Die Schaltfläche PlayPauseStop kann nur verwendet werden, wenn Sie eine Skin für Windows Media Player 10 Mobile oder höher erstellen.
+    > Die PlayPauseStop-Schaltfläche kann nur verwendet werden, wenn eine Skin für Windows Media Player 10 Mobile oder höher erstellt wird.
 
      
 
--   **Schaltfläche "Beenden".** Damit dies leicht zu finden ist, wird es in der oberen linken Ecke platziert. Ein Quadrat wird verwendet, um den Stopp anzugeben. Wenn Sie eine Skin für Windows Media Player 10 Mobile oder höher erstellen, bietet die Schaltfläche PlayPauseStop diese Funktionalität bereits.
--   **Schaltflächen "Weiter" und "Prev".** Da diese nicht so häufig verwendet werden, werden sie auf der linken Seite platziert. Die Schaltfläche Weiter befindet sich über der Schaltfläche "Prev", da Personen wahrscheinlich in einer Wiedergabeliste nach vorn wechseln möchten. Die Doppelpfeilsymbole werden verwendet, da sie in der Funktion einem Steuerelement mit schneller Vorwärtssteuerung ähneln.
--   **Volume-Trackleiste.** Dies wird am unteren Rand des Bildschirms platziert und ist eine einfache Linie mit einer Daumenschaltfläche darüber.
--   **Textfeld "Marquee".** Diese wird unter der Schaltfläche PlayPause oder PlayPauseStop platziert, damit sie leicht zu sehen ist.
+-   **Schaltfläche "Beenden".** Um dies leicht zu finden, wird es in der oberen linken Ecke platziert. Ein Quadrat wird verwendet, um einen Stopp anzugeben. Wenn Sie eine Skin für Windows Media Player 10 Mobile oder höher erstellen, bietet die Schaltfläche PlayPauseStop diese Funktionalität bereits.
+-   **Schaltflächen "Weiter" und "Prev".** Da diese nicht so oft verwendet werden, werden sie auf der linken Seite platziert. Next (Weiter) befindet sich oberhalb der Schaltfläche Prev (Prev), da Personen wahrscheinlicher in einer Wiedergabeliste vorwärts gehen möchten. Die Doppelpfeilsymbole werden verwendet, da sie in der Funktion einem Steuerelement mit schneller Vorwärtsrichtung ähneln.
+-   **Volume-Trackleiste.** Diese wird am unteren Rand des Bildschirms platziert und ist eine einfache Linie mit einer Daumenschaltfläche darüber.
+-   **Markquee-Textfeld.** Diese wird unter der Schaltfläche PlayPause oder PlayPauseStop platziert, damit sie leicht zu sehen ist.
 
-Sie können dies zuerst skizzieren und mit der Platzierung der einzelnen Benutzeroberflächenelemente experimentieren. Der hier gezeigte Entwurf wurde aus Einfachheit und Benutzerfreundlichkeit ausgewählt.
+Sie können dies zuerst skizzieren und mit der Platzierung der einzelnen Benutzeroberflächenelemente experimentieren. Der hier gezeigte Entwurf wurde aus Gründen der Einfachheit und Benutzerfreundlichkeit ausgewählt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

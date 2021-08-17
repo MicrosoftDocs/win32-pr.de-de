@@ -1,9 +1,9 @@
 ---
-title: TVM_CREATEDRAGIMAGE Meldung (kommstrg. h)
-description: Erstellt eine Zieh Bitmap für das angegebene Element in einem Strukturansicht-Steuerelement.
+title: TVM_CREATEDRAGIMAGE Meldung (Commctrl.h)
+description: Erstellt eine Ziehbitmap für das angegebene Element in einem Strukturansichtssteuerelement.
 ms.assetid: fbe97921-c9d3-473c-933c-d6bc0599e24d
 keywords:
-- Windows-Steuerelemente für TVM_CREATEDRAGIMAGE Meldung
+- TVM_CREATEDRAGIMAGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 189b37affc6a4382541faea13199cacfcb9b7df5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a18a00b2225749b30b8dcd9a928fd73e3ffabcfd4a4f9512cd2332d98cc08a79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118408660"
 ---
-# <a name="tvm_createdragimage-message"></a>TVM- \_ Meldung "fiatedragimage"
+# <a name="tvm_createdragimage-message"></a>TVM \_ CREATEDRAGIMAGE-Nachricht
 
-Erstellt eine Zieh Bitmap für das angegebene Element in einem Strukturansicht-Steuerelement. Die Meldung erstellt außerdem eine Bildliste für die Bitmap und fügt der Bildliste die Bitmap hinzu. Eine Anwendung kann das Bild anzeigen, wenn Sie das Element mithilfe der ImageList-Funktionen ziehen. Sie können diese Nachricht explizit oder mithilfe des [**TreeView-Makros " \_ kreeview**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_createdragimage) " senden.
+Erstellt eine Ziehbitmap für das angegebene Element in einem Strukturansichtssteuerelement. Die Nachricht erstellt auch eine Bildliste für die Bitmap und fügt die Bitmap der Bildliste hinzu. Eine Anwendung kann das Bild anzeigen, wenn das Element mithilfe der Bildlistenfunktionen gezogen wird. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ CreateDragImage-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_createdragimage) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,19 +35,19 @@ Erstellt eine Zieh Bitmap für das angegebene Element in einem Strukturansicht-S
 *lParam* 
 </dt> <dd>
 
-Handle für das Element, das die neue Zieh Bitmap empfängt.
+Handle für das Element, das die neue Ziehbitmap empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für die Bildliste zurück, der die Zieh Bitmap hinzugefügt wurde, wenn erfolgreich, andernfalls **null** .
+Gibt das Handle für die Bildliste zurück, zu der die Ziehbitmap hinzugefügt wurde, falls erfolgreich, oder **andernfalls NULL.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie ein Strukturansicht-Steuerelement ohne zugeordnete Bildliste erstellen, können Sie das Bild, das während eines Zieh Vorgangs angezeigt wird, nicht mithilfe der TVM-Meldung " **\_ fiatedragimage** " erstellen. Sie müssen eine eigene Methode zum Erstellen eines Zieh Cursors implementieren.
+Wenn Sie ein Strukturansichtssteuerelement ohne zugeordnete Bildliste erstellen, können Sie die **TVM \_ CREATEDRAGIMAGE-Nachricht** nicht verwenden, um das Bild zu erstellen, das während eines Ziehvorgangs angezeigt werden soll. Sie müssen Ihre eigene Methode zum Erstellen eines Ziehcursors implementieren.
 
-Die Anwendung ist dafür verantwortlich, die Bildliste zu zerstören, wenn Sie nicht mehr benötigt wird.
+Ihre Anwendung ist dafür verantwortlich, die Imageliste zu zerstören, wenn sie nicht mehr benötigt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Die Anwendung ist dafür verantwortlich, die Bildliste zu zerstören, wenn Sie n
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Stellen Sie Dienste bereit, mit denen Anwendungsentwickler die Verschlüsselung/Entschlüsselung von Daten, die Authentifizierung mit digitalen Zertifikaten und die Codierung in und die Decodierung aus der abstrakten Syntax notation One (ASN.1) zu ihren Windows-basierten Anwendungen hinzufügen können.
+description: Stellen Sie Dienste zur Verfügung, mit denen Anwendungsentwickler ihren Windows-basierten Anwendungen Verschlüsselung/Entschlüsselung von Daten, Authentifizierung mit digitalen Zertifikaten und Codierung in asn.1 (Abstract Syntax Notation One) hinzufügen und diese decodieren können.
 ms.assetid: 99aa4130-42d3-4fe7-ab20-dbe821be5b5f
 title: Kryptografie, CryptoAPI und CAPICOM
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "117768642"
 ---
 # <a name="cryptography-cryptoapi-and-capicom"></a>Kryptografie, CryptoAPI und CAPICOM
 
-CryptoAPI und CAPICOM bieten Dienste, mit denen Anwendungsentwickler datenverschlüsselung/-entschlüsselung, Authentifizierung mit digitalen [*Zertifikaten*](../secgloss/c-gly.md)und Codierung in und Decodierung aus [*Abstract Syntax Notation One*](../secgloss/a-gly.md) (ASN.1) zu ihren Windows-basierten Anwendungen hinzufügen können. Anwendungsentwickler können die Funktionen in CryptoAPI verwenden, ohne Details zur zugrunde liegenden Implementierung zu kennen. Dies entspricht in etwa der Art und Weise, wie sie eine Grafikbibliothek verwenden können, ohne etwas über die jeweilige Konfiguration der Grafikhardware zu wissen. CryptoAPI arbeitet mit einer Reihe von [Kryptografiedienstanbietern](microsoft-cryptographic-service-providers.md) zusammen, die die eigentlichen kryptografischen Funktionen ausführen.
+CryptoAPI und CAPICOM stellen Dienste zur Verfügung, die es Anwendungsentwicklern [](../secgloss/c-gly.md)ermöglichen, Daten zu ver- und entschlüsseln, die Authentifizierung mit digitalen Zertifikaten und die Codierung in und Decodierung von ABSTRACT [*Syntax Notation One*](../secgloss/a-gly.md) (ASN.1) zu ihren Windows-basierten Anwendungen hinzuzufügen. Anwendungsentwickler können die Funktionen in CryptoAPI verwenden, ohne Details zur zugrunde liegenden Implementierung zu kennen. Dies ist auf die gleiche Weise wie bei der Verwendung einer Grafikbibliothek, ohne etwas über die spezielle Grafikhardwarekonfiguration zu wissen. CryptoAPI arbeitet mit einer Reihe von [Kryptografiedienstanbietern zusammen,](microsoft-cryptographic-service-providers.md) die die tatsächlichen kryptografischen Funktionen ausführen.
 
  
 

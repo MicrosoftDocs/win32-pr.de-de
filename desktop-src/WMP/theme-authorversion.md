@@ -1,9 +1,9 @@
 ---
-title: Design. authorversion
-description: Das authorversion-Attribut gibt die vom Autor zugewiesene Versionsnummer der Skin an oder ruft Sie ab.
+title: THEME.authorVersion
+description: Das authorVersion-Attribut gibt die Versionsnummer der Skin an, die vom Autor zugewiesen wurde, oder ruft sie ab.
 ms.assetid: b05cfc65-34b6-4029-953e-0dfa1bb3108e
 keywords:
-- Design. authorversion-Windows-Media Player
+- THEME.authorVersion Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dd00fd03fc027f1faac35bf729743726bc654674
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4d58dafcbbbe582f299f4f5807416ddcc73d1c3574f3daf305f0fe862f852ece
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369497"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118117838"
 ---
-# <a name="themeauthorversion"></a>Design. authorversion
+# <a name="themeauthorversion"></a>THEME.authorVersion
 
-Das **authorversion** -Attribut gibt die vom Autor zugewiesene Versionsnummer der Skin an oder ruft Sie ab.
+Das **authorVersion-Attribut** gibt die Versionsnummer der Skin an, die vom Autor zugewiesen wurde, oder ruft sie ab.
 
 ``` syntax
 theme.authorVersion
@@ -29,7 +29,7 @@ theme.authorVersion
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zeichenfolge** ohne Standardwert.
+Dieses Attribut ist eine schreibgeschützte **Zeichenfolge** ohne Standardwert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,18 +37,18 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zeichenfolge** 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Design-Element**](theme-element.md)
+[**THEME-Element**](theme-element.md)
 </dt> <dt>
 
-[**Design. Author**](theme-author.md)
+[**THEME.author**](theme-author.md)
 </dt> </dl>
 
  

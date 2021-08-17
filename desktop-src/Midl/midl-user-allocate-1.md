@@ -1,9 +1,9 @@
 ---
 title: midl_user_allocate-Attribut
-description: Die Funktion "Mittelwert \_ Benutzer \_ zuweisen" ist eine Funktion, die Client-und Server Anwendungen bereitstellen, um Speicher zuzuweisen.
+description: Die \_ \_ Midl-Benutzer-Zuordnungsfunktion ist eine Funktion, die Client- und Serveranwendungen bereitstellen, um Arbeitsspeicher zu reservieren.
 ms.assetid: 0eaf6df5-791d-4f6d-8f49-cc1ce64e7ab4
 keywords:
-- midl_user_allocate Attribut-Mittel l
+- midl_user_allocate MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e4be10c5e1c7073afb3abf359c3ec2fb79a4335b
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 16729e0a0a422c8ed2d8a8f323b563cb6a268fcb041e6a9d2ba13a9c9b847d79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104315062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117806658"
 ---
-# <a name="midl_user_allocate-attribute"></a>Attribut "Mittel l- \_ Benutzer \_ zuweisen"
+# <a name="midl_user_allocate-attribute"></a>midl \_ user \_ allocate-Attribut
 
-Die Funktion " **Mittelwert \_ Benutzer \_ zuweisen** " ist eine Funktion, die Client-und Server Anwendungen bereitstellen, um Speicher zuzuweisen.
+Die **\_ Midl-Benutzer-Zuordnungsfunktion \_** ist eine Funktion, die Client- und Serveranwendungen bereitstellen, um Arbeitsspeicher zu reservieren.
 
 ``` syntax
 void __RPC_FAR * __RPC_API midl_user_allocate (size_t cBytes);
@@ -31,24 +31,24 @@ void __RPC_FAR * __RPC_API midl_user_allocate (size_t cBytes);
 
 <dl> <dt>
 
-*cbytes* 
+*cBytes* 
 </dt> <dd>
 
-Gibt die Anzahl der zuzuordnenden Bytes an.
+Gibt die Anzahl der zu reservierenden Bytes an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sowohl Client Anwendungen als auch Server Anwendungen müssen die Funktion " **mittlere \_ \_ Benutzer** Zuordnungen" implementieren, es sei denn, Sie kompilieren ihn im OSF-Kompatibilitätsmodus ([**/OSF**](-osf.md)). Anwendungen und generierte stubzeichen wenden beim Umgang mit Objekten, auf die von Zeigern verwiesen wird, eine **mittlere \_ Benutzer \_ Zuteilung** an
+Sowohl Clientanwendungen als auch Serveranwendungen müssen die Midl-Benutzer-Zuordnungsfunktion implementieren, es sei denn, Sie kompilieren im OSF-Kompatibilitätsmodus [**(/osf).**](-osf.md) **\_ \_** Anwendungen und generierte Stubs rufen **midl \_ user allocate \_ auf,** wenn es um Objekte geht, auf die von Zeigern verwiesen wird:
 
--   Die Serveranwendung sollte bei der Erstellung eines neuen Knotens für die Application-Klasse den Befehl " **Mittel l- \_ Benutzer \_ zuweisen** " anrufen.
--   Der Serverstub Ruft beim Marshalling von referenzierten Daten in den Adressraum des Servers die Benutzer Zuordnungen für **mittellose \_ Benutzer \_** auf.
--   Der Clientstub Ruft bei der Aufhebung des Marshalling von Daten von dem Server, auf den von einem [**out**](out-idl.md) -Zeiger verwiesen wird, die Benutzer Zuordnungen für **mittlere \_ Benutzer \_** auf Beachten Sie, dass **\[** [](in.md) **\]** der Client-Stub bei in-, **\[ \] out**-und **\[** [**Unique**](unique.md) **\]** -Zeigern nur dann die **\_ Benutzer \_** Zuordnungen aufruft, wenn der **\[ eindeutige \]** Zeiger Wert bei Eingabe **null** war und während des Aufrufs zu einem Wert ungleich **null** wechselt. Wenn der **\[ eindeutige \]** Zeiger bei Eingabe ungleich **null** war, schreibt der Clientstub die zugeordneten Daten in den vorhandenen Arbeitsspeicher.
+-   Die Serveranwendung sollte **midl \_ user \_ allocate** aufrufen, um Arbeitsspeicher für die Anwendung zu reservieren, z.B. beim Erstellen eines neuen Knotens.
+-   Der Serverstub ruft **midl \_ user allocate \_ auf,** wenn die Zuordnung von point-at-Daten in den Serveradressenbereich entmardt wird.
+-   Der Clientstub ruft **midl \_ user allocate \_ auf,** wenn daten vom Server, auf den von einem Out-Zeiger verwiesen wird, nicht imShaling [**gespeichert**](out-idl.md) werden. Beachten Sie, dass der Clientstub für **\[** [**in**](in.md), out **\]** **\[ \]** und eindeutige Zeiger nur dann midl user allocate **\[** [](unique.md) **\]** **\[ \]** aufruft, **\_ \_**  wenn der eindeutige Zeigerwert bei der Eingabe NULL war und sich während des Aufrufs in einen **Nicht-NULL-Wert** ändert. Wenn der **\[ \] eindeutige** Zeiger bei der Eingabe nicht **NULL** war, schreibt der Clientstub die zugeordneten Daten in den vorhandenen Arbeitsspeicher.
 
-Wenn die Zuordnungen von **\_ Benutzer \_** Zuordnungen keinen Arbeitsspeicher zuordnen können, muss ein **null** -Zeiger zurückgegeben werden.
+Wenn **bei der \_ Midl-Benutzerbeteilung \_** kein Speicher reserviert werden kann, muss ein **NULL-Zeiger** zurückgegeben werden.
 
-Es wird empfohlen, dass die Benutzer Zuordnungen in der Mitte einen Zeiger zurückgeben, der auf 8 Bytes ausgerichtet ist. **\_ \_**
+Es wird empfohlen, dass **midl \_ user \_ allocate** einen Zeiger zurückgibt, der 8 Bytes ausgerichtet ist.
 
 ## <a name="examples"></a>Beispiele
 
@@ -71,36 +71,36 @@ void __RPC_FAR * __RPC_API midl_user_allocate(size_t cBytes)
 [**allocate**](allocate.md)
 </dt> <dt>
 
-[**Mikro**](arrays-1.md)
+[**Arrays**](arrays-1.md)
 </dt> <dt>
 
 [Arrays und Zeiger](/windows/desktop/Rpc/arrays-and-pointers)
 </dt> <dt>
 
-[Array-und Sized-Pointer Attribute](array-and-sized-pointer-attributes.md)
+[Array- Sized-Pointer Attribute](array-and-sized-pointer-attributes.md)
 </dt> <dt>
 
-[**in**](in.md)
+[**In**](in.md)
 </dt> <dt>
 
-[**mittlerer l- \_ Benutzer \_ kostenlos**](/windows/desktop/Rpc/the-midl-user-free-function)
+[**midl \_ user \_ free**](/windows/desktop/Rpc/the-midl-user-free-function)
 </dt> <dt>
 
 [**/osf**](-osf.md)
 </dt> <dt>
 
-[**vorgenommen**](out-idl.md)
+[**out**](out-idl.md)
 </dt> <dt>
 
-[**ptr**](ptr.md)
+[**Ptr**](ptr.md)
 </dt> <dt>
 
 [**ref**](ref.md)
 </dt> <dt>
 
-[**gem**](unique.md)
+[**Einzigartige**](unique.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

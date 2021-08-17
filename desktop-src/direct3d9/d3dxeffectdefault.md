@@ -1,7 +1,7 @@
 ---
-description: Standardparameter beeinflussen.
+description: Auswirkungen von Standardparametern.
 ms.assetid: a8a24cf2-0ecd-4429-97d3-086ff49540a1
-title: D3DXEFFECTDEFAULT-Struktur (D3dx9mesh. h)
+title: D3DXEFFECTDEFAULT-Struktur (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: fee415cbd7d8ec28daa079dd2f224949402a813b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 41beda43807ace6b0f335dc1937f8843cbc11544e4842f86af98eb0e0bb0802a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117731879"
 ---
 # <a name="d3dxeffectdefault-structure"></a>D3DXEFFECTDEFAULT-Struktur
 
-Standardparameter beeinflussen.
+Auswirkungen von Standardparametern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ typedef struct D3DXEFFECTDEFAULT {
 
 <dl> <dt>
 
-**pparamname**
+**pParamName**
 </dt> <dd>
 
 Typ: **LPSTR**
@@ -53,36 +53,36 @@ Parametername.
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd>
 
 Typ: **[ **D3DXEFFECTDEFAULTTYPE**](./d3dxeffectdefaulttype.md)**
 
 </dd> <dd>
 
-Datentyp in pValue. Weitere Informationen finden Sie unter [ **D3DXEFFECTDEFAULTTYPE**](./d3dxeffectdefaulttype.md)
+Datentyp in pValue. Weitere Informationen finden Sie unter [ **D3DXEFFECTDEFAULTTYPE.**](./d3dxeffectdefaulttype.md)
 
 </dd> <dt>
 
-**NumBytes**
+**Numbytes**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Größe (in Bytes) der Daten, auf die von pValue verwiesen wird.
+Größe der Daten, auf die pValue verweist, in Bytes.
 
 </dd> <dt>
 
-**pValue**
+**Pvalue**
 </dt> <dd>
 
 Typ: **[ **LPVOID**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Ein Zeiger auf den Speicherort, der die Daten enthält.
+Zeiger auf den Speicherort des Arbeitsspeichers, der die Daten enthält.
 
 </dd> </dl>
 
@@ -92,15 +92,15 @@ Ein Zeiger auf den Speicherort, der die Daten enthält.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Effekt Strukturen](dx9-graphics-reference-effects-structures.md)
+[Effektstrukturen](dx9-graphics-reference-effects-structures.md)
 </dt> </dl>
 
  

@@ -1,41 +1,41 @@
 ---
 title: HSV-Farbräume
-description: Farbton-, Sättigungs-und Wertzeichen (HSV) werden oft von Künstlern verwendet.
+description: Farbräume für Farbton, Sättigung und Wert (HSV) werden häufig von Interpreten verwendet.
 ms.assetid: a2ee9f29-0b81-4edc-8af8-f4df765e9952
 keywords:
-- Windows Color System (WCS), HSV-Farbbereiche
-- WCS (Windows Color System), HSV-Farbbereiche
-- Bild Farbverwaltung, HSV-Farbbereiche
-- Farbverwaltung, HSV-Farbbereiche
-- Farben, HSV-Farbbereiche
-- Farbbereiche, HSV
-- HSV-Farbbereiche
+- Windows Color System (WCS), HSV-Farbräume
+- WCS (Windows Color System), HSV-Farbräume
+- Bildfarbverwaltung, HSV-Farbräume
+- Farbverwaltung, HSV-Farbräume
+- Farben, HSV-Farbräume
+- Farbräume, HSV
+- HSV-Farbräume
 - hue
-- Sattel
+- Sättigung
 - value
-- Helligkeit
-- keine Sättigung
-- Hue-Sättigungswert (HSV)
-- HSV (Hue-Sättigungswert)
+- Leichtigkeit
+- Nullsättigung
+- Farbtonsättigungswert (HSV)
+- HSV (Farbtonsättigungswert)
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4135e9c30dd69b8c5add5d9d8e6d784127ebaec9
-ms.sourcegitcommit: 38954f8f0d70f44bff4a943784f468ebd7ef691a
+ms.openlocfilehash: 30596e1f2d49e2ff3f15e2c5368f2c488640b6c26e00b38741aeb13f055d4ebe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "104557936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117851930"
 ---
 # <a name="hsv-color-spaces"></a>HSV-Farbräume
 
-Farbton-, Sättigungs-und Wert [Zeichen](c.md) (HSV) werden oft von Künstlern verwendet. "Hue" ist das, was wir normalerweise als Farbe betrachten. Dabei handelt es sich um das Attribut einer Farbe, der wir einen Namen wie "Red" oder "Blue" zuweisen. "Value" ist ein anderes Wort für "Helligkeit", das Attribut einer Farbe, die den Farbton eines grauen Werts zwischen schwarz und weiß entspricht. Sättigung ist ein Maß für die Art und Weise, wie verschieden eine Farbe von einem grauen der gleichen [Helligkeit](b.md)angezeigt wird. Die Sättigung NULL zeigt an, dass kein Farbton, sondern nur graue dezimalgrößen Der HSV-Farbraum wird normalisiert.
+Farbräume für [Farbton,](c.md) Sättigung und Wert (HSV) werden häufig von Interpreten verwendet. "Hue" ist das, was wir normalerweise als Farbe betrachten. Es ist das Attribut einer Farbe, mit dem wir ihm einen Namen wie "rot" oder "blau" geben. "Value" ist ein weiteres Wort für "Helligkeit", das Attribut einer Farbe, die es einem Grauton zwischen Schwarz und Weiß gleicht. Die Sättigung ist ein Maß dafür, wie sich eine Farbe von einem Grau mit der gleichen [Helligkeit](b.md)unterscheidet. Nullsättigung gibt keinen Farbton an, nur graue Skala. Der HSV-Farbraum wird normalisiert.
 
-![HSV-Farbraum](images/hsvline.png)
+![hsv-Farbraum](images/hsvline.png)
 
-Die obige Abbildung zeigt eine Zeilen Zeichnung des HSV-Raums in Form eines hexcone. Jeder seiner Querschnitte ist ein hexseck. An den Scheitel Punkten der einzelnen Kreuz Abschnitte befinden sich die Farben rot, gelb, grün, Cyan, blau und Magenta. Eine Farbe im HSV-Raum wird durch Angabe eines Farbton Winkels, der Chroma-Ebene und der Helligkeit-Ebene angegeben. Ein Farbton Winkel von NULL ist rot. Der Hue-Winkel erhöht sich gegen den Uhrzeigersinn. Ergänzende Farben sind 180 voneinander entfernt.
+Die obige Abbildung zeigt eine Linienzeichnung des HSV-Raumes in Form einer Hexadezimalkunde. Jeder seiner Kreuzabschnitte ist ein Sechseck. An den Scheitelpunkten jedes Kreuzabschnitts befinden sich die Farben Rot, Gelb, Grün, Cyan, Blau und Magenta. Eine Farbe im HSV-Raum wird durch Angabe eines Farbtonwinkels, der Farbverlaufsebene und der Helligkeitsstufe angegeben. Ein Farbtonwinkel von 0 (null) ist rot. Der Farbtonwinkel erhöht sich gegen den Uhrzeigersinn. Ergänzende Farben sind 180 voneinander getrennt.
 
-Die HSV-Farbbereiche können Geräte abhängig oder Geräte unabhängig sein.
+HSV-Farbräume können geräteabhängig oder geräteunabhängig sein.
 
  
 

@@ -1,9 +1,9 @@
 ---
-title: widerzuspiegeln
-description: Gibt einen Reflektionsvektor mit einem incidentray und einem Oberflächen normalen zurück.
+title: Spiegeln
+description: Gibt einen Reflektionsvektor mit einem Incidentstrahl und einer Oberflächennormnorm zurück.
 ms.assetid: e321b399-f382-4585-83a6-a7da1f7b2327
 keywords:
-- HLSL reflektieren
+- hlsl reflektieren
 topic_type:
 - apiref
 api_name:
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 46c981f636a797ecc4e0dd341ce44ed886c202cb
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2abc7100eae846fc3d2f21b013676aa3dbc64574a7e8cdb8a14dc492ceb33f75
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117725944"
 ---
-# <a name="reflect"></a>widerzuspiegeln
+# <a name="reflect"></a>Spiegeln
 
-Gibt einen Reflektionsvektor mit einem incidentray und einem Oberflächen normalen zurück.
+Gibt einen Reflektionsvektor mit einem Incidentstrahl und einer Oberflächennormnorm zurück.
 
 
 
-| *ret* reflektieren (*i*, *n*) |
+| *ret* reflect(*i*, *n*) |
 |-------------------------|
 
 
@@ -37,10 +37,10 @@ Gibt einen Reflektionsvektor mit einem incidentray und einem Oberflächen normal
 
 
 
-| Element                                                   | BESCHREIBUNG                                          |
+| Element                                                   | Beschreibung                                          |
 |--------------------------------------------------------|------------------------------------------------------|
-| <span id="i"></span><span id="I"></span>*Ich*<br/> | \[in \] einem Gleit Komma-und incidentvektor.<br/> |
-| <span id="n"></span><span id="N"></span>*Nr*<br/> | \[in \] einem Gleit Komma-, normal-Vektor.<br/>   |
+| <span id="i"></span><span id="I"></span>*Ich*<br/> | \[in \] Einem Gleitkomma- und Incidentvektor.<br/> |
+| <span id="n"></span><span id="N"></span>*N*<br/> | \[in \] einem Gleitkomma, normaler Vektor.<br/>   |
 
 
 
@@ -48,11 +48,11 @@ Gibt einen Reflektionsvektor mit einem incidentray und einem Oberflächen normal
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein Gleit Komma Wert, reflektionvektor.
+Ein Gleitkomma-Reflektionsvektor.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion berechnet den Reflektionsvektor mithilfe der folgenden Formel: v = i-2 \* n \* Punkt (i n).
+Diese Funktion berechnet den Reflektionsvektor mit der folgenden Formel: v = i - 2 \* n \* Punkt(i n) .
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -60,23 +60,23 @@ Diese Funktion berechnet den Reflektionsvektor mithilfe der folgenden Formel: v 
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                       | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                           |
 |-------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------------|
-| *i*   | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
-| *n*   | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *i* |
-| *TZI* | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *i* |
+| *i*   | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
+| *n*   | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(n) wie eingabe *i* |
+| *Ret* | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(n) wie eingabe *i* |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt |
 |------------------------------------------------------------------------------------|-----------|
-| [Shader Model 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) und höhere Shader-Modelle | ja       |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) und höhere Shadermodelle | Ja       |
 
 
 
@@ -86,7 +86,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

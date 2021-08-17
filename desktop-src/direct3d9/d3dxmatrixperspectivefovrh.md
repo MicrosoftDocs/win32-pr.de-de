@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e8860a5d9fed13e8acdedfe67ed94a97911a6de0
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 232c93709939c1371488a5f3a0aeadb2647001cf181270bcf9c357cc0d34042e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117731676"
 ---
 # <a name="d3dxmatrixperspectivefovrh-function-d3dx9mathh"></a>D3DXMatrixPerspectiveFovRH-Funktion (D3dx9math.h)
 
@@ -93,13 +93,13 @@ Z-Wert der fernen Ansichtsebene.
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) bei der es sich um eine rechtshändige Perspektivprojektionsmatrix handelt.
+Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die eine rechtshändige Perspektivprojektionsmatrix ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixPerspectiveFovRH-Funktion** als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXMatrixPerspectiveFovRH-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
-Um die Seitenverhältnisachse zu ändern, verwenden Sie die Berechnungsformel: fovy = 2 * math.atan(math.tan(fovy * 0,5) / aspect). Fügen Sie alternativ X- und Y-Seitenverhältnisvariablen in der Struktur hinzu, um den vertikalen Ansichtsbereich zu skalieren: fovy = 2 * math.atan(math.tan(fovy * 0,5) / aspectY), aspect = aspectX * aspect Y.
+Um die Seitenverhältnisachse zu ändern, verwenden Sie die Berechnungsformel: folow = 2 * math.atan(math.tan(fo unicode * 0,5) / aspect). Alternativ können Sie X- und Y-Seitenverhältnisvariablen in der Struktur hinzufügen, um den vertikalen Ansichtsraum zu skalieren: fo skalierung = 2 * math.atan(math.tan(folow * 0,5) / aspectY), aspect = aspectX * aspect Y.
 
 Diese Funktion berechnet die zurückgegebene Matrix wie gezeigt.
 
@@ -121,7 +121,7 @@ xScale = yScale / aspect ratio
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

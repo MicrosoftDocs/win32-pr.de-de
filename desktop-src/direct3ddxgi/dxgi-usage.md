@@ -1,37 +1,37 @@
 ---
-description: Flags für Optionen zur Oberfläche und Ressourcen Erstellung.
+description: Flags für Optionen für die Oberflächen- und Ressourcenerstellung.
 ms.assetid: b5026566-89b5-458e-b36d-a55e5f8c10c1
-title: DXGI_USAGE (dxgi. h)
+title: DXGI_USAGE (DXGI.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e55e99d86201c76fbe2ec229b13b5831d767ff34
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1d7bc0773794c6c2243d8a3171cbd6ffdafbe1cdd558e1198c2c8cc0b1a3440d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353712"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117909931"
 ---
-# <a name="dxgi_usage"></a>DXGI- \_ Verwendung
+# <a name="dxgi_usage"></a>\_DXGI-NUTZUNG
 
-Flags für Optionen zur Oberfläche und Ressourcen Erstellung.
+Flags für Optionen für die Oberflächen- und Ressourcenerstellung.
 
 
 
-| Konstante/Wert                                                                                                                                                                                                                                                                                  | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                     |
+| Konstante/Wert                                                                                                                                                                                                                                                                                  | Beschreibung                                                                                                                                                                                                                                                                                                                     |
 |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="DXGI_USAGE_BACK_BUFFER"></span><span id="dxgi_usage_back_buffer"></span><dl> <dt>**DXGI \_ Verwendungs \_ Hintergrund \_ Puffer**</dt> <dt>1L <<  (2 + 4)</dt> </dl>                             | Die-Oberfläche oder-Ressource wird als Hintergrund Puffer verwendet. Sie müssen den **DXGI- \_ Verwendungs \_ Hintergrund \_ Puffer** nicht übergeben, wenn Sie eine SwapChain erstellen. Sie können jedoch ermitteln, ob eine Ressource zu einer Swapkette gehört, wenn Sie [**idxgiresource:: getusage**](/windows/desktop/api/DXGI/nf-dxgi-idxgiresource-getusage) aufrufen und den **DXGI- \_ Verwendungs-Back- \_ \_ Puffer** abrufen.<br/> |
-| <span id="DXGI_USAGE_DISCARD_ON_PRESENT"></span><span id="dxgi_usage_discard_on_present"></span><dl> <dt>**DXGI \_ Verwendungs \_ verwerfen \_ bei der \_ aktuellen**</dt> <dt>1L- <<  (5 + 4)</dt> </dl>       | Dieses Flag ist nur für die interne Verwendung vorgesehen.<br/>                                                                                                                                                                                                                                                                                  |
-| <span id="DXGI_USAGE_READ_ONLY"></span><span id="dxgi_usage_read_only"></span><dl> <dt>**DXGI \_ Verwendung \_ \_**</dt> Schreib geschützter <dt>1L- <<  (4 + 4)</dt> </dl>                                   | Verwenden Sie die-Oberfläche oder-Ressource nur zum Lesen.<br/>                                                                                                                                                                                                                                                                        |
-| <span id="DXGI_USAGE_RENDER_TARGET_OUTPUT"></span><span id="dxgi_usage_render_target_output"></span><dl> <dt>**DXGI \_ \_Ausgabe- \_ Renderziel \_ Ausgabe**</dt> <dt>1L <<  (1 + 4)</dt> </dl> | Verwenden Sie die-Oberfläche oder-Ressource als Ausgabe Renderziel.<br/>                                                                                                                                                                                                                                                              |
-| <span id="DXGI_USAGE_SHADER_INPUT"></span><span id="dxgi_usage_shader_input"></span><dl> <dt>**DXGI \_ Usage- \_ \_ Shadereingabe**</dt> <dt>1L <<  (0 + 4)</dt> </dl>                          | Verwenden Sie die-Oberfläche oder-Ressource als Eingabe für einen Shader.<br/>                                                                                                                                                                                                                                                                 |
-| <span id="DXGI_USAGE_SHARED"></span><span id="dxgi_usage_shared"></span><dl> <dt>**DXGI \_ Verwendungs frei \_ gegebene**</dt> <dt>1L- <<  (3 + 4)</dt> </dl>                                             | Freigeben der-Oberfläche oder-Ressource.<br/>                                                                                                                                                                                                                                                                                       |
-| <span id="DXGI_USAGE_UNORDERED_ACCESS"></span><span id="dxgi_usage_unordered_access"></span><dl> <dt>**DXGI \_ \_Ungeordneter \_ Zugriff**</dt> in der Verwendung von <dt>1L <<  (6 + 4)</dt> </dl>              | Verwenden Sie die-Oberfläche oder-Ressource für den ungeordneten Zugriff.<br/>                                                                                                                                                                                                                                                                    |
+| <span id="DXGI_USAGE_BACK_BUFFER"></span><span id="dxgi_usage_back_buffer"></span><dl> <dt>**DXGI \_ USAGE \_ BACK \_ BUFFER**</dt> <dt>1L << (2 + 4)</dt> </dl>                             | Die Oberfläche oder Ressource wird als Hintergrundpuffer verwendet. Sie müssen **DXGI USAGE \_ BACK \_ \_ BUFFER** nicht übergeben, wenn Sie eine Swapkette erstellen. Sie können jedoch ermitteln, ob eine Ressource zu einer Auslagerungskette gehört, wenn Sie [**IDXGIResource::GetUsage**](/windows/desktop/api/DXGI/nf-dxgi-idxgiresource-getusage) aufrufen und **DXGI \_ USAGE BACK \_ BUFFER \_ erhalten.**<br/> |
+| <span id="DXGI_USAGE_DISCARD_ON_PRESENT"></span><span id="dxgi_usage_discard_on_present"></span><dl> <dt>**DXGI \_ USAGE \_ DISCARD \_ ON \_ PRESENT**</dt> <dt>1L << (5 + 4)</dt> </dl>       | Dieses Flag ist nur für die interne Verwendung.<br/>                                                                                                                                                                                                                                                                                  |
+| <span id="DXGI_USAGE_READ_ONLY"></span><span id="dxgi_usage_read_only"></span><dl> <dt>**DXGI \_ NUTZUNG \_ \_ SCHREIBGESCHÜTZT**</dt> <dt>1L << (4 + 4)</dt> </dl>                                   | Verwenden Sie die Oberfläche oder Ressource nur zum Lesen.<br/>                                                                                                                                                                                                                                                                        |
+| <span id="DXGI_USAGE_RENDER_TARGET_OUTPUT"></span><span id="dxgi_usage_render_target_output"></span><dl> <dt>**DXGI \_ \_ \_ \_ VERWENDUNGSRENDERINGZIELAUSGABE**</dt> <dt>1L << (1 + 4)</dt> </dl> | Verwenden Sie die Oberfläche oder Ressource als Ausgaberenderziel.<br/>                                                                                                                                                                                                                                                              |
+| <span id="DXGI_USAGE_SHADER_INPUT"></span><span id="dxgi_usage_shader_input"></span><dl> <dt>**DXGI \_ \_VERWENDUNGS-SHADEREINGABE \_**</dt> <dt>1L << (0 + 4)</dt> </dl>                          | Verwenden Sie die Oberfläche oder Ressource als Eingabe für einen Shader.<br/>                                                                                                                                                                                                                                                                 |
+| <span id="DXGI_USAGE_SHARED"></span><span id="dxgi_usage_shared"></span><dl> <dt>**DXGI \_ USAGE \_ SHARED**</dt> <dt>1L << (3 + 4)</dt> </dl>                                             | Freigeben der Oberfläche oder Ressource.<br/>                                                                                                                                                                                                                                                                                       |
+| <span id="DXGI_USAGE_UNORDERED_ACCESS"></span><span id="dxgi_usage_unordered_access"></span><dl> <dt>**DXGI \_ VERWENDUNG \_ UNGEORDNETER \_ ZUGRIFF**</dt> <dt>1L << (6 + 4)</dt> </dl>              | Verwenden Sie die Oberfläche oder Ressource für ungeordneten Zugriff.<br/>                                                                                                                                                                                                                                                                    |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jedes Flag wird als Ganzzahl ohne Vorzeichen definiert.
+Jedes Flag wird als ganze Zahl ohne Vorzeichen definiert.
 
 ``` syntax
 #define DXGI_CPU_ACCESS_NONE    ( 0 )
@@ -49,9 +49,9 @@ Jedes Flag wird als Ganzzahl ohne Vorzeichen definiert.
 typedef UINT DXGI_USAGE;
 ```
 
-Diese Flagoptionen werden bei einem aufzurufenden [**idxgifactory-Befehl verwendet: die Methoden "anateswapchain**](/windows/desktop/api/DXGI/nf-dxgi-idxgifactory-createswapchain)", " [**IDXGIFactory2:: | ateswapchadetailhwnd**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-createswapchainforhwnd)", " [**IDXGIFactory2::**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow)" und " [**IDXGIFactory2:: foateswapchadetailcomposition**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcomposition) ", um die Optionen für die Oberflächen Verwendung und den CPU-Zugriff für den Hintergrund Puffer einer Swapkette zu beschreiben. Es ist nicht möglich, die **\_ \_ gemeinsame Verwendung der DXGI-Verwendung**, die **DXGI- \_ Verwendung \_ verwerfen \_ \_** und die **DXGI- \_ Verwendung \_ \_** als Eingabe für die Erstellung einer SwapChain zu verwenden. DXGI kann jedoch die **DXGI- \_ Verwendungs \_ Verwerfungs \_ \_** -und **DXGI \_ - \_ Verwendung \_** für einige der Hintergrund Puffer der Swapkette im Auftrag der Anwendung festlegen. Sie können die [**idxgiresource:: getusage**](/windows/desktop/api/DXGI/nf-dxgi-idxgiresource-getusage) -Methode aufrufen, um die Verwendung dieser Hintergrund Puffer abzurufen. Die SwapChain unterstützt nur den **DXGI- \_ CPU- \_ Zugriff \_ None** -Wert im **Feld DXGI- \_ CPU- \_ Zugriff \_** auf die **DXGI- \_ Verwendung**.
+Diese Flagoptionen werden in einem Aufruf von [**IDXGIFactory::CreateSwapChain**](/windows/desktop/api/DXGI/nf-dxgi-idxgifactory-createswapchain), [**IDXGIFactory2::CreateSwapChainForHwnd,**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-createswapchainforhwnd) [**IDXGIFactory2::CreateSwapChainForCoreWindow**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow)oder [**IDXGIFactory2::CreateSwapChainForComposition-Methode**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcomposition) verwendet, um die Oberflächennutzungs- und CPU-Zugriffsoptionen für den Rückpuffer einer Austauschkette zu beschreiben. Sie können die **WERTE DXGI \_ USAGE \_ SHARED,** **DXGI \_ USAGE DISCARD \_ ON \_ \_ PRESENT** und **DXGI USAGE READ \_ \_ \_ ONLY** nicht als Eingabe verwenden, um eine Swapkette zu erstellen. DXGI kann jedoch **DXGI \_ USAGE DISCARD \_ ON \_ \_ PRESENT** und **DXGI USAGE READ \_ \_ \_ ONLY** für einige der Hintergrundpuffer der Swapkette im Auftrag der Anwendung festlegen. Sie können die [**IDXGIResource::GetUsage-Methode**](/windows/desktop/api/DXGI/nf-dxgi-idxgiresource-getusage) aufrufen, um die Verwendung dieser Backpuffer abzurufen. Swap chain es unterstützt nur den **DXGI \_ CPU ACCESS \_ \_ NONE-Wert** im **DXGI CPU ACCESS \_ \_ \_ FIELD-Teil** von **DXGI \_ USAGE**.
 
-Diese Flagoptionen werden auch von der [**idxgidevice:: kreatesurface**](/windows/desktop/api/DXGI/nf-dxgi-idxgidevice-createsurface) -Methode verwendet.
+Diese Flagoptionen werden auch von der [**IDXGIDevice::CreateSurface-Methode**](/windows/desktop/api/DXGI/nf-dxgi-idxgidevice-createsurface) verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,11 +59,11 @@ Diese Flagoptionen werden auch von der [**idxgidevice:: kreatesurface**](/window
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DXGI. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DXGI.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

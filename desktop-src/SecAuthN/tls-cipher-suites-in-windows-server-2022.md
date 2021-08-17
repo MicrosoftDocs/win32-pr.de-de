@@ -3,12 +3,12 @@ description: Erfahren Sie mehr über TLS-Verschlüsselungssammlungen in Windows 
 title: TLS-Verschlüsselungssammlungen in Windows Server 2022.
 ms.topic: article
 ms.date: 02/16/2021
-ms.openlocfilehash: d69cf4d97b356bf772b3a6d59a8bc4146f596ce8
-ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
+ms.openlocfilehash: 10f49c18838b8e727f590505dd7af86203f882106ce351c559b6d687f8dd824a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112262332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117785970"
 ---
 # <a name="tls-cipher-suites-in-windows-server-2022"></a>TLS-Verschlüsselungssammlungen in Windows Server 2022
 
@@ -16,7 +16,7 @@ Verschlüsselungssammlungen können nur für TLS-Versionen ausgehandelt werden, 
 
 Die Verfügbarkeit von Verschlüsselungssammlungen sollte auf zwei Arten gesteuert werden:
 
--   Die Standardprioritäts reihenfolge wird überschrieben, wenn eine Prioritätsliste konfiguriert ist. Verschlüsselungssammlungen, die nicht in der Prioritätsliste enthalten sind, werden nicht verwendet.
+-   Die Standardprioritäts reihenfolge wird überschrieben, wenn eine Prioritätsliste konfiguriert wird. Verschlüsselungssammlungen, die nicht in der Prioritätsliste enthalten sind, werden nicht verwendet.
 -   Zulässig, wenn die Anwendung SCH USE STRONG CRYPTO besteht: Der \_ Microsoft \_ \_ Schannel-Anbieter filtert bekannte schwache Verschlüsselungssammlungen heraus, wenn die Anwendung das FLAG SCH \_ USE STRONG CRYPTO \_ \_ verwendet. RC4-, DES-, Export- und NULL-Verschlüsselungssammlungen werden herausgefiltert.
 
 > [!IMPORTANT]
@@ -24,7 +24,7 @@ Die Verfügbarkeit von Verschlüsselungssammlungen sollte auf zwei Arten gesteue
 
  
 
-Die FIPS-Konformität wurde durch das Hinzufügen elliptischer Kurven komplexer, wodurch die Spalte fips mode enabled (FIPS-Modus aktiviert) in früheren Versionen dieser Tabelle irreführend wurde. Beispielsweise ist eine Verschlüsselungssammlung wie TLS \_ ECDHE \_ RSA \_ WITH \_ AES \_ 128 \_ CBC \_ SHA256 nur FIPS-schwer, wenn elliptische NIST-Kurven verwendet werden. Informationen dazu, welche Kombinationen aus elliptischen Kurven und Verschlüsselungssammlungen im FIPS-Modus aktiviert werden, finden Sie in Abschnitt 3.3.1 der Richtlinien für die Auswahl, Konfiguration und Verwendung von [TLS-Implementierungen.]( https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf)
+Die FIPS-Konformität wurde durch das Hinzufügen elliptischer Kurven komplexer, wodurch die Spalte fips mode enabled (FIPS-Modus aktiviert) in früheren Versionen dieser Tabelle irreführend wurde. Beispielsweise ist eine Verschlüsselungssammlung wie TLS \_ ECDHE \_ RSA \_ WITH \_ AES \_ 128 \_ CBC \_ SHA256 nur FIPS-schwer, wenn elliptische NIST-Kurven verwendet werden. Um herauszufinden, welche Kombinationen aus elliptischen Kurven und Verschlüsselungssammlungen im FIPS-Modus aktiviert werden, lesen Sie Abschnitt 3.3.1 der Richtlinien für die Auswahl, Konfiguration und Verwendung von [TLS-Implementierungen.]( https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf)
 
 Für Windows Server 2022 sind die folgenden Verschlüsselungssammlungen mithilfe des Microsoft Schannel-Anbieters standardmäßig in dieser Prioritäts reihenfolge aktiviert:
 
@@ -62,7 +62,7 @@ Für Windows Server 2022 sind die folgenden Verschlüsselungssammlungen mithilfe
 
  
 
-Die folgenden Verschlüsselungssammlungen werden vom Microsoft Schannel-Anbieter unterstützt, aber standardmäßig nicht aktiviert:
+Die folgenden Verschlüsselungssammlungen werden vom Microsoft Schannel-Anbieter unterstützt, aber nicht standardmäßig aktiviert:
 
 
 
@@ -81,7 +81,7 @@ Die folgenden Verschlüsselungssammlungen werden vom Microsoft Schannel-Anbieter
 | TLS \_ RSA MIT DES \_ \_ \_ CBC \_ SHA<br/>                                                          | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
 | TLS \_ DHE \_ DSS \_ MIT DES \_ \_ CBC \_ SHA<br/>                                                     | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
 | TLS \_ DHE \_ DSS \_ EXPORT1024 \_ WITH DES \_ \_ CBC SHA No TLS \_ 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/>   | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
-| TLS \_ RSA MIT NULL \_ \_ \_ MD5 <br/> Wird nur verwendet, wenn die Anwendung explizit anforderungen. <br/> | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
+| TLS \_ RSA MIT NULL \_ \_ \_ MD5 <br/> Wird nur verwendet, wenn die Anwendung explizit anfordert. <br/> | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
 | TLS \_ RSA \_ EXPORT1024 \_ MIT \_ RC4 \_ 56 \_ SHA<br/>                                               | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
 | TLS \_ RSA \_ EXPORT \_ WITH \_ RC4 \_ 40 \_ MD5<br/>                                                   | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
 | TLS \_ RSA \_ EXPORT1024 \_ MIT DES \_ \_ CBC \_ SHA<br/>                                              | Nein<br/>                       | TLS 1.2, TLS 1.1, TLS 1.0, SSL 3.0<br/> |
@@ -90,7 +90,7 @@ Die folgenden Verschlüsselungssammlungen werden vom Microsoft Schannel-Anbieter
 
  
 
-Die folgenden PSK-Verschlüsselungssammlungen sind mithilfe des Microsoft Schannel-Anbieters standardmäßig in dieser Prioritäts reihenfolge aktiviert:
+Die folgenden PSK-Verschlüsselungssammlungen sind mithilfe des Microsoft Schannel-Anbieters standardmäßig aktiviert und in dieser Prioritätsreihenfolge:
 
 
 
@@ -108,14 +108,14 @@ Die folgenden PSK-Verschlüsselungssammlungen sind mithilfe des Microsoft Schann
  
 
 > [!Note]  
-> Standardmäßig sind keine PSK-Verschlüsselungssammlungen aktiviert. Anwendungen müssen PSK mit SCH \_ USE \_ PRESHAREDKEY \_ ONLY anfordern. Weitere Informationen zu Schannel-Flags finden Sie unter [**SCHANNEL \_ CRED**](/windows/desktop/api/Schannel/ns-schannel-schannel_cred).
+> Standardmäßig sind keine PSK-Verschlüsselungssammlungen aktiviert. Anwendungen müssen PSK nur mit SCH \_ USE \_ PRESHAREDKEY \_ anfordern. Weitere Informationen zu Schannel-Flags finden Sie unter [**SCHANNEL \_ CRED**](/windows/desktop/api/Schannel/ns-schannel-schannel_cred).
 
  
 
-Um Verschlüsselungssammlungen hinzuzufügen, stellen Sie entweder eine Gruppenrichtlinie oder die TLS-Cmdlets zur Verfügung:
+Um Verschlüsselungssammlungen hinzuzufügen, stellen Sie entweder eine Gruppenrichtlinie bereit, oder verwenden Sie die TLS-Cmdlets:
 
--   Um gruppenrichtlinien zu verwenden, konfigurieren Sie die REIHENFOLGE DER SSL-Verschlüsselungssammlung unter Computerkonfiguration > Administrative Vorlagen > Netzwerk > SSL-Konfigurationseinstellungen mit der Prioritätsliste für alle Verschlüsselungssammlungen, die Sie aktivieren möchten.
+-   Um Gruppenrichtlinien zu verwenden, konfigurieren Sie SSL Cipher Suite Order unter Computerkonfiguration > Administrative Vorlagen > Network > SSL Configuration Einstellungen mit der Prioritätsliste für alle Verschlüsselungssammlungen, die Sie aktivieren möchten.
 -   Informationen zur Verwendung von PowerShell finden Sie unter [TLS-Cmdlets.](/powershell/module/tls/?view=win10-ps)
 
 > [!Note]  
-> Vor der Windows 10 wurden Verschlüsselungssammlungszeichenfolgen mit der elliptischen Kurve angefügt, um die Kurvenpriorität zu bestimmen. Windows 10 unterstützt eine Einstellung für die Reihenfolge der Elliptic Curve-Priorität, sodass das Elliptic Curve-Suffix nicht erforderlich ist und durch die neue Reihenfolge der Elliptic Curve-Priorität außer Kraft gesetzt wird, sofern angegeben, damit Organisationen gruppenrichtlinien verwenden können, um verschiedene Versionen von Windows mit den gleichen Verschlüsselungssammlungen zu konfigurieren.
+> Vor Windows 10 wurden Verschlüsselungssammlungszeichenfolgen mit der elliptischen Kurve angefügt, um die Kurvenpriorität zu bestimmen. Windows 10 unterstützt eine Prioritätsreihenfolgeeinstellung für elliptische Kurven, sodass das Suffix der elliptischen Kurve nicht erforderlich ist und von der neuen Prioritätsreihenfolge der elliptischen Kurve überschrieben wird, sofern angegeben, damit Organisationen gruppenrichtlinien verwenden können, um verschiedene Versionen von Windows mit denselben Verschlüsselungssammlungen zu konfigurieren.

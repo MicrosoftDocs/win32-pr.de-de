@@ -1,7 +1,7 @@
 ---
-description: Definiert einen Zeichen Folgentyp für das mobile Breitband Profil.
+description: Definiert einen Zeichenfolgentyp für das Mobile Breitbandprofil.
 ms.assetid: a5c14c39-2731-44f0-9fd2-e78d900b66f0
-title: einfacher nametype-Typ (mobiles Breitband)
+title: 'nameType : einfacher Typ (mobiles Breitband)'
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,16 +11,16 @@ api_name:
 - nameType
 api_type:
 - Schema
-ms.openlocfilehash: d8c6032e17eaf2d067dc23030a7a6279bd41eafa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b07bfb62e23b0c82ef69bc924147675caad10d61258a5c49edc906c4b6bf2a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117881404"
 ---
-# <a name="nametype-simple-type-mobile-broadband"></a>einfacher nametype-Typ (mobiles Breitband)
+# <a name="nametype-simple-type-mobile-broadband"></a>nameType : einfacher Typ (mobiles Breitband)
 
-Der einfache **nametype** -Typ definiert einen Zeichen Folgentyp für das mobile Breitband Profil. Bei dieser Zeichenfolge handelt es sich um mindestens ein Zeichen, das höchstens 255 Zeichen lang ist.
+Der einfache **NameType-Typ** definiert einen Zeichenfolgentyp für das Mobile Breitbandprofil. Diese Zeichenfolge ist mindestens ein Zeichen lang und höchstens 255 Zeichen lang.
 
 ``` syntax
 <xs:simpleType name="nameType">
@@ -43,7 +43,7 @@ Der einfache **nametype** -Typ definiert einen Zeichen Folgentyp für das mobile
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                         |
 
 

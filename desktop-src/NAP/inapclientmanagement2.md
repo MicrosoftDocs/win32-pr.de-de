@@ -1,10 +1,10 @@
 ---
-title: INapClientManagement2-Schnittstelle (napmanagement. h)
-description: Stellt Methoden für die NAP-Client Verwaltung bereit. | INapClientManagement2-Schnittstelle (napmanagement. h)
+title: INapClientManagement2-Schnittstelle (NapManagement.h)
+description: Stellt Methoden für die NAP-Clientverwaltung zur | INapClientManagement2-Schnittstelle (NapManagement.h)
 ms.assetid: 3cf29bfe-471a-481a-903d-bf0479c57a08
 keywords:
 - INapClientManagement2-Schnittstelle NAP
-- INapClientManagement2 Interface NAP, beschrieben
+- INapClientManagement2-Schnittstelle NAP , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,42 +15,42 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3441b52ddf776337765f39d23528bc223a17b1e4
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 4f459e6fa0d883203bf52ebbd0aaab06ee93cef00d1fb52af3d670f71cf7ab52
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104050808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117800100"
 ---
 # <a name="inapclientmanagement2-interface"></a>INapClientManagement2-Schnittstelle
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **INapClientManagement2** -Schnittstelle bietet Methoden für die NAP-Client Verwaltung.
+Die **INapClientManagement2-Schnittstelle** stellt Methoden für die NAP-Clientverwaltung bereit.
 
 > [!Note]  
-> Diese Schnittstelle erbt alle Methoden von [**inapclientmanagement**](inapclientmanagement.md) und sollte stattdessen verwendet werden.
+> Diese Schnittstelle erbt alle Methoden von [**INapClientManagement**](inapclientmanagement.md) und sollte stattdessen verwendet werden.
 
  
 
 ## <a name="members"></a>Member
 
-Die **INapClientManagement2** -Schnittstelle erbt von [**inapclientmanagement**](inapclientmanagement.md). **INapClientManagement2** verfügt auch über die folgenden Typen von Membern:
+Die **INapClientManagement2-Schnittstelle** erbt von [**INapClientManagement**](inapclientmanagement.md). **INapClientManagement2** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **INapClientManagement2** -Schnittstelle verfügt über diese Methoden.
+Die **INapClientManagement2-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                    | BESCHREIBUNG                                                                                                |
+| Methode                                                                                                    | Beschreibung                                                                                                |
 |:----------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|
-| [**INapClientManagement2:: getsystemisolationinfoex**](inapclientmanagement2-getsystemisolationinfoex.md) | Ruft Informationen zum Isolations Status und zum erweiterten Isolations Status des NAP-Clients ab.<br/> |
+| [**INapClientManagement2::GetSystemIsolationInfoEx**](inapclientmanagement2-getsystemisolationinfoex.md) | Ruft Informationen über den Isolationsstatus und den erweiterten Isolationsstatus des Nap-Clients ab.<br/> |
 
 
 
@@ -62,19 +62,19 @@ Die **INapClientManagement2** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                         |
-| Header<br/>                   | <dl> <dt>Napmanagement. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napmanagement. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                         |
+| Header<br/>                   | <dl> <dt>NapManagement.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapManagement.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapclientmanagement**](inapclientmanagement.md)
+[**INapClientManagement**](inapclientmanagement.md)
 </dt> <dt>
 
 [NAP-Schnittstellen](nap-interfaces.md)

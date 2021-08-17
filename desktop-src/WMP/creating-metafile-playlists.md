@@ -23,7 +23,7 @@ ms.locfileid: "117750467"
 ---
 # <a name="creating-metafile-playlists"></a>Erstellen von Metadateiwiedergabelisten
 
-Sie können eine Wiedergabeliste mit einem beliebigen Text-Editor erstellen, z. B. Microsoft Editor. Öffnen Sie den Text-Editor. Geben Sie die Skripteinträge ein, die Sie implementieren möchten. Nachdem Sie die Eingabe in Editor, speichern Sie die Datei mit einem entsprechenden Dateinamen und einer entsprechenden Dateierweiterung. Weitere Informationen zu Erweiterungen finden Sie unter [Metafile Extension Guidelines](metafile-extension-guidelines.md). In der Regel ist der Dateiname der Name der Windows Media-Datei oder des Streams, gefolgt von der Erweiterung ".dateityp", ".wvx" oder ".asx". Wenn es sich bei Ihrem Medieninhalt z. B. um eine Windows Media-Audiodatei mit der Erweiterung .wma handelt, verwenden Sie beim Benennen der Wiedergabeliste die Erweiterung .extension. Wiedergabelisten dürfen keine Formatierungscodes von einem Textprozessor enthalten, z. B. Microsoft Word. Um sicherzustellen, dass keine Formatierungscodes in der Wiedergabeliste enthalten sind, speichern Sie die Datei als Nur-Text- oder ASCII-Datei.
+Sie können eine Wiedergabeliste mit einem beliebigen Text-Editor erstellen, z. B. microsoft Editor. Öffnen Sie den Text-Editor. Geben Sie die Skripteinträge ein, die Sie implementieren möchten. Nachdem Sie die Eingabe in Editor, speichern Sie die Datei mit einem entsprechenden Dateinamen und einer entsprechenden Dateierweiterung. Weitere Informationen zu Erweiterungen finden Sie unter [Metafile Extension Guidelines](metafile-extension-guidelines.md). In der Regel ist der Dateiname der Name der Windows Media-Datei oder des Datenstroms, gefolgt von der Erweiterung ".dateityp", ".wvx" oder ".asx". Wenn ihr Medieninhalt z. B. eine Windows Media-Audiodatei mit der Erweiterung .wma ist, verwenden Sie beim Benennen der Wiedergabeliste die Erweiterung .extension. Wiedergabelisten dürfen keine Formatierungscodes von einem Textprozessor enthalten, z. B. Microsoft Word. Um sicherzustellen, dass keine Formatierungscodes in der Wiedergabeliste enthalten sind, speichern Sie die Datei als Nur-Text- oder ASCII-Datei.
 
 > [!Note]  
 > Bei Elementen und Attributen wird die Kleinschreibung nicht beachtet. Der Text, der in der Wiedergabeliste zum Definieren eines Elements oder Attributs verwendet wird, kann groß- oder klein geschrieben oder eine Mischung aus beidem sein.
@@ -32,21 +32,21 @@ Sie können eine Wiedergabeliste mit einem beliebigen Text-Editor erstellen, z. 
 
 Wenn ein Element keine untergeordneten Elemente enthält (elemente, die ändern oder in einem anderen Element enthalten sind), kann ein einzelner Schrägstrich (/) am Ende des öffnenden Tags direkt vor dem ">" statt eines schließenden Tags verwendet werden. Untergeordnete Elemente eines Elements müssen zwischen dem öffnenden und dem schließenden Tag für dieses Element angezeigt werden. andernfalls sind sie keine untergeordneten Elemente für dieses Element und werden ignoriert oder verursachen einen Fehler in der Syntax der Wiedergabeliste.
 
-Die ersten vier Zeichen einer Wiedergabeliste müssen &lt; "ASX" sein. Das **ASX-Element** wird in allen Wiedergabelisten verwendet, unabhängig davon, ob die Erweiterung .playlist, .wvx oder .asx ist. Pro Wiedergabeliste darf nur ein **ASX-Element** enthalten sein. Dieses Element identifiziert die Datei als wiedergabeliste Windows Medienmetadatei. Der Typ der Wiedergabeliste wird nicht angegeben.
+Die ersten vier Zeichen einer Wiedergabeliste müssen &lt; "ASX" sein. Das **ASX-Element** wird in allen Wiedergabelisten verwendet, unabhängig davon, ob die Erweiterung .playlist, .wvx oder .asx ist. Pro Wiedergabeliste darf nur ein **ASX-Element** enthalten sein. Dieses Element identifiziert die Datei als Wiedergabeliste Windows Medienmetadatei. Der Typ der Wiedergabeliste wird nicht angegeben.
 
 Das **ASX-Element** verfügt über drei mögliche Attribute:
 
 **VERSION**
 
-Das **VERSION-Attribut** ist erforderlich und muss unmittelbar nach dem **ASX-Element** folgen, z.B. "<ASX version = "3.0" &gt; ". Die aktuelle Versionsnummer ist 3.0. Windows Media Player unterstützt alle vorherigen Versionen. Zulässige Werte für das **VERSION-Attribut** sind 3.0 und 3 (ohne Dezimaltrennzeichen).
+Das **VERSION-Attribut** ist erforderlich und muss unmittelbar nach dem **ASX-Element** folgen, z. B. "<ASX version = "3.0" &gt; ". Die aktuelle Versionsnummer ist 3.0. Windows Media Player unterstützt alle vorherigen Versionen. Zulässige Werte für das **VERSION-Attribut** sind 3.0 und 3 (ohne Dezimaltrennzeichen).
 
 **PREVIEWMODE**
 
-Das **PREVIEWMODE-Attribut** ist optional. Es stellt einen weiteren Mechanismus zum Angeben der Länge des Renderns eines Clips dar. Wenn der Wert des **PREVIEWMODE-Attributs** YES ist, rendert Windows Media Player clip für die dauer, die durch das **Element PREVIEWDURATION angegeben wird.** Für jeden Clip kann **PREVIEWDURATION angegeben** werden.
+Das **PREVIEWMODE-Attribut** ist optional. Es stellt einen weiteren Mechanismus zum Angeben der Länge des Renderns eines Clips dar. Wenn der Wert des **PREVIEWMODE-Attributs** YES ist, rendert Windows Media Player jeden Clip für die dauer, die durch das **Element PREVIEWDURATION angegeben wird.** Für jeden Clip kann **PREVIEWDURATION angegeben** werden.
 
 **BANNERBAR**
 
-Das **optionale BANNERBAR-Attribut** definiert, ob Windows Media Player Steuerelement Platz für eine Bannergrafik reserviert. (Verwenden Sie das **BANNER-Element,** um die anzuzeigende Grafik anzugeben.) Wenn der Wert von **BANNERBAR** FEST ist, reserviert Windows Media Player Bannerraum für die Show und für jeden Clip, unabhängig davon, ob die Metadateiwiedergabeliste ein Banner für die Show oder den Clip angibt. Dadurch bleibt die Größe des Windows Media Player-Fensters gleich (es sei denn, die Videogröße ändert sich), unabhängig vom Fehlen oder Vorhandensein einer Bannergrafik. Wenn der Show oder dem Clip kein Banner zugeordnet ist, ist der reservierte Speicherplatz schwarz. Wenn der Wert des **BANNERBAR-Attributs** AUTO ist, reserviert Windows Media Player Platz für das Banner nur, wenn die Show oder der Clip eins enthält.
+Das **optionale BANNERBAR-Attribut** definiert, ob das Windows Media Player-Steuerelement Platz für eine Bannergrafik reserviert. (Verwenden Sie das **BANNER-Element,** um die anzuzeigende Grafik anzugeben.) Wenn der Wert von **BANNERBAR** FEST ist, reserviert Windows Media Player Bannerraum für die Show und für jeden Clip, unabhängig davon, ob die Metadateiwiedergabeliste ein Banner für die Show oder den Clip angibt. Dadurch bleibt die Größe des Windows Media Player-Fensters gleich (es sei denn, die Videogröße ändert sich), unabhängig davon, ob eine Bannergrafik vor ort ist. Wenn der Show oder dem Clip kein Banner zugeordnet ist, ist der reservierte Speicherplatz schwarz. Wenn der Wert des **BANNERBAR-Attributs** AUTO ist, reserviert Windows Media Player Platz für das Banner nur, wenn die Show oder der Clip ein Banner enthält.
 
 
 ```XML
@@ -56,7 +56,7 @@ Das **optionale BANNERBAR-Attribut** definiert, ob Windows Media Player Steuerel
 
 
 
-Weitere Informationen zu den drei Attributen des **ASX-Elements** finden Sie im Verweiseintrag für das [ASX-Element](asx-element.md).
+Weitere Informationen zu den drei Attributen des **ASX-Elements** finden Sie im Verweiseintrag für das [ASX-Element.](asx-element.md)
 
 Ein **ASX-Element** enthält untergeordnete **ENTRY-Elemente,** die Informationen zu den Mediendateien definieren, auf die zugegriffen werden soll. Jedes **ENTRY-Element** muss ein **REF-Element** enthalten, das den Pfad zur zu streamenden Mediendatei angibt. In einem ASX-Element muss mindestens ein **ENTRY-** oder **ENTRYREF-Element** **enthalten** sein.
 
@@ -86,12 +86,12 @@ Beispielcode
 
 
 
-Stellen Sie sicher, dass die Wiedergabeliste funktioniert, indem Sie im Explorer auf Windows doppelklicken. Windows Media Player sollte geöffnet werden und mit dem Streamen des Medieninhalts beginnen. Nachdem Sie bestätigt haben, dass die Wiedergabeliste funktioniert, speichern Sie sie zusammen mit Ihren Webseiten auf Ihrem Webserver, und verknüpfen Sie sie mithilfe eines **HREF-Elements,** oder betten Sie sie mithilfe des Windows Media Player **OBJECT-Elements** in eine Webseite ein.
+Stellen Sie sicher, dass die Wiedergabeliste funktioniert, indem Sie im Windows doppelklicken. Windows Media Player sollte den Medieninhalt öffnen und mit dem Streamen beginnen. Nachdem Sie bestätigt haben, dass die Wiedergabeliste funktioniert, speichern Sie sie zusammen mit Ihren Webseiten auf Ihrem Webserver, und verknüpfen Sie sie mithilfe eines **HREF-Elements,** oder betten Sie sie mithilfe des Windows Media Player **OBJECT-Elements** in eine Webseite ein.
 
 Die folgenden Abschnitte enthalten weitere Informationen:
 
 -   [Schachteln von Metadateien](nesting-metafiles.md)
--   [Verwenden von ASP-Seiten zum dynamischen Erstellen Windows Medienmetadateiwiedergabelisten](using-asp-pages-to-dynamically-create-windows-media-metafile-playlists.md)
+-   [Verwenden von ASP-Seiten zum dynamischen Erstellen Windows Medienmetadatei-Wiedergabelisten](using-asp-pages-to-dynamically-create-windows-media-metafile-playlists.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

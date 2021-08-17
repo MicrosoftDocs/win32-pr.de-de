@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: jetreadfilinput Stance-Funktion'
+description: 'Weitere Informationen zu: JetReadFileInstance-Funktion'
 title: JetReadFileInstance-Funktion
 TOCTitle: JetReadFileInstance Function
 ms:assetid: b17b4b43-86e5-4507-8a85-bbd5eac0aa3c
@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e9aad9828a92d67f2e7411aa534103696d913934
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec5c83bb78528a61bbe7af9bafa59567100ee9da669915b96230bfb97b8bf390
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117891116"
 ---
 # <a name="jetreadfileinstance-function"></a>JetReadFileInstance-Funktion
 
@@ -32,9 +32,9 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetreadfileinstance-function"></a>JetReadFileInstance-Funktion
 
-Die **jetreadfileinstance** -Funktion Ruft den Inhalt einer Datei ab, die mit der [jetopenfileinstance](./jetopenfileinstance-function.md) -Funktion geöffnet wurde.
+Die **JetReadFileInstance-Funktion** ruft den Inhalt einer Datei ab, die mit der [JetOpenFileInstance-Funktion](./jetopenfileinstance-function.md) geöffnet wurde.
 
-**Windows XP**:   **jetreadfileinstance** wird in Windows XP eingeführt.
+**Windows XP:** **JetReadFileInstance** wurde in Windows XP eingeführt.
 
 ```cpp
     JET_ERR JET_API JetReadFileInstance(
@@ -48,33 +48,33 @@ Die **jetreadfileinstance** -Funktion Ruft den Inhalt einer Datei ab, die mit de
 
 ### <a name="parameters"></a>Parameter
 
-*lichen*
+*Instanz*
 
-Die-Instanz, die für einen bestimmten API-Befehl verwendet werden soll.
+Die -Instanz, die für einen bestimmten API-Aufruf verwendet werden soll.
 
-Beachten Sie, dass die API-Variante für Windows 2000 nicht verfügbar ist, da nur eine Instanz unterstützt wird. In diesem Fall wird die Verwendung dieser globalen Instanz impliziert.
+Beachten Sie, dass für Windows 2000 die API-Variante, die diesen Parameter akzeptiert, nicht verfügbar ist, da nur eine Instanz unterstützt wird. Die Verwendung dieser globalen Instanz wird in diesem Fall impliziert.
 
-Für Windows XP und spätere Versionen können Sie die API-Variante aufrufen, die diesen Parameter nicht akzeptiert, wenn sich die Engine im Legacy Modus (Windows 2000-Kompatibilitätsmodus) befindet, in Fällen, in denen nur eine Instanz unterstützt wird. Andernfalls schlägt der Vorgang fehl, und es wird der JET_errRunningInMultiInstanceMode Fehler zurückgegeben.
+Für Windows XP und höhere Versionen können Sie die API-Variante aufrufen, die diesen Parameter nur dann nicht akzeptiert, wenn sich die Engine im Legacymodus befindet (Windows Kompatibilitätsmodus 2000), wenn nur eine Instanz unterstützt wird. Andernfalls schlägt der Vorgang fehl und gibt den JET_errRunningInMultiInstanceMode Fehler zurück.
 
-*hffile*
+*hfFile*
 
 Das Handle der zu lesenden Datei.
 
-*teuren*
+*Pv*
 
-Der Ausgabepuffer, der die Datei Daten empfängt.
+Der Ausgabepuffer, der die Dateidaten empfängt.
 
-*betrieben*
+*Cb*
 
 Die maximale Größe des Ausgabepuffers in Bytes.
 
-*PCB*
+*Pcb*
 
-Die tatsächliche Menge an Datei Daten, die abgerufen wurden.
+Die tatsächliche Menge der abgerufenen Dateidaten.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion vereinfacht die Rückgabe von [JET_ERR](./jet-err.md) Datentypen, die in der ESE-API (Extensible Storage Engine) definiert sind. Weitere Informationen zu Jet-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion erleichtert die Rückgabe aller [JET_ERR](./jet-err.md) Datentypen, die in der ESE-API (Extensible Storage Engine) definiert sind. Weitere Informationen zu JET-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -94,76 +94,76 @@ Diese Funktion vereinfacht die Rückgabe von [JET_ERR](./jet-err.md) Datentypen,
 </tr>
 <tr class="even">
 <td><p>JET_errBackupAbortByServer</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, da die aktuelle externe Sicherung durch einen-Befehl der <a href="gg269240(v=exchg.10).md">jetstopservice</a> -Funktion abgebrochen wurde. Dieser Fehler wird nur von Windows XP und neueren Windows-Versionen zurückgegeben.</p></td>
+<td><p>Fehler beim Vorgang, weil die aktuelle externe Sicherung durch einen Aufruf der <a href="gg269240(v=exchg.10).md">JetStopService-Funktion</a> abgebrochen wurde. Dieser Fehler wird nur von Windows XP und höher Windows Versionen zurückgegeben.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens der <a href="gg269240(v=exchg.10).md">jetstopservice</a> -Funktion beendet wurden.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs der <a href="gg269240(v=exchg.10).md">JetStopService-Funktion</a> ausgeführt wurden.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen. Dieser Fehler wird nur von Windows XP und neueren Windows-Versionen zurückgegeben.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da für die instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von Windows XP und höher Windows Versionen zurückgegeben.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der angegebenen Parameter enthielt entweder einen unerwarteten Wert oder einen Wert, der nicht sinnvoll war, wenn er mit dem Wert eines anderen Parameters kombiniert wurde. Dies kann für die <strong>jetreadfilinput Stance</strong> -Funktion auftreten, wenn eine der folgenden Aktionen auftritt:</p>
+<td><p>Einer der angegebenen Parameter enthielt entweder einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann für die <strong>JetReadFileInstance-Funktion</strong> auftreten, wenn eine der folgenden Vorgänge auftritt:</p>
 <ul>
-<li><p>Das angegebene Instanzhandle ist ungültig. Windows XP und neuere Windows-Versionen.</p></li>
-<li><p>Bei der Ausgabepuffergröße handelt es sich nicht um ein Vielfaches der Seitengröße der Datenbank (<a href="gg269337(v=exchg.10).md">JET_paramDatabasePageSize</a>). Windows XP und neuere Windows-Versionen.</p></li>
-<li><p>Die Ausgabepuffergröße ist kleiner als drei Datenbankseiten (<a href="gg269337(v=exchg.10).md">JET_paramDatabasePageSize</a>). Dies ist der erste Rückruf der <strong>jetreadfileinstance</strong> -Funktion für das angegebene Handle. Windows XP und neuere Windows-Versionen.</p></li>
+<li><p>Das angegebene Instanzhandle ist ungültig. Windows XP und höher Windows Versionen.</p></li>
+<li><p>Die Ausgabepuffergröße ist kein Vielfaches der Datenbankseitengröße (<a href="gg269337(v=exchg.10).md">JET_paramDatabasePageSize</a>). Windows XP und höher Windows Versionen.</p></li>
+<li><p>Die Ausgabepuffergröße ist kleiner als drei Datenbankseiten<a href="gg269337(v=exchg.10).md">(JET_paramDatabasePageSize</a>), und dies ist der erste Aufruf der <strong>JetReadFileInstance-Funktion</strong> für das angegebene Handle. Windows XP und höher Windows Versionen.</p></li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><p>JET_errLogReadVerifyFailure</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, weil nicht BEHEB bare Daten beim Lesen einer Transaktionsprotokoll Datei erkannt wurden. Dieser Fehler wird nur von Windows XP und neueren Windows-Versionen zurückgegeben.</p></td>
+<td><p>Fehler beim Vorgang, weil beim Lesen einer Transaktionsprotokolldatei eine nicht behebbare Datenbeschädigung erkannt wurde. Dieser Fehler wird nur von Windows XP und höher Windows Versionen zurückgegeben.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errNoBackup</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, da keine externe Sicherung durchgeführt wird.</p></td>
+<td><p>Fehler beim Vorgang, weil keine externe Sicherung ausgeführt wird.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die dieser Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
+<td><p>Der Vorgang kann nicht abgeschlossen werden, da die dieser Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errReadVerifyFailure</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, da nicht BEHEB bare Daten beim Lesen einer Datenbankseite aus einer Datenbankdatei oder einer Datenbank-Patchdatei erkannt wurden.</p></td>
+<td><p>Fehler beim Vorgang, weil beim Lesen einer Datenbankseite aus einer Datenbankdatei oder Einer Datenbankpatchdatei eine nicht behebbare Datenbeschädigung erkannt wurde.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die Instanz, die dieser Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da ein Wiederherstellungsvorgang für die Instanz ausgeführt wird, die dieser Sitzung zugeordnet ist.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errRunningInMultiInstanceMode</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, weil versucht wurde, die Engine im Legacy Modus (Windows 2000-Kompatibilitätsmodus) zu verwenden, in einem Fall, in dem nur eine Instanz unterstützt wird, aber mehrere Instanzen bereits vorhanden sind.</p></td>
+<td><p>Der Vorgang ist fehlgeschlagen, weil versucht wurde, die Engine im Legacymodus (Windows 2000-Kompatibilitätsmodus) in einem Fall zu verwenden, in dem nur eine Instanz unterstützt wird, aber bereits mehrere Instanzen vorhanden sind.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die dieser Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da die dieser Sitzung zugeordnete Instanz heruntergefahren wird.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-Bei Erfolg wird der nächste Datenblock aus der Datei in den Ausgabepuffer eingelesen. Die tatsächliche Anzahl der abgerufenen Bytes wird ebenfalls zurückgegeben. Der Dateioffset, bei dem der nächste Lesevorgang stattfindet, wird um diesen Betrag erweitert.
+Bei Erfolg wird der nächste Datenabschnitt aus der Datei in den Ausgabepuffer eingelesen. Die tatsächliche Anzahl der abgerufenen Bytes wird ebenfalls zurückgegeben. Der Dateioffset, bei dem der nächste Lesefehler auftritt, wird um diesen Betrag erweitert.
 
-Bei einem Fehler ist der Status des Ausgabepuffers nicht definiert. Der Fehler führt dazu, dass der gesamte Sicherungsprozess für die aktuelle Instanz abgebrochen wird. In Windows XP und neueren Windows-Versionen wird die Sicherung nicht abgebrochen, wenn beim Lesen einer Datenbankdatei ein Fehler aufgetreten ist. Die Sicherung der Datenbankdatei wird jedoch weiterhin abgebrochen, und das entsprechende Handle wird automatisch geschlossen.
+Bei einem Fehler ist der Status des Ausgabepuffers nicht definiert. Der Fehler führt zum Abbruch des gesamten Sicherungsprozesses für die aktuelle Instanz. In Windows XP und höher Windows Versionen wird die Sicherung nicht abgebrochen, wenn beim Lesen einer Datenbankdatei ein Fehler aufgetreten ist. Die Sicherung dieser Datenbankdatei wird jedoch weiterhin abgebrochen, und das entsprechende Handle wird automatisch geschlossen.
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Jeder Aufrufe der **jetreadfileinstance** -Funktion, die mithilfe eines Handles vorgenommen wurde, das bereits alle Daten in der zugrunde liegenden Datei zurückgegeben hat (z. b., wenn ein vorheriger-Rückruf weniger Bytes zurückgegeben hat als die Größe des Ausgabepuffers), wird immer erfolgreich ausgeführt, gibt aber NULL Bytes an Daten zurück.
+Jeder Aufruf der **JetReadFileInstance-Funktion** mit einem Handle, das bereits alle Daten in der zugrunde liegenden Datei zurückgegeben hat (z. B. wenn ein vorheriger Aufruf weniger Bytes als die Größe des Ausgabepuffers zurückgegeben hat), ist immer erfolgreich, gibt jedoch 0 Bytes an Daten zurück.
 
-Sie sollten einen großen Ausgabepuffer verwenden, um die Sicherungsleistung zu maximieren. Möglicherweise müssen Sie experimentieren, um den optimalen Kompromiss zwischen Ressourcenverbrauch und Durchsatz für eine bestimmte Situation zu ermitteln. In jedem Fall sollte der Ausgabepuffer nicht kleiner als 64 KB sein. Der Zeiger, den Sie an **jetreadfilinput Stance** übergeben, muss an einer Seitenbegrenzung für den Arbeitsspeicher (4 KB oder 8 KB) ausgerichtet sein. Dies können Sie erreichen, indem Sie die **virtualzuweisung** -Funktion aufrufen.
+Sie sollten einen großen Ausgabepuffer verwenden, um die Sicherungsleistung zu maximieren. Möglicherweise müssen Sie experimentieren, um den optimalen Kompromiss zwischen Ressourcenverbrauch und Durchsatz für eine bestimmte Situation zu finden. In jedem Fall sollte der Ausgabepuffer nicht kleiner als 64 KB sein. Der Zeiger, den Sie an **JetReadFileInstance** übergeben, muss an einer Speicherseitengrenze ausgerichtet sein (4 KB oder 8 KB). Rufen Sie hierzu die **VirtualAlloc-Funktion** auf.
 
-Mehrere gleichzeitige Aufrufe von **jetreadfileinstance** , die mithilfe desselben Datei Handles durchgeführt werden, werden nicht unterstützt. Dies bedeutet, dass es nicht möglich ist, mehrere Puffer in die Warteschlange zu stellen, um gleichzeitige Lesevorgänge für dieselbe Datei durchzuführen Verwenden Sie stattdessen einen einzelnen großen Puffer.
+Mehrere gleichzeitige Aufrufe von **JetReadFileInstance** mit demselben Dateihandle werden nicht unterstützt. Dies bedeutet, dass es nicht möglich ist, mehrere Puffer für gleichzeitiges Lesen für dieselbe Datei in die Warteschlange zu stellen, um einen hohen sequenziellen Durchsatz zu erzielen. Verwenden Sie stattdessen einen einzelnen großen Puffer.
 
-Wenn Sie eine bestimmte Instanz so konfiguriert haben, dass die Datenbankseiten Bereinigung aktiviert ist (siehe den [JET_paramCircularLog](./transaction-log-parameters.md) Parameter in [System Parametern](./extensible-storage-engine-system-parameters.md)), werden gelöschte Daten aus der Datenbank als Nebeneffekt eines Aufrufes **jetreadfileinstance** für die Datenbankdatei entfernt.
+Wenn Sie eine bestimmte Instanz so konfiguriert haben, dass die Bereinigung von Datenbankseiten aktiviert ist (siehe [JET_paramCircularLog](./transaction-log-parameters.md) Parameter unter [Systemparameter),](./extensible-storage-engine-system-parameters.md)werden gelöschte Daten als Nebeneffekt eines Aufrufs von **JetReadFileInstance** für die Datenbankdatei aus der Datenbank entfernt.
 
-Es ist sehr wichtig zu verstehen, wie Sicherungen und Daten Beschädigungen interagieren. Wenn die Datenbank-Engine während einer Sicherung Daten Beschädigungen erkennt, schlägt die Sicherung der betroffenen Datenbank oder der gesamten Instanz fehl. Dies ist eine bewusste Entwurfs Entscheidung, die vor Datenverlusten geschützt werden soll. Wenn die Datenbank-Engine die erfolgreiche Ausführung einer Sicherung bei einer Daten Beschädigung gestattet hat, kann es vorkommen, dass eine ältere, nicht beschädigte Sicherung als Ergebnis verworfen wird. Dies wäre leider nicht möglich, da es dann möglich wäre, die Daten Beschädigung auf der Live Instanz zu beheben, indem diese Sicherung wieder hergestellt und alle Transaktionsprotokoll Dateien für diese Datenbank wiedergegeben werden. Bei diesem Szenario mit Null Datenverlust wird davon ausgegangen, dass die zirkuläre Protokollierung nicht aktiviert ist (siehe [JET_paramCircularLog](./transaction-log-parameters.md) in [System Parametern](./extensible-storage-engine-system-parameters.md)).
+Es ist sehr wichtig zu verstehen, wie Sicherungen und Datenbeschädigungen interagieren. Wenn die Datenbank-Engine während einer Sicherung eine Datenbeschädigung erkennt, schlägt die Sicherung der betroffenen Datenbank oder der gesamten Instanz fehl. Dies ist eine bewusste Entwurfsentscheidung zum Schutz vor Datenverlusten. Wenn die Datenbank-Engine zulässt, dass eine Sicherung erfolgreich ausgeführt werden kann, wenn eine Datenbeschädigung vorliegt, kann eine ältere, nicht korrigierte Sicherung als Ergebnis verworfen werden. Dies wäre leider der Fall, da es dann möglich wäre, die Datenbeschädigung auf der Liveinstanz zu beheben, indem diese Sicherung wiederhergestellt und alle Transaktionsprotokolldateien für diese Datenbank wiedergegeben werden. In diesem Szenario ohne Datenverlust wird davon ausgegangen, dass die zirkuläre Protokollierung nicht aktiviert ist (siehe [JET_paramCircularLog](./transaction-log-parameters.md) unter [Systemparameter](./extensible-storage-engine-system-parameters.md)).
 
-Es ist auch wichtig zu verstehen, dass die Fälle von Daten Beschädigungen bei der Streamingsicherung zuerst erkannt werden. Dies liegt daran, dass die Streamingsicherung der einzige Prozess ist, der routinemäßig jede einzelne Seite der Datenbankdatei scannt. Außerdem ist es wahrscheinlich, dass die Streamingsicherung der erste Prozess zum Erkennen der frühen Anzeichen eines Hardwarefehlers ist, wie es bei zeitweiligen Daten Beschädigungen der Fall ist, weil die von der Sicherung abgerufenen Datenmenge und die Geschwindigkeit, mit der die Daten abgerufen werden, auftreten.
+Es ist auch wichtig zu verstehen, dass Fälle von Datenbeschädigung in der Regel zuerst während der Streamingsicherung erkannt werden. Dies liegt daran, dass die Streamingsicherung der einzige Prozess ist, der routinemäßig jede einzelne Seite der Datenbankdatei überprüft. Es ist auch wahrscheinlich, dass die Streamingsicherung der erste Prozess ist, um die frühen Anzeichen von Hardwarefehlern zu erkennen, die sich durch zeitweilige Datenbeschädigungsfehler manifestieren, da sowohl die Menge der durch die Sicherung abgerufenen Daten als auch die Geschwindigkeit, mit der diese Daten abgerufen werden, auftreten.
 
-Daten Beschädigungen werden von der Datenbank-Engine durch die Verwendung von Block Prüfsummen erkannt. Diese Prüfsummen werden direkt vor dem Schreiben einer Datenbankseite festgelegt und auf dem Lesevorgang einer Datenbankseite überprüft. Mit diesem Schema kann die Datenbank-Engine ermitteln, dass die Daten zu einem bestimmten Zeitpunkt beschädigt wurden, aber die Datenbank-Engine kann die Quelle dieser Beschädigung nicht ermitteln. In der Vergangenheit stammen Instanzen solcher Daten Beschädigungen aus anderen Quellen als der Datenbank-Engine selbst.
+Datenbeschädigungen werden von der Datenbank-Engine mithilfe von Blockprüfsummen erkannt. Diese Prüfsummen werden unmittelbar vor dem Schreiben einer Datenbankseite festgelegt und auf einer gelesenen Datenbankseite überprüft. Dieses Schema ermöglicht es der Datenbank-Engine, zu bestimmen, dass Daten zu einem bestimmten Zeitpunkt beschädigt wurden, ermöglicht es der Datenbank-Engine jedoch nicht, die Quelle dieser Beschädigung zu ermitteln. In der Vergangenheit stammen Instanzen solcher Datenbeschädigungen aus anderen Quellen als der Datenbank-Engine selbst.
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -183,11 +183,11 @@ Daten Beschädigungen werden von der Datenbank-Engine durch die Verwendung von B
 </tr>
 <tr class="odd">
 <td><p>Header</p></td>
-<td><p>Wird in "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 <tr class="even">
 <td><p>Bibliothek</p></td>
-<td><p>Verwendet ESENT. lib.</p></td>
+<td><p>Verwendet ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
 <td><p>DLL</p></td>
@@ -202,6 +202,6 @@ Daten Beschädigungen werden von der Datenbank-Engine durch die Verwendung von B
 [JET_ERR](./jet-err.md)  
 [JET_HANDLE](./jet-handle.md)  
 [JET_INSTANCE](./jet-instance.md)  
-[Jetopeinfileinstance](./jetopenfileinstance-function.md)  
-[Jetstopservice](./jetstopservice-function.md)  
-[System Parameter](./extensible-storage-engine-system-parameters.md)
+[JetOpenFileInstance](./jetopenfileinstance-function.md)  
+[JetStopService](./jetstopservice-function.md)  
+[Systemparameter](./extensible-storage-engine-system-parameters.md)

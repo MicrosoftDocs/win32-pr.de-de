@@ -1,10 +1,10 @@
 ---
 title: DownloadItem.cancel-Methode
-description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die cancel-Methode bricht den Download ab.
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die Cancel-Methode bricht den Download ab.
 ms.assetid: b3715fde-6a83-45fa-92ea-1cbffbee7274
 keywords:
-- cancel-Windows Media Player
-- cancel-Windows Media Player , DownloadItem-Klasse
+- cancel-Methode Windows Media Player
+- cancel-Methode Windows Media Player , DownloadItem-Klasse
 - DownloadItem-Klasse Windows Media Player , cancel-Methode
 topic_type:
 - apiref
@@ -26,11 +26,11 @@ ms.locfileid: "117749731"
 # <a name="downloaditemcancel-method"></a>DownloadItem.cancel-Methode
 
 > [!Note]  
-> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
+> In diesem Abschnitt werden funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **cancel-Methode** bricht den Download ab.
+Die **Cancel-Methode** bricht den Download ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,7 +59,7 @@ Abgebrochene Elemente werden nicht aus der Downloadsammlung entfernt. Abgebroche
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player serie 9 oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 

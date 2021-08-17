@@ -1,9 +1,9 @@
 ---
-title: PSM_GETTABCONTROL Meldung (prsht. h)
-description: Ruft das Handle für das Registerkarten-Steuerelement eines Eigenschaften Blatts ab. Sie können diese Nachricht explizit oder mithilfe des propsheet \_ gettabcontrol-Makros senden.
+title: PSM_GETTABCONTROL-Nachricht (Prsht.h)
+description: Ruft das Handle für das Registerkartensteuerelement eines Eigenschaftenblatts ab. Sie können diese Nachricht explizit oder mithilfe des \_ PropSheet-Makros GetTabControl senden.
 ms.assetid: 5ddea541-c8e0-4357-b08e-3b5e64be377f
 keywords:
-- Windows-Steuerelemente für PSM_GETTABCONTROL Meldung
+- PSM_GETTABCONTROL Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab296159cac4dbfb4ef894d90d31bcd74d6ca2e1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5b0e26c9489dc839383552b407a16313c94e1fc3b070d93f1d59ddaf0310134d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118169660"
 ---
-# <a name="psm_gettabcontrol-message"></a>PSM \_ gettabcontrol-Meldung
+# <a name="psm_gettabcontrol-message"></a>PSM \_ GETTABCONTROL-Nachricht
 
-Ruft das Handle für das Registerkarten-Steuerelement eines Eigenschaften Blatts ab. Sie können diese Nachricht explizit oder mithilfe des [**propsheet \_ gettabcontrol**](/windows/desktop/api/Prsht/nf-prsht-propsheet_gettabcontrol) -Makros senden.
+Ruft das Handle für das Registerkartensteuerelement eines Eigenschaftenblatts ab. Sie können diese Nachricht explizit oder mithilfe des [**\_ PropSheet-Makros GetTabControl**](/windows/desktop/api/Prsht/nf-prsht-propsheet_gettabcontrol) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,12 +45,12 @@ Muss Null sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für das Registerkarten-Steuerelement zurück.
+Gibt das Handle an das Registerkartensteuerelement zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Diese Meldung wird nicht unterstützt, wenn der Aero Wizard Style ([**PSH \_ aerowizard**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)) verwendet wird.
+> Diese Meldung wird nicht unterstützt, wenn Sie den Stil des Assistenten Für Dies verwenden [**\_ (PSH-DIALOGFELDWIZARD**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)).
 
  
 
@@ -60,9 +60,9 @@ Gibt das Handle für das Registerkarten-Steuerelement zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

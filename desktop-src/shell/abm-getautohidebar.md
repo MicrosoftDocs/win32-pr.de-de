@@ -1,6 +1,6 @@
 ---
-description: Ruft das Handle für die automatisch Ausblend Ende appbar ab, die einem Bildschirmrand zugeordnet ist. Wenn das System über mehrere Monitore verfügt, wird der Monitor verwendet, der die primäre Taskleiste enthält.
-title: ABM_GETAUTOHIDEBAR Meldung (shellapi. h)
+description: Ruft das Handle für die Autohide-Appbar ab, die einem Bildschirmrand zugeordnet ist. Wenn das System über mehrere Monitore verfügt, wird der Monitor verwendet, der die primäre Taskleiste enthält.
+title: ABM_GETAUTOHIDEBAR (Shellapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 545dd1d9-8cbb-4ff3-b871-4908ecac56db
@@ -13,19 +13,19 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 979825a9dbc28a89e3579419542877faacbace45
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ce38caf8cc1ad39e682aa8650e08e4860a3406e33669008d6ceee65e0416149
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118051152"
 ---
-# <a name="abm_getautohidebar-message"></a>ABM \_ getautohidebar-Meldung
+# <a name="abm_getautohidebar-message"></a>ABM \_ GETAUTOHIDEBAR-Nachricht
 
-Ruft das Handle für die automatisch Ausblend Ende appbar ab, die einem Bildschirmrand zugeordnet ist. Wenn das System über mehrere Monitore verfügt, wird der Monitor verwendet, der die primäre Taskleiste enthält.
+Ruft das Handle für die Autohide-Appbar ab, die einem Bildschirmrand zugeordnet ist. Wenn das System über mehrere Monitore verfügt, wird der Monitor verwendet, der die primäre Taskleiste enthält.
 
 > [!Note]  
-> Verwenden Sie zum Abfragen eines automatischen Ausblenden der appbar eines bestimmten Monitors [**ABM \_ getautohidebarex**](abm-getautohidebarex.md).
+> Verwenden Sie [**ABM \_ GETAUTOHIDEBAREX,**](abm-getautohidebarex.md)um eine Appbar automatisch auf einem bestimmten Monitor zu abfragen.
 
  
 
@@ -43,23 +43,23 @@ hwndAutoHide = (HWND) SHAppBarMessage(ABM_GETAUTOHIDEBAR, pabd);
 *pabd* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**appbardata**](/windows/desktop/api/Shellapi/ns-shellapi-appbardata) -Struktur, die den Bildschirmrand angibt. Sie müssen die Member **CBSIZE** und **uedge** angeben, wenn diese Nachricht gesendet wird. alle anderen Member werden ignoriert.
+Ein Zeiger auf eine [**APPBARDATA-Struktur,**](/windows/desktop/api/Shellapi/ns-shellapi-appbardata) die den Bildschirmrand angibt. Sie müssen die **CbSize- und** **uEdge-Member** angeben, wenn Sie diese Nachricht senden. alle anderen Member werden ignoriert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für die automatisch Ausblend-appbar zurück. Der Rückgabewert ist **null** , wenn ein Fehler auftritt oder wenn dem angegebenen Edge keine Automatisches Ausblenden-appbar zugeordnet ist.
+Gibt das Handle an die Automatischhide-Appbar zurück. Der Rückgabewert ist **NULL,** wenn ein Fehler auftritt oder dem angegebenen Edge keine App-Leiste für die automatischeHide zugeordnet ist.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Shellapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shellapi.h</dt> </dl> |
 
 
 
@@ -67,13 +67,13 @@ Gibt das Handle für die automatisch Ausblend-appbar zurück. Der Rückgabewert 
 
 <dl> <dt>
 
-[**ABM-Bild-auf \_**](abm-setautohidebar.md)
+[**ABM \_ SETAUTOHIDEBAR**](abm-setautohidebar.md)
 </dt> <dt>
 
-[**ABM \_ getautohidebarex**](abm-getautohidebarex.md)
+[**ABM \_ GETAUTOHIDEBAREX**](abm-getautohidebarex.md)
 </dt> <dt>
 
-[**ABM \_ .**](abm-setautohidebarex.md)
+[**ABM \_ SETAUTOHIDEBAREX**](abm-setautohidebarex.md)
 </dt> </dl>
 
  

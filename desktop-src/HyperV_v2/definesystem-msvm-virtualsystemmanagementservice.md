@@ -141,7 +141,7 @@ Der Zugriff auf die [**Msvm \_ VirtualSystemManagementService-Klasse**](msvm-vir
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

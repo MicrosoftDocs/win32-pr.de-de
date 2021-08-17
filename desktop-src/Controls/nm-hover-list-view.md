@@ -1,9 +1,9 @@
 ---
-title: NM_HOVER (Listenansicht) Benachrichtigungscode (Commctrl.h)
-description: Wird von einem Listenansicht-Steuerelement gesendet, wenn der Mauszeiger auf ein Element zeigt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
+title: NM_HOVER -Benachrichtigungscode (Listenansicht) (Commctrl.h)
+description: Wird von einem Listenansichtssteuerelement gesendet, wenn der Mauszeiger auf ein Element zeigt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 0d4a2eee-9c98-43d1-bc05-226d91c0480a
 keywords:
-- NM_HOVER -Benachrichtigungscode (Listenansicht) Windows Controls
+- NM_HOVER -Benachrichtigungscode (Listenansicht) Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -21,9 +21,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118411134"
 ---
-# <a name="nm_hover-list-view-notification-code"></a>NM \_ HOVER-Benachrichtigungscode (Listenansicht)
+# <a name="nm_hover-list-view-notification-code"></a>\_NM-HOVER-Benachrichtigungscode (Listenansicht)
 
-Wird von einem Listenansicht-Steuerelement gesendet, wenn der Mauszeiger auf ein Element zeigt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
+Wird von einem Listenansichtssteuerelement gesendet, wenn der Mauszeiger auf ein Element zeigt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -47,7 +47,7 @@ Zeiger auf eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-
 
 ## <a name="return-value"></a>Rückgabewert
 
-Geben Sie 0 (null) zurück, damit die Listenansicht den Hover normal verarbeiten kann, oder ungleich 0 (null), um zu verhindern, dass der Hover verarbeitet wird.
+Gibt 0 (null) zurück, damit die Listenansicht den Mauszeiger normal verarbeiten kann, oder ungleich 0 (null), um zu verhindern, dass der Mauszeiger verarbeitet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,7 +55,7 @@ Geben Sie 0 (null) zurück, damit die Listenansicht den Hover normal verarbeiten
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

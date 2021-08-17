@@ -1,19 +1,19 @@
 ---
-description: 'Remotable-Version der imftopologynode:: getinputpreftype-Methode.'
+description: Remotable-Version der METHODE VONTOPTOPOLOGYNode::GetInputPrefType.
 ms.assetid: b02cf739-97a9-4bb0-abb1-0da491857c50
-title: Remotegetinputpreftype (mfobjects. h)
+title: RemoteGetInputPrefType (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6461e804d6066b467378742ff02c8e708f5f6714
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8cc11bbb28f15bad78955b59e556873d0500c92e45c126a9e710961ab83cf7e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117878311"
 ---
-# <a name="remotegetinputpreftype"></a>Remotegetinputpreftype
+# <a name="remotegetinputpreftype"></a>RemoteGetInputPrefType
 
-Remotable-Version der [**imftopologynode:: getinputpreftype**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynode-getinputpreftype) -Methode.
+Remotable-Version der [**METHODE VONTOPTOPOLOGYNode::GetInputPrefType.**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynode-getinputpreftype)
 
 ``` syntax
 [call_as(GetInputPrefType)] 
@@ -24,9 +24,9 @@ HRESULT RemoteGetInputPrefType(
 );
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen können diese Methode nicht direkt aufzurufen, und-Objekte implementieren diese Methode nicht. Die-Methode wird nicht in der vtable für die-Schnittstelle angezeigt. Wenn [**getinputpreftype**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynode-getinputpreftype) über Prozess Grenzen hinweg aufgerufen wird, übersetzt der Media Foundation Proxy/Stub-DLL den Aufruf in einen Aufruf der Remote Methode und übersetzt ihn anschließend wieder.
+Anwendungen können diese Methode nicht direkt aufrufen, und Objekte implementieren diese Methode nicht. Die -Methode wird in der vtable für die -Schnittstelle nicht angezeigt. Wenn [**GetInputPrefType**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynode-getinputpreftype) über Prozessgrenzen hinweg aufgerufen wird, übersetzt die Media Foundation Proxy-/Stub-DLL den Aufruf in einen Aufruf der Remotemethode und übersetzt ihn dann zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -34,18 +34,18 @@ Anwendungen können diese Methode nicht direkt aufzurufen, und-Objekte implement
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Mfuuid. lib</dt> </dl>                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Mfuuid.lib</dt> </dl>                    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imftopologynode**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode)
+[**TOPOLOGYNode**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode)
 </dt> </dl>
 
  

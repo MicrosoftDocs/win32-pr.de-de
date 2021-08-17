@@ -1,9 +1,9 @@
 ---
-title: Wochen (monthlydayosweekscheduletype)-Element
-description: Gibt die Wochen des Monats an, in denen der Task ausgeführt wird.
+title: Weeks-Element (monthlyDayOfWeekScheduleType)
+description: Gibt die Wochen des Monats an, in denen die Aufgabe ausgeführt wird.
 ms.assetid: c126d1e2-6e60-4067-9fc2-86c9522cce5d
 keywords:
-- Wochen Element Taskplaner
+- Weeks-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2e032b936353d2c89a84b5da684f681ea3c2b6d3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 81219236012146dac54965af471412369d5c5bb34319897d4d821bb10a730aee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743312"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117757977"
 ---
-# <a name="weeks-monthlydayofweekscheduletype-element"></a>Wochen (monthlydayosweekscheduletype)-Element
+# <a name="weeks-monthlydayofweekscheduletype-element"></a>Weeks-Element (monthlyDayOfWeekScheduleType)
 
-Gibt die Wochen des Monats an, in denen der Task ausgeführt wird.
+Gibt die Wochen des Monats an, in denen die Aufgabe ausgeführt wird.
 
 ``` syntax
 <xs:element name="Weeks"
@@ -30,15 +30,15 @@ Gibt die Wochen des Monats an, in denen der Task ausgeführt wird.
  />
 ```
 
-Das **weeks** -Element wird durch den komplexen [**monthlydayosweekscheduletype**](taskschedulerschema-monthlydayofweekscheduletype-complextype.md) -Typ definiert.
+Das **Weeks-Element** wird durch den komplexen [**MonthlyDayOfWeekScheduleType-Typ**](taskschedulerschema-monthlydayofweekscheduletype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                                      | Abgeleitet von                                                                                         | BESCHREIBUNG                                                                         |
+| Element                                                                                                      | Abgeleitet von                                                                                         | Beschreibung                                                                         |
 |--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| [**Schedulebymonthdayof-Woche**](taskschedulerschema-schedulebymonthdayofweek-calendartriggertype-element.md) | [**monthlydayosweekscheduletype**](taskschedulerschema-monthlydayofweekscheduletype-complextype.md) | Gibt einen-Vorgang an, durch den ein Auftrag an einem monatlichen Wochentag gestartet wird.<br/> |
+| [**ScheduleByMonthDayOfWeek**](taskschedulerschema-schedulebymonthdayofweek-calendartriggertype-element.md) | [**monthlyDayOfWeekScheduleType**](taskschedulerschema-monthlydayofweekscheduletype-complextype.md) | Gibt einen Trigger an, der einen Auftrag nach einem monatlichen Wochentag startet.<br/> |
 
 
 
@@ -46,23 +46,23 @@ Das **weeks** -Element wird durch den komplexen [**monthlydayosweekscheduletype*
 
 
 
-| Element                                                    | type                                                        | BESCHREIBUNG                                        |
+| Element                                                    | type                                                        | Beschreibung                                        |
 |------------------------------------------------------------|-------------------------------------------------------------|----------------------------------------------------|
-| [**Mitte**](taskschedulerschema-week-weekstype-element.md) | [**weektype**](taskschedulerschema-weektype-simpletype.md) | Gibt eine bestimmte Woche des Monats an.<br/> |
+| [**Woche**](taskschedulerschema-week-weekstype-element.md) | [**weekType**](taskschedulerschema-weektype-simpletype.md) | Gibt eine bestimmte Woche des Monats an.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Entwicklung von Skripts werden die Wochen des Monats mithilfe der [**monthlydowauslöst. weeksofmonth**](monthlydowtrigger-weeksofmonth.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung werden die Wochen des Monats mithilfe der [**MonthlyDOWTrigger.WeeksOfMonth-Eigenschaft**](monthlydowtrigger-weeksofmonth.md) angegeben.
 
-Bei der C++-Entwicklung werden die Wochen des Monats mithilfe der [**imonthlydowauslöst:: weeksofmonth**](/windows/desktop/api/taskschd/nf-taskschd-imonthlydowtrigger-get_weeksofmonth) -Eigenschaft angegeben.
+Für die C++-Entwicklung werden die Wochen des Monats mithilfe der [**IMonthlyDOWTrigger::WeeksOfMonth-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-imonthlydowtrigger-get_weeksofmonth) angegeben.
 
-Wenn Sie die Wochen des Monats angeben, verwenden Sie 1-4, um die ersten vier Wochen des Monats anzugeben, oder verwenden Sie die Zeichenfolge "Last", um die letzte Woche anzugeben, unabhängig von der Woche, an der Sie sich befindet.
+Wenn Sie die Wochen des Monats angeben, verwenden Sie 1-4, um die ersten vier Wochen des Monats anzugeben, oder verwenden Sie die Zeichenfolge "Last", um die letzte Woche anzugeben, unabhängig davon, in welcher Woche sie sich befindet.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden XML-Code wird ein monatlicher Wochentag definiert, der die Aufgabe am Montag der ersten Woche für jeden Monat des Jahres startet.
+Der folgende XML-Code definiert einen monatlichen Wochentagskalender, der die Aufgabe für jeden Monat des Jahres am Montag der ersten Woche startet.
 
 
 ```XML
@@ -98,16 +98,16 @@ Im folgenden XML-Code wird ein monatlicher Wochentag definiert, der die Aufgabe 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

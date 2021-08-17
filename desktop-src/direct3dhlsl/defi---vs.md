@@ -1,6 +1,6 @@
 ---
 title: defi – vs
-description: Definiert einen ganzzahligen konstanten Wert, der immer dann geladen werden sollte, wenn ein Shader auf ein Gerät festgelegt wird.
+description: Definiert einen ganzzahligen konstanten Wert, der jedes Mal geladen werden soll, wenn ein Shader auf ein Gerät festgelegt wird.
 ms.assetid: d6067a7d-58fb-4553-a42f-192c29bf78b7
 ms.topic: reference
 ms.date: 05/31/2018
@@ -18,7 +18,7 @@ ms.locfileid: "117726680"
 ---
 # <a name="defi---vs"></a>defi – vs
 
-Definiert einen ganzzahligen konstanten Wert, der immer dann geladen werden sollte, wenn ein Shader auf ein Gerät festgelegt wird.
+Definiert einen ganzzahligen konstanten Wert, der jedes Mal geladen werden soll, wenn ein Shader auf ein Gerät festgelegt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,19 +46,19 @@ Definiert einen ganzzahligen konstanten Wert, der immer dann geladen werden soll
 
  
 
-Die Defi-Anweisung definiert eine Ganzzahl-Shaderkonstance, deren Wert immer dann geladen wird, wenn ein Shader auf ein Gerät festgelegt wird. Diese werden als direkt konstante Konstanten bezeichnet. Direktkonstanten haben Vorrang vor Konstanten, die von der API-Methode SetVertexShaderConstantI festgelegt werden.
+Die defi-Anweisung definiert eine ganzzahlige Shaderkonstante, deren Wert jedes Mal geladen wird, wenn ein Shader auf ein Gerät festgelegt wird. Diese werden als sofortige Konstanten bezeichnet. Direkte Konstanten haben Vorrang vor Konstanten, die von der API-Methode SetVertexShaderConstantI festgelegt werden.
 
-Es gibt zwei Möglichkeiten, eine ganzzahlige Konstante in einem Shader zu setzen.
+Es gibt zwei Möglichkeiten, eine ganzzahlige Konstante in einem Shader festzulegen.
 
-1.  Verwenden Sie defi, um den ganzzahligen konstanten Vektor direkt in einem Shader zu definieren.
-2.  Verwenden Sie die API-Methoden, um eine Konstante zu setzen.
-    -   Verwenden [**Sie SetVertexShaderConstantI,**](/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setvertexshaderconstanti) um eine ganzzahlige Konstante zu setzen.
+1.  Verwenden Sie "defi", um den Ganzzahlkonstantenvektor direkt in einem Shader zu definieren.
+2.  Verwenden Sie die API-Methoden, um eine Konstante festzulegen.
+    -   Verwenden Sie [**SetVertexShaderConstantI,**](/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setvertexshaderconstanti) um eine ganzzahlige Konstante festzulegen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> <dt>
 
 [def – vs](def---vs.md)

@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118403752"
 ---
-# <a name="avencmpvgopsinseq-property"></a>AVEncMPVGOPSInSeq -Eigenschaft
+# <a name="avencmpvgopsinseq-property"></a>AVEncMPVGOPSInSeq-Eigenschaft
 
 Gibt die Anzahl der Gruppen von Bildern (GOPs) zwischen Sequenzheadern an. Diese Eigenschaft gilt für MPEG-Videoencoder.
 

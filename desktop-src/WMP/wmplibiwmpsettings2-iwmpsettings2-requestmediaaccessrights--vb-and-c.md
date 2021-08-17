@@ -3,7 +3,7 @@ title: IWMPSettings2 requestMediaAccessRights-Methode
 description: Die requestMediaAccessRights-Methode fordert eine angegebene Zugriffsebene auf die Bibliothek an. | IWMPSettings2 requestMediaAccessRights-Methode
 ms.assetid: ea33852c-d1e0-45cf-8954-2a1e2fe51910
 keywords:
-- requestMediaAccessRights-Windows Media Player
+- requestMediaAccessRights-Methode Windows Media Player
 - requestMediaAccessRights-Methode Windows Media Player , IWMPSettings2-Schnittstelle
 - IWMPSettings2-Schnittstelle Windows Media Player , requestMediaAccessRights-Methode
 topic_type:
@@ -78,7 +78,7 @@ Ein **system.boolesscher Wert,** der angibt, ob die angeforderten Zugriffsrechte
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Webseite muss zunächst die Berechtigung des Benutzers anfordern, Informationen aus der Bibliothek zu lesen oder Daten in die Bibliothek zu schreiben. Wenn Sie diese Methode aufrufen, wird der Benutzer mit einem Dialogfeld aufgefordert, das die angegebene Berechtigungsebene an fordert. Dies bedeutet, dass auf bestimmte Methoden, Eigenschaften und Ereignisse im Code nicht zugegriffen werden kann, wenn die entsprechenden Zugriffsrechte nicht erteilt wurden. Die aktuelle Zugriffsrechteebene kann mithilfe von **IWMPSettings2.mediaAccessRights abgerufen werden.**
+Eine Webseite muss zunächst die Berechtigung des Benutzers anfordern, Informationen aus der Bibliothek zu lesen oder Daten in diese zu schreiben. Beim Aufrufen dieser Methode wird der Benutzer mit einem Dialogfeld aufgefordert, in dem die angegebene Berechtigungsebene abgesendet wird. Dies bedeutet, dass auf bestimmte Methoden, Eigenschaften und Ereignisse im Code nicht zugegriffen werden kann, wenn die entsprechenden Zugriffsrechte nicht erteilt wurden. Die aktuelle Zugriffsrechteebene kann mithilfe von **IWMPSettings2.mediaAccessRights abgerufen werden.**
 
 Anwendungen, die auf dem Computer des Benutzers ausgeführt werden, müssen diese Methode nicht verwenden.
 
@@ -94,7 +94,7 @@ Anwendungen, die auf dem Computer des Benutzers ausgeführt werden, müssen dies
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

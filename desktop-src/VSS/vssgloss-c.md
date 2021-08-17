@@ -14,21 +14,21 @@ ms.locfileid: "117751446"
 ---
 # <a name="c-volume-shadow-copy-service"></a>C (Volumeschattenkopie-Dienst)
 
-[A](vssgloss-a.md) [B](vssgloss-b.md) C [D](vssgloss-d.md) [E](vssgloss-e.md) [F](vssgloss-f.md) [G](vssgloss-g.md) [H](vssgloss-h.md) [I](vssgloss-i.md) J K [L](vssgloss-l.md) M [N](vssgloss-n.md) [O](vssgloss-o.md) [P](vssgloss-p.md) Q [R](vssgloss-r.md) [S](vssgloss-s.md) [T](vssgloss-t.md) U [V](vssgloss-v.md) [W](vssgloss-w.md) X Y Z
+[A](vssgloss-a.md) [B](vssgloss-b.md) C [D](vssgloss-d.md) [E](vssgloss-e.md) [F](vssgloss-f.md) [G](vssgloss-g.md) [H](vssgloss-h.md) [I](vssgloss-i.md) J K [L](vssgloss-l.md) M [N](vssgloss-n.md) [O](vssgloss-o.md) [P](vssgloss-p.md) Q [R](vssgloss-r.md) [S](vssgloss-s.md) T [U](vssgloss-t.md) [V](vssgloss-v.md) [W](vssgloss-w.md) X Y Z
 
 <dl> <dt>
 
 <span id="base.vssgloss_certification_authority"></span><span id="BASE.VSSGLOSS_CERTIFICATION_AUTHORITY"></span>**Zertifizierungsstelle**
 </dt> <dd>
 
-Eine Entität, die mit der Ausstellung von Zertifikaten beauftragt wurde, die bestätigt, dass die Empfängerperson, der Computer oder die Organisation, die das Zertifikat anfordert, die Bedingungen einer festgelegten Richtlinie erfüllt.
+Eine Entität, die mit der Ausstellung von Zertifikaten beauftragt ist, um zu besenden, dass die Person, der Computer oder die Organisation des Empfängers, die das Zertifikat an anfordern, die Bedingungen einer festgelegten Richtlinie erfüllt.
 
 </dd> <dt>
 
-<span id="base.vssgloss_client_accessible_shadow_copy"></span><span id="BASE.VSSGLOSS_CLIENT_ACCESSIBLE_SHADOW_COPY"></span>**Auf den Client zugängliche Schattenkopie**
+<span id="base.vssgloss_client_accessible_shadow_copy"></span><span id="BASE.VSSGLOSS_CLIENT_ACCESSIBLE_SHADOW_COPY"></span>**Über den Client zugängliche Schattenkopie**
 </dt> <dd>
 
-Eine schattenkopische Kopie, die vom Systemanbieter erstellt wurde, um Schattenkopien für freigegebene Ordner und andere Rollbackmechanismen zu unterstützen, mit denen Clients alte Versionen von Dateien anzeigen und Fehler rückgängig machen können, ohne dass eine vollständige Wiederherstellung erforderlich ist. Eine auf den Client zugängliche Schattenkopie wird mithilfe des **VSS \_ CTX \_ CLIENT \_ ACCESSIBLE-Werts** der [**\_ VSS \_ SNAPSHOT \_ CONTEXT-Enumeration**](/windows/desktop/api/Vss/ne-vss-vss_snapshot_context) erstellt. Darüber hinaus wird der \_ VSS VOLSNAP \_ ATTR \_ CLIENT \_ ACCESSIBLE-Wert der [**\_ VSS VOLUME SNAPSHOT ATTRIBUTES-Enumeration automatisch für vom Client zugängliche \_ Schattenkopien \_ \_**](/windows/desktop/api/Vss/ne-vss-vss_volume_snapshot_attributes) festgelegt. Siehe auch [*Schattenkopien für freigegebene Ordner*](vssgloss-s.md).
+Eine vom Systemanbieter erstellte Schattenkopie zur Unterstützung von Schattenkopien für freigegebene Ordner und anderen Rollbackmechanismen, mit denen Clients alte Versionen von Dateien sehen und Fehler rückgängig machen können, ohne dass eine vollständige Wiederherstellung erforderlich ist. Eine clientzugriffsbasierte Schattenkopie wird mithilfe des **VSS \_ CTX \_ CLIENT \_ ACCESSIBLE-Werts** der [**\_ VSS \_ SNAPSHOT \_ CONTEXT-Enumeration**](/windows/desktop/api/Vss/ne-vss-vss_snapshot_context) erstellt. Darüber hinaus wird der VSS \_ VOLSNAP ATTR CLIENT ACCESSIBLE-Wert der \_ \_ \_ [**\_ VSS \_ VOLUME SNAPSHOT \_ \_ ATTRIBUTES-Enumeration**](/windows/desktop/api/Vss/ne-vss-vss_volume_snapshot_attributes) automatisch für Clientzugriffsschattenkopien festgelegt. Siehe auch [*Schattenkopien für freigegebene Ordner*](vssgloss-s.md).
 
 </dd> <dt>
 
@@ -42,7 +42,7 @@ Eine Gruppe von Dateien, die von einem Writer definiert wird und während Sicher
 <span id="base.vssgloss_component_dependency"></span><span id="BASE.VSSGLOSS_COMPONENT_DEPENDENCY"></span>**Komponentenabhängigkeit**
 </dt> <dd>
 
-Eine Situation, in der eine Von einem Writer verwaltete Komponente (und der von ihr festgelegte Komponentensatz) nicht unabhängig von komponenten, die von anderen Writern verwaltet werden, gesichert oder wiederhergestellt werden kann. Eine Abhängigkeit gibt keine Reihenfolge der Präferenz zwischen der Komponente mit den dokumentierten Abhängigkeiten und den Komponenten an, von denen sie abhängt: Eine Abhängigkeit gibt lediglich an, dass die Komponente und die Komponenten, von denen sie abhängt, immer zusammen gesichert oder wiederhergestellt werden müssen.
+Eine Situation, in der eine von einem Writer verwaltete Komponente (und die von ihr definierte Komponente) nicht unabhängig von komponenten, die von anderen Writern verwaltet werden, sichern oder wiederherstellen kann. Eine Abhängigkeit gibt keine Reihenfolge der Präferenz zwischen der Komponente mit den dokumentierten Abhängigkeiten und den Komponenten an, von denen sie abhängt: Eine Abhängigkeit gibt lediglich an, dass die Komponente und die Komponenten, von denen sie abhängt, immer zusammen sichern oder wiederhergestellt werden müssen.
 
 </dd> <dt>
 
@@ -60,17 +60,17 @@ Eine Gruppe von Komponenten mit mindestens einer auswählbaren Komponente (für 
 
 </dd> <dt>
 
-<span id="base.vssgloss_copy_on_write_shadow_copy"></span><span id="BASE.VSSGLOSS_COPY_ON_WRITE_SHADOW_COPY"></span>**Kopie bei Schreibschattenkopie**
+<span id="base.vssgloss_copy_on_write_shadow_copy"></span><span id="BASE.VSSGLOSS_COPY_ON_WRITE_SHADOW_COPY"></span>**Schattenkopie beim Schreiben kopieren**
 </dt> <dd>
 
-Eine Schattenkopie, die erstellt wird, indem nur die Unterschiede zum ursprünglichen Volume gespeichert werden.
+Eine Schattenkopie, die erstellt wird, indem nur die Unterschiede zum ursprünglichen Volume erhalten werden.
 
 </dd> <dt>
 
-<span id="base.vssgloss_crash_consistent_state"></span><span id="BASE.VSSGLOSS_CRASH_CONSISTENT_STATE"></span>**Absturzkons konsistenter Zustand**
+<span id="base.vssgloss_crash_consistent_state"></span><span id="BASE.VSSGLOSS_CRASH_CONSISTENT_STATE"></span>**Absturz konsistenter Zustand**
 </dt> <dd>
 
-Der Status von Datenträgern, der dem entspricht, was nach einem schwerwiegenden Fehler gefunden wird, der das System plötzlich herunterfährt. Eine Wiederherstellung aus einem solchen Schattenkopiesatz wäre gleichbedeutend mit einem Neustart nach einem plötzlichen Herunterfahren. Dies ist der Standardzustand von Daten, die ohne Unterstützung von Writern kopiert wurden.
+Der Zustand von Datenträgern entspricht dem, was nach einem schwerwiegenden Fehler gefunden wird, der das System plötzlich heruntergefahren hat. Eine Wiederherstellung aus einem solchen Schattenkopiesatz wäre gleichbedeutend mit einem Neustart nach einem plötzlichen Herunterfahren. Dies ist der Standardzustand von Daten, die ohne Unterstützung von Writern schattenkopiert wurden.
 
 </dd> </dl>
 

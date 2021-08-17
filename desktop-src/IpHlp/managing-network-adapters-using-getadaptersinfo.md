@@ -1,5 +1,5 @@
 ---
-description: Die GetAdaptersInfo-Funktion füllt einen Zeiger auf eine IP-Adapter-INFO-Struktur mit Informationen zu den Netzwerkadaptern, \_ die dem System zugeordnet \_ sind.
+description: Die GetAdaptersInfo-Funktion füllt einen Zeiger auf eine \_ IP-ADAPTER-INFO-Struktur mit Informationen zu den Netzwerkadaptern aus, \_ die dem System zugeordnet sind.
 ms.assetid: 5bc72ee5-3065-4bfb-8dcb-8befb2a4bbd9
 title: Verwalten von Netzwerkadaptern mit GetAdaptersInfo
 ms.topic: article
@@ -13,11 +13,11 @@ ms.locfileid: "118644630"
 ---
 # <a name="managing-network-adapters-using-getadaptersinfo"></a>Verwalten von Netzwerkadaptern mit GetAdaptersInfo
 
-Die [**GetAdaptersInfo-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadaptersinfo) füllt einen Zeiger auf eine [**\_ IP-Adapter-INFO-Struktur \_**](/windows/desktop/api/Iptypes/ns-iptypes-ip_adapter_info) mit Informationen zu den Netzwerkadaptern, die dem System zugeordnet sind.
+Die [**GetAdaptersInfo-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadaptersinfo) füllt einen Zeiger auf eine [**\_ IP-ADAPTER-INFO-Struktur \_**](/windows/desktop/api/Iptypes/ns-iptypes-ip_adapter_info) mit Informationen zu den Netzwerkadaptern aus, die dem System zugeordnet sind.
 
 **So verwenden Sie GetAdaptersInfo**
 
-1.  Deklarieren Sie einen Zeiger auf eine INFO-Variable des [**\_ \_ IP-Adapters**](/windows/desktop/api/Iptypes/ns-iptypes-ip_adapter_info) namens *pAdapterInfo* und eine **ULONG-Variable** namens *ulOutBufLen.* Diese Variablen werden als Parameter an die [**GetAdaptersInfo-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadaptersinfo) übergeben. Erstellen Sie außerdem eine **DWORD-Variable** namens *dwRetVal* (für die Fehlerüberprüfung).
+1.  Deklarieren Sie einen Zeiger auf eine [**IP \_ ADAPTER \_ INFO-Variable**](/windows/desktop/api/Iptypes/ns-iptypes-ip_adapter_info) namens *pAdapterInfo* und eine **ULONG-Variable** namens *ulOutBufLen.* Diese Variablen werden als Parameter an die [**GetAdaptersInfo-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadaptersinfo) übergeben. Erstellen Sie außerdem eine **DWORD-Variable** namens *dwRetVal* (für die Fehlerüberprüfung).
     ```C++
     IP_ADAPTER_INFO  *pAdapterInfo;
     ULONG            ulOutBufLen;
@@ -27,7 +27,7 @@ Die [**GetAdaptersInfo-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-get
 
     
 
-2.  Ordnen Sie Arbeitsspeicher für die Strukturen zu.
+2.  Zuordnen von Arbeitsspeicher für die Strukturen.
     ```C++
     pAdapterInfo = (IP_ADAPTER_INFO *) malloc( sizeof(IP_ADAPTER_INFO) );
     ulOutBufLen = sizeof(IP_ADAPTER_INFO);
@@ -36,9 +36,9 @@ Die [**GetAdaptersInfo-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-get
 
     
 
-3.  Rufen Sie zunächst [**GetAdaptersInfo auf,**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadaptersinfo) um die benötigte Größe in die *Variable ulOutBufLen* zu erhalten.
+3.  Rufen [**Sie getAdaptersInfo**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadaptersinfo) zunächst auf, um die erforderliche Größe in der *ulOutBufLen-Variablen* abzurufen.
     > [!Note]  
-    > Dieser Aufruf der Funktion ist für einen Fehler gedacht und wird verwendet, um sicherzustellen, dass die *variable ulOutBufLen* eine größe angibt, die ausreicht, um alle an *pAdapterInfo* zurückgegebenen Informationen zu enthalten. Dies ist ein gängiges Programmiermodell für Datenstrukturen und Funktionen dieses Typs.
+    > Dieser Aufruf der Funktion soll fehlschlagen und wird verwendet, um sicherzustellen, dass die *ulOutBufLen-Variable* eine Größe angibt, die ausreicht, um alle an *pAdapterInfo* zurückgegebenen Informationen zu enthalten. Dies ist ein gängiges Programmiermodell für Datenstrukturen und Funktionen dieses Typs.
 
      
 
@@ -52,7 +52,7 @@ Die [**GetAdaptersInfo-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-get
 
     
 
-4.  Führen Sie einen zweiten Aufruf von [**GetAdaptersInfo**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadaptersinfo)durch, übergeben *Sie pAdapterInfo* und *ulOutBufLen* als Parameter, und führen Sie eine allgemeine Fehlerüberprüfung durch. Geben Sie den Wert an die **DWORD-Variable** *dwRetVal zurück* (für eine ausführlichere Fehlerüberprüfung).
+4.  Erstellen Sie einen zweiten Aufruf von [**GetAdaptersInfo,**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getadaptersinfo)übergeben *Sie pAdapterInfo* und *ulOutBufLen* als Parameter, und überprüfen Sie allgemeine Fehler. Geben Sie den Wert an die **DWORD-Variable** *dwRetVal* zurück (für umfangreichere Fehlerüberprüfungen).
     ```C++
     if ((dwRetVal = GetAdaptersInfo( pAdapterInfo, &ulOutBufLen)) != ERROR_SUCCESS) {
         printf("GetAdaptersInfo call failed with %d\n", dwRetVal);
@@ -94,7 +94,7 @@ Die [**GetAdaptersInfo-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-get
 
     
 
-6.  Geben Sie jeglichen Arbeitsspeicher frei, der für die *pAdapterInfo-Struktur zugeordnet* ist.
+6.  Gibt den für die *pAdapterInfo-Struktur* belegten Arbeitsspeicher frei.
     ```C++
     if (pAdapterInfo)
             free(pAdapterInfo);
@@ -105,7 +105,7 @@ Die [**GetAdaptersInfo-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-get
 
 Nächster Schritt: [Verwalten von Schnittstellen mit GetInterfaceInfo](managing-interfaces-using-getinterfaceinfo.md)
 
-Vorheriger Schritt: [Abrufen von Informationen mit GetNetworkParams](retrieving-information-using-getnetworkparams.md)
+Vorheriger Schritt: [Abrufen von Informationen mit getNetworkParams](retrieving-information-using-getnetworkparams.md)
 
  
 

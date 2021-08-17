@@ -1,9 +1,9 @@
 ---
-title: DEF-pragma-Direktive
-description: Pragma-Direktive, die manuell ein Gleit Komma-Shader-Register zugeordnet.
+title: def pragma-Direktive
+description: Pragma-Direktive, die manuell ein Gleitkomma-Shaderregister zugibt.
 ms.assetid: 45db94c4-f6f6-4c88-9bf2-4eaa9abf7844
 keywords:
-- DEF-pragma-Direktive HLSL
+- def pragma Directive HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2a921e17f8ddee4aaabfe50e75f42ce44812863d
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
-ms.translationtype: HT
+ms.openlocfilehash: fe6961f5fd8c05f291af3634c07de6befada0efa54586796ca881bffe893bf5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104992911"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117726440"
 ---
-# <a name="def-pragma-directive"></a>DEF-pragma-Direktive
+# <a name="def-pragma-directive"></a>def pragma-Direktive
 
-Pragma-Direktive, die manuell ein Gleit Komma-Shader-Register zugeordnet.
+Pragma-Direktive, die manuell ein Gleitkomma-Shaderregister zugibt.
 
 
 
-| \#pragma DEF ( *target*, *Register*, *Wert1*, *Wert2*,*val3*, *val4* ) |
+| \#pragma def( *target*, *register*, *val1*, *val2*,*val3*, *val4* ) |
 |---------------------------------------------------------------------|
 
 
@@ -37,22 +37,22 @@ Pragma-Direktive, die manuell ein Gleit Komma-Shader-Register zugeordnet.
 
 
 
-| Element                                                                        | BESCHREIBUNG                                                                 |
+| Element                                                                        | Beschreibung                                                                 |
 |-----------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| <span id="target"></span><span id="TARGET"></span>*Spar*<br/>       | Das Ziel, das das zuzuordnende Register enthält. <br/>                  |
-| <span id="register"></span><span id="REGISTER"></span>*sich*<br/> | Die zuzuordnende Gleit Komma-Shader-Registrierung. <br/>                     |
-| <span id="val0"></span><span id="VAL0"></span>*val0*<br/>             | Das erste Byte des Werts, der dem angegebenen Register zuzuordnen ist. <br/>  |
-| <span id="val1"></span><span id="VAL1"></span>*Wert1*<br/>             | Zweites Byte des Werts, der dem angegebenen Register zuzuordnen ist. <br/> |
-| <span id="val2"></span><span id="VAL2"></span>*Wert2*<br/>             | Drittes Byte des Werts, der dem angegebenen Register zuzuordnen ist. <br/>  |
-| <span id="val3"></span><span id="VAL3"></span>*val3*<br/>             | Viertes Byte des Werts, der dem angegebenen Register zuzuordnen ist. <br/> |
+| <span id="target"></span><span id="TARGET"></span>*Ziel*<br/>       | Ziel, das das zu zuordnende Register enthält. <br/>                  |
+| <span id="register"></span><span id="REGISTER"></span>*Registrieren*<br/> | Zu zuordnendes Gleitkomma-Shaderregister. <br/>                     |
+| <span id="val0"></span><span id="VAL0"></span>*val0*<br/>             | Erstes Byte des Werts, der dem angegebenen Register zuteilen ist. <br/>  |
+| <span id="val1"></span><span id="VAL1"></span>*val1*<br/>             | Zweites Byte des Werts, der dem angegebenen Register zuteilen ist. <br/> |
+| <span id="val2"></span><span id="VAL2"></span>*val2*<br/>             | Drittes Byte des Werts, der dem angegebenen Register zuteilen ist. <br/>  |
+| <span id="val3"></span><span id="VAL3"></span>*val3*<br/>             | Viertes Byte des Werts, der dem angegebenen Register zuteilen ist. <br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mithilfe des DEF-Pragmas kann ein Entwickler ein Gleit Komma-Shader-Register mit dem angegebenen Wert vorab ausfüllen. Dieses Pragma wird nur selten verwendet.
+Mit dem Def-Pragma kann ein Entwickler ein Gleitkomma-Shaderregister mit dem angegebenen Wert vorab ausfüllen. Dieses Pragma wird selten verwendet.
 
 ## <a name="see-also"></a>Weitere Informationen
 

@@ -51,7 +51,7 @@ dabei sind dimx und dimy die Dimensionen, die im [numthreads-Attribut](sm5-attri
 
 Dieser Systemwert ist optional. Durch seine Verwendung wird jedoch sichergestellt, dass ein Thread nur in den zugewiesenen Speicherbereich in der groupshared-Variablen schreibt.
 
-Die folgende Abbildung zeigt die Beziehung zwischen den Parametern, die an [**ID3D11DeviceContext::D ispatch,**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch)Dispatch(5,3,2) übergeben werden, den im [attribut numthreads angegebenen](sm5-attributes-numthreads.md) Werten, numthreads(10,8,3) und werten, die an den Compute-Shader für die threadbezogenen Systemwerte (SV \_ GroupIndex,[SV \_ DispatchThreadID,](sv-dispatchthreadid.md)[SV \_ GroupThreadID](sv-groupthreadid.md),[SV \_ GroupID)](sv-groupid.md)übergeben werden.
+Die folgende Abbildung zeigt die Beziehung zwischen den Parametern, die an [**ID3D11DeviceContext::D ispatch,**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch)Dispatch(5,3,2), den im [attribut numthreads angegebenen](sm5-attributes-numthreads.md) Werten, numthreads(10,8,3) und werten, die an den Compute-Shader für die threadbezogenen Systemwerte (SV \_ GroupIndex,[SV \_ DispatchThreadID,](sv-dispatchthreadid.md)[SV \_ GroupThreadID](sv-groupthreadid.md),[SV \_ GroupID)](sv-groupid.md)übergeben werden.
 
 ![Abbildung der Beziehung zwischen Dispatch, Threadgruppen und Threads](images/threadgroupids.png)
 

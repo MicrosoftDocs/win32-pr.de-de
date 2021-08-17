@@ -1,9 +1,9 @@
 ---
-title: CB_SETTOPINDEX Meldung (Winuser. h)
-description: Eine Anwendung sendet die CB- \_ settopindex-Nachricht, um sicherzustellen, dass ein bestimmtes Element im Listenfeld eines Kombinations Felds sichtbar ist.
+title: CB_SETTOPINDEX (Winuser.h)
+description: Eine Anwendung sendet die CB SETTOPINDEX-Nachricht, um sicherzustellen, dass ein bestimmtes Element im Listenfeld \_ eines Kombinationsfelds sichtbar ist.
 ms.assetid: vs|controls|~\controls\comboboxes\comboboxreference\comboboxmessages\cb_settopindex.htm
 keywords:
-- Windows-Steuerelemente für CB_SETTOPINDEX Meldung
+- CB_SETTOPINDEX von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f402cbd16cd61a829a2221600bd3c548829f348
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d9364ef5013ef692adda76f96752f11691d5f4cc87c857386914105d16decb11
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117832288"
 ---
-# <a name="cb_settopindex-message"></a>CB \_ settopindex-Meldung
+# <a name="cb_settopindex-message"></a>CB \_ SETTOPINDEX-Meldung
 
-Eine Anwendung sendet die **CB- \_ settopindex** -Nachricht, um sicherzustellen, dass ein bestimmtes Element im Listenfeld eines Kombinations Felds sichtbar ist. Das System führt einen Bildlauf im Listenfeld Inhalt durch, sodass entweder das angegebene Element oben im Listenfeld angezeigt wird oder der maximale Bild Laufbereich erreicht wurde.
+Eine Anwendung sendet die **CB \_ SETTOPINDEX-Nachricht,** um sicherzustellen, dass ein bestimmtes Element im Listenfeld eines Kombinationsfelds sichtbar ist. Das System führt einen Bildlauf durch den Inhalt des Listenfelds durch, sodass entweder das angegebene Element oben im Listenfeld angezeigt wird oder der maximale Bildlaufbereich erreicht wurde.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Eine Anwendung sendet die **CB- \_ settopindex** -Nachricht, um sicherzustellen,
 *wParam* 
 </dt> <dd>
 
-Gibt den NULL basierten Index des Listen Elements an.
+Gibt den nullbasierten Index des Listenelements an.
 
 </dd> <dt>
 
@@ -47,7 +47,7 @@ Dieser Parameter wird nicht verwendet.
 
 Wenn die Nachricht erfolgreich ist, ist der Rückgabewert 0 (null).
 
-Wenn die Nachricht fehlschlägt, ist der Rückgabewert CB \_ Err.
+Wenn die Nachricht fehlschlägt, ist der Rückgabewert CB \_ ERR.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,17 +55,17 @@ Wenn die Nachricht fehlschlägt, ist der Rückgabewert CB \_ Err.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CB \_ gettopindex**](cb-gettopindex.md)
+[**CB \_ GETTOPINDEX**](cb-gettopindex.md)
 </dt> </dl>
 
  

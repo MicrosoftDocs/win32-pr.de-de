@@ -1,31 +1,31 @@
 ---
-description: Offset zwischen dem Zeitstempel jedes Beispiels, das von der Sample Webbannergrabber empfangen wurde, und dem Zeitpunkt, zu dem der Sample Webbannergrabber das Beispiel darstellt.
+description: Offset zwischen dem Zeitstempel der einzelnen Stichproben, die vom Stichprobengraber empfangen werden, und dem Zeitpunkt, zu dem der Stichprobengrab das Beispiel zeigt.
 ms.assetid: 8d06b415-aafc-4276-9a88-4b7262df62f1
-title: MF_SAMPLEGRABBERSINK_SAMPLE_TIME_OFFSET-Attribut (mspdl. h)
+title: MF_SAMPLEGRABBERSINK_SAMPLE_TIME_OFFSET -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d99f65c5023bbe8705e21269dfb07d6f24db4190
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4ad8086d7820a9f7c642fb049af8696521f675be3f7606ff19166a4570ee8000
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359906"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117875990"
 ---
-# <a name="mf_samplegrabbersink_sample_time_offset-attribute"></a>MF \_ samplegrabbersink- \_ Beispiel für \_ Zeit \_ Offset Attribut
+# <a name="mf_samplegrabbersink_sample_time_offset-attribute"></a>MF \_ SAMPLEGRABBERSINK \_ SAMPLE TIME \_ \_ OFFSET-Attribut
 
-Offset zwischen dem Zeitstempel jedes Beispiels, das von der Sample Webbannergrabber empfangen wurde, und dem Zeitpunkt, zu dem der Sample Webbannergrabber das Beispiel darstellt.
+Offset zwischen dem Zeitstempel der einzelnen Stichproben, die vom Stichprobengraber empfangen werden, und dem Zeitpunkt, zu dem der Stichprobengrab das Beispiel zeigt.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT64**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können dieses Attribut für das [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Objekt festlegen, das von der [**mfikreatesamplegrabbersink Aktivierungs**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesamplegrabbersinkactivate) -Funktion zurückgegeben wird. Mit diesem Attribut kann die Rückruffunktion des beispielgrabers Beispiele vor der Präsentationszeit empfangen.
+Sie können dieses Attribut für das VON der [**MFCreateSampleGrabberSinkActivate-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesamplegrabbersinkactivate) zurückgegebene [**OBJEKT FESTLEGEN.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) Dieses Attribut ermöglicht es der Rückruffunktion des Beispielgrabbers, Stichproben vor der Präsentationszeit zu empfangen.
 
-Wenn der Sample Webbannergrabber ein neues Beispiel erhält, wird das Beispiel zum Zeitpunkt *t* - *Offset* dargestellt, wobei *t* der Zeitstempel für das Beispiel und *Offset* der Wert dieses Attributs ist. Wenn dieses Attribut nicht festgelegt ist, ist der Standardwert 0 (null).
+Wenn der Beispielgramper eine neue Stichprobe empfängt, zeigt er das Beispiel zum Zeitpunkt *t* – *Offset* an, wobei *t* der Zeitstempel für die Stichprobe und *offset* der Wert dieses Attributs ist. Wenn dieses Attribut nicht festgelegt ist, ist der Standardwert 0 (null).
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,26 +33,26 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64)
+[**ATTRIBUTEs::GetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64)
+[**ATTRIBUTEs::SetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64)
 </dt> <dt>
 
-[**Imbersamplegrabbersinkcallback**](/windows/desktop/api/mfidl/nn-mfidl-imfsamplegrabbersinkcallback)
+[**VERWALTESampleGrabberSinkCallback**](/windows/desktop/api/mfidl/nn-mfidl-imfsamplegrabbersinkcallback)
 </dt> <dt>
 
 [Media Foundation Attribute](media-foundation-attributes.md)

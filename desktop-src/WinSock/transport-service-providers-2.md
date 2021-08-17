@@ -1,27 +1,27 @@
 ---
-description: Transport Dienstanbieter und Windows Sockets (Winsock).
+description: Transportdienstanbieter und Windows Sockets (Winsock).
 ms.assetid: 4ded519d-d9c2-4ef3-80f5-e6ec40adf938
-title: Transport Dienstanbieter
+title: Transportdienstanbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 114eefa67bbb2d7afdf46b74f1a9524e7a77b7c9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d860db59b5a27d19cdc5263069161f105d79e15cfd7353789f8fdcf9944799ed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347163"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117927175"
 ---
-# <a name="transport-service-providers"></a>Transport Dienstanbieter
+# <a name="transport-service-providers"></a>Transportdienstanbieter
 
-Ein bestimmter Transport Dienstanbieter unterstützt ein oder mehrere Protokolle. Beispielsweise würde ein TCP/IP-Anbieter mindestens die TCP-und UDP-Protokolle bereitstellen, während ein IPX/SPX-Anbieter IPX, SPX und SPX II bereitstellen kann. Jedes Protokoll, das von einem bestimmten Anbieter unterstützt wird, wird durch eine [**wsaprotocol- \_ Informations**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) Struktur beschrieben, und die Gesamtmenge dieser Strukturen kann als Katalog der installierten Protokolle betrachtet werden. Anwendungen können den Inhalt dieses Katalogs abrufen (Weitere Informationen finden Sie unter [**wsaenumprotokolls**](/windows/desktop/api/Winsock2/nf-winsock2-wsaenumprotocolsa), [**wscenumprotokolle**](/windows/desktop/api/Ws2spi/nf-ws2spi-wscenumprotocols)und [**WSCEnumProtocols32**](/windows/desktop/api/Ws2spi/nf-ws2spi-wscenumprotocols32)). durch Untersuchen der verfügbaren **wsaprotocol- \_ Informations** Strukturen können Sie die dem jeweiligen Protokoll zugeordneten Kommunikations Attribute ermitteln.
+Ein angegebener Transportdienstanbieter unterstützt mindestens ein Protokoll. Beispielsweise würde ein TCP/IP-Anbieter mindestens die TCP- und UDP-Protokolle liefern, während ein IPX/SPX-Anbieter IPX, SPX und SPX II zur Verfügung stellt. Jedes Protokoll, das von einem bestimmten Anbieter unterstützt wird, wird durch eine [**WSAPROTOCOL \_ INFO-Struktur**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) beschrieben, und der Gesamtsatz solcher Strukturen kann als Katalog der installierten Protokolle bezeichnet werden. Anwendungen können den Inhalt dieses Katalogs abrufen (weitere Informationen finden Sie unter [**WSAEnumProtocols**](/windows/desktop/api/Winsock2/nf-winsock2-wsaenumprotocolsa), [**WSCEnumProtocols**](/windows/desktop/api/Ws2spi/nf-ws2spi-wscenumprotocols)und [**WSCEnumProtocols32**](/windows/desktop/api/Ws2spi/nf-ws2spi-wscenumprotocols32)), und durch Untersuchen der verfügbaren **WSAPROTOCOL \_ INFO-Strukturen** können sie die den einzelnen Protokollen zugeordneten Kommunikationsattribute erkennen.
 
-## <a name="layered-protocols-and-protocol-chains-in-the-spi"></a>Geschichtete Protokolle und Protokoll Ketten in der SPI
+## <a name="layered-protocols-and-protocol-chains-in-the-spi"></a>Mehrschichtige Protokolle und Protokollketten im SPI
 
-Windows Sockets 2 bietet das Konzept eines geschichteten Protokolls. Bei einem geschichteten Protokoll handelt es sich um einen, der nur Kommunikationsfunktionen auf höherer Ebene implementiert, während er sich auf einen zugrunde liegenden Transport Stapel für den eigentlichen Datenaustausch mit einem Remote Endpunkt stützt. Ein Beispiel für ein solches mehrstufiger Protokoll wäre eine Sicherheitsebene, die dem Verbindungs Einrichtungsprozess Protokoll hinzufügt, um die Authentifizierung durchzuführen und ein einvernehmlich vereinbartes Verschlüsselungsschema einzurichten. Ein solches Sicherheitsprotokoll erfordert im Allgemeinen die Dienste eines zugrunde liegenden zuverlässigen Transport Protokolls, z. b. TCP oder SPX. Der Begriff "Basisprotokoll" bezieht sich auf ein Protokoll, wie z. b. TCP oder SPX, das vollständig die Datenkommunikation mit einem Remote Endpunkt durchführen kann. der Begriff "geschichtetes Protokoll" wird verwendet, um ein Protokoll zu beschreiben, das nicht eigenständig Eine Protokoll Kette wird dann als ein oder mehrere überlappende Protokolle definiert und durch ein Basisprotokoll verankert.
+Windows Sockets 2 unterstützt das Konzept eines mehrschichtigen Protokolls. Ein mehrschichtiges Protokoll ist ein Protokoll, das nur Kommunikationsfunktionen auf höherer Ebene implementiert, während für den eigentlichen Datenaustausch mit einem Remoteendpunkt ein zugrunde liegender Transportstapel verwendet wird. Ein Beispiel für ein solches mehrschichtige Protokoll wäre eine Sicherheitsschicht, die dem Verbindungseinrichtungsprozess Protokoll hinzufügt, um die Authentifizierung durchzuführen und ein gegenseitig vereinbartes Verschlüsselungsschema zu erstellen. Ein solches Sicherheitsprotokoll erfordert im Allgemeinen die Dienste eines zugrunde liegenden zuverlässigen Transportprotokolls wie TCP oder SPX. Der Begriff Basisprotokoll bezieht sich auf ein Protokoll wie TCP oder SPX, das vollständig in der Lage ist, Datenkommunikation mit einem Remoteendpunkt zu führen, und der Begriff Mehrschichtprotokoll wird verwendet, um ein Protokoll zu beschreiben, das nicht allein stehen kann. Eine Protokollkette würde dann als ein oder mehrere mehrschichtige Protokolle definiert werden, die zusammengekettet und durch ein Basisprotokoll verankert sind.
 
-Diese überlappenden Protokolle und Basis Protokolle in Ketten können erreicht werden, indem Sie die geschichteten Protokolle anordnen, um die Winsock-SPI an Ihren oberen und unteren Rändern zu unterstützen. Es wird eine spezielle [**wsaprotocol- \_ Informations**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) Struktur erstellt, die auf die gesamte Protokoll Kette verweist und die explizite Reihenfolge beschreibt, in der die geschichteten Protokolle verknüpft werden. Dies wird in der folgenden Grafik veranschaulicht.
+Diese Zeichenfolge von mehrschichtigen Protokollen und Basisprotokollen in Ketten kann erreicht werden, indem die mehrschichtigen Protokolle so anordnen, dass sie den Winsock SPI sowohl an ihren oberen als auch unteren Rändern unterstützen. Es wird [**eine spezielle WSAPROTOCOL \_ INFO-Struktur**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) erstellt, die auf die Protokollkette als Ganzes verweist und die explizite Reihenfolge beschreibt, in der die mehrschichtigen Protokolle verbunden sind. Dies wird in der folgenden Grafik veranschaulicht.
 
-![Protokoll Kette](images/ovrvw2-3.png)
+![Protokollkette](images/ovrvw2-3.png)
 
  
 

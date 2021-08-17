@@ -1,7 +1,7 @@
 ---
 description: Ruft das Ziel einer symbolischen Verknüpfung ab.
 ms.assetid: 10a6676c-96f7-4758-8868-bbccd37b5019
-title: Ntquerysymboliclinkobject-Funktion
+title: NtQuerySymbolicLinkObject-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - Ntdll.dll
-ms.openlocfilehash: c79b7b40e0d3c8622ee263d96836f738d76942ae
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 805f3de5da380c4749e58dd7467f1f4ccb2471119ffed81b79695a98feb1b090
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354076"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118003630"
 ---
-# <a name="ntquerysymboliclinkobject-function"></a>Ntquerysymboliclinkobject-Funktion
+# <a name="ntquerysymboliclinkobject-function"></a>NtQuerySymbolicLinkObject-Funktion
 
 \[Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
@@ -43,34 +43,34 @@ NTSTATUS WINAPI NtQuerySymbolicLinkObject(
 
 <dl> <dt>
 
-*Linkhandle* \[ in\]
+*LinkHandle* \[ In\]
 </dt> <dd>
 
-Ein Handle für das symbolische Verknüpfungs Objekt.
+Ein Handle für das symbolische Verknüpfungsobjekt.
 
 </dd> <dt>
 
 *LinkTarget* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf eine initialisierte Unicode-Zeichenfolge, die das Ziel der symbolischen Verknüpfung empfängt. Die **MaximumLength** -und **buffer** -Elemente müssen festgelegt werden, wenn der-Befehl fehlschlägt.
+Ein Zeiger auf eine initialisierte Unicode-Zeichenfolge, die das Ziel der symbolischen Verknüpfung empfängt. Die **Member MaximumLength** und **Buffer** müssen festgelegt werden, wenn der Aufruf fehlschlägt.
 
 </dd> <dt>
 
-*Rückkehrnedlength* \[ Out, optional\]
+*ReturnedLength* \[ out, optional\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Länge der Unicode-Zeichenfolge empfängt, die im *LinkTarget* -Parameter zurückgegeben wird. Wenn die Funktion den **Status \_ Puffer \_ zu \_ klein** zurückgibt, erhält diese Variable die erforderliche Puffergröße.
+Ein Zeiger auf eine Variable, die die Länge der im *LinkTarget-Parameter zurückgegebenen Unicode-Zeichenfolge empfängt.* Wenn die Funktion **STATUS BUFFER TOO SMALL \_ \_ \_ zurückgibt,** erhält diese Variable die erforderliche Puffergröße.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Funktion gibt **Status \_ Erfolg** oder einen Fehlerstatus zurück.
+Die Funktion gibt **STATUS \_ SUCCESS oder** einen Fehlerstatus zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,11 +82,11 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ntopensymboliclinkobject**](ntopensymboliclinkobject.md)
+[**NtOpenSymbolicLinkObject**](ntopensymboliclinkobject.md)
 </dt> </dl>
 
  

@@ -1,40 +1,40 @@
 ---
-title: VML V-Text-align-Attribut
-description: VML V-Text-align-Attribut
+title: VML-V-Text-Align-Attribut
+description: VML-V-Text-Align-Attribut
 ms.assetid: ca2cbbf6-ddbb-4f2b-942c-3fe0033bd649
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6efb96bde980a4831f400ada7032f9ee37f1d976
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 54bf8ec2e781b04e7ababc0b30ea3996e569e5cf9066a4bac072806fd7329eac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948860"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117939129"
 ---
-# <a name="vml-v-text-align-attribute"></a>VML V-Text-align-Attribut
+# <a name="vml-v-text-align-attribute"></a>VML-V-Text-Align-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die Textausrichtung. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert die Ausrichtung von Text. Lese-/Schreibzugriff. **Zeichenfolge.**
 
 **Gilt für**
 
-[TextPath](msdn-online-vml-textpath-element.md)
+[Textpath](msdn-online-vml-textpath-element.md)
 
 **Tagsyntax**
 
-<v: *Element* Style = "v-Text-align: *Expression* " >
+<v: *element* style="v-text-align: *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Style. v-Text-align = "*Ausdruck*"
+*element* .style.v-text-align="*expression*"
 
-*Ausdruck* = *Element*. Style. v-Text-align
+*expression* = *Element*.style.v-text-align
 
 **Anmerkungen**
 
@@ -42,16 +42,16 @@ Mögliche Werte:
 
 -   **left** (Standard)
 -   **Richting**
--   **Tagesstätte**
--   **fertigte**
--   **Brief: rechtfertigen**
--   **Stretch-rechtfertigen**
+-   **Center**
+-   **Rechtfertigen**
+-   **Letter-Justify**
+-   **Stretch-Justify**
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Der Text wird so gestreckt, dass er dem Pfad entspricht, aber der zusätzliche Leerraum wird zwischen den einzelnen Buchstaben eingefügt.
+Der Text wird so gestreckt, dass er dem Pfad passt, aber der zusätzliche Leerzeichen wird zwischen jedem Buchstaben eingefügt.
 
 
 ```HTML
@@ -65,6 +65,6 @@ Der Text wird so gestreckt, dass er dem Pfad entspricht, aber der zusätzliche L
 
 
 
- 
+ 
 
- 
+ 

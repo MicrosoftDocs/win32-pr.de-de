@@ -1,14 +1,14 @@
 ---
-description: In dieser Übersicht über die Windows-Barrierefreiheitsfunktionen, die Sie in Ihr Benutzeroberflächenframework integrieren können, erfahren Sie mehr über die Entwicklung von Hilfstechnologien für Windows.
+description: Erfahren Sie mehr über die Entwicklung von Hilfstechnologien für Windows mit dieser Übersicht über die Windows Barrierefreiheitsfunktionen, die Sie in Ihr Benutzeroberflächenframework integrieren können.
 title: Entwickeln von Hilfstechnologie für Windows
 ms.topic: article
 ms.date: 04/18/2019
-ms.openlocfilehash: 35be47ea7ece28da00362623fa5cbafcaf06633a
-ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
+ms.openlocfilehash: bc8ab9c1aedc8ca60fd2e7d9192e20abde81d17a013b738e2b66c295f23ee880
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111988835"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118105978"
 ---
 # <a name="developing-assistive-technology-for-windows"></a>Entwickeln von Hilfstechnologie für Windows
 

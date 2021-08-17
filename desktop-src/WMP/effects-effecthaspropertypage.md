@@ -1,9 +1,9 @@
 ---
-title: Effects. effecthaspropertypage
-description: Das effecthaspropertypage-Attribut Ruft einen Wert ab, der angibt, ob die aktuelle Visualisierung über eine Eigenschaften Seite verfügt.
+title: EFFECTS.effectHasPropertyPage
+description: Das effectHasPropertyPage-Attribut ruft einen Wert ab, der angibt, ob die aktuelle Visualisierung über eine Eigenschaftenseite verfügt.
 ms.assetid: 6014d510-35b6-4b5c-802e-b425297c5be3
 keywords:
-- Effekte. effecthaspropertypage-Fenster Media Player
+- EFFECTS.effectHasPropertyPage-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c60cef0e79238a07d5ba46c5ea097f6fd9d683c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 47b0c900257af5c9cda7b0a0bb21040b47b49792293033d89c82284e479fb182
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117749222"
 ---
-# <a name="effectseffecthaspropertypage"></a>Effects. effecthaspropertypage
+# <a name="effectseffecthaspropertypage"></a>EFFECTS.effectHasPropertyPage
 
-Das **effecthaspropertypage** -Attribut Ruft einen Wert ab, der angibt, ob die aktuelle Visualisierung über eine Eigenschaften Seite verfügt.
+Das **effectHasPropertyPage-Attribut** ruft einen Wert ab, der angibt, ob die aktuelle Visualisierung über eine Eigenschaftenseite verfügt.
 
 ``` syntax
         elementID.effectHasPropertyPage
@@ -29,14 +29,14 @@ Das **effecthaspropertypage** -Attribut Ruft einen Wert ab, der angibt, ob die a
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein Schreib geschützter **boolescher** Wert.
+Dieses Attribut ist ein schreibgeschützter **boolescher Wert.**
 
 
 
 | Wert | BESCHREIBUNG                                  |
 |-------|----------------------------------------------|
-| true  | Die Visualisierung verfügt über eine Eigenschaften Seite.           |
-| false | Die Visualisierung verfügt nicht über eine Eigenschaften Seite. |
+| true  | Die Visualisierung verfügt über eine Eigenschaftenseite.           |
+| false | Die Visualisierung verfügt nicht über eine Eigenschaftenseite. |
 
 
 
@@ -48,15 +48,15 @@ Dieses Attribut ist ein Schreib geschützter **boolescher** Wert.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Effects-Element**](effects-element.md)
+[**EFFECTS-Element**](effects-element.md)
 </dt> </dl>
 
  

@@ -1,27 +1,27 @@
 ---
-description: Die iwbemcallresult-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IWbemCallResult-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: B9AF4D80-4B0C-4DE6-B647-3E887DAF07F6
 ms.tgt_platform: multiple
-title: Iwbemcallresult-Methoden
+title: IWbemCallResult-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c810bb773b6770e362d5e5455354893121061c1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 38eaed7cb91d7edc5ce130a680cf9892ac4dd4c67060ed8a4bfa7f8832026a9c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117924021"
 ---
-# <a name="iwbemcallresult-methods"></a>Iwbemcallresult-Methoden
+# <a name="iwbemcallresult-methods"></a>IWbemCallResult-Methoden
 
-Die [**iwbemcallresult**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemcallresult) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IWbemCallResult-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemcallresult) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Getcallstatus-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemcallresult-getcallstatus)
--   [**Getresultobject-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemcallresult-getresultobject)
--   [**Getresultservices-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemcallresult-getresultservices)
--   [**Getresultstring-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemcallresult-getresultstring)
+-   [**GetCallStatus-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemcallresult-getcallstatus)
+-   [**GetResultObject-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemcallresult-getresultobject)
+-   [**GetResultServices-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemcallresult-getresultservices)
+-   [**GetResultString-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemcallresult-getresultstring)
 
  
 

@@ -1,10 +1,10 @@
 ---
 title: Postal-Address-Attribut
-description: Die Postanschrift für das Objekt.
+description: Die Adressenadresse für das -Objekt.
 ms.assetid: 85e96b88-8e58-4916-a333-59e3d4ed8025
 ms.tgt_platform: multiple
 keywords:
-- Postal-Address AD-Attributschema
+- Postal-Address AD-Schema
 - postalAddress-Attribut AD-Schema
 topic_type:
 - apiref
@@ -23,7 +23,7 @@ ms.locfileid: "118682393"
 ---
 # <a name="postal-address-attribute"></a>Postal-Address-Attribut
 
-Die Postanschrift für das Objekt.
+Die Adressenadresse für das -Objekt.
 
 
 
@@ -35,7 +35,7 @@ Die Postanschrift für das Objekt.
 | Aktualisieren von Berechtigungen  | Domänenadministrator oder Kontobesitzer.                                      |
 | Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und wann immer die Adresse geändert werden muss. |
 | Attribute-Id      | 2.5.4.16                                                                    |
-| System-ID-GUID    | bf9679fc-0de6-11d0-a285-00aa003049e2                                        |
+| System-Id-Guid    | bf9679fc-0de6-11d0-a285-00aa003049e2                                        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                 |
 
 
@@ -59,7 +59,7 @@ Die Postanschrift für das Objekt.
 | Link-ID                | \-                                                                                                                                                                                                                                                                                                              |
 | MAPI-Id                | 0x810C                                                                                                                                                                                                                                                                                                          |
 | System-Only            | Falsch                                                                                                                                                                                                                                                                                                           |
-| Ist einwertig       | Falsch                                                                                                                                                                                                                                                                                                           |
+| Is-Single-Valued       | Falsch                                                                                                                                                                                                                                                                                                           |
 | Ist indiziert             | Falsch                                                                                                                                                                                                                                                                                                           |
 | Im globalen Katalog      | Falsch                                                                                                                                                                                                                                                                                                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                                                    |
@@ -67,7 +67,7 @@ Die Postanschrift für das Objekt.
 | Range-Upper            | 4096                                                                                                                                                                                                                                                                                                            |
 | Search-Flags           | 0x00000010                                                                                                                                                                                                                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                                                      |
-| In verwendete Klassen        | [**Organisation**](c-organization.md)<br/> [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Organisationsrolle**](c-organizationalrole.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**1600-000-**](c-residentialperson.md)<br/> |
+| In verwendete Klassen        | [**Organization**](c-organization.md)<br/> [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Organisationsrolle**](c-organizationalrole.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Besennungsperson**](c-residentialperson.md)<br/> |
 
 
 
@@ -80,7 +80,7 @@ Die Postanschrift für das Objekt.
 | Link-ID                | \-                                                                                                                                                                                                                                                                                                                                                                      |
 | MAPI-Id                | 0x810C                                                                                                                                                                                                                                                                                                                                                                  |
 | System-Only            | Falsch                                                                                                                                                                                                                                                                                                                                                                   |
-| Ist einwertig       | Falsch                                                                                                                                                                                                                                                                                                                                                                   |
+| Is-Single-Valued       | Falsch                                                                                                                                                                                                                                                                                                                                                                   |
 | Ist indiziert             | Falsch                                                                                                                                                                                                                                                                                                                                                                   |
 | Im globalen Katalog      | Falsch                                                                                                                                                                                                                                                                                                                                                                   |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                                                                                                            |
@@ -88,7 +88,7 @@ Die Postanschrift für das Objekt.
 | Range-Upper            | 4096                                                                                                                                                                                                                                                                                                                                                                    |
 | Search-Flags           | 0x00000010                                                                                                                                                                                                                                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                                                                                                              |
-| In verwendete Klassen        | [**Organisation**](c-organization.md)<br/> [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Organisationsrolle**](c-organizationalrole.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**1600-000-**](c-residentialperson.md)<br/> [**rFC822LocalPart**](c-rfc822localpart.md)<br/> |
+| In verwendete Klassen        | [**Organization**](c-organization.md)<br/> [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Organisationsrolle**](c-organizationalrole.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Besennungsperson**](c-residentialperson.md)<br/> [**rFC822LocalPart**](c-rfc822localpart.md)<br/> |
 
 
 
@@ -109,7 +109,7 @@ Die Postanschrift für das Objekt.
 | Range-Upper            | 4096                                                                                                             |
 | Search-Flags           | 0x00000010                                                                                                       |
 | System-Flags           | 0x00000010                                                                                                       |
-| In verwendete Klassen        | [**Organisation**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> |
+| In verwendete Klassen        | [**Organization**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> |
 
 
 
@@ -130,7 +130,7 @@ Die Postanschrift für das Objekt.
 | Range-Upper            | 4096                                                                                                                                                                                                                                                                                                                                                                    |
 | Search-Flags           | 0x00000010                                                                                                                                                                                                                                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                                                                                                              |
-| In verwendete Klassen        | [**Organisation**](c-organization.md)<br/> [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Organisationsrolle**](c-organizationalrole.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Besennungsperson**](c-residentialperson.md)<br/> [**rFC822LocalPart**](c-rfc822localpart.md)<br/> |
+| In verwendete Klassen        | [**Organization**](c-organization.md)<br/> [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Organisationsrolle**](c-organizationalrole.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Besennungsperson**](c-residentialperson.md)<br/> [**rFC822LocalPart**](c-rfc822localpart.md)<br/> |
 
 
 
@@ -151,7 +151,7 @@ Die Postanschrift für das Objekt.
 | Range-Upper            | 4096                                                                                                                                                                                                                                                                                                                                                                    |
 | Search-Flags           | 0x00000010                                                                                                                                                                                                                                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                                                                                                              |
-| In verwendete Klassen        | [**Organisation**](c-organization.md)<br/> [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Organisationsrolle**](c-organizationalrole.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Besennungsperson**](c-residentialperson.md)<br/> [**rFC822LocalPart**](c-rfc822localpart.md)<br/> |
+| In verwendete Klassen        | [**Organization**](c-organization.md)<br/> [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Organisationsrolle**](c-organizationalrole.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Besennungsperson**](c-residentialperson.md)<br/> [**rFC822LocalPart**](c-rfc822localpart.md)<br/> |
 
 
 
@@ -172,7 +172,7 @@ Die Postanschrift für das Objekt.
 | Range-Upper            | 4096                                                                                                                                                                                                                                                                                                                                                                    |
 | Search-Flags           | 0x00000010                                                                                                                                                                                                                                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                                                                                                              |
-| In verwendete Klassen        | [**Organisation**](c-organization.md)<br/> [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Organisationsrolle**](c-organizationalrole.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**1600-000-**](c-residentialperson.md)<br/> [**rFC822LocalPart**](c-rfc822localpart.md)<br/> |
+| In verwendete Klassen        | [**Organization**](c-organization.md)<br/> [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Organisationsrolle**](c-organizationalrole.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Besennungsperson**](c-residentialperson.md)<br/> [**rFC822LocalPart**](c-rfc822localpart.md)<br/> |
 
 
 
@@ -185,7 +185,7 @@ Die Postanschrift für das Objekt.
 | Link-ID                | \-                                                                                                                                                                                                                                                                                                                                                                      |
 | MAPI-Id                | 0x810C                                                                                                                                                                                                                                                                                                                                                                  |
 | System-Only            | Falsch                                                                                                                                                                                                                                                                                                                                                                   |
-| Ist einwertig       | Falsch                                                                                                                                                                                                                                                                                                                                                                   |
+| Is-Single-Valued       | Falsch                                                                                                                                                                                                                                                                                                                                                                   |
 | Ist indiziert             | Falsch                                                                                                                                                                                                                                                                                                                                                                   |
 | Im globalen Katalog      | Falsch                                                                                                                                                                                                                                                                                                                                                                   |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                                                                                                            |
@@ -193,7 +193,7 @@ Die Postanschrift für das Objekt.
 | Range-Upper            | 4096                                                                                                                                                                                                                                                                                                                                                                    |
 | Search-Flags           | 0x00000010                                                                                                                                                                                                                                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                                                                                                              |
-| In verwendete Klassen        | [**Organisation**](c-organization.md)<br/> [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Organisationsrolle**](c-organizationalrole.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**1600-000-**](c-residentialperson.md)<br/> [**rFC822LocalPart**](c-rfc822localpart.md)<br/> |
+| In verwendete Klassen        | [**Organization**](c-organization.md)<br/> [**Unternehmensperson**](c-organizationalperson.md)<br/> [**Organisationsrolle**](c-organizationalrole.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Besennungsperson**](c-residentialperson.md)<br/> [**rFC822LocalPart**](c-rfc822localpart.md)<br/> |
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: rpc-Ns-Transfer-Syntax-Attribut
-description: Die UUID der Übertragungssyntax, die vom aktuellen Eintrag unterstützt wird.
+description: Die UUID der Vom aktuellen Eintrag unterstützten Übertragungssyntax.
 ms.assetid: e40beedb-68f3-4af9-89a8-268c90693082
 ms.tgt_platform: multiple
 keywords:
@@ -23,7 +23,7 @@ ms.locfileid: "118681549"
 ---
 # <a name="rpc-ns-transfer-syntax-attribute"></a>rpc-Ns-Transfer-Syntax-Attribut
 
-Die UUID der Übertragungssyntax, die vom aktuellen Eintrag unterstützt wird.
+Die UUID der Vom aktuellen Eintrag unterstützten Übertragungssyntax.
 
 
 
@@ -35,7 +35,7 @@ Die UUID der Übertragungssyntax, die vom aktuellen Eintrag unterstützt wird.
 | Aktualisieren von Berechtigungen  | \-                                          |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.314                      |
-| System-ID-GUID    | 29401c4a-7a27-11d0-afd6-00c04fd930c9        |
+| System-Id-Guid    | 29401c4a-7a27-11d0-afd6-00c04fd930c9        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -58,7 +58,7 @@ Die UUID der Übertragungssyntax, die vom aktuellen Eintrag unterstützt wird.
 | Link-ID                | \-                                                          |
 | MAPI-Id                | \-                                                          |
 | System-Only            | Falsch                                                       |
-| Ist einwertig       | Richtig                                                        |
+| Is-Single-Valued       | Richtig                                                        |
 | Ist indiziert             | Richtig                                                        |
 | Im globalen Katalog      | Falsch                                                       |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                |
@@ -79,7 +79,7 @@ Die UUID der Übertragungssyntax, die vom aktuellen Eintrag unterstützt wird.
 | Link-ID                | \-                                                          |
 | MAPI-Id                | \-                                                          |
 | System-Only            | Falsch                                                       |
-| Ist einwertig       | Richtig                                                        |
+| Is-Single-Valued       | Richtig                                                        |
 | Ist indiziert             | Richtig                                                        |
 | Im globalen Katalog      | Falsch                                                       |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                |
@@ -100,7 +100,7 @@ Die UUID der Übertragungssyntax, die vom aktuellen Eintrag unterstützt wird.
 | Link-ID                | \-                                                          |
 | MAPI-Id                | \-                                                          |
 | System-Only            | Falsch                                                       |
-| Ist einwertig       | Richtig                                                        |
+| Is-Single-Valued       | Richtig                                                        |
 | Ist indiziert             | Richtig                                                        |
 | Im globalen Katalog      | Falsch                                                       |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                |

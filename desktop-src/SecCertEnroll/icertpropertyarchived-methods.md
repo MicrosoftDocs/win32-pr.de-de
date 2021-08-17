@@ -1,19 +1,19 @@
 ---
-description: Die icertpropertyarchiviert-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die ICertPropertyArchived-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: A2F94821-E1D8-45B6-8C34-CA38591CB1BF
-title: Icertpropertyarchiviert-Methoden
+title: ICertPropertyArchived-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 83aa7074f697efebbba10c28c60bc7f29b18aac2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 60a22707ebf856bf8ba0288926ad017e448655f26b82531ce9c050409084dfaa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117779036"
 ---
-# <a name="icertpropertyarchived-methods"></a>Icertpropertyarchiviert-Methoden
+# <a name="icertpropertyarchived-methods"></a>ICertPropertyArchived-Methoden
 
-Die [**icertpropertyarchiviert**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyarchived) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ICertPropertyArchived-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyarchived) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

@@ -1,9 +1,9 @@
 ---
 title: NetworkSettings.Name-Eigenschaft
-description: Ruft für die Skripterstellung den Namen eines Netzwerkprofils ab oder legt den Namen fest.
+description: Ruft für die Skripterstellung den Namen eines Netzwerkprofils ab oder legt diesen fest.
 ms.assetid: 1b326236-c42f-4611-8c5e-296bf7b8c95b
 keywords:
-- Name-Eigenschaft Taskplaner
+- Name-Taskplaner
 - Name-Eigenschaft Taskplaner , NetworkSettings-Objekt
 - NetworkSettings-Objekt Taskplaner , Name-Eigenschaft
 topic_type:
@@ -25,7 +25,7 @@ ms.locfileid: "117759759"
 ---
 # <a name="networksettingsname-property"></a>NetworkSettings.Name-Eigenschaft
 
-Ruft für die Skripterstellung den Namen eines Netzwerkprofils ab oder legt den Namen fest. Der Name wird zu Anzeigezwecken verwendet.
+Ruft für die Skripterstellung den Namen eines Netzwerkprofils ab oder legt diesen fest. Der Name wird zu Anzeigezwecken verwendet.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -48,7 +48,7 @@ Der Name eines Netzwerkprofils.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |

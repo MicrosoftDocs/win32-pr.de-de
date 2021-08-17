@@ -1,7 +1,7 @@
 ---
-description: Beschreibt einen Animations Titel und gibt das Mischungs Gewicht, die Geschwindigkeit und die Position für den Track zu einem bestimmten Zeitpunkt an.
+description: Beschreibt eine Animationsspur und gibt die Mischung aus Gewichtung, Geschwindigkeit und Position für die Spur zu einem bestimmten Zeitpunkt an.
 ms.assetid: f1469b6f-861f-4b7d-a187-933092a5d257
-title: D3DXTRACK_DESC-Struktur (D3dx9anim. h)
+title: D3DXTRACK_DESC -Struktur (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9anim.h
-ms.openlocfilehash: 12f1604cf954bcdd6a2a898fec5410804112e498
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: cddabb3ea79951e35831c2cdc32e11baeb5c7c1c4ce174fd29d9382edb391953
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365309"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117731117"
 ---
-# <a name="d3dxtrack_desc-structure"></a>D3DXTRACK- \_ Struktur
+# <a name="d3dxtrack_desc-structure"></a>D3DXTRACK \_ DESC-Struktur
 
-Beschreibt einen Animations Titel und gibt das Mischungs Gewicht, die Geschwindigkeit und die Position für den Track zu einem bestimmten Zeitpunkt an.
+Beschreibt eine Animationsspur und gibt die Mischung aus Gewichtung, Geschwindigkeit und Position für die Spur zu einem bestimmten Zeitpunkt an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,61 +46,61 @@ typedef struct D3DXTRACK_DESC {
 **Priority**
 </dt> <dd>
 
-Type: **[ **D3DXPRIORITY- \_ Typ**](./d3dxpriority-type.md)**
+Typ: **[ **D3DXPRIORITY \_ TYPE**](./d3dxpriority-type.md)**
 
 </dd> <dd>
 
-Der Prioritäts Typen, wie in [**D3DXPRIORITY \_ Type**](./d3dxpriority-type.md)definiert.
+Prioritätstyp, wie in [**D3DXPRIORITY \_ TYPE definiert.**](./d3dxpriority-type.md)
 
 </dd> <dt>
 
 **Weight**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Gewichtungswert. Die Gewichtung bestimmt den Anteil dieses Titels zum Mischen mit anderen Spuren.
+Gewichtungswert. Die Gewichtung bestimmt den Anteil dieser Spur, der mit anderen Spuren kombiniert werden soll.
 
 </dd> <dt>
 
 **Geschwindigkeit**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Geschwindigkeitswert. Dies wird ähnlich wie bei einem Multiplikator verwendet, um den Zeitraum des Titels zu skalieren.
+Geschwindigkeitswert. Dies wird ähnlich wie ein Multiplikator verwendet, um den Zeitraum der Spur zu skalieren.
 
 </dd> <dt>
 
 **Position**
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Uhrzeit Position des Titels im lokalen Zeitrahmen des aktuellen Animations Satzes.
+Zeitposition der Spur im lokalen Zeitrahmen des aktuellen Animationssets.
 
 </dd> <dt>
 
 **Aktivieren**
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Nachverfolgen von aktivieren/deaktivieren. Legen Sie zum Aktivieren von auf **true** fest. Legen Sie zum Deaktivieren von auf **false** fest.
+Nachverfolgen des Aktivierens/Deaktivierens. Legen Sie zum Aktivieren auf **TRUE fest.** Legen Sie zum Deaktivieren auf **FALSE fest.**
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Spuren mit der gleichen Priorität werden kombiniert, und die beiden resultierenden Werte werden dann mithilfe des Prioritäts-Blend-Faktors gemischt. Einem Track muss ein Animations Satz (separat gespeichert) zugeordnet sein.
+Spuren mit der gleichen Priorität werden kombiniert, und die beiden resultierenden Werte werden dann mithilfe des Prioritätsmischungsfaktors kombiniert. Einer Spur muss ein Animationssatz (separat gespeichert) zugeordnet sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,11 +108,11 @@ Spuren mit der gleichen Priorität werden kombiniert, und die beiden resultieren
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9anim. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9anim.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

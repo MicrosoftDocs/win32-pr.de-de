@@ -1,52 +1,52 @@
 ---
-description: Gibt an, ob die ASF-Medienquelle die ungefähre Suche verwendet.
+description: Gibt an, ob die ASF-Medienquelle ungefähre Suchmöglichkeiten verwendet.
 ms.assetid: 4877b67c-524c-4717-a90f-6de21918d3d8
-title: MFPKEY_ASFMediaSource_ApproxSeek-Eigenschaft (mspdl. h)
+title: MFPKEY_ASFMediaSource_ApproxSeek -Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 253a18ebbdf78e3aa0ef0e79f41c4bf180a04b48
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 5f68dedbf2b008870021e620029a039c21465d4bb45a23428225d7c88fae6583
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106349774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117874334"
 ---
-# <a name="mfpkey_asfmediasource_approxseek-property"></a>Mfpkey \_ asfmediasource \_ approxseek (Eigenschaft)
+# <a name="mfpkey_asfmediasource_approxseek-property"></a>MFPKEY \_ ASFMediaSource \_ ApproxSeek (Eigenschaft)
 
-Gibt an, ob die ASF-Medienquelle die ungefähre Suche verwendet.
+Gibt an, ob die ASF-Medienquelle ungefähre Suchmöglichkeiten verwendet.
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
-**Variant \_ bool**
+**VARIANT \_ BOOL**
 
-VT \_ bool
+VT \_ BOOL
 
-**Boolesche Werte**
+**boolVal**
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen können diese Eigenschaft verwenden, um die ASF-Medienquelle zu konfigurieren. Um die-Eigenschaft festzulegen, übergeben Sie einen **IPropertyStore** -Zeiger an den quellresolver. Weitere Informationen finden Sie unter [Konfigurieren einer Medienquelle](configuring-a-media-source.md).
+Anwendungen können diese Eigenschaft verwenden, um die ASF-Medienquelle zu konfigurieren. Übergeben Sie zum Festlegen der -Eigenschaft einen **IPropertyStore-Zeiger** an den Quellre resolver. Weitere Informationen finden Sie unter [Konfigurieren einer Medienquelle.](configuring-a-media-source.md)
 
-Die ASF-Medienquelle behandelt die Suche wie folgt:
+Die ASF-Medienquelle verarbeitet suchte wie folgt:
 
--   Wenn der Wert dieser Eigenschaft **Variant \_ true** ist, verwendet die Medienquelle die ungefähre Suche, die weniger genau, aber schneller als die genaue Suche ist.
--   Wenn der Wert **Variant \_ false** ist und die ASF-Datei über einen Index verfügt, verwendet die Medienquelle die genaue Suche.
--   Wenn die ASF-Datei keinen Index enthält, verwendet die Medienquelle die approxmate-Suche, es sei denn, die Eigenschaft " [mfpkey \_ asfmediasource \_ iterativeseekifnoindex](mfpkey-asfmediasource-iterativeseekifnoindex.md) " ist auf **Variant \_ true** festgelegt.
--   Wenn die ASF-Datei keinen Index enthält und die Eigenschaft [mfpkey \_ asfmediasource \_ iterativeseekifnoindex](mfpkey-asfmediasource-iterativeseekifnoindex.md) den Wert **Variant \_ true** hat, verwendet die Medienquelle iteratives suchen. Das iterative suchen ist präziser, aber langsamer als die ungefähre Suche (in der Regel weniger genau als bei der exakten Suche).
+-   Wenn der Wert dieser Eigenschaft **VARIANT \_ TRUE** ist, verwendet die Medienquelle eine ungefähre Suche, die weniger genau, aber schneller als die genaue Suche ist.
+-   Wenn der Wert **VARIANT \_ FALSE ist** und die ASF-Datei über einen Index verfügt, verwendet die Medienquelle genaue Suchmöglichkeiten.
+-   Wenn die ASF-Datei keinen Index enthält, verwendet die Medienquelle camate seeking, es sei denn, die [ \_ \_ IterativeSeekIfNoIndex-Eigenschaft von MFPKEY ASFMediaSource](mfpkey-asfmediasource-iterativeseekifnoindex.md) ist auf **VARIANT TRUE \_ festgelegt.**
+-   Wenn die ASF-Datei keinen Index enthält und die [MFPKEY \_ ASFMediaSource \_ IterativeSeekIfNoIndex-Eigenschaft](mfpkey-asfmediasource-iterativeseekifnoindex.md) **VARIANT \_ TRUE** ist, verwendet die Medienquelle iterative Suchmöglichkeiten. Die iterative Suche ist genauer, aber langsamer als die ungefähre Suche (aber im Allgemeinen weniger genau als die genaue Suche).
     > [!Note]  
     > Erfordert Windows 7.
 
      
 
-Der Standardwert dieser Eigenschaft ist **Variant \_ false**.
+Der Standardwert dieser Eigenschaft ist **VARIANT \_ FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,17 +54,17 @@ Der Standardwert dieser Eigenschaft ist **Variant \_ false**.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

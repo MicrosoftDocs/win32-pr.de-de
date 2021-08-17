@@ -1,10 +1,10 @@
 ---
-title: Attribut "Additional-Trusted-Service-Names"
+title: Additional-Trusted-Service-Names-Attribut
 description: Eine Liste der Dienste in der Domäne, die als vertrauenswürdig eingestuft werden können. Nicht von AD verwendet.
 ms.assetid: 0c574a99-4036-408b-807c-b4b3394624c7
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des Attributs "Additional-Trusted-Service-Names"
+- AD-Schema des Additional-Trusted-Service-Names-Attributs
 - additionalTrustedServiceNames-Attribut AD-Schema
 topic_type:
 - apiref
@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118689176"
 ---
-# <a name="additional-trusted-service-names-attribute"></a>Attribut "Additional-Trusted-Service-Names"
+# <a name="additional-trusted-service-names-attribute"></a>Additional-Trusted-Service-Names-Attribut
 
 Eine Liste der Dienste in der Domäne, die als vertrauenswürdig eingestuft werden können. Nicht von AD verwendet.
 
@@ -35,7 +35,7 @@ Eine Liste der Dienste in der Domäne, die als vertrauenswürdig eingestuft werd
 | Aktualisieren von Berechtigungen  | \-                                          |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.889                      |
-| System-ID-GUID    | 032160be-9824-11d1-aec0-0000f80367c1        |
+| System-Id-Guid    | 032160be-9824-11d1-aec0-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -58,7 +58,7 @@ Eine Liste der Dienste in der Domäne, die als vertrauenswürdig eingestuft werd
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | Falsch                                                |
-| Ist einwertig       | Falsch                                                |
+| Is-Single-Valued       | Falsch                                                |
 | Ist indiziert             | Falsch                                                |
 | Im globalen Katalog      | Falsch                                                |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                         |
@@ -66,7 +66,7 @@ Eine Liste der Dienste in der Domäne, die als vertrauenswürdig eingestuft werd
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
 | System-Flags           | 0x00000010                                           |
-| In verwendete Klassen        | [**Vertrauenswürdige Domäne**](c-trusteddomain.md)<br/> |
+| In verwendete Klassen        | [**Trusted-Domain**](c-trusteddomain.md)<br/> |
 
 
 
@@ -79,7 +79,7 @@ Eine Liste der Dienste in der Domäne, die als vertrauenswürdig eingestuft werd
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | Falsch                                                |
-| Ist einwertig       | Falsch                                                |
+| Is-Single-Valued       | Falsch                                                |
 | Ist indiziert             | Falsch                                                |
 | Im globalen Katalog      | Falsch                                                |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                         |
@@ -87,7 +87,7 @@ Eine Liste der Dienste in der Domäne, die als vertrauenswürdig eingestuft werd
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
 | System-Flags           | 0x00000010                                           |
-| In verwendete Klassen        | [**Vertrauenswürdige Domäne**](c-trusteddomain.md)<br/> |
+| In verwendete Klassen        | [**Trusted-Domain**](c-trusteddomain.md)<br/> |
 
 
 
@@ -100,7 +100,7 @@ Eine Liste der Dienste in der Domäne, die als vertrauenswürdig eingestuft werd
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | Falsch                                                |
-| Ist einwertig       | Falsch                                                |
+| Is-Single-Valued       | Falsch                                                |
 | Ist indiziert             | Falsch                                                |
 | Im globalen Katalog      | Falsch                                                |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                         |
@@ -108,7 +108,7 @@ Eine Liste der Dienste in der Domäne, die als vertrauenswürdig eingestuft werd
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
 | System-Flags           | 0x00000010                                           |
-| In verwendete Klassen        | [**Vertrauenswürdige Domäne**](c-trusteddomain.md)<br/> |
+| In verwendete Klassen        | [**Trusted-Domain**](c-trusteddomain.md)<br/> |
 
 
 

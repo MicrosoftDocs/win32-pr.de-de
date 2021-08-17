@@ -1,7 +1,7 @@
 ---
-description: Eine Anwendungs definierte Funktion, die von der authzcomputegroupscallback-Funktion zugeordnete Arbeitsspeicher freigibt. Authzfregroupscallback ist ein Platzhalter für den Namen der Anwendungs definierten Funktion.
+description: Eine anwendungsdefinierte Funktion, die speicherbenutzerdefinierter Speicher frei gibt, der von der Funktion "HzComputeGroupsCallback" zugeordnet wird. HzFreeGroupsCallback ist ein Platzhalter für den anwendungsdefinierten Funktionsnamen.
 ms.assetid: 5563311c-2bd1-4e96-ba0a-5a4225050f77
-title: Authzfregroupscallback-Rückruffunktion
+title: Rückruffunktion "HzFreeGroupsCallback"
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - UserDefined
 api_location: ''
-ms.openlocfilehash: 7d8942acbc67f122ea79f0b9e98793628b5f21f8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3cce78e261892fede79fb8fc76bc5b0d009342db3e0bf672be2854cb8492bcec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103760825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117783764"
 ---
-# <a name="authzfreegroupscallback-callback-function"></a>Authzfregroupscallback-Rückruffunktion
+# <a name="authzfreegroupscallback-callback-function"></a>Rückruffunktion "HzFreeGroupsCallback"
 
-Die **authzfregroupscallback** -Funktion ist eine Anwendungs definierte Funktion, die von der [**authzcomputegroupscallback**](authzcomputegroupscallback.md) -Funktion zugeordnete Arbeitsspeicher freigibt. **Authzfregroupscallback** ist ein Platzhalter für den Namen der Anwendungs definierten Funktion.
+Die **Funktion "FixhzFreeGroupsCallback"** ist eine anwendungsdefinierte Funktion, die den von der [**Funktion "AghzComputeGroupsCallback"**](authzcomputegroupscallback.md) zugewiesenen Arbeitsspeicher frei gibt. **HzFreeGroupsCallback** ist ein Platzhalter für den anwendungsdefinierten Funktionsnamen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,10 +38,10 @@ void CALLBACK AuthzFreeGroupsCallback(
 
 <dl> <dt>
 
-*psidattrarray* \[ in\]
+*pSidAttrArray* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den von [**authzcomputegroupscallback**](authzcomputegroupscallback.md)zugeordneten Arbeitsspeicher.
+Ein Zeiger auf den arbeitsspeicherbelegten Speicher, der [**vonHzComputeGroupsCallback zugeordnet wird.**](authzcomputegroupscallback.md)
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Ein Zeiger auf den von [**authzcomputegroupscallback**](authzcomputegroupscallba
 
 Diese Rückruffunktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Attribut Variablen müssen in Form eines Ausdrucks vorliegen, wenn Sie mit logischen Operatoren verwendet werden. Andernfalls werden Sie als UNKNOWN ausgewertet.
+Attributvariablen müssen in Form eines Ausdrucks sein, wenn sie mit logischen Operatoren verwendet werden. andernfalls werden sie als unbekannt ausgewertet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,20 +59,20 @@ Attribut Variablen müssen in Form eines Ausdrucks vorliegen, wenn Sie mit logis
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                   |
-| Verteilbare Komponente<br/>          | Windows Server 2003-Verwaltungs Tools Pack unter Windows XP<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                   |
+| Verteilbare Komponente<br/>          | Windows Server 2003 Administration Tools Pack unter Windows XP<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Grundlegende Access Control Funktionen](authorization-functions.md)
 </dt> <dt>
 
-[**Authzcomputegroupscallback**](authzcomputegroupscallback.md)
+[**HzComputeGroupsCallback**](authzcomputegroupscallback.md)
 </dt> </dl>
 
  
