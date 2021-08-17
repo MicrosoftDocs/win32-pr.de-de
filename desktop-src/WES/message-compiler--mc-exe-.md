@@ -145,7 +145,7 @@ Der Compiler ignoriert dieses Argument.
 
 ### <a name="arguments-specific-to-generating-code-that-your-provider-would-use-to-log-events"></a>Argumente für das Generieren von Code, den Ihr Anbieter zum Protokollieren von Ereignissen verwenden würde
 
-Sie können die folgenden Compilerargumente verwenden, um Kernelmodus- oder Benutzermoduscode zu generieren, den Sie zum Protokollieren von Ereignissen verwenden können. Sie können auch anfordern, dass der Compiler Code generiert, um das Schreiben von Ereignissen auf Computern vor Windows Vista zu unterstützen. Wenn Ihre Anwendung in C# geschrieben ist, kann der Compiler eine C#-Klasse generieren, die Sie zum Protokollieren von Ereignissen verwenden können. Diese Argumente sind ab MC-Version 1.12.7051 verfügbar, die mit der Windows 7-Version des Window SDK ausgeliefert wird.
+Sie können die folgenden Compilerargumente verwenden, um Kernelmodus- oder Benutzermoduscode zu generieren, mit dem Sie Ereignisse protokollieren können. Sie können auch anfordern, dass der Compiler Code generiert, um das Schreiben von Ereignissen auf Computern vor Windows Vista zu unterstützen. Wenn Ihre Anwendung in C# geschrieben ist, kann der Compiler eine C#-Klasse generieren, die Sie zum Protokollieren von Ereignissen verwenden können. Diese Argumente sind ab MC-Version 1.12.7051 verfügbar, die mit der Windows 7-Version des Window SDK ausgeliefert wird.
 
 <dl> <dt>
 
@@ -246,7 +246,7 @@ Verwenden Sie dieses Argument, damit der Compiler den Benutzermoduscode generier
 
 Damit der Compiler Protokollierungscode generieren kann, müssen Sie das **Argument -um,** **-cs,** **-css** oder **-km angeben.** diese Argumente schließen sich gegenseitig aus.
 
-Verwenden Sie das -h-Argument, um anzugeben, wo die vom Compiler generierten H-, CS- und **MOF-Dateien gespeichert werden.** Wenn Sie das Argument **-h nicht angeben,** werden die Dateien im aktuellen Ordner abgelegt.
+Verwenden Sie das -h-Argument, um anzugeben, wo die vom Compiler generierten H-, CS- und **MOF-Dateien gespeichert werden.** Wenn Sie das Argument **-h nicht** angeben, werden die Dateien im aktuellen Ordner abgelegt.
 
 Verwenden Sie das **Argument -r,** um anzugeben, wo die RC-Datei und binäre Dateien gespeichert werden (die die Metadatenressourcen enthalten), die der Compiler generiert. Wenn Sie das Argument **-r nicht** angeben, werden die Dateien im aktuellen Ordner abgelegt.
 
@@ -266,7 +266,7 @@ Verwenden Sie dieses Argument, um anzugeben, dass die *Dateinameneingabedatei* I
 <span id="-A"></span><span id="-a"></span>**-A**
 </dt> <dd>
 
-Veraltet. Verwenden Sie dieses Argument, um anzugeben, dass die Nachrichten in der BIN-Ausgabedatei ANSI sein sollen.
+Veraltet. Verwenden Sie dieses Argument, um anzugeben, dass die Nachrichten in der AUSGABE-BIN-Datei ANSI sein sollen.
 
 </dd> <dt>
 

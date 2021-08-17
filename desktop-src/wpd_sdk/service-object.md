@@ -19,8 +19,8 @@ Das Dienstobjekt muss die folgenden Eigenschaften unterstützen.
 
 | Eigenschaftsname                                                                                                                      | Erforderlich oder optional                                                                  |
 |------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| [\_ \_ WPD-OBJEKT-ID](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                                         | Erforderlich. .                                                                           |
-| [ÜBERGEORDNETE ID \_ DES WPD-OBJEKTS \_ \_](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                   | Erforderlich.                                                                             |
+| [\_WPD-OBJEKT-ID \_](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                                         | Erforderlich. .                                                                           |
+| [ÜBERGEORDNETE ID DES \_ \_ WPD-OBJEKTS \_](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                   | Erforderlich.                                                                             |
 | [\_WPD-OBJEKTNAME \_](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                                   | Erforderlich.                                                                             |
 | [PERSISTENTE EINDEUTIGE ID \_ DES WPD-OBJEKTS \_ \_ \_](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85)) | Erforderlich.                                                                             |
 | [\_WPD-OBJEKT \_ ISHIDDEN](/previous-versions/windows/hardware/drivers/ff597893(v=vs.85))                                       | Erforderlich, wenn das Dienstobjekt dem Benutzer nicht angezeigt werden soll.                       |
@@ -40,7 +40,7 @@ Diese Objekte hosten in der Regel keine Ressourcen.
 
 ## <a name="typical-formats"></a>Typische Formate
 
-In der folgenden Liste sind typische Formate aufgeführt, die vom Dienstobjekt verwendet werden. Dieses Objekt ist jedoch nicht auf diese Formate beschränkt.
+In der folgenden Liste sind die typischen Formate aufgeführt, die vom Dienstobjekt verwendet werden. Dieses Objekt ist jedoch nicht auf diese Formate beschränkt.
 
 -   \_ \_ WPD-OBJEKTFORMAT \_ NICHT ANGEGEBEN
 

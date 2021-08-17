@@ -36,7 +36,7 @@ Die **IScanProfile-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                     | Beschreibung                                                                                                                                         |
+| Methode                                                     | BESCHREIBUNG                                                                                                                                         |
 |:-----------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**GetAllPropIDs**](-wia-iscanprofile-getallpropids.md)   | Ruft alle verfügbaren Eigenschaften-IDs in einem Profil ab.<br/>                                                                                            |
 | [**GetDeviceID**](-wia-iscanprofile-getdeviceid.md)       | Gibt die ID des Geräts zurück.<br/>                                                                                                            |
@@ -82,7 +82,7 @@ Das `<Properties>` -Element enthält `<Property>` untergeordnete Elemente. Verwe
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

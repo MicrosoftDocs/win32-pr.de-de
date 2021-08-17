@@ -1,5 +1,5 @@
 ---
-description: Die CIM CollectedCollections-Klasse ist eine Aggregationsassoz, die eine Auflistung von \_ verwalteten Systemelementen (Managed System Elements, MSE) darstellt, die in einer Auflistung von MSEs enthalten sind.
+description: Die CIM \_ CollectedCollections-Klasse ist eine Aggregationszuordnung, die eine Auflistung verwalteter Systemelemente (Managed System Elements, MSE) darstellt, die in einer Sammlung von MSEs enthalten sind.
 ms.assetid: 7baaf429-1211-4545-ace2-c6312d53c0f6
 ms.tgt_platform: multiple
 title: CIM_CollectedCollections-Klasse
@@ -25,10 +25,10 @@ ms.locfileid: "119322290"
 ---
 # <a name="cim_collectedcollections-class"></a>CIM \_ CollectedCollections-Klasse
 
-Die **CIM \_ CollectedCollections-Klasse** ist eine Aggregationsassoz, die eine Auflistung von verwalteten Systemelementen (Managed System Elements, MSE) darstellt, die in einer Auflistung von MSEs enthalten sind.
+Die **CIM \_ CollectedCollections-Klasse** ist eine Aggregationszuordnung, die eine Auflistung verwalteter Systemelemente (Managed System Elements, MSE) darstellt, die in einer Sammlung von MSEs enthalten sind.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
@@ -46,7 +46,7 @@ class CIM_CollectedCollections
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ CollectedCollections-Klasse** verfügt über die folgenden Membertypen:
+Die **CIM \_ CollectedCollections-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -78,7 +78,7 @@ Datentyp: **CIM \_ CollectionOfMSEs**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verweis auf die "gesammelte" **Auflistung**.
+Verweis auf die sammlungsauflistung .
 
 </dd> </dl>
 
@@ -86,7 +86,7 @@ Verweis auf die "gesammelte" **Auflistung**.
 
 WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 

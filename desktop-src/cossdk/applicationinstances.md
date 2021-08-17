@@ -1,7 +1,7 @@
 ---
-description: Ruft Informationen zu laufenden Anwendungen ab.
+description: Ruft Informationen zum Ausführen von Anwendungen ab.
 ms.assetid: 148e42aa-e99e-4fa2-8b74-a7ebf82b99d0
-title: ApplicationInstance-Auflistung
+title: ApplicationInstances-Sammlung
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,74 +12,74 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 56680a81cc564466dc3586bf0381cf4db97f914b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 957fe3fa556a3e41e2484116ff2c9242fd63efa1469a4a6040f31aa04a3627e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483163"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119129382"
 ---
-# <a name="applicationinstances-collection"></a>ApplicationInstance-Auflistung
+# <a name="applicationinstances-collection"></a>ApplicationInstances-Sammlung
 
-Ruft Informationen zu laufenden Anwendungen ab.
+Ruft Informationen zum Ausführen von Anwendungen ab.
 
-Diese Auflistung unterstützt die [**Add**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) -und [**Remove**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) -Methoden des [**comadmincatalogcollection**](comadmincatalogcollection.md) -Objekts.
+Diese Sammlung unterstützt die [**Add- und**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
 ## <a name="members"></a>Member
 
-Die **ApplicationInstance** -Auflistung erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle, verfügt jedoch nicht über zusätzliche Member.
+Die **ApplicationInstances-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
-## <a name="related-collections"></a>Verwandte Auflistungen
+## <a name="related-collections"></a>Verwandte Sammlungen
 
 Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 
 -   [**ErrorInfo**](errorinfo.md)
--   [**PropertyInfo**](propertyinfo.md)
--   [**Relatedcollectioninfo**](relatedcollectioninfo.md)
+-   [**Propertyinfo**](propertyinfo.md)
+-   [**RelatedCollectionInfo**](relatedcollectioninfo.md)
 
-Sie können von den folgenden Sammlungen aus zu dieser Sammlung navigieren:
+Sie können von den folgenden Sammlungen zu dieser Sammlung navigieren:
 
 -   [**Anwendungen**](applications.md)
--   [**Fasst**](root.md)
+-   [**wurzel**](root.md)
 
 ## <a name="properties"></a>Eigenschaften
 
-Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatalogobject.md) -Objekt in der-Auflistung unterstützt:
+Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadmincatalogobject.md) in der Auflistung unterstützt:
 
 -   [Anwendung](#applicationinstances-collection)
--   [Hasrecycelt](#hasrecycled)
+-   [HasRecycled](#hasrecycled)
 -   [InstanceID](#instanceid)
 -   [IsPaused](#ispaused)
 -   [PartitionID](#partitionid)
 -   [ProcessID](#processid)
 
-### <a name="application"></a>Application
+### <a name="application"></a>Anwendung
 
 
 
 | Eingabe | Wert |
 |----------------|-------------------------------------|
-| BESCHREIBUNG    | Die ID für die laufende Anwendung. |
-| Access         | ReadOnly                            |
+| Beschreibung    | Die ID für die ausgeführte Anwendung. |
+| Zugriff         | ReadOnly                            |
 | type           | String                              |
-| Standard        | –                                 |
-| Minimalsystem | Windows XP                          |
+| Standard        | Nicht zutreffend                                 |
+| Mindestsystem | Windows XP                          |
 
 
 
  
 
-### <a name="hasrecycled"></a>Hasrecycelt
+### <a name="hasrecycled"></a>HasRecycled
 
 
 
 | Eingabe | Wert |
 |----------------|---------------------------------------------------------------|
-| BESCHREIBUNG    | Gibt an, ob die Anwendungs Instanz wieder verwendet wurde. |
-| Access         | ReadOnly                                                      |
+| Beschreibung    | Gibt an, ob die Anwendungsinstanz wiederverwendet wurde. |
+| Zugriff         | ReadOnly                                                      |
 | type           | Bool                                                          |
 | Standard        | Falsch                                                         |
-| Minimalsystem | Windows XP                                                    |
+| Mindestsystem | Windows XP                                                    |
 
 
 
@@ -91,11 +91,11 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 | Eingabe | Wert |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Der Globally Unique Identifier für die Anwendungs Instanz. Diese Eigenschaft wird zurückgegeben, wenn die [**Schlüssel**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) -oder [**Name**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) -Eigenschaften Methode für ein Objekt dieser Auflistung aufgerufen wird. |
-| Access         | ReadOnly                                                                                                                                                                                                                            |
+| Beschreibung    | Der global eindeutige Bezeichner für die Anwendungsinstanz. Diese Eigenschaft wird zurückgegeben, wenn die [**Key-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) oder [**Name-Eigenschaftsmethode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) für ein Objekt dieser Auflistung aufgerufen wird. |
+| Zugriff         | ReadOnly                                                                                                                                                                                                                            |
 | type           | String                                                                                                                                                                                                                              |
-| Standard        | –                                                                                                                                                                                                                                 |
-| Minimalsystem | Windows XP                                                                                                                                                                                                                          |
+| Standard        | Nicht zutreffend                                                                                                                                                                                                                                 |
+| Mindestsystem | Windows XP                                                                                                                                                                                                                          |
 
 
 
@@ -107,27 +107,27 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------------------------------|
-| BESCHREIBUNG    | Gibt an, ob die Anwendungs Instanz zurzeit angehalten ist. |
-| Access         | ReadOnly                                                        |
+| Beschreibung    | Gibt an, ob die Anwendungsinstanz derzeit angehalten ist. |
+| Zugriff         | ReadOnly                                                        |
 | type           | Bool                                                            |
 | Standard        | Falsch                                                           |
-| Minimalsystem | Windows XP                                                      |
+| Mindestsystem | Windows XP                                                      |
 
 
 
  
 
-### <a name="partitionid"></a>PartitionID
+### <a name="partitionid"></a>Partitionid
 
 
 
 | Eingabe | Wert |
 |----------------|-------------------------------------------------|
-| BESCHREIBUNG    | Die Partitions-ID, die von der Anwendung verwendet wird. |
-| Access         | ReadOnly                                        |
+| Beschreibung    | Die Partitions-ID, die von der Anwendung verwendet wird. |
+| Zugriff         | ReadOnly                                        |
 | type           | String                                          |
-| Standard        | –                                             |
-| Minimalsystem | Windows XP                                      |
+| Standard        | Nicht zutreffend                                             |
+| Mindestsystem | Windows XP                                      |
 
 
 
@@ -139,21 +139,21 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 | Eingabe | Wert |
 |----------------|---------------------------------------------|
-| BESCHREIBUNG    | Die Prozess-ID der Anwendungs Instanz. |
-| Access         | ReadOnly                                    |
+| Beschreibung    | Die Prozess-ID der Anwendungsinstanz. |
+| Zugriff         | ReadOnly                                    |
 | type           | String                                      |
-| Standard        | –                                         |
-| Minimalsystem | Windows XP                                  |
+| Standard        | Nicht zutreffend                                         |
+| Mindestsystem | Windows XP                                  |
 
 
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Com+-Verwaltungs Sammlungen](com--administration-collections.md)
+[COM+-Verwaltungssammlungen](com--administration-collections.md)
 </dt> </dl>
 
  

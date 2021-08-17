@@ -1,12 +1,12 @@
 ---
-title: IMsRdpDeviceV2 iscompositedevice (Eigenschaft)
-description: Gibt an, ob es sich um ein zusammengesetztes Gerät handelt.
+title: IMsRdpDeviceV2 IsCompositeDevice (Eigenschaft)
+description: Gibt an, ob das Gerät ein zusammengesetztes Gerät ist.
 ms.assetid: cc54f3f0-de0b-4f75-b5a1-4f061ac95ab5
 ms.tgt_platform: multiple
 keywords:
-- Iscompositedevice-Eigenschaft Remotedesktopdienste
-- Iscompositedevice-Eigenschaft Remotedesktopdienste, IMsRdpDeviceV2-Schnittstelle
-- IMsRdpDeviceV2 Interface Remotedesktopdienste, iscompositedevice-Eigenschaft
+- IsCompositeDevice-Remotedesktopdienste
+- IsCompositeDevice-Eigenschaft Remotedesktopdienste , IMsRdpDeviceV2-Schnittstelle
+- IMsRdpDeviceV2-Schnittstelle Remotedesktopdienste , IsCompositeDevice-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2341544543f436272486a839ffdd3ee68a4a4478
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c271c78eabd007641033d7171edc4b4ced1a70b9f18eb366fb30a8bac75254f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475219"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119138553"
 ---
-# <a name="imsrdpdevicev2iscompositedevice-property"></a>IMsRdpDeviceV2:: iscompositedevice-Eigenschaft
+# <a name="imsrdpdevicev2iscompositedevice-property"></a>IMsRdpDeviceV2::IsCompositeDevice (Eigenschaft)
 
-Gibt an, ob es sich um ein zusammengesetztes Gerät handelt.
+Gibt an, ob das Gerät ein zusammengesetztes Gerät ist.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -44,7 +44,7 @@ HRESULT get_IsCompositeDevice(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-" **true** ", wenn das Gerät ein zusammengesetztes Gerät ist. andernfalls **false**.
+**TRUE,** wenn das Gerät ein zusammengesetztes Gerät ist; andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,11 +56,11 @@ HRESULT get_IsCompositeDevice(
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 mit SP1<br/>                                             |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IMsRdpDeviceV2 wird als 5b94466-7661-42a8-98b7-01904c11668f definiert.<br/>      |
+| IID<br/>                      | IID \_ IMsRdpDeviceV2 ist als 5fb94466-7661-42a8-98b7-01904c11668f definiert.<br/>      |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

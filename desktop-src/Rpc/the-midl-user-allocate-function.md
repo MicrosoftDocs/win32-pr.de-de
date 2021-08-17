@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118924249"
 ---
-# <a name="the-midl_user_allocate-function"></a>Die \_ Midl-Benutzerfunktion \_ "allocate"
+# <a name="the-midl_user_allocate-function"></a>Die \_ \_ midl-Benutzer-Zuordnungsfunktion
 
-Die **\_ Midl-Benutzer-Zuordnungsfunktion \_** ist eine Prozedur, die von Entwicklern von RPC-Anwendungen bereitgestellt werden muss. Sie weist Arbeitsspeicher für die RPC-Stubs und Bibliotheksroutinen zu. Ihre **\_ Midl-Benutzer-Zuordnungsfunktion \_** muss mit dem folgenden Prototyp übereinstimmen:
+Die **\_ Midl-Benutzer-Zuordnungsfunktion \_** ist eine Prozedur, die von Entwicklern von RPC-Anwendungen bereitgestellt werden muss. Er weist Arbeitsspeicher für die RPC-Stubs und Bibliotheksroutinen zu. Ihre **\_ Midl-Benutzer-Zuordnungsfunktion \_** muss mit dem folgenden Prototyp übereinstimmen:
 
 ``` syntax
 void __RPC_FAR * __RPC_USER midl_user_allocate (size_t cBytes);
@@ -23,7 +23,7 @@ Der *cBytes-Parameter* gibt die Anzahl der zu reservierenden Bytes an. Sowohl Cl
 
 -   Die Client- und Serveranwendungen rufen **midl \_ user \_ allocate** auf, um Arbeitsspeicher für die Anwendung zu reservieren, z. B. beim Erstellen eines neuen Knotens in einer Struktur oder verknüpften Liste.
 -   Der Serverstub ruft **midl \_ user allocate \_ auf,** wenn die Zuordnung von Daten im Serveradressenbereich entmardt wird.
--   Der Clientstub ruft **midl \_ user allocate \_ auf,** wenn daten vom Server, auf den von einem Out-Zeiger verwiesen wird, nicht imShashaling \[ gespeichert \] werden. Beachten Sie, dass der Clientstub für in , out und eindeutige Zeiger nur dann midl user allocate aufruft, wenn der eindeutige Zeigerwert bei der Eingabe NULL war und sich während des Aufrufs in einen Wert ändert, der nicht \[ \] NULL \[ \] \[ \] **\_ \_** \[ \] ist. Wenn der eindeutige Zeiger bei der Eingabe nicht NULL war, schreibt der \[ \] Clientstub die zugeordneten Daten in den vorhandenen Arbeitsspeicher.
+-   Der Clientstub ruft **midl \_ user allocate \_ auf,** wenn daten vom Server, auf den von einem Out-Zeiger verwiesen wird, nicht imShaling \[ gespeichert \] werden. Beachten Sie, dass der Clientstub für in , out und eindeutige Zeiger nur dann midl user allocate aufruft, wenn der eindeutige Zeigerwert bei der Eingabe NULL war und sich während des Aufrufs in einen Wert ändert, der nicht \[ \] NULL \[ \] \[ \] **\_ \_** \[ \] ist. Wenn der eindeutige Zeiger bei der Eingabe nicht NULL war, schreibt der \[ \] Clientstub die zugeordneten Daten in den vorhandenen Arbeitsspeicher.
 
 Wenn **bei der \_ Midl-Benutzerbeteilung \_** kein Arbeitsspeicher reserviert werden kann, sollte ein NULL-Zeiger zurückgegeben werden.
 
@@ -42,7 +42,7 @@ void __RPC_FAR * __RPC_USER midl_user_allocate(size_t cBytes)
 
 
 > [!Note]  
-> Wenn das RpcSs-Paket aktiviert ist (z. B. als Ergebnis der Verwendung des Attributs \[ [**enable \_ allocate),**](/windows/desktop/Midl/enable-allocate) verwenden Sie \] [**RpcSmAllocate,**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcsmallocate) um Arbeitsspeicher auf serverseitiger Seite zu reservieren. Weitere Informationen zum Aktivieren der \[ **Zuordnung finden \_ Sie** \] in der [MIDL-Referenz.](/windows/desktop/Midl/midl-language-reference)
+> Wenn das RpcSs-Paket aktiviert ist (z. B. als Ergebnis der Verwendung des Attributs \[ [**enable \_ allocate),**](/windows/desktop/Midl/enable-allocate) verwenden Sie \] [**RpcSmAllocate,**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcsmallocate) um Arbeitsspeicher auf der Serverseite zu reservieren. Weitere Informationen zum Aktivieren der \[ **Zuordnung finden \_ Sie** \] in der [MIDL-Referenz.](/windows/desktop/Midl/midl-language-reference)
 
  
 

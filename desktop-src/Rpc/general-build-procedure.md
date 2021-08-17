@@ -1,6 +1,6 @@
 ---
 title: Allgemeine Buildprozedur
-description: Navigationsseite für den Prozess zum Erstellen einer Client-/Serveranwendung mithilfe des Remoteprozeduraufrufs (RPC).
+description: Navigationsseite für den Prozess zum Erstellen einer Client-/Serveranwendung mithilfe des Remoteprozeduraufrufs (REMOTE Procedure Call, RPC).
 ms.assetid: 77fa9f30-c370-4ec2-8c23-6037ec520dc3
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118929632"
 ---
 # <a name="general-build-procedure"></a>Allgemeine Buildprozedur
 
-Der Prozess zum Erstellen einer Client-/Serveranwendung mitHilfe von Microsoft RPC ist:
+Der Prozess zum Erstellen einer Client-/Serveranwendung mithilfe von Microsoft RPC ist:
 
 -   Entwickeln Sie die -Schnittstelle.
 -   Entwickeln Sie den Server, der die -Schnittstelle implementiert.
@@ -23,9 +23,9 @@ Die folgende Abbildung veranschaulicht diese Schritte.
 
 ![Prozess zum Erstellen einer Client-Server-Anwendung mit microsoft rpc](images/appdev.png)
 
-Es ist möglich und üblich, die Client- und Serveranwendungen gleichzeitig zu entwickeln. Da sowohl das Client- als auch das Serverprogramm von der -Schnittstelle abhängig sind, muss die Schnittstelle zwischen ihnen jedoch vor der Entwicklung von Client und Server entwickelt werden, wie im vorherigen Diagramm dargestellt.
+Es ist möglich und üblich, die Client- und Serveranwendungen gleichzeitig zu entwickeln. Da die Client- und Serverprogramme jedoch von der -Schnittstelle abhängig sind, muss die Schnittstelle zwischen ihnen entwickelt werden, bevor der Client und der Server entwickelt werden, wie im vorherigen Diagramm dargestellt.
 
-In diesem Abschnitt werden die Schritte erläutert, die zum Erstellen einer Client-/Serveranwendung mit RPC erforderlich sind. Die Informationen werden in den folgenden Themen vorgestellt:
+In diesem Abschnitt werden die erforderlichen Schritte zum Erstellen einer Client-/Serveranwendung mit RPC erläutert. Die Informationen werden in den folgenden Themen vorgestellt:
 
 -   [Entwickeln der Schnittstelle](developing-the-interface.md)
 -   [Entwickeln des Servers](developing-the-server.md)

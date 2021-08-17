@@ -1,11 +1,11 @@
 ---
 title: Win32_TSVirtualDesktopServerSettings-Klasse
-description: Enthält Konfigurationsinformationen für einen Remotedesktop-Virtualisierungshost Server (RD-Virtualisierungshost).
+description: Enthält Konfigurationsinformationen für einen Remotedesktop Virtualization Host(RD Virtualization Host)-Server.
 ms.assetid: 749018aa-a8aa-433e-985b-40b44ef8aa7f
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSVirtualDesktopServerSettings-Klasse Remotedesktopdienste
-- Win32_TSVirtualDesktopServerSettings Klasse Remotedesktopdienste, beschrieben
+- Win32_TSVirtualDesktopServerSettings-Remotedesktopdienste
+- Win32_TSVirtualDesktopServerSettings klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c39635aee7b32430ace0ead0e3b007051a3c049d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f40e7d51ee0c92e50afca023629bb92de9f506b3e47ee9e520aa16c09640375b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743265"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137463"
 ---
-# <a name="win32_tsvirtualdesktopserversettings-class"></a>Win32- \_ Klasse "tvirtualdesktopserversettings"
+# <a name="win32_tsvirtualdesktopserversettings-class"></a>Win32 \_ TSVirtualDesktopServerSettings-Klasse
 
-Enthält Konfigurationsinformationen für einen Remotedesktop-Virtualisierungshost Server (RD-Virtualisierungshost).
+Enthält Konfigurationsinformationen für einen Remotedesktop Virtualization Host(RD Virtualization Host)-Server.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -46,30 +46,30 @@ class Win32_TSVirtualDesktopServerSettings
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ tvirtualdesktopserversettings** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSVirtualDesktopServerSettings-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ tvirtualdesktopserversettings** " verfügt über diese Eigenschaften.
+Die **Win32 \_ TSVirtualDesktopServerSettings-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Parallelität**
+**Concurrency**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die maximal zulässigen gleichzeitigen Bereitstellungs Anforderungen für diesen virtuellen Desktop Server.
+Die maximal zulässige Anzahl gleichzeitiger Bereitstellungsanforderungen für diesen Virtual Desktop-Server.
 
 </dd> <dt>
 
-**Policysourcesessionbrokername**
+**PolicySourceSessionBrokerName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -78,11 +78,11 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn der Wert auf 0 festgelegt ist, wird angegeben, dass die **sessionbrokername** -Eigenschaft vom Server konfiguriert wird. Wenn der Wert auf 1 festgelegt ist, wird die Eigenschaft **sessionbrokername** von einer Gruppenrichtlinie konfiguriert.
+Wenn diese Einstellung auf 0 festgelegt ist, gibt an, dass die **SessionBrokerName-Eigenschaft** vom Server konfiguriert wird. Wenn auf 1 festgelegt, gibt an, dass die **SessionBrokerName-Eigenschaft** durch eine Gruppenrichtlinie konfiguriert wird.
 
 </dd> <dt>
 
-**Sessionbrokername**
+**SessionBrokerName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -91,7 +91,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der voll qualifizierte Distinguished Name des Sitzungs Brokers für den RD-Virtualisierungshostserver.
+Der vollqualifizierte Distinguished Name des Sitzungsbrokers für den RD-Virtualisierungshostserver.
 
 </dd> </dl>
 
@@ -104,7 +104,7 @@ Der voll qualifizierte Distinguished Name des Sitzungs Brokers für den RD-Virtu
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                             |
 | Namespace<br/>                | Root \\ CIMV2 \\ TerminalServices<br/>                                                   |
-| MOF<br/>                      | <dl> <dt>"Zvmhost. mof"</dt> </dl>    |
+| MOF<br/>                      | <dl> <dt>TSVmHost.mof</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>TSVmHostWmi.dll</dt> </dl> |
 
 

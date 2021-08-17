@@ -1,9 +1,9 @@
 ---
-title: Controls. IsAvailable
-description: Die IsAvailable-Eigenschaft gibt an, ob ein angegebener Informationstyp verfügbar ist oder eine bestimmte Aktion ausgeführt werden kann. | Controls. IsAvailable
+title: Controls.isAvailable
+description: Die isAvailable-Eigenschaft gibt an, ob ein angegebener Informationstyp verfügbar ist oder eine angegebene Aktion ausgeführt werden kann. | Controls.isAvailable
 ms.assetid: d2bfaa67-eac9-4fc4-9424-636ddb4b35d6
 keywords:
-- Steuerelemente. IsAvailable Windows Media Player
+- Controls.isAvailable Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 61afa07596a55208be63bd29759fd5f9f3e10170
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 502343b7654241a00e9efb33acc6f5de842c6fb6bad650f24839a5fe7febf9b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370204"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135743"
 ---
-# <a name="controlsisavailable"></a>Controls. IsAvailable
+# <a name="controlsisavailable"></a>Controls.isAvailable
 
-Die **IsAvailable** -Eigenschaft gibt an, ob ein angegebener Informationstyp verfügbar ist oder eine bestimmte Aktion ausgeführt werden kann.
+Die **isAvailable-Eigenschaft** gibt an, ob ein angegebener Informationstyp verfügbar ist oder eine angegebene Aktion ausgeführt werden kann.
 
 ``` syntax
 player.controls.isAvailable(
@@ -35,23 +35,23 @@ player.controls.isAvailable(
 
 *name*
 
-Eine **Zeichenfolge** , die einen der folgenden Werte enthält.
+**Eine Zeichenfolge,** die einen der folgenden Werte enthält.
 
 
 
 | Zeichenfolge          | Beschreibung                                                                                                                                                       |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| currentItem     | Bestimmt, **ob der Benutzer die Eigenschaft "** Eigenschaft" festlegen kann.                                                                                                 |
-| currentmarker   | Bestimmt, ob der Benutzer einen bestimmten Marker suchen kann.                                                                                                        |
-| CurrentPosition | Bestimmt, ob der Benutzer eine bestimmte Position in der Datei suchen kann. Einige Dateien unterstützen keine Suchvorgänge.                                                       |
-| FastForward     | Bestimmt, ob die Datei eine schnelle Weiterleitung unterstützt und ob diese Funktion aufgerufen werden kann. FastForward wird von vielen Dateitypen (oder Livestreams) nicht unterstützt. |
-| fastreverse     | Bestimmt, ob die Datei fastreverse unterstützt und ob diese Funktion aufgerufen werden kann. Fastreverse wird von vielen Dateitypen (oder Livestreams) nicht unterstützt.     |
-| Weiter            | Bestimmt, ob der Benutzer den nächsten Eintrag in einer Wiedergabeliste suchen kann.                                                                                             |
-| pause           | Bestimmt, ob die **Pause** -Methode verfügbar ist.                                                                                                             |
-| Theater            | Bestimmt, ob die **Play** -Methode verfügbar ist.                                                                                                              |
+| Currentitem     | Bestimmt, ob der Benutzer die **currentItem-Eigenschaft festlegen** kann.                                                                                                 |
+| currentMarker   | Bestimmt, ob der Benutzer nach einem bestimmten Marker suchen kann.                                                                                                        |
+| currentPosition | Bestimmt, ob der Benutzer eine bestimmte Position in der Datei suchen kann. Einige Dateien unterstützen keine Suchunterstützung.                                                       |
+| Fastforward     | Bestimmt, ob die Datei die schnelle Weiterleitung unterstützt und ob diese Funktionalität aufgerufen werden kann. Viele Dateitypen (oder Livestreams) unterstützen fastForward nicht. |
+| fastReverse     | Bestimmt, ob die Datei fastReverse unterstützt und ob diese Funktionalität aufgerufen werden kann. Viele Dateitypen (oder Livestreams) unterstützen fastReverse nicht.     |
+| Weiter            | Bestimmt, ob der Benutzer nach dem nächsten Eintrag in einer Wiedergabeliste suchen kann.                                                                                             |
+| pause           | Bestimmt, ob die **pause-Methode** verfügbar ist.                                                                                                             |
+| Spielen            | Bestimmt, ob die **Wiedergabemethode** verfügbar ist.                                                                                                              |
 | Vorherige        | Bestimmt, ob der Benutzer den vorherigen Eintrag in einer Wiedergabeliste suchen kann.                                                                                         |
-| Schritt            | Bestimmt, ob die **Step** -Methode während der Wiedergabe verfügbar ist.                                                                                              |
-| stop            | Bestimmt, ob die Methode zum **Abbrechen** verfügbar ist.                                                                                                              |
+| Schritt            | Bestimmt, ob **die Schrittmethode** während der Wiedergabe verfügbar ist.                                                                                              |
+| stop            | Bestimmt, ob **die Stop-Methode** verfügbar ist.                                                                                                              |
 
 
 
@@ -59,11 +59,11 @@ Eine **Zeichenfolge** , die einen der folgenden Werte enthält.
 
 ## <a name="return-values"></a>Rückgabewerte
 
-Diese Methode gibt einen **booleschen** Wert zurück.
+Diese Methode gibt einen **booleschen Wert** zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das die Anfangsposition des aktuellen Medien Elements aufsucht. Der JScript-Code verwendet **IsAvailable** , um zu überprüfen, ob die Datei den Suchvorgang unterstützt. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird ein HTML BUTTON-Element erstellt, das nach der Anfangsposition des aktuellen Medienelements sucht. Der JScript code verwendet **isAvailable,** um zu überprüfen, ob die Datei den Suchvorgang unterstützt. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -83,12 +83,12 @@ Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das die Anf
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/>                               |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/>                               |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

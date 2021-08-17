@@ -1,11 +1,11 @@
 ---
-title: Player. Error-Ereignis
-description: Das Fehler Ereignis tritt auf, wenn eine Fehlerbedingung vorliegt.
+title: Player.Error-Ereignis
+description: Das Fehlerereignis tritt auf, wenn eine Fehlerbedingung vorliegt.
 ms.assetid: 1e418a56-ae81-4ff0-b721-3390be08970d
 keywords:
-- Fehler Ereignis-Windows-Media Player
-- Fehler Ereignis Windows Media Player, Player-Klasse
-- Player-Klasse, Windows Media Player, Fehler Ereignis
+- Fehlerereignis Windows Media Player
+- Error-Ereignis Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , Error-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a99411773994ad012155eea5a203ed341d50b460
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6a7e4642eef19b4edc4b1aa5bc75022a307d279d0d60482af0c7e2f0a9368c06
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134813"
 ---
-# <a name="playererror-event"></a>Player. Error-Ereignis
+# <a name="playererror-event"></a>Player.Error-Ereignis
 
-Das **Fehler** Ereignis tritt auf, wenn eine Fehlerbedingung vorliegt.
+Das **Fehlerereignis** tritt auf, wenn eine Fehlerbedingung vorliegt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ Player.Error()
 
 ## <a name="parameters"></a>Parameter
 
-Dieses Ereignis weist keine Parameter auf.
+Dieses Ereignis verfügt über keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -46,7 +46,7 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird ein Ereignishandler erstellt, um den Beschreibungstext für den ersten Fehler in der Fehler Warteschlange anzuzeigen. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird ein Ereignishandler erstellt, um den Beschreibungstext für den ersten Fehler in der Fehlerwarteschlange anzuzeigen. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -70,19 +70,19 @@ alert(errDesc);
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ErrorItem. ErrorDescription**](erroritem-errordescription.md)
+[**ErrorItem.errorDescription**](erroritem-errordescription.md)
 </dt> <dt>
 
-[**Error. Item**](error-item.md)
+[**Error.item**](error-item.md)
 </dt> <dt>
 
 [**Player-Objekt**](player-object.md)

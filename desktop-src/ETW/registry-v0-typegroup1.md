@@ -1,5 +1,5 @@
 ---
-description: 'Registry_V0_TypeGroup1-Klasse: Diese Klasse ist die Ereignistypklasse für Registrierungsereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
+description: 'Registry_V0_TypeGroup1 Klasse: Diese Klasse ist die Ereignistypklasse für Registrierungsereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 93031f3e-963f-46a6-9355-988eefd94836
 title: Registry_V0_TypeGroup1-Klasse
 ms.topic: reference
@@ -16,18 +16,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 86f6d695afa2e05c87a076cf88ed8023e9416beb
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 18b85c95121513057aad24fd4534a552cdb219973ea46a9a3360870dabc39ba8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069780"
 ---
 # <a name="registry_v0_typegroup1-class"></a>Registry \_ V0 \_ TypeGroup1-Klasse
 
 Diese Klasse ist die Ereignistypklasse für Registrierungsereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ class Registry_V0_TypeGroup1 : Registry_V0
 
 ## <a name="members"></a>Member
 
-Die **Klasse Registry \_ V0 \_ TypeGroup1** verfügt über folgende Typen von Membern:
+Die **Klasse Registry \_ V0 \_ TypeGroup1** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -66,7 +66,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Verstrichene Zeit des Registrierungsvorgangs.
+Verstrichene Zeit des Registrierungsvorgang.
 
 </dd> <dt>
 
@@ -89,7 +89,7 @@ Handle für den Registrierungsschlüssel.
 KeyName
 </dt> <dd> <dl> <dt>
 
-Datentyp: **String**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -122,10 +122,10 @@ NTSTATUS-Wert des Registrierungsvorgang.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

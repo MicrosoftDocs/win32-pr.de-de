@@ -1,5 +1,5 @@
 ---
-description: Der Name des Ereignisplaners.
+description: Der Name des Ereignis-Organisators.
 ms.assetid: cee193d6-f683-44c0-90d2-f793c76eff3e
 title: System.Calendar.OrganizerName
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "119397480"
 ---
 # <a name="systemcalendarorganizername"></a>System.Calendar.OrganizerName
 
-Der Name des Ereignisplaners.
+Der Name des Ereignis-Organisators.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

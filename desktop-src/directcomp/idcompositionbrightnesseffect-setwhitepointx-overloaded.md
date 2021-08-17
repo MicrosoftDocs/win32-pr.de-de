@@ -1,9 +1,9 @@
 ---
-title: Idcompositionbrightnesseffect setwhitepointx-Methode (Dcomp. h)
+title: IDCompositionBrightnessEffect SetWhitePointX-Methoden (Dcomp.h)
 description: Legt den x-Wert des weißen Punkts fest.
 ms.assetid: a35c4a79-bf30-3334-1cea-ddd055427a0f
 keywords:
-- Setwhitepointx-Methoden directcomposition
+- SetWhitePointX-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,14 +12,14 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 70f3d53339b513baff56f11d9c707f6895ad80d8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 78512800ae0db84971dac7f3ee190409f912a1229791f3601048bf8ea198b414
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119014"
 ---
-# <a name="idcompositionbrightnesseffectsetwhitepointx-methods"></a>Idcompositionbrightnesseffect:: setwhitepointx-Methoden
+# <a name="idcompositionbrightnesseffectsetwhitepointx-methods"></a>IDCompositionBrightnessEffect::SetWhitePointX-Methoden
 
 Legt den x-Wert des weißen Punkts fest.
 
@@ -27,10 +27,10 @@ Legt den x-Wert des weißen Punkts fest.
 
 
 
-| Methode                                                                                               | BESCHREIBUNG                                     |
+| Methode                                                                                               | Beschreibung                                     |
 |:-----------------------------------------------------------------------------------------------------|:------------------------------------------------|
-| [**Setwhitepointx**](/windows/win32/api/dcomp/nf-dcomp-idcompositionbrightnesseffect-setwhitepointx(float))                               | Legt den x-Wert des weißen Punkts fest.<br/> |
-| [**Setwhitepointx (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionbrightnesseffect-setwhitepointx(idcompositionanimation)) | Legt den x-Wert des weißen Punkts fest.<br/> |
+| [**SetWhitePointX**](/windows/win32/api/dcomp/nf-dcomp-idcompositionbrightnesseffect-setwhitepointx(float))                               | Legt den x-Wert des weißen Punkts fest.<br/> |
+| [**SetWhitePointX (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionbrightnesseffect-setwhitepointx(idcompositionanimation)) | Legt den x-Wert des weißen Punkts fest.<br/> |
 
 
 
@@ -40,15 +40,15 @@ Legt den x-Wert des weißen Punkts fest.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**idcompositionbrightnesserffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionbrightnesseffect)
+[**idcompositionbrightnesseffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionbrightnesseffect)
 </dt> </dl>
 
 �

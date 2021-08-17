@@ -1,5 +1,5 @@
 ---
-description: Legt den Verarbeitungsmodus für den Spracherfassungs-DSP fest.
+description: Legt den Verarbeitungsmodus für den Voice Capture-DSP fest.
 ms.assetid: 479b3525-5beb-4c6b-b1ad-8fa72c0d0fd0
 title: MFPKEY_WMAAECMA_SYSTEM_MODE-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118973269"
 ---
-# <a name="mfpkey_wmaaecma_system_mode-property"></a>MFPKEY \_ WMAAECMA \_ \_ -Systemmoduseigenschaft
+# <a name="mfpkey_wmaaecma_system_mode-property"></a>MFPKEY \_ WMAAECMA \_ SYSTEM \_ MODE-Eigenschaft
 
-Legt den Verarbeitungsmodus für den Spracherfassungs-DSP fest.
+Legt den Verarbeitungsmodus für den Voice Capture-DSP fest.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mit [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
@@ -25,7 +25,7 @@ VT \_ I4
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Spracherfassungs-DSP](voicecapturedmo.md)
+-   [Voice Capture-DSP](voicecapturedmo.md)
 
 ## <a name="remarks"></a>Hinweise
 
@@ -35,10 +35,10 @@ Die -Eigenschaft muss einer der folgenden Werte sein.
 
 
 
-| Wert | BESCHREIBUNG                                 |
+| Wert | Beschreibung                                 |
 |-------|---------------------------------------------|
-| 0     | Nur AEC-Modus (Audio Echo Cancellation)     |
-| 2     | Nur MAP-Modus (Microphone Array Processing, Mikrofonarrayverarbeitung) |
+| 0     | AEC-Modus (Audio Echo Cancellation)     |
+| 2     | Nur-Mikrofon-Arrayverarbeitungsmodus (MAP) |
 | 4     | AEC- und MAP-Modus                            |
 | 5     | Weder AEC noch MAP-Modus                    |
 
@@ -46,7 +46,7 @@ Die -Eigenschaft muss einer der folgenden Werte sein.
 
  
 
-Sie müssen diese Eigenschaft festlegen, bevor Sie den Spracherfassungs-DSP verwenden. Nachdem Sie diese Eigenschaft festgelegt haben, können Sie den DSP mit den Standardeinstellungen verwenden oder zusätzliche Eigenschaften festlegen.
+Sie müssen diese Eigenschaft festlegen, bevor Sie den Voice Capture-DSP verwenden. Nachdem Sie diese Eigenschaft festgelegt haben, können Sie den DSP mit seinen Standardeinstellungen verwenden oder zusätzliche Eigenschaften festlegen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ Sie müssen diese Eigenschaft festlegen, bevor Sie den Spracherfassungs-DSP verw
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
@@ -64,10 +64,10 @@ Sie müssen diese Eigenschaft festlegen, bevor Sie den Spracherfassungs-DSP verw
 
 <dl> <dt>
 
-[Media Foundation-Eigenschaften](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
-[Spracherfassungs-DSP](voicecapturedmo.md)
+[Voice Capture-DSP](voicecapturedmo.md)
 </dt> </dl>
 
  

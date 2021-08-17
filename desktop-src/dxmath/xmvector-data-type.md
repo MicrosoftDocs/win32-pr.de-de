@@ -1,39 +1,39 @@
 ---
-description: Ein portabler Typ, der zum Darstellen eines Vektors von Gleit Komma-oder ganzzahligen 4 32-Bit-Komponenten verwendet wird, die jeweils optimal ausgerichtet und einem Hardware Vektor Register zugeordnet sind.
+description: Ein portabler Typ, der einen Vektor von vier 32-Bit-Gleitkomma- oder Ganzzahlkomponenten darstellt, die jeweils optimal ausgerichtet und einem Hardwarevektorregister zugeordnet sind.
 ms.assetid: 1a044094-444d-e787-fa6a-76e88531aef1
-title: Xmvector-Datentyp (directxmath. h)
+title: XMVECTOR-Datentyp (DirectXMath.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c62cab01098cd95f904ac2e2ee33d420309e8e99
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f0a65c7da346163c3cbfaab7c68982f56eb6c424b7f74a3ec01c754eb4104a5e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361284"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120094480"
 ---
-# <a name="xmvector-data-type"></a>Xmvector-Datentyp
+# <a name="xmvector-data-type"></a>XMVECTOR-Datentyp
 
-Ein portabler Typ, der zum Darstellen eines Vektors von Gleit Komma-oder ganzzahligen 4 32-Bit-Komponenten verwendet wird, die jeweils optimal ausgerichtet und einem Hardware Vektor Register zugeordnet sind.
+Ein portabler Typ, der einen Vektor von vier 32-Bit-Gleitkomma- oder Ganzzahlkomponenten darstellt, die jeweils optimal ausgerichtet und einem Hardwarevektorregister zugeordnet sind.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Liste der zusätzlichen Funktionen, wie z. b. Konstruktoren und Operatoren, die `XMVECTOR` beim Programmieren in C++ verfügbar sind, finden Sie unter [xmvector Extensions](ovw-xmvector-extensions.md).
+Eine Liste der zusätzlichen Funktionen, z. B. Konstruktoren und Operatoren, die bei der Programmierung in C++ zur Verfügung stehen, finden Sie `XMVECTOR` unter [XMVECTOR-Erweiterungen](ovw-xmvector-extensions.md).
 
-In der directxmath-Bibliothek ist ein nicht transparenter Typ, um Portabilität und Optimierung vollständig zu unterstützen `XMVECTOR` . Die tatsächliche Implementierung von `XMVECTOR` ist plattformabhängig.
+In der DirectXMath-Bibliothek ist zur vollständigen Unterstützung von Portabilität und Optimierung standardmäßig ein `XMVECTOR` nicht transparenter Typ. Die tatsächliche Implementierung von `XMVECTOR` ist plattformabhängig.
 
-Im Allgemeinen sollte Code nicht auf die Besonderheiten einer bestimmten plattformspezifischen Implementierung von beruhen `XMVECTOR` . Plattformspezifische Implementierungen haben folgende Merkmale:
+Im Allgemeinen sollte code nicht auf den Besonderheiten einer bestimmten plattformspezifischen Implementierung von `XMVECTOR` basieren. Plattformspezifische Implementierungen haben die folgenden Merkmale:
 
 -   Sie sind nicht portabel.
 -   Sie können sich zwischen Releases ändern.
--   Die Verletzung der Verwendung von Implementierungsdetails ist möglicherweise suboptimal.
+-   Die uneinstige Verwendung von Implementierungsdetails kann suboptimal sein.
 
-Entwickler sollten die Funktionen " [Accessor](ovw-xnamath-reference-functions-accessors.md)", " [Load](ovw-xnamath-reference-functions-load.md)" und " [Store](ovw-xnamath-reference-functions-storage.md) " der directxmath-Bibliothek verwenden, um die Vektoren zu erhalten und festzulegen, und die [Bibliotheks-4D-Vektor Funktionen der directxmath-Bibliothek](ovw-xnamath-reference-functions-vector4.md) .
+Entwickler sollten die [Accessorfunktionen](ovw-xnamath-reference-functions-accessors.md)der DirectXMath [](ovw-xnamath-reference-functions-storage.md) Library [verwenden,](ovw-xnamath-reference-functions-load.md)laden und speichern, um die Vektoren zu erhalten und zu legen, und die [DirectXMath Library 4D Vector Functions](ovw-xnamath-reference-functions-vector4.md) verwenden, um sie zu bearbeiten.
 
-Informationen zu-Projekten, die ausführliche Informationen zur Implementierung `XMVECTOR` von auf verschiedenen Plattformen benötigen, finden Sie unter [Bibliotheks internale](pg-xnamath-internals.md).
+Informationen zu Projekten, die ausführliche Informationen zur Implementierung auf verschiedenen Plattformen benötigen, finden `XMVECTOR` Sie unter [Bibliotheksinternes](pg-xnamath-internals.md).
 
 ### <a name="compiler-aliases"></a>Compileraliase
 
-In der Header Datei "directxmath. h" werden Aliase für das- `XMVECTOR` Objekt verwendet, insbesondere " **cxmvector** " und " **fxmvector**". Der Header verwendet diese Aliase, um die optimalen Inline Aufruf Konventionen verschiedener Compiler einzuhalten. Bei den meisten Projekten, für die directxmath verwendet wird, genügt es, diese Typen als exakten Alias für zu behandeln `XMVECTOR` .
+Die DirectXMath.h-Headerdatei verwendet Aliase für das -Objekt, insbesondere `XMVECTOR` **CXMVECTOR** und **FXMVECTOR.** Der Header verwendet diese Aliase, um den optimalen In-Line-Aufrufkonventionen verschiedener Compiler zu entsprechen. Für die meisten Projekte, die DirectXMath verwenden, ist es ausreichend, diese Typen als genauen Alias für zu `XMVECTOR` behandeln.
 
 Beispiel:
 
@@ -47,11 +47,11 @@ typedef const XMVECTOR CXMVECTOR;
 
 
 
-Informationen zu-Projekten, die ausführliche Informationen dazu benötigen, wie verschiedene Plattformen ihre Aufruf Konventionen verarbeiten, finden Sie unter [Bibliotheks](pg-xnamath-internals.md)interne Informationen.
+Informationen zu Projekten, die detaillierte Informationen dazu benötigen, wie verschiedene Plattformen ihre Aufrufkonventionen behandeln, finden Sie unter [Bibliotheksinternes](pg-xnamath-internals.md).
 
-Bei xnamath 2. x hat der `XMVECTOR` Datentyp die Member. x,. y,. z,. und. w, was im Allgemeinen zu einer schlechten Leistung führt. Die Verwendung des XM \_ Strict \_ VECTOR4-Typs bietet ein Opt-in der directxmath-Definition eines nicht transparenten Datentyps.
+Für XNAMATH 2.x verfügt der Datentyp über Elementelemente vom Typ `XMVECTOR` .x, .y, .z, .and .w, die in der Regel eine schlechte Leistung verursachen. Die Verwendung des XM STRICT VECTOR4-Typs ermöglicht die Verwendung der \_ \_ DirectXMath-Definition eines nicht transparenten Datentyps.
 
-**Namespace**: Verwenden von DirectX
+**Namespace:** DirectX verwenden
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -63,15 +63,15 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Directxmath. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DirectXMath.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Directxmath-Bibliothekstypen](ovw-xnamath-reference-types.md)
+[DirectXMath-Bibliothekstypen](ovw-xnamath-reference-types.md)
 </dt> <dt>
 
 [**XMVECTORI32-Datentyp**](xmvectori32-data-type.md)
@@ -86,7 +86,7 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 [**XMVECTORU8-Datentyp**](xmvectoru8-data-type.md)
 </dt> <dt>
 
-[**Xmvector-Datentyp**](xmvector-data-type.md)
+[**XMVECTOR-Datentyp**](xmvector-data-type.md)
 </dt> </dl>
 
  

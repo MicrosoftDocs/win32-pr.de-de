@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: e15f28af892e713f8bd6897b2d75b6b227886ad1
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6190f27e13771180564a2b943e9db4b8f1437c2a46c1626f1a028015a3fc7a69
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108111348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950190"
 ---
 # <a name="requeststatechange-method-of-the-msvm_storagejob-class"></a>RequestStateChange-Methode der Msvm \_ StorageJob-Klasse
 
@@ -65,7 +65,7 @@ RequestStateChange ändert den Status eines Auftrags. Die folgenden Werte sind m
 
 </dt> <dd>
 
-Beendet den Auftrag vorübergehend. Die Absicht besteht darin, den Auftrag anschließend mit "Start" neu zu starten. Es kann möglich sein, den Status "Dienst" zu erhalten, während er angehalten wird. (Dies ist auftragsspezifisch.)
+Beendet den Auftrag vorübergehend. Der Auftrag soll anschließend mit "Start" neu gestartet werden. Es kann möglich sein, den Status "Dienst" zu erhalten, während er angehalten wird. (Dies ist auftragsspezifisch.)
 
 </dd> <dt>
 
@@ -104,7 +104,7 @@ Versetzt den Auftrag in einen anbieterspezifischen Dienststatus. Möglicherweise
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (7..32767)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserved** (7..32767)
 
 
 </dt> <dd></dd> <dt>
@@ -119,7 +119,7 @@ Versetzt den Auftrag in einen anbieterspezifischen Dienststatus. Möglicherweise
 *TimeoutPeriod* \[ In\]
 </dt> <dd>
 
-Ein Timeoutzeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervallformat muss verwendet werden, um den Timeoutzeitraum anzugeben. Der Wert 0 oder **NULL gibt an,** dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **NULL** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (**Use Of Timeout Parameter Not Supported**) zurückgegeben werden.
+Ein Timeoutzeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervallformat muss verwendet werden, um den Timeoutzeitraum anzugeben. Der Wert 0 oder **NULL** gibt an, dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **NULL** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (**Use Of Timeout Parameter Not Supported**) zurückgegeben werden.
 
 </dd> </dl>
 
@@ -169,11 +169,11 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 

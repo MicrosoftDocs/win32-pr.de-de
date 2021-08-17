@@ -1,19 +1,19 @@
 ---
-description: LOCALE \_ smonthday
+description: LOCALE \_ SMONTHDAY
 ms.assetid: 24f548fd-20b6-4428-a840-900803399a5a
 title: LOCALE_SMONTHDAY
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4bcb192184840925a86b4954fa6e3ec489880406
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec985ed6d4dff22d33b885ccfb5b2db553f1f104d000a19c3d9dba297f9e908d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348432"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118948449"
 ---
-# <a name="locale_smonthday"></a>LOCALE \_ smonthday
+# <a name="locale_smonthday"></a>LOCALE \_ SMONTHDAY
 
-**Windows 7 und höher:** Format Zeichenfolge für die Anzeige von nur dem Monat und dem Tag. Die Formatierung ähnelt der Definition für das [Gebiets Schema \_ slongdate](locale-slongdate.md). Wenn z. b. das Month/Day-Muster der vollständige Monats Name gefolgt von der Tagesnummer mit führenden Nullen ist, wie in "September 03", lautet die Format Zeichenfolge "MMMM dd". Die Zeichenfolge kann aus einer Kombination aus Tages-und Monats Format Bildern und einer beliebigen Zeichenfolge bestehen, die in einfache Anführungszeichen eingeschlossen ist. Zeichen in einfachen Anführungszeichen verbleiben wie angegeben, z. b. "de" für Spanisch (Spanien). Ein Gebiets Schema kann nur ein Monats-/Uhrzeitformat angeben.
+**Windows 7 und höher:** Formatzeichenfolge, um nur den Monat und den Tag anzuzeigen. Die Formatierung ähnelt der für [LOCALE \_ SLONGDATE](locale-slongdate.md)definierten Formatierung. Wenn das Monats-/Tagmuster beispielsweise der vollständige Monatsname gefolgt von der Tagesnummer mit führenden Nullen ist, wie in "September 03", lautet die Formatzeichenfolge "MMMM dd". Die Zeichenfolge kann aus einer Kombination aus Bildern im Tag- und Monatsformat und einer beliebigen Zeichenfolge bestehen, die in einfache Anführungszeichen eingeschlossen ist. Zeichen in einfachen Anführungszeichen bleiben wie angegeben, z. B. "de" für Spanisch (Spanien). Ein Gebietsschema kann nur ein Monats-/Tagformat angeben.
 
  
 

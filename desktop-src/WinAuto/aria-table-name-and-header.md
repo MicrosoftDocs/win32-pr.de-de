@@ -1,35 +1,35 @@
 ---
-title: Aria-Datentabellen Fehler
-description: Aria-Datentabellen Fehler
+title: ARIA-Datentabellenfehler
+description: ARIA-Datentabellenfehler
 ms.assetid: 3D0448BB-50DC-4C85-93BD-D8E626475AB0
 keywords:
-- Ariadatatableerrorid
+- AriaDataTableErrorId
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3286f88a0b3a0d962fd6ac45581f94bc351cb507
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: 025443ab452ff0103c8808c27dce834a03cb8c96e0d9106a7abb4409b64a0697
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "104391136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119133973"
 ---
-# <a name="aria-data-table-error"></a>Aria-Datentabellen Fehler
+# <a name="aria-data-table-error"></a>ARIA-Datentabellenfehler
 
 ## <a name="text"></a>Text
 
-Die Tabelle enthält Daten, aber es ist kein Barrierefreies Markup definiert, das durch die Elemente **Aria-Label**, **Aria-labelledby**, **Title**, **Caption** oder **th** definiert wurde.
+Die Tabelle enthält Daten, verfügt aber nicht über zugängliches Markup, das durch **aria-label,** **aria-captionby**, **title,** **caption** oder **th-Elemente definiert** wurde.
 
 ## <a name="type"></a>type
 
 Fehler
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Dieser Fehler gilt für HTML-Tabellen mit mehr als einer Zelle. Dieser Fehler gilt nicht für Tabellen mit, `role="presentation"` da diese als Layouttabellen angesehen werden.
+Dieser Fehler gilt für HTML-Tabellen mit mehr als einer Zelle. Dieser Fehler gilt nicht für Tabellen mit `role="presentation"` , da diese als Layouttabellen betrachtet werden.
 
-Dieser Fehler weist darauf hin, dass eine Datentabelle keinen zugänglichen Namen oder keine Header Informationen enthält.
+Dieser Fehler weist darauf hin, dass eine Datentabelle keinen zugänglichen Namen oder Headerinformationen hat.
 
-Um diesen Fehler zu beheben, definieren Sie einen zugänglichen Namen mithilfe des [**Beschriftungs**](https://developer.mozilla.org/docs/Web/HTML/Element/caption) Tags oder den Attributen " [**Aria-labelledby**](https://developer.mozilla.org/docs/Web/Accessibility/ARIA)", " [**Aria-Label**](https://developer.mozilla.org/docs/Web/Accessibility/ARIA)" oder " [**Title**](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/title) ". Wenn in der Tabelle keine Header Informationen vorhanden sind, markieren Sie Header Zellen mithilfe der [**AD**](https://developer.mozilla.org/docs/Web/HTML/Element/thead) -Tags.
+Um diesen Fehler zu beheben, definieren Sie einen barrierefreien Namen, indem Sie das [**CAPTION-Tag**](https://developer.mozilla.org/docs/Web/HTML/Element/caption) oder die [**Attribute aria-captionby**](https://developer.mozilla.org/docs/Web/Accessibility/ARIA), [**aria-label**](https://developer.mozilla.org/docs/Web/Accessibility/ARIA)oder [**title**](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/title) verwenden. Wenn in der Tabelle Headerinformationen fehlen, verwenden Sie [**THead-Tags,**](https://developer.mozilla.org/docs/Web/HTML/Element/thead) um Headerzellen zu markieren.
 
 ## <a name="example"></a>Beispiel
 
@@ -58,9 +58,9 @@ Um diesen Fehler zu beheben, definieren Sie einen zugänglichen Namen mithilfe d
 
 
 
- 
+ 
 
- 
+ 
 
 
 

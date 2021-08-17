@@ -1,7 +1,7 @@
 ---
-description: Die QueryId-Methode ruft einen Bezeichner für die PIN ab.
+description: Die QueryId-Methode ruft einen Bezeichner für den Pin ab.
 ms.assetid: 6050292e-6203-4a79-87bf-47394624cb32
-title: Csourcestream. QueryId-Methode (Quelle. h)
+title: CSourceStream.QueryId-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 267748fe4ce1eeec4650544a2f72069df897a366
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1bd8582d16022c9d5dfd60eb87847d564ef69203e329ff37eaa9c2964a11794c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373890"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119317510"
 ---
-# <a name="csourcestreamqueryid-method"></a>Csourcestream. QueryId-Methode
+# <a name="csourcestreamqueryid-method"></a>CSourceStream.QueryId-Methode
 
-Die- `QueryId` Methode ruft einen Bezeichner für die PIN ab.
+Die `QueryId` -Methode ruft einen Bezeichner für den Pin ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,32 +45,32 @@ HRESULT QueryId(
 *Id* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die eine Zeichenfolge mit dem PIN-Bezeichner empfängt.
+Zeiger auf eine Variable, die eine Zeichenfolge empfängt, die den Pinbezeichner enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
 
 
 
 | Rückgabecode                                                                                       | Beschreibung                                 |
 |---------------------------------------------------------------------------------------------------|---------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>              | Erfolg.<br/>                         |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>     | Nicht genügend Arbeitsspeicher.<br/>             |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>         | **Null** -Zeigerargument.<br/>       |
-| <dl> <dt>**VFW \_ E \_ nicht \_ gefunden**</dt> </dl> | Die PIN wurde im Filter nicht gefunden.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>     | Nicht genügend Arbeitsspeicher.<br/>             |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>         |  NULL-Zeigerargument.<br/>       |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ GEFUNDEN**</dt> </dl> | Die Stecknadel wurde im Filter nicht gefunden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode implementiert die [**IPin:: QueryId**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryid) -Methode. Um eine Bezeichnerzeichenfolge zu erstellen, ruft die PIN die [**CSource:: findpinnumber**](csource-findpinnumber.md) -Methode mit sich selbst als Parameter auf. Die **findpinnumber** -Methode gibt die von 0 (null) indizierte PIN-Nummer zurück. `QueryId` erhöht den Rückgabewert um 1 und konvertiert das Ergebnis in eine Zeichenfolge. Beispielsweise wird die erste Pin "1". die zweite PIN wird zu "2". und so weiter.
+Diese Methode implementiert die [**IPin::QueryId-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryid) Um eine Bezeichnerzeichenfolge zu erstellen, ruft der Pin die [**CSource::FindPinNumber-Methode**](csource-findpinnumber.md) mit sich selbst als Parameter auf. Die **FindPinNumber-Methode** gibt die Pinnummer zurück, indiziert von 0 (null). `QueryId` erhöht den Rückgabewert um 1 und konvertiert das Ergebnis in eine Zeichenfolge. Der erste Pin wird z. B. zu "1". Der zweite Pin wird zu "2"; usw.
 
-Wenn diese Methode "VFW \_ E \_ nicht gefunden" zurückgibt \_ , gibt Sie an, dass das Array von Pins des Filters ungültig ist, was vermutlich durch einen Fehler im Filter verursacht wird.
+Wenn diese Methode VFW E NOT FOUND zurückgibt, gibt sie an, dass das Array von Pins des Filters ungültig ist, was vermutlich durch einen Fehler \_ \_ im Filter verursacht \_ wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,16 +78,16 @@ Wenn diese Methode "VFW \_ E \_ nicht gefunden" zurückgibt \_ , gibt Sie an, da
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  

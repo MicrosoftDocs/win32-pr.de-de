@@ -1,7 +1,7 @@
 ---
-description: Auflösen einer Host Zeichenfolge in Ihre IP-Adresse
+description: Auflösen einer Hostzeichenfolge in ihre IP-Adresse
 ms.assetid: 32d70f10-803b-484d-a9e0-d4c61a8d897f
-title: dnsresolveex-Funktion
+title: dnsResolveEx-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 1c63ba3e20653c41864394d9c563c851f2aab5e6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f0f0100367d4fad6d6e0b013e5d552f733086e6ddd5bc720779ef1fb5b65cdce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356950"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119133223"
 ---
-# <a name="dnsresolveex-function"></a>dnsresolveex-Funktion
+# <a name="dnsresolveex-function"></a>dnsResolveEx-Funktion
 
-Auflösen einer Host Zeichenfolge in Ihre IP-Adresse
+Auflösen einer Hostzeichenfolge in ihre IP-Adresse
 
 ## <a name="parameters"></a>Parameter
 
@@ -30,17 +30,17 @@ Auflösen einer Host Zeichenfolge in Ihre IP-Adresse
 *host* 
 </dt> <dd>
 
-Eine Zeichenfolge, die den HTTP-Host enthält, der für FindProxyForURL bereitgestellt wird.
+Eine Zeichenfolge, die den HTTP-Host enthält, der für FindProxyForUrl bereitgestellt wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine durch Semikolons getrennte Zeichenfolge, die IPv6-und IPv4-Adressen enthält, oder eine leere Zeichenfolge, wenn der Host nicht aufgelöst werden kann.
+Eine durch Semikolons getrennte Zeichenfolge, die IPv6- und IPv4-Adressen enthält, oder eine leere Zeichenfolge, wenn der Host nicht auflösbar ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Findproxyforurlex-Implementierer sollten Code hinzufügen, der die Zeichenfolge von durch Semikola getrennten IP-Adressen in separate Adressen unterbricht.
+FindProxyforURLEx-Implementierer sollten Code hinzufügen, der die Zeichenfolge von durch Semikolons getrennten IP-Adressen in separate Adressen unterbricht.
 
 ## <a name="examples"></a>Beispiele
 
@@ -53,10 +53,10 @@ dnsResolveEx("testmachine1");
 
 <dl> <dt>
 
-[IPv6-abhängige proxyhilfsobjekts-Definitionen](ipv6-aware-proxy-helper-api-definitions.md)
+[IPv6-orientierte Proxy-Hilfs-API-Definitionen](ipv6-aware-proxy-helper-api-definitions.md)
 </dt> <dt>
 
-[IPv6-Erweiterungen für das Auto-config-Datei Format des Navigators](ipv6-extensions-to-navigator-auto-config-file-format.md)
+[IPv6-Erweiterungen für das Navigator-Dateiformat für die automatische Konfiguration](ipv6-extensions-to-navigator-auto-config-file-format.md)
 </dt> </dl>
 
  

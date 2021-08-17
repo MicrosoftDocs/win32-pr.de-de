@@ -26,7 +26,7 @@ ms.locfileid: "119351060"
 ---
 # <a name="guidfromstring-function"></a>GUIDFromString-Funktion
 
-\[**GUIDFromString** ist über Windows XP mit Service Pack 2 (SP2) oder Windows Vista verfügbar. Sie kann in nachfolgenden Versionen geändert oder nicht verfügbar sein. Anwendungen sollten ANSTELLE dieser Funktion [**CLSIDFromString**](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring) oder [**IIDFromString**](/windows/win32/api/combaseapi/nf-combaseapi-iidfromstring) verwenden.\]
+\[**GUIDFromString** ist über Windows XP mit Service Pack 2 (SP2) oder Windows Vista verfügbar. Er kann in nachfolgenden Versionen geändert oder nicht verfügbar sein. Anwendungen sollten ANSTELLE dieser Funktion [**CLSIDFromString**](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring) oder [**IIDFromString**](/windows/win32/api/combaseapi/nf-combaseapi-iidfromstring) verwenden.\]
 
 Konvertiert eine Zeichenfolge in eine GUID.
 
@@ -74,9 +74,9 @@ Typ: **BOOL**
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird nicht in einem Header deklariert oder anhand des Namens aus einer .dll Datei exportiert. Sie muss aus Shell32.dll als Ordnungszahl 703 für **GUIDFromStringA** und ordinal 704 für **GUIDFromStringW** geladen werden.
+Diese Funktion wird nicht in einem Header deklariert oder anhand des Namens aus einer .dll Datei exportiert. Sie muss aus Shell32.dll als Ordnungszahl 703 für **GUIDFromStringA** und Ordinalzahl 704 für **GUIDFromStringW** geladen werden.
 
-Der Zugriff ist auch über Shlwapi.dll als Ordnungszahl 269 für **GUIDFromStringA** und Ordnungszahl 270 für **GUIDFromStringW** möglich.
+Sie können auch über Shlwapi.dll als Ordnungszahl 269 für **GUIDFromStringA** und Ordinalzahl 270 für **GUIDFromStringW** darauf zugreifen.
 
 ## <a name="requirements"></a>Anforderungen
 

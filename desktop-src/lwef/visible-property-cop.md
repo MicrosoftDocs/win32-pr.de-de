@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Visible-Eigenschaft des Command-Objekts
 ms.assetid: 80137e16-4646-4251-b1c0-bca39ff7a233
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: af4efec1ad8a97d6412a560a81836273b93ebf2b
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: 07ebc5dee52ff3ab388674bd844e476f0bcc768595b1ba5e69d3c3be5435553f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112396245"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975460"
 ---
 # <a name="visible-property-command-object"></a>Visible-Eigenschaft (Befehlsobjekt)
 
@@ -41,7 +41,7 @@ Gibt zurück oder legt fest, ob der [**Befehl**](/windows/desktop/lwef/the-comma
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Legen Sie diese Eigenschaft auf **False** fest, wenn Sie Spracheingaben für Ihre eigenen Schnittstellen einschließen möchten, ohne dass sie im Popupmenü für das Zeichen angezeigt werden. Wenn Sie die [**Caption-Eigenschaft**](caption-property.md) eines [**Command-Objekts**](/windows/desktop/lwef/the-command-object) auf die leere Zeichenfolge ("") festlegen, wird der Beschriftungstext unabhängig von der [](visible-property.md) Visible-Eigenschaftseinstellung nicht im Popupmenü angezeigt (z. B. als leere Zeile).
 

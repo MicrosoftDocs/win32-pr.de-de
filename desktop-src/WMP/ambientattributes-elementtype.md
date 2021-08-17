@@ -3,7 +3,7 @@ title: AmbientAttributes.elementType
 description: Das elementType-Attribut ruft den Typ des Elements ab (z. B. BUTTON).
 ms.assetid: afff5a23-d981-4a60-b709-a5b926ea1fc3
 keywords:
-- AmbientAttributes.elementType-Windows Media Player
+- AmbientAttributes.elementType Windows Media Player
 topic_type:
 - apiref
 api_name:

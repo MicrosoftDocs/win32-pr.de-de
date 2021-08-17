@@ -19,7 +19,7 @@ Die RemoveRegistryValues-Aktion kann nur Werte aus der Systemregistrierung entfe
 
 Die [InstallValidate-Aktion](installvalidate-action.md) muss aufgerufen werden, bevor RemoveRegistryValues aufgerufen wird. Wenn eine [WriteRegistryValues-Aktion](writeregistryvalues-action.md) verwendet wird, muss sie nach RemoveRegistryValues kommen. RemoveRegistryValues muss vor [UnregisterMIMEInfo](unregistermimeinfo-action.md) oder [UnregisterProgIDInfo kommen.](unregisterprogidinfo-action.md)
 
-Eine benutzerdefinierte Aktion kann verwendet werden, um der [Registrierungstabelle](registry-table.md) während einer Installation, Deinstallation oder Reparaturtransaktion Zeilen hinzuzufügen. Diese Zeilen werden nicht in der Registrierungstabelle beibehalten, und die Informationen sind nur während der aktuellen Transaktion verfügbar. Die benutzerdefinierte Aktion muss daher in jeder Installations-, Deinstallations- oder Reparaturtransaktion ausgeführt werden, die die Informationen in diesen zusätzlichen Zeilen erfordert. Die benutzerdefinierte Aktion muss vor den Aktionen RemoveRegistryValues und [WriteRegistryValues](writeregistryvalues-action.md) in der Aktionssequenz ausgeführt werden.
+Eine benutzerdefinierte Aktion kann verwendet werden, um der [Registrierungstabelle](registry-table.md) während einer Installation, Deinstallation oder Reparaturtransaktion Zeilen hinzuzufügen. Diese Zeilen werden in der Registrierungstabelle nicht beibehalten, und die Informationen sind nur während der aktuellen Transaktion verfügbar. Die benutzerdefinierte Aktion muss daher in jeder Installations-, Deinstallations- oder Reparaturtransaktion ausgeführt werden, die die Informationen in diesen zusätzlichen Zeilen erfordert. Die benutzerdefinierte Aktion muss vor den Aktionen RemoveRegistryValues und [WriteRegistryValues](writeregistryvalues-action.md) in der Aktionssequenz ausgeführt werden.
 
 ## <a name="actiondata-messages"></a>ActionData-Meldungen
 
@@ -36,7 +36,7 @@ Eine benutzerdefinierte Aktion kann verwendet werden, um der [Registrierungstabe
 
 ## <a name="remarks"></a>Hinweise
 
-Um einen Registrierungswert zu entfernen, zeichnen Sie den Wert in der Spalte Wert der Registrierungstabelle auf. Wenn die WriteRegistryValues-Aktion REG MULTI SZ-Zeichenfolgen an den Wert in der Registrierungstabelle angefügt hat, entfernt die \_ \_ [](registry-table.md)RemoveRegistryValues-Aktion nur diese Zeichenfolgen aus dem Registrierungswert.
+Um einen Registrierungswert zu entfernen, zeichnen Sie den Wert in der Spalte Wert der Registrierungstabelle auf. Wenn die WriteRegistryValues-Aktion REG MULTI SZ-Zeichenfolgen an den Wert in der Registry-Tabelle angefügt hat, entfernt die \_ \_ [](registry-table.md)RemoveRegistryValues-Aktion nur diese Zeichenfolgen aus dem Registrierungswert.
 
  
 

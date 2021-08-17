@@ -1,11 +1,11 @@
 ---
-title: Monthly-Eigenschaft. daysOfMonth (Eigenschaft)
-description: Ruft bei der Skripterstellung die Tage des Monats ab, in denen die Aufgabe ausgeführt wird, oder legt diese fest.
+title: MonthlyTrigger.DaysOfMonth-Eigenschaft
+description: Ruft für die Skripterstellung die Tage des Monats ab, an denen der Task ausgeführt wird, oder legt diese fest.
 ms.assetid: 4da80d0f-ae0c-4e56-b51b-6ee6ab309d7c
 keywords:
 - DaysOfMonth-Eigenschaft Taskplaner
-- DaysOfMonth-Eigenschaft Taskplaner, Monthly-Auslöserobjekt
-- Monthly-Auslöserobjekt Taskplaner, daysOfMonth (Eigenschaft)
+- DaysOfMonth-Eigenschaft Taskplaner , MonthlyTrigger-Objekt
+- MonthlyTrigger-Objekt Taskplaner , DaysOfMonth-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 81a3bd671266cfbe459218367fadf20fd52f94a7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b256295b98105f79b144285d4aec77768f0648fc327be8be29d3f203586fe484
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119139403"
 ---
-# <a name="monthlytriggerdaysofmonth-property"></a>Monthly-Eigenschaft. daysOfMonth (Eigenschaft)
+# <a name="monthlytriggerdaysofmonth-property"></a>MonthlyTrigger.DaysOfMonth-Eigenschaft
 
-Ruft bei der Skripterstellung die Tage des Monats ab, in denen die Aufgabe ausgeführt wird, oder legt diese fest.
+Ruft für die Skripterstellung die Tage des Monats ab, an denen der Task ausgeführt wird, oder legt diese fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,9 +38,9 @@ MonthlyTrigger.DaysOfMonth As long
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine bitweise Maske, die die Tage des Monats angibt, in denen die Aufgabe ausgeführt wird.
+Eine bitweise Maske, die die Tage des Monats angibt, an denen der Task ausgeführt wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
@@ -83,7 +83,7 @@ Eine bitweise Maske, die die Tage des Monats angibt, in denen die Aufgabe ausgef
 
  
 
-Beim Lesen oder schreiben Ihrer eigenen XML-Daten für eine Aufgabe werden die Tage des Monats mit dem [**daysOfMonth**](taskschedulerschema-daysofmonth-monthlyscheduletype-element.md) -Element des Taskplaner-Schemas angegeben.
+Beim Lesen oder Schreiben eigener XML-Daten für eine Aufgabe werden die Tage des Monats mit dem [**DaysOfMonth-Element**](taskschedulerschema-daysofmonth-monthlyscheduletype-element.md) des Taskplaner Schemas angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,21 +91,21 @@ Beim Lesen oder schreiben Ihrer eigenen XML-Daten für eine Aufgabe werden die T
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)
 </dt> <dt>
 
-[**Monthly-auslöst**](monthlytrigger.md)
+[**MonthlyTrigger**](monthlytrigger.md)
 </dt> </dl>
 
  

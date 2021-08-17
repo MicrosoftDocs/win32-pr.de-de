@@ -1,7 +1,7 @@
 ---
 description: Ruft alle HTTP-Antwortheader ab.
 ms.assetid: 68b13d4c-5afd-486d-8b78-a7eef0f59a24
-title: 'Iwinhttprequest:: getallresponsheaders-Methode'
+title: IWinHttpRequest::GetAllResponseHeaders-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Winhttp.dll
-ms.openlocfilehash: 74c113216cf41e2f9816176dd28ba5e84208c635
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d853cfd80038081865eeefbbc456f470485b69a2dae02384e91e8b4d78d90810
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119133103"
 ---
-# <a name="iwinhttprequestgetallresponseheaders-method"></a>Iwinhttprequest:: getallresponsheaders-Methode
+# <a name="iwinhttprequestgetallresponseheaders-method"></a>IWinHttpRequest::GetAllResponseHeaders-Methode
 
-Die **getallresponsheaders** -Methode ruft alle HTTP-Antwortheader ab.
+Die **GetAllResponseHeaders-Methode** ruft alle HTTP-Antwortheader ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,29 +40,29 @@ HRESULT GetAllResponseHeaders(
 
 <dl> <dt>
 
-*Header* \[ Out, retval\]
+*Header* \[ out, retval\]
 </dt> <dd>
 
-Empfängt die resultierenden Header Informationen.
+Empfängt die resultierenden Headerinformationen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist bei Erfolg **S \_ OK** oder andernfalls ein Fehlerwert.
+Der Rückgabewert ist **S \_ OK bei** Erfolg oder andernfalls ein Fehlerwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gibt alle Header zurück, die in der letzten Serverantwort enthalten sind. Die einzelnen Header werden durch eine Kombination aus Wagen Rücklauf und Zeilenvorschub (ASCII 13 und 10) getrennt. Auf den letzten Eintrag folgen zwei Trennzeichen (13, 10, 13, 10). Rufen Sie diese Methode nur auf, nachdem die [**Send**](iwinhttprequest-send.md) -Methode aufgerufen wurde.
+Diese Methode gibt alle Header zurück, die in der letzten Serverantwort enthalten sind. Die einzelnen Header sind durch eine Wagenrücklauf- und Zeilenfeedkombination (ASCII 13 und 10) getrennt. Auf den letzten Eintrag folgen zwei Trennzeichen (13, 10, 13, 10). Rufen Sie diese Methode erst auf, nachdem die [**Send-Methode**](iwinhttprequest-send.md) aufgerufen wurde.
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Lauf Zeitanforderungen](winhttp-start-page.md) auf der WinHTTP-Start Seite.
+> Informationen Windows XP und Windows 2000 finden [](winhttp-start-page.md) Sie im Abschnitt Laufzeitanforderungen der WinHTTP-Startseite.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie eine HTTP-Verbindung geöffnet, eine HTTP-Anforderung gesendet und alle Header aus der Antwort erhalten werden. Dieses Beispiel sollte über eine Eingabeaufforderung ausgeführt werden.
+Das folgende Beispiel zeigt, wie Sie eine HTTP-Verbindung öffnen, eine HTTP-Anforderung senden und alle Header aus der Antwort erhalten. Dieses Beispiel sollte über eine Eingabeaufforderung ausgeführt werden.
 
 
 ```C++
@@ -154,7 +154,7 @@ int main(int argc, char* argv[])
 
 
 
-Im folgenden Skript Beispiel wird gezeigt, wie eine HTTP-Verbindung geöffnet, eine HTTP-Anforderung gesendet und alle Header aus der Antwort erhalten werden.
+Das folgende Skriptbeispiel zeigt, wie Sie eine HTTP-Verbindung öffnen, eine HTTP-Anforderung senden und alle Header aus der Antwort erhalten.
 
 
 ```JScript
@@ -179,26 +179,26 @@ WScript.Echo( WinHttpReq.GetAllResponseHeaders());
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5,0 und Internet Explorer 5,01 oder höher unter Windows XP und Windows 2000.<br/> |
-| IDL<br/>                      | <dl> <dt>HttpRequest. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WinHTTP. lib</dt> </dl>     |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher unter Windows XP und Windows 2000.<br/> |
+| Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwinhttprequest**](iwinhttprequest-interface.md)
+[**IWinHttpRequest**](iwinhttprequest-interface.md)
 </dt> <dt>
 
 [**WinHttpRequest**](winhttprequest.md)
 </dt> <dt>
 
-[**Getresponsheader**](iwinhttprequest-getresponseheader.md)
+[**GetResponseHeader**](iwinhttprequest-getresponseheader.md)
 </dt> <dt>
 
 [WinHTTP-Versionen](winhttp-versions.md)

@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 05205750810294076bf005d0e5b73fda6b2143d5
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d8873ee896d910d1596138a8d116c93ae0190534bac48b6ceb19165074f07b72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016748"
 ---
 # <a name="cbasewindowcbasewindow-constructor"></a>CBaseWindow.CBaseWindow-Konstruktor
 
@@ -57,7 +57,7 @@ Boolescher Wert, der die [**Membervariable CBaseWindow::m \_ bDoPostToDestroy**]
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Nachdem Sie das -Objekt erstellt haben, rufen Sie die [**CBaseWindow::P repareWindow-Methode**](cbasewindow-preparewindow.md) auf, um das Fenster zu erstellen. **PrepareWindow** ist eine virtuelle Methode. Sie ruft [**CBaseWindow::InitialiseWindow**](cbasewindow-initialisewindow.md)auf, ebenfalls eine virtuelle Methode. Diese Methoden werden vom Konstruktor getrennt, sodass abgeleitete Klassen sie bei Bedarf überschreiben können.
 
@@ -67,7 +67,7 @@ Wenn der Wert des *bDoGetDC-Parameters* **TRUE** ist, ruft das `CBaseWindow` -Ob
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |

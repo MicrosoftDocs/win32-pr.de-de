@@ -1,11 +1,11 @@
 ---
-title: Inapcertrelyingparty unabonniert bygroup-Methode (napcertrelyingparty. h)
-description: Abonniert einen Integritäts Zertifikat Server (HCS).
+title: INapCertRelyingParty UnSubscribeCertByGroup-Methode (NapCertRelyingParty.h)
+description: Kündigen des Abonnements eines Integritätszertifikatservers (HCS).
 ms.assetid: 2b26b110-8aba-487e-bd49-c6afc6af11f8
 keywords:
-- Unabonniertbygroup-Methode NAP
-- Unabonnebecertbygroup-Methode NAP, inapcertrelyingparty-Schnittstelle
-- Inapcertrelyingparty Interface NAP, unabonnebecertbygroup-Methode
+- UnSubscribeCertByGroup-Methode NAP
+- UnSubscribeCertByGroup-Methode NAP, INapCertRelyingParty-Schnittstelle
+- INapCertRelyingParty-Schnittstelle NAP , UnSubscribeCertByGroup-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b01bbad5ef48b5f709f93f018c56b5798907d08c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7d8b9f5398ba63c0e6108adfefd51d0546180db4536dbd95615e5b15dddde523
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956610"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118940218"
 ---
-# <a name="inapcertrelyingpartyunsubscribecertbygroup-method"></a>Inapcertrelyingparty:: unabonnebecertbygroup-Methode
+# <a name="inapcertrelyingpartyunsubscribecertbygroup-method"></a>INapCertRelyingParty::UnSubscribeCertByGroup-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **unabonniertbygroup** -Methode entabonniert einen Integritäts Zertifikat Server (HCS).
+Die **UnSubscribeCertByGroup-Methode** kündigen das Abonnement eines Integritätszertifikatservers (HCS).
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,17 +48,17 @@ HRESULT UnSubscribeCertByGroup(
 
 <dl> <dt>
 
- *ID* \[ in\]
+ *id* \[ in\]
 </dt> <dd>
 
-Eine [**enforcemententityid**](nap-datatypes.md) , die die ID des Erzwingungs Clients enthält, der abonniert wird.
+Eine [**EnforcementEntityId,**](nap-datatypes.md) die die ID des Nicht abonnierenden Erzwingungsclients enthält.
 
 </dd> <dt>
 
- *reserviert* \[ in\]
+ *reserviert* \[ In\]
 </dt> <dd>
 
-Muss **null** sein.
+Muss **NULL** sein.
 
 </dd> </dl>
 
@@ -71,18 +71,18 @@ Gibt basierend auf dem Ergebnis dieses Vorgangs einen der folgenden Fehlercodes 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Der Vorgang ist erfolgreich.<br/>                            |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn keine anderen Abonnenten für die HCS vorhanden sind, löscht der NAPAgent die entsprechenden Integritäts Zertifikate aus dem Speicher des lokalen Computers.
+Wenn keine anderen HcS-Abonnenten vorhanden sind, löscht NapAgent die entsprechenden Integritätszertifikate aus dem lokalen Computerspeicher.
 
-Rufen Sie vor dem Aufrufen dieser Methode " [**abonbecertbygroup**](inapcertrelyingparty-subscribecertbygroup.md)" auf.
+Rufen Sie vor dem Aufrufen dieser Methode [**SubscribeCertByGroup**](inapcertrelyingparty-subscribecertbygroup.md)auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,18 +90,18 @@ Rufen Sie vor dem Aufrufen dieser Methode " [**abonbecertbygroup**](inapcertrely
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                               |
-| Header<br/>                   | <dl> <dt>Napcertrelyingparty. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napcertrelyingparty. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                               |
+| Header<br/>                   | <dl> <dt>NapCertRelyingParty.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapCertRelyingParty.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapcertrelyingparty**](inapcertrelyingparty.md)
+[**INapCertRelyingParty**](inapcertrelyingparty.md)
 </dt> </dl>
 
  

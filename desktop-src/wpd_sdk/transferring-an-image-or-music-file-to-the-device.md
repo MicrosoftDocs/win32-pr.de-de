@@ -1,38 +1,38 @@
 ---
-description: Übertragen einer Bild-oder Musikdatei auf das Gerät
+description: Übertragen einer Bild- oder Musik datei auf das Gerät
 ms.assetid: bace274c-512a-46da-80a7-84734ee880b7
-title: Übertragen einer Bild-oder Musikdatei auf das Gerät
+title: Übertragen einer Bild- oder Musik datei auf das Gerät
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f3308212825f6c67ea79a40873fc466164d62f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 44cf16c4c95080b5479825bbc4a0f8dcfd131fdb603821edab0a2e9df4d03c41
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119928060"
 ---
-# <a name="transferring-an-image-or-music-file-to-the-device"></a>Übertragen einer Bild-oder Musikdatei auf das Gerät
+# <a name="transferring-an-image-or-music-file-to-the-device"></a>Übertragen einer Bild- oder Musik datei auf das Gerät
 
-Eine der gängigsten Vorgänge, die von einer Anwendung durchgeführt werden, ist die Übertragung von Inhalt auf ein verbundenes Gerät.
+Einer der gängigsten Vorgänge, die von einer Anwendung durchgeführt werden, ist die Übertragung von Inhalten an ein verbundenes Gerät.
 
-Inhalts Übertragungen werden mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen erreicht.
+Inhaltsübertragungen werden mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen durchgeführt.
 
 
 
 | Schnittstelle                                                                | BESCHREIBUNG                                                    |
 |--------------------------------------------------------------------------|----------------------------------------------------------------|
-| [**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)       | Ermöglicht den Zugriff auf die Inhalts spezifischen Methoden.               |
-| [**Iportabledevicedatastream-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicedatastream) | Wird beim Schreiben des Inhalts auf das Gerät verwendet.                   |
-| [**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)         | Dient zum Abrufen von Eigenschaften, die den Inhalt beschreiben.         |
+| [**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)       | Ermöglicht den Zugriff auf die inhaltsspezifischen Methoden.               |
+| [**IPortableDeviceDataStream-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicedatastream) | Wird beim Schreiben des Inhalts auf das Gerät verwendet.                   |
+| [**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)         | Wird verwendet, um Eigenschaften abzurufen, die den Inhalt beschreiben.         |
 | IStream-Schnittstelle                                                        | Wird verwendet, um das Lesen von Inhalten und das Schreiben auf das Gerät zu vereinfachen. |
 
 
 
  
 
-Die `TransferContentToDevice` Funktion im Modul "contenttransfer. cpp" der Beispielanwendung veranschaulicht, wie eine Anwendung Inhalte von einem PC an ein verbundenes Gerät übertragen könnte. In diesem speziellen Beispiel kann der übertragene Inhalt eine Datei sein, die ein Bild, eine Musik oder Kontaktinformationen enthält.
+Die `TransferContentToDevice` Funktion im ContentTransfer.cpp-Modul der Beispielanwendung veranschaulicht, wie eine Anwendung Inhalte von einem PC auf ein verbundenes Gerät übertragen kann. In diesem speziellen Beispiel kann es sich bei dem übertragenen Inhalt um eine Datei mit einem Bild, musik oder Kontaktinformationen handelt.
 
-Die erste Aufgabe, die von der-Funktion durchgeführt wird, besteht darin, `TransferContentToDevice` den Benutzer zur Eingabe eines Objekt Bezeichners aufzufordern, der das zu übertragende Objekt identifiziert.
+Die erste Aufgabe der `TransferContentToDevice` Funktion besteht darin, den Benutzer zur Eingabe eines Objektbezeichners aufzufordern, der das zu übertragende Objekt identifiziert.
 
 
 ```C++
@@ -57,7 +57,7 @@ if (FAILED(hr))
 
 
 
-Die zweite Aufgabe, die von der-Funktion durchgeführt `TransferContentToDevice` wird, besteht darin, ein [**iportabledevicecontent**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent) -Objekt durch Aufrufen der [**iportabledevice:: Content**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-content) -Methode zu erstellen.
+Die zweite Aufgabe der `TransferContentToDevice` Funktion besteht darin, ein [**IPortableDeviceContent-Objekt**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent) durch Aufrufen der [**IPortableDevice::Content-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-content) zu erstellen.
 
 
 ```C++
@@ -73,7 +73,7 @@ if (SUCCEEDED(hr))
 
 
 
-Die nächste Aufgabe, die von der-Funktion durchgeführt `TransferContentToDevice` wird, ist die Erstellung eines **FileOpen** -Dialog Felds, in dem der Benutzer den Speicherort und den Namen der zu übertragenden Datei angeben kann.
+Die nächste Aufgabe, die von der Funktion ausgeführt `TransferContentToDevice` wird, ist die Erstellung eines **Dateiöffnen-Dialogfelds,** mit dem der Benutzer den Speicherort und den Namen der zu übertragenden Datei angeben kann.
 
 
 ```C++
@@ -100,9 +100,9 @@ if (SUCCEEDED(hr))
 
 
 
-Die- `TransferContentToDevice` Funktion übergibt eine Filter Zeichenfolge ( `wszFileTypeFilter` ) an die GetOpenFileName-Methode, die den Typ der Dateien bestimmt, die der Benutzer auswählen kann. `DoMenu`Im Modul wpdapisample. cpp finden Sie Beispiele für die drei verschiedenen Filter, die im Beispiel zulässig sind.
+Die `TransferContentToDevice` Funktion übergibt eine Filterzeichenfolge ( `wszFileTypeFilter` ) an die GetOpenFileName-Methode, die den Typ der Dateien bestimmt, die der Benutzer auswählen kann. Beispiele für die drei verschiedenen Filter, die im Beispiel zulässig sind, finden Sie `DoMenu` in der Funktion im WpdApiSample.cpp-Modul.
 
-Nachdem der Benutzer eine bestimmte Datei für die Übertragung an das Gerät identifiziert hat, `TransferContentToDevice` öffnet die Funktion diese Datei als IStream-Objekt und ruft die zum Abschluss der Übertragung erforderlichen Eigenschaften ab.
+Nachdem der Benutzer eine bestimmte Datei für die Übertragung auf das Gerät identifiziert hat, öffnet die `TransferContentToDevice` Funktion diese Datei als IStream-Objekt und ruft Eigenschaften ab, die zum Abschließen der Übertragung erforderlich sind.
 
 
 ```C++
@@ -135,21 +135,21 @@ if (SUCCEEDED(hr))
 
 
 
-Die erforderlichen Eigenschaften werden abgerufen, indem die `GetRequiredPropertiesForContentType` Hilfsfunktion aufgerufen wird, die für das IStream-Objekt gilt. Die `GetRequiredPropertiesForContentType` -Hilfsfunktion erstellt ein [**iportabledevicevalues**](iportabledevicevalues.md) -Objekt, ruft die Eigenschaften in der folgenden Liste ab und fügt diese diesem-Objekt hinzu.
+Die erforderlichen Eigenschaften werden durch Aufrufen der `GetRequiredPropertiesForContentType` Hilfsfunktion abgerufen, die auf das IStream-Objekt angewendet wird. Die `GetRequiredPropertiesForContentType` Hilfsfunktion erstellt ein [**IPortableDeviceValues-Objekt,**](iportabledevicevalues.md) ruft die Eigenschaften in der folgenden Liste ab und fügt sie diesem Objekt hinzu.
 
--   Übergeordnete Objekt Kennung
+-   Bezeichner des übergeordneten Objekts
 -   Streamgröße in Bytes
--   Name der Inhalts Datei
--   Inhalts Name (der Dateiname ohne Erweiterung)
--   Inhaltstyp (Bild, Audiodatei oder Kontakt)
--   Inhalts Format (jff, WMA oder vCard2)
+-   Name der Inhaltsdatei
+-   Inhaltsname (der Dateiname ohne Erweiterung)
+-   Inhaltstyp (Bild, Audio oder Kontakt)
+-   Inhaltsformat (JFIF, WMA oder vCard2)
 
 Die Beispielanwendung verwendet die abgerufenen Eigenschaften, um den neuen Inhalt auf dem Gerät zu erstellen. Dies erfolgt in drei Phasen:
 
-1.  Die Anwendung ruft die [**iportabledevicecontent:: | ateobjectwithpropertiesanddata**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-createobjectwithpropertiesanddata) -Methode auf, um ein neues IStream-Objekt auf dem Gerät zu erstellen.
-2.  Die Anwendung verwendet dieses Objekt, um ein [**iportabledevicedatastream**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicedatastream) -Objekt aus dem WPD-Treiber abzurufen.
-3.  Die Anwendung verwendet das neue **iportabledevicedatastream** -Objekt, um den Inhalt auf das Gerät zu schreiben (über die streamcopy-Hilfsfunktion). Die Hilfsfunktion schreibt die Daten aus der Quelldatei in den Datenstrom, der von [**iportabledevicecontent:: | ateobjectwithpropertiesanddata**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-createobjectwithpropertiesanddata)zurückgegeben wurde.
-4.  Die Anwendung schließt den Vorgang ab, indem Sie die Commit-Methode für den Zielstream aufruft.
+1.  Die Anwendung ruft die [**IPortableDeviceContent::CreateObjectWithPropertiesAndData-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-createobjectwithpropertiesanddata) auf, um ein neues IStream-Objekt auf dem Gerät zu erstellen.
+2.  Die Anwendung verwendet dieses Objekt, um ein [**IPortableDeviceDataStream-Objekt**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicedatastream) vom WPD-Treiber abzurufen.
+3.  Die Anwendung verwendet das neue **IPortableDeviceDataStream-Objekt,** um den Inhalt auf das Gerät zu schreiben (über die StreamCopy-Hilfsfunktion). Die Hilfsfunktion schreibt die Daten aus der Quelldatei in den Stream, der von [**IPortableDeviceContent::CreateObjectWithPropertiesAndData**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-createobjectwithpropertiesanddata)zurückgegeben wird.
+4.  Die Anwendung schließt den Vorgang ab, indem sie die Commit-Methode im Zielstream aufruft.
 
 
 ```C++
@@ -236,16 +236,16 @@ if (SUCCEEDED(hr))
 
 <dl> <dt>
 
-[**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
+[**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
 </dt> <dt>
 
-[**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
+[**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
 </dt> <dt>
 
-[**Iportabledevicedatastream-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicedatastream)
+[**IPortableDeviceDataStream-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicedatastream)
 </dt> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

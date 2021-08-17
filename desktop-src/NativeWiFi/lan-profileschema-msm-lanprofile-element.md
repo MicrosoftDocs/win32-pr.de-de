@@ -1,7 +1,7 @@
 ---
-description: Enthält Einstellungen für medienspezifische Module (MSM).
+description: Enthält MSM-Einstellungen (Media-Specific Module).
 ms.assetid: fe858701-e0eb-4817-b3c2-ae61e96a4cbe
-title: MSM-Element (lanprofile)
+title: MSM-Element (LANProfile)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: e9e58895ae36a304e713ecdb21b4008a2027e8c8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 25334050e95ff20cf35ed1071bf2b1c006e29c0f9374923199a96c09bbae0471
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119065080"
 ---
-# <a name="msm-lanprofile-element"></a>MSM-Element (lanprofile)
+# <a name="msm-lanprofile-element"></a>MSM-Element (LANProfile)
 
-Das MSM-Element (lanprofile) enthält Einstellungen für medienspezifische Module (MSM).
+Das MSM-Element (LANProfile) enthält MSM-Einstellungen (Media-Specific Module).
 
 ``` syntax
 <xs:element name="MSM">
@@ -56,17 +56,17 @@ Das MSM-Element (lanprofile) enthält Einstellungen für medienspezifische Modul
 </xs:element>
 ```
 
-Das **MSM** -Element wird durch das [**lanprofile**](lan-profileschema-lanprofile-element.md) -Element definiert.
+Das **MSM-Element** wird durch das [**LANProfile-Element**](lan-profileschema-lanprofile-element.md) definiert.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 
 
-| Element                                                                 | type    | BESCHREIBUNG                                                                                                                              |
+| Element                                                                 | type    | Beschreibung                                                                                                                              |
 |-------------------------------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Onexaktiviert**](lan-profileschema-onexenabled-security-element.md)   | boolean | Gibt an, ob der Dienst für die automatische Konfiguration von Kabel Netzwerken mithilfe von 802.1 x eine Port Authentifizierung durchführen soll.<br/>       |
-| [**Onexerzwungen**](lan-profileschema-onexenforced-security-element.md) | boolean | Gibt an, ob für den automatischen Konfigurations Dienst für verkabelte Netzwerke die Verwendung von 802.1 x für die Port Authentifizierung erforderlich ist. <br/> |
-| [**Sicherung**](lan-profileschema-security-msm-element.md)              |         | Enthält Sicherheitseinstellungen. <br/>                                                                                                  |
+| [**OneXEnabled**](lan-profileschema-onexenabled-security-element.md)   | boolean | Gibt an, ob der automatische Konfigurationsdienst für kabelgebundene Netzwerke die Portauthentifizierung mit 802.1X versucht.<br/>       |
+| [**OneXEnforced**](lan-profileschema-onexenforced-security-element.md) | boolean | Gibt an, ob der automatische Konfigurationsdienst für kabelgebundene Netzwerke die Verwendung von 802.1X für die Portauthentifizierung erfordert. <br/> |
+| [**Sicherheit**](lan-profileschema-security-msm-element.md)              |         | Enthält Sicherheitseinstellungen. <br/>                                                                                                  |
 
 
 
@@ -76,25 +76,25 @@ Das **MSM** -Element wird durch das [**lanprofile**](lan-profileschema-lanprofil
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Lanprofile**](lan-profileschema-lanprofile-element.md)
+[**LANProfile**](lan-profileschema-lanprofile-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Lanprofile**](lan-profileschema-lanprofile-element.md)
+[**LANProfile**](lan-profileschema-lanprofile-element.md)
 </dt> </dl>
 
  

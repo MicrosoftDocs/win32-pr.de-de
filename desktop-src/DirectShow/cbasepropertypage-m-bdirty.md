@@ -1,7 +1,7 @@
 ---
-description: Das m \_ bdirty-Flag gibt an, ob eine der Eigenschaften geändert wurde. Legen Sie dieses Flag auf true fest, wenn der Benutzereigenschaften über die Dialogfeld Steuerelemente ändert.
+description: Das \_ m bDirty-Flag gibt an, ob eine der Eigenschaften geändert wurde. Legen Sie dieses Flag auf TRUE fest, wenn der Benutzer Eigenschaften über die Dialogsteuerelemente ändert.
 ms.assetid: 7455a45b-4d6d-410a-aed6-7003d4ed2183
-title: 'Cbasepropertypage:: m_bDirty Member (cprop. h)'
+title: CBasePropertyPage::m_bDirty-Member (Cprop.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 85e3481c66925b667e8791328c84afeb18fe90e6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fd6737b7317c5bd86e756bfbd45d9d69e461f92ecc007d739203519170ee57f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955039"
 ---
-# <a name="cbasepropertypagem_bdirty-member"></a>Cbasepropertypage:: m \_ bdirty-Member
+# <a name="cbasepropertypagem_bdirty-member"></a>CBasePropertyPage::m \_ bDirty-Member
 
-Das **m \_ bdirty** -Flag gibt an, ob eine der Eigenschaften geändert wurde. Legen Sie dieses Flag auf **true** fest, wenn der Benutzereigenschaften über die Dialogfeld Steuerelemente ändert.
+Das **m \_ bDirty-Flag** gibt an, ob eine der Eigenschaften geändert wurde. Legen Sie dieses Flag auf **TRUE** fest, wenn der Benutzer Eigenschaften über die Dialogsteuerelemente ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ BOOL m_bDirty;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Cprop. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Cprop.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepropertypage-Klasse**](cbasepropertypage.md)
+[**CBasePropertyPage-Klasse**](cbasepropertypage.md)
 </dt> </dl>
 
  

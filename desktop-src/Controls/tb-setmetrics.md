@@ -1,9 +1,9 @@
 ---
-title: TB_SETMETRICS Meldung (kommstrg. h)
-description: Legt die Metriken eines Symbolleisten-Steuer Elements fest.
+title: TB_SETMETRICS (Commctrl.h)
+description: Legt die Metriken eines Symbolleisten-Steuerelements fest.
 ms.assetid: 60e35d65-6291-4a55-a4cf-19b5b1db8a65
 keywords:
-- Windows-Steuerelemente für TB_SETMETRICS Meldung
+- TB_SETMETRICS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5320ecc85f0a44c4c80868ae5699b051e1ac1781
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1c152d0fd1bfef894b1d54db768984697ebef2c9b82ac6d2663401363a338b3c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949594"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119967910"
 ---
-# <a name="tb_setmetrics-message"></a>TB \_ setmetrics-Nachricht
+# <a name="tb_setmetrics-message"></a>TB \_ SETMETRICS-Nachricht
 
-Legt die Metriken eines Symbolleisten-Steuer Elements fest.
+Legt die Metriken eines Symbolleisten-Steuerelements fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,7 +35,7 @@ Legt die Metriken eines Symbolleisten-Steuer Elements fest.
 *lParam* 
 </dt> <dd>
 
-[**Tbmetrics**](/windows/desktop/api/Commctrl/ns-commctrl-tbmetrics) -Struktur, die die festzulegenden Toolbar-Metriken enthält.
+[**TBMETRICS-Struktur,**](/windows/desktop/api/Commctrl/ns-commctrl-tbmetrics) die die festgelegten Symbolleistenmetriken enthält.
 
 </dd> </dl>
 
@@ -43,10 +43,10 @@ Legt die Metriken eines Symbolleisten-Steuer Elements fest.
 
 Der Rückgabewert wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung zu verwenden, müssen Sie ein Manifest angeben, das Comclt32.dll 6.0 an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -56,9 +56,9 @@ Der Rückgabewert wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

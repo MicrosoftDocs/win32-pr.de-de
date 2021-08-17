@@ -29,13 +29,13 @@ Wird vom Gruppenrichtlinie-Objekt für Computerrichtlinien verwendet.
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------------------------------------------|
-| CN                | GPC-Computererweiterungsnamen                                                     |
+| CN                | GPC-Machine-Extension-Names                                                     |
 | Ldap-Anzeigename | gPCMachineExtensionNames                                                        |
 | Size              | Hängt von der Anzahl der clientseitigen Erweiterungen ab, die über eine Richtlinie in diesem Gruppenrichtlinienobjekt verfügen. |
 | Aktualisieren von Berechtigungen  | Domänen- oder Richtlinienadministrator.                                                 |
 | Updatehäufigkeit  | Jedes Mal, wenn ein Gruppenrichtlinienobjekt über die GPE aktualisiert wird.                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.1348                                                         |
-| System-ID-GUID    | 32ff8ecc-783f-11d2-9916-0000f87a57d4                                            |
+| System-Id-Guid    | 32ff8ecc-783f-11d2-9916-0000f87a57d4                                            |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                     |
 
 
@@ -57,16 +57,16 @@ Wird vom Gruppenrichtlinie-Objekt für Computerrichtlinien verwendet.
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | False                                                               |
-| Ist einwertig       | True                                                                |
-| Ist indiziert             | False                                                               |
-| Im globalen Katalog      | False                                                               |
+| System-Only            | Falsch                                                               |
+| Is-Single-Valued       | Richtig                                                                |
+| Ist indiziert             | Falsch                                                               |
+| Im globalen Katalog      | Falsch                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 
 
 
@@ -78,16 +78,16 @@ Wird vom Gruppenrichtlinie-Objekt für Computerrichtlinien verwendet.
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | False                                                               |
-| Ist einwertig       | True                                                                |
-| Ist indiziert             | False                                                               |
-| Im globalen Katalog      | False                                                               |
+| System-Only            | Falsch                                                               |
+| Is-Single-Valued       | Richtig                                                                |
+| Ist indiziert             | Falsch                                                               |
+| Im globalen Katalog      | Falsch                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Wird vom Gruppenrichtlinie-Objekt für Computerrichtlinien verwendet.
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | False                                                               |
-| Ist einwertig       | True                                                                |
-| Ist indiziert             | False                                                               |
-| Im globalen Katalog      | False                                                               |
+| System-Only            | Falsch                                                               |
+| Is-Single-Valued       | Richtig                                                                |
+| Ist indiziert             | Falsch                                                               |
+| Im globalen Katalog      | Falsch                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Wird vom Gruppenrichtlinie-Objekt für Computerrichtlinien verwendet.
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | False                                                               |
-| Ist einwertig       | True                                                                |
-| Ist indiziert             | False                                                               |
-| Im globalen Katalog      | False                                                               |
+| System-Only            | Falsch                                                               |
+| Is-Single-Valued       | Richtig                                                                |
+| Ist indiziert             | Falsch                                                               |
+| Im globalen Katalog      | Falsch                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Wird vom Gruppenrichtlinie-Objekt für Computerrichtlinien verwendet.
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | False                                                               |
-| Ist einwertig       | True                                                                |
-| Ist indiziert             | False                                                               |
-| Im globalen Katalog      | False                                                               |
+| System-Only            | Falsch                                                               |
+| Is-Single-Valued       | Richtig                                                                |
+| Ist indiziert             | Falsch                                                               |
+| Im globalen Katalog      | Falsch                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Wird vom Gruppenrichtlinie-Objekt für Computerrichtlinien verwendet.
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | False                                                               |
-| Ist einwertig       | True                                                                |
-| Ist indiziert             | False                                                               |
-| Im globalen Katalog      | False                                                               |
+| System-Only            | Falsch                                                               |
+| Is-Single-Valued       | Richtig                                                                |
+| Ist indiziert             | Falsch                                                               |
+| Im globalen Katalog      | Falsch                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 
 
 

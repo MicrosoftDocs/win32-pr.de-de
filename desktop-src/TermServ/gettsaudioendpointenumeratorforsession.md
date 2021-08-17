@@ -1,10 +1,10 @@
 ---
-title: Gettsaudioendpointenreeratorforsession-Rückruffunktion
-description: Gibt einen Verweis auf einen audioendpunktenumerator für die angegebene Sitzungs-ID zurück.
+title: GetTSAudioEndpointEnumeratorForSession-Rückruffunktion
+description: Gibt einen Verweis auf einen Audioendpunkt-Enumerator für die angegebene Sitzungs-ID zurück.
 ms.assetid: 9dd95ef7-f83f-43be-a8b2-e2b0e4a47a42
 ms.tgt_platform: multiple
 keywords:
-- Gettsaudioendpointenreeratorforsession-Rückruffunktion Remotedesktopdienste
+- GetTSAudioEndpointEnumeratorForSession-Rückruffunktion Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d6c09896fc4b35fcb0b6a01a7d592421dd5d5654
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2f64af1d7e886b418ac87cd360302101a60d746d707652f605a648e9812a5547
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346334"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119059588"
 ---
-# <a name="gettsaudioendpointenumeratorforsession-callback-function"></a>Gettsaudioendpointenreeratorforsession-Rückruffunktion
+# <a name="gettsaudioendpointenumeratorforsession-callback-function"></a>GetTSAudioEndpointEnumeratorForSession-Rückruffunktion
 
-Gibt einen Verweis auf einen audioendpunktenumerator für die angegebene Sitzungs-ID zurück. Consumer dieses audioendpunktenumerators, z. b. MMDevAPI.dll, rufen diese Funktion auf, um einen audioendpunktenumerator in einer Remotedesktopdienste Sitzung abzurufen.
+Gibt einen Verweis auf einen Audioendpunkt-Enumerator für die angegebene Sitzungs-ID zurück. Benutzer dieses Audioendpunkt-Enumerators wie MMDevAPI.dll rufen diese Funktion auf, um einen Audioendpunkt-Enumerator in einer Remotedesktopdienste abzurufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,27 +41,27 @@ HRESULT GetTSAudioEndpointEnumeratorForSession(
 
 <dl> <dt>
 
-*SessionID* \[ in\]
+*SessionId* \[ In\]
 </dt> <dd>
 
 Der Bezeichner der Remotedesktopdienste Sitzung.
 
 </dd> <dt>
 
-*ppendpointenreerator* \[ vorgenommen\]
+*ppEndpointEnumerator* \[ out\]
 </dt> <dd>
 
-Die Adresse eines Zeigers auf eine [**immdeviceenumerator**](/windows/desktop/api/mmdeviceapi/nn-mmdeviceapi-immdeviceenumerator) -Schnittstelle.
+Die Adresse eines Zeigers auf eine [**IMMDeviceEnumerator-Schnittstelle.**](/windows/desktop/api/mmdeviceapi/nn-mmdeviceapi-immdeviceenumerator)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück.
+Wenn die Methode erfolgreich ist, wird **S \_ OK zurückgegeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist nicht in einer Header Datei definiert. Sie sollten diese Funktion in den benutzerdefinierten Endpunkt Enumerator implementieren und exportieren und die im Syntax Block weiter oben in diesem Thema gezeigte Signatur verwenden.
+Diese Funktion ist nicht in einer Headerdatei definiert. Sie sollten diese Funktion in Ihren benutzerdefinierten Endpunktenumerator implementieren und exportieren und die Signatur verwenden, die weiter oben in diesem Thema im Syntaxblock gezeigt wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,14 +74,14 @@ Diese Funktion ist nicht in einer Header Datei definiert. Sie sollten diese Funk
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Implementieren eines benutzerdefinierten audioendpunkt-Enumerators](implementing-an-audio-endpoint-enumerator.md)
+[Implementieren eines benutzerdefinierten Audioendpunkt-Enumerators](implementing-an-audio-endpoint-enumerator.md)
 </dt> <dt>
 
-[**Immdeviceenumerator**](/windows/desktop/api/mmdeviceapi/nn-mmdeviceapi-immdeviceenumerator)
+[**IMMDeviceEnumerator**](/windows/desktop/api/mmdeviceapi/nn-mmdeviceapi-immdeviceenumerator)
 </dt> </dl>
 
  

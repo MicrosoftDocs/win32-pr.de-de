@@ -1,7 +1,7 @@
 ---
-description: Der Zähler von PKEY \_ Photo \_ AnimateSpeed.
+description: Der Zähler von PKEY \_ \_ PhotoSpeed.
 ms.assetid: 7810d1c8-2f64-4853-b7f6-b9d18a0c7fd1
-title: System.Photo.CogspeedNumerator
+title: System.Photo.SpeedNumerator
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: cc43393065558d68ace2a5d7a707368d94d9b2feab79e2eda239d65fb2953ea4
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118970029"
 ---
-# <a name="systemphotoshutterspeednumerator"></a>System.Photo.CogspeedNumerator
+# <a name="systemphotoshutterspeednumerator"></a>System.Photo.SpeedNumerator
 
-Der Zähler von PKEY \_ Photo \_ AnimateSpeed.
+Der Zähler von PKEY \_ \_ PhotoSpeed.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

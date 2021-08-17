@@ -1,11 +1,11 @@
 ---
 title: Managed-Objects-Attribut
-description: Enthält die Liste der Objekte, die vom Benutzer verwaltet werden. Bei den aufgelisteten Objekten handelt es sich um Objekte, für die die Eigenschaft managedBy auf diesen Benutzer festgelegt ist. Jedes Element in der Liste ist ein verknüpfter Verweis auf das verwaltete Objekt.
+description: Enthält die Liste der Objekte, die vom Benutzer verwaltet werden. Bei den aufgelisteten Objekten handelt es sich um Objekte, bei denen die eigenschaft managedBy auf diesen Benutzer festgelegt ist. Jedes Element in der Liste ist ein verknüpfter Verweis auf das verwaltete Objekt.
 ms.assetid: 59b76431-03a5-4839-8800-ef03d26b66cc
 ms.tgt_platform: multiple
 keywords:
-- Managed-Objects AD-Attributschema
-- AD-Schema für managedObjects-Attribut
+- Managed-Objects AD-Schema
+- MANAGEDObjects-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119301250"
 ---
 # <a name="managed-objects-attribute"></a>Managed-Objects-Attribut
 
-Enthält die Liste der Objekte, die vom Benutzer verwaltet werden. Bei den aufgelisteten Objekten handelt es sich um Objekte, für die die Eigenschaft managedBy auf diesen Benutzer festgelegt ist. Jedes Element in der Liste ist ein verknüpfter Verweis auf das verwaltete Objekt.
+Enthält die Liste der Objekte, die vom Benutzer verwaltet werden. Bei den aufgelisteten Objekten handelt es sich um Objekte, bei denen die eigenschaft managedBy auf diesen Benutzer festgelegt ist. Jedes Element in der Liste ist ein verknüpfter Verweis auf das verwaltete Objekt.
 
 
 
@@ -33,9 +33,9 @@ Enthält die Liste der Objekte, die vom Benutzer verwaltet werden. Bei den aufge
 | Ldap-Anzeigename | managedObjects                                                                     |
 | Size              | \-                                                                                 |
 | Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.                                                   |
-| Updatehäufigkeit  | Wenn der Benutzerdatensatz erstellt wird und wenn sich die verwalteten Objekte ändern müssen. |
+| Updatehäufigkeit  | Wenn der Benutzerdatensatz erstellt wird und wann immer die verwalteten Objekte geändert werden müssen. |
 | Attribute-Id      | 1.2.840.113556.1.4.654                                                             |
-| System-ID-GUID    | 0296c124-40da-11d1-a9c0-0000f80367c1                                               |
+| System-Id-Guid    | 0296c124-40da-11d1-a9c0-0000f80367c1                                               |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md)                                            |
 
 
@@ -58,10 +58,10 @@ Enthält die Liste der Objekte, die vom Benutzer verwaltet werden. Bei den aufge
 |------------------------|---------------------------------|
 | Link-ID                | 73                              |
 | MAPI-Id                | 0x8024                          |
-| System-Only            | True                            |
-| Ist einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Richtig                            |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -79,10 +79,10 @@ Enthält die Liste der Objekte, die vom Benutzer verwaltet werden. Bei den aufge
 |------------------------|---------------------------------|
 | Link-ID                | 73                              |
 | MAPI-Id                | 0x8024                          |
-| System-Only            | True                            |
-| Ist einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Richtig                            |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -100,10 +100,10 @@ Enthält die Liste der Objekte, die vom Benutzer verwaltet werden. Bei den aufge
 |------------------------|---------------------------------|
 | Link-ID                | 73                              |
 | MAPI-Id                | 0x8024                          |
-| System-Only            | True                            |
-| Ist einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Richtig                            |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -121,10 +121,10 @@ Enthält die Liste der Objekte, die vom Benutzer verwaltet werden. Bei den aufge
 |------------------------|---------------------------------|
 | Link-ID                | 73                              |
 | MAPI-Id                | 0x8024                          |
-| System-Only            | True                            |
-| Ist einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Richtig                            |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -142,10 +142,10 @@ Enthält die Liste der Objekte, die vom Benutzer verwaltet werden. Bei den aufge
 |------------------------|---------------------------------|
 | Link-ID                | 73                              |
 | MAPI-Id                | 0x8024                          |
-| System-Only            | True                            |
-| Ist einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Richtig                            |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -163,10 +163,10 @@ Enthält die Liste der Objekte, die vom Benutzer verwaltet werden. Bei den aufge
 |------------------------|---------------------------------|
 | Link-ID                | 73                              |
 | MAPI-Id                | 0x8024                          |
-| System-Only            | True                            |
-| Ist einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Richtig                            |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -184,10 +184,10 @@ Enthält die Liste der Objekte, die vom Benutzer verwaltet werden. Bei den aufge
 |------------------------|---------------------------------|
 | Link-ID                | 73                              |
 | MAPI-Id                | 0x8024                          |
-| System-Only            | True                            |
-| Ist einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Richtig                            |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |

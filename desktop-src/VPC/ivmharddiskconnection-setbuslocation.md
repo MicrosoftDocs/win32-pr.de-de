@@ -1,11 +1,11 @@
 ---
-title: Ivmharddiskconnection-setbusloationmethode (vpccominterfaces. h)
-description: Legt den Busspeicherort fest, an den diese Festplatte angefügt ist.
+title: IVMHardDiskConnection SetBusLocation-Methode (VPCCOMInterfaces.h)
+description: Legt den Busstandort fest, an den diese Festplatte angefügt ist.
 ms.assetid: 0aa303ae-d8bf-4d38-94ab-bdbb4e744c7b
 keywords:
-- Setbusloationmethod-Methode Virtual PC
-- Setbusloationmethod-Methode Virtual PC, ivmharddiskconnection-Schnittstelle
-- Ivmharddiskconnection-Schnittstelle Virtual PC, setbusloationmethod
+- SetBusLocation-Methode Virtueller PC
+- SetBusLocation-Methode Virtueller PC, IVMHardDiskConnection-Schnittstelle
+- IVMHardDiskConnection-Schnittstelle Virtueller PC, SetBusLocation-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 61de0f595bc06d497e7f5913da9173ccb3bf1ad2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d8f2ff59b0318c321d1fb5ce75bac8c5604c5e96474c52565732ec3794b4aab0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119974350"
 ---
-# <a name="ivmharddiskconnectionsetbuslocation-method"></a>Ivmharddiskconnection:: setbusloations-Methode
+# <a name="ivmharddiskconnectionsetbuslocation-method"></a>IVMHardDiskConnection::SetBusLocation-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Legt den Busspeicherort fest, an den diese Festplatte angefügt ist.
+Legt den Busstandort fest, an den diese Festplatte angefügt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,14 +45,14 @@ HRESULT SetBusLocation(
 
 <dl> <dt>
 
-*vmbusnumber* \[ in\]
+*vmBusNumber* \[ In\]
 </dt> <dd>
 
 Die zu verwendende Busnummer.
 
 </dd> <dt>
 
-*vmdevicenumschlag* \[ in\]
+*vmDeviceNumber* \[ In\]
 </dt> <dd>
 
 Die zu verwendende Gerätenummer.
@@ -65,15 +65,15 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                               | BESCHREIBUNG                                                                                                 |
+| Rückgabecode/-wert                                                                                                                                                               | Beschreibung                                                                                                 |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                     | Der Vorgang wurde durchgeführt.<br/>                                                                    |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>0x80000003</dt> </dl>                    | Der angegebene Busspeicherort ist ungültig.<br/>                                                         |
-| <dl> <dt>**VM \_ E- \_ VM wird \_ ausgeführt \_ oder \_**</dt> <dt>0xa004020b</dt> gespeichert </dl>    | Der Busstandort konnte nicht festgelegt werden, weil sich der virtuelle Computer in einem laufenden oder gespeicherten Zustand befindet.<br/>    |
-| <dl> <dt>**VM \_ E \_ Drive \_ Bus \_ loc \_ \_ verwendet**</dt> <dt>0xa00400503</dt> </dl> | Der Busstandort konnte nicht festgelegt werden, da zurzeit ein anderes Gerät an diesen Speicherort angeschlossen ist.<br/> |
-| <dl> <dt>**VM \_ E \_ Laufwerk \_ ungültige**</dt> <dt>0xa0040502</dt> </dl>            | Das aktuelle Laufwerk ist ungültig.<br/>                                                                  |
-| <dl> <dt>**VM \_ E \_ VM \_ unbekannt**</dt> <dt>0xa0040207</dt> </dl>               | Der aktuelle virtuelle Computer ist ungültig.<br/>                                                        |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>               | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                |
+| <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>                    | Der angegebene Busstandort ist ungültig.<br/>                                                         |
+| <dl> <dt>**VM \_ E \_ \_ VM, DIE \_ AUSGEFÜHRT WIRD ODER \_ 0XA004020B**</dt> <dt></dt> </dl>    | Der Busstandort konnte nicht festgelegt werden, da sich der virtuelle Computer in einem ausgeführten oder gespeicherten Zustand befindet.<br/>    |
+| <dl> <dt>**VM \_ E \_ DRIVE \_ BUS \_ LOC IN USE \_ \_ 0XA00400503**</dt> <dt></dt> </dl> | Der Busstandort konnte nicht festgelegt werden, da derzeit ein anderes Gerät an diesen Standort angefügt ist.<br/> |
+| <dl> <dt>**VM \_ E \_ DRIVE \_ INVALID**</dt> <dt>0xA0040502</dt> </dl>            | Das aktuelle Laufwerk ist ungültig.<br/>                                                                  |
+| <dl> <dt>**VM \_ E \_ VM \_ UNKNOWN**</dt> <dt>0xA0040207</dt> </dl>               | Der aktuelle virtuelle Computer ist ungültig.<br/>                                                        |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>               | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                |
 
 
 
@@ -85,20 +85,20 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmharddiskconnection ist als aefa36a5-463a-46AE-9e6c-a1fb4e12e671 definiert.<br/>      |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMHardDiskconnection ist als aefa36a5-463a-46ae-9e6c-a1fb4e12e671 definiert.<br/>      |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmharddiskconnection**](ivmharddiskconnection.md)
+[**IVMHardDiskConnection**](ivmharddiskconnection.md)
 </dt> </dl>
 
  

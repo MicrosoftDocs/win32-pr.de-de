@@ -103,7 +103,7 @@ Dieser Codeabschnitt zeigt die **Steuerelementdeklaration SplitButtonGallery.Men
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

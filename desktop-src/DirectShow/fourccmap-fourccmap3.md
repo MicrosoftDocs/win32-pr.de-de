@@ -1,5 +1,5 @@
 ---
-description: Eine Konstruktormethode, die die Zuordnung zwischen alten Multimediaformat-DWORD-Typen und GUID-Untertypen ermöglicht. Diese Methode verwendet den Parameter "pguid".
+description: Eine Konstruktormethode, die die Zuordnung zwischen DWORD-Typen im alten Multimediaformat und GUID-Untertypen bereitstellt. Diese Methode verwendet den Parameter "pguid".
 ms.assetid: 4de6cb49-938e-42f8-8687-dc60a0f23e87
 title: FOURCCMap::FOURCCMap-Konstruktor (Fourcc.h) – pguid-Parameter
 ms.topic: reference
@@ -25,7 +25,7 @@ ms.locfileid: "119330440"
 ---
 # <a name="fourccmapfourccmap-constructor-fourcch---pguid-parameter"></a>FOURCCMap::FOURCCMap-Konstruktor (Fourcc.h) – pguid-Parameter
 
-Konstruktormethode. Der Constuctor stellt die Zuordnung zwischen alten **Multimediaformat-DWORD-Typen** und **GUID-Untertypen** zur Verfügung.
+Konstruktormethode. Der Constuctor stellt die Zuordnung zwischen **DWORD-Typen** im alten Multimediaformat und **GUID-Untertypen** bereit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,14 +51,14 @@ Zeiger auf den global eindeutigen Bezeichner (**GUID**).
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn dieses Objekt mit dem **FOURCC-Code erstellt** wird, wird eine **GUID** erstellt, um ihn zu finden. Wenn dieses Objekt mit einer vorhandenen **GUID erstellt** wird, wird der **FOURCC-Wert** des -Objekts auf 0 (null) festgelegt. Danach kann der **FOURCC-Wert** mithilfe der [**Memberfunktionen SetFOURCC**](fourccmap-setfourcc.md) bzw. [**GetFOURCC**](fourccmap-getfourcc.md) festgelegt oder abgerufen werden.
+Wenn dieses Objekt mit dem **FOURCC-Code** erstellt wird, wird eine **GUID** für den Abgleich erstellt. Wenn dieses Objekt mit einer vorhandenen **GUID** erstellt wird, wird der **FOURCC-Wert** des Objekts auf 0 (null) festgelegt. Danach kann der **FOURCC-Wert** mithilfe der [**Memberfunktionen SetFOURCC**](fourccmap-setfourcc.md) bzw. [**GetFOURCC**](fourccmap-getfourcc.md) festgelegt oder abgerufen werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |-|-|
 | Header  | Fourcc.h (include Streams.h) |
-| Bibliothek | Strmbase.lib (Einzelhandels-Builds); Strmbasd.lib (Debugbuilds) |
+| Bibliothek | Strmbase.lib (Verkaufsbuilds); Strmbasd.lib (Debugbuilds) |
 
 ## <a name="see-also"></a>Weitere Informationen
 

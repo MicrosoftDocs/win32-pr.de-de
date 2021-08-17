@@ -1,7 +1,7 @@
 ---
-description: Die sourcethreadcanwait-Methode enthält den streamingindthread oder gibt diesen frei.
+description: Die SourceThreadCanWait-Methode enthält oder gibt den Streamingthread frei.
 ms.assetid: f68f5f0b-ef5b-49a9-a768-c4cc065c0cb3
-title: Cbaserderderer. sourcethreadcanwait-Methode (renbase. h)
+title: CBaseRenderer.SourceThreadCanWait-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f01be304ec2b5f845ea61c9609808c6e2f39fca9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6ba9f8e202d7c98bfea5d7068fa63a8d889d88fb10b4c6a7cb3516fadbca7ebd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367114"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954769"
 ---
-# <a name="cbaserenderersourcethreadcanwait-method"></a>Cbaserderderer. sourcethreadcanwait-Methode
+# <a name="cbaserenderersourcethreadcanwait-method"></a>CBaseRenderer.SourceThreadCanWait-Methode
 
-Die- `SourceThreadCanWait` Methode enthält den streamingthread oder gibt diesen frei.
+Die `SourceThreadCanWait` -Methode enthält oder gibt den Streamingthread frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ virtual HRESULT SourceThreadCanWait(
 
 <dl> <dt>
 
-*bcanwait* 
+*bCanWait* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob der streamingthread enthalten sein soll. **True** gibt an, dass der streamingingthread blockiert wird, während der Filter auf das Rendering der nächsten Beispiele wartet. Wenn **false**, wird der streamingingthread freigegeben.
+Boolescher Wert, der angibt, ob der Streamingthread verwendet werden soll. True **gibt an,** dass der Streamingthread blockiert wird, während der Filter darauf wartet, die nächsten Beispiele zu rendern. False **gibt an,** dass der Streamingthread freigegeben wird.
 
 </dd> </dl>
 
@@ -53,13 +53,13 @@ Boolescher Wert, der angibt, ob der streamingthread enthalten sein soll. **True*
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie die- `SourceThreadCanWait` Methode mit dem Wert **false** aufrufen, wird der Filter gezwungen, von einem blockierten [**IMemInputPin:: Receive**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) -Aufruf zurückzukehren. Wenn der Filter ausgeführt wird, werden **Empfangs** Aufrufe bis zum Präsentations Zeitpunkt des aktuellen Beispiels blockiert. Wenn der Filter angehalten wird, werden **Empfangs** Aufrufe unbegrenzt blockiert. Dieses Verhalten regelt den Datenfluss im Stream. Wenn der Filter beendet oder geleert wird, sollte er jedoch nicht blockiert werden.
+Das Aufrufen der -Methode mit dem Wert FALSE zwingt den Filter, von einem blockierten `SourceThreadCanWait` [**IMemInputPin::Receive-Aufruf zurückzukehren.**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive)  Wenn der Filter ausgeführt wird, blockiert er **Empfangsaufrufe** bis zur Präsentationszeit des aktuellen Beispiels. Wenn der Filter angehalten wird, werden **Empfangsaufrufe** unbegrenzt blockiert. Dieses Verhalten reguliert den Datenfluss im Stream. Wenn der Filter beendet oder geleert wird, sollte er jedoch nicht blockiert werden.
 
-Die Blockierung wird von der [**cbaserdenderer:: waitforrendertime**](cbaserenderer-waitforrendertime.md) -Methode gesteuert, die auf zwei Ereignisse wartet: [**cbaserdenderer:: m \_ renderevent**](cbaserenderer-m-renderevent.md) und [**cbasererderer:: m \_ threadsignal**](cbaserenderer-m-threadsignal.md). Das **m \_ renderevent** -Ereignis wird signalisiert, wenn die Präsentationszeit erreicht wird. Das **m \_ threadsignal** -Ereignis wird signalisiert, wenn `SourceThreadCanWait` mit dem Wert **false** aufgerufen wird. `SourceThreadCanWait`Wenn Sie mit dem Wert **true** aufrufen, wird das-Ereignis zurückgesetzt.
+Die Blockierung wird von der [**CBaseRenderer::WaitForRenderTime-Methode**](cbaserenderer-waitforrendertime.md) gesteuert, die auf zwei Ereignisse wartet: [**CBaseRenderer::m \_ RenderEvent**](cbaserenderer-m-renderevent.md) und [**CBaseRenderer::m \_ ThreadSignal**](cbaserenderer-m-threadsignal.md). Das **m \_ RenderEvent-Ereignis** wird signalisiert, wenn die Präsentationszeit eintrifft. Das **m \_ ThreadSignal-Ereignis** wird signalisiert, `SourceThreadCanWait` wenn mit dem Wert FALSE aufgerufen **wird.** Wenn `SourceThreadCanWait` Sie mit dem Wert TRUE **aufrufen,** wird das Ereignis zurückgesetzt.
 
-Die [**cbaserenderer:: Ende**](cbaserenderer-stop.md) -und [**cbaserenderer:: beginflush**](cbaserenderer-beginflush.md) -Methoden aufrufen `SourceThreadCanWait` mit dem Wert **false** (Freigabe des streaminginthreads). Der [**cbaserenumderer::P ause**](cbaserenderer-pause.md), [**cbasererderderer:: Run**](cbaserenderer-run.md)-Methode und der [**cbaserderderer:: endflush**](cbaserenderer-endflush.md) -Methodenaufrufe `SourceThreadCanWait` mit dem Wert " **true**".
+Die [**Methoden CBaseRenderer::Stop**](cbaserenderer-stop.md) und [**CBaseRenderer::BeginFlush**](cbaserenderer-beginflush.md) rufen mit dem Wert `SourceThreadCanWait` **FALSE** auf (freigeben des Streamingthreads). Die [**Methoden CBaseRenderer::P ause,**](cbaserenderer-pause.md) [**CBaseRenderer::Run**](cbaserenderer-run.md)und [**CBaseRenderer::EndFlush**](cbaserenderer-endflush.md) rufen mit dem Wert `SourceThreadCanWait` TRUE **auf.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,16 +67,16 @@ Die [**cbaserenderer:: Ende**](cbaserenderer-stop.md) -und [**cbaserenderer:: be
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

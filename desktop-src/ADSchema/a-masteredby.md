@@ -1,6 +1,6 @@
 ---
 title: Mastered-By-Attribut
-description: Rückwärtslink für das Has-Master-NCs-Attribut. Der Distinguished Name für die NTDS-Einstellungen-Objekte.
+description: Rückwärtslink für das Has-Master-NCs-Attribut. Der Distinguished Name für die NTDS-Einstellungen -Objekte.
 ms.assetid: bd14998c-1691-4167-83c4-3c1ec1181b7f
 ms.tgt_platform: multiple
 keywords:
@@ -23,7 +23,7 @@ ms.locfileid: "119301050"
 ---
 # <a name="mastered-by-attribute"></a>Mastered-By-Attribut
 
-Rückwärtslink für das Has-Master-NCs-Attribut. Der Distinguished Name für die NTDS-Einstellungen-Objekte.
+Rückwärtslink für das Has-Master-NCs-Attribut. Der Distinguished Name für die NTDS-Einstellungen -Objekte.
 
 
 
@@ -58,10 +58,10 @@ Rückwärtslink für das Has-Master-NCs-Attribut. Der Distinguished Name für di
 |------------------------|---------------------------------|
 | Link-ID                | 77                              |
 | MAPI-Id                | \-                              |
-| System-Only            | True                            |
-| Ist einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Richtig                            |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -79,10 +79,10 @@ Rückwärtslink für das Has-Master-NCs-Attribut. Der Distinguished Name für di
 |------------------------|---------------------------------|
 | Link-ID                | 77                              |
 | MAPI-Id                | \-                              |
-| System-Only            | True                            |
-| Ist einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Richtig                            |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -100,10 +100,10 @@ Rückwärtslink für das Has-Master-NCs-Attribut. Der Distinguished Name für di
 |------------------------|---------------------------------|
 | Link-ID                | 77                              |
 | MAPI-Id                | \-                              |
-| System-Only            | True                            |
-| Ist einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Richtig                            |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -121,10 +121,10 @@ Rückwärtslink für das Has-Master-NCs-Attribut. Der Distinguished Name für di
 |------------------------|---------------------------------|
 | Link-ID                | 77                              |
 | MAPI-Id                | \-                              |
-| System-Only            | True                            |
-| Is-Single-Valued       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Richtig                            |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -142,10 +142,10 @@ Rückwärtslink für das Has-Master-NCs-Attribut. Der Distinguished Name für di
 |------------------------|---------------------------------|
 | Link-ID                | 77                              |
 | MAPI-Id                | \-                              |
-| System-Only            | True                            |
-| Is-Single-Valued       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Richtig                            |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -163,10 +163,10 @@ Rückwärtslink für das Has-Master-NCs-Attribut. Der Distinguished Name für di
 |------------------------|---------------------------------|
 | Link-ID                | 77                              |
 | MAPI-Id                | \-                              |
-| System-Only            | True                            |
-| Is-Single-Valued       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Richtig                            |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -184,10 +184,10 @@ Rückwärtslink für das Has-Master-NCs-Attribut. Der Distinguished Name für di
 |------------------------|---------------------------------|
 | Link-ID                | 77                              |
 | MAPI-Id                | \-                              |
-| System-Only            | True                            |
-| Is-Single-Valued       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
+| System-Only            | Richtig                            |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |

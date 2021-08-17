@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der spacehintsgrbit-Enumeration.
-title: Spacehintsgrbit-Enumeration
+description: 'Weitere Informationen zu: SpaceHintsGrbit-Enumeration'
+title: SpaceHintsGrbit-Enumeration
 TOCTitle: SpaceHintsGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.SpaceHintsGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.spacehintsgrbit(v=EXCHG.10)
@@ -44,21 +44,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ffc78aab444c73f7ff0eae7ff0eaa84e134ee9bd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8a2ee172355b48e64f62f2b18477373269d81ae060460ad34ff45dbad33a91b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978530"
 ---
-# <a name="spacehintsgrbit-enumeration"></a>Spacehintsgrbit-Enumeration
+# <a name="spacehintsgrbit-enumeration"></a>SpaceHintsGrbit-Enumeration
 
 Optionen für [JET_SPACEHINTS](./jet-spacehints-class.md).
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -93,18 +93,18 @@ public enum SpaceHintsGrbit
 </tr>
 <tr class="even">
 <td></td>
-<td>Spacehintutilizeparameespace</td>
-<td>Dadurch wird die interne Zuordnungs Richtlinie geändert, um Speicherplatz hierarchisch aus dem unmittelbar übergeordneten Element einer B-Struktur zu erhalten.</td>
+<td>SpaceHintUtilizeParentSpace</td>
+<td>Dadurch wird die interne Zuordnungsrichtlinie so geändert, dass der Speicherplatz vom unmittelbar übergeordneten Element einer B-Struktur hierarchisch erhalten wird.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>"Kreatehintappendsequential"</td>
-<td>Dieses Bit ermöglicht das Anfügen von Split-Verhalten entsprechend der Wachstumsdynamik der Tabelle (festgelegt durch cbminblock, ulgrowth, cbmaxblock).</td>
+<td>CreateHintAppendSequential</td>
+<td>Dieses Bit ermöglicht das Anfügen des Teilungsverhaltens entsprechend der Wachstums dynamics der Tabelle (festgelegt durch cbMinExtent, ulGrowth, cbMaxExtent).</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>"Kreatehinthotpointsequential"</td>
-<td>Dieses Bit ermöglicht das Anwachsen des hotpointverhaltens entsprechend der Wachstumsdynamik der Tabelle (festgelegt durch cbminblock, ulgrowth, cbmaxblock).</td>
+<td>CreateHintHotpointSequential</td>
+<td>Dieses Bit ermöglicht das Aufteilen von Hotpoints entsprechend der Wachstums dynamics der Tabelle (festgelegt durch cbMinExtent, ulGrowth, cbMaxExtent).</td>
 </tr>
 <tr class="odd">
 <td></td>
@@ -113,13 +113,13 @@ public enum SpaceHintsGrbit
 </tr>
 <tr class="even">
 <td></td>
-<td>"Retrievehinttablescanforward"</td>
-<td>Durch Festlegen dieser Option gibt der Client an, dass die Forward-sequenzielle Überprüfung das vorherrschende Verwendungs Muster dieser Tabelle ist.</td>
+<td>RetrieveHintTableScanForward</td>
+<td>Durch Festlegen dieser Einstellung gibt der Client an, dass die sequenzielle Vorwärtsüberprüfung das vorherrschende Verwendungsmuster dieser Tabelle ist.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Retrievehinttablescanabwärts</td>
-<td>Durch Festlegen dieser Option gibt der Client an, dass ein rückwärts sequenzieller Scan das vorherrschende Verwendungs Muster dieser Tabelle ist.</td>
+<td>RetrieveHintTableScanBackward</td>
+<td>Durch Festlegen dieser Einstellung gibt der Client an, dass die rückwärts sequenzielle Überprüfung das vorherrschende Verwendungsmuster dieser Tabelle ist.</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -133,15 +133,15 @@ public enum SpaceHintsGrbit
 </tr>
 <tr class="even">
 <td></td>
-<td>Deletehinttablesequential</td>
-<td>Die Anwendung erwartet, dass diese Tabelle sequenziell (vom niedrigsten zum höchsten Schlüssel) bereinigt wird.</td>
+<td>DeleteHintTableSequential</td>
+<td>Die Anwendung erwartet, dass diese Tabelle sequenziell bereinigt wird (vom niedrigsten schlüssel zum höchsten Schlüssel).</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

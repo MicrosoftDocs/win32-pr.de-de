@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob ein Winkel Block wiedergegeben und Winkel Änderungen durchgeführt werden können.
+description: Gibt an, ob ein Winkelblock wiedergegeben wird und Winkeländerungen durchgeführt werden können.
 ms.assetid: 15593841-3162-4598-86bc-1debca22b284
-title: EC_DVD_ANGLES_AVAILABLE (dvdevcode. h)
+title: EC_DVD_ANGLES_AVAILABLE (Dvdevcode.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - dvdevcode.h
-ms.openlocfilehash: e4d2abb17b329323cf4a21128da5dba927b48d4a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e95c692aed8ac6c709ff0db1d6056fc59219fa73f5aa2e4cfb9b31b2c1a03d94
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373914"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119015988"
 ---
-# <a name="ec_dvd_angles_available"></a>EC- \_ DVD- \_ Winkel \_ verfügbar
+# <a name="ec_dvd_angles_available"></a>EC \_ DVD \_ ANGLES \_ AVAILABLE
 
-Gibt an, ob ein Winkel Block wiedergegeben und Winkel Änderungen durchgeführt werden können.
+Gibt an, ob ein Winkelblock wiedergegeben wird und Winkeländerungen durchgeführt werden können.
 
 ## <a name="parameters"></a>Parameter
 
@@ -31,7 +31,7 @@ Gibt an, ob ein Winkel Block wiedergegeben und Winkel Änderungen durchgeführt 
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-Boolescher Wert (**boolescher** Wert), der angibt, ob ein Winkel Block wiedergegeben wird. NULL (0) gibt an, dass die Wiedergabe nicht in einem Winkel Block vorhanden ist und keine Winkel verfügbar sind, eins (1) gibt an, dass ein Winkel Block wiedergegeben wird und Winkel Änderungen durchgeführt werden können.
+Boolescher Wert **(BOOL),** der angibt, ob ein Winkelblock wiedergegeben wird. Null (0) gibt an, dass sich die Wiedergabe nicht in einem Winkelblock befindet und keine Winkel verfügbar sind, Eins (1) gibt an, dass ein Winkelblock wiedergegeben wird und Winkeländerungen durchgeführt werden können.
 
 </dd> <dt>
 
@@ -42,9 +42,9 @@ Keinen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Winkel Änderungen sind nicht auf Winkel Blöcke beschränkt, und die Darstellung der Winkel Änderung kann nur in einem Winkel Block angezeigt werden.
+Winkeländerungen sind nicht auf Winkelblöcke beschränkt, und die Drehung der Winkeländerung kann nur in einem Winkelblock beobachtet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,21 +52,21 @@ Winkel Änderungen sind nicht auf Winkel Blöcke beschränkt, und die Darstellun
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdevcode. h (Include DShow. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdevcode.h (include Dshow.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [DVD-Anwendungen](dvd-applications.md)
 </dt> <dt>
 
-[DVD-Ereignis Benachrichtigungs Codes](dvd-notification-codes.md)
+[DVD-Ereignisbenachrichtigungscodes](dvd-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

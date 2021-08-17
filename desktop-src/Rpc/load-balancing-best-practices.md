@@ -17,9 +17,9 @@ Beim Einrichten und Konfigurieren des RPC-Lastenausgleichs sollten mehrere bewä
 
 Zunächst sollte die Sicherheit für eingehende und ausgehende LBS-Aufrufe festgelegt werden. Dies bedeutet, dass beide optionalen [NoSecurity-Registrierungsschlüssel](configuring-load-balancing.md) entweder nicht vorhanden sein oder auf 0 (null) festgelegt werden sollten.
 
-Zweitens muss die Front-End-Lastenausgleichslösung, die in Verbindung mit der RPC-Lastenausgleichslösung verwendet wird, besondere Aufmerksamkeit erhalten. Wenn der Front-End-Lastenausgleich beispielsweise einen einfachen Roundrobin-Lastenausgleich verwendet, sollte eine ungerade Anzahl von Servern in der Serverfarm vorhanden sein. Dadurch soll die Möglichkeit verringert werden, dass alle Verbindungen weitergeleitet und somit vom gleichen Server oder von denselben Servern verarbeitet werden.
+Zweitens muss die Front-End-Lastenausgleichslösung beachtet werden, die in Verbindung mit der RPC-Lastenausgleichslösung verwendet wird. Wenn der Front-End-Lastenausgleich beispielsweise einen einfachen Roundrobin-Lastenausgleich verwendet, sollte eine ungerade Anzahl von Servern in der Serverfarm vorhanden sein. Dadurch soll die Wahrscheinlichkeit verringert werden, dass alle Verbindungen weitergeleitet und somit vom gleichen Server oder denselben Servern bedient werden.
 
-Aus Sicherheitsgründen ist es in der Regel wünschenswert, dass eine Firewall den Zugriff auf RPC-Proxyserver kontrolliert. Wenn eine portbasierte Firewalllösung verwendet wird, müssen RPC-Endpunkte statisch sein, um die Anzahl der Ports zu begrenzen, die in der Firewall geöffnet sind. Auf Windows Server 2008 und höher von Windows stellt RPC einen Mechanismus zum Zuweisen eines statischen Ports zu dynamischen Endpunkten zur Verfügung. Dies wird durch die RPC-Netsh-Firewallbefehle erreicht. Ein Beispiel für einen Befehlssatz zum Festlegen der LBS-Schnittstelle auf den statischen Port 3010 ist:
+Aus Sicherheitsgründen ist es in der Regel wünschenswert, über einen Firewallsteuerungszugriff auf RPC-Proxyserver zu verfügen. Wenn eine portbasierte Firewalllösung verwendet wird, müssen RPC-Endpunkte statisch sein, um die Anzahl der in der Firewall geöffneten Ports zu begrenzen. Auf Windows Server 2008 und höher von Windows bietet RPC einen Mechanismus zum Zuweisen eines statischen Ports zu dynamischen Endpunkten. Dies wird über die RPC-Netsh-Firewallbefehle erreicht. Beispielbefehle zum Festlegen der LBS-Schnittstelle auf den statischen Port 3010:
 
 ``` syntax
 netsh rpc filter add rule layer=ep_add actiontype=permit
@@ -34,7 +34,7 @@ netsh rpc filter add condition field=ep_value matchtype=equal data=w3010
 netsh rpc filter add filter
 ```
 
-Mit dem RPC-Befehl netsh kann ein statischer Endpunkt für jede dynamische oder statische Schnittstelle festgelegt werden. Dies ist nützlich, wenn der Zugriff auf einen Computer eingeschränkt wird, auf dem eine portbasierte Firewalllösung ausgeführt wird. Wenn die Windows Firewalllösung verwendet wird, kann die RPC-Schnittstelle blockiert oder aktiviert werden, ohne sie einem bestimmten Port zuweisen zu müssen. Weitere Informationen finden Sie in der [RPC Netsh Firewall-Befehlsreferenz.](/previous-versions/windows/it-pro/windows-server-2003/cc784909(v=ws.10))
+Der RPC-Netsh-Befehl kann verwendet werden, um einen statischen Endpunkt für jede dynamische oder statische Schnittstelle festzulegen. Dies ist nützlich, wenn Sie den Zugriff auf einen Computer einschränken, auf dem eine portbasierte Firewalllösung ausgeführt wird. Wenn die Windows Firewalllösung verwendet wird, kann die RPC-Schnittstelle blockiert oder aktiviert werden, ohne sie einem bestimmten Port zuweisen zu müssen. Weitere Informationen finden Sie in der [RPC-Netsh-Firewallbefehlsreferenz.](/previous-versions/windows/it-pro/windows-server-2003/cc784909(v=ws.10))
 
  
 

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_GRBIT'
+description: 'Weitere Informationen zu: JET_GRBIT'
 title: JET_GRBIT
 TOCTitle: JET_GRBIT
 ms:assetid: b72548cf-3ca2-4ba5-b07a-35eb7e85ed2b
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b050aaa844ea814c0c24a62ccfb5ab332c611107
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 2b54ed8a95d81c148b68727384dd76fba3d2dc8b1f9d6452c2105bc45f015646
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "106365876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119362280"
 ---
 # <a name="jet_grbit"></a>JET_GRBIT
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_grbit"></a>JET_GRBIT
 
-Der **JET_GRBIT** -Datentyp ist eine Gruppe von Bits, die Konstanten enthalten, die für die Funktionen und Strukturen spezifisch sind, in denen Sie verwendet wird.
+Der **JET_GRBIT** Datentyp ist eine Gruppe von Bits, die Konstanten enthalten, die spezifisch für die Funktionen und Strukturen sind, in denen er verwendet wird.
 
 ```cpp
 typedef unsigned long JET_GRBIT;
@@ -39,13 +39,13 @@ typedef unsigned long JET_GRBIT;
 
 JET_GRBIT
 
-Im allgemeinen reflektieren die Konstanten, die als Werte für diesen Datentyp verwendet werden, den Namen des API-Elements, in dem Sie verwendet werden. Beispielsweise beginnen alle Konstanten, die an [jetretrievecolnumn](./jetretrievecolumn-function.md) übergebenen werden, mit "JET_bitRetrieve". Ebenso beginnen alle an [jetsetcolumn](./jetsetcolumn-function.md) übergebenen Konstanten mit "JET_bitSet".
+Im Allgemeinen geben die Konstanten, die als Werte für diesen Datentyp verwendet werden, den Namen des API-Elements wieder, in dem sie verwendet werden. Beispielsweise beginnen alle an [JetRetrieveColumn](./jetretrievecolumn-function.md) übergebenen Konstanten mit "JET_bitRetrieve". Ebenso beginnen alle an [JetSetColumn](./jetsetcolumn-function.md) übergebenen Konstanten mit "JET_bitSet".
 
-Der Wert 0 (null) bewirkt, dass der-Parameter ignoriert wird.
+Der Wert 0 (null) bewirkt, dass der Parameter ignoriert wird.
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter der jeweiligen Funktion oder Struktur. Die Optionen werden in der Regel als ein Satz von Flags, die kombiniert werden können, übermittelt.
+Weitere Informationen finden Sie in der spezifischen Funktion oder Struktur. Die Optionen werden in der Regel als Gruppe von Flags übergeben, die kombiniert werden können.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -65,7 +65,7 @@ Weitere Informationen finden Sie unter der jeweiligen Funktion oder Struktur. Di
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 </tbody>
 </table>
@@ -73,5 +73,5 @@ Weitere Informationen finden Sie unter der jeweiligen Funktion oder Struktur. Di
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Jetretrievecolumschlag](./jetretrievecolumn-function.md)  
-[Jetsetcolumn](./jetsetcolumn-function.md)
+[JetRetrieveColumn](./jetretrievecolumn-function.md)  
+[JetSetColumn](./jetsetcolumn-function.md)

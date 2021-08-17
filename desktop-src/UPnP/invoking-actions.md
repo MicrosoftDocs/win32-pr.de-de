@@ -1,30 +1,30 @@
 ---
 title: Aufrufen von Aktionen
-description: Die iupnpservice InvokeAction-Methode ermöglicht das Aufrufen von Aktionen für Dienst Objekte.
+description: Die IUPnPService InvokeAction-Methode ermöglicht das Aufrufen von Aktionen für Dienstobjekte.
 ms.assetid: 671e9280-5ead-43f2-bb6b-12792a6a4487
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dc7550575281681f3f533db90ef1c1034dbaa085
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: fe7b294d7f0ed80988e9d4a9f75393764fd0a58b20d84581ab9ab10677efc6ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137203"
 ---
 # <a name="invoking-actions"></a>Aufrufen von Aktionen
 
-Mit der [**iupnpservice:: InvokeAction**](/windows/desktop/api/Upnp/nf-upnp-iupnpservice-invokeaction) -Methode können Aktionen für Dienst Objekte aufgerufen werden. Diese Methode verfügt über zwei Eingabeparameter: den Namen einer Aktion und ein Array von Eingabe Argumenten für diese Aktion. Die-Methode verfügt über zwei Parameter:
+Die [**IUPnPService::InvokeAction-Methode**](/windows/desktop/api/Upnp/nf-upnp-iupnpservice-invokeaction) ermöglicht das Aufrufen von Aktionen für Dienstobjekte. Diese Methode verfügt über zwei Eingabeparameter: den Namen einer Aktion und ein Array von Eingabeargumenten für diese Aktion. Die -Methode verfügt über zwei Parameter:
 
--   Parameter One – ein Eingabe-/Ausgabeparameter: ein Array von Ausgabe Argumenten für diese Aktion.
--   Parameter Two – ein Ausgabeparameter: ein Rückgabewert.
+-   Parameter 1 : Ein Eingabe-/Ausgabeparameter: ein Array von Ausgabeargumenten für diese Aktion.
+-   Parameter 2 – ein Ausgabeparameter: ein Rückgabewert.
 
-Die-Methode bewirkt, dass die Aktion auf dem Gerät aufgerufen wird. Das Gerät generiert Ereignis Benachrichtigungen, wenn die Statusvariablen des Geräts durch die Aktion geändert werden.
+Die -Methode bewirkt, dass die Aktion auf dem Gerät aufgerufen wird. Das Gerät generiert Ereignisbenachrichtigungen, wenn sich die Zustandsvariablen des Geräts durch die Aktion ändern.
 
 ## <a name="vbscript-example"></a>VBScript-Beispiel
 
-Im folgenden VBScript-Codebeispiel werden zwei Aktionen für ein Dienst Objekt aufgerufen. Die erste Aktion, *gettrackinfo*, übernimmt ein Eingabe Argument, eine Nachverfolgung. Die *gettrackinfo* -Aktion gibt die Länge des Titels als Rückgabewert zurück. Die Aktion verfügt auch über ein Output-Argument, das den Titel des Titels enthält, wenn die Methode Erfolg zurückgibt.
+Im folgenden VBScript-Codebeispiel werden zwei Aktionen für ein Service-Objekt aufgerufen. Die erste Aktion, *GetTrackInfo,* übernimmt ein Eingabeargument, eine Tracknummer. Die *GetTrackInfo-Aktion* gibt die Tracklänge als Rückgabewert zurück. Die Aktion verfügt auch über ein Ausgabeargument, das den Titel der Spur enthält, wenn die Methode erfolgreich zurückgegeben wird.
 
-Nachdem Sie die *gettrackinfo* -Aktion aufgerufen haben, ruft das Beispiel die Play-Aktion auf, die keine Argumente annimmt. Da die Syntax von [**InvokeAction**](/windows/desktop/api/Upnp/nf-upnp-iupnpservice-invokeaction) jedoch ein Array von Eingabe-und Ausgabe Argumenten erfordert, muss im Beispiel ein leeres Array, *emptyargs*, ohne Elemente erstellt werden. Im Beispiel wird dieses Array zusammen mit dem Namen der Aktion sowohl für Eingabe-als auch für Ausgabe Argumente an **InvokeAction** weitergeleitet.
+Nach dem Aufrufen der *GetTrackInfo-Aktion* ruft das Beispiel die Play-Aktion auf, die keine Argumente annimmt. Da die Syntax von [**InvokeAction**](/windows/desktop/api/Upnp/nf-upnp-iupnpservice-invokeaction) jedoch ein Array von Eingabe- und Ausgabeargumenten erfordert, muss im Beispiel ein leeres Array, *emptyArgs,* ohne Elemente erstellt werden. Im Beispiel wird dieses Array für die Eingabe- und Ausgabeargumente zusammen mit dem Namen der Aktion an **InvokeAction** übergeben.
 
 
 ```VB
@@ -44,9 +44,9 @@ returnVal = service.InvokeAction("Play", emptyArgs, emptyArgs)
 
 ## <a name="c-example"></a>C++-Beispiel
 
-Im folgenden Beispiel wird eine C++-Funktion definiert, die eine Aktion ohne Argumente aufruft. Da [**InvokeAction**](/windows/desktop/api/Upnp/nf-upnp-iupnpservice-invokeaction) ein [**SAFEARRAY**](/windows/win32/api/oaidl/ns-oaidl-safearray) von Argumenten erfordert, die übergeben werden, erstellt dieses Beispiel ein leeres **SAFEARRAY**. Da von dieser Aktion kein Wert zurückgegeben wird oder keine Ausgabe Argumente vorhanden sind, werden die letzten beiden [**Variant**](/previous-versions/windows/desktop/automat/variant-manipulation-functions) -Werte, die an **InvokeAction** übermittelt wurden, ignoriert.
+Im folgenden Beispiel wird eine C++-Funktion definiert, die eine Aktion ohne Argumente aufruft. Da [**InvokeAction**](/windows/desktop/api/Upnp/nf-upnp-iupnpservice-invokeaction) erfordert, dass ein [**SAFEARRAY**](/windows/win32/api/oaidl/ns-oaidl-safearray) von Argumenten übergeben wird, wird in diesem Beispiel ein leeres **SAFEARRAY** erstellt. Da diese Aktion keinen Wert zurückgibt oder über Ausgabeargumente verfügt, ignoriert dieses Beispiel die letzten beiden [**VARIANT-Werte,**](/previous-versions/windows/desktop/automat/variant-manipulation-functions) die an **InvokeAction** übergeben werden.
 
-Das Gerät generiert Ereignis Benachrichtigungen, wenn die Statusvariablen des Geräts durch die Aktion geändert werden.
+Das Gerät generiert Ereignisbenachrichtigungen, wenn sich die Zustandsvariablen des Geräts durch die Aktion ändern.
 
 
 ```C++
@@ -122,7 +122,7 @@ void InvokePlay(IUPnPService * pService)
 
 
 
-Im folgenden Beispiel wird die fiktive *gettrackinfo* -Aktion aufgerufen. Sie nimmt eine Nachverfolgung als Argument, gibt die Tracklänge als Rückgabewert zurück und gibt den Titel des Titels in einem Output-Argument zurück. Der Code ähnelt dem vorherigen Beispiel, mit der Ausnahme, dass anstelle eines leeren [**SAFEARRAY**](/windows/win32/api/oaidl/ns-oaidl-safearray) von Eingabe Argumenten in diesem Beispiel eine [**Variante**](/previous-versions/windows/desktop/automat/variant-manipulation-functions) eingefügt wird, die die Nachverfolgung enthält. Wenn [**InvokeAction**](/windows/desktop/api/Upnp/nf-upnp-iupnpservice-invokeaction) Erfolg zurückgibt, untersucht dieses Beispiel den Rückgabewert und das Array von Ausgabe Argumenten.
+Im folgenden Beispiel wird die fiktive *GetTrackInfo-Aktion* aufgerufen. Er nimmt eine Tracknummer als Argument, gibt die Tracklänge als Rückgabewert zurück und gibt den Titel der Spur in einem Ausgabeargument zurück. Der Code ähnelt dem vorherigen Beispiel, mit dem Unterschied, dass in diesem Beispiel kein leeres [**SAFEARRAY**](/windows/win32/api/oaidl/ns-oaidl-safearray) mit Eingabeargumenten erstellt wird, sondern ein [**VARIANT-Wert**](/previous-versions/windows/desktop/automat/variant-manipulation-functions) eingefügt wird, der die Tracknummer enthält. Wenn [**InvokeAction**](/windows/desktop/api/Upnp/nf-upnp-iupnpservice-invokeaction) erfolgreich zurückgegeben wird, untersucht dieses Beispiel den Rückgabewert und das Array von Ausgabeargumenten.
 
 
 ```C++
@@ -256,6 +256,6 @@ void InvokeGetTrackInfo(IUPnPService * pService)
 
 
 
- 
+ 
 
- 
+ 

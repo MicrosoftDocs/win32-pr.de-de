@@ -1,5 +1,5 @@
 ---
-description: Die \_ \_ abstrakte System Klasse des Vertrauens nehmers stellt einen Vertrauens nehmer dar. Es kann entweder ein Name oder eine sid (Bytearray) verwendet werden.
+description: Die \_ \_ abstrakte Vertrauensnehmer-Systemklasse stellt einen Vertrauensnehmer dar. Es kann entweder ein Name oder eine SID (Bytearray) verwendet werden.
 ms.assetid: 92d17c7c-ebca-4dd0-80d8-6edd999ca394
 ms.tgt_platform: multiple
 title: __Trustee-Klasse
@@ -20,18 +20,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 5c6ba04760e924ffe9d86916cffdb82ea2488219
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ac1e80bceb3dc584a22e342780bbf32660276868e473ff33ff01d6c2ad65d504
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119131953"
 ---
-# <a name="__trustee-class"></a>\_\_Treuhänder Klasse
+# <a name="__trustee-class"></a>\_\_Vertrauensnehmerklasse
 
-Die [**\_ \_ abstrakte**](--securitydescriptor.md) System Klasse des Vertrauens nehmers [*stellt einen Vertrauens*](/windows/desktop/SecGloss/t-gly)nehmer dar. Es kann entweder ein Name oder eine sid (Bytearray) verwendet werden.
+Die abstrakte [**\_ \_ Vertrauensnehmer-Systemklasse**](--securitydescriptor.md) stellt einen [*Vertrauensnehmer*](/windows/desktop/SecGloss/t-gly)dar. Es kann entweder ein Name oder eine SID (Bytearray) verwendet werden.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,97 +49,97 @@ class __Trustee
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ Treuhänder** Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ Vertrauensnehmerklasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ Treuhänder** Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ Vertrauensnehmerklasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Domäne**
+**Domain**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Domänen Teil des Kontos.
+Domänenteil des Kontos.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Namensteil des Kontos.
+Name-Teil des Kontos.
 
 </dd> <dt>
 
 **SID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die SID des Vertrauens nehmers im binären Bytearray-Formular.
+Die SID des Vertrauensnehmers im binären Bytearrayformat.
 
 </dd> <dt>
 
 **SidLength**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Länge der sid (in Bytes).
+Die Länge der SID in Bytes.
 
 </dd> <dt>
 
-**Sidstring**
+**SidString**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die SID des Vertrauens nehmers im Zeichen folgen Format, z. b. "S-1-1-0".
+Die SID des Vertrauensnehmers im Zeichenfolgenformat, z.B. "S-1-1-0".
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**TIME \_ CREATED**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Uhrzeit im [CIM- \_ DateTime](cim-datetime.md) -Format, als die Sicherheits Beschreibung erstellt wurde.
+Uhrzeit im [CIM \_ DATETIME-Format,](cim-datetime.md) zu der der Sicherheitsdeskriptor erstellt wurde.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse stellt Eigenschaften bereit, die von der [**Win32- \_ Treuhänder**](/previous-versions/windows/desktop/secrcw32prov/win32-trustee) Klasse geerbt werden, die ein Member der [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Klasse ist. Weitere Informationen finden Sie unter [WMI-sicherheitsdeskriptorobjekte](wmi-security-descriptor-objects.md) und [Ändern der Zugriffssicherheit für Sicherungs fähige Objekte](changing-access-security-on-securable-objects.md). Weitere Informationen zu ACEs finden Sie unter [Access Control-Komponenten](/windows/desktop/SecAuthZ/access-control-components).
+Diese Klasse stellt Eigenschaften bereit, die von der [**\_ Win32-Vertrauensnehmerklasse**](/previous-versions/windows/desktop/secrcw32prov/win32-trustee) geerbt werden, die ein Member der [**Win32 \_ SecurityDescriptor-Klasse**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) ist. Weitere Informationen finden Sie unter [WMI-Sicherheitsbeschreibungsobjekte](wmi-security-descriptor-objects.md) und [Ändern der Zugriffssicherheit für sicherungsfähige Objekte.](changing-access-security-on-securable-objects.md) Weitere Informationen zu ACEs finden Sie unter [Access Control Components](/windows/desktop/SecAuthZ/access-control-components).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -153,14 +153,14 @@ Diese Klasse stellt Eigenschaften bereit, die von der [**Win32- \_ Treuhänder**
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> <dt>
 
-[**Win32- \_ Treuhänder**](/previous-versions/windows/desktop/secrcw32prov/win32-trustee)
+[**\_Win32-Vertrauensnehmer**](/previous-versions/windows/desktop/secrcw32prov/win32-trustee)
 </dt> <dt>
 
 [Verwalten der WMI-Sicherheit](maintaining-wmi-security.md)

@@ -1,48 +1,48 @@
 ---
 title: Überwachen von Anwendungen
-description: In diesem Thema wird erläutert, wie Elemente der dynamischer Datenaustausch-Verwaltungs Bibliothek zum Erstellen einer Anwendung verwendet werden können, die dynamische Datenaustauschaktivitäten im System überwacht.
+description: In diesem Thema wird erläutert, wie Elemente der dynamische Daten Exchange Management Library verwendet werden können, um eine Anwendung zu erstellen, die dynamische Datenaustauschaktivitäten im System überwacht.
 ms.assetid: 6705dc8e-d1e9-4057-9fa2-42cd5cf818af
 keywords:
-- Windows-Benutzeroberfläche, dynamischer Datenaustausch (DDE)
-- Dynamischer Datenaustausch (DDE), Überwachen von Anwendungen
-- DDE (dynamischer Datenaustausch), Überwachen von Anwendungen
-- Datenaustausch, dynamischer Datenaustausch (DDE)
-- Windows-Benutzeroberfläche, dynamischer Datenaustausch Verwaltungs Bibliothek (Ddeml)
-- Dynamischer Datenaustausch Management Library (Ddeml), Überwachen von Anwendungen
-- Ddeml (dynamischer Datenaustausch-Verwaltungs Bibliothek), Überwachen von Anwendungen
-- Datenaustausch, dynamischer Datenaustausch Verwaltungs Bibliothek (Ddeml)
+- Windows Benutzeroberfläche,dynamische Daten Exchange (DDE)
+- dynamische Daten Exchange (DDE), Überwachen von Anwendungen
+- DDE (dynamische Daten Exchange),Überwachen von Anwendungen
+- Datenaustausch,dynamische Daten Exchange (DDE)
+- Windows Benutzeroberfläche,dynamische Daten Exchange Management Library (DDEML)
+- dynamische Daten Exchange Management Library (DDEML), Überwachen von Anwendungen
+- DDEML (dynamische Daten Exchange Management Library), Überwachen von Anwendungen
+- Datenaustausch,dynamische Daten Exchange Management Library (DDEML)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f1f75685d4caa15e519485b2d8b37983faa35366
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8fbf6db1faa765378ea2b22b1146de770e9c94b14cf7e9e511ab862be48369c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036705"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119128552"
 ---
 # <a name="monitoring-applications"></a>Überwachen von Anwendungen
 
-Die API-Elemente der Ddeml (dynamischer Datenaustausch Management Library) können verwendet werden, um eine Anwendung zu erstellen, die dynamischer Datenaustausch (DDE)-Aktivität im System überwacht. Wie jede beliebige Ddeml-Anwendung enthält eine DDE-Überwachungsanwendung eine DDE-Rückruffunktion. Die Ddeml benachrichtigt die DDE-Rückruffunktion einer Überwachungsanwendung immer dann, wenn ein DDE-Ereignis auftritt, wobei Informationen über das Ereignis an die Rückruffunktion übergeben werden. Die Anwendung zeigt die Informationen in der Regel in einem Fenster an oder schreibt Sie in eine Datei.
+Die API-Elemente der dynamische Daten Exchange Management Library (DDEML) können verwendet werden, um eine Anwendung zu erstellen, die dynamische Daten Exchange(DDE)-Aktivität im System überwacht. Wie jede DDEML-Anwendung enthält eine DDE-Überwachungsanwendung eine DDE-Rückruffunktion. Die DDEML benachrichtigt die DDE-Rückruffunktion einer Überwachungsanwendung, wenn ein DDE-Ereignis auftritt, und über gibt Informationen über das Ereignis an die Rückruffunktion weiter. Die Anwendung zeigt die Informationen in der Regel in einem Fenster an oder schreibt sie in eine Datei.
 
-Zum Empfangen von Benachrichtigungen von der Ddeml muss eine Anwendung als DDE-Monitor registriert sein, indem das appclass \_ Monitor-Flag in einem Aufrufe der [**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) -Funktion angegeben wird. Im gleichen Aufrufs kann die Anwendung mindestens ein monitorflags angeben, um die Ereignis Typen anzugeben, für die die Ddeml die Rückruffunktion der Anwendung benachrichtigen soll. Die folgenden monitorflags können von einer Anwendung angegeben werden:
+Um Benachrichtigungen von DDEML zu empfangen, muss eine Anwendung als DDE-Monitor registriert sein, indem das APPCLASS MONITOR-Flag in einem Aufruf der \_ [**DdeInitialize-Funktion angegeben**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) wird. In diesem Aufruf kann die Anwendung ein oder mehrere Monitorflags angeben, um die Ereignistypen anzugeben, für die die DDEML die Rückruffunktion der Anwendung benachrichtigen soll. Die folgenden Monitorflags können von einer Anwendung angegeben werden:
 
 
 
 | Flag          | Beschreibung                                                                                                                                                                                                                                         |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MF- \_ Rückrufe | Benachrichtigt die Rückruffunktion, wenn eine Transaktion an eine DDE-Rückruffunktion im System gesendet wird.                                                                                                                                           |
-| MF- \_ netzwerkv      | Benachrichtigt die Rückruffunktion, wenn eine Konversation eingerichtet oder beendet wird.                                                                                                                                                                |
-| MF- \_ Fehler    | Benachrichtigt die Rückruffunktion, wenn ein Ddeml-Fehler auftritt.                                                                                                                                                                                       |
-| Informationen zu MF \_ hsz \_ | Benachrichtigt die Rückruffunktion immer dann, wenn eine Ddeml-Anwendung den Verwendungs Zähler eines Zeichen folgen Handles erstellt, freigibt oder erhöht oder wenn ein Zeichen folgen Handle aufgrund eines Aufrufs der [**ddeuninitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeuninitialize) -Funktion freigegeben wird. |
-| MF- \_ Links     | Benachrichtigt die Rückruffunktion, wenn eine Empfehlung-Schleife gestartet oder beendet wird.                                                                                                                                                                         |
-| MF- \_ postmsgs  | Benachrichtigt die Rückruffunktion immer dann, wenn das System oder eine Anwendung eine DDE-Nachricht postet.                                                                                                                                                           |
-| MF \_ sendmsgs  | Benachrichtigt die Rückruffunktion immer dann, wenn das System oder eine Anwendung eine DDE-Nachricht sendet.                                                                                                                                                           |
+| \_MF-RÜCKRUFE | Benachrichtigt die Rückruffunktion, wenn eine Transaktion an eine DDE-Rückruffunktion im System gesendet wird.                                                                                                                                           |
+| MF \_ CONV      | Benachrichtigt die Rückruffunktion, wenn eine Konversation hergestellt oder beendet wird.                                                                                                                                                                |
+| \_MF-FEHLER    | Benachrichtigt die Rückruffunktion, wenn ein DDEML-Fehler auftritt.                                                                                                                                                                                       |
+| MF \_ HSZ \_ INFO | Benachrichtigt die Rückruffunktion, wenn eine DDEML-Anwendung die Nutzungsanzahl eines Zeichenfolgenhandls erstellt, freigibt oder erhöht oder wenn ein Zeichenfolgenhandle als Ergebnis eines Aufrufs der [**DdeUninitialize-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeuninitialize) freigibt. |
+| \_MF-LINKS     | Benachrichtigt die Rückruffunktion, wenn eine Advise-Schleife gestartet oder beendet wird.                                                                                                                                                                         |
+| MF \_ POSTMSGS  | Benachrichtigt die Rückruffunktion, wenn das System oder eine Anwendung eine DDE-Nachricht veröffentlicht.                                                                                                                                                           |
+| MF \_ SENDMSGS  | Benachrichtigt die Rückruffunktion, wenn das System oder eine Anwendung eine DDE-Nachricht sendet.                                                                                                                                                           |
 
 
 
- 
+ 
 
-Im folgenden Beispiel wird gezeigt, wie Sie eine DDE-Überwachungsanwendung registrieren, damit Ihre DDE-Rückruffunktion Benachrichtigungen über alle DDE-Ereignisse empfängt.
+Das folgende Beispiel zeigt, wie Sie eine DDE-Überwachungsanwendung registrieren, damit die DDE-Rückruffunktion Benachrichtigungen über alle DDE-Ereignisse empfängt.
 
 
 ```
@@ -69,24 +69,24 @@ if (DdeInitialize(
 
 
 
-Die Ddeml informiert eine Überwachungsanwendung über ein DDE-Ereignis, indem eine [**XYP- \_ Monitor**](xtyp-monitor.md) Transaktion an die DDE-Rückruffunktion der Anwendung gesendet wird. Während dieser Transaktion übergibt die Ddeml ein monitorflag, das den Typ des aufgetretenen DDE-Ereignisses angibt, und ein Handle für ein DDE-Objekt, das ausführliche Informationen über das Ereignis enthält. Die Ddeml stellt eine Reihe von Strukturen bereit, die die Anwendung verwenden kann, um die Informationen aus dem DDE-Objekt zu extrahieren. Es gibt eine entsprechende Struktur für jeden Typ von DDE-Ereignis.
+Die DDEML informiert eine Überwachungsanwendung über ein DDE-Ereignis, indem eine [**XTYP \_ MONITOR-Transaktion**](xtyp-monitor.md) an die DDE-Rückruffunktion der Anwendung sendet. Während dieser Transaktion übergibt die DDEML ein Monitorflag, das den Typ des aufgetretenen DDE-Ereignisses angibt, sowie ein Handle an ein DDE-Objekt, das ausführliche Informationen zum Ereignis enthält. Die DDEML stellt eine Reihe von Strukturen zur Verfügung, mit denen die Anwendung die Informationen aus dem DDE-Objekt extrahieren kann. Es gibt eine entsprechende -Struktur für jeden DDE-Ereignistyp.
 
 
 
-| Struktur                                  | BESCHREIBUNG                                                       |
+| Struktur                                  | Beschreibung                                                       |
 |--------------------------------------------|-------------------------------------------------------------------|
-| [**Moncbstruct**](/windows/win32/api/ddeml/ns-ddeml-moncbstruct)     | Enthält Informationen zu einer Transaktion.                         |
-| [**Mon-vstruct**](/windows/win32/api/ddeml/ns-ddeml-monconvstruct) | Enthält Informationen zu einer Konversation.                        |
-| [**Monerrstruct**](/windows/win32/api/ddeml/ns-ddeml-monerrstruct)   | Enthält Informationen zum letzten DDE-Fehler.                  |
-| [**Monlinkstruct**](/windows/win32/api/ddeml/ns-ddeml-monlinkstruct) | Enthält Informationen zu einer-Empfehlung-Schleife.                        |
-| [**Monhszstruct**](/windows/win32/api/ddeml/ns-ddeml-monhszstructa)   | Enthält Informationen über ein Zeichen folgen handle.                       |
-| [**Monmsgstruct**](/windows/win32/api/ddeml/ns-ddeml-monmsgstruct)   | Enthält Informationen zu einer DDE-Nachricht, die gesendet oder gepostet wurde. |
+| [**MONCBSTRUCT**](/windows/win32/api/ddeml/ns-ddeml-moncbstruct)     | Enthält Informationen zu einer Transaktion.                         |
+| [**MONCONVSTRUCT**](/windows/win32/api/ddeml/ns-ddeml-monconvstruct) | Enthält Informationen zu einer Konversation.                        |
+| [**MONERRSTRUCT**](/windows/win32/api/ddeml/ns-ddeml-monerrstruct)   | Enthält Informationen zum letzten DDE-Fehler.                  |
+| [**MONLINKSTRUCT**](/windows/win32/api/ddeml/ns-ddeml-monlinkstruct) | Enthält Informationen zu einer Advise-Schleife.                        |
+| [**MONHSZSTRUCT**](/windows/win32/api/ddeml/ns-ddeml-monhszstructa)   | Enthält Informationen zu einem Zeichenfolgenhand handle.                       |
+| [**MONMSGSTRUCT**](/windows/win32/api/ddeml/ns-ddeml-monmsgstruct)   | Enthält Informationen zu einer gesendeten oder gesendeten DDE-Nachricht. |
 
 
 
- 
+ 
 
-Das folgende Beispiel zeigt die DDE-Rückruffunktion einer DDE-Überwachungsanwendung, die Informationen zu jedem Ereignis des Zeichen folgen Handles formatiert und dann die Informationen in einem-Fenster anzeigt. Die-Funktion verwendet die [**monhszstruct**](/windows/win32/api/ddeml/ns-ddeml-monhszstructa) -Struktur, um die Informationen aus dem DDE-Objekt zu extrahieren.
+Das folgende Beispiel zeigt die DDE-Rückruffunktion einer DDE-Überwachungsanwendung, die Informationen zu jedem Zeichenfolgenhandpunkt-Ereignis formatiert und die Informationen dann in einem Fenster anzeigt. Die Funktion verwendet die [**MONHSZSTRUCT-Struktur,**](/windows/win32/api/ddeml/ns-ddeml-monhszstructa) um die Informationen aus dem DDE-Objekt zu extrahieren.
 
 
 ```
@@ -189,9 +189,9 @@ DWORD dwData2;
 
 
 
- 
+ 
 
- 
+ 
 
 
 

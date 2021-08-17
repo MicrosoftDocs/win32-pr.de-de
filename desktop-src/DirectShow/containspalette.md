@@ -1,7 +1,7 @@
 ---
-description: Die containspalette-Funktion bestimmt, ob eine angegebene videoinfoheader-Struktur eine Palette enthält.
+description: Die ContainsPalette-Funktion bestimmt, ob eine angegebene VIDEOINFOHEADER-Struktur eine Palette enthält.
 ms.assetid: e87ab1af-a822-45d8-9326-08b450e11279
-title: Containspalette-Funktion (wxutil. h)
+title: ContainsPalette-Funktion (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b9417d9dd39f958e4a4caf68ef368d231a2097de
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6c9e5ab793dfaadb868cc09cfbe25e59c02dc338b470992b81ab1990581e5c19
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954169"
 ---
-# <a name="containspalette-function"></a>Containspalette-Funktion
+# <a name="containspalette-function"></a>ContainsPalette-Funktion
 
-Die **containspalette** -Funktion bestimmt, ob eine angegebene [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur eine Palette enthält.
+Die **ContainsPalette-Funktion** bestimmt, ob eine angegebene [**VIDEOINFOHEADER-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) eine Palette enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ BOOL ContainsPalette(
 
 <dl> <dt>
 
-*pvideoinfo* 
+*pVideoInfo* 
 </dt> <dd>
 
-Zeiger auf eine [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur.
+Zeiger auf eine [**VIDEOINFOHEADER-Struktur.**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Bittiefe 8 oder kleiner (**bmiheader. biBitCount**) ist, oder wenn die Anzahl der Farbindizes größer als 0 (**bmiheader. biclrused**) ist. Gibt andernfalls **false** zurück.
+Gibt **TRUE** zurück, wenn der Bitdepth 8 oder weniger **(bmiHeader.biBitCount)** oder die Anzahl der Farbindizes größer als 0 **(bmiHeader.biClrUsed)** ist. Gibt andernfalls **FALSE zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,16 +60,16 @@ Gibt **true** zurück, wenn die Bittiefe 8 oder kleiner (**bmiheader. biBitCount
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Video-und Bildfunktionen](video-and-image-functions.md)
+[Video- und Bildfunktionen](video-and-image-functions.md)
 </dt> </dl>
 
  

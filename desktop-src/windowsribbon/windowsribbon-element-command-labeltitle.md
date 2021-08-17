@@ -1,9 +1,9 @@
 ---
-title: Command. labeltitle (Eigenschaft)
-description: Stellt einen Bezeichnungs Titel dar.
+title: Command.LabelTitle-Eigenschaft
+description: Stellt einen Bezeichnungstitel dar.
 ms.assetid: 97378ec3-7988-4e39-9cf5-c382b246c5c9
 keywords:
-- Command. labeltitle-Eigenschaft (Windows-Menüband)
+- Command.LabelTitle-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ed6d6c72ddd60cca63834fdcf21cf8f8b726ad22
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c44995d3f17b165c38f9fe7490a33e5d140c8d2b375d5d6b625bb00e3228b21e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518689"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119810790"
 ---
-# <a name="commandlabeltitle-property"></a>Command. labeltitle (Eigenschaft)
+# <a name="commandlabeltitle-property"></a>Command.LabelTitle-Eigenschaft
 
-Stellt einen Bezeichnungs Titel dar.
+Stellt einen Bezeichnungstitel dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -39,9 +39,9 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                   | BESCHREIBUNG                                   |
+| Element                                                   | Beschreibung                                   |
 |-----------------------------------------------------------|-----------------------------------------------|
-| [**Schnür**](windowsribbon-element-string.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/> |
+| [**String**](windowsribbon-element-string.md)<br/> | Kann nur einmal auftreten.<br/> <br/> |
 
 
 
@@ -51,35 +51,35 @@ Es gibt keine Attribute.
 
 | Element                                                     |
 |-------------------------------------------------------------|
-| [**Get-Help**](windowsribbon-element-command.md)<br/> |
+| [**Befehl**](windowsribbon-element-command.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jeden [**Befehl**](windowsribbon-element-command.md)auftreten.
+Kann für jeden Befehl mindestens einmal [**auftreten.**](windowsribbon-element-command.md)
 
-**Command. labeltitle** kann einen Wert vom Typ *xs: String* enthalten, der auf eine beliebige Sequenz von Zeichen beschränkt ist, einschließlich Leerzeichen und Zeilenumbruch Zeichen.
+**Command.LabelTitle kann** einen Wert vom Typ *xs:string* enthalten, der auf eine beliebige Folge von Zeichen beschränkt ist, einschließlich Leerzeichen und Zeilenumbruchzeichen.
 
 > [!Note]  
-> Verwenden Sie den XML-Zeichen Verweis Universal Character Set (UCS) `&#xA;` , um einen Zeilenumbruch anzugeben.
+> Verwenden Sie den UCS-XML-Zeichenverweis (Universal Character Set), `&#xA;` um einen Zeilenumbruch anzugeben.
 
  
 
-Die maximale Länge ist unbegrenzt.
+Die maximale Länge ist ungebunden.
 
-Wenn für **Command. labeltitle** kein Wert angegeben wird, ist das untergeordnete [**Zeichen**](windowsribbon-element-string.md) folgen Element erforderlich.
+Wenn kein Wert für **Command.LabelTitle angegeben wird,** ist das [**untergeordnete String-Element**](windowsribbon-element-string.md) erforderlich.
 
 > [!Note]  
-> Wenn **Command. labeltitle** sowohl einen Wert als auch ein untergeordnetes [**Zeichen**](windowsribbon-element-string.md) folgen Element enthält, hat die **Zeichenfolge** Vorrang.
+> Wenn **Command.LabelTitle** sowohl einen Wert als auch ein untergeordnetes [**String-Element**](windowsribbon-element-string.md) enthält, hat **String** Vorrang.
 
  
 
-**Command. labeltitle** unterstützt nur die linke Ausrichtung.
+**Command.LabelTitle unterstützt** nur die linke Ausrichtung.
 
-Wenn ein Befehl über ein Menü Element verfügbar gemacht wird und der Wert von **Command. labeltitle** oder [UI \_ pkey \_ Label](windowsribbon-reference-properties-uipkey-label.md) einen Buchstaben enthält, dem ein kaufmännisches und vorangestellt ist, wie im folgenden Beispiel gezeigt, wird dieser Buchstabe sowohl als KeyTip als auch als Tastaturbeschleuniger für diesen Befehl durch das Multifunktionsleisten-Framework behandelt.
+Wenn ein Befehl über ein Menüelement verfügbar gemacht wird und der Wert von **Command.LabelTitle** oder [ \_ UI PKEY \_ Label](windowsribbon-reference-properties-uipkey-label.md) einen Buchstaben enthält, dem ein ampersand vorangestellt ist, wie im folgenden Beispiel gezeigt, wird dieser Buchstabe sowohl als Tastenkombination als auch als Tastenkombination für diesen Befehl vom Menübandframework behandelt.
 
 
 ```XML
@@ -92,7 +92,7 @@ Wenn ein Befehl über ein Menü Element verfügbar gemacht wird und der Wert von
 
 
 
-Um ein kaufmännisches und-Zeichen in einer Bezeichnung anzuzeigen, versehen Sie die Bezeichnung für Sonderzeichen mit einem doppelten kaufmännisches und-Zeichen ( `&&` ), wie im folgenden Beispiel gezeigt.
+Um ein ampersand-Zeichen in einer Bezeichnung anzuzeigen, versehen Sie die Sonderzeichenbezeichnung mit einem doppelten Ampersand ( ), wie `&&` im folgenden Beispiel gezeigt.
 
 
 ```XML
@@ -107,7 +107,7 @@ Um ein kaufmännisches und-Zeichen in einer Bezeichnung anzuzeigen, versehen Sie
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das Markup für ein [**Command**](windowsribbon-element-command.md) -Element mit der **Command. labeltitle** -Deklaration veranschaulicht.
+Im folgenden Beispiel wird das Markup für ein [**Command-Element**](windowsribbon-element-command.md) mit einer **Command.LabelTitle-Deklaration** veranschaulicht.
 
 
 ```XML
@@ -137,16 +137,16 @@ Im folgenden Beispiel wird das Markup für ein [**Command**](windowsribbon-eleme
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[UI- \_ pkey- \_ Bezeichnung](windowsribbon-reference-properties-uipkey-label.md)
+[\_PKEY-Bezeichnung der \_ Benutzeroberfläche](windowsribbon-reference-properties-uipkey-label.md)
 </dt> </dl>
 
  

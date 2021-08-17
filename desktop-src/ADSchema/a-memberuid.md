@@ -34,7 +34,7 @@ Enthält die Anmeldenamen der Mitglieder einer Gruppe.
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.3.6.1.1.1.1.12                     |
-| System-Id-Guid    | 03dab236-672e-4f61-ab64-f77d2dc2ffab |
+| System-ID-GUID    | 03dab236-672e-4f61-ab64-f77d2dc2ffab |
 | Syntax            | [**String(IA5)**](s-string-ia5.md)  |
 
 
@@ -54,10 +54,10 @@ Enthält die Anmeldenamen der Mitglieder einer Gruppe.
 |------------------------|-----------------------------------------------|
 | Link-ID                | \-                                            |
 | MAPI-Id                | \-                                            |
-| System-Only            | False                                         |
-| Is-Single-Valued       | False                                         |
-| Ist indiziert             | False                                         |
-| Im globalen Katalog      | False                                         |
+| System-Only            | Falsch                                         |
+| Ist einwertig       | Falsch                                         |
+| Ist indiziert             | Falsch                                         |
+| Im globalen Katalog      | Falsch                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                  |
 | Range-Lower            | \-                                            |
 | Range-Upper            | \-                                            |
@@ -75,10 +75,10 @@ Enthält die Anmeldenamen der Mitglieder einer Gruppe.
 |------------------------|-----------------------------------------------|
 | Link-ID                | \-                                            |
 | MAPI-Id                | \-                                            |
-| System-Only            | False                                         |
-| Is-Single-Valued       | False                                         |
-| Ist indiziert             | False                                         |
-| Im globalen Katalog      | False                                         |
+| System-Only            | Falsch                                         |
+| Ist einwertig       | Falsch                                         |
+| Ist indiziert             | Falsch                                         |
+| Im globalen Katalog      | Falsch                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                  |
 | Range-Lower            | \-                                            |
 | Range-Upper            | \-                                            |
@@ -96,10 +96,10 @@ Enthält die Anmeldenamen der Mitglieder einer Gruppe.
 |------------------------|-----------------------------------------------|
 | Link-ID                | \-                                            |
 | MAPI-Id                | \-                                            |
-| System-Only            | False                                         |
-| Is-Single-Valued       | False                                         |
-| Ist indiziert             | False                                         |
-| Im globalen Katalog      | False                                         |
+| System-Only            | Falsch                                         |
+| Ist einwertig       | Falsch                                         |
+| Ist indiziert             | Falsch                                         |
+| Im globalen Katalog      | Falsch                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                  |
 | Range-Lower            | \-                                            |
 | Range-Upper            | \-                                            |
@@ -117,10 +117,10 @@ Enthält die Anmeldenamen der Mitglieder einer Gruppe.
 |------------------------|-----------------------------------------------|
 | Link-ID                | \-                                            |
 | MAPI-Id                | \-                                            |
-| System-Only            | False                                         |
-| Is-Single-Valued       | False                                         |
-| Ist indiziert             | False                                         |
-| Im globalen Katalog      | False                                         |
+| System-Only            | Falsch                                         |
+| Is-Single-Valued       | Falsch                                         |
+| Ist indiziert             | Falsch                                         |
+| Im globalen Katalog      | Falsch                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                  |
 | Range-Lower            | \-                                            |
 | Range-Upper            | \-                                            |

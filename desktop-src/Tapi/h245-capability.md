@@ -1,21 +1,21 @@
 ---
-description: Die H245 \_ -funktionsenum beschreibt die Unterstützung für Audioformate und Videoformate.
+description: Die \_ H245-Funktionsenumerie beschreibt die Unterstützung des Audio- und Videoformats.
 ms.assetid: 76aeb3a1-3233-4425-b9db-efacbedc309e
-title: H245_CAPABILITY-Enumeration (H323priv. h)
+title: H245_CAPABILITY -Enumeration (H323priv.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ae7a6f81f87480f221f87680d9cf086120deb2de
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1666eb918748696263247f00f0d0e17ac9424e6c4bf85c5574f866bb10e28be1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119140553"
 ---
-# <a name="h245_capability-enumeration"></a>H245- \_ funktionsenumeration
+# <a name="h245_capability-enumeration"></a>H245 \_ CAPABILITY-Enumeration
 
-\[**H245 \_ Die Funktion** ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[**H245 \_ CAPABILITY** ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **H245 \_** -funktionsenum beschreibt die Unterstützung für Audioformate und Videoformate.
+Die **\_ H245-Funktionsenumerie** beschreibt die Unterstützung des Audio- und Videoformats.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,28 +33,28 @@ Die **H245 \_** -funktionsenum beschreibt die Unterstützung für Audioformate u
 <span id="HC_G711"></span><span id="hc_g711"></span>**HC \_ G711**
 </dt> <dd>
 
-Das G. 711-Audioprotokoll wird unterstützt.
+Das G.711-Audioprotokoll wird unterstützt.
 
 </dd> <dt>
 
-<span id="HC_G723"></span><span id="hc_g723"></span>**HC \_ g723**
+<span id="HC_G723"></span><span id="hc_g723"></span>**HC \_ G723**
 </dt> <dd>
 
-Das G. 723-Audioprotokoll wird unterstützt.
+Das G.723-Audioprotokoll wird unterstützt.
 
 </dd> <dt>
 
 <span id="HC_H263QCIF"></span><span id="hc_h263qcif"></span>**HC \_ H263QCIF**
 </dt> <dd>
 
-Das H. 263 Video-Protokoll wird unterstützt.
+Das H.263-Videoprotokoll wird unterstützt.
 
 </dd> <dt>
 
 <span id="HC_H261QCIF"></span><span id="hc_h261qcif"></span>**HC \_ H261QCIF**
 </dt> <dd>
 
-Das H. 263 Video-Protokoll wird unterstützt.
+Das H.263-Videoprotokoll wird unterstützt.
 
 </dd> </dl>
 
@@ -64,16 +64,16 @@ Das H. 263 Video-Protokoll wird unterstützt.
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>H323priv. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>H323priv.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IH323LineEx:: setdefaultcapabilityprefergenz**](ih323lineex-setdefaultcapabilitypreferrence.md)
+[**IH323LineEx::SetDefaultCapabilityPreferrence**](ih323lineex-setdefaultcapabilitypreferrence.md)
 </dt> </dl>
 
  

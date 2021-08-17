@@ -5,7 +5,7 @@ ms.assetid: a4f43f60-5897-4d45-8d47-54dfe3b11c76
 ms.tgt_platform: multiple
 keywords:
 - Logon-Workstation AD-Schema
-- logonWorkstation-Attribut AD-Schema
+- LogonWorkstation-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -30,7 +30,7 @@ Dieses Attribut wird nicht verwendet. Weitere Informationen finden [**Sie unter 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | Logon-Workstation                                     |
-| Ldap-Anzeigename | logonWorkstation                                      |
+| Ldap-Anzeigename | LogonWorkstation                                      |
 | Size              | \-                                                    |
 | Aktualisieren von Berechtigungen  | \-                                                    |
 | Updatehäufigkeit  | \-                                                    |
@@ -57,10 +57,10 @@ Dieses Attribut wird nicht verwendet. Weitere Informationen finden [**Sie unter 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Is-Single-Valued       | True                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
@@ -78,10 +78,10 @@ Dieses Attribut wird nicht verwendet. Weitere Informationen finden [**Sie unter 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Is-Single-Valued       | True                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
@@ -99,10 +99,10 @@ Dieses Attribut wird nicht verwendet. Weitere Informationen finden [**Sie unter 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Is-Single-Valued       | True                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
@@ -120,10 +120,10 @@ Dieses Attribut wird nicht verwendet. Weitere Informationen finden [**Sie unter 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist einwertig       | True                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
@@ -141,10 +141,10 @@ Dieses Attribut wird nicht verwendet. Weitere Informationen finden [**Sie unter 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist einwertig       | True                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
@@ -162,10 +162,10 @@ Dieses Attribut wird nicht verwendet. Weitere Informationen finden [**Sie unter 
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist einwertig       | True                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |

@@ -1,9 +1,9 @@
 ---
-title: Idcompositioneffectgroup-Methode für die topacity (Dcomp. h)
+title: IDCompositionEffectGroup SetOpacity-Methoden (Dcomp.h)
 description: Animiert oder ändert den Wert der Opacity-Eigenschaft.
 ms.assetid: 785DE91D-718B-4704-88E4-B8FB12586E5F
 keywords:
-- Methode "ttopacity" directcomposition
+- SetOpacity-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,14 +12,14 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: efc497b81b6f4a3668907f432f1f5f61a4a21717
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e1b75e272707fd24cdd3af12df975257036f98b973c1e11e1c04ec2b0ea3c389
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119004"
 ---
-# <a name="idcompositioneffectgroupsetopacity-methods"></a>Idcompositioneffectgroup:: stopacity-Methoden
+# <a name="idcompositioneffectgroupsetopacity-methods"></a>IDCompositionEffectGroup::SetOpacity-Methoden
 
 Animiert oder ändert den Wert der Opacity-Eigenschaft.
 
@@ -27,10 +27,10 @@ Animiert oder ändert den Wert der Opacity-Eigenschaft.
 
 
 
-| Methode                                                                                                     | BESCHREIBUNG                                            |
+| Methode                                                                                                     | Beschreibung                                            |
 |:-----------------------------------------------------------------------------------------------------------|:-------------------------------------------------------|
-| [**-Topacity (float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositioneffectgroup-setopacity(float))                                    | Ändert den Wert der Opacity-Eigenschaft.<br/>  |
-| [**"Topacity" (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositioneffectgroup-setopacity(idcompositionanimation)) | Animiert den Wert der Opacity-Eigenschaft.<br/> |
+| [**SetOpacity(float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositioneffectgroup-setopacity(float))                                    | Ändert den Wert der Opacity-Eigenschaft.<br/>  |
+| [**SetOpacity(IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositioneffectgroup-setopacity(idcompositionanimation)) | Animiert den Wert der Opacity-Eigenschaft.<br/> |
 
 
 
@@ -40,19 +40,19 @@ Animiert oder ändert den Wert der Opacity-Eigenschaft.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Dcomp. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Dcomp. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 8 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2012-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Dcomp.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Dcomp.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Dcomp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Idcompositioneffectgroup**](/windows/win32/api/dcomp/nn-dcomp-idcompositioneffectgroup)
+[**IDCompositionEffectGroup**](/windows/win32/api/dcomp/nn-dcomp-idcompositioneffectgroup)
 </dt> </dl>
 
 �

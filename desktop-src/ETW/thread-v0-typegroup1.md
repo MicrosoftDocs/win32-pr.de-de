@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Thread Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Threadereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: cc668fef-48fe-4948-8fe5-4351f7a033d1
 title: Thread_V0_TypeGroup1-Klasse
 ms.topic: reference
@@ -14,18 +14,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 2f6fa7ae1f50e005fe8f66e918a4a8360a0e8f86
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 334d3a2cb9560a4968cbbfa8419d44e7c8be8ff836ccf95b6fce819ee77a9900
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069480"
 ---
-# <a name="thread_v0_typegroup1-class"></a>Thread \_ v0 \_ TypeGroup1-Klasse
+# <a name="thread_v0_typegroup1-class"></a>Thread \_ V0 \_ TypeGroup1-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Thread Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Threadereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,49 +40,49 @@ class Thread_V0_TypeGroup1 : Thread_V0
 
 ## <a name="members"></a>Member
 
-Die Thread-Klasse " **\_ v0 \_ TypeGroup1** " verfügt über diese Typen von Membern:
+Die **Thread \_ V0 \_ TypeGroup1-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Thread \_ v0 \_ TypeGroup1** -Klasse verfügt über diese Eigenschaften.
+Die **Thread \_ V0 \_ TypeGroup1-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 ProcessId
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Format ("x")
+Qualifizierer: WmiDataId(2), Format("x")
 </dt> </dl>
 
-Prozess Bezeichner des am Ereignis beteiligten Threads.
+Prozessbezeichner des am Ereignis beteiligten Threads.
 
 </dd> <dt>
 
-Tthreadid
+TThreadId
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Format ("x")
+Qualifizierer: WmiDataId(1), Format("x")
 </dt> </dl>
 
-Thread Bezeichner des am Ereignis beteiligten Threads.
+Threadbezeichner des Threads, der am Ereignis beteiligt ist.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -97,7 +97,7 @@ Thread Bezeichner des am Ereignis beteiligten Threads.
 
 <dl> <dt>
 
-[**Thread \_ v0**](thread-v0.md)
+[**Thread \_ V0**](thread-v0.md)
 </dt> </dl>
 
  

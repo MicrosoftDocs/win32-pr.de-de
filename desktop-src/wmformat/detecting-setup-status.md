@@ -1,44 +1,44 @@
 ---
-title: Ermitteln des Setup Status
-description: Ermitteln des Setup Status
+title: Erkennen des Setupstatus
+description: Erkennen des Setupstatus
 ms.assetid: d502a5d6-798b-4269-aef3-1412fc379819
 keywords:
-- Windows Media-Format-SDK, Software Verteilung
-- Advanced Systems Format (ASF), Software Verteilung
-- ASF (Advanced Systems Format), Software Verteilung
-- SDK für Windows Media-Format, Neuverteilung
-- Advanced Systems Format (ASF), Verteilung
-- ASF (Advanced Systems Format), Verteilung
-- Software Verteilung, Ermitteln des Setup Status
-- Verteilung, Ermitteln des Setup Status
+- Windows Medienformat-SDK, Softwareverteilung
+- Advanced Systems Format (ASF), Softwareverteilung
+- ASF (Advanced Systems Format), Softwareverteilung
+- Windows Media Format SDK,redistribution
+- Advanced Systems Format (ASF), Redistribution
+- ASF (Advanced Systems Format), Redistribution
+- Softwareverteilung, Erkennen des Setupstatus
+- Redistribution,Detecting setup status (Neuverteilung,Erkennen des Setupstatus)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6add696f2b2989de1e77d48504a1d540634213d8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 250ab87fd81592b868e1dbf13106577f83e680796310aff246f0c1483fa847cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103714219"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119931391"
 ---
-# <a name="detecting-setup-status"></a>Ermitteln des Setup Status
+# <a name="detecting-setup-status"></a>Erkennen des Setupstatus
 
-Wenn die ausführbare Datei für die erneute Verteilung auf einem Computer ausgeführt wird, wird der Installationsstatus in der Registrierung als **HRESULT** -Wert aufgezeichnet. Der Installationsstatus wird im Registrierungs Eintrag **installresult** unter dem folgenden Unterschlüssel gespeichert:
+Wenn die ausführbare Datei für die Weiterverteilung auf einem Computer ausgeführt wird, wird der Installationsstatus in der Registrierung als **HRESULT-Wert** erfasst. Der Installationsstatus wird im Registrierungseintrag **InstallResult** unter dem folgenden Unterschlüssel gespeichert:
 
-**HKEY \_ Current \_ User \\ Software \\ Microsoft \\ Media Player- \\ Setup**
+**HKEY \_ CURRENT \_ USER \\ Software \\ Microsoft \\ MediaPlayer \\ Setup**
 
-Der Registrierungs Eintrag **installresult** weist das folgende Format auf:
+Der **Registrierungseintrag InstallResult** hat das folgende Formular.
 
 
 
 | Name              | type           | Wert                                                                                                                   |
 |-------------------|----------------|-------------------------------------------------------------------------------------------------------------------------|
-| **Installresult** | **REG \_ DWORD** | Ein **HRESULT** , das angibt, ob die Windows Media Player-Installation erfolgreich war und ob ein Neustart erforderlich ist. |
+| **InstallResult** | **REG \_ DWORD** | Ein **HRESULT,** das angibt, Windows Media Player erfolgreich installiert wurde und ob ein Neustart erforderlich ist. |
 
 
 
- 
+ 
 
-Der folgende Code legt die Variablen *fsucess* und *frebootbenöggf* **. auf Grundlage** des **HRESULT** -Werts **fest, der** von der Windows Media-Installation im Komponenten Weitergabepaket geschrieben wird.
+Mit dem folgenden Code werden die *Variablen fSucess* und *fRebootNeeded* auf **True** oder **False** festgelegt. Dies basiert auf dem **HRESULT-Wert,** der vom Windows Media Setup im Komponentenverteilungspaket geschrieben wurde.
 
 
 ```C++
@@ -119,12 +119,12 @@ int main( void )
 
 <dl> <dt>
 
-[**Software Verteilung**](software-redistribution.md)
+[**Software Redistribution**](software-redistribution.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

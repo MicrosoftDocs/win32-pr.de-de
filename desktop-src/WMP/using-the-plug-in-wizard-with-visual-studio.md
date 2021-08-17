@@ -1,63 +1,63 @@
 ---
-title: Verwenden des Plug-in-Assistenten in Visual Studio
-description: Verwenden des Plug-in-Assistenten in Visual Studio
+title: Verwenden des Plug-In-Assistenten mit Visual Studio
+description: Verwenden des Plug-In-Assistenten mit Visual Studio
 ms.assetid: 5d5521b7-5cbc-4259-92b1-a7250853fa2e
 keywords:
-- Windows Media Player-Plug-ins, Visual Studio
-- Plug-ins, Visual Studio
-- Entwickeln von Plug-ins, Visual Studio
-- Windows Media Player-Plug-in-Assistent, Visual Studio
-- Visual Studio, Windows Media Player-Plug-in-Assistent
-- Plug-in-Assistent
+- Windows Media Player Plug-Ins,Visual Studio
+- Plug-Ins, Visual Studio
+- Erstellen von Plug-Ins, Visual Studio
+- Windows Media Player Plug-In-Assistent, Visual Studio
+- Visual Studio,Windows Media Player-Plug-In-Assistent
+- Plug-In-Assistent
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c7f7db9bdc2a99a42f60c2faf38605e50e7dd3e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1534d084d2c57d3546427db59274d1bd135bc66e8bf396906ff7776cae9a370f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310396"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134333"
 ---
-# <a name="using-the-plug-in-wizard-with-visual-studio"></a>Verwenden des Plug-in-Assistenten in Visual Studio
+# <a name="using-the-plug-in-wizard-with-visual-studio"></a>Verwenden des Plug-In-Assistenten mit Visual Studio
 
-Nachdem Sie die erforderlichen Komponenten installiert haben, können Sie schnell ein Plug-in erstellen, das als Ausgangspunkt fungiert. Die folgenden Schritte führen Sie durch.
+Nachdem Sie die erforderlichen Komponenten installiert haben, können Sie schnell ein Plug-In erstellen, das als Ausgangspunkt dient. Die folgenden Schritte führen Sie weiter.
 
 1.  Starten Sie Microsoft Visual Studio.
-2.  Zeigen Sie im Menü **Datei** auf **neu** , und klicken Sie dann auf **Projekt**.
-3.  Wählen Sie unter **Projekttypen** die Option **Visual C++ Projekte** aus.
-4.  Wählen Sie unter **Vorlagen** die Option **Windows Media Player-Plug-in-Assistent** aus.
+2.  Zeigen Sie **im Menü** Datei auf **Neu,** und klicken Sie dann **Project**.
+3.  Wählen **Project Typen** die Option Visual C++ Projekte **aus.**
+4.  Wählen **Sie unter** Vorlagen die Windows Media Player **Plug-In-Assistenten aus.**
 5.  Geben Sie einen Namen für das Projekt ein.
-6.  Geben Sie einen Speicherort für das Projekt ein. Dies ist der Ordner, in den die Projektdateien kopiert werden.
-7.  Klicken Sie auf **OK** , um den Assistenten zu starten.
-8.  Wählen Sie den Typ des Plug-ins aus, das Sie erstellen möchten.
-9.  Vervollständigen Sie alle verbleibenden Dialogfelder im Assistenten.
-10. Verwenden Sie die Visual Studio-Entwicklungsumgebung, um Ihr Projekt zu erstellen.
+6.  Geben Sie einen Speicherort für Ihr Projekt ein. Dies ist der Ordner, in den Ihre Projektdateien kopiert werden.
+7.  Klicken Sie **auf OK,** um den Assistenten zu starten.
+8.  Wählen Sie den Typ des Plug-Ins aus, das Sie erstellen möchten.
+9.  Schließen Sie alle verbleibenden Dialogfelder im Assistenten ab.
+10. Verwenden Sie Visual Studio Entwicklungsumgebung, um Ihr Projekt zu erstellen.
     > [!Note]  
-    > In Windows Vista und höher wird das Projekt nicht erfolgreich erstellt, es sei denn, Sie führen Visual Studio mit einem vollen Administrator Zugriffs Token aus. Klicken Sie mit der rechten Maustaste auf den Namen oder das Symbol von Visual Studio, und klicken Sie auf **als Administrator ausführen**
+    > In Windows Vista und höher wird das Projekt nur erfolgreich erstellt, wenn Sie Visual Studio mit einem vollständigen Administratorzugriffstoken ausführen. Klicken Sie mit der rechten Maustaste auf Visual Studio Symbol, und klicken Sie **auf Als Administrator ausführen.**
 
-     
+     
 
-Bevor Sie versuchen, das Projekt zu erstellen, stellen Sie sicher, dass Sie Ihre Entwicklungsumgebung so konfigurieren, dass Sie auf die Ordner include und lib verweist, in denen Sie die Windows SDK installiert haben. Der Compiler und Linker benötigen Zugriff auf einige der Dateien in diesen Ordnern.
+Bevor Sie versuchen, das Projekt zu erstellen, müssen Sie Ihre Entwicklungsumgebung so konfigurieren, dass sie auf die Ordner include und lib verweisen, in denen Sie das Windows INSTALLIERT haben. Ihr Compiler und Linker benötigen Zugriff auf einige der Dateien in diesen Ordnern.
 
-Wenn Sie das Visual Studio-Registrierungs Dienstprogramm ausgeführt haben, das in der Windows SDK enthalten ist, wurde die Entwicklungsumgebung wahrscheinlich bereits so konfiguriert, dass Sie auf die Ordner Windows SDK include und lib verweist. Andernfalls müssen Sie Ihre Entwicklungsumgebung manuell konfigurieren.
+Wenn Sie das Visual Studio Registration-Hilfsprogramm aus dem Windows SDK ausführen, wurde Ihre Entwicklungsumgebung wahrscheinlich bereits so konfiguriert, dass sie auf die Ordner Windows SDK Include und Lib verweisen kann. Andernfalls müssen Sie Ihre Entwicklungsumgebung manuell konfigurieren.
 
-Führen Sie die folgenden Schritte aus, um Visual Studio manuell zu konfigurieren.
+Um die Visual Studio manuell zu konfigurieren, verwenden Sie die folgenden Schritte.
 
 1.  Klicken Sie im Menü **Extras** auf **Optionen**.
-2.  Klicken Sie auf **Projekte und Projekt** Mappen und dann auf **VC + +-Verzeichnisse**.
-3.  Klicken Sie unter **Verzeichnisse anzeigen für** auf Dateien oder **Bibliotheksdateien** **einschließen** .
+2.  Klicken **Sie auf Projekte und Projektlösungen**, und klicken Sie dann VC++ Verzeichnisse **.**
+3.  Klicken **Sie unter Verzeichnisse für anzeigen** auf Dateien **oder** **Bibliotheksdateien enthalten.**
 4.  Fügen Sie die Verzeichnisse für die erforderlichen Dateien hinzu.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Aufbauen eines Plug-ins](building-a-plug-in.md)
+[Erstellen eines Plug-Ins](building-a-plug-in.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

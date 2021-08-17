@@ -1,92 +1,92 @@
 ---
-title: Standard Netzwerkeinstellungen
-description: Standard Netzwerkeinstellungen
+title: Standardnetzwerk-Einstellungen
+description: Standardnetzwerk-Einstellungen
 ms.assetid: 07464107-9cf7-4ed0-a76b-17ea153399a1
 keywords:
-- Windows Media-Format-SDK, standardmäßige Netzwerkeinstellungen
-- Advanced Systems Format (ASF), Standard Netzwerkeinstellungen
-- ASF (Advanced Systems Format), standardmäßige Netzwerkeinstellungen
-- Windows Media-Format-SDK, Netzwerkeinstellungen
+- Windows Medienformat-SDK, Standardnetzwerkeinstellungen
+- Advanced Systems Format (ASF), Standardnetzwerkeinstellungen
+- ASF (Advanced Systems Format), Standardnetzwerkeinstellungen
+- Windows Medienformat-SDK, Netzwerkeinstellungen
 - Advanced Systems Format (ASF), Netzwerkeinstellungen
 - ASF (Advanced Systems Format), Netzwerkeinstellungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f4f219a60d9211b63eb124500c014452a0143d1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 591bf4aa2154d5cc04a8a17b5fc75f290a8493a39d530d4246bc0338c2424e62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119931420"
 ---
-# <a name="default-networking-settings"></a>Standard Netzwerkeinstellungen
+# <a name="default-networking-settings"></a>Standardnetzwerk-Einstellungen
 
-In den folgenden Tabellen werden die Standardeinstellungen der Netzwerkparameter im Windows Media-Format-SDK, gruppiert nach Schnittstelle, beschrieben.
+In den folgenden Tabellen werden die Standardeinstellungen der Netzwerkparameter im Windows Media Format SDK nach Schnittstelle 2.
 
 
 
-| Iwmreadernetworkconfig                | Standardeinstellung              |
+| IWMReaderNetworkConfig                | Standardeinstellung              |
 |---------------------------------------|------------------------------|
 | Pufferzeit                        | 5 Sekunden                    |
-| Usefixedudpport                       | false                        |
-| Fixedudpport                          | 0 (ungültig)                |
-| Proxysetting: http                    | WMT- \_ Proxy \_ Einstellungs \_ Browser |
-| Proxysetting: MMS                     | WMT- \_ Proxy \_ Einstellung \_ None    |
-| Proxysetting: RTSP                    | WMT- \_ Proxy \_ Einstellung \_ None    |
-| Proxyhostname (http, MMS, RTSP)       | ""                           |
-| Proxyport: http                       | 80                           |
-| Proxyport: MMS                        | 1755                         |
-| Proxtport: RTSP                       | 554                          |
-| Proxyexceptionlist (http, MMS, RTSP)  | ""                           |
-| Proxybypassforlocal (http, MMS, RTSP) | false                        |
-| Forcererunautoerkennungs               | false                        |
-| Enablemulticast                       | TRUE                         |
-| Enablehttp                            | TRUE                         |
-| Enabletcp                             | TRUE                         |
+| UseFixedUDPPort                       | FALSE                        |
+| FixedUDPPort                          | 0 (ungültig)                |
+| ProxySetting: HTTP                    | \_ \_ WMT-PROXYEINSTELLUNGSBROWSER \_ |
+| ProxySetting: MMS                     | \_WMT-PROXYEINSTELLUNG \_ \_ NONE    |
+| ProxySetting: RTSP                    | \_WMT-PROXYEINSTELLUNG \_ \_ NONE    |
+| ProxyHostName (HTTP, MMS, RTSP)       | ""                           |
+| ProxyPort: HTTP                       | 80                           |
+| ProxyPort: MMS                        | 1755                         |
+| ProxtPort: RTSP                       | 554                          |
+| ProxyExceptionList (HTTP, MMS, RTSP)  | ""                           |
+| ProxyBypassForLocal (HTTP, MMS, RTSP) | FALSE                        |
+| ForceRerunAutoDetection               | FALSE                        |
+| EnableMulticast                       | TRUE                         |
+| EnableHTTP                            | TRUE                         |
+| EnableTCP                             | TRUE                         |
 | EnableUDP                             | TRUE                         |
-| Verbindungs Bandbreite                  | 0 (automatische Erkennung)              |
+| Verbindungsbandbreite                  | 0 (automatische Erkennung)              |
 
 
 
- 
+ 
 
 
 
 | IWMReaderNetworkConfig2        | Standardeinstellung        |
 |--------------------------------|------------------------|
-| Beschleunigte streamingdauer | 100 Millionen (10 Sekunden) |
-| Zwischenspeichern von Inhalt aktivieren         | TRUE                   |
-| Schnellen Cache aktivieren              | TRUE                   |
-| Erneute Sende Vorgänge aktivieren                 | TRUE                   |
-| Inhalts Verdünnung aktivieren        | TRUE                   |
-| Limit für erneute Verbindungs Herstellung                | 25                     |
+| Beschleunigte Streamingdauer | 100000000 (10 Sekunden) |
+| Aktivieren der Inhaltszwischenspeicherung         | TRUE                   |
+| Aktivieren des schnellen Caches              | TRUE                   |
+| Erneutes Senden aktivieren                 | TRUE                   |
+| Aktivieren der Inhaltsverankerung        | TRUE                   |
+| Grenzwert für erneute Verbindung                | 25                     |
 
 
 
- 
+ 
 
 
 
-| Iwmschreiternetworksink | Standardeinstellung         |
+| IWMWriterNetworkSink | Standardeinstellung         |
 |----------------------|-------------------------|
 | Max. Anzahl von Clients      | 5                       |
-| Netzwerkprotokoll     | 0 (WMT- \_ Protokoll \_ http) |
+| Netzwerkprotokoll     | 0 (WMT \_ PROTOCOL \_ HTTP) |
 | Host-URL             | 0 (ungültig)           |
 
 
 
- 
+ 
 
 
 
 | IWMWriterAdvanced2  | Standardeinstellung             |
 |---------------------|-----------------------------|
 | Maximale Paketgröße | 1400                        |
-| Protokoll Client-ID       | false                       |
-| Wiedergabemodus           | WMT- \_ Wiedergabe \_ Modus \_ Autoselect |
+| Protokollclient-ID       | FALSE                       |
+| Wiedergabemodus           | WMT \_ PLAY \_ MODE \_ AUTOSELECT |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -95,9 +95,9 @@ In den folgenden Tabellen werden die Standardeinstellungen der Netzwerkparameter
 [**Implementieren von Netzwerkfunktionen**](implementing-network-functionality.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

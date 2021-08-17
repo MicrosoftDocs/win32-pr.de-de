@@ -21,17 +21,17 @@ ms.locfileid: "119338210"
 Dieser Abschnitt zu Anwendungsrichtlinien für Dateizuordnungen und Standardprogramme ist wie folgt organisiert:
 
 -   [Bewährte Methoden für Dateizuordnungen](fa-best-practices.md)
--   [Dateiassozbeispiel](fa-sample-scenarios.md)
+-   [Dateizuordnungsbeispiel](fa-sample-scenarios.md)
 -   [Verwalten von Standardanwendungen](vista-managing-defaults.md)
 -   [Standardprogramme](default-programs.md)
--   [Festlegen von Programmzugriff und Computereinstellungen (SPAD)](cpl-setprogramaccess.md)
+-   [Festlegen von Programmzugriff und Computerstandard (SPAD)](cpl-setprogramaccess.md)
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
 Verwandte konzeptionelle Hintergrundinformationen finden Sie in den folgenden Themen:
 
--   Informationen zur Anwendungsregistrierung über die Registrierung, die nicht spezifisch für die Elemente Set Program Access Computer Defaults (SPAD) oder Set Your Default Programs (SYDP) Systemsteuerung ist, finden Sie unter [Anwendungsregistrierung](app-registration.md).
--   Weitere Hintergrundinformationen finden Sie [unter Dateitypen und Dateizuordnungen.](fa-intro.md)
+-   Informationen zur Anwendungsregistrierung über die Registrierung, die nicht spezifisch für die Systemsteuerung Elemente Set Program Access Computer Defaults (SPAD) oder Set Your Default Programs (SYDP) ist, finden Sie unter [Anwendungsregistrierung](app-registration.md).
+-   Weitere Hintergrundinformationen finden Sie unter [Dateitypen und Dateizuordnungen.](fa-intro.md)
 
  
 

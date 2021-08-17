@@ -1,21 +1,21 @@
 ---
-description: Die getemailnames-Methode ruft ein Array von e-Mail-Namen ab, die dem Konferenz-BLOB zugeordnet sind
+description: Die GetEmailNames-Methode ruft ein Array von E-Mail-Namen ab, die dem Konferenzblob zugeordnet sind.
 ms.assetid: e51f25d7-41e5-408e-930b-396c7ac24437
-title: 'Itsdp:: getemailnames-Methode (sdpblb. h)'
+title: ITSdp::GetEmailNames-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 31f0200b5cc6ea0422f47a323cd1c57d7e0f9a5d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f74ea369210a6ca32e47bb3359000195c544374b7352da96570f6d0f58f2af4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365919"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119140263"
 ---
-# <a name="itsdpgetemailnames-method"></a>Itsdp:: getemailnames-Methode
+# <a name="itsdpgetemailnames-method"></a>ITSdp::GetEmailNames-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Steuerelemente und Schnittstellen für Rendezvous-IP-Telefoniekonferenzen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **getemailnames** -Methode ruft ein Array von e-Mail-Namen ab, die dem Konferenz-BLOB zugeordnet sind
+Die **GetEmailNames-Methode** ruft ein Array von E-Mail-Namen ab, die dem Konferenzblob zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,17 +33,17 @@ HRESULT GetEmailNames(
 
 <dl> <dt>
 
-*padressen* \[ vorgenommen\]
+*pAddresses* \[ out\]
 </dt> <dd>
 
-**Variant** -Zeiger auf ein SafeArray von **BSTR**, das e-Mail-Adressen auflistet.
+**VARIANT-Zeiger** auf ein SAFEARRAY der **BSTR-Auflistung** von E-Mail-Adressen.
 
 </dd> <dt>
 
-*pnames* \[ vorgenommen\]
+*pNames* \[ out\]
 </dt> <dd>
 
-**Variant** -Zeiger auf ein SafeArray von **BSTR** s-Auflistungs Namen.
+**VARIANT-Zeiger** auf safearray von **BSTR-Auflistungsnamen.**
 
 </dd> </dl>
 
@@ -56,18 +56,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                               |
 |-----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                              |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *padressen* -oder *pnames* -Parameter ist kein gültiger Zeiger.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/>           |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                             |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                            |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Der *pAddresses-* oder *pNames-Parameter* ist kein gültiger Zeiger.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/>           |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                             |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Listen, auf die *padressen* und *pnames* zeigen, haben dieselbe Länge.
+Die Listen, *auf die pAddresses* und *pNames* zeigen, haben die gleiche Länge.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,18 +75,18 @@ Die Listen, auf die *padressen* und *pnames* zeigen, haben dieselbe Länge.
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itsdp**](itsdp.md)
+[**ITSdp**](itsdp.md)
 </dt> </dl>
 
  

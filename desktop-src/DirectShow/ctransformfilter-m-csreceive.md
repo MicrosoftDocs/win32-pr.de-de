@@ -1,7 +1,7 @@
 ---
-description: Kritischer Abschnitt, der den streamingstatus schützt. Weitere Informationen finden Sie unter Datenfluss für Filter Entwickler.
+description: Kritischer Abschnitt, der den Streamingzustand schützt. Weitere Informationen finden Sie unter Daten Flow für Filterentwickler.
 ms.assetid: f77c3129-ca25-47b8-8a6e-3a07169701af
-title: 'Ctransformfilter:: m_csReceive Member (Transfrm. h)'
+title: CTransformFilter::m_csReceive-Member (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 542f108cee8dbe761040ef8474ae7cec565e0b52
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5166b91c62828718d34a0e8063098b1fc3b326adc115a9f78912961ec7ce3f47
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953559"
 ---
-# <a name="ctransformfilterm_csreceive-member"></a>Ctransformfilter:: m \_ csreceive-Member
+# <a name="ctransformfilterm_csreceive-member"></a>CTransformFilter::m \_ csReceive-Member
 
-Kritischer Abschnitt, der den streamingstatus schützt. Weitere Informationen finden Sie unter [Datenfluss für Filter Entwickler](data-flow-for-filter-developers.md).
+Kritischer Abschnitt, der den Streamingzustand schützt. Weitere Informationen finden Sie unter [Data Flow for Filter Developers](data-flow-for-filter-developers.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ CCritSec m_csReceive;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

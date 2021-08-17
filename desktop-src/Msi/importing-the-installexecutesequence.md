@@ -1,5 +1,5 @@
 ---
-description: In der Tabelle InstallExecuteSequence werden die Aktionen aufgeführt, die ausgeführt werden, wenn das Installationsprogramm die INSTALL-Aktion der obersten Ebene ausrichtet. Weitere Informationen finden Sie unter Gruppe "Installationsprozedurtabellen", Verwenden einer Sequenztabelle und ausführliches Beispiel für die Sequenztabelle.
+description: In der Tabelle InstallExecuteSequence sind die Aktionen aufgeführt, die ausgeführt werden, wenn das Installationsprogramm die INSTALL-Aktion der obersten Ebene ausführt. Weitere Informationen finden Sie unter Tabellengruppe für Installationsprozedur, Verwenden einer Sequenztabelle und ausführliches Beispiel für die Sequenztabelle.
 ms.assetid: cdd4f02a-cfe6-4a23-9fc2-f4cb810379aa
 title: Importieren von InstallExecuteSequence
 ms.topic: article
@@ -13,11 +13,11 @@ ms.locfileid: "119430770"
 ---
 # <a name="importing-the-installexecutesequence"></a>Importieren von InstallExecuteSequence
 
-In [der Tabelle InstallExecuteSequence](installexecutesequence-table.md) sind die Aktionen aufgeführt, die ausgeführt werden, wenn das Installationsprogramm die [INSTALL-Aktion](install-action.md)der obersten Ebene ausgeführt. Siehe [Gruppe "Installationsprozedurtabellen",](installation-procedure-tables-group.md) [Verwenden einer Sequenztabelle](using-a-sequence-table.md)und Ausführliches Beispiel für die [Sequenztabelle.](sequence-table-detailed-example.md)
+Die [Tabelle InstallExecuteSequence](installexecutesequence-table.md) listet die Aktionen auf, die ausgeführt werden, wenn das Installationsprogramm die [INSTALL-Aktion](install-action.md)der obersten Ebene ausführt. Weitere Informationen finden Sie unter [Installationsprozedurtabellengruppe](installation-procedure-tables-group.md), [Verwenden einer Sequenztabelle](using-a-sequence-table.md)und ausführliches Beispiel für [die Sequenztabelle.](sequence-table-detailed-example.md)
 
-Wenn Sie [](importing-a-blank-database.md) im Abschnitt Importieren einer leeren Datenbank uisample.msi aus dem Windows Installer SDK verwendet haben, enthalten die Sequenztabellen in Ihrer Kopie von MNP2000.msi bereits die vorgeschlagenen Aktionssequenzen, die [unter](using-a-sequence-table.md)Verwenden einer Sequenztabelle beschrieben werden. Es sind keine Änderungen an diesen Sequenzen erforderlich, um das Editor zu erstellen.
+Wenn Sie im Abschnitt [Importieren einer leeren Datenbank](importing-a-blank-database.md) uisample.msi aus dem Windows Installer SDK verwendet haben, enthalten die Sequenztabellen in Ihrer Kopie von MNP2000.msi bereits die unter Verwenden einer [Sequenztabelle](using-a-sequence-table.md)beschriebenen vorgeschlagenen Aktionssequenzen. Zum Erstellen des Editor Installationspakets sind keine Änderungen an diesen Sequenzen erforderlich.
 
-Verwenden Sie Ihren Datenbank-Editor, um MNP2000.msi, und geben Sie die folgenden Daten in die Tabelle InstallExecuteSequence ein.
+Verwenden Sie den Datenbank-Editor, um MNP2000.msi zu öffnen und die folgenden Daten in die Tabelle InstallExecuteSequence einzugeben.
 
 [InstallExecuteSequence-Tabelle](installexecutesequence-table.md)
 

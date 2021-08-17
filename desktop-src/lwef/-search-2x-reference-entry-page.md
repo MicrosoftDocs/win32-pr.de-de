@@ -14,7 +14,7 @@ ms.locfileid: "119451089"
 # <a name="wds-2x-reference"></a>WDS 2.x-Referenz
 
 > [!NOTE]
-> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren [Versionen Windows Search.](../search/-search-3x-wds-overview.md)
+> Windows DesktopSuche 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [Windows Search.](../search/-search-3x-wds-overview.md)
 
 
 [WDS 2. x-Konstanten und -Enumerationen](-search-2x-constants-and-enumerations-entry-page.md)

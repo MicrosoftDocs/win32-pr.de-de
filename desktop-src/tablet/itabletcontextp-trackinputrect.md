@@ -1,7 +1,7 @@
 ---
-description: Aktualisiert den Tablet-Digitalisierer auf Fenster Speicherort-Mapping-Koordinaten.
+description: Aktualisiert den Tablettdigitalisierer in Fensterpositionszuordnungskoordinaten.
 ms.assetid: 2984b87b-620e-4e5d-a3cc-4c3f4c89bae3
-title: 'Itabletcontextp:: trackinputrect-Methode'
+title: ITabletContextP::TrackInputRect-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Wisptis.exe
 - Wisptis.exe.dll
-ms.openlocfilehash: 4529263b81933651db35b88262b11e979d39e6f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 400055247583ec0bd2095d5d6f68d8481c69fd6bb4e7f7730344120203655ce2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353945"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119350570"
 ---
-# <a name="itabletcontextptrackinputrect-method"></a>Itabletcontextp:: trackinputrect-Methode
+# <a name="itabletcontextptrackinputrect-method"></a>ITabletContextP::TrackInputRect-Methode
 
-Aktualisiert den Tablet-Digitalisierer auf Fenster Speicherort-Mapping-Koordinaten.
+Aktualisiert den Tablettdigitalisierer in Fensterpositionszuordnungskoordinaten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ HRESULT TrackInputRect(
 
 <dl> <dt>
 
-*prcinput* \[ vorgenommen\]
+*prcInput* \[ out\]
 </dt> <dd>
 
-Das neue Eingabefenster Rechteck nach dem Aktualisieren der Zuordnung zwischen der Fenster-und der Digitalisierungs Koordinate.
+Das neue Eingabefensterrechteck, nachdem die Zuordnung zwischen den Fenster- und Digitizerkoordinaten aktualisiert wurde.
 
 </dd> </dl>
 
@@ -56,15 +56,15 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Position des Fensters auf dem Bildschirm geändert wird, wird diese Methode aufgerufen.
+Rufen Sie diese Methode jederzeit auf, wenn sich die Position des Fensters auf dem Bildschirm ändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,17 +72,17 @@ Wenn die Position des Fensters auf dem Bildschirm geändert wird, wird diese Met
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itabletcontextp-Schnittstelle**](itabletcontextp.md)
+[**ITabletContextP-Schnittstelle**](itabletcontextp.md)
 </dt> </dl>
 
  

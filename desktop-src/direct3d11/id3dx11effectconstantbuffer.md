@@ -1,10 +1,10 @@
 ---
-title: ID3DX11EffectConstantBuffer-Schnittstelle (D3dx11effect. h)
-description: Eine Konstante Puffer Schnittstelle greift auf Konstante Puffer oder Textur Puffer zu.
+title: ID3DX11EffectConstantBuffer-Schnittstelle (D3dx11effect.h)
+description: Eine Konstantenpufferschnittstelle greifen auf konstante Puffer oder Texturpuffer zu.
 ms.assetid: 2106cb51-dc0a-4ab6-adb6-2deb06922af1
 keywords:
 - ID3DX11EffectConstantBuffer-Schnittstelle Direct3D 11
-- ID3DX11EffectConstantBuffer Interface Direct3D 11, beschrieben
+- ID3DX11EffectConstantBuffer-Schnittstelle Direct3D 11 , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,59 +16,59 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cfea2e8e67af30075990d6643b10bb86cf3021ae
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e5c5e62e6d339482123f66b7f23aae771f335392b54b9a766681dab78f6fbafa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119851640"
 ---
 # <a name="id3dx11effectconstantbuffer-interface"></a>ID3DX11EffectConstantBuffer-Schnittstelle
 
-Eine Konstante Puffer Schnittstelle greift auf Konstante Puffer oder Textur Puffer zu.
+Eine Konstantenpufferschnittstelle greifen auf konstante Puffer oder Texturpuffer zu.
 
 ## <a name="members"></a>Member
 
-Die **ID3DX11EffectConstantBuffer** -Schnittstelle erbt von [**ID3DX11EffectVariable**](id3dx11effectvariable.md). **ID3DX11EffectConstantBuffer** verfügt auch über die folgenden Typen von Membern:
+Die **ID3DX11EffectConstantBuffer-Schnittstelle** erbt von [**ID3DX11EffectVariable**](id3dx11effectvariable.md). **ID3DX11EffectConstantBuffer** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ID3DX11EffectConstantBuffer** -Schnittstelle verfügt über diese Methoden.
+Die **ID3DX11EffectConstantBuffer-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                             | BESCHREIBUNG                                          |
+| Methode                                                                             | Beschreibung                                          |
 |:-----------------------------------------------------------------------------------|:-----------------------------------------------------|
-| [**Getconstantbuffer**](id3dx11effectconstantbuffer-getconstantbuffer.md)         | Einen konstanten Puffer erhalten.<br/>                    |
-| [**Gettexturebuffer**](id3dx11effectconstantbuffer-gettexturebuffer.md)           | Einen Textur Puffer erhalten.<br/>                     |
-| [**Setconstantbuffer**](id3dx11effectconstantbuffer-setconstantbuffer.md)         | Legen Sie einen konstanten Puffer fest.<br/>                    |
-| [**Settexturebuffer**](id3dx11effectconstantbuffer-settexturebuffer.md)           | Legen Sie einen Textur Puffer fest.<br/>                     |
-| [**Undosetconstantbuffer**](id3dx11effectconstantbuffer-undosetconstantbuffer.md) | Stellt einen zuvor festgelegten Konstanten Puffer wieder her.<br/> |
-| [**Undosettexturebuffer**](id3dx11effectconstantbuffer-undosettexturebuffer.md)   | Stellt einen zuvor festgelegten Textur Puffer wieder her.<br/>  |
+| [**GetConstantBuffer**](id3dx11effectconstantbuffer-getconstantbuffer.md)         | Hier wird ein Konstantenpuffer (Constant Buffer) erhalten.<br/>                    |
+| [**GetTextureBuffer**](id3dx11effectconstantbuffer-gettexturebuffer.md)           | Hier erhalten Sie einen Texturpuffer.<br/>                     |
+| [**SetConstantBuffer**](id3dx11effectconstantbuffer-setconstantbuffer.md)         | Legen Sie einen Konstantenpuffer fest.<br/>                    |
+| [**SetTextureBuffer**](id3dx11effectconstantbuffer-settexturebuffer.md)           | Legen Sie einen Texturpuffer fest.<br/>                     |
+| [**UndoSetConstantBuffer**](id3dx11effectconstantbuffer-undosetconstantbuffer.md) | Setzt einen zuvor festgelegten Konstantenpuffer zurück.<br/> |
+| [**UndoSetTextureBuffer**](id3dx11effectconstantbuffer-undosettexturebuffer.md)   | Setzt einen zuvor festgelegten Texturpuffer zurück.<br/>  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden konstanter Puffer zum Speichern von zahlreichen Effekt Konstanten; Gruppieren von Konstanten in Puffer basierend auf Ihrer Aktualisierungshäufigkeit. Auf diese Weise können Sie die Anzahl der Zustandsänderungen minimieren und die wenigsten API-Aufrufe aufrufen, um den Status zu ändern. Beide Faktoren führen zu einer besseren Leistung.
+Verwenden Sie konstante Puffer, um viele Effektkonst constants zu speichern. Gruppieren von Konstanten in Puffern basierend auf ihrer Aktualisierungshäufigkeit. Auf diese Weise können Sie die Anzahl der Zustandsänderungen minimieren und die wenigsten API-Aufrufe zum Ändern des Zustands ausführen. Beide Faktoren führen zu einer besseren Leistung.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
@@ -79,7 +79,7 @@ Verwenden konstanter Puffer zum Speichern von zahlreichen Effekt Konstanten; Gru
 [**ID3DX11EffectVariable**](id3dx11effectvariable.md)
 </dt> <dt>
 
-[Effekte 11-Schnittstellen](d3d11-graphics-reference-effects11-interfaces.md)
+[Effekte 11 Schnittstellen](d3d11-graphics-reference-effects11-interfaces.md)
 </dt> <dt>
 
 [D3DX-Schnittstellen](d3d11-graphics-reference-d3dx11-interfaces.md)

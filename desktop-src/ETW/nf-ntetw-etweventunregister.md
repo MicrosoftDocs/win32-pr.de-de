@@ -1,7 +1,7 @@
 ---
 UID: NF:ntw.EtwEventUnregister
-title: Etweventunregister-Funktion
-description: Hebt die Registrierung eines Ereignisses auf.
+title: EtwEventUnregister-Funktion
+description: Aufheben der Registrierung eines Ereignisses.
 old-location: ''
 ms.assetid: na
 ms.date: 02/20/2018
@@ -10,8 +10,8 @@ ms.topic: reference
 req.header: ntetw.h
 req.include-header: ''
 req.target-type: Windows
-req.target-min-winverclnt: Windows 10, version 1803 [desktop apps \| UWP apps]
-req.target-min-winversvr: Windows 10, version 1803 [desktop apps \| UWP apps]
+req.target-min-winverclnt: Windows 10, version 1803 [desktop apps \| UWP apps]
+req.target-min-winversvr: Windows 10, version 1803 [desktop apps \| UWP apps]
 req.kmdf-ver: ''
 req.umdf-ver: ''
 req.ddi-compliance: ''
@@ -36,23 +36,23 @@ api_name:
 targetos: Windows
 req.typenames: ''
 req.redist: ''
-ms.openlocfilehash: e61de5aa1c050aedd2c82dec471765baa7e6cdd7
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: f2918aa3eb5ca3440496aa1f6ef51363045d5b8704b8b6fca059e68ba19a112d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101578"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119070100"
 ---
-# <a name="etweventunregister-function"></a>Etweventunregister-Funktion
+# <a name="etweventunregister-function"></a>EtwEventUnregister-Funktion
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 
-<b>Etweventunregister</b> hebt die Registrierung eines Ereignisses auf.
+<b>EtwEventUnregister</b> aufheben die Registrierung eines Ereignisses.
             
 
-Anbieter können diese Funktion nur über Ihre <a href="/windows/desktop/ETW/controlcallback">controlcallback</a> -Funktion abrufen.
+Anbieter können diese Funktion nur über ihre <a href="/windows/desktop/ETW/controlcallback">ControlCallback-Funktion</a> aufrufen.
 
 
 ## <a name="parameters"></a>Parameter
@@ -60,7 +60,7 @@ Anbieter können diese Funktion nur über Ihre <a href="/windows/desktop/ETW/con
 
 
 
-### <a name="reghandle-in"></a>Reghandle [in]
+### <a name="reghandle-in"></a>RegHandle [in]
 
 Handle für ein Ereignis.
 
@@ -75,7 +75,7 @@ Gibt ein HRESULT zurück.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 

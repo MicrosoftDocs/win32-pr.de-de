@@ -1,17 +1,17 @@
 ---
-title: Methodexceptionoccured
-description: Methodexceptionoccured
+title: MethodExceptionOccured
+description: MethodExceptionOccured
 ms.assetid: 5FC7936D-FC1D-44DB-98C1-29E6A2D15428
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9247c808d59f3a00a0700fdefb3f416a3bbb0d85
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f37332b1fd94f3939f8c74b4f14e67a3d53c0baa1d1475cf4b5226362f70867b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037310"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119955880"
 ---
-# <a name="methodexceptionoccured"></a>Methodexceptionoccured
+# <a name="methodexceptionoccured"></a>MethodExceptionOccured
 
 ## <a name="text"></a>Text
 
@@ -21,13 +21,13 @@ Ausnahme aufgetreten \\ " {0} \\ "
 
 Fehler
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Unerwartete Ausnahme oder HRESULT aufgetreten. Einige Ausnahmen/HRESULTs sind gültig, aber in diesem Fall werden die Ergebnisse nicht erwartet. Dieser Fehler sollte korrigiert werden.
+Eine unerwartete Ausnahme oder HRESULT wurde gefunden. Einige Ausnahmen/HRESULTS sind gültig, aber in diesem Fall werden die Ergebnisse nicht erwartet. Dieser Fehler sollte behoben werden.
 
- 
+ 
 
- 
+ 
 
 
 

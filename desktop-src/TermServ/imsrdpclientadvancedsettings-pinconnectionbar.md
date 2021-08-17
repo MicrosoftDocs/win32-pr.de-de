@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings pinconnectionbar (Eigenschaft)
-description: Gibt den Status der UI-Verbindungs Leiste an.
+title: IMsRdpClientAdvancedSettings PinConnectionBar (Eigenschaft)
+description: Gibt den Zustand der Benutzeroberflächenverbindungsleiste an.
 ms.assetid: b1f9cb02-3ee3-4574-a874-2584b0d5b47e
 ms.tgt_platform: multiple
 keywords:
-- Pinconnectionbar-Eigenschaft Remotedesktopdienste
-- Pinconnectionbar-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, pinconnectionbar-Eigenschaft
-- Pinconnectionbar-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, pinconnectionbar (Eigenschaft)
-- Pinconnectionbar-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, pinconnectionbar (Eigenschaft)
-- Pinconnectionbar-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, pinconnectionbar (Eigenschaft)
-- Pinconnectionbar-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, pinconnectionbar (Eigenschaft)
-- Pinconnectionbar-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, pinconnectionbar (Eigenschaft)
-- Pinconnectionbar-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, pinconnectionbar (Eigenschaft)
-- Pinconnectionbar-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, pinconnectionbar (Eigenschaft)
+- PinConnectionBar-Remotedesktopdienste
+- PinConnectionBar-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , PinConnectionBar-Eigenschaft
+- PinConnectionBar-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , PinConnectionBar-Eigenschaft
+- PinConnectionBar-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , PinConnectionBar-Eigenschaft
+- PinConnectionBar-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , PinConnectionBar-Eigenschaft
+- PinConnectionBar-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , PinConnectionBar-Eigenschaft
+- PinConnectionBar-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , PinConnectionBar-Eigenschaft
+- PinConnectionBar-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , PinConnectionBar-Eigenschaft
+- PinConnectionBar-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , PinConnectionBar-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,18 +54,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0da294d933026194d7307a7fa0a175575761809e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b2b16f5a1aedac7a7baa099e8586439b005842d7c1bdc11958d51def8fb45fb5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119058988"
 ---
-# <a name="imsrdpclientadvancedsettingspinconnectionbar-property"></a>Imsrdpclientadvancedsettings::P inconnectionbar-Eigenschaft
+# <a name="imsrdpclientadvancedsettingspinconnectionbar-property"></a>IMsRdpClientAdvancedSettings::P inConnectionBar(Eigenschaft)
 
-Gibt den Status der UI-Verbindungs Leiste an.
+Gibt den Zustand der Benutzeroberflächenverbindungsleiste an.
 
-Diese Eigenschaft gibt **E \_ notimpl** zurück, wenn der Container die [**iobjectafety:: setinterfacesafetyoptions**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768225(v=vs.85)) -Methode aufruft.
+Diese Eigenschaft gibt **E \_ NOTIMPL zurück,** wenn der Container die [**IObjectSafety::SetInterfaceSafetyOptions-Methode**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768225(v=vs.85)) aufruft.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -86,13 +86,13 @@ HRESULT get_PinConnectionBar(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Wenn diese Eigenschaft auf **Variant \_ true** festgelegt wird, wird der Status auf "gesenkt" festgelegt, d. h. für den Benutzer unsichtbar und nicht verfügbar. **Variant \_ FALSE** legt den Zustand auf "ausgelöst" fest und ist für Benutzereingaben verfügbar.
+Wenn Sie diese Eigenschaft auf **VARIANT \_ TRUE** festlegen, wird der Zustand auf "lowered" (niedriger) (für den Benutzer unsichtbar und für die Eingabe nicht verfügbar) fest. **VARIANT \_ FALSE legt** den Zustand auf "raised" fest und ist für Benutzereingaben verfügbar.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -106,11 +106,11 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                  |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -135,7 +135,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

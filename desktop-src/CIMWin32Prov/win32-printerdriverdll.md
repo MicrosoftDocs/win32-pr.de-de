@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse für die Win32 printerdriverdll-Zuordnung bezieht sich auf einen lokalen Drucker und seine Treiberdatei.
+description: Die \_ WMI-Zuordnungsklasse Win32 PrinterDriverDll bezieht sich auf einen lokalen Drucker und dessen Treiberdatei.
 ms.assetid: decbd1de-8091-47f7-94a1-42862070b920
 ms.tgt_platform: multiple
 title: Win32_PrinterDriverDll-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 41484c39d9e1b59efd79d7aee08719b3a241de97
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 884c52e388da62529a2aceb49c68ca888f18e0fd7701e05d951880774c3ed035
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483694"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119971860"
 ---
-# <a name="win32_printerdriverdll-class"></a>Win32 \_ printerdriverdll-Klasse
+# <a name="win32_printerdriverdll-class"></a>Win32 \_ PrinterDriverDll-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) für die **Win32 \_ printerdriverdll** -Zuordnung bezieht sich auf einen lokalen Drucker und seine Treiberdatei.
+Die [WMI-Zuordnungsklasse](../wmisdk/retrieving-a-class.md) **Win32 \_ PrinterDriverDll** bezieht sich auf einen lokalen Drucker und dessen Treiberdatei.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ class Win32_PrinterDriverDll : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ printerdriverdll** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ PrinterDriverDll-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ printerdriverdll** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ PrinterDriverDll-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ DataFile**
@@ -63,16 +63,16 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](../wmisdk/standard-qualifiers.md)
 </dt> </dl>
 
-Verweis auf die [**CIM- \_ DataFile**](cim-datafile.md) -Instanz, die die Treiberdatei für diesen Windows-basierten Drucker darstellt.
+Verweis auf die [**CIM \_ DataFile-Instanz,**](cim-datafile.md) die die Treiberdatei für diesen Windows-basierten Drucker darstellt.
 
-Diese Eigenschaft wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)geerbt.
+Diese Eigenschaft wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)geerbt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32- \_ Drucker**
+Datentyp: **\_ Win32-Drucker**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -81,15 +81,15 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](../wmisdk/standard-qualifiers.md)
 </dt> </dl>
 
-Verweis auf die [**Win32- \_ Drucker**](win32-printer.md) Instanz.
+Verweis auf die [**Win32-Druckerinstanz. \_**](win32-printer.md)
 
-Diese Eigenschaft wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)geerbt.
+Diese Eigenschaft wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)geerbt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32-Klasse \_ printerdriverdll** wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **Win32 \_ PrinterDriverDll-Klasse** wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -99,20 +99,20 @@ Die **Win32-Klasse \_ printerdriverdll** wird von der [**CIM- \_ Abhängigkeit**
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                        |
-| MOF<br/>                      | <dl> <dt>Win32 \_ Printer. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                        |
+| MOF<br/>                      | <dl> <dt>Win32 \_ Printer.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl>       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

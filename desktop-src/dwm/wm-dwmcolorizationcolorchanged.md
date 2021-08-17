@@ -1,9 +1,9 @@
 ---
-title: WM_DWMCOLORIZATIONCOLORCHANGED Meldung (Winuser. h)
-description: Informiert alle Fenster der obersten Ebene darüber, dass sich die Farbe der Farbgebung geändert hat.
+title: WM_DWMCOLORIZATIONCOLORCHANGED Meldung (Winuser.h)
+description: Informiert alle Fenster der obersten Ebene, dass sich die Farbgebungsfarbe geändert hat.
 ms.assetid: 6118d41b-f0b4-4034-aa98-d8757f18ca0d
 keywords:
-- WM_DWMCOLORIZATIONCOLORCHANGED Meldung Desktopfenster-Manager
+- WM_DWMCOLORIZATIONCOLORCHANGED Desktopfenster-Manager
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dc99d42fe2d4af77fa4534945a3396dda9c02b25
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5bdbb854821f2a25565241700d28964b2d32319bccb8226c3d7d789c0e457fff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103941"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120094590"
 ---
-# <a name="wm_dwmcolorizationcolorchanged-message"></a>WM \_ dwmcolorizationcolorchanged-Meldung
+# <a name="wm_dwmcolorizationcolorchanged-message"></a>WM \_ DWMCOLORIZATIONCOLORCHANGED-Meldung
 
-Informiert alle Fenster der obersten Ebene darüber, dass sich die Farbe der Farbgebung geändert hat.
+Informiert alle Fenster der obersten Ebene, dass sich die Farbgebungsfarbe geändert hat.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,26 +32,26 @@ Informiert alle Fenster der obersten Ebene darüber, dass sich die Farbe der Far
 *wParam* 
 </dt> <dd>
 
-Gibt die neue farbliche Farbe an. Das Farb Format ist 0xaarrggbb.
+Gibt die neue Farbgebungsfarbe an. Das Farbformat ist 0xAARRGGBB.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Gibt an, ob die neue Farbe mit Deckkraft gemischt wird.
+Gibt an, ob die neue Farbe mit Deckkraft kombiniert wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
-" [**DwmGetColorizationColor**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmgetcolorizationcolor) " wird verwendet, um den aktuellen Farbwert zu bestimmen.
+[**DwmGetColorizationColor**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmgetcolorizationcolor) wird verwendet, um den aktuellen Farbwert zu bestimmen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versi
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Winuser. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winuser.h</dt> </dl> |
 
 
 

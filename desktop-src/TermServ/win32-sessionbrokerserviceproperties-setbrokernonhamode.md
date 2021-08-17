@@ -1,12 +1,12 @@
 ---
-title: Setbrokernonhamode-Methode der Win32_SessionBrokerServiceProperties-Klasse
-description: Migriert Daten aus Central SQL Server in eine lokale Datenbank. Außerdem wird der Broker Server für die Verwendung der lokalen Datenbank konfiguriert.
+title: SetBrokerNonHAMode-Methode der Win32_SessionBrokerServiceProperties-Klasse
+description: Migriert Daten von zentralen SQL Server zu einer lokalen Datenbank. Außerdem wird der Brokerserver für die Verwendung der lokalen Datenbank konfiguriert.
 ms.assetid: a73908be-0cc8-4512-842c-439d5cf18ed4
 ms.tgt_platform: multiple
 keywords:
-- Setbrokernonhamode-Methode Remotedesktopdienste
-- Setbrokernonhamode-Methode Remotedesktopdienste, Win32_SessionBrokerServiceProperties-Klasse
-- Win32_SessionBrokerServiceProperties-Klasse Remotedesktopdienste, setbrokernonhamode-Methode
+- SetBrokerNonHAMode-Methode Remotedesktopdienste
+- SetBrokerNonHAMode-Methode Remotedesktopdienste , Win32_SessionBrokerServiceProperties-Klasse
+- Win32_SessionBrokerServiceProperties Klasse Remotedesktopdienste , SetBrokerNonHAMode-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ef811bf8024f8e89f9739461dfa8499891077f3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 34daa0817056975a6b15164dd29edcbcc86cd7cd9475f753e91500845ce089a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345292"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119058409"
 ---
-# <a name="setbrokernonhamode-method-of-the-win32_sessionbrokerserviceproperties-class"></a>Setbrokernonhamode-Methode der Win32 \_ sessionbrokerserviceproperties-Klasse
+# <a name="setbrokernonhamode-method-of-the-win32_sessionbrokerserviceproperties-class"></a>SetBrokerNonHAMode-Methode der Win32 \_ SessionBrokerServiceProperties-Klasse
 
-Migriert Daten aus Central SQL Server in eine lokale Datenbank. Außerdem wird der Broker Server für die Verwendung der lokalen Datenbank konfiguriert.
+Migriert Daten von zentralen SQL Server zu einer lokalen Datenbank. Außerdem wird der Brokerserver für die Verwendung der lokalen Datenbank konfiguriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ uint32 SetBrokerNonHAMode(
 
 <dl> <dt>
 
-"Verbindungs Dienst" für " *recentraldbrdcms* \[ " in\]
+*connStringToCentralDBRdcms* \[ In\]
 </dt> <dd>
 
-Verbindungs Zeichenfolge zur zentralen Datenbank.
+Verbindungszeichenfolge zur zentralen Datenbank.
 
 </dd> </dl>
 
@@ -59,16 +59,16 @@ Verbindungs Zeichenfolge zur zentralen Datenbank.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                         |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                               |
-| MOF<br/>                      | <dl> <dt>"Tssdwmi. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TssdWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TssdWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32 \_ sessionbrokerserviceproperties**](win32-sessionbrokerserviceproperties.md)
+[**Win32 \_ SessionBrokerServiceProperties**](win32-sessionbrokerserviceproperties.md)
 </dt> </dl>
 
  

@@ -3,8 +3,8 @@ title: IMediaRendererActionInformation PlaySpeeds-Methode
 description: Ruft die vollständige Liste der PlaySpeed-Werte ab, die von der DMR akzeptiert werden.
 ms.assetid: 0AB63E39-6A26-4199-9978-A10866A7C805
 keywords:
-- 'PlaySpeeds-Methode: Medienstreaming-API'
-- PlaySpeeds-Methode Media Streaming API , IMediaRendererActionInformation-Schnittstelle
+- 'PlaySpeeds-Methode: Media Streaming-API'
+- 'PlaySpeeds-Methode: Media Streaming-API, IMediaRendererActionInformation-Schnittstelle'
 - IMediaRendererActionInformation-Schnittstelle Media Streaming-API, PlaySpeeds-Methode
 topic_type:
 - apiref
@@ -41,10 +41,10 @@ HRESULT PlaySpeeds(
 
 <dl> <dt>
 
-*wert* \[ out\]
+*value* \[ out\]
 </dt> <dd>
 
-Empfängt einen Vektor von [**PlaySpeed-Strukturen,**](/previous-versions/windows/desktop/api/windows.media.streaming/ns-windows-media-streaming-playspeed) der die vollständige Liste der **PlaySpeed-Werte** angibt, die von der DMR akzeptiert werden.
+Empfängt einen Vektor von [**PlaySpeed-Strukturen,**](/previous-versions/windows/desktop/api/windows.media.streaming/ns-windows-media-streaming-playspeed) die die vollständige Liste der **PlaySpeed-Werte** angeben, die von der DMR akzeptiert werden.
 
 </dd> </dl>
 

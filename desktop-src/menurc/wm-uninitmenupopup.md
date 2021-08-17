@@ -1,9 +1,9 @@
 ---
-title: WM_UNINITMENUPOPUP (Winuser.h)
+title: WM_UNINITMENUPOPUP Meldung (Winuser.h)
 description: Wird gesendet, wenn ein Dropdownmenü oder Untermenü zerstört wurde.
 ms.assetid: 06129d88-6cf9-4d55-b8eb-6f78994bc87a
 keywords:
-- WM_UNINITMENUPOPUP von Nachrichtenmenüs und anderen Ressourcen
+- WM_UNINITMENUPOPUP Meldung Menüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -46,13 +46,13 @@ Ein Handle für das Menü
 *lParam* 
 </dt> <dd>
 
-Das obere Wort identifiziert das Menü, das zerstört wurde. Derzeit kann dieser Parameter nur **\_ MF-SYSMENU** (das Fenstermenü) sein.
+Das Wort in hoher Reihenfolge identifiziert das Menü, das zerstört wurde. Derzeit kann dieser Parameter nur **MF \_ SYSMENU** (das Fenstermenü) sein.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn eine Anwendung eine [**WM \_ INITMENUPOPUP-Nachricht**](wm-initmenupopup.md) empfängt, wird eine **WM \_ UNINITMENUPOPUP-Nachricht** empfangen.
+Wenn eine Anwendung eine [**\_ WM-INITMENUPOPUP-Nachricht**](wm-initmenupopup.md) empfängt, empfängt sie eine **\_ WM-UNINITMENUPOPUP-Nachricht.**
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -74,7 +74,7 @@ Ein Prozesshandle. Wenn der **ProcessIdentifier-Member** **dem PROCESSIDTYPE \_ 
 
 ## <a name="remarks"></a>Hinweise
 
-Der Desktopfenster-Manager (DWM)-Prozess wird identifiziert, indem **ProcessIdentifier** auf **PROCESSIDTYPE \_ DWM** festgelegt wird. Andere Prozesse werden identifiziert, indem sie das Prozesshandle in **ProcessHandle** und **ProcessIdentifier** auf **PROCESSIDTYPE \_ HANDLE** festlegen.
+Der Desktopfenster-Manager(DWM)-Prozess wird identifiziert, indem **ProcessIdentifier** auf **PROCESSIDTYPE \_ DWM** festgelegt wird. Andere Prozesse werden identifiziert, indem sie das Prozesshandle in **ProcessHandle** und **ProcessIdentifier** auf **PROCESSIDTYPE \_ HANDLE** festlegen.
 
 ## <a name="requirements"></a>Anforderungen
 
