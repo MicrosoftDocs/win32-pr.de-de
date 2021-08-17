@@ -1,9 +1,9 @@
 ---
-title: WM_MOUSEHWHEEL Meldung (Winuser. h)
-description: Wird an das aktive Fenster gesendet, wenn das horizontale Mausrad der Maus gekippt oder gedreht wird.
+title: WM_MOUSEHWHEEL-Nachricht (Winuser.h)
+description: Wird an das aktive Fenster gesendet, wenn das horizontale Scrollrad der Maus geneigt oder gedreht wird.
 ms.assetid: 4d6a3d73-38ef-450d-89d2-2d381fc7a7c3
 keywords:
-- Tastatur-und Maus Eingaben für WM_MOUSEHWHEEL Nachricht
+- WM_MOUSEHWHEEL Meldung Tastatur- und Mauseingabe
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c1f3b1690ad39919e2a62b50ba6eacec8348e1c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: de63d214d087cb804c3973fbba6a90c46955506ebddf5da57a7578d224edb803
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119451490"
 ---
-# <a name="wm_mousehwheel-message"></a>WM- \_ mousehwheel-Meldung
+# <a name="wm_mousehwheel-message"></a>WM \_ MOUSEHWHEEL-Nachricht
 
-Wird an das aktive Fenster gesendet, wenn das horizontale Mausrad der Maus gekippt oder gedreht wird. Die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion gibt die Nachricht an das übergeordnete Fenster des Fensters weiter. Es sollte keine interne Weiterleitung der Nachricht vorhanden sein, da **defwindowproc** Sie in der übergeordneten Kette weitergibt, bis ein Fenster gefunden wird, in dem Sie verarbeitet wird.
+Wird an das aktive Fenster gesendet, wenn das horizontale Scrollrad der Maus geneigt oder gedreht wird. Die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) gibt die Nachricht an das übergeordnete Element des Fensters weiter. Es sollte keine interne Weiterleitung der Nachricht erfolgen, da **DefWindowProc** sie in der übergeordneten Kette weiterleitet, bis sie ein Fenster findet, in dem sie verarbeitet wird.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -41,21 +41,21 @@ Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versi
 *wParam* 
 </dt> <dd>
 
-Das höchst wertige Wort gibt die Entfernung an, um die das Rad gedreht wird, ausgedrückt in Vielfachen oder Faktoren des **\_ raddeltas**, das auf 120 festgelegt ist. Ein positiver Wert gibt an, dass das Mausrad nach rechts gedreht wurde. ein negativer Wert gibt an, dass das Rad nach links gedreht wurde.
+Das Wort in hoher Reihenfolge gibt den Abstand an, in dem das Rad gedreht wird, ausgedrückt in Vielfachen oder Faktoren von **WHEEL \_ DELTA**, die auf 120 festgelegt ist. Ein positiver Wert gibt an, dass das Rad nach rechts gedreht wurde. ein negativer Wert gibt an, dass das Rad nach links gedreht wurde.
 
-Das nieder wertige Wort gibt an, ob verschiedene virtuelle Schlüssel ausfallen. Dieser Parameter kann einen oder mehrere der folgenden Werte aufweisen.
+Das Wort mit niedriger Reihenfolge gibt an, ob verschiedene virtuelle Schlüssel ausgeschaltet sind. Bei diesem Parameter kann es sich um einen oder mehrere der folgenden Werte handelt.
 
 
 
 | Wert                                                                                                                                                                                                               | Bedeutung                                     |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
-| <span id="MK_CONTROL"></span><span id="mk_control"></span><dl> <dt>**MK \_ Steuer**</dt> Element <dt>0x0008</dt> </dl>    | Die STRG-Taste ist nicht gedrückt.<br/>            |
-| <span id="MK_LBUTTON"></span><span id="mk_lbutton"></span><dl> <dt>**MK \_ Lbutton**</dt> <dt>0x0001</dt> </dl>    | Die linke Maustaste ist nicht mehr vorhanden.<br/>   |
-| <span id="MK_MBUTTON"></span><span id="mk_mbutton"></span><dl> <dt>**MK \_ MButton**</dt> <dt>0x0010</dt> </dl>    | Die mittlere Maustaste ist nicht mehr angezeigt.<br/> |
-| <span id="MK_RBUTTON"></span><span id="mk_rbutton"></span><dl> <dt>**MK \_ Rbutton**</dt> <dt>0x0002</dt> </dl>    | Die Rechte Maustaste ist nicht mehr angezeigt.<br/>  |
-| <span id="MK_SHIFT"></span><span id="mk_shift"></span><dl> <dt>**MK \_ UMSCHALT**</dt> <dt>0x0004</dt> </dl>          | Die UMSCHALTTASTE ist nicht mehr festgelegt.<br/>           |
-| <span id="MK_XBUTTON1"></span><span id="mk_xbutton1"></span><dl> <dt>**MK \_ XButton1**</dt> <dt>0x0020</dt> </dl> | Die erste X-Schaltfläche ist nicht angezeigt.<br/>      |
-| <span id="MK_XBUTTON2"></span><span id="mk_xbutton2"></span><dl> <dt>**MK \_ XButton2**</dt> <dt>0x0040</dt> </dl> | Die zweite X-Schaltfläche ist nicht mehr festgelegt.<br/>     |
+| <span id="MK_CONTROL"></span><span id="mk_control"></span><dl> <dt>**MK \_ CONTROL**</dt> <dt>0x0008</dt> </dl>    | Die STRG-TASTE ist gedrückt.<br/>            |
+| <span id="MK_LBUTTON"></span><span id="mk_lbutton"></span><dl> <dt>**MK \_ LBUTTON**</dt> <dt>0x0001</dt> </dl>    | Die linke Maustaste ist nach unten geschaltet.<br/>   |
+| <span id="MK_MBUTTON"></span><span id="mk_mbutton"></span><dl> <dt>**MK \_ MBUTTON**</dt> <dt>0x0010</dt> </dl>    | Die mittlere Maustaste ist gedrückt.<br/> |
+| <span id="MK_RBUTTON"></span><span id="mk_rbutton"></span><dl> <dt>**MK \_ RBUTTON**</dt> <dt>0x0002</dt> </dl>    | Die rechte Maustaste ist nach unten geschaltet.<br/>  |
+| <span id="MK_SHIFT"></span><span id="mk_shift"></span><dl> <dt>**MK \_ UMSCHALT**</dt> <dt>0X0004</dt> </dl>          | Die UMSCHALTTASTE ist nicht mehr gedrückt.<br/>           |
+| <span id="MK_XBUTTON1"></span><span id="mk_xbutton1"></span><dl> <dt>**MK \_ XBUTTON1**</dt> <dt>0x0020</dt> </dl> | Die erste X-Schaltfläche ist ausgeschaltet.<br/>      |
+| <span id="MK_XBUTTON2"></span><span id="mk_xbutton2"></span><dl> <dt>**MK \_ XBUTTON2**</dt> <dt>0x0040</dt> </dl> | Die zweite X-Schaltfläche ist nicht mehr angezeigt.<br/>     |
 
 
 
@@ -66,19 +66,19 @@ Das nieder wertige Wort gibt an, ob verschiedene virtuelle Schlüssel ausfallen.
 *lParam* 
 </dt> <dd>
 
-Das nieder wertige Wort gibt die x-Koordinate des Zeigers relativ zur oberen linken Ecke des Bildschirms an.
+Das Wort mit niedriger Ordnung gibt die x-Koordinate des Zeigers relativ zur oberen linken Ecke des Bildschirms an.
 
-Das höchst wertige Wort gibt die y-Koordinate des Zeigers relativ zur oberen linken Ecke des Bildschirms an.
+Das Wort in hoher Reihenfolge gibt die y-Koordinate des Zeigers relativ zur oberen linken Ecke des Bildschirms an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie den folgenden Code, um die Informationen im *wParam* -Parameter zu erhalten.
+Verwenden Sie den folgenden Code, um die Informationen im *wParam-Parameter* abzurufen.
 
 
 ```
@@ -98,16 +98,16 @@ yPos = GET_Y_LPARAM(lParam);
 
 
 
-Wie bereits erwähnt, befindet sich die x-Koordinate in der unteren **Reihenfolge** des Rückgabewerts. die y-Koordinate befindet sich in der hohen Reihenfolge ( **kurz** ) (beide stellen *signierte* Werte dar, da Sie negative Werte für Systeme mit mehreren Monitoren annehmen können). Wenn der Rückgabewert einer Variablen zugewiesen ist, können Sie mit dem [**makepoints**](/windows/desktop/api/wingdi/nf-wingdi-makepoints) -Makro eine [**Points**](/previous-versions//dd162808(v=vs.85)) -Struktur aus dem Rückgabewert abrufen. Sie können auch das [**get \_ x \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_x_lparam) -oder [**get \_ y \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_y_lparam) -Makro verwenden, um die X-oder y-Koordinate zu extrahieren.
+Wie oben erwähnt, befindet sich die x-Koordinate in der unteren Reihenfolge **unter** dem Rückgabewert. Die y-Koordinate befindet sich in der hohen **Kurzreihenfolge** (beide stellen *signierte* Werte dar, da sie negative Werte auf Systemen mit mehreren Monitoren annehmen können). Wenn der Rückgabewert einer Variablen zugewiesen wird, können Sie das [**MAKEPOINTS-Makro**](/windows/desktop/api/wingdi/nf-wingdi-makepoints) verwenden, um eine [**POINTS-Struktur**](/previous-versions//dd162808(v=vs.85)) aus dem Rückgabewert abzurufen. Sie können auch das [**MAKRO GET \_ X \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_x_lparam) oder [**GET \_ Y \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_y_lparam) verwenden, um die x- oder y-Koordinate zu extrahieren.
 
 > [!IMPORTANT]
-> Verwenden Sie die [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) -oder [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) -Makros nicht, um die x-und y-Koordinaten der Cursorposition zu extrahieren, da diese Makros falsche Ergebnisse für Systeme mit mehreren Monitoren zurückgeben. Systeme mit mehreren Monitoren können über negative x-und y-Koordinaten verfügen, und **LoWord** und **HIWORD** behandeln die Koordinaten als nicht signierte Mengen.
+> Verwenden Sie nicht die [**LOWORD-**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) oder [**HIWORD-Makros,**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) um die x- und y-Koordinaten der Cursorposition zu extrahieren, da diese Makros falsche Ergebnisse auf Systemen mit mehreren Monitoren zurückgeben. Systeme mit mehreren Monitoren können negative x- und y-Koordinaten aufweisen, und **LOWORD** und **HIWORD** behandeln die Koordinaten als Mengen ohne Vorzeichen.
 
  
 
-Die Raddrehung ist ein Vielfaches von **\_ raddelta**, das auf 120 festgelegt ist. Dies ist der Schwellenwert für die auszuführende Aktion, und eine Aktion (z. b. durch Scrollen eines Inkrements) sollte für jedes Delta stattfinden.
+Die Raddrehung ist ein Vielfaches von **WHEEL \_ DELTA**, das auf 120 festgelegt ist. Dies ist der Schwellenwert für die durchzuführende Aktion, und eine solche Aktion (z. B. scrollen in einem Schritt) sollte für jedes Delta erfolgen.
 
-Das Delta wurde auf 120 festgelegt, um es Microsoft oder anderen Anbietern zu ermöglichen, feinere Auflösungs Räder (z. b. ein rotiertes Rad ohne Notches) zu erstellen, um mehr Nachrichten pro Drehung zu senden, aber mit einem geringeren Wert in jeder Nachricht. Um dieses Feature verwenden zu können, können Sie die eingehenden Delta Werte hinzufügen, bis das **\_ raddelta** erreicht ist (also bei einer Delta Drehung dieselbe Antwort), oder wenn Sie Teil Zeilen als Reaktion auf häufigere Nachrichten scrollen. Sie können auch die Bildlauf-Granularität auswählen und die Delta-Optionen ansammeln, bis Sie erreicht ist.
+Das Delta wurde auf 120 festgelegt, damit Microsoft oder andere Anbieter präzisere Radauflösungen erstellen können (z. B. ein frei drehendes Rad ohne Notches), um mehr Nachrichten pro Drehung zu senden, jedoch mit einem kleineren Wert in jeder Nachricht. Um dieses Feature zu verwenden, können Sie entweder die eingehenden Deltawerte hinzufügen, bis **WHEEL \_ DELTA** erreicht ist (für eine Deltarotation erhalten Sie die gleiche Antwort), oder als Reaktion auf häufigere Nachrichten teilzeilen scrollen. Sie können auch Ihre Scrollgranularität auswählen und Deltas sammeln, bis sie erreicht ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,29 +115,29 @@ Das Delta wurde auf 120 festgelegt, um es Microsoft oder anderen Anbietern zu er
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winuser. h (Include WINDOWSX. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Winuser.h (windowsx.h einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**\_KeyState- \_ wParam-Element**](/windows/win32/api/winuser/nf-winuser-get_keystate_wparam)
+[**GET \_ KEYSTATE \_ WPARAM**](/windows/win32/api/winuser/nf-winuser-get_keystate_wparam)
 </dt> <dt>
 
 [**GET \_ X \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_x_lparam)
 </dt> <dt>
 
-[**\_Y- \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_y_lparam)
+[**GET \_ Y \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_y_lparam)
 </dt> <dt>
 
-[**\_ \_ rasterdelta- \_ wParam**](/windows/win32/api/winuser/nf-winuser-get_wheel_delta_wparam)
+[**GET \_ WHEEL \_ DELTA \_ WPARAM**](/windows/win32/api/winuser/nf-winuser-get_wheel_delta_wparam)
 </dt> <dt>
 
 [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))
@@ -146,10 +146,10 @@ Das Delta wurde auf 120 festgelegt, um es Microsoft oder anderen Anbietern zu er
 [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
 </dt> <dt>
 
-[**Maus \_ Ereignis**](/windows/win32/api/winuser/nf-winuser-mouse_event)
+[**\_Mausereignis**](/windows/win32/api/winuser/nf-winuser-mouse_event)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Mauseingabe](mouse-input.md)
@@ -158,16 +158,16 @@ Das Delta wurde auf 120 festgelegt, um es Microsoft oder anderen Anbietern zu er
 **Andere Ressourcen**
 </dt> <dt>
 
-[**GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)
+[**Getsystemmetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)
 </dt> <dt>
 
-[**Makepoints**](/windows/desktop/api/wingdi/nf-wingdi-makepoints)
+[**MAKEPOINTS**](/windows/desktop/api/wingdi/nf-wingdi-makepoints)
 </dt> <dt>
 
-[**Punkt**](/previous-versions//dd162808(v=vs.85))
+[**Punkte**](/previous-versions//dd162808(v=vs.85))
 </dt> <dt>
 
-[**SystemParametersInfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa)
+[**Systemparametersinfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa)
 </dt> </dl>
 
  

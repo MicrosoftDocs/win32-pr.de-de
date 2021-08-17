@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e71a33056f596afaf577968a5c725b3f64f79b6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 7098f8f79212ed52d52ed408795284725735a1a7092988f35e416636675538fd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108090608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119422050"
 ---
 # <a name="usercontrolservice-method-of-the-win32_service-class-remote-desktop-services"></a>UserControlService-Methode der Win32_Service -Klasse (Remotedesktopdienste)
 
 Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **UserControlService** versucht, einen benutzerdefinierten Steuerelementcode an den Dienst zu senden, auf den verwiesen wird.
 
-In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -187,7 +187,7 @@ Der Dienst verfügt über keinen Ausführungsthread.
 **18**
 </dt> <dd>
 
-Der Dienst weist beim Start zirkuläre Abhängigkeiten auf.
+Der Dienst verfügt beim Starten über zirkuläre Abhängigkeiten.
 
 </dd> <dt>
 
@@ -201,14 +201,14 @@ Ein Dienst wird unter demselben Namen ausgeführt.
 **20**
 </dt> <dd>
 
-Der Dienstname weist ungültige Zeichen auf.
+Der Dienstname enthält ungültige Zeichen.
 
 </dd> <dt>
 
 **21**
 </dt> <dd>
 
-An den Dienst wurden ungültige Parameter übergeben.
+Ungültige Parameter wurden an den Dienst übergeben.
 
 </dd> <dt>
 
@@ -237,21 +237,21 @@ Der Dienst ist im System derzeitig angehalten.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
 | MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**\_Win32-Dienst**](/windows/desktop/CIMWin32Prov/win32-service)
+[**Win32-Dienst \_**](/windows/desktop/CIMWin32Prov/win32-service)
 </dt> <dt>
 
 [Betriebssystemklassen](/windows/desktop/CIMWin32Prov/operating-system-classes)

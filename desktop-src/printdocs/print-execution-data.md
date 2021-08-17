@@ -1,7 +1,7 @@
 ---
-description: Enthält den Ausführungs Kontext des Druckertreibers, der getprintexecutiondata aufruft.
+description: Enthält den Ausführungskontext des Druckertreibers, der GetPrintExecutionData aufruft.
 ms.assetid: 1fd25ed9-6f28-48f9-8132-d48fffc956ec
-title: PRINT_EXECUTION_DATA Struktur (winspool. h)
+title: PRINT_EXECUTION_DATA-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 0e33f77a3140c62a1f472fc27948ec26a7ecf3ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e67b43089c275baf59295f15e84d9bf38d1a3a5ff6e2adfaf2d270b02e2ad967
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119447140"
 ---
-# <a name="print_execution_data-structure"></a>\_ \_ Datenstruktur der Druck Ausführung
+# <a name="print_execution_data-structure"></a>PRINT \_ EXECUTION \_ DATA-Struktur
 
-Enthält den Ausführungs Kontext des Druckertreibers, der [**getprintexecutiondata**](getprintexecutiondata.md)aufruft.
+Enthält den Ausführungskontext des Druckertreibers, der [**GetPrintExecutionData aufruft.**](getprintexecutiondata.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,14 +43,14 @@ typedef struct _PRINT_EXECUTION_DATA {
 **context**
 </dt> <dd>
 
-Der [**\_ \_ Kontextwert der Druck Ausführung**](print-execution-context.md) , der den aktuellen Ausführungs Kontext des Druckertreibers darstellt.
+Der [**PRINT \_ EXECUTION \_ CONTEXT-Wert,**](print-execution-context.md) der den aktuellen Ausführungskontext des Druckertreibers darstellt.
 
 </dd> <dt>
 
-**clientapppid**
+**clientAppPID**
 </dt> <dd>
 
-Wenn der Wert des **Kontexts** " **Druck \_ Ausführungs \_ Kontext \_ WOW64**" ist, identifiziert **clientapppid** die Client Anwendung, in deren Auftrag der splwow64.exe Prozess den Druckertreiber geladen hat. Wenn der Wert des **Kontexts** nicht der **Druck \_ Ausführungs \_ Kontext \_ WOW64** ist, ist **clientapppid** gleich 0 (null).
+Wenn der Wert des **Kontexts** **PRINT EXECUTION CONTEXT \_ \_ \_ WOW64** lautet, identifiziert **clientAppPID** die Clientanwendung, in deren Auftrag der splwow64.exe Prozess den Druckertreiber geladen hat. Wenn der Wert von **context** nicht **PRINT EXECUTION CONTEXT \_ \_ \_ WOW64** ist, ist **clientAppPID** 0 (null).
 
 </dd> </dl>
 
@@ -60,20 +60,20 @@ Wenn der Wert des **Kontexts** " **Druck \_ Ausführungs \_ Kontext \_ WOW64**" 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Getprintexecutiondata**](getprintexecutiondata.md)
+[**GetPrintExecutionData**](getprintexecutiondata.md)
 </dt> <dt>
 
-[**Druck \_ Ausführungs \_ Kontext**](print-execution-context.md)
+[**\_ \_ DRUCKAUSFÜHRUNGSKONTEXT**](print-execution-context.md)
 </dt> </dl>
 
  

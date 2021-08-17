@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118971149"
 ---
-# <a name="xps_color"></a>XPS \_ COLOR
+# <a name="xps_color"></a>\_XPS-FARBE
 
 Eine -Struktur, die einen einzelnen Farbwert beschreibt.
 
@@ -36,12 +36,12 @@ typedef union switch (XPS_COLOR_TYPE colorType) value
 
 ## <a name="remarks"></a>Hinweise
 
-Das Format der Struktur hängt vom Wert von *colorType* ab.
+Das Format der Struktur hängt vom Wert von *colorType ab.*
 
 <dl>
 
-[**XPS \_ COLOR \_ TYPE \_ SRGB**](/previous-versions/windows/desktop/dd372944(v=vs.85))  
-[**XPS \_ COLOR \_ TYPE \_ SCRGB**](/previous-versions/windows/desktop/dd372943(v=vs.85))  
+[**\_XPS-FARBTYP \_ \_ SRGB**](/previous-versions/windows/desktop/dd372944(v=vs.85))  
+[**\_XPS-FARBTYP \_ \_ SCRGB**](/previous-versions/windows/desktop/dd372943(v=vs.85))  
 [**\_ \_ XPS-FARBTYPKONTEXT \_**](/windows/win32/api/xpsobjectmodel/ns-xpsobjectmodel-xps_color)  
 </dl>
 
@@ -51,8 +51,8 @@ Das Format der Struktur hängt vom Wert von *colorType* ab.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7, Windows Vista mit SP2 und Plattformupdate für UWP-Apps für Windows \[ \| Vista-Desktop-Apps\]<br/>                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Plattformupdate für Windows Server \[ 2008-Desktop-Apps \| UWP-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 Windows Vista mit SP2 und Plattformupdate für Windows Vista-Desktop-Apps \[ \| UWP-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Plattformupdate für Windows Server 2008-Desktop-Apps \[ \| UWP-Apps\]<br/> |
 | Header<br/>                   | <dl> <dt>Xpsobjectmodel.h</dt> </dl>                                              |
 | Idl<br/>                      | <dl> <dt>XpsObjectModel.idl</dt> </dl>                                            |
 

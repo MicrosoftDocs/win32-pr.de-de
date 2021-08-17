@@ -1,25 +1,25 @@
 ---
-title: Abrufen einer Sammlung
-description: Abrufen einer Sammlung
+title: Abrufen einer Auflistung
+description: Abrufen einer Auflistung
 ms.assetid: b9090ad5-564c-4f48-b7bd-24617d582d2e
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 517acfa320069f9c94ee291e9215459d27ba25ad
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 343f00ee28475d1e6180646a0e548c18d51701afed587c99582dad7dc60d094c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948921"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119063310"
 ---
-# <a name="retrieving-a-collection"></a>Abrufen einer Sammlung
+# <a name="retrieving-a-collection"></a>Abrufen einer Auflistung
 
 > [!Note]  
-> Der Internet Authentifizierungsdienst (IAS) wurde ab Windows Server 2008 in den Netzwerk Richtlinien Server (Network Policy Server, NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS. Im gesamten Text wird NPS verwendet, um auf alle Versionen des Dienstanbieter zu verweisen, einschließlich der Versionen, die ursprünglich als IAS bezeichnet wurden.
+> Internet Authentication Service (IAS) wurde ab Windows Server 2008 in Network Policy Server (NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS. Im gesamten Text wird NPS verwendet, um auf alle Versionen des Diensts zu verweisen, einschließlich der Versionen, die ursprünglich als IAS bezeichnet wurden.
 
- 
+ 
 
-Mit dem folgenden Code wird die-Client Sammlung für den Netzwerk Richtlinien Server abgerufen.
+Der folgende Code ruft die Clientssammlung für den Netzwerkrichtlinienserver ab.
 
 
 ```C++
@@ -109,15 +109,15 @@ Mit dem folgenden Code wird die-Client Sammlung für den Netzwerk Richtlinien Se
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die psdoservicecontrol-Variable enthält einen Zeiger auf ein Server Datenobjekt für NPS. Weitere Informationen finden Sie im Thema [Abrufen eines SDO-diensdo](/windows/desktop/Nps/sdo-retrieving-a-service-sdo).
+Die pSdoServiceControl-Variable enthält einen Zeiger auf ein Serverdatenobjekt für NPS. Weitere Informationen finden Sie im Thema [Abrufen eines Dienst-SDO.](/windows/desktop/Nps/sdo-retrieving-a-service-sdo)
 
-Die vtclientscollection-Variable ist vom Typ [ \_ Variant \_ t](/previous-versions/visualstudio/visual-studio-6.0/aa278648(v=vs.60)). Ein \_ Variant- \_ t-Objekt kapselt bzw. schließt den [**Variant**](/windows/win32/api/oaidl/ns-oaidl-variant) -Datentyp ein. Die-Klasse verwaltet die Zuordnung und Aufhebung der Zuordnung von Ressourcen und führt Funktionsaufrufe an [**VariantInit**](/windows/win32/api/oleauto/nf-oleauto-variantinit) und [**VariantClear**](/windows/win32/api/oleauto/nf-oleauto-variantclear) entsprechend aus.
+Die Variable vtClientsCollection ist vom Typ [ \_ variant \_ t.](/previous-versions/visualstudio/visual-studio-6.0/aa278648(v=vs.60)) Ein \_ Variant \_ t-Objekt kapselt den [**VARIANT-Datentyp**](/windows/win32/api/oaidl/ns-oaidl-variant) oder schließt ihn ein. Die -Klasse verwaltet die Ressourcenzuordnung und -freigabe und führt Funktionsaufrufe an [**VariantInit**](/windows/win32/api/oleauto/nf-oleauto-variantinit) und [**VariantClear**](/windows/win32/api/oleauto/nf-oleauto-variantclear) durch.
 
-Nach dem Aufrufen von "psdo->GetProperty ()" gibt die vtprotocolscollection-Variable ein Objekt an. Der **pdispVal** -Member von vtprotocolscollection enthält einen Zeiger auf die [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle für das Objekt.
+Nach dem Aufruf von "pSdo->GetProperty()" gibt die vtProtocolsCollection-Variable ein -Objekt an. Der **pdispVal-Member** von vtProtocolsCollection enthält einen Zeiger auf die [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) für das -Objekt.
 
-Der obige Beispielcode kann angepasst werden, um andere NPS-Auflistungen abzurufen, z. b. die NPS-Anforderungs Handler-Auflistungen. Der [**iasproperties**](/windows/desktop/api/sdoias/ne-sdoias-iasproperties) -Enumerationstyp listet Werte auf, die den verfügbaren NPS-Auflistungen entsprechen.
+Der obige Beispielcode kann angepasst werden, um andere NPS-Sammlungen abzurufen, z. B. die NPS-Anforderungshandlersammlungen. Der [**ENUMERATIONstyp IASPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-iasproperties) hat Werte aufgelistet, die den verfügbaren NPS-Auflistungen entsprechen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -126,27 +126,27 @@ Der obige Beispielcode kann angepasst werden, um andere NPS-Auflistungen abzuruf
 [\_Variant \_ t](/previous-versions/visualstudio/visual-studio-6.0/aa278648(v=vs.60))
 </dt> <dt>
 
-[**Iasproperties**](/windows/desktop/api/sdoias/ne-sdoias-iasproperties)
+[**IASPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-iasproperties)
 </dt> <dt>
 
-[**Isdo:: GetProperty**](/windows/desktop/api/sdoias/nf-sdoias-isdo-getproperty)
+[**ISdo::GetProperty**](/windows/desktop/api/sdoias/nf-sdoias-isdo-getproperty)
 </dt> <dt>
 
-[**Isdocollection**](/windows/desktop/api/sdoias/nn-sdoias-isdocollection)
+[**ISdoCollection**](/windows/desktop/api/sdoias/nn-sdoias-isdocollection)
 </dt> <dt>
 
-[Abrufen eines SDO-diensdo](/windows/desktop/Nps/sdo-retrieving-a-service-sdo)
+[Abrufen eines Dienst-SDO](/windows/desktop/Nps/sdo-retrieving-a-service-sdo)
 </dt> <dt>
 
 [**VariantClear**](/windows/win32/api/oleauto/nf-oleauto-variantclear)
 </dt> <dt>
 
-[**Variantit**](/windows/win32/api/oleauto/nf-oleauto-variantinit)
+[**VariantInit**](/windows/win32/api/oleauto/nf-oleauto-variantinit)
 </dt> <dt>
 
-[**Konfigur**](/windows/win32/api/oaidl/ns-oaidl-variant)
+[**Variante**](/windows/win32/api/oaidl/ns-oaidl-variant)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

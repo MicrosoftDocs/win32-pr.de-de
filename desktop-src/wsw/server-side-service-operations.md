@@ -1,31 +1,31 @@
 ---
-title: Server seitige Dienst Vorgänge
-description: In diesem Abschnitt werden Dienst seitige Dienst Vorgänge beschrieben.
+title: Serverseitige Dienstvorgänge
+description: In diesem Abschnitt werden dienstseitige Dienstvorgänge beschrieben.
 ms.assetid: d209cf2f-47f5-4025-8af4-1626c867a66a
 keywords:
-- Server seitige Service Operations-Webdienste für Windows
-- Wwsapi
+- Serverseitige Dienstvorgänge Webdienste für Windows
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c7ad5a327c1cb79278aa562bfaa1753f008a542
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 1f1656e56df08d00a0551946c4e52898beccd4d1a37a5bd96c63eb2066928fe1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104391234"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119344630"
 ---
-# <a name="server-side-service-operations"></a>Server seitige Dienst Vorgänge
+# <a name="server-side-service-operations"></a>Serverseitige Dienstvorgänge
 
-In diesem Abschnitt werden Dienst seitige Dienst Vorgänge beschrieben.
+In diesem Abschnitt werden dienstseitige Dienstvorgänge beschrieben.
 
 
-Im folgenden finden Sie das Layout eines serverseitigen Dienst Vorgangs.
+Im Folgenden finden Sie das Layout eines serverseitigen Dienstvorgang.
 
--   [ \_ \_ Kontext](ws-operation-context.md) Kontext Kontext des Konstanten WS-Vorgangs \* : der Vorgangs [Kontext](context.md).
--   Dienst Vorgangs Parameter: Parameter für den Dienst Vorgang.
--   konstanter [**WS- \_ \_**](/windows/desktop/api/WebServices/ns-webservices-ws_async_context) \* asynchroner Kontext AsyncContext: asynchroner Kontext für die asynchrone Ausführung der Dienst Vorgänge.
--   [WS \_ Fehler](ws-error.md) \* Fehler: Rich Error-Objekt.
+-   const [WS \_ OPERATION \_ CONTEXT](ws-operation-context.md) \* context: Der Vorgangskontext . [](context.md)
+-   Dienstbetriebsparameter: Parameter für den Dienstvorgang.
+-   const [**WS \_ ASYNC \_ CONTEXT**](/windows/desktop/api/WebServices/ns-webservices-ws_async_context) \* asyncContext: asynchroner Kontext zum asynchronen Ausführen der Dienstvorgänge.
+-   [WS \_ FEHLERfehler:](ws-error.md) \* Umfangreiches Fehlerobjekt.
 
 ``` syntax
 HRESULT CALLBACK Add(const WS_OPERATION_CONTEXT* context, 
@@ -38,27 +38,27 @@ HRESULT CALLBACK Add(const WS_OPERATION_CONTEXT* context,
 }
 ```
 
-## <a name="fault-and-error-handling"></a>Fehler-und Fehlerbehandlung
+## <a name="fault-and-error-handling"></a>Fehler- und Fehlerbehandlung
 
-Die Serverseite sollte Fehler verwenden, um Fehlerbedingungen an den Client zu übermitteln. Dies ist möglich, indem ein fehlerhaftes HRESULT zurückgegeben und der Fehler in das Fehler Objekt eingebettet wird.
+Die Serverseite sollte Fehler verwenden, um Fehlerbedingungen an den Client zu senden. Dazu kann ein fehlerhaftes HRESULT zurückgegeben und der Fehler in das Fehlerobjekt eingebettet werden.
 
-Wenn der Fehler nicht für das Fehler Objekt festgelegt ist und ein HRESULT-Fehler zurückgegeben wird, versucht die Infrastruktur, einen Fehler an den Client zurückzusenden. Die Ebene der Details, die für den Client in einem solchen Fall offengelegt wird, wird von der [**WS- \_ Dienst \_ Eigenschaft \_ Fault \_ Disclosure**](/windows/desktop/api/WebServices/ne-webservices-ws_service_property_id) Service-Eigenschaft auf dem [Dienst Host](service-host.md)gesteuert.
+Wenn der Fehler nicht für das Fehlerobjekt festgelegt ist und ein Fehler HRESULT zurückgegeben wird, versucht die Infrastruktur, einen Fehler an den Client zurück zu liefern. Die Ebene der Details, die dem Client in einem solchen Fall offengelegt werden, wird durch die [**WS \_ SERVICE PROPERTY \_ FAULT \_ \_ DISCLOSURE-Diensteigenschaft**](/windows/desktop/api/WebServices/ne-webservices-ws_service_property_id) auf dem [Diensthost gesteuert.](service-host.md)
 
-## <a name="call-completion"></a>Rückruf Abschluss
+## <a name="call-completion"></a>Aufrufabschluss
 
-Ein-Rückruf für einen synchronen serverseitigen Dienst Vorgang wird als "Complete" bezeichnet, wenn die Steuerung zurück an den Dienst Host zurückgegeben wurde. Bei einem asynchronen Dienst Vorgang wird ein-Rückruf als beendet betrachtet, sobald die Rückruf Benachrichtigung von der Dienst Vorgangs Implementierung ausgegeben wird.
+Ein Aufruf eines synchronen serverseitigen Dienstvorgang wird als abgeschlossen bezeichnet, wenn einer der Beiden die Steuerung an den Diensthost zurückgegeben hat. Bei einem asynchronen Dienstvorgang gilt ein Aufruf als abgeschlossen, sobald die Rückrufbenachrichtigung von der Dienstvorgangimplementierung ausgegeben wird.
 
-## <a name="call-lifetime"></a>Lebensdauer von Anrufen
+## <a name="call-lifetime"></a>Aufruflebensdauer
 
-Beim Implementieren eines serverseitigen Dienst Vorgangs über seine Lebensdauer muss besonders darauf geachtet werden. Die Lebensdauer eines Aufrufes kann sich stark darauf auswirken, wie lange der Dienst Host heruntergefahren wird.
+Bei der Implementierung eines serverseitigen Dienstvorgang über dessen Lebensdauer sollte besondere Vorsichtsmaßnahmen ergriffen werden. Die Lebensdauer eines Aufrufs kann sich stark darauf auswirken, wie lange das Herunterfahren des Diensthosts dauert.
 
-Wenn erwartet wird, dass ein serverseitiger Dienst Vorgang aufgrund eines e/a-gebundenen Vorgangs blockiert wird, wird empfohlen, einen Abbruch Rückruf so zu registrieren, dass er benachrichtigt wird, wenn der Dienst Host abgebrochen wird oder wenn die zugrunde liegende Verbindung vom Client geschlossen wird.
+Wenn erwartet wird, dass ein serverseitiger Dienstvorgang aufgrund eines E/A-gebundenen Vorgangs blockiert wird, wird empfohlen, einen Abbruchrückruf so zu registrieren, dass er benachrichtigt wird, wenn der Diensthost abgebrochen wird oder wenn die zugrunde liegende Verbindung vom Client geschlossen wird.
 
-## <a name="server-side-service-operations-and-memory-consideration"></a>Server seitige Dienst Vorgänge und Arbeitsspeicher Überlegungen
+## <a name="server-side-service-operations-and-memory-consideration"></a>Serverseitige Dienstvorgänge und Arbeitsspeicherberücksichtigung
 
-Wenn ein Dienst Vorgang Arbeitsspeicher für die ausgehenden Parameter zuweisen muss, sollte er das [WS- \_ Heap](ws-heap.md) Objekt verwenden, das über den [WS- \_ Vorgangs \_ Kontext](ws-operation-context.md)verfügbar ist.
+Wenn ein Dienstvorgang Speicher für seine ausgehenden Parameter zuordnen muss, sollte er [das \_ WS-HEAP-Objekt](ws-heap.md) verwenden, das über den [ \_ WS-VORGANGSKONTEXT verfügbar \_ ist.](ws-operation-context.md)
 
-Beispiel: Dienst Vorgang und WS- \_ Heap
+Beispiel: Dienstvorgang und \_ WS-HEAP
 
 ``` syntax
 HRESULT CALLBACK ProcessOrder (const WS_OPERATION_CONTEXT* context, const ULONG orderNumber, OrderReceipt** orderReceipt, const WS_ASYNC_CONTEXT* asyncContext, WS_ERROR* error)
@@ -79,12 +79,12 @@ HRESULT CALLBACK ProcessOrder (const WS_OPERATION_CONTEXT* context, const ULONG 
 
 ## <a name="return-values"></a>Rückgabewerte
 
--   WS \_ S Async: der-Vorgang wird asynchron \_ abgeschlossen.
--   WS \_ S- \_ Ende: der-Vorgang wurde erfolgreich abgeschlossen, der Server erwartet außerhalb dieses Aufrufes keine [WS- \_ Nachricht](ws-message.md) vom Client. Wenn eine andere WS-Nachricht empfangen wird, \_ sollte der Server den Kanal abbrechen.
--   NoError/alle anderen Erfolgs-HRESULTs: der Rückruf wurde erfolgreich abgeschlossen. Beachten Sie, dass die Anwendung für einen erfolgreichen Abschluss des Dienst Vorgangs kein anderes HRESULT-Ergebnis als noError zurückgeben sollte.
--   Alles mit einem Fehler HRESULT: ein Fehler wird an den Client zurückgesendet, wenn ein Fehler in WS- \_ Fehler vorliegt. Andernfalls wird ein generischer Fehler zurück an den Client gesendet. Siehe Fehler Diskussion weiter oben.
+-   WS \_ S \_ ASYNC: Der Aufruf wird asynchron abgeschlossen.
+-   WS S END: Der Aufruf wurde erfolgreich abgeschlossen, der Server erwartet über diesen Aufruf hinaus keine \_ \_ [ \_ WS-NACHRICHT](ws-message.md) vom Client. Wenn eine andere \_ WS-NACHRICHT einkommt, sollte der Server den Kanal abbrechen.
+-   NOERROR/Alle anderen erfolgreichen HRESULTS: Der Aufruf wurde erfolgreich abgeschlossen. Beachten Sie, dass es empfohlen wird, dass die Anwendung für den erfolgreichen Abschluss des Dienstbetriebs kein anderes HRESULT als NOERROR zurückgibt.
+-   Alles mit einem Fehler-HRESULT: Ein Fehler wird an den Client zurück gesendet, wenn ein Fehler in WS ERROR verfügbar \_ ist. Andernfalls wird ein generischer Fehler zurück an den Client gesendet. Siehe Fehlerdiskussion oben.
 
-Siehe, [Abbruch des Aufrufes](call-cancellation.md).
+Weitere Informationen finden Sie [unter Aufrufabbruch.](call-cancellation.md)
 
  
 

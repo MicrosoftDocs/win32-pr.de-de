@@ -1,6 +1,6 @@
 ---
-title: Stift Maske
-description: Werte, die im Feld "Straf Maske" der POINTER_PEN_INFO Struktur angezeigt werden können.
+title: Stiftmaske
+description: Werte, die im penMask-Feld der -Struktur POINTER_PEN_INFO werden können.
 ms.assetid: 6A44B701-55E1-41D4-9C4A-807E57441DA4
 topic_type:
 - apiref
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: bd181b5eafbe1cf6de56c95886deb04e5bd6d2b0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f8b44787dd1039bd3ffd3fa9afef76a527e2143cfe52bdcfa7676c15efa51342
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104564"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119666115"
 ---
-# <a name="pen-mask"></a>Stift Maske
+# <a name="pen-mask"></a>Stiftmaske
 
-Werte, die im Feld " **Straf Maske** " der [**POINTER_PEN_INFO**](/previous-versions/windows/desktop/api) Struktur angezeigt werden können.
+Werte, die im **penMask-Feld** der -Struktur POINTER_PEN_INFO [**werden**](/previous-versions/windows/desktop/api) können.
 
 <dl> <dt>
 
@@ -50,7 +50,7 @@ Standard. Keines der optionalen Felder ist gültig.
 
 
 
-der **Druck** der [**POINTER_PEN_INFO**](/previous-versions/windows/desktop/api) Struktur ist gültig.
+**Der** Druck der [**POINTER_PEN_INFO**](/previous-versions/windows/desktop/api) ist gültig.
 
 
 </dt> </dl> </dd> <dt>
@@ -63,7 +63,7 @@ der **Druck** der [**POINTER_PEN_INFO**](/previous-versions/windows/desktop/api)
 
 
 
-die **Drehung** der [**POINTER_PEN_INFO**](/previous-versions/windows/desktop/api) Struktur ist gültig.
+**Die** Drehung [**der POINTER_PEN_INFO**](/previous-versions/windows/desktop/api) ist gültig.
 
 
 </dt> </dl> </dd> <dt>
@@ -76,7 +76,7 @@ die **Drehung** der [**POINTER_PEN_INFO**](/previous-versions/windows/desktop/ap
 
 
 
-der **TiltX** -Wert der [**POINTER_PEN_INFO**](/previous-versions/windows/desktop/api) -Struktur ist gültig.
+**ist ein** [**gültiger POINTER_PEN_INFO**](/previous-versions/windows/desktop/api) der -Struktur.
 
 
 </dt> </dl> </dd> <dt>
@@ -89,7 +89,7 @@ der **TiltX** -Wert der [**POINTER_PEN_INFO**](/previous-versions/windows/deskto
 
 
 
-die **TiltY** der [**POINTER_PEN_INFO**](/previous-versions/windows/desktop/api) Struktur ist gültig.
+**der -Struktur** [**POINTER_PEN_INFO**](/previous-versions/windows/desktop/api) gültig.
 
 
 </dt> </dl> </dd> </dl>
@@ -100,13 +100,13 @@ die **TiltY** der [**POINTER_PEN_INFO**](/previous-versions/windows/desktop/api)
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Winuser. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winuser.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

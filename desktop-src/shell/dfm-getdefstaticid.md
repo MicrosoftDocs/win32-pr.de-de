@@ -1,6 +1,6 @@
 ---
-description: Wird von der standardmäßigen Kontextmenü Implementierung während der Erstellung gesendet, wobei der Standardmenü Befehl angegeben und eine Alternative Auswahl getroffen werden kann. Wird von lpfndfmcallback verwendet.
-title: DFM_GETDEFSTATICID Meldung (shlobj. h)
+description: Wird während der Erstellung von der Standardmäßigen Kontextmenüimplementierung gesendet, wobei der Standardmenübefehl angegeben wird und eine alternative Auswahl getroffen werden kann. Wird von LPFNDFMCALLBACK verwendet.
+title: DFM_GETDEFSTATICID Meldung (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 9e4ad96e-7c90-456e-8668-21b347f2915c
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 3fb1635b624b4c39e91ad8c31645c9aad598c7fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4d987e085779fd58f16c2534b517c39ebb4b7e3c6e2829982881015bb3a59a92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119094371"
 ---
-# <a name="dfm_getdefstaticid-message"></a>DFM \_ getdefstaticid-Meldung
+# <a name="dfm_getdefstaticid-message"></a>DFM \_ GETDEFSTATICID-Meldung
 
-Wird von der standardmäßigen Kontextmenü Implementierung während der Erstellung gesendet, wobei der Standardmenü Befehl angegeben und eine Alternative Auswahl getroffen werden kann. Wird von [**lpfndfmcallback**](/windows/win32/api/shlobj_core/nc-shlobj_core-lpfndfmcallback)verwendet.
+Wird während der Erstellung von der Standardmäßigen Kontextmenüimplementierung gesendet, wobei der Standardmenübefehl angegeben wird und eine alternative Auswahl getroffen werden kann. Wird von [**LPFNDFMCALLBACK**](/windows/win32/api/shlobj_core/nc-shlobj_core-lpfndfmcallback)verwendet.
 
 
 ```C++
@@ -37,7 +37,7 @@ DFM_GETDEFSTATICID
 
 <dl> <dt>
 
-*DefaultID* \[ in, out\]
+*defaultID* \[ in, out\]
 </dt> <dd>
 
 Ein Zeiger auf die ID des ausgewählten Menübefehls. Das folgende Flag wird erkannt.
@@ -46,24 +46,24 @@ Ein Zeiger auf die ID des ausgewählten Menübefehls. Das folgende Flag wird erk
 
 <span id="DFM_CMD_PROPERTIES"></span><span id="dfm_cmd_properties"></span>
 
-<span id="DFM_CMD_PROPERTIES"></span><span id="dfm_cmd_properties"></span>**DFM- \_ cmd- \_ Eigenschaften**
+<span id="DFM_CMD_PROPERTIES"></span><span id="dfm_cmd_properties"></span>**DFM \_ CMD \_ PROPERTIES**
 
 
 </dt> <dd>
 
-Zeigt die **Eigenschaften** Benutzeroberfläche für das Element an, für das das Menü aufgerufen wurde.
+Zeigt die **Eigenschaftenbenutzeroberfläche** für das Element an, für das das Menü aufgerufen wurde.
 
 </dd> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie die standardmäßige Befehls Auswahl überschreiben möchten, sollte Ihr Handler beim Empfang dieser Nachricht den Wert, auf den von *DefaultID* verwiesen wird, auf die ID des Ersetzungs Befehls festlegen und S OK zurückgeben \_ . Andernfalls wird ein Fehlercode zurückgegeben.
+Um die Standardbefehlsauswahl außer Kraft zu setzen, sollte Ihr Handler nach Erhalt dieser Meldung den Wert, auf den als *defaultID* verwiesen wird, auf die ID des Ersetzungsbefehls festlegen und S \_ OK zurückgeben. Gibt andernfalls einen Fehlercode zurück.
 
-Diese Nachricht wird entweder an die Rückruffunktion oder an das Rückruf Objekt gesendet, je nachdem, wie das standardmäßige Kontextmenü Objekt erstellt wird. Es gibt zwei APIs für die Erstellung, [**cdeffoldermenu \_ Create2**](/windows/desktop/api/shlobj_core/nf-shlobj_core-cdeffoldermenu_create2), [**shkreatedefaultcontextmenu**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu).
+Diese Meldung wird entweder an die Rückruffunktion oder das Rückrufobjekt gesendet, je nachdem, wie das Standardkontextmenüobjekt erstellt wird. Es gibt zwei APIs für die Erstellung: [**CDefFolderMenu \_ Create2**](/windows/desktop/api/shlobj_core/nf-shlobj_core-cdeffoldermenu_create2), [**SHCreateDefaultContextMenu**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu).
 
-[**DFM \_ Invokecommandex**](dfm-invokecommandex.md) ist eine erweiterte Version dieser Nachricht und bietet weitere Informationen für den Rückruf. Verwenden Sie **DFM \_ invokecommandex** , wenn die zusätzlichen Informationen, die von dieser Schnittstelle bereitgestellt werden, in der Implementierung benötigt werden.
+[**DFM \_ INVOKECOMMANDEX**](dfm-invokecommandex.md) ist eine erweiterte Version dieser Nachricht und stellt weitere Informationen zum Rückruf bereit. Verwenden Sie **DFM \_ INVOKECOMMANDEX,** wenn die zusätzlichen Informationen, die von dieser Schnittstelle bereitgestellt werden, in Ihrer Implementierung benötigt werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -71,7 +71,7 @@ Diese Nachricht wird entweder an die Rückruffunktion oder an das Rückruf Objek
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 3322981be5c266bee20a61e85302cb22538a7b0d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c366ef54c609f2c896b78510bfbe771260b9ef4cdc38c42d3fe0393e1e2a17dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119122584"
 ---
 # <a name="d3dxvec2normalize-function-d3dx9mathh"></a>D3DXVec2Normalize-Funktion (D3dx9math.h)
 
@@ -63,17 +63,17 @@ Zeiger auf die [**D3DXVECTOR2-Quellstruktur.**](d3dxvector2.md)
 
 Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***
 
-Zeiger auf eine [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) bei der es sich um die normalisierte Version des Vektors handelt.
+Zeiger auf eine [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) die die normalisierte Version des Vektors ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXVec2Normalize-Funktion** als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXVec2Normalize-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

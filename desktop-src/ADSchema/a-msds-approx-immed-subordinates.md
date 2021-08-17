@@ -1,11 +1,11 @@
 ---
-title: ms-DS-ca-immed-untergeordnete Attribute
-description: Der von diesem Attribut zurückgegebene Wert basiert auf Index Größen. Dies ist möglicherweise auf "+/\ 8211; 10" für große Container deaktiviert, und der Fehler ist theoretisch unbegrenzt, aber die Verwendung dieses Attributs hilft der Benutzeroberfläche, den Inhalt eines Containers anzuzeigen.
+title: ms-DS-Approx-Immed-Subordinates-Attribut
+description: Der von diesem Attribut zurückgegebene Wert basiert auf Indexgrößen. Dies kann durch +/ \ 8211;10 für große Container deaktiviert sein, und der Fehler ist theoretisch nicht gebunden, aber die Verwendung dieses Attributs hilft der Benutzeroberfläche, den Inhalt eines Containers anzuzeigen.
 ms.assetid: 0d6e3b53-dfad-49ac-bbb3-e53c33ea9cd8
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-ca-immed-untergeordnete Attribute ad-Schema
-- MSDS-ca-immed-untergeordnete Attribute ad-Schema
+- MS-DS-Approx-Immed-Subordinates-Attribut AD-Schema
+- MSDS-Approx-Immed-Subordinates-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fdb51ef642c216d8e41b774ffc596a8f3d4feb28
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 2291cf5dc669d0f0cac64de8ab9cbfc128ecbdd99153c5f96b1cf07a44d9a02b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104520191"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119442720"
 ---
-# <a name="ms-ds-approx-immed-subordinates-attribute"></a>ms-DS-ca-immed-untergeordnete Attribute
+# <a name="ms-ds-approx-immed-subordinates-attribute"></a>ms-DS-Approx-Immed-Subordinates-Attribut
 
-Der von diesem Attribut zurückgegebene Wert basiert auf Index Größen. Dies kann für große Container von +/10% liegen, und der Fehler ist theoretisch unbegrenzt, aber die Verwendung dieses Attributs ermöglicht der Benutzeroberfläche, den Inhalt eines Containers anzuzeigen.
+Der von diesem Attribut zurückgegebene Wert basiert auf Indexgrößen. Dies kann bei großen Containern um +/ 10 % deaktiviert sein, und der Fehler ist theoretisch nicht gebunden, aber die Verwendung dieses Attributs hilft der Benutzeroberfläche, den Inhalt eines Containers anzuzeigen.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-ca-immed-untergeordnete Elemente      |
-| LDAP-Display-Name | MSDS-ca-immed-untergeordnete Elemente       |
+| CN                | ms-DS-Approx-Immed-Subordinates      |
+| Ldap-Anzeigename | msDS-Approx-Immed-Subordinates       |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.     |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.     |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1669              |
 | System-ID-GUID    | e185d243-f6ce-4adb-b496-b0c005d7823c |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -42,14 +42,14 @@ Der von diesem Attribut zurückgegebene Wert basiert auf Index Größen. Dies ka
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -58,10 +58,10 @@ Der von diesem Attribut zurückgegebene Wert basiert auf Index Größen. Dies ka
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -79,10 +79,10 @@ Der von diesem Attribut zurückgegebene Wert basiert auf Index Größen. Dies ka
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -100,10 +100,10 @@ Der von diesem Attribut zurückgegebene Wert basiert auf Index Größen. Dies ka
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -121,10 +121,10 @@ Der von diesem Attribut zurückgegebene Wert basiert auf Index Größen. Dies ka
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -142,10 +142,10 @@ Der von diesem Attribut zurückgegebene Wert basiert auf Index Größen. Dies ka
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -163,10 +163,10 @@ Der von diesem Attribut zurückgegebene Wert basiert auf Index Größen. Dies ka
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

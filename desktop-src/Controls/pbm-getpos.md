@@ -1,9 +1,9 @@
 ---
-title: PBM_GETPOS Meldung (kommstrg. h)
-description: Ruft die aktuelle Position der Statusanzeige ab.
+title: PBM_GETPOS (Commctrl.h)
+description: Ruft die aktuelle Position der Statusleiste ab.
 ms.assetid: 76f49ec6-f2e1-4486-be8a-7dfd49f8b82c
 keywords:
-- Windows-Steuerelemente für PBM_GETPOS Meldung
+- PBM_GETPOS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e23078a75cfaf3a9002a9a5da79752965cbd620
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e4b32ce5c18554ed8eb59c970e48a8ffd8f7991cf7dd85c59458460968a766dc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104798"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119433530"
 ---
-# <a name="pbm_getpos-message"></a>PBM- \_ GetPos-Nachricht
+# <a name="pbm_getpos-message"></a>PBM \_ GETPOS-Nachricht
 
-Ruft die aktuelle Position der Statusanzeige ab.
+Ruft die aktuelle Position der Statusleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft die aktuelle Position der Statusanzeige ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **uint** -Wert zurück, der die aktuelle Position der Statusanzeige darstellt.
+Gibt einen **UINT-Wert** zurück, der die aktuelle Position der Statusleiste darstellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt einen **uint** -Wert zurück, der die aktuelle Position der Statusanzeige d
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

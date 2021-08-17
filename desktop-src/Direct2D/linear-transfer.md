@@ -1,27 +1,27 @@
 ---
-title: Linearer Übertragungs Effekt
-description: Verwenden Sie den linearen Übertragungs Effekt, um die Farb Intensitäten eines Bilds mithilfe einer linearen Funktion zuzuordnen, die aus einer Liste von Werten erstellt wird, die Sie für jeden Kanal bereitstellen.
+title: Linearer Übertragungseffekt
+description: Verwenden Sie den linearen Übertragungseffekt, um die Farbstärken eines Bilds mithilfe einer linearen Funktion zu ordnen, die aus einer Liste von Werten erstellt wurde, die Sie für jeden Kanal bereitstellen.
 ms.assetid: 22DC496E-2958-4726-A74D-B3DE934F507C
 keywords:
-- linearer Übertragungs Effekt
+- Linearer Übertragungseffekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cfedbb79f057ee871ce23cc086034afc3e6cdda0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7dcb2bb688d1e8ebf4b1b1ebfdd531d900755b46840bada2bade49d957ed0f6c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743945"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119385294"
 ---
-# <a name="linear-transfer-effect"></a>Linearer Übertragungs Effekt
+# <a name="linear-transfer-effect"></a>Linearer Übertragungseffekt
 
-Verwenden Sie den linearen Übertragungs Effekt, um die Farb Intensitäten eines Bilds mithilfe einer linearen Funktion zuzuordnen, die aus einer Liste von Werten erstellt wird, die Sie für jeden Kanal bereitstellen.
+Verwenden Sie den linearen Übertragungseffekt, um die Farbstärken eines Bilds mithilfe einer linearen Funktion zu ordnen, die aus einer Liste von Werten erstellt wurde, die Sie für jeden Kanal bereitstellen.
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1LinearTransfer.
 
--   [Beispiel Bild](#example-image)
--   [Effekt Eigenschaften](#effect-properties)
--   [Anforderungen](#requirements)
+-   [Beispielbild](#example-image)
+-   [Effect-Eigenschaften](#effect-properties)
+-   [Requirements](#requirements)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="example-image"></a>Beispielbild
@@ -31,7 +31,7 @@ Die CLSID für diesen Effekt ist CLSID \_ D2D1LinearTransfer.
 | Vorher                                                          |
 |-----------------------------------------------------------------|
 | ![das Bild vor dem Effekt.](images/default-before.jpg)      |
-| Nach                                                           |
+| Danach                                                           |
 | ![das Bild nach der Transformation.](images/13-lineartransfer.png) |
 
 
@@ -57,37 +57,37 @@ m_d2dContext->EndDraw();
 
 
 
-Die lineare Übertragungsfunktion wird basierend auf der Steigung und der y-Abfang Funktion für jeden von Ihnen angegebenen Kanal erstellt. Die Ausgabe Pixel Intensität C wird mit der Gleichung berechnet: c ' = MC + B, wobei m die Steigung der linearen Funktion und B das Y-Abfangen der linearen Funktion ist.
+Die lineare Übertragungsfunktion wird basierend auf der Steigung und dem y-Intercept für jeden von Ihnen angegebenen Kanal erstellt. Die Ausgabepixelstärke C wird mit der Gleichung C' = mC + B berechnet, wobei m die Steigung der linearen Funktion und B der Y-Schnittpunkt der linearen Funktion ist.
 
-Dieser Effekt kann bei geraden und vorab multiplizierten Alpha Bildern verwendet werden. Der Effekt gibt prämultiplizierte Alpha Bitmaps aus.
+Dieser Effekt funktioniert bei geraden und prämultipliierten Alphabildern. Der Effekt gibt prämultipliierte Alphabitmaps aus.
 
-## <a name="effect-properties"></a>Effekt Eigenschaften
+## <a name="effect-properties"></a>Effect-Eigenschaften
 
 > [!Note]  
 > Für alle Kanäle der linearen Übertragungseigenschaften:
 >
-> -   Das Y-abfangen ist nicht begrenzt und ist unitless.
-> -   Die Steigung ist nicht begrenzt und ist unitless.
+> -   Das Y-Intercept ist nicht gebunden und unitlos.
+> -   Die Steigung ist nicht gebunden und unitlos.
 
  
 
 
 
-| Anzeige Name und indexenumeration                                                    | Typ und Standardwert           | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Anzeigename und Indexenumeration                                                    | Typ und Standardwert           | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |---------------------------------------------------------------------------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Redyintercept<br/> D2D1 \_ Lineartransfer \_ ( \_ roter \_ Y- \_ abfangen)<br/>     | GLEITKOMMAZAHL<br/> 0,0 f<br/> | Das Y-Abfangen der linearen Funktion für den roten Kanal.                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Redslope<br/> D2D1 \_ Lineartransfer \_ ( \_ Rote \_ Neigung)<br/>                 | GLEITKOMMAZAHL<br/> 1.0 f<br/> | Die Steigung der linearen Funktion für den roten Kanal.                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Reddeaktiviert<br/> D2D1 \_ Lineartransfer- \_ Stütze \_ rot \_ Deaktivieren<br/>             | BOOL<br/> false<br/> | Wenn Sie diese Einstellung auf "true" festlegen, wird die Übertragungsfunktion nicht auf den roten Kanal angewendet. Wenn Sie diese Einstellung auf "false" festlegen, wendet der Effekt die redlineartransfer-Funktion auf den roten Kanal an.                                                                                                                                                                                                                                                                    |
-| Greenyintercept<br/> D2D1 \_ Lineartransfer \_ Prop \_ grünes \_ Y- \_ abfangen<br/> | GLEITKOMMAZAHL<br/> 0,0 f<br/> | Das Y-Abfangen der linearen Funktion für den grünen Kanal.                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Greenslope<br/> D2D1 \_ Lineartransfer \_ - \_ grüne \_ Steigung<br/>             | GLEITKOMMAZAHL<br/> 1.0 f<br/> | Die Steigung der linearen Funktion für den grünen Kanal.                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Greendeaktivieren<br/> D2D1 \_ Lineartransfer- \_ Prop- \_ grün \_ Deaktivieren<br/>         | BOOL<br/> false<br/> | Wenn Sie diese Einstellung auf "true" festlegen, wird die Übertragungsfunktion nicht auf den grünen Kanal angewendet. Wenn Sie diese Einstellung auf "false" festlegen, wird die greenlineartransfer-Funktion auf den grünen Kanal angewendet.                                                                                                                                                                                                                                                                      |
-| Blueyintercept<br/> D2D1 \_ Lineartransfer \_ Prop \_ blaues \_ Y- \_ abfangen<br/>   | GLEITKOMMAZAHL<br/> 0,0 f<br/> | Das Y-Abfangen der linearen Funktion für den blauen Kanal.                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Blueslope<br/> D2D1 \_ Lineartransfer \_ Prop ( \_ blaue \_ Steigung)<br/>               | GLEITKOMMAZAHL<br/> 1.0 f<br/> | Die Steigung der linearen Funktion für den blauen Kanal.                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Bluedeaktiviert<br/> D2D1 \_ Lineartransfer- \_ Stütze \_ blau \_ Deaktivieren<br/>           | BOOL<br/> false<br/> | Wenn Sie diese Einstellung auf "true" festlegen, wird die Übertragungsfunktion nicht auf den blauen Kanal angewendet. Wenn Sie diese Einstellung auf "false" festlegen, wird die bluelineartransfer-Funktion auf den blauen Kanal angewendet.                                                                                                                                                                                                                                                                         |
-| Alphayintercept<br/> D2D1 \_ Lineartransfer \_ Prop \_ alpha \_ Y \_ abfangen<br/> | GLEITKOMMAZAHL<br/> 0,0 f<br/> | Das Y-Abfangen der linearen Funktion für den Alpha Kanal.                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Alpha aslope<br/> D2D1 \_ Lineartransfer \_ Prop \_ alpha \_ Steigung<br/>             | GLEITKOMMAZAHL<br/> 0,0 f<br/> | Die Steigung der linearen Funktion für den Alpha Kanal.                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Alphadeaktivieren<br/> D2D1 \_ Lineartransfer \_ Prop \_ alpha \_ Deaktivieren<br/>         | BOOL<br/> false<br/> | Wenn Sie diese Einstellung auf "true" festlegen, wird die Übertragungsfunktion nicht auf den Alpha Kanal angewendet. Wenn Sie diese Einstellung auf false festlegen, wird die alphalineartransfer-Funktion auf den Alpha Kanal angewendet.                                                                                                                                                                                                                                                                      |
-| Klamme Ausgabe<br/> D2D1 \_ Lineartransfer \_ Prop \_ - \_ Ausgabe<br/>           | BOOL<br/> false<br/> | Gibt an, ob der Effekt Farbwerte auf zwischen 0 und 1 zeigt, bevor der Effekt die Werte an den nächsten Effekt im Diagramm übergibt. Der Effekt bindet die Werte, bevor die Alpha-angezeigt werden.<br/> Wenn Sie diese Einstellung auf "true" festlegen, werden die Werte durch die Auswirkung fixiert. Wenn Sie diese Einstellung auf "false" festlegen, werden die Farbwerte durch die Auswirkung nicht fixiert, aber andere Effekte und die Ausgabe Oberfläche können die Werte einspannen, wenn Sie nicht über eine hohe Genauigkeit verfügen.<br/> |
+| RedYIntercept<br/> D2D1 \_ LINEARTRANSFER \_ PROP \_ RED \_ Y \_ INTERCEPT<br/>     | GLEITKOMMAZAHL<br/> 0,0f<br/> | Das Y-Intercept der linearen Funktion für den roten Kanal.                                                                                                                                                                                                                                                                                                                                                                                                   |
+| RedSinnen<br/> D2D1 \_ LINEARTRANSFER \_ PROP \_ RED \_ SLOPE<br/>                 | GLEITKOMMAZAHL<br/> 1.0f<br/> | Die Steigung der linearen Funktion für den roten Kanal.                                                                                                                                                                                                                                                                                                                                                                                                         |
+| RedDisable<br/> D2D1 \_ LINEARTRANSFER \_ PROP \_ RED \_ DISABLE<br/>             | BOOL<br/> FALSE<br/> | Wenn Sie dies auf TRUE festlegen, wird die Übertragungsfunktion nicht auf den roten Kanal angewendet. Wenn Sie dies auf FALSE festlegen, wird die RedLinearTransfer-Funktion auf den roten Kanal angewendet.                                                                                                                                                                                                                                                                    |
+| GreenYIntercept<br/> D2D1 \_ LINEARTRANSFER \_ PROP \_ GREEN \_ Y \_ INTERCEPT<br/> | GLEITKOMMAZAHL<br/> 0,0f<br/> | Das Y-Intercept der linearen Funktion für den grünen Kanal.                                                                                                                                                                                                                                                                                                                                                                                                 |
+| GreenSlop<br/> D2D1 \_ LINEARTRANSFER \_ PROP \_ GREEN \_ SLOPE<br/>             | GLEITKOMMAZAHL<br/> 1.0f<br/> | Die Steigung der linearen Funktion für den grünen Kanal.                                                                                                                                                                                                                                                                                                                                                                                                       |
+| GreenDisable<br/> D2D1 \_ LINEARTRANSFER \_ PROP \_ GREEN \_ DISABLE<br/>         | BOOL<br/> FALSE<br/> | Wenn Sie dies auf TRUE festlegen, wird die Übertragungsfunktion nicht auf den grünen Kanal angewendet. Wenn Sie dies auf FALSE festlegen, wird die GreenLinearTransfer-Funktion auf den Grünen Kanal angewendet.                                                                                                                                                                                                                                                                      |
+| BlueYIntercept<br/> D2D1 \_ LINEARTRANSFER \_ PROP \_ BLUE \_ Y \_ INTERCEPT<br/>   | GLEITKOMMAZAHL<br/> 0,0f<br/> | Das Y-Intercept der linearen Funktion für den blauen Kanal.                                                                                                                                                                                                                                                                                                                                                                                                  |
+| BlueS blues<br/> D2D1 \_ LINEARTRANSFER \_ PROP \_ BLUE \_ SLOPE<br/>               | GLEITKOMMAZAHL<br/> 1.0f<br/> | Die Steigung der linearen Funktion für den blauen Kanal.                                                                                                                                                                                                                                                                                                                                                                                                        |
+| BlueDisable<br/> D2D1 \_ LINEARTRANSFER \_ PROP \_ BLUE \_ DISABLE<br/>           | BOOL<br/> FALSE<br/> | Wenn Sie dies auf TRUE festlegen, wird die Übertragungsfunktion nicht auf den blauen Kanal angewendet. Wenn Sie dies auf FALSE festlegen, wird die BlueLinearTransfer-Funktion auf den blauen Kanal angewendet.                                                                                                                                                                                                                                                                         |
+| AlphaYIntercept<br/> D2D1 \_ LINEARTRANSFER \_ PROP \_ ALPHA \_ Y \_ INTERCEPT<br/> | GLEITKOMMAZAHL<br/> 0,0f<br/> | Das Y-Intercept der linearen Funktion für den Alphakanal.                                                                                                                                                                                                                                                                                                                                                                                                 |
+| AlphaSinnen<br/> D2D1 \_ LINEARTRANSFER \_ PROP \_ ALPHA \_ SLOPE<br/>             | GLEITKOMMAZAHL<br/> 0,0f<br/> | Die Steigung der linearen Funktion für den Alphakanal.                                                                                                                                                                                                                                                                                                                                                                                                       |
+| AlphaDisable<br/> D2D1 \_ LINEARTRANSFER \_ PROP \_ ALPHA \_ DISABLE<br/>         | BOOL<br/> FALSE<br/> | Wenn Sie dies auf TRUE festlegen, wird die Übertragungsfunktion nicht auf den Alphakanal angewendet. Wenn Sie dies auf FALSE festlegen, wird die AlphaLinearTransfer-Funktion auf den Alphakanal angewendet.                                                                                                                                                                                                                                                                      |
+| ClampOutput<br/> D2D1 \_ LINEARTRANSFER \_ PROP \_ CLAMP \_ OUTPUT<br/>           | BOOL<br/> FALSE<br/> | Gibt an, ob der Effekt Farbwerte auf zwischen 0 und 1 klammert, bevor der Effekt die Werte an den nächsten Effekt im Diagramm übergibt. Der Effekt klammert die Werte vor der Prämultiplierung des Alpha-.<br/> Wenn Sie dies auf TRUE festlegen, klammert der Effekt die Werte. Wenn Sie dies auf FALSE festlegen, klammert der Effekt die Farbwerte nicht, aber andere Effekte und die Ausgabeoberfläche können die Werte klammern, wenn sie nicht hoch genug sind.<br/> |
 
 
 
@@ -99,10 +99,10 @@ Dieser Effekt kann bei geraden und vorab multiplizierten Alpha Bildern verwendet
 
 | Anforderung | Wert |
 |--------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Header                   | d2d1effects. h                                                                      |
-| Bibliothek                  | d2d1. lib, dxguid. lib                                                               |
+| Unterstützte Mindestversion (Client) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Header                   | d2d1effects.h                                                                      |
+| Bibliothek                  | d2d1.lib, dxguid.lib                                                               |
 
 
 

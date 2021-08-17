@@ -1,12 +1,12 @@
 ---
 title: SetDescription-Methode der Win32_TSGatewayResourceAuthorizationPolicy-Klasse
-description: Legt die Description-Eigenschaft für die Remotedesktop-Ressourcen Autorisierungs Richtlinie fest (RD \ 160; Rap).
+description: Legt die Description-Eigenschaft für die Remotedesktop Ressourcenautorisierungsrichtlinie fest (RD \ 160; HIER WIRD DER 16.
 ms.assetid: 5a0f4c4b-50a4-4bd2-960f-8af7f4686d07
 ms.tgt_platform: multiple
 keywords:
 - SetDescription-Methode Remotedesktopdienste
-- SetDescription-Methode Remotedesktopdienste, Win32_TSGatewayResourceAuthorizationPolicy-Klasse
-- Win32_TSGatewayResourceAuthorizationPolicy-Klasse Remotedesktopdienste, setDescription-Methode
+- SetDescription-Methode Remotedesktopdienste , Win32_TSGatewayResourceAuthorizationPolicy-Klasse
+- Win32_TSGatewayResourceAuthorizationPolicy Klasse Remotedesktopdienste , SetDescription-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b5dfdbcf67096dacc694061b5ff7e704c788bd2d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3380f1d38f28aac2821cc969f96ef60974c1336e77c108e31498c4c33198a705
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391864"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137983"
 ---
-# <a name="setdescription-method-of-the-win32_tsgatewayresourceauthorizationpolicy-class"></a>SetDescription-Methode der Win32- \_ Klasse "zgatewayresourceauthorizationpolicy"
+# <a name="setdescription-method-of-the-win32_tsgatewayresourceauthorizationpolicy-class"></a>SetDescription-Methode der Win32 \_ TSGatewayResourceAuthorizationPolicy-Klasse
 
-Legt die **Description** -Eigenschaft für die Remotedesktop-Ressourcen Autorisierungs Richtlinie (RD-RAP) fest.
+Legt die **Description-Eigenschaft** für die Remotedesktop Resource Authorization Policy (RD-AUTORISIERUNGsrichtlinie) fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,22 +43,22 @@ uint32 SetDescription(
 
 <dl> <dt>
 
-*Beschreibung* \[ in\]
+*Beschreibung* \[ In\]
 </dt> <dd>
 
-Beschreibung der RD-RAP.
+Beschreibung des RD-CSV.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,16 +69,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ faigatewayresourceauthorizationpolicy**](win32-tsgatewayresourceauthorizationpolicy.md)
+[**Win32 \_ TSGatewayResourceAuthorizationPolicy**](win32-tsgatewayresourceauthorizationpolicy.md)
 </dt> </dl>
 
  

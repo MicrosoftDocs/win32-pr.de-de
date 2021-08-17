@@ -1,7 +1,7 @@
 ---
-description: Erstellt das angegebene Mesh mit dem N-Patch-Mosaik Schema.
+description: Mosaik des angegebenen Gittermodells mithilfe des N-Patch-Mosaikschemas.
 ms.assetid: e804905d-ee0b-484f-a621-58b197bd370b
-title: D3DXTessellateNPatches-Funktion (D3DX9Mesh. h)
+title: D3DXTessellateNPatches-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 9c8811816447deb858b5c8b42d651d219f06fef5
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c1df63068f3eef608f797f8048231e744412c32f9e01a31a089c50f8a46465a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365302"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119122722"
 ---
 # <a name="d3dxtessellatenpatches-function"></a>D3DXTessellateNPatches-Funktion
 
-Erstellt das angegebene Mesh mit dem N-Patch-Mosaik Schema.
+Mosaik des angegebenen Gittermodells mithilfe des N-Patch-Mosaikschemas.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,57 +45,57 @@ HRESULT D3DXTessellateNPatches(
 
 <dl> <dt>
 
-*pmeshat* \[ in\]
+*pMeshIn* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)**
 
-Zeiger auf eine [**ID3DXMesh**](id3dxmesh.md) -Schnittstelle, die das zu Mosaik Ende Mesh darstellt.
+Zeiger auf eine [**ID3DXMesh-Schnittstelle,**](id3dxmesh.md) die das Gitternetz zum Mosaik darstellt.
 
 </dd> <dt>
 
-*padjackocyin* \[ in\]
+*pAdencyencyIn* \[ In\]
 </dt> <dd>
 
-Typ: Konstante Konstante **DWORD \***
+Typ: **const CONST \* DWORD**
 
-Zeiger auf ein Array von drei DWORDs pro Gesicht, das die drei Nachbarn für jedes Gesicht im quellmesh angibt. Dieser Parameter kann **null** sein.
+Zeiger auf ein Array von drei DWORDs pro Gesicht, das die drei Nachbarn für jedes Gesicht im Quellgitternetz angibt. Dieser Parameter kann **NULL** sein.
 
 </dd> <dt>
 
-*Numungsgs* \[ in\]
+*NumSegs* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Anzahl der Segmente pro Rand bis Mosaik.
+Anzahl der Segmente pro Edge, für die ein Mosaik zu erstellen ist.
 
 </dd> <dt>
 
-*Quadraticinterpnormals* \[ in\]
+*QuadraticInterpNormals* \[ In\]
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Auf **true** festgelegt, um quadratische Interpolationen für normale zu verwenden; Legen Sie für die lineare interpolung auf **false** fest.
+Legen Sie diese Einstellung auf **TRUE** fest, um die quadratische Interpolation für Normalitäten zu verwenden. für lineare Interpolation auf **FALSE** festgelegt.
 
 </dd> <dt>
 
-*ppmeshout* \[ vorgenommen\]
+*ppMeshOut* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXMesh**](id3dxmesh.md) -Schnittstelle, die das zurückgegebene Mosaik Gitter darstellt.
+Adresse eines Zeigers auf eine [**ID3DXMesh-Schnittstelle,**](id3dxmesh.md) die das zurückgegebene Mosaikgitter darstellt.
 
 </dd> <dt>
 
-*ppyouts-cyout* \[ vorgenommen\]
+*ppAdencyencyOut* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXBuffer**](id3dxbuffer.md) -Schnittstelle. Wenn der Wert dieses Parameters nicht auf **null** festgelegt ist, enthält dieser Puffer ein Array von drei DWORDs pro Gesicht, die die drei Nachbarn für jedes Gesicht im Ausgabe Mesh angeben. Dieser Parameter kann **null** sein.
+Adresse eines Zeigers auf eine [**ID3DXBuffer-Schnittstelle.**](id3dxbuffer.md) Wenn der Wert dieses Parameters nicht auf **NULL** festgelegt ist, enthält dieser Puffer ein Array von drei DWORDs pro Gesicht, die die drei Nachbarn für jedes Gesicht im Ausgabegitternetz angeben. Dieser Parameter kann **NULL** sein.
 
 </dd> </dl>
 
@@ -103,11 +103,11 @@ Adresse eines Zeigers auf eine [**ID3DXBuffer**](id3dxbuffer.md) -Schnittstelle.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData, E \_ outo fmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion verwendet den N-Patch-Algorithmus.
+Diese Funktion setzt den N-Patch-Algorithmus ins Mosaik.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,16 +115,16 @@ Diese Funktion verwendet den N-Patch-Algorithmus.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> </dl>
 
  

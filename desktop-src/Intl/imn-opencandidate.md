@@ -1,19 +1,19 @@
 ---
-description: Benachrichtigt eine Anwendung, wenn ein IME im Begriff ist, das Kandidaten Fenster zu öffnen. Die Anwendung empfängt diesen Befehl über die WM- \_ IME- \_ Benachrichtigungs Meldung mit den Parametereinstellungen, wie unten gezeigt.
+description: Benachrichtigt eine Anwendung, wenn ein IME das Kandidatenfenster öffnet. Die Anwendung empfängt diesen Befehl über die WM \_ IME \_ NOTIFY-Nachricht mit Parametereinstellungen, wie unten dargestellt.
 ms.assetid: 439ff125-2731-4eb1-8287-4ca8ace7d8ec
-title: IMN_OPENCANDIDATE-Ereignis (IMM. h)
+title: IMN_OPENCANDIDATE -Ereignis (Imm.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 27f8f412c60cc6b62904e562d450479af642de0c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4dbf6db7415a62b6d77925a4fb7106b70f0b42d77f922e0c1b6df76e71d10c43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865492"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119147633"
 ---
-# <a name="imn_opencandidate-event"></a>IMN \_ opencandidate-Ereignis
+# <a name="imn_opencandidate-event"></a>IMN \_ OPENCANDIDATE-Ereignis
 
-Benachrichtigt eine Anwendung, wenn ein IME im Begriff ist, das Kandidaten Fenster zu öffnen. Die Anwendung empfängt diesen Befehl über die [**WM- \_ IME- \_ Benachrichtigungs**](wm-ime-notify.md) Meldung mit den Parametereinstellungen, wie unten gezeigt.
+Benachrichtigt eine Anwendung, wenn ein IME das Kandidatenfenster öffnet. Die Anwendung empfängt diesen Befehl über die [**WM \_ IME \_ NOTIFY-Nachricht**](wm-ime-notify.md) mit Parametereinstellungen, wie unten dargestellt.
 
 
 ```C++
@@ -26,29 +26,29 @@ IMN_OPENCANDIDATE
 
 <dl> <dt>
 
-<span id="wParam"></span><span id="wparam"></span><span id="WPARAM"></span>*wParam*
+<span id="wParam"></span><span id="wparam"></span><span id="WPARAM"></span>*Wparam*
 </dt> <dd>
 
-Legen Sie auf IMN \_ opencandidate fest.
+Legen Sie auf IMN \_ OPENCANDIDATE fest.
 
 </dd> <dt>
 
-<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*LParam*
+<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*Lparam*
 </dt> <dd>
 
-Flag der Kandidatenliste. Jedes Bit entspricht einer Kandidatenliste: Bit 0 bis zur ersten Liste, Bit 1 bis zum zweiten usw. Wenn ein angegebenes Bit 1 ist, wird das entsprechende Kandidaten Fenster geöffnet.
+Kandidatenlistenflag. Jedes Bit entspricht einer Kandidatenliste: Bit 0 zur ersten Liste, Bit 1 für die zweite usw. Wenn ein angegebenes Bit 1 ist, wird das entsprechende Kandidatenfenster geöffnet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Dieser Befehl weist keinen Rückgabewert auf.
+Dieser Befehl hat keinen Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung sollte diesen Befehl verarbeiten, wenn Sie Kandidaten selbst anzeigt. Die Anwendung kann eine Liste der anzuzeigenden Kandidaten mithilfe der [**immgetcandidatelist**](/windows/desktop/api/Imm/nf-imm-immgetcandidatelista) -Funktion abrufen.
+Eine Anwendung sollte diesen Befehl verarbeiten, wenn sie Kandidaten selbst anzeigt. Die Anwendung kann mithilfe der [**ImmGetCandidateList-Funktion**](/windows/desktop/api/Imm/nf-imm-immgetcandidatelista) eine Liste von Kandidaten abrufen, die angezeigt werden sollen.
 
-Standardmäßig erstellt das IME-Fenster ein Kandidaten Fenster, wenn es diesen Befehl verarbeitet.
+Standardmäßig erstellt das IME-Fenster ein Kandidatenfenster, wenn dieser Befehl verarbeitet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,24 +58,24 @@ Standardmäßig erstellt das IME-Fenster ein Kandidaten Fenster, wenn es diesen 
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Imm. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Imm.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Eingabemethoden-Manager](input-method-manager.md)
 </dt> <dt>
 
-[Eingabemethoden-Manager-Befehle](input-method-manager-commands.md)
+[Befehle des Eingabemethoden-Managers](input-method-manager-commands.md)
 </dt> <dt>
 
-[**Immgetcandidatelist**](/windows/desktop/api/Imm/nf-imm-immgetcandidatelista)
+[**ImmGetCandidateList**](/windows/desktop/api/Imm/nf-imm-immgetcandidatelista)
 </dt> <dt>
 
-[**WM- \_ IME \_ Benachrichtigen**](wm-ime-notify.md)
+[**WM \_ IME \_ NOTIFY**](wm-ime-notify.md)
 </dt> </dl>
 
  

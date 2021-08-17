@@ -1,17 +1,17 @@
 ---
 description: Gibt den Status einer Topologie während der Wiedergabe an.
 ms.assetid: f7c93bad-1a64-45b0-ab5c-6edea4a1c0d1
-title: MF_EVENT_TOPOLOGY_STATUS-Attribut (mfapi. h)
+title: MF_EVENT_TOPOLOGY_STATUS Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ee3c6e00722239103058ca584ee1da28778511c4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0fecee6003b0275301a29b32ac34d03db32a22017ab1e828536c0631327f79ec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973749"
 ---
-# <a name="mf_event_topology_status-attribute"></a>MF- \_ Ereignis \_ topologiestatusattribut \_
+# <a name="mf_event_topology_status-attribute"></a>MF \_ EVENT \_ TOPOLOGY \_ STATUS-Attribut
 
 Gibt den Status einer Topologie während der Wiedergabe an.
 
@@ -19,13 +19,13 @@ Gibt den Status einer Topologie während der Wiedergabe an.
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert dieses Attributs ist ein Member der [**MF \_ topostatus**](/windows/desktop/api/mfapi/ne-mfapi-mf_topostatus) -Enumeration.
+Der Wert dieses Attributs ist ein Member der [**MF \_ TOPOSTATUS-Enumeration.**](/windows/desktop/api/mfapi/ne-mfapi-mf_topostatus)
 
-Dieses Attribut wird mit dem [mesessiontopologystatus](mesessiontopologystatus.md) -Ereignis verwendet.
+Dieses Attribut wird mit dem [MESessionTopologyStatus-Ereignis](mesessiontopologystatus.md) verwendet.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,13 +33,13 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -49,10 +49,10 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 [Ereignisattribute](event-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEAttributes::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEAttributes::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> </dl>
 
  

@@ -1,23 +1,23 @@
 ---
-description: Das folgende Beispiel zeigt den Quellcode, der erforderlich ist, um eine einfache dll, Myputs.dll, zu erstellen.
+description: Das folgende Beispiel ist der Quellcode, der zum Erstellen einer einfachen DLL erforderlich ist, Myputs.dll.
 ms.assetid: 3b11a83b-9943-4b66-8d0d-4a236ad5ffb8
-title: Erstellen einer einfachen Dynamic-Link Bibliothek
+title: Erstellen einer simple Dynamic-Link Library
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 572c25c87a3130739a55fcccfc9d8f9c6514d812
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 47c3708f98c6b916c54940bc1667ebc4827b29c78596f55102331491aca29e65
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359925"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963790"
 ---
-# <a name="creating-a-simple-dynamic-link-library"></a>Erstellen einer einfachen Dynamic-Link Bibliothek
+# <a name="creating-a-simple-dynamic-link-library"></a>Erstellen einer simple Dynamic-Link Library
 
-Das folgende Beispiel zeigt den Quellcode, der erforderlich ist, um eine einfache dll, Myputs.dll, zu erstellen. Es definiert eine einfache Funktion zum Drucken von Zeichen folgen, die als myputs bezeichnet wird. Die DLL-Datei "myputs" definiert keine Einstiegspunkt Funktion, da Sie mit der C-Lauf Zeit Bibliothek verknüpft ist und keine eigenen Initialisierungs-oder Bereinigungs Funktionen aufweist.
+Das folgende Beispiel ist der Quellcode, der zum Erstellen einer einfachen DLL erforderlich ist, Myputs.dll. Sie definiert eine einfache Zeichenfolgendruckfunktion namens myPuts. Die Myputs-DLL definiert keine Einstiegspunktfunktion, da sie mit der C-Laufzeitbibliothek verknüpft ist und über keine eigenen Initialisierungs- oder Bereinigungsfunktionen verfügt.
 
-Um die dll zu erstellen, befolgen Sie die Anweisungen in der Dokumentation, die im Lieferumfang der Entwicklungs Tools enthalten ist.
+Um die DLL zu erstellen, befolgen Sie die Anweisungen in der Dokumentation, die in Ihren Entwicklungstools enthalten ist.
 
-Ein Beispiel für die Verwendung von myputs finden [Sie unter using Load-Time Dynamic Linking](using-load-time-dynamic-linking.md) or [using Run-Time Dynamic Linking](using-run-time-dynamic-linking.md).
+Ein Beispiel für die Verwendung von myPuts finden Sie unter [Using Load-Time Dynamic Linking](using-load-time-dynamic-linking.md) oder Using Run-Time Dynamic [Linking](using-run-time-dynamic-linking.md).
 
 
 ```C++

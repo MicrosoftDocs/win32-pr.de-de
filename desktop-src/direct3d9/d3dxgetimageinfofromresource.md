@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: ea324ef94ab765bad25f7d07eef07972ab94cff6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 7d383a458b99478eee8435aa46441cdd77cc5c953bbf489c657e448078c9931b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108114448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119123226"
 ---
 # <a name="d3dxgetimageinfofromresource-function"></a>D3DXGetImageInfoFromResource-Funktion
 
@@ -47,7 +47,7 @@ HRESULT D3DXGetImageInfoFromResource(
 
 Typ: **[ **HMODULE**](../winprog/windows-data-types.md)**
 
-Modul, in das die Ressource geladen wird. Legen Sie diesen Parameter auf **NULL fest,** um das Modul anzugeben, das dem Image zugeordnet ist, das das Betriebssystem zum Erstellen des aktuellen Prozesses verwendet hat.
+Modul, in das die Ressource geladen wird. Legen Sie diesen Parameter auf **NULL** fest, um das Modul anzugeben, das dem Image zugeordnet ist, das das Betriebssystem zum Erstellen des aktuellen Prozesses verwendet hat.
 
 </dd> <dt>
 
@@ -56,7 +56,7 @@ Modul, in das die Ressource geladen wird. Legen Sie diesen Parameter auf **NULL 
 
 Typ: **[ **LPCTSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf eine Zeichenfolge, die den Dateinamen angibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR auflösen. Andernfalls wird der Zeichenfolgendatentyp in LPCSTR auflösen. Siehe Hinweise.
+Zeiger auf eine Zeichenfolge, die den Dateinamen angibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der Zeichenfolgendatentyp in LPCSTR aufgelöst. Siehe Hinweise.
 
 </dd> <dt>
 
@@ -73,9 +73,9 @@ Zeiger auf eine [**D3DXIMAGE \_ INFO-Struktur,**](d3dximage-info.md) die mit der
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt sein: D3DERR \_ INVALIDCALL
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt sein: D3DERR \_ INVALIDCALL
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in D3DXGetImageInfoFromResourceW aufgelöst. Andernfalls wird der Funktionsaufruf in D3DXGetImageInfoFromResourceA aufgelöst, da ANSI-Zeichenfolgen verwendet werden.
 
@@ -83,7 +83,7 @@ Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definie
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |

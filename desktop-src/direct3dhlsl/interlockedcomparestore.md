@@ -1,9 +1,9 @@
 ---
-title: Interlockedcomparestore-Funktion (HLSL-Referenz)
-description: Vergleicht atomisch das Ziel mit dem Vergleichswert. Wenn Sie identisch sind, wird das Ziel mit dem Eingabe Wert überschrieben.
+title: InterlockedCompareStore-Funktion (HLSL-Referenz)
+description: Vergleicht das Ziel atomisch mit dem Vergleichswert. Wenn sie identisch sind, wird das Ziel mit dem Eingabewert überschrieben.
 ms.assetid: eaf7e669-5240-40c9-9840-f4e7916e51b4
 keywords:
-- Interlockedcomparestore-Funktion HLSL
+- InterlockedCompareStore-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,24 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: df3ffb51bbe8fe8150d19a390e62640e64ded5c9
-ms.sourcegitcommit: 12e9b14501d51641b690ee0cf764e2b91eb9a140
+ms.openlocfilehash: 7dbf13629b9c3b9b38cc3bd72a8a992ab40bd09c0333c155a7c109f71466f23b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "104389765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119244"
 ---
-# <a name="interlockedcomparestore-function-hlsl-reference"></a>Interlockedcomparestore-Funktion (HLSL-Referenz)
+# <a name="interlockedcomparestore-function-hlsl-reference"></a>InterlockedCompareStore-Funktion (HLSL-Referenz)
 
-Vergleicht atomisch das Ziel mit dem Vergleichswert. Wenn Sie identisch sind, wird das Ziel mit dem Eingabe Wert überschrieben.
+Vergleicht das Ziel atomisch mit dem Vergleichswert. Wenn sie identisch sind, wird das Ziel mit dem Eingabewert überschrieben.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 void InterlockedCompareStore(
-  in R dest,
-  in T compare_value,
-  in T value
+  in R dest,
+  in T compare_value,
+  in T value
 );
 ```
 
@@ -38,7 +38,7 @@ void InterlockedCompareStore(
 
 <dl> <dt>
 
-*dest* \[ in\]
+*dest* \[ In\]
 </dt> <dd>
 
 Typ: **R**
@@ -47,7 +47,7 @@ Die Zieladresse.
 
 </dd> <dt>
 
-*\_ Wert vergleichen* \[ in\]
+*Vergleichen \_ des Werts* \[ in\]
 </dt> <dd>
 
 Typ: **T**
@@ -56,7 +56,7 @@ Der Vergleichswert.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*value* \[ In\]
 </dt> <dd>
 
 Typ: **T**
@@ -69,49 +69,49 @@ Der Eingabewert.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vergleicht atomarisch den Wert, auf den mit dem " *dest* " *verwiesen wird,* mit dem Wert "Wert vergleichen" und speichert den *Wert* in dem Speicherort, auf den *\_* Dieser Vorgang kann nur für typisierte **int** -oder **uint** -Ressourcen und Shared Memory-Variablen ausgeführt werden. Es gibt zwei Verwendungsmöglichkeiten für diese Funktion. Der erste ist, wenn R ein Variablentyp für den gemeinsamen Speicher ist. In diesem Fall führt die Funktion den Vorgang für das Shared Memory-Register aus, auf das von *dest* verwiesen wird. Das zweite Szenario ist, wenn R ein Ressourcen Variablentyp ist. In diesem Szenario führt die Funktion den Vorgang an dem Ressourcen Speicherort aus, auf den " *dest*" verweist.
+Vergleicht atomisch den Wert, auf den *von dest* verwiesen wird, mit dem Vergleichswert und speichert den Wert *an* dem Speicherort, auf den *vom dest* verwiesen wird, wenn die Werte übereinstimmen. *\_* Dieser Vorgang kann nur für **int-** oder **uint-typierte** Ressourcen und Freigegebene Arbeitsspeichervariablen ausgeführt werden. Es gibt zwei mögliche Verwendungsmöglichkeiten für diese Funktion. Die erste ist, wenn R ein Variablentyp für freigegebenen Arbeitsspeicher ist. In diesem Fall führt die Funktion den Vorgang für das Shared Memory-Register aus, auf das von *dest verwiesen wird.* Das zweite Szenario ist, wenn R ein Ressourcenvariablentyp ist. In diesem Szenario führt die Funktion den Vorgang für den Ressourcenspeicherort aus, auf den von *dest verwiesen wird.*
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |  x     | x    |  x     |  x       | x     | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Klont ein Mesh mit einem flexiblen Scheitelpunkt Formatierungs Code (FVF).
+description: Klont ein Gitternetz mithilfe eines FVF-Codes (Flexible Vertex Format).
 ms.assetid: b7d23ea9-1a2f-46e3-bcb5-82040d2a1e12
-title: 'ID3DXBaseMesh:: clonemeschf VF-Methode (D3DX9Mesh. h)'
+title: ID3DXBaseMesh::CloneMeshFVF-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 4cb3b0ad33e54e79464949f441842173fb48a180
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: bc0e389678240396d22e616a39ed0050b1f73b0b974dbe2800fcda2c6d4076a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355804"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119121812"
 ---
-# <a name="id3dxbasemeshclonemeshfvf-method"></a>ID3DXBaseMesh:: clonemeschf VF-Methode
+# <a name="id3dxbasemeshclonemeshfvf-method"></a>ID3DXBaseMesh::CloneMeshFVF-Methode
 
-Klont ein Mesh mit einem flexiblen Scheitelpunkt Formatierungs Code (FVF).
+Klont ein Gitternetz mithilfe eines FVF-Codes (Flexible Vertex Format).
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT CloneMeshFVF(
 
 <dl> <dt>
 
-*Optionen* \[ in\]
+*Optionen* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine Kombination aus einem oder mehreren [**D3DXMESH**](./d3dxmesh.md) -Flags, die Erstellungs Optionen für das Mesh angeben.
+Eine Kombination aus einem oder mehreren [**D3DXMESH-Flags,**](./d3dxmesh.md) die Erstellungsoptionen für das Gitternetz angeben.
 
 </dd> <dt>
 
-*F-VF* \[ in\]
+*FVF* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine Kombination von f-Codes, die das Scheitelpunkt Format für die Scheitel Punkte im Ausgabe Mesh angibt. Die Werte der Codes finden Sie unter [D3DFVF](d3dfvf.md).
+Kombination von FVF-Codes, die das Scheitelpunktformat für die Scheitelpunkte im Ausgabegitternetz angibt. Die Werte der Codes finden Sie unter [D3DFVF](d3dfvf.md).
 
 </dd> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Ein Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das dem Mesh zugeordnete Geräte Objekt darstellt.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das dem Gittermodell zugeordnete Geräteobjekt darstellt.
 
 </dd> <dt>
 
-*ppclonemesh* \[ Out, retval\]
+*ppCloneMesh* \[ out, retval\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXMesh**](id3dxmesh.md) -Schnittstelle, die das geklonte Mesh darstellt.
+Adresse eines Zeigers auf eine [**ID3DXMesh-Schnittstelle,**](id3dxmesh.md) die das geklonte Gitternetz darstellt.
 
 </dd> </dl>
 
@@ -83,13 +83,13 @@ Adresse eines Zeigers auf eine [**ID3DXMesh**](id3dxmesh.md) -Schnittstelle, die
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**ID3DXBaseMesh:: clonemeschfvf** dient zum erneuten Formatieren und Ändern des Vertex-Daten Layouts. Dies erfolgt durch Erstellen eines neuen Mesh-Objekts. Verwenden Sie es z. b. zum Hinzufügen von Platz für normale, Texturkoordinaten, Farben, Gewichtungen usw., die zuvor nicht vorhanden waren.
+**ID3DXBaseMesh::CloneMeshFVF** wird verwendet, um das Vertexdatenlayout neu zu formatiert und zu ändern. Dies erfolgt durch Erstellen eines neuen Gittermodellobjekts. Verwenden Sie es beispielsweise, um Platz für Normalitäten, Texturkoordinaten, Farben, Gewichtungen usw. hinzuzufügen, die zuvor nicht vorhanden waren.
 
-[**ID3DXBaseMesh:: updatesemantics**](id3dxbasemesh--updatesemantics.md) aktualisiert die Vertex-Deklaration mit anderen Semantik Informationen, ohne das Layout des Vertexpuffers zu ändern. Mit dieser Methode wird der Inhalt des Vertex-Puffers nicht geändert. Verwenden Sie diese z. b., um eine 3D-Textur Koordinate als Binormal oder Tangens neu zu bezeichnen, oder umgekehrt.
+[**ID3DXBaseMesh::UpdateSemantics**](id3dxbasemesh--updatesemantics.md) aktualisiert die Scheitelpunktdeklaration mit unterschiedlichen semantischen Informationen, ohne das Layout des Scheitelpunktpuffers zu ändern. Diese Methode ändert den Inhalt des Scheitelpunktpuffers nicht. Verwenden Sie sie beispielsweise, um eine 3D-Texturkoordinate als binormal oder Tangens neu zu bezeichnen oder umgekehrt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,12 +97,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

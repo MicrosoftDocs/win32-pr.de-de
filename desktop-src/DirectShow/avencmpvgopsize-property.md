@@ -1,41 +1,41 @@
 ---
-description: Gibt die maximale Anzahl von Bildern eines GOP-Headers (Group of Pictures) zum nächsten GOP-Header an.
+description: Gibt die maximale Anzahl von Bildern von einer Gruppe von Bildern (GOP) bis zum nächsten GOP-Header an.
 ms.assetid: 90433df4-5a96-4bc2-a780-93306abcb0a4
-title: Avencmpvgopsize-Eigenschaft (codecapi. h)
+title: AVEncMPVGOPSize-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c8907d0992153039b1af9a9a0e82ee5782b525d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f7c82ae5c613bb3e78069be3f39f652d840e19c5d62d095fe020f4186bf975f3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104041266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119258450"
 ---
-# <a name="avencmpvgopsize-property"></a>Avencmpvgopsize (Eigenschaft)
+# <a name="avencmpvgopsize-property"></a>AVEncMPVGOPSize-Eigenschaft
 
-Gibt die maximale Anzahl von Bildern eines GOP-Headers (Group of Pictures) zum nächsten GOP-Header an.
+Gibt die maximale Anzahl von Bildern von einer Gruppe von Bildern (GOP) bis zum nächsten GOP-Header an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencmpvgopsize**
+**CODECAPI \_ AVEncMPVGOPSize**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Encoder können diese Eigenschaft als enumerationsset oder als linearen Bereich implementieren.
+Encoder können diese Eigenschaft als aufzählten Satz oder als linearen Bereich implementieren.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Legen Sie diese Eigenschaft fest, bevor Sie eine Aufzeichnung starten.
 
-**Gilt für Windows 8:** Die codierte GOP-Größe muss mit dieser Eigenschaft kleiner oder gleich der angegebenen Zahl sein, um das gleiche B-Frame-Muster im gesamten GOP oder aufgrund von Szenen Änderungen durch [codecapi \_ avencmpvdefaultbpicturecount](avencmpvdefaultbpicturecount-property.md) festzulegen. Wenn z. B. die Anzahl der B-Frames in einem GOP als 2 angegeben wird und die GOP-Größe 11 beträgt, erzeugt der Encoder eine GOP-Größe von 10 Frames oder weniger. Wenn Szenen Änderungen in der Mitte eines GOP stattfinden, fügt der Encoder möglicherweise auch einen Keyframe ein und erzeugt kleinere GOP.
+**Gilt für Windows 8:** Die codierte GOP-Größe muss kleiner oder gleich der angegebenen Zahl über diese Eigenschaft sein, um das gleiche B-Framemuster beizubehalten, das von [CODECAPI \_ AVEncMPVDefaultBPictureCount](avencmpvdefaultbpicturecount-property.md) während des gesamten GOP oder aufgrund von Szenenänderungen festgelegt wird. Wenn z. B. die Anzahl der B-Frames in einem GOP auf 2 und die GOP-Größe 11 festgelegt ist, muss der Encoder eine GOP-Größe von mindestens 10 Frames erzeugen. Wenn sich die Szene in der Mitte eines GOP ändert, kann der Encoder auch einen Keyframe einfügen und kleinere GOP-Dateien erzeugen.
 
-GOP size 0 ist Codierungs abhängig, und Encoder können basierend auf Ihrer Implementierung/Qualität/Leistung verschiedene GOP-Größen auswählen. Encoder sollten die GOP-Größe berücksichtigen und in diesem Fall B-Frames kürzen.
+GOP-Größe 0 ist encoderabhängig, und Encoder können je nach Implementierung/Qualität/Leistung unterschiedliche GOP-Größen auswählen. Encoder sollten die GOP-Größe berücksichtigen und in diesem Fall B-Frames abschneiden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,20 +43,20 @@ GOP size 0 ist Codierungs abhängig, und Encoder können basierend auf Ihrer Imp
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Mosaik Elemente in einem Dreiecks Gitter, das eine eckige Oberfläche für eine höhere Ordnung ist.
+description: Mosaikt einen dreieckigen Oberflächenpatch höherer Ordnung in ein Dreiecksgitternetz.
 ms.assetid: bcc9143f-fec0-491a-8d32-1df961b8dade
-title: D3DXTessellateTriPatch-Funktion (D3DX9Mesh. h)
+title: D3DXTessellateTriPatch-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 61d5a426f9fe3331b85c4a881219319622283820
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1cae3ff9709cb74e15c176abc0e738e4f12d1417eec1d040b90269b7e3cbc6c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119122712"
 ---
 # <a name="d3dxtessellatetripatch-function"></a>D3DXTessellateTriPatch-Funktion
 
-Mosaik Elemente in einem Dreiecks Gitter, das eine eckige Oberfläche für eine höhere Ordnung ist.
+Mosaikt einen dreieckigen Oberflächenpatch höherer Ordnung in ein Dreiecksgitternetz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT D3DXTessellateTriPatch(
 
 <dl> <dt>
 
-*PVB* \[ in\]
+*pVB* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DVERTEXBUFFER9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dvertexbuffer9)**
 
-Vertex-Puffer, der die Patchdaten enthält.
+Vertexpuffer, der die Patchdaten enthält.
 
 </dd> <dt>
 
-*pnumsek* \[ . in\]
+*pNumSegs* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**float**](../winprog/windows-data-types.md) \***
+Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***
 
-Ein Zeiger auf ein Array von drei Gleit Komma Werten, die die Anzahl der Segmente identifizieren, in denen die einzelnen Kanten des Dreiecks Patches bei einem Mosaik Prozess aufgeteilt werden sollen. Siehe [**D3DTRIPATCH \_ Info**](d3dtripatch-info.md).
+Zeiger auf ein Array von drei Gleitkommawerten, die die Anzahl der Segmente identifizieren, in die jeder Rand des Dreieckspatches geteilt werden soll, wenn ein Mosaik verwendet wird. Siehe [**D3DTRIPATCH \_ INFO**](d3dtripatch-info.md).
 
 </dd> <dt>
 
-*pindecl* \[ in\]
+*pInDecl* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
+Typ: **const [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
 
-Vertex-Deklarations Struktur, die die Scheitelpunkt Daten definiert. Siehe [**D3DVERTEXELEMENT9**](d3dvertexelement9.md).
+Vertexdeklarationsstruktur, die die Scheitelpunktdaten definiert. Siehe [**D3DVERTEXELEMENT9.**](d3dvertexelement9.md)
 
 </dd> <dt>
 
-*pzpatchinfo* \[ in\]
+*pTriPatchInfo* \[ In\]
 </dt> <dd>
 
-Type: **[**D3TRIPATCH \_ Info**](d3dtripatch-info.md) \***
+Typ: **const [**D3TRIPATCH \_ INFO**](d3dtripatch-info.md) \***
 
-Beschreibt einen Dreiecks Patch. Siehe [**D3DTRIPATCH \_ Info**](d3dtripatch-info.md).
+Beschreibt einen Dreieckspatch. Siehe [**D3DTRIPATCH \_ INFO**](d3dtripatch-info.md).
 
 </dd> <dt>
 
-*pmesh* \[ in, out\]
+*pMesh* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)**
 
-Zeiger auf das erstellte Mesh. Siehe [**ID3DXMesh**](id3dxmesh.md).
+Zeiger auf das erstellte Gitternetz. Siehe [**ID3DXMesh.**](id3dxmesh.md)
 
 </dd> </dl>
 
@@ -93,11 +93,11 @@ Zeiger auf das erstellte Mesh. Siehe [**ID3DXMesh**](id3dxmesh.md).
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie [**D3DXTriPatchSize**](d3dxtripatchsize.md) , um die Anzahl der Ausgabe Scheitel Punkte und Indizes zu erhalten, die von der Mosaik Funktion benötigt werden.
+Verwenden Sie [**D3DXTriPatchSize,**](d3dxtripatchsize.md) um die Anzahl der Ausgabevertices und Indizes abzurufen, die die Mosaikfunktion benötigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,16 +105,16 @@ Verwenden Sie [**D3DXTriPatchSize**](d3dxtripatchsize.md) , um die Anzahl der Au
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> <dt>
 
 [**D3DXTessellateRectPatch**](d3dxtessellaterectpatch.md)

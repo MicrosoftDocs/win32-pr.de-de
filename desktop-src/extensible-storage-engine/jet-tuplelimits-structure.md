@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_TUPLELIMITS Struktur'
+description: 'Weitere Informationen finden Sie unter: JET_TUPLELIMITS Struktur'
 title: JET_TUPLELIMITS Struktur
 TOCTitle: JET_TUPLELIMITS Structure
 ms:assetid: 2610e2e5-5883-4aec-bc66-e6160b76c264
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 491f9248db607836b34f1fc0fcacc504b3c1d3f3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c4e2c118b7b42dce82ec0a95c53853ec501a7152c08ad088bbddde251edadf3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960863"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119472690"
 ---
 # <a name="jet_tuplelimits-structure"></a>JET_TUPLELIMITS Struktur
 
@@ -29,9 +29,9 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_tuplelimits-structure"></a>JET_TUPLELIMITS Struktur
 
-Die **JET_TUPLELIMITS** -Struktur ermöglicht die Anpassung der tupelindexmerkmale auf Index Basis und nicht pro Instanz mithilfe von [jetsetsystemparameter](./jetsetsystemparameter-function.md).
+Die **JET_TUPLELIMITS-Struktur** ermöglicht die Anpassung der Tupelindexmerkmale pro Index und nicht auf Instanzbasis mit [jetSetSystemParameter](./jetsetsystemparameter-function.md).
 
-**Windows Server 2003:** Die **JET_TUPLELIMITS** Struktur wird in Windows Server 2003 eingeführt.
+**Windows Server 2003:** Die **JET_TUPLELIMITS-Struktur** wird in Windows Server 2003 eingeführt.
 
 ```cpp
     typedef struct tagJET_TUPLELIMITS {
@@ -45,55 +45,55 @@ Die **JET_TUPLELIMITS** -Struktur ermöglicht die Anpassung der tupelindexmerkma
 
 ### <a name="members"></a>Member
 
-**chverlängert**
+**chLengthMin**
 
-Die minimale Länge eines Tupels. Der Standardwert ist 3.
+Die Mindestlänge eines Tupels. Der Standardwert ist 3.
 
-**chlängen Max**
+**chLengthMax**
 
 Die maximale Länge eines Tupels. Der Standardwert ist 10.
 
-**Chum indexmax**
+**chToIndexMax**
 
-Die maximale Länge einer Zeichenfolge, die indiziert werden soll. Wenn eine Spalte z. b. 100 Zeichen lang ist und **chchanindexmax** auf 60 festgelegt ist, werden nur die ersten 60 Zeichen der Spalte indiziert. Der Standardwert ist 32767.
+Die maximale Länge einer zu indizierenden Zeichenfolge. Wenn eine Spalte beispielsweise 100 Zeichen lang ist und **chToIndexMax** auf 60 festgelegt ist, werden nur die ersten 60 Zeichen der Spalte indiziert. Der Standardwert ist 32767.
 
-**cchincrement**
+**cchIncrement**
 
-Dadurch kann der Stride auf Index Basis konfiguriert werden.
+Dadurch kann der Schritt pro Index konfiguriert werden.
 
-**Windows Vista:** Der **cchincrement** -Member wird in Windows Vista eingeführt. Vor Windows Vista war der Betrag zum Verschieben des Fensters ("stride") immer 1, wie im Beispiel im Abschnitt "Hinweise" gezeigt.
+**Windows Vista:** Das **cchIncrement-Member** wird in Windows Vista eingeführt. Vor der Windows Vista war der Betrag zum Verschieben des Fensters (der "Stride") immer 1, wie im Beispiel im Abschnitt "Hinweise" gezeigt.
 
-**ichstart**
+**ichStart**
 
-Der Offset im Wert, mit dem das Abrufen von Tupeln aus dem Wert begonnen werden soll.
+Der Offset in den Wert, um mit dem Abrufen von Tupeln aus dem Wert zu beginnen.
 
-**Windows Vista:** Das Mitglied " **ichstart** " wird in Windows Vista eingeführt.
+**Windows Vista:** Das **ichStart-Mitglied** wird in Windows Vista eingeführt.
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Ein Tupelindex durchläuft eine Zeichenfolge und indiziert alle möglichen Teil Zeichenfolgen von **chlängen Max**. Am Ende der Zeichenfolge (oder an der Position **chinindexmax**, je nachdem, welcher Wert zuerst auftritt) werden die Teil Zeichenfolgen von mindestens **chlängen min** indiziert.
+Ein Tupelindex durchgibt eine Zeichenfolge und indiziert alle möglichen Teilzeichenfolgen von **chLengthMax.** Am Ende der Zeichenfolge (oder an der Position **chToIndexMax**, je nachdem, was zuerst eintritt), werden die Teilzeichenfolgen von **mindestens chLengthMin** indiziert.
 
-Ein Tupelindex kann verwendet werden, um Zeichen folgen mit führenden und nachfolgenden Platzhaltern zu suchen.
+Ein Tupelindex kann zum Durchsuchen von Zeichenfolgen mit führenden und nachdenkenden Platzhaltern verwendet werden.
 
-Wenn in einer Zeile mit dem Textfeld "Regen in Spanien \! " ein Tupelindex mit den Parametern " **chverlänmin**= 2" und " **chlängen Max**= 3" erstellt wird, werden die folgenden Einträge im Index erstellt:
+Angenommen, eine Zeile mit dem Textfeld "RAIN IN SPANIEN" wird, wenn ein Tupelindex mit den Parametern \! **chLengthMin**=2 und **chLengthMax**=3 erstellt wird, werden die folgenden Einträge im Index erstellt:
 
-Darstellt  
-Porzellan  
-IN  
+"RAI"  
+"AIN"  
+"IN"  
 "N I"  
-IN  
-IN  
+" IN"  
+"IN"  
 "N S"  
-El  
-Hotel  
-Kampagnen  
-Porzellan  
-"In \! "  
-"N \! "
+" SP"  
+"SPA"  
+"PAI"  
+"AIN"  
+\!"IN"  
+\!"N"
 
-Beachten Sie, dass "in" zweimal auftritt und dass der letzte Eintrag ("N \! ") kürzer als 3 (**chlängen Max**) ist. Beachten Sie außerdem, dass der Teilungs Algorithmus keine Leerzeichen oder Wörter kennt und alle Zeichen identisch behandelt.
+Beachten Sie, dass "IN" zweimal auftritt und dass der letzte Eintrag ("N ") kürzer \! als 3 (**chLengthMax**) ist. Beachten Sie auch, dass der Aufteilungsalgorithmus Leerzeichen oder Wörter nicht kennt und alle Zeichen identisch behandelt.
 
-**Windows XP:** Windows XP unterstützt tupelindizes, verfügt jedoch nicht über **JET_TUPLELIMITS**. Die Datenbank-Engine verwendet die Standardwerte (**chverlänmin**= 3, **chlängen Max**= 10, **chdeindexmax**= 32767). Es ist immer noch möglich, diese Werte zu ändern, aber Sie werden auf instanzbasis mithilfe von [jetsetsystemparameter](./jetsetsystemparameter-function.md) mit [JET_paramIndexTuplesLengthMin](./index-parameters.md), [JET_paramIndexTuplesLengthMax](./index-parameters.md)und [JET_paramIndexTuplesToIndexMax](./index-parameters.md)festgelegt.
+**Windows XP:** Windows XP unterstützt Tupelindizes, verfügt aber nicht über **JET_TUPLELIMITS.** Die Datenbank-Engine verwendet die Standardwerte (**chLengthMin**=3, **chLengthMax**=10, **chToIndexMax**=32767). Es ist weiterhin [möglich,](./index-parameters.md)diese Werte zu ändern, aber sie werden auf Instanzbasis festgelegt, indem [JetSetSystemParameter](./jetsetsystemparameter-function.md) mit JET_paramIndexTuplesLengthMin , [JET_paramIndexTuplesLengthMax](./index-parameters.md)und [JET_paramIndexTuplesToIndexMax.](./index-parameters.md)
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -113,7 +113,7 @@ Beachten Sie, dass "in" zweimal auftritt und dass der letzte Eintrag ("N \! ") k
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>
@@ -124,4 +124,4 @@ Beachten Sie, dass "in" zweimal auftritt und dass der letzte Eintrag ("N \! ") k
 [JET_COLTYP](./jet-coltyp.md)  
 [JET_INDEXCREATE](./jet-indexcreate-structure.md)  
 [JET_TUPLELIMITS]()  
-[Jetsetsystemparameter](./jetsetsystemparameter-function.md)
+[JetSetSystemParameter](./jetsetsystemparameter-function.md)

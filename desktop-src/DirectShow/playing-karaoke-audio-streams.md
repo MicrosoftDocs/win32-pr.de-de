@@ -1,28 +1,28 @@
 ---
-description: Wiedergabe von Karaoke-Audiostreams
+description: Wiedergeben von Audio Streams
 ms.assetid: 1a8d0f42-35b8-4743-9ae7-619b99936f76
-title: Wiedergabe von Karaoke-Audiostreams
+title: Wiedergeben von Audio Streams
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 907bfa3e359915cf537de75cdc739630fe607d97
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: b10912761034feb9ed82c85625324cd3091514b2c492c66b4e49af711d7d2152
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106343564"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119213300"
 ---
-# <a name="playing-karaoke-audio-streams"></a>Wiedergabe von Karaoke-Audiostreams
+# <a name="playing-karaoke-audio-streams"></a>Wiedergeben von Audio Streams
 
-Der DVD-Navigator kann DVD-Video-CDs mit Karaoke-Audiostreams wiedergeben, aber die Karaoke-Wiedergabe erfordert auch einen Decoder, der eine Multichannel-Karaoke-Mischung Insbesondere muss der Decoder den DVD- [**Karaoke-Eigenschaften Satz**](dvd-karaoke-property-set.md) unterstützen (am \_ Eigenschaft \_ dvdkaraoke).
+Der DVD-Navigator kann DVD-Video-Datenträgern mit audiostreams wiedergeben, aber für die Wiedergabe von Dvdoke ist auch ein Decoder erforderlich, der das Multichannel-Decodiering unterstützt. Insbesondere muss der Decoder den [**DVD-Eigenschaftssatz ("DVD Quotimoke"**](dvd-karaoke-property-set.md) (AM \_ PROPERTY \_ DVDKARAOKE) unterstützen.
 
-Bei den Karaoke-Festplatten handelt es sich um einen Typ von DVD-Video-CD und die gleiche Navigationsstruktur. Lieder werden im Allgemeinen als Titel formatiert, und Titel können auf der Grundlage von Interpreten, musikalischem Stil oder anderen Kriterien in Titel Gruppen gruppiert werden. Der Hauptunterschied zwischen Karaoke und anderen Typen von DVD-Videos ist der Audiodatenstrom. Alle Karaoke-Datenträger enthalten Multichannel-Audiodaten, normalerweise Dolby AC-3. Die Kanäle 0 und 1 enthalten immer die Hintergrund Instrumentalmusik, während die Kanäle 2 bis 5 jede beliebige Kombination aus Führungs Gesang, Führungs Melodien und Soundeffekten enthalten können. Eine Karaoke-Anwendung kann das Volume und den Ziel Sprecher für jeden hilfsanchannel steuern.
+Datenträger sind eine Art von DVD-Video Datenträger und weisen die gleiche Navigationsstruktur auf. Titel werden im Allgemeinen als Titel formatiert, und Titel können basierend auf Performer, Stil oder anderen Kriterien in Titelsätze gruppiert werden. Der Hauptunterschied zwischen Demoke und anderen Arten von DVD-Videos ist der Audiostream. Dvdoke-Datenträger enthalten alle Mehrkanalaudio, in der Regel Dolby AC-3. Die Kanäle 0 und 1 enthalten immer die Musik im Hintergrund, während die Kanäle 2 bis 5 jeweils eine beliebige Kombination aus Führungsgesang, Guide-Sprechweise und Soundeffekten enthalten können. EineLaufoke-Anwendung kann das Volume und den Ziellautstärken für jeden Hilfskanal steuern.
 
-Wenn der DVD-Navigator einen Karaoke-Inhalt auf einer CD erkennt und in den Karaoke-Modus wechselt, wird der Decoder informiert, der die oberen drei Kanäle (die zusätzlichen Kanäle) stumm schalten sollte, bis eine oder alle davon explizit von einer Anwendung aktiviert werden. Die grundlegenden Aufgaben einer Karaoke-Anwendung sind:
+Wenn der DVD-Navigator Denkinhalt auf einem Datenträger erkennt und in den Modus "Laufwerkoke" wechselt, informiert er den Decoder, der dann die oberen drei Kanäle (die Hilfskanäle) stummschalten sollte, bis eine oder alle kanäle explizit von einer Anwendung aktiviert werden. Die grundlegenden Aufgaben einer dhoke-Anwendung sind:
 
-1.  Bestimmen Sie die Anzahl von zusätzlichen Kanälen und deren Inhalt mithilfe der [**IDvdInfo2**](/windows/desktop/api/Strmif/nn-strmif-idvdinfo2) -Methoden.
-2.  Stellen Sie eine Benutzeroberfläche bereit, auf der der Kanal Inhalt angezeigt wird, und ermöglichen Sie es Benutzern, mithilfe von [**IDvdControl2:: selectkaraokeaudiopresentationmode**](/windows/desktop/api/Strmif/nf-strmif-idvdcontrol2-selectkaraokeaudiopresentationmode)jederzeit einen beliebigen hilfsanchannel zu aktivieren bzw. zu deaktivieren.
+1.  Bestimmen Sie die Anzahl der Hilfskanäle und deren Inhalte mithilfe von [**IDvdInfo2-Methoden.**](/windows/desktop/api/Strmif/nn-strmif-idvdinfo2)
+2.  Stellen Sie eine Benutzeroberfläche bereit, die den Kanalinhalt anzeigt und es Benutzern ermöglicht, jeden zusätzlichen Kanal jederzeit mithilfe von [**IDvdControl2::SelectKaraokeAudioPresentationMode**](/windows/desktop/api/Strmif/nf-strmif-idvdcontrol2-selectkaraokeaudiopresentationmode)zu aktivieren oder zu deaktivieren.
 
-Diese Schritte werden in der Anwendung "DVD-Beispiel" in "dvdcore. cpp" in der Methode " **getaudioattributs** " veranschaulicht.
+Diese Schritte werden in der DVD-Beispielanwendung in DVDCore.cpp in der **GetAudioAttributes-Methode** veranschaulicht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

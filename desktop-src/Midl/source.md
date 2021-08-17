@@ -1,9 +1,9 @@
 ---
 title: Quellattribut
-description: Das Attribut \ Source \ gibt an, dass ein Member einer Co-Klasse, einer Eigenschaft oder Methode eine Quelle von Ereignissen ist. Bei einem Member einer Co-Klasse bedeutet dieses Attribut, dass der Member aufgerufen wird, anstatt implementiert zu werden.
+description: Das Attribut \source\ gibt an, dass ein Member einer Co-Klasse, Eigenschaft oder Methode eine Quelle von Ereignissen ist. Für einen Member einer Co-Klasse bedeutet dieses Attribut, dass der Member aufgerufen und nicht implementiert wird.
 ms.assetid: fbd5411a-e614-4643-810a-f3765e7ec16d
 keywords:
-- Quell Attribut-Mittel l
+- Quellattribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 621e97fd20b6b96d275044dc7cbe701faee29712
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 08f7039505846d7a35bbd0e077456905c0d29ad13be398fe673ca5c1f8da25e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119066680"
 ---
 # <a name="source-attribute"></a>Quellattribut
 
-Das **\[ Source \]** -Attribut gibt an, dass ein Member einer [**Co-Klasse**](coclass.md), einer Eigenschaft oder Methode eine Quelle von Ereignissen ist. Bei einem Member einer **Co-Klasse** bedeutet dieses Attribut, dass der Member aufgerufen wird, anstatt implementiert zu werden.
+Das **\[ \] Quellattribut** gibt an, dass ein Member einer [**Co-Klasse,**](coclass.md)-Eigenschaft oder -Methode eine Quelle von Ereignissen ist. Für einen Member einer **Co-Klasse** bedeutet dieses Attribut, dass der Member aufgerufen und nicht implementiert wird.
 
 ``` syntax
 [
@@ -40,38 +40,38 @@ coclass coclass-name
 
 <dl> <dt>
 
-*coclass-Attribute* 
+*coclass-attributes* 
 </dt> <dd>
 
-0 (null) oder mehr Attribute, die auf die [**Co-Klasse**](coclass.md)angewendet werden.
+Null oder mehr Attribute, die auf die [**Co-Klasse**](coclass.md)angewendet werden.
 
 </dd> <dt>
 
-*Name der Co-Klasse* 
+*coclass-name* 
 </dt> <dd>
 
-Der namens Bezeichner der [**Co-Klasse**](coclass.md).
+Der Namensbezeichner der [**Co-Klasse**](coclass.md).
 
 </dd> <dt>
 
 *optionale Attribute* 
 </dt> <dd>
 
-NULL oder mehr mittlere Attribute.
+Null oder mehr MIDL-Attribute.
 
 </dd> <dt>
 
 *Anweisungstyp* 
 </dt> <dd>
 
-Kann " [**Interface**](interface.md) " oder " [**dispinterface**](dispinterface.md)" sein.
+Kann [**interface**](interface.md) oder [**dispinterface**](dispinterface.md)sein.
 
 </dd> <dt>
 
-*Anweisungs Name* 
+*Anweisungsname* 
 </dt> <dd>
 
-Der Name der [**Schnittstelle**](interface.md) oder der [**dispinterface**](dispinterface.md).
+Der Name der [**Schnittstelle**](interface.md) oder [**Disp-Schnittstelle.**](dispinterface.md)
 
 </dd> <dt>
 
@@ -82,27 +82,27 @@ Der Typ des Objekts, das von der Methode zurückgegeben wird. Dieses Objekt ist 
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
-Der Name einer Methode in einer [**Schnittstelle**](interface.md) oder einer [**dispinterface**](dispinterface.md).
+Der Name einer Methode in einer [**Schnittstelle**](interface.md) oder [**Disp-Schnittstelle.**](dispinterface.md)
 
 </dd> <dt>
 
-*Optional-Parameter-List* 
+*optional-parameter-list* 
 </dt> <dd>
 
-NULL oder mehr Methoden Parameter.
+Null oder mehr Methodenparameter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei einer Eigenschaft oder Methode gibt das **\[ Quell \]** Attribut an, dass der Member ein Objekt oder eine Variante zurückgibt, das eine Quelle von Ereignissen ist. Das Objekt implementiert **IConnectionPointContainer**.
+Bei einer Eigenschaft oder Methode gibt das **\[ \] Quellattribut** an, dass der Member ein Objekt oder variant zurückgibt, das eine Quelle von Ereignissen ist. Das -Objekt implementiert **IConnectionPointContainer.**
 
 ### <a name="flags"></a>Flags
 
-impltypeflag \_ f Source, varflag \_ Source, funcflag \_ Source
+IMPLTYPEFLAG \_ FSOURCE, VARFLAG \_ SOURCE, FUNCFLAG \_ SOURCE
 
 ## <a name="examples"></a>Beispiele
 
@@ -118,24 +118,24 @@ impltypeflag \_ f Source, varflag \_ Source, funcflag \_ Source
 [**coclass**](coclass.md)
 </dt> <dt>
 
-[**dispinterface**](dispinterface.md)
+[**Dispatchschnittstelle**](dispinterface.md)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
-[**berfläche**](interface.md)
+[**Schnittstelle**](interface.md)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[FUNCFLAGS](/windows/win32/api/oaidl/ne-oaidl-typeflags)
+[Typeflags](/windows/win32/api/oaidl/ne-oaidl-typeflags)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht, wie das Kontextmenü für Drag & amp; Drop (manchmal auch als Kontextmenü bezeichnet) erweitert wird.
+description: Veranschaulicht das Erweitern des Drag & Drop-Kontextmenüs (manchmal auch als Kontextmenü bezeichnet).
 title: NonDefaultDropMenuVerb (Beispiel)
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,29 +9,29 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 9d326e012fb78b04fd542f88d49c370e8aeab613
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1c4623b9143e0a23762cfc44dd8dfc4f46b827a0f6433098d45d8a784ead81f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968789"
 ---
 # <a name="nondefaultdropmenuverb-sample"></a>NonDefaultDropMenuVerb (Beispiel)
 
-Veranschaulicht, wie das Kontextmenü für Drag & amp; Drop (manchmal auch als Kontextmenü bezeichnet) erweitert wird.
+Veranschaulicht das Erweitern des Drag & Drop-Kontextmenüs (manchmal auch als Kontextmenü bezeichnet).
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Produkt                                | Minimale Produkt Version |
+| Product (Produkt)                                | Mindestproduktversion |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 7.0                     |
@@ -44,27 +44,27 @@ Dieses Thema enthält folgende Abschnitte:
 
 | Standort      | Pfad-URL                                                                                             |
 |---------------|------------------------------------------------------------------------------------------------------|
-| GitHub  | [Nondefaultdropmenuverb-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/NonDefaultDropMenuVerb) |
+| GitHub  | [NonDefaultDropMenuVerb-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/NonDefaultDropMenuVerb) |
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-So erstellen Sie das Beispiel von der Eingabeaufforderung aus:
+So erstellen Sie das Beispiel über die Eingabeaufforderung:
 
-1.  Öffnen Sie das Eingabe Aufforderungs Fenster, und navigieren Sie zum Projektverzeichnis **nondefaultdropmenuverb** .
+1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum **Projektverzeichnis NonDefaultDropMenuVerb.**
 2.  Geben Sie `msbuild NonDefaultDropMenuVerb.sln` ein.
 
-So erstellen Sie das Beispiel mithilfe Microsoft Visual Studio (bevorzugt):
+So erstellen Sie das Beispiel mit Microsoft Visual Studio (bevorzugt):
 
-1.  Öffnen Sie Windows-Explorer, und navigieren Sie zum Projektverzeichnis **nondefaultdropmenuverb** .
-2.  Doppelklicken Sie auf das Symbol für die Datei nondefaultdropmenuverb. sln, um das Projekt in Visual Studio zu öffnen.
-3.  Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus.
+1.  Öffnen Windows Explorer, und navigieren Sie zum **Projektverzeichnis NonDefaultDropMenuVerb.**
+2.  Doppelklicken Sie auf das Symbol für die Datei NonDefaultDropMenuVerb.sln, um das Projekt in Visual Studio.
+3.  Klicken Sie im Menü **Build** (Erstellen) auf **Build Solution** (Projektmappe erstellen).
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-1.  Navigieren Sie mithilfe der Eingabeaufforderung oder Windows-Explorer zu dem Verzeichnis, das die neue dll-Datei enthält.
-2.  Kopieren Sie NonDefaultDropMenuVerb.dll in das System Verzeichnis (z. b. C: \\ Windows \\ system32).
-3.  Geben Sie an einer Eingabeaufforderung ein `regedit NonDefaultDropMenuVerb.reg` .
-4.  Ziehen Sie mit der rechten Maustaste eine Datei aus einem Ordner in einen anderen. Weitere Menü Elemente für den Drop-Vorgang werden angezeigt.
+1.  Navigieren Sie über die Eingabeaufforderung oder den Explorer zu dem Verzeichnis, das die neue DLL-Windows enthält.
+2.  Kopieren NonDefaultDropMenuVerb.dll in das Verzeichnis System (z. B. C: \\ Windows \\ System32).
+3.  Geben Sie an einer Eingabeaufforderung `regedit NonDefaultDropMenuVerb.reg` ein.
+4.  Verwenden Sie die rechte Maustaste, um eine Datei von einem Ordner in einen anderen zu ziehen. Für den Abbruchvorgang werden zusätzliche Menüelemente angezeigt.
 
  
 

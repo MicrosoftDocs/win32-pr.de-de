@@ -19,14 +19,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: ec94409366761ee208d3e8a6af59a4d07527d82f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8b176cb09efdcb701cdf9cd2c4c85bda54c4ebb03712568b5e1c8240d41277c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348110"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148163"
 ---
-# <a name="msvm_virtualethernetswitchbandwidthsettingdata-class"></a>MSVM \_ virtualethernetzwitchbandwidthsettingdata-Klasse
+# <a name="msvm_virtualethernetswitchbandwidthsettingdata-class"></a>Msvm \_ VirtualEthernetSwitchBandwidthSettingData-Klasse
 
 Stellt die Bandbreiteneinstellungen für einen virtuellen Switch dar.
 
@@ -49,30 +49,30 @@ class Msvm_VirtualEthernetSwitchBandwidthSettingData : Msvm_EthernetSwitchFeatur
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualethernetzwitchbandwidthsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualEthernetSwitchBandwidthSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ virtualethernetzwitchbandwidthsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualEthernetSwitchBandwidthSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von der [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) -Klasse geerbt und ist immer auf "Ethernet Switch Bandwidth Settings" festgelegt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von der [**KLASSE CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) und immer auf "Ethernet Switch Bandwidth Einstellungen" festgelegt.
 
 </dd> <dt>
 
-**Defaultflowreservierung**
+**DefaultFlowReservation**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **UINT64**
@@ -81,14 +81,14 @@ Datentyp: **UINT64**
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (1), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt die absolute Bandbreiten Reservierung für nicht klassifizierte Flows auf dem zugrunde liegenden Adapter an.
+Gibt die absolute Bandbreitenreservierung für nicht klassifizierte Datenflüsse auf dem zugrunde liegenden Adapter an.
 
 </dd> <dt>
 
-**Defaultflowweight**
+**DefaultFlowWeight**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **UINT64**
@@ -97,43 +97,43 @@ Datentyp: **UINT64**
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (2), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt die Bandbreiten Reservierung für nicht klassifizierte Flows auf dem zugrunde liegenden Adapter an.
+Gibt die Bandbreitenreservierung in Gewichtung für nicht klassifizierte Datenflüsse auf dem zugrunde liegenden Adapter an.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "stellt die Einstellungen für die switchbandbreite" fest.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Stellt die Switchbandbreiteneinstellungen dar." festgelegt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt und ist immer auf "Ethernet Switch Bandwidth Settings" festgelegt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ SettingData geerbt**](/previous-versions//cc136911(v=vs.85))und immer auf "Ethernet Switch Bandwidth Einstellungen" festgelegt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -142,7 +142,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85)) geerbt und ist immer auf "Microsoft: Definition \\ *GUID* \\ default" festgelegt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData geerbt**](/previous-versions//cc136911(v=vs.85)) und immer auf "Microsoft:Definition \\ *GUID Default"* \\ festgelegt.
 
 </dd> </dl>
 
@@ -152,10 +152,10 @@ Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

@@ -1,7 +1,7 @@
 ---
 description: Fügt ein Element in die Warteschlange ein.
 ms.assetid: 8ac41d80-e7d5-4b3f-9f09-c3d39c94c490
-title: Cqueue. putqueueobject-Methode (wxutil. h)
+title: CQueue.PutQueueObject-Methode (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5371c843bb348f50539535a3df9a0f6aed00893e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8e6e3539b12f81421e90de1f8311210aa2acb77173be2991bd6f15a1c84d39ac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361412"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119539010"
 ---
-# <a name="cqueueputqueueobject-method"></a>Cqueue. putqueueobject-Methode
+# <a name="cqueueputqueueobject-method"></a>CQueue.PutQueueObject-Methode
 
 Fügt ein Element in die Warteschlange ein.
 
@@ -45,7 +45,7 @@ void PutQueueObject(
 *object* 
 </dt> <dd>
 
-Ein Objekt vom Typ **T** (der Vorlagentyp).
+Objekt vom Typ **T** (Vorlagentyp).
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Ein Objekt vom Typ **T** (der Vorlagentyp).
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird blockiert, bis der Speicherplatz in der Warteschlange für das Element vorhanden ist.
+Diese Methode wird blockiert, bis speicherplatz in der Warteschlange für das Element vorhanden ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Diese Methode wird blockiert, bis der Speicherplatz in der Warteschlange für da
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cqueue-Klasse**](cqueue.md)
+[**CQueue-Klasse**](cqueue.md)
 </dt> </dl>
 
  

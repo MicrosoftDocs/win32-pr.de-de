@@ -3,9 +3,9 @@ title: WebViewFolderContents.SelectItem-Methode (Shldisp.h)
 description: 'WebViewFolderContents.SelectItem-Methode: Legt den Auswahlzustand eines Elements in der Ansicht fest.'
 ms.assetid: c0e163ee-1951-476c-807a-781e26766d99
 keywords:
-- SelectItem-Methode – Ältere Windows-Umgebungsfeatures
-- SelectItem-Methode Legacy-Windows-Umgebungsfeatures, WebViewFolderContents-Objekt
-- WebViewFolderContents-Objekt Legacy-Windows-Umgebungsfeatures, SelectItem-Methode
+- SelectItem-Methode – Legacy-Windows-Umgebungsfeatures
+- SelectItem-Methode Legacy Windows Umgebungsfeatures , WebViewFolderContents-Objekt
+- WebViewFolderContents-Objekt Legacy Windows Umgebungsfeatures, SelectItem-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,12 +16,12 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 66e2d05c010199f05826df7ed4591e8c7c1723e2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d144801e62962f4071b6c8e60147326908a9b4f7787e0d4ac549be9c51fa3c97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108102609"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119960620"
 ---
 # <a name="webviewfoldercontentsselectitem-method"></a>WebViewFolderContents.SelectItem-Methode
 
@@ -133,7 +133,7 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript, das in HTML eingebettet ist.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für JScript, die in HTML eingebettet sind.
 
 
 ```HTML
@@ -171,7 +171,7 @@ Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Methode für 
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |

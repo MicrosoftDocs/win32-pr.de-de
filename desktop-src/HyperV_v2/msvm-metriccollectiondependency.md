@@ -1,5 +1,5 @@
 ---
-description: Stellt die Zuordnung zwischen zwei metrikdefinitionen oder zwei Metrikwerten dar.
+description: Stellt die Zuordnung zwischen zwei Metrikdefinitionen oder zwei Metrikwerten dar.
 ms.assetid: 78fb926d-8981-443a-a82d-ebac34d38e13
 title: Msvm_MetricCollectionDependency-Klasse
 ms.topic: reference
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: dc24cf72975f9d4e47e414425ac4cfbfe5d11847
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e79ae7dbdd98cc732868922b8679ae1cc6c610eccde1d0ae9dfb151f1e55022b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353962"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148333"
 ---
-# <a name="msvm_metriccollectiondependency-class"></a>MSVM- \_ metriccollectiondepencklasse
+# <a name="msvm_metriccollectiondependency-class"></a>Msvm \_ MetricCollectionDependency-Klasse
 
-Stellt die Zuordnung zwischen zwei metrikdefinitionen oder zwei Metrikwerten dar.
+Stellt die Zuordnung zwischen zwei Metrikdefinitionen oder zwei Metrikwerten dar.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,39 +41,39 @@ class Msvm_MetricCollectionDependency : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **MSVM-Klasse " \_ metriccollectiondependenz** " verfügt über diese Typen von Membern:
+Die **Msvm \_ MetricCollectionDependency-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ metriccollectiondepenc-Klasse** verfügt über diese Eigenschaften.
+Die **Msvm \_ MetricCollectionDependency-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
+Datentyp: **[ **CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) -Klasse, die die unabhängige metrikdefinition oder den Metrikwert darstellt. Diese Eigenschaft wird von der [**CIM- \_ Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)geerbt.
+Ein Verweis auf eine Instanz der [**CIM \_ ManagedElement-Klasse,**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) die die unabhängige Metrikdefinition oder den Metrikwert darstellt. Diese Eigenschaft wird von [**\_ CIM-Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)geerbt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
+Datentyp: **[ **CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) -Klasse, die die **metrikdefinition oder den Metrikwert** darstellt, der vom Vorgänger abhängig ist. Diese Eigenschaft wird von der [**CIM- \_ Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)geerbt.
+Ein Verweis auf eine Instanz der [**CIM \_ ManagedElement-Klasse,**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) die die Metrikdefinition oder den Metrikwert darstellt, die vom **Vorgänger** abhängig ist. Diese Eigenschaft wird von [**\_ CIM-Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)geerbt.
 
 </dd> </dl>
 
@@ -83,10 +83,10 @@ Ein Verweis auf eine Instanz der [**CIM \_ managedelta**](/previous-versions/win
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

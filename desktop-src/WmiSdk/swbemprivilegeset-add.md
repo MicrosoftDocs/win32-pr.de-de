@@ -1,8 +1,8 @@
 ---
-description: Durch die Add-Methode des Objekts "Swap-Objekt" wird der "Swap-Auflistung"-Auflistung ein "taubemprivilege"-Objekt hinzugefügt. Wenn eine Berechtigung mit dem gleichen Namen bereits in der Sammlung vorhanden ist, wird Sie ersetzt.
+description: Die Add-Methode des SWbemPrivilegeSet-Objekts fügt der SWbemPrivilegeSet-Sammlung ein SWbemPrivilege-Objekt hinzu. Wenn bereits eine Berechtigung mit dem gleichen Namen in der Auflistung vorhanden ist, wird sie ersetzt.
 ms.assetid: 7d44193f-60e1-4e83-8640-31d8df509d98
 ms.tgt_platform: multiple
-title: Taubemprivilegeset. Add-Methode (wbemdisp. h)
+title: SWbemPrivilegeSet.Add-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 080b9d3e3ab6dbfc0ed8afc8ac0476981b7c26e2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 54b45779f4954f1cee454b5cf171e374e215555902e3389c7c47f5a59bc989eb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119954870"
 ---
-# <a name="swbemprivilegesetadd-method"></a>Taubemprivilegeset. Add-Methode
+# <a name="swbemprivilegesetadd-method"></a>SWbemPrivilegeSet.Add-Methode
 
-Durch die **Add** -Methode des Objekts " [**Swap**](swbemprivilegeset.md) -Objekt" wird der " **Swap** -Auflistung"-Auflistung ein " [**taubemprivilege**](swbemprivilege.md) "-Objekt hinzugefügt. Wenn eine Berechtigung mit dem gleichen Namen bereits in der Sammlung vorhanden ist, wird Sie ersetzt.
+Die **Add-Methode** des [**SWbemPrivilegeSet-Objekts**](swbemprivilegeset.md) fügt der **SWbemPrivilegeSet-Sammlung ein SWbemPrivilege-Objekt** hinzu. [](swbemprivilege.md) Wenn bereits eine Berechtigung mit dem gleichen Namen in der Auflistung vorhanden ist, wird sie ersetzt.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,31 +45,31 @@ objPrivilege = .Add( _
 
 <dl> <dt>
 
-*iprivilege* 
+*iPrivilege* 
 </dt> <dd>
 
-Erforderlich. Eine der WMI-Konstanten aus der [**wbemprivilegeenum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum) -Gruppe. Diese Konstanten sind im wesentlichen ganze Zahlen, die bestimmte Berechtigungen darstellen. Wenn Sie z. b. die Berechtigung hinzufügen möchten, mit der Sie ein Computersystem Herunterfahren können, verwenden Sie die Konstante **wbemprivilegeshutdown** . In einem Skript müssen Sie die numerische Entsprechung von 23 (0x17) verwenden. Eine umfassende Liste dieser Konstanten und der zugehörigen Berechtigungs Zeichenfolgen finden Sie unter [**Berechtigungs Konstanten**](privilege-constants.md).
+Erforderlich. Eine der WMI-Konstanten aus der [**Gruppe WbemPrivilegeEnum.**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum) Diese Konstanten sind im Wesentlichen ganze Zahlen, die bestimmte Berechtigungen darstellen. Um beispielsweise die Berechtigung hinzuzufügen, mit der Sie ein Computersystem herunterfahren können, verwenden Sie die **Konstante wbemPrivilegeShutdown.** In einem Skript müssen Sie die numerische Entsprechung von 23 (0x17. Eine vollständige Liste dieser Konstanten und der zugeordneten Berechtigungszeichenfolgen finden Sie unter [**Privilege Constants**](privilege-constants.md).
 
 </dd> <dt>
 
-*bisenabled* \[ optionale\]
+*bIsEnabled* \[ Optional\]
 </dt> <dd>
 
-Boolescher Wert, der dieses Privileg aktiviert oder deaktiviert. Der Standardwert ist " **true**".
+Boolescher Wert, der diese Berechtigung aktiviert oder deaktiviert. Der Standardwert ist **TRUE.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreicher Ausführung gibt die Methode ein-Objekt zurück, das die [**neue Berechtigung darstellt**](swbemprivilege.md) . Andernfalls wird ein NULL-Objekt zurückgegeben.
+Bei Erfolg gibt die Methode ein [**SWbemPrivilege-Objekt**](swbemprivilege.md) zurück, das die neue Berechtigung darstellt. Andernfalls wird ein NULL-Objekt zurückgegeben.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach Abschluss der **Add** -Methode kann das **Err** -Objekt den Fehlercode in der folgenden Liste enthalten.
+Nach Abschluss der **Add-Methode** kann das **Err-Objekt** den Fehlercode in der folgenden Liste enthalten.
 
 <dl> <dt>
 
-**wbemErrFailed** -2147749889 (0x80041001)
+**wbemErrFailed** – 2147749889 (0x80041001)
 </dt> <dd>
 
 Unbekannter Fehler.
@@ -78,7 +78,7 @@ Unbekannter Fehler.
 
 ## <a name="examples"></a>Beispiele
 
-Ein Codebeispiel, in dem diese Methode verwendet wird, wird im Thema " [**chanbemprivilegeset**](swbemprivilegeset.md) " beschrieben.
+Ein Codebeispiel mit dieser Methode wird im [**Thema SWbemPrivilegeSet**](swbemprivilegeset.md) beschrieben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,19 +88,19 @@ Ein Codebeispiel, in dem diese Methode verwendet wird, wird im Thema " [**chanbe
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-taubemprivilegeset<br/>                                                     |
-| IID<br/>                      | IID \_ iswbemprivilegeset<br/>                                                      |
+| CLSID<br/>                    | CLSID \_ SWbemPrivilegeSet<br/>                                                     |
+| IID<br/>                      | IID \_ ISWbemPrivilegeSet<br/>                                                      |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Swap-Privileg**](swbemprivilegeset.md)
+[**SWbemPrivilegeSet**](swbemprivilegeset.md)
 </dt> <dt>
 
 [Ausführen privilegierter Vorgänge](executing-privileged-operations.md)
@@ -109,16 +109,16 @@ Ein Codebeispiel, in dem diese Methode verwendet wird, wird im Thema " [**chanbe
 [Ausführen privilegierter Vorgänge mit VBScript](executing-privileged-operations-using-vbscript.md)
 </dt> <dt>
 
-[**"Taubemprivilegeset. addasstring"**](swbemprivilegeset-addasstring.md)
+[**SWbemPrivilegeSet.AddAsString**](swbemprivilegeset-addasstring.md)
 </dt> <dt>
 
-[**"Swap-privilegeset. Remove"**](swbemprivilegeset-remove.md)
+[**SWbemPrivilegeSet.Remove**](swbemprivilegeset-remove.md)
 </dt> <dt>
 
-[**Wbemprivilegeumum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum)
+[**WbemPrivilegeEnum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum)
 </dt> <dt>
 
-[**Berechtigungs Konstanten**](privilege-constants.md)
+[**Berechtigungskonst constants**](privilege-constants.md)
 </dt> </dl>
 
  

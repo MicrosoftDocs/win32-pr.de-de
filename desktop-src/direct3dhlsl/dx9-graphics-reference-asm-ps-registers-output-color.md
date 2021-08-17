@@ -1,6 +1,6 @@
 ---
-title: Ausgabe Farb Register
-description: Die Pixel-Shader-Farbausgabe Register (OC \) sind schreibgeschützt, die Ergebnisse an mehrere Renderziele ausgeben.
+title: Ausgabefarbregister
+description: Die Pixel-Shader-Farbausgaberegister (oC\) sind schreibgeschützte Register, die Ergebnisse an mehrere Renderziele ausgeben.
 ms.assetid: 88e69189-3956-47de-a336-921f1e62c025
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,33 +9,33 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 316160e39ce172d56e4ecac17dfbd1d53077005b
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 038446bb7d588222e04028727a447b6a47c941ab6a18a3ba4216f46e93440961
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390812"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119704"
 ---
-# <a name="output-color-register"></a>Ausgabe Farb Register
+# <a name="output-color-register"></a>Ausgabefarbregister
 
-Die Pixel-Shader-Farbausgabe Register (OC #) sind schreibgeschützte Registrierungen, die Ergebnisse an mehrere Renderziele ausgeben.
+Die Pixel-Shader-Farbausgaberegister (oC#) sind schreibgeschützte Register, die Ergebnisse an mehrere Renderziele ausgeben.
 
 Syntax
 
 
 
-| d # |
+| Oc # |
 |------|
 
 
 
- 
+ 
 
 Hierbei gilt:
 
 
 
-| Name | BESCHREIBUNG       |
+| Name | Beschreibung       |
 |------|-------------------|
 | oC0  | Renderziel \# 0 |
 | oC1  | Renderziel \# 1 |
@@ -44,29 +44,29 @@ Hierbei gilt:
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
--   Wenn OCN geschrieben ist, aber kein entsprechendes Renderziel vorhanden ist, wird dieser Schreibvorgang in OCN ignoriert.
--   Die renderzustände D3DRS \_ colorschreiteenable, D3DRS \_ COLORWRITEENABLE1, D3DRS \_ COLORWRITEENABLE2 und D3DRS \_ COLORWRITEENABLE3 bestimmen, welche Komponenten von OCN letztendlich in das Renderziel geschrieben werden (sofern zutreffend). Wenn der Shader einige, jedoch nicht alle Komponenten schreibt, die von den D3DRS \_ ColorWriteEnable- \* renderzuständen für ein bestimmtes OCN-Register definiert werden, erzeugen die nicht geschriebenen Kanäle nicht definierte Werte im entsprechenden Renderziel. Wenn keine der Komponenten eines OCN geschrieben wird, darf das entsprechende Renderziel überhaupt nicht aktualisiert werden (wie oben beschrieben), sodass die \_ renderzustände von D3DRS colorschreiteenable \* nicht zutreffen.
+-   Wenn oCn geschrieben wird, aber kein entsprechendes Renderziel vorhanden ist, wird dieser Schreibvorgang in oCn ignoriert.
+-   Die Renderzustände D3DRS \_ COLORWRITEENABLE, D3DRS \_ COLORWRITEENABLE1, D3DRS \_ COLORWRITEENABLE2 und D3DRS \_ COLORWRITEENABLE3 bestimmen, welche oCn-Komponenten letztendlich in das Renderziel geschrieben werden (nach blend, falls zutreffend). Wenn der Shader einige, aber nicht alle komponenten schreibt, die von den D3DRS \_ COLORWRITEENABLE-Renderzuständen \* für ein bestimmtes oCn-Register definiert werden, erzeugen die nicht geschriebenen Kanäle im entsprechenden Renderziel nicht definierte Werte. Wenn keine der Komponenten eines oCn geschrieben wird, darf das entsprechende Renderziel nicht aktualisiert werden (wie oben erwähnt), sodass die D3DRS \_ COLORWRITEENABLE-Renderzustände \* nicht gelten.
 
-### <a name="shader-model-2-restrictions"></a>Einschränkungen für Shader Model 2
+### <a name="shader-model-2-restrictions"></a>Shadermodell 2 – Einschränkungen
 
--   OCN kann nur mit der [MOV-PS-](mov---ps.md) Anweisung geschrieben werden.
+-   oCn kann nur mit der Anweisung [mov - ps](mov---ps.md) geschrieben werden.
 -   oC0 muss immer im Shader geschrieben werden.
--   Beim Schreiben in einen beliebigen OCN ist kein quellswidwert (mit Ausnahme von. xyzw = default Swizzle) oder der quellmodifizierer zulässig.
--   Beim Schreiben in einen beliebigen OCN ist keine Ziel Schreib Maske (mit Ausnahme von. xyzw = default Mask) oder ein Anweisungs Modifizierer zulässig.
--   Wenn OCN geschrieben ist, muss auch oC0-OCN-1 geschrieben werden. Wenn Sie z. b. in oC2 schreiben möchten, müssen Sie auch in oC0 und oC1 schreiben.
--   Höchstens ein Schreibvorgang in einen oC # pro Shader ist zulässig.
--   Für PS \_ 2 \_ x und PS \_ 3 \_ 0 können Sie nicht in oC #-und od- \# Register in der dynamischen Fluss Steuerung oder im Prädikat schreiben (Schreibvorgänge in OC # innerhalb der statischen Fluss Steuerung ist in Ordnung).
+-   Beim Schreiben in einen beliebigen oCn ist kein Quellwizzle (mit Ausnahme von .xyzw = Standard-Swizzle) oder Quellmodifizierer zulässig.
+-   Beim Schreiben in oCn ist keine Zielschreibmaske (mit Ausnahme von .xyzw = Standardmaske) oder Anweisungsmodifizierer zulässig.
+-   Wenn oCn geschrieben wird, muss auch oC0 - oCn-1 geschrieben werden. Um beispielsweise in oC2 zu schreiben, müssen Sie auch in oC0 und oC1 schreiben.
+-   Es ist höchstens ein Schreibvorgang in beliebige oC#-Dateien pro Shader zulässig.
+-   Für ps \_ 2 \_ x und ps \_ 3 \_ 0 können Sie nicht in oC#- und oD-Register \# innerhalb der dynamischen Flusssteuerung oder Prädikation schreiben (Schreibvorgänge in oC# innerhalb der statischen Flusssteuerung sind in Ordnung).
 
-### <a name="shader-model-3-restrictions"></a>Shader Model 3-Einschränkungen
+### <a name="shader-model-3-restrictions"></a>Einschränkungen für Shadermodell 3
 
--   Bei PS \_ 3 \_ 0 können die Ausgabe Register "OC #" und "od" \# beliebig oft geschrieben werden. Die Ausgabe des Pixelshaders stammt aus dem Inhalt der Ausgabe Register am Ende der Shader-Ausführung. Wenn kein Schreibzugriff auf ein Ausgabe Register erfolgt, möglicherweise aufgrund der Fluss Steuerung, oder wenn der Shader ihn eben nicht geschrieben hat, wird auch das zugehörige renderTarget-Element nicht aktualisiert. Wenn eine Teilmenge der Kanäle in einem Ausgabe Register geschrieben wird, werden nicht definierte Werte in die restlichen Kanäle geschrieben.
--   Für PS \_ 3 \_ 0 können die OC #-Register mit allen Schreib Vorwörtern geschrieben werden.
--   Für PS \_ 2 \_ x und PS \_ 3 \_ 0 können Sie nicht in oC #-und od- \# Register in der dynamischen Fluss Steuerung oder im Prädikat schreiben (Schreibvorgänge in OC # innerhalb der statischen Fluss Steuerung ist in Ordnung).
--   Sie können keine Farbverlaufs Berechnungen (oder Vorgänge, die implizit Farbverlaufs Berechnungen wie [texld-PS \_ 2 \_ 0 und up](texld---ps-2-0.md), [texldb-PS](texldb---ps.md), [texldp-PS](texldp---ps.md)) in Fluss Steuerungs Anweisungen ausführen, deren Verzweigungs Bedingungen auf primitiver Basis variieren (d.h. dynamische Fluss Steuerungs Anweisungen). Das Anweisungs Prädikat gilt nicht als dynamische Fluss Steuerung.
+-   Für ps \_ 3 \_ 0 können ausgaberegister oC# und oD \# beliebig oft geschrieben werden. Die Ausgabe des Pixelshader stammt aus dem Inhalt der Ausgaberegister am Ende der Shaderausführung. Wenn kein Schreibvorgang in ein Ausgaberegister erfolgt, z. B. aufgrund der Flusssteuerung, oder wenn der Shader es einfach nicht geschrieben hat, wird auch das entsprechende Renderziel nicht aktualisiert. Wenn eine Teilmenge der Kanäle in einem Ausgaberegister geschrieben wird, werden nicht definierte Werte in die verbleibenden Kanäle geschrieben.
+-   Für ps \_ 3 \_ 0 können die oC#-Register mit beliebigen Schreibmasken geschrieben werden.
+-   Für ps \_ 2 \_ x und ps \_ 3 \_ 0 können Sie nicht in oC#- und oD-Register \# innerhalb der dynamischen Flusssteuerung oder Prädikation schreiben (Schreibvorgänge in oC# innerhalb der statischen Flusssteuerung sind in Ordnung).
+-   Sie dürfen keine Farbverlaufsberechnungen (oder Vorgänge, die implizit Farbverlaufsberechnungen wie [texld - ps \_ 2 \_ 0 und up](texld---ps-2-0.md), [texldb - ps](texldb---ps.md), [texldp - ps](texldp---ps.md)) innerhalb von Flusssteuerungsanweisungen aufrufen, deren Verzweigungsbedingungen pro Primitive variieren (d. h. dynamische Ablaufsteuerungsanweisungen). Anweisungsprädikation wird nicht als dynamische Flusssteuerung betrachtet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -78,6 +78,6 @@ Hierbei gilt:
 [Mehrere Renderziele (Direct3D 9)](/windows/desktop/direct3d9/multiple-render-targets)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

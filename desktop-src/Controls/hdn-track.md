@@ -1,9 +1,9 @@
 ---
-title: HDN_TRACK Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Header Steuer Elements, dass der Benutzer einen unter Teiler im Header Steuerelement zieht. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: HDN_TRACK Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Headersteuerelements, dass der Benutzer einen Teiler im Headersteuerelement zieht. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 26660ae1-0d6e-4ee7-8b6a-d621abef352d
 keywords:
-- Windows-Steuerelemente für HDN_TRACK Benachrichtigungs
+- HDN_TRACK Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 91b55ac23e2de17788b17c1f121530308de9e7a0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2fb32a553c85c8fb1bc8321dae5e85b3e7832cf90e4a6652ad163511ad4420d7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119435220"
 ---
-# <a name="hdn_track-notification-code"></a>Benachrichtigungs Code für Hdn- \_ Track
+# <a name="hdn_track-notification-code"></a>HDN \_ TRACK-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Header Steuer Elements, dass der Benutzer einen unter Teiler im Header Steuerelement zieht. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Headersteuerelements, dass der Benutzer einen Teiler im Headersteuerelement zieht. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,13 +43,13 @@ HDN_TRACK
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**NMHEADER**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) -Struktur, die Informationen über das Header Steuerelement und das Element enthält, dessen Trennzeichen gezogen werden.
+Ein Zeiger auf eine [**NMHEADER-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmheadera) die Informationen über das Headersteuerelement und das Element enthält, dessen Teiler gezogen wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **false** zurück, um die Nachverfolgung des unter Teilers fortzusetzen, oder **true** zum Beenden der Nachverfolgung
+Gibt **FALSE** zurück, um die Nachverfolgung des Teiler fortzusetzen, oder **TRUE** bis Ende der Nachverfolgung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,10 +57,10 @@ Gibt **false** zurück, um die Nachverfolgung des unter Teilers fortzusetzen, od
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Hdn \_ Trackw** (Unicode) und **Hdn \_ tracka** (ANSI)<br/>                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **HDN \_ TRACKW** (Unicode) und **HDN \_ TRACKA** (ANSI)<br/>                       |
 
 
 

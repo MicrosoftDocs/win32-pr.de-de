@@ -1,39 +1,39 @@
 ---
-title: Text Normalisierung für Text-zu-Sprache-Engines
-description: Text Normalisierung für Text-zu-Sprache-Engines
+title: Textnormalisierung von Text-to-Speech-Engines
+description: Textnormalisierung von Text-to-Speech-Engines
 ms.assetid: 1974d47b-4877-47e3-89d8-fd70967e7605
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb7bda7cb8041e31ef8e741df4d3f5d807610f1f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0cd195212d52d9107aa8112c156bfd8dd6b33d00d2161bec624d182f0f12f78e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337987"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119347920"
 ---
-# <a name="text-to-speech-engines-text-normalization"></a>Text Normalisierung für Text-zu-Sprache-Engines
+# <a name="text-to-speech-engines-text-normalization"></a>Textnormalisierung von Text-to-Speech-Engines
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-Bei der Normalisierung werden Zahlen, Abkürzungen, Akronyme und idiomatiken identifiziert und nach Bedarf in voll Text transformiert. Dies ist in der Regel auf dem Kontext des Satzes begründet.
+Normalisierung ist der Prozess, bei dem Zahlen, Abkürzungen, Akronyme und Idiomatiken identifiziert und bei Bedarf in Volltext transformiert werden, in der Regel basierend auf dem Kontext des Satzes.
 
-Beispielsweise wird mit dem L&H truvoice American-TTS-Modul der Satz:
+Wenn Sie beispielsweise die L&H TruVoice American English TTS Engine verwenden, wird der folgende Satz verwendet:
 
-King George VI von England ist am 6. Februar 1952.
+KingIze VI. von Kürze ist am 6. Februar 1952 verendet.
 
-wird im **normalen Kontext** wie folgt gelesen:
+wird im normalen **Kontext wie hier** gelesen:
 
-   König George V I von England, starb am 6. Februar 19 52.
+   KingIze v. I. von Großbritannien, tod am 6. Februar, 1996, 1997
 
-Unter dem **e-Mail-Kontext** wird Sie jedoch wie folgt gelesen:
+Unter dem **E-Mail-Kontext** wird es jedoch wie hier gelesen:
 
-   King George das sechste von England, verstarb am sechsten Februar 19 52.
+   Der sechste Von- und Sechste von Spanien, der am 6. Februar verstarb, ist 1997 1996 1996.
 
-Informationen zur Verwendung des kontexttags für den **Kontext** finden Sie in der Dokumentation zur agentprogrammierung [Microsoft Agent Speech Output Tags](microsoft-agent-speech-output-tags.md).
+Informationen zur Verwendung des **Context Speech-Tags** finden Sie in der Dokumentation zur Agent-Programmierung [microsoft Agent Speech Output Tags](microsoft-agent-speech-output-tags.md).
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,20 +1,20 @@
 ---
-description: Die Win32 \_ User Account-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die Win32 \_ UserAccount-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: E853655D-A486-4485-9C7E-849585345C62
 ms.tgt_platform: multiple
-title: Win32_UserAccount Methoden
+title: Win32_UserAccount-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 06603427c727cc64dc1c84c1da43afa1fe156d0f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: f91c9417ef2ccbeab76818b334249cefff9abeb3ce899623583329610aa4180d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214075"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922770"
 ---
-# <a name="win32_useraccount-methods"></a>Win32- \_ Useraccount-Methoden
+# <a name="win32_useraccount-methods"></a>Win32 \_ UserAccount-Methoden
 
-Die [**Win32 \_ User Account**](win32-useraccount.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**Win32 \_ UserAccount-Klasse**](win32-useraccount.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

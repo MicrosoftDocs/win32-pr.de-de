@@ -1,36 +1,36 @@
 ---
-title: Beispiel für Application-Driven Animation
-description: Zeigt die Windows-Animation in der Anwendungs gesteuerten Konfiguration mithilfe von Direct2D zum Animieren der Hintergrundfarbe eines Fensters und zum Synchronisieren der Aktualisierungsrate.
+title: Application-Driven Animation Sample
+description: Zeigt Windows Animation in der anwendungsgesteuerten Konfiguration an, indem Direct2D verwendet wird, um die Hintergrundfarbe eines Fensters zu animieren und mit der Aktualisierungsrate zu synchronisieren.
 ms.assetid: deefc473-6749-4e2b-ad34-33ccd206d231
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a06b24905d09ac6559527146ebf572666a6a84f5
-ms.sourcegitcommit: c9c66a09eeb9e46311879a5181342e89964c1dd8
+ms.openlocfilehash: dfbb5ce71ddeff6a37c2d872e0e1e93fdc58cde9fcc8359560d9d386ba7a0834
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "106337213"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137373"
 ---
-# <a name="application-driven-animation-sample"></a>Beispiel für Application-Driven Animation
+# <a name="application-driven-animation-sample"></a>Application-Driven Animation Sample
 
-Zeigt die Windows-Animation in der Anwendungs gesteuerten Konfiguration mithilfe von Direct2D zum Animieren der Hintergrundfarbe eines Fensters und zum Synchronisieren der Aktualisierungsrate.
+Zeigt Windows Animation in der anwendungsgesteuerten Konfiguration an, indem Direct2D verwendet wird, um die Hintergrundfarbe eines Fensters zu animieren und mit der Aktualisierungsrate zu synchronisieren.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Dieses Beispiel ist in den folgenden Speicherorten verfügbar.
+Dieses Beispiel ist an den folgenden Speicherorten verfügbar.
 
 
 
 | Standort                               | Pfad/URL                                                                                          |
 |----------------------------------------|---------------------------------------------------------------------------------------------------|
-| Windows Software Development Kit (SDK) | [Microsoft Windows Software Development Kit 7,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx) |
-| Codegalerie                           | [Windows Animation Manager-Beispiel Code](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/DirectCompositionWindowsAnimationManager)          |
+| Windows Software Development Kit (SDK) | [Microsoft Windows Software Development Kit 7.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx) |
+| Codegalerie                           | [Windows Beispielcode für den Animations-Manager](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/DirectCompositionWindowsAnimationManager)          |
 
 
 
- 
+ 
 
-Nachdem Sie die Windows SDK heruntergeladen und installiert haben, finden Sie die Beispiele im Installationsverzeichnis. Wenn Sie z. b. den Standard Installationspfad für die Windows SDK für Windows 7 verwenden, werden die Beispiele unter C: \\ Programme \\ Microsoft sdert \\ Windows \\ v 7.0 Samples installiert \\ .
+Nachdem Sie das Windows SDK heruntergeladen und installiert haben, finden Sie die Beispiele im Installationsverzeichnis. Wenn Sie beispielsweise den Standardinstallationspfad für das Windows SDK für Windows 7 verwenden, werden die Beispiele unter C: Programme \\ \\ Microsoft SDKs Windows v7.0 Samples( C: Programme Microsoft SDKs \\ Windows \\ v7.0 \\ Samples) installiert.
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
@@ -38,36 +38,36 @@ Verwenden Sie eine der folgenden Methoden, um das Beispiel zu erstellen.
 
 **So erstellen Sie das Beispiel an der Eingabeaufforderung**
 
-1.  Öffnen Sie das Eingabe Aufforderungs Fenster, und navigieren Sie zum Projektverzeichnis "appgesteuerte". Der Standard Installationspfad für dieses Beispiel lautet z. b. C: \\ Program Files \\ Microsoft sdert \\ Windows \\ v 7.0 \\ Samples \\ Multimedia \\ windowsanimation \\ appgesteu.
+1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum Projektverzeichnis AppDriven. Der Standardinstallationspfad für dieses Beispiel ist beispielsweise C: Programme \\ \\ Microsoft SDKs Windows \\ \\ v7.0 \\ Samples Multimedia \\ \\ WindowsAnimation \\ AppDriven.
 
-2.  Führen Sie den folgenden Befehl aus: **MSBuild apprun. sln**
+2.  Führen Sie den folgenden Befehl aus: **msbuild AppDriven.sln**
 
-**So erstellen Sie das Beispiel mithilfe Microsoft Visual Studio (bevorzugt)**
+**So erstellen Sie das Beispiel mit Microsoft Visual Studio (bevorzugt)**
 
-1.  Öffnen Sie Windows-Explorer, und navigieren Sie zum Projektverzeichnis "appgesteuerte".
+1.  Öffnen Windows Explorer, und navigieren Sie zum Projektverzeichnis AppDriven.
 
-2.  Doppelklicken Sie auf das Symbol für die Datei appgesteuerte sln, um das Projekt in Visual Studio zu öffnen.
+2.  Doppelklicken Sie auf das Symbol für die Datei AppDriven.sln, um das Projekt in Visual Studio.
 
     > [!Note]  
-    > Die Dateinamenerweiterung. sln wird unter den Standardordner Einstellungen nicht angezeigt. In dieser Situation kann Sie durch das eindeutige Symbol oder durch die Typbeschreibung "Microsoft Visual Studio Lösung" identifiziert werden.
+    > Die Dateierweiterung SLN wird unter den Standardordnereinstellungen nicht angezeigt. In diesem Fall kann er anhand seines eindeutigen Symbols oder seiner Typbeschreibung "Microsoft Visual Studio identifiziert werden.
 
-     
+     
 
-3.  Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus.
+3.  Klicken Sie im Menü **Build** (Erstellen) auf **Build Solution** (Projektmappe erstellen).
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
 So führen Sie das Beispiel aus:
 
-1.  Navigieren Sie zu dem Verzeichnis, das die neue ausführbare Datei enthält. verwenden Sie dazu entweder die Eingabeaufforderung oder den Windows-Explorer.
+1.  Navigieren Sie zu dem Verzeichnis, das die neue ausführbare Datei enthält, indem Sie entweder die Eingabeaufforderung oder den Windows verwenden.
 
-2.  Führen Sie **AppDriven.exe** an der Eingabeaufforderung aus, oder Doppelklicken Sie im Windows-Explorer auf das Symbol für AppDriven.exe.
+2.  Führen **AppDriven.exe** eingabeaufforderung aus, oder doppelklicken Sie auf das Symbol für AppDriven.exe im Windows Explorer.
 
-3.  Klicken Sie im Client Bereich auf eine beliebige Stelle, und die Hintergrundfarbe des Fensters wechselt in eine zufällige Farbe.
+3.  Klicken Sie auf eine beliebige Stelle im Clientbereich, und die Hintergrundfarbe des Fensters ändert sich in eine zufällige Farbe.
 
- 
+ 
 
- 
+ 
 
 
 

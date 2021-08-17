@@ -1,9 +1,9 @@
 ---
-title: midl_pragma Warning-Attribut
-description: Verwenden Sie die Option "Mittell \_ -pragma-Warnung", um das Verhalten für die Warnmeldung von mittlerer l zur Kompilierzeit vorübergehend
+title: midl_pragma Warnungsattribut
+description: Verwenden Sie die \_ Midl-Pragmawarnungsoption, um das Verhalten von MIDL-Warnmeldungen zur Kompilierzeit vorübergehend zu überschreiben.
 ms.assetid: d32a3d3f-5c4d-4f93-a72a-2224ceed0012
 keywords:
-- midl_pragma Warning-Attribut, Mittel l
+- midl_pragma Warnungsattribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b7e1e2c2a1d818216245e45a9129018a3ba2e1c
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 0ae8e902d1e58ff216f36ae8003dc8f3f553a32005136ef2a86201bd17279107
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103857224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067090"
 ---
-# <a name="midl_pragma-warning-attribute"></a>Mittel l- \_ pragma-Warnungs Attribut
+# <a name="midl_pragma-warning-attribute"></a>\_midl-Pragmawarnungsattribut
 
-Verwenden Sie die Option " **Mittell- \_ pragma-Warnung** ", um das Verhalten für die Warnmeldung von mittlerer l zur Kompilierzeit vorübergehend
+Verwenden Sie die **\_ Midl-Pragmawarnungsoption,** um das Verhalten von MIDL-Warnmeldungen zur Kompilierzeit vorübergehend zu überschreiben.
 
 ``` syntax
 midl_pragma warning ( warning_option : message_list )
@@ -31,23 +31,23 @@ midl_pragma warning ( warning_option : message_list )
 
 <dl> <dt>
 
-*Option "Warnung" \_* 
+*\_Warnungsoption* 
 </dt> <dd>
 
-Die Option "Warnung" kann eines der folgenden sein: "deaktivieren", "aktivieren", "Standard".
+Die Warnungsoption kann eine der folgenden Optionen sein: disable, enable, default.
 
 </dd> <dt>
 
-*Nachrichten \_ Liste* 
+*\_Meldungsliste* 
 </dt> <dd>
 
-Eine durch Leerzeichen getrennte Liste von Nachrichtennummern.
+Eine Durch Leerzeichen getrennte Liste von Nachrichtennummern.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Pragma kann wie ein C-Compiler-Pragma verwendet werden. Das heißt, dass Sie das Standardverhalten für eine bestimmte Mittell-Warnung deaktiviert, aktiviert oder zurückgibt.
+Das Pragma kann wie ein C-Compiler-Pragma verwendet werden. Das heißt, es deaktiviert, aktiviert oder kehrt zum Standardverhalten für eine bestimmte MIDL-Warnung zurück.
 
 ## <a name="examples"></a>Beispiele
 
@@ -64,9 +64,9 @@ midl_pragma warning( disable: 2007 )   // file already imported midl_pragma warn
 [**pragma**](pragma.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

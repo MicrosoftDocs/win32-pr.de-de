@@ -1,23 +1,23 @@
 ---
-description: Die CIM \_ coolingdevice-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ CoolingDevice-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 7E7ED0E6-BCBE-48D0-B949-EDE0629459BC
 ms.tgt_platform: multiple
-title: CIM_CoolingDevice Methoden
+title: CIM_CoolingDevice-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: afeaf32ceff836dcf1d23f6a99804cd162c416ac
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b754527bdb4011850187eac34ed0b8577623c9679e4ef76fe497d4dc47f02696
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119439060"
 ---
-# <a name="cim_coolingdevice-methods"></a>CIM \_ coolingdevice-Methoden
+# <a name="cim_coolingdevice-methods"></a>CIM \_ CoolingDevice-Methoden
 
-Die [**CIM \_ coolingdevice**](cim-coolingdevice.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ CoolingDevice-Klasse**](cim-coolingdevice.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

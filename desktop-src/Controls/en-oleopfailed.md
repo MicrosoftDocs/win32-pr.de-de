@@ -1,9 +1,9 @@
 ---
-title: EN_OLEOPFAILED Benachrichtigungs Code (RichEdit. h)
-description: Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements, dass eine Benutzeraktion für ein Component Object Model (com)-Objekt fehlgeschlagen ist. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer WM-Benachrichtigungs \_ Meldung.
+title: EN_OLEOPFAILED Benachrichtigungscode (Richedit.h)
+description: Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuerelements, dass eine Benutzeraktion für ein Component Object Model-Objekt (COM) fehlgeschlagen ist. Dieses Benachrichtigungscode wird von einem Rich-Edit-Steuerelement in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: b674c36f-2454-473e-8e1c-368c0afd8c34
 keywords:
-- Windows-Steuerelemente für EN_OLEOPFAILED Benachrichtigungs
+- EN_OLEOPFAILED Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 139c51642c8cb6d5efd369cf6b373068604439b0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8a0391bfc61ff9350758ac81ff6f54fb1cff61d0dd1ebbcb2b8ef02ada9fe3fd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119436680"
 ---
-# <a name="en_oleopfailed-notification-code"></a>EN \_ oleopfailed-Benachrichtigungs Code
+# <a name="en_oleopfailed-notification-code"></a>EN \_ OLEOPFAILED-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements, dass eine Benutzeraktion für ein Component Object Model (com)-Objekt fehlgeschlagen ist. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer WM-Benachrichtigungs Meldung. [**\_**](wm-notify.md)
+Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuerelements, dass eine Benutzeraktion für ein Component Object Model-Objekt (COM) fehlgeschlagen ist. Dieses Benachrichtigungscode wird von einem Rich-Edit-Steuerelement in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,17 +41,17 @@ EN_OLEOPFAILED
 *lParam* 
 </dt> <dd>
 
-Eine " [**finoleopfailed**](/windows/desktop/api/Richedit/ns-richedit-enoleopfailed) "-Struktur, die Informationen über den Fehler enthält.
+Eine [**ENOLEOPFAILED-Struktur,**](/windows/desktop/api/Richedit/ns-richedit-enoleopfailed) die Informationen zum Fehler enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Dieser Benachrichtigungs Code gibt NULL zurück.
+Dieser Benachrichtigungscode gibt 0 (null) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das übergeordnete Fenster ruft immer eine [**WM \_**](wm-notify.md) -Benachrichtigungs Meldung für dieses Ereignis ab. es ist keine Benachrichtigungs Maske erforderlich, die mit der "em-Einstellungs [**\_ Maske**](em-seteventmask.md)" gesendet wird.
+Das übergeordnete Fenster wird immer eine [**WM \_ NOTIFY-Nachricht**](wm-notify.md) für dieses Ereignis erhalten, es ist keine Benachrichtigungsmaske erforderlich, die mit [**EM \_ SETEVENTMASK gesendet wird.**](em-seteventmask.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,20 +59,20 @@ Das übergeordnete Fenster ruft immer eine [**WM \_**](wm-notify.md) -Benachrich
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**"Endfailed"**](/windows/desktop/api/Richedit/ns-richedit-enoleopfailed)
+[**ENOLEOPFAILED**](/windows/desktop/api/Richedit/ns-richedit-enoleopfailed)
 </dt> </dl>
 
  

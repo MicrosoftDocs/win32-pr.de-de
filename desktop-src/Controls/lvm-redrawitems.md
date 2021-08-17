@@ -1,9 +1,9 @@
 ---
-title: LVM_REDRAWITEMS Meldung (kommstrg. h)
-description: Erzwingt, dass ein Listenansicht-Steuerelement einen Bereich von Elementen neu zeichnet. Sie können diese Nachricht explizit oder mithilfe des ListView \_ RedrawItems-Makros senden.
+title: LVM_REDRAWITEMS (Commctrl.h)
+description: Erzwingt, dass ein Listenansicht-Steuerelement einen Bereich von Elementen neu gezeichnet. Sie können diese Nachricht explizit oder mit dem ListView \_ RedrawItems-Makro senden.
 ms.assetid: a717b17f-6e0a-4804-96f9-da93392a19ec
 keywords:
-- Windows-Steuerelemente für LVM_REDRAWITEMS Meldung
+- LVM_REDRAWITEMS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 42568a9ab78361a28a99eee372674287a24d03cf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 53fbee43ff8cfcbb14ab357b6e76ab709df3e4a797143d5c4fa2c9b1179153af
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040589"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119261730"
 ---
-# <a name="lvm_redrawitems-message"></a>LVM \_ RedrawItems-Nachricht
+# <a name="lvm_redrawitems-message"></a>LVM \_ REDRAWITEMS-Nachricht
 
-Erzwingt, dass ein Listenansicht-Steuerelement einen Bereich von Elementen neu zeichnet. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ RedrawItems**](/windows/desktop/api/Commctrl/nf-commctrl-listview_redrawitems) -Makros senden.
+Erzwingt, dass ein Listenansicht-Steuerelement einen Bereich von Elementen neu gezeichnet. Sie können diese Nachricht explizit oder mit dem [**ListView \_ RedrawItems-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-listview_redrawitems) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,24 +32,24 @@ Erzwingt, dass ein Listenansicht-Steuerelement einen Bereich von Elementen neu z
 *wParam* 
 </dt> <dd>
 
-Der Index des ersten Elements, das neu gezeichnet werden soll.
+Index des ersten elements, das neu gezeichnet werden soll.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Der Index des letzten Elements, das neu gezeichnet werden soll.
+Index des letzten elements, das neu gezeichnet werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die angegebenen Elemente werden erst neu gezeichnet, wenn das Listen Ansichts Fenster eine WM-Zeichnungs Nachricht erhält, um Sie neu zu zeichnen. [**\_**](/windows/desktop/gdi/wm-paint) Um sofort neu zu zeichnen, müssen Sie die Funktion [**UpdateWindow**](/windows/desktop/api/winuser/nf-winuser-updatewindow) aufrufen, nachdem Sie dieses Makro verwendet haben.
+Die angegebenen Elemente werden erst neu gezeichnet, wenn das Listenansichtsfenster eine [**WM \_ PAINT-Nachricht**](/windows/desktop/gdi/wm-paint) empfängt, die neu gezeichnet werden soll. Rufen Sie die [**UpdateWindow-Funktion**](/windows/desktop/api/winuser/nf-winuser-updatewindow) auf, nachdem Sie dieses Makro verwendet haben, um sofort neu zu bemalen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Die angegebenen Elemente werden erst neu gezeichnet, wenn das Listen Ansichts Fe
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

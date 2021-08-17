@@ -1,36 +1,36 @@
 ---
 title: Garantierte Verschlüsselung
-description: Das Szenario für die garantierte Verschlüsselung der IPSec-Richtlinie erfordert IPSec-Verschlüsselung für den gesamten übereinstimmenden Diese Richtlinie muss in Verbindung mit einer der Richtlinien Optionen für den Transportmodus angegeben werden.
+description: Das IPsec-Richtlinienszenario für die garantierte Verschlüsselung erfordert IPsec-Verschlüsselung für den gesamten übereinstimmenden Datenverkehr. Diese Richtlinie muss in Verbindung mit einer der Transportmodus-Richtlinienoptionen angegeben werden.
 ms.assetid: 68758f0c-f134-4b7a-820a-313e2a82f280
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dbffa3d78a9e178850f3afaa4d6b7fa9831be875
-ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
+ms.openlocfilehash: 381d029b3bebc6fc6e0a438c5123bb6703bc45dd457195fa7ff8fc7268bba16f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107314643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069150"
 ---
 # <a name="guaranteed-encryption"></a>Garantierte Verschlüsselung
 
-Das Szenario für die garantierte Verschlüsselung der IPSec-Richtlinie erfordert IPSec-Verschlüsselung für den gesamten übereinstimmenden Diese Richtlinie muss in Verbindung mit einer der Richtlinien Optionen für den Transportmodus angegeben werden.
+Das IPsec-Richtlinienszenario für die garantierte Verschlüsselung erfordert IPsec-Verschlüsselung für den gesamten übereinstimmenden Datenverkehr. Diese Richtlinie muss in Verbindung mit einer der Transportmodus-Richtlinienoptionen angegeben werden.
 
-Die garantierte Verschlüsselung wird normalerweise verwendet, um sensiblen Datenverkehr auf Anwendungs Basis zu verschlüsseln.
+Die garantierte Verschlüsselung wird in der Regel verwendet, um sensiblen Datenverkehr pro Anwendung zu verschlüsseln.
 
-Ein Beispiel für ein mögliches verschlüsseltes Verschlüsselungs Szenario ist "Secure all Unicast Data Traffic, außer ICMP, Using IPSec Transport Mode, Enable Aushandlung Discovery, and require eine garantierte Verschlüsselung für den gesamten Unicastdatenverkehr gemäß TCP-Port 5555."
+Ein Beispiel für ein mögliches Szenario für die garantierte Verschlüsselung ist "Sichern des gesamten Unicastdatenverkehrs mit Ausnahme von ICMP, Verwenden des IPsec-Transportmodus, Aktivieren der Aushandlungsermittlung und Erfordern einer garantierten Verschlüsselung für den gesamten Unicastdatenverkehr, der dem lokalen TCP-Port 5555 entspricht".
 
-Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgende WFP-Konfiguration.
+Verwenden Sie die folgende WFP-Konfiguration, um dieses Beispiel programmgesteuert zu implementieren.
 
 <dl>
 
-**Auf der swpm- \_ Schicht \_ IKEEXT \_ V {4 \| 6} Einrichten der mm-Aushandlungs Richtlinie**  
+**Richten Sie auf FWPM \_ LAYER \_ IKEEXT \_ V{4 \| 6} die MM-Aushandlungsrichtlinie ein.**  
 
-1.  Fügen Sie einen oder beide der folgenden mm-Richtlinien Anbieter Kontexte hinzu.  
-    -   Für IKE ein Richtlinien Anbieter Kontext vom Typ "swpm \_ IPSec \_ IKE \_ mm \_ context".
-    -   Für AuthIP ein Richtlinien Anbieter Kontext vom Typ "swpm \_ IPSec \_ AuthIP \_ mm \_ context".
+1.  Fügen Sie einen oder beide der folgenden MM-Richtlinienanbieterkontexte hinzu.  
+    -   Bei IKE ein Richtlinienanbieterkontext vom Typ FWPM \_ IPSEC \_ IKE \_ MM \_ CONTEXT.
+    -   Bei AuthIP ein Richtlinienanbieterkontext vom Typ FWPM \_ IPSEC \_ AUTHIP \_ MM \_ CONTEXT.
 
     > [!Note]  
-    > Ein gängiges Schlüssel Anstellungs Modul wird ausgehandelt, und die entsprechende mm-Richtlinie wird angewendet. AuthIP ist das bevorzugte Schlüsselmodul, wenn sowohl IKE als auch AuthIP unterstützt werden.
+    > Ein gemeinsames Schlüsselmodul wird ausgehandelt, und die entsprechende MM-Richtlinie wird angewendet. AuthIP ist das bevorzugte Schlüsselmodul, wenn sowohl IKE als auch AuthIP unterstützt werden.
 
      
 
@@ -39,18 +39,18 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
     | Filter-Eigenschaft        | Wert                                            |
     |------------------------|--------------------------------------------------|
     | Filterbedingungen   | Leer. Der gesamte Datenverkehr entspricht dem Filter.        |
-    | **providercontextkey** | GUID des in Schritt 1 hinzugefügten mm-Anbieter Kontexts. |
+    | **providerContextKey** | GUID des mm-Anbieterkontexts, der in Schritt 1 hinzugefügt wurde. |
 
         
 
-**Auf der swpm- \_ Ebene \_ IPSec \_ V {4 \| 6} Setup-und EM-Aushandlungs Richtlinie**  
+**Einrichten der \_ QM- und EM-Aushandlungsrichtlinie auf FWPM LAYER \_ IPSEC \_ \| V{4 6}**  
 
-1.  Fügen Sie einen oder beide der folgenden Einstellungen für den Transportmodus-Richtlinien Anbieter hinzu, und legen Sie die [**IPSec-Richtlinienflag \_ \_ \_ nd \_ Secure**](/windows/desktop/api/Ipsectypes/ns-ipsectypes-ipsec_transport_policy0) fest.  
-    -   Für IKE ein Richtlinien Anbieter Kontext vom Typ " **WPM- \_ IPSec- \_ IKE- \_ Quadrat- \_ Transport \_ Kontext**".
-    -   Für AuthIP ein Richtlinien Anbieter Kontext vom Typ " **swpm \_ IPSec \_ AuthIP \_ qm \_ Transport \_ context**". Dieser Kontext kann optional die Richtlinie "AuthIP Extended Mode" (EM) aushandeln enthalten.
+1.  Fügen Sie einen oder beide der folgenden Richtlinienanbieterkontexte für den QM-Transportmodus hinzu, und legen Sie das [**\_ FLAG IPSEC POLICY FLAG \_ \_ ND SECURE \_ fest.**](/windows/desktop/api/Ipsectypes/ns-ipsectypes-ipsec_transport_policy0)  
+    -   Für IKE ein Richtlinienanbieterkontext vom Typ **FWPM \_ IPSEC \_ IKE \_ QM TRANSPORT \_ \_ CONTEXT**.
+    -   Bei AuthIP ein Richtlinienanbieterkontext vom Typ **FWPM \_ IPSEC \_ AUTHIP \_ QM TRANSPORT \_ \_ CONTEXT**. Dieser Kontext kann optional die EM-Aushandlungsrichtlinie (Extended Mode, erweiterter AuthIP-Modus) enthalten.
 
     > [!Note]  
-    > Ein gängiges Schlüssel Anstellungs Modul wird ausgehandelt, und die entsprechende hoch Richtlinie wird angewendet. AuthIP ist das bevorzugte Schlüsselmodul, wenn sowohl IKE als auch AuthIP unterstützt werden.
+    > Ein gemeinsames Schlüsselmodul wird ausgehandelt, und die entsprechende QM-Richtlinie wird angewendet. AuthIP ist das bevorzugte Schlüsselmodul, wenn sowohl IKE als auch AuthIP unterstützt werden.
 
      
 
@@ -59,102 +59,102 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
     | Filter-Eigenschaft        | Wert                                            |
     |------------------------|--------------------------------------------------|
     | Filterbedingungen   | Leer. Der gesamte Datenverkehr entspricht dem Filter.        |
-    | **providercontextkey** | GUID des in Schritt 1 hinzugefügten ESDS-Anbieter Kontexts. |
+    | **providerContextKey** | GUID des in Schritt 1 hinzugefügten QM-Anbieterkontexts. |
 
         
 
-**Auf der swpm- \_ Schicht \_ eingehender \_ Transport \_ V {4 \| 6} einrichten eingehender Filterregeln pro Paket**  
+**Richten Sie auf FWPM \_ LAYER \_ INBOUND \_ TRANSPORT \_ V{4 6} Regeln für \| die Filterung eingehender Pakete ein.**  
 
 1.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. 
 
     | Filter-Eigenschaft                                               | Wert                                                                                              |
     |---------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-    | Bedingung zum \_ Filtern von \_ lokalen IP- \_ \_ Adress \_ Typen für die Bedingung | [Nlatunicast](/windows/win32/api/nldef/ne-nldef-nl_address_type)                                      |
-    | **Action. Type**                                               | **aufrufende f- \_ Aktions Legende \_ \_**                                                              |
-    | **Action. calloutkey**                                         | **Swpm-Legende \_ \_ IPSec- \_ Eingangs \_ Transport \_ V {4 \| 6}**                                              |
-    | **rawcontext**                                                | [**swpm-Kontext-IPSec-eingehende Beibehaltung der \_ \_ \_ \_ \_ Verbindungs \_ Sicherheit**](filter-context-identifiers.md) |
+    | Filterbedingung für \_ FWPM-BEDINGUNG IP LOCAL ADDRESS \_ \_ \_ \_ TYPE | [NlatUnicast](/windows/win32/api/nldef/ne-nldef-nl_address_type)                                      |
+    | **action.type**                                               | **\_FWP-AKTIONSAUFRUF \_ \_ BEENDET**                                                              |
+    | **action.calloutKey**                                         | **FWPM \_ CALLOUT \_ IPSEC \_ INBOUND \_ TRANSPORT \_ V{4 \| 6}**                                              |
+    | **rawContext**                                                | [**VERBINDUNGSSICHERHEIT FÜR EINGEHENDEN \_ \_ IPSEC-KONTEXT DES FWPM-KONTEXTS \_ \_ \_ \_**](filter-context-identifiers.md) |
 
         
-2.  Ausnehmen von ICMP-Datenverkehr von IPSec durch Hinzufügen eines Filters mit den folgenden Eigenschaften.
+2.  Ausschließen von ICMP-Datenverkehr von IPsec durch Hinzufügen eines Filters mit den folgenden Eigenschaften.
 
     | Filter-Eigenschaft                                                   | Wert                                                                      |
     |-------------------------------------------------------------------|----------------------------------------------------------------------------|
-    | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                |
-    | "F" **\_ Bedingung für Bedingung \_ -IP- \_ Protokoll** Filterung             | **Ipproto \_ ICMP {V6}** diese Konstanten werden in Winsock2. h definiert.<br/> |
-    | **Action. Type**                                                   | **f/a- \_ Aktion \_ zulassen**                                                    |
-    | **weight**                                                        | [**IKE-Ausnahmen für den f- \_ Gewichtungs \_ Bereich \_ \_**](filter-weight-identifiers.md)  |
+    | **FWPM \_ BEDINGUNG \_ IP LOCAL ADDRESS \_ \_ \_ TYPE** Filterbedingung | NlatUnicast                                                                |
+    | **FWPM \_ BEDINGUNG \_ IP \_ PROTOCOL** Filterungsbedingung             | **IPPROTO \_ ICMP{V6}** Diese Konstanten werden in winsock2.h definiert.<br/> |
+    | **action.type**                                                   | **FWP \_ ACTION \_ PERMIT**                                                    |
+    | **weight**                                                        | [**\_ \_ IKE-AUSNAHMEN FÜR DEN FWPM-GEWICHTUNGSBEREICH \_ \_**](filter-weight-identifiers.md)  |
 
         
 
-**Bei der WPM- \_ Schicht \_ ausgehende \_ Transport \_ V {4 \| 6} Einrichten von ausgehenden Regeln pro Paket Filtern**  
+**Richten Sie auf der FWPM \_ LAYER \_ OUTBOUND \_ TRANSPORT \_ V{4 6} Regeln für \| die Filterung ausgehender Daten pro Paket ein.**  
 
 1.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu.
 
     | Filter-Eigenschaft                                                   | Wert                                                                                     |
     |-------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-    | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                               |
-    | **Action. Type**                                                   | **aufrufende f- \_ Aktions Legende \_ \_**                                                     |
-    | **Action. calloutkey**                                             | **WPM-Legende \_ \_ IPSec- \_ ausgehenden \_ Transport \_ V {4 \| 6}**                                    |
-    | **rawcontext**                                                    | [**WPM- \_ Kontext- \_ IPSec \_ ausgehende \_ Aushandlungs Aushandlung \_ ermitteln**](filter-context-identifiers.md) |
+    | **FWPM \_ BEDINGUNG \_ IP LOCAL ADDRESS \_ \_ \_ TYPE** Filterbedingung | NlatUnicast                                                                               |
+    | **action.type**                                                   | **\_FWP-AKTIONSAUFRUF \_ \_ BEENDET**                                                     |
+    | **action.calloutKey**                                             | **FWPM \_ CALLOUT \_ IPSEC \_ AUSGEHENDER \_ TRANSPORT \_ V{4 \| 6}**                                    |
+    | **rawContext**                                                    | [**ERMITTLUNG DER \_ \_ \_ AUSGEHENDEN IPSEC-AUSHANDLUNG \_ IM FWPM-KONTEXT \_**](filter-context-identifiers.md) |
 
         
-2.  Ausnehmen von ICMP-Datenverkehr von IPSec durch Hinzufügen eines Filters mit den folgenden Eigenschaften.
+2.  Ausschließen von ICMP-Datenverkehr von IPsec durch Hinzufügen eines Filters mit den folgenden Eigenschaften.
 
     | Filter-Eigenschaft                                                   | Wert                                                                      |
     |-------------------------------------------------------------------|----------------------------------------------------------------------------|
-    | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                |
-    | "F" **\_ Bedingung für Bedingung \_ -IP- \_ Protokoll** Filterung             | **Ipproto \_ ICMP {V6}** diese Konstanten werden in Winsock2. h definiert.<br/> |
-    | **Action. Type**                                                   | **f/a- \_ Aktion \_ zulassen**                                                    |
-    | **weight**                                                        | **IKE-Ausnahmen für den f- \_ Gewichtungs \_ Bereich \_ \_**                                   |
+    | **FWPM \_ BEDINGUNG \_ IP LOCAL ADDRESS \_ \_ \_ TYPE** Filterbedingung | NlatUnicast                                                                |
+    | **FWPM \_ BEDINGUNG \_ IP \_ PROTOCOL** Filterungsbedingung             | **IPPROTO \_ ICMP{V6}** Diese Konstanten werden in winsock2.h definiert.<br/> |
+    | **action.type**                                                   | **FWP \_ ACTION \_ PERMIT**                                                    |
+    | **weight**                                                        | **\_ \_ IKE-AUSNAHMEN FÜR DEN FWPM-GEWICHTUNGSBEREICH \_ \_**                                   |
 
         
 
-**Auf dem swpm-Schicht-e/a-Abbild \_ \_ \_ \_ \_ akzeptieren \_ V {4 \| 6} eingehende Filterregeln für eingehende Verbindungen pro Verbindung**  
+**Richten Sie auf FWPM \_ LAYER \_ ALE \_ AUTH \_ RECV \_ ACCEPT \_ V{4 \| 6} ein, um Filterregeln für eingehende Verbindungen pro Verbindung einzurichten.**  
 
-1.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. Dieser Filter lässt nur eingehende Verbindungsversuche zu, wenn Sie durch IPSec gesichert werden. 
+1.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. Dieser Filter lässt eingehende Verbindungsversuche nur zu, wenn sie durch IPsec geschützt sind. 
 
     | Filter-Eigenschaft                                                   | Wert                                                        |
     |-------------------------------------------------------------------|--------------------------------------------------------------|
-    | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                  |
-    | **Action. Type**                                                   | **aufrufende f- \_ Aktions Legende \_ \_**                        |
-    | **Action. calloutkey**                                             | **WPM-Legende \_ \_ IPSec \_ eingehende \_ Initiierung \_ Secure \_ V {4 \| 6}** |
+    | **FWPM \_ BEDINGUNG \_ IP LOCAL ADDRESS \_ \_ \_ TYPE** Filterbedingung | NlatUnicast                                                  |
+    | **action.type**                                                   | **\_FWP-AKTIONSAUFRUF \_ \_ BEENDET**                        |
+    | **action.calloutKey**                                             | **FWPM \_ CALLOUT \_ IPSEC \_ INBOUND \_ INITIATE SECURE \_ \_ V{4 \| 6}** |
 
         
-2.  Ausnehmen von ICMP-Datenverkehr von IPSec durch Hinzufügen eines Filters mit den folgenden Eigenschaften.
+2.  Ausschließen von ICMP-Datenverkehr von IPsec durch Hinzufügen eines Filters mit den folgenden Eigenschaften.
 
     | Filter-Eigenschaft                                                   | Wert                                                                      |
     |-------------------------------------------------------------------|----------------------------------------------------------------------------|
-    | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                |
-    | "F" **\_ Bedingung für Bedingung \_ -IP- \_ Protokoll** Filterung             | **Ipproto \_ ICMP {V6}** diese Konstanten werden in Winsock2. h definiert.<br/> |
-    | **Action. Type**                                                   | **f/a- \_ Aktion \_ zulassen**                                                    |
-    | **weight**                                                        | **IKE-Ausnahmen für den f- \_ Gewichtungs \_ Bereich \_ \_**                                   |
+    | **FWPM \_ BEDINGUNG \_ IP LOCAL ADDRESS \_ \_ \_ TYPE** Filterbedingung | NlatUnicast                                                                |
+    | **FWPM \_ BEDINGUNG \_ IP \_ PROTOCOL** Filterungsbedingung             | **IPPROTO \_ ICMP{V6}** Diese Konstanten werden in winsock2.h definiert.<br/> |
+    | **action.type**                                                   | **FWP \_ ACTION \_ PERMIT**                                                    |
+    | **weight**                                                        | **\_ \_ IKE-AUSNAHMEN FÜR DEN FWPM-GEWICHTUNGSBEREICH \_ \_**                                   |
 
         
-3.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. Dieser Filter lässt nur eingehende Verbindungen mit dem TCP-Port 5555 zu, wenn Sie verschlüsselt sind.
+3.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. Dieser Filter lässt nur eingehende Verbindungen mit TCP-Port 5555 zu, wenn sie verschlüsselt sind.
 
     | Filter-Eigenschaft                                                   | Wert                                                                                                 |
     |-------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-    | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                                           |
-    | "F" **\_ Bedingung für Bedingung \_ -IP- \_ Protokoll** Filterung             | **Ipproto \_ TCP**: diese Konstante ist in Winsock2. h definiert.<br/>                                    |
-    | "F" **\_ Bedingung für die \_ \_ lokale \_ Port** Filterung der Bedingung          | 5555                                                                                                  |
-    | **Action. Type**                                                   | **aufrufende f- \_ Aktions Legende \_ \_**                                                                 |
-    | **Action. calloutkey**                                             | **WPM-Legende \_ \_ IPSec \_ eingehende \_ Initiierung \_ Secure \_ V {4 \| 6}**                                          |
-    | **rawcontext**                                                    | [**WPM-Kontext-o- \_ \_ Set- \_ \_ Verbindung \_ erfordert \_ IPSec- \_ Verschlüsselung**](filter-context-identifiers.md) |
+    | **FWPM \_ BEDINGUNG \_ IP LOCAL ADDRESS \_ \_ \_ TYPE** Filterbedingung | NlatUnicast                                                                                           |
+    | **FWPM \_ BEDINGUNG \_ IP \_ PROTOCOL** Filterungsbedingung             | **IPPROTO \_ TCP** Diese Konstante ist in winsock2.h definiert.<br/>                                    |
+    | **FWPM \_ BEDINGUNG IP LOCAL PORT filtering condition \_ (BEDINGUNGS-IP \_ LOCAL PORT-Filterbedingung) \_**          | 5555                                                                                                  |
+    | **action.type**                                                   | **\_FWP-AKTIONSAUFRUF \_ \_ BEENDET**                                                                 |
+    | **action.calloutKey**                                             | **FWPM \_ CALLOUT \_ IPSEC \_ INBOUND \_ INITIATE SECURE \_ \_ V{4 \| 6}**                                          |
+    | **rawContext**                                                    | [**FWPM \_ CONTEXT \_ ALE \_ SET \_ CONNECTION \_ REQUIRE \_ IPSEC \_ ENCRYPTION**](filter-context-identifiers.md) |
 
         
 
-**Bei der Einrichtung der swpm- \_ Ebene ALE-Authentifizierung \_ \_ \_ Connect \_ V {4 \| 6} richten Sie ausgehende Filterregeln pro Verbindung ein.**
+**Richten Sie auf FWPM \_ LAYER \_ ALE \_ AUTH \_ CONNECT \_ V{4 \| 6} Filterregeln für ausgehende Verbindungen pro Verbindung ein.**
 
--   Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. Mit diesem Filter werden nur ausgehende Verbindungen von TCP-Port 5555 zugelassen, wenn Sie verschlüsselt sind.
+-   Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. Dieser Filter lässt ausgehende Verbindungen von TCP-Port 5555 nur zu, wenn sie verschlüsselt sind.
 
     | Filter-Eigenschaft                                                   | Wert                                                                                                 |
     |-------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-    | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                                           |
-    | "F" **\_ Bedingung für Bedingung \_ -IP- \_ Protokoll** Filterung             | **Ipproto \_ TCP**: diese Konstante ist in Winsock2. h definiert.<br/>                                    |
-    | "F" **\_ Bedingung für die \_ \_ lokale \_ Port** Filterung der Bedingung          | 5555                                                                                                  |
-    | **Action. Type**                                                   | **aufrufende f- \_ Aktions Legende \_ \_**                                                                 |
-    | **Action. calloutkey**                                             | **WPM-Legende \_ \_ IPSec- \_ ALE \_ Connect \_ V {4 \| 6}**                                                       |
-    | **rawcontext**                                                    | [**WPM-Kontext-o- \_ \_ Set- \_ \_ Verbindung \_ erfordert \_ IPSec- \_ Verschlüsselung**](filter-context-identifiers.md) |
+    | **FWPM \_ BEDINGUNG \_ IP LOCAL ADDRESS \_ \_ \_ TYPE** Filterbedingung | NlatUnicast                                                                                           |
+    | **FWPM \_ BEDINGUNG \_ IP \_ PROTOCOL** Filterungsbedingung             | **IPPROTO \_ TCP** Diese Konstante ist in winsock2.h definiert.<br/>                                    |
+    | **FWPM \_ BEDINGUNG IP LOCAL PORT filtering condition \_ (BEDINGUNGS-IP \_ LOCAL PORT-Filterbedingung) \_**          | 5555                                                                                                  |
+    | **action.type**                                                   | **\_FWP-AKTIONSAUFRUF \_ \_ BEENDET**                                                                 |
+    | **action.calloutKey**                                             | **FWPM \_ CALLOUT \_ IPSEC \_ ALE \_ CONNECT \_ V{4 \| 6}**                                                       |
+    | **rawContext**                                                    | [**FWPM \_ CONTEXT \_ ALE \_ SET \_ CONNECTION \_ REQUIRE \_ IPSEC \_ ENCRYPTION**](filter-context-identifiers.md) |
 
       
 
@@ -165,25 +165,25 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 
 <dl> <dt>
 
-[Beispielcode: Verwenden des Transport Modus](using-transport-mode.md)
+[Beispielcode: Verwenden des Transportmodus](using-transport-mode.md)
 </dt> <dt>
 
-[ALE Ebenen](ale-layers.md)
+[ALE-Ebenen](ale-layers.md)
 </dt> <dt>
 
-[**Integrierte Legenden Bezeichner**](built-in-callout-identifiers.md)
+[**Integrierte Aufrufbezeichner**](built-in-callout-identifiers.md)
 </dt> <dt>
 
 [Filterbedingungen](filtering-conditions.md)
 </dt> <dt>
 
-[**Filtern von ebenenbezeichgern**](management-filtering-layer-identifiers-.md)
+[**Filtern von Ebenenbezeichnern**](management-filtering-layer-identifiers-.md)
 </dt> <dt>
 
-[**\_ACTION0**](/windows/desktop/api/Fwpmtypes/ns-fwpmtypes-fwpm_action0)
+[**FWPM \_ ACTION0**](/windows/desktop/api/Fwpmtypes/ns-fwpmtypes-fwpm_action0)
 </dt> <dt>
 
-[**Kontexttyp des WPM- \_ Anbieters \_ \_**](/windows/desktop/api/Fwpmtypes/ne-fwpmtypes-fwpm_provider_context_type)
+[**\_FWPM-ANBIETERKONTEXTTYP \_ \_**](/windows/desktop/api/Fwpmtypes/ne-fwpmtypes-fwpm_provider_context_type)
 </dt> </dl>
 
  

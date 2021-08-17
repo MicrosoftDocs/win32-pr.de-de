@@ -1,9 +1,9 @@
 ---
-title: MIM_CLOSE Meldung (MMSYSTEM. h)
-description: Die MIM \_ Close-Nachricht wird an eine Funktion der MIDI-Eingabe Rückruffunktion gesendet, wenn ein MIDI-Eingabegerät geschlossen wird.
+title: MIM_CLOSE Meldung (Mmsystem.h)
+description: Die MIM \_ CLOSE-Nachricht wird an eine RÜCKRUFFUNKTION für die EINGABEEINGABE gesendet, wenn ein EINGABEGERÄT geschlossen wird.
 ms.assetid: c19ecd3a-c3a5-4f17-9d44-d0d71eefcb15
 keywords:
-- MIM_CLOSE-Nachricht (Multimedia)
+- MIM_CLOSE nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5549d9bef1e802b0b34ab6437b1386519a25d349
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b3b1509573d5c69fd2e95cabeb8ba2c4059d5d37c9cfe3c957ec8b8f75f5abfa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119428170"
 ---
-# <a name="mim_close-message"></a>MIM \_ Close Message
+# <a name="mim_close-message"></a>\_MIM CLOSE-Nachricht
 
-Die **MIM \_ Close** -Nachricht wird an eine Funktion der MIDI-Eingabe Rückruffunktion gesendet, wenn ein MIDI-Eingabegerät geschlossen wird.
+Die **MIM \_ CLOSE-Nachricht** wird an eine RÜCKRUFFUNKTION für die EINGABEEINGABE gesendet, wenn ein EINGABEGERÄT geschlossen wird.
 
 
 ```C++
@@ -41,14 +41,14 @@ dwParam2 = reserved
 <span id="dwParam1"></span><span id="dwparam1"></span><span id="DWPARAM1"></span>*dwParam1*
 </dt> <dd>
 
-Bleiben Verwenden Sie nicht.
+Reserviert; nicht verwenden.
 
 </dd> <dt>
 
 <span id="dwParam2"></span><span id="dwparam2"></span><span id="DWPARAM2"></span>*dwParam2*
 </dt> <dd>
 
-Bleiben Verwenden Sie nicht.
+Reserviert; nicht verwenden.
 
 </dd> </dl>
 
@@ -56,9 +56,9 @@ Bleiben Verwenden Sie nicht.
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Geräte Handle ist nicht mehr gültig, nachdem diese Nachricht gesendet wurde.
+Das Gerätehandle ist nach dem Senden dieser Nachricht nicht mehr gültig.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,18 +68,18 @@ Das Geräte Handle ist nicht mehr gültig, nachdem diese Nachricht gesendet wurd
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Digital Instrumentation Digital Interface (MIDI)](musical-instrument-digital-interface--midi.md)
+[Music Instrument Digital Interface (INSTRUMENTS)](musical-instrument-digital-interface--midi.md)
 </dt> <dt>
 
-[MIDI-Nachrichten](midi-messages.md)
+[MELDUNGSMELDUNGEN](midi-messages.md)
 </dt> </dl>
 
  

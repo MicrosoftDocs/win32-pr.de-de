@@ -1,21 +1,21 @@
 ---
-description: Die Netzwerkanbieter-API gibt eine Funktion mit einer einzelnen Funktion an.
+description: Die Netzwerkanbieter-API gibt eine einzelne Funktionenfunktion an.
 ms.assetid: fc74a043-da13-485f-9f54-a43064add927
-title: Funktionen-Funktionen
+title: Funktionenfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 83cde32ba0d3116ce83e7ca6621666f5e9a86650
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ab47d2c8323131b396640d9154e33749c1716db0d369d3a374f69131468613d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042014"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119141273"
 ---
-# <a name="capabilities-functions"></a>Funktionen-Funktionen
+# <a name="capabilities-functions"></a>Funktionenfunktionen
 
-Die Netzwerkanbieter-API gibt eine Funktion mit einer einzelnen Funktion an. Wenn das Betriebssysteminformationen zu den Funktionen eines Netzwerk Anbieters anfordert, ruft der [*multianbieterrouter*](/windows/desktop/SecGloss/m-gly) (MPR) die [**NPgetCaps**](/windows/desktop/api/Npapi/nf-npapi-npgetcaps) -Funktion jedes Netzwerk Anbieters auf, dessen Netzwerk aktiv ist.
+Die Netzwerkanbieter-API gibt eine einzelne Funktionenfunktion an. Wenn das Betriebssystem Informationen zu den Funktionen eines Netzwerkanbieters anfing, ruft der Multiple [*Provider Router*](/windows/desktop/SecGloss/m-gly) (MPR) die [**NPGetCaps-Funktion**](/windows/desktop/api/Npapi/nf-npapi-npgetcaps) jedes Netzwerkanbieters auf, dessen Netzwerk aktiv ist.
 
-Die [**NPgetCaps**](/windows/desktop/api/Npapi/nf-npapi-npgetcaps) -Funktion gibt eine Bitmaske zurück, die angibt, welche Funktionen der Netzwerkanbieter-API der Netzwerkanbieter unterstützt. Die **NPgetCaps** -Funktion ist die einzige Funktion, die ein Netzwerkanbieter implementieren muss. Das Betriebssystem ruft diese Funktion auf, um zu bestimmen, welche anderen Funktionen der Netzwerkanbieter-API der Anbieter unterstützt.
+Die [**NPGetCaps-Funktion**](/windows/desktop/api/Npapi/nf-npapi-npgetcaps) gibt eine Bitmaske zurück, die angibt, welche Funktionen der Netzwerkanbieter-API der Netzwerkanbieter unterstützt. Die **NPGetCaps-Funktion** ist die einzige Funktion, die ein Netzwerkanbieter implementieren muss. Das Betriebssystem ruft diese Funktion auf, um zu bestimmen, welche anderen Funktionen der Netzwerkanbieter-API der Anbieter unterstützt.
 
  
 

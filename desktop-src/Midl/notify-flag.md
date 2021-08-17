@@ -1,9 +1,9 @@
 ---
 title: notify_flag-Attribut
-description: Das Attribut \ notify \_ Flag \ gibt eine Benachrichtigung an, die angibt, ob eine Server Routine aufgerufen wird.
+description: Das Attribut \notify \_ flag\ gibt eine Benachrichtigung zurück, die identifiziert, ob eine Serverroutine aufgerufen wird.
 ms.assetid: a40b7114-d2e3-40c1-a0b1-599428188611
 keywords:
-- notify_flag Attribut-Mittel l
+- notify_flag MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af61999f0527b599cf358c38288a8c67473445a9
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: e9fb7479667fb9757924dcba765c34138cf01c1ad6645ce7bfdc525be393e77f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037814"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119066871"
 ---
-# <a name="notify_flag-attribute"></a>Flag zum Benachrichtigen von \_ Flags
+# <a name="notify_flag-attribute"></a>\_Notify-Flagattribut
 
-Das **\[ Notify \_ Flag \]** -Attribut stellt eine Benachrichtigung bereit, die angibt, ob eine Server Routine aufgerufen wird.
+Das **\[ \_ \] Notify-Flagattribut** stellt eine Benachrichtigung zur Ermittlung des Namens einer Serverroutine zur Benachrichtigung zur Sicher.
 
 ``` syntax
 [notify_flag] procedure-name();
@@ -31,42 +31,42 @@ Das **\[ Notify \_ Flag \]** -Attribut stellt eine Benachrichtigung bereit, die 
 
 <dl> <dt>
 
-*Prozedur Name* 
+*Prozedurname* 
 </dt> <dd>
 
-Der Name der Remote Prozedur, der die Benachrichtigung zum Benachrichtigen von \_ Flags zugeordnet ist.
+Name der Remoteprozedur, der die \_ Benachrichtigungsflagprozedur zugeordnet ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **\[ Notify \_ - \] Flag** -Attribut ähnelt der Verwendung des **\[ Notify \]** -Attributs.
+Das **\[ \_ \] Notify-Flagattribut** ähnelt der Verwendung des **\[ \] notify-Attributs.**
 
-Der Name der Prozedur zum **\[ Benachrichtigen von \_ Flags \]** ist der Name des Remote Prozedur suffixt durch das **\_ Benachrichtigungs \_** Kennzeichen. Die **\_ Benachrichtigung zum Benachrichtigen von \_ Flags** erfordert keine Parameter und gibt kein Ergebnis zurück. Ein Prototyp dieser Prozedur wird auch in der Header Datei generiert. Beispiel: die IDL-Datei enthält Folgendes:
+Der **\[ Name der Benachrichtigungsflagprozedur \_ \]** ist der Name der Remoteprozedur, die mit dem **\_ Benachrichtigungsflag \_ suffixiert wird.** Die **\_ \_ Benachrichtigungsflagprozedur** erfordert keine Parameter und gibt kein Ergebnis zurück. Ein Prototyp dieser Prozedur wird auch in der Headerdatei generiert. Beispiel: Die IDL-Datei enthält Folgendes:
 
 ``` syntax
 MyProcedure([in] short S);
 ```
 
-Geben Sie Folgendes in der ACF für die mittlere Zeit an, um den **\_ Benachrichtigungs- \_ Flag** -Befehl zu generieren:
+Geben Sie im ACF für MIDL Folgendes an, um den Aufruf des **\_ Benachrichtigungsflags \_ zu** generieren:
 
 ``` syntax
 [notify_flag] MyProcedure();
 ```
 
-Der mittlerer l-Compiler generiert Server-Stub-Code, der den folgenden **\_ aufrufsflag \_** -Vorgang enthält:
+Der MIDL-Compiler generiert Serverstubcode, der den folgenden Aufruf der **\_ Benachrichtigungsflagprozedur \_** enthält:
 
 ``` syntax
 MyProcedure_notify_flag();
 ```
 
-Die Header Datei enthält einen Prototyp:
+Die Headerdatei enthält einen Prototyp:
 
 ``` syntax
 void MyProcedure_notify_flag(boolean __MIDL_NotifyFlag);
 ```
 
-" **\_ Mittell \_ notifyflag** " ist " **true** ", wenn die Server Routine aufgerufen wird.
+**\_ MIDL \_ NotifyFlag ist** **TRUE,** wenn die Serverroutine aufgerufen wird.
 
 ## <a name="examples"></a>Beispiele
 
@@ -78,12 +78,12 @@ void MyProcedure_notify_flag(boolean __MIDL_NotifyFlag);
 
 <dl> <dt>
 
-[**informiert**](notify.md)
+[**Benachrichtigen**](notify.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

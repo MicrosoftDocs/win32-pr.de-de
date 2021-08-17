@@ -1,6 +1,6 @@
 ---
-description: Benachrichtigt Sie, dass ein Infotipp für das Chevron angezeigt wird, das dem von der zugehörigen smdata-Struktur angegebenen Element zugeordnet ist.
-title: SMC_DISPLAYCHEVRONTIP Meldung (shobjidl. h)
+description: Benachrichtigt Sie darüber, dass eine Infotip für das Chevron angezeigt wird, das dem element zugeordnet ist, das von der zugehörigen SMDATA-Struktur angegeben wird.
+title: SMC_DISPLAYCHEVRONTIP Nachricht (Shobjidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: e4ec4839-e49a-4563-9bc9-79f9d4d54658
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 09e01fc6ea169d8dcbf5758ace341198166a3a9e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f1107af5cd621bafbc1e463101cee2ea57236b9d29844d6183963134b50ce3ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104485507"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968169"
 ---
-# <a name="smc_displaychevrontip-message"></a>SMC \_ displaychevrontip-Meldung
+# <a name="smc_displaychevrontip-message"></a>SMC \_ DISPLAYCHEVRONTIP-Nachricht
 
-Benachrichtigt Sie, dass ein Infotipp für das Chevron angezeigt wird, das dem von der zugehörigen [**smdata**](/windows/win32/api/shobjidl_core/ns-shobjidl_core-smdata) -Struktur angegebenen Element zugeordnet ist.
+Benachrichtigt Sie, dass eine Infotip für das Chevron angezeigt wird, das dem element zugeordnet ist, das von der zugehörigen [**SMDATA-Struktur**](/windows/win32/api/shobjidl_core/ns-shobjidl_core-smdata) angegeben wird.
 
 
 ```C++
@@ -34,17 +34,17 @@ SMC_DISPLAYCHEVRONTIP
 
 ## <a name="parameters"></a>Parameter
 
-Diese Nachricht weist keine Parameter auf.
+Diese Nachricht enthält keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt "S OK" zurück \_ , um den infotip anzuzeigen. Gibt den Wert "false" zurück \_ , um zu verhindern, dass InfoTipp angezeigt wird.
+Geben Sie S \_ OK zurück, um die Infotip anzuzeigen. Gibt S \_ FALSE zurück, um zu verhindern, dass die Infotip angezeigt wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Benachrichtigung wird von der [**ishellmenucallback:: callbacksm**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellmenucallback-callbacksm) -Methode empfangen.
+Diese Benachrichtigung wird von der [**IShellMenuCallback::CallbackSM-Methode**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellmenucallback-callbacksm) empfangen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -52,8 +52,8 @@ Diese Benachrichtigung wird von der [**ishellmenucallback:: callbacksm**](/windo
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Shobjidl. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Shobjidl. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shobjidl.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Shobjidl.idl</dt> </dl> |
 
 
 

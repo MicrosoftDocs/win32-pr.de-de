@@ -1,7 +1,7 @@
 ---
-description: Identifiziert den Stamm Knoten des indikatorenabschnitts eines Instrumentierungs Manifests.
+description: Identifiziert den Stammknoten des Leistungsindikatorabschnitts eines Instrumentierungsmanifests.
 ms.assetid: f16f432b-466f-4a3c-bc1b-e80b876a2511
-title: Counters-Element
+title: counters-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 11ced77890dba6d47f713642adf9b41d4b30f6a9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d76707f662e756353f215872264cfa3703686fd06d0840fde858d75d26c9693f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119380850"
 ---
-# <a name="counters-element"></a>Counters-Element
+# <a name="counters-element"></a>counters-Element
 
-Identifiziert den Stamm Knoten des indikatorenabschnitts eines Instrumentierungs Manifests.
+Identifiziert den Stammknoten des Leistungsindikatorabschnitts eines Instrumentierungsmanifests.
 
 ``` syntax
 <xs:element name="counters"
@@ -83,9 +83,9 @@ Identifiziert den Stamm Knoten des indikatorenabschnitts eines Instrumentierungs
 </xs:element>
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der übergeordnete Knoten dieses Elements ist das [**Instrumentations**](/windows/desktop/WES/eventmanifestschema-instrumentationtype-complextype) Element des Manifests.
+Der übergeordnete Knoten dieses Elements ist das [**Instrumentierungselement**](/windows/desktop/WES/eventmanifestschema-instrumentationtype-complextype) des Manifests.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,8 +93,8 @@ Der übergeordnete Knoten dieses Elements ist das [**Instrumentations**](/window
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

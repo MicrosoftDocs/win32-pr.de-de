@@ -1,83 +1,83 @@
 ---
-description: Dieses Thema enthält Aktionen zum Erstellen von Code, der mehrere Märkte unterstützt. Berücksichtigen Sie diese Anweisungen als Leitfaden für den Code Entwurf und als Metriken, wenn Sie die Builds auswerten.
+description: Dieses Thema enthält Aktionen zum Erstellen von Code, der mehrere Märkte unterstützt. Betrachten Sie diese Anweisungen als Leitfaden beim Codeentwurf und als Metriken, wenn Sie die Builds auswerten.
 ms.assetid: cf2ac58e-7fc3-4635-8b82-586a0732b2a3
-title: Internationalisierungs Checkliste
+title: Prüfliste für die Internationalisierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 22b18ef8cf88efa8d496d19c0b66208cd44abaf7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cd4650f7bd1111f35c911d6efe12bfbec4b537f2cdabdc50160965b5e602708b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119147513"
 ---
-# <a name="internationalization-checklist"></a>Internationalisierungs Checkliste
+# <a name="internationalization-checklist"></a>Prüfliste für die Internationalisierung
 
-Dieses Thema enthält Aktionen zum Erstellen von Code, der mehrere Märkte unterstützt. Berücksichtigen Sie diese Anweisungen als Leitfaden für den Code Entwurf und als Metriken, wenn Sie die Builds auswerten.
+Dieses Thema enthält Aktionen zum Erstellen von Code, der mehrere Märkte unterstützt. Betrachten Sie diese Anweisungen als Leitfaden beim Codeentwurf und als Metriken, wenn Sie die Builds auswerten.
 
 -   Erstellen Sie Programmspezifikationen, die von Anfang an internationale Überlegungen berücksichtigen.
-    -   Entwerfen Sie Symbole und Bitmaps so, dass Sie in den Zielmärkten sinnvoll und nicht anstößig sind und keinen Text enthalten.
-    -   Design Menüs und Dialogfelder, um Platz für die Texterweiterung zu belassen. Beispielsweise werden englische Zeichen folgen häufig um 40% erweitert, wenn Sie in Deutsch oder Niederländisch übersetzt werden.
-    -   Verwenden Sie keine oder Kultur abhängigen Verweise in Benutzeroberflächen Elementen oder-Meldungen.
-    -   Erstellen Sie Tastenkombinationen, die auf internationalen Tastaturen zugänglich sind. Vermeiden Sie z. b. die Verwendung von Interpunktions Zeichen Schlüsseln als Tastenkombinationen, da Sie nicht immer auf internationalen Tastaturen gefunden werden oder vom Benutzer leicht erstellt werden. Beispiele für Tastaturlayouts finden Sie unter [Windows-Tastaturlayouts](https://msdn.microsoft.com/goglobal/bb964651.aspx).
-    -   Beachten Sie lokale Gesetze, die sich auf featureentwürfe auswirken, wie z. b. Anforderungen, dass Regierungseinrichtungen Software erwerben, die mehrere offizielle
-    -   Entwickeln Sie Verträge von Drittanbietern, die die internationalen Benutzeroberflächen Standards und Entwurfsentscheidungen Ihrer Organisation unterstützen.
-    -   Verwenden Sie konsistente Terminologie in Benutzeroberflächen Zeichenfolgen, die übersetzt werden müssen.
+    -   Entwerfen Sie Symbole und Bitmaps so, dass sie in Ihren Zielmarkten aussagekräftig und nicht anstößig sind und keinen Text enthalten.
+    -   Entwerfen Sie Menüs und Dialogfelder, um Platz für die Texterweiterung zu lassen. Beispielsweise werden englische Zeichenfolgen häufig um 40 % erweitert, wenn sie ins Deutsche oder Niederländisch übersetzt werden.
+    -   Verwenden Sie keine Slang- oder kulturspezifischen Verweise in Benutzeroberflächenelementen oder Meldungen.
+    -   Erstellen Sie Tastenkombinationen, auf die auf internationalen Tastaturen zugegriffen werden kann. Vermeiden Sie beispielsweise die Verwendung von Interpunktionszeichentasten als Tastenkombinationen, da sie nicht immer auf internationalen Tastaturen zu finden sind oder einfach vom Benutzer erzeugt werden. Beispiele für Tastaturlayouts finden Sie unter [Windows Tastaturlayouts](https://msdn.microsoft.com/goglobal/bb964651.aspx).
+    -   Berücksichtigen Sie lokale Gesetze, die sich auf Featureentwürfe ausdruppen, z. B. Anforderungen, die Behörden an Software erwerben, die mehrere offizielle Sprachen unterstützt.
+    -   Entwickeln Sie Drittanbietervereinbarungen, die die internationalen Ui-Standards und Entwurfsentscheidungen Ihrer Organisation unterstützen.
+    -   Verwenden Sie konsistente Terminologie in Zeichenfolgen der Benutzeroberfläche, die übersetzt werden müssen.
 
 <!-- -->
 
--   Erstellen Sie Code, der unabhängig vom Gebiets Schema ist.
-    -   Verketten Sie keine Zeichen folgen, um Sätze zu bilden.
-    -   Verwenden Sie eine angegebene Zeichen folgen Variable nicht in mehr als einem Kontext, wie z. b. die Wiederverwendung eines Satz Fragments in verschiedenen Nachrichten und Eingabe Aufforderungen, da solche Zeichen folgen möglicherweise nicht leicht übersetzt werden.
-    -   Dokumentieren Sie Zeichen folgen mithilfe von Kommentaren, um Kontext für Konvertierer bereitzustellen, und markieren Sie Zeichen folgen oder Zeichen, die nicht lokalisiert werden sollten.
-    -   Verwenden Sie keine hart codierten Zeichen Konstanten, numerischen Konstanten, Bildschirm Positionen, Dateinamen oder Pfadnamen, die eine bestimmte Sprache voraussetzen.
-    -   Stellen Sie die Puffer groß genug, um übersetzte Zeichen folgen aufzunehmen.
-    -   Hiermit wird die Eingabe von Daten mit Formaten zugelassen, die je nach Gebiets Schema variieren, z. b. Datumsangaben, Uhrzeiten und Währungen.
-    -   Verwenden Sie Papiergröße, Umschlag Größe und andere Standardwerte, die für ein bestimmtes Gebiets Schema geeignet sind.
-    -   Stellen Sie sicher, dass jede Sprachausgabe Dokumente lesen kann, die von den anderen Editionen erstellt wurden.
-    -   Stellen Sie ggf. Unterstützung für Gebiets Schema spezifische Hardware bereit.
-    -   Konfigurieren Sie Features, die nicht für internationale Märkte gelten, als Implementierungs Optionen, die problemlos deaktiviert werden können.
+-   Erstellen Sie Code, der unabhängig vom -Locale ist.
+    -   Verketten Sie keine Zeichenfolgen, um Sätze zu bilden.
+    -   Verwenden Sie eine bestimmte Zeichenfolgenvariable nicht in mehr als einem Kontext, z. B. die Wiederverwendung eines Satzfragments in verschiedenen Nachrichten und Eingabeaufforderungen, da solche Zeichenfolgen möglicherweise nicht einfach zu übersetzen sind.
+    -   Dokumentieren Sie Zeichenfolgen, die Kommentare verwenden, um Kontext für Translators zu bieten, und markieren Sie Zeichenfolgen oder Zeichen, die nicht lokalisiert werden sollen.
+    -   Verwenden Sie keine hart codierten Zeichenkonstten, numerischen Konstanten, Bildschirmpositionen, Dateinamen oder Pfadnamen, die eine bestimmte Sprache voraussetzen.
+    -   Sorgen Sie dafür, dass Puffer groß genug sind, um übersetzte Zeichenfolgen zu enthalten.
+    -   Lassen Sie die Eingabe von Daten mit Formaten zu, die je nach Locale variieren, z. B. Datumsangaben, Zeiten und Währungen.
+    -   Verwenden Sie Papiergröße, Umschlaggröße und andere Standardwerte, die für ein bestimmtes Locale geeignet sind.
+    -   Stellen Sie sicher, dass jede Sprachedition Dokumente lesen kann, die von den anderen Editionen erstellt wurden.
+    -   Stellen Sie bei Bedarf Unterstützung für die lokale Hardware zur Verfügung.
+    -   Konfigurieren Sie Features, die nicht für internationale Märkte gelten, als Implementierungsoptionen, die problemlos deaktiviert werden können.
 
 <!-- -->
 
--   Erstellen Sie Code, der von Microsoft Windows angebotene internationale Funktionen nutzt.
-    -   Verwenden Sie internationale Informationen, die vom System unterstützt werden (Unterstützung der Landessprache).
-    -   Verwenden Sie Systemfunktionen für Sortierung, Fall Konvertierung und Zeichen folgen Zuordnung.
-    -   Verwenden Sie generische textlayoutfunktionen.
-    -   Reagieren Sie auf Änderungen an den internationalen Einstellungen in der Systemsteuerung.
-    -   Behandeln Sie die "WM \_ inputlangchangerequest"-Nachricht.
-    -   Unterstützung für Eingabemethoden-Editoren, vertikalen Text und Zeilenumbruch Regeln in ostasiatischen Editionen.
+-   Erstellen Sie Code, der die internationalen Funktionen von Microsoft Windows.
+    -   Verwenden Sie vom System enthaltene internationale Informationen (Unterstützung der Landessprache).
+    -   Verwenden Sie Systemfunktionen für Sortierung, Fallkonvertierung und Zeichenfolgenzuordnung.
+    -   Verwenden Sie generische Textlayoutfunktionen.
+    -   Reagieren Sie auf Änderungen an internationalen Einstellungen in Systemsteuerung.
+    -   Behandeln Sie die WM \_ INPUTLANGCHANGEREQUEST-Nachricht.
+    -   Unterstützung von Eingabemethode-Editoren, vertikalem Text und Zeilenumbruchregeln in ostasiatischen Editionen.
 
 <!-- -->
 
 -   Kompilieren Sie alle internationalen Editionen des Programms aus einem Satz von Quelldateien.
-    -   Minimieren oder eliminieren Sie Mechanismen, die erfordern, dass Code für verschiedene sprach Editionen neu kompiliert wird.
-    -   Speichern Sie lokalisierbare Elemente, z. b. Zeichen folgen und Symbole, in Windows-Ressourcen Dateien.
-    -   Speichern Sie Dokumente in allen Sprach Editionen, die das gleiche Dateiformat aufweisen.
+    -   Minimieren oder beseitigen Sie Mechanismen, die erfordern, dass Code für verschiedene Spracheditionen neu kompiliert wird.
+    -   Store lokalisierbare Elemente, z. B. Zeichenfolgen und Symbole, in Windows Ressourcendateien.
+    -   Store dokumente in allen Spracheditionen mit demselben Dateiformat.
 
 <!-- -->
 
--   Unterstützt unterschiedliche Zeichensätze, nicht nur die lateinische 1-Codepage, Nummer 1252.
-    -   Das Programm unterstützt Netzwerkumgebungen, in denen Computerbetriebs Systeme mit unterschiedlichen Standard Codepages ausführen.
-    -   Verwenden Sie getcpinfoex zum Abrufen von Lead-Byte-Bereichen für ostasiatische Codepages.
-    -   Analysieren Sie Doppelbyte Zeichen in ostasiatischen –-Anwendungen, es sei denn, der Code basiert auf Unicode.
+-   Unterstützung verschiedener Zeichensätze, nicht nur der lateinischen 1-Codepage, Nummer 1252.
+    -   Das Programm unterstützt Netzwerkumgebungen, in denen Computer Betriebssysteme mit unterschiedlichen Standardcodepages ausführen.
+    -   Verwenden Sie GetCPInfoEx, um Lead-Byte-Bereiche für ostasiatische Codepages abzurufen.
+    -   Analysieren von Doppel bytezeichen in ostasiatischen Anwendungen, es sei denn, der Code basiert auf Unicode.
     -   Unterstützung von Unicode oder Konvertierung zwischen Unicode und der lokalen Codepage.
-    -   Gehen Sie nicht davon aus, dass alle Zeichen 8-Bit oder 16-Bit sind.
+    -   Gehen Sie nicht davon aus, dass alle Zeichen 8-Bit- oder 16-Bit-Zeichen sind.
     -   Verwenden Sie generische Datentypen und generische Funktionsprototypen.
-    -   Verwenden Sie die Schriftart CharSet-Eigenschaft, die enumfontfamiliesex und die allgemeine Dialog Funktion "choosefont" aufruft.
-    -   Sie können Text mit den Schriftarten anzeigen und drucken, die für das Gebiets Schema geeignet sind.
+    -   Verwenden Sie die charset-Eigenschaft der Schriftart, die EnumFontFamiliesEx und die allgemeine Dialogfunktion ChooseFont aufruft.
+    -   Anzeigen und Drucken von Text mit den schriftarten, die für das -Locale geeignet sind.
 
 <!-- -->
 
 -   Testen Sie die internationalen Features des Programms.
-    -   Der übersetzte Text muss den Standards von systemeigenen Referenten entsprechen.
-    -   Die Größe der Dialog Felder sollte ordnungsgemäß geändert werden, und der Text sollte bei der Anzeige unterschiedlicher Sprachen ordnungsgemäß durchgeführt werden.
-    -   Dialog Felder, Status leisten, Symbolleisten und Menüs sollten auf den Bildschirm passen und lesbar lesbar sein, wenn die Anzeige in unterschiedlichen Auflösungen für alle übersetzten Sprachen festgelegt ist.
-    -   Menü-und Dialogfeld-Accelerators sollten eindeutig sein.
-    -   Benutzer sollten in der Lage sein, Zeichen aus nicht-europäischen Skripts in Dokumente, Dialogfelder und Dateinamen einzugeben.
-    -   Benutzer sollten in der Lage sein, Zeichen aus nichteuropäischen Skripts auszuschneiden, einzufügen, zu speichern und zu drucken.
-    -   Sortierung und Groß-/Kleinschreibung sollten für verschiedene Gebiets Schemas genau sein.
-    -   Die Anwendung sollte in lokalisierten Editionen von Windows ordnungsgemäß funktionieren.
+    -   Übersetzter Text sollte den Standards nativer Sprecher entsprechen.
+    -   Die Größe der Dialogfelder sollte ordnungsgemäß geändert werden, und Text sollte entsprechend bindestrichiert werden, wenn verschiedene Sprachen angezeigt werden.
+    -   Dialogfelder, Statusleisten, Symbolleisten und Menüs sollten auf den Bildschirm passen und lesbar sein, wenn die Anzeige für alle übersetzten Sprachen mit unterschiedlichen Auflösungen festgelegt ist.
+    -   Die Zugriffstasten für Menüs und Dialogfelder sollten eindeutig sein.
+    -   Benutzer sollten Zeichen aus nicht europäischen Skripts in Dokumente, Dialogfelder und Dateinamen eingeben können.
+    -   Benutzer sollten zeichen aus nicht europäischen Skripts erfolgreich ausschneiden, einfügen, speichern und drucken können.
+    -   Sortierung und Fallkonvertierung sollten für unterschiedliche Locales genau sein.
+    -   Die Anwendung sollte ordnungsgemäß in lokalisierten Editionen von Windows.
 
  
 

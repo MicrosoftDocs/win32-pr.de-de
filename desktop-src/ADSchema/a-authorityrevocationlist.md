@@ -1,11 +1,11 @@
 ---
-title: Authority-Sperrung-List-Attribut
-description: Zertifikat übergreifende Zertifikat Sperr Liste.
+title: Authority-Revocation-List-Attribut
+description: Zertifikatübergreifende Zertifikatsperrliste.
 ms.assetid: a9bc7ed3-4600-41a7-bbe5-4ec546a421fa
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Authority-Sperrung-List-Attribut
-- AD-Schema des Autorität revocationlist-Attributs
+- AD-Schema des Authority-Revocation-List-Attributs
+- AUTHORITYRevocationList-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fccc08cfb43bf4175bb51f2324e22c247d01f042
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 5dac5f2cdaf204a82c30451df5df50c230748c3afd747fe40542fd7c26cfe423
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104123187"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119443000"
 ---
-# <a name="authority-revocation-list-attribute"></a>Authority-Sperrung-List-Attribut
+# <a name="authority-revocation-list-attribute"></a>Authority-Revocation-List-Attribut
 
-Zertifikat übergreifende Zertifikat Sperr Liste.
+Zertifikatübergreifende Zertifikatsperrliste.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | Authority-Sperrungs Liste                             |
-| LDAP-Display-Name | Autorität revocationlist                               |
+| CN                | Authority-Revocation-List                             |
+| Ldap-Anzeigename | authorityRevocationList                               |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 2.5.4.38                                              |
-| System-ID-GUID    | 1677578d-47b3-11d1-a9c3-0000b80367c1                  |
+| System-Id-Guid    | 1677578d-47f3-11d1-a9c3-0000f80367c1                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Zertifikat übergreifende Zertifikat Sperr Liste.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Zertifikat übergreifende Zertifikat Sperr Liste.
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                         |
 | MAPI-Id                | 0x8026                                                                                                                                     |
-| System-Only            | False                                                                                                                                      |
-| Ist-einwertig       | False                                                                                                                                      |
-| Ist indiziert             | False                                                                                                                                      |
-| Im globalen Katalog      | False                                                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                               |
+| System-Only            | Falsch                                                                                                                                      |
+| Is-Single-Valued       | Falsch                                                                                                                                      |
+| Ist indiziert             | Falsch                                                                                                                                      |
+| Im globalen Katalog      | Falsch                                                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                               |
 | Range-Lower            | \-                                                                                                                                         |
 | Range-Upper            | \-                                                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                                                 |
-| In verwendete Klassen        | [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> [**CRL-Verteilungs Punkt**](c-crldistributionpoint.md)<br/> |
+| In verwendete Klassen        | [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> [**CRL-Verteilungspunkt**](c-crldistributionpoint.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Zertifikat übergreifende Zertifikat Sperr Liste.
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                         |
 | MAPI-Id                | 0x8026                                                                                                                                     |
-| System-Only            | False                                                                                                                                      |
-| Ist-einwertig       | False                                                                                                                                      |
-| Ist indiziert             | False                                                                                                                                      |
-| Im globalen Katalog      | False                                                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                               |
+| System-Only            | Falsch                                                                                                                                      |
+| Is-Single-Valued       | Falsch                                                                                                                                      |
+| Ist indiziert             | Falsch                                                                                                                                      |
+| Im globalen Katalog      | Falsch                                                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                               |
 | Range-Lower            | \-                                                                                                                                         |
 | Range-Upper            | \-                                                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                                                 |
-| In verwendete Klassen        | [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> [**CRL-Verteilungs Punkt**](c-crldistributionpoint.md)<br/> |
+| In verwendete Klassen        | [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> [**CRL-Verteilungspunkt**](c-crldistributionpoint.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Zertifikat übergreifende Zertifikat Sperr Liste.
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                         |
 | MAPI-Id                | 0x8026                                                                                                                                     |
-| System-Only            | False                                                                                                                                      |
-| Ist-einwertig       | False                                                                                                                                      |
-| Ist indiziert             | False                                                                                                                                      |
-| Im globalen Katalog      | False                                                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                               |
+| System-Only            | Falsch                                                                                                                                      |
+| Is-Single-Valued       | Falsch                                                                                                                                      |
+| Ist indiziert             | Falsch                                                                                                                                      |
+| Im globalen Katalog      | Falsch                                                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                               |
 | Range-Lower            | \-                                                                                                                                         |
 | Range-Upper            | \-                                                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                                                 |
-| In verwendete Klassen        | [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> [**CRL-Verteilungs Punkt**](c-crldistributionpoint.md)<br/> |
+| In verwendete Klassen        | [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> [**CRL-Verteilungspunkt**](c-crldistributionpoint.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Zertifikat übergreifende Zertifikat Sperr Liste.
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                         |
 | MAPI-Id                | 0x8026                                                                                                                                     |
-| System-Only            | False                                                                                                                                      |
-| Ist-einwertig       | False                                                                                                                                      |
-| Ist indiziert             | False                                                                                                                                      |
-| Im globalen Katalog      | False                                                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                               |
+| System-Only            | Falsch                                                                                                                                      |
+| Is-Single-Valued       | Falsch                                                                                                                                      |
+| Ist indiziert             | Falsch                                                                                                                                      |
+| Im globalen Katalog      | Falsch                                                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                               |
 | Range-Lower            | \-                                                                                                                                         |
 | Range-Upper            | \-                                                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                                                 |
-| In verwendete Klassen        | [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> [**CRL-Verteilungs Punkt**](c-crldistributionpoint.md)<br/> |
+| In verwendete Klassen        | [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> [**CRL-Verteilungspunkt**](c-crldistributionpoint.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Zertifikat übergreifende Zertifikat Sperr Liste.
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                         |
 | MAPI-Id                | 0x8026                                                                                                                                     |
-| System-Only            | False                                                                                                                                      |
-| Ist-einwertig       | False                                                                                                                                      |
-| Ist indiziert             | False                                                                                                                                      |
-| Im globalen Katalog      | False                                                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                               |
+| System-Only            | Falsch                                                                                                                                      |
+| Is-Single-Valued       | Falsch                                                                                                                                      |
+| Ist indiziert             | Falsch                                                                                                                                      |
+| Im globalen Katalog      | Falsch                                                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                               |
 | Range-Lower            | \-                                                                                                                                         |
 | Range-Upper            | \-                                                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                                                 |
-| In verwendete Klassen        | [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> [**CRL-Verteilungs Punkt**](c-crldistributionpoint.md)<br/> |
+| In verwendete Klassen        | [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> [**CRL-Verteilungspunkt**](c-crldistributionpoint.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Zertifikat übergreifende Zertifikat Sperr Liste.
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                         |
 | MAPI-Id                | 0x8026                                                                                                                                     |
-| System-Only            | False                                                                                                                                      |
-| Ist-einwertig       | False                                                                                                                                      |
-| Ist indiziert             | False                                                                                                                                      |
-| Im globalen Katalog      | False                                                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                               |
+| System-Only            | Falsch                                                                                                                                      |
+| Is-Single-Valued       | Falsch                                                                                                                                      |
+| Ist indiziert             | Falsch                                                                                                                                      |
+| Im globalen Katalog      | Falsch                                                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                               |
 | Range-Lower            | \-                                                                                                                                         |
 | Range-Upper            | \-                                                                                                                                         |
 | Search-Flags           | 0x00000000                                                                                                                                 |
 | System-Flags           | 0x00000010                                                                                                                                 |
-| In verwendete Klassen        | [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> [**CRL-Verteilungs Punkt**](c-crldistributionpoint.md)<br/> |
+| In verwendete Klassen        | [**Zertifizierungsstelle**](c-certificationauthority.md)<br/> [**CRL-Verteilungspunkt**](c-crldistributionpoint.md)<br/> |
 
 
 

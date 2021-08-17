@@ -1,25 +1,25 @@
 ---
-title: Fenster Stationen und Desktops
-description: Um zusätzliche Sicherheit zu gewährleisten, werden Benutzeroberflächen Objekte mithilfe von Fenster Stationen und Desktops verwaltet.
+title: Fensterstationen und Desktops
+description: Um zusätzliche Sicherheit zu gewährleisten, werden Benutzeroberflächenobjekte mithilfe von Fensterstationen und Desktops verwaltet.
 ms.assetid: 34060778-c2a9-4b13-af75-7dff4a1aa82b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 98caf1be6f719f6f978536fca54e12d567b2a6d6
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: dd819dd5304640b15d15cfc75f6c544815beb1ed16b5b9a74b3697503e1f78db
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104209296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119346680"
 ---
-# <a name="window-stations-and-desktops"></a>Fenster Stationen und Desktops
+# <a name="window-stations-and-desktops"></a>Fensterstationen und Desktops
 
-Windows bietet drei Hauptkategorien von Objekten: Benutzeroberfläche, Grafikgeräte Schnittstelle (Graphics Device Interface, GDI) und Kernel. [Kernel Objekte](/windows/desktop/SysInfo/kernel-objects) sind Sicherungs fähig, [Benutzer Objekte](/windows/desktop/SysInfo/user-objects) und [GDI-Objekte](/windows/desktop/SysInfo/gdi-objects) hingegen nicht. Um zusätzliche Sicherheit zu gewährleisten, werden Benutzeroberflächen Objekte daher mithilfe von Fenster Stationen und Desktops verwaltet, die selbst Sicherungs fähige Objekte sind.
+Windows bietet drei Hauptkategorien von Objekten: Benutzeroberfläche, Grafikgeräteschnittstelle (GDI) und Kernel. [Kernelobjekte](/windows/desktop/SysInfo/kernel-objects) sind sicherungsfähig, [Benutzerobjekte](/windows/desktop/SysInfo/user-objects) und [GDI-Objekte](/windows/desktop/SysInfo/gdi-objects) hingegen nicht. Aus diesem Grund werden Benutzeroberflächenobjekte mithilfe von Fensterstationen und Desktops verwaltet, die selbst sicherungsfähige Objekte sind, um zusätzliche Sicherheit zu bieten.
 
-Weitere Informationen finden Sie unter den folgenden Themen:
+Weitere Informationen finden Sie in den folgenden Themen:
 
--   [Informationen zu Fenster Stationen und Desktops](about-window-stations-and-desktops.md)
--   [Fenster Station und Desktop Referenz](window-station-and-desktop-reference.md)
+-   [Informationen zu Fensterstationen und Desktops](about-window-stations-and-desktops.md)
+-   [Window Station and Desktop Reference](window-station-and-desktop-reference.md)
 
- 
+ 
 
- 
+ 

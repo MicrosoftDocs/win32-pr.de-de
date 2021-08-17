@@ -1,12 +1,12 @@
 ---
-title: Create-Methode der Win32_Service-Klasse (Remotedesktopdienste)
-description: 'Create-Methode der Win32_Service-Klasse (Remotedesktopdienste): Erstellt einen neuen Systemdienst.'
+title: Create-Methode der Win32_Service -Klasse (Remotedesktopdienste)
+description: 'Create-Methode der Win32_Service -Klasse (Remotedesktopdienste): Erstellt einen neuen Systemdienst.'
 ms.assetid: 805754AA-B62A-4324-B289-503C42BEFA49
 ms.tgt_platform: multiple
 keywords:
-- Erstellen von methoden Remotedesktopdienste
-- Erstellen einer Methode Remotedesktopdienste , Win32_Service-Klasse
-- Win32_Service Klasse Remotedesktopdienste , Create-Methode
+- Erstellen einer Remotedesktopdienste
+- Create method Remotedesktopdienste , Win32_Service class
+- Win32_Service klasse Remotedesktopdienste , Create-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 14b776d3e451d84c63be5bb61b98ed22081e1a29
-ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
+ms.openlocfilehash: 911ecec0c0ad2cc248bcfdfa2b4e475538d6eff35e8d7bd568df29302b610ee9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111387119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137883"
 ---
-# <a name="create-method-of-the-win32_service-class-remote-desktop-services"></a>Create-Methode der Win32_Service-Klasse (Remotedesktopdienste)
+# <a name="create-method-of-the-win32_service-class-remote-desktop-services"></a>Create-Methode der Win32_Service -Klasse (Remotedesktopdienste)
 
-Die [Methode WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) **erstellen** erstellt einen neuen Systemdienst.
+Die **Create** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) erstellt einen neuen Systemdienst.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,7 +59,7 @@ uint32 Create(
 *Name* \[ In\]
 </dt> <dd>
 
-Name des Diensts, der in der **Create-Methode** installiert werden soll. Die maximale Zeichenfolgenlänge beträgt 256 Zeichen. Die Service Control Manager-Datenbank behält die Groß-/Kleinschreibung der Zeichen bei, bei Dienstnamenvergleichen wird jedoch immer die Groß-/Kleinschreibung beachtet. Schrägstriche (/) und doppelte umgekehrte Schrägstriche \\ \\ () sind ungültige Dienstnamenzeichen.
+Name des Diensts, der in der **Create-Methode installiert werden** soll. Die maximale Zeichenfolgenlänge beträgt 256 Zeichen. Die Service Control Manager-Datenbank behält die Groß-/Kleinschreibung der Zeichen bei, bei Dienstnamenvergleichen wird die Groß-/Kleinschreibung jedoch immer nicht beachtet. Schrägstriche (/) und doppelte schräge Schrägstriche \\ \\ () sind ungültige Dienstnamenzeichen.
 
 </dd> <dt>
 
@@ -77,7 +77,7 @@ Beispiel: "Atdisk".
 *PathName* \[ In\]
 </dt> <dd>
 
-Vollqualifizierte Pfad zur ausführbaren Datei, die den Dienst implementiert.
+Vollqualifizierter Pfad zur ausführbaren Datei, die den Dienst implementiert.
 
 Beispiel: \\ "SystemRoot \\ \\ System32-Treiber \\afd.sys".
 
@@ -114,7 +114,7 @@ Adapter
 8 (0x8)
 </dt> <dd>
 
-Erkennungstreiber
+Recognizer Driver
 
 </dd> <dt>
 
@@ -177,35 +177,35 @@ Das System versucht, mit einer guten Konfiguration zu beginnen.
 *StartMode* \[ In\]
 </dt> <dd>
 
-Startmodus des Windows-Basisdiensts.
+Startmodus des Windows Basisdiensts.
 
 <dt>
 
 Start
 </dt> <dd>
 
-Vom Betriebssystemladeprogramm gestarteter Gerätetreiber. Dieses Wert ist nur für Treiberdienste gültig.
+Vom Betriebssystemlader gestarteter Gerätetreiber. Dieses Wert ist nur für Treiberdienste gültig.
 
 </dd> <dt>
 
 System
 </dt> <dd>
 
-Der Vom Initialisierungsprozess des Betriebssystems gestartete Gerätetreiber. Dieses Wert ist nur für Treiberdienste gültig.
+Der Gerätetreiber wurde durch den Initialisierungsprozess des Betriebssystems gestartet. Dieses Wert ist nur für Treiberdienste gültig.
 
 </dd> <dt>
 
 Automatisch
 </dt> <dd>
 
-Dienst, der während des Systemstarts automatisch vom Dienststeuerungs-Manager gestartet werden soll.
+Der Dienst wird automatisch vom Dienststeuerungs-Manager während des Systemstarts gestartet.
 
 </dd> <dt>
 
 Manuell
 </dt> <dd>
 
-Dienst, der vom Dienststeuerungs-Manager gestartet werden soll, wenn ein Prozess die [**StartService-Methode**](win32-terminalservice-startservice.md) aufruft.
+Der Dienst, der vom Dienststeuerungs-Manager gestartet werden soll, wenn ein Prozess die [**StartService-Methode**](win32-terminalservice-startservice.md) aufruft.
 
 </dd> <dt>
 
@@ -219,50 +219,50 @@ Dienst, der nicht mehr gestartet werden kann.
 *DesktopInteract* \[ In\]
 </dt> <dd>
 
-True gibt an, dass der Dienst Fenster auf dem Desktop erstellen oder mit ihnen kommunizieren kann.
+True **gibt an,** dass der Dienst Fenster auf dem Desktop erstellen oder mit ihnen kommunizieren kann.
 
 </dd> <dt>
 
 *StartName* \[ In\]
 </dt> <dd>
 
-Kontoname, unter dem der Dienst ausgeführt wird. Je nach Diensttyp kann der Kontoname im Format DomainName \\ Username oder User Principal Name (UPN) () Username@DomainName vorliegen. Der Dienstprozess wird bei der Ausführung mit einer dieser beiden Formen protokolliert. Wenn das Konto zur integrierten Domäne gehört, . \\ Der Benutzername kann angegeben werden. Wenn **NULL** angegeben wird, wird der Dienst als LocalSystem-Konto angemeldet. Für Einen Kernel- oder Treiber auf Systemebene enthält *StartName* den Namen des Treiberobjekts (d.h. \\ FileSystem \\ Rdr oder \\ Driver \\ Xns), den das Ein- und Ausgabesystem (E/A) zum Laden des Gerätetreibers verwendet. Wenn **NULL** angegeben ist, wird der Treiber mit einem Standardobjektnamen ausgeführt, der vom E/A-System basierend auf dem Dienstnamen erstellt wurde. Beispiel: DWDOM \\ Admin.
+Kontoname, unter dem der Dienst ausgeführt wird. Je nach Diensttyp kann der Kontoname das Format DomainName Username oder \\ UpN (UpN) (Benutzerprinzipalname ( ) Username@DomainName haben. Der Dienstprozess wird mit einer dieser beiden Formen protokolliert, wenn er ausgeführt wird. Wenn das Konto zur integrierten Domäne gehört, . \\ Der Benutzername kann angegeben werden. Wenn **NULL** angegeben wird, wird der Dienst als LocalSystem-Konto angemeldet. Für Einen Kernel oder Treiber auf Systemebene enthält *StartName* den Treiberobjektnamen (d. h. FileSystem Rdr oder Driver Xns), den das Eingabe- und Ausgabesystem \\ \\ \\ (E/A) zum Laden des \\ Gerätetreibers verwendet. Wenn **NULL** angegeben wird, wird der Treiber mit einem Standardobjektnamen ausgeführt, der vom E/A-System basierend auf dem Dienstnamen erstellt wird. Beispiel: \\ DWDOM-Administrator.
 
 </dd> <dt>
 
 *StartPassword* \[ In\]
 </dt> <dd>
 
-Kennwort für den vom *StartName-Parameter* angegebenen Kontonamen. Geben Sie **NULL** an, wenn Sie das Kennwort nicht ändern. Geben Sie eine leere Zeichenfolge an, wenn der Dienst kein Kennwort besitzt.
+Kennwort für den Kontonamen, der durch den *StartName-Parameter angegeben* wird. Geben **Sie NULL** an, wenn Sie das Kennwort nicht ändern. Geben Sie eine leere Zeichenfolge an, wenn der Dienst kein Kennwort besitzt.
 
 </dd> <dt>
 
 *LoadOrderGroup* \[ In\]
 </dt> <dd>
 
-Gruppenname, der dem neuen Dienst zugeordnet ist. Ladereihenfolgengruppen sind in der Registrierung enthalten und bestimmen die Reihenfolge, in der Dienste in das Betriebssystem geladen werden. Wenn der Zeiger **NULL** ist oder auf eine leere Zeichenfolge zeigt, gehört der Dienst nicht zu einer Gruppe. Abhängigkeiten zwischen Gruppen sollten im *LoadOrderGroupDependencies-Parameter* aufgeführt werden. Dienste in der Liste der Ladereihenfolgegruppen werden zuerst gestartet, gefolgt von Diensten in Gruppen, die nicht in der Liste der Lastenreihenfolgegruppen enthalten sind, gefolgt von Diensten, die keiner Gruppe angehören. Die Registrierung enthält eine Liste der Lastreihenfolgegruppen unter:
+Gruppenname, der dem neuen Dienst zugeordnet ist. Ladereihenfolgegruppen sind in der Registrierung enthalten und bestimmen die Reihenfolge, in der Dienste in das Betriebssystem geladen werden. Wenn der Zeiger NULL **ist** oder auf eine leere Zeichenfolge zeigt, gehört der Dienst nicht zu einer Gruppe. Abhängigkeiten zwischen Gruppen sollten im *LoadOrderGroupDependencies-Parameter aufgeführt* werden. Dienste in der Liste der Last reihenfolgengruppen werden zuerst gestartet, gefolgt von Diensten in Gruppen, die nicht in der Liste der Last reihenfolgengruppen enthalten sind, gefolgt von Diensten, die nicht zu einer Gruppe gehören. Die Registrierung verfügt über eine Liste der Last reihenfolgengruppen unter:
 
-**HKEY \_ LOCAL \_ MACHINE** \\ **System** \\ **CurrentControlSet** \\ **Control** \\ **ServiceGroupOrder**
+**HKEY \_ LOCAL \_ MACHINE-System** \\  \\ **CurrentControlSet-Steuerelement** \\  \\ **ServiceGroupOrder**
 
 </dd> <dt>
 
 *LoadOrderGroupDependencies* \[ In\]
 </dt> <dd>
 
-Array von Lastreihenfolgegruppen, die vor diesem Dienst gestartet werden müssen. Jedes Element im Array wird durch **NULL** getrennt, und die Liste wird durch zwei **NULL-Werte** beendet. In Visual Basic oder Skripts können Sie ein vbArray übergeben. Wenn der Zeiger **NULL** ist oder auf eine leere Zeichenfolge zeigt, weist der Dienst keine Abhängigkeiten auf. Gruppennamen muss das **Zeichen SC GROUP \_ \_ IDENTIFIER** (definiert in der Datei Winsvc.h) vorangestellt sein, um sie von einem Dienstnamen zu unterscheiden, da Dienste und Dienstgruppen denselben Namespace verwenden. Abhängigkeit von einer Gruppe bedeutet, dass dieser Dienst ausgeführt werden kann, wenn mindestens ein Mitglied der Gruppe ausgeführt wird, nachdem versucht wurde, alle Mitglieder der Gruppe zu starten.
+Array von Last reihenfolgengruppen, die vor diesem Dienst gestartet werden müssen. Jedes Element im Array wird durch **NULL** getrennt, und die Liste wird durch zwei **NULL-Werte** beendet. In Visual Basic skript können Sie ein vbArray übergeben. Wenn der Zeiger NULL **ist** oder auf eine leere Zeichenfolge zeigt, weist der Dienst keine Abhängigkeiten auf. Gruppennamen muss das SC **\_ GROUP \_ IDENTIFIER-Zeichen** (definiert in der Datei Winsvc.h) vorangestellt werden, um es von einem Dienstnamen zu unterscheiden, da Dienste und Dienstgruppen denselben Namespace verwenden. Abhängigkeit von einer Gruppe bedeutet, dass dieser Dienst ausgeführt werden kann, wenn mindestens ein Mitglied der Gruppe ausgeführt wird, nachdem versucht wurde, alle Mitglieder der Gruppe zu starten.
 
 </dd> <dt>
 
 *ServiceDependencies* \[ In\]
 </dt> <dd>
 
-Array, das Namen von Diensten enthält, die vor dem Start dieses Diensts gestartet werden müssen. Jedes Element im Array wird durch **NULL** getrennt, und die Liste wird durch zwei **NULL-Werte** beendet. In Visual Basic oder Skripts können Sie ein vbArray übergeben. Wenn der Zeiger **NULL** ist oder auf eine leere Zeichenfolge zeigt, weist der Dienst keine Abhängigkeiten auf. Abhängigkeit von einem Dienst bedeutet, dass dieser Dienst nur ausgeführt werden kann, wenn der Dienst, von dem er abhängt, ausgeführt wird.
+Array, das Namen von Diensten enthält, die gestartet werden müssen, bevor dieser Dienst gestartet wird. Jedes Element im Array wird durch **NULL** getrennt, und die Liste wird durch zwei **NULL-Werte** beendet. In Visual Basic skript können Sie ein vbArray übergeben. Wenn der Zeiger NULL **ist** oder auf eine leere Zeichenfolge zeigt, weist der Dienst keine Abhängigkeiten auf. Abhängigkeit von einem Dienst bedeutet, dass dieser Dienst nur ausgeführt werden kann, wenn der Dienst ausgeführt wird, von dem er abhängig ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum.**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum) Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes.](/windows/desktop/Debug/system-error-codes)
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um auf einen Fehler hindeuten zu können. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -332,7 +332,7 @@ Unbekannter Fehler beim Starten des Diensts.
 **9**
 </dt> <dd>
 
-Der Verzeichnispfad zur ausführbaren Datei des Diensts wurde nicht gefunden.
+Der Verzeichnispfad zur ausführbaren Dienstdatei wurde nicht gefunden.
 
 </dd> <dt>
 
@@ -353,7 +353,7 @@ Die Datenbank zum Hinzufügen eines neuen Diensts ist gesperrt.
 **12**
 </dt> <dd>
 
-Eine Abhängigkeit, von der dieser Dienst abhängt, wurde aus dem System entfernt.
+Eine Abhängigkeit, von der dieser Dienst abhängig ist, wurde aus dem System entfernt.
 
 </dd> <dt>
 
@@ -395,7 +395,7 @@ Der Dienst verfügt über keinen Ausführungsthread.
 **18**
 </dt> <dd>
 
-Der Dienst weist beim Start zirkuläre Abhängigkeiten auf.
+Der Dienst verfügt beim Start über zirkuläre Abhängigkeiten.
 
 </dd> <dt>
 
@@ -409,7 +409,7 @@ Ein Dienst wird unter demselben Namen ausgeführt.
 **20**
 </dt> <dd>
 
-Der Dienstname weist ungültige Zeichen auf.
+Der Dienstname enthält ungültige Zeichen.
 
 </dd> <dt>
 
@@ -443,33 +443,33 @@ Der Dienst ist im System derzeitig angehalten.
 
 ## <a name="remarks"></a>Hinweise
 
-Dienste werden im Allgemeinen auf zwei Arten installiert: entweder als Teil der Betriebssysteminstallation oder mithilfe eines Vom Dienstentwickler bereitgestellten Installationsprogramms. Einige Dienste, insbesondere solche, die im Haus erstellt wurden, verfügen jedoch möglicherweise nicht über ein Installationsprogramm. In diesen Fällen können Sie die **Create-Methode** verwenden, um Dienste programmgesteuert zu installieren.
+Dienste werden in der Regel auf zwei Arten installiert: entweder als Teil der Betriebssysteminstallation oder mithilfe eines vom Dienstentwickler bereitgestellten Installationsprogramms. Einige Dienste, insbesondere solche, die im Unternehmen erstellt wurden, verfügen jedoch möglicherweise nicht über ein Installationsprogramm. In diesen Fällen können Sie die **Create-Methode** verwenden, um Dienste programmgesteuert zu installieren.
 
-Trotz des Namens erstellt die Create-Methode keinen Dienst. Es wird lediglich ein vorhandener Dienst installiert. Um diesen Befehl zu verwenden, müssen Sie die ausführbare Datei des Diensts auf einen Computer kopieren und dann **Erstellen** verwenden, um den Dienst zu installieren.
+Trotz des Namens erstellt die Create-Methode keinen Dienst. Es wird lediglich ein vorhandener Dienst installiert. Um diesen Befehl verwenden zu können, müssen Sie die ausführbare Datei des Diensts auf einen Computer kopieren und dann **erstellen** verwenden, um den Dienst zu installieren.
 
 Die **Create-Methode** ähnelt der [**Change-Methode.**](win32-terminalservice-change.md) In beiden Fällen werden die Eigenschaften des Diensts als Parameter an die -Methode übergeben. Wie bei den Parametern, die mit der **Change-Methode** verwendet werden, ist die Reihenfolge, in der diese Parameter übergeben werden, sehr wichtig.
 
-Der *LoadOrderGroup-Parameter* stellt eine Gruppierung von Systemdiensten dar, die Ausführungsabhängigkeiten definieren. Die Dienste müssen in der von der Load Order Group angegebenen Reihenfolge initiiert werden, da die Dienste voneinander abhängig sind. Diese abhängigen Dienste erfordern, dass die Vorgängerdienste vorhanden sind, damit sie ordnungsgemäß funktionieren.
+Der *LoadOrderGroup-Parameter* stellt eine Gruppierung von Systemdiensten dar, die Ausführungsabhängigkeiten definieren. Die Dienste müssen in der von der Lastauftragsgruppe angegebenen Reihenfolge initiiert werden, da die Dienste voneinander abhängig sind. Diese abhängigen Dienste erfordern das Vorhandensein der voraussenten Dienste, damit sie ordnungsgemäß funktionieren.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
-| Unterstützte Mindestversion (Server)<br/> | WindowsServer 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
 | MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_Win32-Dienst**](/windows/desktop/CIMWin32Prov/win32-service)
+[**Win32-Dienst \_**](/windows/desktop/CIMWin32Prov/win32-service)
 </dt> <dt>
 
 [Betriebssystemklassen](/windows/desktop/CIMWin32Prov/operating-system-classes)

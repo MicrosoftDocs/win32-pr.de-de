@@ -1,23 +1,23 @@
 ---
-description: Ein Word-Wert, der den Port angibt.
+description: Ein WORD-Wert, der den Port angibt.
 ms.assetid: 535d644d-4045-4ff1-9c12-a3d5f665453d
-title: INTERNET_PORT (WinHTTP. h)
+title: INTERNET_PORT (Winhttp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7fb0f5e18e8dba25db231185e34b53c033682367
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 48ca41ee7291f7dc9c1f3d42805145ca3c049a925ffd365aef2864856aec33d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119133143"
 ---
-# <a name="internet_port"></a>\_Internetport
+# <a name="internet_port"></a>\_INTERNETPORT
 
-Ein Word-Wert, der den Port angibt. Die folgenden Internetports werden von WinHTTP vordefiniert.
+Ein WORD-Wert, der den Port angibt. Die folgenden Internetports sind durch WinHTTP vordefiniert.
 
 <dl> <dt>
 
-<span id="INTERNET_DEFAULT_PORT"></span><span id="internet_default_port"></span>**Internet \_ \_ Standardport**
+<span id="INTERNET_DEFAULT_PORT"></span><span id="internet_default_port"></span>**INTERNET \_ DEFAULT \_ PORT**
 </dt> <dd> <dl> <dt>
 
 0
@@ -25,12 +25,12 @@ Ein Word-Wert, der den Port angibt. Die folgenden Internetports werden von WinHT
 
 
 
-Der standardinternetport für das angegebene Protokoll.
+Der Standard-Internetport für das angegebene Protokoll.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_DEFAULT_HTTP_PORT"></span><span id="internet_default_http_port"></span>**Internet- \_ Standard- \_ http- \_ Port**
+<span id="INTERNET_DEFAULT_HTTP_PORT"></span><span id="internet_default_http_port"></span>**INTERNET \_ DEFAULT \_ HTTP \_ PORT**
 </dt> <dd> <dl> <dt>
 
 80
@@ -38,12 +38,12 @@ Der standardinternetport für das angegebene Protokoll.
 
 
 
-Der Standard-Internet-http-Port.
+Der HTTP-Standardport des Internets.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_DEFAULT_HTTPS_PORT"></span><span id="internet_default_https_port"></span>**Internet \_ - \_ HTTPS-Standardport \_**
+<span id="INTERNET_DEFAULT_HTTPS_PORT"></span><span id="internet_default_https_port"></span>**INTERNET \_ DEFAULT \_ HTTPS \_ PORT**
 </dt> <dd> <dl> <dt>
 
 443
@@ -51,7 +51,7 @@ Der Standard-Internet-http-Port.
 
 
 
-Der Standard-Internet-HTTPS-Port.
+Der HTTPS-Standardport für das Internet.
 
 
 </dt> </dl> </dd> </dl>
@@ -62,9 +62,9 @@ Der Standard-Internet-HTTPS-Port.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>      |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>   |
-| Header<br/>                   | <dl> <dt>WinHTTP. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>   |
+| Header<br/>                   | <dl> <dt>Winhttp.h</dt> </dl> |
 
 
 

@@ -1,23 +1,23 @@
 ---
-title: Implementieren von Geräteverhalten
-description: Das Verhalten eines Geräts wird durch die Dienste definiert, die es verfügbar macht.
+title: Implementieren des Geräteverhaltens
+description: Das Verhalten eines Geräts wird durch die verfügbaren Dienste definiert.
 ms.assetid: 5b352870-6de1-42f2-a178-ed7036b7afc9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb702adf3ccb0f21bc71f08e98427cca15495f3b
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: fce2857c11a02ef5eeebe7b2cd5e75ee76138929e5bd95a2e3bdfa7ffd2c71dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106363904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137263"
 ---
-# <a name="implementing-device-behavior"></a>Implementieren von Geräteverhalten
+# <a name="implementing-device-behavior"></a>Implementieren des Geräteverhaltens
 
-Das Verhalten eines Geräts wird durch die Dienste definiert, die es verfügbar macht. Jeder Dienst verfügt über eine Dienst Beschreibung, die seine Aktionen und Zustandsvariablen auflistet. Zusammen bilden diese Dienst Beschreibungen die Dienst Schnittstelle, die definiert, wie ein Steuerungspunkt mit einem Dienst interagieren kann. Jeder Dienst muss mindestens eine Aktion haben.
+Das Verhalten eines Geräts wird durch die verfügbaren Dienste definiert. Jeder Dienst verfügt über eine Dienstbeschreibung, die seine Aktionen und Zustandsvariablen auflistet. Zusammen stellen diese Dienstbeschreibungen die Dienstschnittstelle zusammen, die definiert, wie ein Steuerungspunkt mit einem Dienst interagieren kann. Jeder Dienst muss mindestens eine Aktion haben.
 
-Um einen Dienst zu implementieren, muss ein gehostetes Gerät ein Component Object Model (com)-Objekt bereitstellen, das die-Schnittstelle für den Dienst verfügbar macht. In der Dienst Beschreibung werden die Dienst Schnittstellen in der UPnP-Vorlagen Sprache (UTL) angegeben. Allerdings werden COM-Objekt Schnittstellen in der Regel in IDL (Interface Definition Language) angegeben. Sie können auch die COM-Schnittstelle in einer Typbibliothek oder Header Datei angeben. Das Platform Software Development Kit (SDK) umfasst das Tool Utl2idl, das eine Dienst Beschreibung in UTL in eine COM-Schnittstelle in IDL übersetzt.
+Um einen Dienst zu implementieren, muss ein gehostetes Gerät ein Component Object Model (COM)-Objekt bereitstellen, das die Schnittstelle für den Dienst verfügbar macht. In der Dienstbeschreibung werden die Dienstschnittstellen in UPnP Template Language (UTL) angegeben. COM-Objektschnittstellen werden jedoch in der Regel in Interface Definition Language (IDL) angegeben. Sie können die COM-Schnittstelle auch in einer Typbibliothek oder Headerdatei angeben. Das Platform Software Development Kit (SDK) enthält das Utl2idl-Tool, das eine Dienstbeschreibung in UTL in eine COM-Schnittstelle in IDL übersetzt.
 
-In den folgenden Beispielen wird dieser Konvertierungsprozess veranschaulicht. Die Dienst Beschreibung wird vom Geräte Entwickler bereitgestellt und in UTL geschrieben.
+Die folgenden Beispiele veranschaulichen diesen Konvertierungsprozess. Die Dienstbeschreibung wird vom Geräteentwickler bereitgestellt und in UTL geschrieben.
 
 ``` syntax
 <?xml version="1.0" ?> 
@@ -94,7 +94,7 @@ In den folgenden Beispielen wird dieser Konvertierungsprozess veranschaulicht. D
 </scpd>
 ```
 
-Der nächste Schritt besteht darin, das Utl2idl-Tool auszuführen. Sie erzeugt die IDL-Datei, die die COM-Schnittstelle enthält. Weitere Informationen zu IDL-Dateien und zum **Schnittstellen** Schlüsselwort finden Sie unter [Schnittstellen Definitionsdatei (IDL)](/windows/desktop/Midl/interface-definition-idl-file) und [**Schnittstelle**](/windows/desktop/Midl/interface) in der mittleren l-Referenz.
+Der nächste Schritt besteht im Ausführen des Utl2idl-Tools. Sie erzeugt die IDL-Datei, die die COM-Schnittstelle enthält. Weitere Informationen zu IDL-Dateien und dem **Schlüsselwort interface** finden Sie [**unter**](/windows/desktop/Midl/interface) Interface [Definition (IDL)-Datei](/windows/desktop/Midl/interface-definition-idl-file) und -Schnittstelle in der MIDL-Referenz.
 
 ``` syntax
 #include <windows.h>
@@ -149,43 +149,43 @@ interface IUPnPService_scpd : IUnknown
 ```
 
 > [!Note]
-> Der Rückgabewert ist der erste \[ out- \] Parameter in der Liste der Argumente in der Dienst Beschreibung. er wird jedoch nach der Übersetzung als letzter Parameter aufgeführt.
+> Der Rückgabewert ist der erste out-Parameter in der Liste der Argumente in der Dienstbeschreibung. Er wird jedoch als letzter Parameter nach der \[ \] Übersetzung aufgeführt.
 > 
-> Alle anderen Parameter verbleiben in derselben Reihenfolge.
+> Alle anderen Parameter bleiben in der gleichen Reihenfolge.
 
  
 
-Um die Funktionalität des Dienstanbieter bereitzustellen, implementieren Sie diese COM-Schnittstelle.
+Implementieren Sie diese COM-Schnittstelle, um die Funktionalität des Diensts zur Verfügung zu stellen.
 
 ## <a name="obtaining-information-about-an-endpoint"></a>Abrufen von Informationen zu einem Endpunkt
 
-Im UPnP-Framework enthalten die Endpunkt Informationen Informationen zu einer Anforderung und ihrer Quelle. Ein Gerät kann diese Informationen überprüfen, um eine Entscheidung über die Anforderung zu treffen.
+Im UPnP-Framework enthalten Endpunktinformationen Informationen zu einer Anforderung und ihrer Quelle. Ein Gerät kann diese Informationen überprüfen, um eine Entscheidung über die Anforderung zu treffen.
 
-Endpunkt Informationen sind optional für den implementierten Dienst verfügbar. Der Geräte Host hat Zugriff auf Endpunkt Informationen. der Geräte Host kommuniziert die Informationen jedoch nicht standardmäßig mit dem implementierten Dienst. Sie können den Geräte Host aktivieren, um die Endpunkt Informationen für den implementierten Dienst freizugeben, indem Sie die COM-Schnittstelle in der IDL-Datei (die vom Utl2idl-Tool erstellt wurde) ändern. Sie können \[ \] jeder Methode, die Endpunkt Informationen erfordert, einen in-Parameter hinzufügen. Der zusätzliche \[ in- \] Parameter muss der erste in der Liste der Argumente, ein Zeiger auf eine [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle und explizit " **punkremoteendpointinfo**" genannt werden. Änderungen an der Dienst-XML sind nicht erforderlich oder werden empfohlen. Das folgende Beispiel zeigt die neue Definition der **PowerOn** -Methode, wenn Sie so geändert wird, dass Sie Endpunkt Informationen empfängt:
+Endpunktinformationen sind optional für den implementierten Dienst verfügbar. Der Gerätehost hat Zugriff auf Endpunktinformationen. Der Gerätehost übermittelt die Informationen jedoch nicht standardmäßig an den implementierten Dienst. Sie können es dem Gerätehost ermöglichen, die Endpunktinformationen für den implementierten Dienst zu teilen, indem Sie die COM-Schnittstelle in der IDL-Datei ändern (erstellt vom Utl2idl-Tool). Sie können jeder Methode, die \[ \] Endpunktinformationen erfordert, einen in-Parameter hinzufügen. Der zusätzliche in-Parameter muss der erste in der Liste der Argumente sein, ein Zeiger auf eine IUnknown-Schnittstelle und explizit mit dem Namen \[ \] **eigenschaftRemoteEndpointInfo**. [](/windows/win32/api/unknwn/nn-unknwn-iunknown) Änderungen an der Dienst-XML sind nicht erforderlich oder werden nicht empfohlen. Das folgende Beispiel zeigt die neue Definition der **PowerOn-Methode,** wenn sie geändert wird, sodass sie Endpunktinformationen empfängt:
 
-"HRESULT PowerOn ( \[ in \] IUnknown \* punkremoteendpointinfo);"
+"HRESULT PowerOn( \[ in \] IUnknown \* quot;RemoteEndpointInfo);"
 
-Ein Zeiger auf ein Endpunkt Informationsobjekt, eine [**iupnpremoteendpointinfo**](/windows/desktop/api/Upnphost/nn-upnphost-iupnpremoteendpointinfo) -Schnittstelle, wird durch den neuen Parameter vom Geräte Host übergeben. Die **iupnpremoteendpointinfo** -Schnittstelle bietet drei Methoden für den Zugriff auf die Endpunkt Informationen. Sie müssen die entsprechende-Methode zum Abrufen der Endpunkt Informationen abrufen, die für die Dienst Implementierung erforderlich sind.
+Ein Zeiger auf ein Endpunktinformationsobjekt, eine [**IUPnPRemoteEndpointInfo-Schnittstelle,**](/windows/desktop/api/Upnphost/nn-upnphost-iupnpremoteendpointinfo) wird durch diesen neuen Parameter vom Gerätehost übergeben. Die **IUPnPRemoteEndpointInfo-Schnittstelle** stellt drei Methoden für den Zugriff auf die Endpunktinformationen bereit. Sie müssen die entsprechende Methode aufrufen, um die Endpunktinformationen zu erhalten, die für die Dienstimplementierung erforderlich sind.
 
-Als Alternative zur manuellen Änderung der COM-Schnittstelle können Sie das Utl2idl-Tool mit dem Schalter **-CI** verwenden. Dieser Switch bewirkt, dass das Tool den Endpunkt Informations Parameter den einzelnen Methoden in der COM-Schnittstelle hinzufügt. Die Verwendung des **-CI-** Schalters vereinfacht die Änderung einzelner Methoden nicht. Wenn keine Endpunkt Informationen von allen Methoden einer Schnittstelle benötigt werden, sollten Sie den Parameter manuell hinzufügen, um die effizientesten Implementierungen zu entwickeln.
+Als Alternative zur manuellen Änderung der COM-Schnittstelle können Sie das Utl2idl-Tool mit dem **Schalter -ci** verwenden. Dieser Schalter bewirkt, dass das Tool den Endpunktinformationsparameter zu jeder der Methoden in der COM-Schnittstelle hinzufüge. Die Verwendung **des Schalters -ci** erleichtert keine Änderung einzelner Methoden. Wenn Endpunktinformationen nicht von allen Methoden einer Schnittstelle benötigt werden, sollten Sie den Parameter manuell hinzufügen, um die effizientesten Implementierungen zu erzeugen.
 
-## <a name="implementing-a-service-object"></a>Implementieren eines Dienst Objekts
+## <a name="implementing-a-service-object"></a>Implementieren eines Dienstobjekts
 
-Sie müssen das Utl2idl-Tool verwenden, um die einzelnen Dienst Beschreibungen eines Geräts zu übersetzen.
+Sie müssen das Utl2idl-Tool verwenden, um jede Dienstbeschreibung eines Geräts zu übersetzen.
 
-Ein Objekt, das die Funktionalität für einen Dienst bereitstellt, wird als [*Dienst Objekt*](s-gly.md)bezeichnet. Neben der Bereitstellung von Dienstfunktionen behandeln Dienst Objekte Fehler mithilfe der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. Weitere Informationen finden Sie unter [Verwenden der Geräte Host-API mit UPnP-Technologie](using-the-device-host-api-with-upnp-technology.md).
+Ein Objekt, das die Funktionalität für einen Dienst bietet, wird als [*Dienstobjekt bezeichnet.*](s-gly.md) Zusätzlich zur Bereitstellung von Dienstfunktionen behandeln Dienstobjekte Fehler mithilfe der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) Weitere Informationen finden Sie unter [Verwenden der Gerätehost-API mit UPnP-Technologie.](using-the-device-host-api-with-upnp-technology.md)
 
-Um die Kompatibilität mit Visual Basic zu gewährleisten, das keine out-Parameter unterstützt \[ \] , werden die Parameter **Direction** out **/Direction** in der Dienst Beschreibung in \[ , out- \] Parameter in IDL konvertiert. Der Server muss diese \[ in-, out- \] Parameter freigeben.
+Um die Kompatibilität mit Visual Basic zu gewährleisten, die keine Out-Parameter unterstützt, werden die Richtungs-/Richtungsparameter in der Dienstbeschreibung \[ \] in  \[ In-Out-Parameter in \] IDL konvertiert. Der Server muss diese \[ In-Out-Parameter \] frei geben.
 
-## <a name="implementing-a-device-control-object"></a>Implementieren eines Geräte Steuerungs Objekts
+## <a name="implementing-a-device-control-object"></a>Implementieren eines Gerätesteuerungsobjekts
 
-Zusätzlich zum Implementieren von Dienst Objekten müssen Sie ein [*Geräte Steuerungsobjekt*](d-gly.md)implementieren. Ein Geräte Steuerungsobjekt ist der zentrale Verwaltungspunkt für die Dienst Objekte des Geräts. Beim Registrierungs Zeitpunkt wird das Geräte Steuerungsobjekt an den Geräte Host übermittelt. Wenn ein Ereignis Abonnement oder eine Steuerungs Anforderung für einen der Dienste des Geräts eingeht, ruft der Geräte Host dieses Geräte Steuerungsobjekt auf, um das relevante Dienst Objekt abzurufen. Zu diesem Zeitpunkt erstellt das Geräte Steuerungsobjekt entweder eine Instanz des Dienst Objekts oder gibt die-Schnittstelle einer vorhandenen Instanz des Dienst Objekts zurück.
+Zusätzlich zur Implementierung von Dienstobjekten müssen Sie ein [*Gerätesteuerungsobjekt implementieren.*](d-gly.md) Ein Gerätesteuerungsobjekt ist der zentrale Verwaltungs- und Steuerungspunkt für die Dienstobjekte des Geräts. Zum Zeitpunkt der Registrierung wird das Gerätesteuerungsobjekt an den Gerätehost übergeben. Wenn ein Ereignisabonnement oder eine Steuerungsanforderung für einen der Gerätedienste eintrifft, ruft der Gerätehost dieses Gerätesteuerungsobjekt auf, um das entsprechende Dienstobjekt zu erhalten. Zu diesem Zeitpunkt erstellt das Gerätesteuerungsobjekt entweder eine Instanz des Dienstobjekts oder gibt die Schnittstelle einer vorhandenen Instanz des Dienstobjekts zurück.
 
-Sie können eine Geräte Beschreibung auf mehreren Computern oder mehrmals auf demselben Computer registrieren. Da der eindeutige Geräte Name (User Name, udn) für jede Instanz des Geräts anders sein muss, generiert der Geräte Host jedes Mal, wenn das Gerät registriert ist, für jedes Gerät und jedes eingebettete Gerät einen eindeutigen udn. Verwenden Sie den in der Vorlage Geräte Beschreibung angegebenen udn zum Abrufen des tatsächlichen vom Geräte Host generierten udn, der dem Gerät zugeordnet ist. Zum Aufheben der Registrierung eines Geräts müssen Sie die ID verwenden, die vom UPnP-Framework bereitgestellt wurde, als das Gerät registriert wurde.
+Sie können eine Gerätebeschreibung auf mehreren Computern oder mehrmals auf demselben Computer registrieren. Da der eindeutige Gerätename (Unique Device Name, UDN) für jede Instanz des Geräts unterschiedlich sein muss, generiert der Gerätehost bei jeder Registrierung des Geräts einen eindeutigen UDN für jedes Gerät und eingebettete Gerät. Verwenden Sie den in der Gerätebeschreibungsvorlage angegebenen UDN, um die tatsächliche UDN zu erhalten, die vom Gerätehost generiert und dem Gerät zugeordnet wurde. Zum Aufheben der Registrierung eines Geräts müssen Sie die ID verwenden, die beim Registrieren des Geräts vom UPnP-Framework bereitgestellt wurde.
 
-Geräte Steuerungs Objekte müssen die [**iupnpabvicecontrol**](/windows/desktop/api/Upnphost/nn-upnphost-iupnpdevicecontrol) -Schnittstelle implementieren. Der Geräte Host ruft die [**iupnpdevicecontrol:: Initialize**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpdevicecontrol-initialize) -Methode des Geräte Steuerungs Objekts auf und übergibt dabei die UPnP-basierte Geräte Beschreibung, die der Geräte Host zuvor für das Gerät veröffentlicht hat, sowie eine Initialisierungs Zeichenfolge, die zum Zeitpunkt der Registrierung angegeben wurde (siehe [Registrieren eines gehosteten Geräts beim Geräte Host](registering-a-hosted-device-with-the-device-host.md)). In dieser Geräte Beschreibung liest das Geräte Steuerungsobjekt die udns, die den einzelnen Geräten in der Gerätestruktur zugewiesen sind. Zum Abrufen dieser Informationen können Sie auch die [**iupnpregistrinner:: getuniquedevicename**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-getuniquedevicename) -Methode verwenden.
+Gerätesteuerungsobjekte müssen die [**IUPnPDeviceControl-Schnittstelle**](/windows/desktop/api/Upnphost/nn-upnphost-iupnpdevicecontrol) implementieren. Der Gerätehost ruft die [**IUPnPDeviceControl::Initialize-Methode**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpdevicecontrol-initialize) des Gerätesteuerungsobjekts auf und übergibt dabei die UPnP-basierte Gerätebeschreibung, die der Gerätehost zuvor für das Gerät veröffentlicht hat, und eine Initialisierungszeichenfolge, die zur Registrierungszeit angegeben wurde (siehe Registrieren eines gehosteten Geräts beim [Gerätehost).](registering-a-hosted-device-with-the-device-host.md) Aus dieser Gerätebeschreibung liest das Gerätesteuerungsobjekt die UDNs, die den einzelnen Geräten in der Gerätestruktur zugewiesen sind. Sie können diese Informationen auch mithilfe der [**IUPnPRegistrar::GetUniqueDeviceName-Methode**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-getuniquedevicename) abrufen.
 
-Wenn der Geräte Host einen Zeiger auf ein Dienst Objekt benötigt, das einen bestimmten Dienst implementiert, ruft es die [**iupnpdevicecontrol:: getserviceobject**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpdevicecontrol-getserviceobject) -Methode für das Geräte Steuerungsobjekt auf. Der Geräte Host übergibt den udn und die Dienst-ID des Diensts, für den er ein Dienst Objekt anfordert, und die Adresse eines [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Zeigers, an dem die Methode einen Zeiger auf das Dienst Objekt zurückgeben soll. Der udn-Parameter ist erforderlich, da das Objekt "Gerätesteuerung" Dienste für die gesamte Gerätestruktur verwaltet, einschließlich der in den Netz Geräten. Wenn der Geräte Host ein geclusterte Gerät anfordert, verwendet **getserviceobject** den udn, um es zu identifizieren.
+Wenn der Gerätehost einen Zeiger auf ein Dienstobjekt erfordert, das einen bestimmten Dienst implementiert, ruft er die [**IUPnPDeviceControl::GetServiceObject-Methode**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpdevicecontrol-getserviceobject) für das Gerätesteuerungsobjekt auf. Der Gerätehost übergibt den UDN und die Dienst-ID des Diensts, für den er ein Dienstobjekt angibt, und die Adresse eines [**IDispatch-Zeigers,**](/windows/win32/api/oaidl/nn-oaidl-idispatch) an dem die Methode voraussichtlich einen Zeiger auf das Dienstobjekt zurückgibt. Der UDN-Parameter ist erforderlich, da das Gerätesteuerungsobjekt Dienste für die gesamte Gerätestruktur verwaltet, einschließlich geschachtelter Geräte. Wenn der Gerätehost ein geschachtelte Gerät an fordert, verwendet **GetServiceObject** den UDN, um es zu identifizieren.
 
  
 

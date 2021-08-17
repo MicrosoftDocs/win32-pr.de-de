@@ -1,9 +1,9 @@
 ---
-title: Usereffectiverating-Attribut
-description: Das usereffectiverating-Attribut entspricht der von Windows Media Player berechneten Bewertung basierend darauf, wie oft das Element wiedergegeben wurde.
+title: UserEffectiveRating-Attribut
+description: Das UserEffectiveRating-Attribut ist die Bewertung, die von Windows Media Player basierend darauf berechnet wird, wie oft das Element wiedergegeben wurde.
 ms.assetid: 6a420e20-f61d-4e15-84f8-a738caabd1d7
 keywords:
-- Usereffectiverating-Attribut Fenster Media Player
+- UserEffectiveRating-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,33 +12,33 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94abda9f8237c169845683263081566957a10b1e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 25e3244d793288fe1535c7e7cb4d44c05a3b71404531cf2ae344eb77528dd4a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134443"
 ---
-# <a name="usereffectiverating-attribute"></a>Usereffectiverating-Attribut
+# <a name="usereffectiverating-attribute"></a>UserEffectiveRating-Attribut
 
-Das **usereffectiverating** -Attribut entspricht der von Windows Media Player berechneten Bewertung basierend darauf, wie oft das Element wiedergegeben wurde.
+Das **UserEffectiveRating-Attribut** ist die Bewertung, die von Windows Media Player basierend darauf berechnet wird, wie oft das Element wiedergegeben wurde.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
 -   [Andere Elemente](other-item-attributes.md)
 -   [Wiedergabelisten](playlist-attributes-ref.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Benutzerbewertungen werden durch ganzzahlige Werte dargestellt, wie in der folgenden Tabelle beschrieben. Wenn Sie einen Wert angeben, verwenden Sie einen der Werte aus der Spalte zum Schreiben von Werten. Beim Abrufen von Werten können Sie die Bereiche in der Spalte Lesewerte verwenden, um die Anzahl der Sterne zu bestimmen.
+Benutzerbewertungen werden durch ganzzahlige Werte dargestellt, wie in der folgenden Tabelle beschrieben. Verwenden Sie beim Angeben eines Werts einen der Werte aus der Spalte Schreibwert. Beim Abrufen von Werten können Sie die Bereiche in der Spalte Lesewerte verwenden, um die Anzahl der Sterne zu bestimmen.
 
 
 
-| Rating  | Wert wird geschrieben | Lesen von Werten |
+| Rating  | Schreiben eines Werts | Lesen von Werten |
 |---------|---------------|----------------|
-| Unbewertete | 0             | 0              |
+| Unrated | 0             | 0              |
 | 1 Stern  | 1             | 1 bis 12        |
 | 2 Sterne | 25            | 13 bis 37       |
 | 3 Sterne | 50            | 38 bis 62       |
@@ -49,9 +49,9 @@ Benutzerbewertungen werden durch ganzzahlige Werte dargestellt, wie in der folge
 
  
 
-Dieses Attribut ist nur in der-Bibliothek gespeichert.
+Dieses Attribut wird nur in der Bibliothek gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,15 +59,15 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

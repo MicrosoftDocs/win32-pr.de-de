@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentfleiosparsexception-Konstruktor'
-title: Esentsspleiosparlexception-Konstruktor
+description: 'Weitere Informationen zu: EsentFileIOSparseException-Konstruktor'
+title: EsentFileIOSparseException-Konstruktor
 TOCTitle: 'EsentFileIOSparseException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentFileIOSparseException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentfileiosparseexception.esentfileiosparseexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 311bf33bdea72dc40533648a6857ba7497ac95bd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5dd4e3eb99e0df2fa2cf0b998fedb936d6a98ed02e5018ce9c019705ff2bbcf5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119364538"
 ---
-# <a name="esentfileiosparseexception-constructor"></a>Esentsspleiosparlexception-Konstruktor
+# <a name="esentfileiosparseexception-constructor"></a>EsentFileIOSparseException-Konstruktor
 
-Initialisiert eine neue Instanz der esentfleiosparserexception-Klasse.
+Initialisiert eine neue Instanz der EsentFileIOSparseException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentFileIOSparseException()
 public EsentFileIOSparseException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentfleiosparlexception-Klasse](./esentfileiosparseexception-class.md)
+[EsentFileIOSparseException-Klasse](./esentfileiosparseexception-class.md)
 
-[Esentfleiosparlexception-Member](./esentfileiosparseexception-members.md)
+[EsentFileIOSparseException-Member](./esentfileiosparseexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

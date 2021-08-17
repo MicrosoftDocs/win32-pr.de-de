@@ -1,21 +1,21 @@
 ---
-description: Die tapicontrolflags-Enumeration wird von einer Reihe von Methoden verwendet, um anzugeben, ob eine bestimmte Eigenschaft automatisch oder manuell gesteuert wird.
+description: Die TAPIControlFlags-Enum wird von einer Reihe von Methoden verwendet, um anzugeben, ob eine bestimmte Eigenschaft automatisch oder manuell gesteuert wird.
 ms.assetid: 48259444-bf7b-4f0e-9068-2bdf89dde694
-title: Tapicontrolflags-Enumeration (ipmsp. h)
+title: TAPIControlFlags-Enumeration (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 07cc3e931c69a408d996fa28e6002b6c53c9df87
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 278cc2328335409d4ffcc95ea136826d121acd57776f98aaad947c8fb9ee5d93
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356038"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119139803"
 ---
-# <a name="tapicontrolflags-enumeration"></a>Tapicontrolflags-Enumeration
+# <a name="tapicontrolflags-enumeration"></a>TAPIControlFlags-Enumeration
 
-\[ Diese Enumeration ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Diese Enumeration ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **tapicontrolflags** -Enumeration wird von einer Reihe von Methoden verwendet, um anzugeben, ob eine bestimmte Eigenschaft automatisch oder manuell gesteuert wird.
+Die **TAPIControlFlags-Enum** wird von einer Reihe von Methoden verwendet, um anzugeben, ob eine bestimmte Eigenschaft automatisch oder manuell gesteuert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,24 +30,24 @@ Die **tapicontrolflags** -Enumeration wird von einer Reihe von Methoden verwende
 
 <dl> <dt>
 
-<span id="TAPIControl_Flags_None"></span><span id="tapicontrol_flags_none"></span><span id="TAPICONTROL_FLAGS_NONE"></span>**Tapicontrol- \_ Flags " \_ None"**
+<span id="TAPIControl_Flags_None"></span><span id="tapicontrol_flags_none"></span><span id="TAPICONTROL_FLAGS_NONE"></span>**\_TAPIControl-Flags \_ Keine**
 </dt> <dd>
 
-TAPI weist keine steuerungflags für die Eigenschaft auf.
+TAPI verfügt über keine Steuerelementflags für die -Eigenschaft.
 
 </dd> <dt>
 
-<span id="TAPIControl_Flags_Auto"></span><span id="tapicontrol_flags_auto"></span><span id="TAPICONTROL_FLAGS_AUTO"></span>**Tapicontrol- \_ Flags \_ automatisch**
+<span id="TAPIControl_Flags_Auto"></span><span id="tapicontrol_flags_auto"></span><span id="TAPICONTROL_FLAGS_AUTO"></span>**TAPIControl \_ Flags \_ Auto**
 </dt> <dd>
 
-Die-Eigenschaft wird automatisch gesteuert.
+Die -Eigenschaft wird automatisch gesteuert.
 
 </dd> <dt>
 
-<span id="TAPIControl_Flags_Manual"></span><span id="tapicontrol_flags_manual"></span><span id="TAPICONTROL_FLAGS_MANUAL"></span>**Tapicontrol- \_ Flags \_ manuell**
+<span id="TAPIControl_Flags_Manual"></span><span id="tapicontrol_flags_manual"></span><span id="TAPICONTROL_FLAGS_MANUAL"></span>**TAPIControl \_ Flags \_ Manual**
 </dt> <dd>
 
-Die-Eigenschaft wird manuell gesteuert.
+Die -Eigenschaft wird manuell gesteuert.
 
 </dd> </dl>
 
@@ -57,49 +57,49 @@ Die-Eigenschaft wird manuell gesteuert.
 
 | Anforderung | Wert |
 |-------------------------|------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,1<br/>                                                       |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 3.1<br/>                                                       |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itaudiodebug econtrol:: GetRange**](itaudiodevicecontrol-getrange.md)
+[**ITAudioDeviceControl::GetRange**](itaudiodevicecontrol-getrange.md)
 </dt> <dt>
 
-[**Itaudiodebug econtrol:: Get**](itaudiodevicecontrol-get.md)
+[**ITAudioDeviceControl::Get**](itaudiodevicecontrol-get.md)
 </dt> <dt>
 
-[**Itaudiode vicecontrol:: Set**](itaudiodevicecontrol-set.md)
+[**ITAudioDeviceControl::Set**](itaudiodevicecontrol-set.md)
 </dt> <dt>
 
-[**Itaudiosettings:: GetRange**](itaudiosettings-getrange.md)
+[**ITAudioSettings::GetRange**](itaudiosettings-getrange.md)
 </dt> <dt>
 
-[**Itaudiosettings:: Get**](itaudiosettings-get.md)
+[**ITAudioSettings::Get**](itaudiosettings-get.md)
 </dt> <dt>
 
-[**Itaudiosettings:: Set**](itaudiosettings-set.md)
+[**ITAudioSettings::Set**](itaudiosettings-set.md)
 </dt> <dt>
 
-[**Itcallqualitycontrol:: GetRange**](itcallqualitycontrol-getrange.md)
+[**ITCallQualityControl::GetRange**](itcallqualitycontrol-getrange.md)
 </dt> <dt>
 
-[**Itcallqualitycontrol:: Get**](itcallqualitycontrol-get.md)
+[**ITCallQualityControl::Get**](itcallqualitycontrol-get.md)
 </dt> <dt>
 
-[**Itcallqualitycontrol:: Set**](itcallqualitycontrol-set.md)
+[**ITCallQualityControl::Set**](itcallqualitycontrol-set.md)
 </dt> <dt>
 
-[**Itstreamqualitycontrol:: GetRange**](itstreamqualitycontrol-getrange.md)
+[**ITStreamQualityControl::GetRange**](itstreamqualitycontrol-getrange.md)
 </dt> <dt>
 
-[**Itstreamqualitycontrol:: Get**](itstreamqualitycontrol-get.md)
+[**ITStreamQualityControl::Get**](itstreamqualitycontrol-get.md)
 </dt> <dt>
 
-[**Itstreamqualitycontrol:: Set**](itstreamqualitycontrol-set.md)
+[**ITStreamQualityControl::Set**](itstreamqualitycontrol-set.md)
 </dt> </dl>
 
  

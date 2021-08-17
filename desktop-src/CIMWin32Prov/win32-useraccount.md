@@ -1,5 +1,5 @@
 ---
-description: Das Win32- \_ Benutzerkonto&\# 32; Die WMI-Klasse enthält Informationen zu einem Benutzerkonto auf einem Computersystem, auf dem Windows ausgeführt wird.
+description: Win32 \_ UserAccount&\# 32; Die WMI-Klasse enthält Informationen zu einem Benutzerkonto auf einem Computersystem, auf dem Windows.
 ms.assetid: 747b2ce2-ae38-47de-bf3a-97058df56a7a
 ms.tgt_platform: multiple
 title: Win32_UserAccount-Klasse
@@ -30,23 +30,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: b5af83f7a52e9f3db9dbaa4a959bfe01ae740746
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: df907b1686677db8ea895d8788055567e24dc7be7ffe758bcfa82801591a0dfb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041373"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922750"
 ---
-# <a name="win32_useraccount-class"></a>Win32 \_ User Account-Klasse
+# <a name="win32_useraccount-class"></a>Win32 \_ UserAccount-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) für das **Win32- \_ Benutzerkonto** enthält Informationen zu einem Benutzerkonto auf einem Computersystem, auf dem Windows ausgeführt wird.
+Die **WMI-Klasse \_ Win32 UserAccount** enthält Informationen zu einem Benutzerkonto auf einem Computersystem, auf dem Windows. [](../wmisdk/retrieving-a-class.md)
 
 > [!Note]  
-> Da sowohl der **Name** als auch die **Domäne** Schlüsseleigenschaften sind, kann das Auflisten von **Win32 \_ Useraccount** in einem großen Netzwerk die Leistung beeinträchtigen. Das Aufrufen von **GetObject** oder Abfragen für eine bestimmte Instanz hat weniger Auswirkungen.
+> Da sowohl Name **als** auch **Domäne** wichtige Eigenschaften sind, kann sich das Aufzählen von **Win32 \_ UserAccount** in einem großen Netzwerk negativ auf die Leistung auswirken. Das **Aufrufen von GetObject** oder das Abfragen einer bestimmten Instanz hat weniger Auswirkungen.
 
  
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -75,20 +75,20 @@ class Win32_UserAccount : Win32_Account
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ User Account** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ UserAccount-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Win32 \_ User Account** -Klasse verfügt über diese Methoden.
+Die **Win32 \_ UserAccount-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                     | BESCHREIBUNG                                             |
 |:-----------------------------------------------------------|:--------------------------------------------------------|
-| [**Benen**](rename-method-in-class-win32-useraccount.md) | Ermöglicht das Umbenennen des Benutzerkontos.<br/> |
+| [**Umbenennen**](rename-method-in-class-win32-useraccount.md) | Ermöglicht das Umbenennen des Benutzerkontos.<br/> |
 
 
 
@@ -96,88 +96,88 @@ Die **Win32 \_ User Account** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ User Account** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ UserAccount-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AccountType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 2**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_2) \| usri2 \_ Flags")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 2**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_2) \| usri2 \_ flags")
 </dt> </dl>
 
-Flags, die die Merkmale eines Windows-Benutzerkontos beschreiben.
+Flags, die die Merkmale eines Windows beschreiben.
 
 <dt>
 
 <span id="Temporary_duplicate_account"></span><span id="temporary_duplicate_account"></span><span id="TEMPORARY_DUPLICATE_ACCOUNT"></span>
 
-<span id="Temporary_duplicate_account"></span><span id="temporary_duplicate_account"></span><span id="TEMPORARY_DUPLICATE_ACCOUNT"></span>**Temporäres doppeltes Konto** (256)
+<span id="Temporary_duplicate_account"></span><span id="temporary_duplicate_account"></span><span id="TEMPORARY_DUPLICATE_ACCOUNT"></span>**Temporäres doppeltes** Konto (256)
 
 
 </dt> <dd>
 
-**\_Konto für Temp Temp- \_ Duplizierung \_**
+**TEMPORÄRES \_ DOPPELTES \_ UF-KONTO \_**
 
-Lokales Benutzerkonto für Benutzer, die über ein primäres Konto in einer anderen Domäne verfügen. Dieses Konto ermöglicht nur den Benutzer Zugriff auf diese Domäne – nicht auf eine Domäne, die dieser Domäne vertraut.
+Lokales Benutzerkonto für Benutzer, die über ein primäres Konto in einer anderen Domäne verfügen. Dieses Konto bietet nur Benutzerzugriff auf diese Domäne – nicht auf eine Domäne, die dieser Domäne vertraut.
 
 </dd> <dt>
 
 <span id="Normal_account"></span><span id="normal_account"></span><span id="NORMAL_ACCOUNT"></span>
 
-<span id="Normal_account"></span><span id="normal_account"></span><span id="NORMAL_ACCOUNT"></span>**Normales Konto** (512)
+<span id="Normal_account"></span><span id="normal_account"></span><span id="NORMAL_ACCOUNT"></span>**Normales** Konto (512)
 
 
 </dt> <dd>
 
-**\_normales \_ Konto**
+**NORMALES \_ \_ UF-KONTO**
 
-Der Standard Kontotyp, der einen typischen Benutzer darstellt.
+Standardkontotyp, der einen typischen Benutzer darstellt.
 
 </dd> <dt>
 
 <span id="Interdomain_trust_account"></span><span id="interdomain_trust_account"></span><span id="INTERDOMAIN_TRUST_ACCOUNT"></span>
 
-<span id="Interdomain_trust_account"></span><span id="interdomain_trust_account"></span><span id="INTERDOMAIN_TRUST_ACCOUNT"></span>**Domänen Vertrauensstellungs Konto** (2048)
+<span id="Interdomain_trust_account"></span><span id="interdomain_trust_account"></span><span id="INTERDOMAIN_TRUST_ACCOUNT"></span>**Domänenübergreifendes Vertrauensstellungskonto** (2048)
 
 
 </dt> <dd>
 
-**Konto für die Vertrauensstellung der \_ Verbindungs Domäne \_ \_**
+**UF \_ INTERDOMAIN \_ TRUST \_ ACCOUNT**
 
-Konto für eine System Domäne, die anderen Domänen vertraut.
+Konto für eine Systemdomäne, die anderen Domänen vertraut.
 
 </dd> <dt>
 
 <span id="Workstation_trust_account"></span><span id="workstation_trust_account"></span><span id="WORKSTATION_TRUST_ACCOUNT"></span>
 
-<span id="Workstation_trust_account"></span><span id="workstation_trust_account"></span><span id="WORKSTATION_TRUST_ACCOUNT"></span>Arbeitsstations- **Vertrauensstellungs Konto** (4096)
+<span id="Workstation_trust_account"></span><span id="workstation_trust_account"></span><span id="WORKSTATION_TRUST_ACCOUNT"></span>**Arbeitsstations-Vertrauensstellungskonto** (4096)
 
 
 </dt> <dd>
 
-**Konto der Vertrauensstellung der \_ \_ Vertrauensstellung \_**
+**UF \_ WORKSTATION \_ TRUST \_ ACCOUNT**
 
-Computer Konto für ein Computersystem, auf dem Windows ausgeführt wird, das Mitglied dieser Domäne ist.
+Computerkonto für ein Computersystem, auf dem Windows, das Mitglied dieser Domäne ist.
 
 </dd> <dt>
 
 <span id="Server_trust_account"></span><span id="server_trust_account"></span><span id="SERVER_TRUST_ACCOUNT"></span>
 
-<span id="Server_trust_account"></span><span id="server_trust_account"></span><span id="SERVER_TRUST_ACCOUNT"></span>**Server Vertrauensstellungs Konto** (8192)
+<span id="Server_trust_account"></span><span id="server_trust_account"></span><span id="SERVER_TRUST_ACCOUNT"></span>**Server-Vertrauensstellungskonto** (8192)
 
 
 </dt> <dd>
 
-**\_ \_ \_ Konto Vertrauens Konto für den Server**
+**UF \_ SERVER \_ TRUST \_ ACCOUNT**
 
-Konto für einen Domänen Controller der Systemsicherung, der Mitglied dieser Domäne ist.
+Konto für einen Domänencontroller für die Systemsicherung, der Mitglied dieser Domäne ist.
 
 </dd> </dl>
 
@@ -186,240 +186,240 @@ Konto für einen Domänen Controller der Systemsicherung, der Mitglied dieser Do
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Caption")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Caption")
 </dt> </dl>
 
 Domäne und Benutzername des Kontos.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](../wmisdk/standard-qualifiers.md) ("Description")
+Qualifizierer: [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Description")
 </dt> </dl>
 
-Die Beschreibung des Kontos.
+Beschreibung des Kontos.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Deaktiviert**
+**Disabled** (Deaktiviert)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| Benutzer \_ Info \| UF \_ accountdeaktivieren")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| \_ \| UF \_ ACCOUNTDISABLE")
 </dt> </dl>
 
-Das Windows-Benutzerkonto ist deaktiviert.
+Windows Benutzerkonto ist deaktiviert.
 
 </dd> <dt>
 
-**Domäne**
+**Domain**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](../wmisdk/standard-qualifiers.md) Setzung ("Domäne"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Functions \| Domain Name")
+Qualifizierer: [**Außerkraftsetzung**](../wmisdk/standard-qualifiers.md) ("Domäne"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Domänenname der Win32API-Netzwerkverwaltungsfunktionen") \| \|
 </dt> </dl>
 
-Der Name der Windows-Domäne, zu der ein Benutzerkonto gehört, z. b.: "na-Sales".
+Name der Windows Domäne, zu der ein Benutzerkonto gehört, z. B. "NA-SALES".
 
 </dd> <dt>
 
 **FullName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 2**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_2) \| **usri2 \_ Full \_ Name**")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 2**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_2) \| **usri2 \_ full \_ name**")
 </dt> </dl>
 
-Der vollständige Name eines lokalen Benutzers, z. b.: "Dan Wilson".
+Vollständiger Name eines lokalen Benutzers, z.B. "Dan Soll".
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](../wmisdk/standard-qualifiers.md) (" Install Date ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Installationsdatum")
 </dt> </dl>
 
-Das Datum, an dem das Objekt installiert ist. Für diese Eigenschaft ist kein Wert erforderlich, um anzugeben, dass das Objekt installiert ist.
+Datum, an dem das Objekt installiert wurde. Diese Eigenschaft benötigt keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **LocalAccount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](../wmisdk/standard-wmi-qualifiers.md)
+Qualifizierer: [ **Behoben**](../wmisdk/standard-wmi-qualifiers.md)
 </dt> </dl>
 
-**True** gibt an, dass das Konto auf dem lokalen Computer definiert ist.
+True **gibt an,** dass das Konto auf dem lokalen Computer definiert ist.
 
-Diese Eigenschaft wird vom [**Win32- \_ Konto**](win32-account.md)geerbt.
+Diese Eigenschaft wird vom [**Win32-Konto \_ geerbt.**](win32-account.md)
 
 </dd> <dt>
 
 **Sperrung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 2**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_2) \| **UF \_ Lockout**")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 2**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_2) \| **UF \_ LOCKOUT**")
 </dt> </dl>
 
-**True** gibt an, dass das Benutzerkonto aus dem Windows-Betriebssystem gesperrt ist.
+True **gibt an,** dass das Benutzerkonto aus dem Windows gesperrt ist.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](../wmisdk/standard-qualifiers.md) Setzung ("Name"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| Name")
+Qualifizierer: [**Außerkraftsetzung**](../wmisdk/standard-qualifiers.md) ("Name"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Name der Win32API-Netzwerkverwaltungsstrukturen") \| \|
 </dt> </dl>
 
-Der Name des Windows-Benutzerkontos in der Domäne, die von der **Domänen** Eigenschaft dieser Klasse angegeben wird.
+Der Name des Windows Benutzerkontos in der Domäne, die von der **Domain-Eigenschaft** dieser Klasse angegeben wird.
 
 Beispiel: "danwilson".
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Passwordänderbar**
+**PasswordChangeable**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 2**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_2) \| **UF \_ passwd \_ cant \_ Change**")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 2**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_2) \| **UF \_ PASSWD \_ CANT \_ CHANGE**")
 </dt> </dl>
 
-**True** gibt an, dass das Kennwort für dieses Benutzerkonto geändert werden kann.
+True **gibt an,** dass das Kennwort für dieses Benutzerkonto geändert werden kann.
 
 </dd> <dt>
 
 **PasswordExpires**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 2**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_2) \| **UF \_ 't \_ expire \_ passwd**")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| USER INFO \| [**\_ \_ 2 UF**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_2) \| **\_ DONT \_ EXPIRE \_ PASSWD**")
 </dt> </dl>
 
-**True** gibt an, dass das Kennwort für dieses Benutzerkonto abläuft.
+True gibt an, dass das Kennwort für dieses Benutzerkonto abläuft.
 
 </dd> <dt>
 
 **PasswordRequired**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 2**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_2) \| **UF \_ passwd \_ notreqd**")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| USER INFO \| [**\_ \_ 2 UF**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_2) \| **\_ PASSWD \_ NOTREQD**")
 </dt> </dl>
 
-**True** gibt an, dass ein Kennwort für ein Windows-Benutzerkonto erforderlich ist. **False** gibt an, dass für dieses Konto kein Kennwort erforderlich ist.
+True gibt an, dass ein Kennwort für ein Windows Benutzerkonto erforderlich ist. False gibt an, dass für dieses Konto kein Kennwort erforderlich ist.
 
 </dd> <dt>
 
 **SID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Fixed**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Security IDs (SIDs)")
+Qualifizierer: [**Behoben:**](../wmisdk/standard-wmi-qualifiers.md) [**, MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Sicherheitsbezeichner \| (SIDs)")
 </dt> </dl>
 
-Sicherheits-ID (SID) für dieses Konto. Eine SID ist ein Zeichen folgen Wert variabler Länge, der zum Identifizieren eines Vertrauens nehmers verwendet wird. Jedes Konto verfügt über eine eindeutige SID, die eine Zertifizierungsstelle, z. b. eine Windows-Domäne, ausgibt. Die SID wird in der Sicherheitsdatenbank gespeichert. Wenn sich ein Benutzer anmeldet, ruft das System die Benutzer-SID aus der Datenbank ab, platziert die SID im Benutzer Zugriffs Token und verwendet dann die SID im Benutzer Zugriffs Token, um den Benutzer bei allen nachfolgenden Interaktionen mit der Windows-Sicherheit zu identifizieren. Jede sid ist ein eindeutiger Bezeichner für einen Benutzer oder eine Gruppe, und ein anderer Benutzer oder eine andere Gruppe kann nicht dieselbe SID haben.
+Sicherheits-ID (SID) für dieses Konto. Eine SID ist ein Zeichenfolgenwert variabler Länge, der zum Identifizieren eines Vertrauensnehmers verwendet wird. Jedes Konto verfügt über eine eindeutige SID, die von einer Autorität, z. B. einer Windows Domäne, ausgibt. Die SID wird in der Sicherheitsdatenbank gespeichert. Wenn sich ein Benutzer anmeldet, ruft das System die Benutzer-SID aus der Datenbank ab, platziert die SID im Benutzerzugriffstoken und verwendet dann die SID im Benutzerzugriffstoken, um den Benutzer in allen nachfolgenden Interaktionen mit Windows Sicherheit zu identifizieren. Jede SID ist ein eindeutiger Bezeichner für einen Benutzer oder eine Gruppe, und ein anderer Benutzer oder eine andere Gruppe kann nicht dieselbe SID aufweisen.
 
-Diese Eigenschaft wird vom [**Win32- \_ Konto**](win32-account.md)geerbt.
+Diese Eigenschaft wird vom [**\_ Win32-Konto**](win32-account.md)geerbt.
 
 </dd> <dt>
 
 **SIDType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Fixed**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Access Control Enumerationstypen- \| [**sid- \_ Name \_ verwenden**](/windows/win32/api/winnt/ne-winnt-sid_name_use)")
+Qualifizierer: [**Behoben:**](../wmisdk/standard-wmi-qualifiers.md) [**, MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Access Control Enumerationstypen \| [**SID NAME \_ \_ USE**](/windows/win32/api/winnt/ne-winnt-sid_name_use)")
 </dt> </dl>
 
-Enumerationswert, der den Typ der SID angibt.
+Aufzählungswert, der den Typ der SID angibt.
 
-Diese Eigenschaft wird vom [**Win32- \_ Konto**](win32-account.md)geerbt.
+Diese Eigenschaft wird vom [**\_ Win32-Konto**](win32-account.md)geerbt.
 
 <dt>
 
@@ -446,14 +446,14 @@ Diese Eigenschaft wird vom [**Win32- \_ Konto**](win32-account.md)geerbt.
 
 <span id="SidTypeAlias"></span><span id="sidtypealias"></span><span id="SIDTYPEALIAS"></span>
 
-**Sidtypealias** (4)
+**SidTypeAlias** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SidTypeWellKnownGroup"></span><span id="sidtypewellknowngroup"></span><span id="SIDTYPEWELLKNOWNGROUP"></span>
 
-**Sidtypewellknowngroup** (5)
+**SidTypeWellKnownGroup** (5)
 
 
 </dt> <dd></dd> <dt>
@@ -467,7 +467,7 @@ Diese Eigenschaft wird vom [**Win32- \_ Konto**](win32-account.md)geerbt.
 
 <span id="SidTypeInvalid"></span><span id="sidtypeinvalid"></span><span id="SIDTYPEINVALID"></span>
 
-**Sidtypeingabe valid** (7)
+**SidTypeInvalid** (7)
 
 
 </dt> <dd></dd> <dt>
@@ -481,7 +481,7 @@ Diese Eigenschaft wird vom [**Win32- \_ Konto**](win32-account.md)geerbt.
 
 <span id="SidTypeComputer"></span><span id="sidtypecomputer"></span><span id="SIDTYPECOMPUTER"></span>
 
-**Sidtypecomputer** (9)
+**SidTypeComputer** (9)
 
 
 </dt> <dd></dd> </dl>
@@ -491,16 +491,16 @@ Diese Eigenschaft wird vom [**Win32- \_ Konto**](win32-account.md)geerbt.
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (10), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Status")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (10), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Status")
 </dt> </dl>
 
-Aktueller Status eines Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail". dabei handelt es sich um ein Element, z. b. ein intelligent-fähiges Festplattenlaufwerk, das möglicherweise ordnungsgemäß funktioniert, aber in naher Zukunft einen Fehler vorhersagt. Nicht operative Status sind: "Error", "Starting", "Stop" und "Service". Diese können während der Spiegelung von Spiegelung eines Datenträgers, erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden.
+Aktueller Status eines Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail". Dabei handelt es sich um ein Element wie ein SMART-fähiges Festplattenlaufwerk, das möglicherweise ordnungsgemäß funktioniert, aber einen Fehler in naher Zukunft vorhersagt. Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service", die während des Spiegelresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen administrativen Arbeiten angewendet werden können.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -524,35 +524,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird gestartet** ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -566,52 +566,52 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ User Account** -Klasse wird vom [**Win32- \_ Konto**](win32-account.md)abgeleitet.
+Die **Win32 \_ UserAccount-Klasse** wird von [**Win32-Konto \_**](win32-account.md)abgeleitet.
 
 > [!Note]  
-> Bei dem Versuch, in eine schreibgeschützte Eigenschaft zu schreiben, wird kein Fehler zurückgegeben, und der Wert der Eigenschaft bleibt unverändert.
+> Beim Versuch, in eine schreibgeschützte Eigenschaft zu schreiben, wird kein Fehler zurückgegeben, und der Wert der Eigenschaft bleibt unverändert.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-In der [Liste lokale Benutzerkonten mit WMI](https://Gallery.TechNet.Microsoft.Com/827623f5-eb55-4035-8f57-25c4afb444cd) VBScript in der TechNet Gallery auflisten werden die Informationen zu den lokalen Benutzerkonten, die auf einem Computer gefunden werden, mithilfe des Win32-Benutzer **\_ Kontos** zurückgegeben.
+Das Codebeispiel List Local User Accounts Using WMI VBScript [(Lokale Benutzerkonten mit WMI](https://Gallery.TechNet.Microsoft.Com/827623f5-eb55-4035-8f57-25c4afb444cd) VBScript auflisten) im TechNet-Katalog verwendet **Win32 \_ UserAccount,** um Informationen zu den auf einem Computer gefundenen lokalen Benutzerkonten zurückgibt.
 
-[Die Übersetzung der SID in das Benutzerkonto und das Benutzerkonto in sid](https://Gallery.TechNet.Microsoft.Com/f1c83aed-fe60-48d5-90ab-22388fcbd54f) PowerShell-Codebeispiel in der TechNet Gallery verwendet **Win32 \_ Useraccount** , um eine SID in ein Benutzerkonto und/oder ein Benutzerkonto in sid zu übersetzen.
+Übersetzen der [SID in das Benutzerkonto und des Benutzerkontos in die SID](https://Gallery.TechNet.Microsoft.Com/f1c83aed-fe60-48d5-90ab-22388fcbd54f) Das PowerShell-Codebeispiel im TechNet-Katalog verwendet **Win32 \_ UserAccount,** um eine SID in ein Benutzerkonto und/oder ein Benutzerkonto in SID zu übersetzen.
 
-Im folgenden VBScript-Codebeispiel wird gezeigt, wie Sie den vollständigen Namen eines Benutzers auf einem lokalen Computer erhalten. Der vollständige Name ist der Name der menschlichen Sprache, z. b., wenn eine Person den Benutzernamen "kensanchez" hat und der vollständige Name "Ken Sanchez" ist, geben Sie den tatsächlichen Domänen Namen und den Benutzernamen für "MyDomainName" und "MyUserName" ein. Für eine effiziente Abfrage müssen Sie die Eigenschaften "Domäne" und "Benutzername" angeben.
+Im folgenden VBScript-Codebeispiel wird veranschaulicht, wie Sie den vollständigen Namen eines Benutzers auf einem lokalen Computer abrufen. Der vollständige Name ist der Name der menschlichen Sprache, z. B. kann eine Person den Benutzernamen "kensaali" und den vollständigen Namen "Ken Saoa" haben, sodass Sie den tatsächlichen Domänennamen und Benutzernamen durch "MyDomainName" und "MyUserName" ersetzen. Für eine effiziente Abfrage müssen Sie sowohl die Domänen- als auch die Benutzernameneigenschaften angeben.
 
-Wenn Sie als Administrator auf einem Remote Computer angemeldet sind, können Sie den Namen des Remote Computers für den Cluster (anstelle von ".") zuweisen und dann mithilfe des folgenden Skript Typs den vollständigen Namen eines Benutzerkontos auf einem lokalen Computer – von einem Remote Computer aus erhalten.
+Wenn Sie Administrator auf einem Remotecomputer sind, können Sie den Namen des Remotecomputers für strComputer (anstelle von ".") zuweisen und dann den folgenden Skripttyp verwenden, um den vollständigen Namen eines Benutzerkontos auf einem lokalen Computer abzurufen – von einem Remotecomputer.
 
 
 ```VB
@@ -656,17 +656,17 @@ using System.Management;
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ Konto**](win32-account.md)
+[**\_Win32-Konto**](win32-account.md)
 </dt> <dt>
 
 [Betriebssystemklassen](./operating-system-classes.md)

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_COLUMNDEF-Konstruktor'
-title: JET_COLUMNDEF-Konstruktor
+description: 'Weitere Informationen finden Sie unter: JET_COLUMNDEF Konstruktor'
+title: JET_COLUMNDEF Konstruktor
 TOCTitle: 'JET_COLUMNDEF constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_COLUMNDEF.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_columndef.jet_columndef(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d3f88ea8190a58c6bf9d20154fcf2a9f8c9f40af
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 376a4c31d13ced5d6de78774134ed58bb35b74290ea382273164802531aa84da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356220"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119475387"
 ---
-# <a name="jet_columndef-constructor"></a>JET_COLUMNDEF-Konstruktor
+# <a name="jet_columndef-constructor"></a>JET_COLUMNDEF Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ Dim instance As New JET_COLUMNDEF()
 public JET_COLUMNDEF()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_COLUMNDEF-Klasse](./jet-columndef-class.md)
 
-[Mitglieder JET_COLUMNDEF](./jet-columndef-members.md)
+[JET_COLUMNDEF Member](./jet-columndef-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

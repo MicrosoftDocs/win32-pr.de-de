@@ -1,9 +1,9 @@
 ---
 title: Lautstärke
-description: Generiert einen zufälligen Wert mithilfe des Perlin-Rausch-Algorithmus.
+description: Generiert mithilfe des Perlin-Noise-Algorithmus einen zufallsbasierten Wert.
 ms.assetid: 0188a7f3-9955-4e1c-9370-ef1d8aff3765
 keywords:
-- Füll-HLSL
+- HlSL-Rauschen
 topic_type:
 - apiref
 api_name:
@@ -13,21 +13,21 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6a4dc01eaeb8276527d5d78b07a250d2a6fb1ab9
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 5eb93d32e7730b6840700bba9dc5a629bf3180f83673581f8589a254d467cff8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104391248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119120104"
 ---
 # <a name="noise"></a>Lautstärke
 
-Generiert einen zufälligen Wert mithilfe des Perlin-Rausch-Algorithmus.
+Generiert mithilfe des Perlin-Noise-Algorithmus einen zufallsbasierten Wert.
 
 
 
 
-| *ret* -Rauschen (*x*) |
+| *ret* noise(*x*) |
 |------------------|
 
 
@@ -38,9 +38,9 @@ Generiert einen zufälligen Wert mithilfe des Perlin-Rausch-Algorithmus.
 
 
 
-| Element                                                   | BESCHREIBUNG                                                                    |
+| Element                                                   | Beschreibung                                                                    |
 |--------------------------------------------------------|--------------------------------------------------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[in \] einem Gleit Komma Vektor, von dem Perlin-Rauschen generiert werden sollen.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Einem Gleitkommavektor, aus dem Perlinrauschen generiert werden soll.<br/> |
 
 
 
@@ -48,11 +48,11 @@ Generiert einen zufälligen Wert mithilfe des Perlin-Rausch-Algorithmus.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Perlin-Rausch Wert innerhalb eines Bereichs zwischen-1 und 1.
+Der Perlin-Rauschwert innerhalb eines Bereichs zwischen -1 und 1.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Perlin-Rauschwerte ändern sich reibungslos von einem Punkt zu einem anderen als einem Leerzeichen und erstellen dabei natürliche, nach dem Zufallsprinzip generierte Werte. Sie können Perlin-Rauschen verwenden, um prozedurale Texturen für Effekte wie Rauch und Feuer zu generieren.
+Perlin-Rauschwerte ändern sich nahtlos von einem Punkt zum anderen über einen Raum, wodurch natürlich aussehende, zufällig generierte Werte erstellt werden. Sie können Perlinrauschen verwenden, um prozedurale Texturen für Effekte wie Feuer und Feuer zu generieren.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -60,23 +60,23 @@ Perlin-Rauschwerte ändern sich reibungslos von einem Punkt zu einem anderen als
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                       | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size |
 |-------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|------|
-| *x*   | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any  |
-| *TZI* | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 1    |
+| *x*   | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any  |
+| *Ret* | [**Skalare**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 1    |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt           |
 |------------------------------------------------------------------------------------|---------------------|
-| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | nein                  |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja ( \_ nur TX 1 \_ 0) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Nein                  |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | ja (nur tx \_ \_ 1 0) |
 
 
 
@@ -86,7 +86,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

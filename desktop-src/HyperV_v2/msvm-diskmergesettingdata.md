@@ -1,5 +1,5 @@
 ---
-description: Stellt den Konfigurations Status der Datenträger zusammenlaufseinstellungen für einen virtuellen Computer dar.
+description: Stellt den Konfigurationsstatus der Datenträgerzusammenführungseinstellungen für einen virtuellen Computer dar.
 ms.assetid: b4c0afeb-ce37-4eec-8aba-0d74115c463f
 title: Msvm_DiskMergeSettingData-Klasse
 ms.topic: reference
@@ -18,18 +18,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: fe702c382fb0636579a8ab1355bfd1299657b214
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 825653d643a3f9eb4cf08354edc12e825ae856fc64fb6181f01d04172b393a44
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119431010"
 ---
-# <a name="msvm_diskmergesettingdata-class"></a>MSVM \_ diskmergesettingdata-Klasse
+# <a name="msvm_diskmergesettingdata-class"></a>Msvm \_ DiskMergeSettingData-Klasse
 
-Stellt den Konfigurations Status der Datenträger zusammenlaufseinstellungen für einen virtuellen Computer dar.
+Stellt den Konfigurationsstatus der Datenträgerzusammenführungseinstellungen für einen virtuellen Computer dar.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,73 +47,73 @@ class Msvm_DiskMergeSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ diskmergesettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ DiskMergeSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ diskmergesettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ DiskMergeSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von der [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) -Klasse geerbt und ist immer auf "Datenträger-Merge-Einstellungsdaten" festgelegt.
+Eine kurze Beschreibung des Objekts. Diese Eigenschaft wird von der [**CIM \_ ManagedElement-Klasse geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) und immer auf "Datenträgerzusammenführungseinstellungsdaten" festgelegt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Microsoft Disk Merge Setting Data" festgelegt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Microsoft Disk Merge Setting Data" festgelegt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt und ist immer auf "Datenträger-Merge-Einstellungsdaten" festgelegt. Durch Ändern dieser Eigenschaft wird die **ElementName** -Eigenschaft der zugeordneten [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice) -Ableitung geändert.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ SettingData geerbt**](/previous-versions//cc136911(v=vs.85))und immer auf "Datenträgerzusammenführungseinstellungsdaten" festgelegt. Durch Ändern dieser Eigenschaft wird die **ElementName-Eigenschaft** der zugeordneten [**CIM \_ LogicalDevice-Ableitung**](/windows/desktop/CIMWin32Prov/cim-logicaldevice) geändert.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyresourcesettings**](modifyresourcesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyResourceSettings-Methode**](modifyresourcesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> <dt>
 
 **EnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den aktivierten Zustand der Datenträger-Merge-Funktionalität an.
+Gibt den aktivierten Zustand der Datenträgerzusammenführungsfunktion an.
 
 <dt>
 
 <span id="Temporarily_disabled"></span><span id="temporarily_disabled"></span><span id="TEMPORARILY_DISABLED"></span>
 
-**Temporär deaktiviert** (0)
+**Vorübergehend deaktiviert** (0)
 
 
 </dt> <dd></dd> <dt>
@@ -130,7 +130,7 @@ Gibt den aktivierten Zustand der Datenträger-Merge-Funktionalität an.
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -139,7 +139,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85)) geerbt und ist immer auf "Microsoft:*GUID* Geräte-ID- \\ *Daten*" festgelegt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData geerbt**](/previous-versions//cc136911(v=vs.85)) und immer auf "Microsoft:*GUID* \\ *DeviceSpecificData"* festgelegt.
 
 </dd> </dl>
 
@@ -149,10 +149,10 @@ Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

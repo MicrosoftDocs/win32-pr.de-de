@@ -1,78 +1,78 @@
 ---
-description: Video-und Bildfunktionen
+description: Video- und Bildfunktionen
 ms.assetid: 02401edc-362b-4f6c-b10b-c46b30b3ebe7
-title: Video-und Bildfunktionen
+title: Video- und Bildfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c55e439a17dd570b6e939d1cb84d836f9100eaf7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6ab4b57f804c1da1e4a6da0ca4625e3503ed9987077a80f1f98dde91cf2e27f6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345194"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119432120"
 ---
-# <a name="video-and-image-functions"></a>Video-und Bildfunktionen
+# <a name="video-and-image-functions"></a>Video- und Bildfunktionen
 
-Diese Funktionen und Makros bearbeiten die Format Strukturen des DirectShow-Videos.
+Diese Funktionen und Makros bearbeiten die DirectShow-Videoformatstrukturen.
 
 
 
-| Funktion                                                             | BESCHREIBUNG                                                                                                                                                       |
+| Funktion                                                             | Beschreibung                                                                                                                                                       |
 |----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**\_Bitmasken \_ stimmen zu**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-bit_masks_match)                         | Vergleicht die Farb Masken für zwei [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Strukturen.                                                                                       |
-| [**Bitmasken**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-bitmasks)                                         | Ruft die Farb Masken aus einer [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Struktur ab.                                                                                         |
-| [**Checkvideoinfotype**](checkvideoinfotype.md)                     | Überprüft einen Medientyp, der eine [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Format Struktur für Fehler enthält, die Pufferüberläufe oder ganzzahlige über Läufe verursachen können.   |
-| [**CheckVideoInfo2Type**](checkvideoinfo2type.md)                   | Überprüft einen Medientyp, der eine [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) -Format Struktur für Fehler enthält, die Pufferüberläufe oder ganzzahlige über Läufe verursachen können. |
-| [**Ellen**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-colors)                                             | Ruft die Paletteneinträge aus einer [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Struktur ab.                                                                                     |
-| [**Containspalette**](containspalette.md)                           | Bestimmt, ob eine angegebene [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur eine Palette enthält.                                                           |
-| [**ConvertVideoInfoToVideoInfo2**](convertvideoinfotovideoinfo2.md) | Konvertiert einen Medientyp, der [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) verwendet, in einen, der [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) verwendet.                          |
-| [**Dibsize**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-dibsize)                                           | Berechnet die Anzahl der Bytes, die für eine geräteunabhängige Bitmap (DIB) erforderlich sind.                                                                                     |
-| [**Getbitcount**](getbitcount.md)                                   | Gibt die Anzahl der Bits pro Pixel zurück, die von einem angegebenen Video Untertyp verwendet werden.                                                                                           |
-| [**Getbitmapformatsize**](getbitmapformatsize.md)                   | Berechnet die für eine [**videinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Struktur benötigte Größe, die eine angegebene [**BITMAPINFOHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) -Struktur enthalten kann.       |
-| [**GetBitmapPalette**](getbitmappalette.md)                         | Gibt den ersten Paletteneintrag in einer [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur zurück.                                                                        |
-| [**Getbitmapsize**](getbitmapsize.md)                               | Berechnet die Anzahl der Bytes, die für eine geräteunabhängige Bitmap (DIB) erforderlich sind.                                                                                     |
-| [**Getbitmapsubtype**](getbitmapsubtype.md)                         | Gibt die **GUID** des Medien Untertyps für die angegebene Bitmap zurück.                                                                                                      |
-| [**Getsubtypame**](getsubtypename.md)                             | Ruft den lesbaren Namen eines Video Untertyps ab.                                                                                                             |
-| [**Gettruecolortype**](gettruecolortype.md)                         | Gibt die **GUID** des Medien Untertyps für eine unkomprimierte 16-Bit-RGB-Bitmap zurück.                                                                                          |
-| [**Header**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-header)                                             | Gibt die Adresse des [**bitmapinfoheaders**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) in einem [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader)zurück.                                      |
-| [**MPEG1- \_ Sequenz \_ Informationen**](/previous-versions/windows/desktop/api/amvideo/nf-amvideo-mpeg1_sequence_info)                 | Gibt die Adresse des Sequenz Headers innerhalb einer [**MPEG1VIDEOINFO**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-mpeg1videoinfo) -Struktur zurück.                                                          |
-| [**Palettisiert**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-palettised)                                     | Überprüft, ob eine Bitmap eine Farbtiefe von 8 Bits oder weniger aufweist.                                                                                                      |
-| [**\_Paletteneinträge**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-palette_entries)                          | Ruft die maximale Anzahl von Farben in der Palette einer angegebenen Bitmap ab.                                                                                      |
-| [**Masken zurücksetzen \_**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-reset_masks)                                  | Füllt die Farbmasken Felder in einer [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Struktur mit Nullen.                                                                            |
-| [**Header zurücksetzen \_**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-reset_header)                                | Füllt einen [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) mit Nullen.                                                                                                   |
-| [**Palette zurücksetzen \_**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-reset_palette)                              | Füllt die Paletteneinträge in einer [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Struktur mit Nullen.                                                                              |
-| [**Größe der \_ EGA- \_ Palette**](/previous-versions/windows/desktop/legacy/dd377602(v=vs.85))                       | Berechnet die Größe, die für die Paletteneinträge in einer 4-Bit-RGB-Bitmap benötigt wird.                                                                                         |
-| [**Größen \_ Masken**](/previous-versions/windows/desktop/legacy/dd377603(v=vs.85))                                    | Berechnet die Größe der Farb Masken in einer [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Struktur.                                                                             |
-| [**Größe \_ MPEG1VIDEOINFO**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-size_mpeg1videoinfo)                  | Berechnet die Größe einer [**MPEG1VIDEOINFO**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-mpeg1videoinfo) -Struktur, einschließlich des Sequenz Headers.                                                      |
-| [**\_Palettengröße**](/previous-versions/windows/desktop/legacy/dd377605(v=vs.85))                                | berechnet die Größe der Paletteneinträge in einer [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Struktur.                                                                         |
-| [**SIZE- \_ preheader**](/previous-versions/windows/desktop/legacy/dd377606(v=vs.85))                            | Berechnet den Byte Offset des **bmiheader** -Felds innerhalb einer [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur.                                              |
-| [**\_Video Header Größe**](/previous-versions/windows/desktop/legacy/dd377607(v=vs.85))                        | Berechnet die Größe der [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur.                                                                                  |
-| [**TrueColor**](/previous-versions/windows/desktop/legacy/dd407230(v=vs.85))                                   | Gibt die [**truecolorinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-truecolorinfo) -Struktur aus einer [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Struktur zurück.                                            |
-| [**Validatebitmapinfoheader**](validatebitmapinfoheader.md)         | Überprüft eine [**BITMAPINFOHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) -Struktur auf Fehler, die Pufferüberläufe oder ganzzahlige über Läufe verursachen können.                                   |
+| [**BIT \_ MASKS \_ MATCH**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-bit_masks_match)                         | Vergleicht die Farbmasken für zwei [**VIDEOINFO-Strukturen.**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo)                                                                                       |
+| [**Bitmasken**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-bitmasks)                                         | Ruft die Farbmasken aus einer [**VIDEOINFO-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) ab.                                                                                         |
+| [**CheckVideoInfoType**](checkvideoinfotype.md)                     | Überprüft einen Medientyp, der eine [**VIDEOINFOHEADER-Formatstruktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) enthält, auf Fehler, die Pufferüberläufe oder Ganzzahlüberläufe verursachen können.   |
+| [**CheckVideoInfo2Type**](checkvideoinfo2type.md)                   | Überprüft einen Medientyp, der eine [**VIDEOINFOHEADER2-Formatstruktur**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) enthält, auf Fehler, die Pufferüberläufe oder Ganzzahlüberläufe verursachen können. |
+| [**Farben**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-colors)                                             | Ruft die Paletteneinträge aus einer [**VIDEOINFO-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) ab.                                                                                     |
+| [**ContainsPalette**](containspalette.md)                           | Bestimmt, ob eine angegebene [**VIDEOINFOHEADER-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) eine Palette enthält.                                                           |
+| [**ConvertVideoInfoToVideoInfo2**](convertvideoinfotovideoinfo2.md) | Konvertiert einen Medientyp, der [**VIDEOINFOHEADER**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) verwendet, in einen Medientyp, der [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) verwendet.                          |
+| [**DIBSIZE**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-dibsize)                                           | Berechnet die Anzahl der Bytes, die von einer geräteunabhängigen Bitmap (DIB) benötigt werden.                                                                                     |
+| [**GetBitCount**](getbitcount.md)                                   | Gibt die Anzahl der Bits pro Pixel zurück, die von einem angegebenen Videountertyp verwendet werden.                                                                                           |
+| [**GetBitmapFormatSize**](getbitmapformatsize.md)                   | Berechnet die erforderliche Größe für eine [**VIDEOINFO-Struktur,**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) die eine angegebene [**BITMAPINFOHEADER-Struktur**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) enthalten kann.       |
+| [**GetBitmapPalette**](getbitmappalette.md)                         | Gibt den ersten Paletteneintrag in einer [**VIDEOINFOHEADER-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) zurück.                                                                        |
+| [**GetBitmapSize**](getbitmapsize.md)                               | Berechnet die Anzahl der Bytes, die von einer geräteunabhängigen Bitmap (DIB) benötigt werden.                                                                                     |
+| [**GetBitmapSubtype**](getbitmapsubtype.md)                         | Gibt die **Medienuntertyp-GUID** für die angegebene Bitmap zurück.                                                                                                      |
+| [**GetSubtypeName**](getsubtypename.md)                             | Ruft den für Menschen lesbaren Namen eines Videountertyps ab.                                                                                                             |
+| [**GetTrueColorType**](gettruecolortype.md)                         | Gibt die **Medienuntertyp-GUID** für eine nicht komprimierte 16-Bit-RGB-Bitmap zurück.                                                                                          |
+| [**Header**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-header)                                             | Gibt die Adresse des [**BITMAPINFOHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) in einem [**VIDEOINFOHEADER zurück.**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader)                                      |
+| [**MPEG1 \_ SEQUENCE \_ INFO**](/previous-versions/windows/desktop/api/amvideo/nf-amvideo-mpeg1_sequence_info)                 | Gibt die Adresse des Sequenzheaders innerhalb einer [**MPEG1VIDEOINFO-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-mpeg1videoinfo) zurück.                                                          |
+| [**PALETTISIERT**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-palettised)                                     | Überprüft, ob eine Bitmap eine Farbtiefe von mindestens 8 Bit auf hat.                                                                                                      |
+| [**\_PALETTENEINTRÄGE**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-palette_entries)                          | Ruft die maximale Anzahl von Farben in der Palette einer angegebenen Bitmap ab.                                                                                      |
+| [**ZURÜCKSETZEN \_ VON MASKEN**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-reset_masks)                                  | Füllt die Farbmaskenfelder in einer [**VIDEOINFO-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) mit Nullen auf.                                                                            |
+| [**RESET \_ HEADER**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-reset_header)                                | Füllt einen [**VIDEOINFOHEADER**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) mit Nullen.                                                                                                   |
+| [**PALETTE \_ ZURÜCKSETZEN**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-reset_palette)                              | Füllt die Paletteneinträge in einer [**VIDEOINFO-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) mit Nullen auf.                                                                              |
+| [**\_ \_ GRÖßEN-EGA-PALETTE**](/previous-versions/windows/desktop/legacy/dd377602(v=vs.85))                       | Berechnet die erforderliche Größe für die Paletteneinträge in einer 4-Bit-RGB-Bitmap.                                                                                         |
+| [**\_GRÖßENMASKEN**](/previous-versions/windows/desktop/legacy/dd377603(v=vs.85))                                    | Berechnet die Größe der Farbmasken in einer [**VIDEOINFO-Struktur.**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo)                                                                             |
+| [**SIZE \_ MPEG1VIDEOINFO**](/previous-versions/windows/desktop/api/Amvideo/nf-amvideo-size_mpeg1videoinfo)                  | Berechnet die Größe einer [**MPEG1VIDEOINFO-Struktur,**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-mpeg1videoinfo) einschließlich des Sequenzheaders.                                                      |
+| [**\_GRÖßENPALETTE**](/previous-versions/windows/desktop/legacy/dd377605(v=vs.85))                                | berechnet die Größe der Paletteneinträge in einer [**VIDEOINFO-Struktur.**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo)                                                                         |
+| [**SIZE \_ PREHEADER**](/previous-versions/windows/desktop/legacy/dd377606(v=vs.85))                            | Berechnet den Byteoffset des **bmiHeader-Felds** innerhalb einer [**VIDEOINFOHEADER-Struktur.**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader)                                              |
+| [**SIZE \_ VIDEOHEADER**](/previous-versions/windows/desktop/legacy/dd377607(v=vs.85))                        | Berechnet die Größe der [**VIDEOINFOHEADER-Struktur.**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader)                                                                                  |
+| [**Truecolor**](/previous-versions/windows/desktop/legacy/dd407230(v=vs.85))                                   | Gibt die [**TRUECOLORINFO-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-truecolorinfo) aus einer [**VIDEOINFO-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) zurück.                                            |
+| [**ValidateBitmapInfoHeader**](validatebitmapinfoheader.md)         | Überprüft eine [**BITMAPINFOHEADER-Struktur**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) auf Fehler, die Pufferüberläufe oder Ganzzahlüberläufe verursachen können.                                   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die meisten Makros und Funktionen, die im Abschnitt beschrieben werden, sind für die Bearbeitung von **videoinfoheader** -und **videoinfo** -Strukturen für RGB-Bitmaps konzipiert. Verwenden Sie diese Makros mit Vorsicht: bei den meisten davon wird davon ausgegangen, dass die angegebene Struktur ordnungsgemäß initialisiert wurde. Viele davon gehen auch davon aus, dass die **BITMAPINFOHEADER** -Struktur die Standardgröße ist. Das heißt `biSize == sizeof(BITMAPINFOHEADER)` .
+Die meisten der im Abschnitt beschriebenen Makros und Funktionen sind für die Bearbeitung von **VIDEOINFOHEADER-** und **VIDEOINFO-Strukturen** für RGB-Bitmaps konzipiert. Verwenden Sie diese Makros mit Vorsicht: Die meisten von ihnen gehen davon aus, dass die angegebene Struktur ordnungsgemäß initialisiert wurde. Viele davon gehen auch davon aus, dass die **BITMAPINFOHEADER-Struktur** die Standardgröße ist. das heißt, `biSize == sizeof(BITMAPINFOHEADER)` .
 
-Die DirectShow-Basisklassen Bibliothek bietet auch die folgenden globalen Konstanten, die die Standard Farb Masken für True-Color-Bitmaps definieren.
+Die DirectShow-Basisklassenbibliothek stellt auch die folgenden globalen Konstanten bereit, die die Standardfarbmasken für True-Color-Bitmaps definieren.
 
 
 
-| Globale Daten | BESCHREIBUNG                                                   |
+| Globale Daten | Beschreibung                                                   |
 |-------------|---------------------------------------------------------------|
-| **bits555** | Array von Farb Masken für eine 16-Bit-RGB-Bitmap im 5-5-5-Format. |
-| **bits565** | Array von Farb Masken für eine 16-Bit-RGB-Bitmap im 5-6-5-Format. |
-| **bits888** | Array von Farb Masken für eine 24-Bit-RGB-Bitmap.                 |
+| **bits555** | Array von Farbmasken für eine 16-Bit-RGB-Bitmap im 5-5-5-Format. |
+| **bits565** | Array von Farbmasken für eine 16-Bit-RGB-Bitmap im 5-6-5-Format. |
+| **bits888** | Array von Farbmasken für eine 24-Bit-RGB-Bitmap.                 |
 
 
 
  
 
-Jede dieser Konstanten in einem Array von drei **DWORD** s, das die roten, grünen und blauen Masken in dieser Reihenfolge enthält.
+Jede dieser Konstanten in einem Array von drei **DWORD-S,** das die roten, grünen und blauen Masken in dieser Reihenfolge enthält.
 
  
 

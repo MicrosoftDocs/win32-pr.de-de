@@ -1,7 +1,7 @@
 ---
-description: Die updatecolourtable-Methode aktualisiert die Farbtabelle mit einer neuen Palette.
+description: Die UpdateColourTable-Methode aktualisiert die Farbtabelle mit einer neuen Palette.
 ms.assetid: 61ad98c6-a526-4aac-ad68-d44fadc668de
-title: Cdrawimage. updatecolourtable-Methode (winutil. h)
+title: CDrawImage.UpdateColourTable-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fcffdf9e7deaaac5a01f6559ee557c978fcda88f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5a53413cd1aaf60c17031f126f0a158629f5c41f8ca94981d293f003afadda8d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360442"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119384030"
 ---
-# <a name="cdrawimageupdatecolourtable-method"></a>Cdrawimage. updatecolourtable-Methode
+# <a name="cdrawimageupdatecolourtable-method"></a>CDrawImage.UpdateColourTable-Methode
 
-Die- `UpdateColourTable` Methode aktualisiert die Farbtabelle mit einer neuen Palette.
+Die `UpdateColourTable` -Methode aktualisiert die Farbtabelle mit einer neuen Palette.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void UpdateColourTable(
 
 <dl> <dt>
 
-*HDC* 
+*Hdc* 
 </dt> <dd>
 
 Gerätekontext, der das Bild enthält.
@@ -53,7 +53,7 @@ Gerätekontext, der das Bild enthält.
 *pbmi* 
 </dt> <dd>
 
-Zeiger auf eine [**BITMAPINFOHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) -Struktur, die die neue Palette enthält.
+Zeiger auf eine [**BITMAPINFOHEADER-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) die die neue Palette enthält.
 
 </dd> </dl>
 
@@ -67,16 +67,16 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> </dl>
 
  

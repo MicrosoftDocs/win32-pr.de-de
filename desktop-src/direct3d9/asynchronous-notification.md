@@ -1,43 +1,43 @@
 ---
-description: Es gibt zahlreiche interessante Abfragen für einen Treiber, die eine Anwendung ausführen kann, wenn keine Leistungskosten anfallen.
+description: Es gibt eine Reihe interessanter Abfragen für einen Treiber, die eine Anwendung ausführen kann, wenn es keine Leistungskosten gibt.
 ms.assetid: 81e1c5c5-03bc-4598-814e-14e56513e221
 title: Asynchrone Benachrichtigung (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a8aee8acb791e2e1e2de7eb305cc19df4e7711e2
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: dbd23a64e613bbbae56154dc35c05bcf08b75c4c91f306360153e775e12c40ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343601"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119123417"
 ---
 # <a name="asynchronous-notification-direct3d-9"></a>Asynchrone Benachrichtigung (Direct3D 9)
 
-Es gibt zahlreiche interessante Abfragen für einen Treiber, die eine Anwendung ausführen kann, wenn keine Leistungskosten anfallen. In Direct3D 7 und Direct3D 8 hat ein synchroner Abfrage Mechanismus GetInfo für Dinge wie Statistiken gut funktioniert, aber es wurden keine Leistungs kritischen Abfragen hinzugefügt. Es gibt noch andere Dinge (wie z. b. Zäune), die grundsätzlich asynchron sind. Dies ist eine einfache API, mit der synchrone und asynchrone Abfragen durchführen werden. GetInfo wird in Direct3D 9 eingestellt.
+Es gibt eine Reihe interessanter Abfragen für einen Treiber, die eine Anwendung ausführen kann, wenn es keine Leistungskosten gibt. In Direct3D 7 und Direct3D 8 funktionierte der synchrone Abfragemechanismus GetInfo gut für Dinge wie Statistiken, aber es wurden keine leistungskritischen Abfragen hinzugefügt. Es gibt andere Dinge (z. B. Zäunen), die grundsätzlich asynchron sind. Dies ist eine einfache API, um sowohl synchrone als auch asynchrone Abfragen zu erstellen. GetInfo wird in Direct3D 9 zurückgezogen.
 
-Erstellen Sie eine Abfrage mit [**IDirect3DDevice9:: kreatequery**](/windows/desktop/api). Diese Methode nimmt ein D3DQUERYTYPE-Objekt an, das definiert, welche Art von Abfrage durchführen werden soll, und gibt einen Zeiger auf ein [**IDirect3DQuery9**](/windows/desktop/api) -Objekt zurück. Wenn der Abfragetyp nicht unterstützt wird, gibt der Aufruf einen Fehler zurück D3DERR \_ NotAvailable. Mithilfe des Query-Objekts übermittelt die Anwendung die Abfrage mithilfe von [**IDirect3DQuery9:: Issue**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dquery9-issue)an die Laufzeit und fragt den Abfrage Status mithilfe von [**IDirect3DQuery9:: GetData**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dquery9-getdata)ab. Wenn das Abfrageergebnis verfügbar ist, \_ wird s OK zurückgegeben; andernfalls \_ wird s false zurückgegeben. Es wird erwartet, dass die Anwendung einen entsprechend großen Puffer für die Abfrageergebnisse übergibt.
+Erstellen Sie eine Abfrage [**mithilfe von IDirect3DDevice9::CreateQuery**](/windows/desktop/api). Diese Methode verwendet einen D3DQUERYTYPE, der definiert, welche Art von Abfrage ausgeführt werden soll, und gibt einen Zeiger auf ein [**IDirect3DQuery9-Objekt**](/windows/desktop/api) zurück. Wenn der Abfragetyp nicht unterstützt wird, gibt der Aufruf den Fehler D3DERR \_ NOTAVAILABLE zurück. Mithilfe des Abfrageobjekts übermittelt die Anwendung die Abfrage mithilfe von [**IDirect3DQuery9::Issue**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dquery9-issue)an die Laufzeit und abruft den Abfragestatus mithilfe von [**IDirect3DQuery9::GetData**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dquery9-getdata). Wenn das Abfrageergebnis verfügbar ist, wird S \_ OK zurückgegeben, andernfalls wird S \_ FALSE zurückgegeben. Es wird erwartet, dass die Anwendung einen Puffer mit entsprechender Größe für die Abfrageergebnisse über gibt.
 
-Die Anwendung verfügt über eine Option, mit der die Laufzeit gezwungen wird, die Abfrage mithilfe von D3DGETDATA \_ Flush mit [**IDirect3DQuery9:: GetData**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dquery9-getdata)an den Treiber zu leeren. Dies bewirkt eine Leerung und erzwingt den Treiber, die Abfrage anzuzeigen. In diesem Fall wird D3DERR \_ DeviceLost zurückgegeben, wenn das Gerät verloren geht.
+Die Anwendung verfügt über eine Option, die Laufzeit zu zwingen, die Abfrage mithilfe von D3DGETDATA FLUSH mit \_ [**IDirect3DQuery9::GetData**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dquery9-getdata)an den Treiber zu leeren. Dies führt zu einer Leerung, die den Treiber zwingt, die Abfrage zu sehen. In diesem Fall wird D3DERR DEVICELOST zurückgegeben, \_ wenn das Gerät verloren geht.
 
-Alle Abfragen gehen verloren, wenn das Gerät verloren geht, und die Anwendung muss Sie neu erstellen. Wenn die Abfrage vom Gerät nicht unterstützt wird und pqueryid **null** ist, schlägt die Erstellung der Abfrage mit D3DERR \_ invalidcallfehl.
+Alle Abfragen gehen verloren, wenn das Gerät verloren geht. Die Anwendung muss sie neu erstellen. Wenn das Gerät die Abfrage nicht unterstützt und die pQueryID **NULL ist,** kann die Abfrage nicht mit D3DERR \_ INVALIDCALL erstellt werden.
 
-In der folgenden Tabelle werden wichtige Informationen zu den einzelnen Abfrage Typen zusammengefasst.
+In der folgenden Tabelle werden wichtige Informationen zu den einzelnen Abfragetypen zusammengefasst.
 
 
 
-| Quertytype                    | Gültiges Issue-Flag              | GetData-Puffer              | Typ      | Impliziter Beginn der Abfrage |
+| QuertyType                    | Gültiges Problemflag              | GetData-Puffer              | Typ      | Impliziter Anfang der Abfrage |
 |-------------------------------|-------------------------------|-----------------------------|--------------|-----------------------------|
-| D3DQUERYTYPE \_ VCACHE          | D3DISSUE \_ Ende                 | D3DDEVINFO \_ VCACHE          | Retail/Debug | "Kreatedevice"                |
-| D3DQUERYTYPE \_ ResourceManager | D3DISSUE \_ Ende                 | D3DDEVINFO \_ ResourceManager | Nur Debuggen   | Anzahl                     |
-| D3DQUERYTYPE \_ vertexstats     | D3DISSUE \_ Ende                 | D3DDEVINFO \_ D3DVERTEXSTATS  | Nur Debuggen   | Anzahl                     |
-| D3DQUERYTYPE- \_ Ereignis           | D3DISSUE \_ Ende                 | BOOL                        | Retail/Debug | "Kreatedevice"                |
-| D3DQUERYTYPE- \_ oksion       | D3DISSUE \_ Begin, D3DISSUE \_ End | DWORD                       | Retail/Debug | –                         |
+| D3DQUERYTYPE \_ VCACHE          | D3DISSUE \_ END                 | D3DDEVINFO \_ VCACHE          | Einzelhandel/Debuggen | CreateDevice                |
+| D3DQUERYTYPE \_ ResourceManager | D3DISSUE \_ END                 | D3DDEVINFO \_ ResourceManager | Nur Debuggen   | Anzahl                     |
+| D3DQUERYTYPE \_ VERTEXSTATS     | D3DISSUE \_ END                 | D3DDEVINFO \_ D3DVERTEXSTATS  | Nur Debuggen   | Anzahl                     |
+| D3DQUERYTYPE-EREIGNIS \_           | D3DISSUE \_ END                 | BOOL                        | Einzelhandel/Debuggen | CreateDevice                |
+| D3DQUERYTYPE \_ OCCLUSION       | D3DISSUE \_ BEGIN,D3DISSUE \_ END | DWORD                       | Einzelhandel/Debuggen | Nicht zutreffend                         |
 
 
 
  
 
-Flags-Feld für [**IDirect3DQuery9:: Issue**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dquery9-issue):
+Flags-Feld für [**IDirect3DQuery9::Issue:**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dquery9-issue)
 
 
 ```
@@ -57,7 +57,7 @@ Flags-Feld für [**IDirect3DQuery9:: Issue**](/windows/win32/api/d3d9helper/nf-d
 
 
 
-Flags-Feld für [**IDirect3DQuery9:: GetData**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dquery9-getdata):
+Flags-Feld für [**IDirect3DQuery9::GetData:**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dquery9-getdata)
 
 
 ```
@@ -72,7 +72,7 @@ Flags-Feld für [**IDirect3DQuery9:: GetData**](/windows/win32/api/d3d9helper/nf
 
 <dl> <dt>
 
-[Programmiertipps](programming-tips.md)
+[Programmieren Tipps](programming-tips.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Entfernt den zuvor definierten virtuellen Computer aus dem Verwaltungsbereich des Host Systems.
+description: Entfernt den zuvor definierten virtuellen Computer aus dem Verwaltungsbereich des Hostsystems.
 ms.assetid: 16E6EEB0-CB29-4FFC-AEFF-872E099337FA
-title: Destroysystem-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: DestroySystem-Methode der Msvm_VirtualSystemManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1caf4e4a590bdbfe2f7543e23d5ca00018300fb0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c41b1f985b55d1f1756d49308ebda4db1beb92264945bd7418bdea4460e4e72b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867075"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119254150"
 ---
-# <a name="destroysystem-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Destroysystem-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="destroysystem-method-of-the-msvm_virtualsystemmanagementservice-class"></a>DestroySystem-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Entfernt den zuvor definierten virtuellen Computer aus dem Verwaltungsbereich des Host Systems. Alle zugehörigen Ressourcen Definitionen werden ebenfalls entfernt. Der virtuelle Computer muss sich im ausgeschalteten oder gespeicherten Zustand befinden, bevor diese Methode aufgerufen wird.
+Entfernt den zuvor definierten virtuellen Computer aus dem Verwaltungsbereich des Hostsystems. Alle zugeordneten Ressourcendefinitionen werden ebenfalls entfernt. Der virtuelle Computer muss vor dem Aufrufen dieser Methode im ausgeschalteten oder gespeicherten Zustand sein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,29 +40,29 @@ uint32 DestroySystem(
 
 <dl> <dt>
 
-*Affectedsystem* \[ in\]
+*AffectedSystem* \[ In\]
 </dt> <dd>
 
-Typ: **CIM \_ Computersystem**
+Typ: **\_ CIM-ComputerSystem**
 
-Ein Verweis auf eine Instanz des [**CIM- \_ Computer Systems**](/windows/desktop/CIMWin32Prov/cim-computersystem) , die die zu zerstörende Instanz des virtuellen Computers darstellt.
+Ein Verweis auf eine Instanz des [**\_ CIM-Computersystems,**](/windows/desktop/CIMWin32Prov/cim-computersystem) das die zu zerstörende Instanz des virtuellen Computers darstellt.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Typ: **CIM \_ bettejob**
+Typ: **CIM \_ ConcreteJob**
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Wenn diese Methode synchron ausgeführt wird, wird 0 zurückgegeben, wenn Sie erfolgreich ausgeführt wird. Wenn diese Methode asynchron ausgeführt wird, wird 4096 zurückgegeben, und der *Auftrags* Ausgabeparameter kann verwendet werden, um den Fortschritt des asynchronen Vorgangs zu verfolgen. Jeder andere Rückgabewert gibt einen Fehler an.
+Wenn diese Methode synchron ausgeführt wird, gibt sie 0 zurück, wenn sie erfolgreich ist. Wenn diese Methode asynchron ausgeführt wird, gibt sie  4096 zurück, und der Job-Ausgabeparameter kann verwendet werden, um den Fortschritt des asynchronen Vorgangs zu verfolgen. Jeder andere Rückgabewert gibt einen Fehler an.
 
 <dl> <dt>
 
@@ -72,7 +72,7 @@ Wenn diese Methode synchron ausgeführt wird, wird 0 zurückgegeben, wenn Sie er
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -81,31 +81,31 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ VirtualSystemManagementService-Klasse**](msvm-virtualsystemmanagementservice.md) kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden c#-Beispiel wird die **destroysystem** -Methode verwendet, um einen geplanten virtuellen Computer zu entfernen. Dieser Code stammt aus dem Beispiel zu den von [Hyper-V geplanten virtuellen](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Hyper-V/Pvm)Computern. Die Dienstprogramme, auf die verwiesen wird, finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (v2)](common-utilities-for-the-virtualization-samples-v2.md).
+Im folgenden C#-Beispiel wird die **DestroySystem-Methode** verwendet, um einen geplanten virtuellen Computer zu entfernen. Dieser Code ist aus dem [Hyper-V-Beispiel für geplante virtuelle Computer entnommen.](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Hyper-V/Pvm) Die referenzierten Hilfsprogramme finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (V2).](common-utilities-for-the-virtualization-samples-v2.md)
 
 > [!IMPORTANT]
-> Der folgende Code muss auf dem Host Server des virtuellen Computers ausgeführt werden, und er muss mit Administrator Rechten ausgeführt werden, um ordnungsgemäß zu funktionieren.
+> Damit der folgende Code ordnungsgemäß funktioniert, muss er auf dem Hostserver des virtuellen Computers und mit Administratorrechten ausgeführt werden.
 
  
 
@@ -149,19 +149,19 @@ RemovePvm(
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

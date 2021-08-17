@@ -1,35 +1,35 @@
 ---
-title: Verwenden von Sami mit dem Windows Media Player-Steuerelement in einem Browser
-description: Verwenden von Sami mit dem Windows Media Player-Steuerelement in einem Browser
+title: Verwenden von SAMI mit dem Windows Media Player-Steuerelement in einem Browser
+description: Verwenden von SAMI mit dem Windows Media Player-Steuerelement in einem Browser
 ms.assetid: 41906e57-adaa-4df7-86ba-19b8a757e216
 keywords:
-- Windows Media Player, synchronisierter zugänglicher Medienaustausch (Sami)
-- Windows Media Player-Objektmodell, synchronisierter zugänglicher Medienaustausch (Sami)
-- Objektmodell, synchronisierter, zugänglicher Medienaustausch (Sami)
-- Windows Media Player Mobile, synchronisierter verfügbarer Medienaustausch (Sami)
-- Windows Media Player ActiveX-Steuerelement, synchronisierter barrierefreier Medienaustausch (Sami)
-- Windows Media Player Mobile ActiveX-Steuerelement, synchronisierter barrierefreier Medienaustausch (Sami)
-- ActiveX-Steuerelement, synchronisierter, zugänglicher Medienaustausch (Sami)
-- Synchronisierter, barrierefreier Medienaustausch (Sami), Dateien
-- Samisch (synchronisierter, zugänglicher Medienaustausch), Dateien
-- Synchronisierter, barrierefreier Medienaustausch (Sami), Beispielcode
-- Samisch (synchronisierter, zugänglicher Medienaustausch), Beispielcode
+- Windows Media Player,Synchronized Accessible Media Interchange (SAMI)
+- Windows Media Player Objektmodell, Synchronized Accessible Media Interchange (SAMI)
+- Objektmodell, Synchronisierter barrierefreier Medienaustausch (Synchronized Accessible Media Interchange, SAMI)
+- Windows Media Player Mobiler, synchronisierter zugänglicher Medienaustausch (Synchronized Accessible Media Interchange, SAMI)
+- Windows Media Player ActiveX-Steuerelement, Synchronisierter barrierefreier Medienaustausch (Synchronized Accessible Media Interchange, SAMI)
+- Windows Media Player Mobile ActiveX-Steuerelement, Synchronisierter barrierefreier Medienaustausch (Synchronized Accessible Media Interchange, SAMI)
+- ActiveX-Steuerelement, Synchronisierter barrierefreier Medienaustausch (Synchronized Accessible Media Interchange, SAMI)
+- Synchronisierter zugänglicher Medienaustausch (Synchronized Accessible Media Interchange, SAMI), Dateien
+- SAMI (Synchronized Accessible Media Interchange), Dateien
+- Synchronized Accessible Media Interchange (SAMI), Beispielcode
+- SAMI (Synchronized Accessible Media Interchange), Beispielcode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b651c3af117942d56ffc5334323913d26cdf6f99
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d277f2849e6036d85bc8c03940a7dbd59df8b81083ca88240ebd68be768fde9d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103948053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134343"
 ---
-# <a name="using-sami-with-the-windows-media-player-control-in-a-browser"></a>Verwenden von Sami mit dem Windows Media Player-Steuerelement in einem Browser
+# <a name="using-sami-with-the-windows-media-player-control-in-a-browser"></a>Verwenden von SAMI mit dem Windows Media Player-Steuerelement in einem Browser
 
-Anstatt für jeden Schriftart Stil oder jede Sprache eine Sami-Datei zu erstellen, können Sie unterschiedliche Formatklassen in einer Datei mit grundlegenden Skripts und dem Windows-Media Player Steuerelement-Objektmodell deklarieren. Sie können benutzerdefinierte Steuerelemente erstellen, die es dem Benutzer ermöglichen, zwischen den verschiedenen Stil-und Sprachoptionen zu wählen. Außerdem haben Sie die komplette Kontrolle über das Design der Player-Schnittstelle und die Anpassung der einzelnen Funktionen.
+Anstatt eine SAMI-Datei für jeden Schriftschnitt oder jede Sprache zu erstellen, können Sie verschiedene Stilklassen in einer Datei deklarieren, indem Sie grundlegende Skripts und das Windows Media Player Steuerelementobjektmodell verwenden. Sie können benutzerdefinierte Steuerelemente erstellen, die es dem Benutzer ermöglichen, zwischen den verschiedenen Stil- und Sprachoptionen zu wählen. Darüber hinaus haben Sie die vollständige Kontrolle über den Entwurf der Player-Schnittstelle und die Anpassung der einzelnen Funktionen.
 
-Ausführliche Informationen zum Einbetten des Windows Media Player-Steuer Elements auf einer Webseite finden Sie unter [einfaches Beispiel der Skripterstellung auf einer](simple-example-of-scripting-in-a-web-page.md)Webseite.
+Ausführliche Informationen zum Einbetten des Windows Media Player-Steuerelements in eine Webseite finden Sie unter [Einfaches Beispiel für die Skripterstellung in einer Webseite.](simple-example-of-scripting-in-a-web-page.md)
 
-Der folgende Beispielcode veranschaulicht die Verwendung von Untertiteln mit dem Windows Media Player-Steuerelement, das in eine Webseite eingebettet ist. Es enthält Steuerelemente, mit denen der Benutzer Schriftart Stil und Sprache auswählen kann.
+Der folgende Beispielcode veranschaulicht die Verwendung von Untertiteln mit dem in eine Webseite eingebetteten Windows Media Player-Steuerelement. Sie enthält Steuerelemente, mit denen der Benutzer Schriftschnitt und Sprache auswählen kann.
 
 
 ```C++
@@ -119,9 +119,9 @@ Der folgende Beispielcode veranschaulicht die Verwendung von Untertiteln mit dem
 [**Hinzufügen von Untertiteln zu digitalen Medien**](adding-closed-captions-to-digital-media.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

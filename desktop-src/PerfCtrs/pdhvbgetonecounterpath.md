@@ -1,7 +1,7 @@
 ---
-description: Die pdhvbgetonecounterpath-Funktion zeigt ein Dialogfeld an, in dem der Benutzer die verfügbaren Leistungsindikatoren durchsuchen und einen Indikator auswählen kann.
+description: Die PdhVbGetOneCounterPath-Funktion zeigt ein Dialogfeld an, in dem der Benutzer die verfügbaren Leistungsindikatoren durchsuchen und einen Leistungsindikator auswählen kann.
 ms.assetid: a42406ef-70e0-464d-90f8-fef9e1c3471d
-title: Pdhvbgetonecounterpath-Funktion
+title: PdhVbGetOneCounterPath-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,21 +13,21 @@ api_type:
 - DllExport
 api_location:
 - Pdh.dll
-ms.openlocfilehash: 980665372d49f483e3fb59b7571ec38fa9c2851a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: da6cc5b476373a55135d91d21163f15cb04379fff9d7c7c2cf1342451a5a201d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061158"
 ---
-# <a name="pdhvbgetonecounterpath-function"></a>Pdhvbgetonecounterpath-Funktion
+# <a name="pdhvbgetonecounterpath-function"></a>PdhVbGetOneCounterPath-Funktion
 
-Die **pdhvbgetonecounterpath** -Funktion zeigt ein Dialogfeld an, in dem der Benutzer die verfügbaren Leistungsindikatoren durchsuchen und einen Indikator auswählen kann. Der ausgewählte Wert wird in der *PathString* -Variablen zurückgegeben. Die *PathString* -Variable muss dimensioniert und initialisiert werden, bevor diese Funktion aufgerufen wird, und die dimensionierte Größe muss von der *pathLength* -Variablen angegeben werden.
+Die **PdhVbGetOneCounterPath-Funktion** zeigt ein Dialogfeld an, in dem der Benutzer die verfügbaren Leistungsindikatoren durchsuchen und einen Leistungsindikator auswählen kann. Der ausgewählte Zähler wird in der *PathString-Variablen* zurückgegeben. Die *PathString-Variable* muss dimensioniert und initialisiert werden, bevor diese Funktion aufgerufen wird, und die dimensionierte Größe muss durch die *PathLength-Variable angegeben* werden.
 
 > [!IMPORTANT]
-> Die Funktion, die in diesem Thema beschrieben wird, kann in Zukunft geändert oder nicht mehr verfügbar sein. Stattdessen empfiehlt Microsoft die Verwendung der Funktionen, die unter [Funktionen von Leistungsindikatoren](performance-counters-functions.md)beschrieben werden.
+> Die funktion, die in diesem Thema beschrieben wird, kann in Zukunft geändert oder nicht mehr verfügbar sein. Stattdessen empfiehlt Microsoft die Verwendung der unter [Leistungsindikatorfunktionen beschriebenen Funktionen.](performance-counters-functions.md)
 
-Funktion pdhvbgetonecounterpath ( \_ ByVal PathString As String, \_ ByVal pathLength As Long, \_ ByVal DetailLevel As Long, \_ ByVal captionstring As String \_ ) so lange
+Funktion PdhVbGetOneCounterPath( \_ ByVal PathString as String, \_ ByVal PathLength as long, \_ ByVal DetailLevel as long, \_ ByVal CaptionString as String \_ ) so long
 
 ## <a name="parameters"></a>Parameter
 
@@ -36,7 +36,7 @@ Funktion pdhvbgetonecounterpath ( \_ ByVal PathString As String, \_ ByVal pathLe
 *PathString* 
 </dt> <dd>
 
-Initialisierte Zeichen folgen Variable, die verwendet wird, um den vom Benutzer ausgewählten Counter-Pfad zu empfangen.
+Initialisierte Zeichenfolgenvariable, die zum Empfangen des vom Benutzer ausgewählten Indikatorpfads verwendet wird.
 
 </dd> <dt>
 
@@ -47,7 +47,7 @@ Länge der initialisierten PathString.
 
 </dd> <dt>
 
-*Detail Level* 
+*DetailLevel* 
 </dt> <dd>
 
 Typen von Leistungsindikatoren, die im Dialogfeld angezeigt werden sollen. Dieser Parameter kann einen der folgenden Werte annehmen.
@@ -56,10 +56,10 @@ Typen von Leistungsindikatoren, die im Dialogfeld angezeigt werden sollen. Diese
 
 | Wert                                                                                                                                                                               | Bedeutung                                                                                                                                                 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="PERF_DETAIL_ADVANCED"></span><span id="perf_detail_advanced"></span><dl> <dt>**Leistungs \_ Details \_ erweitert**</dt> </dl> | Leistungsindikatoren, die der Erweiterte Benutzer wahrscheinlich versteht, zusätzlich zu den Endbenutzer-Leistungsindikatoren.<br/>                                            |
-| <span id="PERF_DETAIL_EXPERT"></span><span id="perf_detail_expert"></span><dl> <dt>**Perf- \_ Detail \_ Experte**</dt> </dl>       | Leistungsindikatoren für den Benutzer und den Softwareentwickler, zusätzlich zu den Leistungsindikatoren für die Anfänger und Fortgeschrittene.<br/> |
-| <span id="PERF_DETAIL_NOVICE"></span><span id="perf_detail_novice"></span><dl> <dt>**Perf- \_ Detail- \_ Anfänger**</dt> </dl>       | Nur Leistungsindikatoren, die der Anfänger wahrscheinlich versteht.<br/>                                                                                  |
-| <span id="PERF_DETAIL_WIZARD"></span><span id="perf_detail_wizard"></span><dl> <dt>**Perf- \_ Detail- \_ Assistent**</dt> </dl>       | Alle Leistungsindikatoren im System.<br/>                                                                                                                  |
+| <span id="PERF_DETAIL_ADVANCED"></span><span id="perf_detail_advanced"></span><dl> <dt>**PERF \_ DETAIL \_ ADVANCED**</dt> </dl> | Leistungsindikatoren, die der fortgeschrittene Benutzer neben den Zählern für fortgeschrittene Benutzer wahrscheinlich versteht.<br/>                                            |
+| <span id="PERF_DETAIL_EXPERT"></span><span id="perf_detail_expert"></span><dl> <dt>**PERF \_ DETAIL \_ EXPERT**</dt> </dl>       | Leistungsindikatoren, die der erfahrene Benutzer und Softwareentwickler wahrscheinlich verstehen werden, zusätzlich zu den Leistungsindikatoren für die Fortgeschrittene und fortgeschrittene Benutzer.<br/> |
+| <span id="PERF_DETAIL_NOVICE"></span><span id="perf_detail_novice"></span><dl> <dt>**\_ \_ PERF-DETAILINSZENIERUNG**</dt> </dl>       | Nur Leistungsindikatoren, die der unerfahrene Benutzer wahrscheinlich versteht.<br/>                                                                                  |
+| <span id="PERF_DETAIL_WIZARD"></span><span id="perf_detail_wizard"></span><dl> <dt>**ASSISTENT FÜR \_ \_ PERF-DETAILS**</dt> </dl>       | Alle Leistungsindikatoren im System.<br/>                                                                                                                  |
 
 
 
@@ -67,16 +67,16 @@ Typen von Leistungsindikatoren, die im Dialogfeld angezeigt werden sollen. Diese
 
 </dd> <dt>
 
-*Captionstring* 
+*CaptionString* 
 </dt> <dd>
 
-Zeichen folgen Variable, die den Text enthält, der auf der Beschriftungs Leiste des Dialog Felds angezeigt wird.
+Zeichenfolgenvariable, die den Text enthält, der in der Beschriftungsleiste des Dialogfelds angezeigt wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt die Anzahl der Zeichen zurück, die in den *PathString* -Puffer geschrieben wurden.
+Die Funktion gibt die Anzahl der Zeichen zurück, die in den *PathString-Puffer geschrieben* werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,24 +84,24 @@ Die-Funktion gibt die Anzahl der Zeichen zurück, die in den *PathString* -Puffe
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Bibliothek<br/>                  | <dl> <dt>PDH. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Bibliothek<br/>                  | <dl> <dt>Pdh.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Pdh.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Pdhvbkreatecounterpathlist**](pdhvbcreatecounterpathlist.md)
+[**PdhVbCreateCounterPathList**](pdhvbcreatecounterpathlist.md)
 </dt> <dt>
 
-[**Pdhvbgetcounterpathelements**](pdhvbgetcounterpathelements.md)
+[**PdhVbGetCounterPathElements**](pdhvbgetcounterpathelements.md)
 </dt> <dt>
 
-[**Pdhvbgetcounterpathfromlist**](pdhvbgetcounterpathfromlist.md)
+[**PdhVbGetCounterPathFromList**](pdhvbgetcounterpathfromlist.md)
 </dt> </dl>
 
  

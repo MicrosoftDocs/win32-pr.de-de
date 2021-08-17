@@ -1,7 +1,7 @@
 ---
-description: Hiermit wird ein ActiveX-Objekt überprüft und heruntergeladen.
+description: Überprüft und lädt ein ActiveX herunter.
 ms.assetid: a477c6dc-32a7-4d17-a997-6df4967d6c55
-title: 'Ieaxiservice:: Initialize-Methode'
+title: IeAxiService::Initialize-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 2b2e388f955c968220223519150fc4dc5b7af4a6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 911d955f84d81b225a1b4062e47b2b9b6ab6d058aa6df2e6a72a8d40242345a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218190"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119414890"
 ---
-# <a name="ieaxiserviceinitialize-method"></a>Ieaxiservice:: Initialize-Methode
+# <a name="ieaxiserviceinitialize-method"></a>IeAxiService::Initialize-Methode
 
-Mit der **Initialize** -Methode wird ein ActiveX-Objekt überprüft und heruntergeladen. Wenn das-Objekt die Richtlinien Anforderungen erfüllt, initialisiert diese Methode ein Systemobjekt, das das ActiveX-Objekt installiert.
+Die **Initialize-Methode** überprüft und lädt ein ActiveX herunter. Wenn das -Objekt die Richtlinienanforderungen erfüllt, initialisiert diese Methode ein Systemobjekt, das das ActiveX installiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,58 +44,58 @@ SECURITY_STATUS Initialize(
 
 <dl> <dt>
 
-*hwndParent* \[ in\]
+*hwndParent* \[ In\]
 </dt> <dd>
 
-Ein Handle für das übergeordnete Fenster des Fensters, das versucht, das ActiveX-Steuerelement zu installieren.
+Ein Handle für das übergeordnete Fenster des Fensters, das versucht, das steuerelement ActiveX installieren.
 
 </dd> <dt>
 
-*dwclientpid* \[ in\]
+*dwClientPID* \[ In\]
 </dt> <dd>
 
 Die Prozess-ID des aufrufenden Prozesses.
 
 </dd> <dt>
 
-*bstraudesktop* \[ in\]
+*bstrDesktop* \[ In\]
 </dt> <dd>
 
-Der Desktop für das-Objekt.
+Der Desktop für das -Objekt.
 
 </dd> <dt>
 
-*bstrinclsid* \[ in\]
+*bstrClsID* \[ In\]
 </dt> <dd>
 
-Die Klassen-ID des zu installierenden ActiveX-Objekts.
+Die Klassen-ID des ActiveX zu installierenden Objekts.
 
 </dd> <dt>
 
-*bstrinurl* \[ in\]
+*bstrURL* \[ In\]
 </dt> <dd>
 
-Die URL des zu installierenden ActiveX-Objekts.
+Die URL des ActiveX zu installierenden Objekts.
 
 </dd> <dt>
 
-*pbstrinnonce* \[ vorgenommen\]
+*pbstrNonce* \[ out\]
 </dt> <dd>
 
-Ein Kontext, der zum Freigeben von Zustandsinformationen in Aufrufen anderer Methoden verwendet werden kann, die zum Überprüfen und Herunterladen des ActiveX-Objekts verwendet werden.
+Ein Kontext, der zum Freigeben von Zustandsinformationen in Aufrufen anderer Methoden verwendet werden kann, die zum Überprüfen und Herunterladen des ActiveX werden.
 
 </dd> <dt>
 
-*ppisyncbrokerinterface* \[ vorgenommen\]
+*ppISyncBrokerInterface* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die Instanz der [**ieaxisysteminstaller**](ieaxisysteminstaller.md) -Schnittstelle, mit der das ActiveX-Steuerelement installiert wird.
+Ein Zeiger auf die Instanz der [**IeAxiSystemInstaller-Schnittstelle,**](ieaxisysteminstaller.md) die das ActiveX installiert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert S \_ OK.
 
 Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Fehlercodes sein.
 
@@ -103,7 +103,7 @@ Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Fehle
 
 | Rückgabecode/-wert                                                                                                                                                              | BESCHREIBUNG                                            |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| <dl> <dt>**Vertrauens \_ Stellung E \_ Betreff \_ nicht \_ vertrauenswürdig**</dt> <dt>0x800b0004</dt> </dl> | Das ActiveX-Objekt sollte nicht installiert werden.<br/> |
+| <dl> <dt>**VERTRAUEN \_ E \_ SUBJECT \_ NOT \_ TRUSTED**</dt> <dt>0x800B0004</dt> </dl> | Das ActiveX-Objekt sollte nicht installiert werden.<br/> |
 
 
 
@@ -115,17 +115,17 @@ Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Fehle
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista Business, Windows Vista Enterprise, Windows Vista Ultimate \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista Business, Windows Vista Enterprise, Windows Vista \[ Ultimate-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                 |
-| IID<br/>                      | IID \_ ieaxiservice ist definiert als E9E92380-9ecd-4982-A0EB-6815a56ccb27<br/>                           |
+| IID<br/>                      | IID \_ IeAxiService ist als E9E92380-9ECD-4982-A0EB-6815A56CCF27 definiert.<br/>                           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ieaxiservice**](ieaxiservice.md)
+[**IeAxiService**](ieaxiservice.md)
 </dt> </dl>
 
  

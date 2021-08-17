@@ -1,9 +1,9 @@
 ---
-title: NoCode-Attribut
-description: Das Attribut \ NoCode \ wird in ACF-Headern oder mit einzelnen Funktionen verwendet, um die Generierung von Client-Stub-Code zu verhindern.
+title: nocode-Attribut
+description: Das \nocode\-Attribut wird in ACF-Headern oder mit einzelnen Funktionen verwendet, um die Generierung von Clientstubcode zu verhindern.
 ms.assetid: d3b6e4c8-103c-4ea2-8748-11d844fdda97
 keywords:
-- NoCode-Attribut (Mittelwert)
+- nocode-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 64f5138dc1794e9b2714e5f64762c1af17b47fb2
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 86ec4612bc1bd5db1a8cdcbecdced51911591cdf5c482c83381f86deafd66a9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312210"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119066960"
 ---
-# <a name="nocode-attribute"></a>NoCode-Attribut
+# <a name="nocode-attribute"></a>nocode-Attribut
 
-Das **\[ NoCode \]** -Attribut wird in ACF-Headern oder mit einzelnen Funktionen verwendet, um die Generierung von Client-Stub-Code zu verhindern.
+Das **\[ Nocode-Attribut \]** wird in ACF-Headern oder mit einzelnen Funktionen verwendet, um die Generierung von Clientstubcode zu verhindern.
 
 ``` syntax
 [ 
@@ -44,92 +44,92 @@ interface interface-name
 
 <dl> <dt>
 
-*ACF-Interface-Attribute* 
+*ACF-Schnittstellenattribute* 
 </dt> <dd>
 
-Gibt eine Liste mit einem oder mehreren Attributen an, die auf die gesamte Schnittstelle angewendet werden. Gültige Attribute sind entweder **\[** [**Automatisches \_ handle**](auto-handle.md) **\]** oder **\[** [**implizites \_ handle**](implicit-handle.md) **\]** und entweder **\[** [**Code**](code.md) **\]** oder **\[ NoCode \]**. Wenn zwei oder mehr Schnittstellen Attribute vorhanden sind, müssen diese durch Kommas getrennt werden.
+Gibt eine Liste mit einem oder mehreren Attributen an, die für die gesamte Schnittstelle gelten. Gültige Attribute sind entweder **\[** [**\_ automatisches Handle**](auto-handle.md) **\]** oder **\[** [**implizites \_ Handle**](implicit-handle.md) **\]** und entweder **\[** [**Code**](code.md) **\]** oder **\[ Nocode. \]** Wenn zwei oder mehr Schnittstellenattribute vorhanden sind, müssen sie durch Kommas getrennt werden.
 
 </dd> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
-Gibt den Namen der Schnittstelle an. Im DCE-Kompatibilitätsmodus muss der Schnittstellen Name mit dem Namen der Schnittstelle, die in der IDL-Datei angegeben ist, identisch sein. Wenn Sie den-Compilerschalter [**/ACF**](-acf.md)verwenden, können sich der Schnittstellen Name in der ACF und der Schnittstellen Name in der IDL-Datei unterscheiden.
+Gibt den Namen der Schnittstelle an. Im DCE-Kompatibilitätsmodus muss der Schnittstellenname mit dem Namen der Schnittstelle übereinstimmen, die in der IDL-Datei angegeben ist. Wenn Sie den MIDL-Compilerschalter [**/acf**](-acf.md)verwenden, können sich der Schnittstellenname im ACF und der Schnittstellenname in der IDL-Datei unterscheiden.
 
 </dd> <dt>
 
-*Dateiname-List* 
+*filename-list* 
 </dt> <dd>
 
-Gibt eine durch Kommas getrennte Liste mit einem oder mehreren C-sprach Header Dateinamen an. Der vollständige Dateiname, einschließlich der Erweiterung, muss angegeben werden.
+Gibt eine Liste mit einem oder mehreren Headerdateinamen der C-Sprache an, die durch Kommas getrennt sind. Der vollständige Dateiname, einschließlich der Erweiterung, muss angegeben werden.
 
 </dd> <dt>
 
-*Type-Attribute-List* 
+*type-attribute-list* 
 </dt> <dd>
 
-Gibt eine Liste mit einem oder mehreren Attributen, die durch Kommas getrennt sind, an, die auf den angegebenen Typ angewendet werden. Gültige Typattribute sind " **\[** [**zuordnen**](allocate.md)" **\]** .
+Gibt eine Durch Kommas getrennte Liste von Attributen an, die für den angegebenen Typ gelten. Gültige Typattribute sind das **\[** [**Zuordnen**](allocate.md) **\]** von .
 
 </dd> <dt>
 
-*typeName* 
+*Typename* 
 </dt> <dd>
 
-Gibt einen Typ an, der in der IDL-Datei definiert ist. Typattribute in der ACF können nur auf Typen angewendet werden, die zuvor in der IDL-Datei definiert wurden.
+Gibt einen in der IDL-Datei definierten Typ an. Typattribute im ACF können nur auf Typen angewendet werden, die zuvor in der IDL-Datei definiert wurden.
 
 </dd> <dt>
 
-*ACF-Function-Attribute* 
+*ACF-funktionsattribute* 
 </dt> <dd>
 
-Gibt Attribute an, die auf die Funktion als Ganzes angewendet werden, z. b. den **\[** [**comm- \_ Status**](comm-status.md) **\]** . Funktions Attribute werden in eckige Klammern eingeschlossen. Trennen Sie mehrere Funktions Attribute durch Kommas.
+Gibt Attribute an, die für die Funktion als Ganzes gelten, z. B. **\[** [**comm \_ status**](comm-status.md) **\]** . Funktionsattribute werden in eckige Klammern eingeschlossen. Trennen Sie mehrere Funktionsattribute durch Kommas.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
 Gibt den Namen der Funktion an, wie in der IDL-Datei definiert.
 
 </dd> <dt>
 
-*ACF-Parameter-Attribute* 
+*ACF-parameter-attributes* 
 </dt> <dd>
 
-Gibt ACF-Attribute an, die auf einen Parameter angewendet werden. Beachten Sie, dass NULL oder mehr Attribute auf den Parameter angewendet werden können. Trennen Sie mehrere Parameter Attribute durch Kommas. ACF-Parameter Attribute werden in eckige Klammern eingeschlossen.
+Gibt ACF-Attribute an, die für einen Parameter gelten. Beachten Sie, dass null oder mehr Attribute auf den Parameter angewendet werden können. Trennen Sie mehrere Parameterattribute durch Kommas. ACF-Parameterattribute werden in eckige Klammern eingeschlossen.
 
 </dd> <dt>
 
-*Parameter Name* 
+*Parametername* 
 </dt> <dd>
 
-Gibt einen Parameter der Funktion an, wie in der IDL-Datei definiert. Jeder Parameter für die Funktion muss in derselben Reihenfolge angegeben werden und denselben Namen verwenden, der in der IDL-Datei definiert ist.
+Gibt einen Parameter der Funktion an, wie in der IDL-Datei definiert. Jeder Parameter für die Funktion muss in der gleichen Sequenz und mit dem gleichen Namen angegeben werden, wie in der IDL-Datei definiert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **\[ NoCode \]** -Attribut kann im ACF-Header oder auf eine einzelne Funktion angewendet werden.
+Das **\[ Nocode-Attribut \]** kann im ACF-Header angezeigt oder auf eine einzelne Funktion angewendet werden.
 
-Wenn das **\[ NoCode \]** -Attribut im ACF-Header angezeigt wird, wird der Client-Stub-Code für keine Remote Funktion generiert, es sei denn, er verfügt über das **\[** [**Code**](code.md) **\]** Funktions Attribut. Sie können das **\[ NoCode \]** -Attribut im-Header für eine einzelne Funktion überschreiben, indem Sie das **\[ Code \]** -Attribut als Funktions Attribut angeben.
+Wenn das **\[ Nocode-Attribut \]** im ACF-Header angezeigt wird, wird für keine Remotefunktion Clientstubcode generiert, es sei denn, er verfügt über das **\[** [](code.md) **\]** Codefunktionsattribut. Sie können das **\[ \] nocode-Attribut** im Header für eine einzelne Funktion überschreiben, indem Sie das **\[ \] Codeattribut** als Funktionsattribut angeben.
 
-Wenn das **\[ NoCode \]** -Attribut in der Attribut Liste der Funktion angezeigt wird, wird kein Client-Stub-Code für die Funktion generiert.
+Wenn das **\[ Nocode-Attribut \]** in der Attributliste der Funktion angezeigt wird, wird kein Clientstubcode für die Funktion generiert.
 
-Client-Stub-Code wird nicht generiert, wenn:
+Clientstubcode wird nicht generiert, wenn:
 
--   Der ACF-Header enthält das **\[ NoCode \]** -Attribut.
--   Das **\[ NoCode \]** -Attribut wird auf die-Funktion angewendet.
--   Das **\[** [**lokale**](local.md) **\]** Attribut gilt für die Funktion in der Schnittstellen Datei.
+-   Der ACF-Header enthält das **\[ \] nocode-Attribut.**
+-   Das **\[ Nocode-Attribut \]** wird auf die Funktion angewendet.
+-   Das **\[** [**lokale**](local.md) **\]** Attribut gilt für die Funktion in der Schnittstellendatei.
 
-Entweder **\[** [](code.md) **\]** kann Code oder **\[ NoCode \]** in der Attribut Liste einer Funktion angezeigt werden, und der von Ihnen gewählte Wert kann genau einmal angezeigt werden.
+Code **\[** [](code.md) **\]** oder **\[ Nocode \]** kann in der Attributliste einer Funktion angezeigt werden, und der von Ihnen gewünschte Code kann genau einmal angezeigt werden.
 
-Das **\[ NoCode \]** -Attribut wird ignoriert, wenn serverstubobjekte generiert werden. Sie können Sie nicht anwenden, wenn Sie serverstubdaten im DCE-Kompatibilitätsmodus erstellen.
+Das **\[ Nocode-Attribut \]** wird ignoriert, wenn Serverstubs generiert werden. Sie können sie nicht anwenden, wenn Sie Serverstubs im DCE-Kompatibilitätsmodus generieren.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Anwendungs Konfigurationsdatei (ACF)](application-configuration-file-acf-.md)
+[Anwendungskonfigurationsdatei (Application Configuration File, ACF)](application-configuration-file-acf-.md)
 </dt> <dt>
 
 [**/acf**](-acf.md)
@@ -138,21 +138,21 @@ Das **\[ NoCode \]** -Attribut wird ignoriert, wenn serverstubobjekte generiert 
 [**allocate**](allocate.md)
 </dt> <dt>
 
-[**Automatisches \_ handle**](auto-handle.md)
+[**Automatisches \_ Handle**](auto-handle.md)
 </dt> <dt>
 
-[**Ordnung**](code.md)
+[**Code**](code.md)
 </dt> <dt>
 
-[**Kommunikations \_ Status**](comm-status.md)
+[**\_comm-Status**](comm-status.md)
 </dt> <dt>
 
-[**implizites \_ handle**](implicit-handle.md)
+[**Implizites \_ Handle**](implicit-handle.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,8 +1,8 @@
 ---
-description: 'SetPowerState-Methode der CIM_CacheMemory-Klasse: Die SetPowerState-Methode legt den gewünschten Energiezustand für ein logisches Gerät fest und legt fest, wann das Gerät in diesen Zustand versetzt werden soll.'
+description: 'SetPowerState-Methode der CIM_CacheMemory-Klasse: Die SetPowerState-Methode legt den gewünschten Energiezustand für ein logisches Gerät fest und legt fest, wann das Gerät in diesen Zustand gesetzt werden soll.'
 ms.assetid: f9482bc4-d657-4e31-b6b1-aff6519e8a55
 ms.tgt_platform: multiple
-title: SetPowerState-Methode der CIM_CacheMemory-Klasse
+title: SetPowerState-Methode der CIM_CacheMemory Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,19 +14,19 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 8617014750dfeaa8f597e5877d2ce0f553de7841
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 99f89317636a94447a43630622a419e407ae7ecba44a81479da1f0c03e2b81d2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108086248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119439670"
 ---
 # <a name="setpowerstate-method-of-the-cim_cachememory-class"></a>SetPowerState-Methode der CIM \_ CacheMemory-Klasse
 
-Die **SetPowerState-Methode** legt den gewünschten Energiezustand für ein logisches Gerät fest und legt fest, wann das Gerät in diesen Zustand versetzt werden soll. Geben Sie in einer Unterklasse den Satz möglicher Rückgabecodes an, indem Sie einen **ValueMap-Qualifizierer** für die Methode verwenden. Die Zeichenfolgen, in die der **ValueMap-Inhalt** übersetzt wird, sollten auch in der Unterklasse als Values-Arrayqualifizierer angegeben werden.  Diese Methode wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Die **SetPowerState-Methode** legt den gewünschten Energiezustand für ein logisches Gerät fest und legt fest, wann das Gerät in diesen Zustand gesetzt werden soll. Geben Sie in einer Unterklasse den Satz  möglicher Rückgabecodes an, indem Sie einen ValueMap-Qualifizierer für die -Methode verwenden. Die Zeichenfolgen, in die **der ValueMap-Inhalt** übersetzt wird, sollten auch in der Unterklasse als Values-Arrayqualifizierer angegeben werden.  Diese Methode wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
@@ -70,14 +70,14 @@ Energiesparmodus mit geringer Leistung.
 3
 </dt> <dd>
 
-Energiesparmodus.
+Standbymodus "Energie sparen".
 
 </dd> <dt>
 
 4
 </dt> <dd>
 
-Andere Energie speichern.
+Energie sparen Sie andere.
 
 </dd> <dt>
 
@@ -98,7 +98,7 @@ Ausschalten.
 *Zeit* \[ In\]
 </dt> <dd>
 
-Gibt an, wann der Energiezustand festgelegt werden soll, entweder als regulärer Datums-/Uhrzeitwert oder als Intervallwert (wobei das Intervall beginnt, wenn der Methodenaufruf empfangen wird). Wenn der *PowerState-Parameter* gleich 5 ist ("Power Cycle"), gibt der *Time-Parameter* an, wann das Gerät erneut eingeschaltet werden soll. Das Ausschalten ist sofort.
+Gibt an, wann der Energiezustand festgelegt werden soll, entweder als regulärer Datums-/Uhrzeitwert oder als Intervallwert (wobei das Intervall beginnt, wenn der Methodenaufruf empfangen wird). Wenn der *PowerState-Parameter* gleich 5 ("Power Cycle") ist, gibt der *Time-Parameter* an, wann das Gerät wieder ein-/aus-netzen soll. Das Ausschalten ist sofort.
 
 </dd> </dl>
 
@@ -106,7 +106,7 @@ Gibt an, wann der Energiezustand festgelegt werden soll, entweder als regulärer
 
 Gibt bei Erfolg 0 (null) zurück, 1 (eins), wenn die angegebene *PowerState-* und *Time-Anforderung* nicht unterstützt wird, und einen anderen Wert, wenn ein anderer Fehler aufgetreten ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
@@ -116,7 +116,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von D
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
@@ -126,7 +126,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von D
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_RSTINFO-Klasse'
+description: 'Weitere Informationen zu: JET_RSTINFO-Klasse'
 title: JET_RSTINFO-Klasse
 TOCTitle: JET_RSTINFO class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_RSTINFO
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 964f1cb335fd0adf1a38759c4ec0aa243f1df506
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 002c54dd1631a8e9edbf5397c69ea7d7dc684dd7507b2fb6c3c0961d51b228a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119473480"
 ---
 # <a name="jet_rstinfo-class"></a>JET_RSTINFO-Klasse
 
-Enthält optionale Eingabe-und Ausgabeparameter für jetretrievecolumgen.
+Enthält optionale Eingabe- und Ausgabeparameter für JetRetrieveColumn.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   Microsoft.Isam.Esent.Interop.JET_RSTINFO  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,10 +64,10 @@ public class JET_RSTINFO : IContentEquatable<JET_RSTINFO>,
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Mitglieder JET_RSTINFO](./jet-rstinfo-members.md)
+[JET_RSTINFO-Member](./jet-rstinfo-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,36 +1,36 @@
 ---
-title: Beispiel für das Erstellen eines Inhalts Schlüssels
-description: Beispiel für das Erstellen eines Inhalts Schlüssels
+title: Beispiel zum Erstellen eines Inhaltsschlüssels
+description: Beispiel zum Erstellen eines Inhaltsschlüssels
 ms.assetid: 8e75bac3-d1fb-4a72-8088-fe5ff0899ac2
 keywords:
-- Windows Media-Format-SDK, Inhalts Schlüssel
-- Windows Media-Format-SDK, Beispielcode
-- Windows Media-Format-SDK, Codebeispiele
-- Digital Rights Management (DRM), Inhalts Schlüssel
-- DRM (Digital Rights Management), Inhalts Schlüssel
+- Windows Medienformat-SDK, Inhaltsschlüssel
+- Windows Medienformat-SDK, Beispielcode
+- Windows Medienformat-SDK, Codebeispiele
+- Digital Rights Management (DRM), Inhaltsschlüssel
+- DRM (Digital Rights Management), Inhaltsschlüssel
 - Digital Rights Management (DRM), Beispielcode
 - DRM (Digital Rights Management), Beispielcode
 - Digital Rights Management (DRM), Codebeispiele
 - DRM (Digital Rights Management), Codebeispiele
-- Erweiterte APIs für den DRM-Client, Inhalts Schlüssel
-- Erweiterte Client-APIs, Inhalts Schlüssel
-- Erweiterte APIs für den DRM-Client, Beispielcode
+- ERWEITERTE APIs für DEN DRM-Client, Inhaltsschlüssel
+- Erweiterte Client-APIs, Inhaltsschlüssel
+- ERWEITERTE APIs für DEN DRM-Client, Beispielcode
 - Erweiterte Client-APIs, Beispielcode
-- Erweiterte APIs für den DRM-Client, Codebeispiele
+- ERWEITERTE APIs für DEN DRM-Client, Codebeispiele
 - Erweiterte Client-APIs, Codebeispiele
-- Inhalts Schlüssel
+- Inhaltsschlüssel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 881dfd0d318d7d699b44ca9c3f77f22f9acfc689
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c97c63f55cd825de197ea7e13d9215971e1d3153aabb23ee41924a65f91849c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119931480"
 ---
-# <a name="create-content-key-example"></a>Beispiel für das Erstellen eines Inhalts Schlüssels
+# <a name="create-content-key-example"></a>Beispiel zum Erstellen eines Inhaltsschlüssels
 
-Der Inhalts Schlüssel wird zum Verschlüsseln von Medien Beispielen für den Windows Media DRM-Import verwendet. Im folgenden Codebeispiel wird veranschaulicht, wie eine Inhalts Schlüsselstruktur erstellt und initialisiert wird.
+Der Inhaltsschlüssel wird zum Verschlüsseln von Medienbeispielen für Windows Media DRM Import verwendet. Im folgenden Codebeispiel wird veranschaulicht, wie eine Inhaltsschlüsselstruktur erstellt und initialisiert wird.
 
 
 ```C++
@@ -116,12 +116,12 @@ EXIT:
 
 <dl> <dt>
 
-[**DRM-Import Beispiele**](drm-import-examples.md)
+[**BEISPIELE FÜR DRM-Importe**](drm-import-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Von XMUDEC4 verfügbar gemachte Konstruktoren.
+description: Konstruktoren, die von XMUDEC4 verfügbar gemacht werden.
 ms.assetid: 31604fd5-d947-4bf3-93db-fd2c7dd9529b
 title: XMUDEC4-Konstruktoren
 ms.topic: reference
@@ -11,18 +11,18 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 3c79838c8ccff27c9f9632e6af2dd7fffbc48b7c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 70415ebbf63b482a7057d5c76d414537c8a6819db97e73502bb68ffda6de755e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119117950"
 ---
 # <a name="xmudec4-constructors"></a>XMUDEC4-Konstruktoren
 
-Von verfügbar gemachte Konstruktoren `XMUDEC4` .
+Konstruktoren, die von verfügbar gemacht `XMUDEC4` werden.
 
-Erstellt Instanzen der [**XMUDEC4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmudec4) -Struktur.
+Erstellt Instanzen der [**XMUDEC4-Struktur.**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmudec4)
 
 > [!Note]  
 > Die hier aufgeführten Konstruktoren sind nur unter C++ verfügbar.
@@ -56,7 +56,7 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmudec4-xmudec4(uint32_t)"><strong>XMUDEC4 (uint32_t)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUDEC4</code> aus einer <code>uint32_t</code> Variablen, die Komponenten Daten in einem gepackten Format enthält. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmudec4"><strong>XMUDEC4</strong></a> aus einer <code>uint32_t</code> Variablen, die Komponenten Daten in einem gepackten Format enthält. <br/>
+<td style="text-align: left;">Initialisiert eine neue Instanz von aus <code>XMUDEC4</code> einer <code>uint32_t</code> Variablen, die Komponentendaten in einem gepackten Format enthält. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmudec4"><strong>XMUDEC4</strong></a> aus einer Variablen, die <code>uint32_t</code> Komponentendaten in einem gepackten Format enthält. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -64,8 +64,8 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmudec4-xmudec4(constfloat)"><strong>XMUDEC4 (konstant float *)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUDEC4</code> aus einem Array Argument mit vier Elementen <code>float</code> . <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmudec4"><strong>XMUDEC4</strong></a> aus einem Array Argument mit vier Elementen <code>float</code> . <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmudec4-xmudec4(constfloat)"><strong>XMUDEC4 (const float*)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von aus <code>XMUDEC4</code> einem Arrayargument mit <code>float</code> vier Element. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmudec4"><strong>XMUDEC4</strong></a> aus einem aus einem Arrayargument mit <code>float</code> vier Elemente. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -73,8 +73,8 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmudec4-xmudec4(float_float_float_float)"><strong>XMUDEC4 (float, float, float, float)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUDEC4</code> aus vier <code>float</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmudec4"><strong>XMUDEC4</strong></a> aus vier <code>float</code> Argumenten. <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmudec4-xmudec4(float_float_float_float)"><strong>XMUDEC4 (float,float,float,float)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUDEC4</code> aus vier <code>float</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmudec4"><strong>XMUDEC4 aus</strong></a> vier <code>float</code> Argumenten. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -86,14 +86,14 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [XMUDEC4-Erweiterungen](ovw-xmudec4-extensions.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**XMUDEC4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmudec4)

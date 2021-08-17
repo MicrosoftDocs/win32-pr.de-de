@@ -13,12 +13,12 @@ api_type:
 api_location:
 - Shdocvw.dll
 ms.assetid: 7faf758a-daa0-47f5-9f95-61fe3d8286ea
-ms.openlocfilehash: 64bf83a88584c5d97994726696d4fb3a1e971bdf
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 7ad7270f9054b875eabcb1fd9f5a7ab2e299a5916d55ef4630988921b6b2f4ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119455570"
 ---
 # <a name="dshellwindowseventswindowregistered-method"></a>DShellWindowsEvents.WindowRegistered-Methode
 
@@ -42,7 +42,7 @@ DShellWindowsEvents.WindowRegistered(
 *lCookie* \[ In\]
 </dt> <dd>
 
-Typ: **Integer**
+Typ: **Ganze Zahl**
 
 Das Cookie, das das registrierte Fenster identifiziert.
 
@@ -54,7 +54,7 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Einem Fenster wird ein Cookie erteilt, wenn es als Shellfenster registriert wird. Weitere Informationen finden Sie unter [**Registrieren von**](/windows/desktop/api/Exdisp/nf-exdisp-ishellwindows-register).
+Einem Fenster wird ein Cookie gewährt, wenn es als Shellfenster registriert ist. Weitere Informationen finden Sie unter [**Registrieren von**](/windows/desktop/api/Exdisp/nf-exdisp-ishellwindows-register).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,7 +67,7 @@ Einem Fenster wird ein Cookie erteilt, wenn es als Shellfenster registriert wird
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

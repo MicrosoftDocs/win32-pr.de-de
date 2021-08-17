@@ -1,9 +1,9 @@
 ---
-title: Video. Cursor
-description: Das Cursor Attribut gibt den Cursor Wert an, der verwendet wird, wenn sich der Mauszeiger über einem klickbaren Bereich des Videos befindet, oder ruft ihn ab.
+title: VIDEO.cursor
+description: Das Cursorattribut gibt den Cursorwert an, der verwendet wird, wenn sich der Mauszeiger über einem klickbaren Bereich des Videos befindet, oder ruft diesen ab.
 ms.assetid: 2faaf9cd-47be-47d5-ad4e-8f3bb322d812
 keywords:
-- Video. Cursor-Fenster Media Player
+- VIDEO.cursor Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c23ab90b974ad5a7f9cfaf9fcc598371cd0697f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 73c39b40412a02e145b8063f473272184e1d7cf03caaa170de19bde7fad37a50
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134243"
 ---
-# <a name="videocursor"></a>Video. Cursor
+# <a name="videocursor"></a>VIDEO.cursor
 
-Das **Cursor** Attribut gibt den Cursor Wert an, der verwendet wird, wenn sich der Mauszeiger über einem klickbaren Bereich des Videos befindet, oder ruft ihn ab.
+Das  Cursorattribut gibt den Cursorwert an, der verwendet wird, wenn sich der Mauszeiger über einem klickbaren Bereich des Videos befindet, oder ruft diesen ab.
 
 ``` syntax
         elementID.cursor
@@ -29,30 +29,30 @@ Das **Cursor** Attribut gibt den Cursor Wert an, der verwendet wird, wenn sich d
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff.
 
 
 
 | Wert            | Beschreibung                                                                                 |
 |------------------|---------------------------------------------------------------------------------------------|
-| System           | Platt Form abhängiger Cursor (in der Regel ein Pfeil).                                               |
-| linken             | Linken.                                                                                       |
-| help             | Pfeil mit Fragezeichen, das angibt, dass Hilfe verfügbar ist.                                      |
-| SizeAll          | Vierstufige Pfeil, der nach Norden, Süden, Osten und Westen zeigt.                                   |
-| sizenesw         | Ein Pfeil mit zwei Spitzen, der auf Nordost und Südwest zeigt.                                      |
-| SizeNS           | Ein Pfeil mit zwei Spitzen, der nach Norden und Süden zeigt.                                              |
-| sizenwse         | Ein Pfeil mit zwei Spitzen, der auf Nordwest und Südost zeigt.                                      |
-| SizeWE           | Ein Pfeil mit zwei Spitzen, der nach Westen und Osten zeigt.                                                |
-| oben          | Vertikaler Pfeil nach oben.                                                             |
-| \*. ani oder \* . cur | Alle. ani-oder. cur-Dateien (müssen sich in demselben Verzeichnis wie die WMS-Datei oder in der WMZ-Datei befinden). |
+| System           | Plattformabhängiger Cursor (normalerweise ein Pfeil).                                               |
+| Hand             | Hand.                                                                                       |
+| Hilfe             | Pfeil mit Fragezeichen, das angibt, dass die Hilfe verfügbar ist.                                      |
+| sizeall          | Vierzeilige Pfeile, die nach Norden, Süden, Osten und Westen zeigen.                                   |
+| sizenesw         | Doppelpfeil, der nach Nordosten und Südosten zeigt.                                      |
+| sizens           | Doppelpfeil, der nach Norden und Süden zeigt.                                              |
+| sizenwse         | Pfeil mit doppelter Spitze, der auf den Nordosten und südosten zeigt.                                      |
+| sizewe           | Doppelt gezeigter Pfeil, der nach Westen und Osten zeigt.                                                |
+| uparrow          | Vertikaler Pfeil, der nach oben zeigt.                                                             |
+| \*.ani oder \* .cur | Eine BELIEBIGE ANI- oder CUR-Datei (muss sich im selben Verzeichnis wie die WMS-Datei oder in der WMZ-Datei befinden). |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zu Renderingzwecken ist System der Standard Cursor. Der Standardwert, der von diesem Attribut abgerufen wird, ist "" (leere Zeichenfolge).
+Zu Renderingzwecken ist system der Standardcursor. Der Standardwert, der von diesem Attribut abgerufen wird, ist "" (leere Zeichenfolge).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,15 +60,15 @@ Zu Renderingzwecken ist System der Standard Cursor. Der Standardwert, der von di
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Video-Element**](video-element.md)
+[**VIDEO-Element**](video-element.md)
 </dt> </dl>
 
  

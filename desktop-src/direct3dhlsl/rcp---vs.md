@@ -1,6 +1,6 @@
 ---
-title: RCP-vs
-description: Berechnet die gegenseitige des Quell Skalars. | RCP-vs
+title: rcp – vs
+description: Berechnet den Kehrwert des Quellskalars. | rcp – vs
 ms.assetid: be638a42-b693-461d-ab0a-3a6c0fa1acfc
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 145a998cbca9dc3721d9c7d6ba251d539286a3f1
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d9ec2c011e4f365f7cedc1191522836db098da976c4ce3c5153169a1d87f180d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104982011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119672300"
 ---
-# <a name="rcp---vs"></a>RCP-vs
+# <a name="rcp---vs"></a>rcp – vs
 
-Berechnet die gegenseitige des Quell Skalars.
+Berechnet den Kehrwert des Quellskalars.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| RCP DST, src |
+| rcp dst, src |
 |--------------|
 
 
@@ -33,14 +33,14 @@ Berechnet die gegenseitige des Quell Skalars.
 
 where
 
--   DST ist das Ziel Register.
--   src ist ein Quell Register. Das Quell Register erfordert die explizite Verwendung von replizierten Strichen, d. h. genau einer der x-, y-,. z-,. w-Swizzle-Komponenten (oder r,. g,. b,. a-äquivalente) muss angegeben werden.
+-   dst ist das Zielregister.
+-   src ist ein Quellregister. Das Quellregister erfordert die explizite Verwendung von "replicate swizzle", d.h. genau eine der .x-, .y-, .z-, .w swizzle-Komponenten (oder die Entsprechungen .r, .g, .b, .a) muss angegeben werden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
 | rcp                    | x    | x    | x    | x     | x    | x     |
 
@@ -48,7 +48,7 @@ where
 
  
 
-Das folgende Code Fragment zeigt die ausgeführten Vorgänge.
+Das folgende Codefragment zeigt die ausgeführten Vorgänge.
 
 
 ```
@@ -72,15 +72,15 @@ dest = f;
 
 Die Ausgabe muss genau 1,0 sein, wenn die Eingabe genau 1,0 ist. Eine Quelle von 0,0 ergibt unendlich.
 
-Die Genauigkeit muss mindestens 1.0/(2 ² ²) absolute Fehler im Bereich (1,0, 2,0) betragen, da allgemeine Implementierungen die Mantisse und den Exponenten voneinander trennen.
+Die Genauigkeit sollte mindestens 1,0/(2): absoluter Fehler über dem Bereich (1,0, 2,0) sein, da allgemeine Implementierungen Mantisse und Exponent trennen.
 
-Wenn die Quelle keine Indizes aufweist, wird die x-Komponente verwendet.
+Wenn die Quelle keine Unterskripts enthält, wird die x-Komponente verwendet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  

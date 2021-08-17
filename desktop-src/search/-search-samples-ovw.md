@@ -1,44 +1,44 @@
 ---
-description: In den Themen in diesem Abschnitt werden kurz die Beispiel Programme für die Suche beschrieben, die das Microsoft Windows Software Development Kit (SDK) für Windows 7 enthalten.
+description: Die Themen in diesem Abschnitt beschreiben kurz die Beispielprogramme für die Suche, die das Microsoft Windows Software Development Kit (SDK) für Windows 7 begleiten.
 ms.assetid: 9cd35360-dee5-433e-9576-dbe39bd34cbb
-title: Code Beispiele für Windows Search
+title: Windows Suchcodebeispiele
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7bd67fd8bcb5599be1aa29c1c3ac574a1deb8438
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d70c87999273671ebe4b6f0ac8c00bd0d4b43978705908f132e504c143831b08
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525499"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119094901"
 ---
-# <a name="windows-search-code-samples"></a>Code Beispiele für Windows Search
+# <a name="windows-search-code-samples"></a>Windows Suchcodebeispiele
 
-In den Themen in diesem Abschnitt werden kurz die Beispiel Programme für die Suche beschrieben, die das Microsoft Windows Software Development Kit (SDK) für Windows 7 begleitet haben. Diese Beispiele können auch unter Windows 10 mit dem Windows 10 SDK ausgeführt werden.
+Die Themen in diesem Abschnitt beschreiben kurz die Beispielprogramme für die Suche, die das Microsoft Windows Software Development Kit (SDK) für Windows 7 begleitet haben. Diese Beispiele können auch mithilfe des Windows 10 SDK auf Windows 10 ausgeführt werden.
 
-In den folgenden Themen werden die Such-API-Beispiele beschrieben, die bereitgestellt werden.
+In den folgenden Themen werden die bereitgestellten Search-API-Beispiele beschrieben.
 
-- [Crawlscopecommandline](-search-sample-crawlscopecommandline.md)
-- [Dsearch](-search-sample-dsearch.md)
-- [Ifiltersample](-search-sample-ifiltersample.md)
+- [CrawlScopeCommandLine](-search-sample-crawlscopecommandline.md)
+- [DSearch](-search-sample-dsearch.md)
+- [IFilterSample](-search-sample-ifiltersample.md)
 - [OpenSearch](-search-sample-opensearch.md)
 - [PropertyEdit](-search-sample-propertyedit.md)
-- [Neu indiken](-search-sample-reindexmatchingurls.md)
-- [Searchevents](-search-sample-searchevents.md)
-- [Structuredquerysample](-search-sample-structuredquerysample.md)
-- [Wsfromscript](-search-sample-wsfromscript.md)
-- [Wsoledb](-search-sample-wsoledb.md)
-- [Wssql](-search-sample-wssql.md)
+- [ReindexMatchingUrls](-search-sample-reindexmatchingurls.md)
+- [SearchEvents](-search-sample-searchevents.md)
+- [StructuredQuerySample](-search-sample-structuredquerysample.md)
+- [WSFromScript](-search-sample-wsfromscript.md)
+- [WSOleDB](-search-sample-wsoledb.md)
+- [WSSQL](-search-sample-wssql.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 
 [Übersicht über Windows Search](-search-3x-wds-overview.md)
 
-[Entwicklerhandbuch für Windows Search](-search-developers-guide-entry-page.md)
+[Windows Entwicklerhandbuch für die Suche](-search-developers-guide-entry-page.md)
 
-[Referenz zur Windows-Suche](-search-reference-entry-page.md)
+[Windows Suchreferenz](-search-reference-entry-page.md)
 
-[Code Beispiele für Windows Search](-search-samples-ovw.md)
+[Windows Suchcodebeispiele](-search-samples-ovw.md)
 
 [Verbundsuche in Windows 10](-search-federated-search-overview.md)
 
