@@ -1,7 +1,7 @@
 ---
-description: Ruft den Index der Gitterfläche ab, zu der jeder textexgehört.
+description: Ruft den Index der Gitternetzgesicht ab, zu der jedes Texel gehört.
 ms.assetid: 3eb3461c-4e16-4c89-9ca9-fc9c6b5638c7
-title: 'ID3DXTextureGutterHelper:: getfacemap-Methode (D3DX9Mesh. h)'
+title: ID3DXTextureGutterHelper::GetFaceMap-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 8164ec35c3b3596914577287ecc6b9285142fca8
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f5fce4400b1f778581f830fff60ef4e1519ad73752da02f5194abe64f433d43c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117729189"
 ---
-# <a name="id3dxtexturegutterhelpergetfacemap-method"></a>ID3DXTextureGutterHelper:: getfacemap-Methode
+# <a name="id3dxtexturegutterhelpergetfacemap-method"></a>ID3DXTextureGutterHelper::GetFaceMap-Methode
 
-Ruft den Index der Gitterfläche ab, zu der jeder textexgehört.
+Ruft den Index der Gitternetzgesicht ab, zu der jedes Texel gehört.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT GetFaceMap(
 
 <dl> <dt>
 
-*pfacedata* \[ in\]
+*pFaceData* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf den Index der Mesh-Seite, zu der jeder textexgehört.
+Zeiger auf den Index der Gitternetzgesicht, zu der jedes Texel gehört.
 
 </dd> </dl>
 
@@ -53,15 +53,15 @@ Zeiger auf den Index der Mesh-Seite, zu der jeder textexgehört.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben. D3DERR \_ invalidcall
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, wird der folgende Wert zurückgegeben. D3DERR \_ INVALIDCALL
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die von dieser Methode zurückgegebenen mesface-Daten sind nur für gültige Texels (Non-Class 0) gültig. [**ID3DXTextureGutterHelper:: getguttermap**](id3dxtexturegutterhelper--getguttermap.md) gibt Werte ungleich 0 (null) für gültige Texels (nicht Klassen 0) zurück.
+Die von dieser Methode zurückgegebenen Mesh-Gesichtserkennungsdaten sind nur für gültige Texel (nicht der Klasse 0) gültig. [**ID3DXTextureGutterHelper::GetGutterMap**](id3dxtexturegutterhelper--getguttermap.md) gibt Werte ungleich 0 (null) für gültige Texel (keine Klasse 0) zurück.
 
-Bei [**Klasse 2 texeln**](id3dxtexturegutterhelper.md)ruft diese Methode das nächste Gesicht ab.
+Bei [**Texeln der Klasse 2**](id3dxtexturegutterhelper.md)ruft diese Methode das nächstgelegene Gesicht ab.
 
-Die Anwendung muss pfacedata zuordnen und verwalten.
+Die Anwendung muss pFaceData zuordnen und verwalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,12 +69,12 @@ Die Anwendung muss pfacedata zuordnen und verwalten.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Gibt an, wie die Symbol Daten von den Quell-und Ziel Oberflächen in einem Rückruf von composerects kombiniert werden.
+description: Gibt an, wie die Glyphendaten aus den Quell- und Zieloberflächen in einem Aufruf von ComposeRects kombiniert werden.
 ms.assetid: 4b0e6e48-48e0-4955-bb20-f953fdce785c
-title: D3DCOMPOSERECTSOP-Enumeration (D3d9types. h)
+title: D3DCOMPOSERECTSOP-Enumeration (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3d9types.h
-ms.openlocfilehash: cd47cb14ab129bf27a4b59ba07e0be12d144fb8e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8d968770eb58d9d3dd59f178b05e8e6536079e8de601ddef602a41da4b52ee51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370415"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117911168"
 ---
 # <a name="d3dcomposerectsop-enumeration"></a>D3DCOMPOSERECTSOP-Enumeration
 
-Gibt an, wie die Symbol Daten von den Quell-und Ziel Oberflächen in einem Rückruf von [**composerects**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-composerects)kombiniert werden.
+Gibt an, wie die Glyphendaten aus den Quell- und Zieloberflächen in einem Aufruf von [**ComposeRects kombiniert werden.**](/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9ex-composerects)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,35 +43,35 @@ typedef enum _D3DCOMPOSERECTSOP {
 
 <dl> <dt>
 
-<span id="D3DCOMPOSERECTS_COPY"></span><span id="d3dcomposerects_copy"></span>**D3DCOMPOSERECTS \_ Kopieren**
+<span id="D3DCOMPOSERECTS_COPY"></span><span id="d3dcomposerects_copy"></span>**D3DCOMPOSERECTS \_ COPY**
 </dt> <dd>
 
 Kopieren Sie die Quelle in das Ziel.
 
 </dd> <dt>
 
-<span id="D3DCOMPOSERECTS_OR"></span><span id="d3dcomposerects_or"></span>**D3DCOMPOSERECTS \_ oder**
+<span id="D3DCOMPOSERECTS_OR"></span><span id="d3dcomposerects_or"></span>**D3DCOMPOSERECTS \_ ODER**
 </dt> <dd>
 
-Bitweises OR-Quelle und-Ziel.
+Bitweises OR die Quelle und das Ziel.
 
 </dd> <dt>
 
-<span id="D3DCOMPOSERECTS_AND"></span><span id="d3dcomposerects_and"></span>**D3DCOMPOSERECTS \_ und**
+<span id="D3DCOMPOSERECTS_AND"></span><span id="d3dcomposerects_and"></span>**D3DCOMPOSERECTS \_ UND**
 </dt> <dd>
 
-Bitweises und die Quelle und das Ziel.
+Bitweise AND die Quelle und das Ziel.
 
 </dd> <dt>
 
-<span id="D3DCOMPOSERECTS_NEG"></span><span id="d3dcomposerects_neg"></span>**D3DCOMPOSERECTS- \_ netzb**
+<span id="D3DCOMPOSERECTS_NEG"></span><span id="d3dcomposerects_neg"></span>**D3DCOMPOSERECTS \_ NEG**
 </dt> <dd>
 
-Kopieren Sie die negiert-Quelle in das Ziel (DST & ~ src).
+Kopieren Sie die negierte Quelle in das Ziel (Dst & ~Src).
 
 </dd> <dt>
 
-<span id="D3DCOMPOSERECTS_FORCE_DWORD"></span><span id="d3dcomposerects_force_dword"></span>**D3DCOMPOSERECTS \_ Erzwingen von \_ DWORD**
+<span id="D3DCOMPOSERECTS_FORCE_DWORD"></span><span id="d3dcomposerects_force_dword"></span>**D3DCOMPOSERECTS \_ FORCE \_ DWORD**
 </dt> <dd>
 
 Reserviert. Wird verwendet, um die Enumeration auf eine Größe von 32 Bits zu erzwingen.
@@ -84,11 +84,11 @@ Reserviert. Wird verwendet, um die Enumeration auf eine Größe von 32 Bits zu e
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3d9types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

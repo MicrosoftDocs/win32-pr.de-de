@@ -1,7 +1,7 @@
 ---
-description: Die setmediatype-Methode gibt den Medientyp für die Verbindung in der Eingabe-PIN der Sample Grabber an.
+description: Die SetMediaType-Methode gibt den Medientyp für die Verbindung auf dem Eingabepin des Sample Grabber an.
 ms.assetid: 9568832f-6666-45c9-9421-485c877affb3
-title: 'Isamplegrabber:: setmediatype-Methode (qedit. h)'
+title: ISampleGrabber::SetMediaType-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: a39aa79e9311fe3491d0925fdc1b2dd3b1cc65c2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 060ff0cc10fed441fdb2d6f2bf1bd0e66f3e8b9facec3cb52d8f270b350b1f4d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365784"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117817701"
 ---
-# <a name="isamplegrabbersetmediatype-method"></a>Isamplegrabber:: setmediatype-Methode
+# <a name="isamplegrabbersetmediatype-method"></a>ISampleGrabber::SetMediaType-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `SetMediaType` Methode gibt den Medientyp für die Verbindung in der Eingabe-PIN der Sample Grabber an.
+Die `SetMediaType` -Methode gibt den Medientyp für die Verbindung auf dem Eingabepin des Sample Grabber an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ HRESULT SetMediaType(
 *pType* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**am- \_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur gibt den erforderlichen Medientyp an. Es ist nicht erforderlich, alle Strukturmember festzulegen. Weitere Informationen finden Sie in den hinweisen.
+Der Zeiger auf eine [**AM \_ MEDIA \_ TYPE-Struktur**](/windows/win32/api/strmif/ns-strmif-am_media_type) gibt den erforderlichen Medientyp an. Es ist nicht erforderlich, alle Strukturmitglieder zu setzen. Weitere Informationen finden Sie unter Hinweise.
 
 </dd> </dl>
 
@@ -56,39 +56,39 @@ Ein Zeiger auf eine [**am- \_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmi
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig hat der beispielgrabber keinen bevorzugten Medientyp. Um sicherzustellen, dass der Sample Grabber eine Verbindung mit dem richtigen Filter herstellt, müssen Sie diese Methode vor dem Aufbau des Filter Diagramms abrufen.
+Standardmäßig hat der Beispielgrabber keinen bevorzugten Medientyp. Um sicherzustellen, dass der Sample Grabber eine Verbindung mit dem richtigen Filter herstellt, rufen Sie diese Methode auf, bevor Sie das Filterdiagramm erstellen.
 
-Diese Methode schränkt den Bereich der Medientypen ein, den der Filter akzeptiert. Wenn der Filter eine Verbindung herstellt, versucht er, den in *pType* angegebenen Medientyp abzugleichen. Zu diesem Zweck werden der Haupttyp, der Untertyp und die Formattyp-GUIDs in dieser Reihenfolge verglichen. Wenn *pType* für jede dieser GUIDs den Wert GUID \_ null hat, akzeptiert der beispielgrabber den Medientyp ohne weitere Überprüfungen. Wenn *pType* einen anderen Wert aufweist, vergleicht der Sample Grabber ihn mit der GUID im Verbindungstyp. Wenn die beiden GUIDs nicht exakt übereinstimmen, lehnt der Beispiel-Grabber die Verbindung ab.
+Diese Methode schränkt den Bereich der Medientypen ein, die der Filter akzeptiert. Wenn der Filter eine Verbindung herstellt, versucht er, mit dem in pType angegebenen *Medientyp zu übereinstimmen.* Zu diesem Schritt werden die Haupttyp-, Untertyp- und Formattyp-GUIDs in dieser Reihenfolge verglichen. Wenn *pType* für jede dieser GUIDs den Wert GUID NULL aufgibt, akzeptiert der Sample Grabber den Medientyp ohne \_ weitere Überprüfungen. Wenn *pType* über einen anderen Wert verfügt, vergleicht der Sample Grabber ihn mit der GUID im Verbindungstyp. Sofern die beiden GUIDs nicht genau übereinstimmen, lehnt der Beispielgrabber die Verbindung ab.
 
-Bei Video Medientypen ignoriert der Sample Grabber den Format Block. Aus diesem Grund werden die Videogröße und die Framerate akzeptiert. Wenn Sie aufzurufen `SetMediaType` , legen Sie den Format Block (**pbformat**) auf **null** und die Größe (**cbformat**) auf 0 (null) fest. Für audiomedientyp untersucht der Beispiel-Grabber die [**WaveFormatEx**](/previous-versions/dd757713(v=vs.85)) -Struktur und erfordert, dass der andere Filter eine Verbindung mit diesem Format herstellt – es sei denn, der Format Block in *pType* ist **null**, oder das Format-Tag ist das Wave \_ \_ -Format PCM, und die anderen Strukturmember sind 0 (null).
+Bei Videomedientypen ignoriert der Sample Grabber den Formatblock. Daher akzeptiert sie jede Videogröße und Bildfrequenz. Wenn Sie `SetMediaType` aufrufen, legen Sie den Formatblock (**pbFormat**) auf **NULL** und die Größe (**cbFormat**) auf null fest. Bei Audiomedientypen untersucht der Sample Grabber die [**WAVEFORMATEX-Struktur**](/previous-versions/dd757713(v=vs.85)) und erfordert, dass der andere Filter eine Verbindung mit diesem Format herstellen muss– es sei denn, der Formatblock in *pType* ist **NULL,** oder das Formattag ist WAVE FORMAT PCM, und die anderen Strukturmitglieder sind 0 \_ \_ (null).
 
 Beispiel 1:
 
--   Haupttyp: MediaType- \_ Video
--   Untertyp: GUID \_ null
--   Formattyp: GUID \_ null
+-   Haupttyp: MEDIATYPE \_ Video
+-   Untertyp: GUID \_ NULL
+-   Formattyp: GUID \_ NULL
 
-Der beispielgrabber akzeptiert jeden Videotyp, bei dem der Haupttyp dem Video "MediaType" gleicht \_ . Der Untertyp wird nicht überprüft.
+Der Sample Grabber akzeptiert jeden Videotyp, bei dem der Haupttyp MEDIATYPE \_ Video entspricht. Der Untertyp wird nicht überprüft.
 
 Beispiel 2:
 
--   Haupttyp: MediaType- \_ Video
--   Untertyp: mediasubtype \_ RGB24
--   Formattyp: GUID \_ null
+-   Haupttyp: MEDIATYPE \_ Video
+-   Untertyp: MEDIASUBTYPE \_ RGB24
+-   Formattyp: GUID \_ NULL
 
-Nun prüft der Sample Grabber den Untertyp und akzeptiert nur RGB 24-Videos.
+Das Beispielgrabber überprüft nun den Untertyp und akzeptiert nur RGB 24-Videos.
 
-**Einschränkungen:** Unabhängig davon, welchen Typ Sie festlegen, lehnt der Sample Grabber Filter alle Video Typen mit der Top-Down-Ausrichtung (negative *biheight*) oder dem Formattyp Format \_ VideoInfo2 ab. In diesem Fall stellt `SetMediaType` der Filter keine Verbindung her, obwohl die Methode erfolgreich ausgeführt wird.
+**Einschränkungen:** Unabhängig davon, welchen Typ Sie festlegen, lehnt der Sample Grabber Filter alle Videotypen mit top-down-Ausrichtung (negative *biHeight)* oder mit dem Formattyp FORMAT \_ VideoInfo2 ab. Obwohl die Methode erfolgreich ist, wird in diesem Fall `SetMediaType` keine Verbindung mit dem Filter hergestellt.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -98,19 +98,19 @@ Nun prüft der Sample Grabber den Untertyp und akzeptiert nur RGB 24-Videos.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden der Beispiel-Grabber](using-the-sample-grabber.md)
+[Verwenden des Beispielgrabbers](using-the-sample-grabber.md)
 </dt> <dt>
 
-[**Isamplegrabber-Schnittstelle**](isamplegrabber.md)
+[**ISampleGrabber-Schnittstelle**](isamplegrabber.md)
 </dt> </dl>
 
  

@@ -53,7 +53,7 @@ Adresse eines Zeigers auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/wi
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein. Durch aufrufen dieser Methode wird die interne Verweisanzahl für die [**IDirect3DDevice9-Schnittstelle**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) erhöht. Rufen Sie [**IUnknown auf,**](/windows/win32/api/unknwn/nn-unknwn-iunknown) wenn Sie diese **IDirect3DDevice9-Schnittstelle** nicht mehr verwenden, oder es kommt zu einem Arbeitsspeicherverlust.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein. Wenn Sie diese Methode aufrufen, erhöht sich der interne Verweiszähler für die [**IDirect3DDevice9-Schnittstelle.**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) Rufen Sie [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) auf, wenn Sie mit der Verwendung dieser **IDirect3DDevice9-Schnittstelle** fertig sind oder ein Speicherverlust vorkommt.
 
 ## <a name="requirements"></a>Anforderungen
 

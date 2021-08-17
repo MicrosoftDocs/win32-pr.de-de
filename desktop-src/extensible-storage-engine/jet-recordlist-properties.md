@@ -1,25 +1,25 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RECORDLIST-Eigenschaften'
-title: Eigenschaften von JET_RECORDLIST
+description: Weitere Informationen zu JET_RECORDLIST Eigenschaften
+title: JET_RECORDLIST-Eigenschaften
 TOCTitle: JET_RECORDLIST properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.JET_RECORDLIST
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_recordlist_properties(v=EXCHG.10)
 ms:contentKeyID: 55103831
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: cdb071c7d63dbd5a01a2aa34147067bfa4052472
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bd69d5357653dee59eb85880be5a87a32499871de4e416daa6fc97c2a7a52a2a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104558358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117893472"
 ---
-# <a name="jet_recordlist-properties"></a>Eigenschaften von JET_RECORDLIST
+# <a name="jet_recordlist-properties"></a>JET_RECORDLIST-Eigenschaften
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-Der [JET_RECORDLIST](./jet-recordlist-class.md) -Typ macht die folgenden Member verfügbar.
+Der [JET_RECORDLIST-Typ](./jet-recordlist-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -28,14 +28,14 @@ Der [JET_RECORDLIST](./jet-recordlist-class.md) -Typ macht die folgenden Member 
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335244(v=exchg.10).md">columnidbookmark</a></td>
-<td>Ruft das ColumnID der Spalte in der temporären Tabelle ab, in der das Lesezeichen des Datensatzes gespeichert wird. Die Spalte ist vom Typ JET_coltyp. Text.</td>
+<td><a href="dn335244(v=exchg.10).md">columnidBookmark</a></td>
+<td>Ruft die columnid der Spalte in der temporären Tabelle ab, in der das Lesezeichen des Datensatzes gespeichert wird. Die Spalte ist vom Typ JET_coltyp. Text.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
@@ -44,8 +44,8 @@ Der [JET_RECORDLIST](./jet-recordlist-class.md) -Typ macht die folgenden Member 
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335255(v=exchg.10).md">TableID</a></td>
-<td>Ruft TableID der temporären Tabelle ab. Dies sollte geschlossen werden, wenn die Tabelle nicht mehr benötigt wird.</td>
+<td><a href="dn335255(v=exchg.10).md">tableid</a></td>
+<td>Ruft tableid der temporären Tabelle ab. Dieser sollte geschlossen werden, wenn die Tabelle nicht mehr benötigt wird.</td>
 </tr>
 </tbody>
 </table>
@@ -53,10 +53,10 @@ Der [JET_RECORDLIST](./jet-recordlist-class.md) -Typ macht die folgenden Member 
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_RECORDLIST-Klasse](./jet-recordlist-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

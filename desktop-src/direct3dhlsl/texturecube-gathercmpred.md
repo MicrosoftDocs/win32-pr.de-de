@@ -1,6 +1,6 @@
 ---
 title: TextureCube::TextureCube GatherCmpRed-Methoden
-description: Durchmustert und vergleicht eine Textur und gibt die rote Komponente zurück. | TextureCube::TextureCube GatherCmpRed-Methoden
+description: Lädt eine Textur und vergleicht sie und gibt die rote Komponente zurück. | TextureCube::TextureCube GatherCmpRed-Methoden
 ms.assetid: 614F9DD0-2A49-4F20-8967-3DD63D5B5F32
 keywords:
 - GatherCmpRed-Methoden HLSL
@@ -21,15 +21,15 @@ ms.locfileid: "117722360"
 ---
 # <a name="texturecubegathercmpred-methods"></a>TextureCube::GatherCmpRed-Methoden
 
-Durchmustert und vergleicht eine Textur und gibt die rote Komponente zurück.
+Lädt eine Textur und vergleicht sie und gibt die rote Komponente zurück.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                             | BESCHREIBUNG                                                                                                    |
+| Methode                                                                             | Beschreibung                                                                                                    |
 |:-----------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------|
-| [**GatherCmpRed(S,float,float,uint)**](tcube-gathercmpred-s-float-float-uint-.md) | Analysiert und vergleicht eine Textur und gibt die rote Komponente zusammen mit dem Status des Vorgangs zurück.<br/> |
+| [**GatherCmpRed(S,float,float,uint)**](tcube-gathercmpred-s-float-float-uint-.md) | Lädt eine Textur und vergleicht sie und gibt die rote Komponente zusammen mit dem Status des Vorgangs zurück.<br/> |
 
 
 

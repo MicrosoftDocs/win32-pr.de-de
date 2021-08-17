@@ -1,7 +1,7 @@
 ---
-description: Die incremementpinversion-Methode erhöht die Versionsnummer für den Satz von Pins.
+description: Die IncremementPinVersion-Methode erhöht die Versionsnummer für den Satz von Stecknadeln.
 ms.assetid: e1b3ec33-104d-4a12-9b11-f8bea09690a7
-title: Cbasefilter. incrementpinversion-Methode (amfilter. h)
+title: CBaseFilter.IncrementPinVersion-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 53e66ccd5bdd34c4767001403439f4372ff2938a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 01c82a5f506673b6145b468004bbc900d3acdb051f525df20930344137618e72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372672"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117824108"
 ---
-# <a name="cbasefilterincrementpinversion-method"></a>Cbasefilter. incrementpinversion-Methode
+# <a name="cbasefilterincrementpinversion-method"></a>CBaseFilter.IncrementPinVersion-Methode
 
-Die- `IncremementPinVersion` Methode erhöht die Versionsnummer für den Satz von Pins.
+Die `IncremementPinVersion` -Methode erhöht die Versionsnummer für den Satz von Stecknadeln.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode erhöht die Member-Variable [**cbasefilter:: m \_ pinversion**](cbasefilter-m-pinversion.md) . Wenn der Filter Pins dynamisch erstellt oder zerstört, wird diese Methode immer dann aufgerufen, wenn die Pins geändert werden.
+Diese Methode erhöht die [**CBaseFilter::m \_ PinVersion-Membervariable.**](cbasefilter-m-pinversion.md) Wenn der Filter Pins dynamisch erstellt oder zerstört, rufen Sie diese Methode auf, wenn sich die Stecknadeln ändern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,19 +54,19 @@ Diese Methode erhöht die Member-Variable [**cbasefilter:: m \_ pinversion**](cb
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> <dt>
 
-[**Cbasefilter:: getpinversion**](cbasefilter-getpinversion.md)
+[**CBaseFilter::GetPinVersion**](cbasefilter-getpinversion.md)
 </dt> </dl>
 
  

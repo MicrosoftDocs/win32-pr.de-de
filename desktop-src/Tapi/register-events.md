@@ -1,5 +1,5 @@
 ---
-description: Die folgenden Codebeispiele veranschaulichen die Implementierung eines einfachen Ereignishandlers, die Registrierung der TAPI-Hauptereignisschnittstelle, die Einstellung des Ereignisfilters und die Registrierung für Aufrufbenachrichtigungen.
+description: Die folgenden Codebeispiele veranschaulichen die Implementierung eines einfachen Ereignishandlers, die Registrierung der TAPI-Hauptereignisschnittstelle, das Festlegen des Ereignisfilters und die Registrierung für Aufrufbenachrichtigungen.
 ms.assetid: e7662a26-d7b2-4bff-aa72-e38b58bc15df
 title: Registrieren von Ereignissen
 ms.topic: article
@@ -13,14 +13,14 @@ ms.locfileid: "117761177"
 ---
 # <a name="register-events"></a>Registrieren von Ereignissen
 
-Die folgenden Codebeispiele veranschaulichen die Implementierung eines einfachen Ereignishandlers, die Registrierung der TAPI-Hauptereignisschnittstelle, die Einstellung des Ereignisfilters und die Registrierung für Aufrufbenachrichtigungen.
+Die folgenden Codebeispiele veranschaulichen die Implementierung eines einfachen Ereignishandlers, die Registrierung der TAPI-Hauptereignisschnittstelle, das Festlegen des Ereignisfilters und die Registrierung für Aufrufbenachrichtigungen.
 
-Der gezeigte Ereignishandler ist ein Beispiel anstelle einer Anforderung. Das Hauptziel besteht darin, sicherzustellen, dass der Thread, der Ereignisse empfängt, eine minimale Verarbeitung vor der Übergabe von Arbeit an einen anderen Thread vorgibt. Dadurch wird verhindert, dass der Ereignishandler in Situationen mit hoher Ereignislast zu einem Leistungsproblem wird.
+Der angezeigte Ereignishandler ist ein Beispiel und keine Anforderung. Das Hauptziel besteht in der Sicherstellung, dass der Thread, der Ereignisse empfängt, eine minimale Verarbeitung vor der Übergabe von Arbeit an einen anderen Thread vorzieht. Dadurch wird verhindert, dass der Ereignishandler in Situationen mit hoher Ereignislast zu einem Leistungsproblem wird.
 
-Bevor Sie dieses Codebeispiel verwenden, müssen Sie die Vorgänge unter [Initialize TAPI (TAPI initialisieren)](initialize-tapi.md) und [Select an Address (Adresse auswählen)](select-an-address.md)ausführen.
+Bevor Sie dieses Codebeispiel verwenden, müssen Sie die Vorgänge in Initialisieren von [TAPI und](initialize-tapi.md) [Auswählen einer Adresse ausführen.](select-an-address.md)
 
 > [!Note]  
-> Dieses Beispiel verfügt nicht über die Fehlerüberprüfung und releases, die für Produktionscode geeignet sind.
+> In diesem Beispiel sind die Fehlerüberprüfung und die für Produktionscode geeigneten Releases nicht enthalten.
 
  
 

@@ -1,29 +1,29 @@
 ---
-title: Httpcalculatorwithbasicoversslcliumtexample
-description: In diesem Beispiel wird gezeigt, wie der Dienst Proxy für die Kommunikation mit einem Rechner Dienst mit SSL-Transportsicherheit und HTTP-Header-Standard Authentifizierung verwendet wird.
+title: HttpCalculatorWithBasicOverSslClientExample
+description: In diesem Beispiel wird gezeigt, wie der Dienstproxy für die Kommunikation mit einem Rechnerdienst mit SSL-Transportsicherheit und HTTP-Header-Standardauthentifizierung verwendet wird.
 ms.assetid: be1a44e6-642c-42fa-8b95-bd8c6f335696
 keywords:
-- Httpcalculatorwithbasicoversslcliumtexample Native-Web-Services
-- Wwsapi
+- HttpCalculatorWithBasicOverSslClientExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b3fc925c9cfc6f276d405a27ab931596559adf9d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 53e366d5181f2cc498756820a3c1ccf6345c1ebcff60353cb1ffc5e6338c7ae0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337187"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117841564"
 ---
-# <a name="httpcalculatorwithbasicoversslclientexample"></a>Httpcalculatorwithbasicoversslcliumtexample
+# <a name="httpcalculatorwithbasicoversslclientexample"></a>HttpCalculatorWithBasicOverSslClientExample
 
-In diesem Beispiel wird gezeigt, wie der Dienst Proxy für die Kommunikation mit einem Rechner Dienst mit SSL-Transportsicherheit und HTTP-Header-Standard Authentifizierung verwendet wird. In diesem Setup wird die Transport Verbindung von SSL geschützt (signiert, verschlüsselt), der auch die Server Authentifizierung bereitstellt. Die Client Authentifizierung wird durch ein paar aus Benutzername und Kennwort bereitgestellt, das in HTTP-Headern mit dem grundlegenden Schema
+In diesem Beispiel wird gezeigt, wie der Dienstproxy für die Kommunikation mit einem Rechnerdienst mit SSL-Transportsicherheit und HTTP-Header-Standardauthentifizierung verwendet wird. Bei diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Benutzername-Kennwort-Paar bereitgestellt, das in HTTP-Headern unter Verwendung des basisbasierten Schemas angegeben wird.
 
--   [Httpcalculatorwithbasicoversslclient. cpp](#httpcalculatorwithbasicoversslclientcpp)
--   [CalculatorService. WSDL](#calculatorservicewsdl)
+-   [HttpCalculatorWithBasicOverSslClient.cpp](#httpcalculatorwithbasicoversslclientcpp)
+-   [CalculatorService.wsdl](#calculatorservicewsdl)
 -   [Makefile](#makefile)
 
-## <a name="httpcalculatorwithbasicoversslclientcpp"></a>Httpcalculatorwithbasicoversslclient. cpp
+## <a name="httpcalculatorwithbasicoversslclientcpp"></a>HttpCalculatorWithBasicOverSslClient.cpp
 
 
 ```C++
@@ -241,7 +241,7 @@ Exit:
 
 
 
-## <a name="calculatorservicewsdl"></a>CalculatorService. WSDL
+## <a name="calculatorservicewsdl"></a>CalculatorService.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -366,9 +366,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

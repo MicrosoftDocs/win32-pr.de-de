@@ -1,9 +1,9 @@
 ---
-title: 'Texturecubearray:: texturecubearray samplebias-Methoden'
-description: 'Gibt eine Textur aus, nachdem der Bias-Wert auf die MipMap-Ebene angewendet wurde. | Texturecubearray:: texturecubearray samplebias-Methoden'
+title: TextureCubeArray::TextureCubeArray SampleBias-Methoden
+description: Samples a texture, after applying the bias value to the mipmap level. | TextureCubeArray::TextureCubeArray SampleBias-Methoden
 ms.assetid: 97DE396D-361D-4BFA-B4C2-9B3CC1C86EFF
 keywords:
-- Samplebias-Methoden HLSL
+- SampleBias-Methoden – HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,26 +12,26 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 5f8b6e5b93d844b264695692e49e7b6ace43587b
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d9f21e93a7763601395487f55ec3baaf6c6dc0e283c992fc07676f411f52c3fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117722350"
 ---
-# <a name="texturecubearraysamplebias-methods"></a>Texturecubearray:: samplebias-Methoden
+# <a name="texturecubearraysamplebias-methods"></a>TextureCubeArray::SampleBias-Methoden
 
-Gibt eine Textur aus, nachdem der Bias-Wert auf die MipMap-Ebene angewendet wurde.
+Samples a texture, after applying the bias value to the mipmap level.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                          | BESCHREIBUNG                                                                                                                                                                                  |
+| Methode                                                                                          | Beschreibung                                                                                                                                                                                  |
 |:------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Sample Bias (S, float, float)**](dx-graphics-hlsl-to-samplebias.md)                             | Gibt eine Textur aus, nachdem der Bias-Wert auf die MipMap-Ebene angewendet wurde.<br/>                                                                                                             |
-| [**Sample Bias (S, float, float, float)**](tcubearray-samplebias-s-float-float-float-.md)           | Gibt eine Textur aus, nachdem der Wert "Bias" auf die MipMap-Ebene angewendet wurde, mit einem optionalen Wert, mit dem Sample Level-of-Detail-Werte (LOD) an eine Klammer übergeben werden.<br/>                                     |
-| [**Sample Bias (S, float, float, float, uint)**](tcubearray-samplebias-s-float-float-float-uint-.md) | Gibt eine Textur aus, nachdem der Wert "Bias" auf die MipMap-Ebene angewendet wurde, mit einem optionalen Wert, mit dem Sample Level-of-Detail-Werte (LOD) an eine Klammer übergeben werden. Gibt den Status des Vorgangs zurück.<br/> |
+| [**SampleBias(S,float,float)**](dx-graphics-hlsl-to-samplebias.md)                             | Samples a texture, after applying the bias value to the mipmap level.<br/>                                                                                                             |
+| [**SampleBias(S,float,float,float)**](tcubearray-samplebias-s-float-float-float-.md)           | Samples a texture, after applying the bias value to the mipmap level, with an optional value to clamp sample level-of-detail (LOD) values to .<br/>                                     |
+| [**SampleBias(S,float,float,float,uint)**](tcubearray-samplebias-s-float-float-float-uint-.md) | Samples a texture, after applying the bias value to the mipmap level, with an optional value to clamp sample level-of-detail (LOD) values to . Gibt den Status des Vorgangs zurück.<br/> |
 
 
 
@@ -39,10 +39,10 @@ Gibt eine Textur aus, nachdem der Bias-Wert auf die MipMap-Ebene angewendet wurd
 
 <dl> <dt>
 
-[**Texturecubearray**](texturecubearray.md)
+[**TextureCubeArray**](texturecubearray.md)
 </dt> <dt>
 
-[Texture-Objekt](dx-graphics-hlsl-to-type.md)
+[Texture-Object](dx-graphics-hlsl-to-type.md)
 </dt> </dl>
 
  

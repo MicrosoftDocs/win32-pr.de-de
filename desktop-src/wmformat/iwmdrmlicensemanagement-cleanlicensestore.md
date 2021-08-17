@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmlicenabmanagement cleanlicensstore-Methode (wmdrmsdk. h)
-description: Die cleanlicenserstore-Methode entfernt nicht verwendbare Lizenzen aus dem temporären Lizenz Speicher und defragmentiert den lokalen Lizenz Speicher, um die Leistung zu verbessern.
+title: IWMDRMLicenseManagement CleanLicenseStore-Methode (Wmdrmsdk.h)
+description: Die CleanLicenseStore-Methode entfernt nicht verwendbare Lizenzen aus dem temporären Lizenzspeicher und defragmentiert den lokalen Lizenzspeicher, um die Leistung zu verbessern.
 ms.assetid: 07ddd6f8-a091-4c18-81d3-c4d0c6026b6b
 keywords:
-- Cleanlicenerstore-Methode Windows Media-Format
-- Cleanlicenerstore-Methode Windows Media-Format, iwmdrmlicenermanagement-Schnittstelle
-- Iwmdrmlicenabmanagement Interface Windows Media-Format, cleanlicenerstore-Methode
+- 'CleanLicenseStore-Methode : Windows-Medienformat'
+- CleanLicenseStore-Methode windows Media Format, IWMDRMLicenseManagement-Schnittstelle
+- IWMDRMLicenseManagement-Schnittstelle windows Media Format , CleanLicenseStore-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b9327fd836cf742f5495c29767be93d914c0f187
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6010313efaca6855c403f9ee698284ff4aebb2e0ab8a5e08e5862a5890224a1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351213"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117846952"
 ---
-# <a name="iwmdrmlicensemanagementcleanlicensestore-method"></a>Iwmdrmlicenabmanagement:: cleanlicensstore-Methode
+# <a name="iwmdrmlicensemanagementcleanlicensestore-method"></a>IWMDRMLicenseManagement::CleanLicenseStore-Methode
 
-Die **cleanlicenserstore** -Methode entfernt nicht verwendbare Lizenzen aus dem temporären Lizenz Speicher und defragmentiert den lokalen Lizenz Speicher, um die Leistung zu verbessern.
+Die **CleanLicenseStore-Methode** entfernt nicht verwendbare Lizenzen aus dem temporären Lizenzspeicher und defragmentiert den lokalen Lizenzspeicher, um die Leistung zu verbessern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ HRESULT CleanLicenseStore(
 
 <dl> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Flags, die die zu verwendenden Reinigungs Optionen für den Lizenz Speicher angeben. Legen Sie auf eine der Konstanten in der folgenden Tabelle fest.
+Flags, die die zu verwendenden Bereinigungsoptionen für den Lizenzspeicher angeben. Legen Sie auf eine der Konstanten in der folgenden Tabelle fest.
 
 
 
-| Konstante                            | BESCHREIBUNG                                                                                                                                                                    |
+| Konstante                            | Beschreibung                                                                                                                                                                    |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Synchronisierung des WMDRM- \_ \_ Lizenz \_ Speicher bereinigen \_  | Der Clean-Vorgang wird synchron ausgeführt. Diese Methode wird erst zurückgegeben, wenn der Vorgang beendet ist.                                                              |
-| WMDRM- \_ Clean \_ License \_ Store \_ Async | Der Clean-Vorgang wird asynchron ausgeführt. Diese Methode wird sofort zurückgegeben. Wenn der Vorgang beendet ist, wird das Medienereignis "melicensetup" gesendet. |
+| WMDRM \_ CLEAN \_ LICENSE \_ STORE \_ SYNC  | Der Bereinigungsvorgang wird synchron ausgeführt. Diese Methode gibt erst dann zurück, wenn der Vorgang abgeschlossen ist.                                                              |
+| WMDRM \_ CLEAN \_ LICENSE \_ STORE \_ ASYNC | Der Bereinigungsvorgang wird asynchron ausgeführt. Diese Methode gibt sofort zurück. Wenn der Vorgang abgeschlossen ist, wird das Medienereignis MELicenseStoreCleaned gesendet. |
 
 
 
@@ -62,33 +62,33 @@ Flags, die die zu verwendenden Reinigungs Optionen für den Lizenz Speicher ange
 
 </dd> <dt>
 
-*ppunkcancelationcookie* \[ vorgenommen\]
+*ppunkCancelationCookie* \[ out\]
 </dt> <dd>
 
-Ein Zeiger, der einen Zeiger auf die **IUnknown** -Schnittstelle eines Objekts empfängt, das diesen asynchronen-Befehl identifiziert. Dieser Schnittstellen Zeiger kann zum Abbrechen des asynchronen Aufrufs verwendet werden, indem die [**iwmdrmeventgenerator:: cancelasyncoperation**](iwmdrmeventgenerator-cancelasyncoperation.md) -Methode aufgerufen wird.
+Zeiger, der einen Zeiger auf die **IUnknown-Schnittstelle** eines Objekts empfängt, das diesen asynchronen Aufruf identifiziert. Dieser Schnittstellenzeiger kann verwendet werden, um den asynchronen Aufruf abzubricht, indem die [**IWMDRMEventGenerator::CancelAsyncOperation-Methode aufgerufen**](iwmdrmeventgenerator-cancelasyncoperation.md) wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                            | Beschreibung                                                            |
 |--------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                   | Die Methode wurde erfolgreich ausgeführt.<br/>                                       |
-| <dl> <dt>**DRM- \_ E \_ licensenotfound**</dt> </dl> | Auf dem Client Computer ist kein temporärer Lizenz Speicher vorhanden.<br/> |
+| <dl> <dt>**DRM \_ E \_ LICENSENOTFOUND**</dt> </dl> | Auf dem Clientcomputer ist kein temporärer Lizenzspeicher verfügbar.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird asynchron ausgeführt. Sie wird sofort nach dem Aufruf von zurückgegeben und generiert dann ein **mewmdrmlicenabgelig-Ereignis** , wenn die Verarbeitung fertiggestellt ist.
+Diese Methode wird asynchron ausgeführt. Er wird unmittelbar nach dem Aufgerufenen zurückgegeben und generiert dann ein **MEWMDRMLicenseStoreCleaned-Ereignis,** wenn die Verarbeitung abgeschlossen ist.
 
-Weitere Informationen zur Verwendung der asynchronen Methoden der erweiterten APIs für den Windows Media DRM-Client finden [Sie unter Verwenden des Media Foundation-Ereignis Modells](using-the-media-foundation-model.md).
+Weitere Informationen zur Verwendung der asynchronen Methoden der erweiterten APIs des Windows Media DRM-Clients finden Sie unter [Verwenden des Media Foundation-Ereignismodells.](using-the-media-foundation-model.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,16 +96,16 @@ Weitere Informationen zur Verwendung der asynchronen Methoden der erweiterten AP
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmlicenabmanagement-Schnittstelle**](iwmdrmlicensemanagement.md)
+[**IWMDRMLicenseManagement-Schnittstelle**](iwmdrmlicensemanagement.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Im folgenden Beispiel wird die GetSystemInfo-Funktion verwendet, um Hardwareinformationen zu erhalten, z. b. OEM-Bezeichner, Prozessortyp, Seitengröße usw. Im Beispiel werden die Informationen in der-Konsole angezeigt.
+description: Im folgenden Beispiel wird die GetSystemInfo-Funktion verwendet, um Hardwareinformationen wie OEM-Bezeichner, Prozessortyp, Seitengröße und ähnliches zu erhalten. Im Beispiel werden die Informationen in der Konsole angezeigt.
 ms.assetid: 9f943926-9ca7-4d4c-ad1e-b68c248e0e01
-title: Erhalten von Hardware Informationen
+title: Abrufen von Hardwareinformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d89ab5083e9d88e60d962ebcdd7b701a90e279cb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8a9302e386d3054923f9914fc105c1bc90f380b9b21b869b0d854d6a78af1d81
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366517"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117764455"
 ---
-# <a name="getting-hardware-information"></a>Erhalten von Hardware Informationen
+# <a name="getting-hardware-information"></a>Abrufen von Hardwareinformationen
 
-Im folgenden Beispiel wird die [**GetSystemInfo**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsysteminfo) -Funktion verwendet, um Hardwareinformationen zu erhalten, z. b. OEM-Bezeichner, Prozessortyp, Seitengröße usw. Im Beispiel werden die Informationen in der-Konsole angezeigt.
+Im folgenden Beispiel wird die [**GetSystemInfo-Funktion**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsysteminfo) verwendet, um Hardwareinformationen wie OEM-Bezeichner, Prozessortyp, Seitengröße und ähnliches zu erhalten. Im Beispiel werden die Informationen in der Konsole angezeigt.
 
 
 ```C++

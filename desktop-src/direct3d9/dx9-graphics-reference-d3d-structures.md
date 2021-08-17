@@ -1,19 +1,19 @@
 ---
-description: Dieser Abschnitt enthält Informationen zu den Strukturen, die mit Direct3D verwendet werden.
+description: Dieser Abschnitt enthält Informationen zu den mit Direct3D verwendeten Strukturen.
 ms.assetid: 0a13cb04-10cb-48a6-a709-ad4a56459f02
 title: Direct3D-Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 24b3e11f8760cf5ab13e32bfbf9d944d0dd55f5a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5437b99c97bf58127d942e00a05ee2342844af4865f49ad894d10e67977afc3a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104480723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117730613"
 ---
 # <a name="direct3d-structures"></a>Direct3D-Strukturen
 
-Dieser Abschnitt enthält Informationen zu den Strukturen, die mit Direct3D verwendet werden.
+Dieser Abschnitt enthält Informationen zu den mit Direct3D verwendeten Strukturen.
 
 -   [**D3DADAPTER \_ IDENTIFIER9**](d3dadapter-identifier9.md)
 -   [**D3DBOX**](d3dbox.md)
@@ -40,7 +40,7 @@ Dieser Abschnitt enthält Informationen zu den Strukturen, die mit Direct3D verw
 
      
 
--   [**D3DDEVICE- \_ Erstellungs \_ Parameter**](d3ddevice-creation-parameters.md)
+-   [**\_D3DDEVICE-ERSTELLUNGSPARAMETER \_**](d3ddevice-creation-parameters.md)
 -   [**D3DDEVINFO \_ D3D9BANDWIDTHTIMINGS**](d3ddevinfo-d3d9bandwidthtimings.md)
 -   [**D3DDEVINFO \_ D3D9CACHEUTILIZATION**](d3ddevinfo-d3d9cacheutilization.md)
 -   [**D3DDEVINFO \_ D3D9INTERFACETIMINGS**](d3ddevinfo-d3d9interfacetimings.md)
@@ -71,14 +71,14 @@ Dieser Abschnitt enthält Informationen zu den Strukturen, die mit Direct3D verw
      
 
 -   [**D3DGAMMARAMP**](d3dgammaramp.md)
--   [**D3DINDEXBUFFER- \_ Abteilung**](d3dindexbuffer-desc.md)
+-   [**D3DINDEXBUFFER \_ DESC**](d3dindexbuffer-desc.md)
 -   [**D3DLIGHT9**](d3dlight9.md)
--   [**D3DLOCKED- \_ Feld**](d3dlocked-box.md)
--   [**D3DLOCKED \_ Rect**](d3dlocked-rect.md)
+-   [**D3DLOCKED \_ BOX**](d3dlocked-box.md)
+-   [**D3DLOCKED \_ RECT**](d3dlocked-rect.md)
 -   [**D3DMATERIAL9**](d3dmaterial9.md)
 -   [**D3DMATRIX**](d3dmatrix.md)
 -   [**D3DMEMORYPRESSURE**](d3dmemorypressure.md)
--   [**D3DPRESENT- \_ Parameter**](d3dpresent-parameters.md)
+-   [**D3DPRESENT-PARAMETER \_**](d3dpresent-parameters.md)
 -   
 
     |                                                                                                                                                                    |
@@ -91,21 +91,21 @@ Dieser Abschnitt enthält Informationen zu den Strukturen, die mit Direct3D verw
 
 -   [**D3DPSHADERCAPS2 \_ 0**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dpshadercaps2_0)
 -   [**D3DRANGE**](d3drange.md)
--   [**D3DRASTER- \_ Status**](d3draster-status.md)
+-   [**D3DRASTER \_ STATUS**](d3draster-status.md)
 -   [**D3DRECT**](d3drect.md)
--   [**D3DRECTPATCH \_ Info**](d3drectpatch-info.md)
+-   [**D3DRECTPATCH \_ INFO**](d3drectpatch-info.md)
 -   [**D3DRESOURCESTATS**](d3dresourcestats.md)
--   [**D3DSURFACE- \_ Abteilung**](d3dsurface-desc.md)
--   [**D3DTRIPATCH \_ Info**](d3dtripatch-info.md)
+-   [**D3DSURFACE \_ DESC**](d3dsurface-desc.md)
+-   [**D3DTRIPATCH-INFORMATIONEN \_**](d3dtripatch-info.md)
 -   [**D3DVECTOR**](d3dvector.md)
--   [**D3DVERTEXBUFFER- \_ Abteilung**](d3dvertexbuffer-desc.md)
+-   [**D3DVERTEXBUFFER \_ DESC**](d3dvertexbuffer-desc.md)
 -   [**D3DVERTEXELEMENT9**](d3dvertexelement9.md)
 -   [**D3DVIEWPORT9**](d3dviewport9.md)
--   [**D3DVOLUME- \_ Abteilung**](d3dvolume-desc.md)
+-   [**D3DVOLUME \_ DESC**](d3dvolume-desc.md)
 -   [**D3DVSHADERCAPS2 \_ 0**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dvshadercaps2_0)
--   [**D3DXF \_ fileloadmemory**](d3dxf-fileloadmemory.md)
--   [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry)
--   [**Xfilecompressedanimationset**](xfilecompressedanimationset.md)
+-   [**D3DXF \_ FILELOADMEMORY**](d3dxf-fileloadmemory.md)
+-   [**Paletteentry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry)
+-   [**XFILECOMBLENDDANIMATIONSET**](xfilecompressedanimationset.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,21 +1,21 @@
 ---
-description: Sie können in zeitgesteuerten Intervallen zeichnen, indem Sie einen Timer mit der Funktion "-Funktion" erstellen.
+description: Sie können in Zeitintervallen zeichnen, indem Sie einen Timer mit der SetTimer-Funktion erstellen.
 ms.assetid: 82f9aa5e-8e42-49cf-bcd0-785bc78fe159
-title: Zeichnen in zeitgesteuerten Intervallen
+title: Zeichnen in zeitierten Intervallen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1757aca4e6be8f169aea378c52038420519ee879
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4d82d385dce232c84be0dfeb8fd0f825891563ec64daa6c6cd41b82db81c6f67
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117887108"
 ---
-# <a name="drawing-at-timed-intervals"></a>Zeichnen in zeitgesteuerten Intervallen
+# <a name="drawing-at-timed-intervals"></a>Zeichnen in zeitierten Intervallen
 
-Sie können in zeitgesteuerten Intervallen zeichnen, indem Sie einen Timer [**mit der Funktion**](/windows/win32/api/winuser/nf-winuser-settimer) "-Funktion" erstellen. Durch die Verwendung eines Timers zum Senden von WM-Zeit Geber Nachrichten an die Fenster Prozedur in regelmäßigen Abständen kann eine Anwendung im Client Bereich eine einfache Animation ausführen, während andere Anwendungen weiterhin ausgeführt werden. [**\_**](../winmsg/wm-timer.md)
+Sie können in Zeitintervallen zeichnen, indem Sie einen Timer mit der [**SetTimer-Funktion**](/windows/win32/api/winuser/nf-winuser-settimer) erstellen. Durch die Verwendung eines Timers zum Senden von [**WM \_ TIMER-Nachrichten**](../winmsg/wm-timer.md) an die Fensterprozedur in regelmäßigen Abständen kann eine Anwendung einfache Animationen im Clientbereich ausführen, während andere Anwendungen weiterhin ausgeführt werden.
 
-Im folgenden Beispiel springt die Anwendung einen Stern von der Seite zu Seite im Client Bereich. Jedes Mal, wenn die Fenster Prozedur [**eine \_ WM**](../winmsg/wm-timer.md) -Zeit Geber Nachricht empfängt, löscht die Prozedur den Stern an der aktuellen Position, berechnet eine neue Position und zeichnet den Stern innerhalb der neuen Position. Die Prozedur startet den Zeitgeber, indem er bei der Verarbeitung der [**WM \_**](../winmsg/wm-create.md) -Erstellungs Nachricht [**den Aufruf von**](/windows/win32/api/winuser/nf-winuser-settimer) "*
+Im folgenden Beispiel springt die Anwendung einen Stern im Clientbereich von Seite zu Seite. Jedes Mal, wenn die Fensterprozedur eine [**WM \_ TIMER-Nachricht**](../winmsg/wm-timer.md) empfängt, löscht die Prozedur den Stern an der aktuellen Position, berechnet eine neue Position und zeichnet den Stern innerhalb der neuen Position. Die Prozedur startet den Timer durch Aufrufen [**von SetTimer**](/windows/win32/api/winuser/nf-winuser-settimer) während der Verarbeitung der [**WM \_ CREATE-Nachricht.**](../winmsg/wm-create.md)
 
 
 ```C++
@@ -147,11 +147,11 @@ LRESULT APIENTRY WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 
 
-Diese Anwendung verwendet einen privaten Gerätekontext, um den Zeitaufwand für die Vorbereitung des Geräte Kontexts für das Zeichnen zu minimieren. Die Fenster Prozedur ruft den privaten Gerätekontext bei der Verarbeitung der [**WM \_ Create**](../winmsg/wm-create.md) -Nachricht ab und initialisiert diesen, wobei der Modus für binäre Raster Vorgänge festgelegt wird, um zuzulassen, dass der Stern mithilfe desselben Aufrufens der [**polylinienfunktion**](/windows/desktop/api/Wingdi/nf-wingdi-polyline) gelöscht und gezeichnet werden kann. Die Fenster Prozedur legt auch den Ansichts Port fest, um zuzulassen, dass der Stern mit demselben Satz von Punkten gezeichnet wird, unabhängig von der Position des Sterns im Client Bereich.
+Diese Anwendung verwendet einen privaten Gerätekontext, um die Zeit zu minimieren, die zum Vorbereiten des Gerätekontexts für das Zeichnen erforderlich ist. Die Fensterprozedur ruft beim Verarbeiten der [**WM \_ CREATE-Nachricht**](../winmsg/wm-create.md) den privaten Gerätekontext ab und initialisiert ihn. Dabei wird der Binärraster-Betriebsmodus so festgelegt, dass der Stern gelöscht und mit dem gleichen Aufruf der [**Polyline-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-polyline) gezeichnet werden kann. Die Fensterprozedur legt auch den Viewport-Ursprung fest, damit der Stern mit dem gleichen Satz von Punkten gezeichnet werden kann, unabhängig von der Sternposition im Clientbereich.
 
-Die Anwendung verwendet die [**WM \_**](wm-paint.md) -Zeichnungs Nachricht, um den Stern zu zeichnen, wenn das Fenster aktualisiert werden muss. Die Fenster Prozedur zeichnet den Stern nur, wenn er nicht sichtbar ist. Dies ist nur der Fall, wenn er von der [**WM- \_ Lösch**](../winmsg/wm-erasebkgnd.md) Nachricht gelöscht wurde. Die Fenster Prozedur fängt die **WM- \_ erasebkgnd** -Meldung ab, um die *fVisible* -Variable festzulegen, übergibt die Nachricht jedoch an [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) , damit das System den Hintergrund des Fensters zeichnen kann.
+Die Anwendung verwendet die [**WM \_ PAINT-Nachricht,**](wm-paint.md) um den Stern zu zeichnen, wenn das Fenster aktualisiert werden muss. Die Fensterprozedur zeichnet den Stern nur, wenn er nicht sichtbar ist. das heißt, nur, wenn es durch die [**WM \_ ERASEBKGND-Nachricht gelöscht**](../winmsg/wm-erasebkgnd.md) wurde. Die Fensterprozedur fängt die **WM \_ ERASEBKGND-Nachricht** ab, um die *fVisible-Variable* zu festlegen, übergibt die Nachricht jedoch an [**DefWindowProc,**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) damit das System den Fensterhintergrund zeichnen kann.
 
-Die Anwendung verwendet die [**WM- \_ Größen**](../winmsg/wm-size.md) Nachricht, um den Timer zu beenden, wenn das Fenster minimiert wird, und den Timer neu zu starten, wenn das minimierte Fenster wieder hergestellt wird. Die Fenster Prozedur verwendet auch die-Meldung, um die aktuelle Position des Sterns zu aktualisieren, wenn die Größe des Fensters reduziert wurde, sodass sich der Stern nicht mehr im Client Bereich befindet. Die Anwendung verfolgt die aktuelle Position des Sterns mithilfe der von rccurrent angegebenen Struktur, die das umgebende Rechteck für den Stern definiert. Wenn alle Ecken des Rechtecks im Client Bereich aufbewahrt werden, bleibt der Stern im Bereich. Bei der Verarbeitung der [**WM \_ Create**](../winmsg/wm-create.md) -Nachricht zentriert die Fenster Prozedur zunächst den Stern im Client Bereich.
+Die Anwendung verwendet die [**WM \_ SIZE-Meldung,**](../winmsg/wm-size.md) um den Timer zu beenden, wenn das Fenster minimiert ist, und um den Timer neu zu starten, wenn das minimierte Fenster wiederhergestellt wird. Die Fensterprozedur verwendet auch die Meldung, um die aktuelle Position des Sterns zu aktualisieren, wenn die Größe des Fensters reduziert wurde, sodass sich der Stern nicht mehr im Clientbereich befindet. Die Anwendung verfolgt die aktuelle Position des Sterns mithilfe der durch rcCurrent angegebenen Struktur nach, die das umgebundene Rechteck für den Stern definiert. Wenn Sie alle Ecken des Rechtecks im Clientbereich behalten, bleibt der Stern im Bereich. Die Fensterprozedur centert den Stern zunächst im Clientbereich, wenn die [**WM \_ CREATE-Nachricht verarbeitet**](../winmsg/wm-create.md) wird.
 
  
 

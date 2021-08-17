@@ -1,7 +1,7 @@
 ---
-description: Stellt Methoden bereit, die die Interaktion zwischen einer Benutzeroberfläche (UI) und den durch den Indexer erstellten suchnamespace-Objekten definieren.
+description: Stellt Methoden bereit, die die Interaktion zwischen einer Benutzeroberfläche (UI) und den vom Indexer erstellten Search-Namespaceobjekten definieren.
 ms.assetid: e48c9e5b-9b15-4bc1-91ef-81ba7a05bfbd
-title: Isearchitem-Schnittstelle
+title: ISearchItem-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,43 +12,43 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: c6c0fd5b534c13f8fae2e6759645ac812fc3986c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: de3769f869838cd3a6660229a452ea7fbd96f943ac7421523c523662da205dac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393462"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117863953"
 ---
-# <a name="isearchitem-interface"></a>Isearchitem-Schnittstelle
+# <a name="isearchitem-interface"></a>ISearchItem-Schnittstelle
 
-Stellt Methoden bereit, die die Interaktion zwischen einer Benutzeroberfläche (UI) und den durch den Indexer erstellten suchnamespace-Objekten definieren.
+Stellt Methoden bereit, die die Interaktion zwischen einer Benutzeroberfläche (UI) und den vom Indexer erstellten Search-Namespaceobjekten definieren.
 
 ## <a name="members"></a>Member
 
-Die **isearchitem** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Isearchitem** verfügt auch über die folgenden Typen von Membern:
+Die **ISearchItem-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **ISearchItem** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **isearchitem** -Schnittstelle verfügt über diese Methoden.
+Die **ISearchItem-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                         | BESCHREIBUNG                                                                                                                               |
+| Methode                                                         | Beschreibung                                                                                                                               |
 |:---------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Getpartfolder**](-search-isearchitem-getparentfolder.md) | Ruft das **isearchitem** -Objekt ab, wenn die URL eine tatsächliche shelldatenquelle darstellt (wird auch als Shellnamespace-Erweiterung bezeichnet).<br/> |
-| [**Getuiobjectof**](/previous-versions/windows/desktop/legacy/dd756721(v=vs.85))     | Ruft das Benutzeroberflächen Objekt (UI) von **isearchitem** ab.<br/>                                                                        |
+| [**GetParentFolder**](-search-isearchitem-getparentfolder.md) | Ruft das **ISearchItem-Objekt** ab, wenn die URL eine tatsächliche Shell-Datenquelle darstellt (auch als Shellnamespaceerweiterung bekannt).<br/> |
+| [**GetUIObjectOf**](/previous-versions/windows/desktop/legacy/dd756721(v=vs.85))     | Ruft das Benutzeroberflächenobjekt von **ISearchItem ab.**<br/>                                                                        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[**Isearchitem:: getzientfolder**](-search-isearchitem-getparentfolder.md) wird nur unter Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
+[**ISearchItem::GetParentFolder**](-search-isearchitem-getparentfolder.md) wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
-Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, kann es erforderlich sein, die **isearchitem** -Schnittstelle und die folgenden APIs zu verwenden: die Schnittstellen [**iitempreviewerext**](-search-iitempreviewerext.md), [**iitempropertybag**](iitempropertybag.md)und [**isearchprotocolui**](-search-isearchprotocolui.md) , die [**linkinfo**](-search-linkinfo.md) -Struktur und die [**linktype**](-search-linktype.md)
+Um eine Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern anzuzeigen, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die **ISearchItem-Schnittstelle** und die folgenden APIs zu verwenden: die [**Schnittstellen IItemPreviewerExt,**](-search-iitempreviewerext.md) [**IItemPropertyBag**](iitempropertybag.md)und [**ISearchProtocolUI,**](-search-isearchprotocolui.md) die [**LINKINFO-Struktur**](-search-linkinfo.md) und die [**LINKTYPE-Enumeration.**](-search-linktype.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,9 +56,9 @@ Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittan
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 3,0<br/>          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 3.0<br/>          |
 
 
 

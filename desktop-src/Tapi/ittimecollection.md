@@ -1,42 +1,42 @@
 ---
-description: Die ittimecollection-Schnittstelle ist eine anbieterspezifische Schnittstelle für das Sitzungs Deskriptor Protocol (SDP)-Konferenz-BLOB-Objekt.
+description: Die ITTimeCollection-Schnittstelle ist eine anbieterspezifische Schnittstelle für das SDP-Konferenzblobobjekt (Session Descriptor Protocol).
 ms.assetid: 6309e9f2-8a73-4d42-ae0a-2165352d6244
-title: Ittimecollection-Schnittstelle (sdpblb. h)
+title: ITTimeCollection-Schnittstelle (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 19ca297a26b0eac34396726e6145a24fba5a2ed6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d086dcf0df7fb4d55552c734798244209fc3e9f52a2f2462693f6aaad7110347
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373710"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117762294"
 ---
-# <a name="ittimecollection-interface"></a>Ittimecollection-Schnittstelle
+# <a name="ittimecollection-interface"></a>ITTimeCollection-Schnittstelle
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **ittimecollection** -Schnittstelle ist eine anbieterspezifische Schnittstelle für das Sitzungs Deskriptor Protocol (SDP)-Konferenz-BLOB-Objekt. Diese Schnittstelle ermöglicht den Zugriff auf [**ittime**](ittime.md) -Schnittstellen nach Index und ermöglicht außerdem das Erstellen und Löschen von Zeit Komponenten. Die [**itsdp:: get \_ timecollection**](itsdp-get-timecollection.md) -Methode erstellt die **ittimecollection** -Schnittstelle.
+Die **ITTimeCollection-Schnittstelle** ist eine anbieterspezifische Schnittstelle für das SDP-Konferenzblobobjekt (Session Descriptor Protocol). Diese Schnittstelle ermöglicht den Zugriff [**auf ITTime-Schnittstellen**](ittime.md) nach Index sowie das Erstellen und Löschen von Zeitkomponenten. Die [**\_ TimeCollection-Methode ITSdp::get**](itsdp-get-timecollection.md) erstellt die **ITTimeCollection-Schnittstelle.**
 
 ## <a name="members"></a>Member
 
-Die **ittimecollection** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Ittimecollection** verfügt auch über die folgenden Typen von Membern:
+Die **ITTimeCollection-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **ITTimeCollection** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ittimecollection** -Schnittstelle verfügt über diese Methoden.
+Die **ITTimeCollection-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                           | BESCHREIBUNG                                                                                                           |
+| Methode                                                           | Beschreibung                                                                                                           |
 |:-----------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|
-| [**Stelle**](ittimecollection-create.md)                        | Erstellt eine [**ittime**](ittime.md) -Komponente.<br/>                                                             |
-| [**Lösch**](ittimecollection-delete.md)                        | Löscht eine [**ittime**](ittime.md) -Komponente.<br/>                                                             |
-| [**" \_ \_ netwenum"**](ittimecollection-get--newenum.md)          | Gibt einen Enumerator für die Auflistung zurück.<br/>                                                                  |
-| [**get- \_ Anzahl**](ittimecollection-get-count.md)                 | Ruft die Anzahl der Elemente in der Auflistung ab.<br/>                                                                        |
-| [**\_enumerationif erhalten**](ittimecollection-get-enumerationif.md) | Gibt die [**ienumtime**](ienumtime.md) -Enumerationsschnittstelle zurück, die [**ittime**](ittime.md)auflistet.<br/> |
-| [**\_Element erhalten**](ittimecollection-get-item.md)                   | Gibt ein Element in der Auflistung zurück, wenn ein Index angegeben ist.<br/>                                                         |
+| [**Erstellen**](ittimecollection-create.md)                        | Erstellt eine [**ITTime-Komponente.**](ittime.md)<br/>                                                             |
+| [**Löschen**](ittimecollection-delete.md)                        | Löscht eine [**ITTime-Komponente.**](ittime.md)<br/>                                                             |
+| [**get \_ \_ NewEnum**](ittimecollection-get--newenum.md)          | Gibt einen Enumerator für die Auflistung zurück.<br/>                                                                  |
+| [**get \_ Count**](ittimecollection-get-count.md)                 | Ruft die Anzahl der Elemente in der Auflistung ab.<br/>                                                                        |
+| [**get \_ EnumerationIf**](ittimecollection-get-enumerationif.md) | Gibt die [**IEnumTime-Enumerationsschnittstelle**](ienumtime.md) zurück, die [**ITTime aufzählt.**](ittime.md)<br/> |
+| [**Element \_ "get"**](ittimecollection-get-item.md)                   | Bei einem Index gibt ein Element in der Auflistung zurück.<br/>                                                         |
 
 
 
@@ -48,9 +48,9 @@ Die **ittimecollection** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 

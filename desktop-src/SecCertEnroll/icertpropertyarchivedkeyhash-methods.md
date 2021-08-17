@@ -1,19 +1,19 @@
 ---
-description: Die icertpropertyarchivedkeyhash-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die ICertPropertyArchivedKeyHash-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: CA03ABD3-6FBB-4A96-8CFE-4CB0BCB9E384
-title: Icertpropertyarchivedkeyhash-Methoden
+title: ICertPropertyArchivedKeyHash-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b09bde013547ddb9b3e4a0415ffe046803dc809b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0753fd46383380f52de05fad2f2665d2427b3b29dd48d78684188a45d07e6a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117778999"
 ---
-# <a name="icertpropertyarchivedkeyhash-methods"></a>Icertpropertyarchivedkeyhash-Methoden
+# <a name="icertpropertyarchivedkeyhash-methods"></a>ICertPropertyArchivedKeyHash-Methoden
 
-Die [**icertpropertyarchivedkeyhash**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyarchivedkeyhash) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ICertPropertyArchivedKeyHash-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyarchivedkeyhash) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

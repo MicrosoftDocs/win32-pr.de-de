@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht, wie eine Shell-Namespace Erweiterung implementiert wird, einschließlich Kontextmenü Verhalten und benutzerdefinierter Aufgaben im Browser.
+description: Veranschaulicht, wie eine Shell-Namespaceerweiterung implementiert wird, einschließlich Kontextmenüverhalten und benutzerdefinierter Aufgaben im Browser.
 title: Explorer-Datenanbieter (Beispiel)
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,29 +9,29 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 6bd15cbef62ff69efcccd28fcb625fc1432fdf89
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 223f498f42e33dda09206b1e21a44138fda54e261ec957efb62e55148a014d6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117677837"
 ---
 # <a name="explorer-data-provider-sample"></a>Explorer-Datenanbieter (Beispiel)
 
-Veranschaulicht, wie eine Shell-Namespace Erweiterung implementiert wird, einschließlich Kontextmenü Verhalten und benutzerdefinierter Aufgaben im Browser.
+Veranschaulicht, wie eine Shell-Namespaceerweiterung implementiert wird, einschließlich Kontextmenüverhalten und benutzerdefinierter Aufgaben im Browser.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Produkt                                | Minimale Produkt Version |
+| Product (Produkt)                                | Mindestproduktversion |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 6.1                     |
@@ -44,23 +44,23 @@ Dieses Thema enthält folgende Abschnitte:
 
 | Standort      | Pfad-URL                                                                                             |
 |---------------|------------------------------------------------------------------------------------------------------|
-| GitHub  | [Explorerdataprovider-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/shellextensibility/explorerdataprovider) |
+| GitHub  | [ExplorerDataProvider-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/shellextensibility/explorerdataprovider) |
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-So erstellen Sie das Beispiel von der Eingabeaufforderung aus:
+So erstellen Sie das Beispiel über die Eingabeaufforderung:
 
-1.  Öffnen Sie das Eingabe Aufforderungs Fenster, und navigieren Sie zum Projektverzeichnis **explorerdataprovider** .
+1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum **Projektverzeichnis ExplorerDataProvider.**
 2.  Geben Sie `msbuild ExplorerDataProvider.sln` ein.
 
-So erstellen Sie das Beispiel mithilfe Microsoft Visual Studio (bevorzugt):
+So erstellen Sie das Beispiel mit Microsoft Visual Studio (bevorzugt):
 
-1.  Öffnen Sie Windows-Explorer, und navigieren Sie zum Projektverzeichnis **explorerdataprovider** .
-2.  Doppelklicken Sie auf das Symbol für die Datei explorerdataprovider. sln, um das Projekt in Visual Studio zu öffnen.
-3.  Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus. Die dll wird im standardmäßigen Debug- \\ oder \\ releaseverzeichnis erstellt.
+1.  Öffnen Windows Explorer, und navigieren Sie zum **Projektverzeichnis ExplorerDataProvider.**
+2.  Doppelklicken Sie auf das Symbol für die Datei ExplorerDataProvider.sln, um das Projekt in Visual Studio.
+3.  Klicken Sie im Menü **Build** (Erstellen) auf **Build Solution** (Projektmappe erstellen). Die DLL wird im Standardverzeichnis \\ Debuggen oder \\ Release erstellt.
 
 > [!Note]  
-> In der Version dieses Beispiels, das in der Windows SDK enthalten ist, enthält die Konfiguration für den Build der 64-Bit-Version nicht die Datei "explorerdataprovider. def" in der **Modul Definitionsdatei** -Option des Linkers. Sie müssen diese Datei vor dem Aufbau in einer 64-Bit-Umgebung selbst angeben. Fügen Sie die Zeile `ModuleDefinitionFile="ExplorerDataProvider.def"` zum Abschnitt "VCLinkerTool" (beginnt in Zeile 329) der Datei "explorerdataprovider. vcproj" hinzu, wie hier gezeigt:
+> In der Version dieses Beispiels, die im Windows SDK enthalten ist, enthält die Konfiguration für den 64-Bit-Release-Build nicht die Datei ExplorerDataProvider.def in der Option **Moduldefinitionsdatei** des Linkers. Sie müssen diese Datei selbst angeben, bevor Sie in einer 64-Bit-Umgebung erstellen. Fügen Sie die Zeile dem `ModuleDefinitionFile="ExplorerDataProvider.def"` Abschnitt VCLinkerTool (beginnt bei Zeile 329) der Datei ExplorerDataProvider.vcproj hinzu, wie hier gezeigt:
 >
 > <span codelanguage=""></span>
 >
@@ -78,20 +78,20 @@ So erstellen Sie das Beispiel mithilfe Microsoft Visual Studio (bevorzugt):
 > </tbody>
 > </table> 
 >
-> Die Version dieses Beispiels, die aus der Code Gallery heruntergeladen werden kann, wurde für dieses Problem korrigiert, und es sind keine weiteren Aktionen erforderlich.
+> Die Version dieses Beispiels, die aus dem Codekatalog heruntergeladen werden kann, wurde für dieses Problem behoben, und es ist keine zusätzliche Aktion erforderlich.
 >
 >  
 >
 > ## <a name="running-the-sample"></a>Ausführen des Beispiels
 >
-> 1.  Navigieren Sie mithilfe der Eingabeaufforderung oder Windows-Explorer zu dem Verzeichnis, das die neue dll-und PropDesc-Datei enthält.
-> 2.  Geben Sie in der Befehlszeile ein `regsvr32.exe` .
+> 1.  Navigieren Sie über die Eingabeaufforderung oder den .dll Explorer zu dem Verzeichnis Windows, das die neue Datei .dll propdesc enthält.
+> 2.  Geben Sie in der Befehlszeile `regsvr32.exe` ein.
 >     > [!Note]  
->     > Wenn Sie diesen Befehl an einer Eingabeaufforderung mit erhöhten Rechten ausführen, wird die Datei ". PropDesc" auch automatisch von der Selbstregistrierung registriert. Wenn Sie an einer Eingabeaufforderung ohne erhöhte Rechte ausgeführt wird, funktioniert die Namespace Erweiterung, aber ohne benutzerdefinierte Eigenschafts Funktionalität.
+>     > Wenn Sie diesen Befehl über eine Eingabeaufforderung mit erhöhten Rechten ausführen, registriert die Selbstregistrierung automatisch auch die PROPDESC-Datei. Wenn sie über eine Eingabeaufforderung ohne erhöhte Rechte ausgeführt wird, funktioniert die Namespaceerweiterung, jedoch ohne benutzerdefinierte Eigenschaftenfunktionalität.
 >
 >      
 >
-> 3.  Öffnen Sie den Ordner **Arbeitsplatz** , und Durchsuchen Sie die neue Namespace Erweiterung vorhanden.
+> 3.  Öffnen Sie den **Arbeitsplatz,** und durchsuchen Sie die neue Namespaceerweiterung, die dort vorhanden ist.
 >
 >  
 >

@@ -1,9 +1,9 @@
 ---
-title: LVM_SORTITEMSEX Meldung (kommstrg. h)
-description: Verwendet eine Anwendungs definierte Vergleichsfunktion, um die Elemente eines Listenansicht-Steuer Elements zu sortieren. Der Index der einzelnen Elemente ändert sich, um die neue Sequenz widerzuspiegeln. Sie können diese Nachricht explizit oder mithilfe des ListView- \_ Makros "mentemsex" senden.
+title: LVM_SORTITEMSEX (Commctrl.h)
+description: Verwendet eine anwendungsdefinierte Vergleichsfunktion, um die Elemente eines Listenansicht-Steuerelements zu sortieren. Der Index der einzelnen Elemente ändert sich entsprechend der neuen Sequenz. Sie können diese Nachricht explizit oder mithilfe des \_ SortItemsEx-Makros von ListView senden.
 ms.assetid: eab2f6f5-68fd-4cb6-acf4-cb267ee40fdc
 keywords:
-- Windows-Steuerelemente für LVM_SORTITEMSEX Meldung
+- LVM_SORTITEMSEX von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 99e524b00cb5ff1260eb68e7d86e185e5ae60c75
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ef492ff11980e764b33942f54c0732a64e799a94dde0e3d872ef0cb7bfb66c0a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040175"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118170366"
 ---
-# <a name="lvm_sortitemsex-message"></a>LVM- \_ Nachricht
+# <a name="lvm_sortitemsex-message"></a>LVM \_ SORTITEMSEX-Nachricht
 
-Verwendet eine Anwendungs definierte Vergleichsfunktion, um die Elemente eines Listenansicht-Steuer Elements zu sortieren. Der Index der einzelnen Elemente ändert sich, um die neue Sequenz widerzuspiegeln. Sie können diese Nachricht explizit oder mithilfe des ListView-Makros " [**\_ mentemsex**](/windows/desktop/api/Commctrl/nf-commctrl-listview_sortitemsex) " senden.
+Verwendet eine anwendungsdefinierte Vergleichsfunktion, um die Elemente eines Listenansicht-Steuerelements zu sortieren. Der Index der einzelnen Elemente ändert sich entsprechend der neuen Sequenz. Sie können diese Nachricht explizit oder mithilfe des [**\_ SortItemsEx-Makros von ListView**](/windows/desktop/api/Commctrl/nf-commctrl-listview_sortitemsex) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,35 +32,35 @@ Verwendet eine Anwendungs definierte Vergleichsfunktion, um die Elemente eines L
 *wParam* 
 </dt> <dd>
 
-Der von der Anwendung definierte Wert, der an die Vergleichsfunktion übermittelt wird.
+Anwendungsdefinierter Wert, der an die Vergleichsfunktion übergeben wird.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine Anwendungs definierte Vergleichsfunktion. Sie wird während des Sortier Vorgangs jedes Mal aufgerufen, wenn die relative Reihenfolge zweier Listenelemente verglichen werden muss.
+Zeiger auf eine anwendungsdefinierte Vergleichsfunktion. Sie wird während des Sortiervorgang jedes Mal aufgerufen, wenn die relative Reihenfolge von zwei Listenelementen verglichen werden muss.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Vergleichsfunktion weist die folgende Form auf:
+Die Vergleichsfunktion hat die folgende Form:
 
 ``` syntax
 int CALLBACK CompareFunc(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort);  
 ```
 
-Diese Meldung ähnelt LVM- [**Elementen \_**](lvm-sortitems.md), mit Ausnahme der Art von Informationen, die an die Vergleichsfunktion übermittelt werden. Mit **LVM \_**-Element-Sexualität ist *lParam1* der aktuelle Index des ersten Elements, und *lParam2* ist der aktuelle Index des zweiten Elements. Wenn erforderlich, können Sie eine [**LVM- \_ GetItemText**](lvm-getitemtext.md) -Nachricht senden, um weitere Informationen zu einem Element abzurufen.
+Diese Meldung ähnelt [**LVM \_ SORTITEMS,**](lvm-sortitems.md)mit Ausnahme des Informationstyps, der an die Vergleichsfunktion übergeben wird. Bei **LVM \_ SORTITEMSEX** ist *lParam1* der aktuelle Index des ersten Elements, und *lParam2* ist der aktuelle Index des zweiten Elements. Sie können eine [**LVM \_ GETITEMTEXT-Nachricht**](lvm-getitemtext.md) senden, um bei Bedarf weitere Informationen zu einem Element abzurufen.
 
-Die Vergleichsfunktion muss einen negativen Wert zurückgeben, wenn das erste Element dem zweiten vorangestellt wird, ein positiver Wert, wenn das erste Element der zweiten folgt, oder 0 (null), wenn die beiden Elemente äquivalent sind.
+Die Vergleichsfunktion muss einen negativen Wert zurückgeben, wenn das erste Element vor dem zweiten Element stehen soll, einen positiven Wert, wenn das erste Element dem zweiten element folgen soll, oder 0 (null), wenn die beiden Elemente gleichwertig sind.
 
 > [!Note]  
-> Während des Sortier Vorgangs sind die Inhalte der Listenansicht instabil. Wenn die Rückruffunktion Nachrichten von [**LVM \_ GetItem**](lvm-getitem.md) ([**ListView \_ GetItem**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getitem)) an das Listenansicht-Steuerelement sendet, sind die Ergebnisse unvorhersehbar.
+> Während des Sortiervorgangs sind die Inhalte der Listenansicht instabil. Wenn die Rückruffunktion Nachrichten an das Listenansicht-Steuerelement sendet, abgesehen von [**LVM \_ GETITEM**](lvm-getitem.md) ([**ListView \_ GetItem),**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getitem)sind die Ergebnisse unvorhersehbar.
 
  
 
@@ -70,9 +70,9 @@ Die Vergleichsfunktion muss einen negativen Wert zurückgeben, wenn das erste El
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

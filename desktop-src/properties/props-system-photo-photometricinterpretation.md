@@ -73,7 +73,7 @@ propertyDescription
 
 PKEY-Werte werden in Propkey.h definiert.
 
-Der Standardwert des -Attributs des typeInfo-Elements wurde ab Windows `isInnate` Vista mit Service Pack 1 (SP1) von false in TRUE geändert.   
+Der Standardwert des -Attributs des typeInfo-Elements wurde ab Windows `isInnate` Vista mit Service Pack 1 (SP1) von **false** in TRUE geändert.  
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

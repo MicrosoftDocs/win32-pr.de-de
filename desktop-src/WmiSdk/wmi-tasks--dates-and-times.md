@@ -1,8 +1,8 @@
 ---
-description: Es gibt mehrere WMI-Klassen und ein Skript Objekt, um das CIM-DateTime-Format zu analysieren oder zu konvertieren. Weitere Beispiele finden Sie im technet scriptcenter unter https://www.microsoft.com/technet .
+description: Es gibt mehrere WMI-Klassen und ein Skriptobjekt zum Analysieren oder Konvertieren des CIM-DateTime-Formats. Weitere Beispiele finden Sie im TechNet ScriptCenter unter https://www.microsoft.com/technet .
 ms.assetid: dd01a732-5c88-4c24-a551-4d5452e712cc
 ms.tgt_platform: multiple
-title: 'WMI-Tasks: Datumsangaben und Uhrzeiten'
+title: 'WMI-Aufgaben: Datums- und Zeitangaben'
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,34 +10,34 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 8864deb4f76b8ce6b76017c0348cdb86bf38b697
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 46e8c850ffd04fe4ac5bc9af1b130632338b61ec79c92d154f5769ffd54cb2fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350125"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117739446"
 ---
-# <a name="wmi-tasks-dates-and-times"></a>WMI-Tasks: Datumsangaben und Uhrzeiten
+# <a name="wmi-tasks-dates-and-times"></a>WMI-Aufgaben: Datums- und Zeitangaben
 
-Es gibt mehrere WMI-Klassen und ein Skript Objekt, um das CIM- [DateTime](date-and-time-format.md) -Format zu analysieren oder zu konvertieren. Weitere Beispiele finden Sie im technet scriptcenter unter [https://www.microsoft.com/technet](https://technet.microsoft.com/default.aspx) .
+Es gibt mehrere WMI-Klassen und ein Skriptobjekt zum Analysieren oder Konvertieren des [CIM-DateTime-Formats.](date-and-time-format.md) Weitere Beispiele finden Sie im TechNet ScriptCenter unter [https://www.microsoft.com/technet](https://technet.microsoft.com/default.aspx) .
 
-In den in diesem Thema gezeigten Skript Beispielen werden nur Daten vom lokalen Computer abgerufen. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remote Computern finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md).
+Die in diesem Thema gezeigten Skriptbeispiele beziehen nur Daten vom lokalen Computer. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remotecomputern finden Sie unter Herstellen einer Verbindung [mit WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md)
 
 ## <a name="to-run-a-script"></a>So führen Sie ein Skript aus
 
-Im folgenden Verfahren wird die Vorgehensweise zum Ausführen eines Skripts beschrieben.
+Im folgenden Verfahren wird das Ausführen eines Skripts beschrieben.
 
-1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung. vb, z. b. *filename.vbs*. Stellen Sie sicher, dass der Text-Editor der Datei keine Erweiterung ". txt" hinzufügt.
-2.  Öffnen Sie ein Eingabe Aufforderungs Fenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
-3.  Geben Sie **cscript-filename.vbs** an der Eingabeaufforderung ein.
-4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie von einer Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokolle, z. b. das Sicherheits Ereignisprotokoll, werden möglicherweise durch die Benutzer Zugriffs Steuerung (User Access Control, UAC) geschützt.
+1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung .vbs, z. *B.filename.vbs*. Stellen Sie sicher, dass Ihr Text-Editor der .txt datei keine Erweiterung hinzufüge.
+2.  Öffnen Sie ein Eingabeaufforderungsfenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
+3.  Geben **Sie cscript filename.vbs** eingabeaufforderung ein.
+4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie über eine Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokollen, z. B. das Sicherheitsereignisprotokoll, können durch Benutzerzugriffssteuerungen (User Access Controls, UAC) geschützt werden.
 
 > [!Note]  
-> Cscript zeigt standardmäßig die Ausgabe eines Skripts im Eingabe Aufforderungs Fenster an. Da WMI-Skripts große Mengen an Ausgaben verursachen können, empfiehlt es sich, die Ausgabe in eine Datei umzuleiten. Geben Sie an der Eingabeaufforderung **cscript filename.vbs > outfile.txt** ein, um die Ausgabe des *filename.vbs* Skripts in *outfile.txt* umzuleiten.
+> Standardmäßig zeigt cscript die Ausgabe eines Skripts im Eingabeaufforderungsfenster an. Da WMI-Skripts große Mengen an Ausgabe erzeugen können, sollten Sie die Ausgabe an eine Datei umleiten. Geben **Sie cscript filename.vbs > outfile.txt** eingabeaufforderung ein, um  die Ausgabe des skriptsfilename.vbsan *outfile.txt.*
 
  
 
-In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen verschiedener Datentypen auf dem lokalen Computer verwendet werden können.
+In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen verschiedener Datentypen vom lokalen Computer verwendet werden können.
 
 
 
@@ -49,13 +49,13 @@ In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen vers
 <thead>
 <tr class="header">
 <th>Vorgehensweisen</th>
-<th>WMI-Klassen oder-Methoden</th>
+<th>WMI-Klassen oder -Methoden</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>... Konvertieren von WMI-Datumsangaben in Standard Datums-und Uhrzeitwerte<br/></td>
-<td>Konvertieren Sie diese in reguläre Datums-und <a href="swbemdatetime.md"><strong>Uhrzeitangaben</strong></a> .<br/> <span data-codelanguage="VisualBasic"></span>
+<td>... WMI-Datumsangaben in Standarddaten und -zeiten konvertieren?<br/></td>
+<td>Verwenden Sie <a href="swbemdatetime.md"><strong>das SWbemDateTime-Objekt,</strong></a> um diese in reguläre Datums- und Zeitangaben zu konvertieren.<br/> <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -79,7 +79,7 @@ Next</code></pre></td>
 </tbody>
 </table>
 
-<p>Oder lassen Sie den Code die Aufgabe manuell ausführen.</p>
+<p>Oder lassen Sie Ihren Code die Aufgabe manuell ausführen.</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -106,7 +106,7 @@ End Function </code></pre></td>
 </tr>
 <tr class="even">
 <td><p>... bestimmen Sie die Zeit, die derzeit auf einem Computer konfiguriert ist?</p></td>
-<td><p>Verwenden Sie die <a href="/previous-versions/windows/desktop/wmitimepprov/win32-localtime"><strong>Win32_LocalTime</strong></a> -Klasse.</p>
+<td><p>Verwenden Sie <a href="/previous-versions/windows/desktop/wmitimepprov/win32-localtime"><strong>die Win32_LocalTime-Klasse.</strong></a></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -176,8 +176,8 @@ Foreach ($time in $times) {
 </div></td>
 </tr>
 <tr class="odd">
-<td><p>... bestimmen Sie den Namen der Zeitzone, in der ein Computer ausgeführt wird?</p></td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-timezone"><strong>Win32_TimeZone</strong></a> -Klasse, und überprüfen Sie den Wert der <strong>Description</strong> -Eigenschaft.</p>
+<td><p>... den Namen der Zeitzone bestimmen, in der ein Computer ausgeführt wird?</p></td>
+<td><p>Verwenden <a href="/windows/desktop/CIMWin32Prov/win32-timezone"><strong></strong></a> Sie die Win32_TimeZone-Klasse, und überprüfen Sie den Wert der <strong>Description-Eigenschaft.</strong></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -234,12 +234,12 @@ if ($computer -eq &quot;.&quot;) {$computer = Hostname}
 </div></td>
 </tr>
 <tr class="even">
-<td><p>... Stellen Sie sicher, dass &quot; 10/02/2000 &quot; als Oct. 2, 2000, nicht &quot; 10 Feb, 2000, interpretiert wird &quot; ?</p></td>
-<td><p>Verwalten Sie Datumsangaben im <a href="gloss-c.md"><em>CIM</em></a> - <a href="datetime.md">DateTime</a> -Format, und verwenden Sie die Methode " <a href="swbemdatetime.md"><strong>slibemdatetime</strong></a> " (z. b. <a href="swbemdatetime-getvardate.md"><strong>getVarDate</strong></a> ), um Sie in und aus <a href="/windows/desktop/api/minwinbase/ns-minwinbase-filetime"><strong>FILETIME</strong></a> -oder <strong>VT_Date</strong> -Formaten Da das DateTime-Format Gebiets Schema unabhängig ist, können Sie ein Skript schreiben, das auf einem beliebigen Computer ausgeführt wird. Konvertieren Sie diese in reguläre Datums-und <strong>Uhrzeitangaben</strong> . Weitere Informationen zum Umrechnen von Datums-und Uhrzeitangaben finden Sie unter <a href="date-and-time-format.md">Datum und Uhrzeit</a> .</p></td>
+<td><p>... stellen Sie sicher, dass &quot; der 02.10.2000 als 2. Oktober 2000 und nicht als &quot; &quot; 10. Februar 2000 &quot; interpretiert wird.</p></td>
+<td><p>Verwalten Sie Datumsangaben im <a href="gloss-c.md"><em>CIM</em></a> <a href="datetime.md">DATETIME-Format,</a> und verwenden Sie <a href="swbemdatetime.md"><strong>SWbemDateTime-Methoden,</strong></a> z. B. <a href="swbemdatetime-getvardate.md"><strong>GetVarDate,</strong></a> um sie in und aus <a href="/windows/desktop/api/minwinbase/ns-minwinbase-filetime"><strong>filetime-</strong></a> oder VT_Date <strong>konvertieren.</strong> Da das DATETIME-Format vom Lokalen unabhängig ist, können Sie ein Skript schreiben, das auf jedem Computer ausgeführt wird. Verwenden Sie <strong>das SWbemDateTime-Objekt,</strong> um diese in reguläre Datums- und Zeitangaben zu konvertieren. Weitere <a href="date-and-time-format.md">Informationen zum Konvertieren von Datums-</a> und Uhrzeitangaben finden Sie unter Datums- und Uhrzeitformat.</p></td>
 </tr>
 <tr class="odd">
-<td><p>... Konvertieren eines WMI-DateTime-Werts in einen .NET DateTime-Wert</p></td>
-<td><p>Analysieren Sie die Zeichenfolge manuell, und fügen Sie die abgerufenen Werte in ein <a href="/dotnet/api/system.datetime">DateTime</a> -Objekt ein.</p>
+<td><p>... wird ein WMI-DateTime-Wert in einen .NET DateTime-Wert konvertiert?</p></td>
+<td><p>Analysieren Sie die Zeichenfolge manuell, und legen Sie dann die abgerufenen Werte in ein <a href="/dotnet/api/system.datetime">DateTime-Objekt</a> ab.</p>
 <div class="code">
 <span data-codelanguage="PowerShell"></span>
 <table>
@@ -296,16 +296,16 @@ if ($computer -eq &quot;.&quot;) {$computer = Hostname}
 
 <dl> <dt>
 
-[WMI-Tasks für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
+[WMI-Aufgaben für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
 </dt> <dt>
 
-[WMI C++ Anwendungsbeispiele](wmi-c---application-examples.md)
+[Beispiele für WMI-C++-Anwendungen](wmi-c---application-examples.md)
 </dt> <dt>
 
-[Datums-und Uhrzeit Format](date-and-time-format.md)
+[Datums- und Uhrzeitformat](date-and-time-format.md)
 </dt> <dt>
 
-[Technet scriptcenter](https://www.microsoft.com/technet/scriptcenter)
+[TechNet ScriptCenter](https://www.microsoft.com/technet/scriptcenter)
 </dt> </dl>
 
  

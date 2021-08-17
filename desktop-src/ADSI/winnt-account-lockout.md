@@ -1,29 +1,29 @@
 ---
 title: Kontosperrung (WinNT-Anbieter)
-description: Wenn die Anzahl der fehlgeschlagenen Anmeldeversuche überschritten wird, wird das Benutzerkonto für die im LockoutDuration-Attribut angegebene Anzahl von Minuten gesperrt.
+description: Wenn die Anzahl fehlgeschlagener Anmeldeversuche überschritten wird, wird das Benutzerkonto für die vom lockoutDuration-Attribut angegebene Anzahl von Minuten gesperrt.
 ms.assetid: d7c4134a-0712-4809-83ec-cc09e87afae9
 ms.tgt_platform: multiple
 keywords:
-- Konto Sperre ADSI, WinNT-Anbieter
-- WinNT-Anbieter ADSI, Beispiele für die Benutzerverwaltung, Kontosperrung
+- Kontosperrung ADSI, WinNT-Anbieter
+- WinNT-Anbieter ADSI , Benutzerverwaltungsbeispiele, Kontosperrung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ffeacb18b42beeb20b4af8bf571e611a85ab118
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 86e28c2a4bf58f5559070af78ca55235e8b10c16b2b856a63a256767d4d67a53
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106337873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117838360"
 ---
 # <a name="account-lockout-winnt-provider"></a>Kontosperrung (WinNT-Anbieter)
 
-Wenn die Anzahl der fehlgeschlagenen Anmeldeversuche überschritten wird, wird das Benutzerkonto für die im [**LockoutDuration**](/windows/desktop/ADSchema/a-lockoutduration) -Attribut angegebene Anzahl von Minuten gesperrt. Die Eigenschaft " [**IADsUser. isaccountlocked**](iadsuser-property-methods.md) " scheint die Eigenschaft zu sein, die zum Lesen und Ändern des Sperr Zustands eines Benutzerkontos verwendet werden soll, aber der WinNT ADSI-Anbieter weist Einschränkungen auf, die die Verwendung der Eigenschaft " **isaccountlocked** " einschränken.
+Wenn die Anzahl fehlgeschlagener Anmeldeversuche überschritten wird, wird das Benutzerkonto für die vom [**lockoutDuration-Attribut**](/windows/desktop/ADSchema/a-lockoutduration) angegebene Anzahl von Minuten gesperrt. Die [**IADsUser.IsAccountLocked-Eigenschaft**](iadsuser-property-methods.md) scheint die Eigenschaft zu sein, die zum Lesen und Ändern des Sperrstatus eines Benutzerkontos verwendet werden soll. Der WinNT ADSI-Anbieter verfügt jedoch über Einschränkungen, die die Verwendung der **IsAccountLocked-Eigenschaft** einschränken.
 
-## <a name="resetting-the-account-lockout-status"></a>Zurücksetzen des Konto Sperr Status
+## <a name="resetting-the-account-lockout-status"></a>Zurücksetzen des Kontosperrungsstatus
 
-Bei Verwendung des WinNT-Anbieters kann die [**isaccountlocked**](iadsuser-property-methods.md) -Eigenschaft nur auf **false** festgelegt werden, wodurch das Konto entsperrt wird. Der Versuch, die **isaccountlocked** -Eigenschaft auf **true** festzulegen, schlägt fehl. Nur das System kann ein Konto sperren.
+Bei Verwendung des WinNT-Anbieters kann die [**IsAccountLocked-Eigenschaft**](iadsuser-property-methods.md) nur auf **FALSE** festgelegt werden, wodurch das Konto entsperrt wird. Beim Festlegen der **IsAccountLocked-Eigenschaft** auf **TRUE** ist ein Fehler zu sehen. Nur das System kann ein Konto sperren.
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Visual Basic mit ADSI verwendet wird, um ein Benutzerkonto zu entsperren.
+Im folgenden Codebeispiel wird veranschaulicht, wie sie Visual Basic ADSI verwenden, um ein Benutzerkonto zu entsperren.
 
 
 ```VB
@@ -43,7 +43,7 @@ End Sub
 
 
 
-Im folgenden Codebeispiel wird veranschaulicht, wie C++ mit ADSI verwendet wird, um ein Benutzerkonto zu entsperren.
+Im folgenden Codebeispiel wird veranschaulicht, wie C++ mit ADSI zum Entsperren eines Benutzerkontos verwendet wird.
 
 
 ```C++
@@ -85,11 +85,11 @@ HRESULT UnlockAccount(LPCWSTR pwszUserDN)
 
 
 
-## <a name="reading-the-account-lockout-status"></a>Lesen des Konto Sperr Status
+## <a name="reading-the-account-lockout-status"></a>Lesen des Kontosperrungsstatus
 
-Mit dem WinNT-Anbieter kann mithilfe der [**isaccountlocked**](iadsuser-property-methods.md) -Eigenschaft bestimmt werden, ob ein Konto gesperrt ist. Wenn ein Konto gesperrt ist, enthält die Eigenschaft " **isaccountlocked** " den Wert " **true**". Wenn ein Konto nicht gesperrt ist, enthält die Eigenschaft **isaccountlocked** den Wert **false**.
+Mit dem WinNT-Anbieter kann die [**IsAccountLocked-Eigenschaft**](iadsuser-property-methods.md) verwendet werden, um zu bestimmen, ob ein Konto gesperrt ist. Wenn ein Konto gesperrt ist, enthält die **IsAccountLocked-Eigenschaft** **TRUE**. Wenn ein Konto nicht gesperrt ist, enthält die **IsAccountLocked-Eigenschaft** **FALSE**.
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Visual Basic mit ADSI verwendet wird, um zu bestimmen, ob ein Konto gesperrt ist.
+Im folgenden Codebeispiel wird veranschaulicht, wie sie Visual Basic ADSI verwenden, um zu bestimmen, ob ein Konto gesperrt ist.
 
 
 ```VB
@@ -153,6 +153,6 @@ HRESULT IsAccountLocked(LPCWSTR pwszUserDN, BOOL *pfLocked)
 
 
 
- 
+ 
 
- 
+ 

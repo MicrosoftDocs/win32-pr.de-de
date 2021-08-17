@@ -1,7 +1,7 @@
 ---
-description: Gibt an, dass die DVD-Wiedergabe beendet wurde. Dieses Ereignis wird gesendet, wenn ein Titel oder ein Kapitel abgeschlossen ist und der DVD-Navigator keine andere Verzweigungs Anweisung für die nachfolgende Wiedergabe findet. Das Ereignis wird nicht gesendet, wenn die Anwendung die Wiedergabe beendet.
+description: Gibt an, dass die DVD-Wiedergabe beendet wurde. Dieses Ereignis wird gesendet, wenn ein Titel oder Kapitel abgeschlossen ist und der DVD-Navigator keine andere Verzweigungsanweisung für die nachfolgende Wiedergabe findet. Das Ereignis wird nicht gesendet, wenn die Anwendung die Wiedergabe beendet.
 ms.assetid: c8617307-d70e-48af-8e85-69105595aa10
-title: EC_DVD_PLAYBACK_STOPPED (dvdevcode. h)
+title: EC_DVD_PLAYBACK_STOPPED (Dvdevcode.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - dvdevcode.h
-ms.openlocfilehash: 2304d83aea532b764777b683c57c3bdd4d5df79a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7a5f0b1b66e9d78309e33981910da467757a2b606b967cee5b78e86c4cc0049b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117820456"
 ---
-# <a name="ec_dvd_playback_stopped"></a>EC- \_ DVD- \_ Wiedergabe \_ beendet
+# <a name="ec_dvd_playback_stopped"></a>EC \_ DVD PLAYBACK STOPPED (EC-DVD-WIEDERGABE \_ \_ BEENDET)
 
-Gibt an, dass die DVD-Wiedergabe beendet wurde. Dieses Ereignis wird gesendet, wenn ein Titel oder ein Kapitel abgeschlossen ist und der [DVD-Navigator](dvd-navigator-filter.md) keine andere Verzweigungs Anweisung für die nachfolgende Wiedergabe findet. Das Ereignis wird nicht gesendet, wenn die Anwendung die Wiedergabe beendet.
+Gibt an, dass die DVD-Wiedergabe beendet wurde. Dieses Ereignis wird gesendet, wenn ein Titel oder Kapitel abgeschlossen ist und [der DVD-Navigator](dvd-navigator-filter.md) keine andere Verzweigungsanweisung für die nachfolgende Wiedergabe findet. Das Ereignis wird nicht gesendet, wenn die Anwendung die Wiedergabe beendet.
 
 ## <a name="parameters"></a>Parameter
 
@@ -31,7 +31,7 @@ Gibt an, dass die DVD-Wiedergabe beendet wurde. Dieses Ereignis wird gesendet, w
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-Ein Member der [**DVD- \_ PB \_**](/previous-versions/windows/desktop/api/dvdevcod/ne-dvdevcod-dvd_pb_stopped) hat die Enumeration beendet und gibt an, warum die Wiedergabe beendet wurde.
+Ein Member der [**PB \_ \_ STOPPED-Enumeration der DVD,**](/previous-versions/windows/desktop/api/dvdevcod/ne-dvdevcod-dvd_pb_stopped) der angibt, warum die Wiedergabe beendet wurde.
 
 </dd> <dt>
 
@@ -42,7 +42,7 @@ Keinen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Ereignis wird in allen Domänen ausgelöst.
 
@@ -52,21 +52,21 @@ Dieses Ereignis wird in allen Domänen ausgelöst.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdevcode. h (Include DShow. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdevcode.h (include Dshow.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [DVD-Anwendungen](dvd-applications.md)
 </dt> <dt>
 
-[DVD-Ereignis Benachrichtigungs Codes](dvd-notification-codes.md)
+[DVD-Ereignisbenachrichtigungscodes](dvd-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

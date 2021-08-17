@@ -1,6 +1,6 @@
 ---
 title: Username-Element (TLS)
-description: Erfahren Sie mehr über das UserName-Element. Dieses Element erfasst den Benutzernamen, der in der EAP-Identity-Antwort gesendet werden soll.
+description: Erfahren Sie mehr über das Username-Element. Dieses Element erfasst den Benutzernamen, der in der antwort EAP-Identity gesendet werden soll.
 ms.assetid: dda4a7dd-36ba-418d-9b26-2818ef20854d
 keywords:
 - Username-Element EAPHost
@@ -14,18 +14,18 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2975b425bc760979b33d83182d94469532944e46
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 6748ac8c352540d2288cf3bf3c790004d832ba47961fbc7b9e8211fa712ccb6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106340736"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117720119"
 ---
 # <a name="username-element-tls"></a>Username-Element (TLS)
 
-Das **username** -Element erfasst den Benutzernamen, der in der EAP-Identity-Antwort gesendet werden soll.
+Das **Username-Element** erfasst den Benutzernamen, der in der antwort EAP-Identity gesendet werden soll.
 
-Wenn das **username** -Element nicht vorhanden ist, verwendet EAP-TLS den Namen in dem Zertifikat, auf das im [**userCert**](eaptlsuserpropertiesv1schema-usercert-eaptype-element.md) -Element verwiesen wird.
+Wenn das **Username-Element** nicht vorhanden ist, verwendet EAP-TLS den Namen im Zertifikat, auf das im [**UserCert-Element**](eaptlsuserpropertiesv1schema-usercert-eaptype-element.md) verwiesen wird.
 
 ``` syntax
 <xs:element name="Username"
@@ -37,18 +37,18 @@ Wenn das **username** -Element nicht vorhanden ist, verwendet EAP-TLS den Namen 
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversionen |
+| Role | Unterstützte Mindestversionen des Betriebssystems |
 |------|-------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaptlsuserpropertiesv1-Schema](eaptlsuserpropertiesv1schema-schema.md)

@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetopentable-Methode.
-title: API. jetopentable-Methode
+description: Weitere Informationen finden Sie unter Api.JetOpenTable-Methode.
+title: Api.JetOpenTable-Methode
 TOCTitle: 'JetOpenTable method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetOpenTable(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_DBID,System.String,System.Byte[],System.Int32,Microsoft.Isam.Esent.Interop.OpenTableGrbit,Microsoft.Isam.Esent.Interop.JET_TABLEID@)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetopentable(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5764138d4ea387b68c94805c6966f7ce0e817c37
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4969b21ed195f67f03dbdd3477f51a5abdf15e29fbf5928575f1b1a196b9e4c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960727"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117718708"
 ---
-# <a name="apijetopentable-method"></a>API. jetopentable-Methode
+# <a name="apijetopentable-method"></a>Api.JetOpenTable-Methode
 
 Öffnet einen Cursor für eine zuvor erstellte Tabelle.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -80,64 +80,64 @@ public static JET_wrn JetOpenTable(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
-    Die zu verwendende Daten banksitzung.
+    Die zu verwendende Datenbanksitzung.
 
 <!-- end list -->
 
   - dbid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_DBID](./jet-dbid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_DBID](./jet-dbid-structure.md)  
     
     Die Datenbank, in der die Tabelle geöffnet werden soll.
 
 <!-- end list -->
 
   - Tabellenname  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
-    Der Name der zu öffnenden Tabelle.
+    Der Name der zu öffnende Tabelle.
 
 <!-- end list -->
 
   - parameters  
-    Sorte \[\]  
+    Typ: \[\]  
     
-    Der-Parameter wird nicht verwendet.
+    Der -Parameter wird nicht verwendet.
 
 <!-- end list -->
 
-  - parameterssize  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - parametersSize  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Der-Parameter wird nicht verwendet.
+    Der -Parameter wird nicht verwendet.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. opentablegrbit](./opentablegrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.OpenTableGrbit](./opentablegrbit-enumeration.md)  
     
-    Tabellen Öffnungs Optionen.
+    Optionen zum Öffnen von Tabellen.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
     Gibt die geöffnete Tabelle zurück.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_wrn](./jet-wrn-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_wrn](./jet-wrn-enumeration.md)  
 Eine ESENT-Warnung.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

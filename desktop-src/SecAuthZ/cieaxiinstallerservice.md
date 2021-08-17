@@ -1,7 +1,7 @@
 ---
-description: Implementiert die Schnittstellen iaxiservice und ieaxiservicecallback.
+description: Implementiert die Schnittstellen IAxiService und IeAxiServiceCallback.
 ms.assetid: 39f2ee3a-d4fd-4091-acd6-3d6b715bea75
-title: Cieaxiinstallerservice-Objekt
+title: CIeAxiInstallerService-Objekt
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: b5ae7ec2a2c904a523f3388fa08a3bf2e44fec9d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d8e96600762db414fa93316098d5ba87dabfbc3138f516d3d69f1740d0d33d2b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117783086"
 ---
-# <a name="cieaxiinstallerservice-object"></a>Cieaxiinstallerservice-Objekt
+# <a name="cieaxiinstallerservice-object"></a>CIeAxiInstallerService-Objekt
 
-Das **cieaxiinstallerservice** -Objekt implementiert die [**iaxiservice**](ieaxiservice.md) -und [**ieaxiservicecallback**](ieaxiservicecallback.md) -Schnittstellen.
+Das **CIeAxiInstallerService-Objekt** implementiert die [**Schnittstellen IAxiService**](ieaxiservice.md) und [**IeAxiServiceCallback.**](ieaxiservicecallback.md)
 
-Dieses Objekt ist nicht in einem öffentlichen Header deklariert. Anwendungen müssen es selbst definieren. Das folgende IDL-Fragment (Interface Definition Language) beschreibt dieses Objekt, einschließlich seiner CLSID.
+Dieses Objekt wird nicht in einem öffentlichen Header deklariert. Anwendungen müssen sie selbst definieren. Das folgende IDL-Fragment (Interface Definition Language) beschreibt dieses Objekt, einschließlich seiner CLSID.
 
 ``` syntax
 [
@@ -43,19 +43,19 @@ Dieses Objekt ist nicht in einem öffentlichen Header deklariert. Anwendungen m�
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista Business, Windows Vista Enterprise, Windows Vista Ultimate \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista Business, Windows Vista Enterprise, nur Windows Vista \[ Ultimate-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iaxiservice**](ieaxiservice.md)
+[**IAxiService**](ieaxiservice.md)
 </dt> <dt>
 
-[**Ieaxiservicecallback**](ieaxiservicecallback.md)
+[**IeAxiServiceCallback**](ieaxiservicecallback.md)
 </dt> </dl>
 
  

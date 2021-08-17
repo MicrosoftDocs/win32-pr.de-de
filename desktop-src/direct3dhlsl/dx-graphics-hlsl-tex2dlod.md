@@ -1,6 +1,6 @@
 ---
 title: tex2Dlod
-description: Stichproben eine 2D-Textur mit Mipmaps. Die Mipmap-LOD wird in t.w. angegeben.
+description: Stichproben einer 2D-Textur mit Mipmaps. Die Mipmap-LOD wird in t.w angegeben.
 ms.assetid: 689eff39-f6ac-4c25-8b92-ca68707ae8ad
 keywords:
 - tex2Dlod HLSL
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f63a922fe86dc10d984369a1a872f84089b4db34
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f9581418eb2a3d8736fcd0e125eaafec11494e6b6d5471cef33f9592475d5ec0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104976648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117725678"
 ---
 # <a name="tex2dlod"></a>tex2Dlod
 
-Stichproben eine 2D-Textur mit Mipmaps. Die Mipmap-LOD wird in t.w. angegeben.
+Stichproben einer 2D-Textur mit Mipmaps. Die Mipmap-LOD wird in t.w angegeben.
 
 
 
-| Ret tex2Dlod (s, t) |
+| ret tex2Dlod(s, t) |
 |--------------------|
 
 
@@ -37,10 +37,10 @@ Stichproben eine 2D-Textur mit Mipmaps. Die Mipmap-LOD wird in t.w. angegeben.
 
 
 
-| Element                                                   | BESCHREIBUNG                               |
+| Element                                                   | Beschreibung                               |
 |--------------------------------------------------------|-------------------------------------------|
-| <span id="s"></span><span id="S"></span>*Hymnen*<br/> | \[im \] samplerzustand.<br/>      |
-| <span id="t"></span><span id="T"></span>*Bund*<br/> | \[in \] der Textur Koordinate.<br/> |
+| <span id="s"></span><span id="S"></span>*s*<br/> | \[im \] Zustand "Sampler".<br/>      |
+| <span id="t"></span><span id="T"></span>*T*<br/> | \[in \] Die Texturkoordinate.<br/> |
 
 
 
@@ -48,7 +48,7 @@ Stichproben eine 2D-Textur mit Mipmaps. Die Mipmap-LOD wird in t.w. angegeben.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert der Textur Daten.
+Der Wert der Texturdaten.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -56,35 +56,35 @@ Der Wert der Textur Daten.
 
 | Name | Ein/Aus | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                       | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size |
 |------|--------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|------|
-| s    | in     | [**Objekt**](dx-graphics-hlsl-intrinsic-functions.md) | [sampler2D](dx-graphics-hlsl-sampler.md)                      | 1    |
-| t    | in     | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
-| TZI  | out    | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
+| s    | in     | [**Objekt (object)**](dx-graphics-hlsl-intrinsic-functions.md) | [sampler2D](dx-graphics-hlsl-sampler.md)                      | 1    |
+| t    | in     | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
+| Ret  | out    | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt |
 |------------------------------------------------------------------------------------|-----------|
-| [Shader Model 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) und höhere Shader-Modelle | ja       |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md)                          | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) und höhere Shadermodelle | Ja       |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md)                          | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Nein        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ab Direct3D 10 können Sie die neue HLSL-Syntax verwenden, um auf Texturen und andere Ressourcen zuzugreifen. Sie können systemeigene Textur Suchfunktionen, wie z. b. **tex2Dlod**, durch einen stärker objektorientierten Stil ersetzen. In diesem objektorientierten Stil sind Texturen von Samplern entkoppelt und verfügen über Methoden zum Laden und Sampling.
+Ab Direct3D 10 können Sie mithilfe der neuen HLSL-Syntax auf Texturen und andere Ressourcen zugreifen. Sie können Textursyntitäts-Lookupfunktionen wie **tex2Dlod** durch einen objektorientierteren Stil ersetzen. In diesem objektorientierten Stil werden Texturen von Samplern entkoppelt und verfügen über Methoden zum Laden und Sampling.
 
-Beispiel für eine 2D-Textur, anstatt **tex2Dlod** wie in diesem Code zu verwenden:
+Beispiel für eine 2D-Textur anstelle von **tex2Dlod** wie in diesem Code:
 
 
 ```
@@ -95,7 +95,7 @@ color = tex2Dlod(S, Location);
 
 
 
-Verwenden Sie die [samplelevel](dx-graphics-hlsl-to-samplelevel.md) -Methode eines [**Textur Objekts**](dx-graphics-hlsl-to-type.md) wie in diesem Code:
+Verwenden Sie [die SampleLevel-Methode](dx-graphics-hlsl-to-samplelevel.md) eines [**Texturobjekts**](dx-graphics-hlsl-to-type.md) wie in diesem Code:
 
 
 ```
@@ -107,13 +107,13 @@ color = MyTexture.SampleLevel(MySampler, Location, LOD);
 
 
 
-Um die Funktionen für die Textur Suche im systeminternen Stil, wie z. b. **tex2Dlod**, mit [Shader Model 4](dx-graphics-hlsl-sm4.md) und höher zu verwenden, verwenden Sie [**D3DCOMPILE \_ enable abwärts \_ \_ Compatibility**](d3dcompile-constants.md) to compile. Wenn Sie jedoch Shader Model 4 und höher (auch [ \* \_ 4 \_ 0 \_ Ebene \_ 9 \_ \* ](/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro)) mit neueren, objektorientierten Stil Code als Ziel haben möchten, migrieren Sie zur neueren HLSL-Syntax.
+Verwenden Sie [**D3DCOMPILE \_ ENABLE \_ BACKWARDS \_ COMPATIBILITY**](d3dcompile-constants.md) zum Kompilieren, um die Funktionen für die Textursuche im systeminternen Stil wie **tex2Dlod** mit [Shadermodell 4](dx-graphics-hlsl-sm4.md) und höher zu verwenden. Wenn Sie jedoch Shadermodell 4 und höher (sogar [ \* \_ 4 0 Ebene \_ \_ \_ 9) \_ \* ](/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro)mit neueren objektorientiertem Stilcode als Ziel verwenden möchten, migrieren Sie zur neueren HLSL-Syntax.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

@@ -1,40 +1,40 @@
 ---
-title: Verwenden von mciwnd-Paletten
-description: Verwenden von mciwnd-Paletten
+title: Verwenden von MCIWnd-Paletten
+description: Verwenden von MCIWnd-Paletten
 ms.assetid: 2b99ca57-f321-4286-8ebf-ae3344d8d2c9
 keywords:
-- Mciwndgetpalette-Makro
-- Mciwndsetpalette-Makro
-- Mciwndrealize-Makro
+- MCIWndGetPalette-Makro
+- MCIWndSetPalette-Makro
+- MCIWndRealize-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d970e0e33c9dd03c7f1133576f371b713f7174df
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 074dece2c1dac95e24a465413cae686acea5a8e9055913bfb832341efdb12c1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948709"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117801119"
 ---
-# <a name="using-mciwnd-palettes"></a>Verwenden von mciwnd-Paletten
+# <a name="using-mciwnd-palettes"></a>Verwenden von MCIWnd-Paletten
 
-Die Wiedergabe von Videoclips mit 8-Bit-Farbtiefe (256-Color-Kapazität) erfordert eine Palette, um die verwendeten Farben zu definieren. Manchmal ist die Palette, die in einem Video Clip enthalten ist, nicht die geeignetste Palette, die während der Wiedergabe verwendet werden kann. In diesem Fall bietet mciwnd drei Möglichkeiten zum Verwalten von Paletten für die Wiedergabe:
+Zum Wiedergeben von Videoclips mit 8-Bit-Farbtiefe (256 Farbkapazität) ist eine Palette erforderlich, um die verwendeten Farben zu definieren. Manchmal ist die in einem Videoclip enthaltene Palette nicht die am besten geeignete Palette für die Wiedergabe. In diesem Fall bietet MCIWnd drei Möglichkeiten zum Verwalten von Paletten für die Wiedergabe:
 
--   Rufen Sie ein Handle für die Palette ab, die einem mciwnd-Fenster zugeordnet ist, indem Sie das [**mciwndgetpalette**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetpalette) -Makro verwenden. Die Palette ist nicht notwendigerweise ausschließlich dem mciwnd-Fenster zugeordnet. Andere Anwendungen können den Palettenhandle aufrufen und sogar für ungültig erklären. Folglich sollte Ihre Anwendung die globale Verwendung der Palette vorhersehen und sollte Sie, wenn Sie mit der Palette fertig ist, nicht freigeben.
--   Geben Sie eine neue Palette an, die mit dem Video Clip verwendet werden soll, der einem mciwnd-Fenster zugeordnet ist, indem Sie das [**mciwndsetpalette**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetpalette) -Makro verwenden
--   Erkennen Sie die Palette, die einem mciwnd-Fenster zugeordnet ist, mit der Systempalette, indem Sie das [**mciwndrealize**](/windows/desktop/api/Vfw/nf-vfw-mciwndrealize) -Makro verwenden. Dieses Makro ruft die [**RealizePalette**](/windows/desktop/api/wingdi/nf-wingdi-realizepalette) -Funktion mit der Palette auf, die dem mciwnd-Fenster zugeordnet ist. Wenn Ihre Anwendungs Nachrichten Handler für [**WM \_ palettechanged**](/windows/desktop/gdi/wm-palettechanged) und [**WM \_ querynewpalette**](/windows/desktop/gdi/wm-querynewpalette) nur **RealizePalette** oder **mciwndrealize** aufzurufen, müssen Sie diese Nachrichten an mciwnd weiterleiten, wenn Sie Sie nicht selbst behandeln.
+-   Rufen Sie mithilfe des [**MCIWndGetPalette-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetpalette) ein Handle für die Palette ab, die einem MCIWnd-Fenster zugeordnet ist. Die Palette ist nicht unbedingt ausschließlich dem MCIWnd-Fenster zugeordnet. Andere Anwendungen können auf das Palettenhandle zugreifen und es sogar für ungültig erklären. Daher sollte Ihre Anwendung die globale Verwendung der Palette antizipieren und nach Abschluss der Palette nicht freigeben.
+-   Geben Sie mithilfe des [**MCIWndSetPalette-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetpalette) eine neue Palette an, die mit dem Videoclip verwendet werden soll, der einem MCIWnd-Fenster zugeordnet ist.
+-   Erkennen Sie die Palette, die einem MCIWnd-Fenster zugeordnet ist, mithilfe des [**MCIWndRealize-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndrealize) der Systempalette. Dieses Makro ruft die [**Funktion RealizePalette**](/windows/desktop/api/wingdi/nf-wingdi-realizepalette) mit der Palette auf, die dem MCIWnd-Fenster zugeordnet ist. Wenn Ihre Anwendungsmeldungshandler für [**WM \_ PALETTECHANGED**](/windows/desktop/gdi/wm-palettechanged) und [**WM \_ QUERYNEWPALETTE**](/windows/desktop/gdi/wm-querynewpalette) nur **RealizePalette** oder **MCIWndRealize** aufrufen, müssen Sie diese Nachrichten an MCIWnd weiterleiten, wenn Sie sie nicht selbst verarbeiten.
 
 > [!Note]  
-> Wenn ein Videoclip mit 8-Bit-Farbtiefe in das mciwnd-Fenster geladen wird, ersetzt die in diesem Clip enthaltene Palette die Palette, die dem mciwnd-Fenster zugeordnet ist.
+> Wenn ein Videoclip mit 8-Bit-Farbtiefe in das MCIWnd-Fenster geladen wird, ersetzt die in diesem Clip enthaltene Palette die Palette, die dem MCIWnd-Fenster zugeordnet ist.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Wiedergabe Verbesserungen](playback-enhancements.md)
+[Verbesserungen bei der Wiedergabe](playback-enhancements.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

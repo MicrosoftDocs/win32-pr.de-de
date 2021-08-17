@@ -1,6 +1,6 @@
 ---
-title: VML-Gefülltes Attribut
-description: VML-Gefülltes Attribut
+title: Aufgefülltes VML-Attribut
+description: Aufgefülltes VML-Attribut
 ms.assetid: c5a71a8d-5310-4e58-9153-c5cc64b0a5e0
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,12 +11,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118346604"
 ---
-# <a name="vml-filled-attribute"></a>VML-Gefülltes Attribut
+# <a name="vml-filled-attribute"></a>Aufgefülltes VML-Attribut
 
-In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
  
 
@@ -28,23 +28,23 @@ Bestimmt, ob der geschlossene Pfad ausgefüllt wird. Lese-/Schreibzugriff. **VgT
 
 **Tagsyntax**
 
-<v: *element* filled="-Ausdruck "> 
+<v: *element* filled=" *ausdruck* ">
 
 **Skriptsyntax**
 
 *element* .filled="*expression*"
 
-*expression* = *Element*.filled
+*expression* = *element*.filled
 
 **Anmerkungen**
 
-Der Wert wird aus dem **On-Attribut** des [Fill-Elements dupliziert.](msdn-online-vml-fill-element.md)
+Der Wert wird aus dem **On-Attribut** des [Fill-Elements](msdn-online-vml-fill-element.md) dupliziert.
 
 *VML-Standardattribut*
 
 **Beispiel**
 
-Der Formpfad ist ausgefüllt.
+Der Formpfad ist gefüllt.
 
 
 ```HTML
@@ -58,7 +58,7 @@ Der Formpfad ist ausgefüllt.
 
 
 
-[Beispiel für ein ausgefülltes Attribut.](/previous-versions/bb229669(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[Beispiel für ein gefülltes Attribut.](/previous-versions/bb229669(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
  
 

@@ -1,28 +1,28 @@
 ---
-description: Eine WS-Discovery Meldung, die verwendet wird, um den Abflug eines Geräts oder dienstanaus dem Netzwerk anzukündigen.
+description: Eine WS-Discovery Nachricht, die verwendet wird, um den Abgang eines Geräts oder Diensts aus dem Netzwerk anzukündigen.
 ms.assetid: 7b9abfcc-28ab-4f29-af69-6dc68e3f51b6
 title: Bye-Nachricht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 26880e8b1d4eae7f366f797017b033f9f444fe1f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8276c05314b31782442bfdf6de998dd41241391de9dc94947409041c8f4aa420
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529861"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117738652"
 ---
 # <a name="bye-message"></a>Bye-Nachricht
 
-Bei einer Bye-Nachricht handelt es sich um eine WS-Discovery Meldung, mit der die Abmeldung eines Geräts oder dienstanaus dem Netzwerk angekündigt wird. Weitere Informationen zu Bye-Nachrichten finden Sie im Abschnitt 4,2 der [WS-Discovery-Spezifikation](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf).
+Eine Bye-Nachricht ist eine WS-Discovery Nachricht, mit der das Verlassen eines Geräts oder Diensts aus dem Netzwerk angekündigt wird. Weitere Informationen zu Bye-Nachrichten finden Sie in Abschnitt 4.2 der [WS-Ermittlungsspezifikation.](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf)
 
-Bye-Nachrichten sind nicht angefordert. Die Nachrichten sind optional.
+Bye-Nachrichten werden nicht angefordert. Die Nachrichten sind optional.
 
 > [!Note]  
-> Dieses Thema zeigt eine DPWS-Beispiel Nachricht, die von WSDAPI-Clients und-Hosts generiert wurde. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die nicht diesem Beispiel entsprechen. Verwenden Sie dieses Beispiel nicht zum Überprüfen der DPWS-Interoperabilität. Verwenden Sie stattdessen das [WSDAPI-grundlegende Interoperabilitäts Tool (wsdbit)](https://msdn.microsoft.com/library/cc264250.aspx) .
+> In diesem Thema wird eine DPWS-Beispielnachricht gezeigt, die von WSDAPI-Clients und -Hosts generiert wird. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die diesem Beispiel nicht entsprechen. Verwenden Sie dieses Beispiel nicht, um die DPWS-Interoperabilität zu überprüfen. Verwenden Sie stattdessen das [WSDAPI Basic Interoperability Tool (WSDBIT).](https://msdn.microsoft.com/library/cc264250.aspx)
 
  
 
-Die folgende SOAP-Nachricht zeigt eine Beispiel-Bye-Nachricht.
+Die folgende SOAP-Nachricht zeigt eine Bye-Beispielnachricht.
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8" ?>
@@ -56,7 +56,7 @@ Die folgende SOAP-Nachricht zeigt eine Beispiel-Bye-Nachricht.
 </soap:Body>
 ```
 
-Eine Bye-Nachricht weist die folgenden Schwerpunkt Punkte auf.
+Eine Bye-Nachricht hat die folgenden Fokuspunkte.
 
 
 
@@ -70,7 +70,7 @@ Eine Bye-Nachricht weist die folgenden Schwerpunkt Punkte auf.
 <tr class="header">
 <th>Fokuspunkt</th>
 <th>XML</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -79,7 +79,7 @@ Eine Bye-Nachricht weist die folgenden Schwerpunkt Punkte auf.
 <td><pre class="syntax" data-space="preserve"><code><wsa:Action>
     https://schemas.xmlsoap.org/ws/2005/04/discovery/Bye
 </wsa:Action></code></pre></td>
-<td>Mit der Bye-SOAP-Aktion wird die Nachricht als Bye-Nachricht identifiziert.</td>
+<td>Die Bye SOAP-Aktion identifiziert die Nachricht als Bye-Nachricht.</td>
 </tr>
 <tr class="even">
 <td>AppSequence</td>
@@ -87,7 +87,7 @@ Eine Bye-Nachricht weist die folgenden Schwerpunkt Punkte auf.
     SequenceId=&quot;urn:uuid:369a7d7b-5f87-48a4-aa9a-189edf2a8772&quot;
     MessageNumber=&quot;21&quot;>
 </wsd:AppSequence></code></pre></td>
-<td>Enthält Informationen zur Anwendungs Sequenzierung, die die Reihenfolge der Nachrichten auch dann beibehalten, wenn Sie nicht in der richtigen Reihenfolge empfangen werden. Die appsequence wird wie in <a href="appsequence-validation-rules.md">appsequence-Validierungsregeln</a>beschrieben überprüft.</td>
+<td>Enthält Informationen zur Anwendungssequenzierung, mit denen die Sequenz von Nachrichten auch dann beibehalten werden kann, wenn sie nicht in der angegebenen Reihenfolge empfangen werden. Die AppSequence wird wie unter <a href="appsequence-validation-rules.md">AppSequence Validation Rules (AppSequence-Validierungsregeln)</a>beschrieben überprüft.</td>
 </tr>
 <tr class="odd">
 <td>Adresse</td>
@@ -107,10 +107,10 @@ Eine Bye-Nachricht weist die folgenden Schwerpunkt Punkte auf.
 
 <dl> <dt>
 
-[Ermittlungs-und metadatenaustauschnachrichten](discovery-and-metadata-exchange-message-patterns.md)
+[Ermittlungs- und Metadaten-Exchange-Meldungen](discovery-and-metadata-exchange-message-patterns.md)
 </dt> <dt>
 
-[Hello-Nachricht](hello-message.md)
+[Hello Message](hello-message.md)
 </dt> </dl>
 
  

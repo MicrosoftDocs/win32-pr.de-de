@@ -4,18 +4,18 @@ ms.assetid: 7c38bc15-be86-4260-b2e4-13afc90de6d7
 title: stringFormat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 730355507b78d99eba02e82666427dd29425c942
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: e76c72865c3a0f327657d3d97cda55d57ebae1023793dabcad03db513319c004
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112408353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117867456"
 ---
 # <a name="stringformat"></a>stringFormat
 
-Gibt an, wie [**IPropertyDescription::FormatForDisplay**](/windows/win32/api/propsys/nf-propsys-ipropertydescription-formatfordisplay) den Wert der Eigenschaft als Zeichenfolge formatieren soll. Dies gilt nur, wenn <displayInfo displayType="String"> . Es sollte nur ein [stringFormat-Element]() für jedes [displayInfo-Element](./propdesc-schema-displayinfo.md) vorhanden sein.
+Gibt an, [**wie IPropertyDescription::FormatForDisplay**](/windows/win32/api/propsys/nf-propsys-ipropertydescription-formatfordisplay) den Wert der Eigenschaft als Zeichenfolge formatieren soll. Dies gilt nur, wenn <displayInfo displayType="String"> . Es sollte nur ein [stringFormat-Element]() für jedes [displayInfo-Element geben.](./propdesc-schema-displayinfo.md)
 
-Wenn mehrere Elemente vorhanden sind, wird das letzte Element verwendet. Wenn kein [stringFormat-Element]() bereitgestellt wird, werden die Standardattributeinstellungen auf die Eigenschaftenbeschreibung angewendet.
+Wenn mehrere Elemente enthalten sind, wird das letzte verwendet. Wenn kein [stringFormat-Element]() angegeben wird, werden die Standardattributeinstellungen auf die Eigenschaftenbeschreibung angewendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,7 +70,7 @@ Wenn mehrere Elemente vorhanden sind, wird das letzte Element verwendet. Wenn ke
 <tbody>
 <tr class="odd">
 <td>formatAs</td>
-<td>Öffentlich. Dies ist optional. Der Standardwert ist &quot; &quot; Allgemein. Die folgenden Werte sind gültig. 
+<td>Öffentlich. Optional. Der Standardwert ist &quot; &quot; Allgemein. Die folgenden Werte sind gültig. 
 <table>
 <thead>
 <tr class="header">
@@ -85,11 +85,11 @@ Wenn mehrere Elemente vorhanden sind, wird das letzte Element verwendet. Wenn ke
 </tr>
 <tr class="even">
 <td>FileName</td>
-<td>Formatiert den Wert als Dateinamen. Blendet die Erweiterung entsprechend den Benutzereinstellungen aus. Erfordert, dass der Eigenschaftstyp String ist.</td>
+<td>Formatiert den Wert als Dateinamen. Blendet die Erweiterung gemäß den Benutzereinstellungen aus. Erfordert, dass der Eigenschaftentyp String ist.</td>
 </tr>
 <tr class="odd">
 <td>FilePath</td>
-<td>Formatiert den Wert als Dateipfad. Blendet die Erweiterung entsprechend den Benutzereinstellungen aus. Erfordert, dass der Eigenschaftstyp String ist.</td>
+<td>Formatiert den Wert als Dateipfad. Blendet die Erweiterung gemäß den Benutzereinstellungen aus. Erfordert, dass der Eigenschaftentyp String ist.</td>
 </tr>
 <tr class="even">
 <td>Hyperlink</td>

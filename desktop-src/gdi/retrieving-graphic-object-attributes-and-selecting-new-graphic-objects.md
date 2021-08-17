@@ -1,21 +1,21 @@
 ---
-title: Objekt Attribute abrufen, neue Objekte auswählen
-description: Eine Anwendung kann die Attribute für einen Stift, einen Pinsel, eine Palette, eine Schriftart oder eine Bitmap abrufen, indem Sie die Funktionen getcurrentobject und GetObject aufruft.
+title: Abrufen von Objektattributen und Auswählen neuer Objekte
+description: Eine Anwendung kann die Attribute für Einen Stift, Pinsel, Palette, Schriftart oder Bitmap abrufen, indem sie die Funktionen GetCurrentObject und GetObject aufruft.
 ms.assetid: 09d8412f-a67d-48d5-9c04-9233dee43cf9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b18dcef03bf769e8b2d11574429b64f481b1a79
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 61c58d946f61a6a83dcfeb2ddae24d735d3596e5e864cf672bab832d7db3aedf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978304"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117886145"
 ---
-# <a name="retrieve-object-attributes-select-new-objects"></a>Objekt Attribute abrufen, neue Objekte auswählen
+# <a name="retrieve-object-attributes-select-new-objects"></a>Abrufen von Objektattributen und Auswählen neuer Objekte
 
-Eine Anwendung kann die Attribute für einen Stift, einen Pinsel, eine Palette, eine Schriftart oder eine Bitmap abrufen, indem Sie die Funktionen [**getcurrentobject**](/windows/desktop/api/Wingdi/nf-wingdi-getcurrentobject) und [**GetObject**](/windows/desktop/api/Wingdi/nf-wingdi-getobject) aufruft. Die **getcurrentobject** -Funktion gibt ein Handle zurück, das das derzeit im DC ausgewählte Objekt identifiziert. die **GetObject** -Funktion gibt eine-Struktur zurück, die die Attribute des-Objekts beschreibt.
+Eine Anwendung kann die Attribute für Einen Stift, Pinsel, Palette, Schriftart oder Bitmap abrufen, indem sie die Funktionen [**GetCurrentObject**](/windows/desktop/api/Wingdi/nf-wingdi-getcurrentobject) und [**GetObject**](/windows/desktop/api/Wingdi/nf-wingdi-getobject) aufruft. Die **GetCurrentObject-Funktion** gibt ein Handle zurück, das das derzeit im DC ausgewählte Objekt identifiziert. Die **GetObject-Funktion** gibt eine Struktur zurück, die die Attribute des Objekts beschreibt.
 
-Das folgende Beispiel zeigt, wie eine Anwendung die aktuellen Pinsel Attribute abrufen und die abgerufenen Daten verwenden kann, um zu bestimmen, ob es erforderlich ist, einen neuen Pinsel auszuwählen.
+Das folgende Beispiel zeigt, wie eine Anwendung die aktuellen Pinselattribute abrufen und die abgerufenen Daten verwenden kann, um zu bestimmen, ob ein neuer Pinsel ausgewählt werden muss.
 
 
 ```C++
@@ -63,7 +63,7 @@ Das folgende Beispiel zeigt, wie eine Anwendung die aktuellen Pinsel Attribute a
 
 > [!Note]
 >
-> Die Anwendung hat den ursprünglichen Pinsel Handle beim ersten Aufrufen der [**SelectObject**](/windows/desktop/api/Wingdi/nf-wingdi-selectobject) -Funktion gespeichert. Dieses Handle wird gespeichert, sodass der ursprüngliche Pinsel wieder in den DC ausgewählt werden kann, nachdem der letzte Zeichnungs Vorgang mit dem neuen Pinsel abgeschlossen wurde. Nachdem der Original Pinsel wieder in den Domänen Controller ausgewählt wurde, wird der neue Pinsel gelöscht und gibt Speicher im GDI-Heap frei.
+> Die Anwendung hat das ursprüngliche Pinselhandle beim ersten Aufruf der [**SelectObject-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-selectobject) gespeichert. Dieses Handle wird gespeichert, sodass der ursprüngliche Pinsel wieder auf dem DC ausgewählt werden kann, nachdem der letzte Malvorgang mit dem neuen Pinsel abgeschlossen wurde. Nachdem der ursprüngliche Pinsel wieder auf dem DC ausgewählt wurde, wird der neue Pinsel gelöscht, wodurch Arbeitsspeicher im GDI-Heap freigegeben wird.
 
  
 

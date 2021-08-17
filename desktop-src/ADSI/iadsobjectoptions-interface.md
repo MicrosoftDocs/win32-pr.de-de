@@ -1,26 +1,26 @@
 ---
-title: Iadsobjectoptions-Schnittstelle
-description: Die iadsobjectoptions-Schnittstelle ermöglicht den direkten Zugriff auf das Festlegen und Abrufen von anbieterspezifischen Optionen.
+title: IADsObjectOptions-Schnittstelle
+description: Die IADsObjectOptions-Schnittstelle ermöglicht den direkten Zugriff auf das Festlegen und Abrufen anbieterspezifischer Optionen.
 ms.assetid: b4ac114f-1a23-4be6-af02-0c0d34a8f78f
 ms.tgt_platform: multiple
 keywords:
-- Iadsobjectoptions-Schnittstelle ADSI
-- Iadsobjectoptions ADSI, using
-- ADSI ADSI, Beispielcode C/C++, using iadsobjectoptions
+- IADsObjectOptions-Schnittstelle ADSI
+- IADsObjectOptions ADSI mit
+- ADSI ADSI , Beispielcode C/C++ mit IADsObjectOptions
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3049d4dee7f6bf2e7ebb61f01f42ef9fc39271c1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 43701b4b846e4bf4e69dc8882397b5aba6b19ffc370ba418a34239782433073f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947339"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117839923"
 ---
-# <a name="iadsobjectoptions-interface"></a>Iadsobjectoptions-Schnittstelle
+# <a name="iadsobjectoptions-interface"></a>IADsObjectOptions-Schnittstelle
 
-Die [**iadsobjectoptions**](/windows/desktop/api/Iads/nn-iads-iadsobjectoptions) -Schnittstelle ermöglicht den direkten Zugriff auf das Festlegen und Abrufen von anbieterspezifischen Optionen.
+Die [**IADsObjectOptions-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsobjectoptions) ermöglicht den direkten Zugriff auf das Festlegen und Abrufen anbieterspezifischer Optionen.
 
-Eine der Active Directory Objekt Optionen besteht darin, den Hostnamen eines Servers zurückzugeben. Im folgenden Codebeispiel wird die-Schnittstelle verwendet, um den Hostnamen des globalen Katalog Servers abzurufen.
+Eine der Active Directory-Objektoptionen besteht in der Rückgabe des Hostnamens eines Servers. Im folgenden Codebeispiel wird die -Schnittstelle verwendet, um den Hostnamen des globalen Katalogservers abzurufen.
 
 
 ```C++
@@ -99,9 +99,9 @@ HRESULT GetGCServerName(VARIANT *vGCServer)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

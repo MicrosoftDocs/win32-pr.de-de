@@ -1,5 +1,5 @@
 ---
-description: WMI-Tasks für die Desktop Verwaltung können die Steuerung und den Abruf von Daten entweder von einem Remote Desktop oder von einem lokalen Computer aus ausführen.
+description: WMI-Aufgaben für die Desktopverwaltung können die Kontrolle übernehmen und Daten von einem Remotedesktop oder einem lokalen Computer abrufen.
 ms.assetid: bb8356bf-de38-4925-a501-6ad47d23ea8f
 ms.tgt_platform: multiple
 title: 'WMI-Tasks: Desktopverwaltung '
@@ -10,35 +10,35 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 33f027c808a30463f2747d11020f45d1b8d40edf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e1bb50e58b4db01b01b2122fd55c14bf73be0eb8601d732fa658752b33c35fcd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117738974"
 ---
 # <a name="wmi-tasks-desktop-management"></a>WMI-Tasks: Desktopverwaltung 
 
-WMI-Tasks für die Desktop Verwaltung können die Steuerung und den Abruf von Daten entweder von einem Remote Desktop oder von einem lokalen Computer aus ausführen. Beispielsweise können Sie feststellen, ob für den Bildschirmschoner auf einem lokalen Computer ein Kennwort erforderlich ist. WMI bietet Ihnen außerdem die Möglichkeit, einen Remote Computer herunterzufahren. Weitere Beispiele finden Sie im technet scriptcenter unter [https://www.microsoft.com/technet](https://technet.microsoft.com/default.aspx) .
+WMI-Aufgaben für die Desktopverwaltung können die Kontrolle übernehmen und Daten von einem Remotedesktop oder einem lokalen Computer abrufen. Beispielsweise können Sie bestimmen, ob der Bildschirmschoner auf einem lokalen Computer ein Kennwort erfordert. WMI bietet Ihnen auch die Möglichkeit, einen Remotecomputer herunterfahren. Weitere Beispiele finden Sie im TechNet ScriptCenter unter [https://www.microsoft.com/technet](https://technet.microsoft.com/default.aspx) .
 
-In den in diesem Thema gezeigten Skript Beispielen werden nur Daten vom lokalen Computer abgerufen. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remote Computern finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md).
+Die in diesem Thema gezeigten Skriptbeispiele beziehen nur Daten vom lokalen Computer. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remotecomputern finden Sie unter Herstellen einer Verbindung [mit WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md)
 
 
-Im folgenden Verfahren wird die Vorgehensweise zum Ausführen eines Skripts beschrieben.
+Im folgenden Verfahren wird das Ausführen eines Skripts beschrieben.
 
 **So führen Sie ein Skript aus**
 
-1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung. vb, z. b. *filename.vbs*. Stellen Sie sicher, dass der Text-Editor der Datei keine Erweiterung ". txt" hinzufügt.
-2.  Öffnen Sie ein Eingabe Aufforderungs Fenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
-3.  Geben Sie **cscript-filename.vbs** an der Eingabeaufforderung ein.
-4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie von einer Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokolle, z. b. das Sicherheits Ereignisprotokoll, werden möglicherweise durch die Benutzer Zugriffs Steuerung (User Access Control, UAC) geschützt.
+1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung .vbs, z. *B.filename.vbs*. Stellen Sie sicher, dass Ihr Text-Editor der .txt datei keine Erweiterung hinzufüge.
+2.  Öffnen Sie ein Eingabeaufforderungsfenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
+3.  Geben **Sie cscript filename.vbs** eingabeaufforderung ein.
+4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie über eine Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokollen, z. B. das Sicherheitsereignisprotokoll, können durch Benutzerzugriffssteuerungen (User Access Controls, UAC) geschützt werden.
 
 > [!Note]  
-> Cscript zeigt standardmäßig die Ausgabe eines Skripts im Eingabe Aufforderungs Fenster an. Da WMI-Skripts große Mengen an Ausgaben verursachen können, empfiehlt es sich, die Ausgabe in eine Datei umzuleiten. Geben Sie an der Eingabeaufforderung **cscript filename.vbs > outfile.txt** ein, um die Ausgabe des *filename.vbs* Skripts in *outfile.txt* umzuleiten.
+> Standardmäßig zeigt cscript die Ausgabe eines Skripts im Eingabeaufforderungsfenster an. Da WMI-Skripts große Mengen an Ausgabe erzeugen können, sollten Sie die Ausgabe an eine Datei umleiten. Geben **Sie cscript filename.vbs > outfile.txt** eingabeaufforderung ein, um  die Ausgabe des skriptsfilename.vbsan *outfile.txt.*
 
  
 
-In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen verschiedener Datentypen auf dem lokalen Computer verwendet werden können.
+In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen verschiedener Datentypen vom lokalen Computer verwendet werden können.
 
 
 
@@ -50,13 +50,13 @@ In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen vers
 <thead>
 <tr class="header">
 <th>Vorgehensweisen</th>
-<th>WMI-Klassen oder-Methoden</th>
+<th>WMI-Klassen oder -Methoden</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>... bestimmen, ob ein Remote Computer im abgesicherten Modus mit Netzwerkstatus gestartet wurde?</td>
-<td>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-computersystem"><strong>Win32_ComputerSystem</strong></a> -Klasse, und überprüfen Sie den Wert der <strong>primaryownername</strong> -Eigenschaft.<br/> <span data-codelanguage="VisualBasic"></span>
+<td>... ermitteln, ob ein Remotecomputer im Tresor-Modus mit Netzwerkstatus gestartet wurde?</td>
+<td>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-computersystem"><strong>Win32_ComputerSystem</strong></a> -Klasse, und überprüfen Sie den Wert der <strong>PrimaryOwnerName-Eigenschaft.</strong><br/> <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -102,8 +102,8 @@ foreach ($objComputer in $colSettings)
 </td>
 </tr>
 <tr class="even">
-<td>... bestimmen, ob ein Computerbildschirm Schoner ein Kennwort erfordert?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-desktop"><strong>Win32_Desktop</strong></a> -Klasse, und überprüfen Sie den Wert der <strong>ScreenSaverSecure</strong> -Eigenschaft.</p>
+<td>... ermitteln, ob ein Bildschirmschoner eines Computers ein Kennwort erfordert?</td>
+<td><p>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-desktop"><strong>die Win32_Desktop-Klasse,</strong></a> und überprüfen Sie den Wert der <strong>ScreenSaverSecure-Eigenschaft.</strong></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -154,8 +154,8 @@ foreach ($desktop in $desktops) {
 </div></td>
 </tr>
 <tr class="odd">
-<td>... Überprüfen Sie, ob ein Computerbildschirm 800 Pixel um 600 Pixel festgelegt wurde?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-desktopmonitor"><strong>Win32_DesktopMonitor</strong></a> -Klasse, und überprüfen Sie die Werte der Eigenschaften <strong>ScreenHeight</strong> und <strong>ScreenWidth</strong>.</p>
+<td>... überprüfen, ob ein Computerbildschirm für 800 x 600 Pixel festgelegt wurde?</td>
+<td><p>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-desktopmonitor"><strong>die Win32_DesktopMonitor-Klasse,</strong></a> und überprüfen Sie die Werte der Eigenschaften <strong>ScreenHeight</strong> und <strong>ScreenWidth.</strong></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -197,9 +197,9 @@ $computer = &quot;.&quot;
 $desktops = Get-WmiObject -Class Win32_DesktopMonitor
 $hostname = hostname
 
-< # anzeigen der Desktop Details # > &quot; es sind {0} Desktops {1} wie folgt: &quot; -f $Desktops. Anzahl, $Hostname &quot; &quot; $i = 1 # Anzahl der Desktops auf diesem System
+<# Desktopdetails anzeigen #> Desktops sind wie &quot; {0} folgt {1} &quot; verfügbar: -f $desktops. Anzahl, $hostname &quot; &quot; $i=1 Anzahl der Desktops auf diesem System
 
-foreach ($Desktop in $Desktops) { &quot; Desktop {0} : {1} &quot; -f $i + +, $Desktop. Caption &quot; Screen height: {0} &quot; -f $Desktop. Bildschirmbreite des ScreenHeight &quot; : {0} &quot; -f $Desktop. ScreenWidth &quot; &quot; }</code></pre></td>
+foreach ($desktop in $desktops) { &quot; Desktop {0} : {1} &quot; -f $i++, $Desktop.Caption &quot; Screen Height : {0} &quot; -f $desktop. ScreenHeight &quot; Screen Width : {0} &quot; -f $desktop. ScreenWidth &quot; &quot; }</code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -207,8 +207,8 @@ foreach ($Desktop in $Desktops) { &quot; Desktop {0} : {1} &quot; -f $i + +, $De
 </div></td>
 </tr>
 <tr class="even">
-<td>... Legen Sie fest, wie lange ein Computer ausgeführt wurde?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-operatingsystem"><strong>Win32_OperatingSystem</strong></a> -Klasse und die <strong>LastBootUpTime</strong> -Eigenschaft. Subtrahieren Sie diesen Wert von der aktuellen Zeit, um die Betriebszeit des Systems zu erhalten.</p>
+<td>... ermitteln, wie lange ein Computer ausgeführt wurde?</td>
+<td><p>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-operatingsystem"><strong>Win32_OperatingSystem</strong></a> -Klasse und die <strong>LastBootUpTime-Eigenschaft.</strong> Subtrahieren Sie diesen Wert von der aktuellen Zeit, um die System uptime zu erhalten.</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -275,8 +275,8 @@ foreach ($system in $computers) {
 </div></td>
 </tr>
 <tr class="odd">
-<td>... einen Remote Computer neu starten oder Herunterfahren?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-operatingsystem"><strong>Win32_OperatingSystem</strong></a> -Klasse und die <a href="/windows/desktop/CIMWin32Prov/win32shutdown-method-in-class-win32-operatingsystem"><strong>Win32Shutdown</strong></a> -Methode. Beim Herstellen einer Verbindung mit WMI müssen Sie die <a href="privilege-constants.md">RemoteShutdown</a> -Berechtigung einschließen. Weitere Informationen finden Sie unter <a href="executing-privileged-operations-using-vbscript.md">Ausführen von privilegierten Vorgängen mit VBScript</a>. Anders als bei der <a href="/windows/desktop/CIMWin32Prov/shutdown-method-in-class-win32-operatingsystem"><strong>Shutdown</strong></a> -Methode auf <strong>Win32_OperatingSystem</strong>können Sie mithilfe der <strong>Win32Shutdown</strong> -Methode Flags festlegen, um das Verhalten beim Herunterfahren zu steuern.</p>
+<td>... Einen Remotecomputer neu starten oder herunterfahren?</td>
+<td><p>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-operatingsystem"><strong>Win32_OperatingSystem</strong></a> -Klasse und die <a href="/windows/desktop/CIMWin32Prov/win32shutdown-method-in-class-win32-operatingsystem"><strong>Win32Shutdown-Methode.</strong></a> Beim Herstellen einer Verbindung mit WMI müssen Sie die <a href="privilege-constants.md">RemoteShutdown-Berechtigung</a> enthalten. Weitere Informationen finden Sie unter <a href="executing-privileged-operations-using-vbscript.md">Ausführen privilegierter Vorgänge mit VBScript.</a> Im Gegensatz zur <strong></strong> <a href="/windows/desktop/CIMWin32Prov/shutdown-method-in-class-win32-operatingsystem"><strong>Shutdown-Win32_OperatingSystem</strong></a> können Sie mit der <strong>Win32Shutdown-Methode</strong> Flags festlegen, um das Verhalten beim Herunterfahren zu steuern.</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -324,8 +324,8 @@ foreach ($objOperatingSystem in $colOperatingSystem)
 </div></td>
 </tr>
 <tr class="even">
-<td>... bestimmen, welche Anwendungen automatisch bei jedem Start von Windows ausgeführt werden?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-startupcommand"><strong>Win32_StartupCommand</strong></a> -Klasse.</p>
+<td>... bestimmen, welche Anwendungen bei jedem Start automatisch Windows?</td>
+<td><p>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-startupcommand"><strong>die Win32_StartupCommand-Klasse.</strong></a></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -396,12 +396,12 @@ foreach ($objStartupCommand in $colItems)
 
 <dl> <dt>
 
-[WMI-Tasks für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
+[WMI-Aufgaben für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
 </dt> <dt>
 
-[WMI C++ Anwendungsbeispiele](wmi-c---application-examples.md)
+[Beispiele für WMI-C++-Anwendungen](wmi-c---application-examples.md)
 </dt> <dt>
 
-[Technet scriptcenter](https://www.microsoft.com/technet/scriptcenter)
+[TechNet ScriptCenter](https://www.microsoft.com/technet/scriptcenter)
 </dt> </dl>
 

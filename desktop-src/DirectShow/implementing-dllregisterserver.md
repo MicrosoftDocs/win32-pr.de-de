@@ -4,18 +4,18 @@ ms.assetid: aaa4069e-0b6a-4a76-b950-1a85a9ed969d
 title: Implementieren von DllRegisterServer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b994e80a181b69efffbe6123382957e7a38f8278
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: e39d55b73dd70a21c10df26a100f964917a57dd9f036ebd5c2708359bca1dd50
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117998091"
 ---
 # <a name="implementing-dllregisterserver"></a>Implementieren von DllRegisterServer
 
-Der letzte Schritt besteht darin, die **DllRegisterServer** -Funktion zu implementieren. Die dll, die die Komponente enthält, muss diese Funktion exportieren. Die Funktion wird von einer Setup Anwendung aufgerufen, oder wenn der Benutzer das Regsvr32.exe Tool ausführt.
+Der letzte Schritt besteht darin, die **DllRegisterServer-Funktion** zu implementieren. Die DLL, die die Komponente enthält, muss diese Funktion exportieren. Die Funktion wird von einer eingerichteten Anwendung aufgerufen, oder wenn der Benutzer das Regsvr32.exe Tool ausführt.
 
-Das folgende Beispiel zeigt eine minimale Implementierung von **DllRegisterServer**:
+Das folgende Beispiel zeigt eine minimale Implementierung von **DlLRegisterServer:**
 
 
 ```C++
@@ -27,7 +27,7 @@ STDAPI DllRegisterServer(void)
 
 
 
-Die [**AMovieDllRegisterServer2**](amoviedllregisterserver2.md) -Funktion erstellt Registrierungseinträge für jede Komponente im
+Die [**Funktion AMovieDllRegisterServer2**](amoviedllregisterserver2.md) erstellt Registrierungseinträge für jede Komponente in der
 
 
 ```
@@ -36,18 +36,18 @@ g_Templates
 
 
 
-Array. Diese Funktion weist jedoch einige Einschränkungen auf. Zuerst wird jeder Filter der Kategorie "DirectShow Filters" (CLSID \_ legacyamfiltercategory) zugewiesen, aber nicht jeder Filter gehört zu dieser Kategorie. Erfassungs Filter und Komprimierungs Filter verfügen z. b. über eigene Kategorien. Zweitens: Wenn Ihr Filter ein Hardware Gerät unterstützt, müssen Sie möglicherweise zwei weitere Informationen registrieren, die **AMovieDLLRegisterServer2** nicht behandelt: die Kategorie *Mittel* und *Pin*. Ein Medium definiert eine Kommunikationsmethode in einem Hardware Gerät, z. b. einem Bus. Die PIN-Kategorie definiert die Funktion einer PIN. Informationen zu Medien finden Sie unter "kspin- \_ Medium" im Microsoft Windows Driver Development Kit (DDK). Eine Liste der PIN-Kategorien finden Sie unter [PIN-Eigenschaften Satz](pin-property-set.md).
+Array. Diese Funktion weist jedoch einige Einschränkungen auf. Zunächst wird jeder Filter der Kategorie "DirectShow-Filter" (CLSID \_ LegacyAmFilterCategory) zugewiesen, aber nicht jeder Filter gehört zu dieser Kategorie. Erfassungsfilter und Komprimierungsfilter verfügen beispielsweise über eigene Kategorien. Wenn Ihr Filter ein Hardwaregerät unterstützt, müssen Sie möglicherweise zwei zusätzliche Informationen registrieren, die **AMovieDLLRegisterServer2** nicht verarbeitet: das *Medium* und die *Pinkategorie*. Ein Medium definiert eine Kommunikationsmethode in einem Hardwaregerät, z. B. einem Bus. Die Stecknadelkategorie definiert die Funktion eines Stecknadels. Informationen zu Medien finden Sie unter "KSPIN \_ MEDIUM" im Microsoft Windows Driver Development Kit (DDK). Eine Liste der Stecknadelkategorien finden Sie unter [Anheften von Eigenschaftensatz.](pin-property-set.md)
 
-Wenn Sie eine Filterkategorie, eine mittlere oder eine PIN-Kategorie angeben möchten, müssen Sie die [**IFilterMapper2:: registerfilter**](/windows/desktop/api/Strmif/nf-strmif-ifiltermapper2-registerfilter) -Methode innerhalb von **DllRegisterServer** aufrufen. Diese Methode nimmt einen Zeiger auf eine [**REGFILTER2**](/windows/desktop/api/strmif/ns-strmif-regfilter2) -Struktur, die Informationen über den Filter angibt.
+Wenn Sie eine Filterkategorie, ein Medium oder eine Pinkategorie angeben möchten, rufen Sie die [**IFilterMapper2::RegisterFilter-Methode**](/windows/desktop/api/Strmif/nf-strmif-ifiltermapper2-registerfilter) in **DllRegisterServer** auf. Diese Methode verwendet einen Zeiger auf eine [**REGFILTER2-Struktur,**](/windows/desktop/api/strmif/ns-strmif-regfilter2) die Informationen zum Filter angibt.
 
-Um die Dinge etwas komplizierter zu machen, unterstützt die **REGFILTER2** -Struktur zwei verschiedene Formate zum Registrieren von Pins. Der **dwVersion** -Member gibt das Format an:
+Um dies etwas zu erschweren, unterstützt die **REGFILTER2-Struktur** zwei verschiedene Formate zum Registrieren von Pins. Der **dwVersion-Member** gibt das Format an:
 
--   Wenn **dwVersion** den Wert 1 hat, ist das PIN-Format die **amoviesetup- \_ Pin** (zuvor beschrieben).
--   Wenn **dwVersion** 2 ist, ist das PIN-Format [**REGFILTERPINS2**](/windows/desktop/api/strmif/ns-strmif-regfilterpins2).
+-   Wenn **dwVersion** 1 ist, lautet das Stecknadelformat **AMOVIESETUP \_ PIN** (zuvor beschrieben).
+-   Wenn **dwVersion** 2 ist, lautet das Stecknadelformat [**REGFILTERPINS2.**](/windows/desktop/api/strmif/ns-strmif-regfilterpins2)
 
-Die **REGFILTERPINS2** -Struktur enthält Einträge für PIN-Medien und PIN-Kategorien. Außerdem werden Bitflags für einige Elemente verwendet, die von der **amoviesetup- \_ Pin** als boolesche Werte deklariert werden.
+Die **REGFILTERPINS2-Struktur** enthält Einträge für Pinmedien und Pinkategorien. Außerdem werden Bitflags für einige Elemente verwendet, die **von der AMOVIESETUP-PIN \_** als boolesche Werte deklariert werden.
 
-Im folgenden Beispiel wird gezeigt, wie **IFilterMapper2:: registerfilter** von innerhalb von **DllRegisterServer** aufgerufen wird:
+Im folgenden Beispiel wird gezeigt, wie **IFilterMapper2::RegisterFilter** innerhalb von **DllRegisterServer** aufgerufen wird:
 
 
 ```C++

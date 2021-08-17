@@ -1,7 +1,7 @@
 ---
-description: Erstellt einen Referenzpunkt einer Sammlung virtueller Systeme.
+description: Erstellt einen Verweispunkt einer virtuellen Systemauflistung.
 ms.assetid: 40ec5715-0dbc-43e3-a305-c8c31de60977
-title: Die Methode "kreatereferencepoint" der Msvm_CollectionReferencePointService-Klasse
+title: CreateReferencePoint-Methode der Msvm_CollectionReferencePointService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 7681795ee18965e3e04b75c800e3e574d6627ea9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8e1745a02b643f035dd46d82e1686a8f5075157a7f749a701865028f3a7db162
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104350318"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117994801"
 ---
-# <a name="createreferencepoint-method-of-the-msvm_collectionreferencepointservice-class"></a>Die Methode "kreatereferencepoint" der Klasse "MSVM \_ collectionreferencepointservice"
+# <a name="createreferencepoint-method-of-the-msvm_collectionreferencepointservice-class"></a>CreateReferencePoint-Methode der Msvm \_ CollectionReferencePointService-Klasse
 
-Erstellt einen Referenzpunkt einer Sammlung virtueller Systeme.
+Erstellt einen Verweispunkt einer virtuellen Systemauflistung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ uint32 CreateReferencePoint(
 
 <dl> <dt>
 
-*Sammlung* \[ in\]
+*Sammlung* \[ In\]
 </dt> <dd>
 
-Verweis auf die betroffene Auflistung von virtuellen Systemen.
+Verweis auf die betroffene sammlung des virtuellen Systems.
 
 </dd> <dt>
 
-*Referencepointsettings* \[ in\]
+*ReferencePointSettings* \[ In\]
 </dt> <dd>
 
-Parameter Einstellungen.
+Parametereinstellungen.
 
 </dd> <dt>
 
-*Referencepointtype* \[ in\]
+*ReferencePointType* \[ In\]
 </dt> <dd>
 
-Gibt den Typ des Bezugspunkts an.
+Gibt den Typ des Verweispunkts an.
 
 <dt>
 
@@ -73,48 +73,48 @@ Gibt den Typ des Bezugspunkts an.
 
 <span id="Log_based"></span><span id="log_based"></span><span id="LOG_BASED"></span>
 
-<span id="Log_based"></span><span id="log_based"></span><span id="LOG_BASED"></span>**Protokoll basiert** (1)
+<span id="Log_based"></span><span id="log_based"></span><span id="LOG_BASED"></span>**Protokollbasiert** (1)
 
 
 </dt> <dd>
 
-Protokoll Nachverfolgung für Hyper-V-Replikate.
+Hyper-V-Replikatprotokollnachverfolgung.
 
 </dd> <dt>
 
 <span id="RCT_based"></span><span id="rct_based"></span><span id="RCT_BASED"></span>
 
-<span id="RCT_based"></span><span id="rct_based"></span><span id="RCT_BASED"></span>**RCT basiert** (2)
+<span id="RCT_based"></span><span id="rct_based"></span><span id="RCT_BASED"></span>**RCT-basiert** (2)
 
 
 </dt> <dd>
 
-Basierend auf robusten Änderungsnachverfolgung von virtuellen Datenträgern.
+Basierend auf resilienten Änderungsnachverfolgung virtueller Datenträger.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Specific"></span><span id="vendor_specific"></span><span id="VENDOR_SPECIFIC"></span>
 
-<span id="Vendor_Specific"></span><span id="vendor_specific"></span><span id="VENDOR_SPECIFIC"></span>**Hersteller spezifisch** (32768.65535)
+<span id="Vendor_Specific"></span><span id="vendor_specific"></span><span id="VENDOR_SPECIFIC"></span>**Herstellerspezifisch** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*Resultingreferencepointcollection* \[ in, out\]
+*ResultingReferencePointCollection* \[ in, out\]
 </dt> <dd>
 
-Der resultierende Bezugspunkt einer Sammlung virtueller Systeme.
+Resultierender Verweispunkt einer virtuellen Systemauflistung.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
 Wenn der Vorgang lange ausgeführt wird, kann optional ein Auftrag zurückgegeben werden.
@@ -133,7 +133,7 @@ Wenn erfolgreich, wird entweder 0 (kein Fehler) oder 4096 (Auftrag gestartet) zu
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -142,22 +142,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
 **Ungültiger Typ** (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -166,19 +166,19 @@ Fehler **(2** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ collectionreferencepointservice**](msvm-collectionreferencepointservice.md)
+[**Msvm \_ CollectionReferencePointService**](msvm-collectionreferencepointservice.md)
 </dt> </dl>
 
  

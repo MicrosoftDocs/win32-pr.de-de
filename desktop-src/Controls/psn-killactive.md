@@ -1,9 +1,9 @@
 ---
-title: PSN_KILLACTIVE Benachrichtigungs Code (prsht. h)
-description: Benachrichtigt eine Seite, dass Sie im Begriff ist, die Aktivierung zu verlieren, weil eine andere Seite aktiviert oder der Benutzer auf die Schaltfläche "OK" geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: PSN_KILLACTIVE Benachrichtigungscode (Prsht.h)
+description: Benachrichtigt eine Seite, dass sie die Aktivierung verlieren wird, weil eine andere Seite aktiviert wird oder der Benutzer auf die Schaltfläche OK geklickt hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 470cd6ff-73ad-451a-a861-4d3324a8a8db
 keywords:
-- Windows-Steuerelemente für PSN_KILLACTIVE Benachrichtigungs
+- PSN_KILLACTIVE Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ae5f90670c79797ef8576c5e6e3911255ab5fe1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5eaf1a5221e186ebe5f01f942ec99d82906ea87ef7f1b8f73860bade24ab1751
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118169650"
 ---
-# <a name="psn_killactive-notification-code"></a>PSN- \_ killactive-Benachrichtigungs Code
+# <a name="psn_killactive-notification-code"></a>PSN \_ KILLACTIVE-Benachrichtigungscode
 
-Benachrichtigt eine Seite, dass Sie im Begriff ist, die Aktivierung zu verlieren, weil eine andere Seite aktiviert oder der Benutzer auf die Schaltfläche "OK" geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt eine Seite, dass sie die Aktivierung verlieren wird, weil eine andere Seite aktiviert wird oder der Benutzer auf die Schaltfläche OK geklickt hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,26 +41,26 @@ PSN_KILLACTIVE
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**pshnotify**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) -Struktur, die Informationen über den Benachrichtigungs Code enthält. Diese Struktur enthält eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur als ersten Member, **HDR**. Der **hwndfrom** -Member dieser **NMHDR** -Struktur enthält das Handle für das Eigenschaften Blatt. Der **LPARAM** -Member der **pshnotify** -Struktur enthält keine Informationen.
+Zeiger auf eine [**PSHNOTIFY-Struktur,**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) die Informationen zum Benachrichtigungscode enthält. Diese Struktur enthält eine [**NMHDR-Struktur**](/windows/desktop/api/richedit/ns-richedit-nmhdr) als ersten Member, **hdr**. Der **hwndFrom-Member** dieser **NMHDR-Struktur** enthält das Handle für das Eigenschaftenblatt. Das **lParam-Member** der **PSHNOTIFY-Struktur** enthält keine Informationen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, um zu verhindern, dass die Seite die Aktivierung verliert, oder **false** , um Sie zuzulassen.
+Gibt **TRUE zurück,** um zu verhindern, dass die Seite die Aktivierung verliert, oder **FALSE,** um sie zu ermöglichen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung verarbeitet diesen Benachrichtigungs Code, um die vom Benutzer eingegebenen Informationen zu überprüfen.
+Eine Anwendung verarbeitet diesen Benachrichtigungscode, um die vom Benutzer eingegebenen Informationen zu überprüfen.
 
 > [!Note]  
-> Das Eigenschaften Blatt bearbeitet die Liste der Seiten, wenn der \_ Benachrichtigungs Code "PSN killactive" gesendet wird. Versuchen Sie nicht, während der Verarbeitung dieses Benachrichtigungs Codes Seiten hinzuzufügen, zu entfernen oder einzufügen. Dies führt zu unvorhersehbaren Ergebnissen.
+> Das Eigenschaftenblatt wird die Liste der Seiten bearbeiten, wenn der PSN \_ KILLACTIVE-Benachrichtigungscode gesendet wird. Versuchen Sie nicht, Seiten hinzuzufügen, zu entfernen oder hinzuzufügen, während Sie diesen Benachrichtigungscode behandeln. Dies führt zu unvorhersehbaren Ergebnissen.
 
  
 
-Um einen Rückgabewert festzulegen, muss die Dialogfeld Prozedur für die Seite die [**SetWindowLong**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) -Funktion mit einem DWL- \_ msgresult-Wert aufrufen, der auf den Rückgabewert festgelegt ist. Die Dialogfeld Prozedur muss " **true**" zurückgeben.
+Zum Festlegen eines Rückgabewerts muss die Dialogfeldprozedur für die Seite die [**SetWindowLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) aufrufen, bei der ein DWL MSGRESULT-Wert auf den \_ Rückgabewert festgelegt ist. Die Dialogfeldprozedur muss **TRUE zurückgeben.**
 
-Wenn in der Dialogfeld Prozedur DWL \_ msgresult auf **true** festgelegt wird, sollte ein Meldungs Feld angezeigt werden, um das Problem für den Benutzer zu erläutern.
+Wenn in der Dialogfeldprozedur DWL MSGRESULT auf TRUE festgelegt wird, sollte ein Meldungsfeld angezeigt werden, in dem dem Benutzer das \_ Problem erklärt wird. 
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,9 +68,9 @@ Wenn in der Dialogfeld Prozedur DWL \_ msgresult auf **true** festgelegt wird, s
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

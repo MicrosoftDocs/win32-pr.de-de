@@ -1,11 +1,11 @@
 ---
-title: Iwmpcdrom-Wiedergabelisten Eigenschaft
-description: Die Wiedergabeliste Ruft eine iwmpwiedergabe-Schnittstelle ab, die die Spuren auf der CD darstellt, die sich derzeit auf dem CD-Laufwerk oder die Titel Einträge auf der Stamm Ebene einer DVD befinden.
+title: IWMPC playlist-Eigenschaft
+description: Die Playlist-Eigenschaft ruft eine IWMPPlaylist-Schnittstelle ab, die die Spuren auf der CD darstellt, die sich derzeit auf dem CD-Laufwerk befinden, oder die Titeleinträge auf Stammebene für eine DVD.
 ms.assetid: 09c3db45-6586-4a5b-b72c-77c64473bdd0
 keywords:
-- Wiedergabelisten Eigenschaften Fenster Media Player
-- Wiedergabelisten Eigenschaft, Windows Media Player, iwmpcdrom-Schnittstelle
-- Iwmpcdrom-Schnittstelle, Windows Media Player, Wiedergabelisten Eigenschaft
+- Playlist-Eigenschaft Windows Media Player
+- Playlist-Eigenschaft Windows Media Player , IWMPCnutzeroberfläche
+- IWMPCaku-Schnittstelle Windows Media Player , Playlist-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a386881c8416f4ea1881f3ccd68ee4291aa3fa84
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 988ff17e3716f01308957b3f5f247759fb3f18f639f7b279a8f00d7f6f9e2189
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359629"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118116607"
 ---
-# <a name="iwmpcdromplaylist-property"></a>Iwmpcdrom::P laylist-Eigenschaft
+# <a name="iwmpcdromplaylist-property"></a>IWMPClay::P laylist-Eigenschaft
 
-Die **Wiedergabeliste** Ruft eine **iwmpwiedergabe** -Schnittstelle ab, die die Spuren auf der CD darstellt, die sich derzeit auf dem CD-Laufwerk oder die Titel Einträge auf der Stamm Ebene einer DVD befinden.
+Die **Playlist-Eigenschaft** ruft eine **IWMPPlaylist-Schnittstelle** ab, die die Spuren auf der CD darstellt, die sich derzeit auf dem CD-Laufwerk befinden, oder die Titeleinträge auf Stammebene für eine DVD.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,21 +46,21 @@ Public ReadOnly Property Playlist As IWMPPlaylist
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **WMPLib. iwmpwiedergabe** -Schnittstelle.
+Eine **WMPLib.IWMPPlaylist-Schnittstelle.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der Regel ist der DVD-basierte Inhalt in Titel gegliedert. Jeder Titel enthält ein oder mehrere Kapitel. Jede DVD wird unterschiedlich erstellt, sodass Titel und Kapitel für den Inhalts Autor verwendet werden.
+In der Regel dvdbasierte Inhalte, die in Titeln organisiert sind. Jeder Titel enthält mindestens ein Kapitel. Jede DVD wird anders erstellt, sodass die Verwendung von Titeln und Kapiteln dem Inhaltsautor obliegt.
 
-Für eine DVD erhält diese Eigenschaft eine Wiedergabeliste, die als erstes Element eine **iwmpmedia** -Schnittstelle mit dem Namen "DVD" enthält. Diese Schnittstelle stellt das DVD-Medium dar. Die Wiedergabe des Elements führt dazu, dass die DVD von Anfang an wiedergegeben wird, wenn es sich um das erste Mal nach dem Einfügen einer neuen DVD handelt, oder die Wiedergabe wieder aufzunehmen, wenn die DVD mit der letzten angezeigten DVD identisch ist. Das Festlegen dieses Elements als Aktuelles Element während der Wiedergabe führt dazu, dass die DVD von Anfang an wiedergegeben wird.
+Bei einer DVD ruft diese Eigenschaft eine Wiedergabeliste ab, die als erstes Element eine **IWMPMedia-Schnittstelle** namens "DVD" enthält. Diese Schnittstelle stellt die DVD-Medien dar. Die Wiedergabe des Elements führt dazu, dass die DVD von Anfang an wiedergegeben wird, wenn es sich um die erste Wiedergabe nach dem Einfügen einer neuen DVD handelt, oder die Wiedergabe wird wieder aufgenommen, wenn die DVD mit der letzten angezeigten DVD identisch ist. Wenn dieses Element während der Wiedergabe als aktuelles Element festgelegt wird, wird die DVD von Anfang an wiedergegeben.
 
-Zusätzliche Elemente (die durch **iwmpmedia** -Schnittstellen dargestellt werden) in der Wiedergabeliste sind DVD-Titel, die durch eine Liste von in einer Liste dargestellten Wiedergabe Wenn Sie **iwmpcontrols.** Currency Item auf eine dieser geklickte Wiedergabelisten Elemente festlegen, legt Windows Media Player die geklickte Wiedergabeliste automatisch als aktuelle Wiedergabeliste fest, nachdem die Kapitel Wiedergabe begonnen hat. Sie können dann die Eigenschaften, Methoden und zugehörige Ereignisse der **iwmpwiedergabe** -Schnittstelle verwenden, um mit DVD-Kapiteln zu arbeiten, die auch Wiedergabelisten Elemente sind.
+Zusätzliche Elemente (dargestellt durch **IWMPMedia-Schnittstellen)** in der Wiedergabeliste sind DVD-Titel, die durch geschachtelte Wiedergabelisten dargestellt werden. Wenn Sie **IWMPControls.currentItem** auf eines dieser geschachtelten Wiedergabelistenelemente festlegen, legt Windows Media Player die geschachtelte Wiedergabeliste automatisch als aktuelle Wiedergabeliste fest, nachdem die Kapitelwiedergabe beginnt. Anschließend können Sie die **IWMPPlaylist-Schnittstelleneigenschaften,** -Methoden und zugehörigen Ereignisse verwenden, um mit DVD-Kapiteln zu arbeiten, bei denen es sich ebenfalls um Wiedergabelistenelemente handelt.
 
-Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um den Wert dieser Eigenschaft abzurufen, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die **Wiedergabe** Liste verwendet, um ein mehrzeilige Textfeld mit dem Namen MyText mit der Trackliste der AudioCD auszufüllen, die sich zurzeit auf dem ersten CD-Laufwerk befinden. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **playlist** verwendet, um ein mehrzeiliges Textfeld namens myText mit der Titelliste der Audio-CD auszufüllen, die sich derzeit auf dem ersten CD-Laufwerk befindet. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -110,32 +110,32 @@ myText.Lines = trackList
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpcdrom-Schnittstelle (VB und c#)**](iwmpcdrom--vb-and-c.md)
+[**IWMPCaku-Schnittstelle (VB und C#)**](iwmpcdrom--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. Currency Item (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-currentitem--vb-and-c.md)
+[**IWMPControls.currentItem (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-currentitem--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. mediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.mediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. requestmediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.requestMediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
 </dt> </dl>
 
  

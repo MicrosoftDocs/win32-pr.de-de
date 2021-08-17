@@ -39,7 +39,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                                   | BESCHREIBUNG                                        |
+| Element                                                                   | Beschreibung                                        |
 |---------------------------------------------------------------------------|----------------------------------------------------|
 | [**SizeDefinition**](windowsribbon-element-sizedefinition.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 

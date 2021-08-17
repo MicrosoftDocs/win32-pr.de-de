@@ -1,10 +1,10 @@
 ---
-title: Inapcomponentinfo-Schnittstelle (napcommon. h)
-description: Stellt Methoden bereit, die von Plug-in-Komponenten (z. b. SHAs und SHVs) implementiert werden müssen, damit das NAP-System mit Ihnen kommuniziert.
+title: INapComponentInfo-Schnittstelle (NapCommon.h)
+description: Stellt Methoden bereit, die Plug-In-Komponenten (z. B. SHAs und SHVs) implementieren müssen, damit das NAP-System mit ihnen kommunizieren kann.
 ms.assetid: eeff4f57-72e0-465f-9a18-ed72dad82bc7
 keywords:
-- Inapcomponentinfo-Schnittstelle NAP
-- Inapcomponentinfo-Schnittstelle NAP, beschrieben
+- INapComponentInfo-Schnittstelle NAP
+- INapComponentInfo-Schnittstelle NAP , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,43 +15,43 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ba38c71cb79eb7222f619e6702008b31c41e7e2d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b188aae04ab407c5ae26e1d1a764e9093cc101cbe7d714ef8a8e0146013fefee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117799705"
 ---
-# <a name="inapcomponentinfo-interface"></a>Inapcomponentinfo-Schnittstelle
+# <a name="inapcomponentinfo-interface"></a>INapComponentInfo-Schnittstelle
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapcomponentinfo** -Schnittstelle stellt Methoden bereit, die von Plug-in-Komponenten (z. b. SHAs und SHVs) implementiert werden müssen, damit das NAP-System mit Ihnen kommuniziert. Das NAP-System ruft Ihre Implementierung dieser Methoden auf, um statische administrative Informationen (z. b. Anzeige Name oder lokalisierte Zeichen folgen) abzurufen.
+Die **INapComponentInfo-Schnittstelle** stellt Methoden bereit, die Plug-In-Komponenten (z. B. SHAs und SHVs) implementieren müssen, damit das NAP-System mit ihnen kommunizieren kann. Das NAP-System ruft Ihre Implementierung dieser Methoden auf, um statische Administrative Informationen abzurufen (z. B. Anzeigename oder lokalisierte Zeichenfolgen).
 
 ## <a name="members"></a>Member
 
-Die **inapcomponentinfo** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Inapcomponentinfo** verfügt auch über die folgenden Typen von Membern:
+Die **INapComponentInfo-Schnittstelle erbt** von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **INapComponentInfo** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **inapcomponentinfo** -Schnittstelle verfügt über diese Methoden.
+Die **INapComponentInfo-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                                         | BESCHREIBUNG                                                                                                   |
 |:---------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
-| [**Inapcomponentinfo:: converterrorcodetomess ageid**](inapcomponentinfo-converterrorcodetomessageid-method.md) | Wird vom NAP-System verwendet, um anzufordern, dass der Integritäts Client einen HRESULT-Fehlercode in eine Nachrichten-ID konvertiert.<br/> |
-| [**Inapcomponentinfo:: GetDescription**](inapcomponentinfo-getdescription-method.md)                           | Wird vom NAP-System verwendet, um die Beschreibung eines Integritäts Clients zu erhalten.<br/>                                  |
-| [**Inapcomponentinfo:: getfriendlyname**](inapcomponentinfo-getfriendlyname-method.md)                         | Wird vom NAP-System verwendet, um den anzeigen Amen eines Integritäts Clients zu erhalten.<br/>                                |
-| [**Inapcomponentinfo:: getIcon**](inapcomponentinfo-geticon-method.md)                                         | Wird vom NAP-System verwendet, um das Symbol eines Integritäts Clients zu erhalten.<br/>                                         |
-| [**Inapcomponentinfo:: GetLocalizedString**](inapcomponentinfo-getlocalizedstring-method.md)                   | Wird vom NAP-System verwendet, um lokalisierte Zeichen folgen zu erhalten.<br/>                                                   |
-| [**Inapcomponentinfo:: getvendorname**](inapcomponentinfo-getvendorname-method.md)                             | Wird vom NAP-System verwendet, um den Herstellernamen eines Integritäts Clients zu erhalten.<br/>                                  |
-| [**Inapcomponentinfo:: GetVersion**](inapcomponentinfo-getversion-method.md)                                   | Wird vom NAP-System verwendet, um die Version eines Integritäts Clients zu erhalten.<br/>                                      |
+| [**INapComponentInfo::ConvertErrorCodeToMessageId**](inapcomponentinfo-converterrorcodetomessageid-method.md) | Wird vom NAP-System verwendet, um anzufordern, dass der Integritätsclient einen HRESULT-Fehlercode in eine Meldungs-ID konvertiert.<br/> |
+| [**INapComponentInfo::GetDescription**](inapcomponentinfo-getdescription-method.md)                           | Wird vom NAP-System verwendet, um die Beschreibung eines Integritätsclients abzurufen.<br/>                                  |
+| [**INapComponentInfo::GetFriendlyName**](inapcomponentinfo-getfriendlyname-method.md)                         | Wird vom NAP-System verwendet, um den Anzeigenamen eines Integritätsclients abzurufen.<br/>                                |
+| [**INapComponentInfo::GetIcon**](inapcomponentinfo-geticon-method.md)                                         | Wird vom NAP-System verwendet, um das Symbol eines Integritätsclients abzurufen.<br/>                                         |
+| [**INapComponentInfo::GetLocalizedString**](inapcomponentinfo-getlocalizedstring-method.md)                   | Wird vom NAP-System verwendet, um lokalisierte Zeichenfolgen abzurufen.<br/>                                                   |
+| [**INapComponentInfo::GetVendorName**](inapcomponentinfo-getvendorname-method.md)                             | Wird vom NAP-System verwendet, um den Herstellernamen eines Integritätsclients abzurufen.<br/>                                  |
+| [**INapComponentInfo::GetVersion**](inapcomponentinfo-getversion-method.md)                                   | Wird vom NAP-System verwendet, um die Version eines Integritätsclients abzurufen.<br/>                                      |
 
 
 
@@ -63,14 +63,14 @@ Die **inapcomponentinfo** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Napcommon. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napcommon. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>NapCommon.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapCommon.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

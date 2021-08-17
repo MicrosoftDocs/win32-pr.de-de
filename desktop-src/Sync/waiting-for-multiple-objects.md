@@ -1,21 +1,21 @@
 ---
-description: Im folgenden Beispiel wird die Funktion "forateevent" verwendet, um zwei Ereignis Objekte zu erstellen, und die Funktion "kreatethread" zum Erstellen eines Threads.
+description: Im folgenden Beispiel wird die CreateEvent-Funktion verwendet, um zwei Ereignisobjekte zu erstellen, und die CreateThread-Funktion, um einen Thread zu erstellen.
 ms.assetid: 0132ac94-b45b-438a-b96a-e77cfe522702
 title: Warten auf mehrere Objekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a6fc04d8737b0c404cf6296e1264fa86eb359be6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fe4c8ac12585a32ede0fc96506fa770a19198b18fea833b42a5cf45c75be677b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117765042"
 ---
 # <a name="waiting-for-multiple-objects"></a>Warten auf mehrere Objekte
 
-Im folgenden Beispiel wird die Funktion " [**forateevent**](/windows/win32/api/synchapi/nf-synchapi-createeventa) " verwendet, um zwei Ereignis Objekte zu erstellen, und die Funktion " [**kreatethread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) " zum Erstellen eines Threads. Anschließend wird die [**WaitForMultipleObjects**](/windows/win32/api/synchapi/nf-synchapi-waitformultipleobjects) -Funktion verwendet, um zu warten, bis der Thread den Zustand eines der Objekte mithilfe der [**SetEvent**](/windows/win32/api/synchapi/nf-synchapi-resetevent) -Funktion auf signalisiert festgelegt hat.
+Im folgenden Beispiel wird die [**CreateEvent-Funktion**](/windows/win32/api/synchapi/nf-synchapi-createeventa) verwendet, um zwei Ereignisobjekte zu erstellen, und die [**CreateThread-Funktion,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) um einen Thread zu erstellen. Anschließend wird die [**WaitForMultipleObjects-Funktion**](/windows/win32/api/synchapi/nf-synchapi-waitformultipleobjects) verwendet, um zu warten, bis der Thread den Zustand eines der Objekte mithilfe der [**SetEvent-Funktion**](/windows/win32/api/synchapi/nf-synchapi-resetevent) signalisiert.
 
-Ein Beispiel für das warten auf ein einzelnes Objekt finden [Sie unter Verwenden von Mutex-Objekten](using-mutex-objects.md).
+Ein Beispiel, das auf ein einzelnes Objekt wartet, finden Sie unter [Verwenden von Mutex-Objekten.](using-mutex-objects.md)
 
 
 ```C++

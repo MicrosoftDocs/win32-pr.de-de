@@ -27,7 +27,7 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Ui PKEY DecimalValue wird von einer Anwendung verwendet, um den Wert im Bearbeitungsfeld des \_ \_ [Spinner-Steuerelements](windowsribbon-controls-spinner.md) abzufragen.
+Ui \_ PKEY \_ DecimalValue wird von einer Anwendung verwendet, um den Wert im Bearbeitungsfeld des [Spinner-Steuerelements](windowsribbon-controls-spinner.md) abzufragen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

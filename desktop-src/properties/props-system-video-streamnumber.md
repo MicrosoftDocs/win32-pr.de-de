@@ -1,5 +1,5 @@
 ---
-description: Gibt die Ordnungszahl des Streams an, der abgespielt wird.
+description: Gibt die Ordnungszahl des streams an, der wiedergegeben wird.
 ms.assetid: 796206ab-d69c-4dd5-a408-2ecb5cde243f
 title: System.Video.StreamNumber
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118227362"
 ---
 # <a name="systemvideostreamnumber"></a>System.Video.StreamNumber
 
-Gibt die Ordnungszahl des Streams an, der abgespielt wird.
+Gibt die Ordnungszahl des streams an, der wiedergegeben wird.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

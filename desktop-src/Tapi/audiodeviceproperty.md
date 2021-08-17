@@ -1,21 +1,21 @@
 ---
-description: 'Die audiodeviceproperty-Enumeration wird von den Methoden itaudiodevicecontrol:: GetRange, itaudiodevicecontrol:: Get und itaudiodevicecontrol:: Set verwendet, um die Eigenschaft anzugeben, die adressiert wird.'
+description: Die Enumeration AudioDeviceProperty wird von den Methoden ITAudioDeviceControl::GetRange, ITAudioDeviceControl::Get und ITAudioDeviceControl::Set verwendet, um die zu adressierte Eigenschaft anzugeben.
 ms.assetid: 0ed9b75e-3c79-4e41-9883-63b85ebfae06
-title: Audiodeviceproperty-Enumeration (ipmsp. h)
+title: AudioDeviceProperty-Enumeration (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab807759bfb316858be41ea9bb4b78d795ee1a1a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e5a634caa627f5d518e8783ce056e89a69931aa981466754a9d320f36787186f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117948792"
 ---
-# <a name="audiodeviceproperty-enumeration"></a>Audiodeviceproperty-Enumeration
+# <a name="audiodeviceproperty-enumeration"></a>AudioDeviceProperty-Enumeration
 
-\[ Diese Enumeration ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Diese Enumeration ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **audiodeviceproperty** -Enumeration wird von den Methoden [**itaudiodevicecontrol:: GetRange**](itaudiodevicecontrol-getrange.md), [**itaudiodevicecontrol:: Get**](itaudiodevicecontrol-get.md)und [**itaudiodevicecontrol**](itaudiodevicecontrol-set.md) :: Set verwendet, um die Eigenschaft anzugeben, die adressiert wird.
+Die **AudioDeviceProperty-Enumeration** wird von den [**METHODEN ITAudioDeviceControl::GetRange,**](itaudiodevicecontrol-getrange.md) [**ITAudioDeviceControl::Get**](itaudiodevicecontrol-get.md)und [**ITAudioDeviceControl::Set**](itaudiodevicecontrol-set.md) verwendet, um die zu adressierte Eigenschaft anzugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,24 +30,24 @@ Die **audiodeviceproperty** -Enumeration wird von den Methoden [**itaudiodevicec
 
 <dl> <dt>
 
-<span id="AudioDevice_DuplexMode"></span><span id="audiodevice_duplexmode"></span><span id="AUDIODEVICE_DUPLEXMODE"></span>**Audiodevice- \_ duplexmode**
+<span id="AudioDevice_DuplexMode"></span><span id="audiodevice_duplexmode"></span><span id="AUDIODEVICE_DUPLEXMODE"></span>**AudioDevice \_ DuplexMode**
 </dt> <dd>
 
-Gibt an, dass der Duplex Modus des Geräts festgelegt oder abgerufen wird.
+Gibt an, dass der Duplexmodus des Geräts festgelegt oder abgerufen wird.
 
 </dd> <dt>
 
-<span id="AudioDevice_AutomaticGainControl"></span><span id="audiodevice_automaticgaincontrol"></span><span id="AUDIODEVICE_AUTOMATICGAINCONTROL"></span>**Audiodevice \_ automaticgaincontrol**
+<span id="AudioDevice_AutomaticGainControl"></span><span id="audiodevice_automaticgaincontrol"></span><span id="AUDIODEVICE_AUTOMATICGAINCONTROL"></span>**AudioDevice \_ AutomaticGainControl**
 </dt> <dd>
 
-Gibt an, dass die automatische Erlangung der Steuerung des Geräts festgelegt oder abgerufen wird.
+Gibt an, dass die automatische Steuerung des Gerätegewinns festgelegt oder abgerufen wird.
 
 </dd> <dt>
 
-<span id="AudioDevice_AcousticEchoCancellation"></span><span id="audiodevice_acousticechocancellation"></span><span id="AUDIODEVICE_ACOUSTICECHOCANCELLATION"></span>**Audiodevice- \_ acousticechoabbruch**
+<span id="AudioDevice_AcousticEchoCancellation"></span><span id="audiodevice_acousticechocancellation"></span><span id="AUDIODEVICE_ACOUSTICECHOCANCELLATION"></span>**AudioGeräte \_ AkustikEchoCancellation**
 </dt> <dd>
 
-Gibt an, dass die Eigenschaften für den akustischen Echo Abbruch des Geräts festgelegt oder abgerufen werden.
+Gibt an, dass die Akustik-Echo-Abbrucheigenschaften des Geräts festgelegt oder abgerufen werden.
 
 </dd> </dl>
 
@@ -57,22 +57,22 @@ Gibt an, dass die Eigenschaften für den akustischen Echo Abbruch des Geräts fe
 
 | Anforderung | Wert |
 |-------------------------|------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,1<br/>                                                       |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 3.1<br/>                                                       |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itaudiodebug econtrol:: GetRange**](itaudiodevicecontrol-getrange.md)
+[**ITAudioDeviceControl::GetRange**](itaudiodevicecontrol-getrange.md)
 </dt> <dt>
 
-[**Itaudiodebug econtrol:: Get**](itaudiodevicecontrol-get.md)
+[**ITAudioDeviceControl::Get**](itaudiodevicecontrol-get.md)
 </dt> <dt>
 
-[**Itaudiode vicecontrol:: Set**](itaudiodevicecontrol-set.md)
+[**ITAudioDeviceControl::Set**](itaudiodevicecontrol-set.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ruft eine angegebene Eigenschaft einer Zertifikat Vertrauens Liste (Certificate Trust List, CTL) ab.
+description: Ruft eine angegebene Eigenschaft einer Zertifikatvertrauensliste (Certificate Trust List, CTL) ab.
 ms.assetid: 65309715-65b4-4608-960d-3404e68800a2
-title: Certstoreprovgetctlproperty-Rückruffunktion
+title: Rückruffunktion "CertStoreProvGetCTLProperty"
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - UserDefined
 api_location: ''
-ms.openlocfilehash: e30a9e735d44fc5681d5cd3932baaf3cc90aa30d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1677c2cccbdf0b422696437736380bd0bb57542220a898332d72ec7a0562fd1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117769759"
 ---
-# <a name="certstoreprovgetctlproperty-callback-function"></a>Certstoreprovgetctlproperty-Rückruffunktion
+# <a name="certstoreprovgetctlproperty-callback-function"></a>Rückruffunktion "CertStoreProvGetCTLProperty"
 
-Die **certstoreprovgetctlproperty** -Rückruffunktion Ruft eine angegebene Eigenschaft einer [*Zertifikat Vertrauens Liste (Certificate Trust List*](../secgloss/c-gly.md) , CTL) ab.
+Die **Rückruffunktion CertStoreProvGetCTLProperty** ruft eine angegebene Eigenschaft einer [*Zertifikatvertrauensliste (Certificate Trust List,*](../secgloss/c-gly.md) CTL) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,53 +43,53 @@ BOOL WINAPI CertStoreProvGetCTLProperty(
 
 <dl> <dt>
 
-*hstoreprov* \[ in\]
+*hStoreProv* \[ In\]
 </dt> <dd>
 
-Ein **hcertstoreprov** -Handle für einen [*Zertifikat Speicher*](../secgloss/c-gly.md).
+Ein **HCERTSTOREPROV-Handle** für einen [*Zertifikatspeicher.*](../secgloss/c-gly.md)
 
 </dd> <dt>
 
-*pctlcontext* \[ in\]
+*pCtlContext* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**CTL- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-ctl_context) Struktur.
+Ein Zeiger auf eine [**CTL \_ CONTEXT-Struktur.**](/windows/desktop/api/Wincrypt/ns-wincrypt-ctl_context)
 
 </dd> <dt>
 
-*dwpropid* \[ in\]
+*dwPropId* \[ In\]
 </dt> <dd>
 
-Gibt einen Eigenschafts Bezeichner an.
+Gibt einen Eigenschaftenbezeichner an.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Alle benötigten Flagwerte.
+Alle erforderlichen Flagwerte.
 
 </dd> <dt>
 
-*pvData* \[ vorgenommen\]
+*pvData* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der den Zeiger auf eine [**CTL- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-ctl_context) Struktur enthalten soll, die von der Funktion zurückgegeben werden soll. Dieser Parameter kann bei einem ersten Aufrufen der-Funktion auf **null** festgelegt werden, um den Wert von *pcbData* vor der Zuweisung von Arbeitsspeicher für den Puffer zu erhalten.
+Ein Zeiger auf einen Puffer, der den Zeiger auf eine [**CTL \_ CONTEXT-Struktur**](/windows/desktop/api/Wincrypt/ns-wincrypt-ctl_context) enthält, die von der Funktion zurückgegeben werden soll. Um den Wert von *"pwData"* abzurufen, bevor Speicher für den Puffer zugewiesen wird, kann dieser Parameter bei einem ersten Aufruf der Funktion auf **NULL** festgelegt werden.
 
 </dd> <dt>
 
-*pcbData* \[ in, out\]
+*data* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf ein **DWORD** , das die Länge des *pvData* -Puffers angibt.
+Ein Zeiger auf ein **DWORD,** das die Länge des *pvData-Puffers* angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion einen Wert ungleich NULL zurück.
+Wenn die Funktion erfolgreich ist, gibt die Funktion einen Wert ungleich 0 (null) zurück.
 
-Wenn die Funktion fehlschlägt, gibt Sie 0 (null) zurück.
+Wenn die Funktion fehlschlägt, gibt sie 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,16 +97,16 @@ Wenn die Funktion fehlschlägt, gibt Sie 0 (null) zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CTL- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-ctl_context)
+[**\_CTL-KONTEXT**](/windows/desktop/api/Wincrypt/ns-wincrypt-ctl_context)
 </dt> </dl>
 
  

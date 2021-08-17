@@ -1,11 +1,11 @@
 ---
-title: Systemmonitor. reportvaluetype (Eigenschaft)
-description: Ruft einen Wert ab oder legt einen Wert fest, der bestimmt, ob im Histogramm und in den Berichts Ansichten der letzte Wert, der während des Samplingintervalls Stichprobe oder ein berechneter Wert aus der Stichprobe erfasst wurde
+title: SystemMonitor.ReportValueType-Eigenschaft
+description: Ruft einen Wert ab, der bestimmt, ob das Histogramm und die Berichtsansicht den letzten wert, der während des Samplingintervalls entnommen wurde, oder einen berechneten Wert aus der Stichprobenentnahme, z. B. den Durchschnitts- oder Mindestzählerwert, darstellt, oder legt diesen fest.
 ms.assetid: add75744-c3ab-48ab-b567-28a072facfdd
 keywords:
-- Reportvaluetype-Eigenschaft (Sysmon)
-- Reportvaluetype-Eigenschaft sysmon, Systemmonitor-Klasse
-- Systemmonitor-Klasse (Sysmon), reportvaluetype-Eigenschaft
+- ReportValueType-Eigenschaft SysMon
+- ReportValueType-Eigenschaft SysMon , SystemMonitor-Klasse
+- SystemMonitor-Klasse SysMon , ReportValueType-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ffc340516f1d99bb77dcc5a31c03eb189d2d70a8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 95282c48ac30b13af07c124ea21f36f91c7ae658b10d290a109fdd1dcc7a5ee5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956426"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117955008"
 ---
-# <a name="systemmonitorreportvaluetype-property"></a>Systemmonitor. reportvaluetype (Eigenschaft)
+# <a name="systemmonitorreportvaluetype-property"></a>SystemMonitor.ReportValueType-Eigenschaft
 
-Ruft einen Wert ab oder legt einen Wert fest, der bestimmt, ob im Histogramm und in den Berichts Ansichten der letzte Wert, der während des Samplingintervalls Stichprobe oder ein berechneter Wert aus der Stichprobe erfasst wurde
+Ruft einen Wert ab, der bestimmt, ob das Histogramm und die Berichtsansicht den letzten wert, der während des Samplingintervalls entnommen wurde, oder einen berechneten Wert aus der Stichprobenentnahme, z. B. den Durchschnitts- oder Mindestzählerwert, darstellt, oder legt diesen fest.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -40,11 +40,11 @@ Property ReportValueType As ReportValueTypeConstants
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Bestimmt, ob das Histogramm und die Berichts Sichten den letzten Wert, der während des Samplingintervalls als Stichprobe oder einen berechneten Wert aus dem Samplingintervall Mögliche Werte finden Sie unter [**reportvaluetypeer Konstanten**](/windows/win32/api/isysmon/ne-isysmon-reportvaluetypeconstants).
+Bestimmt, ob die Histogramm- und Berichtsansichten den letzten wert graphieren, der während des Samplingintervalls entnommen wurde, oder einen berechneten Wert aus dem Samplingintervall. Mögliche Werte finden Sie unter [**ReportValueTypeConstants**](/windows/win32/api/isysmon/ne-isysmon-reportvaluetypeconstants).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sysmon ignoriert diesen Wert und verwendet [**ReportValueTypeConstants.sysmondefaultvalue**](/windows/win32/api/isysmon/ne-isysmon-reportvaluetypeconstants) , wenn [**Systemmonitor. DisplayType**](systemmonitor-displaytype.md) nicht [**DisplayTypeConstants.sysmonhistogram**](/windows/win32/api/isysmon/ne-isysmon-displaytypeconstants) oder **DisplayTypeConstants.sysmonreport** ist.
+SYSMON ignoriert diesen Wert und verwendet [**ReportValueTypeConstants.sysmonDefaultValue,**](/windows/win32/api/isysmon/ne-isysmon-reportvaluetypeconstants) wenn [**SystemMonitor.DisplayType**](systemmonitor-displaytype.md) nicht [**DisplayTypeConstants.sysmonHistogram**](/windows/win32/api/isysmon/ne-isysmon-displaytypeconstants) oder **DisplayTypeConstants.sysmonReport** ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,15 +54,15 @@ Sysmon ignoriert diesen Wert und verwendet [**ReportValueTypeConstants.sysmondef
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**System Monitor**](systemmonitor.md)
+[**SystemMonitor**](systemmonitor.md)
 </dt> </dl>
 
  

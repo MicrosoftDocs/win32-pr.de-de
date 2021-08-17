@@ -1,7 +1,7 @@
 ---
-description: Fügt der Auflistung das angegebene Oid-Objekt hinzu.
+description: Fügt der Auflistung das angegebene OID-Objekt hinzu.
 ms.assetid: 0ae087d6-768a-4538-b834-0f936680de05
-title: OIDs. Add-Methode
+title: OIDs.Add-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: d2fa007798a0657991ec8e37a7dddc9fb4c95b2c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ff686ae816fa61d68e0a0c40326581025ced8f4c94fb5cffc633ff452ac4f0ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372126"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117979651"
 ---
-# <a name="oidsadd-method"></a>OIDs. Add-Methode
+# <a name="oidsadd-method"></a>OIDs.Add-Methode
 
-\[Die **Add** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Verwenden Sie stattdessen die [**OidCollection-Klasse**](/dotnet/api/system.security.cryptography.oidcollection?view=netcore-3.1) im [**System. Security. Cryptography**](/dotnet/api/system.security.cryptography?view=dotnet-plat-ext-3.1&preserve-view=true) -Namespace.\]
+\[Die **Add-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Verwenden Sie stattdessen die [**OidCollection-Klasse**](/dotnet/api/system.security.cryptography.oidcollection?view=netcore-3.1) im [**System.Security.Cryptography-Namespace.**](/dotnet/api/system.security.cryptography?view=dotnet-plat-ext-3.1&preserve-view=true)\]
 
-Die **Add** -Methode fügt der Auflistung das angegebene [**OID**](oid.md) -Objekt hinzu.
+Die **Add-Methode** fügt der Auflistung das angegebene [**OID-Objekt**](oid.md) hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ OIDs.Add( _
 
 <dl> <dt>
 
-*OID* \[ in\]
+*OID* \[ In\]
 </dt> <dd>
 
-Das [**OID**](oid.md) -Objekt, das der Auflistung hinzugefügt werden soll. Das **OID** -Objekt wird basierend auf dem gepunkteten Wert in sortierter Reihenfolge hinzugefügt.
+Das [**OID-Objekt,**](oid.md) das der Auflistung hinzugefügt werden soll. Das **OID-Objekt** wird in sortierter Reihenfolge basierend auf seinem gepunkteten Wert hinzugefügt.
 
 </dd> </dl>
 
@@ -58,7 +58,7 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentcolumninrelationshipexception-Konstruktor'
-title: Esentcolumninrelationshipexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentColumnInRelationshipException-Konstruktor'
+title: EsentColumnInRelationshipException-Konstruktor
 TOCTitle: 'EsentColumnInRelationshipException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentColumnInRelationshipException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcolumninrelationshipexception.esentcolumninrelationshipexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8d7affed2e780842259d087e17094f016f54cd97
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6320b1f00ff6bbfb5259e21cf279b70770a74690a426f17b3d202256d78e4ac2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373262"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117713938"
 ---
-# <a name="esentcolumninrelationshipexception-constructor"></a>Esentcolumninrelationshipexception-Konstruktor
+# <a name="esentcolumninrelationshipexception-constructor"></a>EsentColumnInRelationshipException-Konstruktor
 
-Initialisiert eine neue Instanz der esentcolumninrelationshipexception-Klasse.
+Initialisiert eine neue Instanz der EsentColumnInRelationshipException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentColumnInRelationshipException()
 public EsentColumnInRelationshipException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcolumninrelationshipexception-Klasse](./esentcolumninrelationshipexception-class.md)
+[EsentColumnInRelationshipException-Klasse](./esentcolumninrelationshipexception-class.md)
 
-[Esentcolumninrelationshipexception-Member](./esentcolumninrelationshipexception-members.md)
+[EsentColumnInRelationshipException-Member](./esentcolumninrelationshipexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

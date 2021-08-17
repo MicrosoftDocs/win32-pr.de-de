@@ -1,9 +1,9 @@
 ---
-title: 'Rwbyteaddressbuffer:: Load2 (uint)-Funktion'
-description: 'Ruft zwei Werte ab. | Rwbyteaddressbuffer:: Load2 (uint)-Funktion'
+title: RWByteAddressBuffer::Load2(uint)-Funktion
+description: Ruft zwei Werte ab. | RWByteAddressBuffer::Load2(uint)-Funktion
 ms.assetid: a00396cb-e68d-479e-ab3f-4c52f2cfc3bc
 keywords:
-- Load2-Funktion (HLSL)
+- Load2-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7595477448deb087b94664100710690a6f386a94
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 0f71fd2d0585803fb10de3fddfa29c10838d73e32ba7d63b5619be91b042cb71
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104982029"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117725057"
 ---
-# <a name="rwbyteaddressbufferload2uint-function"></a>Rwbyteaddressbuffer:: Load2 (uint)-Funktion
+# <a name="rwbyteaddressbufferload2uint-function"></a>RWByteAddressBuffer::Load2(uint)-Funktion
 
 Ruft zwei Werte ab.
 
@@ -36,12 +36,12 @@ uint2 Load2(
 
 <dl> <dt>
 
-*Adresse* \[ in\]
+*Adresse* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Die Eingabe Adresse in Byte, bei der es sich um ein Vielfaches von 4 handeln muss.
+Die Eingabeadresse in Bytes, die ein Vielfaches von 4 sein muss.
 
 </dd> </dl>
 
@@ -49,15 +49,15 @@ Die Eingabe Adresse in Byte, bei der es sich um ein Vielfaches von 4 handeln mus
 
 Typ: **uint2**
 
-Zwei-Werte.
+Zwei Werte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -72,7 +72,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Load2-Methoden](rwbyteaddressbuffer-load2.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

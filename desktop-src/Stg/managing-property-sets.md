@@ -1,45 +1,45 @@
 ---
-title: Verwalten von Eigenschafts Sätzen
-description: Ein persistenter Eigenschaften Satz enthält verwandte Daten als Eigenschaften.
+title: Verwalten von Eigenschaftensätzen
+description: Ein persistenter Eigenschaftensatz enthält verknüpfte Daten als Eigenschaften.
 ms.assetid: 19ff2751-87f3-43d8-9307-ce2dd399f694
 keywords:
-- Verwalten von Eigenschafts Sätzen
+- Verwalten von Eigenschaftensätzen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: af3f9862d3074a5221bf1d5d975754486a562f87
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: d8b6b81c466232d4fd325d53a3cfe67ebb1cbc60c757a6dfe135a021ab7892a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341726"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117960884"
 ---
-# <a name="managing-property-sets"></a>Verwalten von Eigenschafts Sätzen
+# <a name="managing-property-sets"></a>Verwalten von Eigenschaftensätzen
 
-Ein persistenter Eigenschaften Satz enthält verwandte Daten als Eigenschaften. Jeder Eigenschaften Satz wird mit einer fmtid identifiziert, und eine Globally Unique Identifier (GUID), die es Anwendungen ermöglicht, auf den Eigenschaften Satz zuzugreifen, um den Eigenschaften Satz zu identifizieren. Durch diese Identifikation interpretiert die Anwendung die Eigenschaften, die in der Gruppe enthalten sind.
+Ein persistenter Eigenschaftensatz enthält verknüpfte Daten als Eigenschaften. Jeder Eigenschaftensatz wird mit einer FMTID und einer GUID (Globally Unique Identifier) identifiziert, mit der Anwendungen auf den Eigenschaftensatz zugreifen können, um den Eigenschaftensatz zu identifizieren. Durch diese Identifizierung interpretiert die Anwendung die Eigenschaften, die der Satz enthält.
 
-Beispielsweise sind die Zeichen Formatierungs Eigenschaften in einem Textverarbeitungsprogramm oder die renderingattribute eines Elements in einem Zeichnungsprogramm Eigenschafts Sätze.
+Beispielsweise sind die Zeichenformatierungseigenschaften in einem Textprozessor oder die Renderingattribute eines Elements in einem Zeichenprogramm Eigenschaftensätze.
 
-COM definiert die [**IPropertySetStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) -Schnittstelle, um die Verwaltung von Eigenschafts Sätzen zu vereinfachen. Mithilfe der Methoden dieser Schnittstelle können Sie einen neuen Eigenschaften Satz erstellen oder einen vorhandenen Eigenschaften Satz öffnen oder löschen. Außerdem stellt Sie eine Methode bereit, die einen Enumerator erstellt und einen Zeiger auf die zugehörige [**ienumstatus propsetstg**](/windows/win32/api/propidlbase/nn-propidlbase-ienumstatpropsetstg) -Schnittstelle bereitstellt. Sie können die Methoden dieser Schnittstelle aufrufen, um die [**Status**](/windows/win32/api/propidlbase/nn-propidlbase-ienumstatpropsetstg) Wert-Strukturen für das Objekt aufzulisten, das Informationen zu allen Eigenschafts Sätzen für das Objekt bereitstellt.
+COM definiert die [**IPropertySetStorage-Schnittstelle,**](/windows/desktop/api/Propidl/nn-propidl-ipropertysetstorage) um die Verwaltung von Eigenschaftensätzen zu vereinfachen. Mithilfe der Methoden dieser Schnittstelle können Sie einen neuen Eigenschaftensatz erstellen oder einen vorhandenen Eigenschaftensatz öffnen oder löschen. Darüber hinaus stellt sie eine Methode bereit, die einen Enumerator erstellt und einen Zeiger auf seine [**IEnumSTATPROPSETSTG-Schnittstelle**](/windows/win32/api/propidlbase/nn-propidlbase-ienumstatpropsetstg) bereitstellt. Sie können die Methoden dieser Schnittstelle aufrufen, um [**STATPROPSETSTG-Strukturen**](/windows/win32/api/propidlbase/nn-propidlbase-ienumstatpropsetstg) für Ihr Objekt aufzuzählen, die Informationen zu allen Eigenschaftensätzen für das Objekt bereitstellen.
 
-Wenn Sie eine Instanz von [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage)erstellen oder öffnen, ähnelt Sie dem Öffnen eines Objekts, das [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) oder [**IStream**](/windows/desktop/api/Objidl/nn-objidl-istream)unterstützt, da Sie den Speicher Modus angeben müssen, in dem Sie die Schnittstelle öffnen. Für **IStorage** umfassen diese den Transaktionsmodus, den Lese-/Schreibmodus und den Freigabe Modus.
+Wenn Sie eine Instanz von [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage)erstellen oder öffnen, ähnelt dies dem Öffnen eines Objekts, das [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) oder [**IStream**](/windows/desktop/api/Objidl/nn-objidl-istream)unterstützt, da Sie den Speichermodus angeben müssen, in dem Sie die Schnittstelle öffnen. Für **IStorage** sind dies der Transaktionsmodus, der Lese-/Schreibmodus und der Freigabemodus.
 
-Wenn Sie einen Eigenschaften Satz mit einem [**IPropertySetStorage:: Create**](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-create)-Befehl erstellen, geben Sie an, ob der Eigenschaften Satz einfach oder nicht einfach sein soll. Ein einfacher Eigenschaften Satz enthält Typen, die vollständig in den Eigenschaftenset-Stream geschrieben werden können. dieser ist für eine begrenzte Größe vorgesehen und darf nicht größer als 256 KB in Windows NT 4,0 und früher oder 1 MB in Windows 2000, Windows XP und Windows Server 2003 sein. Wenn Sie jedoch eine größere Menge an Informationen im Eigenschaften Satz speichern müssen, können Sie angeben, dass der Eigenschaften Satz nicht einfach ist. Dies ermöglicht es Ihnen, einen oder mehrere der Typen zu verwenden, die nur einen Zeiger auf ein Speicher-oder Streamobjekt angeben. Diese Typen sind VT \_ Stream, VT \_ -Streaming-Objekt, VT \_ -Speicher und \_ gespeichertes VT- \_ Objekt.
+Wenn Sie einen Eigenschaftensatz mit einem Aufruf von [**IPropertySetStorage::Create**](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-create)erstellen, geben Sie an, ob der Eigenschaftensatz einfach oder nicht einfach sein soll. Ein einfacher Eigenschaftensatz enthält Typen, die vollständig innerhalb des Eigenschaftensatzdatenstroms geschrieben werden können, der begrenzt werden soll und in Windows NT 4.0 und früher nicht größer als 256 KB sein darf, oder 1 MB in Windows 2000, Windows XP und Windows Server 2003. Wenn Sie jedoch eine größere Menge an Informationen im Eigenschaftensatz speichern müssen, können Sie angeben, dass der Eigenschaftensatz nicht einfach ist. Dadurch können Sie einen oder mehrere typen verwenden, die nur einen Zeiger auf ein Speicher- oder Streamobjekt angeben. Diese Typen sind VT \_ STREAM, VT \_ STREAMED OBJECT, VT \_ STORAGE und VT \_ STORED \_ OBJECT.
 
-Die in diesen Eigenschaften gespeicherten Daten werden in Windows NT 4,0 oder früher nicht mit der Größenbeschränkung von 256 KB-Eigenschaften Satz in Windows NT oder früher gezählt, oder das Limit von 1 MB in Windows 2000, Windows XP und Windows Server 2003. Allerdings gelten die Daten über die Eigenschaft, z. b. den Namen,. Wenn Sie ein transaktives Update benötigen, muss der Eigenschaften Satz außerdem nicht einfach sein. Es gibt natürlich eine bestimmte Leistungs Einbuße zum Öffnen dieser Typen, da es erforderlich ist, den Stream oder das Speicher Objekt zu öffnen, für das Sie über den Zeiger verfügen.
+In diesen Eigenschaften gespeicherte Daten werden nicht mit dem Größenlimit von 256 KB in Windows NT 4.0 oder früher oder dem Grenzwert von 1 MB in Windows 2000, Windows XP und Windows Server 2003 gezählt. Es gelten jedoch Daten über die Eigenschaft, z. B. deren Name. Wenn Sie eine transaktionierte Aktualisierung benötigen, muss der Eigenschaftensatz nicht einfach sein. Es gibt natürlich eine bestimmte Leistungseinbuße beim Öffnen dieser Typen, da das Öffnen des Streams oder Speicherobjekts erforderlich ist, auf das Sie den Zeiger haben.
 
-Wenn Ihre Anwendung Verbund Dateien verwendet, können Sie die von com bereitgestellte Implementierung dieser Schnittstellen verwenden, die auf dem com-Verbund Dateispeicher Objekt implementiert werden.
+Wenn Ihre Anwendung Verbunddateien verwendet, können Sie die von COM bereitgestellte Implementierung dieser Schnittstellen verwenden, die für das COM-Verbunddateispeicherobjekt implementiert werden.
 
-Jeder Eigenschaften Satz besteht hauptsächlich aus einer logisch verbundenen Gruppe von Eigenschaften, wie unter [Verwalten von Eigenschaften](managing-properties.md)beschrieben.
+Jeder Eigenschaftensatz besteht in erster Linie aus einer logisch verbundenen Gruppe von Eigenschaften, wie unter [Verwalten von Eigenschaften](managing-properties.md)beschrieben.
 
-Weitere Informationen zu Eigenschafts Sätzen in com finden Sie unter:
+Weitere Informationen zu Eigenschaftensätzen in COM finden Sie unter:
 
--   [Eigenschaften Satz Implementierungen in com](property-set-implementations-in-com.md)
--   [Überlegungen zu Eigenschaften Gruppen](property-set-considerations.md)
+-   [Implementierungen von Eigenschaftensatz in COM](property-set-implementations-in-com.md)
+-   [Überlegungen zum Eigenschaftensatz](property-set-considerations.md)
 -   [Überlegungen zur IPropertySetStorage-Implementierung](ipropertysetstorage-implementation-considerations.md)
--   [Speichern von Eigenschafts Sätzen](storing-property-sets.md)
+-   [Speichern von Eigenschaftensätzen](storing-property-sets.md)
 -   [Leistungsmerkmale](performance-characteristics.md)
--   [Implementieren des Eigenschaften Satzes für Zusammenfassungs Informationen](implementing-the-summary-information-property-set.md)
+-   [Implementieren des Eigenschaftensatzes für Zusammenfassungsinformationen](implementing-the-summary-information-property-set.md)
 
- 
+ 
 
- 
+ 

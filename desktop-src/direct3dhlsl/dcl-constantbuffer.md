@@ -39,22 +39,22 @@ Deklariert einen Shaderkonst konstanten Puffer.
 <thead>
 <tr class="header">
 <th>Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><span id="cbN_size_"></span><span id="cbn_size_"></span><span id="CBN_SIZE_"></span>cb<em>N[size]</em><br/></td>
-<td>[in] Ein shader-Konstantenpuffer, bei dem N eine ganze Zahl ist, die die Konstante-Puffer-Registernummer angibt, und size eine ganze Zahl ist, die die Anzahl der Elemente im Puffer angibt.<br/></td>
+<td>[in] Ein shader-Konstantenpuffer, bei dem N eine ganze Zahl ist, die die Zahl des Konstantenpufferregisters angibt, und size eine ganze Zahl ist, die die Anzahl der Elemente im Puffer angibt.<br/></td>
 </tr>
 <tr class="even">
 <td><span id="AccessPattern"></span><span id="accesspattern"></span><span id="ACCESSPATTERN"></span><em>AccessPattern</em><br/></td>
-<td>[in] Der Zugriff auf den Puffer durch Shadercode ist eine der folgenden: <br/> 
+<td>[in] Der Zugriff auf den Puffer erfolgt durch Shadercode. Dies ist einer der folgenden: <br/> 
 <table>
 <thead>
 <tr class="header">
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -90,11 +90,11 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu erleichtern. Mit shader Model 4 können Sie keinen Shader in der Assemblysprache erstellen.
+Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu erleichtern. Sie können mit shader Model 4 keinen Shader in der Assemblysprache erstellen.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel wird ein konstanter Puffer für register cb0 deklariert, der 19 Elemente enthält. Auf diese Elemente wird mit einem literalen Index zugegriffen.
+In diesem Beispiel wird ein konstanter Puffer für register cb0 deklariert, der über 19 Elemente verfügt. Auf diese Elemente wird mit einem literalen Index zugegriffen.
 
 
 ```
@@ -111,12 +111,12 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

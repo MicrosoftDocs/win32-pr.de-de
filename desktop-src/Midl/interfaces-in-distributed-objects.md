@@ -1,31 +1,31 @@
 ---
 title: Schnittstellen in verteilten Objekten
-description: Bei der verteilten Verarbeitung ist eine Schnittstelle eine Auflistung von Definitionen und Remote Funktionen, die zwei oder mehr Programmen die Interaktion zwischen verschiedenen Kontexten ermöglicht.
+description: Beim verteilten Computing ist eine Schnittstelle eine Sammlung von Definitionen und Remotefunktionen, die es zwei oder mehr Programmen ermöglicht, zwischen verschiedenen Kontexten zu arbeiten.
 ms.assetid: d7cd6bf3-58ec-426d-850a-9c5456ed816d
 keywords:
-- Schnittstellen-Mittell, in verteilten Objekten
+- schnittstellen MIDL in verteilten Objekten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 64cbee13dcbab9ccaa6ef6ad3ad3880daa9b14ce
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 8661e7e07f08d35151afe8fb256539ed574b0a0162178e3a9e63dc8c43c59ce8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117807137"
 ---
 # <a name="interfaces-in-distributed-objects"></a>Schnittstellen in verteilten Objekten
 
-Bei der verteilten Verarbeitung ist eine Schnittstelle eine Auflistung von Definitionen und Remote Funktionen, die zwei oder mehr Programmen die Interaktion zwischen verschiedenen Kontexten ermöglicht. In einer RPC-Anwendung gibt eine Schnittstelle Folgendes an:
+Beim verteilten Computing ist eine Schnittstelle eine Sammlung von Definitionen und Remotefunktionen, die es zwei oder mehr Programmen ermöglicht, zwischen verschiedenen Kontexten zu arbeiten. In einer RPC-Anwendung gibt eine Schnittstelle Folgendes an:
 
--   Die Art und Weise, wie sich Client-und Server Anwendungen untereinander identifizieren.
--   Wie Daten zwischen Client und Server übertragen werden.
--   Remote Prozeduren, die von der Client Anwendung aufgerufen werden können.
--   Datentypen für die Parameter und Rückgabewerte der Remote Prozeduren.
+-   Wie sich Client- und Serveranwendungen gegenseitig identifizieren.
+-   Übertragen von Daten zwischen Client und Server
+-   Remoteprozeduren, die von der Clientanwendung aufgerufen werden können.
+-   Datentypen für die Parameter und Rückgabewerte der Remoteprozeduren.
 
-Der Microsoft Interface Definition Language (Mittelwert) dient zum Implementieren von Schnittstellen, die in verteilten Anwendungen verwendet werden. Mit mittlerer l kann eine Anwendung über eine oder mehrere Schnittstellen verfügen. Jede Schnittstelle gibt einen eindeutigen verteilten Vertrag zwischen den Client-und Serverprogrammen an. Anwendungen, die auf Remote Prozedur aufrufen (RPC), Component Object Model (com) und verteiltem Component Object Model (DCOM) basieren, geben ihre Schnittstellen mithilfe von "Mittel l" an.
+Der Microsoft Interface Definition Language (MIDL) dient zum Implementieren von Schnittstellen, die in verteilten Anwendungen verwendet werden. Mit MIDL kann eine Anwendung über eine Oder mehrere Schnittstellen verfügen. Jede Schnittstelle gibt einen eindeutigen verteilten Vertrag zwischen Client- und Serverprogrammen an. Anwendungen, die auf Remoteprozeduraufrufen (RPC), Component Object Model (COM) und Distributed Component Object Model (DCOM) basieren, geben ihre Schnittstellen mit MIDL an.
 
-"Mittel l" ähnelt C und C++ in vielerlei Hinsicht. Eine Übersicht über das Schreiben von Mittel l-Schnittstellen finden Sie unter [entwickeln der-Schnittstelle](/windows/desktop/Rpc/developing-the-interface).
+MIDL ähnelt C und C++ in vielerlei Hinsicht. Eine Übersicht über das Schreiben von MIDL-Schnittstellen finden Sie unter [Entwickeln der Schnittstelle](/windows/desktop/Rpc/developing-the-interface).
 
- 
+ 
 
- 
+ 

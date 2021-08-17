@@ -4,20 +4,20 @@ ms.assetid: FE44AA0E-1655-41A5-B716-895860AE4160
 title: IX509AttributeArchiveKeyHash-Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3260c6609c126e3e706861a9547074d8eb37c6e4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c1716e2f4930780e5f33729a747782bd36f33c7b6c12ed69b8544f8a0e03ad56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117777041"
 ---
 # <a name="ix509attributearchivekeyhash-properties"></a>IX509AttributeArchiveKeyHash-Eigenschaften
 
-Die [**IX509AttributeArchiveKeyHash**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributearchivekeyhash) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**IX509AttributeArchiveKeyHash-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributearchivekeyhash) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Verschlüsseltedkeyhashblob (Eigenschaft)**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509attributearchivekeyhash-get_encryptedkeyhashblob)
+-   [**EncryptedKeyHashBlob-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509attributearchivekeyhash-get_encryptedkeyhashblob)
 
  
 

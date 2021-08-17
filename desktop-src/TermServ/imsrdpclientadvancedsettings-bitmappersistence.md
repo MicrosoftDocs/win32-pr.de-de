@@ -1,10 +1,10 @@
 ---
-title: IMsRdpClientAdvancedSettings-BitmapPersistence-Eigenschaft
-description: Gibt an, ob die persistente Bitmapzwischenspeicherung verwendet werden soll. Das beständige Zwischenspeichern kann die Leistung verbessern, erfordert jedoch zusätzlichen Speicherplatz.
+title: IMsRdpClientAdvancedSettings BitmapPersistence-Eigenschaft
+description: Gibt an, ob persistente Bitmapzwischenspeicherung verwendet werden soll. Die persistente Zwischenspeicherung kann die Leistung verbessern, erfordert jedoch zusätzlichen Speicherplatz.
 ms.assetid: ffaa9277-9dd7-4b2a-9de5-009b7e8766bc
 ms.tgt_platform: multiple
 keywords:
-- BitmapPersistence-Remotedesktopdienste
+- BitmapPersistence-Eigenschaft Remotedesktopdienste
 - BitmapPersistence-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
 - IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , BitmapPersistence-Eigenschaft
 - BitmapPersistence-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
@@ -61,9 +61,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118353457"
 ---
-# <a name="imsrdpclientadvancedsettingsbitmappersistence-property"></a>IMsRdpClientAdvancedSettings::BitmapPersistence (Eigenschaft)
+# <a name="imsrdpclientadvancedsettingsbitmappersistence-property"></a>IMsRdpClientAdvancedSettings::BitmapPersistence-Eigenschaft
 
-Gibt an, ob die persistente Bitmapzwischenspeicherung verwendet werden soll. Das beständige Zwischenspeichern kann die Leistung verbessern, erfordert jedoch zusätzlichen Speicherplatz.
+Gibt an, ob persistente Bitmapzwischenspeicherung verwendet werden soll. Die persistente Zwischenspeicherung kann die Leistung verbessern, erfordert jedoch zusätzlichen Speicherplatz.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -84,7 +84,7 @@ HRESULT get_BitmapPersistence(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf 0 fest, um das Zwischenspeichern zu deaktivieren, oder legen Sie einen Wert ungleich 0 fest, um das Zwischenspeichern zu aktivieren.
+Legen Sie diesen Parameter auf 0 fest, um das Zwischenspeichern zu deaktivieren, oder einen Wert ungleich null, um das Zwischenspeichern zu aktivieren.
 
 > [!Note]  
 > Der Rechtschreibfehler im Namen des Parameters befindet sich in der freigegebenen Version des Steuerelements.
@@ -93,11 +93,11 @@ Legen Sie diesen Parameter auf 0 fest, um das Zwischenspeichern zu deaktivieren,
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **S \_ OK zurück,** wenn erfolgreich.
+Gibt bei Erfolg **S \_ OK** zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 

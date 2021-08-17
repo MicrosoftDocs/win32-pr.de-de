@@ -1,7 +1,7 @@
 ---
-description: Die addprintprovidor-Funktion installiert einen lokalen Druckanbieter und verknüpft die Konfigurations-, Daten-und Anbieter Dateien.
+description: Die AddPrintProvidor-Funktion installiert einen lokalen Druckanbieter und verknüpft die Konfigurations-, Daten- und Anbieterdateien.
 ms.assetid: f34549c3-0474-48ba-9307-5b36f02dbe1c
-title: Addprintprovidor-Funktion (winspool. h)
+title: AddPrintProvidor-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - Winspool.drv
-ms.openlocfilehash: adf5f914046eb82e070e3e9915325989ff868d1e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca968397441765455e74059201c128be53f50916e5e28212c700078f52124fe8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106362451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117868735"
 ---
-# <a name="addprintprovidor-function"></a>Addprintprovidor-Funktion
+# <a name="addprintprovidor-function"></a>AddPrintProvidor-Funktion
 
-Die **addprintprovidor** -Funktion installiert einen lokalen Druckanbieter und verknüpft die Konfigurations-, Daten-und Anbieter Dateien.
+Die **AddPrintProvidor-Funktion** installiert einen lokalen Druckanbieter und verknüpft die Konfigurations-, Daten- und Anbieterdateien.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ BOOL AddPrintProvidor(
 
 <dl> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Servers angibt, auf dem der Anbieter installiert werden soll. Für Systeme, die nur die lokale Installation von Anbietern unterstützen, sollte dieser Parameter **null** sein.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Namen des Servers angibt, auf dem der Anbieter installiert werden soll. Für Systeme, die nur die lokale Installation von Anbietern unterstützen, sollte dieser Parameter **NULL sein.**
 
 </dd> <dt>
 
-*Ebene* \[ in\]
+*Ebene* \[ In\]
 </dt> <dd>
 
-Die Ebene der-Struktur, auf die *pproviderinfo* verweist. Dies kann einer der folgenden sein:
+Die Ebene der -Struktur, auf die *pProviderInfo* zeigt. Dies kann einer der folgenden Sein.
 
 
 
 | Wert                                                                                                | Bedeutung                                                                            |
 |------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Die Funktion verwendet eine [**providor \_ Info \_ 1**](providor-info-1.md) -Struktur.<br/> |
-| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Die Funktion verwendet eine [**providor \_ Info \_ 2**](providor-info-2.md) -Struktur.<br/> |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Die Funktion verwendet eine [**PROVIDOR \_ INFO \_ 1-Struktur.**](providor-info-1.md)<br/> |
+| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Die Funktion verwendet eine [**PROVIDOR \_ INFO \_ 2-Struktur.**](providor-info-2.md)<br/> |
 
 
 
@@ -68,29 +68,29 @@ Die Ebene der-Struktur, auf die *pproviderinfo* verweist. Dies kann einer der fo
 
 </dd> <dt>
 
-*pproviderinfo* \[ in\]
+*pProviderInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Druckanbieter Struktur, wie nach *Ebene* angegeben.
+Ein Zeiger auf eine Druckanbieterstruktur, wie durch Ebene *angegeben.*
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Wert ungleich 0 (null).
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Wert ungleich 0 (null).
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
-Bevor eine Anwendung die **addprintprovidor** -Funktion aufruft, müssen alle vom Anbieter benötigten Dateien in das Verzeichnis "System32" kopiert werden.
+Bevor eine Anwendung die **AddPrintProvidor-Funktion** aufruft, müssen alle vom Anbieter benötigten Dateien in das Verzeichnis SYSTEM32 kopiert werden.
 
-Ein von **addprintprovidor** hinzugefügter Anbieter kann entfernt werden, indem [**deleteprintprovidor**](deleteprintprovidor.md)aufgerufen wird.
+Ein von **AddPrintProvidor hinzugefügter** Anbieter kann durch Aufrufen von [**DeletePrintProvidor entfernt werden.**](deleteprintprovidor.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,14 +100,14 @@ Ein von **addprintprovidor** hinzugefügter Anbieter kann entfernt werden, indem
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Addprintprovidorw** (Unicode) und **addprintprovidora** (ANSI)<br/>                               |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **AddPrintProvidorW** (Unicode) und **AddPrintProvidorA** (ANSI)<br/>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -117,13 +117,13 @@ Ein von **addprintprovidor** hinzugefügter Anbieter kann entfernt werden, indem
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**Deleteprintprovidor**](deleteprintprovidor.md)
+[**DeletePrintProvidor**](deleteprintprovidor.md)
 </dt> <dt>
 
-[**Providor- \_ Info \_ 1**](providor-info-1.md)
+[**PROVIDOR \_ INFO \_ 1**](providor-info-1.md)
 </dt> <dt>
 
-[**Providor- \_ Info \_ 2**](providor-info-2.md)
+[**PROVIDOR \_ INFO \_ 2**](providor-info-2.md)
 </dt> </dl>
 
  

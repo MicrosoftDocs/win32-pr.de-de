@@ -3,7 +3,7 @@ title: Rwbuffer
 description: Ein Lese-/Schreibpuffer.
 ms.assetid: e9b60e63-5b2b-4f45-834b-269e692ba84c
 keywords:
-- Rwbuffer HLSL
+- RWBuffer HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 765634da85fb74f2d3a3591bfe4767ccee1a80c8
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 88992a60148b58e4a252770c2be65625130378d56837a8c8c93958b57a9a3980
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117725175"
 ---
 # <a name="rwbuffer"></a>Rwbuffer
 
@@ -26,56 +26,56 @@ Ein Lese-/Schreibpuffer.
 
 
 
-| Methode                                                     | BESCHREIBUNG                            |
+| Methode                                                     | Beschreibung                            |
 |------------------------------------------------------------|----------------------------------------|
-| [**GetDimensions**](sm5-object-rwbuffer-getdimensions.md) | Ruft die Ressourcen Dimensionen ab.          |
-| [**Laden**](rwbuffer-load.md)                              | Ruft einen Wert in einem Puffer mit Lese-/Schreibzugriff ab. |
-| [**KOM\[\]**](sm5-object-rwbuffer-operatorindex.md)  | Gibt eine Ressourcen Variable zurück.           |
+| [**GetDimensions**](sm5-object-rwbuffer-getdimensions.md) | Ruft die Ressourcendimensionen ab.          |
+| [**Laden**](rwbuffer-load.md)                              | Ruft einen Wert in einem Lese-/Schreibpuffer ab. |
+| [**Operator\[\]**](sm5-object-rwbuffer-operatorindex.md)  | Gibt eine Ressourcenvariable zurück.           |
 
 
 
- 
+ 
 
-Eine Ressourcen Variable kann auch an einen ungeordneten oder Interlocked-Vorgang übermittelt werden.
+Eine Ressourcenvariable kann auch an jeden ungeordneten oder interlocked-Vorgang übergeben werden.
 
-**Rwbuffer** -Objekten kann die Speicher Klasse **globallycoherent** vorangestellt werden. Diese Speicher Klasse bewirkt, dass Speicherbarrieren und Synchronisierungen Daten über die gesamte GPU leeren, sodass andere Gruppen Schreibvorgänge sehen können. Ohne diesen Spezifizierer leert eine Speicherbarriere oder Synchronisierung eine UAV nur innerhalb der aktuellen Gruppe.
+**RWBuffer-Objekten** kann die speicherklasse **globallycoherent vorangestellt werden.** Diese Speicherklasse bewirkt Speicherbarrieren und Synchronisierungen, um Daten über die gesamte GPU zu leeren, damit andere Gruppen Schreibvorgänge sehen können. Ohne diesen Bezeichner leert eine Speicherbarriere oder Synchronisierung einen UAV nur innerhalb der aktuellen Gruppe.
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Dieses Objekt wird in den folgenden shadermodellen unterstützt.
+Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Dieses Objekt wird für die folgenden Typen von Shadern unterstützt:
+Dieses Objekt wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Shader Model 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
+[ShaderModell 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

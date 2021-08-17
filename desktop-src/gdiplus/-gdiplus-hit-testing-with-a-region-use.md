@@ -1,19 +1,19 @@
 ---
-description: Der Zweck von Treffer Tests besteht darin, zu bestimmen, ob sich der Cursor über einem bestimmten Objekt befindet, z. b. ein Symbol oder eine Schaltfläche.
+description: Der Zweck von Treffertests besteht darin, zu bestimmen, ob sich der Cursor über einem bestimmten Objekt befindet, z. B. einem Symbol oder einer Schaltfläche.
 ms.assetid: 9776b73e-191e-4a8e-9abe-e485ffed954c
-title: Treffer Tests mit einer Region
+title: Treffertests mit einer Region
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 24913d8d890e3e1ded87eb48e2d52f1726663a03
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ff0673466bc368c9288765b1c7e6f460716d8d40674802a0977690a7ef79b58b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994215"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117885398"
 ---
-# <a name="hit-testing-with-a-region"></a>Treffer Tests mit einer Region
+# <a name="hit-testing-with-a-region"></a>Treffertests mit einer Region
 
-Der Zweck von Treffer Tests besteht darin, zu bestimmen, ob sich der Cursor über einem bestimmten Objekt befindet, z. b. ein Symbol oder eine Schaltfläche. Im folgenden Beispiel wird ein Plus förmiger Bereich erstellt, indem die Union zweier rechteckiger Bereiche gebildet wird. Angenommen, der Variable **Punkt** enthält den Speicherort des letzten Click. Der Code prüft, ob der **Punkt** im Plus-förmigen Bereich ist. Wenn sich der **Punkt** in der Region (einem Treffer) befindet, wird der Bereich mit einem nicht transparenten roten Pinsel gefüllt. Andernfalls wird der Bereich mit einem semitransparenten roten Pinsel gefüllt.
+Der Zweck von Treffertests besteht darin, zu bestimmen, ob sich der Cursor über einem bestimmten Objekt befindet, z. B. einem Symbol oder einer Schaltfläche. Im folgenden Beispiel wird ein plusförmiger Bereich erstellt, indem die Vereinigung zweier rechteckiger Bereiche gebildet wird. Angenommen, der **Variablenpunkt** enthält den Speicherort des letzten Klicks. Der Code überprüft, ob sich **der Punkt** im plusförmigen Bereich befindet. Wenn **sich der Punkt** im Bereich befindet (ein Treffer), wird der Bereich mit einem nicht transparenten roten Pinsel gefüllt. Andernfalls wird der Bereich mit einem halbtransparenten roten Pinsel gefüllt.
 
 
 ```

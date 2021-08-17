@@ -13,14 +13,14 @@ ms.locfileid: "118346182"
 ---
 # <a name="vml-visibility-attribute"></a>VML-Sichtbarkeitsattribut
 
-In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
  
 
-Bestimmt, ob eine Form angezeigt wird. Lese-/Schreibzugriff. **Zeichenfolge**.
+Bestimmt, ob eine Form angezeigt wird. Lese-/Schreibzugriff. **Zeichenfolge.**
 
 **Gilt für**
 
@@ -34,11 +34,11 @@ Bestimmt, ob eine Form angezeigt wird. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 *element* .style.visibility="*expression*"
 
-*expression* = *.style.visibility-Element*
+*expression* = *Element*.style.visibility
 
 **Anmerkungen**
 
-Das **Visibility-Attribut** ähnelt dem HTML-Sichtbarkeitsstandardattribut für Stile. 
+Das **Visibility-Attribut** ähnelt dem STANDARDMÄßIGEN **HTML-Sichtbarkeitsattribut** für Stile.
 
 Mögliche Werte:
 
@@ -47,9 +47,9 @@ Mögliche Werte:
 | Wert    | BESCHREIBUNG                                                                                                                                                                             |
 |----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | visible  | Die Form ist sichtbar.                                                                                                                                                                   |
-| hidden   | Die Form ist nicht sichtbar, ist aber immer noch Teil des Flusses der Objekte im Browser. Mausereignisse werden nicht verarbeitet.                                                                  |
-| inherit  | Standard. Der Sichtbarkeitszustand wird vom übergeordneten Element der Form geerbt. Microsoft Office Anwendungen nur **erben** und **ausgeblendet** verwenden; alle anderen Werte werden zugeordnet, um zu **erben.** |
-| Reduzieren | Wird für grafische Bearbeitungsanwendungen verwendet, die Gruppen von Formen reduzieren können. z. B. Konturen.                                                                                     |
+| hidden   | Die Form ist nicht sichtbar, ist aber weiterhin Teil des Flusses der Objekte im Browser. Mausereignisse werden nicht verarbeitet.                                                                  |
+| inherit  | Standard. Der Sichtbarkeitszustand wird vom übergeordneten Element der Form geerbt. Microsoft Office Anwendungen verwenden nur **erben** und **ausgeblendet.** alle anderen Werte werden zugeordnet, um zu **erben.** |
+| Reduzieren | Wird für grafische Bearbeitungsanwendungen verwendet, die Gruppen von Formen reduzieren können. z. B. Gliederungen.                                                                                     |
 
 
 
@@ -59,7 +59,7 @@ Mögliche Werte:
 
 **Beispiel**
 
-Der folgende Code erstellt eine Form, macht sie jedoch ausgeblendet. Andere Objekte im Dokument werden um ihn herum fließen, sodass ein Leerzeichen die gleiche Größe wie die Form hat.
+Mit dem folgenden Code wird eine Form erstellt, aber ausgeblendet. Andere Objekte im Dokument werden um ihn herum fließen, und ein Raum bleibt die gleiche Größe wie die Form.
 
 
 ```HTML
@@ -70,7 +70,7 @@ Der folgende Code erstellt eine Form, macht sie jedoch ausgeblendet. Andere Obje
 
 
 
-[Visibility-Attribut – Beispiel.](/previous-versions/bb264100(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[Sichtbarkeitsattribut – Beispiel.](/previous-versions/bb264100(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
  
 

@@ -1,19 +1,19 @@
 ---
-description: Das- <folderType> Element gibt die GUID für den Ordnertyp an. Dieses Element ist erforderlich, wenn das- <templateInfo> Element vorhanden ist. Sie verfügt über keine Attribute und keine untergeordneten Elemente.
+description: Das <folderType> -Element gibt die GUID für den Ordnertyp an. Dieses Element ist erforderlich, wenn das <templateInfo> Element vorhanden ist. Es verfügt über keine Attribute und keine untergeordneten Elemente.
 ms.assetid: 2361bbf5-adeb-4189-a8ff-5fdd1c9b0ec6
-title: foldertype-Element (Suchconnector-Schema)
+title: folderType-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f7d2a9e7f83dbe225427a8370cd8f5e948a46cc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4c6b9d5682a85126a467c051b9f1103a4ac10f2f6936cc24dd4438a5f8c75d44
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484403"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117862599"
 ---
-# <a name="foldertype-element-search-connector-schema"></a>foldertype-Element (Suchconnector-Schema)
+# <a name="foldertype-element-search-connector-schema"></a>folderType-Element (Search Connector Schema)
 
-Das- <folderType> Element gibt die GUID für den Ordnertyp an. Dieses Element ist erforderlich, wenn das- <templateInfo> Element vorhanden ist. Sie verfügt über keine Attribute und keine untergeordneten Elemente.
+Das <folderType> -Element gibt die GUID für den Ordnertyp an. Dieses Element ist erforderlich, wenn das <templateInfo> Element vorhanden ist. Es verfügt über keine Attribute und keine untergeordneten Elemente.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,17 +37,17 @@ Das- <folderType> Element gibt die GUID für den Ordnertyp an. Dieses Element is
 
 | Übergeordnetes Element                                                                         | Untergeordnete Elemente |
 |----------------------------------------------------------------------------------------|----------------|
-| [templateingefo-Element (Suchconnector-Schema)](search-schema-sconn-templateinfo.md) |                |
+| [templateInfo-Element (Connectorschema suchen)](search-schema-sconn-templateinfo.md) |                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Standard-GUID ist {8faf9629-1980-46ff-8023-9dceab9c3ee3}, ein allgemeiner Ordnertyp für Verbund Suchconnectors (OpenSearch).
+Die Standard-GUID ist {8FAF9629-1980-46FF-8023-9DCEAB9C3EE3}, ein allgemeiner Ordnertyp für Connectors für die Verbundsuche (OpenSearch).
 
-## <a name="example-of-a-foldertype-element"></a>Beispiel für ein foldertype-Element
+## <a name="example-of-a-foldertype-element"></a>Beispiel für ein folderType-Element
 
 
 ```

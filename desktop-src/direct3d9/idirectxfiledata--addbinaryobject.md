@@ -1,5 +1,5 @@
 ---
-description: Erstellt ein binäres -Objekt und fügt es als untergeordnetes Objekt hinzu. Veraltet.
+description: Erstellt ein binäres -Objekt und fügt es als untergeordnetes -Objekt hinzu. Veraltet.
 ms.assetid: 6164951d-dd87-4318-ac08-b97c22f58d45
 title: IDirectXFileData::AddBinaryObject-Methode (DXFile.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "117728976"
 ---
 # <a name="idirectxfiledataaddbinaryobject-method"></a>IDirectXFileData::AddBinaryObject-Methode
 
-Erstellt ein binäres -Objekt und fügt es als untergeordnetes Objekt hinzu. Veraltet.
+Erstellt ein binäres -Objekt und fügt es als untergeordnetes -Objekt hinzu. Veraltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ HRESULT AddBinaryObject(
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf den Namen des Objekts. Geben **Sie NULL** an, wenn das Objekt keinen Namen benötigt.
+Zeiger auf den Namen des Objekts. Geben Sie **NULL** an, wenn das Objekt keinen Namen benötigt.
 
 </dd> <dt>
 
@@ -58,7 +58,7 @@ Zeiger auf den Namen des Objekts. Geben **Sie NULL** an, wenn das Objekt keinen 
 
 Typ: **const [**GUID**](guid.md) \***
 
-Zeiger auf die GUID, die das Objekt darstellt. Geben **Sie NULL** an, wenn das Objekt keine GUID benötigt.
+Zeiger auf die GUID, die das Objekt darstellt. Geben Sie **NULL** an, wenn das Objekt keine GUID benötigt.
 
 </dd> <dt>
 
@@ -85,7 +85,7 @@ Zeiger auf die Daten des Objekts.
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Die Größe des Puffers, auf den pvData zeigt, in Bytes.
+Größe des Puffers, auf den pvData zeigt, in Bytes.
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Die Größe des Puffers, auf den pvData zeigt, in Bytes.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert DXFILE \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Werte sein. DXFILEERR \_ BADALLOC DXFILEERR \_ BADVALUE
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert DXFILE \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein. DXFILEERR \_ BADALLOC DXFILEERR \_ BADVALUE
 
 ## <a name="requirements"></a>Anforderungen
 

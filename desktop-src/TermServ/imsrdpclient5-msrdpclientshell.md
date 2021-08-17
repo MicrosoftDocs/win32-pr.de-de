@@ -1,22 +1,22 @@
 ---
-title: IMsRdpClient5 msrdpclientshell (Eigenschaft)
-description: Ruft die Skript fähige-Client Einstellungs Schnittstelle imsrdpclientshell ab.
+title: IMsRdpClient5 MsRdpClientShell-Eigenschaft
+description: Ruft die skriptfähige Clienteinstellungsschnittstelle IMsRdpClientShell ab.
 ms.assetid: cc56cec4-779d-4b51-8e94-ae0dd9bae997
 ms.tgt_platform: multiple
 keywords:
-- Msrdpclientshell-Eigenschaft Remotedesktopdienste
-- Msrdpclientshell-Eigenschaft Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5 Interface Remotedesktopdienste, msrdpclientshell (Eigenschaft)
-- Msrdpclientshell-Eigenschaft Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6 Interface Remotedesktopdienste, msrdpclientshell (Eigenschaft)
-- Msrdpclientshell-Eigenschaft Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7 Interface Remotedesktopdienste, msrdpclientshell (Eigenschaft)
-- Msrdpclientshell-Eigenschaft Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8 Interface Remotedesktopdienste, msrdpclientshell (Eigenschaft)
-- Msrdpclientshell-Eigenschaft Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9 Interface Remotedesktopdienste, msrdpclientshell (Eigenschaft)
-- Msrdpclientshell-Eigenschaft Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10 Interface Remotedesktopdienste, msrdpclientshell (Eigenschaft)
+- MsRdpClientShell-Eigenschaft Remotedesktopdienste
+- MsRdpClientShell-Eigenschaft Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , MsRdpClientShell-Eigenschaft
+- MsRdpClientShell-Eigenschaft Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , MsRdpClientShell-Eigenschaft
+- MsRdpClientShell-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , MsRdpClientShell-Eigenschaft
+- MsRdpClientShell-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , MsRdpClientShell-Eigenschaft
+- MsRdpClientShell-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , MsRdpClientShell-Eigenschaft
+- MsRdpClientShell-Eigenschaft Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , MsRdpClientShell-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -38,16 +38,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 46129dc4736b50e8b6a650cc7a59f9b238da56e2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f56b403bb5fd754e95786c2a1d4012ccbbacd3e103b1ee02fbf290ff05d30d3a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117942042"
 ---
-# <a name="imsrdpclient5msrdpclientshell-property"></a>IMsRdpClient5:: msrdpclientshell (Eigenschaft)
+# <a name="imsrdpclient5msrdpclientshell-property"></a>IMsRdpClient5::MsRdpClientShell-Eigenschaft
 
-Ruft die Skript fähige-Client Einstellungs Schnittstelle [**imsrdpclientshell**](imsrdpclientshell.md)ab.
+Ruft die Skripterstellungsclienteinstellungsschnittstelle [**IMsRdpClientShell**](imsrdpclientshell.md)ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -64,7 +64,7 @@ HRESULT get_MsRdpClientShell(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein [**imsrdpclientshell**](imsrdpclientshell.md) -Schnittstellen Zeiger.
+Ein [**IMsRdpClientShell-Schnittstellenzeiger.**](imsrdpclientshell.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,11 +76,11 @@ Ein [**imsrdpclientshell**](imsrdpclientshell.md) -Schnittstellen Zeiger.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IMsRdpClient5 ist als 4eb5335b-6429-477d-B922-e06a28ecd8bf definiert.<br/>       |
+| IID<br/>                      | IID \_ IMsRdpClient5 ist als 4eb5335b-6429-477d-b922-e06a28ecd8bf definiert.<br/>       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

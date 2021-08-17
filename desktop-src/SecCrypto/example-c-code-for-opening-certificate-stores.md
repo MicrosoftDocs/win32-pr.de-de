@@ -1,21 +1,21 @@
 ---
-description: In den folgenden Beispielen wird Code zum Öffnen einer Vielzahl allgemeiner Zertifikat Speicher bereitgestellt. Bei diesen Beispielen handelt es sich um eine Reihe von Code Fragmenten, die keine eigenständigen Programme sind.
+description: Die folgenden Beispiele enthalten Code zum Öffnen einer Vielzahl gängiger Zertifikatspeicher. Bei diesen Beispielen handelt es sich um eine Reihe von Codefragmenten, die keine eigenständigen Programme sind.
 ms.assetid: 975a56d1-aa45-470e-b385-753baa1911ff
-title: Beispiel-C-Code zum Öffnen von Zertifikat speichern
+title: C-Beispielcode zum Öffnen von Zertifikatspeichern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e7ebf767fd98b4edca956bf338402ddd14efc26f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3fc54577894c064e855396942139122678808307ee14a4f24474a25e2153ce6f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862847"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117766061"
 ---
-# <a name="example-c-code-for-opening-certificate-stores"></a>Beispiel-C-Code zum Öffnen von Zertifikat speichern
+# <a name="example-c-code-for-opening-certificate-stores"></a>C-Beispielcode zum Öffnen von Zertifikatspeichern
 
-In den folgenden Beispielen wird Code zum Öffnen einer Vielzahl allgemeiner Zertifikat Speicher bereitgestellt. Bei diesen Beispielen handelt es sich um eine Reihe von Code Fragmenten, die keine eigenständigen Programme sind.
+Die folgenden Beispiele enthalten Code zum Öffnen einer Vielzahl gängiger Zertifikatspeicher. Bei diesen Beispielen handelt es sich um eine Reihe von Codefragmenten, die keine eigenständigen Programme sind.
 
-Im folgenden Beispiel wird der eigene Systemspeicher geöffnet.
+Im folgenden Beispiel wird der Speicher Mein System geöffnet.
 
 
 ```C++
@@ -50,7 +50,7 @@ else
 
 
 
-Im folgenden Beispiel wird ein Speicher Speicher geöffnet.
+Im folgenden Beispiel wird ein Speicher für den Arbeitsspeicher geöffnet.
 
 
 ```C++
@@ -78,7 +78,7 @@ else
 
 
 
-Im folgenden Beispiel wird ein Speicher vom Datenträger geöffnet. Im Beispiel wird die im Thema [Creating a DACL](../secbp/creating-a-dacl.md) definierte Funktion "-Funktion" verwendet, um sicherzustellen, **dass die geöffnete** Datei mit einer ordnungsgemäßen DACL erstellt wird.
+Im folgenden Beispiel wird ein Speicher auf dem Datenträger geöffnet. Im Beispiel wird die **CreateMyDACL-Funktion** verwendet, die im Thema Erstellen einer [DACL](../secbp/creating-a-dacl.md) definiert ist, um sicherzustellen, dass die geöffnete Datei mit einer ordnungsgemäßen DACL erstellt wird.
 
 
 ```C++
@@ -164,7 +164,7 @@ if(!(CloseHandle(hFile)))
 
 
 
-Im folgenden Beispiel wird ein Datei basierter Speicher mit dem Datei \_ Namen des Zertifikat Speicher \_ Prov geöffnet \_ .
+Im folgenden Beispiel wird ein dateibasierter Speicher mit CERT \_ STORE \_ PROV \_ FILENAME geöffnet.
 
 
 ```C++
@@ -212,7 +212,7 @@ else
 
 
 
-Im folgenden Beispiel wird ein Sammlungs Speicher geöffnet.
+Im folgenden Beispiel wird ein Sammlungsspeicher geöffnet.
 
 
 ```C++
@@ -292,7 +292,7 @@ if(!(CertCloseStore(hCollectionStoreHandle, 0)))
 
 
 
-Im folgenden Beispiel wird ein Register Speicher geöffnet.
+Im folgenden Beispiel wird ein Registerspeicher geöffnet.
 
 
 ```C++
@@ -320,7 +320,7 @@ if(!(CertCloseStore(hRegStore, 0)))
 
 
 
-Im folgenden Beispiel wird ein Zertifikat Speicher auf der Grundlage einer PKCS \# 7-Nachricht geöffnet.
+Im folgenden Beispiel wird ein Zertifikatspeicher geöffnet, der auf einer PKCS \# 7-Nachricht basiert.
 
 
 ```C++

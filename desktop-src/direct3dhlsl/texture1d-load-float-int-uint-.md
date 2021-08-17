@@ -1,9 +1,9 @@
 ---
-title: 'Texture1D:: Load (int, int, uint)-Funktion'
-description: 'Liest Textur Daten und gibt den Status des Vorgangs zurück. | Texture1D:: Load (int, int, uint)-Funktion'
+title: Texture1D::Load(int,int,uint)-Funktion
+description: Liest Texturdaten und gibt den Status des Vorgangs zurück. | Texture1D::Load(int,int,uint)-Funktion
 ms.assetid: 5C489CBD-E4F6-4CB5-8E7E-EC34633D75B0
 keywords:
-- Ladefunktion HLSL
+- Load-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0c7733ab4802037d83dbb2b4ce523ff7bb57f729
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
-ms.translationtype: HT
+ms.openlocfilehash: b266ad13c050073aeb62497d9833b1f2666e70f2f32f2f9de5099cf4bee29517
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117722991"
 ---
-# <a name="texture1dloadintintuint-function"></a>Texture1D:: Load (int, int, uint)-Funktion
+# <a name="texture1dloadintintuint-function"></a>Texture1D::Load(int,int,uint)-Funktion
 
-Liest Textur Daten und gibt den Status des Vorgangs zurück.
+Liest Texturdaten und gibt den Status des Vorgangs zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ Liest Textur Daten und gibt den Status des Vorgangs zurück.
 
 <dl> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **int**
@@ -50,21 +50,21 @@ Texturkoordinaten
 
 </dd> <dt>
 
-*Offset* \[ in\]
+*Offset* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Ein Offset, der vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Ein Offset, der vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Status* \[ vorgenommen\]
+*Status* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übergeben Sie stattdessen den Status an die systeminterne [**checkaccessfullymapping**](checkaccessfullymapped.md) -Funktion. **Checkaccessfullymapping** gibt **true** zurück, wenn alle Werte aus dem entsprechenden **Sample**-, **Gather**-oder **Load** -Vorgang auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte von einer nicht zugeordneten Kachel entnommen wurden, gibt **checkaccessfullymapping** den Wert **false** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die systeminterne [**CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE** zurück, wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte aus einer nicht zugeordneten Kachel stammen, gibt **CheckAccessFullyMapped** **FALSE** zurück.
 
 </dd> </dl>
 
@@ -72,15 +72,15 @@ Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übe
 
 Typ:
 
-Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**Texture1D**](sm5-object-texture1d.md) -Objekt.
+Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**Texture1D-Objekt.**](sm5-object-texture1d.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -92,7 +92,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Lade Methoden](texture1d-load.md)
+[Laden von Methoden](texture1d-load.md)
 </dt> <dt>
 
 [**Texture1D**](sm5-object-texture1d.md)

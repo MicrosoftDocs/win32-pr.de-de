@@ -1,5 +1,5 @@
 ---
-description: Der Literalwertvergleich verwendet Standardvergleichsoperatoren, um eine einwertige Spalte mit einem Literalwert abzugleichen.
+description: Der Literalwertvergleich verwendet Standardvergleichsoperatoren, um eine einwertige Spalte mit einem Literalwert zu vergleichen.
 ms.assetid: 941298b4-d703-4b3f-8bde-0e6e158560df
 title: Literalwertvergleich
 ms.topic: article
@@ -13,9 +13,9 @@ ms.locfileid: "118227175"
 ---
 # <a name="literal-value-comparison"></a>Literalwertvergleich
 
-Der Literalwertvergleich verwendet Standardvergleichsoperatoren, um eine einwertige Spalte mit einem [Literalwert](-search-sql-literals.md) abzugleichen. Informationen zum Vergleichen mehrwertiger Spalten finden Sie unter [Arrayvergleiche mit mehreren Werten.](-search-sql-multivaluedcomparisons.md)
+Der Literalwertvergleich verwendet Standardvergleichsoperatoren, um eine einwertige Spalte mit einem [Literalwert zu](-search-sql-literals.md) vergleichen. Informationen zum Vergleichen mehrwertigen Spalten finden Sie unter [Multi-Valued (ARRAY) Comparisons](-search-sql-multivaluedcomparisons.md).
 
-Das Literalwertvergleichsprädikat weist die folgende Syntax auf:
+Das Vergleichs prädikat für Literalwerte hat die folgende Syntax:
 
 
 ```
@@ -29,9 +29,9 @@ Das Literalwertvergleichsprädikat weist die folgende Syntax auf:
 
  
 
-Der Spaltenteil ist eine beliebige gültige Eigenschaftenspalte und kann bei Bedarf in einen anderen Typ typisiert werden. Optional können Sie den Spaltennamen aus Gründen der Lesbarkeit in doppelte Anführungszeichen einschließen, ohne die Funktionalität zu beeinträchtigen. Weitere Informationen finden Sie unter [Umwandeln des Datentyps einer Spalte.](-search-sql-castingdatacolumntype.md)
+Der Spaltenteil ist eine beliebige gültige Eigenschaftsspalte und kann bei Bedarf in einen anderen Typumsetzungen verwendet werden. Optional können Sie den Spaltennamen zur Lesbarkeit in doppelte Anführungszeichen umschließen, ohne die Funktionalität zu beeinträchtigen. Weitere Informationen finden Sie unter [Umwandlung des Datentyps einer Spalte.](-search-sql-castingdatacolumntype.md)
 
-Das Literal kann ein beliebiges Zeichenfolgenliteral, numerisches, hexadezimales, boolesches oder Datumsliteral sein, das in einfache Anführungszeichen eingeschlossen ist. Es werden nur genaue Übereinstimmungen erkannt, und Platzhalterzeichen werden ignoriert. Das Literal kann auch in einen anderen Typ typisiert werden.
+Das Literal kann ein beliebiges Zeichenfolgen-, numerisches, hexadezimales, boolesches oder Datumsliteral sein, das in einfache Anführungszeichen eingeschlossen ist. Es werden nur genaue Übereinstimmungen erkannt, und Platzhalterzeichen werden ignoriert. Das Literal kann auch in einen anderen Typ cast werden.
 
 ## <a name="comparison-operators"></a>Vergleichsoperatoren
 
@@ -54,7 +54,7 @@ In der folgenden Tabelle werden die unterstützten Vergleichsoperatoren beschrie
 
  
 
-In Verbindung mit dem Operator "=" unterstützt Windows Search strukturierte Abfragesprache (SQL) die Verwendung der Schlüsselwörter BEFORE und AFTER, die angeben, ob die Abfrage Spaltenwerte vor oder nach einem angegebenen Wert in der Sortierreihenfolge des Wörterbuchs vergleichen soll.
+In Verbindung mit dem Operator "=" unterstützt Windows Search strukturierte Abfragesprache (SQL) die Verwendung der Schlüsselwörter BEFORE und AFTER, die angeben, ob die Abfrage Spaltenwerte vor oder nach einem angegebenen Wert in der Wörterbuchsortierreihenfolge vergleichen soll.
 
 
 ```
@@ -65,7 +65,7 @@ In Verbindung mit dem Operator "=" unterstützt Windows Search strukturierte Abf
 
 ## <a name="examples"></a>Beispiele
 
-Im Folgenden sind Beispiele für das Vergleichsprädikat für Literalwerte aufgeführt.
+Im Folgenden finden Sie Beispiele für das Literalwertvergleichs-Prädikat.
 
 
 ```
@@ -106,10 +106,10 @@ SELECT System.ItemUrl,System.ItemNameDisplay FROM SystemIndex
 **Konzeptionellen**
 </dt> <dt>
 
-[Volltextprädikate](-search-sql-fulltextpredicates.md)
+[Volltext-Prädikate](-search-sql-fulltextpredicates.md)
 </dt> <dt>
 
-[Nicht-Volltextprädikate](-search-sql-nonfulltextpredicates.md)
+[Nicht-Volltext-Prädikate](-search-sql-nonfulltextpredicates.md)
 </dt> </dl>
 
  

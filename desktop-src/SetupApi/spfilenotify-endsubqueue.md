@@ -1,19 +1,19 @@
 ---
-description: Die spfilenotify \_ endsubqueue-Benachrichtigung wird an die Rückruffunktion gesendet, wenn die Warteschlange alle Vorgänge in der unter Warteschlange löschen, umbenennen oder kopieren abschließt.
+description: Die SPFILENOTIFY \_ ENDSUBQUEUE-Benachrichtigung wird an die Rückruffunktion gesendet, wenn die Warteschlange alle Vorgänge in der Unterwarteschlange zum Löschen, Umbenennen oder Kopieren abschließt.
 ms.assetid: 76bd027a-0f00-46e3-b502-0c97827308a8
-title: SPFILENOTIFY_ENDSUBQUEUE Meldung (Setupapi. h)
+title: SPFILENOTIFY_ENDSUBQUEUE Meldung (Setupapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a7eadc7546487b308313b7cb31088a22420e27af
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 72645aafbe94e3f90d11f8ccf65ed8c6006301db811bccd80936cadbf0478dcc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050518"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117964549"
 ---
-# <a name="spfilenotify_endsubqueue-message"></a>Spfilenotify- \_ endsubqueue-Nachricht
+# <a name="spfilenotify_endsubqueue-message"></a>SPFILENOTIFY \_ ENDSUBQUEUE-Nachricht
 
-Die **spfilenotify \_ endsubqueue** -Benachrichtigung wird an die Rückruffunktion gesendet, wenn die Warteschlange alle Vorgänge in der unter Warteschlange löschen, umbenennen oder kopieren abschließt.
+Die **SPFILENOTIFY \_ ENDSUBQUEUE-Benachrichtigung** wird an die Rückruffunktion gesendet, wenn die Warteschlange alle Vorgänge in der Unterwarteschlange zum Löschen, Umbenennen oder Kopieren abschließt.
 
 
 ```C++
@@ -32,7 +32,7 @@ SPFILENOTIFY_ENDSUBQUEUE
 *Param1* 
 </dt> <dd>
 
-Die unter Warteschlange wurde abgeschlossen. Dieser Parameter kann einer der folgenden Werte sein: fileOp \_ Delete, fileOp \_ Rename oder fileOp \_ Copy.
+Abgeschlossene Unterabfrage. Dieser Parameter kann einer der folgenden Werte sein: FILEOP \_ DELETE, FILEOP \_ RENAME oder FILEOP \_ COPY.
 
 </dd> <dt>
 
@@ -53,9 +53,9 @@ Der Rückgabewert wird ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Setupapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Setupapi.h</dt> </dl> |
 
 
 
@@ -69,10 +69,10 @@ Der Rückgabewert wird ignoriert.
 [Benachrichtigungen](notifications.md)
 </dt> <dt>
 
-[**Setupcommitfilequeue**](/windows/desktop/api/Setupapi/nf-setupapi-setupcommitfilequeuea)
+[**SetupCommitFileQueue**](/windows/desktop/api/Setupapi/nf-setupapi-setupcommitfilequeuea)
 </dt> <dt>
 
-[**Setupdefaultqueuecallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupdefaultqueuecallbacka)
+[**SetupDefaultQueueCallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupdefaultqueuecallbacka)
 </dt> </dl>
 
  

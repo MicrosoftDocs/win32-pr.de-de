@@ -1,7 +1,7 @@
 ---
-description: Verwendet effiziente Ray-Tracing in PRT-Simulationen (preberechneten Radiance Transfer), um zu bestimmen, ob ein Strahl ein Mesh schneidet. Wird normalerweise verwendet, um zu bestimmen, ob ein bestimmter Punkt im Schatten ist.
+description: Verwendet effiziente Ray-Tracing in PRT-Simulationen (Precomputed Radiance Transfer), um zu bestimmen, ob ein Strahl ein Gitter schneidet. Wird normalerweise verwendet, um zu bestimmen, ob sich ein angegebener Punkt im Schatten befindet.
 ms.assetid: fcd53a0f-80e8-4013-8efd-125e38f4ccd0
-title: 'ID3DXPRTEngine:: shadowrayintersekten-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::ShadowRayIntersects-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 701aa4c89ee6a9d657721d872565c9b2056bb435
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5064e788d89de6e5143ad826a4f61a4afd802931c6964193c8fa46626edf955d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050877"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117729594"
 ---
-# <a name="id3dxprtengineshadowrayintersects-method"></a>ID3DXPRTEngine:: shadowrayintersekten-Methode
+# <a name="id3dxprtengineshadowrayintersects-method"></a>ID3DXPRTEngine::ShadowRayIntersects-Methode
 
-Verwendet effiziente Ray-Tracing in PRT-Simulationen (preberechneten Radiance Transfer), um zu bestimmen, ob ein Strahl ein Mesh schneidet. Wird normalerweise verwendet, um zu bestimmen, ob ein bestimmter Punkt im Schatten ist.
+Verwendet effiziente Ray-Tracing in PRT-Simulationen (Precomputed Radiance Transfer), um zu bestimmen, ob ein Strahl ein Gitter schneidet. Wird normalerweise verwendet, um zu bestimmen, ob sich ein angegebener Punkt im Schatten befindet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,35 +41,35 @@ BOOL ShadowRayIntersects(
 
 <dl> <dt>
 
-" *praypos* \[ " in\]
+*pRayPos* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die den Punkt angibt, an dem das Ray beginnt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) wobei der Punkt angegeben wird, an dem der Strahl beginnt.
 
 </dd> <dt>
 
-" *praydir* \[ " in\]
+*pRayDir* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die die normalisierte Richtung des Strahls angibt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur**](d3dxvector3.md) unter Angabe der normalisierten Richtung des Strahls.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Gibt " **true** " zurück, wenn der Strahl das aktuelle Mesh überschneidet. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE zurück,** wenn der Strahl das aktuelle Gitter schneidet. andernfalls gibt **FALSE zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie [**ID3DXPRTEngine:: setminmaxschnittstrente**](id3dxprtengine--setminmaxintersection.md) , um den minimalen und maximalen Abstand der Schnittmenge mit dem Ray festzulegen.
+Verwenden [**Sie ID3DXPRTEngine::SetMinMaxIntersection,**](id3dxprtengine--setminmaxintersection.md) um minimale und maximale Schnittmengen mit dem Strahl zu setzen.
 
-Diese Methode wird schneller ausgeführt als [**ID3DXPRTEngine:: closestrayintersekten**](id3dxprtengine--closestrayintersects.md).
+Diese Methode wird schneller als [**ID3DXPRTEngine::ClosestRayIntersects ausgeführt.**](id3dxprtengine--closestrayintersects.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,22 +77,22 @@ Diese Methode wird schneller ausgeführt als [**ID3DXPRTEngine:: closestrayinter
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXPRTEngine](id3dxprtengine.md)
 </dt> <dt>
 
-[**ID3DXPRTEngine:: closestrayintersekten**](id3dxprtengine--closestrayintersects.md)
+[**ID3DXPRTEngine::ClosestRayIntersects**](id3dxprtengine--closestrayintersects.md)
 </dt> <dt>
 
-[**ID3DXPRTEngine:: setminmaxschnitt Menge**](id3dxprtengine--setminmaxintersection.md)
+[**ID3DXPRTEngine::SetMinMaxIntersection**](id3dxprtengine--setminmaxintersection.md)
 </dt> </dl>
 
  

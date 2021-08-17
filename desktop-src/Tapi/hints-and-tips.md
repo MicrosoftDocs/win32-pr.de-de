@@ -1,26 +1,26 @@
 ---
-description: Im folgenden finden Sie Hinweise und Tipps, die beim Schreiben einer Anwendung für TAPI 3 zu beachten sind.
+description: Im Folgenden sind Hinweise und Tipps, die Beim Schreiben einer Anwendung für TAPI 3 berücksichtigt werden sollten.
 ms.assetid: 55aae46a-af5c-4b6d-89fc-9063f078bcd6
 title: Hinweise und Tipps
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9202bdef97fb87b9f0736ed032b298af56917d8c
-ms.sourcegitcommit: 70f39ec77d19d3c32c376ee2831753d2cafae41a
+ms.openlocfilehash: 57d51e8c7e3f8c6e4a9e38b27fa5cfe4c10e45d37cfa67af095d573eea319614
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106363065"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117762933"
 ---
 # <a name="hints-and-tips"></a>Hinweise und Tipps
 
-Im folgenden finden Sie Hinweise und Tipps, die beim Schreiben einer Anwendung für TAPI 3 zu beachten sind:
+Im Folgenden sind Hinweise und Tipps zu beachten, wenn Sie eine Anwendung für TAPI 3 schreiben:
 
-1.  COM [**CoInitialize**](/windows/desktop/api/objbase/nf-objbase-coinitialize) erstellt indirekt Windows. Dies ist besonders wichtig für Apartment Threading. Wenn ein Thread Windows erstellt, muss er Nachrichten verarbeiten. Wenn Ihre Threads **CoInitialize** aufzurufen, führen Sie ein nachrichtenpump aus, um Probleme zu vermeiden. Beispielsweise könnte com das Marshalling ordnungsgemäß verhindern, oder Methoden für COM-Schnittstellen, wie z. **b. iglobalinterfacetable** , hängen möglicherweise auf.
+1.  COM [**CoInitialize**](/windows/desktop/api/objbase/nf-objbase-coinitialize) erstellt indirekt Fenster; dies ist besonders wichtig für Apartmentthreading. Wenn ein Thread Fenster erstellt, muss er Nachrichten verarbeiten. Wenn Ihre Threads **CoInitialize** aufrufen, führen Sie eine Nachrichtenpump aus, um Probleme zu vermeiden. Beispielsweise kann COM das Marshalling ordnungsgemäß beenden, oder Methoden in COM-Schnittstellen, z. **B. IGlobalInterfaceTable,** können hängen bleiben.
 
-    In Apartment Threading müssen Sie über ein nachrichtenpump verfügen, unabhängig davon, ob Sie auf Synchronisierungs Objekte warten. Dies ist besonders wichtig, wenn Sie über eine Konsolenanwendung verfügen oder ein lokales com-/Remote Server Objekt schreiben, das Apartment Thread ist (wobei keine Konsole oder GUI vorhanden ist, das Steuerelement aber nur im System ausgeführt wird).
+    Beim Apartmentthreading muss eine Nachrichtenpumpe vorhanden sein, unabhängig davon, ob Sie auf Synchronisierungsobjekte warten. Dies ist besonders wichtig, wenn Sie über eine Konsolenanwendung verfügen oder ein lokales COM-/Remoteserverobjekt schreiben, das im Apartmentthread ausgeführt wird (wenn Sie keine Konsole oder GUI haben, das Steuerelement jedoch nur im System ausgeführt wird).
 
     > [!Caution]  
-    > Beim Aufrufen der Warte-und Synchronisierungs Funktionen, z. b. " [**Sleep**](/windows/desktop/api/synchapi/nf-synchapi-sleep)", " [**WaitForMultipleObjects**](/windows/desktop/api/synchapi/nf-synchapi-waitformultipleobjects)", " [**WaitForMultipleObjectsEx**](/windows/desktop/api/synchapi/nf-synchapi-waitformultipleobjectsex)", " [**WaitForSingleObject**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)", " [**WaitForSingleObjectEx**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobjectex)" usw. Verwenden Sie stattdessen [**MsgWaitForMultipleObjects**](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) , und verarbeiten Sie die Nachrichten, oder verwenden Sie [**cowaitformultiplehandles**](/windows/desktop/api/combaseapi/nf-combaseapi-cowaitformultiplehandles), die automatisch erkennen, in welchem Apartment der Thread sich der Thread befindet (STA oder MTA) und entweder in einer für com modalen Schleife (if STA) oder in einem Block auf **WaitForMultipleObjects** (if MTA) warten. **MsgWaitForMultipleObjects** und **cowaitformultiplehandles** verarbeiten Windows-Meldungen auch gemäß den com-Regeln.
+    > Beim Aufrufen der Warte- und Synchronisierungsfunktionen wie [**Sleep,**](/windows/desktop/api/synchapi/nf-synchapi-sleep) [**WaitForMultipleObjects,**](/windows/desktop/api/synchapi/nf-synchapi-waitformultipleobjects) [**WaitForMultipleObjectsEx,**](/windows/desktop/api/synchapi/nf-synchapi-waitformultipleobjectsex) [**WaitForSingleObject,**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) [**WaitForSingleObjectEx**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobjectex)usw. Verwenden Sie stattdessen [**MsgWaitForMultipleObjects,**](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) und verarbeiten Sie die Nachrichten, oder verwenden Sie [**CoWaitForMultipleHandles**](/windows/desktop/api/combaseapi/nf-combaseapi-cowaitformultiplehandles), das automatisch erkennt, in welchem Apartmenttyp sich der Thread befindet (STA oder MTA) und entweder in einer modalen COM-Schleife (bei STA) oder auf **WaitForMultipleObjects** (bei MTA) wartet. **MsgWaitForMultipleObjects** und **CoWaitForMultipleHandles** verarbeiten auch Windows-Nachrichten gemäß den COM-Regeln.
 
      
 
@@ -45,11 +45,11 @@ Im folgenden finden Sie Hinweise und Tipps, die beim Schreiben einer Anwendung f
      }
     ```
 
-2.  **Ittapieventnotification:: Event** ist die Ereignis Funktion für apps, die in einem TAPI 3-Rückruf Thread aufgerufen wird.
+2.  **ITTAPIEventNotification::Event** ist die Ereignisfunktion der Apps, die in einem TAPI 3-Rückrufthread aufgerufen wird.
 
-    Führen Sie das minimal in der Ereignis Routine aus. Verwenden Sie stattdessen Ihren eigenen Thread, wenn möglich.
+    Gehen Sie in der Ereignisroutine so gering wie nötig vor. Verwenden Sie stattdessen nach Möglichkeit Ihren eigenen Thread.
 
-    Beachten Sie, dass das folgende Codebeispiel bereitgestellt wird. Dies ist jedoch keine Voraussetzung.
+    Beachten Sie, dass das folgende Codebeispiel bereitgestellt wird, aber keine Anforderung ist.
 
     ```syntax
     #include <windows.h>
@@ -81,7 +81,7 @@ Im folgenden finden Sie Hinweise und Tipps, die beim Schreiben einer Anwendung f
     }     
     ```
 
-3.  Bearbeiten Sie keine COM-Objekte nach dem Aufruf von " [**zählinitialisieren**](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize)". Die Ergebnisse sind unvorhersehbar und schädlich für eine fehlerfreie Anwendung. Einige Beispiele hierfür sind Arbeitsthreads und C++-Dekonstruktoren, die möglicherweise ausgeführt werden, nachdem die Anwendung die **Initialisierung** aufruft.
+3.  Bearbeiten Sie COM-Objekte nicht, nachdem [**Sie CoUninitialize**](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize)aufgerufen haben. Die Ergebnisse sind unvorhersehbar und schädlich für eine fehlerfreie Anwendung. Beispiele dafür sind Arbeitsthreads und C++-Destruktoren, die ausgeführt werden können, nachdem eine Anwendung **CoUninitialize aufruft.**
 
  
 

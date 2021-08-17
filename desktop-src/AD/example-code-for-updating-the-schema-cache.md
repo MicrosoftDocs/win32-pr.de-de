@@ -1,6 +1,6 @@
 ---
 title: Beispielcode zum Aktualisieren des Schemacaches
-description: Die folgenden C/C++-Funktionen erhalten den DNS-Namen des Schemamasters (GetSchemaMasterDNSName) und aktualisieren den Schemacache am Schemamaster (UpdateSchemaMasterCache).
+description: Die folgenden C/C++-Funktionen erhalten den DNS-Namen des Schemamasters (GetSchemaMasterDNSName) und aktualisieren den Schemacache auf dem Schemamaster (UpdateSchemaMasterCache).
 ms.assetid: e955588d-a92c-4406-a197-bb8c36329f88
 ms.tgt_platform: multiple
 keywords:
@@ -16,7 +16,7 @@ ms.locfileid: "118189791"
 ---
 # <a name="example-code-for-updating-the-schema-cache"></a>Beispielcode zum Aktualisieren des Schemacaches
 
-Die folgenden C/C++-Funktionen erhalten den DNS-Namen des Schemamasters (GetSchemaMasterDNSName) und aktualisieren den Schemacache am Schemamaster (UpdateSchemaMasterCache). Um diese Funktionen zu verwenden, rufen Sie GetSchemaMasterDNSName auf, um den DNS-Namen des Schemamasters abzurufen, übergeben Sie den DNS-Namen des Schemamasters an UpdateSchemaMasterCache, und rufen Sie CoTaskMemFree für die Zeichenfolge auf, die den DNS-Namen des Schemamasters enthält.
+Die folgenden C/C++-Funktionen erhalten den DNS-Namen des Schemamasters (GetSchemaMasterDNSName) und aktualisieren den Schemacache auf dem Schemamaster (UpdateSchemaMasterCache). Rufen Sie zum Verwenden dieser Funktionen GetSchemaMasterDNSName auf, um den DNS-Namen des Schemamasters zu erhalten, übergeben Sie den DNS-Namen des Schemamasters an UpdateSchemaMasterCache, und rufen Sie CoTaskMemFree für die Zeichenfolge auf, die den DNS-Namen des Schemamasters enthält.
 
 Weitere Informationen finden Sie unter [Aktualisieren des Schemacaches.](updating-the-schema-cache.md)
 

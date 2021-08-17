@@ -1,6 +1,6 @@
 ---
-description: Diese Elemente bilden das XML-Schema, das im Webpublishing-und Online-Assistenten für das Drucken von Druck Reihen verwendet wird.
-title: Schema des Übertragungs Manifests
+description: Diese Elemente bilden das XML-Schema, das im Übertragungsmanifest des Assistenten für Webveröffentlichung und Onlinedruckreihenfolge verwendet wird.
+title: Übertragen des Manifestschemas
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: 488b6fc9-ff85-4860-9cd5-61d5de7e15e8
@@ -9,18 +9,18 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: d0b57f1eb81169674c6c8d36e66c8a3cd21cf0e4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 30324e32e1bd841423318a37eb1472d673ffc53c6e745f54f9398cec73138239
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104994942"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117858856"
 ---
-# <a name="transfer-manifest-schema"></a>Schema des Übertragungs Manifests
+# <a name="transfer-manifest-schema"></a>Übertragen des Manifestschemas
 
-Diese Elemente bilden das XML-Schema, das im Webpublishing-und Online-Assistenten für das Drucken von Druck Reihen verwendet wird.
+Diese Elemente bilden das XML-Schema, das im Übertragungsmanifest des Assistenten für Webveröffentlichung und Onlinedruckreihenfolge verwendet wird.
 
-Die folgenden Elemente sind für das Übertragungs Manifest definiert.
+Die folgenden Elemente werden für das Übertragungsmanifest definiert.
 
 -   [cancelledpage](#syntax)
     -   [Syntax](#syntax)
@@ -30,7 +30,7 @@ Die folgenden Elemente sind für das Übertragungs Manifest definiert.
     -   [Syntax](#syntax)
     -   [Attribute](#attributes)
     -   [Elementinformationen](#element-information)
--   [Ort](#syntax)
+-   [Lieblings-](#syntax)
     -   [Syntax](#syntax)
     -   [Attribute](#attributes)
     -   [Elementinformationen](#element-information)
@@ -38,15 +38,15 @@ Die folgenden Elemente sind für das Übertragungs Manifest definiert.
     -   [Syntax](#syntax)
     -   [Attribute](#attributes)
     -   [Elementinformationen](#element-information)
--   [FileList](#syntax)
+-   [Liste](#syntax)
     -   [Syntax](#syntax)
     -   [Attribute](#attributes)
     -   [Elementinformationen](#element-information)
--   [Pfalz](#syntax)
+-   [Ordner](#syntax)
     -   [Syntax](#syntax)
     -   [Attribute](#attributes)
     -   [Elementinformationen](#element-information)
--   [folderlist](#syntax)
+-   [Ordnerliste](#syntax)
     -   [Syntax](#syntax)
     -   [Attribute](#attributes)
     -   [Elementinformationen](#element-information)
@@ -58,7 +58,7 @@ Die folgenden Elemente sind für das Übertragungs Manifest definiert.
     -   [Syntax](#syntax)
     -   [Attribute](#attributes)
     -   [Elementinformationen](#element-information)
--   [ImageProperty](#syntax)
+-   [imageproperty](#syntax)
     -   [Syntax](#syntax)
     -   [Attribute](#attributes)
     -   [Elementinformationen](#element-information)
@@ -78,7 +78,7 @@ Die folgenden Elemente sind für das Übertragungs Manifest definiert.
     -   [Syntax](#syntax)
     -   [Attribute](#attributes)
     -   [Elementinformationen](#element-information)
--   [erfolgreicher Dienst](#syntax)
+-   [Successpage](#syntax)
     -   [Syntax](#syntax)
     -   [Attribute](#attributes)
     -   [Elementinformationen](#element-information)
@@ -90,7 +90,7 @@ Die folgenden Elemente sind für das Übertragungs Manifest definiert.
     -   [Syntax](#syntax)
     -   [Attribute](#attributes)
     -   [Elementinformationen](#element-information)
--   [UploadInfo](#syntax)
+-   [uploadinfo](#syntax)
     -   [Syntax](#syntax)
     -   [Attribute](#attributes)
     -   [Elementinformationen](#element-information)
@@ -131,7 +131,7 @@ Gibt die serverseitige HTML-Seite an, die angezeigt werden soll, bevor der Assis
 
 | Übergeordnetes Element        | Untergeordnete Elemente |
 |-----------------------|----------------|
-| [UploadInfo](#syntax) | Keine           |
+| [uploadinfo](#syntax) | Keine           |
 
 
 
@@ -139,7 +139,7 @@ Gibt die serverseitige HTML-Seite an, die angezeigt werden soll, bevor der Assis
 
 ## <a name="failurepage"></a>failurepage
 
-Gibt die serverseitige HTML-Seite an, die angezeigt wird, wenn der Upload nicht erfolgreich ist.
+Gibt die serverseitige HTML-Seite an, die angezeigt werden soll, wenn der Upload nicht erfolgreich war.
 
 ### <a name="syntax"></a>Syntax
 
@@ -161,7 +161,7 @@ Gibt die serverseitige HTML-Seite an, die angezeigt wird, wenn der Upload nicht 
 
 | attribute | BESCHREIBUNG                                                                                |
 |-----------|--------------------------------------------------------------------------------------------|
-| href      | Erforderlich. Die URL der serverseitigen HTML-Seite, die angezeigt werden soll, wenn der Upload nicht erfolgreich ist. |
+| href      | Erforderlich. Die URL der serverseitigen HTML-Seite, die angezeigt werden soll, wenn der Upload nicht erfolgreich war. |
 
 
 
@@ -173,7 +173,7 @@ Gibt die serverseitige HTML-Seite an, die angezeigt wird, wenn der Upload nicht 
 
 | Übergeordnetes Element        | Untergeordnete Elemente         |
 |-----------------------|------------------------|
-| [UploadInfo](#syntax) | Keine. Text ist zulässig. |
+| [uploadinfo](#syntax) | Keine. Text ist zulässig. |
 
 
 
@@ -181,7 +181,7 @@ Gibt die serverseitige HTML-Seite an, die angezeigt wird, wenn der Upload nicht 
 
 ## <a name="favorite"></a>speichern
 
-Weist den Assistenten an, einen Favoriten Website Eintrag im Menü " **Favoriten** " für die angegebene URL zu erstellen. Wenn dieses Element nicht angegeben ist, wird das [htmlui](#syntax) -Element an seiner Stelle verwendet.
+Weist den Assistenten an, einen Favoriteneintrag für die Website im Menü **Favoriten** für die angegebene URL zu erstellen. Wenn dieses Element nicht angegeben ist, wird das [htmlui-Element](#syntax) an seiner Stelle verwendet.
 
 ### <a name="syntax"></a>Syntax
 
@@ -205,9 +205,9 @@ Weist den Assistenten an, einen Favoriten Website Eintrag im Menü " **Favoriten
 
 | attribute | BESCHREIBUNG                                                            |
 |-----------|------------------------------------------------------------------------|
-| comment   | Erforderlich. Der Kommentar, der dem **Favoriten** Eintrag zugeordnet ist.         |
-| href      | Erforderlich. Die URL des **Favoriten** Eintrags.                          |
-| name      | Erforderlich. Der Name für die URL, die im Menü " **Favoriten** " angezeigt wird. |
+| comment   | Erforderlich. Der kommentar, der dem Eintrag **Favoriten** zugeordnet ist.         |
+| href      | Erforderlich. Die URL des **Eintrags Favoriten.**                          |
+| name      | Erforderlich. Der Name der URL, die im Menü **Favoriten** angezeigt wird. |
 
 
 
@@ -219,7 +219,7 @@ Weist den Assistenten an, einen Favoriten Website Eintrag im Menü " **Favoriten
 
 | Übergeordnetes Element        | Untergeordnete Elemente         |
 |-----------------------|------------------------|
-| [UploadInfo](#syntax) | Keine. Text ist zulässig. |
+| [uploadinfo](#syntax) | Keine. Text ist zulässig. |
 
 
 
@@ -227,7 +227,7 @@ Weist den Assistenten an, einen Favoriten Website Eintrag im Menü " **Favoriten
 
 ## <a name="file"></a>file
 
-Beschreibt eine einzelne Datei, die kopiert werden soll. Mehrere [Datei](#syntax) Elemente können unter einem einzelnen [FileList](#syntax) -Knoten enthalten sein.
+Beschreibt eine einzelne Datei, die kopiert werden soll. Mehrere [Dateielemente](#syntax) können in einem einzelnen [Dateilistenknoten](#syntax) enthalten sein.
 
 ### <a name="syntax"></a>Syntax
 
@@ -254,11 +254,11 @@ Beschreibt eine einzelne Datei, die kopiert werden soll. Mehrere [Datei](#syntax
 
 | attribute   | BESCHREIBUNG                                                                                                                                                                  |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ContentType | Optional. Der MIME-Typ der Datei.                                                                                                                                         |
-| destination | Erforderlich. Ein empfohlener Pfad für die Datei, nachdem Sie hochgeladen wurde. Dieser Pfad ist relativ zur Ziel-URL der uploadwebsite. Der uploadstandort kann diesen Wert nach Bedarf ändern. |
+| Contenttype | Optional. Der MIME-Typ der Datei.                                                                                                                                         |
+| destination | Erforderlich. Ein vorgeschlagener Pfad für die Datei, nachdem sie hochgeladen wurde. Dieser Pfad ist relativ zur Ziel-URL der Uploadwebsite. Die Uploadwebsite kann diesen Wert bei Bedarf ändern. |
 | Erweiterung   | Optional. Die Dateinamenerweiterung der Datei.                                                                                                                               |
 | id          | Erforderlich. Der numerische Index der Datei.                                                                                                                                   |
-| size        | Optional. Die Größe der Datei (in Bytes).                                                                                                                                    |
+| Größe        | Optional. Die Größe der Datei (in Bytes).                                                                                                                                    |
 | source      | Erforderlich. Der vollständige Dateisystempfad für die Datei.                                                                                                                            |
 
 
@@ -271,15 +271,15 @@ Beschreibt eine einzelne Datei, die kopiert werden soll. Mehrere [Datei](#syntax
 
 | Übergeordnetes Element      | Untergeordnete Elemente                                          |
 |---------------------|---------------------------------------------------------|
-| [FileList](#syntax) | [Metadaten](#syntax), [Post](#syntax), [Größe ändern](#syntax) |
+| [Liste](#syntax) | [Metadata](#syntax), [post](#syntax), [resize](#syntax) |
 
 
 
  
 
-## <a name="filelist"></a>FileList
+## <a name="filelist"></a>Liste
 
-Ein Container für-Elemente, die die zu kopierenden Dateien beschreiben. Mehrere [FileList](#syntax) -Elemente können unter einem einzelnen [transfermanifest](#syntax) -Knoten enthalten sein.
+Ein Container für Elemente, die die zu kopierenden Dateien beschreiben. Mehrere [Filelist-Elemente](#syntax) können unter einem einzelnen [transfermanifest-Knoten](#syntax) enthalten sein.
 
 ### <a name="syntax"></a>Syntax
 
@@ -299,9 +299,9 @@ Ein Container für-Elemente, die die zu kopierenden Dateien beschreiben. Mehrere
 
 
 
-| attribute   | BESCHREIBUNG      |
+| attribute   | Beschreibung      |
 |-------------|------------------|
-| Einsatz Ordner | Nicht implementiert. |
+| usesfolders | Nicht implementiert. |
 
 
 
@@ -321,7 +321,7 @@ Ein Container für-Elemente, die die zu kopierenden Dateien beschreiben. Mehrere
 
 ## <a name="folder"></a>folder
 
-Beschreibt einen Ordner, in dem Dateien gespeichert werden. Mehrere [Ordner](#syntax) Elemente können unter einem einzelnen [folderlist](#syntax) -Knoten enthalten sein.
+Beschreibt einen Ordner, in dem Dateien gespeichert werden. Mehrere [Ordnerelemente](#syntax) können in einem einzelnen [Ordnerlistenknoten](#syntax) enthalten sein.
 
 ### <a name="syntax"></a>Syntax
 
@@ -343,7 +343,7 @@ Beschreibt einen Ordner, in dem Dateien gespeichert werden. Mehrere [Ordner](#sy
 
 | attribute   | Beschreibung                                                                                                                                                                    |
 |-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| destination | Erforderlich. Ein empfohlener Pfad für den Ordner, nachdem er hochgeladen wurde. Dieser Pfad ist relativ zur Ziel-URL der uploadwebsite. Der uploadstandort kann diesen Wert nach Bedarf ändern. |
+| destination | Erforderlich. Ein vorgeschlagener Pfad für den Ordner, nachdem er hochgeladen wurde. Dieser Pfad ist relativ zur Ziel-URL der Uploadwebsite. Die Uploadwebsite kann diesen Wert bei Bedarf ändern. |
 
 
 
@@ -355,15 +355,15 @@ Beschreibt einen Ordner, in dem Dateien gespeichert werden. Mehrere [Ordner](#sy
 
 | Übergeordnetes Element        | Untergeordnete Elemente |
 |-----------------------|----------------|
-| [folderlist](#syntax) | Keine           |
+| [Ordnerliste](#syntax) | Keine           |
 
 
 
  
 
-## <a name="folderlist"></a>folderlist
+## <a name="folderlist"></a>Ordnerliste
 
-Ein Container für-Elemente, die die zu kopierenden Dateien beschreiben. Mehrere [folderlist](#syntax) -Elemente können unter einem einzelnen [transfermanifest](#syntax) -Knoten enthalten sein.
+Ein Container für Elemente, die die zu kopierenden Dateien beschreiben. Mehrere [Ordnerlistenelemente](#syntax) können unter einem einzelnen [transfermanifest-Knoten](#syntax) enthalten sein.
 
 ### <a name="syntax"></a>Syntax
 
@@ -387,7 +387,7 @@ Keine
 
 | Übergeordnetes Element              | Untergeordnete Elemente    |
 |-----------------------------|-------------------|
-| [transfermanifest](#syntax) | [Pfalz](#syntax) |
+| [transfermanifest](#syntax) | [Ordner](#syntax) |
 
 
 
@@ -395,9 +395,9 @@ Keine
 
 ## <a name="formdata"></a>formdata
 
-Beschreibt optionale HTML-codierte Formulardaten, die mit den Dateien übertragen werden können. Dieses Element wird vom-Dienst hinzugefügt, wenn es für das Hochladen der Dateien als mehrteilige Post-Bereitstellung entscheidet. Die Formulardaten werden sowie Informationen aus dem [Post](#syntax) -Element verwendet, um den Post-Header zu erstellen.
+Beschreibt optionale HTML-codierte Formulardaten, die mit den Dateien übertragen werden können. Dieses Element wird vom Dienst hinzugefügt, wenn er sich dafür auswählt, die Dateien als mehrteiligen Beitrag hochzuladen. Die Formulardaten werden zusammen mit Informationen aus dem [post-Element](#syntax) verwendet, um den Postheader zu erstellen.
 
-Unter einem einzelnen [UploadInfo](#syntax) -Knoten können mehrere [formdata](#syntax) -Elemente enthalten sein.
+Mehrere [formdata-Elemente](#syntax) können in einem einzelnen [uploadinfo-Knoten enthalten](#syntax) sein.
 
 ### <a name="syntax"></a>Syntax
 
@@ -419,7 +419,7 @@ Unter einem einzelnen [UploadInfo](#syntax) -Knoten können mehrere [formdata](#
 
 | attribute | BESCHREIBUNG                                                                      |
 |-----------|----------------------------------------------------------------------------------|
-| name      | Erforderlich. Definiert den Formulardaten Namen, der diesem Abschnitt des Uploads zugeordnet ist. |
+| name      | Erforderlich. Definiert den Formulardatennamen, der diesem Abschnitt des Uploads zugeordnet ist. |
 
 
 
@@ -431,7 +431,7 @@ Unter einem einzelnen [UploadInfo](#syntax) -Knoten können mehrere [formdata](#
 
 | Übergeordnetes Element        | Untergeordnete Elemente |
 |-----------------------|----------------|
-| [UploadInfo](#syntax) | Keine           |
+| [uploadinfo](#syntax) | Keine           |
 
 
 
@@ -439,7 +439,7 @@ Unter einem einzelnen [UploadInfo](#syntax) -Knoten können mehrere [formdata](#
 
 ## <a name="htmlui"></a>htmlui
 
-Die URL der serverseitigen HTML-Seite, die angezeigt wird, wenn der Assistent geschlossen wird. Dieses Element erstellt einen bevorzugten webseiteneintrag im Menü " **Favoriten** ", wenn das [bevorzugte](#syntax) Element fehlt und der Anzeige Name der uploadwebsite angegeben wird.
+Die URL der serverseitigen HTML-Seite, die angezeigt wird, wenn der Assistent geschlossen wird. Dieses Element erstellt einen favoriten Webseiteneintrag [](#syntax) im **Menü Favoriten,** wenn das Favoritenelement nicht vorhanden ist und der Benutzerfreundlichname der Uploadwebsite angegeben ist.
 
 ### <a name="syntax"></a>Syntax
 
@@ -473,15 +473,15 @@ Die URL der serverseitigen HTML-Seite, die angezeigt wird, wenn der Assistent ge
 
 | Übergeordnetes Element        | Untergeordnete Elemente         |
 |-----------------------|------------------------|
-| [UploadInfo](#syntax) | Keine. Text ist zulässig. |
+| [uploadinfo](#syntax) | Keine. Text ist zulässig. |
 
 
 
  
 
-## <a name="imageproperty"></a>ImageProperty
+## <a name="imageproperty"></a>imageproperty
 
-Gibt eine Bild Eigenschaft in Bezug auf die Datei an. Mehrere [ImageProperty](#syntax) -Elemente können unter einem einzelnen [Metadatenknoten](#syntax) enthalten sein.
+Gibt eine Bildeigenschaft im Zusammenhang mit der Datei an. Mehrere [imageproperty-Elemente](#syntax) können in einem einzelnen [Metadatenknoten enthalten](#syntax) sein.
 
 ### <a name="syntax"></a>Syntax
 
@@ -523,7 +523,7 @@ Gibt eine Bild Eigenschaft in Bezug auf die Datei an. Mehrere [ImageProperty](#s
 
 ## <a name="metadata"></a>metadata
 
-Ein Container für Elemente und Text, die Metadaten für die jeweilige Datei definieren. Mehrere [Metadatenelemente](#syntax) können unter einem einzelnen [Datei](#syntax) Knoten enthalten sein.
+Ein Container für Elemente und Text, der Metadaten für die bestimmte Datei definiert. Mehrere [Metadatenelemente](#syntax) können unter einem einzelnen [Dateiknoten enthalten](#syntax) sein.
 
 ### <a name="syntax"></a>Syntax
 
@@ -547,7 +547,7 @@ Keine
 
 | Übergeordnetes Element  | Untergeordnete Elemente           |
 |-----------------|--------------------------|
-| [datei](#syntax) | [ImageProperty](#syntax) |
+| [datei](#syntax) | [imageproperty](#syntax) |
 
 
 
@@ -555,7 +555,7 @@ Keine
 
 ## <a name="netplace"></a>netplace
 
-Definiert das Ziel für einen Netzwerk Speicherort, der nach Abschluss des Uploads an den **Netzwerk Orten** erstellt wird. Die Erstellung eines Netzwerk Orts kann durch die [**ipublishingwizard:: Initialize**](/windows/desktop/api/Shobjidl/nf-shobjidl-ipublishingwizard-initialize) -Methode verhindert werden.
+Definiert das Ziel für einen Netzwerkort, der nach Abschluss des Uploads unter **Meine Netzwerkorte** erstellt wird. Die Erstellung eines Netzwerkplatzes kann mit der [**IPublishingWizard::Initialize-Methode verhindert**](/windows/desktop/api/Shobjidl/nf-shobjidl-ipublishingwizard-initialize) werden.
 
 ### <a name="syntax"></a>Syntax
 
@@ -579,9 +579,9 @@ Definiert das Ziel für einen Netzwerk Speicherort, der nach Abschluss des Uploa
 
 | attribute | BESCHREIBUNG                                                                                     |
 |-----------|-------------------------------------------------------------------------------------------------|
-| comment   | Erforderlich. Der Kommentar, der für das Netzwerk Platz Symbol angezeigt wird, wenn der Cursor darauf liegt.         |
-| href      | Erforderlich. Die URL des Netzwerk Orts Eintrags.                                                   |
-| name      | Erforderlich. Der Name für das Symbol für den Netzwerk Platz, der im Ordner " **meine Netzwerk Orte** " angezeigt wird. |
+| comment   | Erforderlich. Der Kommentar, der für das Symbol für den Netzwerkplatz angezeigt wird, wenn der Cursor darauf ruht.         |
+| href      | Erforderlich. Die URL des Eintrags für den Netzwerkplatz.                                                   |
+| name      | Erforderlich. Der Name für das Symbol für den Netzwerkspeicherort, das im Ordner **Meine Netzwerkorte angezeigt** wird. |
 
 
 
@@ -593,7 +593,7 @@ Definiert das Ziel für einen Netzwerk Speicherort, der nach Abschluss des Uploa
 
 | Übergeordnetes Element        | Untergeordnete Elemente         |
 |-----------------------|------------------------|
-| [UploadInfo](#syntax) | Keine. Text ist zulässig. |
+| [uploadinfo](#syntax) | Keine. Text ist zulässig. |
 
 
 
@@ -601,7 +601,7 @@ Definiert das Ziel für einen Netzwerk Speicherort, der nach Abschluss des Uploa
 
 ## <a name="post"></a>post
 
-Die URL, zu der die Datei gepostet werden soll. Dieses Element wird vom-Dienst hinzugefügt, wenn die Übertragung als mehrteilige Post-Übermittlung erfolgt und mit [formdata](#syntax)verwendet wird, um den Post-Header zu erstellen. Wenn der Dienst die Dateiübertragung mithilfe World Wide Web verteilten Erstellungs-und Versionsverwaltung (WebDAV) durchführen möchte, sollte dieses Element nicht hinzugefügt werden. Mehrere [Post](#syntax) -Elemente können unter einem einzelnen [Datei](#syntax) Knoten enthalten sein.
+URL, an die die Datei gesendet werden soll. Dieses Element wird vom Dienst hinzugefügt, wenn die Übertragung als mehrteilige Post erfolgt und mit [formdata](#syntax)verwendet wird, um den Postheader zu erstellen. Wenn der Dienst die Dateiübertragung mithilfe von World Wide Web Distributed Authoring and Versioning (WebDAV) auswählt, sollte er dieses Element nicht hinzufügen. Mehrere [Post-Elemente](#syntax) können in einem einzelnen [Dateiknoten enthalten](#syntax) sein.
 
 ### <a name="syntax"></a>Syntax
 
@@ -626,8 +626,8 @@ Die URL, zu der die Datei gepostet werden soll. Dieses Element wird vom-Dienst h
 | attribute | Beschreibung                                                                    |
 |-----------|--------------------------------------------------------------------------------|
 | Dateiname  | Optional. Der Dateiname für die gepostete Datei.                                   |
-| href      | Erforderlich. Die URL des Ziel Ordners.                                   |
-| name      | Erforderlich. Definiert den Formulardaten Namen, der diesem Abschnitt des Beitrags zugeordnet ist. |
+| href      | Erforderlich. Die URL des Zielordners.                                   |
+| name      | Erforderlich. Definiert den Formulardatennamen, der diesem Abschnitt des Beitrags zugeordnet ist. |
 
 
 
@@ -647,7 +647,7 @@ Die URL, zu der die Datei gepostet werden soll. Dieses Element wird vom-Dienst h
 
 ## <a name="resize"></a>resize
 
-Definiert die Skalierung und Neukomprimierung einer Bilddatei in das JPEG-Format. Wenn die Quelldatei bereits im JPEG-Format vorliegt und kleiner oder gleich der angegebenen Breite und Höhe ist, wird Sie nicht skaliert. Wenn die Quelldatei keine JPEG-Datei ist, wird Sie konvertiert. Die Skalierung, Neukomprimierung und Konvertierung der Datei kann durch die [**ipublishingwizard:: Initialize**](/windows/desktop/api/Shobjidl/nf-shobjidl-ipublishingwizard-initialize) -Methode verhindert werden. Mehrere Elemente zur [Größenänderung](#syntax) können unter einem einzelnen [Datei](#syntax) Knoten enthalten sein.
+Definiert die Skalierung und Neukomprimierung einer Bilddatei im JPEG-Format. Wenn die Quelldatei bereits im JPEG-Format vorliegt und kleiner oder gleich der angegebenen Breite und Höhe ist, ist sie nicht dimensionierend. Wenn die Quelldatei keine JPEG-Datei ist, wird sie konvertiert. Skalierung, Neukomprimierung und Konvertierung der Datei können über die [**IPublishingWizard::Initialize-Methode**](/windows/desktop/api/Shobjidl/nf-shobjidl-ipublishingwizard-initialize) verhindert werden. Mehrere [Größenänderungselemente](#syntax) können in einem einzelnen [Dateiknoten](#syntax) enthalten sein.
 
 ### <a name="syntax"></a>Syntax
 
@@ -671,9 +671,9 @@ Definiert die Skalierung und Neukomprimierung einer Bilddatei in das JPEG-Format
 
 | attribute | BESCHREIBUNG                                                                                                                                                         |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| verschoben        | Erforderlich. Die Breite des Bilds nach dem Hochladen in Pixel. Wenn dieser Wert 0 ist, wird **CX** aus dem **CY** -Wert berechnet, um relative Dimensionen beizubehalten.  |
-| cy        | Erforderlich. Die Höhe des Bilds nach dem Hochladen in Pixel. Wenn dieser Wert 0 ist, wird **CY** aus dem **CX** -Wert berechnet, um relative Dimensionen beizubehalten. |
-| Qualität   | Erforderlich. Der Wert der JPEG-Qualität zwischen 0 und 100, wobei 100 die höchste Qualität ist.                                                                            |
+| Cx        | Erforderlich. Die Breite des Bilds in Pixel nach dem Hochladen. Wenn dieser Wert 0 ist, wird **cx** anhand des **Cy-Werts** berechnet, um relative Dimensionen beizubehalten.  |
+| cy        | Erforderlich. Die Höhe des Bilds in Pixel nach dem Hochladen. Wenn dieser Wert 0 ist, wird **cy** anhand des **cx-Werts** berechnet, um relative Dimensionen beizubehalten. |
+| Qualität   | Erforderlich. Der JPEG-Qualitätswert zwischen 0 und 100, wobei 100 die höchste Qualität ist.                                                                            |
 
 
 
@@ -691,9 +691,9 @@ Definiert die Skalierung und Neukomprimierung einer Bilddatei in das JPEG-Format
 
  
 
-## <a name="successpage"></a>erfolgreicher Dienst
+## <a name="successpage"></a>Successpage
 
-Gibt die serverseitige HTML-Seite an, die angezeigt wird, wenn der Upload erfolgreich ist.
+Gibt die serverseitige HTML-Seite an, die angezeigt werden soll, wenn der Upload erfolgreich war.
 
 ### <a name="syntax"></a>Syntax
 
@@ -715,7 +715,7 @@ Gibt die serverseitige HTML-Seite an, die angezeigt wird, wenn der Upload erfolg
 
 | attribute | BESCHREIBUNG                                                                            |
 |-----------|----------------------------------------------------------------------------------------|
-| href      | Erforderlich. Die URL der serverseitigen HTML-Seite, die angezeigt werden soll, wenn der Upload erfolgreich ist. |
+| href      | Erforderlich. Die URL der serverseitigen HTML-Seite, die angezeigt werden soll, wenn der Upload erfolgreich war. |
 
 
 
@@ -727,7 +727,7 @@ Gibt die serverseitige HTML-Seite an, die angezeigt wird, wenn der Upload erfolg
 
 | Übergeordnetes Element        | Untergeordnete Elemente         |
 |-----------------------|------------------------|
-| [UploadInfo](#syntax) | Keine. Text ist zulässig. |
+| [uploadinfo](#syntax) | Keine. Text ist zulässig. |
 
 
 
@@ -735,7 +735,7 @@ Gibt die serverseitige HTML-Seite an, die angezeigt wird, wenn der Upload erfolg
 
 ## <a name="target"></a>target
 
-Ein Zielordner, der im UNC-Format (Universal Naming Convention) oder als WebDAV-Server angegeben ist. Der Dienst fügt dieses Ziel hinzu, um einen Zielordner anzugeben, wenn für die Übertragung ein WebDAV-oder Dateisystem Protokoll verwendet wird. Wenn der Dienst die Dateiübertragung als mehrteiligen Beitrag ausführt, sollte er dieses Element nicht hinzufügen.
+Ein Zielordner, der im UNC-Format (Universal Naming Convention) oder als WebDAV-Server angegeben ist. Der Dienst fügt dieses Ziel hinzu, um einen Zielordner anzugeben, wenn bei der Übertragung ein WebDAV- oder Dateisystemprotokoll verwendet wird. Wenn der Dienst die Dateiübertragung als mehrteiligen Beitrag ausführt, sollte er dieses Element nicht hinzufügen.
 
 ### <a name="syntax"></a>Syntax
 
@@ -757,7 +757,7 @@ Ein Zielordner, der im UNC-Format (Universal Naming Convention) oder als WebDAV-
 
 | attribute | BESCHREIBUNG                                                                                                                 |
 |-----------|-----------------------------------------------------------------------------------------------------------------------------|
-| href      | Erforderlich. Die URL des Ziel Ordners. Verwenden Sie das **https://** -Formular für WebDAV oder das **\\ \\ Server \\ Freigabe** Formular für UNC. |
+| href      | Erforderlich. Die URL des Zielordners. Verwenden Sie das **formular https://** für WebDAV oder das Formular für die **\\ \\ \\ Serverfreigabe** für UNC. |
 
 
 
@@ -769,7 +769,7 @@ Ein Zielordner, der im UNC-Format (Universal Naming Convention) oder als WebDAV-
 
 | Übergeordnetes Element        | Untergeordnete Elemente         |
 |-----------------------|------------------------|
-| [UploadInfo](#syntax) | Keine. Text ist zulässig. |
+| [uploadinfo](#syntax) | Keine. Text ist zulässig. |
 
 
 
@@ -777,7 +777,7 @@ Ein Zielordner, der im UNC-Format (Universal Naming Convention) oder als WebDAV-
 
 ## <a name="transfermanifest"></a>transfermanifest
 
-Der übergeordnete Knoten der Datei des Übertragungs Manifests.
+Der übergeordnete Knoten der Übertragungsmanifestdatei.
 
 ### <a name="syntax"></a>Syntax
 
@@ -801,15 +801,15 @@ Keine
 
 | Übergeordnetes Element | Untergeordnete Elemente                                                    |
 |----------------|-------------------------------------------------------------------|
-| Keine           | [FileList](#syntax), [folderlist](#syntax), [UploadInfo](#syntax) |
+| Keine           | [filelist](#syntax), [folderlist](#syntax), [uploadinfo](#syntax) |
 
 
 
  
 
-## <a name="uploadinfo"></a>UploadInfo
+## <a name="uploadinfo"></a>uploadinfo
 
-Ein Container für-Elemente, die Informationen von der in der Transaktion verwendeten uploadwebsite bereitstellen. Mehrere [UploadInfo](#syntax) -Elemente können unter einem einzelnen [transfermanifest](#syntax) -Knoten enthalten sein.
+Ein Container für Elemente, die Informationen von der upload-Website bereitstellen, die in der Transaktion verwendet wird. Mehrere [uploadinfo-Elemente](#syntax) können unter einem einzelnen [transfermanifest-Knoten](#syntax) enthalten sein.
 
 ### <a name="syntax"></a>Syntax
 
@@ -831,7 +831,7 @@ Ein Container für-Elemente, die Informationen von der in der Transaktion verwen
 
 | attribute    | BESCHREIBUNG                                                                 |
 |--------------|-----------------------------------------------------------------------------|
-| FriendlyName | Erforderlich. Ein Anzeige Name für die Website, der im Assistenten angezeigt wird. |
+| friendlyname | Erforderlich. Ein Anzeigename für die Website, der im Assistenten angezeigt wird. |
 
 
 
@@ -843,7 +843,7 @@ Ein Container für-Elemente, die Informationen von der in der Transaktion verwen
 
 | Übergeordnetes Element              | Untergeordnete Elemente                                                                                                                                           |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [transfermanifest](#syntax) | [cancelledpage](#syntax), [failurepage](#syntax), [Favorit](#syntax), [htmlui](#syntax), [netplace](#syntax), [erfolgreicher spage](#syntax), [target](#syntax) |
+| [transfermanifest](#syntax) | [cancelledpage](#syntax), [failurepage](#syntax), [favorite](#syntax), [htmlui](#syntax), [netplace](#syntax), [successpage](#syntax), [target](#syntax) |
 
 
 

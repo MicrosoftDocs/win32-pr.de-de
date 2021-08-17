@@ -1,5 +1,5 @@
 ---
-description: Wendet das Softwareskinning auf die Zielvertices basierend auf den aktuellen Matrizen an.
+description: Wendet software skinning auf die Zielvertices basierend auf den aktuellen Matrizen an.
 ms.assetid: 4858dfd4-dc0d-4852-9165-8ae1b40386d4
 title: ID3DXSkinInfo::UpdateSkinnedMesh-Methode (D3DX9Mesh.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "117729452"
 ---
 # <a name="id3dxskininfoupdateskinnedmesh-method"></a>ID3DXSkinInfo::UpdateSkinnedMesh-Methode
 
-Wendet das Softwareskinning auf die Zielvertices basierend auf den aktuellen Matrizen an.
+Wendet software skinning auf die Zielvertices basierend auf den aktuellen Matrizen an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ HRESULT UpdateSkinnedMesh(
 
 Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Transformationsmatrix für Transformationen.
+Matrix für die Transformation von Kasten.
 
 </dd> <dt>
 
@@ -57,7 +57,7 @@ Transformationsmatrix für Transformationen.
 
 Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Umgekehrte Transponieren der Transformationsmatrix.
+Umgekehrtes Transponieren der Transformationsmatrix der Transformation.
 
 </dd> <dt>
 
@@ -83,11 +83,11 @@ Zeiger auf den Puffer, der die Zielvertices enthält.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn diese Methode verwendet wird, um Scheitelpunkte mit zwei Positionselementen zu skinen, wird das zweite Positionselement mit der Umkehrung des Steines anstelle des Eigentlichen skins skins.
+Wenn diese Methode verwendet wird, um Scheitelpunkte mit zwei Positionselementen zu skinnen, wird das zweite Positionselement mit der Umkehrung des Kastens anstelle des Kastens selbst skint.
 
 ## <a name="requirements"></a>Anforderungen
 

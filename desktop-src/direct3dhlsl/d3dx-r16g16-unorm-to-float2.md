@@ -1,6 +1,6 @@
 ---
 title: D3DX_R16G16_UNORM_to_FLOAT2-Funktion
-description: Entpackt DXGI \_ FORMAT \_ R16G16 \_ UNORM-Shaderdaten in XMFLOAT2.
+description: Entpackt DXGI \_ FORMAT \_ R16G16 \_ UNORM-Shaderdaten in ein XMFLOAT2.
 ms.assetid: e82e2a47-f494-4085-8c02-1bac3088d29f
 keywords:
 - D3DX_R16G16_UNORM_to_FLOAT2-Funktion HLSL
@@ -23,7 +23,7 @@ ms.locfileid: "117727372"
 ---
 # <a name="d3dx_r16g16_unorm_to_float2-function"></a>D3DX \_ R16G16 \_ UNORM \_ zu \_ FLOAT2-Funktion
 
-Entpackt DXGI \_ FORMAT \_ R16G16 \_ UNORM-Shaderdaten in XMFLOAT2.
+Entpackt DXGI \_ FORMAT \_ R16G16 \_ UNORM-Shaderdaten in ein XMFLOAT2.
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,7 +65,7 @@ Die entpackten Shaderdaten.
 [Funktionen](format-conversion-functions.md)
 </dt> <dt>
 
-[Entpacken und Packen des \_ DXGI-FORMATS für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen von DXGI \_ FORMAT für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
  
