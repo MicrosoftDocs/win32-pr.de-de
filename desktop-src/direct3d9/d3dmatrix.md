@@ -1,7 +1,7 @@
 ---
 description: Beschreibt eine Matrix.
 ms.assetid: d6b98a32-e745-4724-b8ce-a81a3f5416f3
-title: D3DMATRIX (D3D9Types. h)
+title: D3DMATRIX (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 6b4339d2e44e1add46103bae58ad3e02c8a6509b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: ee4c67a4a743d3bff1cfc5ca88b6691e995f78a9fb01fe36aabc4ae6aca66e6c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117732365"
 ---
 # <a name="d3dmatrix"></a>D3DMATRIX
 
@@ -45,17 +45,17 @@ Abgeleitete Typen: \* LPD3DMATRIX
 
 
 
-| Element                                                        | BESCHREIBUNG                                                                                                                                                                                                     |
+| Element                                                        | Beschreibung                                                                                                                                                                                                     |
 |-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="_ij"></span><span id="_IJ"></span>\_angesprochenen<br/> | Ein Array von Gleit Komma Zahlen, die eine 4 x 4-Matrix darstellen, bei der es sich um die Zeilennummer und j um die Spaltennummer handelt. 34 bedeutet beispielsweise, dass das \_ gleiche wie \[ ein ₃ ₄ \] , die Komponente in der dritten Zeile und vierten Spalte ist.<br/> |
+| <span id="_ij"></span><span id="_IJ"></span>\_Ij<br/> | Ein Array von Gleitkommazahlen, die eine 4x4-Matrix darstellen, wobei i die Zeilennummer und j die Spaltennummer ist. Beispielsweise \_ bedeutet 34 das gleiche wie \[ a₃₄ , die Komponente in der \] dritten Zeile und vierten Spalte.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In Direct3D kann das \_ 34-Element einer Projektions Matrix keine negative Zahl sein. Wenn die Anwendung an diesem Speicherort einen negativen Wert verwenden muss, sollte Sie stattdessen die gesamte Projektions Matrix um-1 skalieren.
+In Direct3D kann das \_ 34-Element einer Projektionsmatrix keine negative Zahl sein. Wenn Ihre Anwendung an dieser Position einen negativen Wert verwenden muss, sollte stattdessen die gesamte Projektionsmatrix um -1 skaliert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,11 +63,11 @@ In Direct3D kann das \_ 34-Element einer Projektions Matrix keine negative Zahl 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -77,7 +77,7 @@ In Direct3D kann das \_ 34-Element einer Projektions Matrix keine negative Zahl 
 [**GetTransform**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-gettransform)
 </dt> <dt>
 
-[**MultiplyTransform**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-multiplytransform)
+[**Graphics.multiplytransform**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-multiplytransform)
 </dt> <dt>
 
 [**SetTransform**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settransform)

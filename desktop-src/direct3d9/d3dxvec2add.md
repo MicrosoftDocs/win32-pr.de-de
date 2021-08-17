@@ -1,7 +1,7 @@
 ---
 description: Fügt zwei 2D-Vektoren hinzu.
 ms.assetid: 82b2fdf6-1b1f-4768-8c0b-ac8faa77d7ed
-title: D3DXVec2Add-Funktion (D3dx9math. h)
+title: D3DXVec2Add-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 5087177448b01763bd94acb9b50c27c6cdf38815
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f9ab63d23a4370c2c64143d2289bd1324a3ebf684d30caf06db3eab2cd4e2915
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961582"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117730893"
 ---
 # <a name="d3dxvec2add-function"></a>D3DXVec2Add-Funktion
 
@@ -42,30 +42,30 @@ D3DXVECTOR2* D3DXVec2Add(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***
 
-Ein Zeiger auf die [**D3DXVECTOR2**](d3dxvector2.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*pV1* \[ in\]
+*pV1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](d3dxvector2.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR2**](d3dxvector2.md) -Struktur.
+Zeiger auf eine [**D3DXVECTOR2-Quellstruktur.**](d3dxvector2.md)
 
 </dd> <dt>
 
-*pV2* \[ in\]
+*pV2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR2**](d3dxvector2.md) \***
+Typ: **const [**D3DXVECTOR2**](d3dxvector2.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR2**](d3dxvector2.md) -Struktur.
+Zeiger auf eine [**D3DXVECTOR2-Quellstruktur.**](d3dxvector2.md)
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Zeiger auf eine Quell- [**D3DXVECTOR2**](d3dxvector2.md) -Struktur.
 
 Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***
 
-Zeiger auf eine [**D3DXVECTOR2**](d3dxvector2.md) -Struktur, die die Summe der beiden Vektoren ist.
+Zeiger auf eine [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) die die Summe der beiden Vektoren darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXVec2Add** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXVec2Add-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,12 +85,12 @@ Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Paramete
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

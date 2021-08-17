@@ -1,11 +1,11 @@
 ---
-title: Player. buffereing-Ereignis
-description: Das bufferingereignis tritt auf, wenn das Windows Media Player-Steuerelement die Pufferung oder den Download beendet. | Player. buffereing-Ereignis
+title: Player.Buffering-Ereignis
+description: Das Pufferungsereignis tritt auf, wenn das Windows Media Player-Steuerelement mit dem Puffern oder Herunterladen beginnt oder beendet. | Player.Buffering-Ereignis
 ms.assetid: a0a09bf7-19bc-4838-a403-924e8d83b48d
 keywords:
-- Media Player für die Pufferung von Ereignis Fenstern
-- Puffer Ereignis Windows Media Player, Player-Klasse
-- Player-Klasse, Windows Media Player, pufferungsereignis
+- Pufferereignis Windows Media Player
+- Pufferereignis Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , Pufferungsereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a73ac77f9b8e81162a6cc0f9220562caba26eae
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d0ac382315d37fcd36a5470ae3f7f07bf4454687b660a2311498b5b0866e32b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117747521"
 ---
-# <a name="playerbuffering-event"></a>Player. buffereing-Ereignis
+# <a name="playerbuffering-event"></a>Player.Buffering-Ereignis
 
-Das **bufferingereignis** tritt auf, wenn das Windows Media Player-Steuerelement die Pufferung oder den Download beendet.
+Das **Pufferungsereignis** tritt auf, wenn das Windows Media Player-Steuerelement mit dem Puffern oder Herunterladen beginnt oder beendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ Player.Buffering(
 
 <dl> <dt>
 
-*Starten* 
+*Start* 
 </dt> <dd>
 
-**Boolescher** Wert, der einen der folgenden Werte enthält.
+**Boolescher Wert,** der einen der folgenden Werte enthält.
 
 
 
@@ -64,11 +64,11 @@ Player.Buffering(
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie dieses Ereignis, um zu bestimmen, wann ein-oder herunterladen gestartet oder beendet wird. Sie können den gleichen Ereignisblock für beide Fälle und das Test *Netzwerk* verwenden. **BufferingProgress** und *Network*. **Download Progress** , um zu bestimmen, ob der Inhalt von Windows Media Player derzeit gepuffert oder heruntergeladen wird.
+Verwenden Sie dieses Ereignis, um zu bestimmen, wann das Puffern oder Herunterladen gestartet oder beendet wird. Sie können den gleichen Ereignisblock für beide Fälle verwenden und *Network* testen. **bufferingProgress** und *Network*. **downloadProgress,** um zu bestimmen, ob Windows Media Player derzeit Inhalt puffert oder herunterlädt.
 
-Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und der Zugriff auf und die Übergabe an eine Methode in einer importierten JScript-Datei mithilfe des angegebenen Parameter namens ist möglich. Dieser Parameter Name muss genau wie gezeigt eingegeben werden, einschließlich der Groß-/Kleinschreibung.
+Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens in einer importierten JScript Datei auf eine Methode zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt eingegeben werden, einschließlich Der Groß-/Großschreibung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,19 +76,19 @@ Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und d
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Network. BufferingProgress**](network-bufferingprogress.md)
+[**Network.bufferingProgress**](network-bufferingprogress.md)
 </dt> <dt>
 
-[**Network. Download Progress**](network-downloadprogress.md)
+[**Network.downloadProgress**](network-downloadprogress.md)
 </dt> <dt>
 
 [**Player-Objekt**](player-object.md)

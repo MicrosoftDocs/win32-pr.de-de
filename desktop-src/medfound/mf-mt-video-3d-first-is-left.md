@@ -1,45 +1,45 @@
 ---
-description: Gibt für ein 3D-Videoformat an, welche Ansicht die linke Ansicht ist.
+description: Bei einem 3D-Videoformat gibt an, welche Ansicht die linke Ansicht ist.
 ms.assetid: 4F33BF2D-EB32-46B6-B071-F9130D404201
-title: MF_MT_VIDEO_3D_FIRST_IS_LEFT-Attribut (mfapi. h)
+title: MF_MT_VIDEO_3D_FIRST_IS_LEFT-Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 027d91509d772a9200cdfc0ac64cce15514aa5a5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 19b7deed122f3de419455abf54bfcc18ad50ef199d87afa8bcaad8d34000a011
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104393789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117876801"
 ---
-# <a name="mf_mt_video_3d_first_is_left-attribute"></a>MF \_ MT \_ \_ -Video 3D \_ erste \_ ist Left- \_ Attribut
+# <a name="mf_mt_video_3d_first_is_left-attribute"></a>MF \_ MT \_ VIDEO \_ 3D \_ FIRST IS \_ \_ LEFT-Attribut
 
-Gibt für ein 3D-Videoformat an, welche Ansicht die linke Ansicht ist.
+Bei einem 3D-Videoformat gibt an, welche Ansicht die linke Ansicht ist.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL** als **UINT32** gespeichert
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei 3D-Videos enthält jedes Video Beispiel zwei Ansichten, die als *erste Ansicht* und *zweite Ansicht* bezeichnet werden. Das genaue Layout der Ansichten im Arbeitsspeicher wird durch das Format Attribut des " [MF \_ MT \_ \_ -Video 3D \_ ](mf-mt-video-3d-format.md) " angegeben.
+Für 3D-Videos enthält jedes Videobeispiel zwei Ansichten, die als *erste Ansicht* und *zweite Ansicht* festgelegt sind. Das genaue Layout der Ansichten im Arbeitsspeicher wird durch das [MF \_ MT VIDEO \_ \_ 3D \_ FORMAT-Attribut](mf-mt-video-3d-format.md) angegeben.
 
 
 
 | Format               | Erste Ansicht              | Zweite Ansicht               |
 |----------------------|-------------------------|---------------------------|
-| Seite-an-Seite gepackt  | Linke Hälfte des Puffers | Rechte Hälfte des Puffers  |
+| Nebeneinander gepackt  | Linke Hälfte des Puffers | Rechte Hälfte des Puffers  |
 | Von oben nach unten gepackt | Obere Hälfte des Puffers  | Untere Hälfte des Puffers |
-| MultiView            | Puffer Index 0          | Puffer Index 1            |
-| Basis Ansicht            | Ganzer Frame            | Nicht vorhanden               |
+| Multiview            | Pufferindex 0          | Pufferindex 1            |
+| Basisansicht            | Gesamter Frame            | Nicht vorhanden               |
 
 
 
  
 
-Standardmäßig ist die erste Ansicht die linke Ansicht, die zweite Ansicht ist die Rechte Ansicht. Wenn die linke und die Rechte Ansicht ausgetauscht werden, legen Sie für das MF \_ MT \_ \_ -Video 3D- \_ \_ Attribut erste ist Left- \_ Attribut im Medientyp auf **false** fest.
+Standardmäßig ist die erste Ansicht die linke Ansicht, und die zweite Ansicht ist die rechte Ansicht. Wenn die linke und die rechte Ansicht ausgetauscht werden, legen Sie das \_ MF MT \_ VIDEO \_ 3D \_ FIRST IS \_ \_ LEFT-Attribut im Medientyp auf **FALSE** fest.
 
 > [!Note]  
-> Im Format der *Basis Ansicht* (**MFVideo3DSampleFormat \_ baseview**) wird nur die Basis Ansicht beibehalten, sodass dieses Attribut nicht angewendet wird.
+> Im *Basisansichtsformat* **(MFVideo3DSampleFormat \_ BaseView)** wird nur die Basisansicht beibehalten, sodass dieses Attribut nicht angewendet wird.
 
  
 
@@ -49,13 +49,13 @@ Standardmäßig ist die erste Ansicht die linke Ansicht, die zweite Ansicht ist 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

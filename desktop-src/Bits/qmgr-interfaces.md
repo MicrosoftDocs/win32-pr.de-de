@@ -13,7 +13,7 @@ ms.locfileid: "118679994"
 ---
 # <a name="qmgr-interfaces"></a>QMGR-Schnittstellen
 
-\[Warteschlangen-Manager-Schnittstellen (QMGR) stehen für die Verwendung in den Betriebssystemen zur Verfügung, die im Abschnitt Anforderungen eines Themas angegeben sind. In nachfolgenden Versionen wurde sie möglicherweise geändert oder entfernt. Verwenden Sie stattdessen die [BITS-Schnittstellen](bits-interfaces.md).\]
+\[Warteschlangen-Manager-Schnittstellen (QMGR) sind für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen eines Themas angegeben sind. In nachfolgenden Versionen wurde sie möglicherweise geändert oder entfernt. Verwenden Sie stattdessen die [BITS-Schnittstellen](bits-interfaces.md).\]
 
 Verwenden Sie die folgenden Queue Manager-Schnittstellen (QMGR), um Dateien herunterzuladen und Aufträge in der Downloadwarteschlange zu überwachen.
 

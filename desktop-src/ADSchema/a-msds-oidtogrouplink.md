@@ -1,11 +1,11 @@
 ---
-title: ms-DS-oidtoidgruppenlink-Attribut
-description: Gibt für eine OID das Gruppen Objekt an, das der von dieser OID dargestellten Ausstellungs Richtlinie entspricht.
+title: ms-DS-OIDToGroup-Link-Attribut
+description: Identifiziert für eine OID das Gruppenobjekt, das der durch diese OID dargestellten Ausstellungsrichtlinie entspricht.
 ms.assetid: aebd0803-9c8f-4a33-8982-739941d65754
 ms.tgt_platform: multiple
 keywords:
-- das AD-Schema "ms-DS-oidtoigroup-Link"
-- adschema des msDS-oidesgrouplink-Attributs
+- AD-Schema des ms-DS-OIDToGroup-Link-Attributs
+- AD-Schema des msDS-OIDToGroupLink-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 61d562cb2ac1c07b5dd0507bc8b059662e3abc55
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 7acd07f3d1d323b300f914724cfc3d75492eb65631eef8b0331b974d4f54379b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957510"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118014421"
 ---
-# <a name="ms-ds-oidtogroup-link-attribute"></a>ms-DS-oidtoidgruppenlink-Attribut
+# <a name="ms-ds-oidtogroup-link-attribute"></a>ms-DS-OIDToGroup-Link-Attribut
 
-Gibt für eine OID das Gruppen Objekt an, das der von dieser OID dargestellten Ausstellungs Richtlinie entspricht.
+Identifiziert für eine OID das Gruppenobjekt, das der durch diese OID dargestellten Ausstellungsrichtlinie entspricht.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-oidtoidgruppenlink                   |
-| LDAP-Display-Name | MSDS-oidtoiplink                     |
+| CN                | ms-DS-OIDToGroup-Link                   |
+| Ldap-Anzeigename | msDS-OIDToGroupLink                     |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.2051                 |
-| System-ID-GUID    | f9c9a57c-3941-438d-bebf-0edaf2aca187    |
+| System-Id-Guid    | f9c9a57c-3941-438d-bebf-0edaf2aca187    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -53,16 +53,16 @@ Gibt für eine OID das Gruppen Objekt an, das der von dieser OID dargestellten A
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | 2164                                                               |
 | MAPI-Id                | \-                                                                 |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| System-Only            | Falsch                                                              |
+| Is-Single-Valued       | Richtig                                                               |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000000                                                         |
 | System-Flags           | 0x00000010                                                         |
-| In verwendete Klassen        | [**MS-PKI-Enterprise-OID**](c-mspki-enterprise-oid.md)<br/> |
+| In verwendete Klassen        | [**ms-PKI-Enterprise-Oid**](c-mspki-enterprise-oid.md)<br/> |
 
 
 
@@ -74,16 +74,16 @@ Gibt für eine OID das Gruppen Objekt an, das der von dieser OID dargestellten A
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | 2164                                                               |
 | MAPI-Id                | \-                                                                 |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| System-Only            | Falsch                                                              |
+| Is-Single-Valued       | Richtig                                                               |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000000                                                         |
 | System-Flags           | 0x00000010                                                         |
-| In verwendete Klassen        | [**MS-PKI-Enterprise-OID**](c-mspki-enterprise-oid.md)<br/> |
+| In verwendete Klassen        | [**ms-PKI-Enterprise-Oid**](c-mspki-enterprise-oid.md)<br/> |
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: Phase-PS
-description: Die Phasen Anweisung markiert den Übergang Zwischenphase 1 und Phase 2. Wenn keine Phasen Anweisung vorhanden ist, wird der gesamte Shader so ausgeführt, als handele es sich um einen Shader der Phase 2.
+title: phase – ps
+description: Die Phasesanweisung markiert den Übergang zwischen Phase 1 und Phase 2. Wenn keine Phasesanweisung vorhanden ist, wird der gesamte Shader so ausgeführt, als ob es sich um einen Shader der Phase 2 handelt.
 ms.assetid: e0e89425-dc8e-489f-a0d1-3eefbfd09178
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: e9a16b01e186de5645ffe65e003ebbe6defca2d5
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: aac29792274a36ad4bb7266ffa02d0ea5d2bb1b6cec8efe2db213e9b0dd4890b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104038361"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118088693"
 ---
-# <a name="phase---ps"></a>Phase-PS
+# <a name="phase---ps"></a>phase – ps
 
-Die Phasen Anweisung markiert den Übergang Zwischenphase 1 und Phase 2. Wenn keine Phasen Anweisung vorhanden ist, wird der gesamte Shader so ausgeführt, als handele es sich um einen Shader der Phase 2.
+Die Phasesanweisung markiert den Übergang zwischen Phase 1 und Phase 2. Wenn keine Phasesanweisung vorhanden ist, wird der gesamte Shader so ausgeführt, als ob es sich um einen Shader der Phase 2 handelt.
 
 Diese Anweisung gilt nur für Version 1 \_ 4.
 
@@ -31,27 +31,27 @@ phase
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | phase                 |      |      |      | x    |      |      |       |      |       |
 
 
 
- 
+ 
 
-Shaderanweisungen, die vor der Phasen Anweisung erfolgen, sind Anweisungen der Phase 1. Alle anderen Anweisungen sind Anweisungen der Phase 2. Wenn Sie zwei Phasen für Anweisungen haben, wird die maximale Anzahl von Anweisungen pro Shader angehoben.
+Shaderanweisungen, die vor der Phasesanweisung auftreten, sind Anweisungen in Phase 1. Alle anderen Anweisungen sind Anweisungen in Phase 2. Durch zwei Phasen für Anweisungen wird die maximale Anzahl von Anweisungen pro Shader erhöht.
 
-Der unglückliche Nebeneffekt des Phasenübergangs besteht darin, dass die Alpha Komponente von [temporären Registern](dx9-graphics-reference-asm-ps-registers-ps-1-x.md) nicht über den Übergang hinweg beibehalten wird. Das heißt, die Alpha Komponente muss nach der Phasen Anweisung erneut initialisiert werden.
+Der vorübergehende Nebeneffekt des [Phasenübergangs](dx9-graphics-reference-asm-ps-registers-ps-1-x.md) ist, dass die Alphakomponente temporärer Register während des Übergangs nicht beibehalten wird. Anders ausgedrückt: Die Alphakomponente muss nach der Phasesanweisung erneut initialisiert werden.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel wird gezeigt, wie Sie Anweisungen in Phase 1 oder in Phase 2 in einem Shader gruppieren.
+In diesem Beispiel wird gezeigt, wie Anweisungen als Anweisungen in Phase 1 oder Phase 2 innerhalb eines Shaders gruppiert werden.
 
-Die Phasen Anweisung wird auch als Phasen Marker bezeichnet, da Sie den Übergang zwischen den Anweisungen in Phase 1 und 2 markiert. Wenn in einem \_ Pixelshader der Version 1 4 der Phasen Marker nicht vorhanden ist, wird der Shader so ausgeführt, als ob er in Phase 2 ausgeführt wird. Dies ist wichtig, da es Unterschiede zwischen den Anweisungen in Phase 1 und 2 gibt und die Verfügbarkeit registriert ist. Die Unterschiede werden im gesamten Referenz Abschnitt vermerkt.
+Die Phasenanweisung wird auch häufig als Phasenmarker bezeichnet, da sie den Übergang zwischen Phase 1- und 2-Anweisungen markiert. Wenn der Phasenmarker in einem Shader der Version 1 mit 4 Pixeln nicht vorhanden ist, wird der Shader so ausgeführt, als würde er \_ in Phase 2 ausgeführt. Dies ist wichtig, da es Unterschiede zwischen den Anweisungen in Phase 1 und 2 und der Registrierung der Verfügbarkeit gibt. Die Unterschiede werden im gesamten Referenzabschnitt beschrieben.
 
 
 ```
@@ -68,12 +68,12 @@ phase
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

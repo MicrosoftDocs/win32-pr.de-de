@@ -1,11 +1,11 @@
 ---
-title: Player. openplayer-Methode
-description: Die openplayer-Methode öffnet Windows Media Player unter Verwendung der angegebenen URL. | Player. openplayer-Methode
+title: Player.openPlayer-Methode
+description: Die openPlayer-Methode wird Windows Media Player der angegebenen URL geöffnet. | Player.openPlayer-Methode
 ms.assetid: 9ddd63c9-f4a0-490a-8543-51ad0fa74a26
 keywords:
-- openplayer-Methode, Windows-Media Player
-- openplayer-Methode, Windows Media Player, Player-Klasse
-- Player-Klasse, Windows Media Player, openplayer-Methode
+- openPlayer-Windows Media Player
+- openPlayer-Methode Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , openPlayer-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3378df48f961f1aa5e3fccec72e79b7f1c26ff08
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 42245ec29f7d7caeac17f116d1f592f74f10ba95716d5d16734ecd21bbcbb60d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117747568"
 ---
-# <a name="playeropenplayer-method"></a>Player. openplayer-Methode
+# <a name="playeropenplayer-method"></a>Player.openPlayer-Methode
 
-Die **openplayer** -Methode öffnet Windows Media Player unter Verwendung der angegebenen URL.
+Die **openPlayer-Methode** wird Windows Media Player der angegebenen URL geöffnet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ Player.openPlayer(
 
 <dl> <dt>
 
-*URL* \[ in\]
+*URL* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die die URL des wieder zugebende Medien Elements darstellt.
+**Eine Zeichenfolge,** die die URL des medienelements darstellt, das wiedergibt.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Player.openPlayer(
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Methode wird Windows Media Player gestartet, wobei der angegebene URL als Aktuelles Medien Element festgelegt ist. Wenn der Spieler zuvor im Skin-Modus geschlossen wurde, wird er mithilfe der Skin geöffnet, die zuletzt vom Benutzer ausgewählt wurde. Andernfalls wird der Spieler im vollständigen Modus geöffnet.
+Diese Methode startet Windows Media Player, bei der die angegebene URL als aktuelles Medienelement festgelegt ist. Wenn der Player zuvor im Skinmodus geschlossen wurde, wird er mit der zuletzt vom Benutzer ausgewählten Skin geöffnet. Andernfalls wird der Player im Vollmodus geöffnet.
 
-Wenn diese Methode von einem Windows Media-playeractivex-Steuerelement aufgerufen wird, das im Remote Modus eingebettet ist, ist das Verhalten mit der *playerapplication* identisch. **switchtoplayerapplication** -Methode.
+Wenn diese Methode von einem Windows Media PlayerActiveX-Steuerelement aufgerufen wird, das in den Remotemodus eingebettet ist, ist das Verhalten mit *dem PlayerApplication identisch.* **switchToPlayerApplication-Methode.**
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
@@ -67,19 +67,19 @@ Wenn diese Methode von einem Windows Media-playeractivex-Steuerelement aufgerufe
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player 9-Serie oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Playerapplication. switchtoplayerapplication**](playerapplication-switchtoplayerapplication.md)
+[**PlayerApplication.switchToPlayerApplication**](playerapplication-switchtoplayerapplication.md)
 </dt> </dl>
 
  

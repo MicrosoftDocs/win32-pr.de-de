@@ -35,7 +35,7 @@ Keine
 
 
 
-| attribute | Typ           | Erforderlich | Beschreibung | Mögliche Werte     |
+| attribute | type           | Erforderlich | BESCHREIBUNG | Mögliche Werte     |
 |-----------|----------------|----------|-------------|---------------------|
 | **Mat1**  | **xs:decimal** | Erforderlich |             | Eine beliebige Dezimalzahl. |
 | **Mat2**  | **xs:decimal** | Erforderlich |             | Eine beliebige Dezimalzahl. |

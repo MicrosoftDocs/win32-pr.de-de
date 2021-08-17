@@ -1,9 +1,9 @@
 ---
-title: LVM_GETFOOTERRECT-Nachricht (Commctrl.h)
+title: LVM_GETFOOTERRECT Meldung (Commctrl.h)
 description: Ruft die Koordinaten der Fußzeile für ein Listenansicht-Steuerelement ab. Senden Sie diese Nachricht explizit oder mithilfe des ListView \_ GetFooterRect-Makros.
 ms.assetid: f8816f35-c1d2-4072-81d3-0a9a3df53d64
 keywords:
-- LVM_GETFOOTERRECT Windows-Steuerelemente für Nachrichten
+- LVM_GETFOOTERRECT Meldung Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:

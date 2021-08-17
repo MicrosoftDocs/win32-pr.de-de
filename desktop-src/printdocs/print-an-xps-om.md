@@ -1,37 +1,37 @@
 ---
-description: Beschreibt, wie ein XPS-OM als XPS-Dokument an einen Drucker gesendet wird.
+description: Beschreibt, wie ein XPS OM als XPS-Dokument an einen Drucker gesendet wird.
 ms.assetid: eb1068c4-6a6a-4ef2-8ed6-033a6a2c273b
-title: Drucken eines XPS-OM
+title: Drucken eines XPS OM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c01ae1081c4f0c58c66efedc30406e310dd8dd9c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 12f1386352cff1556a5ce2403f34ebe4258c4110d4c3bf455990f3f1eb226d17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118470903"
 ---
-# <a name="print-an-xps-om"></a>Drucken eines XPS-OM
+# <a name="print-an-xps-om"></a>Drucken eines XPS OM
 
-Beschreibt, wie ein XPS-OM als XPS-Dokument an einen Drucker gesendet wird.
+Beschreibt, wie ein XPS OM als XPS-Dokument an einen Drucker gesendet wird.
 
-Anweisungen zum Drucken eines XPS-OMS, das ein vollständiges XPS-Dokument enthält, finden Sie unter [Drucken eines vollständigen XPS-OMS](#print-a-complete-xps-om). Um ein XPS-Dokument zu enthalten, muss ein XPS-OM die unter [Erstellen eines leeren XPS-Maps](create-a-blank-xps-om.md)aufgeführten Elemente enthalten.
+Anweisungen zum Drucken eines XPS OM, das ein vollständiges XPS-Dokument enthält, finden Sie unter [Drucken eines vollständigen XPS OM.](#print-a-complete-xps-om) Um ein XPS-Dokument enthalten zu können, muss ein XPS OM die unter Erstellen eines leeren XPS OM aufgeführten [Elemente enthalten.](create-a-blank-xps-om.md)
 
-Anweisungen zum Drucken eines XPS-OMS, das jeweils nacheinander erstellt oder verarbeitet wird, finden Sie unter [inkrementelles Drucken eines XPS-OM](#incrementally-print-an-xps-om).
+Anweisungen zum Drucken eines XPS OM, das gleichzeitig erstellt oder verarbeitet wird, finden Sie unter [Inkrementelles](#incrementally-print-an-xps-om)Drucken eines XPS OM.
 
-Bevor Sie diese Codebeispiele in Ihrem Programm verwenden, lesen Sie den Haftungsausschluss in [Allgemeine XPS-Dokument Programmieraufgaben](common-xps-document-tasks.md).
+Bevor Sie diese Codebeispiele in Ihrem Programm verwenden, lesen Sie den Haftungsausschluss unter [Allgemeine XPS-Dokumentprogrammieraufgaben](common-xps-document-tasks.md).
 
 In diesem Thema erfahren Sie, wie Sie die folgenden Aufgaben ausführen:
 
--   [Drucken eines vollständigen XPS-OMS](#print-a-complete-xps-om)
--   [Inkrementelles Drucken eines XPS-OM](#incrementally-print-an-xps-om)
+-   [Drucken eines vollständigen XPS OM](#print-a-complete-xps-om)
+-   [Inkrementelles Drucken eines XPS OM](#incrementally-print-an-xps-om)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="print-a-complete-xps-om"></a>Drucken eines vollständigen XPS-OMS
+## <a name="print-a-complete-xps-om"></a>Drucken eines vollständigen XPS OM
 
-Wenn ein XPS-OM ein vollständiges XPS-Dokument enthält, kann die " [**Write**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-writetostream) "-Methode der [**ixpsompackage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage) -Schnittstelle den Inhalt des XPS-OMS an einen Drucker oder eine Druck Warteschlange senden.
+Wenn ein XPS OM ein vollständiges XPS-Dokument enthält, kann die [**WriteToStream-Methode**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-writetostream) der [**IXpsOMPackage-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage) den Inhalt des XPS OM an einen Drucker oder eine Druckwarteschlange senden.
 
-Um zu ermitteln, wann der Druckauftrag abgeschlossen wurde, erstellen Sie ein Ereignis handle, wie im folgenden Beispiel gezeigt.
+Um zu ermitteln, wann der Druckauftrag abgeschlossen wurde, erstellen Sie ein Ereignishand handle, wie im folgenden Beispiel gezeigt.
 
 
 ```C++
@@ -46,14 +46,14 @@ Um zu ermitteln, wann der Druckauftrag abgeschlossen wurde, erstellen Sie ein Er
 
 
 
-So drucken Sie ein vollständiges XPS-om:
+So drucken Sie ein vollständiges XPS OM
 
-1.  Erstellen Sie einen neuen Druckauftrags Datenstrom, indem Sie [**startxpsprintjob**](/windows/win32/api/xpsprint/nf-xpsprint-startxpsprintjob)aufrufen.
-2.  Senden Sie den Inhalt des XPS-OMS in den Stream, indem Sie die Methode " [**Write-tostream**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-writetostream) " des Pakets aufrufen.
-3.  Schließen Sie den Druckauftrags Datenstrom, indem Sie die **Close** -Methode des Streams aufrufen.
-4.  Warten Sie, bis der Druckauftrag signalisiert hat, dass er abgeschlossen wurde.
-5.  Überprüfen Sie den Abschluss Status.
-6.  Schließen und Freigeben von Ressourcen.
+1.  Erstellen Sie einen neuen Druckauftragsstream, indem [**Sie StartXpsPrintJob aufrufen.**](/windows/win32/api/xpsprint/nf-xpsprint-startxpsprintjob)
+2.  Senden Sie den Inhalt des XPS OM an den Stream, indem Sie die [**WriteToStream-Methode**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-writetostream) des Pakets aufrufen.
+3.  Schließen Sie den Druckauftragsstream, indem Sie die **Close-Methode** des Streams aufrufen.
+4.  Warten Sie, bis der Druckauftrag signalisiert, dass er abgeschlossen wurde.
+5.  Überprüfen Sie den Abschlussstatus.
+6.  Schließen sie Ressourcen, und geben Sie sie frei.
 
 
 ```C++
@@ -126,11 +126,11 @@ So drucken Sie ein vollständiges XPS-om:
 
 
 
-## <a name="incrementally-print-an-xps-om"></a>Inkrementelles Drucken eines XPS-OM
+## <a name="incrementally-print-an-xps-om"></a>Inkrementelles Drucken eines XPS OM
 
-Sie können die Dokument Komponenten eines XPS OM inkrementell an einen Drucker Auftrag senden, indem Sie einen XPS-Druckauftrags Datenstrom erstellen und die einzelnen Dokument Komponenten nacheinander an den Druckauftrags Datenstrom übergeben. Die Reihenfolge, in der die Dokument Komponenten gesendet werden, bestimmt, wie diese im fertigen Dokument angezeigt werden. Daher muss die Dokument Komponenten ordnungsgemäß organisiert werden, bevor ein Programm den Code in diesem Beispiel abrufen kann.
+Sie können die Dokumentkomponenten eines XPS OM inkrementell an einen Druckerauftrag senden, indem Sie einen XPS-Druckauftragsstream erstellen und dann die einzelnen Dokumentkomponenten einzeln an den Druckauftragsstream übergeben. Die Reihenfolge, in der die Dokumentkomponenten gesendet werden, bestimmt, wie sie im fertigen Dokument angezeigt werden. Daher müssen die Dokumentkomponenten ordnungsgemäß organisiert werden, bevor ein Programm den Code in diesem Beispiel aufrufen kann.
 
-Bevor Sie XPS OM-Schnittstellen verwenden, initialisieren Sie com im Thread, wie im folgenden Beispielcode gezeigt.
+Bevor Sie XPS OM-Schnittstellen verwenden, initialisieren Sie COM im Thread, wie im folgenden Beispielcode gezeigt.
 
 
 ```C++
@@ -140,7 +140,7 @@ Bevor Sie XPS OM-Schnittstellen verwenden, initialisieren Sie com im Thread, wie
 
 
 
-Erstellen Sie ein Ereignis handle, wie im folgenden Beispielcode gezeigt, um den Abschluss des Druckauftrags zu überwachen.
+Um den Abschluss des Druckauftrags zu überwachen, erstellen Sie ein Ereignishand handle, wie im folgenden Beispielcode gezeigt.
 
 
 ```C++
@@ -156,22 +156,22 @@ Erstellen Sie ein Ereignis handle, wie im folgenden Beispielcode gezeigt, um den
 
 
 
-Erstellen Sie einen neuen Druckauftrags Datenstrom und einen neuen paketwriter. Übergeben Sie die einzelnen Dokument Komponenten an die entsprechenden paketwriter-Methoden in derselben Reihenfolge, in der Sie im fertigen Dokument angezeigt werden.
+Erstellen Sie einen neuen Druckauftragsstream und einen neuen Paketwriter. Übergeben Sie jede der Dokumentkomponenten in derselben Reihenfolge an die entsprechenden Paketwritermethoden, wie sie im fertigen Dokument angezeigt werden.
 
-Starten Sie jedes Dokument neu, und fügen Sie ihm Seiten hinzu. Nachdem Sie alle Dokument Komponenten an den Druckauftrags Datenstrom übergeben haben, schließen Sie den Stream, warten Sie, bis der Druckauftrag abgeschlossen ist, und schließen Sie dann offene Ressourcen.
+Starten Sie jedes Dokument neu, und fügen Sie ihm Seiten hinzu. Nachdem Sie alle Dokumentkomponenten an den Druckauftragsstream übergeben haben, schließen Sie den Stream, warten Sie, bis der Druckauftrag abgeschlossen ist, und schließen Sie dann geöffnete Ressourcen, und geben Sie sie frei.
 
-1.  Erstellen Sie einen neuen Druckauftrags Datenstrom, indem Sie [**startxpsprintjob**](/windows/win32/api/xpsprint/nf-xpsprint-startxpsprintjob)aufrufen.
+1.  Erstellen Sie einen neuen Druckauftragsstream, indem [**Sie StartXpsPrintJob aufrufen.**](/windows/win32/api/xpsprint/nf-xpsprint-startxpsprintjob)
 2.  Erstellen Sie einen Teil-URI für den FixedDocumentSequence-Teil.
-3.  Erstellen Sie einen neuen paketwriter im Druckauftrags Datenstrom.
-4.  Für jedes Dokument, das geschrieben werden soll:
+3.  Erstellen Sie einen neuen Paketwriter für den Druckauftragsstream.
+4.  Für jedes zu schreibende Dokument:
     1.  Erstellen Sie einen neuen Teil-URI für den FixedDocument-Teil.
-    2.  Startet ein neues Dokument im paketwriter.
-    3.  Erstellen Sie für jede Seite im aktuellen Dokument einen Teil-URI für den FixedPage-Teil, und fügen Sie die Seite dem paketwriter hinzu.
-5.  Nachdem dem paketwriter alle Seiten hinzugefügt wurden, schließen Sie ihn.
-6.  Schließen Sie den Druckauftrags Datenstrom.
-7.  Warten Sie, bis der Druckauftrag vollständig ausgeführt wurde.
-8.  Überprüfen Sie den Abschluss Status.
-9.  Schließen und freigeben offener Ressourcen.
+    2.  Starten Sie ein neues Dokument im Paketwriter.
+    3.  Erstellen Sie für jede Seite im aktuellen Dokument einen Teil-URI für den FixedPage-Teil, und fügen Sie die Seite dem Paketwriter hinzu.
+5.  Nachdem alle Seiten dem Paketwriter hinzugefügt wurden, schließen Sie sie.
+6.  Schließen Sie den Druckauftragsstream.
+7.  Warten Sie, bis der Druckauftrag abgeschlossen ist.
+8.  Überprüfen Sie den Abschlussstatus.
+9.  Schließen Sie geöffnete Ressourcen, und geben Sie sie frei.
 
 
 ```C++
@@ -411,7 +411,7 @@ Starten Sie jedes Dokument neu, und fügen Sie ihm Seiten hinzu. Nachdem Sie all
 
 
 
-Wenn das Programm die Dokument Komponenten inkrementell schreibt, wie in diesem Beispiel gezeigt, muss es die Teilnamen für jeden Dokument Teil generieren, der an den Druckauftrags Datenstrom gesendet wird. Im vorangehenden Beispiel wird der FixedDocumentSequence-Teil-URI aus einer statischen Zeichenfolge erstellt, da nur ein solcher Teil im XPS-Dokument vorhanden ist. Der URI jedes FixedPage-und FixedDocument-Teils muss innerhalb des XPS-Dokuments eindeutig sein. Wenn Sie den Teil-URI mit dem Index dieser Komponenten verwenden, können Sie sicherstellen, dass die resultierende URI-Zeichenfolge innerhalb des XPS-Dokuments eindeutig ist.
+Wenn das Programm die Dokumentkomponenten inkrementell schreibt, wie in diesem Beispiel gezeigt, muss es die Teilenamen für jeden Dokumentteil generieren, den es an den Druckauftragsstream sendet. Im vorherigen Beispiel wird der FixedDocumentSequence-Teil-URI aus einer statischen Zeichenfolge erstellt, da das XPS-Dokument nur einen teil davon enthält. Der URI jedes FixedPage- und FixedDocument-Teils muss innerhalb des XPS-Dokuments eindeutig sein. Wenn Sie den Teil-URI mithilfe des Index dieser Komponenten erstellen, können Sie sicherstellen, dass die resultierende URI-Zeichenfolge innerhalb des XPS-Dokuments eindeutig ist.
 
 
 ```C++
@@ -449,7 +449,7 @@ HRESULT MakePagePartUri (
 
 
 
-Weitere Informationen zur Struktur eines XPS-Dokuments finden Sie in der [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf).
+Weitere Informationen zur Struktur eines XPS-Dokuments finden Sie im [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -458,46 +458,46 @@ Weitere Informationen zur Struktur eines XPS-Dokuments finden Sie in der [XML Pa
 **Next Steps**
 </dt> <dt>
 
-[Schreiben eines XPS-om in ein XPS-Dokument](write-an-xps-om-to-an-xps-document.md)
+[Schreiben eines XPS OM in ein XPS-Dokument](write-an-xps-om-to-an-xps-document.md)
 </dt> <dt>
 
-**In diesem Abschnitt verwendet**
+**Wird in diesem Abschnitt verwendet**
 </dt> <dt>
 
 [**CoInitializeEx**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)
 </dt> <dt>
 
-[**CreateEvent**](/windows/desktop/api/synchapi/nf-synchapi-createeventa)
+[**Createevent**](/windows/desktop/api/synchapi/nf-synchapi-createeventa)
 </dt> <dt>
 
-[**Iopcparamei**](/previous-versions/windows/desktop/api/msopc/nn-msopc-iopcparturi)
+[**IOpcPartUri**](/previous-versions/windows/desktop/api/msopc/nn-msopc-iopcparturi)
 </dt> <dt>
 
-[**Ixpsompackage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage)
+[**IXpsOMPackage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage)
 </dt> <dt>
 
-[**Ixpsompackagewriter**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackagewriter)
+[**IXpsOMPackageWriter**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackagewriter)
 </dt> <dt>
 
-[**Ixpsprintjob**](/windows/win32/api/xpsprint/nn-xpsprint-ixpsprintjob)
+[**IXpsPrintJob**](/windows/win32/api/xpsprint/nn-xpsprint-ixpsprintjob)
 </dt> <dt>
 
-[**Ixpsprintjobstream**](/windows/win32/api/xpsprint/nn-xpsprint-ixpsprintjobstream)
+[**IXpsPrintJobStream**](/windows/win32/api/xpsprint/nn-xpsprint-ixpsprintjobstream)
 </dt> <dt>
 
-[**Startxpsprintjob**](/windows/win32/api/xpsprint/nf-xpsprint-startxpsprintjob)
+[**StartXpsPrintJob**](/windows/win32/api/xpsprint/nf-xpsprint-startxpsprintjob)
 </dt> <dt>
 
-[**WaitForSingleObject**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)
+[**Waitforsingleobject**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)
 </dt> <dt>
 
 **Weitere Informationen**
 </dt> <dt>
 
-[Initialisieren eines XPS-OMS](xps-object-model-initialization.md)
+[Initialisieren eines XPS OM](xps-object-model-initialization.md)
 </dt> <dt>
 
-[XPS-Dokument-API-Referenz](xps-programming-reference.md)
+[REFERENZ ZUR XPS-Dokument-API](xps-programming-reference.md)
 </dt> <dt>
 
 [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

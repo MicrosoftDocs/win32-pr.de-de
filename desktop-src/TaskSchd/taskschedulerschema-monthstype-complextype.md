@@ -1,9 +1,9 @@
 ---
-title: komplexer monthstype-Typ
-description: Definiert die untergeordneten Elemente und Sequenzierungs Informationen für die Monate (monthlydayosweekscheduletype) und die Monate (monthlyscheduletype).
+title: monthsType Complex Type
+description: Definiert die untergeordneten Elemente und Sequenzierungsinformationen für die Elemente Months (monthlyDayOfWeekScheduleType) und Months (monthlyScheduleType).
 ms.assetid: f1faa67a-2f5f-4a00-a1df-2d44e218278b
 keywords:
-- komplexer monthstype-Typ Taskplaner
+- monthsType complex type Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e6a19000073fd12e05aa915921850264979a0541
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a0873f07cc76af9fab827c3df98a8f08ef300de93d4ae6b316809ba32aac87ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740440"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117758746"
 ---
-# <a name="monthstype-complex-type"></a>komplexer monthstype-Typ
+# <a name="monthstype-complex-type"></a>monthsType Complex Type
 
-Definiert die untergeordneten Elemente und Sequenzierungs Informationen für die [**Monate (monthlydayosweekscheduletype)**](taskschedulerschema-months-monthlydayofweekscheduletype-element.md) und die [**Monate (monthlyscheduletype)**](taskschedulerschema-months-monthlyscheduletype-element.md) .
+Definiert die untergeordneten Elemente und Sequenzierungsinformationen für [**die Elemente Months (monthlyDayOfWeekScheduleType)**](taskschedulerschema-months-monthlydayofweekscheduletype-element.md) und [**Months (monthlyScheduleType).**](taskschedulerschema-months-monthlyscheduletype-element.md)
 
 ``` syntax
 <xs:complexType name="monthsType">
@@ -95,20 +95,20 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen für die
 
 
 
-| Element                                                               | type | BESCHREIBUNG                                            |
+| Element                                                               | type | Beschreibung                                            |
 |-----------------------------------------------------------------------|------|--------------------------------------------------------|
-| [**Am**](taskschedulerschema-april-monthstype-element.md)         | –  | Gibt an, dass der Task im April ausgeführt wird. <br/>     |
-| [**August**](taskschedulerschema-august-monthstype-element.md)       | –  | Gibt an, dass der Task im August ausgeführt wird. <br/>    |
-| [**Dezember**](taskschedulerschema-december-monthstype-element.md)   | –  | Gibt an, dass der Task im Dezember ausgeführt wird. <br/>  |
-| [**Februar**](taskschedulerschema-february-monthstype-element.md)   | –  | Gibt an, dass der Task im Februar ausgeführt wird. <br/>  |
-| [**January**](taskschedulerschema-january-monthstype-element.md)     | –  | Gibt an, dass der Task im Januar ausgeführt wird. <br/>   |
-| [**Juli**](taskschedulerschema-july-monthstype-element.md)           | –  | Gibt an, dass der Task im Juli ausgeführt wird. <br/>      |
-| [**June**](taskschedulerschema-june-monthstype-element.md)           | –  | Gibt an, dass der Task im Juni ausgeführt wird. <br/>      |
-| [**März**](taskschedulerschema-march-monthstype-element.md)         | –  | Gibt an, dass der Task im März ausgeführt wird. <br/>     |
-| [**May**](taskschedulerschema-may-monthstype-element.md)             | –  | Gibt an, dass der Task im Mai ausgeführt wird. <br/>       |
-| [**November**](taskschedulerschema-november-monthstype-element.md)   | –  | Gibt an, dass der Task im November ausgeführt wird. <br/>  |
-| [**Vom**](taskschedulerschema-october-monthstype-element.md)     | –  | Gibt an, dass der Task im Oktober ausgeführt wird. <br/>   |
-| [**September**](taskschedulerschema-september-monthstype-element.md) | –  | Gibt an, dass der Task im September ausgeführt wird. <br/> |
+| [**April**](taskschedulerschema-april-monthstype-element.md)         | Nicht zutreffend  | Gibt an, dass die Aufgabe im April ausgeführt wird. <br/>     |
+| [**August**](taskschedulerschema-august-monthstype-element.md)       | Nicht zutreffend  | Gibt an, dass die Aufgabe im August ausgeführt wird. <br/>    |
+| [**Dezember**](taskschedulerschema-december-monthstype-element.md)   | Nicht zutreffend  | Gibt an, dass die Aufgabe im Dezember ausgeführt wird. <br/>  |
+| [**Februar**](taskschedulerschema-february-monthstype-element.md)   | Nicht zutreffend  | Gibt an, dass die Aufgabe im Februar ausgeführt wird. <br/>  |
+| [**January**](taskschedulerschema-january-monthstype-element.md)     | Nicht zutreffend  | Gibt an, dass die Aufgabe im Januar ausgeführt wird. <br/>   |
+| [**Juli**](taskschedulerschema-july-monthstype-element.md)           | Nicht zutreffend  | Gibt an, dass die Aufgabe im Juli ausgeführt wird. <br/>      |
+| [**June**](taskschedulerschema-june-monthstype-element.md)           | Nicht zutreffend  | Gibt an, dass die Aufgabe im Juni ausgeführt wird. <br/>      |
+| [**März**](taskschedulerschema-march-monthstype-element.md)         | Nicht zutreffend  | Gibt an, dass die Aufgabe im März ausgeführt wird. <br/>     |
+| [**May**](taskschedulerschema-may-monthstype-element.md)             | Nicht zutreffend  | Gibt an, dass die Aufgabe im Mai ausgeführt wird. <br/>       |
+| [**November**](taskschedulerschema-november-monthstype-element.md)   | Nicht zutreffend  | Gibt an, dass die Aufgabe im November ausgeführt wird. <br/>  |
+| [**Oktober**](taskschedulerschema-october-monthstype-element.md)     | Nicht zutreffend  | Gibt an, dass die Aufgabe im Oktober ausgeführt wird. <br/>   |
+| [**September**](taskschedulerschema-september-monthstype-element.md) | Nicht zutreffend  | Gibt an, dass die Aufgabe im September ausgeführt wird. <br/> |
 
 
 
@@ -118,16 +118,16 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen für die
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[Taskplaner Komplexe Schematypen](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

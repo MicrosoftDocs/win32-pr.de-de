@@ -1,39 +1,39 @@
 ---
 title: Tipps zur Migration
-description: Es ist wichtig, Adress Berechnungen und Zeigerarithmetik zu berücksichtigen, wenn Sie Ihren Code auf 64-Bit-Fenster portieren.
+description: Es ist wichtig, adressbasierte Berechnungen und Zeigerarithmetik zu berücksichtigen, wenn Sie Ihren Code in 64-Bit-Windows.
 ms.assetid: ae562a85-d6ea-4595-b54c-0a28e6532cf5
 keywords:
-- 64-Bit-Windows-Programmier Handbuch 64-Bit Windows-Programmierung, Tipps zur Migration
-- Migrations Tipps 64-Bit-Windows-Programmierung
-- Kompatibilität 64-Bit-Windows-Programmierung
+- 64-Bit-Windows 64-Bit-Programmierhandbuch Windows Programmierung, Tipps zur Migration
+- Tipps zur Migration von 64-Bit-Windows Programmierung
+- Kompatibilität mit 64-Bit-Windows Programmierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5236012b84ee880b53f8d7e50b01694181e71112
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3ee1480bec99bdc3b620d5d349343330aa3c34121ff697d5e8b15497c72baedc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711711"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117743595"
 ---
 # <a name="migration-tips"></a>Tipps zur Migration
 
-Bei der Untersuchung des Codes für die 64-Bit-Kompatibilität sind die folgenden beiden Hauptbereiche von Bedeutung:
+Die beiden hauptanliegenden Bereiche bei der Untersuchung Ihres Codes auf 64-Bit-Kompatibilität sind:
 
--   Adress Berechnungen
+-   Adressberechnungen
 -   Zeigerarithmetik
 
-Aus vielen Gründen haben Entwickler Adressen als **ulong** -Wert gespeichert. Schließlich sind auf 32-Bit-Fenstern eine Adresse, ein Zeiger und ein **ulong** -Wert alle 32 Bits lang. Bei 64-Bit-Fenstern weisen jedoch eine Adresse und ein **ulong** nicht die gleiche Länge auf. Während ein **ulong** -Wert ein 32-Bit-Wert ist, sind alle Zeiger jetzt 64-Bit-Werte.
+Aus vielen Gründen haben Entwickler Adressen als **ULONG-Wert** gespeichert. Auf 32-Bit-Windows sind eine Adresse, ein Zeiger und ein **ULONG-Wert** alle 32 Bits lang. Auf 64-Bit-Windows haben eine Adresse und **ein ULONG** jedoch nicht die gleiche Länge. Während ein **ULONG** ein 32-Bit-Wert bleibt, sind alle Zeiger jetzt 64-Bit-Werte.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Allgemeine Richtlinien für die Portierung](general-porting-guidelines.md)
+-   [Allgemeine Portierungsrichtlinien](general-porting-guidelines.md)
 -   [Speichern eines 64-Bit-Werts](storing-a-64-bit-value.md)
 -   [Häufige Compilerfehler](common-compiler-errors.md)
 -   [Weitere Überlegungen](additional-considerations.md)
 
- 
+ 
 
- 
+ 
 
 
 

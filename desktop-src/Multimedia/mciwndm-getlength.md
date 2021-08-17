@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_GETLENGTH (Vfw.h)
-description: Die MCIWNDM GETLENGTH-Nachricht ruft die Länge des Inhalts oder der Datei ab, der bzw. die derzeit von \_ einem MCI-Gerät verwendet wird. Sie können diese Nachricht explizit oder mithilfe des MCIWndGetLength-Makros senden.
+title: MCIWNDM_GETLENGTH-Nachricht (Vfw.h)
+description: Die MCIWNDM \_ GETLENGTH-Nachricht ruft die Länge des Inhalts oder der Datei ab, der bzw. die derzeit von einem MCI-Gerät verwendet wird. Sie können diese Nachricht explizit oder mithilfe des MCIWndGetLength-Makros senden.
 ms.assetid: bee4d9fc-78eb-4577-98bb-d6c2d9acbb7f
 keywords:
-- MCIWNDM_GETLENGTH-Nachricht Windows Multimedia
+- MCIWNDM_GETLENGTH nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:

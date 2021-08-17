@@ -1,11 +1,11 @@
 ---
 title: INapClientManagement GetSystemIsolationInfo-Methode (NapManagement.h)
-description: Ruft Informationen zum Isolationsstatus von NapClient ab.
+description: Ruft Informationen zum Isolationsstatus des NapClient ab.
 ms.assetid: e1f69e66-71ca-402e-9c94-8af159d00b21
 keywords:
-- GetSystemIsolationInfo-Methode NAP
+- Nap-Methode "GetSystemIsolationInfo"
 - GetSystemIsolationInfo-Methode NAP, INapClientManagement-Schnittstelle
-- INapClientManagement-Schnittstelle NAP, GetSystemIsolationInfo-Methode
+- INapClientManagement-Schnittstelle NAP , GetSystemIsolationInfo-Methode
 topic_type:
 - apiref
 api_name:
@@ -26,11 +26,11 @@ ms.locfileid: "118368704"
 # <a name="inapclientmanagementgetsystemisolationinfo-method"></a>INapClientManagement::GetSystemIsolationInfo-Methode
 
 > [!Note]  
-> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **GetSystemIsolationInfo-Methode** ruft Informationen zum Isolationsstatus des NapClient ab.
+Die **GetSystemIsolationInfo-Methode** ruft Informationen zum Isolationsstatus von NapClient ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ Ein Zeiger auf einen Zeiger auf eine [**IsolationInfo-Struktur,**](/windows/win3
 *unknownConnections* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf ein Flag, das angibt, ob sich eine der Verbindungen in einem unbekannten Zustand befinden soll. Wenn eines dieser Flags zutrifft, wird das Flag auf **TRUE festgelegt.** Andernfalls wird das Flag auf **FALSE festgelegt.**
+Ein Zeiger auf ein Flag, das angibt, ob sich eine der Verbindungen in einem unbekannten Zustand befindet. Wenn eine davon vorhanden ist, wird das Flag auf **TRUE** festgelegt. Andernfalls wird das Flag auf **FALSE** festgelegt.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Die -Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht 
 | <dl> <dt>**S \_ OK**</dt> </dl>                | Vorgang erfolgreich.<br/>                                   |
 | <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl>      | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
 | <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>       | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
-| <dl> <dt>**RPC \_ E \_ DISCONNECTED**</dt> </dl> | Der NapAgent wird nicht ausgeführt.<br/>                            |
+| <dl> <dt>**RPC \_ E \_ DISCONNECTED**</dt> </dl> | NapAgent wird nicht ausgeführt.<br/>                            |
 
 
 
@@ -89,7 +89,7 @@ Die abgerufenen Isolationsinformationen spiegeln keine unbekannten Zustände wid
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                         |
 | Header<br/>                   | <dl> <dt>NapManagement.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>NapManagement.idl</dt> </dl> |

@@ -1,31 +1,31 @@
 ---
-description: WMI prüft die Zugriffsrechte für Anwendungen und Skripts.
+description: WMI überprüft die Zugriffsrechte für Anwendungen und Skripts.
 ms.assetid: f6808f50-a1fd-434f-8a42-efa3afbe7871
 ms.tgt_platform: multiple
-title: WMI-Sicherheits Konstanten
+title: WMI-Sicherheitskonst constants
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d360aa57c12c958db95c4b94f2b06327a3f70dd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0f2f3a8ff4727852637fe6e4b808f0b8d3a74c958808cb3beb7bc9df32b0c995
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218165"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117739417"
 ---
-# <a name="wmi-security-constants"></a>WMI-Sicherheits Konstanten
+# <a name="wmi-security-constants"></a>WMI-Sicherheitskonst constants
 
-WMI prüft die Zugriffsrechte für Anwendungen und Skripts für Objekte wie WMI-Namespaces, Drucker, Dienste, DCOM-Anwendungen, Dateien, Freigaben und andere Sicherungs fähige Objekte. Der Zugriff auf diese Sicherungs fähigen Objekte wird durch Zugriffs Steuerungs Einträge (Access Control Entries, ACE) gesteuert. Jeder ACE enthält Listen, die festlegen, auf welche Gruppen oder Benutzer zugegriffen werden soll. Weitere Informationen zu Sicherheits-und Zugriffs Steuerungs Listen (ACLs, DACLs oder SACLs) finden Sie unter [Access Control Listen (ACLs)](/windows/desktop/SecAuthZ/access-control-lists) und [Sicherheits Deskriptoren](/windows/desktop/SecAuthZ/security-descriptors).
+WMI überprüft die Zugriffsrechte für Anwendungen und Skripts für Objekte wie WMI-Namespaces, Drucker, Dienste, DCOM-Anwendungen, Dateien, Freigaben und andere sicherungsfähige Objekte. Der Zugriff auf diese sicherungsfähige Objekte wird durch Zugriffssteuerungseinträge (ACCESS Control Entries, ACE) gesteuert. Jeder ACE enthält Listen, die angeben, welche Gruppen oder Benutzer Zugriff haben. Weitere Informationen zu Sicherheits- und Zugriffssteuerungslisten (ACLs, DACLs oder SACLs) finden Sie unter [Access Control Lists (ACLs)](/windows/desktop/SecAuthZ/access-control-lists) und [Security Descriptors](/windows/desktop/SecAuthZ/security-descriptors).
 
-Viele Anbieter Methoden in WMI, die Sicherungs fähige Objekte betreffen, erfordern, dass der Administrator bestimmte Berechtigungen aktiviert. Welche Version der Berechtigung Sie verwenden, hängt von der Programmiersprache ab, wie in [**Berechtigungs Konstanten**](privilege-constants.md)gezeigt.
+Viele Anbietermethoden in WMI, die sich auf sicherungsfähige Objekte auswirken, erfordern, dass der Administrator bestimmte Berechtigungen aktiviert. Welche Version der Berechtigungen Sie verwenden, hängt von der Programmiersprache ab, wie unter [**Privilege Constants (Berechtigungskonst constants) gezeigt.**](privilege-constants.md)
 
-Die Sicherheits Konstanten werden in den folgenden Themen definiert:
+Die Sicherheitskonst constants werden in den folgenden Themen definiert:
 
--   [**Ereignis Sicherheits Konstanten**](event-security-constants.md)
--   [**Datei-und Verzeichniszugriffs Rechte-Konstanten**](file-and-directory-access-rights-constants.md)
--   [**Namespace-Zugriffsrechte Konstanten**](namespace-access-rights-constants.md)
--   [**Namespace-ACE-Flag-Konstanten**](namespace-ace-flag-constants.md)
--   [**Namespace-ACE-Typkonstanten**](namespace-ace-type-constants.md)
--   [**Berechtigungs Konstanten**](privilege-constants.md)
+-   [**Ereignissicherheitskonst constants**](event-security-constants.md)
+-   [**Konstanten für Datei- und Verzeichniszugriffsrechte**](file-and-directory-access-rights-constants.md)
+-   [**Namespacezugriffsrechte-Konstanten**](namespace-access-rights-constants.md)
+-   [**Namespace-ACE-Flagkonst constants**](namespace-ace-flag-constants.md)
+-   [**Namespace-ACE-Typkonst constants**](namespace-ace-type-constants.md)
+-   [**Berechtigungskonst constants**](privilege-constants.md)
 
  
 

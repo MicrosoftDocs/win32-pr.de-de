@@ -1,29 +1,29 @@
 ---
-title: Klassen-und Attribut anzeigen Amen
-description: Dieses Thema enthält Informationen zu und Richtlinien für Klassen-und Attribut anzeigen Amen.
+title: Anzeigenamen für Klassen und Attribute
+description: Dieses Thema enthält Informationen zu und Richtlinien für Klassen- und Attributanzeigenamen.
 ms.assetid: c85905b2-ed8b-4032-8c54-fd4de8b34ecf
 ms.tgt_platform: multiple
 keywords:
-- Anzeige Spezifizierer anzeigen, Klassen-und Attribut anzeigen Amen
-- Klassen Anzeige Namen AD
-- anzeigen amen des Attributs
+- Anzeigespezifizierer AD, Klassen- und Attributanzeigenamen
+- Anzeigenamen der Klasse AD
+- Attributanzeigenamen AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d65cd6ac6fc3077ff0d2bba15ffa9904b147654
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 213132acfa6463b1c1e8a7615f5d7f488e53edfcdf9b75f8df5759fcd0e4d398
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104472669"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118022591"
 ---
-# <a name="class-and-attribute-display-names"></a>Klassen-und Attribut anzeigen Amen
+# <a name="class-and-attribute-display-names"></a>Anzeigenamen für Klassen und Attribute
 
-Der Anzeige Bezeichner für eine Objektklasse enthält die folgenden Attribute, die verwendet werden können, um die lokalisierten anzeigen Amen anzugeben, die in der Benutzeroberfläche für Objekte dieser Klasse verwendet werden:
+Der Anzeigespezifizierer für eine Objektklasse enthält die folgenden Attribute, die verwendet werden können, um die lokalisierten Anzeigenamen anzugeben, die in der Benutzeroberfläche für Objekte dieser Klasse verwendet werden:
 
--   Das **classdisplayname** -Attribut ist eine Einzelwert-Unicode-Zeichenfolge, die den Klassen anzeigen Amen angibt.
--   Das **attributeDisplayNames** -Attribut ist eine mehrwertige Eigenschaft, die die Namen angibt, die in der Benutzeroberfläche für Attribute der Objektklasse verwendet werden sollen.
+-   Das **classDisplayName-Attribut** ist eine Unicode-Zeichenfolge mit einem Wert, die den Anzeigenamen der Klasse angibt.
+-   Das **attributeDisplayNames-Attribut** ist eine Mehrwerteigenschaft, die die Namen angibt, die in der Benutzeroberfläche für Attribute der Objektklasse verwendet werden sollen.
 
-Die **attributeDisplayNames** -Werte sind Unicode-Zeichen folgen. jedes Element besteht aus einem durch Trennzeichen getrennten namens paar:
+Die **attributeDisplayNames-Werte** sind Unicode-Zeichenfolgen. jedes Element besteht aus einem durch Trennzeichen getrennten Namenspaar:
 
 
 ```C++
@@ -32,29 +32,29 @@ Die **attributeDisplayNames** -Werte sind Unicode-Zeichen folgen. jedes Element 
 
 
 
-In diesem Beispiel ist " &lt; Attribut Name &gt; " der **ldapDisplayName** des Attributs, und " &lt; Anzeige Text &gt; " ist der Text, der als Name dieses Attributs in der Benutzeroberfläche angezeigt werden soll.
+In diesem Beispiel ist " &lt; Attributname &gt; " der **lDAPDisplayName** des Attributs, und " &lt; anzeigetext " ist der &gt; Text, der als Name dieses Attributs auf der Benutzeroberfläche angezeigt werden soll.
 
-## <a name="guidelines-for-class-and-attribute-display-names"></a>Richtlinien für Klassen-und Attribut anzeigen Amen
+## <a name="guidelines-for-class-and-attribute-display-names"></a>Richtlinien für Klassen- und Attributanzeigenamen
 
-Da viele Lieferanten Klassen mit neuen Attributen erweitern oder vollständig neue Klassen erstellen können, ist es wichtig, dass die anzeigen amen der Klasse und des Attributs eindeutig sind und keine Konflikte verursachen.
+Da viele Anbieter Klassen mit neuen Attributen erweitern oder völlig neue Klassen erstellen können, ist es wichtig, dass die Anzeigenamen der Klassen und Attribute eindeutig sind und keine Konflikte verursachen.
 
-Jeder Anbieter sollte dem Namen der Klassen Anzeige einen eindeutigen, auf dem Herstellernamen basierenden Bezeichner als Präfix voranstellen. Wenn z. b. das fiktive Unternehmen Fabrikam Inc. eine neue Klasse erstellt, die von der "Contact"-Klasse abgeleitet ist, können Sie einen eindeutigen Klassen anzeigen Amen mit dem Namen "Fabrikam Contact" aufweisen.
+Jeder Anbieter sollte dem Klassenanzeigenamen einen eindeutigen Anzeigebezeichner basierend auf dem Herstellernamen voranstellen. Wenn beispielsweise das fiktive Unternehmen Fabrikam Inc. eine neue Klasse erstellt, die von der Klasse "contact" abgeleitet ist, kann es einen eindeutigen Klassenanzeigenamen "Fabrikam Contact" haben.
 
-Wenn ein Anbieter eine vorhandene Klasse mit neuen Attributen erweitert, sollte der Anzeige Name des Attributs erneut eindeutig identifiziert werden, sodass keine Konflikte mit anderen Attribut anzeigen Amen auftreten. Auch hier empfiehlt es sich, den Attribut anzeigen Amen mit dem eindeutigen, auf dem Herstellernamen basierenden Bezeichner als präfixvorgang festzulegen. Wenn beispielsweise das Fabrikam-Unternehmen die User-Klasse mit einem neuen HR-Attribut erweitert, könnte es das Attribut eindeutig als "Fabrikam HR-Informationen" anzeigen.
+Wenn ein Anbieter eine vorhandene Klasse um neue Attribute erweitert, sollte er den Anzeigenamen des Attributs erneut eindeutig identifizieren, sodass keine Konflikte mit anderen Attributanzeigenamen auftreten. Auch hier ist es eine bewährte Methode, dem Anzeigenamen des Attributs einen eindeutigen Anzeigebezeichner basierend auf dem Herstellernamen voranstellen. Wenn beispielsweise das Fabrikam-Unternehmen die Benutzerklasse um ein neues HR-Attribut erweitert, kann das Attribut eindeutig als "Fabrikam HR Information" angezeigt werden.
 
-Außerdem sollte jeder Anbieter aus Lokalisierungs Sicht die Klassen-und Attribut Anzeige Namen in jeder Sprache lokalisieren, die von Windows 2000 unterstützt wird.
+Darüber hinaus sollte jeder Anbieter aus Lokalisierungssicht die Anzeigenamen der Klassen und Attribute in jede Sprache lokalisieren, die von Windows 2000 unterstützt wird.
 
-## <a name="adding-a-value-to-the-attributedisplaynames-attribute"></a>Hinzufügen eines Werts zum attributeDisplayNames-Attribut
+## <a name="adding-a-value-to-the-attributedisplaynames-attribute"></a>Hinzufügen eines Werts zum AttributDisplayNames-Attribut
 
-**So fügen Sie dem **attributeDisplayNames** -Attribut einen Name-Zuordnungswert hinzu**
+**So fügen Sie dem **attributDisplayNames-Attribut** einen Wert für die Namenszuordnung hinzu**
 
-1.  Bestimmen Sie, ob der Name Zuordnungswert für das Attribut vorhanden ist. Wenn ein Name für die Namenszuordnung ersetzt werden soll, löschen Sie zuerst den vorhandenen Wert, indem Sie die [**IADs::P utex**](/windows/desktop/api/iads/nf-iads-iads-putex) -Methode verwenden, wobei der *lncontrolcode* -Parameter auf **ADS \_ Property \_ Delete** und der *vprop* -Parameter auf den zu entfernenden Wert festgelegt ist. Verwenden Sie nicht die **ADS- \_ Eigenschaft \_ Clear** oder **ADS \_ Property \_ Update** für *lncontrolcode*.
-2.  Erstellen Sie die Zeichenfolge, die den anzeigen amen des Attributs darstellt. Ein Beispiel finden Sie im obigen Format.
-3.  Verwenden Sie die [**IADs::P utex**](/windows/desktop/api/iads/nf-iads-iads-putex) -Methode, bei der der *lncontrolcode* -Parameter auf **ADS- \_ Eigenschaft \_ Append** festgelegt ist, um den neuen Wert hinzuzufügen.
-4.  Ruft [**IADs:: abtinfo**](/windows/desktop/api/iads/nf-iads-iads-setinfo) auf, um die Änderungen im Verzeichnis zu übertragen.
+1.  Bestimmen Sie, ob der Wert für die Namenszuordnung für das Attribut vorhanden ist. Wenn ein Wert für die Namenszuordnung ersetzt werden soll, löschen Sie zuerst den vorhandenen Wert mithilfe der [**IADs::P utEx-Methode,**](/windows/desktop/api/iads/nf-iads-iads-putex) wobei der *lnControlCode-Parameter* auf **ADS PROPERTY \_ \_ DELETE** und der *vProp-Parameter* auf den zu entfernenden Wert festgelegt ist. Verwenden Sie ADS **\_ PROPERTY \_ CLEAR** oder **ADS PROPERTY \_ \_ UPDATE** nicht für *lnControlCode*.
+2.  Erstellen Sie die Zeichenfolge, die den Anzeigenamen des Attributs darstellt. Ein Beispiel finden Sie im obigen Format.
+3.  Verwenden Sie die [**IADs::P utEx-Methode,**](/windows/desktop/api/iads/nf-iads-iads-putex) wobei der *lnControlCode-Parameter* auf **ADS PROPERTY \_ \_ APPEND** festgelegt ist, um den neuen Wert hinzuzufügen.
+4.  Rufen Sie [**IADs::SetInfo**](/windows/desktop/api/iads/nf-iads-iads-setinfo) auf, um die Änderungen an das Verzeichnis zu committen.
 
-Weitere Informationen zum Benennen neuer Klassen und Attribute finden Sie unter [Benennen von Attributen und Klassen](naming-attributes-and-classes.md).
+Weitere Informationen zum Benennen neuer Klassen und Attribute finden Sie unter [Benennen von Attributen und Klassen.](naming-attributes-and-classes.md)
 
- 
+ 
 
- 
+ 

@@ -1,6 +1,6 @@
 ---
 title: WSMan.Error-Eigenschaft (WSManDisp.h)
-description: Ruft zusätzliche Fehlerinformationen in einem XML-Stream für den vorherigen Aufruf einer WSMan-Methode ab, wenn Windows Remoteverwaltungsdienst kein Session-Objekt, ein ConnectionOptions-Objekt oder ein ResourceLocator-Objekt erstellen konnte.
+description: Ruft zusätzliche Fehlerinformationen in einem XML-Stream für den vorherigen Aufruf einer WSMan-Methode ab, wenn der Windows-Remoteverwaltungsdienst kein Session-Objekt, ein ConnectionOptions-Objekt oder ein ResourceLocator-Objekt erstellen konnte.
 ms.assetid: 72d05ef9-672c-4693-b7c9-6d689858acd4
 ms.tgt_platform: multiple
 keywords:
@@ -26,7 +26,7 @@ ms.locfileid: "117742195"
 ---
 # <a name="wsmanerror-property"></a>WSMan.Error-Eigenschaft
 
-Ruft zusätzliche Fehlerinformationen in einem XML-Stream für den vorherigen Aufruf einer [**WSMan-Methode**](wsman.md) ab, wenn Windows Remoteverwaltungsdienst kein [**Session-Objekt,**](session.md) ein [**ConnectionOptions-Objekt**](connectionoptions.md) oder ein [**ResourceLocator-Objekt**](resourcelocator.md) erstellen konnte.
+Ruft zusätzliche Fehlerinformationen in einem XML-Stream für den vorherigen Aufruf einer [**WSMan-Methode**](wsman.md) ab, wenn der Windows-Remoteverwaltungsdienst kein [**Session-Objekt,**](session.md) ein [**ConnectionOptions-Objekt**](connectionoptions.md) oder ein [**ResourceLocator-Objekt**](resourcelocator.md) erstellen konnte.
 
 Diese Eigenschaft ist schreibgeschützt.
 

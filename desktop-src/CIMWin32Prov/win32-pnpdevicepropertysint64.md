@@ -1,5 +1,5 @@
 ---
-description: Stellt eine PNP-Geräte Eigenschaft vom Typ Sint64 dar.
+description: Stellt eine PnP-Geräteeigenschaft vom Typ Sint64 dar.
 ms.assetid: AA6D505D-505B-4C79-921B-F37926B89FCA
 ms.tgt_platform: multiple
 title: Win32_PnPDevicePropertySint64-Klasse
@@ -19,16 +19,16 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: fd4767382181f45408e0fb4a361fa77e5a863c2b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: d7a8de344860a0f4f475c3c3503c041429f4ec0ba6780a8a1b0ee49a5bfed70c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118008789"
 ---
-# <a name="win32_pnpdevicepropertysint64-class"></a>Win32- \_ PnPDevicePropertySint64-Klasse
+# <a name="win32_pnpdevicepropertysint64-class"></a>Win32 \_ PnPDevicePropertySint64-Klasse
 
-Stellt eine PNP-Geräte Eigenschaft vom Typ **Sint64** dar.
+Stellt eine PnP-Geräteeigenschaft vom Typ **Sint64** dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,13 +47,13 @@ class Win32_PnPDevicePropertySint64 : Win32_PnPDeviceProperty
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ PnPDevicePropertySint64** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ PnPDevicePropertySint64-Klasse** verfügt über folgende Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ PnPDevicePropertySint64** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ PnPDevicePropertySint64-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -70,65 +70,65 @@ Der Eigenschaftswert.
 
 </dd> <dt>
 
-**DeviceID**
+**Deviceid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Identifiziert das PNP-Gerät.
+Identifiziert das PnP-Gerät.
 
-Diese Eigenschaft wird von [**Win32 \_ pnpdeviceproperty**](win32-pnpdeviceproperty.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ PnPDeviceProperty**](win32-pnpdeviceproperty.md)geerbt.
 
 </dd> <dt>
 
 **Schlüssel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Wert des Schlüssels Name-Value Paars, das die **Daten** Eigenschaft identifiziert.
+Der Wert des Schlüssel-Name-Value-Paars, das die **Data-Eigenschaft** identifiziert.
 
-Diese Eigenschaft wird von [**Win32 \_ pnpdeviceproperty**](win32-pnpdeviceproperty.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ PnPDeviceProperty**](win32-pnpdeviceproperty.md)geerbt.
 
 </dd> <dt>
 
-**KeyName**
+**Keyname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Schlüssels Name-Value Paars, das die **Daten** Eigenschaft identifiziert.
+Der Name des Schlüssel-Name-Value-Paars, das die **Data-Eigenschaft** identifiziert.
 
-Diese Eigenschaft wird von [**Win32 \_ pnpdeviceproperty**](win32-pnpdeviceproperty.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ PnPDeviceProperty**](win32-pnpdeviceproperty.md)geerbt.
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **Uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ der **Daten** Eigenschaft.
+Der Typ der **Data-Eigenschaft.**
 
-Diese Eigenschaft wird von [**Win32 \_ pnpdeviceproperty**](win32-pnpdeviceproperty.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ PnPDeviceProperty**](win32-pnpdeviceproperty.md)geerbt.
 
-Mögliche Werte sind.
+Die möglichen Werte sind.
 
 <dt>
 
@@ -141,7 +141,7 @@ Mögliche Werte sind.
 
 <span id="Null"></span><span id="null"></span><span id="NULL"></span>
 
-**Null** (1)
+**NULL** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -183,7 +183,7 @@ Mögliche Werte sind.
 
 <span id="Uint32"></span><span id="uint32"></span><span id="UINT32"></span>
 
-**UInt32** (7)
+**Uint32** (7)
 
 
 </dt> <dd></dd> <dt>
@@ -218,7 +218,7 @@ Mögliche Werte sind.
 
 <span id="Decimal"></span><span id="decimal"></span><span id="DECIMAL"></span>
 
-**Dezimal** Zahl (12)
+**Dezimal** (12)
 
 
 </dt> <dd></dd> <dt>
@@ -246,14 +246,14 @@ Mögliche Werte sind.
 
 <span id="FileTime"></span><span id="filetime"></span><span id="FILETIME"></span>
 
-**FILETIME** (16)
+**FileTime** (16)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Boolean"></span><span id="boolean"></span><span id="BOOLEAN"></span>
 
-**Boolescher** Wert (17)
+**Boolean** (17)
 
 
 </dt> <dd></dd> <dt>
@@ -274,21 +274,21 @@ Mögliche Werte sind.
 
 <span id="SecurityDescriptorString"></span><span id="securitydescriptorstring"></span><span id="SECURITYDESCRIPTORSTRING"></span>
 
-**SecurityDescriptor String** (20)
+**SecurityDescriptorString** (20)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DEVPROPKEY"></span><span id="devpropkey"></span>
 
-**Devpropkey** (21)
+**DEVPROPKEY** (21)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DEVPROPTYPE"></span><span id="devproptype"></span>
 
-**Devproptype** (22)
+**DEVPROPTYPE** (22)
 
 
 </dt> <dd></dd> <dt>
@@ -302,14 +302,14 @@ Mögliche Werte sind.
 
 <span id="NTStatus"></span><span id="ntstatus"></span><span id="NTSTATUS"></span>
 
-**NTSTATUS** (24)
+**NTStatus** (24)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="StringIndirect"></span><span id="stringindirect"></span><span id="STRINGINDIRECT"></span>
 
-**Stringindirect** (25)
+**StringIndirect** (25)
 
 
 </dt> <dd></dd> <dt>
@@ -319,11 +319,11 @@ Mögliche Werte sind.
 **Reserved**
 
 
-</dt> <dd>26 – 4097</dd> <dt>
+</dt> <dd>26–4097</dd> <dt>
 
 <span id="SByteArray"></span><span id="sbytearray"></span><span id="SBYTEARRAY"></span>
 
-**Sbytearray** (4098)
+**SByteArray** (4098)
 
 
 </dt> <dd></dd> <dt>
@@ -365,7 +365,7 @@ Mögliche Werte sind.
 
 <span id="FloatArray"></span><span id="floatarray"></span><span id="FLOATARRAY"></span>
 
-**Floatarray** (4104)
+**FloatArray** (4104)
 
 
 </dt> <dd></dd> <dt>
@@ -379,105 +379,105 @@ Mögliche Werte sind.
 
 <span id="DecimalArray"></span><span id="decimalarray"></span><span id="DECIMALARRAY"></span>
 
-**Decimalarray** (4106)
+**DecimalArray** (4106)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="GuidArray"></span><span id="guidarray"></span><span id="GUIDARRAY"></span>
 
-**Guidarray** (4107)
+**GuidArray** (4107)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="CurrencyArray"></span><span id="currencyarray"></span><span id="CURRENCYARRAY"></span>
 
-"Currency **Array** " (4108)
+**CurrencyArray** (4108)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DateArray"></span><span id="datearray"></span><span id="DATEARRAY"></span>
 
-**Datearray** (4109)
+**DateArray** (4109)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FileTimeArray"></span><span id="filetimearray"></span><span id="FILETIMEARRAY"></span>
 
-**Filetimearray** (4110)
+**FileTimeArray** (4110)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="BooleanArray"></span><span id="booleanarray"></span><span id="BOOLEANARRAY"></span>
 
-**Booleanarray** (4111)
+**BooleanArray** (4111)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="StringList"></span><span id="stringlist"></span><span id="STRINGLIST"></span>
 
-**Stringlist** (4112)
+**StringList** (4112)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SecurityDescriptorList"></span><span id="securitydescriptorlist"></span><span id="SECURITYDESCRIPTORLIST"></span>
 
-**SecurityDescriptor List** (4113)
+**SecurityDescriptorList** (4113)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SecurityDescriptorStringList"></span><span id="securitydescriptorstringlist"></span><span id="SECURITYDESCRIPTORSTRINGLIST"></span>
 
-**SecurityDescriptor stringlist** (8210)
+**SecurityDescriptorStringList** (8210)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DEVPROPKEYArray"></span><span id="devpropkeyarray"></span><span id="DEVPROPKEYARRAY"></span>
 
-**Devpropkeyarray** (8211)
+**DEVPROPKEYArray** (8211)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DEVPROPTYPEArray"></span><span id="devproptypearray"></span><span id="DEVPROPTYPEARRAY"></span>
 
-**Devproptypearray** (8212)
+**DEVPROPTYPEArray** (8212)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ErrorArray"></span><span id="errorarray"></span><span id="ERRORARRAY"></span>
 
-**Errorarray** (4117)
+**ErrorArray** (4117)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NTStatusArray"></span><span id="ntstatusarray"></span><span id="NTSTATUSARRAY"></span>
 
-**NTSTATUS Array** (4118)
+**NTStatusArray** (4118)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="StringIndirectList"></span><span id="stringindirectlist"></span><span id="STRINGINDIRECTLIST"></span>
 
-**Stringindirectlist** (4119)
+**StringIndirectList** (4119)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown_-_check_in_devpropdef.h"></span><span id="unknown_-_check_in_devpropdef.h"></span><span id="UNKNOWN_-_CHECK_IN_DEVPROPDEF.H"></span>
 
-**Unknown-Check in devpropdef. h** (4120)
+**Unbekannt: Einchecken von "devpropdef.h"** (4120)
 
 
 </dt> <dd></dd> <dt>
@@ -494,7 +494,7 @@ Mögliche Werte sind.
 **Reserved**
 
 
-</dt> <dd>8218 – 4294967295</dd> </dl>
+</dt> <dd>8218–4294967295</dd> </dl>
 
 </dd> </dl>
 
@@ -504,19 +504,19 @@ Mögliche Werte sind.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>Cimwin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ pnpdeviceproperty**](win32-pnpdeviceproperty.md)
+[**Win32 \_ PnPDeviceProperty**](win32-pnpdeviceproperty.md)
 </dt> </dl>
 
  

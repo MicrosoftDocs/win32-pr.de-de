@@ -14,21 +14,21 @@ ms.locfileid: "117751196"
 ---
 # <a name="t-volume-shadow-copy-service"></a>T (Volumeschattenkopie-Dienst)
 
-[A](vssgloss-a.md) [B](vssgloss-b.md) [C](vssgloss-c.md) [D](vssgloss-d.md) [E](vssgloss-e.md) [F](vssgloss-f.md) [G](vssgloss-g.md) [H](vssgloss-h.md) [I](vssgloss-i.md) J K [L](vssgloss-l.md) M [N](vssgloss-n.md) [O](vssgloss-o.md) [P](vssgloss-p.md) Q [R](vssgloss-r.md) [S](vssgloss-s.md) T U [V](vssgloss-v.md) [W](vssgloss-w.md) X Y Z
+[A](vssgloss-a.md) [B](vssgloss-b.md) [C](vssgloss-c.md) [D](vssgloss-d.md) [E](vssgloss-e.md) F [G](vssgloss-f.md) [](vssgloss-g.md) [H](vssgloss-h.md) [I](vssgloss-i.md) J K [L](vssgloss-l.md) M [N](vssgloss-n.md) [O](vssgloss-o.md) [P](vssgloss-p.md) Q [R](vssgloss-r.md) [S](vssgloss-s.md) T U [V](vssgloss-v.md) [W](vssgloss-w.md) X Y Z
 
 <dl> <dt>
 
 <span id="base.vssgloss_thaw_event"></span><span id="BASE.VSSGLOSS_THAW_EVENT"></span>**Thaw-Ereignis**
 </dt> <dd>
 
-Ein von VSS ausgegebenes VSS-Ereignis, das angibt, dass ein Einfrieren der Schattenkopie abgeschlossen wurde. Es wird verwendet, um die Vorbereitungen eines Writers für ein Einfrieren zu entfernen. Siehe auch [*Einfrieren*](vssgloss-f.md)von , [*Schattenkopie*](vssgloss-s.md).
+Ein von VSS ausgegebenes VSS-Ereignis, das angibt, dass ein Einfrieren der Schattenkopie abgeschlossen wurde. Es wird verwendet, um die Vorbereitungen eines Schreibers auf ein Einfrieren zu entfernen. Siehe auch [*Einfrieren,*](vssgloss-f.md) [*Schattenkopie*](vssgloss-s.md).
 
 </dd> <dt>
 
-<span id="base.vssgloss_transportable_shadow_copy"></span><span id="BASE.VSSGLOSS_TRANSPORTABLE_SHADOW_COPY"></span>**Transportable shadow copy (Transportable Shadow Copy)**
+<span id="base.vssgloss_transportable_shadow_copy"></span><span id="BASE.VSSGLOSS_TRANSPORTABLE_SHADOW_COPY"></span>**Transportierbare Schattenkopie**
 </dt> <dd>
 
-Eine Schattenkopie, die von einem System in ein anderes verschoben werden kann. In der Regel wird eine transportierbare Schattenkopie nicht lokal eingedrungen. Siehe auch [*surfaced shadow copy*](vssgloss-s.md).
+Eine Schattenkopie, die von einem System in ein anderes verschoben werden kann. In der Regel wird eine transportierbare Schattenkopie nicht lokal verfügbar. Siehe auch [*Surfaced Shadow Copy*](vssgloss-s.md).
 
 </dd> </dl>
 

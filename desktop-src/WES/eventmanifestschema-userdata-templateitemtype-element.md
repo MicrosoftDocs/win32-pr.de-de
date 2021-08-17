@@ -1,6 +1,6 @@
 ---
-title: UserData-Element (templateitemtype)
-description: Ein XML-Fragment, das zum Rendering der Ereignisdaten verwendet wird.
+title: UserData-Element (TemplateItemType)
+description: Ein XML-Fragment, das zum Rendern der Ereignisdaten verwendet wird.
 ms.assetid: 2b327a2c-8900-488f-b92d-991c25e580c4
 keywords:
 - UserData-Element EventLog
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8954e76256b86a7b982efb1ab23831052d29ee6b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d22abfbcc1d57e3bc94792c36ddd98cec66c722ac401de051cc32440d43253f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340918"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117750808"
 ---
-# <a name="userdata-templateitemtype-element"></a>UserData-Element (templateitemtype)
+# <a name="userdata-templateitemtype-element"></a>UserData-Element (TemplateItemType)
 
-Ein XML-Fragment, das zum Rendering der Ereignisdaten verwendet wird.
+Ein XML-Fragment, das zum Rendern der Ereignisdaten verwendet wird.
 
 ``` syntax
 <xs:element name="UserData"
@@ -30,7 +30,7 @@ Ein XML-Fragment, das zum Rendering der Ereignisdaten verwendet wird.
  />
 ```
 
-Das **UserData** -Element wird durch den komplexen Typ " [**templateitemtype**](eventmanifestschema-templateitemtype-complextype.md) " definiert.
+Das **UserData-Element** wird durch den komplexen [**TemplateItemType-Typ**](eventmanifestschema-templateitemtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,19 +38,19 @@ Das **UserData** -Element wird durch den komplexen Typ " [**templateitemtype**](
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Vorlage (templatelisttype)**](eventmanifestschema-template-templatelisttype-element.md)
+[**template (TemplateListType)**](eventmanifestschema-template-templatelisttype-element.md)
 </dt> </dl>
 
  

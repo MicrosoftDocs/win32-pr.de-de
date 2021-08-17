@@ -33,11 +33,11 @@ Dieses Attribut ist eine  Lese-/Schreibnummer (long), die einen der folgenden We
 
 
 
-| Wert | BESCHREIBUNG                              |
+| Wert | Beschreibung                              |
 |-------|------------------------------------------|
-| 0     | Bei den aktuellen Sprechern handelt es sich um Eines.     |
-| 1     | Die aktuellen Sprecher haben eine normale Größe. |
-| 2     | Die aktuellen Sprecher sind groß.          |
+| 0     | Die aktuellen Sprecher sind Sprechspeer.     |
+| 1     | Die aktuellen Lautsprecher haben eine normale Größe. |
+| 2     | Die aktuellen Lautsprecher sind groß.          |
 
 
 
@@ -45,7 +45,7 @@ Dieses Attribut ist eine  Lese-/Schreibnummer (long), die einen der folgenden We
 
 ## <a name="remarks"></a>Hinweise
 
-Der Angezeigte Name der Sprechergröße kann mithilfe des **currentSpeakerName-Attributs abgerufen** werden.
+Der Anzeigename der Sprechergröße kann mithilfe des **currentSpeakerName-Attributs** abgerufen werden.
 
 Dieses Attribut wird ignoriert, wenn **enhancedAudio** auf FALSE festgelegt ist.
 

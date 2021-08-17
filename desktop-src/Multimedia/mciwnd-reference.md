@@ -6,7 +6,7 @@ keywords:
 - MCI (Media Control Interface), MCIWnd-Referenz
 - MCIWnd-Fensterklasse, Referenz
 - MCIWnd-Fenster, Referenz
-- MCIWnd-Referenz,about
+- MCIWnd-Referenz, Informationen
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 03249d5e0f0a0f4fef8110d878021437f7aee667085a0720a86de77c8cbdfe49
@@ -83,7 +83,7 @@ In diesem Abschnitt werden die Funktionen, Meldungen und Makros beschrieben, die
 -   [**MCIWndSetVolume**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetvolume)
 -   [**MCIWndSetZoom**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetzoom)
 
-## <a name="image-and-palette-adjustments"></a>Anpassungen von Bildern und Paletten
+## <a name="image-and-palette-adjustments"></a>Bild- und Palettenanpassungen
 
 -   [**MCIWndGetDest**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetdest)
 -   [**MCIWndGetPalette**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetpalette)
@@ -135,7 +135,7 @@ In diesem Abschnitt werden die Funktionen, Meldungen und Makros beschrieben, die
 -   [**MCIWndGetFileName**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetfilename)
 -   [**MCIWndGetMode**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetmode)
 
-## <a name="mci-command-string-interface"></a>MCICommand-String Schnittstelle
+## <a name="mci-command-string-interface"></a>MCI Command-String-Schnittstelle
 
 -   [**MCIWndReturnString**](/windows/desktop/api/Vfw/nf-vfw-mciwndreturnstring)
 -   [**MCIWndSendString**](/windows/desktop/api/Vfw/nf-vfw-mciwndsendstring)

@@ -1,5 +1,5 @@
 ---
-title: dcl_output_sgv (sm4 - asm)
+title: dcl_output_sgv (sm4 – asm)
 description: dcl \_ output \_ sgv (sm4 - asm)
 ms.assetid: 0723541e-a97d-4b31-aaba-e7d1172137a6
 ms.topic: reference
@@ -31,11 +31,11 @@ Deklariert ein Ausgaberegister, das einen [Systemwertparameter](dx-graphics-hlsl
 
 
 
-| Element                                                                                                                               | BESCHREIBUNG                                                                                                                                         |
+| Element                                                                                                                               | Beschreibung                                                                                                                                         |
 |------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | <span id="oN"></span><span id="on"></span><span id="ON"></span>o *N*<br/>                                                     | \[in \] Ein Ausgabedatenregister; *N* ist eine ganze Zahl, die die Registernummer angibt.<br/>                                                      |
 | <span id="_.mask_"></span><span id="_.MASK_"></span>*\[.mask\]*<br/>                                                         | \[in \] Optional. Eine Komponentenmaske (.xyzw), die angibt, welche der Registerkomponenten verwendet werden soll.<br/>                                        |
-| <span id="systemValueName"></span><span id="systemvaluename"></span><span id="SYSTEMVALUENAME"></span>*systemValueName*<br/> | \[in \] Der Systemwertname, der eine Zeichenfolge ist (siehe [Systemwertsemantik](dx-graphics-hlsl-semantics.md)) ohne das Präfix "SV". \_<br/> |
+| <span id="systemValueName"></span><span id="systemvaluename"></span><span id="SYSTEMVALUENAME"></span>*systemValueName*<br/> | \[in \] Der Systemwertname, bei dem es sich um eine Zeichenfolge handelt (siehe [Systemwertsemantik)](dx-graphics-hlsl-semantics.md)ohne das \_ Präfix "SV".<br/> |
 
 
 
@@ -53,7 +53,7 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu erleichtern. Mit shader Model 4 können Sie keinen Shader in der Assemblysprache erstellen.
+Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Sie können keinen Shader in der Assemblysprache mit shader Model 4 erstellen.
 
 ## <a name="example"></a>Beispiel
 
@@ -66,7 +66,7 @@ dcl_output_sgv o4.x, primitiveID
 
 
 
-## <a name="minimum-shader-model"></a>Minimales Shadermodell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -74,12 +74,12 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -89,7 +89,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

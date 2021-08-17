@@ -1,25 +1,25 @@
 ---
-description: Anwendungen, Prozesse und Windows können sich dazu entscheiden, sich selbst nicht für das Anheften an die Taskleiste oder für die Aufnahme in die Liste der am häufigsten verwendeten (MFU-) Startmenüs zu entscheiden.
-title: Ausschließen von Elementen aus der Taskleiste anheften und zuletzt auftretenden Listen
+description: Anwendungen, Prozesse und Fenster können sich dafür entscheiden, sich selbst für das Anheften an die Taskleiste oder die Aufnahme in die MFU-Liste (Most Frequently Used) von Startmenü nicht verfügbar zu machen.
+title: Ausschließen von Elementen aus Taskleisten-Pinning und zuletzt verwendeten/häufigen Listen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: af7f32ad641832703804f94b8cc28f47ea9cabb2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e3adb60353836e436f4327837c30448c7628a435048cc2a41b0464d56341f410
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118223564"
 ---
-# <a name="how-to-exclude-items-from-taskbar-pinning-and-recentfrequent-lists"></a>Ausschließen von Elementen aus der Taskleiste anheften und zuletzt auftretenden Listen
+# <a name="how-to-exclude-items-from-taskbar-pinning-and-recentfrequent-lists"></a>Ausschließen von Elementen aus Taskleisten-Pinning und zuletzt verwendeten/häufigen Listen
 
-Anwendungen, Prozesse und Windows können sich dazu entscheiden, sich selbst nicht für das Anheften an die Taskleiste oder für die Aufnahme in die Liste der am häufigsten verwendeten (MFU-) **Startmenüs** zu entscheiden.
+Anwendungen, Prozesse und Fenster können sich selbst für das Anheften an die  Taskleiste oder für die Aufnahme in die Liste Am häufigsten verwendet (Most frequently Used, MFU) des Startmenüs nicht verfügbar machen.
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
 
-Es gibt drei Mechanismen, um den Ausschluss von Elementen aus dem anheften der Taskleiste und der aktuellen bzw. häufigen Listen zu erreichen:
+Es gibt drei Mechanismen, um den Ausschluss von Elementen aus der Taskleisten-Pinning und den aktuellen/häufigen Listen zu erreichen:
 
--   Fügen Sie den NoStartPage-Eintrag zur Registrierung der Anwendung hinzu, wie im folgenden Beispiel gezeigt:
+-   Fügen Sie der Registrierung der Anwendung den Eintrag NoStartPage hinzu, wie im folgenden Beispiel gezeigt:
 
     ```
     HKEY_CLASSES_ROOT
@@ -28,12 +28,12 @@ Es gibt drei Mechanismen, um den Ausschluss von Elementen aus dem anheften der T
              NoStartPage
     ```
 
-    Die dem NoStartPage-Eintrag zugeordneten Daten werden ignoriert. Nur das vorhanden sein des Eintrags ist erforderlich. Daher ist der ideale Typ für NoStartPage " **reg \_ None**".
+    Die dem NoStartPage-Eintrag zugeordneten Daten werden ignoriert. Nur das Vorhandensein des Eintrags ist erforderlich. Daher ist der ideale Typ für NoStartPage **REG \_ NONE.**
 
-    Beachten Sie, dass jede Verwendung einer expliziten App-Benutzer Modell-ID (appusermodelid) den NoStartPage-Eintrag überschreibt. Wenn eine explizite appusermodelid auf eine Verknüpfung, einen Prozess oder ein Fenster angewendet wird, wird Sie gepinckbar und ist für die MFU-Liste des **Start** Menüs geeignet.
+    Beachten Sie, dass die Verwendung einer expliziten Anwendungsbenutzermodell-ID (AppUserModelID) den Eintrag NoStartPage überschreibt. Wenn eine explizite AppUserModelID auf eine Verknüpfung, einen Prozess oder ein Fenster angewendet wird, wird sie anheftbar und für die MFU-Liste **im Startmenü** geeignet.
 
--   Legen Sie die [System. appusermodel. preventpinning](../properties/props-system-appusermodel-preventpinning.md) -Eigenschaft unter Windows und Verknüpfungen fest. Diese Eigenschaft muss für ein Fenster festgelegt werden, bevor die [pkey- \_ appusermodel- \_ ID](../properties/props-system-appusermodel-id.md) -Eigenschaft festgelegt wird.
--   Fügen Sie eine explizite appusermodelid als Wert unter dem folgenden Registrierungs Unterschlüssel hinzu, wie im folgenden Beispiel gezeigt:
+-   Legen Sie [die System.AppUserModel.PreventPinning-Eigenschaft für](../properties/props-system-appusermodel-preventpinning.md) Fenster und Verknüpfungen fest. Diese Eigenschaft muss in einem Fenster festgelegt werden, bevor die [Eigenschaft PKEY \_ AppUserModel \_ ID](../properties/props-system-appusermodel-id.md) festgelegt wird.
+-   Fügen Sie eine explizite AppUserModelID als Wert unter dem folgenden Registrierungsunterschlüssel hinzu, wie in diesem Beispiel gezeigt:
 
     ```
     HKEY_LOCAL_MACHINE
@@ -49,32 +49,32 @@ Es gibt drei Mechanismen, um den Ausschluss von Elementen aus dem anheften der T
                             AppUserModelID3
     ```
 
-    Jeder Eintrag ist ein **reg- \_ null** -Wert mit dem Namen der appusermodelid. Alle in dieser Liste gefundenen appusermodelid-Werte können nicht in die MFU-Liste des **Start** Menüs eingefügt werden.
+    Jeder Eintrag ist ein **REG \_ NULL-Wert** mit dem Namen der AppUserModelID. Jede AppUserModelID, die in dieser Liste enthalten ist, ist nicht anheftbar und kann nicht in die MFU-Liste des **Startmenüs** aufgenommen werden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass bestimmte ausführbare Dateien und Verknüpfungen, die bestimmte Zeichen folgen in ihren Namen enthalten, automatisch vom anhechern und einschließen in die MFU-Liste ausgeschlossen werden.
+Beachten Sie, dass bestimmte ausführbare Dateien sowie Verknüpfungen, die bestimmte Zeichenfolgen in ihren Namen enthalten, automatisch vom Anheften und Einschluss in die MFU-Liste ausgeschlossen werden.
 
 > [!Note]  
-> Dieser automatische Ausschluss kann überschrieben werden, indem eine explizite appusermodelid angewendet wird.
+> Dieser automatische Ausschluss kann durch Anwenden einer expliziten AppUserModelID überschrieben werden.
 
  
 
-Wenn eine der folgenden Zeichen folgen, unabhängig von der Groß-/Kleinschreibung, im Verknüpfungs Namen enthalten ist, kann das Programm nicht festgelegt werden und wird nicht in der am häufigsten verwendeten Liste angezeigt (gilt nicht für Windows 10):
+Wenn eine der folgenden Zeichenfolgen unabhängig von der Fall im Verknüpfungsnamen enthalten ist, ist das Programm nicht anheftbar und wird nicht in der Liste der am häufigsten verwendeten Zeichenfolgen angezeigt (gilt nicht für Windows 10):
 
 -   Dokumentation
 -   Hilfe
 -   Installieren
 -   Weitere Informationen
--   Lesezugriff
+-   Read me (Lesen)
 -   Zuerst lesen
 -   Infodatei
--   Remove (Entfernen)
+-   Entfernen
 -   Einrichten
 -   Support
 -   Neuerungen
 
-Die folgende Liste der Programme ist nicht pinckbar und wird aus der Liste der am häufigsten verwendeten Programme ausgeschlossen:
+Die folgende Liste der Programme ist nicht anheftbar und wird aus der Liste der am häufigsten verwendeten Programme ausgeschlossen:
 
 -   Applaunch.exe
 -   Control.exe
@@ -99,10 +99,10 @@ Die folgende Liste der Programme ist nicht pinckbar und wird aus der Liste der a
 -   Wlrmdr.exe
 -   Wuapp.exe
 
-Die vorangehenden Listen werden in den folgenden Registrierungs Werten gespeichert.
+Die obigen Listen werden in den folgenden Registrierungswerten gespeichert.
 
 > [!Note]  
-> Diese Listen sollten nicht von Anwendungen geändert werden. Verwenden Sie eine der Methoden der Ausschlussliste, die weiter oben in diesem Thema beschrieben wurden.
+> Diese Listen sollten nicht von Anwendungen geändert werden. Verwenden Sie eine der oben in diesem Thema beschriebenen Ausschlusslistenmethoden für die gleiche Erfahrung.
 
  
 
@@ -122,10 +122,10 @@ HKEY_LOCAL_MACHINE
 
 <dl> <dt>
 
-[Die Taskleiste](taskbar.md)
+[Taskleiste](taskbar.md)
 </dt> <dt>
 
-[Task leisten Erweiterungen](taskbar-extensions.md)
+[Taskleistenerweiterungen](taskbar-extensions.md)
 </dt> </dl>
 
  

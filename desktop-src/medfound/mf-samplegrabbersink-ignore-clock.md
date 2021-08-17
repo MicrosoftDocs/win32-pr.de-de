@@ -29,7 +29,7 @@ Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT32 auf.**](/w
 
 Sie können dieses Attribut für das Aktivierungsobjekt festlegen, das von der [**MFCreateSampleGrabberSinkActivate-Funktion erstellt**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesamplegrabbersinkactivate) wurde. Legen Sie das -Attribut fest, bevor [**Sie die METHODE VERWERTERAktivieren::ActivateObject für**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) das Aktivierungsobjekt aufrufen.
 
-Wenn die Sample-Grabber-Senke ein Beispiel empfängt, wartet sie standardmäßig bis zur Präsentationszeit des Beispiels, um den Rückruf der Anwendung auf aufruft. Wenn das MF SAMPLEGRABBERSINK IGNORE CLOCK-Attribut ungleich 0 (null) ist, ignoriert die \_ \_ Sample-Grabber-Senke die Präsentationsuhr und ruft den Rückruf auf, sobald die einzelnen Stichproben empfangen \_ werden.
+Wenn die Sample-Grabber-Senke ein Beispiel empfängt, wartet sie standardmäßig bis zur Präsentationszeit des Beispiels, um den Rückruf der Anwendung aufrufen. Wenn das MF SAMPLEGRABBERSINK IGNORE CLOCK-Attribut ungleich 0 (null) ist, ignoriert die \_ \_ Sample-Grabber-Senke die Präsentationsuhr und ruft den Rückruf auf, sobald die einzelnen Stichproben empfangen \_ werden.
 
 Empfohlene Verwendung:
 
@@ -54,7 +54,7 @@ Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste Media Foundation Attributen](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [Media Foundation Attribute](media-foundation-attributes.md)

@@ -1,8 +1,8 @@
 ---
-description: Kopiert die logische Auslagerungsdatei oder das verzeichnis, die bzw. das im Objektpfad angegeben ist, an den vom Eingabeparameter angegebenen Speicherort.
+description: Kopiert die logische Auslagerungsdatei oder das im Objektpfad angegebene Verzeichnis an den speicherort, der durch den Eingabeparameter angegeben wird.
 ms.assetid: e1ff3e91-dc30-4849-b80a-8838b527ad63
 ms.tgt_platform: multiple
-title: Copy-Methode der Win32_PageFile Klasse
+title: Copy-Methode der Win32_PageFile-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -23,9 +23,9 @@ ms.locfileid: "118419674"
 ---
 # <a name="copy-method-of-the-win32_pagefile-class"></a>Copy-Methode der Win32 \_ PageFile-Klasse
 
-Die **Copy** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) kopiert die logische Auslagerungsdatei oder das verzeichnis, die bzw. das im Objektpfad angegeben ist, an den vom Eingabeparameter angegebenen Speicherort. Eine Kopie wird nicht unterstützt, wenn das Überschreiben einer vorhandenen logischen Datei erforderlich ist.
+Die **Copy** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) kopiert die logische Auslagerungsdatei oder das im Objektpfad angegebene Verzeichnis an den speicherort, der durch den Eingabeparameter angegeben wird. Eine Kopie wird nicht unterstützt, wenn das Überschreiben einer vorhandenen logischen Datei erforderlich ist.
 
-In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ uint32 Copy(
 *FileName* \[ In\]
 </dt> <dd>
 
-Vollqualifizierter Name der Kopie der Datei (oder des Verzeichnisses).
+Vollqualifizierte Name der Kopie der Datei (oder des Verzeichnisses).
 
 Beispiel: c: \\ temp \\ newdirectory
 
@@ -123,7 +123,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist ein Freigabeverstoß vor worden.
+Es ist ein Freigabeverstoß aufgetreten.
 
 </dd> <dt>
 

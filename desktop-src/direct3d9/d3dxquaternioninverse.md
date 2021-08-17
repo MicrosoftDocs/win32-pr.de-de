@@ -1,5 +1,5 @@
 ---
-description: 'D3DXQuaternionInverse-Funktion (D3dx9math.h): Konjugiert und normalisiert eine Quaternion.'
+description: 'D3DXQuaternionInverse-Funktion (D3dx9math.h): Konjugiert eine Quaternion und normalisiert sie neu.'
 ms.assetid: 25407a60-f7c0-4063-8d1d-2d6d03bdb217
 title: D3DXQuaternionInverse-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 6ebb2520efa3c7c78d98fd8b90ec1ba9615e9927
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: beb9445edaffd913483e74da5703e76137d363dd6f464c7b634264a680c8ab29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117731602"
 ---
 # <a name="d3dxquaternioninverse-function-d3dx9mathh"></a>D3DXQuaternionInverse-Funktion (D3dx9math.h)
 
@@ -65,7 +65,7 @@ Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
 Zeiger auf eine [**D3DXQUATERNION-Struktur,**](d3dxquaternion.md) die die umgekehrte Quaternion der Quaternion ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 ```
@@ -84,7 +84,7 @@ Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für all
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

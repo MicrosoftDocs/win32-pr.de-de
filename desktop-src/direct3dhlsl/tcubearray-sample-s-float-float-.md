@@ -1,6 +1,6 @@
 ---
 title: TextureCubeArray::Sample(S,float,float)-Funktion
-description: Stichproben einer Textur mit einem optionalen Wert zum Anschließen von Sample Level-of-Detail-Werten (LOD). | TextureCubeArray::Sample(S,float,float)-Funktion
+description: Samples a texture with an optional value to clamp sample level-of-detail (LOD) values to . | TextureCubeArray::Sample(S,float,float)-Funktion
 ms.assetid: E3BACA5E-18FC-4BD7-A8D8-C2808BDF1517
 keywords:
 - Beispielfunktion HLSL
@@ -22,7 +22,7 @@ ms.locfileid: "117723325"
 ---
 # <a name="texturecubearraysamplesfloatfloat-function"></a>TextureCubeArray::Sample(S,float,float)-Funktion
 
-Stichproben einer Textur mit einem optionalen Wert zum Anschließen von Sample Level-of-Detail-Werten (LOD).
+Samples a texture with an optional value to clamp sample level-of-detail (LOD) values to .
 
 ## <a name="syntax"></a>Syntax
 

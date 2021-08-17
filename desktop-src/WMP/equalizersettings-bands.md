@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. Bands
-description: Das Bands-Attribut ruft die Anzahl der unterstützten Häufigkeits Bänder ab.
+title: EQUALIZERSETTINGS.bands
+description: Das Bandattribut ruft die Anzahl der unterstützten Frequenzbänder ab.
 ms.assetid: 602db39e-de47-4bee-be98-9e565a137591
 keywords:
-- Fenster "equalizersettings. Bands" Media Player
+- EQUALIZERSETTINGS.bands Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9146ba21c52af7ce152fdda8671e30e9f63aeebd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fd481f3565f7e58ffa480ed72b902f99578794bef9daa7089236947826f2e8e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372577"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117748928"
 ---
-# <a name="equalizersettingsbands"></a>Equalizersettings. Bands
+# <a name="equalizersettingsbands"></a>EQUALIZERSETTINGS.bands
 
-Das **Bands** -Attribut ruft die Anzahl der unterstützten Häufigkeits Bänder ab.
+Das  Bandattribut ruft die Anzahl der unterstützten Frequenzbänder ab.
 
 ``` syntax
         elementID.bands
@@ -29,7 +29,7 @@ Das **Bands** -Attribut ruft die Anzahl der unterstützten Häufigkeits Bänder 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long**).
+Dieses Attribut ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,15 +37,15 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> </dl>
 
  

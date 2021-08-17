@@ -20,7 +20,7 @@ Der Schattierungsmodus, der zum Rendern eines Polygons verwendet wird, wirkt sic
 
 ## <a name="flat-shading"></a>Flache Schattierung
 
-Im Flachschattierungsmodus rendert die Direct3D-Renderingpipeline ein Polygon, indem die Farbe des Polygonmaterials am ersten Scheitelpunkt als Farbe für das gesamte Polygon verwendet wird. 3D-Objekte, die mit flacher Schattierung gerendert werden, haben sichtbar spitze Kanten zwischen Polygonen, wenn sie nicht koplanar sind.
+Im flachen Schattierungsmodus rendert die Direct3D-Renderingpipeline ein Polygon, indem die Farbe des Polygonmaterials am ersten Scheitelpunkt als Farbe für das gesamte Polygon verwendet wird. 3D-Objekte, die mit flacher Schattierung gerendert werden, haben sichtbar spitze Kanten zwischen Polygonen, wenn sie nicht koplanar sind.
 
 Die folgende Abbildung zeigt eine Teekanne, die mit flacher Schattierung gerendert wird. Die Kontur der einzelnen Polygone ist deutlich sichtbar. Flache Schattierung ist die schnellste Form der Schattierung.
 

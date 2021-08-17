@@ -1,6 +1,6 @@
 ---
-title: 'Rwbyteaddressbuffer:: GetDimensions-Funktion'
-description: 'Ruft die Länge des Puffers ab. | Rwbyteaddressbuffer:: GetDimensions-Funktion'
+title: RWByteAddressBuffer::GetDimensions-Funktion
+description: Ruft die Länge des Puffers ab. | RWByteAddressBuffer::GetDimensions-Funktion
 ms.assetid: 7d78aa0d-75b8-43d5-85d9-0a6fb04ae64f
 keywords:
 - GetDimensions-Funktion HLSL
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0d22b6f655802d77a92611fe8699a405aa323873
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 2271f563251cfdb9c6f2a2174c91dc8c271c7354a2b10b9b2e7e55cb4af09d0c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353579"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117725145"
 ---
-# <a name="rwbyteaddressbuffergetdimensions-function"></a>Rwbyteaddressbuffer:: GetDimensions-Funktion
+# <a name="rwbyteaddressbuffergetdimensions-function"></a>RWByteAddressBuffer::GetDimensions-Funktion
 
 Ruft die Länge des Puffers ab.
 
@@ -36,7 +36,7 @@ void GetDimensions(
 
 <dl> <dt>
 
- \[ Abblenden\]
+*Dim* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
@@ -49,13 +49,13 @@ Die Länge des Puffers in Bytes.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -67,10 +67,10 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Rwbyteaddressbuffer](sm5-object-rwbyteaddressbuffer.md)
+[RWByteAddressBuffer](sm5-object-rwbyteaddressbuffer.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

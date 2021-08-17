@@ -1,67 +1,67 @@
 ---
-description: Debug-und Ablauf Verfolgungs Funktionen und Windows Sockets 2.
+description: Debuggen und Verfolgen von Funktionen und Windows Sockets 2.
 ms.assetid: eb29fc21-92d6-4471-860a-fd1c531686f6
-title: Debug-und Ablauf Verfolgungs Funktionen
+title: Debug- und Ablaufverfolgungs-Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7288c6b4d72a7a375ee16da23a25b0a04a46df91
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ae0617aa8fc18e90b0c3e366a7ab14f1457cb26471865bfcc97682801a858565
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117741367"
 ---
-# <a name="debug-and-trace-facilities"></a>Debug-und Ablauf Verfolgungs Funktionen
+# <a name="debug-and-trace-facilities"></a>Debug- und Ablaufverfolgungs-Funktionen
 
-Entwickler von Windows Sockets 2-Anwendungen müssen Fehler in den folgenden Fenstern isolieren:
+Windows Sockets 2-Anwendungsentwickler müssen Fehler in:
 
 -   Die Anwendung.
--   Die *Ws2- \_32.dll* oder eine der DLLs für Kompatibilitäts-Shim.
+-   *Ws232.dll\_* oder eine der Kompatibilitäts-Shim-DLLs.
 -   Der Dienstanbieter.
 
-Windows Sockets 2 erfüllt diese Anforderung durch mehrere Komponenten und Features:
+Windows Sockets 2 löst diese Notwendigkeit mit mehreren Komponenten und Features:
 
--   Integrierte Unterstützung für die Winsock-Ablauf Verfolgung unter Windows Vista und höher.
--   Eine speziell entwickelte Debugversion des *Ws2- \_32.dll* unter Windows Vista.
--   Ein separates Primitives Debug-und Ablauf Verfolgungs Werk für die Verwendung unter Windows Server 2003 und Windows XP.
+-   Integrierte Unterstützung für die Winsock-Ablaufverfolgung Windows Vista und höher.
+-   Eine speziell entwickelte Debugversion des *Ws2-32.dll\_* unter Windows Vista.
+-   Eine separate primitive Debug- und Ablaufverfolgungseinrichtung zur Verwendung auf Windows Server 2003 und Windows XP.
 
-## <a name="winsock-tracing-using-event-tracing-for-windows"></a>Winsock-Ablauf Verfolgung mithilfe der Ereignis Ablauf Verfolgung für Windows
+## <a name="winsock-tracing-using-event-tracing-for-windows"></a>Winsock-Ablaufverfolgung mit ereignisablaufverfolgung für Windows
 
-Integrierte Unterstützung für die Winsock-Ablauf Verfolgung mithilfe der Ereignis Ablauf Verfolgung für Windows (ETW) ist unter Windows Vista und höher enthalten. Dies ist die bevorzugte Methode für die Ablauf Verfolgung von Winsock-aufrufen unter Windows Vista und höher. Die Winsock-Ablauf Verfolgung unter Verwendung von etw ist einfach und funktioniert für Einzelhandelsversionen von Windows. Es sind keine zusätzlichen Softwarekomponenten oder Komponenten erforderlich. Diese Funktion muss nur unter Windows Vista und höher aktiviert werden. Ausführlichere Informationen finden Sie in den Themen zur [Winsock](winsock-tracing.md) -Ablauf Verfolgung.
+Integrierte Unterstützung für die Winsock-Ablaufverfolgung mithilfe der Ereignisablaufverfolgung für Windows (ETW) ist in Windows Vista und höher enthalten. Dies ist die bevorzugte Methode zum Nachverfolgen von Winsock-Aufrufen auf Windows Vista und höher. Die Winsock-Ablaufverfolgung mit ETW ist einfach und funktioniert mit Verkaufsversionen Windows. Es sind keine zusätzliche Software oder Komponenten erforderlich. Dieses Feature muss nur auf Windows Vista und höher aktiviert werden. Ausführlichere Informationen finden Sie in den [Themen zur Winsock-Ablaufverfolgung.](winsock-tracing.md)
 
 ## <a name="using-a-debug-version-of-ws2_32dll"></a>Verwenden einer Debugversion von Ws2 \_32.dll
 
-Durch die Kombination einer Debugversion des *Ws2- \_32.dll* unter Windows Vista und der Winsock-Ablauf Verfolgung können alle Prozedur Aufrufe für die Windows Sockets 2-API oder SPI überwacht und in gewissem Umfang gesteuert werden.
+Die Kombination einer Debugversion von *Ws2 \_32.dll* unter Windows Vista und Winsock-Ablaufverfolgung ermöglicht es, alle Prozeduraufrufe über die Windows Sockets 2-API oder SPI hinweg zu überwachen und in gewissem Umfang zu steuern.
 
-Wenn eine Version des Microsoft Windows Software Development Kit (SDK) für Windows Vista am Standard Speicherort installiert ist, befinden sich die Debugversionen des *Ws2- \_32.dll* für verschiedene Architekturen unter folgendem Ordner:
+Wenn eine Version des Microsoft Windows Software Development Kit (SDK) für Windows Vista am Standardspeicherort installiert ist, befinden sich Debugversionen von *Ws2 \_32.dll* für verschiedene Architekturen im folgenden Ordner:
 
-**C: \\ Programmdateien \\ Microsoft sdert \\ Windows \\ v 6.0 \\ NoRedist**
+**C: \\ Programme \\ Microsoft SDKs Windows \\ \\ v6.0 \\ NoRedist**
 
-Eine überprüfte Version des *Ws2- \_32.dll* , die mit der Version von Windows übereinstimmt, und dem Service Pack, das Sie testen, sollte verwendet werden. Beachten Sie, dass möglicherweise Sicherheitspatches angewendet wurden, die den *Ws2- \_32.dll* auf Ihrem Testsystem aktualisiert haben. Die Windows SDK für Windows Vista und frühere Platform Software Development Kit (SDK) DVD/CD-Abonnements enthalten überprüfte Builds für die verschiedenen Versionen von Windows. Sie sollten dieselbe überprüfte Version des Ws2- *\_32.dll* verwenden wie die Verkaufsversion, die auf dem getesteten System verwendet wurde. Beachten Sie auch, dass das Verhalten, das unter einem überprüften Build ausgeführt wird, nicht mit dem Ausführen eines Einzelhandels Builds identisch ist.
+Es sollte eine überprüfte Version des *\_ Ws2-32.dll* verwendet werden, die der Version von Windows und dem Service Pack entspricht, für das Sie testen. Beachten Sie, dass möglicherweise Sicherheitspatches angewendet wurden, die die *Ws2-32.dll\_* auf Ihrem Testsystem aktualisiert haben. Das Windows SDK für Windows Vista und die früheren DVD/CD-Abonnements des Platform Software Development Kit (SDK) enthalten überprüfte Builds für die verschiedenen Versionen Windows. Sie sollten die gleiche überprüfte Version des *\_ Ws2-32.dll* wie die Verkaufsversion verwenden, die auf dem getesteten System verwendet wurde. Beachten Sie auch, dass das Verhalten, das unter einem überprüften Build ausgeführt wird, nicht mit dem Ausführen mit einem Einzelhandels-Build identisch ist.
 
-**Hinweis**  Der Windows SDK für Windows Server 2008 und höher enthält keine speziellen Debugversionen der *Ws2- \_32.dll*. Entwickler sollten stattdessen die Winsock-Ablauf Verfolgung mit etw verwenden, da diese Funktion keine Debugbuilds erfordert.
+**Hinweis:**  Das Windows SDK für Windows Server 2008 und höher enthält keine speziellen Debugversionen der *Ws2-32.dll. \_* Entwickler sollten stattdessen die Winsock-Ablaufverfolgung mit ETW verwenden, da diese Funktion keine Debugbuilds erfordert.
 
-## <a name="winsock-debug-and-trace-facility-on-windows-server-2003-and-windows-xp"></a>Winsock-Debug-und-Ablauf Verfolgungs Einrichtung unter Windows Server 2003 und Windows XP
+## <a name="winsock-debug-and-trace-facility-on-windows-server-2003-and-windows-xp"></a>Winsock Debug and Trace Facility on Windows Server 2003 and Windows XP
 
-Ältere Versionen von Windows vor Windows 8 und Windows Server 2012 unterstützen ein separates Primitives Debug-und Ablauf Verfolgungs Werk, das als Beispiel mit dem Windows SDK und dem älteren Platform SDK enthalten ist. Die Debug/Trace-Funktion sollte nur unter Windows Server 2003 und Windows XP verwendet werden, wo die Winsock-Ablauf Verfolgung nicht unterstützt wird.
+Ältere Versionen von Windows vor Windows 8 und Windows Server 2012 unterstützen eine separate primitive Debug- und Ablaufverfolgungseinrichtung, die als Beispiel mit dem Windows SDK und dem älteren Platform SDK enthalten ist. Die Debug-/Ablaufverfolgungseinrichtung sollte nur auf Windows Server 2003 und Windows XP verwendet werden, wobei die Winsock-Ablaufverfolgung nicht unterstützt wird.
 
-Wenn die Windows SDK für Windows 7 am Standard Speicherort installiert ist, wird diese primitive Winsock-Ablauf Verfolgungs Funktion im folgenden Ordner installiert:
+Wenn das Windows SDK für Windows 7 am Standardspeicherort installiert ist, wird dieses primitive Winsock-Ablaufverfolgungsfeature im folgenden Ordner installiert:
 
-**C: \\ Programmdateien \\ Microsoft sdert \\ Windows \\ v 7.0 \\ Beispiele \\ netds \\ Winsock \\ dt \_ dll**
+**C: \\ Programme \\ Microsoft SDKs Windows \\ \\ v7.0 \\ Samples \\ NetDs \\ winsock dt \\ \_ dll**
 
-Die *DbgSpec.doc* -Datei in diesem Ordner enthält eine Dokumentation zu dieser primitiven Ablauf Verfolgungs Funktion. Der Beispielcode im Ordner dt \_ dll muss für die Verwendung dieser Funktion kompiliert werden. Entwickler können den Quellcode nutzen, um Versionen der Debug/Trace-dll zu entwickeln, die Ihre speziellen Anforderungen erfüllen.
+Die *DbgSpec.doc* in diesem Ordner enthält Dokumentation zu dieser primitiven Ablaufverfolgungseinrichtung. Der Beispielcode im Ordner dt \_ dll muss kompiliert werden, um diese Einrichtung verwenden zu können. Entwickler können den Quellcode verwenden, um Versionen der Debug-/Ablaufverfolgungs-DLL zu entwickeln, die ihre spezifischen Anforderungen erfüllen.
 
-Beachten Sie, dass diese primitive Winsock-Ablauf Verfolgungs Funktion nur bei installierter Debugversion von *Ws2 \_32.dll* funktioniert. Daher müssen Sie eine aktivierte Version des *Ws2- \_32.dll* erhalten, die mit der Version von Windows und dem Service Pack übereinstimmt, das Sie testen.
+Beachten Sie, dass dieses primitive Winsock-Ablaufverfolgungsfeature nur mit der Installierten Debugversion von *Ws2 \_32.dll* funktioniert. Sie müssen also eine überprüfte Version des *Ws2-32.dll\_ erhalten,* die der Version von Windows und dem Service Pack entspricht, für das Sie testen.
 
-Eine Einschränkung dieser primitiven Ablauf \_ Verfolgungs Funktion der dt-dll besteht darin, dass im Beispielcode für jeden Winsock-Funktions aufrufeine globale Sperre (kritischer Abschnitt) verwendet wird. Diese Funktion ist daher für den Umgang mit Racebedingungen nicht nützlich. Der Beispielcode müsste erheblich umgeschrieben werden, damit diese Ablauf Verfolgungs Funktion für den Umgang mit den meisten echten Winsock-Problemen nützlich ist (ersetzt die globalen sperren). Dieser Beispielcode ermöglicht Entwicklern das Verfolgen von Prozedur aufrufen, Prozedur Rückgaben, Parameterwerten und Rückgabe Werten.
+Eine Einschränkung dieser primitiven DT DLL-Ablaufverfolgungsfunktion besteht in der Verwendung einer globalen Sperre (kritischer Abschnitt) für jeden \_ Winsock-Funktionsaufruf. Daher ist diese Einrichtung für den Umgang mit Racebedingungen nicht nützlich. Der Beispielcode muss erheblich umgeschrieben werden, damit diese Ablaufverfolgungseinrichtung für den Umgang mit den meisten tatsächlichen Winsock-Problemen (ersetzen der globalen Sperren) nützlich ist. Mit diesem Beispielcode können Entwickler die Prozeduraufrufe, Prozedurrückrufe, Parameterwerte und Rückgabewerte nachverfolgen.
 
-Entwickler können diesen primitiven Mechanismus verwenden, um Prozedur Aufrufe, Prozedur Rückgaben, Parameterwerte und Rückgabewerte zu verfolgen. Parameter Werte und Rückgabewerte können bei Prozedur aufrufen oder Prozedur Rücklauf geändert werden. Wenn gewünscht, kann ein Prozedur Aufrufwert verhindert oder umgeleitet werden. Durch den Zugriff auf diese Ebene von Informationen und Kontrolle kann ein Entwickler ein Problem in der Anwendung, *Ws2 \_32.dll* oder dem Dienstanbieter isolieren.
+Entwickler können diesen primitiven Mechanismus verwenden, um Prozeduraufrufe, Prozedurrückrufe, Parameterwerte und Rückgabewerte zu verfolgen. Parameterwerte und Rückgabewerte können beim Prozeduraufruf oder bei der Prozedur-Rückgabe geändert werden. Bei Wunsch kann ein Prozeduraufruf verhindert oder umgeleitet werden. Mit dem Zugriff auf diese Ebene von Informationen und Kontrolle ist ein Entwickler besser in der Lage, ein Problem in der Anwendung, *Ws2 \_* 32.dlloder Dienstanbieter zu isolieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Winsock-Ablauf Verfolgung](winsock-tracing.md)
+[Winsock-Ablaufverfolgung](winsock-tracing.md)
 </dt> </dl>
 
  

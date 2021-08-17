@@ -1,7 +1,7 @@
 ---
 description: Erstellt eine Textur aus einer Datei.
 ms.assetid: 247b0ee2-ee31-4090-b94c-41951b46675f
-title: D3DXCreateTextureFromFile-Funktion (D3dx9tex. h)
+title: D3DXCreateTextureFromFile-Funktion (D3dx9tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 19453986405ee4d46a3e72145c2117bb113663bd
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b3ffce68a8044267e67d874412264d5a915c65b88ea5cc13b0cd8d2cd1400828
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394129"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117732159"
 ---
 # <a name="d3dxcreatetexturefromfile-function"></a>D3DXCreateTextureFromFile-Funktion
 
@@ -42,30 +42,30 @@ HRESULT D3DXCreateTextureFromFile(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das Gerät darstellt, das der Textur zugeordnet werden soll.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das Gerät darstellt, das der Textur zugeordnet werden soll.
 
 </dd> <dt>
 
-*psrcfile* \[ in\]
+*pSrcFile* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCTSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf eine Zeichenfolge, die den Dateinamen angibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der String-Datentyp in LPCSTR aufgelöst. Siehe Hinweise.
+Zeiger auf eine Zeichenfolge, die den Dateinamen angibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der Zeichenfolgendatentyp in LPCSTR aufgelöst. Siehe Hinweise.
 
 </dd> <dt>
 
-*pptexture* \[ vorgenommen\]
+*ppTexture* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)\***
 
-Adresse eines Zeigers auf eine [**IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) -Schnittstelle, die das erstellte Textur Objekt darstellt.
+Adresse eines Zeigers auf eine [**IDirect3DTexture9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) die das erstellte Texturobjekt darstellt.
 
 </dd> </dl>
 
@@ -73,28 +73,28 @@ Adresse eines Zeigers auf eine [**IDirect3DTexture9**](/windows/win32/api/d3d9he
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ NotAvailable, D3DERR \_ ouesfvideomemory, D3DERR \_ invalidcall, D3DXERR \_ InvalidData, E \_ outo fmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ NOTAVAILABLE, D3DERR \_ OUTOFVIDEOMEMORY, D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt auch die Funktions Version. Wenn Unicode definiert ist, wird der Funktions aufrufin D3DXCreateTextureFromFileW aufgelöst. Andernfalls wird der Funktions Aufruhe in D3DXCreateTextureFromFileA aufgelöst, da ANSI-Zeichen folgen verwendet werden.
+Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in D3DXCreateTextureFromFileW aufgelöst. Andernfalls wird der Funktionsaufruf in D3DXCreateTextureFromFileA aufgelöst, da ANSI-Zeichenfolgen verwendet werden.
 
-Diese Funktion unterstützt die folgenden Dateiformate: BMP,. DDS,. DIB,. HDR,. jpg,. PFM,. png,. ppm und. TGA. Siehe [**D3DXIMAGE \_ FileFormat**](./d3dximage-fileformat.md).
+Diese Funktion unterstützt die folgenden Dateiformate: .bmp, .dds, .dib, .hdr, .jpg, .pfm, .png, .ppm und .tga. Siehe [**D3DXIMAGE \_ FILEFORMAT**](./d3dximage-fileformat.md).
 
-Die-Funktion entspricht D3DXCreateTextureFromFileEx (pdevice, psrcfile, D3DX \_ Default, D3DX \_ Default, D3DX \_ Default, 0, D3DFMT \_ unknown, D3DPOOL \_ Managed, D3DX \_ Default, D3DX \_ Default, 0, **null**, **null**, pptexture).
+Die Funktion entspricht D3DXCreateTextureFromFileEx(pDevice, pSrcFile, D3DX \_ DEFAULT, D3DX \_ DEFAULT, D3DX \_ DEFAULT, 0, D3DFMT \_ UNKNOWN, D3DPOOL \_ MANAGED, D3DX \_ DEFAULT, D3DX \_ DEFAULT, 0, **NULL**, **NULL**, ppTexture).
 
-Für mipzugeordnete Texturen ist jede Ebene automatisch mit der geladenen Textur gefüllt.
+Bei Mipmapped-Texturen ist jede Ebene automatisch mit der geladenen Textur gefüllt.
 
-Beim Laden von Bildern in mipzugeordnete Texturen können einige Geräte nicht zu einem 1 x1-Bild wechseln, und diese Funktion schlägt fehl. Wenn dies der Fall ist, müssen die Images manuell geladen werden.
+Beim Laden von Bildern in mipmapped Texturen können einige Geräte nicht zu einem 1x1-Bild wechseln, und diese Funktion schlägt fehl. In diesem Fall müssen die Images manuell geladen werden.
 
-Beachten Sie, dass eine mit dieser Funktion erstellte Ressource in der Speicher Klasse platziert wird, die von D3DPOOL Managed angegeben wird \_ .
+Beachten Sie, dass eine mit dieser Funktion erstellte Ressource in der Speicherklasse platziert wird, die von D3DPOOL MANAGED bezeichnet \_ wird.
 
-Filter werden automatisch auf eine Textur angewendet, die mit dieser Methode erstellt wurde. Die Filterung entspricht D3DX \_ Filter \_ Dreieck \| D3DX \_ Filter \_ Dither in [D3DX \_ Filter](d3dx-filter.md).
+Die Filterung wird automatisch auf eine Textur angewendet, die mit dieser Methode erstellt wurde. Die Filterung entspricht D3DX \_ FILTER \_ TRIANGLE \| D3DX \_ FILTER \_ DITHER in [D3DX \_ FILTER](d3dx-filter.md).
 
-Optimale Leistung bei der Verwendung von **D3DXCreateTextureFromFile**:
+Für die beste Leistung bei Verwendung von **D3DXCreateTextureFromFile:**
 
-1.  Die Bildskalierung und die Formatkonvertierung zur Ladezeit können langsam sein. Speichern Sie Images im Format und in der Lösung, die Sie verwenden werden. Wenn die Zielhardware eine Potenz von zwei Dimensionen erfordert, erstellen und speichern Sie Images mit zwei Dimensionen.
-2.  Verwenden Sie ggf. DirectDraw Surface (DDS)-Dateien. Da DDS-Dateien verwendet werden können, um ein beliebiges Direct3D 9-Textur Format darzustellen, sind Sie für D3DX sehr leicht lesbar. Außerdem können Sie MipMaps speichern, sodass alle MipMap-Generierungs Algorithmen zum Erstellen der Images verwendet werden können.
+1.  Die Bildskalierung und Formatkonvertierung zur Ladezeit kann langsam sein. Store Bilder in dem Format und der Auflösung, in dem sie verwendet werden. Wenn die Zielhardware eine Leistung von zwei Dimensionen erfordert, erstellen und speichern Sie Bilder mit zwei Dimensionen.
+2.  Erwägen Sie die Verwendung von DDS-Dateien (DirectDraw Surface). Da DDS-Dateien verwendet werden können, um jedes Direct3D 9-Texturformat darzustellen, sind sie für D3DX sehr einfach zu lesen. Außerdem können sie Mipmaps speichern, sodass alle Mipmap-Generierungsalgorithmen zum Erstellen der Bilder verwendet werden können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -102,19 +102,19 @@ Optimale Leistung bei der Verwendung von **D3DXCreateTextureFromFile**:
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**D3DXCreateTextureFromFileEx**](d3dxcreatetexturefromfileex.md)
 </dt> <dt>
 
-[Textur Funktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
+[Texturfunktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
 </dt> </dl>
 
  

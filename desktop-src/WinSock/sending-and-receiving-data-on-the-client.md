@@ -1,19 +1,19 @@
 ---
-description: Der folgende Code veranschaulicht die Sende-und empfangener-Funktionen, die vom Client verwendet werden, nachdem eine Verbindung hergestellt wurde.
+description: Der folgende Code veranschaulicht die Sende- und Recv-Funktionen, die vom Client verwendet werden, sobald eine Verbindung hergestellt wurde.
 ms.assetid: 9c6d366d-2bc6-4c92-8d0b-21c51e08ed4f
-title: Senden und empfangen von Daten auf dem Client
+title: Senden und Empfangen von Daten auf dem Client
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 36d91ee507d78bc2638a6d3f7383cd6a930651e7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3150c853f50e8626451cc344179645289058df928600d71bf437dc95d9738986
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117740561"
 ---
-# <a name="sending-and-receiving-data-on-the-client"></a>Senden und empfangen von Daten auf dem Client
+# <a name="sending-and-receiving-data-on-the-client"></a>Senden und Empfangen von Daten auf dem Client
 
-Der folgende Code veranschaulicht die [**Sende**](/windows/desktop/api/Winsock2/nf-winsock2-send) -und [**empfangener**](/windows/desktop/api/winsock/nf-winsock-recv) -Funktionen, die vom Client verwendet werden, nachdem eine Verbindung hergestellt wurde.
+Der folgende Code veranschaulicht die [**Sende-**](/windows/desktop/api/Winsock2/nf-winsock2-send) und [**Recv-Funktionen,**](/windows/desktop/api/winsock/nf-winsock-recv) die vom Client verwendet werden, sobald eine Verbindung hergestellt wurde.
 
 ## <a name="client"></a>Client
 
@@ -63,18 +63,18 @@ do {
 
 
 
-Die Funktionen [**Send**](/windows/desktop/api/Winsock2/nf-winsock2-send) und [**empfangener**](/windows/desktop/api/winsock/nf-winsock-recv) geben jeweils einen ganzzahligen Wert für die Anzahl der gesendeten oder empfangenen Bytes oder einen Fehler zurück. Jede Funktion verwendet auch die gleichen Parameter: den aktiven Socket, einen **char** -Puffer, die Anzahl der zu sendenden Bytes, die Anzahl der zu sendenden Bytes und alle Flags, die verwendet werden sollen.
+Die [**Funktionen send**](/windows/desktop/api/Winsock2/nf-winsock2-send) und [**recv**](/windows/desktop/api/winsock/nf-winsock-recv) geben jeweils einen ganzzahligen Wert der Anzahl gesendeter bzw. empfangener Bytes bzw. einen Fehler zurück. Jede Funktion verwendet auch die gleichen Parameter: den aktiven Socket, einen **char-Puffer,** die Anzahl der zu sendenden oder zu empfangenden Bytes und alle zu verwendenden Flags.
 
-Nächster Schritt: [Trennen der Verbindung des Clients](disconnecting-the-client.md)
+Nächster Schritt: [Trennen des Clients](disconnecting-the-client.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Einstieg in Winsock](getting-started-with-winsock.md)
+[Erste Schritte mit Winsock](getting-started-with-winsock.md)
 </dt> <dt>
 
-[WinSock-Client Anwendung](winsock-client-application.md)
+[Winsock-Clientanwendung](winsock-client-application.md)
 </dt> <dt>
 
 [Herstellen einer Verbindung mit einem Socket](connecting-to-a-socket.md)

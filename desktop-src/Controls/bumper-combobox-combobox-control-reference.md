@@ -20,7 +20,7 @@ ms.locfileid: "118416726"
 -   [ComboBox-Steuerelementmeldungen](bumper-combobox-control-reference-messages.md)
 -   [ComboBox-Steuerelementbenachrichtigungen](bumper-combobox-control-reference-notifications.md)
 -   [ComboBox-Steuerelementstrukturen](bumper-combobox-control-reference-structures.md)
--   [ComboBox-Steuerelementkonstanten](bumper-combobox-control-reference-constants.md)
+-   [ComboBox-Steuerelementkonst constants](bumper-combobox-control-reference-constants.md)
 
  
 

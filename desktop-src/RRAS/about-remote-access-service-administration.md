@@ -5,7 +5,7 @@ ms.assetid: 95c6dceb-e3a9-421e-b43f-88b18b9e64ff
 keywords:
 - Routing- und RAS-Dienst RRAS, RAS-Verwaltung
 - Routing- und Ras-Dienst RRAS , RAS-Verwaltung, beschrieben
-- RAS-Verwaltung RRAS
+- RAS-Verwaltungs-RRAS
 - RAS Administration RRAS , beschrieben
 ms.topic: article
 ms.date: 05/31/2018

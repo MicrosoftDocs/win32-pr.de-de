@@ -1,50 +1,50 @@
 ---
-description: Anforderungen für Windows Media DRM-Enabled-Anwendungen
+description: Anforderungen für Windows Media DRM-Enabled Anwendungen
 ms.assetid: 67f872dc-79ef-4799-bb7b-b84d7dc11c71
-title: Anforderungen für Windows Media DRM-Enabled-Anwendungen
+title: Anforderungen für Windows Media DRM-Enabled Anwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 59543bf6ea803d2b9d58721fd775c49b79653c0b
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 14ad59b5b590436ca5734fcb8d226d41f4f995a5d4ea97e0c46d771df476be6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106353258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118027049"
 ---
-# <a name="requirements-for-windows-media-drm-enabled-applications"></a>Anforderungen für Windows Media DRM-Enabled-Anwendungen
+# <a name="requirements-for-windows-media-drm-enabled-applications"></a>Anforderungen für Windows Media DRM-Enabled Anwendungen
 
-Zum Erstellen einer Windows Media Digital Rights Management (DRM)-fähigen Anwendung benötigen Sie die Header und Bibliotheken, die im Abschnitt [Allgemeine Anforderungen für die Anwendungsentwicklung](general-requirements-for-application-development.md) in diesem Dokument beschrieben werden. Außerdem muss die Anwendung beim Öffnen des Geräts zusätzliche Eigenschaften in den Client Informationen bereitstellen.
+Um eine Windows Media Digital Rights Management(DRM)-fähige Anwendung zu erstellen, müssen Sie über die [](general-requirements-for-application-development.md) Header und Bibliotheken verfügen, die im Abschnitt Allgemeine Anforderungen für die Anwendungsentwicklung dieses Dokuments beschrieben sind. Darüber hinaus muss die Anwendung beim Öffnen des Geräts zusätzliche Eigenschaften in den Clientinformationen enthalten.
 
-In der folgenden Tabelle werden die beiden zusätzlichen Eigenschaften, die zum Aktivieren von Windows Media DRM-geschützten Inhalts Übertragungen erforderlich sind, beschrieben.
+Die beiden zusätzlichen Eigenschaften, die zum Aktivieren Windows Medien-DRM-geschützten Inhaltsübertragungen erforderlich sind, werden in der folgenden Tabelle beschrieben.
 
 
 
-| Eigenschaft                                      | BESCHREIBUNG                              |
+| Eigenschaft                                      | Beschreibung                              |
 |-----------------------------------------------|------------------------------------------|
-| privater Schlüssel für WPD- \_ Client \_ WMDRM- \_ Anwendung \_ \_ | Gibt den privaten Schlüssel der Anwendung an. |
-| WPD- \_ Client- \_ WMDRM- \_ Anwendungs \_ Zertifikat  | Gibt das Zertifikat der Anwendung an. |
+| WPD \_ CLIENT \_ WMDRM \_ APPLICATION \_ PRIVATE \_ KEY | Gibt den privaten Schlüssel der Anwendung an. |
+| \_ \_ WPD-CLIENT-WMDRM-ANWENDUNGSZERTIFIKAT \_ \_  | Gibt das Zertifikat der Anwendung an. |
 
 
 
  
 
-Diese Eigenschaften müssen in den Client Informationen der Anwendung angegeben werden, wenn das Gerät mit der [**iportabledevice:: Open**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-open) -Methode geöffnet wird. Wenn diese Eigenschaften angegeben werden, ermöglicht die WPD-API die Übertragung geschützter Inhalte. Wenn die Anwendung ein Zertifikat und einen privaten Schlüssel bereitgestellt hat, erstellt die API einen sicheren Kanal für die Übertragung geschützter WMDRM-Inhalte auf das Gerät.
+Diese Eigenschaften müssen in den Clientinformationen der Anwendung angegeben werden, wenn das Gerät mit der [**IPortableDevice::Open-Methode geöffnet**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-open) wird. Wenn diese Eigenschaften bereitgestellt werden, lässt die WPD-API übertragungen geschützter Inhalte zu. Wenn die Anwendung ein Zertifikat und einen privaten Schlüssel bereitgestellt hat, erstellt die API einen sicheren Kanal zum Übertragen geschützter WMDRM-Inhalte auf das Gerät.
 
-Informationen zum Erstellen und Verteilen von Windows-basierten Anwendungen, die Windows Media DRM unterstützen, finden Sie im Thema zur [Lizenzierung Windows-basierter Anwendungen](https://www.microsoft.com/windows/windowsmedia/licensing/licensing_drm_apps.aspx) .
+Informationen zum Erstellen und Verteilen von Windows-basierten Anwendungen, die Windows Media DRM unterstützen, finden Sie im folgenden Thema Licensing Windows-based Applications (Lizenzierung [Windows-basierten](https://www.microsoft.com/windows/windowsmedia/licensing/licensing_drm_apps.aspx) Anwendungen).
 
-## <a name="transferring-content"></a>Inhalt wird übertragen
+## <a name="transferring-content"></a>Übertragen von Inhalten
 
-Verwenden Sie zum Übertragen von WMDRM-geschütztem Inhalt [**iportabledevicecontent:: |-objectwithpropertiesanddata**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-createobjectwithpropertiesanddata). Diese Methode kann sowohl für den geschützten als auch für den Lösch Inhalt ohne zusätzliche Optionen verwendet werden. Abhängig davon, ob der Inhalt geschützt oder gelöscht wird, wählt die WPD-API automatisch den geschützten oder leeren Kanal aus. Es wird mit dem WMDRM-Anbieter für sichere Inhalte zum Verarbeiten der WMDRM-Lizenzen über eine Schnittstelle.
+Verwenden Sie zum Übertragen von durch WMDRM geschützten Inhalt [**IPortableDeviceContent::CreateObjectWithPropertiesAndData.**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-createobjectwithpropertiesanddata) Diese Methode kann sowohl für geschützten als auch für löschenden Inhalt ohne zusätzliche Optionen verwendet werden. Die WPD-API wählt automatisch den geschützten oder gelöschten Kanal aus, je nachdem, ob der Inhalt geschützt oder klar ist. Er ist mit dem WMDRM Secure Content Provider verbunden, um die WMDRM-Lizenzen zu verarbeiten.
 
-## <a name="transferring-known-clear-content"></a>Übertragen von bekanntem Klartext
+## <a name="transferring-known-clear-content"></a>Übertragen von bekannten eindeutigen Inhalten
 
-Wenn Sie Ihre Anwendung für die Handhabung geschützter Inhalte aktiviert haben, wenn Sie jedoch wissen, dass eine bestimmte Datei nicht geschützt ist, können Sie WPD anweisen, die DRM-Verarbeitung zu überspringen, indem Sie die **\_ Option " \_ \_ \_ Clear \_ Data \_ Stream verwenden** " in der Eingabe " **iportabledevicevalues** " festlegen, wenn Sie " [**iportabledevicecontent:: createobjectwithpropertiesanddata**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-createobjectwithpropertiesanddata) " für den Inhalt löschen
+Wenn Sie Ihre Anwendung für die Verarbeitung geschützter Inhalte aktiviert haben, aber wissen, dass eine bestimmte Datei nicht geschützt ist, können Sie WPD anraten, die DRM-Verarbeitung zu überspringen, indem Sie die **\_ WPD-API-Option \_ USE CLEAR \_ DATA \_ \_ \_ STREAM** in der **Eingabe IPortableDeviceValues** auf TRUE festlegen, wenn [**IPortableDeviceContent::CreateObjectWithPropertiesAndData**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-createobjectwithpropertiesanddata) für eindeutigen Inhalt aufruft.
 
-## <a name="accessing-metering-operations-using-iwmdrmdeviceapp"></a>Zugreifen auf Messungs Vorgänge mithilfe von iwmdrmdeviceapp
+## <a name="accessing-metering-operations-using-iwmdrmdeviceapp"></a>Zugreifen auf Messungsvorgänge mithilfe von IWMDRMDeviceApp
 
-WPD bietet einen Mechanismus für den Zugriff auf die **iwmdrmdeviceapp** -APIs, um Lizenz Updates und den Abruf von Messungs Daten zu erhalten. Um über WPD auf diese API zuzugreifen, aufrufen Sie **QueryInterface** für **IID \_ iwmdrmdeviceapp** aus dem **IStream** , der von [**iportabledevicecontent:: deateobjectwithpropertiesanddata**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-createobjectwithpropertiesanddata)zurückgegeben wurde. Diese **iwmdrmdeviceapp** -Instanz ist an die **iportabledevice** -Verbindung mit dem WMDRM-kompatiblen Gerät gebunden, nicht an dem spezifischen Inhalt, in dem der **IStream** abgerufen wurde. WPD umschließt die Messungs-APIs intern und macht Sie für Ihre Anwendung zugänglich. Die Anwendung sollte die \_ \_ ptr-Konstante WPD- \_ Gerät \_ für den *iwmdmdevice* - \* Parameter verwenden.
+WPD bietet einen Mechanismus für den Zugriff auf **die IWMDRMDeviceApp-APIs** für Lizenzupdates und den Abruf von Messungsdaten. Um über WPD auf diese API zuzugreifen, rufen Sie **QueryInterface** in **IID \_ IWMDRMDeviceApp** aus dem von [**IPortableDeviceContent::CreateObjectWithPropertiesAndData**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-createobjectwithpropertiesanddata)zurückgegebenen **IStream** auf. Diese **IWMDRMDeviceApp-Instanz** ist an die **IPortableDevice-Verbindung** mit Ihrem WMDRM-kompatiblen Gerät gebunden und nicht an den spezifischen Inhalt, an dem **der IStream** erhalten wurde. WPD umschließt die Messungs-APIs intern und macht sie für Ihre Anwendung zugänglich. Ihre Anwendung sollte die WMDRMDEVICEAPP USE WPD DEVICE PTR-Konstante für den \_ \_ \_ \_ *IWMDMDevice-Parameter* \* verwenden.
 
-Dies wird im folgenden Code Ausschnitt veranschaulicht.
+Dies wird im folgenden Codeausschnitt veranschaulicht.
 
 
 ```C++
@@ -104,17 +104,17 @@ if (SUCCEEDED(hr))
 
 
 
-Diese Voraussetzung gilt auch für den privaten Schlüssel der Anwendung und das Zertifikat. Wenn der Schlüssel/das Zertifikat ungültig ist oder das WMDRM-System nicht initialisiert werden kann, schlägt der **queryinferface** -Rückruf fehl.
+Die gleiche Voraussetzung wie für den privaten Schlüssel und das Zertifikat der Anwendung gilt auch hier. Wenn der Schlüssel/das Zertifikat ungültig ist oder das WMDRM-System nicht initialisiert werden kann, schlägt der **QueryInferface-Aufruf** fehl.
 
-Die obige Methode zum Abrufen der **iwmdrmdeviceapp** -Schnittstelle über den **IStream** -Zeiger ist nur eine einfache Möglichkeit, wenn Ihre Anwendung bereits eine zuvor geschützte Inhalts Übertragung durchführen muss, bevor Sie mit der Verarbeitung von Messungs-und Lizenz Synchronisierungs Vorgängen fortfahren.
+Die oben beschriebene Methode zum Erwerben der **IWMDRMDeviceApp-Schnittstelle** aus dem **IStream-Zeiger** ist nur eine Vereinfachung, wenn Ihre Anwendung bereits eine vorherige Übertragung geschützter Inhalte vor der Vermessung und Lizenzsynchronisierung vor dem Durchführen von Messungs- und Lizenzsynchronisierungsvorgängen durchläuft.
 
-Die Empfehlung für die meisten Anwendungen, die auf **iwmdrmdeviceapp** zugreifen müssen, besteht darin, **iwmdrmdeviceapp** direkt zu initialisieren, da es nicht erforderlich ist, dass Ihre Anwendung geschützte Inhalte überträgt oder an den Übertragungs Schnittstellen hält, um die Geräte Messung und die Lizenz Synchronisierung durchzuführen. Diese Methode erfordert die Verwendung von WMDM-APIs (Windows Media Device Manager). Ausführliche Informationen und Beispielcode finden Sie im Whitepaper [zugreifen auf WMDRM-APIs von einer WPD-Anwendung](../windows-portable-devices.md) auf der whdc-Website.
+Für die meisten Anwendungen, die auf **IWMDRMDeviceApp** zugreifen müssen, wird empfohlen, **IWMDRMDeviceApp** direkt zu initialisieren, da ihre Anwendung dafür weder geschützte Inhalte übertragen noch an die Übertragungsschnittstellen halten muss, um Gerätemessung und Lizenzsynchronisierung zu ermöglichen. Diese Methode erfordert die Verwendung von Windows Media Geräte-Manager-APIs (WMDM). Details und Beispielcode finden Sie im Whitepaper [Accessing WMDRM APIs from a WPD Application (Zugreifen auf WMDRM-APIs](../windows-portable-devices.md) aus einer WPD-Anwendung) auf der WHDC-Website.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Tragbare Windows-Geräte**](/windows/desktop/windows-portable-devices)
+[**Windows Portable Geräte**](/windows/desktop/windows-portable-devices)
 </dt> </dl>
 
  

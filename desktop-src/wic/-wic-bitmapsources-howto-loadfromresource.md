@@ -1,21 +1,21 @@
 ---
-description: In diesem Thema wird veranschaulicht, wie ein IWICBitmapFrameDecode aus einer Anwendungs Ressource geladen wird.
+description: In diesem Thema wird veranschaulicht, wie sie einen IWICBitmapFrameDecode aus einer Anwendungsressource laden.
 ms.assetid: 2260ad3a-44d4-4fe2-aa8c-608ffc11fbfb
-title: Vorgehensweise beim Laden einer Bitmap aus einer Ressource (Windows Imaging Component)
+title: Laden einer Bitmap aus einer Ressource (Windows Imaging-Komponente)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: deb33ad57b3b9dac1cb5d98719c681adb38c11de
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 88bc10766ed6720e60dd85a9600107c883da80d7b326ddd810b6261e509915da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118034742"
 ---
-# <a name="how-to-load-a-bitmap-from-a-resource-windows-imaging-component"></a>Vorgehensweise beim Laden einer Bitmap aus einer Ressource (Windows Imaging Component)
+# <a name="how-to-load-a-bitmap-from-a-resource-windows-imaging-component"></a>Laden einer Bitmap aus einer Ressource (Windows Imaging-Komponente)
 
-In diesem Thema wird veranschaulicht, wie ein [**IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) aus einer Anwendungs Ressource geladen wird.
+In diesem Thema wird veranschaulicht, wie sie [**einen IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) aus einer Anwendungsressource laden.
 
-1.  Definieren Sie in der Anwendungs Ressourcen-Definitionsdatei (RC-Datei) die Ressource. Im folgenden Beispiel wird eine `Image` Ressource mit dem Namen definiert `IDR_SAMPLE_IMAGE` .
+1.  Definieren Sie in der Anwendungsressourcendefinitionsdatei (RC) die Ressource. Im folgenden Beispiel wird eine Ressource `Image` mit dem Namen `IDR_SAMPLE_IMAGE` definiert.
 
     ```C++
     IDR_SAMPLE_IMAGE IMAGE "turtle.jpg"
@@ -78,7 +78,7 @@ In diesem Thema wird veranschaulicht, wie ein [**IWICBitmapFrameDecode**](/windo
 
     
 
-4.  Verwenden Sie die Methode " [**kreatestream**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createstream) ", um ein [**IWICStream**](/windows/desktop/api/Wincodec/nn-wincodec-iwicstream) -Objekt zu erstellen, und initialisieren Sie es mit dem Bildspeicher Zeiger.
+4.  Verwenden Sie die [**CreateStream-Methode,**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createstream) um ein [**IWICStream-Objekt zu**](/windows/desktop/api/Wincodec/nn-wincodec-iwicstream) erstellen und es mithilfe des Bildspeicherzeigers zu initialisieren.
 
     ```C++
     // Create a WIC stream to map onto the memory.
@@ -96,7 +96,7 @@ In diesem Thema wird veranschaulicht, wie ein [**IWICBitmapFrameDecode**](/windo
 
     
 
-5.  Erstellen Sie einen [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) aus dem neuen Stream-Objekt mithilfe der Methode " [**kreatedecoderfromstream**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromstream) ".
+5.  Erstellen Sie mithilfe der [**CreateDecoderFromStream-Methode**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromstream) einen [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) aus dem neuen Streamobjekt.
 
     ```C++
     // Create a decoder for the stream.
@@ -111,7 +111,7 @@ In diesem Thema wird veranschaulicht, wie ein [**IWICBitmapFrameDecode**](/windo
 
     
 
-6.  Rufen Sie einen [**IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) aus dem decodierten Bild ab.
+6.  Rufen Sie [**einen IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) aus dem decodierten Bild ab.
 
     ```C++
     // Retrieve the initial frame.
@@ -122,14 +122,14 @@ In diesem Thema wird veranschaulicht, wie ein [**IWICBitmapFrameDecode**](/windo
 
     
 
-    Mit diesem Code wird nur der erste `0` Frame () des Bilds abgerufen. Verwenden Sie für mehrstufige Bilder [**GetFrameCount**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getframecount) , um die Anzahl der Frames im Bild zu bestimmen.
+    Dieser Code ruft nur den ersten Frame `0` () des Bilds ab. Verwenden Sie für Bilder mit mehreren Frames [**GetFrameCount,**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getframecount) um die Anzahl der Frames im Bild zu bestimmen.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 [Programmierhandbuch](-wic-programming-guide.md)
 
 
-[Verweis](-wic-codec-reference.md)
+[Referenz](-wic-codec-reference.md)
 
 
 [Beispiele](-wic-samples.md)

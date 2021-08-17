@@ -1,10 +1,10 @@
 ---
-title: Network Settings-Objekt
-description: Gibt für die Skripterstellung die Einstellungen an, die vom Taskplaner-Dienst zum Abrufen eines Netzwerk Profils verwendet werden.
+title: NetworkSettings-Objekt
+description: Für die Skripterstellung stellt die Einstellungen zur Verfügung, die der Taskplaner verwendet, um ein Netzwerkprofil zu erhalten.
 ms.assetid: 86ac26c3-c868-4886-8f0b-3a6f6efe3e9d
 keywords:
-- Network Settings-Objekt Taskplaner
-- Network Settings-Objekt Taskplaner, beschrieben
+- NetworkSettings-Taskplaner
+- NetworkSettings-Objekt Taskplaner , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,41 +15,41 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a1eecfbbdd4e3ea00c8d2412ae912594f2ec297
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ddc5e247ad3de50268c6075f8956687f92800c4e901788b5098a0cef868bb202
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477202"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117759692"
 ---
-# <a name="networksettings-object"></a>Network Settings-Objekt
+# <a name="networksettings-object"></a>NetworkSettings-Objekt
 
-Gibt für die Skripterstellung die Einstellungen an, die vom Taskplaner-Dienst zum Abrufen eines Netzwerk Profils verwendet werden.
+Für die Skripterstellung stellt die Einstellungen zur Verfügung, die der Taskplaner verwendet, um ein Netzwerkprofil zu erhalten.
 
 ## <a name="members"></a>Member
 
-Das **Network Settings** -Objekt verfügt über folgende Typen von Membern:
+Das **NetworkSettings-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **Network Settings** -Objekt verfügt über diese Eigenschaften.
+Das **NetworkSettings-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                        | Zugriffstyp           | BESCHREIBUNG                                                                                    |
+| Eigenschaft                                        | Zugriffstyp           | Beschreibung                                                                                    |
 |:------------------------------------------------|:----------------------|:-----------------------------------------------------------------------------------------------|
-| [**Name**](networksettings-id.md)<br/>     | Lesen/Schreiben<br/> | Ruft einen GUID-Wert ab, der ein Netzwerk Profil identifiziert, oder legt ihn fest.<br/>                        |
-| [**Name**](networksettings-name.md)<br/> | Lesen/Schreiben<br/> | Ruft den Namen eines Netzwerk Profils ab oder legt ihn fest. Der Name wird zu Anzeige Zwecken verwendet. <br/> |
+| [**Id**](networksettings-id.md)<br/>     | Lesen/Schreiben<br/> | Ruft einen GUID-Wert ab, der ein Netzwerkprofil identifiziert, oder legt diesen fest.<br/>                        |
+| [**Name**](networksettings-name.md)<br/> | Lesen/Schreiben<br/> | Ruft den Namen eines Netzwerkprofils ab oder legt den Namen fest. Der Name wird zu Anzeigezwecken verwendet. <br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Lesen oder schreiben Ihrer eigenen XML-Daten für eine Aufgabe werden Netzwerkeinstellungen mit dem [**networksettings**](taskschedulerschema-networksettings-settingstype-element.md) -Element des Taskplaner-Schemas angegeben.
+Beim Lesen oder Schreiben eigener XML-Daten für eine Aufgabe werden Netzwerkeinstellungen mithilfe des [**NetworkSettings-Elements**](taskschedulerschema-networksettings-settingstype-element.md) des Taskplaner angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,14 +57,14 @@ Beim Lesen oder schreiben Ihrer eigenen XML-Daten für eine Aufgabe werden Netzw
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

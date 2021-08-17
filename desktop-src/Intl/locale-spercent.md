@@ -13,7 +13,7 @@ ms.locfileid: "118391123"
 ---
 # <a name="locale_spercent"></a>LOCALE \_ SPERCENT
 
-**Windows 7 und höher:** Symbol, das verwendet wird, um den Prozentsatz anzugeben, z. B. "%". Der Wert ist eine einzelne Zeichenfolge mit 0 bis 3 Zeichen.
+**Windows 7 und höher:** Symbol, das zum Angeben des Prozentsatzes verwendet wird, z. B. "%". Der Wert ist eine einzelne Zeichenfolge von 0 bis 3 Zeichen.
 
  
 

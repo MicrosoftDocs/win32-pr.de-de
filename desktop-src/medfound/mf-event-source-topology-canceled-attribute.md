@@ -1,36 +1,36 @@
 ---
-description: Gibt an, ob die Sequencer-Quelle eine Topologie abgebrochen hat.
+description: Gibt an, ob die Sequencerquelle eine Topologie abgebrochen hat.
 ms.assetid: b7252336-1612-43fc-8f08-1fdfdbb293eb
-title: MF_EVENT_SOURCE_TOPOLOGY_CANCELED-Attribut (mfapi. h)
+title: MF_EVENT_SOURCE_TOPOLOGY_CANCELED -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a2a161aec292d834b0418f59f1c26ea2f11a538e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ef612c8a1081ecc26eaa9dc593a5906ff965d0387ab02490eedd68f7fbf5e813
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366249"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118060657"
 ---
-# <a name="mf_event_source_topology_canceled-attribute"></a>Attribut der MF- \_ Ereignis \_ Quell \_ Topologie wurde \_ abgebrochen.
+# <a name="mf_event_source_topology_canceled-attribute"></a>\_ \_ CANCELED-Attribut der \_ \_ MF-EREIGNISQUELLENTOPOLOGIE
 
-Gibt an, ob die [Sequencer-Quelle](sequencer-source.md) eine Topologie abgebrochen hat.
+Gibt an, ob [die Sequencerquelle](sequencer-source.md) eine Topologie abgebrochen hat.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-Als booleschen Wert behandeln.
+Als boolescher Wert behandeln.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Attribut wird mit den folgenden Ereignissen verwendet:
 
--   [Meendof presentationsegment](meendofpresentationsegment.md)
--   [Meendof Presentation](meendofpresentation.md)
+-   [MEEndOfPresentationSegment](meendofpresentationsegment.md)
+-   [MEEndOfPresentation](meendofpresentation.md)
 
-Wenn dieses Attribut vorhanden und ungleich NULL ist, bedeutet dies, dass das Präsentations Segment beendet wurde, weil die Sequencer-Quelle die Topologie abgebrochen hat. Andernfalls wurde das Präsentations Segment normal beendet.
+Wenn dieses Attribut vorhanden ist und ungleich 0 (null) ist, bedeutet dies, dass das Präsentationssegment beendet wurde, da die Sequencerquelle die Topologie abgebrochen hat. Andernfalls wurde das Präsentationssegment normal beendet.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,29 +38,29 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [Ereignisattribute](event-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEs::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEs::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[Sequencer-Quell Ereignisse](sequencer-source-events.md)
+[Sequencer-Quellereignisse](sequencer-source-events.md)
 </dt> </dl>
 
  

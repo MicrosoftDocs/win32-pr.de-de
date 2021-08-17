@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse für die Win32-pnpallocatedresource-Zuordnung stellt eine Zuordnung zwischen logischen Geräten und Systemressourcen dar.
+description: Die \_ WMI-Zuordnungsklasse Win32 PnPAllocatedResource stellt eine Zuordnung zwischen logischen Geräten und Systemressourcen dar.
 ms.assetid: e3cef457-cf88-4df5-8db8-b0495f636904
 ms.tgt_platform: multiple
 title: Win32_PnPAllocatedResource-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 353009016c8d4d54cdc92fb8f0ed062567dded6f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 492bd510965499393b399e8e02c1b901fc33f9abc00acf191899c5bb6b8b6d71
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861711"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118008944"
 ---
-# <a name="win32_pnpallocatedresource-class"></a>Win32- \_ pnpallocatedresource-Klasse
+# <a name="win32_pnpallocatedresource-class"></a>Win32 \_ PnPAllocatedResource-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) für die **Win32- \_ pnpallocatedresource** -Zuordnung stellt eine Zuordnung zwischen logischen Geräten und Systemressourcen dar. Diese Klasse wird verwendet, um die Ressourcen zu ermitteln, die von einem bestimmten Gerät verwendet werden, z. b. eine Interruptanforderung (UNQ) oder einen DMA-Kanal (Direct Memory Access).
+Die [WMI-Zuordnungsklasse](../wmisdk/retrieving-a-class.md) **Win32 \_ PnPAllocatedResource** stellt eine Zuordnung zwischen logischen Geräten und Systemressourcen dar. Diese Klasse wird verwendet, um die Ressourcen zu ermitteln, die von einem bestimmten Gerät verwendet werden, z. B. eine Interruptrequest (IRQ) oder ein DMA-Kanal (Direct Memory Access).
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,51 +42,51 @@ class Win32_PnPAllocatedResource : CIM_AllocatedResource
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ pnpallocatedresource** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ PnPAllocatedResource-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ pnpallocatedresource** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ PnPAllocatedResource-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Systemresource**
+Datentyp: **CIM \_ SystemResource**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**override**](../wmisdk/standard-qualifiers.md) ("Vorgänger"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("CIM \| CIM \_ Systemresource")
+Qualifizierer: [**Schlüssel,**](../wmisdk/key-qualifier.md) [**Außerkraftsetzung**](../wmisdk/standard-qualifiers.md) ("Vorgänger"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("CIM \| CIM \_ SystemResource")
 </dt> </dl>
 
-Verweis auf die [**CIM- \_ systemressourceninstanz**](cim-systemresource.md) , die die Eigenschaften einer für das logische Gerät verfügbaren System Ressource darstellt. Diese Eigenschaft wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)geerbt.
+Verweis auf die [**\_ CIM-SystemResource-Instanz,**](cim-systemresource.md) die die Eigenschaften einer Systemressource darstellt, die für das logische Gerät verfügbar ist. Diese Eigenschaft wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)geerbt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ pnptity**
+Datentyp: **Win32 \_ PnPEntity**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**override**](../wmisdk/standard-qualifiers.md) ("Dependent"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("CIM \| CIM \_ LogicalDevice")
+Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**Override**](../wmisdk/standard-qualifiers.md) ("Dependent"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("CIM \| CIM \_ LogicalDevice")
 </dt> </dl>
 
-Verweis auf die [**Win32 \_ pnptity**](win32-pnpentity.md) -Instanz, die die Eigenschaften des logischen Geräts mit den zugewiesenen Systemressourcen darstellt. Diese Eigenschaft wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)geerbt.
+Verweis auf die [**Win32-PnPEntity-Instanz, \_**](win32-pnpentity.md) die die Eigenschaften des logischen Geräts mithilfe der ihm zugewiesenen Systemressourcen darstellt. Diese Eigenschaft wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)geerbt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32- \_ pnpallocatedresource** -Klasse wird von CIM "" [**\_ zugeordnet**](cim-allocatedresource.md).
+Die **Win32 \_ PnPAllocatedResource-Klasse** wird von [**CIM \_ AllocatedResource**](cim-allocatedresource.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,20 +96,20 @@ Die **Win32- \_ pnpallocatedresource** -Klasse wird von CIM "" [**\_ zugeordnet*
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Verteilungs Quelle**](cim-allocatedresource.md)
+[**CIM \_ AllocatedResource**](cim-allocatedresource.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

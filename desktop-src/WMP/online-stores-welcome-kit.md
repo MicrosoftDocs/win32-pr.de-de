@@ -1,47 +1,47 @@
 ---
-title: Willkommens-Kit für Online Stores
-description: Willkommens-Kit für Online Stores
+title: Welcome Kit für Onlineshops
+description: Welcome Kit für Onlineshops
 ms.assetid: 0684f705-62c4-4b90-bd0e-b33ab8fec6ef
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aa42f51400aedba55682f87d0dc8734b438755ae
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6271a7dfda3bfe16e27071b39c6610b4b99e844f5d7a5270fb7286c3f1ae3798
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339394"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117747848"
 ---
-# <a name="online-stores-welcome-kit"></a>Willkommens-Kit für Online Stores
+# <a name="online-stores-welcome-kit"></a>Welcome Kit für Onlineshops
 
-Dieser Abschnitt enthält das Willkommens Kit für Online Stores, das eine Sammlung von Informationen zum Einbinden eines Online-Musik Speichers für Windows Media Player ist. Das Kit enthält die folgenden Themen.
+Dieser Abschnitt enthält das Online Stores Welcome Kit, bei dem es sich um eine Sammlung von Informationen zum Mitbringen eines Online-Musikspeichers für Windows Media Player. Das Kit enthält die folgenden Themen.
 
 
 
-| Thema                                                                                                          | BESCHREIBUNG                                                                                                        |
+| Thema                                                                                                          | Beschreibung                                                                                                        |
 |----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| [Einführung in das Willkommens Kit für Online Stores](introduction-to-the-online-stores-welcome-kit.md)             | Bietet eine Einführung in das Begrüßungs-Kit, die Kontaktinformationen und eine Liste verwandter Dokumente.                 |
-| [Online Musik Store auf dem Board](getting-an-online-music-store-on-board.md)                           | Beschreibt den Prozess der bereit Führung eines Online-Musik Stores für Windows Media Player.                         |
-| [Anforderungen an Online Music Stores](requirements-for-online-music-stores.md)                               | Beschreibt einige wichtige Anforderungen bezüglich der cusomization und der Wiedergabe.                                               |
-| [Verträge und Lizenzen für Online Musik Stores](contracts-and-licenses-for-online-music-stores.md)           | Beschreibt die Verträge, die signiert werden müssen, bevor ein Online Music Store in das Board aufgenommen werden kann.                 |
-| [Kontakt Informationsformular für einen Online-Musikspeicher](contact-information-form-for-an-online-music-store.md)   | Bietet ein Formular, das die Designer eines Online Musik Stores verwenden können, um Microsoft Kontaktinformationen bereitzustellen. |
-| [Start Informationsformular für Online Musikspeicher](startup-information-form-for-an-online-music-store.md)   | Bietet ein Formular, das die Designer eines Online Musik Stores verwenden können, um Microsoft Startinformationen bereitzustellen. |
-| [Validierungs Tests für den Typ 2 Online Musikspeicher](validation-tests-for-type-2-online-music-stores.md)         | Beschreibt die Tests, die Microsoft durchführt, um einen Online Music Store vom Typ 2 zu validieren.                               |
-| [Häufige Probleme bei der Integration von Online Musik Stores](common-on-boarding-problems-for-online-music-stores.md) | Beschreibt häufige Probleme, die Online Musik Stores bei der Durchführung des Vorgangs aufgetreten sind.         |
+| [Einführung in das Welcome Kit für Onlineshops](introduction-to-the-online-stores-welcome-kit.md)             | Bietet eine Einführung in das Welcome Kit, Kontaktinformationen und eine Liste verwandter Dokumente.                 |
+| [Getting an Online Musik Store On Board](getting-an-online-music-store-on-board.md)                           | Beschreibt den Prozess, bei dem ein Online-Musikspeicher für die Windows Media Player.                         |
+| [Anforderungen für Online Musik Speicher](requirements-for-online-music-stores.md)                               | Beschreibt einige wichtige Anforderungen in Bezug auf die Cusomisierung und Wiedergabe.                                               |
+| [Verträge und Lizenzen für Online Musik Speicher](contracts-and-licenses-for-online-music-stores.md)           | Beschreibt die Verträge, die unterzeichnet werden müssen, bevor ein Online-Musikspeicher ins Spiel gebracht werden kann.                 |
+| [Formular "Kontaktinformationen" für eine Musik Store](contact-information-form-for-an-online-music-store.md)   | Stellt ein Formular zur Verfügung, das die Designer eines Online-Musikspeichers verwenden können, um Microsoft Kontaktinformationen zur Verfügung zu stellen. |
+| [Startinformationsformular für eine Musik Store](startup-information-form-for-an-online-music-store.md)   | Stellt ein Formular zur Verfügung, das die Designer eines Online-Musikspeichers verwenden können, um Microsoft Startinformationen zur Verfügung zu stellen. |
+| [Validierungstests für Onlinespeicher vom Typ 2 Musik Speicher](validation-tests-for-type-2-online-music-stores.md)         | Beschreibt die Tests, die Microsoft zum Überprüfen eines Music Store vom Typ 2 führt.                               |
+| [Häufige Probleme beim Einsteigen für Online Musik Stores](common-on-boarding-problems-for-online-music-stores.md) | Beschreibt häufige Probleme, die bei online verfügbaren Musikgeschäften während des Prozesses aufgetreten sind.         |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Windows Media Player Online Stores](windows-media-player-online-stores.md)
+[Windows Media Player Onlineshops](windows-media-player-online-stores.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

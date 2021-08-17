@@ -71,7 +71,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von D
 
 <dl> <dt>
 
-[CIM \_ USBGeräte](reset-method-in-class-cim-usbdevice.md)
+[CIM \_ USBDevice](reset-method-in-class-cim-usbdevice.md)
 </dt> <dt>
 
 [**CIM \_ USBDevice**](cim-usbdevice.md)

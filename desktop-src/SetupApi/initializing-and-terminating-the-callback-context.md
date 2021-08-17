@@ -1,25 +1,25 @@
 ---
-description: Bevor die Standard Warteschlangen-Rückruf Routine verwendet werden kann, indem Sie entweder beim Ausführen eines Commits für eine Datei Warteschlange als Rückruf Routine angegeben wird, oder indem Sie Sie von einer benutzerdefinierten Rückruf Routine aus aufrufen, muss Sie initialisiert werden.
+description: Bevor die Standardmäßige Warteschlangenrückrufroutine verwendet werden kann, entweder durch Angabe als Rückrufroutine beim Committen einer Dateiwarteschlange oder durch Aufrufen über eine benutzerdefinierte Rückrufroutine, muss sie initialisiert werden.
 ms.assetid: e25a9787-a4a3-4d06-bf55-f6f7cfb23481
-title: Initialisieren und Beenden des Rückruf Kontexts
+title: Initialisieren und Beenden des Rückrufkontexts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 03cb4c144cb9069d395ccd688e2a172680df8a12
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 67df0707f91a17369503fa17ecbeefef3eb6827be60285b0b778b07d98eba3a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117965433"
 ---
-# <a name="initializing-and-terminating-the-callback-context"></a>Initialisieren und Beenden des Rückruf Kontexts
+# <a name="initializing-and-terminating-the-callback-context"></a>Initialisieren und Beenden des Rückrufkontexts
 
-Bevor die Standard Warteschlangen-Rückruf Routine verwendet werden kann, indem Sie entweder beim Ausführen eines Commits für eine Datei Warteschlange als Rückruf Routine angegeben wird, oder indem Sie Sie von einer benutzerdefinierten Rückruf Routine aus aufrufen, muss Sie initialisiert werden.
+Bevor die Standardmäßige Warteschlangenrückrufroutine verwendet werden kann, entweder durch Angabe als Rückrufroutine beim Committen einer Dateiwarteschlange oder durch Aufrufen über eine benutzerdefinierte Rückrufroutine, muss sie initialisiert werden.
 
-Die [**SetupInitDefaultQueueCallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupinitdefaultqueuecallback) -Funktion erstellt die Kontext Struktur, die von der Standard Warteschlangen-Rückruf Routine verwendet wird. Sie gibt einen void-Zeiger auf diese-Struktur zurück. Diese Struktur ist für den Vorgang der Standard Rückruf Routine unverzichtbar und muss an die Rückruf Routine übergeben werden. Hierzu können Sie entweder den void-Zeiger als Kontext in einem Aufruf von [**setupcommitfilequeue**](/windows/desktop/api/Setupapi/nf-setupapi-setupcommitfilequeuea)angeben oder den void-Zeiger als Kontext Parameter angeben, wenn Sie [**setupdefaultqueuecallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupdefaultqueuecallbacka) aus einer benutzerdefinierten Rückruf Routine aufrufen. Diese Kontext Struktur darf nicht geändert werden oder von der Setup Anwendung referenziert werden.
+Die [**SetupInitDefaultQueueCallback-Funktion**](/windows/desktop/api/Setupapi/nf-setupapi-setupinitdefaultqueuecallback) erstellt die Kontextstruktur, die von der standardmäßigen Warteschlangenrückrufroutine verwendet wird. Sie gibt einen void-Zeiger auf diese Struktur zurück. Diese Struktur ist wichtig für den Vorgang der Standardrückrufroutine und muss an die Rückrufroutine übergeben werden. Hierzu können Sie entweder den void-Zeiger als Kontext in einem Aufruf von [**SetupCommitFileQueue**](/windows/desktop/api/Setupapi/nf-setupapi-setupcommitfilequeuea)angeben oder indem Sie den void-Zeiger als Kontextparameter angeben, wenn [**SetupDefaultQueueCallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupdefaultqueuecallbacka) aus einer benutzerdefinierten Rückrufroutine aufruft. Diese Kontextstruktur darf von der Setupanwendung nicht geändert oder referenziert werden.
 
-Die [**setupinitdefaultqueuecallbackex**](/windows/desktop/api/Setupapi/nf-setupapi-setupinitdefaultqueuecallbackex) -Funktion initialisiert außerdem einen Kontext für die Standard Warteschlangen-Rückruf Routine. Sie gibt jedoch ein zweites Fenster an, mit dem eine vom Aufrufer angegebene Statusmeldung empfangen wird, wenn die Warteschlange eine Benachrichtigung sendet. Dies ermöglicht es Ihnen, die Standard Dialogfelder für Datenträger und Fehler zu verwenden und eine Statusanzeige z. b. in einem zweiten Fenster einzubetten, z. b. auf einer Seite des Installations-Assistenten.
+Die [**SetupInitDefaultQueueCallbackEx-Funktion**](/windows/desktop/api/Setupapi/nf-setupapi-setupinitdefaultqueuecallbackex) initialisiert auch einen Kontext für die Standardmäßige Warteschlangenrückrufroutine, gibt jedoch ein zweites Fenster an, in dem jedes Mal, wenn die Warteschlange eine Benachrichtigung sendet, eine vom Aufrufer angegebene Statusmeldung empfangen wird. Auf diese Weise können Sie die Standarddialogfelder für Die Eingabeaufforderung und Fehler des Datenträgers verwenden und auch eine Statusleiste in ein zweites Fenster einbetten, z. B. auf einer Seite eines Installations-Assistenten.
 
-Unabhängig davon, ob Sie den von der Standard Warteschlangen Rückruf-Routine verwendeten Kontext mit [**SetupInitDefaultQueueCallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupinitdefaultqueuecallback) oder [**setupinitdefaultqueuecallbackex**](/windows/desktop/api/Setupapi/nf-setupapi-setupinitdefaultqueuecallbackex)initialisiert haben, rufen Sie [**setuptermdefaultqueuecallback**](/windows/desktop/api/Setupapi/nf-setupapi-setuptermdefaultqueuecallback) auf, um die beim Initialisieren der Kontext Struktur zugeordneten Ressourcen freizugeben.
+Rufen Sie [**setupTermDefaultQueueCallback**](/windows/desktop/api/Setupapi/nf-setupapi-setuptermdefaultqueuecallback) auf, um die beim Initialisieren der Kontextstruktur zugeordneten Ressourcen frei zu geben, unabhängig davon, ob Sie den Kontext initialisiert haben, der von der Standardmäßig-Warteschlangenrückrufroutine mit [**SetupInitDefaultQueueCallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupinitdefaultqueuecallback) oder [**SetupInitDefaultQueueCallbackEx**](/windows/desktop/api/Setupapi/nf-setupapi-setupinitdefaultqueuecallbackex)verwendet wird.
 
  
 

@@ -1,9 +1,9 @@
 ---
-title: Recordingtimeday-Attribut
-description: Das recordingtimeday-Attribut ist der Tages Teil des Datums der ursprünglichen Aufzeichnung, bei Elementen, bei denen dieses Datum nicht mit dem Veröffentlichungsdatum identisch ist.
+title: RecordingTimeDay-Attribut
+description: Das RecordingTimeDay-Attribut ist der Tagesteil des Datums der ursprünglichen Aufzeichnung für Elemente, bei denen sich dieses Datum vom Veröffentlichungsdatum abspielt.
 ms.assetid: fb2d9eb6-ea06-492c-839b-27f6bd3fd986
 keywords:
-- Recordingtimeday-Attribut, Windows Media Player
+- RecordingTimeDay-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f6f4bbd80625df7b3a548cc6ad89707a5e595ab
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ff864607ceced7942ccb759caab6be2bbef299c647f4b749056e172876d08a71
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117746579"
 ---
-# <a name="recordingtimeday-attribute"></a>Recordingtimeday-Attribut
+# <a name="recordingtimeday-attribute"></a>RecordingTimeDay-Attribut
 
-Das **recordingtimeday** -Attribut ist der Tages Teil des Datums der ursprünglichen Aufzeichnung, bei Elementen, bei denen dieses Datum nicht mit dem Veröffentlichungsdatum identisch ist.
+Das **RecordingTimeDay-Attribut** ist der Tagesteil des Datums der ursprünglichen Aufzeichnung für Elemente, bei denen sich dieses Datum vom Veröffentlichungsdatum abspielt.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
--   [Foto Elemente](photo-item-attributes.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Fotoelemente](photo-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur in der-Bibliothek gespeichert.
+Dieses Attribut wird nur in der Bibliothek gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,11 +45,11 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

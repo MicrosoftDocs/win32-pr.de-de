@@ -1,7 +1,7 @@
 ---
-description: Eine übergeordnete Klasse für Klassen, die Anzeigegeräte darstellen.
+description: Eine Oberklasse für Klassen, die Anzeigegeräte darstellen.
 ms.assetid: 6e3b4b40-dacb-4b89-b636-0c1b18872a51
-title: CIM_Display-Klasse (Hyper-V-Verwaltung)
+title: CIM_Display -Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: f5ac939eb1eff305cbd1ef1fab37eecd4ed4f566
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 003cb47d43f93fe3cb4f2ddd10c94075c3ef45b94e5f493cfa0d40973955899d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117812716"
 ---
-# <a name="cim_display-class-hyper-v-management"></a>CIM_Display-Klasse (Hyper-V-Verwaltung)
+# <a name="cim_display-class-hyper-v-management"></a>CIM_Display -Klasse (Hyper-V-Verwaltung)
 
-Eine übergeordnete Klasse für Klassen, die Anzeigegeräte darstellen.
+Eine Oberklasse für Klassen, die Anzeigegeräte darstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,7 +35,7 @@ class CIM_Display : CIM_UserDevice
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ Anzeige** Klasse definiert keine Member.
+Die **CIM \_ Display-Klasse** definiert keine Member.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,16 +46,16 @@ Die **CIM- \_ Anzeige** Klasse definiert keine Member.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ userdevice**](cim-userdevice.md)
+[**CIM \_ UserDevice**](cim-userdevice.md)
 </dt> </dl>
 
  

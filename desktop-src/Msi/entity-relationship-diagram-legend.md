@@ -1,5 +1,5 @@
 ---
-description: Ein schwarzer Kreis, der zu einem offenen Rauten führt, gibt eine 1:n-Beziehung zwischen dem Primärschlüssel der ersten Tabelle und dem Fremdschlüssel der zweiten Tabelle an.
+description: Ein schwarzer Kreis, der zu einer offenen Raute führt, gibt eine 1:n-Beziehung zwischen dem Primärschlüssel der ersten Tabelle und dem Fremdschlüssel der zweiten Tabelle an.
 ms.assetid: a72d9b7c-e1ed-422c-a5d2-b19060c72487
 title: Legende des Entitätsbeziehungsdiagramms
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118378161"
 ---
 # <a name="entity-relationship-diagram-legend"></a>Legende des Entitätsbeziehungsdiagramms
 
-Ein schwarzer Kreis, der zu einem offenen Rauten führt, gibt eine 1:n-Beziehung zwischen dem Primärschlüssel der ersten Tabelle und dem Fremdschlüssel der zweiten Tabelle an. Ein Beispiel hierfür finden Sie in der Abbildung für die [Registrierungstabellengruppe](registry-tables-group.md). Die Erweiterung ist ein Primärschlüssel der Erweiterungstabelle und ein Fremdschlüssel der Verbtabelle. Eine Erweiterung kann daher registriert werden, um mehrere Verben zu haben, aber ein bestimmtes Verb kann nur einer Erweiterung zugeordnet werden.
+Ein schwarzer Kreis, der zu einer offenen Raute führt, gibt eine 1:n-Beziehung zwischen dem Primärschlüssel der ersten Tabelle und dem Fremdschlüssel der zweiten Tabelle an. Ein Beispiel für diesen Blick ist die Abbildung für die [Registrierungstabellengruppe](registry-tables-group.md). Erweiterung ist ein Primärschlüssel der Erweiterungstabelle und ein Fremdschlüssel der Verb-Tabelle. Eine Erweiterung kann daher mit mehreren Verben registriert werden, aber ein bestimmtes Verb kann nur einer Erweiterung zugeordnet werden.
 
  
 
