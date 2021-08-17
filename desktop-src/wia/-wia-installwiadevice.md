@@ -1,5 +1,5 @@
 ---
-description: Die InstallWiaDevice-Funktion installiert ein Windows WIA-Gerät (Image Acquisition) als Stammgerät. Möglicherweise wird eine Sicherheitswarnung angezeigt, wenn eine Installationsdatei oder ein Coinstaller nicht digital signiert und vertrauenswürdig ist.
+description: Die InstallWiaDevice-Funktion installiert ein WIA-Gerät (Windows Image Acquisition) als stammbasiertes Gerät. Es wird möglicherweise eine Sicherheitswarnung angezeigt, wenn eine installierte Datei oder ein Coinstaller nicht digital signiert und vertrauenswürdig ist.
 ms.assetid: c7de27f5-5994-4fce-a6ec-6e7cfae2e591
 title: InstallWiaDevice-Funktion (Wia.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118965839"
 ---
 # <a name="installwiadevice-function"></a>InstallWiaDevice-Funktion
 
-Die **InstallWiaDevice-Funktion** installiert ein wia-Gerät (Windows Image Acquisition) als Stammgerät. Möglicherweise wird eine Sicherheitswarnung angezeigt, wenn eine Installationsdatei oder ein Coinstaller nicht digital signiert und vertrauenswürdig ist.
+Die **InstallWiaDevice-Funktion** installiert ein WIA-Gerät (Windows Image Acquisition) als root-enumeriertes Gerät. Es wird möglicherweise eine Sicherheitswarnung angezeigt, wenn eine installierte Datei oder ein Coinstaller nicht digital signiert und vertrauenswürdig ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,7 +53,7 @@ Zeiger auf eine WIADEVICEINSTALL-Struktur. Der *szFriendlyName-Member* der -Stru
 
 Typ: **DWORD**
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert ERROR \_ SUCCESS.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR \_ SUCCESS.
 
 Wenn die Funktion fehlschlägt, wird ein Win32-Fehlercode zurückgegeben.
 
@@ -63,7 +63,7 @@ Wenn die Funktion fehlschlägt, wird ein Win32-Fehlercode zurückgegeben.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>       |
 | Bibliothek<br/>                  | <dl> <dt>Wiaguid.lib</dt> </dl> |

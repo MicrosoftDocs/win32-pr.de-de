@@ -1,5 +1,5 @@
 ---
-description: 'Process_TypeGroup1 Klasse: Diese Klasse ist die Ereignistypklasse für Prozessereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
+description: 'Process_TypeGroup1 Klasse: Diese Klasse ist die Ereignistypklasse für Prozessereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 4f06e1af-3f9a-4346-aa50-50f3ee82cd98
 title: Process_TypeGroup1-Klasse
 ms.topic: reference
@@ -21,18 +21,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: bd67059f5257dad9b66e1c21f642fef04f03719e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b1a172b7c3c09ca5735e9e58da2003fcb3790f584cda5809e393ae721393e6a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119070030"
 ---
 # <a name="process_typegroup1-class"></a>Process \_ TypeGroup1-Klasse
 
 Diese Klasse ist die Ereignistypklasse für Prozessereignisse.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,7 +67,7 @@ Die **Process \_ TypeGroup1-Klasse** verfügt über diese Eigenschaften.
 CommandLine
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -115,7 +115,7 @@ Beendigungsstatus des beendeten Prozesses.
 ImageFileName
 </dt> <dd> <dl> <dt>
 
-Datentyp: **String**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -140,7 +140,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(3), Format("x")
 </dt> </dl>
 
-Eindeutiger Bezeichner des Prozesses, der diesen Prozess erstellt. Prozessbezeichnernummern werden wiederverwendet, sodass sie nur einen Prozess für die Lebensdauer dieses Prozesses identifizieren. Es ist möglich, dass der durch ParentProcessId identifizierte Prozess beendet wird, sodass ParentProcessId möglicherweise nicht auf einen ausgeführten Prozess verweist. Es ist auch möglich, dass ParentProcessId fälschlicherweise auf einen Prozess verweist, der einen Prozessbezeichner wiederverwendet.
+Eindeutiger Bezeichner des Prozesses, der diesen Prozess erstellt. Prozessbezeichnernummern werden wiederverwendet, sodass sie nur einen Prozess für die Lebensdauer dieses Prozesses identifizieren. Es ist möglich, dass der von ParentProcessId identifizierte Prozess beendet wird, sodass ParentProcessId möglicherweise nicht auf einen ausgeführten Prozess verweisen kann. Es ist auch möglich, dass ParentProcessId fälschlicherweise auf einen Prozess verweist, der einen Prozessbezeichner wiederverwendet.
 
 </dd> <dt>
 
@@ -156,7 +156,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(2), Format("x")
 </dt> </dl>
 
-Globaler Prozessbezeichner, den Sie zum Identifizieren eines Prozesses verwenden können. Der Wert ist gültig ab dem Zeitpunkt, zu dem ein Prozess erstellt wird, bis er beendet wird.
+Globaler Prozessbezeichner, den Sie zum Identifizieren eines Prozesses verwenden können. Der Wert ist ab dem Zeitpunkt gültig, zu dem ein Prozess erstellt wird, bis er beendet wird.
 
 </dd> <dt>
 
@@ -172,7 +172,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
-Eindeutiger Bezeichner, den ein Betriebssystem generiert, wenn es eine neue Sitzung erstellt. Eine Sitzung erstreckt sich über einen Zeitraum von der Anmeldung bis zur Abmeldung von einem bestimmten System.
+Eindeutiger Bezeichner, den ein Betriebssystem generiert, wenn es eine neue Sitzung erstellt. Eine Sitzung erstreckt sich über einen Zeitraum von der Anmeldung bis zur Abmelde von einem bestimmten System.
 
 </dd> <dt>
 
@@ -195,7 +195,7 @@ Die Adresse des Prozessobjekts im Kernel.
 UserSID
 </dt> <dd> <dl> <dt>
 
-Datentyp: **object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -208,15 +208,15 @@ Sicherheits-ID (SID) für den Benutzerkontext, unter dem das Ereignis eintritt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die DCStart- und DCEnd-Ereignistypen zählen den Prozess auf, der derzeit ausgeführt wird, einschließlich Leerlauf und Systemprozess, zu dem Zeitpunkt, zu dem die Kernelsitzung gestartet bzw. beendet wird.
+Die DcStart- und DCEnd-Ereignistypen enumerieren den Prozess, der derzeit ausgeführt wird, einschließlich des Leerlauf- bzw. Systemprozesses, zum Zeitpunkt, zu dem die Kernelsitzung gestartet bzw. beendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>       |

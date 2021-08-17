@@ -1,16 +1,16 @@
 ---
 title: WS-Verwaltungsprotokoll
-description: Ein öffentlicher Standard für den Remote Austausch von Verwaltungsdaten mit jedem Computer Gerät, das das Protokoll implementiert.
+description: Ein öffentlicher Standard für den Remoteaustausch von Verwaltungsdaten mit jedem Computergerät, das das Protokoll implementiert.
 ms.assetid: 2c47acd2-5d52-4e0f-8848-a11aff59f963
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61e01fdc860eeb5510dd78a4127fdc22b30d711a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 95a20900e77d7d686868e00f7067b23fff644255997a14c9d4c1cbdcf3d1951d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102306"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117742731"
 ---
 # <a name="ws-management-protocol"></a>WS-Verwaltungsprotokoll
 
@@ -18,23 +18,23 @@ Das WS-Verwaltungsprotokoll wurde von einer Gruppe von Hardware- und Softwareher
 
 ## <a name="standards"></a>Standards
 
-Weitere Informationen zum WS-Management-Protokoll finden Sie unter [Spezifikation der Web Services for Management (WS-Management)](https://dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf).
+Weitere Informationen zu WS-Management Protokoll finden Sie unter [Web Services for Management (WS-Management)-Spezifikation.](https://dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf)
 
-Der Zweck des Protokolls besteht darin, Konsistenz und Interoperabilität für Verwaltungsvorgänge auf vielen Arten von Geräten (einschließlich Firmware) und Betriebssystemen bereitzustellen. WS-Management Protokoll kann erweitert werden, wenn neue Vorgänge von der IT-Branche identifiziert werden.
+Das Protokoll soll Konsistenz und Interoperabilität für Verwaltungsvorgänge über viele Gerätetypen (einschließlich Firmware) und Betriebssysteme hinweg bereitstellen. WS-Management Protokoll kann erweitert werden, wenn neue Vorgänge von der IT-Branche identifiziert werden.
 
-Die aktuelle Implementierung des WS-Management Protokolls basiert auf den folgenden Standardspezifikationen: https, SOAP über HTTP (WS-I Profile), SOAP 1,2, WS-Adressierung, WS-Transfer, WS-Enumeration und WS-Eventing. Weitere Informationen zu den WS-Management Standards und XML-Schemas finden Sie unter. <https://dmtf.org/standards/wsman>
+Die aktuelle Implementierung des WS-Management-Protokolls basiert auf den folgenden Standardspezifikationen: HTTPS, SOAP über HTTP (WS-I-Profil), SOAP 1.2, WS-Adressierung, WS-Transfer, WS-Enumeration und WS-Eventing. Weitere Informationen zu den WS-Management Standards und XML-Schemas finden Sie unter <https://dmtf.org/standards/wsman>
 
 ## <a name="messages"></a>Meldungen
 
-Das WS-Management-Protokoll stellt einen Standard zum Erstellen von XML- [*Nachrichten*](windows-remote-management-glossary.md) mithilfe verschiedener Webdienst Standards wie [*WS-Adressierung*](windows-remote-management-glossary.md) und [*WS-Transfer*](windows-remote-management-glossary.md)bereit. Diese Standards definieren XML-Schemas für Webdienst Nachrichten. Die Nachrichten verweisen auf eine [*Ressource*](windows-remote-management-glossary.md) , die einen [*Ressourcen-URI*](windows-remote-management-glossary.md)verwendet. Das WS-Management-Protokoll fügt einen Satz von Definitionen für Verwaltungsvorgänge und Werte hinzu. Beispielsweise definiert WS-Transfer die Vorgänge "Get", "Put", "Create" und "Delete" für eine Ressource. WS-Management Protokoll fügt rename, partielle Get und partielle Put hinzu.
+Das WS-Management-Protokoll bietet einen Standard zum Erstellen von [*XML-Nachrichten*](windows-remote-management-glossary.md) mithilfe verschiedener Webdienststandards wie [*WS-Adressierung*](windows-remote-management-glossary.md) und [*WS-Transfer.*](windows-remote-management-glossary.md) Diese Standards definieren XML-Schemas für Webdienstnachrichten. Die Nachrichten verweisen mithilfe eines [*Ressourcen-URI*](windows-remote-management-glossary.md)auf eine [*Ressource.*](windows-remote-management-glossary.md) Das WS-Management-Protokoll fügt eine Reihe von Definitionen für Verwaltungsvorgänge und -werte hinzu. Beispielsweise definiert WS-Transfer die Vorgänge Get, Put, Create und Delete für eine Ressource. WS-Management Protokoll fügt Rename, Partial Get und Partial Put hinzu.
 
-Die Nachrichten folgen den Konventionen von [*SOAP (Simple Object Access Protocol)*](windows-remote-management-glossary.md) , die von allen Webdienst Protokollen verwendet werden.
+Die Nachrichten folgen den Konventionen des [*Simple Object Access Protocol (SOAP),*](windows-remote-management-glossary.md) das von allen Webdienstprotokollen verwendet wird.
 
-Das folgende Codebeispiel zeigt eine Meldung mit einem Get-Vorgang. Dieses Beispiel wird als Hilfe zum Verständnis der zugrunde liegenden Nachrichten angezeigt. Sie müssen nicht wissen, wie SOAP-Nachrichten erzeugt werden. Die Nachrichten werden von Windows-Remoteverwaltung assembliert, wenn Sie mit dem **WinRM** -Befehlszeilen Tool einen Befehl ausführen oder ein Skript ausführen, das mit der [WinRM-Skript-API](winrm-scripting-api.md)geschrieben wurde.
+Das folgende Codebeispiel zeigt eine Nachricht mit einem Get-Vorgang. Dieses Beispiel wird als Hilfe gezeigt, um zu verstehen, wie die zugrunde liegenden Nachrichten aussehen. Sie müssen nicht wissen, wie SOAP-Nachrichten erzeugt werden. Die Nachrichten werden von Windows Remoteverwaltung zusammengestellt, wenn  Sie einen Befehl mit dem Winrm-Befehlszeilentool ausführen oder ein Skript ausführen, das mit der [WinRM-Skripterstellungs-API](winrm-scripting-api.md)geschrieben wurde.
 
-Die Meldung ist eine Anforderung, die Instanz von [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) mit der **DeviceID** -Eigenschaft "c:" von einem Server mit dem Namen "Remotecomputer" zu erhalten. Die Anforderung verwendet den HTTP-Transport über Port 80. Das Konto, das die Anforderung sendet, muss sich in der lokalen Gruppe "Administratoren" auf dem Remote Computer befinden.
+Die Nachricht ist eine Anforderung, die Instanz von [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) mit der **DeviceID-Eigenschaft** "c:" von einem Server mit dem Namen RemoteComputer abzurufen. Die Anforderung verwendet den HTTP-Transport über Port 80. Das Konto, das die Anforderung sendet, muss sich in der lokalen Administratorgruppe auf dem Remotecomputer befinden.
 
-Die Zeichen vor dem Doppelpunkt am Anfang jedes Tags geben an, welcher Standard das XML-Element definiert. Beispielsweise ` <wsa:To>` gibt an, dass das to-Element durch den WS-Addressing-Standard definiert wird, und `<s:Header>` gibt den Anfang des Header Inhalts in einer SOAP-Nachricht an. Beachten Sie, dass der Großteil der Nachricht aus XML-Elementen besteht, die von SOAP oder WS-Adressierung definiert werden. WS-Management Protokoll fügt MaxEnvelopeSize, Selector und selectorset hinzu.
+Die Zeichen vor dem Doppelpunkt am Anfang jedes Tags geben an, welcher Standard das XML-Element definiert. Gibt beispielsweise ` <wsa:To>` an, dass das To-Element durch den WS-Addressing Standard definiert wird, und `<s:Header>` gibt den Anfang des Headerinhalts in einer SOAP-Nachricht an. Beachten Sie, dass der Großteil der Nachricht aus XML-Elementen besteht, die durch SOAP oder WS-Adressierung definiert werden. WS-Management-Protokoll fügt MaxEnvelopeSize, Selector und SelectorSet hinzu.
 
 
 ```XML
@@ -72,12 +72,12 @@ Die Zeichen vor dem Doppelpunkt am Anfang jedes Tags geben an, welcher Standard 
 
 <dl> <dt>
 
-[Informationen zu Windows-Remoteverwaltung](about-windows-remote-management.md)
+[Informationen Windows Remoteverwaltung](about-windows-remote-management.md)
 </dt> <dt>
 
-[Remote Hardware Verwaltung](remote-hardware-management.md)
+[Remotehardwareverwaltung](remote-hardware-management.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

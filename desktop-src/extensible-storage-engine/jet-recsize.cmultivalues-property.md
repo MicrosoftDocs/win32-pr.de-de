@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: JET_RECSIZE.cMultiValues-Eigenschaft'
+description: 'Weitere Informationen finden Sie unter: JET_RECSIZE.cMultiValues-Eigenschaft.'
 title: JET_RECSIZE.cMultiValues-Eigenschaft (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'cMultiValues property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE.cMultiValues
@@ -35,7 +35,7 @@ ms.locfileid: "118763683"
 ---
 # <a name="jet_recsizecmultivalues-property"></a>JET_RECSIZE.cMultiValues-Eigenschaft
 
-Ruft die Akkumulation der Gesamtzahl der Werte nach der ersten für alle Spalten im Datensatz ab.
+Ruft die Akkumulation der Gesamtzahl von Werten ab, die über die erste für alle Spalten im Datensatz hinausgehen.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -68,6 +68,6 @@ Typ: [System.Int64](/dotnet/api/system.int64)
 
 [JET_RECSIZE-Struktur](./jet-recsize-structure2.md)
 
-[JET_RECSIZE-Member](./jet-recsize-members.md)
+[JET_RECSIZE Mitglieder](./jet-recsize-members.md)
 
 [Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

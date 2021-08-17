@@ -1,7 +1,7 @@
 ---
-description: Fügt einen Daten Verweis als untergeordnetes Element dieses ID3DXFileSaveData File Data-Knotens hinzu. Der Daten Verweis verweist auf ein Datei Datenobjekt.
+description: Fügt einen Datenverweis als untergeordnetes Element dieses ID3DXFileSaveData-Dateidatenknotens hinzu. Der Datenverweis verweist auf ein Dateidatenobjekt.
 ms.assetid: 75bfe91e-15ea-41f3-b1f7-071fb7f0093f
-title: 'ID3DXFileSaveData:: adddatareferenzierungsmethode (D3DX9Xof. h)'
+title: ID3DXFileSaveData::AddDataReference-Methode (D3DX9Xof.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: f4aabf5601ef73f4e1062b1db1a28c1f0deae5fd
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 862df88701cffd1059ca67e086cd49d05174bc66e9fa13807df2d2aeb0c9ff1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119121349"
 ---
-# <a name="id3dxfilesavedataadddatareference-method"></a>ID3DXFileSaveData:: adddatareferenzierungsmethode
+# <a name="id3dxfilesavedataadddatareference-method"></a>ID3DXFileSaveData::AddDataReference-Methode
 
-Fügt einen Daten Verweis als untergeordnetes Element dieses [**ID3DXFileSaveData**](id3dxfilesavedata.md) File Data-Knotens hinzu. Der Daten Verweis verweist auf ein Datei Datenobjekt.
+Fügt einen Datenverweis als untergeordnetes Element dieses [**ID3DXFileSaveData-Dateidatenknotens**](id3dxfilesavedata.md) hinzu. Der Datenverweis verweist auf ein Dateidatenobjekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT AddDataReference(
 
 <dl> <dt>
 
-*szName* \[ in\]
+*szName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Ein Zeiger auf den Namen des Datenobjekts, das als Verweis hinzugefügt werden soll. Geben Sie **null** an, wenn das Datenobjekt keinen Namen hat.
+Zeiger auf den Namen des Datenobjekts, das als Verweis hinzugefügt werden soll. Geben Sie **NULL** an, wenn das Datenobjekt keinen Namen hat.
 
 </dd> <dt>
 
-*pId* \[ in\]
+*pId* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**GUID**](guid.md) \***
+Typ: **const [**GUID**](guid.md) \***
 
-Zeiger auf eine GUID, die das Datenobjekt darstellt, das als Verweis hinzugefügt werden soll. Wenn der Wert **null** ist, wird ein Verweis hinzugefügt, der auf das Datenobjekt mit dem Namen verweist, der von szName angegeben wird.
+Zeiger auf eine GUID, die das datenobjekt darstellt, das als Verweis hinzugefügt werden soll. Wenn **NULL,** wird ein Verweis hinzugefügt, der auf das Datenobjekt mit dem von szName angegebenen Namen verweist.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Zeiger auf eine GUID, die das Datenobjekt darstellt, das als Verweis hinzugefüg
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DXFERR \_ badobject, D3DXFERR \_ badvalue, E \_ oudebmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Sein: D3DXFERR \_ BADOBJECT, D3DXFERR \_ BADVALUE, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Datei Datenobjekt, auf das verwiesen wird, muss entweder einen Namen oder eine GUID aufweisen. Das Datei Datenobjekt muss auch von einem anderen übergeordneten [**ID3DXFileSaveData**](id3dxfilesavedata.md) -Objekt abgeleitet werden.
+Das Dateidatenobjekt, auf das verwiesen wird, muss entweder einen Namen oder eine GUID aufweisen. Das Dateidatenobjekt muss auch von einem anderen übergeordneten [**ID3DXFileSaveData-Objekt**](id3dxfilesavedata.md) abgeleitet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,12 +75,12 @@ Das Datei Datenobjekt, auf das verwiesen wird, muss entweder einen Namen oder ei
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Xof. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX9Xof.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

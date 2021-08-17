@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: JET_ENUMCOLUMN.cbData-Eigenschaft'
+description: 'Weitere Informationen finden Sie unter: JET_ENUMCOLUMN.cbData-Eigenschaft'
 title: JET_ENUMCOLUMN.cbData-Eigenschaft
 TOCTitle: 'cbData property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_ENUMCOLUMN.cbData
@@ -35,7 +35,7 @@ ms.locfileid: "118766006"
 ---
 # <a name="jet_enumcolumncbdata-property"></a>JET_ENUMCOLUMN.cbData-Eigenschaft
 
-Ruft die Größe des Werts ab, der für die Spalte aufzählt wurde. Dieser Member wird nur verwendet, wenn [err](./jet-enumcolumn.err-property.md) gleich [ColumnSingleValue](./jet-wrn-enumeration.md)ist.
+Ruft die Größe des Werts ab, der für die Spalte aufzählt wurde. Dieser Member wird nur verwendet, [wenn err](./jet-enumcolumn.err-property.md) gleich [ColumnSingleValue ist.](./jet-wrn-enumeration.md)
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -68,6 +68,6 @@ Typ: [System.Int32](/dotnet/api/system.int32)
 
 [JET_ENUMCOLUMN-Klasse](./jet-enumcolumn-class.md)
 
-[JET_ENUMCOLUMN-Member](./jet-enumcolumn-members.md)
+[JET_ENUMCOLUMN Member](./jet-enumcolumn-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

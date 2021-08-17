@@ -44,7 +44,7 @@ typedef struct _D3DAUTHENTICATEDCHANNEL_QUERY_INPUT {
 **QueryType**
 </dt> <dd>
 
-Eine GUID, die die Abfrage angibt. Eine Liste der Werte finden Sie unter [Content Protection Abfragen](content-protection-queries.md).
+Eine GUID, die die Abfrage angibt. Eine Liste der Werte finden Sie unter [Content Protection Queries](content-protection-queries.md).
 
 </dd> <dt>
 

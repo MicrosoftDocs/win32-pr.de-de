@@ -27,7 +27,7 @@ Samples a texture, using a comparison value to reject samples. (Stichproben werd
 
 
 
-| Methode                                                                                        | Beschreibung                                                                                                                                                                           |
+| Methode                                                                                        | BESCHREIBUNG                                                                                                                                                                           |
 |:----------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**SampleCmp(S,float,float)**](dx-graphics-hlsl-to-samplecmp.md)                             | Samples a texture, using a comparison value to reject samples. (Stichproben werden mithilfe eines Vergleichswerts abgewiesen.)<br/>                                                                                                             |
 | [**SampleCmp(S,float,float,float)**](tcubearray-samplecmp-s-float-float-float-.md)           | Samples a texture, using a comparison value to reject samples, with an optional value to clamp sample level-of-detail (LOD) values to .<br/>                                     |

@@ -1,7 +1,7 @@
 - name: Isolierte Anwendungen und parallele Assemblys
   href: isolated-applications-and-side-by-side-assemblies-portal.md
   items:
-    - name: Informationen zu isolierten Anwendungen und parallelen Assemblys
+    - name: Informationen zu isolierten Anwendungen und nebenseitigen Assemblys
       href: about-isolated-applications-and-side-by-side-assemblies.md
       items:
         - name: Isolierte Anwendungen
@@ -10,76 +10,76 @@
           href: about-side-by-side-assemblies-.md
         - name: Manifeste
           href: manifests.md
-        - name: Info
+        - name: Informationen zu freigegebenen Assemblys
           href: about-shared-assemblies-.md
-        - name: Über private Assemblys
+        - name: Informationen zu privaten Assemblys
           href: about-private-assemblies-.md
-        - name: Assemblysuchsequenz
+        - name: Sequenz der Assemblysuche
           href: assembly-searching-sequence.md
-        - name: Parallele assemblyfreigabe
+        - name: Gemeinsames Freigeben von Assemblys
           href: side-by-side-assembly-sharing.md
         - name: Konfiguration
           href: configuration.md
           items:
             - name: Standardkonfiguration
               href: default-configuration.md
-            - name: Herausgeber Konfiguration
+            - name: Publisher Konfiguration
               href: publisher-configuration.md
-            - name: Konfiguration pro Anwendung
+            - name: Anwendungsspezifische Konfiguration
               href: per-application-configuration.md
-            - name: Konfiguration pro Anwendung unter Windows XP
+            - name: Anwendungsspezifische Konfiguration auf Windows XP
               href: per-application-configuration-on-windows-xp.md
-        - name: Aktivierungs Kontexte
+        - name: Aktivierungskontexte
           href: activation-contexts.md
         - name: Assemblyversionen
           href: assembly-versions.md
-        - name: DLL-/COM-Umleitung unter Windows
+        - name: DLL/COM-Umleitung auf Windows
           href: dll-com-redirection-on-windows.md
-    - name: Verwenden von isolierten Anwendungen und parallelen Assemblys
+    - name: Verwenden isolierter Anwendungen und nebeneinander verwendeter Assemblys
       href: using-isolated-applications-and-side-by-side-assemblies.md
       items:
-        - name: Verwenden paralleler Assemblys
+        - name: Verwenden von nebenseitigen Assemblys
           href: using-side-by-side-assemblies.md
-        - name: Parallele Assemblys werden installiert.
+        - name: Installieren von nebenseitigen Assemblys
           href: installing-side-by-side-assemblies.md
           items:
-            - name: Parallele Assemblys als private Assemblys installieren
+            - name: Installieren von nebenseitigen Assemblys als private Assemblys
               href: installing-side-by-side-assemblies-as-private-assemblies.md
-            - name: Installieren paralleler Assemblys als freigegebene Assemblys
+            - name: Installieren von nebenseitigen Assemblys als freigegebene Assemblys
               href: installing-side-by-side-assemblies-as-shared-assemblies.md
               items:
                 - name: Erstellen signierter Dateien und Kataloge
                   href: creating-signed-files-and-catalogs.md
                 - name: Beispiel für die Assemblysignierung
                   href: assembly-signing-example.md
-        - name: 'Aktivieren einer Assembly in einer Anwendung, die eine DLL, Erweiterung oder Systemsteuerung gehostet'
+        - name: 'Aktivieren einer Assembly in einer Anwendung, die eine DLL, Erweiterung oder Systemsteuerung'
           href: enabling-an-assembly-in-an-application-hosting-a-dll-extension-or-control-panel.md
         - name: Aktivieren einer Assembly in einer Anwendung ohne Erweiterungen
           href: enabling-an-assembly-in-an-application-without-extensions.md
         - name: 'Aktivieren von aktualisierten allgemeinen Steuerelementen, visuellen Stilen und Designs'
           href: enabling-updated-common-controls-visual-styles-and-themes.md
-        - name: Verwenden der Aktivierungs Kontext-API
+        - name: Verwenden der Aktivierungskontext-API
           href: using-the-activation-context-api.md
           items:
-            - name: Aktivierungs Kontexte der Verweis Zählung
+            - name: Aktivierungskontexte zur Verweiszählung
               href: reference-counting-activation-contexts.md
             - name: Suchen nach Assemblys
               href: searching-for-assemblies.md
-            - name: Assemblydateien werden gesucht
+            - name: Suchen nach Assemblydateien
               href: searching-for-assembly-files.md
-            - name: Erstellen paralleler Windows-Klassen
+            - name: Erstellen von side-by-side-Windows-Klassen
               href: creating-side-by-side-windows-classes.md
             - name: Erstellen Registration-Free COM-Objekten
               href: creating-registration-free-com-objects.md
-            - name: 'Verwenden von Threads, asynchronen Prozeduren und Fenster Meldungen'
+            - name: 'Verwenden von Threads, asynchronen Prozeduren und Fenstermeldungen'
               href: using-threads--asynchronous-procedures--and-window-messages.md
-            - name: Angeben eines Standard Aktivierungs Kontexts
+            - name: Angeben eines Standardaktivierungskontexts
               href: specifying-a-default-activation-context.md
-            - name: Anwendungskomponenten werden aktualisiert
+            - name: Aktualisieren von Anwendungskomponenten
               href: updating-application-components.md
-            - name: Aufrufen in Assemblys
+            - name: Aufrufen von Assemblys
               href: calling-into-assemblies.md
-            - name: Aufrufen außerhalb einer Assembly
+            - name: Aufrufen von außerhalb einer Assembly
               href: calling-outside-an-assembly.md
             - name: Verwenden von Rückrufen von gehosteten Komponenten
               href: using-callbacks-from-hosted-components.md
@@ -87,26 +87,26 @@
               href: isolating-components.md
         - name: Verwenden von Assemblys mit einer mehrsprachigen Benutzeroberfläche
           href: using-assemblies-with-a-multilanguage-user-interface.md
-        - name: Verwenden paralleler Assemblys als Ressource
+        - name: Verwenden von nebenseitigen Assemblys als Ressource
           href: using-side-by-side-assemblies-as-a-resource.md
-        - name: Beheben einer vorhandenen Anwendung mit einer privaten Assembly
+        - name: Korrigieren einer vorhandenen Anwendung mithilfe einer privaten Assembly
           href: fixing-an-existing-application-using-a-private-assembly.md
-    - name: Richtlinien zum Erstellen paralleler Assemblys
+    - name: Richtlinien zum Erstellen von nebenseitigen Assemblys
       href: guidelines-for-creating-side-by-side-assemblies.md
       items:
-        - name: Sollten Sie eine freigegebene Komponente als parallele Assembly bereitstellen?
+        - name: Sollten Sie eine freigegebene Komponente als side-by-side-Assembly bereitstellen?
           href: should-you-provide-a-shared-component-as-a-side-by-side-assembly.md
-        - name: Erstellen einer DLL für eine parallele Assembly
+        - name: Erstellen einer DLL für eine side-by-side-Assembly
           href: authoring-a-dll-for-a-side-by-side-assembly.md
-        - name: Erstellen von Zustands Speicher für parallele Assemblys
+        - name: Erstellungsstatus Storage für nebenseitige Assemblys
           href: authoring-state-storage-for-side-by-side-assemblies.md
-    - name: Verweis auf parallele Assemblys
+    - name: Verweis auf nebenseitige Assemblys
       href: side-by-side-assemblies-reference.md
       items:
-        - name: Parallele Assembly-API
+        - name: API für die side-by-side-Assembly
           href: side-by-side-assembly-api.md
           items:
-            - name: Parallele Assemblyenumerationen
+            - name: Nebenseitige Assemblyenumeration
               href: enumerations.md
               items:
                 - name: ASM_CMP_FLAGS
@@ -117,17 +117,17 @@
                   href: /windows/win32/api/Winsxs/ne-winsxs-asm_name
                 - name: CREATE_ASM_NAME_OBJ_FLAGS
                   href: /windows/win32/api/Winsxs/ne-winsxs-create_asm_name_obj_flags
-            - name: Parallele Assemblyfunktionen
+            - name: Nebenseitige Assemblyfunktionen
               href: side-by-side-assembly-functions.md
               items:
                 - name: CreateAssemblyCache
                   href: /windows/desktop/api/Winsxs/nf-winsxs-createassemblycache
                 - name: CreateAssemblyNameObject
                   href: /windows/desktop/api/Winsxs/nf-winsxs-createassemblynameobject
-            - name: Parallele Assemblyschnittstellen
+            - name: Schnittstellen für nebeneinander seitige Assemblys
               href: side-by-side-assembly-interfaces.md
               items:
-                - name: IAssemblyCache
+                - name: Iassemblycache
                   href: /windows/desktop/api/winsxs/nn-winsxs-iassemblycache
                   items:
                     - name: CreateAssemblyCacheItem-Methode
@@ -138,14 +138,14 @@
                       href: /windows/desktop/api/winsxs/nf-winsxs-iassemblycache-queryassemblyinfo
                     - name: UninstallAssembly-Methode
                       href: /windows/desktop/api/winsxs/nf-winsxs-iassemblycache-uninstallassembly
-                - name: IAssemblyCacheItem
+                - name: Iassemblycacheitem
                   href: /windows/desktop/api/winsxs/nn-winsxs-iassemblycacheitem
                   items:
                     - name: Commit-Methode
                       href: /windows/desktop/api/winsxs/nf-winsxs-iassemblycacheitem-commit
                     - name: CreateStream-Methode
                       href: /windows/desktop/api/winsxs/nf-winsxs-iassemblycacheitem-createstream
-                - name: IAssemblyName
+                - name: Iassemblyname
                   href: /windows/desktop/api/winsxs/nn-winsxs-iassemblyname
                   items:
                     - name: Clone-Methode
@@ -162,56 +162,56 @@
                       href: /windows/desktop/api/winsxs/nf-winsxs-iassemblyname-isequal
                     - name: SetProperty-Methode
                       href: /windows/desktop/api/winsxs/nf-winsxs-iassemblyname-setproperty
-            - name: Parallele assemblystrukturen
+            - name: Nebenseitige Assemblystrukturen
               href: structures.md
               items:
                 - name: ASSEMBLY_INFO
                   href: /windows/win32/api/Winsxs/ns-winsxs-assembly_info
                 - name: FUSION_INSTALL_REFERENCE
                   href: /windows/win32/api/winsxs/ns-winsxs-fusion_install_reference
-        - name: Manifest-Dateireferenz
+        - name: Referenz zu Manifestdateien
           href: manifest-files-reference.md
           items:
-            - name: Assembly-Manifeste
+            - name: Assemblymanifeste
               href: assembly-manifests.md
-            - name: Anwendungs Manifeste
+            - name: Anwendungsmanifeste
               href: application-manifests.md
             - name: Anwendungskonfigurationsdateien
               href: application-configuration-files.md
-            - name: Verleger Konfigurationsdateien
+            - name: Publisher Konfigurationsdateien
               href: publisher-configuration-files.md
-            - name: Manifest-Datei Schema
+            - name: Manifestdateischema
               href: manifest-file-schema.md
-            - name: Schema der Anwendungs Konfigurationsdatei
+            - name: Schema der Anwendungskonfigurationsdatei
               href: application-configuration-file-schema.md
-            - name: Schema der Verleger Konfigurationsdatei
+            - name: Publisher Konfigurationsdateischema
               href: publisher-configuration-file-schema.md
-        - name: Aktivierungs Kontext Verweis
+        - name: Referenz zum Aktivierungskontext
           href: activation-context-reference.md
           items:
-            - name: Activateactctx
+            - name: ActivateActCtx
               href: /windows/desktop/api/Winbase/nf-winbase-activateactctx
-            - name: Adressfactctx
+            - name: AddRefActCtx
               href: /windows/desktop/api/Winbase/nf-winbase-addrefactctx
-            - name: '"Kreateactctx"'
+            - name: CreateActCtx
               href: /windows/desktop/api/Winbase/nf-winbase-createactctxa
-            - name: Deactivateactctx
+            - name: DeactivateActCtx
               href: /windows/desktop/api/Winbase/nf-winbase-deactivateactctx
-            - name: Findactctxsectionguid
+            - name: FindActCtxSectionGuid
               href: /windows/desktop/api/Winbase/nf-winbase-findactctxsectionguid
-            - name: Findactctxsectionstring
+            - name: FindActCtxSectionString
               href: /windows/desktop/api/Winbase/nf-winbase-findactctxsectionstringa
-            - name: Getcurrentactctx
+            - name: GetCurrentActCtx
               href: /windows/desktop/api/Winbase/nf-winbase-getcurrentactctx
-            - name: Isolationawarecleanup
+            - name: IsolationAwareCleanup
               href: /previous-versions/windows/desktop/legacy/aa375204(v=vs.85)
-            - name: Queryactctxw
+            - name: QueryActCtxW
               href: /windows/desktop/api/Winbase/nf-winbase-queryactctxw
-            - name: Queryactctxsettingsw
+            - name: QueryActCtxSettingsW
               href: /windows/desktop/api/Winbase/nf-winbase-queryactctxsettingsw
-            - name: Releaseactctx
+            - name: ReleaseActCtx
               href: /windows/desktop/api/Winbase/nf-winbase-releaseactctx
-            - name: Zombifyactctx
+            - name: ZombifyActCtx
               href: /windows/desktop/api/Winbase/nf-winbase-zombifyactctx
             - name: ACTIVATION_CONTEXT_ASSEMBLY_DETAILED_INFORMATION
               href: /windows/win32/api/Winnt/ns-winnt-activation_context_assembly_detailed_information
@@ -221,7 +221,7 @@
               href: /windows/win32/api/Winnt/ns-winnt-activation_context_detailed_information
             - name: ACTIVATION_CONTEXT_QUERY_INDEX
               href: /windows/win32/api/Winnt/ns-winnt-activation_context_query_index
-            - name: ActCtx
+            - name: ACTCTX
               href: /windows/win32/api/Winbase/ns-winbase-actctxa
             - name: ACTCTX_SECTION_KEYED_DATA
               href: /windows/win32/api/Winbase/ns-winbase-actctx_section_keyed_data
@@ -235,9 +235,9 @@
               href: /windows/desktop/api/Winnt/ne-winnt-actctx_compatibility_element_type
             - name: ACTCTX_REQUESTED_RUN_LEVEL
               href: /windows/desktop/api/Winnt/ne-winnt-actctx_requested_run_level
-        - name: Unterstützte parallele Assemblys von Microsoft
+        - name: Unterstützte Microsoft-Nebenassemblys
           href: supported-microsoft-side-by-side-assemblies.md
-        - name: Parallele assemblyentwicklungtools
+        - name: Nebensassemblyentwicklungstools
           href: side-by-side-assembly-development-tools.md
           items:
             - name: Manifestchk.vbs
@@ -249,9 +249,9 @@
         - name: Microsoft. Windows. ActCtx-Objekt
           href: microsoft-windows-actctx-object.md
           items:
-            - name: Manifest (Eigenschaft)
+            - name: Manifest-Eigenschaft
               href: manifest.md
-            - name: Methode "kreateobject"
+            - name: CreateObject-Methode
               href: createobject.md
             - name: GetObject-Methode
               href: getobject.md

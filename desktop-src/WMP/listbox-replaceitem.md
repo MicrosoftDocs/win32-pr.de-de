@@ -1,9 +1,9 @@
 ---
-title: ListBox. replaceitem
-description: Die replaceitem-Methode ersetzt den Text am angegebenen Index durch den angegebenen Text.
+title: LISTBOX.replaceItem
+description: Die replaceItem-Methode ersetzt den Text am angegebenen Index durch den angegebenen Text.
 ms.assetid: 8dc05dc6-4f89-4ae6-8a28-cbc418449694
 keywords:
-- ListBox. replaceitem-Fenster Media Player
+- LISTBOX.replaceItem Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 74592feb9bc58e23853b886ee2383744e36b9cff
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4524b479490dff81b9a114ca957c7c40282ded130d2bf35dba8c58a6197eab17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135213"
 ---
-# <a name="listboxreplaceitem"></a>ListBox. replaceitem
+# <a name="listboxreplaceitem"></a>LISTBOX.replaceItem
 
-Die **replaceitem** -Methode ersetzt den Text am angegebenen Index durch den angegebenen Text.
+Die **replaceItem-Methode** ersetzt den Text am angegebenen Index durch den angegebenen Text.
 
 ``` syntax
         elementID.replaceItem(index, text)
@@ -32,17 +32,17 @@ Die **replaceitem** -Methode ersetzt den Text am angegebenen Index durch den ang
 
 <dl> <dt>
 
-<span id="index"></span><span id="INDEX"></span>*Sin*
+<span id="index"></span><span id="INDEX"></span>*Index*
 </dt> <dd>
 
-**Zahl** (**Long**), die den Index der abzurufenden Zeile enthält.
+**Number** (**long**), die den Index der abzurufenden Zeile enthält.
 
 </dd> <dt>
 
 <span id="text"></span><span id="TEXT"></span>*Text*
 </dt> <dd>
 
-**Zeichenfolge** , die den neuen Text enthält.
+**Eine Zeichenfolge,** die den neuen Text enthält.
 
 </dd> </dl>
 
@@ -60,11 +60,11 @@ Diese Methode gibt keinen Wert zurück.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> </dl>
 
  

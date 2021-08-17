@@ -39,7 +39,7 @@ Beide Methoden in der obigen Tabelle legen einen Zeiger auf eine **IWMStreamPrio
 
 
 
-| Schnittstelle                                                  | BESCHREIBUNG                                                          |
+| Schnittstelle                                                  | Beschreibung                                                          |
 |------------------------------------------------------------|----------------------------------------------------------------------|
 | [**IWMStreamPrioritization**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamprioritization) | Verwaltet die Liste der Streams innerhalb des Streampriorisierungsobjekts. |
 

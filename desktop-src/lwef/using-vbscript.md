@@ -13,18 +13,18 @@ ms.locfileid: "118975500"
 ---
 # <a name="using-vbscript"></a>Verwenden von VBScript
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-VBScript ist eine Programmiersprache, die in Microsoft Internet Explorer enthalten ist. Wenden Sie sich bei anderen Browsern an Ihren Anbieter, um Support zu erhalten. VBScript 2.0 (oder höher) wird für die Verwendung mit dem -Agent empfohlen. Obwohl frühere Versionen von VBScript möglicherweise mit dem -Agent funktionieren, fehlen ihnen bestimmte Funktionen, die Sie möglicherweise verwenden möchten. Sie können VBScript 2.0 herunterladen und weitere Informationen zu VBScript auf der Microsoft Downloads-Website und der Microsoft VBScript-Website abrufen.
+VBScript ist eine Programmiersprache, die in Microsoft Internet Explorer. Wenden Sie sich bei anderen Browsern an Ihren Anbieter, um Support zu erhalten. VBScript 2.0 (oder höher) wird für die Verwendung mit dem -Agent empfohlen. Obwohl frühere Versionen von VBScript möglicherweise mit dem -Agent funktionieren, fehlen ihnen bestimmte Funktionen, die Sie möglicherweise verwenden möchten. Sie können VBScript 2.0 herunterladen und weitere Informationen zu VBScript auf der Microsoft Downloads-Website und auf der Microsoft VBScript-Website abrufen.
 
-Verwenden Sie den HTML-Code, um den Microsoft-Agent über VBScript zu programmieren. <SCRIPT> tags. To access the programming interface, use the name of control you assign in the <OBJECT> tag, followed by the subobject (if any), the name of the method or property, and any parameters or values supported by the method or property:
+Verwenden Sie zum Programmieren von Microsoft Agent aus VBScript den HTML-Code. <SCRIPT> tags. To access the programming interface, use the name of control you assign in the <OBJECT> tag, followed by the subobject (if any), the name of the method or property, and any parameters or values supported by the method or property:
 
 ``` syntax
 agent[.object].Method parameter, [parameter]
 agent[.object].Property = value
 ```
 
-Schließen Sie für Ereignisse den Namen des Steuerelements gefolgt vom Namen des Ereignisses und alle Parameter ein:
+Fügen Sie für Ereignisse den Namen des Steuerelements gefolgt vom Namen des Ereignisses und allen Parametern ein:
 
 ``` syntax
 Sub agent_event (ByVal parameter[,ByVal parameter])
@@ -40,9 +40,9 @@ statements
 </SCRIPT>
 ```
 
-Obwohl Microsoft Internet Explorer diese letztere Syntax unterstützt, ist dies nicht in allen Browsern der Fall. Verwenden Sie aus Kompatibilitätsgründen nur die frühere Syntax für Ereignisse.
+Obwohl Microsoft Internet Explorer diese zweite Syntax unterstützt, ist dies nicht in allen Browsern der Fall. Verwenden Sie zur Kompatibilität nur die frühere Syntax für Ereignisse.
 
-Mit VBScript (2.0 oder höher) können Sie überprüfen, ob der Microsoft-Agent installiert ist, indem Sie versuchen, das Objekt zu erstellen und zu überprüfen, ob es vorhanden ist. Im folgenden Beispiel wird veranschaulicht, wie Sie nach dem -Agent-Steuerelement suchen, ohne einen automatischen Download des Steuerelements auszulösen (wie beim Einlesen eines <OBJECT> Tags für das Steuerelement auf der Seite):
+Mit VBScript (2.0 oder höher) können Sie überprüfen, ob Microsoft Agent installiert ist, indem Sie versuchen, das Objekt zu erstellen und zu überprüfen, ob es vorhanden ist. Im folgenden Beispiel wird veranschaulicht, wie Sie das -Steuerelement auf das -Agent-Steuerelement überprüfen, ohne einen automatischen Download des Steuerelements auszulösen (wie dies der Fall wäre, wenn Sie ein Tag für das Steuerelement auf der <OBJECT> Seite enthalten würden):
 
 ``` syntax
 <!-- WARNING - This code requires VBScript 2.0.

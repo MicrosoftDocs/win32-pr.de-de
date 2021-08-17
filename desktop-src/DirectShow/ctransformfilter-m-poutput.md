@@ -1,7 +1,7 @@
 ---
 description: Zeiger auf den Ausgabepin.
 ms.assetid: 78ad7c38-8259-4005-9542-5ac375305940
-title: 'Ctransformfilter:: m_pOutput Member (Transfrm. h)'
+title: CTransformFilter::m_pOutput-Member (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8ff6d29030e39a3e68f3fc85b1bfbcfaf1b28785
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 661f03c9431834a24386cace80a0b197007bd9ffe464325bbe08321916e3545f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354710"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953539"
 ---
-# <a name="ctransformfilterm_poutput-member"></a>Ctransformfilter:: m \_ poutput-Member
+# <a name="ctransformfilterm_poutput-member"></a>CTransformFilter::m \_ pOutput-Member
 
 Zeiger auf den Ausgabepin.
 
@@ -42,16 +42,16 @@ CTransformOutputPin *m_pOutput;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

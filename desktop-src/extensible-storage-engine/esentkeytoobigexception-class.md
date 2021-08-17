@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentKeyTooBigException-Klasse'
+description: 'Weitere Informationen zu: EsentKeyTooBigException-Klasse'
 title: EsentKeyTooBigException-Klasse
 TOCTitle: EsentKeyTooBigException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentKeyTooBigException

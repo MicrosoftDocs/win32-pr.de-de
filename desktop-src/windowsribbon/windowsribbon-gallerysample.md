@@ -24,7 +24,7 @@ Dieses Codebeispiel veranschaulicht das Markup und den Code, die erforderlich si
 
 ## <a name="usage"></a>Verbrauch
 
-Die Windows Menüband-Frameworkbeispiele können als eigenständige Microsoft Visual Studio Projekte aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=9620) heruntergeladen oder als Teil des Windows Software Development Kit [(SDK)](https://developer.microsoft.com/windows/downloads/sdk-archive/)installiert werden.
+Die Frameworkbeispiele für Windows Menüband können als eigenständige Microsoft Visual Studio Projekte aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=9620) heruntergeladen oder als Teil des Windows Software Development Kit [(SDK)](https://developer.microsoft.com/windows/downloads/sdk-archive/)installiert werden.
 
 - Windows Software Development Kit (SDK) (Standardinstallationspfad): %ProgramFiles% \\ Microsoft SDKs \\ Windows \\ \[ Versionsnummer \] \\ Beispiele \\ winui \\ WindowsRibbon \\ Gallery
 
@@ -44,7 +44,7 @@ Um das Beispiel im Befehlsfenster der Buildumgebung auszuführen, führen Sie di
 
 Um das kompilierte Beispiel in Visual Studio mit Debuggen auszuführen, drücken Sie F5.
 
-## <a name="support"></a>Unterstützung
+## <a name="support"></a>Support
 
 Das [Windows Menübandentwicklungsforum](https://social.msdn.microsoft.com/Forums/windowsdesktop/home?forum=windowsribbondevelopment) ist verfügbar, um Themen zu besprechen und Fragen im Zusammenhang mit der Entwicklung Windows Menübandanwendungen zu stellen.
 
@@ -65,7 +65,7 @@ Das [Windows Menübandentwicklungsforum](https://social.msdn.microsoft.com/Forum
  
 
 > [!Note]  
-> Das [Plattformupdate für Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx) und das [Plattformupdate für Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) sind Sätze von Laufzeitbibliotheken, mit denen Entwickler Windows Menübandanwendungen sowohl auf Windows Vista als auch auf Windows Server 2008 ausrichten können. Die Plattformupdates sind über Windows Update für alle Kunden Windows Vista und Windows Server 2008 verfügbar. Drittanbieteranwendungen, die [Plattformupdates für Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx) oder [Plattformupdate für Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) erfordern, können Windows Update erkennen, ob das erforderliche Update installiert ist. Andernfalls wird Windows Update heruntergeladen und im Hintergrund installiert.
+> Das [Plattformupdate für Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx) und das [Plattformupdate für Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) sind Sätze von Laufzeitbibliotheken, mit denen Entwickler Windows Menübandanwendungen auf Windows Vista und Windows Server 2008 ausrichten können. Die Plattformupdates sind für alle Kunden von Windows Vista und Windows Server 2008 über Windows Update verfügbar. Drittanbieteranwendungen, die [Plattformupdates für Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx) oder [Plattformupdate für Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) erfordern, können Windows Update erkennen, ob das erforderliche Update installiert ist. Andernfalls wird Windows Update heruntergeladen und im Hintergrund installiert.
 
  
 

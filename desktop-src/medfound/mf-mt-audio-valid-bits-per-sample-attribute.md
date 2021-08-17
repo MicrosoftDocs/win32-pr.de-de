@@ -1,7 +1,7 @@
 ---
-description: Anzahl gültiger Bits von Audiodaten in jedem Audiobeispiel.
+description: Anzahl der gültigen Bits von Audiodaten in jedem Audiobeispiel.
 ms.assetid: b5b97700-c98a-4394-a184-661852add0b4
-title: MF_MT_AUDIO_VALID_BITS_PER_SAMPLE-Attribut (Mfapi.h)
+title: MF_MT_AUDIO_VALID_BITS_PER_SAMPLE -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.openlocfilehash: b6f84fa3938e4d74473da70bd28e5ccbb1bab71441c694b670cdb8b54bead31c
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118973579"
 ---
-# <a name="mf_mt_audio_valid_bits_per_sample-attribute"></a>MF \_ MT AUDIO VALID \_ \_ \_ BITS PER \_ \_ SAMPLE-Attribut
+# <a name="mf_mt_audio_valid_bits_per_sample-attribute"></a>MF \_ MT AUDIO VALID BITS PER \_ \_ \_ \_ \_ SAMPLE-Attribut
 
-Anzahl gültiger Bits von Audiodaten in jedem Audiobeispiel.
+Anzahl der gültigen Bits von Audiodaten in jedem Audiobeispiel.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,11 +21,11 @@ Anzahl gültiger Bits von Audiodaten in jedem Audiobeispiel.
 
 ## <a name="remarks"></a>Hinweise
 
-Das **MF MT AUDIO VALID \_ \_ \_ \_ BITS PER \_ \_ SAMPLE-Attribut** wird für Audioformate verwendet, die nach jedem Audiobeispiel auffüllen. Die Gesamtgröße jedes Audiobeispiels, einschließlich der Auffüllungsbits, wird im [**MF \_ MT AUDIO \_ \_ BITS PER \_ \_ SAMPLE-Attribut**](mf-mt-audio-bits-per-sample-attribute.md) angegeben.
+Das **MF \_ MT AUDIO VALID BITS PER \_ \_ \_ \_ \_ SAMPLE-Attribut** wird für Audioformate verwendet, die nach jedem Audiobeispiel Auf padding enthalten. Die Gesamtgröße jedes Audiobeispiels, einschließlich der Auf padding Bits, wird im [**MF \_ MT AUDIO BITS PER \_ \_ \_ \_ SAMPLE-Attribut**](mf-mt-audio-bits-per-sample-attribute.md) angegeben.
 
-Wenn das **ATTRIBUT MF MT AUDIO VALID \_ \_ \_ \_ BITS PER \_ \_ SAMPLE** nicht festgelegt ist, verwenden Sie das [**ATTRIBUT MF MT AUDIO \_ \_ \_ BITS PER \_ \_ SAMPLE,**](mf-mt-audio-bits-per-sample-attribute.md) um die Anzahl gültiger Bits pro Stichprobe zu ermitteln.
+Wenn das **MF \_ MT AUDIO VALID BITS PER \_ \_ \_ \_ \_ SAMPLE-Attribut** nicht festgelegt ist, verwenden Sie das [**MF MT AUDIO BITS \_ \_ PER \_ \_ \_ SAMPLE-Attribut,**](mf-mt-audio-bits-per-sample-attribute.md) um die Anzahl der gültigen Bits pro Stichprobe zu finden.
 
-Wenn ein Audioformat keine Auffüllungsbits enthält, sollte dieses Attribut nicht festgelegt oder auf den gleichen Wert wie das [**MF \_ MT AUDIO \_ \_ BITS PER \_ \_ SAMPLE-Attribut**](mf-mt-audio-bits-per-sample-attribute.md) festgelegt werden.
+Wenn ein Audioformat keine Aufpaddingbits enthält, sollte dieses Attribut nicht festgelegt oder auf denselben Wert wie das [**MF \_ MT AUDIO BITS PER \_ \_ \_ \_ SAMPLE-Attribut**](mf-mt-audio-bits-per-sample-attribute.md) festgelegt werden.
 
 Dieses Attribut entspricht dem **wValidBitsPerSample-Member** der [**WAVEFORMATEXTENSIBLE-Struktur.**](/windows/win32/api/mmreg/ns-mmreg-waveformatextensible)
 
@@ -47,16 +47,16 @@ Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**ATTRIBUTEAttributes::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEs::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**DENKattribute::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEs::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**ARCHEMEDIATYPE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**VERERBungstyp**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> <dt>
 
 [Medientypattribute](media-type-attributes.md)

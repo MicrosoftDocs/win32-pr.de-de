@@ -1,11 +1,11 @@
 ---
-title: IPropertyFilterCollection-AddItem-Eigenschaft (WdsSharedIDL.h)
+title: IPropertyFilterCollection AddItem-Eigenschaft (WdsSharedIDL.h)
 description: Fügt der Auflistung einen neuen Filter hinzu.
 ms.assetid: 01078e7a-811a-4dfb-b122-4801f39413d8
 keywords:
-- AddItem-Eigenschaft Legacy Windows-Umgebungsfeatures
-- AddItem-Eigenschaft Legacy Windows Umgebungsfeatures , IPropertyFilterCollection-Schnittstelle
-- IPropertyFilterCollection-Schnittstelle Legacy Windows Umgebungsfeatures, AddItem-Eigenschaft
+- AddItem-Eigenschaft Legacy Windows Umgebungsfeatures
+- AddItem-Eigenschaft Legacy Windows Environment Features , IPropertyFilterCollection-Schnittstelle
+- IPropertyFilterCollection-Schnittstelle Legacy Windows Environment Features , AddItem-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -27,7 +27,7 @@ ms.locfileid: "118755447"
 # <a name="ipropertyfiltercollectionadditem-property"></a>IPropertyFilterCollection::AddItem-Eigenschaft
 
 > [!NOTE]
-> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API.](../search/-search-reference-entry-page.md) 
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [die Windows Search-API.](../search/-search-reference-entry-page.md) 
 
 Fügt der Auflistung einen neuen Filter hinzu.
 
@@ -55,7 +55,7 @@ gibt einen Zeiger auf die Adresse für den neuen Filter zurück.
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 nur mit \[ SP1-Desktop-Apps\]<br/>                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2003 mit \[ SP1-Desktop-Apps\]<br/>                             |
 | Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 2.6.5<br/>                                             |
 | Header<br/>                   | <dl> <dt>WdsSharedIDL.h</dt> </dl> |
 

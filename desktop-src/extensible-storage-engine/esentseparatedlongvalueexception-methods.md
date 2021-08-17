@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentSeparatedLongValueException-Methoden'
+description: 'Weitere Informationen zu: EsentSeparatedLongValueException-Methoden'
 title: 'EsentSeparatedLongValueException-Methoden '
 TOCTitle: EsentSeparatedLongValueException methods
 ms:assetid: Methods.T:Microsoft.Isam.Esent.Interop.EsentSeparatedLongValueException
@@ -16,8 +16,8 @@ ms.locfileid: "118773477"
 ---
 # <a name="esentseparatedlongvalueexception-methods"></a>EsentSeparatedLongValueException-Methoden 
 
-Geschützte Member enthalten  
-Geerbte Member enthalten  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 Der [EsentSeparatedLongValueException-Typ](./esentseparatedlongvalueexception-class.md) macht die folgenden Member verfügbar.
 
@@ -45,7 +45,7 @@ Der [EsentSeparatedLongValueException-Typ](./esentseparatedlongvalueexception-cl
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.getbaseexception#System_Exception_GetBaseException">Getbaseexception</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
@@ -60,7 +60,7 @@ Der [EsentSeparatedLongValueException-Typ](./esentseparatedlongvalueexception-cl
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.gettype#System_Exception_GetType">Gettype</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
@@ -70,7 +70,7 @@ Der [EsentSeparatedLongValueException-Typ](./esentseparatedlongvalueexception-cl
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.tostring#System_Exception_ToString">ToString</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 </tbody>
 </table>

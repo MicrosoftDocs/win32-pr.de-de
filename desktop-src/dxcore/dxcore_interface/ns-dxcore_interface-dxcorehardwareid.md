@@ -4,14 +4,14 @@ description: Stellt die PnP-Hardware-ID-Teile für einen Adapter dar.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 06/20/2019
-ms.openlocfilehash: 6882d9aa16bf72fb33f9a254a6434becb37f9cb8
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 68cdb130dd6f0c0338e5b94da2f68c58f98bb91d404871e18ac82e817881117c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119118627"
 ---
-# <a name="dxcorehardwareid-structure"></a>Dxcorehardwareid-Struktur
+# <a name="dxcorehardwareid-structure"></a>DXCoreHardwareID-Struktur
 
 Stellt die PnP-Hardware-ID-Teile für einen Adapter dar.
 
@@ -29,23 +29,23 @@ struct DXCoreHardwareID
 
 ## <a name="members"></a>Member
 
-### <a name="vendorid"></a>vendorId
+### <a name="vendorid"></a>Vendorid
 
 Typ: **uint32_t \***
 
-Die PCI-ID des Hardwareherstellers des Adapters.
+Die PCI-ID des Hardwareanbieters des Adapters.
 
 ### <a name="deviceid"></a>deviceId
 
 Typ: **uint32_t \***
 
-Die PCI-ID des Hardware Geräts des Adapters.
+Die PCI-ID des Hardwaregeräts des Adapters.
 
-### <a name="subsysid"></a>subsysid
+### <a name="subsysid"></a>subSysId
 
 Typ: **uint32_t \***
 
-Die PCI-ID des Hardware Subsystems des Adapters.
+Die PCI-ID des Hardwaresubsystems des Adapters.
 
 ### <a name="revision"></a>revision
 
@@ -53,6 +53,6 @@ Typ: **uint32_t \***
 
 Die PCI-ID der Revisionsnummer des Adapters.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Auflisten von Adaptern](../dxcore-enum-adapters.md)
+[DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Aufzählen von Adaptern](../dxcore-enum-adapters.md)

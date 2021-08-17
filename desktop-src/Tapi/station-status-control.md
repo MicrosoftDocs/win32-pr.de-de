@@ -1,19 +1,19 @@
 ---
-description: Es gibt drei Hauptfunktionen für den Stations Status, für die Steuerungs Nachrichten gewartet werden müssen und die weitergeleitet werden und die nicht gestört werden müssen.
+description: Es gibt drei wichtige Stationsstatusfunktionen, die die Steuerung von Nachrichtenwartelichtern, Weiterleitung und Nicht störend erfordern.
 ms.assetid: 4a6dc47f-caff-4f2b-8858-0e9bec32b137
-title: Stations Status-Steuerelement
+title: Stationsstatus-Steuerung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 37f6ddd1b1ce6df1ad2f3dc61e891ed6952a7f05
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e136450dbda8cec260a460f49ce8d45b65d1b58ec588ccbcc435c5e3a2b1cd7f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118861933"
 ---
-# <a name="station-status-control"></a>Stations Status-Steuerelement
+# <a name="station-status-control"></a>Stationsstatus-Steuerung
 
-Es gibt drei Hauptfunktionen für den Stations Status, die Steuern müssen: Nachrichten Wartezeiten, weiterleiten und nicht stören. Weiterleitungs-und nicht störende Funktionen sind über die vorhandene [**lineforward**](/windows/desktop/api/Tapi/nf-tapi-lineforward) -Funktion (die Adress spezifisch ist) steuerbar und können mithilfe von [**linegetaddressstatus**](/windows/desktop/api/Tapi/nf-tapi-linegetaddressstatus)abgefragt werden. Das msgwait-Bit linedevstatusflags \_ im **dwdevstatusflags** -Member von [**linedevstatus**](/windows/desktop/api/Tapi/ns-tapi-linedevstatus) gibt den Status der Nachrichten Warteschlange auf dem Gerät an, und eine linedevstate-msgwaideff- \_ \_ Nachricht wird gesendet, um anzugeben, wann sich der Status ändert. Mit der [**linesetlinedevstatus**](/windows/desktop/api/Tapi/nf-tapi-linesetlinedevstatus) -Funktion kann die Warteschlange für Nachrichten gesteuert werden, ohne dass hierfür ein TAPI-Telefongerät implementiert werden muss. Das linefeature \_ setdevstatus-Bit (im **dwlinefeatures** -Member von [**linedevcaps**](/windows/desktop/api/Tapi/ns-tapi-linedevcaps) und **linedevstatus**) gibt an, wann es aufgerufen werden kann, und der **dwsettabledevstatus** -Member von **linedevcaps** ermöglicht der Anwendung, zu erkennen, welche Gerätestatus Einstellungen von der Anwendung gesteuert werden können. Zusätzlich dazu, dass die Funktion "Nachrichten Warteschlange" gesteuert werden kann, kann auch der Status "verbunden", "INService" und "gesperrt" des Geräts so festgelegt werden, dass diese vom Switch oder anderer Hardware unterstützt werden. Aufrufe dieser Funktion führen dazu, dass [**entsprechende \_ linienlinedevstate**](line-linedevstate.md) -Meldungen gesendet werden, um den neuen Status widerzuspiegeln.
+Es gibt drei wichtige Stationsstatusfunktionen, die gesteuert werden müssen: Nachrichtenwartelichter, Weiterleitung und Nicht störend. Weiterleitung und Nicht stören können über die vorhandene [**lineForward-Funktion**](/windows/desktop/api/Tapi/nf-tapi-lineforward) (die adressspezifisch ist) gesteuert und mithilfe von [**lineGetAddressStatus**](/windows/desktop/api/Tapi/nf-tapi-linegetaddressstatus)abgefragt werden. Das MSGWAIT-Bit LINEDEVSTATUSFLAGS \_ im **Member dwDevStatusFlags** von [**LINEDEVSTATUS**](/windows/desktop/api/Tapi/ns-tapi-linedevstatus) gibt den Status der Nachricht an, die auf das Gerät wartet, und eine LINEDEVSTATE \_ MSGWAITON- oder LINEDEVSTATE \_ MSGWAITOFF-Nachricht wird gesendet, um anzugeben, wann sich der Zustand ändert. Die [**lineSetLineDevStatus-Funktion**](/windows/desktop/api/Tapi/nf-tapi-linesetlinedevstatus) ermöglicht die Steuerung des Wartelichts für Nachrichten, ohne dass ein TAPI-Telefongerät nur für diesen Zweck implementiert werden muss. Das \_ LINEFEATURE SETDEVSTATUS-Bit (im **dwLineFeatures-Member** von [**LINEDEVCAPS**](/windows/desktop/api/Tapi/ns-tapi-linedevcaps) und **LINEDEVSTATUS**) gibt an, wann es aufgerufen werden kann, und mit dem **dwSettableDevStatus-Member** von **LINEDEVCAPS** kann die Anwendung erkennen, welche Gerätestatuseinstellungen von der Anwendung gesteuert werden können. Neben der Steuerung der Funktion "Warten auf Nachrichten" kann auch der Status Verbunden, Inservice und Gesperrt des Geräts festgelegt werden, sofern diese vom Switch oder von anderer Hardware unterstützt werden. Aufrufe dieser Funktion führen dazu, dass entsprechende [**LINE \_ LINEDEVSTATE-Meldungen**](line-linedevstate.md) gesendet werden, um den neuen Status widerzuspiegeln.
 
  
 

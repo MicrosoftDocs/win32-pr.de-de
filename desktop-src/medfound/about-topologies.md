@@ -4,57 +4,57 @@ ms.assetid: 4f69b099-0ca7-4ea6-8412-0f1ea02e1600
 title: Informationen zu Topologien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 35008d839e8054554370039dd13297ae7a1f0b0a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9410207ed5f235f61e167564f7a5dee8a1367044032be0a15cef9ac3b95fb9e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104567781"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975126"
 ---
 # <a name="about-topologies"></a>Informationen zu Topologien
 
-Eine Topologie ist ein Objekt, das die Art der Datenfluss in der Pipeline darstellt. Eine Anwendung erstellt eine Topologie, um den Pfad zu beschreiben, den jeder Stream von der Medienquelle an eine Medien Senke annimmt. Die Anwendung übergibt die Topologie an die Medien Sitzung, und die Medien Sitzung verwendet die Topologie, um den Datenfluss zu steuern.
+Eine Topologie ist ein Objekt, das darstellt, wie Daten in der Pipeline fließen. Eine Anwendung erstellt eine Topologie, um den Pfad zu beschreiben, den jeder Stream von der Medienquelle zu einer Mediensenke nimmt. Die Anwendung übergibt die Topologie an die Mediensitzung, und die Mediensitzung verwendet die Topologie, um den Datenfluss zu steuern.
 
-Die Datenverarbeitungs Komponenten in der Pipeline (Medienquellen, Transformationen und Medien senken) werden in der Topologie als *Knoten* dargestellt. Der Datenfluss von einer Komponente zu einer anderen wird durch eine Verbindung zwischen den Knoten repräsentiert. Die folgenden Knoten Typen sind definiert:
+Die Datenverarbeitungskomponenten in der Pipeline (Medienquellen, Transformationen und Mediensenken) werden in der Topologie als *Knoten* dargestellt. Der Datenfluss von einer Komponente zu einer anderen wird durch eine Verbindung zwischen den Knoten dargestellt. Die folgenden Knotentypen sind definiert:
 
--   Quellknoten: stellt einen Mediendaten Strom in einer Medienquelle dar.
--   Transformations Knoten: stellt eine Media Foundation Transformation (MFT) dar.
--   Ausgabe Knoten: stellt eine streamsenke für eine Medien Senke dar.
--   Tee-Knoten: stellt eine Verzweigung im Stream dar. Tee-Knoten stellen eine Ausnahme von der Regel dar, dass ein Knoten ein Pipeline Objekt darstellt. Im Gegensatz zu anderen Knoten Typen leitet der Tee-Knoten den Datenfluss einfach weiter.
+-   Quellknoten: Stellt einen Medienstream auf einer Medienquelle dar.
+-   Transformationsknoten: Stellt eine Media Foundation-Transformation (MFT) dar.
+-   Ausgabeknoten: Stellt eine Streamsenke auf einer Mediensenke dar.
+-   Tee-Knoten: Stellt eine Verzweigung im Stream dar. Tee-Knoten stellen eine Ausnahme von der Regel dar, dass ein Knoten ein Pipelineobjekt darstellt. Im Gegensatz zu anderen Knotentypen leitet der Tee-Knoten einfach den Datenfluss weiter.
 
-Eine funktionierende Topologie muss mindestens einen Quellknoten enthalten, der mit einem Ausgabe Knoten verbunden ist, möglicherweise über einen oder mehrere Transformations Knoten. Das folgende Diagramm zeigt z. b. eine einfache Topologie mit einem Datenstrom.
+Eine funktionierende Topologie muss mindestens einen Quellknoten enthalten, der mit einem Ausgabeknoten verbunden ist, möglicherweise über einen oder mehrere Transformationsknoten. Das folgende Diagramm zeigt beispielsweise eine einfache Topologie mit einem Stream.
 
-![ein Diagramm, das eine Topologie mit einem Datenstrom anzeigt.](images/topology01.png)
+![Ein Diagramm, das eine Topologie mit einem Datenstrom zeigt.](images/topology01.png)
 
-Bei der Wiedergabe von Dateien stellt der Transformations Knoten möglicherweise einen Decoder dar, und der Ausgabe Knoten stellt den Audio-oder Videorenderer dar. Bei der Datei Codierung würde der Transformations Knoten einen Encoder darstellen, und der Ausgabe Knoten würde eine Archive-Senke darstellen, wie z. b. die ASF-Datei-Senke.
+Bei der Dateiwiedergabe kann der Transformationsknoten einen Decoder darstellen, und der Ausgabeknoten stellt den Audio- oder Videorenderer dar. Bei der Dateicodierung stellt der Transformationsknoten einen Encoder dar, und der Ausgabeknoten stellt eine Archivsenke dar, z. B. die ASF-Dateisenke.
 
-Wenn zwei Knoten verbunden sind, wird der Knoten *, der Daten* erzeugt, als upstreamknoten bezeichnet, und der Knoten, der Daten empfängt, wird als *Downstream* -Knoten bezeichnet. Beispielsweise ist im vorherigen Diagramm der Quellknoten vom Knoten transformieren.
+Wenn zwei Knoten verbunden sind, wird der Knoten, der Daten erzeugt, als *Upstreamknoten* bezeichnet, und der Knoten, der Daten empfängt, wird als *Downstreamknoten* bezeichnet. Im vorherigen Diagramm befindet sich der Quellknoten beispielsweise vor dem Transformationsknoten.
 
-In einem Paar verbundener Knoten wird der Verbindungspunkt auf dem upstreamknoten als *Ausgabe* bezeichnet. Der Verbindungspunkt auf dem Downstream-Knoten wird als *Eingabe* bezeichnet. Das folgende Diagramm zeigt ein Knoten Paar mit ihren Verbindungs Punkten und den Datenfluss zwischen Ihnen. Die Verbindungspunkte werden in der Topologie nicht als separate Objekte dargestellt. Sie werden durch den Indexwert für das Knoten Objekt angegeben.
+In einem Paar verbundener Knoten wird der Verbindungspunkt auf dem Upstreamknoten als *Ausgabe* bezeichnet. Der Verbindungspunkt auf dem Downstreamknoten wird als *Eingabe* bezeichnet. Das folgende Diagramm zeigt ein Knotenpaar mit ihren Verbindungspunkten und den Datenfluss zwischen ihnen. Die Verbindungspunkte werden nicht als separate Objekte in der Topologie dargestellt. Sie werden durch den Indexwert für das Knotenobjekt angegeben.
 
-![ein Diagramm, in dem zwei verbundene Knoten angezeigt werden.](images/topology04.png)
+![Ein Diagramm, das zwei verbundene Knoten zeigt.](images/topology04.png)
 
-Ein Quellknoten darf keine Eingaben enthalten. Aus diesem Grund können keine Knoten von einem Quellknoten in den Upstream-upgrund vorhanden sein. Ebenso kann ein Ausgabe Knoten keine Ausgaben aufweisen, und es dürfen keine downstreamknoten von einem Ausgabe Knoten mehr vorhanden sein. Eine Kette von Knoten von einem Quellknoten zu einem Ausgabe Knoten wird als *Verzweigung* der Topologie bezeichnet. Das erste Diagramm in diesem Thema zeigt eine Topologie mit einer einzelnen Verzweigung. Im Allgemeinen ist ein Branch pro Stream vorhanden. Zum Abspielen einer Datei mit einem Audiostream und einem Videostream ist beispielsweise eine Topologie mit zwei Verzweigungen erforderlich.
+Ein Quellknoten darf keine Eingaben enthalten. Daher können von einem Quellknoten keine Upstreamknoten vorhanden sein. Ebenso kann ein Ausgabeknoten keine Ausgaben aufweisen, und es können keine Knoten nach einem Ausgabeknoten vorhanden sein. Eine Kette von Knoten von einem Quellknoten zu einem Ausgabeknoten wird als *Branch* der Topologie bezeichnet. Das erste Diagramm in diesem Thema zeigt eine Topologie mit einem einzelnen Branch. Im Allgemeinen gibt es einen Branch pro Stream. Zum Wiedergeben einer Datei mit einem Audiostream und einem Videostream ist beispielsweise eine Topologie mit zwei Verzweigungen erforderlich.
 
-## <a name="partial-topologies"></a>Partielle Topologien
+## <a name="partial-topologies"></a>Teiltopologien
 
-Eine vollständige oder *voll* ständige Topologie enthält einen Knoten für jedes benötigte Pipeline Objekt. Allerdings muss die Anwendung nicht immer eine vollständige Topologie erstellen. Stattdessen wird eine *partielle* Topologie erstellt, in der ein oder mehrere Transformations Knoten ausgelassen werden.
+Eine vollständige oder *vollständige* Topologie enthält einen Knoten für jedes erforderliche Pipelineobjekt. Die Anwendung muss jedoch nicht immer eine vollständige Topologie erstellen. Stattdessen wird eine *partielle* Topologie erstellt, die einen oder mehrere Transformationsknoten auslässt.
 
-Die Medien Sitzung schließt die Topologie mithilfe eines Objekts namens *topologielader* ab. Das topologielader konvertiert partielle Topologien in vollständige Topologien, indem die benötigten Transformationen eingefügt werden. Der Konvertierungs Vorgang wird als *Auflösen* der Topologie bezeichnet.
+Die Mediensitzung schließt die Topologie mithilfe eines Objekts ab, das als *Topologieladeprogramm* bezeichnet wird. Das Topologieladeprogramm konvertiert Teiltopologien in vollständige Topologien, indem die erforderlichen Transformationen eingefügt werden. Der Konvertierungsprozess wird als *Auflösen* der Topologie bezeichnet.
 
-Um z. b. einen codierten Audiostream wiederzugeben, muss die Topologie über einen Decoder zwischen den Quell-und Ausgabe Knoten verfügen. Die Anwendung erstellt eine partielle Topologie, die den Quellknoten ohne den Decoder direkt mit dem Ausgabe Knoten verbindet. Das topologielader untersucht die Streamformate, sucht den richtigen Decoder und fügt einen Transformations Knoten in die Topologie ein.
+Um beispielsweise einen codierten Audiostream wiederzugeben, muss die Topologie über einen Decoder zwischen dem Quell- und dem Ausgabeknoten verfügen. Die Anwendung erstellt eine Teiltopologie, die den Quellknoten direkt mit dem Ausgabeknoten ohne den Decoder verbindet. Das Topologieladeprogramm untersucht die Streamformate, findet den richtigen Decoder und fügt einen Transformationsknoten in die Topologie ein.
 
 Das folgende Diagramm zeigt die partielle Topologie, die von der Anwendung erstellt wurde.
 
-![ein Diagramm, das eine partielle mit einem Quellknoten und einem Ausgabe Knoten anzeigt.](images/topology02.png)
+![Ein Diagramm, das einen Teil mit einem Quellknoten und einem Ausgabeknoten zeigt.](images/topology02.png)
 
-Im nächsten Diagramm wird die vollständige Topologie angezeigt, nachdem Sie vom topologielader aufgelöst wurde. In diesem Beispiel hat der topologielader einen Transformations Knoten für den Decoder eingefügt.
+Das nächste Diagramm zeigt die vollständige Topologie, nachdem sie vom Topologieladeprogramm aufgelöst wurde. In diesem Beispiel hat das Topologieladeprogramm einen Transformationsknoten für den Decoder eingefügt.
 
-![ein Diagramm, das eine vollständige Topologie anzeigt.](images/topology03.png)
+![Ein Diagramm, das eine vollständige Topologie zeigt.](images/topology03.png)
 
-In der aktuellen Version von Media Foundation unterstützt das topologielader Topologien für die Wiedergabe. Bei der Datei Codierung und anderen Szenarien muss die Anwendung eine vollständige Topologie erstellen.
+In der aktuellen Version von Media Foundation unterstützt das Topologieladeprogramm Topologien für die Wiedergabe. Für die Dateicodierung und andere Szenarien muss die Anwendung eine vollständige Topologie erstellen.
 
-Anwendungen können auch den topologielader erstellen und direkt verwenden. Beispielsweise können Sie mit dem topologielader eine partielle Topologie auflösen und dann die vollständige Topologie ändern, bevor Sie Sie an die Medien Sitzung weitergeben. Rufen Sie zum Erstellen des topologieladers [**mfkreatetopoloader**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetopoloader)auf.
+Anwendungen können auch das Topologieladeprogramm erstellen und direkt verwenden. Beispielsweise können Sie das Topologieladeprogramm verwenden, um eine Teiltopologie aufzulösen und dann die vollständige Topologie zu ändern, bevor Sie sie an die Mediensitzung weitergibt. Um das Topologieladeprogramm zu erstellen, rufen [**Sie MFCreateTopoLoader**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetopoloader)auf.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

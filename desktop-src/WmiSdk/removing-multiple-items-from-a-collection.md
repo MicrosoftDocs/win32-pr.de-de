@@ -5,18 +5,18 @@ ms.tgt_platform: multiple
 title: Entfernen mehrerer Elemente aus einer WMI-Sammlung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c44203f3279163a1de595cac8a00270dccd31c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 17795378f5215977e5e7c2d0afd745c5d02fe6b294d062fcdbcf82f7ccc15351
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359554"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992440"
 ---
 # <a name="removing-multiple-items-from-a-wmi-collection"></a>Entfernen mehrerer Elemente aus einer WMI-Sammlung
 
-Wenn Sie versuchen, mehr als ein Element in einer Sammlung zu entfernen, werden Sie möglicherweise feststellen, dass einige Elemente nicht entfernt werden. Beim Entfernen von Elementen ist es nicht möglich, eine Auflistung zu durchlaufen, denn wenn Sie ein Element aus einer Auflistung entfernen, wird der Auflistungs Zeiger auf das nächste Element verschoben. Beispielsweise führt der Versuch, alle Elemente aus einer Sammlung zu entfernen, dazu, dass jedes andere Element entfernt wird. Dieses Problem wird möglicherweise angezeigt, wenn Sie Elemente mit der Methode " [**Swap. Remove**](swbemqualifierset-remove.md) " oder " [**gobempropertyset. Remove**](swbempropertyset-remove.md) " entfernen. Sie können dieses Problem vermeiden, indem Sie die Auflistung durchlaufen und die Namen der zu entfernenden Elemente in einem Array ablegen. Anschließend können Sie das Array durchlaufen und die im Array benannten Elemente löschen. Die Auflistungen, wie z. b. " [**Swap namedvalueset**](swbemnamedvalueset.md)", " [**taubemprivilegeset**](swbemprivilegeset.md)" und " [**Swap**](swbemrefresher.md)Update", verfügen ebenfalls über eine Methode, mit der alle Elemente im Aktualisierungs Container gelöscht werden.
+Wenn Sie versuchen, mehr als ein Element in einer Sammlung zu entfernen, werden Sie möglicherweise feststellen, dass einige Elemente nicht entfernt werden. Sie können beim Entfernen von Elementen keine Auflistung iterieren, da beim Entfernen eines Elements aus einer Auflistung der Auflistungszeiger auf das nächste Element verschoben wird. Beispielsweise führt der Versuch, alle Elemente aus einer Auflistung zu entfernen, zum Entfernen jedes anderen Elements. Dieses Problem wird möglicherweise beim Entfernen von Elementen mit den Methoden [**SWbemQualifierSet.Remove**](swbemqualifierset-remove.md) oder [**SWbemPropertySet.Remove**](swbempropertyset-remove.md) auftreten. Sie können dieses Problem vermeiden, indem Sie eine Schleife durch die Auflistung und die Namen der zu entfernenden Elemente in ein Array setzen. Anschließend können Sie eine Schleife durch das Array und die im Array benannten Elemente löschen. Die Sammlungen, z. B. [**SWbemNamedValueSet,**](swbemnamedvalueset.md) [**SWbemPrivilegeSet**](swbemprivilegeset.md)und [**SWbemRefresher,**](swbemrefresher.md)verfügen auch über eine Methode, die alle Elemente im Aktualisierungscontainer löscht.
 
-Das folgende Skript veranschaulicht, wie mehrere Elemente aus einer Sammlung entfernt werden.
+Das folgende Skript veranschaulicht, wie mehrere Elemente aus einer Auflistung entfernt werden.
 
 
 ```VB
@@ -63,9 +63,9 @@ End Sub
 
 
 
-Eigenschaften und Qualifizierer können nicht in einer Klasseninstanz oder abgeleiteten Klasse entfernt werden, die Eigenschaften geerbt hat. Bei einem solchen Löschversuch wird ein Fehler ausgelöst, und die Eigenschaft oder der Qualifizierer wird nicht entfernt. Stattdessen setzt WMI die Eigenschaft oder den Qualifizierer auf den Standardwert zurück. Bei einer abgeleiteten Klasse mit geerbten Eigenschaften setzt WMI die geerbte Eigenschaft auf den Standardwert der Eigenschaft in der übergeordneten Klasse zurück.
+Sie können keine Eigenschaften und Qualifizierer in einer Klasseninstanz oder abgeleiteten Klasse entfernen, die über geerbte Eigenschaften verfügt. Ein solcher Löschversuch löst einen Fehler aus, und die Eigenschaft oder der Qualifizierer wird nicht entfernt. Stattdessen setzt WMI die Eigenschaft oder den Qualifizierer auf den Standardwert zurück. Im Fall einer abgeleiteten Klasse mit geerbten Eigenschaften setzt WMI die geerbte Eigenschaft auf den Standardwert der Eigenschaft in der übergeordneten Klasse zurück.
 
-Weitere Informationen finden Sie unter Bearbeiten von [Klassen-und Instanzinformationen](manipulating-class-and-instance-information.md), [zugreifen auf eine](accessing-a-collection.md)Auflistung und [Entfernen eines einzelnen Elements aus einer](removing-a-single-item-from-a-collection.md)Auflistung.
+Weitere Informationen finden Sie unter [Bearbeiten von Klassen- und Instanzinformationen,](manipulating-class-and-instance-information.md)Zugreifen auf eine [Auflistung](accessing-a-collection.md)und Entfernen eines einzelnen Elements aus [einer Auflistung.](removing-a-single-item-from-a-collection.md)
 
  
 

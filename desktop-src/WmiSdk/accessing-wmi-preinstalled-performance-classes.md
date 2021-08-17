@@ -1,28 +1,28 @@
 ---
-description: Das WMI-Repository enthält vorinstallierte Leistungsklassen für alle Leistungs Bibliotheksobjekte.
+description: Das WMI-Repository enthält vorinstallierte Leistungsklassen für alle Leistungsbibliotheksobjekte.
 ms.assetid: 2158385f-d0dc-4102-84db-ce02d2b0ee53
 ms.tgt_platform: multiple
 title: Zugreifen auf vorinstallierte WMI-Leistungsklassen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0265f9b4008913a463545ed03cd6f1025b58ef5a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 656c3434d2f20bd73ae9ff5273f7e67439fc6caa01ac9ee5bf0283850e64b34a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347623"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119131893"
 ---
 # <a name="accessing-wmi-preinstalled-performance-classes"></a>Zugreifen auf vorinstallierte WMI-Leistungsklassen
 
-Das WMI-Repository enthält vorinstallierte Leistungsklassen für alle Leistungs Bibliotheksobjekte. Beispielsweise stellen Instanzen der RAW-Daten Leistungsklasse [**Win32 \_ perfrawdata \_ perfproc \_ Process**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) Prozesse dar. Dieses Leistungs Objekt ist im System Monitor als Prozess Objekt sichtbar.
+Das WMI-Repository enthält vorinstallierte Leistungsklassen für alle Leistungsbibliotheksobjekte. Beispielsweise stellen Instanzen der Rohdaten-Leistungsklasse [**Win32 \_ PerfRawData \_ PerfProc \_ Process**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) Prozesse dar. Dieses Leistungsobjekt wird im Systemmonitor als Prozessobjekt angezeigt.
 
-Die **pagefehlerspersec** -Eigenschaft des [**Win32 \_ perfrawdata \_ perfproc- \_ Prozesses**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) stellt den Leistungs Leistungs Monitor "Seiten Fehler pro Sekunde" für den Prozess dar. Die [**Win32 \_ perfformatteddata**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata) -Klassen enthalten die berechneten Datenwerte, die im System Monitor (Perfmon.exe) angezeigt werden. Der Wert der **pagefehlerspersec** -Eigenschaft des [**Win32 \_ perfformatteddata \_ perfproc- \_ Prozesses**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) entspricht dem, wenn er im System Monitor angezeigt wird.
+Die **PageFaultsPerSec-Eigenschaft** des [**Win32 \_ PerfRawData \_ PerfProc-Prozesses \_**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) stellt den Leistungsindikator Seitenfehler pro Sekunde für den Prozess dar. Die [**Win32 \_ PerfFormattedData-Klassen**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata) enthalten die berechneten Datenwerte, die im Systemmonitor (Perfmon.exe) angezeigt werden. Der Wert der **PageFaultsPerSec-Eigenschaft** von [**Win32 \_ PerfFormattedData \_ PerfProc \_ Process entspricht**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) dem Wert, der im Systemmonitor angezeigt wird.
 
-Verwenden Sie entweder die [com-API für WMI](com-api-for-wmi.md) oder die [Skript-API für WMI](scripting-api-for-wmi.md) , um über die [Leistungs Leistungsdaten Klassen](/windows/desktop/CIMWin32Prov/performance-counter-classes)auf Leistungsdaten zuzugreifen. In beiden Fällen ist [*ein*](gloss-r.md) Aktualisierungs Objekt zum Abrufen der einzelnen Daten Stichproben erforderlich. Weitere Informationen und Skriptcode Beispiele für die Verwendung von aktualisierungsproblegern und den Zugriff auf Leistungsklassen finden Sie unter [WMI-Tasks: Leistungsüberwachung](wmi-tasks--performance-monitoring.md). Weitere Informationen finden Sie unter [zugreifen auf Leistungsdaten im Skript](accessing-performance-data-in-script.md).
+Verwenden Sie entweder die [COM-API für WMI](com-api-for-wmi.md) oder die [Skript-API für WMI,](scripting-api-for-wmi.md) um über die [Leistungsindikatorklassen](/windows/desktop/CIMWin32Prov/performance-counter-classes)auf Leistungsdaten zuzugreifen. In beiden Fällen ist ein [*Aktualisierungsobjekt*](gloss-r.md) erforderlich, um jedes Datenbeispiel abzurufen. Weitere Informationen und Skriptcodebeispiele für die Verwendung von Aktualisierungen und den Zugriff auf Leistungsklassen finden Sie unter [WMI Tasks: Performance Monitoring](wmi-tasks--performance-monitoring.md). Weitere Informationen finden Sie unter [Zugreifen auf Leistungsdaten in Skript](accessing-performance-data-in-script.md).
 
-## <a name="accessing-performance-data-from-c"></a>Zugreifen auf Leistungsdaten von C++
+## <a name="accessing-performance-data-from-c"></a>Zugreifen auf Leistungsdaten aus C++
 
-Im folgenden C++-Codebeispiel wird der Leistungsindikatorenanbieter verwendet, um auf vordefinierte hochleistungsklassen zuzugreifen. Er erstellt ein Aktualisierungs Objekt und fügt dem Aktualisierungs Programm ein Objekt hinzu. Das-Objekt ist eine [**Win32 \_ perfrawdata \_ perfproc- \_ Prozess**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) Instanz, die die Leistung eines bestimmten Prozesses überwacht. Der Code liest nur eine Counter-Eigenschaft im Process-Objekt, der **virtualbytes** -Eigenschaft. Der Code erfordert, dass die folgenden Verweise und **\# include** -Anweisungen ordnungsgemäß kompiliert werden.
+Im folgenden C++-Codebeispiel wird der Leistungsindikatoranbieter verwendet, um auf vordefinierte Hochleistungsklassen zuzugreifen. Es erstellt ein Aktualisierungsobjekt und fügt der Aktualisierung ein -Objekt hinzu. Das -Objekt ist eine [**Win32 \_ PerfRawData \_ PerfProc-Prozessinstanz, \_**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) die die Leistung eines bestimmten Prozesses überwacht. Der Code liest nur eine Indikatoreigenschaft im Prozessobjekt, die **VirtualBytes-Eigenschaft.** Der Code erfordert die folgenden Verweise und **\# include-Anweisungen,** um ordnungsgemäß zu kompilieren.
 
 
 ```C++
@@ -35,19 +35,19 @@ using namespace std;
 
 
 
-Im folgenden Verfahren wird gezeigt, wie Sie in C++ auf Daten von einem Hochleistungs Anbieter zugreifen können.
+Das folgende Verfahren veranschaulicht den Zugriff auf Daten von einem Hochleistungsanbieter in C++.
 
-**So greifen Sie auf Daten eines Hochleistungs Anbieters in C++ zu**
+**So greifen Sie von einem Hochleistungsanbieter in C++ auf Daten zu**
 
-1.  Stellen Sie eine Verbindung mit dem WMI-Namespace her, und legen Sie die WMI-Sicherheit mithilfe eines Aufrufes von [**IWBEMLocator:: ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver) und [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket)fest.
+1.  Stellen Sie eine Verbindung mit dem WMI-Namespace her, und legen Sie die WMI-Sicherheit fest, indem [**Sie IWbemLocator::ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver) und [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket)aufrufen.
 
-    Dieser Schritt ist ein Standard Schritt zum Erstellen einer beliebigen WMI-Client Anwendung. Weitere Informationen finden Sie unter [Erstellen einer WMI-Anwendung mithilfe von C++](creating-a-wmi-application-using-c-.md).
+    Dieser Schritt ist ein Standardschritt zum Erstellen einer beliebigen WMI-Clientanwendung. Weitere Informationen finden Sie unter [Erstellen einer WMI-Anwendung mit C++](creating-a-wmi-application-using-c-.md).
 
-2.  Erstellen Sie ein Aktualisierungs Objekt, indem Sie [**cokreateinstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) mit CLSID \_ wbemaktualisierungs Programm verwenden. Fordern Sie mithilfe der [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Methode eine [**iwbemconfigurerefresher**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemconfigurerefresher) -Schnittstelle an. Fordern Sie mithilfe der **QueryInterface** -Methode eine [**iwbemaktualisierungs**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemrefresher) -Schnittstelle an.
+2.  Erstellen Sie ein Aktualisierungsobjekt mithilfe von [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) mit CLSID \_ WbemRefresher. Fordern Sie über die [**QueryInterface-Methode**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) eine [**IWbemConfigureRefresher-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemconfigurerefresher) an. Fordern Sie eine [**IWbemRefresher-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemrefresher) über die **QueryInterface-Methode** an.
 
-    Die [**iwbemfreshsher**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemrefresher) -Schnittstelle ist die Hauptschnittstelle für das [**WMI-**](swbemrefreshableitem-refresher.md) Aktualisierungs Objekt.
+    Die [**IWbemRefresher-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemrefresher) ist die Hauptschnittstelle für das [**WMI-Aktualisierungsobjekt.**](swbemrefreshableitem-refresher.md)
 
-    Im folgenden C++-Codebeispiel wird gezeigt, wie [**iwbemconfigurerefresher**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemrefresher)abgerufen wird.
+    Das folgende C++-Codebeispiel zeigt, wie [**IWbemConfigureRefresher**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemrefresher)abgerufen wird.
 
     ```C++
     IWbemRefresher* pRefresher = NULL;
@@ -69,11 +69,11 @@ Im folgenden Verfahren wird gezeigt, wie Sie in C++ auf Daten von einem Hochleis
 
     
 
-3.  Fügen Sie dem Aktualisierungs Programm ein Objekt hinzu, indem Sie die [**iwbemconfigurerefresher:: addobjectbypath**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemconfigurerefresher-addobjectbypath) -Methode aufrufen.
+3.  Fügen Sie der Aktualisierung über einen Aufruf der [**IWbemConfigureRefresher::AddObjectByPath-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemconfigurerefresher-addobjectbypath) ein Objekt hinzu.
 
-    Wenn Sie dem Aktualisierungs Programm ein Objekt hinzufügen, aktualisiert WMI das Objekt, wenn Sie die [**iwbemrefresh Sher:: Refresh**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) -Methode aufruft. Das Objekt, das Sie hinzufügen, bestimmt den Anbieter in seinen Klassen Qualifizierern.
+    Wenn Sie der Aktualisierung ein Objekt hinzufügen, aktualisiert WMI das Objekt immer dann, wenn Sie die [**IWbemRefresher::Refresh-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) aufrufen. Das objekt, das Sie hinzufügen, bestimmt den Anbieter in seinen Klassenqualifizierern.
 
-    Im folgenden C++-Codebeispiel wird gezeigt, wie [**addobjectbypath**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemconfigurerefresher-addobjectbypath)aufgerufen wird.
+    Das folgende C++-Codebeispiel zeigt, wie [**AddObjectByPath**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemconfigurerefresher-addobjectbypath)aufgerufen wird.
 
     ```C++
     IWbemClassObject* pObj = NULL;
@@ -99,9 +99,9 @@ Im folgenden Verfahren wird gezeigt, wie Sie in C++ auf Daten von einem Hochleis
 
     
 
-4.  Um einen schnelleren Zugriff auf das Objekt einzurichten, stellen Sie über [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) auf der [**IWbemClassObject**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemclassobject) -Schnittstelle eine Verbindung mit der [**iwbewbjectaccess**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjectaccess) -Schnittstelle her.
+4.  Stellen Sie über [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) in der [**IWbemClassObject-Schnittstelle**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemclassobject) eine Verbindung mit der [**IWbemObjectAccess-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjectaccess) her, um einen schnelleren Zugriff auf das Objekt einzurichten.
 
-    Im folgenden C++-Codebeispiel wird gezeigt, wie ein Zeiger auf das-Objekt mithilfe von [**iwbemubjectaccess**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjectaccess) anstelle von [**IWbemClassObject**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemclassobject)abgerufen wird.
+    Das folgende C++-Codebeispiel zeigt, wie ein Zeiger auf das -Objekt mithilfe von [**IWbemObjectAccess**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjectaccess) anstelle von [**IWbemClassObject**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemclassobject)abgerufen wird.
 
     ```C++
         // For quick property retrieval, use IWbemObjectAccess.
@@ -113,13 +113,13 @@ Im folgenden Verfahren wird gezeigt, wie Sie in C++ auf Daten von einem Hochleis
 
     
 
-    Die [**iwbemubjectaccess**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjectaccess) -Schnittstelle steigert die Leistung, da Sie Handles für bestimmte Leistungstest Eigenschaften abrufen können. Außerdem müssen Sie das Objekt im Code Sperren und entsperren. dabei handelt es sich um einen Vorgang, den [**IWbemClassObject**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemclassobject) für jeden Eigenschaften Zugriff ausführt.
+    Die [**IWbemObjectAccess-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjectaccess) erhöht die Leistung, da Sie Handles für bestimmte Indikatoreigenschaften abrufen können, und sie erfordert, dass Sie das Objekt in Ihrem Code sperren und entsperren. Dies ist ein Vorgang, den [**IWbemClassObject**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemclassobject) für jeden Eigenschaftenzugriff ausführt.
 
-5.  Rufen Sie die Handles der zu überprüfenden Eigenschaften mithilfe von Aufrufen der [**iwbewbjectaccess:: getpropertyhandle**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) -Methode ab.
+5.  Rufen Sie die Zu überprüfenden Handles der Eigenschaften ab, indem Sie Aufrufe der [**IWbemObjectAccess::GetPropertyHandle-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) verwenden.
 
-    Eigenschaften Handles sind für alle Instanzen einer Klasse identisch. Dies bedeutet, dass Sie das Eigenschaften Handle verwenden, das Sie von einer bestimmten Instanz für alle Instanzen einer bestimmten Klasse abrufen. Sie können auch ein Handle von einem Klassenobjekt abrufen, um Eigenschaftswerte aus einem Instanzobjekt abzurufen.
+    Eigenschaftshandles sind für alle Instanzen einer Klasse identisch. Dies bedeutet, dass sie das Eigenschaftenhandle verwenden, das Sie von einer bestimmten Instanz für alle Instanzen einer bestimmten Klasse abrufen. Sie können auch ein Handle aus einem Klassenobjekt abrufen, um Eigenschaftswerte aus einem Instanzobjekt abzurufen.
 
-    Im folgenden C++-Codebeispiel wird gezeigt, wie ein Eigenschaften Handle abgerufen wird.
+    Das folgende C++-Codebeispiel zeigt, wie ein Eigenschaftenhandle abgerufen wird.
 
     ```C++
         // Get a property handle for the VirtualBytes property
@@ -141,17 +141,17 @@ Im folgenden Verfahren wird gezeigt, wie Sie in C++ auf Daten von einem Hochleis
 
     
 
-6.  Erstellen Sie eine Programmier Schleife, die die folgenden Aktionen ausführt:
+6.  Erstellen Sie eine Programmierschleife, die die folgenden Aktionen ausführt:
 
-    -   Aktualisieren Sie das Objekt mit einem [**callbemrefresh Sher:: Refresh**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) -Befehl, indem Sie den Zeiger verwenden, der im vorherigen Aufrufen von [**cokreateinstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)erstellt wurde.
+    -   Aktualisieren Sie das -Objekt mit einem Aufruf von [**IWbemRefresher::Refresh,**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) indem Sie den Zeiger verwenden, der im vorherigen Aufruf von [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)erstellt wurde.
 
-        In diesem-Befehl aktualisiert das WMI-Aktualisierungs Programm das-Client Objekt mithilfe von Daten, die der Anbieter bereitstellt.
+        In diesem Aufruf aktualisiert die WMI-Aktualisierung das Clientobjekt mithilfe der vom Anbieter bereitgestellten Daten.
 
-    -   Führen Sie für das Objekt gegebenenfalls eine beliebige Aktion aus, z. b. das Abrufen eines Eigenschafts namens, eines Datentyps oder eines Werts.
+    -   Führen Sie nach Bedarf eine beliebige Aktion für das Objekt aus, z. B. das Abrufen eines Eigenschaftsnamens, Datentyps oder Werts.
 
-        Sie können über das zuvor erhaltene Eigenschaften Handle auf die-Eigenschaft zugreifen. Aufgrund des [**Aktualisierungs**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) Aufrufes aktualisiert WMI die-Eigenschaft jedes Mal durch die-Schleife.
+        Sie können über das zuvor abgerufene Eigenschaftenhandle auf die Eigenschaft zugreifen. Aufgrund des [**Refresh-Aufrufs**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) aktualisiert WMI die -Eigenschaft jedes Mal durch die -Schleife.
 
-Im folgenden Beispiel wird gezeigt, wie die Hochleistungs-API von WMI verwendet wird.
+Im folgenden C++-Beispiel wird die Verwendung der WMI-Api für hohe Leistung veranschaulicht.
 
 
 ```C++
@@ -302,10 +302,10 @@ pWbemLocator->Release();
 
 <dl> <dt>
 
-[Leistungs Leistungsdaten-Klassen](/windows/desktop/CIMWin32Prov/performance-counter-classes)
+[Leistungsindikatorklassen](/windows/desktop/CIMWin32Prov/performance-counter-classes)
 </dt> <dt>
 
-[WMI-Tasks: Leistungsüberwachung](wmi-tasks--performance-monitoring.md)
+[WMI-Aufgaben: Leistungsüberwachung](wmi-tasks--performance-monitoring.md)
 </dt> </dl>
 
  

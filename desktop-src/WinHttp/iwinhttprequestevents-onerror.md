@@ -34,7 +34,7 @@ void OnError(
 *ErrorNumber* \[ In\]
 </dt> <dd>
 
-Empfängt den numerischen Wert des Fehlers. Die unteren 16 Bits dieser Fehlernummer entsprechen einem der in [**Fehlermeldungen**](error-messages.md)aufgeführten Fehler.
+Empfängt den numerischen Wert des Fehlers. Die unteren 16 Bits dieser Fehlernummer entsprechen einem der unter [**Fehlermeldungen aufgeführten Fehler.**](error-messages.md)
 
 </dd> <dt>
 
@@ -52,7 +52,7 @@ Dieses Ereignis gibt keinen Wert zurück.
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Laufzeitanforderungen](winhttp-start-page.md) der WinHTTP-Startseite.
+> Informationen Windows XP und Windows 2000 finden [](winhttp-start-page.md) Sie im Abschnitt Laufzeitanforderungen der WinHTTP-Startseite.
 
  
 
@@ -64,7 +64,7 @@ Dieses Ereignis gibt keinen Wert zurück.
 |-------------------------------------|--------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher auf Windows XP und Windows 2000.<br/> |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher unter Windows XP und Windows 2000.<br/> |
 | Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
 
 

@@ -75,7 +75,7 @@ Eine **WMPLib.IWMPLibrary-Schnittstelle** für die zurückgegebene Bibliothek.
 
 ## <a name="remarks"></a>Hinweise
 
-Es gibt nur eine lokale Bibliothek, und Datenträgerbibliotheken sind nur auf Daten-CDs und DVDs verfügbar, die Medieninhalte enthalten.
+Es gibt nur eine lokale Bibliothek, und Datenträgerbibliotheken sind nur für Daten-CDs und DVDs verfügbar, die Medieninhalte enthalten.
 
 ## <a name="requirements"></a>Anforderungen
 

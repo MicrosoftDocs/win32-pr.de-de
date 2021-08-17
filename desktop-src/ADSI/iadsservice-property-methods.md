@@ -1,10 +1,10 @@
 ---
 title: IADsService-Eigenschaftsmethoden (Iads.h)
-description: Lesen und schreiben Sie die in diesem Thema beschriebenen Eigenschaften.
+description: Lesen und Schreiben der in diesem Thema beschriebenen Eigenschaften.
 ms.assetid: ff05ab0c-b4fe-4c67-8894-9ac8427ce5b8
 ms.tgt_platform: multiple
 keywords:
-- IADsService-Eigenschaftsmethoden ADSI
+- IADsService-Eigenschaftenmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -69,7 +69,7 @@ Die Eigenschaftenmethoden der [**IADsService-Schnittstelle**](/windows/desktop/a
 **Abhängigkeiten**
 </dt> <dd> <dl>
 
-Array von **BSTR-Namen** von Diensten oder Ladegruppen, die geladen werden müssen, damit dieser Dienst geladen werden kann. Die Syntax für den Eintrag ist "Service:", gefolgt vom Dienstnamen oder "Group:", gefolgt vom Namen der Ladegruppe.
+Array von **BSTR-Namen** von Diensten oder Ladegruppen, die geladen werden müssen, damit dieser Dienst geladen werden kann. Die Syntax für den Eintrag lautet "Service:", gefolgt vom Dienstnamen oder "Group:" gefolgt vom Namen der Ladegruppe.
 
 <dt>
 
@@ -97,7 +97,7 @@ HRESULT put_Dependencies(
 **DisplayName**
 </dt> <dd> <dl>
 
-Der Benutzerfreundlichkeitsname des Diensts.
+Der Anzeigename des Diensts.
 
 <dt>
 
@@ -125,24 +125,24 @@ HRESULT put_DisplayName(
 **ErrorControl**
 </dt> <dd> <dl>
 
-Die Aktion, die ausgeführt werden soll, wenn dieser Dienst beim Start fehlschlägt. Im Folgenden finden Sie gültige Werte für diese Eigenschaft.
+Die Aktion, die ausgeführt werden soll, wenn dieser Dienst beim Start fehlschlägt. Im Folgenden sind gültige Werte für diese Eigenschaft angegeben.
 
 <dt>
 
 <span id="ADS_SERVICE_ERROR_IGNORE"></span><span id="ads_service_error_ignore"></span>
 
-<span id="ADS_SERVICE_ERROR_IGNORE"></span><span id="ads_service_error_ignore"></span>ADS \_ SERVICE \_ ERROR \_ IGNORE**
+<span id="ADS_SERVICE_ERROR_IGNORE"></span><span id="ads_service_error_ignore"></span>\_ADS-DIENSTFEHLER \_ \_ IGNORE
 
 
 </dt> <dd>
 
-Das Startprogramm protokolliert den Fehler, setzt den Startvorgang jedoch fort.
+Das Startprogramm protokolliert den Fehler, setzt aber den Startvorgang fort.
 
 </dd> <dt>
 
 <span id="ADS_SERVICE_ERROR_NORMAL"></span><span id="ads_service_error_normal"></span>
 
-<span id="ADS_SERVICE_ERROR_NORMAL"></span><span id="ads_service_error_normal"></span>ADS \_ SERVICE \_ ERROR \_ NORMAL**
+<span id="ADS_SERVICE_ERROR_NORMAL"></span><span id="ads_service_error_normal"></span>\_ADS-DIENSTFEHLER \_ \_ NORMAL
 
 
 </dt> <dd>
@@ -153,7 +153,7 @@ Das Startprogramm protokolliert den Fehler und zeigt ein Meldungsfeld an, setzt 
 
 <span id="ADS_SERVICE_ERROR_SEVERE"></span><span id="ads_service_error_severe"></span>
 
-<span id="ADS_SERVICE_ERROR_SEVERE"></span><span id="ads_service_error_severe"></span>ADS \_ SERVICE \_ ERROR \_ SEVERE**
+<span id="ADS_SERVICE_ERROR_SEVERE"></span><span id="ads_service_error_severe"></span>\_ADS-DIENSTFEHLER \_ \_ SCHWERWIEGEND
 
 
 </dt> <dd>
@@ -225,7 +225,7 @@ HRESULT put_HostComputer(
 **LoadOrderGroup**
 </dt> <dd> <dl>
 
-Name der Ladeauftragsgruppe, in der dieser Dienst Mitglied ist.
+Name der Ladereihenfolgegruppe, der dieser Dienst angehört.
 
 <dt>
 
@@ -281,7 +281,7 @@ HRESULT put_Path(
 **ServiceAccountName**
 </dt> <dd> <dl>
 
-Name des Kontos, das dieser Dienst verwendet, um sich beim Start zu authentifizieren.
+Name des Kontos, das dieser Dienst verwendet, um sich beim Start selbst zu authentifizieren.
 
 <dt>
 
@@ -309,7 +309,7 @@ HRESULT put_ServiceAccountName(
 **ServiceAccountPath**
 </dt> <dd> <dl>
 
-Der Pfad des kontos, das durch die **ServiceAccountPath-Eigenschaft angegeben** wird.
+Pfad des von der **ServiceAccountPath-Eigenschaft** angegebenen Kontos.
 
 <dt>
 
@@ -337,34 +337,34 @@ HRESULT put_ServiceAccountPath(
 **ServiceType**
 </dt> <dd> <dl>
 
-Die Beschreibung der Darstellung eines Diensts auf dem Hostcomputer. Diese Eigenschaft kann 0 (null) oder eine Kombination aus mindestens einem der folgenden Werte sein.
+Die Beschreibung der Darstellung eines Diensts auf dem Hostcomputer. Diese Eigenschaft kann 0 (null) oder eine Kombination aus einem oder mehreren der folgenden Werte sein.
 
 <dt>
 
 <span id="ADS_SERVICE_KERNEL_DRIVER"></span><span id="ads_service_kernel_driver"></span>
 
-ADS \_ SERVICE \_ KERNEL \_ DRIVER** (0x00000001)
+ADS \_ SERVICE \_ KERNEL \_ DRIVER( (0x00000001)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_FILE_SYSTEM_DRIVER"></span><span id="ads_service_file_system_driver"></span>
 
-ADS \_ SERVICE FILE SYSTEM \_ \_ \_ DRIVER** (0x00000002)
+ADS \_ SERVICE FILE SYSTEM \_ \_ \_ DRIVER( (0x00000002)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_OWN_PROCESS"></span><span id="ads_service_own_process"></span>
 
-ADS \_ SERVICE \_ OWN \_ PROCESS** (0x00000010)
+ADS \_ SERVICE \_ OWN \_ PROCESS( (0x00000010)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ADS_SERVICE_SHARE_PROCESS"></span><span id="ads_service_share_process"></span>
 
-ADS \_ SERVICE \_ SHARE \_ PROCESS** (0x00000020)
+ADS \_ SERVICE \_ SHARE \_ PROCESS( (0x00000020)
 
 
 </dt> <dd></dd> </dl> <dt>
@@ -393,46 +393,46 @@ HRESULT put_ServiceType(
 **Starttyp**
 </dt> <dd> <dl>
 
-Bestimmt, wie der Dienst gestartet wird. Im Folgenden finden Sie gültige Werte für diese Eigenschaft.
+Bestimmt, wie der Dienst gestartet wird. Im Folgenden sind gültige Werte für diese Eigenschaft angegeben.
 
 <dt>
 
 <span id="ADS_SERVICE_BOOT_START"></span><span id="ads_service_boot_start"></span>
 
-<span id="ADS_SERVICE_BOOT_START"></span><span id="ads_service_boot_start"></span>ADS \_ SERVICE \_ BOOT \_ START**
+<span id="ADS_SERVICE_BOOT_START"></span><span id="ads_service_boot_start"></span>\_ \_ ADS-DIENSTSTART \_
 
 
 </dt> <dd>
 
-Der Dienst ist ein Gerätetreiber, der vom Systemlader gestartet wird. Dieses Wert ist nur für Treiberdienste gültig.
+Der Dienst ist ein Gerätetreiber, der vom Systemladeprogramm gestartet wird. Dieses Wert ist nur für Treiberdienste gültig.
 
 </dd> <dt>
 
 <span id="ADS_SERVICE_SYSTEM_START"></span><span id="ads_service_system_start"></span>
 
-<span id="ADS_SERVICE_SYSTEM_START"></span><span id="ads_service_system_start"></span>ADS \_ SERVICE \_ SYSTEM \_ START**
+<span id="ADS_SERVICE_SYSTEM_START"></span><span id="ads_service_system_start"></span>ADS \_ SERVICE \_ SYSTEM \_ START
 
 
 </dt> <dd>
 
-Der Dienst ist ein Gerätetreiber, der von der **IoInitSystem-Funktion gestartet** wird. Dieses Wert ist nur für Treiberdienste gültig.
+Der Dienst ist ein Gerätetreiber, der von der **IoInitSystem-Funktion** gestartet wird. Dieses Wert ist nur für Treiberdienste gültig.
 
 </dd> <dt>
 
 <span id="ADS_SERVICE_AUTO_START"></span><span id="ads_service_auto_start"></span>
 
-<span id="ADS_SERVICE_AUTO_START"></span><span id="ads_service_auto_start"></span>ADS \_ SERVICE \_ AUTO \_ START**
+<span id="ADS_SERVICE_AUTO_START"></span><span id="ads_service_auto_start"></span>ADS \_ SERVICE \_ AUTO \_ START(
 
 
 </dt> <dd>
 
-Der Dienst wird automatisch vom Dienststeuerungs-Manager während des Systemstarts gestartet.
+Der Dienst wird während des Systemstarts automatisch vom Dienststeuerungs-Manager gestartet.
 
 </dd> <dt>
 
 <span id="ADS_SERVICE_DEMAND_START"></span><span id="ads_service_demand_start"></span>
 
-<span id="ADS_SERVICE_DEMAND_START"></span><span id="ads_service_demand_start"></span>ADS \_ SERVICE \_ DEMAND \_ START**
+<span id="ADS_SERVICE_DEMAND_START"></span><span id="ads_service_demand_start"></span>ADS \_ SERVICE \_ DEMAND \_ START(
 
 
 </dt> <dd>
@@ -443,7 +443,7 @@ Der Dienst wird vom Dienststeuerungs-Manager gestartet, wenn ein Prozess die [**
 
 <span id="ADS_SERVICE_DISABLED"></span><span id="ads_service_disabled"></span>
 
-<span id="ADS_SERVICE_DISABLED"></span><span id="ads_service_disabled"></span>ADS \_ SERVICE \_ DISABLED**
+<span id="ADS_SERVICE_DISABLED"></span><span id="ads_service_disabled"></span>\_ADS-DIENST \_ DEAKTIVIERT
 
 
 </dt> <dd>
@@ -533,7 +533,7 @@ HRESULT put_Version(
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Codebeispiel zeigt, wie alle verfügbaren Systemdienste, die auf dem Hostcomputer "myMachine" ausgeführt werden, zusammen mit dem Speicherort zum Suchen der ausführbaren Dateien der Dienste aufgeführt werden.
+Das folgende Codebeispiel zeigt, wie sie alle verfügbaren Systemdienste auflisten, die auf dem Hostcomputer "myMachine" ausgeführt werden, zusammen mit dem Speicherort, an dem die ausführbaren Dateien der Dienste gesucht werden.
 
 
 ```VB
@@ -571,7 +571,7 @@ Cleanup:
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-description: ICE36 überprüft, ob jedes Symbol in der Symboltabelle mindestens einmal in der Eigenschaft ARPPRODUCTICON oder in den Tabellen Class, ProgId oder Shortcut aufgeführt ist.
+description: ICE36 überprüft, ob jedes Symbol in der Icon-Tabelle mindestens einmal in der ARPPRODUCTICON-Eigenschaft oder in den Tabellen Class, ProgId oder Shortcut aufgeführt ist.
 ms.assetid: d502c0a9-17e5-467a-8b02-8b254e77b96b
 title: ICE36
 ms.topic: article
@@ -13,15 +13,15 @@ ms.locfileid: "118635303"
 ---
 # <a name="ice36"></a>ICE36
 
-ICE36 überprüft, ob jedes Symbol in der Symboltabelle mindestens einmal in der [**Eigenschaft ARPPRODUCTICON**](arpproducticon.md) oder in den Tabellen [Class,](class-table.md) [ProgId](progid-table.md)oder [Shortcut](shortcut-table.md) aufgeführt ist.
+ICE36 überprüft, ob jedes Symbol in der Icon-Tabelle mindestens einmal in der [**ARPPRODUCTICON-Eigenschaft**](arpproducticon.md) oder in den [Tabellen Class,](class-table.md) [ProgId](progid-table.md)oder [Shortcut aufgeführt](shortcut-table.md) ist.
 
-Während der Ankündigung installiert das Installationsprogramm alle Symbole, die in der [Tabelle Symbol](icon-table.md) auf dem Computer des Benutzers aufgeführt sind. Nicht verwendete Symbole in der Symboltabelle verhindern nicht, dass die Installation ausgeführt wird, erhöht jedoch unnötigerweise die Größe der .msi-Datei sowie die Zeit und den Speicherplatz, die zum Ankündigen eines Features erforderlich sind.
+Während der Ankündigung installiert das Installationsprogramm alle Symbole, die in der [Tabelle Symbol aufgeführt sind,](icon-table.md) auf dem Computer des Benutzers. Nicht verwendete Symbole in der Icon-Tabelle verhindern nicht, dass die Installation ausgeführt wird, erhöht jedoch unnötigerweise die Größe der .msi-Datei sowie die Zeit und den Speicherplatz, die für die Ankündigung eines Features erforderlich sind.
 
 Wenn in der Eigenschaft oder Tabelle nicht auf ein Symbol verwiesen wird und keine Benutzeroberfläche zum Erstellen eines Verweises zur Laufzeit bereitgestellt wird, sollten Sie das Symbol entfernen, um eine bessere Leistung zu erzielen.
 
 ## <a name="result"></a>Ergebnis
 
-ICE36 sendet eine Meldung, wenn ein Symbol in der Symboltabelle vorhanden ist, auf das in den Tabellen [Class](class-table.md), [ProgId](progid-table.md)oder [Shortcut](shortcut-table.md) nicht verwiesen wird und wenn keine Benutzeroberfläche zum Erstellen eines solchen Verweises zur Laufzeit bereitgestellt wird.
+ICE36 stellt eine Meldung zur Verfügung, wenn in der Tabelle Icon ein Symbol vorhanden ist, auf das in den Tabellen [Class,](class-table.md) [ProgId](progid-table.md)oder [Shortcut](shortcut-table.md) nicht verwiesen wird, und wenn keine Benutzeroberfläche zum Erstellen eines solchen Verweises zur Laufzeit bereitgestellt wird.
 
 ## <a name="example"></a>Beispiel
 

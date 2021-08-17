@@ -1,6 +1,6 @@
 ---
-title: komplexe baseeapconnectionpropertiesv1-Schema Typen
-description: Erfahren Sie mehr über das baseeapconnectionpropertiesv1-Schema. Dieses Schema definiert die komplexen Typen baseeapparameters und baseeaptypeparameters.
+title: baseeapconnectionpropertiesv1 Schema Complex Types
+description: Erfahren Sie mehr über das Schema baseeapconnectionpropertiesv1. Dieses Schema definiert die komplexen Typen BaseEapParameters und BaseEapTypeParameters.
 ms.assetid: 536dbc56-1811-4b51-95ee-cf1e3f4b0a2d
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,33 +9,33 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 6466298e0f03dc5b5f20960c5910a29529e65520
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: b63c04159741f6deb1ad12f4e2d3507ae8d29c093ffd39d7d7cc2299c6ab84db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104316478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119117680"
 ---
-# <a name="baseeapconnectionpropertiesv1-schema-complex-types"></a>komplexe baseeapconnectionpropertiesv1-Schema Typen
+# <a name="baseeapconnectionpropertiesv1-schema-complex-types"></a>baseeapconnectionpropertiesv1 Schema Complex Types
 
-Das baseeapconnectionpropertiesv1-Schema definiert die folgenden komplexen Typen.
+Das Schema baseeapconnectionpropertiesv1 definiert die folgenden komplexen Typen.
 
--   [**Baseeapparameters**](baseeapconnectionpropertiesv1schema-baseeapparameters-complextype.md)
--   [**Baseeaptypeparameters**](baseeapconnectionpropertiesv1schema-baseeaptypeparameters-complextype.md)
+-   [**BaseEapParameters**](baseeapconnectionpropertiesv1schema-baseeapparameters-complextype.md)
+-   [**BaseEapTypeParameters**](baseeapconnectionpropertiesv1schema-baseeaptypeparameters-complextype.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [baseeapconnectionpropertiesv1-Schema](baseeapconnectionpropertiesv1schema-schema.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

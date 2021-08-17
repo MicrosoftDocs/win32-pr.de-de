@@ -1,7 +1,7 @@
 ---
-description: Die listreaders-Methode ruft die Namen der Smartcardleser ab, die in der Smartcard-Datenbank registriert sind.
+description: Die ListReaders-Methode ruft die Namen der Smartcardleser ab, die in der Smartcard-Datenbank registriert sind.
 ms.assetid: e1ca85a1-9206-4c09-ba0f-10b60e472dfb
-title: 'Iscarddatabase:: listreaders-Methode (scardmgr. h)'
+title: ISCardDatabase::ListReaders-Methode (Scardmgr.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: dcd78066a95c69b75d5089ba1683e5c937cb7414
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c7ae9c41a8b1894ec0c233c6090f8ab990e275e95bc20c4768171fe867412838
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119141133"
 ---
-# <a name="iscarddatabaselistreaders-method"></a>Iscarddatabase:: listreaders-Methode
+# <a name="iscarddatabaselistreaders-method"></a>ISCardDatabase::ListReaders-Methode
 
-\[Die **listreaders** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **ListReaders-Methode** ist für die Verwendung in den Im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **listreaders** -Methode ruft die Namen der [*Smartcardleser*](../secgloss/r-gly.md) ab, die in der [*Smartcard-Datenbank*](../secgloss/s-gly.md)registriert sind.
+Die **ListReaders-Methode** ruft die Namen [](../secgloss/r-gly.md) der Smartcardleser ab, die in der [*Smartcard-Datenbank registriert sind.*](../secgloss/s-gly.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,50 +42,50 @@ HRESULT ListReaders(
 
 <dl> <dt>
 
-*LocaleID* \[ in\]
+*localeId* \[ In\]
 </dt> <dd>
 
-Sprach Lokalisierungs-ID.
+Sprachlokalisierungs-ID.
 
 </dd> <dt>
 
-*ppreaders* \[ vorgenommen\]
+*ppReaders* \[ out\]
 </dt> <dd>
 
-Zeiger auf ein SafeArray von bstrinray, das die Namen der Smartcardleser enthält, wenn erfolgreich. **Null** , wenn der Vorgang fehlgeschlagen ist.
+Zeiger auf ein SAFEARRAY von BSTRs, das bei Erfolg die Namen der Smartcardleser enthält; **NULL,** wenn der Vorgang fehlgeschlagen ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                         |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/>        |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Ungültiger Parameter.<br/>                       |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Ein fehlerhafter Zeiger wurde in " *ppreaders*" übergeben.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                           |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ungültiger Parameter.<br/>                       |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Ein fehlerhafter Zeiger wurde in *ppReaders übergeben.*<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                           |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Rufen Sie zum Abrufen aller bekannten [*Smartcards*](../secgloss/s-gly.md) oder [*Lesergruppen*](../secgloss/r-gly.md) [**listcards**](iscarddatabase-listcards.md) bzw. [**listreadergroups**](iscarddatabase-listreadergroups.md) auf.
+Um alle bekannten [*Smartcards oder*](../secgloss/s-gly.md) Readergruppen [*abzurufen,*](../secgloss/r-gly.md)rufen [**Sie ListCards bzw.**](iscarddatabase-listcards.md) [**ListReaderGroups**](iscarddatabase-listreadergroups.md) auf.
 
-Zum Abrufen des [*primären Dienstanbieters*](../secgloss/p-gly.md) oder der Schnittstellen einer bestimmten Karte [**getprovidercardid**](iscarddatabase-getprovidercardid.md) bzw. [**listcardinterfaces**](iscarddatabase-listcardinterfaces.md) .
+So rufen Sie [*den primären Dienstanbieter oder*](../secgloss/p-gly.md) die Schnittstellen einer bestimmten Karte [**GetProviderCardId**](iscarddatabase-getprovidercardid.md) bzw. [**ListCardInterfaces**](iscarddatabase-listcardinterfaces.md) ab.
 
-Eine Liste aller Methoden, die von dieser Schnittstelle bereitgestellt werden, finden Sie unter [**iscarddatabase**](iscarddatabase.md).
+Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardDatabase**](iscarddatabase.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die Smartcard zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes gibt diese Schnittstelle möglicherweise einen Smartcard-Fehlercode zurück, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung zu erfüllen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt, wie Sie die Namen der Smartcardleser abrufen, die in der Smartcard-Datenbank registriert sind.
+Das folgende Beispiel zeigt das Abrufen der Namen der Smartcardleser, die in der Smartcard-Datenbank registriert sind.
 
 
 ```C++
@@ -115,34 +115,34 @@ else
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scardmgr. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scardmgr. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scardmgr.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scardmgr.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscarddatabase ist als 1461aac8-6810-11D0-918f -00aa00c18068 definiert.<br/>       |
+| IID<br/>                      | IID \_ ISCardDatabase ist als 1461AAC8-6810-11D0-918F-00AA00C18068 definiert.<br/>       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Getprovidercardid**](iscarddatabase-getprovidercardid.md)
+[**GetProviderCardId**](iscarddatabase-getprovidercardid.md)
 </dt> <dt>
 
-[**Iscarddatabase**](iscarddatabase.md)
+[**ISCardDatabase**](iscarddatabase.md)
 </dt> <dt>
 
-[**Listcardinterfaces**](iscarddatabase-listcardinterfaces.md)
+[**ListCardInterfaces**](iscarddatabase-listcardinterfaces.md)
 </dt> <dt>
 
-[**Listcards**](iscarddatabase-listcards.md)
+[**ListCards**](iscarddatabase-listcards.md)
 </dt> <dt>
 
-[**Listreadergroups**](iscarddatabase-listreadergroups.md)
+[**ListReaderGroups**](iscarddatabase-listreadergroups.md)
 </dt> </dl>
 
  

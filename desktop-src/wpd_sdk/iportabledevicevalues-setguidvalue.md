@@ -1,5 +1,5 @@
 ---
-description: Die SetGuidValue-Methode fügt einen neuen GUID-Wert (Typ VT \_ CLSID) hinzu oder überschreibt einen vorhandenen.
+description: Die SetGuidValue-Methode fügt einen neuen GUID-Wert (Typ VT CLSID) hinzu oder überschreibt \_ einen vorhandenen.
 ms.assetid: 429a83c0-59b6-4e2f-a657-cbec1dfb9070
 title: IPortableDeviceValues::SetGuidValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118963589"
 ---
 # <a name="iportabledevicevaluessetguidvalue-method"></a>IPortableDeviceValues::SetGuidValue-Methode
 
-Die **SetGuidValue-Methode** fügt einen neuen **GUID-Wert** (Typ VT \_ CLSID) hinzu oder überschreibt einen vorhandenen.
+Die **SetGuidValue-Methode** fügt einen neuen **GUID-Wert** (Typ VT CLSID) hinzu oder überschreibt \_ einen vorhandenen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ HRESULT SetGuidValue(
 
 <dl> <dt>
 
-*key* \[ In\]
+*Key* \[ In\]
 </dt> <dd>
 
-Ein **REFPROPERTYKEY,** der das zu erstellende oder zu überschreibende Element angibt.
+Ein **REFPROPERTYKEY-Objekt,** das das zu erstellende oder zu überschreibende Element angibt.
 
 </dd> <dt>
 
@@ -71,7 +71,7 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der vom *Schlüsselparameter* angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben.
+Wenn ein vorhandener Wert über denselben  Schlüssel verfügt, der vom Schlüsselparameter angegeben wird, überschreibt er den vorhandenen Wert ohne Warnung.
 
 ## <a name="requirements"></a>Anforderungen
 

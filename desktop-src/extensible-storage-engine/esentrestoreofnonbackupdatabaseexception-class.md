@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentRestoreOfNonBackupDatabaseException-Klasse'
+description: 'Weitere Informationen finden Sie unter: EsentRestoreOfNonBackupDatabaseException-Klasse'
 title: EsentRestoreOfNonBackupDatabaseException-Klasse
 TOCTitle: EsentRestoreOfNonBackupDatabaseException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentRestoreOfNonBackupDatabaseException

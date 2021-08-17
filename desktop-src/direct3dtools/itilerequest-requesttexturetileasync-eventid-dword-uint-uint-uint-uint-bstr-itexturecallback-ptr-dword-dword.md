@@ -1,10 +1,10 @@
 ---
-description: Fordert an, den Inhalt einer gekachelten Textur als zu erhalten. DDS-Datei (DirectDraw Surface).
+description: Fordert an, den Inhalt einer kachelierten Textur als zu erhalten. DDS-Datei (DirectDraw Surface).
 MS-HAID: vspixengine.ITileRequest\_RequestTextureTileAsync\_EventID\_DWORD\_UINT\_UINT\_UINT\_UINT\_BSTR\_ITextureCallback\_ptr\_DWORD\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Itilerequest:: requesttexturetileasync-Methode'
+title: ITileRequest::RequestTextureTileAsync-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: E3F4FAC2-E7D9-4FDF-BE64-73D3EA175A8F
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: e22c3b54c1e04242805d698c37a1d4dd2709fa0b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 20e67b9cd6d05e32488246306edb80d35fc8c6379fe4054f2cb1d7858f8e7402
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124711"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119464"
 ---
-# <a name="span-idvspixengineitilerequest_requesttexturetileasync_eventid_dword_uint_uint_uint_uint_bstr_itexturecallback_ptr_dword_dwordspanitilerequestrequesttexturetileasync-method"></a><span id="vspixengine.itilerequest_requesttexturetileasync_eventid_dword_uint_uint_uint_uint_bstr_itexturecallback_ptr_dword_dword"></span>Itilerequest:: requesttexturetileasync-Methode
+# <a name="span-idvspixengineitilerequest_requesttexturetileasync_eventid_dword_uint_uint_uint_uint_bstr_itexturecallback_ptr_dword_dwordspanitilerequestrequesttexturetileasync-method"></a><span id="vspixengine.itilerequest_requesttexturetileasync_eventid_dword_uint_uint_uint_uint_bstr_itexturecallback_ptr_dword_dword"></span>ITileRequest::RequestTextureTileAsync-Methode
 
-Fordert an, den Inhalt einer gekachelten Textur als zu erhalten. DDS-Datei (DirectDraw Surface).
+Fordert an, den Inhalt einer kachelierten Textur als zu erhalten. DDS-Datei (DirectDraw Surface).
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,47 +48,47 @@ HRESULT RequestTextureTileAsync(
 
 ## <a name="parameters"></a>Parameter
 
-*EventID*   
-Das angegebene Ereignis, mit dem der Inhalt des Puffers verglichen werden soll (z. b. kann sich ein Renderziel im Laufe der Zeit ändern).
+*Eventid*   
+Das angegebene Ereignis, mit dem der Inhalt des Puffers übereinstimmen soll (z. B. kann sich ein Renderziel im Laufe der Zeit ändern).
 
-*texturemeleptr*   
-Die Adresse des angegebenen Textur Objekts.
+*textureFileptr*   
+Die Adresse des angegebenen Texturobjekts.
 
-*tilesubresource*   
-Die angegebene untergeordnete Quelle der Kachel.
+*tileSubresource*   
+Die angegebene Unterressource der Kachel.
 
-*Tilex*   
-Die angegebene X-Position der Kachel.
+*tileX*   
+Die angegebene Kachel X-Position.
 
-*tiley*   
+*tileY*   
 Die angegebene Y-Position der Kachel.
 
-*tilez*   
-Die angegebene Z-Position der Kachel.
+*tileZ*   
+Die angegebene Kachel Z-Position.
 
-*ddsfilename*   
-Eine com-Zeichenfolge, die den Pfadnamen der DDS-Datei enthält, in die die Ergebnisse geschrieben werden.
+*ddsFilename*   
+Eine COM-Zeichenfolge, die den Pfadnamen der DDS-Datei enthält, in die Ergebnisse geschrieben werden.
 
-*prequestcallback*   
-Die Adresse des Rückrufs, der zum Benachrichtigen des Hosts der Ergebnisse verwendet wird.
+*pRequestCallback*   
+Die Adresse des Rückrufs, der verwendet wird, um den Host über Ergebnisse zu benachrichtigen.
 
-*requestcookie*   
-Ein Cookie, das die Anforderung eindeutig identifiziert, und kann verwendet werden, um zu signalisieren, dass es abgebrochen werden soll.
+*requestCookie*   
+Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
-*progressintervalmsekunden*   
-Nicht verwendet.
+*progressIntervalMsecs*   
+Wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Itilerequest**](/windows/desktop/direct3dtools/itilerequest)
+[**ITileRequest**](/windows/desktop/direct3dtools/itilerequest)
 
  
 

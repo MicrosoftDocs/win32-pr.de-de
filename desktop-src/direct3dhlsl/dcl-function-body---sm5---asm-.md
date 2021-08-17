@@ -1,23 +1,23 @@
 ---
-title: dcl_function_body (SM5-ASM)
-description: Deklarieren Sie einen Funktions Text.
+title: dcl_function_body (sm5 - asm)
+description: Deklarieren Sie einen Funktionskörper.
 ms.assetid: 3A651107-BEA6-4D79-938F-8E0243C874C3
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 33f020748ecff270311fbbc89798d82b223b1f34
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 339e7f5d7edb91f4f3405b328286a9ae32a8108efdaafaba1f212870be7ff8b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104101114"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117727234"
 ---
-# <a name="dcl_function_body-sm5---asm"></a>DCL \_ \_ -Funktions Text (SM5-ASM)
+# <a name="dcl_function_body-sm5---asm"></a>\_ \_ dcl-Funktionskörper (sm5 - asm)
 
-Deklarieren Sie einen Funktions Text.
+Deklarieren Sie einen Funktionskörper.
 
 
 
-| DCL- \_ Funktions \_ Text FB\# |
+| dcl \_ function \_ body fb\# |
 |--------------------------|
 
 
@@ -26,29 +26,29 @@ Deklarieren Sie einen Funktions Text.
 
 
 
-| Element                                                          | BESCHREIBUNG                                                              |
+| Element                                                          | Beschreibung                                                              |
 |---------------------------------------------------------------|--------------------------------------------------------------------------|
-| <span id="fb_"></span><span id="FB_"></span>*ÖFB\#*<br/> | \[in \] der Bezeichnung des Speicher Orts, an dem die Funktion angezeigt wird.<br/> |
+| <span id="fb_"></span><span id="FB_"></span>*Fb\#*<br/> | \[in \] Die Bezeichnung des Orts, an dem die Funktion angezeigt wird.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung deklariert einen eindeutigen Funktions Text, dessen Code später im Programm bei der Bezeichnung FB angezeigt wird \# .
+Diese Anweisung deklariert einen eindeutigen Funktionskörper, dessen Code später im Programm bei der Bezeichnung fb angezeigt \# wird.
 
-Funktions Texte werden in Funktionstabellen Deklarationen verwendet. Weitere Informationen finden Sie unter [DCL \_ Function \_ Table](dcl-function-table---sm5---asm-.md).
+Funktionskörper werden in Funktionstabellendeklarationen verwendet. Weitere Informationen finden Sie in der [ \_ dcl-Funktionstabelle. \_ ](dcl-function-table---sm5---asm-.md)
 
-Im Rumpf-Shader und im Domänen-Shader, in dem mehrere Phasen vorhanden sind (Steuerungspunkt Phase, Verzweigungs Phase und joinphase), werden alle Funktions Texte (Bezeichnung FB \# ) nach allen Phasen angezeigt, anstatt nach Phasen gruppiert zu werden.
+Im Hüllen-Shader und Domänen-Shader, in dem es mehrere Phasen gibt (Kontrollpunktphase, Forkphase und Joinphase), werden alle Funktionskörper (Bezeichnung fb ) nach allen Phasen angezeigt, anstatt nach Phase zu gruppiert \# zu werden.
 
-Es gibt keine Beschränkung, wie viele funktionskörper vorhanden sein können.
+Es gibt keine Beschränkung, wie viele Funktionskörper vorhanden sein können.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -56,20 +56,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

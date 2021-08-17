@@ -1,65 +1,65 @@
 ---
-description: Bei Windows Vista wurde die Elementstruktur der Windows-Abbild Beschaffung (WIA) erheblich geändert.
+description: Mit Windows Vista hat sich die Elementstruktur Windows Image Acquisition (WIA) erheblich geändert.
 ms.assetid: dda87bcc-2315-4f0d-87a0-d5a33d5d929a
 title: Informationen zur IWiaItem2-Elementstruktur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e4d3e7d39319c7b1c94f88612c5d571f17f2a027
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ae342f5a85e61b6384604dae703881c6888e3e1cf8e61cc8a39a32ac77ad436
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119264428"
 ---
 # <a name="about-the-iwiaitem2-item-tree"></a>Informationen zur IWiaItem2-Elementstruktur
 
-Bei Windows Vista wurde die Elementstruktur der Windows-Abbild Beschaffung (WIA) erheblich geändert. [**IWiaItem2**](-wia-iwiaitem2.md) Items werden verwendet, um Geräte Attribute und Gerätedaten darzustellen. Abbild Erstellungs Anwendungen sehen ein Windows-Abbild Erfassungsgerät (WIA) 2,0 als hierarchische Struktur von Elementen, wobei das Stamm Element das eigentliche Gerät und die untergeordneten Elemente darstellt, die Elemente wie programmierbare Datenquellen, Bilder oder Ordner darstellen, die Bilder enthalten.
+Mit Windows Vista hat sich die Elementstruktur Windows Image Acquisition (WIA) erheblich geändert. [**IWiaItem2-Elemente**](-wia-iwiaitem2.md) werden verwendet, um Geräteattribute und Gerätedaten darzustellen. Imageerstellungsanwendungen sehen ein WIA 2.0-Gerät (Windows Image Acquisition) als hierarchische Struktur von Elementen, wobei das Stammelement das Gerät selbst und die untergeordneten Elemente darstellen, die Elemente wie programmierbare Datenquellen, Bilder oder Ordner darstellen, die Bilder enthalten.
 
--   [Anwendungs Elemente](#application-items)
+-   [Anwendungselemente](#application-items)
 -   [Elementflags](#item-flags)
--   [Element Kategorien](#item-categories)
--   [Stamm Element](#root-item)
+-   [Elementkategorien](#item-categories)
+-   [Stammelement](#root-item)
 -   [Datenelement](#data-item)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="application-items"></a>Anwendungs Elemente
+## <a name="application-items"></a>Anwendungselemente
 
-Die WIA 2,0-Elementstruktur, die eine Anwendung sehen kann, ist getrennt von der Struktur, die von einem WIA 2,0 Minidriver erstellt und verwaltet wird. Wenn ein Mini Treiber eine Struktur erstellt, verwendet der WIA 2,0-Dienst diese WIA 2,0-Elementstruktur als Leitfaden, um eine Kopie der Struktur zu erstellen, die von Abbild Erstellungs Anwendungen angezeigt werden kann. Elemente in der kopierten Struktur werden als *Anwendungs* Elemente bezeichnet. Elemente in der Struktur, die von einem Mini Treiber erstellt werden, werden als *Treiber* Elemente bezeichnet.
+Die WIA 2.0-Elementstruktur, die eine Anwendung sehen kann, ist von der Struktur getrennt, die von einem WIA 2.0-Minitreiber erstellt und verwaltet wird. Wenn ein Minitreiber eine Struktur erstellt, verwendet der WIA 2.0-Dienst diese WIA 2.0-Elementstruktur als Leitfaden, um eine Kopie der Struktur zu erstellen, die von Imageerstellungsanwendungen angezeigt werden kann. Elemente in der kopierten Struktur werden als *Anwendungselemente* bezeichnet. Elemente in der von einem Minitreiber erstellten Struktur werden als *Treiberelemente* bezeichnet.
 
-Ein WIA-Element kann eine programmierbare Datenquelle für die Dokument-oder Daten eines Scanners darstellen, die auf diesem Gerät gespeichert sind. Ein WIA-Gerät sollte in einzelne Elemente unterteilt werden, die verschiedene Daten beschreiben, die von diesem Gerät erzeugt werden.
+Ein WIA-Element kann eine programmierbare Datenquelle für den Dokumentfeeder eines Scanners oder die auf diesem Gerät gespeicherten Daten darstellen. Ein WIA-Gerät sollte in einzelne Elemente unterteilt werden, die verschiedene von diesem Gerät erzeugte Daten beschreiben.
 
-Beispielsweise kann ein WIA-Scanner, der sowohl die Überprüfung des Flatbed als auch das Scannen von Dokumenten Scans unterstützt, unterteilt werden. Eine stellt die Überprüfungs Funktion für Flat-Scans dar, und die andere stellt die Scanfunktion für die Dokument Prüfung dar.
+Beispielsweise kann ein WIA-Scanner, der sowohl Flatbedscans als auch Dokumentfeederscans unterstützt, in zwei untergeordnete Elemente unterteilt werden. Eine stellt die Flatbed-Scanfunktionalität und die andere die Überprüfungsfunktionalität des Dokumentfeeders dar.
 
-Mehrere Abbilder, die auf einem flachen Scanner angeordnet und gleichzeitig gescannt werden, können in einem einzigen Ordner abgelegt werden. Mithilfe des Segmentierungs Filters ([**iwiasegmentationfilter**](-wia-iwiasegmentationfilter.md)) kann jedes Bild oder jede Unterregion als untergeordnetes Element des Ordners erstellt werden.
+Mehrere Bilder, die auf einem Flatbedscanner angeordnet und gleichzeitig gescannt werden, können in einem Ordner platziert werden. Mithilfe des Segmentierungsfilters ([**IWiaSegmentationFilter**](-wia-iwiasegmentationfilter.md)) kann jedes Bild oder jede Unterregion dann als untergeordnetes Element des Ordners erstellt werden.
 
-Die WIA-Struktur für ein Kamera Gerät, das Fotos speichert ("Film"), kann in Elemente aufgeteilt werden, die Ordner, Unterordner und Fotos darstellen.
+Die WIA-Struktur für ein Kameragerät, das Fotos ("Film") speichert, kann in Elemente unterteilt werden, die Ordner, Unterordner und Fotos darstellen.
 
 ## <a name="item-flags"></a>Elementflags
 
-WIA-elementflags helfen, den Inhalt oder das unterstützte Verhalten eines bestimmten WIA-Elements zu klassifizieren. WIA-elementflags fallen in zwei Gruppen.
+WIA-Elementflags helfen beim Klassifizieren des Inhalts oder des unterstützten Verhaltens eines bestimmten WIA-Elements. WIA-Elementflags sind in zwei Gruppen unterteilt.
 
-1.  Elementstatusflags melden den aktuellen Status des WIA-Elements, z. b. [**wiaitemtypegetrennte**](-wia-wia-item-type-flags.md), **wiaitemtypedeleted** usw.
-2.  Elementdaten Darstellung/nutzungsflags melden die Daten, die das WIA-Element darstellt oder bei der Übertragung erzeugt. [**Wiaitemtypeimage**](-wia-wia-item-type-flags.md) ist beispielsweise ein Daten Darstellungs Flag, das der Anwendung mitteilt, dass die Daten, die dem aktuellen WIA-Element zugeordnet sind, Bilddaten sind und über Bild Daten Eigenschaften verfügen sollen. **WIA \_ IPA \_ - \_ elementflags** ist ein Element für die Element Verwendung, das der Anwendung mitteilt, dass das WIA-Element konfigurierbar ist und einem Satz vordefinierter Konfigurations Regeln entsprechend der [**WIA \_ IPA- \_ Element \_ Kategorie**](-wia-wiaitempropcommonitem.md) folgt und dass die Konfiguration das Ergebnis für jede Datenübertragung möglicherweise ändern kann. (Weitere Informationen zu Kategoriedefinitionen finden [Sie Unterelement Kategorien](#item-categories) Element Kategorien.)
+1.  Elementstatusflags melden den aktuellen Status des WIA-Elements, z. B. [**WiaItemTypeDisconnected,**](-wia-wia-item-type-flags.md) **WiaItemTypeDeleted** usw.
+2.  Elementdatendarstellung/Verwendungsflags melden die Daten, die das WIA-Element darstellt oder bei der Übertragung erzeugen kann. Beispielsweise ist [**WiaItemTypeImage**](-wia-wia-item-type-flags.md) ein Datendarstellungsflag, das der Anwendung mitteilt, dass die dem aktuellen WIA-Element zugeordneten Daten Bilddaten sind und Bilddateneigenschaften aufweisen sollten. **WIA \_ IPA ITEM FLAGS ist ein \_ \_ Elementverwendungsflag,** das die Anwendung darüber informiert, dass das WIA-Element konfigurierbar ist und einem Satz vordefinierter Konfigurationsregeln folgt, die auf der [**WIA IPA ITEM \_ \_ \_ CATEGORY**](-wia-wiaitempropcommonitem.md) basieren, und dass die Konfiguration möglicherweise das Ergebnis für jede Datenübertragung ändern kann. (Weitere Informationen zu Kategoriedefinitionen finden Sie unter [Elementkategorien](#item-categories) von Elementkategorien.)
 
-Die folgende Abbildung zeigt ein Beispiel für eine WIA-Elementstruktur und die verschiedenen Flags, die jedem Element zugeordnet werden können.
+Die folgende Grafik zeigt ein Beispiel für eine WIA-Elementstruktur und die verschiedenen Flags, die jedem Element zugeordnet sein können.
 
-![Beispiele für elementflags für Elemente in einer Struktur](images/scannertree1.jpg)
+![Beispiele für Elementflags für Elemente in einer Struktur](images/scannertree1.jpg)
 
-## <a name="item-categories"></a>Element Kategorien
+## <a name="item-categories"></a>Elementkategorien
 
-WIA-Elemente werden mithilfe der [**WIA \_ IPA \_ Element \_ Category**](-wia-wiaitempropcommonitem.md) -Eigenschaftswerte in Kategorien gruppiert. Diese Kategorien definieren, wie ein WIA-Element behandelt oder verwendet werden soll. Wenn das Element z. b. eine fertige Datei (die \_ Datei mit der Kategorie ist \_ abgeschlossen \_ ) darstellt, sollte eine WIA-Anwendung davon ausgehen, dass die Daten statisch sind und sich auf dem Gerät befinden. Wenn das Element einen feedvorgang (WIA \_ Category \_ Feeder) darstellt, sollte die Anwendung erwarten, dass Sie die erforderlichen Eigenschaften für die Dokument feederstellung enthält und wie eine Dokument-feederstellung funktioniert.
+WIA-Elemente werden mithilfe der [**WIA \_ IPA ITEM \_ \_ CATEGORY-Eigenschaftswerte**](-wia-wiaitempropcommonitem.md) in Kategorien gruppiert. Diese Kategorien definieren, wie ein WIA-Element behandelt oder verwendet werden soll. Wenn das Element beispielsweise eine fertige Datei (WIA \_ CATEGORY \_ FINISHED \_ FILE) darstellt, sollte eine WIA-Anwendung davon ausgehen, dass die Daten statisch sind und sich auf dem Gerät befinden. Wenn das Element einen Feeder (WIA \_ CATEGORY \_ FEEDER) darstellt, sollte die Anwendung erwarten, dass es die erforderlichen Eigenschaften des Dokumentfeeders enthält und wie ein Dokumentfeeder funktioniert.
 
-Die von WIA definierten Kategorien lauten:
+Die von WIA definierten Kategorien sind:
 
--   Automatische WIA- \_ Kategorie \_
--   Kategorie- \_ \_ Feeder WIA
--   Film der Kategorie "WIA" \_ \_
--   Datei der WIA- \_ Kategorie \_ abgeschlossen \_
--   WIA- \_ Kategorie \_
+-   WIA \_ CATEGORY \_ AUTO
+-   WIA \_ CATEGORY \_ FEEDER
+-   WIA \_ CATEGORY \_ FILM
+-   \_ \_ FERTIGE \_ WIA-KATEGORIEDATEI
+-   WIA \_ CATEGORY \_ FLATBED
 
-Beispielsweise kann für das Element des Typs für einen Scanner die [**WIA \_ IPA \_ - \_ elementflags**](-wia-wiaitempropcommonitem.md) auf [**wiaitemtypeimage**](-wia-wia-item-type-flags.md), **wiaitemtypetransfer** und **wiaitemtypeprogrammiabledatasource** festgelegt werden, und die **WIA \_ IPA \_ Item \_ Category** -Eigenschaft ist auf die WIA-Kategorie "vereinfacht" festgelegt \_ \_ .
+Beispielsweise können für das Flatbedelement eines Scanners die [**WIA \_ IPA ITEM \_ \_ FLAGS**](-wia-wiaitempropcommonitem.md) auf [**WiaItemTypeImage,**](-wia-wia-item-type-flags.md) **WiaItemTypeTransfer** und **WiaItemTypeProgrammableDataSource** und die **WIA IPA ITEM \_ \_ \_ CATEGORY-Eigenschaft** auf WIA CATEGORY FLATBED festgelegt \_ \_ sein.
 
-Die folgende Tabelle zeigt die WIA-kategoriengruppierung mit elementflags und WIA-Elementen. Diese Tabelle enthält keine vollständige Liste der WIA-elementflags, die von WIA definiert werden.
+Die folgende Tabelle zeigt die WIA-Kategoriegruppierung mit Elementflags und WIA-Elementen. Diese Tabelle enthält keine vollständige Liste der WIA-Elementflags, die von WIA definiert werden.
 
 
 
@@ -73,8 +73,8 @@ Die folgende Tabelle zeigt die WIA-kategoriengruppierung mit elementflags und WI
 <thead>
 <tr class="header">
 <th>WIA-Kategorie</th>
-<th>Gültige WIA-elementflags</th>
-<th>WIA-Eigenschaften Satz</th>
+<th>Gültige WIA-Elementflags</th>
+<th>WIA-Eigenschaftensatz</th>
 <th>WIA-Elemente</th>
 </tr>
 </thead>
@@ -82,62 +82,62 @@ Die folgende Tabelle zeigt die WIA-kategoriengruppierung mit elementflags und WI
 <tr class="odd">
 <td>WIA_CATEGORY_AUTO</td>
 <td><ul>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypeprogrammabledatasource</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypeimage</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypetransfer</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypefile</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeProgrammableDataSource</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeImage</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeTransfer</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeFile</strong></a></li>
 </ul></td>
-<td>Der Eigenschaften Satz umfasst automatisch konfigurierte Scanner-Eigenschaften.</td>
-<td>Ein automatisches Element, das die automatisch konfigurierten Überprüfungs Einstellungen des Scanners darstellt.</td>
+<td>Der Eigenschaftensatz enthält automatisch konfigurierte Scannereigenschaften.</td>
+<td>Automatisches WIA-Element, das die automatisch konfigurierten Scaneinstellungen des Scanners darstellt.</td>
 </tr>
 <tr class="even">
 <td>WIA_CATEGORY_FEEDER</td>
 <td><ul>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypeprogrammabledatasource</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypeimage</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypedocument</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypetransfer</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypefolder</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeProgrammableDataSource</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeImage</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeDocument</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeTransfer</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeFolder</strong></a></li>
 </ul></td>
-<td>Der Eigenschaften Satz umfasst Eigenschaften des feedscannersteuerelements (normalerweise Bild-und Dokument spezifischer Eigenschaften Satz).</td>
-<td>WIA-feeselemente, einschließlich untergeordneter Elemente, die die Vorder-und Hintergrund Seiten eines Dokuments darstellen.</td>
+<td>Der Eigenschaftensatz enthält Eigenschaften des Feederscanner-Steuerelements (in der Regel bild- und dokumentspezifische Eigenschaften).</td>
+<td>WIA Feeder-Elemente, einschließlich untergeordneter Elemente, die die Front- und Back-Seiten eines Dokuments darstellen.</td>
 </tr>
 <tr class="odd">
 <td>WIA_CATEGORY_FILM</td>
 <td><ul>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypeprogrammabledatasource</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypeimage</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypetransfer</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypefolder</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeProgrammableDataSource</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeImage</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeTransfer</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeFolder</strong></a></li>
 </ul></td>
-<td>Der Eigenschaften Satz umfasst die Eigenschaften für den Filmscanner-Steuerelement (normalerweise Bild-und Dokument spezifischer Eigenschaften Satz)</td>
-<td>WIA-Film Elemente, einschließlich untergeordneter Elemente, die die einzelnen scanungs Rahmen darstellen.</td>
+<td>Der Eigenschaftensatz umfasst Eigenschaften von Filmscanner-Steuerelementen (normalerweise bild- und dokumentspezifische Eigenschaften).</td>
+<td>WIA-Filmelemente, einschließlich untergeordneter Elemente, die die einzelnen Scanframes darstellen.</td>
 </tr>
 <tr class="even">
 <td>WIA_CATEGORY_FINISHED_FILE</td>
 <td><ul>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypefolder</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypeimage</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypeaudiodatei</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypevideo</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypedocument</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypetransfer</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeFolder</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeImage</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeAudio</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeVideo</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeDocument</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeTransfer</strong></a></li>
 </ul></td>
-<td>Die für dieses Element festgelegte Eigenschaft hängt vom Typ des gemeldeten Elements ab. Beispielsweise sollte <a href="-wia-wia-item-type-flags.md"><strong>wiaitemtypeimage</strong></a> einige Bildelement Eigenschaften wie Bits pro Pixel usw. enthalten.</td>
-<td>WIA-Speicherelemente, einschließlich untergeordneter Elemente, die den fertiggestellten Dateiinhalt darstellen (Datendateien wie JPEG, HTML, txt usw.).</td>
+<td>Die für dieses Element festgelegte Eigenschaft hängt vom gemeldeten Elementtyp ab. Beispielsweise sollte <a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeImage</strong></a> einige Bildelementeigenschaften wie Bits pro Pixel usw. enthalten.</td>
+<td>WIA-Speicherelemente, einschließlich untergeordneter Elemente, die fertige Dateiinhalte darstellen (Datendateien wie JPEG, HTML, TXT usw.).</td>
 </tr>
 <tr class="odd">
 <td>WIA_CATEGORY_FLATBED</td>
 <td><ul>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypeprogrammabledatasource</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypeimage</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypedocument</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypetransfer</strong></a></li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypefolder</strong></a>– kann vorhanden sein, wenn der Scanner das Scannen von mehreren Elementen unterstützt.</li>
-<li><a href="-wia-wia-item-type-flags.md"><strong>Wiaitemtypegenerated</strong></a>– kann vorhanden sein, wenn die Anwendung während einer Scan Sitzung mit mehreren Elementen ein WIA-Element generiert.</li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeProgrammableDataSource</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeImage</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeDocument</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeTransfer</strong></a></li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeFolder</strong></a>– kann vorhanden sein, wenn der Scanner die Überprüfung mit mehreren Elemente unterstützt.</li>
+<li><a href="-wia-wia-item-type-flags.md"><strong>WiaItemTypeGenerated</strong></a>– kann vorhanden sein, wenn die Anwendung während einer Überprüfungssitzung mit mehreren Element ein WIA-Element generiert.</li>
 </ul></td>
-<td>Der Eigenschaften Satz umfasst Eigenschaften für das Überprüfung des über prüfbilds (normalerweise Bild-und Dokument spezifischer Eigenschaften Satz).</td>
-<td>Elemente mit einem flachen Element, einschließlich untergeordneter Elemente, die Bereiche darstellen, die auf der Registerkarte "Flatbed" des Scanners gescannt werden.</td>
+<td>Der Eigenschaftensatz enthält Eigenschaften des Flatbedscanner-Steuerelements (in der Regel bild- und dokumentspezifische Eigenschaften).</td>
+<td>WIA-Flatbed-Elemente, einschließlich untergeordneter Elemente, die Bereiche darstellen, die auf dem Flatbed-Kennzeichen des Scanners gescannt werden.</td>
 </tr>
 </tbody>
 </table>
@@ -146,31 +146,31 @@ Die folgende Tabelle zeigt die WIA-kategoriengruppierung mit elementflags und WI
 
  
 
-Die folgende Abbildung zeigt ein Beispiel für eine WIA-Elementstruktur und die verschiedenen Kategorien, die jedem Element zugeordnet werden können.
+Die folgende Grafik zeigt ein Beispiel für eine WIA-Elementstruktur und die verschiedenen Kategorien, die jedem Element zugeordnet werden können.
 
-![Beispiele für Element Kategorien für Elemente in einem Baum](images/scannertree2.jpg)
+![Beispiele für Elementkategorien für Elemente in einer Struktur](images/scannertree2.jpg)
 
-## <a name="root-item"></a>Stamm Element
+## <a name="root-item"></a>Stammelement
 
-Ein WIA-Stamm Element ist ein Ordner Element, das mit [**wiaitemtyperoot**](-wia-wia-item-type-flags.md) -und **wiaitemtypedevice** -Flags gekennzeichnet ist, die das Gerät selbst darstellen. Sie enthält Geräte Attribute wie Hersteller, Gerätename und Treiber Attribute wie Treiber Version und Benutzeroberflächen-Klassen Bezeichner (CLSID). Abbild Erstellungs Anwendungen rufen den Stamm der WIA-Elementstruktur auf, indem Sie die [**IWiaDevMgr2:: createdevice**](-wia-iwiadevmgr2-createdevice.md) -Methode aufrufen. Die Anwendung verwendet das root-Element, um Zugriff auf die einzelnen untergeordneten WIA-Elemente zu erhalten, indem die Struktur aufgelistet wird (siehe [**IEnumWiaItem2**](-wia-ienumwiaitem2.md)).
+Ein WIA-Stammelement ist ein Ordnerelement, das mit den Flags [**WiaItemTypeRoot**](-wia-wia-item-type-flags.md) und **WiaItemTypeDevice** markiert ist, die das Gerät selbst darstellen. Sie enthält Geräteattribute wie Hersteller, Gerätename und Treiberattribute wie Treiberversion und BENUTZEROBERFLÄCHEN-Klassenbezeichner (USER Interface Class Identifier, CLSID). Imageerstellungsanwendungen rufen den Stamm zur WIA-Elementstruktur ab, indem sie die [**IWiaDevMgr2::CreateDevice-Methode**](-wia-iwiadevmgr2-createdevice.md) aufrufen. Die Anwendung verwendet das Stammelement, um Zugriff auf die einzelnen untergeordneten WIA-Elemente zu erhalten, indem sie die Struktur aufzählt (siehe [**IEnumWiaItem2**](-wia-ienumwiaitem2.md)).
 
 ## <a name="data-item"></a>Datenelement
 
-Alle Elemente, die zum Übertragen von Daten verwendet werden können, werden als Datenelement betrachtet. Dies schließt Elemente ein, die mit dem [**wiaitemtypeprogrammiabledatasource**](-wia-wia-item-type-flags.md) -Flag gekennzeichnet sind.
+Jedes Element, das zum Übertragen von Daten verwendet werden kann, wird als Datenelement betrachtet. Dies schließt Elemente ein, die mit dem [**Flag WiaItemTypeProgrammableDataSource gekennzeichnet**](-wia-wia-item-type-flags.md) sind.
 
-Ordner Elemente und nicht Ordner Elemente können die Möglichkeit zur Übertragung von Daten verfügbar machen, indem Sie mit dem [**wiaitemtypetransfer**](-wia-wia-item-type-flags.md) -Flag gekennzeichnet werden. Jedes Element, für das dieses Flag festgelegt ist, muss die folgenden WIA-Element Eigenschaften bereitstellen:
+Ordnerelemente und Nichtordnerelemente können die Möglichkeit zum Übertragen von Daten verfügbar machen, indem sie mit dem [**WiaItemTypeTransfer-Flag markiert**](-wia-wia-item-type-flags.md) werden. Jedes Element, für das dieses Flag festgelegt ist, muss die folgenden WIA-Elementeigenschaften bereitstellen:
 
--   [**WIA \_ IPA- \_ Zugriffs \_ Rechte**](-wia-wiaitempropcommonitem.md)
--   [**WIA \_ IPA- \_ Element \_ Größe**](-wia-wiaitempropcommonitem.md)
--   [**WIA \_ IPA- \_ Puffer \_ Größe**](-wia-wiaitempropcommonitem.md)
--   [**WIA \_ IPA- \_ Format**](-wia-wiaitempropcommonitem.md)
--   [**WIA \_ IPA- \_ bevorzugtes \_ Format**](-wia-wiaitempropcommonitem.md)
+-   [**\_ \_ WIA-IPA-ZUGRIFFSRECHTE \_**](-wia-wiaitempropcommonitem.md)
+-   [**\_ \_ WIA-IPA-ELEMENTGRÖßE \_**](-wia-wiaitempropcommonitem.md)
+-   [**\_ \_ WIA-IPA-PUFFERGRÖßE \_**](-wia-wiaitempropcommonitem.md)
+-   [**\_WIA-IPA-FORMAT \_**](-wia-wiaitempropcommonitem.md)
+-   [**BEVORZUGTES \_ WIA-IPA-FORMAT \_ \_**](-wia-wiaitempropcommonitem.md)
 -   [**WIA \_ IPA \_ TYMED**](-wia-wiaitempropcommonitem.md)
--   [**WIA \_ IPA- \_ Dateinamen \_ Erweiterung**](-wia-wiaitempropcommonitem.md)
+-   [**\_ \_ WIA-IPA-DATEINAMENERWEITERUNG \_**](-wia-wiaitempropcommonitem.md)
 
-Programmierbare Datenquellen Elemente, die mit dem [**wiaitemtypetransfer**](-wia-wia-item-type-flags.md) -Flag gekennzeichnet sind, müssen außerdem die erforderliche Eigenschaft für das Datenelement angeben.
+Programmierbare Datenquellenelemente, die mit dem [**WiaItemTypeTransfer-Flag**](-wia-wia-item-type-flags.md) gekennzeichnet sind, müssen auch den erforderlichen Eigenschaftensatz für das Datenelement enthalten.
 
-WIA-Datenelemente haben möglicherweise zusätzliche Eigenschaften, abhängig von den Flag-Einstellungen des Elements. Beispielsweise sollten WIA-Elemente, die mit dem [**wiaitemtypeimage**](-wia-wia-item-type-flags.md) -Flag gekennzeichnet sind, über Bild spezifische Informations Eigenschaften verfügen, wie [**WIA \_ IPA- \_ Tiefe**](-wia-wiaitempropcommonitem.md) und **WIA \_ IPA- \_ Anzahl \_ von \_ Zeilen**.
+WIA-Datenelemente können abhängig von den Flageinstellungen des Elements zusätzliche Eigenschaften aufweisen. Beispielsweise sollten WIA-Elemente, die mit dem [**WiaItemTypeImage-Flag**](-wia-wia-item-type-flags.md) gekennzeichnet sind, bildspezifische Informationseigenschaften wie [**WIA \_ IPA \_ DEPTH**](-wia-wiaitempropcommonitem.md) und **WIA \_ IPA \_ NUMBER OF LINES \_ \_ aufweisen.**
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

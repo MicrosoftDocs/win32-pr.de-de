@@ -1,9 +1,9 @@
 ---
-title: Benachrichtigungs Code für NM_RCLICK (Strukturansicht) (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuer Elements, dass der Benutzer mit der rechten Maustaste im-Steuerelement geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_RCLICK -Benachrichtigungscode (Strukturansicht) (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Strukturansichtssteuerelements, dass der Benutzer auf die rechte Maustaste innerhalb des Steuerelements geklickt hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 5816d8b8-7f3d-477d-9116-1b3670d99240
 keywords:
-- NM_RCLICK (Strukturansicht) Windows-Steuerelemente für Benachrichtigungs Code
+- NM_RCLICK -Benachrichtigungscode (Strukturansicht) Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 58d72ee220bf33189e8954a2e1ef454b22886553
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7b0cb27b37764090a778e2c3ba91f4dbaa807d9cd8cc4e48371f0b2839fda417
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078904"
 ---
-# <a name="nm_rclick-tree-view-notification-code"></a>NM \_ rclick-Benachrichtigungs Code (Strukturansicht)
+# <a name="nm_rclick-tree-view-notification-code"></a>NM \_ RCLICK-Benachrichtigungscode (Strukturansicht)
 
-Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuer Elements, dass der Benutzer mit der rechten Maustaste im-Steuerelement geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Strukturansichtssteuerelements, dass der Benutzer auf die rechte Maustaste innerhalb des Steuerelements geklickt hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,13 +41,13 @@ NM_RCLICK
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die zusätzliche Informationen zu dieser Benachrichtigung enthält.
+Zeiger auf eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) die zusätzliche Informationen zu dieser Benachrichtigung enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, um die Standard Verarbeitung zu verhindern, oder NULL, um die Standard Verarbeitung
+Gibt einen Wert ungleich 0 (null) zurück, um die Standardverarbeitung zu verhindern, oder 0 (null), um die Standardverarbeitung zuzulassen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Gibt einen Wert ungleich 0 (null) zurück, um die Standard Verarbeitung zu verhi
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

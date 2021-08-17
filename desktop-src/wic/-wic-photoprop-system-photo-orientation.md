@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. Orientation-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Photo.Orientation-Eigenschaft.
 ms.assetid: 27e6d4f5-39d5-4cb4-88bc-b0d61ccaa2f3
-title: System. Photo. Orientation-Foto-metadatenrichtlinie
+title: Richtlinie für System.Photo.Orientation-Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a28f4f350cd1a4c24d71ec737b4679aea2f7cab5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 87f9496942e6be971e0e047596125669fc9112cf82bce6eb02ec7e1cdbddc4de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050297"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119087066"
 ---
-# <a name="systemphotoorientation-photo-metadata-policy"></a>System. Photo. Orientation-Foto-metadatenrichtlinie
+# <a name="systemphotoorientation-photo-metadata-policy"></a>Richtlinie für System.Photo.Orientation-Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. Photo. Orientation](../properties/props-system-photo-meteringmode.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.Photo.Orientation-Eigenschaft.](../properties/props-system-photo-meteringmode.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ Foto \_ Ausrichtung
+\_ \_ PKEY-Fotoausrichtung
 
 ### <a name="containers"></a>Container
 
@@ -27,7 +27,7 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ UI2
 
@@ -35,46 +35,46 @@ VT \_ UI2
 
 UShort
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                   | Datenträger Format |
+| Auftrag | Pfad                   | Datenträgerformat |
 |-------|------------------------|-------------|
-| 1     | /App1/IFD/{ushort = 274} | ushort      |
-| 2     | /XMP/TIFF: Ausrichtung  | Unicode     |
+| 1     | /app1/ifd/{ushort=274} | ushort      |
+| 2     | /xmp/tiff:Orientation  | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                   | Datenträger Format |
+| Auftrag | Pfad                   | Datenträgerformat |
 |-------|------------------------|-------------|
-| 1     | /App1/IFD/{ushort = 274} | ushort      |
-| 2     | /XMP/TIFF: Ausrichtung  | Unicode     |
+| 1     | /app1/ifd/{ushort=274} | ushort      |
+| 2     | /xmp/tiff:Orientation  | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                   |
 |-------|------------------------|
-| 1     | /App1/IFD/{ushort = 274} |
-| 2     | /XMP/TIFF: Ausrichtung  |
+| 1     | /app1/ifd/{ushort=274} |
+| 2     | /xmp/tiff:orientation  |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /IFD/{ushort = 274}         | ushort      |
-| 2     | /IFD/XMP/TIFF: Ausrichtung | Unicode     |
+| 1     | /ifd/{ushort=274}         | ushort      |
+| 2     | /ifd/xmp/tiff:Orientation | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /IFD/{ushort = 274}         | ushort      |
-| 2     | /IFD/XMP/TIFF: Ausrichtung | Unicode     |
+| 1     | /ifd/{ushort=274}         | ushort      |
+| 2     | /ifd/xmp/tiff:Orientation | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                      |
 |-------|---------------------------|
-| 1     | /IFD/{ushort = 274}         |
-| 2     | /IFD/XMP/TIFF: Ausrichtung |
+| 1     | /ifd/{ushort=274}         |
+| 2     | /ifd/xmp/tiff:orientation |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. Orientation](../properties/props-system-photo-meteringmode.md)
+[System.Photo.Orientation](../properties/props-system-photo-meteringmode.md)
 </dt> </dl>
 
  

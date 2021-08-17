@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen zu JET_COMMIT_ID Mitgliedern
-title: JET_COMMIT_ID Member (Microsoft.Isam.Esent.Interop.Windows8)
+description: 'Weitere Informationen finden Sie unter: JET_COMMIT_ID Mitglieder'
+title: JET_COMMIT_ID (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: JET_COMMIT_ID members
 ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.Windows8.JET_COMMIT_ID
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.jet_commit_id_members(v=EXCHG.10)
@@ -14,14 +14,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118767060"
 ---
-# <a name="jet_commit_id-members"></a>JET_COMMIT_ID-Member
+# <a name="jet_commit_id-members"></a>JET_COMMIT_ID Member
 
-Einschließen geschützter Member  
-Einschließen geerbter Member  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Vom Informationskontext umschlossene Daten, die von JET_PFNEMITLOGDATA ausgegeben werden.
+Der Informationskontext umgibt Daten, die von einem JET_PFNEMITLOGDATA.
 
-Der [JET_COMMIT_ID-Typ](./jet-commit-id-class.md) macht die folgenden Member verfügbar.
+Der [JET_COMMIT_ID](./jet-commit-id-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="methods"></a>Methoden
 
@@ -30,7 +30,7 @@ Der [JET_COMMIT_ID-Typ](./jet-commit-id-class.md) macht die folgenden Member ver
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
@@ -72,7 +72,7 @@ Der [JET_COMMIT_ID-Typ](./jet-commit-id-class.md) macht die folgenden Member ver
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="dn335330(v=exchg.10).md">ToString</a></td>
-<td>Generieren Sie eine Zeichenfolgendarstellung der -Struktur. (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>.)</td>
+<td>Generiert eine Zeichenfolgendarstellung der -Struktur. (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -87,39 +87,39 @@ Oben
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn350944.puboperator(exchg.10).gif" title="Öffentlicher Operator" alt="Public operator" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn335331(v=exchg.10).md">Gleichheit</a></td>
-<td>Bestimmen Sie, ob eine commitid gleich einer anderen commitid ist.</td>
+<td>Bestimmen Sie, ob eine Commit-ID gleich einer anderen commitid ist.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn350944.puboperator(exchg.10).gif" title="Öffentlicher Operator" alt="Public operator" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn335457(v=exchg.10).md">GreaterThan</a></td>
-<td>Bestimmen Sie, ob eine commitid vor einer anderen commitid liegt.</td>
+<td>Bestimmen Sie, ob eine Commit-ID vor einer anderen commitid steht.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn350944.puboperator(exchg.10).gif" title="Öffentlicher Operator" alt="Public operator" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn335332(v=exchg.10).md">GreaterThanOrEqual</a></td>
-<td>Bestimmen Sie, ob eine commitid vor einer anderen commitid liegt.</td>
+<td>Bestimmen Sie, ob eine Commit-ID vor einer anderen commitid steht.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn350944.puboperator(exchg.10).gif" title="Öffentlicher Operator" alt="Public operator" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn335462(v=exchg.10).md">Ungleichheit</a></td>
-<td>Bestimmen Sie, ob eine commitid ungleich einer anderen commitid ist.</td>
+<td>Bestimmen Sie, ob eine Commit-ID nicht gleich einer anderen Commit-ID ist.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn350944.puboperator(exchg.10).gif" title="Öffentlicher Operator" alt="Public operator" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn335335(v=exchg.10).md">LessThan</a></td>
-<td>Bestimmen Sie, ob eine commitid vor einer anderen commitid liegt.</td>
+<td>Bestimmen Sie, ob eine Commit-ID vor einer anderen commitid steht.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn350944.puboperator(exchg.10).gif" title="Öffentlicher Operator" alt="Public operator" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn335463(v=exchg.10).md">LessThanOrEqual</a></td>
-<td>Bestimmen Sie, ob eine commitid vor einer anderen commitid liegt.</td>
+<td>Bestimmen Sie, ob eine Commit-ID vor einer anderen commitid steht.</td>
 </tr>
 </tbody>
 </table>

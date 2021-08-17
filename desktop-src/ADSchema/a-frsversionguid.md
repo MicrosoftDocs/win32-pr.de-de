@@ -1,11 +1,11 @@
 ---
 title: FRS-Version-GUID-Attribut
-description: Falls vorhanden, bedeutet das Ändern dieses Werts, dass eine Konfigurationsänderung für diese Replikatgruppe vorgenommen wurde.
+description: Wenn dieser Wert vorhanden ist, deutet die Änderung dieses Werts darauf hin, dass eine Konfigurationsänderung an dieser Replikatgruppe vorgenommen wurde.
 ms.assetid: 27cd68c5-a8aa-4c14-bf1d-0eb7c4d9cca5
 ms.tgt_platform: multiple
 keywords:
 - FRS-Version-GUID-Attribut AD-Schema
-- Ad-Schema des fRSVersionGUID-Attributs
+- AD-Schema des fRSVersionGUID-Attributs
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118961429"
 ---
 # <a name="frs-version-guid-attribute"></a>FRS-Version-GUID-Attribut
 
-Falls vorhanden, bedeutet das Ändern dieses Werts, dass eine Konfigurationsänderung für diese Replikatgruppe vorgenommen wurde.
+Wenn dieser Wert vorhanden ist, deutet die Änderung dieses Werts darauf hin, dass eine Konfigurationsänderung an dieser Replikatgruppe vorgenommen wurde.
 
 
 
@@ -35,7 +35,7 @@ Falls vorhanden, bedeutet das Ändern dieses Werts, dass eine Konfigurationsänd
 | Aktualisieren von Berechtigungen  | \-                                                    |
 | Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.43                                 |
-| System-ID-GUID    | 26d9736c-6070-11d1-a9c6-0000f80367c1                  |
+| System-Id-Guid    | 26d9736c-6070-11d1-a9c6-0000f80367c1                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -57,10 +57,10 @@ Falls vorhanden, bedeutet das Ändern dieses Werts, dass eine Konfigurationsänd
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist einwertig       | True                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | 16                                                        |
 | Range-Upper            | 16                                                        |
@@ -78,10 +78,10 @@ Falls vorhanden, bedeutet das Ändern dieses Werts, dass eine Konfigurationsänd
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist einwertig       | True                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | 16                                                        |
 | Range-Upper            | 16                                                        |
@@ -99,10 +99,10 @@ Falls vorhanden, bedeutet das Ändern dieses Werts, dass eine Konfigurationsänd
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist einwertig       | True                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | 16                                                        |
 | Range-Upper            | 16                                                        |
@@ -120,10 +120,10 @@ Falls vorhanden, bedeutet das Ändern dieses Werts, dass eine Konfigurationsänd
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Is-Single-Valued       | True                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | 16                                                        |
 | Range-Upper            | 16                                                        |
@@ -141,10 +141,10 @@ Falls vorhanden, bedeutet das Ändern dieses Werts, dass eine Konfigurationsänd
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Is-Single-Valued       | True                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | 16                                                        |
 | Range-Upper            | 16                                                        |
@@ -162,10 +162,10 @@ Falls vorhanden, bedeutet das Ändern dieses Werts, dass eine Konfigurationsänd
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Is-Single-Valued       | True                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | 16                                                        |
 | Range-Upper            | 16                                                        |

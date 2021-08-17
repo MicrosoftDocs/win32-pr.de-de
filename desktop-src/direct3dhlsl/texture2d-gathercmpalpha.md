@@ -27,7 +27,7 @@ Samples and compares a Texture2D and returns the alpha component. (Stichprobenen
 
 
 
-| Methode                                                                                                                       | Beschreibung                                                                                                      |
+| Methode                                                                                                                       | BESCHREIBUNG                                                                                                      |
 |:-----------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|
 | [**GatherCmpAlpha(S,float,float,int)**](sm5-object-texture2d-gathercmpalpha.md)                                             | Analysiert und vergleicht eine Textur und gibt die Alphakomponente zurück.<br/>                                       |
 | [**GatherCmpAlpha(S,float,float,int,uint)**](t2d-gathercmpalpha-s-float-float-int-uint-.md)                                 | Samples and compares a texture and returns the alpha component along with status about the operation. (Stichprobenentnahme und Vergleich einer Textur und Rückgabe der Alphakomponente zusammen mit dem Status des Vorgangs.<br/> |

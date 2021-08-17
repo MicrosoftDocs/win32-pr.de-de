@@ -27,7 +27,7 @@ Probieren Sie eine [**Texture2D**](sm5-object-texture2d.md) aus, und gibt die bl
 
 
 
-| Methode                                                                                                  | Beschreibung                                                                                                                                      |
+| Methode                                                                                                  | BESCHREIBUNG                                                                                                                                      |
 |:--------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**GatherBlue(S,float,int)**](sm5-object-texture2d-gatherblue.md)                                       | Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden.<br/>                                 |
 | [**GatherBlue(S,float,int,uint)**](t2d-gatherblue-s-float-int-uint-.md)                                 | Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang zusammen mit dem Kachelzuordnungsstatus verwendet werden.<br/> |

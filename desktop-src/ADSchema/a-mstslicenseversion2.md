@@ -54,10 +54,10 @@ Version des zweiten Terminalservers pro Benutzer-CAL.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Is-Single-Valued       | True         |
-| Ist indiziert             | True         |
-| Im globalen Katalog      | False        |
+| System-Only            | Falsch        |
+| Is-Single-Valued       | Richtig         |
+| Ist indiziert             | Richtig         |
+| Im globalen Katalog      | Falsch        |
 | NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |
@@ -75,10 +75,10 @@ Version des zweiten Terminalservers pro Benutzer-CAL.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Is-Single-Valued       | True         |
-| Ist indiziert             | True         |
-| Im globalen Katalog      | False        |
+| System-Only            | Falsch        |
+| Is-Single-Valued       | Richtig         |
+| Ist indiziert             | Richtig         |
+| Im globalen Katalog      | Falsch        |
 | NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |
@@ -96,10 +96,10 @@ Version des zweiten Terminalservers pro Benutzer-CAL.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Is-Single-Valued       | True         |
-| Ist indiziert             | True         |
-| Im globalen Katalog      | False        |
+| System-Only            | Falsch        |
+| Is-Single-Valued       | Richtig         |
+| Ist indiziert             | Richtig         |
+| Im globalen Katalog      | Falsch        |
 | NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |

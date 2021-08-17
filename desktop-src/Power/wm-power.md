@@ -1,26 +1,26 @@
 ---
-description: Benachrichtigt Anwendungen, dass das System, üblicherweise ein Akku gesteuerter PC, im Begriff ist, in einen angehaltenen Modus zu wechseln.
+description: Benachrichtigt Anwendungen darüber, dass das System , in der Regel ein akkugestützter Personalcomputer, in den angehaltenen Modus versetzt wird.
 ms.assetid: ceaa5ca4-799e-4801-96cd-aeea3dfd7d52
-title: WM_POWER Meldung (Winuser. h)
+title: WM_POWER-Nachricht (WinUser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dc53fd165ee1cefe8970f85daea04b931a673b33
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5fd525b4bf229fdb04dac4c1d1492a52dad44317344f58a2f0807ba9afbdc962
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119143183"
 ---
-# <a name="wm_power-message"></a>\_Power Message-WM
+# <a name="wm_power-message"></a>WM \_ POWER-Nachricht
 
-Benachrichtigt Anwendungen, dass das System, üblicherweise ein Akku gesteuerter PC, im Begriff ist, in einen angehaltenen Modus zu wechseln.
+Benachrichtigt Anwendungen darüber, dass das System , in der Regel ein akkugestützter Personalcomputer, in den angehaltenen Modus versetzt wird.
 
 > [!Note]  
-> Die **WM- \_ Strom** Meldung ist veraltet. Sie wird nur für die Kompatibilität mit 16-Bit-Windows-basierten Anwendungen bereitgestellt. Anwendungen sollten die [**WM- \_ powerbroadcast**](wm-powerbroadcast.md) -Nachricht verwenden.
+> Die **WM \_ POWER-Nachricht** ist veraltet. Sie wird nur aus Gründen der Kompatibilität mit 16-Bit-Windows-basierten Anwendungen bereitgestellt. Anwendungen sollten die [**WM \_ POWERBROADCAST-Nachricht**](wm-powerbroadcast.md) verwenden.
 
  
 
-Ein Fenster empfängt diese Meldung über seine **WindowProc** -Funktion.
+Ein Fenster empfängt diese Meldung über seine **WindowProc-Funktion.**
 
 
 ```C++
@@ -38,32 +38,32 @@ LRESULT CALLBACK WindowProc
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Ein Handle für Fenster.
+Ein Handle für fenster.
 
 </dd> <dt>
 
-*Umschlag* 
+*uMsg* 
 </dt> <dd>
 
-Der **WM- \_ Strom** Nachrichten Bezeichner.
+Der **WM POWER-Nachrichtenbezeichner. \_**
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Die Strom Ereignis Benachrichtigung. Dieser Parameter kann einen der folgenden Werte annehmen.
+Die Energieereignisbenachrichtigung. Dieser Parameter kann einen der folgenden Werte annehmen.
 
 
 
 | Wert                                                                                                                                                                        | Bedeutung                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="PWR_CRITICALRESUME"></span><span id="pwr_criticalresume"></span><dl> <dt>**PWR \_ criticalresume**</dt> </dl> | Gibt an, dass das System den Vorgang nach dem Wechsel in den Modus "angehalten" fortsetzt, ohne zuerst eine **PWR \_ suspendrequest** -Benachrichtigungs Meldung an die Anwendung zu senden Eine Anwendung sollte alle notwendigen Wiederherstellungs Aktionen ausführen.<br/>                                                   |
-| <span id="PWR_SUSPENDREQUEST"></span><span id="pwr_suspendrequest"></span><dl> <dt>**PWR \_ suspendrequest**</dt> </dl> | Gibt an, dass das System in den Modus "angehalten" versetzt wird.<br/>                                                                                                                                                                                                                                 |
-| <span id="PWR_SUSPENDRESUME"></span><span id="pwr_suspendresume"></span><dl> <dt>**PWR \_ suspendresume**</dt> </dl>    | Gibt an, dass das System den Vorgang fortsetzt, nachdem der angehaltene Modus in den normalen Zustand versetzt wurde. das System überträgt eine **PWR \_ suspendrequest** -Benachrichtigungs Meldung an die Anwendung, bevor das System angehalten wurde. Eine Anwendung sollte alle notwendigen Wiederherstellungs Aktionen ausführen.<br/> |
+| <span id="PWR_CRITICALRESUME"></span><span id="pwr_criticalresume"></span><dl> <dt>**PWR \_ CRITICALRESUME**</dt> </dl> | Gibt an, dass das System den Vorgang nach dem Wechseln in den angehaltenen Modus fortsetzen kann, ohne zuvor eine **PWR SUSPENDREQUEST-Benachrichtigungsmeldung \_** an die Anwendung zu senden. Eine Anwendung sollte alle erforderlichen Wiederherstellungsaktionen ausführen.<br/>                                                   |
+| <span id="PWR_SUSPENDREQUEST"></span><span id="pwr_suspendrequest"></span><dl> <dt>**PWR \_ SUSPENDREQUEST**</dt> </dl> | Gibt an, dass das System in den angehaltenen Modus wechselt.<br/>                                                                                                                                                                                                                                 |
+| <span id="PWR_SUSPENDRESUME"></span><span id="pwr_suspendresume"></span><dl> <dt>**PWR \_ SUSPENDRESUME**</dt> </dl>    | Gibt an, dass das System den Vorgang fortsetzen soll, nachdem es normalerweise in den angehaltenen Modus versetzt wurde, d. h., das System sendet eine **PWR SUSPENDREQUEST-Benachrichtigungsmeldung \_** an die Anwendung, bevor das System angehalten wurde. Eine Anwendung sollte alle erforderlichen Wiederherstellungsaktionen ausführen.<br/> |
 
 
 
@@ -80,13 +80,13 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert, der von einer Anwendung zurückgegeben wird, hängt vom Wert des *wParam* -Parameters ab. Wenn " *wParam* " **PWR \_ suspendrequest** ist, kann der Rückgabewert **PWR \_ nicht** verhindern, dass das System in den Zustand "angehalten" wechselt; andernfalls ist es **PWR \_ OK**. Wenn " *wParam* " **PWR \_ suspendresume** oder **PWR \_ criticalresume** ist, ist der Rückgabewert 0 (null).
+Der Wert, den eine Anwendung zurückgibt, hängt vom Wert des *wParam-Parameters* ab. Wenn *wParam* **PWR \_ SUSPENDREQUEST** ist, lautet der Rückgabewert **PWR \_ FAIL,** um zu verhindern, dass das System in den angehaltenen Zustand übergeht. Andernfalls ist es **PWR \_ OK.** Wenn *wParam* **PWR \_ SUSPENDRESUME** oder **PWR \_ CRITICALRESUME** ist, ist der Rückgabewert 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird nur an eine Anwendung übertragen, die auf einem System ausgeführt wird, das der Spezifikation "Basic Input/Output System (FIM) für die erweiterte Energie Verwaltung (Basic Input/Output System)" entspricht. Die Meldung wird vom Energie Verwaltungs Treiber an jedes Fenster gesendet, das von der **EnumWindows** -Funktion zurückgegeben wird.
+Diese Nachricht wird nur an eine Anwendung übertragen, die auf einem System ausgeführt wird, das der BIOS-Spezifikation (Basic Input/Output System) der Advanced Power Management (APM) entspricht. Die Nachricht wird vom Treiber für die Energieverwaltung an jedes Fenster übertragen, das von der **EnumWindows-Funktion** zurückgegeben wird.
 
-Der angehaltene Modus ist der Status, in dem die größte Menge an Energieeinsparungen auftritt, aber alle operativen Daten und Parameter bleiben erhalten. RAM-Inhalte (Random Access Memory) werden beibehalten, aber viele Geräte sind wahrscheinlich ausgeschaltet.
+Der angehaltene Modus ist der Zustand, in dem die größten Einsparungen auftreten, aber alle betriebsbereiten Daten und Parameter werden beibehalten. Ram-Inhalte (Random Access Memory) werden beibehalten, aber viele Geräte sind wahrscheinlich deaktiviert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -94,17 +94,17 @@ Der angehaltene Modus ist der Status, in dem die größte Menge an Energieeinspa
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>WinUser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**WM- \_ powerbroadcast**](wm-powerbroadcast.md)
+[**WM \_ POWERBROADCAST**](wm-powerbroadcast.md)
 </dt> </dl>
 
  

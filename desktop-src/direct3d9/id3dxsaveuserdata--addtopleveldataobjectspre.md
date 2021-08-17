@@ -1,5 +1,5 @@
 ---
-description: Fügen Sie vor der Framehierarchie ein Objekt der obersten Ebene hinzu.
+description: Fügen Sie vor der Rahmenhierarchie ein Objekt der obersten Ebene hinzu.
 ms.assetid: ab4bfc3e-58eb-4de6-b080-8b3392b801bf
 title: ID3DXSaveUserData::AddTopLevelDataObjectsPre-Methode (D3dx9anim.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118801161"
 ---
 # <a name="id3dxsaveuserdataaddtopleveldataobjectspre-method"></a>ID3DXSaveUserData::AddTopLevelDataObjectsPre-Methode
 
-Fügen Sie vor der Framehierarchie ein Objekt der obersten Ebene hinzu.
+Fügen Sie vor der Rahmenhierarchie ein Objekt der obersten Ebene hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ HRESULT AddTopLevelDataObjectsPre(
 
 Typ: **[ **LPD3DXFILESAVEOBJECT**](id3dxfilesaveobject.md)**
 
-Zeiger auf ein .x-Datei-Speicherobjekt. Verwenden Sie diesen Zeiger zum Aufrufen [**von IDirectXFileSaveObject::CreateDataObject,**](idirectxfilesaveobject--createdataobject.md) um das zu speichernde Datenobjekt zu erstellen. Rufen Sie dann [**IDirectXFileSaveObject::SaveData auf,**](idirectxfilesaveobject--savedata.md) um die Daten zu speichern.
+Zeiger auf ein X-Dateispeicherobjekt. Verwenden Sie diesen Zeiger, um [**IDirectXFileSaveObject::CreateDataObject**](idirectxfilesaveobject--createdataobject.md) aufzurufen, um das zu speichernde Datenobjekt zu erstellen. Rufen Sie dann [**IDirectXFileSaveObject::SaveData**](idirectxfilesaveobject--savedata.md) auf, um die Daten zu speichern.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeiger auf ein .x-Datei-Speicherobjekt. Verwenden Sie diesen Zeiger zum Aufrufen
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die -Methode so, dass D3D \_ OK zurückgegeben wird. Programmieren Sie andernfalls die -Methode so, dass eine entsprechende Fehlermeldung von [D3DERR](d3derr.md) oder [**D3DXERR**](./d3dxerr.md)zurückgegeben wird, da dadurch auch [**D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md) fehlschlägt und der Fehler zurückgegeben wird.
+Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die -Methode, um D3D \_ OK zurückzugeben. Programmieren Sie andernfalls die -Methode, um eine entsprechende Fehlermeldung von [D3DERR](d3derr.md) oder [**D3DXERR**](./d3dxerr.md)zurückzugeben, da dies dazu führt, dass [**auch D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md) fehlschlägt, und den Fehler zurückgibt.
 
 ## <a name="requirements"></a>Anforderungen
 

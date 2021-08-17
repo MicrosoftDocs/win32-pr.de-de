@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. nextvoreinstellung
-description: Die nextvoreinstellung-Methode wendet die nächste Voreinstellung für den equaliausgleich an.
+title: EQUALIZERSETTINGS.nextPreset
+description: Die nextPreset-Methode wendet die Next Equalizer-Voreinstellung an.
 ms.assetid: 67d40ec9-2744-4d63-aa56-0ee20496e896
 keywords:
-- Fenster "equalizersettings. nextvoreinstellung" Media Player
+- EQUALIZERSETTINGS.nextPreset Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b464c0fca9b38a14a65a24185e51813e4520eee0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 715c5ee514cf2818cbab8b5553cab9565a2b448e47d1f6fe2282f17940cfc5b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372727"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117748695"
 ---
-# <a name="equalizersettingsnextpreset"></a>Equalizersettings. nextvoreinstellung
+# <a name="equalizersettingsnextpreset"></a>EQUALIZERSETTINGS.nextPreset
 
-Die **nextvoreinstellung** -Methode wendet die nächste Voreinstellung für den equaliausgleich an.
+Die **nextPreset-Methode** wendet die Next Equalizer-Voreinstellung an.
 
 ``` syntax
         elementID.nextPreset()
@@ -36,9 +36,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn es sich bei der aktuellen Voreinstellung um die letzte verfügbare Voreinstellung handelt, wird die erste Voreinstellung als aktuell festgestellt.
+Wenn es sich bei der aktuellen Voreinstellung um die letzte verfügbare Voreinstellung handelt, wird die erste Voreinstellung als aktuell betrachtet.
 
 ## <a name="examples"></a>Beispiele
 
@@ -69,18 +69,18 @@ Wenn es sich bei der aktuellen Voreinstellung um die letzte verfügbare Voreinst
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> <dt>
 
-[**Equalizersettings. previouationsset**](equalizersettings-previouspreset.md)
+[**EQUALIZERSETTINGS.previousPreset**](equalizersettings-previouspreset.md)
 </dt> </dl>
 
  

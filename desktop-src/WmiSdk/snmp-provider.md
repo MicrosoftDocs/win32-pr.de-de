@@ -1,37 +1,37 @@
 ---
-description: Der SNMP-Anbieter (Simple Network Management Protocol) ermöglicht Client Anwendungen den Zugriff auf SNMP-Informationen über Windows-Verwaltungsinstrumentation (WMI).
+description: Der SNMP-Anbieter (Simple Network Management Protocol) ermöglicht Clientanwendungen den Zugriff auf SNMP-Informationen über Windows Management Instrumentation (WMI).
 ms.assetid: 71e758d9-2ea6-42f5-93b4-d370a96b10cf
 ms.tgt_platform: multiple
 title: WMI und SNMP
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f5ea7e8385e1fb95ac20d14af31f82444350e044
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a6f1327afe2a86a1f56f40c0a93d904148ccaf1fd0547b6cb623d9eb420c2a51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992300"
 ---
 # <a name="wmi-and-snmp"></a>WMI und SNMP
 
-Der SNMP-Anbieter (Simple Network Management Protocol) ermöglicht Client Anwendungen den Zugriff auf SNMP-Informationen über Windows-Verwaltungsinstrumentation (WMI). Der SNMP-Anbieter ist standardmäßig nicht installiert. Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung](setting-up-the-wmi-snmp-environment.md).
+Der SNMP-Anbieter (Simple Network Management Protocol) ermöglicht Clientanwendungen den Zugriff auf SNMP-Informationen über Windows Management Instrumentation (WMI). Der SNMP-Anbieter ist standardmäßig nicht installiert. Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung.](setting-up-the-wmi-snmp-environment.md)
 
-SNMP (Simple Network Management Protocol) verwendet ein Schema zum Definieren von Objekten. Das Schema unterscheidet sich von dem in WMI verwendeten Schema. Das Schema SNMPv1 und SNMPv2C wird als Struktur von Verwaltungsinformationen (SMI) bezeichnet und als MIB-Dateien (Management Information Base) verpackt. MIB-Dateien definieren Objekte mithilfe einer Standardsprache – Abstract Syntax Notation 1 (ASN. 1) – und einer Reihe von Makro Definitionen, die als Vorlagen zum Beschreiben der Objekte dienen. Die Makros stellen Informationen wie den Objektnamen, den Bezeichner, die Syntax, die Beschreibung, Zugriffsrechte, Protokoll Vorgänge und die Protokoll Codierung bereit. In der folgenden Tabelle ist aufgelistet, wie der SNMP-Anbieter verschiedene Aspekte eines MIB-Objekts behandelt.
+Simple Network Management Protocol (SNMP) verwendet ein Schema zum Definieren von Objekten. Das Schema ist anders als das in WMI verwendete Schema. Das SNMPv1- und SNMPv2C-Schema wird als Structure of Management Information (SMI) bezeichnet und als MIB-Dateien (Management Information Base) gepackt. MIB-Dateien definieren Objekte mithilfe einer Standardsprache – Abstract Syntax Notation 1 (ASN.1) – und einer Reihe von Makrodefinitionen, die als Vorlagen zum Beschreiben der Objekte dienen. Die Makros stellen Informationen wie Objektname, Bezeichner, Syntax, Beschreibung, Zugriffsrechte, Protokollvorgänge und Protokollcodierung zur Verfügung. In der folgenden Tabelle wird aufgeführt, wie der SNMP-Anbieter verschiedene Aspekte eines MIB-Objekts behandelt.
 
 
 
 | Thema                                                    | BESCHREIBUNG                                                 |
 |----------------------------------------------------------|-------------------------------------------------------------|
-| [Notification-Type-Makro](notification-type-macro.md)   | Gibt an, wie das **-Benachrichtigungstyp-** Makro von SNMP zu WMI zugeordnet wird.  |
-| [Object-Type-Makro](object-type-macro.md)               | Gibt an, wie das **Objekttyp-** Makro von SNMP zu WMI zugeordnet wird.        |
-| [Text Konvention-Makro](textual-convention-macro.md) | Gibt an, wie das **Textkonventionen-** Makro von SNMP zu WMI zugeordnet wird. |
-| [Trap-Type-Makro](trap-type-macro.md)                   | Gibt an, wie das **Trap-Type-** Makro von SNMP zu WMI zugeordnet wird.          |
+| [NOTIFICATION-TYPE-Makro](notification-type-macro.md)   | Die Zuordnung **des NOTIFICATION-TYPE-Makros** von SNMP zu WMI.  |
+| [OBJECT-TYPE-Makro](object-type-macro.md)               | Die Zuordnung **des OBJECT-TYPE-Makros** von SNMP zu WMI.        |
+| [TEXTUAL-CONVENTION-Makro](textual-convention-macro.md) | Die Zuordnung **des TEXTUAL-CONVENTION-Makros** von SNMP zu WMI. |
+| [TRAP-TYPE-Makro](trap-type-macro.md)                   | Die Zuordnung **des TRAP-TYPE-Makros** von SNMP zu WMI.          |
 
 
 
  
 
-Der SNMP-Anbieter enthält einen Compiler, der MIB-Objekte in WMI-Objekte übersetzt. Der SNMP-Compiler kann auch Fehler oder andere Nachrichten ausgeben. Weitere Informationen finden Sie unter [SNMP-Compilerfehlermeldungen](snmp-compiler-error-messages.md) und [Allgemeine Informationsmeldungen](general-information-messages.md).
+Der SNMP-Anbieter verfügt über einen Compiler, der MIB-Objekte in WMI-Objekte übersetzt. Der SNMP-Compiler kann auch Fehler oder andere Meldungen ausgegeben. Weitere Informationen finden Sie unter [Fehlermeldungen des SNMP-Compilers und](snmp-compiler-error-messages.md) [Allgemeine Informationsmeldungen.](general-information-messages.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

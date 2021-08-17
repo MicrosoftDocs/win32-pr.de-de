@@ -4,8 +4,8 @@ description: Bei einem Anspruchstypobjekt identifiziert dieses Attribut, ob der 
 ms.assetid: e4b42a41-6275-4575-88a4-77c3bbcfc161
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ms-DS-Claim-Is-Single-Valued-Attributs
-- AD-Schema des msDS-ClaimIsSingleValued-Attributs
+- MS-DS-Claim-Is-Single-Valued Attribute AD Schema
+- MSDS-ClaimIsSingleValued-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Bei einem Anspruchstypobjekt identifiziert dieses Attribut, ob der Anspruchstyp 
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2160              |
-| System-Id-Guid    | cd789fb9-96b4-4648-8219-ca378161af38 |
+| System-ID-GUID    | cd789fb9-96b4-4648-8219-ca378161af38 |
 | Syntax            | [**Boolean**](s-boolean.md)         |
 
 
@@ -53,7 +53,7 @@ Bei einem Anspruchstypobjekt identifiziert dieses Attribut, ob der Anspruchstyp 
 | Link-ID                | \-                                                                                                              |
 | MAPI-Id                | \-                                                                                                              |
 | System-Only            | Richtig                                                                                                            |
-| Is-Single-Valued       | Richtig                                                                                                            |
+| Ist einwertig       | Richtig                                                                                                            |
 | Ist indiziert             | Falsch                                                                                                           |
 | Im globalen Katalog      | Falsch                                                                                                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                    |

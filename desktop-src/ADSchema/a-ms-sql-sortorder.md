@@ -1,6 +1,6 @@
 ---
 title: MS-SQL-SortOrder-Attribut
-description: Die Sortierreihenfolge für die aktuelle Instanz SQL Server.
+description: Die Sortierreihenfolge für die aktuelle Instanz von SQL Server.
 ms.assetid: cd58cb56-19aa-4ee6-b241-1198b3e9e097
 ms.tgt_platform: multiple
 keywords:
@@ -23,7 +23,7 @@ ms.locfileid: "118686587"
 ---
 # <a name="ms-sql-sortorder-attribute"></a>MS-SQL-SortOrder-Attribut
 
-Die Sortierreihenfolge für die aktuelle Instanz SQL Server.
+Die Sortierreihenfolge für die aktuelle Instanz von SQL Server.
 
 
 
@@ -35,7 +35,7 @@ Die Sortierreihenfolge für die aktuelle Instanz SQL Server.
 | Aktualisieren von Berechtigungen  | Domänenadministrator                        |
 | Updatehäufigkeit  | Beim Systemsetup.                            |
 | Attribute-Id      | 1.2.840.113556.1.4.1371                     |
-| System-Id-Guid    | 6ddc42c0-ccee-11d2-9993-0000f87a57d4        |
+| System-ID-GUID    | 6ddc42c0-ccee-11d2-9993-0000f87a57d4        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -58,7 +58,7 @@ Die Sortierreihenfolge für die aktuelle Instanz SQL Server.
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | Falsch                                                     |
-| Is-Single-Valued       | Richtig                                                      |
+| Ist einwertig       | Richtig                                                      |
 | Ist indiziert             | Falsch                                                     |
 | Im globalen Katalog      | Falsch                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
@@ -79,7 +79,7 @@ Die Sortierreihenfolge für die aktuelle Instanz SQL Server.
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | Falsch                                                     |
-| Is-Single-Valued       | Richtig                                                      |
+| Ist einwertig       | Richtig                                                      |
 | Ist indiziert             | Falsch                                                     |
 | Im globalen Katalog      | Falsch                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
@@ -100,7 +100,7 @@ Die Sortierreihenfolge für die aktuelle Instanz SQL Server.
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | Falsch                                                     |
-| Is-Single-Valued       | Richtig                                                      |
+| Ist einwertig       | Richtig                                                      |
 | Ist indiziert             | Falsch                                                     |
 | Im globalen Katalog      | Falsch                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
@@ -121,7 +121,7 @@ Die Sortierreihenfolge für die aktuelle Instanz SQL Server.
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | Falsch                                                     |
-| Ist einwertig       | Richtig                                                      |
+| Is-Single-Valued       | Richtig                                                      |
 | Ist indiziert             | Falsch                                                     |
 | Im globalen Katalog      | Falsch                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
@@ -142,7 +142,7 @@ Die Sortierreihenfolge für die aktuelle Instanz SQL Server.
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | Falsch                                                     |
-| Ist einwertig       | Richtig                                                      |
+| Is-Single-Valued       | Richtig                                                      |
 | Ist indiziert             | Falsch                                                     |
 | Im globalen Katalog      | Falsch                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
@@ -163,7 +163,7 @@ Die Sortierreihenfolge für die aktuelle Instanz SQL Server.
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | Falsch                                                     |
-| Ist einwertig       | Richtig                                                      |
+| Is-Single-Valued       | Richtig                                                      |
 | Ist indiziert             | Falsch                                                     |
 | Im globalen Katalog      | Falsch                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |

@@ -24,7 +24,7 @@ In diesem Abschnitt wird das Format der Datensätze für jedes der Datensatztoke
 
 ## <a name="token_name"></a>\_TOKENNAME
 
-Ein Datensatz variabler Länge. Auf das Token folgt ein Count-Wert, der die Anzahl der Bytes angibt, die im Feld name folgen. Ein ASCII-Name der Längenanzahl schließt den Datensatz ab.
+Ein Datensatz variabler Länge. Auf das Token folgt ein Count-Wert, der die Anzahl von Bytes angibt, die im Feld name folgen. Ein ASCII-Name der Längenanzahl schließt den Datensatz ab.
 
 
 
@@ -40,7 +40,7 @@ Ein Datensatz variabler Länge. Auf das Token folgt ein Count-Wert, der die Anza
 
 ## <a name="token_string"></a>\_TOKENZEICHENFOLGE
 
-Ein Datensatz variabler Länge. Auf das Token folgt ein Count-Wert, der die Anzahl der Bytes angibt, die im Zeichenfolgenfeld folgen. Eine ASCII-Zeichenfolge der Längenanzahl setzt den Datensatz fort, der durch ein beendendes Token abgeschlossen wird. Die Auswahl des Abschlusszeichens wird durch Syntaxprobleme bestimmt, die an anderer Stelle erläutert werden.
+Ein Datensatz variabler Länge. Auf das Token folgt ein Count-Wert, der die Anzahl von Bytes angibt, die im Zeichenfolgenfeld folgen. Eine ASCII-Zeichenfolge mit Längenanzahl setzt den Datensatz fort, der durch ein abschließendes Token abgeschlossen wird. Die Auswahl des Abschlusszeichens wird durch Syntaxprobleme bestimmt, die an anderer Stelle erläutert werden.
 
 
 
@@ -49,7 +49,7 @@ Ein Datensatz variabler Länge. Auf das Token folgt ein Count-Wert, der die Anza
 | token      | WORD       | 2            | \_Tokenzeichenfolge                    |
 | count      | DWORD      | 4            | Länge des Zeichenfolgenfelds in Bytes  |
 | Schnur     | BYTE-Array | count        | ASCII-Zeichenfolge                     |
-| Terminator | DWORD      | 4            | tOKEN \_ SEMICOLON oder TOKEN \_ COMMA |
+| Terminator | DWORD      | 4            | tOKEN \_ SEMIKOLON oder \_ TOKEN-KOMMA |
 
 
 
@@ -57,7 +57,7 @@ Ein Datensatz variabler Länge. Auf das Token folgt ein Count-Wert, der die Anza
 
 ## <a name="token_integer"></a>TOKEN \_ INTEGER
 
-Ein Datensatz mit fester Länge. Auf das Token folgt der erforderliche ganzzahlige Wert.
+Ein Datensatz fester Länge. Auf das Token folgt der erforderliche ganzzahlige Wert.
 
 
 
@@ -72,7 +72,7 @@ Ein Datensatz mit fester Länge. Auf das Token folgt der erforderliche ganzzahli
 
 ## <a name="token_guid"></a>\_TOKEN-GUID
 
-Ein Datensatz fester Länge. Auf das Token folgen die vier Datenfelder, wie im OSF DCE-Standard definiert.
+Ein Datensatz fester Länge. Auf das Token folgen die vier Datenfelder, die durch den OSF DCE-Standard definiert sind.
 
 
 
@@ -90,7 +90,7 @@ Ein Datensatz fester Länge. Auf das Token folgen die vier Datenfelder, wie im O
 
 ## <a name="token_integer_list"></a>TOKEN \_ INTEGER \_ LIST
 
-Ein Datensatz variabler Länge. Auf das Token folgt ein Count-Wert, der die Anzahl von ganzen Zahlen angibt, die im Listenfeld folgen. Aus Effizienzgründen sollten aufeinander folgende ganzzahlige Listen zu einer einzigen Liste zusammengesetzt werden.
+Ein Datensatz variabler Länge. Auf das Token folgt ein Count-Wert, der die Anzahl der im Listenfeld folgenden ganzen Zahlen angibt. Aus Effizienzgewährungsgewährungen sollten aufeinanderfolgende ganzzahlige Listen in einer einzelnen Liste zusammengesetzt werden.
 
 
 
@@ -106,15 +106,15 @@ Ein Datensatz variabler Länge. Auf das Token folgt ein Count-Wert, der die Anza
 
 ## <a name="token_float_list"></a>TOKEN \_ FLOAT \_ LIST
 
-Ein Datensatz variabler Länge. Auf das Token folgt ein Count-Wert, der die Anzahl der gleitkomma- oder double-Werte angibt, die im Listenfeld folgen. Die Größe des Gleitkommawerts (float oder double) wird durch den Wert von float sizes bestimmt, der im Dateiheader angegeben ist. Aus Effizienzgründen sollten aufeinander folgende TOKEN \_ FLOAT \_ LISTs in einer einzigen Liste zusammengesetzt werden.
+Ein Datensatz variabler Länge. Auf das Token folgt ein Count-Wert, der die Anzahl der floats oder doubles angibt, die im Listenfeld folgen. Die Größe des Gleitkommawerts (float oder double) wird durch den Wert der float-Größe bestimmt, der im Dateiheader angegeben ist. Zur Effizienz sollten aufeinander folgende TOKEN \_ FLOAT \_ LISTs in einer einzigen Liste zusammengesetzt werden.
 
 
 
 | Feld | type               | Größe (Byte)   | Inhalte                                  |
 |-------|--------------------|----------------|-------------------------------------------|
 | token | WORD               | 2              | tOKEN \_ FLOAT \_ LISt                        |
-| count | DWORD              | 4              | Anzahl von Gleitkommazahlen oder Doubles im Listenfeld |
-| list  | float/double-Array | 4 oder 8 x Anzahl | Gleitkomma- oder Doppelliste                      |
+| count | DWORD              | 4              | Anzahl der Gleitkommazahlen oder Doubles im Listenfeld |
+| list  | float/double-Array | 4 oder 8 x Anzahl | Float- oder Double-Liste                      |
 
 
 

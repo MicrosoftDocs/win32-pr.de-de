@@ -3,14 +3,14 @@ title: Arbeiten mit portablen Geräten
 description: Arbeiten mit portablen Geräten
 ms.assetid: 145ede07-a23b-486b-a561-9c87a48b72a8
 keywords:
-- Windows Media Player,portable Geräte
-- Windows Media Player Objektmodell, portable Geräte
+- Windows Media Player, portable Geräte
+- Windows Media Player-Objektmodell, portable Geräte
 - Objektmodell, portable Geräte
-- Windows Media Player ActiveX,portable Geräte
-- ActiveX,portable Geräte
+- Windows Media Player ActiveX-Steuerelement, portable Geräte
+- ActiveX-Steuerelement, portable Geräte
 - Windows Media Player Mobile ActiveX-Steuerelement, portable Geräte
 - Windows Media Player Mobile, portable Geräte
-- Portable Geräte,Informationen
+- Portable Geräte, Informationen
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 34cbff16b293ac4ab438c1b018608497d2a61cdfa6fb727332d5b50a27de313c
@@ -22,9 +22,9 @@ ms.locfileid: "117745506"
 ---
 # <a name="working-with-portable-devices"></a>Arbeiten mit portablen Geräten
 
-In diesem Abschnitt wird beschrieben, wie Sie ein remote Windows Media Player ActiveX-Steuerelement verwenden, um mit portablen Geräten zu arbeiten.
+In diesem Abschnitt wird beschrieben, wie Sie ein Remotesteuerelement Windows Media Player ActiveX verwenden, um mit portablen Geräten zu arbeiten.
 
-In den Codebeispielen in diesem Abschnitt werden Active Template Library (ATL)-Klassen wie **CComPtr verwendet.**
+In den Codebeispielen in diesem Abschnitt werden Active Template Library -Klassen (ATL) verwendet, z. **B. CComPtr.**
 
 ## <a name="included-headers"></a>Eingeschlossene Header
 
@@ -53,9 +53,9 @@ CComPtr<IWMPPlayer> m_spPlayer;
 
 
 
-## <a name="devices-are-stored-in-an-array"></a>Geräte werden in einem Array gespeichert
+## <a name="devices-are-stored-in-an-array"></a>Geräte werden in einem Array gespeichert.
 
-Der Beispielcode greifen auf die folgende Membervariable zu, die im Projektheader deklariert werden soll:
+Der Beispielcode greift auf die folgende Membervariable zu, die im Projektheader deklariert werden soll:
 
 
 ```C++
@@ -75,7 +75,7 @@ int m_cDevices; // Count of devices.
 
 ## <a name="retrieving-a-device-pointer"></a>Abrufen eines Gerätezeigers
 
-Ein Zeiger auf ein bestimmtes Gerät wird über seinen Arrayindex mithilfe von Code wie dem folgenden abgerufen:
+Ein Zeiger auf ein bestimmtes Gerät wird über seinen Arrayindex abgerufen, indem Code wie der folgende verwendet wird:
 
 
 ```C++
@@ -84,11 +84,11 @@ CComPtr<IWMPSyncDevice> spSyncDevice(m_ppWMPDevices[lIndex]);
 
 
 
-Beachten Sie, dass der in den vorherigen Beispielen gezeigte Index nicht der Partnerschaftsindex für das Gerät ist. Dies ist der Index für das Gerät im benutzerdefinierten Array von Geräten.
+Beachten Sie, dass der in den vorherigen Beispielen gezeigte Index nicht der Partnerschaftsindex für das Gerät ist. Dies ist der Index für das Gerät im benutzerdefinierten Gerätearray.
 
 ## <a name="cleaning-up"></a>Bereinigung
 
-In den Beispielen wird die folgende Funktion verwendet, um den Arbeitsspeicher im Gerätearray frei zu geben und die Schnittstellenze0er frei zu geben:
+In den Beispielen wird die folgende Funktion verwendet, um den Arbeitsspeicher im Gerätearray freizugeben und die Schnittstellenzeiger freizugeben:
 
 
 ```C++
@@ -109,7 +109,7 @@ void CMainDlg::FreeDeviceArray()
 
 
 
-## <a name="devices-are-displayed-in-a-list-box"></a>Geräte werden in einem Listenfeld angezeigt
+## <a name="devices-are-displayed-in-a-list-box"></a>Geräte werden in einem Listenfeld angezeigt.
 
 Die GetSelectedDeviceIndex-Funktion gibt mithilfe des folgenden Codes den Index des Geräts zurück, das der Benutzer in einem Listenfeld ausgewählt hat:
 
@@ -123,7 +123,7 @@ long CMainDlg::GetSelectedDeviceIndex()
 
 
 
-## <a name="user-interface-state-is-managed-by-a-single-function"></a>Benutzeroberfläche Zustand wird von einer einzelnen Funktion verwaltet
+## <a name="user-interface-state-is-managed-by-a-single-function"></a>Benutzeroberfläche Zustand wird von einer einzelnen Funktion verwaltet.
 
 Die SetUIState-Funktion verwaltet die Benutzeroberfläche.
 
@@ -136,7 +136,7 @@ bConnected)
 
 
 
-Die Details dieser Funktion sind für die Diskussionen in diesem Abschnitt nicht relevant, aber beachten Sie, dass diese Funktion Aufgaben wie das Aktivieren oder Deaktivieren von Steuerelementen und das Ändern von Anzeigetext auf der Benutzeroberfläche ausführt.
+Die Details dieser Funktion sind für die Diskussionen in diesem Abschnitt nicht relevant, aber beachten Sie, dass diese Funktion Aufgaben wie das Aktivieren oder Deaktivieren von Steuerelementen und das Ändern des Anzeigetexts auf der Benutzeroberfläche ausführt.
 
 Die UIState-Enumeration wurde wie folgt definiert:
 
@@ -152,9 +152,9 @@ enum UIState
 
 
 
-Der *Parameter bConnected* gibt an, ob die Benutzeroberfläche für ein verbundenes Gerät konfiguriert werden soll (TRUE bedeutet, dass das Gerät verbunden ist). Die *Parameter NewState* und *bConnected* vermitteln die Informationen, die für die Funktion erforderlich sind, um ihre Arbeit zu erfüllen.
+Der *bConnected-Parameter* gibt an, ob die Benutzeroberfläche für ein verbundenes Gerät konfiguriert werden soll (TRUE bedeutet, dass das Gerät verbunden ist). Die Parameter *NewState* und *bConnected* vermitteln die Informationen, die die Funktion für ihre Arbeit benötigt.
 
-Die folgenden Abschnitte enthalten Erläuterungen zum Beispielcode:
+In den folgenden Abschnitten wird der Beispielcode erläutert:
 
 -   [Aufzählen von Geräten](enumerating-devices.md)
 -   [Abrufen von Geräteattributen](retrieving-device-attributes.md)
@@ -165,7 +165,7 @@ Die folgenden Abschnitte enthalten Erläuterungen zum Beispielcode:
 
 <dl> <dt>
 
-[**Leitfaden zum Player-Steuerelement**](player-control-guide.md)
+[**Leitfaden zum Playersteuerelement**](player-control-guide.md)
 </dt> </dl>
 
  

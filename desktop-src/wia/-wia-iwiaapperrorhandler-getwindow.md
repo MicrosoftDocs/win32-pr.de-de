@@ -1,5 +1,5 @@
 ---
-description: Ruft ein Handle für das Dialogfeld ab, das Fehlermeldungen anzeigt und mindestens eine Schaltfläche zum Fortsetzen, Abbrechen oder Abbrechen der Anwendung bereitstellt.
+description: Ruft ein Handle für das Dialogfeld ab, das Fehlermeldungen anzeigt und eine oder mehrere Schaltflächen zum Fortsetzen, Abbrechen oder Abbrechen der Anwendung enthält.
 ms.assetid: 54deac2e-a395-45dc-b9f9-ecf8140fd9d7
 title: IWiaAppErrorHandler::GetWindow-Methode (Wia.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118965759"
 ---
 # <a name="iwiaapperrorhandlergetwindow-method"></a>IWiaAppErrorHandler::GetWindow-Methode
 
-Ruft ein Handle für das Dialogfeld ab, das Fehlermeldungen anzeigt und mindestens eine Schaltfläche zum Fortsetzen, Abbrechen oder Abbrechen der Anwendung bereitstellt.
+Ruft ein Handle für das Dialogfeld ab, das Fehlermeldungen anzeigt und eine oder mehrere Schaltflächen zum Fortsetzen, Abbrechen oder Abbrechen der Anwendung enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ HRESULT GetWindow(
 
 Typ: **HWND\***
 
-HWND, das vom Anwendungsfehlerhandler, vom Treiberfehlerhandler und vom Standardfehlerhandler für Gerätemeldungsdialogfelder (Fehler und Information) verwendet wird. Der Ausgabewert kann **NULL** sein.
+HWND, das vom Anwendungsfehlerhandler, vom Treiberfehlerhandler und vom Standardfehlerhandler für Gerätemeldungsdialogfelder verwendet wird (fehler- und informationell). Der Ausgabewert kann **NULL sein.**
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ HWND, das vom Anwendungsfehlerhandler, vom Treiberfehlerhandler und vom Standard
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -65,7 +65,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>       |
 | Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl>     |

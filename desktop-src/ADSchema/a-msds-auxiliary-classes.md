@@ -121,7 +121,7 @@ Dieses Attribut listet die Hilfsklassen auf, die dynamisch an ein Objekt angefü
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | Richtig         |
-| Ist einwertig       | Falsch        |
+| Is-Single-Valued       | Falsch        |
 | Ist indiziert             | Falsch        |
 | Im globalen Katalog      | Falsch        |
 | NT-Security-Descriptor | O:BAG:BAD:S: |
@@ -142,7 +142,7 @@ Dieses Attribut listet die Hilfsklassen auf, die dynamisch an ein Objekt angefü
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | Richtig         |
-| Ist einwertig       | Falsch        |
+| Is-Single-Valued       | Falsch        |
 | Ist indiziert             | Falsch        |
 | Im globalen Katalog      | Falsch        |
 | NT-Security-Descriptor | O:BAG:BAD:S: |
@@ -163,7 +163,7 @@ Dieses Attribut listet die Hilfsklassen auf, die dynamisch an ein Objekt angefü
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | Richtig         |
-| Ist einwertig       | Falsch        |
+| Is-Single-Valued       | Falsch        |
 | Ist indiziert             | Falsch        |
 | Im globalen Katalog      | Falsch        |
 | NT-Security-Descriptor | O:BAG:BAD:S: |

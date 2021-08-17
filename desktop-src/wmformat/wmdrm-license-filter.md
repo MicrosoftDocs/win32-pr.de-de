@@ -1,10 +1,10 @@
 ---
-title: WMDRM_LICENSE_FILTER -Struktur (Wmdrmsdk.h)
-description: Die WMDRM \_ LICENSE \_ FILTER-Struktur definiert Filterparameter, die beim Erstellen einer Lizenzenumeration verwendet werden.
+title: WMDRM_LICENSE_FILTER-Struktur (Wmdrmsdk.h)
+description: Die WMDRM \_ LICENSE \_ FILTER-Struktur definiert Filterparameter für die Verwendung beim Erstellen einer Lizenzenumeration.
 ms.assetid: 43bbbfdc-1ec4-44a6-8245-96853bbeea86
 keywords:
-- WMDRM_LICENSE_FILTER struktur windows media format
-- Strukturfenster-Medienformat
+- WMDRM_LICENSE_FILTER Strukturfenster Medienformat
+- Strukturfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -22,9 +22,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118698137"
 ---
-# <a name="wmdrm_license_filter-structure"></a>\_WMDRM-LIZENZFILTERstruktur \_
+# <a name="wmdrm_license_filter-structure"></a>WMDRM \_ LICENSE \_ FILTER-Struktur
 
-Die **WMDRM \_ LICENSE \_ FILTER-Struktur** definiert Filterparameter, die beim Erstellen einer Lizenzenumeration verwendet werden.
+Die **WMDRM \_ LICENSE \_ FILTER-Struktur** definiert Filterparameter für die Verwendung beim Erstellen einer Lizenzenumeration.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,21 +54,21 @@ Gibt eine Mindestversionsnummer für die zurückgegebenen Lizenzen an.
 **bstrKID**
 </dt> <dd>
 
-Gibt eine Schlüssel-ID an, nach der Lizenzen gefiltert werden. Nur Lizenzen mit der angegebenen Schlüssel-ID werden in die -Enumeration einbezogen.
+Gibt eine Schlüssel-ID an, nach der Lizenzen gefiltert werden sollen. Nur Lizenzen mit der angegebenen Schlüssel-ID werden in die Enumeration einbezogen.
 
 </dd> <dt>
 
 **bstrRights**
 </dt> <dd>
 
-Gibt einen Satz von Rechten an, nach dem Lizenzen gefiltert werden können. Nur Lizenzen, die alle angegebenen Rechte bereitstellen, werden in die -Enumeration einbezogen.
+Gibt einen Satz von Rechten an, nach dem Lizenzen gefiltert werden sollen. Nur Lizenzen, die alle angegebenen Rechte bereitstellen, werden in die Enumeration einbezogen.
 
 </dd> <dt>
 
 **bstrAllowedSourceIDs**
 </dt> <dd>
 
-Gibt die Quellen geschützter Inhalte an, die in die Lizenzsuche enthalten sein soll.
+Gibt die Quellen von geschützten Inhalten an, die in die Lizenzsuche eingeschlossen werden sollen.
 
 </dd> </dl>
 

@@ -1,5 +1,5 @@
 ---
-description: Stellt einen 4-d-Punkt mit 64-Bit-Gleit Komma Koordinaten (Double) dar.
+description: Stellt einen 4D-Punkt mit 64-Bit-Gleitkommakoordinaten (double) dar.
 MS-HAID: vspixengine.PixEnginePoint4D
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 9a56d89d11ed4dff33d6f35d793e24d7195121f1
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 2ca929459658af64243e8895f97b81cfd18e1f0e6cde9349dc4cba5625cb54c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119284"
 ---
 # <a name="span-idvspixenginepixenginepoint4dspanpixenginepoint4d-structure"></a><span id="vspixengine.pixenginepoint4d"></span>PixEnginePoint4D-Struktur
 
-Stellt einen 4-d-Punkt mit 64-Bit-Gleit Komma Koordinaten (Double) dar.
+Stellt einen 4D-Punkt mit 64-Bit-Gleitkommakoordinaten (double) dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ Der Wert der homogenen W-Komponente.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

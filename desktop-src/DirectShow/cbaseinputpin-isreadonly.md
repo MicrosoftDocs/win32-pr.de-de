@@ -1,7 +1,7 @@
 ---
-description: Fragt ab, ob die Zuweisung schreibgeschützte Medien Beispiele verwendet.
+description: Fragt ab, ob die Zuweisung schreibgeschützte Medienbeispiele verwendet.
 ms.assetid: 2cb692da-f030-4265-afe4-b1608b51fd47
-title: Cbasinput PIN. isread only-Methode (amfilter. h)
+title: CBaseInputPin.IsReadOnly-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 93d1e7930631328a277ce7332f483ee264b2d525
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 45a8fc563e9377f7308ad9ea702b16f48ea9723aa13902ef29d60e2da903ffda
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371457"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017038"
 ---
-# <a name="cbaseinputpinisreadonly-method"></a>Cbasinput PIN. isread only-Methode
+# <a name="cbaseinputpinisreadonly-method"></a>CBaseInputPin.IsReadOnly-Methode
 
-Fragt ab, ob die Zuweisung schreibgeschützte Medien Beispiele verwendet.
+Fragt ab, ob die Zuweisung schreibgeschützte Medienbeispiele verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert der Element Variablen " [**cbasinput PIN:: m \_ bReadOnly**](cbaseinputpin-m-breadonly.md) " zurück.
+Gibt den Wert der [**CBaseInputPin::m \_ bReadOnly-Membervariable**](cbaseinputpin-m-breadonly.md) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,16 +50,16 @@ Gibt den Wert der Element Variablen " [**cbasinput PIN:: m \_ bReadOnly**](cbase
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseingeputpin-Klasse**](cbaseinputpin.md)
+[**CBaseInputPin-Klasse**](cbaseinputpin.md)
 </dt> </dl>
 
  

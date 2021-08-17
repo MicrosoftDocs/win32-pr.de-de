@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_RECPOS. DeepClone-Methode'
+description: 'Erfahren Sie mehr über: JET_RECPOS. DeepClone-Methode'
 title: JET_RECPOS. DeepClone-Methode
 TOCTitle: 'DeepClone method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_RECPOS.DeepClone
@@ -69,6 +69,6 @@ Eine tiefe Kopie des -Objekts.
 
 [JET_RECPOS-Klasse](./jet-recpos-class.md)
 
-[JET_RECPOS Member](./jet-recpos-members.md)
+[JET_RECPOS-Member](./jet-recpos-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

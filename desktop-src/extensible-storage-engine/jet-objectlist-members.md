@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: JET_OBJECTLIST Mitglieder'
-title: JET_OBJECTLIST Mitglieder
+description: Weitere Informationen zu JET_OBJECTLIST Mitgliedern
+title: JET_OBJECTLIST-Member
 TOCTitle: JET_OBJECTLIST members
 ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.JET_OBJECTLIST
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_objectlist_members(v=EXCHG.10)
@@ -14,14 +14,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118765996"
 ---
-# <a name="jet_objectlist-members"></a>JET_OBJECTLIST Mitglieder
+# <a name="jet_objectlist-members"></a>JET_OBJECTLIST-Member
 
-Geschützte Member enthalten  
-Geerbte Member enthalten  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 Informationen zu einer temporären Tabelle, die Informationen zu allen Tabellen für eine bestimmte Datenbank enthält.
 
-Der [JET_OBJECTLIST](./jet-objectlist-class.md) macht die folgenden Member verfügbar.
+Der [JET_OBJECTLIST-Typ](./jet-objectlist-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="constructors"></a>Konstruktoren
 
@@ -30,7 +30,7 @@ Der [JET_OBJECTLIST](./jet-objectlist-class.md) macht die folgenden Member verf�
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
@@ -52,14 +52,14 @@ Oben
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn335215(v=exchg.10).md">columnidcPage</a></td>
-<td>Ruft die Columnid der Spalte in der temporären Tabelle ab, in der die Anzahl der von der Tabelle verwendeten Seiten gespeichert wird.</td>
+<td>Ruft die columnid der Spalte in der temporären Tabelle ab, in der die Anzahl der seiten gespeichert wird, die von der Tabelle verwendet werden.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
@@ -69,17 +69,17 @@ Oben
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn335210(v=exchg.10).md">columnidflags</a></td>
-<td>Ruft die Columnid der Spalte in der temporären Tabelle ab, in der die Tabellenflags gespeichert werden (z. B. das Systemtabellenflag).</td>
+<td>Ruft die columnid der Spalte in der temporären Tabelle ab, in der die Tabellenflags gespeichert werden (z. B. das Systemtabellenflag).</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn335211(v=exchg.10).md">columnidgrbit</a></td>
-<td>Ruft die Columnid der Spalte in der temporären Tabelle ab, in der die grbits gespeichert werden, die beim Erstellen der Tabelle verwendet wurden.</td>
+<td>Ruft die columnid der Spalte in der temporären Tabelle ab, in der die grbits gespeichert werden, die beim Erstellen der Tabelle verwendet wurden.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn335213(v=exchg.10).md">columnidobjectname</a></td>
-<td>Ruft die Columnid der Spalte in der temporären Tabelle ab, in der der Name der Tabelle gespeichert wird.</td>
+<td>Ruft die columnid der Spalte in der temporären Tabelle ab, in der der Name der Tabelle gespeichert wird.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
@@ -94,7 +94,7 @@ Oben
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn335218(v=exchg.10).md">tableid</a></td>
-<td>Ruft die tableid der temporären Tabelle ab. Dieser sollte geschlossen werden, wenn die Tabelle nicht mehr benötigt wird.</td>
+<td>Ruft tableid der temporären Tabelle ab. Dieser sollte geschlossen werden, wenn die Tabelle nicht mehr benötigt wird.</td>
 </tr>
 </tbody>
 </table>
@@ -109,7 +109,7 @@ Oben
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
@@ -141,7 +141,7 @@ Oben
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="dn335216(v=exchg.10).md">ToString</a></td>
-<td>Gibt eine <a href="/dotnet/api/system.string">Zeichenfolge</a> zurück, die die <a href="dn335206(v=exchg.10).md">aktuelle</a>JET_OBJECTLIST. (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>.)</td>
+<td>Gibt eine <a href="/dotnet/api/system.string">Zeichenfolge</a> zurück, die die aktuelle <a href="dn335206(v=exchg.10).md">JET_OBJECTLIST</a>darstellt. (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>.)</td>
 </tr>
 </tbody>
 </table>

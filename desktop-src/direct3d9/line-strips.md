@@ -41,7 +41,7 @@ CUSTOMVERTEX Vertices[] =
 
 
 
-Das folgende Codebeispiel zeigt, wie sie einen Zeilenstreifen in Direct3D 9 mit [**IDirect3DDevice9::D rawPrimitive rendern.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive)
+Das folgende Codebeispiel zeigt, wie sie einen Zeilenstreifen in Direct3D 9 mithilfe von [**IDirect3DDevice9::D rawPrimitive rendern.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive)
 
 
 ```

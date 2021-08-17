@@ -1,9 +1,9 @@
 ---
-title: Floor (corecrt \_ Math. h)
+title: floor (Corecrt \_ math.h)
 description: Gibt die größte ganze Zahl zurück, die kleiner oder gleich dem angegebenen Wert ist.
 ms.assetid: f7193425-2448-4ae6-99d5-bb5e1aa74111
 keywords:
-- bodenhlsl
+- Floor HLSL
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8ecb46719d5361ec9f7c36b21d94793bc9a67ffe
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 38d696bd591fe9ac47d8e4acd996fc6944f66113533f019d9fe21b6f39a9c61d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119120294"
 ---
 # <a name="floor"></a>floor
 
@@ -27,7 +27,7 @@ Gibt die größte ganze Zahl zurück, die kleiner oder gleich dem angegebenen We
 
 
 
-| *ret* -Floor (*x*) |
+| *ret* floor(*x*) |
 |------------------|
 
 
@@ -38,9 +38,9 @@ Gibt die größte ganze Zahl zurück, die kleiner oder gleich dem angegebenen We
 
 
 
-| Element                                                   | BESCHREIBUNG                            |
+| Element                                                   | Beschreibung                            |
 |--------------------------------------------------------|----------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[im \] angegebenen Wert.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der angegebene Wert.<br/> |
 
 
 
@@ -48,7 +48,7 @@ Gibt die größte ganze Zahl zurück, die kleiner oder gleich dem angegebenen We
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der größte ganzzahlige Wert (zurückgegeben als Gleit kommatyp), der kleiner oder gleich dem *x* -Parameter ist.
+Der größte ganzzahlige Wert (als Gleitkommatyp zurückgegeben), der kleiner oder gleich dem *x-Parameter* ist.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -56,35 +56,35 @@ Der größte ganzzahlige Wert (zurückgegeben als Gleit kommatyp), der kleiner o
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                           |
 |-------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------------|
-| *x*   | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
-| *TZI* | identisch mit Eingabe *x*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *x* |
+| *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
+| *Ret* | identisch mit eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(en) wie eingabe *x* |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt |
 |------------------------------------------------------------------------------------|-----------|
-| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | ja       |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | vs \_ 1 \_ 1  |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja       |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Vs \_ 1 \_ 1  |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Corecrt \_ Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Corecrt \_ math.h</dt> </dl> |
 
 
 
@@ -92,7 +92,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

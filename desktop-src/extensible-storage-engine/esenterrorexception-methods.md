@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen finden Sie unter EsentErrorException-Methoden.
+description: 'Weitere Informationen zu: EsentErrorException-Methoden'
 title: EsentErrorException-Methoden
 TOCTitle: EsentErrorException methods
 ms:assetid: Methods.T:Microsoft.Isam.Esent.Interop.EsentErrorException
@@ -16,8 +16,8 @@ ms.locfileid: "118779207"
 ---
 # <a name="esenterrorexception-methods"></a>EsentErrorException-Methoden
 
-Geschützte Member enthalten  
-Geerbte Member enthalten  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 Der [EsentErrorException-Typ](./esenterrorexception-class.md) macht die folgenden Member verfügbar.
 
@@ -45,7 +45,7 @@ Der [EsentErrorException-Typ](./esenterrorexception-class.md) macht die folgende
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.getbaseexception#System_Exception_GetBaseException">Getbaseexception</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
@@ -60,7 +60,7 @@ Der [EsentErrorException-Typ](./esenterrorexception-class.md) macht die folgende
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.gettype#System_Exception_GetType">Gettype</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
@@ -70,7 +70,7 @@ Der [EsentErrorException-Typ](./esenterrorexception-class.md) macht die folgende
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.tostring#System_Exception_ToString">ToString</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 </tbody>
 </table>

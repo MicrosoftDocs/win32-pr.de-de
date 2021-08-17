@@ -13,7 +13,7 @@ ms.locfileid: "118718259"
 ---
 # <a name="ink-collection-sample"></a>Beispiel für die Ink-Sammlung
 
-Diese Anwendung basiert auf dem [InkCollector-Objekt](/previous-versions/ms836493(v=msdn.10)) und veranschaulicht die Auflistung von Ink. Die Anwendung erstellt ein Fenster, hängt ein InkCollector-Objekt an das Fenster an und stellt dem Benutzer Menüoptionen zur Verfügung, die verwendet werden können, um die Ink-Farbe, die Breite der Ink-Objekte und die Ink-Sammlung zu aktivieren und zu deaktivieren.
+Diese Anwendung basiert auf dem [InkCollector-Objekt](/previous-versions/ms836493(v=msdn.10)) und veranschaulicht die Auflistung von Ink. Die Anwendung erstellt ein Fenster, angefügt ein InkCollector-Objekt und stellt dem Benutzer Menüoptionen zur Verfügung, die zum Ändern der Farbe der Ink-Farbe, der Breite der Ink-Objekte und zum Aktivieren und Deaktivieren der Ink-Sammlung verwendet werden können.
 
 > [!Note]  
 > Die in diesem Abschnitt erläuterte Version ist Visual Basic .NET. Die Konzepte sind bei anderen Sprachversionen in der Beispielbibliothek identisch.
@@ -67,7 +67,7 @@ Die [DefaultDrawingAttributes-Eigenschaft](/previous-versions/ms836500(v=msdn.10
 
 ## <a name="changing-the-properties"></a>Ändern der Eigenschaften
 
-Der Rest dieser einfachen Anwendung besteht aus Handlern für die verschiedenen Menüauswahlen, die der Benutzer treffen kann. Wenn der Benutzer beispielsweise die Freidruckfarbe durch Auswahl von Rot im Freiraummenü in Rot ändert, wird die Farbe mithilfe der [Color-Eigenschaft](/previous-versions/ms837933(v=msdn.10)) der [DefaultDrawingAttributes-Eigenschaft](/previous-versions/ms836500(v=msdn.10)) des [InkCollector-Objekts](/previous-versions/ms836493(v=msdn.10)) im Ereignishandler für das Menü geändert.
+Der Rest dieser einfachen Anwendung besteht aus Handlern für die verschiedenen Menüauswahlen, die der Benutzer treffen kann. Wenn der Benutzer beispielsweise die Freidruckfarbe durch Auswahl von Rot im Freidruckmenü in Rot ändert, wird die Farbe mithilfe der [Color-Eigenschaft](/previous-versions/ms837933(v=msdn.10)) der [DefaultDrawingAttributes-Eigenschaft](/previous-versions/ms836500(v=msdn.10)) des [InkCollector-Objekts](/previous-versions/ms836493(v=msdn.10)) im Ereignishandler für das Menü geändert.
 
 
 ```C++

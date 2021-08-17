@@ -22,7 +22,7 @@ ms.locfileid: "118709217"
 ---
 # <a name="wiccreatecolortransform_proxy-function"></a>WICCreateColorTransform-Proxyfunktion \_
 
-Erstellt ein Farbtransformationsobjekt, das [**IWICColorTransform**](/windows/win32/api/wincodec/nn-wincodec-iwiccolortransform)implementiert. Dieses COM-Objekt unterstützt das Freethread-Objektmodell.
+Erstellt ein Farbtransformationsobjekt, das [**IWICColorTransform implementiert.**](/windows/win32/api/wincodec/nn-wincodec-iwiccolortransform) Dieses COM-Objekt unterstützt das Freethread-Objektmodell.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ Die erstellte Farbtransformation.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 

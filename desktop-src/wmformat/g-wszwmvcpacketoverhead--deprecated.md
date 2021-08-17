@@ -1,6 +1,6 @@
 ---
 title: g_wszWMVCPacketOverhead (Wmcodecdsp.h)
-description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | g_wszWMVCPacketOverhead (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | g_wszWMVCPacketOverhead (Wmcodecdsp.h)
 ms.assetid: 76d412e0-8c7f-4bc8-b8c1-974c495856ba
 keywords:
 - g_wszWMVCPacketOverhead Windows-Medienformat
@@ -23,7 +23,7 @@ ms.locfileid: "118703331"
 ---
 # <a name="g_wszwmvcpacketoverhead"></a>g \_ wszWMVCPacketOverhead
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: Update.Cancel-Methode'
+description: Weitere Informationen finden Sie unter Update.Cancel-Methode.
 title: Update.Cancel-Methode
 TOCTitle: 'Cancel method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Update.Cancel
@@ -59,6 +59,6 @@ public void Cancel()
 
 [Update-Klasse](./update-class.md)
 
-[Aktualisieren von Membern](./update-members.md)
+[Aktualisieren von Mitgliedern](./update-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

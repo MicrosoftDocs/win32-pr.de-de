@@ -1,7 +1,7 @@
 ---
-description: Ruft eine Liste von DXVA-Profilen (DirectX Video Acceleration) ab, die vom Anzeigetreiber unterstützt werden.
+description: Ruft eine Liste der DXVA-Profile (DirectX Video Acceleration) ab, die vom Anzeigetreiber unterstützt werden.
 ms.assetid: 4adbbac2-a25d-4e17-b62e-a02a67dcdbed
-title: 'IDirect3DVideoDevice9:: getdxvage IDs-Methode (DXVA. h)'
+title: IDirect3DVideoDevice9::GetDXVAGuids-Methode (Dxva.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - dxva.h
-ms.openlocfilehash: 3ea05af8f27399af38419e177d7bd40b029cd63b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6a355c27177a546a2e91e769f72d9f4b9e216b005f711d42b5b7af39b4b78361
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360211"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119269240"
 ---
-# <a name="idirect3dvideodevice9getdxvaguids-method"></a>IDirect3DVideoDevice9:: getdxvage IDs-Methode
+# <a name="idirect3dvideodevice9getdxvaguids-method"></a>IDirect3DVideoDevice9::GetDXVAGuids-Methode
 
-Ruft eine Liste von DXVA-Profilen (DirectX Video Acceleration) ab, die vom Anzeigetreiber unterstützt werden.
+Ruft eine Liste der DXVA-Profile (DirectX Video Acceleration) ab, die vom Anzeigetreiber unterstützt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,29 +40,29 @@ HRESULT GetDXVAGuids(
 
 <dl> <dt>
 
-*pnumguids* 
+*pNumGuids* 
 </dt> <dd>
 
-Gibt bei Eingabe die Anzahl der Elemente im *pguids* -Array an. Wenn *pguids* **null** ist, muss der Wert von `*pNumGuids` 0 (null) lauten.
+Gibt bei der Eingabe die Anzahl der Elemente im *pGuids-Array* an. Wenn *pGuids* NULL **ist,** muss der Wert `*pNumGuids` von 0 (null) sein.
 
-Bei Ausgabe, wenn *pguids* **null** ist, empfängt *pnumguids* die Anzahl der DXVA-Profile im eingeschränkten Modus. Andernfalls empfängt *pnumguids* die tatsächliche Anzahl der GUIDs, die in das *pguids* -Array kopiert werden.
+Wenn *pGuids* bei der Ausgabe **NULL ist,** empfängt *pNumGuids* die Anzahl der DXVA-Profile im eingeschränkten Modus. *Andernfalls empfängt pNumGuids* die tatsächliche Anzahl von GUIDs, die in das *pGuids-Array kopiert* werden.
 
 </dd> <dt>
 
-*pguids* 
+*pGuids* 
 </dt> <dd>
 
-Adresse eines Arrays von GUIDs oder **null**. Wenn der Wert nicht **null** ist, empfängt das Array eine Liste von GUIDs, die DXVA-Profile im eingeschränkten Modus angeben. Diese GUIDs werden in "DXVA. h" definiert und in der [DXVA 1,0-Spezifikation](/windows-hardware/drivers/display/directx-video-acceleration)dokumentiert.
+Adresse eines Arrays von GUIDs oder **NULL.** Wenn der Wert nicht NULL ist,**empfängt** das Array eine Liste von GUIDs, die DXVA-Profile im eingeschränkten Modus angeben. Diese GUIDs sind in dxva.h definiert und in der [DXVA 1.0-Spezifikation dokumentiert.](/windows-hardware/drivers/display/directx-video-acceleration)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ruft diese Methode zweimal auf. Legen Sie für den ersten-Befehl *pguids* auf **null** fest. Der *pnumguids* -Parameter empfängt die Anzahl der DXVA-Profil-GUIDs. Weisen Sie ein Array von GUIDs der erforderlichen Größe zu, und nennen Sie die Methode erneut. Legen Sie dieses Mal *pguids* auf die Adresse des Arrays fest. Die-Methode füllt das Array mit der Liste der DXVA-Profil-GUIDs auf.
+Rufen Sie diese Methode zweimal auf. Legen Sie beim ersten Aufruf *pGuids auf* **NULL fest.** Der *pNumGuids-Parameter* empfängt die Anzahl der DXVA-Profil-GUIDs. Ordnen Sie ein Array von GUIDs mit der erforderlichen Größe zu, und rufen Sie die -Methode erneut auf. Legen Sie dieses Mal *pGuids auf* die Adresse des Arrays fest. Die -Methode füllt das Array mit der Liste der DXVA-Profil-GUIDs auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,13 +70,13 @@ Ruft diese Methode zweimal auf. Legen Sie für den ersten-Befehl *pguids* auf **
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>DXVA. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Dxva.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

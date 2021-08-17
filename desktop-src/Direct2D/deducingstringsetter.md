@@ -1,9 +1,9 @@
 ---
-title: Deducingstringsetter (D2d1effecthelpers. h)
-description: Leitet die-Klasse und die-Argumente ab und ruft dann einen Eigenschaften Setter-Rückruf für eine Element Funktion für eine Eigenschaft vom Typ "String" auf.
+title: DeducingStringSetter (D2d1effecthelpers.h)
+description: Leitet die Klasse und argumente ab und ruft dann einen Memberfunktionseigenschafts-Setterrückruf für eine Zeichenfolgentypeigenschaft auf.
 ms.assetid: D3075B7B-D253-4F85-9FD2-3487C4207122
 keywords:
-- Deducingstringsetter Direct2D
+- DeducingStringSetter Direct2D
 topic_type:
 - apiref
 api_name:
@@ -14,19 +14,19 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b7860978fd271b2ff395caae068cd651d3057020
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 50fdcf97e9df1f77705509a4b93b6936a4c9f7f203ddb16e0b0284630cb42bdc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354210"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119075284"
 ---
-# <a name="deducingstringsetter"></a>Deducingstringsetter
+# <a name="deducingstringsetter"></a>DeducingStringSetter
 
-Leitet die-Klasse und die-Argumente ab und ruft dann einen Eigenschaften Setter-Rückruf für eine Element Funktion für eine Eigenschaft vom Typ "String" auf.
+Leitet die Klasse und argumente ab und ruft dann einen Memberfunktionseigenschafts-Setterrückruf für eine Zeichenfolgentypeigenschaft auf.
 
 > [!Note]  
-> Deducingstringsetter sollte nicht direkt aufgerufen werden.
+> DeducingStringSetter sollte nicht direkt aufgerufen werden.
 
  
 
@@ -46,15 +46,15 @@ HRESULT DeducingStringSetter(
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D2d1effecthelpers. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D2d1effecthelpers.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Direct2D::D educingstringgetter**](deducingstringgetter.md)
+[**Direct2D::D educingStringGetter**](deducingstringgetter.md)
 </dt> </dl>
 
  

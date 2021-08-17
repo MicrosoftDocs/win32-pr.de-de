@@ -1,11 +1,11 @@
 ---
 title: ms-DS-NC-Repl-Cursors-Attribut
-description: Eine Liste der früheren und aktuellen Replikationspartner und wie aktuell wir mit jedem dieser Partner sind.
+description: Eine Liste der bisherigen und aktuellen Replikationspartner und wie aktuell wir mit jedem dieser Partner sind.
 ms.assetid: febe8614-b68a-4001-b6ae-dae3fe6eb25f
 ms.tgt_platform: multiple
 keywords:
-- MS-DS-NC-Repl-Cursors-Attribut AD-Schema
-- MSDS-NCReplCursors-Attribut-AD-Schema
+- AD-Schema des ms-DS-NC-Repl-Cursors-Attributs
+- AD-Schema des msDS-NCReplCursors-Attributs
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118684330"
 ---
 # <a name="ms-ds-nc-repl-cursors-attribute"></a>ms-DS-NC-Repl-Cursors-Attribut
 
-Eine Liste der früheren und aktuellen Replikationspartner und wie aktuell wir mit jedem dieser Partner sind.
+Eine Liste der bisherigen und aktuellen Replikationspartner und wie aktuell wir mit jedem dieser Partner sind.
 
 
 
@@ -35,7 +35,7 @@ Eine Liste der früheren und aktuellen Replikationspartner und wie aktuell wir m
 | Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.            |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1704                     |
-| System-ID-GUID    | 8a167ce4-f9e8-47eb-8d78-f7fe80abb2cc        |
+| System-Id-Guid    | 8a167ce4-f9e8-47eb-8d78-f7fe80abb2cc        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -58,7 +58,7 @@ Eine Liste der früheren und aktuellen Replikationspartner und wie aktuell wir m
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Falsch                           |
-| Ist einwertig       | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -79,7 +79,7 @@ Eine Liste der früheren und aktuellen Replikationspartner und wie aktuell wir m
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Falsch                           |
-| Ist einwertig       | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -100,7 +100,7 @@ Eine Liste der früheren und aktuellen Replikationspartner und wie aktuell wir m
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Falsch                           |
-| Ist einwertig       | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |

@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der in jedem Cluster zu verwendenden PCA-Vektoren (Principal Component Analysis) ab.
+description: Ruft die Anzahl der Basisvektoren der Prinzipalkomponentenanalyse (Principal Component Analysis, PCA) ab, die in jedem Cluster verwendet werden.
 ms.assetid: c8d53880-990c-4c0d-bb4c-354cf808886c
-title: 'ID3DXPRTCompBuffer:: getnumpca-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTCompBuffer::GetNumPCA-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: cbe6c14e3f24f8bb94f5f68c8d91ce5fc7f08bdc
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: ebc22df2c922b40fb39f320ed8375879bc74bea534db75408cb63b5ff46ac9be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118801335"
 ---
-# <a name="id3dxprtcompbuffergetnumpca-method"></a>ID3DXPRTCompBuffer:: getnumpca-Methode
+# <a name="id3dxprtcompbuffergetnumpca-method"></a>ID3DXPRTCompBuffer::GetNumPCA-Methode
 
-Ruft die Anzahl der in jedem Cluster zu verwendenden PCA-Vektoren (Principal Component Analysis) ab.
+Ruft die Anzahl der Basisvektoren der Prinzipalkomponentenanalyse (Principal Component Analysis, PCA) ab, die in jedem Cluster verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,9 +40,9 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Gibt die Anzahl der in jedem Cluster zu verwendenden PCA-Vektoren (Principal Component Analysis) zurück.
+Gibt die Anzahl der Basisvektoren der Prinzipalkomponentenanalyse (Principal Component Analysis, PCA) zurück, die in jedem Cluster verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,12 +50,12 @@ Gibt die Anzahl der in jedem Cluster zu verwendenden PCA-Vektoren (Principal Com
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

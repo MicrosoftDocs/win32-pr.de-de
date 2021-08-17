@@ -1,6 +1,6 @@
 ---
 title: id-Attribut
-description: Das \id\-Attribut gibt eine DISPID für eine Memberfunktion an (entweder eine Eigenschaft oder eine Methode in einer Schnittstelle oder Dispinterface).
+description: Das Attribut \id\ gibt eine DISPID für eine Memberfunktion an (entweder eine Eigenschaft oder eine Methode, in einer Schnittstelle oder Disp-Schnittstelle).
 ms.assetid: 6f1be049-81b4-4aa2-a893-5dd79bb4d63c
 keywords:
 - ID-Attribut MIDL
@@ -21,7 +21,7 @@ ms.locfileid: "118643066"
 ---
 # <a name="id-attribute"></a>id-Attribut
 
-Das **\[ id-Attribut \]** gibt eine DISPID für eine Memberfunktion an (entweder eine Eigenschaft oder eine Methode in einer Schnittstelle oder Dispinterface).
+Das **\[ attribut id \]** gibt eine DISPID für eine Memberfunktion an (entweder eine Eigenschaft oder eine Methode in einer Schnittstelle oder Disp-Schnittstelle).
 
 ``` syntax
 [id(id-num) [,optional-attribute-list]] return-type function-name(optional-parameter-list)
@@ -45,7 +45,7 @@ Gibt eine Liste von null oder mehr MIDL-Schnittstellenattributen an.
 
 </dd> <dt>
 
-*rückgabetyp* 
+*return-type* 
 </dt> <dd>
 
 Gibt den Rückgabetyp der Funktion an.
@@ -68,11 +68,11 @@ Null oder mehr Funktionsparameter.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie das **\[ \] id-Attribut,** wenn Sie einer Methode oder Eigenschaft eine Standard-DISPID (z.B. DISPID \_ VALUE, DISPID \_ NEWENUM usw.) zuweisen möchten oder wenn Sie Ihr eigenes **IDispatch::Invoke** implementieren, anstatt an **DispInvoke** / **ITypeInfo::Invoke** zu delegieren.
+Verwenden Sie das **\[ \] id-Attribut,** wenn Sie einer Methode oder Eigenschaft eine Standard-DISPID (z. B. DISPID VALUE, DISPID NEWENUM usw.) zuweisen möchten oder wenn Sie Ihr eigenes IDispatch::Invoke implementieren, anstatt an \_ \_  **DispInvoke** / **ITypeInfo::Invoke** zu delegieren.
 
-Wenn Sie das **\[ ID-Attribut \]** nicht für eine Schnittstelle verwenden, weist der MIDL-Compiler Ihnen eine DISPID zu. Wenn Sie jedoch eine Disp-Schnittstelle mithilfe von Eigenschaften und Methoden angeben, müssen Sie eine DISPID für jede Eigenschaft und Methode angeben.
+Wenn Sie das **\[ \] ID-Attribut** nicht für eine Schnittstelle verwenden, weist der MIDL-Compiler Ihnen eine DISPID zu. Wenn Sie jedoch eine Disp-Interface mithilfe von Eigenschaften und Methoden angeben, müssen Sie für jede Eigenschaft und Methode eine DISPID angeben.
 
-*Id-num* ist ein positiver 32-Bit-Ganzzahlwert. Negative IDs sind für die Verwendung durch Automation reserviert.
+*Id-num ist* ein positiver 32-Bit-Ganzzahlwert. Negative IDs sind für die Verwendung durch Automation reserviert.
 
 ## <a name="examples"></a>Beispiele
 
@@ -100,7 +100,7 @@ interface IKnown : IUnknown
 [ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
 [Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)

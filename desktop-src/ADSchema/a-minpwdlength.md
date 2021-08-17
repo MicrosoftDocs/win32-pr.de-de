@@ -121,7 +121,7 @@ Die Mindestanzahl von Zeichen, die ein Kennwort enthalten muss.
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | Falsch                                                                                                                                                 |
-| Ist einwertig       | Richtig                                                                                                                                                  |
+| Is-Single-Valued       | Richtig                                                                                                                                                  |
 | Ist indiziert             | Falsch                                                                                                                                                 |
 | Im globalen Katalog      | Falsch                                                                                                                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
@@ -142,7 +142,7 @@ Die Mindestanzahl von Zeichen, die ein Kennwort enthalten muss.
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | Falsch                                                                                                                                                 |
-| Ist einwertig       | Richtig                                                                                                                                                  |
+| Is-Single-Valued       | Richtig                                                                                                                                                  |
 | Ist indiziert             | Falsch                                                                                                                                                 |
 | Im globalen Katalog      | Falsch                                                                                                                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
@@ -163,7 +163,7 @@ Die Mindestanzahl von Zeichen, die ein Kennwort enthalten muss.
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
 | System-Only            | Falsch                                                                                                                                                 |
-| Ist einwertig       | Richtig                                                                                                                                                  |
+| Is-Single-Valued       | Richtig                                                                                                                                                  |
 | Ist indiziert             | Falsch                                                                                                                                                 |
 | Im globalen Katalog      | Falsch                                                                                                                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |

@@ -1,9 +1,9 @@
 ---
-title: Moreingefo-Element
-description: Das moreinfo-Element gibt eine URL zu einer Website, einer e-Mail-Adresse oder einem Skript Befehl an, die einer Show, einem Clip oder einem Banner zugeordnet ist.
+title: MOREINFO-Element
+description: Das MOREINFO-Element gibt eine URL zu einer Website, einer E-Mail-Adresse oder einem Skriptbefehl an, der einem Show-, Clip- oder Banner zugeordnet ist.
 ms.assetid: b817ef1d-4ca0-45f4-942b-695eaf537110
 keywords:
-- Moreingefo-Element Fenster Media Player
+- MOREINFO-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: efc54fe9745566ec7eaa87b7f0f4645b07a055f0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 925783b6bd48fbc8b944d7b8fd2a2b94a9954c7036114145b99b015b90cbb6d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358260"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134953"
 ---
-# <a name="moreinfo-element"></a>Moreingefo-Element
+# <a name="moreinfo-element"></a>MOREINFO-Element
 
-Das **moreinfo** -Element gibt eine URL zu einer Website, einer e-Mail-Adresse oder einem Skript Befehl an, die einer Show, einem Clip oder einem Banner zugeordnet ist.
+Das **MOREINFO-Element** gibt eine URL zu einer Website, einer E-Mail-Adresse oder einem Skriptbefehl an, der einem Show-, Clip- oder Banner zugeordnet ist.
 
 ``` syntax
 <MOREINFO
@@ -33,36 +33,36 @@ Das **moreinfo** -Element gibt eine URL zu einer Website, einer e-Mail-Adresse o
 
 ## <a name="attributes"></a>Attribute
 
-**Href** (erforderlich)
+**HREF** (erforderlich)
 
-URL zu einer Website, einer e-Mail-Adresse oder einem Skript Befehl.
+URL zu einer Website, einer E-Mail-Adresse oder einem Skriptbefehl.
 
-**Spar**
+**Ziel**
 
-Ein Wert, der den Frame oder das Fenster definiert, in dem der Browser die durch das **href** -Attribut definierte Seite öffnet.
+Wert, der den Frame oder das Fenster definiert, in dem der Browser die durch das **HREF-Attribut** definierte Seite öffnet.
 
-Dabei kann es sich um eine Zeichenfolge handeln, die einen Fensternamen oder einen der folgenden Werte enthält.
+Dies kann eine Zeichenfolge sein, die einen Fensternamen oder einen der folgenden Werte enthält.
 
 
 
-| Wert    | BESCHREIBUNG                                                                                                              |
+| Wert    | Beschreibung                                                                                                              |
 |----------|--------------------------------------------------------------------------------------------------------------------------|
-| \_Blitz  | Das Dokument wird in einem neuen Browserfenster geladen.                                                                              |
-| \_self   | Das Dokument wird im gleichen Frame geladen wie das aktuelle Dokument, das das Windows Media Player-Steuerelement enthält.                |
-| \_übergeordneten | Das Dokument wird in den unmittelbar übergeordneten Frame des aktuellen Frames oder den aktuellen Frame geladen, wenn kein übergeordneter Frame vorhanden ist. |
+| \_leer  | Das Dokument wird in einem neuen Browserfenster geladen.                                                                              |
+| \_self   | Das Dokument wird im selben Frame wie das aktuelle Dokument geladen, das das Windows Media Player-Steuerelement enthält.                |
+| \_Elternteil | Das Dokument wird in den unmittelbar übergeordneten Frame des aktuellen Frames geladen, oder der aktuelle Frame, wenn kein übergeordneter Frame vorhanden ist. |
 | \_top    | Das Dokument wird im vollständigen Browserfenster geladen und ersetzt alle anderen Frames oder Dokumente.                                  |
 
 
 
  
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy       | Elemente                       |
 |-----------------|--------------------------------|
-| Übergeordnete Elemente | **ASX**, **Eintrag**, **Banner** |
+| Übergeordnete Elemente | **ASX,** **EINTRAG,** **BANNER** |
 | Untergeordnete Elemente  | Keine                           |
 
 
@@ -71,21 +71,21 @@ Dabei kann es sich um eine Zeichenfolge handeln, die einen Fensternamen oder ein
 
 ## <a name="remarks"></a>Bemerkungen
 
-Dieses Element gibt eine URL zu einer Website, einer e-Mail-Adresse **oder einem Skript Befehl an. Der Benutzer kann auf das Ziel der URL zugreifen, indem er auf die Grafik oder den Text klickt, der dem Morein FO-Element zugeordnet ist** . Die Details hängen von dem übergeordneten Element des **moreingefo** -Elements ab:
+Dieses Element gibt eine URL zu einer Website, einer E-Mail-Adresse oder einem **Skriptbefehl an. Der Benutzer kann auf das Ziel der URL zugreifen, indem er auf die Grafik oder den Text klickt, die bzw. der dem MOREINFO-Element zugeordnet ist.** Die Details hängen vom übergeordneten Element des **MOREINFO-Elements** ab:
 
--   Wenn das **moreinfo** -Element das untergeordnete Element eines **ASX** -Elements ist, kann der Benutzer auf die URL zugreifen, indem er auf den Titel anzeigen klickt.
--   Wenn das **moreinfo** -Element das untergeordnete Element eines **Entry** -Elements ist, kann der Benutzer auf die URL zugreifen, indem er auf den Clip-Titel klickt.
--   Wenn das **Moran FO** -Element das untergeordnete Element eines **Banner** Elements ist, kann der Benutzer auf die URL zugreifen, indem er auf die Banner Grafik klickt.
+-   Wenn das **MOREINFO-Element** das untergeordnete Element eines **ASX-Elements** ist, kann der Benutzer auf die URL zugreifen, indem er auf den Titel anzeigen klickt.
+-   Wenn das **MOREINFO-Element** das untergeordnete Element eines **ENTRY-Elements** ist, kann der Benutzer auf die URL zugreifen, indem er auf den Titel des Clips klickt.
+-   Wenn das **MOREINFO-Element** das untergeordnete Element eines **BANNER-Elements** ist, kann der Benutzer auf die URL zugreifen, indem er auf die Bannergrafik klickt.
 
-Wenn das **href** -Attribut eine URL zu einer Website angibt, wird der Browser geöffnet und navigiert zur URL. Wenn das **href** -Attribut eine e-Mail-Adresse angibt, wird die e-Mail des Benutzers gestartet. Wenn das **href** -Attribut einen Skript Befehl angibt, wird der Skript Befehl im Browser ausgeführt.
+Wenn das **HREF-Attribut** eine URL zu einer Website angibt, wird der Browser geöffnet und navigiert zur URL. Wenn das **HREF-Attribut** eine E-Mail-Adresse angibt, wird die E-Mail-Anwendung des Benutzers gestartet. Wenn das **HREF-Attribut** einen Skriptbefehl angibt, wird der Skriptbefehl im Browser ausgeführt.
 
 **Hinweis**
 
-Wenn das **moreinfo** -Element in einem **ASX** -oder **Entry** -Element angezeigt wird, wenn der Mauszeiger über dem Titel der Anzeige (für **ein-** Element des-Elements) oder von Clip (bei einem **Entry** -Element) gehalten wird, kann die im **href** -Attribut definierte URL ausgewählt und von Windows Media Player aufgerufen werden.
+Wenn das **MOREINFO-Element** in einem **ASX-** oder **ENTRY-Element** angezeigt wird und der Mauszeiger über dem Titel der Show (für ein **ASX-Element)** oder clip (für ein **ENTRY-Element)** gehalten wird, kann die im **HREF-Attribut** definierte URL ausgewählt werden und von Windows Media Player darauf zugegriffen werden.
 
-Das **Ziel** Attribut definiert den Frame oder das Fenster, in dem der Browser die durch das **href** -Attribut definierte Seite öffnet. Die Werte für dieses Attribut entsprechen standardmäßigen HTML-Syntax und-Definitionen. Wenn ein in einer Webseite eingebettetes Steuerelement kein **Ziel** Attribut definiert ist, lädt die URL das aktuelle Browserfenster und ersetzt die vorhandene Seite, was bedeutet, dass die Inhalte nicht mehr abgespielt werden. Daher wird empfohlen, beim Einbetten des Windows Media Player-Steuer Elements auf einer Webseite immer ein **Ziel** Attribut anzugeben.
+Das **TARGET-Attribut** definiert den Frame oder das Fenster, in dem der Browser die durch das **HREF-Attribut** definierte Seite öffnet. Die Werte für dieses Attribut folgen standardmäßiger HTML-Syntax und -Definitionen. Wenn bei einem in eine Webseite eingebetteten Steuerelement kein **TARGET-Attribut** definiert ist, lädt die URL das aktuelle Browserfenster und ersetzt die vorhandene Seite, was bedeutet, dass der Inhalt nicht mehr wiedergegeben wird. Daher wird empfohlen, immer ein **TARGET-Attribut** anzugeben, wenn Sie das Windows Media Player-Steuerelement in eine Webseite einbetten.
 
-Wenn die Metadatendatei im eigenständigen Windows-Media Player geöffnet ist, wird das **Ziel** Attribut ignoriert, und die URL wird in ein vorhandenes Browserfenster geladen. Wenn derzeit kein Browserfenster geöffnet ist, wird die URL in einem neuen Browserfenster geladen.
+Wenn die Metadatei im eigenständigen Windows Media Player geöffnet wird, wird das **TARGET-Attribut** ignoriert, und die URL wird in einem vorhandenen Browserfenster geladen. Wenn derzeit kein Browserfenster geöffnet ist, wird die URL in ein neues Browserfenster geladen.
 
 ## <a name="examples"></a>Beispiele
 
@@ -114,18 +114,18 @@ Wenn die Metadatendatei im eigenständigen Windows-Media Player geöffnet ist, w
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 70 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 70 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Metadateien**](windows-media-metafile-reference.md)
+[**Windows Referenz zu Medienmetadateien**](windows-media-metafile-reference.md)
 </dt> </dl>
 
  

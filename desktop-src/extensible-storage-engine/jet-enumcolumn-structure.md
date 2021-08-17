@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_ENUMCOLUMN Struktur'
+description: 'Weitere Informationen zu: JET_ENUMCOLUMN-Struktur'
 title: JET_ENUMCOLUMN-Struktur
 TOCTitle: JET_ENUMCOLUMN Structure
 ms:assetid: f8f512fd-5fcf-47ed-a5db-2fb3bd76c2d7
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_enumcolumn-structure"></a>JET_ENUMCOLUMN-Struktur
 
-Die **JET_ENUMCOLUMN-Struktur** aufzählt die Spaltenwerte eines Datensatzes, wenn die [JetEnumerateColumns-Funktion](./jetenumeratecolumns-function.md) verwendet wird. [JetEnumerateColumns gibt](./jetenumeratecolumns-function.md) ein Array von **JET_ENUMCOLUMN** zurück. Das Array wird im Arbeitsspeicher zurückgegeben, der mit dem [realloc-kompatiblen](/cpp/c-runtime-library/reference/realloc?view=vs-2019) Rückruf zugeordnet wird, der für diese API bereitgestellt wurde.
+Die **JET_ENUMCOLUMN-Struktur** listet die Spaltenwerte eines Datensatzes auf, wenn die [JetEnumerateColumns-Funktion](./jetenumeratecolumns-function.md) verwendet wird. [JetEnumerateColumns](./jetenumeratecolumns-function.md) gibt ein Array von **JET_ENUMCOLUMN** Strukturen zurück. Das Array wird im Arbeitsspeicher zurückgegeben, der mithilfe des [reloc-kompatiblen](/cpp/c-runtime-library/reference/realloc?view=vs-2019) Rückrufs zugeordnet wird, der für diese API bereitgestellt wurde.
 
 ```cpp
     typedef struct {
@@ -52,7 +52,7 @@ Die **JET_ENUMCOLUMN-Struktur** aufzählt die Spaltenwerte eines Datensatzes, we
 
 **Columnid**
 
-Die Spalten-ID, die aufzählt wurde.
+Die Aufzählungsspalten-ID.
 
 **Err**
 
@@ -84,15 +84,15 @@ Der Spaltenstatuscode, der sich aus der Enumeration der Spalte ergibt.
 </tr>
 <tr class="even">
 <td><p>JET_wrnColumnPresent</p></td>
-<td><p>JET_bitEnumeratePresenceOnly wurde angegeben, und für diese Spalte wurde mindestens ein Nicht-NULL-Spaltenwert zurückgegeben.</p></td>
+<td><p>JET_bitEnumeratePresenceOnly angegeben wurde und mindestens ein Spaltenwert ungleich NULL für diese Spalte zurückgegeben worden wäre.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_wrnColumnSingleValue</p></td>
-<td><p>JET_bitEnumerateCompressOutput wurde angegeben, und für diese Spalte wurde genau ein Nicht-NULL-Spaltenwert zurückgegeben. Daher wurde die komprimierte Form der <strong>JET_ENUMCOLUMN</strong> zurückgegeben. Weitere <strong>JET_ENUMCOLUMN</strong> finden Sie unter .</p></td>
+<td><p>JET_bitEnumerateCompressOutput angegeben wurde und genau ein Nicht-NULL-Spaltenwert für diese Spalte zurückgegeben wurde. Daher wurde die komprimierte Form von <strong>JET_ENUMCOLUMN</strong> zurückgegeben. Weitere Informationen finden Sie <strong>unter JET_ENUMCOLUMN.</strong></p></td>
 </tr>
 <tr class="even">
 <td><p>JET_wrnColumnSkipped</p></td>
-<td><p>Die Spalten-ID in <a href="gg269251(v=exchg.10).md">der JET_ENUMCOLUMNID</a> struktur, die dieser Struktur <strong>entspricht JET_ENUMCOLUMN</strong> 0 (null) war.</p></td>
+<td><p>Die Spalten-ID in der <a href="gg269251(v=exchg.10).md">JET_ENUMCOLUMNID</a> Struktur, die dieser <strong>JET_ENUMCOLUMN</strong> Struktur entspricht, war 0 (null).</p></td>
 </tr>
 </tbody>
 </table>
@@ -100,39 +100,39 @@ Der Spaltenstatuscode, der sich aus der Enumeration der Spalte ergibt.
 
 **cEnumColumnValue**
 
-Das Array von Spaltenwerten, das für die Spalte aufzählt wurde. Der Ausgabepuffer wird im Arbeitsspeicher zurückgegeben, der mithilfe des [realloc-kompatiblen](/cpp/c-runtime-library/reference/realloc?view=vs-2019) Rückrufs zugeordnet wurde, der [für JetEnumerateColumns bereitgestellt wurde.](./jetenumeratecolumns-function.md)
+Das Array von Spaltenwerten, das für die Spalte aufzählt wurde. Der Ausgabepuffer wird im Arbeitsspeicher zurückgegeben, der mit dem [relokalkompatiblen](/cpp/c-runtime-library/reference/realloc?view=vs-2019) Rückruf zugeordnet wurde, der an [JetEnumerateColumns](./jetenumeratecolumns-function.md)bereitgestellt wurde.
 
-Dieser Ausgabepuffer wird verwendet, wenn der Spaltenstatuscode nicht gleich JET_wrnColumnSingleValue. Weitere Informationen finden Sie unter [JetEnumerateColumns](./jetenumeratecolumns-function.md).
+Dieser Ausgabepuffer wird verwendet, wenn der Spaltenstatuscode nicht gleich JET_wrnColumnSingleValue ist. Weitere Informationen finden Sie unter [JetEnumerateColumns](./jetenumeratecolumns-function.md).
 
-Dies wird zurückgegeben, wenn "err \! = JET_wrnColumnSingleValue" ist.
+Dies wird zurückgegeben, wenn "err \! = JET_wrnColumnSingleValue".
 
 **rgEnumColumnValue**
 
-Das Array von Spaltenwerten, das für die Spalte aufzählt wurde. Der Ausgabepuffer wird im Arbeitsspeicher zurückgegeben, der mithilfe des [realloc-kompatiblen](/cpp/c-runtime-library/reference/realloc?view=vs-2019) Rückrufs zugeordnet wurde, der [für JetEnumerateColumns bereitgestellt wurde.](./jetenumeratecolumns-function.md)
+Das Array von Spaltenwerten, das für die Spalte aufzählt wurde. Der Ausgabepuffer wird im Arbeitsspeicher zurückgegeben, der mit dem [relokalkompatiblen](/cpp/c-runtime-library/reference/realloc?view=vs-2019) Rückruf zugeordnet wurde, der an [JetEnumerateColumns](./jetenumeratecolumns-function.md)bereitgestellt wurde.
 
-Dieser Ausgabepuffer wird verwendet, wenn der Spaltenstatuscode nicht gleich JET_wrnColumnSingleValue. Weitere Informationen finden Sie unter [JetEnumerateColumns](./jetenumeratecolumns-function.md).
+Dieser Ausgabepuffer wird verwendet, wenn der Spaltenstatuscode nicht gleich JET_wrnColumnSingleValue ist. Weitere Informationen finden Sie unter [JetEnumerateColumns](./jetenumeratecolumns-function.md).
 
-Dies wird zurückgegeben, wenn "err \! = JET_wrnColumnSingleValue" ist.
+Dies wird zurückgegeben, wenn "err \! = JET_wrnColumnSingleValue".
 
 **cbData**
 
 Der Spaltenwert, der für die Spalte aufzählt wurde.
 
-Der Ausgabepuffer wird im Arbeitsspeicher zurückgegeben, der mithilfe des [realloc-kompatiblen](/cpp/c-runtime-library/reference/realloc?view=vs-2019) Rückrufs zugeordnet wurde, der [für JetEnumerateColumns bereitgestellt wurde.](./jetenumeratecolumns-function.md)
+Der Ausgabepuffer wird im Arbeitsspeicher zurückgegeben, der mit dem [relokalkompatiblen](/cpp/c-runtime-library/reference/realloc?view=vs-2019) Rückruf zugeordnet wurde, der an [JetEnumerateColumns](./jetenumeratecolumns-function.md)bereitgestellt wurde.
 
-Dieser Ausgabepuffer wird nur verwendet, wenn der Spaltenstatuscode JET_wrnColumnSingleValue. Weitere Informationen finden Sie unter [JetEnumerateColumns](./jetenumeratecolumns-function.md).
+Dieser Ausgabepuffer wird nur verwendet, wenn der Spaltenstatuscode JET_wrnColumnSingleValue ist. Weitere Informationen finden Sie unter [JetEnumerateColumns](./jetenumeratecolumns-function.md).
 
-Dies wird zurückgegeben, wenn "err == JET_wrnColumnSingleValue" ist.
+Dies wird zurückgegeben, wenn "err == JET_wrnColumnSingleValue".
 
 **pvData**
 
 Der Spaltenwert, der für die Spalte aufzählt wurde.
 
-Der Ausgabepuffer wird im Arbeitsspeicher zurückgegeben, der mithilfe des [realloc-kompatiblen](/cpp/c-runtime-library/reference/realloc?view=vs-2019) Rückrufs zugeordnet wurde, der [für JetEnumerateColumns bereitgestellt wurde.](./jetenumeratecolumns-function.md)
+Der Ausgabepuffer wird im Arbeitsspeicher zurückgegeben, der mit dem [relokalkompatiblen](/cpp/c-runtime-library/reference/realloc?view=vs-2019) Rückruf zugeordnet wurde, der an [JetEnumerateColumns](./jetenumeratecolumns-function.md)bereitgestellt wurde.
 
-Dieser Ausgabepuffer wird nur verwendet, wenn der Spaltenstatuscode JET_wrnColumnSingleValue. Weitere Informationen finden Sie unter [JetEnumerateColumns](./jetenumeratecolumns-function.md).
+Dieser Ausgabepuffer wird nur verwendet, wenn der Spaltenstatuscode JET_wrnColumnSingleValue ist. Weitere Informationen finden Sie unter [JetEnumerateColumns](./jetenumeratecolumns-function.md).
 
-Dies wird zurückgegeben, wenn "err == JET_wrnColumnSingleValue" ist.
+Dies wird zurückgegeben, wenn "err == JET_wrnColumnSingleValue".
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -152,7 +152,7 @@ Dies wird zurückgegeben, wenn "err == JET_wrnColumnSingleValue" ist.
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In Esent.h deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 </tbody>
 </table>

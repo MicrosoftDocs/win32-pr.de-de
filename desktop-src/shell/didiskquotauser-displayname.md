@@ -1,6 +1,6 @@
 ---
 description: Ruft den Anzeigenamen des Benutzers ab.
-title: DIDiskQuotaUser.DisplayName (Eigenschaft)
+title: DIDiskQuotaUser.DisplayName-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118969459"
 ---
-# <a name="didiskquotauserdisplayname-property"></a>DIDiskQuotaUser.DisplayName (Eigenschaft)
+# <a name="didiskquotauserdisplayname-property"></a>DIDiskQuotaUser.DisplayName-Eigenschaft
 
 Ruft den Anzeigenamen des Benutzers ab.
 
@@ -41,7 +41,7 @@ Ein Zeichenfolgenwert, der auf den Anzeigenamen des Benutzers festgelegt ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft enthält den "Angezeigten Namen" des Benutzers. Der Wert ist nicht unbedingt definiert.
+Diese Eigenschaft enthält den "Anzeigenamen" des Benutzers. Sein Wert ist nicht notwendigerweise definiert.
 
 ## <a name="requirements"></a>Anforderungen
 

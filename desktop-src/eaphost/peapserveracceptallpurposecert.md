@@ -28,7 +28,7 @@ Dies ist ein **REG \_ DWORD-Wert.**
 
 
 
-| Wert        | Beschreibung                                                                                                 |
+| Wert        | BESCHREIBUNG                                                                                                 |
 |--------------|-------------------------------------------------------------------------------------------------------------|
 | 1            | Server und Client akzeptieren alle von der anderen Partei zur EAP-TLS-Authentifizierung gesendeten Zertifikate.       |
 | Andere Werte | Server und Client akzeptieren keine allzweckbasierten Zertifikate, die von der anderen Partei für die EAP-TLS-Authentifizierung gesendet werden. |

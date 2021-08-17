@@ -1,11 +1,11 @@
 ---
 title: FSMO-Role-Owner-Attribut
-description: Flexible Single-Master Operation Der Distinguished Name des Domänencontrollers, in dem das Schema geändert werden kann.
+description: Flexible Single-Master Operation Der Distinguished Name des Domänencontrollers, an dem das Schema geändert werden kann.
 ms.assetid: 8eb28524-4bbf-453c-89ab-864ef94b0781
 ms.tgt_platform: multiple
 keywords:
 - AD-Schema des FSMO-Role-Owner-Attributs
-- fSMORoleOwner-Attribut-AD-Schema
+- Ad-Schema des fSMORoleOwner-Attributs
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118961379"
 ---
 # <a name="fsmo-role-owner-attribute"></a>FSMO-Role-Owner-Attribut
 
-Flexible Single-Master Operation: Der Distinguished Name des Domänencontrollers, in dem das Schema geändert werden kann.
+Flexibler Single-Master: Der Distinguished Name des Domänencontrollers, an dem das Schema geändert werden kann.
 
 
 
@@ -35,7 +35,7 @@ Flexible Single-Master Operation: Der Distinguished Name des Domänencontrollers
 | Aktualisieren von Berechtigungen  | Schemaadministrator                    |
 | Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.369                  |
-| System-ID-GUID    | 66171887-8f3c-11d0-afda-00c04fd930c9    |
+| System-Id-Guid    | 66171887-8f3c-11d0-afda-00c04fd930c9    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -58,10 +58,10 @@ Flexible Single-Master Operation: Der Distinguished Name des Domänencontrollers
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist einwertig       | True                            |
-| Ist indiziert             | True                            |
-| Im globalen Katalog      | False                           |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Richtig                            |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -79,10 +79,10 @@ Flexible Single-Master Operation: Der Distinguished Name des Domänencontrollers
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist einwertig       | True                            |
-| Ist indiziert             | True                            |
-| Im globalen Katalog      | False                           |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Richtig                            |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -100,10 +100,10 @@ Flexible Single-Master Operation: Der Distinguished Name des Domänencontrollers
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist einwertig       | True                            |
-| Ist indiziert             | True                            |
-| Im globalen Katalog      | False                           |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Richtig                            |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -121,10 +121,10 @@ Flexible Single-Master Operation: Der Distinguished Name des Domänencontrollers
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist einwertig       | True                            |
-| Ist indiziert             | True                            |
-| Im globalen Katalog      | False                           |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Richtig                            |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -142,10 +142,10 @@ Flexible Single-Master Operation: Der Distinguished Name des Domänencontrollers
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist einwertig       | True                            |
-| Ist indiziert             | True                            |
-| Im globalen Katalog      | False                           |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Richtig                            |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -163,10 +163,10 @@ Flexible Single-Master Operation: Der Distinguished Name des Domänencontrollers
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist einwertig       | True                            |
-| Ist indiziert             | True                            |
-| Im globalen Katalog      | False                           |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Richtig                            |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
@@ -184,10 +184,10 @@ Flexible Single-Master Operation: Der Distinguished Name des Domänencontrollers
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist einwertig       | True                            |
-| Ist indiziert             | True                            |
-| Im globalen Katalog      | False                           |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Richtig                            |
+| Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |

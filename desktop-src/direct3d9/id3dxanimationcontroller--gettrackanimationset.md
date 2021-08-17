@@ -1,7 +1,7 @@
 ---
-description: Ruft den Animations Satz für den angegebenen Titel ab.
+description: Ruft den Animationssatz für die angegebene Spur ab.
 ms.assetid: d40669ac-c391-4912-82d6-28c366a0f1dc
-title: 'ID3DXAnimationController:: gettrackanimationset-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::GetTrackAnimationSet-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a7ba397fb876d94aa48f635785737ab0448ecef6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 23ee81fa6e704e73c1bf1a8e3064a5832731f2e5336e9725d3666409133a5106
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961672"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119122111"
 ---
-# <a name="id3dxanimationcontrollergettrackanimationset-method"></a>ID3DXAnimationController:: gettrackanimationset-Methode
+# <a name="id3dxanimationcontrollergettrackanimationset-method"></a>ID3DXAnimationController::GetTrackAnimationSet-Methode
 
-Ruft den Animations Satz für den angegebenen Titel ab.
+Ruft den Animationssatz für die angegebene Spur ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetTrackAnimationSet(
 
 <dl> <dt>
 
-Nach *verfolgen* \[ in\]
+*Nachverfolgen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Bezeichner nachverfolgen.
+Nachverfolgungsbezeichner.
 
 </dd> <dt>
 
-*ppanimset* \[ vorgenommen\]
+*ppAnimSet* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXANIMATIONSET**](id3dxanimationset.md)\***
 
-Zeiger auf den [**ID3DXAnimationSet**](id3dxanimationset.md) -Animations Satz für den angegebenen Titel.
+Zeiger auf den [**ID3DXAnimationSet-Animationssatz**](id3dxanimationset.md) für die angegebene Spur.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Zeiger auf den [**ID3DXAnimationSet**](id3dxanimationset.md) -Animations Satz f�
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,12 +71,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

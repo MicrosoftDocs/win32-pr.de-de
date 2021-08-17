@@ -1,9 +1,9 @@
 ---
-title: Pixelaspectratioy
-description: Das pixelaspectratioy-Attribut ist der vertikale Teil des Seitenverhältnisses eines Videos.
+title: PixelAspectRatioy
+description: Das PixelAspectRatioY-Attribut ist der vertikale Teil des Seitenverhältnisses eines Videos.
 ms.assetid: de2799c4-4f9a-4dc9-8c60-9b11cd1894b3
 keywords:
-- Pixelaspectratioy-Fenster Media Player
+- PixelAspectRatioY-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 981816eab204b493f94f240e0de97d94417e4df8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 256e3a5a0ac17493e4a0caf280834ff72aa132f02e381d8fd9a10f6c44d41888
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371402"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134853"
 ---
-# <a name="pixelaspectratioy"></a>Pixelaspectratioy
+# <a name="pixelaspectratioy"></a>PixelAspectRatioy
 
-Das **pixelaspectratioy** -Attribut ist der vertikale Teil des Seitenverhältnisses eines Videos.
+Das **PixelAspectRatioY-Attribut** ist der vertikale Teil des Seitenverhältnisses eines Videos.
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für ein Video mit einem Seitenverhältnis von 16:9 wäre **pixelaspectratioy** gleich "9".
+Für ein Video mit einem Seitenverhältnis von 16:9 würde **PixelAspectRatioY** gleich "9" sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,11 +41,11 @@ Für ein Video mit einem Seitenverhältnis von 16:9 wäre **pixelaspectratioy** 
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

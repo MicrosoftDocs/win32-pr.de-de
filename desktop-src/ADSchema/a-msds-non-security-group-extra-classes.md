@@ -120,7 +120,7 @@ Die allgemeinen Namen der Nichtstandardklassen, die einer Nichtsicherheitsgruppe
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | Falsch                                               |
-| Ist einwertig       | Falsch                                               |
+| Is-Single-Valued       | Falsch                                               |
 | Ist indiziert             | Falsch                                               |
 | Im globalen Katalog      | Falsch                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                        |
@@ -141,7 +141,7 @@ Die allgemeinen Namen der Nichtstandardklassen, die einer Nichtsicherheitsgruppe
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | Falsch                                               |
-| Ist einwertig       | Falsch                                               |
+| Is-Single-Valued       | Falsch                                               |
 | Ist indiziert             | Falsch                                               |
 | Im globalen Katalog      | Falsch                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                        |
@@ -155,7 +155,7 @@ Die allgemeinen Namen der Nichtstandardklassen, die einer Nichtsicherheitsgruppe
 
 ## <a name="remarks"></a>Hinweise
 
-In der folgenden Liste sind die Standardklassen aufgeführt, die einer Gruppe über das Active Directory-Benutzer und -Computer Snap-In hinzugefügt werden können.
+In der folgenden Liste sind die Standardklassen aufgeführt, die einer Gruppe über das Active Directory-Benutzer und -Computer hinzugefügt werden können.
 
 -   [**Gruppe**](c-group.md)
 -   [**Benutzer**](c-user.md)
@@ -163,7 +163,7 @@ In der folgenden Liste sind die Standardklassen aufgeführt, die einer Gruppe ü
 -   [**Contact**](c-contact.md)
 -   [**Computer**](c-computer.md)
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

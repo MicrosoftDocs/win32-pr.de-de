@@ -75,7 +75,7 @@ Breite der Textur in Pixel aus [**ID3DXTextureGutterHelper::GetWidth**](id3dxtex
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Höhe der Textur in Pixel, die aus [**ID3DXTextureGutterHelper::GetHeight ermittelt wurde.**](id3dxtexturegutterhelper--getheight.md)
+Höhe der Textur in Pixel, die von [**ID3DXTextureGutterHelper::GetHeight erhalten wurde.**](id3dxtexturegutterhelper--getheight.md)
 
 </dd> </dl>
 

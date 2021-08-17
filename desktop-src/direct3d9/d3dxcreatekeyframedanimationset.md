@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine ID3DXKeyframedAnimationSet Key-Animation für Animations Sätze.
+description: Erstellt eine ID3DXKeyframedAnimationSet-Schnittstelle für keyframed animation set.
 ms.assetid: 7b4fffdc-696c-400c-a0cc-fc755fd25b75
-title: D3DXCreateKeyframedAnimationSet-Funktion (D3dx9anim. h)
+title: D3DXCreateKeyframedAnimationSet-Funktion (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 3f3eb45e999d25c776014c3df5824e0468d03ffd
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c4fbfb31b712e1521930fa468bae315a443105f3a6bc0863fe3267f9586f874a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118804566"
 ---
 # <a name="d3dxcreatekeyframedanimationset-function"></a>D3DXCreateKeyframedAnimationSet-Funktion
 
-Erstellt eine [**ID3DXKeyframedAnimationSet**](id3dxkeyframedanimationset.md) Key-Animation für Animations Sätze.
+Erstellt eine [**ID3DXKeyframedAnimationSet-Schnittstelle**](id3dxkeyframedanimationset.md) für keyframed animation set.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,66 +46,66 @@ HRESULT D3DXCreateKeyframedAnimationSet(
 
 <dl> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf den Namen des Animations Satzes.
+Zeiger auf den Namen des Animationssets.
 
 </dd> <dt>
 
-*TicksPerSecond* \[ in\]
+*TicksPerSecond* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Anzahl der Keyframe-Ticks, die pro Sekunde verstrichen sind.
+Anzahl der Keyframe-Ticks, die pro Sekunde verstreichen.
 
 </dd> <dt>
 
-*Wiedergabe* \[ in\]
+*Wiedergabe* \[ In\]
 </dt> <dd>
 
-Type: **[ **D3DXPLAYBACK- \_ Typ**](./d3dxplayback-type.md)**
+Typ: **[ **D3DXPLAYBACK-TYP \_**](./d3dxplayback-type.md)**
 
-Der Typ der Wiedergabe Schleife für Animations Sätze. Siehe [**D3DXPLAYBACK \_ Type**](./d3dxplayback-type.md).
+Typ der Wiedergabeschleife des Animationssets. Siehe [**D3DXPLAYBACK \_ TYPE**](./d3dxplayback-type.md).
 
 </dd> <dt>
 
-*Numanimationen* \[ in\]
+*NumAnimations* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Skalierungs Gruppen für Skalierung, Drehung und Übersetzung (SRT).
+Anzahl von Skalierungs-, Dreh- und Übersetzungsanimationsätzen (SRT).
 
 </dd> <dt>
 
-*Numcallbackkeys* \[ in\]
+*NumCallbackKeys* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl von Rückruf Schlüsseln.
+Anzahl von Rückrufschlüsseln.
 
 </dd> <dt>
 
-*pcallkeys* \[ in\]
+*pCallKeys* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**LPD3DXKEY \_ Rückruf**](d3dxkey-callback.md) \***
+Typ: **const [**LPD3DXKEY \_ CALLBACK**](d3dxkey-callback.md) \***
 
-Zeiger auf eine [**D3DXKEY- \_ Rückruf**](d3dxkey-callback.md) Struktur, die Benutzer Rückruf Daten speichert.
+Zeiger auf eine [**D3DXKEY \_ CALLBACK-Struktur,**](d3dxkey-callback.md) die Benutzerrückrufdaten speichert.
 
 </dd> <dt>
 
-*ppanimationset* \[ vorgenommen\]
+*ppAnimationSet* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXKEYFRAMEDANIMATIONSET**](id3dxkeyframedanimationset.md)\***
 
-Adresse eines Zeigers auf die [**ID3DXKeyframedAnimationSet**](id3dxkeyframedanimationset.md) Key Framed Animation Set-Schnittstelle.
+Adresse eines Zeigers auf die [**Schnittstelle id3DXKeyframedAnimationSet**](id3dxkeyframedanimationset.md) key framed animation set.
 
 </dd> </dl>
 
@@ -113,7 +113,7 @@ Adresse eines Zeigers auf die [**ID3DXKeyframedAnimationSet**](id3dxkeyframedani
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -121,16 +121,16 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. W
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Animations Funktionen](dx9-graphics-reference-d3dx-functions-animation.md)
+[Animationsfunktionen](dx9-graphics-reference-d3dx-functions-animation.md)
 </dt> </dl>
 
  
