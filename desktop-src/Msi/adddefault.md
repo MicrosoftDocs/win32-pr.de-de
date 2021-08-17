@@ -15,11 +15,11 @@ ms.locfileid: "118639704"
 
 Der Wert der **ADDDEFAULT-Eigenschaft** ist eine Liste von Features, die durch Kommas getrennt sind und in ihrer Standardkonfiguration installiert werden sollen. Die Features müssen in der Spalte Feature der [Featuretabelle vorhanden sein.](feature-table.md) Um alle Features in ihren Standardkonfigurationen zu installieren, verwenden Sie ADDDEFAULT=ALL in der Befehlszeile.
 
-Ein in der **ADDDEFAULT-Eigenschaft** aufgeführtes Feature wird im gleichen Installationszustand installiert, als ob der Benutzer eine Bedarfsbasierte Installation des Features angefordert hätte. Der Zustand wird durch die Bits bestimmt, die für das Feature in der Spalte Attribute der [Featuretabelle](feature-table.md)festgelegt sind, und welche Bits für die Featurekomponenten in der Spalte Attribute der [Komponententabelle festgelegt werden.](component-table.md)
+Ein in der **ADDDEFAULT-Eigenschaft** aufgeführtes Feature wird im gleichen Installationszustand installiert, als ob der Benutzer eine bedarfsbasierte Installation des Features angefordert hätte. Der Zustand wird durch die Bits bestimmt, die für das Feature in der Spalte Attribute der [Featuretabelle](feature-table.md)festgelegt sind, und welche Bits für die Featurekomponenten in der Spalte Attribute der [Komponententabelle festgelegt werden.](component-table.md)
 
 ## <a name="remarks"></a>Hinweise
 
-Bei den Featurenamen wird die Kleinschreibung beachtet.
+Bei den Featurenamen wird die Schreibung beachtet.
 
 Das Installationsprogramm wertet die folgenden Eigenschaften immer in der folgenden Reihenfolge aus:
 
@@ -41,7 +41,7 @@ Beispiel:
 -   Wenn die Befehlszeile angibt: ADDLOCAL=ALL, ADDSOURCE = MyFeature, werden alle Features zuerst auf run-local und dann **myFeature** auf run-from-source festgelegt.
 -   Wenn die Befehlszeile auf ADDSOURCE=ALL, ADDLOCAL=MyFeature festgelegt ist, wird zuerst **MyFeature** auf run-local festgelegt, und wenn ADDSOURCE=ALL ausgewertet wird, werden alle Features (einschließlich **MyFeature)** auf die Ausführung aus der Quelle zurückgesetzt.
 
-Das Installationsprogramm legt die [**Preselected-Eigenschaft**](preselected.md) während der Wiederaufnahme einer angehaltenen Installation oder bei Angabe einer der oben genannten Eigenschaften in der Befehlszeile auf den Wert "1" fest.
+Das Installationsprogramm legt die [**Eigenschaft Vorab**](preselected.md) ausgewählt auf den Wert "1" während der Wiederaufnahme einer angehaltenen Installation oder auf den Wert fest, wenn eine der oben genannten Eigenschaften in der Befehlszeile angegeben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,7 +49,7 @@ Das Installationsprogramm legt die [**Preselected-Eigenschaft**](preselected.md)
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Requirements (Anforderungen für den Windows Installer).<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

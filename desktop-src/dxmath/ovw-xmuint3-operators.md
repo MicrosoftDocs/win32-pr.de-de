@@ -4,16 +4,16 @@ ms.assetid: 6e732b64-9926-4949-9292-c3ac3a553967
 title: XMUINT3-Operatoren
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 07195c100e7b27e6171cb7a281b13789a471bd09
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4eac7a6a91fe41f2168b1c1c4265a12088b911cb8beb1a5138c4c4ab96a541af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863495"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119118330"
 ---
 # <a name="xmuint3-operators"></a>XMUINT3-Operatoren
 
-Die [**XMUINT3**](/windows/win32/api/directxmath/ns-directxmath-xmuint3) -Struktur macht die folgenden Operatoren verfügbar.
+Die [**XMUINT3-Struktur**](/windows/win32/api/directxmath/ns-directxmath-xmuint3) macht die folgenden Operatoren verfügbar.
 
 > [!Note]  
 > Die hier aufgeführten Operatoren sind nur unter C++ verfügbar.
@@ -26,7 +26,7 @@ Die [**XMUINT3**](/windows/win32/api/directxmath/ns-directxmath-xmuint3) -Strukt
 
 | Methoden                                              | BESCHREIBUNG                                                                                                        |
 |------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| [**Operator =**](/windows/win32/api/directxmath/nf-directxmath-xmuint3-operator-assign)<br/> | Weist die Vektor Komponenten Daten einer Instanz von `XMUINT3` der aktuellen Instanz von zu `XMUINT3` . <br/> |
+| [**operator =**](/windows/win32/api/directxmath/nf-directxmath-xmuint3-operator-assign)<br/> | Weist der aktuellen Instanz von die Vektorkomponentendaten von `XMUINT3` einer Instanz von `XMUINT3` zu. <br/> |
 
 
 
@@ -39,7 +39,7 @@ Die [**XMUINT3**](/windows/win32/api/directxmath/ns-directxmath-xmuint3) -Strukt
 [XMUINT3-Erweiterungen](ovw-xmuint3-extensions.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**XMUINT3**](/windows/win32/api/directxmath/ns-directxmath-xmuint3)

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentresource-Klasse'
-title: Esentresource-Klasse
+description: Weitere Informationen zur EsentResource-Klasse
+title: EsentResource-Klasse
 TOCTitle: EsentResource class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentResource
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentresource(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 607fb59d6f9f89c33e685ed411ae9dc95eaa6818
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2f29c322b112994159799fd34a7db7a149cf6e7593b132fe4925838335bccdd8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346990"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119970930"
 ---
-# <a name="esentresource-class"></a>Esentresource-Klasse
+# <a name="esentresource-class"></a>EsentResource-Klasse
 
-Dies ist die Basisklasse für alle ESENT-Ressourcen Objekte. Unterklassen dieser Klasse können nicht verwaltete Ressourcen zuordnen und freigeben.
+Dies ist die Basisklasse für alle esent-Ressourcenobjekte. Unterklassen dieser Klasse können nicht verwaltete Ressourcen zuordnen und freigeben.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  Microsoft. ISAM. ESENT. Interop. esentresource  
-    [Microsoft. ISAM. ESENT. Interop. Session](./session-class.md)  
-    [Microsoft. ISAM. ESENT. Interop. Table](./table-class.md)  
-    [Microsoft. ISAM. ESENT. Interop. Transaction](./transaction-class.md)  
-    [Microsoft. ISAM. ESENT. Interop. Update](./update-class.md)  
-    [Microsoft. ISAM. ESENT. Interop. Windows8. durablecommitcallback](./durablecommitcallback-class.md)  
+  Microsoft.Isam.Esent.Interop.EsentResource  
+    [Microsoft.Isam.Esent.Interop.Session](./session-class.md)  
+    [Microsoft.Isam.Esent.Interop.Table](./table-class.md)  
+    [Microsoft.Isam.Esent.Interop.Transaction](./transaction-class.md)  
+    [Microsoft.Isam.Esent.Interop.Update](./update-class.md)  
+    [Microsoft.Isam.Esent.Interop.Windows8.DurableCommitCallback](./durablecommitcallback-class.md)  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,10 +66,10 @@ public abstract class EsentResource : IDisposable
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentresource-Member](./esentresource-members.md)
+[EsentResource-Elemente](./esentresource-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

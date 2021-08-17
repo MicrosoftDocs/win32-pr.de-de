@@ -4,12 +4,12 @@ description: WebSocket-Protokollkomponenten-API
 ms.assetid: ae73fd5e-9715-448c-b7ca-898f2705e228
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c16290a7af5b5fea406e5f47c0db718d775e4d17
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a712234f55b0270db9da23dc0efa1da823c85907cca92ac3428cb1225fac8a97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108088818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134213"
 ---
 # <a name="websocket-protocol-component-api"></a>WebSocket-Protokollkomponenten-API
 
@@ -21,7 +21,7 @@ Die WebSocket-Protokollkomponenten-API ermöglicht asynchrone, bidirektionale Ko
 
 
 
-| Thema                                                                                                          | BESCHREIBUNG                                                                 |
+| Thema                                                                                                          | Beschreibung                                                                 |
 |----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | [**API-Datentypen der WebSocket-Protokollkomponente**](web-socket-protocol-component-api-data-types.md)<br/> | Die WebSocket-Protokollkomponenten-API definiert diese Datentypen.<br/>   |
 | [WebSocket-Protokollkomponenten-API-Enumerationen](web-socket-protocol-component-api-enumerations.md)<br/> | Die WebSocket-Protokollkomponenten-API definiert diese Enumerationen.<br/> |
@@ -34,16 +34,16 @@ Die WebSocket-Protokollkomponenten-API ermöglicht asynchrone, bidirektionale Ko
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
-Die WebSocket-Protokollkomponenten-API ist für die Verwendung durch C/C++-Programmierer konzipiert. Sie müssen mit HTTP- und Windows-Netzwerken vertraut sein.
+Die WebSocket-Protokollkomponenten-API ist für die Verwendung durch C/C++-Programmierer konzipiert. Sie müssen mit HTTP und Windows Netzwerk vertraut sein.
 
 > [!Note]  
-> Die bevorzugte Methode zur Verwendung des WebSocket-Protokolls unter Windows ist die Verwendung der [Windows HTTP Services-API (WinHTTP)](/windows/desktop/WinHttp/winhttp-start-page) oder des [Windows.Networking.Sockets-Namespace.](/uwp/api/Windows.Networking.Sockets)
+> Die bevorzugte Möglichkeit, das WebSocket-Protokoll auf Windows zu verwenden, ist die Windows [HTTP Services (WinHTTP)-API](/windows/desktop/WinHttp/winhttp-start-page) oder [die Windows. Networking.Sockets-Namespace](/uwp/api/Windows.Networking.Sockets).
 
  
 
 ## <a name="run-time-requirements"></a>Laufzeitanforderungen
 
-Die WebSocket-Protokollkomponenten-API erfordert Windows 8 und neuere Versionen des Windows-Betriebssystems. Die APIs können dynamisch über die websocket.dll.
+Die WebSocket-Protokollkomponenten-API erfordert Windows 8 und neuere Versionen des Windows Betriebssystems. Die APIs können dynamisch über die websocket.dll.
 
 > [!Note]  
 > websocket.dll unterstützt Client- und Serverhandshake-bezogene HTTP-Header, überprüft empfangene Handshakedaten und analysiert den WebSocket-Datenstrom. Er verarbeitet keine HTTP-spezifischen Vorgänge (Umleitung, Authentifizierung, Proxyunterstützung) und führt keine E/A-Vorgänge aus (Senden oder Empfangen von WebSocket-Streambytes).
@@ -57,7 +57,7 @@ Die WebSocket-Protokollkomponenten-API erfordert Windows 8 und neuere Versionen 
 [HTTP](/windows/desktop/Http/http-api-start-page)
 </dt> <dt>
 
-[Windows-HTTP-Dienste (WinHTTP)](/windows/desktop/WinHttp/winhttp-start-page)
+[Windows HTTP-Dienste (WinHTTP)](/windows/desktop/WinHttp/winhttp-start-page)
 </dt> </dl>
 
  

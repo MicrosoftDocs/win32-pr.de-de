@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdatabasecorruptedexception-Konstruktor'
-title: Esentdatabasecorruptedexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentDatabaseCorruptedException-Konstruktor'
+title: EsentDatabaseCorruptedException-Konstruktor
 TOCTitle: 'EsentDatabaseCorruptedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDatabaseCorruptedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabasecorruptedexception.esentdatabasecorruptedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5bc7635fdfbd878a69306fc2ad6170cd103f8e82
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7c010ec7d191be215f0b00c4e165263376f58c983fe751add06cd3ef323042c2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215063"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120094180"
 ---
-# <a name="esentdatabasecorruptedexception-constructor"></a>Esentdatabasecorruptedexception-Konstruktor
+# <a name="esentdatabasecorruptedexception-constructor"></a>EsentDatabaseCorruptedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdatabasecorruptedexception-Klasse.
+Initialisiert eine neue Instanz der EsentDatabaseCorruptedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentDatabaseCorruptedException()
 public EsentDatabaseCorruptedException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabasecorruptedexception-Klasse](./esentdatabasecorruptedexception-class.md)
+[EsentDatabaseCorruptedException-Klasse](./esentdatabasecorruptedexception-class.md)
 
-[Esentdatabasecorruptedexception-Elemente](./esentdatabasecorruptedexception-members.md)
+[EsentDatabaseCorruptedException-Member](./esentdatabasecorruptedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

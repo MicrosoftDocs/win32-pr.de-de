@@ -1,6 +1,6 @@
 ---
 title: Windows Netzwerk (WNet)
-description: Mit Windows -Netzwerkfunktionen (WNet) können Sie Netzwerkfunktionen in Ihrer Anwendung implementieren, ohne Berechtigungen für einen bestimmten Netzwerkanbieter oder eine physische Netzwerkimplementierung zu übernehmen.
+description: Mit Windows -Netzwerkfunktionen (WNet) können Sie Netzwerkfunktionen in Ihrer Anwendung implementieren, ohne Berechtigungen für einen bestimmten Netzwerkanbieter oder eine physische Netzwerkimplementierung zu machen.
 ms.assetid: 7668ac55-7104-4ddb-88eb-920cfe4e36fd
 keywords:
 - Windows Netzwerk-WNET
@@ -16,7 +16,7 @@ ms.locfileid: "118566413"
 ---
 # <a name="windows-networking-wnet"></a>Windows Netzwerk (WNet)
 
-Mit Windows -Netzwerkfunktionen (WNet) können Sie Netzwerkfunktionen in Ihrer Anwendung implementieren, ohne Berechtigungen für einen bestimmten Netzwerkanbieter oder eine physische Netzwerkimplementierung zu übernehmen. Dies liegt daran, dass die WNet-Funktionen netzwerkunabhängig sind.
+Mit Windows -Netzwerkfunktionen (WNet) können Sie Netzwerkfunktionen in Ihrer Anwendung implementieren, ohne Berechtigungen für einen bestimmten Netzwerkanbieter oder eine physische Netzwerkimplementierung zu machen. Dies liegt daran, dass die WNet-Funktionen netzwerkunabhängig sind.
 
 -   [Informationen Windows Netzwerk](about-windows-networking.md)
 -   [Verwenden Windows Netzwerk](using-windows-networking.md)

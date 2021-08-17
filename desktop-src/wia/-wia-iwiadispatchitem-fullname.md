@@ -1,5 +1,5 @@
 ---
-description: Ruft den vollständigen Namen des Elements ab, wie es auf der Benutzeroberfläche angezeigt wird. Schreibgeschützt.
+description: Ruft den vollständigen Namen des Elements ab, wie er in der Benutzeroberfläche angezeigt wird. Schreibgeschützt.
 ms.assetid: efe8de99-fe66-4472-8ca3-f45373d03f81
 title: Item.FullName-Eigenschaft
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118440615"
 ---
 # <a name="itemfullname-property"></a>Item.FullName-Eigenschaft
 
-Ruft den vollständigen Namen des Elements ab, wie es auf der Benutzeroberfläche angezeigt wird. Schreibgeschützt.
+Ruft den vollständigen Namen des Elements ab, wie er in der Benutzeroberfläche angezeigt wird. Schreibgeschützt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ Zeichenfolge, die den Namen empfängt.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 

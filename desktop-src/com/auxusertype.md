@@ -31,7 +31,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID
 
 Die empfohlene maximale Länge für *ShortDisplayName* beträgt 15 Zeichen. Dieser Name wird in Menüs verwendet, einschließlich Popupmenüs.
 
-*ApplicationName* sollte den tatsächlichen Namen der Anwendung enthalten (z.B. "Acme Draw 2.0"). Dieser Name wird im Feld **Ergebnisse** des Dialogfelds **Sonder einfügen** verwendet.
+*ApplicationName* sollte den tatsächlichen Namen der Anwendung enthalten (z.B. "Acme Draw 2.0"). Dieser Name wird im Feld **Ergebnisse** des Dialogfelds **Spezielle** Einfügen verwendet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,10 +1,10 @@
 ---
-title: Attribut "meetingisencrypted"
-description: Dies trifft zu, wenn die Besprechung verschlüsselt werden soll.
+title: meetingIsEncrypted-Attribut
+description: Dies ist TRUE, wenn die Besprechung verschlüsselt werden soll.
 ms.assetid: bf8c1344-9f7e-4e4f-aac7-52cb0b65b9f0
 ms.tgt_platform: multiple
 keywords:
-- "\"attribuingisencrypted\"-Attribut, AD-Schema"
+- meetingIsEncrypted-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d2e645624ff9167da7e8a6278e10bf57420cd152
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 3132a08589395619dc4ed2222f2497e0e15a6b1425ac150259c5a8ada95445e4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119300771"
 ---
-# <a name="meetingisencrypted-attribute"></a>Attribut "meetingisencrypted"
+# <a name="meetingisencrypted-attribute"></a>meetingIsEncrypted-Attribut
 
-Dies **trifft** zu, wenn die Besprechung verschlüsselt werden soll.
+Dies **ist TRUE,** wenn die Besprechung verschlüsselt werden soll.
 
 
 
 | Eingabe | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| CN                | meetingisencrypted                                                               |
-| LDAP-Display-Name | meetingisencrypted                                                               |
+| CN                | meetingIsEncrypted                                                               |
+| Ldap-Anzeigename | meetingIsEncrypted                                                               |
 | Size              | \-                                                                               |
-| Berechtigung aktualisieren  | Jeder kann dieses Objekt basierend auf der Sicherheit des Objekts, das erstellt wird, aktualisieren. |
-| Aktualisierungshäufigkeit  | \-                                                                               |
+| Aktualisieren von Berechtigungen  | Jeder kann dieses Objekt basierend auf der Sicherheit des zu erstellenden Objekts aktualisieren. |
+| Updatehäufigkeit  | \-                                                                               |
 | Attribute-Id      | 1.2.840.113556.1.4.585                                                           |
-| System-ID-GUID    | 11b6cc8e-48C4-11d1-a9c3-0000e80367c1                                             |
+| System-Id-Guid    | 11b6cc8e-48c4-11d1-a9c3-0000f80367c1                                             |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                      |
 
 
@@ -42,7 +42,7 @@ Dies **trifft** zu, wenn die Besprechung verschlüsselt werden soll.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,20 +56,20 @@ Dies **trifft** zu, wenn die Besprechung verschlüsselt werden soll.
 |------------------------|-----------------------------------------|
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
-| System-Only            | False                                   |
-| Ist-einwertig       | Richtig                                    |
-| Ist indiziert             | False                                   |
-| Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| System-Only            | Falsch                                   |
+| Is-Single-Valued       | Richtig                                    |
+| Ist indiziert             | Falsch                                   |
+| Im globalen Katalog      | Falsch                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -77,16 +77,16 @@ Dies **trifft** zu, wenn die Besprechung verschlüsselt werden soll.
 |------------------------|-----------------------------------------|
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
-| System-Only            | False                                   |
-| Ist-einwertig       | Richtig                                    |
-| Ist indiziert             | False                                   |
-| Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| System-Only            | Falsch                                   |
+| Is-Single-Valued       | Richtig                                    |
+| Ist indiziert             | Falsch                                   |
+| Im globalen Katalog      | Falsch                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -98,16 +98,16 @@ Dies **trifft** zu, wenn die Besprechung verschlüsselt werden soll.
 |------------------------|-----------------------------------------|
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
-| System-Only            | False                                   |
-| Ist-einwertig       | Richtig                                    |
-| Ist indiziert             | False                                   |
-| Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| System-Only            | Falsch                                   |
+| Is-Single-Valued       | Richtig                                    |
+| Ist indiziert             | Falsch                                   |
+| Im globalen Katalog      | Falsch                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -119,16 +119,16 @@ Dies **trifft** zu, wenn die Besprechung verschlüsselt werden soll.
 |------------------------|-----------------------------------------|
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
-| System-Only            | False                                   |
-| Ist-einwertig       | Richtig                                    |
-| Ist indiziert             | False                                   |
-| Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| System-Only            | Falsch                                   |
+| Ist einwertig       | Richtig                                    |
+| Ist indiziert             | Falsch                                   |
+| Im globalen Katalog      | Falsch                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -140,16 +140,16 @@ Dies **trifft** zu, wenn die Besprechung verschlüsselt werden soll.
 |------------------------|-----------------------------------------|
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
-| System-Only            | False                                   |
-| Ist-einwertig       | Richtig                                    |
-| Ist indiziert             | False                                   |
-| Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| System-Only            | Falsch                                   |
+| Ist einwertig       | Richtig                                    |
+| Ist indiziert             | Falsch                                   |
+| Im globalen Katalog      | Falsch                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -161,16 +161,16 @@ Dies **trifft** zu, wenn die Besprechung verschlüsselt werden soll.
 |------------------------|-----------------------------------------|
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
-| System-Only            | False                                   |
-| Ist-einwertig       | Richtig                                    |
-| Ist indiziert             | False                                   |
-| Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| System-Only            | Falsch                                   |
+| Ist einwertig       | Richtig                                    |
+| Ist indiziert             | Falsch                                   |
+| Im globalen Katalog      | Falsch                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 

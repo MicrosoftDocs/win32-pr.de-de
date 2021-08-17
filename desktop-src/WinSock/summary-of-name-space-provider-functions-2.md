@@ -1,5 +1,5 @@
 ---
-description: Navigationsseite für Windows Sockets (Winsock) SPI-Namespace-Dienstanbieterfunktionen.
+description: Navigationsseite für Windows Funktionen des SPI-Namespacedienstanbieters für Sockets (Winsock).
 ms.assetid: fb48cc4e-5225-4ad9-9fcd-7a7992f01e6d
 title: Zusammenfassung der Namespaceanbieterfunktionen
 ms.topic: article
@@ -13,18 +13,18 @@ ms.locfileid: "118559746"
 ---
 # <a name="summary-of-namespace-provider-functions"></a>Zusammenfassung der Namespaceanbieterfunktionen
 
-Die Funktionen des Namespace-Dienstanbieters können in fünf Kategorien unterteilt werden:
+Die Funktionen des Namespace-Dienstanbieters können in fünf Kategorien gruppiert werden:
 
--   Konfiguration (und Installation) des Namespaceanbieters
--   Anbieterin initialisierung
+-   Namespaceanbieterkonfiguration (und Installation)
+-   Anbieterinitialisierung
 -   Dienstinstallation
 -   Clientabfragen
 -   Hilfsfunktionen (und Makros)
 
-In den folgenden Abschnitten werden die Funktionen in den einzelnen Kategorien identifiziert und deren beabsichtigte Verwendung kurz beschrieben. Wichtige Datenstrukturen werden ebenfalls beschrieben.
+In den folgenden Abschnitten werden die Funktionen in den einzelnen Kategorien und deren beabsichtigte Verwendung kurz beschrieben. Wichtige Datenstrukturen werden ebenfalls beschrieben.
 
 -   [Konfiguration und Installation des Namespaceanbieters](name-space-provider-configuration-and-installation-2.md)
--   [Initialisierung und Bereinigung des Namespaceanbieters](name-space-provider-initialization-and-cleanup-2.md)
+-   [Initialisierung und Bereinigung von Namespaceanbietern](name-space-provider-initialization-and-cleanup-2.md)
 -   [Dienstinstallation im Windows Sockets 2 SPI](service-installation-in-the-windows-sockets-2-spi-2.md)
 -   [Dienstabfrage](service-query-2.md)
 -   [Hilfsfunktionen in der SPI](helper-functions-in-the-spi-2.md)

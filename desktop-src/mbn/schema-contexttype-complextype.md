@@ -1,7 +1,7 @@
 ---
-description: Gibt den konnenction-Kontext eines mobilen Breitband Geräts an.
+description: Gibt den Konnenktionskontext eines mobilen Breitbandgeräts an.
 ms.assetid: 513e744d-bd62-43e9-a636-6690867d8b9b
-title: komplexer ContextType-Typ
+title: contextType Complex Type
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,16 +11,16 @@ api_name:
 - contextType
 api_type:
 - Schema
-ms.openlocfilehash: 63d221c6bd388196abfb73a8ac38a26de516d0df
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 58189cf27f667b3d7e5e6c387a52143b8c757724106e8d9941d31d2582002b0d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345709"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118744447"
 ---
-# <a name="contexttype-complex-type"></a>komplexer ContextType-Typ
+# <a name="contexttype-complex-type"></a>contextType Complex Type
 
-Der komplexe Typ " **ContextType** " gibt den konnenction-Kontext eines mobilen Breitband Geräts an.
+Der **komplexe contextType-Typ** gibt den Konnenktionskontext eines mobilen Breitbandgeräts an.
 
 ``` syntax
 <xs:complexType name="contextType">
@@ -106,15 +106,15 @@ Der komplexe Typ " **ContextType** " gibt den konnenction-Kontext eines mobilen 
 
 
 
-| Element                                                               | type                                           | BESCHREIBUNG                                                                                    |
+| Element                                                               | type                                           | Beschreibung                                                                                    |
 |-----------------------------------------------------------------------|------------------------------------------------|------------------------------------------------------------------------------------------------|
-| [**AccessString**](schema-accessstring-contexttype-element.md)       |                                                | Zum Herstellen einer Datenverbindung zu verwendende APN-oder Wähl Zeichenfolge<br/>                        |
-| [**AuthProtocol**](schema-authprotocol-contexttype-element.md)       |                                                | Das Authentifizierungsprotokoll, das zum Aktivieren eines PDP-Kontexts verwendet werden soll.<br/>                    |
-| [**Komprimi**](schema-compression-contexttype-element.md)         |                                                | Gibt an, ob die Komprimierung beim Daten Link für Header und Datenübertragung verwendet wird.<br/> |
-| [**Ignorepassword**](schema-ignorepassword-userlogoncred-element.md) | boolean                                        | Behandeln von Kenn Wörtern beim Aktualisieren von Profilen<br/>                                    |
-| [**Anmelden**](schema-password-userlogoncred-element.md)             | Zeichenfolge                                         | Zum Authentifizieren eines Benutzers verwendetes Kennwort<br/>                                                |
-| [**UserLogonCred**](schema-userlogoncred-contexttype-element.md)     |                                                | Anmelde Informationen für eine Verbindung anmelden.<br/>                                                |
-| [**User**](schema-username-userlogoncred-element.md)             | [**nametype**](schema-nametype-simpletype.md) | Benutzername für die Anmeldung<br/>                                                                 |
+| [**AccessString**](schema-accessstring-contexttype-element.md)       |                                                | APN oder Wählzeichenfolge zum Herstellen einer Datenverbindung<br/>                        |
+| [**AuthProtocol**](schema-authprotocol-contexttype-element.md)       |                                                | Authentifizierungsprotokoll, das zum Aktivieren eines PDP-Kontexts verwendet werden soll.<br/>                    |
+| [**Komprimierung**](schema-compression-contexttype-element.md)         |                                                | Gibt an, ob die Komprimierung an der Datenverknüpfung für Header und Datenübertragung verwendet wird.<br/> |
+| [**IgnorePassword**](schema-ignorepassword-userlogoncred-element.md) | boolean                                        | Behandeln von Kennwörtern beim Aktualisieren von Profilen.<br/>                                    |
+| [**Passwort**](schema-password-userlogoncred-element.md)             | Zeichenfolge                                         | Kennwort zum Authentifizieren eines Benutzers<br/>                                                |
+| [**UserLogonCred**](schema-userlogoncred-contexttype-element.md)     |                                                | Melden Sie sich anmeldeinformationen für eine Verbindung an.<br/>                                                |
+| [**Nutzername**](schema-username-userlogoncred-element.md)             | [**nameType**](schema-nametype-simpletype.md) | Benutzername für die Anmeldung<br/>                                                                 |
 
 
 
@@ -124,7 +124,7 @@ Der komplexe Typ " **ContextType** " gibt den konnenction-Kontext eines mobilen 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                         |
 
 

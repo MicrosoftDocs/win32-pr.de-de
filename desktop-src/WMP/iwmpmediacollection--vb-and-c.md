@@ -1,10 +1,10 @@
 ---
-title: Iwmpmediacollection-Schnittstelle (VB und C) (WMP. h)
-description: Stellt Methoden bereit, die verwendet werden können, um eine große Auflistung von Medien Elementen zu organisieren.
+title: IWMPMediaCollection-Schnittstelle (VB und C) (Wmp.h)
+description: Stellt Methoden bereit, die verwendet werden können, um eine große Sammlung von Medienelementen zu organisieren.
 ms.assetid: a9e3d466-7dcf-4f1b-ba6f-9d166a35f03d
 keywords:
-- Iwmpmediacollection (VB und C) Interface Windows Media Player
-- Iwmpmediacollection (VB und C) Interface Windows Media Player, beschrieben
+- IWMPMediaCollection-Schnittstelle (VB und C) Windows Media Player
+- IWMPMediaCollection-Schnittstelle (VB und C) Windows Media Player beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,56 +16,56 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 424fd45b1fd3d02000a9774ffe75ec87e52dd9c5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ce15616b2059802610360b52d5af9bfa8d56b56b7ed06129bb849de567e22e26
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370945"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119468450"
 ---
-# <a name="iwmpmediacollection-vb-and-c-interface"></a>Iwmpmediacollection-Schnittstelle (VB und c#)
+# <a name="iwmpmediacollection-vb-and-c-interface"></a>IWMPMediaCollection-Schnittstelle (VB und C#)
 
-Stellt Methoden bereit, die verwendet werden können, um eine große Auflistung von Medien Elementen zu organisieren.
+Stellt Methoden bereit, die verwendet werden können, um eine große Sammlung von Medienelementen zu organisieren.
 
 ## <a name="members"></a>Member
 
-Die **iwmpmediacollection-Schnittstelle (VB und c#)** verfügt über diese Typen von Membern:
+Die **IWMPMediaCollection-Schnittstelle (VB und C#)** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmpmediacollection-Schnittstelle (VB und c#)** verfügt über diese Methoden.
+Die **IWMPMediaCollection-Schnittstelle (VB und C#)** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                                       | BESCHREIBUNG                                                                                                                                   |
+| Methode                                                                                                                       | Beschreibung                                                                                                                                   |
 |:-----------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|
-| [**add**](wmplibiwmpmediacollection-iwmpmediacollection-add--vb-and-c.md)                                                   | Fügt der Bibliothek ein neues Medien Element oder eine neue Wiedergabeliste hinzu.<br/>                                                                                  |
-| [**"GetAll"**](wmplibiwmpmediacollection-iwmpmediacollection-getall--vb-and-c.md)                                             | Gibt eine **iwmpwiedergabe** -Schnittstelle zurück, die der Wiedergabeliste entspricht, die alle Medienelemente in der Bibliothek enthält.<br/>               |
-| [**getAttributeStringCollection**](wmplibiwmpmediacollection-iwmpmediacollection-getattributestringcollection--vb-and-c.md) | Gibt eine **iwmpstringcollection** -Schnittstelle zurück, die den Satz aller Werte für ein angegebenes Attribut innerhalb eines Medientyps darstellt.<br/> |
-| [**getbyalbum**](wmplibiwmpmediacollection-iwmpmediacollection-getbyalbum--vb-and-c.md)                                     | Gibt eine **iwmpwiedergabe** -Schnittstelle zurück, die den Zugriff auf Medienelemente aus dem angegebenen Album ermöglicht.<br/>                                |
-| [**getbyattribute**](wmplibiwmpmediacollection-iwmpmediacollection-getbyattribute--vb-and-c.md)                             | Gibt eine **iwmpwiedergabe** -Schnittstelle zurück, die dem angegebenen Attribut mit dem angegebenen Wert entspricht.<br/>                      |
-| [**getbyauthor**](wmplibiwmpmediacollection-iwmpmediacollection-getbyauthor--vb-and-c.md)                                   | Gibt eine **iwmpwiedergabe** -Schnittstelle zurück, die den Zugriff auf die Medienelemente durch den angegebenen Autor ermöglicht.<br/>                             |
-| [**getByGenre**](wmplibiwmpmediacollection-iwmpmediacollection-getbygenre--vb-and-c.md)                                     | Gibt eine **iwmpwiedergabe** -Schnittstelle zurück, die den Zugriff auf Medienelemente des angegebenen Genres ermöglicht.<br/>                                  |
-| [**getByName**](wmplibiwmpmediacollection-iwmpmediacollection-getbyname--vb-and-c.md)                                       | Gibt eine **iwmpwiedergabe** -Schnittstelle zurück, die den Zugriff auf Medienelemente mit dem angegebenen Namen ermöglicht.<br/>                                 |
-| [**getmediaatom**](wmplibiwmpmediacollection-iwmpmediacollection-getmediaatom--vb-and-c.md)                                 | Gibt den Index eines angegebenen Attributs zurück.<br/>                                                                                        |
+| [**add**](wmplibiwmpmediacollection-iwmpmediacollection-add--vb-and-c.md)                                                   | Fügt der Bibliothek ein neues Medienelement oder eine neue Wiedergabeliste hinzu.<br/>                                                                                  |
+| [**getAll**](wmplibiwmpmediacollection-iwmpmediacollection-getall--vb-and-c.md)                                             | Gibt eine **IWMPPlaylist-Schnittstelle** zurück, die der Wiedergabeliste entspricht, die alle Medienelemente in der Bibliothek enthält.<br/>               |
+| [**getAttributeStringCollection**](wmplibiwmpmediacollection-iwmpmediacollection-getattributestringcollection--vb-and-c.md) | Gibt eine **IWMPStringCollection-Schnittstelle** zurück, die den Satz aller Werte für ein angegebenes Attribut innerhalb eines Medientyps darstellt.<br/> |
+| [**getBy Einmal**](wmplibiwmpmediacollection-iwmpmediacollection-getbyalbum--vb-and-c.md)                                     | Gibt eine **IWMPPlaylist-Schnittstelle** zurück, die Zugriff auf Medienelemente aus dem angegebenen Album bietet.<br/>                                |
+| [**getByAttribute**](wmplibiwmpmediacollection-iwmpmediacollection-getbyattribute--vb-and-c.md)                             | Gibt eine **IWMPPlaylist-Schnittstelle** zurück, die dem angegebenen Attribut mit dem angegebenen Wert entspricht.<br/>                      |
+| [**getByAuthor**](wmplibiwmpmediacollection-iwmpmediacollection-getbyauthor--vb-and-c.md)                                   | Gibt eine **IWMPPlaylist-Schnittstelle** zurück, die zugriff auf die Medienelemente durch den angegebenen Autor bereitstellt.<br/>                             |
+| [**getByGenre**](wmplibiwmpmediacollection-iwmpmediacollection-getbygenre--vb-and-c.md)                                     | Gibt eine **IWMPPlaylist-Schnittstelle** zurück, die Zugriff auf Medienelemente des angegebenen Genre bereitstellt.<br/>                                  |
+| [**getByName**](wmplibiwmpmediacollection-iwmpmediacollection-getbyname--vb-and-c.md)                                       | Gibt eine **IWMPPlaylist-Schnittstelle** zurück, die Zugriff auf Medienelemente mit dem angegebenen Namen bietet.<br/>                                 |
+| [**getMediaAtom**](wmplibiwmpmediacollection-iwmpmediacollection-getmediaatom--vb-and-c.md)                                 | Gibt den Index eines angegebenen Attributs zurück.<br/>                                                                                        |
 | **isDeleted**                                                                                                                | Wird nicht mehr unterstützt.<br/>                                                                                                               |
-| [**aufgeh**](wmplibiwmpmediacollection-iwmpmediacollection-remove--vb-and-c.md)                                             | Entfernt das angegebene Medien Element aus der Medien Auflistung.<br/>                                                                        |
-| [**SetDeleted**](wmplibiwmpmediacollection-iwmpmediacollection-setdeleted--vb-and-c.md)                                     | Verschiebt das angegebene Medien Element in den Ordner "Gelöschte Elemente".<br/>                                                                        |
+| [**Entfernen**](wmplibiwmpmediacollection-iwmpmediacollection-remove--vb-and-c.md)                                             | Entfernt das angegebene Medienelement aus der Medienauflistung.<br/>                                                                        |
+| [**setDeleted**](wmplibiwmpmediacollection-iwmpmediacollection-setdeleted--vb-and-c.md)                                     | Verschiebt das angegebene Medienelement in den Ordner für gelöschte Elemente.<br/>                                                                        |
 
 
 
  
 
-Sie erhalten eine **iwmpmediacollection** -Schnittstelle mit den folgenden Eigenschaften, auf die über das folgende Objekt oder die folgende Schnittstelle zugegriffen wird.
+Abrufen einer **IWMPMediaCollection-Schnittstelle** mithilfe der folgenden Eigenschaften, auf die über das folgende Objekt oder die folgende Schnittstelle zugegriffen wird.
 
 
 
 | Objekt oder Schnittstelle                                               | Eigenschaft                                                                           |
 |-------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [AxWindowsMediaPlayer](axwindowsmediaplayer-object--vb-and-c.md) | [**mediacollection**](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md) |
-| [**Iwmplibrary**](iwmplibrary--vb-and-c.md)                      | [**mediacollection**](wmplibiwmplibrary-iwmplibrary-mediacollection--vb-and-c.md) |
+| [AxWindowsMediaPlayer](axwindowsmediaplayer-object--vb-and-c.md) | [**mediaCollection**](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md) |
+| [**IWMPLibrary**](iwmplibrary--vb-and-c.md)                      | [**mediaCollection**](wmplibiwmplibrary-iwmplibrary-mediacollection--vb-and-c.md) |
 
 
 
@@ -77,24 +77,24 @@ Sie erhalten eine **iwmpmediacollection** -Schnittstelle mit den folgenden Eigen
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMP. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Schnittstellen für Visual Basic .net und C #**](interfaces-for-visual-basic--net-and-c.md)
+[**Schnittstellen für Visual Basic .NET und C #**](interfaces-for-visual-basic--net-and-c.md)
 </dt> <dt>
 
 [**IWMPMediaCollection2-Schnittstelle**](iwmpmediacollection2--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpstringcollection-Schnittstelle (VB und c#)**](iwmpstringcollection--vb-and-c.md)
+[**IWMPStringCollection-Schnittstelle (VB und C#)**](iwmpstringcollection--vb-and-c.md)
 </dt> </dl>
 
  

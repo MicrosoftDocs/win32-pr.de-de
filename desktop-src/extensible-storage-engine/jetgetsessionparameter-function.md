@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: jetgeungessionparameter-Funktion'
-title: Jetgeungessionparameter-Funktion
+description: Weitere Informationen finden Sie unter JetGetSessionParameter-Funktion.
+title: JetGetSessionParameter-Funktion
 TOCTitle: JetGetSessionParameter Function
 ms:assetid: 36fbcc06-a72d-4bfb-976b-1b705487732a
 ms:mtpsurl: https://msdn.microsoft.com/library/JJ835039(v=EXCHG.10)
@@ -19,21 +19,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f0ac02142d48009d668d903b39163b425d738b55
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: effd1ea5a9489df0a85af54a79cd773cc05b2fa3d6dbe57096a61fbd4c79c25a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119472030"
 ---
-# <a name="jetgetsessionparameter-function"></a>Jetgeungessionparameter-Funktion
+# <a name="jetgetsessionparameter-function"></a>JetGetSessionParameter-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-Die **jetgeungessionparameter** -Funktion liest den Sitzungs Parameter für die angegebene Sitzung.
+Die **JetGetSessionParameter-Funktion** liest den Sitzungsparameter für die angegebene Sitzung.
 
-Die **jetgezessionparameter** -Funktion wurde im Windows 8-Betriebssystem eingeführt.
+Die **JetGetSessionParameter-Funktion** wurde im Windows 8 Betriebssystem eingeführt.
 
 ``` c++
 JET_ERR JET_API JetGetSessionParameter (
@@ -47,37 +47,37 @@ JET_ERR JET_API JetGetSessionParameter (
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet werden soll.
+Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
-Wenn angegeben, wird die angegebene-Instanz ignoriert, und die-Instanz, die der Sitzung zugeordnet ist, wird verwendet.
+Wenn angegeben, wird die angegebene Instanz ignoriert, und die der Sitzung zugeordnete Instanz wird verwendet.
 
-*sesparamid*
+*sesparbor*
 
-Die ID des festzulegenden Sitzungs Parameters.
+Die ID des festzulegende Sitzungsparameters.
 
 *pvParam*
 
-Daten in diesem Sitzungs Parameter.
+Daten in diesem Sitzungsparameter.
 
-*cbparammax*
+*cbParamMax*
 
-Die maximale Größe des Datasets in diesem Sitzungs Parameter.
+Die maximale Größe des Datasets in diesem Sitzungsparameter.
 
-*pcbparamactual*
+*pwParamActual*
 
-Die tatsächliche Größe des Datasets in diesem Sitzungs Parameter.
+Die tatsächliche Größe des Datasets in diesem Sitzungsparameter.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird der für den angeforderten Sitzungs Parameter geeignete Ausgabepuffer auf den Wert dieses Sitzungs Parameters festgelegt.
+Bei Erfolg wird der für den angeforderten Sitzungsparameter geeignete Ausgabepuffer auf den Wert dieses Sitzungsparameters festgelegt.
 
-Bei einem Fehler wird der Status der Ausgabepuffer nicht definiert.
+Bei einem Fehler ist der Status der Ausgabepuffer nicht definiert.
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Der Session-Parameter wird für die Lebensdauer der Sitzung oder bis zum Zurücksetzen des Werts verwendet.
+Der Sitzungsparameter wird für die Lebensdauer der Sitzung oder bis zum Zurücksetzen des Werts verwendet.
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -97,28 +97,28 @@ Der Session-Parameter wird für die Lebensdauer der Sitzung oder bis zum Zurück
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-#### <a name="see-also"></a>Siehe auch
+#### <a name="see-also"></a>Weitere Informationen
 
 [JET_API_PTR](./jet-api-ptr.md)  
 [JET_ERR](./jet-err.md)  
 [JET_INSTANCE](./jet-instance.md)  
 [JET_SESID](./jet-sesid.md)  
-[Jetkreateingestance](./jetcreateinstance-function.md)  
+[JetCreateInstance](./jetcreateinstance-function.md)  
 [JetInit](./jetinit-function.md)  
-[Jetsetsystemparameter](./jetsetsystemparameter-function.md)  
-[Jetstopservice](./jetstopservice-function.md)  
-[System Parameter](./extensible-storage-engine-system-parameters.md)
+[JetSetSystemParameter](./jetsetsystemparameter-function.md)  
+[JetStopService](./jetstopservice-function.md)  
+[Systemparameter](./extensible-storage-engine-system-parameters.md)

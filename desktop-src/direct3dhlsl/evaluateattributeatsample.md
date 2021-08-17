@@ -1,9 +1,9 @@
 ---
-title: Evaluateattributeatsample-Funktion
-description: Wertet an der indizierten Stichproben Position aus.
+title: EvaluateAttributeAtSample-Funktion
+description: Wertet am indexierten Beispielspeicherort aus.
 ms.assetid: b5886004-5960-461d-a0d2-f4c3b0d09d94
 keywords:
-- Evaluateattributeatsample-Funktion HLSL
+- EvaluateAttributeAtSample-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,23 +13,23 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b183f86599d08a6892e33c169b938dc09a2b55de
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 29191a3790afee2d37fee3d2ee8fb58673ff487af178bd8b1e2b33f26f1ec44c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718143"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119982480"
 ---
-# <a name="evaluateattributeatsample-function"></a>Evaluateattributeatsample-Funktion
+# <a name="evaluateattributeatsample-function"></a>EvaluateAttributeAtSample-Funktion
 
-Wertet an der indizierten Stichproben Position aus.
+Wertet am indexierten Beispielspeicherort aus.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 numeric EvaluateAttributeAtSample(
-  in attrib numeric value,
-  in uint sampleindex
+  in attrib numeric value,
+  in uint sampleindex
 );
 ```
 
@@ -37,67 +37,67 @@ numeric EvaluateAttributeAtSample(
 
 <dl> <dt>
 
-*Wert* \[ in\]
+*wert* \[ In\]
 </dt> <dd>
 
-Type: **atzb numeric**
+Typ: **attrib numeric**
 
 Der Eingabewert.
 
 </dd> <dt>
 
-*sampleingedex* \[ in\]
+*sampleindex* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Beispiel Speicherort.
+Der Beispielspeicherort.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Interpolations Modus kann **linear** oder **linear ( \_ keine \_ Perspektive** ) für die Variable sein. Die Verwendung von " **Schwerpunkt** " oder " **Sample** " wird ignoriert. Attribute mit konstanter Interpolation sind ebenfalls zulässig. in diesem Fall wird der Beispiel Index ignoriert.
+Der Interpolationsmodus kann linear oder **linear** sein, **ohne \_ \_ Perspektive** auf die Variable. Die Verwendung von **Schwerpunkt** oder **Beispiel** wird ignoriert. Attribute mit konstanter Interpolation sind ebenfalls zulässig. In diesem Fall wird der Beispielindex ignoriert.
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     |         |
 
 
 
- 
+ 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

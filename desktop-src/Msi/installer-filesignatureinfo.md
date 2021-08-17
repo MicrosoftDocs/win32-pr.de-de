@@ -22,7 +22,7 @@ ms.locfileid: "118630781"
 ---
 # <a name="installerfilesignatureinfo-method"></a>Installer.FileSignatureInfo-Methode
 
-Die **FileSignatureInfo-Methode** des [**Installer-Objekts**](installer-object.md) verwendet den Pfad zu einer Datei und gibt ein SAFEARRAY von Bytes zurück, die den Hash oder das codierte Zertifikat darstellen. Die Werte können dann verwendet werden, um die Tabellen [MsiDigitalSignature,](msidigitalsignature-table.md) [MsiPatchCertificate](msipatchcertificate-table.md)und [MsiDigitalCertificate zu](msidigitalcertificate-table.md) füllen.
+Die **FileSignatureInfo-Methode** des [**Installer-Objekts**](installer-object.md) nimmt den Pfad zu einer Datei und gibt ein SAFEARRAY von Bytes zurück, die den Hash oder das codierte Zertifikat darstellen. Die Werte können dann verwendet werden, um die Tabellen [MsiDigitalSignature,](msidigitalsignature-table.md) [MsiPatchCertificate](msipatchcertificate-table.md)und [MsiDigitalCertificate zu](msidigitalcertificate-table.md) füllen.
 
 Weitere Informationen finden Sie unter [**SAFEARRAY-Datentyp.**](/windows/win32/api/oaidl/ns-oaidl-safearray)
 
@@ -48,7 +48,7 @@ Installer.FileSignatureInfo(
 
 Vollständiger Pfad zu einer Datei, die digital signiert ist.
 
-Beim Aufpopulieren der [Tabellen MsiDigitalSignature](msidigitalsignature-table.md) und [MsiDigitalCertificate](msidigitalcertificate-table.md) verweist *FilePath* auf einen digital signierten Schränk. Beim Aufstellen der [Tabellen MsiPatchCertificate](msipatchcertificate-table.md) und MsiDigitalCertificate verweist *FilePath* auf einen digital signierten Patch.
+Beim Aufstellen der [Tabellen MsiDigitalSignature](msidigitalsignature-table.md) und [MsiDigitalCertificate](msidigitalcertificate-table.md) verweist *FilePath* auf ein digital signiertes Schränkchen. Beim Aufstellen der [Tabellen MsiPatchCertificate](msipatchcertificate-table.md) und MsiDigitalCertificate verweist *FilePath* auf einen digital signierten Patch.
 
 </dd> <dt>
 
@@ -89,7 +89,7 @@ Die angeforderten Signaturinformationen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg gibt die Methode ein [SAFEARRAY](/windows/win32/api/oaidl/ns-oaidl-safearray) von Bytes zurück, die entweder das Hashzertifikat oder das codierte Zertifikat enthalten.
+Bei Erfolg gibt die Methode [safearray](/windows/win32/api/oaidl/ns-oaidl-safearray) von Bytes zurück, die entweder das Hashzertifikat oder das codierte Zertifikat enthalten.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -107,14 +107,14 @@ Verwenden Sie zum Erstellen einer vollständig überprüften signierten Installa
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Erstellen einer vollständig überprüften signierten Installation mithilfe von Automation](authoring-a-fully-verified-signed-installation-using-automation.md)
 </dt> <dt>
 
-[Digital Signatures and Windows Installer](digital-signatures-and-windows-installer.md)
+[Digitale Signaturen und Windows Installer](digital-signatures-and-windows-installer.md)
 </dt> <dt>
 
 [**MsiGetFileSignatureInformation**](/windows/desktop/api/Msi/nf-msi-msigetfilesignatureinformationa)

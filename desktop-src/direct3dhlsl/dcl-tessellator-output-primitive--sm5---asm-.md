@@ -1,23 +1,23 @@
 ---
-title: dcl_tessellator_output_primitive (SM5-ASM)
-description: Deklarieren Sie den primitiven Typ der Mosaik Ausgabe in einem Hull-Shader-Deklarations Abschnitt.
+title: dcl_tessellator_output_primitive (sm5 - asm)
+description: Deklarieren Sie den primitiven Tessellatorausgabetyp in einem Deklarationsabschnitt für den Hüllen-Shader.
 ms.assetid: 95F074C5-6012-4160-B78E-440C33C1ECC3
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 390f22cdafe3b0d078bf8a502623a1c741e34e34
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: d5805e522571588814a9dc4a55ff5cf8cd6f03ce49345de64c9d68a5b6a46c23
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104038368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118792956"
 ---
-# <a name="dcl_tessellator_output_primitive-sm5---asm"></a>DCL \_ \_ \_ -Mosaik-Ausgabe primitive (SM5-ASM)
+# <a name="dcl_tessellator_output_primitive-sm5---asm"></a>dcl \_ tessellator \_ output primitive \_ (sm5 - asm)
 
-Deklarieren Sie den primitiven Typ der Mosaik Ausgabe in einem Hull-Shader-Deklarations Abschnitt.
+Deklarieren Sie den primitiven Tessellatorausgabetyp in einem Deklarationsabschnitt für den Hüllen-Shader.
 
 
 
-| DCL-Mosaik \_ \_ Ausgabe \_ primitive {Ausgabe \_ Punkt \| Ausgabe \_ Zeile \| ausgabeausgabe \_ e \_ CW \| Ausgabe \_ Dreieck \_ CCW} |
+| dcl \_ tessellator \_ output primitive \_ {output point \_ \| Ausgabezeile \_ \| triangloutput \_ e \_ cw \| \_Ausgabedreieck \_ ccw} |
 |----------------------------------------------------------------------------------------------------------------------|
 
 
@@ -26,42 +26,42 @@ Deklarieren Sie den primitiven Typ der Mosaik Ausgabe in einem Hull-Shader-Dekla
 
 
 
-| Element                                                                                                                                                                                                                                                                                                                                            | BESCHREIBUNG                                  |
+| Element                                                                                                                                                                                                                                                                                                                                            | Beschreibung                                  |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
-| <span id="output_point___output_line_____________________________________triangloutput_e_cw___output_triangle_ccw"></span><span id="OUTPUT_POINT___OUTPUT_LINE_____________________________________TRIANGLOUTPUT_E_CW___OUTPUT_TRIANGLE_CCW"></span>*Ausgabe \_ Punkt \| Ausgabe \_ Zeile \| triangloutput \_ e \_ CW \| Ausgabe \_ Dreieck \_ CCW*<br/> | \[im \] Ausgabe primitiven Typ.<br/> |
+| <span id="output_point___output_line_____________________________________triangloutput_e_cw___output_triangle_ccw"></span><span id="OUTPUT_POINT___OUTPUT_LINE_____________________________________TRIANGLOUTPUT_E_CW___OUTPUT_TRIANGLE_CCW"></span>*\_ \| Ausgabepunkt-Ausgabezeile \_ \| triangloutput \_ e \_ cw \| \_ Ausgabedreieck \_ ccw*<br/> | \[in \] Der primitive Ausgabetyp.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle                 | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf                 | Domain | Geometrie | Pixel | Compute |
 |--------|----------------------|--------|----------|-------|---------|
-|        | Deklarations Abschnitt |        |          |       |         |
+|        | Abschnitt "Deklarationen" |        |          |       |         |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

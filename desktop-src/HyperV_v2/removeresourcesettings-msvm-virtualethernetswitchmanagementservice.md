@@ -1,7 +1,7 @@
 ---
-description: Entfernt die Einstellungen virtueller Ressourcen aus einer Konfiguration des virtuellen Switches.
+description: Entfernt Einstellungen für virtuelle Ressourcen aus einer Konfiguration eines virtuellen Switches.
 ms.assetid: 9992ebcd-8891-42ef-be7e-154f336e37f8
-title: Removeresourcesettings-Methode der Msvm_VirtualEthernetSwitchManagementService-Klasse
+title: RemoveResourceSettings-Methode der Msvm_VirtualEthernetSwitchManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 9e82117b14ab9975b069e5b340ba9ec504ae65ce
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f0c7aebc3051127da1c0afa92ba4481e434ea611b70afc5bdcf0a9fe9a28dea8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041807"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119147773"
 ---
-# <a name="removeresourcesettings-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>Removeresourcesettings-Methode der MSVM \_ virtualethernetzwitchmanagementservice-Klasse
+# <a name="removeresourcesettings-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>RemoveResourceSettings-Methode der Msvm \_ VirtualEthernetSwitchManagementService-Klasse
 
-Entfernt die Einstellungen virtueller Ressourcen aus einer Konfiguration des virtuellen Switches.
+Entfernt Einstellungen für virtuelle Ressourcen aus einer Konfiguration eines virtuellen Switches.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ uint32 RemoveResourceSettings(
 
 <dl> <dt>
 
-*Resourcesettings* \[ in\]
+*ResourceSettings* \[ In\]
 </dt> <dd>
 
-Ein Array von Verweisen auf Instanzen der [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata) -Klasse, wobei jede Instanz die Einstellungen einer virtuellen Ressource innerhalb einer zu entfernenden virtuellen Switch-Konfiguration darstellt.
+Ein Array von Verweisen auf Instanzen der [**CIM \_ ResourceAllocationSettingData-Klasse,**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata) wobei jede Instanz die Einstellungen einer virtuellen Ressource innerhalb einer konfiguration des virtuellen Switches darstellt, die entfernt werden sollen.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -66,7 +66,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -75,19 +75,19 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -96,25 +96,25 @@ Fehler **(2** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Adresssourcesettings**](addresourcesettings-msvm-virtualethernetswitchmanagementservice.md)
+[**AddResourceSettings**](addresourcesettings-msvm-virtualethernetswitchmanagementservice.md)
 </dt> <dt>
 
-[**Modifyresourcesettings**](modifyresourcesettings-msvm-virtualethernetswitchmanagementservice.md)
+[**ModifyResourceSettings**](modifyresourcesettings-msvm-virtualethernetswitchmanagementservice.md)
 </dt> <dt>
 
-[**MSVM \_ virtualethernetzwitchmanagementservice**](msvm-virtualethernetswitchmanagementservice.md)
+[**Msvm \_ VirtualEthernetSwitchManagementService**](msvm-virtualethernetswitchmanagementservice.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-description: Während der Direct3D-und Fenster Programmierung werden Objekte auf dem Bildschirm in Bezug auf Begrenzungs Rechtecke bezeichnet.
+description: Während der Direct3D- und Fensterprogrammierung wird auf Objekte auf dem Bildschirm als umrandende Rechtecke verwiesen.
 ms.assetid: 9e271652-1673-42ea-b1f4-31ac63c397c5
 title: Rechtecke (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fd74538e81482061452382de3123243c3dffe7a8
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 02dda6e8a4f10128ab11ffeb8b390e79be7cc0f698ed1625ca3f2c5df995d67e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104123434"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119368874"
 ---
 # <a name="rectangles-direct3d-9"></a>Rechtecke (Direct3D 9)
 
-Während der Direct3D-und Fenster Programmierung werden Objekte auf dem Bildschirm in Bezug auf Begrenzungs Rechtecke bezeichnet. Die Seiten eines umgebenden Rechtecks sind immer parallel zu den Seiten des Bildschirms. Daher kann das Rechteck durch zwei Punkte, die obere linke Ecke und die untere rechte Ecke beschrieben werden. Die meisten Anwendungen verwenden die [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, um Informationen zu einem umgebenden Rechteck zu übertragen, das beim blisten auf den Bildschirm oder beim Ausführen der Treffer Erkennung verwendet werden soll.
+Während der Direct3D- und Fensterprogrammierung wird auf Objekte auf dem Bildschirm als umrandende Rechtecke verwiesen. Die Seiten eines umrandenden Rechtecks sind immer parallel zu den Seiten des Bildschirms, sodass das Rechteck durch zwei Punkte beschrieben werden kann: die obere linke Ecke und die untere rechte Ecke. Die meisten Anwendungen verwenden die [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) um Informationen zu einem umrandenden Rechteck zu enthalten, das beim Blitting auf dem Bildschirm oder beim Ausführen der Treffererkennung verwendet werden soll.
 
-In C++ hat die [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur die folgende Definition.
+In C++ hat die [**RECT-Struktur**](/previous-versions//dd162897(v=vs.85)) die folgende Definition.
 
 
 ```
@@ -29,13 +29,13 @@ typedef struct tagRECT {
 
 
 
-Im vorherigen Beispiel sind die linken und oberen Elemente die x-und y-Koordinaten der linken oberen Ecke eines umgebenden Rechtecks. Entsprechend bilden die Rechte und unteren Member die Koordinaten der unteren rechten Ecke. In der folgenden Abbildung wird gezeigt, wie diese Werte visualisiert werden können.
+Im vorherigen Beispiel sind der linke und der obere Member die x- und y-Koordinaten der oberen linken Ecke eines umgebundenen Rechtecks. Analog dazu stellen die rechten und unteren Elemente die Koordinaten der unteren rechten Ecke zusammen. Die folgende Abbildung zeigt, wie Sie diese Werte visualisieren können.
 
-![Abbildung des Rechtecks, das durch die Werte Links, oben, rechts und unten begrenzt ist](images/rect.png)
+![Abbildung des Rechtecks, das durch den linken, oberen, rechten und unteren Wert gebunden ist](images/rect.png)
 
-Die Spalte mit Pixeln am rechten Rand und die Zeile der Pixel am unteren Rand sind nicht in der Rect enthalten. Wenn Sie z. b. ein Rect mit den Membern {10, 10, 138, 138} sperren, wird ein Objekt mit einer Breite und Höhe von 128 Pixel ausgegeben.
+Die Pixelspalte am rechten Rand und die Pixelzeile am unteren Rand sind nicht im RECT enthalten. Beispielsweise führt das Sperren eines RECT mit den Membern {10, 10, 138, 138} zu einem Objekt mit einer Breite und Höhe von 128 Pixeln.
 
-Im Interesse der Effizienz, Konsistenz und Benutzerfreundlichkeit können alle Direct3D Presentation-Funktionen mit Rechtecke verwendet werden.
+Im Interesse der Effizienz, Konsistenz und Benutzerfreundlichkeit funktionieren alle Direct3D-Präsentationsfunktionen mit Rechtecke.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

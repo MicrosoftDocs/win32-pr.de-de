@@ -1,30 +1,30 @@
 ---
 title: Identifizieren des Anbieters
-description: Ein Manifest kann einen oder mehrere Anbieter identifizieren. Verwenden Sie das Provider-Element, um einen Anbieter zu identifizieren.
+description: Ein Manifest kann einen oder mehrere Anbieter identifizieren. Um einen Anbieter zu identifizieren, verwenden Sie das Provider-Element.
 ms.assetid: 3bd40405-2b7a-4709-aef7-8615de8c5b6a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 45941a540f8804beccc408435fc202593ddad601
-ms.sourcegitcommit: c2a1c4314550ea9bd202d28adfcc7bfe6180932f
+ms.openlocfilehash: fbce9b07aa8a2322311397ae9a48b3d72d60b784e5c55b028afc9772b53f63d9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "104516676"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119470920"
 ---
 # <a name="identifying-the-provider"></a>Identifizieren des Anbieters
 
-Ein Manifest kann einen oder mehrere Anbieter identifizieren. Verwenden Sie das **Provider** -Element, um einen Anbieter zu identifizieren. Sie müssen die Attribute " **Name**", " **GUID**", " **resourceFileName**", " **messagefilename**" und " **Symbol** " angeben. Wenn Sie das Manifest lokalisieren, sollten Sie auch das **Nachrichten** Attribut angeben, das von den Consumern verwendet wird, um den Namen des Anbieters anzuzeigen. Wenn Sie das **Message** -Attribut nicht angeben, verwenden Consumer den Wert des **Name** -Attributs.
+Ein Manifest kann einen oder mehrere Anbieter identifizieren. Um einen Anbieter zu identifizieren, verwenden Sie das **Provider-Element.** Sie müssen die **Symbolattribute** **name,** **guid,** **resourceFileName,** **messageFileName** und angeben. Wenn Sie Ihr Manifest lokalisieren,  sollten Sie auch das Nachrichtenattribut angeben, das Consumer als Anzeigename des Anbieters verwenden. Wenn Sie das **Nachrichtenattribut** nicht angeben, verwenden Consumer den Wert des **Attributs name.**
 
-Im Manifest können bis zu 16 Anbieter identifiziert werden. Wenn Sie mehr als 16 Anbieter identifizieren möchten, müssen Sie den Abschnitt **messagetable** des Manifests einschließen, mit dem die-und-Anbieter Ressourcen Werte für die Meldungs Zeichenfolgen zuweisen müssen, die Sie definieren – die Nachrichten Tabelle darf keine Nachrichten Zeichenfolgen enthalten, die von den Anbietern 1 bis 16 definiert wurden.
+Sie können bis zu 16 Anbieter im Manifest identifizieren. Wenn Sie mehr als 16 Anbieter identifizieren möchten, müssen Sie den **MessageTable-Abschnitt** des Manifests einschließen, den der Siebzehnte und der Anbieter verwenden müssen, um Ressourcenwerte für die von ihnen definierten Nachrichtenzeichenfolgen zuzuweisen. Die Nachrichtentabelle darf keine Nachrichtenzeichenfolgen enthalten, die von den Anbietern 1 bis 16 definiert werden.
 
-Im folgenden Beispiel wird gezeigt, wie das **Provider** -Element verwendet wird, um einen Anbieter zu identifizieren.
+Das folgende Beispiel zeigt, wie sie das **Provider-Element** verwenden, um einen Anbieter zu identifizieren.
 
 
 ```XML
 <instrumentationManifest
     xmlns="http://schemas.microsoft.com/win/2004/08/events" 
-    xmlns:win="https://manifests.microsoft.com/win/2004/08/windows/events"
-    xmlns:xs="https://www.w3.org/2001/XMLSchema"    
+    xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     >
 
     <instrumentation>

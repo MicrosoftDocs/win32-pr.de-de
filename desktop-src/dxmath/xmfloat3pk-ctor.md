@@ -47,7 +47,7 @@ Erstellt Instanzen der [**XMFLOAT3PK-Struktur.**](/windows/win32/api/directxpack
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmfloat3pk-xmfloat3pk(constfloat)"><strong>XMFLOAT3PK ()</strong></a></td>
-<td style="text-align: left;">Standardkonstruktor für <code>XMFLOAT3PK</code> .<br/> Standardkonstruktor <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmfloat3pk"><strong>für XMFLOAT3PK</strong></a>.<br/>
+<td style="text-align: left;">Standardkonstruktor für <code>XMFLOAT3PK</code> .<br/> Standardkonstruktor für <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmfloat3pk"><strong>XMFLOAT3PK</strong></a>.<br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -56,7 +56,7 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmfloat3pk-xmfloat3pk(uint32_t)"><strong>XMFLOAT3PK (uint32_t)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von aus <code>XMFLOAT3PK</code> einer <code>uint32_t</code> Variablen, die Komponentendaten in einem gepackten Format enthält.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmfloat3pk"><strong>XMFLOAT3PK</strong></a> aus einer Variablen, die <code>uint32_t</code> Komponentendaten in einem gepackten Format enthält.<br/>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMFLOAT3PK</code> aus einer <code>uint32_t</code> Variablen, die Komponentendaten in einem gepackten Format enthält.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmfloat3pk"><strong>XMFLOAT3PK</strong></a> aus einer <code>uint32_t</code> Variablen, die Komponentendaten in einem gepackten Format enthält.<br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -65,7 +65,7 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmfloat3pk-xmfloat3pk(constfloat)"><strong>XMFLOAT3PK (const float*)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von aus <code>XMFLOAT3PK</code> einem Arrayargument mit <code>float</code> drei Element.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmfloat3pk"><strong>XMFLOAT3PK</strong></a> aus einem Arrayargument mit <code>float</code> drei Elemente.<br/>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMFLOAT3PK</code> aus einem Arrayargument mit drei <code>float</code> Elementen.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmfloat3pk"><strong>XMFLOAT3PK</strong></a> aus einem Arrayargument mit drei <code>float</code> Elementen.<br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -73,8 +73,8 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmfloat3pk-xmfloat3pk(float_float_float)"><strong>XMFLOAT3PK (float,float,float)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMFLOAT3PK</code> aus drei <code>float</code> Argumenten.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmfloat3pk"><strong>XMFLOAT3PK aus</strong></a> drei <code>float</code> Argumenten.<br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmfloat3pk-xmfloat3pk(float_float_float)"><strong>XMFLOAT3PK (float, float, float)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMFLOAT3PK</code> aus drei <code>float</code> Argumenten.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmfloat3pk"><strong>XMFLOAT3PK</strong></a> aus drei <code>float</code> Argumenten.<br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.

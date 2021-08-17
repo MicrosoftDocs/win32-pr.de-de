@@ -1,7 +1,7 @@
 ---
-description: Macht eine Methode verfügbar, um auszuwerten, ob ein icontextnode-Objekt bestimmte Kriterien erfüllt oder nicht.
+description: Macht eine Methode verfügbar, um zu bewerten, ob ein IContextNode-Objekt ein angegebenes Kriterium erfüllt oder fehlschlägt.
 ms.assetid: 8b094882-e739-4088-87de-6ef4719b0b5b
-title: Imatchescriteria-Schnittstelle (iacom. h)
+title: IMatchesCriteriaCallBack-Schnittstelle (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,40 +13,40 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 960bd221bdd1f621f6ec4deb5ea167f5bf9ee4d4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bc661f47c77d615df95f63e58beccbbf125b93078392a63f86ed50f52cc5636d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525319"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118718969"
 ---
-# <a name="imatchescriteriacallback-interface"></a>Imatchescriteria-Schnittstelle
+# <a name="imatchescriteriacallback-interface"></a>IMatchesCriteriaCallBack-Schnittstelle
 
-Macht eine Methode verfügbar, um auszuwerten, ob ein [**icontextnode**](icontextnode.md) -Objekt bestimmte Kriterien erfüllt oder nicht.
+Macht eine Methode verfügbar, um zu bewerten, ob ein [**IContextNode-Objekt**](icontextnode.md) ein angegebenes Kriterium erfüllt oder fehlschlägt.
 
 ## <a name="members"></a>Member
 
-Die **imatchescriteria** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Imatchescriteria acallback** weist auch diese Typen von Membern auf:
+Die **IMatchesCriteriaCallBack-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IMatchesCriteriaCallBack** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **imatcheskriteriacallback** -Schnittstelle verfügt über diese Methoden.
+Die **IMatchesCriteriaCallBack-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                      | BESCHREIBUNG                                                                                                                                  |
+| Methode                                                                      | Beschreibung                                                                                                                                  |
 |:----------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Evaluatecontextnode**](imatchescriteriacallback-evaluatecontextnode.md) | Wertet beim Überschreiben in einer abgeleiteten Klasse aus, ob ein bestimmtes [**icontextnode**](icontextnode.md) -Objekt die Kriterien erfüllt.<br/> |
+| [**EvaluateContextNode**](imatchescriteriacallback-evaluatecontextnode.md) | Wertet beim Überschreiben in einer abgeleiteten Klasse aus, ob ein angegebenes [**IContextNode-Objekt**](icontextnode.md) die Kriterien erfüllt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die [**iinkanalyzer:: findnodeswithcallback-Methode**](iinkanalyzer-findnodeswithcallback.md) oder die [**iinkanalyzer:: findnodeswithcallbackinsubtree-Methode**](iinkanalyzer-findnodeswithcallbackinsubtree.md)zu verwenden, erstellen Sie eine Klasse, die **imatchescriteria acallback** implementiert. Implementieren Sie [**imatchescriteria acallback:: evaluatecontextnode**](imatchescriteriacallback-evaluatecontextnode.md) , um **Variant \_ true** zurückzugeben, wenn das [**icontextnode**](icontextnode.md) -Objekt mit Ihren Kriterien übereinstimmt, und andernfalls **\_ false** . Für einige Kriterien müssen Sie möglicherweise eine Möglichkeit zur Initialisierung oder Beibehaltung des Zustands Ihres **imatchescriteria** -Objekts bereitstellen.
+Um die [**IInkAnalyzer::FindNodesWithCallBack-Methode**](iinkanalyzer-findnodeswithcallback.md) oder [**die IInkAnalyzer::FindNodesWithCallBackInSubTree-Methode**](iinkanalyzer-findnodeswithcallbackinsubtree.md)zu verwenden, erstellen Sie eine Klasse, die **IMatchesCriteriaCallBack implementiert.** Implementieren [**Sie IMatchesCriteriaCallBack::EvaluateContextNode**](imatchescriteriacallback-evaluatecontextnode.md) so, dass **VARIANT \_ TRUE** zurückgegeben wird, wenn das [**IContextNode-Objekt**](icontextnode.md) Ihren Kriterien entspricht, andernfalls **VARIANT \_ FALSE.** Bei einigen Kriterien müssen Sie möglicherweise eine Möglichkeit zum Initialisieren oder Verwalten des Zustands Ihres **IMatchesCriteriaCallBack-Objekts** bereitstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,24 +54,24 @@ Um die [**iinkanalyzer:: findnodeswithcallback-Methode**](iinkanalyzer-findnodes
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalyzer:: findnodeswithcallback-Methode**](iinkanalyzer-findnodeswithcallback.md)
+[**IInkAnalyzer::FindNodesWithCallBack-Methode**](iinkanalyzer-findnodeswithcallback.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findnodeswithcallbackinsubtree-Methode**](iinkanalyzer-findnodeswithcallbackinsubtree.md)
+[**IInkAnalyzer::FindNodesWithCallBackInSubTree-Methode**](iinkanalyzer-findnodeswithcallbackinsubtree.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

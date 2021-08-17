@@ -33,7 +33,7 @@ ms.locfileid: "119978200"
 ---
 # <a name="apijetindexrecordcount-method"></a>Api.JetIndexRecordCount-Methode
 
-Zählt die Anzahl der Einträge im aktuellen Index von der aktuellen Position nach vorn. Die aktuelle Position ist in der Anzahl enthalten. Die Anzahl kann größer als die Gesamtzahl der Datensätze in der Tabelle sein, wenn sich der aktuelle Index über einer mehrwertigen Spalte befindet und Instanzen der Spalte mehrere Werte haben. Wenn die Tabelle leer ist, wird 0 für die Anzahl zurückgegeben.
+Zählt die Anzahl der Einträge im aktuellen Index aus der aktuellen Position vorwärts. Die aktuelle Position ist in der Anzahl enthalten. Die Anzahl kann größer als die Gesamtzahl der Datensätze in der Tabelle sein, wenn sich der aktuelle Index über einer mehrwertigen Spalte befindet und Instanzen der Spalte mehrere Werte aufweisen. Wenn die Tabelle leer ist, wird 0 für die Anzahl zurückgegeben.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -77,7 +77,7 @@ public static void JetIndexRecordCount(
   - tableid  
     Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der Cursor, in dem die Datensätze gezählt werden.
+    Der Cursor, in dem die Datensätze gezählt werden sollen.
 
 <!-- end list -->
 
@@ -91,7 +91,7 @@ public static void JetIndexRecordCount(
   - maxRecordsToCount  
     Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Die maximale Anzahl der zu zählenden Datensätze. Der Wert 0 gibt an, dass die Anzahl unbegrenzt ist.
+    Die maximale Anzahl von datensätzen, die gezählt werden sollen. Der Wert 0 gibt an, dass die Anzahl unbegrenzt ist.
 
 ## <a name="see-also"></a>Weitere Informationen
 

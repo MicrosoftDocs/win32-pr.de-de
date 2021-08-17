@@ -1,6 +1,6 @@
 ---
-title: So erzwingen Key-Frame einfügen
-description: So erzwingen Key-Frame einfügen
+title: So erzwingen sie Key-Frame Einfügen
+description: So erzwingen sie Key-Frame Einfügen
 ms.assetid: 456482da-aaa2-41f8-93f7-c0fa5abe7dd2
 keywords:
 - Advanced Systems Format (ASF), Erzwingen von Keyframeeinfügungen
@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118196496"
 ---
-# <a name="to-force-key-frame-insertion"></a>So erzwingen Key-Frame einfügen
+# <a name="to-force-key-frame-insertion"></a>So erzwingen sie Key-Frame Einfügen
 
 Der Windows Media Video 9-Codec unterstützt das erzwungene Einfügen von Keyframes. Wenn Sie ein Beispiel an den Writer übergeben, können Sie angeben, dass es als Keyframe [*codiert werden muss.*](wmformat-glossary.md)
 
@@ -29,7 +29,7 @@ Um das Einfügen eines Keyframes für ein Beispiel zu erzwingen, führen Sie die
 4.  Aktualisieren Sie die im Puffer verwendete Datenmenge, um die tatsächliche Größe des Beispiels widerzurufen, indem [**Sie INSSBuffer::SetLength aufrufen.**](/previous-versions/windows/desktop/api/Wmsbuffer/nf-wmsbuffer-inssbuffer-setlength)
 5.  Rufen Sie einen Zeiger auf die [**INSSBuffer3-Schnittstelle**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer3) ab, indem Sie **INSSBuffer::QueryInterface aufrufen.**
 6.  Legen Sie das Beispiel als erzwungenen Keyframe fest, indem Sie die [**INSSBuffer3::SetProperty-Methode**](/previous-versions/windows/desktop/api/Wmsbuffer/nf-wmsbuffer-inssbuffer3-setproperty) aufrufen, um die WM \_ SampleExtensionGUID \_ OutputCleanPoint-Eigenschaft festlegen. Diese Eigenschaft ist ein boolescher Wert. Legen Sie ihn auf **TRUE fest.**
-7.  Übergeben Sie die Pufferschnittstelle zusammen mit der Eingabenummer und der Beispielzeit mithilfe der [**IWMWriter::WriteSample-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-writesample) an den Writer.
+7.  Übergeben Sie mithilfe der [**IWMWriter::WriteSample-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-writesample) die Pufferschnittstelle zusammen mit der Eingabenummer und der Stichprobenzeit an den Writer.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

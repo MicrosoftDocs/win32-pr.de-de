@@ -1,27 +1,27 @@
 ---
-title: Server Zeit Limit bei idirector ysearch
-description: Um zu vermeiden, dass die gesamte CPU-Zeit verwendet und andere Vorgänge nicht ausgeführt werden, geben Sie das Such Zeitlimit auf einen kleinen Wert an, und führen Sie die Anwendung dann später erneut aus, wenn der Bericht nicht generiert werden kann.
+title: Server Time Limit with IDirectorySearch
+description: Um zu vermeiden, dass die gesamte CPU-Zeit verwendet wird und andere Vorgänge nicht ausgeführt werden, geben Sie das Suchzeitlimit auf einen kleinen Wert an, und führen Sie die Anwendung später erneut aus, wenn der Bericht nicht generiert werden kann.
 ms.assetid: 0fd4d8a2-36fc-4179-aeee-1cd3f3996e19
 ms.tgt_platform: multiple
 keywords:
-- Server Zeit Limit mit idirector ysearch ADSI
-- ADSI, Search, idirector ysearch, andere Suchoptionen, Server Zeit Limit
+- Server Time Limit with IDirectorySearch ADSI
+- ADSI, Suchen, IDirectorySearch, Andere Suchoptionen, Serverzeitlimit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ba5f80f9b83f20affaf7ad03de6b1609e9951b7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e120586cb05fa07baf1e26fa8c1db8e11eecdbd1b19ed7f4f9c2215a921409ee
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119262130"
 ---
-# <a name="server-time-limit-with-idirectorysearch"></a>Server Zeit Limit bei idirector ysearch
+# <a name="server-time-limit-with-idirectorysearch"></a>Server Time Limit with IDirectorySearch
 
-Wenn Sie eine Suche auf einem ausgelasteten Server anfordern, möchten Sie möglicherweise anfordern, dass der Server die Suche auf ein angegebenes Zeitlimit beschränkt. Sie möchten z. b. eine Anwendung ausführen, um einen wöchentlichen Bericht auf einem Server zu generieren, der in der Nähe seiner Kapazität ausgeführt wird. Um zu vermeiden, dass die gesamte CPU-Zeit verwendet und andere Vorgänge nicht ausgeführt werden, geben Sie das Such Zeitlimit auf einen kleinen Wert an, und führen Sie die Anwendung dann später erneut aus, wenn der Bericht nicht generiert werden kann.
+Wenn Sie eine Suche auf einem ausgelasteten Server anfordern, können Sie anfordern, dass der Server die Suche auf ein angegebenes Zeitlimit beschränkt. Beispielsweise möchten Sie eine Anwendung ausführen, um einen wöchentlichen Bericht auf einem Server zu generieren, der in der Nähe seiner Kapazität ausgeführt wird. Um zu vermeiden, dass die gesamte CPU-Zeit verwendet wird und andere Vorgänge nicht ausgeführt werden, geben Sie das Suchzeitlimit auf einen kleinen Wert an, und führen Sie die Anwendung später erneut aus, wenn der Bericht nicht generiert werden kann.
 
-Einige Server erzwingen möglicherweise eine eigene administrative Zeitbegrenzung. Wenn Sie in diesen Fällen einen Wert für das Such Zeitlimit angeben, der größer ist als das administrative Zeit Limit, ignoriert der Server Ihre Spezifikation und verwendet stattdessen den internen Wert des Zeitlimits.
+Einige Server legen möglicherweise ein eigenes Administratives Zeitlimit fest. Wenn Sie in diesen Fällen einen Suchzeitlimitwert angeben, der größer als das administrative Zeitlimit ist, ignoriert der Server Ihre Spezifikation und verwendet stattdessen den internen Zeitlimitwert.
 
-Der Standardwert für das Serverzeit Limit ist unbegrenzt. Zum Festlegen eines Serverzeit Limits legen Sie eine Suchoption für die Suchoption " **ADS \_ searchpref \_ time \_ Limit** " mit einem **\_ ganzzahligen adstype** -Wert fest, der das Server Zeitlimit (in Sekunden) in dem an die [**IDirectorySearch:: setsearchpreference**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-setsearchpreference) -Methode über gebenden [**ADS \_ \_**](/windows/desktop/api/Iads/ns-iads-ads_searchpref_info) enthält. Dieser Vorgang wird im folgenden Codebeispiel gezeigt. Ein Serverzeit Limit von 0 (null) gibt an, dass kein Zeit Limit
+Die Standardeinstellung für das Serverzeitlimit ist kein Limit. Um ein Serverzeitlimit festzulegen, legen Sie eine **ADS \_ SEARCHPREF \_ TIME \_ LIMIT-Suchoption** mit einem **ADSTYPE \_ INTEGER-Wert** fest, der das Serverzeitlimit in Sekunden im [**ADS \_ SEARCHPREF \_ INFO-Array**](/windows/desktop/api/Iads/ns-iads-ads_searchpref_info) enthält, das an die [**IDirectorySearch::SetSearchPreference-Methode**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-setsearchpreference) übergeben wird. Dieser Vorgang wird im folgenden Codebeispiel gezeigt. Ein Serverzeitlimit von 0 (null) gibt kein Zeitlimit an.
 
 
 ```C++
@@ -33,9 +33,9 @@ SearchPref.vValue.Integer = 10;
 
 
 
- 
+ 
 
- 
+ 
 
 
 

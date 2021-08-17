@@ -1,25 +1,25 @@
 ---
-description: In diesem Abschnitt wird die binäre Version des DirectX-Datei Formats (. x) ausführlich erläutert, das mit der Veröffentlichung von DirectX 3,0 eingeführt wurde.
+description: In diesem Abschnitt wird die binäre Version des DirectX-Dateiformats (.x) beschrieben, die mit der Veröffentlichung von DirectX 3.0 eingeführt wurde.
 ms.assetid: d1b6698f-72bd-40a4-a501-c2093cd940f6
 title: Binärcodierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 56937b54be82e36d6ff18aab2a2349be6d59cc12
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e64f35d4ccd33692cc25c2b99c8c20ed53dc0c7a01a488c738992a9a4f22fbc8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344942"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119460759"
 ---
 # <a name="binary-encoding"></a>Binärcodierung
 
-In diesem Abschnitt wird die binäre Version des DirectX-Datei Formats (. x) ausführlich erläutert, das mit der Veröffentlichung von DirectX 3,0 eingeführt wurde.
+In diesem Abschnitt wird die binäre Version des DirectX-Dateiformats (.x) beschrieben, die mit der Veröffentlichung von DirectX 3.0 eingeführt wurde.
 
-Das Binärformat ist eine Tokendarstellung des Text Formats. Token können eigenständig oder von primitiven Datensätzen begleitet werden. Eigenständige Token verfügen über eine grammatikalische Struktur, und die erforderlichen Daten werden von Daten Satz basierten Token bereitgestellt.
+Das Binärformat ist eine tokenisierte Darstellung des Textformats. Token können eigenständig sein oder von primitiven Datensätzen begleitet werden. Eigenständige Token bieten eine grammatikalische Struktur, und Datensatztoken stellen die erforderlichen Daten zur Verfügung.
 
-Beachten Sie, dass alle Daten im Little-Endian-Format gespeichert werden. Ein gültiger binärer Datenstrom besteht aus einem Header, gefolgt von Vorlagen und/oder Datenobjekten.
+Beachten Sie, dass alle Daten im Little-Endian-Format gespeichert werden. Ein gültiger binärer Datenstrom besteht aus einem Header gefolgt von Vorlagen und/oder Datenobjekten.
 
-In diesem Abschnitt werden die folgenden Komponenten des Binärdatei Formats erläutert und eine Beispiel Vorlage und ein binäres Datenobjekt bereitstellt.
+In diesem Abschnitt werden die folgenden Komponenten des Binärdateiformats erläutert und eine Beispielvorlage und ein Binärdatenobjekt zur Verfügung gestellt.
 
 -   [Header](header.md)
 -   [Token](tokens.md)
@@ -32,7 +32,7 @@ In diesem Abschnitt werden die folgenden Komponenten des Binärdatei Formats erl
 
 <dl> <dt>
 
-[X-Datei Format Referenz](dx9-graphics-reference-x-file-format.md)
+[X-Dateiformatreferenz](dx9-graphics-reference-x-file-format.md)
 </dt> </dl>
 
  

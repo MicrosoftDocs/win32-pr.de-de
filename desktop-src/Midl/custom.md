@@ -1,9 +1,9 @@
 ---
 title: benutzerdefiniertes Attribut
-description: Das \custom\-Attribut erstellt ein benutzerdefiniertes Attribut.
+description: Das Attribut \custom\ erstellt ein benutzerdefiniertes Attribut.
 ms.assetid: 63c93eca-c9c1-4c14-9f46-aa78b01d9ff8
 keywords:
-- BENUTZERDEFINIERTES ATTRIBUT MIDL
+- MIDL des benutzerdefinierten Attributs
 topic_type:
 - apiref
 api_name:
@@ -31,31 +31,31 @@ Das **\[ benutzerdefinierte \]** Attribut erstellt ein benutzerdefiniertes Attri
 
 <dl> <dt>
 
-*Attribut-ID* 
+*attribute-id* 
 </dt> <dd>
 
 Die GUID für das benutzerdefinierte Attribut.
 
 </dd> <dt>
 
-*Attributwert* 
+*attribut-value* 
 </dt> <dd>
 
-Der Wert, den das Attribut enthält. Der Wert muss ein Wert sein, der in einen VARIANT-Typ umgewandelt werden kann.
+Der Wert, den das Attribut enthält. Der Wert muss ein Wert sein, der in einen VARIANT-Typ verwendet werden kann.
 
 </dd> <dt>
 
 *Attributliste* 
 </dt> <dd>
 
-Andere Attribute, z. **\[** B. [**uuid**](uuid.md) **\]** und **\[** [**helpstring,**](helpstring.md)die für dieses Element **\]** gelten.
+Andere Attribute wie **\[** [**uuid**](uuid.md) **\]** und **\[** [**helpstring**](helpstring.md) **\]** , die für dieses Element gelten.
 
 </dd> <dt>
 
-*Elementtyp* 
+*element-type* 
 </dt> <dd>
 
-Der Elementtyp, für den das benutzerdefinierte Attribut gilt. Dies kann eine Bibliotheks-Anweisung, Typinformationen, eine Variable, eine Funktion oder ein Parameter sein. Sie können kein benutzerdefiniertes Attribut für einen Member einer Co-Klasse verwenden.
+Der Typ des Elements, auf das das benutzerdefinierte Attribut angewendet wird. Dies kann eine Bibliotheks-Anweisung, Typinformationen, eine Variable, eine Funktion oder ein Parameter sein. Sie können kein benutzerdefiniertes Attribut für einen Member einer Co-Klasse verwenden.
 
 </dd> <dt>
 
@@ -70,7 +70,7 @@ Der Name des Elements.
 
 Verwenden Sie das **\[ benutzerdefinierte \]** Attribut, um Ihr eigenes Attribut zu definieren. Beispielsweise können Sie ein Zeichenfolgenwertattribut erstellen, das die ProgID für eine Klasse angibt.
 
-Um einen benutzerdefinierten Attributwert abzurufen, rufen Sie einen der folgenden Aufforderungen auf:
+Um einen benutzerdefinierten Attributwert abzurufen, rufen Sie einen der folgenden Aufrufe auf:
 
 -   ITypeLib2::GetCustData(rguid, pvarVal)
 -   ITypeInfo2::GetCustData(rguid, pvarVal)
@@ -78,7 +78,7 @@ Um einen benutzerdefinierten Attributwert abzurufen, rufen Sie einen der folgend
 -   ITypeInfo2::GetVarCustData(index, rguid, pvarval)
 -   ITypeInfo2::GetParamCustData(indexFunc, indexParam, rguid, pvarVal)
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -91,7 +91,7 @@ Um einen benutzerdefinierten Attributwert abzurufen, rufen Sie einen der folgend
 [**Bibliothek**](library.md)
 </dt> <dt>
 
-[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
 [ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)

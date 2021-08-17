@@ -1,18 +1,18 @@
 ---
-description: Die Reset-Methode setzt den Anfang der enumerationssequenz zurück. Diese Methode ist in Visual Basic-und Skriptsprachen ausgeblendet.
+description: Die Reset-Methode wird auf den Anfang der Enumerationssequenz zurückgesetzt. Diese Methode ist vor Visual Basic und Skriptsprachen verborgen.
 ms.assetid: 991f20bb-cfcb-4546-af56-cff61737a205
-title: 'Ienumteilnehmer:: Reset-Methode'
+title: IEnumParticipant::Reset-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 149072165cbd8903def861b731a3553e1bdc4fb3
-ms.sourcegitcommit: 70f39ec77d19d3c32c376ee2831753d2cafae41a
+ms.openlocfilehash: 4e9b8b280afa39bf95c1020a70ee5dc46bcbc6e998a08fe48edc36ca5efebead
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106361139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119140483"
 ---
-# <a name="ienumparticipantreset-method"></a>Ienumteilnehmer:: Reset-Methode
+# <a name="ienumparticipantreset-method"></a>IEnumParticipant::Reset-Methode
 
-\[**Reset** ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[**Das Zurücksetzen** ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Reset** -Methode setzt den Anfang der enumerationssequenz zurück. Diese Methode ist in Visual Basic-und Skriptsprachen ausgeblendet.
+Die **Reset-Methode** wird auf den Anfang der Enumerationssequenz zurückgesetzt. Diese Methode ist vor Visual Basic und Skriptsprachen verborgen.

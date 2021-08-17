@@ -1,7 +1,7 @@
 ---
 description: Die FeatureUsageCount-Eigenschaft ist eine schreibgeschützte Eigenschaft, die zurückgibt, wie oft das Feature verwendet wurde.
 ms.assetid: 70171e22-d73a-4718-a360-df9d1722761b
-title: Installer.FeatureUsageCount-Eigenschaft
+title: Installer.FeatureUsageCount (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118631199"
 ---
-# <a name="installerfeatureusagecount-property"></a>Installer.FeatureUsageCount-Eigenschaft
+# <a name="installerfeatureusagecount-property"></a>Installer.FeatureUsageCount (Eigenschaft)
 
 Die **FeatureUsageCount-Eigenschaft** ist eine schreibgeschützte Eigenschaft, die zurückgibt, wie oft das Feature verwendet wurde.
 
@@ -39,7 +39,7 @@ propVal = Installer.FeatureUsageCount
 
 ## <a name="remarks"></a>Hinweise
 
-Die Verwendung der Methoden [**UseFeature,**](installer-usefeature.md) [**ProvideComponent**](installer-providecomponent.md) oder [**ProvideQualifiedComponent**](installer-providequalifiedcomponent.md) oder deren API-Entsprechungen für das angegebene Feature erhöht diese Eigenschaft.
+Die Verwendung der [**Methoden UseFeature,**](installer-usefeature.md) [**ProvideComponent**](installer-providecomponent.md) oder [**ProvideQualifiedComponent**](installer-providequalifiedcomponent.md) oder ihrer API-Entsprechungen für das angegebene Feature erhöht diese Eigenschaft.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,13 +47,13 @@ Die Verwendung der Methoden [**UseFeature,**](installer-usefeature.md) [**Provid
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

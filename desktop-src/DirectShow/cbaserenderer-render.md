@@ -1,7 +1,7 @@
 ---
-description: Die Rendermethode rendert ein Beispiel.
+description: Die Render-Methode rendert ein Beispiel.
 ms.assetid: 82b47777-2900-4821-ab79-1856da432832
-title: Cbaserderderer. Rendering-Methode (renbase. h)
+title: CBaseRenderer.Render-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9fefd44fe1b913fbba0e3ebfaa6f750b88d40813
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 185baf6818d2022dbe7b64cfab888945e1a2405433eefa925d2de70dcca286e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371555"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016858"
 ---
-# <a name="cbaserendererrender-method"></a>Cbaserderderer. Rendering-Methode
+# <a name="cbaserendererrender-method"></a>CBaseRenderer.Render-Methode
 
-Die- `Render` Methode rendert ein Beispiel.
+Die `Render` -Methode rendert ein Beispiel.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,33 +42,33 @@ virtual Render(
 
 <dl> <dt>
 
-*pmediasample* 
+*pMediaSample* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels.
+Zeiger auf die [**IMediaSample-Schnittstelle des**](/windows/desktop/api/Strmif/nn-strmif-imediasample) Beispiels.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die werte in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                                                      |
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl> | Der Filter wurde beendet, oder *pmediasample* ist **null**.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Der Filter wird beendet, oder *pMediaSample ist* **NULL.**<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg.<br/>                                              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die reine virtuelle Methode [**cbasererderderer::D orendersample**](cbaserenderer-dorendersample.md)auf, die die eigentliche Arbeit übernimmt. Die abgeleitete Klasse muss " **dorendersample**" implementieren.
+Diese Methode ruft die reine virtuelle [**Methode CBaseRenderer::D oRenderSample**](cbaserenderer-dorendersample.md)auf, die die eigentliche Arbeit übernimmt. Die abgeleitete Klasse muss **DoRenderSample implementieren.**
 
-Direkt vor dem Aufruf von " **dorendersample**" ruft diese Methode die [**cbaserdenderer:: onrenderstart**](cbaserenderer-onrenderstart.md) -Methode auf. Unmittelbar danach wird die [**cbaserenderer:: onrenderend**](cbaserenderer-onrenderend.md) -Methode aufgerufen. Die abgeleitete Klasse kann diese beiden Methoden nach Bedarf überschreiben.
+Unmittelbar vor dem **Aufruf von DoRenderSample** ruft diese Methode die [**CBaseRenderer::OnRenderStart-Methode**](cbaserenderer-onrenderstart.md) auf. Unmittelbar danach wird die [**CBaseRenderer::OnRenderEnd-Methode**](cbaserenderer-onrenderend.md) aufruft. Die abgeleitete Klasse kann diese beiden Methoden nach Bedarf überschreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,16 +76,16 @@ Direkt vor dem Aufruf von " **dorendersample**" ruft diese Methode die [**cbaser
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

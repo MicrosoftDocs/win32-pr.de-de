@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Windows7IdxInfo-Klasse'
-title: Windows7IdxInfo-Klasse (Microsoft. ISAM. ESENT. Interop. Windows7)
+description: 'Weitere Informationen zu: Windows7IdxInfo-Klasse'
+title: Windows7IdxInfo-Klasse (Microsoft.Isam.Esent.Interop.Windows7)
 TOCTitle: Windows7IdxInfo class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Windows7.Windows7IdxInfo
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows7.windows7idxinfo(v=EXCHG.10)
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 77902cbbeb5779acdf235a645fc48c865fb683bf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 89377e1428259453ebcf789fbb04c619b7cd403ec649e0a2f0b48202ab428157
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343756"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119470860"
 ---
 # <a name="windows7idxinfo-class"></a>Windows7IdxInfo-Klasse
 
-Spalten Informationsebenen, die der Windows 7-Version von ESENT hinzugefügt wurden.
+Spalteninformationsebenen, die der Windows 7-Version von ESENT hinzugefügt wurden.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  Microsoft. ISAM. ESENT. Interop. Windows7. Windows7IdxInfo  
+  Microsoft.Isam.Esent.Interop.Windows7.Windows7IdxInfo  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows7](./microsoft.isam.esent.interop.windows7-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows7](./microsoft.isam.esent.interop.windows7-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,8 +60,8 @@ public static class Windows7IdxInfo
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop. Windows7-Namespace](./microsoft.isam.esent.interop.windows7-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows7-Namespace](./microsoft.isam.esent.interop.windows7-namespace.md)

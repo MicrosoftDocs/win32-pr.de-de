@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: snapshotendgrbit-Enumeration'
-title: Snapshotendgrbit-Enumeration (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen zu: SnapshotEndGrbit-Enumeration'
+title: SnapshotEndGrbit-Enumeration (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: SnapshotEndGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Vista.SnapshotEndGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.snapshotendgrbit(v=EXCHG.10)
@@ -28,21 +28,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cc813f4931a3b5a1d03cb5640e06d48d83e9aa07
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a4e34b1a9093ff068454dd181c531e12d4201afd8b6964516b2db09f4d07207f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129816"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119107217"
 ---
-# <a name="snapshotendgrbit-enumeration"></a>Snapshotendgrbit-Enumeration
+# <a name="snapshotendgrbit-enumeration"></a>SnapshotEndGrbit-Enumeration
 
-Optionen für [jeto ssnapshotend (JET_OSSNAPID, snapshotendgrbit)](./vistaapi.jetossnapshotend-method.md).
+Optionen für [JetOSSnapshotEnd(JET_OSSNAPID, SnapshotEndGrbit)](./vistaapi.jetossnapshotend-method.md).
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -77,15 +77,15 @@ public enum SnapshotEndGrbit
 </tr>
 <tr class="even">
 <td></td>
-<td>Aborandnapshot</td>
-<td>Die Momentaufnahme Sitzung wurde abgebrochen.</td>
+<td>AbortSnapshot</td>
+<td>Die Momentaufnahmesitzung wurde abgebrochen.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

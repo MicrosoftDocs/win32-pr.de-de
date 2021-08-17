@@ -1,33 +1,33 @@
 ---
-description: Gibt an, ob die Medien Senke, die diesem topologieknoten zugeordnet ist, ratlos ist.
+description: Gibt an, ob die diesem Topologieknoten zugeordnete Mediensenke ratenlos ist.
 ms.assetid: 81ef7005-a9ab-4f26-bc39-68b27c4f92aa
-title: MF_TOPONODE_RATELESS-Attribut (mspdl. h)
+title: MF_TOPONODE_RATELESS-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d5c5ded4d8d09e8d45f766b03737954329c9202
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 56d4de6b132bf2b49e327be45588a497374043794ec73925eb61f2dab16fd1bb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345785"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119448870"
 ---
-# <a name="mf_toponode_rateless-attribute"></a>Attribut "MF- \_ toponode- \_ Attribut"
+# <a name="mf_toponode_rateless-attribute"></a>MF \_ TOPONODE \_ RATELESS-Attribut
 
-Gibt an, ob die Medien Senke, die diesem topologieknoten zugeordnet ist, ratlos ist.
+Gibt an, ob die diesem Topologieknoten zugeordnete Mediensenke ratenlos ist.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-Als booleschen Wert behandeln.
+Als boolescher Wert behandeln.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Ausgabe Knoten (**MF- \_ topologieausgabe- \_ \_ Knoten**).
+Dieses Attribut gilt für Ausgabeknoten (**MF \_ TOPOLOGY \_ OUTPUT \_ NODE**).
 
-Wenn der Wert dieses Attributs ungleich 0 (null) ist, behandelt die Medien Sitzung die Medien Senke als ratlose Senke, unabhängig davon, ob die Medien Senke das **mediasink \_** -Attribut zurückgibt. Wenn dieses Attribut nicht festgelegt ist, wird davon ausgegangen, dass die Medien Senke nicht ratlos ist.
+Wenn der Wert dieses Attributs ungleich 0 (null) ist, behandelt die Mediensitzung die Mediensenke als ratenlose Senke, unabhängig davon, ob die Mediensenke das **MEDIASINK \_ RATELESS-Merkmal** zurückgibt. Wenn dieses Attribut nicht festgelegt ist, wird davon ausgegangen, dass die Mediensenke nicht ratenlos ist.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,29 +35,29 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEAttributes::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**DENKattribute::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**Imfmediasink:: getcharacteristics**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasink-getcharacteristics)
+[**TENSMediaSink::GetCharacteristics**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasink-getcharacteristics)
 </dt> <dt>
 
-[**Imftopologynode**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode)
+[**TOPOLOGYNode**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode)
 </dt> <dt>
 
 [Topologieknotenattribute](topology-node-attributes.md)

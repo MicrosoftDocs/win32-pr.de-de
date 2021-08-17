@@ -1,12 +1,12 @@
 ---
-title: Modifyberechtigungs-Methode der Win32_TSAccount-Klasse
+title: ModifyPermissions-Methode der Win32_TSAccount Klasse
 description: Legt eine Berechtigung für das angegebene Konto fest.
 ms.assetid: cef36f7f-d327-4bb6-9bff-282036c1a5d5
 ms.tgt_platform: multiple
 keywords:
-- Modifyberechtigungs-Methode Remotedesktopdienste
-- Modifyberechtigungs Methode Remotedesktopdienste, Win32_TSAccount-Klasse
-- Win32_TSAccount-Klasse Remotedesktopdienste, modifyberechtigungs Methode
+- ModifyPermissions-Remotedesktopdienste
+- ModifyPermissions-Methode Remotedesktopdienste , Win32_TSAccount Klasse
+- Win32_TSAccount klasse Remotedesktopdienste , ModifyPermissions-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c4bf6147c215475314f65bb8fa426442884bc82e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a6265290fa3604c426609f51d0518f1f6762ea02718757d86ff9ed69b10bd018
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339565"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119421670"
 ---
-# <a name="modifypermissions-method-of-the-win32_tsaccount-class"></a>Modifyberechtigungs-Methode der Win32- \_ Klasse "zaccount"
+# <a name="modifypermissions-method-of-the-win32_tsaccount-class"></a>ModifyPermissions-Methode der Win32 \_ TSAccount-Klasse
 
 Legt eine Berechtigung für das angegebene Konto fest.
 
@@ -44,10 +44,10 @@ uint32 ModifyPermissions(
 
 <dl> <dt>
 
-*PermissionMask* \[ in\]
+*PermissionMask* \[ In\]
 </dt> <dd>
 
-Die [Remotedesktop-Sitzungshost](terminal-services-permissions.md) festzulegende Berechtigung.
+Die [Remotedesktop-Sitzungshost Berechtigung, die](terminal-services-permissions.md) festgelegt werden soll.
 
 Mögliche Werte sind:
 
@@ -55,18 +55,18 @@ Mögliche Werte sind:
 
 <span id="WINSTATION_QUERY"></span><span id="winstation_query"></span>
 
-<span id="WINSTATION_QUERY"></span><span id="winstation_query"></span>**WinStation \_ Abfrage** (0)
+<span id="WINSTATION_QUERY"></span><span id="winstation_query"></span>**WINSTATION \_ QUERY** (0)
 
 
 </dt> <dd>
 
-Berechtigung zum Abfragen von Informationen über eine Sitzung.
+Berechtigung zum Abfragen von Informationen zu einer Sitzung.
 
 </dd> <dt>
 
 <span id="WINSTATION_SET"></span><span id="winstation_set"></span>
 
-<span id="WINSTATION_SET"></span><span id="winstation_set"></span>**WinStation \_ Set** (1)
+<span id="WINSTATION_SET"></span><span id="winstation_set"></span>**WINSTATION \_ SET** (1)
 
 
 </dt> <dd>
@@ -77,40 +77,40 @@ Berechtigung zum Ändern von Verbindungsparametern.
 
 <span id="WINSTATION_RESET"></span><span id="winstation_reset"></span>
 
-<span id="WINSTATION_RESET"></span><span id="winstation_reset"></span>**WinStation \_ Zurücksetzen** (6)
+<span id="WINSTATION_RESET"></span><span id="winstation_reset"></span>**WINSTATION \_ RESET** (6)
 
 
 </dt> <dd>
 
-Berechtigung zum Zurücksetzen oder Beenden einer Sitzung oder einer Verbindung.
+Berechtigung zum Zurücksetzen oder Beenden einer Sitzung oder Verbindung.
 
 </dd> <dt>
 
 <span id="WINSTATION_VIRTUAL___STANDARD_RIGHTS_REQUIRED"></span><span id="winstation_virtual___standard_rights_required"></span>
 
-<span id="WINSTATION_VIRTUAL___STANDARD_RIGHTS_REQUIRED"></span><span id="winstation_virtual___standard_rights_required"></span>**WinStation \_ \| \_ \_ Erforderliche virtuelle Standard Rechte** (3)
+<span id="WINSTATION_VIRTUAL___STANDARD_RIGHTS_REQUIRED"></span><span id="winstation_virtual___standard_rights_required"></span>**WINSTATION \_ VIRTUELLE \| \_ \_ STANDARDRECHTE ERFORDERLICH** (3)
 
 
 </dt> <dd>
 
-Berechtigung zum Verwenden von virtuellen Kanälen. Virtuelle Kanäle ermöglichen den Zugriff von einem Serverprogramm auf Client Geräte.
+Berechtigung zum Verwenden virtueller Kanäle. Virtuelle Kanäle ermöglichen den Zugriff von einem Serverprogramm auf Clientgeräte.
 
 </dd> <dt>
 
 <span id="WINSTATION_SHADOW"></span><span id="winstation_shadow"></span>
 
-<span id="WINSTATION_SHADOW"></span><span id="winstation_shadow"></span>**WinStation \_ Schatten** (4)
+<span id="WINSTATION_SHADOW"></span><span id="winstation_shadow"></span>**WINSTATION \_ SHADOW** (4)
 
 
 </dt> <dd>
 
-Berechtigung, um die Sitzung eines anderen Benutzers zu überschatten oder Remote zu steuern.
+Berechtigung zum Überschatten oder Remotesteuerung der Sitzung eines anderen Benutzers.
 
 </dd> <dt>
 
 <span id="WINSTATION_LOGON"></span><span id="winstation_logon"></span>
 
-<span id="WINSTATION_LOGON"></span><span id="winstation_logon"></span>**WinStation \_ Anmelden** (5)
+<span id="WINSTATION_LOGON"></span><span id="winstation_logon"></span>**WINSTATION \_ LOGON** (5)
 
 
 </dt> <dd>
@@ -121,7 +121,7 @@ Berechtigung zum Anmelden bei einer Sitzung auf dem Server.
 
 <span id="WINSTATION_LOGOFF"></span><span id="winstation_logoff"></span>
 
-<span id="WINSTATION_LOGOFF"></span><span id="winstation_logoff"></span>**WinStation \_ Abmeldung (2** )
+<span id="WINSTATION_LOGOFF"></span><span id="winstation_logoff"></span>**WINSTATION \_ LOGOFF** (2)
 
 
 </dt> <dd>
@@ -132,18 +132,18 @@ Berechtigung zum Abmelden eines Benutzers von einer Sitzung.
 
 <span id="WINSTATION_MSG"></span><span id="winstation_msg"></span>
 
-<span id="WINSTATION_MSG"></span><span id="winstation_msg"></span>**WinStation \_ Meldung (7** )
+<span id="WINSTATION_MSG"></span><span id="winstation_msg"></span>**WINSTATION \_ MSG** (7)
 
 
 </dt> <dd>
 
-Die Berechtigung zum Senden einer Nachricht an die Sitzung eines anderen Benutzers.
+Berechtigung zum Senden einer Nachricht an die Sitzung eines anderen Benutzers.
 
 </dd> <dt>
 
 <span id="WINSTATION_CONNECT"></span><span id="winstation_connect"></span>
 
-<span id="WINSTATION_CONNECT"></span><span id="winstation_connect"></span>**WinStation \_ Verbinden** (8)
+<span id="WINSTATION_CONNECT"></span><span id="winstation_connect"></span>**WINSTATION \_ CONNECT** (8)
 
 
 </dt> <dd>
@@ -154,7 +154,7 @@ Berechtigung zum Herstellen einer Verbindung mit einer anderen Sitzung.
 
 <span id="WINSTATION_DISCONNECT"></span><span id="winstation_disconnect"></span>
 
-<span id="WINSTATION_DISCONNECT"></span><span id="winstation_disconnect"></span>**WinStation \_ Trennen** (9)
+<span id="WINSTATION_DISCONNECT"></span><span id="winstation_disconnect"></span>**WINSTATION \_ DISCONNECT** (9)
 
 
 </dt> <dd>
@@ -163,10 +163,10 @@ Berechtigung zum Trennen einer Sitzung.
 
 </dd> </dl> </dd> <dt>
 
-*Zulassen* \[ in\]
+*Zulassen* \[ In\]
 </dt> <dd>
 
-Gibt an, ob die Berechtigung im *PermissionMask* -Parameter zugelassen oder verweigert wird.
+Gibt an, ob die Berechtigung im *PermissionMask-Parameter* zulässig oder verweigert wird.
 
 Mögliche Werte sind:
 
@@ -179,28 +179,28 @@ Mögliche Werte sind:
 
 </dt> <dd>
 
-Der angegebene Berechtigungs Satz ist zulässig.
+Der angegebene Berechtigungssatz ist zulässig.
 
 </dd> <dt>
 
 <span id="0"></span>
 
-<span id="0"></span>**1,0**
+<span id="0"></span>**0**
 
 
 </dt> <dd>
 
-Der angegebene Berechtigungs Satz wird verweigert.
+Der angegebene Berechtigungssatz wird verweigert.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) .
+Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Remotedesktopdienste finden Sie unter [Fehlercodes](terminal-services-wmi-provider-error-codes.md) für WMI-Anbieter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -210,17 +210,17 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Win32- \_ Konto**](win32-tsaccount.md)
+[**Win32 \_ TSAccount**](win32-tsaccount.md)
 </dt> </dl>
 
  

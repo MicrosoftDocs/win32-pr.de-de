@@ -1,8 +1,8 @@
 ---
-description: Ruft den CHKDSK-Vorgang auf dem Datenträger auf.
+description: Ruft den chkdsk-Vorgang auf dem Datenträger auf.
 ms.assetid: 65942702-b660-46cd-b614-e3e1ec3df7b9
 ms.tgt_platform: multiple
-title: CHKDSK-Methode der Win32_LogicalDisk-Klasse
+title: Chkdsk-Methode der Win32_LogicalDisk-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 662fc8739f90eea15295b762edc446ac16677aef
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 24d7052cd7d36da8a9464cbbef142904a70f83767872dadf25fda2033fa66fa6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118959109"
 ---
-# <a name="chkdsk-method-of-the-win32_logicaldisk-class"></a>CHKDSK-Methode der Win32 \_ LogicalDisk-Klasse
+# <a name="chkdsk-method-of-the-win32_logicaldisk-class"></a>Chkdsk-Methode der Win32 \_ LogicalDisk-Klasse
 
-Die **chkdsk** -Instanzmethode ruft den **chkdsk** -Vorgang auf dem Datenträger auf.
+Die **Chkdsk-Instanzmethode** ruft den **chkdsk-Vorgang** auf dem Datenträger auf.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,102 +47,102 @@ uint32 Chkdsk(
 
 <dl> <dt>
 
-*Fixerrors* \[ in\]
+*FixErrors* \[ In\]
 </dt> <dd>
 
-Gibt an, was mit den auf dem Datenträger gefundenen Fehlern geschehen soll. **True** gibt an, dass Fehler korrigiert werden. Der Standardwert ist **FALSE**.
+Gibt an, was mit Fehlern auf dem Datenträger geschehen soll. True **gibt an,** dass Fehler behoben wurden. Der Standardwert ist **FALSE**.
 
 </dd> <dt>
 
-*VigorousIndexCheck* \[ in\]
+*1000000000* \[ In\]
 </dt> <dd>
 
-**True** gibt an, dass eine weniger kräftige Überprüfung der Indexeinträge ausgeführt werden soll. Der Standardwert ist **FALSE**.
+True **gibt an,** dass eine weniger starke Überprüfung von Indexeinträgen durchgeführt werden sollte. Der Standardwert ist **FALSE**.
 
 </dd> <dt>
 
-*Skipfoldercycle* \[ in\]
+*SkipFolderCycle* \[ In\]
 </dt> <dd>
 
-**True** gibt an, dass die Überprüfung des Ordner Überlaufs ausgelassen werden soll. Der Standardwert ist **true**.
+True **gibt an,** dass die Überprüfung des Ordnerzyklus übersprungen werden sollte. Der Standardwert ist **true**.
 
 </dd> <dt>
 
-*ForceDismount* \[ in\]
+*ForceDismount* \[ In\]
 </dt> <dd>
 
-**True** gibt an, dass das Laufwerk vor der Überprüfung gezwungen werden muss, die Einbindung aufzuheben. Der Standardwert ist **FALSE**.
+True **gibt an,** dass die Bereitstellung des Laufwerks vor der Überprüfung erzwungen werden sollte. Der Standardwert ist **FALSE**.
 
 </dd> <dt>
 
-*Recoverbadsektoren* \[ in\]
+*RecoverBadSectors* \[ In\]
 </dt> <dd>
 
-**True** gibt an, dass die fehlerhaften Sektoren gefunden und die lesbaren Informationen aus diesen Sektoren wieder hergestellt werden sollten. Der Standardwert ist **FALSE**.
+True **gibt an,** dass die fehlerhaften Sektoren gefunden und die lesbaren Informationen aus diesen Sektoren wiederhergestellt werden sollten. Der Standardwert ist **FALSE**.
 
 </dd> <dt>
 
-*Oktorunatbootup* \[ in\]
+*OKToRunAtBootUp* \[ In\]
 </dt> <dd>
 
-**True** gibt an, dass der **chkdsk** -Vorgang beim nächsten Startzeitpunkt ausgeführt werden soll, falls der Vorgang nicht ausgeführt werden konnte, weil der Datenträger zum Zeitpunkt des Aufrufs dieser Methode gesperrt ist. Der Standardwert ist **FALSE**.
+True **gibt an,** dass der **chkdsk-Vorgang** beim nächsten Startvorgang ausgeführt werden sollte, falls der Vorgang nicht ausgeführt werden konnte, da der Datenträger zum Zeitpunkt des Aufrufens dieser Methode gesperrt ist. Der Standardwert ist **FALSE**.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei erfolgreicher Ausführung den Wert 0 (null) zurück. Andere Werte sind in der folgenden Liste aufgeführt. Weitere Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt bei Erfolg den Wert 0 (null) zurück. Andere Werte sind in der folgenden Liste aufgeführt. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
-**Erfolg-Chkdsk abgeschlossen**
+**Erfolg– Chkdsk abgeschlossen**
 </dt> <dd>
 
 0
 
-Erfolg- [**chkdsk**](chkdsk-method-in-class-win32-logicaldisk.md) abgeschlossen
+Erfolg – [**Chkdsk abgeschlossen**](chkdsk-method-in-class-win32-logicaldisk.md)
 
 </dd> <dt>
 
-**Erfolg: gesperrt und chkdsk geplant beim Neustart**
+**Erfolg: Gesperrt und chkdsk beim Neustart geplant**
 </dt> <dd>
 
 1
 
 </dd> <dt>
 
-**Fehler-unbekanntes Dateisystem**
+**Fehler: Unbekanntes Dateisystem**
 </dt> <dd>
 
 2
 
 </dd> <dt>
 
-**Fehler-unbekannter Fehler.**
+**Fehler: Unbekannter Fehler**
 </dt> <dd>
 
 3
 
 </dd> <dt>
 
-**Fehler: nicht unterstütztes Datei System**
+**Fehler: Nicht unterstütztes Dateisystem**
 </dt> <dd>
 
 4
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gilt nur für die Instanzen von logischen Datenträgern, die einen physischen Datenträger auf dem Computer darstellen. Sie ist nicht auf zugeordnete logische Laufwerke anwendbar.
+Diese Methode gilt nur für instanzen von logischen Datenträgern, die einen physischen Datenträger auf dem Computer darstellen. Dies gilt nicht für zugeordnete logische Laufwerke.
 
 ## <a name="examples"></a>Beispiele
 
-Das in einem Server-PowerShell-Codebeispiel festgelegte geändertes[chkdsk-Bit](https://Gallery.TechNet.Microsoft.Com/57076851-97fb-4af6-8c5c-1e34156ceab4) untersucht das Remote System und gibt true oder false zurück, wenn das chkdsk/f-Flag festgelegt wurde.
+Das PowerShell-Codebeispiel Is CHKDSK Dirty Bit Set on a server (Is[CHKDSK Dirty Bit Set](https://Gallery.TechNet.Microsoft.Com/57076851-97fb-4af6-8c5c-1e34156ceab4) auf einem Server) untersucht das Remotesystem und gibt true oder false zurück, wenn das Flag chkdsk /f festgelegt wurde.
 
-Das PowerShell-Codebeispiel für die [Remote](https://Gallery.TechNet.Microsoft.Com/Remotely-scan-disk-dd4fc267) Überprüfung von Datenträgern startet oder plant den Scan Datenträger
+Das [PowerShell-Codebeispiel](https://Gallery.TechNet.Microsoft.Com/Remotely-scan-disk-dd4fc267) Remote scan disk startet oder startet scan disk (Datenträger überprüfen) remote.
 
-Im folgenden VBScript-Codebeispiel wird ChkDsk.exe für Laufwerk D auf einem Computer ausgeführt.
+Im folgenden VBScript-Codebeispiel werden ChkDsk.exe Laufwerk D auf einem Computer ausgeführt.
 
 
 ```VB
@@ -167,20 +167,20 @@ errReturn = objDisk.ChkDsk(FIX_ERRORS)
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Win32 \_ LogicalDisk**](win32-logicaldisk.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

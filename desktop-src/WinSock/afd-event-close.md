@@ -1,7 +1,7 @@
 ---
-description: Winsock-Netzwerkablaufverfolgungs-Ereignis für SocketClose.
+description: Winsock-Netzwerkablaufverfolgungsereignis für socket- Close-Vorgang.
 ms.assetid: C59B2B51-288A-46C9-B390-26A18DB0C2FB
-title: AFD_EVENT_CLOSE Ereignis
+title: AFD_EVENT_CLOSE-Ereignis
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: fbc6c63a3084db6a9be0a4b4ea7672d84881a29a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9068809c052638e33d45a5affadc23a289fa65ae04e6b1a71af1e40e4b508b15
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118993750"
 ---
-# <a name="afd_event_close-event"></a>Ereignis zum Schließen von AFD- \_ Ereignissen \_
+# <a name="afd_event_close-event"></a>AFD \_ EVENT \_ CLOSE-Ereignis
 
-Das Ereignis für die **AFD- \_ Ereignis \_ Schließung** ist ein Winsock-Netzwerk Ablauf Verfolgungs Ereignis für den socketschließ Vorgang.
+Das **AFD \_ EVENT \_ CLOSE-Ereignis** ist ein Winsock-Netzwerkablaufverfolgungsereignis für den Vorgang zum Schließen des Sockets.
 
 
 ```C++
@@ -34,22 +34,22 @@ const EVENT_DESCRIPTOR AFD_EVENT_CLOSE = {0x3e9, 0x0, 0x10, 0x4, 0xf, 0x3e9, 0x8
 
 <dl> <dt>
 
-*Enterexit* 
+*EnterExit* 
 </dt> <dd>
 
 Informationen zu diesem Ereignis.
 
-In der folgenden Tabelle sind die möglichen Werte für den Parameter " *enterexit* " aufgeführt:
+In der folgenden Tabelle sind die möglichen Werte für den *EnterExit-Parameter* aufgeführt:
 
 
 
 | Wert                                                                        | Bedeutung                                                                                              |
 |------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| <dl> <dt>0</dt> </dl> | Der Start einer Winsock-Anforderung.<br/>                                                           |
+| <dl> <dt>0</dt> </dl> | Der Anfang einer Winsock-Anforderung.<br/>                                                           |
 | <dl> <dt>1</dt> </dl> | Die Winsock-Anforderung wurde abgeschlossen.<br/>                                                            |
-| <dl> <dt>2</dt> </dl> | Der Winsock-AFD-Treiber hat eine interne Aktion ausgeführt (z. b. eine Verbindung abgebrochen).<br/>      |
-| <dl> <dt>3</dt> </dl> | Der TCP/IP-Treiber hat dieses Ereignis verursacht. Dies weist normalerweise auf eine Daten Benachrichtigung hin.<br/> |
-| <dl> <dt>4</dt> </dl> | Der Winsock-AFD-Treiber hat dieses Ereignis ausgelöst (z. b. das Festlegen einer Socketoption).<br/> |
+| <dl> <dt>2</dt> </dl> | Der Winsock AFD-Treiber hat eine interne Aktion (z. B. das Abbrechen einer Verbindung) verwendet.<br/>      |
+| <dl> <dt>3</dt> </dl> | Der TCP/IP-Treiber hat dieses Ereignis verursacht. Dies weist in der Regel auf eine Datenbenachrichtigung hin.<br/> |
+| <dl> <dt>4</dt> </dl> | Der Winsock AFD-Treiber hat dieses Ereignis ausgelöst (z. B. durch Festlegen einer Socketoption).<br/> |
 
 
 
@@ -57,24 +57,24 @@ In der folgenden Tabelle sind die möglichen Werte für den Parameter " *enterex
 
 </dd> <dt>
 
-*Location* 
+*Standort* 
 </dt> <dd>
 
-Ein privates Feld, das intern verwendet wird.
+Ein intern verwendetes privates Feld.
 
 </dd> <dt>
 
-*Prozess* 
+*Process* 
 </dt> <dd>
 
-Die [EPROCESS](/windows-hardware/drivers/kernel/eprocess) -Adresse des Prozesses, der den zugehörigen Socket besitzt. Dies ist eine nicht transparente Struktur, die als Prozess Objekt für einen Prozess dient. Weitere Informationen finden Sie in der Dokumentation zum Windows-Treiberkit für die [EPROCESS](/windows-hardware/drivers/kernel/eprocess) -Struktur.
+Die [EPROCESS-Adresse](/windows-hardware/drivers/kernel/eprocess) des Prozesses, der den verknüpften Socket besitzt. Dies ist eine nicht transparente Struktur, die als Prozessobjekt für einen Prozess dient. Weitere Informationen finden Sie in der dokumentation Windows Driver Kit für die [EPROCESS-Struktur.](/windows-hardware/drivers/kernel/eprocess)
 
 </dd> <dt>
 
 *Endpunkt* 
 </dt> <dd>
 
-Die AFD- \_ Endpunkt Adresse des Sockets.
+Die \_ AFD-ENDPUNKTadresse des Sockets.
 
 </dd> <dt>
 
@@ -85,9 +85,9 @@ Der NTSTATUS-Code für den Vorgang.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Ereignis für die **AFD- \_ Ereignis \_ Schließung** wird nachverfolgt, wenn ein Winsock-Netzwerk Vorgang einen Socket schließt. Der Kanal für dieses Ereignis ist Winsock-AFD. Die Ebene für dieses Ereignis dient nur zu Informationszwecken.
+Das **AFD \_ EVENT \_ CLOSE-Ereignis** wird für einen Winsock-Netzwerkvorgang verfolgt, um einen Socket zu schließen. Der Kanal für dieses Ereignis ist Winsock-AFD. Die Ebene für dieses Ereignis ist informationell.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,28 +95,28 @@ Das Ereignis für die **AFD- \_ Ereignis \_ Schließung** wird nachverfolgt, wen
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Kontrolle über die Winsock-Ablauf Verfolgung](control-of-winsock-tracing.md)
+[Steuerung der Winsock-Ablaufverfolgung](control-of-winsock-tracing.md)
 </dt> <dt>
 
-[**Ereignis \_ Deskriptor**](/windows/desktop/api/evntprov/ns-evntprov-event_descriptor)
+[**\_EREIGNISDESKRIPTOR**](/windows/desktop/api/evntprov/ns-evntprov-event_descriptor)
 </dt> <dt>
 
-[Winsock-Ablauf Verfolgung](winsock-tracing.md)
+[Winsock-Ablaufverfolgung](winsock-tracing.md)
 </dt> <dt>
 
-[Winsock-Ablauf Verfolgungs Ebenen](winsock-tracing-levels.md)
+[Winsock-Ablaufverfolgungsebenen](winsock-tracing-levels.md)
 </dt> <dt>
 
-[Details zur Änderung der Winsock-Katalog Änderung](winsock-layered-service-provider-tracing-event-details.md)
+[Details zur Ablaufverfolgung für Winsock-Katalogänderung](winsock-layered-service-provider-tracing-event-details.md)
 </dt> </dl>
 
  

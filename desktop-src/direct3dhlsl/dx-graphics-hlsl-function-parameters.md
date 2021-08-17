@@ -1,6 +1,6 @@
 ---
 title: Funktionsargumente
-description: Eine Funktion nimmt mindestens ein Eingabe Argument an. Verwenden Sie die folgende Syntax, um jedes Argument zu deklarieren.
+description: Eine Funktion verwendet mindestens ein Eingabeargument. Verwenden Sie die folgende Syntax, um jedes Argument zu deklarieren.
 ms.assetid: 80e0dbc8-26b7-4250-bb01-6856fc70f6b8
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,30 +9,30 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 3ba35ad04b20b67e45550644e842d69209ca5088
-ms.sourcegitcommit: 927b9c371f75f52b8011483edf3a4ba37d11ebe4
+ms.openlocfilehash: 7a2f2fdb656917ccf9dc57f06713fe01d77398d35776ac0c479b7d088281bc0e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "104389797"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118514763"
 ---
 # <a name="function-arguments"></a>Funktionsargumente
 
-Eine Funktion nimmt mindestens ein Eingabe Argument an. Verwenden Sie die folgende Syntax, um jedes Argument zu deklarieren.
+Eine Funktion verwendet mindestens ein Eingabeargument. Verwenden Sie die folgende Syntax, um jedes Argument zu deklarieren.
 
 
 
 |                                                                                             |
 |---------------------------------------------------------------------------------------------|
-| **\[Typname des inputmodifiers \] \[ : Semantic \] \[ interpolationmodifier \] \[ = Initialisierer\]** |
+| **\[\]InputModifier-Typname: \[ Semantic \] \[ InterpolationModifier \] \[ = Initializers\]** |
 
 
 
  
 
-\[\]Modifizierertypname \[ : Semantic \] \[ : Interpolations Modifizierer \] \[ = Initialisierer (s)\]
+\[Modifizierertypname \] : Semantic \[ : \] \[ Interpolationsmodifizierer = \] \[ Initialisierer\]
 
-Wenn mehrere Funktionsargumente vorhanden sind, werden diese durch Kommas getrennt.
+Wenn mehrere Funktionsargumente vorhanden sind, werden sie durch Kommas getrennt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -51,20 +51,20 @@ Wenn mehrere Funktionsargumente vorhanden sind, werden diese durch Kommas getren
 </thead>
 <tbody>
 <tr class="odd">
-<td><span id="InputModifier"></span><span id="inputmodifier"></span><span id="INPUTMODIFIER"></span><strong>Input-Modifizierer</strong><br/></td>
-<td>Optionaler Begriff, der ein Argument als Eingabe, Ausgabe oder beides bezeichnet.<br/> 
+<td><span id="InputModifier"></span><span id="inputmodifier"></span><span id="INPUTMODIFIER"></span><strong>InputModifier</strong><br/></td>
+<td>Optionaler Begriff, der ein Argument als Eingabe, Ausgabe oder beides identifiziert.<br/> 
 <table>
 <tbody>
 <tr class="odd">
 <td>Wert</td>
-<td>BESCHREIBUNG</td>
+<td>Beschreibung</td>
 </tr>
 <tr class="even">
 <td><strong>in</strong></td>
 <td>Nur Eingabe</td>
 </tr>
 <tr class="odd">
-<td><strong>INOUT</strong></td>
+<td><strong>Inout</strong></td>
 <td>Eingabe und Ausgabe</td>
 </tr>
 <tr class="even">
@@ -73,34 +73,34 @@ Wenn mehrere Funktionsargumente vorhanden sind, werden diese durch Kommas getren
 </tr>
 <tr class="odd">
 <td><strong>uniform-Variable</strong></td>
-<td>Nur konstante Daten eingeben</td>
+<td>Eingabe nur konstanter Daten</td>
 </tr>
 </tbody>
 </table>
 
 <p> </p>
-<p>Parameter werden immer als Wert übermittelt. in gibt an, dass der Wert des-Parameters aus der aufrufenden Anwendung kopiert werden soll, bevor die-Funktion beginnt. out gibt an, dass der letzte Wert des-Parameters kopiert und an die aufrufende Anwendung zurückgegeben werden soll, wenn die Funktion zurückgibt. "INOUT" ist eine Kurzzeit zum Angeben von beidem.</p>
-<p>Ein einheitlicher Wert stammt aus einem konstanten Register. jeder Scheitelpunkt-Shader oder Pixel-Shader-Aufruf hat denselben Anfangswert für eine einheitliche Variable. Globale Variablen werden so behandelt, als wären Sie als einheitlich deklariert. Bei Funktionen, die nicht auf oberster Ebene stehen, ist Uniform gleichbedeutend mit <strong>in</strong>. Wenn keine Parameter Verwendung angegeben ist, wird davon ausgegangen, dass die Parameter Verwendung <strong>in</strong>erfolgt.</p></td>
+<p>Parameter werden immer als Wert übergeben. in gibt an, dass der Wert des Parameters aus der aufrufenden Anwendung kopiert werden soll, bevor die Funktion beginnt. out gibt an, dass der letzte Wert des Parameters kopiert und an die aufrufende Anwendung zurückgegeben werden soll, wenn die Funktion zurückgegeben wird. inout ist eine Kurzform für die Angabe beider Angaben.</p>
+<p>Ein einheitlicher Wert stammt aus einem konstanten Register. Jeder Aufruf von Vertex-Shadern oder Pixel-Shadern sieht den gleichen Anfangswert für eine einheitliche Variable. Globale Variablen werden so behandelt, als wären sie als einheitlich deklariert. Für Nicht-Funktionen der obersten Ebene ist uniform synonym mit <strong>in</strong>. Wenn keine Parameterverwendung angegeben wird, wird davon ausgegangen, dass sich die Parameterverwendung <strong>in befindet.</strong></p></td>
 </tr>
 <tr class="even">
-<td><p><span id="Type"></span><span id="type"></span><span id="TYPE"></span><strong>Sorte</strong></p></td>
-<td><p>Der Argumenttyp. kann ein beliebiger gültiger HLSL- <a href="dx-graphics-hlsl-data-types.md">Typ</a>sein.</p></td>
+<td><p><span id="Type"></span><span id="type"></span><span id="TYPE"></span><strong>Typ</strong></p></td>
+<td><p>Der Argumenttyp; kann ein beliebiger gültiger <a href="dx-graphics-hlsl-data-types.md">HLSL-Typ</a>sein.</p></td>
 </tr>
 <tr class="odd">
-<td><p><span id="Name"></span><span id="name"></span><span id="NAME"></span><strong>Benennen</strong></p></td>
-<td><p>Eine ASCII-Zeichenfolge, die den Namen der Shader-Funktion eindeutig identifiziert.</p></td>
+<td><p><span id="Name"></span><span id="name"></span><span id="NAME"></span><strong>Namen</strong></p></td>
+<td><p>Eine ASCII-Zeichenfolge, die den Namen der Shaderfunktion eindeutig identifiziert.</p></td>
 </tr>
 <tr class="even">
-<td><p><span id="Semantic"></span><span id="semantic"></span><span id="SEMANTIC"></span><strong>Tischer</strong></p></td>
-<td><p>Optionale Zeichenfolge, die die beabsichtigte Verwendung der Daten identifiziert (siehe <a href="dx-graphics-hlsl-semantics.md">Semantik (DirectX HLSL)</a>).</p></td>
+<td><p><span id="Semantic"></span><span id="semantic"></span><span id="SEMANTIC"></span><strong>Semantische</strong></p></td>
+<td><p>Optionale Zeichenfolge, die die beabsichtigte Verwendung der Daten angibt (siehe <a href="dx-graphics-hlsl-semantics.md">Semantik (DirectX HLSL)</a>).</p></td>
 </tr>
 <tr class="odd">
-<td><p><span id="InterpolationModifier"></span><span id="interpolationmodifier"></span><span id="INTERPOLATIONMODIFIER"></span><strong>Interpolationmodifier</strong></p></td>
-<td><p>Optionaler <a href="dx-graphics-hlsl-struct.md">Interpolations Modifizierer</a> , der es einem Shader ermöglicht, die Interpolationsmethode zu bestimmen. Ein Interpolations Modifizierer für ein Funktions Argument gilt nur für ein Argument, das als Eingabe für eine pixelshaderfunktion verwendet wird.</p></td>
+<td><p><span id="InterpolationModifier"></span><span id="interpolationmodifier"></span><span id="INTERPOLATIONMODIFIER"></span><strong>InterpolationModifier</strong></p></td>
+<td><p>Optionaler <a href="dx-graphics-hlsl-struct.md">Interpolationsmodifizierer,</a> der es einem Shader ermöglicht, die Interpolationsmethode zu bestimmen. Ein Interpolationsmodifizierer für ein Funktionsargument gilt nur für ein Argument, das als Eingabe für eine Pixelshaderfunktion verwendet wird.</p></td>
 </tr>
 <tr class="even">
-<td><p><span id="Initializers"></span><span id="initializers"></span><span id="INITIALIZERS"></span><strong>Initialisierer</strong></p></td>
-<td><p>Optionale Werte für die Initialisierung. zum Initialisieren von Datentypen mit mehreren Komponenten sind mehrere Werte erforderlich.</p></td>
+<td><p><span id="Initializers"></span><span id="initializers"></span><span id="INITIALIZERS"></span><strong>Initialisierungen</strong></p></td>
+<td><p>Optionale Werte für die Initialisierung; mehrere Werte sind erforderlich, um Datentypen mit mehreren Komponenten zu initialisieren.</p></td>
 </tr>
 </tbody>
 </table>
@@ -109,15 +109,15 @@ Wenn mehrere Funktionsargumente vorhanden sind, werden diese durch Kommas getren
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Funktionsargumente werden in einer durch Trennzeichen getrennten Argumentliste in einer Funktionsdeklaration aufgelistet. Wie bei C-Funktionen muss jedes Argument einen Parameternamen und einen Typ deklarieren. ein Argument für eine HLSL-Funktion kann optional eine Semantik, einen Anfangswert und eine Pixel-Shadereingabe enthalten, die einen Interpolationstyp enthalten können.
+Funktionsargumente werden in einer durch Kommas getrennten Argumentliste in einer Funktionsdeklaration aufgeführt. Wie bei C-Funktionen müssen für jedes Argument ein Parametername und ein Typ deklariert sein. Ein Argument für eine HLSL-Funktion kann optional eine Semantik, einen Anfangswert und eine Pixel-Shadereingabe einen Interpolationstyp enthalten.
 
-Der *Typ* eines Funktionsarguments könnte eine Struktur sein, die einen Interpolations Modifizierer pro Member enthalten könnte. Wenn das Funktions Argument auch einen Interpolations Modifizierer aufweist, überschreibt der funktionsargumentmodifizierer Interpolations Modifizierer, die innerhalb des Typs deklariert werden.
+Der *Typ* eines Funktionsarguments kann eine -Struktur sein, die einen Pro-Member-Interpolationsmodifizierer enthalten kann. Wenn das Funktionsargument auch über einen Interpolationsmodifizierer verfügt, überschreibt der Funktionsargumentmodifizierer Interpolationsmodifizierer, die innerhalb des Typs deklariert sind.
 
 ## <a name="examples"></a>Beispiele
 
-In diesem Beispiel (aus dem [BasicHLSL10](https://msdn.microsoft.com/library/Ee416395(v=VS.85).aspx)-Beispiel) werden einheitliche und nicht einheitliche Eingaben für eine Vertex-Shader-Funktion veranschaulicht.
+Dieses Beispiel (aus dem [BasicHLSL10-Beispiel)](https://msdn.microsoft.com/library/Ee416395(v=VS.85).aspx)veranschaulicht einheitliche und nicht einheitliche Eingaben für eine Vertex-Shaderfunktion.
 
 
 ```
@@ -135,7 +135,7 @@ VS_OUTPUT RenderSceneVS(
 
 
 
-In diesem Beispiel (aus dem [contentstreaming-Beispiel](https://msdn.microsoft.com/library/Ee416397(v=VS.85).aspx)) wird eine Eingabe Struktur verwendet, um Argumente an eine Pixel-Shader-Funktion zu übergeben.
+In diesem Beispiel (aus dem [ContentStreaming-Beispiel)](https://msdn.microsoft.com/library/Ee416397(v=VS.85).aspx)wird eine Eingabestruktur verwendet, um Argumente an eine Pixelshaderfunktion zu übergeben.
 
 
 ```

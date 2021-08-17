@@ -1,9 +1,9 @@
 ---
 title: NM_SETFOCUS (Listenansicht) Benachrichtigungscode (Commctrl.h)
-description: Benachrichtigt das übergeordnete Fenster eines Listenansichtssteuerelements, dass das Steuerelement den Eingabefokus erhalten hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
+description: Benachrichtigt das übergeordnete Fenster eines Listenansicht-Steuerelements, dass das Steuerelement den Eingabefokus erhalten hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 43d3b09a-f095-4f30-87a8-2f2e782d6720
 keywords:
-- NM_SETFOCUS -Benachrichtigungscode (Listenansicht) Windows-Steuerelemente
+- NM_SETFOCUS -Benachrichtigungscode (Listenansicht) Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -21,9 +21,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118410303"
 ---
-# <a name="nm_setfocus-list-view-notification-code"></a>NM \_ SETFOCUS -Benachrichtigungscode (Listenansicht)
+# <a name="nm_setfocus-list-view-notification-code"></a>NM \_ SETFOCUS-Benachrichtigungscode (Listenansicht)
 
-Benachrichtigt das übergeordnete Fenster eines Listenansichtssteuerelements, dass das Steuerelement den Eingabefokus erhalten hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
+Benachrichtigt das übergeordnete Fenster eines Listenansicht-Steuerelements, dass das Steuerelement den Eingabefokus erhalten hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -55,7 +55,7 @@ Der Rückgabewert für diese Benachrichtigung wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

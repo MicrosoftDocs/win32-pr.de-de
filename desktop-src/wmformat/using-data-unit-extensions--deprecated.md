@@ -1,9 +1,9 @@
 ---
-title: Verwenden von dateneinheits-Erweiterungen (Windows Media Format 11 SDK)
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Verwenden von dateneinheits-Erweiterungen (Windows Media Format 11 SDK)
+title: Verwenden von Dateneinheitenerweiterungen (Windows Media Format 11 SDK)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | Verwenden von Dateneinheitenerweiterungen (Windows Media Format 11 SDK)
 ms.assetid: b1650560-2261-427a-ace7-5d7ed0bb3f77
 keywords:
-- Verwenden von Dateneinheiten Erweiterungen Windows Media-Format
+- Verwenden von Dateneinheitenerweiterungen windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9194e204536b8088f1cb29033d93fb2c0f9b397d
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 6da36a1f0bc8ad7b2ebcbfb6372e7a41d1445e5357fd31e8a3dde71ccfd89e12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106353326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963929"
 ---
-# <a name="using-data-unit-extensions-windows-media-format-11-sdk"></a>Verwenden von dateneinheits-Erweiterungen (Windows Media Format 11 SDK)
+# <a name="using-data-unit-extensions-windows-media-format-11-sdk"></a>Verwenden von Dateneinheitenerweiterungen (Windows Media Format 11 SDK)
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
  
 

@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht, wie ein shellverb mithilfe der Methoden explorercommand und explorercommandstate implementiert wird.
+description: Veranschaulicht, wie ein Shellverb mithilfe der Methoden ExplorerCommand und ExplorerCommandState implementiert wird.
 title: Explorer-Befehl-Verb (Beispiel)
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,29 +9,29 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: a35662c3df0e0fcddae049ccfaac2d9e3e265ee3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3ec8f4c88ea01aad410e982fc24fd248f3c1826d8c8657e904844b535e621fd2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868304"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118719182"
 ---
 # <a name="explorer-command-verb-sample"></a>Explorer-Befehl-Verb (Beispiel)
 
-Veranschaulicht, wie ein shellverb mithilfe der Methoden explorercommand und explorercommandstate implementiert wird.
+Veranschaulicht, wie ein Shellverb mithilfe der Methoden ExplorerCommand und ExplorerCommandState implementiert wird.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Produkt                                | Minimale Produkt Version |
+| Product (Produkt)                                | Mindestversion des Produkts |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 7.0                     |
@@ -44,26 +44,26 @@ Dieses Thema enthält folgende Abschnitte:
 
 | Standort      | Pfad-URL                                                                                             |
 |---------------|------------------------------------------------------------------------------------------------------|
-| GitHub  | [Explorercommandverb-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/ExplorerCommandVerb) |
+| GitHub  | [ExplorerCommandVerb-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/ExplorerCommandVerb) |
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-So erstellen Sie das Beispiel von der Eingabeaufforderung aus:
+So erstellen Sie das Beispiel über die Eingabeaufforderung:
 
-1.  Öffnen Sie das Eingabe Aufforderungs Fenster, und navigieren Sie zum Projektverzeichnis **explorercommandverb** .
+1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum Projektverzeichnis **ExplorerCommandVerb.**
 2.  Geben Sie `msbuild ExplorerCommandVerb.sln` ein.
 
-So erstellen Sie das Beispiel mithilfe Microsoft Visual Studio (bevorzugt):
+So erstellen Sie das Beispiel mit Microsoft Visual Studio (bevorzugt):
 
-1.  Öffnen Sie Windows-Explorer, und navigieren Sie zum Projektverzeichnis **explorercommandverb** .
-2.  Doppelklicken Sie auf das Symbol für die Datei explorercommandverb. sln, um das Projekt in Visual Studio zu öffnen.
-3.  Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus.
+1.  Öffnen Sie Windows Explorer, und navigieren Sie zum Projektverzeichnis **ExplorerCommandVerb.**
+2.  Doppelklicken Sie auf das Symbol für die Datei ExplorerCommandVerb.sln, um das Projekt in Visual Studio zu öffnen.
+3.  Klicken Sie im Menü **Build** (Erstellen) auf **Build Solution** (Projektmappe erstellen).
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-1.  Navigieren Sie mithilfe der Eingabeaufforderung oder Windows-Explorer zu dem Verzeichnis, das die ExplorerCommandVerb.dll enthält. Stellen Sie sicher, dass Sie die 64-Bit-DLL-Datei auf 64-Bit-Windows verwenden.
-2.  Geben Sie in der Befehlszeile ein `regsvr32.exe ExplorerCommandVerb.dll` .
-3.  Wenn Sie mit der rechten Maustaste auf eine txt-Datei klicken, werden zwei neue Verben im Kontextmenü angezeigt.
+1.  Navigieren Sie mithilfe der Eingabeaufforderung oder Windows Explorer zu dem Verzeichnis, das die ExplorerCommandVerb.dll enthält. Stellen Sie sicher, dass Sie die 64-Bit-DLL-Datei auf 64-Bit-Windows verwenden.
+2.  Geben Sie in der Befehlszeile `regsvr32.exe ExplorerCommandVerb.dll` ein.
+3.  Zwei neue Verben werden im Kontextmenü angezeigt, wenn Sie mit der rechten Maustaste auf eine .txt Datei klicken.
 
  
 

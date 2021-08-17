@@ -1,61 +1,61 @@
 ---
-title: Desktop Sicherheit und Zugriffsrechte
-description: Sicherheit ermöglicht es Ihnen, den Zugriff auf Desktop Objekte zu steuern. Weitere Informationen zur Sicherheit finden Sie unter Access-Control Modell.
+title: Desktopsicherheits- und Zugriffsrechte
+description: Mit der Sicherheit können Sie den Zugriff auf Desktopobjekte steuern. Weitere Informationen zur Sicherheit finden Sie unter Access-Control-Modell.
 ms.assetid: 6512d128-3b0c-4ba7-8709-2fd225389a40
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d18b48e0b80dc39ea1b3f65a77acb615c4cb8c7
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1805a9b5b3db70bf496d467b774dc7c959030b43d6f89d40aabd0336540b7e56
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119346690"
 ---
-# <a name="desktop-security-and-access-rights"></a>Desktop Sicherheit und Zugriffsrechte
+# <a name="desktop-security-and-access-rights"></a>Desktopsicherheits- und Zugriffsrechte
 
-Sicherheit ermöglicht es Ihnen, den Zugriff auf Desktop Objekte zu steuern. Weitere Informationen zur Sicherheit finden Sie unter [Zugriffs Steuerungsmodell](/windows/desktop/SecAuthZ/access-control-model).
+Mit der Sicherheit können Sie den Zugriff auf Desktopobjekte steuern. Weitere Informationen zur Sicherheit finden Sie unter [Access-Control Model](/windows/desktop/SecAuthZ/access-control-model).
 
-Sie können eine [Sicherheits Beschreibung](/windows/desktop/SecAuthZ/security-descriptors) für ein Desktop Objekt angeben, wenn Sie die Funktion "up [**Desktop**](/windows/win32/api/winuser/nf-winuser-createdesktopa) " oder " [**kreatedesktopex**](/windows/win32/api/winuser/nf-winuser-createdesktopexa) " aufrufen. Wenn Sie NULL angeben, erhält der Desktop eine Standard Sicherheits Beschreibung. Die ACLs in der Standard Sicherheits Beschreibung für einen Desktop stammen aus der übergeordneten Fenster Station.
+Sie können eine [Sicherheitsbeschreibung](/windows/desktop/SecAuthZ/security-descriptors) für ein Desktopobjekt angeben, wenn Sie die [**Funktion CreateDesktop**](/windows/win32/api/winuser/nf-winuser-createdesktopa) oder [**CreateDesktopEx**](/windows/win32/api/winuser/nf-winuser-createdesktopexa) aufrufen. Wenn Sie NULL angeben, ruft der Desktop einen Standardsicherheitsdeskriptor ab. Die ACLs in der Standardsicherheitsbeschreibung für einen Desktop stammen von der übergeordneten Fensterstation.
 
-Zum Abrufen oder Festlegen der Sicherheits Beschreibung eines Fenster Stations Objekts aufrufen Sie die Funktionen [**GetSecurityInfo**](/windows/desktop/api/aclapi/nf-aclapi-getsecurityinfo) und [**setsecurityinfo**](/windows/desktop/api/aclapi/nf-aclapi-setsecurityinfo) .
+Um die Sicherheitsbeschreibung eines Fensterstationsobjekts abzurufen oder festzulegen, rufen Sie die Funktionen [**GetSecurityInfo**](/windows/desktop/api/aclapi/nf-aclapi-getsecurityinfo) und [**SetSecurityInfo**](/windows/desktop/api/aclapi/nf-aclapi-setsecurityinfo) auf.
 
-Wenn Sie die Funktion [**OpenDesktop**](/windows/win32/api/winuser/nf-winuser-opendesktopa) oder [**openinputdesktop**](/windows/win32/api/winuser/nf-winuser-openinputdesktop) aufrufen, prüft das System die angeforderten Zugriffsrechte auf die Sicherheits Beschreibung des Objekts.
+Wenn Sie die [**OpenDesktop-**](/windows/win32/api/winuser/nf-winuser-opendesktopa) oder [**OpenInputDesktop-Funktion**](/windows/win32/api/winuser/nf-winuser-openinputdesktop) aufrufen, überprüft das System die angeforderten Zugriffsrechte anhand des Sicherheitsdeskriptors des Objekts.
 
-Zu den gültigen Zugriffsrechten für Desktop Objekte gehören die [Standard Zugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights) und einige objektspezifische Zugriffsrechte. In der folgenden Tabelle sind die standardmäßigen Zugriffsrechte aufgelistet, die von allen Objekten verwendet werden.
+Zu den gültigen Zugriffsrechten für Desktopobjekte gehören die [Standardzugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights) und einige objektspezifische Zugriffsrechte. In der folgenden Tabelle sind die Standardzugriffsrechte aufgeführt, die von allen -Objekten verwendet werden.
 
 | Wert                       | Bedeutung                                                                                                                                                                                                                                                                              |
 |-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Delete (0x00010000l)        | Erforderlich, um das Objekt zu löschen.                                                                                                                                                                                                                                                       |
-| Read- \_ Steuerelement (0x00020000l) | Ist erforderlich, um Informationen in der Sicherheits Beschreibung für das-Objekt zu lesen, ohne die Informationen in der SACL zu einschließen. Um die SACL zu lesen oder zu schreiben, müssen Sie das Zugriffs \_ System- \_ Sicherheits Zugriffsrecht anfordern. Weitere Informationen finden Sie unter [SACL-Zugriffsrecht](/windows/desktop/SecAuthZ/sacl-access-right). |
-| Synchronisieren (0x00100000l)   | Wird für Desktop Objekte nicht unterstützt.                                                                                                                                                                                                                                                   |
-| \_DAC schreiben (0x00040000l)    | Erforderlich, um die DACL in der Sicherheits Beschreibung für das-Objekt zu ändern.                                                                                                                                                                                                               |
-| Schreib \_ Besitzer (0x00080000l)  | Erforderlich, um den Besitzer in der Sicherheits Beschreibung für das Objekt zu ändern.                                                                                                                                                                                                              |
+| DELETE (0x00010000L)        | Erforderlich, um das Objekt zu löschen.                                                                                                                                                                                                                                                       |
+| READ \_ CONTROL (0x00020000L) | Erforderlich, um Informationen in der Sicherheitsbeschreibung für das Objekt zu lesen, ohne die Informationen in der SACL einzulesen. Zum Lesen oder Schreiben der SACL müssen Sie das Zugriffsrecht ACCESS \_ SYSTEM \_ SECURITY anfordern. Weitere Informationen finden Sie unter [SACL-Zugriffsrecht.](/windows/desktop/SecAuthZ/sacl-access-right) |
+| SYNCHRONIZE (0x00100000L)   | Wird für Desktopobjekte nicht unterstützt.                                                                                                                                                                                                                                                   |
+| WRITE \_ DAC (0x00040000L)    | Erforderlich, um die DACL in der Sicherheitsbeschreibung für das Objekt zu ändern.                                                                                                                                                                                                               |
+| WRITE \_ OWNER (0x00080000L)  | Erforderlich, um den Besitzer in der Sicherheitsbeschreibung für das Objekt zu ändern.                                                                                                                                                                                                              |
 
 
 
- 
+ 
 
-In der folgenden Tabelle sind die Objekt spezifischen Zugriffsrechte aufgeführt.
+In der folgenden Tabelle sind die objektspezifischen Zugriffsrechte aufgeführt.
 
 
 
 | Zugriffsrecht                       | BESCHREIBUNG                                                                                 |
 |------------------------------------|---------------------------------------------------------------------------------------------|
-| Desktop " \_ beatemdeu" (0x0004l)      | Erforderlich, um auf dem Desktop ein Menü zu erstellen.                                                   |
-| Desktop- \_ kreatewindow (0x0002l)    | Erforderlich, um auf dem Desktop ein Fenster zu erstellen.                                                 |
-| Desktop \_ Aufzählung (0x0040l)       | Erforderlich, damit der Desktop aufgezählt wird.                                                  |
-| Desktop- \_ Hostingsteuerelement (0x0008l)     | Erforderlich, um einen der Fenster Hooks einzurichten.                                              |
-| Desktop \_ journalplayback (0x0020l) | Erforderlich, um die Journal Wiedergabe auf einem Desktop auszuführen.                                          |
-| Desktop \_ journalrecord (0x0010l)   | Erforderlich, um die Journal Aufzeichnung auf einem Desktop auszuführen.                                         |
-| Desktop-Schreib \_ Objekte (0x0001l)     | Erforderlich zum Lesen von Objekten auf dem Desktop.                                                    |
-| Desktop \_ switchdesktop (0x0100l)   | Erforderlich, um den Desktop mithilfe der [**switchdesktop**](/windows/win32/api/winuser/nf-winuser-switchdesktop) -Funktion zu aktivieren. |
-| Desktop-Schreib \_ Objekte (0x0080l)    | Erforderlich zum Schreiben von Objekten auf dem Desktop.                                                   |
+| DESKTOP \_ CREATEMENU (0x0004L)      | Erforderlich, um ein Menü auf dem Desktop zu erstellen.                                                   |
+| DESKTOP \_ CREATEWINDOW (0x0002L)    | Erforderlich, um ein Fenster auf dem Desktop zu erstellen.                                                 |
+| DESKTOP \_ ENUMERATE (0x0040L)       | Erforderlich, damit der Desktop aufzählt.                                                  |
+| DESKTOP \_ HOOKCONTROL (0x0008L)     | Erforderlich, um einen der Fensterhooks einzurichten.                                              |
+| DESKTOP \_ JOURNALPLAYBACK (0x0020L) | Erforderlich, um die Journalwiedergabe auf einem Desktop durchzuführen.                                          |
+| DESKTOP \_ JOURNALRECORD (0x0010L)   | Erforderlich, um eine Journalaufzeichnung auf einem Desktop durchzuführen.                                         |
+| DESKTOP \_ READOBJECTS (0x0001L)     | Erforderlich zum Lesen von Objekten auf dem Desktop.                                                    |
+| DESKTOP \_ SWITCHDESKTOP (0x0100L)   | Erforderlich, um den Desktop mithilfe der [**SwitchDesktop-Funktion**](/windows/win32/api/winuser/nf-winuser-switchdesktop) zu aktivieren. |
+| DESKTOP \_ WRITEOBJECTS (0x0080L)    | Erforderlich, um Objekte auf dem Desktop zu schreiben.                                                   |
 
 
 
- 
+ 
 
-Im folgenden finden Sie die [allgemeinen Zugriffsrechte](/windows/desktop/SecAuthZ/generic-access-rights) für ein Desktop Objekt, das in der interaktiven Fenster Station der Anmelde Sitzung des Benutzers enthalten ist.
+Im Folgenden sind die [generischen Zugriffsrechte](/windows/desktop/SecAuthZ/generic-access-rights) für ein Desktopobjekt aufgeführt, das in der interaktiven Fensterstation der Anmeldesitzung des Benutzers enthalten ist.
 
 
 
@@ -110,10 +110,10 @@ STANDARD_RIGHTS_REQUIRED<br />
 
 
 
- 
+ 
 
-Sie können das Zugriffs \_ System \_ -Sicherheits Zugriffsrecht für ein Desktop Objekt anfordern, wenn Sie die SACL des Objekts lesen oder schreiben möchten. Weitere Informationen finden Sie unter [Zugriffs Steuerungs Listen (Access Control Lists, ACLs)](/windows/desktop/SecAuthZ/access-control-lists) und [SACL-Zugriffsrecht](/windows/desktop/SecAuthZ/sacl-access-right).
+Sie können das Zugriffsrecht ACCESS \_ SYSTEM SECURITY auf ein \_ Desktopobjekt anfordern, wenn Sie die SACL des Objekts lesen oder schreiben möchten. Weitere Informationen finden Sie unter [Zugriffssteuerungslisten (ACLs)](/windows/desktop/SecAuthZ/access-control-lists) und [SACL-Zugriffsrecht.](/windows/desktop/SecAuthZ/sacl-access-right)
 
- 
+ 
 
- 
+ 

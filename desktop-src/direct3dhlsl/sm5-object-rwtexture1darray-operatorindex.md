@@ -1,9 +1,9 @@
 ---
-title: 'RWTexture1DArray:: Operator-Funktion'
-description: 'Gibt eine Ressourcen Variable zurück. | RWTexture1DArray:: Operator-Funktion'
+title: RWTexture1DArray::Operator-Funktion
+description: Gibt eine Ressourcenvariable zurück. | RWTexture1DArray::Operator-Funktion
 ms.assetid: 7047e670-dd78-4b73-8d80-5575e458f27c
 keywords:
-- Operator Function HLSL
+- Operatorfunktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6f8623ab25b42f6865e401c5b263a1774206c752
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
-ms.translationtype: HT
+ms.openlocfilehash: 2e0735e3d9945d15c2f8473155612a40cbf652349eb531f089f5a4aa44451484
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981712"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118509282"
 ---
-# <a name="rwtexture1darrayoperator--function"></a>RWTexture1DArray:: Operator-Funktion
+# <a name="rwtexture1darrayoperator--function"></a>RWTexture1DArray::Operator-Funktion
 
-Gibt eine Ressourcen Variable zurück.
+Gibt eine Ressourcenvariable zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,12 +36,12 @@ R Operator[](
 
 <dl> <dt>
 
-*POS* \[ in\]
+*pos* \[ In\]
 </dt> <dd>
 
 Typ: **uint2**
 
-Die Indexposition. Die erste Komponente enthält die x-Koordinate. Die zweite Komponente gibt den gewünschten Array Slice an.
+Die Indexposition. Die erste Komponente enthält die x-Koordinate. Die zweite Komponente gibt den gewünschten Arrayslice an.
 
 </dd> </dl>
 
@@ -49,15 +49,15 @@ Die Indexposition. Die erste Komponente enthält die x-Koordinate. Die zweite Ko
 
 Typ: **R**
 
-Eine Ressourcen Variable.
+Eine Ressourcenvariable.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -72,7 +72,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [RWTexture1DArray](sm5-object-rwtexture1darray.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

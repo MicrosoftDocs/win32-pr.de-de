@@ -1,21 +1,21 @@
 ---
-description: Das folgende Material enthält eine allgemeine Überprüfung des TAPI 3-Aufrufens und der Medien Steuerungs Objekte, Schnittstellen und Methoden zum Entwickeln von Anwendungen für die Endbenutzer-und Serverkommunikation.
+description: Das folgende Material bietet eine allgemeine Übersicht über die TapI 3-Aufruf- und Mediensteuerelementeobjekte, -schnittstellen und -methoden zum Erstellen von Endbenutzer- und Serverkommunikationsanwendungen.
 ms.assetid: 992b1f84-257a-4484-a2f8-bcd33916fb16
-title: Aufrufe und mediensteuer Elemente
+title: Aufruf- und Mediensteuerelemente
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 29b2f1bf06caa4072dae681551aa7941e0c8e2fb
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: b4b5816c3b66e6f48a18d2ec685a44bc3b683e6f9a309007ad414e3b7744f341
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106364996"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118871027"
 ---
-# <a name="call-and-media-controls"></a>Aufrufe und mediensteuer Elemente
+# <a name="call-and-media-controls"></a>Aufruf- und Mediensteuerelemente
 
-Das folgende Material enthält eine allgemeine Überprüfung des TAPI 3-Aufrufens und der Medien Steuerungs Objekte, Schnittstellen und Methoden zum Entwickeln von Anwendungen für die Endbenutzer-und Serverkommunikation. [Informationen zu den-und](about-call-and-media-controls.md) -Steuerelementen, die die Hauptobjekte und ein hyperverknüpftes Diagramm enthalten, das sowohl Objekte und Schnittstellen anzeigt. [Durch die Verwendung von-Steuerelementen für Anrufe und Medien](using-call-and-media-controls.md) werden spezifischere Informationen behandelt, die für das Schreiben von Anwendungen hilfreich sind, wie z. b. die zum Kompilieren erforderlichen lib-Dateien
+Das folgende Material bietet eine allgemeine Übersicht über die TapI 3-Aufruf- und Mediensteuerelementeobjekte, -schnittstellen und -methoden zum Erstellen von Endbenutzer- und Serverkommunikationsanwendungen. [Informationen zu Aufruf- und Mediensteuerelementen](about-call-and-media-controls.md) beschreibt die Hauptobjekte und enthält ein mit Links verknüpftes Diagramm, das sowohl Objekte als auch Schnittstellen zeigt. [Die Verwendung von Aufruf- und Mediensteuerelementen](using-call-and-media-controls.md) umfasst spezifischere Informationen, die beim Schreiben von Anwendungen nützlich sind, z. B. die lib-Dateien, die zum Kompilieren erforderlich sind, und einige Codebeispiele.
 
-Weitere Informationen finden Sie in der [Referenz zu den Referenz-und mediensteuer Elementen](call-and-media-controls-reference.md).
+Weitere Informationen finden Sie in der [Referenz zu Aufruf- und Mediensteuerelementen.](call-and-media-controls-reference.md)
 
  
 

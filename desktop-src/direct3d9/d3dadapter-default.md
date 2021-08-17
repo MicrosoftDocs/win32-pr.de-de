@@ -1,23 +1,23 @@
 ---
-description: Gibt den primären Anzeigeadapter an.
+description: Gibt den primären Adapter an.
 ms.assetid: 76f91917-394a-4588-9c83-c35bddb36b8e
 title: D3DADAPTER_DEFAULT
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4453d7b8852b2066d3573de0ac9fb6a134cf792d
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: 595c49e9624cb287f1407cf53f8981deafe28e1e7ae482b5ecb751309224db81
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110343405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118805680"
 ---
 # <a name="d3dadapter_default"></a>D3DADAPTER \_ DEFAULT
 
-Gibt den primären Anzeigeadapter an.
+Gibt den primären Adapter an.
 
 
 
-| \#Definieren            | Wert | BESCHREIBUNG                                  |
+| \#Definieren            | Wert | Beschreibung                                  |
 |---------------------|-------|----------------------------------------------|
 | D3DADAPTER \_ DEFAULT | 0     | Wird verwendet, um den primären Anzeigeadapter anzugeben. |
 
@@ -25,7 +25,7 @@ Gibt den primären Anzeigeadapter an.
 
  
 
-## <a name="constant-information"></a>Konstanteninformationen
+## <a name="constant-information"></a>Konstante Informationen
 
 
 

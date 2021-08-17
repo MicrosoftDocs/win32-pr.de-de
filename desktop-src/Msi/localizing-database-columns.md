@@ -15,7 +15,7 @@ ms.locfileid: "118629455"
 
 Ändern Sie alle anderen lokalisierbaren Spalten in der MNPFren.msi-Datenbank mithilfe eines Tabellen-Editors wie Orca oder SQL Abfragen. Informationen dazu, welche Spalten einer bestimmten Tabelle in einer anderen Sprache lokalisiert werden können, finden Sie im Referenzthema für diese Datenbanktabelle. Eine [Liste aller Datenbanktabellen](database-tables.md) finden Sie unter Datenbanktabellen.
 
-Beispielsweise muss das Textfeld einiger Datensätze in der [Control-Tabelle](control-table.md) möglicherweise in Französisch lokalisiert werden. Die Zeichenfolge "Möchten Sie die Installation von \[ ProductName \] abbrechen?" im [Dialogfeld Abbrechen](cancel-dialog.md) kann in dieser Tabelle so geändert werden, dass sie auf Französisch angezeigt wird. Der ursprüngliche Datensatz in .msi Datei wird wie folgt angezeigt.
+Beispielsweise muss das Textfeld einiger Datensätze in der [Control-Tabelle](control-table.md) möglicherweise in Französisch lokalisiert werden. Die Zeichenfolge "Möchten Sie die Installation von \[ ProductName \] abbrechen?" im [Dialogfeld Abbrechen](cancel-dialog.md) kann in dieser Tabelle so geändert werden, dass sie auf Französisch angezeigt wird. Der ursprüngliche Datensatz in .msi datei wird wie folgt angezeigt.
 
 [Steuertabelle](control-table.md) (partiell) der ursprünglichen .msi Datei
 
@@ -29,7 +29,7 @@ Beispielsweise muss das Textfeld einiger Datensätze in der [Control-Tabelle](co
 
  
 
-Sie können einen Tabellen-Editor verwenden, um das Textfeld zu ändern, z. B. den Orca-Tabellen-Editor, der mit dem SDK oder einem anderen Tabellen-Editor bereitgestellt wird, oder eine SQL-Abfrage verwenden, um das Textfeld des Datensatzes control table zu ändern. Ein Beispiel für skriptgesteuerte Datenbankabfragen finden Sie im Windows Installer SDK als WiRunSQL.vbs. Verwenden Sie die folgende Befehlszeile, um das Feld mit WiRunSQL.vbs und dem Windows Skripthost zu ändern. Siehe auch [Beispiele für Datenbankabfragen mit SQL und Skript](examples-of-database-queries-using-sql-and-script.md).
+Sie können einen Tabellen-Editor verwenden, um das Textfeld zu ändern, z. B. den Orca-Tabellen-Editor, der mit dem SDK oder einem anderen Tabellen-Editor bereitgestellt wird, oder eine SQL-Abfrage verwenden, um das Textfeld des Datensatzes Control table zu ändern. Ein Beispiel für skriptgesteuerte Datenbankabfragen finden Sie im Windows Installer SDK als WiRunSQL.vbs. Verwenden Sie die folgende Befehlszeile, um das Feld mit WiRunSQL.vbs und dem Windows Skripthost zu ändern. Siehe auch [Beispiele für Datenbankabfragen mit SQL und Skript](examples-of-database-queries-using-sql-and-script.md).
 
 **Cscript WiRunSQL.vbs MNPFren.msi "UPDATE Control SET Control.Text='Etes-vous sur de voätzir annuler l'installation de \[ \] ProductName?' WHERE Control.Dialog \_ ='CancelDlg' AND Control.Control='Text'"**
 
@@ -45,7 +45,7 @@ Sie können einen Tabellen-Editor verwenden, um das Textfeld zu ändern, z. B. d
 
  
 
-Wenn die Installation von MNPFren.msi vom Benutzer abgebrochen  wird, wird das Dialogfeld Abbrechen mit dem folgenden Text angezeigt: "Gnotes-vous s de vovocir annuler l'installation de MNP2000?"
+Wenn die Installation von MNPFren.msi durch den Benutzer  abgebrochen wird, wird im Dialogfeld Abbrechen der Text "Gnos-vous s de vovocir annuler l'installation de MNP2000?" angezeigt.
 
 Wenn Sie diese Methode verwenden, um Benutzeroberflächentext in einer anderen Sprache zu lokalisieren, muss die lokalisierte Benutzeroberfläche getestet werden, um sicherzustellen, dass die Größe der Steuerelemente groß genug ist, um den gesamten lokalisierten Text anzuzeigen. Dies sollte mit allen Schriftgradeinstellungen getestet werden, die für die Anzeige verfügbar sind. Lokalisierter Text kann mehr Platz als der ursprüngliche Text erfordern und abgeschnitten werden, wenn er in einem zu kleinen Steuerelement angezeigt wird.
 

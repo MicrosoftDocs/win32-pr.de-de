@@ -1,21 +1,21 @@
 ---
-description: Im Autorisierungs-Manager handelt es sich bei einem Vorgang um eine Funktion oder Methode einer Anwendung auf niedriger Ebene.
+description: Im Autorisierungs-Manager ist ein Vorgang eine Low-Level-Funktion oder -Methode einer Anwendung.
 ms.assetid: 458c5418-94c5-4977-8203-f8299387c6da
 title: Definieren von Vorgängen in C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 31431390d3c95dbf4248ffeebc63f29f1fa6757d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 87cf547e89c7767f6e04cd2bfb9cdc9e0b42123ce3c7c784c89a4b394af60bbd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104350579"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118913783"
 ---
 # <a name="defining-operations-in-c"></a>Definieren von Vorgängen in C++
 
-Im Autorisierungs-Manager handelt es sich bei einem Vorgang um eine Funktion oder Methode einer Anwendung auf niedriger Ebene. Diese Vorgänge werden als Aufgaben zusammengefasst. Benutzer der Anwendung fordern die Berechtigung zum Ausführen von Aufgaben an. Ein Vorgang wird durch ein [**iazoperation**](/windows/desktop/api/Azroles/nn-azroles-iazoperation) -Objekt dargestellt. Weitere Informationen zu Vorgängen finden Sie unter [Vorgänge und Aufgaben](operations-and-tasks.md).
+Im Autorisierungs-Manager ist ein Vorgang eine Low-Level-Funktion oder -Methode einer Anwendung. Diese Vorgänge werden als Aufgaben gruppiert. Benutzer der Anwendung fordern die Berechtigung zum Ausführen von Aufgaben an. Ein Vorgang wird durch ein [**IAzOperation-Objekt**](/windows/desktop/api/Azroles/nn-azroles-iazoperation) dargestellt. Weitere Informationen zu Vorgängen finden Sie unter [Vorgänge und Aufgaben.](operations-and-tasks.md)
 
-Im folgenden Beispiel wird gezeigt, wie Vorgänge in einem Autorisierungs Richtlinien Speicher definiert werden. Im Beispiel wird davon ausgegangen, dass ein vorhandener XML-Richtlinien Speicher namens MyStore.xml im Stammverzeichnis des Laufwerks C vorhanden ist und dass dieser Speicher eine Anwendung mit dem Namen "Aufwendungen" enthält.
+Das folgende Beispiel zeigt, wie Vorgänge in einem Autorisierungsrichtlinienspeicher definiert werden. Im Beispiel wird davon ausgegangen, dass im Stammverzeichnis von Laufwerk C ein XML-Richtlinienspeicher namens MyStore.xml vorhanden ist und dass dieser Speicher eine Anwendung mit dem Namen Expense enthält.
 
 
 ```C++

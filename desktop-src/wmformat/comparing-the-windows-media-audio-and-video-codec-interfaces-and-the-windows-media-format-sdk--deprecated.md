@@ -1,5 +1,5 @@
 ---
-title: Vergleich der Windows Medienaudio- und Videocodecschnittstellen und des Windows Media Format SDK
+title: Vergleich der Windows Medienaudio- und Videocodec-Schnittstellen und des Windows Media Format SDK
 description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | Vergleich der Windows Medienaudio- und Videocodec-Schnittstellen und des Windows Media Format SDK
 ms.assetid: 829c289e-f297-43bb-9628-0f6da397e80f
 keywords:
@@ -19,7 +19,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118434367"
 ---
-# <a name="comparing-the-windows-media-audio-and-video-codec-interfaces-and-the-windows-media-format-sdk"></a>Vergleich der Windows Medienaudio- und Videocodecschnittstellen und des Windows Media Format SDK
+# <a name="comparing-the-windows-media-audio-and-video-codec-interfaces-and-the-windows-media-format-sdk"></a>Vergleich der Windows Medienaudio- und Videocodec-Schnittstellen und des Windows Media Format SDK
 
 Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 

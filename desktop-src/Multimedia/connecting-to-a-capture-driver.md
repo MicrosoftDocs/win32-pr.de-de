@@ -1,21 +1,21 @@
 ---
-title: Herstellen einer Verbindung mit einem Aufzeichnungs Treiber
-description: Herstellen einer Verbindung mit einem Aufzeichnungs Treiber
+title: Herstellen einer Verbindung mit einem Erfassungstreiber
+description: Herstellen einer Verbindung mit einem Erfassungstreiber
 ms.assetid: ce83329f-de5a-4428-bc0d-be5f3d35ff1a
 keywords:
-- capdriverdisconnect-Makro
+- capDriverDisconnect-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2161279f5b8b8dc528ee548d0a6a8ad6e9b397f4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b34e606c439143400f1ea1845db37e7faf93009350254c173c4003400c3996f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342051"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144863"
 ---
-# <a name="connecting-to-a-capture-driver"></a>Herstellen einer Verbindung mit einem Aufzeichnungs Treiber
+# <a name="connecting-to-a-capture-driver"></a>Herstellen einer Verbindung mit einem Erfassungstreiber
 
-Im folgenden Beispiel wird die Verbindung zwischen dem Erfassungsfenster und dem *hwndc* -Handle mit dem MSVIDEO-Treiber hergestellt, und die Verbindung wird dann mit dem-Makro [**capdriverdisconnect**](/windows/desktop/api/Vfw/nf-vfw-capdriverdisconnect) getrennt:
+Im folgenden Beispiel wird das Erfassungsfenster mit dem Handle *hWndC* mit dem MSVIDEO-Treiber verbunden und dann mithilfe des Makros [**capDriverDisconnect**](/windows/desktop/api/Vfw/nf-vfw-capdriverdisconnect) getrennt:
 
 
 ```C++
@@ -35,12 +35,12 @@ capDriverDisconnect (hWndC);
 
 <dl> <dt>
 
-[Verwenden der Video Erfassung](using-video-capture.md)
+[Verwenden von Video capture](using-video-capture.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

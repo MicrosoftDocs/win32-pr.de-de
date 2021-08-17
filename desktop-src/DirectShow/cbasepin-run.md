@@ -1,7 +1,7 @@
 ---
-description: Die Run-Methode benachrichtigt die PIN, dass der Filter jetzt ausgeführt wird.
+description: Die Run-Methode benachrichtigt den Pin, dass der Filter jetzt ausgeführt wird.
 ms.assetid: 74aafc89-2d3c-4259-a5b7-d4fb7628f539
-title: Cbasepin. Run-Methode (amfilter. h)
+title: CBasePin.Run-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 35d66f6d504a96c1146bc15285762d83faa6de3b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4f145a827546a9258ee2968d0348ab7725147bb47132f5df5acbd2865a45b78e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369711"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119429810"
 ---
-# <a name="cbasepinrun-method"></a>Cbasepin. Run-Methode
+# <a name="cbasepinrun-method"></a>CBasePin.Run-Methode
 
-Die- `Run` Methode benachrichtigt die PIN, dass der Filter jetzt ausgeführt wird.
+Die `Run` -Methode benachrichtigt den Pin, dass der Filter jetzt ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ HRESULT Run(
 
 <dl> <dt>
 
-*tSTART* 
+*tStart* 
 </dt> <dd>
 
-Die Startzeit, die an die [**imediafilter:: Run**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-run) -Methode des Filters übermittelt wird.
+Startzeit, die an die [**IMediaFilter::Run-Methode**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-run) des Filters übergeben wird.
 
 </dd> </dl>
 
@@ -53,13 +53,13 @@ Die Startzeit, die an die [**imediafilter:: Run**](/windows/desktop/api/Strmif/n
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Filter von "angehalten" in "wird ausgeführt" wechselt, ruft die [**cbasefilter**](cbasefilter.md) -Klasse diese Methode für alle Pins des Filters auf.
+Wenn der Filter von angehalten in ausgeführt wird, ruft die [**CBaseFilter-Klasse**](cbasefilter.md) diese Methode an allen Pins des Filters auf.
 
-Diese Methode führt in der Basisklasse keine Aktion aus. Abgeleitete Klassen können diese Methode überschreiben. Beispielsweise kann eine PIN einen Arbeits Thread starten, der Beispiele liefert.
+Diese Methode führt in der Basisklasse nichts aus. Abgeleitete Klassen können diese Methode überschreiben. Beispielsweise kann ein Pin einen Arbeitsthread starten, der Beispiele übermittelt.
 
-Der interne Zustand des Filter Graph-Managers wird erst aktualisiert, nachdem diese Element Funktion zurückgegeben wurde. Testen Sie daher nicht den Status dieser Methode.
+Der interne Zustand des Filtergraph-Managers wird erst aktualisiert, nachdem diese Memberfunktion zurückgegeben wurde. Testen Sie daher nicht den Zustand dieser Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,16 +67,16 @@ Der interne Zustand des Filter Graph-Managers wird erst aktualisiert, nachdem di
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

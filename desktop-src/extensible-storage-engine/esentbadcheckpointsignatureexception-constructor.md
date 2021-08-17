@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentbadcheckpointsignatureexception-Konstruktor'
-title: Esentbadcheckpointsignatureexception-Konstruktor
+description: 'Weitere Informationen zu: EsentBadCheckpointSignatureException-Konstruktor'
+title: EsentBadCheckpointSignatureException-Konstruktor
 TOCTitle: 'EsentBadCheckpointSignatureException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentBadCheckpointSignatureException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentbadcheckpointsignatureexception.esentbadcheckpointsignatureexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c7a05d2db9d1457634fa0d6b83563fa2c87846af
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 59449bd1a41e220cc071333763822137829904ab2f2f9ed3f14cddef4305f27a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119975970"
 ---
-# <a name="esentbadcheckpointsignatureexception-constructor"></a>Esentbadcheckpointsignatureexception-Konstruktor
+# <a name="esentbadcheckpointsignatureexception-constructor"></a>EsentBadCheckpointSignatureException-Konstruktor
 
-Initialisiert eine neue Instanz der esentbadcheckpointsignatureexception-Klasse.
+Initialisiert eine neue Instanz der EsentBadCheckpointSignatureException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentBadCheckpointSignatureException()
 public EsentBadCheckpointSignatureException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentbadcheckpointsignatureexception-Klasse](./esentbadcheckpointsignatureexception-class.md)
+[EsentBadCheckpointSignatureException-Klasse](./esentbadcheckpointsignatureexception-class.md)
 
-[Esentbadcheckpointsignatureexception-Member](./esentbadcheckpointsignatureexception-members.md)
+[EsentBadCheckpointSignatureException-Member](./esentbadcheckpointsignatureexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,9 +1,9 @@
 ---
 title: DRM_Flags
-description: Die DRM- \_ Flags-Eigenschaft wird nur mit DRM-Inhalt der Version 1 verwendet, um die Rechte anzugeben, die in der lokalen Lizenz enthalten sein werden.
+description: Die EIGENSCHAFT DRM-Flags wird nur mit DRM-Inhalt der Version 1 verwendet, um die Rechte anzugeben, die \_ in der lokalen Lizenz enthalten sein werden.
 ms.assetid: d9a776d3-da22-4111-b1ed-e3607a5576ef
 keywords:
-- DRM_Flags Windows Media-Format
+- DRM_Flags Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,39 +12,39 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b4f2f8eb2baa401f1bc8519da5ca555a1fe428ee
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: adf4f1b2065eb1b251f0c555f8c33e424e43aefd04377ed894edb90c121aacb4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "103948429"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119086011"
 ---
-# <a name="drm_flags"></a>DRM- \_ Flags
+# <a name="drm_flags"></a>\_DRM-Flags
 
-Die **DRM- \_ Flags** -Eigenschaft wird nur mit DRM-Inhalt der Version 1 verwendet, um die Rechte anzugeben, die in der lokalen Lizenz enthalten sein werden. Rechte werden mit Werten angegeben, die durch den Enumerationstyp **WMT- \_ Rechte** definiert werden. Es können mehrere Werte ausgewählt werden, indem Sie mit dem bitweisen **or** -Operator kombiniert werden.
+Die **EIGENSCHAFT \_ DRM-Flags** wird nur mit DRM-Inhalt der Version 1 verwendet, um die Rechte anzugeben, die in der lokalen Lizenz enthalten sein werden. Rechte werden mit Werten angegeben, die vom **WMT \_ RIGHTS-Enumerationstyp** definiert werden. Mehrere Werte können ausgewählt werden, indem sie mit dem bitweise **OR-Operator kombiniert** werden.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmdrm- \_ Flags
+g \_ wszWMDRM-Flags \_
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT- \_ Typ \_ DWORD**
+**WMT \_ TYPE \_ DWORD**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Zugriff auf die **IWMHeaderInfo3** -Schnittstelle des Writer-Objekts können Sie diesen Wert hinzufügen oder ändern. In anderen Objekten (Metadaten-Editor, Reader und synchroner Reader) ist dieser Wert schreibgeschützt. Verwenden Sie [**iwmheaderinfo:: setAttribute**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmheaderinfo-setattribute) , um diese Eigenschaft beim Erstellen von DRM-Version 1-Inhalten festzulegen.
+Wenn Sie auf die **IWMHeaderInfo3-Schnittstelle** des Writer-Objekts zugreifen, können Sie diesen Wert hinzufügen oder ändern. In anderen Objekten (Metadaten-Editor, Reader und synchroner Reader) ist dieser Wert schreibgeschützt. Verwenden [**Sie IWMHeaderInfo::SetAttribute,**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmheaderinfo-setattribute) um diese Eigenschaft beim Erstellen von DRM-Inhalt der Version 1 festlegen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**DRM-Eigenschaften**](drm-properties.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

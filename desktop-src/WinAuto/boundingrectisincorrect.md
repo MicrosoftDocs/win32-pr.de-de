@@ -1,43 +1,43 @@
 ---
-title: Boundingrectisincorrect
-description: Boundingrectisincorrect
+title: BoundingRectIsIncorrect
+description: BoundingRectIsIncorrect
 ms.assetid: 29D3EFB4-204D-419E-B241-25C8BAE28C11
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f8972a02086e7838c2356cc647ffbed4442d9015
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: eccc5db6cbf0b3432871ba4a25d95ee8f6583fb47deeabf2e388942168a1c71c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036859"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118326723"
 ---
-# <a name="boundingrectisincorrect"></a>Boundingrectisincorrect
+# <a name="boundingrectisincorrect"></a>BoundingRectIsIncorrect
 
 ## <a name="text"></a>Text
 
-Der {0} Rand des gemeldeten Rechtecks ist inkonsistent mit Treffer Tests für {1} das Rect an Punkt {2} .
+Der {0} Rand des gemeldeten Rechtecks ist inkonsistent mit dem {1} Treffertest des Rect an Punkt {2} .
 
-## <a name="type"></a>type
+## <a name="type"></a>Typ
 
 Fehler
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Das Begrenzungs Rechteck des Elements ist nicht mit den erwarteten Treffer Testergebnissen konsistent. Beispielsweise wird beim Treffer Test ein Punkt außerhalb des umgebenden Rechtecks des Elements kein anderes Element zurückgegeben.
+Das umgebundene Rechteck des Elements entspricht nicht den erwarteten Treffertestergebnissen. Beispielsweise gibt der Treffertest eines Punkts außerhalb des umgebundenen Rechtecks des Elements kein anderes Element zurück.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**IAccessible:: accHitTest**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acchittest)
+[**IAccessible::accHitTest**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acchittest)
 </dt> <dt>
 
-[**Accessibleobjectfrompoint**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfrompoint)
+[**AccessibleObjectFromPoint**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfrompoint)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

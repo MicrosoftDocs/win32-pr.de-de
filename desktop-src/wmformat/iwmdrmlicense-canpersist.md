@@ -3,7 +3,7 @@ title: IWMDRMLicense CanPersist-Methode (Wmdrmsdk.h)
 description: Die CanPersist-Methode fragt ab, ob die Lizenz in einem lokalen Lizenzspeicher beibehalten werden kann.
 ms.assetid: 040b30d8-4e47-44a3-8b09-e81cc30e8a53
 keywords:
-- 'CanPersist-Methode : Windows-Medienformat'
+- 'CanPersist-Methode : Windows Media Format'
 - CanPersist-Methode windows Media Format, IWMDRMLicense-Schnittstelle
 - IWMDRMLicense-Schnittstelle Windows Media Format , CanPersist-Methode
 topic_type:

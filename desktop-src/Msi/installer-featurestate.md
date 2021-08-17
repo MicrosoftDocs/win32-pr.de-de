@@ -1,7 +1,7 @@
 ---
 description: Die schreibgeschützte FeatureState-Eigenschaft gibt den installierten Zustand eines Features zurück.
 ms.assetid: a3d30296-191e-4446-b5b1-a92f8991926a
-title: Installer.FeatureState-Eigenschaft
+title: Installer.FeatureState (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118631274"
 ---
-# <a name="installerfeaturestate-property"></a>Installer.FeatureState-Eigenschaft
+# <a name="installerfeaturestate-property"></a>Installer.FeatureState (Eigenschaft)
 
 Die schreibgeschützte **FeatureState-Eigenschaft** gibt den installierten Zustand eines Features zurück.
 
@@ -43,13 +43,13 @@ Diese Eigenschaft gibt einen der folgenden Werte zurück.
 
 
 
-| Wert                     | Beschreibung                                      |
+| Wert                     | BESCHREIBUNG                                      |
 |---------------------------|--------------------------------------------------|
 | msiInstallStateAbsent     | Das Feature ist nicht installiert.                    |
 | msiInstallStateAdvertised | Das Feature wird angekündigt.                       |
-| msiInstallStateLocal      | Das Feature wird installiert, um lokal ausgeführt zu werden.         |
+| msiInstallStateLocal      | Das Feature wird für die lokale Ausführung installiert.         |
 | msiInstallStateSource     | Das Feature wird installiert, um von der Quelle aus ausgeführt zu werden.     |
-| msiInstallStateInvalidArg | Ein ungültiger Parameter wurde an die Funktion übergeben. |
+| msiInstallStateInvalidArg | An die Funktion wurde ein ungültiger Parameter übergeben. |
 | msiInstallStateUnknown    | Der Produktcode oder die Feature-ID ist unbekannt.       |
 | msiInstallStateBadConfig  | Die Konfigurationsdaten sind beschädigt.               |
 
@@ -67,13 +67,13 @@ Die **FeatureState-Eigenschaft** überprüft nicht, ob auf das Feature zugegriff
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

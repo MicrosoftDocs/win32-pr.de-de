@@ -74,7 +74,7 @@ Der Eigenschaftswert ist ein regulärer Ausdruck, kein Literalausdruck.
 <span id="WPD_PROPERTY_ATTRIBUTE_FORM_OJBECT_IDENTIFIER"></span><span id="wpd_property_attribute_form_ojbect_identifier"></span>**WPD \_ PROPERTY \_ ATTRIBUTE \_ FORM \_ OJBECT \_ IDENTIFIER**
 </dt> <dd>
 
-Der -Eigenschaftswert stellt einen Objektbezeichner dar.
+Der Eigenschaftswert stellt einen Objektbezeichner dar.
 
 </dd> </dl>
 

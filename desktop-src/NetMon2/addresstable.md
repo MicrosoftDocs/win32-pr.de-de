@@ -1,7 +1,7 @@
 ---
-description: Die "adresssstable"-Struktur enthält eine Tabelle mit Adress Paaren.
+description: Die ADDRESSTABLE-Struktur enthält eine Tabelle mit Adresspaaren.
 ms.assetid: 84577b6c-9d43-4e53-9f8d-33685329b11d
-title: Adresssstable-Struktur (Netmon. h)
+title: ADDRESSTABLE-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 41acab19f83fdcc88a384c0407b666a7f641a598
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c1c766e29033136954abab69755e1231e610983314cdaa01da3957889af5eb33
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485403"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119064280"
 ---
-# <a name="addresstable-structure"></a>Adresssstable-Struktur
+# <a name="addresstable-structure"></a>ADDRESSTABLE-Struktur
 
-Die " **adresssstable** "-Struktur enthält eine Tabelle mit Adress Paaren.
+Die **ADDRESSTABLE-Struktur** enthält eine Tabelle mit Adresspaaren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ typedef struct _ADDRESSTABLE {
 
 <dl> <dt>
 
-**nadresssspairs**
+**nAddressPairs**
 </dt> <dd>
 
-Anzahl der Adress Paare im **adresssspair** -Array.
+Anzahl von Adresspaaren im **AddressPair-Array.**
 
 </dd> <dt>
 
-**nnonmacadresssspairs**
+**nNonMacAddressPairs**
 </dt> <dd>
 
-Anzahl der nicht-Mac-Adress Paare.
+Anzahl von Nicht-MAC-Adresspaaren.
 
 </dd> <dt>
 
-**Adresssspair**
+**AddressPair**
 </dt> <dd>
 
-Array von Adress Paaren. Beachten Sie, dass Sie nur bis zu acht Adress Paare pro adresstabiler Struktur speichern können.
+Array von Adresspaaren. Beachten Sie, dass Sie pro ADDRESSTABLE-Struktur nur bis zu acht Adresspaare speichern können.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Struktur als Teil des Erfassungs Filter Erstellungs Prozesses. Weitere Informationen zum Implementieren dieser Struktur finden Sie unter [Erfassungs Filter](capture-filters.md).
+Verwenden Sie diese Struktur als Teil des Erfassungsfilter-Konstruktionsprozesses. Weitere Informationen zum Implementieren dieser Struktur finden Sie unter [Erfassungsfilter](capture-filters.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,18 +74,18 @@ Verwenden Sie diese Struktur als Teil des Erfassungs Filter Erstellungs Prozesse
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Adresssspair](addresspair.md)
+[ADDRESSPAIR](addresspair.md)
 </dt> <dt>
 
-[Capturefilter](capturefilter.md)
+[CAPTUREFILTER](capturefilter.md)
 </dt> </dl>
 
  

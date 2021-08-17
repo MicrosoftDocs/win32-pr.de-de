@@ -1,5 +1,5 @@
 ---
-description: Definiert einen Zeichenfolgentyp für das ProviderName-Element im Mobile Broadband-Profil.
+description: Definiert einen Zeichenfolgentyp für das ProviderName-Element im Mobilen Breitbandprofil.
 ms.assetid: 1644ded2-f931-4920-848d-e0405d8723e3
 title: providerNameType Simple Type
 ms.topic: reference
@@ -20,7 +20,7 @@ ms.locfileid: "118744389"
 ---
 # <a name="providernametype-simple-type"></a>providerNameType Simple Type
 
-Der **einfache Typ providerNameType** definiert einen Zeichenfolgentyp für das [**ProviderName-Element**](schema-providername-providertype-element.md) im Mobile Broadband-Profil. Diese Zeichenfolge ist mindestens ein Zeichen lang und mindestens 20 Zeichen lang.
+Der einfache **ProviderNameType-Typ** definiert einen Zeichenfolgentyp für das [**ProviderName-Element**](schema-providername-providertype-element.md) im Mobilen Breitbandprofil. Diese Zeichenfolge ist mindestens ein Zeichen lang und höchstens 20 Zeichen lang.
 
 ``` syntax
 <xs:simpleType name="providerNameType">

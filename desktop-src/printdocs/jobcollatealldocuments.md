@@ -4,12 +4,12 @@ ms.assetid: 64fcd03f-8e0a-498d-82ea-0c69be0a3886
 title: JobCollateAllDocuments
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e75eb21fcd518f0fda4edd4c3c4eff721a6a5b17
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 4c5e9adc0b6e9682f3c67f1bc8f5ef46c5e272c434968c3c1490e474b7edc0b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112409063"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118971309"
 ---
 # <a name="jobcollatealldocuments"></a>JobCollateAllDocuments
 
@@ -21,11 +21,11 @@ Im Folgenden finden Sie die Regeln, die für die Collate-Implementierung befolgt
 
 ## <a name="element-definition-and-rules"></a>Elementdefinition und Regeln
 
-Sie müssen zuerst die Regeln für JobCollateAllDocument befolgen und dann Regeln für DocumentCollate anwenden, damit die Szenarien funktionieren. Beachten Sie, dass es in einer Konvertierungseinstellung "PrintTicket in Devmode", bei der JobCollateAllDocuments vom Treiber nicht unterstützt wird, Aufgabe des Treibers ist, das geeignete Verhalten zu wählen (JobCollateAllDocuments = ON oder OFF). Außerdem kann die Auswahl abhängig von anderen PrintTicket-Einstellungen geändert werden.
+Sie müssen zuerst die Regeln für JobCollateAllDocument befolgen und dann Regeln für DocumentCollate anwenden, damit die Szenarien funktionieren. Beachten Sie, dass es in einer Konvertierungseinstellung von PrintTicket in Devmode, bei der JobCollateAllDocuments vom Treiber nicht unterstützt wird, aufgabe es dem Treiber, das entsprechende Verhalten zu wählen (JobCollateAllDocuments = ON oder OFF). Außerdem kann die Auswahl abhängig von anderen PrintTicket-Einstellungen geändert werden.
 
 ### <a name="jobcollatealldocuments"></a>JobCollateAllDocuments
 
-ON: Drucken Sie (DocumentCopiesAllPages)-Kopien jedes Dokuments, wiederholen Sie JobCopiesAllDocuments-Zeiten.
+ON: Drucken Sie (DocumentCopiesAllPages) Kopien jedes Dokuments, wiederholen Sie JobCopiesAllDocuments-Zeiten.
 
 OFF: Für jedes Dokument kopiert print (JobCopiesAllDocuments x DocumentCopiesAllPages) zusammen.
 
@@ -37,7 +37,7 @@ OFF: Für alle Kopien (JobCopiesAllDocuments x DocumentCopiesAllPages), die zusa
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)
--   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ### <a name="element-information"></a>Elementinformationen
 
@@ -45,7 +45,7 @@ OFF: Für alle Kopien (JobCopiesAllDocuments x DocumentCopiesAllPages), die zusa
 
 | Name | Wert |
 |----------------------------|--------------------|
-| Elementtyp <br/>   | Funktion<br/> |
+| Elementtyp <br/>   | Komponente<br/> |
 | Bereichspräfix <br/> | Auftrag<br/>     |
 | Hinweise <br/>          | Keine<br/>    |
 
@@ -85,7 +85,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
  
 
-### <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML) Content
+### <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
 Die Schlüsselwörter des öffentlichen Druckschemas werden im -Namespace https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords definiert. Der öffentliche Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 

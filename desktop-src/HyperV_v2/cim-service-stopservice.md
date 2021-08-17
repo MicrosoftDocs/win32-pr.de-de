@@ -1,7 +1,7 @@
 ---
-description: Paces the service in the stopped state.
+description: Beschleunigt den Dienst im Zustand "Beendet".
 ms.assetid: d7469643-bccc-4f55-b2fc-d2bc2e392d84
-title: StopService-Methode der CIM_Service -Klasse (Hyper-V-Verwaltung)
+title: StopService-Methode der CIM_Service-Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,13 +20,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118647583"
 ---
-# <a name="stopservice-method-of-the-cim_service-class-hyper-v-management"></a>StopService-Methode der CIM_Service -Klasse (Hyper-V-Verwaltung)
+# <a name="stopservice-method-of-the-cim_service-class-hyper-v-management"></a>StopService-Methode der CIM_Service-Klasse (Hyper-V-Verwaltung)
 
-Paces the service in the stopped state.
+Beschleunigt den Dienst im Zustand "Beendet".
 
 > [!Note]
 >
-> Die Semantik dieser Methode überschneidet sich mit der **RequestStateChange-Methode,** die von [**CIM \_ EnabledLogicalElement geerbt wird.**](cim-enabledlogicalelement.md) Diese Methode wird beibehalten, da sie weit verbreitet implementiert wurde und ihre einfache "Stopp"-Semantik praktisch zu verwenden ist.
+> Die Semantik dieser Methode überschneidet sich mit der **RequestStateChange-Methode,** die von [**CIM \_ EnabledLogicalElement**](cim-enabledlogicalelement.md)geerbt wird. Diese Methode wird beibehalten, da sie umfassend implementiert wurde und ihre einfache "Stop"-Semantik praktisch zu verwenden ist.
 
  
 
@@ -45,7 +45,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
+Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,13 +55,13 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

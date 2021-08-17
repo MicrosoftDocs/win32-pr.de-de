@@ -1,72 +1,72 @@
 ---
 title: ANR-Attribute
-description: Es folgen die Attribute, die eine mehrdeutige Namensauflösung (-ANR) unterstützen.
+description: Im Folgenden finden Sie die Attribute, die mehrdeutige Namensauflösung (ANR) unterstützen.
 ms.assetid: fc76c2e8-461f-48bf-82ed-329b8f74408e
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dcb0324fc39d3a492aeaf7eb843fab3d2dbb0b56
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 71dd9873ef5aad455b4b8c9a0cc62b8dcce4034c2eb383247f647d779b463f45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206211"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922830"
 ---
 # <a name="anr-attributes"></a>ANR-Attribute
 
-Es folgen die Attribute, die eine mehrdeutige Namensauflösung (-ANR) unterstützen.
+Im Folgenden finden Sie die Attribute, die mehrdeutige Namensauflösung (ANR) unterstützen.
 
 ## <a name="windows-2000-server"></a>Windows 2000 Server
 
 <dl>
 
-[**Anzeige Name**](a-displayname.md)  
-[**Vorname**](a-givenname.md)  
+[**Anzeigename**](a-displayname.md)  
+[**Given-Name**](a-givenname.md)  
 [**Legacy-Exchange-DN**](a-legacyexchangedn.md)  
-[**Physical-delivery-Office-Name**](a-physicaldeliveryofficename.md)  
-[**Proxy Adressen**](a-proxyaddresses.md)  
-[**RDN**](a-name.md)  
-[**Sam-Account-Name**](a-samaccountname.md)  
+[**Physical-Delivery-Office-Name**](a-physicaldeliveryofficename.md)  
+[**Proxyadressen**](a-proxyaddresses.md)  
+[**Rdn**](a-name.md)  
+[**SAM-Account-Name**](a-samaccountname.md)  
 [**Nachname**](a-sn.md)  
 </dl>
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 <dl>
 
-[**Anzeige Name**](a-displayname.md)  
-[**Vorname**](a-givenname.md)  
+[**Anzeigename**](a-displayname.md)  
+[**Given-Name**](a-givenname.md)  
 [**Legacy-Exchange-DN**](a-legacyexchangedn.md)  
-[**ms-DS-additional-Sam-Account-Name**](a-msds-additionalsamaccountname.md)  
-[**Physical-delivery-Office-Name**](a-physicaldeliveryofficename.md)  
-[**Proxy Adressen**](a-proxyaddresses.md)  
-[**RDN**](a-name.md)  
-[**Sam-Account-Name**](a-samaccountname.md)  
+[**ms-DS-Additional-Sam-Account-Name**](a-msds-additionalsamaccountname.md)  
+[**Physical-Delivery-Office-Name**](a-physicaldeliveryofficename.md)  
+[**Proxyadressen**](a-proxyaddresses.md)  
+[**Rdn**](a-name.md)  
+[**SAM-Account-Name**](a-samaccountname.md)  
 [**Nachname**](a-sn.md)  
 </dl>
 
-## <a name="active-directory-application-mode-adam"></a>Active Directory Anwendungsmodus (Adam)
+## <a name="active-directory-application-mode-adam"></a>Active Directory-Anwendungsmodus (ADAM)
 
 <dl>
 
-[**Anzeige Name**](a-displayname.md)  
-[**Physical-delivery-Office-Name**](a-physicaldeliveryofficename.md)  
-[**Proxy Adressen**](a-proxyaddresses.md)  
-[**RDN**](a-name.md)  
+[**Anzeigename**](a-displayname.md)  
+[**Physical-Delivery-Office-Name**](a-physicaldeliveryofficename.md)  
+[**Proxyadressen**](a-proxyaddresses.md)  
+[**Rdn**](a-name.md)  
 </dl>
 
 ## <a name="windows-server-2003-r2"></a>Windows Server 2003 R2
 
 <dl>
 
-[**Anzeige Name**](a-displayname.md)  
-[**Vorname**](a-givenname.md)  
+[**Anzeigename**](a-displayname.md)  
+[**Given-Name**](a-givenname.md)  
 [**Legacy-Exchange-DN**](a-legacyexchangedn.md)  
-[**ms-DS-additional-Sam-Account-Name**](a-msds-additionalsamaccountname.md)  
-[**Physical-delivery-Office-Name**](a-physicaldeliveryofficename.md)  
-[**Proxy Adressen**](a-proxyaddresses.md)  
-[**RDN**](a-name.md)  
-[**Sam-Account-Name**](a-samaccountname.md)  
+[**ms-DS-Additional-Sam-Account-Name**](a-msds-additionalsamaccountname.md)  
+[**Physical-Delivery-Office-Name**](a-physicaldeliveryofficename.md)  
+[**Proxyadressen**](a-proxyaddresses.md)  
+[**Rdn**](a-name.md)  
+[**SAM-Account-Name**](a-samaccountname.md)  
 [**Nachname**](a-sn.md)  
 </dl>
 
@@ -74,19 +74,19 @@ Es folgen die Attribute, die eine mehrdeutige Namensauflösung (-ANR) unterstüt
 
 <dl>
 
-[**Anzeige Name**](a-displayname.md)  
-[**Vorname**](a-givenname.md)  
+[**Anzeigename**](a-displayname.md)  
+[**Given-Name**](a-givenname.md)  
 [**Legacy-Exchange-DN**](a-legacyexchangedn.md)  
-[**ms-DS-additional-Sam-Account-Name**](a-msds-additionalsamaccountname.md)  
+[**ms-DS-Additional-Sam-Account-Name**](a-msds-additionalsamaccountname.md)  
 [**ms-DS-Phonetic-Company-Name**](a-msds-phoneticcompanyname.md)  
 [**ms-DS-Phonetic-Department**](a-msds-phoneticdepartment.md)  
 [**ms-DS-Phonetic-Display-Name**](a-msds-phoneticdisplayname.md)  
 [**ms-DS-Phonetic-First-Name**](a-msds-phoneticfirstname.md)  
 [**ms-DS-Phonetic-Last-Name**](a-msds-phoneticlastname.md)  
-[**Physical-delivery-Office-Name**](a-physicaldeliveryofficename.md)  
-[**Proxy Adressen**](a-proxyaddresses.md)  
-[**RDN**](a-name.md)  
-[**Sam-Account-Name**](a-samaccountname.md)  
+[**Physical-Delivery-Office-Name**](a-physicaldeliveryofficename.md)  
+[**Proxyadressen**](a-proxyaddresses.md)  
+[**Rdn**](a-name.md)  
+[**SAM-Account-Name**](a-samaccountname.md)  
 [**Nachname**](a-sn.md)  
 </dl>
 
@@ -94,19 +94,19 @@ Es folgen die Attribute, die eine mehrdeutige Namensauflösung (-ANR) unterstüt
 
 <dl>
 
-[**Anzeige Name**](a-displayname.md)  
-[**Vorname**](a-givenname.md)  
+[**Anzeigename**](a-displayname.md)  
+[**Given-Name**](a-givenname.md)  
 [**Legacy-Exchange-DN**](a-legacyexchangedn.md)  
-[**ms-DS-additional-Sam-Account-Name**](a-msds-additionalsamaccountname.md)  
+[**ms-DS-Additional-Sam-Account-Name**](a-msds-additionalsamaccountname.md)  
 [**ms-DS-Phonetic-Company-Name**](a-msds-phoneticcompanyname.md)  
 [**ms-DS-Phonetic-Department**](a-msds-phoneticdepartment.md)  
 [**ms-DS-Phonetic-Display-Name**](a-msds-phoneticdisplayname.md)  
 [**ms-DS-Phonetic-First-Name**](a-msds-phoneticfirstname.md)  
 [**ms-DS-Phonetic-Last-Name**](a-msds-phoneticlastname.md)  
-[**Physical-delivery-Office-Name**](a-physicaldeliveryofficename.md)  
-[**Proxy Adressen**](a-proxyaddresses.md)  
-[**RDN**](a-name.md)  
-[**Sam-Account-Name**](a-samaccountname.md)  
+[**Physical-Delivery-Office-Name**](a-physicaldeliveryofficename.md)  
+[**Proxyadressen**](a-proxyaddresses.md)  
+[**Rdn**](a-name.md)  
+[**SAM-Account-Name**](a-samaccountname.md)  
 [**Nachname**](a-sn.md)  
 </dl>
 
@@ -114,25 +114,25 @@ Es folgen die Attribute, die eine mehrdeutige Namensauflösung (-ANR) unterstüt
 
 <dl>
 
-[**Anzeige Name**](a-displayname.md)  
-[**Vorname**](a-givenname.md)  
+[**Anzeigename**](a-displayname.md)  
+[**Given-Name**](a-givenname.md)  
 [**Legacy-Exchange-DN**](a-legacyexchangedn.md)  
-[**ms-DS-additional-Sam-Account-Name**](a-msds-additionalsamaccountname.md)  
+[**ms-DS-Additional-Sam-Account-Name**](a-msds-additionalsamaccountname.md)  
 [**ms-DS-Phonetic-Company-Name**](a-msds-phoneticcompanyname.md)  
 [**ms-DS-Phonetic-Department**](a-msds-phoneticdepartment.md)  
 [**ms-DS-Phonetic-Display-Name**](a-msds-phoneticdisplayname.md)  
 [**ms-DS-Phonetic-First-Name**](a-msds-phoneticfirstname.md)  
 [**ms-DS-Phonetic-Last-Name**](a-msds-phoneticlastname.md)  
-[**Physical-delivery-Office-Name**](a-physicaldeliveryofficename.md)  
-[**Proxy Adressen**](a-proxyaddresses.md)  
-[**RDN**](a-name.md)  
-[**Sam-Account-Name**](a-samaccountname.md)  
+[**Physical-Delivery-Office-Name**](a-physicaldeliveryofficename.md)  
+[**Proxyadressen**](a-proxyaddresses.md)  
+[**Rdn**](a-name.md)  
+[**SAM-Account-Name**](a-samaccountname.md)  
 [**Nachname**](a-sn.md)  
 </dl>
 
- 
+ 
 
- 
+ 
 
 
 

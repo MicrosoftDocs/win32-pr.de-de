@@ -1,6 +1,6 @@
 ---
 title: Enumerationen in Active Directory Domain Services
-description: Die folgenden Enumerationen werden für Microsoft Active Directory Domain Services verwendet.
+description: Die folgenden Enumerationen werden für Microsoft Active Directory Domain Services.
 ms.assetid: eafa3285-4474-4077-a6ad-b37f8211e7e6
 ms.tgt_platform: multiple
 ms.topic: article
@@ -14,17 +14,17 @@ ms.locfileid: "118694833"
 ---
 # <a name="enumerations-in-active-directory-domain-services"></a>Enumerationen in Active Directory Domain Services
 
-Die folgenden Enumerationen werden für Microsoft Active Directory Domain Services verwendet.
+Die folgenden Enumerationen werden für Microsoft Active Directory Domain Services.
 
 -   [**DS \_ MANGLE \_ FOR**](/windows/desktop/api/Dsparse/ne-dsparse-ds_mangle_for)
--   [**\_DS-NAMENSFEHLER \_**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_name_error)
+-   [**\_ \_ DS-NAME-FEHLER**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_name_error)
 -   [**\_ \_ DS-NAMENSFLAGS**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_name_flags)
--   [**FORMAT DES \_ \_ DS-NAMENS**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_name_format)
--   [**DS \_ REPL INFO TYPE (DS-REPL-INFOTYP) \_ \_**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_repl_info_type)
--   [**DS \_ REPL \_ OP \_ TYPE**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_repl_op_type)
--   [**DS \_ REPSYNCALL \_ ERROR**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_repsyncall_error)
--   [**DS \_ \_ REPSYNCALL-EREIGNIS**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_repsyncall_event)
--   [**DS \_ \_ SPN-NAMENSTYP \_**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_spn_name_type)
+-   [**\_DS-NAMENSFORMAT \_**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_name_format)
+-   [**\_DS-REPL-INFOTYP \_ \_**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_repl_info_type)
+-   [**DS \_ REPL \_ \_ OP-TYP**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_repl_op_type)
+-   [**DS \_ REPSYNCALL-FEHLER \_**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_repsyncall_error)
+-   [**DS \_ REPSYNCALL-EREIGNIS \_**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_repsyncall_event)
+-   [**\_ \_ DS-SPN-NAMENSTYP \_**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_spn_name_type)
 -   [**DS \_ SPN \_ WRITE \_ OP**](/windows/desktop/api/Ntdsapi/ne-ntdsapi-ds_spn_write_op)
 -   [**\_DSROLE-COMPUTERROLLE \_**](/windows/desktop/api/Dsrole/ne-dsrole-dsrole_machine_role)
 -   [**\_DSROLE-VORGANGSSTATUS \_**](/windows/desktop/api/Dsrole/ne-dsrole-dsrole_operation_state)

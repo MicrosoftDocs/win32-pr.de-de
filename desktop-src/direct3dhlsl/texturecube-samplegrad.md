@@ -1,6 +1,6 @@
 ---
 title: TextureCube::TextureCube SampleGrad-Methoden
-description: Probieren Sie eine Textur mithilfe eines Farbverlaufs aus, um die Art und Weise zu beeinflussen, wie die Stichprobenposition berechnet wird. | TextureCube::TextureCube SampleGrad-Methoden
+description: Samples a texture using a gradient to influence the way the sample location is calculated. (Stichprobenentnahme einer Textur mithilfe eines Farbverlaufs, um die Berechnung der Stichprobenposition zu beeinflussen.) | TextureCube::TextureCube SampleGrad-Methoden
 ms.assetid: 710A3049-53EF-4166-ABE3-CFA1DA90FB71
 keywords:
 - SampleGrad-Methoden HLSL
@@ -21,7 +21,7 @@ ms.locfileid: "118505458"
 ---
 # <a name="texturecubesamplegrad-methods"></a>TextureCube::SampleGrad-Methoden
 
-Probieren Sie eine Textur mithilfe eines Farbverlaufs aus, um die Art und Weise zu beeinflussen, wie die Stichprobenposition berechnet wird.
+Samples a texture using a gradient to influence the way the sample location is calculated. (Stichprobenentnahme einer Textur mithilfe eines Farbverlaufs, um die Berechnung der Stichprobenposition zu beeinflussen.)
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,9 +29,9 @@ Probieren Sie eine Textur mithilfe eines Farbverlaufs aus, um die Art und Weise 
 
 | Methode                                                                                                 | BESCHREIBUNG                                                                                                                                                                                                        |
 |:-------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**SampleGrad(S,float,float,float)**](dx-graphics-hlsl-to-samplegrad.md)                              | Stichproben einer Textur mithilfe eines Farbverlaufs, um die Art und Weise zu beeinflussen, wie die Stichprobenposition berechnet wird.<br/>                                                                                                             |
-| [**SampleGrad(S,float,float,float,float)**](tcube-samplegrad-s-float-float-float-float-.md)           | Stichproben einer Textur, wobei ein Farbverlauf verwendet wird, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail).<br/>                                     |
-| [**SampleGrad(S,float,float,float,float,uint)**](tcube-samplegrad-s-float-float-float-float-uint-.md) | Stichproben einer Textur, wobei ein Farbverlauf verwendet wird, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail). Gibt den Status des Vorgangs zurück.<br/> |
+| [**SampleGrad(S,float,float,float)**](dx-graphics-hlsl-to-samplegrad.md)                              | Samples a texture, using a gradient to influence the way the sample location is calculated. (Stichprobenentnahme einer Textur mithilfe eines Farbverlaufs, um die Berechnung der Stichprobenposition zu beeinflussen.)<br/>                                                                                                             |
+| [**SampleGrad(S,float,float,float,float)**](tcube-samplegrad-s-float-float-float-float-.md)           | Stichproben einer Textur mithilfe eines Farbverlaufs, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert, an den die Werte der Stichprobenebene (Level-of-Detail, LOD) geklammert werden.<br/>                                     |
+| [**SampleGrad(S,float,float,float,float,uint)**](tcube-samplegrad-s-float-float-float-float-uint-.md) | Stichproben einer Textur mithilfe eines Farbverlaufs, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert, an den die Werte der Stichprobenebene (Level-of-Detail, LOD) geklammert werden. Gibt den Status des Vorgangs zurück.<br/> |
 
 
 
@@ -42,7 +42,7 @@ Probieren Sie eine Textur mithilfe eines Farbverlaufs aus, um die Art und Weise 
 [**TextureCube**](texturecube.md)
 </dt> <dt>
 
-[Texturobjekt](dx-graphics-hlsl-to-type.md)
+[Texture-Object](dx-graphics-hlsl-to-type.md)
 </dt> </dl>
 
  

@@ -1,71 +1,71 @@
 ---
-description: Debug-opology-API
+description: DeviceTopology-API
 ms.assetid: 051311ef-dd29-4014-bb9c-4cdccf7ce7de
-title: Debug-opology-API
+title: DeviceTopology-API
 ms.topic: article
 ms.date: 05/31/2018
 ms.custom: project-verbatim
-ms.openlocfilehash: 472c02cd59ca0cadd922cbe398a768c97cfab73a
-ms.sourcegitcommit: af120ad5c30da2fc5eb717ca2a1c4c45878efd71
+ms.openlocfilehash: 3b79def9f1cb1f5ec9342074b813e50993cbc37e7a7af2a9e0b577c730156247
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "106373556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118406755"
 ---
-# <a name="devicetopology-api"></a>Debug-opology-API
+# <a name="devicetopology-api"></a>DeviceTopology-API
 
-Weitere Informationen finden Sie im [Microsoft High Quality Voice Capture DMO-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/multimedia/audio/aecmicarray).
+Weitere Informationen finden [Sie im Microsoft-Beispiel DMO Voice Capture.](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/multimedia/audio/aecmicarray)
 
-Die Geräte-API (Debug-API) bietet Client Anwendungen die Möglichkeit, die funktionalen hardwaretopologien von audiorendering und Erfassungs Geräten zu durchlaufen. Über die Schnittstellen und Methoden in der devicetopology-API können Clients die funktionalen Untereinheiten (z. b. die volumesteuerung) ermitteln, die auf den Daten Pfaden liegen, die zu und von [audioendpunktgeräten](audio-endpoint-devices.md)führen. Clients können die internen Topologien von audioadaptern und audioendpunktgeräten durchlaufen und über die Verbindungen hinweg wechseln, die ein Gerät mit einem anderen verbinden. Weitere Informationen finden Sie unter [Device Topologien](device-topologies.md).
+Die DeviceTopology-API bietet Clientanwendungen die Möglichkeit, die funktionalen Hardwaretopologien von Audiorendering- und Erfassungsgeräten zu durchlaufen. Über die Schnittstellen und Methoden in der DeviceTopology-API können Clients die funktionalen Untereinheiten (z. B. die Volumesteuerung) entdecken, die entlang der Datenpfade liegen, die zu und von Audioendpunktgeräten [führen.](audio-endpoint-devices.md) Clients können die internen Topologien von Audioadaptergeräten und Audioendpunktgeräten durchlaufen und die Verbindungen durchlaufen, die ein Gerät mit einem anderen verbinden. Weitere Informationen finden Sie unter [Gerätetopologien](device-topologies.md).
 
-Die Header Datei "devicetopology. h" definiert die Schnittstellen in der devicetopology-API.
+Die Headerdatei Devicetopology.h definiert die Schnittstellen in der DeviceTopology-API.
 
-Um auf die API-Schnittstellen der devicetopology zuzugreifen, Ruft ein Client zuerst einen Verweis auf die [**idevicetopology**](/windows/desktop/api/Devicetopology/nn-devicetopology-idevicetopology) -Schnittstelle für ein audioendpunktgerät ab, indem er die folgenden Schritte ausführen:
+Um auf die Schnittstellen der DeviceTopology-API zuzugreifen, erhält ein Client zunächst mit den folgenden Schritten einen Verweis auf die [**IDeviceTopology-Schnittstelle**](/windows/desktop/api/Devicetopology/nn-devicetopology-idevicetopology) für ein Audioendpunktgerät:
 
-1.  Mithilfe einer der in der [**immdevice-Schnittstelle**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdevice)beschriebenen Verfahren erhalten Sie einen Verweis auf die **immdevice** -Schnittstelle für ein audioendpunktgerät.
-2.  Aufrufen der Methode " [**immdevice:: Aktivierungs**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) " mit dem Parameter " *IID* ", der auf **refID** IID \_ idevicetopology festgelegt ist.
+1.  Mithilfe einer der in [**IMMDevice Interface**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdevice)beschriebenen Techniken erhalten Sie einen Verweis auf die **IMMDevice-Schnittstelle** für ein Audioendpunktgerät.
+2.  Rufen Sie die [**IMMDevice::Activate-Methode auf,**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) bei der der *Parameter iid* auf **REFIID** IID \_ IDeviceTopology festgelegt ist.
 
-Der Client kann Verweise auf andere Schnittstellen in der devicetopology-API abrufen, indem er die Methoden in der [**idevicetopology**](/windows/desktop/api/Devicetopology/nn-devicetopology-idevicetopology) -Schnittstelle aufruft.
+Der Client kann Verweise auf die anderen Schnittstellen in der DeviceTopology-API abrufen, indem er die Methoden in der [**IDeviceTopology-Schnittstelle**](/windows/desktop/api/Devicetopology/nn-devicetopology-idevicetopology) aufruft.
 
-Die devicetopology-API implementiert die folgenden Schnittstellen.
+Die DeviceTopology-API implementiert die folgenden Schnittstellen.
 
 
 
-| Schnittstelle                                                  | BESCHREIBUNG                                                                                                                                                                                                               |
+| Schnittstelle                                                  | Beschreibung                                                                                                                                                                                                               |
 |------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Iaudioautogaincontrol**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudioautogaincontrol)     | Bietet Zugriff auf ein Hardware-Steuerelement zum automatischen gewinnen (Automatic Access Control, AGC)                                                                                                                                                               |
-| [**Iaudiobass**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiobass)                           | Ermöglicht den Zugriff auf ein Steuerelement auf der Basis von Hardware.                                                                                                                                                                         |
-| [**Iaudiochannelconfig**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiochannelconfig)         | Ermöglicht den Zugriff auf ein Hardware-Channel-Konfigurations Steuerelement.                                                                                                                                                              |
-| [**Iaudioinputselector**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudioinputselector)         | Ermöglicht den Zugriff auf ein Hardware-Multiplexer-Steuerelement (Eingabeauswahl).                                                                                                                                                       |
-| [**Iaudioloudness**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudioloudness)                   | Bietet Zugriff auf ein Steuerelement für die "Lautstärke"-Kompensierung.                                                                                                                                                                     |
-| [**Iaudiomidrange**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiomidrange)                   | Ermöglicht den Zugriff auf ein Hardware-Midrange-Steuerelement.                                                                                                                                                                     |
-| [**Iaudiomute**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiomute)                           | Ermöglicht den Zugriff auf ein Hardware stumm Steuerelement.                                                                                                                                                                               |
-| [**Iaudiooutputselector**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiooutputselector)       | Ermöglicht den Zugriff auf ein Hardware-Demultiplexer-Steuerelement (Ausgabe Auswahl).                                                                                                                                                    |
-| [**Iaudiopeakmeter**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiopeakmeter)                 | Bietet Zugriff auf ein Hardware-Spitzenwert-Steuerelement.                                                                                                                                                                         |
-| [**Iaudiotreble**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiotreble)                       | Bietet Zugriff auf ein Steuerelement auf Hardwareebene.                                                                                                                                                                       |
-| [**Iaudiovolumelevel**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiovolumelevel)             | Ermöglicht den Zugriff auf ein Hardware Volume-Steuerelement.                                                                                                                                                                             |
+| [**IAudioAutoGainControl**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudioautogaincontrol)     | Ermöglicht den Zugriff auf eine Hardware automatic gain control (AGC).                                                                                                                                                               |
+| [**IAudioBass**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiobass)                           | Ermöglicht den Zugriff auf ein Hardwaresteuersystem auf Hardwareebene.                                                                                                                                                                         |
+| [**IAudioChannelConfig**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiochannelconfig)         | Ermöglicht den Zugriff auf ein Hardwarekanalkonfigurations-Steuerelement.                                                                                                                                                              |
+| [**IAudioInputSelector**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudioinputselector)         | Ermöglicht den Zugriff auf ein Hardware-Multiplexer-Steuerelement (Eingabeselektor).                                                                                                                                                       |
+| [**IAudioGuidedness**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudioloudness)                   | Ermöglicht den Zugriff auf ein "Lautheit"-Kompensationssteuer steuerelement.                                                                                                                                                                     |
+| [**IAudioMidrange**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiomidrange)                   | Ermöglicht den Zugriff auf ein Hardware-Midrange-Level-Steuerelement.                                                                                                                                                                     |
+| [**IAudioMute**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiomute)                           | Ermöglicht den Zugriff auf ein Hardwaremute-Steuerelement.                                                                                                                                                                               |
+| [**IAudioOutputSelector**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiooutputselector)       | Ermöglicht den Zugriff auf ein Hardwaredemultiplexer-Steuerelement (Ausgabeauswahl).                                                                                                                                                    |
+| [**IAudioPeakMeter**](/windows/desktop/api/Devicetopology/nn-devicetopology-iaudiopeakmeter)                 | Ermöglicht den Zugriff auf ein Hardware-Peak-Meter-Steuerelement.                                                                                                                                                                         |
+| [**IAudioTreble**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiotreble)                       | Ermöglicht den Zugriff auf eine Hardwaresteuerung auf Trebleebene.                                                                                                                                                                       |
+| [**IAudioVolumeLevel**](/windows/win32/api/devicetopology/nn-devicetopology-iaudiovolumelevel)             | Ermöglicht den Zugriff auf eine Hardware-Volumesteuerung.                                                                                                                                                                             |
 | [**IConnector**](/windows/desktop/api/Devicetopology/nn-devicetopology-iconnector)                           | Stellt einen Verbindungspunkt zwischen Komponenten dar.                                                                                                                                                                      |
-| [**Icontrolinterface**](/windows/desktop/api/Devicetopology/nn-devicetopology-icontrolinterface)             | Stellt eine Steuerelement Schnittstelle in einem Teil (subunit oder Connector) dar.                                                                                                                                                          |
-| [**Idevicespecificproperty**](/windows/desktop/api/Devicetopology/nn-devicetopology-idevicespecificproperty) | Stellt eine gerätespezifische Eigenschaft eines Connector oder einer Untereinheit dar.                                                                                                                                                          |
-| [**Idevicetopology**](/windows/desktop/api/Devicetopology/nn-devicetopology-idevicetopology)                 | Bietet Zugriff auf die Topologie eines Audiogeräts.                                                                                                                                                                       |
-| [**"Iksformatsupport"**](/windows/desktop/api/Devicetopology/nn-devicetopology-iksformatsupport)               | Enthält Informationen zu den Audiodateiformaten, die von einer Software konfigurierten e/a-Verbindung (in der Regel ein DMA-Kanal) zwischen dem Audiogerät und dem Systemspeicher unterstützt werden.                                        |
-| [**"Iksjackdescription"**](/windows/desktop/api/Devicetopology/nn-devicetopology-iksjackdescription)           | Enthält Informationen zu den Buben oder internen Connectors, die eine physische Verbindung zwischen einem Gerät auf einem Audioadapter und einem externen oder internen Endpunkt Gerät (z. b. einem Mikrofon oder CD-Player) bereitstellen. |
-| [**Ipart**](/windows/desktop/api/Devicetopology/nn-devicetopology-ipart)                                     | Stellt einen Teil (Connector oder Untereinheit) einer Geräte Topologie dar.                                                                                                                                                            |
-| [**Ipartslist**](/windows/desktop/api/Devicetopology/nn-devicetopology-ipartslist)                           | Stellt eine Liste von Teilen (Connectors und Untereinheiten) dar.                                                                                                                                                                     |
-| [**Iperchanneldblevel**](/windows/desktop/api/Devicetopology/nn-devicetopology-iperchanneldblevel)           | Stellt eine generische Schnittstelle für die Steuerelement-Steuerelement-Schnittstelle dar, die die Kanalsteuerung über die Volumeebene in Dezimalstellen eines Audiostreams oder eines Häufigkeits Bandes in einem Audiostream bereitstellt.                                        |
-| [**Isubunit**](/windows/win32/api/devicetopology/nn-devicetopology-isubunit)                               | Stellt eine Hardware Untereinheit (z. b. ein Steuerelement auf volumebene) dar, die im Daten Pfad zwischen einem Client und einem audioendpunktgerät liegt.                                                                             |
+| [**IControlInterface**](/windows/desktop/api/Devicetopology/nn-devicetopology-icontrolinterface)             | Stellt eine Steuerelementschnittstelle auf einem Teil (Untereinheit oder Connector) dar.                                                                                                                                                          |
+| [**IDeviceSpecificProperty**](/windows/desktop/api/Devicetopology/nn-devicetopology-idevicespecificproperty) | Stellt eine gerätespezifische Eigenschaft eines Connectors oder einer Untereinheit dar.                                                                                                                                                          |
+| [**IDeviceTopology**](/windows/desktop/api/Devicetopology/nn-devicetopology-idevicetopology)                 | Ermöglicht den Zugriff auf die Topologie eines Audiogeräts.                                                                                                                                                                       |
+| [**IKsFormatSupport**](/windows/desktop/api/Devicetopology/nn-devicetopology-iksformatsupport)               | Stellt Informationen zu den Audiodatenformaten zur Verfügung, die von einer softwarekonfigurierten E/A-Verbindung (in der Regel ein DMA-Kanal) zwischen dem Audiogerät und dem Systemspeicher unterstützt werden.                                        |
+| [**IKsJackDescription**](/windows/desktop/api/Devicetopology/nn-devicetopology-iksjackdescription)           | Enthält Informationen zu den Buchsen oder internen Connectors, die eine physische Verbindung zwischen einem Gerät auf einem Audioadapter und einem externen oder internen Endpunktgerät (z. B. einem Mikrofon oder CD-Player) bereitstellen. |
+| [**Ipart**](/windows/desktop/api/Devicetopology/nn-devicetopology-ipart)                                     | Stellt einen Teil (Connector oder Untereinheit) einer Gerätetopologie dar.                                                                                                                                                            |
+| [**IPartsList**](/windows/desktop/api/Devicetopology/nn-devicetopology-ipartslist)                           | Stellt eine Liste von Teilen (Connectors und Untereinheiten) dar.                                                                                                                                                                     |
+| [**IPerChannelDbLevel**](/windows/desktop/api/Devicetopology/nn-devicetopology-iperchanneldblevel)           | Stellt eine generische Untereinheit-Steuerelementschnittstelle dar, die kanalspezifische Steuerung über die Lautstärke in Dezibel eines Audiostreams oder eines Frequenzbands in einem Audiostream ermöglicht.                                        |
+| [**ISubunit**](/windows/win32/api/devicetopology/nn-devicetopology-isubunit)                               | Stellt eine Hardwareuntereinheit (z. B. ein Steuerelement auf Volumeebene) dar, die sich im Datenpfad zwischen einem Client und einem Audioendpunktgerät befindet.                                                                             |
 
 
 
  
 
-Devicetopology-API-Clients, für die Benachrichtigungen über Steuerungs Änderungs Ereignisse in Connectors und Untereinheiten erforderlich sind, müssen die folgende Schnittstelle implementieren.
+DeviceTopology-API-Clients, die Benachrichtigungen über Ereignisse zur Steuerungsänderung in Connectors und Untereinheiten erfordern, sollten die folgende Schnittstelle implementieren.
 
 
 
-| Schnittstelle                                            | BESCHREIBUNG                                                                      |
+| Schnittstelle                                            | Beschreibung                                                                      |
 |------------------------------------------------------|----------------------------------------------------------------------------------|
-| [**Icontrolchangenotify**](/windows/desktop/api/Devicetopology/nn-devicetopology-icontrolchangenotify) | Stellt Benachrichtigungen bereit, wenn sich der Status eines Teils (Connector oder subunit) ändert. |
+| [**IControlChangeNotify**](/windows/desktop/api/Devicetopology/nn-devicetopology-icontrolchangenotify) | Stellt Benachrichtigungen zum Ändern des Status eines Teils (Connector oder Untereinheit) zur |
 
 
 

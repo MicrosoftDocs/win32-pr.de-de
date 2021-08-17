@@ -1,56 +1,56 @@
 ---
-title: Benutzer Übersicht
-description: Benutzer Übersicht
+title: Benutzerübersicht
+description: Benutzerübersicht
 ms.assetid: a1cf4b47-1410-464d-8542-334d3eb9c200
 keywords:
-- Windows Media Player-Plug-ins, Visualisierungen
-- Plug-ins, Visualisierungen
-- Visualisierungen, Benutzer Übersicht
-- benutzerdefinierte Visualisierungen, Benutzer Übersicht
+- Windows Media Player-Plug-Ins, Visualisierungen
+- Plug-Ins, Visualisierungen
+- Visualisierungen, Benutzerübersicht
+- Benutzerdefinierte Visualisierungen, Benutzerübersicht
 - Visualisierungen, Standard
-- benutzerdefinierte Visualisierungen, Standard Visualisierungen
+- Benutzerdefinierte Visualisierungen, Standardvisualisierungen
 - Visualisierungen, Voreinstellungen
-- benutzerdefinierte Visualisierungen, Voreinstellungen
-- Visualisierungen, Skin-Attribute
-- benutzerdefinierte Visualisierungen, Skin-Attribute
-- Voreinstellungen in Visualisierungen, Benutzer Übersicht
+- Benutzerdefinierte Visualisierungen, Voreinstellungen
+- Visualisierungen, Skinattribute
+- Benutzerdefinierte Visualisierungen, Skinattribute
+- Voreinstellungen in Visualisierungen, Benutzerübersicht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f0b8b389f07dc1a39c852f881a9c7d287176b73
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1d78cb01fe5ee87857ea546fc8c225f9ca16217c642ebbee06025cb037d94fec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337174"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134487"
 ---
-# <a name="user-overview"></a>Benutzer Übersicht
+# <a name="user-overview"></a>Benutzerübersicht
 
-Für den Benutzer sind Visualisierungen Bilder, die in der Zeit mit der Musik tanzen. Sie bieten zusätzliche Unterhaltung, um die Benutzerfreundlichkeit zu verbessern. Umso besser ist eine Visualisierung, umso besser!
+Für den Benutzer sind Visualisierungen Bilder, die zeitlich auf die Musik zeigen. Sie bieten zusätzliche Unterhaltung, um die Benutzererfahrung zu verbessern. Je freundlicher eine Visualisierung ist, desto besser!
 
 Eine typische Visualisierung wird wie in der folgenden Abbildung dargestellt angezeigt.
 
 ![Typische Visualisierung](images/vizanim.gif)
 
-## <a name="standard-visualizations"></a>Standard Visualisierungen
+## <a name="standard-visualizations"></a>Standardvisualisierungen
 
-Windows Media Player umfasst mehrere Visualisierungen, wie z. b. die folgenden:
+Windows Media Player enthält mehrere Visualisierungen, z. B. die folgenden:
 
--   Ambience
+-   Ambiente
 -   Plenoptic
--   Spinnen
+-   Spitze
 
-## <a name="standard-presets"></a>Standard Voreinstellungen
+## <a name="standard-presets"></a>Standardvoreinstellungen
 
-Außerdem enthält jede Visualisierung bestimmte Voreinstellungen, die die Anzeige der Visualisierung verändern. Beispielsweise kommt die Spitze Visualisierung in zwei Voreinstellungen vor:
+Darüber hinaus enthält jede Visualisierung bestimmte Voreinstellungen, die die Anzeige der Visualisierung ändern. Die Visualisierung "Spike" ist beispielsweise in zwei Voreinstellungen enthalten:
 
--   Spinnen
+-   Spitze
 -   Amoeba
 
-Beide Effekte sind Teil der gleichen Visualisierung, haben jedoch unterschiedliche Voreinstellungen. Eine Voreinstellung ist ein Satz von Werten für die Attribute einer bestimmten Visualisierung.
+Beide Effekte sind Teil derselben Visualisierung, weisen jedoch unterschiedliche Voreinstellungen auf. Eine Voreinstellung ist ein Satz von Werten für die Attribute einer bestimmten Visualisierung.
 
-## <a name="skin-attributes"></a>Skin-Attribute
+## <a name="skin-attributes"></a>Skinattribute
 
-Wenn Sie Skins für Windows-Media Player erstellen, können Sie die Standard Visualisierungen in ihren Skins mithilfe des **Effects** -Elements anzeigen. Weitere Informationen zur Verwendung von Visualisierungen in Skins finden Sie unter [Windows Media Player Skins](windows-media-player-skins.md).
+Wenn Sie Skins für Windows Media Player erstellen, können Sie die Standardvisualisierungen in Ihren Skins mithilfe des **Effects-Elements** anzeigen. Weitere Informationen zur Verwendung von Visualisierungen in Skins finden Sie unter [Windows Media Player Skins](windows-media-player-skins.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -59,9 +59,9 @@ Wenn Sie Skins für Windows-Media Player erstellen, können Sie die Standard Vis
 [**Informationen zu benutzerdefinierten Visualisierungen**](about-custom-visualizations.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

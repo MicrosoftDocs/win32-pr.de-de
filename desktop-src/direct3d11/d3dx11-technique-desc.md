@@ -1,9 +1,9 @@
 ---
-title: D3DX11_TECHNIQUE_DESC-Struktur (D3dx11effect. h)
-description: Beschreibt eine Effekt Technik.
+title: D3DX11_TECHNIQUE_DESC -Struktur (D3dx11effect.h)
+description: Beschreibt eine Effekttechnik.
 ms.assetid: 89690a68-d7e8-4f44-9f67-c55d0a400602
 keywords:
-- D3DX11_TECHNIQUE_DESC Struktur Direct3D 11
+- D3DX11_TECHNIQUE_DESC-Struktur Direct3D 11
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 31158b93b8121ac3393e0935cee31c6361b894d5
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2266737a04b28940eeaa3758f5bd3909ec815745cb060836c499cfd4b3142266
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762180"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119124925"
 ---
-# <a name="d3dx11_technique_desc-structure"></a>Bibliothek d3dx11 \_ Technique- \_ Struktur
+# <a name="d3dx11_technique_desc-structure"></a>D3DX11 \_ TECHNIQUE \_ DESC-Struktur
 
-Beschreibt eine Effekt Technik.
+Beschreibt eine Effekttechnik.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,43 +49,43 @@ Typ: **[ **LPCSTR**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Der Name dieser Technik (null, wenn nicht anonym).
+Name dieser Technik (NULL, wenn nicht anonym).
 
 </dd> <dt>
 
-**Ausweisen**
+**Übergibt**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Anzahl der in der Technik enthaltenen Übergänge.
+Anzahl der in der Technik enthaltenen Durchläufe.
 
 </dd> <dt>
 
 **Anmerkungen**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Anzahl der Anmerkungen zu dieser Technik.
+Anzahl der Anmerkungen zu diesem Verfahren.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bibliothek d3dx11 \_ Technique \_ wird mit [**ID3DX11EffectTechnique:: getdebug**](id3dx11effecttechnique-getdesc.md)verwendet.
+D3DX11 \_ TECHNIQUE \_ DESC wird mit [**ID3DX11EffectTechnique::GetDesc verwendet.**](id3dx11effecttechnique-getdesc.md)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx11effect. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx11effect.h</dt> </dl> |
 
 
 
@@ -93,7 +93,7 @@ Bibliothek d3dx11 \_ Technique \_ wird mit [**ID3DX11EffectTechnique:: getdebug*
 
 <dl> <dt>
 
-[Effekte 11-Strukturen](d3d11-graphics-reference-effects11-structures.md)
+[Effects 11 Structures](d3d11-graphics-reference-effects11-structures.md)
 </dt> </dl>
 
  

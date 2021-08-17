@@ -1,5 +1,5 @@
 ---
-description: Die GetIPortableDeviceValuesCollectionValue-Methode ruft einen IPortableDeviceValuesCollection-Wert (Typ VT UNKNOWN) ab, der durch einen \_ Schlüssel angegeben wird.
+description: Die GetIPortableDeviceValuesCollectionValue-Methode ruft einen IPortableDeviceValuesCollection-Wert (Typ VT \_ UNKNOWN) ab, der durch einen Schlüssel angegeben wird.
 ms.assetid: 07b41ef8-d299-4d69-98ad-f1818c09ef6c
 title: IPortableDeviceValues::GetIPortableDeviceValuesCollectionValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118697078"
 ---
 # <a name="iportabledevicevaluesgetiportabledevicevaluescollectionvalue-method"></a>IPortableDeviceValues::GetIPortableDeviceValuesCollectionValue-Methode
 
-Die **GetIPortableDeviceValuesCollectionValue-Methode** ruft einen **IPortableDeviceValuesCollection-Wert** (Typ VT UNKNOWN) ab, der durch einen \_ Schlüssel angegeben wird.
+Die **GetIPortableDeviceValuesCollectionValue-Methode** ruft einen **IPortableDeviceValuesCollection-Wert** (Typ VT \_ UNKNOWN) ab, der durch einen Schlüssel angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ HRESULT GetIPortableDeviceValuesCollectionValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ In\]
+*key* \[ In\]
 </dt> <dd>
 
 Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.
@@ -51,7 +51,7 @@ Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.
 *ppValue* \[ out\]
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf die abgerufene [**IPortableDeviceValuesCollection-Schnittstelle**](iportabledevicevaluescollection.md) empfängt. Der Aufrufer ist für den Aufruf von **Release auf** der abgerufenen Schnittstelle verantwortlich.
+Adresse einer Variablen, die einen Zeiger auf die [**abgerufene IPortableDeviceValuesCollection-Schnittstelle**](iportabledevicevaluescollection.md) empfängt. Der Aufrufer ist für den Aufruf **von Release** für die abgerufene Schnittstelle verantwortlich.
 
 </dd> </dl>
 
@@ -64,8 +64,8 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 | Rückgabecode                                                                                                            | Beschreibung                                                                                         |
 |------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                   | Die Methode wurde erfolgreich ausgeführt.<br/>                                                                    |
-| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>                   | Die durch key angegebene *Eigenschaft* ist keine **IPortableDeviceValuesCollection-Schnittstelle.**<br/> |
-| <dl> <dt>**HRESULT \_ FROM \_ WIN32(ERROR \_ NOT \_ FOUND)**</dt> </dl> | Die durch key angegebene *Eigenschaft* ist nicht in der Auflistung.<br/>                                |
+| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>                   | Die vom *Schlüssel* angegebene Eigenschaft ist keine **IPortableDeviceValuesCollection-Schnittstelle.**<br/> |
+| <dl> <dt>**HRESULT \_ AUS \_ WIN32 (FEHLER \_ NICHT \_ GEFUNDEN)**</dt> </dl> | Die vom *Schlüssel* angegebene Eigenschaft befindet sich nicht in der Auflistung.<br/>                                |
 
 
 
@@ -73,7 +73,7 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung dieser Methode finden Sie unter Abrufen der von einem Gerät [unterstützten Renderingfunktionen.](retrieving-the-rendering-capabilities-supported-by-a-device.md)
+Ein Beispiel für die Verwendung dieser Methode finden Sie unter [Abrufen der Renderingfunktionen, die von einem Gerät unterstützt werden.](retrieving-the-rendering-capabilities-supported-by-a-device.md)
 
 ## <a name="requirements"></a>Anforderungen
 

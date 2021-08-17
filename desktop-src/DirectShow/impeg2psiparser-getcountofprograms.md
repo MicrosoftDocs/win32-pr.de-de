@@ -12,12 +12,12 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: d6bfe698a45ea1cfe0a4bac6e65b839292bc1996
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c0c5609f82db98caea02e08f1e4fbd3877eeccbae25a5e83da3ac2804577b100
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118398107"
 ---
 # <a name="impeg2psiparsergetcountofprograms-method"></a>IMpeg2PsiParser::GetCountOfPrograms-Methode
 
@@ -49,7 +49,7 @@ Zeiger auf eine Variable, die die Anzahl der Programme empfängt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die -Methode gibt einen HRESULT-Wert zurück. Mögliche Werte sind, aber nicht beschränkt auf, die in der folgenden Tabelle gezeigten Werte.
+Die Methode gibt einen HRESULT-Wert zurück. Mögliche Werte sind u. a. die in der folgenden Tabelle aufgeführten Werte.
 
 
 
@@ -68,7 +68,7 @@ Die -Methode gibt einen HRESULT-Wert zurück. Mögliche Werte sind, aber nicht b
 [**IMpeg2PsiParser-Schnittstelle**](impeg2psiparser.md)
 </dt> <dt>
 
-[BEISPIEL FÜR PSI-Parserfilter](psi-parser-filter-sample.md)
+[PSI Parser-Filterbeispiel](psi-parser-filter-sample.md)
 </dt> </dl>
 
  

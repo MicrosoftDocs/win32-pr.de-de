@@ -1,11 +1,11 @@
 ---
-title: Iconnectionbrokerclient-Schnittstelle (cbclient. h)
-description: Stellt die Methoden bereit, die zum Verwenden des Remotedesktopverbindung Broker-Clients erforderlich sind.
+title: IConnectionBrokerClient-Schnittstelle (Cbclient.h)
+description: Stellt die Methoden zur Verwendung des Remotedesktopverbindung Broker-Clients zur Anwendung.
 ms.assetid: AFFE0157-DEF5-480D-8CE0-D89E9EF70EAF
 ms.tgt_platform: multiple
 keywords:
-- Iconnectionbrokerclient-Schnittstelle Remotedesktopdienste
-- Iconnectionbrokerclient-Schnittstelle Remotedesktopdienste, beschrieben
+- IConnectionBrokerClient-Remotedesktopdienste
+- IConnectionBrokerClient-Schnittstelle Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,34 +16,34 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a062059f7aa1f16e32514b3bacbfb31dc0a350f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a87c30729a5ec78e5275a6c2a1c0d9d139b857c3c7ea10f666ba09b7fceed256
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478891"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119059158"
 ---
-# <a name="iconnectionbrokerclient-interface"></a>Iconnectionbrokerclient-Schnittstelle
+# <a name="iconnectionbrokerclient-interface"></a>IConnectionBrokerClient-Schnittstelle
 
-Stellt die Methoden bereit, die zum Verwenden des Remotedesktopverbindung Broker-Clients erforderlich sind.
+Stellt die Methoden zur Verwendung des Remotedesktopverbindung Broker-Clients zur Anwendung.
 
-Diese Schnittstelle wird vom System implementiert. Verwenden Sie die [**cbkreateclientinstance**](cbcreateclientinstance.md) -Funktion, um eine Instanz dieser Schnittstelle abzurufen.
+Diese Schnittstelle wird vom System implementiert. Um eine Instanz dieser Schnittstelle zu erhalten, verwenden Sie die [**CBCreateClientInstance-Funktion.**](cbcreateclientinstance.md)
 
 ## <a name="members"></a>Member
 
-Die **iconnectionbrokerclient** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iconnectionbrokerclient** verfügt auch über die folgenden Typen von Membern:
+Die **IConnectionBrokerClient-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IConnectionBrokerClient** verfügt auch über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iconnectionbrokerclient** -Schnittstelle verfügt über diese Methoden.
+Die **IConnectionBrokerClient-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                         | BESCHREIBUNG                                                                                          |
+| Methode                                                         | Beschreibung                                                                                          |
 |:---------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------|
-| [**Gettargetinfo**](iconnectionbrokerclient-gettargetinfo.md) | Fordert Informationen über den Zielcomputer an, an den die Verbindung umgeleitet werden soll.<br/> |
+| [**GetTargetInfo**](iconnectionbrokerclient-gettargetinfo.md) | Fordert Informationen zum Zielcomputer an, auf dem die Verbindung umgeleitet werden soll.<br/> |
 
 
 
@@ -57,18 +57,18 @@ Die **iconnectionbrokerclient** -Schnittstelle verfügt über diese Methoden.
 |-------------------------------------|--------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                             |
-| Header<br/>                   | <dl> <dt>Cbclient. h</dt> </dl>      |
-| Bibliothek<br/>                  | <dl> <dt>Cbclient. lib</dt> </dl>    |
+| Header<br/>                   | <dl> <dt>Cbclient.h</dt> </dl>      |
+| Bibliothek<br/>                  | <dl> <dt>Cbclient.lib</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>Cbclient.dll</dt> </dl>    |
-| IID<br/>                      | IID \_ iconnectionbrokerclient ist als D6818DF2-8338-4EB7-AD77-DE210817987C definiert.<br/> |
+| IID<br/>                      | IID \_ IConnectionBrokerClient ist als D6818DF2-8338-4EB7-AD77-DE210817987C definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbkreateclientinstance**](cbcreateclientinstance.md)
+[**CBCreateClientInstance**](cbcreateclientinstance.md)
 </dt> </dl>
 
  

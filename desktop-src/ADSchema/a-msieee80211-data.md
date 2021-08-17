@@ -120,7 +120,7 @@ Speichert eine Liste der bevorzugten Netzwerkkonfigurationen in Gruppenrichtlini
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
 | System-Only            | Falsch                                                           |
-| Is-Single-Valued       | Richtig                                                            |
+| Ist einwertig       | Richtig                                                            |
 | Ist indiziert             | Falsch                                                           |
 | Im globalen Katalog      | Falsch                                                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
@@ -141,7 +141,7 @@ Speichert eine Liste der bevorzugten Netzwerkkonfigurationen in Gruppenrichtlini
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
 | System-Only            | Falsch                                                           |
-| Is-Single-Valued       | Richtig                                                            |
+| Ist einwertig       | Richtig                                                            |
 | Ist indiziert             | Falsch                                                           |
 | Im globalen Katalog      | Falsch                                                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                    |

@@ -1,9 +1,9 @@
 ---
-title: PSM_SETTITLE Meldung (prsht. h)
-description: Legt den Titel eines Eigenschaften Blatts fest. Sie können diese Nachricht explizit oder mithilfe des propsheet- \_ Makros SetTitle senden.
+title: PSM_SETTITLE-Nachricht (Prsht.h)
+description: Legt den Titel eines Eigenschaftenblatts fest. Sie können diese Nachricht explizit oder mit dem PropSheet \_ SetTitle-Makro senden.
 ms.assetid: 53ce8e20-4554-41f4-bad9-fb24c2c93c34
 keywords:
-- Windows-Steuerelemente für PSM_SETTITLE Meldung
+- PSM_SETTITLE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a848a5bdaeaae64b6f1825740d1e8ade07a5a22
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 782d5ebf3e7fe0850b89d9f52f0dc5c406dbd41c9bdad694b41b8ae9ea4c8b0e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949457"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119985450"
 ---
-# <a name="psm_settitle-message"></a>PSM- \_ SetTitle-Nachricht
+# <a name="psm_settitle-message"></a>PSM \_ SETTITLE-Nachricht
 
-Legt den Titel eines Eigenschaften Blatts fest. Sie können diese Nachricht explizit oder mithilfe des [**propsheet-Makros \_ SetTitle**](/windows/desktop/api/Prsht/nf-prsht-propsheet_settitle) senden.
+Legt den Titel eines Eigenschaftenblatts fest. Sie können diese Nachricht explizit oder mit dem [**PropSheet \_ SetTitle-Makro**](/windows/desktop/api/Prsht/nf-prsht-propsheet_settitle) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,14 +34,14 @@ Legt den Titel eines Eigenschaften Blatts fest. Sie können diese Nachricht expl
 *wParam* 
 </dt> <dd>
 
-Flag, das angibt, ob das Präfix "Eigenschaften für" oder das Suffix "Properties" (abhängig von der Version) mit der angegebenen Titel Zeichenfolge eingeschlossen werden soll. Wenn dieser Wert "PSH \_ proptitle" ist, ist das Präfix oder Suffix enthalten.
+Flag, das angibt, ob das Präfix "Properties for" oder das Suffix "Properties" (abhängig von der Version) mit der angegebenen Titelzeichenfolge eingeschlossen werden soll. Wenn dieser Wert PSH \_ PROPTITLE ist, wird das Präfix oder Suffix eingeschlossen.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Zeiger auf einen Puffer, der die Titel Zeichenfolge enthält. Wenn das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) dieses Parameters **null** ist, lädt das Eigenschaften Blatt die im [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))angegebene Zeichen folgen Ressource.
+Zeiger auf einen Puffer, der die Titelzeichenfolge enthält. Wenn das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) dieses Parameters **NULL** ist, lädt das Eigenschaftenblatt die zeichenfolgenressource, die im [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))angegeben ist.
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Zeiger auf einen Puffer, der die Titel Zeichenfolge enthält. Wenn das [**HIWORD
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In einem Aero-Assistenten kann diese Meldung verwendet werden, um den Titel einer inneren Seite dynamisch zu ändern. Dies ist beispielsweise der Fall, wenn die " [PSN \_ SETACTIVE](psn-setactive.md) "-Benachrichtigung
+In einem Assistenten kann diese Meldung verwendet werden, um den Titel einer inneren Seite dynamisch zu ändern. beispielsweise bei der Behandlung der [PSN \_ SETACTIVE-Benachrichtigung.](psn-setactive.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,10 +59,10 @@ In einem Aero-Assistenten kann diese Meldung verwendet werden, um den Titel eine
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **PSM \_ Settitlew** (Unicode) und **PSM \_ settitlea** (ANSI)<br/>              |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **PSM \_ SETTITLEW** (Unicode) und **PSM \_ SETTITLEA** (ANSI)<br/>              |
 
 
 

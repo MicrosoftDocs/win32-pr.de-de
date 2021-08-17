@@ -1,11 +1,11 @@
 ---
-title: Superior-DNS-Root-Attribut
-description: Hierbei handelt es sich um ein System Attribut, das für die Verweis Generierung verwendet wird.
+title: Übergeordnetes DNS-Root-Attribut
+description: Dies ist ein Systemattribut, das für die Empfehlungsgenerierung verwendet wird.
 ms.assetid: 421f8315-26e2-457d-ae76-868b7fc6551a
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das übergeordnete DNS-Root-Attribut
-- "\"superiordnsroot\"-Attribut AD-Schema"
+- ÜBERGEORDNETES DNS-Stammattribut AD-Schema
+- superiorDNSRoot-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6561839cf5137968adbac628ad6046b8b86dab85
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 2b4dcb26b12ba36003a82ba093d0049a050f4945ec2f277e4ea9a503a08a9b7e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118959919"
 ---
-# <a name="superior-dns-root-attribute"></a>Superior-DNS-Root-Attribut
+# <a name="superior-dns-root-attribute"></a>Übergeordnetes DNS-Root-Attribut
 
-Hierbei handelt es sich um ein System Attribut, das für die Verweis Generierung verwendet wird.
+Dies ist ein Systemattribut, das für die Empfehlungsgenerierung verwendet wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Superior-DNS-Root                           |
-| LDAP-Display-Name | superiordnsroot                             |
+| Ldap-Anzeigename | superiorDNSRoot                             |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.            |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.            |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.532                      |
-| System-ID-GUID    | 5245801d-ca6a-11D0-AFFF -0000f 80367c1        |
+| System-ID-GUID    | 5245801d-ca6a-11d0-afff-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Hierbei handelt es sich um ein System Attribut, das für die Verweis Generierung
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,19 +59,19 @@ Hierbei handelt es sich um ein System Attribut, das für die Verweis Generierung
 | Link-ID                | \-                                         |
 | MAPI-Id                | \-                                         |
 | System-Only            | False                                      |
-| Ist-einwertig       | Richtig                                       |
+| Ist einwertig       | True                                       |
 | Ist indiziert             | False                                      |
 | Im globalen Katalog      | False                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                               |
 | Range-Lower            | \-                                         |
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Kreuz Verweis**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,15 +80,15 @@ Hierbei handelt es sich um ein System Attribut, das für die Verweis Generierung
 | Link-ID                | \-                                         |
 | MAPI-Id                | \-                                         |
 | System-Only            | False                                      |
-| Ist-einwertig       | Richtig                                       |
+| Ist einwertig       | True                                       |
 | Ist indiziert             | False                                      |
 | Im globalen Katalog      | False                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                               |
 | Range-Lower            | \-                                         |
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Kreuz Verweis**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> |
 
 
 
@@ -101,15 +101,15 @@ Hierbei handelt es sich um ein System Attribut, das für die Verweis Generierung
 | Link-ID                | \-                                         |
 | MAPI-Id                | \-                                         |
 | System-Only            | False                                      |
-| Ist-einwertig       | Richtig                                       |
+| Ist einwertig       | True                                       |
 | Ist indiziert             | False                                      |
 | Im globalen Katalog      | False                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                               |
 | Range-Lower            | \-                                         |
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Kreuz Verweis**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> |
 
 
 
@@ -122,15 +122,15 @@ Hierbei handelt es sich um ein System Attribut, das für die Verweis Generierung
 | Link-ID                | \-                                         |
 | MAPI-Id                | \-                                         |
 | System-Only            | False                                      |
-| Ist-einwertig       | Richtig                                       |
+| Is-Single-Valued       | True                                       |
 | Ist indiziert             | False                                      |
 | Im globalen Katalog      | False                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                               |
 | Range-Lower            | \-                                         |
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Kreuz Verweis**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> |
 
 
 
@@ -143,15 +143,15 @@ Hierbei handelt es sich um ein System Attribut, das für die Verweis Generierung
 | Link-ID                | \-                                         |
 | MAPI-Id                | \-                                         |
 | System-Only            | False                                      |
-| Ist-einwertig       | Richtig                                       |
+| Is-Single-Valued       | True                                       |
 | Ist indiziert             | False                                      |
 | Im globalen Katalog      | False                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                               |
 | Range-Lower            | \-                                         |
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Kreuz Verweis**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> |
 
 
 
@@ -164,15 +164,15 @@ Hierbei handelt es sich um ein System Attribut, das für die Verweis Generierung
 | Link-ID                | \-                                         |
 | MAPI-Id                | \-                                         |
 | System-Only            | False                                      |
-| Ist-einwertig       | Richtig                                       |
+| Is-Single-Valued       | True                                       |
 | Ist indiziert             | False                                      |
 | Im globalen Katalog      | False                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                               |
 | Range-Lower            | \-                                         |
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Kreuz Verweis**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> |
 
 
 
@@ -185,15 +185,15 @@ Hierbei handelt es sich um ein System Attribut, das für die Verweis Generierung
 | Link-ID                | \-                                         |
 | MAPI-Id                | \-                                         |
 | System-Only            | False                                      |
-| Ist-einwertig       | Richtig                                       |
+| Is-Single-Valued       | True                                       |
 | Ist indiziert             | False                                      |
 | Im globalen Katalog      | False                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                               |
 | Range-Lower            | \-                                         |
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Kreuz Verweis**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> |
 
 
 

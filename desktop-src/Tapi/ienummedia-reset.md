@@ -1,21 +1,21 @@
 ---
-description: Die Reset-Methode setzt auf den Anfang der enumerationssequenz zurück.
+description: Die Reset-Methode wird auf den Anfang der Enumerationssequenz zurückgesetzt.
 ms.assetid: 338e0614-8f18-4ee2-8697-66ff3898f813
-title: 'Ienummedia:: Reset-Methode'
+title: IEnumMedia::Reset-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 14624d5a048df2f5bc80205f34f262068c53da74
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: c58ed91ce829402d2870f00f4aff13a19e8e8c3c6da074a5d365366faa195145
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106355104"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119975900"
 ---
-# <a name="ienummediareset-method"></a>Ienummedia:: Reset-Methode
+# <a name="ienummediareset-method"></a>IEnumMedia::Reset-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Reset** -Methode setzt auf den Anfang der enumerationssequenz zurück.
+Die **Reset-Methode** wird auf den Anfang der Enumerationssequenz zurückgesetzt.
 
 ## <a name="syntax"></a>Syntax
 

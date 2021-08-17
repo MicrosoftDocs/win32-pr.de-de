@@ -1,9 +1,9 @@
 ---
 title: dispinterface-Attribut
-description: Die dispinterface-Anweisung definiert eine Reihe von Eigenschaften und Methoden, für die Sie IDispatch Invoke aufrufen können.
+description: Die dispinterface-Anweisung definiert einen Satz von Eigenschaften und Methoden, für die Sie IDispatch Invoke aufrufen können.
 ms.assetid: d85a8e2b-0155-4d68-bb38-e86f4807e7de
 keywords:
-- MIDL des Dispinterface-Attributs
+- dispinterface-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118384667"
 ---
 # <a name="dispinterface-attribute"></a>dispinterface-Attribut
 
-Die **dispinterface-Anweisung** definiert einen Satz von Eigenschaften und Methoden, für die Sie **IDispatch::Invoke** aufrufen können. Eine Disp-Schnittstelle kann durch explizites Auflisten der unterstützten Methoden und Eigenschaften (Syntax 1) oder durch Auflisten einer einzelnen Schnittstelle (Syntax 2) definiert werden.
+Die **dispinterface-Anweisung** definiert einen Satz von Eigenschaften und Methoden, für die Sie **IDispatch::Invoke aufrufen können.** Eine Disp-Schnittstelle kann durch explizites Auflisten der unterstützten Methoden und Eigenschaften (Syntax 1) oder durch Auflisten einer einzelnen Schnittstelle (Syntax 2) definiert werden.
 
 ``` syntax
 [
@@ -51,40 +51,40 @@ dispinterface dispinterface-name
 *attributes* 
 </dt> <dd>
 
-Gibt Attribute an, die für die gesamte **Disp-Schnittstelle** gelten. Die folgenden Attribute werden akzeptiert: **\[** [**helpstring**](helpstring.md) **\]** , **\[** [**helpcontext**](helpcontext.md) **\]** , **\[** [**helpfile**](helpfile.md), **\]** **\[** [**hidden**](hidden.md), **\]** **\[** [**nonextensible**](nonextensible.md), **\]** **\[** [**oleautomation**](oleautomation.md), **\]** **\[** [**restricted**](restricted.md) **\]** , **\[** [**uuid**](uuid.md)und **\]** **\[** [**version**](version.md) **\]** .
+Gibt Attribute an, die für die gesamte **Dispinterface gelten.** Die folgenden Attribute werden akzeptiert: **\[** [**helpstring**](helpstring.md) **\]** , **\[** [**helpcontext**](helpcontext.md) **\]** , **\[** [**helpfile**](helpfile.md), **\]** **\[** [**hidden**](hidden.md), **\]** **\[** [**nonextensible**](nonextensible.md), **\]** **\[** [**oleautomation**](oleautomation.md), **\]** **\[** [**restricted**](restricted.md) **\]** , **\[** [**uuid**](uuid.md)und **\]** **\[** [**version**](version.md) **\]** .
 
 </dd> <dt>
 
 *dispinterface-name* 
 </dt> <dd>
 
-Der Name, mit dem die **Disp-Schnittstelle** in der Typbibliothek bekannt ist. Dieser Name muss innerhalb der Typbibliothek eindeutig sein.
+Der Name, unter dem **die Disp-Interface** in der Typbibliothek bekannt ist. Dieser Name muss innerhalb der Typbibliothek eindeutig sein.
 
 </dd> <dt>
 
-*property-list* 
+*Eigenschaftenliste* 
 </dt> <dd>
 
 (Syntax 1) Eine optionale Liste von Eigenschaften, die vom -Objekt unterstützt werden und in Form von Variablen deklariert werden. Dies ist die Kurzform zum Deklarieren der Eigenschaftenfunktionen in der Methodenliste. Weitere Informationen finden Sie im Abschnitt "Kommentare".
 
 </dd> <dt>
 
-*Methodenliste* 
+*method-list* 
 </dt> <dd>
 
-(Syntax 1) Eine Liste, die einen Funktionsprototyp für jede Methode und Eigenschaft in der **Disp-Schnittstelle** enthält. Eine beliebige Anzahl von Funktionsdefinitionen kann in *methlist* angezeigt werden. Eine Funktion in *methlist* hat die folgende Form:
+(Syntax 1) Eine Liste, die einen Funktionsprototyp für jede Methode und Eigenschaft in der **dispinterface enthält.** Eine beliebige Anzahl von Funktionsdefinitionen kann in der *Methlist angezeigt werden.* Eine Funktion in *methlist hat* die folgende Form:
 
 **\[**_Attribute_ *_\]_* *returntype methname type paramname***(**_params_*_);_*
 
-Die folgenden Attribute werden für eine Methode in einer **Dispinterface** akzeptiert: **\[ helpstring \]**, **\[ helpcontext \]**, **\[** [**propget**](propget.md) **\]** , **\[** [**propput**](propput.md), **\]** **\[** [**propputref**](propputref.md), **\]** **\[** [**string**](string.md)und **\]** **\[** [**lvarg**](vararg.md) **\]** . Wenn **\[ lvarg \]** angegeben wird, muss der letzte Parameter ein **sicheres** Array vom Variant-Typ sein.
+Die folgenden Attribute werden für eine Methode in einer **Disp-Schnittstelle** akzeptiert: **\[ helpstring \]**, **\[ helpcontext \]**, **\[** [**propget**](propget.md) **\]** , **\[** [**propput**](propput.md), **\]** **\[** [**propputref**](propputref.md), **\]** **\[** [**string**](string.md)und **\]** **\[** [**triburg**](vararg.md) **\]** . Wenn **\[ fgrg \]** angegeben wird, muss der letzte Parameter ein sicheres Array vom **Typ VARIANT** sein.
 
-Die Parameterliste ist eine durch Kommas getrennte Liste, von der jedes Element die folgende Form hat:
+Die Parameterliste ist eine durch Trennzeichen getrennte Liste, von der jedes Element die folgende Form hat:
 
 **\[**_Attribute_*_\]_*
 
 Der *Typ* kann ein beliebiger deklarierter oder integrierter Typ oder ein Zeiger auf einen beliebigen Typ sein. Attribute für Parameter sind:
 
-**\[**[**in**](in.md) **\]** , **\[** [**out**](out-idl.md) **\]** , **\[** [**optional,**](optional.md) **\]** **\[ Zeichenfolge \]**
+**\[**[**in**](in.md) **\]** , **\[** [**out**](out-idl.md), **\]** optional , **\[** [](optional.md) **\]** **\[ Zeichenfolge \]**
 
 </dd> <dt>
 
@@ -97,19 +97,19 @@ Der *Typ* kann ein beliebiger deklarierter oder integrierter Typ oder ein Zeiger
 
 ## <a name="remarks"></a>Hinweise
 
-Der MIDL-Compiler akzeptiert die folgende Parameterreihenfolge (von links nach rechts):
+Der MIDL-Compiler akzeptiert die folgende Parameter reihenfolge (von links nach rechts):
 
-1.  Erforderliche Parameter (Parameter ohne \[ defaultvalue- \] oder \[ optionale \] Attribute)
-2.  optionale Parameter mit oder ohne das \[ \] defaultvalue-Attribut,
-3.  Parameter mit dem \[ optionalen \] Attribut und ohne das \[ \] defaultvalue-Attribut,
-4.  \[[](lcid.md) \] lcid-Parameter, falls vorhanden,
+1.  Erforderliche Parameter (Parameter, die nicht über die \[ Attribute defaultvalue \] oder optional \[ \] verfügen)
+2.  optionale Parameter mit oder ohne \[ \] defaultvalue-Attribut,
+3.  Parameter mit dem \[ \] optionalen Attribut und ohne \[ das defaultvalue-Attribut, \]
+4.  \[[](lcid.md) \] lcid-Parameter, falls ein Parameter,
 5.  \[[**retval**](retval.md) \] Parameter
 
-Methodenfunktionen werden genau wie auf der Referenzseite für [**das Modul**](module.md) beschrieben angegeben, mit der Ausnahme, dass das \[ [](entry.md) \] Eintragsattribut nicht zulässig ist. Beachten Sie, dass STDOLE32. TLB (STDOLE. TLB auf 16-Bit-Systemen) muss importiert werden, da eine **Disp-Schnittstelle** von IDispatch erbt.
+Methodenfunktionen werden genau wie auf der Referenzseite für das Modul beschrieben [**angegeben,**](module.md) mit der Ausnahme, dass das \[ [](entry.md) \] Entry-Attribut nicht zulässig ist. Beachten Sie, dass STDOLE32. TLB (STDOLE. TLB auf 16-Bit-Systemen) muss importiert werden, da **eine Disp-Schnittstelle** von IDispatch erbt.
 
-Sie können Eigenschaften entweder in den Eigenschaften- oder Methodenlisten deklarieren. Das Deklarieren von Eigenschaften in der Eigenschaftenliste gibt nicht den Typ des Zugriffs an, der von der Eigenschaft unterstützt wird (also get, put oder putref). Geben Sie das \[ [**schreibgeschützte**](readonly.md) \] Attribut für Eigenschaften an, die put oder putref nicht unterstützen. Wenn Sie die Eigenschaftenfunktionen in der Methodenliste deklarieren, weisen Alle Funktionen für eine Eigenschaft den gleichen Bezeichner auf.
+Sie können Eigenschaften in den Eigenschaften- oder Methodenlisten deklarieren. Das Deklarieren von Eigenschaften in der Eigenschaftenliste gibt nicht den Zugriffstyp an, den die Eigenschaft unterstützt (d. h. get, put oder putref). Geben Sie \[ [**das schreibgeschützte Attribut**](readonly.md) \] für Eigenschaften an, die put oder putref nicht unterstützen. Wenn Sie die Eigenschaftenfunktionen in der Methodenliste deklarieren, verfügen alle Funktionen für eine Eigenschaft über denselben Bezeichner.
 
-Mit der ersten Syntax sind die Eigenschaften und Methoden: Tags erforderlich. Das \[ [**ID-Attribut**](id.md) \] ist auch für jedes Element erforderlich. Beispiel:
+Mithilfe der ersten Syntax sind die Eigenschaften und Methoden: Tags erforderlich. Das \[ [](id.md) \] id-Attribut ist auch für jedes Member erforderlich. Beispiel:
 
 ``` syntax
 properties: 
@@ -118,9 +118,9 @@ methods:
     [id(1)] HRESULT Show();
 ```
 
-Im Gegensatz zu Schnittstellenmembern können dispinterface-Member das [**Attribut retval**](retval.md) nicht verwenden, um zusätzlich zu einem HRESULT-Fehlercode einen Wert zurückzugeben. Das \[ [**lcid-Attribut**](lcid.md) \] ist für dispinterfaces ebenfalls ungültig, da IDispatch::Invoke eine LCID übergibt. Es ist jedoch möglich, eine Schnittstelle erneut zu deklarieren, die diese Attribute verwendet.
+Im Gegensatz zu Schnittstellenmitgliedern können Dispinterface-Member das [**retval-Attribut**](retval.md) nicht verwenden, um zusätzlich zu einem HRESULT-Fehlercode einen Wert zurückgibt. Das \[ [**attribut lcid**](lcid.md) \] ist für dispinterfaces ebenfalls ungültig, da IDispatch::Invoke eine LCID übergibt. Es ist jedoch möglich, eine Schnittstelle, die diese Attribute verwendet, erneut zu definieren.
 
-Mit der zweiten Syntax können Schnittstellen, die IDispatch unterstützen und zuvor in einem ODL-Skript deklariert wurden, wie folgt als IDispatch-Schnittstellen erneut deklariert werden:
+Mithilfe der zweiten Syntax können Schnittstellen, die IDispatch unterstützen und zuvor in einem ODL-Skript deklariert wurden, wie folgt als IDispatch-Schnittstellen erneut deklariert werden:
 
 ``` syntax
 dispinterface helloPro 
@@ -129,14 +129,14 @@ dispinterface helloPro
 };
 ```
 
-Im vorherigen Beispiel werden alle Member von hello und alle Member, die hello erbt, als unterstützend für IDispatch deklariert. Wenn hello in diesem Fall zuvor mit \[ \] lcid- und \[ retval-Membern deklariert wurde, die \] HRESULTs zurückgegeben haben, entfernt MkTypLib jeden \[ lcid-Parameter \] und HRESULT-Rückgabetyp und markiert den Rückgabetyp stattdessen als den des \[ retval-Parameters. \]
+Im vorherigen Beispiel werden alle Member von hello und alle Member, die hello erbt, als unterstützend für IDispatch deklariert. Wenn in diesem Fall hello zuvor mit lcid- und retval-Membern deklariert wurde, die HRESULTs zurückgegeben haben, entfernt MkTypLib jeden lcid-Parameter und HRESULT-Rückgabetyp und markieren stattdessen den Rückgabetyp als den des \[ \] \[ \] \[ \] \[ retval-Parameters. \]
 
 > [!Note]  
-> Das Mktyplib.exe Tool ist veraltet. Verwenden Sie stattdessen den MIDL-Compiler.
+> Das Mktyplib.exe ist veraltet. Verwenden Sie stattdessen den MIDL-Compiler.
 
  
 
-Die Eigenschaften und Methoden einer Disp-Schnittstelle sind nicht Teil der VTBL der Disp-Schnittstelle. Daher können [CreateStdDispatch](/windows/win32/api/oleauto/nf-oleauto-createstddispatch) und [DispInvoke](/windows/win32/api/oleauto/nf-oleauto-dispinvoke) nicht zum Implementieren von IDispatch::Invoke verwendet werden. Die Disp-Schnittstelle wird verwendet, wenn eine Anwendung vorhandene Nicht-VTBL-Funktionen über Automation verfügbar machen muss. Diese Anwendungen können IDispatch::Invoke implementieren, indem sie den dispidMember-Parameter untersuchen und die entsprechende Funktion direkt aufrufen.
+Die Eigenschaften und Methoden einer Disp-Interface sind nicht Teil des VTBL der Disp-Interface. Daher können [CreateStdDispatch](/windows/win32/api/oleauto/nf-oleauto-createstddispatch) und [DispInvoke](/windows/win32/api/oleauto/nf-oleauto-dispinvoke) nicht verwendet werden, um IDispatch::Invoke zu implementieren. Die Disp-Interface wird verwendet, wenn eine Anwendung vorhandene Nicht-VTBL-Funktionen über Automation verfügbar machen muss. Diese Anwendungen können IDispatch::Invoke implementieren, indem sie den Parameter dispidMember untersuchen und die entsprechende Funktion direkt aufrufen.
 
 ## <a name="examples"></a>Beispiele
 
@@ -208,7 +208,7 @@ dispinterface MyObject
 [ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
 [Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)

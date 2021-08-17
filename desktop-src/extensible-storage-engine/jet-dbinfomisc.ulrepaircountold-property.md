@@ -1,6 +1,6 @@
 ---
 description: 'Weitere Informationen finden Sie unter: JET_DBINFOMISC.ulRepairCountOld-Eigenschaft'
-title: JET_DBINFOMISC.ulRepairCountOld -Eigenschaft
+title: JET_DBINFOMISC.ulRepairCountOld-Eigenschaft
 TOCTitle: 'ulRepairCountOld property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.ulRepairCountOld
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_dbinfomisc.ulrepaircountold(v=EXCHG.10)
@@ -33,7 +33,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118485949"
 ---
-# <a name="jet_dbinfomisculrepaircountold-property"></a>JET_DBINFOMISC.ulRepairCountOld -Eigenschaft
+# <a name="jet_dbinfomisculrepaircountold-property"></a>JET_DBINFOMISC.ulRepairCountOld-Eigenschaft
 
 Ruft ab, wie oft diese Datenbank vor der letzten Defragmentierung repariert wurde.
 
@@ -68,6 +68,6 @@ Typ: [System.Int32](/dotnet/api/system.int32)
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[JET_DBINFOMISC Mitglieder](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC-Member](./jet-dbinfomisc-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

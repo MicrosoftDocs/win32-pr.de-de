@@ -1,6 +1,6 @@
 ---
 title: Anzeigen der XML-Ausgabe von WinRM-Skripts
-description: Windows-Remoteverwaltung Skripts geben XML anstelle von-Objekten zurück. Der XML-Code ist nicht in einem lesbaren Format. Sie können die Methoden der MSXML-API und der vorinstallierten XSL-Datei verwenden, um die Daten in ein lesbares Format umzuwandeln.
+description: Windows Remoteverwaltungsskripts geben XML anstelle von Objekten zurück. Der XML-Code hat kein lesbares Format. Sie können die Methoden der MSXML-API und der vorinstallierten XSL-Datei verwenden, um die Daten in ein lesbares Format zu transformieren.
 ms.assetid: a2c9401b-bc1e-4f8e-aabf-b6ade1a849ba
 ms.tgt_platform: multiple
 ms.topic: article
@@ -10,24 +10,24 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: c70dd0a61181f6fc61e685641ff0ed5e3d43ffe8
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: df5c27c1fe22ae87395357aeefe681af7c041420d32b7bccbf595fab38bb060b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039383"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119680020"
 ---
 # <a name="displaying-xml-output-from-winrm-scripts"></a>Anzeigen der XML-Ausgabe von WinRM-Skripts
 
-Windows-Remoteverwaltung Skripts geben XML anstelle von-Objekten zurück. Der XML-Code ist nicht in einem lesbaren Format. Sie können die Methoden der [MSXML](/previous-versions/windows/desktop/ms763742(v=vs.85)) -API und der vorinstallierten XSL-Datei verwenden, um die Daten in ein lesbares Format umzuwandeln.
+Windows Remoteverwaltungsskripts geben XML anstelle von Objekten zurück. Der XML-Code hat kein lesbares Format. Sie können die Methoden der [MSXML-API](/previous-versions/windows/desktop/ms763742(v=vs.85)) und der vorinstallierten XSL-Datei verwenden, um die Daten in ein lesbares Format zu transformieren.
 
-Weitere Informationen zur WinRM-XML-Ausgabe und Beispiele für unformatierte und formatierte XML-Daten finden Sie unter [Scripting in Windows-Remoteverwaltung](scripting-in-windows-remote-management.md).
+Weitere Informationen zur WinRM-XML-Ausgabe und Beispiele für unformatiertes und formatiertes XML finden Sie unter [Scripting in Windows Remote Management](scripting-in-windows-remote-management.md).
 
-Das **WinRM** -Befehlszeilen Tool enthält eine Transformations Datei mit dem Namen "WsmTxt. xsl", die die Ausgabe in tabellarischer Form anzeigt. Wenn Ihr Skript diese Datei den MSXML-Methoden bereitstellt, die tranforms ausführen, wird die Ausgabe mit der Ausgabe des **WinRM** -Tools angezeigt.
+Das  Winrm-Befehlszeilentool enthält eine Transformationsdatei mit dem Namen WsmTxt.xsl, die die Ausgabe in tabellarischer Form anzeigt. Wenn Ihr Skript diese Datei an die MSXML-Methoden zur Durchführung von Tranforms liefert, wird die Ausgabe wie die Ausgabe des **Winrm-Tools** angezeigt.
 
-**So formatieren Sie XML-Rohdaten**
+**So formatieren Sie unformatierte XML-Ausgabe**
 
-1.  Erstellen Sie das [**WSMAN**](wsman.md) -Objekt, und erstellen Sie eine Sitzung.
+1.  Erstellen Sie das [**WSMan-Objekt**](wsman.md) und eine Sitzung.
 
     ```VB
     Set Wsman = CreateObject("Wsman.Automation")
@@ -36,7 +36,7 @@ Das **WinRM** -Befehlszeilen Tool enthält eine Transformations Datei mit dem Na
 
     
 
-2.  Erstellen Sie MSXML-Objekte, die die XML-Antwort Ausgabe und die XSL-Transformation darstellen.
+2.  Erstellen MSXML,die die XML-Antwortausgabe und die XSL-Transformation darstellen.
 
     ```VB
     Set xmlFile = CreateObject( "MSXml.DOMDocument" )
@@ -45,7 +45,7 @@ Das **WinRM** -Befehlszeilen Tool enthält eine Transformations Datei mit dem Na
 
     
 
-3.  Abrufen von Daten über [**Sitzungs**](session.md) Objektmethoden.
+3.  Abrufen von Daten über [**Session-Objektmethoden.**](session.md)
 
     ```VB
     xmlResponse = Session.Get("http://schemas.microsoft.com/" & _
@@ -54,7 +54,7 @@ Das **WinRM** -Befehlszeilen Tool enthält eine Transformations Datei mit dem Na
 
     
 
-4.  Geben Sie die Antwort auf die "MSXML [LoadXml](/previous-versions/windows/desktop/ms754585(v=vs.85)) "-Methode und die [Load](/previous-versions/windows/desktop/ms762722(v=vs.85)) -Methode zum Speichern der Transformations Datei an.
+4.  Geben Sie die Antwort an die MSXML [loadXML-Methode](/previous-versions/windows/desktop/ms754585(v=vs.85)) und die [Load-Methode](/previous-versions/windows/desktop/ms762722(v=vs.85)) zum Speichern der Transformationsdatei an.
 
     ```VB
     xmlFile.LoadXml(xmlResponse)
@@ -64,7 +64,7 @@ Das **WinRM** -Befehlszeilen Tool enthält eine Transformations Datei mit dem Na
 
     
 
-5.  Verwenden Sie die MSXML [transformNode](/previous-versions/windows/desktop/ms761399(v=vs.85)) -Methode, um die Ausgabe anzuzeigen oder zu speichern.
+5.  Verwenden Sie die MSXML [transformNode-Methode,](/previous-versions/windows/desktop/ms761399(v=vs.85)) und zeigen Sie die Ausgabe an oder speichern Sie sie.
 
     ```VB
     Wscript.Echo xmlFile.TransformNode(xslFile)
@@ -72,7 +72,7 @@ Das **WinRM** -Befehlszeilen Tool enthält eine Transformations Datei mit dem Na
 
     
 
-Das folgende VBScript-Codebeispiel zeigt das komplette Skript.
+Das folgende VBScript-Codebeispiel zeigt das vollständige Skript.
 
 
 ```VB
@@ -90,11 +90,11 @@ Wscript.Echo xmlFile.TransformNode(xslFile)
 
 
 
-## <a name="adding-a-portable-subroutine-to-transform-xml-to-your-scripts"></a>Hinzufügen einer portablen Unterroutine zum Transformieren von XML in Ihre Skripts
+## <a name="adding-a-portable-subroutine-to-transform-xml-to-your-scripts"></a>Hinzufügen einer portablen Unterroutine zum Transformieren von XML zu Ihren Skripts
 
-Sie können den Skripts, die die vorinstallierte XSL-Datei verwenden, eine Unterroutine hinzufügen, um die unformatierte XML-Ausgabe eines WinRM-Skripts in ein tabellarisches Formular zu konvertieren.
+Sie können Ihren Skripts eine Unterroutine hinzufügen, die die vorinstallierte XSL-Datei verwendet, um die unformatierte XML-Ausgabe eines WinRM-Skripts in ein tabellarisches Format zu konvertieren.
 
-Die folgende Unterroutine verwendet Aufrufe der MSXML-Skript Methoden, um die Ausgabe an WsmTxt. xsl bereitzustellen.
+Die folgende Unterroutine verwendet Aufrufe der MSXML Skriptmethoden, um die Ausgabe an WsmTxt.xsl zu liefern.
 
 
 ```VB
@@ -112,7 +112,7 @@ End Sub
 
 
 
-Die folgende Unterroutine transformiert jede Zeile der Daten, wie im folgenden Beispiel gezeigt.
+Die folgende Unterroutine transformiert jede Zeile Ihrer Daten, wie im folgenden Beispiel gezeigt.
 
 
 ```VB
@@ -140,15 +140,15 @@ End Sub
 
 <dl> <dt>
 
-[Informationen zu Windows-Remoteverwaltung](about-windows-remote-management.md)
+[Informationen Windows Remoteverwaltung](about-windows-remote-management.md)
 </dt> <dt>
 
-[Verwenden von Windows-Remoteverwaltung](using-windows-remote-management.md)
+[Verwenden Windows Remoteverwaltung](using-windows-remote-management.md)
 </dt> <dt>
 
-[Windows-Remoteverwaltung Referenz](windows-remote-management-reference.md)
+[Windows Remoteverwaltungsreferenz](windows-remote-management-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

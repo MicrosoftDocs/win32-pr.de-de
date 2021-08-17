@@ -1,11 +1,11 @@
 ---
-title: 'PKI-Registrierung: Access-Attribut'
-description: Das PKI-Registrierungs Zugriffs Attribut ist nur für die interne Verwendung vorgesehen.
+title: PKI-Enrollment-Access-Attribut
+description: Das PKI-Enrollment-Access-Attribut ist nur zur internen Verwendung.
 ms.assetid: 09eab075-71a5-4a38-af34-dafedca9c2c6
 ms.tgt_platform: multiple
 keywords:
-- PKI-Registrierung-AD-Schema des Zugriffs Attributs
-- AD-Schema des pkienrollmentaccess-Attributs
+- AD-Schema des PKI-Enrollment-Access-Attributs
+- pKIEnrollmentAccess-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f5f974e1072810b902fa42d30f067a67e22236ca
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 7af4331d5ed5069448848ba56cd331251eb055c10767f4b63d0b581da98f35fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119923880"
 ---
-# <a name="pki-enrollment-access-attribute"></a>PKI-Registrierung: Access-Attribut
+# <a name="pki-enrollment-access-attribute"></a>PKI-Enrollment-Access-Attribut
 
-Das **PKI-Registrierungs Zugriffs** Attribut ist nur für die interne Verwendung vorgesehen.
+Das **PKI-Enrollment-Access-Attribut** ist nur zur internen Verwendung.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------------------|
-| CN                | PKI-Registrierung-Zugriff                               |
-| LDAP-Display-Name | pkienrollmentaccess                                 |
+| CN                | PKI-Enrollment-Access                               |
+| Ldap-Anzeigename | pKIEnrollmentAccess                                 |
 | Size              | \-                                                  |
-| Berechtigung aktualisieren  | \-                                                  |
-| Aktualisierungshäufigkeit  | \-                                                  |
+| Aktualisieren von Berechtigungen  | \-                                                  |
+| Updatehäufigkeit  | \-                                                  |
 | Attribute-Id      | 1.2.840.113556.1.4.1335                             |
-| System-ID-GUID    | 926be278-56b9-11d2-90d0-00c04f d91ab1                |
+| System-Id-Guid    | 926be278-56f9-11d2-90d0-00c04fd91ab1                |
 | Syntax            | [**String(NT-Sec-Desc)**](s-string-nt-sec-desc.md) |
 
 
@@ -43,7 +43,7 @@ Das **PKI-Registrierungs Zugriffs** Attribut ist nur für die interne Verwendung
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Das **PKI-Registrierungs Zugriffs** Attribut ist nur für die interne Verwendung
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Is-Single-Valued       | False                                                                   |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Das **PKI-Registrierungs Zugriffs** Attribut ist nur für die interne Verwendung
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Is-Single-Valued       | False                                                                   |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Das **PKI-Registrierungs Zugriffs** Attribut ist nur für die interne Verwendung
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Is-Single-Valued       | False                                                                   |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Das **PKI-Registrierungs Zugriffs** Attribut ist nur für die interne Verwendung
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Is-Single-Valued       | False                                                                   |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Das **PKI-Registrierungs Zugriffs** Attribut ist nur für die interne Verwendung
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Is-Single-Valued       | False                                                                   |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Das **PKI-Registrierungs Zugriffs** Attribut ist nur für die interne Verwendung
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Is-Single-Valued       | False                                                                   |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Updatesubresources (Heap Zuordnung)-Funktion (D3dx12. h)
-description: Aktualisiert unter Ressourcen mit einer Heap Zuweisungs Implementierung.
+title: UpdateSubresources-Funktion (Heapzuweisung) (D3dx12.h)
+description: Aktualisiert Unterressourcen mit einer Heapzuweisungsimplementierung.
 ms.assetid: 328D8755-D328-471D-AAF4-9771CBFF7539
 keywords:
-- Updatesubresources-Funktion
+- UpdateSubresources-Funktion
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c97abe59bdd0334fe4b7badf03e44ddc03b85495
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: bc4e476501c91c3e7508c0aefdc1d9d6c99a057840b5a126879c8b4ff3608f68
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106351963"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119460751"
 ---
-# <a name="updatesubresources-heap-allocating-function"></a>Updatesubresources (Heap Zuordnung)-Funktion
+# <a name="updatesubresources-heap-allocating-function"></a>UpdateSubresources-Funktion (Heapzuweisung)
 
-Aktualisiert unter Ressourcen mit einer Heap Zuweisungs Implementierung.
+Aktualisiert Unterressourcen mit einer Heapzuweisungsimplementierung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,66 +47,66 @@ UINT64 inline UpdateSubresources(
 
 <dl> <dt>
 
-*pcmdlist* \[ in\]
+*pCmdList* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3D12GraphicsCommandList**](/windows/desktop/api/d3d12/nn-d3d12-id3d12graphicscommandlist)\***
 
-Ein Zeiger auf die [**ID3D12GraphicsCommandList**](/windows/desktop/api/d3d12/nn-d3d12-id3d12graphicscommandlist) -Schnittstelle für die Befehlsliste.
+Ein Zeiger auf die [**ID3D12GraphicsCommandList-Schnittstelle**](/windows/desktop/api/d3d12/nn-d3d12-id3d12graphicscommandlist) für die Befehlsliste.
 
 </dd> <dt>
 
-*pdestinationresource* \[ in\]
+*pDestinationResource* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3D12Resource**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource)\***
 
-Ein Zeiger auf die [**ID3D12Resource**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource) -Schnittstelle, die die Ziel Ressource darstellt.
+Ein Zeiger auf die [**ID3D12Resource-Schnittstelle,**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource) die die Zielressource darstellt.
 
 </dd> <dt>
 
-*pintermediate* \[ in\]
+*pIntermediate* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3D12Resource**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource)\***
 
-Ein Zeiger auf die [**ID3D12Resource**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource) -Schnittstelle, die die zwischen Ressource darstellt.
+Ein Zeiger auf die [**ID3D12Resource-Schnittstelle,**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource) die die Zwischenressource darstellt.
 
 </dd> <dt>
 
-*Intermediateoffset* 
+*IntermediateOffset* 
 </dt> <dd>
 
 Typ: **[ **UINT64**](/windows/desktop/WinProg/windows-data-types)**
 
-Der Offset in Bytes der zwischen Ressource.
+Der Offset in Bytes zur Zwischenressource.
 
 </dd> <dt>
 
-*Firstsubresource* \[ in\]
+*FirstSubresource* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Der Index der ersten unter Quelle in der Ressource. Der Bereich gültiger Werte ist 0 bis D3D12 \_ req \_ subresources.
+Der Index der ersten Unterressource in der Ressource. Der Bereich der gültigen Werte beträgt 0 bis D3D12 \_ REQ \_ SUBRESOURCES.
 
 </dd> <dt>
 
-*Numsubresources* \[ in\]
+*NumSubresources* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Anzahl der unter Ressourcen in der Ressource. Der Bereich gültiger Werte ist 0 bis (D3D12 \_ req \_ subresources- *firstsubresource*).
+Die Anzahl der Unterressourcen in der Ressource. Der Bereich der gültigen Werte beträgt 0 bis (D3D12 \_ REQ \_ SUBRESOURCES – *FirstSubresource*).
 
 </dd> <dt>
 
-*pSrcData* \[ in\]
+*pSrcData* \[ In\]
 </dt> <dd>
 
-Typ: **[ **D3D12 \_ subresource- \_ Daten**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_data)\***
+Typ: **[ **D3D12 \_ SUBRESOURCE \_ DATA**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_data)\***
 
-Zeiger auf ein Array (der Länge *numsubresources*) von Zeigern auf D3D12-unter Berichts [**\_ \_ Daten**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_data) Strukturen, die Beschreibungen der für das Update verwendeten unter Berichtsdaten enthalten.
+Zeiger auf ein Array (der Länge *NumSubresources*) von Zeigern auf [**D3D12 \_ SUBRESOURCE \_ DATA-Strukturen,**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_data) die Beschreibungen der für das Update verwendeten Unterressourcendaten enthalten.
 
 </dd> </dl>
 
@@ -122,13 +122,13 @@ Die Größe des Cookies in Bytes.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx12. h</dt> </dl>  |
-| Bibliothek<br/> | <dl> <dt>D3D12. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx12.h</dt> </dl>  |
+| Bibliothek<br/> | <dl> <dt>D3D12.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D3D12.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

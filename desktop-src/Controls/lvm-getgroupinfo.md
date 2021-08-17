@@ -1,5 +1,5 @@
 ---
-title: LVM_GETGROUPINFO Meldung (Commctrl.h)
+title: LVM_GETGROUPINFO-Nachricht (Commctrl.h)
 description: Ruft Gruppeninformationen ab.
 ms.assetid: 72d84e0b-121e-473b-a34d-874234c598b6
 keywords:
@@ -44,7 +44,7 @@ Gibt bei Erfolg die ID der Gruppe zurück, andernfalls -1.
 Bevor Sie versuchen, den Header für eine Gruppe abzurufen, stellen Sie zunächst sicher, dass die Gruppe nicht über den \_ LBGS NOHEADER-Stil verfügt.
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest angeben, das Comclt32.dll Version 6.0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
+> Um diese Meldung verwenden zu können, müssen Sie ein Manifest angeben, das Comclt32.dll Version 6.0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 

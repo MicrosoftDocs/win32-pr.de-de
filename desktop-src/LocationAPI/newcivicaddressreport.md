@@ -1,7 +1,7 @@
 ---
-description: Tritt auf, wenn ein neuer Bericht über die Berichterstellung generiert wird.
+description: Tritt ein, wenn ein neuer Bericht zur Stadtadresse generiert wird.
 ms.assetid: a8df870e-6744-4e8a-a103-56b446da135f
-title: Newcivicaddressreport-Ereignis
+title: NewCivicAddressReport-Ereignis
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: fa786ecee4ce4223cdb7ec0c8400c5c11bf6e192
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 61b5c6c05d8aa551148d278fa0cbafa8791bbc4c1a1f6b1142ef7f2ef80af318
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868891"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118386736"
 ---
-# <a name="newcivicaddressreport-event"></a>Newcivicaddressreport-Ereignis
+# <a name="newcivicaddressreport-event"></a>NewCivicAddressReport-Ereignis
 
-\[Das Location-API-Objektmodell ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-geolozierungs-API](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85)), um auf den Standort von einer Website zuzugreifen. Verwenden Sie die [**Windows. Devices. Geolokation**](/uwp/api/Windows.Devices.Geolocation) -API, um auf den Speicherort einer Desktop Anwendung zuzugreifen.\]
+\[Das Location API-Objektmodell ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-Geolocation-API,](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85))um von einer Website aus auf den Standort zuzugreifen. Verwenden Sie den Windows, um von einer Desktopanwendung aus auf den Speicherort [**zuzugreifen. Devices.Geolocation-API.**](/uwp/api/Windows.Devices.Geolocation)\]
 
-Tritt auf, wenn ein neuer Bericht über die Berichterstellung generiert wird.
+Tritt ein, wenn ein neuer Bericht zur Stadtadresse generiert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ Tritt auf, wenn ein neuer Bericht über die Berichterstellung generiert wird.
 
 <dl> <dt>
 
-*newreport* 
+*newReport* 
 </dt> <dd>
 
-Das neue [**LocationDisp. dispcivicaddressreport**](locationdisp-dispcivicaddressreport.md) -Objekt.
+Das neue [**LocationDisp.DispCivicAddressReport-Objekt.**](locationdisp-dispcivicaddressreport.md)
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung dieses Ereignisses finden Sie unter Überwachen von [Ereignissen für den öffentlichen Adress Bericht](/uwp/api/Windows.Devices.Geolocation).
+Ein Beispiel für die Verwendung dieses Ereignisses finden Sie unter [Listening for Civic Address Report Events](/uwp/api/Windows.Devices.Geolocation).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Ein Beispiel für die Verwendung dieses Ereignisses finden Sie unter Überwachen
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                  |
 
 

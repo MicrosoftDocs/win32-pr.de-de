@@ -1,7 +1,7 @@
 - name: API zur Vergrößerung
   href: ./entry-magapi-sdk.md
   items:
-    - name: Übersicht über die Vergrößerung
+    - name: Übersicht über die Vergrößerungs-API
       href: ./magapi-intro.md
     - name: Verweis
       href: ./entry-magapi-ref.md
@@ -9,59 +9,59 @@
         - name: Konstanten
           href: ./entry-magapi-constants.md
           items:
-            - name: Bildschirm Stile
+            - name: Vergrößerungsstile
               href: ./magapi-magnifier-styles.md
         - name: Functions
           href: ./entry-magapi-functions.md
           items:
-            - name: Maggetcoloreffect
+            - name: MagGetColorEffect
               href: /windows/win32/api/Magnification/nf-magnification-maggetcoloreffect
-            - name: Maggetfullscreencoloreffect
+            - name: MagGetFullscreenColorEffect
               href: /windows/win32/api/Magnification/nf-magnification-maggetfullscreencoloreffect
-            - name: Maggetfullscreentransform
+            - name: MagGetFullscreenTransform
               href: /windows/win32/api/Magnification/nf-magnification-maggetfullscreentransform
-            - name: Maggetimagescalingcallback
+            - name: MagGetImageScalingCallback
               href: /windows/win32/api/Magnification/nf-magnification-maggetimagescalingcallback
-            - name: Maggetinputtransform
+            - name: MagGetInputTransform
               href: /windows/win32/api/Magnification/nf-magnification-maggetinputtransform
-            - name: Maggetwindowfilterlist
+            - name: MagGetWindowFilterList
               href: /windows/win32/api/Magnification/nf-magnification-maggetwindowfilterlist
-            - name: Maggetwindowsource
+            - name: MagGetWindowSource
               href: /windows/win32/api/Magnification/nf-magnification-maggetwindowsource
-            - name: Maggetwindowtransform
+            - name: MagGetWindowTransform
               href: /windows/win32/api/Magnification/nf-magnification-maggetwindowtransform
-            - name: Magimagescalingcallback
+            - name: MagImageScalingCallback
               href: /windows/win32/api/Magnification/nc-magnification-magimagescalingcallback
-            - name: Maginitialize
+            - name: MagInitialize
               href: /windows/win32/api/Magnification/nf-magnification-maginitialize
-            - name: Magsetcoloreffect
+            - name: MagSetColorEffect
               href: /windows/win32/api/Magnification/nf-magnification-magsetcoloreffect
-            - name: Magsetfullscreencoloreffect
+            - name: MagSetFullscreenColorEffect
               href: /windows/win32/api/Magnification/nf-magnification-magsetfullscreencoloreffect
-            - name: Magsetfullscreentransform
+            - name: MagSetFullscreenTransform
               href: /windows/win32/api/Magnification/nf-magnification-magsetfullscreentransform
-            - name: Mageltimagescalingcallback
+            - name: MagSetImageScalingCallback
               href: /windows/win32/api/Magnification/nf-magnification-magsetimagescalingcallback
-            - name: Magationtinputtransform
+            - name: MagSetInputTransform
               href: /windows/win32/api/Magnification/nf-magnification-magsetinputtransform
-            - name: Magsetwindowfilterlist
+            - name: MagSetWindowFilterList
               href: /windows/win32/api/Magnification/nf-magnification-magsetwindowfilterlist
-            - name: Magsetwindowsource
+            - name: MagSetWindowSource
               href: /windows/win32/api/Magnification/nf-magnification-magsetwindowsource
-            - name: Magsetwindowtransform
+            - name: MagSetWindowTransform
               href: /windows/win32/api/Magnification/nf-magnification-magsetwindowtransform
-            - name: Magshowsystemcursor
+            - name: MagShowSystemCursor
               href: /windows/win32/api/Magnification/nf-magnification-magshowsystemcursor
-            - name: Maguninitialize
+            - name: MagUninitialize
               href: /windows/win32/api/Magnification/nf-magnification-maguninitialize
         - name: Strukturen
           href: ./entry-magapi-structures.md
           items:
-            - name: Magcoloreffect
+            - name: MAGCOLOREFFECT
               href: /windows/win32/api/magnification/ns-magnification-magcoloreffect
-            - name: Magimageheader
+            - name: MAGIMAGEHEADER
               href: /windows/win32/api/magnification/ns-magnification-magimageheader
-            - name: Magtransform
+            - name: MAGTRANSFORM
               href: /windows/win32/api/magnification/ns-magnification-magtransform
     - name: Beispiele
       href: ./magapi-samples-entry.md

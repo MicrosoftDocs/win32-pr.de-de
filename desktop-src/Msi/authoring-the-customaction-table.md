@@ -1,37 +1,37 @@
 ---
-description: Geben Sie Datensätze für die fünf benutzerdefinierten Beispiel Aktionen ein, die im vorherigen Abschnitt für die Tabelle CustomAction erstellt wurden. Weitere Informationen zum Auffüllen der CustomAction-Tabelle für diese Art von benutzerdefinierter Aktion finden Sie unter benutzerdefinierter Aktionstyp 1.
+description: Geben Sie Datensätze für die fünf benutzerdefinierten Beispielaktionen ein, die im vorherigen Abschnitt in der CustomAction-Tabelle erstellt wurden. Weitere Informationen zum Auffüllen der CustomAction-Tabelle für diese Art von benutzerdefinierter Aktion finden Sie unter Benutzerdefinierter Aktionstyp 1.
 ms.assetid: 56828105-bd72-426d-833f-f756c577c77f
-title: Erstellen der Tabelle "CustomAction"
+title: Erstellen der CustomAction-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 56fb7d8cf99a30200e6a5525e3516e2b888c1129
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b618da6e88718aa59483b3b25c007ff0b41eb89f6e1dc18a7eb31563632dc54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959509"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119066080"
 ---
-# <a name="authoring-the-customaction-table"></a>Erstellen der Tabelle "CustomAction"
+# <a name="authoring-the-customaction-table"></a>Erstellen der CustomAction-Tabelle
 
-Geben Sie Datensätze für die fünf benutzerdefinierten Beispiel Aktionen ein, die im vorherigen Abschnitt für die [Tabelle CustomAction](customaction-table.md)erstellt wurden. Weitere Informationen zum Auffüllen der CustomAction-Tabelle für diese Art von benutzerdefinierter Aktion finden Sie unter [benutzerdefinierter Aktionstyp 1](custom-action-type-1.md).
+Geben Sie Datensätze für die fünf benutzerdefinierten Beispielaktionen ein, die im vorherigen Abschnitt in der [CustomAction-Tabelle erstellt wurden.](customaction-table.md) Weitere Informationen zum Auffüllen der CustomAction-Tabelle für diese Art von benutzerdefinierter Aktion finden Sie unter [Benutzerdefinierter Aktionstyp 1.](custom-action-type-1.md)
 
-[Tabelle "CustomAction"](customaction-table.md)
+[CustomAction-Tabelle](customaction-table.md)
 
 
 
 | Aktion            | type  | `Source`      | Ziel                |
 |-------------------|-------|-------------|-----------------------|
-| Processaccounts   | 1     | Process.dll | Processuseraccounts   |
-| Nicht installaccounts | 1     | Process.dll | Uninstalluseraccounts |
-| CreateAccount     | 11265 | Create.dll  | "Kreateuseraccount"     |
-| RemoveAccount     | 11265 | Remove.dll  | Removeuseraccount     |
-| Rollbackaccount   | 9473  | Remove.dll  | Removeuseraccount     |
+| ProcessAccounts   | 1     | Process.dll | ProcessUserAccounts   |
+| UninstallAccounts | 1     | Process.dll | UninstallUserAccounts |
+| CreateAccount     | 11265 | Create.dll  | CreateUserAccount     |
+| RemoveAccount     | 11265 | Remove.dll  | RemoveUserAccount     |
+| RollbackAccount   | 9473  | Remove.dll  | RemoveUserAccount     |
 
 
 
  
 
-Der C++-Quellcode für die Dynamic-Link-Bibliotheken wird im Windows Installer SDK bereitgestellt. Verwenden Sie "Process. cpp", um die Datei Process.dll zu erstellen. Erstellen Sie die Datei Create.dll mit CREATE. cpp. Verwenden Sie Remove. cpp, um Remove.dll zu erstellen. Fügen Sie diese Dynamic-Link Library-Dateien der Binär Tabelle hinzu.
+Der C++-Quellcode für die Dynamic Link-Bibliotheken wird im Windows Installer SDK bereitgestellt. Verwenden Sie Process.cpp, um die Datei zu Process.dll. Verwenden Sie Create.cpp, um die Datei zu Create.dll. Verwenden Sie Remove.cpp, um Remove.dll. Fügen Sie diese Dynamic Link Library-Dateien der Binary-Tabelle hinzu.
 
 [Binäre Tabelle](binary-table.md)
 
@@ -39,15 +39,15 @@ Der C++-Quellcode für die Dynamic-Link-Bibliotheken wird im Windows Installer S
 
 | Name        | Daten            |
 |-------------|-----------------|
-| Process.dll | {*binäre Daten*} |
-| Create.dll  | {*binäre Daten*} |
-| Remove.dll  | {*binäre Daten*} |
+| Process.dll | {*binary data*} |
+| Create.dll  | {*binary data*} |
+| Remove.dll  | {*binary data*} |
 
 
 
  
 
-Fügen Sie weiterhin [eine benutzerdefinierte customuseraccounts-Tabelle hinzu](adding-a-custom-customuseraccounts-table.md).
+Fahren Sie [mit Hinzufügen einer benutzerdefinierten CustomUserAccounts-Tabelle fort.](adding-a-custom-customuseraccounts-table.md)
 
  
 

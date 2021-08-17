@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentCannotDeleteTemplateTableException-Klasse'
+description: 'Weitere Informationen zu: EsentCannotDeleteTemplateTableException-Klasse'
 title: EsentCannotDeleteTemplateTableException-Klasse
 TOCTitle: EsentCannotDeleteTemplateTableException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentCannotDeleteTemplateTableException

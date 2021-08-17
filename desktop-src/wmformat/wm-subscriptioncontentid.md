@@ -29,7 +29,7 @@ g \_ wszWMSubscriptionContentID
 
 ## <a name="data-type"></a>Datentyp
 
-**\_WMT-TYPZEICHENFOLGE \_**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
 ## <a name="see-also"></a>Weitere Informationen
 

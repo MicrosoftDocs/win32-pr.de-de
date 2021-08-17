@@ -1,9 +1,9 @@
 ---
 title: LOG10
-description: Gibt den Logarithmus zur Basis 10 des angegebenen-Werts zurück.
+description: Gibt den Logarithmus der Basis 10 des angegebenen Werts zurück.
 ms.assetid: a94f8438-8153-4a31-bde3-98831edf99e5
 keywords:
-- LOG10 HLSL
+- log10 HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2d226dcc33da1aee6d55e21c6d97febc23577503
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1a0a6aa00037fcf93df39dc40f694f0460878121c9c8f962e4cc28ba0b4a0a94
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315980"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118791545"
 ---
 # <a name="log10"></a>LOG10
 
-Gibt den Logarithmus zur Basis 10 des angegebenen-Werts zurück.
+Gibt den Logarithmus der Basis 10 des angegebenen Werts zurück.
 
 
 
-| *ret* log10 (*x*) |
+| *ret* log10(*x*) |
 |------------------|
 
 
@@ -39,7 +39,7 @@ Gibt den Logarithmus zur Basis 10 des angegebenen-Werts zurück.
 
 | Element                                                   | BESCHREIBUNG                            |
 |--------------------------------------------------------|----------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[im \] angegebenen Wert.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der angegebene Wert.<br/> |
 
 
 
@@ -47,7 +47,7 @@ Gibt den Logarithmus zur Basis 10 des angegebenen-Werts zurück.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Logarithmus zur Basis 10 des *x* -Parameters. Wenn der *x* -Parameter negativ ist, gibt diese Funktion unbegrenzt zurück. Wenn das *x* 0 ist, gibt diese Funktion "-inf" zurück.
+Der Logarithmus der Basis 10 des *x-Parameters.* Wenn der *x-Parameter* negativ ist, gibt diese Funktion einen unbestimmten Wert zurück. Wenn das *x* 0 ist, gibt diese Funktion -INF zurück.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -55,23 +55,23 @@ Der Logarithmus zur Basis 10 des *x* -Parameters. Wenn der *x* -Parameter negati
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                           |
 |-------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------------|
-| *x*   | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
-| *TZI* | identisch mit Eingabe *x*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *x* |
+| *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
+| *Ret* | identisch mit Eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(n) wie Eingabe *x* |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt           |
 |------------------------------------------------------------------------------------|---------------------|
-| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | ja                 |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja ( \_ nur vs 1 \_ 1) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja                 |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja (nur \_ im Vergleich \_ zu 1 1) |
 
 
 
@@ -81,7 +81,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

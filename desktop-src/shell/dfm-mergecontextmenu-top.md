@@ -1,6 +1,6 @@
 ---
-description: Ermöglicht dem Rückruf, Elemente oben im erweiterten Menü hinzuzufügen.
-title: DFM_MERGECONTEXTMENU_TOP Meldung (shlobj. h)
+description: Ermöglicht dem Rückruf das Hinzufügen von Elementen am oberen Rand des erweiterten Menüs.
+title: DFM_MERGECONTEXTMENU_TOP Meldung (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: eed6aec6-11a0-4738-b5b9-a455d0e35eac
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 5810b5b6a0fc862b4dd8a9605cb9aa5c0c83afc6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4cafbbe7331242e65e27137a1b5b78da6b8c6086c8326f96bbc32520366d10a1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525355"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119351120"
 ---
-# <a name="dfm_mergecontextmenu_top-message"></a>DFM- \_ mergecontextmenu- \_ Top-Meldung
+# <a name="dfm_mergecontextmenu_top-message"></a>DFM \_ MERGECONTEXTMENU \_ TOP-Nachricht
 
-Ermöglicht dem Rückruf, Elemente oben im erweiterten Menü hinzuzufügen.
+Ermöglicht dem Rückruf das Hinzufügen von Elementen am oberen Rand des erweiterten Menüs.
 
 
 ```C++
@@ -41,37 +41,37 @@ DFM_MERGECONTEXTMENU_TOP
 
 <dl> <dt>
 
-*pqcminfo* \[ in\]
+*pqcminfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**qcminfo**](/windows/desktop/api/shlobj_core/ns-shlobj_core-qcminfo) -Struktur, die die Informationen enthält, die in der Zusammenführung verwendet werden.
+Ein Zeiger auf eine [**QCMINFO-Struktur,**](/windows/desktop/api/shlobj_core/ns-shlobj_core-qcminfo) die die in der Zusammenführung verwendeten Informationen enthält.
 
 </dd> <dt>
 
-*uFlags* \[ in\]
+*uFlags* \[ In\]
 </dt> <dd>
 
-Flags, die angeben, wie das Kontextmenü geändert werden kann. Dieser Parameter verwendet die CMF-Werte, die \_ \* in [**IContextMenu:: querycontextmenu**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu)beschrieben werden.
+Flags, die angeben, wie das Kontextmenü geändert werden kann. Dieser Parameter verwendet die \_ \* cmf-Werte, die in [**IContextMenu::QueryContextMenu**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu)beschrieben sind.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn dem erweiterten Kontextmenü Elemente hinzugefügt werden, müssen Sie mit Routinen unterstützt werden, die entsprechend reagieren, wenn eines dieser Elemente mithilfe von [**DFM \_ InvokeCommand**](dfm-invokecommand.md)aufgerufen wird.
+Wenn Dem erweiterten Kontextmenü Elemente hinzugefügt werden, müssen sie mit Routinen unterstützt werden, die entsprechend reagieren, wenn eines dieser Elemente mit [**DFM \_ INVOKECOMMAND**](dfm-invokecommand.md)aufgerufen wird.
 
-Diese Nachricht wird entweder an die Rückruffunktion oder an das Rückruf Objekt gesendet, je nachdem, wie das Standardkontext Menü-Objekt implementiert wird. Es gibt zwei APIs für die Implementierung, [**cdeffoldermenu \_ Create2**](/windows/desktop/api/shlobj_core/nf-shlobj_core-cdeffoldermenu_create2), [**shkreatedefaultcontextmenu**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu).
+Diese Meldung wird entweder an die Rückruffunktion oder das Rückrufobjekt gesendet, je nachdem, wie das Standardkontextmenüobjekt implementiert wird. Es gibt zwei APIs für die Implementierung: [**CDefFolderMenu \_ Create2**](/windows/desktop/api/shlobj_core/nf-shlobj_core-cdeffoldermenu_create2), [**SHCreateDefaultContextMenu.**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu)
 
-[**DFM \_ Invokecommandex**](dfm-invokecommandex.md) ist eine erweiterte Version dieser Nachricht und bietet weitere Informationen für den Rückruf. Verwenden Sie **DFM \_ invokecommandex** , wenn die zusätzlichen Informationen, die von dieser Schnittstelle bereitgestellt werden, in der Implementierung benötigt werden.
+[**DFM \_ INVOKECOMMANDEX**](dfm-invokecommandex.md) ist eine erweiterte Version dieser Nachricht und stellt weitere Informationen zum Rückruf bereit. Verwenden Sie **DFM \_ INVOKECOMMANDEX,** wenn die zusätzlichen Informationen, die von dieser Schnittstelle bereitgestellt werden, in Ihrer Implementierung benötigt werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

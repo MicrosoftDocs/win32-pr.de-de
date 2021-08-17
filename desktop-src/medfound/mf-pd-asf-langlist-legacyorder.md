@@ -1,65 +1,65 @@
 ---
-description: Enthält eine Liste der in der aktuellen Präsentation verwendeten RFC 1766-Sprachen.
+description: Enthält eine Liste der RFC 1766-Sprachen, die in der aktuellen Präsentation verwendet werden.
 ms.assetid: 8853bd88-d51a-478c-8c78-cf69a260e295
-title: MF_PD_ASF_LANGLIST_LEGACYORDER-Attribut (wmcontainer. h)
+title: MF_PD_ASF_LANGLIST_LEGACYORDER -Attribut (Wmcontainer.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f24abc714a7605800faa8ad66f8c0b888fba6f79
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 32693550ecbe48d14d6e26b9c509f3b90cfd1c327fd945583f1cdff729db7bc6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353607"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119102930"
 ---
-# <a name="mf_pd_asf_langlist_legacyorder-attribute"></a>MF \_ PD \_ ASF \_ langlist \_ legacyorder-Attribut
+# <a name="mf_pd_asf_langlist_legacyorder-attribute"></a>MF \_ PD \_ ASF \_ LANGLIST \_ LEGACYORDER-Attribut
 
-Enthält eine Liste der in der aktuellen Präsentation verwendeten RFC 1766-Sprachen.
+Enthält eine Liste der RFC 1766-Sprachen, die in der aktuellen Präsentation verwendet werden.
 
 ## <a name="data-type"></a>Datentyp
 
-**Hobby \[\]**
+**Byte \[\]**
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Zum Abrufen dieses Attributs müssen Sie [**imfattributes:: GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)aufrufen.
+Um dieses Attribut zu erhalten, rufen [**Sie DEN ATTRIBUTEAttributes::GetBlob auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
 
-Um dieses Attribut festzulegen, müssen Sie [**imfattributes:: setBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)aufrufen.
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetBlob auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF presentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
+[**BESCHRIFTungDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Präsentations Deskriptoren, die durch einen Aufruf von [**imfasfcontentinfo:: generatepresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor)aus dem [Objekt "ASF ContentInfo](asf-contentinfo-object.md) " generiert wurden. Das Bytearray weist das folgende Format auf:
+Dieses Attribut gilt für Präsentationsdeskriptoren, die durch einen Aufruf von [**IMFASFContentInfo::GeneratePresentationDescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor)aus dem [ASF ContentInfo-Objekt](asf-contentinfo-object.md) generiert wurden. Das Format des Bytearrays lautet wie folgt:
 
 
 
-| Feld "sprach Listen Objekt" | Datentyp    | Size    | BESCHREIBUNG                            |
+| Feld "Language List Object" (Sprachlistenobjekt) | Datentyp    | Size    | Beschreibung                            |
 |----------------------------|--------------|---------|----------------------------------------|
-| Anzahl der Sprach-ID-Einträge  | **DWORD**    | 4 Bytes | Anzahl von Sprachen                    |
-| Sprach-ID-Einträge        | **Hobby**\[\] | Varies  | Array von sprach Zeichenfolgen (siehe unten). |
+| Anzahl der Sprach-ID-Datensätze  | **DWORD**    | 4 Bytes | Anzahl von Sprachen                    |
+| Sprach-ID-Datensätze        | **Byte**\[\] | Varies  | Array von Sprachzeichenfolgen (siehe unten). |
 
 
 
  
 
-Der erste **DWORD** -Wert ist die Anzahl der Sprachen, gefolgt von einem Array von sprachbezeichnerzeichenfolgen. Jede Zeichenfolge weist das folgende Format auf:
+Das erste **DWORD ist** die Anzahl der Sprachen, gefolgt von einem Array von Sprachbezeichnerzeichenfolgen. Jede Zeichenfolge hat das folgende Format:
 
 
 
-| Feld "sprach Listen Objekt" | Datentyp     | Size    | BESCHREIBUNG                                                                               |
+| Feld "Language List Object" (Sprachlistenobjekt) | Datentyp     | Size    | Beschreibung                                                                               |
 |----------------------------|---------------|---------|-------------------------------------------------------------------------------------------|
-| Länge der Sprach-ID         | **DWORD**     | 4 Bytes | Die Länge der Zeichenfolge in Bytes, einschließlich der Größe des nachfolgenden **null** Zeichens. |
-| Sprach-ID                | **WCHAR**\[\] | Varies  | Eine mit NULL endenden Zeichenfolge, die den Namen der RFC 1766-Sprache enthält.                           |
+| Länge der Sprach-ID         | **DWORD**     | 4 Bytes | Die Länge der Zeichenfolge in Bytes, einschließlich der Größe des folgenden **NULL-Zeichens.** |
+| Sprach-ID                | **Wchar**\[\] | Varies  | Eine auf NULL beendete Zeichenfolge, die den Rfc 1766-Sprachnamen enthält.                           |
 
 
 
  
 
-Jede Zeichenfolge ist ein sprach Kennzeichen, das mit RFC 1766 kompatibel ist.
+Jede Zeichenfolge ist ein Sprachtag, das mit RFC 1766 kompatibel ist.
 
-Verwenden Sie dieses Attribut nur aus Gründen der Abwärtskompatibilität mit der Enumerationsreihenfolge der [**IWMReaderAdvanced4**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreaderadvanced4) -Schnittstelle im SDK des Windows Media-Formats. Die sprach Zeichenfolgen werden in einer anderen Reihenfolge als das MF-Attribut " [**\_ \_ ASF \_ langlist**](mf-pd-asf-langlist-attribute.md) " gespeichert.
+Verwenden Sie dieses Attribut nur aus Gründen der Abwärtskompatibilität mit der Enumerations reihenfolge der [**IWMReaderAdvanced4-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreaderadvanced4) im Windows Media Format SDK. Die Sprachzeichenfolgen werden in einer anderen Reihenfolge im [**MF \_ PD \_ ASF \_ LANGLIST-Attribut**](mf-pd-asf-langlist-attribute.md) gespeichert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,20 +67,20 @@ Verwenden Sie dieses Attribut nur aus Gründen der Abwärtskompatibilität mit d
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Wmcontainer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Wmcontainer.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Präsentations deskriptorattribute](presentation-descriptor-attributes.md)
+[Präsentationsdeskriptorattribute](presentation-descriptor-attributes.md)
 </dt> </dl>
 
  

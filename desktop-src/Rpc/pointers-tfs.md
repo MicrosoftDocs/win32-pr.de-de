@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über einen allgemeinen RPC-Zeiger, der als alles
 ms.assetid: 9756E637-BCBB-48F1-B962-25AF2C917921
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ade676610a310e230eb6fa89dd666996bb82040f
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 30a87c13f9657d56e3f85d1d5828dc097c25e29990c617c5f20679a1d6cbe91e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113119705"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118927350"
 ---
 # <a name="pointers-rpc"></a>Zeiger (RPC)
 
@@ -54,12 +54,12 @@ Zeigerattribute \_<1> können über eines der in der folgenden Tabelle gezeigten
 
 
 
-| attribute | Flag              | Beschreibung                                                                                                                                                                                                                                      |
+| attribute | Flag              | BESCHREIBUNG                                                                                                                                                                                                                                      |
 |------|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 01   | FC \_ ORDNET \_ ALLE KNOTEN ZU \_ | Der Zeiger ist Teil eines \_ Zuordnungsschemas allocate(all nodes).                                                                                                                                                                   |
+| 01   | FC \_ ZUORDNEN \_ ALLER \_ KNOTEN | Der Zeiger ist Teil eines \_ Zuordnungsschemas allocate(all nodes).                                                                                                                                                                   |
 | 02   | FC \_ DONT \_ FREE           | Ein allocate(don't \_ free)-Zeiger.                                                                                                                                                                                                      |
 | 04   | FC \_ ALLOCED \_ ON \_ STACK   | Ein Zeiger, dessen Referenz auf dem Stapel des Stubs zugeordnet ist.                                                                                                                                                                            |
-| 08   | FC \_ SIMPLE \_ POINTER      | Ein Zeiger auf einen einfachen Typ oder eine nicht konforme Zeichenfolge. Dieses Flag, das festgelegt wird, gibt das Layout der Zeigerbeschreibung wie das oben beschriebene einfache Zeigerlayout an, andernfalls wird das Deskriptorformat mit dem Offset angegeben. |
+| 08   | FC \_ SIMPLE \_ POINTER      | Ein Zeiger auf einen einfachen Typ oder eine nicht konforme Zeichenfolge. Dieses Flag, das festgelegt wird, gibt das Layout der Zeigerbeschreibung als das oben beschriebene einfache Zeigerlayout an, andernfalls wird das Deskriptorformat mit dem Offset angegeben. |
 | 10   | FC \_ POINTER \_ DEREF       | Ein Zeiger, der dereferenziert werden muss, bevor der Verweis des Zeigers verarbeitet wird.                                                                                                                                                           |
 
 
@@ -100,7 +100,7 @@ simple_type<1>
 byte_count_description<> 
 ```
 
-–und –
+– und –
 
 ``` syntax
 FC_BYTE_COUNT_POINTER 

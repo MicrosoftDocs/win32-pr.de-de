@@ -1,7 +1,7 @@
 ---
-description: Das aktuelle Ereignis Intervall für das Berichts Ereignis in Millisekunden.
+description: Das aktuelle Ereignisintervall des Stadtadressberichts in Millisekunden.
 ms.assetid: 495dd8a1-4244-468f-b295-337b393aea8a
-title: LocationDisp. civicaddressreportfactory. Report Interval (Eigenschaft)
+title: LocationDisp.CivicAddressReportFactory.ReportInterval-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 47f7840be20ac640b5a8e7014f8401bc2350d328
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d18db71ac97bbfca60d4892bb151388eee97dbb481508b86b595d5dda74954fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363424"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118387161"
 ---
-# <a name="locationdispcivicaddressreportfactoryreportinterval-property"></a>LocationDisp. civicaddressreportfactory. Report Interval (Eigenschaft)
+# <a name="locationdispcivicaddressreportfactoryreportinterval-property"></a>LocationDisp.CivicAddressReportFactory.ReportInterval-Eigenschaft
 
-\[Das Location-API-Objektmodell ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-geolozierungs-API](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85)), um auf den Standort von einer Website zuzugreifen. Verwenden Sie die [**Windows. Devices. Geolokation**](/uwp/api/Windows.Devices.Geolocation) -API, um auf den Speicherort einer Desktop Anwendung zuzugreifen.\]
+\[Das Location API-Objektmodell ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-Geolocation-API,](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85))um von einer Website aus auf den Standort zuzugreifen. Um von einer Desktopanwendung aus auf den Speicherort zuzugreifen, verwenden Sie die [**Windows. Devices.Geolocation-API.**](/uwp/api/Windows.Devices.Geolocation)\]
 
-Das aktuelle Ereignis Intervall für das Berichts Ereignis in Millisekunden.
+Das aktuelle Ereignisintervall des Stadtadressberichts in Millisekunden.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -39,11 +39,11 @@ LocationDisp.CivicAddressReportFactory.ReportInterval = ReportInterval
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Diese Eigenschaft ist ein Lese- **/Schreib-ULONG**.
+Diese Eigenschaft ist ein **ULONG-Objekt** mit Lese-/Schreibzugriff.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Wert ist eine Anforderung für den Speicherort Anbieter. Es ist nicht erforderlich, dass der standortanbieter Berichte in dem von Ihnen angeforderten Intervall bereitstellt. Lesen Sie den Wert dieser Eigenschaft, um die Einstellung für das tatsächliche Berichts Intervall zu ermitteln.
+Dieser Wert ist eine Anforderung für den Standortanbieter. Der Standortanbieter muss keine Berichte in dem von Ihnen angeforderten Intervall bereitstellen. Lesen Sie den Wert dieser Eigenschaft, um die Einstellung true report interval zu ermitteln.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,7 +51,7 @@ Dieser Wert ist eine Anforderung für den Speicherort Anbieter. Es ist nicht erf
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                  |
 
 

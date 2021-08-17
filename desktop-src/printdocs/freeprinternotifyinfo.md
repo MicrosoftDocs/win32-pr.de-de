@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "freprinternotifyinfo" gibt einen vom System zugewiesenen Puffer frei, der von der findnextprinterchangenotifi-Funktion erstellt wurde.
+description: Die FreePrinterNotifyInfo-Funktion gibt einen vom System zugeordneten Puffer frei, der von der FindNextPrinterChangeNotification-Funktion erstellt wurde.
 ms.assetid: e50d4718-3682-486b-9d07-ddddd0b284dc
-title: Freprinternotifyinfo-Funktion (winspool. h)
+title: FreePrinterNotifyInfo-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Spoolss.dll
-ms.openlocfilehash: 8d2cc22971c2645af250a9e92872b89959387163
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 37340bc7d5ba576735c7bf4cc1ef8ac40b07377e829353d35452ed0fa5307891
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347351"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120091950"
 ---
-# <a name="freeprinternotifyinfo-function"></a>Freprinternotifyinfo-Funktion
+# <a name="freeprinternotifyinfo-function"></a>FreePrinterNotifyInfo-Funktion
 
-Die Funktion " **freprinternotifyinfo** " gibt einen vom System zugewiesenen Puffer frei, der von der [**findnextprinterchangenotifi-**](findnextprinterchangenotification.md) Funktion erstellt wurde.
+Die **FreePrinterNotifyInfo-Funktion** gibt einen vom System zugeordneten Puffer frei, der von der [**FindNextPrinterChangeNotification-Funktion**](findnextprinterchangenotification.md) erstellt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ BOOL FreePrinterNotifyInfo(
 
 <dl> <dt>
 
-*pprinternotifyinfo* \[ in\]
+*pPrinterNotifyInfo* \[ In\]
 </dt> <dd>
 
-Zeiger auf einen [**Drucker \_ Benachrichtigungs \_**](printer-notify-info.md) Puffer, der von einem aufrufsbefehl der [**findnextprinterchangenotifi-**](findnextprinterchangenotification.md) Funktion zurückgegeben wird. " **Freiprinternotifyinfo** " hebt die Zuordnung dieses Puffers auf.
+Zeiger auf einen [**PRINTER \_ NOTIFY \_ INFO-Puffer,**](printer-notify-info.md) der von einem Aufruf der [**FindNextPrinterChangeNotification-Funktion**](findnextprinterchangenotification.md) zurückgegeben wird. **FreePrinterNotifyInfo** hebt die Zuordnung dieses Puffers auf.
 
 </dd> </dl>
 
@@ -52,10 +52,10 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Wert u
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion und wird möglicherweise nicht sofort zurückgegeben. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren für Druckertreiber ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion über einen Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, kann dazu bringen, dass die Anwendung scheinbar nicht reagiert.
 
  
 
@@ -67,13 +67,13 @@ Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
 | DLL<br/>                      | <dl> <dt>Spoolss.dll</dt> </dl>                    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -83,10 +83,10 @@ Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**Findnextprinterchangenotifizierung**](findnextprinterchangenotification.md)
+[**FindNextPrinterChangeNotification**](findnextprinterchangenotification.md)
 </dt> <dt>
 
-[**Drucker \_ Benachrichtigungs \_ Informationen**](printer-notify-info.md)
+[**\_ \_ DRUCKERBENACHRICHTIGUNGSINFORMATIONEN**](printer-notify-info.md)
 </dt> </dl>
 
  

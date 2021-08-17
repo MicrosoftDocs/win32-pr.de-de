@@ -1,9 +1,9 @@
 ---
 title: XTYP_ADVSTART Transaktion (Ddeml.h)
-description: Ein Client verwendet die XTYP \_ ADVSTART-Transaktion, um eine Advise-Schleife mit einem Server herzustellen.
+description: Ein Client verwendet die XTYP \_ ADVSTART-Transaktion, um eine Advise-Schleife mit einem Server einzurichten.
 ms.assetid: 8911e722-5656-4ca6-8b0a-6bdf8281611a
 keywords:
-- XTYP_ADVSTART Transaktion Data Exchange
+- XTYP_ADVSTART Exchange von Transaktionsdaten
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118544759"
 ---
 # <a name="xtyp_advstart-transaction"></a>XTYP \_ ADVSTART-Transaktion
 
-Ein Client verwendet die **XTYP \_ ADVSTART-Transaktion,** um eine Advise-Schleife mit einem Server herzustellen. Eine dynamische Daten Exchange-Serverrückruffunktion [*(DdeCallback)*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)empfängt diese Transaktion, wenn ein Client **XTYP \_ ADVSTART** als *wType-Parameter* der [**DdeClientTransaction-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction) angibt.
+Ein Client verwendet die **XTYP \_ ADVSTART-Transaktion,** um eine Advise-Schleife mit einem Server einzurichten. Eine dynamische Daten Exchange (DDE)-Serverrückruffunktion, [*DdeCallback,*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)empfängt diese Transaktion, wenn ein Client **XTYP \_ ADVSTART** als *wType-Parameter* der [**DdeClientTransaction-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction) angibt.
 
 
 ```C++
@@ -95,13 +95,13 @@ Wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Serverrückruffunktion sollte **TRUE** zurückgeben, um eine Advise-Schleife für das angegebene Themennamens- und Elementnamenpaar zu ermöglichen, oder **FALSE,** um die Advise-Schleife zu verweigern. Wenn die Rückruffunktion **TRUE** zurückgibt, bewirkt jeder nachfolgende Aufruf der [**DdePostAdvise-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise) durch den Server im selben Themennamen- und Elementnamenpaar, dass das System [**XTYP \_ ADBENACHRICHTIGUNGQ-Transaktionen**](xtyp-advreq.md) an den Server sendet.
+Eine Serverrückruffunktion sollte **TRUE** zurückgeben, um eine Advise-Schleife für das angegebene Themen- und Elementnamenpaar zuzulassen, oder **FALSE,** um die Advise-Schleife zu verweigern. Wenn die Rückruffunktion **TRUE** zurückgibt, bewirkt jeder nachfolgende Aufruf der [**DdePostAdvise-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddepostadvise) durch den Server im gleichen Themennamen- und Elementnamenpaar, dass das System [**XTYP \_ ADHAPQ-Transaktionen**](xtyp-advreq.md) an den Server sendet.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn ein Client eine Advise-Schleife für einen Themennamen, Einen Elementnamen und ein Datenformat für eine bereits eingerichtete Advise-Schleife an fordert, erstellt die dynamische Daten Exchange Management Library (DDEML) keine doppelte Advise-Schleife, sondern ändert stattdessen die Advise-Schleifenflags (**XTYPF \_ ACKREQ** und **XTYPF \_ NODATA**) so, dass sie mit der neuesten Anforderung übereinstimmen.
+Wenn ein Client eine Advise-Schleife für einen Themennamen, einen Elementnamen und ein Datenformat für eine bereits eingerichtete Advise-Schleife anfordert, erstellt die dynamische Daten Exchange Management Library (DDEML) keine doppelte Advise-Schleife, sondern ändert stattdessen die Advise-Schleifenflags (**XTYPF \_ ACKREQ** und **XTYPF \_ NODATA**), um der neuesten Anforderung zu entsprechen.
 
-Diese Transaktion wird gefiltert, wenn die Serveranwendung das **CBF \_ FAIL \_ ADVISES-Flag** in der [**DdeInitialize-Funktion angegeben**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) hat.
+Diese Transaktion wird gefiltert, wenn die Serveranwendung das **CBF \_ FAIL \_ FILTERS-Flag** in der [**DdeInitialize-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) angegeben hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,7 +115,7 @@ Diese Transaktion wird gefiltert, wenn die Serveranwendung das **CBF \_ FAIL \_ 
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -134,7 +134,7 @@ Diese Transaktion wird gefiltert, wenn die Serveranwendung das **CBF \_ FAIL \_ 
 **Konzeptionellen**
 </dt> <dt>
 
-[dynamische Daten Exchange Management Library](dynamic-data-exchange-management-library.md)
+[dynamische Daten Exchange-Verwaltungsbibliothek](dynamic-data-exchange-management-library.md)
 </dt> </dl>
 
  

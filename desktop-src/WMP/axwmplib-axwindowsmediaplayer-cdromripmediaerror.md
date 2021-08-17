@@ -1,9 +1,9 @@
 ---
-title: Cdromripmediaerror-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das cdromripmediaerror-Ereignis tritt auf, wenn ein Fehler auftritt, während ein einzelner Track-Vorgang von einer CD durchgeführt wird.
+title: ComeRipMediaError-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das CiererRipMediaError-Ereignis tritt auf, wenn beim Berieren einer einzelnen Spur von einer CD ein Fehler auftritt.
 ms.assetid: 542d0184-d893-4b98-903e-339909276fd6
 keywords:
-- Cdromripmediaerror-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- ComeRipMediaError-Ereignis des AxWindowsMediaPlayer-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 39b429505996cd5e85bc1e0e2e85c3f47103d244
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ea2be1f777c4af3385e41939743bb91a20d3d7094f1a38917b3e79686b2a2863
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367510"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136183"
 ---
-# <a name="cdromripmediaerror-event-of-the-axwindowsmediaplayer-object"></a>Cdromripmediaerror-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="cdromripmediaerror-event-of-the-axwindowsmediaplayer-object"></a>ComeRipMediaError-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das cdromripmediaerror-Ereignis tritt auf, wenn ein Fehler auftritt, während ein einzelner Track-Vorgang von einer CD durchgeführt wird.
+Das CiererRipMediaError-Ereignis tritt auf, wenn beim Berieren einer einzelnen Spur von einer CD ein Fehler auftritt.
 
 ``` syntax
 [C#]
@@ -41,14 +41,14 @@ Private Sub player_CdromRipMediaError(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ cdromripmediaerroreventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ cdromripmediaerrorevent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ ComeRipMediaErrorEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ ComeRipMediaErrorEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft  | BESCHREIBUNG                                                                                                             |
+| Eigenschaft  | Beschreibung                                                                                                             |
 |-----------|-------------------------------------------------------------------------------------------------------------------------|
-| pcdromrip | WMPLib. iwmpcdromripdie Schnittstelle, die den einreißen-Vorgang darstellt, der den Fehler ausgelöst hat.<br/>                |
-| pmedia    | System. objectdas Medien Element, das den Fehler ausgelöst hat. Sie können dies in eine iwmpmedia-Schnittstelle umwandeln, um darauf zuzugreifen.<br/> |
+| pCiererRip | WMPLib.IWMPCiererRipDie Schnittstelle, die den Löschvorgang darstellt, der den Fehler ausgelöst hat.<br/>                |
+| pMedia    | System.ObjectDas Medienelement, das den Fehler ausgelöst hat. Sie können dies in eine IWMPMedia-Schnittstelle um casten, um darauf zu zugreifen.<br/> |
 
 
 
@@ -66,17 +66,17 @@ Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents 
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromrip-Schnittstelle (VB und c#)**](iwmpcdromrip--vb-and-c.md)
+[**IWMPCiererRip-Schnittstelle (VB und C#)**](iwmpcdromrip--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> </dl>
 
  

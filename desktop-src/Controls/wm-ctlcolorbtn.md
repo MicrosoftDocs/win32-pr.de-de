@@ -1,6 +1,6 @@
 ---
 title: WM_CTLCOLORBTN (Winuser.h)
-description: Die WM \_ CTLCOLORBTN-Nachricht wird an das übergeordnete Fenster einer Schaltfläche gesendet, bevor die Schaltfläche gezeichnunget wird. Das übergeordnete Fenster kann den Text und die Hintergrundfarben der Schaltfläche ändern. Allerdings reagieren nur vom Besitzer gezeichnete Schaltflächen auf das übergeordnete Fenster, das diese Meldung verarbeitet.
+description: Die WM CTLCOLORBTN-Nachricht wird an das übergeordnete Fenster einer Schaltfläche gesendet, \_ bevor die Schaltfläche gezeichnunget wird. Das übergeordnete Fenster kann den Text und die Hintergrundfarben der Schaltfläche ändern. Allerdings reagieren nur vom Besitzer gezeichnete Schaltflächen auf das übergeordnete Fenster, das diese Meldung verarbeitet.
 ms.assetid: fd2ab917-ffd6-4f71-9b1c-0ecdfe53ae8b
 keywords:
 - WM_CTLCOLORBTN von Windows-Steuerelementen
@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118407639"
 ---
-# <a name="wm_ctlcolorbtn-message"></a>WM \_ CTLCOLORBTN-Nachricht
+# <a name="wm_ctlcolorbtn-message"></a>WM \_ CTLCOLORBTN-Meldung
 
 Die **WM \_ CTLCOLORBTN-Nachricht** wird an das übergeordnete Fenster einer Schaltfläche gesendet, bevor die Schaltfläche gezeichnunget wird. Das übergeordnete Fenster kann den Text und die Hintergrundfarben der Schaltfläche ändern. Allerdings reagieren nur vom Besitzer gezeichnete Schaltflächen auf das übergeordnete Fenster, das diese Meldung verarbeitet.
 
@@ -42,7 +42,7 @@ WM_CTLCOLORBTN
 *wParam* 
 </dt> <dd>
 
-Ein **HDC,** der das Handle für den Anzeigekontext für die Schaltfläche angibt.
+Ein **HDC,** das das Handle für den Anzeigekontext für die Schaltfläche angibt.
 
 </dd> <dt>
 
@@ -59,9 +59,9 @@ Wenn eine Anwendung diese Nachricht verarbeitet, muss sie ein Handle an einen Pi
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die Anwendung einen von ihr erstellten Pinsel zurückgibt (z. B. mithilfe der [**CreateSolidBrush-**](/windows/desktop/api/wingdi/nf-wingdi-createsolidbrush) oder [**CreateBrushIndirect-Funktion),**](/windows/desktop/api/wingdi/nf-wingdi-createbrushindirect) muss die Anwendung den Pinsel frei geben. Wenn die Anwendung einen Systempinsel zurückgibt (z. B. einen, der von der [**GetStockObject-**](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) oder [**GetSysColorBrush-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) abgerufen wurde), muss die Anwendung den Pinsel nicht frei geben.
+Wenn die Anwendung einen von ihr erstellten Pinsel zurückgibt (z. B. mithilfe der [**CreateSolidBrush-**](/windows/desktop/api/wingdi/nf-wingdi-createsolidbrush) oder [**CreateBrushIndirect-Funktion),**](/windows/desktop/api/wingdi/nf-wingdi-createbrushindirect) muss die Anwendung den Pinsel frei geben. Wenn die Anwendung einen Systempinsel zurückgibt (z. B. einen, der von der [**GetStockObject-**](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) oder [**GetSysColorBrush-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) abgerufen wurde), muss die Anwendung den Pinsel nicht freigibt.
 
-Standardmäßig wählt die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) die Standardsystemfarben für die Schaltfläche aus. Schaltflächen mit den [**Formaten BS \_ PUSHBUTTON,**](button-styles.md) [**BS \_ DEFPUSHBUTTON**](button-styles.md)oder [**BS \_ PUSHLIKE**](button-styles.md) verwenden nicht den zurückgegebenen Pinsel. Schaltflächen mit diesen Stilen werden immer mit den Standardsystemfarben gezeichnet. Das Zeichnen von Pushschaltflächen erfordert mehrere unterschiedliche Pinsel: Gesicht, Hervorhebung und Schatten. Die **\_ WM-CTLCOLORBTN-Nachricht** lässt jedoch zu, dass nur ein Pinsel zurückgegeben wird. Verwenden Sie eine vom Besitzer gezeichnete Schaltfläche, um eine benutzerdefinierte Darstellung für Schaltflächen zu ermöglichen. Weitere Informationen finden Sie unter [Creating Owner-Drawn Controls](user-controls-intro.md).
+Standardmäßig wählt die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) die Standardsystemfarben für die Schaltfläche aus. Schaltflächen mit den [**Formaten BS \_ PUSHBUTTON,**](button-styles.md) [**BS \_ DEFPUSHBUTTON**](button-styles.md)oder [**BS \_ PUSHLIKE**](button-styles.md) verwenden nicht den zurückgegebenen Pinsel. Schaltflächen mit diesen Stilen werden immer mit den Standardsystemfarben gezeichnet. Das Zeichnen von Pushschaltflächen erfordert mehrere unterschiedliche Pinsel: Gesicht, Hervorhebung und Schatten. Die **\_ WM-CTLCOLORBTN-Nachricht** lässt jedoch nur die Rückkehr eines Pinsels zu. Verwenden Sie eine vom Besitzer gezeichnete Schaltfläche, um eine benutzerdefinierte Darstellung für Schaltflächen zu ermöglichen. Weitere Informationen finden Sie unter [Creating Owner-Drawn Controls](user-controls-intro.md).
 
 Die **WM \_ CTLCOLORBTN-Nachricht** wird nie zwischen Threads gesendet. Es wird nur innerhalb eines Threads gesendet.
 

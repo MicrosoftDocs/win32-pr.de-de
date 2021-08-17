@@ -1,9 +1,9 @@
 ---
-title: einfacher prioritytype-Typ
-description: Definiert die minimalen und maximalen Werte für das Priority-Element (settingstype).
+title: priorityType Simple Type
+description: Definiert die Minimal- und Höchstwerte für das Priority (settingsType)-Element.
 ms.assetid: 44e97d78-f035-4db9-a557-f24960518628
 keywords:
-- einfacher prioritytype-Typ Taskplaner
+- priorityType simple type Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 05b3c6d04adf557242438c813dab4f10d48cdb9d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 71bdf8b87a641247ce2064ccf44ee861d79aab0593229e4cd7b38035c5c7c124
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119424430"
 ---
-# <a name="prioritytype-simple-type"></a>einfacher prioritytype-Typ
+# <a name="prioritytype-simple-type"></a>priorityType Simple Type
 
-Definiert die minimalen und maximalen Werte für das [**Priority-Element (settingstype)**](taskschedulerschema-priority-settingstype-element.md) .
+Definiert die Minimal- und Höchstwerte für das [**Priority (settingsType)-Element.**](taskschedulerschema-priority-settingstype-element.md)
 
 ``` syntax
 <xs:simpleType name="priorityType">
@@ -41,14 +41,14 @@ Definiert die minimalen und maximalen Werte für das [**Priority-Element (settin
 
 ## <a name="enumeration-values"></a>Enumerationswerte
 
-Der einfache **prioritytype** -Typ definiert die folgenden Werte.
+Der einfache **PriorityType-Typ** definiert die folgenden Werte.
 
 
 
-| Wert | BESCHREIBUNG                         |
+| Wert | Beschreibung                         |
 |-------|-------------------------------------|
-| 0     | Minimale Ganzzahl zulässig.<br/> |
-| 10    | Maximale Ganzzahl zulässig.<br/> |
+| 0     | Mindestens zulässige ganze Zahl.<br/> |
+| 10    | Maximal zulässige ganze Zahl.<br/> |
 
 
 
@@ -58,16 +58,16 @@ Der einfache **prioritytype** -Typ definiert die folgenden Werte.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Einfache Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[Taskplaner schema simple types (Einfache Schematypen)](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

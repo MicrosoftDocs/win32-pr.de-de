@@ -1,24 +1,24 @@
 ---
-description: Implementiert Schnittstellen Methoden, die Drittanbieter für die Interaktion mit Eltern Steuerungs-APIs verwenden können.
+description: Implementiert Schnittstellenmethoden, die Drittanbieter für die Interaktion mit Jugendschutz-APIs verwenden können.
 ms.assetid: a2cbc127-7011-4107-9ee2-f7172c069ed7
-title: WMI-Anbieter-API für Eltern Steuerelemente
+title: WMI-Anbieter-API für Jugendschutz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b8d6790f201c74ea79c69814eb8d22a7a6f78106
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a02413f98750d8d1274b4523f11cd842989a64e8d90ce1252f7ed14452978db3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368729"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119100584"
 ---
-# <a name="parental-controls-wmi-provider-api"></a>WMI-Anbieter-API für Eltern Steuerelemente
+# <a name="parental-controls-wmi-provider-api"></a>WMI-Anbieter-API für Jugendschutz
 
-Die WMI-Anbieter-API implementiert Schnittstellen Methoden, die Drittanbieter für die Interaktion mit Eltern Steuerungs-APIs verwenden können.
+Die WMI-Anbieter-API implementiert Schnittstellenmethoden, die Drittanbieter für die Interaktion mit Jugendschutz-APIs verwenden können.
 
--   [**Iwpcproviderconfig**](/windows/desktop/api/Wpcapi/nn-wpcapi-iwpcproviderconfig)
--   [**Iwpcproviderstate**](/windows/desktop/api/Wpcapi/nn-wpcapi-iwpcproviderstate)
--   [**Iwpcprovidersupport**](/windows/desktop/api/Wpcapi/nn-wpcapi-iwpcprovidersupport)
--   [Jugend Steuerungs-WMI-Anbieter Schema](parental-controls-wmi-provider-schema.md)
+-   [**IWPCProviderConfig**](/windows/desktop/api/Wpcapi/nn-wpcapi-iwpcproviderconfig)
+-   [**IWPCProviderState**](/windows/desktop/api/Wpcapi/nn-wpcapi-iwpcproviderstate)
+-   [**IWPCProviderSupport**](/windows/desktop/api/Wpcapi/nn-wpcapi-iwpcprovidersupport)
+-   [Schema des WMI-Anbieters für die Jugendschutzfunktionen](parental-controls-wmi-provider-schema.md)
 
  
 

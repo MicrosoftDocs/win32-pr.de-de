@@ -1,5 +1,5 @@
 ---
-description: Von XMUBYTEN4 verfügbar gemachte Konstruktoren.
+description: Konstruktoren, die von XMUBYTEN4 verfügbar gemacht werden.
 ms.assetid: 0bb46e9b-6c76-40b5-9bf0-6387edfed484
 title: XMUBYTEN4-Konstruktoren
 ms.topic: reference
@@ -11,18 +11,18 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: e67401329c161728478e7c93a5b3939c0c27746a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d9c2951809241ed4a53ebbdf56006e6bc25703fb0962102e43d176efdf819e28
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345214"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119117981"
 ---
 # <a name="xmubyten4-constructors"></a>XMUBYTEN4-Konstruktoren
 
-Von verfügbar gemachte Konstruktoren `XMUBYTEN4` .
+Konstruktoren, die von verfügbar gemacht `XMUBYTEN4` werden.
 
-Erstellt Instanzen der [**XMUBYTEN4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmubyten4) -Struktur.
+Erstellt Instanzen der [**XMUBYTEN4-Struktur.**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmubyten4)
 
 > [!Note]  
 > Die hier aufgeführten Konstruktoren sind nur unter C++ verfügbar.
@@ -56,7 +56,7 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten4-xmubyten4(uint32_t)"><strong>XMUBYTEN4 (uint32_t)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTEN4</code> aus einer <code>uint32_t</code> Variablen, die Komponenten Daten in einem gepackten Format enthält. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmubyten4"><strong>XMUBYTEN4</strong></a> aus einer <code>uint32_t</code> Variablen, die Komponenten Daten in einem gepackten Format enthält. <br/>
+<td style="text-align: left;">Initialisiert eine neue Instanz von aus <code>XMUBYTEN4</code> einer <code>uint32_t</code> Variablen, die Komponentendaten in einem gepackten Format enthält. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmubyten4"><strong>XMUBYTEN4</strong></a> aus einer Variablen, die <code>uint32_t</code> Komponentendaten in einem gepackten Format enthält. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -64,8 +64,8 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten4-xmubyten4(constfloat)"><strong>XMUBYTEN4 (konstant float *)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTEN4</code> aus einem Array Argument mit vier Elementen <code>float</code> . <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmubyten4"><strong>XMUBYTEN4</strong></a> aus einem Array Argument mit vier Elementen <code>float</code> . <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten4-xmubyten4(constfloat)"><strong>XMUBYTEN4 (const float*)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von aus <code>XMUBYTEN4</code> einem Arrayargument mit <code>float</code> vier Element. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmubyten4"><strong>XMUBYTEN4</strong></a> aus einem aus einem Arrayargument mit <code>float</code> vier Elemente. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -73,8 +73,8 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten4-xmubyten4(constuint8_t)"><strong>XMUBYTEN4 (konstant uint8_t *)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTE4</code> aus einem Array Argument mit vier Elementen <code>uint8_t</code> .<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmubyten4"><strong>XMUBYTEN4</strong></a> aus einem Array Argument mit vier Elementen <code>uint8_t</code> .<br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten4-xmubyten4(constuint8_t)"><strong>XMUBYTEN4 (const uint8_t*)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von aus <code>XMUBYTE4</code> einem Arrayargument mit <code>uint8_t</code> vier Element.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmubyten4"><strong>XMUBYTEN4 aus</strong></a> einem Arrayargument mit <code>uint8_t</code> vier Element.<br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -82,8 +82,8 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten4-xmubyten4(float_float_float_float)"><strong>XMUBYTEN4 (float, float, float, float)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTEN4</code> aus vier <code>float</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmubyten4"><strong>XMUBYTEN4</strong></a> aus vier <code>float</code> Argumenten. <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten4-xmubyten4(float_float_float_float)"><strong>XMUBYTEN4 (float,float,float,float)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTEN4</code> aus vier <code>float</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmubyten4"><strong>XMUBYTEN4 aus</strong></a> vier <code>float</code> Argumenten. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -91,8 +91,8 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten4-xmubyten4(uint8_t_uint8_t_uint8_t_uint8_t)"><strong>XMUBYTEN4 (uint8_t, uint8_t, uint8_t, uint8_t)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTEN4</code> aus vier <code>uint8_t</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmubyten4"><strong>XMUBYTEN4</strong></a> aus vier <code>uint8_t</code> Argumenten. <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten4-xmubyten4(uint8_t_uint8_t_uint8_t_uint8_t)"><strong>XMUBYTEN4 (uint8_t,uint8_t,uint8_t,uint8_t)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTEN4</code> aus vier <code>uint8_t</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmubyten4"><strong>XMUBYTEN4 aus</strong></a> vier <code>uint8_t</code> Argumenten. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -104,14 +104,14 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [XMUBYTEN4-Erweiterungen](ovw-xmubyten4-extensions.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**XMUBYTEN4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmubyten4)

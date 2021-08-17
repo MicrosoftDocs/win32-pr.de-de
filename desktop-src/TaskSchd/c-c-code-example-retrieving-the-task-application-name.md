@@ -1,22 +1,22 @@
 ---
-title: C/C++-Code Beispiel Abrufen des Aufgaben Anwendungs namens
-description: In diesem Beispiel wird der Name der Anwendung abgerufen, die einer bestimmten Aufgabe zugeordnet ist, und der Name wird auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+title: C/C++-Codebeispiel zum Abrufen des Taskanwendungsnamens
+description: In diesem Beispiel wird der Name der Anwendung abgerufen, die einer bestimmten Aufgabe zugeordnet ist, und dieser Name wird auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 ms.assetid: 7cf20a14-fee3-4507-83a9-4a081a9783fc
 keywords:
-- Anwendungsnamen werden abgerufen Taskplaner
-- Abrufen von Task Eigenschaften Taskplaner, Anwendungsname
+- Abrufen von Anwendungsnamen Taskplaner
+- Abrufen von Aufgabeneigenschaften Taskplaner , Anwendungsname
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eeb590900cf7b4c6d8821560e91e2f05c21c0f73
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: dde0d00910ab590e8668e66da3380744a85228e86dafba4d1db7349b24bb80a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119139633"
 ---
-# <a name="cc-code-example-retrieving-the-task-application-name"></a>C/C++-Code Beispiel: Abrufen des Aufgaben Anwendungs namens
+# <a name="cc-code-example-retrieving-the-task-application-name"></a>C/C++-Codebeispiel: Abrufen des Taskanwendungsnamens
 
-In diesem Beispiel wird der Name der Anwendung abgerufen, die einer bestimmten Aufgabe zugeordnet ist, und der Name wird auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+In diesem Beispiel wird der Name der Anwendung abgerufen, die einer bestimmten Aufgabe zugeordnet ist, und dieser Name wird auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 
 
 ```C++
@@ -119,12 +119,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[Taskplaner 1.0-Beispiele](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

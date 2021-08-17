@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: IJET_LOGTIME. "DateTime"-Methode'
-title: IJET_LOGTIME. "DateTime"-Methode
+description: 'Weitere Informationen finden Sie unter: IJET_LOGTIME. ToDateTime-Methode'
+title: IJET_LOGTIME. ToDateTime-Methode
 TOCTitle: 'ToDateTime method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.IJET_LOGTIME.ToDateTime
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.ijet_logtime.todatetime(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 78226731ef945025aef0609cfeb905fe9b42101d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cc14ca741f2dcb3014ef6cb7996a623141b9e5dd94f1624bfd1ece5305208eb4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353179"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118980670"
 ---
-# <a name="ijet_logtimetodatetime-method"></a>IJET_LOGTIME. "DateTime"-Methode
+# <a name="ijet_logtimetodatetime-method"></a>IJET_LOGTIME. ToDateTime-Methode
 
-Generiert eine DateTime-Darstellung dieses IJET_LOGTIME.
+Generieren Sie eine DateTime-Darstellung dieses IJET_LOGTIME.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ Nullable<DateTime> ToDateTime()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Nullable](/dotnet/api/system.nullable-1)\<[DateTime](/dotnet/api/system.datetime)\>  
-Ein DateTime-Wert, der die IJET_LOGTIME darstellt. Wenn die IJET_LOGTIME NULL ist, wird NULL zurückgegeben.  
+Typ: [System.Nullable](/dotnet/api/system.nullable-1)\<[DateTime](/dotnet/api/system.datetime)\>  
+Ein DateTime-IJET_LOGTIME. Wenn der IJET_LOGTIME NULL ist, wird NULL zurückgegeben.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [IJET_LOGTIME-Schnittstelle](./ijet-logtime-interface.md)
 
-[Mitglieder IJET_LOGTIME](./ijet-logtime-members.md)
+[IJET_LOGTIME Mitglieder](./ijet-logtime-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

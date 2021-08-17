@@ -1,29 +1,29 @@
 ---
-description: Wie der Client erhält der Server auch ein Anmelde Informations handle, das auf eine eingehende Authentifizierungsanforderung vom Client reagiert.
+description: Wie der Client erhält auch der Server ein Anmeldeinformationenhand handle, um auf eine eingehende Authentifizierungsanforderung vom Client reagieren zu können.
 ms.assetid: 2a0aeadf-e099-4264-8522-e498f437bf75
-title: Initialisierung des Server Kontexts
+title: Initialisierung des Serverkontexts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1362c8fd71e079392f10a8e35f76ad511de3c49f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a6d4a81c8033dc6b5dda8baca9ee7dfcc87d2b14c1cd139ff4a7f8eda99603f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103756415"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118918329"
 ---
-# <a name="server-context-initialization"></a>Initialisierung des Server Kontexts
+# <a name="server-context-initialization"></a>Initialisierung des Serverkontexts
 
-Wie der Client erhält der Server auch ein [*Anmelde*](../secgloss/c-gly.md) Informations handle, das auf eine eingehende Authentifizierungsanforderung vom Client reagiert. Server Anmelde Informationen werden verwendet, um den Server für den Client in [*Sicherheitsprotokollen*](../secgloss/s-gly.md) zu authentifizieren, die die Server Authentifizierung oder gegenseitige Authentifizierung unterstützen. Der Server erhält ein Handle für die Anmelde Informationen, die durch das Dienst Konto definiert werden, das zum Starten des Servers verwendet wird. Dies erfolgt durch Aufrufen von [**AcquireCredentialsHandle**](/windows/win32/api/sspi/nf-sspi-acquirecredentialshandlea).
+Wie der Client erhält auch [](../secgloss/c-gly.md) der Server ein Anmeldeinformationenhand handle, um auf eine eingehende Authentifizierungsanforderung vom Client reagieren zu können. Serveranmeldeinformationen werden verwendet, um den Server beim Client in Sicherheitsprotokollen [*zu*](../secgloss/s-gly.md) authentifizieren, die die Serverauthentifizierung oder gegenseitige Authentifizierung unterstützen. Der Server erhält ein Handle für seine Anmeldeinformationen, die durch das Dienstkonto definiert sind, das zum Starten des Servers verwendet wird. Rufen Sie dazu [**AcquireCredentialsHandle auf.**](/windows/win32/api/sspi/nf-sspi-acquirecredentialshandlea)
 
-Der Server kann sein Anmelde Informations handle abrufen und dann in den Zustand "lauschen" wechseln, oder er kann in einem lausch Status warten, bis eine Verbindungsanforderung eingeht, und dann ein Handle für eingehende Anmelde Informationen abrufen. Weitere Informationen zu Anmelde Informationsfunktionen finden Sie unter [Verwaltung](authentication-functions.md)von Anmelde Informationen.
+Der Server kann sein Anmeldeinformationenhand handle erhalten und dann in einen Lauschenzustand wechseln, oder er kann in einem Lauschenzustand warten, bis eine Verbindungsanforderung eintrifft, und dann ein Handle für eingehende Anmeldeinformationen erhalten. Weitere Informationen zu Anmeldeinformationsfunktionen finden Sie unter [Credential Management](authentication-functions.md).
 
-Wenn der Server eine Verbindungs Anforderungs Nachricht von einem Client empfängt, erstellt er mithilfe von " [**akzeptsecuritycontext (allgemein)**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext)" einen lokalen [*Sicherheitskontext*](../secgloss/s-gly.md) für den Client. Der Server verwendet diesen lokalen Sicherheitskontext, um zukünftige Anforderungen vom gleichen Client auszuführen. Weitere Informationen zu Kontextfunktionen finden Sie unter [Context Management (Kontext Verwaltung](authentication-functions.md)).
+Wenn der Server eine Verbindungsanforderungsnachricht von einem [](../secgloss/s-gly.md) Client empfängt, erstellt er mit [**AcceptSecurityContext (Allgemein)**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext)einen lokalen Sicherheitskontext für den Client. Der Server verwendet diesen lokalen Sicherheitskontext, um zukünftige Anforderungen durch denselben Client zu senden. Weitere Informationen zu Kontextfunktionen finden Sie unter [Kontextverwaltung.](authentication-functions.md)
 
-Der Server überprüft den Rückgabestatus und den Ausgabepuffer Deskriptor, um sicherzustellen, dass bisher keine Fehler vorliegen, und kann die Verbindungsanforderung ablehnen, wenn Fehler auftreten. Wenn im Ausgabepuffer Informationen vorhanden sind, die von " [**akzeptsecuritycontext (allgemein)**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext)" zurückgegeben werden, wird dieser Puffer in eine Antwortnachricht an den Client integriert.
+Der Server überprüft den Rückgabestatus und den Ausgabepufferdeskriptor, um sicherzustellen, dass bisher keine Fehler aufgetreten sind, und kann die Verbindungsanforderung ablehnen, wenn Fehler auftreten. Wenn informationen im Ausgabepuffer enthalten sind, der von [**AcceptSecurityContext (Allgemein)**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext)zurückgegeben wird, wird dieser Puffer in einer Antwortnachricht an den Client gebündelt.
 
-Jeder Ausgabepuffer von " [**Accept-SecurityContext" (allgemein)**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) muss an den Client zurückgesendet werden. Außerdem ist ein weiterer Nachrichtenaustausch mit dem Client erforderlich, wenn für den Rückgabestatus das Protokoll fortgesetzt werden muss (s muss \_ \_ weiterhin \_ benötigt werden \_ \_ \_ , und der Vorgang wird beendet und \_ fortgesetzt).
+Jeder Ausgabepuffer von [**AcceptSecurityContext (Allgemein)**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) muss zurück an den Client gesendet werden. Wenn für den Rückgabestatus das Fortsetzen des Protokolls erforderlich ist (SEC I CONTINUE NEEDED oder SEC I COMPLETE AND CONTINUE), ist ein weiterer Nachrichtenaustausch \_ \_ mit dem Client \_ \_ \_ \_ \_ erforderlich.
 
-Bei zusätzlichen Beinen wartet der Server darauf, dass der Client mit einer anderen Nachricht antwortet. Bei diesem warte Vorgang kann ein Timeout auftreten, um einen Denial-of-Service-Angriff zu vermeiden, bei dem ein Client absichtlich nie antwortet, was dazu führt, dass ein Server Thread und bald alle Serverthreads nicht mehr reagiert.
+Für weitere Beide wartet der Server darauf, dass der Client mit einer anderen Nachricht antwortet. Für diese Wartezeit kann ein Time out durchgeführt werden, um einen Denial-of-Service-Angriff zu vermeiden, bei dem ein Client nicht mehr gezielt reagiert. Dies führt dazu, dass ein Serverthread und bald alle Serverthreads nicht mehr reagieren.
 
  
 

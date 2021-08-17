@@ -1,5 +1,5 @@
 ---
-description: Das folgende Beispiel enthält eine CMC-Schlüsselarchivierungsanforderung im ASN.1-Format. Das Beispiel wurde mithilfe der tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+description: Das folgende Beispiel enthält eine CMC-Schlüsselarchivierungsanforderung im ASN.1-Format. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für die Certreq.exe enthält die folgende Konfiguration.
 ms.assetid: 3bc81495-97c7-4ec0-91cd-4f70409b4762
 title: CMC Key Archival Encoded ASN.1
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118901715"
 ---
 # <a name="cmc-key-archival-encoded-asn1"></a>CMC Key Archival Encoded ASN.1
 
-Das folgende Beispiel enthält eine CMC-Schlüsselarchivierungsanforderung im ASN.1-Format. Das Beispiel wurde mithilfe der tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+Das folgende Beispiel enthält eine CMC-Schlüsselarchivierungsanforderung im ASN.1-Format. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für die Certreq.exe enthält die folgende Konfiguration.
 
 ``` syntax
 [NewRequest]
@@ -25,11 +25,11 @@ PrivateKeyArchive=true
 CertificateTemplate=User
 ```
 
-Diese Konfiguration generiert die folgende Beispielausgabe. Die Konfiguration gibt den Betreff, den Typ der Anforderung (CMC) und den Vorlagennamen an. Die Benutzervorlage gibt Folgendes an:
+Diese Konfiguration generiert die folgende Beispielausgabe. Die Konfiguration gibt den Betreff, den Anforderungstyp (CMC) und den Vorlagennamen an. Die Benutzervorlage gibt An:
 
 -   Die Anforderung muss entweder den Microsoft Base Cryptographic Provider 1.0 oder den Microsoft Enhanced Cryptographic Provider 1.0 verwenden.
--   Der Antragstellername muss aus Active Directory erstellt werden.
--   Die Anforderung umfasst den Namen der Zertifikatvorlage, die erweiterte Schlüsselverwendung (Enhanced Key Usage, EKU) und die Schlüsselverwendungserweiterungen. Die EKU-Erweiterung gibt an, dass das ausgestellte Zertifikat für verschlüsselndes Dateisystem (EFS), sichere E-Mail- und Clientauthentifizierung verwendet werden kann.
+-   Der Name des Betreffs muss aus Active Directory erstellt werden.
+-   Die Anforderung enthält den Zertifikatvorlagennamen, die Erweiterte Schlüsselverwendung (Enhanced Key Usage, EKU) und die Schlüsselverwendungserweiterungen. Die EKU-Erweiterung gibt an, dass das ausgestellte Zertifikat für verschlüsselndes Dateisystem (EFS), sichere E-Mail-Adresse und Clientauthentifizierung verwendet werden kann.
 
 ``` syntax
 0000: 30 82 08 a9               ; SEQUENCE (8a9 Bytes)

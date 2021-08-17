@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: b6f6f08e10155509df800cca3cb3788d6b27e520
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 81a087156de61f7997b5d755eb45c0c7e7736fd2345c219b22e8b642ea44e9dc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108114358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119460369"
 ---
 # <a name="d3dxloadmeshhierarchyfromx-function"></a>D3DXLoadMeshHierarchyFromX-Funktion
 
@@ -87,7 +87,7 @@ Zeiger auf eine [**ID3DXAllocateHierarchy-Schnittstelle.**](id3dxallocatehierarc
 
 Typ: **[ **LPD3DXLOADUSERDATA**](id3dxloaduserdata.md)**
 
-Von der Anwendung bereitgestellte Schnittstelle, die das Laden von Benutzerdaten ermöglicht. Siehe [**ID3DXLoadUserData.**](id3dxloaduserdata.md)
+Von der Anwendung bereitgestellte Schnittstelle, die das Laden von Benutzerdaten ermöglicht. Siehe [**ID3DXLoadUserData**](id3dxloaduserdata.md).
 
 </dd> <dt>
 
@@ -96,7 +96,7 @@ Von der Anwendung bereitgestellte Schnittstelle, die das Laden von Benutzerdaten
 
 Typ: **[ **LPD3DXFRAME**](d3dxframe.md)\***
 
-Gibt einen Zeiger auf die geladene Rahmenhierarchie zurück. Siehe [**D3DXFRAME**](d3dxframe.md).
+Gibt einen Zeiger auf die geladene Framehierarchie zurück. Siehe [**D3DXFRAME**](d3dxframe.md).
 
 </dd> <dt>
 
@@ -105,7 +105,7 @@ Gibt einen Zeiger auf die geladene Rahmenhierarchie zurück. Siehe [**D3DXFRAME*
 
 Typ: **[ **LPD3DXANIMATIONCONTROLLER**](id3dxanimationcontroller.md)\***
 
-Gibt einen Zeiger auf den Animationscontroller zurück, der der Animation in der X-Datei entspricht. Dies wird mit Standardspuren und Ereignissen erstellt. Siehe [**ID3DXAnimationController.**](id3dxanimationcontroller.md)
+Gibt einen Zeiger auf den Animationscontroller zurück, der der Animation in der X-Datei entspricht. Dies wird mit Standardspuren und -ereignissen erstellt. Siehe [**ID3DXAnimationController**](id3dxanimationcontroller.md).
 
 </dd> </dl>
 
@@ -113,30 +113,30 @@ Gibt einen Zeiger auf den Animationscontroller zurück, der der Animation in der
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in D3DXLoadMeshHierarchyFromXW aufgelöst. Andernfalls wird der Funktionsaufruf in D3DXLoadMeshHierarchyFromXA aufgelöst.
+Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in D3DXLoadMeshHierarchyFromXW auflösen. Andernfalls wird der Funktionsaufruf in D3DXLoadMeshHierarchyFromXA auflösen.
 
-Alle Gitternetze in der Datei werden in ein Ausgabegitternetz reduziert. Wenn die Datei eine Rahmenhierarchie enthält, werden alle Transformationen auf das Gitternetz angewendet.
+Alle Gitternetze in der Datei werden zu einem Ausgabegitternetz reduziert. Wenn die Datei eine Rahmenhierarchie enthält, werden alle Transformationen auf das Gitternetz angewendet.
 
 **D3DXLoadMeshHierarchyFromX** lädt die Animationsdaten und die Framehierarchie aus einer X-Datei. Sie scannt die X-Datei und erstellt eine Framehierarchie und einen Animationscontroller gemäß dem von [**ID3DXAllocateHierarchy**](id3dxallocatehierarchy.md)abgeleiteten Objekt, das über pAlloc an sie übergeben wird. Das Laden der Daten erfordert mehrere Schritte wie folgt:
 
 1.  Leiten Sie [**ID3DXAllocateHierarchy ab,**](id3dxallocatehierarchy.md)und implementieren Sie jede Methode. Dies steuert, wie Frames und Gitternetze zugeordnet und frei werden.
 2.  Leiten Sie [**ID3DXLoadUserData ab,**](id3dxloaduserdata.md)und implementieren Sie jede Methode. Wenn Ihre X-Datei keine eingebetteten benutzerdefinierten Daten enthält oder Sie sie nicht benötigen, können Sie diesen Teil überspringen.
-3.  Erstellen Sie ein Objekt ihrer [**ID3DXAllocateHierarchy-Klasse**](id3dxallocatehierarchy.md) und optional Ihrer LoadUserData-Klasse. Sie müssen keine Methoden dieser Objekte selbst aufrufen.
+3.  Erstellen Sie ein Objekt ihrer [**ID3DXAllocateHierarchy-Klasse**](id3dxallocatehierarchy.md) und optional ihrer LoadUserData-Klasse. Sie müssen keine Methoden dieser Objekte selbst aufrufen.
 4.  Rufen **Sie D3DXLoadMeshHierarchyFromX** auf, und übergeben Sie ihr [**ID3DXAllocateHierarchy-Objekt**](id3dxallocatehierarchy.md) und Ihr [**ID3DXLoadUserData-Objekt**](id3dxloaduserdata.md) (oder **NULL),** um die Framehierarchie und den Animationscontroller zu erstellen. Alle Animationssätze und Frames werden automatisch beim Animationscontroller registriert.
 
-Während des Ladevorgang werden [**CreateFrame**](id3dxallocatehierarchy--createframe.md) und [**LoadFrameChildData**](id3dxloaduserdata--loadframechilddata.md) auf jedem Frame zurückgebewegt, um das Laden und die Zuordnung des Frames zu steuern. Die Anwendung definiert diese Methoden, um zu steuern, wie Frames gespeichert werden. [**CreateMeshContainer**](id3dxallocatehierarchy--createmeshcontainer.md) und [**LoadMeshChildData**](id3dxloaduserdata--loadmeshchilddata.md) werden für jedes Gittermodellobjekt zurückgebewegt, um das Laden und die Zuordnung von Gittermodellobjekten zu steuern. [**LoadTopLevelData**](id3dxloaduserdata--loadtopleveldata.md) wird für jedes Objekt der obersten Ebene zurückgewendet, das nicht von den anderen Methoden geladen wird.
+Während des Ladevorgang [**werden CreateFrame**](id3dxallocatehierarchy--createframe.md) und [**LoadFrameChildData**](id3dxloaduserdata--loadframechilddata.md) auf jedem Frame zurückgebewegt, um das Laden und die Zuordnung des Frames zu steuern. Die Anwendung definiert diese Methoden, um zu steuern, wie Frames gespeichert werden. [**CreateMeshContainer**](id3dxallocatehierarchy--createmeshcontainer.md) und [**LoadMeshChildData**](id3dxloaduserdata--loadmeshchilddata.md) werden für jedes Gittermodellobjekt zurückgebewegt, um das Laden und die Zuordnung von Gittermodellobjekten zu steuern. [**LoadTopLevelData**](id3dxloaduserdata--loadtopleveldata.md) wird für jedes Objekt der obersten Ebene zurückgewendt, das nicht von den anderen Methoden geladen wird.
 
-Um diese Daten frei zu geben, rufen Sie ID3DXAnimationController::Release auf, um die Animationssätze frei zu geben, und [**D3DXFRAMEDestroy**](d3dxframedestroy.md), indem Sie den Stammknoten der Framehierarchie und ein Objekt der abgeleiteten [**ID3DXAllocateHierarchy-Klasse**](id3dxallocatehierarchy.md) übergeben. [**DestroyFrame**](id3dxallocatehierarchy--destroyframe.md) und [**DestroyMeshContainer**](id3dxallocatehierarchy--destroymeshcontainer.md) werden jeweils für jeden Frame und jedes Gittermodellobjekt in der Framehierarchie aufgerufen. Ihre Implementierung von **DestroyFrame** sollte alles freigeben, was von [**CreateFrame**](id3dxallocatehierarchy--createframe.md)zugeordnet wird, und ebenso für die Meshcontainermethoden.
+Um diese Daten frei zu geben, rufen Sie ID3DXAnimationController::Release auf, um die Animationssätze frei zu geben, und [**D3DXFRAMEDestroy,**](d3dxframedestroy.md)indem Sie den Stammknoten der Framehierarchie und ein Objekt ihrer abgeleiteten [**ID3DXAllocateHierarchy-Klasse**](id3dxallocatehierarchy.md) übergeben. [**DestroyFrame**](id3dxallocatehierarchy--destroyframe.md) und [**DestroyMeshContainer**](id3dxallocatehierarchy--destroymeshcontainer.md) werden jeweils für jeden Frame und jedes Gittermodellobjekt in der Framehierarchie aufgerufen. Ihre Implementierung von **DestroyFrame sollte** alles, was von [**CreateFrame zugeordnet**](id3dxallocatehierarchy--createframe.md)wurde, und ebenso für die Mesh-Containermethoden frei geben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

@@ -1,7 +1,7 @@
 ---
-description: Die iamtimelineobj-Schnittstelle stellt Methoden zum Bearbeiten von Zeitachsen Objekten in DirectShow-Bearbeitungs Diensten (de) bereit.
+description: Die IAMTimelineObj-Schnittstelle stellt Methoden zum Bearbeiten von Zeitachsenobjekten in DirectShow Editing Services (DES) bereit.
 ms.assetid: ae8a778d-00b3-4b88-98dd-16e0a8645127
-title: Iamtimelineobj-Schnittstelle (qedit. h)
+title: IAMTimelineObj-Schnittstelle (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,88 +14,88 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: e968ec01d937aeac9a5838b75462a6d23a632512
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4a987cfd0f08311a0e7a233ab479e5cdbe2fc649fd521ad4f4ed1b37b6df6d75
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352897"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119428160"
 ---
-# <a name="iamtimelineobj-interface"></a>Iamtimelineobj-Schnittstelle
+# <a name="iamtimelineobj-interface"></a>IAMTimelineObj-Schnittstelle
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `IAMTimelineObj` Schnittstelle stellt Methoden zum Bearbeiten von Zeitachsen Objekten in [DirectShow-Bearbeitungs Diensten](directshow-editing-services.md) bereit. Alle Timeline-Objekte implementieren diese Methode, einschließlich Quell-, Effekt-, Übergangs-, Nachverfolgung-, Gruppen-und Kompositions Objekte. Erstellen Sie ein Zeitachsen Objekt, indem Sie die [**iamtimeline:: createemptynode**](iamtimeline-createemptynode.md) -Methode aufrufen.
+Die `IAMTimelineObj` -Schnittstelle stellt Methoden zum Bearbeiten von Zeitachsenobjekten in [DirectShow Editing Services](directshow-editing-services.md) (DES) bereit. Alle Zeitachsenobjekte implementieren diese Methode, einschließlich Quell-, Effekt-, Übergangs-, Nachverfolgungs-, Gruppen- und Kompositionsobjekte. Erstellen Sie ein Zeitachsenobjekt, indem Sie die [**IAMTimeline::CreateEmptyNode-Methode**](iamtimeline-createemptynode.md) aufrufen.
 
 ## <a name="members"></a>Member
 
-Die **iamtimelineobj** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iamtimelineobj** verfügt auch über die folgenden Typen von Membern:
+Die **IAMTimelineObj-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IAMTimelineObj** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iamtimelineobj** -Schnittstelle verfügt über diese Methoden.
+Die **IAMTimelineObj-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                          | BESCHREIBUNG                                                                                                                            |
+| Methode                                                          | Beschreibung                                                                                                                            |
 |:----------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
-| [**Cleardirty**](iamtimelineobj-cleardirty.md)                 | Wird nicht unterstützt.<br/>                                                                                                              |
-| [**Fixtimes**](iamtimelineobj-fixtimes.md)                     | Rundet die angegebene Start-und Endzeit auf die nächsten Frame Begrenzungen auf.<br/>                                                  |
-| [**FixTimes2**](iamtimelineobj-fixtimes2.md)                   | Rundet die angegebenen Start-und Endzeit Werte, die als [**reftime**](reftime.md) -Werte angegeben sind, auf die nächsten Frame Begrenzungen auf.<br/> |
-| [**Getdirtyrange**](iamtimelineobj-getdirtyrange.md)           | Wird nicht unterstützt.<br/>                                                                                                              |
+| [**ClearDirty**](iamtimelineobj-cleardirty.md)                 | Wird nicht unterstützt.<br/>                                                                                                              |
+| [**FixTimes**](iamtimelineobj-fixtimes.md)                     | Rundet die angegebenen Start- und Stoppzeiten auf die nächsten Rahmengrenzen.<br/>                                                  |
+| [**FixTimes2**](iamtimelineobj-fixtimes2.md)                   | Rundet die angegebenen Start- und Stoppzeiten, die als [**REFTIME-Werte**](reftime.md) angegeben werden, auf die nächsten Rahmengrenzen.<br/> |
+| [**GetDirtyRange**](iamtimelineobj-getdirtyrange.md)           | Wird nicht unterstützt.<br/>                                                                                                              |
 | [**GetDirtyRange2**](iamtimelineobj-getdirtyrange2.md)         | Wird nicht unterstützt.<br/>                                                                                                              |
-| [**Getembedtiefe**](iamtimelineobj-getembeddepth.md)           | Wird nicht unterstützt.<br/>                                                                                                              |
-| [**Getgenid**](iamtimelineobj-getgenid.md)                     | Ruft den generierten Bezeichner des Objekts ab.<br/>                                                                                |
-| [**Getgroupibelongto**](iamtimelineobj-getgroupibelongto.md)   | Wird nicht unterstützt.<br/>                                                                                                              |
-| [**Getlocked**](iamtimelineobj-getlocked.md)                   | Ruft den Bearbeitungs Zustand des Objekts ab (gesperrt oder entsperrt).<br/>                                                                  |
-| [**Getmutiert**](iamtimelineobj-getmuted.md)                     | Ruft den gedämpften Zustand des Objekts ab.<br/>                                                                                         |
-| [**GetPropertySetter**](iamtimelineobj-getpropertysetter.md)   | Ruft den Eigenschaften Setter des Objekts ab.<br/>                                                                                     |
-| [**Getstartstopps**](iamtimelineobj-getstartstop.md)             | Ruft die Start-und Endzeit des Objekts relativ zum übergeordneten Element des Objekts ab.<br/>                                               |
-| [**GetStartStop2**](iamtimelineobj-getstartstop2.md)           | Ruft die Start-und Endzeit Werte des-Objekts als [**ref-Zeit**](reftime.md) Werte ab.<br/>                                          |
-| [**Getsubobject**](iamtimelineobj-getsubobject.md)             | Ruft das diesem-Objekt zugeordnete untergeordnete Objekt ab.<br/>                                                                        |
-| [**Getsubobjectguid**](iamtimelineobj-getsubobjectguid.md)     | Ruft die GUID des untergeordneten Objekts ab, das diesem Zeitachsen Objekt zugeordnet ist.<br/>                                                   |
-| [**Getsubobjectguidb**](iamtimelineobj-getsubobjectguidb.md)   | Ruft die GUID des untergeordneten Objekts als **BSTR** -Wert ab.<br/>                                                                    |
-| [**Getsubobjectloaded**](iamtimelineobj-getsubobjectloaded.md) | Bestimmt, ob der untergeordnete Zeiger des Objekts festgelegt wurde.<br/>                                                             |
-| [**Gettimelinenoref**](iamtimelineobj-gettimelinenoref.md)     | Wird nicht unterstützt.<br/>                                                                                                              |
-| [**Gettimelinetype**](iamtimelineobj-gettimelinetype.md)       | Ruft den Objekttyp ab.<br/>                                                                                                |
-| [**GetUserData**](iamtimelineobj-getuserdata.md)               | Ruft die von der Anwendung definierten persistenten Daten ab.<br/>                                                                          |
-| [**BENUTZERID**](iamtimelineobj-getuserid.md)                   | Ruft den von der Anwendung definierten Bezeichner des Objekts ab.<br/>                                                                      |
-| [**GetUserName**](iamtimelineobj-getusername.md)               | Ruft den von der Anwendung definierten Namen des Objekts ab.<br/>                                                                            |
-| [**Aufgeh**](iamtimelineobj-remove.md)                         | Entfernt dieses-Objekt aus der Zeitachse, um es an anderer Stelle wiederherzustellen.<br/>                                                           |
-| [**RemoveAll**](iamtimelineobj-removeall.md)                   | Entfernt dieses objektpermanent aus der Zeitachse, einschließlich untergeordneten Elementen und untergeordneten Elementen.<br/>                                       |
-| [**Setdirtyrange**](iamtimelineobj-setdirtyrange.md)           | Nicht implementiert.<br/>                                                                                                            |
+| [**GetEmbedDepth**](iamtimelineobj-getembeddepth.md)           | Wird nicht unterstützt.<br/>                                                                                                              |
+| [**GetGenID**](iamtimelineobj-getgenid.md)                     | Ruft den generierten Bezeichner des Objekts ab.<br/>                                                                                |
+| [**GetGroupIBelongTo**](iamtimelineobj-getgroupibelongto.md)   | Wird nicht unterstützt.<br/>                                                                                                              |
+| [**GetLocked**](iamtimelineobj-getlocked.md)                   | Ruft den Bearbeitungsstatus des Objekts ab (gesperrt oder entsperrt).<br/>                                                                  |
+| [**GetMuted**](iamtimelineobj-getmuted.md)                     | Ruft den stummgeschalteten Zustand des Objekts ab.<br/>                                                                                         |
+| [**GetPropertySetter**](iamtimelineobj-getpropertysetter.md)   | Ruft den Eigenschaftens setter des Objekts ab.<br/>                                                                                     |
+| [**GetStartStop**](iamtimelineobj-getstartstop.md)             | Ruft die Start- und Stoppzeiten des Objekts relativ zum übergeordneten Element des Objekts ab.<br/>                                               |
+| [**GetStartStop2**](iamtimelineobj-getstartstop2.md)           | Ruft die Start- und Stoppzeiten des Objekts als [**REFTIME-Werte**](reftime.md) ab.<br/>                                          |
+| [**GetSubObject**](iamtimelineobj-getsubobject.md)             | Ruft das diesem -Objekt zugeordnete Unterobjekt ab.<br/>                                                                        |
+| [**GetSubObjectGUID**](iamtimelineobj-getsubobjectguid.md)     | Ruft die GUID des Unterobjekts ab, das diesem Zeitachsenobjekt zugeordnet ist.<br/>                                                   |
+| [**GetSubObjectGUIDB**](iamtimelineobj-getsubobjectguidb.md)   | Ruft die GUID des Unterobjekts als **BSTR-Wert** ab.<br/>                                                                    |
+| [**GetSubObjectLoaded**](iamtimelineobj-getsubobjectloaded.md) | Bestimmt, ob der Unterobjektzeiger des Objekts festgelegt wurde.<br/>                                                             |
+| [**GetTimelineNoRef**](iamtimelineobj-gettimelinenoref.md)     | Wird nicht unterstützt.<br/>                                                                                                              |
+| [**GetTimelineType**](iamtimelineobj-gettimelinetype.md)       | Ruft den Typ des Objekts ab.<br/>                                                                                                |
+| [**GetUserData**](iamtimelineobj-getuserdata.md)               | Ruft die anwendungsdefinierten persistenten Daten ab.<br/>                                                                          |
+| [**BENUTZERID**](iamtimelineobj-getuserid.md)                   | Ruft den anwendungsdefinierten Bezeichner des Objekts ab.<br/>                                                                      |
+| [**GetUserName**](iamtimelineobj-getusername.md)               | Ruft den anwendungsdefinierten Namen des Objekts ab.<br/>                                                                            |
+| [**Entfernen**](iamtimelineobj-remove.md)                         | Entfernt dieses Objekt aus der Zeitachse, um es an anderer Stelle wieder zu resertionen.<br/>                                                           |
+| [**Removeall**](iamtimelineobj-removeall.md)                   | Entfernt dieses Objekt dauerhaft aus der Zeitachse, einschließlich Unterobjekten und untergeordneten Objekten.<br/>                                       |
+| [**SetDirtyRange**](iamtimelineobj-setdirtyrange.md)           | Nicht implementiert.<br/>                                                                                                            |
 | [**SetDirtyRange2**](iamtimelineobj-setdirtyrange2.md)         | Nicht implementiert.<br/>                                                                                                            |
-| [**Setlocked**](iamtimelineobj-setlocked.md)                   | Legt den Bearbeitungs Zustand des-Objekts auf gesperrt oder entsperrt fest.<br/>                                                                      |
-| [**Setstumm**](iamtimelineobj-setmuted.md)                     | Legt den gedämpften Zustand des-Objekts fest.<br/>                                                                                              |
-| [**Setpropertysetter**](iamtimelineobj-setpropertysetter.md)   | Legt den Eigenschaften Setter des Objekts fest.<br/>                                                                                          |
-| [**Setstartstopp**](iamtimelineobj-setstartstop.md)             | Legt die Start-und Endzeit des Objekts relativ zur Zeitachse fest.<br/>                                                           |
-| [**SetStartStop2**](iamtimelineobj-setstartstop2.md)           | Legt die Start-und Endzeit Werte des-Objekts als **ref-Zeit** Werte fest.<br/>                                                              |
-| [**Setsubobject**](iamtimelineobj-setsubobject.md)             | Wird nicht unterstützt.<br/>                                                                                                              |
-| [**Setsubobjectguid**](iamtimelineobj-setsubobjectguid.md)     | Gibt die Globally Unique Identifier (GUID) des untergeordneten Objekts an, das diesem Objekt zugeordnet ist.<br/>                               |
-| [**Setsubobjectguidb**](iamtimelineobj-setsubobjectguidb.md)   | Gibt die GUID des untergeordneten Objekts als **BSTR** -Wert an.<br/>                                                                    |
-| [**Settimelinetype**](iamtimelineobj-settimelinetype.md)       | Wird nicht unterstützt.<br/>                                                                                                              |
-| [**SetUserData**](iamtimelineobj-setuserdata.md)               | Legt von der Anwendung definierte persistente Daten fest.<br/>                                                                                   |
-| [**Setuserid**](iamtimelineobj-setuserid.md)                   | Legt einen von der Anwendung definierten Bezeichner für das-Objekt fest.<br/>                                                                      |
-| [**SetUserName**](iamtimelineobj-setusername.md)               | Legt einen von der Anwendung definierten Namen für das-Objekt fest.<br/>                                                                            |
+| [**SetLocked**](iamtimelineobj-setlocked.md)                   | Legt den Bearbeitungszustand des Objekts auf gesperrt oder entsperrt fest.<br/>                                                                      |
+| [**SetMuted**](iamtimelineobj-setmuted.md)                     | Legt den stummgeschalteten Zustand des Objekts fest.<br/>                                                                                              |
+| [**SetPropertySetter**](iamtimelineobj-setpropertysetter.md)   | Legt den Eigenschaftens setter des Objekts fest.<br/>                                                                                          |
+| [**SetStartStop**](iamtimelineobj-setstartstop.md)             | Legt die Start- und Stoppzeiten des Objekts relativ zur Zeitachse fest.<br/>                                                           |
+| [**SetStartStop2**](iamtimelineobj-setstartstop2.md)           | Legt die Start- und Stoppzeiten des Objekts als **REFTIME-Werte** fest.<br/>                                                              |
+| [**SetSubObject**](iamtimelineobj-setsubobject.md)             | Wird nicht unterstützt.<br/>                                                                                                              |
+| [**SetSubObjectGUID**](iamtimelineobj-setsubobjectguid.md)     | Gibt den globally unique identifier (GUID) des Diesem -Objekt zugeordneten Unterobjekts an.<br/>                               |
+| [**SetSubObjectGUIDB**](iamtimelineobj-setsubobjectguidb.md)   | Gibt die GUID des Unterobjekts als **BSTR-Wert** an.<br/>                                                                    |
+| [**SetTimelineType**](iamtimelineobj-settimelinetype.md)       | Wird nicht unterstützt.<br/>                                                                                                              |
+| [**SetUserData**](iamtimelineobj-setuserdata.md)               | Legt anwendungsdefinierte persistente Daten fest.<br/>                                                                                   |
+| [**SetUserID**](iamtimelineobj-setuserid.md)                   | Legt einen anwendungsdefinierten Bezeichner für das -Objekt fest.<br/>                                                                      |
+| [**SetUserName**](iamtimelineobj-setusername.md)               | Legt einen anwendungsdefinierten Namen für das -Objekt fest.<br/>                                                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -105,8 +105,8 @@ Die **iamtimelineobj** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 

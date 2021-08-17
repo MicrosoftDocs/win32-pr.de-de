@@ -1,6 +1,6 @@
 ---
 title: STDFACT. Cpp
-description: In der Beispielanbieterkomponente befindet sich ein Codebeispiel für die IClassFactory-Standardimplementierungen in "Stdfact.cpp". Weitere Informationen finden Sie unter IClassFactory.
+description: In der Beispielanbieterkomponente befindet sich ein Codebeispiel, das die IClassFactory-Standardimplementierung zeigt, in Stdfact.cpp. Weitere Informationen finden Sie unter IClassFactory.
 ms.assetid: 8d8f1698-c180-4c30-8760-193f87370fda
 ms.tgt_platform: multiple
 ms.topic: article
@@ -14,7 +14,7 @@ ms.locfileid: "118690375"
 ---
 # <a name="stdfactcpp"></a>STDFACT. Cpp
 
-In der Beispielanbieterkomponente befindet sich ein Codebeispiel für die [**IClassFactory-Standardimplementierungen**](/windows/win32/api/unknwn/nn-unknwn-iclassfactory) in "Stdfact.cpp". Weitere Informationen finden Sie unter **IClassFactory.**
+In der Beispielanbieterkomponente befindet sich ein Codebeispiel, das die [**IClassFactory-Standardimplementierung**](/windows/win32/api/unknwn/nn-unknwn-iclassfactory) zeigt, in Stdfact.cpp. Weitere Informationen finden Sie unter **IClassFactory**.
 
  
 

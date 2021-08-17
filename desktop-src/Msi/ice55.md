@@ -1,5 +1,5 @@
 ---
-description: ICE55 überprüft, ob alle LockPermission-Objekte vorhanden sind und gültige Berechtigungswerte haben.
+description: ICE55 überprüft, ob alle LockPermission-Objekte vorhanden sind und gültige Berechtigungswerte aufweisen.
 ms.assetid: e23e43ce-942f-4f6b-b5fd-cf366f7a7fe5
 title: ICE55
 ms.topic: article
@@ -13,15 +13,15 @@ ms.locfileid: "118635141"
 ---
 # <a name="ice55"></a>ICE55
 
-ICE55 überprüft, ob alle LockPermission-Objekte vorhanden sind und gültige Berechtigungswerte haben.
+ICE55 überprüft, ob alle LockPermission-Objekte vorhanden sind und gültige Berechtigungswerte aufweisen.
 
 ## <a name="result"></a>Ergebnis
 
-ICE55 gibt einen Fehler aus, wenn ein in der [Tabelle LockPermissions](lockpermissions-table.md) aufgeführtes LockObject nicht vorhanden ist oder wenn in der Spalte Berechtigung keine Berechtigungsstufe angegeben ist.
+ICE55 post an error if a LockObject listed in the LockPermissions table does not exist or if no privilege level is specified in the Permission column. (ICE55 post an error if a LockObject listed in the [LockPermissions table](lockpermissions-table.md) does not exist or if no privilege level is specified in the Permission column.
 
 ## <a name="example"></a>Beispiel
 
-ICE55 würde die folgenden Fehler für das Beispiel melden.
+ICE55 meldet die folgenden Fehler für das Beispiel.
 
 ``` syntax
 LockObject 'File1'.'File'.''.'guest' in the LockPermissions table 
@@ -56,9 +56,9 @@ Could not find item 'File3' in table 'File' which is referenced
 
  
 
-Das Objekt File1 hat in der Spalte Permission einen NULL-Wert. Jede Zeile muss in der Spalte Berechtigungen einen Wert enthalten. Um diesen Fehler zu beheben, geben Sie einen numerischen Wert in dieser Spalte an. Wenn für dieses Objekt keine Berechtigungen erforderlich sind, sollten Sie die Zeile entfernen.
+Das Objekt File1 weist in der Spalte Permission einen NULL-Wert auf. Jede Zeile muss einen Wert in der Spalte Berechtigungen aufweisen. Um diesen Fehler zu beheben, geben Sie einen numerischen Wert in dieser Spalte an. Wenn für dieses Objekt keine Berechtigungen erforderlich sind, sollten Sie die Zeile entfernen.
 
-Das in der Tabelle LockPermissions beschriebene Objekt File3 ist nicht in der Tabelle File aufgeführt. Um diesen Fehler zu beheben, verweisen Sie auf ein gültiges -Objekt.
+Das in der LockPermissions-Tabelle beschriebene File3-Objekt ist nicht in der Dateitabelle aufgeführt. Um diesen Fehler zu beheben, verweisen Sie auf ein gültiges -Objekt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

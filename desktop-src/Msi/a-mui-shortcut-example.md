@@ -17,11 +17,11 @@ In diesem Abschnitt wird beschrieben, wie Sie der Windows [Installer-Verknüpfun
 
 **Windows Installer 2.0 und Windows Installer 3.0:** Nicht unterstützt. Dieses Beispiel erfordert Windows Installer 4.0.
 
-Informationen zum [Entwickeln von ANWENDUNGEN, die FÜR DIE -Anwendung aktiviert](/windows/desktop/Intl/multilingual-user-interface) sind, finden Sie in der DOKUMENTATION zum mehrsprachige Benutzeroberfläche ().
+Informationen zum [Entwickeln von ANWENDUNGEN, die für DIE -Funktion aktiviert sind,](/windows/desktop/Intl/multilingual-user-interface) finden Sie in der DOKUMENTATION zum mehrsprachige Benutzeroberfläche () .
 
 So fügen Sie die ressourcenzeichenfolgen, die von Windows Vista Multilingual User Interfaces verwendet werden, einem Windows Installer-Paket hinzu:
 
-1.  Fügen Sie der Dateitabelle die Informationen für alle sprachneutralen Dateien und [Sprachdateien hinzu.](file-table.md) Die Dateien können z. B. aus einer sprachneutralen Datei (msimsg.dll) und Sprachdateien für Englisch (msimsgen.dll.soll), Japanisch (msimsgja.dll.soll) und Chinesisch (msimsgcs.dll.soll enthalten sein). Jede Datei kann zu einer anderen Komponente gehören. Jede Datei kann sowohl einen langen als auch einen kurzen Dateinamen haben. Im Fall dieses Beispiels können der Dateitabelle die folgenden [Informationen hinzugefügt werden.](file-table.md)
+1.  Fügen Sie der Dateitabelle die Informationen für alle sprachneutralen Dateien und [Sprachdateien hinzu.](file-table.md) Die Dateien können z. B. aus einer sprachneutralen Datei (msimsg.dll) und Sprachdateien für Englisch (msimsgen.dll.version), Japanisch (msimsgja.dll.soll) und Chinesisch (msimsgcs.dll.soll) bestehen. Jede Datei kann zu einer anderen Komponente gehören. Jede Datei kann sowohl einen langen als auch einen kurzen Dateinamen haben. Im Fall dieses Beispiels können der Dateitabelle die folgenden [Informationen hinzugefügt werden.](file-table.md)
 
     [Dateitabelle](file-table.md) (partiell)
 
@@ -29,9 +29,9 @@ So fügen Sie die ressourcenzeichenfolgen, die von Windows Vista Multilingual Us
 
     | Datei        | Komponente\_     | FileName                     |
     |-------------|-----------------|------------------------------|
-    | msimsgmusprogramms | \_MSIMSG-MSI-JA \_ | msimsgja.dll\|msimsg.dll.soll |
-    | msimsgmuics | MSIMSG \_ MUI \_ CS | msimsgcs.dll\|msimsg.dll.soll |
-    | msimsgmuien | MSIMSG \_ MSIMSG MSI \_ EN | msimsgen.dll\|msimsg.dll.soll |
+    | msimsgmugas | \_MSIMSG-MSI-JA \_ | msimsgja.dll\|msimsg.dll.. |
+    | msimsgmuics | MSIMSG \_ MUI \_ CS | msimsgcs.dll\|msimsg.dll.. |
+    | msimsgmuien | MSIMSG \_ MSIMSG MSI \_ EN | msimsgen.dll\|msimsg.dll.. |
     | msimsgdll   | MSIMSG          | msimsg.dll                   |
 
     
@@ -46,28 +46,28 @@ So fügen Sie die ressourcenzeichenfolgen, die von Windows Vista Multilingual Us
 
     | Komponente       | Verzeichnis\_   | KeyPath     |
     |-----------------|---------------|-------------|
-    | \_MSIMSG-MSI-JA \_ | VERBINDEOrdner \_ JA | msimsgmusprogramms |
+    | \_MSIMSG-MSI-JA \_ | VERBINDEOrdner \_ JA | msimsgmugas |
     | MSIMSG \_ MUI \_ CS | VERBINDer \_ CS | msimsgmuics |
-    | MSIMSG \_ MSIMSG MSI \_ EN | VERBINDEOrdner \_ EN | msimsgmuien |
+    | MSIMSG \_ MSIMSG MSI \_ EN | BENUTZERDEFINIERTE Ordner \_ EN | msimsgmuien |
     | MSIMSG          | BAUFolder     | msimsgdll   |
 
     
 
      
 
-3.  Bearbeiten Sie [die Directory-Tabelle,](directory-table.md) damit die Komponenten in den richtigen Verzeichnissen installiert werden. Stellen Sie sicher, dass Sie Informationen zu dem Verzeichnis hinzufügen, in dem die Verknüpfung installiert wird. Beispielsweise können der Verzeichnistabelle eines Pakets, das die Komponenten installiert, und einer Verknüpfung im Verzeichnis DesktopFolder die folgenden Informationen hinzugefügt werden.
+3.  Bearbeiten Sie [die Tabelle Directory,](directory-table.md) damit die Komponenten in den richtigen Verzeichnissen installiert werden. Stellen Sie sicher, dass Sie Informationen zu dem Verzeichnis hinzufügen, in dem die Verknüpfung installiert wird. Beispielsweise können der Verzeichnistabelle eines Pakets, das die Komponenten installiert, und einer Verknüpfung im Verzeichnis DesktopFolder die folgenden Informationen hinzugefügt werden.
 
     [Verzeichnistabelle](directory-table.md) (partiell)
 
     
 
-    | Verzeichnis     | Übergeordnetes Verzeichnis \_ | DefaultDir |
+    | Verzeichnis     | Übergeordnetes \_ Verzeichnis | DefaultDir |
     |---------------|-------------------|------------|
     | Targetdir     |                   | SourceDir  |
     | MsiTest       | Targetdir         | MsiTest:  |
     | BAUFolder     | MsiTest           | Mui        |
     | VERBINDer \_ CS | BAUFolder         | cs-CZ      |
-    | VERBINDEOrdner \_ EN | BAUFolder         | en-US      |
+    | BENUTZERDEFINIERTE Ordner \_ EN | BAUFolder         | en-US      |
     | VERBINDEOrdner \_ JA | BAUFolder         | ja-JP      |
     | DesktopFolder | Targetdir         | .          |
 
@@ -96,16 +96,16 @@ So fügen Sie die ressourcenzeichenfolgen, die von Windows Vista Multilingual Us
 
     
 
-    | Komponente               | Übergeordnetes \_ Feature       | Titel                 | Attribute |
+    | Komponente               | \_Übergeordnetes Feature       | Titel                 | Attribute |
     |-----------------------|-----------------------|-----------------------|------------|
-    | FeatureParent1 \_ Lokal |                       | FeatureParent1 \_ Lokal | 16         |
-    | FeatureChild1 \_ Local  | FeatureParent1 \_ Lokal | FeatureParent1 \_ Lokal | 0          |
+    | FeatureParent1 \_ Local |                       | FeatureParent1 \_ Local | 16         |
+    | FeatureChild1 \_ Local  | FeatureParent1 \_ Local | FeatureParent1 \_ Local | 0          |
 
     
 
      
 
-6.  Fügen Sie für jede neue Verknüpfung die Ressourcenzeichenfolgeninformationen den Feldern DisplayResourceDLL, DisplayResourceId, DescriptionResourceDLL und DescriptionResourceId der [Verknüpfungstabelle hinzu.](shortcut-table.md) Die Felder DisplayResourceDLL und DescriptionResourceDLL enthalten die Ressourcenzeichenfolge im [formatierten](formatted.md) Zeichenfolgenformat. Die formatierte Zeichenfolge kann die \[ \# *Dateischlüsselkonvention* \] des [formatierten Formats](formatted.md) verwenden. Fügen Sie die Anzeige- und Beschreibungsindizes für die Ressourcenzeichenfolgen in den Feldern DisplayResourceId und DescriptionResourceId hinzu.
+6.  Fügen Sie für jede neue Verknüpfung die Ressourcenzeichenfolgeninformationen den Feldern DisplayResourceDLL, DisplayResourceId, DescriptionResourceDLL und DescriptionResourceId der [Verknüpfungstabelle](shortcut-table.md)hinzu. Die Felder DisplayResourceDLL und DescriptionResourceDLL enthalten die Ressourcenzeichenfolge im [formatierten](formatted.md) Zeichenfolgenformat. Die formatierte Zeichenfolge kann die \[ \# *Dateischlüsselkonvention* \] des [Formatierten](formatted.md) Formats verwenden. Fügen Sie die Anzeige- und Beschreibungsindizes für die Ressourcenzeichenfolgen in den Feldern DisplayResourceId und DescriptionResourceId hinzu.
 
     [Verknüpfungstabelle](shortcut-table.md) (partiell)
 
@@ -120,7 +120,7 @@ So fügen Sie die ressourcenzeichenfolgen, die von Windows Vista Multilingual Us
 
      
 
-7.  Testen Sie nach der Installation des Pakets, um sicherzustellen, dass mehrsprachige Benutzeroberfläche wie erwartet funktioniert.
+7.  Testen Sie nach der Installation des Pakets, um sicherzustellen, dass die mehrsprachige Benutzeroberfläche wie erwartet funktioniert.
 
  
 

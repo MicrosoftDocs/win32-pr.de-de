@@ -1,6 +1,6 @@
 ---
-title: Sätftigen (HLSL-Referenz)
-description: Bindet das Ergebnis einer arithmetischen Operation mit einer Gleit Komma Zahl oder einer Gleit Komma Zahl mit doppelter Genauigkeit in \ 0,0 f... 1.0 f \ Bereich.
+title: Saturate (HLSL-Referenz)
+description: Klammert das Ergebnis einer Gleitkommaarithmetikoperation mit einzelner oder doppelter Genauigkeit auf \ 0,0f... 1,0f\-Bereich.
 ms.assetid: ce3e79c7-c3e6-4a2c-910a-2cd568aece50
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,63 +9,63 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 05b6048777ac7b6ecd2c4b59ff3c9e0287380949
-ms.sourcegitcommit: cba7f424a292fd7f3a8518947b9466439b455419
+ms.openlocfilehash: 25e771bd53dbb8a4b0d2eaf8162675cd556c071344b249562defe4a06e715f5a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "104389632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118790743"
 ---
-# <a name="saturate-hlsl-reference"></a>Sätftigen (HLSL-Referenz)
+# <a name="saturate-hlsl-reference"></a>Saturate (HLSL-Referenz)
 
-Bindet das Ergebnis einer arithmetischen Operation mit einer Gleit Komma Zahl oder einer Gleit Komma Zahl mit doppelter Genauigkeit auf \[ 0,0 f... 1.0 f \] Bereich.
+Klammert das Ergebnis einer arithmetischen Gleitkommaoperation mit einzelner oder doppelter Genauigkeit auf \[ 0,0f... 1,0f-Bereich. \]
 
 
 
-| \_gesetzt |
+| \_Sat |
 |-------|
 
 
 
- 
+ 
 
-Der **ergebnismodifizierer** "Bezeichner" führt die folgenden Vorgänge für die Ergebnis Werte aus einer arithmetischen Operation für Gleit Komma Operationen aus, auf die festgelegt wurde \_ :
+Der Ergebnismodifizierer für die **Saturate-Anweisung** führt den folgenden Vorgang für die Ergebniswerte aus einer arithmetischen Gleitkommaoperation aus, die darauf angewendet \_ wurde:
 
 `min(1.0f, max(0.0f, value))`
 
-Dabei verhalten sich "min ()" und "Max ()" im obigen Ausdruck in der Art und Weise, wie [Min](min--sm4---asm-.md), [Max](max--sm4---asm-.md), [DMin](dmin--sm5---asm-.md)oder [DMax](dmax--sm5---asm-.md) betrieben werden.
+dabei verhalten sich min() und max() im obigen Ausdruck wie [min,](min--sm4---asm-.md) [max,](max--sm4---asm-.md) [dmin](dmin--sm5---asm-.md)oder [dmax.](dmax--sm5---asm-.md)
 
-`_sat(NaN)` gibt 0 zurück, durch die Regeln für min und Max.
+`_sat(NaN)` gibt nach den Regeln für min und max 0 zurück.
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Dieser Modifizierer wird in den folgenden shadermodellen unterstützt.
+Dieser Modifizierer wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Anweisungs Modifizierer](instruction-modifiers.md)
+[Anweisungsmodifizierer](instruction-modifiers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

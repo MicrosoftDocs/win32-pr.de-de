@@ -5,7 +5,7 @@ ms.assetid: 47f5d367-d1da-4189-a73e-b6e6715bd297
 ms.tgt_platform: multiple
 keywords:
 - Role-Occupant AD-Schema
-- roleOccupant-Attribut AD-Schema
+- ROLEOccupant-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:

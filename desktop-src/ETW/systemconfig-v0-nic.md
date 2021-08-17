@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Konfigurations Ereignisse der Netzwerkschnittstellenkarte.
+description: Diese Klasse ist die Ereignistypklasse für Netzwerkschnittstellenkarten-Konfigurationsereignisse.
 ms.assetid: 1cae611b-fb6a-4416-8fd4-0c882e8aa5e6
 title: SystemConfig_V0_NIC-Klasse
 ms.topic: reference
@@ -28,18 +28,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 040c409564c0ad37e5208c1e91962d3f04de5fc4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6abe9356ce222d8f461509ec9cfa25ab0a49b8583022ee5e1d832cf29a226dcb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119746470"
 ---
-# <a name="systemconfig_v0_nic-class"></a>SystemConfig \_ v0- \_ NIC-Klasse
+# <a name="systemconfig_v0_nic-class"></a>SystemConfig \_ \_ V0-NIC-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Konfigurations Ereignisse der Netzwerkschnittstellenkarte.
+Diese Klasse ist die Ereignistypklasse für Netzwerkschnittstellenkarten-Konfigurationsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,26 +68,26 @@ class SystemConfig_V0_NIC : SystemConfig_V0
 
 ## <a name="members"></a>Member
 
-Die **System config \_ v0- \_ NIC** -Klasse verfügt über diese Typen von Membern:
+Die **SystemConfig \_ \_ V0-NIC-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **System config \_ v0- \_ NIC** -Klasse verfügt über diese Eigenschaften.
+Die **SystemConfig \_ \_ V0-NIC-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Daten**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (16)
+Qualifizierer: **WmiDataId** (16)
 </dt> </dl>
 
 Datenfeld.
@@ -103,10 +103,10 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (8)
+Qualifizierer: **WmiDataId** (8)
 </dt> </dl>
 
-Die IP-Adresse des DHCP-Servers (Dynamic Host Configuration Protocol). Der Wert 255.255.255.255 gibt an, dass der DHCP-Server nicht erreicht werden konnte oder gerade erreicht wird. Jedes Byte der sint32 stellt einen der vier Teile der IP-Adresse (P1. P2. P3. P4) dar. Das nieder wertige Byte enthält den Wert für P1, das nächste Byte enthält den Wert für P2 usw.
+IP-Adresse des DHCP-Servers (Dynamic Host Configuration Protocol). Der Wert 255.255.255.255 gibt an, dass der DHCP-Server nicht erreicht werden konnte oder gerade erreicht wird. Jedes Byte von sint32 stellt einen der vier Teile der IP-Adresse dar (p1.p2.p3.p4). Das niedrige Byte enthält den Wert für p1, das nächste Byte enthält den Wert für p2 und so weiter.
 
 </dd> <dt>
 
@@ -119,10 +119,10 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (12)
+Qualifizierer: **WmiDataId** (12)
 </dt> </dl>
 
-Die ersten Server-IP-Adressen, die zum Abfragen von DNS-Servern verwendet werden sollen. Jedes Byte der sint32 stellt einen der vier Teile der IP-Adresse (P1. P2. P3. P4) dar. Das nieder wertige Byte enthält den Wert für P1, das nächste Byte enthält den Wert für P2 usw.
+Die ersten Server-IP-Adressen, die beim Abfragen von DNS-Servern verwendet werden sollen. Jedes Byte von sint32 stellt einen der vier Teile der IP-Adresse dar (p1.p2.p3.p4). Das niedrige Byte enthält den Wert für p1, das nächste Byte enthält den Wert für p2 und so weiter.
 
 </dd> <dt>
 
@@ -135,10 +135,10 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (13)
+Qualifizierer: **WmiDataId** (13)
 </dt> </dl>
 
-Zweite Server-IP-Adressen, die zum Abfragen von DNS-Servern verwendet werden sollen. Jedes Byte der sint32 stellt einen der vier Teile der IP-Adresse (P1. P2. P3. P4) dar. Das nieder wertige Byte enthält den Wert für P1, das nächste Byte enthält den Wert für P2 usw.
+Zweite Ip-Adressen des Servers, die bei Abfragen von DNS-Servern verwendet werden sollen. Jedes Byte von sint32 stellt einen der vier Teile der IP-Adresse dar (p1.p2.p3.p4). Das niedrige Byte enthält den Wert für p1, das nächste Byte enthält den Wert für p2 und so weiter.
 
 </dd> <dt>
 
@@ -151,10 +151,10 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (14)
+Qualifizierer: **WmiDataId** (14)
 </dt> </dl>
 
-Dritte Server-IP-Adressen, die zum Abfragen von DNS-Servern verwendet werden sollen. Jedes Byte der sint32 stellt einen der vier Teile der IP-Adresse (P1. P2. P3. P4) dar. Das nieder wertige Byte enthält den Wert für P1, das nächste Byte enthält den Wert für P2 usw.
+IP-Adressen des dritten Servers, die beim Abfragen von DNS-Servern verwendet werden sollen. Jedes Byte von sint32 stellt einen der vier Teile der IP-Adresse dar (p1.p2.p3.p4). Das niedrige Byte enthält den Wert für p1, das nächste Byte enthält den Wert für p2 und so weiter.
 
 </dd> <dt>
 
@@ -167,10 +167,10 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (15)
+Qualifizierer: **WmiDataId** (15)
 </dt> </dl>
 
-Vierte Server-IP-Adressen, die beim Abfragen von DNS-Servern verwendet werden sollen. Jedes Byte der sint32 stellt einen der vier Teile der IP-Adresse (P1. P2. P3. P4) dar. Das nieder wertige Byte enthält den Wert für P1, das nächste Byte enthält den Wert für P2 usw.
+Vierte Server-IP-Adressen, die beim Abfragen von DNS-Servern verwendet werden sollen. Jedes Byte von sint32 stellt einen der vier Teile der IP-Adresse dar (p1.p2.p3.p4). Das niedrige Byte enthält den Wert für p1, das nächste Byte enthält den Wert für p2 und so weiter.
 
 </dd> <dt>
 
@@ -183,26 +183,26 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (9)
+Qualifizierer: **WmiDataId** (9)
 </dt> </dl>
 
-Die IP-Adresse des Standard Gateways, das vom Computersystem verwendet wird. Jedes Byte der sint32 stellt einen der vier Teile der IP-Adresse (P1. P2. P3. P4) dar. Das nieder wertige Byte enthält den Wert für P1, das nächste Byte enthält den Wert für P2 usw.
+IP-Adresse des Standardgateways, das vom Computersystem verwendet wird. Jedes Byte von sint32 stellt einen der vier Teile der IP-Adresse dar (p1.p2.p3.p4). Das niedrige Byte enthält den Wert für p1, das nächste Byte enthält den Wert für p2 und so weiter.
 
 </dd> <dt>
 
 **Index**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2)
+Qualifizierer: **WmiDataId** (2)
 </dt> </dl>
 
-Adapter Index. Der Adapter Index kann sich ändern, wenn ein Adapter deaktiviert und dann aktiviert wird, oder unter anderen Umständen nicht als persistent eingestuft wird.
+Adapterindex. Der Adapterindex kann sich ändern, wenn ein Adapter deaktiviert und dann aktiviert wird, oder unter anderen Umständen, und sollte nicht als persistent betrachtet werden.
 
 </dd> <dt>
 
@@ -215,30 +215,30 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (6)
+Qualifizierer: **WmiDataId** (6)
 </dt> </dl>
 
-IP-Adressen, die der Netzwerkschnittstellenkarte zugeordnet sind. Jedes Byte der sint32 stellt einen der vier Teile der IP-Adresse (P1. P2. P3. P4) dar. Das nieder wertige Byte enthält den Wert für P1, das nächste Byte enthält den Wert für P2 usw.
+IP-Adressen, die der Netzwerkschnittstellenkarte zugeordnet sind. Jedes Byte von sint32 stellt einen der vier Teile der IP-Adresse dar (p1.p2.p3.p4). Das niedrige Byte enthält den Wert für p1, das nächste Byte enthält den Wert für p2 und so weiter.
 
 </dd> <dt>
 
-**NICNAME**
+**NICName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **char16** Array
+Datentyp: **char16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1), **Max** (256)
+Qualifizierer: **WmiDataId** (1), **Max** (256)
 </dt> </dl>
 
-Der Name der Netzwerkschnittstellenkarte.
+Name der Netzwerkschnittstellenkarte.
 
 </dd> <dt>
 
-**Physicaladdr**
+**PhysicalAddr**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **char16**
@@ -247,30 +247,30 @@ Datentyp: **char16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4), **Max** (8)
+Qualifizierer: **WmiDataId** (4), **Max** (8)
 </dt> </dl>
 
-Die Hardware Adresse für den Adapter.
+Hardwareadresse für den Adapter.
 
 </dd> <dt>
 
-**Physicaladdrlen**
+**PhysicalAddrLen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3)
+Qualifizierer: **WmiDataId** (3)
 </dt> </dl>
 
 Länge der Hardwareadresse für den Adapter.
 
 </dd> <dt>
 
-**Primarywinsserver**
+**PrimaryWinsServer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -279,14 +279,14 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (10)
+Qualifizierer: **WmiDataId** (10)
 </dt> </dl>
 
-Die IP-Adresse für den primären WINS-Server. Jedes Byte der sint32 stellt einen der vier Teile der IP-Adresse (P1. P2. P3. P4) dar. Das nieder wertige Byte enthält den Wert für P1, das nächste Byte enthält den Wert für P2 usw.
+IP-Adresse für den primären WINS-Server. Jedes Byte von sint32 stellt einen der vier Teile der IP-Adresse dar (p1.p2.p3.p4). Das niedrige Byte enthält den Wert für p1, das nächste Byte enthält den Wert für p2 und so weiter.
 
 </dd> <dt>
 
-**Secondarywinsserver**
+**SecondaryWinsServer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -295,26 +295,26 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (11)
+Qualifizierer: **WmiDataId** (11)
 </dt> </dl>
 
-Die IP-Adresse für den sekundären WINS-Server. Jedes Byte der sint32 stellt einen der vier Teile der IP-Adresse (P1. P2. P3. P4) dar. Das nieder wertige Byte enthält den Wert für P1, das nächste Byte enthält den Wert für P2 usw.
+IP-Adresse für den sekundären WINS-Server. Jedes Byte von sint32 stellt einen der vier Teile der IP-Adresse dar (p1.p2.p3.p4). Das niedrige Byte enthält den Wert für p1, das nächste Byte enthält den Wert für p2 und so weiter.
 
 </dd> <dt>
 
 **Größe**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (5)
+Qualifizierer: **WmiDataId** (5)
 </dt> </dl>
 
-Größe (in Bytes) der Dateneigenschaft.
+Größe der Data-Eigenschaft in Bytes.
 
 </dd> <dt>
 
@@ -327,21 +327,21 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (7)
+Qualifizierer: **WmiDataId** (7)
 </dt> </dl>
 
-Die der Netzwerkschnittstellenkarte zugeordnete Subnetzmaske. Jedes Byte der sint32 stellt einen der vier Teile der IP-Adresse (P1. P2. P3. P4) dar. Das nieder wertige Byte enthält den Wert für P1, das nächste Byte enthält den Wert für P2 usw.
+Subnetzmaske, die der Netzwerkschnittstellenkarte zugeordnet ist. Jedes Byte von sint32 stellt einen der vier Teile der IP-Adresse dar (p1.p2.p3.p4). Das niedrige Byte enthält den Wert für p1, das nächste Byte enthält den Wert für p2 und so weiter.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -349,7 +349,7 @@ Die der Netzwerkschnittstellenkarte zugeordnete Subnetzmaske. Jedes Byte der sin
 
 <dl> <dt>
 
-[**SystemConfig \_ v0**](systemconfig-v0.md)
+[**SystemConfig \_ V0**](systemconfig-v0.md)
 </dt> </dl>
 
  

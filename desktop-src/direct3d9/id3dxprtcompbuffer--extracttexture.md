@@ -1,7 +1,7 @@
 ---
-description: Extrahiert die pro-Beispiel-PCA-Projektions Koeffizienten (Principal Component Analysis) aus einem komprimierten ID3DXPRTCompBuffer-Datenpuffer und fügt die Daten einem IDirect3DTexture9-Objekt hinzu.
+description: Extrahiert die PcA-Projektionskoeffizienten (Principal Component Analysis, Prinzipalkomponentenanalyse) pro Beispiel aus einem komprimierten ID3DXPRTCompBuffer-Datenpuffer und fügt die Daten einem IDirect3DTexture9-Objekt hinzu.
 ms.assetid: 2159e57d-b8e5-421f-b20a-ac58b29e3c45
-title: 'ID3DXPRTCompBuffer:: extracttexture-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTCompBuffer::ExtractTexture-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a6a2200c680c19019375a5e33d2d8b675992dc38
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 6b6dd2f0a366cf371347d1f8f7289e1ad3c782e069dcd9f7007abbd7c1a5c33d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050882"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119985650"
 ---
-# <a name="id3dxprtcompbufferextracttexture-method"></a>ID3DXPRTCompBuffer:: extracttexture-Methode
+# <a name="id3dxprtcompbufferextracttexture-method"></a>ID3DXPRTCompBuffer::ExtractTexture-Methode
 
-Extrahiert die pro-Beispiel-PCA-Projektions Koeffizienten (Principal Component Analysis) aus einem komprimierten [**ID3DXPRTCompBuffer**](id3dxprtcompbuffer.md) -Datenpuffer und fügt die Daten einem [**IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) -Objekt hinzu.
+Extrahiert die PcA-Projektionskoeffizienten (Principal Component Analysis, Prinzipalkomponentenanalyse) pro Beispiel aus einem komprimierten [**ID3DXPRTCompBuffer-Datenpuffer**](id3dxprtcompbuffer.md) und fügt die Daten einem [**IDirect3DTexture9-Objekt**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT ExtractTexture(
 
 <dl> <dt>
 
-*Startpca* \[ in\]
+*StartPCA* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Startwert des Puffer Koeffizienten, von dem Textur Daten extrahiert werden sollen.
+Startwert des Pufferkoeffizienten, aus dem Texturdaten extrahiert werden.
 
 </dd> <dt>
 
-*Numpca* \[ in\]
+*NumPCA* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der PCA-Koeffizienten, die aus dem Puffer extrahiert werden sollen.
+Anzahl der PCA-Koeffizienten, die aus dem Puffer extrahiert werden.
 
 </dd> <dt>
 
-*ptexture* \[ in\]
+*pTexture* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)**
 
-Zeiger auf ein [**IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) -Textur Objekt, in dem die PCA-Koeffizienten gespeichert werden.
+Zeiger auf ein [**IDirect3DTexture9-Texturobjekt,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) in dem PCA-Koeffizienten gespeichert werden.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Zeiger auf ein [**IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9help
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, wird der folgende Wert zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,12 +81,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

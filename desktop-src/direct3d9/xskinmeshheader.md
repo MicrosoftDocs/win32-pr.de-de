@@ -1,19 +1,19 @@
 ---
-description: Diese Vorlage wird nur in Netzen, die exportierte skinsinformationen enthalten, pro Mesh instanziiert. Der Zweck dieser Vorlage besteht darin, Informationen über die Art der exportierten Informationen zu den zu exportierenden Informationen bereitzustellen.
+description: Diese Vorlage wird pro Gitternetz nur in Gitternetzen instanziiert, die exportierte Skinninginformationen enthalten. Der Zweck dieser Vorlage besteht in der Bereitstellung von Informationen zur Art der exportierten Skinninginformationen.
 ms.assetid: 95a4fa45-63d1-4931-9c91-b26807d2b043
-title: Xskinmeshheader
+title: XSkinMeshHeader
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 306f8c183086846fca020040af00b9ccef2665cc
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 78c86127e46809cd1415b191a769b25e09535405e6500e511df6248e6174888d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392785"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118796854"
 ---
-# <a name="xskinmeshheader"></a>Xskinmeshheader
+# <a name="xskinmeshheader"></a>XSkinMeshHeader
 
-Diese Vorlage wird nur in Netzen, die exportierte skinsinformationen enthalten, pro Mesh instanziiert. Der Zweck dieser Vorlage besteht darin, Informationen über die Art der exportierten Informationen zu den zu exportierenden Informationen bereitzustellen.
+Diese Vorlage wird pro Gitternetz nur in Gitternetzen instanziiert, die exportierte Skinninginformationen enthalten. Der Zweck dieser Vorlage besteht in der Bereitstellung von Informationen zur Art der exportierten Skinninginformationen.
 
 ``` syntax
 template XSkinMeshHeader 
@@ -27,11 +27,11 @@ template XSkinMeshHeader
 
 Hierbei gilt:
 
--   nmaxskinweightspervertex: maximale Anzahl von Transformationen, die einen Scheitelpunkt im Mesh beeinflussen.
--   nmaxskinweightsperface: maximale Anzahl eindeutiger Transformationen, die die drei Scheitel Punkte beliebiger Gesichter beeinflussen.
--   nbones: die Anzahl der Knochen, die die Scheitel Punkte in diesem Mesh beeinflussen.
+-   nMaxSkinWeightsPerVertex: Maximale Anzahl von Transformationen, die sich auf einen Scheitelpunkt im Gitternetz auswirken.
+-   nMaxSkinWeightsPerFace: Maximale Anzahl eindeutiger Transformationen, die sich auf die drei Scheitelungen eines Gesichts auswirken.
+-   nBones: Anzahl von Gittern, die Sich auf Scheitelungen in diesem Gitternetz auswirken.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

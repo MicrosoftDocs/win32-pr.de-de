@@ -19,7 +19,7 @@ Wenn Sie eine Authentifizierungsebene für eine Anwendung festlegen, bestimmen S
 
 1.  Klicken Sie mit der rechten Maustaste auf die COM+-Anwendung, für die Sie die Authentifizierung festlegen, und klicken Sie dann auf **Eigenschaften.**
 
-2.  Klicken Sie im Dialogfeld Anwendungseigenschaften auf die **Registerkarte** Sicherheit.
+2.  Klicken Sie im Dialogfeld Anwendungseigenschaften auf die **Registerkarte Sicherheit.**
 
 3.  Wählen Sie **im Feld Authentifizierungsebene für** Aufrufe die entsprechende Ebene aus. Die Ebenen sind wie folgt und von der niedrigsten zur höchsten Sicherheit geordnet:
 

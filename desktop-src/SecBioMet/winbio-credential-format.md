@@ -1,9 +1,9 @@
 ---
-title: WINBIO_CREDENTIAL_FORMAT-Enumeration (winbio \_ types. h)
-description: Definiert Flags, die verwendet werden können, um das Format der Anmelde Informationen für den Endbenutzer anzugeben.
+title: WINBIO_CREDENTIAL_FORMAT -Enumeration (Winbio \_ types.h)
+description: Definiert Flags, die zum Angeben des Anmeldeinformationsformats des Endbenutzers verwendet werden können.
 ms.assetid: f107e000-98a2-44f0-aa5e-d13b5d9c8d43
 keywords:
-- WINBIO_CREDENTIAL_FORMAT Enumeration Windows-Biometrieframework-API
+- WINBIO_CREDENTIAL_FORMAT enumeration Windows Biometric Framework-API
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa28ea56c7af9f78947e64587740300a70f763ca
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 82185bdb9d8170abbdba04e758010443dc8be6a37e198edb27a137024dacf9af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103695"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118910823"
 ---
-# <a name="winbio_credential_format-enumeration"></a>Winbio \_ Credential \_ Format-Enumeration
+# <a name="winbio_credential_format-enumeration"></a>WINBIO \_ CREDENTIAL \_ FORMAT-Enumeration
 
-Definiert Flags, die verwendet werden können, um das Format der Anmelde Informationen für den Endbenutzer anzugeben. Diese Enumeration wird von der [**winbiosetcredential**](/windows/desktop/api/Winbio/nf-winbio-winbiosetcredential) -Funktion verwendet.
+Definiert Flags, die zum Angeben des Anmeldeinformationsformats des Endbenutzers verwendet werden können. Diese Enumeration wird von der [**WinBioSetCredential-Funktion**](/windows/desktop/api/Winbio/nf-winbio-winbiosetcredential) verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ typedef enum _WINBIO_CREDENTIAL_FORMAT {
 
 <dl> <dt>
 
-<span id="WINBIO_PASSWORD_GENERIC"></span><span id="winbio_password_generic"></span>**winbio- \_ Kennwort \_ generisch**
+<span id="WINBIO_PASSWORD_GENERIC"></span><span id="winbio_password_generic"></span>**WINBIO \_ PASSWORD \_ GENERIC**
 </dt> <dd>
 
-Das Kennwort ist in einem generischen Format angegeben.
+Das Kennwort hat ein generisches Format.
 
 </dd> <dt>
 
-<span id="WINBIO_PASSWORD_PACKED"></span><span id="winbio_password_packed"></span>**winbio- \_ Kennwort \_ gepackt**
+<span id="WINBIO_PASSWORD_PACKED"></span><span id="winbio_password_packed"></span>**GEPACKTES \_ \_ WINBIO-KENNWORT**
 </dt> <dd>
 
-Das Kennwort weist ein komprimiertes Format auf.
+Das Kennwort hat ein komprimiertes Format.
 
 </dd> <dt>
 
-<span id="WINBIO_PASSWORD_PROTECTED"></span><span id="winbio_password_protected"></span>**winbio- \_ Kennwort \_ geschützt**
+<span id="WINBIO_PASSWORD_PROTECTED"></span><span id="winbio_password_protected"></span>**WINBIO \_ PASSWORD \_ PROTECTED**
 </dt> <dd>
 
-Die Kenn Wort Anmelde Informationen wurden mit " [**kredprotect**](/windows/desktop/api/wincred/nf-wincred-credprotecta)" umschließt.
+Die Kennwort-Anmeldeinformationen wurden mit [**CredProtect umschlossen.**](/windows/desktop/api/wincred/nf-wincred-credprotecta)
 
 </dd> </dl>
 
@@ -69,20 +69,20 @@ Die Kenn Wort Anmelde Informationen wurden mit " [**kredprotect**](/windows/desk
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                                  |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                                  |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (einschließlich Winbio.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Enumerationen von Client Anwendungen](client-application-enumerations.md)
+[Clientanwendungsenumeration](client-application-enumerations.md)
 </dt> <dt>
 
-[**Winbiosetcredential**](/windows/desktop/api/Winbio/nf-winbio-winbiosetcredential)
+[**WinBioSetCredential**](/windows/desktop/api/Winbio/nf-winbio-winbiosetcredential)
 </dt> </dl>
 
  

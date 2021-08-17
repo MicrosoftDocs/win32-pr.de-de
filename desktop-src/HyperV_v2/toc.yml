@@ -4,14 +4,14 @@
     - name: Informationen zur Hyper-V-Verwaltung
       href: about-hyper-v-management.md
       items:
-        - name: Sichern und Wiederherstellen von virtuellen Computern
+        - name: Sichern und Wiederherstellen virtueller Computer
           href: backing-up-and-restoring-virtual-machines.md
-        - name: Generierungs Bezeichner der virtuellen Maschine
+        - name: Generierungsbezeichner für virtuelle Computer
           href: virtual-machine-generation-identifier.md
     - name: Referenz zur Hyper-V-Verwaltung
       href: hyper-v-management-reference.md
       items:
-        - name: Hyper-V-Verwaltungs Steuerungs Codes
+        - name: Steuerungscodes für die Hyper-V-Verwaltung
           href: hyper-v-management-control-codes.md
           items:
             - name: IOCTL_VMGENCOUNTER_READ
@@ -21,7 +21,7 @@
           items:
             - name: VM_GENCOUNTER
               href: /windows/win32/api/Vmgenerationcounter/ns-vmgenerationcounter-vm_gencounter
-- name: Hyper-V-WMI-Anbieter (v2)
+- name: Hyper-V-WMI-Anbieter (V2)
   href: windows-virtualization-portal.md
   items:
     - name: Informationen zum Hyper-V-WMI-Anbieter
@@ -29,24 +29,24 @@
       items:
         - name: Verwaltungsdienst für virtuelle Systeme
           href: virtual-system-management-service.md
-        - name: Ressourcen Verwaltungsdienst
+        - name: Ressourcenverwaltungsdienst
           href: resource-management-service.md
-        - name: Neues in Hyper-V-WMI-Anbieter
+        - name: Neuerungen beim Hyper-V-WMI-Anbieter
           href: what-s-new-in-hyper-v.md
     - name: Verwenden des Hyper-V-WMI-Anbieters
       href: using-the-virtualization-wmi-provider.md
       items:
-        - name: Exportieren einer Momentaufnahme einer virtuellen Maschine
+        - name: Exportieren einer Momentaufnahme eines virtuellen Computers
           href: exporting-virtual-machines.md
-        - name: Exportieren der Konfiguration einer virtuellen Maschine
+        - name: Exportieren der Konfiguration eines virtuellen Computers
           href: exporting-the-configuration-of-a-virtual-machine.md
-        - name: Der DNS-Name des virtuellen Systems wird erhalten.
+        - name: Abrufen des DNS-Namens des virtuellen Systems
           href: getting-the-virtual-system-dns-name.md
-        - name: Migrieren virtueller Maschinen
+        - name: Migrieren virtueller Computer
           href: importing-virtual-machines.md
-        - name: Abfragen von Netzwerk Objekten
+        - name: Abfragen von Netzwerkobjekten
           href: querying-networking-objects.md
-        - name: Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (v2)
+        - name: Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (V2)
           href: common-utilities-for-the-virtualization-samples-v2.md
     - name: Hyper-V-WMI-Klassen
       href: hyper-v-wmi-classes.md
@@ -174,7 +174,7 @@
             - name: CIM_Job
               href: cim-job.md
               items:
-                - name: Killjob-Methode
+                - name: KillJob-Methode
                   href: cim-job-killjob.md
             - name: CIM_LANEndpoint
               href: cim-lanendpoint.md
@@ -189,13 +189,13 @@
                   href: cim-logicaldevice-reset.md
                 - name: EnableDevice-Methode
                   href: cim-logicaldevice-enabledevice.md
-                - name: Onlinedevice-Methode
+                - name: OnlineDevice-Methode
                   href: cim-logicaldevice-onlinedevice.md
-                - name: Quiescedevice-Methode
+                - name: QuiesceDevice-Methode
                   href: cim-logicaldevice-quiescedevice.md
                 - name: SaveProperties-Methode
                   href: cim-logicaldevice-saveproperties.md
-                - name: Restoreproperties-Methode
+                - name: RestoreProperties-Methode
                   href: cim-logicaldevice-restoreproperties.md
             - name: CIM_LogicalDisk
               href: cim-logicaldisk.md
@@ -212,7 +212,7 @@
             - name: CIM_MediaAccessDevice
               href: cim-mediaaccessdevice.md
               items:
-                - name: Lockmedia-Methode
+                - name: LockMedia-Methode
                   href: cim-mediaaccessdevice-lockmedia.md
             - name: CIM_MediaPresent
               href: cim-mediapresent.md
@@ -229,17 +229,17 @@
             - name: CIM_MetricService
               href: cim-metricservice.md
               items:
-                - name: Showmetrics-Methode
+                - name: ShowMetrics-Methode
                   href: cim-metricservice-showmetrics.md
-                - name: Showmetricsbyclass-Methode
+                - name: ShowMetricsByClass-Methode
                   href: cim-metricservice-showmetricsbyclass.md
-                - name: Controlmetrics-Methode
+                - name: ControlMetrics-Methode
                   href: cim-metricservice-controlmetrics.md
-                - name: Controlmetricsbyclass-Methode
+                - name: ControlMetricsByClass-Methode
                   href: cim-metricservice-controlmetricsbyclass.md
-                - name: Getmetricvalues-Methode
+                - name: GetMetricValues-Methode
                   href: cim-metricservice-getmetricvalues.md
-                - name: Controlsampletimes-Methode
+                - name: ControlSampleTimes-Methode
                   href: cim-metricservice-controlsampletimes.md
             - name: CIM_MetricServiceCapabilities
               href: cim-metricservicecapabilities.md
@@ -278,17 +278,17 @@
             - name: CIM_ResourcePoolConfigurationService
               href: cim-resourcepoolconfigurationservice.md
               items:
-                - name: Methode "kreateresourcepool"
+                - name: CreateResourcePool-Methode
                   href: cim-resourcepoolconfigurationservice-createresourcepool.md
-                - name: Methode "kreatechildresourcepool"
+                - name: CreateChildResourcePool-Methode
                   href: cim-resourcepoolconfigurationservice-createchildresourcepool.md
-                - name: Deleteresourcepool-Methode
+                - name: DeleteResourcePool-Methode
                   href: cim-resourcepoolconfigurationservice-deleteresourcepool.md
-                - name: Adresssourcestoresourcepool-Methode
+                - name: AddResourcesToResourcePool-Methode
                   href: cim-resourcepoolconfigurationservice-addresourcestoresourcepool.md
-                - name: Removeresourcesfromresourcepool-Methode
+                - name: RemoveResourcesFromResourcePool-Methode
                   href: cim-resourcepoolconfigurationservice-removeresourcesfromresourcepool.md
-                - name: Changesamentresourcepool-Methode
+                - name: ChangeParentResourcePool-Methode
                   href: cim-resourcepoolconfigurationservice-changeparentresourcepool.md
             - name: CIM_SAPSAPDependency
               href: cim-sapsapdependency.md
@@ -348,9 +348,9 @@
             - name: CIM_TPM
               href: cim-tpm.md
               items:
-                - name: Requesttpmstatechange-Methode
+                - name: RequestTPMStateChange-Methode
                   href: cim-tpm-requesttpmstatechange.md
-                - name: Changebesitzauth-Methode
+                - name: ChangeOwnerAuth-Methode
                   href: cim-tpm-changeownerauth.md
             - name: CIM_TransparentBridgingDynamicForwarding
               href: cim-transparentbridgingdynamicforwarding.md
@@ -376,17 +376,17 @@
             - name: CIM_VirtualSystemManagementService
               href: cim-virtualsystemmanagementservice.md
               items:
-                - name: Adresssourcesettings-Methode
+                - name: AddResourceSettings-Methode
                   href: cim-virtualsystemmanagementservice-addresourcesettings.md
-                - name: Definesystem-Methode
+                - name: DefineSystem-Methode
                   href: cim-virtualsystemmanagementservice-definesystem.md
-                - name: Destroysystem-Methode
+                - name: DestroySystem-Methode
                   href: cim-virtualsystemmanagementservice-destroysystem.md
-                - name: Modifyresourcesettings-Methode
+                - name: ModifyResourceSettings-Methode
                   href: cim-virtualsystemmanagementservice-modifyresourcesettings.md
-                - name: Modifysystemsettings-Methode
+                - name: ModifySystemSettings-Methode
                   href: cim-virtualsystemmanagementservice-modifysystemsettings.md
-                - name: Removeresourcesettings-Methode
+                - name: RemoveResourceSettings-Methode
                   href: cim-virtualsystemmanagementservice-removeresourcesettings.md
             - name: CIM_VirtualSystemMigrationCapabilities
               href: cim-virtualsystemmigrationcapabilities.md
@@ -410,11 +410,11 @@
             - name: CIM_VirtualSystemSnapshotService
               href: cim-virtualsystemsnapshotservice.md
               items:
-                - name: Kreatesnapshot-Methode
+                - name: CreateSnapshot-Methode
                   href: cim-virtualsystemsnapshotservice-createsnapshot.md
-                - name: Destroysnapshot-Methode
+                - name: DestroySnapshot-Methode
                   href: cim-virtualsystemsnapshotservice-destroysnapshot.md
-                - name: Applysnapshot-Methode
+                - name: ApplySnapshot-Methode
                   href: cim-virtualsystemsnapshotservice-applysnapshot.md
             - name: CIM_VLANEndpoint
               href: cim-vlanendpoint.md
@@ -431,27 +431,27 @@
               href: msvm-bioselement.md
             - name: Msvm_SystemBIOS
               href: msvm-systembios.md
-        - name: Eingabe Klassen
+        - name: Eingabeklassen
           href: input-classes.md
           items:
             - name: Msvm_Keyboard
               href: msvm-keyboard.md
               items:
-                - name: Iskeypressed-Methode
+                - name: IsKeyPressed-Methode
                   href: iskeypressed-msvm-keyboard.md
-                - name: Presskey-Methode
+                - name: PressKey-Methode
                   href: presskey-msvm-keyboard.md
-                - name: Releasekey-Methode
+                - name: ReleaseKey-Methode
                   href: releasekey-msvm-keyboard.md
                 - name: RequestStateChange-Methode
                   href: msvm-keyboard-requeststatechange.md
                 - name: Reset-Methode
                   href: msvm-keyboard-reset.md
-                - name: Typectrlaltdel-Methode
+                - name: TypeCtrlAltDel-Methode
                   href: typectrlaltdel-msvm-keyboard.md
-                - name: Typekey-Methode
+                - name: TypeKey-Methode
                   href: typekey-msvm-keyboard.md
-                - name: Typescancodes-Methode
+                - name: TypeScancodes-Methode
                   href: msvm-keyboard-typescancodes.md
                 - name: TypeText-Methode
                   href: typetext-msvm-keyboard.md
@@ -464,9 +464,9 @@
                   href: getbuttonstate-msvm-ps2mouse.md
                 - name: SetButtonState-Methode
                   href: setbuttonstate-msvm-ps2mouse.md
-                - name: Settrelativeposition-Methode
+                - name: SetRelativePosition-Methode
                   href: setrelativeposition-msvm-ps2mouse.md
-                - name: Setscrollposition-Methode
+                - name: SetScrollPosition-Methode
                   href: setscrollposition-msvm-ps2mouse.md
                 - name: RequestStateChange-Methode
                   href: msvm-ps2mouse-requeststatechange.md
@@ -479,11 +479,11 @@
                   href: clickbutton-msvm-syntheticmouse.md
                 - name: GetButtonState-Methode
                   href: getbuttonstate-msvm-syntheticmouse.md
-                - name: Settabsoluteposition-Methode
+                - name: SetAbsolutePosition-Methode
                   href: setabsoluteposition-msvm-syntheticmouse.md
                 - name: SetButtonState-Methode
                   href: setbuttonstate-msvm-syntheticmouse.md
-                - name: Setscrollposition-Methode
+                - name: SetScrollPosition-Methode
                   href: setscrollposition-msvm-syntheticmouse.md
                 - name: RequestStateChange-Methode
                   href: msvm-syntheticmouse-requeststatechange.md
@@ -497,7 +497,7 @@
               items:
                 - name: GetError-Methode
                   href: geterror-msvm-copyfiletoguestjob.md
-                - name: Geterrorex-Methode
+                - name: GetErrorEx-Methode
                   href: geterrorex-msvm-copyfiletoguestjob.md
                 - name: RequestStateChange-Methode
                   href: requeststatechange-msvm-copyfiletoguestjob.md
@@ -506,7 +506,7 @@
             - name: Msvm_GuestFileService
               href: msvm-guestfileservice.md
               items:
-                - name: Copyfilestoguest-Methode
+                - name: CopyFilesToGuest-Methode
                   href: copyfilestoguest-msvm-guestfileservice.md
             - name: Msvm_GuestService
               href: msvm-guestservice.md
@@ -542,7 +542,7 @@
               items:
                 - name: InitiateShutdown-Methode
                   href: msvm-shutdowncomponent-initiateshutdown.md
-                - name: Initiatereboot-Methode
+                - name: InitiateReboot-Methode
                   href: msvm-shutdowncomponent-initiatereboot.md
                 - name: RequestStateChange-Methode
                   href: msvm-shutdowncomponent-requeststatechange.md
@@ -568,7 +568,7 @@
                   href: msvm-vsscomponent-reset.md
             - name: Msvm_VssComponentSettingData
               href: msvm-vsscomponentsettingdata.md
-        - name: Speicher Klassen
+        - name: Speicherklassen
           href: memory-classes.md
           items:
             - name: Msvm_ElementAllocatedFromNumaNode
@@ -584,7 +584,7 @@
               href: msvm-memorysettingdata.md
             - name: Msvm_NumaNode
               href: msvm-numanode.md
-        - name: Prozessor Klassen
+        - name: Prozessorklassen
           href: processor-classes.md
           items:
             - name: Msvm_Processor
@@ -597,11 +597,11 @@
             - name: Msvm_ProcessorPool
               href: msvm-processorpool.md
               items:
-                - name: Calculatepossiblereserve-Methode
+                - name: CalculatePossibleReserve-Methode
                   href: calculatepossiblereserve-msvm-processorpool.md
             - name: Msvm_ProcessorSettingData
               href: msvm-processorsettingdata.md
-        - name: Profil Registrierungs Klassen
+        - name: Profilregistrierungsklassen
           href: profile-registration-classes.md
           items:
             - name: Msvm_ElementConformsToProfile
@@ -638,14 +638,14 @@
             - name: Msvm_RdvComponent
               href: msvm-rdvcomponent.md
               items:
-                - name: Enableendpoints-Methode
+                - name: EnableEndPoints-Methode
                   href: enableendpoints-msvm-rdvcomponent.md
             - name: Msvm_RdvComponentSettingData
               href: msvm-rdvcomponentsettingdata.md
             - name: Msvm_Synth3dVideoPool
               href: msvm-synth3dvideopool.md
               items:
-                - name: Calculatevideomemoryrequirements-Methode
+                - name: CalculateVideoMemoryRequirements-Methode
                   href: msvm-synth3dvideopool-calculatevideomemoryrequirements.md
             - name: Msvm_Synthetic3DDisplayController
               href: msvm-synthetic3ddisplaycontroller.md
@@ -654,26 +654,26 @@
             - name: Msvm_Synthetic3DService
               href: msvm-synthetic3dservice.md
               items:
-                - name: Disablegpuforvirtualization-Methode
+                - name: DisableGPUForVirtualization-Methode
                   href: disablegpuforvirtualization-msvm-synthetic3dservice.md
-                - name: Enablegpuforvirtualization-Methode
+                - name: EnableGPUForVirtualization-Methode
                   href: enablegpuforvirtualization-msvm-synthetic3dservice.md
-                - name: Modifyservicesettings-Methode
+                - name: ModifyServiceSettings-Methode
                   href: modifyservicesettings-msvm-synthetic3dservice.md
             - name: Msvm_Synthetic3DServiceSettingData
               href: msvm-synthetic3dservicesettingdata.md
             - name: Msvm_TerminalService
               href: msvm-terminalservice.md
               items:
-                - name: Getinteractivesessionacl-Methode
+                - name: GetInteractiveSessionACL-Methode
                   href: getinteractivesessionacl-msvm-terminalservice.md
-                - name: Grantinteractivesessionaccess-Methode
+                - name: GrantInteractiveSessionAccess-Methode
                   href: grantinteractivesessionaccess-msvm-terminalservice.md
-                - name: Modifyservicesettings-Methode
+                - name: ModifyServiceSettings-Methode
                   href: modifyservicesettings-msvm-terminalservice.md
                 - name: RequestStateChange-Methode
                   href: msvm-terminalservice-requeststatechange.md
-                - name: Revokeinteractivesessionaccess-Methode
+                - name: RevokeInteractiveSessionAccess-Methode
                   href: revokeinteractivesessionaccess-msvm-terminalservice.md
                 - name: StartService-Methode
                   href: msvm-terminalservice-startservice.md
@@ -707,19 +707,19 @@
             - name: Msvm_ResourcePoolConfigurationService
               href: msvm-resourcepoolconfigurationservice.md
               items:
-                - name: Methode "kreatepool"
+                - name: CreatePool-Methode
                   href: createpool-msvm-resourcepoolconfigurationservice.md
-                - name: Deletepool-Methode
+                - name: DeletePool-Methode
                   href: deletepool-msvm-resourcepoolconfigurationservice.md
-                - name: Modifypoolresources-Methode
+                - name: ModifyPoolResources-Methode
                   href: modifypoolresources-msvm-resourcepoolconfigurationservice.md
-                - name: Modifypoolsettings-Methode
+                - name: ModifyPoolSettings-Methode
                   href: modifypoolsettings-msvm-resourcepoolconfigurationservice.md
             - name: Msvm_ResourcePoolSettingData
               href: msvm-resourcepoolsettingdata.md
             - name: Msvm_SettingsDefineCapabilities
               href: msvm-settingsdefinecapabilities.md
-        - name: Serielle Geräteklassen
+        - name: Klassen für serielle Geräte
           href: serial-devices-classes.md
           items:
             - name: Msvm_SerialController
@@ -754,7 +754,7 @@
                   href: msvm-diskdrive-requeststatechange.md
                 - name: Reset-Methode
                   href: msvm-diskdrive-reset.md
-                - name: Lockmedia-Methode
+                - name: LockMedia-Methode
                   href: msvm-diskdrive-lockmedia.md
             - name: Msvm_DisketteController
               href: msvm-diskettecontroller.md
@@ -770,7 +770,7 @@
                   href: msvm-diskettedrive-requeststatechange.md
                 - name: Reset-Methode
                   href: msvm-diskettedrive-reset.md
-                - name: Lockmedia-Methode
+                - name: LockMedia-Methode
                   href: msvm-diskettedrive-lockmedia.md
             - name: Msvm_DVDDrive
               href: msvm-dvddrive.md
@@ -779,7 +779,7 @@
                   href: msvm-dvddrive-requeststatechange.md
                 - name: Reset-Methode
                   href: msvm-dvddrive-reset.md
-                - name: Lockmedia-Methode
+                - name: LockMedia-Methode
                   href: msvm-dvddrive-lockmedia.md
             - name: Msvm_IDEController
               href: msvm-idecontroller.md
@@ -791,53 +791,53 @@
             - name: Msvm_ImageManagementService
               href: msvm-imagemanagementservice.md
               items:
-                - name: Attachvirtualharddisk-Methode
+                - name: AttachVirtualHardDisk-Methode
                   href: attachvirtualharddisk-msvm-imagemanagementservice.md
-                - name: Compactvirtualharddisk-Methode
+                - name: CompactVirtualHardDisk-Methode
                   href: compactvirtualharddisk-msvm-imagemanagementservice.md
-                - name: Convertvirtualharddisk-Methode
+                - name: ConvertVirtualHardDisk-Methode
                   href: convertvirtualharddisk-msvm-imagemanagementservice.md
-                - name: Methode "kreatevirtualharddisk"
+                - name: CreateVirtualHardDisk-Methode
                   href: createvirtualharddisk-msvm-imagemanagementservice.md
-                - name: Methode "kreatevirtualfloppydisk"
+                - name: CreateVirtualFloppyDisk-Methode
                   href: createvirtualfloppydisk-msvm-imagemanagementservice.md
-                - name: Convertvirtualharddisktovhdset-Methode
+                - name: ConvertVirtualHardDiskToVHDSet-Methode
                   href: msvm-imagemanagementservice-convertvirtualharddisktovhdset.md
-                - name: Deletevhdsnapshot-Methode
+                - name: DeleteVHDSnapshot-Methode
                   href: msvm-imagemanagementservice-deletevhdsnapshot.md
-                - name: Findmountedstorageimageinstance-Methode
+                - name: FindMountedStorageImageInstance-Methode
                   href: msvm-imagemanagementservice-findmountedstorageimageinstance.md
-                - name: Getvirtualdiskchanges-Methode
+                - name: GetVirtualDiskChanges-Methode
                   href: msvm-imagemanagementservice-getvirtualdiskchanges.md
-                - name: Getvirtualharddisksettingdata-Methode
+                - name: GetVirtualHardDiskSettingData-Methode
                   href: getvirtualharddisksettingdata-msvm-imagemanagementservice.md
-                - name: Getvirtualharddiskstate-Methode
+                - name: GetVirtualHardDiskState-Methode
                   href: getvirtualharddiskstate-msvm-imagemanagementservice.md
-                - name: Getvhdsetinformation-Methode
+                - name: GetVHDSetInformation-Methode
                   href: msvm-imagemanagementservice-getvhdsetinformation.md
-                - name: Getvhdsnapshotinformation-Methode
+                - name: GetVHDSnapshotInformation-Methode
                   href: msvm-imagemanagementservice-getvhdsnapshotinformation.md
-                - name: Mergevirtualharddisk-Methode
+                - name: MergeVirtualHardDisk-Methode
                   href: mergevirtualharddisk-msvm-imagemanagementservice.md
-                - name: Optimizevhdset-Methode
+                - name: OptimizeVHDSet-Methode
                   href: msvm-imagemanagementservice-optimizevhdset.md
-                - name: Resizevirtualharddisk-Methode
+                - name: ResizeVirtualHardDisk-Methode
                   href: resizevirtualharddisk-msvm-imagemanagementservice.md
                 - name: RequestStateChange-Methode
                   href: msvm-imagemanagementservice-requeststatechange.md
-                - name: Setparameentvirtualharddisk-Methode
+                - name: SetParentVirtualHardDisk-Methode
                   href: setparentvirtualharddisk-msvm-imagemanagementservice.md
-                - name: Setvirtualharddisksettingdata-Methode
+                - name: SetVirtualHardDiskSettingData-Methode
                   href: setvirtualharddisksettingdata-msvm-imagemanagementservice.md
-                - name: Setvhdsnapshotinformation-Methode
+                - name: SetVHDSnapshotInformation-Methode
                   href: msvm-imagemanagementservice-setvhdsnapshotinformation.md
                 - name: StartService-Methode
                   href: msvm-imagemanagementservice-startservice.md
                 - name: StopService-Methode
                   href: msvm-imagemanagementservice-stopservice.md
-                - name: Validatepersistentreservationsupport-Methode
+                - name: ValidatePersistentReservationSupport-Methode
                   href: msvm-imagemanagementservice-validatepersistentreservationsupport.md
-                - name: Validatevirtualharddisk-Methode
+                - name: ValidateVirtualHardDisk-Methode
                   href: validatevirtualharddisk-msvm-imagemanagementservice.md
             - name: Msvm_LogicalDisk
               href: msvm-logicaldisk.md
@@ -851,7 +851,7 @@
             - name: Msvm_MountedStorageImage
               href: msvm-mountedstorageimage.md
               items:
-                - name: Detachvirtualharddisk-Methode
+                - name: DetachVirtualHardDisk-Methode
                   href: detachvirtualharddisk-msvm-mountedstorageimage.md
             - name: Msvm_ProtocolControllerForUnit
               href: msvm-protocolcontrollerforunit.md
@@ -871,7 +871,7 @@
               items:
                 - name: GetError-Methode
                   href: msvm-storagejob-geterror.md
-                - name: Geterrorex-Methode
+                - name: GetErrorEx-Methode
                   href: geterrorex-msvm-storagejob.md
                 - name: RequestStateChange-Methode
                   href: msvm-storagejob-requeststatechange.md
@@ -879,7 +879,7 @@
               href: msvm-virtualharddisksettingdata.md
             - name: Msvm_VirtualHardDiskState
               href: msvm-virtualharddiskstate.md
-        - name: Video Klassen
+        - name: Videoklassen
           href: video-classes.md
           items:
             - name: Msvm_S3DisplayController
@@ -912,7 +912,7 @@
                   href: msvm-videohead-reset.md
             - name: Msvm_VideoHeadOnController
               href: msvm-videoheadoncontroller.md
-        - name: Klassen des virtuellen Systems
+        - name: Virtuelle Systemklassen
           href: virtual-system-classes.md
           items:
             - name: Msvm_BootSourceComponent
@@ -922,11 +922,11 @@
             - name: Msvm_ComputerSystem
               href: msvm-computersystem.md
               items:
-                - name: Injetnonmaskableinterrupt-Methode
+                - name: InjectNonMaskableInterrupt-Methode
                   href: injectnonmaskableinterrupt-msvm-computersystem.md
-                - name: Requestreplicationstatechange-Methode
+                - name: RequestReplicationStateChange-Methode
                   href: msvm-computersystem-requestreplicationstatechange.md
-                - name: Requestreplicationstatechangeex-Methode
+                - name: RequestReplicationStateChangeEx-Methode
                   href: msvm-requestreplicationstatechangeex-computersystem.md
                 - name: RequestStateChange-Methode
                   href: requeststatechange-msvm-computersystem.md
@@ -957,7 +957,7 @@
               href: msvm-virtualsystemsettingdata.md
             - name: Msvm_VirtualSystemSettingDataComponent
               href: msvm-virtualsystemsettingdatacomponent.md
-        - name: Verwaltungs Klassen für virtuelle Systeme
+        - name: Verwaltungsklassen für virtuelle Systeme
           href: virtual-system-management-classes.md
           items:
             - name: Msvm_AffectedJobElement
@@ -967,7 +967,7 @@
               items:
                 - name: GetError-Methode
                   href: geterror-msvm-concretejob.md
-                - name: Geterrorex-Methode
+                - name: GetErrorEx-Methode
                   href: geterrorex-msvm-concretejob.md
                 - name: RequestStateChange-Methode
                   href: requeststatechange-msvm-concretejob.md
@@ -1000,137 +1000,137 @@
             - name: Msvm_VirtualSystemManagementService
               href: msvm-virtualsystemmanagementservice.md
               items:
-                - name: Addbootsourcesettings-Methode
+                - name: AddBootSourceSettings-Methode
                   href: msvm-virtualsystemmanagementservice-addbootsourcesettings.md
-                - name: Addfeaturesettings-Methode
+                - name: AddFeatureSettings-Methode
                   href: addfeaturesettings-msvm-virtualsystemmanagementservice.md
-                - name: Addguestservicesettings-Methode
+                - name: AddGuestServiceSettings-Methode
                   href: msvm-virtualsystemmanagementservice-addguestservicesettings.md
-                - name: Addfbrechannelchap-Methode
+                - name: AddFibreChannelChap-Methode
                   href: addfibrechannelchap-msvm-virtualsystemmanagementservice.md
-                - name: Addkvpitems-Methode
+                - name: AddKvpItems-Methode
                   href: addkvpitems-msvm-virtualsystemmanagementservice.md
-                - name: Adresssourcesettings-Methode
+                - name: AddResourceSettings-Methode
                   href: addresourcesettings-msvm-virtualsystemmanagementservice.md
-                - name: Addsystemcomponentsettings-Methode
+                - name: AddSystemComponentSettings-Methode
                   href: msvm-virtualsystemmanagementservice-addsystemcomponentsettings.md
-                - name: Defineplannedsystem-Methode
+                - name: DefinePlannedSystem-Methode
                   href: msvm-virtualsystemmanagementservice-defineplannedsystem.md
-                - name: Definesystem-Methode
+                - name: DefineSystem-Methode
                   href: definesystem-msvm-virtualsystemmanagementservice.md
-                - name: Destroysystem-Methode
+                - name: DestroySystem-Methode
                   href: destroysystem-msvm-virtualsystemmanagementservice.md
-                - name: Diagnosenetworkconnection-Methode
+                - name: DiagnoseNetworkConnection-Methode
                   href: msvm-virtualsystemmanagementservice-diagnosenetworkconnection.md
-                - name: Exportsystemdefinition-Methode
+                - name: ExportSystemDefinition-Methode
                   href: exportsystemdefinition-msvm-virtualsystemmanagementservice.md
-                - name: Formaterror-Methode
+                - name: FormatError-Methode
                   href: formaterror-msvm-virtualsystemmanagementservice.md
-                - name: Generatewwpn-Methode
+                - name: GenerateWwpn-Methode
                   href: generatewwpn-msvm-virtualsystemmanagementservice.md
-                - name: Getcurrentwwpnfromgenerator-Methode
+                - name: GetCurrentWwpnFromGenerator-Methode
                   href: getcurrentwwpnfromgenerator-msvm-virtualsystemmanagementservice.md
                 - name: GetDefinitionFileSummaryInformation-Methode
                   href: getdefinitionfilesummaryinformation-msvm-virtualsystemmanagementservice.md
-                - name: Getsizeofsystemfiles-Methode
+                - name: GetSizeOfSystemFiles-Methode
                   href: getsizeofsystemfiles-msvm-virtualsystemmanagementservice.md
-                - name: Getsummaryinformation-Methode
+                - name: GetSummaryInformation-Methode
                   href: getsummaryinformation-msvm-virtualsystemmanagementservice.md
-                - name: Getvirtualsystemthumbnailimage-Methode
+                - name: GetVirtualSystemThumbnailImage-Methode
                   href: getvirtualsystemthumbnailimage-msvm-virtualsystemmanagementservice.md
-                - name: Importsnapshotdefinitions-Methode
+                - name: ImportSnapshotDefinitions-Methode
                   href: importsnapshotdefinitions-msvm-virtualsystemmanagementservice.md
-                - name: Importsystemdefinition-Methode
+                - name: ImportSystemDefinition-Methode
                   href: importsystemdefinition-msvm-virtualsystemmanagementservice.md
-                - name: Modifydiskmergesettings-Methode
+                - name: ModifyDiskMergeSettings-Methode
                   href: modifydiskmergesettings-msvm-virtualsystemmanagementservice.md
-                - name: Modifyfeaturesettings-Methode
+                - name: ModifyFeatureSettings-Methode
                   href: modifyfeaturesettings-msvm-virtualsystemmanagementservice.md
-                - name: Modifyguestservicesettings-Methode
+                - name: ModifyGuestServiceSettings-Methode
                   href: msvm-virtualsystemmanagementservice-modifyguestservicesettings.md
-                - name: Modifykvpitems-Methode
+                - name: ModifyKvpItems-Methode
                   href: modifykvpitems-msvm-virtualsystemmanagementservice.md
-                - name: Modifyresourcesettings-Methode
+                - name: ModifyResourceSettings-Methode
                   href: modifyresourcesettings-msvm-virtualsystemmanagementservice.md
-                - name: Modifyservicesettings-Methode
+                - name: ModifyServiceSettings-Methode
                   href: modifyservicesettings-msvm-virtualsystemmanagementservice.md
-                - name: Modifysystemcomponentsettings-Methode
+                - name: ModifySystemComponentSettings-Methode
                   href: msvm-virtualsystemmanagementservice-modifysystemcomponentsettings.md
-                - name: Modifysystemsettings-Methode
+                - name: ModifySystemSettings-Methode
                   href: modifysystemsettings-msvm-virtualsystemmanagementservice.md
-                - name: Realizeplannedsystem-Methode
+                - name: RealizePlannedSystem-Methode
                   href: realizeplannedsystem-msvm-virtualsystemmanagementservice.md
-                - name: Removefeaturesettings-Methode
+                - name: RemoveFeatureSettings-Methode
                   href: removefeaturesettings-msvm-virtualsystemmanagementservice.md
-                - name: Removebootsourcesettings-Methode
+                - name: RemoveBootSourceSettings-Methode
                   href: msvm-virtualsystemmanagementservice-removebootsourcesettings.md
-                - name: Removemebrechannelchap-Methode
+                - name: RemoveFibreChannelChap-Methode
                   href: removefibrechannelchap-msvm-virtualsystemmanagementservice.md
-                - name: Removekvpitems-Methode
+                - name: RemoveKvpItems-Methode
                   href: removekvpitems-msvm-virtualsystemmanagementservice.md
-                - name: Removeguestservicesettings-Methode
+                - name: RemoveGuestServiceSettings-Methode
                   href: msvm-virtualsystemmanagementservice-removeguestservicesettings.md
-                - name: Removeresourcesettings-Methode
+                - name: RemoveResourceSettings-Methode
                   href: removeresourcesettings-msvm-virtualsystemmanagementservice.md
-                - name: Removesystemcomponentsettings-Methode
+                - name: RemoveSystemComponentSettings-Methode
                   href: msvm-virtualsystemmanagementservice-removesystemcomponentsettings.md
                 - name: RequestStateChange-Methode
                   href: msvm-virtualsystemmanagementservice-requeststatechange.md
-                - name: Testnetworkconnection-Methode
+                - name: TestNetworkConnection-Methode
                   href: msvm-virtualsystemmanagementservice-testnetworkconnection.md
-                - name: Setguestnetworkadapterconfiguration-Methode
+                - name: SetGuestNetworkAdapterConfiguration-Methode
                   href: setguestnetworkadapterconfiguration-msvm-virtualsystemmanagementservice.md
-                - name: Setinitialmachineconfigurationdata-Methode
+                - name: SetInitialMachineConfigurationData-Methode
                   href: msvm-virtualsystemmanagementservice-setinitialmachineconfigurationdata.md
                 - name: StartService-Methode
                   href: msvm-virtualsystemmanagementservice-startservice.md
                 - name: StopService-Methode
                   href: msvm-virtualsystemmanagementservice-stopservice.md
-                - name: Upgradesystemversion-Methode
+                - name: UpgradeSystemVersion-Methode
                   href: msvm-virtualsystemmanagementservice-upgradesystemversion.md
-                - name: Validateplannedsystem-Methode
+                - name: ValidatePlannedSystem-Methode
                   href: validateplannedsystem-msvm-virtualsystemmanagementservice.md
             - name: Msvm_VirtualSystemManagementServiceSettingData
               href: msvm-virtualsystemmanagementservicesettingdata.md
             - name: Msvm_VirtualSystemSnapshotService
               href: msvm-virtualsystemsnapshotservice.md
               items:
-                - name: Applysnapshot-Methode
+                - name: ApplySnapshot-Methode
                   href: applysnapshot-msvm-virtualsystemsnapshotservice.md
-                - name: Clearsnapshotstate-Methode
+                - name: ClearSnapshotState-Methode
                   href: clearsnapshotstate-msvm-virtualsystemsnapshotservice.md
-                - name: Kreatesnapshot-Methode
+                - name: CreateSnapshot-Methode
                   href: createsnapshot-msvm-virtualsystemsnapshotservice.md
-                - name: Destroysnapshot-Methode
+                - name: DestroySnapshot-Methode
                   href: destroysnapshot-msvm-virtualsystemsnapshotservice.md
-                - name: Destroysnapshottree-Methode
+                - name: DestroySnapshotTree-Methode
                   href: destroysnapshottree-msvm-virtualsystemsnapshotservice.md
                 - name: RequestStateChange-Methode
                   href: msvm-virtualsystemsnapshotservice-requeststatechange.md
-                - name: Converttoreferencepoint-Methode
+                - name: ConvertToReferencePoint-Methode
                   href: msvm-virtualsystemsnapshotservice-converttoreferencepoint.md
-    - name: Hyper-V-anwendungsintegritätsüberwachungs-API
+    - name: Hyper-V-Anwendungsüberwachungs-API
       href: hyper-v-application-health-monitoring-api.md
       items:
-        - name: Referenz zur Integritäts Überwachung für Hyper-V-Anwendungen
+        - name: Referenz zur Hyper-V-Anwendungsüberwachungs-API
           href: hyper-v-application-health-monitoring-api-reference.md
           items:
-            - name: Enumerationen der Integritäts Überwachung für Hyper-V-Anwendungen
+            - name: Hyper-V-Anwendungsüberwachungsenumerationen
               href: hyper-v-application-health-monitoring-enumerations.md
               items:
                 - name: APPLICATION_STATE
                   href: application-state.md
-            - name: Schnittstellen der Integritäts Überwachung für Hyper-V-Anwendungen
+            - name: Hyper-V-Anwendungsüberwachungsschnittstellen
               href: hyper-v-application-health-monitoring-interfaces.md
               items:
-                - name: Ivmapplicationhealthmonitor
+                - name: IVmApplicationHealthMonitor
                   href: ivmapplicationhealthmonitor.md
                   items:
-                    - name: Resetallapplicationstate-Methode
+                    - name: ResetAllApplicationState-Methode
                       href: ivmapplicationhealthmonitor-resetallapplicationstate.md
-                    - name: Die Methode "stapplicationstate"
+                    - name: SetApplicationState-Methode
                       href: ivmapplicationhealthmonitor-setapplicationstate.md
-            - name: WMI-Klassen für die Hyper-V-Anwendungs Integritäts Überwachung
+            - name: WMI-Klassen für die Hyper-V-Anwendungsüberwachung
               href: hyper-v-application-health-monitoring-wmi-classes.md
               items:
                 - name: Msvm_HeartbeatComponent
@@ -1142,10 +1142,10 @@
                       href: msvm-heartbeatcomponent-reset.md
                 - name: Msvm_HeartbeatComponentSettingData
                   href: msvm-heartbeatcomponentsettingdata.md
-    - name: HyperV-Replikations-API
+    - name: Hyper-V-Replikations-API
       href: hyper-v-replication-api.md
       items:
-        - name: API-Referenz zur Hyper-V-Replikation
+        - name: Referenz zur Hyper-V-Replikations-API
           href: hyper-v-replication-api-reference.md
           items:
             - name: Msvm_FailoverNetworkAdapterSettingData
@@ -1161,63 +1161,63 @@
             - name: Msvm_ReplicationService
               href: msvm-replicationservice.md
               items:
-                - name: Addauthorizationentry-Methode
+                - name: AddAuthorizationEntry-Methode
                   href: addauthorizationentry-msvm-replicationservice.md
-                - name: Changereplicationmodetoprimary-Methode
+                - name: ChangeReplicationModeToPrimary-Methode
                   href: changereplicationmodetoprimary-msvm-replicationservice.md
-                - name: Commitfailover-Methode
+                - name: CommitFailover-Methode
                   href: commitfailover-msvm-replicationservice.md
-                - name: Methode "samatereplicationrelationship"
+                - name: CreateReplicationRelationship-Methode
                   href: createreplicationrelationship-msvm-replicationservice.md
-                - name: Getreplicationstatistics-Methode
+                - name: GetReplicationStatistics-Methode
                   href: getreplicationstatistics-msvm-replicationservice.md
-                - name: Getreplicationstatisticsex-Methode
+                - name: GetReplicationStatisticsEx-Methode
                   href: getreplicationstatisticsex-msvm-replicationservice.md
-                - name: Getsystemzertifikate-Methode
+                - name: GetSystemCertificates-Methode
                   href: getsystemcertificates-msvm-replicationservice.md
-                - name: Importinitialreplica-Methode
+                - name: ImportInitialReplica-Methode
                   href: importinitialreplica-msvm-replicationservice.md
-                - name: Initiatefailback-Methode
+                - name: InitiateFailback-Methode
                   href: initiatefailback-msvm-replicationservice.md
-                - name: Initiatefailover-Methode
+                - name: InitiateFailover-Methode
                   href: initiatefailover-msvm-replicationservice.md
-                - name: Modifyauthorizationentry-Methode
+                - name: ModifyAuthorizationEntry-Methode
                   href: modifyauthorizationentry-msvm-replicationservice.md
-                - name: Modifyreplicationsettings-Methode
+                - name: ModifyReplicationSettings-Methode
                   href: modifyreplicationsettings-msvm-replicationservice.md
-                - name: Modifyservicesettings-Methode
+                - name: ModifyServiceSettings-Methode
                   href: modifyservicesettings-msvm-replicationservice.md
-                - name: Removeauthorizationentry-Methode
+                - name: RemoveAuthorizationEntry-Methode
                   href: removeauthorizationentry-msvm-replicationservice.md
-                - name: Removereplicationrelationship-Methode
+                - name: RemoveReplicationRelationship-Methode
                   href: removereplicationrelationship-msvm-replicationservice.md
-                - name: Removereplicationrelationshipex-Methode
+                - name: RemoveReplicationRelationshipEx-Methode
                   href: removereplicationrelationshipex-msvm-replicationservice.md
                 - name: RequestStateChange-Methode
                   href: msvm-replicationservice-requeststatechange.md
-                - name: Resegtreplicationstatistics-Methode
+                - name: ResetReplicationStatistics-Methode
                   href: resetreplicationstatistics-msvm-replicationservice.md
-                - name: Resegtreplicationstatisticsex-Methode
+                - name: ResetReplicationStatisticsEx-Methode
                   href: resetreplicationstatisticsex-msvm-replicationservice.md
-                - name: Methode zum erneuten Synchronisieren
+                - name: Resynchronize-Methode
                   href: resynchronize-msvm-replicationservice.md
-                - name: Reversereplicationrelationship-Methode
+                - name: ReverseReplicationRelationship-Methode
                   href: reversereplicationrelationship-msvm-replicationservice.md
-                - name: Revertfailover-Methode
+                - name: RevertFailover-Methode
                   href: revertfailover-msvm-replicationservice.md
-                - name: Setauthorizationentry-Methode
+                - name: SetAuthorizationEntry-Methode
                   href: setauthorizationentry-msvm-replicationservice.md
-                - name: Setfailovernetworkadaptersettings-Methode
+                - name: SetFailoverNetworkAdapterSettings-Methode
                   href: setfailovernetworkadaptersettings-msvm-replicationservice.md
-                - name: Startreplikation-Methode
+                - name: StartReplication-Methode
                   href: startreplication-msvm-replicationservice.md
                 - name: StartService-Methode
                   href: msvm-replicationservice-startservice.md
                 - name: StopService-Methode
                   href: msvm-replicationservice-stopservice.md
-                - name: Testreplicasystem-Methode
+                - name: TestReplicaSystem-Methode
                   href: testreplicasystem-msvm-replicationservice.md
-                - name: Testreplicationconnection-Methode
+                - name: TestReplicationConnection-Methode
                   href: testreplicationconnection-msvm-replicationservice.md
             - name: Msvm_ReplicationServiceSettingData
               href: msvm-replicationservicesettingdata.md
@@ -1252,21 +1252,21 @@
             - name: Msvm_MetricService
               href: msvm-metricservice.md
               items:
-                - name: Controlmetrics-Methode
+                - name: ControlMetrics-Methode
                   href: controlmetrics-msvm-metricservice.md
-                - name: Controlmetricsbyclass-Methode
+                - name: ControlMetricsByClass-Methode
                   href: msvm-metricservice-controlmetricsbyclass.md
-                - name: Controlsampletimes-Methode
+                - name: ControlSampleTimes-Methode
                   href: msvm-metricservice-controlsampletimes.md
-                - name: Getmetricvalues-Methode
+                - name: GetMetricValues-Methode
                   href: msvm-metricservice-getmetricvalues.md
-                - name: Modifyservicesettings-Methode
+                - name: ModifyServiceSettings-Methode
                   href: modifyservicesettings-msvm-metricservice.md
                 - name: RequestStateChange-Methode
                   href: msvm-metricservice-requeststatechange.md
-                - name: Showmetrics-Methode
+                - name: ShowMetrics-Methode
                   href: msvm-metricservice-showmetrics.md
-                - name: Showmetricsbyclass-Methode
+                - name: ShowMetricsByClass-Methode
                   href: msvm-metricservice-showmetricsbyclass.md
                 - name: StartService-Methode
                   href: msvm-metricservice-startservice.md
@@ -1428,23 +1428,23 @@
             - name: Msvm_VirtualEthernetSwitchManagementService
               href: msvm-virtualethernetswitchmanagementservice.md
               items:
-                - name: Addfeaturesettings-Methode
+                - name: AddFeatureSettings-Methode
                   href: addfeaturesettings-msvm-virtualethernetswitchmanagementservice.md
-                - name: Adresssourcesettings-Methode
+                - name: AddResourceSettings-Methode
                   href: addresourcesettings-msvm-virtualethernetswitchmanagementservice.md
-                - name: Definesystem-Methode
+                - name: DefineSystem-Methode
                   href: definesystem-msvm-virtualethernetswitchmanagementservice.md
-                - name: Destroysystem-Methode
+                - name: DestroySystem-Methode
                   href: destroysystem-msvm-virtualethernetswitchmanagementservice.md
-                - name: Modifyfeaturesettings-Methode
+                - name: ModifyFeatureSettings-Methode
                   href: modifyfeaturesettings-msvm-virtualethernetswitchmanagementservice.md
-                - name: Modifyresourcesettings-Methode
+                - name: ModifyResourceSettings-Methode
                   href: modifyresourcesettings-msvm-virtualethernetswitchmanagementservice.md
-                - name: Modifysystemsettings-Methode
+                - name: ModifySystemSettings-Methode
                   href: modifysystemsettings-msvm-virtualethernetswitchmanagementservice.md
-                - name: Removefeaturesettings-Methode
+                - name: RemoveFeatureSettings-Methode
                   href: removefeaturesettings-msvm-virtualethernetswitchmanagementservice.md
-                - name: Removeresourcesettings-Methode
+                - name: RemoveResourceSettings-Methode
                   href: removeresourcesettings-msvm-virtualethernetswitchmanagementservice.md
                 - name: RequestStateChange-Methode
                   href: msvm-virtualethernetswitchmanagementservice-requeststatechange.md
@@ -1478,7 +1478,7 @@
               items:
                 - name: GetError-Methode
                   href: geterror-msvm-migrationjob.md
-                - name: Geterrorex-Methode
+                - name: GetErrorEx-Methode
                   href: geterrorex-msvm-migrationjob.md
                 - name: RequestStateChange-Methode
                   href: requeststatechange-msvm-migrationjob.md
@@ -1489,9 +1489,9 @@
             - name: Msvm_VirtualSystemMigrationService
               href: msvm-virtualsystemmigrationservice.md
               items:
-                - name: Addnetworksettings-Methode
+                - name: AddNetworkSettings-Methode
                   href: addnetworksettings-msvm-virtualsystemmigrationservice.md
-                - name: Checksystemcompatibilityinfo-Methode
+                - name: CheckSystemCompatibilityInfo-Methode
                   href: checksystemcompatibilityinfo-msvm-virtualsystemmigrationservice.md
                 - name: CheckVirtualSystemIsMigratable-Methode
                   href: checkvirtualsystemismigratable-msvm-virtualsystemmigrationservice.md
@@ -1499,19 +1499,19 @@
                   href: checkvirtualsystemismigratabletohost-msvm-virtualsystemmigrationservice.md
                 - name: CheckVirtualSystemIsMigratableToSystem-Methode
                   href: msvm-virtualsystemmigrationservice-checkvirtualsystemismigratabletosystem.md
-                - name: Getsystemcompatibilityinfo-Methode
+                - name: GetSystemCompatibilityInfo-Methode
                   href: getsystemcompatibilityinfo-msvm-virtualsystemmigrationservice.md
-                - name: Getsystemcompatibilityvectors-Methode
+                - name: GetSystemCompatibilityVectors-Methode
                   href: getsystemcompatibilityvectors-msvm-virtualsystemmigrationservice.md
                 - name: MigrateVirtualSystemToHost-Methode
                   href: migratevirtualsystemtohost-msvm-virtualsystemmigrationservice.md
                 - name: MigrateVirtualSystemToSystem-Methode
                   href: migratevirtualsystemtosystem-msvm-virtualsystemmigrationservice.md
-                - name: Modifynetworksettings-Methode
+                - name: ModifyNetworkSettings-Methode
                   href: modifynetworksettings-msvm-virtualsystemmigrationservice.md
-                - name: Modifyservicesettings-Methode
+                - name: ModifyServiceSettings-Methode
                   href: modifyservicesettings-msvm-virtualsystemmigrationservice.md
-                - name: Removenetworksettings-Methode
+                - name: RemoveNetworkSettings-Methode
                   href: removenetworksettings-msvm-virtualsystemmigrationservice.md
                 - name: RequestStateChange-Methode
                   href: msvm-virtualsystemmigrationservice-requeststatechange.md
@@ -1528,7 +1528,7 @@
     - name: Virtuelle Hyper-V-Fibre Channel-API
       href: hyper-v-virtual-fiber-channels-api.md
       items:
-        - name: Virtuelle Hyper-V-Fibre Channel-API-Referenz
+        - name: Referenz zur Hyper-V-FIBRE CHANNEL-API
           href: hyper-v-virtual-fiber-channels-api-reference.md
           items:
             - name: Msvm_ExternalFcPort
@@ -1577,7 +1577,7 @@
       items:
         - name: Msvm_CompatibilityVector
           href: msvm-compatibilityvector.md
-    - name: Schwellenwert Klassen
+    - name: Schwellenwertklassen
       href: threshold-classes.md
       items:
         - name: Msvm_CollectedCollections
@@ -1591,17 +1591,17 @@
         - name: Msvm_CollectionManagementService
           href: msvm-collectionmanagementservice.md
           items:
-            - name: Definecollection-Methode
+            - name: DefineCollection-Methode
               href: msvm-collectionmanagementservice-definecollection.md
-            - name: Destroycollection-Methode
+            - name: DestroyCollection-Methode
               href: msvm-collectionmanagementservice-destroycollection.md
-            - name: Renamecollection-Methode
+            - name: RenameCollection-Methode
               href: msvm-collectionmanagementservice-renamecollection.md
             - name: AddMember-Methode
               href: msvm-collectionmanagementservice-addmember.md
             - name: RemoveMember-Methode
               href: msvm-collectionmanagementservice-removemember.md
-            - name: Removemembership byid-Methode
+            - name: RemoveMemberById-Methode
               href: msvm-collectionmanagementservice-removememberbyid.md
             - name: StartService-Methode
               href: msvm-collectionmanagementservice-startservice.md
@@ -1612,13 +1612,13 @@
         - name: Msvm_CollectionReferencePointService
           href: msvm-collectionreferencepointservice.md
           items:
-            - name: Methode "kreatereferencepoint"
+            - name: CreateReferencePoint-Methode
               href: msvm-collectionreferencepointservice-createreferencepoint.md
-            - name: Destroyreferencepoint-Methode
+            - name: DestroyReferencePoint-Methode
               href: msvm-collectionreferencepointservice-destroyreferencepoint.md
-            - name: Removeassociateddata-Methode
+            - name: RemoveAssociatedData-Methode
               href: msvm-collectionreferencepointservice-removeassociateddata.md
-            - name: Exportreferencepoint-Methode
+            - name: ExportReferencePoint-Methode
               href: msvm-collectionreferencepointservice-exportreferencepoint.md
         - name: Msvm_CollectionReferencePointSettingData
           href: msvm-collectionreferencepointsettingdata.md
@@ -1629,15 +1629,15 @@
         - name: Msvm_CollectionSnapshotService
           href: msvm-collectionsnapshotservice.md
           items:
-            - name: Kreatesnapshot-Methode
+            - name: CreateSnapshot-Methode
               href: msvm-collectionsnapshotservice-createsnapshot.md
-            - name: Destroysnapshot-Methode
+            - name: DestroySnapshot-Methode
               href: msvm-collectionsnapshotservice-destroysnapshot.md
-            - name: Exportsnapshot-Methode
+            - name: ExportSnapshot-Methode
               href: msvm-collectionsnapshotservice-exportsnapshot.md
-            - name: Converttoreferencepoint-Methode
+            - name: ConvertToReferencePoint-Methode
               href: msvm-collectionsnapshotservice-converttoreferencepoint.md
-            - name: Applysnapshot-Methode
+            - name: ApplySnapshot-Methode
               href: msvm-collectionsnapshotservice-applysnapshot.md
         - name: Msvm_ComputerSystemSummaryInformation
           href: msvm-computersystemsummaryinformation.md
@@ -1713,15 +1713,15 @@
         - name: Msvm_VirtualSystemReferencePointService
           href: msvm-virtualsystemreferencepointservice.md
           items:
-            - name: Methode "kreatereferencepoint"
+            - name: CreateReferencePoint-Methode
               href: msvm-virtualsystemreferencepointservice-createreferencepoint.md
-            - name: Exportreferencepoint-Methode
+            - name: ExportReferencePoint-Methode
               href: msvm-virtualsystemreferencepointservice-exportreferencepoint.md
-            - name: Destroyreferencepoint-Methode
+            - name: DestroyReferencePoint-Methode
               href: msvm-virtualsystemreferencepointservice-destroyreferencepoint.md
-            - name: Removeassociateddata-Methode
+            - name: RemoveAssociatedData-Methode
               href: msvm-virtualsystemreferencepointservice-removeassociateddata.md
-            - name: Importreferencepointmetadata-Methode
+            - name: ImportReferencePointMetadata-Methode
               href: msvm-virtualsystemreferencepointservice-importreferencepointmetadata.md
         - name: Msvm_VirtualSystemReferencePointSettingData
           href: msvm-virtualsystemreferencepointsettingdata.md
@@ -1730,7 +1730,7 @@
         - name: Msvm_VssService
           href: msvm-vssservice.md
           items:
-            - name: Queryguestclusterinformation-Methode
+            - name: QueryGuestClusterInformation-Methode
               href: msvm-vssservice-queryguestclusterinformation.md
     - name: RS2-Klassen
       href: redstone-classes.md
@@ -1740,9 +1740,9 @@
         - name: Msvm_AssignableDeviceService
           href: msvm-assignabledeviceservice.md
           items:
-            - name: Dismountassignabledevice-Methode
+            - name: DismountAssignableDevice-Methode
               href: msvm-assignabledeviceservice-dismountassignabledevice.md
-            - name: Mountassignabledevice-Methode
+            - name: MountAssignableDevice-Methode
               href: msvm-assignabledeviceservice-mountassignabledevice.md
         - name: Msvm_CollectionReferencePointExportJob
           href: msvm-collectionreferencepointexportjob.md
@@ -1751,7 +1751,7 @@
               href: msvm-collectionreferencepointexportjob-requeststatechange.md
             - name: GetError-Methode
               href: msvm-collectionreferencepointexportjob-geterror.md
-            - name: Geterrorex-Methode
+            - name: GetErrorEx-Methode
               href: msvm-collectionreferencepointexportjob-geterrorex.md
         - name: Msvm_EthernetSwitchHardwareOffloadSettingData
           href: msvm-ethernetswitchhardwareoffloadsettingdata.md
@@ -1780,15 +1780,15 @@
         - name: Msvm_SecurityService
           href: msvm-securityservice.md
           items:
-            - name: Modifysecuritysettings-Methode
+            - name: ModifySecuritySettings-Methode
               href: msvm-securityservice-modifysecuritysettings.md
-            - name: Setsecuritypolicy-Methode
+            - name: SetSecurityPolicy-Methode
               href: msvm-securityservice-setsecuritypolicy.md
-            - name: Setkeyprotector-Methode
+            - name: SetKeyProtector-Methode
               href: msvm-securityservice-setkeyprotector.md
-            - name: Getkeyprotector-Methode
+            - name: GetKeyProtector-Methode
               href: msvm-securityservice-getkeyprotector.md
-            - name: Restorelastknowngoodkeyprotector-Methode
+            - name: RestoreLastKnownGoodKeyProtector-Methode
               href: msvm-securityservice-restorelastknowngoodkeyprotector.md
             - name: StartService-Methode
               href: msvm-securityservice-startservice.md
@@ -1809,7 +1809,7 @@
               href: msvm-virtualsystemreferencepointexportjob-requeststatechange.md
             - name: GetError-Methode
               href: msvm-virtualsystemreferencepointexportjob-geterror.md
-            - name: Geterrorex-Methode
+            - name: GetErrorEx-Methode
               href: msvm-virtualsystemreferencepointexportjob-geterrorex.md
     - name: RS3-Klassen
       href: rs3-classes.md

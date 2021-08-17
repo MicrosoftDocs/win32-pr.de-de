@@ -1,5 +1,5 @@
 ---
-description: 'TcpIp_V1_TypeGroup1 Klasse: Diese Klasse ist die Ereignistypklasse für TCP/IP-Ereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
+description: 'TcpIp_V1_TypeGroup1-Klasse: Diese Klasse ist die Ereignistypklasse für TCP/IP-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 1cde7e37-52da-4108-90ce-7647a5653f65
 title: TcpIp_V1_TypeGroup1-Klasse
 ms.topic: reference
@@ -18,18 +18,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 831dfdc228e2c8e128f328784046e833b0b45a39
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 2b16f125eac6bf22904e93aef9084f00bbf6ca55be85c762de54c286631b584e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069550"
 ---
 # <a name="tcpip_v1_typegroup1-class"></a>TcpIp \_ V1 \_ TypeGroup1-Klasse
 
 Diese Klasse ist die Ereignistypklasse für TCP/IP-Ereignisse.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,20 +48,20 @@ class TcpIp_V1_TypeGroup1 : TcpIp_V1
 
 ## <a name="members"></a>Member
 
-Die **Klasse TcpIp \_ V1 \_ TypeGroup1** verfügt über die folgenden Membertypen:
+Die **TcpIp \_ V1 \_ TypeGroup1-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Klasse TcpIp \_ V1 \_ TypeGroup1** verfügt über diese Eigenschaften.
+Die **TcpIp \_ V1 \_ TypeGroup1-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 daddr
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Objekt**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -77,7 +77,7 @@ Ziel-IP-Adresse.
 dport
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Objekt**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -158,10 +158,10 @@ Quellportnummer.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

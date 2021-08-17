@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentexclusivetablelockrequirements dexception-Konstruktor'
-title: Esentexclusivetablelockrequirements dexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentExclusiveTableLockRequiredException-Konstruktor'
+title: EsentExclusiveTableLockRequiredException-Konstruktor
 TOCTitle: 'EsentExclusiveTableLockRequiredException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentExclusiveTableLockRequiredException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentexclusivetablelockrequiredexception.esentexclusivetablelockrequiredexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2a1dd6543d60a3c089430fa2bc869e8d0815c5ff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5935cb53a82bc839c88b63f7ee710259f8db4b61116684fc3b8629518cd90b20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529855"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118778668"
 ---
-# <a name="esentexclusivetablelockrequiredexception-constructor"></a>Esentexclusivetablelockrequirements dexception-Konstruktor
+# <a name="esentexclusivetablelockrequiredexception-constructor"></a>EsentExclusiveTableLockRequiredException-Konstruktor
 
-Initialisiert eine neue Instanz der esentexclusivetablelockrequirements dexception-Klasse.
+Initialisiert eine neue Instanz der EsentExclusiveTableLockRequiredException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentExclusiveTableLockRequiredException()
 public EsentExclusiveTableLockRequiredException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentexclusivetablelockrequirements dexception-Klasse](./esentexclusivetablelockrequiredexception-class.md)
+[EsentExclusiveTableLockRequiredException-Klasse](./esentexclusivetablelockrequiredexception-class.md)
 
-[Esentexclusivetablelockrequirements dexception-Member](./esentexclusivetablelockrequiredexception-members.md)
+[EsentExclusiveTableLockRequiredException-Member](./esentexclusivetablelockrequiredexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

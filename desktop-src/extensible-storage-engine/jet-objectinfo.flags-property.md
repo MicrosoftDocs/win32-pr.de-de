@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_OBJECTINFO. Flags-Eigenschaft'
-title: JET_OBJECTINFO. Flags (Eigenschaft)
+description: Weitere Informationen finden Sie unter JET_OBJECTINFO.flags-Eigenschaft.
+title: JET_OBJECTINFO.flags-Eigenschaft
 TOCTitle: 'flags property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_OBJECTINFO.flags
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_objectinfo.flags(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c3a21af823a573b70e6866fd85036dcdffb8ae62
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: da959003f38917b2c34f6394f2dd3dfb112fced58219f9e897913004fe49c720
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866835"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118979820"
 ---
-# <a name="jet_objectinfoflags-property"></a>JET_OBJECTINFO. Flags (Eigenschaft)
+# <a name="jet_objectinfoflags-property"></a>JET_OBJECTINFO.flags-Eigenschaft
 
-Ruft die Tabellentyp-Flags ab.
+Ruft die Tabellentypflags ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public ObjectInfoFlags flags { get; private set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft. ISAM. ESENT. Interop. objectinfoflags](./objectinfoflags-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.ObjectInfoFlags](./objectinfoflags-enumeration.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_OBJECTINFO-Klasse](./jet-objectinfo-class.md)
 
-[Mitglieder JET_OBJECTINFO](./jet-objectinfo-members.md)
+[JET_OBJECTINFO-Member](./jet-objectinfo-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

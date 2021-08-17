@@ -1,9 +1,9 @@
 ---
-title: D3DX11_PASS_DESC-Struktur (D3dx11effect. h)
-description: Beschreibt einen Effekt Durchlauf, der den Pipeline Zustand enthält.
+title: D3DX11_PASS_DESC -Struktur (D3dx11effect.h)
+description: Beschreibt einen Effektpass, der den Pipelinezustand enthält.
 ms.assetid: 3695b99f-d379-403b-aa10-e3e370a6c864
 keywords:
-- D3DX11_PASS_DESC Struktur Direct3D 11
+- D3DX11_PASS_DESC-Struktur Direct3D 11
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b4d7f10268db0515b2f7e3772332b34427ba67a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 6f00cc28e6ab901073e30abd2554046d61144c42af2217869c0b87dc6c19d29d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982549"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119124945"
 ---
-# <a name="d3dx11_pass_desc-structure"></a>Bibliothek d3dx11 \_ Pass- \_ de-Struktur
+# <a name="d3dx11_pass_desc-structure"></a>D3DX11 \_ PASS \_ DESC-Struktur
 
-Beschreibt einen Effekt Durchlauf, der den Pipeline Zustand enthält.
+Beschreibt einen Effektpass, der den Pipelinezustand enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,87 +53,87 @@ Typ: **[ **LPCSTR**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Der Name dieses Pass (**null** , wenn nicht anonym).
+Name dieses Durchgangs (**NULL,** wenn nicht anonym).
 
 </dd> <dt>
 
 **Anmerkungen**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Anzahl der Anmerkungen zu diesem Durchlauf.
+Anzahl der Anmerkungen in diesem Durchgang.
 
 </dd> <dt>
 
-**piainputsignature**
+**pIAInputSignature**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)\***
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)\***
 
 </dd> <dd>
 
-Signatur aus dem Scheitelpunkt-Shader oder Geometry-Shader (wenn kein Scheitelpunkt-Shader vorhanden ist) oder **null** , wenn keines vorhanden ist.
+Signatur vom Vertex-Shader oder Geometrie-Shader (wenn kein Vertex-Shader vorhanden ist) oder **NULL,** wenn keines vorhanden ist.
 
 </dd> <dt>
 
-**Iainputsignaturesize**
+**IAInputSignatureSize**
 </dt> <dd>
 
-Typ: **[ **Größe \_ T**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **SIZE \_ T**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Größe der Größe in Bytes.
+Singature-Größe in Bytes.
 
 </dd> <dt>
 
-**Schablone Ref**
+**StencilRef**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Der im Status der tiefen Schablone verwendete Schablonen Verweis Wert.
+Der Schablonenverweiswert, der im Tiefen-Schablonenzustand verwendet wird.
 
 </dd> <dt>
 
-**Samplemask**
+**SampleMask**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Die Beispiel Maske für den Blend-Zustand.
+Die Beispielmaske für den Überblendzustand.
 
 </dd> <dt>
 
-**Blendfactor**
+**BlendFactor**
 </dt> <dd>
 
-Typ: **[ **float**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **FLOAT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Die pro-Komponente-Blend-Faktoren (RGBA) für den Blend-Zustand.
+Die einzelnen Komponentenblendfaktoren (RGBA) für den Überblendungszustand.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bibliothek d3dx11 \_ Pass-Debug \_ wird mit [**ID3DX11EffectPass:: getdebug**](id3dx11effectpass-getdesc.md)verwendet.
+D3DX11 \_ PASS \_ DESC wird mit [**ID3DX11EffectPass::GetDesc verwendet.**](id3dx11effectpass-getdesc.md)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx11effect. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx11effect.h</dt> </dl> |
 
 
 
@@ -141,7 +141,7 @@ Bibliothek d3dx11 \_ Pass-Debug \_ wird mit [**ID3DX11EffectPass:: getdebug**](i
 
 <dl> <dt>
 
-[Effekte 11-Strukturen](d3d11-graphics-reference-effects11-structures.md)
+[Effects 11 Structures](d3d11-graphics-reference-effects11-structures.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Waveactivemax-Funktion
-description: Gibt den maximalen Wert des Ausdrucks für alle aktiven Bereiche in der aktuellen Wave zurück und repliziert Sie zurück in alle aktiven Bereiche.
+title: WaveActiveMax-Funktion
+description: Gibt den Maximalwert des Ausdrucks für alle aktiven Lanes in der aktuellen Welle zurück und repliziert ihn wieder auf alle aktiven Lanes.
 ms.assetid: 19101C56-2618-4F34-8725-DF92198ABDA4
 keywords:
-- Waveactivemax-Funktion HLSL
+- WaveActiveMax-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7c0fd10f578d598c326cdfb4cf943d3a35fe78a9
-ms.sourcegitcommit: a232805e6c618673f2df904111cc4f5a33e15504
+ms.openlocfilehash: 8c85936ca28aabe0365fd912b4d764739b0ab15765241a243ad67143dacd0d7d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "104391275"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119484200"
 ---
-# <a name="waveactivemax-function"></a>Waveactivemax-Funktion
+# <a name="waveactivemax-function"></a>WaveActiveMax-Funktion
 
-Gibt den maximalen Wert des Ausdrucks für alle aktiven Bereiche in der aktuellen Wave zurück und repliziert Sie zurück in alle aktiven Bereiche.
+Gibt den Maximalwert des Ausdrucks für alle aktiven Lanes in der aktuellen Welle zurück und repliziert ihn wieder auf alle aktiven Lanes.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,11 +47,11 @@ Der auszuwertende Ausdruck.
 
 Der Maximalwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die Reihenfolge der Vorgänge ist nicht definiert.
 
-Diese Funktion wird vom Shader-Modell 6,0 in allen shaderphasen unterstützt. 
+Diese Funktion wird vom Shadermodell 6.0 in allen Shaderstufen unterstützt. 
 
 
 
@@ -68,10 +68,10 @@ Diese Funktion wird vom Shader-Modell 6,0 in allen shaderphasen unterstützt.
 
 <dl> <dt>
 
-[Übersicht über Shader-Modell 6](hlsl-shader-model-6-0-features-for-direct3d-12.md)
+[Übersicht über Shadermodell 6](hlsl-shader-model-6-0-features-for-direct3d-12.md)
 </dt> <dt>
 
-[Shader-Modell 6](shader-model-6-0.md)
+[Shadermodell 6](shader-model-6-0.md)
 </dt> </dl>
 
  

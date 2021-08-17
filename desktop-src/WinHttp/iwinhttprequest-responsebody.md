@@ -1,7 +1,7 @@
 ---
-description: Ruft den Antwortentitätstext als Array von Bytes ohne Vorzeichen ab.
+description: Ruft den Antwortentitätskörper als Array von Bytes ohne Vorzeichen ab.
 ms.assetid: 557913e0-9f19-42fc-bfca-9ed248972b4b
-title: IWinHttpRequest::ResponseBody-Eigenschaft
+title: IWinHttpRequest::ResponseBody (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -22,9 +22,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118563228"
 ---
-# <a name="iwinhttprequestresponsebody-property"></a>IWinHttpRequest::ResponseBody-Eigenschaft
+# <a name="iwinhttprequestresponsebody-property"></a>IWinHttpRequest::ResponseBody (Eigenschaft)
 
-Die **ResponseBody-Eigenschaft** ruft den Antwortentitätstext als Array von Bytes ohne Vorzeichen ab.
+Die **ResponseBody-Eigenschaft** ruft den Antwortentitätskörper als Array von Bytes ohne Vorzeichen ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,18 +49,18 @@ vtResponseBody = WinHttpRequest.ResponseBody
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **Variant-Wert,** der den Antwortentitätstext als Array von Bytes ohne Vorzeichen empfängt. Dieses Array enthält die Rohdaten, die direkt vom Server empfangen werden.
+Ein **Variant-Wert,** der den Antwortentitätskörper als Array von Bytes ohne Vorzeichen empfängt. Dieses Array enthält die Rohdaten, die direkt vom Server empfangen werden.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der Rückgabewert ist bei Erfolg **S \_ OK,** andernfalls ein Fehlerwert.
+Der Rückgabewert ist **S \_ OK bei** Erfolg oder andernfalls ein Fehlerwert.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft gibt die Antwortdaten in einem Array von Bytes ohne Vorzeichen zurück. Wenn die Antwort keinen Antworttext enthält, wird eine leere Variante zurückgegeben. Diese Eigenschaft kann nur aufgerufen werden, nachdem die [**Send-Methode**](iwinhttprequest-send.md) aufgerufen wurde.
+Diese Eigenschaft gibt die Antwortdaten in einem Array von Bytes ohne Vorzeichen zurück. Wenn die Antwort keinen Antwortkörper enthält, wird eine leere Variante zurückgegeben. Diese Eigenschaft kann nur aufgerufen werden, nachdem die [**Send-Methode**](iwinhttprequest-send.md) aufgerufen wurde.
 
 > [!Note]  
-> Weitere Informationen zur Implementierung für Windows XP und Windows 2000 finden Sie unter [Laufzeitanforderungen.](winhttp-start-page.md)
+> Weitere Informationen zur Implementierung für Windows XP und Windows 2000 finden Sie unter [Laufzeitanforderungen](winhttp-start-page.md).
 
  
 
@@ -72,14 +72,14 @@ Diese Eigenschaft gibt die Antwortdaten in einem Array von Bytes ohne Vorzeichen
 |-------------------------------------|--------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher auf Windows XP und Windows 2000.<br/> |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher unter Windows XP und Windows 2000.<br/> |
 | Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

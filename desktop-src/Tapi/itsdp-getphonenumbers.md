@@ -1,21 +1,21 @@
 ---
-description: Die getphonenumbers-Methode ruft ein Array von Telefonnummern ab, die einem Konferenz-BLOB zugeordnet sind.
+description: Die GetPhoneNumbers-Methode ruft ein Array von Telefonnummern ab, die einem Konferenzblob zugeordnet sind.
 ms.assetid: c4ad6c5a-e15c-45ae-94de-763a843554bb
-title: 'Itsdp:: getphonenumbers-Methode (sdpblb. h)'
+title: ITSdp::GetPhoneNumbers-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 465bc6b2d2167ca17d25b8f50466f111724ea3b5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d417a86ba89269055aa7e30a94724f58da7978d58d80a61d65f6caec8793d5ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060808"
 ---
-# <a name="itsdpgetphonenumbers-method"></a>Itsdp:: getphonenumbers-Methode
+# <a name="itsdpgetphonenumbers-method"></a>ITSdp::GetPhoneNumbers-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **getphonenumbers** -Methode ruft ein Array von Telefonnummern ab, die einem Konferenz-BLOB zugeordnet sind.
+Die **GetPhoneNumbers-Methode** ruft ein Array von Telefonnummern ab, die einem Konferenzblob zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,17 +33,17 @@ HRESULT GetPhoneNumbers(
 
 <dl> <dt>
 
-*pnumbers* \[ vorgenommen\]
+*pNumbers* \[ out\]
 </dt> <dd>
 
-**Variant** -Zeiger auf ein SafeArray von **BSTR** s, das Telefonnummern auflistet.
+**VARIANT-Zeiger** auf ein SAFEARRAY der **BSTR-Auflistung** von Telefonnummern.
 
 </dd> <dt>
 
-*pnames* \[ vorgenommen\]
+*pNames* \[ out\]
 </dt> <dd>
 
-**Variant** -Zeiger auf ein SafeArray von **BSTR** s-Auflistungs Namen.
+**VARIANT-Zeiger** auf ein SAFEARRAY von BSTR-Auflistungsnamen. 
 
 </dd> </dl>
 
@@ -56,18 +56,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                             |
 |-----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                            |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *pnumbers* -oder *pnames* -Parameter ist kein gültiger Zeiger.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/>         |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                           |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                          |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Der *Parameter pNumbers* oder *pNames* ist kein gültiger Zeiger.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/>         |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                           |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                          |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Listen, auf die *pnumbers* und *pnames* zeigen, haben dieselbe Länge.
+Die Listen, auf die *pNumbers* und *pNames* verweisen, haben die gleiche Länge.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,18 +75,18 @@ Die Listen, auf die *pnumbers* und *pnames* zeigen, haben dieselbe Länge.
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itsdp**](itsdp.md)
+[**ITSdp**](itsdp.md)
 </dt> </dl>
 
  

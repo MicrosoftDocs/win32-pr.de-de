@@ -1,47 +1,47 @@
 ---
 title: Organisieren des Zustands in einem Effekt (Direct3D 11)
-description: Mit Direct3D 11 wird der Effekt Zustand für bestimmte Pipeline Stufen nach Strukturen organisiert.
+description: Bei Direct3D 11 ist der Effektzustand für bestimmte Pipelinestufen nach Strukturen organisiert.
 ms.assetid: e5057f94-69dd-4219-a5f4-569e48502475
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b5a0523dd8abdabde29a5485b8d3b1e6d13b9429
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1d36bf99887e96dc5854778edb24f0ceacbc0cdf5a7994532bc2ebd94137fe8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104993471"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119126094"
 ---
 # <a name="organizing-state-in-an-effect-direct3d-11"></a>Organisieren des Zustands in einem Effekt (Direct3D 11)
 
-Mit Direct3D 11 wird der Effekt Zustand für bestimmte Pipeline Stufen nach Strukturen organisiert. Im folgenden sind die Strukturen aufgeführt:
+Bei Direct3D 11 ist der Effektzustand für bestimmte Pipelinestufen nach Strukturen organisiert. Dies sind die Strukturen:
 
 
 
-| Pipeline Status | Struktur                                                                                                          |
+| Pipelinezustand | Struktur                                                                                                          |
 |----------------|--------------------------------------------------------------------------------------------------------------------|
-| Rasterung  | [**D3D11 \_ Rasterizer- \_ Abteilung**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_rasterizer_desc)                                                           |
-| Ausgabezusammenführung  | [**D3D11 \_ Blend \_**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_blend_desc) -Debug-und [ **D3D11- \_ tiefen \_ Schablone \_**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_depth_stencil_desc) |
+| Rasterung  | [**D3D11 \_ RASTERIZER \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_rasterizer_desc)                                                           |
+| Ausgabezusammenführung  | [**D3D11 \_ BLEND \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_blend_desc) und [ **D3D11 \_ DEPTH \_ STENCIL \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_depth_stencil_desc) |
 | Shader        | Siehe unten                                                                                                          |
 
 
 
- 
+ 
 
-In den Shader-Phasen, in denen die Anzahl der Zustandsänderungen von einer Anwendung stärker gesteuert werden muss, wurde der Zustand in den konstanten Puffer Status, den samplerstatus, den Shader-Ressourcen Zustand und den Ansichts Zustand für ungeordnete Zugriffe (für Pixel-und Compute-Shader) aufgeteilt. Dadurch wird eine Anwendung ermöglicht, die sorgfältig entworfen wurde, um nur den geänderten Zustand zu aktualisieren. Dadurch wird die Leistung verbessert, da die Datenmenge reduziert wird, die an die GPU übermittelt werden muss.
+Für die Shaderstufen, in denen die Anzahl der Zustandsänderungen von einer Anwendung stärker gesteuert werden muss, wurde der Zustand in konstanten Pufferzustand, Samplerzustand, Shaderressourcenstatus und ungeordneten Zugriffsansichtszustand (für Pixel- und Compute-Shader) unterteilt. Dies ermöglicht einer Anwendung, die sorgfältig darauf ausgelegt ist, nur den Zustand zu aktualisieren, der sich ändert. Dies verbessert die Leistung, indem die Menge der Daten reduziert wird, die an die GPU übergeben werden müssen.
 
-Wie organisieren Sie also den Pipeline Status in einem Effekt?
+Wie organisieren Sie also den Pipelinezustand in einem Effekt?
 
-Die Antwort ist, dass die Reihenfolge keine Rolle spielt. Globale Variablen müssen sich nicht im oberen Bereich befinden. Allerdings wird für alle Beispiele im SDK dieselbe Reihenfolge befolgt, da es eine bewährte Methode ist, die Daten auf die gleiche Weise zu organisieren. Dies ist eine kurze Beschreibung der Datenreihen Folge in den DirectX SDK-Beispielen.
+Die Antwort ist, dass die Reihenfolge keine Rolle spielt. Globale Variablen müssen sich nicht oben befinden. Alle Beispiele im SDK folgen jedoch der gleichen Reihenfolge, da es eine bewährte Methode ist, die Daten auf die gleiche Weise zu organisieren. Dies ist also eine kurze Beschreibung der Daten reihenfolge in den DirectX SDK-Beispielen.
 
 -   [Globale Variablen](#global-variables)
 -   [Shader](#shaders)
--   [Gruppen, Techniken und Durchgänge](#groups-techniques-and-passes)
+-   [Gruppen, Techniken und Durchläufe](#groups-techniques-and-passes)
 
 ## <a name="global-variables"></a>Globale Variablen
 
-Ebenso wie die Standard-C-Übung werden globale Variablen zuerst am Anfang der Datei deklariert. In den meisten Fällen handelt es sich hierbei um Variablen, die von einer Anwendung initialisiert und dann in einem Effekt verwendet werden. Manchmal werden Sie initialisiert und nie geändert, in anderen Fällen, in denen Sie jedes Frame aktualisiert werden. Ebenso wie Regeln des C-Funktions Bereichs sind Effekte, die außerhalb des Gültigkeits Bereichs von Effekten deklariert wurden, während des Effekts sichtbar. jede Variable, die innerhalb einer Effekt Funktion deklariert wird, ist nur innerhalb dieser Funktion sichtbar.
+Wie bei der C-Standardübung werden globale Variablen zuerst am Anfang der Datei deklariert. Am häufigsten handelt es sich dabei um Variablen, die von einer Anwendung initialisiert und dann in einem Effekt verwendet werden. Manchmal werden sie initialisiert und nie geändert, mal werden sie für jeden Frame aktualisiert. Genau wie C-Funktionsbereichsregeln sind Effektvariablen, die außerhalb des Gültigkeitsbereichs von Effektfunktionen deklariert sind, während des gesamten Effekts sichtbar. Jede Variable, die innerhalb einer Effect-Funktion deklariert ist, ist nur innerhalb dieser Funktion sichtbar.
 
-Im folgenden finden Sie ein Beispiel für die Variablen, die in BasicHLSL10. FX deklariert werden.
+Im Folgenden finden Sie ein Beispiel für die Variablen, die in BasicHLSL10.fx deklariert sind.
 
 
 ```
@@ -66,25 +66,25 @@ SamplerState MeshTextureSampler
 
 
 
-Die Syntax für Effekt Variablen wird in der [Variablen Syntax von Effect (Direct3D 11)](d3d11-effect-variable-syntax.md)ausführlicher beschrieben. Die Syntax für Effekt Textur-Samplern ist ausführlicher im [Samplingtyp (DirectX HLSL)](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-sampler)ausführlich beschrieben.
+Die Syntax für Effektvariablen ist unter [Effect Variable Syntax (Direct3D 11) ausführlicher.](d3d11-effect-variable-syntax.md) Die Syntax für Effekttextur-Sampler ist unter [Samplertyp (DirectX HLSL) ausführlicher.](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-sampler)
 
 ## <a name="shaders"></a>Shader
 
-Shader sind kleine ausführbare Programme. Sie können sich Shader als kapselnde shaderzustand vorstellen, da der HLSL-Code die shaderfunktionalität implementiert. Die Grafik Pipeline bis zu fünf verschiedene Arten von Shadern.
+Shader sind kleine ausführbare Programme. Sie können sich Shader als Kapseln des Shaderzustands kapseln, da der HLSL-Code die Shaderfunktionalität implementiert. Die Grafikpipeline bis zu fünf verschiedene Arten von Shadern.
 
--   Vertex-Shader: Arbeiten mit Vertex-Daten. Ein Scheitelpunkt in ergibt einen Scheitelpunkt aus.
--   Hull-Shader: Arbeiten mit Patchdaten. Kontrollpunkt Phase: ein Aufruf ergibt einen Steuerungspunkt. Für jede Verzweigung und jede joinphase: ein Patch erzeugt eine gewisse Menge an Patch-konstantendaten.
--   Domänen-Shader: Arbeiten mit primitiven Daten. Ein primitiver kann 0, 1 oder viele primitive ergeben.
--   Geometry-Shader: Arbeiten mit primitiven Daten. Ein primitiver in kann 0, 1 oder viele primitive ergeben.
--   Pixel-Shader: Arbeiten mit Pixeldaten. Ein Pixel in ergibt 1 Pixel, es sei denn, das Pixel ist aus einem Rendering herausgefiltert.
+-   Vertex-Shader: Arbeiten Sie mit Scheitelpunktdaten. Ein Scheitelpunkt in ergibt einen Scheitelpunkt.
+-   Hüllen-Shader: Arbeiten Sie mit Patchdaten. Kontrollpunktphase: Ein Aufruf ergibt einen Kontrollpunkt. Für jede Fork- und Join-Phase: Ein Patch ergibt eine gewisse Menge an konstanten Patchdaten.
+-   Domänen-Shader: Arbeiten Sie mit primitiven Daten. Ein Primitiv kann 0, 1 oder viele Primitive ergeben.
+-   Geometrie-Shader: Arbeiten Sie mit primitiven Daten. Ein Primitiv in kann 0, 1 oder viele Primitive ergeben.
+-   Pixel-Shader: Arbeiten sie mit Pixeldaten. Ein Pixel in ergibt 1 Pixel aus (es sei denn, das Pixel wird aus einem Render heraus gecullt).
 
-Die COMPUTE-Shader-Pipeline verwendet einen Shader:
+Die Compute-Shaderpipeline verwendet einen Shader:
 
--   Compute-Shader: Arbeiten auf jeder Art von Daten. Die Ausgabe ist unabhängig von der Anzahl der Threads.
+-   Compute-Shader: Arbeiten Sie mit jeder Art von Daten. Die Ausgabe ist unabhängig von der Anzahl der Threads.
 
-Shader sind lokale Funktionen und folgen Regeln für C-Stil Funktionen. Wenn ein Effekt kompiliert wird, wird jeder Shader kompiliert, und ein Zeiger auf jede Shader-Funktion wird intern gespeichert. Bei erfolgreicher Kompilierung wird eine ID3D11Effect-Schnittstelle zurückgegeben. An diesem Punkt liegt der kompilierte Effekt in einem zwischen Format vor.
+Shader sind lokale Funktionen und befolgen Funktionsregeln im C-Stil. Wenn ein Effekt kompiliert wird, wird jeder Shader kompiliert, und ein Zeiger auf jede Shaderfunktion wird intern gespeichert. Eine ID3D11Effect-Schnittstelle wird zurückgegeben, wenn die Kompilierung erfolgreich ist. An diesem Punkt liegt der kompilierte Effekt in einem Zwischenformat vor.
 
-Um weitere Informationen zu den kompilierten Shadern zu erhalten, müssen Sie die Shader-Reflektion verwenden. Dies entspricht im Wesentlichen dem Anfordern der Laufzeit, die Shader zu dekompilieren, und gibt Informationen über den Shader-Code zurück.
+Um weitere Informationen zu den kompilierten Shadern zu erhalten, müssen Sie shader-Reflektion verwenden. Dies ist im Wesentlichen so, als ob die Runtime aufgefordert wird, die Shader zu dekompilieren und Informationen zum Shadercode an Sie zurücksenden.
 
 
 ```
@@ -131,15 +131,15 @@ PS_OUTPUT RenderScenePS( VS_OUTPUT In,
 
 
 
-Die Syntax für Effekte-Shader ist in der [Funktions Syntax von "Effect" (Direct3D 11)](d3d11-effect-function-syntax.md)ausführlicher beschrieben.
+Die Syntax für Effekt-Shader ist unter [Effect Function Syntax (Direct3D 11) ausführlicher.](d3d11-effect-function-syntax.md)
 
-## <a name="groups-techniques-and-passes"></a>Gruppen, Techniken und Durchgänge
+## <a name="groups-techniques-and-passes"></a>Gruppen, Techniken und Durchläufe
 
-Bei einer Gruppe handelt es sich um eine Sammlung von Techniken. Eine Technik ist eine Sammlung von Renderingdurchläufen (es muss mindestens ein Durchlauf vorhanden sein). Jeder Effekt Durchlauf (ähnlich dem Bereich zu einem einzelnen Durchlauf in einer Renderschleife) definiert den Shader-Zustand und alle anderen Pipeline Zustände, die zum Rendern von Geometrie erforderlich sind.
+Eine Gruppe ist eine Sammlung von Techniken. Eine Technik ist eine Auflistung von Renderingüberläufen (es muss mindestens ein Durchgang sein). Jeder Effektüberlauf (der im Gültigkeitsbereich einem einzelnen Durchlauf in einer Renderschleife ähnelt) definiert den Shaderzustand und alle anderen Pipelinestatus, die zum Rendern der Geometrie erforderlich sind.
 
-Gruppen sind optional. Es gibt eine einzelne, unbenannte Gruppe, die alle globalen Techniken umfasst. Alle anderen Gruppen müssen benannt werden.
+Gruppen sind optional. Es gibt eine einzelne unbenannte Gruppe, die alle globalen Techniken umfasst. Alle anderen Gruppen müssen benannt werden.
 
-Im folgenden finden Sie ein Beispiel für eine Technik (die einen Durchlauf umfasst) aus BasicHLSL10. fx.
+Hier ist ein Beispiel für eine Technik (die einen Durchgang enthält) aus BasicHLSL10.fx.
 
 
 ```
@@ -168,7 +168,7 @@ fxgroup g0
 
 
 
-Die Syntax für Effekte-Shader ist ausführlicher in der [Effekt Techniken-Syntax (Direct3D 11)](d3d11-effect-technique-syntax.md).
+Die Syntax für Effekt-Shader ist unter [Effect Technique Syntax (Direct3D 11) ausführlicher.](d3d11-effect-technique-syntax.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -177,6 +177,6 @@ Die Syntax für Effekte-Shader ist ausführlicher in der [Effekt Techniken-Synta
 [Effekte (Direct3D 11)](d3d11-graphics-programming-guide-effects.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

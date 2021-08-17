@@ -1,9 +1,9 @@
 ---
-title: Vmshutdownaction-Enumeration (vpccominterfaces. h)
-description: Gibt an, wie eine virtuelle Maschine heruntergefahren wird, wenn der Host heruntergefahren oder der vpc.exe Prozess beendet wird.
+title: VMShutdownAction-Enumeration (VPCCOMInterfaces.h)
+description: Gibt an, wie ein virtueller Computer heruntergefahren wird, wenn der Host heruntergefahren wird oder der vpc.exe Prozess beendet wird.
 ms.assetid: 271a685a-cac9-4a15-b363-bf8873fd5324
 keywords:
-- Vmshutdownaction-Enumeration virtueller PC
+- VMShutdownAction-Enumeration Virtueller PC
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a6b939954042a446f7ad9f128580e804d73e9d29
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: df1f8b5bc21021e7771c14c0c3c6399e1d6342d7ebe3803759c8adb5c45024cb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119248410"
 ---
-# <a name="vmshutdownaction-enumeration"></a>Vmshutdownaction-Enumeration
+# <a name="vmshutdownaction-enumeration"></a>VMShutdownAction-Enumeration
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Gibt an, wie eine virtuelle Maschine (VM) heruntergefahren wird, wenn der Host heruntergefahren oder der vpc.exe Prozess beendet wird.
+Gibt an, wie ein virtueller Computer (VM) heruntergefahren wird, wenn der Host heruntergefahren oder der vpc.exe Prozess beendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,24 +44,24 @@ typedef enum  {
 
 <dl> <dt>
 
-<span id="vmShutdownAction_Save"></span><span id="vmshutdownaction_save"></span><span id="VMSHUTDOWNACTION_SAVE"></span>**vmshutdownaction \_ Speichern**
+<span id="vmShutdownAction_Save"></span><span id="vmshutdownaction_save"></span><span id="VMSHUTDOWNACTION_SAVE"></span>**vmShutdownAction \_ Save**
 </dt> <dd>
 
 Speichern Sie den VM-Status.
 
 </dd> <dt>
 
-<span id="vmShutdownAction_TurnOff"></span><span id="vmshutdownaction_turnoff"></span><span id="VMSHUTDOWNACTION_TURNOFF"></span>**vmshutdownaction- \_ Abzweigung**
+<span id="vmShutdownAction_TurnOff"></span><span id="vmshutdownaction_turnoff"></span><span id="VMSHUTDOWNACTION_TURNOFF"></span>**vmShutdownAction \_ TurnOff**
 </dt> <dd>
 
-Schalten Sie die VM aus, ohne die Laufwerke abzumachen.
+Deaktivieren Sie den virtuellen Computer, ohne die Laufwerke rückgängig zu machen.
 
 </dd> <dt>
 
-<span id="vmShutdownAction_Shutdown"></span><span id="vmshutdownaction_shutdown"></span><span id="VMSHUTDOWNACTION_SHUTDOWN"></span>**vmshutdownaction wird \_ heruntergefahren**
+<span id="vmShutdownAction_Shutdown"></span><span id="vmshutdownaction_shutdown"></span><span id="VMSHUTDOWNACTION_SHUTDOWN"></span>**vmShutdownAction \_ Shutdown**
 </dt> <dd>
 
-Fahren Sie das Gast Betriebssystem auf dem virtuellen Computer herunter, ohne die Laufwerke abzumachen, wenn die Integrations Komponenten verfügbar sind, und speichern Sie andernfalls die VM.
+Fahren Sie das Gastbetriebssystem auf dem virtuellen Computer herunter, ohne die Laufwerke rückgängig zu macht, wenn die Integrationskomponenten verfügbar sind, und speichern Sie die VM andernfalls.
 
 </dd> </dl>
 
@@ -71,22 +71,22 @@ Fahren Sie das Gast Betriebssystem auf dem virtuellen Computer herunter, ohne di
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Windows Virtual PC-Enumerationen](virtual-pc-enumerations.md)
+[Windows Enumerationen virtueller PCs](virtual-pc-enumerations.md)
 </dt> <dt>
 
-[**Ivmvirtualmachine:: shutdownaktiononquit**](ivmvirtualmachine-shutdownactiononquit.md)
+[**IVMVirtualMachine::ShutdownActionOnQuit**](ivmvirtualmachine-shutdownactiononquit.md)
 </dt> </dl>
 
  

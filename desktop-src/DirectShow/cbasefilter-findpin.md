@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2bbef9b051a42597b2585a432f544eead4e2e0a1
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3818ef4356f11a2d003abe4e9442c4de06108aa32e50f480a3d097ea5db0c343
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017188"
 ---
 # <a name="cbasefilterfindpin-method"></a>CBaseFilter.FindPin-Methode
 
@@ -46,7 +46,7 @@ HRESULT FindPin(
 *Id* 
 </dt> <dd>
 
-Zeiger auf eine konstante, mit NULL endende Unicode-Zeichenfolge, die den Pin identifiziert.
+Zeiger auf eine konstante, mit NULL beendete Unicode-Zeichenfolge, die den Pin identifiziert.
 
 </dd> <dt>
 
@@ -66,27 +66,27 @@ Gibt einen der folgenden **HRESULT-Werte** zurück.
 | Rückgabecode                                                                                       | Beschreibung                               |
 |---------------------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>              | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ POINTER**</dt> </dl>         | **NULL-Zeigerargument.**<br/>     |
-| <dl> <dt>**VFW \_ E \_ NICHT \_ GEFUNDEN**</dt> </dl> | Ein übereinstimmender Pin wurde nicht gefunden.<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>         |  NULL-Zeigerargument.<br/>     |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ GEFUNDEN**</dt> </dl> | Es wurde kein passender Pin finden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**CBasePin::Name-Methode**](cbasepin-name.md) auf, um den Namen jedes Pins mit der zeichenfolge zu vergleichen, die durch den *Id-Parameter* angegeben wird.
+Diese Methode ruft die [**CBasePin::Name-Methode**](cbasepin-name.md) auf, um den Namen jedes Pins mit der durch den Id-Parameter angegebenen *Zeichenfolge zu* vergleichen.
 
-Wenn die Methode erfolgreich ist, verfügt die **IPin-Schnittstelle** über einen ausstehenden Verweiszähler. Stellen Sie sicher, dass Sie es freigeben, wenn Sie fertig sind.
+Wenn die Methode erfolgreich ist, verfügt die **IPin-Schnittstelle** über eine ausstehende Verweisanzahl. Stellen Sie sicher, dass Sie sie veröffentlichen, wenn Sie fertig sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

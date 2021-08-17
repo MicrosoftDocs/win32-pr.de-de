@@ -231,18 +231,18 @@ Der Ereignistyp.
 | <span id="9"></span><dl> <dt>**9**</dt> </dl>   | PCI-Paritätsfehler.<br/>                                                                                                |
 | <span id="10"></span><dl> <dt>**10**</dt> </dl> | PCI-Systemfehler.<br/>                                                                                                |
 | <span id="11"></span><dl> <dt>**11**</dt> </dl> | CPU-Fehler.<br/>                                                                                                     |
-| <span id="12"></span><dl> <dt>**12**</dt> </dl> | TIMER-Time out für EISA Failsafe.<br/>                                                                                    |
+| <span id="12"></span><dl> <dt>**12**</dt> </dl> | TIMER-Timer für EISA-Ausfallsicherheit.<br/>                                                                                    |
 | <span id="13"></span><dl> <dt>**13**</dt> </dl> | Korrigierende Speicherprotokoll deaktiviert.<br/>                                                                                 |
 | <span id="14"></span><dl> <dt>**14**</dt> </dl> | Protokollierung für einen bestimmten Ereignistyp deaktiviert. Zu viele Fehler desselben Typs wurden in kurzer Zeit empfangen.<br/> |
 | <span id="15"></span><dl> <dt>**15**</dt> </dl> | Reserviert.<br/>                                                                                                        |
-| <span id="16"></span><dl> <dt>**16**</dt> </dl> | Das Systemlimit wurde überschritten (z. B. die Belastung oder der Temperaturschwellenwert überschritten).<br/>                                  |
-| <span id="17"></span><dl> <dt>**17**</dt> </dl> | Der asynchrone Hardwaretimer ist abgelaufen und hat eine Systemrücksetzung ausgegeben.<br/>                                                   |
+| <span id="16"></span><dl> <dt>**16**</dt> </dl> | Das Systemlimit wurde überschritten (z. B. Die Spannung oder der Temperaturschwellenwert wurde überschritten).<br/>                                  |
+| <span id="17"></span><dl> <dt>**17**</dt> </dl> | Der asynchrone Hardwarezeitr ist abgelaufen und hat eine Systemzurücksetzung ausgegeben.<br/>                                                   |
 | <span id="18"></span><dl> <dt>**18**</dt> </dl> | Systemkonfigurationsinformationen.<br/>                                                                                |
-| <span id="19"></span><dl> <dt>**19**</dt> </dl> | Informationen zur Festplatte.<br/>                                                                                           |
-| <span id="20"></span><dl> <dt>**20**</dt> </dl> | System neu konfiguriert.<br/>                                                                                             |
-| <span id="21"></span><dl> <dt>**21**</dt> </dl> | Unbesenkbarer CPU-komplexer Fehler.<br/>                                                                                 |
-| <span id="22"></span><dl> <dt>**22**</dt> </dl> | Zurücksetzen des Protokollbereichs oder Löschen.<br/>                                                                                       |
-| <span id="23"></span><dl> <dt>**23**</dt> </dl> | Systemstart. Bei Implementierung ist dieser Protokolleintrag garantiert der erste, der beim Systemstart geschrieben wurde.<br/>        |
+| <span id="19"></span><dl> <dt>**19**</dt> </dl> | Festplatteninformationen.<br/>                                                                                           |
+| <span id="20"></span><dl> <dt>**20**</dt> </dl> | Neukonfiguriertes System.<br/>                                                                                             |
+| <span id="21"></span><dl> <dt>**21**</dt> </dl> | Nicht behebt cpukomplexer Fehler.<br/>                                                                                 |
+| <span id="22"></span><dl> <dt>**22**</dt> </dl> | Zurücksetzung des Protokollbereichs oder Löschen.<br/>                                                                                       |
+| <span id="23"></span><dl> <dt>**23**</dt> </dl> | Systemstart. Wenn dieser Protokolleintrag implementiert ist, wird garantiert, dass er der erste ist, der bei jedem Systemstart geschrieben wurde.<br/>        |
 
 
 
@@ -259,7 +259,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Typ der Ereignisprotokollmeldung. Diese Nachrichten entsprechen den Ereignisprotokollmeldungscodes, die verwendet werden, um Ereignisprotokollmeldungen vom Windows Ereignisprotokoll-Consumeranbieter einzufügen, wenn er eines der Ereignisse empfängt.
+Typ der Ereignisprotokollmeldung. Diese Nachrichten entsprechen den Ereignisprotokoll-Meldungscodes, die zum Einfügen von Ereignisprotokollmeldungen durch den Windows-Ereignisprotokoll-Consumeranbieter verwendet werden, wenn er eines der Ereignisse empfängt.
 
 </dd> <dt>
 
@@ -272,7 +272,7 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Validierungsbits, die verwendet werden, um die Gültigkeit der nachfolgenden Felder anzugeben. Der Wert 1 (0x1) bedeutet, dass das **\_ SMBIOS-EREIGNIS** gültig ist.
+Validierungsbits, die verwendet werden, um die Gültigkeit der nachfolgenden Felder anzugeben. Der Wert 1 (0x1) bedeutet, dass **das SMBIOS-EREIGNIS \_** gültig ist.
 
 Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
@@ -280,7 +280,7 @@ Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie
 
 ## <a name="remarks"></a>Hinweise
 
-Die **MSMCAEvent \_ SMBIOSError-Klasse** wird von [**WMIEvent**](wmievent.md)abgeleitet.
+Die **MSMCAEvent \_ SMBIOSError-Klasse** wird von [**WMIEvent abgeleitet.**](wmievent.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -296,7 +296,7 @@ Die **MSMCAEvent \_ SMBIOSError-Klasse** wird von [**WMIEvent**](wmievent.md)abg
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

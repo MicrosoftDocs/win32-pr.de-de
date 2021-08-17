@@ -1,5 +1,5 @@
 ---
-description: 'CEnumPins.CEnumPins-Konstruktor : Konstruktormethode.'
+description: CEnumPins.CEnumPins-Konstruktor – Konstruktormethode.
 ms.assetid: f696e433-b051-4de0-80e5-f9cd31fd0f23
 title: CEnumPins.CEnumPins-Konstruktor (Amfilter.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: caa27dfe0190df15be1e41b7128c06249f1ae2b8
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1972533b86215e34563b9b1aa8f1b8ac3c14450b804fdae01ed7c7eafa78def4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131240"
 ---
 # <a name="cenumpinscenumpins-constructor"></a>CEnumPins.CEnumPins-Konstruktor
 
@@ -46,7 +46,7 @@ CEnumPins(
 *pFilter* 
 </dt> <dd>
 
-Zeiger auf den Filter, für den die Stecknadeln aufzählt werden.
+Zeiger auf den Filter, für den die Stecknadeln aufzählt werden sollen.
 
 </dd> <dt>
 
@@ -57,18 +57,18 @@ Zeiger auf die [**IEnumPins-Schnittstelle**](/windows/desktop/api/Strmif/nn-strm
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn *pEnumPins* **NULL ist,** initialisiert diese Methode den Enumerator am Anfang der Enumerationssequenz. Andernfalls wird der interne Zustand des durch *pEnumPins angegebenen Enumerators dupliziert.*
+Wenn *pEnumPins* **NULL** ist, initialisiert diese Methode den Enumerator am Anfang der Enumerationssequenz. Andernfalls wird der interne Zustand des durch *pEnumPins* angegebenen Enumerators dupliziert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

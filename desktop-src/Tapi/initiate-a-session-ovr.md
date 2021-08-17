@@ -1,64 +1,64 @@
 ---
-description: Die Hauptinformationen, die eine Anwendung zum Initiieren einer Kommunikationssitzung bereitstellt, sind der adrestyp, der Medientyp oder die Typen und die Zieladresse.
+description: Die wichtigsten Informationen, die eine Anwendung zum Initiieren einer Kommunikationssitzung liefert, sind der Adresstyp, der Medientyp oder die Medientypen und die Zieladresse.
 ms.assetid: 65e53587-0e40-411b-8d6c-d6adfc9d1e6c
 title: Initiieren einer Sitzung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e925ba90460b88c85a9aab1624923acdbc4572a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0226fc1b04ea5859bc4a96b6f5ca43e3749e7664a9ccf6810b586115171530b2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119975850"
 ---
 # <a name="initiate-a-session"></a>Initiieren einer Sitzung
 
-Die Hauptinformationen, die eine Anwendung zum Initiieren einer Kommunikationssitzung bereitstellt, sind der [adrestyp](address-type-ovr.md), der [Medientyp](media-type-ovr.md) oder die Typen und die Ziel [Adresse](address-ovr.md).
+Die wichtigsten Informationen, die eine Anwendung zum Initiieren einer [](media-type-ovr.md) Kommunikationssitzung liefert, sind der Adresstyp, [](address-type-ovr.md)der Medientyp oder die Medientypen und die [Zieladresse.](address-ovr.md)
 
-Die Zieladresse erfordert möglicherweise eine [Adressübersetzung](#address-translation) , um die von einem Benutzer eingegebenen Informationen in das richtige Format für einen bestimmten Adresstyp zu versetzen. Beispielsweise ist für eine Telefonnummer, die sich in einem elektronischen Adressbuch im [kanonischen](address-ovr.md) Format befunden hat, eine Übersetzung in ein [dialbares](address-ovr.md) Format erforderlich.
+Die Zieladresse erfordert möglicherweise eine [Adressübersetzung,](#address-translation) um die von einem Benutzer eingegebenen Informationen in das richtige Format für einen bestimmten Adresstyp zu setzen. Beispielsweise erfordert eine Telefonnummer in einem elektronischen Adressbuch [im](address-ovr.md) kanonischen Format eine Übersetzung in das [Wählformat.](address-ovr.md)
 
-Einige Sitzungen erfordern möglicherweise spezielle Setup Parameter, wenn Sie vom Dienstanbieter unterstützt werden. Beispielsweise kann ein ISDN-TSP Benutzer Benutzerinformationen übertragen, und einige MSPs benötigen Informationen über die Richtung des Medien Stroms. Eine Überprüfung der Daten, die für eine Sitzung festgelegt oder abgerufen werden können, finden Sie unter [Sitzungsinformationen](session-information-ovr.md) .
+Einige Sitzungen erfordern möglicherweise spezielle Setupparameter, wenn sie vom Dienstanbieter unterstützt werden. Beispielsweise kann ein ISDN-TSP Benutzer-Benutzerinformationen übertragen, und einige MSPs erfordern Informationen zur Richtung des Medienstreams. Eine Überprüfung [der Daten,](session-information-ovr.md) die für eine Sitzung festgelegt oder erhalten werden können, finden Sie unter Sitzungsinformationen.
 
-Nachdem eine Sitzung initiiert wurde, wird die Anwendung über den Ereignis Benachrichtigungs Mechanismus, der während der Initialisierung eingerichtet wurde, von TAPI informiert.
+Nachdem eine Sitzung initiiert wurde, informiert TAPI die Anwendung über den Aufruffortschritt mithilfe des während der Initialisierung eingerichteten Ereignisbenachrichtigungsmechanismus.
 
-**TAPI 2. x:** Anwendungen initiieren eine Sitzung mithilfe der [**linemakecall**](/windows/win32/api/tapi/nf-tapi-linemakecall) -Funktion. Bei Bedarf wird die [**linetranslateaddress**](/windows/win32/api/tapi/nf-tapi-linetranslateaddress) -Funktion verwendet, um die Adressübersetzung auszuführen.
+**TAPI 2.x:** Anwendungen initiieren eine Sitzung mithilfe der [**lineMakeCall-Funktion.**](/windows/win32/api/tapi/nf-tapi-linemakecall) Die [**lineTranslateAddress-Funktion**](/windows/win32/api/tapi/nf-tapi-linetranslateaddress) wird bei Bedarf zum Durchführen der Adressübersetzung verwendet.
 
-Die Parameter zum Aufrufen von Setup können in der Datenstruktur [**linecallparameams**](/windows/win32/api/tapi/ns-tapi-linecallparams) gespeichert werden, und ein Zeiger auf diese Struktur wird dann als Parameter von [**linemakecall**](/windows/win32/api/tapi/nf-tapi-linemakecall)verwendet. Wenn **linemakecall** keine **linecallpara** -Struktur bereitgestellt wird, wird ein standardmäßiger Anruf in der sprachklasse mit einem Satz von Standardwerten angefordert.
+Aufrufeinrichtungsparameter können in der [**LINECALLPARAMS-Datenstruktur**](/windows/win32/api/tapi/ns-tapi-linecallparams) gespeichert werden, und ein Zeiger auf diese Struktur wird dann als Parameter von [**lineMakeCall verwendet.**](/windows/win32/api/tapi/nf-tapi-linemakecall) Wenn **lineMakeCall** keine **LINECALLPARAMS-Struktur** bereitgestellt wird, wird ein STANDARD-VOICE-Anruf mit einem Satz von Standardwerten angefordert.
 
-Wenn die Sitzung erfolgreich eingerichtet wurde, wird ein Aufruf Handle mit *Besitzer* [rechten](privilege-ovr.md) an die Anwendung zurückgegeben, und TAPI sendet die Anwendungs [**Zeilen- \_ CallState**](./line-callstate.md) -Meldungen mit Informationen zum Fortschritt des Aufrufes. Anwendungen verwenden diese Nachrichten in der Regel, um dem Benutzer Statusberichte anzuzeigen.
+Wenn die Sitzung erfolgreich eingerichtet wurde,  wird ein Aufrufhand handle mit Besitzerberechtigungen an die Anwendung zurückgegeben, und TAPI sendet die LINE [**\_ CALLSTATE-Nachrichten**](./line-callstate.md) der Anwendung mit Informationen zum Status des [Aufrufs.](privilege-ovr.md) Anwendungen verwenden diese Meldungen in der Regel, um dem Benutzer Statusberichte anzuzeigen.
 
-**TAPI 3. x:** Anwendungen initiieren eine Kommunikationssitzung, indem Sie die [**itaddress:: anatecall**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddress-createcall) -Methode für eine Adresse aufrufen, die den erforderlichen Adresstyp und Medientyp verarbeiten können. Wenn die Adresse die Schnittstelle [**itterminalsupport**](/windows/win32/api/tapi3if/nn-tapi3if-itterminalsupport) verfügbar macht, werden Terminals auf den Mediendaten Strömen des calljektes ausgewählt. Eine Veranschaulichung dieses Prozesses finden Sie im Beispiel " [make a callcode](make-a-call.md) ".
+**TAPI 3.x:** Anwendungen initiieren eine Kommunikationssitzung, indem sie die [**ITAddress::CreateCall-Methode**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddress-createcall) für eine Adresse aufrufen, die den erforderlichen Adresstyp und Medientyp behandeln kann. Wenn die Adresse die [**ITTerminalSupport-Schnittstelle**](/windows/win32/api/tapi3if/nn-tapi3if-itterminalsupport) verfügbar macht, werden Terminals in den Medienstreams des Aufrufobjekts ausgewählt. Eine [Veranschaulichung dieses Prozesses](make-a-call.md) finden Sie im Beispiel zum Ausführen eines Aufrufcodes.
 
-Setup Parameter aufrufen können mithilfe von Methoden, die von der [**itcallinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo) -Schnittstelle verfügbar gemacht werden, gespeichert oder geändert werden
+Aufrufeinrichtungsparameter können mithilfe von Methoden gespeichert oder geändert werden, die von der [**ITCallInfo-Schnittstelle verfügbar gemacht**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo) werden.
 
-Wenn die Sitzung erfolgreich eingerichtet wurde, gibt TAPI einen [**itbasiccallcontrol**](/windows/desktop/api/tapi3if/nn-tapi3if-itbasiccallcontrol) -Schnittstellen Zeiger zurück, der für weitere Sitzungs Vorgänge verwendet werden kann, oder zum Abrufen eines [**itcallinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo) -Schnittstellen Zeigers, der zum Abrufen zusätzlicher Sitzungsinformationen verwendet werden kann. Die [**itcallstateevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallstateevent) -Schnittstelle verarbeitet TAPI-Aufruf Zustands Ereignisse.
+Wenn die Sitzung erfolgreich eingerichtet wurde, gibt TAPI einen [**ITBasicCallControl-Schnittstellenzeiger**](/windows/desktop/api/tapi3if/nn-tapi3if-itbasiccallcontrol) zurück, der für weitere Sitzungsvorgänge oder zum Abrufen eines [**ITCallInfo-Schnittstellenzeigers**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo) verwendet werden kann, der zum Abrufen zusätzlicher Sitzungsinformationen verwendet werden kann. Die [**ITCallStateEvent-Schnittstelle**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallstateevent) verarbeitet TAPI-Aufrufzustandsereignisse.
 
 > [!Note]  
-> TAPI sollte nicht für Faxübertragungen verwendet werden. Verwenden Sie stattdessen die Funktionen, die über MAPI verfügbar sind, die Microsoft Messaging-API.
+> TAPI sollte nicht für Faxübertragungen verwendet werden. Verwenden Sie stattdessen die Funktionen, die über MAPI verfügbar sind, die Microsoft-Nachrichten API.
 
  
 
 ## <a name="address-translation"></a>Adressübersetzung
 
-Eine Endbenutzer-oder Serveranwendung kann Adressen in einem Format speichern, das nicht mit den Anforderungen eines bestimmten Dienstanbieters kompatibel ist. Eine Telefonnummer kann z. b. in einem elektronischen Adressbuch im [kanonischen Format](address-ovr.md)gespeichert werden, aber die meisten Dienstanbieter, die Telefonnummern verarbeiten, benötigen das [Format "dialable](address-ovr.md)".
+Eine Endbenutzer- oder Serveranwendung kann Adressen in einem Format speichern, das nicht mit den Anforderungen eines bestimmten Dienstanbieters kompatibel ist. Beispielsweise kann eine Telefonnummer in einem elektronischen Adressbuch im kanonischen Format gespeichert [werden,](address-ovr.md)aber die meisten Dienstanbieter, die Telefonnummern verarbeiten, benötigen das [Wählformat](address-ovr.md).
 
-TAPI stellt Adress Übersetzungs Vorgänge bereit, die einer Anwendung helfen, den richtigen Adresstyp für einen TSP anzugeben. Der Dienstanbieter gibt für TAPI an, welche Adresstypen unterstützt werden, und er muss keine Form der Adressübersetzung enthalten.
+TAPI stellt Adressübersetzungsvorgänge zur Verfügung, die eine Anwendung bei der Präsentation des richtigen Adresstyps für einen TSP unterstützen. Der Dienstanbieter gibt TAPI an, welche Adresstypen unterstützt werden, und muss keine Form der Adressübersetzung enthalten.
 
-**TAPI 2. x:** Siehe [**linetranslateaddress**](/windows/win32/api/tapi/nf-tapi-linetranslateaddress).
+**TAPI 2.x:** Siehe [**lineTranslateAddress**](/windows/win32/api/tapi/nf-tapi-linetranslateaddress).
 
-**TAPI 3:** Siehe [**itadresssstranslation**](/windows/desktop/api/tapi3if/nn-tapi3if-itaddresstranslation), [**itadresstranslationinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itaddresstranslationinfo).
+**TAPI 3:** Siehe [**ITAddressTranslation**](/windows/desktop/api/tapi3if/nn-tapi3if-itaddresstranslation), [**ITAddressTranslationInfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itaddresstranslationinfo).
 
-## <a name="toll-lists"></a>Maut Listen
+## <a name="toll-lists"></a>Mautlisten
 
-An manchen Stellen in Nordamerika sind alle Telefonanrufe, die im lokalen Code abgelegt werden, lokale Aufrufe. An anderen Standorten sind einige Aufrufe, die an den lokalen Code platziert werden, lange Distanz und benötigen ein Präfix "1", um gewählt zu werden. Die ersten drei Ziffern der Adresse (das Präfix) bestimmen, ob es sich bei einem-Befehl im lokalen Code um einen Maut Befehl handelt.
+An einigen Orten in Nordamerika sind alle Telefonanrufe in der Ortsvorwahl Ortsanrufe. An anderen Orten sind einige Aufrufe der Ortsvorwahl weit entfernt und benötigen das Präfix "1", um gewählt werden zu können. Die ersten drei Ziffern der Adresse (das Präfix) bestimmen, ob ein Aufruf in der Ortsvorwahl ein Mautaufruf ist.
 
-Eine *Maut Liste* ist eine Liste von Präfixen im lokalen Code, deren Adressen als Adressen mit langer Entfernung gewählt werden müssen und für die eine lange Entfernungs Gebühr geschätzt wird.
+Eine *Mautliste* ist eine Liste von Präfixen in der Ortsvorwahl, deren Adressen als Fernadressen gewählt werden müssen und für die Gebühren für die Fernverbindung berechnet werden.
 
-Maut Listen sind für Dienstanbieter oder Anwendungen, die nicht auf ein Telefon Netzwerk zugreifen, nicht relevant.
+Mautlisten sind für Dienstanbieter oder Anwendungen, die nicht auf ein Telefonnetzwerk zugreifen, nicht relevant.
 
-**TAPI 2. x:** Weitere Informationen finden Sie unter [**linetranslateaddress**](/windows/win32/api/tapi/nf-tapi-linetranslateaddress) (linetranslateresult \_ intolllist und linetranslateresult \_ notintolllist Bits in der [**linetranslateoutput**](/windows/win32/api/tapi/ns-tapi-linetranslateoutput) -Struktur), [**linesettolllist**](/windows/win32/api/tapi/nf-tapi-linesettolllist).
+**TAPI 2.x:** Siehe [**lineTranslateAddress**](/windows/win32/api/tapi/nf-tapi-linetranslateaddress) (LINETRANSLATERESULT \_ INTOLLLIST- und LINETRANSLATERESULT \_ NOTINTOLLLIST-Bits in der [**LINETRANSLATEOUTPUT-Struktur),**](/windows/win32/api/tapi/ns-tapi-linetranslateoutput) [**lineSetTollList**](/windows/win32/api/tapi/nf-tapi-linesettolllist).
 
-**TAPI 3:** Siehe [**itadresssstranslation:: TranslateAddress**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddresstranslation-translateaddress), [**itadresssstranslationinfo:: get- \_ Übersetzungsergebnisse**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddresstranslationinfo-get_translationresults).
+**TAPI 3:** Weitere Informationen finden Sie unter [**ITAddressTranslation::TranslateAddress**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddresstranslation-translateaddress), [**ITAddressTranslationInfo::get \_ TranslationResults**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddresstranslationinfo-get_translationresults).
 
  
 

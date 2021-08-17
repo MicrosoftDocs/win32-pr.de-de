@@ -1,41 +1,41 @@
 ---
-description: In diesem Abschnitt werden die binären Raster Vorgangs Codes aufgelistet, die von den GetROP2-und SetROP2-Funktionen verwendet werden. Raster-Vorgangs Codes definieren, wie GDI die Bits aus dem ausgewählten Stift mit den Bits in der Ziel Bitmap kombiniert.
+description: In diesem Abschnitt werden die binären Rastervorgangscodes aufgelistet, die von den Funktionen GetROP2 und SetROP2 verwendet werden. Rasteroperationscodes definieren, wie GDI die Bits aus dem ausgewählten Stift mit den Bits in der Zielbitmap kombiniert.
 ms.assetid: 9a3a5b5d-b41f-4859-8830-98272983a635
-title: Binäre Raster Vorgänge
+title: Binäre Rastervorgänge
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bd8a70030b1940c31d036505a80a6b1868aececd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 462c07165d7f377f2a536722bf2f728446c308503108474cbb6a585cee6f68e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119105809"
 ---
-# <a name="binary-raster-operations"></a>Binäre Raster Vorgänge
+# <a name="binary-raster-operations"></a>Binäre Rastervorgänge
 
-In diesem Abschnitt werden die binären Raster Vorgangs Codes aufgelistet, die von den [**GetROP2**](/windows/desktop/api/Wingdi/nf-wingdi-getrop2) -und [**SetROP2**](/windows/desktop/api/Wingdi/nf-wingdi-setrop2) -Funktionen verwendet werden. Raster-Vorgangs Codes definieren, wie GDI die Bits aus dem ausgewählten Stift mit den Bits in der Ziel Bitmap kombiniert.
+In diesem Abschnitt werden die binären Rastervorgangscodes aufgelistet, die von den Funktionen [**GetROP2**](/windows/desktop/api/Wingdi/nf-wingdi-getrop2) und [**SetROP2**](/windows/desktop/api/Wingdi/nf-wingdi-setrop2) verwendet werden. Rasteroperationscodes definieren, wie GDI die Bits aus dem ausgewählten Stift mit den Bits in der Zielbitmap kombiniert.
 
-Jeder Raster Vorgangs Code stellt einen booleschen Vorgang dar, in dem die Werte der Pixel im ausgewählten Stift und die Ziel Bitmap kombiniert werden. Die folgenden beiden Operanden werden in diesen Vorgängen verwendet.
+Jeder Rastervorgangscode stellt einen booleschen Vorgang dar, bei dem die Werte der Pixel im ausgewählten Stift und der Zielbitmap kombiniert werden. Im Folgenden sind die beiden Operanden, die in diesen Vorgängen verwendet werden.
 
 
 
 | Operand | Bedeutung            |
 |---------|--------------------|
 | P       | Ausgewählter Stift       |
-| D       | Ziel Bitmap |
+| D       | Zielbitmap |
 
 
 
  
 
-Die in diesen Vorgängen verwendeten booleschen Operatoren folgen.
+Die booleschen Operatoren, die in diesen Vorgängen verwendet werden, folgen.
 
 
 
 | Operator | Bedeutung                    |
 |----------|----------------------------|
 | a        | Bitweises AND                |
-| n        | Bitweises NOT (inversen)      |
+| n        | Bitweises NOT (umgekehrt)      |
 | o        | Bitweises OR                 |
 | x        | Bitweises exklusives OR (XOR) |
 
@@ -43,7 +43,7 @@ Die in diesen Vorgängen verwendeten booleschen Operatoren folgen.
 
  
 
-Alle booleschen Vorgänge werden in umgekehrter polnischer Schreibweise dargestellt. Der folgende Vorgang ersetzt z. b. die Werte der Pixel in der Ziel Bitmap durch eine Kombination der Pixelwerte des Stifts und des ausgewählten Pinsels:
+Alle booleschen Vorgänge werden in umgekehrter polnischer Notation dargestellt. Der folgende Vorgang ersetzt beispielsweise die Werte der Pixel in der Zielbitmap durch eine Kombination der Pixelwerte des Stifts und des ausgewählten Pinsels:
 
 
 ```C++
@@ -52,11 +52,11 @@ DPo
 
 
 
-Jeder Raster Vorgangs Code ist eine 32-Bit-Ganzzahl, deren hohes Wort ein boolescher Vorgangs Index ist und dessen niedriges Wort der Vorgangs Code ist. Bei dem 16-Bit-Vorgangs Index handelt es sich um einen 8-Bit-Wert mit 0 (null), der alle möglichen Ergebnisse darstellt, die sich aus der booleschen Operation für zwei Parameter ergeben (in diesem Fall der Stift-und Zielwert). Die Vorgangs Indizes für die DPO-und DPAN-Vorgänge werden z. b. in der folgenden Liste angezeigt.
+Jeder Rastervorgangscode ist eine 32-Bit-Ganzzahl, deren Wort in hoher Reihenfolge ein boolescher Vorgangsindex ist und dessen Wort mit niedriger Reihenfolge der Vorgangscode ist. Der 16-Bit-Vorgangsindex ist ein null erweiterter 8-Bit-Wert, der alle möglichen Ergebnisse darstellt, die sich aus der booleschen Operation für zwei Parameter ergeben (in diesem Fall der Stift und die Zielwerte). Beispielsweise werden die Vorgangsindizes für die DPo- und DPan-Vorgänge in der folgenden Liste angezeigt.
 
 
 
-| P   | D   | DPO | DPAN |
+| P   | D   | Dsb | Dpan |
 |-----|-----|-----|------|
 | 0   | 0   | 0   | 1    |
 | 0   | 1   | 1   | 1    |
@@ -67,82 +67,82 @@ Jeder Raster Vorgangs Code ist eine 32-Bit-Ganzzahl, deren hohes Wort ein booles
 
  
 
-In der folgenden Liste werden die Zeichnungs Modi und die booleschen Operationen beschrieben, die Sie darstellen.
+In der folgenden Liste werden die Zeichnungsmodi und die booleschen Vorgänge beschrieben, die sie darstellen.
 
 
 
-| Raster Vorgang | Boolescher Vorgang |
+| Rastervorgang | Boolescher Vorgang |
 |------------------|-------------------|
-| R2 \_ schwarz        | 0                 |
-| R2- \_ CopyPen      | P                 |
-| R2 \_ masklotpen   | DPNA              |
-| R2- \_ MaskPen      | DPa               |
-| R2 \_ maskpnot   | Pdna              |
-| R2 \_ mergenotpen  | Dpno              |
-| R2- \_ MergePen     | DPO               |
-| R2 \_ mergepnot  | Pdno              |
+| R2 \_ BLACK        | 0                 |
+| R2 \_ COPYPEN      | P                 |
+| R2 \_ MASKNOTPEN   | DPna              |
+| R2 \_ MASKPEN      | Dpa               |
+| R2 \_ MASKPENNOT   | PDna              |
+| R2 \_ MERGENOTPEN  | DPno              |
+| R2 \_ MERGEPEN     | Dsb               |
+| R2 \_ MERGEPENNOT  | PDno              |
 | R2 \_ NOP          | D                 |
-| R2 \_ nicht          | Dn                |
-| R2- \_ notcopypen   | PN                |
-| R2 \_ notmaskpen   | DPAN              |
-| R2 \_ NotMergePen  | Dpon              |
-| R2- \_ NotXorPen    | Dpxn              |
-| R2 \_ weiß        | 1                 |
-| R2- \_ XOrPen       | DPX               |
+| R2 \_ NOT          | Dn                |
+| R2 \_ NOTCOPYPEN   | Pn                |
+| R2 \_ NOTMASKPEN   | DPan              |
+| R2 \_ NOTMERGEPEN  | DPon              |
+| R2 \_ NOTXORPEN    | DPxn              |
+| R2 \_ WHITE        | 1                 |
+| R2 \_ XORPEN       | Dpx               |
 
 
 
  
 
-Bei einem monochrome Gerät ordnet GDI den Wert 0 (null) und den Wert 1 weiß zu. Wenn eine Anwendung versucht, mit einem schwarzen Stift auf einem weißen Ziel mithilfe der verfügbaren binären Raster Vorgänge zu zeichnen, treten die folgenden Ergebnisse auf.
+Für ein monocolores Gerät ordnet GDI den Wert 0 (null) schwarz und den Wert 1 weiß zu. Wenn eine Anwendung versucht, mit einem schwarzen Stift auf einem weißen Ziel mithilfe der verfügbaren binären Rastervorgänge zu zeichnen, treten die folgenden Ergebnisse auf.
 
 
 
-| Raster Vorgang | Ergebnis             |
+| Rastervorgang | Ergebnis             |
 |------------------|--------------------|
-| R2 \_ schwarz        | Sichtbare schwarze Linie |
-| R2- \_ CopyPen      | Sichtbare schwarze Linie |
-| R2 \_ masklotpen   | Keine sichtbare Zeile    |
-| R2- \_ MaskPen      | Sichtbare schwarze Linie |
-| R2 \_ maskpnot   | Sichtbare schwarze Linie |
-| R2 \_ mergenotpen  | Keine sichtbare Zeile    |
-| R2- \_ MergePen     | Sichtbare schwarze Linie |
-| R2 \_ mergepnot  | Sichtbare schwarze Linie |
+| R2 \_ BLACK        | Sichtbare schwarze Linie |
+| R2 \_ COPYPEN      | Sichtbare schwarze Linie |
+| R2 \_ MASKNOTPEN   | Keine sichtbare Zeile    |
+| R2 \_ MASKPEN      | Sichtbare schwarze Linie |
+| R2 \_ MASKPENNOT   | Sichtbare schwarze Linie |
+| R2 \_ MERGENOTPEN  | Keine sichtbare Zeile    |
+| R2 \_ MERGEPEN     | Sichtbare schwarze Linie |
+| R2 \_ MERGEPENNOT  | Sichtbare schwarze Linie |
 | R2 \_ NOP          | Keine sichtbare Zeile    |
-| R2 \_ nicht          | Sichtbare schwarze Linie |
-| R2- \_ notcopypen   | Keine sichtbare Zeile    |
-| R2 \_ notmaskpen   | Keine sichtbare Zeile    |
-| R2 \_ NotMergePen  | Sichtbare schwarze Linie |
-| R2- \_ NotXorPen    | Sichtbare schwarze Linie |
-| R2 \_ weiß        | Keine sichtbare Zeile    |
-| R2- \_ XOrPen       | Keine sichtbare Zeile    |
+| R2 \_ NOT          | Sichtbare schwarze Linie |
+| R2 \_ NOTCOPYPEN   | Keine sichtbare Zeile    |
+| R2 \_ NOTMASKPEN   | Keine sichtbare Zeile    |
+| R2 \_ NOTMERGEPEN  | Sichtbare schwarze Linie |
+| R2 \_ NOTXORPEN    | Sichtbare schwarze Linie |
+| R2 \_ WHITE        | Keine sichtbare Zeile    |
+| R2 \_ XORPEN       | Keine sichtbare Zeile    |
 
 
 
  
 
-Bei einem Farbgerät verwendet GDI RGB-Werte, um die Farben des Stifts und des Ziels darzustellen. Ein RGB-Farbwert ist eine lange ganze Zahl, die ein rotes, grünes und blaues Farbfeld enthält, das jeweils die Intensität der angegebenen Farbe angibt. Die Intensitäten liegen zwischen 0 und 255. Die Werte werden in die drei nieder wertigen Bytes der Long-Ganzzahl gepackt. Die Farbe eines Stifts ist immer eine voll Tonfarbe, aber die Farbe des Ziels kann eine Mischung aus zwei oder drei Farben sein. Wenn eine Anwendung versucht, mit einem weißen Stift auf einem blauen Ziel mithilfe der verfügbaren binären Raster Vorgänge zu zeichnen, treten die folgenden Ergebnisse auf.
+Für ein Farbgerät verwendet GDI RGB-Werte, um die Farben des Stifts und des Ziels darzustellen. Ein RGB-Farbwert ist eine lange ganze Zahl, die ein rotes, ein grünes und ein blaues Farbfeld enthält, die jeweils die Intensität der angegebenen Farbe angeben. Die Intensitäten reichen von 0 bis 255. Die Werte werden in die drei Bytes der langen ganzen Zahl in niedriger Reihenfolge gepackt. Die Farbe eines Stifts ist immer eine Volltonfarbe, aber die Farbe des Ziels kann eine Mischung aus zwei oder drei Farben sein. Wenn eine Anwendung versucht, mit einem weißen Stift auf einem blauen Ziel mithilfe der verfügbaren binären Rastervorgänge zu zeichnen, treten die folgenden Ergebnisse auf.
 
 
 
-| Raster Vorgang | Ergebnis                 |
+| Rastervorgang | Ergebnis                 |
 |------------------|------------------------|
-| R2 \_ schwarz        | Sichtbare schwarze Linie     |
-| R2- \_ CopyPen      | Sichtbare weiße Linie     |
-| R2 \_ masklotpen   | Sichtbare schwarze Linie     |
-| R2- \_ MaskPen      | Unsichtbare blaue Linie    |
-| R2 \_ maskpnot   | Sichtbare rote/grüne Linie |
-| R2 \_ mergenotpen  | Unsichtbare blaue Linie    |
-| R2- \_ MergePen     | Sichtbare weiße Linie     |
-| R2 \_ mergepnot  | Sichtbare weiße Linie     |
+| R2 \_ BLACK        | Sichtbare schwarze Linie     |
+| R2 \_ COPYPEN      | Sichtbare weiße Linie     |
+| R2 \_ MASKNOTPEN   | Sichtbare schwarze Linie     |
+| R2 \_ MASKPEN      | Unsichtbare blaue Linie    |
+| R2 \_ MASKPENNOT   | Sichtbare rote/grüne Linie |
+| R2 \_ MERGENOTPEN  | Unsichtbare blaue Linie    |
+| R2 \_ MERGEPEN     | Sichtbare weiße Linie     |
+| R2 \_ MERGEPENNOT  | Sichtbare weiße Linie     |
 | R2 \_ NOP          | Unsichtbare blaue Linie    |
-| R2 \_ nicht          | Sichtbare rote/grüne Linie |
-| R2- \_ notcopypen   | Sichtbare schwarze Linie     |
-| R2 \_ notmaskpen   | Sichtbare rote/grüne Linie |
-| R2 \_ NotMergePen  | Sichtbare schwarze Linie     |
-| R2- \_ NotXorPen    | Unsichtbare blaue Linie    |
-| R2 \_ weiß        | Sichtbare weiße Linie     |
-| R2- \_ XOrPen       | Sichtbare rote/grüne Linie |
+| R2 \_ NOT          | Sichtbare rote/grüne Linie |
+| R2 \_ NOTCOPYPEN   | Sichtbare schwarze Linie     |
+| R2 \_ NOTMASKPEN   | Sichtbare rote/grüne Linie |
+| R2 \_ NOTMERGEPEN  | Sichtbare schwarze Linie     |
+| R2 \_ NOTXORPEN    | Unsichtbare blaue Linie    |
+| R2 \_ WHITE        | Sichtbare weiße Linie     |
+| R2 \_ XORPEN       | Sichtbare rote/grüne Linie |
 
 
 

@@ -27,7 +27,7 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Ui PKEY SmallImage wird von einer Anwendung zum Abfragen des kleinen Bilds \_ \_ verwendet, das einem Menüband-Steuerelement zugeordnet ist.
+Ui \_ PKEY \_ SmallImage wird von einer Anwendung verwendet, um das kleine Bild abzufragen, das einem Menübandsteuerelement zugeordnet ist.
 
 Der Eigenschaftswert ist ein [**IUIImage-Objekt.**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiimage)
 

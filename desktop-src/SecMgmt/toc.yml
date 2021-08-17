@@ -9,38 +9,38 @@
           items:
             - name: Lokale Sicherheitsrichtlinie
               href: local-security-policy.md
-            - name: Integrierte und Konto Domänen
+            - name: Integrierte Domänen und Kontodomänen
               href: built-in-and-account-domains.md
             - name: Primäre und vertrauenswürdige Domänen
               href: primary-and-trusted-domains.md
-            - name: LSA-Richtlinien Objekte
+            - name: LSA-Richtlinienobjekte
               href: lsa-policy-objects.md
               items:
-                - name: Policy-Objekt
+                - name: Richtlinienobjekt
                   href: policy-object.md
-                - name: Treuhänder-Domänen Objekt
+                - name: TrustedDomain-Objekt
                   href: trusteddomain-object.md
-                - name: Konto Objekt
+                - name: Kontoobjekt
                   href: account-object.md
                 - name: Privates Datenobjekt
                   href: private-data-object.md
-        - name: Kenn Wortfilter
+        - name: Kennwortfilter
           href: password-filters.md
           items:
-            - name: Überlegungen zur Kenn Wort Filter Programmierung
+            - name: Überlegungen zur Programmierung von Kennwortfiltern
               href: password-filter-programming-considerations.md
-            - name: Starke Kenn Wort Erzwingung und Passfilt.dll
+            - name: Erzwingung und Passfilt.dll
               href: strong-password-enforcement-and-passfilt-dll.md
-        - name: Sicherheit
+        - name: Sicherer
           href: safer.md
-        - name: Dienst Sicherheitsanlagen
+        - name: Dienstsicherheitsanlagen
           href: service-security-attachments.md
           items:
-            - name: Erweiterungs-Snap-in-Erweiterungen
+            - name: Snap-In-Erweiterungen für Anlagen
               href: attachment-snap-in-extensions.md
             - name: Anlagen-Engines
               href: attachment-engines.md
-            - name: Sicherheits Vorlagen
+            - name: Sicherheitsvorlagen
               href: security-templates.md
             - name: Sicherheitskonfiguration und -analyse
               href: security-configuration-and-analysis.md
@@ -50,66 +50,66 @@
         - name: Verwenden der LSA-Richtlinie
           href: using-lsa-policy.md
           items:
-            - name: Verwenden von LSA Unicode-Zeichen folgen
+            - name: Verwenden von LSA-Unicode-Zeichenfolgen
               href: using-lsa-unicode-strings.md
-            - name: Öffnen eines Policy-Objekt Handles
+            - name: Öffnen eines Richtlinienobjekthandpunkts
               href: opening-a-policy-object-handle.md
-            - name: Verwalten von Richtlinien Informationen
+            - name: Verwalten von Richtlinieninformationen
               href: managing-policy-information.md
-            - name: Empfangen von Richtlinien Änderungs Ereignissen
+            - name: Empfangen von Richtlinienänderungsereignissen
               href: receiving-policy-change-events.md
-            - name: Verwalten von Konto Berechtigungen
+            - name: Verwalten von Kontoberechtigungen
               href: managing-account-permissions.md
-            - name: Verwalten von Informationen zur vertrauenswürdigen Domäne
+            - name: Verwalten von Informationen zu vertrauenswürdigen Domänen
               href: managing-trusted-domain-information.md
-            - name: Übersetzen von Namen und SIDs
+            - name: Übersetzen zwischen Namen und SIDs
               href: translating-between-names-and-sids.md
-            - name: Mapping von POSIX-bezeichlern
+            - name: Zuordnen von Posix-Bezeichnern
               href: mapping-posix-identifiers.md
             - name: Speichern privater Daten
               href: storing-private-data.md
-        - name: Verwenden von Kenn Wort Filtern
+        - name: Verwenden von Kennwortfiltern
           href: using-password-filters.md
           items:
-            - name: Installieren und Registrieren einer Kenn Wort Filter-dll
+            - name: Installieren und Registrieren einer Kennwortfilter-DLL
               href: installing-and-registering-a-password-filter-dll.md
-        - name: Verwenden von Dienst Sicherheitsanlagen
+        - name: Verwenden von Dienstsicherheitsanlagen
           href: using-service-security-attachments.md
           items:
-            - name: Erstellen einer Anlagen-Snap-in-Erweiterung
+            - name: Erstellen einer Snap-In-Erweiterung für Anlagen
               href: creating-an-attachment-snap-in-extension.md
               items:
-                - name: Implementieren von iscesvplattachmentpersistinfo
+                - name: Implementieren von ISceSvcAttachmentPersistInfo
                   href: implementing-iscesvcattachmentpersistinfo.md
-                - name: Anzeigen von Konfigurations-und Analyse Informationen
+                - name: Anzeigen von Konfigurations- und Analyseinformationen
                   href: displaying-configuration-and-analysis-information.md
-                - name: Erweiterungs Knoten "Anlage-Snap-in hinzufügen"
+                - name: Hinzufügen eines Erweiterungsknotens für das Anlagen-Snap-In
                   href: adding-an-attachment-snap-in-extension-node.md
                 - name: Einrichten der Kommunikation mit Konfigurations-Snap-Ins
                   href: establishing-communication-with-configuration-snap-ins.md
-                - name: Daten aus den Konfigurations-Snap-Ins erhalten
+                - name: Abrufen von Daten aus den Konfigurations-Snap-Ins
                   href: getting-data-from-the-configuration-snap-ins.md
-                - name: Ändern von Konfigurationsinformationen in der Benutzeroberfläche
+                - name: Ändern von Konfigurationsinformationen im Benutzeroberfläche
                   href: modifying-configuration-information-in-the-user-interface.md
                 - name: Ändern von Konfigurationsinformationen in der Datenbank
                   href: modifying-configuration-information-in-the-database.md
-            - name: Registrieren einer Anlage-Snap-in-Erweiterung
+            - name: Registrieren einer Snap-In-Erweiterung für Anlagen
               href: registering-an-attachment-snap-in-extension.md
-            - name: Erstellen einer Anlage-Engine
+            - name: Erstellen einer Anlagen-Engine
               href: creating-an-attachment-engine.md
               items:
-                - name: Implementieren von scesvpetachmentanalysis
+                - name: Implementieren von SceSvcAttachmentAnalyze
                   href: implementing-scesvcattachmentanalyze.md
-                - name: Implementieren von scesvalisitachmentconfig
+                - name: Implementieren von SceSvcAttachmentConfig
                   href: implementing-scesvcattachmentconfig.md
-                - name: Implementieren von scesvertachmentupdate
+                - name: Implementieren von SceSvcAttachmentUpdate
                   href: implementing-scesvcattachmentupdate.md
-            - name: Registrieren einer Anlage-Engine
+            - name: Registrieren einer Anlagen-Engine
               href: registering-an-attachment-engine.md
     - name: Referenz zur Sicherheitsverwaltung
       href: management-reference.md
       items:
-        - name: Sicherheits Verwaltungs Datentypen
+        - name: Security Management-Datentypen
           href: management-data-types.md
           items:
             - name: LSA_ENUMERATION_HANDLE
@@ -120,13 +120,13 @@
               href: sce-enumeration-context.md
             - name: SCE_HANDLE
               href: sce-handle.md
-            - name: Scestatus
+            - name: SCESTATUS
               href: scestatus.md
             - name: SCESVC_HANDLE
               href: scesvc-handle.md
             - name: SCESVC_INFO_TYPE
               href: /windows/win32/api/Scesvc/ne-scesvc-scesvc_info_type
-        - name: Sicherheitsverwaltungs-Enumerationen
+        - name: Sicherheitsverwaltungsenumeration
           href: management-enumerations.md
           items:
             - name: CRED_FETCH
@@ -153,62 +153,62 @@
               href: /windows/win32/api/WinSafer/ne-winsafer-safer_policy_info_class
             - name: TRUSTED_INFORMATION_CLASS
               href: /windows/win32/api/Ntsecapi/ne-ntsecapi-trusted_information_class
-        - name: Sicherheits Verwaltungsfunktionen
+        - name: Sicherheitsverwaltungsfunktionen
           href: management-functions.md
           items:
-            - name: Getserviceaccountpassword
+            - name: GetServiceAccountPassword
               href: getserviceaccountpassword.md
             - name: PSAM_INIT_NOTIFICATION_ROUTINE
               href: /windows/desktop/api/Ntsecapi/nc-ntsecapi-psam_init_notification_routine
-            - name: Lsaaddaccountrghts
+            - name: LsaAddAccountRights
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaaddaccountrights
-            - name: Lsaclose
+            - name: LsaClose
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaclose
-            - name: Lsacreatetrusteddomainex
+            - name: LsaCreateTrustedDomainEx
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsacreatetrusteddomainex
-            - name: Lsadeletetreuddomain
+            - name: LsaDeleteTrustedDomain
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsadeletetrusteddomain
-            - name: Lsaenumerateaccountrghts
+            - name: LsaEnumerateAccountRights
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaenumerateaccountrights
-            - name: Lsaenumerateaccounpwithuserright
+            - name: LsaEnumerateAccountsWithUserRight
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaenumerateaccountswithuserright
-            - name: Lsaenumeratetrusteddomains
+            - name: LsaEnumerateTrustedDomains
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaenumeratetrusteddomains
-            - name: Lsaenumeratetrusteddomainsex
+            - name: LsaEnumerateTrustedDomainsEx
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaenumeratetrusteddomainsex
-            - name: Lsafreememory
+            - name: LsaFreeMemory
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsafreememory
-            - name: Lsalookupnames
+            - name: LsaLookupNames
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsalookupnames
             - name: LsaLookupNames2
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsalookupnames2
-            - name: Lsalookupprivilegevalue
+            - name: LsaLookupPrivilegeValue
               href: /windows/desktop/api/ntlsa/nf-ntlsa-lsalookupprivilegevalue
-            - name: Lsalookupsids
+            - name: LsaLookupSids
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsalookupsids
             - name: LsaLookupSids2
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsalookupsids2
-            - name: Lsantstatustowinerror
+            - name: LsaNtStatusToWinError
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsantstatustowinerror
-            - name: Lsaopentrusteddomainbyname
+            - name: LsaOpenTrustedDomainByName
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaopentrusteddomainbyname
-            - name: Lsaquerytreuhänddomaininfo
+            - name: LsaQueryTrustedDomainInfo
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaquerytrusteddomaininfo
             - name: LsaQueryTrustedDomainInfoByName
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaquerytrusteddomaininfobyname
-            - name: Lsaregisterpolicychangenotifizierung
+            - name: LsaRegisterPolicyChangeNotification
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaregisterpolicychangenotification
-            - name: Lsaremuveaccountrghts
+            - name: LsaRemoveAccountRights
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaremoveaccountrights
-            - name: Lsarelteveprivatedata
+            - name: LsaRetri browsePrivateData
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaretrieveprivatedata
-            - name: Lsasettrusteddomaininfobyname
+            - name: LsaSetTrustedDomainInfoByName
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsasettrusteddomaininfobyname
-            - name: Lsasettrusteddomaininformation
+            - name: LsaSetTrustedDomainInformation
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsasettrusteddomaininformation
-            - name: Lsastoreprivatedata
+            - name: LsaStorePrivateData
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsastoreprivatedata
-            - name: Lsaunregisterpolicychangenotifizierung
+            - name: LsaUnregisterPolicyChangeNotification
               href: /windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaunregisterpolicychangenotification
             - name: NetAddServiceAccount
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netaddserviceaccount
@@ -216,7 +216,7 @@
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netenumerateserviceaccounts
             - name: NetIsServiceAccount
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netisserviceaccount
-            - name: Netqueryserviceaccount
+            - name: NetQueryServiceAccount
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netqueryserviceaccount
             - name: NetRemoveServiceAccount
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netremoveserviceaccount
@@ -232,97 +232,97 @@
               href: /windows/desktop/api/scesvc/nc-scesvc-pfsce_query_info
             - name: PFSCE_SET_INFO
               href: /windows/desktop/api/scesvc/nc-scesvc-pfsce_set_info
-            - name: Safercloselevel
+            - name: SaferCloseLevel
               href: /windows/desktop/api/WinSafer/nf-winsafer-safercloselevel
-            - name: Safercompute"fromlevel"
+            - name: SaferComputeTokenFromLevel
               href: /windows/desktop/api/WinSafer/nf-winsafer-safercomputetokenfromlevel
-            - name: Saferkreatelevel
+            - name: SaferCreateLevel
               href: /windows/desktop/api/WinSafer/nf-winsafer-safercreatelevel
-            - name: Safergetlevelinformation
+            - name: SaferGetLevelInformation
               href: /windows/desktop/api/WinSafer/nf-winsafer-safergetlevelinformation
-            - name: Safergetpolicyinformation
+            - name: SaferGetPolicyInformation
               href: /windows/desktop/api/WinSafer/nf-winsafer-safergetpolicyinformation
             - name: SaferIdentifyLevel
               href: /windows/desktop/api/WinSafer/nf-winsafer-saferidentifylevel
-            - name: Saferiisexecutablefiletype
+            - name: SaferiIsExecutableFileType
               href: /windows/desktop/api/WinSafer/nf-winsafer-saferiisexecutablefiletype
-            - name: Saferrecorabventlogentry
+            - name: SaferRecordEventLogEntry
               href: /windows/desktop/api/WinSafer/nf-winsafer-saferrecordeventlogentry
-            - name: Safersetlevelinformation
+            - name: SaferSetLevelInformation
               href: /windows/desktop/api/WinSafer/nf-winsafer-safersetlevelinformation
-            - name: Safersetpolicyinformation
+            - name: SaferSetPolicyInformation
               href: /windows/desktop/api/WinSafer/nf-winsafer-safersetpolicyinformation
-            - name: Scesvpetachmentanalysis
+            - name: SceSvcAttachmentAnalyze
               href: scesvcattachmentanalyze.md
-            - name: Scesvalisitachmentconfig
+            - name: SceSvcAttachmentConfig
               href: scesvcattachmentconfig.md
-            - name: Scesvertachmentupdate
+            - name: SceSvcAttachmentUpdate
               href: scesvcattachmentupdate.md
-            - name: srpinvereroriginclaim
+            - name: srpInheritOriginClaim
               href: srpinheritoriginclaim.md
-        - name: Sicherheits Verwaltungs Schnittstellen
+        - name: Sicherheitsverwaltungsschnittstellen
           href: management-interfaces.md
           items:
-            - name: Iscesvstreamtachmentdata
+            - name: ISceSvcAttachmentData
               href: /windows/desktop/api/Scesvc/nn-scesvc-iscesvcattachmentdata
               items:
-                - name: Iscesvtortachmentdata-Methoden
+                - name: ISceSvcAttachmentData-Methoden
                   href: iscesvcattachmentdata-methods.md
                   items:
                     - name: CloseHandle-Methode
                       href: /windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentdata-closehandle
-                    - name: Frebuffer-Methode
+                    - name: FreeBuffer-Methode
                       href: /windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentdata-freebuffer
                     - name: GetData-Methode
                       href: /windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentdata-getdata
                     - name: Initialize-Methode
                       href: /windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentdata-initialize
-            - name: Iscesvplattachmentpersistinfo
+            - name: ISceSvcAttachmentPersistInfo
               href: /windows/desktop/api/Scesvc/nn-scesvc-iscesvcattachmentpersistinfo
               items:
-                - name: Iscesvplattachmentpersistinfo-Methoden
+                - name: ISceSvcAttachmentPersistInfo-Methoden
                   href: iscesvcattachmentpersistinfo-methods.md
                   items:
-                    - name: Frebuffer-Methode
+                    - name: FreeBuffer-Methode
                       href: /windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentpersistinfo-freebuffer
                     - name: IsDirty-Methode
                       href: /windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentpersistinfo-isdirty
                     - name: Save-Methode
                       href: /windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentpersistinfo-save
-        - name: Sicherheits Verwaltungs Objekte
+        - name: Sicherheitsverwaltungsobjekte
           href: management-objects.md
           items:
-            - name: Der Richtlinien Objekttyp
+            - name: Der Richtlinienobjekttyp
               href: the-policy-object-type.md
               items:
-                - name: Zugriffsrechte für Richtlinien Objekte
+                - name: Zugriffsrechte für Richtlinienobjekt
                   href: policy-object-access-rights.md
-                - name: Richtlinien Objektschutz
+                - name: Schutz von Richtlinienobjekten
                   href: policy-object-protection.md
-            - name: Der "Treuhänder Domain"-Objekttyp
+            - name: Der TrustedDomain-Objekttyp
               href: the-trusteddomain-object-type.md
               items:
-                - name: Zugriffsrechte für das Treuhänder-Domänen Objekt
+                - name: Zugriffsrechte für TrustedDomain-Objekte
                   href: trusteddomain-object-access-rights.md
-                - name: Schutz von treuhänddomain-Objekten
+                - name: TrustedDomain-Objektschutz
                   href: trusteddomain-object-protection.md
-            - name: Der Konto Objekttyp
+            - name: Der Kontoobjekttyp
               href: the-account-object-type.md
               items:
-                - name: Zugriffsrechte für Konto Objekte
+                - name: Zugriffsrechte für Kontoobjekt
                   href: account-object-access-rights.md
-                - name: Konto Objektschutz
+                - name: Kontoobjektschutz
                   href: account-object-protection.md
-            - name: Der private Daten Objekttyp.
+            - name: Der Objekttyp "Private Daten"
               href: the-private-data-object-type.md
               items:
-                - name: Zugriffsrechte für private Datenobjekte
+                - name: Zugriffsrechte für private Datenobjekt
                   href: private-data-object-access-rights.md
-                - name: Ursprünglicher Schutz privater Datenobjekte
+                - name: Anfänglicher Schutz des privaten Datenobjekts
                   href: private-data-object-initial-protection.md
         - name: Rückgabewerte der Sicherheitsverwaltung
           href: management-return-values.md
-        - name: Sicherheits Verwaltungsstrukturen
+        - name: Sicherheitsverwaltungsstrukturen
           href: management-structures.md
           items:
             - name: LSA_AUTH_INFORMATION

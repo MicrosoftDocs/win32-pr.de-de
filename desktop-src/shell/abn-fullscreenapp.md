@@ -1,6 +1,6 @@
 ---
-description: Benachrichtigt eine appbar, wenn eine Vollbildanwendung geöffnet oder geschlossen wird. Diese Benachrichtigung wird in Form einer von der Anwendung definierten Nachricht gesendet, die von der neuen ABM-Nachricht festgelegt wird \_ .
-title: ABN_FULLSCREENAPP Meldung (shellapi. h)
+description: Benachrichtigt eine App-Leiste, wenn eine Vollbildanwendung geöffnet oder geschlossen wird. Diese Benachrichtigung wird in Form einer anwendungsdefinierten Nachricht gesendet, die von der ABM \_ NEW-Nachricht festgelegt wird.
+title: ABN_FULLSCREENAPP (Shellapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: c67ec934-088c-43e0-bff4-900d76a456e5
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: d73a30c9f40fc494603afd4a6cbb990f81290c8c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 55bba51153ff90dfa69b870468a1c5002121eaccf45559821c6031aba35d4b98
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128476"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090790"
 ---
-# <a name="abn_fullscreenapp-message"></a>ABN \_ fullscreenapp-Nachricht
+# <a name="abn_fullscreenapp-message"></a>ABN \_ FULLSCREENAPP-Nachricht
 
-Benachrichtigt eine appbar, wenn eine Vollbildanwendung geöffnet oder geschlossen wird. Diese Benachrichtigung wird in Form einer von der Anwendung definierten Nachricht gesendet, die von der [**\_ neuen ABM**](abm-new.md) -Nachricht festgelegt wird.
+Benachrichtigt eine App-Leiste, wenn eine Vollbildanwendung geöffnet oder geschlossen wird. Diese Benachrichtigung wird in Form einer anwendungsdefinierten Nachricht gesendet, die von der [**ABM \_ NEW-Nachricht festgelegt**](abm-new.md) wird.
 
 
 ```C++
@@ -40,10 +40,10 @@ ABN_FULLSCREENAPP
 
 <dl> <dt>
 
-*fOpen* 
+*Fopen* 
 </dt> <dd>
 
-Ein Flag, das angibt, ob eine Vollbildanwendung geöffnet oder geschlossen wird. Dieser Parameter ist " **true** ", wenn die Anwendung geöffnet wird, oder " **false** ", wenn Sie geschlossen wird.
+Ein Flag, das an gibt, ob eine Vollbildanwendung geöffnet oder geschlossen wird. Dieser Parameter ist **TRUE,** wenn die Anwendung geöffnet wird, oder **FALSE,** wenn sie geschlossen wird.
 
 </dd> </dl>
 
@@ -51,19 +51,19 @@ Ein Flag, das angibt, ob eine Vollbildanwendung geöffnet oder geschlossen wird.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Vollbildanwendung geöffnet wird, muss eine appbar am Ende der z-Reihenfolge ablegen. Beim Schließen sollte die appbar die Position der z-Reihenfolge wiederherstellen.
+Wenn eine Vollbildanwendung geöffnet wird, muss eine App-Leiste unten in der Z-Reihenfolge angezeigt werden. Wenn sie geschlossen wird, sollte die App-Leiste ihre Position in der Z-Reihenfolge wiederherstellen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Shellapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shellapi.h</dt> </dl> |
 
 
 

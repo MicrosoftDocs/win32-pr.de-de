@@ -1,7 +1,7 @@
 ---
-description: Zeigt das Windows-Hilfe-und Support Center an. Diese Methode hat denselben Effekt wie das Klicken auf das Startmenü und das Auswählen von Hilfe und Support.
+description: Zeigt die Windows Hilfe- und Supportcenter an. Diese Methode hat die gleiche Auswirkung wie das Klicken auf die Startmenü und das Auswählen von Hilfe und Support.
 ms.assetid: fc13fef8-dac8-4c59-936d-8da0e63e06d4
-title: Shell. Help-Methode (Shldisp. h)
+title: Shell.Help-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: bfb4e9b3272355c41d13526d2e526515ff65d42b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3bd471f4252caaf33edfd5429160b6ff8a2b0bdd901507a7f2074dff95509e10
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104216066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968559"
 ---
-# <a name="shellhelp-method"></a>Shell. Help-Methode
+# <a name="shellhelp-method"></a>Shell.Help-Methode
 
-Zeigt das Windows-Hilfe-und Support Center an. Diese Methode hat denselben Effekt wie das Klicken auf das **Startmenü** und das Auswählen von **Hilfe und Support**.
+Zeigt die Windows Hilfe- und Supportcenter an. Diese Methode hat die gleiche Auswirkung wie das Klicken auf das **Startmenü** und das Auswählen von **Hilfe und Support.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,9 +57,9 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die verwendete **Hilfe** . Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **Die Hilfe** wird verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -75,7 +75,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -109,17 +109,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

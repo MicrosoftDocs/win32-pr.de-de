@@ -1,33 +1,33 @@
 ---
-description: Gibt die Anzahl der abgeschlossenen Codierungs Durchläufen an. Diese Eigenschaft gilt nur für die Multipass-Codierung.
+description: Gibt die Anzahl abgeschlossener Codierungsdurchläufe an. Diese Eigenschaft gilt nur für die Multipasscodierung.
 ms.assetid: 19286f26-96f1-429c-9d6a-5e9b98597cd2
-title: Avencstatucommoncompletedpass-Eigenschaft (codecapi. h)
+title: AVEncStatCommonCompletedPasses-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2927e501963d450cbc08106e7860dfbfd2d7d98a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: d5950a8f013dc697b0e8178e65610971776c0bd7bba233a58d164c05080f966f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106342947"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119275870"
 ---
-# <a name="avencstatcommoncompletedpasses-property"></a>Avencstatucommoncompletedpass (Eigenschaft)
+# <a name="avencstatcommoncompletedpasses-property"></a>AVEncStatCommonCompletedPasses-Eigenschaft
 
-Gibt die Anzahl der abgeschlossenen Codierungs Durchläufen an. Diese Eigenschaft gilt nur für die Multipass-Codierung.
+Gibt die Anzahl abgeschlossener Codierungsdurchläufe an. Diese Eigenschaft gilt nur für die Multipasscodierung.
 
 Diese Eigenschaft ist schreibgeschützt.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencstatus commoncompletedpass**
+**CODECAPI \_ AVEncStatCommonCompletedPasses**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Diese Eigenschaft verfügt über einen linearen Wertebereich. Um den unterstützten Bereich abzurufen, nennen Sie [**icodecapi:: getparameterrange**](/windows/desktop/api/Strmif/nf-strmif-icodecapi-getparameterrange).
+Diese Eigenschaft verfügt über einen linearen Wertebereich. Rufen Sie [**ICodecAPI::GetParameterRange**](/windows/desktop/api/Strmif/nf-strmif-icodecapi-getparameterrange)auf, um den unterstützten Bereich abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,20 +35,20 @@ Diese Eigenschaft verfügt über einen linearen Wertebereich. Um den unterstütz
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

@@ -1,31 +1,31 @@
 ---
-title: Benutzerdefinierte Datei-und streamhandlerfunktionen
-description: Benutzerdefinierte Datei-und streamhandlerfunktionen
+title: Benutzerdefinierte Datei- und Streamhandlerfunktionen
+description: Benutzerdefinierte Datei- und Streamhandlerfunktionen
 ms.assetid: cb1954a7-94dc-463e-bd74-b1a9b9e23bb2
 keywords:
-- Video für Windows (Vfw), benutzerdefinierte dateihandlerfunktionen
-- Video für Windows (Vfw), benutzerdefinierte streamhandlerfunktionen
-- Video für Windows (Vfw), dateihandlerfunktionen
-- Video für Windows (Vfw), streamhandlerfunktionen
-- VFW (Video für Windows), benutzerdefinierte dateihandlerfunktionen
-- VFW (Video für Windows), benutzerdefinierte streamhandlerfunktionen
-- VFW (Video für Windows), dateihandlerfunktionen
-- VFW (Video für Windows), streamhandlerfunktionen
+- Video für Windows (VFW), benutzerdefinierte Dateihandlerfunktionen
+- Video für Windows (VFW), benutzerdefinierte Streamhandlerfunktionen
+- Video für Windows (VFW), Dateihandlerfunktionen
+- Video für Windows (VFW), Streamhandlerfunktionen
+- VFW (Video für Windows),benutzerdefinierte Dateihandlerfunktionen
+- VFW (Video für Windows),benutzerdefinierte Streamhandlerfunktionen
+- VFW (Video für Windows),Dateihandlerfunktionen
+- VFW (Video für Windows),Streamhandlerfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c2ccac567c88412bf8b41cc18e072229f1b24cc8
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 81c84dc5562a807c2bc97355f2838a9d285547359e1c93e308f31d22c5c51e1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101546"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144593"
 ---
-# <a name="custom-file-and-stream-handler-functions"></a>Benutzerdefinierte Datei-und streamhandlerfunktionen
+# <a name="custom-file-and-stream-handler-functions"></a>Benutzerdefinierte Datei- und Streamhandlerfunktionen
 
-Die folgende Funktion wird mit benutzerdefinierten Datei-und streamhandlern verwendet.
+Die folgende Funktion wird mit benutzerdefinierten Datei- und Streamhandlern verwendet.
 
-[**DllGetClassObject**](/previous-versions//dd797891(v=vs.85))
+[**Dllgetclassobject**](/previous-versions//dd797891(v=vs.85))
 
- 
+ 
 
- 
+ 

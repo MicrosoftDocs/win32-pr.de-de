@@ -3,7 +3,7 @@ title: HasAudio
 description: Das HasAudio-Attribut ist ein Attribut auf Dateiebene, das angibt, ob die Datei Audiostreams enthält.
 ms.assetid: 104c9634-611b-4cd9-8493-cfdaddd49b72
 keywords:
-- HasAudio-Fenstermedienformat
+- HasAudio windows Media Format
 topic_type:
 - apiref
 api_name:

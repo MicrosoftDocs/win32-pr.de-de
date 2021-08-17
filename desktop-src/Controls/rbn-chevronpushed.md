@@ -3,7 +3,7 @@ title: RBN_CHEVRONPUSHED Benachrichtigungscode (Commctrl.h)
 description: Wird von einem Rebar-Steuerelement gesendet, wenn ein Chevron gepusht wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 58aa2c9d-8ab6-46ee-b32f-5c04fb7afa84
 keywords:
-- RBN_CHEVRONPUSHED Benachrichtigungscode Windows Controls
+- RBN_CHEVRONPUSHED Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:

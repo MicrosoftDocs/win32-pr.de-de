@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectVariable asrasterizer-Methode (D3dx11effect. h)
-description: Eine Raster-Variable erhalten.
+title: ID3DX11EffectVariable AsRasterizer-Methode (D3dx11effect.h)
+description: Hier erhalten Sie eine Rasterizervariable.
 ms.assetid: 6a55d067-f527-4a1b-a4d4-a6d1719aebe7
 keywords:
-- Asrasterizer-Methode Direct3D 11
-- Asrasterizer-Methode Direct3D 11, ID3DX11EffectVariable-Schnittstelle
-- ID3DX11EffectVariable-Schnittstelle Direct3D 11, asrasterizer-Methode
+- AsRasterizer-Methode Direct3D 11
+- AsRasterizer-Methode Direct3D 11, ID3DX11EffectVariable-Schnittstelle
+- ID3DX11EffectVariable-Schnittstelle Direct3D 11 , AsRasterizer-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2cbe4edc1b1195a9d449b37897f0875b1f35aae3
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: dfaf83debc6c7e73a89f78b0c8c3899cce2fb83fb6a5884fa5a5ed9ed5b35912
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104996323"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119858100"
 ---
-# <a name="id3dx11effectvariableasrasterizer-method"></a>ID3DX11EffectVariable:: asrasterizer-Methode
+# <a name="id3dx11effectvariableasrasterizer-method"></a>ID3DX11EffectVariable::AsRasterizer-Methode
 
-Eine Raster-Variable erhalten.
+Hier erhalten Sie eine Rasterizervariable.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,27 +45,27 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **ID3DX11EffectRasterizerVariable**](id3dx11effectrasterizervariable.md)\***
 
-Ein Zeiger auf eine Raster-Variable. Siehe [**ID3DX11EffectRasterizerVariable**](id3dx11effectrasterizervariable.md).
+Ein Zeiger auf eine Rasterizervariable. Siehe [**ID3DX11EffectRasterizerVariable**](id3dx11effectrasterizervariable.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Asrasterizer gibt eine Version der Effekt Variablen zurück, die auf eine Raster-Variable spezialisiert wurde. Ähnlich wie bei einer Umwandlung gibt diese Spezialisierung ein ungültiges Objekt zurück, wenn die Effekt Variable keine Raster-Daten enthält.
+AsRasterizer gibt eine Version der Effektvariablen zurück, die auf eine Rasterizervariable spezialisiert wurde. Ähnlich wie bei einer Typisierung gibt diese Spezialisierung ein ungültiges Objekt zurück, wenn die Effect-Variable keine Rasterizerdaten enthält.
 
-Anwendungen können das zurückgegebene Objekt auf Gültigkeit testen, indem Sie [**IsValid**](id3dx11effectvariable-isvalid.md)aufrufen.
+Anwendungen können das zurückgegebene Objekt auf Gültigkeit testen, indem sie [**IsValid aufrufen.**](id3dx11effectvariable-isvalid.md)
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 

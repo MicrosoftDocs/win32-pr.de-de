@@ -1,5 +1,5 @@
 ---
-description: Die FixMediaTimes2-Methode rundet die angegebenen Zeitwerte auf die nächste Framegrenze, wie durch die Ausgabebildrate definiert. Diese Methode entspricht IAMTimelineSrc::FixMediaTimes, verwendet jedoch REFTIME-Werte.
+description: Die FixMediaTimes2-Methode rundet die angegebenen Zeitwerte auf die nächste Framegrenze, wie durch die Ausgabebildrate definiert. Diese Methode entspricht IAMTimelineSrc::FixMediaTimes, nimmt jedoch REFTIME-Werte an.
 ms.assetid: c51172ea-b5d7-4a2e-ace2-85e6e671c1e9
 title: IAMTimelineSrc::FixMediaTimes2-Methode (Qedit.h)
 ms.topic: reference
@@ -24,11 +24,11 @@ ms.locfileid: "118399620"
 # <a name="iamtimelinesrcfixmediatimes2-method"></a>IAMTimelineSrc::FixMediaTimes2-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die `FixMediaTimes2` -Methode rundet die angegebenen Zeitwerte auf die nächste Framegrenze, wie durch die Ausgabebildrate definiert. Diese Methode entspricht [**IAMTimelineSrc::FixMediaTimes,**](iamtimelinesrc-fixmediatimes.md)verwendet jedoch [**REFTIME-Werte.**](reftime.md)
+Die -Methode rundet die angegebenen Zeitwerte auf die nächste Framegrenze, wie durch `FixMediaTimes2` die Ausgabebildrate definiert. Diese Methode entspricht [**IAMTimelineSrc::FixMediaTimes,**](iamtimelinesrc-fixmediatimes.md)nimmt jedoch [**REFTIME-Werte**](reftime.md) an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,23 +56,23 @@ Zeiger auf eine Variable, die die Startzeit in Sekunden enthält. Wenn der Aufru
 *Pstop* 
 </dt> <dd>
 
-Zeiger auf eine Variable, die die Beendigungszeit in Sekunden enthält. Wenn der Aufruf erfolgreich ist, wird diese Variable auf die gerundete Zeit festgelegt.
+Zeiger auf eine Variable, die die Stoppzeit in Sekunden enthält. Wenn der Aufruf erfolgreich ist, wird diese Variable auf die gerundete Zeit festgelegt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK-Update für Windows Vista und [.NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 

@@ -1,6 +1,6 @@
 ---
-title: Nicht unterstützte Benutzeroberfläche Elements
-description: Microsoft Active Accessibility die in der folgenden Tabelle aufgeführten allgemeinen Steuerelemente nicht unterstützt.
+title: Nicht unterstützte Benutzeroberfläche-Elemente
+description: Microsoft Active Accessibility unterstützt die in der folgenden Tabelle aufgeführten allgemeinen Steuerelemente nicht.
 ms.assetid: 3c6a46e2-fa21-4d78-adab-6db331af0513
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,17 +11,17 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118563889"
 ---
-# <a name="unsupported-user-interface-elements"></a>Nicht unterstützte Benutzeroberfläche Elements
+# <a name="unsupported-user-interface-elements"></a>Nicht unterstützte Benutzeroberfläche-Elemente
 
-Microsoft Active Accessibility die in der folgenden Tabelle aufgeführten allgemeinen Steuerelemente nicht unterstützt.
+Microsoft Active Accessibility unterstützt die in der folgenden Tabelle aufgeführten allgemeinen Steuerelemente nicht.
 
 
 
 | Steuerelementname                  | Name der Fensterklasse   |
 |-------------------------------|---------------------|
-| Datums- und Uhrzeitauswahl-Steuerelemente | DATETIMEPICK-KLASSE \_ |
-| Pager-Steuerelemente                | WC \_ PAGESCROLLER    |
-| Rebar-Steuerelemente                | REBARCLASSNAME      |
+| Steuerelemente für die Datums- und Uhrzeitauswahl | \_DATETIMEPICK-KLASSE |
+| Pagersteuerelemente                | WC \_ PAGESCROLLER    |
+| Neuleistensteuerelemente                | REBARCLASSNAME      |
 
 
 

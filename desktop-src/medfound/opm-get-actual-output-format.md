@@ -1,17 +1,17 @@
 ---
 description: Gibt eine Beschreibung des Videosignals zurück, das über den Connector übertragen wird.
 ms.assetid: 8464470f-49db-4559-80b2-02cfc473e30e
-title: OPM_GET_ACTUAL_OUTPUT_FORMAT (opmapi. h)
+title: OPM_GET_ACTUAL_OUTPUT_FORMAT (Opmapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 12eeca9bcf8fde670447afe4268a86ffa31b6a94
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a37f35e9f3d64bd1a72bb6800011978ea1cf2f4c60f523a344594f949beb4f81
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119102074"
 ---
-# <a name="opm_get_actual_output_format"></a>OPM \_ get \_ tatsächliches \_ Ausgabe \_ Format
+# <a name="opm_get_actual_output_format"></a>OPM \_ GET \_ ACTUAL \_ OUTPUT \_ FORMAT
 
 Gibt eine Beschreibung des Videosignals zurück, das über den Connector übertragen wird.
 
@@ -19,19 +19,19 @@ Gibt eine Beschreibung des Videosignals zurück, das über den Connector übertr
 
 | Anforderung | Wert |
 |--------------|------------------------------------------------------------------------------|
-| Anforderungs-GUID | OPM \_ get \_ tatsächliches \_ Ausgabe \_ Format                                             |
+| Anforderungs-GUID | OPM \_ GET \_ ACTUAL \_ OUTPUT \_ FORMAT                                             |
 | Eingabedaten   | Keine                                                                         |
-| Daten zurückgeben  | Eine [**tatsächliche OPM- \_ \_ Ausgabe \_ Format**](/windows/desktop/api/opmapi/ns-opmapi-opm_actual_output_format) Struktur |
+| Daten zurückgeben  | Eine [**OPM \_ ACTUAL OUTPUT \_ \_ FORMAT-Struktur**](/windows/desktop/api/opmapi/ns-opmapi-opm_actual_output_format) |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das über den Connector übertragene Videosignal weist nicht notwendigerweise dasselbe Format wie der Desktop Anzeigemodus auf. Beispielsweise kann der Desktop Anzeigemodus 1024 x 768 Pixel bei 85 Hz sein, während der Connector ein S-Video-Connector sein kann, der ein Videosignal mit 720 x 480 Pixel, 60/1.01 Hz-Zeilen Sprung überträgt. In diesem Fall würde der Treiber die Auflösung des S-Video Signals und nicht die Desktop Auflösung zurückgeben.
+Das Videosignal, das über den Connector übertragen wird, hat nicht unbedingt das gleiche Format wie der Desktopanzeigemodus. Der Desktopanzeigemodus kann beispielsweise 1.024 x 768 Pixel bei 85 Hz betragen, während der Connector ein S-Video-Connector sein kann, der ein Videosignal mit 720 x 480 Pixeln und 60/1,01 Hz-Interlacing überträgt. In diesem Fall gibt der Treiber die Auflösung des S-Video-Signals zurück, nicht die Desktopauflösung.
 
-Diese Abfrage entspricht der DXVA- \_ Abfrage "coppquerydisplaydata", die im Certified Output Protection Protocol (COPP) verwendet wird.
+Diese Abfrage entspricht der \_ DXVA-Abfrage COPPQueryDisplayData, die im Certified Output Protection Protocol (COPP) verwendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,23 +39,23 @@ Diese Abfrage entspricht der DXVA- \_ Abfrage "coppquerydisplaydata", die im Cer
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Opmapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Opmapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IOPMVideoOutput:: COPPCompatibleGetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-coppcompatiblegetinformation)
+[**IOPMVideoOutput::COPPCompatibleGetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-coppcompatiblegetinformation)
 </dt> <dt>
 
-[**IOPMVideoOutput:: GetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-getinformation)
+[**IOPMVideoOutput::GetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-getinformation)
 </dt> <dt>
 
-[OPM-Status Anforderungen](opm-status-requests.md)
+[OPM-Statusanforderungen](opm-status-requests.md)
 </dt> </dl>
 
  

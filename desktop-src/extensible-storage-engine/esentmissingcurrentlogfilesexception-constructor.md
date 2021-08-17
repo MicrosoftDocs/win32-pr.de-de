@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentmissingcurrentlogfilesexception-Konstruktor'
-title: Esentmissingcurrentlogfilesexception-Konstruktor
+description: 'Weitere Informationen zu: EsentMissingCurrentLogFilesException-Konstruktor'
+title: EsentMissingCurrentLogFilesException-Konstruktor
 TOCTitle: 'EsentMissingCurrentLogFilesException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentMissingCurrentLogFilesException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentmissingcurrentlogfilesexception.esentmissingcurrentlogfilesexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: fa6a73ee855d15080e5a1e8ea249f24207d3e317
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7d2c774aeeed6f00e8c4294c7cd6d3b1693e03aef9b4ad0b96e11a459bc6ad12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119115570"
 ---
-# <a name="esentmissingcurrentlogfilesexception-constructor"></a>Esentmissingcurrentlogfilesexception-Konstruktor
+# <a name="esentmissingcurrentlogfilesexception-constructor"></a>EsentMissingCurrentLogFilesException-Konstruktor
 
-Initialisiert eine neue Instanz der esentmissingcurrentlogfilesexception-Klasse.
+Initialisiert eine neue Instanz der EsentMissingCurrentLogFilesException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentMissingCurrentLogFilesException()
 public EsentMissingCurrentLogFilesException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentmissingcurrentlogfilesexception-Klasse](./esentmissingcurrentlogfilesexception-class.md)
+[EsentMissingCurrentLogFilesException-Klasse](./esentmissingcurrentlogfilesexception-class.md)
 
-[Esentmissingcurrentlogfilesexception-Elemente](./esentmissingcurrentlogfilesexception-members.md)
+[EsentMissingCurrentLogFilesException-Member](./esentmissingcurrentlogfilesexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

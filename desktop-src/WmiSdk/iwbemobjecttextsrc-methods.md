@@ -1,20 +1,20 @@
 ---
-description: Die iwbemubjecttexzrc-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IWbemObjectTextSrc-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: B998252F-050A-49E3-AB56-B3B9F22122FC
 ms.tgt_platform: multiple
-title: Iwbemubjecttexzrc-Methoden
+title: IWbemObjectTextSrc-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea8cdbb75f5b36658fddcb3f85e958943e8b3f8d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e23aa196ddde71b4cc11e420aa083af74eefeb700e89f95861de40ff698db209
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218654"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118993000"
 ---
-# <a name="iwbemobjecttextsrc-methods"></a>Iwbemubjecttexzrc-Methoden
+# <a name="iwbemobjecttextsrc-methods"></a>IWbemObjectTextSrc-Methoden
 
-Die [**iwbemubjecttexzrc**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjecttextsrc) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IWbemObjectTextSrc-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemobjecttextsrc) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

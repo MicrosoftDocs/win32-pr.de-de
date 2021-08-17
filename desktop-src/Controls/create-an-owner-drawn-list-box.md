@@ -15,9 +15,9 @@ ms.locfileid: "118413198"
 
 In diesem Thema wird veranschaulicht, wie ein vom Besitzer gezeichnetes Listenfeld implementiert wird.
 
-Im C++-Codebeispiel in diesem Thema wird veranschaulicht, wie ein Listenfeld gezeichnet wird, das fünf vom Besitzer gezeichnete Elemente enthält: vier Zeichnungs implementiert und einen Fork. Jedes Listenelement wird als Bitmap gefolgt vom Namen des Objekts angezeigt. Über eine Schaltfläche wird der Benutzer aufgefordert, ein Element auszuwählen, das nicht mit dem anderen Element aussieht. Wenn Sie die Schaltfläche mit dem ausgewählten Fork auswählen, wird die Meldung "You're right!" angezeigt. und schließt das Dialogfeld. Wenn Sie die Schaltfläche mit einem anderen ausgewählten Listenelement auswählen, wird die Meldung "Try again!" (Wiederholen Sie den Vorgang) angezeigt. Vorgang nicht gefunden werden konnte.
+Das C++-Codebeispiel in diesem Thema zeigt, wie ein Listenfeld gezeichnet wird, das fünf vom Besitzer gezeichnete Elemente enthält: vier Zeichnungs implementiert und eine Verzweigung. Jedes Listenelement wird als Bitmap gefolgt vom Namen des Objekts angezeigt. Über eine Schaltfläche wird der Benutzer aufgefordert, ein Element auszuwählen, das nicht den anderen entspricht. Wenn Sie die Schaltfläche mit der ausgewählten Verzweigung auswählen, wird "You're right!" angezeigt. wird angezeigt, und das Dialogfeld wird geschlossen. Wenn Sie die Schaltfläche mit einem beliebigen anderen ausgewählten Listenelement auswählen, wird "Try again!" angezeigt. Vorgang nicht gefunden werden konnte.
 
-Das Listenfeld enthält zusätzlich zu den standardmäßigen Listenfeldstilen die Formate [**LBS \_ OWNERDRAWFIXED**](list-box-styles.md) und [**LBS \_ HASSTRINGS.**](list-box-styles.md)
+Das Listenfeld enthält zusätzlich zu den Standardlistenfeldstilen die Formate [**LBS \_ OWNERDRAWFIXED**](list-box-styles.md) und [**\_ LBS HASSTRINGS.**](list-box-styles.md)
 
 ## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
@@ -28,14 +28,14 @@ Das Listenfeld enthält zusätzlich zu den standardmäßigen Listenfeldstilen di
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Windows Benutzeroberfläche Programmierung
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
 Um ein vom Besitzer gezeichnetes Listenfeld zu initialisieren, muss Ihre Anwendung die Textzeichenfolge und die zugeordnete Bitmap für jedes Listenfeldelement laden.
 
-Im folgenden C++-Codebeispiel initialisiert die Dialogfeldprozedur das Listenfeld **IDC \_ LIST \_ STUFF,** indem die [**LB \_ ADDSTRING-Nachricht**](lb-addstring.md) zum Festlegen des Texts gesendet wird, und sendet dann die [**LB \_ SETITEMDATA-Nachricht,**](lb-setitemdata.md) um jedem Listenfeldelement eine Bitmap zu zuordnen. Der Code legt auch die Höhe jedes Listenfeldelements fest, indem die [**WM \_ MEASUREITEM-Nachricht**](wm-measureitem.md) verarbeitet wird, und zeichnet den Text und die Bitmap für jedes Element, indem die [**WM \_ DRAWITEM-Nachricht verarbeitet**](wm-drawitem.md) wird.
+Im folgenden C++-Codebeispiel initialisiert die Dialogfeldprozedur das Listenfeld **IDC \_ LIST \_ STUFF,** indem die [**LB \_ ADDSTRING-Nachricht**](lb-addstring.md) gesendet wird, um den Text festzulegen, und sendet dann die [**LB \_ SETITEMDATA-Nachricht,**](lb-setitemdata.md) um jedem Listenfeldelement eine Bitmap zuzuordnen. Der Code legt auch die Höhe jedes Listenfeldelements fest, indem die [**WM \_ MEASUREITEM-Nachricht**](wm-measureitem.md) verarbeitet wird, und zeichnet den Text und die Bitmap für jedes Element, indem die [**WM \_ DRAWITEM-Nachricht**](wm-drawitem.md) verarbeitet wird.
 
 
 

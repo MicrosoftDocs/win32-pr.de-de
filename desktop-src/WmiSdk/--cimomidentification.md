@@ -18,18 +18,18 @@ api_type:
 - Schema
 api_location:
 - Root
-ms.openlocfilehash: a8590a2a83cdbc9bd06575cf17ddbe65138a4a31
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 50d81fb8cfc5580ad0868df307771c493c0919e1bf2ce4de4b67d48db034a0d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349939"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118321110"
 ---
-# <a name="__cimomidentification-class"></a>\_\_Cimumidentificlass
+# <a name="__cimomidentification-class"></a>\_\_CIMOMIdentification-Klasse
 
-Die " **\_ \_ cimumidentifisystem** "-Klasse beschreibt die lokale Installation von WMI. Dies ist eine Singleton-Klasse. Es gibt nur eine Instanz. Die **\_ \_ cimumidentificlass** ist nur in den **\\ Standard** Namespaces **root** und Root verfügbar. Benutzer Fragen die-Instanz ab, um Informationen zur WMI-Installation zu erhalten.
+Die **\_ \_ CIMOMIdentification-Systemklasse** beschreibt die lokale Installation von WMI. Dies ist eine Singletonklasse. es gibt nur eine -Instanz. Die **\_ \_ CIMOMIdentification-Klasse** ist nur in den **Namespaces Root** und **Root \\ Default** verfügbar. Benutzer fragen die Instanz ab, um Informationen zur WMI-Installation zu erhalten.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,20 +46,20 @@ class __CIMOMIdentification : __SystemClass
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ cimumidentifizierungsklasse** verfügt über diese Typen von Membern:
+Die **\_ \_ CIMOMIdentification-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ cimumidentificlass** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ CIMOMIdentification-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Setupdatetime**
+**SetupDateTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -67,48 +67,48 @@ Zugriffstyp: Schreibgeschützt
 
 Datum und Uhrzeit der Installation. Diese Eigenschaft ist leer, nachdem das Betriebssystem zum ersten Mal installiert wurde.
 
-Wenn das WMI-Repository gelöscht und dann erneut erstellt wurde, enthält diese Eigenschaft das Datum und die Uhrzeit der erneuten Erstellung des Repository.
+Wenn das WMI-Repository gelöscht und dann erneut erstellt wurde, enthält diese Eigenschaft das Datum und die Uhrzeit der erneuten Erstellung des Repositorys.
 
 </dd> <dt>
 
-**Versioncurrentlyrunning**
+**VersionCurrentlyRunning**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Version des eigentlichen Bilds an, das den WMI-Dienst enthält, der das Common Information Model (CIM)-Repository erstellt hat. Da sich das Repository-Format zwischen den Versionen von WMI ändern kann, ermöglicht diese Eigenschaft zukünftigen WMI-Upgrades, zu bestimmen, ob die Datenbank aktualisiert werden muss. Das Format lautet:
+Gibt die Version des eigentlichen Images an, das den WMI-Dienst enthält, der das Common Information Model (CIM)-Repository erstellt hat. Da sich das Repositoryformat zwischen WMI-Versionen ändern kann, ermöglicht diese Eigenschaft zukünftigen WMI-Upgrades zu bestimmen, ob die Datenbank aktualisiert werden muss. Das Format lautet:
 
 "1.00.183.0000"
 
-Wenn die erste Ziffer die Hauptversion ist, sind die nächsten zwei Ziffern neben Versionen, und die nächsten drei Ziffern sind die Buildnummer. Die verbleibenden Ziffern werden nicht verwendet.
+Dabei ist die erste Ziffer die Hauptversion, die nächsten beiden Ziffern sind Nebenversionen, und die nächsten drei Ziffern sind die Buildnummer. Die übrigen Ziffern werden nicht verwendet.
 
 </dd> <dt>
 
-**Versionusedtykreatedb**
+**VersionUsedToCreateDB**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Version des eigentlichen Bilds an, das den WMI-Dienst enthält, der das CIM-Repository erstellt hat. Da sich das Repository-Format zwischen den Versionen von WMI ändern kann, ermöglicht diese Eigenschaft zukünftigen WMI-Upgrades, zu bestimmen, ob die Datenbank aktualisiert werden muss. Das Format lautet:
+Gibt die Version des tatsächlichen Images an, das den WMI-Dienst enthält, der das CIM-Repository erstellt hat. Da sich das Repositoryformat zwischen WMI-Versionen ändern kann, ermöglicht diese Eigenschaft zukünftigen WMI-Upgrades zu bestimmen, ob die Datenbank aktualisiert werden muss. Das Format lautet:
 
 "1.00.183.0000"
 
-Wenn die erste Ziffer die Hauptversion ist, sind die nächsten zwei Ziffern neben Versionen, und die nächsten drei Ziffern sind die Buildnummer. Die verbleibenden Ziffern werden nicht verwendet.
+Dabei ist die erste Ziffer die Hauptversion, die nächsten beiden Ziffern sind Nebenversionen, und die nächsten drei Ziffern sind die Buildnummer. Die übrigen Ziffern werden nicht verwendet.
 
 </dd> <dt>
 
 **WorkingDirectory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -118,13 +118,13 @@ Installationsverzeichnis.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ cimumidentificlass** wird von [**\_ \_ systemclass**](--systemclass.md)abgeleitet, die keine Eigenschaften hat.
+Die **\_ \_ CIMOMIdentification-Klasse** wird von [**\_ \_ SystemClass abgeleitet,**](--systemclass.md)die über keine Eigenschaften verfügt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Codebeispiel wird beschrieben, wie die Identifikationsinformationen des CIM-Objektmodells angezeigt und aus dem Beispiel Verzeichnis unter \\ \\ Programme \\ Microsoft sdert \\ Windows \\ v 7.0 \\ Samples \\ sysmgmt \\ WMI \\ Scripting verwendet werden.
+Im folgenden VBScript-Codebeispiel wird beschrieben, wie Cim-Objektmodellidentifikationsinformationen angezeigt werden. Es wurde aus dem Beispielverzeichnis unter Program \\ \\ Files Microsoft \\ SDKs Windows \\ \\ v7.0 \\ Samples \\ sysmgmt wmi scripting( Sysmgmt \\ wmi \\ scripting) entnommen.
 
 
 ```VB
@@ -141,7 +141,7 @@ end if
 
 
 
-Im folgenden perl-Codebeispiel wird beschrieben, wie die Identifikationsinformationen des CIM-Objektmodells angezeigt und aus dem Beispiel Verzeichnis unter \\ \\ Programme \\ Microsoft sdert \\ Windows \\ v 7.0 \\ Samples \\ sysmgmt \\ WMI \\ Scripting verwendet werden.
+Im folgenden Perl-Codebeispiel wird beschrieben, wie Cim-Objektmodellidentifikationsinformationen angezeigt werden. Es wurde aus dem Beispielverzeichnis unter Program \\ \\ Files Microsoft \\ SDKs Windows \\ \\ v7.0 \\ Samples \\ sysmgmt wmi scripting (Sysmgmt \\ wmi-Skripterstellung für Programme microsoft SDKs Windows v7.0-Beispiele) \\ entnommen.
 
 
 ```Perl
@@ -178,14 +178,14 @@ else
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_\_System Class**](/windows/desktop/WmiSdk/--systemclass)
+[**\_\_SystemClass**](/windows/desktop/WmiSdk/--systemclass)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

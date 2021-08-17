@@ -1,43 +1,43 @@
 ---
-description: Eine Anwendung kann Schriftart Metriken nur für eine physische Schriftart abrufen, nachdem die Schriftart in einem Gerätekontext ausgewählt wurde.
+description: Eine Anwendung kann Schriftartmetriken für eine physische Schriftart nur abrufen, nachdem die Schriftart in einem Gerätekontext ausgewählt wurde.
 ms.assetid: 3eaabc8b-e244-4b65-918b-a20043afa535
-title: Geräte im Vergleich zu Entwurfs Einheiten
+title: Geräte- und Entwurfseinheiten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9fb52a671727a2fa84d5514b469be5bd320f3318
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 456ac0ed7ad02ced5390201000fbc76217b8c579116bf36b356b13880d5d0158
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119354410"
 ---
-# <a name="device-vs-design-units"></a>Geräte im Vergleich zu Entwurfs Einheiten
+# <a name="device-vs-design-units"></a>Geräte- und Entwurfseinheiten
 
-Eine Anwendung kann Schriftart Metriken nur für eine physische Schriftart abrufen, nachdem die Schriftart in einem Gerätekontext ausgewählt wurde. Wenn eine Schriftart in einen Gerätekontext ausgewählt wird, wird Sie für das Gerät skaliert. Die für das Gerät spezifischen Schriftart Metriken werden als Geräte Einheiten bezeichnet.
+Eine Anwendung kann Schriftartmetriken für eine physische Schriftart nur abrufen, nachdem die Schriftart in einem Gerätekontext ausgewählt wurde. Wenn eine Schriftart in einem Gerätekontext ausgewählt wird, wird sie für das Gerät skaliert. Die für das Gerät spezifischen Schriftartmetriken werden als Geräteeinheiten bezeichnet.
 
-Portable Metriken in Schriftarten werden als Entwurfs Einheiten bezeichnet. Entwurfs Einheiten müssen in Geräte Einheiten konvertiert werden, damit Sie auf ein bestimmtes Gerät angewendet werden können. Verwenden Sie die folgende Formel, um Entwurfs Einheiten in Geräte Einheiten zu konvertieren.
+Portable Metriken in Schriftarten werden als Entwurfseinheiten bezeichnet. Um auf ein angegebenes Gerät angewendet zu werden, müssen Entwurfseinheiten in Geräteeinheiten konvertiert werden. Verwenden Sie die folgende Formel, um Entwurfseinheiten in Geräteeinheiten zu konvertieren.
 
-*Deviceunits* = (*designunits* / *unitsperem*) \* (*pointsize*/72) \* *deviceresolution*
+*DeviceUnits* = (*DesignUnits* / *unitsPerEm*) \* (*PointSize*/72) \* *DeviceResolution*
 
-Die Variablen in dieser Formel haben folgende Bedeutungen.
+Die Variablen in dieser Formel haben die folgende Bedeutung.
 
 
 
 | Variable           | BESCHREIBUNG                                                                                                                                                                |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Deviceunits*      | Gibt die in Geräte Einheiten konvertierte Schriftart Metrik " *designunits* " an. Dieser Wert befindet sich in den gleichen Einheiten wie der für *deviceresolution* angegebene Wert.                          |
-| *Design Units*      | Gibt die Schriftart Metrik an, die in Geräte Einheiten konvertiert werden soll. Bei diesem Wert kann es sich um eine beliebige Schriftart Metrik handeln, einschließlich der Breite eines Zeichens oder des aufsteigenden Werts für eine ganze Schriftart. |
-| *unitsperem*       | Gibt die EM-Quadrat Größe für die Schriftart an.                                                                                                                                 |
-| *PointSize*        | Gibt die Schriftgröße in Punkt an. (Ein Punkt ist gleich 1/72 Zoll.)                                                                                                 |
-| *Deviceresolution* | Gibt die Anzahl der Geräte Einheiten (Pixel) pro Zoll an. Typische Werte können 300 für einen Laserdrucker oder 96 für einen VGA-Bildschirm sein.                                                |
+| *DeviceUnits*      | Gibt die in Geräteeinheiten konvertierte *Schriftartmetrik DesignUnits* an. Dieser Wert befindet sich in den gleichen Einheiten wie der für *DeviceResolution* angegebene Wert.                          |
+| *DesignUnits*      | Gibt die Schriftartmetrik an, die in Geräteeinheiten konvertiert werden soll. Dieser Wert kann eine beliebige Schriftartmetrik sein, einschließlich der Breite eines Zeichens oder des aufsteigenden Werts für eine ganze Schriftart. |
+| *unitsPerEm*       | Gibt die Quadratgröße em für die Schriftart an.                                                                                                                                 |
+| *PointSize*        | Gibt den Schriftgrad in Punkten an. (Ein Punkt entspricht 1/72 Zoll.)                                                                                                 |
+| *DeviceResolution* | Gibt die Anzahl der Geräteeinheiten (Pixel) pro Zoll an. Typische Werte können 300 für einen Drucker oder 96 für einen VGA-Bildschirm sein.                                                |
 
 
 
  
 
-Diese Formel sollte nicht verwendet werden, um Geräte Einheiten zurück in Entwurfs Einheiten zu konvertieren. Geräte Einheiten werden immer auf das nächste Pixel gerundet. Der weitergaberoundfehler kann sehr groß werden, insbesondere dann, wenn eine Anwendung mit Bildschirmgrößen arbeitet.
+Diese Formel sollte nicht verwendet werden, um Geräteeinheiten zurück in Entwurfseinheiten zu konvertieren. Geräteeinheiten werden immer auf das nächste Pixel gerundet. Der weitergegebene Round-Off-Fehler kann sehr groß werden, insbesondere wenn eine Anwendung mit Bildschirmgrößen arbeitet.
 
-Um Entwurfs Einheiten anzufordern, erstellen Sie eine logische Schriftart, deren Höhe als *unitsperem* angegeben wird. Anwendungen können den Wert für *unitsperem* abrufen, indem Sie die Funktion " [**EnumFontFamilies**](/windows/desktop/api/Wingdi/nf-wingdi-enumfontfamiliesa) " aufrufen und den **ntmsizeem** -Member der [**newtextmetric**](/windows/win32/api/wingdi/ns-wingdi-newtextmetrica) -Struktur überprüfen.
+Um Entwurfseinheiten anzufordern, erstellen Sie eine logische Schriftart, deren Höhe als *unitsPerEm* angegeben ist. Anwendungen können den Wert für *unitsPerEm abrufen,* indem sie die [**EnumFontFamilies-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-enumfontfamiliesa) aufrufen und den **ntmSizeEM-Member** der [**NEWTEXTMETRIC-Struktur**](/windows/win32/api/wingdi/ns-wingdi-newtextmetrica) überprüfen.
 
  
 

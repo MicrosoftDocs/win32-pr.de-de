@@ -1,5 +1,5 @@
 ---
-description: 'Es gibt zwei Phasen für einen erfolgreichen Installationsvorgang: Erwerb und Ausführung. Wenn die Installation nicht erfolgreich ist, kann eine Rollbackphase auftreten.'
+description: 'Es gibt zwei Phasen für einen erfolgreichen Installationsprozess: Erwerb und Ausführung. Wenn die Installation nicht erfolgreich ist, kann eine Rollbackphase auftreten.'
 ms.assetid: e9cda321-6978-4f9f-aff4-ccf609c88667
 title: Installationsmechanismus
 ms.topic: article
@@ -13,11 +13,11 @@ ms.locfileid: "118634218"
 ---
 # <a name="installation-mechanism"></a>Installationsmechanismus
 
-Es gibt zwei Phasen für einen erfolgreichen Installationsvorgang: Erwerb und Ausführung. Wenn die Installation nicht erfolgreich ist, kann eine Rollbackphase auftreten.
+Es gibt zwei Phasen für einen erfolgreichen Installationsprozess: Erwerb und Ausführung. Wenn die Installation nicht erfolgreich ist, kann eine Rollbackphase auftreten.
 
 ## <a name="acquisition"></a>Erwerb
 
-Zu Beginn der Erwerbsphase weist eine Anwendung oder ein Benutzer das Installationsprogramm an, ein Feature oder eine Anwendung zu installieren. Das Installationsprogramm durchschreitet dann die Aktionen, die in den Sequenztabellen der Installationsdatenbank angegeben sind. Diese Aktionen fragen die Installationsdatenbank ab und generieren ein Skript, das eine schritt-für-Schritt-Anleitung zum Ausführen der Installation enthält.
+Zu Beginn der Erwerbsphase weist eine Anwendung oder ein Benutzer das Installationsprogramm an, ein Feature oder eine Anwendung zu installieren. Das Installationsprogramm durchschreitet dann die aktionen, die in den Sequenztabellen der Installationsdatenbank angegeben sind. Diese Aktionen fragen die Installationsdatenbank ab und generieren ein Skript, das eine schrittweise Vorgehensweise zum Ausführen der Installation enthält.
 
 ## <a name="execution"></a>Ausführung
 
@@ -25,7 +25,7 @@ Während der Ausführungsphase übergibt das Installationsprogramm die Informati
 
 ## <a name="rollback"></a>Rollback
 
-Wenn eine Installation nicht erfolgreich ist, stellt das Installationsprogramm den ursprünglichen Zustand des Computers wieder auf. Wenn das Installationsprogramm das Installationsskript verarbeitet, wird gleichzeitig ein Rollbackskript generiert. Zusätzlich zum Rollbackskript speichert das Installationsprogramm eine Kopie jeder Datei, die während der Installation gelöscht wird. Diese Dateien werden in einem verborgenen Systemverzeichnis gespeichert. Nach Abschluss der Installation werden das Rollbackskript und die gespeicherten Dateien gelöscht. Weitere Informationen finden Sie unter [Rollbackinstallation](rollback-installation.md).
+Wenn eine Installation nicht erfolgreich ist, stellt das Installationsprogramm den ursprünglichen Zustand des Computers wieder her. Wenn das Installationsprogramm das Installationsskript verarbeitet, wird gleichzeitig ein Rollbackskript generiert. Zusätzlich zum Rollbackskript speichert das Installationsprogramm eine Kopie jeder Datei, die während der Installation gelöscht wird. Diese Dateien werden in einem ausgeblendeten Systemverzeichnis gespeichert. Nach Abschluss der Installation werden das Rollbackskript und die gespeicherten Dateien gelöscht. Weitere Informationen finden Sie unter [Rollbackinstallation.](rollback-installation.md)
 
  
 

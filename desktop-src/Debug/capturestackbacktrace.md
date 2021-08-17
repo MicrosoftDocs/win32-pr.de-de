@@ -1,7 +1,7 @@
 ---
 UID: ''
-title: Capturestackbacktrace-Funktion
-description: Erfasst eine Stapel Rückverfolgung, indem der Stapel nach oben durchlaufen wird.
+title: CaptureStackBackTrace-Funktion
+description: Erfasst eine Stapelrückverfolgung, indem der Stapel nach oben geleitet wird.
 old-location: ''
 ms.assetid: na
 ms.date: 04/10/2019
@@ -34,18 +34,18 @@ api_name:
 targetos: Windows
 req.typenames: ''
 req.redist: ''
-ms.openlocfilehash: 3c9edc9184000d513b82ad4131e3ac05c2ed22d6
-ms.sourcegitcommit: 1f6a1bfc1c4bb2641bc3ba44beb1f2727c94681b
+ms.openlocfilehash: 0b6cad22d7a52908c3aa02bef7e23a57899e421f87bda00660519750de742919
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "106341286"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119279501"
 ---
-# <a name="capturestackbacktrace-function"></a>Capturestackbacktrace-Funktion
+# <a name="capturestackbacktrace-function"></a>CaptureStackBackTrace-Funktion
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Erfasst eine Stapel Rückverfolgung, indem der Stapel nach oben durchlaufen und die Informationen für die einzelnen Frames aufgezeichnet werden.
+Erfasst eine Stapelrückverfolgung, indem der Stapel hochläuft und die Informationen für jeden Frame aufgezeichnet werden.
 
 ```cpp
 USHORT WINAPI CaptureStackBackTrace(
@@ -58,36 +58,36 @@ USHORT WINAPI CaptureStackBackTrace(
 
 ## <a name="parameters"></a>Parameter
 
-### <a name="framestoskip-in"></a>Framestoskip [in]
+### <a name="framestoskip-in"></a>FramesToSkip [in]
 
-Die Anzahl der Rahmen, die vom Anfang der Rückverfolgung ausgelassen werden sollen.
+Die Anzahl der Frames, die ab dem Anfang der Rückverfolgung übersprungen werden sollen.
 
-### <a name="framestocapture-in"></a>Framestocapture [in]
+### <a name="framestocapture-in"></a>FramesToCapture [in]
 
 Die Anzahl der zu erfassenden Frames.
-Sie können bis zu **maxushort** -Frames erfassen.
+Sie können bis zu **MAXUSHORT-Frames** erfassen.
 
-**Windows Server 2003 und Windows XP:**  Die Summe der Parameter " *framestoskip* " und " *framestocapture* " muss kleiner als 63 sein.
+**Windows Server 2003 und Windows XP:**  Die Summe der *FramesToSkip-* und *FramesToCapture-Parameter* muss kleiner als 63 sein.
 
-### <a name="backtrace-out"></a>Rückverfolgung [out]
+### <a name="backtrace-out"></a>BackTrace [out]
 
-Ein Array von Zeigern, die von der aktuellen Stapel Überwachung aufgezeichnet wurden.
+Ein Array von Zeigern, die aus der aktuellen Stapelüberwachung erfasst werden.
 
-### <a name="backtracehash-out-optional"></a>Backtracehash [out, optional]
+### <a name="backtracehash-out-optional"></a>BackTraceHash [out, optional]
 
-Ein Wert, der zum Organisieren von Hash Tabellen verwendet werden kann.
-Wenn dieser Parameter **null** ist, wird kein Hashwert berechnet.
+Ein -Wert, der zum Organisieren von Hashtabellen verwendet werden kann.
+Wenn dieser Parameter **NULL** ist, wird kein Hashwert berechnet.
 
-Dieser Wert wird basierend auf den Werten der Zeiger berechnet, die im Backtrace-Array zurückgegeben werden.
-Zwei identische Stapel Überwachungen generieren identische Hashwerte.
+Dieser Wert wird basierend auf den Werten der Zeiger berechnet, die im BackTrace-Array zurückgegeben werden.
+Zwei identische Stapelüberwachungen generieren identische Hashwerte.
 
 ## <a name="returns"></a>Gibt zurück
 
-Die Anzahl der aufgezeichneten Frames.
+Die Anzahl der erfassten Frames.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **capturestackbacktrace** -Funktion ist als **rtlcapturestackbacktrace** -Funktion definiert (die Definition ist in der Windows SDK ab Windows Vista enthalten).
-Weitere Informationen finden Sie unter Winbase. h und WinNT. h.
+Die **CaptureStackBackTrace-Funktion** ist als **die RtlCaptureStackBackTrace-Funktion** definiert (die Definition ist ab Windows Vista im Windows SDK enthalten).
+Weitere Informationen finden Sie unter WinBase.h und WinNT.h.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen

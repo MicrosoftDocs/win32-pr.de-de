@@ -1,7 +1,7 @@
 ---
-description: Beschreibt den Typ der Ereignisse, die vom Animations Controller verschlüsselt werden können.
+description: Beschreibt den Typ von Ereignissen, die vom Animationscontroller schlüsselt werden können.
 ms.assetid: d98b398e-29e1-41b5-84eb-37983bac8d0a
-title: D3DXEVENT_TYPE-Enumeration (D3dx9anim. h)
+title: D3DXEVENT_TYPE-Enumeration (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9anim.h
-ms.openlocfilehash: 97219478b898dc47e385e8e00a5cc9b5484730ce
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a7e3dec14876f784bbb4055c483f22552bef80e034798f902196c7b65ff3aa45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354877"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118804091"
 ---
-# <a name="d3dxevent_type-enumeration"></a>D3DXEVENT- \_ Typenumeration
+# <a name="d3dxevent_type-enumeration"></a>D3DXEVENT \_ TYPE-Enumeration
 
-Beschreibt den Typ der Ereignisse, die vom Animations Controller verschlüsselt werden können.
+Beschreibt den Typ von Ereignissen, die vom Animationscontroller schlüsselt werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,45 +44,45 @@ typedef enum D3DXEVENT_TYPE {
 
 <dl> <dt>
 
-<span id="D3DXEVENT_TRACKSPEED"></span><span id="d3dxevent_trackspeed"></span>**D3DXEVENT \_ trackspeed**
+<span id="D3DXEVENT_TRACKSPEED"></span><span id="d3dxevent_trackspeed"></span>**D3DXEVENT \_ TRACKSPEED**
 </dt> <dd>
 
 Nachverfolgen der Geschwindigkeit.
 
 </dd> <dt>
 
-<span id="D3DXEVENT_TRACKWEIGHT"></span><span id="d3dxevent_trackweight"></span>**D3DXEVENT \_ trackweight**
+<span id="D3DXEVENT_TRACKWEIGHT"></span><span id="d3dxevent_trackweight"></span>**D3DXEVENT \_ TRACKWEIGHT**
 </dt> <dd>
 
-Last nachverfolgen.
+Nachverfolgungsgewichtung.
 
 </dd> <dt>
 
-<span id="D3DXEVENT_TRACKPOSITION"></span><span id="d3dxevent_trackposition"></span>**D3DXEVENT \_ trackposition**
+<span id="D3DXEVENT_TRACKPOSITION"></span><span id="d3dxevent_trackposition"></span>**D3DXEVENT \_ TRACKPOSITION**
 </dt> <dd>
 
 Position nachverfolgen.
 
 </dd> <dt>
 
-<span id="D3DXEVENT_TRACKENABLE"></span><span id="d3dxevent_trackenable"></span>**D3DXEVENT \_ trackenable**
+<span id="D3DXEVENT_TRACKENABLE"></span><span id="d3dxevent_trackenable"></span>**D3DXEVENT \_ TRACKENABLE**
 </dt> <dd>
 
-Flag aktivieren.
+Aktivieren Sie das Flag .
 
 </dd> <dt>
 
-<span id="D3DXEVENT_PRIORITYBLEND"></span><span id="d3dxevent_priorityblend"></span>**D3DXEVENT \_ priorityblend**
+<span id="D3DXEVENT_PRIORITYBLEND"></span><span id="d3dxevent_priorityblend"></span>**D3DXEVENT \_ PRIORITYBLEND**
 </dt> <dd>
 
-Wert für die Prioritäts Mischung.
+Prioritätsblendwert.
 
 </dd> <dt>
 
-<span id="D3DXEVENT_FORCE_DWORD"></span><span id="d3dxevent_force_dword"></span>**D3DXEVENT \_ Erzwingen von \_ DWORD**
+<span id="D3DXEVENT_FORCE_DWORD"></span><span id="d3dxevent_force_dword"></span>**D3DXEVENT \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt die Kompilierung dieser Enumeration in 32 Bits. Ohne diesen Wert können einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration in eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
@@ -92,11 +92,11 @@ Erzwingt die Kompilierung dieser Enumeration in 32 Bits. Ohne diesen Wert könne
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9anim. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9anim.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

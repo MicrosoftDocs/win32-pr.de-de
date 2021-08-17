@@ -1,5 +1,5 @@
 ---
-description: Diese Flags identifizieren eine Oberfläche, die zurückgesetzt werden soll, wenn Clear aufgerufen wird.
+description: Diese Flags identifizieren eine Oberfläche, die beim Aufrufen von Clear zurückgesetzt werden soll.
 ms.assetid: 5d76e9a3-7afc-4db7-bffe-64bc7b9f83ac
 title: D3DCLEAR
 ms.topic: article
@@ -13,21 +13,21 @@ ms.locfileid: "118527610"
 ---
 # <a name="d3dclear"></a>D3DCLEAR
 
-Diese Flags identifizieren eine Oberfläche, die zurückgesetzt werden soll, wenn Clear aufgerufen [**wird.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-clear)
+Diese Flags identifizieren eine Oberfläche, die beim Aufrufen von Clear zurückgesetzt [**werden soll.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-clear)
 
 
 
-| \#Definieren          | Beschreibung                                                                                                                                 |
+| \#Definieren          | BESCHREIBUNG                                                                                                                                 |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | \_D3DCLEAR-SCHABLONE | Löschen Sie den Schablonenpuffer.                                                                                                                   |
-| D3DCLEAR-ZIEL \_  | Löschen Sie ein Renderziel oder alle Ziele in einem mehreren Renderziel. Weitere Informationen finden Sie unter [Mehrere Renderziele (Direct3D 9).](multiple-render-targets.md) |
+| D3DCLEAR-ZIEL \_  | Löschen Sie ein Renderziel oder alle Ziele in einem Ziel mit mehreren Rendern. Weitere Informationen [finden Sie unter Mehrere Renderziele (Direct3D 9).](multiple-render-targets.md) |
 | D3DCLEAR \_ ZBUFFER | Löschen Sie den Tiefenpuffer.                                                                                                                     |
 
 
 
  
 
-## <a name="constant-information"></a>Konstanteninformationen
+## <a name="constant-information"></a>Konstante Informationen
 
 
 

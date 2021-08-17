@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: de2b852ffc9a12622a4560ae834a3347b1e07552
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 9fce4cb5edb9765e7f69726188e5ed0ba2017df7d6fa90cae0bfa059b89fc939
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119798"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119688990"
 ---
 # <a name="ccritsecccritsec-constructor"></a>CCritSec.CCritSec-Konstruktor
 
@@ -40,18 +40,18 @@ CCritSec();
 
 Dieser Konstruktor verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**InitializeCriticalSection-Funktion auf,**](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection) um den kritischen Abschnitt zu initialisieren.
+Diese Methode ruft die [**InitializeCriticalSection-Funktion**](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection) auf, um den kritischen Abschnitt zu initialisieren.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil.h (streams.h enthalten)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

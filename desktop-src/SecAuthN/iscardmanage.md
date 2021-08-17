@@ -1,7 +1,7 @@
 ---
-description: Wird zum Anfügen an eine bestimmte Smartcard oder einen Leser verwendet, um andere optionale Schnittstellen zum Ausführen spezifischer Smartcardfunktionen zu erstellen, eine bestimmte Smartcard für die exklusive Verwendung zu sperren und den Status einer Smartcard oder eines Readers zu erhalten.
+description: Wird zum Anfügen an eine bestimmte Smartcard oder einen bestimmten Reader, zum Erstellen anderer optionaler Schnittstellen zum Ausführen bestimmter Smartcardfunktionen, zum Sperren einer bestimmten Smartcard für die exklusive Verwendung und zum Abrufen des Status einer Smartcard oder eines Readers verwendet.
 ms.assetid: 67077034-5bd0-4176-9dc7-774caba3d427
-title: Iscardmanage-Schnittstelle
+title: ISCardManage-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,56 +12,56 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: cce31ea21701c098b09a0bd96360afb374a9bccc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c027ae9004a8437f3d182fdef3335c8fbbad67abaab5c15e351520f2ae592818
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217759"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118922649"
 ---
-# <a name="iscardmanage-interface"></a>Iscardmanage-Schnittstelle
+# <a name="iscardmanage-interface"></a>ISCardManage-Schnittstelle
 
-\[Die **iscardmanage** -Schnittstelle ist nicht mehr für die Verwendung ab Windows Server 2008, Windows Vista und Windows Server 2003 mit Service Pack 1 (SP1) und höher verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **ISCardManage-Schnittstelle** ist ab Windows Server 2008, Windows Vista und Windows Server 2003 mit Service Pack 1 (SP1) und höher nicht mehr verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die folgende Schnittstellen Definition wird als Standard bereitgestellt, der bei der Entwicklung eines [*Smartcard*](../secgloss/s-gly.md) - [*Dienstanbieters*](../secgloss/c-gly.md)befolgt werden kann.
+Die folgende Schnittstellendefinition wird als Standard bereitgestellt, der bei der Entwicklung eines [*Smartcard-Dienstanbieters*](../secgloss/s-gly.md) [*befolgt werden kann.*](../secgloss/c-gly.md)
 
-Die **iscardmanage** -Schnittstelle muss bereitgestellt werden. Sie wird zum Anfügen an eine bestimmte [*Smartcard*](../secgloss/s-gly.md) oder einen [*Leser*](../secgloss/r-gly.md)verwendet, um andere optionale Schnittstellen zum Ausführen bestimmter Smartcardfunktionen zu erstellen, eine bestimmte Smartcard für die exklusive Verwendung zu sperren und den Status einer Smartcard oder eines Readers zu erhalten. Als Gruppe können diese Dienste für die Verwaltung eines klar definierten Kontexts verantwortlich sein, in dem eine Anwendung mit einer [*Smartcard*](../secgloss/s-gly.md) oder einem [*Reader*](../secgloss/r-gly.md)kommunizieren kann.
+Die **ISCardManage-Schnittstelle** muss bereitgestellt werden. Es wird zum Anfügen [](../secgloss/s-gly.md) an eine [](../secgloss/r-gly.md)bestimmte Smartcard oder einen Bestimmten Reader, zum Erstellen anderer optionaler Schnittstellen zum Ausführen bestimmter Smartcardfunktionen, zum Sperren einer bestimmten Smartcard für die exklusive Verwendung und zum Abrufen des Status einer Smartcard oder eines Readers verwendet. Als Gruppe können diese Dienste für die Verwaltung eines klar definierten Kontexts verantwortlich sein, in dem eine Anwendung mit einer Smartcard oder einem Leser [*kommunizieren*](../secgloss/s-gly.md) [*kann.*](../secgloss/r-gly.md)
 
-Im folgenden finden Sie eine typische Verwendung der **iscardmanage** -Schnittstelle.
+Im Folgenden finden Sie eine typische Verwendung der **ISCardManage-Schnittstelle.**
 
-**So stellen Sie eine Verbindung mit einer Smartcard her**
+**So stellen Sie eine Verbindung mit einer Smartcard**
 
-1.  Erstellen Sie die **iscardmanage** -Schnittstelle, die der Karte zugeordnet ist.
-2.  Stellen Sie eine Verbindung zu einer Smartcard her, indem Sie Sie an einen bestimmten Smartcardleser ([**attachbyifd**](iscardmanage-attachbyifd.md)) anfügen, oder indem Sie ein zuvor erworbenes handle ([**attachbyhandle**](iscardmanage-attachbyhandle.md)) verwenden.
-3.  Erstellen Sie andere Schnittstellen zum Durchführen von smartcardvorgängen ("[**kreatecardauth**](iscardmanage-createcardauth.md)", "up [**File Access**](iscardmanage-createfileaccess.md)", " [**kreatechverification**](iscardmanage-createchverification.md)" oder " [**kreateinterface**](iscardmanage-createinterface.md)").
-4.  Geben Sie die Karte frei ([**trennen**](iscardmanage-detach.md)).
-5.  Geben Sie die **iscardmanage** -Schnittstelle und andere nach Bedarf frei.
+1.  Erstellen Sie die **ISCardManage-Schnittstelle,** die der Karte zugeordnet ist.
+2.  Verbinden einer Smartcard durch Anfügen an einen bestimmten Smartcardleser ([**AttachByIFD**](iscardmanage-attachbyifd.md)) oder mithilfe eines zuvor erworbenen Handles ([**AttachByHandle**](iscardmanage-attachbyhandle.md)).
+3.  Erstellen Sie andere Schnittstellen zum Ausführen von Smartcardvorgängen ([**CreateCardAuth,**](iscardmanage-createcardauth.md) [**CreateFileAccess,**](iscardmanage-createfileaccess.md) [**CreateCHVerification**](iscardmanage-createchverification.md)oder [**CreateInterface**](iscardmanage-createinterface.md)).
+4.  Lassen Sie die Karte los ([**Trennen**](iscardmanage-detach.md)).
+5.  Geben Sie **die ISCardManage-Schnittstelle** und andere nach Bedarf frei.
 
 ## <a name="members"></a>Member
 
-Die **iscardmanage** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Iscardmanage** verfügt auch über die folgenden Typen von Mitgliedern:
+Die **ISCardManage-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **ISCardManage** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iscardmanage** -Schnittstelle verfügt über diese Methoden.
+Die **ISCardManage-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                            | BESCHREIBUNG                                                                                                                                                                                                                                                                |
 |:------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Attachbyhandle**](iscardmanage-attachbyhandle.md)             | Ermöglicht es einer Anwendung, mithilfe eines Handles, das von der Smartcard- [*Ressourcen-Manager*](../secgloss/r-gly.md)zurückgegeben wird, eine Kommunikations Verknüpfung zu einer Smartcard zu erstellen.<br/>                                              |
-| [**Attachbyifd**](iscardmanage-attachbyifd.md)                   | Ermöglicht es einer Anwendung, die Einrichtung eines Kontexts für einen bestimmten Reader anzufordern, auf den mit einem anzeigen Amen verwiesen wird.<br/>                                                                                                                                               |
-| [**"Kreatecardauth"**](iscardmanage-createcardauth.md)             | Ermöglicht die Erstellung einer [**iscardauth**](iscardauth.md) -Schnittstelle.<br/>                                                                                                                                                                                            |
-| [**"Kreatechverification"**](iscardmanage-createchverification.md) | Ermöglicht die Erstellung einer [**iscardverify**](iscardverify.md) -Schnittstelle.<br/>                                                                                                                                                                                        |
-| [**"Kreatefileaccess"**](iscardmanage-createfileaccess.md)         | Ermöglicht die Erstellung einer [**iscardfileaccess**](iscardfileaccess.md) -Schnittstelle.<br/>                                                                                                                                                                                |
-| [**"Kreatabterface"**](iscardmanage-createinterface.md)           | Ermöglicht das Erstellen einer Schnittstelle.<br/>                                                                                                                                                                                                                            |
-| [**Trennen**](iscardmanage-detach.md)                             | Gibt die Anlage auf einer bestimmten Smartcard oder einem Leser frei, der von [**attachbyhandle**](iscardmanage-attachbyhandle.md) bzw. [**attachbyifd**](iscardmanage-attachbyifd.md) zugeordnet wird.<br/>                                                                |
-| [**Verbindung wiederherstellen**](iscardmanage-reconnect.md)                       | Ermöglicht es einer Anwendung, erneut eine Verbindung mit einer Smartcard oder einem Reader herzustellen, ohne eine Trennung [**, gefolgt von**](iscardmanage-detach.md) [**attachbyhandle**](iscardmanage-attachbyhandle.md) oder [**attachbyifd**](iscardmanage-attachbyifd.md) , ausgeben zu müssen.<br/> |
-| [**Scardlock**](iscardmanage-scardlock.md)                       | Sperrt eine verbundene Smartcard oder einen verbundenen Reader für die exklusive Verwendung.<br/>                                                                                                                                                                                                       |
-| [**Scardunlock**](iscardmanage-scardunlock.md)                   | Gibt die exklusive Verwendung der verbundenen Smartcard oder des Readers frei.<br/>                                                                                                                                                                                                   |
-| [**Status**](iscardmanage-status.md)                             | Ermöglicht es einer Anwendung, den aktuellen Status der Smartcard oder des Readers zu erhalten.<br/>                                                                                                                                                                                    |
+| [**AttachByHandle**](iscardmanage-attachbyhandle.md)             | Ermöglicht einer Anwendung das Erstellen einer Kommunikationsverbindung mit einer Smartcard mithilfe eines Handles, das vom Smartcard-Ressourcen-Manager [*zurückgegeben wird.*](../secgloss/r-gly.md)<br/>                                              |
+| [**AttachByIFD**](iscardmanage-attachbyifd.md)                   | Ermöglicht es einer Anwendung, die Einrichtung eines Kontexts für einen bestimmten Reader an fordern, auf den mit einem Anzeigenamen verwiesen wird.<br/>                                                                                                                                               |
+| [**CreateCardAuth**](iscardmanage-createcardauth.md)             | Ermöglicht die Erstellung einer [**ISCardAuth-Schnittstelle.**](iscardauth.md)<br/>                                                                                                                                                                                            |
+| [**CreateCHVerification**](iscardmanage-createchverification.md) | Ermöglicht die Erstellung einer [**ISCardVerify-Schnittstelle.**](iscardverify.md)<br/>                                                                                                                                                                                        |
+| [**CreateFileAccess**](iscardmanage-createfileaccess.md)         | Ermöglicht die Erstellung einer [**ISCardFileAccess-Schnittstelle.**](iscardfileaccess.md)<br/>                                                                                                                                                                                |
+| [**CreateInterface**](iscardmanage-createinterface.md)           | Ermöglicht die Erstellung einer Schnittstelle.<br/>                                                                                                                                                                                                                            |
+| [**Trennen**](iscardmanage-detach.md)                             | Gibt die Anlage an eine bestimmte Smartcard oder einen bestimmten Reader frei, die von [**AttachByHandle**](iscardmanage-attachbyhandle.md) bzw. [**AttachByIFD zugeordnet**](iscardmanage-attachbyifd.md) wird.<br/>                                                                |
+| [**Verbindung wiederherstellen**](iscardmanage-reconnect.md)                       | Ermöglicht einer Anwendung das erneute Herstellen einer Verbindung mit [](iscardmanage-detach.md) einer Smartcard oder einem Reader, ohne eine Trennung gefolgt von [**AttachByHandle**](iscardmanage-attachbyhandle.md) bzw. [**AttachByIFD**](iscardmanage-attachbyifd.md) aus geben zu müssen.<br/> |
+| [**SCardLock**](iscardmanage-scardlock.md)                       | Sperrt eine verbundene Smartcard oder einen Reader für die exklusive Verwendung.<br/>                                                                                                                                                                                                       |
+| [**SCardUnlock**](iscardmanage-scardunlock.md)                   | Gibt die exklusive Verwendung der verbundenen Smartcard oder des verbundenen Readers frei.<br/>                                                                                                                                                                                                   |
+| [**Status**](iscardmanage-status.md)                             | Ermöglicht einer Anwendung, den aktuellen Status der Smartcard oder des Lesers zu erhalten.<br/>                                                                                                                                                                                    |
 
 
 
@@ -73,8 +73,8 @@ Die **iscardmanage** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                |
 | Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
 

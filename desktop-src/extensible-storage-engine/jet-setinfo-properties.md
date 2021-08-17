@@ -1,25 +1,25 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SETINFO-Eigenschaften'
-title: Eigenschaften von JET_SETINFO
+description: Weitere Informationen finden Sie unter JET_SETINFO Eigenschaften.
+title: JET_SETINFO Eigenschaften
 TOCTitle: JET_SETINFO properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.JET_SETINFO
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_setinfo_properties(v=EXCHG.10)
 ms:contentKeyID: 55103917
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: af54ddfc09cce0a9c9498dea2060fb83baa0d6f8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 80dea8d2055464441dbaeb5b228c91c2fa4780f74fa2ec4cfe89d2ab33585e5c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120093290"
 ---
-# <a name="jet_setinfo-properties"></a>Eigenschaften von JET_SETINFO
+# <a name="jet_setinfo-properties"></a>JET_SETINFO Eigenschaften
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Der [JET_SETINFO](./jet-setinfo-class.md) -Typ macht die folgenden Member verfügbar.
+Der [JET_SETINFO](./jet-setinfo-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -34,13 +34,13 @@ Der [JET_SETINFO](./jet-setinfo-class.md) -Typ macht die folgenden Member verfü
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351064(v=exchg.10).md">iblongvalue</a></td>
-<td>Ruft den Offset bis zum ersten Byte ab, das in einer Spalte vom Typ <a href="hh577895(v=exchg.10).md">LONGBINARY</a> oder <a href="hh577895(v=exchg.10).md">LONGTEXT</a>festgelegt werden soll, oder legt diesen fest.</td>
+<td><a href="dn351064(v=exchg.10).md">ibLongValue</a></td>
+<td>Ruft den Offset auf das erste Byte ab, das in einer Spalte vom Typ <a href="hh577895(v=exchg.10).md">LongBinary</a> oder LongText festgelegt werden soll, oder <a href="hh577895(v=exchg.10).md">legt diesen fest.</a></td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351037(v=exchg.10).md">itagsequence</a></td>
-<td>Ruft die Sequenznummer des Werts in einer mehrwertigen Spalte ab, die festgelegt werden soll, oder legt Sie fest. Das Array von Werten ist 1-basiert. Der erste Wert ist Sequenz 1, nicht 0 (null). Wenn die Daten Satz Spalte nur über einen Wert verfügt, sollte 1 als itagsequence übergeben werden, wenn dieser Wert ersetzt wird. Der Wert 0 (null) bedeutet, dass am Ende der Sequenz der Spaltenwerte eine neue Spaltenwert Instanz hinzugefügt wird.</td>
+<td><a href="dn351037(v=exchg.10).md">itagSequence</a></td>
+<td>Ruft die Sequenznummer des Werts in einer mehrwertigen Spalte ab, die festgelegt werden soll, oder legt diese fest. Das Array von Werten ist 1-basiert. Der erste Wert ist Sequenz 1, nicht 0 (null). Wenn die Datensatzspalte nur einen Wert hat, sollte 1 als itagSequence übergeben werden, wenn dieser Wert ersetzt wird. Der Wert 0 (null) bedeutet, dass am Ende der Sequenz von Spaltenwerten eine neue Spaltenwertinstanz hinzugefügt wird.</td>
 </tr>
 </tbody>
 </table>
@@ -48,10 +48,10 @@ Der [JET_SETINFO](./jet-setinfo-class.md) -Typ macht die folgenden Member verfü
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_SETINFO-Klasse](./jet-setinfo-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

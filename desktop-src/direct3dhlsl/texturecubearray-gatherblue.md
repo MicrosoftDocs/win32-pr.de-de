@@ -1,9 +1,9 @@
 ---
-title: 'Texturecubearray:: texturecubearray gatherblue-Methoden'
-description: 'Gibt die blauen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden. | Texturecubearray:: texturecubearray gatherblue-Methoden'
+title: TextureCubeArray::TextureCubeArray GatherBlue-Methoden
+description: Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden. | TextureCubeArray::TextureCubeArray GatherBlue-Methoden
 ms.assetid: 709EF549-20F6-44E1-8E8C-1FF71C259FC7
 keywords:
-- Gatherblue-Methoden HLSL
+- GatherBlue-Methoden HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: ee3946a2a205a679da835b2523da090611372331
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
-ms.translationtype: HT
+ms.openlocfilehash: bf6a87e4e4accb6a9c6742d6bb31b5cec36bc14f8120587e45f8979c9a5d3ee5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118786323"
 ---
-# <a name="texturecubearraygatherblue-methods"></a>Texturecubearray:: gatherblue-Methoden
+# <a name="texturecubearraygatherblue-methods"></a>TextureCubeArray::GatherBlue-Methoden
 
-Gibt die blauen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.
+Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,7 +29,7 @@ Gibt die blauen Komponenten der vier texelwerte zurück, die in einem bilinearen
 
 | Methode                                                                  | BESCHREIBUNG                                                                                                                                      |
 |:------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Gatherblue (S, float, uint)**](tcubearray-gatherblue-s-float-uint-.md)  | Gibt die blauen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang zusammen mit dem Status der Kachel Zuordnung verwendet werden.<br/> |
+| [**GatherBlue(S,float,uint)**](tcubearray-gatherblue-s-float-uint-.md)  | Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden, zusammen mit dem Kachelzuordnungsstatus.<br/> |
 
 
 
@@ -37,7 +37,7 @@ Gibt die blauen Komponenten der vier texelwerte zurück, die in einem bilinearen
 
 <dl> <dt>
 
-[**Texturecubearray**](texturecubearray.md)
+[**TextureCubeArray**](texturecubearray.md)
 </dt> </dl>
 
  

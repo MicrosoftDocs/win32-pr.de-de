@@ -1,5 +1,5 @@
 ---
-description: Multiplikations Operatoren
+description: Multiplikationsoperatoren.
 ms.assetid: f8397999-9956-4d11-8705-c95b788a9f03
 title: Operator *-Operatoren
 ms.topic: reference
@@ -11,16 +11,16 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 15cdb9d189d110621461c1623b4fd20eaa9e7f5e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 374b8ecefd606a9f17b1ae063aeac51158c9fd93514ba9b48dd72b1f19dd8113
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130581"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119117890"
 ---
-# <a name="operator--operators"></a>Operator \* Operatoren
+# <a name="operator--operators"></a>\*Operatoroperatoren
 
-Multiplikations Operator
+Multiplikationsoperatoren
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -34,13 +34,13 @@ Multiplikations Operator
 <thead>
 <tr class="header">
 <th style="text-align: left;">Operator</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
+<th style="text-align: left;">Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><a href="/previous-versions/windows/desktop/legacy/ee421390(v=vs.85)"><strong>Xmvector:: Operator * (float, xmvector)</strong></a></td>
-<td style="text-align: left;">Multiplizieren eines Gleit Komma Werts durch eine Instanz von <code>XMVECTOR</code> , wobei das Ergebnis einer neuen Instanz von zurückgegeben wird <code>XMVECTOR</code> .<br/> <code>operator *</code>Multipliziert einen Gleit Komma Wert für jede Komponente einer Instanz des <a href="xmvector-data-type.md"><strong>xmvector-Datentyps</strong></a>und gibt eine neue-Instanz zurück, <code>XMVECTOR</code> deren Komponenten das Ergebnis enthalten. <br/>
+<td style="text-align: left;"><a href="/previous-versions/windows/desktop/legacy/ee421390(v=vs.85)"><strong>XMVECTOR::operator * (float,XMVECTOR)</strong></a></td>
+<td style="text-align: left;">Multiplizieren Eines Gleitkommawerts mit einer Instanz von <code>XMVECTOR</code> , wodurch das Ergebnis eine neue Instanz von zurückgegeben <code>XMVECTOR</code> wird.<br/> <code>operator *</code>Multipliziert einen Gleitkommawert mit jeder Komponente einer Instanz des <a href="xmvector-data-type.md"><strong>XMVECTOR-Datentyps</strong></a>und gibt eine neue <code>XMVECTOR</code> Instanz zurück, deren Komponenten das Ergebnis enthalten. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Operator ist nur unter C++ verfügbar.
@@ -48,8 +48,8 @@ Dieser Operator ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/previous-versions/windows/desktop/legacy/ee421391(v=vs.85)"><strong>Xmvector:: Operator * (xmvector, float)</strong></a></td>
-<td style="text-align: left;">Multiplizieren Sie eine Instanz von <code>XMVECTOR</code> mit einem Gleit Komma Wert, und geben Sie das Ergebnis einer neuen Instanz von zurück <code>XMVECTOR</code> .<br/> <code>operator *</code>Multipliziert jede Komponente einer Instanz des <a href="xmvector-data-type.md"><strong>xmvector-Datentyps</strong></a> mit einem Gleit Komma Wert und gibt eine neue-Instanz zurück, <code>XMVECTOR</code> deren Komponenten das Ergebnis enthalten. <br/>
+<td style="text-align: left;"><a href="/previous-versions/windows/desktop/legacy/ee421391(v=vs.85)"><strong>XMVECTOR::operator * (XMVECTOR,float)</strong></a></td>
+<td style="text-align: left;">Multiplizieren Sie eine Instanz von <code>XMVECTOR</code> mit einem Gleitkommawert, und geben Sie dem Ergebnis eine neue Instanz von <code>XMVECTOR</code> zurück.<br/> <code>operator *</code>Multipliziert jede Komponente einer Instanz des <a href="xmvector-data-type.md"><strong>XMVECTOR-Datentyps</strong></a> mit einem Gleitkommawert und gibt eine neue Instanz zurück, <code>XMVECTOR</code> deren Komponenten das Ergebnis enthalten. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Operator ist nur unter C++ verfügbar.
@@ -57,8 +57,8 @@ Dieser Operator ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="/previous-versions/windows/desktop/legacy/ee421392(v=vs.85)"><strong>Xmvector:: Operator * (xmvector, xmvector)</strong></a></td>
-<td style="text-align: left;">Multipliziert eine Instanz von <code>XMVECTOR</code> mit einer zweiten-Instanz und gibt das Ergebnis in einer dritten-Instanz zurück. <br/> <code>operator *</code>Multipliziert jede Komponente einer Instanz des <a href="xmvector-data-type.md"><strong>xmvector-Datentyps</strong></a> mit der entsprechenden Komponente in einer zweiten Instanz von <code>XMVECTOR</code> und gibt eine neue-Instanz zurück, <code>XMVECTOR</code> die das Ergebnis enthält. <br/>
+<td style="text-align: left;"><a href="/previous-versions/windows/desktop/legacy/ee421392(v=vs.85)"><strong>XMVECTOR::operator * (XMVECTOR,XMVECTOR)</strong></a></td>
+<td style="text-align: left;">Multipliziert eine Instanz von <code>XMVECTOR</code> mit einer zweiten Instanz und gibt das Ergebnis in einer dritten Instanz zurück. <br/> <code>operator *</code>Multipliziert jede Komponente einer Instanz des <a href="xmvector-data-type.md"><strong>XMVECTOR-Datentyps</strong></a> mit der entsprechenden Komponente in einer zweiten Instanz von <code>XMVECTOR</code> und gibt eine neue Instanz <code>XMVECTOR</code> zurück, die das Ergebnis enthält. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Operator ist nur unter C++ verfügbar.
@@ -70,17 +70,17 @@ Dieser Operator ist nur unter C++ verfügbar.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Xmvector-Operatoren](ovw-xmvector-operators.md)
+[XMVECTOR-Operatoren](ovw-xmvector-operators.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Xmvector-Datentyp**](xmvector-data-type.md)
+[**XMVECTOR-Datentyp**](xmvector-data-type.md)
 </dt> </dl>
 
  

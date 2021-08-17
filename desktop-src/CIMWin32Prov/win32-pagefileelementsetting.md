@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse der Win32 pagefileelementsetting-Zuordnung verknüpft die anfänglichen Einstellungen einer Auslagerungs Datei und den Zustand dieser Einstellungen während der normalen Verwendung.
+description: Die \_ WMI-Zuordnungsklasse Win32 PageFileElementSetting bezieht sich auf die anfänglichen Einstellungen einer Seitendatei und den Zustand dieser Einstellungen während der normalen Verwendung.
 ms.assetid: efc1f20d-166e-4e27-9767-f6ec0bbd6c14
 ms.tgt_platform: multiple
 title: Win32_PageFileElementSetting-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: dfc1087225894cef2895cf41af5e5297769a4041
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 366f2b8ae14e57d17b4f6a48fb59cdd6c5cfd5c2c12068e40650e410c7c1f45f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119972260"
 ---
-# <a name="win32_pagefileelementsetting-class"></a>Win32 \_ pagefileelementsetting-Klasse
+# <a name="win32_pagefileelementsetting-class"></a>Win32 \_ PageFileElementSetting-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) der **Win32 \_ pagefileelementsetting** -Zuordnung verknüpft die anfänglichen Einstellungen einer Auslagerungs Datei und den Zustand dieser Einstellungen während der normalen Verwendung.
+Die **WMI-Zuordnungsklasse \_ Win32 PageFileElementSetting** bezieht sich auf die anfänglichen Einstellungen einer Seitendatei und den Zustand dieser Einstellungen während der normalen Verwendung. [](../wmisdk/retrieving-a-class.md)
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,13 +42,13 @@ class Win32_PageFileElementSetting : CIM_ElementSetting
 
 ## <a name="members"></a>Member
 
-Die **Win32-Klasse \_ pagefileelementsetting** verfügt über diese Typen von Membern:
+Die **Win32 \_ PageFileElementSetting-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32-Klasse \_ pagefileelementsetting** verfügt über diese Eigenschaften.
+Die **Win32 \_ PageFileElementSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -61,32 +61,32 @@ Datentyp: **Win32 \_ PageFileUsage**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**override**](../wmisdk/standard-qualifiers.md) ("Element"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ PageFileUsage")
+Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**Override**](../wmisdk/standard-qualifiers.md) ("Element"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ PageFileUsage")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die Eigenschaften einer Auslagerungs Datei darstellt, während das Win32-System verwendet wird.
+Verweis auf die -Instanz, die die Eigenschaften einer Seitendatei darstellt, während das Win32-System verwendet wird.
 
 </dd> <dt>
 
 **Einstellung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ pagefilesetting**
+Datentyp: **Win32 \_ PageFileSetting**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**override**](../wmisdk/standard-qualifiers.md) ("Setting"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ pagefilesetting")
+Qualifizierer: [**schlüssel**](../wmisdk/key-qualifier.md), [**Override**](../wmisdk/standard-qualifiers.md) ("Setting"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ PageFileSetting")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die anfänglichen Einstellungen einer Auslagerungs Datei darstellt, wenn das Win32-System gestartet wird.
+Verweis auf die -Instanz, die die anfänglichen Einstellungen einer Seitendatei darstellt, wenn das Win32-System gestartet wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32-Klasse \_ pagefileelementsetting** wird von [**CIM \_ Element Setting**](cim-elementsetting.md)abgeleitet.
+Die **Win32 \_ PageFileElementSetting-Klasse** wird von [**CIM \_ ElementSetting abgeleitet.**](cim-elementsetting.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,17 +96,17 @@ Die **Win32-Klasse \_ pagefileelementsetting** wird von [**CIM \_ Element Settin
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Element Setting**](cim-elementsetting.md)
+[**\_CIM-ElementSetting**](cim-elementsetting.md)
 </dt> <dt>
 
 [Betriebssystemklassen](./operating-system-classes.md)

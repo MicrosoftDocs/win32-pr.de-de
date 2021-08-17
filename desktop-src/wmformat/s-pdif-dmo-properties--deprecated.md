@@ -1,9 +1,9 @@
 ---
-title: S/PDIF DMO-Eigenschaften
-description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | S/PDIF DMO-Eigenschaften
+title: S/PDIF-DMO Eigenschaften
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | S/PDIF-DMO Eigenschaften
 ms.assetid: cc9bbe33-2a4c-4662-b0db-36db3451343f
 keywords:
-- S/PDIF DMO Eigenschaften windows Medienformat
+- S/PDIF-DMO EigenschaftenFenstermedienformat
 topic_type:
 - apiref
 api_name:
@@ -19,9 +19,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118699977"
 ---
-# <a name="spdif-dmo-properties"></a>S/PDIF DMO-Eigenschaften
+# <a name="spdif-dmo-properties"></a>S/PDIF-DMO Eigenschaften
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
  
 

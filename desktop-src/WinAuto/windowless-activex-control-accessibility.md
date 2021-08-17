@@ -15,21 +15,21 @@ ms.locfileid: "118563455"
 
 In diesem Abschnitt wird beschrieben, wie Sie die Windows Barrierefreiheits-API verwenden, um sicherzustellen, dass fensterlose Microsoft ActiveX-Steuerelemente zugänglich sind.
 
-Windows 8 enthält neue Windows Barrierefreiheits-API, die die Implementierung der Barrierefreiheit für fensterlose steuerelemente ActiveX vereinfachen. Die API enthält Schnittstellen, die in einem fensterlosen Steuerelement und im Steuerelementcontainer implementiert werden, sodass das fensterlose Steuerelement und sein Container zusammenarbeiten können, um Barrierefreiheitsinformationen über das fensterlose Steuerelement zur Verfügung zu stellen. Die API unterstützt die folgenden Szenarien:
+Windows 8 neue Schnittstellen Windows Barrierefreiheits-API, die die Implementierung der Barrierefreiheit für fensterlose steuerelemente ActiveX vereinfachen. Die API enthält Schnittstellen, die in einem fensterlosen Steuerelement und im Steuerelementcontainer implementiert werden, sodass das fensterlose Steuerelement und sein Container zusammenarbeiten können, um Barrierefreiheitsinformationen über das fensterlose Steuerelement zur Verfügung zu stellen. Die API unterstützt die folgenden Szenarien:
 
 -   Microsoft Active Accessibility fensterlose Steuerelemente, die in einem Microsoft Active Accessibility-Steuerelementcontainer gehostet werden.
 -   Microsoft Active Accessibility fensterlose Steuerelemente, die in einem Microsoft Benutzeroberflächenautomatisierung-Steuerelementcontainer gehostet werden.
 -   Benutzeroberflächenautomatisierung fensterlose Steuerelemente, die in einem Microsoft Active Accessibility-Steuerelementcontainer gehostet werden.
 -   Benutzeroberflächenautomatisierung fensterlose Steuerelemente, die in einem Benutzeroberflächenautomatisierung-Steuerelementcontainer gehostet werden.
 
-In der folgenden Tabelle sind die Schnittstellen aufgeführt, die fensterlose Steuerelemente ActiveX und die Objekte identifizieren, die die Schnittstellen implementieren.
+In der folgenden Tabelle sind die Schnittstellen aufgeführt, die fensterlose steuerelemente ActiveX und die Objekte identifizieren, die die Schnittstellen implementieren.
 
 
 
 | Object              | MSAA                                                                             | Benutzeroberflächenautomatisierung                                                                                     |
 |---------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | Steuerelementobjekt      | [**Iaccessiblehandler**](/windows/desktop/api/oleacc/nn-oleacc-iaccessiblehandler)                                 |                                                                                                   |
-| Steuerungsstandort        | [**IAccessibleWindowlessSite**](/windows/desktop/api/oleacc/nn-oleacc-iaccessiblewindowlesssite)        | [**IRawElementProviderWindowlessSite**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-irawelementproviderwindowlesssite)         |
+| Standort steuern        | [**IAccessibleWindowlessSite**](/windows/desktop/api/oleacc/nn-oleacc-iaccessiblewindowlesssite)        | [**IRawElementProviderWindowlessSite**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-irawelementproviderwindowlesssite)         |
 | Stamm des Hostfensters | [**IAccessibleHostingElementProviders**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iaccessiblehostingelementproviders) | [**IRawElementProviderHostingAccessibles**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-irawelementproviderhostingaccessibles) |
 
 
@@ -40,7 +40,7 @@ In der folgenden Tabelle sind die Schnittstellen aufgeführt, die fensterlose St
 
 -   [How to Use Benutzeroberflächenautomatisierung to Make a Windowless ActiveX Control Accessible](use-ui-automation-to-make-an-windowless-activex-control-accessible.md)
 -   [How to Use MSAA to Make a Windowless ActiveX Control Accessible](use-msaa-to-make-an-windowless-activex-control-accessible.md)
--   [Hosten eines fensterlosen Benutzeroberflächenautomatisierung-Steuerelements ActiveX Hosten](host-a-ui-automation-windowless-activex-control.md)
+-   [Hosten eines fensterlosen Benutzeroberflächenautomatisierung-Steuerelements ActiveX Steuerelements](host-a-ui-automation-windowless-activex-control.md)
 -   [Hosten eines fensterlosen MSAA-steuerelements ActiveX](host-an-msaa-windowless-activex-control.md)
 
  

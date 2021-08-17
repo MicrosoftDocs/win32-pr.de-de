@@ -1,23 +1,23 @@
 ---
-description: Die CIM \_ deviceerrorcounts-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ DeviceErrorCounts-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 688073C9-7A15-49B9-BDB6-C71B6B53C79E
 ms.tgt_platform: multiple
-title: CIM_DeviceErrorCounts Methoden
+title: CIM_DeviceErrorCounts-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b2331482628c7ba0985d389375ad27f28f66b02d
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: cb44b79eb10856b8698899fb1ff214161443d0fc69e1f8218838474153076c8c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483382"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119080794"
 ---
-# <a name="cim_deviceerrorcounts-methods"></a>CIM \_ deviceerrorcounts-Methoden
+# <a name="cim_deviceerrorcounts-methods"></a>CIM \_ DeviceErrorCounts-Methoden
 
-Die [**CIM \_ deviceerrorcounts**](cim-deviceerrorcounts.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ DeviceErrorCounts-Klasse**](cim-deviceerrorcounts.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

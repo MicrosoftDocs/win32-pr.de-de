@@ -1,19 +1,19 @@
 ---
-description: Profil-und Konfigurations Einrichtung im eingeschränkten Modus
+description: Eingeschränktes Modusprofil und Einrichtung der Konfiguration
 ms.assetid: 550f5413-eaa4-4530-867e-fd9b1907cadf
-title: Profil-und Konfigurations Einrichtung im eingeschränkten Modus
+title: Eingeschränktes Modusprofil und Einrichtung der Konfiguration
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 17a424505b3934131527f249176f9fe0984b320a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c9bb4d4bea3f42eaf897e781ccf859d094a0d0321815e7457aa6c79f96cb5ded
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392533"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747050"
 ---
-# <a name="restricted-mode-profile-and-configuration-establishment"></a>Profil-und Konfigurations Einrichtung im eingeschränkten Modus
+# <a name="restricted-mode-profile-and-configuration-establishment"></a>Eingeschränktes Modusprofil und Einrichtung der Konfiguration
 
-Aufgrund der Vielzahl von Datentypen, die von DirectX VA decodiert werden können, und die Konfigurationen mit mehreren decodierungen, die in DirectX VA für die einzelnen Datentypen unterstützt werden (z. b. die Verwendung von bitstreampuffern im Vergleich zum Decodieren von Host-Rest-unterschieden im Vergleich zu Accelerator-basierten IDCT mit und ohne Verschlüsselung jedes relevanten Puffer Typs usw Dadurch wird eine große Anzahl von GUIDs erstellt (z. b. hypothetisch, wenn es 16 Profile mit DirectX VA und 16 Konfigurationen gibt), müssten 256 definierte GUIDs vorhanden sein – und Sie benötigen 4 KB an Arbeitsspeicher, um alle Dateien zu speichern. Dieses Problem ist der schwierigste Aspekt bei der Bestimmung, wie DirectX VA in **iamvideoaccelerator** zugeordnet werden soll, wobei die restliche Betriebs Definition größtenteils recht unkompliziert ist. Daher geben wir eine eindeutige GUID für jeden Datentyp an (für jedes Profil mit eingeschränktem Modus) und ermöglichen es, jeder Art von Verschlüsselung eine weitere GUID zugeordnet zu werden. Die Decodierungs Konfiguration wird dann zwischen dem Decoder und dem Accelerator durch eine untergeordnete Aushandlungs Verhandlung mithilfe von Prüf-und Sperr Vorgängen eingerichtet, um Konfigurationen für jeden Typ der DirectX-VA-Funktion einzurichten.
+Aufgrund der Vielzahl von Datentypen, die von DirectX VA decodiert werden können, und der in DirectX VA für jeden dieser Datentypen unterstützten Decodierungskonfigurationen (z. B. die Verwendung von Bitstreampuffern im Vergleich zur Host-Restdifferenzdecodierung im Vergleich zur zugriffsbasierten IDCT mit und ohne Verschlüsselung der einzelnen relevanten Puffertypen und so weiter),  Wir sind der Meinung, dass es etwas unvoreinig wäre, einfach eine eindeutige GUID für jeden eindeutigen Datentyp und jede Decodierungskonfiguration anzugeben. Dies würde eine große Anzahl von GUIDs erstellen (wenn beispielsweise hypothetisch 16 Profile mit DirectX VA- und 16 Konfigurationen möglich wären, müssten 256 guiDs definiert sein, was 4 Kilobyte Arbeitsspeicher erfordert, um sie alle zu speichern). Dieses Problem ist der schwierigste Teil der Entscheidung, wie DirectX VA **IAMVideoAccelerator** zuordnen soll. Der Rest der Betriebsdefinition ist größtenteils recht einfach. Daher geben wir eine eindeutige GUID nur für jeden Datentyp (für jedes Profil im eingeschränkten Modus) an und lassen zu, dass jedem Verschlüsselungstyp eine zusätzliche GUID zugeordnet wird. Die Decodierungskonfiguration wird dann zwischen decoder und accelerator durch eine untergeordnete Aushandlung auf niedrigerer Ebene mithilfe von Such- und Sperrvorgängen eingerichtet, um Konfigurationen für jeden Typ von DirectX VA-Funktion zu erstellen.
 
  
 

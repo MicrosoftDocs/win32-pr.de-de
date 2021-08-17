@@ -1,19 +1,19 @@
 ---
-description: Im folgenden finden Sie die komplette Auflistung des Schemas für die Anwendungs Konfigurationsdatei.
+description: Im Folgenden ist die vollständige Liste des Anwendungskonfigurationsdateischemas aufgeführt.
 ms.assetid: c673dbff-cb64-4e90-88a8-c5f2c259f1d3
-title: Schema der Anwendungs Konfigurationsdatei
+title: Anwendungskonfigurationsdateischema
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b964775755cf1bcbb8ec78e563b4b39f71e3cc7e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 19b05f1444e9a652d3cd20f5cefa2ac314bfe17868f47e4f34f6b485e42d4a41
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119142553"
 ---
-# <a name="application-configuration-file-schema"></a>Schema der Anwendungs Konfigurationsdatei
+# <a name="application-configuration-file-schema"></a>Anwendungskonfigurationsdateischema
 
-Im folgenden finden Sie die komplette Auflistung des Schemas für die Anwendungs Konfigurationsdatei.
+Im Folgenden ist die vollständige Liste des Anwendungskonfigurationsdateischemas aufgeführt.
 
 ``` syntax
 <?xml version="1.0" encoding="US-ASCII"?>

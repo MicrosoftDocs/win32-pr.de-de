@@ -1,7 +1,7 @@
 ---
 description: Legt eine neue Antwort-APDU fest.
 ms.assetid: 1d058c89-0de9-4809-b008-ae24c62acc5b
-title: Iscardcmd::p ut_ApduReply-Methode (scarddat. h)
+title: ISCardCmd::p ut_ApduReply-Methode (Discountddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 0292f3ebd4e5f18638ad496cdf15cd9f5c4320f5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 749c0aee678a036160b52db635f2f096c68e0d20b2295c05387c5b57bbe2befc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119481460"
 ---
-# <a name="iscardcmdput_apdureply-method"></a>Iscardcmd::p UT- \_ apdureply-Methode
+# <a name="iscardcmdput_apdureply-method"></a>ISCardCmd::p ut-Methode \_ "ApduReply"
 
-\[Die **Put \_ apdureply** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **\_ put-Methode ApduReply** steht für die Verwendung in den Betriebssystemen zur Verfügung, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Mit der **Put \_ apdureply** -Methode wird eine neue [*Antwort-APDU*](../secgloss/r-gly.md)festgelegt.
+Die **\_ put-Methode ApduReply** legt eine neue [*Antwort-APDU*](../secgloss/r-gly.md)fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,41 +41,41 @@ HRESULT put_ApduReply(
 
 <dl> <dt>
 
-*preplyapdu* \[ in\]
+*pReplyApdu* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den Byte Puffer (durch ein **IStream** -Objekt zugeordnet), der bei der Rückgabe die APDU-Wiedergabe Meldung enthält.
+Zeiger auf den Bytepuffer (durch ein **IStream-Objekt** zugeordnet), der die APDU-Wiedergabenachricht bei der Rückgabe enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                          |
 |-----------------------------------------------------------------------------------------------|------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/>         |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *preplyapdu* -Parameter ist ungültig.<br/>  |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Ein fehlerhafter Zeiger wurde in *preplyapdu* übermittelt.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                            |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *pReplyApdu-Parameter* ist ungültig.<br/>  |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein ungültiger Zeiger wurde in *pReplyApdu* übergeben.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um ein vorhandenes Antwort-APDU abzurufen, nennen [**Sie get \_ apdureply**](iscardcmd-get-apdureply.md).
+Rufen Sie [**get \_ ApduReply**](iscardcmd-get-apdureply.md)auf, um ein vorhandenes Antwort-APDU abzurufen.
 
-Eine Liste aller Methoden, die von dieser Schnittstelle bereitgestellt werden, finden Sie unter [**iscardcmd**](iscardcmd.md).
+Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardCmd**](iscardcmd.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die Smartcard zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen Smartcardfehlercode zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie ein neues [*Antwort-APDU*](../secgloss/r-gly.md)festgelegt wird. In diesem Beispiel wird davon ausgegangen, dass pibytereply ein gültiger Zeiger auf eine Instanz von [**ibytebuffer**](ibytebuffer.md)ist und dass "piscardcmd" ein gültiger Zeiger auf eine Instanz der [**iscardcmd**](iscardcmd.md) -Schnittstelle ist.
+Das folgende Beispiel zeigt, wie sie eine neue [*Antwort-APDU*](../secgloss/r-gly.md)festlegen. Im Beispiel wird davon ausgegangen, dass pIByteReply ein gültiger Zeiger auf eine Instanz von [**IByteBuffer**](ibytebuffer.md)und pISCardCmd ein gültiger Zeiger auf eine Instanz der [**ISCardCmd-Schnittstelle**](iscardcmd.md) ist.
 
 
 ```C++
@@ -98,28 +98,28 @@ if (FAILED(hr))
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Ddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Ddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardcmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
+| IID<br/>                      | IID \_ ISCardCmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_apdureply erhalten**](iscardcmd-get-apdureply.md)
+[**get \_ ApduReply**](iscardcmd-get-apdureply.md)
 </dt> <dt>
 
-[**\_apdureplylength erhalten**](iscardcmd-get-apdureplylength.md)
+[**get \_ ApduReplyLength**](iscardcmd-get-apdureplylength.md)
 </dt> <dt>
 
-[**Iscardcmd**](iscardcmd.md)
+[**ISCardCmd**](iscardcmd.md)
 </dt> </dl>
 
  

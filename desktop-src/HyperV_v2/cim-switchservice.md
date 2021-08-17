@@ -43,7 +43,7 @@ class CIM_SwitchService : CIM_ForwardingService
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ SwitchService-Klasse** verfügt über diese Typen von Membern:
+Die **CIM \_ SwitchService-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -65,7 +65,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (32), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| BRIDGE-MIB.dot1dBaseBridgeAddress"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ SwitchService**.**BridgeAddressType**")
 </dt> </dl>
 
-Die Adresse des Switchdiensts, bei dem es sich um einen Teil des eindeutigen Bezeichners des Diensts handelt.
+Die Adresse des Switchdiensts, der ein Teil des eindeutigen Bezeichners des Diensts ist.
 
 </dd> <dt>
 
@@ -81,13 +81,13 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ SwitchService**.**BridgeAddress**")
 </dt> </dl>
 
-Das Adressierungsformat, das für die Bridge und die **BridgeAddress-Eigenschaft** verwendet wird.
+Das Adressierungsformat, das für die Bridge und die **BridgeAddress-Eigenschaft verwendet** wird.
 
 <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Andere** (1)
+**Sonstige** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -134,7 +134,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| BRIDGE-MIB.dot1dBaseType")
 </dt> </dl>
 
-Der Typ des auszuführende Dienstwechseldiensts.
+Der Typ des durchzuführenden Wechseldiensts.
 
 <dt>
 
@@ -180,7 +180,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| BRIDGE-MIB.dot1dBaseNumPorts")
 </dt> </dl>
 
-Die Anzahl der Switchports, die von diesem Switchdienst gesteuert werden.
+Die Anzahl der Switchports, die von diesem Wechseldienst gesteuert werden.
 
 </dd> </dl>
 
@@ -192,13 +192,13 @@ Die Anzahl der Switchports, die von diesem Switchdienst gesteuert werden.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
 title: versionType Simple Type
-description: Definiert ein Muster, das eine Version einer Aufgabe angibt.
+description: Definiert ein Muster, das eine Version eines Tasks angibt.
 ms.assetid: e9eebbc1-5465-4af6-8b97-f1fd5827442e
 keywords:
 - versionType simple type Taskplaner
@@ -22,7 +22,7 @@ ms.locfileid: "118355036"
 ---
 # <a name="versiontype-simple-type"></a>versionType Simple Type
 
-Definiert ein Muster, das eine Version einer Aufgabe angibt.
+Definiert ein Muster, das eine Version eines Tasks angibt.
 
 ``` syntax
 <xs:simpleType name="versionType">
@@ -38,7 +38,7 @@ Definiert ein Muster, das eine Version einer Aufgabe angibt.
 
 ## <a name="patterns"></a>Muster
 
-Der **einfache typ versionType** ist eine **Zeichenfolge,** die durch das folgende Muster eingeschränkt ist:
+Der einfache **versionType-Typ** ist eine **Zeichenfolge,** die durch das folgende Muster eingeschränkt ist:
 
 -   `\d+(\.\d+){1,3}`
 
@@ -50,7 +50,7 @@ Der **einfache typ versionType** ist eine **Zeichenfolge,** die durch das folgen
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

@@ -1,9 +1,9 @@
 ---
-title: MIM_OPEN Meldung (MMSYSTEM. h)
-description: Die MIM- \_ Open-Nachricht wird an eine Funktion der MIDI-Eingabe Rückruffunktion gesendet, wenn ein MIDI-Eingabegerät geöffnet wird.
+title: MIM_OPEN Meldung (Mmsystem.h)
+description: Die MIM \_ OPEN-Nachricht wird an eine RÜCKRUFFUNKTION für die EINGABEEINGABE gesendet, wenn ein EINGABEGERÄT geöffnet wird.
 ms.assetid: c7a8b856-aedd-457d-8a21-0ec2e9303960
 keywords:
-- MIM_OPEN-Nachricht (Multimedia)
+- MIM_OPEN nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 49fcfd05ef7702fbc7bf3108365e49660071ae9a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 15cacc21fd31810adf3188cb1ba267c9727715a0426c98d18f231eeec19b9691
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119428120"
 ---
-# <a name="mim_open-message"></a>Meldung zum Öffnen von MIM \_
+# <a name="mim_open-message"></a>\_MIM OPEN-Nachricht
 
-Die **MIM- \_ Open** -Nachricht wird an eine Funktion der MIDI-Eingabe Rückruffunktion gesendet, wenn ein MIDI-Eingabegerät geöffnet wird.
+Die **MIM \_ OPEN-Nachricht** wird an eine RÜCKRUFFUNKTION für die EINGABEEINGABE gesendet, wenn ein EINGABEGERÄT geöffnet wird.
 
 
 ```C++
@@ -41,14 +41,14 @@ dwParam2 = reserved
 <span id="dwParam1"></span><span id="dwparam1"></span><span id="DWPARAM1"></span>*dwParam1*
 </dt> <dd>
 
-Bleiben Verwenden Sie nicht.
+Reserviert; nicht verwenden.
 
 </dd> <dt>
 
 <span id="dwParam2"></span><span id="dwparam2"></span><span id="DWPARAM2"></span>*dwParam2*
 </dt> <dd>
 
-Bleiben Verwenden Sie nicht.
+Reserviert; nicht verwenden.
 
 </dd> </dl>
 
@@ -64,18 +64,18 @@ Diese Meldung gibt keinen Wert zurück.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Digital Instrumentation Digital Interface (MIDI)](musical-instrument-digital-interface--midi.md)
+[Music Instrument Digital Interface (INSTRUMENTS)](musical-instrument-digital-interface--midi.md)
 </dt> <dt>
 
-[MIDI-Nachrichten](midi-messages.md)
+[MELDUNGSMELDUNGEN](midi-messages.md)
 </dt> </dl>
 
  

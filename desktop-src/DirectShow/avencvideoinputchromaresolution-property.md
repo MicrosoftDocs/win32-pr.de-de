@@ -1,33 +1,33 @@
 ---
-description: Gibt die Chroma-Auflösung des Eingangs Videos an.
+description: Gibt die Auflösung des Eingabevideos an.
 ms.assetid: 1e405def-2958-4f4f-9c15-db186e0df52f
-title: Avencvideoinputchromaresolution-Eigenschaft (codecapi. h)
+title: AVEncVideoInputColoraResolution-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 938c314d9d077eff96b93e53740335f19bc5d35c
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 0874d3c0d05e323d7d49c7dce56263070c7460d376ded38f3150e0d3261e4311
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346186"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119275480"
 ---
-# <a name="avencvideoinputchromaresolution-property"></a>Avencvideoinputchromaresolution (Eigenschaft)
+# <a name="avencvideoinputchromaresolution-property"></a>AVEncVideoInputColoraResolution-Eigenschaft
 
-Gibt die Chroma-Auflösung des Eingangs Videos an.
+Gibt die Auflösung des Eingabevideos an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencvideoinputchromaresolution**
+**CODECAPI \_ AVEncVideoInputColoraResolution**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavencvideochromaresolution**](/windows/win32/api/codecapi/ne-codecapi-eavencvideochromaresolution) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVEncVideoColoraResolution-Enumeration.**](/windows/win32/api/codecapi/ne-codecapi-eavencvideochromaresolution)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,20 +35,20 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavencvideochromaresolution**]
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

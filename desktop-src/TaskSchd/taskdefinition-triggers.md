@@ -1,11 +1,11 @@
 ---
-title: Taskdefinition. Triggers (Eigenschaft)
-description: Ruft bei der Skripterstellung eine Auflistung von Triggern ab, die zum Starten einer Aufgabe verwendet werden, oder legt diese fest.
+title: TaskDefinition.Triggers(Eigenschaft)
+description: Für die Skripterstellung ruft eine Auflistung von Triggern ab, die zum Starten einer Aufgabe verwendet werden, oder legt diese fest.
 ms.assetid: ff5faa5d-30eb-4ecb-91bc-ae5e42fec69f
 keywords:
-- Trigger-Eigenschaften Taskplaner
-- Trigger-Eigenschaft Taskplaner, Task Definition-Objekt
-- Taskdefinition-Objekt Taskplaner, Trigger-Eigenschaft
+- Triggereigenschafts-Taskplaner
+- Trigger-Eigenschaft Taskplaner , TaskDefinition-Objekt
+- TaskDefinition-objekt Taskplaner , Triggers-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 914724c8b0f39cafb7328a39acd827eed1ec386e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1c6dc654473b7e6c01e439f48e013b8e758383641f711643098460ce5bdb4960
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119975020"
 ---
-# <a name="taskdefinitiontriggers-property"></a>Taskdefinition. Triggers (Eigenschaft)
+# <a name="taskdefinitiontriggers-property"></a>TaskDefinition.Triggers(Eigenschaft)
 
-Ruft bei der Skripterstellung eine Auflistung von Triggern ab, die zum Starten einer Aufgabe verwendet werden, oder legt diese fest.
+Für die Skripterstellung ruft eine Auflistung von Triggern ab, die zum Starten einer Aufgabe verwendet werden, oder legt diese fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,18 +46,18 @@ Eine Auflistung von Triggern, die zum Starten einer Aufgabe verwendet werden.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TriggerCollection**](triggercollection.md)
+[**Triggercollection**](triggercollection.md)
 </dt> <dt>
 
 [**Trigger**](trigger.md)

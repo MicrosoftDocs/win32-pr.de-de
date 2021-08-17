@@ -1,11 +1,11 @@
 ---
-title: Ideviceicon-ContentType-Methode
+title: IDeviceIcon ContentType-Methode
 description: Ruft den Inhaltstyp des Symbols ab.
 ms.assetid: 01928A98-B7D0-4523-9259-81FEB33F052E
 keywords:
-- ContentType-Methode Medien Streaming-API
-- ContentType-Methode Medien Streaming-API, ideviceicon-Schnittstelle
-- Ideviceicon Interface Medien Streaming-API, ContentType-Methode
+- 'ContentType-Methode: Media Streaming-API'
+- 'ContentType-Methode: Media Streaming-API, IDeviceIcon-Schnittstelle'
+- IDeviceIcon-Schnittstelle Media Streaming-API, ContentType-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: af48aabb2a64f4c4b8fbd40a3859acc82496a399
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: d8fb9cb639381b60bb59965d12ce3f0545daf6d2725cde69d3dea3dee589f8f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103858177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119461744"
 ---
-# <a name="ideviceiconcontenttype-method"></a>Ideviceicon:: ContentType-Methode
+# <a name="ideviceiconcontenttype-method"></a>IDeviceIcon::ContentType-Methode
 
 Ruft den Inhaltstyp des Symbols ab.
 
@@ -41,7 +41,7 @@ HRESULT ContentType(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*value* \[ out\]
 </dt> <dd>
 
 Empfängt einen Zeiger auf den Inhaltstyp des Symbols.
@@ -50,7 +50,7 @@ Empfängt einen Zeiger auf den Inhaltstyp des Symbols.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -62,11 +62,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ideviceicon**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-ideviceicon)
+[**IDeviceIcon**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-ideviceicon)
 </dt> </dl>
 
  

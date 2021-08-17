@@ -1,6 +1,6 @@
 ---
 title: g_wszWMVCInterlacedCodingEnabled (Wmcodecdsp.h)
-description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | g_wszWMVCInterlacedCodingEnabled (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | g_wszWMVCInterlacedCodingEnabled (Wmcodecdsp.h)
 ms.assetid: 6ce382d0-b856-44e3-a8fb-96765d2797ca
 keywords:
 - g_wszWMVCInterlacedCodingEnabled Windows-Medienformat
@@ -23,7 +23,7 @@ ms.locfileid: "118198794"
 ---
 # <a name="g_wszwmvcinterlacedcodingenabled"></a>g \_ wszWMVCInterlacedCodingEnabled
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und Digitalsignalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 

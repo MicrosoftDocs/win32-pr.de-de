@@ -41,7 +41,7 @@ HRESULT GetKeyValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ In\]
+*Key* \[ In\]
 </dt> <dd>
 
 Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.

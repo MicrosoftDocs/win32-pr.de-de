@@ -1,5 +1,5 @@
 ---
-description: Die FileSize-Methode des Installer-Objekts verwendet Win32-API-Aufrufe, um die Größe der in Path angegebenen Datei zurück anzugeben.
+description: Die FileSize-Methode des Installer-Objekts verwendet Win32-API-Aufrufe, um die In Path angegebene Dateigröße zurückzugeben.
 ms.assetid: d7119e5e-9315-4b20-a904-bc1104f3a4e4
 title: Installer.FileSize-Methode
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118630689"
 ---
 # <a name="installerfilesize-method"></a>Installer.FileSize-Methode
 
-Die **FileSize-Methode** des [**Installer-Objekts**](installer-object.md) verwendet Win32-API-Aufrufe, um die Größe der in Pfad angegebenen Datei *zurück anzugeben.*
+Die **FileSize-Methode** des [**Installer-Objekts**](installer-object.md) verwendet Win32-API-Aufrufe, um die Größe der unter *Pfad* angegebenen Datei zurückzugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,9 +56,9 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 

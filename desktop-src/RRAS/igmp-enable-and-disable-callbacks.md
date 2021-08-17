@@ -1,24 +1,24 @@
 ---
-title: IGMP-Rückrufe aktivieren und deaktivieren
-description: Der Multicast-Gruppen-Manager verwendet zwei Rückrufe zu IGMP, um Änderungen im Schnittstellen Besitz von IGMP zu einem Routing Protokoll und von einem Routing Protokoll an IGMP zu koordinieren.
+title: 'IGMP: Aktivieren und Deaktivieren von Rückrufen'
+description: Der Multicastgruppenleiter verwendet zwei Rückrufe an IGMP, um Änderungen im Schnittstellenbesitz von IGMP zu einem Routingprotokoll und von einem Routingprotokoll an IGMP zu koordinieren.
 ms.assetid: e4b2be85-6c67-4801-9905-eb1990d4bbb6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6aa58e9b65c67ac5946f5f5e54e611565e59d8c7
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 103a0f9abb4d2a78b2b87fde3cb5832b4e88eb2677851d9fe703e5162263642c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858404"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117791143"
 ---
-# <a name="igmp-enable-and-disable-callbacks"></a>IGMP-Rückrufe aktivieren und deaktivieren
+# <a name="igmp-enable-and-disable-callbacks"></a>IGMP: Aktivieren und Deaktivieren von Rückrufen
 
-Der Multicast-Gruppen-Manager verwendet zwei Rückrufe zu IGMP, um Änderungen im Schnittstellen Besitz von IGMP zu einem Routing Protokoll und von einem Routing Protokoll an IGMP zu koordinieren. Die Rückrufe ermöglichen es IGMP, auf einer Schnittstelle mit einem anderen Routing Protokoll (z. b. DVMRP) nebeneinander zu existieren.
+Der Multicastgruppenleiter verwendet zwei Rückrufe an IGMP, um Änderungen im Schnittstellenbesitz von IGMP zu einem Routingprotokoll und von einem Routingprotokoll an IGMP zu koordinieren. Die Rückrufe ermöglichen igmp das gleichzeitige Verwenden einer Schnittstelle mit einem anderen Routingprotokoll, z. B. DVMRP.
 
-Nachdem sich der Besitz einer Schnittstelle geändert hat, ruft der Multicast-Gruppen-Manager zunächst den [**pmgm-Rückruf Rückruf " \_ \_ IGMP \_ Deaktivieren**](/windows/win32/api/mgm/nc-mgm-pmgm_disable_igmp_callback) " auf. IGMP muss das Hinzufügen und Löschen von Gruppenmitgliedschaften auf der angegebenen Schnittstelle verhindern, bis der Multicast-Gruppen-Manager den [**pmgm-Rückruf Rückruf " \_ enable \_ IGMP \_**](/windows/desktop/api/Mgm/nc-mgm-pmgm_enable_igmp_callback) " aufruft.
+Nachdem sich der Besitz einer Schnittstelle geändert hat, ruft der Multicastgruppen-Manager zuerst den [**PMGM \_ DISABLE \_ IGMP \_ CALLBACK-Rückruf**](/windows/win32/api/mgm/nc-mgm-pmgm_disable_igmp_callback) auf. IGMP muss das Hinzufügen und Löschen von Gruppenmitgliedschaften auf der angegebenen Schnittstelle beenden, bis der Multicastgruppen-Manager den [**PMGM \_ ENABLE \_ IGMP \_ CALLBACK-Rückruf**](/windows/desktop/api/Mgm/nc-mgm-pmgm_enable_igmp_callback) aufruft.
 
-Der Multicast-Gruppen-Manager ruft den [**pmgm- \_ Rückruf " \_ IGMP- \_ Rückruf aktivieren**](/windows/desktop/api/Mgm/nc-mgm-pmgm_enable_igmp_callback) " auf, nachdem die Änderung des Schnittstellen Besitzes beendet wurde.
+Der Multicastgruppen-Manager ruft den [**PMGM \_ ENABLE \_ IGMP \_ CALLBACK-Rückruf**](/windows/desktop/api/Mgm/nc-mgm-pmgm_enable_igmp_callback) auf, nachdem die Änderung des Schnittstellenbesitzes abgeschlossen ist.
 
- 
+ 
 
- 
+ 

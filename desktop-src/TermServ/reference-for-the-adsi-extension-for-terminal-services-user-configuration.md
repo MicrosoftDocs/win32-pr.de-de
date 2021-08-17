@@ -1,38 +1,38 @@
 ---
 title: Referenz für die ADSI-Erweiterung für Remotedesktopdienste Benutzerkonfiguration
-description: Eigenschaften Methoden, die Sie verwenden können, um Remotedesktopdienste Benutzereigenschaften zu überprüfen und zu konfigurieren.
+description: Eigenschaftenmethoden, die Sie zum Untersuchen und Konfigurieren Remotedesktopdienste Benutzereigenschaften verwenden können.
 ms.assetid: 7c8b654d-5899-4f4d-8341-92e0650e403b
 ms.tgt_platform: multiple
 keywords:
-- Iadstsuserex-Klasse Remotedesktopdienste
-- Remotedesktopdienste Remotedesktopdienste, iadstsuserex-Klasse
+- IADsTSUserEx-Klasse Remotedesktopdienste
+- Remotedesktopdienste Remotedesktopdienste , IADsTSUserEx-Klasse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 54fb8cca961ddc48e2444da55f6b507120bc468e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1ade30d34118f10afda4b03572f026fc302b709f6e8e81b3087b607c2883f2cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119138023"
 ---
 # <a name="reference-for-the-adsi-extension-for-remote-desktop-services-user-configuration"></a>Referenz für die ADSI-Erweiterung für Remotedesktopdienste Benutzerkonfiguration
 
-Mit der ADSI-Erweiterung für Remotedesktopdienste Benutzerkonfiguration können Domänen Administratoren Skripts schreiben, um die Wartung von Remotedesktopdienste spezifischen Benutzereigenschaften zu automatisieren. Es enthält die folgende duale Schnittstelle.
+Die ADSI-Erweiterung für Remotedesktopdienste-Benutzerkonfiguration ermöglicht Domänenadministratoren das Schreiben von Skripts, um die Wartung Remotedesktopdienste benutzerspezifischen Eigenschaften zu automatisieren. Sie enthält die folgende duale Schnittstelle.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**Iadstsuserex**](/windows/desktop/api/Tsuserex/nn-tsuserex-iadstsuserex)
+[**IADsTSUserEx**](/windows/desktop/api/Tsuserex/nn-tsuserex-iadstsuserex)
 </dt> <dd>
 
-Wird verwendet, um Remotedesktopdienste Benutzereigenschaften zu untersuchen und zu konfigurieren.
+Wird zum Untersuchen und Konfigurieren Remotedesktopdienste Benutzereigenschaften verwendet.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

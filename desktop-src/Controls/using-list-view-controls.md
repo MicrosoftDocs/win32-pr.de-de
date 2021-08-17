@@ -1,6 +1,6 @@
 ---
-title: Verwenden List-View-Steuerelementen
-description: Dieser Abschnitt enthält Codebeispiele, die veranschaulichen, wie Listenansichtssteuerelemente in Ihren Anwendungen erstellt und verwendet werden.
+title: Verwenden von List-View Steuerelementen
+description: Dieser Abschnitt enthält Codebeispiele, die veranschaulichen, wie Sie Listenansichtssteuerelemente in Ihren Anwendungen erstellen und verwenden.
 ms.assetid: 6953cdfc-8c59-4c6d-8998-f828cea3a315
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,15 +11,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118407784"
 ---
-# <a name="using-list-view-controls"></a>Verwenden List-View-Steuerelementen
+# <a name="using-list-view-controls"></a>Verwenden von List-View Steuerelementen
 
-Dieser Abschnitt enthält Codebeispiele, die veranschaulichen, wie Listenansichtssteuerelemente in Ihren Anwendungen erstellt und verwendet werden.
+Dieser Abschnitt enthält Codebeispiele, die veranschaulichen, wie Sie Listenansichtssteuerelemente in Ihren Anwendungen erstellen und verwenden.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                      | BESCHREIBUNG                                                                                                                                                                                                                                                                                                       |
+| Thema                                                                                      | Beschreibung                                                                                                                                                                                                                                                                                                       |
 |--------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Erstellen eines List-View Steuerelements](create-a-list-view-control.md)<br/>             | In diesem Thema wird veranschaulicht, wie sie ein Listenansicht-Steuerelement erstellen. Um ein Listenansicht-Steuerelement zu erstellen, verwenden Sie die [**CreateWindow-**](/windows/desktop/api/winuser/nf-winuser-createwindowa) oder [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) und geben die [**FENSTERklasse WC \_ LISTVIEW**](common-control-window-classes.md) an. <br/> |
 | [Hinzufügen von List-View Bildlisten](add-list-view-image-lists.md)<br/>               | In diesem Thema wird veranschaulicht, wie Einem Listenansicht-Steuerelement Bildlisten hinzugefügt werden.<br/>                                                                                                                                                                                                                                 |

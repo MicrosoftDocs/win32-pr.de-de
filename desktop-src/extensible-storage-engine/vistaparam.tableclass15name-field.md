@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: vistaparam. TableClass15Name-Feld'
-title: Vistaparam. TableClass15Name-Feld (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen finden Sie unter: VistaParam.TableClass15Name-Feld'
+title: VistaParam.TableClass15Name-Feld (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: TableClass15Name field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Vista.VistaParam.TableClass15Name
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistaparam.tableclass15name(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8d1ae0ad2b2a9d6ff776eb4979430f85c47609c4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ed4d3e98e526bfd798ee21f3d92ef3eb5f79e30c2b80b7b7599e3597e812ea3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050402"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119106668"
 ---
-# <a name="vistaparamtableclass15name-field"></a>Vistaparam. TableClass15Name-Feld
+# <a name="vistaparamtableclass15name-field"></a>VistaParam.TableClass15Name-Feld
 
-Legen Sie den der Tabellen Klasse 15 zugeordneten Namen fest.
+Legen Sie den Namen fest, der der Tabellenklasse 15 zugeordnet ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,12 +53,12 @@ value = VistaParam.TableClass15Name
 public const JET_param TableClass15Name
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistaparam-Klasse](./vistaparam-class.md)
+[VistaParam-Klasse](./vistaparam-class.md)
 
-[Vistaparam-Member](./vistaparam-members.md)
+[VistaParam-Member](./vistaparam-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

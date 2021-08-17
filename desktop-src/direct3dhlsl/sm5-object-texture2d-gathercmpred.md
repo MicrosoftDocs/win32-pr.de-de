@@ -1,9 +1,9 @@
 ---
-title: 'Texture2D:: gathercmpred (S, float, float, int)-Funktion'
-description: 'Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der roten Komponente mit einem Vergleichswert zurückgegeben. | Texture2D:: gathercmpred (S, float, float, int)-Funktion'
+title: Texture2D::GatherCmpRed(S,float,float,int)-Funktion
+description: Für vier Texelwerte, die in einem bilinealen Filtervorgang verwendet werden, gibt einen Vergleich ihrer roten Komponente mit einem Vergleichswert zurück. | Texture2D::GatherCmpRed(S,float,float,int)-Funktion
 ms.assetid: bd5fdd3b-c1b0-4cb0-aec5-9fe020420e6c
 keywords:
-- Gathercmpred-Funktion HLSL
+- GatherCmpRed-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e221dbe60141eb809d41361a0a6a93d8bf2a7d7e
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 07786eb41dfd45ce911717ee17b14c4694ab1972115b92a79076aef358ab0ad6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120095090"
 ---
-# <a name="texture2dgathercmpredsfloatfloatint-function"></a>Texture2D:: gathercmpred (S, float, float, int)-Funktion
+# <a name="texture2dgathercmpredsfloatfloatint-function"></a>Texture2D::GatherCmpRed(S,float,float,int)-Funktion
 
-Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der roten Komponente mit einem Vergleichswert zurückgegeben.
+Für vier Texelwerte, die in einem bilinealen Filtervorgang verwendet werden, gibt einen Vergleich ihrer roten Komponente mit einem Vergleichswert zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,36 +42,36 @@ float4 GatherCmpRed(
 *s* \[ in\]
 </dt> <dd>
 
-Typ: **samplercomparisonstate**
+Typ: **SamplerComparisonState**
 
-Der null basierte samplerindex.
+Der nullbasierte Samplerindex.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*location* \[ In\]
 </dt> <dd>
 
 Typ: **float2**
 
-Die Beispiel Koordinaten (u, v).
+Die Beispielkoordinaten (u,v).
 
 </dd> <dt>
 
-*\_ Wert vergleichen* \[ in\]
+*Vergleichen \_ des Werts* \[ in\]
 </dt> <dd>
 
 Typ: **float**
 
-Ein Wert, der jeweils mit jedem Stichproben Wert verglichen werden soll.
+Ein -Wert, der jeweils mit jedem stichprobenentnahmen Wert verglichen werden soll.
 
 </dd> <dt>
 
-*Offset* \[ in\]
+*offset* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Ein Offset, der vor der Stichprobenentnahme auf die Textur Koordinate angewendet wird.
+Ein Offset, der vor der Stichprobenentnahme auf die Texturkoordinate angewendet wird.
 
 </dd> </dl>
 
@@ -79,17 +79,17 @@ Ein Offset, der vor der Stichprobenentnahme auf die Textur Koordinate angewendet
 
 Typ: **float4**
 
-Ein vier komponentenwert, wobei jede Komponente das Ergebnis eines Vergleichs pro Komponente ist.
+Ein Wert mit vier Komponenten, bei dem jede Komponente das Ergebnis eines Komponentenvergleichs ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Textur Beispiele können für bilineare Interpolationen verwendet werden.
+Die Texturbeispiele können für die bilineare Interpolation verwendet werden.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -101,10 +101,10 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Gathercmpred-Methoden](texture2d-gathercmpred.md)
+[GatherCmpRed-Methoden](texture2d-gathercmpred.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

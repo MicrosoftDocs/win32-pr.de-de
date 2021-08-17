@@ -1,5 +1,5 @@
 ---
-description: Ruft die aktuelle Position innerhalb der Breite, Höhe und Tiefe ab, die mit dem systeminternen [**dispatchraysdimensions**](dispatchraysdimensions.md) -System Wert abgerufen wird.
+description: Ruft die aktuelle Position innerhalb der Breite, Höhe und Tiefe ab, die mit dem [**systeminternen DispatchRaysDimensions-Systemwert**](dispatchraysdimensions.md) ermittelt wird.
 title: 'DispatchRaysIndex '
 ms.localizationpriority: low
 ms.topic: reference
@@ -11,16 +11,16 @@ api_name:
 - DispatchRaysIndex
 api_type:
 - NA
-ms.openlocfilehash: aa26400c26aba4ee9e647bcd0a79bad3f3d52f7c
-ms.sourcegitcommit: 4e4f9e7c90d25af0774deec1d44bd49fa9b6daa9
+ms.openlocfilehash: 1b40987c76f42d41d74b7cb3d41f35cc20bd5a6ac1414ae9b010cedcfa7ef9fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "106338099"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119124165"
 ---
 # <a name="dispatchraysindex"></a>DispatchRaysIndex 
 
-Ruft die aktuelle Position innerhalb der Breite, Höhe und Tiefe ab, die mit dem systeminternen [**dispatchraysdimensions**](dispatchraysdimensions.md) -System Wert abgerufen wird.
+Ruft die aktuelle Position innerhalb der Breite, Höhe und Tiefe ab, die mit dem [**systeminternen DispatchRaysDimensions-Systemwert**](dispatchraysdimensions.md) ermittelt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,9 +28,9 @@ Ruft die aktuelle Position innerhalb der Breite, Höhe und Tiefe ab, die mit dem
 uint3 DispatchRaysIndex();
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion kann von den folgenden Raytracing-shadertypen aufgerufen werden.
+Diese Funktion kann von den folgenden Raytracing-Shadertypen aufgerufen werden.
 
 * [**Any Hit-Shader**](any-hit-shader.md)
 * [**Callable-Shader**](callable-shader.md)
@@ -39,6 +39,6 @@ Diese Funktion kann von den folgenden Raytracing-shadertypen aufgerufen werden.
 * [**Miss-Shader**](miss-shader.md)
 * [**Ray Generation-Shader**](ray-generation-shader.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Direct3D 12-Raytracing, HLSL-Referenz](direct3d-12-raytracing-hlsl-reference.md)

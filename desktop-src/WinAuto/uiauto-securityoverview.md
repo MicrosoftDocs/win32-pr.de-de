@@ -28,7 +28,7 @@ ms.locfileid: "118563963"
 ---
 # <a name="security-considerations-for-assistive-technologies"></a>Sicherheitsüberlegungen für Hilfstechnologien
 
-Hilfstechnologien sind Anwendungen, die auf dem Windows Desktop ausgeführt werden und Barrierefreiheitsbenutzern helfen, mit dem Betriebssystem und anderen Anwendungen zu interagieren, die auf dem Computer ausgeführt werden, einschließlich Anwendungen in der neuen Windows Ui. Hilfstechnologieanwendungen arbeiten, indem Sie Informationen aus dem Betriebssystem und anderen Anwendungen abrufen und die Informationen dann so darstellen, dass sie für den Benutzer zugänglich sind. Eine Hilfstechnologieanwendung kann das Betriebssystem und andere Anwendungen auch programmgesteuert basierend auf Eingaben des Benutzers "steuern".
+Hilfstechnologien sind Anwendungen, die auf dem Windows Desktop ausgeführt werden und Barrierefreiheitsbenutzern helfen, mit dem Betriebssystem und anderen Anwendungen zu interagieren, die auf dem Computer ausgeführt werden, einschließlich Anwendungen in der neuen Windows Benutzeroberfläche. Hilfstechnologieanwendungen arbeiten, indem Sie Informationen aus dem Betriebssystem und anderen Anwendungen abrufen und die Informationen dann so darstellen, dass sie für den Benutzer zugänglich sind. Eine Hilfstechnologieanwendung kann das Betriebssystem und andere Anwendungen auch programmgesteuert basierend auf Eingaben des Benutzers "steuern".
 
 Die Art von Hilfstechnologieanwendungen erfordert, dass sie Prozessgrenzen überschreiten und Zugriff auf Prozesse haben, die auf einer höheren Integritätsebene als sie selbst ausgeführt werden. (Eine Hilfstechnologieanwendung wird bei mittlerer IL ausgeführt.) Wenn der Benutzer beispielsweise versucht, eine Aufgabe auszuführen, die Administratorrechte erfordert, zeigt Windows ein Dialogfeld an, in dem der Benutzer zur Zustimmung aufgefordert wird, den Vorgang fortzusetzen. Dieses Dialogfeld wird auf einer höheren IL ausgeführt, um es vor prozessübergreifender Kommunikation zu schützen, sodass Schadsoftware keine Benutzereingaben simulieren kann. Auf ähnliche Weise wird der Desktopanmeldungsbildschirm auf einer höheren IL ausgeführt, um zu verhindern, dass andere Prozesse darauf zugreifen.
 
@@ -40,7 +40,7 @@ Um Zugriff auf höhere IL-Prozesse zu erhalten, muss eine Hilfstechnologieanwend
 > Zugriffsberechtigungen sind wie folgt eingeschränkt:
 >
 > - Eine Anwendung, die nicht über UIAccess im Manifest verfügt, beginnt mit medium IL und kann nicht auf die Prozess-UI mit erhöhten Rechten ("Mittel+" IL) zugreifen.
-> - Eine Anwendung, die UIAccess im Manifest enthält und von einem Benutzer gestartet wird, der sich nicht in der Gruppe "Administratoren" befindet, als IL "Mittel+" gestartet wird und nicht auf die benutzeroberfläche mit erhöhten Rechten zugreifen kann (nichts wird als "hohe" IL ausgeführt, z. B. Apps, die über einen **Rechtsklick -> Als Administrator ausführen** gestartet werden).
+> - Eine Anwendung, die UIAccess im Manifest enthält und von einem Benutzer gestartet wird, der sich nicht in der Gruppe "Administratoren" befindet, als IL "mittel+" beginnt und nicht auf erhöhte Benutzeroberflächen zugreifen kann (nichts wird als "hohe" IL ausgeführt, z. B. Apps, die über einen **Rechtsklick -> Als Administrator ausführen** gestartet werden).
 > - Eine Anwendung verfügt über Benutzeroberflächenzugriff und wird von einem Administratorbenutzer als "hohe" IL gestartet und kann auf die Benutzeroberfläche mit erhöhten Rechten zugreifen, da sie über die gleiche IL verfügt.
 >
 > UIAccess reicht nicht aus, um einen Prozess durch die IL-Grenze nach oben zu verschieben.
@@ -52,7 +52,7 @@ Neben dem Zugriff auf höhere IL-Prozesse kann eine Hilfstechnologieanwendung mi
 
 ## <a name="uiaccess-requirements-for-assistive-technology-applications"></a>UIAccess-Anforderungen für Hilfstechnologieanwendungen
 
-Eine Hilfstechnologieanwendung ist eine Windows Windows Desktopanwendung, die mit anderen Prozessen interagiert, die auf dem Desktop und in der neuen Windows Ui ausgeführt werden, um Informationen aus dem System und den Anwendungen abzurufen. Die Hilfstechnologieanwendung kann dann die Informationen für Barrierefreiheitsbenutzer bereitstellen.
+Eine Hilfstechnologieanwendung ist eine Windows Windows Desktopanwendung, die mit anderen Prozessen interagiert, die auf dem Desktop und in der neuen Windows Ui ausgeführt werden, um Informationen vom System und den Anwendungen abzurufen. Die Hilfstechnologieanwendung kann dann die Informationen für Barrierefreiheitsbenutzer bereitstellen.
 
 Eine Hilfstechnologieanwendung erhält Zugriff auf andere Prozesse, indem sie das UIAccess-Flag im Anwendungsmanifest festlegt. Um das UIAccess-Flag zu verwenden, muss eine Hilfstechnologieanwendung die folgenden Anforderungen erfüllen.
 
@@ -98,7 +98,7 @@ Der Wert  des Ebenenattributs in diesem Code ist nur ein Beispiel.
 
 **UIAccess** ist standardmäßig "false". Wenn das Attribut ausgelassen wird oder kein Manifest vorhanden ist, kann die Anwendung keinen Zugriff auf die geschützte Benutzeroberfläche erhalten.
 
-Weitere Informationen zur sicherheit Windows, zum Signieren von Anwendungen und zum Erstellen von Manifesten finden Sie unter [The Windows Vista and Windows Server 2008 Developer Story: Windows Vista Application Development Requirements for User Account Control (UAC)](/previous-versions/aa905330(v=msdn.10)) auf MSDN.
+Weitere Informationen zur sicherheit Windows, zum Signieren von Anwendungen und zum Erstellen von Manifesten finden Sie auf MSDN unter [The Windows Vista and Windows Server 2008 Developer Story: Windows Vista Application Development Requirements for User Account Control (UAC).](/previous-versions/aa905330(v=msdn.10))
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

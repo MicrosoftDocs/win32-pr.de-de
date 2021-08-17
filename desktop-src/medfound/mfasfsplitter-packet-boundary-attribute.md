@@ -1,35 +1,35 @@
 ---
-description: Gibt an, ob ein Puffer den Anfang eines Pakets für das Advanced Systems Format (ASF) enthält.
+description: Gibt an, ob ein Puffer den Anfang eines ASF-Pakets (Advanced Systems Format) enthält.
 ms.assetid: eca3f9b7-6051-4654-8016-a9c679519bc7
-title: MFASFSPLITTER_PACKET_BOUNDARY-Attribut (wmcontainer. h)
+title: MFASFSPLITTER_PACKET_BOUNDARY-Attribut (Wmcontainer.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 044fd3ed635dc7cb45db1cb9e5c480481b06cd31
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0904c6b5a002d6aa18361365946a176521674ea22f7a45cc042b89d844c4210d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119464060"
 ---
-# <a name="mfasfsplitter_packet_boundary-attribute"></a>Mfasarsplitter- \_ Paket \_ Begrenzungs Attribut
+# <a name="mfasfsplitter_packet_boundary-attribute"></a>MFASFSPLITTER \_ PACKET \_ BOUNDARY-Attribut
 
-Gibt an, ob ein Puffer den Anfang eines Pakets für das Advanced Systems Format (ASF) enthält.
+Gibt an, ob ein Puffer den Anfang eines ASF-Pakets (Advanced Systems Format) enthält.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-Als booleschen Wert behandeln.
+Als boolescher Wert behandeln.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Medien Puffer die [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Schnittstelle über **QueryInterface** verfügbar macht und der Wert dieses Attributs ungleich NULL ist, behandelt der ASF-Splitter den Puffer als Anfang eines neuen Pakets.
+Wenn ein Medienpuffer die [**INTERFACESAttributes-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) über **QueryInterface** verfügbar macht und der Wert dieses Attributs ungleich 0 (null) ist, behandelt der ASF-Splitter den Puffer als Anfang eines neuen Pakets.
 
-Dieses Attribut gilt, wenn Sie den ASF-Splitter zum Analysieren von ASF-Daten verwenden. Wenn Ihre ASF-Daten über Variable Paket Längen verfügen, müssen Sie dieses Attribut für die Medien Puffer festlegen, die Sie an die [**imfasfsplitter::P arsedata**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfsplitter-parsedata) -Methode übergeben. Legen Sie das-Attribut auf **true** fest, wenn der Puffer den Anfang eines neuen Pakets enthält. Wenn der Puffer eine Fortsetzung des vorherigen Pakets enthält, legen Sie das-Attribut auf " **false**" fest. Die Puffer können nicht mehrere Pakete umfassen.
+Dieses Attribut gilt, wenn Sie den ASF-Splitter zum Analysieren von ASF-Daten verwenden. Wenn Ihre ASF-Daten variable Paketlängen aufweisen, müssen Sie dieses Attribut für die Medienpuffer festlegen, die Sie an die [**IMFASFSplitter::P arseData-Methode**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfsplitter-parsedata) übergeben. Legen Sie das Attribut auf **TRUE** fest, wenn der Puffer den Anfang eines neuen Pakets enthält. Wenn der Puffer eine Fortsetzung des vorherigen Pakets enthält, legen Sie das -Attribut auf **FALSE** fest. Die Puffer können sich nicht über mehrere Pakete erstrecken.
 
-Bei ASF-Daten mit fester Paketgröße ist dieses Attribut nicht erforderlich, und ein Puffer kann mehrere Pakete umfassen.
+Für ASF-Daten mit festen Paketgrößen ist dieses Attribut nicht erforderlich, und ein Puffer kann mehrere Pakete umfassen.
 
-Beachten Sie, dass die Standard Implementierungen von [**imfmediabuffer**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediabuffer) , die von Media Foundation bereitgestellt werden, keine [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)verfügbar machen. Um dieses Attribut zu verwenden, müssen Sie eine eigene Implementierung von **imfmediabuffer** bereitstellen. beispielsweise durch das umwickeln der von [**MF | atememorybuffer**](/windows/desktop/api/mfapi/nf-mfapi-mfcreatememorybuffer)zurückgegebenen Puffer.
+Beachten Sie, dass die von Media Foundation bereitgestellten Standardimplementierungen des [**VOM**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediabuffer) -Media Foundation [**NICHT DIE ATTRIBUTEAttribute verfügbar**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)machen. Um dieses Attribut verwenden zu können, müssen Sie Ihre eigene Implementierung von **ÜBERMEDIABUFFER** bereitstellen. z. B. durch Umschließen der Puffer, die von [**MFCreateMemoryBuffer**](/windows/desktop/api/mfapi/nf-mfapi-mfcreatememorybuffer)zurückgegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,13 +37,13 @@ Beachten Sie, dass die Standard Implementierungen von [**imfmediabuffer**](/wind
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Wmcontainer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Wmcontainer.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -53,13 +53,13 @@ Beachten Sie, dass die Standard Implementierungen von [**imfmediabuffer**](/wind
 [ASF-Attribute](asf-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEAttributes::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**DENKattribute::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**Imfmediabuffer**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediabuffer)
+[**BUFFERMediaBuffer**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediabuffer)
 </dt> </dl>
 
  

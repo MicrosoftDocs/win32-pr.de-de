@@ -1,34 +1,34 @@
 ---
-title: EAPHost-Authentifikator-Methoden Enumerationen
-description: Erfahren Sie mehr über die EAPHost-Authentifikator-Methoden Enumerationen. Die Enumerationen sind EAP \_ Authenticator \_ Send \_ Timeout und EAP- \_ Methode \_ Authentifikator \_ Response \_ Action.
+title: EAPHost-Authenticator-Methodenenumeration
+description: Erfahren Sie mehr über EAPHost Authenticator Methodenenumeration. Die Enumerationen sind EAP \_ AUTHENTICATOR \_ SEND \_ TIMEOUT und EAP \_ METHOD \_ AUTHENTICATOR RESPONSE \_ \_ ACTION.
 ms.assetid: 8c21625f-a9b7-4ea5-98ff-cdcce637dad8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 14b9f19efba1756ce450683a2c3516d3f352ac84
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 043ed53dfe3c358eb5c7a697261481f8a579d4f267f1ea989b0da01a1e45f120
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106337261"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120094440"
 ---
-# <a name="eaphost-authenticator-method-enumerations"></a>EAPHost-Authentifikator-Methoden Enumerationen
+# <a name="eaphost-authenticator-method-enumerations"></a>EAPHost-Authenticator-Methodenenumeration
 
-Die Enumerationen der EAPHost-Authenticator-Methode lauten wie folgt.
+Die EAPHost-Authenticator Methodenenumeration lauten wie folgt.
 
 
 
 | Enumeration                                                                                      | Beschreibung                                                                                                                                        |
 |--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Sende Timeout für EAP- \_ Authentifikator \_ \_**](/windows/desktop/api/eapAuthenticatorTypes/ne-eapauthenticatortypes-eap_authenticator_send_timeout)                      | Gibt dem Informationssystem (ist) die Zeitspanne an, die nach dem Senden des Pakets auf Benutzereingaben gewartet werden soll. Der Timeout Wert kann auf "None" festgelegt werden. |
-| [**Antwort Aktion für EAP- \_ Methoden- \_ Authentifikator \_ \_**](/windows/desktop/api/EapAuthenticatorActionDefine/ne-eapauthenticatoractiondefine-eap_method_authenticator_response_action) | Definiert die Antwort Anweisungen, die vom Authentifikator an die Supplicant-oder EAP-Peer Methode gesendet werden.                                                  |
+| [**EAP \_ AUTHENTICATOR \_ SEND \_ TIMEOUT**](/windows/desktop/api/eapAuthenticatorTypes/ne-eapauthenticatortypes-eap_authenticator_send_timeout)                      | Gibt dem Informationssystem (IS) an, wie lange nach dem Senden des Pakets auf Benutzereingaben gewartet werden soll. Der Timeoutwert kann auf "None" festgelegt werden. |
+| [**\_ \_ EAP-METHODENAUTHENTATOR-ANTWORTAKTION \_ \_**](/windows/desktop/api/EapAuthenticatorActionDefine/ne-eapauthenticatoractiondefine-eap_method_authenticator_response_action) | Definiert die Antwortanweisungen, die vom Authentator an die supplicant- oder EAP-Peermethode gesendet werden.                                                  |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,10 +1,10 @@
 ---
 title: Aktivieren des Dienstkontos für den Zugriff auf SCP-Eigenschaften
-description: Im folgenden Codebeispiel wird ein Paar von Access Control Einträgen (ACEs) für ein Dienstverbindungspunktobjekt (Service Connection Point, SCP) festgelegt.
+description: Im folgenden Codebeispiel wird ein Paar Access Control Entries (ACEs) für ein Dienstverbindungspunktobjekt (Service Connection Point, SCP) definiert.
 ms.assetid: 663dcf55-5f0d-49af-8b51-4c1e35b79ef1
 ms.tgt_platform: multiple
 keywords:
-- Aktivieren des Dienstkontos für den Zugriff auf SCP Properties AD
+- Aktivieren des Dienstkontos für den Zugriff auf SCP-Eigenschaften AD
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 260b08d4a7255813e2811c02ebd0e597a518f153db84f35cdb978a44369e5e8c
@@ -16,32 +16,32 @@ ms.locfileid: "118695309"
 ---
 # <a name="enabling-service-account-to-access-scp-properties"></a>Aktivieren des Dienstkontos für den Zugriff auf SCP-Eigenschaften
 
-Im folgenden Codebeispiel wird ein Paar von Access Control Einträgen (ACEs) für ein Dienstverbindungspunktobjekt (Service Connection Point, SCP) festgelegt. Die ACEs gewähren Lese-/Schreibzugriff auf das Benutzer- oder Computerkonto, unter dem die Dienstinstanz ausgeführt wird. Das Dienstinstallationsprogramm verwendet Code ähnlich dem folgenden, um sicherzustellen, dass der Dienst seine Eigenschaften zur Laufzeit aktualisieren kann. Wenn acEs ähnlich wie diese nicht festgelegt sind, hat der Dienst keinen Zugriff auf die Eigenschaften des SCP.
+Im folgenden Codebeispiel wird ein Paar Access Control Entries (ACEs) für ein Dienstverbindungspunktobjekt (Service Connection Point, SCP) definiert. Die ACEs gewähren Lese-/Schreibzugriff auf das Benutzer- oder Computerkonto, unter dem die Dienstinstanz ausgeführt wird. Das Dienstinstallationsprogramm verwendet Code ähnlich dem folgenden, um sicherzustellen, dass der Dienst seine Eigenschaften zur Laufzeit aktualisieren kann. Wenn aces ähnlich wie diese nicht festgelegt sind, hat der Dienst keinen Zugriff auf die Eigenschaften des SCP.
 
-In der Regel legt ein Dienstinstallationsprogramm diese ACEs nach dem Erstellen des SCP-Objekts fest. Weitere Informationen und ein Codebeispiel, das einen SCP erstellt und diese Funktion aufruft, finden Sie unter [Suchen und Verwenden eines Dienstverbindungspunkts](how-clients-find-and-use-a-service-connection-point.md)durch Clients. Wenn der Dienst für die Ausführung unter einem anderen Konto neu konfiguriert ist, müssen die ACEs aktualisiert werden. Um erfolgreich ausgeführt zu werden, muss dieses Codebeispiel im Sicherheitskontext eines Domänenadministrators ausgeführt werden.
+In der Regel werden diese ACEs von einem Dienstinstallationsprogramm festgelegt, nachdem das SCP-Objekt erstellt wurde. Weitere Informationen und ein Codebeispiel, das einen SCP erstellt und diese Funktion aufruft, finden Sie unter Suchen und Verwenden eines [Dienstverbindungspunkts durch Clients.](how-clients-find-and-use-a-service-connection-point.md) Wenn der Dienst für die Ausführung unter einem anderen Konto neu konfiguriert wird, müssen die ACEs aktualisiert werden. Um erfolgreich ausgeführt zu werden, muss dieses Codebeispiel im Sicherheitskontext eines Domänenadministrators ausgeführt werden.
 
-Der erste Parameter der Beispielfunktion gibt den Namen des Benutzerkontos an, dem Zugriff gewährt werden soll. Die Funktion geht davon aus, dass der Name im UserName-Format *Domäne* **\\** _vorliegt._ Wenn kein Konto angegeben wird, geht die Funktion davon aus, dass der Dienst das LocalSystem-Konto verwendet. Dies bedeutet, dass die Funktion Zugriff auf das Computerkonto des Hostservers gewähren muss, auf dem der Dienst ausgeführt wird. Zu diesem Zweck ruft das Codebeispiel die [**GetComputerObjectName-Funktion**](/windows/desktop/api/secext/nf-secext-getcomputerobjectnamea) auf, um die Domäne und den Benutzernamen des lokalen Computers abzurufen.
+Der erste Parameter der Beispielfunktion gibt den Namen des Benutzerkontos an, dem Zugriff gewährt werden soll. Die Funktion geht davon aus, dass der Name im **\\** _*Domain*UserName-Format_ vor liegt. Wenn kein Konto angegeben wird, geht die Funktion davon aus, dass der Dienst das LocalSystem-Konto verwendet. Dies bedeutet, dass die Funktion Zugriff auf das Computerkonto des Hostservers gewähren muss, auf dem der Dienst ausgeführt wird. Hierzu ruft das Codebeispiel die [**GetComputerObjectName-Funktion**](/windows/desktop/api/secext/nf-secext-getcomputerobjectnamea) auf, um die Domäne und den Benutzernamen des lokalen Computers zu erhalten.
 
-Das folgende Codebeispiel kann geändert werden, um dem Dienst Vollzugriff auf das SCP-Objekt zu gewähren. Die bewährte Methode besteht jedoch darin, nur die spezifischen Zugriffsrechte zu gewähren, die der Dienst zur Laufzeit benötigt. In diesem Fall gewährt die Funktion Zugriff auf zwei Eigenschaften.
+Das folgende Codebeispiel kann geändert werden, um dem Dienst Vollzugriff auf das SCP-Objekt zu gewähren. Die bewährte Methode besteht jedoch in der Gewährung nur der spezifischen Zugriffsrechte, die der Dienst zur Laufzeit benötigt. In diesem Fall gewährt die Funktion Zugriff auf zwei Eigenschaften.
 
 
 
-| Eigenschaft                                                              | Beschreibung                                                          |
+| Eigenschaft                                                              | BESCHREIBUNG                                                          |
 |-----------------------------------------------------------------------|----------------------------------------------------------------------|
 | [**serviceDNSName**](/windows/desktop/ADSchema/a-servicednsname)                       | Der Name des Hostservers, auf dem der Dienst ausgeführt wird.         |
-| [**serviceBindingInformation**](/windows/desktop/ADSchema/a-servicebindinginformation) | Private Bindungsinformationen, die der Dienst beim Start aktualisiert. |
+| [**serviceBindingInformation**](/windows/desktop/ADSchema/a-servicebindinginformation) | Private Bindungsinformationen, die der Dienst aktualisiert, wenn er gestartet wird. |
 
 
 
  
 
-Jede Eigenschaft wird durch die **schemaIDGUID** der **attributeSchema-Klasse** der Eigenschaft identifiziert. Jede Eigenschaft im Schema verfügt über ein eigenes eindeutiges **schemaIDGUID-Objekt.** Im folgenden Codebeispiel werden Zeichenfolgen verwendet, um die GUIDs anzugeben. Die GUID-Zeichenfolgen weisen das folgende Format auf, wobei jedes "X" durch eine Hexadezimalziffer ersetzt wird: {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}.
+Jede Eigenschaft wird durch die **schemaIDGUID der** **attributeSchema-Klasse** der Eigenschaft identifiziert. Jede Eigenschaft im Schema verfügt über eine eigene eindeutige **schemaIDGUID.** Im folgenden Codebeispiel werden Zeichenfolgen verwendet, um die GUIDs anzugeben. Die GUID-Zeichenfolgen haben das folgende Format, wobei jedes "X" durch eine Hexadezimalziffer ersetzt wird: {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}.
 
-Die **schemaIDGUID-Werte,** die den Eigenschaften zugewiesen sind, auf die der Zugriff gewährt oder verweigert werden soll, finden Sie auf den Referenzseiten des Active Directory-Schemas.
+Die **schemaIDGUID-Werte,** die den Eigenschaften zugewiesen sind, für die der Zugriff gewährt oder verweigert werden soll, finden Sie auf den Referenzseiten des Active Directory-Schemas.
 
-Im folgenden Codebeispiel werden die Schnittstellen [**IADsSecurityDescriptor,**](/windows/desktop/api/iads/nn-iads-iadssecuritydescriptor) [**IADsAccessControlList**](/windows/desktop/api/iads/nn-iads-iadsaccesscontrollist)und [**IADsAccessControlEntry**](/windows/desktop/api/iads/nn-iads-iadsaccesscontrolentry) verwendet, um die folgenden Vorgänge auszuführen.
+Im folgenden Codebeispiel werden die [**Schnittstellen IADsSecurityDescriptor,**](/windows/desktop/api/iads/nn-iads-iadssecuritydescriptor) [**IADsAccessControlList**](/windows/desktop/api/iads/nn-iads-iadsaccesscontrollist)und [**IADsAccessControlEntry**](/windows/desktop/api/iads/nn-iads-iadsaccesscontrolentry) verwendet, um die folgenden Vorgänge durchzuführen.
 
-1.  Rufen Sie den Sicherheitsdeskriptor des SCP-Objekts ab.
+1.  Abrufen der Sicherheitsbeschreibung des SCP-Objekts.
 2.  Legen Sie die entsprechenden ACEs in der DACL (Discretionary Access Control List) des Sicherheitsdeskriptors fest.
 3.  Ändern Sie die Sicherheitsbeschreibung des SCP-Objekts.
 

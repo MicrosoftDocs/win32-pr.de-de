@@ -21,9 +21,9 @@ DIE stellt die folgenden Makros zum Abrufen von Informationen aus einer [**FILEM
 [**FILEMUIINFO \_ GET \_ MAIN \_ TYPEID**](/windows/desktop/api/Winnls/nf-winnls-filemuiinfo_get_main_typeid)  
 [**FILEMUIINFO \_ GET \_ MAIN \_ TYPEIDS**](/windows/desktop/api/Winnls/nf-winnls-filemuiinfo_get_main_typeids)  
 [**FILEMUIINFO \_ GET \_ MAIN \_ TYPENAMES**](/windows/desktop/api/Winnls/nf-winnls-filemuiinfo_get_main_typenames)  
-[**FILEMUIINFO \_ GET \_ \_ DATEITYP-ID**](/windows/desktop/api/Winnls/nf-winnls-filemuiinfo_get_mui_typeid)  
+[**FILEMUIINFO \_ \_ GETDATEIERWEITERUNG \_ TYPEID**](/windows/desktop/api/Winnls/nf-winnls-filemuiinfo_get_mui_typeid)  
 [**FILEMUIINFO \_ GET \_ \_ DATEITYP-IDS**](/windows/desktop/api/Winnls/nf-winnls-filemuiinfo_get_mui_typeids)  
-[**FILEMUIINFO \_ GET \_ \_ TYPSNAMES**](/windows/desktop/api/Winnls/nf-winnls-filemuiinfo_get_mui_typenames)  
+[**FILEMUIINFO \_ GET \_ EMAIL \_ TYPENAMES**](/windows/desktop/api/Winnls/nf-winnls-filemuiinfo_get_mui_typenames)  
 </dl>
 
  

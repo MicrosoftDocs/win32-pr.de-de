@@ -1,21 +1,21 @@
 ---
-description: Um die Elemente eines Pfads abzurufen, rufen Sie die pdhparser-counterpath-Funktion auf. Die-Funktion analysiert die Elemente eines Counter-Pfads und gibt Sie in einer PDH- \_ counter- \_ Pfad \_ Elementstruktur zurück.
+description: Rufen Sie die PdhParseCounterPath-Funktion auf, um die Elemente eines Pfads abzurufen. Die Funktion analysiert die Elemente eines Indikatorpfads und gibt sie in einer PDH \_ COUNTER \_ PATH \_ ELEMENTS-Struktur zurück.
 ms.assetid: 65c722f9-6f9d-4e3d-abf3-867cf260ef9f
-title: Abrufen von Counter-Pfad Elementen aus einem Counter-Pfad
+title: Abrufen von Indikatorpfadelementen aus einem Indikatorpfad
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 08b8579033ddf7a97aec36b88bd067f9a240506d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 479c8df5c7176684fc439f632a22f829afe5afae202f7595579350450ee30c8f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106362470"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119143973"
 ---
-# <a name="obtaining-counter-path-elements-from-a-counter-path"></a>Abrufen von Counter-Pfad Elementen aus einem Counter-Pfad
+# <a name="obtaining-counter-path-elements-from-a-counter-path"></a>Abrufen von Indikatorpfadelementen aus einem Indikatorpfad
 
-Um die Elemente eines Pfads abzurufen, rufen Sie die [**pdhparser-counterpath**](/windows/desktop/api/Pdh/nf-pdh-pdhparsecounterpatha) -Funktion auf. Die-Funktion analysiert die Elemente eines Counter-Pfads und gibt Sie in einer [**PDH- \_ counter- \_ Pfad \_ Element**](/windows/desktop/api/Pdh/ns-pdh-pdh_counter_path_elements_a) Struktur zurück.
+Rufen Sie die [**PdhParseCounterPath-Funktion auf,**](/windows/desktop/api/Pdh/nf-pdh-pdhparsecounterpatha) um die Elemente eines Pfads abzurufen. Die Funktion analysiert die Elemente eines Indikatorpfads und gibt sie in einer [**PDH \_ COUNTER PATH \_ \_ ELEMENTS-Struktur**](/windows/desktop/api/Pdh/ns-pdh-pdh_counter_path_elements_a) zurück.
 
-Wenn Sie über einen komplexen Instanznamen verfügen (einen, der eine übergeordnete Instanz und einen Instanzindex enthält), können Sie die [**pdhparser seinstancename**](/windows/desktop/api/Pdh/nf-pdh-pdhparseinstancenamea) -Funktion aufrufen, um den Instanznamen, den Instanzindex und den übergeordneten Namen zu extrahieren.
+Wenn Sie über einen komplexen Instanznamen verfügen (einen, der eine übergeordnete Instanz und einen Instanzindex enthält), können Sie die [**PdhParseInstanceName-Funktion**](/windows/desktop/api/Pdh/nf-pdh-pdhparseinstancenamea) aufrufen, um den Instanznamen, den Instanzindex und den übergeordneten Namen zu extrahieren.
 
  
 

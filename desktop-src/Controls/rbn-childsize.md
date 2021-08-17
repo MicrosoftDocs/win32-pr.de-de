@@ -1,9 +1,9 @@
 ---
-title: RBN_CHILDSIZE Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Grund leisten-Steuerelement gesendet, wenn die Größe des untergeordneten Fensters eines Bands geändert wird. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: RBN_CHILDSIZE Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Rebar-Steuerelement gesendet, wenn die Größe des untergeordneten Fensters eines Bandes geändert wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: ba64d21a-e568-4894-8007-be644ae4f54a
 keywords:
-- Windows-Steuerelemente für RBN_CHILDSIZE Benachrichtigungs
+- RBN_CHILDSIZE Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d505d13048d96783d53b9b1a821d80712597da4f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3450b0c94d4c625d866a25fb5d319b2f0957bef58c6e46296a498ecf3803f764
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859002"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119985280"
 ---
-# <a name="rbn_childsize-notification-code"></a>RBN \_ childsize-Benachrichtigungs Code
+# <a name="rbn_childsize-notification-code"></a>RBN \_ CHILDSIZE-Benachrichtigungscode
 
-Wird von einem Grund leisten-Steuerelement gesendet, wenn die Größe des untergeordneten Fensters eines Bands geändert wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Rebar-Steuerelement gesendet, wenn die Größe des untergeordneten Fensters eines Bandes geändert wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ RBN_CHILDSIZE
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmrebarchildsize**](/windows/win32/api/commctrl/ns-commctrl-nmrebarchildsize) -Struktur, die Informationen über den Benachrichtigungs Code enthält.
+Zeiger auf eine [**NMREBARCHILDSIZE-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmrebarchildsize) die Informationen zum Benachrichtigungscode enthält.
 
 </dd> </dl>
 
@@ -55,9 +55,9 @@ Der Rückgabewert für diese Benachrichtigung wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

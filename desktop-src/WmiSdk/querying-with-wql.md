@@ -1,5 +1,5 @@
 ---
-description: Die WMI Query Language (WQL) ist eine Teilmenge der Standard-American National Standards Institute strukturierte Abfragesprache (ANSI SQL) mit geringfügigen semantischen Änderungen zur Unterstützung von WMI.
+description: Die WMI Query Language (WQL) ist eine Teilmenge der standardmäßigen American National Standards Institute strukturierte Abfragesprache (ANSI SQL) mit geringfügigen semantischen Änderungen zur Unterstützung von WMI.
 ms.assetid: 7e04ba37-c0e0-4304-b162-8b911f233f38
 ms.tgt_platform: multiple
 title: Abfragen mit WQL
@@ -19,9 +19,9 @@ ms.locfileid: "118554831"
 ---
 # <a name="querying-with-wql"></a>Abfragen mit WQL
 
-Die WMI Query Language (WQL) ist eine Teilmenge der Standard-American National Standards Institute strukturierte Abfragesprache (ANSI SQL) mit geringfügigen semantischen Änderungen zur Unterstützung von WMI.
+Die WMI Query Language (WQL) ist eine Teilmenge der standardmäßigen American National Standards Institute strukturierte Abfragesprache (ANSI SQL) mit geringfügigen semantischen Änderungen zur Unterstützung von WMI.
 
-Eine vollständige Liste der unterstützten WQL-Schlüsselwörter finden Sie unter [WQL (SQL für WMI).](wql-sql-for-wmi.md) Die Verwendung von SQL Schlüsselwörtern für Objekt- oder Eigenschaftsnamen kann die Analyse einer Abfrage einschränken. Die folgenden SQL Schlüsselwörter sind eingeschränkt: **NULL,** **TRUE** und **FALSE.**
+Eine vollständige Liste der unterstützten WQL-Schlüsselwörter finden Sie unter [WQL (SQL für WMI).](wql-sql-for-wmi.md) Die Verwendung von SQL Schlüsselwörtern für Objekt- oder Eigenschaftsnamen kann die Analyse einer Abfrage einschränken. Die folgenden SQL Schlüsselwörter sind eingeschränkt: **NULL,** **TRUE** und **FALSE**.
 
 > [!Note]  
 > Die Anzahl von AND- und OR-Schlüsselwörtern, die in WQL-Abfragen verwendet werden können, ist begrenzt. Eine große Anzahl von WQL-Schlüsselwörtern, die in einer komplexen Abfrage verwendet werden, kann dazu führen, dass WMI den **WBEM \_ E \_ QUOTA \_ VIOLATION-Fehlercode** als **HRESULT-Wert** zurückgibt. Die Beschränkung der WQL-Schlüsselwörter hängt davon ab, wie komplex die Abfrage ist.

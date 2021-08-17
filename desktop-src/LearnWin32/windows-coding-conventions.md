@@ -1,6 +1,6 @@
 ---
 title: Windows Codierungskonventionen
-description: Wenn Sie noch nicht mit Windows arbeiten, kann es versirrend sein, wenn Sie zum ersten Mal ein Windows sehen.
+description: Wenn Sie noch nicht mit Windows arbeiten, kann dies verzerrend sein, wenn Sie zum ersten Mal ein Windows sehen.
 ms.assetid: 466a66db-7681-4fce-9672-07849cd1b096
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,13 +13,13 @@ ms.locfileid: "118387395"
 ---
 # <a name="windows-coding-conventions"></a>Windows Codierungskonventionen
 
-Wenn Sie noch nicht mit Windows arbeiten, kann es versirrend sein, wenn Sie zum ersten Mal ein Windows sehen. Der Code ist mit ungewöhnlichen Typdefinitionen wie **DWORD \_ PTR** und **LPRECT** gefüllt, und Variablen verfügen über Namen wie *hWnd* und *pwsz* (als "Ink malische Notation" bezeichnet). Es lohnt sich, sich einen Moment Zeit zu nehmen, um einige der Windows programmieren zu lernen.
+Wenn Sie noch nicht mit Windows arbeiten, kann dies verzerrend sein, wenn Sie zum ersten Mal ein Windows sehen. Der Code ist mit ungewöhnlichen Typdefinitionen wie **DWORD \_ PTR** und **LPRECT** gefüllt, und Variablen verfügen über Namen wie *hWnd* und *pwsz* (als "Ink malische Notation" bezeichnet). Es lohnt sich, sich einen Moment Zeit zu nehmen, um einige der Windows zu erlernen.
 
-Die überwiegende Mehrheit Windows APIs besteht entweder aus Funktionen oder Component Object Model (COM)-Schnittstellen. Nur sehr wenige Windows-APIs werden als C++-Klassen bereitgestellt. (Eine wichtige Ausnahme ist GDI+, eine der 2D-Grafik-APIs.)
+Der Großteil der Windows APIs besteht entweder aus Funktionen oder Component Object Model (COM)-Schnittstellen. Nur sehr wenige Windows-APIs werden als C++-Klassen bereitgestellt. (Eine wichtige Ausnahme ist GDI+, eine der 2D-Grafik-APIs.)
 
 ## <a name="typedefs"></a>TypeDefs
 
-Die Windows-Header enthalten viele Typedefs. Viele davon sind in der Headerdatei WinDef.h definiert. Hier sind einige, auf die Sie häufig stoßen werden.
+Die Windows-Header enthalten viele Typdefinitionen. Viele davon sind in der Headerdatei WinDef.h definiert. Hier sind einige, auf die Sie häufig stoßen werden.
 
 ### <a name="integer-types"></a>Ganzzahltypen
 
@@ -43,7 +43,7 @@ Die Windows-Header enthalten viele Typedefs. Viele davon sind in der Headerdatei
 
  
 
-Wie Sie sehen können, gibt es eine gewisse Redundanz in diesen Typedefs. Ein Teil dieser Überlappung ist einfach auf den Verlauf der Windows-APIs zurück. Die hier aufgeführten Typen haben eine feste Größe, und die Größen sind in 32-Bit- und 64-Anwendungen identisch. Der **DWORD-Typ** ist beispielsweise immer 32 Bit breit.
+Wie Sie sehen können, gibt es in diesen Typedefs eine gewisse Redundanz. Einige dieser Überschneidungen sind einfach auf den Verlauf der Windows-APIs zurück. Die hier aufgeführten Typen haben eine feste Größe, und die Größen sind in 32-Bit- und 64-Anwendungen identisch. Der **DWORD-Typ** ist z. B. immer 32 Bit breit.
 
 ### <a name="boolean-type"></a>Boolescher Typ
 
@@ -103,7 +103,7 @@ In der Vergangenheit *steht P* für "zeiger" und *LP* für "long pointer". Lange
 
 ### <a name="pointer-precision-types"></a>Zeigergenauigkeitstypen
 
-Die folgenden Datentypen weisen immer die Größe eines Zeigers auf, d. &a. 32 Bit Breite in 32-Bit-Anwendungen und 64 Bit Breite in 64-Bit-Anwendungen. Die Größe wird zur Kompilierzeit bestimmt. Wenn eine 32-Bit-Anwendung auf 64-Bit-Windows ausgeführt wird, sind diese Datentypen immer noch 4 Byte breit. (Eine 64-Bit-Anwendung kann nicht auf 32-Bit-Windows ausgeführt werden, sodass die umgekehrte Situation nicht eintritt.)
+Die folgenden Datentypen weisen immer die Größe eines Zeigers auf, d.&a; 32 Bit breit in 32-Bit-Anwendungen und 64 Bit breit in 64-Bit-Anwendungen. Die Größe wird zur Kompilierzeit bestimmt. Wenn eine 32-Bit-Anwendung auf 64-Bit-Windows ausgeführt wird, sind diese Datentypen immer noch 4 Byte breit. (Eine 64-Bit-Anwendung kann nicht auf 32-Bit-Windows ausgeführt werden, sodass die umgekehrte Situation nicht eintritt.)
 
 -   **DWORD \_ PTR**
 -   **INT \_ PTR**
@@ -115,9 +115,9 @@ Diese Typen werden in Situationen verwendet, in denen eine ganze Zahl in einen Z
 
 ## <a name="hungarian-notation"></a>Notation (Deutsch)
 
-*Bei der notieren Notation* handelt es sich um das Hinzufügen von Präfixen zu den Namen von Variablen, um zusätzliche Informationen über die Variable zu erhalten. (Der Rausch der Notation, Charles Simonyi, war", daher der Name".
+*Dies ist die* Vorgehensweise beim Hinzufügen von Präfixen zu den Namen von Variablen, um zusätzliche Informationen über die Variable zu erhalten. (Der Rausch der Notation, Charles Simonyi, war", daher ihr Name.)
 
-In der ursprünglichen Form liefert die notation -Notation *semantische* Informationen zu einer Variablen, die Ihnen die beabsichtigte Verwendung angibt. Beispielsweise bedeutet *"i"* einen Index, *"cb"* eine Größe in Bytes ("Anzahl von Bytes") und *"rw"* und *"col"* die mittleren Zeilen- und Spaltennummern. Diese Präfixe sind so konzipiert, dass die versehentliche Verwendung einer Variablen im falschen Kontext vermieden wird. Wenn Sie beispielsweise den Ausdruck gesehen haben, wissen Sie, dass einer Größe eine Zeilennummer hinzugefügt wird. Dies ist mit sicherheit ein `rwPosition +  cbTable` Fehler im Code.
+In der ursprünglichen Form liefert die europäische Notation *semantische* Informationen über eine Variable, die Ihnen die beabsichtigte Verwendung angibt. Beispielsweise bedeutet *"i"* einen Index, *"cb"* eine Größe in Bytes ("Anzahl von Bytes") und *"rw"* und *"col"* die mittleren Zeilen- und Spaltennummern. Diese Präfixe sollen die versehentliche Verwendung einer Variablen im falschen Kontext vermeiden. Wenn Sie beispielsweise den Ausdruck gesehen haben, wissen Sie, dass einer Größe eine Zeilennummer hinzugefügt wird. Dies ist mit sicherheit ein `rwPosition +  cbTable` Fehler im Code.
 
 In einer gängigeren Form der notation -Notation werden Präfixe verwendet, um Typinformationen zu geben, z. B. *dw* für **DWORD** und *w* für **WORD**. 
 
