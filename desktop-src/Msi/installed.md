@@ -1,5 +1,5 @@
 ---
-description: Die Eigenschaft Installiert wird nur festgelegt, wenn das Produkt pro Computer oder für den aktuellen Benutzer installiert wird.
+description: Die Installed-Eigenschaft wird nur festgelegt, wenn das Produkt pro Computer oder für den aktuellen Benutzer installiert ist.
 ms.assetid: 139a6324-58fb-485e-8b3e-c5cf2881d5d1
 title: Installierte Eigenschaft
 ms.topic: reference
@@ -13,11 +13,11 @@ ms.locfileid: "118633523"
 ---
 # <a name="installed-property"></a>Installierte Eigenschaft
 
-Die **Eigenschaft Installiert** wird nur festgelegt, wenn das Produkt pro Computer oder für den aktuellen Benutzer installiert wird. Diese Eigenschaft wird nicht festgelegt, wenn das Produkt für einen anderen Benutzer installiert ist.
+Die **Installed-Eigenschaft** wird nur festgelegt, wenn das Produkt pro Computer oder für den aktuellen Benutzer installiert ist. Diese Eigenschaft wird nicht festgelegt, wenn das Produkt für einen anderen Benutzer installiert ist.
 
-Die **Installed-Eigenschaft** kann in bedingten Ausdrücken verwendet werden, um zu bestimmen, ob ein Produkt pro Computer oder für den aktuellen Benutzer installiert wird. Beispielsweise kann die -Eigenschaft in der bedingten Spalte einer Sequenztabelle verwendet werden oder um zwischen einer ersten Installation und einer Wartungsinstallation zu unterscheiden.
+Die **Installed-Eigenschaft** kann in bedingten Ausdrücken verwendet werden, um zu bestimmen, ob ein Produkt pro Computer oder für den aktuellen Benutzer installiert ist. Beispielsweise kann die -Eigenschaft in der bedingungsbedingten Spalte einer Sequenztabelle oder verwendet werden, um zwischen einer ersten Installation und einer Wartungsinstallation zu unterscheiden.
 
-Überprüfen Sie die [**ProductState-Eigenschaft,**](productstate.md) um zu bestimmen, ob das Produkt für einen anderen Benutzer installiert ist.
+Überprüfen Sie die [**ProductState-Eigenschaft,**](productstate.md) um zu ermitteln, ob das Produkt für einen anderen Benutzer installiert ist.
 
 Der Wert der [**ProductVersion-Eigenschaft**](productversion.md) ist die Version des Produkts im Zeichenfolgenformat.
 
@@ -27,7 +27,7 @@ Der Wert der [**ProductVersion-Eigenschaft**](productversion.md) ist die Version
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Unter [Windows Installer Run-Time Requirements (Anforderungen für](windows-installer-portal.md) Windows Installer) finden Sie Informationen zu den mindestens erforderlichen Windows Service Packs, die für eine Windows Installer-Version erforderlich sind.<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

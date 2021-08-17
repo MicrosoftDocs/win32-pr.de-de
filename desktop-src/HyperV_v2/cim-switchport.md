@@ -37,7 +37,7 @@ class CIM_SwitchPort : CIM_ProtocolEndpoint
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ SwitchPort-Klasse** verfügt über folgende Typen von Membern:
+Die **CIM \_ SwitchPort-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -71,13 +71,13 @@ Der numerische Bezeichner des Switchports.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

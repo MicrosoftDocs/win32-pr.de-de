@@ -4,7 +4,7 @@ description: Dieses Thema enthält Codebeispiele, die Benutzer auf einem Mitglie
 ms.assetid: a856281a-7f84-44d0-9123-b27fda56e0ea
 ms.tgt_platform: multiple
 keywords:
-- 'Active Directory-Beispiele: Active Directory, Aufzählen von Benutzern auf einem Mitgliedsserver'
+- Active Directory-Beispiele für Active Directory, Auflisten von Benutzern auf einem Mitgliedsserver
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 03064d2030cd84ea75c1225bc6592c33e5af5a20b2fe6946987d4ca7caf7497f
@@ -16,7 +16,7 @@ ms.locfileid: "118693699"
 ---
 # <a name="example-code-for-enumerating-users-on-a-member-server"></a>Beispielcode zum Aufzählen von Benutzern auf einem Mitgliedsserver
 
-Im folgenden Visual Basic Codebeispiel werden alle Benutzer auf einem Mitgliedsserver oder Windows 2000-Professional.
+Im folgenden Visual Basic Codebeispiel werden alle Benutzer auf einem Mitgliedsserver oder Windows 2000 Professional aufzählt.
 
 
 ```VB
@@ -73,7 +73,7 @@ End Sub
 
 
 
-Das folgende C++-Codebeispiel listet alle Objekte einer angegebenen Klasse auf, z. B. einen Benutzer, und zeigt die Member an, die in jedem -Objekt auf einem Memberserver oder Windows 2000-Professional.
+Das folgende C++-Codebeispiel listet alle Objekte einer angegebenen Klasse auf, z. B. einen Benutzer, und zeigt die Member an, die in jedem -Objekt auf einem Memberserver oder Windows 2000 Professional enthalten sind.
 
 
 ```C++

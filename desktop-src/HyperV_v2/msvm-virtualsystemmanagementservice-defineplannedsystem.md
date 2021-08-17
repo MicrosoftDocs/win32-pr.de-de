@@ -1,7 +1,7 @@
 ---
 description: Definiert ein geplantes virtuelles System.
 ms.assetid: f129554b-e43e-4c3a-8418-d5d810f4c4b5
-title: Defineplannedsystem-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: DefinePlannedSystem-Methode der Msvm_VirtualSystemManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: d5e9fa8a49e86850d044216a3d95e3d4dd756fc0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 398f0c11f748cb9dc4865cb1ccb94f24409bda104bbcb55ec00ffde62a17188b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525205"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117810485"
 ---
-# <a name="defineplannedsystem-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Defineplannedsystem-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="defineplannedsystem-method-of-the-msvm_virtualsystemmanagementservice-class"></a>DefinePlannedSystem-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
 Definiert ein geplantes virtuelles System.
 
-Eingaben, die nicht vollständig angegeben sind, können mit Standardwerten aufgefüllt werden.
+Eingaben, die nicht vollständig angegeben sind, können mit Standardwerten ausgefüllt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,44 +45,44 @@ uint32 DefinePlannedSystem(
 
 <dl> <dt>
 
-*SystemSettings* \[ in\]
+*SystemSettings* \[ In\]
 </dt> <dd>
 
 Die Systemeinstellungen für das virtuelle System.
 
 </dd> <dt>
 
-*Resourcesettings* \[ in\]
+*ResourceSettings* \[ In\]
 </dt> <dd>
 
-Die Ressourcen Einstellungen für das virtuelle System.
+Die Ressourceneinstellungen für das virtuelle System.
 
 </dd> <dt>
 
-*Referenceconfiguration* \[ in\]
+*ReferenceConfiguration* \[ In\]
 </dt> <dd>
 
-Ein [**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md) , das die Verweis Konfiguration enthält.
+Eine [**CIM \_ VirtualSystemSettingData-Datei,**](cim-virtualsystemsettingdata.md) die die Referenzkonfiguration enthält.
 
 </dd> <dt>
 
-*Resultingsystem* \[ vorgenommen\]
+*ResultingSystem* \[ out\]
 </dt> <dd>
 
-Ein [**CIM- \_ Computersystem**](cim-computersystem.md) , das das resultierende System enthält.
+Ein [**\_ CIM-Computersystem, das**](cim-computersystem.md) das resultierende System enthält.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird 0 oder 4096 zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg 0 oder 4096 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
@@ -92,7 +92,7 @@ Bei Erfolg wird 0 oder 4096 zurückgegeben. Andernfalls wird ein Fehler zurückg
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -101,16 +101,16 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -119,19 +119,19 @@ Fehler **(2** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

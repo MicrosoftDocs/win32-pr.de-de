@@ -1,5 +1,5 @@
 ---
-description: Zeigt das Dialogfeld Datums- und Uhrzeiteigenschaften an. Diese Methode hat die gleiche Auswirkung wie das Klicken mit der rechten Maustaste auf die Uhr im Taskleistenstatusbereich und das Auswählen von Datum/Uhrzeit anpassen.
+description: Zeigt das Dialogfeld Datums- und Uhrzeiteigenschaften an. Diese Methode hat die gleiche Wirkung wie das Klicken mit der rechten Maustaste auf die Uhr im Statusbereich der Taskleiste und das Auswählen von Datum/Uhrzeit anpassen.
 ms.assetid: 01694607-3fc2-4d0d-ba48-5bdbb40da000
 title: Shell.SetTime-Methode (Shldisp.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118452840"
 ---
 # <a name="shellsettime-method"></a>Shell.SetTime-Methode
 
-Zeigt das Dialogfeld **Datums- und Uhrzeiteigenschaften** an. Diese Methode hat die gleiche Auswirkung wie das Klicken mit der rechten Maustaste auf die Uhr im Taskleistenstatusbereich und das Auswählen **von Datum/Uhrzeit anpassen.**
+Zeigt das **Dialogfeld Datums- und Uhrzeiteigenschaften** an. Diese Methode hat die gleiche Wirkung wie das Klicken mit der rechten Maustaste auf die Uhr im Statusbereich der Taskleiste und das Auswählen **von Datum/Uhrzeit anpassen.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel **wird SetTime** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **SetTime** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
 JScript:
 
@@ -105,7 +105,7 @@ End Sub
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |

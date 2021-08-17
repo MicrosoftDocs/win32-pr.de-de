@@ -1,10 +1,10 @@
 ---
 title: Beispielcode zum Festlegen von Berechtigungen für eine Gruppe von Eigenschaften
-description: In den folgenden C- und C++-Codebeispielen wird ein ACE erstellt, der dem angegebenen Vertrauenshänder Lese- und Schreibzugriff auf die Attribute des Eigenschaftensatzes "Persönliche Informationen" von Benutzerobjekten zu weist.
+description: Die folgenden C- und C++-Codebeispiele erstellen einen ACE, der dem angegebenen Vertrauensnehmer Lese- und Schreibzugriff auf die Attribute des Eigenschaftensatzes "Persönliche Informationen" von Benutzerobjekten zuweist.
 ms.assetid: 46d53b41-02eb-4830-b625-2d9ffa21a312
 ms.tgt_platform: multiple
 keywords:
-- Active Directory-Beispiele Active Directory , Festlegen von Berechtigungen für eine Gruppe von Eigenschaften
+- 'Active Directory-Beispiele: Active Directory, Festlegen von Berechtigungen für eine Gruppe von Eigenschaften'
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 220a9f306a4691aed53ec5c769405ae5db9f9c53fcb192cc383fbf9e8235def4
@@ -16,7 +16,7 @@ ms.locfileid: "118190098"
 ---
 # <a name="example-code-for-setting-permissions-on-a-group-of-properties"></a>Beispielcode zum Festlegen von Berechtigungen für eine Gruppe von Eigenschaften
 
-In den folgenden C- und C++-Codebeispielen wird ein ACE erstellt, der dem angegebenen Vertrauenshänder Lese- und Schreibzugriff auf die Attribute des Eigenschaftensatzes [**"Persönliche**](/windows/desktop/ADSchema/r-personal-information) Informationen" von Benutzerobjekten zu weist.
+Die folgenden C- und C++-Codebeispiele erstellen einen ACE, der dem angegebenen Vertrauensnehmer Lese- und Schreibzugriff auf die Attribute des Eigenschaftensatzes [**"Persönliche Informationen"**](/windows/desktop/ADSchema/r-personal-information) von Benutzerobjekten zuweist.
 
 
 ```C++

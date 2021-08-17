@@ -90,7 +90,7 @@ Eine Threadpumpe ist ein sehr ressourcenintensives Objekt. Pro Anwendung sollte 
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

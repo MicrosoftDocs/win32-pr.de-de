@@ -1,9 +1,9 @@
 ---
 title: ncacn_nb_tcp-Attribut
-description: Das schlüsselwort ncacn \_ nb \_ tcp wird verwendet, um TCP über NetBIOS als Protokollfamilie für den Endpunkt zu identifizieren. Diese Protokollfamilie ist veraltet und sollte nicht in neuen Anwendungen verwendet werden.
+description: Das tcp-Schlüsselwort ncacn nb wird verwendet, um \_ TCP über NetBIOS als \_ Protokollfamilie für den Endpunkt zu identifizieren. Diese Protokollfamilie ist veraltet und sollte nicht in neuen Anwendungen verwendet werden.
 ms.assetid: 3633842c-d1f5-46d9-866e-e54f31415ea5
 keywords:
-- ncacn_nb_tcp-Attribut MIDL
+- ncacn_nb_tcp MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118642165"
 ---
 # <a name="ncacn_nb_tcp-attribute"></a>ncacn \_ nb \_ tcp-Attribut
 
-Das schlüsselwort **ncacn \_ nb \_ tcp** wird verwendet, um TCP über NetBIOS als Protokollfamilie für den Endpunkt zu identifizieren. Diese Protokollfamilie ist veraltet und sollte nicht in neuen Anwendungen verwendet werden.
+Das **tcp-Schlüsselwort \_ \_ ncacn nb** wird verwendet, um TCP über NetBIOS als Protokollfamilie für den Endpunkt zu identifizieren. Diese Protokollfamilie ist veraltet und sollte nicht in neuen Anwendungen verwendet werden.
 
 ``` syntax
 endpoint("ncacn_nb_tcp:[port-name]")
@@ -34,13 +34,13 @@ endpoint("ncacn_nb_tcp:[port-name]")
 *Portname* 
 </dt> <dd>
 
-Gibt einen optionalen 8-Bit-Wert im Bereich von 1 bis 254 an. Werte kleiner als 0x20 sind reserviert. Wenn der *Portnamewert* nicht angegeben ist, wählt der Endpunktzuordnungsdienst den Portwert aus.
+Gibt einen optionalen 8-Bit-Wert im Bereich von 1 bis 254 an. Werte kleiner als 0x20 sind reserviert. Wenn der *Portnamewert nicht* angegeben wird, wählt der Endpunktzuordnungsdienst den Portwert aus.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die Syntax der NetBIOS-Portzeichenfolge wird wie alle Portzeichenfolgen von der Transportimplementierungen definiert und ist unabhängig von der IDL-Spezifikation. Der MIDL-Compiler führt eine eingeschränkte Syntaxüberprüfung durch, garantiert jedoch nicht, dass die Endpunktspezifikation korrekt ist. Einige Fehlerklassen werden möglicherweise zur Laufzeit und nicht zur Kompilierzeit gemeldet.
+Die Syntax der NetBIOS-Portzeichenfolge wird wie alle Portzeichenfolgen von der Transportimplementierung definiert und ist unabhängig von der IDL-Spezifikation. Der MIDL-Compiler führt eine eingeschränkte Syntaxüberprüfung durch, garantiert jedoch nicht, dass die Endpunktspezifikation korrekt ist. Einige Fehlerklassen werden möglicherweise zur Laufzeit und nicht zur Kompilierzeit gemeldet.
 
 > [!Note]  
 > Diese Protokollfamilie wird in Windows XP nicht unterstützt.

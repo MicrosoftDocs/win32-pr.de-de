@@ -1,10 +1,10 @@
 ---
-title: MPSIGUPDATE_DATA Struktur (mpclient. h)
-description: Benachrichtigungs Daten werden an die Rückruffunktion der Signatur Aktualisierung übermittelt.
+title: MPSIGUPDATE_DATA-Struktur (MpClient.h)
+description: Benachrichtigungsdaten, die an die Rückruffunktion der Signaturaktualisierung übergeben werden.
 ms.assetid: E999ABC2-CC72-43CC-86D9-4F29E9128E1A
 keywords:
-- MPSIGUPDATE_DATA Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPSIGUPDATE_DATA Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPSIGUPDATE_DATA struktur Legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
+- PMPSIGUPDATE_DATA Strukturzeiger Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 442b19da394043b6fc6b8693f51c5f150233f970
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d3c117b92882a24a825aee5c5b008e10721c40b8a93d26a9a677bb79858635c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118476252"
 ---
-# <a name="mpsigupdate_data-structure"></a>Mpsigupdate- \_ Datenstruktur
+# <a name="mpsigupdate_data-structure"></a>MPSIGUPDATE \_ DATA-Struktur
 
-Benachrichtigungs Daten werden an die Rückruffunktion der Signatur Aktualisierung übermittelt.
+Benachrichtigungsdaten, die an die Rückruffunktion der Signaturaktualisierung übergeben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ typedef struct tagMPSIGUPDATE_DATA {
 
 <dl> <dt>
 
-**dwprozentucomplete**
+**dwPercentComplete**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -57,49 +57,49 @@ Eine Schätzung des Prozentsatzes für alle Updates, die heruntergeladen und/ode
 
 </dd> <dt>
 
-**dwtotalupdates**
+**dwTotalUpdates**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Gesamtzahl der herunter zuladenden und/oder zu installierenden Updates.
+Gesamtanzahl der herunterzuladende und/oder zu installierende Updates.
 
 </dd> <dt>
 
-**dwcurrentupdateingedex**
+**dwCurrentUpdateIndex**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-NULL basierter Indexwert, der angibt, welches Update zwischen den erforderlichen zurzeit heruntergeladen und/oder installiert wird.
+Nullbasierter Indexwert, der angibt, welches Update für die erforderlichen Updates derzeit heruntergeladen und/oder installiert wird.
 
 </dd> <dt>
 
-**ETYPE**
+**eType**
 </dt> <dd>
 
-Typ: **mpsigupdate- \_ Typ**
+Typ: **MPSIGUPDATE \_ TYPE**
 
 </dd> <dd>
 
-Aktualisieren Sie den Typ. Einer der folgenden möglichen Werte:
+Updatetyp. Einer der folgenden möglichen Werte:
 
 
 
 | Wert                                                                                                                                                                                                                             | Bedeutung                                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| <span id="MPSIGUPDATE_TYPE_NONE"></span><span id="mpsigupdate_type_none"></span><dl> <dt>**mpsigupdate- \_ Typ " \_ None"**</dt> </dl>                                            |                                                                             |
-| <span id="MPSIGUPDATE_TYPE_MANAGED"></span><span id="mpsigupdate_type_managed"></span><dl> <dt>**verwalteter mpsigupdate- \_ Typ \_**</dt> </dl>                                   | WSUS-Update Abbrechen erfordert Administratorrechte.<br/>               |
-| <span id="MPSIGUPDATE_TYPE_HTTP"></span><span id="mpsigupdate_type_http"></span><dl> <dt>**mpsigupdate- \_ Typ \_ http**</dt> </dl>                                            | HTTP-Update. Zum Abbrechen sind keine Administrator Rechte erforderlich.<br/>          |
-| <span id="MPSIGUPDATE_TYPE_HTTP_SRV"></span><span id="mpsigupdate_type_http_srv"></span><dl> <dt>**mpsigupdate- \_ Typ \_ http \_ SRV**</dt> </dl>                               | HTTP vom Dienst. Abbrechen erfordert Administratorrechte.<br/>         |
-| <span id="MPSIGUPDATE_TYPE_UNC"></span><span id="mpsigupdate_type_unc"></span><dl> <dt>**mpsigupdate- \_ Typ \_ UNC**</dt> </dl>                                               | UNC-Freigabe. Zum Abbrechen sind keine Administrator Rechte erforderlich.<br/>            |
-| <span id="MPSIGUPDATE_TYPE_UNMANAGED"></span><span id="mpsigupdate_type_unmanaged"></span><dl> <dt>**mpsigupdate- \_ Typ \_ nicht verwaltet**</dt> </dl>                             | MU/wu-Update. Abbrechen erfordert Administratorrechte.<br/>              |
-| <span id="MPSIGUPDATE_TYPE_MANAGED_PLATFORM"></span><span id="mpsigupdate_type_managed_platform"></span><dl> <dt>**\_ \_ verwaltete \_ Plattform für mpsigupdate-Typ**</dt> </dl>       | WSUS-Update für Plattform. Abbrechen erfordert Administratorrechte.<br/>  |
-| <span id="MPSIGUPDATE_TYPE_UNMANAGED_PLATFORM"></span><span id="mpsigupdate_type_unmanaged_platform"></span><dl> <dt>**mpsigupdate- \_ Typ \_ nicht verwaltete \_ Plattform**</dt> </dl> | MU/wu-Update für Plattform. Abbrechen erfordert Administratorrechte.<br/> |
+| <span id="MPSIGUPDATE_TYPE_NONE"></span><span id="mpsigupdate_type_none"></span><dl> <dt>**\_MPSIGUPDATE-TYP \_ NONE**</dt> </dl>                                            |                                                                             |
+| <span id="MPSIGUPDATE_TYPE_MANAGED"></span><span id="mpsigupdate_type_managed"></span><dl> <dt>**\_VERWALTETER MPSIGUPDATE-TYP \_**</dt> </dl>                                   | WSUS-Update. Zum Abbrechen sind Administratorrechte erforderlich.<br/>               |
+| <span id="MPSIGUPDATE_TYPE_HTTP"></span><span id="mpsigupdate_type_http"></span><dl> <dt>**\_MPSIGUPDATE-TYP \_ HTTP**</dt> </dl>                                            | HTTP-Update. Administratorrechte zum Abbrechen nicht erforderlich.<br/>          |
+| <span id="MPSIGUPDATE_TYPE_HTTP_SRV"></span><span id="mpsigupdate_type_http_srv"></span><dl> <dt>**\_MPSIGUPDATE-TYP \_ HTTP \_ SRV**</dt> </dl>                               | HTTP vom Dienst. Zum Abbrechen sind Administratorrechte erforderlich.<br/>         |
+| <span id="MPSIGUPDATE_TYPE_UNC"></span><span id="mpsigupdate_type_unc"></span><dl> <dt>**\_MPSIGUPDATE-TYP \_ UNC**</dt> </dl>                                               | UNC-Freigabe. Administratorrechte zum Abbrechen nicht erforderlich.<br/>            |
+| <span id="MPSIGUPDATE_TYPE_UNMANAGED"></span><span id="mpsigupdate_type_unmanaged"></span><dl> <dt>**\_MPSIGUPDATE-TYP \_ NICHT VERWALTET**</dt> </dl>                             | MU/WU-Update. Zum Abbrechen sind Administratorrechte erforderlich.<br/>              |
+| <span id="MPSIGUPDATE_TYPE_MANAGED_PLATFORM"></span><span id="mpsigupdate_type_managed_platform"></span><dl> <dt>**VERWALTETE PLATTFORM VOM TYP MPSIGUPDATE \_ \_ \_**</dt> </dl>       | WSUS-Update für PLATFORM. Zum Abbrechen sind Administratorrechte erforderlich.<br/>  |
+| <span id="MPSIGUPDATE_TYPE_UNMANAGED_PLATFORM"></span><span id="mpsigupdate_type_unmanaged_platform"></span><dl> <dt>**\_NICHT VERWALTETE \_ \_ PLATTFORM VOM TYP MPSIGUPDATE**</dt> </dl> | MU/WU-Update für PLATFORM. Zum Abbrechen sind Administratorrechte erforderlich.<br/> |
 
 
 
@@ -110,20 +110,20 @@ Aktualisieren Sie den Typ. Einer der folgenden möglichen Werte:
 **Phase**
 </dt> <dd>
 
-Typ: **MP- \_ Aktualisierungs \_ Phase**
+Typ: **MP \_ UPDATE \_ STAGE**
 
 </dd> <dd>
 
-Aktualisierungs Phase. Einer der folgenden möglichen Werte:
+Aktualisierungsphase. Einer der folgenden möglichen Werte:
 
 
 
 | Wert                                                                                                                                                                         | Bedeutung                           |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
-| <span id="MP_STAGE_UNKNOWN"></span><span id="mp_stage_unknown"></span><dl> <dt>**MP- \_ Stufe \_ unbekannt**</dt> </dl>       | Die Aktualisierungs Phase ist unbekannt.<br/>  |
-| <span id="MP_SEARCH_UPDATE"></span><span id="mp_search_update"></span><dl> <dt>**MP- \_ Suche- \_ Update**</dt> </dl>       | Aktualisierungs Phase aktualisieren.<br/>   |
-| <span id="MP_DOWNLOAD_UPDATE"></span><span id="mp_download_update"></span><dl> <dt>**MP- \_ Download \_ Update**</dt> </dl> | Download Stufe aktualisieren.<br/> |
-| <span id="MP_INSTALL_UPDATE"></span><span id="mp_install_update"></span><dl> <dt>**MP- \_ Installations \_ Update**</dt> </dl>    | Aktualisieren Sie die Installationsphase.<br/>  |
+| <span id="MP_STAGE_UNKNOWN"></span><span id="mp_stage_unknown"></span><dl> <dt>**MP \_ STAGE \_ UNKNOWN**</dt> </dl>       | Updatephase unbekannt.<br/>  |
+| <span id="MP_SEARCH_UPDATE"></span><span id="mp_search_update"></span><dl> <dt>**\_UPDATE DER MP-SUCHE \_**</dt> </dl>       | Aktualisieren sie die Suchphase.<br/>   |
+| <span id="MP_DOWNLOAD_UPDATE"></span><span id="mp_download_update"></span><dl> <dt>**MP \_ DOWNLOAD \_ UPDATE**</dt> </dl> | Update-Downloadphase.<br/> |
+| <span id="MP_INSTALL_UPDATE"></span><span id="mp_install_update"></span><dl> <dt>**MP \_ INSTALL \_ UPDATE**</dt> </dl>    | Updateinstallationsphase.<br/>  |
 
 
 
@@ -131,10 +131,10 @@ Aktualisierungs Phase. Einer der folgenden möglichen Werte:
 
 </dd> <dt>
 
-**Pfad**
+**Path**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
@@ -148,9 +148,9 @@ Aktualisieren Sie den Pfad.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

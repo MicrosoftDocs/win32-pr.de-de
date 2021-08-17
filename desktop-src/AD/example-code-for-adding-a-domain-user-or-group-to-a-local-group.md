@@ -16,7 +16,7 @@ ms.locfileid: "118694688"
 ---
 # <a name="example-code-for-adding-a-domain-user-or-group-to-a-local-group"></a>Beispielcode zum Hinzufügen eines Domänenbenutzers oder einer Gruppe zu einer lokalen Gruppe
 
-Im folgenden C++-Codebeispiel wird ein Domänenbenutzer oder eine Gruppe einer lokalen Gruppe auf einem Mitgliedsserver oder einem Computer hinzugefügt, der auf Windows NT-Arbeitsstation oder Windows 2000 Professional ausgeführt wird.
+Im folgenden C++-Codebeispiel wird einer lokalen Gruppe auf einem Mitgliedsserver oder einem Computer, der auf Windows NT-Arbeitsstation oder Windows 2000-Professional ausgeführt wird, ein Domänenbenutzer oder eine Gruppe hinzugefügt.
 
 
 ```C++

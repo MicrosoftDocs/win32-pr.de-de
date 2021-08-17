@@ -1,10 +1,10 @@
 ---
-title: ATTRIBUT "ACS-Time-Of-Day"
+title: ACS-Time-Of-Day-Attribut
 description: Tageszeiten, zu denen diese Richtlinie gilt.
 ms.assetid: aacd604a-45cb-4815-bc6b-332cf090f4a2
 ms.tgt_platform: multiple
 keywords:
-- ACS-Time-Of-Day-Attribut AD-Schema
+- AD-Schema des ACS-Time-Of-Day-Attributs
 - AD-Schema des aCSTimeOfDay-Attributs
 topic_type:
 - apiref
@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118689266"
 ---
-# <a name="acs-time-of-day-attribute"></a>ATTRIBUT "ACS-Time-Of-Day"
+# <a name="acs-time-of-day-attribute"></a>ACS-Time-Of-Day-Attribut
 
 Tageszeiten, zu denen diese Richtlinie gilt.
 
@@ -35,7 +35,7 @@ Tageszeiten, zu denen diese Richtlinie gilt.
 | Aktualisieren von Berechtigungen  | \-                                          |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.756                      |
-| System-ID-GUID    | 7f561279-5301-11d1-a9c5-0000f80367c1        |
+| System-Id-Guid    | 7f561279-5301-11d1-a9c5-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -58,7 +58,7 @@ Tageszeiten, zu denen diese Richtlinie gilt.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | Falsch                                        |
-| Ist einwertig       | Richtig                                         |
+| Is-Single-Valued       | Richtig                                         |
 | Ist indiziert             | Falsch                                        |
 | Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
@@ -79,7 +79,7 @@ Tageszeiten, zu denen diese Richtlinie gilt.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | Falsch                                        |
-| Ist einwertig       | Richtig                                         |
+| Is-Single-Valued       | Richtig                                         |
 | Ist indiziert             | Falsch                                        |
 | Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
@@ -100,7 +100,7 @@ Tageszeiten, zu denen diese Richtlinie gilt.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | Falsch                                        |
-| Ist einwertig       | Richtig                                         |
+| Is-Single-Valued       | Richtig                                         |
 | Ist indiziert             | Falsch                                        |
 | Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |

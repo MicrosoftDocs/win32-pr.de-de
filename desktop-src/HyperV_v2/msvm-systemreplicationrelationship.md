@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung zwischen einer Instanz von MSVM \_ Computersystem dar, die den virtuellen Computer und eine Instanz von MSVM \_ replicationrelationship darstellt, die eine Replikations Beziehung des virtuellen Computers darstellt.
+description: Stellt eine Zuordnung zwischen einer Instanz von Msvm \_ ComputerSystem dar, die den virtuellen Computer darstellt, und einer Instanz von Msvm \_ ReplicationRelationship, die eine Replikationsbeziehung des virtuellen Computers darstellt.
 ms.assetid: 23E7BF91-9527-434C-A571-05879E83950E
 title: Msvm_SystemReplicationRelationship-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: dd5ada4eef811a7d542c01c0a3be66d53cca0916
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 86040e6dc5676f6cd40b223f0a3cbd31864965722de957fda6ff1d140ad94b18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117810606"
 ---
-# <a name="msvm_systemreplicationrelationship-class"></a>MSVM \_ systemreplicationrelationship-Klasse
+# <a name="msvm_systemreplicationrelationship-class"></a>Msvm \_ SystemReplicationRelationship-Klasse
 
-Stellt eine Zuordnung zwischen einer Instanz von [**MSVM \_ Computersystem**](msvm-computersystem.md) dar, die den virtuellen Computer und eine Instanz von [**MSVM \_ replicationrelationship**](msvm-replicationrelationship.md) darstellt, die eine Replikations Beziehung des virtuellen Computers darstellt. Diese Klasse wird von der [**CIM- \_ Abhängigkeits**](/windows/desktop/CIMWin32Prov/cim-dependency) Klasse abgeleitet.
+Stellt eine Zuordnung zwischen einer Instanz von [**Msvm \_ ComputerSystem**](msvm-computersystem.md) dar, die den virtuellen Computer darstellt, und einer Instanz von [**Msvm \_ ReplicationRelationship,**](msvm-replicationrelationship.md) die eine Replikationsbeziehung des virtuellen Computers darstellt. Diese Klasse wird von der [**\_ CIM-Abhängigkeitsklasse**](/windows/desktop/CIMWin32Prov/cim-dependency) abgeleitet.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -41,45 +41,45 @@ class Msvm_SystemReplicationRelationship : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ systemreplicationrelationship** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ SystemReplicationRelationship-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ systemreplicationrelationship** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ SystemReplicationRelationship-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MSVM \_ Computersystem**
+Datentyp: **Msvm \_ ComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM- \_ Abhängigkeit. Vorgänger")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ Dependency.Antecedent")
 </dt> </dl>
 
-Verweis auf die Instanz der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse, die den virtuellen Computer darstellt.
+Verweis auf die Instanz der [**Msvm \_ ComputerSystem-Klasse,**](msvm-computersystem.md) die den virtuellen Computer darstellt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MSVM \_ replicationrelationship**
+Datentyp: **Msvm \_ ReplicationRelationship**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM- \_ Abhängigkeit. abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ Dependency.Dependent")
 </dt> </dl>
 
-Verweis auf die Instanz der [**MSVM \_ replicationrelationship**](msvm-replicationrelationship.md) -Klasse, die die Replikations Beziehung eines virtuellen Systems darstellt.
+Verweis auf die Instanz der [**Msvm \_ ReplicationRelationship-Klasse,**](msvm-replicationrelationship.md) die die Replikationsbeziehung eines virtuellen Systems darstellt.
 
 </dd> </dl>
 
@@ -89,22 +89,22 @@ Verweis auf die Instanz der [**MSVM \_ replicationrelationship**](msvm-replicati
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> <dt>
 
-[**CIM- \_ Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)
+[**\_CIM-Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)
 </dt> </dl>
 
  

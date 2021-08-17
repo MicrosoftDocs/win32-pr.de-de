@@ -41,7 +41,7 @@ In aktuellen Versionen von Windows wird mit diesem Schalter nichts ausgeführt. 
 
 **midl filename.idl**
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

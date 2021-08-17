@@ -1,38 +1,38 @@
 ---
-description: Die VBScript-Datei WiLstScr.vbs wird in den Windows SDK Komponenten für Windows Installer Entwickler bereitgestellt. In diesem Beispielskript wird der Windows Installer Skript-Viewer veranschaulicht.
+description: Die VBScript-WiLstScr.vbs wird in den sdk-Komponenten Windows für Windows Installer-Entwickler bereitgestellt. Dieses Beispielskript veranschaulicht den Windows Installer-Skript-Viewer.
 ms.assetid: 18989c16-e0c8-4d11-b915-730951b6845b
-title: Installerskript anzeigen
+title: Anzeigen des Installationsskripts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 56888f478bb7cdd43ebcee817c86f6f9f163840e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4797d73c4c90266b94a02b9d73657fb95de75e153617ef1e34797f28035ee701
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117803981"
 ---
-# <a name="view-installer-script"></a>Installerskript anzeigen
+# <a name="view-installer-script"></a>Anzeigen des Installationsskripts
 
-Die VBScript-Datei WiLstScr.vbs wird in den [Windows SDK Komponenten für Windows Installer Entwickler](platform-sdk-components-for-windows-installer-developers.md)bereitgestellt. In diesem Beispielskript wird der Windows Installer Skript-Viewer veranschaulicht.
+Die VBScript-WiLstScr.vbs wird in den Windows [SDK-Komponenten für Windows Installer-Entwickler bereitgestellt.](platform-sdk-components-for-windows-installer-developers.md) Dieses Beispielskript veranschaulicht den Windows Installer-Skript-Viewer.
 
 Das Beispiel veranschaulicht die Verwendung von:
 
 -   [**OpenDatabase-Methode (Installer-Objekt)**](installer-opendatabase.md)
--   [**Lasterrorrecord**](installer-lasterrorrecord.md) -Methode des [**Installer**](installer-object.md) -Objekts
--   [**OpenView**](database-openview.md) -Methode des [**Daten Bank**](database-object.md) Objekts
--   [**Fetch**](view-fetch.md) -Methode des [**View**](view-object.md) -Objekts
--   [**Formattext**](record-formattext.md) -Methode
--   [**FieldCount**](record-fieldcount.md) (Eigenschaft)
--   [**StringData**](record-stringdata.md) -Eigenschaft des [**Datensatz**](record-object.md) -Objekts
--   [\_Transformview-Tabelle](-transformview-table.md)
+-   [**LastErrorRecord-Methode**](installer-lasterrorrecord.md) des [**Installer-Objekts**](installer-object.md)
+-   [**OpenView-Methode**](database-openview.md) des [**Database-Objekts**](database-object.md)
+-   [**Fetch-Methode**](view-fetch.md) des [**View-Objekts**](view-object.md)
+-   [**FormatText-Methode**](record-formattext.md)
+-   [**FieldCount-Eigenschaft**](record-fieldcount.md)
+-   [**StringData-Eigenschaft**](record-stringdata.md) des [**Datensatzobjekts**](record-object.md)
+-   [\_TransformView-Tabelle](-transformview-table.md)
 
-Zum Verwenden dieses Beispiels ist die CScript.exe Version von Windows Script Host erforderlich. Wenn Sie CScript.exe verwenden möchten, um dieses Beispiel auszuführen, geben Sie einen Befehl an der Eingabeaufforderung ein, indem Sie die folgende Syntax verwenden. Hilfe wird angezeigt, wenn das erste Argument/? oder, wenn zu wenige Argumente angegeben werden. Um die Ausgabe in eine Datei umzuleiten, beenden Sie die Befehlszeile mit VSB > \[ *Pfad zur Datei* \] . Das Beispiel gibt den Wert 0 für Erfolg zurück, 1, wenn Hilfe aufgerufen wird, und 2, wenn das Skript fehlschlägt.
+Die Verwendung dieses Beispiels erfordert die CScript.exe-Version Windows Skripthosts. Um dieses CScript.exe ausführen zu können, geben Sie an der Eingabeaufforderung einen Befehl mit der folgenden Syntax ein. Hilfe wird angezeigt, wenn das erste Argument /? ist. oder , wenn zu wenige Argumente angegeben werden. Um die Ausgabe an eine Datei umzuleiten, beenden Sie die Befehlszeile mit VBS > \[ *Pfad zur Datei* \] . Das Beispiel gibt den Wert 0 für den Erfolg zurück, 1, wenn Hilfe aufgerufen wird, und 2, wenn das Skript fehlschlägt.
 
-**cscript-WiLstScr.vbs** *\[ Pfad zum Windows Installer Ausführungs \] Skript*
+**cscript WiLstScr.vbs** *\[ pfad zum Windows Installer-Ausführungsskript \]*
 
-Geben Sie den Pfad zum Ausführungs Skript des Installers an.
+Geben Sie den Pfad zum Installationsausführungsskript an.
 
-Weitere Skript Beispiele finden Sie unter [Windows Installer Skript Beispiele](windows-installer-scripting-examples.md). Beispiel Hilfsprogramme, die keinen Windows Script Host erfordern, finden Sie unter [Windows Installer-Entwicklungs Tools](windows-installer-development-tools.md).
+Weitere Skriptbeispiele finden Sie unter [Windows Installer Scripting Examples](windows-installer-scripting-examples.md). Beispielprogramme, für die kein Skripthost Windows ist, finden Sie unter [Windows Installer Development Tools](windows-installer-development-tools.md).
 
  
 

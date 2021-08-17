@@ -57,7 +57,7 @@ WEIGHT ( <weight_multipler> )
 
 Der Multiplikator muss eine Dezimalzahl von 0,001 bis 1,000 sein. Der unformatierte Rangwert, der vom Suchbedingungs-Prädikat zurückgegeben wird, wird mit dem Gewichtungsmultiplikator multipliziert, um einen neuen Rangwert zu setzen.
 
-Im folgenden Beispiel enthält die WEIGHT-Funktion Dokumente mit dem Wort "Theresa" im System.Document. LastAuthor-Feld zur Hälfte des Rangwerts von Dokumenten mit "Theresa" im Feld System.Author:
+Im folgenden Beispiel gibt die WEIGHT-Funktion Dokumente mit dem Wort "Theresa" im System.Document. LastAuthor-Feld zur Hälfte des Rangwerts von Dokumenten mit "Theresa" im Feld System.Author:
 
 
 ```
@@ -73,7 +73,7 @@ WHERE CONTAINS ( System.Author,'"Theresa"' )
  
 
 > [!Note]  
-> Die Spaltengewichtungsfeatures CONTAINS und FREETEXT unterstützen ein Kurzformat mit einem Doppelpunkt zwischen dem Suchbegriff und dem Multiplikator ("software":0.25). Die RANK BY-Klausel unterstützt die verkürzte Form nicht.
+> Die Spaltengewichtungsfeatures CONTAINS und FREETEXT unterstützen ein Kurzformformat mit einem Doppelpunkt zwischen dem Suchbegriff und dem Multiplikator ("software":0.25). Die RANK BY-Klausel unterstützt die verkürzte Form nicht.
 
  
 
@@ -124,7 +124,7 @@ In der folgenden Tabelle werden die verfügbaren Einstellungen für den Koercion
 
  
 
-Im folgenden Beispiel wird die COERCION-Funktion verwendet, um alle Dokumente mit "computer" im Titel auf einen Rang von 1000 zu setzen, während der Rang der Dokumente, die sowohl "computer" als auch "software" im Titel enthalten, um ein Quartal reduziert wird.
+Im folgenden Beispiel wird die COERCION-Funktion verwendet, um alle Dokumente mit "computer" im Titel auf einen Rang von 1000 zu setzen, während der Rang der Dokumente, die sowohl "computer" als auch "software" im Titel enthalten, um ein Viertel reduziert wird.
 
 
 ```
