@@ -3,36 +3,36 @@ title: Lesen von ASF-Daten über ein Netzwerk
 description: Lesen von ASF-Daten über ein Netzwerk
 ms.assetid: 488c456a-0ab6-4559-9d91-c27a64a9a9a0
 keywords:
-- Windows Media-Format-SDK, Lesen von ASF-Daten
-- Windows Media-Format-SDK, Abspielen von Dateien aus Netzwerk Quellen
+- Windows Medienformat-SDK, Lesen von ASF-Daten
+- Windows Medienformat-SDK, Wiedergabe von Dateien aus Netzwerkquellen
 - Advanced Systems Format (ASF), Lesen von Daten
 - ASF (Advanced Systems Format), Lesen von Daten
-- Advanced Systems Format (ASF), Abspielen von Dateien aus Netzwerk Quellen
-- ASF (Advanced Systems Format), Abspielen von Dateien aus Netzwerk Quellen
+- Advanced Systems Format (ASF), Wiedergabe von Dateien aus Netzwerkquellen
+- ASF (Advanced Systems Format), Wiedergabe von Dateien aus Netzwerkquellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e2616443a20ba83167c32cfdc400d4d09fce4b99
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 33e385a37511867cf016b08811b10814fc0cb779ae2d1c7dfa55c5bd4f32a3bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342086"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118197925"
 ---
 # <a name="reading-asf-data-over-a-network"></a>Lesen von ASF-Daten über ein Netzwerk
 
-In diesem Abschnitt wird beschrieben, wie Dateien aus einer Netzwerkquelle abgespielt werden und wie die Netzwerkeinstellungen für das Reader-Objekt konfiguriert werden. Der Abschnitt ist wie folgt gegliedert.
+In diesem Abschnitt wird beschrieben, wie Sie Dateien aus einer Netzwerkquelle wieder geben und die Netzwerkeinstellungen für das Readerobjekt konfigurieren. Der Abschnitt ist wie folgt gegliedert.
 
--   [Abspielen von Dateien aus einer Netzwerkquelle](playing-files-from-a-network-source.md)
+-   [Wiederspielen von Dateien aus einer Netzwerkquelle](playing-files-from-a-network-source.md)
 -   [Protokollrollover](protocol-rollover.md)
 -   [Speichern von Inhalt](saving-content.md)
 -   [Authentifizierung](authentication.md)
--   [Aktivieren von schnellem Cache Streaming vom Client](enabling-fast-cache-streaming-from-the-client.md)
--   [Client Protokollierung](client.md)
--   [Konfigurations Persistenz](configuration-persistence.md)
+-   [Aktivieren des schnellen Cachestreamings vom Client](enabling-fast-cache-streaming-from-the-client.md)
+-   [Clientprotokollierung](client.md)
+-   [Konfigurationspersistenz](configuration-persistence.md)
 
- 
+ 
 
- 
+ 
 
 
 

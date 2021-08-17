@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_PIPELINE_STATE_STREAM_PRIMITIVE_TOPOLOGY-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, die verwendet wird, um die primitive Topologie als einzelnes Objekt zu beschreiben, das für eine Datenstrom Beschreibung geeignet ist.
+title: CD3DX12_PIPELINE_STATE_STREAM_PRIMITIVE_TOPOLOGY-Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, die verwendet wird, um die primitive Topologie als einzelnes Objekt zu beschreiben, das für eine Streambeschreibung geeignet ist.
 ms.assetid: 7DC73B75-2B8D-4DAB-A0AA-6DF6F4039093
 keywords:
-- CD3DX12_PIPELINE_STATE_STREAM_PRIMITIVE_TOPOLOGY Struktur
+- CD3DX12_PIPELINE_STATE_STREAM_PRIMITIVE_TOPOLOGY-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e597da8ea1ed4a4291142065e8e06f89d2664e03
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7a828ef50956d9ab5336dfe88fa12bed9f7541633ec4589a9c556511e8487a9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353343"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117734262"
 ---
-# <a name="cd3dx12_pipeline_state_stream_primitive_topology-structure"></a>CD3DX12 \_ - \_ \_ Struktur der \_ primitiven \_ Topologie des Pipeline Zustands Stroms
+# <a name="cd3dx12_pipeline_state_stream_primitive_topology-structure"></a>PRIMITIVE TOPOLOGIESTRUKTUR DES \_ CD3DX12-PIPELINEZUSTANDSSTREAMS \_ \_ \_ \_
 
-Eine hilfsstruktur, die verwendet wird, um die primitive Topologie als einzelnes Objekt zu beschreiben, das für eine Datenstrom Beschreibung geeignet ist.
+Eine Hilfsstruktur, die verwendet wird, um die primitive Topologie als einzelnes Objekt zu beschreiben, das für eine Streambeschreibung geeignet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,37 +44,37 @@ struct CD3DX12_PIPELINE_STATE_STREAM_PRIMITIVE_TOPOLOGY {
 
 <dl> <dt>
 
-**CD3DX12 \_ \_ \_ \_ primitive Topologie des Pipeline Zustands Stroms \_**
+**PRIMITIVE TOPOLOGIE DES \_ CD3DX12-PIPELINEZUSTANDSSTREAMS \_ \_ \_ \_**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12 \_ Pipeline \_ State \_ Stream \_ primitive \_ Topologie.
+Erstellt eine neue, nicht initialisierte Instanz einer PRIMITIVEN TOPOLOGIE DES \_ CD3DX12-PIPELINEZUSTANDSSTREAMs. \_ \_ \_ \_
 
 </dd> <dt>
 
-**CD3DX12 \_ \_ \_ primitive Topologie des Pipeline Zustands Stroms \_ \_ (D3D12 \_ primitiver \_ \_ Topologietyp Konstanten &i)**
+**PRIMITIVE TOPOLOGIE DES CD3DX12 \_ PIPELINE \_ STATE \_ \_ \_ STREAM(D3D12 \_ PRIMITIVE \_ TOPOLOGY TYPE \_ const &i)**
 </dt> <dd>
 
-Erstellt eine neue Instanz einer primitiven CD3DX12 \_ Pipeline \_ State \_ Stream \_ \_ -Topologie, die mit einem untergeordneten Typ von **D3D12 \_ Pipeline \_ State \_ unter Objekt \_ Type \_ primitive \_ Topologie** und aus *i* kopierten untergeordneten Daten in einer primitiven [**\_ \_ topologietypstruktur \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_primitive_topology_type) initialisiert wird.
+Erstellt eine neue Instanz einer PRIMITIVEN TOPOLOGIE DES \_ CD3DX12-PIPELINEZUSTANDSDATENSTROMs, \_ \_ \_ \_ initialisiert mit dem Unterobjekttyp **D3D12 \_ PIPELINE STATE \_ \_ SUBOBJECT TYPE PRIMITIVE \_ \_ \_ TOPOLOGY** und den unterobjektdaten, die aus *der* [**Struktur D3D12 \_ PRIMITIVE \_ TOPOLOGY \_ TYPE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_primitive_topology_type) kopiert wurden.
 
 </dd> <dt>
 
-**Operator = (D3D12 \_ primitiver \_ \_ Topologietyp Konstanten& i)**
+**operator=(D3D12 \_ PRIMITIVE \_ TOPOLOGY TYPE \_ const& i)**
 </dt> <dd>
 
-Kopier Zuweisungs Operator.
+Kopierzuweisungsoperator.
 
 </dd> <dt>
 
-**Operator D3D12 \_ primitiver \_ \_ Topologietyp () konstant**
+**Operator D3D12 \_ PRIMITIVE \_ TOPOLOGY \_ TYPE() const**
 </dt> <dd>
 
-Implizite Konvertierung in eine [**D3D12 \_ primitive \_ \_ Topologietyp**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_primitive_topology_type) -Struktur.
+Implizite Konvertierung in eine [**D3D12 \_ PRIMITIVE \_ TOPOLOGY \_ TYPE-Struktur.**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_primitive_topology_type)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-CD3DX12 \_ \_ \_ \_ \_ die primitive Topologie des Pipeline Zustands Stroms ist eine typedef-Spezialisierung der untergeordneten Pipeline für den [**CD3DX12 \_ Pipeline \_ State \_ Stream \_**](cd3dx12-pipeline-state-stream-subobject.md) und ist wie folgt definiert:
+CD3DX12 \_ PIPELINE STATE STREAM PRIMITIVE \_ \_ \_ \_ TOPOLOGY ist eine Typdefinitionsspezialisierung der [**CD3DX12 \_ PIPELINE STATE STREAM \_ \_ \_ SUBOBJECT-Vorlage**](cd3dx12-pipeline-state-stream-subobject.md) und wird wie folgt definiert:
 
 
 ```C++
@@ -91,21 +91,21 @@ typedef CD3DX12_PIPELINE_STATE_STREAM_SUBOBJECT<D3D12_PRIMITIVE_TOPOLOGY_TYPE, D
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)
 </dt> <dt>
 
-[**CD3DX12 \_ Pipeline State-Datenstrom-unter \_ \_ \_ Objekt**](cd3dx12-pipeline-state-stream-subobject.md)
+[**CD3DX12 \_ PIPELINE \_ STATE \_ STREAM \_ SUBOBJECT**](cd3dx12-pipeline-state-stream-subobject.md)
 </dt> <dt>
 
-[**D3D12 \_ Pipeline \_ Status-unter Objekt- \_ \_ Typ**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_pipeline_state_subobject_type)
+[**D3D12 \_ PIPELINE \_ STATE \_ SUBOBJECT \_ TYPE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_pipeline_state_subobject_type)
 </dt> </dl>
 
  

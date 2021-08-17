@@ -1,9 +1,9 @@
 ---
-title: RAS_PPP_NBFCP_RESULT-Struktur (Rassapi.h)
-description: Die \_ \_ RAS-NBFCP \_ RESULT-Struktur wird verwendet, um das Ergebnis eines NBF-Projektionsvorgangs (ABC NetBEUI Framer) für einen Port zu melden.
+title: RAS_PPP_NBFCP_RESULT -Struktur (Rassapi.h)
+description: Die RAS NBFCP RESULT-Struktur wird verwendet, um das Ergebnis eines NBF-Projektionsvorgang \_ \_ \_ (HK NetBEUI Framer) für einen Port zu melden.
 ms.assetid: 670bf125-cad5-481f-89e4-858e636316bd
 keywords:
-- RAS_PPP_NBFCP_RESULT Struktur von RAS
+- RAS_PPP_NBFCP_RESULT-Struktur
 topic_type:
 - apiref
 api_name:
@@ -21,11 +21,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117789594"
 ---
-# <a name="ras_ppp_nbfcp_result-structure"></a>\_ \_ \_ RAS-NBFCP-ERGEBNISstruktur
+# <a name="ras_ppp_nbfcp_result-structure"></a>RAS \_ \_ NBFCP \_ RESULT-Struktur
 
-\[Die **\_ \_ RAS-NBFCP \_ RESULT-Struktur** wird ab Windows Vista nicht unterstützt.\]
+\[Die **RAS \_ \_ NBFCP \_ RESULT-Struktur** wird ab vista Windows unterstützt.\]
 
-Die **\_ RAS-NBFCP \_ \_ RESULT-Struktur** wird verwendet, um das Ergebnis eines NBF-Projektionsvorgangs (ABC NetBEUI Framer) für einen Port zu melden.
+Die **RAS \_ \_ NBFCP \_ RESULT-Struktur** wird verwendet, um das Ergebnis eines NBF-Projektionsvorgang (HK NetBEUI Framer) für einen Port zu melden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,28 +48,28 @@ typedef struct _RAS_PPP_NBFCP_RESULT {
 **dwError**
 </dt> <dd>
 
-Gibt die Ergebnisse des NBF-Projektionsvorgangs an. Der Wert NO \_ ERROR gibt den Erfolg an. In diesem Fall enthält das **wszWksta-Element** den Namen des Remotecomputers. Wenn der Projektionsvorgang nicht erfolgreich war, ist **dwError** ein Fehlercode aus Winerror.h oder Raserror.h.
+Gibt die Ergebnisse des NBF-Projektionsvorgang an. Der Wert NO ERROR gibt den Erfolg an. In diesem Fall enthält das \_ **wszWksta-Member** den Namen des Remotecomputers. Wenn der Projektionsvorgang nicht erfolgreich war, **ist dwError** ein Fehlercode von Winerror.h oder Raserror.h.
 
 </dd> <dt>
 
 **dwNetBiosError**
 </dt> <dd>
 
-Ignorieren Sie dieses Mitglied auf dem Server. sie ist nur auf dem Client relevant.
+Ignorieren Sie diesen Member auf dem Server. sie ist nur auf dem Client relevant.
 
 </dd> <dt>
 
 **Szname**
 </dt> <dd>
 
-Ignorieren Sie dieses Mitglied auf dem Server. sie ist nur auf dem Client relevant.
+Ignorieren Sie diesen Member auf dem Server. sie ist nur auf dem Client relevant.
 
 </dd> <dt>
 
 **wszWksta**
 </dt> <dd>
 
-Eine auf NULL endende Unicode-Zeichenfolge, die den NetBIOS-Namen der RAS-Clientarbeitsstation angibt.
+Eine auf NULL beendete Unicode-Zeichenfolge, die den NetBIOS-Namen der RAS-Clientarbeitsstation angibt.
 
 </dd> </dl>
 
@@ -91,7 +91,7 @@ Eine auf NULL endende Unicode-Zeichenfolge, die den NetBIOS-Namen der RAS-Client
 
 <dl> <dt>
 
-[Remotezugriffsdienst (RAS) – Übersicht](about-remote-access-service.md)
+[Ras-Dienst (RAS): Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
 [RAS-Serververwaltungsstrukturen](ras-server-administration-structures.md)

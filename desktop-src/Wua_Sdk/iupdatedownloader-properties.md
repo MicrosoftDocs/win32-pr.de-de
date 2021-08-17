@@ -17,7 +17,7 @@ Die [**IUpdateDownloader-Schnittstelle**](/windows/desktop/api/Wuapi/nn-wuapi-iu
 
 
 
-| Eigenschaft                                                             | BESCHREIBUNG                                                                                                                                                                |
+| Eigenschaft                                                             | Beschreibung                                                                                                                                                                |
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**ClientApplicationID**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatedownloader-get_clientapplicationid) | Ruft die aktuelle Clientanwendung ab und legt sie fest.                                                                                                                              |
 | [**IsForced**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatedownloader-get_isforced)                       | Ruft einen booleschen Wert ab, der angibt, ob der Windows Update-Agent (WUA) das Herunterladen von Updates erzwingt, die bereits installiert sind oder nicht installiert werden können, und legt diesen fest. |

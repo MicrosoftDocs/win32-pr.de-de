@@ -1,5 +1,5 @@
 ---
-description: 'IWICFastMetadataEncoder_Commit_Proxy Funktion: Proxyfunktion für die Commit-Methode.'
+description: 'IWICFastMetadataEncoder_Commit_Proxy-Funktion: Proxyfunktion für die Commit-Methode.'
 ms.assetid: 5b3b90ad-9d67-4fbd-b01e-c7478df8dd45
 title: IWICFastMetadataEncoder_Commit_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 848ed74ec9c9bb490065935bd94cae7a35d02db2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 69f94853761affe09472a18ca27585a74f398846dd06ef54abb88fe3c9b7ce71
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117668403"
 ---
 # <a name="iwicfastmetadataencoder_commit_proxy-function"></a>IWICFastMetadataEncoder-Commitproxyfunktion \_ \_
 
-Proxyfunktion für [](/windows/desktop/api/Wincodec/nf-wincodec-iwicfastmetadataencoder-commit) die Commit-Methode.
+Proxyfunktion für die [**Commit-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicfastmetadataencoder-commit)
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ HRESULT IWICFastMetadataEncoder_Commit_Proxy(
 
 <dl> <dt>
 
-*DIES \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
 Typ: **[ **IWICFastMetadataEncoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicfastmetadataencoder)\***
@@ -53,7 +53,7 @@ Zeiger auf dieses [**IWICFastMetadataEncoder-Objekt.**](/windows/desktop/api/Win
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -61,10 +61,10 @@ Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegebe
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
 | DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 

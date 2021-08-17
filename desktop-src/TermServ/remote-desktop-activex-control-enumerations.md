@@ -1,18 +1,18 @@
 ---
-title: Remotedesktop ActiveX-Steuerelement Enumerationen
+title: Remotedesktop ActiveX Steuerelementenumerationen
 description: Die folgenden Enumerationen werden mit dem Remotedesktop ActiveX-Steuerelement verwendet.
 ms.assetid: C4EBA996-B3C7-492B-A6B7-96A3EC1847B2
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cb2313cdc429fd39366a38f9596298a94e24e65b
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f5880ff690e93d3a18337347b964aae421bff5acc95c5ec4859e597bc307822e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473485"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117756181"
 ---
-# <a name="remote-desktop-activex-control-enumerations"></a>Remotedesktop ActiveX-Steuerelement Enumerationen
+# <a name="remote-desktop-activex-control-enumerations"></a>Remotedesktop ActiveX Steuerelementenumerationen
 
 Die folgenden Enumerationen werden mit dem Remotedesktop ActiveX-Steuerelement verwendet.
 
@@ -20,76 +20,76 @@ Die folgenden Enumerationen werden mit dem Remotedesktop ActiveX-Steuerelement v
 
 <dl> <dt>
 
-[**Controlclosestatus**](controlclosestatus.md)
+[**ControlCloseStatus**](controlclosestatus.md)
 </dt> <dd>
 
-Gibt an, ob die Anwendung, die das Steuerelement enthält, das Steuerelement sofort schließen kann
+Gibt an, ob die Anwendung, die das Steuerelement enthält, das Steuerelement sofort schließen kann.
 
 </dd> <dt>
 
-[**Controlreconnectstatus**](controlreconnectstatus.md)
+[**ControlReconnectStatus**](controlreconnectstatus.md)
 </dt> <dd>
 
-Gibt das Ergebnis der [**IMsRdpClient8:: Reconnect**](imsrdpclient8-reconnect.md) -Methode an.
+Gibt das Ergebnis der [**IMsRdpClient8::Reconnect-Methode**](imsrdpclient8-reconnect.md) an.
 
 </dd> <dt>
 
-[**Clientspec**](clientspec.md)
+[**ClientSpec**](clientspec.md)
 </dt> <dd>
 
-Wird mit der [**clientprotocolspec**](imsrdpclientadvancedsettings8-clientprotocolspec.md) -Eigenschaft zum Angeben des Remote Desktop Protokolls verwendet, das zwischen dem Client und dem Server verwendet wird.
+Wird mit der [**ClientProtocolSpec-Eigenschaft**](imsrdpclientadvancedsettings8-clientprotocolspec.md) verwendet, um das Remotedesktopprotokoll anzugeben, das zwischen dem Client und dem Server verwendet wird.
 
 </dd> <dt>
 
-[**Extendeddisconnectycode**](extendeddisconnectreasoncode.md)
+[**ExtendedDisconnectReasonCode**](extendeddisconnectreasoncode.md)
 </dt> <dd>
 
-Definiert erweiterte Informationen über den Grund für die Trennung der Verbindung.
+Definiert erweiterte Informationen zum Grund der Trennung des Steuerelements.
 
 </dd> <dt>
 
-[**Redirectde vicetype**](redirectdevicetype.md)
+[**RedirectDeviceType**](redirectdevicetype.md)
 </dt> <dd>
 
 Wird verwendet, um den Typ eines Geräts anzugeben.
 
 </dd> <dt>
 
-[**Remoteaktionstyp**](/windows/win32/api/rdpappcontainerclient/ne-rdpappcontainerclient-remoteactiontype)
+[**RemoteActionType**](/windows/win32/api/rdpappcontainerclient/ne-rdpappcontainerclient-remoteactiontype)
 </dt> <dd>
 
-Die Aktion, die an die Remote Sitzung gesendet werden soll.
+Die Aktion, die an die Remotesitzung gesendet werden soll.
 
 </dd> <dt>
 
-[**Remotesessionaktionstyp**](remotesessionactiontype.md)
+[**RemoteSessionActionType**](remotesessionactiontype.md)
 </dt> <dd>
 
-Wird verwendet, um den Typ der Remote Aktion anzugeben.
+Wird verwendet, um den Typ der Remoteaktion anzugeben.
 
 </dd> <dt>
 
-[**Remotewindowdisplayedattribute**](remotewindowdisplayedattribute.md)
+[**RemoteWindowDisplayedAttribute**](remotewindowdisplayedattribute.md)
 </dt> <dd>
 
-Wird mit der-Methode verwendet, um Informationen zum Ereignis anzugeben.
+Wird mit der -Methode verwendet, um Informationen zum Ereignis anzugeben.
 
 </dd> <dt>
 
-[**Snapshotencodingtype**](/windows/win32/api/rdpappcontainerclient/ne-rdpappcontainerclient-snapshotencodingtype)
+[**SnapshotEncodingType**](/windows/win32/api/rdpappcontainerclient/ne-rdpappcontainerclient-snapshotencodingtype)
 </dt> <dd>
 
-Der Codierungstyp, der für Remotedesktopprotokoll eine Client Momentaufnahme (RDP)-app-Container verwendet wird.
+Der Typ der Codierung, der für eine Clientmomentaufnahme eines Remotedesktopprotokoll-App-Containers (RDP) verwendet wird.
 
 </dd> <dt>
 
-[**Snapshotformattype**](/windows/win32/api/rdpappcontainerclient/ne-rdpappcontainerclient-snapshotformattype)
+[**SnapshotFormatType**](/windows/win32/api/rdpappcontainerclient/ne-rdpappcontainerclient-snapshotformattype)
 </dt> <dd>
 
-Das Datenformat, das für eine Client Momentaufnahme eines RDP-App-Containers (Remotedesktopprotokoll) verwendet wird.
+Das Datenformat, das für eine Clientmomentaufnahme eines Remotedesktopprotokoll-App-Containers (RDP) verwendet wird.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 

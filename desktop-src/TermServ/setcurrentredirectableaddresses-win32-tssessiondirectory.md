@@ -1,12 +1,12 @@
 ---
-title: SetCurrentRedirectableAddresses-Methode der Win32_TSSessionDirectory-Klasse
-description: Legt die konfigurierte Liste der dns-berechtigten Adressen fest, die für die Umleitung verwendet werden können.
+title: SetCurrentRedirectableAddresses-Methode der Win32_TSSessionDirectory Klasse
+description: Legt die konfigurierte Liste der DNS-fähigen Adressen fest, die für die Umleitung verwendet werden können.
 ms.assetid: cad6a8a8-fdf1-406e-abeb-37acb396ac16
 ms.tgt_platform: multiple
 keywords:
-- SetCurrentRedirectableAddresses-Methode Remotedesktopdienste
+- SetCurrentRedirectableAddresses-Remotedesktopdienste
 - SetCurrentRedirectableAddresses-Methode Remotedesktopdienste , Win32_TSSessionDirectory-Klasse
-- Win32_TSSessionDirectory-Klasse Remotedesktopdienste , SetCurrentRedirectableAddresses-Methode
+- Win32_TSSessionDirectory klasse Remotedesktopdienste , SetCurrentRedirectableAddresses-Methode
 topic_type:
 - apiref
 api_name:
@@ -26,7 +26,7 @@ ms.locfileid: "117756100"
 ---
 # <a name="setcurrentredirectableaddresses-method-of-the-win32_tssessiondirectory-class"></a>SetCurrentRedirectableAddresses-Methode der Win32 \_ TSSessionDirectory-Klasse
 
-Die **SetCurrentRedirectableAddresses-Methode** legt die konfigurierte Liste der dns-berechtigten Adressen fest, die für die Umleitung verwendet werden können.
+Die **SetCurrentRedirectableAddresses-Methode** legt die konfigurierte Liste der DNS-berechtigten Adressen fest, die für die Umleitung verwendet werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ Ein Flag, das angibt, ob die Tokenumleitung verwendet werden soll.
 
 Typ: **\[ \] Zeichenfolge**
 
-Ein Array von Zeichenfolgen, das die Liste der FÜR DNS geeigneten IP-Adressen darstellt, die für die Umleitung verwendet werden können.
+Ein Array von Zeichenfolgen, das die Liste der DNS-fähigen IP-Adressen darstellt, die für die Umleitung verwendet werden können.
 
 </dd> </dl>
 
@@ -66,11 +66,11 @@ Ein Array von Zeichenfolgen, das die Liste der FÜR DNS geeigneten IP-Adressen d
 
 Typ: **uint32**
 
-Gibt bei Erfolg 0 zurück. andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
+Gibt bei Erfolg 0 zurück. andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Remotedesktopdienste finden Sie unter [Fehlercodes](terminal-services-wmi-provider-error-codes.md) für WMI-Anbieter.
 
 ## <a name="remarks"></a>Hinweise
 
-Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Man
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
 | MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 

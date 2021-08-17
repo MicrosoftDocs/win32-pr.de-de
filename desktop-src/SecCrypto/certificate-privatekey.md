@@ -1,7 +1,7 @@
 ---
-description: Legt den privaten Schlüssel fest, der dem Zertifikat zugeordnet ist, oder ruft den schlüssel ab.
+description: Legt den privaten Schlüssel fest, der dem Zertifikat zugeordnet ist, oder ruft diesen ab.
 ms.assetid: 976d81b4-5cbe-4824-9087-9a908b0e60e5
-title: Certificate.PrivateKey-Eigenschaft
+title: Certificate.PrivateKey(Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,11 +20,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117771555"
 ---
-# <a name="certificateprivatekey-property"></a>Certificate.PrivateKey-Eigenschaft
+# <a name="certificateprivatekey-property"></a>Certificate.PrivateKey(Eigenschaft)
 
-\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Mit **der PrivateKey-Eigenschaft** wird der private Schlüssel festgelegt oder abgerufen, der dem Zertifikat zugeordnet ist. Diese Eigenschaft wurde in CAPICOM 2.0 eingeführt.
+Die **PrivateKey-Eigenschaft** legt den privaten Schlüssel fest, der dem Zertifikat zugeordnet ist, oder ruft diesen ab. Diese Eigenschaft wurde in CAPICOM 2.0 eingeführt.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -43,7 +43,7 @@ Ein [**PrivateKey-Objekt,**](privatekey.md) das den privaten Schlüssel darstell
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie die **PrivateKey-Eigenschaft** auf Nothing festlegen, wird die Zuordnung zwischen dem privaten Schlüssel und dem Zertifikat entfernt, aber der private Schlüssel wird nicht gelöscht. Um den privaten Schlüssel zu löschen, rufen Sie die [**PrivateKey.Delete-Methode**](privatekey-delete.md) auf, und legen Sie diese Eigenschaft auf Nothing fest.
+Wenn Sie **die PrivateKey-Eigenschaft** auf Nothing festlegen, wird die Zuordnung zwischen dem privaten Schlüssel und dem Zertifikat entfernt, aber der private Schlüssel wird nicht gelöscht. Um den privaten Schlüssel zu löschen, rufen Sie die [**PrivateKey.Delete-Methode**](privatekey-delete.md) auf, und legen Sie diese Eigenschaft dann auf Nothing fest.
 
 Diese Eigenschaft löst CAPICOM \_ E \_ NOT ALLOWED \_ aus, wenn sie von einer webbasierten Anwendung festgelegt wird.
 

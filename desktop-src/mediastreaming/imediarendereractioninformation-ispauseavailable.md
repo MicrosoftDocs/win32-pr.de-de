@@ -1,11 +1,11 @@
 ---
-title: Imediarendereraktioninformation ispauseravailable-Methode
-description: Ruft einen Wert ab, der angibt, ob der DMR derzeit die Methode "paugasync" annimmt.
+title: IMediaRendererActionInformation IsPauseAvailable-Methode
+description: Ruft einen Wert ab, der angibt, ob die DMR derzeit die PauseAsync-Methode akzeptiert.
 ms.assetid: 095A664F-D974-410D-8741-87A171EDD071
 keywords:
-- Ispaugavailable-Methode Medien Streaming-API
-- Ispauseravailable-Methode Medien Streaming-API, imediarendereraktioninformation-Schnittstelle
-- Imediarendereraktioninformation-Schnittstelle Medien Streaming-API, ispauseravailable-Methode
+- 'IsPauseAvailable-Methode: Medienstreaming-API'
+- 'IsPauseAvailable-Methode: Media Streaming-API, IMediaRendererActionInformation-Schnittstelle'
+- IMediaRendererActionInformation-Schnittstelle Media Streaming-API, IsPauseAvailable-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9eb0b750f5a04528aef830d87376c276bdaf6674
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: fad69863306a8a937771f16c2ab9a83a2622c571d2cd5ee5658a279bf7564132
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103858227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117870847"
 ---
-# <a name="imediarendereractioninformationispauseavailable-method"></a>Imediarendereraktioninformation:: ispauseravailable-Methode
+# <a name="imediarendereractioninformationispauseavailable-method"></a>IMediaRendererActionInformation::IsPauseAvailable-Methode
 
-Ruft einen Wert ab, der angibt, ob der DMR derzeit die Methode " [**paugasync**](imediarenderer-pauseasync.md) " annimmt.
+Ruft einen Wert ab, der angibt, ob die DMR derzeit die [**PauseAsync-Methode**](imediarenderer-pauseasync.md) akzeptiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT IsPauseAvailable(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*value* \[ out\]
 </dt> <dd>
 
-Ein boolescher Wert, der **true** ist, wenn der DMR derzeit die Methode " [**pausiasync**](imediarenderer-pauseasync.md) " annimmt, andernfalls " **false** ".
+Ein boolescher Wert, der **True** ist, wenn die DMR derzeit die [**PauseAsync-Methode**](imediarenderer-pauseasync.md) akzeptiert, ander denn, false. 
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -62,11 +62,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imediarendereraktioninformation**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-imediarendereractioninformation)
+[**IMediaRendererActionInformation**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-imediarendereractioninformation)
 </dt> </dl>
 
  

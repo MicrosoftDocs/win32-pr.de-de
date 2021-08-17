@@ -1,12 +1,12 @@
 ---
-title: Zgstoreadminmsg-Methode der Win32_TSGatewayServerSettings-Klasse
-description: Aktualisiert die administrative Meldung für den Gatewayserver.
+title: TSGStoreAdminMsg-Methode der Win32_TSGatewayServerSettings-Klasse
+description: Aktualisiert die Verwaltungsmeldung für den Gatewayserver.
 ms.assetid: 84e5b967-12fd-47a7-93e4-2550c15c4491
 ms.tgt_platform: multiple
 keywords:
-- Zgstoreadminmsg-Methode Remotedesktopdienste
-- Methode Remotedesktopdienste der Methode "zgstoreadminmsg", Win32_TSGatewayServerSettings Klasse
-- Win32_TSGatewayServerSettings-Klasse Remotedesktopdienste, Methode "zgstoreadminmsg"
+- TSGStoreAdminMsg-Remotedesktopdienste
+- TSGStoreAdminMsg-Methode Remotedesktopdienste , Win32_TSGatewayServerSettings-Klasse
+- Win32_TSGatewayServerSettings klasse Remotedesktopdienste , TSGStoreAdminMsg-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 398a027d28970b28b4a1e7db37b5fbfee06e881e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c921eb977597147713f1251b94bb36ed3aa5678bde1e27881af4dc930dd957fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858954"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117755786"
 ---
-# <a name="tsgstoreadminmsg-method-of-the-win32_tsgatewayserversettings-class"></a>Zgstoreadminmsg-Methode der Win32-Klasse "t- \_ gatewayserversettings"
+# <a name="tsgstoreadminmsg-method-of-the-win32_tsgatewayserversettings-class"></a>TSGStoreAdminMsg-Methode der Win32 \_ TSGatewayServerSettings-Klasse
 
-Aktualisiert die administrative Meldung für den Gatewayserver.
+Aktualisiert die Verwaltungsmeldung für den Gatewayserver.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,44 +45,44 @@ uint32 TSGStoreAdminMsg(
 
 <dl> <dt>
 
-"GS- *mmsg* \[ " in\]
+*TSGAdmMsg* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Der Text der administrativen Nachricht.
+Der Administrative Message-Text.
 
 </dd> <dt>
 
-*Msgstarttime* \[ in\]
+*MsgStartTime* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Die Startzeit der administrativen Nachricht.
+Die Startzeit der Verwaltungsmeldung.
 
 </dd> <dt>
 
-*Msgendtime* \[ in\]
+*MsgEndTime* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Die Endzeit der administrativen Nachricht.
+Die Endzeit der Administrative Message.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,17 +92,17 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                        |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-Datei- \_ gatewayserversettings**](win32-tsgatewayserversettings.md)
+[**Win32 \_ TSGatewayServerSettings**](win32-tsgatewayserversettings.md)
 </dt> </dl>
 
  

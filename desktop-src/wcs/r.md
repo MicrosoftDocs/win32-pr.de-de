@@ -3,49 +3,49 @@ title: R
 description: R
 ms.assetid: 03819a70-487b-45fd-9eb0-1becc55b4ccb
 keywords:
-- Windows Color System (WCS), Glossar
+- Windows Farbsystem (WCS), Glossar
 - WCS (Windows Color System), Glossar
-- Bildfarben Verwaltung, Glossar
-- Farbverwaltung, Glossar
+- Bildfarbverwaltung, Glossar
+- Farbverwaltung,Glossar
 - Farben, Glossar
-- Windows Color System (WCS), Definitionen
+- Windows Farbsystem (WCS), Definitionen
 - WCS (Windows Color System), Definitionen
-- Bild Farbverwaltung, Definitionen
-- Farbverwaltung, Definitionen
+- Bildfarbverwaltung,Definitionen
+- Farbverwaltung,Definitionen
 - Farben, Definitionen
-- Windows Color System (WCS), Begriffe
+- Windows Farbsystem (WCS), Begriffe
 - WCS (Windows Color System), Begriffe
-- Bildfarben Verwaltung, Begriffe
+- Bildfarbverwaltung,Begriffe
 - Farbverwaltung, Begriffe
 - Farben, Begriffe
-- renderintents
+- Renderingabsichten
 - RGB-Farbraum
-- rotes grünes blau (RGB)
-- RGB (rotes grünes blau)
-- RGB-dreifach
+- Rotgrünblau (RGB)
+- RGB (rotgrün blau)
+- RGB Triple
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a5f03f0d294fff0c850c4674d3431c34dccf67ed
-ms.sourcegitcommit: 38954f8f0d70f44bff4a943784f468ebd7ef691a
+ms.openlocfilehash: d13eb2e78b76c2ca6323a7a9d9e625748a3cf2ab3ce5e6aafdd2b6904f654713
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "106366527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118209700"
 ---
 # <a name="r"></a>R
 
-## <a name="rendering-intent"></a>renderabsicht
+## <a name="rendering-intent"></a>Renderingabsicht
 
-Ansätze zum Rendern von Farben von einem Farb Raum zu einem anderen. Die in den ICC-Profilen verwendeten renderintents werden vom International Color Consortium (ICC) definiert.
+Ansätze zum Rendern von Farben aus einem Farbraum in einen anderen. Die in DEN PROFILEn verwendeten Renderingabsichten werden vom International Color Consortium (CONSORTIUM) definiert.
 
 ## <a name="rgb"></a>RGB
 
-Der rote, grüne und blaue Farbraum.
+Der Farbraum Rot, Grün und Blau.
 
-## <a name="rgb-triple"></a>RGB-dreifach
+## <a name="rgb-triple"></a>RGB Triple
 
-Eine Menge, die RGB-Farbraum-Werte enthält.
+Eine Menge, die RGB-Farbraumwerte enthält.
 
  
 

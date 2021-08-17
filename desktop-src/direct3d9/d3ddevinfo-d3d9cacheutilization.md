@@ -1,7 +1,7 @@
 ---
-description: Messen Sie die Leistung der Cache-Treffer Rate für Texturen und indizierte Vertices.
+description: Messen Sie die Leistung der Cachetrefferrate für Texturen und indizierte Scheitelungen.
 ms.assetid: 70bc4e93-0a34-485b-bdcc-028c24b52f62
-title: D3DDEVINFO_D3D9CACHEUTILIZATION-Struktur (D3D9Types. h)
+title: D3DDEVINFO_D3D9CACHEUTILIZATION -Struktur (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 94f77549d0ea2a9c59d7de8367a6133085cc2771
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 01f0521ca7833cd74c3cb45b5a650fbd12aae485e36a153b57e6d9b10b49d1f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104530866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117733071"
 ---
 # <a name="d3ddevinfo_d3d9cacheutilization-structure"></a>D3DDEVINFO \_ D3D9CACHEUTILIZATION-Struktur
 
-Messen Sie die Leistung der Cache-Treffer Rate für Texturen und indizierte Vertices.
+Messen Sie die Leistung der Cachetrefferrate für Texturen und indizierte Scheitelungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,31 +40,31 @@ typedef struct D3DDEVINFO_D3D9CACHEUTILIZATION {
 
 <dl> <dt>
 
-**Texturecachehitrate**
+**TextureCacheHitRate**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Treffer Rate zum Ermitteln einer Textur im Textur Cache. Dabei wird davon ausgegangen, dass ein Textur Cache vorhanden ist. Das Erhöhen der Detailebene für die Verwendung der detaillierteren Textur mit vielen großen Texturen oder das Erzeugen eines near Random Texture-Zugriffs Musters für große Texturen mit benutzerdefiniertem shadercode kann die Treffer Rate des Textur Caches erheblich beeinträchtigen.
+Die Trefferrate zum Suchen einer Textur im Texturcache. Dabei wird davon ausgegangen, dass ein Texturcache vorhanden ist. Die Erhöhung der Detailebenenverzerrung, um die ausführlichste Textur zu verwenden, viele große Texturen zu verwenden oder ein nahezu zufälliges Texturzugriffsmuster für große Texturen mit benutzerdefiniertem Shadercode zu erzeugen, kann sich erheblich auf die Trefferrate des Texturcaches auswirken.
 
 </dd> <dt>
 
-**Posttransformvertexcachehitrate**
+**PostTransformVertexCacheHitRate**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Treffer Rate zum Suchen transformier ender Scheitel Punkte im Scheitelpunkt Cache. Die GPU ist so konzipiert, dass Sie indizierte Scheitel Punkte transformiert und Sie möglicherweise in einem Scheitelpunkt Cache speichert. Wenn Sie Meshes verwenden, kann [**D3DXOptimizeFaces**](d3dxoptimizefaces.md) oder [**D3DXOptimizeVertices**](d3dxoptimizevertices.md) zu einer besseren Vertex-Cache Auslastung führen.
+Die Trefferrate für das Suchen transformierte Scheitelpunkte im Scheitelpunktcache. Die GPU ist für die Transformation indizierter Scheitelpunkte konzipiert und kann sie in einem Scheitelpunktcache speichern. Wenn Sie Gitternetze verwenden, führt [**D3DXOptimizeFaces**](d3dxoptimizefaces.md) oder [**D3DXOptimizeVertices**](d3dxoptimizevertices.md) möglicherweise zu einer besseren Auslastung des Scheitelpunktcaches.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein effizienter Cache liegt in der Regel bei einer Treffer Rate von 90 Prozent, und ein ineffizienter Cache liegt in der Regel bei einer Trefferquote von 10 Prozent (obwohl ein niedriger Prozentsatz nicht unbedingt ein Problem darstellt).
+Ein effizienter Cache liegt in der Regel näher an einer Trefferrate von 90 Prozent, und ein ineffizienter Cache ist in der Regel näher an einer Trefferrate von 10 Prozent (obwohl ein niedriger Prozentsatz nicht unbedingt ein Problem darstellt).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,11 +72,11 @@ Ein effizienter Cache liegt in der Regel bei einer Treffer Rate von 90 Prozent, 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

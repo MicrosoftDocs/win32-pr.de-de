@@ -1,39 +1,39 @@
 ---
-description: Allgemeine Richtlinien für die Implementierung von rohcodecs
+description: Allgemeine Richtlinien für die Implementierung von RAW-Codecs
 ms.assetid: 47b3b226-4642-41d2-b05c-bc12583047aa
-title: Allgemeine Richtlinien für die Implementierung von rohcodecs
+title: Allgemeine Richtlinien für die Implementierung von RAW-Codecs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7f774e5d254330e3274daccb6062f35baa443144
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d5081edfc6f49dc1d145fc3e2ce7e5f993fb2e7e250aeb0f1091579dd3f45461
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217374"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118204628"
 ---
-# <a name="general-guidelines-for-implementing-raw-codecs"></a>Allgemeine Richtlinien für die Implementierung von rohcodecs
+# <a name="general-guidelines-for-implementing-raw-codecs"></a>Allgemeine Richtlinien für die Implementierung von RAW-Codecs
 
-Im Vergleich zu nicht unformatierten Bild Typen wie JPEG oder TIFF gibt es zwei wichtige Unterschiede in Bezug darauf, wie sich Rohbild Formate in Windows Verhalten:
+Im Vergleich zu Nicht-RAW-Bildtypen wie JPEG oder TIFF gibt es zwei wichtige Unterschiede im Verhalten von RAW-Bildformaten in Windows:
 
--   Die meisten Rohbild Formate werden als "schreibgeschützt" angesehen und unterstützen die Pixel Codierung wahrscheinlich nicht in RAW-Format. Da Windows Imaging Component (WIC) jedoch erfordert, dass ein Encoder das Zurückschreiben von Metadaten unterstützt, sollten unformatierte Codec-Autoren mindestens eine Skeleton Encoder-Klasse implementieren.
--   Das Decodieren eines rohimages voller Größe kann im Vergleich zu anderen Formaten sehr lange dauern. Aus diesem Grund empfiehlt Microsoft, bestimmte Ansätze zu beachten, um die Decodierungs Latenz zu minimieren und die Unterstützung für Szenarien wie das schnelle Rendering von Miniaturansichten und Vorschau Versionen zu gewährleisten.
+-   Die meisten RAW-Bildformate werden als "schreibgeschützt" angenommen und unterstützen wahrscheinlich keine Pixelcodierung im RAW-Format. Da jedoch Windows Imaging Component (WIC) einen Encoder erfordert, um das Zurückschreiben von Metadaten zu unterstützen, sollten RAW-Codecautoren planen, mindestens eine Skeleton Encoder-Klasse zu implementieren.
+-   Das Decodieren eines RAW-Bilds in voller Größe kann im Vergleich zu anderen Formaten sehr lange dauern. Aus diesem Grund empfiehlt Microsoft, bestimmte Ansätze zu verwenden, um die Latenz bei der Decodierung zu minimieren und die Unterstützung für Szenarien wie schnelles Rendering von Miniaturansichten und Vorschauen sicherzustellen.
 
-    So müssen z. b. alle unformatierten Codec-Autoren die [**IWICBitmapSourceTransform**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsourcetransform) -Schnittstelle implementieren, die einen Mechanismus bereitstellt, mit dem der Decoder vor der zielbitmapgröße benachrichtigt wird, sodass die optimierte Decodierung für eine kleinere Ausgabe Bildgröße aktiviert werden kann.
+    Beispielsweise müssen alle RAW-Codecautoren die [**IWICBitmapSourceTransform-Schnittstelle**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsourcetransform) implementieren, die einen Mechanismus zur Benachrichtigung des Decoders vor der Zielbitmapgröße bietet, wodurch eine optimierte Decodierung auf eine kleinere Ausgabebildgröße ermöglicht wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Übersicht über die Windows Imaging-Komponente](-wic-about-windows-imaging-codec.md)
+[Windows Übersicht über Bildverarbeitungskomponenten](-wic-about-windows-imaging-codec.md)
 </dt> <dt>
 
-[WIC-Richtlinien für Kamera Rohbild Formate](-wic-rawguidelines.md)
+[WIC Guidelines for Camera RAW Image Formats](-wic-rawguidelines.md)
 </dt> <dt>
 
-[Schreiben eines WIC-Enabled Codecs](-wic-howtowriteacodec.md)
+[Schreiben eines WIC-Enabled CODEC](-wic-howtowriteacodec.md)
 </dt> </dl>
 
  

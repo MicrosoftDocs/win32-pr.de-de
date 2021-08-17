@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die CreateFastMetadataEncoderFromDecoder-Methode.
+description: Proxyfunktion für die CreateFastMetadataEncoderFromDecoder-Methode.
 ms.assetid: eae7ed9c-9205-4e41-91b2-461fd1f5d093
 title: IWICImagingFactory_CreateFastMetadataEncoderFromDecoder_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: cdeb682139feb03c19cd66e999b6e3b8b7b366d3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8c08e5b60c33e2735272236be87bdf9250f6109f3434c833b353252feac976a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347615"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118206395"
 ---
-# <a name="iwicimagingfactory_createfastmetadataencoderfromdecoder_proxy-function"></a>IWICImagingFactory \_ CreateFastMetadataEncoderFromDecoder \_ Proxy Funktion
+# <a name="iwicimagingfactory_createfastmetadataencoderfromdecoder_proxy-function"></a>IWICImagingFactory \_ CreateFastMetadataEncoderFromDecoder-Proxyfunktion \_
 
-Proxy Funktion für die [**CreateFastMetadataEncoderFromDecoder**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createfastmetadataencoderfromdecoder) -Methode.
+Proxyfunktion für die [**CreateFastMetadataEncoderFromDecoder-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createfastmetadataencoderfromdecoder)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ HRESULT IWICImagingFactory_CreateFastMetadataEncoderFromDecoder_Proxy(
 
 <dl> <dt>
 
-*pfactory* \[ in\]
+*pFactory* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) \** _
+Typ: **[ **IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory)\***
 
 </dd> <dt>
 
-_pIDecoder * \[ in\]
+*pIDecoder* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) \** _
+Typ: **[ **IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)\***
 
-Der Decoder, aus dem [_ *IWICFastMetadataEncoder* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicfastmetadataencoder) erstellt werden soll.
+Der Decoder, aus dem der [**IWICFastMetadataEncoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicfastmetadataencoder) erstellt werden soll.
 
 </dd> <dt>
 
-*ppif Me* \[ vorgenommen\]
+*ppIFME* \[ out\]
 </dt> <dd>
 
 Typ: **[ **IWICFastMetadataEncoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicfastmetadataencoder)\*\***
@@ -71,7 +71,7 @@ Ein Zeiger, der einen Zeiger auf den neuen [**IWICFastMetadataEncoder**](/window
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -81,9 +81,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

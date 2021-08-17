@@ -1,7 +1,7 @@
 ---
 description: Ruft eine Zeichenfolge ab, die den Namen des Zertifikatausstellers enthält.
 ms.assetid: 6cf528e3-061a-44dc-b320-0e4b48a6c6ab
-title: Certificate.IssuerName-Eigenschaft
+title: Certificate.IssuerName (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,9 +20,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117771579"
 ---
-# <a name="certificateissuername-property"></a>Certificate.IssuerName-Eigenschaft
+# <a name="certificateissuername-property"></a>Certificate.IssuerName (Eigenschaft)
 
-\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
 Die **IssuerName-Eigenschaft** ruft eine Zeichenfolge ab, die den Namen des Zertifikatausstellers enthält.
 

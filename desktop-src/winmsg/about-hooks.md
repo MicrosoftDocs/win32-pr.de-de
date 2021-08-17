@@ -1,61 +1,61 @@
 ---
-description: In diesem Thema wird erläutert, wie Hooks verwendet werden sollten.
+description: In diesem Thema wird erläutert, wie Hooks verwendet werden sollen.
 ms.assetid: 9ced0ac4-e602-425f-b954-6af9c741699a
 title: Übersicht über Hooks
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 36c5d89f111604418d1dc3ea9a4ebce6fe0a8124
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 10754f7275ce06c17b668e04c7792e6296a854fbe14a6ebc9544fbb70c73e9cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352231"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118201225"
 ---
 # <a name="hooks-overview"></a>Übersicht über Hooks
 
-Ein *Hook* ist ein Mechanismus, mit dem eine Anwendung Ereignisse abfangen kann, z. b. Nachrichten, Mausaktionen und Tastatureingaben. Eine Funktion, die einen bestimmten Ereignistyp abfängt, wird als *Hook-Prozedur* bezeichnet. Eine Hook-Prozedur kann auf jedes empfangene Ereignis reagieren und dann das Ereignis ändern oder verwerfen.
+Ein *Hook* ist ein Mechanismus, mit dem eine Anwendung Ereignisse wie Nachrichten, Mausaktionen und Tastatureingaben abfangen kann. Eine Funktion, die einen bestimmten Ereignistyp abfingt, wird als *Hookprozedur bezeichnet.* Eine Hookprozedur kann für jedes empfangene Ereignis agieren und dann das Ereignis ändern oder verwerfen.
 
 Im folgenden Beispiel wird für Hooks verwendet:
 
 -   Überwachen von Meldungen zu Debugzwecken
--   Unterstützung für die Aufzeichnung und Wiedergabe von Makros bereitstellen
--   Unterstützung für eine Hilfe Taste (F1)
--   Maus-und Tastatureingabe simulieren
--   Implementieren einer computerbasierten Schulungs Anwendung (CBT)
+-   Bereitstellen von Unterstützung für die Aufzeichnung und Wiedergabe von Makros
+-   Bereitstellen von Unterstützung für einen Hilfeschlüssel (F1)
+-   Simulieren von Maus- und Tastatureingaben
+-   Implementieren einer CBT-Anwendung (Computer-Based Training)
 
 > [!Note]  
-> Hooks neigen dazu, das System zu verlangsamen, da Sie die Verarbeitungs Menge erhöhen, die das System für jede Nachricht ausführen muss. Sie sollten einen Hook nur dann installieren, wenn dies erforderlich ist, und ihn so bald wie möglich entfernen.
+> Hooks verlangsamen das System in der Regel, da sie die Verarbeitungsmenge erhöhen, die das System für jede Nachricht ausführen muss. Installieren Sie einen Hook nur bei Bedarf, und entfernen Sie ihn so bald wie möglich.
 
  
 
 In diesem Abschnitt wird Folgendes erläutert:
 
--   [Hook-Ketten](#hook-chains)
--   [Hook-Verfahren](#hook-procedures)
--   [Hook-Typen](#hook-types)
-    -   [WH \_ callwndproc und WH \_ callwndprokret](#wh_callwndproc-and-wh_callwndprocret)
+-   [Hookketten](#hook-chains)
+-   [Hook-Prozeduren](#hook-procedures)
+-   [Hooktypen](#hook-types)
+    -   [WH \_ CALLWNDPROC und WH \_ CALLWNDPROCRET](#wh_callwndproc-and-wh_callwndprocret)
     -   [WH \_ CBT](#wh_cbt)
-    -   [WH- \_ Debug](#wh_debug)
-    -   [WH \_ foregroundidle](#wh_foregroundidle)
-    -   [WH \_ GetMessage](#wh_getmessage)
-    -   [WH \_ journalplayback](#wh_journalplayback)
-    -   [WH \_ Journaldatensatz](#wh_journalrecord)
-    -   [WH \_ Tastatur \_](#wh_keyboard_ll)
-    -   [WH- \_ Tastatur](#wh_keyboard)
-    -   [WH- \_ Maustaste \_](#wh_mouse_ll)
-    -   [WH- \_ Maus](#wh_mouse)
-    -   [WH \_ msgfilter und WH \_ sysmsgfilter](#wh_msgfilter-and-wh_sysmsgfilter)
-    -   [WH- \_ Shell](#wh_shell)
+    -   [WH \_ DEBUG](#wh_debug)
+    -   [WH \_ FOREGROUNDIDLE](#wh_foregroundidle)
+    -   [WH \_ GETMESSAGE](#wh_getmessage)
+    -   [WH \_ JOURNALPLAYBACK](#wh_journalplayback)
+    -   [WH \_ JOURNALRECORD](#wh_journalrecord)
+    -   [WH \_ KEYBOARD \_ LL](#wh_keyboard_ll)
+    -   [\_WH-TASTATUR](#wh_keyboard)
+    -   [WH \_ MOUSE \_ LL](#wh_mouse_ll)
+    -   [\_WH-MAUS](#wh_mouse)
+    -   [WH \_ MSGFILTER und WH \_ SYSMSGFILTER](#wh_msgfilter-and-wh_sysmsgfilter)
+    -   [\_WH-SHELL](#wh_shell)
 
-## <a name="hook-chains"></a>Hook-Ketten
+## <a name="hook-chains"></a>Hookketten
 
-Das System unterstützt viele verschiedene Arten von Hooks. Jeder Typ bietet Zugriff auf einen anderen Aspekt seines Nachrichten Behandlungs Mechanismus. Eine Anwendung kann z. b. den Datenverkehr mit dem Datenverkehr "Wh" für Maus Nachrichten überwachen. [ \_ ](#wh_mouse)
+Das System unterstützt viele verschiedene Arten von Hooks. jeder Typ bietet Zugriff auf einen anderen Aspekt des Nachrichtenbehandlungsmechanismus. Beispielsweise kann eine Anwendung den [WH \_ MOUSE-Hook](#wh_mouse) verwenden, um den Nachrichtendatenverkehr für Mausnachrichten zu überwachen.
 
-Das System verwaltet für jeden Typ von Hook eine separate Hook-Kette. Eine *Hookkette* ist eine Liste von Zeigern zu speziellen, Anwendungs definierten Rückruf Funktionen, die als *Hook-Prozeduren* bezeichnet werden. Wenn eine Nachricht auftritt, die einem bestimmten Hook-Typ zugeordnet ist, übergibt das System die Nachricht an jede Hook-Prozedur, auf die in der Hook-Kette verwiesen wird. Die Aktion, die eine Hook-Prozedur ausführen kann, hängt vom Typ des Beteiligten Hooks ab. Die Hook-Prozeduren für einige Arten von Hooks können nur Nachrichten überwachen. andere Benutzer können Nachrichten ändern oder den Fortschritt durch die Kette abbrechen, sodass Sie nicht mehr die nächste Hook-Prozedur oder das Zielfenster erreichen können.
+Das System verwaltet eine separate Hookkette für jeden Hooktyp. Eine *Hookkette ist* eine Liste von Zeigern auf spezielle, anwendungsdefinierte Rückruffunktionen, die als *Hook-Prozeduren bezeichnet werden.* Wenn eine Nachricht auftritt, die einem bestimmten Hooktyp zugeordnet ist, übergibt das System die Nachricht an jede Hookprozedur, auf die in der Hookkette nacheinander verwiesen wird. Die Aktion, die eine Hookprozedur ergreifen kann, hängt vom Typ des beteiligten Hooks ab. Die Hookverfahren für einige Arten von Hooks können nur Nachrichten überwachen. Andere können Nachrichten ändern oder ihren Fortschritt durch die Kette beenden, um zu verhindern, dass sie die nächste Hookprozedur oder das Zielfenster erreichen.
 
-## <a name="hook-procedures"></a>Hook-Verfahren
+## <a name="hook-procedures"></a>Hook-Prozeduren
 
-Um von einer bestimmten Art von Hook profitieren zu können, stellt der Entwickler eine Hook-Prozedur bereit und verwendet die [**SetWindowsHookEx**](/windows/win32/api/winuser/nf-winuser-setwindowshookexa) -Funktion, um Sie in der dem Hook zugeordneten Kette zu installieren. Eine Hook-Prozedur muss folgende Syntax aufweisen:
+Um einen bestimmten Hooktyp zu nutzen, stellt der Entwickler eine Hookprozedur zur Verfügung und verwendet die [**SetWindowsHookEx-Funktion,**](/windows/win32/api/winuser/nf-winuser-setwindowshookexa) um sie in der Kette zu installieren, die dem Hook zugeordnet ist. Eine Hookprozedur muss die folgende Syntax haben:
 
 ``` syntax
 LRESULT CALLBACK HookProc(
@@ -71,118 +71,118 @@ LRESULT CALLBACK HookProc(
 }
 ```
 
-"Host *" ist ein* Platzhalter für einen Anwendungs definierten Namen.
+*HookProc ist* ein Platzhalter für einen anwendungsdefinierten Namen.
 
-Der *nCode* -Parameter ist ein Hook-Code, den die Hook-Prozedur verwendet, um die auszuführende Aktion zu bestimmen. Der Wert des Hook-Codes hängt vom Typ des Hooks ab. Jeder Typ verfügt über einen eigenen Merkmals Satz von Hook-Codes. Die Werte der *wParam* -und *LPARAM* -Parameter hängen von dem Hook-Code ab, Sie enthalten jedoch in der Regel Informationen zu einer Nachricht, die gesendet oder gepostet wurde.
+Der *nCode-Parameter* ist ein Hookcode, mit dem die Hookprozedur die durchzuführende Aktion bestimmt. Der Wert des Hookcodes hängt vom Typ des Hooks ab. Jeder Typ verfügt über einen eigenen Merkmalssatz von Hookcodes. Die Werte der *Parameter wParam* und *lParam* hängen vom Hookcode ab, enthalten jedoch in der Regel Informationen zu einer gesendeten oder gesendeten Nachricht.
 
-Die Funktion " [**SetWindowsHookEx**](/windows/win32/api/winuser/nf-winuser-setwindowshookexa) " installiert immer eine Hook-Prozedur am Anfang einer Hook-Kette. Wenn ein Ereignis auftritt, das von einem bestimmten Hook-Typ überwacht wird, ruft das System die Prozedur am Anfang der dem Hook zugeordneten Hook-Kette auf. Jede Hook-Prozedur in der Kette bestimmt, ob das Ereignis an die nächste Prozedur übergeben wird. Eine Hook-Prozedur übergibt ein Ereignis an das nächste Verfahren, indem die [**CallNextHookEx**](/windows/win32/api/winuser/nf-winuser-callnexthookex) -Funktion aufgerufen wird.
+Die [**SetWindowsHookEx-Funktion**](/windows/win32/api/winuser/nf-winuser-setwindowshookexa) installiert immer eine Hookprozedur am Anfang einer Hookkette. Wenn ein Ereignis auftritt, das von einem bestimmten Hooktyp überwacht wird, ruft das System die Prozedur am Anfang der Hookkette auf, die dem Hook zugeordnet ist. Jede Hookprozedur in der Kette bestimmt, ob das Ereignis an die nächste Prozedur übergeben werden soll. Eine Hookprozedur übergibt ein Ereignis durch Aufrufen der [**CallNextHookEx-Funktion**](/windows/win32/api/winuser/nf-winuser-callnexthookex) an die nächste Prozedur.
 
-Beachten Sie, dass die Hook-Prozeduren für einige Arten von Hooks nur Nachrichten überwachen können. Das System übergibt Nachrichten an jede Hook-Prozedur, unabhängig davon, ob eine bestimmte Prozedur [**CallNextHookEx**](/windows/win32/api/winuser/nf-winuser-callnexthookex)aufruft.
+Beachten Sie, dass die Hookverfahren für einige Arten von Hooks nur Nachrichten überwachen können. das System übergibt Nachrichten an jede Hookprozedur, unabhängig davon, ob eine bestimmte Prozedur [**CallNextHookEx aufruft.**](/windows/win32/api/winuser/nf-winuser-callnexthookex)
 
-Ein *globaler Hook* überwacht Nachrichten für alle Threads im gleichen Desktop wie der aufrufende Thread. Ein *Thread spezifischer Hook* überwacht Nachrichten nur für einen einzelnen Thread. Eine globale Hook-Prozedur kann im Kontext einer beliebigen Anwendung im selben Desktop wie der aufrufende Thread aufgerufen werden, sodass sich die Prozedur in einem separaten dll-Modul befinden muss. Eine Thread spezifische Hook-Prozedur wird nur im Kontext des zugeordneten Threads aufgerufen. Wenn eine Anwendung eine Hook-Prozedur für einen ihrer eigenen Threads installiert, kann sich die Hook-Prozedur entweder im gleichen Modul wie der restliche Code der Anwendung oder in einer DLL befinden. Wenn die Anwendung eine Hook-Prozedur für einen Thread einer anderen Anwendung installiert, muss sich die Prozedur in einer DLL befinden. Weitere Informationen finden Sie unter [Dynamic Link Libraries (Dynamic Link Libraries](../dlls/dynamic-link-libraries.md)).
+Ein *globaler Hook* überwacht Nachrichten für alle Threads auf demselben Desktop wie der aufrufende Thread. Ein *threadspezifischer Hook überwacht* Nachrichten nur für einen einzelnen Thread. Eine globale Hookprozedur kann im Kontext einer beliebigen Anwendung auf demselben Desktop wie der aufrufende Thread aufgerufen werden, sodass sich die Prozedur in einem separaten DLL-Modul befindet. Eine threadspezifische Hookprozedur wird nur im Kontext des zugeordneten Threads aufgerufen. Wenn eine Anwendung eine Hookprozedur für einen ihrer eigenen Threads installiert, kann sich die Hookprozedur entweder im selben Modul wie der Rest des Anwendungscodes oder in einer DLL befindet. Wenn die Anwendung eine Hookprozedur für einen Thread einer anderen Anwendung installiert, muss die Prozedur in einer DLL enthalten sein. Weitere Informationen finden Sie unter [Dynamic Link Libraries](../dlls/dynamic-link-libraries.md).
 
 > [!Note]  
-> Sie sollten globale Hooks nur zu Debuggingzwecken verwenden. Andernfalls sollten Sie diese vermeiden. Globale Hooks beeinträchtigen die Systemleistung und verursachen Konflikte mit anderen Anwendungen, die denselben Typ von globalem Hook implementieren.
+> Sie sollten globale Hooks nur zu Debugzwecken verwenden. Andernfalls sollten Sie sie vermeiden. Globale Hooks beeinträchtigen die Systemleistung und verursachen Konflikte mit anderen Anwendungen, die die gleiche Art von globalem Hook implementieren.
 
  
 
-## <a name="hook-types"></a>Hook-Typen
+## <a name="hook-types"></a>Hooktypen
 
-Mit jedem Hook-Typ kann eine Anwendung einen anderen Aspekt des Nachrichten Behandlungs Mechanismus des Systems überwachen. In den folgenden Abschnitten werden die verfügbaren Hooks beschrieben.
+Mit jedem Hooktyp kann eine Anwendung einen anderen Aspekt des Nachrichtenbehandlungsmechanismus des Systems überwachen. In den folgenden Abschnitten werden die verfügbaren Hooks beschrieben.
 
--   [WH \_ callwndproc und WH \_ callwndprokret](#wh_callwndproc-and-wh_callwndprocret)
+-   [WH \_ CALLWNDPROC und WH \_ CALLWNDPROCRET](#wh_callwndproc-and-wh_callwndprocret)
 -   [WH \_ CBT](#wh_cbt)
--   [WH- \_ Debug](#wh_debug)
--   [WH \_ foregroundidle](#wh_foregroundidle)
--   [WH \_ GetMessage](#wh_getmessage)
--   [WH \_ journalplayback](#wh_journalplayback)
--   [WH \_ Journaldatensatz](#wh_journalrecord)
--   [WH \_ Tastatur \_](#wh_keyboard_ll)
--   [WH- \_ Tastatur](#wh_keyboard)
--   [WH- \_ Maustaste \_](#wh_mouse_ll)
--   [WH- \_ Maus](#wh_mouse)
--   [WH \_ msgfilter und WH \_ sysmsgfilter](#wh_msgfilter-and-wh_sysmsgfilter)
--   [WH- \_ Shell](#wh_shell)
+-   [WH \_ DEBUG](#wh_debug)
+-   [WH \_ FOREGROUNDIDLE](#wh_foregroundidle)
+-   [WH \_ GETMESSAGE](#wh_getmessage)
+-   [WH \_ JOURNALPLAYBACK](#wh_journalplayback)
+-   [WH \_ JOURNALRECORD](#wh_journalrecord)
+-   [WH \_ KEYBOARD \_ LL](#wh_keyboard_ll)
+-   [\_WH-TASTATUR](#wh_keyboard)
+-   [WH \_ MOUSE \_ LL](#wh_mouse_ll)
+-   [\_WH-MAUS](#wh_mouse)
+-   [WH \_ MSGFILTER und WH \_ SYSMSGFILTER](#wh_msgfilter-and-wh_sysmsgfilter)
+-   [\_WH-SHELL](#wh_shell)
 
-### <a name="wh_callwndproc-and-wh_callwndprocret"></a>WH \_ callwndproc und WH \_ callwndprokret
+### <a name="wh_callwndproc-and-wh_callwndprocret"></a>WH \_ CALLWNDPROC und WH \_ CALLWNDPROCRET
 
-Mit den " **WH \_ callwndproc** " und " **WH \_ callwndprokret** " können Sie Nachrichten überwachen, die an Fenster Prozeduren gesendet werden Das System ruft eine " **WH \_ callwndproc** "-Hook-Prozedur auf, bevor die Nachricht an die Empfangs Fenster Prozedur übergeben wird, und ruft die " **WH \_ callwndprokret** "-Hook-Prozedur auf, nachdem die Fenster Prozedur die Nachricht verarbeitet hat
+Mit **den Hooks WH \_ CALLWNDPROC** und **WH \_ CALLWNDPROCRET** können Sie Nachrichten überwachen, die an Fensterprozeduren gesendet werden. Das System ruft eine **WH \_ CALLWNDPROC-Hookprozedur** auf, bevor die Nachricht an die Prozedur für das empfangende Fenster übergeben wird, und ruft die **WH \_ CALLWNDPROCRET-Hookprozedur** auf, nachdem die Fensterprozedur die Nachricht verarbeitet hat.
 
-Der " **WH \_ callwndprokret** "-Hook übergibt einen Zeiger auf eine [**cwpretstruct**](/windows/win32/api/winuser/ns-winuser-cwpretstruct) -Struktur an die Hook-Prozedur. Die-Struktur enthält den Rückgabewert der Fenster Prozedur, von der die Nachricht verarbeitet wurde, sowie die Nachrichten Parameter, die der Meldung zugeordnet sind. Unterklassen das Fenster funktioniert nicht für Nachrichten, die zwischen Prozessen festgelegt sind.
+Der **WH \_ CALLWNDPROCRET-Hook** übergibt einen Zeiger auf eine [**CWPRETSTRUCT-Struktur**](/windows/win32/api/winuser/ns-winuser-cwpretstruct) an die Hookprozedur. Die -Struktur enthält den Rückgabewert der Fensterprozedur, die die Nachricht verarbeitet hat, sowie die der Nachricht zugeordneten Meldungsparameter. Das Unterklassen des Fensters funktioniert nicht für Nachrichten, die zwischen Prozessen festgelegt wurden.
 
-Weitere Informationen finden Sie in den [*callwndproc*](/previous-versions/windows/desktop/legacy/ms644975(v=vs.85)) -und [*callwndretproc*](/windows/win32/api/winuser/nc-winuser-hookproc) -Rückruf Funktionen.
+Weitere Informationen finden Sie in den [*Rückruffunktionen CallWndProc*](/previous-versions/windows/desktop/legacy/ms644975(v=vs.85)) und [*CallWndRetProc.*](/windows/win32/api/winuser/nc-winuser-hookproc)
 
 ### <a name="wh_cbt"></a>WH \_ CBT
 
-Das System ruft eine **WH \_ CBT** -Hook-Prozedur vor dem aktivieren, erstellen, zerstören, minimieren, maximieren, verschieben oder Anpassen eines Fensters auf, vor dem Abschließen eines System Befehls, vor dem Entfernen eines Maus-oder Tastatur Ereignisses aus der System Meldungs Warteschlange, vor dem Festlegen des Eingabefokus oder vor der Synchronisierung mit der System Meldungs Warteschlange. Der Wert, den die Hook-Prozedur zurückgibt, bestimmt, ob das System einen dieser Vorgänge zulässt oder verhindert. Der **WH \_ CBT** -Hook ist hauptsächlich für computerbasierte Schulungs Anwendungen (CBT) vorgesehen.
+Das System ruft eine **\_ WH-CBT-Hookprozedur** vor dem Aktivieren, Erstellen, Zerstören, Minimieren, Maximieren, Verschieben oder Anpassen eines Fensters auf, bevor ein Systembefehl abgeschlossen wird; vor dem Entfernen eines Maus- oder Tastaturereignisses aus der Systemnachrichtenwarteschlange, vor dem Festlegen des Eingabefokus oder vor dem Synchronisieren mit der Systemnachrichtenwarteschlange. Der Wert, den die Hookprozedur zurückgibt, bestimmt, ob das System einen dieser Vorgänge zulässt oder verhindert. Der **WH \_ CBT-Hook** ist in erster Linie für computerbasierte Trainingsanwendungen (CBT) vorgesehen.
 
-Weitere Informationen finden Sie unter der [*cbtproc*](/previous-versions/windows/desktop/legacy/ms644977(v=vs.85)) -Rückruffunktion.
+Weitere Informationen finden Sie unter [*der CBTProc-Rückruffunktion.*](/previous-versions/windows/desktop/legacy/ms644977(v=vs.85))
 
 Weitere Informationen finden Sie unter [WinEvents](/windows/desktop/WinAuto/winevents-infrastructure).
 
-### <a name="wh_debug"></a>WH- \_ Debug
+### <a name="wh_debug"></a>WH \_ DEBUG
 
-Das System ruft vor dem Aufrufen von Hook-Prozeduren, die einem anderen Hook im System zugeordnet sind, eine " **WH- \_ debughook** Sie können diesen Hook verwenden, um zu bestimmen, ob das System das aufzurufen von Hook-Prozeduren zulässt, die anderen Arten von Hooks zugeordnet sind.
+Das System ruft vor dem Aufrufen von Hookprozeduren, die einem anderen Hook im System zugeordnet sind, eine **WH-DEBUG-Hookprozedur \_** auf. Sie können diesen Hook verwenden, um zu bestimmen, ob das System hook-Prozeduren aufrufen darf, die anderen Hooktypen zugeordnet sind.
 
-Weitere Informationen finden Sie in der [*debugproc*](/previous-versions/windows/desktop/legacy/ms644978(v=vs.85)) -Rückruffunktion.
+Weitere Informationen finden Sie unter [*der DebugProc-Rückruffunktion.*](/previous-versions/windows/desktop/legacy/ms644978(v=vs.85))
 
-### <a name="wh_foregroundidle"></a>WH \_ foregroundidle
+### <a name="wh_foregroundidle"></a>WH \_ FOREGROUNDIDLE
 
-Der **WH \_ foregroundidle** -Hook ermöglicht Ihnen das Ausführen von Aufgaben mit niedriger Priorität in Zeiten, in denen sich der Vordergrund Thread im Leerlauf befindet. Das System ruft eine **WH \_ foregroundidle** -Hook-Prozedur auf, wenn der Vordergrund Thread der Anwendung sich im Leerlauf befindet.
+Mit **dem WH \_ FOREGROUNDIDLE-Hook** können Sie Aufgaben mit niedriger Priorität in Zeiten ausführen, in denen sich der Vordergrundthread im Leerlauf befindet. Das System ruft eine **WH \_ FOREGROUNDIDLE-Hookprozedur** auf, wenn sich der Vordergrundthread der Anwendung im Leerlauf befindet.
 
-Weitere Informationen finden Sie in der [*foregroundidleproc*](/previous-versions/windows/desktop/legacy/ms644980(v=vs.85)) -Rückruffunktion.
+Weitere Informationen finden Sie unter [*der ForegroundIdleProc-Rückruffunktion.*](/previous-versions/windows/desktop/legacy/ms644980(v=vs.85))
 
-### <a name="wh_getmessage"></a>WH \_ GetMessage
+### <a name="wh_getmessage"></a>WH \_ GETMESSAGE
 
-Der **WH \_ GetMessage** -Hook ermöglicht einer Anwendung das Überwachen von Nachrichten, die von der [**GetMessage**](/windows/win32/api/winuser/nf-winuser-getmessage) -Funktion oder der [**Peer-Message**](/windows/win32/api/winuser/nf-winuser-peekmessagea) -Funktion zurückgegeben werden. Mit dem " **WH \_ GetMessage** "-Hook können Sie die Maus-und Tastatureingaben sowie andere in der Nachrichten Warteschlange gesendetes Meldungen überwachen.
+Der **WH \_ GETMESSAGE-Hook** ermöglicht es einer Anwendung, Nachrichten zu überwachen, die von der [**GetMessage-**](/windows/win32/api/winuser/nf-winuser-getmessage) oder [**PeekMessage-Funktion zurückgegeben werden**](/windows/win32/api/winuser/nf-winuser-peekmessagea) sollen. Sie können den **WH \_ GETMESSAGE-Hook** verwenden, um Maus- und Tastatureingaben sowie andere Nachrichten zu überwachen, die an die Nachrichtenwarteschlange gesendet werden.
 
-Weitere Informationen finden Sie in der [*getmsgproc*](/previous-versions/windows/desktop/legacy/ms644981(v=vs.85)) -Rückruffunktion.
+Weitere Informationen finden Sie unter [*der GetMsgProc-Rückruffunktion.*](/previous-versions/windows/desktop/legacy/ms644981(v=vs.85))
 
-### <a name="wh_journalplayback"></a>WH \_ journalplayback
+### <a name="wh_journalplayback"></a>WH \_ JOURNALPLAYBACK
 
-Der **WH \_ journalplayback** -Hook ermöglicht einer Anwendung das Einfügen von Nachrichten in die System Meldungs Warteschlange. Mit diesem Hook können Sie eine Reihe von Maus-und Tastatur Ereignissen wiedergeben, die zuvor mithilfe von " [WH \_ journalrecord](#wh_journalrecord)" aufgezeichnet wurden. Normale Maus-und Tastatureingaben werden deaktiviert, solange ein " **WH \_ journalplayback** "-Hook installiert ist. Ein **WH \_ journalplayback** -Hook ist ein globaler Hook – er kann nicht als Thread spezifischer Hook verwendet werden.
+Mit **dem Hook WH \_ JOURNALPLAYBACK** kann eine Anwendung Nachrichten in die Systemnachrichtenwarteschlange einfügen. Sie können diesen Hook verwenden, um eine Reihe von Maus- und Tastaturereignissen wieder zu spielen, die zuvor mithilfe von [WH \_ JOURNALRECORD aufgezeichnet wurden.](#wh_journalrecord) Reguläre Maus- und Tastatureingaben werden deaktiviert, solange ein **WH \_ JOURNALPLAYBACK-Hook** installiert ist. Ein **WH \_ JOURNALPLAYBACK-Hook** ist ein globaler Hook– er kann nicht als threadspezifischer Hook verwendet werden.
 
-Der **WH \_ journalplayback** -Hook gibt einen Timeout Wert zurück. Dieser Wert teilt dem System mit, wie viele Millisekunden gewartet werden muss, bevor die aktuelle Nachricht vom Wiedergabe Hook verarbeitet wird. Dies ermöglicht es dem Hook, die zeitliche Steuerung der wiedergegeben Ereignisse zu steuern.
+Der **WH \_ JOURNALPLAYBACK-Hook** gibt einen Time out-Wert zurück. Dieser Wert gibt dem System an, wie viele Millisekunden gewartet werden soll, bevor die aktuelle Nachricht vom Wiedergabehook verarbeitet wird. Dies ermöglicht es dem Hook, die Zeitliche Steuerung der Ereignisse zu steuern, die er wieder gibt.
 
-Weitere Informationen finden Sie in der [*journalplaybackproc*](/previous-versions/windows/desktop/legacy/ms644982(v=vs.85)) -Rückruffunktion.
+Weitere Informationen finden Sie unter der [*Rückruffunktion JournalPlaybackProc.*](/previous-versions/windows/desktop/legacy/ms644982(v=vs.85))
 
-### <a name="wh_journalrecord"></a>WH \_ Journaldatensatz
+### <a name="wh_journalrecord"></a>WH \_ JOURNALRECORD
 
-Mit dem " **WH \_ journalrecord** "-Hook können Sie Eingabeereignisse überwachen und aufzeichnen. In der Regel verwenden Sie diesen Hook zum Aufzeichnen einer Sequenz von Maus-und Tastatur Ereignissen, um Sie später mithilfe von " [WH \_ journalplayback](#wh_journalplayback)" wiederzugeben. Der " **WH \_ journalrecord** "-Hook ist ein globaler Hook – er kann nicht als Thread spezifischer Hook verwendet werden.
+Mit **dem Hook WH \_ JOURNALRECORD** können Sie Eingabeereignisse überwachen und aufzeichnen. In der Regel verwenden Sie diesen Hook, um eine Sequenz von Maus- und Tastaturereignissen zu erfassen, die später mithilfe von [WH \_ JOURNALPLAYBACK wiedergegeben werden.](#wh_journalplayback) Der **WH \_ JOURNALRECORD-Hook** ist ein globaler Hook– er kann nicht als threadspezifischer Hook verwendet werden.
 
-Weitere Informationen finden Sie in der [*journalrecordproc*](/previous-versions/windows/desktop/legacy/ms644983(v=vs.85)) -Rückruffunktion.
+Weitere Informationen finden Sie unter der [*Rückruffunktion JournalRecordProc.*](/previous-versions/windows/desktop/legacy/ms644983(v=vs.85))
 
-### <a name="wh_keyboard_ll"></a>WH \_ Tastatur \_
+### <a name="wh_keyboard_ll"></a>WH \_ KEYBOARD \_ LL
 
-Mit dem " **WH \_ Keyboard \_ ll** Hook" können Sie Tastatureingabe Ereignisse überwachen, die in einer Thread Eingabe Warteschlange gepostet werden.
+Mit **dem WH \_ KEYBOARD \_ LL-Hook** können Sie Tastatureingabeereignisse überwachen, die in einer Threadeingabewarteschlange veröffentlicht werden.
 
-Weitere Informationen finden Sie unter der [*LowLevelKeyboardProc*](/previous-versions/windows/desktop/legacy/ms644985(v=vs.85)) -Rückruffunktion.
+Weitere Informationen finden Sie unter [*der Rückruffunktion LowLevelKeyboardProc.*](/previous-versions/windows/desktop/legacy/ms644985(v=vs.85))
 
-### <a name="wh_keyboard"></a>WH- \_ Tastatur
+### <a name="wh_keyboard"></a>\_WH-TASTATUR
 
-Der **WH- \_ Tastatur** Hook ermöglicht einer Anwendung, den Nachrichtenverkehr für [**WM- \_ KeyDown**](/windows/desktop/inputdev/wm-keydown) -und [**WM- \_ KeyUp**](/windows/desktop/inputdev/wm-keyup) -Meldungen zu überwachen, die von der [**GetMessage**](/windows/win32/api/winuser/nf-winuser-getmessage) -Funktion oder der [**Peer Message**](/windows/win32/api/winuser/nf-winuser-peekmessagea) -Funktion zurückgegeben werden Mithilfe des WH- **\_ Tastatur** Hooks können Sie Tastatureingaben überwachen, die in einer Nachrichten Warteschlange gepostet werden.
+Mit **dem WH \_ KEYBOARD-Hook** kann eine Anwendung den Nachrichtendatenverkehr für [**WM \_ KEYDOWN-**](/windows/desktop/inputdev/wm-keydown) und [**WM \_ KEYUP-Nachrichten**](/windows/desktop/inputdev/wm-keyup) überwachen, die von der [**GetMessage-**](/windows/win32/api/winuser/nf-winuser-getmessage) oder [**PeekMessage-Funktion zurückgegeben werden**](/windows/win32/api/winuser/nf-winuser-peekmessagea) sollen. Sie können den **WH \_ KEYBOARD-Hook verwenden,** um Tastatureingaben zu überwachen, die an eine Nachrichtenwarteschlange gesendet werden.
 
-Weitere Informationen finden Sie in der [*keyboardproc*](/previous-versions/windows/desktop/legacy/ms644984(v=vs.85)) -Rückruffunktion.
+Weitere Informationen finden Sie unter [*der KeyboardProc-Rückruffunktion.*](/previous-versions/windows/desktop/legacy/ms644984(v=vs.85))
 
-### <a name="wh_mouse_ll"></a>WH- \_ Maustaste \_
+### <a name="wh_mouse_ll"></a>WH \_ MOUSE \_ LL
 
-Mit dem " **WH \_ Mouse \_ ll** Hook" können Sie Mauseingabe Ereignisse überwachen, die in einer Thread Eingabe Warteschlange gepostet werden.
+Mit **dem WH \_ MOUSE \_ LL-Hook** können Sie Mauseingabeereignisse überwachen, die in einer Threadeingabewarteschlange veröffentlicht werden.
 
-Weitere Informationen finden Sie unter der [*lowlevelmousetproc*](/previous-versions/windows/desktop/legacy/ms644986(v=vs.85)) -Rückruffunktion.
+Weitere Informationen finden Sie unter [*der LowLevelMouseProc-Rückruffunktion.*](/previous-versions/windows/desktop/legacy/ms644986(v=vs.85))
 
-### <a name="wh_mouse"></a>WH- \_ Maus
+### <a name="wh_mouse"></a>\_WH-MAUS
 
-Mit dem "Wh"-mousehook können Sie Maus Meldungen überwachen, die von der [**GetMessage**](/windows/win32/api/winuser/nf-winuser-getmessage) -Funktion oder der [**Peer Message**](/windows/win32/api/winuser/nf-winuser-peekmessagea) -Funktion zurückgegeben werden. **\_** Mit dem "Wh"-mousehook können Sie Maus Eingaben überwachen, die in einer Nachrichten Warteschlange gepostet **\_**
+Mit **dem WH \_ MOUSE-Hook** können Sie Mausnachrichten überwachen, die von der GetMessage- oder [**PeekMessage-Funktion zurückgegeben werden**](/windows/win32/api/winuser/nf-winuser-peekmessagea) sollen. [](/windows/win32/api/winuser/nf-winuser-getmessage) Sie können den **WH \_ MOUSE-Hook** verwenden, um Mauseingaben zu überwachen, die in eine Nachrichtenwarteschlange gesendet werden.
 
-Weitere Informationen finden Sie unter [*mousetproc*](/previous-versions/windows/desktop/legacy/ms644988(v=vs.85)) -Rückruffunktion.
+Weitere Informationen finden Sie unter [*der MouseProc-Rückruffunktion.*](/previous-versions/windows/desktop/legacy/ms644988(v=vs.85))
 
-### <a name="wh_msgfilter-and-wh_sysmsgfilter"></a>WH \_ msgfilter und WH \_ sysmsgfilter
+### <a name="wh_msgfilter-and-wh_sysmsgfilter"></a>WH \_ MSGFILTER und WH \_ SYSMSGFILTER
 
-Mit den Gruppen " **WH \_ msgfilter** " und " **WH \_ sysmsgfilter** " können Sie Nachrichten überwachen, die über ein Menü, eine Bild Lauf Leiste, ein Meldungs Feld oder ein Dialogfeld verarbeitet werden sollen, und erkennen, wann ein anderes Fenster aktiviert werden soll, wenn der Benutzer die Tastenkombination Alt + Tab oder ALT + ESC drückt. Der " **WH \_ msgfilter** "-Hook kann nur Nachrichten überwachen, die an ein Menü, eine Bild Lauf Leiste, ein Meldungs Feld oder ein Dialogfeld übermittelt wurden Der " **WH \_ sysmsgfilter** "-Hook überwacht solche Nachrichten für alle Anwendungen.
+Mit den **HOOKs \_ WH MSGFILTER** und **WH \_ SYSMSGFILTER** können Sie Nachrichten überwachen, die über ein Menü, eine Scrollleiste, ein Meldungsfeld oder ein Dialogfeld verarbeitet werden sollen, und erkennen, wann ein anderes Fenster aktiviert werden soll, wenn der Benutzer die Tastenkombination ALT+TAB oder ALT+ESC drückt. Der **WH \_ MSGFILTER-Hook** kann nur Nachrichten überwachen, die an ein Menü, eine Scrollleiste, ein Meldungsfeld oder ein Dialogfeld übergeben werden, das von der Anwendung erstellt wurde, die die Hookprozedur installiert hat. Der **WH \_ SYSMSGFILTER-Hook** überwacht solche Nachrichten für alle Anwendungen.
 
-Mit den " **WH \_ msgfilter** "-und " **WH \_ sysmsgfilter** "-Hooks können Sie bei modalen Schleifen eine Nachrichtenfilterung durchführen, die der in der Hauptnachrichten Schleife durchgeführten Filterung entspricht. Beispielsweise untersucht eine Anwendung häufig eine neue Nachricht in der Hauptschleife zwischen dem Zeitpunkt, zu dem Sie die Nachricht aus der Warteschlange abruft, und dem Zeitpunkt, an dem die Nachricht gesendet wird, und führt gegebenenfalls eine spezielle Verarbeitung durch. Während einer modalen Schleife ruft das System jedoch Nachrichten ab und sendet Sie, ohne dass eine Anwendung die Möglichkeit erhält, die Nachrichten in der Hauptnachrichten Schleife zu filtern. Wenn eine Anwendung eine " **WH \_ msgfilter** "-oder " **WH \_ sysmsgfilter** "-Hook-Prozedur installiert, ruft das System die Prozedur während der modalen Schleife auf.
+Die **\_ WH-Hooks MSGFILTER** und **WH \_ SYSMSGFILTER** ermöglichen Ihnen das Filtern von Nachrichten während modaler Schleifen, die der Filterung in der Hauptnachrichtenschleife entsprechen. Beispielsweise untersucht eine Anwendung häufig eine neue Nachricht in der Hauptschleife zwischen dem Zeitpunkt, zu dem sie die Nachricht aus der Warteschlange abruft, und dem Zeitpunkt, zu dem sie die Nachricht versendet, und führt bei Bedarf eine spezielle Verarbeitung durch. Während einer modalen Schleife ruft das System jedoch Nachrichten ab und gibt sie weiter, ohne dass eine Anwendung die Möglichkeit hat, die Nachrichten in der Hauptnachrichtenschleife zu filtern. Wenn eine Anwendung eine **\_ WH-MSGFILTER-** oder **\_ WH-SYSMSGFILTER-Hookprozedur** installiert, ruft das System die Prozedur während der modalen Schleife auf.
 
-Eine Anwendung kann den " **WH \_ msgfilter** "-Hook direkt aufrufen, indem Sie die [**callmsgfilter**](/windows/win32/api/winuser/nf-winuser-callmsgfiltera) -Funktion aufruft. Mit dieser Funktion kann die Anwendung denselben Code zum Filtern von Nachrichten in modalen Schleifen verwenden, wie Sie in der Hauptnachrichten Schleife verwendet wird. Kapseln Sie hierzu die Filter Vorgänge in einer **WH \_ msgfilter** -Hook-Prozedur, und rufen Sie **callmsgfilter** zwischen den Aufrufen der Funktionen [**GetMessage**](/windows/win32/api/winuser/nf-winuser-getmessage) und [**DispatchMessage**](/windows/win32/api/winuser/nf-winuser-dispatchmessage) auf.
+Eine Anwendung kann den **WH \_ MSGFILTER-Hook** direkt aufrufen, indem sie die [**CallMsgFilter-Funktion**](/windows/win32/api/winuser/nf-winuser-callmsgfiltera) aufruft. Mit dieser Funktion kann die Anwendung denselben Code verwenden, um Nachrichten während modaler Schleifen zu filtern, wie sie in der Hauptnachrichtenschleife verwendet. Kapseln Sie dazu die Filtervorgänge in einer **WH MSGFILTER-Hookprozedur, \_** und rufen Sie **CallMsgFilter zwischen** den Aufrufen der [**GetMessage-**](/windows/win32/api/winuser/nf-winuser-getmessage) und [**DispatchMessage-Funktionen**](/windows/win32/api/winuser/nf-winuser-dispatchmessage) auf.
 
 ``` syntax
 while (GetMessage(&msg, (HWND) NULL, 0, 0)) 
@@ -192,17 +192,17 @@ while (GetMessage(&msg, (HWND) NULL, 0, 0))
 } 
 ```
 
-Das letzte Argument von [**callmsgfilter**](/windows/win32/api/winuser/nf-winuser-callmsgfiltera) wird einfach an die Hook-Prozedur übermittelt. Sie können einen beliebigen Wert eingeben. Die Hook-Prozedur kann durch Definieren einer Konstanten wie **MSGF \_ mainloop** diesen Wert verwenden, um zu bestimmen, wo die Prozedur von aufgerufen wurde.
+Das letzte Argument von [**CallMsgFilter**](/windows/win32/api/winuser/nf-winuser-callmsgfiltera) wird einfach an die Hookprozedur übergeben. Sie können einen beliebigen Wert eingeben. Die Hookprozedur kann durch Definieren einer Konstante wie **MSGF \_ MAINLOOP** diesen Wert verwenden, um zu bestimmen, von wo die Prozedur aufgerufen wurde.
 
-Weitere Informationen finden Sie unter den " [*MessageProc*](/previous-versions/windows/desktop/legacy/ms644987(v=vs.85)) "-und " [*sysmsgproc*](/previous-versions/windows/desktop/legacy/ms644992(v=vs.85)) "-Rückruf Funktionen.
+Weitere Informationen finden Sie unter den [*Rückruffunktionen MessageProc*](/previous-versions/windows/desktop/legacy/ms644987(v=vs.85)) und [*SysMsgProc.*](/previous-versions/windows/desktop/legacy/ms644992(v=vs.85))
 
-### <a name="wh_shell"></a>WH- \_ Shell
+### <a name="wh_shell"></a>\_WH-SHELL
 
-Eine Shellanwendung kann mit dem **WH- \_ ShellHook** wichtige Benachrichtigungen erhalten. Das System ruft eine **WH- \_ ShellHook** -Prozedur auf, wenn die Shellanwendung aktiviert wird und wenn ein Fenster der obersten Ebene erstellt oder zerstört wird.
+Eine Shellanwendung kann den **WH \_ SHELL-Hook** verwenden, um wichtige Benachrichtigungen zu erhalten. Das System ruft eine **WH \_ SHELL-Hookprozedur** auf, wenn die Shellanwendung aktiviert wird und wenn ein Fenster der obersten Ebene erstellt oder zerstört wird.
 
-Beachten Sie, dass benutzerdefinierte Shellanwendungen keine **WH- \_ shellnachrichten** empfangen. Daher muss jede Anwendung, die sich selbst als Standardshell registriert, die [**SystemParametersInfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) -Funktion aufrufen, bevor Sie (oder eine andere Anwendung) **WH- \_ Shell** -Nachrichten empfangen kann. Diese Funktion muss mit **SPI \_ setminimizedmetrics** und einer [**minimizedmetrics**](/windows/win32/api/winuser/ns-winuser-minimizedmetrics) -Struktur aufgerufen werden. Legen Sie den **iarrange** -Member dieser Struktur auf **ARW \_ Hide** fest.
+Beachten Sie, dass benutzerdefinierte Shellanwendungen keine **WH \_ SHELL-Nachrichten** empfangen. Daher muss jede Anwendung, die sich selbst als Standardshell registriert, die [**SystemParametersInfo-Funktion**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) aufrufen, bevor sie (oder eine andere Anwendung) **WH SHELL-Nachrichten \_ empfangen** kann. Diese Funktion muss mit **SPI \_ SETMINIMIZEDMETRICS und** einer [**MINIMIZEDMETRICS-Struktur aufgerufen**](/windows/win32/api/winuser/ns-winuser-minimizedmetrics) werden. Legen Sie **den iArrange-Member** dieser -Struktur auf **ARW \_ HIDE fest.**
 
-Weitere Informationen finden Sie unter [*shellproc*](/previous-versions/windows/desktop/legacy/ms644991(v=vs.85)) -Rückruffunktion.
+Weitere Informationen finden Sie unter [*der ShellProc-Rückruffunktion.*](/previous-versions/windows/desktop/legacy/ms644991(v=vs.85))
 
  
 

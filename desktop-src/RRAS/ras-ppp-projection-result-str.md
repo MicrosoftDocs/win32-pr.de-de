@@ -23,7 +23,7 @@ ms.locfileid: "117789584"
 ---
 # <a name="ras_ppp_projection_result-structure"></a>\_ \_ \_ RAS-PROJEKTIONSERGEBNISSTRUKTUR
 
-\[Ab Windows Vista wird die **\_ RAS-PROJEKTIONSERGEBNIS-Struktur \_ \_** nicht unterstützt.\]
+\[Die **\_ RAS-PROJEKTIONSPROJEKTIONSERGEBNIS-Struktur \_ \_** wird ab Windows Vista nicht unterstützt.\]
 
 Die **\_ RAS-PROJEKTIONSPROJEKTIONSERGEBNIS-Struktur \_ \_** wird verwendet, um die Ergebnisse der verschiedenen PROJEKTIONSIONS-Projektionsvorgänge für einen Port zu melden.
 

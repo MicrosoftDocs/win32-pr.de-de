@@ -33,7 +33,7 @@ Im folgenden Verfahren wird beschrieben, wie Ein Skript ausgeführt wird.
 4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie über eine Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokolle, z. B. das Sicherheitsereignisprotokoll, können durch Benutzerzugriffssteuerungen (User Access Controls, UAC) geschützt werden.
 
 > [!Note]  
-> Standardmäßig zeigt cscript die Ausgabe eines Skripts im Eingabeaufforderungsfenster an. Da WMI-Skripts große Mengen von Ausgaben erzeugen können, sollten Sie die Ausgabe an eine Datei umleiten. Geben Sie **cscript filename.vbs > outfile.txt** an der Eingabeaufforderung ein, um die Ausgabe des *filename.vbs* Skripts an *outfile.txt* umzuleiten.
+> Standardmäßig zeigt cscript die Ausgabe eines Skripts im Eingabeaufforderungsfenster an. Da WMI-Skripts große Mengen von Ausgaben erzeugen können, sollten Sie die Ausgabe an eine Datei umleiten. Geben Sie **cscript filename.vbs > outfile.txt** an der Eingabeaufforderung ein, um die Ausgabe des *filename.vbs* Skripts anoutfile.txt *umzuleiten.*
 
  
 
@@ -56,7 +56,7 @@ In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen versc
 <tbody>
 <tr class="odd">
 <td>... ermitteln, welche Dienste ausgeführt werden und welche nicht?</td>
-<td>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> -Klasse, um den Status aller Dienste zu überprüfen. Die Zustandseigenschaft informiert Sie darüber, ob ein Dienst beendet oder ausgeführt wird.<br/> <span data-codelanguage="VisualBasic"></span>
+<td>Verwenden <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong></strong></a> Sie die Win32_Service-Klasse, um den Status aller Dienste zu überprüfen. Die Zustandseigenschaft informiert Sie darüber, ob ein Dienst beendet oder ausgeführt wird.<br/> <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -265,7 +265,7 @@ Next</code></pre></td>
 </tr>
 <tr class="even">
 <td>... finden Sie die Dienste, die ausgeführt werden müssen, bevor ich den DHCP-Dienst starten kann?</td>
-<td><p>Fragen Sie <a href="associators-of-statement.md">ASSOCIATORS DER</a> <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> -Klasse namens &quot; DHCP &quot; ab, die sich in der <a href="/windows/desktop/CIMWin32Prov/win32-dependentservice"><strong>Win32_DependentService-Klasse</strong></a> befinden und abhängig in &quot; der &quot; <strong>Role-Eigenschaft</strong> aufweisen. <strong>Rolle</strong> bedeutet die Rolle des DHCP-Diensts: In diesem Fall ist sie von den anderen Diensten abhängig, die gestartet werden.</p>
+<td><p>Fragen Sie <a href="associators-of-statement.md">ASSOCIATORS DER</a> <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> -Klasse namens &quot; DHCP &quot; ab, die sich in der <a href="/windows/desktop/CIMWin32Prov/win32-dependentservice"><strong>Win32_DependentService-Klasse</strong></a> befinden und abhängig in &quot; der &quot; <strong>Role-Eigenschaft</strong> haben. <strong>Rolle</strong> bedeutet die Rolle des DHCP-Diensts: In diesem Fall ist sie von den anderen Diensten abhängig, die gestartet werden.</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>

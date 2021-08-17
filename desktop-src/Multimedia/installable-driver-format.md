@@ -1,26 +1,26 @@
 ---
-title: Installier bares Treiber Format
-description: Installier bares Treiber Format
+title: Installierbares Treiberformat
+description: Installierbares Treiberformat
 ms.assetid: 4573567e-237d-47f9-9510-31d01326205f
 keywords:
-- installierbare Treiber, Formate
-- installierbare Treiber, driverproc-Funktion
-- installierbare Treiber, Meldungen
-- Treiber Meldungen
-- Treiber Formate
+- Installierbare Treiber, Formate
+- Installierbare Treiber, DriverProc-Funktion
+- Installierbare Treiber, Meldungen
+- Treibermeldungen
+- Treiberformate
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 86fbbdcb8a49184dee6e9cf13c9f434506b1b48f
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 9c02f6bb2515d1f182146b84b7f0b971fa4b73fe2e2caf5abf63dfd4ddb272df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314955"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118140789"
 ---
-# <a name="installable-driver-format"></a>Installier bares Treiber Format
+# <a name="installable-driver-format"></a>Installierbares Treiberformat
 
-Jeder installierbare Treiber exportiert eine [driverproc](/windows/win32/api/mmiscapi/nc-mmiscapi-driverproc) -Funktion. Diese allgemeine Einstiegspunkt Funktion empfängt *Treiber Nachrichten* vom System, die den Treiber dazu leiten, Aktionen auszuführen oder Informationen bereitzustellen. Das System sendet Treiber Nachrichten an die Funktion " **driverproc** ", wenn eine Anwendung oder dll den Treiber öffnet oder schließt oder wenn Sie anfordert, dass eine Nachricht an den Treiber gesendet wird. Die **driverproc** -Funktion verarbeitet entweder die Nachricht oder übergibt die Nachricht an den Standard Nachrichten Handler, die [defdriverproc](/windows/win32/api/mmiscapi/nf-mmiscapi-defdriverproc) -Funktion. In beiden Fällen muss von **driverproc** ein Wert zurückgegeben werden, der angibt, ob die angeforderte Aktion erfolgreich war.
+Jeder installierbare Treiber exportiert eine [DriverProc-Funktion.](/windows/win32/api/mmiscapi/nc-mmiscapi-driverproc) Diese allgemeine Einstiegspunktfunktion empfängt *Treibermeldungen vom* System, die den Treiber an die Durchführung von Aktionen oder die Bereitstellung von Informationen verweisen. Das System sendet Treibermeldungen an die **DriverProc-Funktion,** wenn eine Anwendung oder DLL den Treiber öffnet oder schließt oder eine Nachricht an den Treiber sendet. Die **DriverProc-Funktion** verarbeitet entweder die Nachricht oder übergibt die Nachricht an den Standardnachrichtenhandler, die [DefDriverProc-Funktion.](/windows/win32/api/mmiscapi/nf-mmiscapi-defdriverproc) In beiden Fällen muss **DriverProc** einen Wert zurückgeben, der angibt, ob die angeforderte Aktion erfolgreich war.
 
- 
+ 
 
- 
+ 

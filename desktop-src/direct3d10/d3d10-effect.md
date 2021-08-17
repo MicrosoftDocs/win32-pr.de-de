@@ -1,39 +1,39 @@
 ---
-description: Diese Konstanten werden beim Erstellen eines Effekts verwendet, um entweder das Kompilierungs Verhalten oder das Lauf Zeit Effekt Verhalten zu definieren.
+description: Diese Konstanten werden beim Erstellen eines Effekts verwendet, um das Kompilierungsverhalten oder das Laufzeiteffektverhalten zu definieren.
 ms.assetid: cff99200-8bdc-416c-b1a5-3ae515a17a17
 title: D3D10_EFFECT Konstanten
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c12b7a458bb7c97bb53436565513673006a2884
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 7e3738a95a843020f7c0f8af30e8c5d035f0a86ac7098d36cae422eb01ed4dc0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117736049"
 ---
-# <a name="d3d10_effect-constants"></a>D3d10 \_ Effect-Konstanten
+# <a name="d3d10_effect-constants"></a>D3D10 \_ EFFECT-Konstanten
 
-Diese Konstanten werden beim Erstellen eines Effekts verwendet, um entweder das Kompilierungs Verhalten oder das Lauf Zeit Effekt Verhalten zu definieren.
+Diese Konstanten werden beim Erstellen eines Effekts verwendet, um das Kompilierungsverhalten oder das Laufzeiteffektverhalten zu definieren.
 
 
 
-| \#definieren                                 | Wert        | BESCHREIBUNG                                                                                                                                                                                                                                                 |
+| \#Definieren                                 | Wert        | Beschreibung                                                                                                                                                                                                                                                 |
 |------------------------------------------|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| D3d10 \_ Effekt \_ Kompilieren des untergeordneten \_ \_ Effekts    | 1 << 0 | Kompilieren Sie die FX-Datei mit einem untergeordneten Effekt. Untergeordnete Effekte haben keine Initialisiert für freigegebene Werte, da diese im Effekt Pool initialisiert werden.                                                                                                           |
-| D3d10 \_ Effekt- \_ Kompilierung \_ \_ langsame \_ Ops zulassen | 1 << 1 | Standardmäßig ist der Leistungsmodus aktiviert. Der Leistungsmodus lässt änderbare Zustands Objekte nicht zu, indem verhindert wird, dass nicht literale Ausdrücke in Zustands Objekt Definitionen angezeigt werden. Wenn Sie dieses Flag angeben, wird der Modus deaktiviert, und es werden änderbare Zustands Objekte zugelassen. |
-| D3d10 \_ Effect \_ Single \_ Thread          | 1 << 3 | Versuchen Sie nicht, mit anderen Threads zu synchronisieren, die Auswirkungen in denselben Pool laden.                                                                                                                                                                        |
+| UNTERGEORDNETER D3D10 \_ EFFECT \_ \_ \_ COMPILE-EFFEKT    | 1 << 0 | Kompilieren Sie die FX-Datei in einen untergeordneten Effekt. Untergeordnete Effekte haben keine Initialisierungen für freigegebene Werte, da diese im Effektpool initialisiert werden.                                                                                                           |
+| D3D10 \_ EFFECT COMPILE ERMÖGLICHT \_ \_ \_ \_ LANGSAME OPS | 1 << 1 | Standardmäßig ist der Leistungsmodus aktiviert. Der Leistungsmodus verhindert, dass veränderliche Zustandsobjekte in Zustandsobjektdefinitionen angezeigt werden, da nicht literale Ausdrücke nicht angezeigt werden. Wenn Sie dieses Flag angeben, wird der Modus deaktiviert, und es können veränderliche Zustandsobjekte verwendet werden. |
+| D3D10 \_ EFFECT \_ SINGLE \_ THREADED          | 1 << 3 | Versuchen Sie nicht, eine Synchronisierung mit anderen Threads zu versuchen, die Auswirkungen in denselben Pool laden.                                                                                                                                                                        |
 
 
 
  
 
-Diese Konstanten werden in d3d10effect. h als Makros definiert.
+Diese Konstanten werden in d3d10effect.h als Makros definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Effekt Konstanten (Direct3D 10)](d3d10-graphics-reference-effect-constants.md)
+[Effektkonst constants (Direct3D 10)](d3d10-graphics-reference-effect-constants.md)
 </dt> </dl>
 
  

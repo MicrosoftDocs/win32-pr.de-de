@@ -1,7 +1,7 @@
 ---
 description: Ruft die Namen aller Netzwerk-DDE-Freigaben ab, die im Kontext des aufrufenden Prozesses als vertrauenswürdig eingestuft werden.
 ms.assetid: 8e2323a4-0c27-44e6-9598-08a3c1a88bd3
-title: Nddebug-ShareEnum-Funktion (nddecoapi. h)
+title: NDdeTrustedShareEnum-Funktion (Nddeapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - Nddeapi.dll
-ms.openlocfilehash: caa3f7c20b95243e03c0c6025d1ff32d60443ab2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fc8eefd335ad9c54e7dc4aefa5a1027785de1b9c33cd3346c8bb1c8a4872b939
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117695042"
 ---
-# <a name="nddetrustedshareenum-function"></a>Nddebug-ShareEnum-Funktion
+# <a name="nddetrustedshareenum-function"></a>NDdeTrustedShareEnum-Funktion
 
-\[Network DDE wird nicht mehr unterstützt. Nddeapi.dll ist unter Windows Vista vorhanden, aber alle Funktionsaufrufe geben "ndde" \_ nicht \_ implementiert zurück.\]
+\[Netzwerk-DDE wird nicht mehr unterstützt. Nddeapi.dll ist auf Windows Vista vorhanden, aber alle Funktionsaufrufe geben NDDE \_ NOT \_ IMPLEMENTED zurück.\]
 
 Ruft die Namen aller Netzwerk-DDE-Freigaben ab, die im Kontext des aufrufenden Prozesses als vertrauenswürdig eingestuft werden.
 
@@ -48,53 +48,53 @@ UINT NDdeTrustedShareEnum(
 
 <dl> <dt>
 
-*lpszserver* \[ in\]
+*lpszServer* \[ In\]
 </dt> <dd>
 
-Der Name des Servers, auf dem sich die DSDM befindet.
+Der Name des Servers, auf dem sich das DSDM befindet.
 
 </dd> <dt>
 
-*Nlevel* \[ in\]
+*nLevel* \[ In\]
 </dt> <dd>
 
-Reserviert. Dieser Parameter muss NULL sein.
+Reserviert. Dieser Parameter muss 0 (null) sein.
 
 </dd> <dt>
 
-*lpBuffer* \[ vorgenommen\]
+*lpBuffer* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der die Liste der vertrauenswürdigen DDE-Freigaben empfängt. Die Liste der vertrauenswürdigen DDE-Freigaben wird als Sequenz von durch Null getrennten Zeichen folgen zurückgegeben, die mit einem doppelten NULL-Zeichen am Ende beendet werden. Dieser Parameter kann **NULL** sein. Wenn der *lpBuffer* **null** ist, gibt die DSDM die Größe des Puffers zurück, der zum Speichern der Liste der Freigaben im Feld *lpcbtotalavailable* erforderlich ist.
+Ein Zeiger auf einen Puffer, der die Liste der vertrauenswürdigen DDE-Freigaben empfängt. Die Liste der vertrauenswürdigen DDE-Freigaben wird als Sequenz von durch NULL getrennten Zeichenfolgen zurückgegeben, die am Ende mit einem doppelten NULL-Zeichen beendet werden. Dieser Parameter kann **NULL** sein. Wenn *lpBuffer* **NULL** ist, gibt das DSDM die Größe des Puffers zurück, der für die Liste der Freigaben im Feld *lpcbTotalAvailable* erforderlich ist.
 
 </dd> <dt>
 
-*cbubsize* \[ in\]
+*cBufSize* \[ In\]
 </dt> <dd>
 
-Die Größe des *lpBuffer* -Puffers in Bytes. Dieser Parameter muss NULL sein, wenn *lpBuffer* **null** ist.
+Die Größe des *lpBuffer-Puffers* in Bytes. Dieser Parameter muss 0 (null) sein, wenn *lpBuffer* **NULL** ist.
 
 </dd> <dt>
 
-*lpnentriesread* \[ vorgenommen\]
+*lpnEntriesRead* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Gesamtzahl der aufzuzählenden vertrauenswürdigen Freigaben empfängt. Dieser Parameter darf nicht **null** sein.
+Ein Zeiger auf eine Variable, die die Gesamtzahl der vertrauenswürdigen Freigaben empfängt, die aufgezählt werden. Dieser Parameter darf nicht **NULL** sein.
 
 </dd> <dt>
 
-*lpcbtotalavailable* \[ vorgenommen\]
+*lpcbTotalAvailable* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Gesamtzahl der Bytes empfängt, die zum Speichern der Liste vertrauenswürdiger DDE-Freigaben benötigt werden. Dieser Parameter darf nicht **null** sein.
+Ein Zeiger auf eine Variable, die die Gesamtzahl der Bytes empfängt, die zum Speichern der Liste der vertrauenswürdigen DDE-Freigaben erforderlich sind. Dieser Parameter darf nicht **NULL** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert "ndde \_ No \_ Error".
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert NDDE \_ NO \_ ERROR.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch den Aufruf von [**nddegeterrorstring**](nddegeterrorstring.md)in eine Text Fehlermeldung übersetzt werden kann. Wenn der *lpBuffer* -Parameter **null** ist, wird ndde \_ buf \_ zu \_ klein zurückgegeben.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch Aufrufen von [**NDdeGetErrorString**](nddegeterrorstring.md)in eine Textfehlermeldung übersetzt werden kann. Wenn der *lpBuffer-Parameter* **NULL** ist, wird NDDE \_ BUF \_ TOO SMALL \_ zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -104,21 +104,21 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch 
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Ndde API. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Ndde API. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Nddeapi.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Nddeapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nddeapi.dll</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Nddebug-shareenumw** (Unicode) und **nddebug-shareenuma** (ANSI)<br/>    |
+| Unicode- und ANSI-Name<br/>   | **NDdeTrustedShareEnumW** (Unicode) und **NDdeTrustedShareEnumA** (ANSI)<br/>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Übersicht über das Netzwerk dynamischer Datenaustausch](network-dynamic-data-exchange.md)
+[Network dynamische Daten Exchange Overview (Übersicht über Netzwerk-dynamische Daten Exchange)](network-dynamic-data-exchange.md)
 </dt> <dt>
 
-[Network DDE-Funktionen](network-dde-functions.md)
+[Netzwerk-DDE-Funktionen](network-dde-functions.md)
 </dt> </dl>
 
  

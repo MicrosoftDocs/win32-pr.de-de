@@ -1,6 +1,6 @@
 ---
 description: Gibt an, ob eine Netzwerkadresse einem angegebenen Typ und Format entspricht.
-title: NCM_GETADDRESS Meldung (shellapi. h)
+title: NCM_GETADDRESS Meldung (Shellapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 733CD62D-614C-4ac2-986D-CCFCFF4B1B4D
@@ -13,14 +13,14 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 5d5effa69a23a61a602efaf1172de09a09889e32
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 27f5beec56a0125d26cc359f40b5033eda1f035f2dec7666725264ec6fd59ba7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977880"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117677968"
 ---
-# <a name="ncm_getaddress-message"></a>NCM- \_ GetAddress-Nachricht
+# <a name="ncm_getaddress-message"></a>NCM \_ GETADDRESS-Nachricht
 
 Gibt an, ob eine Netzwerkadresse einem angegebenen Typ und Format entspricht.
 
@@ -44,8 +44,8 @@ NCM_GETADDRESS
 *wParam* 
 </dt> <dd>Muss Null sein.</dd> <dt>
 
-*PV* \[ in, out\]
-</dt> <dd>Ein Zeiger auf eine <a href="/windows/win32/api/shellapi/ns-shellapi-nc_address">NC_ADDRESS</a> -Struktur zum Empfangen von Netzwerk Adressinformationen in der analysierten Form, wenn das Adressformat und der Typ im von *HWND* angegebenen Steuerelement überprüft werden. Die aufrufenden Anwendung ist dafür verantwortlich, den Arbeitsspeicher für diese Struktur zuzuordnen.</dd> </dl>
+*pv* \[ in, out\]
+</dt> <dd>Ein Zeiger auf eine <a href="/windows/win32/api/shellapi/ns-shellapi-nc_address">NC_ADDRESS</a> Struktur, um Netzwerkadresseninformationen in analysierter Form zu empfangen, wenn das Adressformat und der Typ im von *hwnd* angegebenen Steuerelement überprüft werden. Die aufrufende Anwendung ist für die Zuweisung des Arbeitsspeichers für diese Struktur verantwortlich.</dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -55,35 +55,35 @@ Gibt einen der folgenden Werte vom Typ **HRESULT** zurück.
 
 | Rückgabecode                                                                                                | Beschreibung                                                                                          |
 |------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>               | Die aufrufenden Anwendung konnte eine [**NC- \_ Adress**](/windows/win32/api/shellapi/ns-shellapi-nc_address) Struktur nicht zuordnen.<br/> |
-| <dl> <dt>**Fehler \_ beim \_ Puffer.**</dt> </dl> | Der Ausgabepuffer ist zu klein, um die analysierte Netzwerkadresse zu speichern.<br/>                           |
-| <dl> <dt>**Fehler bei \_ ungültigem \_ Parameter**</dt> </dl>   | Die Netzwerk Adress Zeichenfolge ist nicht von einem beliebigen Typ angegeben.<br/>                                  |
-| <dl> <dt>**Fehler \_ erfolgreich**</dt> </dl>              | Der Vorgang wurde durchgeführt.<br/>                                                             |
-| <dl> <dt>**S \_ false**</dt> </dl>                    | Es gibt keine Adresse im Netzwerk Adress Steuerelement, das überprüft werden soll.<br/>                           |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>               | Die aufrufende Anwendung konnte keine [**NC \_ ADDRESS-Struktur**](/windows/win32/api/shellapi/ns-shellapi-nc_address) zuordnen.<br/> |
+| <dl> <dt>**FEHLER: \_ \_ UNZUREICHENDER PUFFER**</dt> </dl> | Der Out-Puffer ist zu klein, um die analysierte Netzwerkadresse zu speichern.<br/>                           |
+| <dl> <dt>**FEHLER: \_ UNGÜLTIGER \_ PARAMETER**</dt> </dl>   | Die Netzwerkadresszeichenfolge hat keinen angegebenen Typ.<br/>                                  |
+| <dl> <dt>**FEHLER \_ ERFOLGREICH**</dt> </dl>              | Der Vorgang wurde durchgeführt.<br/>                                                             |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>                    | Im Netzwerkadresssteuerelement ist keine Adresse vorhanden, die überprüft werden soll.<br/>                           |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die **NCM \_ GetAddress** -Nachricht, um eine Netzwerkadresse in einem Netzwerk Adress Steuerelement mit einer voreingestellten Netzwerkadresse zu überprüfen. Verwenden Sie zum Instanziieren die in shellapi. h definierte Klasse **msctls- \_ netaddress** . Ruft vor dem Senden dieser Nachricht [**initnetworkaddresscontrol**](/windows/desktop/api/Shellapi/nf-shellapi-initnetworkaddresscontrol) zur Laufzeit auf. Dadurch wird die Bibliothek der allgemeinen Steuerelemente initialisiert, die das Netzwerk Adress Steuerelement enthält.
+Verwenden Sie die **NCM \_ GETADDRESS-Nachricht,** um eine Netzwerkadresse in einem Netzwerkadresssteuerelement anhand einer vordefinierten Netzwerkadresstypmaske zu überprüfen. Verwenden Sie zum Instanziieren die in Shellapi.h definierte Klasse **msctls \_ netaddress.** Rufen Sie [**InitNetworkAddressControl**](/windows/desktop/api/Shellapi/nf-shellapi-initnetworkaddresscontrol) zur Laufzeit auf, bevor Sie diese Nachricht senden. Dadurch wird die Bibliothek für allgemeine Steuerelemente initialisiert, die das Netzwerkadresssteuerelement enthält.
 
-Diese Nachricht Ruft die Netzwerk Adress Zeichenfolge aus einem Netzwerk Adress Steuerelement ab, analysiert die Zeichenfolge und überprüft, ob die Zeichenfolge mit einer Netzwerk Adresstyp Maske übereinstimmt. Wenn die Zeichenfolge mit der Maske übereinstimmt, gibt die Meldung S \_ OK zurück und gibt die Zeichenfolge in der analysierten Form an die aufrufende Anwendung zurück (einschließlich der Portnummer, der Präfix Länge und anderer Adressinformationen), wobei die [**NC- \_ Adress**](/windows/win32/api/shellapi/ns-shellapi-nc_address) Struktur verwendet wird, auf die von *PV* verwiesen wird Diese Meldung gibt E \_ invalidArg zurück, wenn die aufrufende Anwendung die Struktur nicht zuordnen kann, auf die von *PV* verwiesen wird.
+Diese Meldung ruft die Netzwerkadresszeichenfolge aus einem Netzwerkadresssteuerelement ab, analysiert die Zeichenfolge und überprüft, ob die Zeichenfolge mit einer Netzwerkadresstypmaske übereinstimmt. Wenn die Zeichenfolge mit der Maske übereinstimmt, gibt die Nachricht S \_ OK zurück und gibt die Zeichenfolge in analysierter Form an die aufrufende Anwendung zurück (einschließlich Portnummer, Präfixlänge und andere Adressinformationen), wobei die [**NC \_ ADDRESS-Struktur**](/windows/win32/api/shellapi/ns-shellapi-nc_address) verwendet wird, auf die pv zeigt. Diese Meldung gibt E \_ INVALIDARG zurück, wenn die aufrufende Anwendung die Struktur, auf die von *pv* gezeigt wird, nicht zuordnen kann.
 
-Darstellungen von IP-Adressen (Internet Protocol), Version 4 und 6 (V4/V6) für Dienste und Netzwerke sowie benannte Internet Adressen und Dienste mit Domain Name System-Format (DNS) werden analysiert. Wenn die Netzwerk Adress Zeichenfolge einen benannten Hostnamen (DNS) oder Dienst darstellt, ist der Wert, der im **prefixlength** -Member der [**NC- \_ Adresse**](/windows/win32/api/shellapi/ns-shellapi-nc_address) zurückgegeben wird, 0 (null)
+Darstellungen der IP-Adressen (Internet Protocol) Version 4 und 6 (v4/v6) für Dienste und Netzwerke sowie benannte Internetadressen und Dienste im DNS-Format (Domain Name System) werden analysiert. Wenn die Netzwerkadresszeichenfolge einen benannten Hostnamen (DNS) oder Dienst darstellt, ist der im **PrefixLength-Member** von [**NC \_ ADDRESS**](/windows/win32/api/shellapi/ns-shellapi-nc_address) zurückgegebene Wert 0 (null).
 
-Legen Sie den Netzwerk Adressentyp Mask mithilfe der [**NCM \_ setallowtype**](ncm-setallowtype.md) -Nachricht fest, bevor Sie das **NCM- \_ GetAddress** -Makro senden.
+Legen Sie die Netzwerkadresstypmaske mithilfe der [**NCM \_ SETALLOWTYPE-Nachricht**](ncm-setallowtype.md) fest, bevor Sie das **NCM \_ GETADDRESS-Makro** senden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Shellapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Shellapi.h</dt> </dl> |
 
 
 
@@ -91,10 +91,10 @@ Legen Sie den Netzwerk Adressentyp Mask mithilfe der [**NCM \_ setallowtype**](n
 
 <dl> <dt>
 
-[**NCM- \_ getallowtype**](ncm-getallowtype.md)
+[**NCM \_ GETALLOWTYPE**](ncm-getallowtype.md)
 </dt> <dt>
 
-[**NETADDR- \_ GetAddress**](/windows/desktop/api/Shellapi/nf-shellapi-netaddr_getaddress)
+[**NetAddr \_ GetAddress**](/windows/desktop/api/Shellapi/nf-shellapi-netaddr_getaddress)
 </dt> </dl>
 
  

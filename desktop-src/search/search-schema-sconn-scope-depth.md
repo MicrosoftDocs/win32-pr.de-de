@@ -1,19 +1,19 @@
 ---
-description: Das <depth> -Element gibt an, ob der Bereich des Suchconnector untergeordnete URLs einschließen soll. Die zulässigen Werte sind tief und flach. Dieses Element hat keine untergeordneten Elemente und keine Attribute.
+description: Das -Element gibt an, ob der Bereich des <depth> Suchconnectors untergeordnete URLs enthalten soll. Die zulässigen Werte sind Deep und Shallow. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
 ms.assetid: 859decab-cbe3-4cec-b37c-6d0e7c353876
-title: tiefen Element (Suchconnector-Schema)
+title: depth-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bf68bcbc96b6d1beb2c381f0a17532272b8d397e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 245156088cd68fcf67103c18b987a9b459b0b760b3a04a1ced817badd25aada8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958780"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117862525"
 ---
-# <a name="depth-element-search-connector-schema"></a>tiefen Element (Suchconnector-Schema)
+# <a name="depth-element-search-connector-schema"></a>depth-Element (Search Connector Schema)
 
-Das <depth> -Element gibt an, ob der Bereich des Suchconnector untergeordnete URLs einschließen soll. Die zulässigen Werte sind `Deep` und `Shallow`. Dieses Element hat keine untergeordneten Elemente und keine Attribute.
+Das -Element gibt an, ob der Bereich des <depth> Suchconnectors untergeordnete URLs enthalten soll. Die zulässigen Werte sind `Deep` und `Shallow`. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,19 +60,19 @@ Das <depth> -Element gibt an, ob der Bereich des Suchconnector untergeordnete UR
 
 | Übergeordnetes Element                                                                   | Untergeordnete Elemente |
 |----------------------------------------------------------------------------------|----------------|
-| [scopeitem-Element (Suchconnector-Schema)](search-schema-sconn-scopeitem.md) |                |
+| [scopeItem-Element (Search Connector Schema)](search-schema-sconn-scopeitem.md) |                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Tiefe tiefer ist, können Benutzer Elemente in der URL-Ebene von scopeitem oder innerhalb von untergeordneten URLs durchsuchen oder durchsuchen.
+Wenn die Tiefe tief ist, können Benutzer Elemente auf der URL-Ebene des scopeItem oder in untergeordneten URLs durchsuchen oder durchsuchen.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt einen Suchbereich, der c: \\ FolderA und alle seine untergeordneten Ordner und c: \\ folderB, aber keinen seiner untergeordneten Ordner enthält.
+Das folgende Beispiel zeigt einen Suchbereich, der C: FolderA und alle untergeordneten Ordner und \\ C: \\ FolderB, aber keinen der untergeordneten Ordner enthält.
 
 
 ```

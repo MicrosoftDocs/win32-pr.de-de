@@ -1,11 +1,11 @@
 ---
 title: Replica-Source-Attribut
-description: Dieses Attribut enthält die GUID einer Replikations Quelle.
+description: Dieses Attribut enthält die GUID einer Replikationsquelle.
 ms.assetid: a3415613-273a-40a8-966a-8d7a2b07ba70
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Replica-Source-Attribut
-- AD-Schema des replicasource-Attributs
+- Replica-Source AD-Schema
+- AD-Schema des replicaSource-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9328ff208a66bc12315d1572a5f395ad0a2659b3
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 23f73aabec4f81eeefc47fbdf78acfbcc2fc956ec89df5e83801894d03c7685a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117836699"
 ---
 # <a name="replica-source-attribute"></a>Replica-Source-Attribut
 
-Dieses Attribut enthält die GUID einer Replikations Quelle.
+Dieses Attribut enthält die GUID einer Replikationsquelle.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Replica-Source                              |
-| LDAP-Display-Name | replicasource                               |
+| Ldap-Anzeigename | replicaSource                               |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.109                      |
-| System-ID-GUID    | bf967a18-0de6-11d0-a285-00aa003049e2        |
+| System-Id-Guid    | bf967a18-0de6-11d0-a285-00aa003049e2        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Dieses Attribut enthält die GUID einer Replikations Quelle.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Dieses Attribut enthält die GUID einer Replikations Quelle.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | Richtig                                         |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Dieses Attribut enthält die GUID einer Replikations Quelle.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | Richtig                                         |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Dieses Attribut enthält die GUID einer Replikations Quelle.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | Richtig                                         |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Dieses Attribut enthält die GUID einer Replikations Quelle.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | Richtig                                         |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Dieses Attribut enthält die GUID einer Replikations Quelle.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | Richtig                                         |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Dieses Attribut enthält die GUID einer Replikations Quelle.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | Richtig                                         |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 

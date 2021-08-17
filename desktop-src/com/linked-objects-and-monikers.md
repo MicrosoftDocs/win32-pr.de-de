@@ -1,46 +1,46 @@
 ---
 title: Verknüpfte Objekte und Moniker
-description: Verknüpfte Objekte, wie eingebettete Objekte, verlassen sich auf einen Objekt Handler, um mit Server Anwendungen zu kommunizieren.
+description: Verknüpfte Objekte wie eingebettete Objekte basieren auf einem Objekthandler für die Kommunikation mit Serveranwendungen.
 ms.assetid: f72557b9-cd24-4d96-8144-94a5344ec2ae
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b7c14f4cc74ee84fbf745e730d77203ebb4f43b0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 4fb8107a5c98ae407cc8e6198d782f75b092110232ae23f41a42dcaefae31758
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207265"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117736493"
 ---
 # <a name="linked-objects-and-monikers"></a>Verknüpfte Objekte und Moniker
 
-Verknüpfte Objekte, wie eingebettete Objekte, verlassen sich auf einen Objekt Handler, um mit Server Anwendungen zu kommunizieren. Das verknüpfte Objekt selbst verwaltet jedoch die Benennung und Nachverfolgung von Verknüpfungs Quellen. Das verknüpfte Objekt verhält sich wie ein Prozess interner Server. Wenn beispielsweise ein verknüpftes Objekt aktiviert ist, wird die OLE-Serveranwendung, die die Verknüpfungs Quelle ist, gesucht und gestartet.
+Verknüpfte Objekte wie eingebettete Objekte basieren auf einem Objekthandler für die Kommunikation mit Serveranwendungen. Das verknüpfte Objekt selbst verwaltet jedoch die Benennung und Nachverfolgung von Linkquellen. Das verknüpfte Objekt verhält sich wie ein Prozessserver. Wenn beispielsweise aktiviert, sucht ein verknüpftes Objekt die OLE-Serveranwendung, die die Linkquelle ist, und startet sie.
 
-Der Handler eines verknüpften Objekts besteht aus zwei Hauptkomponenten: der Handlerkomponente und der Verknüpfungs Komponente. Die Handlerkomponente enthält die Steuerungs-und Remoting-Teile und-Funktionen, ähnlich wie ein Handler für ein eingebettetes Objekt. Die Verknüpfungs Komponente verfügt über einen eigenen Controller und Cache und ermöglicht den Zugriff auf den strukturierten Speicher des Objekts. Der Verknüpfungs Komponenten Controller unterstützt die Quell Benennung durch die Verwendung von Monikern und die Bindung, das Auffinden und Ausführen der Link Quelle. (Weitere Informationen zu Monikern und Bindung finden Sie [im Component Object Model](the-component-object-model.md).)
+Der Handler eines verknüpften Objekts besteht aus zwei Hauptkomponenten: der Handlerkomponente und der Verknüpfungskomponente. Die Handlerkomponente enthält die Steuerungs- und Remotingteile und -funktionen ähnlich wie ein Handler für ein eingebettetes Objekt. Die Verknüpfungskomponente verfügt über einen eigenen Controller und Cache und bietet Zugriff auf den strukturierten Speicher des Objekts. Der Controller für verknüpfungskomponenten unterstützt die Quellbenennung durch die Verwendung von Monikern und die Bindung, den Prozess der Suche und Ausführung der Linkquelle. (Weitere Informationen zu Monikern und Bindungen finden Sie unter [The Component Object Model](the-component-object-model.md).)
 
-Wenn ein Benutzer anfänglich ein verknüpftes Objekt erstellt oder ein vorhandenes Objekt aus dem Speicher lädt, lädt der Container zusammen mit dem Objekt Handler eine Instanz der Verknüpfungs Komponente in den Arbeitsspeicher. Die Verknüpfungs Komponente stellt Schnittstellen – insbesondere [**iolelink**](/windows/desktop/api/OleIdl/nn-oleidl-iolelink)– bereit, die das Objekt als Link bezeichnen und es Ihnen ermöglichen, die Benennung, Nachverfolgung und Aktualisierung der zugehörigen Verknüpfungs Quelle zu verwalten.
+Wenn ein Benutzer zunächst ein verknüpftes Objekt erstellt oder ein vorhandenes objekt aus dem Speicher lädt, lädt der Container eine Instanz der verknüpfenden Komponente zusammen mit dem Objekthandler in den Arbeitsspeicher. Die Verknüpfungskomponente stellt Schnittstellen bereit , insbesondere [**IOleLink,**](/windows/desktop/api/OleIdl/nn-oleidl-iolelink)die das Objekt als Link identifizieren und es ermöglichen, die Benennung, Nachverfolgung und Aktualisierung seiner Linkquelle zu verwalten.
 
-Durch Implementieren der [**iolelink**](/windows/desktop/api/OleIdl/nn-oleidl-iolelink) -Schnittstelle stellt ein verknüpftes Objekt seinen Container mit Funktionen bereit, die das Verknüpfen unterstützen. **Iolelink** wird nur von verknüpften Objekten implementiert, und durch Abfragen für diese Schnittstelle kann ein Container ermitteln, ob ein bestimmtes Objekt eingebettet oder verknüpft ist. Die wichtigste Funktion von **iolelink** ermöglicht einem Container das Binden an die Quelle des verknüpften Objekts, d. h., um die Verbindung mit dem Dokument zu aktivieren, in dem die systemeigenen Daten des verknüpften Objekts gespeichert werden. **Iolelink** definiert auch Funktionen zum Verwalten von Informationen über das verknüpfte Objekt, z. b. zwischengespeicherte Präsentationsdaten und den Speicherort der Verknüpfungs Quelle.
+Durch die Implementierung der [**IOleLink-Schnittstelle**](/windows/desktop/api/OleIdl/nn-oleidl-iolelink) stellt ein verknüpftes Objekt seinen Container mit Funktionen bereit, die das Verknüpfen unterstützen. Nur verknüpfte Objekte implementieren **IOleLink,** und durch Abfragen dieser Schnittstelle kann ein Container bestimmen, ob ein bestimmtes Objekt eingebettet oder verknüpft ist. Die wichtigste funktion, die von **IOleLink** bereitgestellt wird, ermöglicht es einem Container, eine Bindung an die Quelle des verknüpften Objekts zu erstellen, d. b. die Verbindung mit dem Dokument zu aktivieren, in dem die nativen Daten des verknüpften Objekts gespeichert sind. **IOleLink definiert** auch Funktionen zum Verwalten von Informationen über das verknüpfte Objekt, z. B. zwischengespeicherte Präsentationsdaten und den Speicherort der Linkquelle.
 
-Wenn ein Verbund Dokument gespeichert wird, das ein verknüpftes Objekt enthält, werden die Daten des Links mit der Link Quelle, nicht mit dem Container gespeichert. Nur Informationen zu Name und Speicherort werden zusammen mit dem Verbund Dokument gespeichert. Dieses Verhalten steht im Gegensatz zu dem eines eingebetteten Objekts, dessen Daten zusammen mit dem des zugehörigen Containers gespeichert werden.
+Wenn ein zusammengesetztes Dokument gespeichert wird, das ein verknüpftes Objekt enthält, werden die Daten des Links mit der Linkquelle und nicht mit dem Container gespeichert. Es werden nur Informationen zu Name und Speicherort zusammen mit dem Verbunddokument gespeichert. Dieses Verhalten steht im Gegensatz zu einem eingebetteten Objekt, dessen Daten zusammen mit dem des Containers gespeichert werden.
 
-Container Anwendungen können Informationen zu ihren eingebetteten Objekten bereitstellen, sodass die letzteren oder Teile davon als Verknüpfungs Quellen fungieren können. Durch Implementieren der Unterstützung für das Verknüpfen mit den eingebetteten Objekten des Containers können Sie geschiebte Einbettungen ermöglichen, sodass der Benutzer die Originale der einzelnen Einbettungs Objekte, auf die ein Link gewünscht ist, nicht mehr nachverfolgen muss. Wenn ein Benutzer beispielsweise ein Microsoft Excel-Arbeitsblatt in Microsoft Word einbetten möchte und das Arbeitsblatt eine in Pinsel erstellte Bitmap enthält, kann der Benutzer eine Verknüpfung mit einer Kopie der Bitmap herstellen, die im Arbeitsblatt enthalten ist.
+Containeranwendungen können Informationen zu ihren eingebetteten Objekten bereitstellen, damit letztere oder Teile davon als Linkquellen fungieren können. Durch die Implementierung von Unterstützung für das Verknüpfen mit eingebetteten Objekten Ihres Containers ermöglichen Sie geschachtelte Einbettungen, wodurch der Benutzer die Originale jedes Einbettungsobjekts nachverfolgen muss, zu dem ein Link gewünscht ist. Wenn ein Benutzer z. B. ein Microsoft Excel-Arbeitsblatt in Microsoft Word einbetten möchte und das Arbeitsblatt eine bitmap enthält, die in Paintbrush erstellt wurde, kann der Benutzer eine Verknüpfung mit einer Kopie der Bitmap im Arbeitsblatt anstelle des Originals erstellen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verbund Dokumente](compound-documents.md)
+[Verbunddokumente](compound-documents.md)
 </dt> <dt>
 
-[Prozess interne Server](in-process-servers.md)
+[In-Process-Server](in-process-servers.md)
 </dt> <dt>
 
-[Objekt Handler](object-handlers.md)
+[Objekthandler](object-handlers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

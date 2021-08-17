@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 19c87cbd5fd81100682225aa16256573c7f95be0
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d6d559dc8a04500b4b208a87bcbda6841c21bf7c6e30f662a01cf943de286652
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108107928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117735998"
 ---
 # <a name="id3dxmatrixstackpop-method-d3dx10h"></a>ID3DXMATRIXStack::P op-Methode (D3DX10.h)
 
@@ -44,15 +44,15 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass diese Methode die Anzahl der Elemente im Stapel um 1 dekrementiert, indem die aktuelle Matrix effektiv von der obersten Seite des Stapels entfernt und eine Matrix an den Anfang des Stapels hoch gerechnet wird. Wenn die aktuelle Anzahl von Elementen im Stapel 0 beträgt, gibt diese Methode zurück, ohne eine Aktion ausführen zu müssen. Wenn die aktuelle Anzahl von Elementen im Stapel 1 beträgt, leert diese Methode den Stapel.
+Beachten Sie, dass diese Methode die Anzahl der Elemente im Stapel um 1 dekrementiert, die aktuelle Matrix effektiv von der obersten Seite des Stapels entfernt und eine Matrix an den Anfang des Stapels hochkrementiert. Wenn die aktuelle Anzahl von Elementen im Stapel 0 beträgt, gibt diese Methode zurück, ohne eine Aktion ausführen zu müssen. Wenn die aktuelle Anzahl von Elementen im Stapel 1 beträgt, leert diese Methode den Stapel.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |

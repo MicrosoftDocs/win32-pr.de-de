@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 5a90b3953ed54b8a3652d6c9c26533d433ffb600
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: abab6e19611b927d69746d9b218da73e543f5d592f43baad8362d3406e521f7f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083858"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117858131"
 ---
 # <a name="shellapplication-property"></a>Shell.Application-Eigenschaft
 
-Enthält das Application-Objekt des -Objekts.
+Enthält das Application-Objekt des Objekts.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,21 +45,21 @@ Property Application As Object
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Variable vom Typ [**IDispatch,**](/windows/win32/api/oaidl/nn-oaidl-idispatch) die das Anwendungsobjekt empfängt.
+Eine Variable vom Typ [**IDispatch,**](/windows/win32/api/oaidl/nn-oaidl-idispatch) die das Application-Objekt empfängt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die **Application-Eigenschaft** gibt das Automatisierungsobjekt zurück, das von der Anwendung unterstützt wird, die das WebBrowser-Steuerelement enthält, wenn auf dieses Objekt zugegriffen werden kann. Andernfalls gibt diese Eigenschaft das Automatisierungsobjekt des WebBrowser-Steuerelements zurück.
 
-Verwenden Sie diese Eigenschaft mit den **Befehlen Set** und **CreateObject** oder mit dem **Befehl GetObject,** um eine Instanz der Windows Internet Explorer zu erstellen und zu bearbeiten.
+Verwenden Sie diese Eigenschaft mit den Befehlen **Set** und **CreateObject** oder mit dem **Befehl GetObject,** um eine Instanz der Windows Internet Explorer Anwendung zu erstellen und zu bearbeiten.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |

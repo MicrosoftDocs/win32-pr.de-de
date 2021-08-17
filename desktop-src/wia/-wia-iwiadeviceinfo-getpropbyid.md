@@ -1,7 +1,7 @@
 ---
-description: Die getpropbyid-Methode des DeviceInfo-Objekts verwendet die ID einer Geräte Eigenschaft, um ihren Wert zurückzugeben.
+description: Die GetPropById-Methode des DeviceInfo-Objekts verwendet die ID einer Geräteeigenschaft, um ihren Wert zurück zu geben.
 ms.assetid: 9c68e6af-446c-4750-89e6-70862b23b296
-title: Deviceingefo. getpropbyid-Methode
+title: DeviceInfo.GetPropById-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wiascr.dll
-ms.openlocfilehash: adbc8b6a29f97066c8dc5b2e45b7ddc5834f2b60
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c996989661703c4a9c7416cd63904c376fdb7fcca3071d4558551bdd78470d3a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118208786"
 ---
-# <a name="deviceinfogetpropbyid-method"></a>Deviceingefo. getpropbyid-Methode
+# <a name="deviceinfogetpropbyid-method"></a>DeviceInfo.GetPropById-Methode
 
-Die **getpropbyid** -Methode des [**deviceInfo**](-wia-deviceinfo.md) -Objekts verwendet die ID einer Geräte Eigenschaft, um ihren Wert zurückzugeben.
+Die **GetPropById-Methode** des [**DeviceInfo-Objekts**](-wia-deviceinfo.md) verwendet die ID einer Geräteeigenschaft, um ihren Wert zurück zu geben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ retVal = DeviceInfo.GetPropById(
 *ID* \[ in\]
 </dt> <dd>
 
-Typ: **[wiadeviceinf opropertyid](-wia-wiadeviceinfopropertyid.md)**
+Typ: **[WiaDeviceInfoPropertyId](-wia-wiadeviceinfopropertyid.md)**
 
 Gibt die ID der Eigenschaft an.
 
@@ -50,15 +50,15 @@ Gibt die ID der Eigenschaft an.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **Variant**
+Typ: **VARIANT**
 
-Diese Methode gibt den Wert der Eigenschaft zurück, die durch *ID* angegeben wird.
+Diese Methode gibt den Wert der durch id angegebenen *Eigenschaft zurück.*
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Methode, um den Wert einer Geräte Eigenschaft aus der ID zu suchen. Eine Liste der Eigenschaften-IDs finden Sie unter [Eigenschaften konstanter Definitionen von WIA](-wia-wia-property-constant-definitions.md). Weitere Informationen zu den Eigenschaften der Windows-Abbild Erfassung (WIA) selbst finden Sie unter [WIA Property Konstanten](-wia-wia-property-constants.md).
+Verwenden Sie diese Methode, um den Wert einer Geräteeigenschaft aus ihrer ID zu suchen. Eine Liste der Eigenschaften-IDs finden Sie unter [WIA Property Constant Definitions](-wia-wia-property-constant-definitions.md). Informationen zu den wia Windows(Wia)-Eigenschaften finden Sie unter [WIA-Eigenschaftenkonst constants (WIA-Eigenschaftenkonst constants).](-wia-wia-property-constants.md)
 
-Fügen Sie für Microsoft Visual Basic-Anwendungen einen Verweis auf die Typbibliothek "Windows-Abbild Erfassung 1,01" hinzu. Die folgenden Konstanten, die in dieser Datei definiert sind, sind für diese Methode gültig:
+Fügen Sie Visual Basic Microsoft-Anwendungen einen Verweis auf "Windows Image Acquisition 1.01 Type Library" hinzu. Die folgenden konstanten, in dieser Datei definierten Konstanten sind für diese Methode gültig:
 
 ``` syntax
 const DeviceID = 2
@@ -74,7 +74,7 @@ const UIClassID = 10
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird veranschaulicht, wie die **getpropbyid** -Methode verwendet wird, um einen Eigenschafts Wert abzurufen.
+Im folgenden Beispiel wird die Verwendung der **GetPropById-Methode** zum Abrufen eines Eigenschaftswerts veranschaulicht.
 
 
 ```JScript
@@ -103,9 +103,9 @@ Next
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4,90 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 
 
 

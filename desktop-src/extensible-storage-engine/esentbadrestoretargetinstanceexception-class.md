@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentbadrestoretargetinstanceexception-Klasse'
-title: Esentbadrestoretargetinstanceexception-Klasse
+description: 'Weitere Informationen zu: EsentBadRestoreTargetInstanceException-Klasse'
+title: EsentBadRestoreTargetInstanceException-Klasse
 TOCTitle: EsentBadRestoreTargetInstanceException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentBadRestoreTargetInstanceException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentbadrestoretargetinstanceexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5905ba56ff2be41757121542460e1bd59fd17e7e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 868f9ec88c744b90d35f5fe4cff7baafb7f5a371118d994a153b09c8ba4d51cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117715600"
 ---
-# <a name="esentbadrestoretargetinstanceexception-class"></a>Esentbadrestoretargetinstanceexception-Klasse
+# <a name="esentbadrestoretargetinstanceexception-class"></a>EsentBadRestoreTargetInstanceException-Klasse
 
-Basisklasse für JET_err. Badrestoretargetinstance-Ausnahmen.
+Basisklasse für JET_err. BadRestoreTargetInstance-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentusageexception](./esentusageexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentbadrestoretargetinstanceexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentUsageException](./esentusageexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentBadRestoreTargetInstanceException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentBadRestoreTargetInstanceException : EsentUsageException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentbadrestoretargetinstanceexception-Member](./esentbadrestoretargetinstanceexception-members.md)
+[EsentBadRestoreTargetInstanceException-Member](./esentbadrestoretargetinstanceexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

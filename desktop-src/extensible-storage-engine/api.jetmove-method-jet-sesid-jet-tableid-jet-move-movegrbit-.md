@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. jetmove-Methode (JET_SESID, JET_TABLEID, JET_Move, movegrbit)'
-title: API. jetmove-Methode (JET_SESID, JET_TABLEID, JET_Move, movegrbit)
+description: Weitere Informationen finden Sie unter Api.JetMove-Methode (JET_SESID, JET_TABLEID, JET_Move, MoveGrbit).
+title: Api.JetMove-Methode (JET_SESID, JET_TABLEID, JET_Move, MoveGrbit)
 TOCTitle: JetMove method (JET_SESID, JET_TABLEID, JET_Move, MoveGrbit)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetMove(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.JET_Move,Microsoft.Isam.Esent.Interop.MoveGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetmove(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f5b6eeaf8d728cf63304141614caaf9598bcc6c1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4b7ea09ae36160fc83fbee4dc3b7f94222f55125b992039aa15035c1d958c696
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759756"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117718718"
 ---
-# <a name="apijetmove-method-jet_sesid-jet_tableid-jet_move-movegrbit"></a>API. jetmove-Methode (JET_SESID, JET_TABLEID, JET_Move, movegrbit)
+# <a name="apijetmove-method-jet_sesid-jet_tableid-jet_move-movegrbit"></a>Api.JetMove-Methode (JET_SESID, JET_TABLEID, JET_Move, MoveGrbit)
 
-Navigieren Sie durch einen Index. Der Cursor kann am Anfang oder Ende des Indexes positioniert und um eine angegebene Anzahl von Indexeinträgen rückwärts und vorwärts verschoben werden. Siehe auch [trymuvefirst (JET_SESID, JET_TABLEID)](./api.trymovefirst-method.md), [trymuvelast (JET_SESID, JET_TABLEID)](./api.trymovelast-method.md), [trymuvenext (JET_SESID, JET_TABLEID)](./api.trymovenext-method.md), [trymuveprevious (JET_SESID, JET_TABLEID)](./api.trymoveprevious-method.md).
+Navigieren Sie durch einen Index. Der Cursor kann am Anfang oder Ende des Indexes positioniert und durch eine angegebene Anzahl von Indexeinträgen rückwärts und vorwärts verschoben werden. Siehe auch [TryMoveFirst(JET_SESID, JET_TABLEID)](./api.trymovefirst-method.md), [TryMoveLast(JET_SESID, JET_TABLEID)](./api.trymovelast-method.md), [TryMoveNext(JET_SESID, JET_TABLEID)](./api.trymovenext-method.md), [TryMovePrevious(JET_SESID, JET_TABLEID)](./api.trymoveprevious-method.md).
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,40 +63,40 @@ public static void JetMove(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
-    Die für den-Befehl zu verwendende Sitzung.
+    Die Sitzung, die für den Aufruf verwendet werden soll.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der Cursor, der positioniert werden soll.
+    Der zu positionierende Cursor.
 
 <!-- end list -->
 
   - numRows  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_Move](./jet-move-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_Move](./jet-move-enumeration.md)  
     
-    Ein Offset, der angibt, wie weit der Cursor verschoben werden soll.
+    Ein Offset, der angibt, wie weit der Cursor bewegt werden soll.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. muvegrbit](./movegrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.MoveGrbit](./movegrbit-enumeration.md)  
     
-    Verschieben von Optionen.
+    Verschiebungsoptionen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Jetmove-Überladung](./api.jetmove-method.md)
+[JetMove-Überladung](./api.jetmove-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

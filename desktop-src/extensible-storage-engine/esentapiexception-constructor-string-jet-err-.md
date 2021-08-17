@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentapiexception-Konstruktor (String, JET_err)'
-title: Esentapiexception-Konstruktor (Zeichenfolge, JET_err)
+description: 'Weitere Informationen zu: EsentApiException-Konstruktor (String, JET_err)'
+title: EsentApiException-Konstruktor (String, JET_err)
 TOCTitle: EsentApiException constructor (String, JET_err)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentApiException.#ctor(System.String,Microsoft.Isam.Esent.Interop.JET_err)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentapiexception.esentapiexception(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 568cf61a1c5852b70d0e08647a39ab70140d2215
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8f13858d07b10ff222e58d851ceafa086eaaeeeedcfd83765c8732869a619c40
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749440"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117716129"
 ---
-# <a name="esentapiexception-constructor-string-jet_err"></a>Esentapiexception-Konstruktor (Zeichenfolge, JET_err)
+# <a name="esentapiexception-constructor-string-jet_err"></a>EsentApiException-Konstruktor (String, JET_err)
 
-Initialisiert eine neue Instanz der esentapiexception-Klasse.
+Initialisiert eine neue Instanz der EsentApiException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,25 +60,25 @@ protected EsentApiException(
 #### <a name="parameters"></a>Parameter
 
   - description  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Die Beschreibung des Fehlers.
 
 <!-- end list -->
 
-  - irre  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_err](./jet-err-enumeration.md)  
+  - Err  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_err](./jet-err-enumeration.md)  
     
     Der Fehlercode der Ausnahme.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentapiexception-Klasse](./esentapiexception-class.md)
+[EsentApiException-Klasse](./esentapiexception-class.md)
 
-[Esentapiexception-Member](./esentapiexception-members.md)
+[EsentApiException-Member](./esentapiexception-members.md)
 
-[Esentapiexception-Überladung](./esentapiexception-constructor.md)
+[EsentApiException-Überladung](./esentapiexception-constructor.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

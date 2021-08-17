@@ -1,10 +1,10 @@
 ---
-title: RAS_USER_0 Struktur (rassapi. h)
-description: Die Struktur "RAS \_ User \_ 0" wird in den rasadminuserminfo-und rasadminusergetinfo-Funktionen verwendet, um Informationen zu einem Benutzer anzugeben.
+title: RAS_USER_0 -Struktur (Rassapi.h)
+description: Die RAS \_ USER \_ 0-Struktur wird in den Funktionen RasAdminUserSetInfo und RasAdminUserGetInfo verwendet, um Informationen zu einem Benutzer anzugeben.
 ms.assetid: a2d4a935-f46d-4bc2-ada8-beaa3ac74834
 keywords:
-- RAS_USER_0 Struktur-RAS
-- PRAS_USER_0-Struktur Zeiger RAS
+- RAS_USER_0 Ras-Struktur
+- PRAS_USER_0 Strukturzeiger RAS
 topic_type:
 - apiref
 api_name:
@@ -15,18 +15,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c79a6b946ed9d10cd2bfc989f8cde27fad2ffa92
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cbb4b04ddf3b81d330825b3333899e149d2f7b0d1f30c19106c6977e5291846f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117789141"
 ---
-# <a name="ras_user_0-structure"></a>RAS \_ User \_ 0-Struktur
+# <a name="ras_user_0-structure"></a>RAS \_ USER \_ 0-Struktur
 
-\[Diese Version der **RAS- \_ Benutzer- \_ 0** -Struktur wird ab Windows Vista nicht unterstützt. Verwenden Sie stattdessen den neueren [**RAS- \_ Benutzer \_ 0**](/windows/desktop/api/Mprapi/ns-mprapi-ras_user_0) , der in MPRAPI. h definiert ist.\]
+\[Diese Version der **RAS \_ USER \_ 0-Struktur** wird ab Windows Vista nicht mehr unterstützt. Verwenden Sie stattdessen den [**neueren RAS \_ USER \_ 0,**](/windows/desktop/api/Mprapi/ns-mprapi-ras_user_0) der in mprapi.h definiert ist.\]
 
-Die Struktur " **RAS \_ User \_ 0** " wird in den [**rasadminuserminfo**](rasadminusersetinfo.md) -und [**rasadminusergetinfo**](rasadminusergetinfo.md) -Funktionen verwendet, um Informationen zu einem Benutzer anzugeben.
+Die **RAS \_ USER \_ 0-Struktur** wird in den [**Funktionen RasAdminUserSetInfo**](rasadminusersetinfo.md) und [**RasAdminUserGetInfo**](rasadminusergetinfo.md) verwendet, um Informationen zu einem Benutzer anzugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,32 +44,32 @@ typedef struct _RAS_USER_0 {
 
 <dl> <dt>
 
-**BF-Berechtigung**
+**bfPrivilege**
 </dt> <dd>
 
-Ein Satz von Bitflags, die die RAS-Berechtigungen des Benutzers angeben. Dieser Member kann eine Kombination aus dem raspriv \_ -Flag "dialinprivilege" und einem der rückgabeflags sein. Verwenden Sie die raspriv \_ CallbackType Mask, um den Typ der dem Benutzer bereitgestellten Rückruf Berechtigung zu identifizieren. Die folgenden Flags sind definiert.
+Ein Satz von Bitflags, die die RAS-Berechtigungen des Benutzers angeben. Dieser Member kann eine Kombination aus dem RASPRIV \_ DialinPrivilege-Flag und einem der Rückrufflags sein. Verwenden Sie die RASPRIV CallbackType-Maske, um den Typ der Rückrufberechtigung zu identifizieren, \_ die dem Benutzer bereitgestellt wird. Die folgenden Flags sind definiert.
 
 
 
 | Wert                                                                                                                                                                                                                                         | Bedeutung                                                                                       |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| <span id="RASPRIV_NoCallback"></span><span id="raspriv_nocallback"></span><span id="RASPRIV_NOCALLBACK"></span><dl> <dt>**Raspriv \_ NoCallback**</dt> </dl>                             | Der Benutzer hat keine Rückruf Berechtigung.<br/>                                               |
-| <span id="RASPRIV_AdminSetCallback"></span><span id="raspriv_adminsetcallback"></span><span id="RASPRIV_ADMINSETCALLBACK"></span><dl> <dt>**Raspriv \_ adminsetcallback**</dt> </dl>     | Das Benutzerkonto ist so konfiguriert, dass der Administrator die Rückrufnummer festgelegt hat.<br/> |
-| <span id="RASPRIV_CallerSetCallback"></span><span id="raspriv_callersetcallback"></span><span id="RASPRIV_CALLERSETCALLBACK"></span><dl> <dt>**Raspriv \_ callersetcallback**</dt> </dl> | Der Remote Benutzer kann beim Einwählen eine Telefonnummer für den Rückruf angeben.<br/>              |
-| <span id="RASPRIV_DialinPrivilege"></span><span id="raspriv_dialinprivilege"></span><span id="RASPRIV_DIALINPRIVILEGE"></span><dl> <dt>**Raspriv- \_ dialinprivilege**</dt> </dl>         | Der Benutzer verfügt über die Berechtigung zum Einwählen dieses Servers.<br/>                                 |
+| <span id="RASPRIV_NoCallback"></span><span id="raspriv_nocallback"></span><span id="RASPRIV_NOCALLBACK"></span><dl> <dt>**RASPRIV \_ NoCallback**</dt> </dl>                             | Der Benutzer verfügt über keine Rückrufberechtigung.<br/>                                               |
+| <span id="RASPRIV_AdminSetCallback"></span><span id="raspriv_adminsetcallback"></span><span id="RASPRIV_ADMINSETCALLBACK"></span><dl> <dt>**RASPRIV \_ AdminSetCallback**</dt> </dl>     | Das Benutzerkonto ist so konfiguriert, dass der Administrator die Rückrufnummer festgelegt hat.<br/> |
+| <span id="RASPRIV_CallerSetCallback"></span><span id="raspriv_callersetcallback"></span><span id="RASPRIV_CALLERSETCALLBACK"></span><dl> <dt>**RASPRIV \_ CallerSetCallback**</dt> </dl> | Der Remotebenutzer kann beim Einwählen eine Rückruf-Telefonnummer angeben.<br/>              |
+| <span id="RASPRIV_DialinPrivilege"></span><span id="raspriv_dialinprivilege"></span><span id="RASPRIV_DIALINPRIVILEGE"></span><dl> <dt>**RASPRIV \_ DialinPrivilege**</dt> </dl>         | Der Benutzer hat die Berechtigung, sich bei diesem Server einwählen zu können.<br/>                                 |
 
 
 
  
 
-Geben Sie eines der rückgabeflags im aufrufsbefehl der [**rasadminusereintinfo**](rasadminusersetinfo.md) -Funktion an.
+Geben Sie eines der Rückrufflags im Aufruf der [**RasAdminUserSetInfo-Funktion**](rasadminusersetinfo.md) an.
 
 </dd> <dt>
 
-**szphonenumber**
+**szPhoneNumber**
 </dt> <dd>
 
-Eine NULL-terminierte Unicode-Zeichenfolge, die die Rückruf Telefonnummer des Benutzers angibt.
+Eine auf NULL beendete Unicode-Zeichenfolge, die die Rückruftelefonnummer für den Benutzer angibt.
 
 </dd> </dl>
 
@@ -82,25 +82,25 @@ Eine NULL-terminierte Unicode-Zeichenfolge, die die Rückruf Telefonnummer des B
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Rassapi. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Rassapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Remote Zugriffs Dienst (RAS) (Übersicht)](about-remote-access-service.md)
+[Ras-Dienst (RAS): Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
-[RAS-Server-Verwaltungsstrukturen](ras-server-administration-structures.md)
+[RAS-Serververwaltungsstrukturen](ras-server-administration-structures.md)
 </dt> <dt>
 
-[**Rasadminusergetinfo**](rasadminusergetinfo.md)
+[**RasAdminUserGetInfo**](rasadminusergetinfo.md)
 </dt> <dt>
 
-[**Rasadminusereintinfo**](rasadminusersetinfo.md)
+[**RasAdminUserSetInfo**](rasadminusersetinfo.md)
 </dt> </dl>
 
  

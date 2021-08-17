@@ -1,7 +1,7 @@
 ---
-description: Enthält das übergeordnete Ordner Objekt.
+description: Enthält das übergeordnete Ordnerobjekt.
 ms.assetid: b832948c-f599-4ada-8760-9280b86abfed
-title: Folder. para Folder-Eigenschaft (Shldisp. h)
+title: Folder.ParentFolder-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 200d8f8c931bd81015f52226bed5a4e584951e20
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4d812d127884ca1c76533992a4ee4d8c527d151891239d715f5e3a7f8a5f0ba0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117860267"
 ---
-# <a name="folderparentfolder-property"></a>Folder. para Folder-Eigenschaft
+# <a name="folderparentfolder-property"></a>Folder.ParentFolder (Eigenschaft)
 
-Enthält das übergeordnete [**Ordner**](folder.md) Objekt.
+Enthält das übergeordnete [**Ordnerobjekt.**](folder.md)
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,20 +37,20 @@ ParentFolder = Folder.ParentFolder
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Objekt Verweis auf das Objekt "objektfolder".
+Ein Objektverweis auf das ParentFolder-Objekt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise ist die Methode " [**Parser Name**](folder-parsename.md) " nicht für den System Steuerungs Ordner (CSIDL-Steuer \_ Elemente) implementiert. Wenn Sie versuchen, eine nicht implementierte Methode aufzurufen, wird ein 0x800a01bd (Decimal 445)-Fehler ausgelöst.
+> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise ist die [**ParseName-Methode**](folder-parsename.md) nicht für den ordner Systemsteuerung (CSIDL \_ CONTROLS) implementiert. Wenn Sie versuchen, eine nichtimplementierte Methode auf 0x800A01BD fehler (dezimal 445) wird ausgelöst.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung von "Parameter **Folder** " für JScript, VBScript und Visual Basic.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung von **ParentFolder** für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -78,7 +78,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -139,17 +139,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die notifyenddraw-Methode wird nicht unterstützt.
+description: Die NotifyEndDraw-Methode wird nicht unterstützt.
 ms.assetid: a71d0686-fee8-4adf-8a3b-da3854710ffd
-title: Cdrawimage. notifyenddraw-Methode (winutil. h)
+title: CDrawImage.NotifyEndDraw-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d7b23cd9ca304ab4722c705ef87a813c28c0689d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 02f45ddeb8f16ca608c216eab9bf8cf96f469e2e75d4a29a45fe6eec2b3679e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365751"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117822077"
 ---
-# <a name="cdrawimagenotifyenddraw-method"></a>Cdrawimage. notifyenddraw-Methode
+# <a name="cdrawimagenotifyenddraw-method"></a>CDrawImage.NotifyEndDraw-Methode
 
-Die- `NotifyEndDraw` Methode wird nicht unterstützt.
+Die `NotifyEndDraw` -Methode wird nicht unterstützt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In früheren Versionen der Basisklassen Bibliothek unterstützte diese Methode Leistungsmessungen durch das [**cdrawimage**](cdrawimage.md) -Objekt.
+In früheren Versionen der Basisklassenbibliothek unterstützte diese Methode Leistungsmessungen durch das [**CDrawImage-Objekt.**](cdrawimage.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ In früheren Versionen der Basisklassen Bibliothek unterstützte diese Methode L
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> </dl>
 
  

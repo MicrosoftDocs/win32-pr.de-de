@@ -1,9 +1,9 @@
 ---
 title: CDN_INITDONE Benachrichtigungscode (Commdlg.h)
-description: Wird von einem Dialogfeld im Explorer-Stil geöffnet oder speichern unter gesendet, wenn das System die Anordnung der Steuerelemente im Dialogfeld abgeschlossen hat. Das System verschiebt die Standardsteuerelemente, um Platz für die Steuerelemente des untergeordneten Dialogfelds zu schaffen.
+description: Wird von einem Dialogfeld Im Explorer-Stil öffnen oder speichern unter gesendet, wenn das System die Anordnung der Steuerelemente im Dialogfeld beendet hat. Das System verschiebt die Standardsteuerelemente, um Platz für die Steuerelemente des untergeordneten Dialogfelds zu machen.
 ms.assetid: 337fccac-5444-442d-92f0-862c5302fa21
 keywords:
-- Dialogfelder für CDN_INITDONE Benachrichtigungscode
+- CDN_INITDONE Benachrichtigungscode (Dialogfelder)
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6594c161d57a5d0772679477ee9bce2cda28ba12
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 032cf03b6205f2184986d28ca115060b3bf7a99991ef6256f3b87f995c33341d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110549835"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117721051"
 ---
-# <a name="cdn_initdone-notification-code"></a>CDN \_ INITDONE-Benachrichtigungscode
+# <a name="cdn_initdone-notification-code"></a>\_CDN INITDONE-Benachrichtigungscode
 
-\[Ab Windows Vista wurden die Dialogfelder **Öffnen** und **Speichern unter** allgemein durch das [Dialogfeld "Allgemeines Element"](../shell/common-file-dialog.md)ersetzt. Es wird empfohlen, die Dialogfeld-API für allgemeine Elemente anstelle dieser Dialogfelder aus der Common Dialog Box Library zu verwenden.\]
+\[Ab Windows Vista wurden **die** allgemeinen  Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
 
-Wird von einem Dialogfeld im Explorer-Stil **geöffnet** oder **speichern unter** gesendet, wenn das System die Anordnung der Steuerelemente im Dialogfeld abgeschlossen hat. Das System verschiebt die Standardsteuerelemente, um Platz für die Steuerelemente des untergeordneten Dialogfelds zu schaffen.
+Wird von einem  Dialogfeld Im Explorer-Stil öffnen oder speichern **unter** gesendet, wenn das System die Anordnung der Steuerelemente im Dialogfeld beendet hat. Das System verschiebt die Standardsteuerelemente, um Platz für die Steuerelemente des untergeordneten Dialogfelds zu machen.
 
 Ihre [*OFNHookProc-Hookprozedur*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc) empfängt diese Nachricht in Form einer [**WM \_ NOTIFY-Nachricht.**](../controls/wm-notify.md)
 
@@ -51,7 +51,7 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**OFNOTIFY-Struktur.**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifya) Die **OFNOTIFY-Struktur** enthält eine [**NMHDR-Struktur,**](/windows/win32/api/richedit/ns-richedit-nmhdr) deren **Codemember** die **CDN \_ INITDONE-Benachrichtigungsmeldung** angibt.
+Ein Zeiger auf eine [**OFNOTIFY-Struktur.**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifya) Die **OFNOTIFY-Struktur** enthält eine [**NMHDR-Struktur,**](/windows/win32/api/richedit/ns-richedit-nmhdr) deren Code member die CDN **\_ INITDONE-Benachrichtigung** angibt. 
 
 </dd> </dl>
 
@@ -61,7 +61,7 @@ Der Rückgabewert wird ignoriert.
 
 ## <a name="remarks"></a>Hinweise
 
-Das System sendet diese Benachrichtigung nur, wenn das Dialogfeld mit dem **\_ OFN-EXPLORER-Wert** erstellt wurde.
+Das System sendet diese Benachrichtigung nur, wenn das Dialogfeld mithilfe des **\_ OFN-EXPLORER-Werts erstellt** wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,11 +71,11 @@ Das System sendet diese Benachrichtigung nur, wenn das Dialogfeld mit dem **\_ O
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Commdlg.h (windows.h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

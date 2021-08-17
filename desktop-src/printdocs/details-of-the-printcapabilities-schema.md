@@ -4,12 +4,12 @@ ms.assetid: 45782478-cfbd-4155-9bb4-3badfeef3595
 title: Details zum PrintCapabilities-Schema
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c8af59b640f12c9dc4836340714e7bc0632e994
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: e41c8d8a651b102e5ead31186a36dacc30818bb3d0d13222ce7d9da382313522
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113118965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117868594"
 ---
 # <a name="details-of-the-printcapabilities-schema"></a>Details zum PrintCapabilities-Schema
 

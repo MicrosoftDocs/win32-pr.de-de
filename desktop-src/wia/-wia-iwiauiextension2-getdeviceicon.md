@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Wiadevd.h
-ms.openlocfilehash: fe1498a804de5adeeea459464e95640b3b81ef06
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 236a12bdf37a3d4c73a4601dd35667e946442bab3fc8dc66340d5f889b165f20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108116618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117669382"
 ---
 # <a name="iwiauiextension2getdeviceicon-method"></a>IWiaUIExtension2::GetDeviceIcon-Methode
 
@@ -46,7 +46,7 @@ HRESULT GetDeviceIcon(
 
 Typ: **BSTR**
 
-Gibt die Geräte-ID des WIA-Geräts an, für das das Symbol abgerufen werden soll.
+Gibt die Geräte-ID des WIA-Geräts an, für das das Symbol erhalten werden soll.
 
 </dd> <dt>
 
@@ -55,7 +55,7 @@ Gibt die Geräte-ID des WIA-Geräts an, für das das Symbol abgerufen werden sol
 
 Typ: **HICON \***
 
-Zeigt auf eine Speicherposition, die ein Handle für das Symbol für das Gerät erhält.
+Zeigt auf einen Speicherort, der ein Handle für das Symbol für das Gerät erhält.
 
 </dd> <dt>
 
@@ -72,13 +72,13 @@ Gibt die gewünschte Symbolgröße in Pixel an. Das Symbol wird als quadratisch 
 
 Typ: **HRESULT**
 
-Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn die Methode fehlschlägt, wird ein entsprechender Fehlercode zurückgegeben. In der folgenden Tabelle sind einige der möglichen Rückgabestatuscodes aufgeführt.
+Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn bei der Methode ein Fehler auftritt, wird ein entsprechender Fehlercode zurückgegeben. In der folgenden Tabelle sind einige der möglichen Rückgabestatuscodes aufgeführt.
 
 
 
 | Fehlercode    | BESCHREIBUNG                                                                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
-| E \_ INVALIDARG | Der Parameter bstrDeviceId oder phIcon ist **NULL,** oder bstrDeviceId verweist nicht auf eine gültige WIA-Geräte-ID-Zeichenfolge. |
+| E \_ INVALIDARG | Der Parameter bstrDeviceId oder phIcon ist **NULL,** oder bstrDeviceIdzeigen nicht auf eine gültige WIA-Geräte-ID-Zeichenfolge. |
 | E \_ FAIL       | Es ist keine Symbolressource verfügbar.                                                                               |
 | E \_ NOTIMPL    | Es ist kein Symbol der angeforderten Größe verfügbar.                                                                  |
 
@@ -90,10 +90,10 @@ Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn die Methode 
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                 |
 | Header<br/>                   | <dl> <dt>Wiadevd.h</dt> </dl> |
 
 

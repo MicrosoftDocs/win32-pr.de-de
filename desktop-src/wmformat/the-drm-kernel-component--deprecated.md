@@ -1,53 +1,53 @@
 ---
-title: Die DRM-Kernel Komponente (veraltet)
-description: Die DRM-Kernel Komponente (veraltet)
+title: Die DRM-Kernelkomponente (veraltet)
+description: Die DRM-Kernelkomponente (veraltet)
 ms.assetid: 016899fb-6d0a-4529-8649-5e8f29c89253
 keywords:
-- Windows Media-Format-SDK, Microsoft Secure-Audiopfad (SAP)
-- Digital Rights Management (DRM), Microsoft Secure-Audiopfad (SAP)
-- DRM (Digital Rights Management), Microsoft Secure-Audiopfad (SAP)
-- Windows Media-Format-SDK, sicherer Audiopfad (SAP)
-- Digital Rights Management (DRM), sicherer Audiopfad (SAP)
-- DRM (Digital Rights Management), sicherer Audiopfad (SAP)
-- Windows Media-Format-SDK, DRM-Kernel Komponente
-- Digital Rights Management (DRM), Kernel Komponente
-- DRM (Digital Rights Management), Kernel Komponente
-- Microsoft Secure-Audiopfad (SAP), DRM-Kernel Komponente
-- Secure-Audiopfad (SAP), DRM-Kernel Komponente
-- SAP (sicherer Audiopfad), DRM-Kernel Komponente
+- Windows Media Format SDK, Microsoft Secure Audio Path (SAP)
+- Digital Rights Management (DRM), Microsoft Secure Audio Path (SAP)
+- DRM (Digital Rights Management), Microsoft Secure Audio Path (SAP)
+- Windows Medienformat-SDK, Sicherer Audiopfad (SAP)
+- Digital Rights Management (DRM), Sicherer Audiopfad (SAP)
+- DRM (Digital Rights Management), Sicherer Audiopfad (SAP)
+- Windows Medienformat-SDK, DRM-Kernelkomponente
+- Digital Rights Management (DRM), Kernelkomponente
+- DRM (Digital Rights Management), Kernelkomponente
+- Microsoft Secure Audio Path (SAP), DRM-Kernelkomponente
+- Sicherer Audiopfad (SAP), DRM-Kernelkomponente
+- SAP (Sicherer Audiopfad), DRM-Kernelkomponente
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bacc0074fdf390ca478ed41b59188ad42ec193c1
-ms.sourcegitcommit: 52d79b29f3b9933c8bef43207ff80c668a81cb73
+ms.openlocfilehash: 8b8db4389d9156ef13d9e87983a4ae433e6028805268f3cbd55690d4d0d8144b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "104039822"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117845757"
 ---
-# <a name="the-drm-kernel-component-deprecated"></a>Die DRM-Kernel Komponente (veraltet)
+# <a name="the-drm-kernel-component-deprecated"></a>Die DRM-Kernelkomponente (veraltet)
 
-Diese Seite dokumentiert eine Funktion, die in zukünftigen Versionen von Windows mit einer anderen technischen Lösung unterstützt wird.
+Auf dieser Seite wird ein Feature dokumentiert, das in zukünftigen Versionen von mit einer anderen technischen Lösung unterstützt Windows.
 
-Im SAP-Modell (Secure audiopath) von Microsoft bietet die DRM-Kernel Komponente zwei grundlegende Features, mit denen die Integrität verschlüsselter Musik geschützt wird.
+Im SAP-Modell (Microsoft Secure Audio Path) bietet die DRM-Kernelkomponente zwei grundlegende Features, die die Integrität verschlüsselter Musik schützen.
 
-Zuerst werden die DRM-Client Komponente und die DRM-Kernel Komponente bei der Wiedergabe einer Musikdatei kommuniziert. Diese Kommunikation zwischen Komponenten verhindert, dass jemand das verschlüsselte Signal manipuliert oder falsche Informationen einfügt.
+Zunächst werden die DRM-Clientkomponente und die DRM-Kernelkomponente kommunizieren, wenn eine Musikdatei abgespielt wird. Diese Kommunikation zwischen Komponenten verhindert, dass das verschlüsselte Signal manipuliert oder falsche Informationen eingefügt werden.
 
-Zweitens entschlüsselt die DRM-Kernel Komponente das Musiksignal erst, wenn alle verbleibenden Komponenten authentifiziert wurden. Das heißt, vor dem Entschlüsseln von Inhalten und der Übergabe an die nächste Systemkomponente überprüft die DRM-Kernel Komponente jede Komponente, die im Pfad zur Audiokarte verbleibt (jede Komponente, die auf den Inhalt zugreifen kann) und überprüft, ob diese Komponenten mit einem Zertifikat von Microsoft signiert sind. Eine nicht signierte Komponente weist möglicherweise auf eine verdächtige Komponente oder einen bösartigen Treiber hin. Wenn also die DRM-Kernel Komponente die verbleibenden Komponenten überprüft, wird das Signal angehalten und kann nicht wiedergegeben werden, wenn eine Komponente den Test nicht bestanden hat. Wenn alle Komponenten die Überprüfung bestehen, entschlüsselt die DRM-Kernel Komponente andernfalls die Musik und übergibt sie an die nächste Komponente.
+Zweitens entschlüsselt die DRM-Kernelkomponente das Musiksignal erst, wenn alle verbleibenden Komponenten authentifiziert sind. Das bedeutet, dass die DRM-Kernelkomponente vor dem Entschlüsseln von Inhalt und der Übergabe an die nächste Systemkomponente jede Komponente überprüft, die im Pfad zur Soundkarte verbleibt (jede Komponente, die auf den Inhalt zugreifen kann) und überprüft, ob diese Komponenten mit einem Zertifikat von Microsoft signiert sind. Eine komponente ohne Vorzeichen kann auf eine verdächtige Komponente oder einen schädlichen Treiber hinweisen. Wenn also die DRM-Kernelkomponente verbleibende Komponenten überprüft und eine Komponente diesen Test nicht besteht, wird das Signal angehalten und kann nicht abgespielt werden. Andernfalls entschlüsselt die DRM-Kernelkomponente die Musik und übergibt sie an die nächste Komponente, wenn alle Komponenten die Validierung bestehen.
 
-Microsoft signiert Treiber, die die Tests der Windows®-Hardware Qualität (WHQL) bestanden haben, Digital, um Benutzern zu gewährleisten, dass Sie die Treiber mit der höchsten Qualität verwenden. Diese Vorgehensweise ist Standard und garantiert die Authentizität von Komponenten, da die Signatur nicht gefälscht werden kann, und der Code kann nicht geändert werden, ohne die Signatur zu zerstören. Treiber, die für einen sicheren Audiopfad zertifiziert sind, müssen die Audiodaten, die Sie verarbeiten, vor dem Zugriff durch nicht vertrauenswürdige Komponenten schützen. 
+Microsoft signiert Treiber, die die Windows® Hardware Quality Lab (WHQL)-Tests bestehen, digital, um sicherzustellen, dass Benutzer die treibern mit der höchsten Qualität verwenden. Diese Vorgehensweise ist Standard und garantiert die Authentizität von Komponenten, da die Signatur nicht gefälscht werden kann und der Code auch nicht geändert werden kann, ohne die Signatur zu zerstören. Treiber, die für Secure Audio Path zertifiziert sind, müssen die Audiodaten, die sie verarbeiten, vor dem Zugriff durch nicht vertrauenswürdige Komponenten schützen. 
 
-Treiber, die in der Windows Millennium Edition und Windows XP enthalten sind, werden für einen sicheren Audiopfad aktualisiert und signiert. Treiber, die nicht für die Verwendung mit Windows Me oder Windows XP signiert sind, können geschützte Musik nicht wiedergeben. Treiber Hersteller können aktualisierte Versionen ihrer von WHQL signierten Treiber neu ausstellen und im Internet veröffentlichen, damit Consumer Sie herunterladen können.
+Treiber, die in Windows Edition und Windows XP enthalten sind, werden für Secure Audio Path aktualisiert und signiert. Treiber, die nicht für die Verwendung mit Windows Me oder Windows XP signiert sind, können keine geschützte Musik wieder geben. Treiberhersteller können aktualisierte Versionen ihrer Treiber, die von WHQL signiert sind, erneut veröffentlichen und im Internet veröffentlichen, damit sie von Kunden heruntergeladen werden können.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Microsoft Secure-Audiopfad**](microsoft-secure-audio-path--deprecated.md)
+[**Sicherer Audiopfad von Microsoft**](microsoft-secure-audio-path--deprecated.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,29 +1,29 @@
 ---
-description: Die nicht interaktive Authentifizierung kann nur verwendet werden, nachdem eine interaktive Authentifizierung stattfindet. Während der nicht interaktiven Authentifizierung wird der Benutzer nicht zur Eingabe von Anmeldedaten verwendet. stattdessen werden zuvor festgelegte Anmelde Informationen verwendet.
+description: Die nicht interaktive Authentifizierung kann nur verwendet werden, nachdem eine interaktive Authentifizierung durchgeführt wurde. Während der nichtinteraktiven Authentifizierung gibt der Benutzer keine Anmeldedaten ein, stattdessen werden zuvor eingerichtete Anmeldeinformationen verwendet.
 ms.assetid: 1539cbfa-d84f-4989-8380-6cfc7c496310
-title: Nicht interaktive Authentifizierung
+title: Nichtinteraktive Authentifizierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 658cba212403da2f970e056d7bacc1bc1bcaa559
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7e259a2b14d48f4d7109966fa01f6fbd6a505a1343e90ea312c557ebfb9c84ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117786613"
 ---
-# <a name="noninteractive-authentication"></a>Nicht interaktive Authentifizierung
+# <a name="noninteractive-authentication"></a>Nichtinteraktive Authentifizierung
 
-Die nicht interaktive Authentifizierung kann nur verwendet werden, nachdem eine [interaktive Authentifizierung](interactive-authentication.md) stattfindet. Während der nicht interaktiven Authentifizierung wird der Benutzer nicht zur Eingabe von [*Anmeldedaten*](../secgloss/l-gly.md)verwendet. stattdessen werden zuvor festgelegte [*Anmelde*](../secgloss/c-gly.md) Informationen verwendet.
+Die nicht interaktive Authentifizierung kann nur verwendet werden, nachdem eine [interaktive Authentifizierung](interactive-authentication.md) durchgeführt wurde. Während der nicht interaktiven Authentifizierung gibt der Benutzer keine [*Anmeldedaten*](../secgloss/l-gly.md)ein, stattdessen werden zuvor [*eingerichtete Anmeldeinformationen*](../secgloss/c-gly.md) verwendet.
 
-Die nicht interaktive Authentifizierung wird ausgeführt, wenn eine Anwendung die [*Security Support Provider-Schnittstelle (Security Support Provider Interface*](../secgloss/s-gly.md) , SSPI) und ein Sicherheitspaket verwendet, um eine sichere Netzwerkverbindung herzustellen. Die nicht interaktive Authentifizierung ist der Mechanismus bei der Arbeit, wenn ein Benutzer eine Verbindung mit mehreren Computern in einem Netzwerk herstellt, ohne die Anmelde Informationen für jeden Computer erneut eingeben zu müssen. Wenn eine Anwendung z. b. einen sicheren Ordner auf einem Remote Computer öffnen muss und der Anwendungs Benutzer bereits interaktiv bei einem Domänen Konto angemeldet ist, ist es für die Anwendung nicht erforderlich, dass der Benutzer erneut Anmeldedaten bereitstellt. Stattdessen kann die Anwendung mithilfe von SSPI eine nicht interaktive Authentifizierung anfordern, um die zuvor eingerichteten Sicherheitsinformationen an ein Sicherheitspaket zu übergeben. Das Sicherheitspaket verwendet dann LSA-Funktionen, um die [*Anmelde*](../secgloss/c-gly.md)Informationen zu überprüfen. Dieses Verfahren wird im folgenden Diagramm veranschaulicht.
+Die nicht interaktive Authentifizierung wird ausgeführt, wenn eine Anwendung die [*SSPI (Security Support Provider Interface)*](../secgloss/s-gly.md) und ein Sicherheitspaket verwendet, um eine sichere Netzwerkverbindung herzustellen. Die nicht interaktive Authentifizierung ist der Mechanismus bei der Arbeit, wenn ein Benutzer eine Verbindung mit mehreren Computern in einem Netzwerk herstellt, ohne erneut Anmeldeinformationen für jeden Computer eingeben zu müssen. Wenn eine Anwendung beispielsweise einen sicheren Ordner auf einem Remotecomputer öffnen muss und der Anwendungsbenutzer bereits interaktiv bei einem Domänenkonto angemeldet ist, benötigt die Anwendung nicht, dass der Benutzer erneut Anmeldedaten angibt. Stattdessen kann die Anwendung mithilfe von SSPI eine nicht interaktive Authentifizierung anfordern, um die zuvor eingerichteten Sicherheitsinformationen an ein Sicherheitspaket zu übergeben. Das Sicherheitspaket verwendet dann LSA-Funktionen, um die [*Anmeldeinformationen*](../secgloss/c-gly.md)zu überprüfen. Das folgende Diagramm veranschaulicht dieses Verfahren.
 
-![nicht interaktive Authentifizierung](images/lsasspi2.png)
+![Nichtinteraktive Authentifizierung](images/lsasspi2.png)
 
-Im vorangehenden Diagramm initiiert die Client Anwendung einen SSPI-Aufrufe, um eine authentifizierte Netzwerkverbindung anzufordern. SSPI übergibt die Anforderung des Clients an ein Sicherheitspaket zur Verarbeitung. Das Sicherheitspaket authentifiziert den Benutzer durch Aufrufen der [*lokalen Sicherheits Autorität (Local Security Authority*](../secgloss/l-gly.md) , LSA) und durch Angabe eines [*Authentifizierungs Pakets*](../secgloss/a-gly.md) und Bereitstellen der vorhandenen Anmelde Informationen des Benutzers.
+Im obigen Diagramm initiiert die Clientanwendung einen Aufruf von SSPI, um eine authentifizierte Netzwerkverbindung anzufordern. SSPI übergibt die Anforderung des Clients zur Verarbeitung an ein Sicherheitspaket. Das Sicherheitspaket authentifiziert den Benutzer, indem es die [*lokale Sicherheitsautorität (Local Security Authority,*](../secgloss/l-gly.md) LSA) aufruft, ein [*Authentifizierungspaket*](../secgloss/a-gly.md) angibt und die vorhandenen Anmeldeinformationen des Benutzers bereitstellt.
 
-Das Authentifizierungs Ergebnis wird vom [*Authentifizierungs Paket*](../secgloss/a-gly.md)über die LSA an das [*Sicherheitspaket*](../secgloss/s-gly.md)und schließlich an SSPI übermittelt. SSPI benachrichtigt die Client Anwendung über das Ergebnis der Anforderung.
+Das Authentifizierungsergebnis wird vom [*Authentifizierungspaket*](../secgloss/a-gly.md)über das LSA, an das [*Sicherheitspaket*](../secgloss/s-gly.md)und schließlich an SSPI übergeben. SSPI benachrichtigt die Clientanwendung über das Ergebnis der Anforderung.
 
-Weitere Informationen zu SSPI finden Sie [unter Security Support Provider Interface](sspi.md).
+Weitere Informationen zu SSPI finden Sie unter [Security Support Provider Interface](sspi.md).
 
  
 

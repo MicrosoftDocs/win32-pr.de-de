@@ -1,7 +1,7 @@
 ---
-description: Tritt auf, nachdem iinkanalyzer ein icontextnode-Objekt erstellt hat.
+description: Tritt ein, nachdem IInkAnalyzer ein IContextNode-Objekt erstellt hat.
 ms.assetid: b4ba0d3b-da91-4cc7-b071-240155687b83
-title: '_IAnalysisProxyEvents:: contextnoentcreated-Ereignis (iacom. h)'
+title: _IAnalysisProxyEvents::ContextNodeCreated-Ereignis (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: ac06a7fc45604e93408b1bb144ee7e884efd351e
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 5938ffda54542602248c5d04da0726d932b381aaff092f1c2038dd37ae4631e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "103961241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117675867"
 ---
-# <a name="_ianalysisproxyeventscontextnodecreated-event"></a>\_Ianalysisproxyevents:: contextnoentcreated-Ereignis
+# <a name="_ianalysisproxyeventscontextnodecreated-event"></a>\_IAnalysisProxyEvents::ContextNodeCreated-Ereignis
 
-Tritt auf, nachdem [**iinkanalyzer**](iinkanalyzer.md) ein [**icontextnode**](icontextnode.md) -Objekt erstellt hat.
+Tritt ein, nachdem [**IInkAnalyzer ein**](iinkanalyzer.md) [**IContextNode-Objekt erstellt**](icontextnode.md) hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,36 +40,36 @@ HRESULT ContextNodeCreated(
 
 <dl> <dt>
 
-*pinkanalyzer* \[ in\]
+*pInkAnalyzer* \[ In\]
 </dt> <dd>
 
-Der [**iinkanalyzer**](iinkanalyzer.md) , der das [**icontextnode**](icontextnode.md) -Objekt erstellt.
+Der [**IInkAnalyzer, der**](iinkanalyzer.md) das [**IContextNode-Objekt**](icontextnode.md) erstellt.
 
 </dd> <dt>
 
-*pcontextnode erstellt* \[ in\]
+*pContextNodeCreated* \[ In\]
 </dt> <dd>
 
-Das neue [**icontextnode**](icontextnode.md) -Objekt.
+Das neue [**IContextNode-Objekt.**](icontextnode.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie dieses Ereignis, wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der von [**iinkanalyzer**](iinkanalyzer.md)synchronisiert wird. Dieses Ereignis tritt während der ababstimmungs Phase der frei Hand Analyse oder als Reaktion auf eine Ink Analyzer-Methode auf, die einen [**icontextnode**](icontextnode.md)erstellt.
+Verwenden Sie dieses Ereignis, wenn Ihre Anwendung ihre eigene Datenstruktur bei behält, die mit der von [**IInkAnalyzer synchronisiert wird.**](iinkanalyzer.md) Dieses Ereignis tritt während der Abstimmungsphase der Ink-Analyse oder als Reaktion auf eine Ink Analyzer-Methode auf, die einen [**IContextNode erstellt.**](icontextnode.md)
 
-Wenn [**iinkanalyzer**](iinkanalyzer.md) einen [**icontextnode**](icontextnode.md)erstellt, enthält der neue **icontextnode** keine Striche, enthält keine Links zu anderen **icontextnode** -Objekten, und möglicherweise sind nicht alle zugehörigen Eigenschaften festgelegt. Außerdem wird der neue **icontextnode** am Ende der Auflistung der untergeordneten Knoten des übergeordneten Knotens hinzugefügt (siehe [**icontextnode:: gettientnode**](icontextnode-getparentnode.md) und [**icontextnode:: getsubnodes**](icontextnode-getsubnodes.md)). Nach diesem Ereignis kann der **iinkanalyzer** die folgenden Ereignisse aufwecken.
+Wenn [**der IInkAnalyzer**](iinkanalyzer.md) einen [**IContextNode**](icontextnode.md)erstellt, enthält der neue **IContextNode** keine Striche, enthält keine Links zu anderen **IContextNode-Objekten** und verfügt möglicherweise nicht über alle festgelegten Eigenschaften. Außerdem wird der neue **IContextNode** am Ende der Auflistung der Untergeordneten Knoten des übergeordneten Knotens hinzugefügt (siehe [**IContextNode::GetParentNode**](icontextnode-getparentnode.md) und [**IContextNode::GetSubNodes**](icontextnode-getsubnodes.md)). Nach diesem Ereignis kann **der IInkAnalyzer** die folgenden Ereignisse aus der NSD-2016-2016-2016-2016-2016-
 
--   Das [**\_ ianalysisproxyevents:: strokereprodent**](-ianalysisproxyevents-strokereparented.md) -Ereignis, wenn ein Strich von einem Kontext Knoten zu einem anderen verschoben wird.
--   Das [**\_ ianalysisproxyevents:: contextnodelta inkadditions**](-ianalysisproxyevents-contextnodelinkadding.md) -Ereignis, wenn einem [**icontextnode**](icontextnode.md)ein [**icontextlink**](icontextlink.md) hinzugefügt wird.
--   Das [**\_ ianalysisproxyevents:: ContextNodeMovingToPosition**](-ianalysisproxyevents-contextnodemovingtoposition.md) -Ereignis, wenn die Reihenfolge eines [**icontextnode**](icontextnode.md) in der Auflistung von untergeordneten Knoten des übergeordneten Knotens geändert wird.
--   Der [**iinkanalyzer**](iinkanalyzer.md) löst das [**\_ ianalysisproxyevents:: contextnodebug**](-ianalysisproxyevents-contextnodepropertiesupdated.md) -Ereignis aus, nachdem der Zustand von [**icontextnode**](icontextnode.md) für diese Analysephase aufgelöst wurde.
+-   Das [**\_ IAnalysisProxyEvents::StrokeReparented-Ereignis,**](-ianalysisproxyevents-strokereparented.md) wenn ein Strich von einem Kontextknoten auf einen anderen verschoben wird.
+-   Das [**\_ IAnalysisProxyEvents::ContextNodeLinkAdding-Ereignis,**](-ianalysisproxyevents-contextnodelinkadding.md) wenn es einem [**IContextNode**](icontextnode.md)einen [**IContextLink**](icontextlink.md) hinzufügt.
+-   Das [**\_ IAnalysisProxyEvents::ContextNodeMovingToPosition-Ereignis,**](-ianalysisproxyevents-contextnodemovingtoposition.md) wenn es die Reihenfolge eines [**IContextNode**](icontextnode.md) innerhalb der Auflistung der Untergeordneten Knoten des übergeordneten Knotens ändert.
+-   Der [**IInkAnalyzer**](iinkanalyzer.md) löst das [**\_ IAnalysisProxyEvents::ContextNodePropertiesUpdated-Ereignis**](-ianalysisproxyevents-contextnodepropertiesupdated.md) aus, nachdem der Zustand des [**IContextNode**](icontextnode.md) für diese Analysephase behoben wurde.
 
-Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyzer**](iinkanalyzer.md)finden Sie unter [Daten Proxy mit Ink-Analyse](data-proxy-with-ink-analysis.md).
+Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnalyzer**](iinkanalyzer.md)finden Sie unter [Datenproxy mit Ink-Analyse.](data-proxy-with-ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,33 +77,33 @@ Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyze
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_Ianalysisproxyevents**](-ianalysisproxyevents.md)
+[**\_IAnalysisProxyEvents**](-ianalysisproxyevents.md)
 </dt> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: analysierungsmethode**](iinkanalyzer-analyze.md)
+[**IInkAnalyzer::Analyze-Methode**](iinkanalyzer-analyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
+[**IInkAnalyzer::BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

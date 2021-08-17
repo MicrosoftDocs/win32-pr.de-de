@@ -1,7 +1,7 @@
 ---
-description: Die Funktion dbgdumpobjectregiester zeigt Informationen zu aktiven Objekten an. Wird in Einzelhandels Builds ignoriert.
+description: Die DbgDumpObjectRegister-Funktion zeigt Informationen zu aktiven Objekten an. Wird in Einzelhandels-Builds ignoriert.
 ms.assetid: 362d9912-662c-4a72-95b4-01f3d808e299
-title: Dbgdumpobjectregiester-Funktion (wxdebug. h)
+title: DbgDumpObjectRegister-Funktion (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 727d9c00ebbe3d48bb46797a1e27b9dd27c7b2c0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d82d7b419949210e19460880126a07ad52f63ae59f6055e5a2b968a2dd5c7beb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356453"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117821577"
 ---
-# <a name="dbgdumpobjectregister-function"></a>Dbgdumpobjectregiester-Funktion
+# <a name="dbgdumpobjectregister-function"></a>DbgDumpObjectRegister-Funktion
 
-Die- `DbgDumpObjectRegister` Funktion zeigt Informationen zu aktiven Objekten an. Wird in Einzelhandels Builds ignoriert.
+Die `DbgDumpObjectRegister` Funktion zeigt Informationen zu aktiven Objekten an. Wird in Einzelhandels-Builds ignoriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ Diese Funktion besitzt keine Parameter.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In Debugbuilds verwaltet die Debug-Bibliothek eine Liste aktiver Objekte. Die Liste enthält alle Objekte, die von [**cbaseobject**](cbaseobject.md)abgeleitet sind, vom aktuellen Modul erstellt wurden und nicht zerstört wurden. Der **cbaseobject** -Konstruktor und die dekonstruktormethoden aktualisieren die Liste.
+In Debugbuilds verwaltet die Debugbibliothek eine Liste aktiver Objekte. Die Liste enthält alle Objekte, die von [**CBaseObject**](cbaseobject.md)abgeleitet sind, vom aktuellen Modul erstellt wurden und nicht zerstört wurden. Die **CBaseObject-Konstruktor-** und Destruktormethoden aktualisieren die Liste.
 
-Diese Funktion generiert mehrere Protokoll \_ Speicher Meldungen. Bei der Protokollierungs Stufe 1 zeigt die Funktion nur die Gesamtzahl der Objekte an. In der Protokollierungs Stufe 2 oder höher wird eine Liste der Objekte angezeigt.
+Diese Funktion generiert mehrere LOG \_ MEMORY-Meldungen. Auf Protokollierebene 1 zeigt die Funktion nur die Gesamtzahl der Objekte an. Auf Protokollierebene 2 oder höher wird eine Liste der Objekte angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,16 +56,16 @@ Diese Funktion generiert mehrere Protokoll \_ Speicher Meldungen. Bei der Protok
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Debug-Ausgabefunktionen](debug-output-functions.md)
+[Debugausgabefunktionen](debug-output-functions.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ -Chassis-Klasse stellt die physischen Elemente dar, die andere Elemente einschließen und definierbare Funktionen bereitstellen, wie z. b. einen Desktop, Verarbeitungs Knoten, UPS, Datenträger-oder Band Speicher oder eine Kombination dieser Elemente.
+description: Die CIM-Chassis-Klasse stellt die physischen Elemente dar, die andere Elemente umschließen und definierbare Funktionen bereitstellen, z. B. desktop, verarbeitungsknoten, UPS, Datenträger- oder Bandspeicher oder eine Kombination \_ dieser Elemente.
 ms.assetid: 4c55dbff-bc4a-4cc9-8f34-29636defaa56
 ms.tgt_platform: multiple
 title: CIM_Chassis-Klasse
@@ -49,23 +49,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: b1eb7f5e2733056cf48c1c9333453613ace699c6
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 271f01587dc67c14464cfdb06de321d853b8b9a606a99cb1aca8fdcb0ff2ca17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127116"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117835035"
 ---
-# <a name="cim_chassis-class"></a>CIM- \_ Chassis-Klasse
+# <a name="cim_chassis-class"></a>\_CIM-Chassisklasse
 
-Die **CIM- \_ Chassis** -Klasse stellt die physischen Elemente dar, die andere Elemente einschließen und definierbare Funktionen bereitstellen, wie z. b. einen Desktop, Verarbeitungs Knoten, UPS, Datenträger-oder Band Speicher oder eine Kombination dieser Elemente.
+Die **\_ CIM-Chassis-Klasse** stellt die physischen Elemente dar, die andere Elemente umschließen und definierbare Funktionen bereitstellen, z. B. desktop, verarbeitungsknoten, UPS, Datenträger- oder Bandspeicher oder eine Kombination dieser Elemente.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -113,20 +113,20 @@ class CIM_Chassis : CIM_PhysicalFrame
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ Chassis** -Klasse verfügt über diese Typen von Membern:
+Die **\_ CIM-Chassis-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **CIM- \_ Chassis** -Klasse verfügt über diese Methoden.
+Die **\_ CIM-Chassis-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                           | BESCHREIBUNG                                                                                                                                      |
+| Methode                                                           | Beschreibung                                                                                                                                      |
 |:-----------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Iskompatibel**](iscompatible-method-in-class-cim-chassis.md) | Überprüft, ob das physische-Element, auf das verwiesen wird, in das physische Paket eingefügt oder darin eingefügt werden kann. Wird nicht von WMI implementiert.<br/> |
+| [**IsCompatible**](iscompatible-method-in-class-cim-chassis.md) | Überprüft, ob das physische Element, auf das verwiesen wird, im physischen Paket enthalten oder in dieses eingefügt werden kann. Nicht von WMI implementiert.<br/> |
 
 
 
@@ -134,22 +134,22 @@ Die **CIM- \_ Chassis** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ Chassis** -Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Chassis-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Audiblealarm**
+**AudiobleAlarm**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass der Frame mit einem hörbaren Alarm ausgestattet ist.
+True **gibt an,** dass der Frame mit einem akustischen Alarm ausgestattet ist.
 
-Diese Eigenschaft wird von [**CIM \_ physicalframe**](cim-physicalframe.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalFrame geerbt.**](cim-physicalframe.md)
 
 </dd> <dt>
 
@@ -162,12 +162,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ physicalframe**](cim-physicalframe.md).**Securityverletzungs**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ PhysicalFrame**](cim-physicalframe.md).**SecurityBreach**")
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die weitere Informationen bereitstellt, wenn die **securityverletzungs** -Eigenschaft angibt, dass eine Sicherheitsverletzung oder ein anderes Sicherheits bezogenes Ereignis aufgetreten ist.
+Freiformzeichenfolge, die weitere Informationen enthält, wenn die **SecurityBreach-Eigenschaft** angibt, dass eine Sicherheitsverletzung oder ein anderes sicherheitsbezogenes Ereignis aufgetreten ist.
 
-Diese Eigenschaft wird von [**CIM \_ physicalframe**](cim-physicalframe.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalFrame geerbt.**](cim-physicalframe.md)
 
 </dd> <dt>
 
@@ -180,9 +180,9 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die Informationen darüber enthält, wie die verschiedenen Kabel mit dem Frame verbunden und gebündelt werden. Dank vieler Netzwerk-, Speicher-und Netzkabel kann die Kabel Verwaltung ein komplexes und anspruchsvolles Unterfangen sein. Diese Zeichen folgen Eigenschaft enthält Informationen, um die Assembly und den Dienst des Frames zu unterstützen.
+Freiformzeichenfolge, die Informationen darüber enthält, wie die verschiedenen Kabel für den Rahmen verbunden und gebündelt werden. Mit vielen Netzwerk-, Speicher- und Netzkabeln kann die Kabelverwaltung ein komplexes und anspruchsvolles Unterfangen sein. Diese Zeichenfolgeneigenschaft enthält Informationen zur Unterstützung der Assembly und des Diensts des Frames.
 
-Diese Eigenschaft wird von [**CIM \_ physicalframe**](cim-physicalframe.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalFrame geerbt.**](cim-physicalframe.md)
 
 </dd> <dt>
 
@@ -195,28 +195,28 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
 </dt> </dl>
 
-Eine kurze Textbeschreibung des-Objekts.
+Eine kurze Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **ChassisTypes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". Physischer DMTF- \| Container globale Tabelle \| 002,1 "), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Chassis**".**Typebeschreibungen**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DmTF \| Physical Container Global Table \| 002.1"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ Chassis**.**TypeDescriptions**")
 </dt> </dl>
 
-Enumerationsarray mit ganzzahligen Werten, das den Typ des Chassis angibt.
+Enumeriertes Array mit ganzzahligen Werten, das den Typ des Gehäuses angibt.
 
 <dt>
 
@@ -255,12 +255,12 @@ Desktop:
 
 <span id="Low_Profile_Desktop"></span><span id="low_profile_desktop"></span><span id="LOW_PROFILE_DESKTOP"></span>
 
-<span id="Low_Profile_Desktop"></span><span id="low_profile_desktop"></span><span id="LOW_PROFILE_DESKTOP"></span>**Desktop mit niedrigem Profil** (4)
+<span id="Low_Profile_Desktop"></span><span id="low_profile_desktop"></span><span id="LOW_PROFILE_DESKTOP"></span>**Desktop mit geringem Profil** (4)
 
 
 </dt> <dd>
 
-Desktop mit niedrigem Profil
+Desktop mit geringem Profil.
 
 </dd> <dt>
 
@@ -271,24 +271,24 @@ Desktop mit niedrigem Profil
 
 </dt> <dd>
 
-Pizza Box.
+Pizzabox.
 
 </dd> <dt>
 
 <span id="Mini_Tower"></span><span id="mini_tower"></span><span id="MINI_TOWER"></span>
 
-<span id="Mini_Tower"></span><span id="mini_tower"></span><span id="MINI_TOWER"></span>**Mini Turm** (6)
+<span id="Mini_Tower"></span><span id="mini_tower"></span><span id="MINI_TOWER"></span>**Mini Tower** (6)
 
 
 </dt> <dd>
 
-Mini Turm.
+Mini-Hochhaus.
 
 </dd> <dt>
 
 <span id="Tower"></span><span id="tower"></span><span id="TOWER"></span>
 
-<span id="Tower"></span><span id="tower"></span><span id="TOWER"></span>**Turm** (7)
+<span id="Tower"></span><span id="tower"></span><span id="TOWER"></span>**Tower** (7)
 
 
 </dt> <dd>
@@ -304,7 +304,7 @@ Tower:
 
 </dt> <dd>
 
-Tabel.
+Tragbar.
 
 </dd> <dt>
 
@@ -326,7 +326,7 @@ Laptop:
 
 </dt> <dd>
 
-Noten.
+Notizbuch.
 
 </dd> <dt>
 
@@ -337,29 +337,29 @@ Noten.
 
 </dt> <dd>
 
-Hand halten.
+Hand-held.
 
 </dd> <dt>
 
 <span id="Docking_Station"></span><span id="docking_station"></span><span id="DOCKING_STATION"></span>
 
-<span id="Docking_Station"></span><span id="docking_station"></span><span id="DOCKING_STATION"></span>**Docking Station** (12)
+<span id="Docking_Station"></span><span id="docking_station"></span><span id="DOCKING_STATION"></span>**Andockstation** (12)
 
 
 </dt> <dd>
 
-Andockstation.
+Dockingstation.
 
 </dd> <dt>
 
 <span id="All_in_One"></span><span id="all_in_one"></span><span id="ALL_IN_ONE"></span>
 
-<span id="All_in_One"></span><span id="all_in_one"></span><span id="ALL_IN_ONE"></span>**Alle in eins** (13)
+<span id="All_in_One"></span><span id="all_in_one"></span><span id="ALL_IN_ONE"></span>**All in One** (13)
 
 
 </dt> <dd>
 
-Vollständig.
+All-in-One.
 
 </dd> <dt>
 
@@ -370,57 +370,57 @@ Vollständig.
 
 </dt> <dd>
 
-Unter Notebook.
+Subnotebook.
 
 </dd> <dt>
 
 <span id="Space-Saving"></span><span id="space-saving"></span><span id="SPACE-SAVING"></span>
 
-<span id="Space-Saving"></span><span id="space-saving"></span><span id="SPACE-SAVING"></span>**Speicherplatz** (15)
+<span id="Space-Saving"></span><span id="space-saving"></span><span id="SPACE-SAVING"></span>**Speicherplatzspeicherung** (15)
 
 
 </dt> <dd>
 
-Speicherplatz wird gespeichert.
+Speicherplatzsparend.
 
 </dd> <dt>
 
 <span id="Lunch_Box"></span><span id="lunch_box"></span><span id="LUNCH_BOX"></span>
 
-<span id="Lunch_Box"></span><span id="lunch_box"></span><span id="LUNCH_BOX"></span>**Mittags Feld** (16)
+<span id="Lunch_Box"></span><span id="lunch_box"></span><span id="LUNCH_BOX"></span>**Lunch Box** (16)
 
 
 </dt> <dd>
 
-Das mittags Kästchen.
+Mittagsbox.
 
 </dd> <dt>
 
 <span id="Main_System_Chassis"></span><span id="main_system_chassis"></span><span id="MAIN_SYSTEM_CHASSIS"></span>
 
-<span id="Main_System_Chassis"></span><span id="main_system_chassis"></span><span id="MAIN_SYSTEM_CHASSIS"></span>**Haupt Betriebssystem-Chassis** (17)
+<span id="Main_System_Chassis"></span><span id="main_system_chassis"></span><span id="MAIN_SYSTEM_CHASSIS"></span>**Hauptsystemgehäuse** (17)
 
 
 </dt> <dd>
 
-Haupt Betriebssystem des Systems.
+Hauptsystemchassis.
 
 </dd> <dt>
 
 <span id="Expansion_Chassis"></span><span id="expansion_chassis"></span><span id="EXPANSION_CHASSIS"></span>
 
-<span id="Expansion_Chassis"></span><span id="expansion_chassis"></span><span id="EXPANSION_CHASSIS"></span>**Erweiterungs Chassis** (18)
+<span id="Expansion_Chassis"></span><span id="expansion_chassis"></span><span id="EXPANSION_CHASSIS"></span>**Erweiterungschassis** (18)
 
 
 </dt> <dd>
 
-Erweiterungs Chassis.
+Erweiterungschassis.
 
 </dd> <dt>
 
 <span id="SubChassis"></span><span id="subchassis"></span><span id="SUBCHASSIS"></span>
 
-<span id="SubChassis"></span><span id="subchassis"></span><span id="SUBCHASSIS"></span>**Subchassis** (19)
+<span id="SubChassis"></span><span id="subchassis"></span><span id="SUBCHASSIS"></span>**SubChassis** (19)
 
 
 </dt> <dd>
@@ -431,80 +431,80 @@ Subchassis.
 
 <span id="Bus_Expansion_Chassis"></span><span id="bus_expansion_chassis"></span><span id="BUS_EXPANSION_CHASSIS"></span>
 
-<span id="Bus_Expansion_Chassis"></span><span id="bus_expansion_chassis"></span><span id="BUS_EXPANSION_CHASSIS"></span>**Buserweiterungs Chassis** (20)
+<span id="Bus_Expansion_Chassis"></span><span id="bus_expansion_chassis"></span><span id="BUS_EXPANSION_CHASSIS"></span>**Buserweiterungschassis** (20)
 
 
 </dt> <dd>
 
-Buserweiterungs Chassis.
+Buserweiterungschassis.
 
 </dd> <dt>
 
 <span id="Peripheral_Chassis"></span><span id="peripheral_chassis"></span><span id="PERIPHERAL_CHASSIS"></span>
 
-<span id="Peripheral_Chassis"></span><span id="peripheral_chassis"></span><span id="PERIPHERAL_CHASSIS"></span>**Peripherie Chassis** (21)
+<span id="Peripheral_Chassis"></span><span id="peripheral_chassis"></span><span id="PERIPHERAL_CHASSIS"></span>**Peripheriegehäuse** (21)
 
 
 </dt> <dd>
 
-Peripherie Chassis.
+Peripheriegehäuse.
 
 </dd> <dt>
 
 <span id="Storage_Chassis"></span><span id="storage_chassis"></span><span id="STORAGE_CHASSIS"></span>
 
-<span id="Storage_Chassis"></span><span id="storage_chassis"></span><span id="STORAGE_CHASSIS"></span>**Speicherchassis** (22)
+<span id="Storage_Chassis"></span><span id="storage_chassis"></span><span id="STORAGE_CHASSIS"></span>**Storage Gehäuse** (22)
 
 
 </dt> <dd>
 
-Speicher Chassis.
+Storage Gehäuse.
 
 </dd> <dt>
 
 <span id="Rack_Mount_Chassis"></span><span id="rack_mount_chassis"></span><span id="RACK_MOUNT_CHASSIS"></span>
 
-<span id="Rack_Mount_Chassis"></span><span id="rack_mount_chassis"></span><span id="RACK_MOUNT_CHASSIS"></span>**Rack Mount Chassis** (23)
+<span id="Rack_Mount_Chassis"></span><span id="rack_mount_chassis"></span><span id="RACK_MOUNT_CHASSIS"></span>**Rack mount Chassis** (23)
 
 
 </dt> <dd>
 
-Rack einbinden des Chassis.
+Rack-Gehäuse.
 
 </dd> <dt>
 
 <span id="Sealed-Case_PC"></span><span id="sealed-case_pc"></span><span id="SEALED-CASE_PC"></span>
 
-<span id="Sealed-Case_PC"></span><span id="sealed-case_pc"></span><span id="SEALED-CASE_PC"></span>**Sealed-Case-PC** (24)
+<span id="Sealed-Case_PC"></span><span id="sealed-case_pc"></span><span id="SEALED-CASE_PC"></span>**PC mit versiegelter Case -Datei** (24)
 
 
 </dt> <dd>
 
-Sealed-Case-Computer.
+Versiegelter Computer.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Wenn diese Eigenschaft mit anderen Schlüsseleigenschaften der-Klasse verwendet wird, können alle Instanzen der-Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit anderen Schlüsseleigenschaften der -Klasse ermöglicht diese Eigenschaft die eindeutige Identifizierung aller Instanzen der -Klasse und ihrer Unterklassen.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
 </dd> <dt>
 
-**Currentrequirements dorerzeugte**
+**CurrentRequiredOrProduced**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint16**
@@ -513,10 +513,10 @@ Datentyp: **sint16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Amps bei 120 Volt")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Amps bei 120 Litern")
 </dt> </dl>
 
-Wird derzeit vom Chassis bei 120 Volt benötigt. Wenn die Stromversorgung vom Chassis bereitgestellt wird (wie im Fall von a-UPS), kann diese Eigenschaft den erstellten AMPERAGE als negative Zahl angeben.
+Derzeit für das Gehäuse bei 120 Litern erforderlich. Wenn die Stromversorgung durch das Gehäuse erfolgt (wie bei einer USV), kann diese Eigenschaft den erzeugten Strom als negative Zahl angeben.
 
 </dd> <dt>
 
@@ -532,34 +532,34 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Zoll")
 </dt> </dl>
 
-Die Tiefe des physischen Pakets in Zoll.
+Tiefe des physischen Pakets in Zoll.
 
-Diese Eigenschaft wird von [**CIM \_ physicalpackage**](cim-physicalpackage.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage**](cim-physicalpackage.md)geerbt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Beschreibung")
 </dt> </dl>
 
-Eine Textbeschreibung des-Objekts.
+Eine Textbeschreibung des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**Heatgene Ration**
+**HeatGeneration**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -568,7 +568,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("BTU pro Stunde")
 </dt> </dl>
 
-Menge der vom Chassis in BTU/Stunde erzeugten Heat.
+Vom Gehäuse in Btu/Stunde generierte Wärmemenge.
 
 </dd> <dt>
 
@@ -586,71 +586,71 @@ Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Zo
 
 Höhe des physischen Pakets in Zoll.
 
-Diese Eigenschaft wird von [**CIM \_ physicalpackage**](cim-physicalpackage.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage**](cim-physicalpackage.md)geerbt.
 
 </dd> <dt>
 
-**"Anappable"**
+**HotSwappable**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass das Paket im laufenden Betrieb ausgetauscht werden kann. Ein physisches Paket kann mit einem ausgetauschten Element ersetzt werden, wenn das Element durch ein physisch anderes (aber gleichwertiges) Element ersetzt werden kann, während das enthaltende Paket eingeschaltet ist. Beispielsweise kann eine Lüfter-Komponente so entworfen werden, dass Sie im laufenden Betrieb ausgetauscht wird. Alle Komponenten, bei denen es sich um eine ausgetauschte Komponente handelt, sind von Natur aus austauschbar und austauschbar.
+True gibt an, dass das Paket im laufenden Betrieb getauscht werden kann. Ein physisches Paket kann im laufenden Betrieb ausgetauscht werden, wenn das Element durch ein physisch anderes (aber gleichwertiges) ersetzt werden kann, während das enthaltende Paket aktiviert ist. Beispielsweise kann eine Lüfterkomponente so entworfen werden, dass sie im laufenden Betrieb ausgetauscht wird. Alle Komponenten, die im laufenden Betrieb ausgetauscht werden können, können grundsätzlich entfernt und ersetzt werden.
 
-Diese Eigenschaft wird von [**CIM \_ physicalpackage**](cim-physicalpackage.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage**](cim-physicalpackage.md)geerbt.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installationsdatum")
 </dt> </dl>
 
-Gibt an, wann das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Gibt an, wann das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**Sperre vorhanden**
+**LockPresent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass der Frame durch eine Sperre geschützt wird.
+True gibt an, dass der Frame durch eine Sperre geschützt ist.
 
-Diese Eigenschaft wird von [**CIM \_ physicalframe**](cim-physicalframe.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalFrame**](cim-physicalframe.md)geerbt.
 
 </dd> <dt>
 
 **Manufacturer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name der Organisation, die für die Erstellung des physischen Elements verantwortlich ist. Weitere Informationen finden Sie unter der **Hersteller** Eigenschaft des [**CIM- \_ Produkts**](cim-product.md).
+Name der Organisation, die für die Erstellung des physischen Elements verantwortlich ist. Weitere Informationen finden Sie unter der **Vendor-Eigenschaft** von [**CIM \_ Product**](cim-product.md).
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
@@ -659,13 +659,13 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)g
 **Modell**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
 Der Name, mit dem das physische Element allgemein bekannt ist.
@@ -677,44 +677,44 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)g
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
 </dt> </dl>
 
-Die Bezeichnung, nach der das-Objekt bekannt ist. Bei einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden.
+Bezeichnung, mit der das Objekt bekannt ist. Bei Einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**Anzahl von powercords**
+**NumberOfPowerCords**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der Netzkabel, die mit dem Chassis verbunden werden müssen, damit alle Komponenten funktionieren können.
+Anzahl von Netzkabeln, die mit dem Gehäuse verbunden sein müssen, damit alle Komponenten ausgeführt werden können.
 
 </dd> <dt>
 
 **OtherIdentifyingInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zusätzliche Daten, über die Informationen zu Asset-Tags hinausgehen, die zum Identifizieren eines physischen Elements verwendet werden können. Ein Beispiel hierfür sind Barcode Daten, die einem Element zugeordnet sind, das ebenfalls über ein Bestands Kennzeichen verfügt. Beachten Sie Folgendes: Wenn nur Barcode Daten verfügbar sind und eindeutig sind und als Element Schlüssel verwendet werden können, ist diese Eigenschaft NULL, und die Barcode Daten werden als Klassen Schlüssel in der **Tag** -Eigenschaft verwendet.
+Zusätzliche Daten, die über Assettaginformationen hinausgehen und zum Identifizieren eines physischen Elements verwendet werden können. Ein Beispiel sind Balkencodedaten, die einem Element zugeordnet sind, das ebenfalls über ein Medienobjekttag verfügt. Beachten Sie Folgendes: Wenn nur Balkencodedaten verfügbar sind und eindeutig sind und als Elementschlüssel verwendet werden können, wäre diese Eigenschaft NULL, und die Balkencodedaten würden als Klassenschlüssel in der **Tag-Eigenschaft** verwendet werden.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
@@ -723,87 +723,87 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)g
 **PartNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Teilenummer, die von der Organisation zugewiesen wurde, die für das Erstellen oder die Herstellung des physischen Elements verantwortlich ist
+Teilenummer, die von der Organisation zugewiesen wird, die für die Produktion oder Herstellung des physischen Elements verantwortlich ist.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
 </dd> <dt>
 
-**Poweredon**
+**PoweredOn**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass das physische Element eingeschaltet ist. Andernfalls ist Sie zurzeit deaktiviert.
+True gibt an, dass das physische Element eingeschaltet ist. Andernfalls ist sie derzeit deaktiviert.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
 </dd> <dt>
 
-**Ab**
+**Abnehmbare**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass das Paket in den physischen Container übernommen werden soll, in dem es normalerweise gefunden wird, ohne die Funktion der gesamten Paket Erstellung zu beeinträchtigen. Ein Paket gilt auch dann als austauschbar, wenn die Stromversorgung deaktiviert sein muss, um das Entfernen auszuführen. Wenn die Stromversorgung aktiviert und das Paket entfernt werden kann, ist das-Element austauschbar und kann im laufenden Betrieb ausgetauscht werden. Beispielsweise kann ein erweiterbarer Prozessor Chip entfernt werden.
+True gibt an, dass das Paket so konzipiert ist, dass es in den physischen Container, in dem es normalerweise gefunden wird, ein- und aus dem Paket aufgenommen wird, ohne die Funktion der gesamten Paketierung zu beeinträchtigen. Ein Paket gilt auch dann als wechselbar, wenn die Stromversorgung ausgeschaltet sein muss, um die Entfernung durchzuführen. Wenn die Stromversorgung eingeschaltet und das Paket entfernt werden kann, ist das Element wechselbar und kann im laufenden Betrieb ausgetauscht werden. Beispielsweise kann ein aktualisierbarer Prozessorchip entfernt werden.
 
-Diese Eigenschaft wird von [**CIM \_ physicalpackage**](cim-physicalpackage.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage**](cim-physicalpackage.md)geerbt.
 
 </dd> <dt>
 
-**Replaceable**
+**Austauschbare**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn der Wert **true** ist, kann das-Element durch einen physisch anderen ersetzt werden. Beispielsweise ist für einige Computersysteme das Upgrade des Hauptprozessor-Chips auf eine höhere Bewertungsstufe möglich. In diesem Fall wird der Prozessor als ersetzbar bezeichnet. Alle wechselkomponenten sind von Natur aus ersetzbar.
+True gibt an, dass das Element durch ein physisch anderes ersetzt werden kann. Einige Computersysteme ermöglichen beispielsweise das Upgrade des Hauptprozessorchips auf eine höhere Uhrbewertung. In diesem Fall wird der Prozessor als ersetzbar bezeichnet. Alle Wechselkomponenten sind grundsätzlich austauschbar.
 
-Diese Eigenschaft wird von [**CIM \_ physicalpackage**](cim-physicalpackage.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage**](cim-physicalpackage.md)geerbt.
 
 </dd> <dt>
 
-**Security-Verletzung**
+**SecurityBreach**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". Physischer DMTF- \| Container Global Table \| 002,12 "), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ physicalframe**](cim-physicalframe.md).**BreachDescription**")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Physical Container Global Table \| 002.12"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ PhysicalFrame**](cim-physicalframe.md).**BreachDescription**")
 </dt> </dl>
 
-Gibt an, ob ein physischer Verstoß gegen den Frame versucht wurde, jedoch nicht erfolgreich war oder ob versucht wurde.
+Gibt an, ob eine physische Verletzung des Frames versucht wurde, aber nicht erfolgreich war, oder ob versucht wurde und erfolgreich war.
 
-Diese Eigenschaft wird von [**CIM \_ physicalframe**](cim-physicalframe.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalFrame**](cim-physicalframe.md)geerbt.
 
 <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -817,83 +817,83 @@ Diese Eigenschaft wird von [**CIM \_ physicalframe**](cim-physicalframe.md)geerb
 
 <span id="No_Breach"></span><span id="no_breach"></span><span id="NO_BREACH"></span>
 
-**Keine Verletzung** (3)
+**Keine Sicherheitsverletzung** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Breach_Attempted"></span><span id="breach_attempted"></span><span id="BREACH_ATTEMPTED"></span>
 
-**Versuchte Sicherheitsverletzung** (4)
+Breach Attempted (4) **(Versuchter Sicherheitsverletzungsversuch** (4))
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Breach_Successful"></span><span id="breach_successful"></span><span id="BREACH_SUCCESSFUL"></span>
 
-**Verletzung erfolgreich** (5)
+**Sicherheitsverletzung erfolgreich** (5)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**SerialNumber**
+**Serialnumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Vom Hersteller zugewiesene Nummer, mit der das physische Element identifiziert wird.
+Vom Hersteller zugeordnete Nummer, die zum Identifizieren des physischen Elements verwendet wird.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
 </dd> <dt>
 
-**Service Beschreibungen**
+**ServiceDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ physicalframe**](cim-physicalframe.md).**ServicePhilosophy**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ PhysicalFrame**](cim-physicalframe.md).**ServiceOsoosophy**")
 </dt> </dl>
 
-Freiform-Zeichen folgen, die ausführliche Erläuterungen zu Einträgen im **ServicePhilosophy** -Array bereitstellen.
+Freiformzeichenfolgen, die ausführliche Erklärungen für Einträge im **ServiceOsoosophy-Array** bereitstellen.
 
 > [!Note]  
-> Jeder Eintrag dieses Arrays bezieht sich auf den Eintrag im **ServicePhilosophy** -Array, das sich im gleichen Index befindet.
+> Jeder Eintrag dieses Arrays bezieht sich auf den Eintrag im **ServiceOsoosophy-Array,** der sich am gleichen Index befindet.
 
  
 
-Diese Eigenschaft wird von [**CIM \_ physicalframe**](cim-physicalframe.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalFrame**](cim-physicalframe.md)geerbt.
 
 </dd> <dt>
 
-**ServicePhilosophy**
+**ServiceOsoosophy**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ physicalframe**](cim-physicalframe.md).**Service Beschreibungen**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ PhysicalFrame**](cim-physicalframe.md).**ServiceDescriptions**")
 </dt> </dl>
 
-Gibt an, ob der Frame vom oberen Rand, von der Vorderseite, von hinten oder von der Seite bedient wird. und ob Schiebe Fächer oder Wechsel Seiten vorhanden sind, und ob der Frame beweglich ist (z. b. über Walzen).
+Gibt an, ob der Frame von oben, vorn, zurück oder von der Seite aus gewartet wird. und ob es Schiebeleisten oder Wechselseiten hat und ob der Rahmen verschiebbar ist (z. B. Rolls).
 
-Diese Eigenschaft wird von [**CIM \_ physicalframe**](cim-physicalframe.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalFrame**](cim-physicalframe.md)geerbt.
 
 <dt>
 
@@ -906,28 +906,28 @@ Diese Eigenschaft wird von [**CIM \_ physicalframe**](cim-physicalframe.md)geerb
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Service_From_Top"></span><span id="service_from_top"></span><span id="SERVICE_FROM_TOP"></span>
 
-**Dienst von oben** (2)
+**Service From Top** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Service_From_Front"></span><span id="service_from_front"></span><span id="SERVICE_FROM_FRONT"></span>
 
-**Dienst von Front** (3)
+**Service From Front** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Service_From_Back"></span><span id="service_from_back"></span><span id="SERVICE_FROM_BACK"></span>
 
-**Dienst von hinten** (4)
+**Dienst von zurück** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -941,21 +941,21 @@ Diese Eigenschaft wird von [**CIM \_ physicalframe**](cim-physicalframe.md)geerb
 
 <span id="Sliding_Trays"></span><span id="sliding_trays"></span><span id="SLIDING_TRAYS"></span>
 
-**Gleitende Tabletts** (6)
+**Gleitleisten** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Removable_Sides"></span><span id="removable_sides"></span><span id="REMOVABLE_SIDES"></span>
 
-Wechsel **Seiten** (7)
+**Wechselseiten** (7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Moveable"></span><span id="moveable"></span><span id="MOVEABLE"></span>
 
-**Verschiebbare** (8)
+**Verschiebebar** (8)
 
 
 </dt> <dd></dd> </dl>
@@ -965,16 +965,16 @@ Wechsel **Seiten** (7)
 **SKU**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Die Stock Keeping Unit-Nummer für dieses physische Element.
+Lagerhaltungseinheitennummer für dieses physische Element.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
@@ -983,18 +983,18 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)g
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
-Eine Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebliche Status können definiert werden. Der Betriebsstatus kann "OK", "heruntergestuft" und "pred Fail" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. b. ein intelligent-fähiges Festplattenlaufwerk).
+Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebsbereite Status können definiert werden. Der Betriebsstatus kann "OK", "Heruntergestuft" und "Fehler vor dem Fehler" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. B. ein SMART-fähiges Festplattenlaufwerk).
 
-Der nicht betriebliche Status kann "Error", "Starting", "Stop" und "Service" enthalten. "Service" kann während der Datenträger Spiegelung angewendet werden, indem eine Benutzer Berechtigungs Liste oder eine andere administrative Arbeit neu geladen wird. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Nicht betriebsbereite Status können "Error", "Starting", "Stopping" und "Service" sein. "Dienst" kann während der Datenträgerspiegelung, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Administrativen Arbeiten angewendet werden. Nicht alle dieser Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -1018,35 +1018,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird gestartet** ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -1060,28 +1060,28 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
@@ -1091,37 +1091,37 @@ Wird **beendet ("wird angehalten** ")
 **Tag**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Identifiziert das physische Element eindeutig und fungiert als Schlüssel des Elements. Diese Eigenschaft kann Informationen enthalten, z. b. Daten zu Bestands Kennzeichen oder Seriennummer. Der Schlüssel für [**CIM \_ PhysicalElement**](cim-physicalelement.md) wird in der Objekthierarchie sehr hoch platziert, um die Hardware oder Entität unabhängig von der physischen Platzierung in (oder in) Schränken, Adaptern usw. unabhängig voneinander zu identifizieren. Beispielsweise kann eine Wechsel Komponente, für die ein ausgetauschte Vorgang ausgeführt werden kann, aus dem enthaltenden (Bereichs bezogenen) Paket entnommen und vorübergehend nicht verwendet werden. Das Objekt bleibt weiterhin vorhanden und kann sogar in einen anderen Bereichs Container eingefügt werden. Der Schlüssel für ein physisches Element ist eine beliebige Zeichenfolge, die unabhängig von der Platzierung oder der Speicherort orientierten Hierarchie definiert wird.
+Identifiziert das physische Element eindeutig und dient als Schlüssel des Elements. Diese Eigenschaft kann Informationen enthalten, z. B. Assettag- oder Seriennummerndaten. Der Schlüssel für [**CIM \_ PhysicalElement**](cim-physicalelement.md) wird sehr hoch in der Objekthierarchie platziert, um die Hardware oder Entität unabhängig von der physischen Platzierung in Schränken, Adaptern usw. zu identifizieren. Beispielsweise kann eine Wechselkomponente, die im laufenden Betrieb ausgetauscht werden kann, aus dem enthaltenden Paket (Bereichspaket) entnommen und vorübergehend nicht verwendet werden. Das Objekt ist weiterhin vorhanden und kann sogar in einen anderen Bereichscontainer eingefügt werden. Der Schlüssel für ein physisches Element ist eine beliebige Zeichenfolge, die unabhängig von der Platzierung oder der standortorientierten Hierarchie definiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
 </dd> <dt>
 
-**Typebeschreibungen**
+**TypeDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Chassis**.**ChassisTypes**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ Chassis**.**ChassisTypes**")
 </dt> </dl>
 
-Array von Freiform-Zeichen folgen, das Informationen über die **ChassisTypes** -Array Einträge bereitstellt.
+Array von Freiformzeichenfolgen, das Informationen zu den **ChassisTypes-Arrayeinträgen** bereitstellt.
 
 > [!Note]  
-> Jeder Array Eintrag bezieht sich auf den Eintrag in der **ChassisTypes** -Eigenschaft, der sich am selben Index befindet.
+> Jeder Arrayeintrag bezieht sich auf den Eintrag in der **ChassisTypes-Eigenschaft,** die sich am gleichen Index befindet.
 
  
 
@@ -1136,27 +1136,27 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
 Gibt die Version des physischen Elements an.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
-**Visiblealarm**
+**VisibleAlarm**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass die Ausrüstung einen sichtbaren Alarm enthält.
+True **gibt an,** dass die Ausrüstung einen sichtbaren Alarm enthält.
 
-Diese Eigenschaft wird von [**CIM \_ physicalframe**](cim-physicalframe.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalFrame geerbt.**](cim-physicalframe.md)
 
 </dd> <dt>
 
@@ -1172,9 +1172,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Pfund")
 </dt> </dl>
 
-Gewichtung des physischen Pakets in Pfund.
+Gewichtung des physischen Pakets in Kilos.
 
-Diese Eigenschaft wird von [**CIM \_ physicalpackage**](cim-physicalpackage.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage geerbt.**](cim-physicalpackage.md)
 
 </dd> <dt>
 
@@ -1192,17 +1192,17 @@ Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Zo
 
 Breite des physischen Pakets in Zoll.
 
-Diese Eigenschaft wird von [**CIM \_ physicalpackage**](cim-physicalpackage.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalPackage geerbt.**](cim-physicalpackage.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM- \_ Chassis** -Klasse wird von [**CIM \_ physicalframe**](cim-physicalframe.md)abgeleitet.
+Die **\_ CIM-Chassis-Klasse** wird von [**CIM \_ PhysicalFrame abgeleitet.**](cim-physicalframe.md)
 
-Diese Klasse wird von WMI nicht implementiert. Weitere Informationen zu Klassen, die vom **CIM- \_ Chassis** abgeleitet sind, finden Sie unter [Win32-Klassen](win32-provider.md).
+WMI implementiert diese Klasse nicht. Weitere Informationen zu Klassen, die von **\_ CIM-Gehäusen abgeleitet werden,** finden Sie unter [Win32-Klassen](win32-provider.md).
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -1212,17 +1212,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ physicalframe**](cim-physicalframe.md)
+[**CIM \_ PhysicalFrame**](cim-physicalframe.md)
 </dt> </dl>
 
  

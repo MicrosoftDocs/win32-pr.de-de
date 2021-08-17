@@ -4,12 +4,12 @@ ms.assetid: F37C3596-E273-4144-87B9-D589EBB82C0B
 title: TLS-Verschlüsselungssammlungen in Windows 8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a204fabb91ddafc6b4d55c10b58503b4b81ca45
-ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
+ms.openlocfilehash: d2761098142d82f37c3bb22dd038bb2dc158155c12db8ca5ad31887f2f4724a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112262352"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117785990"
 ---
 # <a name="tls-cipher-suites-in-windows-8"></a>TLS-Verschlüsselungssammlungen in Windows 8
 
@@ -27,7 +27,7 @@ Die Verfügbarkeit von Verschlüsselungssammlungen sollte auf zwei Arten gesteue
 
 Die FIPS-Konformität wurde komplexer, da die Spalte mit aktivierten FIPS-Modus in früheren Versionen dieser Tabelle durch das Hinzufügen von elliptischen Kurven irreführend wurde. Beispielsweise ist eine Verschlüsselungssammlung wie TLS \_ ECDHE \_ RSA \_ WITH \_ AES \_ 128 \_ CBC \_ SHA256 nur FIPS-konform, wenn NIST-Elliptic Curves verwendet werden. Informationen dazu, welche Kombinationen aus elliptischen Kurven und Verschlüsselungssammlungen im FIPS-Modus aktiviert werden, finden Sie im Abschnitt 3.3.1 der [Richtlinien für die Auswahl, Konfiguration und Verwendung von TLS-Implementierungen.]( https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf)
 
-Windows 7, Windows 8 und Windows Server 2012 werden vom Windows Update durch das Update 3042058 aktualisiert, das die Prioritätsreihenfolge ändert. Weitere Informationen finden Sie in der [Microsoft-Sicherheitsempfehlung 3042058.](/security-updates/SecurityAdvisories/2015/3042058) Die folgenden Verschlüsselungssammlungen werden vom Microsoft Schannel-Anbieter standardmäßig in dieser Prioritätsreihenfolge aktiviert:
+Windows 7, Windows 8 und Windows Server 2012 werden vom Windows Update durch die 3042058 aktualisiert, wodurch die Prioritätsreihenfolge geändert wird. Weitere Informationen finden Sie [unter Microsoft-Sicherheitsempfehlung 3042058.](/security-updates/SecurityAdvisories/2015/3042058) Die folgenden Verschlüsselungssammlungen werden vom Microsoft Schannel-Anbieter standardmäßig in dieser Prioritätsreihenfolge aktiviert:
 
 
 
@@ -106,7 +106,7 @@ Die folgenden Verschlüsselungssammlungen werden vom Microsoft Schannel-Anbieter
 
  
 
-Verwenden Sie zum Hinzufügen von Verschlüsselungssammlungen die Gruppenrichtlinieneinstellung SSL Cipher Suite Order unter Computer configuration > Administrative Vorlagen > Network > SSL Configuration Settings (Computerkonfiguration > SSL-Konfigurationseinstellungen), um eine Prioritätsliste für alle Verschlüsselungssammlungen zu konfigurieren, die Sie aktivieren möchten.
+Um Verschlüsselungssammlungen hinzuzufügen, verwenden Sie die Gruppenrichtlinieneinstellung SSL Cipher Suite Order unter Computerkonfiguration > Administrative Vorlagen > Network > SSL Configuration Einstellungen , um eine Prioritätsliste für alle Verschlüsselungssammlungen zu konfigurieren, die Sie aktivieren möchten.
 
  
 

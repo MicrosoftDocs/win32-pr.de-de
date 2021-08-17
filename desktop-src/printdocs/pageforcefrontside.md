@@ -1,25 +1,25 @@
 ---
-description: Erfahren Sie mehr über das benutzerkonfigurierbare PageForceFrontSide-Element. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über das vom Benutzer konfigurierbare PageForceFrontSide-Element. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: 0658c808-f050-41f3-90b6-2a013b616b58
 title: PageForceFrontSide
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 79f22e9ec52b7cee72e8f3a479d161e9abb765c4
-ms.sourcegitcommit: 998d50f6def8a25850fc113fc8a2df903c829c5e
+ms.openlocfilehash: 53d05aeab9ae3e9e28ab981b5525ec0214ae6093e688cce66c9c0e68f7a1cc45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113549188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117868195"
 ---
 # <a name="pageforcefrontside"></a>PageForceFrontSide
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Erzwingt, dass die Ausgabe an der Vorderseite eines Medienblatts angezeigt wird. Relevant für Medienblätter mit unterschiedlichen Oberflächen auf jeder Seite. In Fällen, in denen dieses Feature Verarbeitungsoptionen (z. B. DocumentDuplex) beeinträchtigt, hat PageForceFrontSide Vorrang für die spezifische Seite, auf die das Feature angewendet wird.
+Erzwingt, dass die Ausgabe auf der Vorderseite eines Medienblatts angezeigt wird. Relevant für Medienblätter mit unterschiedlichen Oberflächen auf jeder Seite. In Fällen, in denen dieses Feature die Verarbeitungsoptionen beeinträchtigt (z. B. DocumentDuplex), hat PageForceFrontSide Vorrang vor der spezifischen Seite, auf die das Feature angewendet wird.
 
 -   [Elementinformationen](#element-information)
--   [Strukturelle Inhalte](#structural-content)
--   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
+-   [Strukturell](#structural-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -27,7 +27,7 @@ Erzwingt, dass die Ausgabe an der Vorderseite eines Medienblatts angezeigt wird.
 
 | Name | Wert |
 |----------------------------|--------------------|
-| Elementtyp <br/>   | Funktion<br/> |
+| Elementtyp <br/>   | Komponente<br/> |
 | Bereichspräfix <br/> | Seite<br/>    |
 | Hinweise <br/>          | Keine<br/>    |
 
@@ -35,9 +35,9 @@ Erzwingt, dass die Ausgabe an der Vorderseite eines Medienblatts angezeigt wird.
 
  
 
-## <a name="structural-content"></a>Strukturelle Inhalte
+## <a name="structural-content"></a>Strukturell
 
-Die XML-Struktur dieses Elements ist:
+Die XML-Struktur dieses Elements lautet:
 
 ``` syntax
 <psf:Feature name="psk:PageForceFrontSide">
@@ -55,22 +55,22 @@ Die XML-Struktur dieses Elements ist:
 
 ## <a name="structure-variables"></a>Strukturvariablen
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
 | Name                               | Datentyp         | Einheit                  | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                      |
 |------------------------------------|-------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| \_Optionname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierter Name, wie durch [Namespaces in XML definiert.](https://www.w3.org/TR/1999/REC-xml-names-19990114/) Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                           |
-| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/> | n/v<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/> |
+| \_Optionname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                           |
+| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/> | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/> |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML) Content
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
-Die Schlüsselwörter des öffentlichen Druckschemas werden im -Namespace https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords definiert. Der öffentliche Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
+Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
 ``` syntax
 <psf:Feature name="psk:PageForceFrontSide">

@@ -1,30 +1,30 @@
 ---
-description: Erläutert, wie SChannel-Anmelde Informationen manuell überprüft werden.
+description: Erläutert, wie Schannel-Anmeldeinformationen manuell überprüft werden.
 ms.assetid: 0229486a-5812-4a7e-98ad-446292997ee3
-title: Manuelles Überprüfen von SChannel-Anmelde Informationen
+title: Manuelles Überprüfen von Schannel-Anmeldeinformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 20ec87b662cf9d3711c1ae729d2dd3b14ac5f79e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d71ddff50ab674825d8effd1a08477116ee0c654d031e7f353a30c95e4f1249f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363634"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117787002"
 ---
-# <a name="manually-validating-schannel-credentials"></a>Manuelles Überprüfen von SChannel-Anmelde Informationen
+# <a name="manually-validating-schannel-credentials"></a>Manuelles Überprüfen von Schannel-Anmeldeinformationen
 
-Standardmäßig überprüft SChannel das [*Serverzertifikat*](../secgloss/s-gly.md) durch Aufrufen der [**WinVerifyTrust**](/windows/win32/api/wintrust/nf-wintrust-winverifytrust) -Funktion. Wenn Sie diese Funktion jedoch mit dem Flag für die manuelle Initialisierung von "ISC req" deaktiviert haben \_ \_ \_ \_ , müssen Sie das Zertifikat überprüfen, das von dem Server bereitgestellt wird, der versucht, seine Identität zu ermitteln.
+Standardmäßig überprüft Schannel das [*Serverzertifikat,*](../secgloss/s-gly.md) indem die [**WinVerifyTrust-Funktion**](/windows/win32/api/wintrust/nf-wintrust-winverifytrust) aufgerufen wird. Wenn Sie dieses Feature jedoch mithilfe des ISC \_ REQ \_ MANUAL \_ CRED \_ VALIDATION-Flags deaktiviert haben, müssen Sie das vom Server bereitgestellte Zertifikat überprüfen, der versucht, seine Identität herzustellen.
 
-Wenn Sie das Serverzertifikat manuell überprüfen möchten, müssen Sie es zuerst erhalten. Verwenden Sie die Funktion [**QueryContextAttributes (allgemein)**](/windows/win32/api/sspi/nf-sspi-querycontextattributesa) , und geben Sie den Wert des Attributs "secpkg \_ attr \_ Remote \_ CERT Context" an \_ . Dieses Attribut gibt eine [**CERT- \_ Kontext**](/windows/win32/api/wincrypt/ns-wincrypt-cert_context) Struktur zurück, die das vom Server bereitgestellte Zertifikat enthält. Dieses Zertifikat wird als Blatt Zertifikat bezeichnet, da es das letzte Zertifikat in der Zertifikat Kette ist und vom Stamm [*Zertifikat*](../secgloss/r-gly.md)entfernt ist.
+Um das Serverzertifikat manuell zu überprüfen, müssen Sie es zuerst abrufen. Verwenden Sie die [**QueryContextAttributes (General)-Funktion,**](/windows/win32/api/sspi/nf-sspi-querycontextattributesa) und geben Sie den SECPKG \_ ATTR \_ REMOTE \_ CERT \_ CONTEXT-Attributwert an. Dieses Attribut gibt eine [**CERT \_ CONTEXT-Struktur**](/windows/win32/api/wincrypt/ns-wincrypt-cert_context) zurück, die das vom Server bereitgestellte Zertifikat enthält. Dieses Zertifikat wird als Blattzertifikat bezeichnet, da es das letzte Zertifikat in der Zertifikatkette ist und am weitesten vom [*Stammzertifikat*](../secgloss/r-gly.md)entfernt ist.
 
-Mithilfe des Blatt Zertifikats müssen Sie Folgendes überprüfen:
+Mithilfe des Blattzertifikats müssen Sie Folgendes überprüfen:
 
--   Die Zertifikatskette ist fertiggestellt, und der Stamm ist ein Zertifikat von einer vertrauenswürdigen Zertifizierungsstelle ( [*Certification Authority*](../secgloss/c-gly.md) , ca).
--   Die aktuelle Zeit liegt nicht außerhalb des Anfangs-und Enddatums für jedes der Zertifikate in der Zertifikatskette.
--   Keines der Zertifikate in der Zertifikat Kette wurde widerrufen.
--   Die Tiefe des Blatt Zertifikats ist nicht tiefer als die maximale zulässige Tiefe, die in der Zertifikat Erweiterung angegeben ist. Diese Überprüfung ist nur erforderlich, wenn eine Tiefe angegeben ist.
--   Die Verwendung des Zertifikats ist korrekt, z. b., wenn ein [*Client Zertifikat*](../secgloss/c-gly.md) nicht zum Authentifizieren eines Servers verwendet werden soll.
--   Bei der Server Authentifizierung entspricht die Server Identität, die im Blatt Zertifikat des Servers enthalten ist, dem Server, mit dem der Client eine Verbindung herzustellen versucht. In der Regel wird der Client ein Element im Feld "Antragsteller Name" des Zertifikats mit der IP-Adresse oder dem DNS-Namen des Servers vergleichen.
+-   Die Zertifikatkette ist vollständig, und der Stamm ist ein Zertifikat einer vertrauenswürdigen [*Zertifizierungsstelle.*](../secgloss/c-gly.md)
+-   Die aktuelle Zeit liegt nicht über dem Anfangs- und Enddatum für jedes Zertifikat in der Zertifikatkette hinaus.
+-   Keines der Zertifikate in der Zertifikatkette wurde widerrufen.
+-   Die Tiefe des Blattzertifikats liegt nicht tiefer als die maximal zulässige Tiefe, die in der Zertifikaterweiterung angegeben ist. Diese Überprüfung ist nur erforderlich, wenn eine Tiefe angegeben ist.
+-   Die Verwendung des Zertifikats ist richtig. Ein [*Clientzertifikat*](../secgloss/c-gly.md) sollte beispielsweise nicht zum Authentifizieren eines Servers verwendet werden.
+-   Bei der Serverauthentifizierung stimmt die im Blattzertifikat des Servers enthaltene Serveridentität mit dem Server überein, den der Client zu kontaktieren versucht. In der Regel stimmt der Client ein Element im Feld Antragstellername des Zertifikats mit der IP-Adresse oder dem DNS-Namen des Servers überein.
 
  
 

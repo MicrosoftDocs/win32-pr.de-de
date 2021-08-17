@@ -1,7 +1,7 @@
 ---
-description: Die getiportabledevicekeycollectionvalue-Methode ruft einen iportabledevicekeycollection-Wert (Typ VT unknown) ab, der \_ durch einen Schlüssel angegeben wird.
+description: Die GetIPortableDeviceKeyCollectionValue-Methode ruft einen IPortableDeviceKeyCollection-Wert (Typ VT UNKNOWN) ab, der durch \_ einen Schlüssel angegeben wird.
 ms.assetid: 131c8e05-9224-4db4-bdf6-0fd9c563e049
-title: 'Iportabledevicevalues:: getiportabledevicekeycollectionvalue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::GetIPortableDeviceKeyCollectionValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 7868b71790f6dbb7525fcd1be49b197042a196f1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 13a7ccde6a7cf5a73c78cc382341f7d750d9032cbfd8d69bdcfd3e318eeccece
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118194101"
 ---
-# <a name="iportabledevicevaluesgetiportabledevicekeycollectionvalue-method"></a>Iportabledevicevalues:: getiportabledevicekeycollectionvalue-Methode
+# <a name="iportabledevicevaluesgetiportabledevicekeycollectionvalue-method"></a>IPortableDeviceValues::GetIPortableDeviceKeyCollectionValue-Methode
 
-Die **getiportabledevicekeycollectionvalue** -Methode ruft einen **iportabledevicekeycollection** -Wert (Typ VT unknown) ab, der \_ durch einen Schlüssel angegeben wird.
+Die **GetIPortableDeviceKeyCollectionValue-Methode** ruft einen **IPortableDeviceKeyCollection-Wert** (Typ VT UNKNOWN) ab, der durch \_ einen Schlüssel angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,31 +41,31 @@ HRESULT GetIPortableDeviceKeyCollectionValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** -Schlüssel, der das abzurufende Element angibt.
+Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.
 
 </dd> <dt>
 
-*ppValue* \[ vorgenommen\]
+*ppValue* \[ out\]
 </dt> <dd>
 
-Zeiger auf den abgerufenen [**iportabledevicekeycollection**](iportabledevicekeycollection.md) -Schnittstellen Zeiger. Der Aufrufer ist für das Aufrufen von **Release** an der abgerufenen Schnittstelle verantwortlich.
+Zeiger auf den abgerufenen [**IPortableDeviceKeyCollection-Schnittstellenzeiger.**](iportabledevicekeycollection.md) Der Aufrufer ist für den Aufruf von **Release auf** der abgerufenen Schnittstelle verantwortlich.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                            | Beschreibung                                                                                      |
 |------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                   | Die Methode wurde erfolgreich ausgeführt.<br/>                                                                 |
-| <dl> <dt>**DISP \_ E \_ typemismatch**</dt> </dl>                   | Die von *Key* angegebene Eigenschaft ist keine **iportabledevicekeycollection** -Schnittstelle.<br/> |
-| <dl> <dt>**HRESULT \_ von \_ Win32 (Fehler \_ nicht \_ gefunden)**</dt> </dl> | Die von *Key* angegebene Eigenschaft ist nicht in der Auflistung.<br/>                             |
+| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>                   | Die durch key angegebene *Eigenschaft* ist keine **IPortableDeviceKeyCollection-Schnittstelle.**<br/> |
+| <dl> <dt>**HRESULT \_ FROM \_ WIN32(ERROR \_ NOT \_ FOUND)**</dt> </dl> | Die durch key angegebene *Eigenschaft* ist nicht in der Auflistung.<br/>                             |
 
 
 
@@ -73,7 +73,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung dieser Methode finden Sie [unter Abrufen unterstützter Dienst Ereignisse](retrieving-supported-events.md).
+Ein Beispiel für die Verwendung dieser Methode finden Sie unter [Abrufen von unterstützten Dienstereignissen.](retrieving-supported-events.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,25 +81,25 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie [unter Abrufen unters
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportableendvicevalues:: Server Type Report abledevicekeycollectionvalue**](iportabledevicevalues-setiportabledevicekeycollectionvalue.md)
+[**IPortableDeviceValues::SetIPortableDeviceKeyCollectionValue**](iportabledevicevalues-setiportabledevicekeycollectionvalue.md)
 </dt> <dt>
 
-[Abrufen unterstützter Dienst Ereignisse](retrieving-supported-events.md)
+[Abrufen unterstützter Dienstereignisse](retrieving-supported-events.md)
 </dt> <dt>
 
-[Abrufen unterstützter Dienst Methoden](retrieving-supported-methods.md)
+[Abrufen unterstützter Dienstmethoden](retrieving-supported-methods.md)
 </dt> </dl>
 
  

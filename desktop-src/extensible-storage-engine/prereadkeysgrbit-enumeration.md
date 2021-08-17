@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der prereadkeysgrbit-Enumeration.
-title: Prereadkeysgrbit-Enumeration (Microsoft. ISAM. ESENT. Interop. Windows7)
+description: Weitere Informationen finden Sie unter PrereadKeysGrbit-Enumeration.
+title: PrereadKeysGrbit-Enumeration (Microsoft.Isam.Esent.Interop.Windows7)
 TOCTitle: PrereadKeysGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Windows7.PrereadKeysGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows7.prereadkeysgrbit(v=EXCHG.10)
@@ -28,21 +28,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: dadd7622206fe29197aa56d5629b5a9e2931e162
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 35b88c1b6fab760782d7233b736f469565b9f7420bffdf097bed4d30554a447c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117703075"
 ---
-# <a name="prereadkeysgrbit-enumeration"></a>Prereadkeysgrbit-Enumeration
+# <a name="prereadkeysgrbit-enumeration"></a>PrereadKeysGrbit-Enumeration
 
-Optionen für jetprereadkeys.
+Optionen für JetPrereadKeys.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows7](./microsoft.isam.esent.interop.windows7-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows7](./microsoft.isam.esent.interop.windows7-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -73,19 +73,19 @@ public enum PrereadKeysGrbit
 <tr class="odd">
 <td></td>
 <td>Weiter</td>
-<td>Preread Forward.</td>
+<td>Vorlesen.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Rückwärts</td>
-<td>Preread rückwärts.</td>
+<td>Vorlesen zurück.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop. Windows7-Namespace](./microsoft.isam.esent.interop.windows7-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows7-Namespace](./microsoft.isam.esent.interop.windows7-namespace.md)

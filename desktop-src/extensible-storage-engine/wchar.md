@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: WCHAR'
+description: 'Weitere Informationen zu: WCHAR'
 title: WCHAR
 TOCTitle: WCHAR
 ms:assetid: 922431b3-bf9a-4aba-bc67-dd33d9aeaac0
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1dfa86cbc771059d941027385090dcbd2f401855
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d35dd161816253b13b09c2f2f12e9aaa6d701d197546ee3e76cbf4b687236ae7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345095"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117701144"
 ---
 # <a name="wchar"></a>WCHAR
 
@@ -63,7 +63,7 @@ Ein 16-Bit-Unicode-Zeichen.
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 </tbody>
 </table>

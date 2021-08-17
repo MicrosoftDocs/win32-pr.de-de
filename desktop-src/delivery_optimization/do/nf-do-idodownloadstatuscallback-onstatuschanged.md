@@ -1,8 +1,8 @@
 ---
-title: 'Idodownloadstatus Callback:: OnStatusChange-Methode'
-description: Ruft die Implementierung dieser Methode immer dann auf, wenn sich ein Download Status geändert hat.
+title: IDODownloadStatusCallback::OnStatusChange-Methode
+description: DO ruft Ihre Implementierung dieser Methode jedes Mal auf, wenn sich ein Downloadstatus geändert hat.
 keywords:
-- 'Idodownloadstatus Callback:: OnStatusChange-Methode'
+- IDODownloadStatusCallback::OnStatusChange-Methode
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 07/03/2019
-ms.openlocfilehash: 9abf13969a6183f98102792b9bcf7a3329ca243d
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: 0395b6bc64ad3abe102a0a4f0dc7afd8e8d59f336949a3b97eaf683a4f4900cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "104038394"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117736217"
 ---
-# <a name="idodownloadstatuscallbackonstatuschange-method"></a>Idodownloadstatus Callback:: OnStatusChange-Methode
+# <a name="idodownloadstatuscallbackonstatuschange-method"></a>IDODownloadStatusCallback::OnStatusChange-Methode
 
-Ruft die Implementierung dieser Methode immer dann auf, wenn sich ein Download Status geändert hat.
+DO ruft Ihre Implementierung dieser Methode jedes Mal auf, wenn sich ein Downloadstatus geändert hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,20 +38,20 @@ HRESULT OnStatusChange(
 
 `download`
 
-Ein Zeiger auf die **idodownload** -Schnittstelle, deren Status geändert wurde.
+Ein Zeiger auf die **IDODownload-Schnittstelle,** deren Status sich geändert hat.
 
 `status`
 
-Ein Zeiger auf eine **DO_DOWNLOAD_STATUS** Struktur, die den Download Status enthält.
+Ein Zeiger auf eine **DO_DOWNLOAD_STATUS** Struktur, die den Downloadstatus enthält.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein [**HRESULT**](/windows/desktop/com/structure-of-com-error-codes) - [Fehlercode](/windows/desktop/com/com-error-codes-10)zurückgegeben.
+Wenn die Funktion erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein [**HRESULT-Fehlercode**](/windows/desktop/com/structure-of-com-error-codes) [](/windows/desktop/com/com-error-codes-10)zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Unterstützte Mindestversion (Client)** | Nur Windows 10, Version 1809, \[ Win32-Anwendungen\] |
-| **Unterstützte Mindestversion (Server)** | Nur Windows Server, Version 1809, \[ Win32-Anwendungen\] |
-| **Header** | Do. h |
+| **Unterstützte Mindestversion (Client)** | \[Windows 10, Version 1809 Nur Win32-Anwendungen\] |
+| **Unterstützte Mindestversion (Server)** | Windows Server, nur Win32-Anwendungen der Version 1809 \[\] |
+| **Header** | Do.h |

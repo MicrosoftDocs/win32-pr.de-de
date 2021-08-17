@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 78f25ea90f8eb37c829cdc86e89f6d7e8cad2312
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 445ea8626d7ecc6c1c72cd13eebfc9811ae229b772787eae2625224d830bc25e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110549255"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117721078"
 ---
-# <a name="cdn_includeitem-notification-code"></a>CDN \_ INCLUDEITEM-Benachrichtigungscode
+# <a name="cdn_includeitem-notification-code"></a>\_CDN INCLUDEITEM-Benachrichtigungscode
 
-\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
+\[Ab Windows Vista wurden **die** allgemeinen  Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
 
-Wird über das **Dialogfeld Öffnen** oder Speichern **unter** gesendet, um zu bestimmen, ob im Dialogfeld ein Element in der Elementliste eines Shellordners angezeigt werden soll. Wenn der Benutzer einen Ordner öffnet, sendet das Dialogfeld eine **CDN \_ INCLUDEITEM-Benachrichtigung** für jedes Element im Ordner. Das Dialogfeld sendet diese Benachrichtigung nur, wenn das **OFN \_ ENABLEINCLUDENOTIFY-Flag** beim Erstellen des Dialogfelds festgelegt wurde.
+Wird über das **Dialogfeld Öffnen** oder Speichern **unter** gesendet, um zu bestimmen, ob im Dialogfeld ein Element in der Elementliste eines Shellordners angezeigt werden soll. Wenn der Benutzer einen Ordner öffnet, sendet das Dialogfeld eine CDN **\_ INCLUDEITEM-Benachrichtigung** für jedes Element im Ordner. Das Dialogfeld sendet diese Benachrichtigung nur, wenn das **OFN \_ ENABLEINCLUDENOTIFY-Flag** beim Erstellen des Dialogfelds festgelegt wurde.
 
 Ihre [*OFNHookProc-Hookprozedur*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc) empfängt diese Nachricht in Form einer [**WM \_ NOTIFY-Nachricht.**](../controls/wm-notify.md)
 
@@ -53,7 +53,7 @@ Dieser Parameter wird nicht verwendet.
 
 Ein Zeiger auf eine [**OFNOTIFYEX-Struktur.**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifyexa)
 
-Die [**OFNOTIFYEX-Struktur**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifyexa) enthält eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) deren **Code** member die **CDN \_ INCLUDEITEM-Benachrichtigungsmeldung** angibt.
+Die [**OFNOTIFYEX-Struktur**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifyexa) enthält eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) deren Code member die CDN **\_ INCLUDEITEM-Benachrichtigungsmeldung** angibt. 
 
 Der **psf-Member** der [**OFNOTIFYEX-Struktur**](/windows/desktop/api/Commdlg/ns-commdlg-ofnotifyexa) ist ein Zeiger auf eine Schnittstelle für den Ordner, dessen Elemente aufzählt werden. Das **pidl-Element** ist ein Zeiger auf eine Elementbezeichnerliste, die das Element relativ zum Ordner identifiziert.
 
@@ -61,13 +61,13 @@ Der **psf-Member** der [**OFNOTIFYEX-Struktur**](/windows/desktop/api/Commdlg/ns
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die [*HOOKprozedur OFNHookProc*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc) null zurückgibt, schließt das Dialogfeld das Element aus der Liste der Elemente aus.
+Wenn die [*OFNHookProc-Hookprozedur*](/windows/win32/api/commdlg/nc-commdlg-lpofnhookproc) 0 (null) zurückgibt, schließt das Dialogfeld das Element aus der Liste der Elemente aus.
 
 Um das Element ein include zu erhalten, geben Sie einen Wert ungleich 0 (null) aus der Hookprozedur zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Das Dialogfeld enthält immer Elemente mit den Attributen **SFGAO \_ FILESYSTEM** und **SFGAO \_ FILESYSANCESTOR,** unabhängig vom wert, der von **CDN \_ INCLUDEITEM zurückgegeben wird.**
+Das Dialogfeld enthält immer Elemente, die sowohl über die **ATTRIBUTE SFGAO \_ FILESYSTEM** als auch **SFGAO \_ FILESYSANCESTOR** verfügen, unabhängig vom Wert, der von CDN **\_ INCLUDEITEM zurückgegeben wird.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,11 +77,11 @@ Das Dialogfeld enthält immer Elemente mit den Attributen **SFGAO \_ FILESYSTEM*
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Commdlg.h (einschließlich Windows.h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

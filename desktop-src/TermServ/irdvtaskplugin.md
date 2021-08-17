@@ -1,11 +1,11 @@
 ---
-title: Undvtaskplugin-Schnittstelle
-description: Die Schnittstelle "iridvtaskplugin" wird von einem Task-Agent für virtuelle Computer Updates implementiert, damit der Task-Agent Systemupdates für einen virtuellen Computer verwalten kann.
+title: IRDVTaskPlugin-Schnittstelle
+description: Die IRDVTaskPlugin-Schnittstelle wird von einem Task-Agent für die Aktualisierung virtueller Computer implementiert, damit der Task-Agent Systemupdates für einen virtuellen Computer verwalten kann.
 ms.assetid: e06eb707-be78-4d1f-96d3-21526b167e61
 ms.tgt_platform: multiple
 keywords:
-- Undvtaskplugin-Schnittstelle Remotedesktopdienste
-- Undvtaskplugin-Schnittstelle Remotedesktopdienste, beschrieben
+- IRDVTaskPlugin-Remotedesktopdienste
+- IRDVTaskPlugin-Schnittstelle Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,34 +15,34 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 59e90e899e8084f7fbc6b0b6f11067061eaa807b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fe76f0b0b92286d5a4b7db5126706fd55bdb6f580c11fda1dcaa55a47be4678c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118129169"
 ---
-# <a name="irdvtaskplugin-interface"></a>Undvtaskplugin-Schnittstelle
+# <a name="irdvtaskplugin-interface"></a>IRDVTaskPlugin-Schnittstelle
 
-Die Schnittstelle " **iridvtaskplugin** " wird von einem *Task-Agent* für virtuelle Computer Updates implementiert, damit der Task-Agent Systemupdates für einen virtuellen Computer verwalten kann. Diese Schnittstelle wird vom- *Agent* verwendet, der vom Host System implementiert wird.
+Die **IRDVTaskPlugin-Schnittstelle** wird von  einem Task-Agent für die Aktualisierung virtueller Computer implementiert, damit der Task-Agent Systemupdates für einen virtuellen Computer verwalten kann. Diese Schnittstelle wird vom *Trigger-Agent verwendet,* der vom Hostsystem implementiert wird.
 
 ## <a name="members"></a>Member
 
-Die Schnittstelle " **iridvtaskplugin** " erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. " **Iridvtaskplugin** " verfügt auch über die folgenden Typen von Membern:
+Die **IRDVTaskPlugin-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IRDVTaskPlugin** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Schnittstelle " **iridvtaskplugin** " verfügt über diese Methoden.
+Die **IRDVTaskPlugin-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                          | BESCHREIBUNG                                                        |
+| Methode                                          | Beschreibung                                                        |
 |:------------------------------------------------|:-------------------------------------------------------------------|
 | [**Initialisieren**](irdvtaskplugin-initialize.md) | Wird aufgerufen, um den Task-Agent zu initialisieren.<br/>                    |
-| [**StartTask**](irdvtaskplugin-starttask.md)   | Wird aufgerufen, um den Aktualisierungs Task auf dem virtuellen Computer zu starten.<br/> |
+| [**StartTask**](irdvtaskplugin-starttask.md)   | Wird aufgerufen, um die Updateaufgabe auf dem virtuellen Computer zu starten.<br/> |
 | [**Terminate**](irdvtaskplugin-terminate.md)   | Wird aufgerufen, wenn der Task-Agent heruntergefahren wird.<br/>          |
 
 
@@ -51,33 +51,33 @@ Die Schnittstelle " **iridvtaskplugin** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Schnittstelle " **iridvtaskplugin** " verfügt über diese Eigenschaften.
+Die **IRDVTaskPlugin-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                   | Zugriffstyp          | BESCHREIBUNG                                             |
+| Eigenschaft                                                   | Zugriffstyp          | Beschreibung                                             |
 |:-----------------------------------------------------------|:---------------------|:--------------------------------------------------------|
-| [**PluginName**](irdvtaskplugin-pluginname.md)<br/> | Schreibgeschützt<br/> | Enthält den anzeigen amen des Task-Agents.<br/> |
+| [**PluginName**](irdvtaskplugin-pluginname.md)<br/> | Schreibgeschützt<br/> | Enthält den Anzeigenamen des Task-Agents.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Task-Agent wird auf dem virtuellen Computer ausgeführt, wenn der virtuelle Computer für ein System Update geplant ist. Der Task-Agent aktualisiert die virtuelle Maschine, wenn die [**Starttask**](irdvtaskplugin-starttask.md) -Methode aufgerufen wird.
+Der Task-Agent wird auf dem virtuellen Computer ausgeführt, wenn für diesen virtuellen Computer ein Systemupdate geplant ist. Der Task-Agent aktualisiert den virtuellen Computer, wenn die [**StartTask-Methode**](irdvtaskplugin-starttask.md) aufgerufen wird.
 
-Fügen Sie der Registrierung des virtuellen Computers den folgenden Schlüssel hinzu, um den Task-Agent zu registrieren:
+Um den Task-Agent zu registrieren, fügen Sie der Registrierung des virtuellen Computers den folgenden Schlüssel hinzu:
 
-**HKEY \_ Lokale \_ Computer** \\ **Software** \\ **Microsoft** \\ **Windows NT** \\ **CurrentVersion** \\ **Terminal Server** \\ **Task** \\ **Plugins** \\ **taskagentname**
+**HKEY \_ LOCAL \_ MACHINE** \\ **Software** \\ **Microsoft** \\ **Windows NT** \\ **CurrentVersion** Terminal \\ **Server** Task \\  \\ **Plugins** \\ **TaskAgentName**
 
 Fügen Sie unter diesem Registrierungsschlüssel die folgenden Werte hinzu:
 
 
 
-| Name                     | type                      | BESCHREIBUNG                                                                   |
+| Name                     | type                      | Beschreibung                                                                   |
 |--------------------------|---------------------------|-------------------------------------------------------------------------------|
-| **CLSID**<br/>     | **REG- \_ SZ**<br/>    | Eine Zeichenfolge, die die **CLSID** des Task-Agents darstellt.<br/>          |
+| **Clsid**<br/>     | **REG \_ SZ**<br/>    | Eine Zeichenfolge, die die **CLSID** des Task-Agents darstellt.<br/>          |
 | **IsEnabled**<br/> | **REG \_ DWORD**<br/> | 0, wenn der Task-Agent deaktiviert ist, oder 1, wenn der Task-Agent aktiviert ist.<br/> |
 
 
@@ -85,11 +85,11 @@ Fügen Sie unter diesem Registrierungsschlüssel die folgenden Werte hinzu:
  
 
 > [!Note]  
-> Es können mehr als ein Task-Agent registriert werden, es wird jedoch nur ein Task-Agent verwendet. Wenn mehr als ein Task-Agent aktiviert ist, wird nur der erste gefundene verwendet.
+> Es können mehrere Task-Agents registriert werden, es wird jedoch nur ein Task-Agent verwendet. Wenn mehr als ein Task-Agent aktiviert ist, wird nur der erste gefundene verwendet.
 
  
 
-Diese Schnittstelle wird zwar von den in den folgenden Anforderungen identifizierten Betriebssystemen unterstützt, Sie wird jedoch nur verwendet, wenn der virtuelle Computer unter Windows Server 2012 gehostet wird.
+Obwohl diese Schnittstelle unter den in den folgenden Anforderungen angegebenen Betriebssystemen unterstützt wird, wird sie nur verwendet, wenn der virtuelle Computer auf der Windows Server 2012.
 
 ## <a name="requirements"></a>Anforderungen
 

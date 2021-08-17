@@ -4,12 +4,12 @@ ms.assetid: 95c3b1ae-0e77-4ca2-ab73-a0e97ab115b5
 title: InkOverlay.MouseDown-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ff1e4bff715a6585ee607de766c809579f527aa
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d0b0d605dd36f4cae410de2514542aa15818d4604e4484352c68dac54b40b1d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108086818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118219266"
 ---
 # <a name="inkoverlaymousedown-event"></a>InkOverlay.MouseDown-Ereignis
 
@@ -65,7 +65,7 @@ Die Y-Koordinate eines Mausklicks in Pixel.
 *Abbrechen* \[ in, out\]
 </dt> <dd>
 
-**VARIANT \_ TRUE,** um das Ereignis für das übergeordnete Steuerelement abzubrechen; Andernfalls **VARIANT \_ FALSE**. Der Standardwert ist **VARIANT \_ FALSE.**
+**VARIANT \_ TRUE,** um das Ereignis für das übergeordnete Steuerelement abzubricht; andernfalls **VARIANT \_ FALSE**. Der Standardwert ist **VARIANT \_ FALSE.**
 
 </dd> </dl>
 
@@ -73,29 +73,29 @@ Die Y-Koordinate eines Mausklicks in Pixel.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die Leistung von Ink-Echtzeit zu verbessern, blenden Sie den Mauszeiger in den [**MouseDown-**](inkcollector-mousedown.md) und [**MouseUp-Ereignishandlern**](inkcollector-mouseup.md) aus oder ein.
+Um die Leistung von Ink in Echtzeit zu verbessern, blenden Sie den Mauszeiger in den [**MouseDown-**](inkcollector-mousedown.md) und [**MouseUp-Ereignishandlern**](inkcollector-mouseup.md) aus oder ein.
 
 > [!Note]  
-> Die Eigenschaften pX und pY sind in Pixel und nicht die HIMETRIC-Einheiten, die dem Freihandraum zugeordnet sind. Dies liegt daran, dass dieses Ereignis das zugehörige Mausereignis einer Anwendung ohne Stift ersetzt und diese Art von Anwendung nur Pixel versteht.
+> Die Eigenschaften pX und pY befinden sich in Pixeln und nicht in den HIMETRIC-Einheiten, die dem Freiraum zugeordnet sind. Dies liegt daran, dass dieses Ereignis das zugehörige Mausereignis einer Nicht-Stiftanwendung ersetzt und diese Art von Anwendung nur Pixel versteht.
 
  
 
 > [!Note]  
-> Einige Steuerelemente basieren auf einer bestimmten Beziehung zwischen [**MouseDown-,**](inkcollector-mousedown.md) [**MouseMove-**](inkcollector-mousemove.md)und [**MouseUp-Ereignissen.**](inkcollector-mouseup.md) Das Abbrechen einiger dieser Ereignisse kann unerwartete Ergebnisse haben.
+> Einige Steuerelemente basieren auf einer bestimmten Beziehung zwischen [**MouseDown-,**](inkcollector-mousedown.md) [**MouseMove-**](inkcollector-mousemove.md)und [**MouseUp-Ereignissen.**](inkcollector-mouseup.md) Das Abbrechen einiger dieser Ereignisse kann zu unerwarteten Ergebnissen führen.
 
  
 
-Diese Ereignismethode wird in den \_ \_ Dispatch-Only-Schnittstellen IInkCollectorEvents, IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ IPEMouseDown definiert.
+Diese Ereignismethode wird in den \_ Dispatch-Schnittstellen IInkCollectorEvents, \_ IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ IPEMouseDown definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps der Windows XP Tablet PC Edition \[\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
 | Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |

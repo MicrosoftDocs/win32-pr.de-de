@@ -1,39 +1,39 @@
 ---
 title: Zusammengesetzte Moniker
-description: Eines der nützlichsten Features von Monikern ist, dass Sie Moniker verketten oder zusammen verfassen können.
+description: Eines der nützlichsten Features von Monikern ist, dass Sie Moniker miteinander verketten oder zusammenstellen können.
 ms.assetid: ea2453f3-7a64-4ce0-87c2-de6224ca71df
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b5375bb505ff3737fb4e0cdea894790d93c0051
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3ad815cdb89dda7f58fe1507d43a07a14d24875309668297e20ec51114dd65d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103714274"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117737026"
 ---
 # <a name="composite-monikers"></a>Zusammengesetzte Moniker
 
-Eines der nützlichsten Features von Monikern ist, dass Sie Moniker verketten oder zusammen verfassen können. Ein zusammen *gesetzter Moniker* ist ein Moniker, bei dem es sich um eine Komposition von anderen Monikern handelt und die Beziehung zwischen den Teilen bestimmt werden kann. Auf diese Weise können Sie den vollständigen Pfad zu einem Objekt mit zwei oder mehr Monikern zusammenstellen, die den partiellen Pfaden entsprechen. Sie können Moniker der gleichen Klasse (z. b. zwei dateimoniker) oder verschiedener Klassen (z. b. ein dateimoniker und einen elementmoniker) verfassen. Wenn Sie Ihre eigene Monikerklasse schreiben möchten, können Sie auch Ihre Moniker mit Datei-oder elementmonikern verfassen. Der grundlegende Vorteil einer zusammengesetzten besteht darin, dass Sie einen Teil des Codes zum Implementieren aller möglichen Moniker bietet, bei denen es sich um eine Kombination aus einfacheren Monikern handelt. Dadurch wird die Notwendigkeit spezifischer benutzerdefinierter Monikerklassen erheblich reduziert.
+Eines der nützlichsten Features von Monikern ist, dass Sie Moniker miteinander verketten oder zusammenstellen können. Ein *zusammengesetzter Moniker* ist ein Moniker, der eine Zusammensetzung anderer Moniker ist und die Beziehung zwischen den Teilen bestimmen kann. Auf diese Weise können Sie den vollständigen Pfad zu einem Objekt zusammenstellen, wenn zwei oder mehr Moniker angegeben werden, die partiellen Pfaden entsprechen. Sie können Moniker derselben Klasse (z. B. zwei Dateimoniker) oder aus verschiedenen Klassen (z. B. einem Dateimoniker und einem Elementmoniker) zusammenstellen. Wenn Sie Ihre eigene Monikerklasse schreiben würden, könnten Sie ihre Moniker auch mit Datei- oder Elementmonikern zusammenstellen. Der grundlegende Vorteil eines zusammengesetzten -Codes ist, dass er Ihnen einen Codeteil bietet, um jeden möglichen Moniker zu implementieren, bei dem es sich um eine Kombination einfacher Moniker handelt. Dies reduziert die Notwendigkeit bestimmter benutzerdefinierter Monikerklassen erheblich.
 
-Da Moniker verschiedener Klassen miteinander zusammengesetzt werden können, bieten Moniker die Möglichkeit, mehreren Namespaces beizutreten. Das Dateisystem definiert einen gemeinsamen Namespace für Objekte, die als Dateien gespeichert sind, da alle Anwendungen den Pfadnamen eines Dateisystems verstehen. Ebenso definiert ein Container Objekt auch einen privaten Namespace für die darin enthaltenen Objekte, da kein Container die von einem anderen Container generierten Namen versteht. Moniker erlauben, dass diese Namespaces verknüpft werden, da dateimoniker und elementmoniker zusammengesetzt werden können. Ein monikerclient kann den Namespace nach allen Objekten durchsuchen, die einen einzigen Mechanismus verwenden. Der Client ruft einfach [**IMoniker:: bindjeobject**](/windows/desktop/api/ObjIdl/nf-objidl-imoniker-bindtoobject) für den Moniker auf, und der monikercode übernimmt den Rest. Ein [**IMoniker:: GetDisplayName**](/windows/desktop/api/ObjIdl/nf-objidl-imoniker-getdisplayname) -Rückruf für eine zusammengesetzte erstellt einen Namen mithilfe der Verkettung aller anzeigen amen der einzelnen Moniker.
+Da Moniker verschiedener Klassen miteinander zusammengesetzt werden können, bieten Moniker die Möglichkeit, mehrere Namespaces zu verbinden. Das Dateisystem definiert einen allgemeinen Namespace für Objekte, die als Dateien gespeichert sind, da alle Anwendungen einen Dateisystempfadnamen verstehen. Ebenso definiert ein Containerobjekt auch einen privaten Namespace für die objekte, die es enthält, da kein Container die von einem anderen Container generierten Namen versteht. Moniker ermöglichen das Hinzufügen dieser Namespaces, da Dateimoniker und Elementmoniker zusammengesetzt werden können. Ein Monikerclient kann den Namespace mit einem einzigen Mechanismus nach allen Objekten durchsuchen. Der Client ruft einfach [**IMoniker::BindToObject für**](/windows/desktop/api/ObjIdl/nf-objidl-imoniker-bindtoobject) den Moniker auf, und der Monikercode verarbeitet den Rest. Ein Aufruf von [**IMoniker::GetDisplayName**](/windows/desktop/api/ObjIdl/nf-objidl-imoniker-getdisplayname) für einen zusammengesetzten erstellt einen Namen unter Verwendung der Verkettung aller Anzeigenamen der einzelnen Moniker.
 
-Außerdem können Sie mit der monikerkomposition angepasste Erweiterungen zum Namespace für-Objekte hinzufügen, da Sie eine eigene Monikerklasse schreiben können.
+Da Sie außerdem Eine eigene Monikerklasse schreiben können, können Sie mit der Monikerkomposition benutzerdefinierte Erweiterungen zum Namespace für -Objekte hinzufügen.
 
-Manchmal können zwei Moniker bestimmter Klassen auf besondere Weise kombiniert werden. Ein dateimoniker, der einen unvollständigen Pfad darstellt, und ein anderer dateimoniker, der einen relativen Pfad darstellt, können kombiniert werden, um einen einzelnen dateimoniker zu bilden, der den vollständigen Pfad Beispielsweise könnten die dateimoniker "c: \\ work \\ Art" mit dem relativen dateimoniker ". \\ " zusammengesetzt werden. Backup \\myfile.doc "to equal" c: \\ work \\ Backup \\myfile.doc ". Dies ist ein Beispiel für eine *nicht generische Komposition*.
+Manchmal können zwei Moniker bestimmter Klassen auf besondere Weise kombiniert werden. Beispielsweise kann ein Dateimoniker, der einen unvollständigen Pfad darstellt, und ein anderer Dateimoniker, der einen relativen Pfad darstellt, kombiniert werden, um einen einzelnen Dateimoniker zu bilden, der den vollständigen Pfad darstellt. Beispielsweise könnten die Dateimoniker "c: work art" mit dem \\ \\ relativen Dateimoniker "." zusammengesetzt werden. \\ backup \\myfile.doc" auf "c: \\ \\ Arbeitssicherungs-myfile.doc". \\ Dies ist ein Beispiel für *eine nicht allgemeine Komposition.*
 
-Die *generische Komposition* hingegen lässt die Verbindung zweier Moniker zu, unabhängig von der Art der Klassen. Sie könnten z. b. einen elementmoniker in einem dateimoniker verfassen, dies ist natürlich nicht anders.
+*Die generische Komposition* hingegen ermöglicht die Verbindung von zwei beliebigen Monikern, unabhängig davon, welche Klassen sie haben. Beispielsweise könnten Sie einen Elementmoniker in einem Dateimoniker zusammenstellen, obwohl dies natürlich nicht umgekehrt der Reihe nach ist.
 
-Da eine nicht generische Komposition von der Klasse der beteiligten Moniker abhängt, werden die Details durch die Implementierung einer bestimmten Monikerklasse definiert. Sie können neue Typen von nicht generischen Kompositionen definieren, wenn Sie eine neue Monikerklasse schreiben. Im Gegensatz dazu werden generische Kompositionen von OLE definiert. Moniker, die als Ergebnis der generischen Komposition erstellt werden, werden als generische zusammengesetzte Moniker bezeichnet.
+Da eine nichtgenerische Komposition von der Klasse der beteiligten Moniker abhängt, werden ihre Details durch die Implementierung einer bestimmten Monikerklasse definiert. Sie können neue Typen nichtgenerischer Kompositionen definieren, wenn Sie eine neue Monikerklasse schreiben. Im Gegensatz dazu werden generische Kompositionen durch OLE definiert. Moniker, die als Ergebnis der generischen Komposition erstellt werden, werden als generische zusammengesetzte Moniker bezeichnet.
 
-Diese drei Klassen, dateimoniker, elementmoniker und generische zusammengesetzte Moniker arbeiten zusammen, und Sie sind die am häufigsten verwendeten Klassen von Monikern.
+Diese drei Klassen, Dateimoniker, Elementmoniker und generische zusammengesetzte Moniker arbeiten zusammen und sind die am häufigsten verwendeten Klassen von Monikern.
 
-Monikerclients sollten [**IMoniker:: compoabwith**](/windows/desktop/api/ObjIdl/nf-objidl-imoniker-composewith) aufrufen, um eine zusammengesetzte für den Moniker mit einem anderen zu erstellen. Der Moniker, für den er aufgerufen wird, entscheidet intern, ob er eine generische oder nicht generische Komposition ausführen kann. Wenn die monikerimplementierung feststellt, dass eine generische Komposition verwendbar ist, stellt OLE [**die Funktion "**](/windows/desktop/api/Objbase/nf-objbase-creategenericcomposite) die Funktion", um dies zu vereinfachen.
+Monikerclients sollten [**IMoniker::ComposeWith**](/windows/desktop/api/ObjIdl/nf-objidl-imoniker-composewith) aufrufen, um einen zusammengesetzten für Moniker mit einem anderen zu erstellen. Der Moniker, für den er aufgerufen wird, entscheidet intern, ob er eine generische oder nicht generische Komposition verwenden kann. Wenn die Monikerimplementierung feststellt, dass eine generische Komposition verwendet werden kann, stellt OLE die [**CreateGenericComposite-Funktion**](/windows/desktop/api/Objbase/nf-objbase-creategenericcomposite) zur Verfügung, um dies zu vereinfachen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Anti-Moniker](anti-monikers.md)
+[Antimoniker](anti-monikers.md)
 </dt> <dt>
 
 [Klassenmoniker](class-monikers.md)
@@ -48,9 +48,9 @@ Monikerclients sollten [**IMoniker:: compoabwith**](/windows/desktop/api/ObjIdl/
 [Zeigermoniker](pointer-monikers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

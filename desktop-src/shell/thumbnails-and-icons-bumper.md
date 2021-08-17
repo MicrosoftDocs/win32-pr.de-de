@@ -9,17 +9,17 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: c2a1781f12bac0d4720f93364aa46ce85834c68a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b33a5b9fb602daedd78a6a8aafb9a89f81b700e98946fe1ab42b0ac3dff2b092
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104994958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117675702"
 ---
 # <a name="thumbnails-and-icons"></a>Miniaturansichten und Symbole
 
--   [Miniatur Ansichts Handler](thumbnail-providers.md)
--   [Symbole und Symbol Überlagerungen](icons-and-icon-overlays-bumper.md)
+-   [Miniaturansichtshandler](thumbnail-providers.md)
+-   [Symbole und Symbolüberlagerungen](icons-and-icon-overlays-bumper.md)
 
  
 

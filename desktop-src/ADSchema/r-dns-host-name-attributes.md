@@ -1,10 +1,10 @@
 ---
-title: DNS-Host-Name-Attribute-Eigenschaft festgelegt
-description: Enthält die Attribute "DNS-Host-Name" und "ms-DS-additional-DNS-Host-Name".
+title: EIGENSCHAFTENSATZ "DNS-Hostname-Attribute"
+description: Enthält die Attribute DNS-Hostname und ms-DS-Additional-Dns-Hostname.
 ms.assetid: c5adb4a4-0d83-4f34-ac61-5f3fa2def69c
 ms.tgt_platform: multiple
 keywords:
-- 'DNS-Host-Name-Attribute-Eigenschaft: AD-Schema festlegen'
+- DNS-Host-Name-Attributes-Eigenschaftensatz AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,44 +13,44 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c17445dcaa76e1c3a46e39cafb403321ea337bc3
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 224c720d442770ee65726c832b7f21c5932a43fb5852e7a8c403bf5d3006248c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343114"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117836213"
 ---
-# <a name="dns-host-name-attributes-property-set"></a>DNS-Host-Name-Attribute-Eigenschaft festgelegt
+# <a name="dns-host-name-attributes-property-set"></a>EIGENSCHAFTENSATZ "DNS-Hostname-Attribute"
 
-Enthält die Attribute "DNS-Host-Name" und "ms-DS-additional-DNS-Host-Name".
+Enthält die Attribute DNS-Hostname und ms-DS-Additional-Dns-Hostname.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
 | CN           | DNS-Hostname-Attribute             |
-| Anzeigename | DNS-Hostname Attribute             |
-| Rights-GUID  | 72e39547-7b18-11d1-ADEF-00c04ld8d5cd |
+| Anzeigename | DNS-Hostnamenattribute             |
+| Rights-GUID  | 72e39547-7b18-11d1-adef-00c04fd8d5cd |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Applies-To              | [**Computer**](c-computer.md)<br/>                                                                                           |
-| Lokalisierung-Display-ID | 60                                                                                                                                  |
-| Eigenschaften Satz Elemente    | [**DNS-Hostname**](a-dnshostname.md)<br/> [**ms-DS-Zusatz-DNS-Hostname**](a-msds-additionaldnshostname.md)<br/> |
+| Lokalisierungsanzeige-ID | 60                                                                                                                                  |
+| Eigenschaftensatz-Member    | [**DNS-Hostname**](a-dnshostname.md)<br/> [**ms-DS-Additional-Dns-Host-Name**](a-msds-additionaldnshostname.md)<br/> |
 
 
 
@@ -61,8 +61,8 @@ Enthält die Attribute "DNS-Host-Name" und "ms-DS-additional-DNS-Host-Name".
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Applies-To              | [**Computer**](c-computer.md)<br/>                                                                                           |
-| Lokalisierung-Display-ID | 60                                                                                                                                  |
-| Eigenschaften Satz Elemente    | [**DNS-Hostname**](a-dnshostname.md)<br/> [**ms-DS-Zusatz-DNS-Hostname**](a-msds-additionaldnshostname.md)<br/> |
+| Lokalisierungsanzeige-ID | 60                                                                                                                                  |
+| Eigenschaftensatz-Member    | [**DNS-Hostname**](a-dnshostname.md)<br/> [**ms-DS-Additional-Dns-Host-Name**](a-msds-additionaldnshostname.md)<br/> |
 
 
 
@@ -73,8 +73,8 @@ Enthält die Attribute "DNS-Host-Name" und "ms-DS-additional-DNS-Host-Name".
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Applies-To              | [**Computer**](c-computer.md)<br/>                                                                                           |
-| Lokalisierung-Display-ID | 60                                                                                                                                  |
-| Eigenschaften Satz Elemente    | [**DNS-Hostname**](a-dnshostname.md)<br/> [**ms-DS-Zusatz-DNS-Hostname**](a-msds-additionaldnshostname.md)<br/> |
+| Lokalisierungsanzeige-ID | 60                                                                                                                                  |
+| Eigenschaftensatz-Member    | [**DNS-Hostname**](a-dnshostname.md)<br/> [**ms-DS-Additional-Dns-Host-Name**](a-msds-additionaldnshostname.md)<br/> |
 
 
 
@@ -84,9 +84,9 @@ Enthält die Attribute "DNS-Host-Name" und "ms-DS-additional-DNS-Host-Name".
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Konto**](c-msds-managedserviceaccount.md)<br/>          |
-| Lokalisierung-Display-ID | 60                                                                                                                                  |
-| Eigenschaften Satz Elemente    | [**DNS-Hostname**](a-dnshostname.md)<br/> [**ms-DS-Zusatz-DNS-Hostname**](a-msds-additionaldnshostname.md)<br/> |
+| Applies-To              | [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Account**](c-msds-managedserviceaccount.md)<br/>          |
+| Lokalisierungsanzeige-ID | 60                                                                                                                                  |
+| Eigenschaftensatz-Member    | [**DNS-Hostname**](a-dnshostname.md)<br/> [**ms-DS-Additional-Dns-Host-Name**](a-msds-additionaldnshostname.md)<br/> |
 
 
 
@@ -96,9 +96,9 @@ Enthält die Attribute "DNS-Host-Name" und "ms-DS-additional-DNS-Host-Name".
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Konto**](c-msds-managedserviceaccount.md)<br/>          |
-| Lokalisierung-Display-ID | 60                                                                                                                                  |
-| Eigenschaften Satz Elemente    | [**DNS-Hostname**](a-dnshostname.md)<br/> [**ms-DS-Zusatz-DNS-Hostname**](a-msds-additionaldnshostname.md)<br/> |
+| Applies-To              | [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Account**](c-msds-managedserviceaccount.md)<br/>          |
+| Lokalisierungsanzeige-ID | 60                                                                                                                                  |
+| Eigenschaftensatz-Member    | [**DNS-Hostname**](a-dnshostname.md)<br/> [**ms-DS-Additional-Dns-Host-Name**](a-msds-additionaldnshostname.md)<br/> |
 
 
 

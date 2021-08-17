@@ -74,14 +74,14 @@ Wenn **fAckReq** **true ist,** sollte die Clientanwendung die [**WM \_ DDE \_ AC
 
 Der Client muss den [**WM \_ DDE \_ ACK**](wm-dde-ack.md) *lParam-Parameter* erstellen oder wiederverwenden, indem er die [**PackDDElParam-Funktion**](/windows/desktop/api/Dde/nf-dde-packddelparam) oder die [**ReuseDDElParam-Funktion**](/windows/desktop/api/Dde/nf-dde-reuseddelparam) aufruft.
 
-Wenn **fAckReq** **false ist,** sollte die Clientanwendung das Atom löschen.
+Wenn **fAckReq** false **ist,** sollte die Clientanwendung das Atom löschen.
 
 Wenn die Senden-Anwendung ein globales Speicherobjekt als **NULL** angibt, kann die empfangende Anwendung den Server zum Senden der Daten anfordern, indem sie eine [**WM \_ DDE \_ REQUEST-Nachricht**](wm-dde-request.md) sendet.
 
 Nach der Verarbeitung einer **WM \_ DDE \_ DATA-Nachricht,** in der das globale Speicherobjekt nicht **NULL** ist, sollte der Client das Objekt freigibt, es sei denn, eine der folgenden Bedingungen trifft zu:
 
 -   Der **fRelease-Member** ist **FALSE.**
--   Der **fRelease-Member** ist **TRUE,** aber die Clientanwendung antwortet mit einer negativen [**WM \_ DDE \_ ACK-Nachricht.**](wm-dde-ack.md)
+-   Der **fRelease-Member** ist **TRUE,** aber die Clientanwendung antwortet mit einer negativen [**WM \_ DDE \_ ACK-Meldung.**](wm-dde-ack.md)
 
 ## <a name="requirements"></a>Anforderungen
 

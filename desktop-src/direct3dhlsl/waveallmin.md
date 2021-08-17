@@ -1,6 +1,6 @@
 ---
 title: WaveActiveMin-Funktion
-description: Gibt den Minimalwert des Ausdrucks auf allen aktiven Spuren in der aktuellen Welle zurück und repliziert ihn zurück an alle aktiven Lanes.
+description: Gibt den Minimalwert des Ausdrucks über alle aktiven Lanes in der aktuellen Welle zurück und repliziert ihn zurück an alle aktiven Lanes.
 ms.assetid: BA762C02-894C-4AF9-A226-C1E3AAC286FF
 keywords:
 - WaveActiveMin-Funktion HLSL
@@ -22,7 +22,7 @@ ms.locfileid: "117721787"
 ---
 # <a name="waveactivemin-function"></a>WaveActiveMin-Funktion
 
-Gibt den Minimalwert des Ausdrucks auf allen aktiven Spuren in der aktuellen Welle zurück und repliziert ihn zurück an alle aktiven Lanes.
+Gibt den Minimalwert des Ausdrucks über alle aktiven Lanes in der aktuellen Welle zurück und repliziert ihn zurück an alle aktiven Lanes.
 
 ## <a name="syntax"></a>Syntax
 

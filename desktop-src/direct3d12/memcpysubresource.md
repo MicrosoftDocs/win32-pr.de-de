@@ -1,9 +1,9 @@
 ---
-title: Memcpysubresource-Funktion (D3dx12. h)
-description: Kopiert eine untergeordnete Quelle zeilenweise.
+title: MemcpySubresource-Funktion (D3dx12.h)
+description: Kopiert eine Unterressourcenzeile nach Zeile.
 ms.assetid: 33A9F99D-FD85-4FD6-AFD6-7A10F16C3D9B
 keywords:
-- Memcpysubresource-Funktion
+- MemcpySubresource-Funktion
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b955211a490927033186442480b3449773b4ebcd
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8c27e8cf9ffda237c2dad017b3a981ff71498a22c1c7b54ede032d6bf8c012a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370446"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117733362"
 ---
-# <a name="memcpysubresource-function"></a>Memcpysubresource-Funktion
+# <a name="memcpysubresource-function"></a>MemcpySubresource-Funktion
 
-Kopiert eine untergeordnete Quelle zeilenweise.
+Kopiert eine Unterressourcenzeile nach Zeile.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,46 +45,46 @@ void inline MemcpySubresource(
 
 <dl> <dt>
 
-*pdest* \[ in\]
+*pDest* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3D12 \_ memcpy \_ dest**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_memcpy_dest) \***
+Typ: **const [**D3D12 \_ MEMCPY \_ DEST**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_memcpy_dest) \***
 
-Ein Zeiger auf eine [**D3D12 \_ memcpy \_ dest**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_memcpy_dest) -Struktur, die das Ziel des Speicher Kopiervorgangs beschreibt.
+Ein Zeiger auf eine [**D3D12 \_ MEMCPY \_ DEST-Struktur,**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_memcpy_dest) die das Ziel des Speicherkopiervorgang beschreibt.
 
 </dd> <dt>
 
-*psrc* \[ in\]
+*pSrc* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3D12 \_ subresource- \_ Daten**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_data) \***
+Typ: **const [**D3D12 \_ SUBRESOURCE \_ DATA**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_data) \***
 
-Ein Zeiger auf eine [**D3D12 \_ subresource- \_ Daten**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_data) Struktur, die die Quelle des Speicher Kopiervorgangs beschreibt.
+Ein Zeiger auf eine [**D3D12 \_ SUBRESOURCE \_ DATA-Struktur,**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_data) die die Quelle des Speicherkopiervorgang beschreibt.
 
 </dd> <dt>
 
-*Rowsizeinbytes* 
+*RowSizeInBytes* 
 </dt> <dd>
 
-Typ: **[ **Größe \_ T**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **SIZE \_ T**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Größe (in Bytes) der einzelnen Zeilen.
+Die Größe jeder Zeile in Bytes.
 
 </dd> <dt>
 
 *NumRows* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Die Anzahl von Zeilen.
 
 </dd> <dt>
 
-*Numslices* 
+*NumSlices* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Die Anzahl der Slices.
 
@@ -94,13 +94,13 @@ Die Anzahl der Slices.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie auch die folgenden Methoden:
+Berücksichtigen Sie außerdem die folgenden Methoden:
 
--   [**ID3D12Resource:: Write Items**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-writetosubresource)
--   [**ID3D12Resource:: Read fromsubresource**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-readfromsubresource)
--   [**ID3D12GraphicsCommandList:: copyresource**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copyresource)
+-   [**ID3D12Resource::WriteToSubresource**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-writetosubresource)
+-   [**ID3D12Resource::ReadFromSubresource**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-readfromsubresource)
+-   [**ID3D12GraphicsCommandList::CopyResource**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copyresource)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,13 +108,13 @@ Beachten Sie auch die folgenden Methoden:
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx12. h</dt> </dl>  |
-| Bibliothek<br/> | <dl> <dt>D3D12. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx12.h</dt> </dl>  |
+| Bibliothek<br/> | <dl> <dt>D3D12.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D3D12.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

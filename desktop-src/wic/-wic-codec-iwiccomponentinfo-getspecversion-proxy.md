@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die getspecversion-Methode.
+description: Proxyfunktion für die GetSpecVersion-Methode.
 ms.assetid: 363e55c2-d6e8-4ddc-a063-c5be08232a67
 title: IWICComponentInfo_GetSpecVersion_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: a7b9b0a44eb5fd8404eecc3ad355ec280583d690
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a29b57e84b7cf9ceee67ac4f64ac090e697366fbe0698a891c8fbcc87e3ff5b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118206583"
 ---
-# <a name="iwiccomponentinfo_getspecversion_proxy-function"></a>Iwiccomponentinfo \_ getspecversion- \_ Proxy Funktion
+# <a name="iwiccomponentinfo_getspecversion_proxy-function"></a>IWICComponentInfo \_ \_ GetSpecVersion-Proxyfunktion
 
-Proxy Funktion für die [**getspecversion**](/windows/desktop/api/Wincodec/nf-wincodec-iwiccomponentinfo-getspecversion) -Methode.
+Proxyfunktion für die [**GetSpecVersion-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwiccomponentinfo-getspecversion)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,47 +43,47 @@ HRESULT IWICComponentInfo_GetSpecVersion_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**iwiccomponentinfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccomponentinfo) \** _
+Typ: **[ **IWICComponentInfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccomponentinfo)\***
 
-Zeiger auf dieses [_ *iwiccomponentinfo* *](/windows/desktop/api/Wincodec/nn-wincodec-iwiccomponentinfo) -Objekt.
+Zeiger auf dieses [**IWICComponentInfo-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccomponentinfo)
 
 </dd> <dt>
 
-*cchspecversion* \[ in\]
+*cchSpecVersion* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Die Größe des *wzspecversion* -Puffers.
+Die Größe des *wzSpecVersion-Puffers.*
 
 </dd> <dt>
 
-*wzspecversion* \[ in, out\]
+*wzSpecVersion* \[ in, out\]
 </dt> <dd>
 
-Typ: **WCHAR \** _
+Typ: **WCHAR \***
 
-Wenn diese Methode zurückgegeben wird, enthalten Sie eine Kultur invarient-Zeichenfolge der Spezifikations Version der Komponente. Das Versions Formular ist NN. NN. NN. NN.
+Wenn diese Methode zurückgegeben wird, enthalten Sie eine kulturinvariante Zeichenfolge der Spezifikationsversion der Komponente. Das Versionsformular ist NN.NN.NN.NN.
 
 </dd> <dt>
 
-_pcchActual * \[ out\]
+*pcchActual* \[ out\]
 </dt> <dd>
 
-Typ: **uint \** _
+Typ: **UINT \***
 
-Ein Zeiger, der die tatsächliche Länge der Spezifikations Version der Komponente empfängt.
+Ein Zeiger, der die tatsächliche Länge der Spezifikationsversion der Komponente empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -93,9 +93,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

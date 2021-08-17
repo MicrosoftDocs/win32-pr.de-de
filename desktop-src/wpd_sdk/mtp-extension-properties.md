@@ -1,25 +1,25 @@
 ---
-description: MTP-Erweiterungs Eigenschaften
+description: MTP-Erweiterungseigenschaften
 ms.assetid: 58fc8741-261a-4e63-9fd3-8f0ca05866ad
-title: MTP-Erweiterungs Eigenschaften
+title: MTP-Erweiterungseigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 86a653d05285d62c7660bd914a785807a2341a01
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0468d249b469c4e768962ab6a920935e7a64b51d8e035af111e8274f7f0b9af6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356237"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118193946"
 ---
-# <a name="mtp-extension-properties"></a>MTP-Erweiterungs Eigenschaften
+# <a name="mtp-extension-properties"></a>MTP-Erweiterungseigenschaften
 
 Eigenschaften beschreiben Objekte, Eigenschaften, Ressourcen und Geräte.
 
-## <a name="vendor-extended-object-properties"></a>Vom Hersteller erweiterte Objekteigenschaften
+## <a name="vendor-extended-object-properties"></a>Eigenschaften von vendor-extended-Objekten
 
-Wenn ein Gerätehersteller eine vom Hersteller erweiterte Eigenschaft für ein Geräte Objekt erstellt, werden die **\_ Eigenschaften des \_ MTP-Herstellers \_ für \_ Erweiterte \_ Objekte \_ des MTP** -Herstellers mit dem Eigenschafts Code des Objekts kombiniert, um eine **PropertyKey** -Struktur zu erstellen.
+Wenn ein Gerätehersteller eine vom Hersteller erweiterte Eigenschaft für ein Geräteobjekt erstellt, kombiniert er die **WPD \_ PROPERTIES \_ MTP \_ VENDOR EXTENDED \_ \_ OBJECT \_ PROPS** GUID mit dem Eigenschaftencode des Objekts, um eine **PROPERTYKEY-Struktur** zu erstellen.
 
-Wenn z. b. der Eigenschafts Code des Objekts 0xd801 ist, würde der resultierende **PropertyKey** wie im folgenden Beispiel gezeigt lauten:
+Wenn der Eigenschaftencode des Objekts beispielsweise 0xD801 ist, würde **der resultierende PROPERTYKEY** wie im folgenden Beispiel gezeigt sein:
 
 
 ```C++
@@ -28,11 +28,11 @@ Wenn z. b. der Eigenschafts Code des Objekts 0xd801 ist, würde der resultierend
 
 
 
-## <a name="vendor-extended-device-properties"></a>Vom Hersteller erweiterte Geräteeigenschaften
+## <a name="vendor-extended-device-properties"></a>Eigenschaften von vom Hersteller erweiterten Geräten
 
-Wenn ein Gerätehersteller eine vom Hersteller erweiterte Eigenschaft für ein Gerät erstellt, kombiniert er die **Eigenschaften des \_ \_ MTP- \_ Herstellers \_ für \_ Erweiterte \_ Geräteeigenschaften des MTP** -Herstellers mit dem Eigenschafts Code des Objekts, um eine **PropertyKey** -Struktur zu erstellen.
+Wenn ein Gerätehersteller eine vom Hersteller erweiterte Eigenschaft für ein Gerät erstellt, kombiniert er die **WPD \_ PROPERTIES \_ MTP \_ VENDOR EXTENDED \_ \_ DEVICE \_ PROPS** GUID mit dem Eigenschaftencode des Objekts, um eine **PROPERTYKEY-Struktur** zu erstellen.
 
-Wenn z. b. der Eigenschafts Code des Objekts 0xd001 ist, würde der resultierende **PropertyKey** wie im folgenden Beispiel gezeigt lauten:
+Wenn der Eigenschaftencode des Objekts z. B. 0xD001 ist, würde die resultierende **PROPERTYKEY-Eigenschaft** wie im folgenden Beispiel gezeigt sein:
 
 
 ```C++

@@ -1,10 +1,10 @@
 ---
-title: ITSRemoteProgram2-Eigenschaft "RemoteApplicationArgs"
+title: ITSRemoteProgram2 RemoteApplicationArgs (Eigenschaft)
 description: Die Befehlszeilenargumente für die RemoteApp.
 ms.assetid: c1c36876-df3d-4ef9-a5ac-f623bc51fe7b
 ms.tgt_platform: multiple
 keywords:
-- RemoteApplicationArgs-Eigenschaft Remotedesktopdienste
+- RemoteApplicationArgs-Remotedesktopdienste
 - RemoteApplicationArgs-Eigenschaft Remotedesktopdienste , ITSRemoteProgram2-Schnittstelle
 - ITSRemoteProgram2-Schnittstelle Remotedesktopdienste , RemoteApplicationArgs-Eigenschaft
 - RemoteApplicationArgs-Eigenschaft Remotedesktopdienste , ITSRemoteProgram3-Schnittstelle
@@ -29,7 +29,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117756772"
 ---
-# <a name="itsremoteprogram2remoteapplicationargs-property"></a>ITSRemoteProgram2::RemoteApplicationArgs-Eigenschaft
+# <a name="itsremoteprogram2remoteapplicationargs-property"></a>ITSRemoteProgram2::RemoteApplicationArgs (Eigenschaft)
 
 Die Befehlszeilenargumente für die RemoteApp.
 

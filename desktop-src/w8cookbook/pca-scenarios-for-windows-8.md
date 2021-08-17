@@ -1,380 +1,380 @@
 ---
-title: Szenarios für den Programmkompatibilitäts-Assistenten für Windows 8
-description: Szenarios für den Programmkompatibilitäts-Assistenten für Windows 8
+title: Szenarien des Programmkompatibilitäts-Assistenten für Windows 8
+description: Szenarien des Programmkompatibilitäts-Assistenten für Windows 8
 ms.assetid: C61BF746-63EE-4F4E-81D3-52947FD4954D
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ebada2ca5115d24f260808a1c9ae899963184a8
-ms.sourcegitcommit: ee06501cc29132927ade9813e0888aaa4decc487
+ms.openlocfilehash: d63fbd912e14ac682ffe820ad140b2cad6a487dfbac833aa419c53389a9339ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "104556334"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117852596"
 ---
-# <a name="program-compatibility-assistant-scenarios-for-windows-8"></a>Szenarios für den Programmkompatibilitäts-Assistenten für Windows 8
+# <a name="program-compatibility-assistant-scenarios-for-windows-8"></a>Szenarien des Programmkompatibilitäts-Assistenten für Windows 8
 
 ## <a name="platforms"></a>Plattformen
 
-**Clients** -Windows XP \| Windows Vista Windows \| 7 Windows \| 8  
+**Clients–** Windows XP \| Windows Vista \| Windows 7 \| Windows 8  
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Der Programmkompatibilitäts-Assistent (PCA) ist ein Feature in Windows 8, mit dem Endbenutzer Desktop-Apps ausführen können, die für frühere Windows-Versionen entwickelt wurden. Windows 8 verfügt über eine hervorragend integrierte APP-Kompatibilität, die es ermöglicht, dass apps, die für Windows 7 oder frühere Windows-Versionen entwickelt wurden, automatisch auf Windows 8 funktionieren Allerdings gibt es eine kleine Anzahl von apps, die ohne Eingriff Probleme ausführen können.
+Der Programmkompatibilitäts-Assistent (Program Compatibility Assistant, PCA) ist ein Feature in Windows 8, mit dem Endbenutzer Desktop-Apps ausführen können, die für frühere Windows-Versionen entwickelt wurden. Windows 8 verfügt über eine hervorragende integrierte App-Kompatibilität, mit der Apps, die für Windows 7 oder frühere Windows-Versionen entwickelt wurden, automatisch für Windows 8 geeignet sind. Es gibt jedoch eine kleine Anzahl von Apps, die Probleme beim Ausführen ohne Eingriff haben können.
 
-Wenn ein Benutzer eine APP ausführt, verfolgt PCA die APP und identifiziert alle Symptome bestimmter bekannter Kompatibilitätsprobleme in Windows 8. Wenn es Probleme mit dem Problem erkennt, bietet es dem Benutzer die Möglichkeit, eine empfohlene Lösung anzuwenden, mit der die APP besser auf Windows 8 ausgeführt werden kann.
+Wenn ein Benutzer eine App ausführt, verfolgt PCA die App und identifiziert alle Symptome bestimmter bekannter Kompatibilitätsprobleme in Windows 8. Wenn problemede Symptome erkannt werden, bietet es dem Benutzer die Möglichkeit, eine empfohlene Korrektur anzuwenden, mit der die App auf Windows 8 besser ausgeführt werden kann.
 
 ## <a name="scenarios"></a>Szenarien
 
-PCA verfolgt Apps für eine Reihe bekannter Kompatibilitätsprobleme in Windows 8. PCA verfolgt die Probleme, identifiziert die Korrekturen und stellt dem Benutzer ein Dialogfeld mit Anweisungen zum Anwenden einer empfohlenen Lösung zur Verfügung. Der Benutzer kann entscheiden, ob er die empfohlenen Korrekturen anwendet oder nichts Unternehmen und die Empfehlung abbrechen möchte. Wenn der Benutzer abbricht, wird diese APP von PCA nicht mehr nachverfolgt.
+Pca verfolgt Apps nach einer Reihe bekannter Kompatibilitätsprobleme in Windows 8. Die PCA verfolgt die Probleme, identifiziert die Fehlerbehebungen und stellt dem Benutzer ein Dialogfeld mit Anweisungen zum Anwenden einer empfohlenen Fehlerbehebung bereit. Der Benutzer kann sich dafür entscheiden, die empfohlenen Fehlerbehebungen anzuwenden oder nichts zu unternehmen und die Empfehlung abzubrechen. Wenn der Benutzer den Vorgang abbricht, wird diese App von DER PCA nicht mehr nachverfolgt.
 
-PCA wendet in der Regel einen der drei Windows-Kompatibilitäts Modi an – Windows XP SP3, Windows Vista SP2 oder Windows 7, je nachdem, wann das Programm (oder dessen Setup) erstellt wurde. PCA verwendet die Attribute "Link \_ Date" und "Subsystem Version" des Programms und die Abschnitte "trustInfo" und "Kompatibilität" des ausführbaren Datei Manifests, um zu bestimmen, welcher der Modi relevant ist und Windows XP SP3 (einschließlich Administrator Berechtigung), Windows Vista SP2 oder Windows 7 anwendet. Ein Glossar am Ende des Dokuments Listet jeden der Kompatibilitäts Modi auf, die vom PCA und dessen Beschreibung angewendet werden.
+PCA wendet in der Regel einen von drei Windows Kompatibilitätsmodi an: Windows XP SP3, Windows Vista SP2 oder Windows 7, je nachdem, wann das Programm (oder sein Setup) erstellt wurde. PCA verwendet die Attribute LINK \_ DATE und SUBSYSTEM VERSION des Programms sowie die Abschnitte TRUSTINFO und COMPATIBILITY des ausführbaren Dateimanifests, um zu bestimmen, welcher der Modi relevant ist, und wendet Windows XP SP3 (einschließlich Administratorberechtigungen), Windows Vista SP2 bzw. Windows 7 an. Ein Glossar am Ende des Dokuments enthält die einzelnen Kompatibilitätsmodi, die pca anwendet, und die zugehörige Beschreibung.
 
-Für alle unten aufgeführten Szenarien verfolgt PCA apps ein zweites Mal nach dem Anwenden einer Korrektur nach. Wenn die APP auch nach dem Anwenden eines Kompatibilitäts Fixes weiterhin auf dieselbe Weise ausfällt, stellt PCA die Korrektur wieder her. Der PCA beendet die Nachverfolgung der einzelnen fehlerhaften app dann dauerhaft.
+Für alle unten aufgeführten Szenarien verfolgt pca Apps ein zweites Mal nach, nachdem eine Korrektur angewendet wurde. Wenn die App auch nach dem Anwenden eines Kompatibilitätsfixes weiterhin auf die gleiche Weise fehlschlägt, wird die Korrektur vom PCA wie folgt zurückgesetzt. Die PCA beendet dann dauerhaft die Nachverfolgung der spezifischen App, bei der ein Fehler aufgetreten ist.
 
-Während der PCA viele potenzielle Probleme nachverfolgt, werden nicht alle Probleme tatsächlich zu app-Fehlern führen. PCA empfiehlt Korrekturen nur in Situationen, in denen eine hohe Wahrscheinlichkeit besteht, dass der APP-Fehler auf Windows-Kompatibilitäts Gründe zurückzuführen ist. In den folgenden Abschnitten werden die in Windows 8 entwickelten PCA-Szenarien erweitert. In jedem Abschnitt werden das Problem Szenario und die Empfehlungen beschrieben, die von PCA bereitstellt werden, damit die APP weiterhin ordnungsgemäß auf Windows 8 funktioniert.
+PcA verfolgt zwar viele potenzielle Probleme, aber nicht alle Probleme verursachen tatsächlich App-Fehler. Die PCA empfiehlt Korrekturen nur in Situationen, in denen eine hohe Wahrscheinlichkeit besteht, dass der App-Fehler auf Windows Kompatibilitätsgründen zurückzuführen ist. In den folgenden Abschnitten werden die einzelnen PCA-Szenarien erweitert, die in Windows 8 entwickelt wurden. In jedem Abschnitt werden das Problemszenario und die Empfehlungen beschrieben, die pca bietet, damit die App weiterhin ordnungsgemäß an Windows 8 funktioniert.
 
-Weitere Informationen zu Kompatibilitäts Änderungen in Windows 8 finden Sie in den anderen Themen im *Windows 8 Compatibility Cookbook*.
+Weitere Informationen zu Kompatibilitätsänderungen in Windows 8 finden Sie in den anderen Themen im *Windows 8 Compatibility Cookbook*.
 
-Folgende Szenarien werden von PCA nachverfolgt und empfohlen:
+In den folgenden Szenarien verfolgt der PCA Korrekturen nach und empfiehlt diese:
 
--   Die APP kann nicht installiert oder deinstalliert werden.
--   Die APP kann nicht mit einer Windows-Versions Überprüfung ausgeführt werden.
--   Die APP kann aufgrund von Administratorrechten nicht gestartet werden.
--   App stürzt aufgrund bestimmter Speicherprobleme ab
--   App schlägt aufgrund nicht übereinstimmender Systemdateien fehl
--   App schlägt aufgrund von nicht behandelten Fehlern auf 64-Bit-Fenstern fehl
--   App schlägt fehl, wenn geschützte nicht-Windows-Dateien gelöscht werden.
--   App schlägt fehl, wenn Windows-Dateien geändert werden
--   App schlägt aufgrund der Verwendung von 8-oder 16-Bit-Farbmodi fehl
--   App schlägt aufgrund von Grafik-und Anzeigeproblemen fehl
--   App kann keine dpi-Informationen deklarieren
--   App schlägt aufgrund von fehlenden Windows-Features fehl
--   App schlägt aufgrund von nicht signierten Treibern auf 64-Bit-Windows 8 fehl
--   Über Kompatibilitäts Einstellungen installierte apps werden überwacht.
--   App kann Installationsprogramme oder updaterer nicht starten
--   App-Installationsprogramme, die mit Administrator Berechtigungen ausgeführt werden müssen
--   Ältere Systemsteuerungs-Applets, die mit Administrator Berechtigungen ausgeführt werden müssen
+-   App kann nicht installiert oder deinstalliert werden
+-   App kann nicht mit einer meldung zur Windows Versionsprüfung ausgeführt werden
+-   App kann aufgrund von Administratorrechten nicht gestartet werden
+-   App stürzt aufgrund bestimmter Arbeitsspeicherprobleme ab
+-   App schlägt aufgrund von nicht übereinstimmenden Systemdateien fehl
+-   App-Fehler aufgrund von Nicht behandelten Fehlern auf 64-Bit-Windows
+-   App schlägt fehl, wenn versucht wird, geschützte, nicht Windows Dateien zu löschen
+-   App schlägt fehl, wenn versucht wird, Windows Dateien zu ändern
+-   App-Fehler aufgrund der Verwendung von 8- oder 16-Bit-Farbmodi
+-   App schlägt aufgrund von Grafik- und Anzeigeproblemen fehl
+-   App kann DPI-Bekanntheit nicht deklarieren
+-   App-Fehler aufgrund fehlender Windows Features
+-   App-Fehler aufgrund von nicht signierten Treibern auf 64-Bit-Windows 8
+-   Nachverfolgen von Apps, die über Kompatibilitätseinstellungen installiert wurden
+-   App kann Installationsprogramme oder Updater nicht starten
+-   App-Installer, die mit Administratorrechten ausgeführt werden müssen
+-   Legacy-Systemsteuerung Applets, die mit Administratorrechten ausgeführt werden müssen
 
-Jedes dieser Szenarien wird unten erweitert:
+Jedes dieser Szenarien wird im Folgenden erweitert:
 
-**Die APP kann nicht installiert oder deinstalliert werden.**
+**App kann nicht installiert oder deinstalliert werden**
 
-Einer der gängigsten Arten von App-Fehlern tritt während der Installation der APP auf. Ältere Setup Programme schlagen in der Regel auf zweierlei Weise fehl:
+Einer der häufigsten Arten von App-Fehlern tritt während der Installation der App auf. Ältere Setupprogramme schlagen am häufigsten auf zwei Arten fehl:
 
--   Das Setup Programm kennt die Features der Benutzerkontensteuerung (User Account Control, UAC) in Windows 8 nicht, sodass es möglicherweise nicht mit den vollständigen Berechtigungen ausgeführt wird, die erforderlich sind, um Systemänderungen an den geschützten Bereichen von Windows 8 vorzunehmen.
--   Das Setup Programm überprüft, ob die Windows-Version ausgeführt wird, und blockiert die Ausführung, wenn die Version höher als erwartet ist.
+-   Das Setupprogramm kennt die Features der Benutzerkontensteuerung (User Account Control, UAC) in Windows 8 nicht, sodass es möglicherweise nicht mit den vollständigen Berechtigungen ausgeführt wird, die erforderlich sind, um Systemänderungen an den geschützten Bereichen von Windows 8
+-   Das Setupprogramm sucht nach der Windows Version und blockiert die Ausführung, wenn die Version höher als erwartet ist.
 
-Diese Fehlerbedingungen sind zwei der gängigsten Typen von Kompatibilitäts Fehlern beim Setup. Durch die Unterstützung verschiedener anderer Windows-Komponenten, wie z. b. UAC, werden Setup Programme beim Start erkannt und am Ende der Installation nachverfolgt. Wenn beim Setup Programm entweder keine Dateien hinzugefügt werden oder ein gültiger Eintrag in der Windows-Systemsteuerung in der Windows-Systemsteuerung hinzugefügt werden kann, betrachtet PCA das Setup als fehlgeschlagen.
+Diese Fehlerbedingungen sind zwei der häufigsten Arten von Kompatibilitätsfehlern beim Setup. PCA erkennt setup-Programme beim Start mithilfe verschiedener anderer Windows-Komponenten wie UAC und verfolgt sie bis zum Ende der Installation nach. Wenn das Setupprogramm dateien oder einen gültigen Eintrag im Teil "Software hinzufügen" der Windows Systemsteuerung nicht hinzufügen kann, betrachtet PCA das Setup als fehlgeschlagen.
 
-In diesem Fall empfiehlt PCA einen geeigneten Kompatibilitätsmodus für die app. Im Kompatibilitätsmodus kann das Setup Programm im Windows-Modus ausgeführt werden, für den es entworfen wurde, und es wird außerdem sichergestellt, dass die APP mit Administratorrechten ausgeführt wird. PCA wendet den RunAsAdmin-Kompatibilitätsmodus zusammen mit dem entsprechenden Kompatibilitätsmodus von Windows XP, Windows Vista oder Windows 7 an. Der Benutzer kann am Ende der fehlgeschlagenen Installation ein Dialogfeld mit der PCA-Empfehlung sehen:
+In diesem Fall empfiehlt pca einen für die App geeigneten Kompatibilitätsmodus. Der Kompatibilitätsmodus ermöglicht die Ausführung des Setupprogramms im Windows Modus, für den es entwickelt wurde, und stellt außerdem sicher, dass die App mit Administratorrechten ausgeführt wird. PCA wendet den RUNASADMIN-Kompatibilitätsmodus zusammen mit dem entsprechenden Windows XP-, Windows Vista- oder Windows 7-Kompatibilitätsmodus an. Dem Benutzer wird am Ende der fehlgeschlagenen Installation ein Dialogfeld mit der PCA-Empfehlung angezeigt:
 
-![Dialogfeld "Fehler beim Installieren oder deinstallieren" der APP](images/pcafigure1.png)
+![Das Dialogfeld "App kann nicht installiert oder deinstalliert werden"](images/pcafigure1.png)
 
 Der Benutzer kann dann Folgendes auswählen:
 
--   Führen Sie das Programm mit den Kompatibilitäts Einstellungen (empfohlene Option) aus, nach der PCA die empfohlene Einstellung anwendet (Kompatibilitätsmodus), das Setup Programm neu starten und nachverfolgen, bis das Setup erfolgreich abgeschlossen wurde.
--   Geben Sie an, dass das Programm ordnungsgemäß installiert ist. in diesem Fall fügt der PCA keine Einstellungen hinzu und beendet die Nachverfolgung des Setups.
--   Klicken Sie auf schließen. in diesem Fall fügt der PCA keine Einstellungen hinzu und beendet die Nachverfolgung dieses Setups.
+-   Führen Sie das Programm mithilfe der Kompatibilitätseinstellungen (empfohlene Option) aus. Danach wendet pca die empfohlene Einstellung an (Kompatibilitätsmodus), startet das Setupprogramm neu und verfolgt es nach, bis das Setup erfolgreich abgeschlossen ist.
+-   Geben Sie an, dass das Programm ordnungsgemäß installiert wurde. In diesem Fall fügt pca keine Einstellungen hinzu und beendet die Nachverfolgung des Setups.
+-   Klicken Sie auf Schließen. In diesem Fall fügt PCA keine Einstellungen hinzu und beendet die Nachverfolgung dieses Setups.
 
-Derselbe Mechanismus wird verwendet, um die Deinstallation der APP zu unterstützen, wenn ein Benutzer versucht, die APP entweder über den Abschnitt "Software entfernen" in Windows oder über die Verknüpfung der APP-Deinstallation zu deinstallieren.
+Der gleiche Mechanismus wird verwendet, um die Deinstallation der App zu unterstützen, wenn ein Benutzer versucht, die App entweder über den Abschnitt "Programme hinzufügen" in Windows oder über die Deinstallationsverknüpfung der App zu deinstallieren.
 
-**Die APP kann nicht mit einer Windows-Versions Überprüfung ausgeführt werden.**
+**App kann nicht mit einer meldung zur Windows Versionsprüfung ausgeführt werden**
 
-Einer der gängigeren Kompatibilitäts Fehler in der APP-Laufzeit ist die Überprüfung der Windows-Version. Viele apps überprüfen beim Start die Windows-Version. Wenn Sie die Version nicht erkennen, blockieren Sie sich selbst dann, wenn die APP ohne Probleme ausgeführt werden kann.
+Einer der häufigsten Kompatibilitätsfehler in der App-Runtime ist auf die Windows Versionsprüfung zurückzuführen. Viele Apps überprüfen beim Start die Windows Version. Wenn sie die Version nicht erkennen, blockieren sie sich selbst, auch wenn die App ohne Probleme ausgeführt werden konnte.
 
-Im Allgemeinen sind solche Überprüfungen zwei Bedingungen zugeordnet, die der PCA verfolgt:
+Im Allgemeinen sind solche Überprüfungen zwei Bedingungen zugeordnet, die von der PCA verfolgt werden:
 
-Die APP zeigt ein Meldungs Feld an, das den Benutzer warnt. Unten ist ein Beispiel angegeben:
+Die App zeigt ein Meldungsfeld an, das den Benutzer warnt. Ein Beispiel finden Sie unten:
 
-![Fehler beim Ausführen der APP mit dem Dialogfeld "Windows-Versions Überprüfung"](images/pcafigure2.png)
+![Die App kann nicht mit einem Meldungsdialogfeld für die Windows-Versionsprüfung ausgeführt werden.](images/pcafigure2.png)
 
--   Die APP wird sofort beendet oder stürzt ab
+-   Die App wird sofort beendet oder stürzt ab.
 
-Wenn der PCA beide Bedingungen für eine APP identifiziert, wird dem Benutzer eine Empfehlung bereitgestellt. PCA ermöglicht dem Benutzer, die APP mit Kompatibilitäts Einstellungen erneut auszuführen. Der PCA wendet den entsprechenden Windows XP-, Windows Vista-oder Windows 7-Kompatibilitätsmodus basierend auf der APP an. Wie in jedem Szenario kann der Benutzer PCA mitteilen, dass die APP ordnungsgemäß ausgeführt wurde, oder die empfohlenen Einstellungen durch Klicken auf die Schaltfläche Schließen ablehnen. Ein Beispiel Dialogfeld wird wie folgt bereitgestellt:
+Wenn pca beide Bedingungen für eine App identifiziert, gibt sie dem Benutzer eine Empfehlung. Pca ermöglicht dem Benutzer, die App mit Kompatibilitätseinstellungen erneut auszuführen. Pca wendet den entsprechenden kompatibilitätsbasierten Windows XP-, Windows Vista- oder Windows 7-Kompatibilitätsmodus basierend auf der App an. Wie in jedem der Szenarien kann der Benutzer pca mitteilen, dass die App ordnungsgemäß ausgeführt wurde, oder die empfohlenen Einstellungen deaktivieren, indem er auf die Schaltfläche "Schließen" klickt. Ein Beispieldialogfeld wird wie folgt bereitgestellt:
 
-![Fehler beim Ausführen der APP mit einer Option zur Option "Windows-Versions Überprüfung"](images/pcafigure3.png)
+![app fails to run with a windows version check message option dialog (App kann nicht mit einer Meldungsoption für die Windows-Versionsprüfung ausgeführt werden)](images/pcafigure3.png)
 
-**Die APP kann aufgrund von Administrator Berechtigungen nicht gestartet oder ausgeführt werden.**
+**App kann aufgrund von Administratorrechten nicht gestartet oder ausgeführt werden**
 
-Einige apps benötigen Administratorrechte, um ihre Funktionalität auszuführen und auszuführen. In Windows 8, ähnlich wie Windows 7 und Windows Vista, werden apps jedoch standardmäßig aufgrund von UAC auf niedrigeren Berechtigungsstufen ausgeführt. Neuere apps, die für Windows Vista und höher entwickelt wurden, deklarieren im Allgemeinen die Berechtigungsstufe, die Sie für die Verwendung im Trust Info-Abschnitt des exe-Manifests benötigen. Ältere apps schlagen jedoch im Allgemeinen auf zweierlei Weise fehl:
+Einige Apps benötigen Administratorrechte zum Ausführen und Ausführen ihrer Funktionen. In Windows 8, ähnlich wie Windows 7 und Windows Vista, werden Apps aufgrund von UAC jedoch standardmäßig in niedrigeren Berechtigungsstufen ausgeführt. Neuere Apps, die für Windows Vista und höher entwickelt wurden, deklarieren im Allgemeinen die Berechtigungsstufe, die sie für die Ausführung benötigen, im Abschnitt TRUSTINFO des EXE-Manifests. Ältere Apps schlagen jedoch in der Regel auf zwei Arten fehl:
 
--   Die APP zeigt dem Benutzer eine Meldung an, dass Administrator Berechtigungen erforderlich sind, wie im folgenden Beispiel gezeigt:
+-   Die App zeigt dem Benutzer eine Meldung an, dass administratorrechte erforderlich sind, wie im folgenden Beispiel dargestellt:
 
-![die APP kann aufgrund des Dialog Felds für administrative Berechtigungen nicht gestartet oder ausgeführt werden.](images/pcafigure4a.png)
+![App kann aufgrund von Administratorrechten nicht gestartet oder ausgeführt werden](images/pcafigure4a.png)
 
--   Die APP wird entweder sofort beendet oder stürzt ab.
+-   App wird entweder sofort beendet oder stürzt ab
 
-Wenn der PCA beide Bedingungen für eine APP identifiziert, wird dem Benutzer eine Empfehlung bereitgestellt. PCA ermöglicht dem Benutzer die erneute Ausführung der APP mit Administratorrechten (PCA wendet den RunAsHighest-Kompatibilitätsmodus an). Der Benutzer erhält eine UAC-Eingabeaufforderung, wenn die APP erneut ausgeführt wird. Wie in jedem Szenario kann der Benutzer mit der empfohlenen Einstellung erneut ausführen oder die empfohlenen Einstellungen durch Klicken auf Schließen ablehnen. Ein Beispiel Dialogfeld wird wie folgt bereitgestellt:
+Wenn pca beide Bedingungen für eine App identifiziert, gibt sie dem Benutzer eine Empfehlung. PCA ermöglicht dem Benutzer, die App mit Administratorrechten erneut auszuführen (PCA wendet den RUNASHIGHEST-Kompatibilitätsmodus an). Der Benutzer erhält eine UAC-Eingabeaufforderung, wenn die App erneut ausgeführt wird. Wie in jedem der Szenarien kann der Benutzer die empfohlene Einstellung erneut ausführen oder die empfohlenen Einstellungen deaktivieren, indem er auf Schließen klickt. Ein Beispieldialogfeld wird wie folgt bereitgestellt:
 
-![Fehler beim Starten oder Ausführen der APP aufgrund der Option für administrative Berechtigungen.](images/pcafigure5.png)
+![app fails to launch or run due to administrative privilege option dialog (App kann aufgrund von Administratorrechten nicht gestartet oder ausgeführt werden)](images/pcafigure5.png)
 
-**App stürzt aufgrund bestimmter Speicherprobleme ab**
+**App stürzt aufgrund bestimmter Arbeitsspeicherprobleme ab**
 
-Einige Apps Abstürzen aufgrund eines bekannten Speicher Problems. Die APP verweist auf eine DLL aus dem Arbeitsspeicher und ruft dann eine Funktion auf, um Code in derselben DLL auszuführen. Dies führt zu einem sofortigen Absturz der app. Obwohl dieses Problem nicht auf Windows 8-Kompatibilitäts Änderungen zurückzuführen ist, ist es ein relativ häufiges Problem, das in einer Vielzahl von apps auftritt. PCA verfolgt dieses Problem nach, um Benutzern die Möglichkeit zu geben, Ihre APP zuverlässiger auszuführen.
+Einige Apps stürzt aufgrund eines bekannten Arbeitsspeicherproblems ab. Die App dereferenziert eine DLL aus dem Arbeitsspeicher und ruft dann eine Funktion auf, um Code in derselben DLL auszuführen. Dies führt zu einem sofortigen Absturz der App. Obwohl dieses Problem nicht auf Windows 8 Kompatibilitätsänderungen zurückzuführen ist, ist es ein relativ häufiges Problem, das in einer Vielzahl von Apps auftritt. Pca verfolgt dieses Problem, um Benutzern die Möglichkeit zu geben, ihre App zuverlässiger auszuführen.
 
-Für diese apps wendet PCA den pindll-Kompatibilitätsmodus automatisch automatisch an. Der von PCA aufgerufene Kompatibilitätsmodus verhindert, dass die APP die dll aus dem Arbeitsspeicher freigibt. Daher funktioniert der Funktionsaufrufe der DLL von der APP, sodass die APP abstürzen kann, sodass Sie weiterhin ordnungsgemäß funktioniert.
+Für diese Apps wendet PCA automatisch den PINDLL-Kompatibilitätsmodus automatisch an. Der von PCA aufgerufene Kompatibilitätsmodus verhindert, dass die App die DLL aus dem Arbeitsspeicher freisetzt. Der Funktionsaufruf der DLL durch die App funktioniert also, sodass die App nicht abstürzt und weiterhin ordnungsgemäß funktioniert.
 
-**App schlägt aufgrund nicht übereinstimmender Systemdateien fehl**
+**App schlägt aufgrund von nicht übereinstimmenden Systemdateien fehl**
 
-Einige apps, die für Windows XP und früher entwickelt wurden, umfassen Kopien von Windows-System-DLLs zusammen mit ihren Installationsprogrammen. Wenn solche apps installiert sind, verfügt die APP sowohl über eine ältere Kopie der dll als auch über die aktuelle Version der dll in den Windows-Systemordnern.
+Einige Apps, die für Windows XP und früher entwickelt wurden, enthalten Kopien von Windows System-DLLs zusammen mit ihren Installationsprogrammen. Wenn solche Apps installiert sind, enthält die App sowohl eine ältere Kopie der DLL in ihrem eigenen Ordner als auch die neueste Version der DLL, die sich in den Windows Systemordnern befindet.
 
-Unter Windows Vista und höher kann diese Bedingung bewirken, dass die APP fehlschlägt, wenn versucht wird, die lokale dll zu laden, da diese DLL nicht gut mit den restlichen Windows-System-DLLs funktioniert. Da die app in der Regel nicht die neueren Versionen dieser DLL kennt, funktioniert Sie nicht ordnungsgemäß.
+Auf Windows Vista und höher kann diese Bedingung dazu führen, dass die App fehlschlägt, wenn sie versucht, die lokale DLL zu laden, da diese DLL nicht gut mit den übrigen aktuellen Windows System-DLLs funktioniert. Da die App die neueren Versionen dieser DLL im Allgemeinen nicht kennt, funktioniert sie nicht ordnungsgemäß.
 
-Wenn der PCA erkennt, dass die dll nicht ordnungsgemäß geladen werden konnte, wendet er eine Kompatibilitäts Einstellung an, die Windows das Laden der neuesten Version der dll aus dem Windows-Systemordner ermöglicht, damit die APP ordnungsgemäß ausgeführt werden kann.
+Wenn pca erkennt, dass die DLL nicht ordnungsgemäß geladen werden konnte, wird eine Kompatibilitätseinstellung angewendet, die es Windows ermöglicht, die neueste Version der DLL aus dem Windows Systemordner zu laden, damit die App ordnungsgemäß ausgeführt werden kann.
 
-Am Ende der ersten fehlgeschlagenen APP wird das Dialogfeld "PCA" angezeigt, in dem Sie über die angewendete Einstellung benachrichtigt werden, wie unten gezeigt:
+Am Ende der ersten fehlerhaften Ausführung der App wird den Benutzern das PCA-Dialogfeld angezeigt, in dem sie wie folgt über die angewendete Einstellung benachrichtigt werden:
 
-![App schlägt aufgrund von nicht übereinstimmenden Systemdateien fehl](images/pcafigure6.png)
+![App schlägt aufgrund eines nicht übereinstimmenden Dialogfelds für Systemdateien fehl](images/pcafigure6.png)
 
-**App schlägt aufgrund von nicht behandelten Fehlern auf 64-Bit-Fenstern fehl**
+**App-Fehler aufgrund von Nicht behandelten Fehlern auf 64-Bit-Windows**
 
-Bei der 64-Bit-Version von Windows 8 wurde eine neue Ausnahme für den Rückrufmechanismus der Nachrichten Schleife aktiviert. Diese Ausnahme wurde in Windows 7 eingeführt, es ist jedoch nicht zwingend erforderlich, diesen Fehler zu behandeln. In Windows 8 müssen apps, die Nachrichten Schleifen verwenden, diese neue Ausnahme behandeln. Wenn dies nicht der Fall ist, stürzt dies ab. Apps, die für ältere Windows-Versionen entwickelt wurden, kennen diese Ausnahme möglicherweise nicht. Daher wird dieser Fehler (Ausnahme) möglicherweise nicht ordnungsgemäß behandelt.
+Bei der 64-Bit-Version von Windows 8 wurde eine neue Ausnahme für den Rückrufmechanismus der Nachrichtenschleife aktiviert. Obwohl diese Ausnahme erstmals in Windows 7 eingeführt wurde, war es nicht zwingend erforderlich, diesen Fehler zu behandeln. In Windows 8 müssen Apps, die Nachrichtenschleifen verwenden, diese neue Ausnahme behandeln. Wenn dies nicht dere ist, werden sie abgestürzt. Apps, die für ältere Windows Versionen entwickelt wurden, kennen diese Ausnahme möglicherweise nicht und behandeln diesen Fehler (Ausnahme) möglicherweise nicht ordnungsgemäß.
 
-Der PCA erkennt apps, die aufgrund dieses unbehandelten Fehlers fehlschlagen, und wendet automatisch den Kompatibilitätsmodus "disableusercallbackexception" für die APP an. Nachdem die Einstellung am Ende der Ausführung angewendet wurde, wird der Benutzer wie unten beschrieben benachrichtigt. Die APP erhält den Modus bei der nächsten Testlauf und kann diesen Fehler vermeiden.
+PCA erkennt Apps, die aufgrund dieses nicht behandelten Fehlers fehlschlagen, und wendet automatisch den KOMPATIBILITÄTsmodus DISABLEUSERCALLBACKEXCEPTION für die App an. Nachdem die Einstellung am Ende der Ausführung angewendet wurde, wird der Benutzer wie folgt benachrichtigt. Die App erhält den Modus bei der nächsten Ausführung und kann diesen Fehler vermeiden.
 
-![App schlägt aufgrund von nicht behandelten Fehlern im Windows-Dialogfeld 64-Bit-Windows fehl](images/pcafigure7.png)
+![app fails due to unhandled errors on 64-bit windows dialog (App-Fehler aufgrund nicht behandelter Fehler im 64-Bit-Fensterdialogfeld)](images/pcafigure7.png)
 
-**App schlägt fehl, wenn geschützte nicht-Windows-Dateien gelöscht werden.**
+**App schlägt fehl, wenn versucht wird, geschützte, nicht Windows Dateien zu löschen**
 
-Für einige apps, die für Windows XP und früher entwickelt wurden, wird davon ausgegangen, dass Sie normalerweise mit vollen Administratorrechten Im Rahmen des normalen App-Verhaltens können Sie versuchen, geschützte nicht-Windows-Dateien (entweder in Programmdateien oder in Windows-Ordnern) zu löschen. Wenn der Löschvorgang fehlschlägt, können viele derartige Apps Abstürzen.
+Einige Apps, die für Windows XP entwickelt wurden und früher davon ausgehen, dass sie in der Regel mit vollständigen Administratorrechten ausgeführt werden. Im Rahmen des normalen App-Verhaltens versuchen sie möglicherweise, geschützte, nicht Windows Dateien zu löschen (entweder in Programmdateien oder Windows Ordnern). Wenn der Löschvorgang fehlschlägt, können viele solche Apps abstürzten.
 
-Der PCA erkennt diese apps, die geschützte Dateien und Abstürze nicht löschen können, und bietet dem Benutzer eine Empfehlung. PCA ermöglicht dem Benutzer, die APP mit Kompatibilitäts Einstellungen erneut auszuführen. Wie in jedem Szenario kann der Benutzer PCA mitteilen, dass die APP ordnungsgemäß ausgeführt wurde, oder die empfohlenen Einstellungen durch Klicken auf die Schaltfläche Schließen ablehnen. In diesem Fall wendet PCA den virtualizedelete-Kompatibilitätsmodus an. Ein Beispiel Dialogfeld wird wie folgt bereitgestellt:
+Pca erkennt diese Apps, die geschützte Dateien nicht löschen und abstürzt, und gibt dem Benutzer eine Empfehlung. Pca ermöglicht dem Benutzer, die App mit Kompatibilitätseinstellungen erneut auszuführen. Wie in jedem der Szenarien kann der Benutzer pca mitteilen, dass die App ordnungsgemäß ausgeführt wurde, oder die empfohlenen Einstellungen deaktivieren, indem er auf die Schaltfläche "Schließen" klickt. In diesem Fall wendet PCA den VIRTUALIZEDELETE-Kompatibilitätsmodus an. Ein Beispieldialogfeld wird wie folgt bereitgestellt:
 
-![App schlägt fehl, während versucht wird, geschützte nicht-Windows-Dateien zu löschen.](images/pcafigure8.png)
+![app fails while attempting to delete protected non-windows files dialog (App schlägt fehl, wenn versucht wird, geschützte Nicht-Windows-Dateien zu löschen)](images/pcafigure8.png)
 
-**App schlägt fehl, wenn versucht wird, Windows-Dateien oder Registrierungsschlüssel zu ändern**
+**App schlägt fehl, wenn versucht wird, Windows Dateien oder Registrierungsschlüssel zu ändern**
 
-Für einige apps, die für Windows XP und früher entwickelt wurden, wird davon ausgegangen, dass Sie normalerweise mit vollen Administratorrechten Im Rahmen des normalen App-Verhaltens können Sie versuchen, Windows-geschützte Dateien (entweder in Programmdateien oder Windows-Ordnern) oder Registrierungs Schlüsseln im Besitz von Windows zu ändern, zu löschen oder zu schreiben. Wenn ein Schreib-, Lösch-oder Änderungs Vorgang für eine Datei oder einen Registrierungsschlüssel fehlschlägt, können viele derartige Apps Abstürzen oder fehlschlagen.
+Einige Apps, die für Windows XP entwickelt wurden und früher davon ausgehen, dass sie in der Regel mit vollständigen Administratorrechten ausgeführt werden. Im Rahmen des normalen App-Verhaltens können sie versuchen, Windows geschützten Dateien (entweder in Programmdateien oder Windows Ordnern) oder Registrierungsschlüssel im Besitz von Windows zu ändern, zu löschen oder zu schreiben. Wenn ein Schreib-, Lösch- oder Änderungsvorgang für eine Datei oder einen Registrierungsschlüssel fehlschlägt, können viele solche Apps abstürzt oder fehlerhaft sein.
 
-PCA erkennt diese apps, die nicht in geschützte Windows-Dateien oder Registrierungsschlüssel schreiben können, und bietet dem Benutzer eine Empfehlung, wenn die APP beendet wird. PCA ermöglicht dem Benutzer, die APP mit Kompatibilitäts Einstellungen erneut auszuführen. Wie in jedem Szenario kann der Benutzer PCA mitteilen, dass die APP ordnungsgemäß ausgeführt wurde, oder die empfohlenen Einstellungen durch Klicken auf die Schaltfläche Schließen ablehnen. In diesem Fall wendet PCA den Kompatibilitätsmodus "wrpentschärfung" an. Ein Beispiel Dialogfeld wird wie folgt bereitgestellt:
+Pca erkennt diese Apps, die nicht in geschützte Windows Dateien oder Registrierungsschlüssel schreiben können, und gibt dem Benutzer eine Empfehlung, wenn die App beendet wird. Pca ermöglicht dem Benutzer, die App mit Kompatibilitätseinstellungen erneut auszuführen. Wie in jedem der Szenarien kann der Benutzer pca mitteilen, dass die App ordnungsgemäß ausgeführt wurde, oder die empfohlenen Einstellungen deaktivieren, indem er auf die Schaltfläche Schließen klickt. In diesem Fall wendet PCA den WRPMITIGATION-Kompatibilitätsmodus an. Ein Beispieldialogfeld wird wie folgt bereitgestellt:
 
-![App schlägt fehl, wenn versucht wird, Windows-Dateien oder Registrierungsschlüssel zu ändern.](images/pcafigure9.png)
+![app fails while attempting to modify windows files or registry keys dialog (App schlägt beim Ändern von Windows-Dateien oder Registrierungsschlüsseln fehl)](images/pcafigure9.png)
 
-**App schlägt aufgrund der Verwendung von 8-oder 16-Bit-Farbmodi fehl**
+**App-Fehler aufgrund der Verwendung von 8- oder 16-Bit-Farbmodi**
 
-Als Teil der reimaginierung von Windows 8 für Windows Store-Apps ist einer der wichtigsten Änderungen, dass die Desktopfenster-Manager (DWM) jetzt nur 32-Bit-Farben in Windows 8 unterstützt. Niedrigere Farbmodi werden nun simuliert.
+Im Rahmen der Neuinsagierung Windows 8 für Windows Store-Apps ist eine der wichtigsten Änderungen, dass die Desktopfenster-Manager (DWM) jetzt nur 32-Bit-Farben in Windows 8 unterstützt. Niedrigere Farbmodi werden jetzt simuliert.
 
-Viele ältere apps und Spiele, die für Windows XP oder vor der Verwendung von 8-Bit-oder 16-Bit-Farbmodi entwickelt wurden. Ohne Entschärfung können diese apps unter Windows 8 nicht ausgeführt werden. Wenn diese apps jedoch einen der 8-Bit-oder 16-Bit-Farbmodi zur Anzeige verwenden, identifiziert PCA das Problem sofort und stellt mit der Hilfe von DWM sicher, dass die APP ordnungsgemäß mit dem simulierten Farb Modus funktioniert.
+Viele ältere Apps und Spiele, die für Windows XP oder vor entwickelt wurden, verwenden 8-Bit- oder 16-Bit-Farbmodi. Ohne Risikominderung können diese Apps auf Windows 8 nicht ausgeführt werden. Wenn diese Apps jedoch einen der 8-Bit- oder 16-Bit-Farbmodi für die Anzeige auflisten oder zu verwenden versuchen, identifiziert PCA sofort das Problem und stellt mithilfe von DWM sicher, dass die App ordnungsgemäß mit dem simulierten Farbmodus funktioniert.
 
-Beachten Sie, dass dies geschieht, sobald die APP den unteren Farbmodus anfordert und für den Benutzer transparent ist. Der Benutzer muss die APP nicht neu starten, um diese Entschärfung zu erhalten, da diese Korrektur immer erforderlich ist, um sicherzustellen, dass die APP ordnungsgemäß funktioniert.
+Beachten Sie, dass dies geschieht, sobald die App die Modi mit niedriger Farbe anfordert und für den Benutzer transparent ist. Der Benutzer muss die App nicht neu starten, um diese Lösung zu erhalten, da diese Korrektur immer erforderlich ist, um sicherzustellen, dass die App ordnungsgemäß funktioniert.
 
-**Anwendung schlägt aufgrund von Grafik-und Anzeigeproblemen fehl**
+**Anwendung schlägt aufgrund von Grafik- und Anzeigeproblemen fehl**
 
-Da Desktopfenster-Manager (DWM) in Windows 8 immer aktiviert ist, kann es bei einigen älteren Windows XP-ERA-apps zu Fehlern kommen, wenn die APP Grafik-APIs im gemischten Modus verwendet, wie bei der Verwendung von GDI-und DirectX-APIs zum Zeichnen auf den Bildschirm (meistens ältere Spiele) und versucht, den Vollbildmodus zu verwenden
+Da Desktopfenster-Manager (DWM) in Windows 8 immer aktiviert ist, können einige ältere Apps aus Windows XP-Zeit fehlschlagen, wenn die App Grafik-APIs im gemischten Modus verwendet, wie bei der Verwendung von GDI- und DirectX-APIs zum Zeichnen auf dem Bildschirm (meist ältere Spiele) und versucht, den Vollbildmodus zu verwenden:
 
--   DWM verhindert, dass das Zeichnen direkt auf dem Desktop erfolgt, und das Spiel oder die APP schlägt fehl, oder es wird ein schwarzer Bildschirm auf den Desktop gezeichnet, und keines der Grafiken ist sichtbar.
--   In solchen Fällen erkennt Windows, wenn die APP beendet wird,, dass die APP oder das Spiel ein Problem mit dem Vollbildmodus hat, und wendet den Kompatibilitätsmodus dxmaximizedwindowedmode an, mit dem die APP oder das Spiel in einem maximierten Fenstermodus statt im Vollbildmodus ausgeführt werden kann.
--   Nachdem die Einstellung am Ende der Ausführung angewendet wurde, wird der Benutzer vom PCA benachrichtigt, wie unten gezeigt. die APP erhält beim nächsten Testlauf den Kompatibilitätsmodus und kann ordnungsgemäß ausgeführt werden.
+-   DWM verhindert das direkte Zeichnen auf dem Desktop, und das Spiel oder die App schlägt entweder fehl, oder es wird ein schwarzer Bildschirm auf dem Desktop gezeichnet, und keine der Grafiken ist sichtbar.
+-   Wenn die App beendet wird, erkennt Windows in solchen Fällen, dass die App oder das Spiel ein Problem mit dem Vollbildmodus hat, und wendet den DXMAXIMIZEDWINDOWEDMODE-Kompatibilitätsmodus an, der die Ausführung der App oder des Spiels in einem maximierten Fenstermodus anstelle eines Vollbildmodus ermöglicht.
+-   Nachdem die Einstellung am Ende der Ausführung angewendet wurde, wird der Benutzer wie unten gezeigt per PCA benachrichtigt. Die App erhält bei der nächsten Ausführung den Kompatibilitätsmodus und kann ordnungsgemäß ausgeführt werden.
 
-![Anwendung schlägt aufgrund von Grafik-und Anzeigeproblemen fehl](images/pcafigure10.png)
+![Anwendung schlägt aufgrund von Grafik- und Anzeigeproblemen fehl](images/pcafigure10.png)
 
-**App kann keine dpi-Informationen deklarieren**
+**App kann DPI-Bekanntheit nicht deklarieren**
 
-Ein weiteres typisches Anzeige Problem bei vielen älteren apps tritt auf, wenn Windows und die APP im Modus mit hohem dpi-Modus ausgeführt werden, die APP jedoch nicht das Bewusstsein für hohe dpi-Vorgänge über das exe-Manifest deklariert. Zu den häufigen Problemen, die aufgrund dieser nicht Übereinstimmung in den Einstellungen auftreten können, zählen Elemente der Benutzeroberfläche oder Text und falscher Schrift Grad. Weitere Informationen zu den Problemen finden Sie [hier](/previous-versions//dd464660(v=vs.85)).
+Ein weiteres typisches Anzeigeproblem bei vielen älteren Apps tritt auf, wenn Windows und die App im Modus mit hohem DPI-Wert ausgeführt wird, die App jedoch nicht über ihr EXE-Manifest ihr Bewusstsein für hohe DPI deklariert. Zu den häufigen Problemen, die aufgrund dieses Konflikts in den Einstellungen auftreten können, gehören beschnittene Benutzeroberflächenelemente oder Text und ein falscher Schriftgrad. Weitere Informationen zu den Problemen finden Sie unter diesem [Link.](/previous-versions//dd464660(v=vs.85))
 
-In solchen Fällen erkennt Windows, dass die APP hoch dpi-fähig ist, und wendet den highdpiaware-Kompatibilitätsmodus auf die APP am Ende der ersten Testlauf an. Die PCA informiert den Benutzer dann über diese Informationen wie unten gezeigt:
+In solchen Fällen erkennt Windows, dass die App einen hohen DPI-Wert erkennt, und wendet den HIGHDPIAWARE-Kompatibilitätsmodus am Ende der ersten Ausführung auf die App an. Die PCA informiert den Benutzer dann wie unten gezeigt darüber:
 
-![Fehler beim Deklarieren des dpi-Dialog Felds für die APP](images/pcafigure11.png)
+![app fails to declare dpi awareness dialog (Dialogfeld zur DPI-Erkennung nicht deklarieren)](images/pcafigure11.png)
 
-**Anwendung schlägt aufgrund von fehlenden Windows-Features fehl**
+**Fehler bei der Anwendung aufgrund fehlender Windows Features**
 
-Einige apps sind von Windows-Features abhängig, die seit Windows Vista entfernt wurden. Wenn diese apps versuchen, die fehlenden DLLs oder COM-Komponenten zu laden, funktionieren Sie nicht mehr.
+Einige Apps sind von Windows Features abhängig, die seit Windows Vista entfernt wurden. Wenn diese Apps versuchen, die fehlenden DLLs oder COM-Komponenten zu laden, funktionieren sie nicht.
 
-PCA erkennt apps, wenn Sie versuchen, die fehlenden Windows-Features zu laden, und gibt eine Empfehlung zum Herunterladen dieser Komponenten und deren Installation nach dem Beenden der APP an. Der Benutzer kann auf "Get Help Online" klicken, um eine Alternative zu finden oder das Feature herunterzuladen und zu installieren. Wenn dies erforderlich ist, kann der Benutzer durch Klicken auf schließen auswählen, dass nichts unternommen werden soll.
+Die PCA erkennt Apps, wenn sie versuchen, die fehlenden Windows Features zu laden, und bietet eine Empfehlung, diese Komponenten herunterzuladen und zu installieren, nachdem die App beendet wurde. Der Benutzer kann auf "Hilfe online abrufen" klicken, um entweder eine Alternative zu finden oder das Feature herunterzuladen und zu installieren. Bei Bedarf kann der Benutzer nichts tun, indem er auf Schließen klickt.
 
-![Anwendungsfehler aufgrund eines fehlenden Dialog Felds "Windows-Features"](images/pcafigure12.png)
+![Anwendung schlägt aufgrund fehlender Windows-Features fehl](images/pcafigure12.png)
 
-**App schlägt aufgrund von nicht signierten Treibern auf 64-Bit-Windows 8 fehl**
+**App-Fehler aufgrund von nicht signierten Treibern auf 64-Bit-Windows 8**
 
-64-Bit-Windows hat seit Windows Vista Digital signierte Treiber (sys-Dateien) benötigt. Ältere apps wurden jedoch vor der Veröffentlichung von Windows Vista-ausgeliefert-Treibern entworfen, die nicht digital signiert waren. Wenn ein solcher nicht signierter Treiber installiert ist, lädt Windows ihn nicht. In seltenen Fällen kann es vorkommen, dass Windows nicht gestartet wird, wenn solche Treiber als Treiber für die Start Zeit gekennzeichnet sind.
+64-Bit-Windows verfügt seit Windows Vista über erforderliche digital signierte Treiber (SYS-Dateien). Ältere Apps, die vor der Veröffentlichung von Windows Vista entwickelt wurden, lieferten jedoch Treiber, die nicht digital signiert wurden. Wenn ein solcher Treiber ohne Vorzeichen installiert ist, werden sie von Windows nicht geladen. In seltenen Fällen ist es möglich, dass Windows nicht gestartet wird, wenn diese Treiber als Startzeittreiber markiert sind.
 
-Einige ältere apps installieren Treiber, die nicht auf 64-Bit-Windows signiert sind. Jedes Gerät oder jede APP, das versucht, diesen Treiber zu verwenden, kann fehlschlagen oder zu einem Systemabsturz führen. Um ein solches Szenario zu verhindern, erkennt der PCA apps, wenn er nicht signierte Treiber installiert, und deaktiviert den Treiber, der als Treiber für die Start Zeit markiert ist.
+Einige ältere Apps installieren Treiber, die nicht auf 64-Bit-Windows signiert sind. Alle Geräte oder Apps, die versuchen, diesen Treiber zu verwenden, können fehlschlagen oder zu einem Systemabsturz führen. Um ein solches Szenario zu verhindern, erkennt PCA Apps, wenn sie nicht signierte Treiber installieren, und deaktiviert den Treiber, der als Startzeittreiber markiert ist.
 
-Außerdem weist Sie den Benutzer an, einen digital signierten Treiber zu erhalten, damit die APP ordnungsgemäß funktioniert. Die Meldung wird als Ergebnis der Installation des Treibers und als Ergebnis der Installation der App angezeigt. Wenn der gleiche Treiber von einer anderen APP installiert wird, erhält diese APP ebenfalls dieselbe Nachricht.
+Außerdem wird der Benutzer angewiesen, einen digital signierten Treiber zu erwerben, damit die App ordnungsgemäß funktioniert. Die Meldung wird als Ergebnis der Installation des Treibers und als Ergebnis der Installation der App angezeigt. Wenn eine andere App denselben Treiber installiert, erhält diese App auch die gleiche Meldung.
 
-![App schlägt aufgrund von nicht signierten Treibern auf dem 64-Bit-Dialogfeld für Windows 8 fehl](images/pcafigure13.png)
+![app fails due to unsigned drivers on 64-bit windows 8 dialog (App schlägt aufgrund von nicht signierten Treibern im 64-Bit-Dialogfeld von Windows 8 fehl)](images/pcafigure13.png)
 
-**Über Kompatibilitäts Einstellungen installierte apps werden überwacht.**
+**Nachverfolgen von Apps, die über Kompatibilitätseinstellungen installiert wurden**
 
-Wenn ein Installer ausfällt, unterstützt PCA das Installationsprogramm je nach Fehlerart verschiedene Kompatibilitäts Modi. Nachdem das Installationsprogramm mit Kompatibilitäts Einstellungen erfolgreich abgeschlossen wurde, verfolgt PCA die Verknüpfungen, die das Installationsprogramm hinzugefügt hat Dadurch wird nachverfolgt, ob die installierten Apps möglicherweise auch die Kompatibilitäts Einstellungen für das Installationsprogramm benötigen.
+Wenn ein Installationsprogramm ausfällt, unterstützt PCA das Installationsprogramm je nach Art des Fehlers mit verschiedenen Kompatibilitätsmodi. Sobald das Installationsprogramm mit kompatibilitätseinstellungen erfolgreich ausgeführt wurde, verfolgt pca die Verknüpfungen nach, die das Installationsprogramm hinzugefügt hat. Dadurch wird nachverfolgt, ob die installierten Apps möglicherweise auch die Kompatibilitätseinstellungen benötigen, die auf das Installationsprogramm angewendet werden.
 
-Wenn ein Benutzer eine solche APP aufruft, fordert PCA den Benutzer dazu auf, zu Fragen, ob die APP ordnungsgemäß funktioniert hat. Wenn der Benutzer antwortet, "yes", hält der PCA die Nachverfolgung der APP an. Wenn der Benutzer "Nein" antwortet, wendet er denselben Kompatibilitätsmodus an, der auf das Installationsprogramm der APP angewendet wurde, und führt die APP erneut mit dem angewendeten Kompatibilitätsmodus aus.
+Wenn ein Benutzer eine solche App startet, fordert PCA den Benutzer auf, zu fragen, ob die App ordnungsgemäß funktioniert hat. Wenn der Benutzer die Antwort "Ja" gibt, beendet die PCA die Nachverfolgung der App. Wenn der Benutzer "Nein" beantwortet, wendet er den gleichen Kompatibilitätsmodus an, der auf das Installationsprogramm der App angewendet wurde, und führt die App mit dem angewendeten Kompatibilitätsmodus erneut aus.
 
-**App kann Installationsprogramme oder updaterer nicht starten**
+**App kann Installationsprogramme oder Updater nicht starten**
 
-Apps starten manchmal untergeordnete Programme, die als Administratoren ausgeführt werden müssen. Dies ist in der Regel der Fall, wenn eine APP versucht, die Updater-Software zu starten, um neue Updates für die APP zu überprüfen und zu installieren. Wenn apps solche untergeordneten Programme direkt ausführen, kann das untergeordnete Programm nicht gestartet werden, da die APP selbst nicht über Administratorrechte verfügte oder weil das untergeordnete Programm nicht ordnungsgemäß für die Rechte Erweiterung mit dem UAC-Manifest gekennzeichnet wurde.
+Apps starten manchmal untergeordnete Programme, die als Administratoren ausgeführt werden müssen. Dies ist in der Regel der Fall, wenn eine App versucht, ihre Updatersoftware zu starten, um neue Updates für die App zu überprüfen und zu installieren. Wenn Apps solche untergeordneten Programme direkt ausführen, kann das untergeordnete Programm nicht gestartet werden, weil die App selbst nicht über Administratorrechte verfügte oder weil das untergeordnete Programm nicht ordnungsgemäß für erhöhte Rechte mit dem UAC-Manifest markiert wurde.
 
-PCA verfolgt diese Fehler nach, und wenn die primäre app geschlossen wird, wendet sie automatisch den ElevateCreateProcess-Kompatibilitätsmodus an, der dabei hilft, dass untergeordnete Programme ordnungsgemäß ausgeführt werden. Wenn die APP die untergeordnete App bei nachfolgenden Ausführungen startet, wird dem Benutzer ein UAC-Dialogfeld für das untergeordnete Programm angezeigt.
+PCA verfolgt diese Fehler nach, und wenn die primäre App geschlossen wird, wird automatisch der ELEVATECREATEPROCESS-Kompatibilitätsmodus angewendet, der die ordnungsgemäße Ausführung der untergeordneten Programme unterstützt. Wenn die App die untergeordnete App bei nachfolgenden Ausführungen startet, wird dem Benutzer ein UAC-Dialogfeld für das untergeordnete Programm angezeigt.
 
-Im folgenden wird ein Beispiel für das PCA-Dialogfeld angezeigt:
+Ein Beispiel für das PCA-Dialogfeld ist unten dargestellt:
 
-![Fehler beim Starten des Dialog Felds "Installer oder updaterer" der APP](images/pcafigure14.png)
+![App kann das Dialogfeld "Installationsprogramme oder Updater" nicht starten](images/pcafigure14.png)
 
-**App-Installationsprogramme, die mit Administrator Berechtigungen ausgeführt werden müssen**
+**App-Installer, die mit Administratorrechten ausgeführt werden müssen**
 
-Installer von Windows-Desktop-Apps erfordern Administratorrechte, da Sie Dateien, Ordner und Registrierungseinträge in geschützte Systembereiche schreiben. Windows (UAC) verfügt über Erkennungs Logik, um zu ermitteln, wann ein Installer ausgeführt wird, und fordert den Benutzer sofort auf, Administratorrechte über das UAC-Dialogfeld anzugeben. In einigen Fällen kann diese Logik jedoch nicht ermitteln, ob es sich bei einer APP tatsächlich um ein Installationsprogramm handelt, und es werden möglicherweise keine Administratorrechte erhalten. Dabei handelt es sich im Allgemeinen um benutzerdefinierte Installationsprogramme, die keine bekannten Installationstechnologien wie Windows Installer oder Install Shield verwenden.
+Installationsprogramme von Windows Desktop-Apps erfordern Administratorrechte, da sie Dateien, Ordner und Registrierungseinträge in geschützte Systembereiche schreiben. Windows (UAC) verfügt über Erkennungslogik, um zu ermitteln, wann ein Installationsprogramm ausgeführt wird, und fordert den Benutzer sofort auf, Administratorrechte über das UAC-Dialogfeld bereitzustellen. In einigen Fällen kann diese Logik jedoch nicht feststellen, dass eine App tatsächlich ein Installationsprogramm war, und erhält möglicherweise keine Administratorrechte. Dies sind im Allgemeinen benutzerdefinierte Installationsprogramme, die keine bekannten Installationstechnologien wie Windows Installer oder Install Shield verwenden.
 
-In solchen Fällen erkennt der PCA, dass der Installer seine Dateien nicht schreiben konnte. Wenn die fehlgeschlagene Installation fehlschlägt, gibt PCA eine Empfehlung zum Anwenden von Kompatibilitäts Einstellungen an. Wenn der Benutzer auf "Programm ausführen" klickt, wendet PCA den RunAsAdmin-Kompatibilitätsmodus an und führt den Installer erneut aus. Wenn sich der Benutzer für das Schließen entscheidet, wird keine Einstellung angewendet. Ein Beispiel für ein PCA-Dialogfeld ist unten dargestellt:
+In solchen Fällen erkennt pca, dass das Installationsprogramm seine Dateien nicht schreiben konnte. Wenn bei der Installation ein Fehler aufgetreten ist, wird vom PCA eine Empfehlung zum Anwenden von Kompatibilitätseinstellungen angezeigt. Wenn der Benutzer auf "Programm ausführen" klickt, wendet PCA den RUNASADMIN-Kompatibilitätsmodus an und führt das Installationsprogramm erneut aus. Wenn sich der Benutzer für das Schließen entscheidet, wird keine Einstellung angewendet. Im Folgenden finden Sie ein PcA-Beispieldialogfeld:
 
-![Screenshot, der ein Beispiel für ein Dialogfeld für ein App-Installationsprogramm anzeigt, das mit Administratorrechten ausgeführt werden muss.](images/pcafigure15.png)
+![Screenshot: Beispiel für ein Dialogfeld für ein App-Installationsprogramm, das mit Administratorrechten ausgeführt werden muss](images/pcafigure15.png)
 
-Ältere Systemsteuerungs-Applets, die mit Administratorrechten System Steuerungs Applets ausgeführt werden müssen, ändern in der Regel die Systemeinstellungen und benötigen die Möglichkeit, AD-Administrator auszuführen. Die, die vor Windows Vista geschrieben wurden, verfügen jedoch nicht über ein exe-Manifest, oder Sie verfügen nicht über den Trust Info-Abschnitt, der die gewünschte Berechtigungsstufe deklariert. Wenn solche Applets ausgeführt werden, erkennt der PCA Sie, und gibt am Ende der ersten Testlauf eine Empfehlung zur Durchführung der administrativen Einstellungen an. Wenn der Benutzer auf "Programm ausführen" klickt, wendet PCA den RunAsAdmin-Kompatibilitätsmodus an und führt den Installer erneut aus. Wenn sich der Benutzer für das Schließen entscheidet, werden keine Einstellungen angewendet. Ein Beispiel für ein PCA-Dialogfeld ist unten dargestellt:
+Legacy-Systemsteuerung Applets, die mit Administratorrechten ausgeführt werden müssen, ändern in der Regel Systemeinstellungen und benötigen die Möglichkeit, Ad-Administrator auszuführen. Diejenigen, die vor Windows Vista geschrieben wurden, verfügen jedoch entweder nicht über ein EXE-Manifest oder nicht über den TRUSTINFO-Abschnitt, der die erforderliche Berechtigungsstufe deklariert. Wenn solche Applets ausgeführt werden, erkennt pca sie und gibt am Ende der ersten Ausführung eine Empfehlung zur Ausführung mit Administratoreinstellungen an. Wenn der Benutzer auf "Programm ausführen" klickt, wendet PCA den RUNASADMIN-Kompatibilitätsmodus an und führt das Installationsprogramm erneut aus. Wenn sich der Benutzer für das Schließen entscheidet, werden keine Einstellungen angewendet. Im Folgenden finden Sie ein PcA-Beispieldialogfeld:
 
-![App-Installationsprogramme, die mit Administrator Berechtigungen ausgeführt werden müssen](images/pcafigure16.png)
+![App-Installer, die mit Administratorrechten ausgeführt werden müssen](images/pcafigure16.png)
 
-**Überprüfen der empfohlenen Einstellungen durch Benutzer Feedback**
+**Überprüfen der empfohlenen Einstellungen durch Benutzerfeedback**
 
-Am Ende jedes Szenarios (nachdem die APP mit den empfohlenen Kompatibilitäts Einstellungen ausgeführt wurde) fragt PCA den Benutzer nach einer einfachen Frage:
+Am Ende jedes Szenarios (nachdem die App mit empfohlenen Kompatibilitätseinstellungen ausgeführt wurde) stellt PCA dem Benutzer eine einfache Frage:
 
-![Überprüfen der empfohlenen Einstellungen im Dialogfeld "Benutzer Feedback"](images/pcafigure17.png)
+![Überprüfen der empfohlenen Einstellungen über das Dialogfeld "Benutzerfeedback"](images/pcafigure17.png)
 
-Der Benutzer kann Feedback geben, wenn die APP mit der Kompatibilitäts Einstellung funktioniert hat oder fehlgeschlagen ist. Diese Daten werden anonym an Microsoft gesendet. Dadurch wird sichergestellt, dass solche Korrekturen in Windows 8 über den Windows Update-Prozess integriert werden können, sodass zukünftige Benutzer von Windows 8 den App-Fehler nicht mehr erreichen, und PCA die APP nicht mehr nach dem Fehler nachverfolgen muss.
+Der Benutzer kann Feedback geben, wenn die App mit der Kompatibilitätseinstellung funktioniert hat oder fehlgeschlagen ist. Diese Daten werden anonym an Microsoft gesendet. Dadurch wird sichergestellt, dass solche Fehlerbehebungen über Windows Updateprozess in Windows 8 integriert werden können, sodass zukünftige Benutzer von Windows 8 nicht mehr auf den App-Fehler stoßen und die PCA die App nicht mehr auf den Fehler nachverfolgen muss.
 
 **Nachverfolgen von Problemen ohne Empfehlungen**
 
-Apps können aus Kompatibilitätsgründen auf viele verschiedene Arten fehlschlagen. PCA verfolgt viele weitere Kompatibilitätsprobleme, als in den obigen Szenarien aufgeführt sind. In diesen Fällen hängt die Problem Manifestation oft von der App ab. Dies bedeutet, dass einige apps solche Probleme ordnungsgemäß behandeln und daraus wiederherstellen können, während andere dies nicht tun. Daher bietet der PCA, bei dem der PCA die APP weiterhin verfolgt, keine direkte Empfehlung für eine Korrektur.
+Apps können aus Kompatibilitätsgründen auf viele verschiedene Arten ausfallen. PCA verfolgt viel mehr Kompatibilitätsprobleme als in den obigen Szenarien aufgeführt. In diesen Fällen hängt das Problem häufig von der App ab. Dies bedeutet, dass einige Apps solche Probleme ordnungsgemäß behandeln und daraus wiederherstellen, während andere dies möglicherweise nicht tun. Bei solchen Problemen bietet pca zwar weiterhin die App, aber keine direkte Empfehlung für eine Behebung.
 
-Zu den Problemen, die von PCA nachverfolgt werden, ohne dass eine empfohlene Einstellung oder ein Dialogfeld angezeigt wird, gehören folgende apps:
+Zu den Problemen, die pca verfolgt, die keine empfohlene Einstellung oder kein Dialogfeld aufweisen, gehören Apps, die:
 
--   Sehr kurze Laufzeit – apps werden nicht mehr als drei Sekunden ausgeführt.
--   Erstellen globaler Speicher Objekte ohne Administratorrechte
+-   Sehr kurze Laufzeit: Apps werden nicht länger als drei Sekunden ausgeführt.
+-   Erstellen von globalen Speicherobjekten ohne Administratorrechte
 -   Fehler (Win32-Ausnahme) beim Start
--   Überprüfen auf Administratorrechte (schlägt jedoch möglicherweise fehl)
--   Verwenden von Indeo-Codecs (veraltet von Windows Vista)
--   Versuchen Sie, Schlüssel von geschützten Registrierungs Speicherorten wie HKLM zu schreiben oder zu löschen.
+-   Überprüfen auf Administratorrechte (aber möglicherweise nicht fehlgeschlagen)
+-   Verwenden von Indeo-Codecs (veraltet ab Windows Vista)
+-   Versuchen Sie, Schlüssel aus geschützten Registrierungsspeicherorten wie HKLM zu schreiben oder zu löschen.
 -   Absturz beim Start
 
-**Anwenden von Korrekturen auf der Registerkarte "Kompatibilität" und Kompatibilitätsproblemen**
+**Anwenden von Fehlerbehebungen über die Registerkarte "Kompatibilität" und "Kompatibilitätsproblembehandlung"**
 
-Wie bereits erwähnt, können Apps aus einer Vielzahl von Kompatibilitätsgründen fehlschlagen. Nicht alle diese haben eine Clear PCA-Empfehlung, da die Einstellungen App-abhängig sind. Benutzer können jedoch zur Kompatibilitätsproblem Behandlung oder zur Registerkarte Kompatibilität wechseln, um bestimmte gängige Korrekturen anzuwenden, um zu versuchen, ihre fehlerhafte App auf Windows 8 ordnungsgemäß zu verwenden. In solchen Fällen verfolgt PCA die APP weiterhin auf Kompatibilitätsprobleme, bevor und nachdem die Lösung angewendet wird. Nachdem die APP mit der Anwendung ausgeführt wurde, wird der Benutzer vom PCA gefragt, ob der Fehler behoben wurde. Nachdem der Benutzer die Frage beantwortet hat, werden die Daten anonym über Telemetriedaten an Microsoft gesendet. Diese Daten werden von vielen Benutzern gesammelt und analysiert, und die qualifizierenden Korrekturen werden dann über Windows Update umfassend an alle Windows 8-Benutzer verteilt.
+Wie bereits erwähnt, können Apps aus verschiedenen Kompatibilitätsgründen fehlschlagen. Nicht alle haben eine klare PCA-Empfehlung, da die Einstellungen von der App abhängig sind. Benutzer können jedoch zur Kompatibilitätsproblembehandlung oder zur Registerkarte Kompatibilität wechseln, um bestimmte allgemeine Fehlerbehebungen anzuwenden, um zu versuchen, ihre fehlerhafte App ordnungsgemäß auf Windows 8 zu bearbeiten. In solchen Fällen verfolgt die PCA die App weiterhin auf Kompatibilitätsprobleme nach, bevor und nachdem die Korrektur angewendet wurde. Nachdem die App mit angewendeter Korrektur ausgeführt wurde, fragt pca den Benutzer, ob die Korrektur funktioniert hat. Nachdem der Benutzer die Frage beantwortet hat, werden die Daten anonym über Telemetriedaten an Microsoft gesendet. Diese Daten werden von vielen Benutzern gesammelt und analysiert, und die qualifizierenden Fehlerbehebungen werden dann über Windows Update auf alle Windows 8 Benutzer verteilt.
 
-**Verwenden der Kompatibilitätsproblem Behandlung**
+**Verwenden der Kompatibilitätsproblembehandlung**
 
-Die Kompatibilitätsproblem Behandlung ist ein Mechanismus in Windows, mit dem Sie Probleme mit apps diagnostizieren und empfohlene Korrekturen anwenden können, damit Sie ordnungsgemäß funktionieren. Dies ist nur erforderlich, wenn der PCA keine Empfehlung für die APP bereitstellt.
+Die Kompatibilitätsproblembehandlung ist ein Mechanismus in Windows, mit dem Sie Probleme mit Apps diagnostizieren und empfohlene Fehlerbehebungen anwenden können, damit sie ordnungsgemäß funktionieren. Dies ist nur erforderlich, wenn pca keine Empfehlung für die App bereitstellen soll.
 
-Mit der Problembehandlung können Benutzer eine Reihe von Fragen durchlaufen und beantworten. basierend auf den Antworten wird ein Satz von Korrekturen angewendet, und die Benutzer können ihre Apps testen und die Korrekturen überprüfen. Nach der Überprüfung werden die Korrekturen dauerhaft auf die apps angewendet, damit Sie unter Windows 8 besser funktionieren.
+Mit der Problembehandlung können Benutzer eine Reihe von Fragen durchlaufen und beantworten. Basierend auf den Antworten wenden sie eine Reihe von Fehlerbehebungen an und ermöglichen es den Benutzern, ihre Apps zu testen und die Fehlerbehebungen zu überprüfen. Nach der Überprüfung werden die Fehlerbehebungen dauerhaft auf die Apps angewendet, damit sie bei Windows 8 besser funktionieren.
 
-Im folgenden finden Sie eine Referenz zur Problembehandlung:
+Die Problembehandlungsbenutzeroberfläche wird unten als Referenz angezeigt:
 
-![Verwenden des Dialog Felds zur Kompatibilität von Kompatibilitätsproblemen](images/pcafigure18.png)
+![Verwenden des Dialogfelds "Kompatibilitätsproblembehandlung"](images/pcafigure18.png)
 
-Die Kompatibilitätsproblem Behandlung kann auf zwei Arten gestartet werden:
+Sie können die Kompatibilitätsproblembehandlung auf zwei Arten starten:
 
-**Über den Startbildschirm:**
+**Auf dem Startbildschirm:**
 
-1.  Typ: Kompatibilitätsproblem Behandlung
-2.  Klicken Sie im Abschnitt Einstellungen auf die Kachel "Programme, die für vorherige Version von Windows ausgeführt wurden".
+1.  Typ: Kompatibilitätsproblembehandlung
+2.  Klicken Sie im Abschnitt "Einstellungen" auf die Kachel "Programme für vorherige Version von Windows ausführen".
 
   
-**Über die APP-Kachel:**
+**Über die App-Kachel:**
 
-1.  Klicken Sie im Start Bildschirm mit der rechten Maustaste auf die APP-Kachel.
-2.  Klicken Sie auf "Datei Speicherort öffnen" (nur Desktop-Apps).
-3.  Klicken Sie im Explorer-Menüband auf die Registerkarte "App".
-4.  "Behandlung von Kompatibilitätsproblemen" auswählen
+1.  Klicken Sie im Startbildschirm mit der rechten Maustaste auf die App-Kachel.
+2.  Klicken Sie auf "Dateispeicherort öffnen" (nur Desktop-Apps).
+3.  Klicken Sie im Menüband Explorer auf die Registerkarte "App".
+4.  Wählen Sie "Problembehandlung bei der Kompatibilität" aus.
 
   
 
 
 **Verwenden der Registerkarte "Kompatibilität"**
 
-Beachten Sie, dass dies nur für Benutzer empfohlen wird, die verschiedene Kompatibilitäts Einstellungen ausprobieren möchten. Diese Methode bietet keine Empfehlung zur Art der Behebung, die auf apps angewendet werden soll. Hier wird erwartet, dass der Benutzer weiß, welche Korrekturen angewendet werden können, damit die APP funktioniert. Wenn Sie sich nicht sicher sind, welche Korrekturen vorliegen, verwenden Sie die Kompatibilitätsproblem Behandlung, um eine Lösung für die APP zu finden.
+Beachten Sie, dass dies nur für Benutzer empfohlen wird, die Experten sind, die verschiedene Kompatibilitätseinstellungen ausprobieren. Diese Methode bietet keine Empfehlung für den Typ der Fehlerbehebung, die auf Apps angewendet werden soll. Hier muss der Benutzer wissen, welche Korrekturen angewendet werden können, damit die App funktioniert. Wenn Sie sich über die Fehlerbehebungen nicht sicher sind, verwenden Sie die Kompatibilitätsproblembehandlung, um eine Lösung für die App zu finden.
 
 So greifen Sie auf die Registerkarte Kompatibilität zu:
 
- **Über den Startbildschirm:**
+ **Auf dem Startbildschirm:**
 
-1.  Rechtsklick auf die APP-Kachel
-2.  Datei Speicherort öffnen (nur Desktop-Apps)
+1.  Klicken Sie mit der rechten Maustaste auf die App-Kachel.
+2.  Dateispeicherort öffnen (nur Desktop-Apps)
 
   
-**Im Explorer-Menüband:**
+**Über das Menüband Explorer:**
 
-1.  Klicken Sie auf Eigenschaften
+1.  Klicken Sie auf Eigenschaften.
 2.  Navigieren Sie zur Registerkarte Kompatibilität.
-3.  Kompatibilitäts Korrekturen auswählen
-4.  Erneutes Ausführen der APP
+3.  Auswählen der Kompatibilitätskorrekturen
+4.  Erneutes Ausführen der App
     > [!Note]  
-    > Sie können erneut an derselben Stelle zurückkehren, um die Korrekturen zu ändern oder zu entfernen. Sie können die Korrekturen auch auf alle Benutzer auf dem Computer anwenden, indem Sie die Schaltfläche auf der Registerkarte verwenden.
+    > Sie können wieder an den gleichen Ort zurückkehren, um die Fehlerbehebungen ebenfalls zu ändern oder zu entfernen. Sie können die Fehlerbehebungen auch auf alle Benutzer auf dem Computer anwenden, indem Sie die Schaltfläche auf der Registerkarte verwenden.
 
      
 
   
 
 
-![Verwenden der Registerkarte "Kompatibilität"](images/pcafigure19.png)
+![mithilfe der Registerkarte "Kompatibilität"](images/pcafigure19.png)
 
 **Apps mit bekannten Kompatibilitätsproblemen**
 
-Abgesehen von den oben aufgeführten Erkennungs Szenarien zur Laufzeit werden die Benutzer von PCA auch beim Starten der APP informiert, wenn die APP bekannte Kompatibilitätsprobleme aufweist. Die Liste wird in der Kompatibilitätsdatenbank der System-App gespeichert. Es gibt zwei Arten von Nachrichten:
+Neben den oben aufgeführten Szenarien zur Erkennung von Laufzeitproblemen informiert pca Benutzer beim Start der App auch, wenn die App bekannte Kompatibilitätsprobleme auflistet. Die Liste wird in der Kompatibilitätsdatenbank der System-App gespeichert. Es gibt zwei Arten von Nachrichten:
 
--   **Hard-Block-Nachrichten**– wenn die APP bekanntermaßen nicht kompatibel ist und das Zulassen der Ausführung der APP zu schwerwiegenden Auswirkungen auf das System führt (z. b. ein Windows-Absturz oder nach der Installation nicht starten kann), wird eine blockierende Meldung angezeigt, wie unten gezeigt.
+-   **Hartblockmeldungen:** Wenn bekannt ist, dass die App inkompatibel ist und die Ausführung der App zu schwerwiegenden Auswirkungen auf das System führt (z. B. ein Windows Absturz oder der Start nach der Installation nicht möglich ist), wird eine Blockierungsmeldung wie unten dargestellt angezeigt.
 
-![Apps mit bekannten Kompatibilitätsproblemen: Dialogfeld "Hard Block Messages"](images/pcafigure20.png)
+![Apps mit bekannten Kompatibilitätsproblemen – Dialogfeld "Meldungen mit harter Blockierung"](images/pcafigure20.png)
 
--   **Soft-Block-Nachrichten**– wenn die APP ein bekanntes Kompatibilitätsproblem aufweist und möglicherweise nicht ordnungsgemäß funktioniert, wird diese Meldung angezeigt:
+-   **Soft Block Messages**: Wenn die App über ein bekanntes Kompatibilitätsproblem verfügt und möglicherweise nicht ordnungsgemäß funktioniert, wird die folgende Meldung angezeigt:
 
-![Apps mit bekannten Kompatibilitätsproblemen-Dialogfeld "Soft Block Messages"](images/pcafigure21.png)
+![Apps mit bekannten Kompatibilitätsproblemen – Dialogfeld "Softblocknachrichten"](images/pcafigure21.png)
 
-In beiden Fällen sendet die Option "Get Help Online" einen Windows-Fehlerbericht, um eine Online Antwort von Microsoft zu erhalten, und zeigt Sie dem Benutzer an. In der Regel weisen die Antworten den Benutzer auf einen von drei Arten von Ressourcen hin:
+In beiden Fällen sendet die Option "Hilfe online abrufen" einen Windows Fehlerbericht, um eine Onlineantwort von Microsoft zu erhalten und dem Benutzer anzuzeigen. In der Regel verweisen die Antworten den Benutzer auf einen von drei Arten von Ressourcen:
 
--   Ein Update vom APP-Hersteller
--   Die Website eines App-Anbieters für weitere Informationen
--   Microsoft Knowledge Base-Artikel weitere Informationen
+-   Ein Update des App-Anbieters
+-   Website eines App-Anbieters für weitere Informationen
+-   Weitere Informationen finden Sie in einem Microsoft Knowledge Base-Artikel.
 
 **Telemetrie für PCA**
 
-Nachdem der PCA alle App-Probleme auf einem Windows 8-Computer behoben hat und alle Benutzer Feedback erhält, sammelt er anonyme Daten über die APP, das Installationsprogramm, die erkannten Probleme und die Kompatibilitäts Einstellungen, die auf die APP angewendet werden, und sendet Sie an Microsoft zurück. Diese Daten werden von jedem Benutzer gesammelt, der bereit ist, solche anonymen Daten (über das Programm zur Verbesserung der Benutzerfreundlichkeit CEIP) bereitzustellen. Nachdem diese Daten erfasst wurden, werden die Fehler und Fehlerbehebungen der APP analysiert, und die Korrekturen werden dann über den Windows Update Mechanismus an das gesamte Windows-Ökosystem verteilt, sodass jeder Benutzer der app in Zukunft automatisch von der Behebung profitiert.
+Nachdem pca alle App-Probleme auf einem Windows 8 Computer behoben und das gesamte Benutzerfeedback erhalten hat, sammelt sie anonyme Daten über die App, das Installationsprogramm, die erkannten Probleme und die auf die App angewendeten Kompatibilitätseinstellungen und sendet sie zurück an Microsoft. Diese Daten werden von jedem Benutzer gesammelt, der bereit ist, solche anonymen Daten bereitzustellen (über die Programm zur Verbesserung der Benutzerfreundlichkeit – CEIP). Sobald diese Daten gesammelt wurden, werden die Fehler und Fehlerbehebungen der App analysiert, und die Fehlerbehebungen werden dann über den Windows Updatemechanismus an das gesamte Windows Ökosystem verteilt, sodass alle Benutzer der App in Zukunft automatisch von der Korrektur profitieren.
 
-**Administrative Steuerelemente und Verwalten der PCA-Einstellungen**
+**Administrative Steuerungen und Verwalten von PCA-Einstellungen**
 
 IT-Administratoren können das PCA-Verhalten auf zwei Arten steuern:
 
--   **PCA** deaktivieren – diese Einstellung ermöglicht es IT-Administratoren, die Dialogfelder, die PCA anzeigt, für die Benutzer zu deaktivieren. PCA verfolgt und erkennt weiterhin Probleme und sendet Telemetriedaten.
--   **App-Telemetrie deaktivieren** – durch diese Einstellung wird das Sammeln und Senden von Telemetriedaten durch PCA deaktiviert.
+-   **PCA deaktivieren:** Mit dieser Einstellung können IT-Administratoren die Dialoge deaktivieren, die der PCA den Benutzern anzeigt. PCA verfolgt weiterhin Probleme und erkennt sie und sendet Telemetriedaten zurück.
+-   **App-Telemetrie deaktivieren:** Diese Einstellung deaktiviert jegliche Erfassung und das Senden von Telemetriedaten per PCA.
     > [!Note]  
     > Wenn CEIP deaktiviert ist, hat diese Einstellung keine Auswirkungen.
 
      
 
-**Entwerfen von Apps für die Zusammenarbeit mit PCA**
+**Entwerfen von Apps für die Arbeit mit PCA**
 
-Entwickler müssen sicherstellen, dass Ihre apps in allen oben beschriebenen Kompatibilitäts Szenarien gut funktionieren. Entwickler müssen ihre Apps für die einzelnen Szenarien testen und validieren und sicherstellen, dass es keine Kompatibilitätsprobleme gibt. Wenn Kompatibilitätsprobleme erkannt werden, sollten Entwickler die erforderlichen Korrekturen an Ihren Apps vornehmen, um sicherzustellen, dass das Kompatibilitätsproblem behoben ist. Zu den häufigsten Fehlerbehebungen, die Entwickler erstellen sollten, zählen:
+Entwickler müssen sicherstellen, dass ihre Apps in allen oben beschriebenen Kompatibilitätsszenarien gut funktionieren. Entwickler müssen ihre Apps für jedes der oben genannten Szenarien testen und überprüfen und sicherstellen, dass keine Kompatibilitätsprobleme vorliegen. Wenn Kompatibilitätsprobleme erkannt werden, sollten Entwickler die erforderlichen Korrekturen an ihren Apps vornehmen, um sicherzustellen, dass das Kompatibilitätsproblem behoben wird. Zu den häufigen Fehlerbehebungen, die Entwickler vornehmen sollten, gehören:
 
--   Windows-Betriebssystem-Versions Prüfungen bei Installation und Laufzeit eliminieren
--   Berechtigungsprüfung entfernen (Überprüfung des Administrator Zugriffs); Verwenden Sie das exe-Manifest, um die richtige Berechtigungsebene zu deklarieren.
--   Stellen Sie sicher, dass Windows-Binärdateien nicht innerhalb des App-Installers ausgeliefert werden.
--   Vermeiden Sie das Schreiben in geschützte Bereiche (Registrierung, Ordner) oder das Schreiben von geschützten Dateien.
--   Alle Binärdateien digital signieren (exe, dll, sys-Dateien)
--   Stellen Sie für Installationsprogramme sicher, dass der richtige Eintrag zum Hinzufügen/Entfernen der Software hinzugefügt wird. dieser APP-Metadateneintrag sollte mindestens den APP-Namen, den Herausgeber, die Versions Zeichenfolge und die unterstützte Sprache enthalten. Dadurch wird dem PCA mitgeteilt, dass das Installationsprogramm erfolgreich abgeschlossen wurde, und es wird eine bequeme Möglichkeit für Benutzer bereitgestellt, die APP zu deinstallieren.
+-   Entfernen Windows Überprüfungen der Betriebssystemversion bei der Installation und Laufzeit
+-   Entfernen der Berechtigungsprüfung (Überprüfung auf Administratorzugriff) Verwenden des EXE-Manifests zum Deklarieren der erforderlichen Berechtigungsebene
+-   Stellen Sie sicher, dass Windows Binärdateien nicht im App-Installer enthalten sind.
+-   Vermeiden des Schreibens in geschützte Bereiche (Registrierung, Ordner) oder Schreiben über geschützte Dateien
+-   Digitales Signieren aller Binärdateien (EXE, DLL, SYS-Dateien)
+-   Stellen Sie für Installationsprogramme sicher, dass der richtige Eintrag "Programme hinzufügen/entfernen" hinzugefügt wird. Dieser App-Metadateneintrag sollte mindestens den App-Namen, den Herausgeber, die Versionszeichenfolge und die unterstützte Sprache enthalten. Dies gibt der PCA an, dass das Installationsprogramm erfolgreich abgeschlossen wurde, und bietet Benutzern auch eine bequeme Möglichkeit, die App zu deinstallieren.
 
-Um sicherzustellen, dass der Trust Info-Abschnitt und der Kompatibilitäts Abschnitt des App-Manifests (ausführbare Datei) gemäß den Angaben im Windows 8 Compatibility Cookbook aktualisiert wird, weiß der PCA, dass die APP für Windows 8 entwickelt wurde, und stellt außerdem sicher, dass die APP immer nativ ausgeführt wird, ohne dass alle Kompatibilitäts Modi darauf angewendet
+Stellen Sie sicher, dass der Abschnitt TRUSTINFO und COMPATIBILITY des App-Manifests (ausführbare Datei) wie im Windows 8 Compatibility Cookbook aufgeführt aktualisiert wird, informiert pca den PCA darüber, dass die App für Windows 8 entwickelt wurde, und stellt außerdem sicher, dass die App immer nativ ausgeführt wird, ohne dass kompatibilitätsmodi angewendet werden.
 
-Um sicherzustellen, dass PCA die APP für Windows 8 entwickelt:
+So stellen Sie sicher, dass die PCA die App als für Windows 8 konzipiert betrachtet:
 
--   Alle exe-Dateien (Installer oder Runtime) müssen für die trustInfo-und Kompatibilitäts Abschnitte für Windows 8 angezeigt werden.
--   Der Installer muss den Eintrag "Software hinzufügen/entfernen" hinzufügen.
+-   Alle EXEs (Installationsprogramm oder Runtime) müssen für die Abschnitte TRUSTINFO und COMPATIBILITY für Windows 8
+-   Das Installationsprogramm sollte einen Eintrag "Programme hinzufügen/entfernen" hinzufügen.
 
 **Glossar**
 
-Die vom PCA verwendeten Kompatibilitäts Modi sind unten aufgeführt, und es wird eine kurze Beschreibung der Funktionsweise des Modus angezeigt.
+Die von DER PCA verwendeten Kompatibilitätsmodi sind unten mit einer kurzen Beschreibung aufgeführt, was der Modus ermöglicht.
 
 
 
 | Mode                         | BESCHREIBUNG                                                                                                                                                      |
 |------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Windows7RTM                  | Dieser Modus emuliert das allgemeine Verhalten von Windows 7, einschließlich der Betriebssystem-Versionsnummer 6,1.                                                                   |
-| WindowsVistaSP2              | Dieser Modus emuliert das allgemeine Verhalten von Windows 7, einschließlich der Betriebssystem-Versionsnummer 6,1.                                                                   |
-| WindowsXPSp3                 | Dieser Modus emuliert das allgemeine Verhalten von Windows XP SP3, einschließlich der Betriebssystem-Versionsnummer 5,1. Dies schließt auch den RunAsHighest-Modus ein.                    |
-| Runashöchste                 | Dieser Modus fordert den Benutzer auf, die APP mit der höchsten verfügbaren Berechtigung auszuführen. Benutzern mit Administratorrechten wird eine UAC-Eingabeaufforderung für erhöhte Rechte für die App angezeigt. |
-| RUNASADMIN                   | In diesem Modus wird der Benutzer immer aufgefordert, die APP mit Administratorrechten auszuführen. bei apps mit diesem Modus wird immer die UAC-Eingabeaufforderung für erhöhte Rechte angezeigt.                    |
-| ELEVATECREATEPROCESS         | Dieser Modus bewirkt, dass untergeordnete Prozesse der Haupt-App mit Administratorrechten ausgeführt werden. die untergeordneten Prozesse erhalten ein UAC-Erweiterungs Dialogfeld.                          |
-| Pindll                       | Dieser Modus erzwingt, dass eine DLL für eine APP im Arbeitsspeicher vorhanden ist, auch wenn die APP die dll entlädt.                                                                                |
-| Disableusercallbackexception | In diesem Modus werden Benutzer Rückruf Ausnahmen abgefangen, und die APP kann fortgesetzt werden, ohne dass die Ausnahme behandelt werden muss.                                          |
-| Virtualizedelete             | Dieser Modus fängt Löschvorgänge für geschützte Dateien ab und verhindert, dass apps aufgrund von nicht behandelten Ausnahmen vom Löschvorgang fehlschlagen.                   |
-| Wrpentschärfung                | Dieser Modus gibt Erfolg zurück, wenn eine APP versucht, Windows-geschützte Dateien oder Registrierungseinträge zu schreiben, zu ändern oder zu löschen (ohne den Vorgang tatsächlich abzuschließen).  |
-| Dxmaximizedwindowedmode      | Dieser Modus identifiziert apps, die in den Vollbildmodus wechseln, und leitet Sie in einen maximierten Fenstermodus um.                                                          |
-| Highdpiaware                 | Mit diesem Modus weiß der Rest von Windows, dass die APP hohe dpi-Werte hat, und hilft bei der ordnungsgemäßen Darstellung von Benutzeroberflächen Elementen, Text, Schriftart usw.                              |
+| Windows7RTM                  | Dieser Modus emuliert das allgemeine Verhalten Windows 7, einschließlich der Betriebssystemversionsnummer 6.1.                                                                   |
+| WindowsVistaSP2              | Dieser Modus emuliert das allgemeine Verhalten Windows 7, einschließlich der Betriebssystemversionsnummer 6.1.                                                                   |
+| WindowsXPSp3                 | Dieser Modus emuliert allgemeines Windows XP SP3-Verhalten, einschließlich der Betriebssystemversionsnummer 5.1. Dies schließt auch den RUNASHIGHEST-Modus ein.                    |
+| RUNASHIGHEST                 | In diesem Modus wird der Benutzer aufgefordert, die App mit den höchsten verfügbaren Berechtigungen auszuführen. Benutzern mit Administratorrechten wird eine UAC-Eingabeaufforderung für erhöhte Rechte für die App angezeigt. |
+| Runasadmin                   | In diesem Modus wird der Benutzer immer aufgefordert, die App mit Administratorrechten auszuführen. -Apps mit diesem Modus erhalten immer die Eingabeaufforderung für erhöhte Rechte durch die UAC.                    |
+| ELEVATECREATEPROCESS         | In diesem Modus werden untergeordnete Prozesse der Haupt-App mit Administratorrechten ausgeführt. Die untergeordneten Prozesse erhalten ein UAC-Dialogfeld für erhöhte Rechte.                          |
+| PINDLL                       | Dieser Modus erzwingt, dass sich eine DLL im Arbeitsspeicher für eine App befindet, auch wenn die App die DLL entlädt.                                                                                |
+| DISABLEUSERCALLBACKEXCEPTION | Dieser Modus fängt Benutzerrückrufausnahmen ab und ermöglicht es der App, fortzufahren, ohne die Ausnahme behandeln zu müssen.                                          |
+| VIRTUALIZEDELETE             | Dieser Modus fängt Löschvorgänge für geschützte Dateien ab und verhindert, dass Apps aufgrund nicht behandelter Ausnahmen aus dem Löschvorgang fehlschlagen.                   |
+| WRPMITIGATION                | Dieser Modus gibt erfolglos zurück, wenn eine App versucht, Windows geschützten Dateien oder Registrierungseinträgen zu schreiben, zu ändern oder zu löschen (ohne den Vorgang tatsächlich abzuschließen).  |
+| DXMAXIMIZEDWINDOWEDMODE      | Dieser Modus identifiziert Apps, die in den Vollbildmodus wechseln, und leitet sie in einen maximierten Fenstermodus um.                                                          |
+| HIGHDPIAWARE                 | In diesem Modus werden die restlichen Windows darüber informiert, dass die App über hohe DPI-Fähige Daten (High DPI Aware, DPI) informiert ist und das ordnungsgemäße Rendern von Benutzeroberflächenelementen, Text, Schriftart usw. unterstützt.                              |
 
 
 

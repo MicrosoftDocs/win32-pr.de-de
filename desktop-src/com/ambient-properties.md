@@ -13,7 +13,7 @@ ms.locfileid: "117737303"
 ---
 # <a name="ambient-properties"></a>Umgebungseigenschaften
 
-Mindestens ActiveX Control-Container müssen die folgenden Umgebungseigenschaften unterstützen, indem die Standard-Dispids verwendet werden.
+Steuerelementcontainer müssen ActiveX mindestens die folgenden Umgebungseigenschaften mithilfe der Standard-Dispids unterstützen.
 
 
 
@@ -21,7 +21,7 @@ Mindestens ActiveX Control-Container müssen die folgenden Umgebungseigenschafte
 |------------------------------|-----------------|--------------------------------------------------------------------------|
 | LocaleID<br/>          | -705<br/> |   <br/>                                                          |
 | Usermode<br/>          | -709<br/> | Für Container mit unterschiedlichen Benutzer- und Ausführungsumgebungen.<br/> |
-| DisplayAsDefault <br/> | -713<br/> | Für Container, bei denen eine Standardschaltfläche relevant ist.<br/>      |
+| DisplayAsDefault <br/> | -713<br/> | Für container, in denen eine Standardschaltfläche relevant ist.<br/>      |
 
 
 

@@ -1,29 +1,29 @@
 ---
-title: Httpcalculatorserviceexample
-description: In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines Rechner Diensts über HTTP verwendet wird.
+title: HttpCalculatorServiceExample
+description: In diesem Beispiel wird die Verwendung des Diensthosts zum Hosten eines Rechnerdiensts über HTTP veranschaulicht.
 ms.assetid: 898bc206-ad64-461c-a734-c8791b6b106d
 keywords:
-- 'Httpcalculatorserviceexample: Native Webdienste'
-- Wwsapi
+- HttpCalculatorServiceExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b560cce8065927f2322a77cb1f66e6151e818319
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: dc26fe4a0575c29b34807044b622c08c427a7d199fd38550e2c5fee760369f84
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037627"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117841693"
 ---
-# <a name="httpcalculatorserviceexample"></a>Httpcalculatorserviceexample
+# <a name="httpcalculatorserviceexample"></a>HttpCalculatorServiceExample
 
-In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines Rechner Diensts über HTTP verwendet wird.
+In diesem Beispiel wird die Verwendung des Diensthosts zum Hosten eines Rechnerdiensts über HTTP veranschaulicht.
 
--   [Httpcalculatorservice. cpp](#httpcalculatorservicecpp)
--   [CalculatorService. WSDL](#calculatorservicewsdl)
+-   [HttpCalculatorService.cpp](#httpcalculatorservicecpp)
+-   [CalculatorService.wsdl](#calculatorservicewsdl)
 -   [Makefile](#makefile)
 
-## <a name="httpcalculatorservicecpp"></a>Httpcalculatorservice. cpp
+## <a name="httpcalculatorservicecpp"></a>HttpCalculatorService.cpp
 
 
 ```C++
@@ -251,7 +251,7 @@ Exit:
 
 
 
-## <a name="calculatorservicewsdl"></a>CalculatorService. WSDL
+## <a name="calculatorservicewsdl"></a>CalculatorService.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -376,9 +376,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

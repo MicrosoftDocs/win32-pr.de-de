@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_ROOT_DESCRIPTOR_TABLE1-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, um die einfache Initialisierung einer D3D12-Stamm \_ \_ Deskriptor Table1-Struktur zu ermöglichen \_ .
+title: CD3DX12_ROOT_DESCRIPTOR_TABLE1 -Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, um eine einfache Initialisierung einer D3D12 \_ ROOT \_ DESCRIPTOR \_ TABLE1-Struktur zu ermöglichen.
 ms.assetid: 82AC1948-92AA-4A4D-B443-717E9BF3046D
 keywords:
-- CD3DX12_ROOT_DESCRIPTOR_TABLE1 Struktur
+- CD3DX12_ROOT_DESCRIPTOR_TABLE1-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e3538e5e1e199fdb6f8c7473af4996ccd7b7f1f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4570629b810fb7a088c7cfd88e3626412d5580beb1891a1a30daf9ffabede5d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354410"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117733992"
 ---
-# <a name="cd3dx12_root_descriptor_table1-structure"></a>CD3DX12 \_ root \_ Descriptor \_ Table1-Struktur
+# <a name="cd3dx12_root_descriptor_table1-structure"></a>CD3DX12 \_ ROOT \_ DESCRIPTOR \_ TABLE1-Struktur
 
-Eine hilfsstruktur, um die einfache Initialisierung einer [**D3D12-Stamm \_ \_ Deskriptor \_ Table1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_descriptor_table1) -Struktur zu ermöglichen.
+Eine Hilfsstruktur, um eine einfache Initialisierung einer [**D3D12 \_ ROOT \_ DESCRIPTOR \_ TABLE1-Struktur zu**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_descriptor_table1) ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,52 +45,52 @@ struct CD3DX12_ROOT_DESCRIPTOR_TABLE1  : public D3D12_ROOT_DESCRIPTOR_TABLE1{
 
 <dl> <dt>
 
-**CD3DX12 \_ root \_ Descriptor \_ Table1 ()**
+**CD3DX12 \_ ROOT \_ DESCRIPTOR \_ TABLE1()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12-Stamm \_ \_ Deskriptors \_ Table1.
+Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12 \_ ROOT \_ DESCRIPTOR \_ TABLE1.
 
 </dd> <dt>
 
-**expliziter CD3DX12-Stamm \_ \_ Deskriptor \_ Table1 (konstant D3D12 Stamm \_ \_ Deskriptor \_ Table1 &o)**
+**explicit CD3DX12 \_ ROOT \_ DESCRIPTOR \_ TABLE1(const D3D12 \_ ROOT \_ DESCRIPTOR \_ TABLE1 &o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 \_ root \_ Descriptor \_ Table1, initialisiert mit dem Inhalt einer anderen [**D3D12 \_ root \_ Descriptor \_ Table1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_descriptor_table1) -Struktur.
+Erstellt eine neue Instanz eines CD3DX12 ROOT DESCRIPTOR TABLE1, initialisiert mit dem Inhalt einer anderen \_ \_ \_ [**D3D12 \_ ROOT \_ DESCRIPTOR \_ TABLE1-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_descriptor_table1)
 
 </dd> <dt>
 
-**CD3DX12 \_ root \_ Descriptor \_ Table1 (uint numdescriptorranges, Konstanten D3D12 \_ Descriptor \_ Bereich1 \* \_ pdescriptorranges)**
+**CD3DX12 \_ ROOT \_ DESCRIPTOR \_ TABLE1(UINT numDescriptorRanges, const D3D12 \_ DESCRIPTOR \_ RANGE1 \* \_ pDescriptorRanges)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 \_ root \_ Descriptor \_ Table1 und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz eines CD3DX12 \_ ROOT \_ DESCRIPTOR \_ TABLE1 und initialisiert die folgenden Parameter:
 
-Uint numdescriptor Ranges
+UINT numDescriptorRanges
 
-Konstanten [**D3D12 \_ Deskriptor \_ Bereich1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1) \* \_ pdescriptorranges
+const [**D3D12 \_ DESCRIPTOR \_ RANGE1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1) \* \_ pDescriptorRanges
 
 </dd> <dt>
 
-**Inline-init (uint numdescriptorranges, Konstanten D3D12 \_ Deskriptor \_ Bereich1 \* \_ pdescriptorranges)**
+**inline Init(UINT numDescriptorRanges, const D3D12 \_ DESCRIPTOR \_ RANGE1 \* \_ pDescriptorRanges)**
 </dt> <dd>
 
 Gibt eine Funktion an, die die folgenden Parameter initialisiert:
 
-Uint numdescriptor Ranges
+UINT numDescriptorRanges
 
-Konstanten [**D3D12 \_ Deskriptor \_ Bereich1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1) \* \_ pdescriptorranges
+const [**D3D12 \_ DESCRIPTOR \_ RANGE1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1) \* \_ pDescriptorRanges
 
 </dd> <dt>
 
-**static Inline init (D3D12 \_ root \_ Descriptor \_ Table1 &rootdescriptortable, uint numdescriptorranges, Konstanten D3D12 \_ Descriptor \_ Bereich1 \* \_ pdescriptorranges)**
+**static inline Init(D3D12 \_ ROOT \_ DESCRIPTOR \_ TABLE1 &rootDescriptorTable, UINT numDescriptorRanges, const D3D12 \_ DESCRIPTOR \_ RANGE1 \* \_ pDescriptorRanges)**
 </dt> <dd>
 
 Gibt eine Funktion an, die die folgenden Parameter initialisiert:
 
-[**D3D12 \_ Stamm \_ Deskriptor \_ Table1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_descriptor_table1) &rootdescriptortable
+[**D3D12 \_ ROOT \_ DESCRIPTOR \_ TABLE1 &**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_descriptor_table1) rootDescriptorTable
 
-Uint numdescriptor Ranges
+UINT numDescriptorRanges
 
-Konstanten [**D3D12 \_ Deskriptor \_ Bereich1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1) \* \_ pdescriptorranges
+const [**D3D12 \_ DESCRIPTOR \_ RANGE1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_range1) \* \_ pDescriptorRanges
 
 </dd> </dl>
 
@@ -100,15 +100,15 @@ Konstanten [**D3D12 \_ Deskriptor \_ Bereich1**](/windows/desktop/api/d3d12/ns-d
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**D3D12-Stamm \_ \_ Deskriptor \_ Table1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_descriptor_table1)
+[**D3D12 \_ ROOT \_ DESCRIPTOR \_ TABLE1**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_root_descriptor_table1)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

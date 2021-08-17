@@ -1,5 +1,5 @@
 ---
-description: Die WMI Query Language (WQL) ist eine Teilmenge der American National Standards Institute strukturierte Abfragesprache (ANSI SQL)&8212; mit geringfügigen semantischen \# Änderungen. In der folgenden Tabelle sind die WQL-Schlüsselwörter aufgeführt.
+description: Die WMI Query Language (WQL) ist eine Teilmenge der American National Standards Institute strukturierte Abfragesprache (ANSI SQL)&\# 8212; mit geringfügigen semantischen Änderungen. In der folgenden Tabelle sind die WQL-Schlüsselwörter aufgeführt.
 ms.assetid: 72a7ec04-9af3-41ae-9189-6e1d46803fa9
 ms.tgt_platform: multiple
 title: WQL (WMI SQL)
@@ -32,7 +32,7 @@ Die WMI Query Language (WQL) ist eine Teilmenge der American National Standards 
 <tbody>
 <tr class="odd">
 <td>AND<br/></td>
-<td>Kombiniert zwei boolesche Ausdrücke und gibt <strong>TRUE zurück,</strong> wenn beide Ausdrücke <strong>TRUE sind.</strong><br/></td>
+<td>Kombiniert zwei boolesche Ausdrücke und gibt <strong>TRUE</strong> zurück, wenn beide Ausdrücke <strong>TRUE</strong>sind.<br/></td>
 </tr>
 <tr class="even">
 <td><a href="associators-of-statement.md">ASSOZIATOREN VON</a></td>
@@ -44,48 +44,48 @@ Die WMI Query Language (WQL) ist eine Teilmenge der American National Standards 
 </tr>
 <tr class="even">
 <td>FROM<br/></td>
-<td>Gibt die Klasse an, die die in einer SELECT-Anweisung aufgeführten Eigenschaften enthält. Windows Die Verwaltungsinstrumentation (WMI) unterstützt Datenabfragen von nur einer Klasse gleichzeitig.<br/></td>
+<td>Gibt die Klasse an, die die in einer SELECT-Anweisung aufgeführten Eigenschaften enthält. Windows Die Verwaltungsinstrumentation (Management Instrumentation, WMI) unterstützt Datenabfragen von jeweils nur einer Klasse.<br/></td>
 </tr>
 <tr class="odd">
 <td><a href="group-clause.md">GROUP-Klausel</a></td>
-<td>Bewirkt, dass WMI eine Benachrichtigung generiert, die eine Gruppe von Ereignissen repräsentiert.<br/> Verwenden Sie diese Klausel mit Ereignisabfragen.<br/></td>
+<td>Bewirkt, dass WMI eine Benachrichtigung generiert, um eine Gruppe von Ereignissen darzustellen.<br/> Verwenden Sie diese Klausel mit Ereignisabfragen.<br/></td>
 </tr>
 <tr class="even">
 <td><a href="having-clause.md">HAVING</a></td>
-<td>Filtert die Ereignisse, die während des Gruppierungsintervalls empfangen werden, das in der <a href="within-clause.md">WITHIN-Klausel angegeben ist.</a><br/></td>
+<td>Filtert die Ereignisse, die während des Gruppierungsintervalls empfangen werden, das in der <a href="within-clause.md">WITHIN-Klausel</a>angegeben ist.<br/></td>
 </tr>
 <tr class="odd">
 <td><a href="wql-operators.md">IS</a></td>
-<td>Vergleichsoperator, der mit NOT und <strong>NULL verwendet wird.</strong> Die Syntax für diese Anweisung ist die folgende:<br/> IS [NOT] <strong>NULL</strong><br/> (wobei NOT optional ist)<br/></td>
+<td>Vergleichsoperator, der mit NOT und <strong>NULL</strong>verwendet wird. Die Syntax für diese Anweisung lautet wie folgt:<br/> IS [NOT] <strong>NULL</strong><br/> (wobei NOT optional ist)<br/></td>
 </tr>
 <tr class="even">
 <td><a href="wql-operators.md">ISA</a></td>
-<td>Operator, der eine Abfrage auf die Unterklassen einer angegebenen Klasse an wendet. Weitere Informationen finden Sie unter <a href="isa-operator-for-event-queries.md">ISA-Operator für</a>Ereignisabfragen, <a href="isa-operator-for-data-queries.md">ISA-Operator für Datenabfragen</a>und <a href="isa-operator-for-schema-queries.md">ISA-Operator für Schemaabfragen.</a><br/></td>
+<td>Operator, der eine Abfrage auf die Unterklassen einer angegebenen Klasse anwendet. Weitere Informationen finden Sie unter <a href="isa-operator-for-event-queries.md">ISA-Operator für Ereignisabfragen,</a> <a href="isa-operator-for-data-queries.md">ISA-Operator für Datenabfragen</a>und <a href="isa-operator-for-schema-queries.md">ISA-Operator für Schemaabfragen.</a><br/></td>
 </tr>
 <tr class="odd">
 <td>KEYSONLY<br/></td>
-<td>Wird in <a href="references-of-statement.md">REFERENCES OF-</a> und <a href="associators-of-statement.md">ASSOCIATORS OF-Abfragen</a> verwendet, um sicherzustellen, dass die resultierenden Instanzen nur mit den Schlüsseln der -Instanzen aufgefüllt werden, wodurch der Aufwand für den Aufruf reduziert wird.<br/></td>
+<td>Wird in <a href="references-of-statement.md">REFERENCES OF-</a> und <a href="associators-of-statement.md">ASSOCIATORS OF-Abfragen</a> verwendet, um sicherzustellen, dass die resultierenden Instanzen nur mit den Schlüsseln der Instanzen aufgefüllt werden, wodurch der Mehraufwand des Aufrufs reduziert wird.<br/></td>
 </tr>
 <tr class="even">
 <td><a href="wql-operators.md">LIKE</a></td>
-<td>Operator, der bestimmt, ob eine angegebene Zeichenfolge einem angegebenen Muster entspricht.<br/></td>
+<td>Operator, der bestimmt, ob eine angegebene Zeichenfolge mit einem angegebenen Muster übereinstimmt.<br/></td>
 </tr>
 <tr class="odd">
 <td>NICHT<br/></td>
-<td>Vergleichsoperator, der in einer WQL SELECT-Abfrage verwendet, z. B.:<br/>
+<td>Vergleichsoperator, der in einer WQL SELECT-Abfrage verwendet wird, z. B.:<br/>
 <pre data-space="preserve"><code>SELECT * FROM meta_class WHERE NOT __class < &quot;Win32&quot; AND NOT __this ISA &quot;Win32_Account&quot;</code></pre></td>
 </tr>
 <tr class="even">
 <td><strong>NULL</strong></td>
-<td>Gibt an, dass einem Objekt kein explizit zugewiesener Wert zugewiesen ist. <strong>NULL</strong> entspricht nicht null (0) oder leer.<br/></td>
+<td>Gibt an, dass einem Objekt kein explizit zugewiesener Wert zugewiesen ist. <strong>NULL</strong> entspricht nicht 0 (null) oder leer.<br/></td>
 </tr>
 <tr class="odd">
 <td>oder<br/></td>
-<td>Kombiniert zwei Bedingungen.<br/> Wenn mehrere logische Operatoren in einer -Anweisung verwendet werden, werden die OR-Operatoren nach den AND-Operatoren ausgewertet.<br/></td>
+<td>Kombiniert zwei Bedingungen.<br/> Wenn in einer -Anweisung mehrere logische Operatoren verwendet werden, werden die OR-Operatoren nach den AND-Operatoren ausgewertet.<br/></td>
 </tr>
 <tr class="even">
 <td><a href="references-of-statement.md">VERWEISE VON</a></td>
-<td>Ruft alle Zuordnungsinstanzen ab, die auf eine bestimmte Quellinstanz verweisen. Verwenden Sie diese Anweisung mit Schema- und Datenabfragen. Die <a href="references-of-statement.md">REFERENCES OF-Anweisung</a> ähnelt der <a href="associators-of-statement.md">ASSOCIATORS OF-Anweisung.</a> Endpunktinstanzen werden jedoch nicht abgerufen. Sie ruft die Zuordnungsinstanzen ab.<br/></td>
+<td>Ruft alle Zuordnungsinstanzen ab, die auf eine bestimmte Quellinstanz verweisen. Verwenden Sie diese Anweisung mit Schema- und Datenabfragen. Die <a href="references-of-statement.md">REFERENCES OF-Anweisung</a> ähnelt der <a href="associators-of-statement.md">ASSOCIATORS</a> OF-Anweisung. Endpunktinstanzen werden jedoch nicht abgerufen. sie ruft die Zuordnungsinstanzen ab.<br/></td>
 </tr>
 <tr class="odd">
 <td>SELECT<br/></td>
@@ -93,11 +93,11 @@ Die WMI Query Language (WQL) ist eine Teilmenge der American National Standards 
 </tr>
 <tr class="even">
 <td><strong>TRUE</strong></td>
-<td>Boolescher Operator, der zu -1 (minus 1) ausgewertet wird.<br/></td>
+<td>Boolescher Operator, der -1 ergibt (minus 1).<br/></td>
 </tr>
 <tr class="odd">
 <td><a href="where-clause.md">WHERE</a></td>
-<td>Eingeengt den Bereich einer Daten-, Ereignis- oder Schemaabfrage.<br/></td>
+<td>Schränkt den Bereich einer Daten-, Ereignis- oder Schemaabfrage ein.<br/></td>
 </tr>
 <tr class="even">
 <td><a href="within-clause.md">WITHIN</a></td>
@@ -105,7 +105,7 @@ Die WMI Query Language (WQL) ist eine Teilmenge der American National Standards 
 </tr>
 <tr class="odd">
 <td>FALSE<br/></td>
-<td>Boolescher Operator, der zu 0 (null) ausgewertet wird.</td>
+<td>Boolescher Operator, der als 0 (null) ausgewertet wird.</td>
 </tr>
 </tbody>
 </table>
