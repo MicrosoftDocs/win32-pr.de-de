@@ -1,5 +1,5 @@
 ---
-description: Ruft die maximalen Gesichtseinflüsse in einem Dreiecksgitternetz mit dem angegebenen Indexpuffer ab.
+description: Ruft die maximalen Gesichtseinflüsse in einem Dreiecksgitter mit dem angegebenen Indexpuffer ab.
 ms.assetid: 72dc2440-87df-461e-80d0-9ad9b1e4d8ee
 title: ID3DXSkinInfo::GetMaxFaceInfluences-Methode (D3DX9Mesh.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118800669"
 ---
 # <a name="id3dxskininfogetmaxfaceinfluences-method"></a>ID3DXSkinInfo::GetMaxFaceInfluences-Methode
 
-Ruft die maximalen Gesichtseinflüsse in einem Dreiecksgitternetz mit dem angegebenen Indexpuffer ab.
+Ruft die maximalen Gesichtseinflüsse in einem Dreiecksgitter mit dem angegebenen Indexpuffer ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ HRESULT GetMaxFaceInfluences(
 
 Typ: **[ **LPDIRECT3DINDEXBUFFER9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dindexbuffer9)**
 
-Zeiger auf den Indexpuffer, der die Meshindexdaten enthält.
+Zeiger auf den Indexpuffer, der die Gitternetzindexdaten enthält.
 
 </dd> <dt>
 
@@ -73,7 +73,7 @@ Zeiger auf die maximalen Gesichtseinflüsse.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 

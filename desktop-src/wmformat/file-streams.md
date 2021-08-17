@@ -6,8 +6,8 @@ keywords:
 - Windows Medienformat-SDK, Dateistreams
 - Advanced Systems Format (ASF), Dateistreams
 - ASF (Advanced Systems Format), Dateistreams
-- Windows Medienformat-SDK, Streams
-- Advanced Systems Format (ASF), Streams
+- Windows Medienformat-SDK,Streams
+- Advanced Systems Format (ASF),streams
 - ASF (Advanced Systems Format), Streams
 - Dateistreams
 ms.topic: article
@@ -21,7 +21,7 @@ ms.locfileid: "118703908"
 ---
 # <a name="file-streams"></a>Datei Streams
 
-Ein Dateistream enthält mindestens eine Datendatei. Wenn Sie Dateiinformationen als Stream übertragen, sollten Sie den Dateinamen an jedes Beispiel im Stream anfügen. Informationen zum Anfügen verwandter Informationen an Beispiele finden Sie unter [Dateneinheitenerweiterungen.](data-unit-extensions.md)
+Ein Dateistream enthält mindestens eine Datendatei. Wenn Sie Dateiinformationen als Stream übertragen, sollten Sie den Dateinamen an jedes Beispiel im Stream anfügen. Informationen zum Anfügen verwandter Informationen an Beispiele finden Sie unter [Data Unit Extensions](data-unit-extensions.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -30,7 +30,7 @@ Ein Dateistream enthält mindestens eine Datendatei. Wenn Sie Dateiinformationen
 [**Beliebige Streams**](arbitrary-streams.md)
 </dt> <dt>
 
-[**Konfigurieren von Streams**](configuring-file-transfer-streams.md)
+[**Konfigurieren von Dateiübertragungs-Streams**](configuring-file-transfer-streams.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: 'Rwbuffer:: rwbuffer Load-Methoden'
-description: Ruft einen Wert aus einem rwbuffer ab.
+title: RWBuffer::RWBuffer Load-Methoden
+description: Ruft einen Wert aus einem RWBuffer ab.
 ms.assetid: 85A8F1C9-6896-4E3A-AFDF-B82D1D3E96EA
 keywords:
-- Lade Methoden HLSL
+- HlSL-Lademethoden
 topic_type:
 - apiref
 api_type:
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 017a2aeb1cbbbda051c4349c3837f574a97f7557
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: 1a365643558d8bc31c63dd2d3c0e40a2ecc5fb8b6d63a08c5dd5aaa1bb13c4a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104389390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118791461"
 ---
-# <a name="rwbufferload-methods"></a>Rwbuffer:: Load-Methoden
+# <a name="rwbufferload-methods"></a>RWBuffer::Load-Methoden
 
-Ruft einen Wert aus einem [**rwbuffer**](sm5-object-rwbuffer.md)ab.
+Ruft einen Wert aus einem [**RWBuffer**](sm5-object-rwbuffer.md)ab.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ Ruft einen Wert aus einem [**rwbuffer**](sm5-object-rwbuffer.md)ab.
 
 | Methode                                              | BESCHREIBUNG                                                       |
 |:----------------------------------------------------|:------------------------------------------------------------------|
-| [**Load (int, uint)**](rwbuffer-load-float-uint-.md) | Liest Puffer Daten und gibt den Status des Vorgangs zurück.<br/> |
-| [**Laden (int)**](rwbuffer-load-float-.md)           | Liest Puffer Daten.<br/>                                     |
+| [**Load(int,uint)**](rwbuffer-load-float-uint-.md) | Liest Pufferdaten und gibt den Status des Vorgangs zurück.<br/> |
+| [**Load(int)**](rwbuffer-load-float-.md)           | Liest Pufferdaten.<br/>                                     |
 
 
 

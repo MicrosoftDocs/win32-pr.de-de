@@ -1,96 +1,96 @@
 ---
-title: Struktur der Beispiel-Desktop Anwendung
-description: Struktur der Beispiel-Desktop Anwendung
+title: Struktur der Beispieldesktopanwendung
+description: Struktur der Beispieldesktopanwendung
 ms.assetid: e042470d-dc78-488c-bcad-2e8d34714d5d
 keywords:
-- Windows Media Device Manager, Beispiele
-- Device Manager, Beispiele
-- Desktop Anwendungen, Beispiele
-- Windows Media Device Manager, Beispiel für eine Desktop Anwendung
-- Beispiel für Device Manager Desktop Anwendung
-- Beispiele, Desktop Anwendungen
+- Windows Medien Geräte-Manager,Beispiele
+- Geräte-Manager,Beispiele
+- Desktopanwendungen,Beispiele
+- Windows Beispiel für Geräte-Manager,Desktopanwendung
+- Geräte-Manager,Desktopanwendungsbeispiel
+- Beispiele,Desktopanwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 34fb377c1bb6ebf943721b55ec6175e65f70ddde
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a7dde8250a5efc8bc0f0b9582739bd8770d95ee586ea571a43bcbb9be69e8774
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119957160"
 ---
-# <a name="structure-of-the-sample-desktop-application"></a>Struktur der Beispiel-Desktop Anwendung
+# <a name="structure-of-the-sample-desktop-application"></a>Struktur der Beispieldesktopanwendung
 
-Die Beispiel-Desktop Anwendung besteht aus zwei Hauptteilen:
+Die Beispieldesktopanwendung besteht aus zwei Hauptteilen:
 
--   Das wmdapp-Projekt enthält die meisten Klassen, die die Benutzeroberfläche anzeigen, Drag & amp; Drop verarbeiten und alle erforderlichen Funktionen des Programms ausführen.
--   Das proghelp-Projekt ist eine Hilfsanwendung, die nicht erforderliche Klassen zum Verarbeiten von Status Benachrichtigungen und manuellen Übertragungen von Dateien vom Desktop zur Anwendung enthält.
+-   Das wmdapp-Projekt enthält die meisten Klassen, die die Benutzeroberfläche anzeigen, ziehen und ablegen und alle erforderlichen Funktionen des Programms ausführen.
+-   Das Proghelp-Projekt ist eine Hilfsanwendung, die nicht wichtige Klassen enthält, um Statusbenachrichtigungen und manuelle Dateiübertragungen vom Desktop an die Anwendung zu verarbeiten.
 
-Die ausführbare Datei verwendet das Hilfsprojekt nur dann, wenn der Benutzer im Menü **Optionen die Option** **use Operation Interface** ausgewählt hat, um die manuelle Dateiübertragung an das Gerät zu verarbeiten und die Statusleiste im Formular zum Herunterladen des Fortschritts zu erhöhen. Der gesamte Rest der Anwendung wird im wmdapp-Projekt behandelt.
+Die ausführbare Datei verwendet das Hilfsprojekt nur, wenn  der Benutzer im Menü Optionen die Option Operation **Interface** verwenden auswählt, um die manuelle Dateiübertragung an das Gerät zu verarbeiten und die Statusleiste im Downloadstatusformular zu erhöhen. Der Rest der Anwendung wird im wmdapp-Projekt verarbeitet.
 
 
 
-| Klasse                | Datei                    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                     |
+| Klasse                | Datei                    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                     |
 |----------------------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| —                    | wmdmapp. cpp             | Die Klasse, die das übergeordnete Fenster der Benutzeroberfläche behandelt. Der Code in dieser Datei verarbeitet auch einige Benutzereingaben, die nicht von cdevfiles behandelt werden, z. b. das Erstellen einer Wiedergabeliste oder eines Albums auf einem Gerät, das Löschen von Dateien und das Registrieren von Menü Optionen.                                                                                                                                                    |
-| Cdevices             | Geräte. cpp             | Die Klasse, die den linken Bereich des Haupt Anwendungsfensters behandelt, in dem die verfügbaren Geräte aufgelistet sind. Diese Klasse verwaltet die Messaging Schleife, die Benutzereingaben behandelt, z. b. das Auswählen eines Geräts und das Benachrichtigen des cdevfiles-Bereichs, um die entsprechenden Dateien zu laden, wenn sich die Geräteauswahl geändert hat.                                                                              |
-| Cdevfiles            | Devfiles. cpp            | Die Klasse, die den rechten Bereich des Haupt Anwendungsfensters behandelt, in dem die Dateien auf dem ausgewählten Gerät aufgeführt werden. Diese Klasse verwaltet die Messaging Schleife und verarbeitet Benutzereingaben, z. b. das Ziehen von Dateien auf das Gerät und das Löschen von Dateien auf dem Gerät.                                                                                                                          |
-| Cstatus              | Status. cpp              | Die Klasse, die die untere Statusleiste im Hauptfenster behandelt, in der die Anzahl der Geräte und Dateien aufgeführt ist, sowie die Menge an freiem und verwendeter Arbeitsspeicher auf dem ausgewählten Gerät.                                                                                                                                                                                                         |
-| Cwmdm                | Wmdevmgr. cpp            | Die Oberfläche der obersten Ebene für Windows Media Device Manager. Diese Klasse übernimmt die Authentifizierung, ruft die **iwmdevicemanager** -Schnittstelle der obersten Ebene ab und registriert sich mit der **iwmdmnotification** -Schnittstelle für Benachrichtigungen.                                                                                                                                                                  |
-| Cprogress            | "Progress. cpp"            | Die-Klasse im Haupt Anwendungsprojekt, das das Dialogfeld erstellt und verwaltet, das den Fortschritt eines Ereignisses anzeigt.                                                                                                                                                                                                                                                                             |
-| Citemdata            | ItemData. cpp            | Eine Wrapper Klasse, die einen Zeiger auf einen Speicher (bei Darstellung einer Datei oder eines Ordners auf dem Gerät) oder ein Gerät (bei Darstellung eines Geräts) enthält, sowie eine Vielzahl von Informationen über das Objekt, einschließlich Größe und Attributen.                                                                                                                                                                  |
-| Cnotificationhandler | Notificationhandler. cpp | Behandelt Benachrichtigungen über das eintreffen und Entfernen von Geräten durch Warnung im Fenster "cdevices".                                                                                                                                                                                                                                                                                                               |
-| Cprogresshelper      | Progresshelper. cpp      | Wird von cdevfiles in lokalen Funktionen erstellt, um Benachrichtigungen von Windows Media-Device Manager durch Implementieren von **iwmdmprogress** zu empfangen. Sie wird von der cprogress-Klasse verwendet, um die Anzahl der Balken in der Statusanzeige zu ermitteln, und, wenn eine Aktion abgeschlossen ist. Diese Klasse ist als COM-Objekt definiert, das die SDK-Schnittstelle **iwmdmprogress** und eine benutzerdefinierte Schnittstelle iwmdmprogresshelper verfügbar macht. |
-| Coperationhelper     | Operationhelper. cpp     | Diese Klasse implementiert **iwmdmoperation** , um die manuelle Übertragung von Dateien zu verarbeiten. Es ist eine Multithread-Schnittstelle, die asynchron auftreten kann. es wird als COM-Objekt definiert, das eine benutzerdefinierte Schnittstelle (iwmdmoperationhelper) verfügbar macht, um die Klasse zu instanziieren und zu initialisieren. Diese Klasse wird nur verwendet, wenn der Benutzer im Menü **Optionen die Option** "Vorgangs Schnittstelle verwenden" auswählt.                            |
+| —                    | wmdmapp.cpp             | Die Klasse, die das übergeordnete Fenster der Benutzeroberfläche behandelt. Der Code in dieser Datei verarbeitet auch einige Benutzereingaben, die nicht von CDevFiles verarbeitet werden, z. B. das Erstellen einer Wiedergabeliste oder eines Albums auf einem Gerät, das Löschen von Dateien und das Registrieren von Menüoptionen.                                                                                                                                                    |
+| CDevices             | Devices.cpp             | Die Klasse, die den linken Bereich des Hauptanwendungsfensters behandelt, in dem die verfügbaren Geräte aufgeführt sind. Diese Klasse verwaltet die Messagingschleife, die Benutzereingaben verarbeitet, z. B. das Auswählen eines Geräts und das Benachrichtigen des Bereichs CDevFiles, um die entsprechenden Dateien zu laden, wenn sich die Geräteauswahl geändert hat.                                                                              |
+| CDevFiles            | Devfiles.cpp            | Die Klasse, die den rechten Bereich des Hauptanwendungsfensters behandelt, in dem die Dateien auf dem ausgewählten Gerät aufgelistet sind. Diese Klasse verwaltet die Messagingschleife und verarbeitet Benutzereingaben wie das Ziehen von Dateien auf das Gerät und das Löschen von Dateien vom Gerät.                                                                                                                          |
+| CStatus              | Status.cpp              | Die Klasse, die die untere Statusleiste im Hauptfenster behandelt, in der die Anzahl der Geräte und Dateien aufgeführt ist, sowie die Menge an freiem und genutzten Arbeitsspeicher auf dem ausgewählten Gerät.                                                                                                                                                                                                         |
+| CWMDM                | Wmdevmgr.cpp            | Die Schnittstelle der obersten Ebene für Windows Media Geräte-Manager. Diese Klasse verarbeitet die Authentifizierung, ruft die **IWMDeviceManager-Schnittstelle** der obersten Ebene ab und registriert sich für Benachrichtigungen mit **der IWMDMNotification-Schnittstelle.**                                                                                                                                                                  |
+| CProgress            | Progress.cpp            | Die -Klasse im Hauptanwendungsprojekt, die das Dialogfeld erstellt und verwaltet, das den Fortschritt eines Ereignisses zeigt.                                                                                                                                                                                                                                                                             |
+| CItemData            | ItemData.cpp            | Eine Wrapperklasse, die einen Zeiger auf einen Speicher (wenn sie eine Datei oder einen Ordner auf dem Gerät darstellt) oder ein Gerät (wenn es ein Gerät darstellt) sowie eine Vielzahl von Informationen über das Objekt enthält, einschließlich Größe und Attribute.                                                                                                                                                                  |
+| CNotificationHandler | Notificationhandler.cpp | Verarbeitet Benachrichtigungen zum Ein- und Entfernen von Geräten durch Warnungen im Fenster "CGeräte".                                                                                                                                                                                                                                                                                                               |
+| CProgressHelper      | ProgressHelper.cpp      | Erstellt von CDevFiles in lokalen Funktionen zum Empfangen von Benachrichtigungen von Windows Media Geräte-Manager durch Implementierung **von IWMDMProgress**. Sie wird von der CProgress-Klasse verwendet, um die Anzahl der Balken in der Statusleiste und den Abschluss einer Aktion zu bestimmen. Diese Klasse ist als COM-Objekt definiert, das die SDK-Schnittstelle **IWMDMProgress** und eine benutzerdefinierte Schnittstelle IWMDMProgressHelper verfügbar macht. |
+| COperationHelper     | Operationhelper.cpp     | Diese Klasse implementiert **IWMDMOperation, um** die manuelle Übertragung von Dateien zu verarbeiten. Es ist multithreaded, um die asynchrone Ausführung zu ermöglichen, und ist als COM-Objekt definiert, das eine benutzerdefinierte Schnittstelle ( IWMDMOperationHelper) verfügbar macht, um die Klasse zu instanziieren und zu initialisieren. Diese Klasse wird nur verwendet, wenn der Benutzer im Menü Optionen die Option "Operation Interface **verwenden"** auswählt.                            |
 
 
 
- 
+ 
 
-In den folgenden Listen finden Sie die grundlegenden Schritte, die für verschiedene Benutzeraktionen ausgeführt werden:
+In den folgenden Listen werden die grundlegenden Schritte beschrieben, die für verschiedene Benutzeraktionen durchgeführt werden:
 
 **Beim Start**
 
-Die folgenden Hauptschritte werden ausgeführt, wenn die Beispielanwendung gestartet wird.
+Die folgenden Hauptschritte erfolgen, wenn die Beispielanwendung gestartet wird.
 
-1.  Die globale cwmdm-Variable wird instanziiert und authentifiziert und wird für den Empfang von Benachrichtigungen registriert.
-2.  Globale cdevices werden instanziiert, und cdevices:: Create wird aufgerufen, um den Bereich Geräte zu erstellen und auszufüllen.
-3.  Eine globale cdevfiles wird instanziiert, und cdevfiles:: Create wird aufgerufen, um den Bereich Dateien zu erstellen (dieser wird erst aufgefüllt, wenn der Benutzer ein Gerät auswählt).
-4.  Ein globaler cstatus wird instanziiert, und cstatus:: Create wird aufgerufen, um die Statusleiste zu instanziieren.
-5.  \_Onviewrefresh listet alle Geräte auf und initialisiert und fügt alle Geräte (citemdata) zu cdevices hinzu und aktualisiert die Statusleiste, um die Anzahl der Geräte anzuzeigen.
-6.  Cdevices:: AddItem fügt das Element der TreeView-Ansicht, die die Geräte darstellt, mit einem Zeiger auf sich selbst als "tvitem. lParam" hinzu. Alle cdevice-Objekte (Geräte) und cdevfiles-Objekte (Datei) werden in diesem Mitglied des TreeView-Knotens im entsprechenden Fenster gespeichert.
+1.  Die globale CWMDM-Variable wird instanziiert und authentifiziert und registriert sich für den Empfang von Benachrichtigungen.
+2.  Eine globale CDevices-Instanz wird instanziiert, und CDevices::Create wird aufgerufen, um den Gerätebereich zu erstellen und zu füllen.
+3.  Eine globale CDevFiles-Instanz wird instanziiert, und CDevFiles::Create wird aufgerufen, um den Dateibereich zu erstellen (der erst aufgefüllt wird, wenn der Benutzer ein Gerät auswählt).
+4.  Ein globaler CStatus wird instanziiert, und CStatus::Create wird aufgerufen, um die Statusleiste zu instanziieren.
+5.  \_OnViewRefresh durchlistet alle Geräte und initialisiert und fügt CDevices alle Geräte (CItemData) hinzu und aktualisiert die Statusleiste, um die Anzahl der Geräte anzuzeigen.
+6.  CDevices::AddItem fügt das Element der Strukturansicht hinzu, die die Geräte darstellt, mit einem Zeiger auf sich selbst als TVITEM.lparam. Alle CDevice-Objekte (Geräte) und CDevFiles-Objekte (Datei) werden in diesem Member des Treeview-Knotens im entsprechenden Fenster gespeichert.
 
 **Beim Auswählen eines Geräts**
 
-Die folgenden Hauptschritte werden ausgeführt, wenn der Benutzer im linken Bereich des Anwendungsfensters ein Gerät auswählt.
+Die folgenden Hauptschritte erfolgen, wenn der Benutzer im linken Bereich des Anwendungsfensters ein Gerät auswählt.
 
-1.  Das Fenster "cdevices" fängt einen Klick ein und stellt eine WM- \_ DRM- \_ updatedevice-Nachricht an sich selbst.
-2.  Cdevices empfängt eine eigene Nachricht und ruft updateselection auf, das dem globalen cdevfiles-Objekt mitteilt, alles zu löschen, alle Elemente der obersten Ebene im Gerät aufzulisten und cdevfiles:: AddItem aufzurufen, um die einzelnen Elemente dem Bereich Dateien hinzuzufügen.
-3.  Zum Schluss ruft cdevices cdevfiles:: updatestatusbar auf, um die Statusleiste mit den richtigen Geräte-und Dateiinformationen zu aktualisieren.
+1.  Das CDevices-Fenster fängt einen Klick ab und veröffentlicht eine WM \_ DRM \_ UPDATEDEVICE-Meldung an sich selbst.
+2.  CDevices empfängt eine eigene Nachricht und ruft UpdateSelection auf. Dies weist das globale CDevFiles-Objekt an, alles zu löschen, alle Elemente der obersten Ebene auf dem Gerät aufzählen und CDevFiles::AddItem aufrufen, um diese elemente dem Dateibereich hinzuzufügen.
+3.  Schließlich ruft CDevices CDevFiles::UpdateStatusBar auf, um die Statusleiste mit den richtigen Geräte- und Dateiinformationen zu aktualisieren.
 
 **Beim Erstellen einer Wiedergabeliste**
 
-Nachdem Sie auf "Wiedergabeliste erstellen" im Menü " **Container** " geklickt haben, ruft die Anwendung die lokale Funktion " \_ onupatewiedergabe" auf, die die folgenden Aktionen ausführt:
+Nach dem Klicken auf "Wiedergabeliste erstellen" im Menü **Container** ruft die Anwendung die lokale \_ Funktion OnCreatePlaylist auf, die die folgenden Aktionen ausführt:
 
-1.  Die Anzahl ausgewählter Elemente aus der globalen cdevfiles-Variablen erhalten.
-2.  Ruft die lokale Funktion dlgnamewiedergabe auf, um ein Dialogfeld zu öffnen, in dem Sie einen Namen für die Wiedergabeliste abrufen können.
-3.  Rufen Sie cprogress:: Create auf, um ein Dialogfeld zu erstellen, in dem der Fortschritt der Aktion angezeigt wird, und legen Sie Parameter für die cprogress-Klasse fest, z. b. Titel Text, Bereich, aktueller Wert usw.
-4.  Durchlaufen Sie alle ausgewählten Elemente im Struktur Ansichts Objekt der cdevfiles, und fordern Sie das citemdata-Objekt an, das jeder ausgewählten Datei in der Strukturansicht zugeordnet ist. erhöhen Sie die Status Dialogleiste der einzelnen Dateien. Die Dateien werden einem Array von [**iwmdmstorage**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmstorage) -Schnittstellen hinzugefügt.
-5.  Rufen Sie ein Handle für das aktuell ausgewählte Element ab, und Fragen Sie es nach einer [**IWMDMStorageControl3**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmstoragecontrol3) -Schnittstelle ab, die später zum Erstellen der neuen Wiedergabeliste auf dem Gerät verwendet wird.
-6.  Fragen Sie das ausgewählte Objekt nach [**IWMDMStorage3**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmstorage3)ab, und rufen Sie [**CreateEmptyMetadataObject**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage3-createemptymetadataobject) auf, um eine neue [**iwmdmmetadata**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmmetadata)-Schnittstelle zu erstellen.
-7.  Fügen Sie den Code "WMDM \_ Formatcode \_ abstractaudiovideoplaylist" zur neuen **iwmdmmetadata** -Schnittstelle hinzu, und erstellen Sie eine Wiedergabeliste auf dem Gerät durch Aufrufen von [**IWMDMStorageControl3:: Insert3**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol3-insert3)und übergeben Sie die Metadatenschnittstelle. Die-Methode ruft einen Zeiger auf den neuen **iwmdmstorage** auf dem Gerät ab.
-8.  Füllen Sie die Wiedergabeliste aus, indem Sie den neuen Speicher für [**IWMDMStorage4**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmstorage4)Abfragen und [**IWMDMStorage4:: abtreferences**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage4-setreferences)aufrufen. übergeben Sie dabei das in Schritt 4 gesammelte Array von **iwmdmstorage** -Zeigern.
-9.  Erstellen Sie abschließend ein neues citemdata-Objekt, das die neue Wiedergabeliste auf dem Gerät enthält, initialisieren Sie es mit dem neuen Speicher, und rufen Sie cdevfiles:: AddItem auf, um es dem Bereich "cdevfiles" hinzuzufügen.
+1.  Sie können die Anzahl der ausgewählten Elemente aus der globalen CDevFiles-Variablen erhalten.
+2.  Rufen Sie die lokale Funktion DlgNamePlaylist auf, um ein Dialogfeld zum Erhalten eines Namens für die Wiedergabeliste zu öffnen.
+3.  Rufen Sie CProgress::Create auf, um ein Dialogfeld zu erstellen, in dem der Fortschritt der Aktion angezeigt wird, und legen Sie Parameter für die CProgress-Klasse fest, z. B. Titeltext, Bereich, aktueller Wert und so weiter.
+4.  Schleife durch alle ausgewählten Elemente im CDevFiles-Strukturansichtsobjekt, und fordern Sie das CItemData-Objekt an, das jeder ausgewählten Datei in der Strukturansicht zugeordnet ist, und erhöhen Sie die Statusdialogleiste mit jeder Datei. Die Dateien werden einem Array von [**IWMDMStorage-Schnittstellen**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmstorage) hinzugefügt.
+5.  Erhalten Sie ein Handle für das aktuell ausgewählte Element, und fragen Sie es nach einer [**IWMDMStorageControl3-Schnittstelle**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmstoragecontrol3) ab, die später zum Erstellen der neuen Wiedergabeliste auf dem Gerät verwendet wird.
+6.  Fragen Sie das ausgewählte Objekt [**für IWMDMStorage3 ab,**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmstorage3)und rufen Sie [**CreateEmptyMetadataObject**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage3-createemptymetadataobject) auf, um eine neue [**IWMDMMetaData-Schnittstelle zu**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmmetadata)erstellen.
+7.  Fügen Sie den Formatcode WMDM FORMATCODE ABSTRACTAUDIOVIDEOPLAYLIST der neuen IWMDMMetadata-Schnittstelle hinzu, und erstellen Sie eine Wiedergabeliste auf dem Gerät, indem Sie \_ \_ [**IWMDMStorageControl3::Insert3**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol3-insert3)  aufrufen und die Metadatenschnittstelle übergeben. Die -Methode ruft einen Zeiger auf das neue **IWMDMStorage auf** dem Gerät ab.
+8.  Füllen Sie die Wiedergabeliste aus, indem Sie den neuen Speicher für [**IWMDMStorage4**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmstorage4)abfragen und [**IWMDMStorage4::SetReferences**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage4-setreferences)aufrufen und das Array der **IWMDMStorage-Zeiger** übergeben, die in Schritt 4 gesammelt wurden.
+9.  Erstellen Sie abschließend ein neues CItemData-Objekt, um die neue Wiedergabeliste auf dem Gerät zu speichern, initialisieren Sie sie mit dem neuen Speicher, und rufen Sie CDevFiles::AddItem auf, um sie dem Bereich CDevFiles hinzuzufügen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Beispiel für eine Desktop Anwendung**](sample-desktop-application.md)
+[**Beispieldesktopanwendung**](sample-desktop-application.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

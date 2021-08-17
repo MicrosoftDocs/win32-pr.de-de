@@ -1,7 +1,7 @@
 ---
-description: Konvertiert ein Bytearray in eine Zeichenfolge mit Binär Zeichen.
+description: Konvertiert ein Bytearray in eine binär gepackte Zeichenfolge.
 ms.assetid: 8db4597d-612c-4535-895e-984d29fc173d
-title: Utilities. bytearraydebinarystring-Methode
+title: Utilities.ByteArrayToBinaryString-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 117cb593b77499f6f5c9e402a79e36410375647e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 33d499f1c7750335b1f4159647907d39c27dd74952e89b1da31b118d2812de12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106353782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118896406"
 ---
-# <a name="utilitiesbytearraytobinarystring-method"></a>Utilities. bytearraydebinarystring-Methode
+# <a name="utilitiesbytearraytobinarystring-method"></a>Utilities.ByteArrayToBinaryString-Methode
 
-\[Die **bytearraytobinarystring** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind.\]
+\[Die **ByteArrayToBinaryString-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind.\]
 
-Die **bytearrayesbinarystring** -Methode konvertiert ein Bytearray in eine Zeichenfolge mit Binär Zeichen.
+Die **ByteArrayToBinaryString-Methode** konvertiert ein Bytearray in eine binär gepackte Zeichenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ Utilities.ByteArrayToBinaryString( _
 
 <dl> <dt>
 
-*varbytearray* \[ in\]
+*varByteArray* \[ In\]
 </dt> <dd>
 
-Das Bytearray, das in eine Binär Zeichenfolge konvertiert werden soll.
+Das Bytearray, das in eine binär gepackte Zeichenfolge konvertiert werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Binär geladene Zeichenfolge, die das Ergebnis der Konvertierung enthält.
+Die binär gepackte Zeichenfolge, die das Ergebnis der Konvertierung enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,16 +58,16 @@ Die Binär geladene Zeichenfolge, die das Ergebnis der Konvertierung enthält.
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Versorgungsunternehmen**](utilities.md)
+[**Hilfsprogramme**](utilities.md)
 </dt> </dl>
 
  

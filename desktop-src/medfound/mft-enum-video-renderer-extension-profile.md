@@ -1,19 +1,19 @@
 ---
-description: Enthält eine Liste aller videorendererextensionprofile-Einträge im Tag videorendererextensionprofiles einer UWP-App-Manifest-Datei.
+description: Enthält eine Liste aller VideoRendererExtensionProfile-Einträge im VideoRendererExtensionProfiles-Tag einer UWP-App-Manifestdatei.
 ms.assetid: 2EFFA81C-5609-43FA-8151-D06C28A0FCC4
-title: MFT_ENUM_VIDEO_RENDERER_EXTENSION_PROFILE-Attribut (mfapi. h)
+title: MFT_ENUM_VIDEO_RENDERER_EXTENSION_PROFILE-Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c7d7c758dac39c7dd93054eb28d5ef7dcc5325db
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cb1d9ece298f2ec8b906bfc28a5a76bfa755660b4ba162040884744bdaa7764b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130512"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119102150"
 ---
-# <a name="mft_enum_video_renderer_extension_profile-attribute"></a>MFT \_ Enum- \_ Video- \_ Renderer- \_ Erweiterungs \_ Profil Attribut
+# <a name="mft_enum_video_renderer_extension_profile-attribute"></a>\_MFT ENUM \_ VIDEO \_ RENDERER \_ EXTENSION \_ PROFILE-Attribut
 
-Enthält eine Liste aller **videorendererextensionprofile** -Einträge im Tag **videorendererextensionprofiles** einer UWP-App-Manifest-Datei. [**Mfitenumex**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) speichert dies im Attribut Speicher des [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Objekts, das von **mfitenumex** für MFTs erstellt wird, die über ein zugeordnetes UWP-Manifest mit dem Tag **videorendererextensionprofiles** verfügen.
+Enthält eine Liste aller **VideoRendererExtensionProfile-Einträge** im **VideoRendererExtensionProfiles-Tag** einer UWP-App-Manifestdatei. [**MFTEnumEx**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) speichert dies im Attributspeicher des [**VON**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) **MFTEnumEx** für MFTs mit einem zugeordneten UWP-Manifest, das das **Tag VideoRendererExtensionProfiles** enthält.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -23,9 +23,9 @@ Enthält eine Liste aller **videorendererextensionprofile** -Einträge im Tag **
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                          |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 

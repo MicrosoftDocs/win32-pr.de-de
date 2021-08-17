@@ -13,15 +13,15 @@ ms.locfileid: "118638776"
 ---
 # <a name="bindimage-action"></a>BindImage-Aktion
 
-Die BindImage-Aktion bindet jede ausführbare Datei oder DLL, die an die von ihr importierten DLLs gebunden werden muss. Die BindImage-Aktion funktioniert für jede Datei in der [BindImage-Tabelle,](bindimage-table.md) aber nur für diejenigen, die lokal installiert werden sollen. Das Installationsprogramm berechnet die virtuelle Adresse jeder Funktion, die aus allen DLLs importiert wurde, und speichert die berechnete virtuelle Adresse dann in der [*Importadresstabelle*](i-gly.md) (Import Address Table, IAT) des importierenden Images.
+Die BindImage-Aktion bindet jede ausführbare Datei oder DLL, die an die von ihr importierten DLLs gebunden werden muss. Die BindImage-Aktion wirkt sich auf jede Datei in der [BindImage-Tabelle](bindimage-table.md) aus, jedoch nur auf die Dateien, die lokal installiert werden sollen. Das Installationsprogramm berechnet die virtuelle Adresse jeder Funktion, die aus allen DLLs importiert wurde, [](i-gly.md) und speichert dann die berechnete virtuelle Adresse in der Importadressentabelle (IAT) des importierenden Images.
 
 Die BindImage-Aktion ruft intern die **BindImageEx-Windows-API** auf.
 
 ## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die BindImage-Aktion muss nach der [InstallFiles-Aktion](installfiles-action.md) erfolgen.
+Die BindImage-Aktion muss nach der [InstallFiles-Aktion](installfiles-action.md) durchgeführt werden.
 
-## <a name="actiondata-messages"></a>ActionData-Nachrichten
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
 
 

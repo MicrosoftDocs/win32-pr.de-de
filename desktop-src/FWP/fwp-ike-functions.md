@@ -1,23 +1,23 @@
 ---
 title: IKE/AuthIP-Funktionen
-description: (WFP)-Funktionen, die für die Interaktion mit Schlüssel für die Schlüssel Erstellung (8212 Internetschlüsselaustausch; IKE), Internetschlüsselaustausch v2 (IKEv2) und authentifiziertes Internetprotokoll (AuthIP) verwendet werden.
+description: (WFP)-Funktionen, die für die Interaktion mit Schlüsselmodulen \ 8212;Internetschlüssel-Exchange (IKE), Internetschlüssel Exchange v2 (IKEv2) und Authentifiziertes Internetprotokoll (AuthIP) verwendet werden.
 ms.assetid: df36b6cc-a304-4426-8f16-1bf92fd721e1
 keywords:
-- API-Internetschlüsselaustausch Funktionen der Windows-Filter Plattform
+- Windows Filtern von Internetschlüsselfunktionen der Plattform-API Exchange
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6cce5d3e2393bb1a83ebf816375f537318bb4b1f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f0841ad333b57631170a3e34f247baa515fdf81fb17cf83d3021425fc85c91a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310555"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069260"
 ---
 # <a name="ikeauthip-functions"></a>IKE/AuthIP-Funktionen
 
-Die Funktionen der Windows-Filter Plattform (Windows Filtering Platform, WFP), die für die Interaktion mit den – Internetschlüsselaustausch (IKE), Internetschlüsselaustausch v2 (IKEv2) und authentifiziertes Internetprotokoll (AuthIP) – verwendet werden, lauten wie folgt.
+Die WFP-Funktionen (Windows Filtering Platform), die für die Interaktion mit Schlüsselmodulen verwendet werden – Internet Key Exchange (IKE), Internet Key Exchange v2 (IKEv2) und Authentifiziertes Internetprotokoll (AuthIP) – sind wie folgt.
 
--   Ikeextgetstatistics:
+-   IkeextGetStatistics:
     -   [**IkeextGetStatistics0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ikeextgetstatistics0) (Windows Vista)
     -   [**IkeextGetStatistics1**](/windows/desktop/api/Fwpmu/nf-fwpmu-ikeextgetstatistics1) (Windows 7 und höher)
 -   [**IkeextSaCreateEnumHandle0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ikeextsacreateenumhandle0)
@@ -25,18 +25,18 @@ Die Funktionen der Windows-Filter Plattform (Windows Filtering Platform, WFP), d
 -   [**IkeextSaDbSetSecurityInfo0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ikeextsadbsetsecurityinfo0)
 -   [**IkeextSaDeleteById0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ikeextsadeletebyid0)
 -   [**IkeextSaDestroyEnumHandle0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ikeextsadestroyenumhandle0)
--   Ikeextsaerum:
+-   IkeextSaEnum:
     -   [**IkeextSaEnum0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ikeextsaenum0) (Windows Vista)
     -   [**IkeextSaEnum1**](/windows/desktop/api/Fwpmu/nf-fwpmu-ikeextsaenum1) (Windows 7)
     -   [**IkeextSaEnum2**](/windows/desktop/api/Fwpmu/nf-fwpmu-ikeextsaenum2) (Windows 8)
--   Ikeextsagetbyid:
+-   IkeextSaGetById:
     -   [**IkeextSaGetById0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ikeextsagetbyid0) (Windows Vista)
     -   [**IkeextSaGetById1**](/windows/desktop/api/Fwpmu/nf-fwpmu-ikeextsagetbyid1) (Windows 7)
     -   [**IkeextSaGetById2**](/windows/desktop/api/Fwpmu/nf-fwpmu-ikeextsagetbyid2) (Windows 8)
 
- 
+ 
 
- 
+ 
 
 
 

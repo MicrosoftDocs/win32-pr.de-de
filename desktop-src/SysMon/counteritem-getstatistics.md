@@ -1,11 +1,11 @@
 ---
-title: Countryteritem. getstatistics-Methode
-description: Ruft die durchschnittlichen, maximalen und minimalen Werte für den Zählers ab.
+title: CounterItem.GetStatistics-Methode
+description: Ruft die Durchschnitts-, Höchst- und Mindestwerte für den Leistungsindikator ab.
 ms.assetid: fb55d68b-1dbe-48b1-88c8-51f33048ec24
 keywords:
-- Getstatistics-Methode (Sysmon)
-- Getstatistics-Methode "sysmon", "count"-Klasse
-- Namteritem Class sysmon, getstatistics-Methode
+- GetStatistics-Methode SysMon
+- GetStatistics-Methode SysMon , CounterItem-Klasse
+- CounterItem-Klasse SysMon , GetStatistics-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c993ed8b9bb39a4d8bb3ff18663f2d884ece156
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bea1be162d68bb02db4842a7140effe653231dcc5105c4bea3b557abb02beab0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956596"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118883776"
 ---
-# <a name="counteritemgetstatistics-method"></a>Countryteritem. getstatistics-Methode
+# <a name="counteritemgetstatistics-method"></a>CounterItem.GetStatistics-Methode
 
-Ruft die durchschnittlichen, maximalen und minimalen Werte für den Zählers ab.
+Ruft die Durchschnitts-, Höchst- und Mindestwerte für den Leistungsindikator ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,28 +45,28 @@ CounterItem.GetStatistics( _
 
 <dl> <dt>
 
-*Max* \[ . vorgenommen\]
+*max* \[ out\]
 </dt> <dd>
 
-Maximaler Wert des Zählers.
+Maximalwert des Leistungsindikators.
 
 </dd> <dt>
 
-*Min* \[ . vorgenommen\]
+*min* \[ out\]
 </dt> <dd>
 
-Der Minimalwert des Zählers.
+Mindestwert des Leistungsindikators.
 
 </dd> <dt>
 
-*Durchschnitt* \[ vorgenommen\]
+*Average (Durchschnitt)* \[ out\]
 </dt> <dd>
 
-Der Durchschnittswert des Zählers.
+Durchschnittswert des Leistungsindikators.
 
 </dd> <dt>
 
-*Status* \[ vorgenommen\]
+*status* \[ out\]
 </dt> <dd>
 
 Gibt an, ob die Werte gültig sind.
@@ -76,7 +76,7 @@ Gibt an, ob die Werte gültig sind.
 | Wert                                                                                              | Bedeutung                              |
 |----------------------------------------------------------------------------------------------------|--------------------------------------|
 | <dl> <dt>0</dt> </dl>                       | Die Werte sind gültig.<br/>     |
-| <dl> <dt>0xc0000bba (3221228474)</dt> </dl> | Die Werte sind ungültig.<br/> |
+| <dl> <dt>0xC0000BBA (3221228474)</dt> </dl> | Die Werte sind ungültig.<br/> |
 
 
 
@@ -88,9 +88,9 @@ Gibt an, ob die Werte gültig sind.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es werden nur die im Diagramm fenstersicht baren Werte verwendet, um die statistischen Werte zu berechnen.
+Nur die Indikatorwerte, die im Diagrammfenster sichtbar sind, werden verwendet, um die statistischen Werte zu berechnen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,21 +100,21 @@ Es werden nur die im Diagramm fenstersicht baren Werte verwendet, um die statist
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ratteritem**](counteritem.md)
+[**CounterItem**](counteritem.md)
 </dt> <dt>
 
-[**"Count. getdataat"**](counteritem-getdataat.md)
+[**CounterItem.GetDataAt**](counteritem-getdataat.md)
 </dt> <dt>
 
-[**"Count. GetValue"**](counteritem-getvalue.md)
+[**CounterItem.GetValue**](counteritem-getvalue.md)
 </dt> </dl>
 
  

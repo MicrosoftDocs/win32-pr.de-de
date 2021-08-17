@@ -4,8 +4,8 @@ description: Ein verschlüsselter privater Schlüssel.
 ms.assetid: 24837506-b15e-4476-9bf3-de3d5d388f15
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Private-Key-Attribut
-- AD-Schema des PrivateKey-Attributs
+- Private-Key AD-Attributschema
+- privateKey-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 929b31e817d01601597458948b6bd6a92b14b690
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: a063e0707402752036f2137a9331adfad74fe05485febd502e3900c35f296252
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106339609"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119923480"
 ---
 # <a name="private-key-attribute"></a>Private-Key-Attribut
 
@@ -30,10 +30,10 @@ Ein verschlüsselter privater Schlüssel.
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | Private-Key                                           |
-| LDAP-Display-Name | privateKey                                            |
+| Ldap-Anzeigename | privateKey                                            |
 | Size              | 8 Bytes                                               |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.101                                |
 | System-ID-GUID    | bf967a03-0de6-11d0-a285-00aa003049e2                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
@@ -43,7 +43,7 @@ Ein verschlüsselter privater Schlüssel.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Ein verschlüsselter privater Schlüssel.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Ein verschlüsselter privater Schlüssel.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Ein verschlüsselter privater Schlüssel.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Ein verschlüsselter privater Schlüssel.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Ein verschlüsselter privater Schlüssel.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Ein verschlüsselter privater Schlüssel.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 

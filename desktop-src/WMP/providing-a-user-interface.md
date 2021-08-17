@@ -1,64 +1,64 @@
 ---
-title: Bereitstellen einer Benutzeroberfläche
-description: Bereitstellen einer Benutzeroberfläche
+title: Bereitstellen eines Benutzeroberfläche
+description: Bereitstellen eines Benutzeroberfläche
 ms.assetid: 43a0cfea-4f35-4c4a-97f5-a3787b597dc5
 keywords:
-- Windows Media Player-Plug-ins, Eigenschaften Seiten
-- Plug-ins, Eigenschaften Seiten
-- Plug-Ins für die digitale Signalverarbeitung, Eigenschaften Seiten
-- DSP-Plug-ins, Eigenschaften Seiten
+- Windows Media Player-Plug-Ins, Eigenschaftenseiten
+- Plug-Ins, Eigenschaftenseiten
+- Plug-Ins für die digitale Signalverarbeitung, Eigenschaftenseiten
+- DSP-Plug-Ins, Eigenschaftenseiten
 - Plug-Ins für die digitale Signalverarbeitung, Benutzeroberfläche
-- DSP-Plug-ins, Benutzeroberfläche
+- DSP-Plug-Ins, Benutzeroberfläche
 - Eigenschaftenseiten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 22d708d1256faf7096d15a7596a9635a33173d22
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fb80525fa4b32845608eebb32752871a038aa6e01088baeebce5bc5f8c84b4bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117746738"
 ---
-# <a name="providing-a-user-interface"></a>Bereitstellen einer Benutzeroberfläche
+# <a name="providing-a-user-interface"></a>Bereitstellen eines Benutzeroberfläche
 
-DSP-Plug-Ins können eine Eigenschaften Seite zum Erstellen einer Benutzeroberfläche bereitstellen. Zu diesem Zweck muss das Plug-in ein Eigenschaften Seiten Objekt enthalten, das eine Implementierung einer **IPropertyPage** -Schnittstelle bereitstellt. Das DSP-Plug-in-Objekt muss **ISpecifyPropertyPages:: GetPages** implementieren, das es Windows Media Player ermöglicht, die richtige Eigenschaften Seite für das Plug-in zu finden und zu identifizieren.
+DSP-Plug-Ins können eine Eigenschaftenseite bereitstellen, um eine Benutzeroberfläche zu erstellen. Dazu muss das Plug-In ein Eigenschaftenseitenobjekt enthalten, das eine Implementierung einer **IPropertyPage-Schnittstelle** bietet. Das DSP-Plug-In-Objekt muss **ISpecifyPropertyPages::GetPages** implementieren, wodurch Windows Media Player die richtige Eigenschaftenseite für das Plug-In suchen und identifizieren kann.
 
-**Anzeigen einer Status Grafik**
+**Anzeigen einer Statusgrafik**
 
-DSP-Plug-Ins können im Bereich Windows-Media Player Status eine kleine Grafik oder eine Reihe von Grafiken anzeigen, um den Benutzer darüber zu benachrichtigen, dass ein Plug-in aktiv ist. Um diese Funktion zu unterstützen, muss das Plug-in die **IPropertyBag** -Schnittstelle implementieren. Windows Media Player ruft **IPropertyBag:: Read** auf und stellt einen Zeiger auf den angeforderten Eigenschaftsnamen "IconStreams" bereit, bei dem die Groß-/Kleinschreibung beachtet wird, und ein Zeiger auf eine **Variant** -Struktur, die die Daten für die Grafik empfängt. Das Plug-in erstellt ein **IStream** -Objekt (oder ein SafeArray von **IStream** -Objekten, wenn mehrere Grafiken vorhanden sind), lädt dann die Grafikdaten, einschließlich Header Informationen, in den Stream und gibt einen Zeiger auf das **IStream** -Objekt mit dem **punkVal** -Member der **Variant** -Struktur zurück. Wenn das Plug-in nur eine Grafik liefert, wird das **VT** -Element der **Variant** -Struktur als VT \_ Unknown angegeben. Wenn das Plug-in mehrere Grafik- **IStream** -Objekte mithilfe von SAFEARRAY bereitstellt, gibt es das **VT** -Element der **Variant** -Struktur als VT- \_ Array an.
+DSP-Plug-Ins können eine kleine Grafik oder eine Reihe von Grafiken im Windows Media Player-Statusbereich anzeigen, um den Benutzer zu benachrichtigen, dass ein Plug-In aktiv ist. Um dieses Feature zu unterstützen, muss das Plug-In die **IPropertyBag-Schnittstelle** implementieren. Windows Media Player ruft **IPropertyBag::Read** auf und stellt einen Zeiger auf den angeforderten Eigenschaftsnamen "IconStreams" zur Verfügung, bei dem die Kleinschreibung beachtet wird, und einen Zeiger auf eine **VARIANT-Struktur,** die die Daten für die Grafik empfängt. Das Plug-In erstellt ein **IStream-Objekt** (oder ein SAFEARRAY von **IStream-Objekten,** wenn mehrere Grafiken verfügbar sind), lädt dann die Grafikdaten, einschließlich Headerinformationen, in den Stream und gibt dann einen Zeiger auf das **IStream-Objekt** zurück, indem das **memberval-Member der** **VARIANT-Struktur verwendet** wird. Wenn das Plug-In nur eine Grafik liefert, wird der **vt-Member** der **VARIANT-Struktur** als VT \_ UNKNOWN angegeben. Wenn das Plug-In mehrere grafische **IStream-Objekte** mit safearray angibt, wird der **vt-Member** der **VARIANT-Struktur** als VT \_ ARRAY angegeben.
 
-Grafiken können in einer Vielzahl von Dateiformaten gespeichert werden, einschließlich:
+Grafiken können in einer Vielzahl von Dateiformaten gespeichert werden, darunter:
 
-**BMP**
+**Bmp**
 
-Microsoft Windows-Bitmapbilder sind nicht komprimiert.
+Microsoft Windows Bitmapbilder werden nicht komprimiert.
 
-**JPEG**
+**Jpeg**
 
-Komprimiertes Bildformat, das häufig für Webseiten verwendet wird. JPEG-Format Dateien haben in der Regel JPG-Dateinamen Erweiterungen.
+Komprimiertes Bildformat, das häufig für Webseiten verwendet wird. JPEG-Formatdateien verfügen in der Regel .jpg Dateierweiterungen.
 
-**GIF**
-
-Komprimiertes Bildformat, das häufig für Webseiten verwendet wird.
-
-**PNG**
+**Gif**
 
 Komprimiertes Bildformat, das häufig für Webseiten verwendet wird.
 
-Die maximalen Dimensionen für die DSP-Plug-in-Grafiken sind 38 Pixel breit und 14 Pixel hoch.
+**Png**
 
-Der **IStream** -Bytestream, der die Status Grafik enthält, muss Header Informationen enthalten. Ohne Header Informationen kann Windows Media Player den Typ der Grafik nicht ordnungsgemäß identifizieren und das Bild daher nicht laden.
+Komprimiertes Bildformat, das häufig für Webseiten verwendet wird.
+
+Die maximalen Abmessungen für DSP-Plug-In-Grafiken sind 38 Pixel breit und 14 Pixel hoch.
+
+Der **IStream-Bytestream,** der die Statusgrafik enthält, muss Headerinformationen enthalten. Ohne Headerinformationen kann Windows Media Player grafiktyp nicht richtig identifizieren und wird daher das Bild nicht laden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Übersicht über den DSP-Plug-in-Entwickler**](dsp-plug-in-developer-overview.md)
+[**Übersicht über DSP-Plug-In-Entwickler**](dsp-plug-in-developer-overview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

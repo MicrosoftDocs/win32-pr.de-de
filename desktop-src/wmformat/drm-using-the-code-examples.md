@@ -1,6 +1,6 @@
 ---
-title: Verwenden der Microsoft Windows Media DRM-Clientcodebeispiele
-description: Verwenden der Microsoft Windows Media DRM-Clientcodebeispiele
+title: Verwenden von Drm-Clientcodebeispielen für Microsoft Windows Media
+description: Verwenden von Drm-Clientcodebeispielen für Microsoft Windows Media
 ms.assetid: 75db2663-9eb8-406d-b1a9-8f6092c95f9d
 keywords:
 - Windows Medienformat-SDK, Codebeispiele
@@ -8,7 +8,7 @@ keywords:
 - Windows Medienformat-SDK, DRM-Codebeispiele
 - Digital Rights Management (DRM), Codebeispiele
 - DRM (Digital Rights Management), Codebeispiele
-- Digital Rights Management (DRM), Beispielcode
+- Digital Rights Management (DRM),Beispielcode
 - DRM (Digital Rights Management), Beispielcode
 ms.topic: article
 ms.date: 05/31/2018
@@ -19,12 +19,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118704213"
 ---
-# <a name="using-the-microsoft-windows-media-drm-client-code-examples"></a>Verwenden der Microsoft Windows Media DRM-Clientcodebeispiele
+# <a name="using-the-microsoft-windows-media-drm-client-code-examples"></a>Verwenden von Drm-Clientcodebeispielen für Microsoft Windows Media
 
-Codebeispiele sind in dieser Dokumentation enthalten, um die Verwendung von Komponenten zu veranschaulichen. Die Beispiele werden so klar und präzise wie möglich geschrieben. Beim Lesen der Beispiele sollten Sie die folgenden Konventionen beachten.
+Codebeispiele sind in dieser Dokumentation enthalten, um die Verwendung von Komponenten zu veranschaulichen. Die Beispiele sind so klar und präzise wie möglich geschrieben. Beachten Sie beim Lesen der Beispiele die folgenden Konventionen.
 
 -   Es wird davon ausgegangen, dass alle Beispiele windows.h und wmdrmsdk.h enthalten. Das Beispiel enthält eine Notiz, wenn für die Kompilierung andere Header erforderlich sind.
--   Die Fehlerüberprüfung wurde auf das Ausbrechen der Funktion beschränkt, wenn ein Fehler auftritt. In einer Anwendung sollten Sie nach bestimmten Fehlercodes überprüfen und eine Art Fehlerberichterstattung bereitstellen.
+-   Die Fehlerüberprüfung wurde auf das Ausbrechen der Funktion beschränkt, wenn ein Fehler auftritt. In einer Anwendung sollten Sie nach bestimmten Fehlercodes suchen und eine Art fehlerberichterstattung bereitstellen.
 -   Schnittstellen und Arbeitsspeicher werden in den Codebeispielen mit Makros namens SAFE \_ RELEASE und SAFE ARRAY DELETE \_ \_ freigegeben. Diese Makros werden im folgenden Code definiert:
     ```C++
     #ifndef SAFE_RELEASE

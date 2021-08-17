@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Is-Domain-For-Attribut
-description: Rückwärtslink für ms-DS-Has-Domain-NCs. Gibt an, welche Domänencontroller diese Partition als primäre Domäne enthalten. | ms-DS-Is-Domain-For-Attribut
+description: Abwärtslink für ms-DS-Has-Domain-NCs. Identifiziert, welche Domänencontroller diese Partition als primäre Domäne enthalten. | ms-DS-Is-Domain-For-Attribut
 ms.assetid: ec63ddb4-c220-492b-92ce-e3da2069bcb8
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-Is-Domain-For-Attribut AD-Schema
-- MSDS-IsDomainFor-Attribut-AD-Schema
+- AD-Schema des ms-DS-Is-Domain-For-Attributs
+- msDS-IsDomainFor-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,19 +23,19 @@ ms.locfileid: "118685110"
 ---
 # <a name="ms-ds-is-domain-for-attribute"></a>ms-DS-Is-Domain-For-Attribut
 
-Rückwärtslink für [**ms-DS-Has-Domain-NCs**](a-msds-hasdomainncs.md). Gibt an, welche Domänencontroller diese Partition als primäre Domäne enthalten.
+Abwärtslink für [**ms-DS-Has-Domain-NCs**](a-msds-hasdomainncs.md). Identifiziert, welche Domänencontroller diese Partition als primäre Domäne enthalten.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-Is-Domain-For                     |
+| CN                | ms-DS-is-Domain-for                     |
 | Ldap-Anzeigename | msDS-IsDomainFor                        |
 | Size              | \-                                      |
 | Aktualisieren von Berechtigungen  | \-                                      |
 | Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.1933                 |
-| System-ID-GUID    | ff155a2a-44e5-4de0-8318-13a58988de4f    |
+| System-Id-Guid    | ff155a2a-44e5-4de0-8318-13a58988de4f    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -55,7 +55,7 @@ Rückwärtslink für [**ms-DS-Has-Domain-NCs**](a-msds-hasdomainncs.md). Gibt an
 | Link-ID                | 2027                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist einwertig       | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -76,7 +76,7 @@ Rückwärtslink für [**ms-DS-Has-Domain-NCs**](a-msds-hasdomainncs.md). Gibt an
 | Link-ID                | 2027                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist einwertig       | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -97,7 +97,7 @@ Rückwärtslink für [**ms-DS-Has-Domain-NCs**](a-msds-hasdomainncs.md). Gibt an
 | Link-ID                | 2027                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist einwertig       | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |

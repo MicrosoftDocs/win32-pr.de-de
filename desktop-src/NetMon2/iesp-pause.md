@@ -14,12 +14,12 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: 486c7aedc7092e0dd0f9f68cc1ea2ccad08d9438
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3727bbabe9c56620b313d70ed529b5ac5f43bed620e98e49a3f6c3564fd1ba3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108084238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119063960"
 ---
 # <a name="iesppause-method"></a>IESP::P ause-Methode
 
@@ -49,7 +49,7 @@ Veraltet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -57,28 +57,28 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                           | Beschreibung                                                                                                                   |
 |-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**NMERR \_ CAPTURE \_ PAUSED**</dt> </dl> | Die Erfassung wurde bereits angehalten.<br/>                                                                                     |
-| <dl> <dt>**NMERR NOT CAPTURING (NMERR \_ WIRD NICHT \_ ERFASST)**</dt> </dl>  | Der NPP erfasst keine Daten. Rufen [Sie IESP::Start auf,](iesp-start.md) um die Erfassung zu starten.<br/>                            |
-| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>  | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen [Sie IESP::Connect auf,](iesp-connect.md) um die NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**NMERR \_ NICHT \_ ESP**</dt> </dl>        | Das NPP ist mit dem Netzwerk verbunden, aber nicht mit der [IESP::Connect-Methode.](iesp-connect.md)<br/>                     |
+| <dl> <dt>**NMERR \_ CAPTURE \_ PAUSED**</dt> </dl> | Die Erfassung ist bereits angehalten.<br/>                                                                                     |
+| <dl> <dt>**NMERR \_ NICHT \_ ERFASSEN**</dt> </dl>  | Das NPP erfasst keine Daten. Rufen Sie [IESP::Start](iesp-start.md) auf, um die Erfassung zu starten.<br/>                            |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>  | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [IESP::Verbinden](iesp-connect.md) auf, um das NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NOT \_ ESP**</dt> </dl>        | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IESP::Verbinden-Methode.](iesp-connect.md)<br/>                     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Während sich die Erfassung in einem angehaltenen Zustand befindet, werden der aktuellen Erfassungsdatei erst dann neue Daten hinzugefügt, wenn Sie die [IESP::Resume-Methode](iesp-resume.md) aufrufen, um die Erfassung neu zu starten. [](c.md) Wenn **Anhalten** und **Fortsetzen** zum Beenden und Neustarten der Erfassung verwendet werden, werden alle erfassten Informationen in derselben Erfassungsdatei gespeichert.
+Während sich die Erfassung in einem angehaltenen Zustand befindet, werden der aktuellen [*Erfassungsdatei*](c.md) erst neue Daten hinzugefügt, wenn Sie die [IESP::Resume-Methode](iesp-resume.md) aufrufen, um die Erfassung neu zu starten. Wenn **Anhalten** und **Fortsetzen** verwendet werden, um die Erfassung zu beenden und neu zu starten, werden alle erfassten Informationen in derselben Erfassungsdatei gespeichert.
 
-Wenn Sie die **Methoden IESP::P ause** und **IESP::Resume** verwenden, um die Erfassung [](c.md) zu steuern, fügt Netzwerkmonitor weiterhin Konversationsstatistiken hinzu, wenn die Erfassung ausgeführt wird.
+Wenn Sie die **Methoden IESP::P ause** und **IESP::Resume** verwenden, um die Erfassung zu steuern, fügt Netzwerkmonitor bei jeder Ausführung der Erfassung [*weiterhin Konversationsstatistiken*](c.md) hinzu.
 
-Rufen Sie [IESP::Resume](iesp-resume.md)auf, um die Erfassung neu zu starten. Um die Erfassung zu beenden, rufen Sie [IESP::Stop](iesp-stop.md)auf.
+Rufen Sie [IESP::Resume](iesp-resume.md)auf, um die Erfassung neu zu starten. Rufen Sie [IESP::Stop](iesp-stop.md)auf, um die Erfassung zu beenden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
@@ -94,7 +94,7 @@ Rufen Sie [IESP::Resume](iesp-resume.md)auf, um die Erfassung neu zu starten. Um
 [IESP](iesp.md)
 </dt> <dt>
 
-[IESP::Connect](iesp-connect.md)
+[IESP::Verbinden](iesp-connect.md)
 </dt> <dt>
 
 [IESP::Resume](iesp-resume.md)

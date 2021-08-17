@@ -1,6 +1,6 @@
 ---
-title: Status des Modifiziererschlüssels
-description: Gibt an, welche Tastaturmodifizierertasten zum Zeitpunkt der Eingabegenerierung gedrückt wurden.
+title: Schlüsselzustand des Modifizierers
+description: Gibt an, welche Tastaturmodifizierertasten beim Erstellen der Eingabe gedrückt wurden.
 ms.assetid: 721f5109-67ab-4242-921e-580c2dc0463b
 topic_type:
 - apiref
@@ -20,9 +20,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118756880"
 ---
-# <a name="modifier-key-state"></a>Status des Modifiziererschlüssels
+# <a name="modifier-key-state"></a>Schlüsselzustand des Modifizierers
 
-Gibt an, welche Tastaturmodifizierertasten zum Zeitpunkt der Eingabegenerierung gedrückt wurden.
+Gibt an, welche Tastaturmodifizierertasten beim Erstellen der Eingabe gedrückt wurden.
 
 <dl> <dt>
 

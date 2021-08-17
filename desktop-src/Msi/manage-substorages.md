@@ -1,56 +1,56 @@
 ---
-description: Die VBScript-Datei WiSubStg.vbs wird in den Windows SDK Komponenten für Windows Installer Entwickler bereitgestellt.
+description: Die VBScript-WiSubStg.vbs wird in den sdk-Komponenten Windows für Windows Installer-Entwickler bereitgestellt.
 ms.assetid: a0248dfb-e406-4ce6-ab11-1e428aa67af4
-title: Verwalten von substorages
+title: Verwalten von Unterstorages
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 01876efdb85bdc89df1b4d64332d44674e5e860e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 34f6d3a0716854755e595133771ede65b11212cdd0fd19b4502bab0c631a9d26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118945595"
 ---
-# <a name="manage-substorages"></a>Verwalten von substorages
+# <a name="manage-substorages"></a>Verwalten von Unterstorages
 
-Die VBScript-Datei WiSubStg.vbs wird in den [Windows SDK Komponenten für Windows Installer Entwickler](platform-sdk-components-for-windows-installer-developers.md)bereitgestellt. In diesem Beispiel wird gezeigt, wie Sie mithilfe von Skripts substorages in einer Windows Installer Datenbank verwalten können. Eine Transformation kann zu einer vorhandenen Windows Installer Datenbank als unter Speicher hinzugefügt werden.
+Die VBScript-WiSubStg.vbs wird in den Windows [SDK-Komponenten für Windows Installer-Entwickler bereitgestellt.](platform-sdk-components-for-windows-installer-developers.md) In diesem Beispiel wird gezeigt, wie das Skript zum Verwalten von Unterstorages in einer Windows Installer-Datenbank verwendet werden kann. Eine Transformation kann einer vorhandenen Datenbank Windows Installer als Unterstorage hinzugefügt werden.
 
 Das Beispiel veranschaulicht die Verwendung von:
 
--   [\_Tabelle "Storages"](-storages-table.md)
+-   [\_Tabelle "Speicher"](-storages-table.md)
 -   [**OpenDatabase-Methode (Installer-Objekt)**](installer-opendatabase.md)
--   [**Methode "kreaterecord"**](installer-createrecord.md)
--   [**Lasterrorrecord-Methode**](installer-lasterrorrecord.md) des [ **Installer-Objekts**](installer-object.md)
+-   [**CreateRecord-Methode**](installer-createrecord.md)
+-   [**LastErrorRecord-Methode**](installer-lasterrorrecord.md) des [ **Installer-Objekts**](installer-object.md)
 -   [**OpenView-Methode**](database-openview.md)
--   [**Commit-Methode**](database-commit.md) des [ **Datenbankobjekts**](database-object.md)
--   [**FETCH-Methode**](view-fetch.md)
+-   [**Commit-Methode**](database-commit.md) des [ **Database-Objekts**](database-object.md)
+-   [**Fetch-Methode**](view-fetch.md)
 -   [**Modify-Methode**](view-modify.md)
 -   [**Execute-Methode**](view-execute.md) des [ **View-Objekts**](view-object.md)
--   [**StringData (Eigenschaft)**](record-stringdata.md)
--   [**SetStream-Methode**](record-setstream.md) des [ **Datensatz-Objekts**](record-object.md)
+-   [**StringData-Eigenschaft**](record-stringdata.md)
+-   [**SetStream-Methode**](record-setstream.md) des [ **Record-Objekts**](record-object.md)
 
-Sie benötigen die CScript.exe oder WScript.exe Version von Windows Script Host, um dieses Beispiel zu verwenden. Wenn Sie CScript.exe verwenden möchten, um dieses Beispiel auszuführen, geben Sie mithilfe der folgenden Syntax eine Befehlszeile an der Eingabeaufforderung ein. Hilfe wird angezeigt, wenn das erste Argument/? oder, wenn zu wenige Argumente angegeben werden. Um die Ausgabe in eine Datei umzuleiten, beenden Sie die Befehlszeile mit VSB > \[ *Pfad zur Datei* \] . Das Beispiel gibt den Wert 0 für Erfolg zurück, 1, wenn Hilfe aufgerufen wird, und 2, wenn das Skript fehlschlägt.
+Sie benötigen die CScript.exe oder WScript.exe von Windows Script Host, um dieses Beispiel verwenden zu können. Um dieses CScript.exe ausführen zu können, geben Sie an der Eingabeaufforderung eine Befehlszeile mit der folgenden Syntax ein. Hilfe wird angezeigt, wenn das erste Argument /? ist. oder , wenn zu wenige Argumente angegeben werden. Um die Ausgabe an eine Datei umzuleiten, beenden Sie die Befehlszeile mit VBS > \[ *Pfad zur Datei* \] . Das Beispiel gibt den Wert 0 für den Erfolg zurück, 1, wenn Hilfe aufgerufen wird, und 2, wenn das Skript fehlschlägt.
 
-**cscript WiSubStg.vbs \[ Pfad zu Daten Bank \] \[ Pfad zu Datei \] \[ Optionen \] \[ unter Speicher Name\]**
+**cscript WiSubStg.vbs \[ pfad zum Datenbankpfad zu Dateioptionen Name des \] \[ \] \[ \] \[ Unterstorages\]**
 
-Geben Sie den Pfad zur Windows Installer Datenbank an, um unter Speicher hinzuzufügen oder zu entfernen. Geben Sie einen Pfad zur Transformation oder Datenbankdatei an, die als unter Speicher hinzugefügt wird. Zum Auflisten der substorages in der Windows Installer-Datenbank lassen Sie den Pfad zu dieser Datei aus. Sie können einen optionalen unter Speicher Namen angeben. Wenn dieser Wert ausgelassen wird, wird der Name des unter Speichers standardmäßig auf den Dateinamen festgelegt.
+Geben Sie den Pfad zur Windows Installer-Datenbank an, die Unterstorage hinzugefügt oder entfernt werden soll. Geben Sie einen Pfad zur Transformations- oder Datenbankdatei an, die als Unterstorage hinzugefügt wird. Wenn Sie die Unterstorages in der Windows Installer-Datenbank auflisten möchten, müssen Sie den Pfad zu dieser Datei weglassen. Sie können einen optionalen Namen für das Unterspeichern angeben. Wenn dies weggelassen wird, wird der Name des Unterspeichers standardmäßig auf den Dateinamen festgelegt.
 
 Die folgende Option kann angegeben werden.
 
 
 
-| Option              | BESCHREIBUNG                                                                                         |
+| Option              | Beschreibung                                                                                         |
 |---------------------|-----------------------------------------------------------------------------------------------------|
-| keine Option angegeben. | Fügen Sie der Windows Installer Datenbank einen unter Speicher hinzu.                                                 |
-| /d                  | Entfernen Sie einen unter Speicher. Auf dieses Optionsflag muss der Name des zu entfernenden subspeichers folgen. |
+| keine Option angegeben | Fügen Sie der Windows Installer-Datenbank einen Windows hinzu.                                                 |
+| /d                  | Entfernen Sie ein Unterstorage. Auf dieses Optionsflag muss der Name des zu entfernenden Unterstorages folgen. |
 
 
 
  
 
-Weitere Skript Beispiele finden Sie unter [Windows Installer Skript Beispiele](windows-installer-scripting-examples.md). Beispiel Hilfsprogramme, die keinen Windows Script Host erfordern, finden Sie unter [Windows Installer-Entwicklungs Tools](windows-installer-development-tools.md).
+Weitere Skriptbeispiele finden Sie unter [Windows Installer Scripting Examples](windows-installer-scripting-examples.md). Beispielprogramme, für die kein Skripthost Windows ist, finden Sie unter [Windows Installer Development Tools](windows-installer-development-tools.md).
 
-Beachten Sie, dass [ein Beispiel für eine Lokalisierung](a-localization-example.md) die [Einbettung von Anpassungs Transformationen als unter Speicher](embedding-customization-transforms-as-substorage.md)veranschaulicht.
+Beachten Sie, [dass ein Lokalisierungsbeispiel](a-localization-example.md) [das Einbetten von Anpassungstransformationen als Unterstorage veranschaulicht.](embedding-customization-transforms-as-substorage.md)
 
  
 

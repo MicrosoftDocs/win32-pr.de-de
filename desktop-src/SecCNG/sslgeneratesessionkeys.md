@@ -1,7 +1,7 @@
 ---
-description: Generiert einen Satz von SSL-Sitzungs Schlüsseln (Secure Sockets Layer Protocol).
+description: Generiert einen Satz von SSL-Sitzungsschlüsseln (Secure Sockets Layer Protocol).
 ms.assetid: 88465f30-8591-411e-8618-8a381d4c22e9
-title: Sslgeneratesessionkeys-Funktion (sslprovider. h)
+title: SslGenerateSessionKeys-Funktion (Sslprovider.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ncrypt.dll
-ms.openlocfilehash: cf8e20008d2a77cae3a47728f4e38fff8ae0b09b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3a9d7a25e5dd2035bd0b060ae11904e351489309b3a5e3c65c0e1582dce77500
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118906172"
 ---
-# <a name="sslgeneratesessionkeys-function"></a>Sslgeneratesessionkeys-Funktion
+# <a name="sslgeneratesessionkeys-function"></a>SslGenerateSessionKeys-Funktion
 
-Die **sslgeneratesessionkeys** -Funktion generiert einen Satz von SSL-Sitzungs Schlüsseln ( [*Secure Sockets Layer Protocol*](/windows/desktop/SecGloss/s-gly) ).
+Die **SslGenerateSessionKeys-Funktion** generiert einen Satz von SSL-Sitzungsschlüsseln [*(Secure Sockets Layer Protocol).*](/windows/desktop/SecGloss/s-gly)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,42 +44,42 @@ SECURITY_STATUS WINAPI SslGenerateSessionKeys(
 
 <dl> <dt>
 
-*hsslprovider* \[ in\]
+*hSslProvider* \[ In\]
 </dt> <dd>
 
-Das Handle für die SSL-Protokoll Anbieter Instanz.
+Das Handle für die SSL-Protokollanbieterinstanz.
 
 </dd> <dt>
 
-*hmasterkey* \[ in\]
+*hMasterKey* \[ In\]
 </dt> <dd>
 
-Das Handle für das [*Hauptschlüssel*](/windows/desktop/SecGloss/m-gly) Objekt.
+Das Handle für das [*Hauptschlüsselobjekt.*](/windows/desktop/SecGloss/m-gly)
 
 </dd> <dt>
 
-*Phread Key* \[ vorgenommen\]
+*phReadKey* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf das zurückgegebene Lese Schlüssel handle.
+Ein Zeiger auf das zurückgegebene Leseschlüsselhandle.
 
 </dd> <dt>
 
-*phschreitekey* \[ vorgenommen\]
+*phWriteKey* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf das zurückgegebene Schreib Schlüssel handle.
+Ein Zeiger auf das zurückgegebene Schreibschlüsselhandle.
 
 </dd> <dt>
 
-*pparameterlist* \[ in\]
+*pParameterList* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf ein Array von [**ncryptbuffer**](https://msdn.microsoft.com/library/Aa376245(v=VS.85).aspx) -Puffern, die Informationen enthalten, die als Teil des Schlüsselaustausch Vorgangs verwendet werden. Der genaue Satz Puffer ist abhängig vom verwendeten Protokoll und der Verschlüsselungs Sammlung. Die Liste enthält mindestens Puffer, die den vom Client und vom Server bereitgestellten Zufallswert enthalten.
+Ein Zeiger auf ein Array von [**NCryptBuffer-Puffern,**](https://msdn.microsoft.com/library/Aa376245(v=VS.85).aspx) die Informationen enthalten, die als Teil des Schlüsselaustauschvorgangs verwendet werden. Der genaue Satz von Puffern hängt vom verwendeten Protokoll und der verwendeten Verschlüsselungssammlung ab. Die Liste enthält mindestens Puffer, die die vom Client und server bereitgestellten Zufallswerte enthalten.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Dieser Parameter ist für die zukünftige Verwendung reserviert.
@@ -88,19 +88,19 @@ Dieser Parameter ist für die zukünftige Verwendung reserviert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt Sie 0 (null) zurück.
+Wenn die Funktion erfolgreich ausgeführt wird, gibt sie 0 (null) zurück.
 
 Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgegeben.
 
-Mögliche Rückgabecodes sind u. a. die folgenden:
+Mögliche Rückgabecodes sind u. a. folgende.
 
 
 
 | Rückgabecode/-wert                                                                                                                                                       | BESCHREIBUNG                                                              |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| <dl> <dt>**Ernte \_ Kein Arbeits \_ Speicher**</dt> <dt>0x8009000el</dt> </dl>         | Es ist nicht genügend Arbeitsspeicher verfügbar, um erforderliche Puffer zuzuordnen.<br/> |
-| <dl> <dt>**Ernte \_ Ungültiges \_ handle**</dt> <dt>0x80090026l</dt> </dl>    | Eines der bereitgestellten Handles ist ungültig.<br/>                     |
-| <dl> <dt>**Ernte \_ Ungültiger \_ Parameter**</dt> <dt>0x80090027l</dt> </dl> | Der Parameter " *Phread Key* " oder " *phschreitekey* " ist NULL.<br/>            |
+| <dl> <dt>**NTE \_ NO \_ MEMORY**</dt> <dt>0x8009000EL</dt> </dl>         | Es ist nicht genügend Arbeitsspeicher verfügbar, um die erforderlichen Puffer zuzuordnen.<br/> |
+| <dl> <dt>**NTE \_ UNGÜLTIGES \_ HANDLE**</dt> <dt>0x80090026L</dt> </dl>    | Einer der bereitgestellten Handles ist ungültig.<br/>                     |
+| <dl> <dt>**NTE \_ INVALID \_ PARAMETER**</dt> <dt>0x80090027L</dt> </dl> | Der *parameter phReadKey* oder *phWriteKey* ist NULL.<br/>            |
 
 
 
@@ -112,9 +112,9 @@ Mögliche Rückgabecodes sind u. a. die folgenden:
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Sslprovider. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Sslprovider.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ncrypt.dll</dt> </dl>    |
 
 

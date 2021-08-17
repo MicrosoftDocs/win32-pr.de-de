@@ -1,17 +1,17 @@
 ---
 description: Passt die Helligkeit an.
 ms.assetid: 1b3f56eb-3f22-4120-ba6c-331eccd5d303
-title: MFPKEY_COLOR_BRIGHTNESS-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_COLOR_BRIGHTNESS-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 685ab934a91f1843183fcfa88bb94c83e602db27
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a43969dff8d743e493916303c31e3d57760a2b025bfadaeaf8cc03e7e25430d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864775"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119954650"
 ---
-# <a name="mfpkey_color_brightness-property"></a>Eigenschaft "mfpkey \_ Color \_ Helligkeit"
+# <a name="mfpkey_color_brightness-property"></a>MFPKEY \_ COLOR \_ BRIGHTNESS-Eigenschaft
 
 Passt die Helligkeit an.
 
@@ -29,13 +29,13 @@ VT \_ I4
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Farb Steuerungs Transformation (DSP)](colorcontroltransform.md)
+-   [Farbsteuerelementtransformations-DSP](colorcontroltransform.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Helligkeitsanpassung wird durch Hinzufügen eines Werts zum Luma-Kanal durchgeführt.
+Die Helligkeitsanpassung erfolgt durch Hinzufügen eines Werts zum Lumakanal.
 
-Diese Eigenschaft hat einen Bereich von-127 bis 127. NULL gibt an, dass die Helligkeit nicht geändert werden soll.
+Diese Eigenschaft hat einen Bereich von -127 bis 127. Null gibt an, dass sich die Helligkeit nicht ändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,17 +43,17 @@ Diese Eigenschaft hat einen Bereich von-127 bis 127. NULL gibt an, dass die Hell
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

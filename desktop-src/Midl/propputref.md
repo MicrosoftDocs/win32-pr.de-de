@@ -1,9 +1,9 @@
 ---
 title: propputref-Attribut
-description: Das Attribut \propputref\ gibt eine Eigenschaftseinstellungsfunktion an, die einen Verweis anstelle eines Werts verwendet.
+description: Das \propputref\-Attribut gibt eine Eigenschaftseinstellungsfunktion an, die einen Verweis anstelle eines Werts verwendet.
 ms.assetid: 84f1cd08-3c42-4a6d-bb1d-0bfd3f4c33f2
 keywords:
-- propputref-Attribut MIDL
+- PROPPUTREF-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118641963"
 ---
 # <a name="propputref-attribute"></a>propputref-Attribut
 
-Das **\[ propputref-Attribut \]** gibt eine Eigenschaftseinstellungsfunktion an, die einen Verweis anstelle eines Werts verwendet.
+Das **\[ \] propputref-Attribut** gibt eine Eigenschaftseinstellungsfunktion an, die einen Verweis anstelle eines Werts verwendet.
 
 ``` syntax
 [propputref [,optional-property-attributes]] return-type function-name( parameters);
@@ -38,7 +38,7 @@ Null oder mehr Eigenschaftsattribute.
 
 </dd> <dt>
 
-*return-type* 
+*rückgabetyp* 
 </dt> <dd>
 
 Der Typ der von der Remoteprozedur zurückgegebenen Daten.
@@ -61,9 +61,9 @@ Null oder mehr Parameter für die Remoteprozedur.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Funktion, die über das **\[ \] propputref-Attribut** verfügt, muss als letzten Parameter auch einen Zeiger mit dem **\[** [**attribut in**](in.md) **\]** haben.
+Eine Funktion, die über das **\[ propputref-Attribut \]** verfügt, muss als letzten Parameter auch einen Zeiger mit dem **\[** [**in-Attribut**](in.md) **\]** aufweisen.
 
-Die Eigenschaft muss den gleichen Namen wie die Funktion haben. Für eine Funktion kann mindestens eines der **\[** [**Attribute propget,**](propget.md)propput und **\]** **\[** [](propput.md) **\]** **\[ propputref \]** angegeben werden.
+Die Eigenschaft muss den gleichen Namen wie die Funktion aufweisen. Höchstens eines der **\[** [**Propget-,**](propget.md) **\]** **\[** [**Propput-**](propput.md) **\]** und **\[ Propputref-Attribute \]** kann für eine Funktion angegeben werden.
 
 ### <a name="flags"></a>Flags
 
@@ -93,7 +93,7 @@ interface InMyFace : IDispatch
 [**In**](in.md)
 </dt> <dt>
 
-[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
+[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
 [ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)

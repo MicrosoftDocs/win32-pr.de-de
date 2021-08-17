@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentWriteConflictException-Klasse'
+description: 'Weitere Informationen finden Sie unter: EsentWriteConflictException-Klasse'
 title: EsentWriteConflictException-Klasse
 TOCTitle: EsentWriteConflictException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentWriteConflictException

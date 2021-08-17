@@ -1,36 +1,36 @@
 ---
-description: Die Umgebungs Zuordnung ist eine Technik, die hochgradig reflektierenden Oberflächen ohne Verwendung der Ray-Ablauf Verfolgung simuliert.
+description: Die Umgebungszuordnung ist eine Technik, die stark reflektierende Oberflächen simuliert, ohne die Ray-Ablaufverfolgung zu verwenden.
 ms.assetid: vs|directx_sdk|~\environment_mapping.htm
-title: Umgebungs Zuordnung (Direct3D 9)
+title: Umgebungszuordnung (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 686f15b2f097550206f9c02cfc4104e7c9f6c030
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: d8a07d53028e200d273206f149ea12c07afa6dbc4ad47f8232e64cddf7582a09
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119122222"
 ---
-# <a name="environment-mapping-direct3d-9"></a>Umgebungs Zuordnung (Direct3D 9)
+# <a name="environment-mapping-direct3d-9"></a>Umgebungszuordnung (Direct3D 9)
 
-Die Umgebungs Zuordnung ist eine Technik, die hochgradig reflektierenden Oberflächen ohne Verwendung der Ray-Ablauf Verfolgung simuliert. In der Praxis wendet die Umgebungs Zuordnung eine spezielle Textur Karte an, die ein Bild der Szene enthält, die ein Objekt für das Objekt selbst umgibt. Das Ergebnis ähnelt der Darstellung einer reflektierenden Oberfläche, so nah genug, um das Auge zu täuschen, ohne dass eine der komplexen Berechnungen an der Ray-Ablauf Verfolgung vorhanden ist.
+Die Umgebungszuordnung ist eine Technik, die stark reflektierende Oberflächen simuliert, ohne die Ray-Ablaufverfolgung zu verwenden. In der Praxis wendet die Umgebungszuordnung eine spezielle Texturkarte an, die ein Bild der Szene um ein Objekt enthält, auf das Objekt selbst. Das Ergebnis entspricht der Darstellung einer reflektierenden Oberfläche, die nah genug ist, um das Auge zu verleugnen, ohne dass eine der komplexen Berechnungen für die Ray-Ablaufverfolgung erforderlich ist.
 
-In der folgenden Abbildung wird ein Typ der Umgebungs Zuordnung mit dem Namen sphärischen Umgebungs Zuordnung veranschaulicht. Weitere Informationen finden Sie unter [sphärischen Umgebungs Zuordnung](spherical-environment-mapping.md).
+Die folgende Abbildung veranschaulicht eine Art von Umgebungszuordnung, die als pherische Umgebungszuordnung bezeichnet wird. Weitere Informationen finden Sie unter [Pherical Environment Mapping](spherical-environment-mapping.md).
 
-![Darstellung eines "Teekanne" mit einer angewendeten Textur, die die Umgebung reflektiert](images/spheremapped-teapot.png)
+![Abbildung einer Teekanne mit einer angewendeten Textur, die die Umgebung widerspiegelt](images/spheremapped-teapot.png)
 
-Die "Teekanne" in diesem Bild scheint der Umgebung widerzuspiegeln. Dabei handelt es sich tatsächlich um eine Textur, die auf das Objekt angewendet wird. Da die Umgebungs Zuordnung eine Textur in Kombination mit speziell berechneten Texturkoordinaten verwendet, kann Sie in Echtzeit ausgeführt werden.
+Die Teekanne in diesem Bild scheint ihre Umgebung widerzu spiegeln. dies ist tatsächlich eine Textur, die auf das -Objekt angewendet wird. Da die Umgebungszuordnung eine Textur in Kombination mit speziell berechneten Texturkoordinaten verwendet, kann sie in Echtzeit ausgeführt werden.
 
-Dieser Abschnitt enthält Informationen zum Durchführen von zwei gängigen Typen der Umgebungs Zuordnung mit Direct3D. Es gibt viele Arten von Umgebungs Zuordnung, die in der gesamten Grafikbranche verwendet werden. die folgenden Themen Zielen jedoch auf die beiden gängigsten Formen ab: kubische Umgebungs Zuordnung und sphärischen Umgebungs Zuordnung.
+Dieser Abschnitt enthält Informationen zum Ausführen von zwei gängigen Typen von Umgebungszuordnungen mit Direct3D. Es gibt viele Arten von Umgebungszuordnungen, die in der gesamten Grafikbranche verwendet werden, aber die folgenden Themen zielen auf die beiden häufigsten Formen ab: kubische Umgebungszuordnung und pherische Umgebungszuordnung.
 
--   [Kubische Umgebungs Zuordnung](cubic-environment-mapping.md)
--   [Sphärischen Umgebungs Zuordnung](spherical-environment-mapping.md)
+-   [Kubische Umgebungszuordnung](cubic-environment-mapping.md)
+-   [Pherical Environment Mapping (pherische Umgebungszuordnung)](spherical-environment-mapping.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Pixel Pipeline](pixel-pipeline.md)
+[Pixelpipeline](pixel-pipeline.md)
 </dt> </dl>
 
  

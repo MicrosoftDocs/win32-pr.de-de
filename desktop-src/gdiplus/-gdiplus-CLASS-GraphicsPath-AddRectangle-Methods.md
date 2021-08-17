@@ -1,38 +1,38 @@
 ---
-description: In diesem Thema werden die addrechteck-Methoden der GraphicsPath-Klasse aufgelistet. Eine umfassende Liste der Methoden für die GraphicsPath-Klasse finden Sie unter GraphicsPath.
+description: In diesem Thema werden die AddRectangle-Methoden der GraphicsPath-Klasse aufgeführt. Eine vollständige Liste der Methoden für die GraphicsPath-Klasse finden Sie unter GraphicsPath.
 ms.assetid: b86c87c0-7d6b-4e9d-b276-a98ac9a33772
-title: GraphicsPath. addrechteck-Methode (gdipluspath. h)
+title: GraphicsPath.AddRectangle-Methoden (Gdipluspath.h)
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: fd2eb31e0debdf933427bdc44c95253a61f3857f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 94407a1d50ddd840d16b9f68850420642c7cbd527a78aff7d1a13738da37400f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104996530"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119105699"
 ---
-# <a name="graphicspathaddrectangle-methods"></a>GraphicsPath. addrechteck-Methoden
+# <a name="graphicspathaddrectangle-methods"></a>GraphicsPath.AddRectangle-Methoden
 
-In diesem Thema werden die addrechteck-Methoden der [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath) -Klasse aufgelistet. Eine umfassende Liste der Methoden für die **GraphicsPath** -Klasse finden Sie unter [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath).
+In diesem Thema werden die AddRectangle-Methoden der [**GraphicsPath-Klasse**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath) aufgeführt. Eine vollständige Liste der Methoden für die **GraphicsPath-Klasse** finden Sie unter [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath).
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                               | BESCHREIBUNG                                                                                                                                     |
+| Methode                                                                               | Beschreibung                                                                                                                                     |
 |:-------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Addrechteck (Rect&)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addrectangle(inconstrect_))   | Die [**GraphicsPath:: addrechteck**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addrectangle(inconstrect_)) -Methode fügt diesem Pfad ein Rechteck hinzu.<br/>  |
-| [**Addrechteck (RectF&)**](/previous-versions//ms535592(v=vs.85)) | Die [**GraphicsPath:: addrechteck**](/previous-versions//ms535592(v=vs.85)) -Methode fügt diesem Pfad ein Rechteck hinzu.<br/> |
+| [**AddRectangle(Rect&)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addrectangle(inconstrect_))   | Die [**GraphicsPath::AddRectangle-Methode fügt**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addrectangle(inconstrect_)) diesem Pfad ein Rechteck hinzu.<br/>  |
+| [**AddRectangle(RectF&)**](/previous-versions//ms535592(v=vs.85)) | Die [**GraphicsPath::AddRectangle-Methode fügt**](/previous-versions//ms535592(v=vs.85)) diesem Pfad ein Rechteck hinzu.<br/> |
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Gdipluspath. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Gdipluspath.h</dt> </dl> |
 
 
 

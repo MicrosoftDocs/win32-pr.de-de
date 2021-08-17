@@ -1,5 +1,5 @@
 ---
-description: 'Process-Klasse: Diese Klasse ist die übergeordnete Klasse für Prozessereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
+description: 'Prozessklasse: Diese Klasse ist die übergeordnete Klasse für Prozessereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: a505c693-2169-499b-bd32-42fa9bd69d2f
 title: Process-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 8085bae0d00ebe830efff420744f6b7e9b4bf23c
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 25c21e5f301d88f3790900c70873d9485161f5041d28bb1a30f3bb85082a9bd9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106268"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069900"
 ---
 # <a name="process-class"></a>Process-Klasse
 
 Diese Klasse ist die übergeordnete Klasse für Prozessereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,21 +38,21 @@ class Process : MSNT_SystemTrace
 
 Die **Process-Klasse** definiert keine Member.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um Prozessereignisse in einer NT-Kernelprotokollierungssitzung zu aktivieren, geben Sie beim Aufrufen der [**StartTrace-Funktion**](/windows/win32/api/evntrace/nf-evntrace-starttracea) das **EVENT TRACE FLAG \_ \_ \_ PROCESS-Flag** im **EnableFlags-Member** einer [**EVENT TRACE \_ \_ PROPERTIES-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) an. Sie können auch das folgende Flag angeben:
+Um Prozessereignisse in einer NT-Kernelprotokollierungssitzung zu aktivieren, geben Sie beim Aufrufen der [**StartTrace-Funktion**](/windows/win32/api/evntrace/nf-evntrace-starttracea) das **FLAG EVENT TRACE FLAG \_ \_ \_ PROCESS** im **EnableFlags-Member** einer [**EVENT TRACE \_ \_ PROPERTIES-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) an. Sie können auch das folgende Flag angeben:
 
--   **\_ \_ \_ \_ EREIGNISABLAUFVERFOLGUNGSFLAG-PROZESSINDIKATOREN**
+-   **PROZESSINDIKATOREN \_ FÜR \_ EREIGNIS-ABLAUFVERFOLGUNGSFLAGS \_ \_**
 
-Consumer der Ereignisablaufverfolgung können eine spezielle Verarbeitung für Prozessereignisse implementieren, indem sie die [**SetTraceCallback-Funktion**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) aufrufen und [**ProcessGuid**](nt-kernel-logger-constants.md) als *pGuid-Parameter* angeben. Verwenden Sie die folgenden Ereignistypen, um das tatsächliche Prozessereignis beim Verarbeiten von Ereignissen zu identifizieren.
+Ereignisverfolgungsverbraucher können eine spezielle Verarbeitung für Prozessereignisse implementieren, indem sie die [**SetTraceCallback-Funktion**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) aufrufen und [**ProcessGuid**](nt-kernel-logger-constants.md) als *pGuid-Parameter* angeben. Verwenden Sie die folgenden Ereignistypen, um das tatsächliche Prozessereignis beim Verarbeiten von Ereignissen zu identifizieren.
 
 
 
-| Ereignistyp                                                      | BESCHREIBUNG                                                                                                                                                                                                                        |
+| Ereignistyp                                                      | Beschreibung                                                                                                                                                                                                                        |
 |-----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **EVENT \_ TRACE \_ TYPE \_ END**(Ereignistypwert ist 2)<br/>   | Endprozessereignis. Die [**Process \_ TypeGroup1**](process-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                                          |
-| **EVENT \_ TRACE \_ TYPE \_ START**(Ereignistypwert ist 1)<br/> | Startprozessereignis. Die [**Process \_ TypeGroup1**](process-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                                        |
-| Ereignistypwert, 3                                             | Starten sie das Datensammlungsprozessereignis. Aufzählen von Prozessen, die derzeit zum Zeitpunkt des Starts der Kernelsitzung ausgeführt werden. Die [**\_ MOF-Klasse Process TypeGroup1**](process-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis. |
+| **EVENT \_ TRACE \_ TYPE \_ END**(Ereignistypwert ist 2)<br/>   | Endprozessereignis. Die [**\_ MOF-Klasse Process TypeGroup1**](process-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                                          |
+| **EVENT \_ TRACE \_ TYPE \_ START**(Ereignistypwert ist 1)<br/> | Startprozessereignis. Die [**\_ MOF-Klasse Process TypeGroup1**](process-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                                        |
+| Ereignistypwert, 3                                             | Ereignis zum Starten des Datensammlungsprozesses. Aufzählen von Prozessen, die derzeit zum Zeitpunkt des Starts der Kernelsitzung ausgeführt werden. Die [**\_ MOF-Klasse Process TypeGroup1**](process-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis. |
 | Ereignistypwert, 4                                             | Beenden des Datensammlungsprozess-Ereignisses. Aufzählen von Prozessen, die derzeit zum Zeitpunkt des Beendens der Kernelsitzung ausgeführt werden. Die [**\_ MOF-Klasse Process TypeGroup1**](process-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.     |
 
 
@@ -65,10 +65,10 @@ Prozess- und Threadstartereignisse können im Kontext des übergeordneten Prozes
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[ Vista-Desktop-Apps \| UWP-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | UWP-Apps für Windows Server \[ 2008-Desktop-Apps \|\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/> |
 
 
 

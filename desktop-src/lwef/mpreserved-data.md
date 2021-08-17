@@ -1,10 +1,10 @@
 ---
-title: MPRESERVED_DATA Struktur (mpclient. h)
-description: Reservierte Benachrichtigungs Daten.
+title: MPRESERVED_DATA-Struktur (MpClient.h)
+description: Reservierte Benachrichtigungsdaten.
 ms.assetid: C92206BD-6E56-4B7D-ABB1-DC1149AE141D
 keywords:
-- MPRESERVED_DATA Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPRESERVED_DATA Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPRESERVED_DATA struktur legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
+- PMPRESERVED_DATA Strukturzeiger Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b1e08184da71fe857cb412ef986c986a0c59baa
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: faabacdcfb581f9b4fc7e9d9a42464dd61e152ca533865acfb7231a711f02317
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104547"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118747654"
 ---
-# <a name="mpreserved_data-structure"></a>Mbeibehaltene \_ Datenstruktur
+# <a name="mpreserved_data-structure"></a>MPRESERVED \_ DATA-Struktur
 
-Reservierte Benachrichtigungs Daten.
+Reservierte Benachrichtigungsdaten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ typedef struct tagMPRESERVED_DATA {
 
 <dl> <dt>
 
-**cbreserveddata**
+**cbReservedData**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -53,10 +53,10 @@ Größe der reservierten Daten in Bytes.
 
 </dd> <dt>
 
-**pbreserveddata**
+**pbReservedData**
 </dt> <dd>
 
-Type: **Byte \***
+Typ: **BYTE \***
 
 </dd> <dd>
 
@@ -70,9 +70,9 @@ Zeiger auf reservierte Daten.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

@@ -1,47 +1,47 @@
 ---
-title: Behandeln von Ereignissen in einer Webseite, die von Firefox angezeigt wird
-description: Behandeln von Ereignissen in einer Webseite, die von Firefox angezeigt wird
+title: Behandeln von Ereignissen auf einer von Firefox angezeigten Webseite
+description: Behandeln von Ereignissen auf einer von Firefox angezeigten Webseite
 ms.assetid: 361c46ff-36e2-4497-a511-86b0439e9437
 keywords:
-- Windows Media Player, Einbetten des ActiveX-Steuer Elements
-- Windows Media Player Objektmodell, Einbetten des ActiveX-Steuer Elements
-- Objektmodell, Einbetten des ActiveX-Steuer Elements
-- Windows Media Player Mobile, Einbetten des ActiveX-Steuer Elements
-- Windows Media Player ActiveX-Steuerelement, einbetten
-- Windows Media Player Mobile ActiveX-Steuerelement, einbetten
-- ActiveX-Steuerelement, einbetten
-- Windows Media Player ActiveX-Steuerelement, Webseiten
+- Windows Media Player,einbetten ActiveX Steuerelements
+- Windows Media Player-Objektmodell, Einbetten ActiveX Steuerelement
+- Objektmodell,Einbetten ActiveX Steuerelement
+- Windows Media Player Mobil,einbetten ActiveX Steuerelement
+- Windows Media Player ActiveX,Einbetten
+- Windows Media Player Mobile ActiveX-Steuerelement,Einbetten
+- ActiveX,Einbetten
+- Windows Media Player ActiveX,Webseiten
 - Windows Media Player Mobile ActiveX-Steuerelement, Webseiten
-- ActiveX-Steuerelement, Webseiten
-- Windows Media Player ActiveX-Steuerelement, Ereignis Behandlung
-- Windows Media Player Mobile ActiveX-Steuerelement, Ereignis Behandlung
-- ActiveX-Steuerelement, Ereignis Behandlung
-- Einbettungen, Webseiten
-- Einbettung von Webseiten, Ereignis Behandlung
-- Windows Media Player, Firefox
+- ActiveX,Webseiten
+- Windows Media Player ActiveX,Ereignisbehandlung
+- Windows Media Player Mobile ActiveX-Steuerelement, Ereignisbehandlung
+- ActiveX,Ereignisbehandlung
+- Einbetten, Webseiten
+- Einbetten von Webseiten, Ereignisbehandlung
+- Windows Media Player,Firefox
 - Windows Media Player-Objektmodell, Firefox
 - Objektmodell, Firefox
-- Windows Media Player Mobile, Firefox
-- Windows Media Player ActiveX-Steuerelement, Firefox
-- Windows Media Player Mobile ActiveX-Steuerelement, Firefox
-- ActiveX-Steuerelement, Firefox
-- Firefox, Ereignis Behandlung
-- Einbettung von Webseiten, Firefox
-- Ereignisse, Firefox
+- Windows Media Player Mobil, Firefox
+- Windows Media Player ActiveX,Firefox
+- Windows Media Player Mobile ActiveX-Steuerelement,Firefox
+- ActiveX,Firefox
+- Firefox, Ereignisbehandlung
+- Einbetten von Webseiten, Firefox
+- events,Firefox
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b9659d1920ffc4d5e39f4cd44e15e24b08f6ddc
-ms.sourcegitcommit: e22adfb0dd3bb989e59455baedb4d905a877a240
+ms.openlocfilehash: e971caef18114b670678fc76d0515858bee77a94a5e3f8b5c24ca5322177b8e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "104311687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117748415"
 ---
-# <a name="handling-events-in-a-web-page-displayed-by-firefox"></a>Behandeln von Ereignissen in einer Webseite, die von Firefox angezeigt wird
+# <a name="handling-events-in-a-web-page-displayed-by-firefox"></a>Behandeln von Ereignissen auf einer von Firefox angezeigten Webseite
 
-Wenn Sie das Windows Media Player-Steuerelement in eine Webseite einbetten, können Sie Skripts schreiben, mit denen Ereignisse behandelt werden. Eine Liste der Ereignisse, die vom Player-Steuerelement ausgelöst werden, finden Sie unter [Player-Objekt](player-object.md).
+Wenn Sie das Windows Media Player-Steuerelement in eine Webseite einbetten, können Sie ein Skript schreiben, das Ereignisse behandelt. Eine Liste der Ereignisse, die vom Player-Steuerelement ausgelöst werden, finden Sie unter [Player-Objekt](player-object.md).
 
-Wenn der MIME-Typ, der einem eingebetteten Player-Steuerelement zugeordnet ist, application/x-MS-WMP ist, können Sie Ereignishandler schreiben, die das folgende Format aufweisen:
+Wenn der mime-Typ, der einem eingebetteten Player-Steuerelement zugeordnet ist, application/x-ms-wmp ist, können Sie Ereignishandler im folgenden Format schreiben:
 
 
 ```HTML
@@ -52,7 +52,7 @@ Wenn der MIME-Typ, der einem eingebetteten Player-Steuerelement zugeordnet ist, 
 
 
 
-Dabei ist *EventName* der Name eines Windows Media Player-Ereignisses, und *para* Meters ist eine Liste der Parameter des Ereignisses. Der folgende Code enthält z. b. einen Handler für das [PlayStateChange](player-player-playstatechange.md) -Ereignis.
+Dabei *ist EventName* der Name eines Windows Media Player und *Params* eine Liste der Ereignisparameter. Der folgende Code enthält beispielsweise einen Handler für das [PlayStateChange-Ereignis.](player-player-playstatechange.md)
 
 
 ```HTML
@@ -69,9 +69,9 @@ Dabei ist *EventName* der Name eines Windows Media Player-Ereignisses, und *para
 
 
 
-Wenn Sie über mehrere Instanzen des Player-Steuer Elements auf einer Webseite verfügen und das im vorangehenden Beispiel gezeigte Format verwenden, ist jeder Ereignishandler an eine bestimmte Instanz des Player-Steuer Elements gebunden. Im vorangehenden Beispiel wird der Ereignishandler nur aufgerufen, wenn sich der Wiedergabe Zustand für das Steuerelement mit ID = "Player" ändert.
+Wenn sie über mehrere Instanzen des Player-Steuerelements auf einer Webseite verfügen und das im voran sehenden Beispiel gezeigte Format verwenden, ist jeder Ereignishandler an eine bestimmte Instanz des Player-Steuerelements gebunden. Im voran folgenden Beispiel wird der Ereignishandler nur aufgerufen, wenn sich der Wiedergabezustand für das Steuerelement ändert, das id="Player" hat.
 
-Wenn der MIME-Typ, der einem eingebetteten Player-Steuerelement zugeordnet ist, nicht application/x-MS-WMP ist, können Sie Ereignishandler schreiben, die das folgende Format aufweisen:
+Wenn der mime-Typ, der einem eingebetteten Player-Steuerelement zugeordnet ist, nicht application/x-ms-wmp ist, können Sie Ereignishandler im folgenden Format schreiben:
 
 
 ```HTML
@@ -83,7 +83,7 @@ Wenn der MIME-Typ, der einem eingebetteten Player-Steuerelement zugeordnet ist, 
 
 
 
-Dabei ist *EventName* der Name eines Windows Media Player-Ereignisses, und *para* Meters ist eine Liste der Parameter des Ereignisses. Der folgende Code enthält z. b. einen Handler für das **PlayStateChange** -Ereignis.
+Dabei *ist EventName* der Name eines Windows Media Player und *Params* eine Liste der Ereignisparameter. Der folgende Code enthält beispielsweise einen Handler für das **PlayStateChange-Ereignis.**
 
 
 ```HTML
@@ -104,23 +104,23 @@ Dabei ist *EventName* der Name eines Windows Media Player-Ereignisses, und *para
 
 
 
-Wenn Sie über mehrere Instanzen des Player-Steuer Elements auf einer Webseite verfügen und das im vorangehenden Beispiel gezeigte Format verwenden, ist jeder Ereignishandler an alle Instanzen des Player-Steuer Elements gebunden, und der Ereignishandler wird aufgerufen, wenn sich der Wiedergabe Zustand für ein Player-Steuerelement auf der Seite ändert.
+Wenn Sie über mehrere Instanzen des Player-Steuerelements auf einer Webseite verfügen und das im voranseitigen Beispiel gezeigte Format verwenden, ist jeder Ereignishandler an alle Instanzen des Player-Steuerelements gebunden, und der Ereignishandler wird aufgerufen, wenn sich der Wiedergabezustand für ein Player-Steuerelement auf der Seite ändert.
 
 > [!Note]  
-> Wenn der MIME-Typ nicht application/x-MS-WMP ist, wird das **Double Click** -Ereignis als ondsdblclickevt (nicht ondsdoubleclickevt) gesendet, um die Kompatibilität mit Version 6,4 des Player-Steuer Elements zu gewährleisten.
+> Wenn der MIME-Typ nicht application/x-ms-wmp ist, wird das **DoubleClick-Ereignis** aus Kompatibilitätsproblemen mit Version 6.4 des Player-Steuerelements als OnDSDblClickEvt (nicht OnDSDoubleClickEvt) gesendet.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Verwenden des Windows Media Player-Steuer Elements mit Firefox**](using-the-windows-media-player-control-with-firefox.md)
+[**Verwenden des Windows Media Player-Steuerelements mit Firefox**](using-the-windows-media-player-control-with-firefox.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

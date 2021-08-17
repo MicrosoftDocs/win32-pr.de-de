@@ -1,40 +1,40 @@
 ---
-description: Die AppID-Tabelle oder die Registrierungs Tabelle gibt an, dass das Installationsprogramm DCOM-Server konfiguriert und registriert, um einen der folgenden Schritte während einer Installation durchzuführen.
+description: Die Tabelle AppId oder die Registrierungstabelle gibt an, dass das Installationsprogramm DCOM-Server für einen der folgenden Schritte während einer Installation konfiguriert und registriert.
 ms.assetid: d76ed6df-944b-4996-bf07-e42ceb7a1b69
-title: AppID-Tabelle
+title: AppId-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 07fa202907c094d8c12f73d838f5ad1d6b942125
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4e8452635cd7c167d6a8618629eaec2f6f6c1aa2e72e0b3628a7d4542a9e7160
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119066270"
 ---
-# <a name="appid-table"></a>AppID-Tabelle
+# <a name="appid-table"></a>AppId-Tabelle
 
-Die AppID-Tabelle oder die [Registrierungs Tabelle](registry-table.md) gibt an, dass das Installationsprogramm DCOM-Server konfiguriert und registriert, um einen der folgenden Schritte während einer Installation durchzuführen.
+Die Tabelle AppId oder die [Registrierungstabelle](registry-table.md) gibt an, dass das Installationsprogramm DCOM-Server für einen der folgenden Schritte während einer Installation konfiguriert und registriert.
 
--   Führt den DCOM-Server unter einer anderen Identität aus als der Benutzer, der den Server aktiviert. Beispielsweise, um einen DCOM-Server so zu konfigurieren, dass er immer als interaktiver Benutzer oder als vordefinierter Benutzer ausgeführt wird.
+-   Führen Sie den DCOM-Server unter einer anderen Identität als der Benutzer aus, der den Server aktiviert. Beispielsweise, um einen DCOM-Server so zu konfigurieren, dass er immer als interaktiver Benutzer oder als vordefinierter Benutzer ausgeführt wird.
 -   Führen Sie den DCOM-Server als Dienst aus.
--   Konfigurieren Sie den Standard Sicherheits Zugriff für den DCOM-Server.
+-   Konfigurieren Sie den Standardsicherheitszugriff für den DCOM-Server.
 -   Registrieren Sie den DCOM-Server so, dass er auf einem anderen Computer aktiviert ist.
 
-Diese Tabelle wird bei der Installation der Komponente verarbeitet, die dem DCOM-Server in der \_ Spalte Komponente der [Klassen Tabelle](class-table.md)zugeordnet ist. Eine AppID wird nicht angekündigt.
+Diese Tabelle wird bei der Installation der Komponente verarbeitet, die dem DCOM-Server in der \_ Spalte Komponente der [Class-Tabelle](class-table.md)zugeordnet ist. Eine AppId wird nicht angekündigt.
 
-Die AppID-Tabelle weist die folgenden Spalten auf.
+Die Tabelle AppId enthält die folgenden Spalten.
 
 
 
-| Spalte               | Typ                       | Schlüssel | Nullwerte zulässig |
+| Spalte               | Typ                       | Key | Nullwerte zulässig |
 |----------------------|----------------------------|-----|----------|
 | AppId                | [GUID](guid.md)           | J   | N        |
-| RemoteServerName     | [Großformatige](formatted.md) | N   | J        |
+| RemoteServerName     | [Formatiert](formatted.md) | N   | J        |
 | LocalService         | [Text](text.md)           | N   | J        |
-| Service Parameters    | [Text](text.md)           | N   | J        |
-| Dllersatz         | [Text](text.md)           | N   | J        |
-| Activateatstorage    | [Integer](integer.md)     | N   | J        |
-| Runasinteractiveuser | [Integer](integer.md)     | N   | J        |
+| ServiceParameters    | [Text](text.md)           | N   | J        |
+| DllSurrogate         | [Text](text.md)           | N   | J        |
+| ActivateAtStorage    | [Integer](integer.md)     | N   | J        |
+| RunAsInteractiveUser | [Integer](integer.md)     | N   | J        |
 
 
 
@@ -44,62 +44,62 @@ Die AppID-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="AppId"></span><span id="appid"></span><span id="APPID"></span>AppID
+<span id="AppId"></span><span id="appid"></span><span id="APPID"></span>Appid
 </dt> <dd>
 
-Die AppID-Spalte der [Klassen Tabelle](class-table.md) ist ein Fremdschlüssel in diese Spalte der AppID-Tabelle. Diese Spalte enthält den AppID-Wert, der unter der CLSID geschrieben wird, und erstellt den AppID-GUID-Schlüssel unter HKCR \\ AppID.
+Die AppId-Spalte der [Class-Tabelle](class-table.md) ist ein Fremdschlüssel in dieser Spalte der AppId-Tabelle. Diese Spalte enthält den AppId-Wert, der unter der CLSID geschrieben wird, und erstellt den AppId-GUID-Schlüssel unter HKCR \\ AppId.
 
 </dd> <dt>
 
-<span id="RemoteServerName"></span><span id="remoteservername"></span><span id="REMOTESERVERNAME"></span>Remote Servername
+<span id="RemoteServerName"></span><span id="remoteservername"></span><span id="REMOTESERVERNAME"></span>RemoteServerName
 </dt> <dd>
 
-Diese Spalte enthält den Wert von "Remoteservername" = <xxxx> , der unter HKCR \\ AppID \\ {AppID} geschrieben wird \\ .
+Diese Spalte enthält den Wert von "RemoteServerName"=, der <xxxx> unter HKCR \\ AppID \\ {AppID} geschrieben \\ wird.
 
 </dd> <dt>
 
-<span id="LocalService"></span><span id="localservice"></span><span id="LOCALSERVICE"></span>LocalService
+<span id="LocalService"></span><span id="localservice"></span><span id="LOCALSERVICE"></span>Localservice
 </dt> <dd>
 
-Diese Spalte enthält den Wert von LocalService, der unter HKCR \\ AppID \\ { <appid> } "LocalService" = geschrieben wird <xxx> .
+Diese Spalte enthält den Wert von LocalService, der unter HKCR \\ AppID \\ { } <appid> "LocalService"= geschrieben <xxx> wird.
 
 </dd> <dt>
 
-<span id="ServiceParameters"></span><span id="serviceparameters"></span><span id="SERVICEPARAMETERS"></span>Service Parameters
+<span id="ServiceParameters"></span><span id="serviceparameters"></span><span id="SERVICEPARAMETERS"></span>ServiceParameters
 </dt> <dd>
 
-Diese Spalte enthält den Wert von Service Parameters, der unter HKCR \\ AppID \\ {AppID>} "Service Parameters" geschrieben wird.
+Diese Spalte enthält den Wert von ServiceParameters, der unter HKCR \\ AppID \\ {appid>} "ServiceParameters" geschrieben wird.
 
 </dd> <dt>
 
-<span id="DllSurrogate"></span><span id="dllsurrogate"></span><span id="DLLSURROGATE"></span>Dllersatz
+<span id="DllSurrogate"></span><span id="dllsurrogate"></span><span id="DLLSURROGATE"></span>DllSurrogate
 </dt> <dd>
 
-Diese Spalte enthält den Wert von dllersatz, der unter HKCR \\ AppID \\ { <appid> } "dllersatz" = geschrieben wird <xxx> . Wenn diese Spalte vorhanden ist, handelt es sich in der Regel um eine leere Zeichenfolge.
+Diese Spalte enthält den Wert von DllSurrogate, der unter HKCR \\ AppId \\ { } <appid> "DllSurrogate"= geschrieben <xxx> wird. Wenn diese Spalte vorhanden ist, handelt es sich in der Regel um eine leere Zeichenfolge.
 
 </dd> <dt>
 
-<span id="ActivateAtStorage"></span><span id="activateatstorage"></span><span id="ACTIVATEATSTORAGE"></span>Activateatstorage
+<span id="ActivateAtStorage"></span><span id="activateatstorage"></span><span id="ACTIVATEATSTORAGE"></span>ActivateAtStorage
 </dt> <dd>
 
-Ein ganzzahliger Wert ungleich 0 (null) in diesem Feld bewirkt, dass Windows Installer HKCR \\ AppID \\ { <appid> } "activateatstorage" = "Y" in die Registrierung schreibt. Wenn das Feld leer gelassen wird oder den Wert 0 (null) aufweist, wird kein Wert geschrieben.
+Ein ganzzahliger Wert ungleich 0 in diesem Feld bewirkt, dass Windows Installer HKCR \\ AppID \\ { } <appid> "ActivateAtStorage"="Y" in die Registrierung schreibt. Wenn das Feld leer gelassen wird oder den Wert 0 hat, wird kein Wert geschrieben.
 
 </dd> <dt>
 
-<span id="RunAsInteractiveUser"></span><span id="runasinteractiveuser"></span><span id="RUNASINTERACTIVEUSER"></span>Runasinteractiveuser
+<span id="RunAsInteractiveUser"></span><span id="runasinteractiveuser"></span><span id="RUNASINTERACTIVEUSER"></span>RunAsInteractiveUser
 </dt> <dd>
 
-Ein ganzzahliger Wert ungleich 0 (null) in diesem Feld bewirkt, dass Windows Installer HKCR \\ AppID \\ {AppID>} "runas" = "Interactive User" in die Registrierung schreibt. Wenn das Feld leer gelassen wird oder den Wert 0 (null) aufweist, wird kein Wert geschrieben.
+Ein ganzzahliger Wert ungleich 0 in diesem Feld bewirkt, dass Windows Installer HKCR \\ AppID \\ {appid>} "RunAs"="Interactive User" in die Registrierung schreibt. Wenn das Feld leer gelassen wird oder den Wert 0 hat, wird kein Wert geschrieben.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Tabelle wird von der [RegisterClassInfo-Aktion](registerclassinfo-action.md) und der [unregisterclassinfo-Aktion](unregisterclassinfo-action.md)verwendet.
+Diese Tabelle wird von der [RegisterClassInfo-Aktion](registerclassinfo-action.md) und der [UnregisterClassInfo-Aktion](unregisterclassinfo-action.md)verwendet.
 
-Beachten Sie, dass die AppID-Tabelle keine Spalte zum Registrieren eines Standard namens enthält. In Fällen, in denen Sie einen benutzerfreundlichen Namen als Standardwert für den Namen schreiben müssen, müssen Sie sich daher mithilfe der [Registrierungs Tabelle](registry-table.md)registrieren.
+Beachten Sie, dass die Tabelle AppId keine Spalte zum Registrieren eines Standardnamens enthält. In Fällen, in denen Sie einen benutzerfreundlichen Namen als Wert für Standardname schreiben müssen, müssen Sie sich daher mithilfe der [Registrierungstabelle](registry-table.md)registrieren.
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

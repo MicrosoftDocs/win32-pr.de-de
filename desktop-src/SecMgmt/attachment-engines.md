@@ -1,31 +1,31 @@
 ---
-description: Eine Anlage-Engine ist eine DLL, die Dienst spezifische Konfigurations-und Analyseanforderungen verarbeitet.
+description: Eine Anlagen-Engine ist eine DLL, die dienstspezifische Konfigurations- und Analyseanforderungen verarbeitet.
 ms.assetid: bbca486a-9eec-4510-b5fd-435972182a69
 title: Anlagen-Engines
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9af0711caa5ceada7c16ae11b6470568a76d16ef
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 62e09996bfb58e0447ec8e25bb627af6a4c93751a86f9f73f3499cf7f8b0fdb8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866963"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118895053"
 ---
 # <a name="attachment-engines"></a>Anlagen-Engines
 
-Eine Anlage-Engine ist eine DLL, die Dienst spezifische Konfigurations-und Analyseanforderungen verarbeitet.
+Eine Anlagen-Engine ist eine DLL, die dienstspezifische Konfigurations- und Analyseanforderungen verarbeitet.
 
-Der Benutzer stellt eine Dienst spezifische Konfigurations-und Analyse Anforderung mithilfe der Erweiterungs-Snap-in-Erweiterung her. Diese Anforderung wird dann über die Sicherheitskonfigurations-Snap-Ins an die allgemeine Sicherheitskonfigurations-Engine weitergeleitet, die wiederum die Dienst spezifische Verarbeitung an die entsprechende Anlage-Engine übergibt. Die Anlagen-Engine stellt dann eine Verbindung mit dem Dienst her und ändert seine Konfiguration. Mit anderen Worten: die Anlagen-Engine stellt die Back-End-Verarbeitung bereit, die die Erweiterungs-Snap-in-Erweiterung unterstützt.
+Der Benutzer stellt mithilfe der Erweiterung für das Anlagen-Snap-In eine dienstspezifische Konfigurations- und Analyseanforderung. Diese Anforderung wird dann über die Sicherheitskonfigurations-Snap-Ins an die allgemeine Sicherheitskonfigurations-Engine übergeben, die wiederum die dienstspezifische Verarbeitung an die entsprechende Anlagen-Engine übergibt. Die Anlagen-Engine stellt dann eine Verbindung mit dem Dienst her und ändert seine Konfiguration. Anders ausgedrückt: Die Anlagen-Engine stellt die Back-End-Verarbeitung bereit, die die Erweiterung für das Anfüge-Snap-In unterstützt.
 
-Eine Anlage-Engine muss die folgenden drei Funktionen implementieren:
+Eine Anlagen-Engine muss die folgenden drei Funktionen implementieren:
 
--   [**Scesvstreamtachmentanalysis**](scesvcattachmentanalyze.md): berechnet den Unterschied zwischen der Konfiguration des Diensts und der Konfiguration, die in der Sicherheitsdatenbank gespeichert ist. Die Unterschiede werden in die Sicherheitsdatenbank geschrieben.
--   [**Scesvtortachmentconfig**](scesvcattachmentconfig.md): Hiermit wird der Dienst entsprechend der Angabe in der Snap-in-Benutzeroberfläche konfiguriert.
--   [**Scesvsintachmentupdate**](scesvcattachmentupdate.md), das die Basiskonfiguration und Konfigurations Analyse für den Dienst in der Sicherheitsdatenbank aktualisiert.
+-   [**SceSvcAttachmentAnalyze**](scesvcattachmentanalyze.md), das den Unterschied zwischen der Konfiguration des Diensts und der in der Sicherheitsdatenbank gespeicherten Konfiguration berechnet. Die Unterschiede werden in die Sicherheitsdatenbank geschrieben.
+-   [**SceSvcAttachmentConfig**](scesvcattachmentconfig.md), das den Dienst gemäß der Angabe in der Snap-In-Benutzeroberfläche konfiguriert.
+-   [**SceSvcAttachmentUpdate**](scesvcattachmentupdate.md), das die Basiskonfiguration und Konfigurationsanalyse für den Dienst in der Sicherheitsdatenbank aktualisiert.
 
-Um die Implementierung der vorangehenden Funktionen zu vereinfachen, stellt das Sicherheitskonfigurations-Toolset Unterstützungsfunktionen und-Strukturen bereit, die Ihre Anwendung zum Abfragen und Festlegen von Informationen in der Sicherheitsdatenbank verwenden kann. Weitere Informationen finden Sie unter [Anlage Rückruf Funktionen](management-functions.md).
+Um die Implementierung der vorherigen Funktionen zu vereinfachen, stellt der Toolsatz für die Sicherheitskonfiguration Unterstützungsfunktionen und Strukturen bereit, die Ihre Anwendung zum Abfragen und Festlegen von Informationen in der Sicherheitsdatenbank verwenden kann. Weitere Informationen finden Sie unter [Attachment Callback Functions](management-functions.md).
 
-Wenn Sie eine Anlagen-Engine-dll erstellen, müssen Sie Sie installieren und anschließend bei der Sicherheitskonfigurations-Engine registrieren. Um die dll zu registrieren, fügen Sie der Registrierung einen bestimmten Schlüssel hinzu. Beim Start der Sicherheitskonfigurations-Engine wird die Registrierung überprüft und alle registrierten Anlagen-Engine-DLLs geladen. Anschließend werden Dienst spezifische Konfigurations-und Analyseanforderungen an die entsprechende Anlage-Engine weitergeleitet. Standard Konfigurations-und Analyseanforderungen, die nicht Dienst spezifisch sind, werden von der Sicherheitskonfigurations-Engine verarbeitet.
+Wenn Sie eine Anlagen-Engine-DLL erstellen, müssen Sie sie installieren und dann bei der Sicherheitskonfigurations-Engine registrieren. Um die DLL zu registrieren, fügen Sie der Registrierung einen bestimmten Schlüssel hinzu. Wenn die Sicherheitskonfigurations-Engine gestartet wird, überprüft sie die Registrierung und lädt alle registrierten Anlagen-Engine-DLLs. Anschließend werden dienstspezifische Konfigurations- und Analyseanforderungen an die entsprechende Anlagen-Engine übergeben. Standardkonfigurations- und Analyseanforderungen, die nicht dienstspezifisch sind, werden von der Sicherheitskonfigurations-Engine verarbeitet.
 
  
 

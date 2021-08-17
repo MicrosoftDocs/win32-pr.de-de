@@ -18,7 +18,7 @@ ms.locfileid: "118690515"
 
 Wenn Sie eine Suche auf einem Server mit starker Arbeitsauslastung anfordern, sollten Sie den Server anweisen, die Suche auf ein bestimmtes Zeitlimit zu beschränken. Wenn Sie z. B. eine Anwendung ausführen möchten, um einen wöchentlichen Bericht auf einem Server zu generieren, der nahezu die Kapazität hat, und um zu vermeiden, dass die CPU-Zeit maximiert und die Ausführung anderer Aufträge verhindert wird, können Sie die Suchzeit auf einen kleinen Wert festlegen und die Anwendung später erneut ausführen, wenn der Bericht nicht generiert werden kann.
 
-Einige Server können ihr eigenes Verwaltungszeitlimit erzwingen. Wenn Sie in diesen Fällen einen Suchzeitgrenzwert angeben, der das Verwaltungszeitlimit überschreitet, ignoriert der Server Ihre Spezifikation und verwendet stattdessen das interne Verwaltungszeitlimit.
+Einige Server können ein eigenes Verwaltungszeitlimit erzwingen. Wenn Sie in diesen Fällen einen Suchzeitgrenzwert angeben, der das Verwaltungszeitlimit überschreitet, ignoriert der Server Ihre Spezifikation und verwendet stattdessen das interne Verwaltungszeitlimit.
 
 Weitere Informationen zur Verwendung der Option "Suchzeitlimit" mit einer bestimmten Suchschnittstelle finden Sie unter:
 

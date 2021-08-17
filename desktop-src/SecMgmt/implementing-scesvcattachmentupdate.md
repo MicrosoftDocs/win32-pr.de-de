@@ -1,32 +1,32 @@
 ---
-description: Nimmt als Parameter einen Satz von bereitgestellten Konfigurationsinformationen an.
+description: Verwendet als Parameter einen Satz angegebener Konfigurationsinformationen.
 ms.assetid: 3c0a71f6-f643-4a5e-8b5c-15c976a3736e
-title: Implementieren von scesvertachmentupdate
+title: Implementieren von SceSvcAttachmentUpdate
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 381a2b04b75399b5f580426d9f2dd9f5911f52d6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c3f2399ee87fdc97dcfb82d9fd711c6407894c3dbbbf17a31df39bb225010032
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360575"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118894594"
 ---
-# <a name="implementing-scesvcattachmentupdate"></a>Implementieren von scesvertachmentupdate
+# <a name="implementing-scesvcattachmentupdate"></a>Implementieren von SceSvcAttachmentUpdate
 
-Die [**scesvgattachmentupdate**](scesvcattachmentupdate.md) -Funktion benötigt als Parameter einen Satz von bereitgestellten Konfigurationsinformationen. Anschließend werden Informationen aus der Sicherheitsdatenbank abgerufen, eine neue Basiskonfiguration mit den bereitgestellten Konfigurationsinformationen berechnet, neue Analyse Informationen auf der Grundlage der Datenbankinformationen und der angegebenen Konfigurationsinformationen berechnet und die Datenbank mit neuen grundlegenden Konfigurations-und Analyse Informationen aktualisiert. Sie können **scesvsintachmentupdate** mit dem folgenden Algorithmus implementieren.
+Die [**SceSvcAttachmentUpdate-Funktion**](scesvcattachmentupdate.md) akzeptiert als Parameter einen Satz angegebener Konfigurationsinformationen. Anschließend werden Informationen aus der Sicherheitsdatenbank abgerufen, eine neue Basiskonfiguration anhand der angegebenen Konfigurationsinformationen berechnet, neue Analyseinformationen basierend auf den Datenbankinformationen und den angegebenen Konfigurationsinformationen berechnet und die Datenbank mit neuen Basiskonfigurations- und Analyseinformationen aktualisiert. Sie können **SceSvcAttachmentUpdate mit** dem folgenden Algorithmus implementieren.
 
-**So implementieren Sie scesvertachmentupdate**
+**So implementieren Sie SceSvcAttachmentUpdate**
 
-1.  Definieren Sie die Variablen, die zum Abrufen von Informationen, Festlegen von Informationen und Rückgabecodes erforderlich sind.
-2.  Rufen Sie die pfqueryinfo-Rückruffunktion in der Rückruf Struktur auf, um die aktuellen Konfigurationsinformationen aus der Sicherheitsdatenbank abzurufen.
+1.  Definieren Sie die Variablen, die zum Abrufen von Informationen, Festlegen von Informationen und Zurückgeben von Codes erforderlich sind.
+2.  Rufen Sie die rückruffunktion pfQueryInfo in der Rückrufstruktur auf, um die aktuellen Konfigurationsinformationen aus der Sicherheitsdatenbank abzurufen.
 3.  Vergleichen Sie die Werte:
 
-    -   Wenn sich die Daten unterscheiden, rufen Sie die pfabtinfo-Rückruffunktion in der Rückruf Struktur auf, um die Konfigurationsdaten in der Datenbank zu aktualisieren.
-    -   Wenn die Daten identisch sind, rufen Sie die pfsetinfo-Rückruffunktion in der Rückruf Struktur auf, um die Analysedaten in der Datenbank zu aktualisieren.
+    -   Wenn sich die Daten unterscheiden, rufen Sie die rückruffunktion pfSetInfo in der Rückrufstruktur auf, um die Konfigurationsdaten in der Datenbank zu aktualisieren.
+    -   Wenn die Daten identisch sind, rufen Sie die rückruffunktion pfSetInfo in der Rückrufstruktur auf, um die Analysedaten in der Datenbank zu aktualisieren.
 
 4.  Wiederholen Sie den Vorgang, bis alle Daten verarbeitet wurden.
 
-Das folgende Beispiel zeigt eine mögliche Implementierung von [**scesvertachmentupdate**](scesvcattachmentupdate.md).
+Das folgende Beispiel zeigt eine mögliche Implementierung von [**SceSvcAttachmentUpdate.**](scesvcattachmentupdate.md)
 
 
 ```C++

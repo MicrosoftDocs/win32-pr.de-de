@@ -1,5 +1,5 @@
 ---
-description: Stellt Daten für ein VectorChanged-Ereignis bereit.
+description: Stellt Daten für ein VectorChanged-Ereignis zur
 ms.assetid: 635c0f96-5d64-436e-9186-78f9d85b6d29
 title: IVectorChangedEventArgs-Schnittstelle (IVectorChangedEventArgs.h)
 ms.topic: reference
@@ -22,11 +22,11 @@ ms.locfileid: "118560615"
 ---
 # <a name="ivectorchangedeventargs-interface"></a>IVectorChangedEventArgs-Schnittstelle
 
-Stellt Daten für ein [**VectorChanged-Ereignis**](/uwp/api/windows.foundation.collections.iobservablevector-1?view=winrt-19041) bereit.
+Stellt Daten für ein [**VectorChanged-Ereignis**](/uwp/api/windows.foundation.collections.iobservablevector-1?view=winrt-19041) zur
 
 ## <a name="members"></a>Member
 
-Die **IVectorChangedEventArgs-Schnittstelle** erbt von **IInspectable**. **IVectorChangedEventArgs** verfügt auch über diese Typen von Membern:
+Die **IVectorChangedEventArgs-Schnittstelle** erbt von **IInspectable**. **IVectorChangedEventArgs** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
@@ -38,8 +38,8 @@ Die **IVectorChangedEventArgs-Schnittstelle** verfügt über diese Methoden.
 
 | Methode                                                                        | Beschreibung                                                           |
 |:------------------------------------------------------------------------------|:----------------------------------------------------------------------|
-| [**get \_ CollectionChange**](ivectorchangedeventargs-get-collectionchange.md) | Ruft den Änderungstyp ab, der im Vektor aufgetreten ist.<br/>       |
-| [**get \_ Index**](ivectorchangedeventargs-get-index.md)                       | Ruft die Position im Vektor ab, an der die Änderung aufgetreten ist.<br/> |
+| [**get \_ CollectionChange**](ivectorchangedeventargs-get-collectionchange.md) | Ruft den Typ der Änderung ab, die im Vektor aufgetreten ist.<br/>       |
+| [**Index \_ get**](ivectorchangedeventargs-get-index.md)                       | Ruft die Position im Vektor ab, an der die Änderung aufgetreten ist.<br/> |
 
 
 

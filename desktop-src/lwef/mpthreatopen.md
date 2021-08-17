@@ -23,7 +23,7 @@ ms.locfileid: "118746889"
 ---
 # <a name="mpthreatopen-function"></a>MpThreatOpen-Funktion
 
-Gibt ein Enumerationshand handle zum Abrufen von Bedrohungen zurück. Diese Funktion kann verwendet werden, um Bedrohungen zu öffnen, die von einer bestimmten Überprüfung erkannt wurden, alle aktiven Bedrohungen im System, den Verlauf der Bedrohungsbedrohung oder alle Bedrohungen, die in der Signaturdatenbank vorhanden sind.
+Gibt ein Enumerationshand handle zum Abrufen von Bedrohungen zurück. Diese Funktion kann verwendet werden, um Bedrohungen zu öffnen, die von einem bestimmten Scan erkannt wurden, alle aktiven Bedrohungen im System, den Verlauf der Bedrohungsbedrohung oder alle Bedrohungen, die in der Signaturdatenbank vorhanden sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,7 +68,7 @@ Wird verwendet, um die Quelle der Bedrohungsenumeration zu steuern. Die möglich
 | <span id="MPTHREAT_SOURCE_HISTORY"></span><span id="mpthreat_source_history"></span><dl> <dt>**\_MPTHREAT-QUELLVERLAUF \_**</dt> </dl>          | Bedrohungen, die als Verlauf umgesetzt und beibehalten werden.<br/>                                                 |
 | <span id="MPTHREAT_SOURCE_QUARANTINE"></span><span id="mpthreat_source_quarantine"></span><dl> <dt>**\_MPTHREAT-QUELLQUARANTÄNE \_**</dt> </dl> | Bedrohungen, die unter Quarantäne gestellt werden.<br/>                                                                           |
 | <span id="MPTHREAT_SOURCE_SIGNATURE"></span><span id="mpthreat_source_signature"></span><dl> <dt>**\_MPTHREAT-QUELLSIGNATUR \_**</dt> </dl>    | Bedrohungen, die mit der aktuellen Signaturdatenbank erkannt werden können.<br/>                                |
-| <span id="MPTHREAT_SOURCE_STATE"></span><span id="mpthreat_source_state"></span><dl> <dt>**\_MPTHREAT-QUELLZUSTAND \_**</dt> </dl>                | Bedrohungen, auf die vor Kurzem reagiert wurde. ("Recently" wird durch eine konfigurierbare interne Einstellung definiert.)<br/> |
+| <span id="MPTHREAT_SOURCE_STATE"></span><span id="mpthreat_source_state"></span><dl> <dt>**\_MPTHREAT-QUELLZUSTAND \_**</dt> </dl>                | Bedrohungen, auf die vor Kurzem reagiert wurde. ("Kürzlich" wird durch eine konfigurierbare interne Einstellung definiert.)<br/> |
 
 
 
@@ -88,10 +88,10 @@ Wird verwendet, um aufzählte Bedrohungen basierend auf dem Erkennungstyp zu fil
 | Wert                                                                                                                                                                                           | Bedeutung                                                                                                       |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | <span id="MPTHREAT_TYPE_KNOWNBAD"></span><span id="mpthreat_type_knownbad"></span><dl> <dt>**MPTHREAT-TYP \_ \_ KNOWNBAD**</dt> </dl>       | Die Erkennung erfolgt basierend auf einer bestimmten Signatur, Emulation oder einer anderen Bedrohungserkennungsmethode.<br/> |
-| <span id="MPTHREAT_TYPE_SUSPICIOUS"></span><span id="mpthreat_type_suspicious"></span><dl> <dt>**MPTHREAT-TYP \_ VERDÄCHTIG \_**</dt> </dl> | Die Erkennung erfolgt basierend auf der Verhaltensüberwachung.<br/>                                               |
+| <span id="MPTHREAT_TYPE_SUSPICIOUS"></span><span id="mpthreat_type_suspicious"></span><dl> <dt>**MPTHREAT-TYP \_ \_ VERDÄCHTIG**</dt> </dl> | Die Erkennung erfolgt basierend auf der Verhaltensüberwachung.<br/>                                               |
 | <span id="MPTHREAT_TYPE_UNKNOWN"></span><span id="mpthreat_type_unknown"></span><dl> <dt>**MPTHREAT-TYP \_ \_ UNBEKANNT**</dt> </dl>          | Die Erkennung erfolgt basierend auf unbekannten Bedrohungen (nicht klassifiziert).<br/>                                    |
 | <span id="MPTHREAT_TYPE_KNOWNGOOD"></span><span id="mpthreat_type_knowngood"></span><dl> <dt>**MPTHREAT-TYP \_ \_ KNOWNGOOD**</dt> </dl>    | Die Erkennung erfolgt basierend auf bekannten sicheren Bedrohungen.<br/>                                                |
-| <span id="MPTHREAT_TYPE_NIS"></span><span id="mpthreat_type_nis"></span><dl> <dt>**MPTHREAT \_ TYPE \_ NIS**</dt> </dl>                      | Die Erkennung erfolgt basierend auf NIS-Bedrohungen.<br/>                                                       |
+| <span id="MPTHREAT_TYPE_NIS"></span><span id="mpthreat_type_nis"></span><dl> <dt>**\_MPTHREAT-TYP-NIS \_**</dt> </dl>                      | Die Erkennung erfolgt basierend auf NIS-Bedrohungen.<br/>                                                       |
 
 
 
@@ -104,7 +104,7 @@ Wird verwendet, um aufzählte Bedrohungen basierend auf dem Erkennungstyp zu fil
 
 Typ: **PMPHANDLE**
 
-Zurückgegebenes Bedrohungsenumerationshand handle, das den Enumerationskontext identifiziert. Dieses Handle kann zum Aufzählen von Bedrohungsinformationen mit [**mpThreatEnumerate verwendet werden.**](mpthreatenumerate.md) Das Handle muss mit der [**MpHandleClose-Funktion geschlossen**](mphandleclose.md) werden.
+Das zurückgegebene Bedrohungsenumerationshand handle, das den Enumerationskontext identifiziert. Dieses Handle kann zum Aufzählen von Bedrohungsinformationen mit [**mpThreatEnumerate verwendet werden.**](mpthreatenumerate.md) Das Handle muss mit der [**MpHandleClose-Funktion geschlossen**](mphandleclose.md) werden.
 
 </dd> </dl>
 

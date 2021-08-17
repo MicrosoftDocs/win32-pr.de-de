@@ -1,6 +1,6 @@
 ---
 title: IADsSession-Eigenschaftsmethoden (Iads.h)
-description: Die Eigenschaftenmethoden der IADsSession-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen und eine allgemeine Erläuterung zu Eigenschaftsmethoden finden Sie unter Schnittstelleneigenschaftenmethoden.
+description: Die Eigenschaftenmethoden der IADsSession-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen und eine allgemeine Diskussion über Eigenschaftenmethoden finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: b2366da7-c51c-4279-8931-2000d3110d72
 ms.tgt_platform: multiple
 keywords:
@@ -36,7 +36,7 @@ ms.locfileid: "118690735"
 ---
 # <a name="iadssession-property-methods"></a>IADsSession-Eigenschaftsmethoden
 
-Die Eigenschaftenmethoden der [**IADsSession-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadssession) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen und eine allgemeine Erläuterung zu Eigenschaftsmethoden finden Sie unter [Schnittstelleneigenschaftenmethoden.](interface-property-methods.md)
+Die Eigenschaftenmethoden der [**IADsSession-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadssession) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen und eine allgemeine Diskussion über Eigenschaftenmethoden finden Sie unter [Schnittstelleneigenschaftsmethoden](interface-property-methods.md).
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -95,7 +95,7 @@ HRESULT get_ComputerPath(
 **ConnectTime**
 </dt> <dd> <dl>
 
-Verstrichene Zeit (in Sekunden), seit die Sitzung gestartet wurde.
+Verstrichene Zeit in Sekunden seit dem Start der Sitzung.
 
 <dt>
 
@@ -303,7 +303,7 @@ Cleanup:
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

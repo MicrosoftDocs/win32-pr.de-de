@@ -22,7 +22,7 @@ ms.locfileid: "118901462"
 ---
 # <a name="publickeyencodedkey-property"></a>PublicKey.EncodedKey-Eigenschaft
 
-\[Die **EncodedKey-Eigenschaft** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Verwenden Sie stattdessen die [**X509Certificate2.PublicKey-Eigenschaft**](/dotnet/api/system.security.cryptography.x509certificates.x509certificate2.publickey?view=netcore-3.1) im [**System.Security.Cryptography.X509Certificates-Namespace.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
+\[Die **Eigenschaft EncodedKey** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Verwenden Sie stattdessen die [**X509Certificate2.PublicKey-Eigenschaft**](/dotnet/api/system.security.cryptography.x509certificates.x509certificate2.publickey?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
 Die **EncodedKey-Eigenschaft** ruft den Wert des öffentlichen Schlüssels ab.
 
@@ -37,7 +37,7 @@ PublicKey.EncodedKey As EncodedData
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein [**EncodedData-Objekt,**](encodeddata.md) das Zugriff auf den Wert des öffentlichen Schlüssels bereitstellt.
+Ein [**EncodedData-Objekt,**](encodeddata.md) das Zugriff auf den Wert des öffentlichen Schlüssels bietet.
 
 ## <a name="requirements"></a>Anforderungen
 

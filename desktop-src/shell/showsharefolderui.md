@@ -23,7 +23,7 @@ ms.locfileid: "118968259"
 ---
 # <a name="showsharefolderui-function"></a>ShowShareFolderUI-Funktion
 
-Zeigt die Registerkarte **Ordnerfreigabe** auf dem Eigenschaftenblatt für den angegebenen Ordner an.
+Zeigt die **Registerkarte Ordnerfreigabe** auf dem Eigenschaftenblatt für den angegebenen Ordner an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Ein Handle für das übergeordnete Fenster für das Eigenschaftenblatt.
 
 Typ: **LPCWSTR**
 
-Ein Zeiger auf eine Zeichenfolge, die den Pfad zu dem Ordner angibt, in dem die Registerkarte **Ordnerfreigabe** angezeigt wird.
+Ein Zeiger auf eine Zeichenfolge, die den Pfad zu dem Ordner angibt, in dem die Registerkarte **Ordnerfreigabe angezeigt** wird.
 
 </dd> </dl>
 
@@ -67,7 +67,7 @@ Diese Funktion gibt immer S \_ OK zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine LIB-Datei zugeordnet. Sie müssen [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um es zu verwenden.
+Dieser Funktion ist keine LIB-Datei zugeordnet. Sie müssen [**LoadLibrary und**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) [**GetProcAddress verwenden,**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) um sie zu verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,7 +75,7 @@ Dieser Funktion ist keine LIB-Datei zugeordnet. Sie müssen [**LoadLibrary**](/w
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Ntshrui.dll</dt> </dl> |
 | Unicode- und ANSI-Name<br/>   | **ShowShareFolderUIW** (Unicode)<br/>                                            |

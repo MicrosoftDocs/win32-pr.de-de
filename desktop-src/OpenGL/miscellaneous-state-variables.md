@@ -1,9 +1,9 @@
 ---
-title: Verschiedene Zustandsvariablen
-description: Verschiedene Zustandsvariablen
+title: Verschiedene Statusvariablen
+description: Verschiedene Statusvariablen
 ms.assetid: 4c99b9b6-5cd3-49d1-9bfe-fa1421d892f2
 keywords:
-- Verschiedene Zustandsvariablen OpenGL
+- Sonstige Zustandsvariablen OpenGL
 topic_type:
 - apiref
 api_name:
@@ -12,14 +12,14 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: de565d9e6f8055f1b2ebc90c4deec83da463e7d5
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: a9ac073ee9e71a47a36a34bf774698b7d00bec2cc675d9c1c1214725eb389dc2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107909857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118937309"
 ---
-# <a name="miscellaneous-state-variables"></a>Verschiedene Zustandsvariablen
+# <a name="miscellaneous-state-variables"></a>Verschiedene Statusvariablen
 
 <dl> <dt><span id="GL_LIST_BASE"></span><span id="gl_list_base"></span>GL \_ LIST \_ BASE</dt> <dd> 
 
@@ -38,7 +38,7 @@ ms.locfileid: "107909857"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Anzahl der Anzeigelisten, die in Arbeit sind; 0 , wenn keine                            |
+| Beschreibung:     | Anzahl von Anzeigelisten, die in Der Konstruktion sind; 0, wenn keiner                            |
 | Attributgruppe: |                                                                                  |
 | Anfangswert:   | 0                                                                                |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -47,11 +47,11 @@ ms.locfileid: "107909857"
 
  
 
-</dd> <dt><span id="GL_LIST_MODE"></span><span id="gl_list_mode"></span>GL \_ \_ LIST-MODUS</dt> <dd> 
+</dd> <dt><span id="GL_LIST_MODE"></span><span id="gl_list_mode"></span>\_ \_ GL-LISTENMODUS</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Modus der Anzeigeliste, die sich im Aufbau befindet; undefiniert, wenn keines vorhanden ist                       |
+| Beschreibung:     | Anzeigemodus der Anzeigeliste in Der Konstruktion; Undefined, wenn keine                       |
 | Attributgruppe: |                                                                                  |
 | Anfangswert:   | 0                                                                                |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |

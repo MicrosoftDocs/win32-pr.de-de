@@ -1,9 +1,9 @@
 ---
-title: gllightfv-Funktion (GL. h)
-description: Die gllightfv-Funktion gibt Werte für helle Quellparameter zurück.
+title: glLightfv-Funktion (Gl.h)
+description: Die glLightfv-Funktion gibt Light Source-Parameterwerte zurück.
 ms.assetid: 0a9feb00-f64a-43fc-b9ca-8a97fdaf4de9
 keywords:
-- gllightfv-Funktion OpenGL
+- glLightfv-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1cdebfeecc66ee78d90722acc95b0041edb2714d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bf62d5dc650eb56dbfed5dd11b0bdde516290ad57fbbf8da1137d8fc579368ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341780"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118938507"
 ---
-# <a name="gllightfv-function"></a>gllightfv-Funktion
+# <a name="gllightfv-function"></a>glLightfv-Funktion
 
-Die **gllightfv** -Funktion gibt Werte für helle Quellparameter zurück.
+Die **glLightfv-Funktion** gibt Light Source-Parameterwerte zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,27 +45,27 @@ void WINAPI glLightfv(
 *light* 
 </dt> <dd>
 
-Der Bezeichner eines Lichts. Die Anzahl der möglichen Lichter hängt von der Implementierung ab, aber es werden mindestens acht Leuchten unterstützt. Sie werden durch symbolische Namen der Form GL \_ Light *i* identifiziert, bei  der es sich um einen Wert handelt: 0 bis GL \_ Max \_ Lights-1.
+Der Bezeichner eines Lichts. Die Anzahl möglicher Beleuchtungen hängt von der Implementierung ab, aber es werden mindestens acht Beleuchtungen unterstützt. Sie werden durch symbolische Namen der Form GL LIGHT i identifiziert, wobei i ein Wert \_ ist: 0 bis GL MAX LIGHTS -  \_ \_ 1.
 
 </dd> <dt>
 
-*pName* 
+*pname* 
 </dt> <dd>
 
-Ein Light Source-Parameter für *Light*. Die folgenden symbolischen Namen werden akzeptiert.
+Ein Light Source-Parameter für *light*. Die folgenden symbolischen Namen werden akzeptiert.
 
 
 
 | Wert                                                                                                                                                                                                                                                                                                                                               | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_AMBIENT"></span><span id="gl_ambient"></span><dl> <dt>**GL- \_ AMBIENT**</dt> </dl>                                                                                                                                                                                                | Der Parameter *para* meters enthält vier Gleit Komma Werte, die die Umgebungs-RGBA-Intensität des Lichts angeben. Gleit Komma Werte werden direkt zugeordnet. Keine ganzzahligen oder Gleit Komma Werte werden geklammert. Die standardmäßige Ambient-Lichtintensität ist (0,0, 0,0, 0,0, 1,0). <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| <span id="GL_DIFFUSE"></span><span id="gl_diffuse"></span><dl> <dt>**GL- \_ diffuses**</dt> </dl>                                                                                                                                                                                                | Der Parameter *para* meters enthält vier Gleit Komma Werte, die die diffuse RGBA-Intensität des Lichts angeben. Gleit Komma Werte werden direkt zugeordnet. Keine ganzzahligen oder Gleit Komma Werte werden geklammert. Die standardmäßige diffuse Intensität beträgt (0,0, 0,0, 0,0, 1,0) für alle Glühlampen, die keine helle NULL sind. Die standardmäßige diffuse Intensität von Light Zero ist (1,0, 1,0, 1,0, 1,0). <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| <span id="GL_SPECULAR"></span><span id="gl_specular"></span><dl> <dt>**GL \_ Glanz**</dt> </dl>                                                                                                                                                                                             | Der Parameter *para* meters enthält vier Gleit Komma Werte, die die Glanzlichter RGBA-Intensität des Lichts angeben. Gleit Komma Werte werden direkt zugeordnet. Keine ganzzahligen oder Gleit Komma Werte werden geklammert. Die standardmäßige Glanz Intensität beträgt (0,0, 0,0, 0,0, 1,0) für alle Glühlampen, die keine helle NULL sind. Die standardmäßige Glanz Intensität von Light Zero ist (1,0, 1,0, 1,0, 1,0).<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| <span id="GL_POSITION"></span><span id="gl_position"></span><dl> <dt>**GL- \_ Position**</dt> </dl>                                                                                                                                                                                             | Der Parameter *para* meters enthält vier Gleit Komma Werte, die die Position des Lichts in homogenen Objekt Koordinaten angeben. Ganzzahlige Werte und Gleit Komma Werte werden direkt zugeordnet. Keine ganzzahligen oder Gleit Komma Werte werden geklammert. <br/> Die Position wird von der Modelview-Matrix transformiert, wenn **gllightfv** aufgerufen wird (genau so, als ob es sich um einen Punkt handelt) und in den Augen Koordinaten gespeichert wird. Wenn die *w* -Komponente der Position 0,0 ist, wird das Licht als direktionale Quelle behandelt. Diffuses und Glanzlichter Berechnungen übernehmen die Richtung des Lichts, aber nicht die tatsächliche Position, berücksichtigen, und die Dämpfung ist deaktiviert. Andernfalls basieren diffuse und Glanzlichter Berechnungen auf der tatsächlichen Position des Lichts in den Augen Koordinaten, und die Dämpfung ist aktiviert. Die Standardposition ist (0, 0, 1, 0); Daher ist die standardmäßige Light-Quelle direktional, parallel zu und in der Richtung der-*z* -Achse.<br/> |
-| <span id="GL_SPOT_DIRECTION"></span><span id="gl_spot_direction"></span><dl> <dt>**GL- \_ Spot- \_ Richtung**</dt> </dl>                                                                                                                                                                          | Der Parameter *para* meters enthält drei Gleit Komma Werte, die die Richtung des Lichts in homogenen Objekt Koordinaten angeben. Ganzzahlige Werte und Gleit Komma Werte werden direkt zugeordnet. Keine ganzzahligen oder Gleit Komma Werte werden geklammert. <br/> Die Spot-Richtung wird durch die Umkehrung der Modelview-Matrix transformiert, wenn **gllightfv** aufgerufen wird (genau so, als ob es sich um eine normale handelt) und in den Augen Koordinaten gespeichert wird. Dies ist nur dann von Bedeutung, wenn die GL-Spot-Umstellung \_ \_ nicht 180 ist, was standardmäßig der Fall ist. Die Standardrichtung ist (0,0).<br/>                                                                                                                                                                                                                                                                                                                                                                                          |
-| <span id="GL_SPOT_EXPONENT"></span><span id="gl_spot_exponent"></span><dl> <dt>**GL- \_ Spot- \_ Exponent**</dt> </dl>                                                                                                                                                                             | Der Parameter *para* Meters ist ein einzelner Gleit Komma Wert, der die Intensität des Lichts angibt. Ganzzahlige und Gleit Komma Werte werden direkt zugeordnet. Nur Werte im Bereich von \[ 0, 128 \] werden akzeptiert. <br/> Die effektive Lichtintensität wird durch den Kosinus des Winkels zwischen der Richtung des Lichts und der Richtung vom Licht zum Vertex, der beleuchtet wird, und bis zur Potenz des Spot Exponenten verringert. Daher führen höhere Spot-expenten zu einer gezielteren Lichtquelle, unabhängig vom Punkt Umstellungs Winkel. Der standardmäßige Spot-Exponent ist 0 (null) und ergibt eine einheitliche Lichtverteilung.<br/>                                                                                                                                                                                                                                                                                                                         |
-| <span id="GL_SPOT_CUTOFF"></span><span id="gl_spot_cutoff"></span><dl> <dt>**GL. \_ Spot- \_ cuumff**</dt> </dl>                                                                                                                                                                                   | Der Parameter *para* Meters ist ein einzelner Gleit Komma Wert, der den maximalen breitenwinkel einer Lichtquelle angibt. Ganzzahlige und Gleit Komma Werte werden direkt zugeordnet. Nur Werte im Bereich \[ 0, 90 \] und der spezielle Wert 180 werden akzeptiert. <br/> Wenn der Winkel zwischen der Richtung des Lichts und der Richtung vom Licht zum Scheitelpunkt größer als der Winkel Umstellungs Winkel ist, wird das Licht vollständig maskiert. Andernfalls wird die Intensität durch den Spot Exponent und die Dämpfungsfaktoren gesteuert. Der Standardwert für die Spot-Umstellungs Funktion ist 180, was eine einheitliche Lichtverteilung zur Folge hat.<br/>                                                                                                                                                                                                                                                                                                                               |
-| <span id="GL_CONSTANT_ATTENUATION__GL_LINEAR_ATTENUATION__GL_QUADRATIC_ATTENUATION"></span><span id="gl_constant_attenuation__gl_linear_attenuation__gl_quadratic_attenuation"></span><dl> <dt>**GL- \_ Konstante \_ Dämpfung, GL- \_ lineare \_ Dämpfung, GL- \_ quadratische \_ Dämpfung**</dt> </dl> | Der Parameter *para* Meters ist ein einzelner Gleit Komma Wert, der einen der drei Licht Dämpfungsfaktoren angibt. Ganzzahlige und Gleit Komma Werte werden direkt zugeordnet. Nur nicht negative Werte werden akzeptiert. <br/> Wenn das Licht positionell und nicht direktional ist, wird seine Intensität durch die gegenseitige Summe der Summe von verringert: der Konstante Faktor, der lineare Faktor multipliziert mit dem Abstand zwischen dem Licht und dem Vertex, der beleuchtet wird, und der quadratische Faktor multipliziert mit dem Quadrat desselben Abstands. Die standardmäßigen Dämpfungsfaktoren sind (1, 0, 0), was zu einer nicht Dämpfung führt.<br/>                                                                                                                                                                                                                                                                                                                                           |
+| <span id="GL_AMBIENT"></span><span id="gl_ambient"></span><dl> <dt>**GL \_ AMBIENT**</dt> </dl>                                                                                                                                                                                                | Der *Parameter params* enthält vier Gleitkommawerte, die die RGBA-Umgebungsstärke des Lichts angeben. Gleitkommawerte werden direkt zugeordnet. Weder ganzzahlige werte noch Gleitkommawerte werden an die Klammern klammern. Die Standardmäßige Umgebungslichtstärke ist (0,0, 0,0, 0,0, 1,0). <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| <span id="GL_DIFFUSE"></span><span id="gl_diffuse"></span><dl> <dt>**GL \_ DIFFUSE**</dt> </dl>                                                                                                                                                                                                | Der *Parameter params* enthält vier Gleitkommawerte, die die diffuse RGBA-Intensität des Lichts angeben. Gleitkommawerte werden direkt zugeordnet. Weder ganzzahlige werte noch Gleitkommawerte werden an die Klammern klammern. Die standardmäßige diffuse Intensität ist (0,0, 0,0, 0,0, 1,0) für alle Anderen als lichten Nullen. Die standardmäßige diffuse Intensität des lichten Nullpunkts ist (1,0, 1,0, 1,0, 1,0). <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <span id="GL_SPECULAR"></span><span id="gl_specular"></span><dl> <dt>**GL \_ SPECULAR**</dt> </dl>                                                                                                                                                                                             | Der *Parameter params* enthält vier Gleitkommawerte, die die rgba-Intensität des Lichts angeben. Gleitkommawerte werden direkt zugeordnet. Weder ganzzahlige werte noch Gleitkommawerte werden an die Klammern klammern. Die Standardmäßige Specular-Intensität ist (0,0, 0,0, 0,0, 1,0) für alle Anderen als lichten Nullen. Die Standardmäßige Specular-Intensität des Lichts 0 ist (1,0, 1,0, 1,0, 1,0).<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| <span id="GL_POSITION"></span><span id="gl_position"></span><dl> <dt>**GL \_ POSITION**</dt> </dl>                                                                                                                                                                                             | Der *Parameter params* enthält vier Gleitkommawerte, die die Position des Lichts in homogenen Objektkoordinaten angeben. Sowohl ganzzahlige als auch Gleitkommawerte werden direkt zugeordnet. Weder ganzzahlige werte noch Gleitkommawerte werden an die Klammern klammern. <br/> Die Position wird von der ModelView-Matrix transformiert, wenn **glLightfv** aufgerufen wird (als wäre es ein Punkt), und sie wird in Augenkoordinaten gespeichert. Wenn die *w-Komponente* der Position 0,0 ist, wird das Licht als direktionale Quelle behandelt. Bei diffusen und specularen Beleuchtungsberechnungen wird die Richtung des Lichts, aber nicht seine tatsächliche Position berücksichtigt, und die Dämpfung wird deaktiviert. Andernfalls basieren diffuse und speculare Beleuchtungsberechnungen auf der tatsächlichen Position des Lichts in Augenkoordinaten, und die Dämpfung ist aktiviert. Die Standardposition ist (0,0,1,0); Daher ist die Standardlichtquelle richtungs- und parallel zur - z-Achse.<br/> |
+| <span id="GL_SPOT_DIRECTION"></span><span id="gl_spot_direction"></span><dl> <dt>**GL \_ SPOT \_ DIRECTION**</dt> </dl>                                                                                                                                                                          | Der *Parameter params* enthält drei Gleitkommawerte, die die Richtung des Lichts in homogenen Objektkoordinaten angeben. Sowohl ganzzahlige als auch Gleitkommawerte werden direkt zugeordnet. Weder ganzzahlige werte noch Gleitkommawerte werden an die Klammern klammern. <br/> Die Spotrichtung wird durch die Umkehrung der Modellansichtsmatrix transformiert, wenn **glLightfv** aufgerufen wird (so als wäre es eine normale) und wird in Augenkoordinaten gespeichert. Dies ist nur wichtig, wenn GL \_ SPOT \_ CUTOFF nicht 180 beträgt, was standardmäßig der Standard ist. Die Standardrichtung ist (0,0,1).<br/>                                                                                                                                                                                                                                                                                                                                                                                          |
+| <span id="GL_SPOT_EXPONENT"></span><span id="gl_spot_exponent"></span><dl> <dt>**GL \_ SPOT \_ EXPONENT**</dt> </dl>                                                                                                                                                                             | Der *Parameter params* ist ein einzelner Gleitkommawert, der die Intensitätsverteilung des Lichts angibt. Ganzzahl- und Gleitkommawerte werden direkt zugeordnet. Nur Werte im Bereich \[ 0, 128 \] werden akzeptiert. <br/> Die effektive Lichtstärke wird durch den Kosinus des Winkels zwischen der Lichtrichtung und der Richtung vom Licht zum scheitelierten Scheitelpunkt abgedämpft, der zur Potenz des Spot-Exponenten erhöht wird. Daher führen höhere Spot-Exponenten unabhängig vom Spot-Abschneidewinkel zu einer fokussierteren Lichtquelle. Der Standard-Spot-Exponent ist 0, was zu einer gleichmäßigen Lichtverteilung führt.<br/>                                                                                                                                                                                                                                                                                                                         |
+| <span id="GL_SPOT_CUTOFF"></span><span id="gl_spot_cutoff"></span><dl> <dt>**GL \_ SPOT \_ CUTOFF**</dt> </dl>                                                                                                                                                                                   | Der *Parameter params* ist ein einzelner Gleitkommawert, der den maximalen Strichwinkel einer Lichtquelle angibt. Ganzzahl- und Gleitkommawerte werden direkt zugeordnet. Nur Werte im Bereich \[ 0, 90 und dem \] Sonderwert 180 werden akzeptiert. <br/> Wenn der Winkel zwischen der Lichtrichtung und der Richtung vom Licht zum scheitelierten Scheitelpunkt größer ist als der Abschneidewinkel, wird das Licht vollständig maskiert. Andernfalls wird die Intensität durch den Spot-Exponenten und die Dämpfungsfaktoren gesteuert. Der Standard-Spot-Cutoff ist 180, was zu einer gleichmäßigen Lichtverteilung führt.<br/>                                                                                                                                                                                                                                                                                                                               |
+| <span id="GL_CONSTANT_ATTENUATION__GL_LINEAR_ATTENUATION__GL_QUADRATIC_ATTENUATION"></span><span id="gl_constant_attenuation__gl_linear_attenuation__gl_quadratic_attenuation"></span><dl> <dt>**GL \_ CONSTANT \_ ATTENUATION, GL \_ LINEAR \_ ATTENUATION, GL \_ QUADRATIC \_ ATTENUATION**</dt> </dl> | Der *Parameter params* ist ein einzelner Gleitkommawert, der einen der drei Lichtdämpfungsfaktoren angibt. Ganzzahl- und Gleitkommawerte werden direkt zugeordnet. Es werden nur nicht negative Werte akzeptiert. <br/> Wenn das Licht positional und nicht direktional ist, wird seine Intensität durch den Kehreffekt der Summe von abgedämpft: der konstante Faktor, der lineare Faktor multipliziert mit dem Abstand zwischen dem Licht und dem scheitelierten Scheitelpunkt und der quadratische Faktor multipliziert mit dem Quadrat desselben Abstands. Die Standarddämpfungsfaktoren sind (1,0,0), was zu keiner Dämpfung führt.<br/>                                                                                                                                                                                                                                                                                                                                           |
 
 
 
@@ -76,7 +76,7 @@ Ein Light Source-Parameter für *Light*. Die folgenden symbolischen Namen werden
 *params* 
 </dt> <dd>
 
-Gibt den Wert an, auf den der Parameter " *PName* " von Light Source *Light* festgelegt wird.
+Gibt den Wert an, auf  den *der Parameter pname* der Lichtquelle festgelegt wird.
 
 </dd> </dl>
 
@@ -86,33 +86,33 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                                                                                                                   |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *Light* oder *PName* war kein akzeptierter Wert.<br/>                                                                                                                                                                  |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | Ein Spot Exponent-Wert wurde außerhalb des Bereichs \[ 0, 128 \] oder der Spot-cuum angegeben, der außerhalb des Bereichs \[ 0, 90 \] (mit Ausnahme des sonderwerts 180) angegeben wurde, oder es wurde ein negativer Dämpfungsfaktor angegeben.<br/> |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/>                                                                                     |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *light* oder *pname* war kein akzeptierter Wert.<br/>                                                                                                                                                                  |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | Ein Spot-Exponentwert wurde außerhalb des Bereichs von 0, 128 oder spot cutoff außerhalb des Bereichs 0, 90 (mit Ausnahme des Sonderwerts \[ \] \[ 180) angegeben, oder es wurde ein negativer Dämpfungsfaktor \] angegeben.<br/> |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/>                                                                                     |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **gllightfv** -Funktion legt den Wert oder die Werte einzelner Lichtquellen Parameter fest. Der *Light* -Parameter benennt das Licht und ist ein symbolischer Name der Form GL \_ Light *i*, wobei 0 = *i* < GL \_ Max \_ Lights ist.
+Die **glLightfv-Funktion** legt den Wert oder die Werte einzelner Lichtquellenparameter fest. Der *Lichtparameter* benennt das Licht und ist ein symbolischer Name der Form GL \_ LIGHT *i,* wobei 0 = *i <* GL \_ MAX \_ LIGHTS.
 
-Der *PName* -Parameter gibt einen der hellen Quellparameter an, und zwar erneut durch einen symbolischen Namen. Der *params* -Parameter ist entweder ein einzelner Wert oder ein Zeiger auf ein Array, das die neuen Werte enthält.
+Der *pname-Parameter* gibt einen der Light Source-Parameter an, wiederum durch symbolischen Namen. Der *Parameter params* ist entweder ein einzelner Wert oder ein Zeiger auf ein Array, das die neuen Werte enthält.
 
-Die Beleuchtungs Berechnung wird mithilfe von " [**glEnable**](glenable.md) " und " [**glEnable**](gldisable.md) " mit dem Argument "GL Beleuchtung" aktiviert \_ Wenn Beleuchtung aktiviert ist, tragen helle Quellen, die aktiviert sind, zur Beleuchtungs Berechnung bei. Light Source *i* wird mithilfe von **glEnable** und **gldeaktiviert** mit dem Argument GL \_ Light *i* aktiviert und deaktiviert.
+Die Beleuchtungsberechnung wird mit [**glEnable**](glenable.md) und [**glDisable**](gldisable.md) mit dem Argument GL LIGHTING aktiviert und \_ deaktiviert. Wenn die Beleuchtung aktiviert ist, tragen die aktivierten Lichtquellen zur Beleuchtungsberechnung bei. Die Lichtquelle *i ist* aktiviert und deaktiviert, **indem glEnable** und **glDisable** mit dem Argument GL \_ LIGHT i verwendet *werden.*
 
-Es ist immer der Fall, dass GL \_ Light *i* = GL \_ LIGHT0 + *i*.
+Es ist immer der Fall, dass GL \_ LIGHT *i* = GL \_ LIGHT0 + *i* ist.
 
-Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **gllightfv** -Funktion ab:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **glLightfv-Funktion** ab:
 
-[**glgetlight**](glgetlight.md)
+[**glGetLight**](glgetlight.md)
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL- \_ Beleuchtung
+[**glIsEnabled mit**](glisenabled.md) Argument GL \_ LIGHTING
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,29 +122,29 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **gllightfv
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glcolormaterial**](glcolormaterial.md)
+[**glColorMaterial**](glcolormaterial.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**gllightmodel**](gllightmodel-functions.md)
+[**glLightModel**](gllightmodel-functions.md)
 </dt> <dt>
 
-[**glmaterial**](glmaterial-functions.md)
+[**glMaterial**](glmaterial-functions.md)
 </dt> </dl>
 
  

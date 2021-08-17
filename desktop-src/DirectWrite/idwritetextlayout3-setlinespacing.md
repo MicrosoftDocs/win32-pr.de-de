@@ -3,8 +3,8 @@ title: IDWriteTextLayout3 SetLineSpacing-Methode
 description: Legen Sie den Zeilenabstand fest. | IDWriteTextLayout3 SetLineSpacing-Methode
 ms.assetid: 1bfca257-189c-4d18-628c-aff8217d2775
 keywords:
-- SetLineSpacing-Methode – Direkter Schreibzugriff
-- SetLineSpacing-Methode Direct Write, IDWriteTextLayout3-Schnittstelle
+- SetLineSpacing-Methode Direct Write
+- SetLineSpacing-Methode Direct Write , IDWriteTextLayout3-Schnittstelle
 - IDWriteTextLayout3-Schnittstelle Direct Write , SetLineSpacing-Methode
 topic_type:
 - apiref
@@ -45,13 +45,13 @@ HRESULT SetLineSpacing(
 *lineSpacingOptions* \[ In\]
 </dt> <dd>
 
-Verwalten des Speicherplatzes zwischen Zeilen.
+Verwalten des Speicherplatzes zwischen Linien.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,13 +61,13 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                 |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1 und Windows Runtime-Apps\]<br/> |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1- und Windows Runtime-Apps\]<br/> |
 | Bibliothek<br/>                  | <dl> <dt>Dwrite.lib</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>Dwrite.dll</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

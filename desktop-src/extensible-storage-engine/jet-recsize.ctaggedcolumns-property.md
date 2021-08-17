@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_RECSIZE. ctaggedcolumns-Eigenschaft'
-title: JET_RECSIZE. ctaggedcolumns-Eigenschaft (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen zu: JET_RECSIZE.cTaggedColumns-Eigenschaft'
+title: JET_RECSIZE.cTaggedColumns-Eigenschaft (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'cTaggedColumns property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE.cTaggedColumns
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_recsize.ctaggedcolumns(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 531a2a453737e03b66ad1a5a86a80f3ba61c4711
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 566e79819a978ff5227474ee70cbf9d757de0a0e3d6ec30d93cc9d6cc6e33a0e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118763638"
 ---
-# <a name="jet_recsizectaggedcolumns-property"></a>JET_RECSIZE. ctaggedcolumns (Eigenschaft)
+# <a name="jet_recsizectaggedcolumns-property"></a>JET_RECSIZE.cTaggedColumns-Eigenschaft
 
 Ruft die Gesamtzahl der markierten Spalten ab, die in diesem Datensatz festgelegt sind.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public long cTaggedColumns { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int64](/dotnet/api/system.int64)  
+Typ: [System.Int64](/dotnet/api/system.int64)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_RECSIZE Struktur](./jet-recsize-structure2.md)
+[JET_RECSIZE-Struktur](./jet-recsize-structure2.md)
 
-[Mitglieder JET_RECSIZE](./jet-recsize-members.md)
+[JET_RECSIZE-Member](./jet-recsize-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

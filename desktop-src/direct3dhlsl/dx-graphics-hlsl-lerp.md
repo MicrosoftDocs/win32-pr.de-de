@@ -1,9 +1,9 @@
 ---
-title: Lerp
-description: Führt eine lineare interpolung aus.
+title: lerp
+description: Führt eine lineare Interpolation aus.
 ms.assetid: e369f182-b5bd-4b7f-aa77-9cfe11033bc4
 keywords:
-- Lerp HLSL
+- lerp HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7c7a5251aaf410d7224b87b9ee9a8f0e8a0c947e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6981ef4134bbce17cbc7fa1e17de4d55de198572716ac39cbdd44b5e552e7f99
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104993431"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118791636"
 ---
-# <a name="lerp"></a>Lerp
+# <a name="lerp"></a>lerp
 
-Führt eine lineare interpolung aus.
+Führt eine lineare Interpolation aus.
 
 
 
-| *ret* Lerp (*x*, *y*, *s*) |
+| *ret* lerp(*x*, *y*, *s*) |
 |---------------------------|
 
 
@@ -37,11 +37,11 @@ Führt eine lineare interpolung aus.
 
 
 
-| Element                                                   | BESCHREIBUNG                                                                                           |
+| Element                                                   | Beschreibung                                                                                           |
 |--------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[im \] ersten Gleit Komma Wert.<br/>                                                     |
-| <span id="y"></span><span id="Y"></span>*Teenie*<br/> | \[im \] zweiten Gleit Komma Wert.<br/>                                                    |
-| <span id="s"></span><span id="S"></span>*Hymnen*<br/> | \[in \] einem Wert, der linear zwischen dem *x* -Parameter und dem *y* -Parameter interpoliert.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der Wert des ersten Gleitkommawerts.<br/>                                                     |
+| <span id="y"></span><span id="Y"></span>*Y*<br/> | \[in \] Der Wert des zweiten Gleitkommawerts.<br/>                                                    |
+| <span id="s"></span><span id="S"></span>*s*<br/> | \[in \] Ein -Wert, der linear zwischen dem *x-Parameter* und dem *y-Parameter interpoliert.*<br/> |
 
 
 
@@ -49,7 +49,7 @@ Führt eine lineare interpolung aus.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das Ergebnis der linearen interpolung.
+Das Ergebnis der linearen Interpolation.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -57,29 +57,29 @@ Das Ergebnis der linearen interpolung.
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                           |
 |-------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------------|
-| *x*   | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
-| *y*   | identisch mit Eingabe *x*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *x* |
-| *s*   | identisch mit Eingabe *x*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *x* |
-| *TZI* | identisch mit Eingabe *x*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *x* |
+| *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
+| *y*   | identisch mit Eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(n) wie Eingabe *x* |
+| *s*   | identisch mit Eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(n) wie Eingabe *x* |
+| *Ret* | identisch mit Eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(n) wie Eingabe *x* |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die lineare interpolung basiert auf der folgenden Formel: x \* (1-s) + y \* s, die gleichwertig als x + s (y-x) geschrieben werden können.
+Die lineare Interpolation basiert auf der folgenden Formel: x (1 s) + y s, die entsprechend als \* \* x + s(y-x) geschrieben werden können.
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt                   |
 |------------------------------------------------------------------------------------|-----------------------------|
-| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | ja                         |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja (vs \_ 1 \_ 1 und PS \_ 1 \_ 1) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja                         |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja (im Vergleich \_ zu 1 \_ 1 und ps \_ 1 \_ 1) |
 
 
 
@@ -89,7 +89,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
-title: Ireconcileinitiator-Schnittstelle
-description: Macht Methoden verfügbar, die die Aktentasche-Auflösung mit der Möglichkeit bereitstellen, den Initiator über den Fortschritt zu benachrichtigen, ein Beendigungs Objekt festzulegen und eine bestimmte Version eines Dokuments anzufordern. Der Initiator ist für die Implementierung dieser Schnittstelle verantwortlich.
+title: IReconcileInitiator-Schnittstelle
+description: Macht Methoden verfügbar, die die Abstimmung von Kleinbuchstaben mit der Möglichkeit bereitstellen, den Initiator über seinen Fortschritt zu benachrichtigen, ein Beendigungsobjekt festzulegen und eine bestimmte Version eines Dokuments anzufordern. Der Initiator ist für die Implementierung dieser Schnittstelle verantwortlich.
 ms.assetid: 1a32d67f-1ddc-49dc-af88-b8c41a50ac54
 keywords:
-- Ireconcileinitiator Interface Legacy Windows-Umgebungs Features
-- Ireconcileinitiator Interface Legacy Windows-Umgebungs Features, beschrieben
+- IReconcileInitiator-Schnittstelle – Legacy-Windows-Umgebungsfeatures
+- IReconcileInitiator-Schnittstelle Legacy Windows Umgebungsfeatures , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,33 +15,33 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 759ad26fd87db7076811b9b31d6ef39df1479e3e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ff81862e5ff0b27b75f952749957e6559306257240f2a02aca5f34e3efc870cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118749140"
 ---
-# <a name="ireconcileinitiator-interface"></a>Ireconcileinitiator-Schnittstelle
+# <a name="ireconcileinitiator-interface"></a>IReconcileInitiator-Schnittstelle
 
-Macht Methoden verfügbar, die die Aktentasche-Auflösung mit der Möglichkeit bereitstellen, den Initiator über den Fortschritt zu benachrichtigen, ein Beendigungs Objekt festzulegen und eine bestimmte Version eines Dokuments anzufordern. Der Initiator ist für die Implementierung dieser Schnittstelle verantwortlich.
+Macht Methoden verfügbar, die die Abstimmung von Kleinbuchstaben mit der Möglichkeit bereitstellen, den Initiator über seinen Fortschritt zu benachrichtigen, ein Beendigungsobjekt festzulegen und eine bestimmte Version eines Dokuments anzufordern. Der Initiator ist für die Implementierung dieser Schnittstelle verantwortlich.
 
 ## <a name="members"></a>Member
 
-Die **ireconcileinitiator** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Ireconcileinitiator** verfügt auch über diese Typen von Membern:
+Die **IReconcileInitiator-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IReconcileInitiator** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ireconcileinitiator** -Schnittstelle verfügt über diese Methoden.
+Die **IReconcileInitiator-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                 | BESCHREIBUNG                                                                                                                                                                                                                                                                                                             |
 |:-----------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**"-Tabortcallback"**](/windows/win32/api/reconcil/nf-reconcil-ireconcileinitiator-setabortcallback)       | Legt das-Objekt fest, über das der Initiator eine Abstimmung asynchron beenden kann. Bei einer Aktentasche-Synchronisierung wird dieses Objekt in der Regel für reversationen festgelegt, die langwierig sind oder eine Benutzerinteraktion umfassen. <br/>                                                                                              |
-| [**Setprogressfeedback**](/windows/win32/api/reconcil/nf-reconcil-ireconcileinitiator-setprogressfeedback) | Gibt den Fortschritt an, den der Aktentasche-Konflikt bei der ababstimmung durchgeführt hat. Der Betrag ist ein Bruchteil und wird als Quotienten der *ulprogress* -und *ulprogressmax* -Parameter berechnet. Die Abstimmung sollte diese Methode in regelmäßigen Abständen während Ihres Abstimmungs Vorgangs aufzurufen. <br/> |
+| [**SetAbortCallback**](/windows/win32/api/reconcil/nf-reconcil-ireconcileinitiator-setabortcallback)       | Legt das Objekt fest, über das der Initiator eine Abstimmung asynchron beenden kann. Ein Briefkastenabstimmungs-Objekt legt dieses Objekt in der Regel für Abstimmungen fest, die lang sind oder eine Benutzerinteraktion beinhalten. <br/>                                                                                              |
+| [**SetProgressFeedback**](/windows/win32/api/reconcil/nf-reconcil-ireconcileinitiator-setprogressfeedback) | Gibt den Fortschritt an, den der Briefkasten-Abstimmungsschritt beim Abschließen des Abgleichs erzielt hat. Der Betrag ist ein Bruchteil und wird als Quotient der *UlProgress-* und *ulProgressMax-Parameter* berechnet. Abstimmungen sollten diese Methode in regelmäßigen Abständen während ihres Abstimmungsprozesses aufrufen. <br/> |
 
 
 
@@ -53,9 +53,9 @@ Die **ireconcileinitiator** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.0 oder höher)</dt> </dl> |
 
 
 

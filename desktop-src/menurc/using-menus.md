@@ -3,105 +3,105 @@ title: Verwenden von Menüs
 description: Dieser Abschnitt enthält Codebeispiele für Aufgaben im Zusammenhang mit Menüs.
 ms.assetid: b1391e37-a146-46ec-a329-aa57cfcfd351
 keywords:
-- Ressourcen, Menüs
-- Menüs, erstellen
-- Menü Vorlagen Ressourcen
-- Ressourcen, Menüvorlage
-- Erweitertes Menü-Vorlagen Format
-- Format der alten Menüvorlage
-- Menü Vorlagen Ressourcen werden geladen.
-- Menüs, Klasse
+- Ressourcen,Menüs
+- Menüs,erstellen
+- Menüvorlagenressourcen
+- resources,menu-template
+- Erweitertes Menüvorlagenformat
+- Vorlagenformat im alten Menü
+- Laden von Menüvorlagenressourcen
+- menus,class
 - Menüs, Verknüpfung
 - Erstellen von Menüs
-- Klassen Menüs
+- Klassenmenüs
 - Kontextmenüs
-- Bitmaps für Menü Elemente
-- Menüs, gezeichnete Besitzer
-- vom Besitzer gezeichnete Menüs
-- Bitmaps für benutzerdefinierte Prüfzeichen
+- Menüelementbitmaps
+- Menüs,Besitzer gezeichnet
+- Gezeichnete Menüs des Besitzers
+- Benutzerdefinierte Häkchenbitmaps
 - Menüs, Kontrollkästchen
 - Menüs, Schriftarten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d216b5fe5e6c25a98b5bdf3abe9d55b4bb0b34f
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 61f3a71a580a323fa2058613f8c9a14d9c2782bd3ba139e5d182750e5047fe74
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103726752"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118971929"
 ---
 # <a name="using-menus"></a>Verwenden von Menüs
 
 In diesem Abschnitt werden die folgenden Aufgaben beschrieben:
 
--   [Verwenden einer Menu-Template-Ressource](#using-a-menu-template-resource)
+-   [Verwenden einer Menu-Template Ressource](#using-a-menu-template-resource)
     -   [Erweitertes Menu-Template Format](#extended-menu-template-format)
     -   [Altes Menu-Template Format](#old-menu-template-format)
     -   [Laden einer Menu-Template Ressource](#loading-a-menu-template-resource)
-    -   [Erstellen eines Klassen Menüs](#creating-a-class-menu)
+    -   [Erstellen eines Klassenmenüs](#creating-a-class-menu)
 -   [Erstellen eines Kontextmenüs](#creating-a-shortcut-menu)
-    -   [Verarbeiten der WM- \_ ContextMenu-Meldung](/windows)
-    -   [Erstellen einer Verknüpfung Font-Attributes Menü](#creating-a-shortcut-font-attributes-menu)
+    -   [Verarbeiten der WM \_ CONTEXTMENU-Nachricht](/windows)
+    -   [Erstellen eines Kontextmenüs Font-Attributes](#creating-a-shortcut-font-attributes-menu)
     -   [Anzeigen eines Kontextmenüs](#displaying-a-shortcut-menu)
--   [Verwenden von Menu-Item Bitmaps](#using-menu-item-bitmaps)
-    -   [Festlegen des Bitmap-Typflags](#setting-the-bitmap-type-flag)
+-   [Verwenden Menu-Item Bitmaps](#using-menu-item-bitmaps)
+    -   [Festlegen des Bitmaptypflags](#setting-the-bitmap-type-flag)
     -   [Erstellen der Bitmap](#creating-the-bitmap)
     -   [Hinzufügen von Linien und Diagrammen zu einem Menü](#adding-lines-and-graphs-to-a-menu)
     -   [Beispiel für Menu-Item Bitmaps](#example-of-menu-item-bitmaps)
--   [Erstellen von Owner-Drawn Menü Elementen](#creating-owner-drawn-menu-items)
+-   [Erstellen Owner-Drawn Menüelemente](#creating-owner-drawn-menu-items)
     -   [Festlegen des Owner-Drawn Flags](#setting-the-owner-drawn-flag)
-    -   [Vom Besitzer gezeichnete Menüs und die WM- \_ MeasureItem-Nachricht](/windows)
-    -   [Von einem Besitzer gezeichnete Menüs und die WM- \_ DrawItem-Nachricht](/windows)
-    -   [Von einem Besitzer gezeichnete Menüs und die WM- \_ menuchar-Meldung](/windows)
-    -   [Festlegen von Schriftarten für Menu-Item Text Zeichenfolgen](#setting-fonts-for-menu-item-text-strings)
-    -   [Beispiel für Owner-Drawn Menü Elemente](#example-of-owner-drawn-menu-items)
--   [Verwenden von benutzerdefinierten Häkchen-Bitmaps](#using-custom-check-mark-bitmaps)
-    -   [Erstellen von benutzerdefinierten Häkchen Bitmaps](#creating-custom-check-mark-bitmaps)
-    -   [Zuordnen von Bitmaps zu einem Menü Element](#associating-bitmaps-with-a-menu-item)
-    -   [Festlegen des Häkchen Attributs](#setting-the-check-mark-attribute)
+    -   [Vom Besitzer gezeichnete Menüs und die WM \_ MEASUREITEM-Meldung](/windows)
+    -   [Vom Besitzer gezeichnete Menüs und die WM \_ DRAWITEM-Meldung](/windows)
+    -   [Besitzer gezeichnete Menüs und die WM \_ MENUCHAR-Meldung](/windows)
+    -   [Festlegen von Schriftarten für Menu-Item Textzeichenfolgen](#setting-fonts-for-menu-item-text-strings)
+    -   [Beispiel für Owner-Drawn Menüelemente](#example-of-owner-drawn-menu-items)
+-   [Verwenden benutzerdefinierter Häkchenbitmaps](#using-custom-check-mark-bitmaps)
+    -   [Erstellen benutzerdefinierter Häkchenbitmaps](#creating-custom-check-mark-bitmaps)
+    -   [Zuordnen von Bitmaps zu einem Menüelement](#associating-bitmaps-with-a-menu-item)
+    -   [Festlegen des Check-Mark-Attributs](#setting-the-check-mark-attribute)
     -   [Simulieren von Kontrollkästchen in einem Menü](#simulating-check-boxes-in-a-menu)
-    -   [Beispiel für die Verwendung von benutzerdefinierten Bitmaps für das Häkchen](#example-of-using-custom-check-mark-bitmaps)
+    -   [Beispiel für die Verwendung benutzerdefinierter Häkchenbitmaps](#example-of-using-custom-check-mark-bitmaps)
 
-## <a name="using-a-menu-template-resource"></a>Verwenden einer Menu-Template-Ressource
+## <a name="using-a-menu-template-resource"></a>Verwenden einer Menu-Template Ressource
 
-In der Regel fügen Sie ein Menü in eine Anwendung ein, indem Sie eine Menü Vorlagen Ressource erstellen und das Menü dann zur Laufzeit laden. In diesem Abschnitt wird das Format einer Menüvorlage beschrieben. Außerdem wird erläutert, wie Sie eine Menü Vorlagen Ressource laden und in Ihrer Anwendung verwenden. Weitere Informationen zum Erstellen einer Menü Vorlagen Ressource finden Sie in der Dokumentation, die in ihren Entwicklungs Tools enthalten ist.
+In der Regel fügen Sie ein Menü in eine Anwendung ein, indem Sie eine Menüvorlagenressource erstellen und das Menü dann zur Laufzeit laden. In diesem Abschnitt wird das Format einer Menüvorlage beschrieben, und es wird erläutert, wie Sie eine Menüvorlagenressource laden und in Ihrer Anwendung verwenden. Informationen zum Erstellen einer Menüvorlagenressource finden Sie in der Dokumentation zu Ihren Entwicklungstools.
 
 -   [Erweitertes Menu-Template Format](#extended-menu-template-format)
 -   [Altes Menu-Template Format](#old-menu-template-format)
 -   [Laden einer Menu-Template Ressource](#loading-a-menu-template-resource)
--   [Erstellen eines Klassen Menüs](#creating-a-class-menu)
+-   [Erstellen eines Klassenmenüs](#creating-a-class-menu)
 
 ### <a name="extended-menu-template-format"></a>Erweitertes Menu-Template Format
 
-Das erweiterte Menü Vorlagen Format unterstützt zusätzliche Menüfunktionen. Ebenso wie Standardmenü Vorlagen Ressourcen haben erweiterte Menü Vorlagen Ressourcen den **\_ Menü** Ressourcentyp RT. Das System unterscheidet die beiden Ressourcen Formate durch die Versionsnummer, die der erste Member des Ressourcen Headers ist.
+Das erweiterte Menüvorlagenformat unterstützt zusätzliche Menüfunktionen. Wie standarde Menüvorlagenressourcen verfügen auch erweiterte Menüvorlagenressourcen über den **Ressourcentyp RT \_ MENU.** Das System unterscheidet die beiden Ressourcenformate durch die Versionsnummer, die das erste Mitglied des Ressourcenheaders ist.
 
-Eine erweiterte Menüvorlage besteht aus einer [**menuex- \_ Vorlagen \_ Header**](menuex-template-header.md) Struktur, gefolgt von einer weiteren [**menuex- \_ Vorlagen \_ Element**](menuex-template-item.md) -Element Definitions Struktur.
+Eine erweiterte Menüvorlage besteht aus einer [**MENUEX \_ TEMPLATE \_ HEADER-Struktur,**](menuex-template-header.md) gefolgt von einer anderen [**MENUEX \_ TEMPLATE \_ ITEM-Elementdefinitionsstruktur.**](menuex-template-item.md)
 
 ### <a name="old-menu-template-format"></a>Altes Menu-Template Format
 
-In einer alten Menüvorlage (Microsoft Windows NT 3,51 und früher) ist ein Menü definiert, aber die neue Menü Funktionalität wird nicht unterstützt. Eine alte Menü Vorlagen Ressource verfügt über den **RT- \_ Menü** Ressourcentyp.
+Eine alte Menüvorlage (Microsoft Windows NT 3.51 und früher) definiert ein Menü, unterstützt jedoch nicht die neue Menüfunktionalität. Eine alte Menüvorlagenressource hat den **Ressourcentyp RT \_ MENU.**
 
-Eine alte Menüvorlage besteht aus einer [**menuitemtemplateheader**](/windows/desktop/api/Winuser/ns-winuser-menuitemtemplateheader) -Struktur, gefolgt von einer oder mehreren [**menuitemtemplate**](/windows/desktop/api/Winuser/ns-winuser-menuitemtemplate) -Strukturen.
+Eine alte Menüvorlage besteht aus einer [**MENUITEMTEMPLATEHEADER-Struktur**](/windows/desktop/api/Winuser/ns-winuser-menuitemtemplateheader) gefolgt von einer oder mehreren [**MENUITEMTEMPLATE-Strukturen.**](/windows/desktop/api/Winuser/ns-winuser-menuitemtemplate)
 
 ### <a name="loading-a-menu-template-resource"></a>Laden einer Menu-Template Ressource
 
-Verwenden Sie zum Laden einer Menü Vorlagen Ressource die [**loadmenu**](/windows/desktop/api/Winuser/nf-winuser-loadmenua) -Funktion, und geben Sie ein Handle für das Modul an, das die Ressource und den Bezeichner der Menüvorlage enthält. Die **loadmenu** -Funktion gibt ein Menü Handle zurück, das Sie verwenden können, um das Menü einem Fenster zuzuweisen. Dieses Fenster wird zum Besitzer Fenster des Menüs, das alle vom Menü generierten Meldungen empfängt.
+Verwenden Sie zum Laden einer Menüvorlagenressource die [**LoadMenu-Funktion,**](/windows/desktop/api/Winuser/nf-winuser-loadmenua) und geben Sie ein Handle für das Modul an, das die Ressource und den Bezeichner der Menüvorlage enthält. Die **LoadMenu-Funktion** gibt ein Menühand handle zurück, mit dem Sie das Menü einem Fenster zuweisen können. Dieses Fenster wird zum Besitzerfenster des Menüs und empfängt alle vom Menü generierten Nachrichten.
 
-Verwenden Sie die [**loadmenuindirekte**](/windows/desktop/api/Winuser/nf-winuser-loadmenuindirecta) -Funktion, um ein Menü aus einer Menüvorlage zu erstellen, die sich bereits im Arbeitsspeicher befindet. Dies ist nützlich, wenn Ihre Anwendung Menü Vorlagen dynamisch generiert.
+Verwenden Sie die [**LoadMenuIndirect-Funktion,**](/windows/desktop/api/Winuser/nf-winuser-loadmenuindirecta) um ein Menü aus einer Menüvorlage zu erstellen, die sich bereits im Arbeitsspeicher befindet. Dies ist nützlich, wenn Ihre Anwendung Menüvorlagen dynamisch generiert.
 
-Wenn Sie ein Menü einem Fenster zuweisen möchten, verwenden Sie die [**setMenu**](/windows/desktop/api/Winuser/nf-winuser-setmenu) -Funktion, oder geben Sie beim Erstellen eines Fensters das Handle des Menüs im *HMENU* -Parameter der Funktion " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " an. Eine andere Möglichkeit, einem Fenster ein Menü zuzuweisen, besteht darin, eine Menüvorlage anzugeben, wenn Sie eine Fenster Klasse registrieren. die Vorlage identifiziert das angegebene Menü als Klassen Menü für diese Fenster Klasse.
+Verwenden Sie zum Zuweisen eines Menüs zu einem Fenster die [**Funktion SetMenu,**](/windows/desktop/api/Winuser/nf-winuser-setmenu) oder geben Sie beim Erstellen eines Fensters das Handle des Menüs im *hMenu-Parameter* der [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) an. Sie können einem Fenster auch ein Menü zuweisen, indem Sie beim Registrieren einer Fensterklasse eine Menüvorlage angeben. Die Vorlage identifiziert das angegebene Menü als Klassenmenü für diese Fensterklasse.
 
-Wenn das System ein bestimmtes Menü automatisch einem Fenster zuweisen soll, geben Sie die Menüvorlage an, wenn Sie die Klasse des Fensters registrieren. Die Vorlage identifiziert das angegebene Menü als Klassen Menü für diese Fenster Klasse. Wenn Sie dann ein Fenster der angegebenen Klasse erstellen, weist das System das angegebene Menü automatisch dem Fenster zu.
+Damit das System einem Fenster automatisch ein bestimmtes Menü zu weist, geben Sie die Vorlage des Menüs an, wenn Sie die -Klasse des Fensters registrieren. Die Vorlage identifiziert das angegebene Menü als Klassenmenü für diese Fensterklasse. Wenn Sie dann ein Fenster der angegebenen Klasse erstellen, weist das System dem Fenster automatisch das angegebene Menü zu.
 
-Einem Fenster, das ein untergeordnetes Fenster ist, kann kein Menü zugewiesen werden.
+Sie können einem Fenster, das ein untergeordnetes Fenster ist, kein Menü zuweisen.
 
-Um ein Klassen Menü zu erstellen, schließen Sie den Bezeichner der Menü Vorlagen Ressource als **lpszmenuname** -Member einer [**WNDCLASS**](/windows/win32/api/winuser/ns-winuser-wndclassa) -Struktur ein, und übergeben Sie dann einen Zeiger auf die-Struktur an die [**registerClass**](/windows/desktop/api/winuser/nf-winuser-registerclassa) -Funktion.
+Um ein Klassenmenü zu erstellen, schließen Sie den Bezeichner der Menüvorlagenressource als **lpszMenuName-Member** einer [**WNDCLASS-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassa) ein, und übergeben Sie dann einen Zeiger auf die -Struktur an die [**RegisterClass-Funktion.**](/windows/desktop/api/winuser/nf-winuser-registerclassa)
 
-### <a name="creating-a-class-menu"></a>Erstellen eines Klassen Menüs
+### <a name="creating-a-class-menu"></a>Erstellen eines Klassenmenüs
 
-Im folgenden Beispiel wird gezeigt, wie ein Klassen Menü für eine Anwendung erstellt wird, ein Fenster erstellt wird, in dem das Klassen Menü und Menübefehle verarbeiten in der Fenster Prozedur verwendet werden.
+Das folgende Beispiel zeigt, wie Sie ein Klassenmenü für eine Anwendung erstellen, ein Fenster erstellen, das das Klassenmenü verwendet, und Menübefehle in der Fensterprozedur verarbeiten.
 
-Im folgenden ist der relevante Teil der Header Datei der Anwendung aufgeführt:
+Im Folgenden finden Sie den relevanten Teil der Headerdatei der Anwendung:
 
 
 ```
@@ -112,7 +112,7 @@ Im folgenden ist der relevante Teil der Header Datei der Anwendung aufgeführt:
 
 
 
-Im folgenden sind die relevanten Teile der Anwendung selbst aufgeführt:
+Im Folgenden finden Sie die relevanten Teile der Anwendung selbst:
 
 
 ```
@@ -215,25 +215,25 @@ LRESULT APIENTRY MainWndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 ## <a name="creating-a-shortcut-menu"></a>Erstellen eines Kontextmenüs
 
-Wenn Sie ein Kontextmenü in einer Anwendung verwenden möchten, übergeben Sie das zugehörige Handle an die [**TrackPopupMenuEx**](/windows/desktop/api/Winuser/nf-winuser-trackpopupmenuex) -Funktion. Eine Anwendung ruft in der Regel **TrackPopupMenuEx** in einer Fenster Prozedur als Reaktion auf eine benutzergenerierte Meldung auf, z. b. [**WM \_ lbuttondown**](/windows/desktop/inputdev/wm-lbuttondown) oder [**WM \_ KeyDown**](/windows/desktop/inputdev/wm-keydown).
+Um ein Kontextmenü in einer Anwendung zu verwenden, übergeben Sie dessen Handle an die [**TrackPopupMenuEx-Funktion.**](/windows/desktop/api/Winuser/nf-winuser-trackpopupmenuex) Eine Anwendung ruft in der Regel **TrackPopupMenuEx** in einer Fensterprozedur als Reaktion auf eine vom Benutzer generierte Nachricht auf, z. B. [**WM \_ LBUTTONDOWN**](/windows/desktop/inputdev/wm-lbuttondown) oder [**WM \_ KEYDOWN**](/windows/desktop/inputdev/wm-keydown).
 
-Zusätzlich zum Popup-Menü handle erfordert [**TrackPopupMenuEx**](/windows/desktop/api/Winuser/nf-winuser-trackpopupmenuex) , dass Sie ein Handle für das Besitzer Fenster, die Position des Kontextmenüs (in Bildschirm Koordinaten) und die Maustaste angeben, mit der der Benutzer ein Element auswählen kann.
+Zusätzlich zum Popupmenühandl erfordert [**TrackPopupMenuEx,**](/windows/desktop/api/Winuser/nf-winuser-trackpopupmenuex) dass Sie ein Handle für das Besitzerfenster, die Position des Kontextmenüs (in Bildschirmkoordinaten) und die Maustaste angeben, mit der der Benutzer ein Element auswählen kann.
 
-Die ältere [**TrackPopupMenu**](/windows/desktop/api/Winuser/nf-winuser-trackpopupmenu) -Funktion wird weiterhin unterstützt, aber neue Anwendungen sollten die [**TrackPopupMenuEx**](/windows/desktop/api/Winuser/nf-winuser-trackpopupmenuex) -Funktion verwenden. Die **TrackPopupMenuEx** -Funktion erfordert dieselben Parameter wie **TrackPopupMenu**, aber Sie können auch einen Teil des Bildschirms angeben, der vom Menü nicht verdeckt werden soll. Eine Anwendung ruft diese Funktionen in der Regel in einer Fenster Prozedur auf, wenn die [**WM- \_ ContextMenu**](wm-contextmenu.md) -Nachricht verarbeitet wird.
+Die ältere [**TrackPopupMenu-Funktion**](/windows/desktop/api/Winuser/nf-winuser-trackpopupmenu) wird weiterhin unterstützt, aber neue Anwendungen sollten die [**TrackPopupMenuEx-Funktion**](/windows/desktop/api/Winuser/nf-winuser-trackpopupmenuex) verwenden. Die **TrackPopupMenuEx-Funktion** erfordert die gleichen Parameter wie **TrackPopupMenu.** Sie können aber auch einen Teil des Bildschirms angeben, den das Menü nicht verdeckt. Eine Anwendung ruft diese Funktionen in der Regel in einer Fensterprozedur auf, wenn die [**WM \_ CONTEXTMENU-Nachricht verarbeitet**](wm-contextmenu.md) wird.
 
-Sie können die Position eines Kontextmenüs angeben, indem Sie x-und y-Koordinaten zusammen mit dem **TPM \_ centeralign**, **TPM \_ leftalign** oder dem **TPM \_ RightAlign** -Flag bereitstellen. Das-Flag gibt die Position des Kontextmenüs in Bezug auf die x-und y-Koordinaten an.
+Sie können die Position eines Kontextmenüs angeben, indem Sie x- und y-Koordinaten zusammen mit dem **TPM \_ CENTERALIGN-,** **TPM \_ LEFTALIGN-** oder **TPM \_ RIGHTALIGN-Flag** angeben. Das -Flag gibt die Position des Kontextmenüs relativ zu den x- und y-Koordinaten an.
 
-Sie sollten zulassen, dass der Benutzer ein Element aus einem Kontextmenü mithilfe derselben Maustaste zum Anzeigen des Menüs auswählen. Geben Sie hierzu entweder **TPM \_ LeftButton** oder **TPM \_ RightButton** -Flag an, um anzugeben, welche Maustaste der Benutzer zum Auswählen eines Menü Elements verwenden kann.
+Sie sollten es dem Benutzer ermöglichen, ein Element aus einem Kontextmenü mit der gleichen Maustaste zu wählen, die zum Anzeigen des Menüs verwendet wird. Geben Sie hierzu entweder **das TPM \_ LEFTBUTTON-** oder **TPM \_ RIGHTBUTTON-Flag** an, um anzugeben, welche Maustaste der Benutzer zum Auswählen eines Menüelements verwenden kann.
 
--   [Verarbeiten der WM- \_ ContextMenu-Meldung](/windows)
--   [Erstellen einer Verknüpfung Font-Attributes Menü](#creating-a-shortcut-font-attributes-menu)
+-   [Verarbeiten der WM \_ CONTEXTMENU-Nachricht](/windows)
+-   [Erstellen eines Kontextmenüs Font-Attributes](#creating-a-shortcut-font-attributes-menu)
 -   [Anzeigen eines Kontextmenüs](#displaying-a-shortcut-menu)
 
-### <a name="processing-the-wm_contextmenu-message"></a>Verarbeiten der WM- \_ ContextMenu-Meldung
+### <a name="processing-the-wm_contextmenu-message"></a>Verarbeiten der WM \_ CONTEXTMENU-Nachricht
 
-Die [**"WM \_ ContextMenu**](wm-contextmenu.md) "-Meldung wird generiert, wenn die Fenster Prozedur einer Anwendung die [**WM- \_ rbuttonup**](/windows/desktop/inputdev/wm-rbuttonup) -oder [**WM \_ ncrbuttonup**](/windows/desktop/inputdev/wm-ncrbuttonup) -Meldung an die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion übergibt. Die Anwendung kann diese Nachricht verarbeiten, um ein Kontextmenü anzuzeigen, das für einen bestimmten Teil des Bildschirms geeignet ist. Wenn in der Anwendung kein Kontextmenü angezeigt wird, sollte die Nachricht zur Standardbehandlung an **defwindowproc** übergeben werden.
+Die [**WM \_ CONTEXTMENU-Meldung**](wm-contextmenu.md) wird generiert, wenn die Fensterprozedur einer Anwendung die [**WM \_ RBUTTONUP-**](/windows/desktop/inputdev/wm-rbuttonup) oder [**WM \_ NCRBUTTONUP-Nachricht**](/windows/desktop/inputdev/wm-ncrbuttonup) an die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) übergibt. Die Anwendung kann diese Meldung verarbeiten, um ein Kontextmenü anzuzeigen, das für einen bestimmten Teil des Bildschirms geeignet ist. Wenn die Anwendung kein Kontextmenü zeigt, sollte sie die Meldung zur Standardbehandlung **an DefWindowProc** übergeben.
 
-Im folgenden finden Sie ein Beispiel der WM-Verarbeitung von [**\_ ContextMenu**](wm-contextmenu.md) , wie Sie in der Fenster Prozedur einer Anwendung angezeigt werden kann. Die nieder wertigen und höherwertigen Wörter des *LPARAM* -Parameters geben die Bildschirm Koordinaten der Maus an, wenn die Rechte Maustaste losgelassen wird (Beachten Sie, dass diese Koordinaten für Systeme mit mehreren Monitoren negative Werte annehmen können). Die von der Anwendung definierte **oncontextmenu** -Funktion gibt **true** zurück, wenn ein Kontextmenü angezeigt wird, andernfalls **false** .
+Im Folgenden finden Sie ein Beispiel für die Verarbeitung von [**WM \_ CONTEXTMENU-Nachrichten,**](wm-contextmenu.md) wie sie in der Fensterprozedur einer Anwendung angezeigt werden kann. Die niedrigen und hohen Wörter des *lParam-Parameters* geben die Bildschirmkoordinaten der Maus an, wenn die rechte Maustaste losgelassen wird (beachten Sie, dass diese Koordinaten negative Werte auf Systemen mit mehreren Monitoren enthalten können). Die anwendungsdefinierte **OnContextMenu-Funktion** gibt **TRUE** zurück, wenn ein Kontextmenü angezeigt wird, oder **FALSE,** wenn dies nicht der Fall ist.
 
 
 ```
@@ -246,7 +246,7 @@ case WM_CONTEXTMENU:
 
 
 
-Die folgende Anwendungs definierte oncontextmenu-Funktion zeigt ein Kontextmenü an, wenn sich die angegebene Mausposition im Client Bereich des Fensters befindet. Je nachdem, welcher Teil des Client Bereichs angegeben ist, kann eine anspruchsvollere Funktion eine von mehreren unterschiedlichen Menüs anzeigen. Um das Kontextmenü tatsächlich anzuzeigen, wird in diesem Beispiel eine Anwendungs definierte Funktion namens "displaycontextmenu" aufgerufen. Eine Beschreibung dieser Funktion finden Sie unter [Anzeigen eines Kontextmenüs](#displaying-a-shortcut-menu).
+Die folgende anwendungsdefinierte OnContextMenu-Funktion zeigt ein Kontextmenü an, wenn sich die angegebene Mausposition innerhalb des Clientbereichs des Fensters befindet. Eine komplexere Funktion kann je nachdem, welcher Teil des Clientbereichs angegeben ist, eines von mehreren verschiedenen Menüs anzeigen. Um das Kontextmenü tatsächlich anzuzeigen, ruft dieses Beispiel eine anwendungsdefinierte Funktion namens DisplayContextMenu auf. Eine Beschreibung dieser Funktion finden Sie unter [Anzeigen eines Kontextmenüs.](#displaying-a-shortcut-menu)
 
 
 ```
@@ -281,11 +281,11 @@ BOOL WINAPI OnContextMenu(HWND hwnd, int x, int y)
 
 
 
-### <a name="creating-a-shortcut-font-attributes-menu"></a>Erstellen einer Verknüpfung Font-Attributes Menü
+### <a name="creating-a-shortcut-font-attributes-menu"></a>Erstellen eines Kontextmenüs Font-Attributes
 
-Das Beispiel in diesem Abschnitt enthält Teile von Code aus einer Anwendung, die ein Kontextmenü erstellt und anzeigt, das es dem Benutzer ermöglicht, Schriftarten und Schriftart Attribute festzulegen. Die Anwendung zeigt das Menü im Client Bereich des Hauptfensters an, wenn der Benutzer mit der linken Maustaste klickt.
+Das Beispiel in diesem Abschnitt enthält Teile von Code aus einer Anwendung, die ein Kontextmenü erstellt und anzeigt, mit dem der Benutzer Schriftarten und Schriftartattribute festlegen kann. Die Anwendung zeigt das Menü immer dann im Clientbereich des Hauptfensters an, wenn der Benutzer mit der linken Maustaste klickt.
 
-Hier ist die Menüvorlage für das Kontextmenü, das in der Ressourcen Definitionsdatei der Anwendung bereitgestellt wird.
+Dies ist die Menüvorlage für das Kontextmenü, das in der Ressourcendefinitionsdatei der Anwendung bereitgestellt wird.
 
 
 ```
@@ -326,7 +326,7 @@ END
 
 
 
-Im folgenden Beispiel werden die Fenster Prozedur und die unterstützenden Funktionen verwendet, mit denen das Kontextmenü erstellt und angezeigt wird.
+Das folgende Beispiel enthält die Fensterprozedur und unterstützende Funktionen, die zum Erstellen und Anzeigen des Kontextmenüs verwendet werden.
 
 
 ```
@@ -403,7 +403,7 @@ VOID APIENTRY HandlePopupMenu(HWND hwnd, POINT pt)
 
 Die im folgenden Beispiel gezeigte Funktion zeigt ein Kontextmenü an.
 
-Die Anwendung enthält eine Menü Ressource, die durch die Zeichenfolge "shortcutexample" identifiziert wird. Die Menüleiste enthält einfach einen Menünamen. Die Anwendung verwendet die [**TrackPopupMenu**](/windows/desktop/api/Winuser/nf-winuser-trackpopupmenu) -Funktion, um das Menü anzuzeigen, das diesem Menü Element zugeordnet ist. (Die Menüleiste selbst wird nicht angezeigt, da **TrackPopupMenu** ein Handle für ein Menü, ein Untermenü oder ein Kontextmenü erfordert.)
+Die Anwendung enthält eine Menüressource, die durch die Zeichenfolge "ShortcutExample" identifiziert wird. Die Menüleiste enthält einfach einen Menünamen. Die Anwendung verwendet die [**TrackPopupMenu-Funktion,**](/windows/desktop/api/Winuser/nf-winuser-trackpopupmenu) um das diesem Menüelement zugeordnete Menü anzuzeigen. (Die Menüleiste selbst wird nicht angezeigt, da **TrackPopupMenu** ein Handle für ein Menü, Untermenü oder Kontextmenü erfordert.)
 
 
 ```
@@ -437,43 +437,43 @@ VOID APIENTRY DisplayContextMenu(HWND hwnd, POINT pt)
 
 
 
-## <a name="using-menu-item-bitmaps"></a>Verwenden von Menu-Item Bitmaps
+## <a name="using-menu-item-bitmaps"></a>Verwenden Menu-Item Bitmaps
 
-Das System kann eine Bitmap anstelle einer Text Zeichenfolge verwenden, um ein Menü Element anzuzeigen. Um eine Bitmap zu verwenden, müssen Sie das **miim- \_ Bitmap** -Flag für das Menü Element festlegen und ein Handle für die Bitmap angeben, das das System für das Menü Element im **hbmpitem** -Member der [**menuiteminfo**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) -Struktur anzeigen soll. In diesem Abschnitt wird beschrieben, wie Bitmaps für Menü Elemente verwendet werden.
+Das System kann eine Bitmap anstelle einer Textzeichenfolge verwenden, um ein Menüelement anzuzeigen. Um eine Bitmap zu verwenden, müssen Sie das **MIIM \_ BITMAP-Flag** für das Menüelement festlegen und ein Handle für die Bitmap angeben, das das System für das Menüelement im **hbmpItem-Element** der [**MENUITEMINFO-Struktur anzeigen**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) soll. In diesem Abschnitt wird beschrieben, wie Bitmaps für Menüelemente verwendet werden.
 
--   [Festlegen des Bitmap-Typflags](#setting-the-bitmap-type-flag)
+-   [Festlegen des Bitmaptypflags](#setting-the-bitmap-type-flag)
 -   [Erstellen der Bitmap](#creating-the-bitmap)
 -   [Hinzufügen von Linien und Diagrammen zu einem Menü](#adding-lines-and-graphs-to-a-menu)
 -   [Beispiel für Menu-Item Bitmaps](#example-of-menu-item-bitmaps)
 
-### <a name="setting-the-bitmap-type-flag"></a>Festlegen des Bitmap-Typflags
+### <a name="setting-the-bitmap-type-flag"></a>Festlegen des Bitmaptypflags
 
-Das **miim \_ Bitmap** -oder **MF- \_ bitmapflag** weist das System an, anstelle einer Text Zeichenfolge eine Bitmap zu verwenden, um ein Menü Element anzuzeigen. Das **miim \_ Bitmap** -oder MF- **\_ bitmapflag** eines Menü Elements muss zur Laufzeit festgelegt werden. es ist nicht möglich, es in der Ressourcen Definitionsdatei festzulegen.
+Das **MIIM \_ BITMAP-** oder **MF \_ BITMAP-Flag** weist das System an, eine Bitmap anstelle einer Textzeichenfolge zum Anzeigen eines Menüelements zu verwenden. Das **\_ MIIM-BITMAP-** oder **MF-BITMAP-Flag \_** eines Menüelements muss zur Laufzeit festgelegt werden. Sie können es nicht in der Ressourcendefinitionsdatei festlegen.
 
-Bei neuen Anwendungen können Sie die [**setmenuiteminfo**](/windows/desktop/api/Winuser/nf-winuser-setmenuiteminfoa) -oder [**InsertMenuItem**](/windows/desktop/api/Winuser/nf-winuser-insertmenuitema) -Funktion verwenden, um das **miim- \_ Bitmap** -Typflag festzulegen. Verwenden Sie **setmenuiteminfo**, um ein Menü Element von einem Textelement in ein bitmapelement zu ändern. Verwenden Sie die **InsertMenuItem** -Funktion, um einem Menü ein neues Bitmap-Element hinzuzufügen.
+Für neue Anwendungen können Sie die [**Funktion SetMenuItemInfo**](/windows/desktop/api/Winuser/nf-winuser-setmenuiteminfoa) oder [**InsertMenuItem**](/windows/desktop/api/Winuser/nf-winuser-insertmenuitema) verwenden, um das **MIIM \_ BITMAP-Typflag** fest zu setzen. Verwenden Sie **SetMenuItemInfo,** um ein Menüelement von einem Textelement in ein Bitmapelement zu ändern. Um einem Menü ein neues Bitmapelement hinzuzufügen, verwenden Sie die **InsertMenuItem-Funktion.**
 
-Anwendungen, die für frühere Versionen des Systems geschrieben wurden, können weiterhin die [**modifymenu**](/windows/desktop/api/Winuser/nf-winuser-modifymenua)-, [**InsertMenu**](/windows/desktop/api/Winuser/nf-winuser-insertmenua)-oder [**AppendMenu**](/windows/desktop/api/Winuser/nf-winuser-appendmenua) -Funktion verwenden, um das **MF- \_ bitmapflag** festzulegen. Wenn Sie ein Menü Element von einem Textzeichen folgen Element in ein bitmapelement ändern möchten, verwenden Sie **modifymenu**. Um einem Menü ein neues bitmapelement hinzuzufügen, verwenden Sie das **MF- \_ Bitmap** -Flag mit der **InsertMenu** -Funktion oder der **AppendMenu** -Funktion.
+Anwendungen, die für frühere Versionen des Systems geschrieben wurden, können weiterhin die [**Funktionen ModifyMenu,**](/windows/desktop/api/Winuser/nf-winuser-modifymenua) [**InsertMenu**](/windows/desktop/api/Winuser/nf-winuser-insertmenua)oder [**AppendMenu**](/windows/desktop/api/Winuser/nf-winuser-appendmenua) verwenden, um das **MF \_ BITMAP-Flag** zu setzen. Um ein Menüelement von einem Textzeichenfolgenelement in ein Bitmapelement zu ändern, verwenden **Sie ModifyMenu**. Um einem Menü ein neues Bitmapelement hinzuzufügen, verwenden Sie das **MF \_ BITMAP-Flag** mit der **InsertMenu-** oder **AppendMenu-Funktion.**
 
 ### <a name="creating-the-bitmap"></a>Erstellen der Bitmap
 
-Wenn Sie das Flag **miim \_ Bitmap** -oder **MF- \_ Bitmaptyp** für ein Menü Element festlegen, müssen Sie auch ein Handle für die Bitmap angeben, das das System für das Menü Element anzeigen soll. Sie können die Bitmap als Bitmap-Ressource bereitstellen oder die Bitmap zur Laufzeit erstellen. Wenn Sie eine Bitmap-Ressource verwenden, können Sie die [**LoadBitmap**](/windows/desktop/api/winuser/nf-winuser-loadbitmapa) -Funktion verwenden, um die Bitmap zu laden und Ihr Handle abzurufen.
+Wenn Sie das **MIIM \_ BITMAP-** oder **MF BITMAP-Typflag \_** für ein Menüelement festlegen, müssen Sie auch ein Handle für die Bitmap angeben, das das System für das Menüelement anzeigen soll. Sie können die Bitmap als Bitmapressource bereitstellen oder die Bitmap zur Laufzeit erstellen. Wenn Sie eine Bitmapressource verwenden, können Sie die [**LoadBitmap-Funktion**](/windows/desktop/api/winuser/nf-winuser-loadbitmapa) verwenden, um die Bitmap zu laden und ihr Handle zu erhalten.
 
-Um die Bitmap zur Laufzeit zu erstellen, verwenden Sie die Funktionen von Windows Graphics Device Interface (GDI). GDI bietet mehrere Möglichkeiten zum Erstellen einer Bitmap zur Laufzeit, aber Entwickler verwenden normalerweise die folgende Methode:
+Um die Bitmap zur Laufzeit zu erstellen, verwenden Sie Windows Graphics Device Interface (GDI)-Funktionen. GDI bietet mehrere Möglichkeiten zum Erstellen einer Bitmap zur Laufzeit, entwickler verwenden jedoch in der Regel die folgende Methode:
 
-1.  Verwenden Sie [**die Funktion**](/windows/desktop/api/wingdi/nf-wingdi-createcompatibledc) "Funktion", um einen Gerätekontext zu erstellen, der mit dem vom Hauptfenster der Anwendung verwendeten Gerätekontext kompatibel ist.
-2.  Verwenden Sie [**die Funktion**](/windows/desktop/api/wingdi/nf-wingdi-createcompatiblebitmap) "-Funktion", um eine Bitmap zu erstellen, die mit dem Hauptfenster der Anwendung kompatibel ist, oder verwenden [**Sie die Funktion**](/windows/desktop/api/wingdi/nf-wingdi-createbitmap) "die Funktion", um eine monochrome Bitmap zu erstellen.
-3.  Verwenden Sie die [**SelectObject**](/windows/desktop/api/wingdi/nf-wingdi-selectobject) -Funktion, um die Bitmap in den kompatiblen Gerätekontext auszuwählen.
-4.  Verwenden Sie GDI-Zeichnungsfunktionen, z. b. [**Ellipse**](/windows/desktop/api/wingdi/nf-wingdi-ellipse) und [**LineTo**](/windows/desktop/api/wingdi/nf-wingdi-lineto), um ein Bild in die Bitmap zu zeichnen.
+1.  Verwenden Sie [**die Funktion CreateCompatibleDC,**](/windows/desktop/api/wingdi/nf-wingdi-createcompatibledc) um einen Gerätekontext zu erstellen, der mit dem vom Hauptfenster der Anwendung verwendeten Gerätekontext kompatibel ist.
+2.  Verwenden Sie [**die CreateCompatibleBitmap-Funktion,**](/windows/desktop/api/wingdi/nf-wingdi-createcompatiblebitmap) um eine Bitmap zu erstellen, die mit dem Hauptfenster der Anwendung kompatibel ist, oder verwenden Sie die [**CreateBitmap-Funktion,**](/windows/desktop/api/wingdi/nf-wingdi-createbitmap) um eine monofarbige Bitmap zu erstellen.
+3.  Verwenden Sie die [**SelectObject-Funktion,**](/windows/desktop/api/wingdi/nf-wingdi-selectobject) um die Bitmap im kompatiblen Gerätekontext auszuwählen.
+4.  Verwenden Sie GDI-Zeichnungsfunktionen wie [**Ellipse**](/windows/desktop/api/wingdi/nf-wingdi-ellipse) und [**LineTo,**](/windows/desktop/api/wingdi/nf-wingdi-lineto)um ein Bild in die Bitmap zu zeichnen.
 
 Weitere Informationen finden Sie unter [Bitmaps](/windows/desktop/gdi/bitmaps).
 
 ### <a name="adding-lines-and-graphs-to-a-menu"></a>Hinzufügen von Linien und Diagrammen zu einem Menü
 
-Im folgenden Codebeispiel wird gezeigt, wie ein Menü erstellt wird, das Menü Element Bitmaps enthält. Es werden zwei Menüs erstellt. Das erste ist ein Diagramm Menü, das drei Menü Element Bitmaps enthält: ein Kreis Diagramm, ein Liniendiagramm und ein Balkendiagramm. Im Beispiel wird veranschaulicht, wie diese Bitmaps aus der Ressourcen Datei der Anwendung geladen werden, und anschließend werden die Menü-und Menü Elemente mithilfe der Funktionen " [**anatepopupmenu**](/windows/desktop/api/Winuser/nf-winuser-createpopupmenu) " und " [**AppendMenu**](/windows/desktop/api/Winuser/nf-winuser-appendmenua) " erstellt.
+Das folgende Codebeispiel zeigt, wie Sie ein Menü erstellen, das Menüelementbitmaps enthält. Es werden zwei Menüs erstellt. Die erste ist ein Diagrammmenü, das drei Menüelementbitmaps enthält: ein Kreisdiagramm, ein Liniendiagramm und ein Balkendiagramm. Das Beispiel zeigt, wie sie diese Bitmaps aus der Ressourcendatei der Anwendung laden und dann die [**Funktionen CreatePopupMenu**](/windows/desktop/api/Winuser/nf-winuser-createpopupmenu) und [**AppendMenu**](/windows/desktop/api/Winuser/nf-winuser-appendmenua) verwenden, um die Menü- und Menüelemente zu erstellen.
 
-Das zweite Menü ist ein Zeilen Menü. Sie enthält Bitmaps, die die vom vordefinierten Stift im System bereitgestellten Linienstile darstellen. Die zeilenweise Bitmaps werden zur Laufzeit mithilfe von GDI-Funktionen erstellt.
+Das zweite Menü ist ein Linienmenü. Sie enthält Bitmaps, die die vom vordefinierten Stift im System bereitgestellten Linienstile anzeigen. Die Bitmaps im Linienstil werden zur Laufzeit mithilfe von GDI-Funktionen erstellt.
 
-Im folgenden finden Sie die Definitionen der Bitmapressourcen in der Ressourcen Definitionsdatei der Anwendung.
+Hier sind die Definitionen der Bitmapressourcen in der Ressourcendefinitionsdatei der Anwendung.
 
 
 ```
@@ -485,7 +485,7 @@ BAR BITMAP bar.bmp
 
 
 
-Im folgenden finden Sie die relevanten Teile der Header Datei der Anwendung.
+Im Folgenden finden Sie die relevanten Teile der Headerdatei der Anwendung.
 
 
 ```
@@ -527,7 +527,7 @@ VOID MakeLineMenu(HWND, HPEN, HBITMAP);
 
 
 
-Im folgenden Beispiel wird gezeigt, wie Menüs und Menü Element Bitmaps in einer Anwendung erstellt werden.
+Das folgende Beispiel zeigt, wie Menüs und Menüelementbitmaps in einer Anwendung erstellt werden.
 
 
 ```
@@ -692,15 +692,15 @@ VOID MakeLineMenu(HWND hwnd, HPEN phpen, HBITMAP phbmp)
 
 ### <a name="example-of-menu-item-bitmaps"></a>Beispiel für Menu-Item Bitmaps
 
-Im Beispiel in diesem Thema werden zwei Menüs erstellt, die jeweils mehrere Bitmap-Menü Elemente enthalten. Die Anwendung fügt der Menüleiste des Hauptfensters für jedes Menü einen entsprechenden Menünamen hinzu.
+Im Beispiel in diesem Thema werden zwei Menüs erstellt, die jeweils mehrere Bitmapmenüelemente enthalten. Für jedes Menü fügt die Anwendung der Menüleiste des Hauptfensters einen entsprechenden Menünamen hinzu.
 
-Das erste Menü enthält Menü Elemente, die jeden der drei Diagrammtypen anzeigen: Kreis, Linie und Balken. Die Bitmaps für diese Menü Elemente werden als Ressourcen definiert und mithilfe der [**LoadBitmap**](/windows/desktop/api/winuser/nf-winuser-loadbitmapa) -Funktion geladen. Diesem Menü ist der Menü Name "Diagramm" in der Menüleiste zugeordnet.
+Das erste Menü enthält Menüelemente, die jeden der drei Diagrammtypen anzeigen: Kreis, Linie und Balken. Die Bitmaps für diese Menüelemente werden als Ressourcen definiert und mithilfe der [**LoadBitmap-Funktion geladen.**](/windows/desktop/api/winuser/nf-winuser-loadbitmapa) Diesem Menü ist ein Menüname "Diagramm" auf der Menüleiste zugeordnet.
 
-Das zweite Menü enthält Menü Elemente, die jeden der fünf Zeilen Formate mit der Funktion " [**kreatepen**](/windows/desktop/api/wingdi/nf-wingdi-createpen) " angezeigt werden: **PS \_ Solid**, **PS \_ Dash**, **PS- \_ Punkt**, **PS- \_ DashDot** und **PS- \_ DashDotDot**. Die Anwendung erstellt die Bitmaps für diese Menü Elemente zur Laufzeit mithilfe von GDI-Zeichnungsfunktionen. Diesem Menü ist ein **Zeilen** Menü Name in der Menüleiste zugeordnet.
+Das zweite Menü enthält Menüelemente mit den fünf Linienstilen, die mit der [**CreatePen-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-createpen) verwendet werden: **PS \_ SOLID**, **PS \_ DASH**, **PS \_ DOT**, **PS \_ DASHDOT** und **PS \_ DASHDOT**. Die Anwendung erstellt die Bitmaps für diese Menüelemente zur Laufzeit mithilfe von GDI-Zeichnungsfunktionen. Diesem Menü ist  ein Zeilenmenüname auf der Menüleiste zugeordnet.
 
-In der Fenster Prozedur der Anwendung sind zwei statische Arrays von bitmaphandles definiert. Ein Array enthält die Handles der drei Bitmaps, die für das **Diagramm** Menü verwendet werden. Der andere enthält die Handles der fünf Bitmaps, die für das Menü " **Linien** " verwendet werden. Bei der Verarbeitung der [**WM \_ Create**](/windows/desktop/winmsg/wm-create) -Nachricht lädt die Fenster Prozedur die Diagramm Bitmaps, erstellt die Zeilen Bitmaps und fügt dann die entsprechenden Menü Elemente hinzu. Bei der Verarbeitung [**der \_ WM**](/windows/desktop/winmsg/wm-destroy) -Lösch Nachricht löscht die Fenster Prozedur alle Bitmaps.
+In der Fensterprozedur der Anwendung sind zwei statische Arrays von Bitmaphandles definiert. Ein Array enthält die Handles der drei Bitmaps, die für das Menü **Diagramm verwendet** werden. Die andere enthält die Handles der fünf Bitmaps, die für das Menü **Zeilen verwendet** werden. Beim Verarbeiten der [**WM \_ CREATE-Nachricht**](/windows/desktop/winmsg/wm-create) lädt die Fensterprozedur die Diagrammbitmaps, erstellt die Linienbitmaps und fügt dann die entsprechenden Menüelemente hinzu. Beim Verarbeiten der [**WM \_ DESTROY-Nachricht**](/windows/desktop/winmsg/wm-destroy) löscht die Fensterprozedur alle Bitmaps.
 
-Im folgenden finden Sie die relevanten Teile der Header Datei der Anwendung.
+Im Folgenden finden Sie die relevanten Teile der Headerdatei der Anwendung.
 
 
 ```
@@ -734,7 +734,7 @@ Im folgenden finden Sie die relevanten Teile der Header Datei der Anwendung.
 
 
 
-Im folgenden sind die relevanten Teile der Fenster Prozedur beschrieben. Die Fenster Prozedur führt den größten Teil ihrer Initialisierung durch Aufrufen der Anwendungs definierten loadchartbitmaps-, createlinebitmaps-und addbitmapmenu-Funktionen aus, die weiter unten in diesem Thema beschrieben werden.
+Im Folgenden finden Sie die relevanten Teile der Fensterprozedur. Die Fensterprozedur führt den Großteil der Initialisierung durch, indem die anwendungsdefinierten Funktionen LoadChartBitmaps, CreateLineBitmaps und AddBitmapMenu, die weiter unten in diesem Thema beschrieben werden, aufrufen.
 
 
 ```
@@ -794,7 +794,7 @@ LRESULT CALLBACK MainWindowProc(
 
 
 
-Die Anwendungs definierte loadchartbitmaps-Funktion lädt die Bitmapressourcen für das Diagramm Menü, indem die [**LoadBitmap**](/windows/desktop/api/winuser/nf-winuser-loadbitmapa) -Funktion wie folgt aufgerufen wird.
+Die anwendungsdefinierte LoadChartBitmaps-Funktion lädt die Bitmapressourcen für das Diagrammmenü, indem die [**LoadBitmap-Funktion**](/windows/desktop/api/winuser/nf-winuser-loadbitmapa) wie folgt aufruft.
 
 
 ```
@@ -808,7 +808,7 @@ VOID WINAPI LoadChartBitmaps(HBITMAP *paHbm)
 
 
 
-Die von der Anwendung definierte Funktion "-Funktion" erstellt die Bitmaps für das Menü "Zeilen" mithilfe von GDI-Zeichnungsfunktionen. Die-Funktion erstellt einen Arbeitsspeicher-Gerätekontext (DC) mit denselben Eigenschaften wie der DC des Desktop Fensters. Für jede Linienart erstellt die Funktion eine Bitmap, wählt Sie in den Speicher-DC aus und zeichnet Sie auf.
+Die anwendungsdefinierte CreateLineBitmaps-Funktion erstellt die Bitmaps für das Menü Linien mithilfe von GDI-Zeichnungsfunktionen. Die Funktion erstellt einen Speichergerätekontext (DC) mit den gleichen Eigenschaften wie der Domänencontroller des Desktopfensters. Für jeden Linienstil erstellt die Funktion eine Bitmap, wählt sie im Arbeitsspeicher-DC aus und zeichnet sie.
 
 
 ```
@@ -876,7 +876,7 @@ VOID WINAPI CreateLineBitmaps(HBITMAP *paHbm)
 
 
 
-Die Anwendungs definierte addbitmapmenu-Funktion erstellt ein Menü und fügt dieser die angegebene Anzahl von Bitmap-Menü Elementen hinzu. Anschließend wird der Menüleiste des angegebenen Fensters ein entsprechender Menü Name hinzugefügt.
+Die anwendungsdefinierte AddBitmapMenu-Funktion erstellt ein Menü und fügt ihr die angegebene Anzahl von Bitmapmenüelementen hinzu. Anschließend wird der Menüleiste des angegebenen Fensters ein entsprechender Menüname hinzufügt.
 
 
 ```
@@ -915,59 +915,59 @@ VOID WINAPI AddBitmapMenu(
 
 
 
-## <a name="creating-owner-drawn-menu-items"></a>Erstellen von Owner-Drawn Menü Elementen
+## <a name="creating-owner-drawn-menu-items"></a>Erstellen Owner-Drawn Menüelemente
 
-Wenn Sie die gesamte Kontrolle über die Darstellung eines Menü Elements benötigen, können Sie ein von einem Besitzer gezeichnetes Menü Element in der Anwendung verwenden. In diesem Abschnitt werden die Schritte beschrieben, die zum Erstellen und Verwenden eines von einem Besitzer gezeichneten Menü Elements erforderlich sind.
+Wenn Sie die vollständige Kontrolle über die Darstellung eines Menüelements benötigen, können Sie ein vom Besitzer gezeichnetes Menüelement in Ihrer Anwendung verwenden. In diesem Abschnitt werden die Schritte zum Erstellen und Verwenden eines vom Besitzer gezeichneten Menüelements beschrieben.
 
 -   [Festlegen des Owner-Drawn Flags](#setting-the-owner-drawn-flag)
--   [Vom Besitzer gezeichnete Menüs und die WM- \_ MeasureItem-Nachricht](/windows)
--   [Von einem Besitzer gezeichnete Menüs und die WM- \_ DrawItem-Nachricht](/windows)
--   [Von einem Besitzer gezeichnete Menüs und die WM- \_ menuchar-Meldung](/windows)
--   [Festlegen von Schriftarten für Menu-Item Text Zeichenfolgen](#setting-fonts-for-menu-item-text-strings)
--   [Beispiel für Owner-Drawn Menü Elemente](#example-of-owner-drawn-menu-items)
+-   [Vom Besitzer gezeichnete Menüs und die WM \_ MEASUREITEM-Meldung](/windows)
+-   [Besitzer gezeichnete Menüs und die WM \_ DRAWITEM-Meldung](/windows)
+-   [Vom Besitzer gezeichnete Menüs und die WM \_ MENUCHAR-Meldung](/windows)
+-   [Festlegen von Schriftarten für Menu-Item Textzeichenfolgen](#setting-fonts-for-menu-item-text-strings)
+-   [Beispiel für Owner-Drawn Menüelemente](#example-of-owner-drawn-menu-items)
 
 ### <a name="setting-the-owner-drawn-flag"></a>Festlegen des Owner-Drawn Flags
 
-Sie können kein vom Besitzer gezeichnetes Menü Element in der Ressourcen Definitionsdatei Ihrer Anwendung definieren. Stattdessen müssen Sie ein neues Menü Element erstellen oder ein vorhandenes Menü Element ändern, indem Sie das MFT-Menü Kennzeichen für Besitzer **\_ Zeichnen** verwenden.
+Sie können kein vom Besitzer gezeichnetes Menüelement in der Ressourcendefinitionsdatei Ihrer Anwendung definieren. Stattdessen müssen Sie ein neues Menüelement erstellen oder ein vorhandenes ändern, indem Sie das **MFT \_ OWNERDRAW-Menüflag** verwenden.
 
-Mit der [**InsertMenuItem**](/windows/desktop/api/Winuser/nf-winuser-insertmenuitema) -oder der [**setmenuiteminfo**](/windows/desktop/api/Winuser/nf-winuser-setmenuiteminfoa) -Funktion können Sie ein vom Besitzer gezeichnetes Menü Element angeben. Verwenden Sie **InsertMenuItem** , um ein neues Menü Element an der angegebenen Position in einer Menüleiste oder einem Menü einzufügen. Verwenden Sie **setmenuiteminfo** , um den Inhalt eines Menüs zu ändern.
+Sie können die [**Funktion InsertMenuItem oder**](/windows/desktop/api/Winuser/nf-winuser-insertmenuitema) [**SetMenuItemInfo**](/windows/desktop/api/Winuser/nf-winuser-setmenuiteminfoa) verwenden, um ein vom Besitzer gezeichnetes Menüelement anzugeben. Verwenden **Sie InsertMenuItem,** um ein neues Menüelement an der angegebenen Position in eine Menüleiste oder ein Menü einfügungen. Verwenden **Sie SetMenuItemInfo,** um den Inhalt eines Menüs zu ändern.
 
-Wenn Sie diese beiden Funktionen aufrufen, müssen Sie einen Zeiger auf eine [**menuiteminfo**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) -Struktur angeben, die die Eigenschaften des neuen Menü Elements oder die Eigenschaften angibt, die Sie für ein vorhandenes Menü Element ändern möchten. Um ein Element als vom Besitzer gezeichnetes Element festzulegen, geben Sie den **miim \_ ftype** -Wert für das **fmask** -Element und den **MFT-Besitzer \_ Zeichnungs** Wert für das **ftype** -Element an.
+Wenn Sie diese beiden Funktionen aufrufen, müssen Sie einen Zeiger auf eine [**MENUITEMINFO-Struktur**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) angeben, die die Eigenschaften des neuen Menüelements oder die Eigenschaften angibt, die Sie für ein vorhandenes Menüelement ändern möchten. Um ein Element zu einem vom Besitzer gezeichneten Element zu machen, geben Sie den **MIIM \_ FTYPE-Wert** für das **fMask-Element** und den **MFT \_ OWNERDRAW-Wert** für das **fType-Element** an.
 
-Durch Festlegen der entsprechenden Member der [**menuiteminfo**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) -Struktur können Sie jedem Menü Element einen Anwendungs definierten Wert, der als **Elementdaten** bezeichnet wird, zuordnen. Geben Sie hierzu den **miim- \_ Datenwert** für das **fmask** -Element und den von der Anwendung definierten Wert für das **dwitemdata** -Element an.
+Durch Festlegen der entsprechenden Member der [**MENUITEMINFO-Struktur**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) können Sie jedem Menüelement einen anwendungsdefinierten Wert zuordnen, der als Elementdaten bezeichnet wird. Geben Sie dazu den **MIIM \_ DATA-Wert** für das **fMask-Element** und den anwendungsdefinierten Wert für das **dwItemData-Element** an.
 
-Sie können Elementdaten mit jedem beliebigen Menü Elementtyp verwenden, aber dies ist besonders nützlich für Elemente, die vom Besitzer gezeichnet werden. Angenommen, eine-Struktur enthält Informationen, die zum Zeichnen eines Menü Elements verwendet werden. Eine Anwendung kann die Elementdaten für ein Menü Element verwenden, um einen Zeiger auf die Struktur zu speichern. Die Elementdaten werden mit den Nachrichten " [**WM \_ MeasureItem**](../controls/wm-measureitem.md) " und " [**WM \_ DrawItem**](../controls/wm-drawitem.md) " an das Besitzer Fenster des Menüs gesendet. Um die Elementdaten für ein Menü zu einem beliebigen Zeitpunkt abzurufen, verwenden Sie die [**getmenuiteminfo**](/windows/desktop/api/Winuser/nf-winuser-getmenuiteminfoa) -Funktion.
+Sie können Elementdaten mit jeder Art von Menüelement verwenden, aber es ist besonders nützlich für vom Besitzer gezeichnete Elemente. Angenommen, eine -Struktur enthält Informationen, die zum Zeichnen eines Menüelements verwendet werden. Eine Anwendung kann die Elementdaten für ein Menüelement verwenden, um einen Zeiger auf die Struktur zu speichern. Die Elementdaten werden mit den Meldungen [**WM \_ MEASUREITEM**](../controls/wm-measureitem.md) und WM DRAWITEM an das [**\_ Besitzerfenster des Menüs**](../controls/wm-drawitem.md) gesendet. Um die Elementdaten für ein Menü jederzeit abzurufen, verwenden Sie die [**GetMenuItemInfo-Funktion.**](/windows/desktop/api/Winuser/nf-winuser-getmenuiteminfoa)
 
-Anwendungen, die für frühere Versionen des Systems geschrieben wurden, können weiterhin [**AppendMenu**](/windows/desktop/api/Winuser/nf-winuser-appendmenua), [**InsertMenu**](/windows/desktop/api/Winuser/nf-winuser-insertmenua)oder [**modifymenu**](/windows/desktop/api/Winuser/nf-winuser-modifymenua) aufrufen, um das MF-Besitzer **\_ Zeichnungs** Flag einem von einem Besitzer gezeichneten Menü Element zuzuweisen.
+Anwendungen, die für frühere Versionen des Systems geschrieben wurden, können [**weiterhin AppendMenu,**](/windows/desktop/api/Winuser/nf-winuser-appendmenua) [**InsertMenu**](/windows/desktop/api/Winuser/nf-winuser-insertmenua)oder [**ModifyMenu**](/windows/desktop/api/Winuser/nf-winuser-modifymenua) aufrufen, um das **MF \_ OWNERDRAW-Flag** einem vom Besitzer gezeichneten Menüelement zu zuweisen.
 
-Wenn Sie eine dieser drei Funktionen aufrufen, können Sie einen Wert als *lpnetwitem* -Parameter übergeben. Dieser Wert kann alle Informationen darstellen, die für Ihre Anwendung von Bedeutung sind, und die der Anwendung zur Verfügung stehen, wenn das Element angezeigt werden soll. Der Wert kann z. b. einen Zeiger auf eine-Struktur enthalten. die-Struktur kann wiederum eine Text Zeichenfolge und ein Handle für die logische Schriftart enthalten, die Ihre Anwendung zum Zeichnen der Zeichenfolge verwendet.
+Wenn Sie eine dieser drei Funktionen aufrufen, können Sie einen Wert als *lpNewItem-Parameter* übergeben. Dieser Wert kann alle Informationen darstellen, die für Ihre Anwendung aussagekräftig sind und der Anwendung zur Verfügung stehen, wenn das Element angezeigt werden soll. Beispielsweise könnte der Wert einen Zeiger auf eine -Struktur enthalten. Die -Struktur wiederum kann eine Textzeichenfolge und ein Handle für die logische Schriftart enthalten, die Ihre Anwendung zum Zeichnen der Zeichenfolge verwendet.
 
-### <a name="owner-drawn-menus-and-the-wm_measureitem-message"></a>Owner-Drawn Menüs und die "WM \_ MeasureItem"-Meldung
+### <a name="owner-drawn-menus-and-the-wm_measureitem-message"></a>Owner-Drawn Menüs und die WM \_ MEASUREITEM-Meldung
 
-Bevor das System zum ersten Mal ein vom Besitzer gezeichnetes Menü Element anzeigt, sendet es die " [**WM \_ MeasureItem**](../controls/wm-measureitem.md) "-Meldung an die Fenster Prozedur des Fensters, das das Menü des Elements besitzt. Diese Meldung enthält einen Zeiger auf eine [**measureitemstruct**](/windows/win32/api/winuser/ns-winuser-measureitemstruct) -Struktur, die das Element identifiziert und die Elementdaten enthält, die einer Anwendung möglicherweise zugewiesen wurden. Die Fenster Prozedur muss die Elemente **ItemWidth** und **ItemHeight** der Struktur ausfüllen, bevor Sie von der Verarbeitung der Nachricht zurückgegeben wird. Das System verwendet die Informationen in diesen Membern beim Erstellen des umgebenden Rechtecks, in dem eine Anwendung das Menü Element zeichnet. Außerdem werden die Informationen verwendet, um zu erkennen, wann der Benutzer das Element auswählt.
+Bevor das System zum ersten Mal ein vom Besitzer gezeichnetes Menüelement anzeigt, sendet es die [**WM \_ MEASUREITEM-Nachricht**](../controls/wm-measureitem.md) an die Fensterprozedur des Fensters, das das Menü des Elements besitzt. Diese Meldung enthält einen Zeiger auf eine [**MEASUREITEMSTRUCT-Struktur,**](/windows/win32/api/winuser/ns-winuser-measureitemstruct) die das Element identifiziert und die Elementdaten enthält, die ihm möglicherweise von einer Anwendung zugewiesen wurden. Die Fensterprozedur muss die **Member itemWidth** und **itemHeight** der -Struktur ausfüllen, bevor sie von der Verarbeitung der Nachricht zurückkehrt. Das System verwendet die Informationen in diesen Membern beim Erstellen des umgebundenen Rechtecks, in dem eine Anwendung das Menüelement zeichnet. Außerdem werden die Informationen verwendet, um zu erkennen, wann der Benutzer das Element auswählt.
 
-### <a name="owner-drawn-menus-and-the-wm_drawitem-message"></a>Owner-Drawn Menüs und die WM- \_ DrawItem-Nachricht
+### <a name="owner-drawn-menus-and-the-wm_drawitem-message"></a>Owner-Drawn Menüs und die WM \_ DRAWITEM-Meldung
 
-Wenn das Element gezeichnet werden muss (z. b. wenn es zum ersten Mal angezeigt wird oder wenn der Benutzer es auswählt), sendet das System die [**WM \_ DrawItem**](../controls/wm-drawitem.md) -Nachricht an die Fenster Prozedur des Besitzer Fensters des Menüs. Diese Meldung enthält einen Zeiger auf eine [**drawitemstruct**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) -Struktur, die Informationen über das Element enthält, einschließlich der Elementdaten, die einer Anwendung möglicherweise zugewiesen wurden. Außerdem enthält **drawitemstruct** Flags, die den Zustand des Elements angeben (z. b. ob es abgeblendet oder ausgewählt ist), sowie ein umgebenden Rechteck und einen Gerätekontext, den die Anwendung zum Zeichnen des Elements verwendet.
+Wenn das Element gezeichnet werden muss (z. B. wenn es zum ersten Mal angezeigt wird oder wenn der Benutzer es auswählt), sendet das System die [**WM \_ DRAWITEM-Nachricht**](../controls/wm-drawitem.md) an die Fensterprozedur des Besitzerfensters des Menüs. Diese Meldung enthält einen Zeiger auf eine [**DRAWITEMSTRUCT-Struktur,**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) die Informationen zum Element enthält, einschließlich der Elementdaten, die ihm möglicherweise von einer Anwendung zugewiesen wurden. Darüber hinaus enthält **DRAWITEMSTRUCT** Flags, die den Zustand des Elements angeben (z. B. ob es grau oder ausgewählt ist), sowie ein umgebundenes Rechteck und einen Gerätekontext, den die Anwendung zum Zeichnen des Elements verwendet.
 
-Eine Anwendung muss beim Verarbeiten der [**WM- \_ DrawItem**](../controls/wm-drawitem.md) -Nachricht folgende Aktionen ausführen:
+Eine Anwendung muss beim Verarbeiten der [**WM \_ DRAWITEM-Nachricht Folgendes**](../controls/wm-drawitem.md) tun:
 
--   Bestimmen Sie den Typ der Zeichnung, der erforderlich ist. Überprüfen Sie hierzu den **itemaction** -Member der [**drawitemstruct**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) -Struktur.
--   Zeichnen Sie das Menü Element entsprechend, indem Sie das umgebende Rechteck und den Gerätekontext verwenden, die aus der [**drawitemstruct**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) -Struktur abgerufen werden. Die Anwendung muss nur innerhalb des umgebenden Rechtecks gezeichnet werden. Aus Leistungsgründen gibt das System keine Teile des Bilds aus, die außerhalb des Rechtecks gezeichnet werden.
--   Stellt alle GDI-Objekte wieder her, die für den Gerätekontext des Menü Elements ausgewählt wurden.
+-   Bestimmen Sie den erforderlichen Zeichnungstyp. Überprüfen Sie dazu das **itemAction-Element** der [**DRAWITEMSTRUCT-Struktur.**](/windows/win32/api/winuser/ns-winuser-drawitemstruct)
+-   Zeichnen Sie das Menüelement entsprechend, indem Sie das umgebundene Rechteck und den Gerätekontext verwenden, der aus der [**DRAWITEMSTRUCT-Struktur ermittelt**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) wurde. Die Anwendung darf nur innerhalb des umgebundenen Rechtecks zeichnen. Aus Leistungsgründen beschneiden das System keine Teile des Bilds, die außerhalb des Rechtecks gezeichnet werden.
+-   Stellen Sie alle GDI-Objekte wieder wieder dar, die für den Gerätekontext des Menüelements ausgewählt wurden.
 
-Wenn der Benutzer das Menü Element auswählt, legt das System den **itemaction** -Member [**der drawitemstruct**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) -Struktur auf den Wert für die **ODA- \_ Auswahl** fest und legt den **\_ ausgewählten ODS** -Wert im **ItemState** -Member fest. Dies ist der Hinweis einer Anwendung, um das Menü Element neu zu zeichnen, um anzugeben, dass es ausgewählt ist.
+Wenn der Benutzer das Menüelement auswählt, legt das System das **itemAction-Element** der [**DRAWITEMSTRUCT-Struktur**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) auf den **KONSTRUKT \_ SELECT-Wert** und den **ODS \_ SELECTED-Wert** im **itemState-Element** fest. Dies ist der Hinweis einer Anwendung, das Menüelement neu zu zeichnet, um anzugeben, dass es ausgewählt ist.
 
-### <a name="owner-drawn-menus-and-the-wm_menuchar-message"></a>Owner-Drawn Menüs und die WM- \_ menuchar-Meldung
+### <a name="owner-drawn-menus-and-the-wm_menuchar-message"></a>Owner-Drawn Menüs und die WM \_ MENUCHAR-Meldung
 
-Menüs, die keine von einem Besitzer gezeichneten Menüs sind, können ein mnetmonisches Menü angeben, indem Sie einen Unterstrich neben einem Zeichen in der Menü Zeichenfolge einfügen. Dies ermöglicht dem Benutzer das Auswählen des Menüs durch Drücken von alt und drücken des Menüs mnetmonisches Zeichen. In den von einem Besitzer gezeichneten Menüs können Sie jedoch kein mnetmonisches Menü auf diese Weise angeben. Stattdessen muss Ihre Anwendung die [**WM \_ menuchar**](wm-menuchar.md) -Nachricht verarbeiten, um von einem Besitzer gezeichnete Menüs mit Menü-mnetmonics bereitzustellen.
+Andere Menüs als besitzergezeichnete Menüs können ein mnemonisches Menü angeben, indem Sie einen Unterstrich neben einem Zeichen in die Menüzeichenfolge einfügen. Dadurch kann der Benutzer das Menü auswählen, indem er ALT und das mnemonische Menüzeichen drückt. In von Besitzern gezeichneten Menüs können Sie jedoch kein mnemonisches Menü auf diese Weise angeben. Stattdessen muss Ihre Anwendung die [**WM \_ MENUCHAR-Nachricht**](wm-menuchar.md) verarbeiten, um Menüs mit Mnemonischen Menüs mit Besitzerzeichen zur Verfügung zu stellen.
 
-Die " [**WM \_ menuchar**](wm-menuchar.md) "-Meldung wird gesendet, wenn der Benutzer ein Menü "mnetmonic" eingibt, das mit keinem der vordefinierten mmaics des aktuellen Menüs identisch ist. Der in *wParam* enthaltene Wert gibt das ASCII-Zeichen an, das dem Schlüssel entspricht, den der Benutzer mit der Alt-Taste gedrückt hat. Das nieder wertige Wort von *wParam* gibt den Typ des ausgewählten Menüs an und kann einen der folgenden Werte aufweisen:
+Die [**WM \_ MENUCHAR-Meldung**](wm-menuchar.md) wird gesendet, wenn der Benutzer ein mnemonisches Menü ein gibt, das nicht mit den vordefinierten Mnemonischen des aktuellen Menüs übereinstimmen kann. Der in *wParam enthaltene* Wert gibt das ASCII-Zeichen an, das dem Schlüssel entspricht, den der Benutzer mit der ALT-TASTE gedrückt hat. Das niedrige Wort *von wParam* gibt den Typ des ausgewählten Menüs an und kann einer der folgenden Werte sein:
 
--   **MF \_ Popup** , wenn das aktuelle Menü ein Untermenü ist.
--   **MF \_ Sysmenu** , wenn das Menü das Systemmenü ist.
+-   **MF \_ POPUP,** wenn das aktuelle Menü ein Untermenü ist.
+-   **MF \_ SYSMENU,** wenn das Menü das Systemmenü ist.
 
-Das hochwertige Wort von *wParam* enthält das Menü Handle für das aktuelle Menü. Das Fenster mit den von einem Besitzer gezeichneten Menüs kann [**WM \_ menuchar**](wm-menuchar.md) wie folgt verarbeiten:
+Das obere Wort *von wParam* enthält das Menühandli zum aktuellen Menü. Das Fenster mit den vom Besitzer gezeichneten Menüs kann [**WM \_ MENUCHAR**](wm-menuchar.md) wie folgt verarbeiten:
 
 
 ```
@@ -980,28 +980,28 @@ Das hochwertige Wort von *wParam* enthält das Menü Handle für das aktuelle Me
 
 
 
-Mit den beiden im höherwertigen Wort des Rückgabewerts wird dem System mitgeteilt, dass das nieder wertige Wort des Rückgabewerts den NULL basierten Index des auszuwählenden Menü Elements enthält.
+Die beiden im hohen Wort des Rückgabewerts informieren das System darüber, dass das niedrige Wort des Rückgabewerts den nullbasierten Index des zu wählenden Menüelements enthält.
 
-Die folgenden Konstanten entsprechen den möglichen Rückgabe Werten der WM- [**\_ menuchar**](wm-menuchar.md) -Nachricht.
+Die folgenden Konstanten entsprechen den möglichen Rückgabewerten aus der [**WM \_ MENUCHAR-Meldung.**](wm-menuchar.md)
 
 
 
 | Konstante         | Wert | Bedeutung                                                                                                                                                       |
 |------------------|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **MNC \_ ignorieren**  | 0     | Das System sollte das vom Benutzer gedrückte Zeichen verwerfen und auf dem System Sprecher ein kurzes Signal erstellen.                                                       |
-| **MNC- \_ Schließen**   | 1     | Das System sollte das aktive Menü schließen.                                                                                                                      |
-| **MNC- \_ Ausführung** | 2     | Das System sollte das im nieder wertigen Wort des Rückgabewerts angegebene Element auswählen. Das Besitzer Fenster empfängt eine [**WM- \_ Befehls**](wm-command.md) Meldung. |
-| **MNC \_ SELECT**  | 3     | Das System sollte das im nieder wertigen Wort des Rückgabewerts angegebene Element auswählen.                                                                        |
+| **MNC \_ IGNORE**  | 0     | Das System sollte das Zeichen verwerfen, das der Benutzer gedrückt hat, und einen kurzen Signalton auf dem Systemlautlauter erstellen.                                                       |
+| **MNC \_ CLOSE**   | 1     | Das System sollte das aktive Menü schließen.                                                                                                                      |
+| **MNC \_ EXECUTE** | 2     | Das System sollte das Element auswählen, das im Niedrigwertwort des Rückgabewerts angegeben ist. Das Besitzerfenster empfängt eine [**WM \_ COMMAND-Meldung.**](wm-command.md) |
+| **MNC \_ SELECT**  | 3     | Das System sollte das Element auswählen, das im Niedrigwertwort des Rückgabewerts angegeben ist.                                                                        |
 
 
 
- 
+ 
 
-### <a name="setting-fonts-for-menu-item-text-strings"></a>Festlegen von Schriftarten für Menu-Item Text Zeichenfolgen
+### <a name="setting-fonts-for-menu-item-text-strings"></a>Festlegen von Schriftarten für Menu-Item Textzeichenfolgen
 
-Dieses Thema enthält ein Beispiel für eine Anwendung, die in einem Menü von einem Besitzer gezeichnete Menü Elemente verwendet. Das Menü enthält Elemente, die die Attribute der aktuellen Schriftart festlegen, und die Elemente werden mit dem entsprechenden Font-Attribut angezeigt.
+Dieses Thema enthält ein Beispiel aus einer Anwendung, die besitzergezeichnete Menüelemente in einem Menü verwendet. Das Menü enthält Elemente, die die Attribute der aktuellen Schriftart festlegen, und die Elemente werden mit dem entsprechenden Schriftartattribut angezeigt.
 
-Hier sehen Sie, wie das Menü in der Ressourcen Definitionsdatei definiert ist. Beachten Sie, dass die Zeichen folgen für die Menü Elemente "regulär", "Fett", "Kursiv" und "Unterstreichung" zur Laufzeit zugewiesen werden, sodass Ihre Zeichen folgen in der Ressourcen Definitionsdatei leer sind.
+So wird das Menü in der Ressourcendefinitionsdatei definiert. Beachten Sie, dass die Zeichenfolgen für die Menüelemente Regular, Bold, Italic und Underline zur Laufzeit zugewiesen werden, sodass ihre Zeichenfolgen in der Ressourcendefinitionsdatei leer sind.
 
 
 ```
@@ -1020,18 +1020,18 @@ END
 
 
 
-Die Fenster Prozedur der Anwendung verarbeitet die Nachrichten, die an der Verwendung von vom Besitzer gezeichneten Menü Elementen beteiligt sind. Die Anwendung verwendet die [**WM \_ Create**](/windows/desktop/winmsg/wm-create) -Nachricht, um Folgendes durchzuführen:
+Die Fensterprozedur der Anwendung verarbeitet die Nachrichten, die an der Verwendung von Vom Besitzer gezeichneten Menüelementen beteiligt sind. Die Anwendung verwendet die [**WM \_ CREATE-Nachricht,**](/windows/desktop/winmsg/wm-create) um Folgendes zu tun:
 
--   Legen Sie für die Menü Elemente das-Flag für den **MF \_** -Besitzer fest.
--   Legen Sie die Text Zeichenfolgen für die Menü Elemente fest.
--   Ruft Handles der Schriftarten ab, die zum Zeichnen der Elemente verwendet werden.
--   Ruft die Text-und Hintergrund Farbwerte für ausgewählte Menü Elemente ab.
+-   Legen Sie das **MF \_ OWNERDRAW-Flag** für die Menüelemente fest.
+-   Legen Sie die Textzeichenfolgen für die Menüelemente fest.
+-   Abrufen von Handles der Schriftarten, die zum Zeichnen der Elemente verwendet werden.
+-   Abrufen der Text- und Hintergrundfarbwerte für ausgewählte Menüelemente.
 
-Die Text Zeichenfolgen und Schriftart Handles werden in einem Array von Anwendungs definierten myItem-Strukturen gespeichert. Die Anwendungs definierte getafont-Funktion erstellt eine Schriftart, die dem angegebenen Schriftart Attribut entspricht, und gibt ein Handle für die Schriftart zurück. Die Handles werden während der Verarbeitung der WM- [**\_ zerstörungsnachricht**](/windows/desktop/winmsg/wm-destroy) zerstört.
+Die Textzeichenfolgen und Schriftarthandles werden in einem Array anwendungsdefinierter MYITEM-Strukturen gespeichert. Die anwendungsdefinierte GetAFont-Funktion erstellt eine Schriftart, die dem angegebenen Schriftartattribut entspricht, und gibt ein Handle an die Schriftart zurück. Die Handles werden während der Verarbeitung der [**WM \_ DESTROY-Nachricht**](/windows/desktop/winmsg/wm-destroy) zerstört.
 
-Während der Verarbeitung der " [**WM \_ MeasureItem**](../controls/wm-measureitem.md) "-Nachricht Ruft das Beispiel die Breite und Höhe einer Menü Element Zeichenfolge ab und kopiert diese Werte in die [**measureitemstruct**](/windows/win32/api/winuser/ns-winuser-measureitemstruct) -Struktur. Das System verwendet die Width-und Height-Werte, um die Größe des Menüs zu berechnen.
+Während der Verarbeitung der [**WM \_ MEASUREITEM-Nachricht**](../controls/wm-measureitem.md) ruft das Beispiel die Breite und Höhe einer Menüelementzeichenfolge ab und kopiert diese Werte in die [**MEASUREITEMSTRUCT-Struktur.**](/windows/win32/api/winuser/ns-winuser-measureitemstruct) Das System verwendet die Werte für Breite und Höhe, um die Größe des Menüs zu berechnen.
 
-Während der Verarbeitung der [**WM- \_ DrawItem**](../controls/wm-drawitem.md) -Nachricht wird die Zeichenfolge des Menü Elements mit Raum links neben der Zeichenfolge für das Häkchen-Bitmap gezeichnet. Wenn der Benutzer das Element auswählt, werden die ausgewählten Text-und Hintergrundfarben verwendet, um das Element zu zeichnen.
+Während der Verarbeitung der [**WM \_ DRAWITEM-Nachricht**](../controls/wm-drawitem.md) wird die Zeichenfolge des Menüelements mit platz links neben der Zeichenfolge für die Häkchenbitmap gezeichnet. Wenn der Benutzer das Element auswählt, werden der ausgewählte Text und die Hintergrundfarben verwendet, um das Element zu zeichnen.
 
 
 ```
@@ -1258,26 +1258,26 @@ HFONT GetAFont(int fnFont)
 
 
 
-### <a name="example-of-owner-drawn-menu-items"></a>Beispiel für Owner-Drawn Menü Elemente
+### <a name="example-of-owner-drawn-menu-items"></a>Beispiel für Owner-Drawn Menüelemente
 
-Im Beispiel in diesem Thema werden vom Besitzer gezeichnete Menü Elemente in einem Menü verwendet. Die Menü Elemente wählen bestimmte Schriftart Attribute aus, und die Anwendung zeigt jedes Menü Element mit einer Schriftart an, die das entsprechende-Attribut aufweist. Beispielsweise wird das Menü Element **kursiv** formatiert angezeigt. Der Name des **Zeichen** Menüs in der Menüleiste öffnet das Menü.
+Im Beispiel in diesem Thema werden vom Besitzer gezeichnete Menüelemente in einem Menü verwendet. Die Menüelemente wählen bestimmte Schriftartattribute aus, und die Anwendung zeigt jedes Menüelement mit einer Schriftart an, die über das entsprechende Attribut verfügt. Beispielsweise wird das **italische** Menüelement in einer italischen Schriftart angezeigt. Der **Menüname** Zeichen in der Menüleiste öffnet das Menü.
 
-Die Menüleiste und das Dropdown Menü werden anfänglich durch eine erweiterte Menü Vorlagen Ressource definiert. Da eine Menüvorlage keine von einem Besitzer gezeichneten Elemente angeben kann, enthält das Menü anfänglich vier Text Menü Elemente mit den folgenden Zeichen folgen: "Regular", "Bold", "Kursiv" und "unterstrichen". Die Fenster Prozedur der Anwendung ändert diese in vom Besitzer gezeichnete Elemente, wenn die [**WM \_ Create**](/windows/desktop/winmsg/wm-create) -Nachricht verarbeitet wird. Beim Empfang der **WM \_ Create** -Nachricht Ruft die Fenster Prozedur die Anwendungs definierte OnCreate-Funktion auf, die die folgenden Schritte für jedes Menü Element ausführt:
+Die Menüleiste und das Dropdownmenü werden anfänglich durch eine erweiterte Menüvorlagenressource definiert. Da eine Menüvorlage keine vom Besitzer gezeichneten Elemente angeben kann, enthält das Menü zunächst vier Textmenüelemente mit den folgenden Zeichenfolgen: "Regular", "Bold", "Italic" und "Underline". Die Fensterprozedur der Anwendung ändert diese elemente in vom Besitzer gezeichnete Elemente, wenn sie die [**WM \_ CREATE-Nachricht**](/windows/desktop/winmsg/wm-create) verarbeitet. Wenn die **WM \_ CREATE-Nachricht** empfangen wird, ruft die Fensterprozedur die anwendungsdefinierte OnCreate-Funktion auf, die die folgenden Schritte für jedes Menüelement ausführt:
 
--   Ordnet eine von der Anwendung definierte myItem-Struktur zu.
--   Ruft den Text des Menü Elements ab und speichert ihn in der von der Anwendung definierten myItem-Struktur.
--   Erstellt die Schriftart, die zum Anzeigen des Menü Elements verwendet wird, und speichert das Handle in der von der Anwendung definierten myItem-Struktur.
--   Ändert den Menü Elementtyp in **MFT \_** -Besitzer zeichnen und speichert einen Zeiger auf die Anwendungs definierte myItem-Struktur als Elementdaten.
+-   Ordnet eine anwendungsdefinierte MYITEM-Struktur zu.
+-   Ruft den Text des Menüelements ab und speichert ihn in der anwendungsdefinierten MYITEM-Struktur.
+-   Erstellt die Schriftart, die zum Anzeigen des Menüelements verwendet wird, und speichert das Handle in der anwendungsdefinierten MYITEM-Struktur.
+-   Ändert den Menüelementtyp in **MFT \_ OWNERDRAW** und speichert einen Zeiger auf die anwendungsdefinierte MYITEM-Struktur als Elementdaten.
 
-Da ein Zeiger auf jede Anwendungs definierte myItem-Struktur als Elementdaten gespeichert wird, wird Sie in Verbindung mit den Nachrichten " [**WM \_ MeasureItem**](../controls/wm-measureitem.md) " und " [**WM \_ DrawItem**](../controls/wm-drawitem.md) " für das entsprechende Menü Element an die Fenster Prozedur übergeben. Der-Zeiger ist im **ItemData** -Member der [**measureitemstruct**](/windows/win32/api/winuser/ns-winuser-measureitemstruct) -Struktur und der [**drawitemstruct**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) -Struktur enthalten.
+Da ein Zeiger auf jede anwendungsdefinierte MYITEM-Struktur als Elementdaten gespeichert wird, wird er zusammen mit den [**MELDUNGEN WM \_ MEASUREITEM**](../controls/wm-measureitem.md) und [**WM \_ DRAWITEM**](../controls/wm-drawitem.md) für das entsprechende Menüelement an die Fensterprozedur übergeben. Der Zeiger ist im **itemData-Member** sowohl der [**MEASUREITEMSTRUCT- als**](/windows/win32/api/winuser/ns-winuser-measureitemstruct) auch [**der DRAWITEMSTRUCT-Struktur**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) enthalten.
 
-Bei der ersten Anzeige wird eine [**WM \_ MeasureItem**](../controls/wm-measureitem.md) -Meldung für jedes Menü Element gesendet, das vom Besitzer gezeichnet wird. Die Anwendung verarbeitet diese Nachricht, indem die Schriftart für das Menü Element in einen Gerätekontext ausgewählt und dann der erforderliche Speicherplatz für die Anzeige des Menü Element Texts in dieser Schriftart festgelegt wird. Der Text für Schriftart und Menü Element wird durch die Struktur des Menü Elements `MYITEM` (die von der Anwendung definierte Struktur) angegeben. Die Anwendung bestimmt die Größe des Texts mithilfe der [**GetTextExtentPoint32**](/windows/desktop/api/wingdi/nf-wingdi-gettextextentpoint32a) -Funktion.
+Eine [**WM \_ MEASUREITEM-Meldung**](../controls/wm-measureitem.md) wird für jedes vom Besitzer gezeichnete Menüelement gesendet, wenn es zum ersten Mal angezeigt wird. Die Anwendung verarbeitet diese Nachricht, indem sie die Schriftart für das Menüelement in einem Gerätekontext auswählt und dann den Speicherplatz bestimmt, der zum Anzeigen des Menüelementtexts in dieser Schriftart erforderlich ist. Die Schriftart und der Menüelementtext werden beide durch die Struktur des Menüelements (die von der Anwendung `MYITEM` definierte Struktur) angegeben. Die Anwendung bestimmt die Größe des Texts mithilfe der [**GetTextExtentPoint32-Funktion.**](/windows/desktop/api/wingdi/nf-wingdi-gettextextentpoint32a)
 
-Die Fenster Prozedur verarbeitet die [**WM- \_ DrawItem**](../controls/wm-drawitem.md) -Nachricht, indem der Menü Element Text in der entsprechenden Schriftart angezeigt wird. Der Schriftart-und Menü Element Text wird durch die Struktur des Menü Elements angegeben `MYITEM` . Die Anwendung wählt Text und Hintergrundfarben aus, die für den Zustand des Menü Elements geeignet sind.
+Die Fensterprozedur verarbeitet die [**WM \_ DRAWITEM-Meldung,**](../controls/wm-drawitem.md) indem der Menüelementtext in der entsprechenden Schriftart angezeigt wird. Die Schriftart und der Menüelementtext werden beide durch die Struktur des Menüelements `MYITEM` angegeben. Die Anwendung wählt Text- und Hintergrundfarben aus, die für den Zustand des Menüelements geeignet sind.
 
-Die Fenster Prozedur verarbeitet die [**WM- \_ zerstörungsnachricht**](/windows/desktop/winmsg/wm-destroy) , um Schriftarten zu zerstören und Arbeitsspeicher freizugeben. Die Anwendung löscht die Schriftart und gibt die von der Anwendung definierte myItem-Struktur für jedes Menü Element frei.
+Die Fensterprozedur verarbeitet die [**WM \_ DESTROY-Nachricht,**](/windows/desktop/winmsg/wm-destroy) um Schriftarten zu zerstören und Arbeitsspeicher frei zu machen. Die Anwendung löscht die Schriftart und gibt die anwendungsdefinierte MYITEM-Struktur für jedes Menüelement frei.
 
-Im folgenden finden Sie die relevanten Teile der Header Datei der Anwendung.
+Im Folgenden sind die relevanten Teile der Headerdatei der Anwendung angegeben.
 
 
 ```
@@ -1304,7 +1304,7 @@ typedef struct tagMYITEM
 
 
 
-Im folgenden sind die relevanten Teile der Fenster Prozedur der Anwendung und die zugehörigen Funktionen beschrieben.
+Im Folgenden sind die relevanten Teile der Fensterprozedur der Anwendung und die zugehörigen Funktionen aufgeführt.
 
 
 ```
@@ -1522,67 +1522,67 @@ VOID WINAPI OnDrawItem(HWND hwnd, LPDRAWITEMSTRUCT lpdis)
 
 
 
-## <a name="using-custom-check-mark-bitmaps"></a>Verwenden von benutzerdefinierten Häkchen-Bitmaps
+## <a name="using-custom-check-mark-bitmaps"></a>Verwenden von benutzerdefinierten Häkchenbitmaps
 
-Das System stellt eine Standard Bitmap für das Häkchen bereit, die neben einem ausgewählten Menü Element angezeigt wird. Sie können ein einzelnes Menü Element anpassen, indem Sie ein Bitmappaar bereitstellen, um die Standard Bitmap für das Häkchen zu ersetzen. Das System zeigt eine Bitmap an, wenn das Element ausgewählt wird, und das andere, wenn es klar ist. In diesem Abschnitt werden die Schritte zum Erstellen und Verwenden von benutzerdefinierten Prüfzeichen-Bitmaps beschrieben.
+Das System stellt eine Standardmäßige Häkchenbitmap zum Anzeigen neben einem ausgewählten Menüelement bereit. Sie können ein einzelnes Menüelement anpassen, indem Sie ein Bitmappaar bereitstellen, um die Standardmäßige Häkchenbitmap zu ersetzen. Das System zeigt eine Bitmap an, wenn das Element ausgewählt ist, und die andere, wenn es gelöscht wird. In diesem Abschnitt werden die Schritte zum Erstellen und Verwenden von benutzerdefinierten Häkchenbitmaps beschrieben.
 
--   [Erstellen von benutzerdefinierten Häkchen Bitmaps](#creating-custom-check-mark-bitmaps)
--   [Zuordnen von Bitmaps zu einem Menü Element](#associating-bitmaps-with-a-menu-item)
--   [Festlegen des Häkchen Attributs](#setting-the-check-mark-attribute)
+-   [Erstellen von benutzerdefinierten Häkchenbitmaps](#creating-custom-check-mark-bitmaps)
+-   [Zuordnen von Bitmaps zu einem Menüelement](#associating-bitmaps-with-a-menu-item)
+-   [Festlegen des Häkchenattributs](#setting-the-check-mark-attribute)
 -   [Simulieren von Kontrollkästchen in einem Menü](#simulating-check-boxes-in-a-menu)
--   [Beispiel für die Verwendung von benutzerdefinierten Bitmaps für das Häkchen](#example-of-using-custom-check-mark-bitmaps)
+-   [Beispiel für die Verwendung von benutzerdefinierten Häkchenbitmaps](#example-of-using-custom-check-mark-bitmaps)
 
-### <a name="creating-custom-check-mark-bitmaps"></a>Erstellen von benutzerdefinierten Häkchen Bitmaps
+### <a name="creating-custom-check-mark-bitmaps"></a>Erstellen von benutzerdefinierten Häkchenbitmaps
 
-Eine benutzerdefinierte Bitmap für das Häkchen muss dieselbe Größe aufweisen wie die Standard Bitmap für das Häkchen. Sie können die standardmäßige Häkchen Größe der Bitmap abrufen, indem Sie die [**GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) -Funktion aufrufen. Das nieder wertige Wort des Rückgabewerts dieser Funktion gibt die Breite an. das höchst wertige Wort gibt die Höhe an.
+Eine benutzerdefinierte Häkchenbitmap muss die gleiche Größe wie die Standardmäßige Häkchenbitmap haben. Sie können die Standardmäßige Häkchengröße der Bitmap abrufen, indem Sie die [**GetSystemMetrics-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) aufrufen. Das Wort in niedriger Reihenfolge des Rückgabewerts dieser Funktion gibt die Breite an. das Wort in hoher Reihenfolge gibt die Höhe an.
 
-Sie können Bitmapressourcen verwenden, um Bitmaps für das Häkchen bereitzustellen. Da die erforderliche Bitmapgröße je nach Anzeigetyp variiert, müssen Sie möglicherweise die Größe der Bitmap zur Laufzeit ändern, indem Sie die [**StretchBlt**](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) -Funktion verwenden. Abhängig von der Bitmap kann die durch die Größenänderung verursachte Verzerrung zu nicht akzeptablen Ergebnissen führen.
+Sie können Bitmapressourcen verwenden, um Bitmaps mit Häkchen bereitzustellen. Da die erforderliche Bitmapgröße jedoch je nach Anzeigetyp variiert, müssen Sie möglicherweise die Größe der Bitmap zur Laufzeit mithilfe der [**StretchBlt-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) ändern. Je nach Bitmap kann die Verzerrung, die durch größenabhängige Größen verursacht wird, zu inakzeptablen Ergebnissen führen.
 
-Anstatt eine Bitmap-Ressource zu verwenden, können Sie mithilfe von GDI-Funktionen zur Laufzeit eine Bitmap erstellen.
+Anstatt eine Bitmapressource zu verwenden, können Sie zur Laufzeit mithilfe von GDI-Funktionen eine Bitmap erstellen.
 
-**So erstellen Sie eine Bitmap zur Laufzeit**
+**So erstellen Sie zur Laufzeit eine Bitmap**
 
-1.  Verwenden Sie [**die Funktion**](/windows/desktop/api/wingdi/nf-wingdi-createcompatibledc) "Funktion", um einen Gerätekontext zu erstellen, der mit dem vom Hauptfenster der Anwendung verwendeten kompatibel ist.
+1.  Verwenden Sie die [**CreateCompatibleDC-Funktion,**](/windows/desktop/api/wingdi/nf-wingdi-createcompatibledc) um einen Gerätekontext zu erstellen, der mit dem vom Hauptfenster der Anwendung verwendeten kompatibel ist.
 
-    Der *hdc* -Parameter der Funktion kann entweder **null** oder den Rückgabewert der Funktion angeben. " [**Kreatecompatibledc**](/windows/desktop/api/wingdi/nf-wingdi-createcompatibledc) " gibt ein Handle an den kompatiblen Gerätekontext zurück.
+    Der *hdc-Parameter* der Funktion kann entweder **NULL** oder den Rückgabewert der Funktion angeben. [**CreateCompatibleDC**](/windows/desktop/api/wingdi/nf-wingdi-createcompatibledc) gibt ein Handle für den kompatiblen Gerätekontext zurück.
 
-2.  Verwenden Sie [**die Funktion "**](/windows/desktop/api/wingdi/nf-wingdi-createcompatiblebitmap) -Funktion", um eine Bitmap zu erstellen, die mit dem Hauptfenster der Anwendung kompatibel ist.
+2.  Verwenden Sie die [**CreateCompatibleBitmap-Funktion,**](/windows/desktop/api/wingdi/nf-wingdi-createcompatiblebitmap) um eine Bitmap zu erstellen, die mit dem Hauptfenster der Anwendung kompatibel ist.
 
-    Mit den Parametern " *nwidth* " und " *nheight* " der Funktion wird die Größe der Bitmap festgelegt. Sie sollten die von der [**GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) -Funktion zurückgegebenen Width-und Height-Informationen angeben.
+    Die Parameter *nWidth* und *nHeight* dieser Funktion legen die Größe der Bitmap fest. Sie sollten die Von der [**GetSystemMetrics-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) zurückgegebenen Informationen zur Breite und Höhe angeben.
 
     > [!Note]  
-    > Sie können auch die Funktion " [**kreatebitmap**](/windows/desktop/api/wingdi/nf-wingdi-createbitmap) " verwenden, um eine monochrome Bitmap zu erstellen.
+    > Sie können auch die [**CreateBitmap-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-createbitmap) verwenden, um eine monocolore Bitmap zu erstellen.
 
-     
+     
 
-3.  Verwenden Sie die [**SelectObject**](/windows/desktop/api/wingdi/nf-wingdi-selectobject) -Funktion, um die Bitmap in den kompatiblen Gerätekontext auszuwählen.
-4.  Verwenden Sie GDI-Zeichnungsfunktionen, z. b. [**Ellipse**](/windows/desktop/api/wingdi/nf-wingdi-ellipse) und [**LineTo**](/windows/desktop/api/wingdi/nf-wingdi-lineto), um ein Bild in die Bitmap zu zeichnen, oder verwenden Sie Funktionen wie [**BitBLT**](/windows/desktop/api/wingdi/nf-wingdi-bitblt) und [**StretchBlt**](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) zum Kopieren eines Bilds in die Bitmap.
+3.  Verwenden Sie die [**SelectObject-Funktion,**](/windows/desktop/api/wingdi/nf-wingdi-selectobject) um die Bitmap im kompatiblen Gerätekontext auszuwählen.
+4.  Verwenden Sie GDI-Zeichnungsfunktionen wie [**Ellipse**](/windows/desktop/api/wingdi/nf-wingdi-ellipse) und [**LineTo,**](/windows/desktop/api/wingdi/nf-wingdi-lineto)um ein Bild in die Bitmap zu zeichnen, oder verwenden Sie Funktionen wie [**BitBlt**](/windows/desktop/api/wingdi/nf-wingdi-bitblt) und [**StretchBlt,**](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) um ein Bild in die Bitmap zu kopieren.
 
-Weitere Informationen finden Sie unter [Bitmaps](/windows/desktop/gdi/bitmaps).
+Weitere Informationen finden Sie unter [Bitmaps.](/windows/desktop/gdi/bitmaps)
 
-### <a name="associating-bitmaps-with-a-menu-item"></a>Zuordnen von Bitmaps zu einem Menü Element
+### <a name="associating-bitmaps-with-a-menu-item"></a>Zuordnen von Bitmaps zu einem Menüelement
 
-Sie ordnen ein paar von Check-Mark-Bitmaps einem Menü Element zu, indem Sie die Handles der Bitmaps an die [**setmenuitembitmaps**](/windows/desktop/api/Winuser/nf-winuser-setmenuitembitmaps) -Funktion übergeben. Der *hbitmapuncheck* -Parameter identifiziert die Clear-Bitmap, und der *hbitmapcheck* -Parameter identifiziert die ausgewählte Bitmap. Wenn Sie ein oder beide Häkchen aus einem Menü Element entfernen möchten, können Sie den Parameter *hbitmapuncheck* oder *hbitmapcheck* oder beides auf **null** festlegen.
+Sie ordnen ein Paar von Häkchenbitmaps einem Menüelement zu, indem Sie die Handles der Bitmaps an die [**SetMenuItemBitmaps-Funktion**](/windows/desktop/api/Winuser/nf-winuser-setmenuitembitmaps) übergeben. Der *hBitmapUnchecked-Parameter* identifiziert die eindeutige Bitmap, und der *hBitmapChecked-Parameter* identifiziert die ausgewählte Bitmap. Wenn Sie ein oder beide Häkchen aus einem Menüelement entfernen möchten, können Sie den Parameter *hBitmapUnchecked* oder *hBitmapChecked* oder beides auf **NULL** festlegen.
 
-### <a name="setting-the-check-mark-attribute"></a>Festlegen des Häkchen Attributs
+### <a name="setting-the-check-mark-attribute"></a>Festlegen des Häkchenattributs
 
-Die [**checkmenuitem**](/windows/desktop/api/Winuser/nf-winuser-checkmenuitem) -Funktion legt das Häkchen Attribut eines Menü Elements auf "ausgewählt" oder "deaktiviert" fest. Sie können den von **MF \_** aktivierten Wert angeben, um das Häkchen Attribut auf "ausgewählt" festzulegen, und den Wert " **MF \_** deaktiviert", um ihn zu löschen.
+Die [**CheckMenuItem-Funktion**](/windows/desktop/api/Winuser/nf-winuser-checkmenuitem) legt das Häkchenattribut eines Menüelements entweder auf ausgewählt oder gelöscht fest. Sie können den **MF \_ CHECKED-Wert** angeben, um das Häkchenattribut auf selected und den **MF \_ UNCHECKED-Wert** auf clear festzulegen.
 
-Mithilfe der [**setmenuiteminfo**](/windows/desktop/api/Winuser/nf-winuser-setmenuiteminfoa) -Funktion können Sie auch den Status der Überprüfung eines Menü Elements festlegen.
+Sie können den Überprüfungsstatus eines Menüelements auch mithilfe der [**SetMenuItemInfo-Funktion**](/windows/desktop/api/Winuser/nf-winuser-setmenuiteminfoa) festlegen.
 
-Manchmal stellt eine Gruppe von Menü Elementen einen Satz von sich gegenseitig ausschließenden Optionen dar. Mithilfe der [**checkmenuradioitem**](/windows/desktop/api/Winuser/nf-winuser-checkmenuradioitem) -Funktion können Sie ein Menü Element aktivieren und gleichzeitig das Häkchen aus allen anderen Menü Elementen in der Gruppe entfernen.
+Manchmal stellt eine Gruppe von Menüelementen eine Reihe von sich gegenseitig ausschließenden Optionen dar. Mithilfe der [**CheckMenuRadioItem-Funktion**](/windows/desktop/api/Winuser/nf-winuser-checkmenuradioitem) können Sie ein Menüelement überprüfen und gleichzeitig das Häkchen aus allen anderen Menüelementen in der Gruppe entfernen.
 
 ### <a name="simulating-check-boxes-in-a-menu"></a>Simulieren von Kontrollkästchen in einem Menü
 
-Dieses Thema enthält ein Beispiel, das zeigt, wie Kontrollkästchen in einem Menü simuliert werden. Das Beispiel enthält ein Zeichen Menü, dessen Elemente es dem Benutzer ermöglichen, die Attribute "Bold", "Kursiv" und "unterstreichen" der aktuellen Schriftart festzulegen. Wenn ein Schriftart Attribut in Kraft ist, wird im Kontrollkästchen neben dem entsprechenden Menü Element ein Häkchen angezeigt. Andernfalls wird neben dem Element ein leeres Kontrollkästchen angezeigt.
+Dieses Thema enthält ein Beispiel, das zeigt, wie Kontrollkästchen in einem Menü simuliert werden. Das Beispiel enthält ein Zeichenmenü, dessen Elemente es dem Benutzer ermöglichen, die Fett-, Kursiv- und Unterstreichungsattribute der aktuellen Schriftart festzulegen. Wenn ein Schriftartattribut aktiviert ist, wird im Kontrollkästchen neben dem entsprechenden Menüelement ein Häkchen angezeigt. Andernfalls wird neben dem Element ein leeres Kontrollkästchen angezeigt.
 
-Im Beispiel wird die Standard Bitmap für das Häkchen durch zwei Bitmaps ersetzt: eine Bitmap mit einem aktivierten Kontrollkästchen und die Bitmap mit einem leeren Feld. Das aktivierte Kontrollkästchen Bitmap wird neben dem Menü Element Fett, kursiv oder unterstrichen angezeigt, wenn das Häkchen-Attribut des Elements auf **MF \_ aktiviert** festgelegt ist. Das Kontrollkästchen Bitmap löschen oder leer wird angezeigt, wenn das Häkchen-Attribut auf **MF \_** deaktiviert festgelegt ist.
+Im Beispiel wird die Standardmarkierungsbitmap durch zwei Bitmaps ersetzt: eine Bitmap mit einem ausgewählten Kontrollkästchen und die Bitmap durch ein leeres Feld. Die ausgewählte Kontrollkästchenbitmap wird neben dem Menüelement Fett, Kursiv oder Unterstrichen angezeigt, wenn das Häkchenattribut des Elements auf **MF \_ CHECKED** festgelegt ist. Die Bitmap für das deaktivieren oder leere Kontrollkästchen wird angezeigt, wenn das Häkchenattribut auf **MF \_ UNCHECKED** festgelegt ist.
 
-Das System stellt eine vordefinierte Bitmap bereit, die die für Kontrollkästchen und Options Felder verwendeten Bilder enthält. Im Beispiel werden die Kontrollkästchen aktiviert und leer isoliert, in zwei separate Bitmaps kopiert und dann als ausgewählte und gelöschte Bitmaps für Elemente im Menü **Zeichen** verwendet.
+Das System stellt eine vordefinierte Bitmap bereit, die die Bilder enthält, die für Kontrollkästchen und Optionsfelder verwendet werden. Im Beispiel werden die ausgewählten und leeren Kontrollkästchen isoliert, in zwei separate Bitmaps kopiert und dann als ausgewählte und gelöschte Bitmaps für Elemente im Menü **Zeichen** verwendet.
 
-Zum Abrufen eines Handles für das System definierte Kontrollkästchen Bitmap Ruft das Beispiel die [**LoadBitmap**](/windows/desktop/api/winuser/nf-winuser-loadbitmapa) -Funktion auf, wobei **null** als *HINSTANCE* -Parameter und **obm- \_ Kontrollkästchen** als *lpbitmapname* -Parameter angegeben wird. Da die Bilder in der Bitmap die gleiche Größe haben, kann das Beispiel diese isolieren, indem Sie die Breite und Höhe der Bitmap durch die Anzahl der Bilder in den Zeilen und Spalten dividiert.
+Um ein Handle für die systemdefinierte Kontrollkästchenbitmap abzurufen, ruft das Beispiel die [**LoadBitmap-Funktion**](/windows/desktop/api/winuser/nf-winuser-loadbitmapa) auf und gibt **NULL** als *hInstance-Parameter* und **OBM \_ CHECKBOXES** als *lpBitmapName-Parameter* an. Da die Bilder in der Bitmap alle die gleiche Größe aufweisen, können sie im Beispiel isoliert werden, indem die Breite und Höhe der Bitmap durch die Anzahl der Bilder in den Zeilen und Spalten dividiert wird.
 
-Der folgende Teil einer Ressourcen Definitionsdatei zeigt, wie die Menü Elemente im Menü **Zeichen** definiert werden. Beachten Sie, dass keine Schriftart Attribute anfänglich sind, sodass das Häkchen-Attribut für das **reguläre** Element auf ausgewählt festgelegt ist und das Häkchen-Attribut der restlichen Elemente standardmäßig auf Clear festgelegt ist.
+Der folgende Teil einer Ressourcendefinitionsdatei zeigt, wie die Menüelemente im Menü **Zeichen** definiert werden. Beachten Sie, dass anfänglich keine Schriftartattribute wirksam sind, sodass das Häkchenattribut für das **Reguläre** Element auf ausgewählt und standardmäßig das Häkchenattribut der verbleibenden Elemente auf "Löschen" festgelegt ist.
 
 
 ```
@@ -1603,7 +1603,7 @@ END
 
 
 
-Dies sind die relevanten Inhalte der Header Datei der Anwendung.
+Hier sind die relevanten Inhalte der Headerdatei der Anwendung angegeben.
 
 
 ```
@@ -1632,7 +1632,7 @@ BYTE CheckOrUncheckMenuItem(BYTE, HMENU);
 
 
 
-Im folgenden Beispiel werden die Teile der Fenster Prozedur gezeigt, die die Prüfzeichen-Bitmaps erstellen. Legen Sie das Häkchen Attribut der Menü Elemente **Fett**, **kursiv** und unter **Streichung** fest. und zerstören Kontrollkästchen-Bitmaps.
+Das folgende Beispiel zeigt die Teile der Fensterprozedur, die die Häkchenbitmaps erstellen. Legen Sie das Häkchenattribut der Menüelemente **Bold**, **Italic** und **Underline** fest. und zerstören Häkchenbitmaps.
 
 
 ```
@@ -1904,27 +1904,27 @@ BYTE CheckOrUncheckMenuItem(BYTE bMenuItemID, HMENU hmenu)
 
 
 
-### <a name="example-of-using-custom-check-mark-bitmaps"></a>Beispiel für die Verwendung von benutzerdefinierten Bitmaps für das Häkchen
+### <a name="example-of-using-custom-check-mark-bitmaps"></a>Beispiel für die Verwendung von benutzerdefinierten Häkchenbitmaps
 
-Im Beispiel in diesem Thema werden Menü Elementen benutzerdefinierte Bitmaps für das Häkchen in zwei Menüs zugewiesen. Die Menü Elemente im ersten Menü geben Zeichen Attribute an: Fett, kursiv und unterstrichen. Jedes Menü Element kann entweder aktiviert oder deaktiviert sein. In diesem Beispiel werden für diese Menü Elemente Kontrollkästchen-Bitmaps verwendet, die den ausgewählten und gelöschten Zuständen eines Kontrollkästchen-Steuer Elements ähneln.
+Im Beispiel in diesem Thema werden Menüelementen in zwei Menüs benutzerdefinierte Häkchenbitmaps zugewiesen. Die Menüelemente im ersten Menü geben Zeichenattribute an: fett, kursiv und unterstrichen. Jedes Menüelement kann entweder ausgewählt oder gelöscht werden. Für diese Menüelemente werden im Beispiel Bitmaps mit Häkchen verwendet, die den ausgewählten und gelöschten Zuständen eines Kontrollkästchen-Steuerelements ähneln.
 
-Die Menü Elemente im zweiten Menü geben die Einstellungen für die Absatz Ausrichtung an: Links, zentriert und rechts. Es wird immer nur eines dieser Menü Elemente ausgewählt. In diesem Beispiel werden für diese Menü Elemente Kontrollkästchen-Bitmaps verwendet, die den ausgewählten und unklaren Zuständen eines Optionsfeld-Steuer Elements ähneln.
+Die Menüelemente im zweiten Menü geben Absatzausrichtungseinstellungen an: links, zentriert und rechts. Es wird immer nur eines dieser Menüelemente ausgewählt. Für diese Menüelemente werden im Beispiel Bitmaps mit Häkchen verwendet, die den ausgewählten und eindeutigen Zuständen eines Optionsfeld-Steuerelements ähneln.
 
-Die Fenster Prozedur verarbeitet die [**WM \_ Create**](/windows/desktop/winmsg/wm-create) -Nachricht, indem Sie die Anwendungs definierte OnCreate-Funktion aufrufen. `OnCreate` erstellt die vier Bitmaps für das Häkchen und weist diese dann den entsprechenden Menü Elementen mithilfe der [**setmenuitembitmaps**](/windows/desktop/api/Winuser/nf-winuser-setmenuitembitmaps) -Funktion zu.
+Die Fensterprozedur verarbeitet die [**WM \_ CREATE-Nachricht,**](/windows/desktop/winmsg/wm-create) indem die anwendungsdefinierte OnCreate-Funktion aufgerufen wird. `OnCreate` erstellt die vier Häkchenbitmaps und weist sie dann mithilfe der [**SetMenuItemBitmaps-Funktion**](/windows/desktop/api/Winuser/nf-winuser-setmenuitembitmaps) ihren entsprechenden Menüelementen zu.
 
-Um jede Bitmap zu erstellen, ruft OnCreate die Anwendungs definierte Funktion "roatemenubitmaps" auf und gibt einen Zeiger auf eine bitmapspezifische Zeichnungs Funktion an. "Anatemenubitmaps" erstellt eine monochrome Bitmap der erforderlichen Größe, wählt Sie in einen Speichergeräte Kontext aus und löscht den Hintergrund. Anschließend wird die angegebene Zeichnungs Funktion aufgerufen, um in den Vordergrund zu füllen.
+Um jede Bitmap zu erstellen, ruft OnCreate die anwendungsdefinierte CreateMenuBitmaps-Funktion auf und gibt einen Zeiger auf eine bitmapspezifische Zeichnungsfunktion an. CreateMenuBitmaps erstellt eine monocolore Bitmap der erforderlichen Größe, wählt sie in einem Speichergerätekontext aus und löscht den Hintergrund. Anschließend ruft sie die angegebene Zeichnungsfunktion auf, um den Vordergrund auszufüllen.
 
-Die vier Anwendungs definierten Zeichnungsfunktionen sind "drawcheck", "drawuncheck", " **drawradiocheck**" und "drawradiouncheck". Sie zeichnen ein Rechteck mit einem X, einem leeren Rechteck, einer Ellipse, die eine kleinere Gefüllte Ellipse enthält, bzw. einer leeren Ellipse.
+Die vier anwendungsdefinierte Zeichnungsfunktionen sind DrawCheck, DrawUncheck, **DrawRadioCheck** und DrawRadioUncheck. Sie zeichnen ein Rechteck mit einem X, einem leeren Rechteck, einer Ellipse mit einer kleineren gefüllten Ellipse bzw. einer leeren Ellipse.
 
-Die Fenster Prozedur verarbeitet die [**WM \_**](/windows/desktop/winmsg/wm-destroy) -Lösch Nachricht, indem die Prüfzeichen-Bitmaps gelöscht werden. Alle bitmaphandles werden mithilfe der [**getmenuiteminfo**](/windows/desktop/api/Winuser/nf-winuser-getmenuiteminfoa) -Funktion abgerufen und dann ein Handle an die Funktion übergeben.
+Die Fensterprozedur verarbeitet die [**WM \_ DESTROY-Nachricht,**](/windows/desktop/winmsg/wm-destroy) indem die Häkchenbitmaps gelöscht werden. Sie ruft jedes Bitmaphandle mithilfe der [**GetMenuItemInfo-Funktion**](/windows/desktop/api/Winuser/nf-winuser-getmenuiteminfoa) ab und übergibt dann ein Handle an die Funktion.
 
-Wenn der Benutzer ein Menü Element auswählt, wird eine [**WM- \_ Befehls**](wm-command.md) Meldung an das Besitzer Fenster gesendet. Für Menü Elemente im Menü **Zeichen** Ruft die Fenster Prozedur die Anwendungs definierte checkcharakteritem-Funktion auf. Für Elemente im **Absatz** Menü Ruft die Fenster Prozedur die Anwendungs definierte checkparagraphitem-Funktion auf.
+Wenn der Benutzer ein Menüelement auswählt, wird eine [**WM \_ COMMAND-Meldung**](wm-command.md) an das Besitzerfenster gesendet. Für Menüelemente im Menü **Zeichen** ruft die Fensterprozedur die anwendungsdefinierte CheckCharacterItem-Funktion auf. Für Elemente im **Menü Absatz** ruft die Fensterprozedur die anwendungsdefinierte CheckParagraphItem-Funktion auf.
 
-Jedes Element im Menü " **Zeichen** " kann unabhängig voneinander ausgewählt und gelöscht werden. Daher schaltet checkcharakteritem einfach den Überprüfungs Zustand des angegebenen Menü Elements. Zuerst Ruft die Funktion die [**getmenuiteminfo**](/windows/desktop/api/Winuser/nf-winuser-getmenuiteminfoa) -Funktion auf, um den aktuellen Menü Element Zustand zu erhalten. Anschließend schaltet er das Flag für aktivierte **MFS \_** -Zustände um und legt den neuen Status durch Aufrufen der Funktion [**setmenuiteminfo**](/windows/desktop/api/Winuser/nf-winuser-setmenuiteminfoa) fest.
+Jedes Element im Menü **Zeichen** kann unabhängig ausgewählt und gelöscht werden. Daher wechselt CheckCharacterItem einfach den Prüfzustand des angegebenen Menüelements. Zuerst ruft die Funktion die [**GetMenuItemInfo-Funktion**](/windows/desktop/api/Winuser/nf-winuser-getmenuiteminfoa) auf, um den aktuellen Menüelementzustand abzurufen. Anschließend wechselt das **MFS \_ CHECKED-Statusflag** und legt den neuen Zustand fest, indem die [**SetMenuItemInfo-Funktion**](/windows/desktop/api/Winuser/nf-winuser-setmenuiteminfoa) aufgerufen wird.
 
-Im Gegensatz zu Zeichen Attributen kann jeweils nur eine Absatz Ausrichtung ausgewählt werden. Daher prüft checkparagphitem das angegebene Menü Element und entfernt das Häkchen aus allen anderen Elementen im Menü. Zu diesem Zweck wird die [**checkmenuradioitem**](/windows/desktop/api/Winuser/nf-winuser-checkmenuradioitem) -Funktion aufgerufen.
+Im Gegensatz zu Zeichenattributen kann jeweils nur eine Absatzausrichtung ausgewählt werden. Daher überprüft CheckParagraphItem das angegebene Menüelement und entfernt das Häkchen aus allen anderen Elementen im Menü. Zu diesem Zweck wird die [**CheckMenuRadioItem-Funktion**](/windows/desktop/api/Winuser/nf-winuser-checkmenuradioitem) aufrufen.
 
-Im folgenden finden Sie die relevanten Teile der Header Datei der Anwendung.
+Im Folgenden sind die relevanten Teile der Headerdatei der Anwendung angegeben.
 
 
 ```
@@ -1950,7 +1950,7 @@ typedef VOID (WINAPI * DRAWFUNC)(HDC hdc, SIZE size);
 
 
 
-Im folgenden sind die relevanten Teile der Fenster Prozedur der Anwendung und zugehöriger Funktionen beschrieben.
+Im Folgenden sind die relevanten Teile der Fensterprozedur der Anwendung und die zugehörigen Funktionen aufgeführt.
 
 
 ```
@@ -2206,6 +2206,6 @@ VOID WINAPI OnDestroy(HWND hwnd)
 
 
 
- 
+ 
 
- 
+ 

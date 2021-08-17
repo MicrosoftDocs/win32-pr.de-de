@@ -1,5 +1,5 @@
 ---
-description: IgnoreChange ControlEvent wird vom DirectoryList-Steuerelement veröffentlicht, wenn der ausgewählte Ordner von einem Verzeichnis in ein anderes Verzeichnis im -Steuerelement geändert wird. Dieses Ereignis sollte in der EventMapping-Tabelle verfasst werden.
+description: IgnoreChange ControlEvent wird vom DirectoryList-Steuerelement veröffentlicht, wenn der ausgewählte Ordner von einem Verzeichnis in ein anderes Verzeichnis im Steuerelement geändert wird. Dieses Ereignis sollte in der EventMapping-Tabelle erstellt werden.
 ms.assetid: 4d3128a1-cbe3-457c-83b5-8f6ec1a7ba29
 title: IgnoreChange ControlEvent
 ms.topic: article
@@ -13,9 +13,9 @@ ms.locfileid: "118634458"
 ---
 # <a name="ignorechange-controlevent"></a>IgnoreChange ControlEvent
 
-IgnoreChange ControlEvent wird vom [DirectoryList-Steuerelement](directorylist-control.md) veröffentlicht, wenn der ausgewählte Ordner von einem Verzeichnis in ein anderes Verzeichnis im -Steuerelement geändert wird. Dieses Ereignis sollte in der [EventMapping-Tabelle verfasst werden.](eventmapping-table.md)
+IgnoreChange ControlEvent wird vom [DirectoryList-Steuerelement](directorylist-control.md) veröffentlicht, wenn der ausgewählte Ordner von einem Verzeichnis in ein anderes Verzeichnis im Steuerelement geändert wird. Dieses Ereignis sollte in der [EventMapping-Tabelle](eventmapping-table.md)erstellt werden.
 
-Für dieses ControlEvent muss die Benutzeroberfläche auf der vollständigen [*Benutzeroberflächenebene ausgeführt*](f-gly.md) werden. Dieses Ereignis funktioniert nicht mit einer reduzierten [*Benutzeroberfläche oder*](r-gly.md) einer [*einfachen Benutzeroberfläche.*](b-gly.md) Weitere Informationen finden Sie unter [Benutzeroberfläche Levels](user-interface-levels.md).
+Für dieses ControlEvent muss die Benutzeroberfläche auf [*der vollständigen Benutzeroberflächenebene*](f-gly.md) ausgeführt werden. Dieses Ereignis funktioniert nicht mit einer [*reduzierten Benutzeroberfläche*](r-gly.md) oder [*einer einfachen Benutzeroberfläche.*](b-gly.md) Weitere Informationen finden Sie unter [Benutzeroberfläche Ebenen.](user-interface-levels.md)
 
 ## <a name="published-by"></a>Veröffentlicht von
 
@@ -31,7 +31,7 @@ Dieses ControlEvent führt keine Aktion auf Abonnenten aus.
 
 ## <a name="typical-use"></a>Typische Verwendung
 
-Das [DirectoryCombo-Steuerelement](directorycombo-control.md) verwendet häufig ignoreChange ControlEvent.
+Das [DirectoryCombo-Steuerelement](directorycombo-control.md) verwendet in der Regel ignoreChange ControlEvent.
 
  
 

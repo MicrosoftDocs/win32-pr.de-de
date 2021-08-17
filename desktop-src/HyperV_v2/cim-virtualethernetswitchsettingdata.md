@@ -41,7 +41,7 @@ class CIM_VirtualEthernetSwitchSettingData : CIM_VirtualSystemSettingData
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ VirtualEthernetSwitchSettingData-Klasse** verfügt über diese Typen von Membern:
+Die **CIM \_ VirtualEthernetSwitchSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -60,7 +60,7 @@ Datentyp: **Zeichenfolgenarray**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array, das die Hostressourcenpools enthält, die derzeit zugeordnet sind, oder das dem Ethernet-Switch zugeordnet werden soll, um Ethernetverbindungen zwischen dem Ethernet-Switch und einem virtuellen Computer zuzuordnen. Jeder Wert ungleich NULL dieser Eigenschaft muss dem **WBEM-URI \_ \_ UntypedInstancePath** entsprechen, wie in der DMTF-Spezifikation "DSP0207" definiert.
+Ein Array, das die derzeit zugeordneten Hostressourcenpools enthält oder dem Ethernet-Switch zugeordnet werden soll, um Ethernetverbindungen zwischen dem Ethernet-Switch und einem virtuellen Computer zu ordnen. Jeder Nicht-NULL-Wert dieser Eigenschaft muss **dem WBEM-URI \_ \_ UntypedInstancePath** entsprechen, wie in der DMTF-Spezifikation "DSP0207" definiert.
 
 </dd> <dt>
 
@@ -98,13 +98,13 @@ Ein Array, das die VLAN-IDs enthält, auf die der Switch zugreifen kann.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

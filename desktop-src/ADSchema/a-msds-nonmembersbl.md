@@ -120,7 +120,7 @@ Abwärtslink von einer Gruppe oder einem Benutzer, die kein Mitglied ist, zu Az-
 | Link-ID                | 2015                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist einwertig       | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -141,7 +141,7 @@ Abwärtslink von einer Gruppe oder einem Benutzer, die kein Mitglied ist, zu Az-
 | Link-ID                | 2015                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist einwertig       | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |

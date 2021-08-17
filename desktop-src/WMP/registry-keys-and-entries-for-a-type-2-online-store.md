@@ -1,29 +1,29 @@
 ---
-title: Registrierungsschlüssel und-Einträge für einen Typ 2-Online Speicher
-description: Registrierungsschlüssel und-Einträge für einen Typ 2-Online Speicher
+title: Registrierungsschlüssel und Einträge für eine Onlinedatenbank vom Typ 2 Store
+description: Registrierungsschlüssel und Einträge für eine Onlinedatenbank vom Typ 2 Store
 ms.assetid: 17dff940-3884-488a-9016-29bb47c51caf
 keywords:
-- Windows Media Player Online Stores, Registrierung
-- Online Stores, Registrierung
-- Typ 2 Online Stores, Registrierung
-- Registrierung, Typ 2 Online Stores
+- Windows Media Player,Registrierung
+- Onlineshops, Registrierung
+- 'Typ 2: Onlineshops, Registrierung'
+- Registrierung,Typ 2 Onlineshops
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 685a26514730e7c370c698cbc9c64c29366c35ee
-ms.sourcegitcommit: ad672d3a10192c5ccac619ad2524407109266e93
+ms.openlocfilehash: c01a5494f56a4c3fa7ea91d9537f6177453a1df54f684aa73c347029574f8dde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "104101334"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117746451"
 ---
-# <a name="registry-keys-and-entries-for-a-type-2-online-store"></a>Registrierungsschlüssel und-Einträge für einen Typ 2-Online Speicher
+# <a name="registry-keys-and-entries-for-a-type-2-online-store"></a>Registrierungsschlüssel und Einträge für eine Onlinedatenbank vom Typ 2 Store
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Um einen Onlinespeicher vom Typ 2 in Windows Media Player verfügbar zu machen, muss der Onlinespeicher Anbieter die folgenden Registrierungs Unterschlüssel und Einträge auf dem Computer des Benutzers erstellen.
+Um einen Onlineshop vom Typ 2 in Windows Media Player verfügbar zu machen, muss der Onlineshopanbieter die folgenden Registrierungsunterschlüssel und -einträge auf dem Computer des Benutzers erstellen.
 
 
 ```C++
@@ -42,37 +42,37 @@ Um einen Onlinespeicher vom Typ 2 in Windows Media Player verfügbar zu machen, 
 
 
 
-In der vorangehenden Registrierungs Syntax sind die Symbole in kursiv Platzhalter für Namen und Global Unique Identifier (GUIDs), die für den Online Store spezifisch sind. In der folgenden Tabelle werden diese Platzhalter beschrieben.
+In der obigen Registrierungssyntax sind die symbole italisch Platzhalter für Namen und GUIDs (Globally Unique Identifiers), die für den Onlineshop spezifisch sind. In der folgenden Tabelle werden diese Platzhalter beschrieben.
 
 
 
 | Platzhalter    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                            |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *keyName*      | Eine Zeichenfolge, die zwischen Microsoft und dem Online Store vereinbart wurde. Diese Zeichenfolge identifiziert den Online Store eindeutig. Beispiel: "Proseware"<br/>                                                                                                                                                                                                                                                          |
-| *flags*        | Eine bitweise **or** -Funktion von mindestens einem Plug-in-funktionsflags diese Flags geben an, ob Windows-Media Player bestimmte Methoden von [iwmpabonneptionservice](/previous-versions/windows/desktop/api/subscriptionservices/nn-subscriptionservices-iwmpsubscriptionservice) und [IWMPSubscriptionService2](/previous-versions/windows/desktop/api/subscriptionservices/nn-subscriptionservices-iwmpsubscriptionservice2)aufruft. Weitere Informationen zu unterstützten Flags finden Sie in der Tabelle mit den Plug-in-funktionsflags, die dieser Tabelle folgt. Beispiel: 00000037<br/> |
-| *CLSID*        | Eine GUID, bei der es sich um den Klassen Bezeichner (CLSID) für die Klasse handelt, die im Plug-in des Online Stores **iwmpabonnementservice** implementiert. Diese GUID muss das Registrierungs Format aufweisen und mit den geschweiften Klammern vervollständigt werden. Format: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}<br/>                                                                                                                                    |
-| *FriendlyName* | Ein Anzeige Name für den Online Shop. Beispiel: "Proseware Music Service"<br/>                                                                                                                                                                                                                                                                                                                     |
-| *pluginName*   | Ein Name für das Plug-in des Online Stores. Beispiel: "Proxy Dienst-Plug-in"<br/>                                                                                                                                                                                                                                                                                                                  |
-| *className*    | Der Name der Klasse, die im Plug-in des Online Stores **iwmpabonneptionservice** implementiert. Beispiel: "cprosewareservice"<br/>                                                                                                                                                                                                                                                                |
-| *ModuleName*   | Der voll qualifizierte Pfad zu der dll, die das Plug-in des Online Stores implementiert. Beispiel: "C: \\ Program Files \\ proseware \\ProsewareService.dll"<br/>                                                                                                                                                                                                                                                |
+| *keyName*      | Eine Zeichenfolge, die zwischen Microsoft und dem Onlineshop vereinbart wurde. Diese Zeichenfolge identifiziert den Onlineshop eindeutig. Beispiel: "Proseware"<br/>                                                                                                                                                                                                                                                          |
+| *flags*        | Ein bitweises **OR** eines oder mehrere Plug-In-Funktionsflags Diese Flags geben an, ob Windows Media Player bestimmte Methoden von [IWMPSubscriptionService](/previous-versions/windows/desktop/api/subscriptionservices/nn-subscriptionservices-iwmpsubscriptionservice) und [IWMPSubscriptionService2](/previous-versions/windows/desktop/api/subscriptionservices/nn-subscriptionservices-iwmpsubscriptionservice2)aufrufen soll. Informationen zu unterstützten Flags finden Sie in der Tabelle der Plug-In-Funktionsflags, die dieser Tabelle folgen. Beispiel: 00000037<br/> |
+| *Clsid*        | Eine GUID, die der Klassenbezeichner (CLSID) für die Klasse ist, die **IWMPSubscriptionService** im Plug-In des Onlineshops implementiert. Diese GUID muss im Registrierungsformat vorliegen und mit geschweiften Klammern vervollständigen. Format: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}<br/>                                                                                                                                    |
+| *friendlyname* | Ein Benutzername für den Onlineshop. Beispiel: "Proseware Musik Service"<br/>                                                                                                                                                                                                                                                                                                                     |
+| *pluginName*   | Ein Name für das Plug-In des Onlineshops. Beispiel: "Proseware-Dienst-Plug-In"<br/>                                                                                                                                                                                                                                                                                                                  |
+| *className*    | Der Name der Klasse, die **IWMPSubscriptionService** im Plug-In des Onlineshops implementiert. Beispiel: "CProsewareService"<br/>                                                                                                                                                                                                                                                                |
+| *moduleName*   | Der vollqualifizierte Pfad zur DLL, die das Plug-In des Onlineshops implementiert. Beispiel: "C: \\ Programme \\ Proseware \\ProsewareService.dll"<br/>                                                                                                                                                                                                                                                |
 
 
 
  
 
-In der folgenden Tabelle werden die Plug-in-funktionsflags beschrieben.
+In der folgenden Tabelle werden die Plug-In-Funktionsflags beschrieben.
 
 
 
-| Flag                                    | Wert | BESCHREIBUNG                                                                                                                                                                                                                        |
+| Flag                                    | Wert | Beschreibung                                                                                                                                                                                                                        |
 |-----------------------------------------|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Abonnement- \_ Cap \_ allowplay            | 0X1   | Der Windows-Media Player sollte [iwmpabonneptionservice:: allowplay](/previous-versions/windows/desktop/api/subscriptionservices/nf-subscriptionservices-iwmpsubscriptionservice-allowplay)aufruft.                                                                                                                      |
-| Abonnement \_ Grenze \_ allowcdburn          | 0X2   | Windows Media Player sollte [iwmpabonneptionservice:: allowcdburn](/previous-versions/windows/desktop/api/subscriptionservices/nf-subscriptionservices-iwmpsubscriptionservice-allowcdburn)aufruft.                                                                                                                  |
-| Abonnement- \_ Cap \_ allowpdatransfer     | 0X4   | Der Windows-Media Player sollte [iwmpabonneptionservice:: allowpdatransfer](/previous-versions/windows/desktop/api/subscriptionservices/nf-subscriptionservices-iwmpsubscriptionservice-allowpdatransfer)aufruft.                                                                                                        |
-| \_ \_ backgroundprocessing für Abonnement Abdeckung | 0X8   | Windows Media Player sollte [iwmpabonneptionservice:: startbackgroundprocessing](/previous-versions/windows/desktop/api/subscriptionservices/nf-subscriptionservices-iwmpsubscriptionservice-startbackgroundprocessing)aufrufen.                                                                                      |
-| Abonnement \_ Abdeckung \_ deviceavailable      | 0X10  | Windows Media Player muss [IWMPSubscriptionService2::d eviceavailable](/previous-versions/windows/desktop/api/subscriptionservices/nf-subscriptionservices-iwmpsubscriptionservice2-deviceavailable)aufgerufen werden.                                                                                                        |
-| Abonnement- \_ Cap \_ prepareforsync       | 0X20  | Windows Media Player muss [IWMPSubscriptionService2::p Analyse forsync](/previous-versions/windows/desktop/api/subscriptionservices/nf-subscriptionservices-iwmpsubscriptionservice2-prepareforsync).                                                                                                          |
-| Abonnement \_ v1- \_ Caps                  | 0XF   | Standard. Dieser Wert wird verwendet, wenn keine registriert ist. Dies entspricht der Kombination von Abonnement- \_ Cap \_ allowplay, Abonnement Abdeckung \_ \_ allowcdburn, Abonnement Abdeckung \_ \_ allowpdatransfer und Abonnement Abdeckung \_ \_ backgroundprocessing. |
+| \_ABONNEMENTOBERGRENZE \_ – ALLOWPLAY            | 0X1   | Windows Media Player sollte [IWMPSubscriptionService::allowPlay aufrufen.](/previous-versions/windows/desktop/api/subscriptionservices/nf-subscriptionservices-iwmpsubscriptionservice-allowplay)                                                                                                                      |
+| \_ \_ ABONNEMENTOBERGRENZE ALLOWCD WIEGE          | 0X2   | Windows Media Player sollte [IWMPSubscriptionService::allowCDZeichnet aufrufen.](/previous-versions/windows/desktop/api/subscriptionservices/nf-subscriptionservices-iwmpsubscriptionservice-allowcdburn)                                                                                                                  |
+| \_ \_ ABONNEMENTOBERGRENZE ALLOWPDATRANSFER     | 0X4   | Windows Media Player sollte [IWMPSubscriptionService::allowPDATransfer aufrufen.](/previous-versions/windows/desktop/api/subscriptionservices/nf-subscriptionservices-iwmpsubscriptionservice-allowpdatransfer)                                                                                                        |
+| HINTERGRUNDVERARBEITUNG \_ FÜR \_ ABONNEMENTOBERGRENZE | 0X8   | Windows Media Player sollte [IWMPSubscriptionService::startBackgroundProcessing aufrufen.](/previous-versions/windows/desktop/api/subscriptionservices/nf-subscriptionservices-iwmpsubscriptionservice-startbackgroundprocessing)                                                                                      |
+| \_ \_ ABONNEMENTOBERGRENZE GERÄT VERFÜGBAR      | 0X10  | Windows Media Player sollte [IWMPSubscriptionService2::d eviceAvailable aufrufen.](/previous-versions/windows/desktop/api/subscriptionservices/nf-subscriptionservices-iwmpsubscriptionservice2-deviceavailable)                                                                                                        |
+| \_ABONNEMENTOBERGRENZE \_ PREPAREFORSYNC       | 0X20  | Windows Media Player sollte [IWMPSubscriptionService2::p repareForSync aufrufen.](/previous-versions/windows/desktop/api/subscriptionservices/nf-subscriptionservices-iwmpsubscriptionservice2-prepareforsync)                                                                                                          |
+| ABONNEMENT \_ \_ V1-OBERGRENZEN                  | 0XF   | Standard. Dieser Wert wird verwendet, wenn keiner registriert ist. Dies entspricht der Kombination von SUBSCRIPTION \_ CAP \_ ALLOWPLAY, SUBSCRIPTION \_ CAP \_ ALLOWCDILLA, SUBSCRIPTION \_ CAP \_ ALLOWPDATRANSFER und SUBSCRIPTION \_ CAP \_ BACKGROUNDPROCESSING. |
 
 
 
@@ -80,9 +80,9 @@ In der folgenden Tabelle werden die Plug-in-funktionsflags beschrieben.
 
 **Registrierungseinträge für Entwicklung und Tests**
 
-Wenn Sie mit der Entwicklung Ihres Online Stores beginnen, bietet Microsoft Ihnen zwei Schlüssel: einen Testschlüssel und einen Produktions Schlüssel. Während der Entwicklungs-und Testphase wird der Online Shop in Windows Media Player nur angezeigt, wenn sich der Testschlüssel oder Ihr Produktions Schlüssel in der Registrierung auf dem Computer des Benutzers befindet. Weitere Informationen zu den Test-und Produktions Schlüsseln finden Sie unter [Test-und Produktions Schlüssel für einen Online Store vom Typ 2](test-and-production-keys-for-a-type-2-online-store.md).
+Wenn Sie mit der Entwicklung Ihres Onlineshops beginnen, stellt Ihnen Microsoft zwei Schlüssel zur Verfügung: einen Testschlüssel und einen Produktionsschlüssel. Während der Entwicklungs- und Testphase wird Ihr Onlineshop nur dann in Windows Media Player angezeigt, wenn sich Ihr Testschlüssel oder Ihr Produktionsschlüssel in der Registrierung auf dem Computer des Benutzers befindet. Weitere Informationen zu den Test- und Produktionsschlüsseln finden Sie unter Test- und Produktionsschlüssel für einen [Typ 2 Online Store](test-and-production-keys-for-a-type-2-online-store.md).
 
-Platzieren Sie den Test-oder Produktions Schlüssel an folgendem Speicherort in der Registrierung.
+Platzieren Sie den Test- oder Produktionsschlüssel an folgendem Speicherort in der Registrierung.
 
 
 ```C++
@@ -92,7 +92,7 @@ Platzieren Sie den Test-oder Produktions Schlüssel an folgendem Speicherort in 
 
 
 
-Beachten Sie, dass der Wert des Registrierungs Eintrags Testparameter mehrere Test-oder Produktions Schlüssel angeben kann. Nehmen wir beispielsweise an, dass Proseware einen Testschlüssel mit dem Wert "1234" hat und dass die Datei "" den Testschlüssel "2345" hat. Der folgende Registrierungs Eintrag gibt an, dass die Test Speicher für Proseware und Microsoft Configuration Manager in der Windows-Media Player angezeigt werden.
+Beachten Sie, dass der Wert des Registrierungseintrags TestParameter mehrere Test- oder Produktionsschlüssel angeben kann. Angenommen, Proseware hat den Testschlüssel "1234", und Contoso hat den Testschlüssel "2345". Der folgende Registrierungseintrag gibt an, dass die Testspeicher für Proseware und Contoso in der Windows Media Player.
 
 
 ```C++
@@ -102,9 +102,9 @@ Beachten Sie, dass der Wert des Registrierungs Eintrags Testparameter mehrere Te
 
 
 
-**ActiveService-Registrierungs Eintrag**
+**ActiveService-Registrierungseintrag**
 
-Wenn der Benutzer einen Online Shop aktiviert, schreibt Windows Media Player Informationen in die Registrierung, die den aktiven Online Store identifiziert. In Windows Media Player werden die Informationen an folgendem Speicherort in der Registrierung auf dem Computer des Benutzers abgelegt.
+Wenn der Benutzer einen Onlineshop aktiviert, schreibt Windows Media Player Informationen in die Registrierung, die den aktiven Onlineshop identifizieren. Windows Media Player die Informationen an folgendem Speicherort in der Registrierung auf dem Computer des Benutzers ab.
 
 
 ```C++
@@ -114,7 +114,7 @@ Wenn der Benutzer einen Online Shop aktiviert, schreibt Windows Media Player Inf
 
 
 
-In der vorangehenden Registrierungs Syntax ist *serviceInfo* ein Platzhalter für eine Zeichenfolge, die beschreibende Informationen zum aktiven Online Store enthält.
+In der obigen Registrierungssyntax ist *serviceInfo* ein Platzhalter für eine Zeichenfolge, die beschreibende Informationen zum aktiven Onlineshop enthält.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

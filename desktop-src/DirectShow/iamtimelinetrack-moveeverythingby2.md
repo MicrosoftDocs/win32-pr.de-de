@@ -14,12 +14,12 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 8b0334f207dcf70e790afddc8a8ec68648a24a93
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 16ca6851c2789a9cd59dfcf69b6ef80a2c65e70a23698e5efe26a4cf061a1eba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118952789"
 ---
 # <a name="iamtimelinetrackmoveeverythingby2-method"></a>IAMTimelineTrack::MoveEverythingBy2-Methode
 
@@ -41,7 +41,7 @@ HRESULT MoveEverythingBy2(
 
 <dl> <dt>
 
-*Starten* 
+*Start* 
 </dt> <dd>
 
 Reserviert.
@@ -59,7 +59,7 @@ Reserviert.
 
 Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
 > Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
@@ -67,7 +67,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls
  
 
 > [!Note]  
-> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK Update für Windows Vista und .NET Framework [3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -75,7 +75,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
 | Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |

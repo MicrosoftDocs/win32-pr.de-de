@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_LS. Gleichheits Methode (JET_LS)'
-title: JET_LS. Gleichheits Methode (JET_LS)
+description: 'Weitere Informationen finden Sie unter: JET_LS. Equals-Methode (JET_LS)'
+title: JET_LS. Equals-Methode (JET_LS)
 TOCTitle: Equals method (JET_LS)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_LS.Equals(Microsoft.Isam.Esent.Interop.JET_LS)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_ls.equals(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c8a571f97fcf5abc5ff9a69ff476d48adfd8015c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d978536a16507118ffd400359ce8f360b16d24140dc588913c3ad69fd7fb661d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352411"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118765066"
 ---
-# <a name="jet_lsequals-method-jet_ls"></a>JET_LS. Gleichheits Methode (JET_LS)
+# <a name="jet_lsequals-method-jet_ls"></a>JET_LS. Equals-Methode (JET_LS)
 
 Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,28 +57,28 @@ public bool Equals(
 
 #### <a name="parameters"></a>Parameter
 
-  - andere  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_LS](./jet-ls-structure.md)  
+  - Sonstige  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_LS](./jet-ls-structure.md)  
     
-    Eine-Instanz, die mit dieser Instanz verglichen werden soll.
+    Eine -Instanz, die mit dieser Instanz verglichen werden soll.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
-True, wenn die beiden Instanzen gleich sind.  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
+TRUE, wenn die beiden Instanzen gleich sind.  
 
 #### <a name="implements"></a>Implementiert
 
-[IEquatable \<T\> . Ist gleich(T)](/dotnet/api/system.iequatable-1.equals#System_IEquatable_1_Equals__0_)  
+[IEquatable \<T\> . Equals(T)](/dotnet/api/system.iequatable-1.equals#System_IEquatable_1_Equals__0_)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_LS Struktur](./jet-ls-structure.md)
+[JET_LS-Struktur](./jet-ls-structure.md)
 
-[Mitglieder JET_LS](./jet-ls-members.md)
+[JET_LS Mitglieder](./jet-ls-members.md)
 
-[Gleichheits Überladung](./jet-ls.equals-method.md)
+[Equals-Überladung](./jet-ls.equals-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentSLVInvalidPathException-Konstruktor'
+description: 'Weitere Informationen finden Sie unter: EsentSLVInvalidPathException-Konstruktor'
 title: EsentSLVInvalidPathException-Konstruktor
 TOCTitle: 'EsentSLVInvalidPathException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSLVInvalidPathException.#ctor

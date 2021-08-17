@@ -13,15 +13,15 @@ ms.locfileid: "118742926"
 ---
 # <a name="custom-asynchronous-result-objects"></a>Benutzerdefinierte asynchrone Ergebnisobjekte
 
-In diesem Thema wird beschrieben, wie [**dieASYNCAsyncResult-Schnittstelle implementiert**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) wird.
+In diesem Thema wird beschrieben, wie die [**SCHNITTSTELLE "AWAITAsyncResult"**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) implementiert wird.
 
-Es ist selten, dass Sie eine benutzerdefinierte Implementierung [**derASYNCAsyncResult-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) schreiben müssen. In fast allen Fällen ist die Standardimplementierung Media Foundation ausreichend. (Diese Implementierung wird von der [**MFCreateAsyncResult-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateasyncresult) zurückgegeben.) Wenn Sie jedoch eine benutzerdefinierte Implementierung schreiben, müssen Sie einige Probleme beachten.
+Es ist selten, dass Sie eine benutzerdefinierte Implementierung der [**INTERFACESAsyncResult-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) schreiben müssen. In fast allen Fällen ist die Standardimplement Media Foundation ausreichend. (Diese Implementierung wird von der [**MFCreateAsyncResult-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateasyncresult) zurückgegeben.) Wenn Sie jedoch eine benutzerdefinierte Implementierung schreiben, sind einige Probleme zu beachten.
 
-Zunächst muss Ihre Implementierung die [**MFASYNCRESULT-Struktur**](/windows/win32/api/mfapi/ns-mfapi-mfasyncresult) erben. Die Media Foundation Arbeitswarteschlangen verwenden diese Struktur intern, um den Vorgang zu senden. Initialisieren Sie alle Strukturmitglieder mit Ausnahme des **pCallback-Members,** der einen Zeiger auf die Rückrufschnittstelle des Aufrufers enthält, auf 0 (null).
+Zunächst muss Ihre Implementierung die [**MFASYNCRESULT-Struktur**](/windows/win32/api/mfapi/ns-mfapi-mfasyncresult) erben. Die Media Foundation Arbeitswarteschlangen verwenden diese Struktur intern, um den Vorgang zu senden. Initialisieren Sie alle Strukturmember mit Ausnahme des **pCallback-Members,** der einen Zeiger auf die Rückrufschnittstelle des Aufrufers enthält, auf 0 (null).
 
-Zweitens sollte Ihr Objekt [**MFLockPlatform**](/windows/desktop/api/mfapi/nf-mfapi-mflockplatform) in seinem Konstruktor aufrufen, um die Media Foundation sperren. Rufen [**Sie MFUnlockPlatform auf,**](/windows/desktop/api/mfapi/nf-mfapi-mfunlockplatform) um die Plattform zu entsperren. Diese Funktionen verhindern, dass die Plattform heruntergefahren wird, bevor das Objekt zerstört wird. Weitere Informationen finden Sie unter [Arbeitswarteschlangen](work-queues.md).
+Zweitens sollte Ihr Objekt [**MFLockPlatform**](/windows/desktop/api/mfapi/nf-mfapi-mflockplatform) in seinem Konstruktor aufrufen, um die Media Foundation Plattform zu sperren. Rufen Sie [**MFUnlockPlatform**](/windows/desktop/api/mfapi/nf-mfapi-mfunlockplatform) auf, um die Plattform zu entsperren. Mit diesen Funktionen wird verhindert, dass die Plattform heruntergefahren wird, bevor das Objekt zerstört wird. Weitere Informationen finden Sie unter [Arbeitswarteschlangen.](work-queues.md)
 
-Der folgende Code zeigt eine grundlegende Implementierung [**derASYNCAsyncResult-Schnittstelle.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) Wie gezeigt, bietet dieser Code keine zusätzlichen Features, die über die Standardimplementierung Media Foundation hinausgehen.
+Der folgende Code zeigt eine grundlegende Implementierung der [**INTERFACESAsyncResult-Schnittstelle.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) Wie gezeigt, bietet dieser Code keine zusätzlichen Features, die über die Standardmäßige Media Foundation Implementierung hinausgehen.
 
 
 ```C++

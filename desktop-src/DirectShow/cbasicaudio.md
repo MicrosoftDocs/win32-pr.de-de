@@ -1,7 +1,7 @@
 ---
-description: Die cbasicaudioklasse implementiert die IDispatch-Methoden der ibasicaudioschnittstelle. Die verbleibenden ibasicaudiomethoden werden als rein virtuelle Methoden belassen und müssen von einer abgeleiteten Klasse implementiert werden.
+description: Die CBasicAudio-Klasse implementiert die IDispatch-Methoden der IBasicAudio-Schnittstelle. Die verbleibenden IBasicAudio-Methoden bleiben rein virtuelle Methoden und müssen von einer abgeleiteten Klasse implementiert werden.
 ms.assetid: 6772ade4-84c5-443f-a8b5-0e8e12263f76
-title: Cbasicaudioklasse (ctlutil. h)
+title: CBasicAudio-Klasse (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,20 +16,20 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e2d52b07284d10d82122e52e41b185799e12d458
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f511df84b93372fda1e557b4ebd12011fa8ef41beca9eb3d190c049564021031
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370931"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074479"
 ---
-# <a name="cbasicaudio-class"></a>Cbasicaudioklasse
+# <a name="cbasicaudio-class"></a>CBasicAudio-Klasse
 
-![cbasicaudioklassenhierarchie](images/cutil07.png)
+![cbasicaudio-Klassenhierarchie](images/cutil07.png)
 
-Die `CBasicAudio` -Klasse implementiert die **IDispatch** -Methoden der [**ibasicaudioschnittstelle**](/windows/desktop/api/Control/nn-control-ibasicaudio) . Die verbleibenden **ibasicaudiomethoden** werden als rein virtuelle Methoden belassen und müssen von einer abgeleiteten Klasse implementiert werden.
+Die `CBasicAudio` -Klasse implementiert die **IDispatch-Methoden** der [**IBasicAudio-Schnittstelle.**](/windows/desktop/api/Control/nn-control-ibasicaudio) Die **verbleibenden IBasicAudio-Methoden** bleiben rein virtuelle Methoden und müssen von einer abgeleiteten Klasse implementiert werden.
 
-Bei den **IDispatch** -Methoden in dieser Klasse handelt es sich um Standard Implementierungen, die hier nicht ausführlich beschrieben werden.
+Die **IDispatch-Methoden** in dieser Klasse sind Standardimplementierungen und werden hier nicht ausführlich beschrieben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,16 +37,16 @@ Bei den **IDispatch** -Methoden in dieser Klasse handelt es sich um Standard Imp
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasedispatch-Klasse**](cbasedispatch.md)
+[**CBaseDispatch-Klasse**](cbasedispatch.md)
 </dt> </dl>
 
  

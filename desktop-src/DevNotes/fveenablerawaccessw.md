@@ -1,7 +1,7 @@
 ---
-description: Aktiviert oder deaktiviert das Lesen und Schreiben von Datenträger Sektoren.
+description: Aktiviert oder deaktiviert das Lesen und Schreiben von Datenträgersektoren.
 ms.assetid: 885e4db1-a131-4727-80ab-3be8c591b766
-title: Funktion "sveenablerawaccessw"
+title: FveEnableRawAccessW-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Fveapi.dll
-ms.openlocfilehash: 5b4a367c3566c1475f856783d800ec43e21071e2
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 050983663b782d40c330092919b8fc29060cbba057a16d147b80c6ea477cbf54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118956089"
 ---
-# <a name="fveenablerawaccessw-function"></a>Funktion "sveenablerawaccessw"
+# <a name="fveenablerawaccessw-function"></a>FveEnableRawAccessW-Funktion
 
-Aktiviert oder deaktiviert das Lesen und Schreiben von Datenträger Sektoren.
+Aktiviert oder deaktiviert das Lesen und Schreiben von Datenträgersektoren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ HRESULT FveEnableRawAccessW(
 
 <dl> <dt>
 
-*Volumename* \[ in\]
+*VolumeName* \[ In\]
 </dt> <dd>
 
-Ein eindeutiger Bezeichner für das Datenträger Volume.
+Ein eindeutiger Bezeichner für das Datenträgervolumen.
 
 </dd> <dt>
 
-*Aktiviert* \[ in\]
+*Aktiviert* \[ In\]
 </dt> <dd>
 
-Wenn der Wert **true** ist, wird der Zugriff auf das rohvolume ermöglicht. Wenn der Wert **false** ist, ist kein Zugriff auf das rohvolume zulässig. Wenn der rohzugriff bereits aktiviert wurde, dieser Wert jedoch **false** ist, wird das Volume erneut bereitgestellt und erneut überprüft.
+True **gibt an,** dass der Zugriff auf das rohe Volume möglich ist. False **gibt an,** dass kein Zugriff auf das rohe Volume zulässig ist. Wenn roher Zugriff bereits aktiviert wurde, dieser Wert jedoch **FALSE ist,** wird das Volume erneut bereitgestellt und erneut aktiviert.
 
 </dd> </dl>
 
@@ -60,11 +60,11 @@ Diese Funktion gibt einen der folgenden Codes oder einen anderen Fehlercode zur�
 
 
 
-| Rückgabecode/-wert                                                                                                                                                           | BESCHREIBUNG                                                                        |
+| Rückgabecode/-wert                                                                                                                                                           | Beschreibung                                                                        |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl>                           | Die Funktion war erfolgreich.<br/>                                            |
-| <dl> <dt>**S \_ FALSE**</dt> <dt>1 (0x1)</dt> </dl>                        | Aktiviert ist **false** , und das Volume war nicht bereits im RAW-Zugriffsmodus.<br/> |
-| <dl> <dt>**E \_ AccessDenied**</dt> <dt>2147942405 (0x80070005)</dt> </dl> | Das Volume kann nicht gesperrt werden.<br/>                                            |
+| <dl> <dt>**S \_ FALSE**</dt> <dt>1 (0x1)</dt> </dl>                        | Aktiviert ist **FALSE,** und das Volume war noch nicht im Rohdatenzugriffsmodus.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> <dt>2147942405 (0x80070005)</dt> </dl> | Das Volume kann nicht gesperrt werden.<br/>                                            |
 
 
 
@@ -76,8 +76,8 @@ Diese Funktion gibt einen der folgenden Codes oder einen anderen Fehlercode zur�
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
 | DLL<br/>                      | <dl> <dt>Fveapi.dll</dt> </dl> |
 
 

@@ -1,9 +1,9 @@
 ---
-title: Savesystemacctinputsettings-Funktion
-description: Wendet das Layout der Benutzer Tastatur und den Text Dienst auf die Hive des System Kontos an.
+title: SaveSystemAcctInputSettings-Funktion
+description: Wendet das Benutzertastaturlayout und die Textdiensteinstellung auf die Systemkontenstruktur an.
 ms.assetid: 73782637-3784-46d9-ba93-0527a2527412
 keywords:
-- Savesystemacctinputsettings-Funktion, Text Dienste-Framework
+- SaveSystemAcctInputSettings-Textdienstframework
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e45d590b80a9119d78eac8363a493ecd6c7b70d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c60b9743ebbf54ce7189499f7295d44377c272b6d7cfcf5693259f12657bf06c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118875294"
 ---
-# <a name="savesystemacctinputsettings-function"></a>Savesystemacctinputsettings-Funktion
+# <a name="savesystemacctinputsettings-function"></a>SaveSystemAcctInputSettings-Funktion
 
-Wendet das Layout der Benutzer Tastatur und den Text Dienst auf die Hive des System Kontos an.
+Wendet das Benutzertastaturlayout und die Textdiensteinstellung auf die Systemkontenstruktur an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ BOOL CALLBACK SaveSystemAcctInputSettings(
 
 <dl> <dt>
 
-*hwndParent* \[ in\]
+*hwndParent* \[ In\]
 </dt> <dd>
 
-Das übergeordnete Fenster für das Dialogfeld "Warnung". Das Dialogfeld "Warnung" wird nicht immer angezeigt und wird entsprechend angezeigt. Wenn dieser Parameter **null** ist, wird das Dialogfeld Warnung nicht angezeigt.
+Das übergeordnete Fenster für das Warnungsdialogfeld. Das Warnungsdialogfeld wird nicht immer angezeigt und entsprechend angezeigt. Wenn dieser Parameter **NULL ist,** wird das Warnungsdialogfeld nicht angezeigt.
 
 </dd> <dt>
 
-*hsourceregkey* \[ in\]
+*hSourceRegKey* \[ In\]
 </dt> <dd>
 
-Der Stamm Registrierungsschlüssel der zu kopierenden Benutzereinstellung.
+Der Stammregistrierungsschlüssel der zu kopierenden Benutzereinstellung.
 
 </dd> </dl>
 
@@ -61,23 +61,23 @@ Der Stamm Registrierungsschlüssel der zu kopierenden Benutzereinstellung.
 
 | Rückgabecode                                                                          | Beschreibung                               |
 |--------------------------------------------------------------------------------------|-------------------------------------------|
-| <dl> <dt>**Fall**</dt> </dl>  | Die Funktion war erfolgreich.<br/>   |
-| <dl> <dt>**Alarm**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**STIMMT**</dt> </dl>  | Die Funktion war erfolgreich.<br/>   |
+| <dl> <dt>**FALSE**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Systemkonto Struktur ist HKEY- \_ Benutzer \\ . Standard, HKEY \_ \\ -Benutzer s-1-5-19 und HKEY \_ \\ -Benutzer s-1-5-20.
+Die Systemkontostruktur ist HKEY \_ USERS \\ . DEFAULT, HKEY \_ USERS \\ S-1-5-19 und HKEY \_ USERS \\ S-1-5-20.
 
 ## <a name="examples"></a>Beispiele
 
-Es ist keine Import Bibliothek verfügbar, die diese Funktion definiert. Daher ist es erforderlich, mithilfe von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)einen Zeiger auf diese Funktion zu erhalten. Im folgenden Beispiel wird veranschaulicht, wie ein Zeiger auf diese Funktion abgerufen wird.
+Es ist keine Importbibliothek verfügbar, die diese Funktion definiert. Daher ist es erforderlich, mit [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)einen Zeiger auf diese Funktion zu erhalten. Im folgenden Beispiel wird veranschaulicht, wie ein Zeiger auf diese Funktion erhalten wird.
 
 > [!Note]  
-> Die falsche Verwendung von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann die Sicherheit Ihrer Anwendung beeinträchtigen, indem die falsche DLL geladen wird. Informationen zum ordnungsgemäßen Laden von DLLs mit verschiedenen Versionen von Microsoft Windows finden Sie in der [Such Reihenfolge für die Dynamic Link Library](/windows/desktop/Dlls/dynamic-link-library-search-order) .
+> Die [**falsche Verwendung von LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann die Sicherheit Ihrer Anwendung gefährden, indem die falsche DLL geladen wird. Informationen zum [ordnungsgemäßen](/windows/desktop/Dlls/dynamic-link-library-search-order) Laden von DLLs mit verschiedenen Versionen von Microsoft Windows.
 
  
 
@@ -115,8 +115,8 @@ else
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
 | DLL<br/>                      | <dl> <dt>Input.dll</dt> </dl> |
 
 

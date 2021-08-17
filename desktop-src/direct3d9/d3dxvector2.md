@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVECTOR2-Struktur (D3dx9math.h): Beschreibt einen vektor mit zwei Komponenten, einschließlich Operatorüberladungen und Typcasts.'
+description: 'D3DXVECTOR2-Struktur (D3dx9math.h): Beschreibt einen Vektor mit zwei Komponenten, einschließlich Operatorüberladungen und Typcasts.'
 ms.assetid: e61ec1c8-00b5-491f-8fb1-be97218f6c68
 title: D3DXVECTOR2-Struktur (D3dx9math.h)
 ms.topic: reference
@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: 79f66c0e9130a320042c9b914bad47e5f02f0d8a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 078e23f94d72c6eccfa1e35ba02700a4c88f6e84e4acae5112429c02013f362c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118803632"
 ---
 # <a name="d3dxvector2-structure-d3dx9mathh"></a>D3DXVECTOR2-Struktur (D3dx9math.h)
 
@@ -62,7 +62,7 @@ Die y-Komponente.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="d3dxvector2-extensions"></a>D3DXVECTOR2-Erweiterungen
 
@@ -141,7 +141,7 @@ public:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 

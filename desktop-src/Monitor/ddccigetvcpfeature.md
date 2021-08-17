@@ -1,6 +1,6 @@
 ---
 title: DDCCIGetVCPFeature-Funktion
-description: Ruft den aktuellen Wert, den Maximalwert und den Codetyp eines VCP-Codes (Virtual Systemsteuerung) für einen Monitor ab.
+description: Ruft den aktuellen Wert, den höchstwert und den Codetyp eines VCP-Codes (Virtual Systemsteuerung) für einen Monitor ab.
 ms.assetid: 7749d45c-a0d5-44ee-8f91-811677cbf59f
 keywords:
 - DDCCIGetVCPFeature-Funktion Monitorkonfiguration
@@ -24,11 +24,11 @@ ms.locfileid: "118640998"
 # <a name="ddccigetvcpfeature-function"></a>DDCCIGetVCPFeature-Funktion
 
 > [!IMPORTANT]
-> Diese Funktion wird von der Api für die Monitorkonfiguration verwendet, um auf die Funktionalität im Anzeigetreiber zuzugreifen. Anwendungen sollten diese Funktion nicht aufrufen.
+> Diese Funktion wird von der Überwachungskonfigurations-API verwendet, um auf funktionen im Anzeigetreiber zuzugreifen. Anwendungen sollten diese Funktion nicht aufrufen.
 
  
 
-Ruft den aktuellen Wert, den Maximalwert und den Codetyp eines VCP-Codes (Virtual Systemsteuerung) für einen Monitor ab.
+Ruft den aktuellen Wert, den höchstwert und den Codetyp eines VCP-Codes (Virtual Systemsteuerung) für einen Monitor ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,7 +59,7 @@ Ein Handle für einen physischen Monitor.
 *dwVCPCode* \[ In\]
 </dt> <dd>
 
-Der zu abfragende VCP-Code.
+Der abzufragende VCP-Code.
 
 </dd> <dt>
 
@@ -80,19 +80,19 @@ Empfängt den aktuellen Wert des VCP-Codes.
 *pdwMaximumValue* \[ out, optional\]
 </dt> <dd>
 
-Empfängt den Höchstwert des VCP-Codes.
+Empfängt den maximalen Wert des VCP-Codes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, wird **STATUS \_ SUCCESS zurückgegeben.** Andernfalls wird ein **NTSTATUS-Fehlercode** zurückgegeben.
+Wenn die Methode erfolgreich ist, wird **STATUS \_ SUCCESS** zurückgegeben. Andernfalls wird ein **NTSTATUS-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Anwendungen sollten [**GetVCPFeatureAndVCPFeatureReply**](/windows/desktop/api/LowLevelMonitorConfigurationAPI/nf-lowlevelmonitorconfigurationapi-getvcpfeatureandvcpfeaturereply) aufrufen, anstatt diese Funktion auf aufruft.
+Anwendungen sollten [**GetVCPFeatureAndVCPFeatureReply**](/windows/desktop/api/LowLevelMonitorConfigurationAPI/nf-lowlevelmonitorconfigurationapi-getvcpfeatureandvcpfeaturereply) aufrufen, anstatt diese Funktion aufzurufen.
 
-Dieser Funktion ist keine Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch eine Verknüpfung mit Gdi32.dll.
+Dieser Funktion ist keine Importbibliothek zugeordnet. Um diese Funktion aufzurufen, müssen Sie die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch mit Gdi32.dll zu verknüpfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,13 +100,13 @@ Dieser Funktion ist keine Importbibliothek zugeordnet. Zum Aufrufen dieser Funkt
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
 | DLL<br/>                      | <dl> <dt>Gdi32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

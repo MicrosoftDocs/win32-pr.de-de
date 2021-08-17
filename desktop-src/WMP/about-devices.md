@@ -3,59 +3,59 @@ title: Informationen zu Geräten
 description: Informationen zu Geräten
 ms.assetid: 9e68c5eb-5fcb-4d7d-8dbb-7e951f253df8
 keywords:
-- Windows Media Player, Synchronisieren von Geräten
-- Windows Media Player-Objektmodell, Synchronisieren von Geräten
+- Windows Media Player,Synchronisieren von Geräten
+- Windows Media Player Objektmodell, Synchronisieren von Geräten
 - Objektmodell, Synchronisieren von Geräten
-- Windows Media Player ActiveX-Steuerelement, Synchronisieren von Geräten
-- ActiveX-Steuerelement, Synchronisieren von Geräten
-- Windows Media Player Mobile ActiveX-Steuerelement, Synchronisieren von Geräten
-- Windows Media Player Mobile, Synchronisieren von Geräten
-- Synchronisieren von Geräten, Informationen zu
-- Geräte Synchronisierung, Informationen zu
+- Windows Media Player ActiveX,Synchronisieren von Geräten
+- ActiveX,Synchronisieren von Geräten
+- Windows Media Player Mobile ActiveX,Synchronisieren von Geräten
+- Windows Media Player Mobil,Synchronisieren von Geräten
+- Synchronisieren von Geräten, Informationen
+- Gerätesynchronisierung, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e89a074e4edb5bdbc7d90391398d5e0e4133505a
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 66383082bae772b48f913f6bd4615724de8f7b7735e387ba93407a9848f17074
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "106339867"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119956920"
 ---
 # <a name="about-devices"></a>Informationen zu Geräten
 
-Portable Geräte sind Hardware Geräte, die Benutzer zum Nutzen digitaler Medieninhalte nutzen, wenn Sie nicht mehr von Ihrem Computer entfernt sind. In der Regel sind tragbare Geräte Akku Betrieb. Einige Geräte können nur Musik abspielen. Andere Geräte können Videos und Musik abspielen.
+Portable Geräte sind Hardwaregeräte, die Benutzer verwenden, um digitale Medieninhalte zu nutzen, wenn sie sich nicht am Computer befinden. In der Regel werden tragbare Geräte im Akkubetrieb betrieben. Einige Geräte können nur Musik wieder geben. Andere Geräte können Videos und Musik wiederrufen.
 
-Einige Geräte unterstützen die automatische Synchronisierung digitaler Medieninhalte mit Windows Media Player. Andere Geräte unterstützen nur die manuelle Übertragung. Sie können bestimmen, ob ein bestimmtes Gerät die automatische Synchronisierung unterstützt, indem Sie [iwmpsyncdevice:: get- \_ Status](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-get_status) aufrufen und dann den abgerufenen [wmpdevicestatus](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpdevicestatus) -Wert überprüfen. Wenn der abgerufene Wert **wmpdsmanualdevice** lautet, unterstützt das Gerät keine automatische Synchronisierung.
+Einige Geräte unterstützen die automatische Synchronisierung digitaler Medieninhalte mit Windows Media Player. Andere Geräte unterstützen nur die manuelle Übertragung. Sie können ermitteln, ob ein bestimmtes Gerät die automatische Synchronisierung unterstützt, indem Sie [IWMPSyncDevice::get \_ status](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-get_status) aufrufen und dann den abgerufenen [WMPDeviceStatus-Wert](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpdevicestatus) überprüfen. Wenn der abgerufene Wert **wmpdsManualDevice ist,** unterstützt das Gerät keine automatische Synchronisierung.
 
-Die Geräte, die mit dem Computer des Benutzers verbunden sind, können aufgelistet werden. Verwenden Sie zu diesem Zweck zuerst [iwmpsyncservices:: get \_ devicecount](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncservices-get_devicecount) , um die Anzahl der Geräte abzurufen. Nennen Sie dann in einer-Schleife [iwmpsyncservices:: getdevice](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncservices-getdevice), und übergeben Sie jedes Mal den entsprechenden Indexwert. Mit [iwmpsyncdevice:: get- \_ Verbindung](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-get_connected) können Sie auswerten, ob ein bestimmtes Gerät zurzeit verbunden ist.
+Sie können die Geräte aufzählen, die mit dem Computer des Benutzers verbunden sind. Verwenden Sie hierzu zunächst [IWMPSyncServices::get \_ deviceCount,](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncservices-get_devicecount) um die Anzahl der Geräte abzurufen. Rufen Sie dann in einer Schleife [IWMPSyncServices::getDevice](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncservices-getdevice)auf, und übergeben Sie jedes Mal den entsprechenden Indexwert. Sie können [IWMPSyncDevice::get \_ connected](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-get_connected) verwenden, um zu bewerten, ob ein bestimmtes Gerät derzeit verbunden ist.
 
-Wenn Sie wissen möchten, wenn Geräte eine Verbindung herstellen oder trennen, können Sie die Ereignisse **deviceconnetct** und **devicedisconnect** empfangen. Diese Ereignisse werden über die **IWMPEvents2** -Schnittstelle empfangen.
+Um zu erfahren, wann Geräte eine Verbindung herstellen oder trennen, können Sie die **Ereignisse DeviceConnect** und **DeviceDisconnect** empfangen. Diese Ereignisse werden über die **IWMPEvents2-Schnittstelle** empfangen.
 
-Die **iwmpsyncdevice** -Schnittstelle stellt zusätzliche Methoden bereit, mit denen Sie Informationen zu einem Gerät erhalten oder festlegen können. Beispiel:
+Die **IWMPSyncDevice-Schnittstelle stellt** zusätzliche Methoden bereit, mit denen Sie Informationen zu einem Gerät erhalten oder festlegen können. Beispiel:
 
--   Mit den Methoden **get \_ FriendlyName** und **Put \_ FriendlyName** können Sie den Namen des benutzerdefinierten Geräts abrufen und angeben.
--   Mit der Methode " **get \_ DeviceName** " können Sie den Gerätenamen abrufen, den Benutzer in der Windows XP-Shell sehen.
--   Die **getiteminfo** -Methode ermöglicht das Abrufen von Metadaten von Geräten.
+-   Mit **den Methoden get \_ FriendlyName** und **put \_ FriendlyName** können Sie den benutzerdefinierten Gerätenamen abrufen und angeben.
+-   Mit **der \_ get deviceName-Methode** können Sie den Gerätenamen abrufen, der Benutzern in der xp Windows angezeigt wird.
+-   Mit **der getItemInfo-Methode** können Sie Metadaten von Geräten abrufen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen zur Geräte Synchronisierung**](about-device-synchronization.md)
+[**Informationen zur Gerätesynchronisierung**](about-device-synchronization.md)
 </dt> <dt>
 
 [**IWMPEvents2-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpevents2)
 </dt> <dt>
 
-[**Iwmpsyncdevice-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpsyncdevice)
+[**IWMPSyncDevice-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpsyncdevice)
 </dt> <dt>
 
-[**Arbeiten mit tragbaren Geräten**](working-with-portable-devices.md)
+[**Arbeiten mit portablen Geräten**](working-with-portable-devices.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

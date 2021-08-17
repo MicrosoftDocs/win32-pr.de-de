@@ -1,9 +1,9 @@
 ---
-title: D3DX11_STATE_BLOCK_MASK-Struktur (D3dx11effect. h)
-description: Gibt den Gerätezustand an.
+title: D3DX11_STATE_BLOCK_MASK -Struktur (D3dx11effect.h)
+description: Gibt den Gerätestatus an.
 ms.assetid: 42044a6d-6a11-4f90-889a-82e7954da6c7
 keywords:
-- D3DX11_STATE_BLOCK_MASK Struktur Direct3D 11
+- D3DX11_STATE_BLOCK_MASK-Struktur Direct3D 11
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 41236c541fc251902a7a0a5ad6030a28dd36e3a4
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8087f45ad94fe3e45f78a1be9d86b30f6f7e3f2c9161b9c4498865b12582436e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355357"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119124935"
 ---
-# <a name="d3dx11_state_block_mask-structure"></a>Bibliothek d3dx11 \_ State \_ Block \_ Mask-Struktur
+# <a name="d3dx11_state_block_mask-structure"></a>D3DX11 \_ STATE \_ BLOCK \_ MASK-Struktur
 
-Gibt den Gerätezustand an.
+Gibt den Gerätestatus an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -83,439 +83,439 @@ typedef struct _D3DX11_STATE_BLOCK_MASK {
 
 <dl> <dt>
 
-**Jews**
+**Vs**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob der Scheitelpunkt-Shader-Zustand gespeichert werden soll.
+Boolescher Wert, der angibt, ob der Vertex-Shaderzustand zu speichern ist.
 
 </dd> <dt>
 
-**Vssamplers**
+**VSSamplers**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Vertex-Shader-Samplern. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen samplingslot darstellt.
+Array von Vertex-Shader-Samplern. Das Array ist eine Multi-Byte-Bitmaske, bei der jedes Bit einen Samplerslot darstellt.
 
 </dd> <dt>
 
-**Vsshaderresources**
+**VSShaderResources**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Vertex-Shaderressourcen. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Ressourcen Slot darstellt.
+Array von Vertex-Shader-Ressourcen. Das Array ist eine Multi-Byte-Bitmaske, bei der jedes Bit einen Ressourcenslot darstellt.
 
 </dd> <dt>
 
-**Vsconstantbuffers**
+**VSConstantBuffers**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Vertex-Shader-konstantenpuffern. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen konstanten Puffer Slot darstellt.
+Array von konstanten Vertex-Shader-Puffern. Das Array ist eine Mehr-Byte-Bitmaske, bei der jedes Bit einen konstanten Pufferslot darstellt.
 
 </dd> <dt>
 
-**Vsintergesichter**
+**VSInterfaces**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Vertex-Shader-Schnittstellen. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Schnittstellen Slot darstellt.
+Array von Vertex-Shader-Schnittstellen. Das Array ist eine Multi-Byte-Bitmaske, bei der jedes Bit einen Schnittstellenslot darstellt.
 
 </dd> <dt>
 
-**Jh**
+**Hs**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob der Hull-Shader-Zustand gespeichert werden soll.
+Boolescher Wert, der angibt, ob der Zustand des Hüllen-Shaders zu speichern ist.
 
 </dd> <dt>
 
-**Hssamplers**
+**HSSamplers**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Hull-Shader-Samplern. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen samplingslot darstellt.
+Array von Hüllen-Shader-Samplern. Das Array ist eine Multi-Byte-Bitmaske, bei der jedes Bit einen Samplerslot darstellt.
 
 </dd> <dt>
 
-**Hsshaderresources**
+**HSShaderResources**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Hull-Shader-Ressourcen. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Ressourcen Slot darstellt.
+Array von Hüllen-Shader-Ressourcen. Das Array ist eine Multi-Byte-Bitmaske, bei der jedes Bit einen Ressourcenslot darstellt.
 
 </dd> <dt>
 
-**Hsconstantbuffers**
+**HSConstantBuffers**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Hull-Shader-konstantenpuffern. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen konstanten Puffer Slot darstellt.
+Array von Hüllen-Shader-Konstantenpuffern. Das Array ist eine Mehr-Byte-Bitmaske, bei der jedes Bit einen konstanten Pufferslot darstellt.
 
 </dd> <dt>
 
-**Hsintergesichter**
+**HSInterfaces**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Hull-Shader-Schnittstellen. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Schnittstellen Slot darstellt.
+Array von Hüllen-Shader-Schnittstellen. Das Array ist eine Multi-Byte-Bitmaske, bei der jedes Bit einen Schnittstellenslot darstellt.
 
 </dd> <dt>
 
 **DS**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob der Domänen-shaderzustand gespeichert werden soll.
+Boolescher Wert, der angibt, ob der Domänen-Shaderzustand zu speichern ist.
 
 </dd> <dt>
 
-**Dssamplers**
+**DSSamplers**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Domänen-Shader-Samplern. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen samplingslot darstellt.
+Array von Domänen-Shader-Samplern. Das Array ist eine Multi-Byte-Bitmaske, bei der jedes Bit einen Samplerslot darstellt.
 
 </dd> <dt>
 
-**Dsshaderresources**
+**DSShaderResources**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Domänen-Shader-Ressourcen. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Ressourcen Slot darstellt.
+Array von Domänen-Shader-Ressourcen. Das Array ist eine Multi-Byte-Bitmaske, bei der jedes Bit einen Ressourcenslot darstellt.
 
 </dd> <dt>
 
-**Dsconstantbuffers**
+**DSConstantBuffers**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Domänen-Shader-konstantenpuffern. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Puffer Slot darstellt.
+Array von Domänen-Shader-Konstantenpuffern. Das Array ist eine Mehr-Byte-Bitmaske, bei der jedes Bit einen Pufferslot darstellt.
 
 </dd> <dt>
 
-**Dsintergesichter**
+**DSInterfaces**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Domänen-Shader-Schnittstellen. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Schnittstellen Slot darstellt.
+Array von Domänen-Shader-Schnittstellen. Das Array ist eine Multi-Byte-Bitmaske, bei der jedes Bit einen Schnittstellenslot darstellt.
 
 </dd> <dt>
 
 **GS**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob der Geometrie-Shader-Zustand gespeichert werden soll.
+Boolescher Wert, der angibt, ob der Zustand des Geometrie-Shaders gespeichert werden soll.
 
 </dd> <dt>
 
-**Gssamplers**
+**GSSamplers**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Geometry-Shader-Samplern. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen samplingslot darstellt.
+Array von geometry-shader-Samplern. Das Array ist eine Multi-Byte-Bitmaske, bei der jedes Bit einen Samplerslot darstellt.
 
 </dd> <dt>
 
-**Gsshaderresources**
+**GSShaderResources**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Geometry-Shaderressourcen. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Ressourcen Slot darstellt.
+Array von geometry-shader-Ressourcen. Das Array ist eine Multi-Byte-Bitmaske, bei der jedes Bit einen Ressourcenslot darstellt.
 
 </dd> <dt>
 
-**Gsconstantbuffers**
+**GSConstantBuffers**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Geometry-Shader-konstantenpuffern. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Puffer Slot darstellt.
+Array von geometry-shader-Konstantenpuffern. Das Array ist eine Mehr-Byte-Bitmaske, bei der jedes Bit einen Pufferslot darstellt.
 
 </dd> <dt>
 
-**Gsintergesichter**
+**GSInterfaces**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Geometry-Shader-Schnittstellen. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Schnittstellen Slot darstellt.
+Array von Geometry-Shader-Schnittstellen. Das Array ist eine Multi-Byte-Bitmaske, bei der jedes Bit einen Schnittstellenslot darstellt.
 
 </dd> <dt>
 
-**PS**
+**Ps**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob der Pixelshader-Zustand gespeichert werden soll.
+Boolescher Wert, der angibt, ob der Shaderzustand des Pixels zu speichern ist.
 
 </dd> <dt>
 
-**Pssamplers**
+**PSSamplers**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Pixel-Shader-Samplern. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen samplingslot darstellt.
+Array von Pixel-Shader-Samplern. Das Array ist eine Multi-Byte-Bitmaske, bei der jedes Bit einen Samplerslot darstellt.
 
 </dd> <dt>
 
-**Psshaderresources**
+**PSShaderResources**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Pixel-Shader-Ressourcen. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Ressourcen Slot darstellt.
+Array von Pixel-Shader-Ressourcen. Das Array ist eine Multi-Byte-Bitmaske, bei der jedes Bit einen Ressourcenslot darstellt.
 
 </dd> <dt>
 
-**Psconstantbuffers**
+**PSConstantBuffers**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array aus Pixel-Shader-konstantenpuffern. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen konstanten Puffer Slot darstellt.
+Array von Pixel-Shader-Konstantenpuffern. Das Array ist eine Mehr-Byte-Bitmaske, bei der jedes Bit einen konstanten Pufferslot darstellt.
 
 </dd> <dt>
 
-**Psintergesichter**
+**PSInterfaces**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Pixel-Shader-Schnittstellen. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Schnittstellen Slot darstellt.
+Array von Pixel-Shader-Schnittstellen. Das Array ist eine Bitmaske mit mehreren Byte, wobei jedes Bit einen Schnittstellenslot darstellt.
 
 </dd> <dt>
 
-**Psunorderedaccessviews**
+**PSUnorderedAccessViews**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob die Pixel-Shader-Ansicht für ungeordnete Zugriffe gespeichert werden soll.
+Boolescher Wert, der angibt, ob die ungeordneten Zugriffsansichten des Pixelshader gespeichert werden sollen.
 
 </dd> <dt>
 
 **CS**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob der COMPUTE-Shader-Zustand gespeichert werden soll.
+Boolescher Wert, der angibt, ob der Zustand des Compute-Shaders gespeichert werden soll.
 
 </dd> <dt>
 
-**Cssamplers**
+**CSSamplers**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Compute-Shader-Samplern. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen samplingslot darstellt.
+Array von Compute-Shader-Samplern. Das Array ist eine Bitmaske mit mehreren Byte, wobei jedes Bit einen Samplerslot darstellt.
 
 </dd> <dt>
 
-**Csshaderresources**
+**CSShaderResources**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Compute-Shaderressourcen. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Ressourcen Slot darstellt.
+Array von Compute-Shader-Ressourcen. Das Array ist eine Bitmaske mit mehreren Byte, wobei jedes Bit einen Ressourcenslot darstellt.
 
 </dd> <dt>
 
-**Csconstantbuffers**
+**CSConstantBuffers**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Compute-Shader-konstantenpuffern. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen konstanten Puffer Slot darstellt.
+Array von Konstantenpuffern für Compute-Shader. Das Array ist eine Bitmaske mit mehreren Byte, wobei jedes Bit einen konstanten Pufferslot darstellt.
 
 </dd> <dt>
 
-**Csintergesichter**
+**CSInterfaces**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array von Compute-Shader-Schnittstellen. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Schnittstellen Slot darstellt.
+Array von Compute-Shader-Schnittstellen. Das Array ist eine Bitmaske mit mehreren Byte, wobei jedes Bit einen Schnittstellenslot darstellt.
 
 </dd> <dt>
 
-**Csunorderedaccessviews**
+**CSUnorderedAccessViews**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob die Server-Shader-Ansichten für ungeordnete Zugriffe gespeichert werden sollen.
+Boolescher Wert, der angibt, ob die ungeordneten Zugriffsansichten des Compute-Shaders gespeichert werden sollen.
 
 </dd> <dt>
 
-**Iavertexbuffers**
+**IAVertexBuffers**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Array der Scheitelpunkt Puffer. Das Array ist eine multibyte-Bitmaske, bei der jedes Bit einen Ressourcen Slot darstellt.
+Array von Scheitelpunktpuffern. Das Array ist eine Bitmaske mit mehreren Byte, wobei jedes Bit einen Ressourcenslot darstellt.
 
 </dd> <dt>
 
-**Iaindexbuffer**
+**IAIndexBuffer**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob der Status des Index Puffers gespeichert werden soll.
+Boolescher Wert, der angibt, ob der Indexpufferzustand gespeichert werden soll.
 
 </dd> <dt>
 
-**Iainputlayout**
+**IAInputLayout**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob der Eingabe Layoutzustand gespeichert werden soll.
+Boolescher Wert, der angibt, ob der Eingabelayoutzustand gespeichert werden soll.
 
 </dd> <dt>
 
-**Iaprimitivetopology**
+**IAPrimitiveTopology**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob der primitive topologiezustand gespeichert werden soll.
+Boolescher Wert, der angibt, ob der primitive Topologiezustand gespeichert werden soll.
 
 </dd> <dt>
 
-**Omrendertargets**
+**OMRenderTargets**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob die renderzielzustände gespeichert werden sollen.
+Boolescher Wert, der angibt, ob die Renderzielzustände gespeichert werden sollen.
 
 </dd> <dt>
 
-**Omdepthstencilstate**
+**OMDepthStencilState**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob der Status der tiefen Schablone gespeichert werden soll.
+Boolescher Wert, der angibt, ob der Tiefenschablonenzustand gespeichert werden soll.
 
 </dd> <dt>
 
-**Omblendstate**
+**OMBlendState**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob der Blend-Zustand gespeichert werden soll.
+Boolescher Wert, der angibt, ob der Mischungszustand gespeichert werden soll.
 
 </dd> <dt>
 
-**Rsviewports**
+**RSViewports**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
@@ -523,61 +523,61 @@ Boolescher Wert, der angibt, ob die Viewports-Zustände gespeichert werden solle
 
 </dd> <dt>
 
-**Rsscissorrects**
+**RSScissorRects**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob die Scheren-Rechtecke Zustände gespeichert werden sollen.
+Boolescher Wert, der angibt, ob die Scissor-Rechteckzustände gespeichert werden sollen.
 
 </dd> <dt>
 
-**Rsrasterizerstate**
+**RSRasterizerState**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob der Status des Rasterizers gespeichert werden soll.
+Boolescher Wert, der angibt, ob der Rasterizerzustand gespeichert werden soll.
 
 </dd> <dt>
 
-**Sobuffers**
+**SOBuffers**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob die Datenstrom Ausgabepuffer Zustände gespeichert werden sollen.
+Boolescher Wert, der angibt, ob die Status der Stream-Out-Puffer gespeichert werden sollen.
 
 </dd> <dt>
 
 **Prädikation**
 </dt> <dd>
 
-Type: **[ **Byte**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BYTE**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Boolescher Wert, der angibt, ob der prediationstatus gespeichert werden soll.
+Boolescher Wert, der angibt, ob der Prädikationszustand gespeichert werden soll.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Status Block Maske gibt an, dass das Gerät angibt, dass eine Pass-oder eine Technik geändert wird.
+Eine Zustandsblockmaske gibt den Gerätezustand an, dass sich ein Durchlauf oder eine Technik ändert.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx11effect. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx11effect.h</dt> </dl> |
 
 
 
@@ -585,7 +585,7 @@ Eine Status Block Maske gibt an, dass das Gerät angibt, dass eine Pass-oder ein
 
 <dl> <dt>
 
-[Effekte 11-Strukturen](d3d11-graphics-reference-effects11-structures.md)
+[Effekte 11 Strukturen](d3d11-graphics-reference-effects11-structures.md)
 </dt> </dl>
 
  

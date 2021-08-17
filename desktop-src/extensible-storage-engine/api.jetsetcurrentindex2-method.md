@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. JetSetCurrentIndex2-Methode.
-title: API. JetSetCurrentIndex2-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetSetCurrentIndex2-Methode'
+title: Api.JetSetCurrentIndex2-Methode
 TOCTitle: 'JetSetCurrentIndex2 method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetSetCurrentIndex2(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,System.String,Microsoft.Isam.Esent.Interop.SetCurrentIndexGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetsetcurrentindex2(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7e08e1fe5027641348259381d74b34ce16b034e0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee20d69e2c88c8da9abf00c09d0ce1f7f782017742deb696d0ce0db7cdd617d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393485"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118783711"
 ---
-# <a name="apijetsetcurrentindex2-method"></a>API. JetSetCurrentIndex2-Methode
+# <a name="apijetsetcurrentindex2-method"></a>Api.JetSetCurrentIndex2-Methode
 
 Legen Sie den aktuellen Index eines Cursors fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,38 +67,38 @@ public static void JetSetCurrentIndex2(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
     Der Cursor, für den der Index festgelegt werden soll.
 
 <!-- end list -->
 
   - Index  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
-    Der Name des Indexes, der ausgewählt werden soll. Wenn dieser Wert NULL oder leer ist, wird der primäre Index ausgewählt.
+    Der Name des index, der ausgewählt werden soll. Wenn dies NULL oder leer ist, wird der primäre Index ausgewählt.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. setcurrentindexgrbit](./setcurrentindexgrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.SetCurrentIndexGrbit](./setcurrentindexgrbit-enumeration.md)  
     
-    Legen Sie Index Optionen fest.
+    Legen Sie Indexoptionen fest.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

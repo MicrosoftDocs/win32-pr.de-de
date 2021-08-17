@@ -78,18 +78,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: c8e2a8c2207e410878a4f5c498ea71a1ce67cd8f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e9ee527dddc8366f13ea09ca6e785946a5e205e40da67d16946ecdb52d21a6b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118949849"
 ---
-# <a name="msvm_syntheticethernetport-class"></a>MSVM \_ syntheticethernetport-Klasse
+# <a name="msvm_syntheticethernetport-class"></a>Msvm \_ SyntheticEthernetPort-Klasse
 
-Stellt einen synthetischen Ethernet-Adapter dar. Dieser Adapter ist der bevorzugte Netzwerkadapter aufgrund seiner Leistung und, da Änderungen an der IT sofort wirksam werden können, während Sie verwendet werden (Hot Configurability).
+Stellt einen synthetischen Ethernet-Adapter dar. Dieser Adapter ist der bevorzugte Netzwerkadapter aufgrund seiner Leistung und weil Änderungen an ihm sofort wirksam werden können, während er verwendet wird (Hot Configurability).
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -161,25 +161,25 @@ class Msvm_SyntheticEthernetPort : CIM_EthernetPort
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ syntheticethernetport** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ SyntheticEthernetPort-Klasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MSVM \_ syntheticethernetport** -Klasse verfügt über diese Methoden.
+Die **Msvm \_ SyntheticEthernetPort-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                      | BESCHREIBUNG                              |
+| Methode                                                                      | Beschreibung                              |
 |:----------------------------------------------------------------------------|:-----------------------------------------|
 | **EnableDevice**                                                            | Diese Methode wird nicht unterstützt.<br/> |
-| **Onlinedevice**                                                            | Diese Methode wird nicht unterstützt.<br/> |
-| **Inaktiven Geräte**                                                           | Diese Methode wird nicht unterstützt.<br/> |
-| [**RequestStateChange**](msvm-syntheticethernetport-requeststatechange.md) | Fordert eine Statusänderung an.<br/>      |
+| **OnlineGeräte**                                                            | Diese Methode wird nicht unterstützt.<br/> |
+| **QuiesceDevice**                                                           | Diese Methode wird nicht unterstützt.<br/> |
+| [**RequestStateChange**](msvm-syntheticethernetport-requeststatechange.md) | Fordert eine Zustandsänderung an.<br/>      |
 | [**Zurücksetzen**](msvm-syntheticethernetport-reset.md)                           | Setzt das Gerät zurück.<br/>            |
-| **Restoreproperties**                                                       | Diese Methode wird nicht unterstützt.<br/> |
+| **RestoreProperties**                                                       | Diese Methode wird nicht unterstützt.<br/> |
 | **SaveProperties**                                                          | Diese Methode wird nicht unterstützt.<br/> |
 | **SetPowerState**                                                           | Diese Methode wird nicht unterstützt.<br/> |
 
@@ -189,14 +189,14 @@ Die **MSVM \_ syntheticethernetport** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ syntheticethernetport** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ SyntheticEthernetPort-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Activemaximumtransmissionunit**
+**ActiveMaximumTransmissionUnit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -205,61 +205,61 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Einheiten** ("Bytes")
 </dt> </dl>
 
-Die aktive oder ausgehandelte maximale Übertragungseinheit (Maximum Transmission Unit, MTU), die unterstützt werden kann. Diese Eigenschaft wird vom [**CIM- \_ Netzwerkport**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
+Die aktive oder ausgehandelte maximale Übertragungseinheit (MAXIMUM TRANSMISSION Unit, MTU), die unterstützt werden kann. Diese Eigenschaft wird von [**CIM \_ NetworkPort**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
 
 </dd> <dt>
 
-**Additionalavailability**
+**AdditionalAvailability**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zusätzliche Verfügbarkeit und Status des Geräts, über das hinaus, das in der **Availability** -Eigenschaft angegeben ist. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt und ist immer auf 6 festgelegt (nicht zutreffend).
+Zusätzliche Verfügbarkeit und zusätzlicher Status des Geräts, die über die in der **Availability-Eigenschaft** angegebene hinausgehen. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt und immer auf 6 (Nicht zutreffend) festgelegt.
 
 </dd> <dt>
 
-**AutoSense**
+**Autosense**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Netzwerkport die Geschwindigkeit oder andere Kommunikationsmerkmale der angeschlossenen Netzwerk Medien automatisch bestimmen kann. Diese Eigenschaft wird vom [**CIM- \_ Netzwerkport**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
+Gibt an, ob der Netzwerkport die Geschwindigkeit oder andere Kommunikationsmerkmale der angefügten Netzwerkmedien automatisch bestimmen kann. Diese Eigenschaft wird von [**CIM \_ NetworkPort**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
 
 </dd> <dt>
 
 **Verfügbarkeit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die primäre Verfügbarkeit und den Status des Geräts. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
+Die primäre Verfügbarkeit und der Status des Geräts. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
 
 </dd> <dt>
 
-**Availablerequestedstates**
+**AvailableRequestedStates**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die möglichen Werte für den *requestedstate* -Parameter der [**requestStateChange**](/previous-versions/windows/desktop/iscsitarg/requeststatechange-cim-enabledlogicalelement) -Methode an, die zum Initiieren einer Zustandsänderung verwendet wird. Bei den aufgelisteten Werten handelt es sich um eine Teilmenge der Werte in der **requestedstaatsupported** -Eigenschaft der zugeordneten Instanz von **CIM \_ enabledlogicalelementfunctions**, bei der die ausgewählten Werte eine Funktion des aktuellen Zustands des [**CIM- \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))sind. Diese Eigenschaft darf nicht **null** sein, wenn eine Implementierung den Satz möglicher Werte als Funktion des aktuellen Zustands ankündigen kann. Diese Eigenschaft ist **null** , wenn eine Implementierung den Satz möglicher Werte nicht als Funktion des aktuellen Zustands bestimmen kann.
+Gibt die möglichen Werte für den *RequestedState-Parameter* der [**RequestStateChange-Methode**](/previous-versions/windows/desktop/iscsitarg/requeststatechange-cim-enabledlogicalelement) an, die zum Initiieren einer Zustandsänderung verwendet wird. Die aufgelisteten Werte sind eine Teilmenge der Werte, die in der **RequestedStatesSupported-Eigenschaft** der zugeordneten Instanz von **CIM \_ EnabledLogicalElementCapabilities** enthalten sind, wobei die ausgewählten Werte eine Funktion des aktuellen Zustands des [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))sind. Diese Eigenschaft kann ungleich **NULL** sein, wenn eine Implementierung den Satz möglicher Werte als Funktion des aktuellen Zustands ankündigen kann. Diese Eigenschaft ist **NULL,** wenn eine Implementierung den Satz möglicher Werte nicht als Funktion des aktuellen Zustands bestimmen kann.
 
-Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt.
 
 <dl> <dt>
 
@@ -269,7 +269,7 @@ Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions
 <span id="Disabled"></span><span id="disabled"></span><span id="DISABLED"></span>**Deaktiviert** (3)
 </dt> <dt>
 
-<span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>**Herunter** fahren (4)
+<span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>**Herunterfahren** (4)
 </dt> <dt>
 
 <span id="Offline"></span><span id="offline"></span><span id="OFFLINE"></span>**Offline** (6)
@@ -278,10 +278,10 @@ Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions
 <span id="Test"></span><span id="test"></span><span id="TEST"></span>**Test** (7)
 </dt> <dt>
 
-<span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>Zurück **stellen (8** )
+<span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>**Zurückstellen** (8)
 </dt> <dt>
 
-<span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>Still **legung (9** )
+<span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>**Stille** (9)
 </dt> <dt>
 
 <span id="Reboot"></span><span id="reboot"></span><span id="REBOOT"></span>**Neustart** (10)
@@ -290,7 +290,7 @@ Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions
 <span id="Reset"></span><span id="reset"></span><span id="RESET"></span>**Zurücksetzen** (11)
 </dt> <dt>
 
-<span id="DMTF_Reserved_"></span><span id="dmtf_reserved_"></span><span id="DMTF_RESERVED_"></span>**DMTF reserviert** (.. )
+<span id="DMTF_Reserved_"></span><span id="dmtf_reserved_"></span><span id="DMTF_RESERVED_"></span>**DMTF Reserved** (.. )
 </dt> </dl>
 
 </dd> <dt>
@@ -298,163 +298,163 @@ Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions
 **Capabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Funktionen des Ethernet-Ports. Das Gerät unterstützt z. b. alertonlan, wakeonlan, Lastenausgleich oder Failover. Wenn Failover-oder Lasten Ausgleichs Funktionen aufgelistet werden, sollte auch eine SpareGroup (Failover) oder extracapacitygroup (Lastenausgleich) definiert werden, um die Funktion vollständig zu beschreiben. Diese Eigenschaft wird vom [**CIM- \_ Ethernetport**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport) geerbt und wird nicht verwendet.
+Die Funktionen des Ethernet-Ports. Das Gerät kann beispielsweise AlertOnLan, WakeOnLan, Lastenausgleich oder FailOver unterstützen. Wenn Failover- oder Lastenausgleichsfunktionen aufgeführt sind, sollte auch eine Ersatzgruppe (Failover) oder ExtraCapacityGroup (Lastenausgleich) definiert werden, um die Funktion vollständig zu beschreiben. Diese Eigenschaft wird von [**CIM \_ EthernetPort**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport) geerbt und nicht verwendet.
 
 </dd> <dt>
 
-**Capabilitybeschreibungen**
+**CapabilityDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array von Freiform-Zeichen folgen, das Ausführlichere Erläuterungen für alle Ethernetport-Funktionen bereitstellt, die im Eigenschafts Array der **Funktionen** angegeben sind. Beachten Sie, dass jeder Eintrag dieses Arrays mit dem Eintrag im Eigenschafts Array " **Funktionen** " verknüpft ist, der sich am selben Index befindet. Diese Eigenschaft wird vom [**CIM- \_ Ethernetport**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport) geerbt und wird nicht verwendet.
+Ein Array von Freiformzeichenfolgen, das ausführlichere Erklärungen für alle EthernetPort-Features bereitstellt, die im **Eigenschaftenarray Capabilities** angegeben sind. Beachten Sie, dass jeder Eintrag dieses Arrays mit dem Eintrag im **Capabilities-Eigenschaftenarray** verknüpft ist, das sich am gleichen Index befindet. Diese Eigenschaft wird von [**CIM \_ EthernetPort**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport) geerbt und nicht verwendet.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Communicationstatus**
+**CommunicationStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Klasse oder der Unterklasse, die bei der Erstellung einer-Instanz verwendet wird. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
+Der Name der Klasse oder der Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **DetailedStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ergänzt die **primarystatus** -Eigenschaft mit zusätzlichen Status Details. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Ergänzt die **PrimaryStatus-Eigenschaft** durch zusätzliche Statusdetails. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
-**DeviceID**
+**Deviceid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Adresse oder andere identifizierende Informationen, die verwendet werden, um das logische Gerät eindeutig zu benennen. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
+Eine Adresse oder andere identifizierende Informationen, die zum eindeutigen Benennen des logischen Geräts verwendet werden. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Enabled-Funktionen**
+**EnabledCapabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Funktionen, die in der Liste aller unterstützten Funktionen aktiviert sind, die im Eigenschafts Array " **Funktionen** " definiert sind. Diese Eigenschaft wird vom [**CIM- \_ Ethernetport**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport)geerbt, aber nicht verwendet.
+Die Funktionen, die in der Liste aller unterstützten Funktionen aktiviert sind, die im **Eigenschaftenarray Capabilities** definiert sind. Diese Eigenschaft wird von [**CIM \_ EthernetPort**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport)geerbt, aber nicht verwendet.
 
 </dd> <dt>
 
-**Enableddefault**
+**EnabledDefault**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Standard-oder Startkonfiguration eines Administrators für den aktivierten Zustand eines Elements. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Die Standard- oder Startkonfiguration eines Administrators für den aktivierten Zustand eines Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt.
 
 </dd> <dt>
 
 **EnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktivierte und deaktivierte Status dieses Elements. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Der aktivierte und deaktivierte Status dieses Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt.
 
 </dd> <dt>
 
-**Errorgelöscht**
+**ErrorCleared**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -467,7 +467,7 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32P
 **ErrorDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -477,49 +477,49 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32P
 
 </dd> <dt>
 
-**Vollduplex**
+**FullDuplex**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Port im Vollduplex Modus betrieben wird. Diese Eigenschaft wird vom [**CIM- \_ Netzwerkport**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
+Gibt an, ob der Port im Vollduplexmodus ausgeführt wird. Diese Eigenschaft wird von [**CIM \_ NetworkPort**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
 
 </dd> <dt>
 
 **HealthState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Zustand des Elements. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Die aktuelle Integrität des Elements. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **IdentifyingDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array von Freiform-Zeichen folgen, die Erklärungen und Details hinter den Einträgen im " **OtherIdentifyingInfo** "-Array bereitstellen. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice) geerbt und wird nicht verwendet.
+Ein Array von Freiformzeichenfolgen, die Erklärungen und Details hinter den Einträgen im **OtherIdentifyingInfo-Array** bereitstellen. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice) geerbt und nicht verwendet.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -532,7 +532,7 @@ Das Datum, an dem der Ethernet-Port dem virtuellen Computer hinzugefügt wurde. 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -541,14 +541,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **LastErrorCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -558,16 +558,16 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32P
 
 </dd> <dt>
 
-**Linktechnology**
+**LinkTechnology**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Enumeration der Linktypen. Wenn der Wert auf 1 (Other) festgelegt ist, enthält die zugehörige Eigenschaft **otherlinktechnology** eine Zeichen folgen Beschreibung des linktyps. Diese Eigenschaft wird vom [**CIM- \_ Netzwerkport**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
+Eine Enumeration der Typen von Links. Bei Festlegung auf 1 (Other) enthält die zugehörige Eigenschaft **OtherLinkTechnology eine Zeichenfolgenbeschreibung** des Linktyps. Diese Eigenschaft wird von [**CIM \_ NetworkPort**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
 
 <dl> <dt>
 
@@ -576,23 +576,23 @@ Eine Enumeration der Linktypen. Wenn der Wert auf 1 (Other) festgelegt ist, enth
 
 </dd> <dt>
 
-**Maxdatasize**
+**MaxDataSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Größe des Felds Info (nicht-Mac), das empfangen oder übertragen wird. Diese Eigenschaft wird vom [**CIM- \_ Ethernetport**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport)geerbt.
+Die maximale Größe des Felds INFO (nicht MAC), das empfangen oder übertragen wird. Diese Eigenschaft wird von [**CIM \_ EthernetPort**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport)geerbt.
 
 </dd> <dt>
 
-**Maxquiescetime**
+**MaxQuiesceTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -602,10 +602,10 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32P
 
 </dd> <dt>
 
-**MAXSPEED**
+**MaxSpeed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -614,183 +614,183 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Einheiten** ("Bits pro Sekunde")
 </dt> </dl>
 
-Die maximale Bandbreite des Ports in Bits pro Sekunde. Diese Eigenschaft wird von [**CIM \_ logicalport**](/previous-versions//cc136869(v=vs.85))geerbt.
+Die maximale Bandbreite des Ports in Bits pro Sekunde. Diese Eigenschaft wird von [**CIM \_ LogicalPort**](/previous-versions//cc136869(v=vs.85))geerbt.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**"Networkaddresses"**
+**NetworkAddresses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ethernet/802.3-Mac-Adressen, die als zwölf hexadezimal Ziffern formatiert sind (z. b. "010203040506"), wobei jedes Paar eines der sechs Oktette der Mac-Adresse in kanonischer bidirektionalen Reihenfolge darstellt (das Gruppen Adressbit befindet sich im niedrig wertigen Bit des ersten Zeichens der Zeichenfolge). Diese Eigenschaft wird vom [**CIM- \_ Ethernetport**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport)geerbt und wird nicht verwendet.
+Ethernet/802.3 MAC-Adressen, die als zwölf Hexadezimalziffern formatiert sind (z. B. "010203040506"), wobei jedes Paar eines der sechs Oktette der MAC-Adresse in kanonischer Bitreihenfolge darstellt (das Gruppenadressbit befindet sich im unteren Bit des ersten Zeichens der Zeichenfolge). Diese Eigenschaft wird von [**CIM \_ EthernetPort**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport)geerbt und nicht verwendet.
 
 </dd> <dt>
 
-**Operatingstatus**
+**OperatingStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit und kann verwendet werden, um weitere Details in Bezug auf den Wert der **enabledstate** -Eigenschaft bereitzustellen. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Stellt aktuelle Statusinformationen für die Betriebsbedingung des Elements bereit und kann zum Bereitstellen weiterer Details in Bezug auf den Wert der **EnabledState-Eigenschaft** verwendet werden. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **OperationalStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Status des Elements. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf 2 (OK) festgelegt.
+Der aktuelle Status des Elements. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und immer auf 2 (OK) festgelegt.
 
 </dd> <dt>
 
-**Otherenabled-Funktionen**
+**OtherEnabledCapabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array von Freiform-Zeichen folgen, das Ausführlichere Erläuterungen für jede der aktivierten Funktionen bereitstellt, die als "Other" angegeben sind. Diese Eigenschaft wird vom [**CIM- \_ Ethernetport**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport) geerbt und wird nicht verwendet.
+Ein Array von Freiformzeichenfolgen, das ausführlichere Erklärungen für alle aktivierten Funktionen bereitstellt, die als "Other" angegeben sind. Diese Eigenschaft wird von [**CIM \_ EthernetPort**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport) geerbt und nicht verwendet.
 
 </dd> <dt>
 
-**Otherenabledstate**
+**OtherEnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktivierte oder deaktivierte Status des Elements, wenn die **enabledstate** -Eigenschaft auf 1 (Sonstiges) festgelegt ist. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Der aktivierte oder deaktivierte Zustand des Elements, wenn die **EnabledState-Eigenschaft** auf 1 (Sonstige) festgelegt ist. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt.
 
 </dd> <dt>
 
 **OtherIdentifyingInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Alle Daten, zusätzlich zu den Informationen zur Geräte-ID, die zum Identifizieren eines logischen Geräts verwendet werden könnten. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice) geerbt und wird nicht verwendet.
+Alle Daten zusätzlich zu Geräte-ID-Informationen, die zum Identifizieren eines logischen Geräts verwendet werden können. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice) geerbt und nicht verwendet.
 
 </dd> <dt>
 
-**Otherlinktechnology**
+**OtherLinkTechnology**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Zeichen folgen Wert, der **linktechnology** beschreibt, wenn es auf 1 (Sonstiges) festgelegt ist. Diese Eigenschaft wird vom [**CIM- \_ Netzwerkport**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
+Ein Zeichenfolgenwert, der **LinkTechnology** beschreibt, wenn er auf 1 (Other) festgelegt ist. Diese Eigenschaft wird von [**CIM \_ NetworkPort**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
 
 </dd> <dt>
 
-**Othernetworkporttype**
+**OtherNetworkPortType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird vom [**CIM- \_ Netzwerkport**](/previous-versions/windows/desktop/iscsitarg/cim-networkport) geerbt und auf **null** festgelegt.
+Diese Eigenschaft wird von [**CIM \_ NetworkPort**](/previous-versions/windows/desktop/iscsitarg/cim-networkport) geerbt und auf **NULL** festgelegt.
 
 </dd> <dt>
 
-**Otherporttype**
+**OtherPortType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Modultyp, wenn **portType** auf 1 (Other) festgelegt ist. Diese Eigenschaft wird von [**CIM \_ logicalport**](/previous-versions//cc136869(v=vs.85))geerbt.
+Der Typ des Moduls, wenn **PortType** auf 1 (Other) festgelegt ist. Diese Eigenschaft wird von [**CIM \_ LogicalPort**](/previous-versions//cc136869(v=vs.85))geerbt.
 
 </dd> <dt>
 
-**Permanent Address**
+**PermanentAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Netzwerkadresse, die in den Port hart codiert ist. Diese hart codierte Adresse kann mithilfe eines Firmwareupdates oder einer Softwarekonfiguration geändert werden. Wenn diese Änderung vorgenommen wird, sollte das Feld gleichzeitig aktualisiert werden. Die **permanentaddress** -Eigenschaft sollte leer gelassen werden, wenn keine hart codierte Adresse für den Netzwerkadapter vorhanden ist. Diese Eigenschaft wird vom [**CIM- \_ Netzwerkport**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
+Die Netzwerkadresse, die im Port hartcodiert ist. Diese hartcodierte Adresse kann mithilfe eines Firmwareupgrades oder einer Softwarekonfiguration geändert werden. Wenn diese Änderung vorgenommen wird, sollte das Feld gleichzeitig aktualisiert werden. Die **Eigenschaft PermanentAddress** sollte leer gelassen werden, wenn keine hartcodierte Adresse für den Netzwerkadapter vorhanden ist. Diese Eigenschaft wird von [**CIM \_ NetworkPort**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
 
 </dd> <dt>
 
-**PortNumber**
+**Portnumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Netzwerkports sind häufig in Bezug auf ein logisches Modul oder ein Netzwerkelement nummeriert. Dieser Wert ist 1 für emulierten NICs, 0 für alle anderen. Diese Eigenschaft wird vom [**CIM- \_ Netzwerkport**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
+Netzwerkports sind häufig relativ zu einem logischen Modul oder einem Netzwerkelement nummeriert. Dieser Wert ist 1 für emulierte NICs, 0 für alle anderen. Diese Eigenschaft wird von [**CIM \_ NetworkPort**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
 
 </dd> <dt>
 
-**PortType**
+**Porttype**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der bestimmte Modus, der derzeit für den Port aktiviert ist. Wenn der Wert auf 1 (Sonstiges) festgelegt ist, enthält die zugehörige Eigenschaft **otherporttype** eine Zeichen folgen Beschreibung für den Porttyp. Diese Eigenschaft wird vom [**CIM- \_ Ethernetport**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport)geerbt.
+Der spezifische Modus, der derzeit für den Port aktiviert ist. Bei Festlegung auf 1 (Other) enthält die verknüpfte Eigenschaft **OtherPortType** eine Zeichenfolgenbeschreibung des Porttyps. Diese Eigenschaft wird von [**CIM \_ EthernetPort**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport)geerbt.
 
 </dd> <dt>
 
-**Powermanagementfunktionen**
+**PowerManagementCapabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -800,10 +800,10 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32P
 
 </dd> <dt>
 
-**Powermanagementsupported**
+**PowerManagementSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -813,10 +813,10 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32P
 
 </dd> <dt>
 
-**Poweronhours**
+**PowerOnHours**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -826,23 +826,23 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32P
 
 </dd> <dt>
 
-**Primarystatus**
+**PrimaryStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt Statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der **detailedstatus** -Eigenschaft verwendet werden, um allgemeine und ausführliche Integritäts Statusinformationen für das-Element und seine unter Komponenten bereitzustellen. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Stellt statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der **DetailedStatus-Eigenschaft** verwendet werden, um detaillierte und detaillierte Integritätsstatusinformationen für das Element und seine Unterkomponenten bereitzustellen. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **RequestedSpeed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -851,27 +851,27 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Einheiten** ("Bits pro Sekunde")
 </dt> </dl>
 
-Die angeforderte Bandbreite des Ports (in Bits pro Sekunde). Die tatsächliche Bandbreite wird in der Eigenschaft **Geschwindigkeit** gemeldet. Diese Eigenschaft wird von [**CIM \_ logicalport**](/previous-versions//cc136869(v=vs.85))geerbt.
+Die angeforderte Bandbreite des Ports in Bits pro Sekunde. Die tatsächliche Bandbreite wird in der **Speed-Eigenschaft** gemeldet. Diese Eigenschaft wird von [**CIM \_ LogicalPort**](/previous-versions//cc136869(v=vs.85))geerbt.
 
 </dd> <dt>
 
 **RequestedState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der zuletzt angeforderte oder gewünschte Status für den Verwaltungsdienst. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Der zuletzt angeforderte oder gewünschte Zustand für den Verwaltungsdienst. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt.
 
 </dd> <dt>
 
 **Geschwindigkeit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -880,53 +880,53 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Einheiten** ("Bits pro Sekunde")
 </dt> </dl>
 
-Die aktuelle Bandbreite des Ports (in Bits pro Sekunde). Für Ports, die die Bandbreite variieren, oder für diejenigen, bei denen keine genaue Schätzung vorgenommen werden kann, sollte diese Eigenschaft die nominale Bandbreite enthalten. Diese Eigenschaft wird vom [**CIM- \_ Netzwerkport**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
+Die aktuelle Bandbreite des Ports in Bits pro Sekunde. Für Ports, die in der Bandbreite variieren, oder für Ports, bei denen keine genaue Schätzung vorgenommen werden kann, sollte diese Eigenschaft die nominale Bandbreite enthalten. Diese Eigenschaft wird von [**CIM \_ NetworkPort geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Status des Elements. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Der aktuelle Status des Elements. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
 
 </dd> <dt>
 
-**Status Beschreibungen**
+**StatusDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeichen folgen, die die verschiedenen **OperationalStatus** -Array Werte beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Zeichenfolgen, die die verschiedenen **OperationalStatus-Arraywerte** beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
 
 </dd> <dt>
 
 **StatusInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)aber nicht verwendet.
 
 </dd> <dt>
 
-**Supportedmaximumtransmissionunit**
+**SupportedMaximumTransmissionUnit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -935,95 +935,95 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Einheiten** ("Bytes")
 </dt> </dl>
 
-Die maximale Übertragungseinheit (MTU), die unterstützt werden kann. Diese Eigenschaft wird vom [**CIM- \_ Netzwerkport**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)geerbt.
+Die maximale Übertragungseinheit (MTU), die unterstützt werden kann. Diese Eigenschaft wird von [**CIM \_ NetworkPort geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-networkport)
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des Bereichs Systems. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
+Der Name der Erstellungsklasse des Bereichssystems. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)
 
 </dd> <dt>
 
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der NetBIOS-Name des hostingcomputersystems. Diese Eigenschaft enthält die ID der virtuellen Maschine im **GUID** -Format. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
+Der NetBIOS-Name des Hostcomputersystems. Diese Eigenschaft enthält die ID des virtuellen Computers im **GUID-Formular.** Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)
 
 </dd> <dt>
 
-**Timeoflaststatechange**
+**TimeOfLastStateChange**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum oder die Uhrzeit, zu dem der aktivierte Status des Elements zuletzt geändert wurde. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Das Datum oder die Uhrzeit der letzten Änderung des aktivierten Zustands des Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt.**](/previous-versions//cc136818(v=vs.85))
 
 </dd> <dt>
 
-**Totalpoweronhours**
+**TotalPowerOnHours**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)aber nicht verwendet.
 
 </dd> <dt>
 
-**Transitioningumstate**
+**TransitioningToState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Ziel Status an, in den die-Instanz übergeht. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Gibt den Zielzustand an, in den die Instanz übergibt. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt.**](/previous-versions//cc136818(v=vs.85))
 
 </dd> <dt>
 
-**Einsatz Einschränkung**
+**UsageRestriction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Unter bestimmten Umständen kann ein logischer Port als Front-End-oder Back-End-Port identifiziert werden. Wenn keine Einschränkung für die Verwendung des Ports vorliegt, sollte der Wert auf 4 (nicht eingeschränkt) festgelegt werden. Diese Eigenschaft wird von [**CIM \_ logicalport**](/previous-versions//cc136869(v=vs.85))geerbt.
+In einigen Fällen kann ein logischer Port als Front-End- oder Back-End-Port identifiziert werden. Wenn die Verwendung des Ports nicht eingeschränkt ist, sollte der Wert auf 4 (Nicht eingeschränkt) festgelegt werden. Diese Eigenschaft wird von [**CIM \_ LogicalPort geerbt.**](/previous-versions//cc136869(v=vs.85))
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM \_ syntheticethernetport** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ SyntheticEthernetPort-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
-Weitere Informationen finden Sie unter [Abfragen von Netzwerk Objekten](querying-networking-objects.md).
+Weitere Informationen [finden Sie unter Abfragen von Netzwerkobjekten.](querying-networking-objects.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -1031,22 +1031,22 @@ Weitere Informationen finden Sie unter [Abfragen von Netzwerk Objekten](querying
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Ethernetport**](cim-ethernetport.md)
+[**CIM \_ EthernetPort**](cim-ethernetport.md)
 </dt> <dt>
 
-[**CIM- \_ Ethernetport**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport)
+[**CIM \_ EthernetPort**](/previous-versions/windows/desktop/iscsitarg/cim-ethernetport)
 </dt> </dl>
 
  

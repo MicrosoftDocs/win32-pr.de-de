@@ -1,95 +1,95 @@
 ---
-title: Objektmodell Hierarchie
-description: Die Objekte im SDO-Objektmodell werden in einer Hierarchie angeordnet. Dies bedeutet, dass Objekte in SDO auf andere Objekte in SDO zugreifen können.
+title: Objektmodellhierarchie
+description: Die Objekte im SDO-Objektmodell sind in einer Hierarchie angeordnet. Dies bedeutet, dass Objekte in SDO Zugriff auf andere Objekte in SDO bieten.
 ms.assetid: 22159f61-2b35-4a0d-9b8b-8cb0a8192afb
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d2484b4d7402f8a5b43a590651f36d4d1707bca2
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f3f63b5692571bab49580251d6ef879adde8ae9a57af4c541404aabc48538e38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119063340"
 ---
-# <a name="object-model-hierarchy"></a>Objektmodell Hierarchie
+# <a name="object-model-hierarchy"></a>Objektmodellhierarchie
 
-Die Objekte im SDO-Objektmodell werden in einer Hierarchie angeordnet. Dies bedeutet, dass Objekte in SDO auf andere Objekte in SDO zugreifen können.
+Die Objekte im SDO-Objektmodell sind in einer Hierarchie angeordnet. Dies bedeutet, dass Objekte in SDO Zugriff auf andere Objekte in SDO bieten.
 
--Objekte ermöglichen den Zugriff auf andere-Objekte auf zwei Arten. Eine Möglichkeit besteht darin, dass das-Objekt eine Schnittstelle verfügbar macht, die Methoden zum Abrufen anderer Objekte bereitstellt. Ein Beispiel für diesen Ansatz ist das Computer Objekt. Das Computer Objekt macht die [**isdomachine**](/windows/desktop/api/sdoias/nn-sdoias-isdomachine) -Schnittstelle verfügbar. Die [**isdomachine:: getservicesdo**](/windows/desktop/api/sdoias/nf-sdoias-isdomachine-getservicesdo) -Methode ruft ein Dienst Objekt ab. Die [**isdomachine:: getusersdo**](/windows/desktop/api/sdoias/nf-sdoias-isdomachine-getusersdo) -Methode ruft ein Benutzerobjekt ab.
+Objekte bieten auf zwei Arten Zugriff auf andere Objekte. Eine Möglichkeit besteht darin, dass das Objekt eine Schnittstelle verfügbar macht, die Methoden zum Abrufen anderer Objekte bereitstellt. Ein Beispiel für diesen Ansatz ist das Machine-Objekt. Das Machine-Objekt macht die [**ISdoMachine-Schnittstelle**](/windows/desktop/api/sdoias/nn-sdoias-isdomachine) verfügbar. Die [**ISdoMachine::GetServiceSDO-Methode**](/windows/desktop/api/sdoias/nf-sdoias-isdomachine-getservicesdo) ruft ein Service-Objekt ab. Die [**ISdoMachine::GetUserSDO-Methode**](/windows/desktop/api/sdoias/nf-sdoias-isdomachine-getusersdo) ruft ein Benutzerobjekt ab.
 
-![Computer Objekt, das die isdomachine-Schnittstelle](images/sdo01.png)
+![Machine Object Exposing isdomachine interface (Isdomachine-Schnittstelle verfügbar machendes Computerobjekt)](images/sdo01.png)
 
-Weitere Informationen finden Sie unter Abrufen von [Dienst-und Benutzer-SDOs](/windows/desktop/Nps/sdo-obtaining-service-and-user-sdos).
+Weitere Informationen finden Sie unter [Abrufen von Dienst- und Benutzer-SDOs.](/windows/desktop/Nps/sdo-obtaining-service-and-user-sdos)
 
-Die zweite Möglichkeit, dass Objekte auf andere Objekte zugreifen, besteht darin, dass eine Objekt Auflistung als Eigenschaft des Objekts dargestellt wird, in dem Sie enthalten ist. Rufen Sie zum Abrufen einer Objekt Auflistung [**isdo:: GetProperty**](/windows/desktop/api/sdoias/nf-sdoias-isdo-getproperty) für die-Eigenschaft eines Objekts auf, das die Auflistung darstellt. Um z. b. die Richtlinien Auflistung abzurufen, rufen Sie **isdo:: GetProperty** in der [**isdo**](/windows/desktop/api/sdoias/nn-sdoias-isdo) -Schnittstelle auf, die vom NPS-Objekt verfügbar gemacht wird.
+Die zweite Möglichkeit, auf die Objekte Zugriff auf andere Objekte gewähren, besteht darin, dass eine Objektauflistung als Eigenschaft des Objekts dargestellt wird, das sie enthält. Um eine Objektauflistung abzurufen, rufen [**Sie ISdo::GetProperty**](/windows/desktop/api/sdoias/nf-sdoias-isdo-getproperty) für die -Eigenschaft eines Objekts auf, das die Auflistung darstellt. Um beispielsweise die Policies-Auflistung abzurufen, rufen **Sie ISdo::GetProperty** für die [**ISdo-Schnittstelle**](/windows/desktop/api/sdoias/nn-sdoias-isdo) auf, die vom NPS-Objekt verfügbar gemacht wird.
 
 > [!Note]  
-> Der Internet Authentifizierungsdienst (IAS) wurde ab Windows Server 2008 in den Netzwerk Richtlinien Server (Network Policy Server, NPS) umbenannt.
+> Der Internetauthentifizierungsdienst (INTERNET Authentication Service, IAS) wurde ab Windows Server 2008 in Netzwerkrichtlinienserver (Network Policy Server, NPS) umbenannt.
 
- 
+ 
 
-![Abrufen der Richtlinien Sammlung](images/sdo02.png)
+![Abrufen der Richtliniensammlung](images/sdo02.png)
 
-Beispielcode, der die Richtlinien Auflistung abruft, finden Sie unter [Abrufen einer](/windows/desktop/Nps/sdo-retrieving-a-collection)Auflistung.
+Beispielcode zum Abrufen der Richtlinienauflistung finden Sie unter [Abrufen einer Sammlung.](/windows/desktop/Nps/sdo-retrieving-a-collection)
 
-Das [**NPS-Server Datenobjekt**](/windows/desktop/api/sdoias/ne-sdoias-iasproperties) verfügt über die folgenden Eigenschaften, die Sammlungen darstellen:
+Das [**NPS-Serverdatenobjekt**](/windows/desktop/api/sdoias/ne-sdoias-iasproperties) verfügt über die folgenden Eigenschaften, die Auflistungen darstellen:
 
 <dl> <dt>
 
-<span id="Auditors"></span><span id="auditors"></span><span id="AUDITORS"></span>Rechnung
+<span id="Auditors"></span><span id="auditors"></span><span id="AUDITORS"></span>Revisionsstelle
 </dt> <dd>
 
-Der einzige Auditor in der Prüfer Sammlung ist das [**NT-Ereignisprotokoll**](/windows/desktop/api/sdoias/ne-sdoias-nteventlogproperties).
+Der einzige Prüfer in der Prüfersammlung ist das [**NT-Ereignisprotokoll**](/windows/desktop/api/sdoias/ne-sdoias-nteventlogproperties).
 
 </dd> <dt>
 
-<span id="Policies"></span><span id="policies"></span><span id="POLICIES"></span>Policies
+<span id="Policies"></span><span id="policies"></span><span id="POLICIES"></span>Politik
 </dt> <dd>
 
-Jedes [**Richtlinien Objekt**](/windows/desktop/api/sdoias/ne-sdoias-policyproperties) verfügt über eine-Eigenschaft, die eine Auflistung von Bedingungen darstellt.
+Jedes [**Richtlinienobjekt**](/windows/desktop/api/sdoias/ne-sdoias-policyproperties) verfügt über eine -Eigenschaft, die eine Auflistung von Bedingungen darstellt.
 
 </dd> <dt>
 
-<span id="Profiles"></span><span id="profiles"></span><span id="PROFILES"></span>Liert
+<span id="Profiles"></span><span id="profiles"></span><span id="PROFILES"></span>Profile
 </dt> <dd>
 
-Jedes [**Profil Objekt**](/windows/desktop/api/sdoias/ne-sdoias-profileproperties) in den Profil Auflistungen verfügt über eine-Eigenschaft, die eine Attribut Auflistung darstellt. Eine Liste der Attribute, die von SDO unterstützt werden, finden [Sie unter Unterstützte SDO-Attribute](/windows/desktop/Nps/sdo-sdo-supported-attributes) .
+Jedes [**Profilobjekt**](/windows/desktop/api/sdoias/ne-sdoias-profileproperties) in den Profiles-Auflistungen verfügt über eine -Eigenschaft, die eine Attributauflistung darstellt. Eine Liste der von [SDO](/windows/desktop/Nps/sdo-sdo-supported-attributes) unterstützten Attribute finden Sie unter Unterstützte SDO-Attribute.
 
 </dd> <dt>
 
-<span id="Protocols"></span><span id="protocols"></span><span id="PROTOCOLS"></span>Protokollen
+<span id="Protocols"></span><span id="protocols"></span><span id="PROTOCOLS"></span>Protokolle
 </dt> <dd>
 
-Die Protokolle-Auflistung enthält das RADIUS-Protokoll Objekt, das eine Clients-Sammlung enthält, die RADIUS-Clients darstellt. Siehe [Hinzufügen eines Clients](/windows/desktop/Nps/sdo-adding-a-client) für Beispielcode, der zeigt, wie die Client Auflistung abgerufen wird.
+Die protocols-Auflistung enthält das RADIUS-Protokollobjekt, das eine Clientssammlung enthält, die RADIUS-Clients darstellt. Beispielcode zum Abrufen [der Clientsammlung](/windows/desktop/Nps/sdo-adding-a-client) finden Sie unter Hinzufügen eines Clients.
 
 </dd> <dt>
 
-<span id="Proxy_Policies"></span><span id="proxy_policies"></span><span id="PROXY_POLICIES"></span>Proxy Richtlinien
+<span id="Proxy_Policies"></span><span id="proxy_policies"></span><span id="PROXY_POLICIES"></span>Proxyrichtlinien
 </dt> <dd>
 
-Diese Sammlung enthält Netzwerk Zugriffsrichtlinien, die für die Verarbeitung von Verbindungsanforderungen verwendet werden.
+Diese Sammlung enthält Netzwerkzugriffsrichtlinien, die für die Verarbeitung von Verbindungsanforderungen verwendet werden.
 
 </dd> <dt>
 
-<span id="Proxy_Profiles"></span><span id="proxy_profiles"></span><span id="PROXY_PROFILES"></span>Proxy profile
+<span id="Proxy_Profiles"></span><span id="proxy_profiles"></span><span id="PROXY_PROFILES"></span>Proxyprofile
 </dt> <dd>
 
-Diese Sammlung enthält Profile, die für die Verarbeitung von Verbindungsanforderungen verwendet werden.
+Diese Auflistung enthält Profile, die für die Verarbeitung von Verbindungsanforderungen verwendet werden.
 
 </dd> <dt>
 
-<span id="RADIUS_Server_Groups"></span><span id="radius_server_groups"></span><span id="RADIUS_SERVER_GROUPS"></span>RADIUS-Server Gruppen
+<span id="RADIUS_Server_Groups"></span><span id="radius_server_groups"></span><span id="RADIUS_SERVER_GROUPS"></span>RADIUS-Servergruppen
 </dt> <dd>
 
-Jede [**RADIUS-Server Gruppe**](/windows/desktop/api/sdoias/ne-sdoias-radiusservergroupproperties) in der RADIUS-Server Gruppen Auflistung verfügt über eine-Eigenschaft, die die Sammlung der Server in dieser Server Gruppe darstellt.
+Jede [**RADIUS-Servergruppe**](/windows/desktop/api/sdoias/ne-sdoias-radiusservergroupproperties) in der RADIUS-Servergruppenauflistung verfügt über eine -Eigenschaft, die die Auflistung der Server in dieser Servergruppe darstellt.
 
 </dd> <dt>
 
-<span id="Request_Handlers"></span><span id="request_handlers"></span><span id="REQUEST_HANDLERS"></span>Anforderungs Handler
+<span id="Request_Handlers"></span><span id="request_handlers"></span><span id="REQUEST_HANDLERS"></span>Anforderungshandler
 </dt> <dd>
 
-Diese Sammlung enthält die "Microsoft Realm Evaluator"-Sammlung. Die Einstellungen "Microsoft NT Sam-Authentifizierung" und "Microsoft Accounting" sind auch in dieser Sammlung verfügbar.
+Diese Sammlung enthält die Sammlung "Microsoft Realms Evaluator". Die Einstellungen "Microsoft NT SAM Authentication" und "Microsoft Accounting" sind ebenfalls in dieser Sammlung verfügbar.
 
 </dd> </dl>
 
@@ -97,12 +97,12 @@ Diese Sammlung enthält die "Microsoft Realm Evaluator"-Sammlung. Die Einstellun
 
 <dl> <dt>
 
-[SDO-Objekte und-Eigenschaften](/windows/desktop/Nps/sdo-objects-and-properties)
+[SDO-Objekte und -Eigenschaften](/windows/desktop/Nps/sdo-objects-and-properties)
 </dt> <dt>
 
-[Unterstützte SDO-Attribute](/windows/desktop/Nps/sdo-sdo-supported-attributes)
+[Von SDO unterstützte Attribute](/windows/desktop/Nps/sdo-sdo-supported-attributes)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

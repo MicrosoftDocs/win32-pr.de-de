@@ -13,7 +13,7 @@ ms.locfileid: "118750785"
 ---
 # <a name="iagentcharacterexgethelpmodeon"></a>IAgentCharacterEx::GetHelpModeOn
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT GetHelpModeOn(
@@ -21,7 +21,7 @@ HRESULT GetHelpModeOn(
 );
 ```
 
-Ruft ab, ob der kontextsensitive Hilfemodus für das Zeichen aktiviert ist.
+Ruft ab, ob der kontextbezogene Hilfemodus für das Zeichen aktiviert ist.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
@@ -30,13 +30,13 @@ Ruft ab, ob der kontextsensitive Hilfemodus für das Zeichen aktiviert ist.
 <span id="pbHelpModeOn"></span><span id="pbhelpmodeon"></span><span id="PBHELPMODEON"></span>*pbHelpModeOn*
 </dt> <dd>
 
-Die Adresse einer Variablen, die **TRUE empfängt,** wenn der Hilfemodus für das Zeichen aktiviert ist, und **False,** wenn dies nicht der Fall ist.
+Adresse einer Variablen, die **True** empfängt, wenn der Hilfemodus für das Zeichen aktiviert ist, **andernfalls FALSE.**
 
 </dd> </dl>
 
-Wenn diese Eigenschaft auf **True** festgelegt ist, ändert sich der Mauszeiger in das kontextsensitive Hilfebild, wenn er über das Zeichen oder über das Popupmenü für das Zeichen verschoben wird. Wenn der Benutzer auf das Zeichen klickt oder es zieht oder auf ein Element im Popupmenü des Zeichens klickt, löst der Server das [**IAgentNotifySinkEx::HelpComplete-Ereignis**](https://www.bing.com/search?q=**IAgentNotifySinkEx::HelpComplete**) aus und beendet den Hilfemodus.
+Wenn diese Eigenschaft auf **True** festgelegt ist, ändert sich der Mauszeiger in das kontextbezogene Hilfebild, wenn er über das Zeichen oder über das Popupmenü für das Zeichen verschoben wird. Wenn der Benutzer auf das Zeichen klickt oder es zieht oder auf ein Element im Popupmenü des Zeichens klickt, löst der Server das [**IAgentNotifySinkEx::HelpComplete-Ereignis**](https://www.bing.com/search?q=**IAgentNotifySinkEx::HelpComplete**) aus und beendet den Hilfemodus.
 
-Im Hilfemodus sendet der Server keine [**IAgentNotifySink::Click-,**](iagentnotifysink--click.md) [**IAgentNotifySink::D ragStart-,**](iagentnotifysink--dragstart.md) [**IAgentNotifySink::D ragComplete-**](iagentnotifysink--dragcomplete.md)und [**IAgentNotifySink::Command-Ereignisse,**](iagentnotifysink--command.md) es sei denn, die [**GetAutoPopupMenu-Eigenschaft**](https://www.bing.com/search?q=**GetAutoPopupMenu**) gibt **True zurück.** In diesem Fall sendet der Server das **IAgentNotifySink::Click-Ereignis** (beendet den Hilfemodus nicht), sondern nur für die rechte Maustaste, damit Sie das Popupmenü anzeigen können.
+Im Hilfemodus sendet der Server die Ereignisse [**IAgentNotifySink::Click,**](iagentnotifysink--click.md) [**IAgentNotifySink::D ragStart,**](iagentnotifysink--dragstart.md) [**IAgentNotifySink::D ragComplete**](iagentnotifysink--dragcomplete.md)und [**IAgentNotifySink::Command**](iagentnotifysink--command.md) nicht, es sei denn, die [**GetAutoPopupMenu-Eigenschaft**](https://www.bing.com/search?q=**GetAutoPopupMenu**) gibt **True** zurück. In diesem Fall sendet der Server das **IAgentNotifySink::Click-Ereignis** (beendet nicht den Hilfemodus), sondern nur für die rechte Maustaste, damit Sie das Popupmenü anzeigen können.
 
 Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch Ihre Clientanwendung. Die Einstellung wirkt sich nicht auf andere Clients des Zeichens oder anderer Zeichen Ihrer Clientanwendung aus.
 

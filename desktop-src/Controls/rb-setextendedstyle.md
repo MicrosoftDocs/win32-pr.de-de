@@ -1,25 +1,25 @@
 ---
-title: RB_SETEXTENDEDSTYLE Meldung
+title: RB_SETEXTENDEDSTYLE-Nachricht
 description: Legt den erweiterten Stil fest.
 ms.assetid: 8e2fb1ca-d4f4-436b-b432-7e0721efa1a5
 keywords:
-- Windows-Steuerelemente für RB_SETEXTENDEDSTYLE Meldung
+- RB_SETEXTENDEDSTYLE von Windows-Steuerelementen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 042ad89bd77c57a0c5c618b483499dcc5192ec14
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 3b3ed7997785a2eac9b8ac2a345839ae5301263d83af2797bbb75cdfd6cc2fba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106338227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078664"
 ---
-# <a name="rb_setextendedstyle-message"></a>Meldung "RB- \_ textendedstyle"
+# <a name="rb_setextendedstyle-message"></a>RB \_ SETEXTENDEDSTYLE-Meldung
 
 Diese Meldung ist nicht implementiert.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,31 +1,31 @@
 ---
-description: Komposition und Ebenenerstellung
+description: Komposition und Ebenen
 ms.assetid: c1aefd92-b47f-4af1-8299-9ba401ad5fe8
-title: Komposition und Ebenenerstellung
+title: Komposition und Ebenen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e7dce1e1df87b5ffc5c65e9090c6fb7266b972d3
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 8b173ed0727869d3630a2241d7237cf74fb5143a907a95fcc53901a7b85f285c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954229"
 ---
-# <a name="composition-and-layering"></a>Komposition und Ebenenerstellung
+# <a name="composition-and-layering"></a>Komposition und Ebenen
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-In einer Auflistung von Spuren hat der erste Titel die niedrigste Priorität (Priorität 0), und jede nachfolgende Spur hat eine Priorität, die eine Ebene höher ist. Auf jeder Prioritätsstufe blenden die Quell Clips in dieser Nachverfolgung die Quell Clips in den nachstehenden Spuren aus, es sei denn, diese Ebene enthält auch einen Übergang. Daher können Sie sich vorstellen, dass es beim Rendern mehrere Durchgänge gibt.
+In einer Sammlung von Spuren hat die erste Spur die niedrigste Priorität (Priorität 0), und jede nachfolgende Spur hat eine Priorität um eine Ebene höher. Auf jeder Prioritätsebene blenden die Quellclips in diesem Track die Quellclips in den darunter stehenden Spuren aus, es sei denn, diese Ebene enthält auch einen Übergang. Daher können Sie sich vorstellen, dass DES beim Rendern mehrere Durchläufe macht.
 
-Zuerst wird Track 0 gerendert. Es gibt keine "unter"-Nachverfolgung 0, sodass leere Bereiche als solides schwarzes Bild gerendert werden. Übergänge in dieser Ebene treten zwischen dem schwarzen Bild und der Nachverfolgung 0 oder umgekehrt auf. Des legt den Titel 1 auf der Nachverfolgung 0 fest und erzeugt dabei alle Übergänge zwischen den beiden Titeln. Das Ergebnis ist die Zusammensetzung der beiden Titel. Anschließend wird Track 2 auf diesem zusammengesetzten platziert. Übergänge auf dieser Ebene treten zwischen dem zusammengesetzten und dem Track 2 auf. Der Prozess wird fortgesetzt, bis die letzte (höchste Priorität) nachverfolgt wird.
+Zuerst wird track 0 gerendert. Es gibt nichts "unter" Track 0, sodass leere Bereiche als ein schwarzes Vollbild gerendert werden. Übergänge in dieser Schicht erfolgen zwischen dem schwarzen Bild und Track 0 oder umgekehrt. DES legt Track 1 über Track 0 ab und generiert alle Übergänge zwischen den beiden Spuren. Das Ergebnis ist die Zusammengesetzte der beiden Spuren. Als Nächstes platziert sie Track 2 auf dieser Zusammengesetzten. Übergänge auf dieser Ebene erfolgen zwischen dem zusammengesetzten und dem Track 2. Der Prozess wird fortgesetzt, bis die letzte Spur (mit der höchsten Priorität) heruntergefahren ist.
 
-Wenn mehrere Spuren zusammengeführt werden, Verhalten Sie sich wie ein einzelner Track (virtueller Titel genannt). Das Kompositions Objekt kapselt dieses Verhalten, sodass komplexe Übergänge möglich sind. Beispielsweise kann ein Videoclip auf einen zweiten Clip gesetzt werden, während der zusammengesetzte (beide Clips und das Löschen) zu einem dritten Clip werden.
+Wenn mehrere Spuren zusammengesetzt werden, verhalten sie sich wie eine einzelne Spur (als virtuelle Spur bezeichnet). Das Kompositionsobjekt kapselt dieses Verhalten und ermöglicht komplexe Übergänge. Beispielsweise kann ein Videoclip auf einen zweiten Clip zurückgelöscht werden, während der zusammengesetzte Clip (beide Clips plus das Zurücksetzungsvideo) zu einem dritten Clip verblasst.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Einführung in DirectShow-Bearbeitungs Dienste](getting-started-with-directshow-editing-services.md)
+[Erste Schritte mit DirectShow-Bearbeitungsdiensten](getting-started-with-directshow-editing-services.md)
 </dt> </dl>
 
  

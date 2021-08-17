@@ -30,7 +30,7 @@ ms.locfileid: "118901320"
 Die **PvkGetCryptProv-Funktion** ruft ein Handle für einen Kryptografiedienstanbieter [](../secgloss/p-gly.md) (Cryptographic [*Service Provider,*](../secgloss/c-gly.md) CSP) basierend auf einer Datei mit einem privaten Schlüssel oder einem Schlüsselcontainernamen ab.
 
 > [!Note]  
-> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch eine Verknüpfung mit Mssign32.dll.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um eine dynamische Verknüpfung mit Mssign32.dll.
 
  
 
@@ -81,7 +81,7 @@ Ein Zeiger auf eine auf NULL beendete Zeichenfolge für den CSP-Namen.
 *dwProviderType* \[ In\]
 </dt> <dd>
 
-Ein **DWORD-Wert,** der den Kryptografieanbietertyp darstellt. Weitere Informationen finden Sie unter [Kryptografieanbietertypen.](cryptographic-provider-types.md)
+Ein **DWORD-Wert,** der den Kryptografieanbietertyp darstellt. Weitere Informationen finden Sie unter [Kryptografieanbietertypen](cryptographic-provider-types.md).
 
 </dd> <dt>
 
@@ -124,7 +124,7 @@ Ein Zeiger auf ein Handle für den CSP.
 
 Wenn die Methode erfolgreich ist, wird **S \_ OK zurückgegeben.**
 
-Wenn bei der Methode ein Fehler auftritt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte.](common-hresult-values.md)
+Wenn bei der Methode ein Fehler auftritt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
 
 ## <a name="remarks"></a>Hinweise
 

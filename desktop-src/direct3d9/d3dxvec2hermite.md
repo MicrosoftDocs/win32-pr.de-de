@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVec2Hermite-Funktion (D3dx9math.h): Führt eine Hermite-Splineinterpolation mit den angegebenen 2D-Vektoren aus.'
+description: 'D3DXVec2Hermite-Funktion (D3dx9math.h): Führt eine Hermite-Splineinterpolation mithilfe der angegebenen 2D-Vektoren aus.'
 ms.assetid: 30eb9490-bc01-4449-adfb-1c552e8ad3e7
 title: D3DXVec2Hermite-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 88073e23826362e1f9a753f411ac89ac1e272fc6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 052174ba85370c62dc8a4618b44880f1e750801a78cf61963d863a9057c10568
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118804052"
 ---
 # <a name="d3dxvec2hermite-function-d3dx9mathh"></a>D3DXVec2Hermite-Funktion (D3dx9math.h)
 
-Führt eine Hermite-Splineinterpolation unter Verwendung der angegebenen 2D-Vektoren aus.
+Führt eine Hermite-Splineinterpolation mithilfe der angegebenen 2D-Vektoren aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -105,21 +105,21 @@ Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***
 
 Zeiger auf eine [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) die das Ergebnis der Hermite-Splineinterpolation ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **D3DXVec2Hermite-Funktion** interpoliert mithilfe der Hermite-Splineinterpolation von (positionA, tangentA) nach (positionB, tangentB).
+Die **D3DXVec2Hermite-Funktion** interpoliert mithilfe der Hermite-Splineinterpolation von (positionA, tangentA) in (positionB, tangentB).
 
-Die Splineinterpolation ist eine Verallgemeinerung des Splines mit einfacherEntschärfung. Die Rampe ist eine Funktion von Q(s) mit den folgenden Eigenschaften.
+Die Splineinterpolation ist eine Generalisierung der einfachen, einfachen Spline. Die Rampe ist eine Funktion von Q(s) mit den folgenden Eigenschaften.
 
-Q(s) = Assstelle + Bssstelle + Cs + D (und daher Q(s) = 3Aszept + 2Bs + C)
+Q(s) = As( + Bs) + Cs + D (und daher Q'(s) = 3As× + 2Bs + C)
 
 a) Q(0) = v1, also Q'(0) = t1
 
 b) Q(1) = v2, also Q'(1) = t2
 
-v1 ist der Inhalt von pV1, v2 im Inhalt von pV2, t1 ist der Inhalt von pT1 und t2 ist der Inhalt von pT2.
+v1 ist der Inhalt von pV1, v2 im Inhalt von pV2, t1 ist der Inhalt von pT1 und t2 der Inhalt von pT2.
 
-Diese Eigenschaften werden für A, B, C, D verwendet.
+Diese Eigenschaften werden zur Lösung für A, B, C, D verwendet.
 
 ``` syntax
 D = v1  (from a)
@@ -128,7 +128,7 @@ C = t1  (from a)
 A + B = v2 - v1 - t1 (substituting for C and D)
 ```
 
-Schließen Sie die Lösungen für A, B, C und D ein, um Q(s) zu generieren.
+Schließen Sie die Lösungen für A, B, C und D ein, um Fragen zu generieren.
 
 ``` syntax
 A = 2v1 - 2v2 + t2 + t1 
@@ -139,13 +139,13 @@ D = v1
 
 Dies ergibt:
 
-Q(s) = (2v1 - 2v2 + t2 + t1)ssstelle + (3v2 - 3v1 - 2t1 - t2)stif + t1s + v1
+Q(s) = (2v1 - 2v2 + t2 + t1)s) + (3v2 - 3v1 - 2t1 - t2)s× t1s + v1
 
-Dies kann wie hier angezeigt neu angeordnet werden:
+Dies kann neu angeordnet werden wie:
 
-Q(s) = (2ssstelle – 3ssstelle + 1)v1 + (-2ssstelle + 3ssstelle)v2 + (ssstelle – 2ssstelle + s)t1 + (ssstelle – ssstelle)t2
+Q(s) = (2s, 3s) + 1)v1 + (-2s, + 3s) v2 + (ss - 2s): + s)t1 + (s) - s2)t2
 
-Hermite-Splines sind nützlich zum Steuern der Animation, da die Kurve alle Kontrollpunkte durchläuft. Da die Position und der Tangens explizit an den Enden jedes Segments angegeben werden, ist es außerdem einfach, eine kontinuierliche C2-Kurve zu erstellen, solange Sie sicherstellen, dass Ihre Anfangsposition und der Tangens mit den Endwerten des letzten Segments übereinstimmen.
+Einsemit-Splines sind nützlich, um Animationen zu steuern, da die Kurve alle Kontrollpunkte durchläuft. Da die Position und der Tangens explizit an den Enden jedes Segments angegeben werden, ist es außerdem einfach, eine kontinuierliche C2-Kurve zu erstellen, solange Sie sicherstellen, dass Ihre Anfangsposition und der Tangens mit den Endwerten des letzten Segments übereinstimmen.
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXVec2Hermite-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
@@ -153,7 +153,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

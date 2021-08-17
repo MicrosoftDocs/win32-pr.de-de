@@ -1,5 +1,5 @@
 ---
-description: Die Schlüsselwörter mit niedriger Konfidenz für das Element.
+description: Die Schlüsselwörter für niedrige Konfidenz für das Element.
 ms.assetid: 606619aa-2995-4024-99ee-64de9f2109b0
 title: System.LowKeywords
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118726314"
 ---
 # <a name="systemlowkeywords"></a>System.LowKeywords
 
-Die Schlüsselwörter mit niedriger Konfidenz für das Element.
+Die Schlüsselwörter für niedrige Konfidenz für das Element.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1
 

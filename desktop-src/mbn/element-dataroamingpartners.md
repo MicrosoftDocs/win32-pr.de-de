@@ -89,7 +89,7 @@ Keine.
 <thead>
 <tr class="header">
 <th>Übergeordnetes Element</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>

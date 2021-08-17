@@ -1,9 +1,9 @@
 ---
 title: Arbeiten mit Medienpuffern (Windows Media Format 11 SDK)
-description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | Arbeiten mit Medienpuffern (Windows Media Format 11 SDK)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | Arbeiten mit Medienpuffern (Windows Media Format 11 SDK)
 ms.assetid: 45428737-3f72-44b5-9606-69fa8aba308c
 keywords:
-- Arbeiten mit Medienpuffern im Windows-Medienformat
+- Arbeiten mit Medienpuffern windows Medienformat
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118697751"
 ---
 # <a name="working-with-media-buffers-windows-media-format-11-sdk"></a>Arbeiten mit Medienpuffern (Windows Media Format 11 SDK)
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und Digitalsignalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
  
 

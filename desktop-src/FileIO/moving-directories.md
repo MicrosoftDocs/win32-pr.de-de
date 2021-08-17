@@ -1,21 +1,21 @@
 ---
-description: Zum Verschieben eines Verzeichnisses an einen anderen Speicherort, zusammen mit den darin enthaltenen Dateien und Unterverzeichnissen, wird die Funktion MoveFileEx, movefilewithprogress oder movefiletransktive aufgerufen.
+description: Um ein Verzeichnis zusammen mit den darin enthaltenen Dateien und Unterverzeichnissen an einen anderen Speicherort zu verschieben, rufen Sie die Funktion MoveFileEx, MoveFileWithProgress oder MoveFileTransacted auf.
 ms.assetid: ca56c109-d6a3-456e-956c-126ce4aee8ba
 title: Verschieben von Verzeichnissen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 56167f0831894350a044104bce1f41ef3c5770ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: da891e22c2840ad9460f5fb43c8cc1b130905b86de80a988be2eeeb9a4010ac5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366476"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118951139"
 ---
 # <a name="moving-directories"></a>Verschieben von Verzeichnissen
 
-Zum Verschieben eines Verzeichnisses an einen anderen Speicherort, zusammen mit den darin enthaltenen Dateien und Unterverzeichnissen, wird die Funktion [**MoveFileEx**](/windows/desktop/api/WinBase/nf-winbase-movefileexa), [**movefilewithprogress**](/windows/desktop/api/WinBase/nf-winbase-movefilewithprogressa)oder [**movefiletransktive**](/windows/desktop/api/WinBase/nf-winbase-movefiletransacteda) aufgerufen. Die Funktion " [**fivefilewithprogress**](/windows/desktop/api/WinBase/nf-winbase-movefilewithprogressa) " verfügt über die gleiche Funktionalität wie " [**muvefileex**](/windows/desktop/api/WinBase/nf-winbase-movefileexa)", **mit dem Unterschied, dass "** " mit "" "mit" "" "mit" "" "mit" ". Die Funktion " [**fivefiletransktive**](/windows/desktop/api/WinBase/nf-winbase-movefiletransacteda) " ermöglicht es Ihnen, den Vorgang als transaktiven Vorgang auszuführen.
+Um ein Verzeichnis zusammen mit den darin enthaltenen Dateien und Unterverzeichnissen an einen anderen Speicherort zu verschieben, rufen Sie die Funktion [**MoveFileEx,**](/windows/desktop/api/WinBase/nf-winbase-movefileexa) [**MoveFileWithProgress**](/windows/desktop/api/WinBase/nf-winbase-movefilewithprogressa)oder [**MoveFileTransacted**](/windows/desktop/api/WinBase/nf-winbase-movefiletransacteda) auf. Die [**MoveFileWithProgress-Funktion**](/windows/desktop/api/WinBase/nf-winbase-movefilewithprogressa) verfügt über die gleiche Funktionalität wie [**MoveFileEx,**](/windows/desktop/api/WinBase/nf-winbase-movefileexa)mit der Ausnahme, dass **Sie mit MoveFileWithProgress** eine Rückrufroutine angeben können, die Benachrichtigungen zum Status des Vorgangs empfängt. Mit der [**MoveFileTransacted-Funktion**](/windows/desktop/api/WinBase/nf-winbase-movefiletransacteda) können Sie den Vorgang als transaktiven Vorgang ausführen.
 
-Das folgende Beispiel veranschaulicht die Verwendung der Funktion " [**fivefileex**](/windows/desktop/api/WinBase/nf-winbase-movefileexa) " mit einem Verzeichnis.
+Im folgenden Beispiel wird die Verwendung der [**MoveFileEx-Funktion**](/windows/desktop/api/WinBase/nf-winbase-movefileexa) mit einem Verzeichnis veranschaulicht.
 
 
 ```C++

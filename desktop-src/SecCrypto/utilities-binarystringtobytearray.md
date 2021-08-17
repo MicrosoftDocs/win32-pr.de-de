@@ -1,7 +1,7 @@
 ---
-description: Konvertiert eine Binär Zeichen-Zeichenfolge in ein Bytearray.
+description: Konvertiert eine binär gepackte Zeichenfolge in ein Bytearray.
 ms.assetid: 61eeef7b-c962-4f10-ab93-6371db0b37a3
-title: Utilities. binarystringdebytearray-Methode
+title: Utilities.BinaryStringToByteArray-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 54d2463d38ea9d7f01037e932531465dd2d06a70
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 69528e14496d6055605532411b558085ac963c911022a9a734d7d4cb9129004e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118896599"
 ---
-# <a name="utilitiesbinarystringtobytearray-method"></a>Utilities. binarystringdebytearray-Methode
+# <a name="utilitiesbinarystringtobytearray-method"></a>Utilities.BinaryStringToByteArray-Methode
 
-\[Die **binarystringtobytearray** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind.\]
+\[Die **BinaryStringToByteArray-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar.\]
 
-Die **binarystringdebytearray** -Methode konvertiert eine Binär Zeichenfolge in ein Bytearray.
+Die **BinaryStringToByteArray-Methode** konvertiert eine binär gepackte Zeichenfolge in ein Bytearray.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ Utilities.BinaryStringToByteArray( _
 
 <dl> <dt>
 
-*Binarystring* \[ in\]
+*BinaryString* \[ In\]
 </dt> <dd>
 
-Die Binär gepackte Zeichenfolge, die in ein Bytearray konvertiert werden soll.
+Die binär gepackte Zeichenfolge, die in ein Bytearray konvertiert werden soll.
 
 </dd> </dl>
 
@@ -58,7 +58,7 @@ Das Array, das das Ergebnis der Konvertierung enthält.
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 

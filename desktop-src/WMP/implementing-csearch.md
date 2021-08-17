@@ -1,28 +1,28 @@
 ---
-title: Implementieren von csearch
-description: Implementieren von csearch
+title: Implementieren von CSearch
+description: Implementieren von CSearch
 ms.assetid: 3041807a-e7e0-4022-ab90-a8b846bafc0e
 keywords:
-- Windows Media Player-Plug-ins, csearch-Klasse
-- Plug-ins, csearch-Klasse
-- Benutzeroberflächen-Plug-ins, csearch-Klasse
-- UI-Plug-ins, csearch-Klasse
-- Csearch-Klasse
-- Programmier Handbuch, Benutzerschnittstellen-Plug-ins
+- Windows Media Player-Plug-Ins, CSearch-Klasse
+- Plug-Ins, CSearch-Klasse
+- Benutzeroberflächen-Plug-Ins, CSearch-Klasse
+- Benutzeroberflächen-Plug-Ins, CSearch-Klasse
+- CSearch-Klasse
+- Programmierhandbuch, Benutzeroberflächen-Plug-Ins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f36c6446ca0eb6b1cc9dfb5f45044493c2a8fd6b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 56f99f3e232d11075bde9905169099649a3b6e754454ac10af60b8a83493fcd4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515614"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117748155"
 ---
-# <a name="implementing-csearch"></a>Implementieren von csearch
+# <a name="implementing-csearch"></a>Implementieren von CSearch
 
-Die **iwmppluginui** -Schnittstelle verfügt über mehrere Methoden, die von Windows Media Player zu unterschiedlichen Zeiten während des Lebenszyklus einer Plug-in-Instanz aufgerufen werden. Der Assistent stellt grundlegende Implementierungen dieser Methoden sowie den Klassenkonstruktor und-Dekonstruktor sowie andere Klassen Methoden bereit. Die Datei search. h muss geändert werden, damit Windows Media Player mit der Benutzeroberfläche kommunizieren kann, die im nächsten Abschnitt beschrieben wird.
+Die **IWMPPluginUI-Schnittstelle** verfügt über mehrere Methoden, die von Windows Media Player zu unterschiedlichen Zeiten während des Lebenszyklus einer Plug-In-Instanz aufgerufen werden. Der Assistent stellt grundlegende Implementierungen dieser Methoden sowie den Klassenkonstruktor und -destruktor sowie andere Klassenmethoden zur Anwendung. Die Datei Search.h muss geändert werden, damit Windows Media Player mit der Benutzeroberfläche kommunizieren kann. Dies wird im nächsten Abschnitt beschrieben.
 
-Damit die cpluginwindow-Klasse Zugriff auf die private Member-Variable m \_ spcore hat, muss innerhalb der csearch-Klassendefinition eine Friend-Klassen Deklaration erstellt werden, wie im folgenden Code Ausschnitt gezeigt:
+Damit die CPluginWindow-Klasse Zugriff auf die private Membervariable m spCore hat, muss innerhalb der CSearch-Klassendefinition eine Friend-Klassendeklaration vorgenommen werden, wie im folgenden \_ Codeausschnitt gezeigt:
 
 
 ```C++
@@ -46,12 +46,12 @@ friend class CPluginWindow;
 
 <dl> <dt>
 
-[**Programmier Handbuch für Benutzeroberflächen-Plug-ins**](user-interface-plug-ins-programming-guide.md)
+[**Benutzeroberfläche Plug-Ins -Programmierhandbuch**](user-interface-plug-ins-programming-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

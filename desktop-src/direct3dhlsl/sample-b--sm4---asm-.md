@@ -1,23 +1,23 @@
 ---
-title: sample_b (SM4-ASM)
-description: Stichproben von Daten aus dem angegebenen Element/der Textur mithilfe der angegebenen Adresse und des vom angegebenen Sampler identifizierten Filter Modus. | sample_b (SM4-ASM)
+title: sample_b (sm4 – asm)
+description: Stichproben von Daten aus dem angegebenen Element/der angegebenen Textur unter Verwendung der angegebenen Adresse und des vom angegebenen Sampler identifizierten Filtermodus. | sample_b (sm4 – asm)
 ms.assetid: FC0DF03E-9C21-4E88-96ED-EEFE86017E7C
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 72e82696ecc5b01847f87b39cbfeba0c665bcde4
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 9193930aadf8874c759fde3beac7d7da4c9d01b709f6e0b1840b36fe0675ef8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219323"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118790788"
 ---
-# <a name="sample_b-sm4---asm"></a>Beispiel \_ b (SM4-ASM)
+# <a name="sample_b-sm4---asm"></a>Sample \_ b (sm4 - asm)
 
-Stichproben von Daten aus dem angegebenen Element/der Textur mithilfe der angegebenen Adresse und des vom angegebenen Sampler identifizierten Filter Modus.
+Stichproben von Daten aus dem angegebenen Element/der angegebenen Textur unter Verwendung der angegebenen Adresse und des vom angegebenen Sampler identifizierten Filtermodus.
 
 
 
-| Sample \_ b \[ \_ aoffimmi (u, v, w) \] dest \[ . mask \] , srcaddress \[ . Swizzle \] , srkresource \[ . Swizzle \] , srcsampler, srclodbias. Select- \_ Komponente |
+| sample \_ b \[ \_ aoffimmi(u,v,w) \] dest \[ .mask , \] srcAddress \[ .swizzle \] , srcResource \[ .swizzle \] , srcSampler, srcLODBias.select \_ component |
 |-----------------------------------------------------------------------------------------------------------------------------------------|
 
 
@@ -26,31 +26,31 @@ Stichproben von Daten aus dem angegebenen Element/der Textur mithilfe der angege
 
 
 
-| Element                                                                                                               | BESCHREIBUNG                                                                                                                |
+| Element                                                                                                               | Beschreibung                                                                                                                |
 |--------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/>                                                    | \[in \] der Adresse des Vorgangs Ergebnisses.<br/>                                                              |
-| <span id="srcAddress"></span><span id="srcaddress"></span><span id="SRCADDRESS"></span>*srcaddress*<br/>     | \[in \] einem Satz von Texturkoordinaten. Weitere Informationen finden Sie in der [Beispiel](sample--sm4---asm-.md) Anweisung.<br/> |
-| <span id="srcResource"></span><span id="srcresource"></span><span id="SRCRESOURCE"></span>*srkresource*<br/> | \[in \] einem Textur Register. Weitere Informationen finden Sie in der **Beispiel** Anweisung.<br/>                                 |
-| <span id="srcSampler"></span><span id="srcsampler"></span><span id="SRCSAMPLER"></span>*srcsampler*<br/>     | \[in \] einem Samplerregister. Weitere Informationen finden Sie in der **Beispiel** Anweisung.<br/>                                 |
-| <span id="srcLODBias"></span><span id="srclodbias"></span><span id="SRCLODBIAS"></span>*srclodbias*<br/>     | \[\]Weitere Informationen zu diesem Parameter finden Sie im Abschnitt " **Hinweise** ".<br/>                                        |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/>                                                    | \[in \] Die Adresse des Ergebnisses des Vorgangs.<br/>                                                              |
+| <span id="srcAddress"></span><span id="srcaddress"></span><span id="SRCADDRESS"></span>*srcAddress*<br/>     | \[in \] Eine Gruppe von Texturkoordinaten. Weitere Informationen finden [](sample--sm4---asm-.md) Sie in der Beispielanweisung.<br/> |
+| <span id="srcResource"></span><span id="srcresource"></span><span id="SRCRESOURCE"></span>*srcResource*<br/> | \[in \] einem Texturregister. Weitere Informationen finden  Sie in der Beispielanweisung.<br/>                                 |
+| <span id="srcSampler"></span><span id="srcsampler"></span><span id="SRCSAMPLER"></span>*srcSampler*<br/>     | \[in \] einem Samplerregister. Weitere Informationen finden  Sie in der Beispielanweisung.<br/>                                 |
+| <span id="srcLODBias"></span><span id="srclodbias"></span><span id="SRCLODBIAS"></span>*srcLODBias*<br/>     | \[Informationen \] zu diesem Parameter finden Sie im Abschnitt **"Hinweise".**<br/>                                        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Quelldaten können von jedem Ressourcentyp (außer Puffern) stammen. Im Rahmen der Anweisungs Ausführung wird eine zusätzliche Abweichung auf die Detailebene angewendet.
+Die Quelldaten können von einem beliebigen Ressourcentyp stammen, mit Ausnahme von Puffern. Ein zusätzlicher Bias wird auf die Detailebene angewendet, die im Rahmen der Anweisungsausführung berechnet wird.
 
-Diese Anweisung verhält sich wie die [Beispiel](sample--sm4---asm-.md) Anweisung mit dem Hinzufügen des angegebenen *srclodbias* -Werts auf den Detail Wert, der als Teil der Anweisungs Ausführung berechnet wurde, bevor die MIP-Karte ausgewählt wird. Der *srclodbias* -Wert wird der berechneten LOD auf Pixel Basis zusammen mit dem Sampler-miplodbias-Wert hinzugefügt, vor der Klammer an minlod und maxlod.
+Diese Anweisung verhält [](sample--sm4---asm-.md) sich wie die Beispielanweisung mit dem Hinzufügen des angegebenen *srcLODBias-Werts* auf die Ebene des Detailwerts, der als Teil der Anweisungsausführung berechnet wird, bevor die MIP-Zuordnungen ausgewählt werden. Der *srcLODBias-Wert* wird der berechneten LOD pro Pixel zusammen mit dem Wert des Samplers MipLODBias vor der Klammer an MinLOD und MaxLOD hinzugefügt.
 
 ### <a name="restrictions"></a>Beschränkungen
 
--   **Beispiel \_ b** erbt dieselben Einschränkungen wie die [Beispiel](sample--sm4---asm-.md) Anweisung sowie zusätzliche Einschränkungen für den zusätzlichen Parameter.
--   Der Bereich von *srclodbias* ist (-16,0 f bis 15,99 f). Werte außerhalb dieses Bereichs führen zu undefinierten Ergebnissen.
--   *srclodbias* muss eine einzelne Komponentenauswahl verwenden, wenn es sich nicht um eine sofortige skalare handelt.
+-   **Sample \_ b** erbt die gleichen Einschränkungen wie die Beispielanweisung sowie zusätzliche Einschränkungen für den zusätzlichen Parameter. [](sample--sm4---asm-.md)
+-   Der Bereich von *srcLODBias* ist (-16.0f bis 15.99f); -Werte außerhalb dieses Bereichs führen zu nicht definierten Ergebnissen.
+-   *srcLODBias* muss eine einzelne Komponentenauswahl verwenden, wenn es sich nicht um einen skalaren unmittelbaren Selektor handelt.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -62,20 +62,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -85,7 +85,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

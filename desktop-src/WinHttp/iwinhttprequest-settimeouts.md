@@ -1,5 +1,5 @@
 ---
-description: Die SetTimeouts-Methode gibt die einzelnen Timeoutkomponenten eines Sende-/Empfangsvorgang in Millisekunden an.
+description: Die SetTimeouts-Methode gibt die einzelnen Timeoutkomponenten eines Sende-/Empfangsvorgangs in Millisekunden an.
 ms.assetid: c2b6c432-5f3b-4361-8026-1b843c6697ae
 title: IWinHttpRequest::SetTimeouts-Methode
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118562455"
 ---
 # <a name="iwinhttprequestsettimeouts-method"></a>IWinHttpRequest::SetTimeouts-Methode
 
-Die **SetTimeouts-Methode** gibt die einzelnen Timeoutkomponenten eines Sende-/Empfangsvorgang in Millisekunden an.
+Die **SetTimeouts-Methode** gibt die einzelnen Timeoutkomponenten eines Sende-/Empfangsvorgangs in Millisekunden an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,43 +46,43 @@ HRESULT SetTimeouts(
 *ResolveTimeout* \[ In\]
 </dt> <dd>
 
-Time out-Wert, der beim Auflösen eines Hostnamens (z. B. ) in eine IP-Adresse (z. B. `www.microsoft.com` 192.168.131.199) in Millisekunden angewendet wird. Der Standardwert ist 0 (null), d. h. kein Time out (unendlich). Wenn DNS-Timeout mitHILFE von NAME RESOLUTION TIMEOUT angegeben wird, verursacht dies einen Mehraufwand \_ von einem Thread pro \_ Anforderung.
+Beim Auflösen eines Hostnamens (z.B. `www.microsoft.com` ) in eine IP-Adresse (z.B. 192.168.131.199) in Millisekunden angewendeter Time out-Wert. Der Standardwert ist 0 (null), d. h. kein Time out (unendlich). Wenn das DNS-Timeout mitHILFE von NAME RESOLUTION TIMEOUT angegeben \_ \_ wird, entsteht ein Mehraufwand von einem Thread pro Anforderung.
 
 </dd> <dt>
 
 *ConnectTimeout* \[ In\]
 </dt> <dd>
 
-Time out-Wert, der beim Einrichten eines Kommunikationssocket mit dem Zielserver in Millisekunden angewendet wird. Der Standardwert ist 60.000 (60 Sekunden).
+Beim Einrichten eines Kommunikationssockets mit dem Zielserver in Millisekunden wird ein Time out-Wert angewendet. Der Standardwert ist 60.000 (60 Sekunden).
 
 </dd> <dt>
 
 *SendTimeout* \[ In\]
 </dt> <dd>
 
-Time out-Wert, der beim Senden eines einzelnen Pakets von Anforderungsdaten auf dem Kommunikationssocket an den Zielserver in Millisekunden angewendet wird. Eine große Anforderung, die an einen HTTP-Server gesendet wird, wird normalerweise in mehrere Pakete zerbrochen. Das Sende-Time out gilt für das senden jedes Paket einzeln. Der Standardwert ist 30.000 (30 Sekunden).
+Der Time out-Wert, der beim Senden eines einzelnen Pakets von Anforderungsdaten auf dem Kommunikationssocket an den Zielserver in Millisekunden angewendet wird. Eine große Anforderung, die an einen HTTP-Server gesendet wird, wird normalerweise in mehrere Pakete aufgeteilt. das Sendetime out gilt für das individuelle Senden jedes Pakets. Der Standardwert ist 30.000 (30 Sekunden).
 
 </dd> <dt>
 
 *ReceiveTimeout* \[ In\]
 </dt> <dd>
 
-Time out-Wert, der angewendet wird, wenn ein Paket mit Antwortdaten vom Zielserver in Millisekunden empfangen wird. Große Antworten werden in mehrere Pakete zerbrochen. Das Empfangs-Time out gilt für das Abrufen jedes Datenpakets aus dem Socket. Der Standardwert ist 30.000 (30 Sekunden).
+Beim Empfangen eines Pakets mit Antwortdaten vom Zielserver angewendeter Time out-Wert in Millisekunden. Große Antworten werden in mehrere Pakete unterteilt. das Empfangstime out gilt für das Abrufen jedes Datenpakets aus dem Socket. Der Standardwert ist 30.000 (30 Sekunden).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist **S \_ OK bei** Erfolg oder andernfalls ein Fehlerwert.
+Der Rückgabewert ist bei Erfolg **S \_ OK,** andernfalls ein Fehlerwert.
 
 ## <a name="remarks"></a>Hinweise
 
-Alle Parameter sind erforderlich. Der Wert 0 oder -1 legt fest, dass ein Time out unendlich lange wartet. Ein Wert größer als 0 legt den Time out-Wert in Millisekunden fest. Beispielsweise würde 30.000 das Time out auf 30 Sekunden festlegen. Alle negativen Werte, die nicht -1 sind, führen dazu, dass diese Methode fehlschlägt.
+Alle Parameter sind erforderlich. Mit dem Wert 0 oder -1 wird ein Time out festgelegt, um unendlich zu warten. Ein Wert größer als 0 legt den Time out-Wert in Millisekunden fest. Beispielsweise würde 30.000 das Time out auf 30 Sekunden festlegen. Alle negativen Werte außer -1 führen dazu, dass diese Methode fehlschlägt.
 
 Time out-Werte werden auf der Winsock-Ebene angewendet.
 
 > [!Note]  
-> Informationen Windows XP und Windows 2000 finden Sie im Abschnitt Laufzeitanforderungen der [WinHttp-Startseite.](winhttp-start-page.md)
+> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Laufzeitanforderungen](winhttp-start-page.md) der WinHttp-Startseite.
 
  
 
@@ -212,14 +212,14 @@ WinHttpReq.Send();
 |-------------------------------------|--------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher unter Windows XP und Windows 2000.<br/> |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher auf Windows XP und Windows 2000.<br/> |
 | Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

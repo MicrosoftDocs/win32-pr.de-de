@@ -15,7 +15,7 @@ ms.locfileid: "118798732"
 
 ## <a name="using-precomputed-radiance-transfer"></a>Verwenden der vorausbesetzten Radianceübertragung
 
-Es gibt verschiedene Formen der Komplexität in interessanten Szenen, z. B. wie die Beleuchtungsumgebung modelliert wird (d. h. Bereichsbeleuchtungsmodelle im Vergleich zu punkt-/richtungsalen Modellen) und welche Art von globalen Effekten modelliert werden (z. B. Schatten, Interreflectionen, Unteroberflächen-Punktion). Herkömmliche interaktive Renderingtechniken modellieren einen begrenzten Teil dieser Komplexität. PRT ermöglicht diese Auswirkungen mit einigen erheblichen Einschränkungen:
+In interessanten Szenen gibt es verschiedene Formen der Komplexität, z. B. wie die Beleuchtungsumgebung modelliert wird (d. h. Bereichsbeleuchtungsmodelle im Vergleich zu punkt-/richtungsalen Modellen) und welche Art von globalen Effekten modelliert werden (z. B. Schatten, Interreflectionen, Unteroberflächen-Punktion). Herkömmliche interaktive Renderingtechniken modellieren einen begrenzten Teil dieser Komplexität. PRT ermöglicht diese Auswirkungen mit einigen erheblichen Einschränkungen:
 
 -   Es wird davon ausgegangen, dass Objekte fest (d. h. keine Ns) sind.
 -   Es handelt sich um einen objektzentrierten Ansatz (sofern Objekte nicht zusammen verschoben werden, werden diese globalen Effekte nicht zwischen ihnen beibehalten).
@@ -32,9 +32,9 @@ Die folgende Abbildung wird mit dem herkömmlichen Beleuchtungsmodell (n · l) g
 
 ![Screenshot einer Mithilfe des herkömmlichen Beleuchtungsmodells gerenderten Abbildung](images/prt-diffuse-cropped.png)
 
-Die nächste Abbildung wird mit PRT mit der besten Näherung eines einzelnen direktionalen Lichts gerendert, das es auflösen kann. Dies führt zu weichen Schatten, die mit herkömmlichen Techniken schwer zu erzeugen sind. Da DAS PRT immer beleuchtungsumgebungen vollständig modelliert, die mehrere Beleuchtungslichter hinzufügen oder eine Umgebungszuordnung verwenden, würden Sie nur die Werte (aber nicht die Anzahl) von Konstanten ändern, die vom Shader verwendet werden.
+Die nächste Abbildung wird mit PRT mit der besten Näherung eines einzelnen direktionalen Lichts gerendert, das es auflösen kann. Dies führt zu weichen Schatten, die mit herkömmlichen Techniken schwierig zu erzeugen sind. Da DAS PRT immer beleuchtungsumgebungen vollständig modelliert, die mehrere Beleuchtungslichter hinzufügen oder eine Umgebungszuordnung verwenden, würden Sie nur die Werte (aber nicht die Anzahl) von Konstanten ändern, die vom Shader verwendet werden.
 
-![Screenshot einer Mithilfe von PRT gerenderten Abbildung](images/prt-diffuseshadows-cropped.png)
+![Screenshot einer mit prt gerenderten Abbildung](images/prt-diffuseshadows-cropped.png)
 
 ### <a name="prt-with-interreflections"></a>PRT mit Interreflections
 
@@ -42,7 +42,7 @@ Die direkte Beleuchtung erreicht die Oberfläche direkt vom Licht. Interreflecti
 
 Die folgende Abbildung wird nur mit dem direkten PRT erstellt (0 Bounces ohne Interreflectionen).
 
-![Screenshot einer Abbildung, die nur mithilfe des direkten PRT gerendert wird](images/prt-nointerreflections.png)
+![Screenshot einer Abbildung, die nur mithilfe des direkten PRT gerendert wurde](images/prt-nointerreflections.png)
 
 Die folgende Abbildung wird mithilfe von PRT mit Interreflectionen (2 Bounces mit Interreflectionen) erstellt.
 
@@ -50,19 +50,19 @@ Die folgende Abbildung wird mithilfe von PRT mit Interreflectionen (2 Bounces mi
 
 ### <a name="prt-with-subsurface-scattering"></a>PRT mit Subsurface Scattering
 
-Das Streuen von Unteroberflächen ist eine Technik, die modelliert, wie Licht bestimmte Materialien durchläuft. Drücken Sie z. B. eine leuchtende Taschenlampe gegen die Handfläche. Das Licht der Taschenlampe durchläuft Ihre Hand, springt umher (ändert die Farbe im Prozess) und verlässt die andere Seite Ihrer Hand. Dies kann auch mit einfachen Änderungen am Simulator und ohne Änderungen an der Laufzeit modelliert werden.
+Das Streuen von Unteroberflächen ist eine Technik, die modelliert, wie Licht bestimmte Materialien durchläuft. Drücken Sie z. B. eine leuchtende Taschenlampe gegen die Handfläche. Das Licht der Taschenlampe durchläuft Ihre Hand, springt umher (ändert die Farbe im Prozess) und wird von der anderen Seite der Hand beendet. Dies kann auch mit einfachen Änderungen am Simulator und ohne Änderungen an der Laufzeit modelliert werden.
 
 Die folgende Abbildung veranschaulicht PRT mit Unteroberflächen-Punktung.
 
-![Screenshot einer Abbildung, die mithilfe von prt mit Unteroberflächen-Punktung gerendert wurde](images/prt-subsurface.png)
+![Screenshot einer Abbildung, die mithilfe von prt mit Unteroberflächen-Punktdiagrammen gerendert wurde](images/prt-subsurface.png)
 
 ## <a name="how-prt-works"></a>Funktionsweise von PRT
 
 Die folgenden Begriffe sind nützlich, um zu verstehen, wie PRT funktioniert, wie im folgenden Diagramm dargestellt.
 
-Quellradanz: Die Quellenresonanz stellt die gesamte Beleuchtungsumgebung dar. In PRT wird eine beliebige Umgebung mithilfe der pherischen Tropenbasis als ungefähre Umgebung bezeichnet. Es wird davon ausgegangen, dass diese Beleuchtung relativ zum Objekt entfernt ist (die gleiche Annahme wie bei Umgebungszuordnungen).
+Quellradanz: Die Quellenlichtung stellt die gesamte Beleuchtungsumgebung dar. In PRT wird eine beliebige Umgebung mithilfe der pherischen Tropenbasis als ungefähre Umgebung bezeichnet. Es wird davon ausgegangen, dass diese Beleuchtung relativ zum Objekt entfernt ist (die gleiche Annahme wie bei Umgebungszuordnungen).
 
-Exit Radiance :Exit radiance (Exit-Radiance) ist das Licht, das von einem Punkt auf der Oberfläche aus einer beliebigen möglichen Quelle (reflektierte Bogenstärke, Streuung des Unteroberflächen, Lichtabbild) verlässt.
+Exit Radiance :Exit radiance (Exit-Radiance) ist das Licht, das von einem Punkt auf der Oberfläche von einer beliebigen möglichen Quelle (reflektierter Bogen, Streuen des Unteroberflächen, Lichtabbild) verlassen wird.
 
 Übertragungsvektoren: Übertragungsvektoren ordnen quellauslösend dem Ausgangsbild zu und werden offline mithilfe einer komplexen Lichttransportsimulation vorausberechnunget.
 
@@ -70,14 +70,14 @@ Exit Radiance :Exit radiance (Exit-Radiance) ist das Licht, das von einem Punkt 
 
 PRT bestimmt den Renderingprozess in zwei Phasen, wie im folgenden Diagramm dargestellt:
 
-1.  Eine teure Lichttransportsimulation berechnet Übertragungskoeffizienten, die zur Laufzeit verwendet werden können.
+1.  Eine teure Lichttransportsimulation berechnet Übertragungskoeffizienten vorab, die zur Laufzeit verwendet werden können.
 2.  Eine relativ einfache Laufzeitphase wird zuerst der Beleuchtungsumgebung mithilfe der pherischen Glühbirne angewend, dann werden diese Beleuchtungskoeffizienten und die vorausbesetzten Übertragungskoeffizienten (aus Phase 1) mit einem einfachen Shader verwendet, was zu Einer-Beendigungs-Lichtauslösung (dem Licht, das das Objekt verlässt) führt.
 
 ![Diagramm des PRT-Datenflusses](images/prt-dataflow.png)
 
 ### <a name="how-to-use-the-prt-api"></a>Verwenden der PRT-API
 
-1.  Berechnen Sie die Übertragungsvektoren mit einer der Compute-... -Methoden von [**ID3DXPRTEngine**](id3dxprtengine.md).
+1.  Berechnen Sie die Übertragungsvektoren mit einer der Compute-... Methoden von [**ID3DXPRTEngine**](id3dxprtengine.md).
 
     Der direkte Umgang mit diesen Übertragungsvektoren erfordert eine erhebliche Menge an Arbeitsspeicher und Shaderberechnung. Durch die Komprimierung wird die Erforderliche Menge an Arbeitsspeicher und Shaderberechnung erheblich reduziert.
 
@@ -89,7 +89,7 @@ PRT bestimmt den Renderingprozess in zwei Phasen, wie im folgenden Diagramm darg
 
     
 
-    | Parameter      | BESCHREIBUNG                                                                                                     |
+    | Parameter      | Beschreibung                                                                                                     |
     |----------------|-----------------------------------------------------------------------------------------------------------------|
     | Rp             | Ein einzelner Kanal mit Beendigungsausdance bei Scheitelpunkt p und wird an jedem Scheitelpunkt im Gitternetz ausgewertet.                     |
     | Mk             | Der Mittelwert für Cluster k. Dies ist ein Order 2-Vektor von Koeffizienten.                                               |
@@ -103,7 +103,7 @@ PRT bestimmt den Renderingprozess in zwei Phasen, wie im folgenden Diagramm darg
 
      
 
-    Extrahieren... -Methoden von [**ID3DXPRTCompBuffer ermöglichen**](id3dxprtcompbuffer.md) den Zugriff auf komprimierte Daten aus der Simulation.
+    Die Extract... -Methoden von [**ID3DXPRTCompBuffer ermöglichen**](id3dxprtcompbuffer.md) den Zugriff auf komprimierte Daten aus der Simulation.
 
 2.  Berechnen Sie die Quellleistung.
 
@@ -114,7 +114,7 @@ PRT bestimmt den Renderingprozess in zwei Phasen, wie im folgenden Diagramm darg
     | Funktion                                                         | Zweck                                                                                                     |
     |------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
     | [**D3DXSHEvalDirectionalLight**](d3dxshevaldirectionallight.md) | Entspricht einem konventionellen direktionalen Licht.                                                              |
-    | [**D3DXSHEvalSphericalLight**](d3dxshevalsphericallight.md)     | Ungefähre lokale pherische Lichtquellen. (Beachten Sie, dass PRT nur mit Entfernungslichtumgebungen funktioniert.) |
+    | [**D3DXSHEvalSphericalLight**](d3dxshevalsphericallight.md)     | Ungefähre lokale pherische Lichtquellen. (Beachten Sie, dass DAS PRT nur mit Entfernungslichtumgebungen funktioniert.) |
     | [**D3DXSHEvalConeLight**](d3dxshevalconelight.md)               | Entspricht einer entfernten Bereichslichtquelle. Ein Beispiel wäre die Sote (sehr kleiner Kegelwinkel).              |
     | [**D3DXSHEvalHemisphereLight**](d3dxshevalhemispherelight.md)   | Wertet ein Licht aus, bei dem es sich um eine lineare Interpolation zwischen zwei Farben handelt (eine auf jedem Pol einer Kugel).         |
 
@@ -161,7 +161,7 @@ PRT bestimmt den Renderingprozess in zwei Phasen, wie im folgenden Diagramm darg
 
     
 
-## <a name="references"></a>Literatur
+## <a name="references"></a>Referenzen
 
 Weitere Informationen zu PRT und pherischen Trophäen finden Sie in den folgenden Arbeiten:
 

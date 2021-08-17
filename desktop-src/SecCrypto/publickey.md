@@ -21,7 +21,7 @@ ms.locfileid: "118901347"
 ---
 # <a name="publickey-object"></a>PublicKey-Objekt
 
-\[Das **PublicKey-Objekt** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Verwenden Sie stattdessen die [**X509Certificate2.PublicKey-Eigenschaft**](/dotnet/api/system.security.cryptography.x509certificates.x509certificate2.publickey?view=netcore-3.1) im [**System.Security.Cryptography.X509Certificates-Namespace.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
+\[Das **PublicKey-Objekt** kann in den betriebssystemen verwendet werden, die im Abschnitt Anforderungen angegeben sind. Verwenden Sie stattdessen die [**X509Certificate2.PublicKey-Eigenschaft**](/dotnet/api/system.security.cryptography.x509certificates.x509certificate2.publickey?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
 Das **PublicKey-Objekt** stellt einen öffentlichen Schlüssel in einem [**Certificate-Objekt**](certificate.md) dar.
 
@@ -31,7 +31,7 @@ Das **PublicKey-Objekt** wird verwendet, um Daten über den öffentlichen Schlü
 
 ## <a name="members"></a>Member
 
-Das **PublicKey-Objekt** verfügt über diese Typen von Membern:
+Das **PublicKey-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -41,11 +41,11 @@ Das **PublicKey-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                            | Zugriffstyp          | Beschreibung                                                                                                                            |
+| Eigenschaft                                                            | Zugriffstyp          | BESCHREIBUNG                                                                                                                            |
 |:--------------------------------------------------------------------|:---------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
 | [**Algorithmus**](publickey-algorithm.md)<br/>                 | Schreibgeschützt<br/> | Ruft das [**OID-Objekt**](oid.md) ab, das den vom öffentlichen Schlüssel verwendeten Algorithmus identifiziert. Dies ist die Standardeigenschaft.<br/> |
-| [**EncodedKey**](publickey-encodedkey.md)<br/>               | Schreibgeschützt<br/> | Ruft ein [**EncodedData-Objekt**](encodeddata.md) ab, das Zugriff auf den Wert des öffentlichen Schlüssels bereitstellt.<br/>                 |
-| [**EncodedParameters**](publickey-encodedparameters.md)<br/> | Schreibgeschützt<br/> | Ruft ein [**EncodedData-Objekt**](encodeddata.md) ab, das Zugriff auf die Parameter des Algorithmus für öffentliche Schlüssel bereitstellt.<br/>  |
+| [**EncodedKey**](publickey-encodedkey.md)<br/>               | Schreibgeschützt<br/> | Ruft ein [**EncodedData-Objekt ab,**](encodeddata.md) das Zugriff auf den Wert des öffentlichen Schlüssels bietet.<br/>                 |
+| [**Codierte Parameter**](publickey-encodedparameters.md)<br/> | Schreibgeschützt<br/> | Ruft ein [**EncodedData-Objekt ab,**](encodeddata.md) das Zugriff auf die Parameter des Algorithmus für öffentliche Schlüssel bietet.<br/>  |
 | [**Länge**](publickey-length.md)<br/>                       | Schreibgeschützt<br/> | Ruft die Länge des öffentlichen Schlüssels in Bits ab.<br/>                                                                             |
 
 

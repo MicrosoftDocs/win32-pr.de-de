@@ -1,5 +1,5 @@
 ---
-description: Das folgende Beispiel enthält eine CMC-Schlüsselarchivierungsanforderung. Das Beispiel wurde mithilfe der tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+description: Das folgende Beispiel enthält eine CMC-Schlüsselarchivierungsanforderung. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
 ms.assetid: e418ef57-90de-4374-b607-52823bbdd429
 title: CMC-Schlüsselarchivierungsanforderung
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118901617"
 ---
 # <a name="cmc-key-archival-request"></a>CMC-Schlüsselarchivierungsanforderung
 
-Das folgende Beispiel enthält eine CMC-Schlüsselarchivierungsanforderung. Das Beispiel wurde mithilfe der tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+Das folgende Beispiel enthält eine CMC-Schlüsselarchivierungsanforderung. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
 
 ``` syntax
 [NewRequest]
@@ -29,7 +29,7 @@ Diese Konfiguration generiert die folgende Beispielausgabe. Die Konfiguration gi
 
 -   Die Anforderung muss entweder den Microsoft Base Cryptographic Provider 1.0 oder den Microsoft Enhanced Cryptographic Provider 1.0 verwenden.
 -   Der Antragstellername muss aus Active Directory erstellt werden.
--   Die Anforderung umfasst den Namen der Zertifikatvorlage, die erweiterte Schlüsselverwendung (Enhanced Key Usage, EKU) und die Schlüsselverwendungserweiterungen. Die EKU-Erweiterung gibt an, dass das ausgestellte Zertifikat für verschlüsselndes Dateisystem (EFS), sichere E-Mails und Clientauthentifizierung verwendet werden kann.
+-   Die Anforderung umfasst den Namen der Zertifikatvorlage, die erweiterte Schlüsselverwendung (Enhanced Key Usage, EKU) und die Schlüsselverwendungserweiterungen. Die EKU-Erweiterung gibt an, dass das ausgestellte Zertifikat für verschlüsselndes Dateisystem (EFS), sichere E-Mail- und Clientauthentifizierung verwendet werden kann.
 
 ``` syntax
 PKCS7/CMS Message:

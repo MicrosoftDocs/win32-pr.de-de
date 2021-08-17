@@ -1,24 +1,24 @@
 ---
-description: In dieser Übersicht wird der von der imagehlp-dll bereitgestellte Funktions Satz beschrieben. Diese Funktionen ermöglichen es Ihnen, mit einem Portable ausführbaren Image (PE) zu arbeiten.
+description: In dieser Übersicht wird der von der ImageHlp-DLL bereitgestellte Funktionssatz beschrieben. Mit diesen Funktionen können Sie mit einem pe-Image (Portable Executable) arbeiten.
 ms.assetid: 45579485-a129-4c42-ab76-a7f57d79b46a
-title: Bild Hilfe Bibliothek
+title: Bildhilfebibliothek
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b63cb9ee74743649173d42fb0b1c3813f575484
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 3ade9d2dec1375fecc4c5fe0f9bea21cc955edd12207fa2a36f5186009e0df78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957119"
 ---
-# <a name="image-help-library"></a>Bild Hilfe Bibliothek
+# <a name="image-help-library"></a>Bildhilfebibliothek
 
-In dieser Übersicht wird der von der imagehlp-dll bereitgestellte Funktions Satz beschrieben. Diese Funktionen ermöglichen es Ihnen, mit einem Portable ausführbaren Image (PE) zu arbeiten.
+In dieser Übersicht wird der von der ImageHlp-DLL bereitgestellte Funktionssatz beschrieben. Mit diesen Funktionen können Sie mit einem pe-Image (Portable Executable) arbeiten.
 
--   [Informationen zu imagehlp](about-imagehlp.md)
--   [Imagehlp-Referenz](imagehlp-reference.md)
+-   [Informationen zu ImageHlp](about-imagehlp.md)
+-   [ImageHlp-Referenz](imagehlp-reference.md)
 
-Die im Betriebssystem enthaltene imagehlp-dll kann nicht weiter verteilt werden. Eine Teilmenge der Funktionen ist in der [debughilfebibliothek](debug-help-library.md)enthalten, die restributable ist.
+Sie können die ImageHlp-DLL, die im Betriebssystem enthalten ist, nicht neu verteilen. Eine Teilmenge der Funktionen ist in der [Debug-Hilfebibliothek enthalten,](debug-help-library.md)die weiterverteilbar ist.
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Das Erinnerungs Makro generiert zum Zeitpunkt der Kompilierung eine Erinnerung. Dieses Makro generiert eine Zeichenfolge, die die Parameter Zeichenfolge, den Namen der Quelldatei und die Zeilennummer enthält.
+description: Das REMIND-Makro generiert zur Kompilierzeit eine Erinnerung. Dieses Makro generiert eine Zeichenfolge, die die Parameterzeichenfolge, den Namen der Quelldatei und die Zeilennummer enthält.
 ms.assetid: 12043df5-ed68-4980-91aa-7598d8ab1951
-title: Erinnerung (wxdebug. h)
+title: REMIND (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 305e5df628244293b643da8882f57dd83041c4c6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c17ec8fac190cd98803a0dfa85acff015d0ac2c18ce712cc87316dd2dca181bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118952119"
 ---
 # <a name="remind"></a>Erinnern
 
-Das `REMIND` Makro generiert zum Zeitpunkt der Kompilierung eine Erinnerung. Dieses Makro generiert eine Zeichenfolge, die die Parameter Zeichenfolge, den Namen der Quelldatei und die Zeilennummer enthält.
+Das `REMIND` Makro generiert zur Kompilierzeit eine Erinnerung. Dieses Makro generiert eine Zeichenfolge, die die Parameterzeichenfolge, den Namen der Quelldatei und die Zeilennummer enthält.
 
 ``` syntax
 REMIND(strLiteral);
@@ -35,16 +35,16 @@ REMIND(strLiteral);
 
 <dl> <dt>
 
-<span id="strLiteral"></span><span id="strliteral"></span><span id="STRLITERAL"></span>*"Straume"*
+<span id="strLiteral"></span><span id="strliteral"></span><span id="STRLITERAL"></span>*strLiteral*
 </dt> <dd>
 
-Text Zeichenfolge.
+Textzeichenfolge.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Makro ist nützlich zum Erzeugen von Warnungen zur Kompilierzeit:
+Dieses Makro ist nützlich, um Warnungen zur Kompilierzeit zu generieren:
 
 
 ```C++
@@ -59,16 +59,16 @@ Dieses Makro ist nützlich zum Erzeugen von Warnungen zur Kompilierzeit:
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Debug-Ausgabefunktionen](debug-output-functions.md)
+[Debugausgabefunktionen](debug-output-functions.md)
 </dt> </dl>
 
  
