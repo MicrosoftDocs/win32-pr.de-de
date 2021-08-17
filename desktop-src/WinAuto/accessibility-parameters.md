@@ -13,7 +13,7 @@ ms.locfileid: "118327788"
 ---
 # <a name="accessibility-parameters"></a>Parameter für die Barrierefreiheit
 
-Das System verwaltet eine Reihe von Barrierefreiheitsparametern, die angeben, ob der Benutzer besondere Anforderungen oder Einstellungen hat, die erfordern, dass Anwendungen ihr Standardverhalten ändern. Der Benutzer steuert den Zustand dieser Parameter, in der Regel mithilfe der Center für erleicherte Bedienung in Systemsteuerung. Systemsteuerung Anwendungen oder andere Programme, die es dem Benutzer ermöglichen, die Umgebung anzupassen, können die Barrierefreiheitsparameter mithilfe der [**SystemParametersInfo-Funktion**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) festlegen.
+Das System verwaltet eine Reihe von Barrierefreiheitsparametern, die angeben, ob der Benutzer besondere Anforderungen oder Einstellungen hat, die erfordern, dass Anwendungen ihr Standardverhalten ändern. Der Benutzer steuert den Status dieser Parameter, in der Regel mithilfe der Center für erleicherte Bedienung in Systemsteuerung. Systemsteuerung Anwendungen oder andere Programme, die es dem Benutzer ermöglichen, die Umgebung anzupassen, können die Barrierefreiheitsparameter mithilfe der [**SystemParametersInfo-Funktion**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) festlegen.
 
 Wenn ein Benutzer diese Parameter ändert, sendet Systemsteuerung [**WM \_ SETTINGCHANGE-Nachricht.**](/windows/desktop/winmsg/wm-settingchange) Anwendungen sollten auf diese Meldung reagieren und [**SystemParametersInfo verwenden,**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) um den Status der Barrierefreiheitsparameter zu bestimmen. Wenn ein Barrierefreiheitsparameter aktiviert ist, sollte die Anwendung bei Bedarf die Benutzeroberfläche ändern, um die Einstellungen des Benutzers zu berücksichtigen.
 
@@ -21,7 +21,7 @@ Windows unterstützt die folgenden Parameter für die Barrierefreiheit.
 
 
 
-| Parameter                                                                    | BESCHREIBUNG                                                                                                                                                                    |
+| Parameter                                                                    | Beschreibung                                                                                                                                                                    |
 |------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Color Blind Friendly](high-contrast-parameter.md) (Für Farbenblinde)                                 | Gibt an, dass Anwendungen einen hohen Kontrast zwischen Vordergrund- und Hintergrundvisu visuals bereitstellen sollen.                                                                            |
 | [Tastaturpräferenz](keyboard-preference-parameter.md)                     | Gibt an, dass Anwendungen Tastaturschnittstellen anzeigen sollen, die andernfalls ausgeblendet wären.                                                                                 |

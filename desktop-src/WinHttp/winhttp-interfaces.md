@@ -1,22 +1,22 @@
 ---
-description: In diesem Thema werden die beiden Schnittstellen identifiziert, die Microsoft Windows HTTP-Dienste (WinHTTP) verfügbar macht.
+description: In diesem Thema werden die beiden Schnittstellen identifiziert, die microsoft Windows HTTP Services (WinHTTP) verfügbar macht.
 ms.assetid: effecdbe-bec9-43bd-b0a5-e8a91ea4733e
 title: WinHTTP-Schnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d83c3d7f4bd63e0d2013c5ce1e63915443ccca2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 94fb5371655876029aadf6bbb4d91161583ea5501579d078248304ab728aa68d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343303"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117743889"
 ---
 # <a name="winhttp-interfaces"></a>WinHTTP-Schnittstellen
 
-Die [Microsoft Windows HTTP-Dienste (WinHTTP)](about-winhttp.md) machen die folgenden beiden Schnittstellen verfügbar:
+[Microsoft Windows HTTP Services (WinHTTP)](about-winhttp.md) macht die folgenden beiden Schnittstellen verfügbar:
 
--   [**Iwinhttprequest**](iwinhttprequest-interface.md) implementiert WinHTTP-Methoden, die keine Ereignisse einschließen.
--   [**Iwinhttprequestevents**](iwinhttprequestevents-interface.md) implementiert WinHTTP-Ereignisse und ereignisbasierte Methoden.
+-   [**IWinHttpRequest**](iwinhttprequest-interface.md) implementiert WinHTTP-Methoden, die keine Ereignisse beinhalten.
+-   [**IWinHttpRequestEvents**](iwinhttprequestevents-interface.md) implementiert WinHTTP-Ereignisse und ereignisbasierte Methoden.
 
  
 

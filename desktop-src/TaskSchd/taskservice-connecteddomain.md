@@ -3,7 +3,7 @@ title: TaskService.ConnectedDomain-Eigenschaft
 description: Ruft für die Skripterstellung den Namen der Domäne ab, mit der der TargetServer-Computer verbunden ist.
 ms.assetid: c0acb326-9a93-4248-8952-acb570ef70a6
 keywords:
-- ConnectedDomain-Eigenschaft Taskplaner
+- Taskplaner der ConnectedDomain-Eigenschaft
 - ConnectedDomain-Eigenschaft Taskplaner , TaskService-Objekt
 - TaskService-Objekt Taskplaner , ConnectedDomain-Eigenschaft
 topic_type:

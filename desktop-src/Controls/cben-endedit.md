@@ -1,9 +1,9 @@
 ---
 title: CBEN_ENDEDIT Benachrichtigungscode (Commctrl.h)
-description: Wird gesendet, wenn der Benutzer einen Vorgang im Bearbeitungsfeld abgeschlossen oder ein Element aus der Dropdownliste des Steuerelements ausgewählt hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
+description: Wird gesendet, wenn der Benutzer einen Vorgang innerhalb des Bearbeitungsfelds abgeschlossen hat oder ein Element aus der Dropdownliste des Steuerelements ausgewählt hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: b6b50951-7304-4499-b57b-a5b592de2190
 keywords:
-- CBEN_ENDEDIT Benachrichtigungscode Windows-Steuerelemente
+- CBEN_ENDEDIT Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -25,7 +25,7 @@ ms.locfileid: "118413950"
 ---
 # <a name="cben_endedit-notification-code"></a>CBEN \_ ENDEDIT-Benachrichtigungscode
 
-Wird gesendet, wenn der Benutzer einen Vorgang im Bearbeitungsfeld abgeschlossen oder ein Element aus der Dropdownliste des Steuerelements ausgewählt hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
+Wird gesendet, wenn der Benutzer einen Vorgang innerhalb des Bearbeitungsfelds abgeschlossen hat oder ein Element aus der Dropdownliste des Steuerelements ausgewählt hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -49,7 +49,7 @@ Ein Zeiger auf eine [**NMCBEENDEDIT-Struktur,**](/windows/desktop/api/Commctrl/n
 
 ## <a name="return-value"></a>Rückgabewert
 
-**FALSE,** um den Benachrichtigungscode zu akzeptieren und dem Steuerelement das Anzeigen des ausgewählten Elements zu ermöglichen; Andernfalls **TRUE.**
+**FALSE,** um den Benachrichtigungscode zu akzeptieren und dem Steuerelement zu erlauben, das ausgewählte Element anzuzeigen. andernfalls **TRUE**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,7 +57,7 @@ Ein Zeiger auf eine [**NMCBEENDEDIT-Struktur,**](/windows/desktop/api/Commctrl/n
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 | Unicode- und ANSI-Name<br/>   | **CBEN \_ ENDEDITW** (Unicode) und **CBEN \_ ENDEDITA** (ANSI)<br/>                 |

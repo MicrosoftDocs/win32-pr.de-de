@@ -15,17 +15,17 @@ ms.locfileid: "118325379"
 
 ## <a name="text"></a>Text
 
-Die Tabstoppreihenfolge folgt möglicherweise nicht den Standardrichtlinien für Windows.
+Die Reihenfolge der Registerkarten entspricht möglicherweise nicht den Standardrichtlinien Windows Richtlinien.
 
-## <a name="type"></a>type
+## <a name="type"></a>Typ
 
 Informational
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Durch die Verwendung der Standardtastaturnavigation (Tabulator oder UMSCHALT+TAB) wird eine nicht standardmäßige Registerkartenreihenfolge verfügbar gemacht. Abhängig von den lokalen Systemeinstellungen imitiert die Registerkartenreihenfolge in der Regel die Lesereihenfolge.
+Die Verwendung der Standardtastaturnavigation (TAB ODER UMSCHALT+TAB) macht eine nicht standardmäßige Tabstopps-Reihenfolge verfügbar. Je nach lokalen Systemeinstellungen imitiert die Tabstopps in der Regel die Lese reihenfolge.
 
-Dieses Problem verursacht Probleme für Personen, die sich auf eine Sprachausgabe und Tastatur für die Navigation verlassen, da das Durchlaufen von Elementen unregelmäßig und unvorhersehbar sein kann.
+Dieses Problem verursacht Probleme für Benutzer, die eine Sprachausgabe und Tastatur für die Navigation verwenden, da das Durchlaufen von Elementen möglicherweise unvorhergesehen und unvorhersehbar ist.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -34,7 +34,7 @@ Dieses Problem verursacht Probleme für Personen, die sich auf eine Sprachausgab
 [Richtlinien zur Gestaltung einer tastaturgesteuerten Benutzeroberfläche](/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
 </dt> <dt>
 
-[Windows Richtlinien für die Interaktion mit der Benutzeroberfläche – Tastatur](https://msdn.microsoft.com/library/bb545460.aspx#guidelines)
+[Windows Richtlinien für die Benutzererfahrungsinteraktion – Tastatur](https://msdn.microsoft.com/library/bb545460.aspx#guidelines)
 </dt> </dl>
 
  

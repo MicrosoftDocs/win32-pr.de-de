@@ -1,11 +1,11 @@
 ---
-title: IWMPMetadataPicture MimeType-Eigenschaft
-description: Die MimeType-Eigenschaft ruft den MIME-Typ des Bilds ab, das durch das Metadatenattribut dargestellt wird.
+title: MimeType-Eigenschaft "IWMPMetadataPicture"
+description: Die mimeType-Eigenschaft ruft den MIME-Typ des Bilds ab, das durch das Metadatenattribut dargestellt wird.
 ms.assetid: 3ddd7f20-a183-4b95-bdcf-5497349f6db6
 keywords:
-- MimeType-Eigenschaft, Windows-Media Player
-- MimeType-Eigenschaft, Windows Media Player, IWMPMetadataPicture-Schnittstelle
-- IWMPMetadataPicture Interface Windows Media Player, MimeType-Eigenschaft
+- mimeType-Eigenschaft Windows Media Player
+- mimeType-Eigenschaft Windows Media Player , IWMPMetadataPicture-Schnittstelle
+- IWMPMetadataPicture-Schnittstelle Windows Media Player , mimeType-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b79602e1cdf8d4cc2ceda6ca217b81a7f899c6cc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e61f155394ecf91b73b0f6056f3c1aaed53b87f3202928e86d10db1298a430b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106374033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117745988"
 ---
-# <a name="iwmpmetadatapicturemimetype-property"></a>IWMPMetadataPicture:: MimeType-Eigenschaft
+# <a name="iwmpmetadatapicturemimetype-property"></a>IWMPMetadataPicture::mimeType-Eigenschaft
 
-Die- `mimeType` Eigenschaft ruft den MIME-Typ des Bilds ab, das durch das Metadata-Attribut dargestellt wird.
+Die `mimeType` -Eigenschaft ruft den MIME-Typ des Bilds ab, das durch das Metadatenattribut dargestellt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,11 +46,11 @@ Public ReadOnly Property mimeType As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **System. String** , die den MIME-Typ des Bilds ist.
+Eine **System.String-Datei,** die der MIME-Typ des Bilds ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Eigenschaft verwenden können, benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,17 +58,17 @@ Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibl
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IWMPMetadataPicture-Schnittstelle (VB und c#)**](iwmpmetadatapicture--vb-and-c.md)
+[**IWMPMetadataPicture-Schnittstelle (VB und C#)**](iwmpmetadatapicture--vb-and-c.md)
 </dt> </dl>
 
  

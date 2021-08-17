@@ -1,38 +1,38 @@
 ---
-title: Lebenszyklus der virtualisierungsinstanz
-description: Übersicht über den Lebenszyklus einer projfs-virtualisierungsinstanz.
+title: Lebenszyklus von Virtualisierungsinstanzen
+description: Übersicht über den Lebenszyklus einer ProjFS-Virtualisierungsinstanz.
 ms.assetid: <GUID-GOES-HERE>
 ms.date: 09/17/2018
 ms.topic: article
-ms.openlocfilehash: 567eff1f7b8acf330dba7c652e2e12b724072b9b
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: bbaaf5eca5481f3959e3e5afeb36a8cf6b264c939e8eb2cc9d84ba501d3c8530
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104516853"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117792384"
 ---
-# <a name="virtualization-instance-lifecycle"></a>Lebenszyklus der virtualisierungsinstanz
+# <a name="virtualization-instance-lifecycle"></a>Lebenszyklus von Virtualisierungsinstanzen
 
-Die Anbieter Anwendung verwaltet mindestens eine virtualisierungsinstanz.  Jede virtualisierungsinstanz durchläuft vier Phasen in Ihrem Lebenszyklus:
+Die Anbieteranwendung verwaltet eine oder mehrere Virtualisierungsinstanzen.  Jede Virtualisierungsinstanz durchläuft vier Phasen ihres Lebenszyklus:
 
 1. Erstellung
 2. Start
 3. Typ
-4. Shutdown
+4. Herunterfahren
 
-Beachten Sie, dass der Anbieter nach dem Herunterfahren einer virtualisierungsinstanz ihn nicht erneut erstellen muss, um ihn wiederzuverwenden.  Sie kann einfach erneut gestartet werden.
+Beachten Sie, dass der Anbieter nach dem Herunterfahren einer Virtualisierungsinstanz diese nicht neu erstellen muss, um sie wiederzuverwenden.  Es kann einfach neu gestartet werden.
 
-> **Hinweis**: in diesem Abschnitt werden Beispiele für projfs-APIs gezeigt.  Jedes Beispiel dient zur Veranschaulichung der grundlegenden API-Verwendung.  Eine Dokumentation der in diesen Beispielen nicht verwendeten Optionen finden Sie in der [projfs-API-Referenz](/windows/desktop/api/_projfs).
+> **Hinweis:** In diesem Abschnitt werden Beispiele für ProjFS-APIs gezeigt.  Jedes Beispiel soll die grundlegende API-Nutzung veranschaulichen.  Eine Dokumentation der optionen, die in diesen Beispielen nicht verwendet werden, finden Sie in der [Referenz zur ProjFS-API.](/windows/desktop/api/_projfs)
 
-## <a name="creating-a-virtualization-root"></a>Erstellen eines virtualisierungsstamms
+## <a name="creating-a-virtualization-root"></a>Erstellen eines Virtualisierungsstamms
 
-Bevor ein Anbieter die virtualisierungsinstanz starten kann, mit der Elemente in das lokale Dateisystem integriert werden, muss der virtualisierungsstamm erstellt werden.  Der virtualisierungsstamm ist das Verzeichnis, in dem der Anbieter eine Struktur von Verzeichnissen und Dateien projiziert.
+Bevor ein Anbieter die Virtualisierungsinstanz starten kann, die Elemente in das lokale Dateisystem projectt, muss er den Virtualisierungsstamm erstellen.  Der Virtualisierungsstamm ist das Verzeichnis, in dem der Anbieter eine Struktur von Verzeichnissen und Dateien probiert.
 
-Zum Erstellen eines virtualisierungsstamms muss der Anbieter folgende Aktionen ausführen:
+Um einen Virtualisierungsstamm zu erstellen, muss der Anbieter:
 
-1. Erstellen Sie ein Verzeichnis, das als virtualisierungsstamm fungiert.
+1. Erstellen Sie ein Verzeichnis, das als Virtualisierungsstamm dient.
 
-    Der Anbieter erstellt ein Verzeichnis, das als virtualisierungsstamm verwendet werden soll, z. b. " **[kreatedirectory](/windows/desktop/api/fileapi/nf-fileapi-createdirectoryw)**":
+    Der Anbieter erstellt ein Verzeichnis, das als Virtualisierungsstamm verwendet wird, z. B. **[CreateDirectory:](/windows/desktop/api/fileapi/nf-fileapi-createdirectoryw)**
 
     ```C++
     HRESULT hr;
@@ -45,9 +45,9 @@ Zum Erstellen eines virtualisierungsstamms muss der Anbieter folgende Aktionen a
     }
     ```
 
-1. Erstellen Sie eine Instanz-ID der Virtualisierung.
+1. Erstellen Sie eine Virtualisierungsinstanz-ID.
 
-    Jede virtualisierungsinstanz verfügt über eine eindeutige ID, die als _virtualisierungsinstanz-ID_ bezeichnet wird.  Das System verwendet diesen Wert, um zu ermitteln, welcher virtualisierungsinstanz der Inhalt zugeordnet ist.
+    Jede Virtualisierungsinstanz verfügt über eine eindeutige ID, die als _Virtualisierungsinstanz-ID bezeichnet wird._  Das System verwendet diesen Wert, um zu identifizieren, welcher Virtualisierungsinstanz sein Inhalt zugeordnet ist.
 
     ```C++
     GUID instanceId;
@@ -59,9 +59,9 @@ Zum Erstellen eines virtualisierungsstamms muss der Anbieter folgende Aktionen a
     }
     ```
 
-1. Markieren Sie das neue Verzeichnis als virtualisierungsstamm.
+1. Markieren Sie das neue Verzeichnis als Virtualisierungsstamm.
 
-    Der Anbieter ruft **[prjmarkdirectoryasplachalter](/windows/desktop/api/projectedfslib/nf-projectedfslib-prjmarkdirectoryasplaceholder)** auf, um das neue Verzeichnis als virtualisierungsstamm zu markieren und es der virtualisierungsinstanz zuzuweisen.
+    Der Anbieter ruft **[PrjMarkDirectoryAsPlaceholder](/windows/desktop/api/projectedfslib/nf-projectedfslib-prjmarkdirectoryasplaceholder)** auf, um das neue Verzeichnis als Virtualisierungsstamm zu markieren und der Virtualisierungsinstanz zu zuweisen.
 
     ```C++
     hr = PrjMarkDirectoryAsPlaceholder(rootName,
@@ -75,17 +75,17 @@ Zum Erstellen eines virtualisierungsstamms muss der Anbieter folgende Aktionen a
     }
     ```
 
-Der Anbieter muss für jede virtualisierungsinstanz nur einmal den virtualisierungsstamm erstellen.  Nachdem ein Stamm erstellt wurde, kann die zugehörige Instanz wiederholt gestartet und beendet werden, ohne dass der Stamm neu erstellt wird.
+Der Anbieter muss den Virtualisierungsstamm nur einmal für jede Virtualisierungsinstanz erstellen.  Nachdem ein Stamm erstellt wurde, kann die zugehörige Instanz wiederholt gestartet und beendet werden, ohne den Stamm neu zu erstellen.
 
-## <a name="starting-a-virtualization-instance"></a>Starten einer virtualisierungsinstanz
+## <a name="starting-a-virtualization-instance"></a>Starten einer Virtualisierungsinstanz
 
-Nachdem der virtualisierungsstamm erstellt wurde, muss der Anbieter die virtualisierungsinstanz starten.  Dadurch wird projfs signalisiert, dass der Anbieter bereit ist, Rückrufe zu empfangen und Daten bereitzustellen.
+Nachdem der Virtualisierungsstamm erstellt wurde, muss der Anbieter die Virtualisierungsinstanz starten.  Dies signalisiert ProjFS, dass der Anbieter bereit ist, Rückrufe zu empfangen und Daten zur Verfügung zu stellen.
 
-Zum Starten der virtualisierungsinstanz muss der Anbieter
+Um die Virtualisierungsinstanz zu starten, muss der Anbieter:
 
-1. Richten Sie die Rückruf Tabelle ein.
+1. Richten Sie die Rückruftabelle ein.
 
-    Projfs kommuniziert mit dem Anbieter, indem Rückruf Routinen aufgerufen werden, die vom Anbieter implementiert werden.  Der Anbieter füllt eine [PRJ_CALLBACKS](/windows/desktop/api/projectedfslib/ns-projectedfslib-prj_callbacks) Struktur mit Zeigern auf seine Rückruf Routinen auf.
+    ProjFS kommuniziert mit dem Anbieter durch Aufrufen von Rückrufroutinen, die vom Anbieter implementiert werden.  Der Anbieter füllt eine [PRJ_CALLBACKS](/windows/desktop/api/projectedfslib/ns-projectedfslib-prj_callbacks) Struktur mit Zeigern auf seine Rückrufroutinen auf.
 
     ```C++
     PRJ_CALLBACKS callbackTable;
@@ -103,9 +103,9 @@ Zum Starten der virtualisierungsinstanz muss der Anbieter
     callbackTable.CancelCommandCallback = nullptr;
     ```
 
-1. Starten Sie die-Instanz.
+1. Starten Sie die -Instanz.
 
-    Der Anbieter ruft **[prjstartvirtualization](/windows/desktop/api/projectedfslib/nf-projectedfslib-prjstartvirtualizing)** auf, um die virtualisierungsinstanz zu starten.
+    Der Anbieter ruft **[PrjStartVirtualizing auf,](/windows/desktop/api/projectedfslib/nf-projectedfslib-prjstartvirtualizing)** um die Virtualisierungsinstanz zu starten.
 
     ```C++
     PRJ_NAMESPACE_VIRTUALIZATION_CONTEXT instanceHandle;
@@ -120,23 +120,23 @@ Zum Starten der virtualisierungsinstanz muss der Anbieter
         return;
     }
     ```
-    Der Parameter " _InstanceHandle_ " von **prjstartvirtualization** gibt ein Handle für die virtualisierungsinstanz zurück.  Der Anbieter verwendet dieses Handle, wenn andere projfs-APIs aufgerufen werden.
+    **Der instanceHandle-Parameter von PrjStartVirtualizing** gibt ein Handle an die Virtualisierungsinstanz zurück.   Der Anbieter verwendet dieses Handle beim Aufrufen anderer ProjFS-APIs.
 
-## <a name="virtualization-instance-runtime"></a>Laufzeit der virtualisierungsinstanz
+## <a name="virtualization-instance-runtime"></a>Virtualisierungsinstanzlaufzeit
 
-Nachdem der Aufruf von **prjstartvirtualization** zurückgegeben wurde, werden die Rückruf Routinen des Anbieters von projfs als Reaktion auf Dateisystem Vorgänge in der virtualisierungsinstanz aufgerufen.  Informationen dazu, wie der Anbieter verschiedene Dateisystem Vorgänge verarbeiten kann, finden Sie in den folgenden Abschnitten:
+Sobald der Aufruf von **PrjStartVirtualizing** zurückgegeben wird, ruft ProjFS die Rückrufroutinen des Anbieters als Reaktion auf Dateisystemvorgänge in der Virtualisierungsinstanz auf.  Informationen dazu, wie der Anbieter verschiedene Dateisystemvorgänge verarbeiten kann, finden Sie in den folgenden Abschnitten:
 
 * [Auflisten von Dateien und Verzeichnissen](enumerating-files-and-directories.md)
 * [Bereitstellen von Dateidaten](providing-file-data.md)
-* [Datei System-Vorgangs Benachrichtigungen](file-system-operation-notifications.md)
-* [Behandeln von Änderungen der Ansicht](handling-view-changes.md)
+* [Dateisystem-Vorgangsbenachrichtigungen](file-system-operation-notifications.md)
+* [Behandeln von Ansichtsänderungen](handling-view-changes.md)
 
-## <a name="shutting-down-a-virtualization-instance"></a>Herunterfahren einer virtualisierungsinstanz
+## <a name="shutting-down-a-virtualization-instance"></a>Herunterfahren einer Virtualisierungsinstanz
 
-Um projfs zu signalisieren, dass der Anbieter keine Rückrufe mehr empfangen und Daten bereitstellen möchte, muss der Anbieter die virtualisierungsinstanz abbrechen.  Zu diesem Zweck ruft der Anbieter **[prjstopvirtualization](/windows/desktop/api/projectedfslib/nf-projectedfslib-prjstopvirtualizing)** auf und übergibt ihm das Handle an die virtualisierungsinstanz, die er vom Aufruf an **prjstartvirtualization** empfangen hat.
+Um ProjFS zu signalisieren, dass der Anbieter den Empfang von Rückrufen und die Bereitstellung von Daten beenden möchte, muss der Anbieter die Virtualisierungsinstanz beenden.  Hierzu ruft der Anbieter **[PrjStopVirtualizing](/windows/desktop/api/projectedfslib/nf-projectedfslib-prjstopvirtualizing)** auf und über gibt das Handle an die Virtualisierungsinstanz weiter, die er vom Aufruf von **PrjStartVirtualizing erhalten hat.**
 
 ```C++
 PrjStopVirtualizing(instanceHandle);
 ```
 
-Beachten Sie, dass projfs die Rückruf Routinen des Anbieters weiterhin aufrufen kann, bis dieser Aufruf zurückgegeben wird.
+Beachten Sie, dass ProjFS die Rückrufroutinen des Anbieters weiterhin aufrufen kann, bis dieser Aufruf zurückgegeben wird.

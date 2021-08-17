@@ -6,9 +6,9 @@ keywords:
 - Multimediadatei-E/A-Dateien, MULTIMEDIA-Dateien
 - Datei-E/A-Dateien, DATEI-E/A-Dateien
 - Eingabe- und Ausgabedateien (E/A),FORMAT-Dateien
-- E/A (Eingabe und Ausgabe), DANN-Dateien
+- E/A (Eingabe und Ausgabe),FORMAT-Dateien
 - Resource Interchange File Format (ENDE)
-- ENDE (Dateiformat des Ressourcenaustauschs)
+- RAFF (Dateiformat für Ressourcenaustausch)
 - ORGANISATIONS-E/A
 - Gepufferte E/A
 - blockunk (blockunk)
@@ -23,7 +23,7 @@ ms.locfileid: "118372686"
 ---
 # <a name="performing-file-io-on-riff-files"></a>Ausführen von Datei-E/A-Anweisungen für DATEITYP-Dateien
 
-Im folgenden Beispiel wird gezeigt, wie Sie eineGELESEN-Datei für gepufferte E/A-Dateien öffnen und wie sie absteigend, aufsteigend und lesen können.
+Im folgenden Beispiel wird gezeigt, wie Sie eineGELESEN-Datei für gepufferte E/A-Daten öffnen sowie absteigende, aufsteigende und lesende BLOCK-Bzw. -Block lesen.
 
 
 ```C++

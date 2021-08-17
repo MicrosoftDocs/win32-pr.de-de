@@ -1,7 +1,7 @@
 ---
-description: Die buildimpersonatetrustee-Funktion wird nicht unterstützt.
+description: Die BuildImpersonateTrustee-Funktion wird nicht unterstützt.
 ms.assetid: 43AFB2BF-85D7-40FF-AD58-A14B1DAC6A71
-title: Buildimpersonatetrustee-Funktion
+title: BuildImpersonateTrustee-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 789e743aa0778b209af614a73ff92fe3c1149f08
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a61b494da963bc9c4d524dabc453dd3d6998f70bd0912dd1314cb9ba7722ef5d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104132089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117783636"
 ---
-# <a name="buildimpersonatetrustee-function"></a>Buildimpersonatetrustee-Funktion
+# <a name="buildimpersonatetrustee-function"></a>BuildImpersonateTrustee-Funktion
 
 Diese Funktion wird nicht unterstützt.
 

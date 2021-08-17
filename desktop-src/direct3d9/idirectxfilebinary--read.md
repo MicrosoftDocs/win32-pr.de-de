@@ -1,7 +1,7 @@
 ---
 description: Liest die Binärdaten. Veraltet.
 ms.assetid: 530552c5-bf05-4e86-836d-d25161832c6d
-title: 'Idirectxfilebinary:: Read-Methode (dxfile. h)'
+title: IDirectXFileBinary::Read-Methode (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3dxof.lib
 - D3dxof.dll
-ms.openlocfilehash: 60548640fbbb0e67909eab1fed2df24a3465bf95
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2e0c926580df3471ae314d2c6127b38bf3c2231946010a0ab58500125edc6f39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117728986"
 ---
-# <a name="idirectxfilebinaryread-method"></a>Idirectxfilebinary:: Read-Methode
+# <a name="idirectxfilebinaryread-method"></a>IDirectXFileBinary::Read-Methode
 
 Liest die Binärdaten. Veraltet.
 
@@ -42,7 +42,7 @@ HRESULT Read(
 
 <dl> <dt>
 
-*pvData* \[ vorgenommen\]
+*pvData* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPVOID**](../winprog/windows-data-types.md)**
@@ -51,21 +51,21 @@ Zeiger auf den Puffer, der die gelesenen Daten empfängt.
 
 </dd> <dt>
 
-*CBSIZE* \[ in\]
+*cbSize* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Größe des Puffers, auf den pvData zeigt (in Bytes).
+Größe des Puffers, auf den pvData zeigt, in Bytes.
 
 </dd> <dt>
 
-*pcbread* \[ vorgenommen\]
+*read* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPDWORD**](../winprog/windows-data-types.md)**
 
-Ein Zeiger auf die Anzahl der tatsächlich gelesenen Bytes.
+Zeiger auf die Anzahl der tatsächlich gelesenen Bytes.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Ein Zeiger auf die Anzahl der tatsächlich gelesenen Bytes.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \_ . Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: dxfileerr \_ badvalue, dxfileerr \_ nomoredata.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert DXFILE \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: DXFILEERR \_ BADVALUE, DXFILEERR \_ NOMOREDATA.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,16 +81,16 @@ Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Idirectxfilebinary](idirectxfilebinary.md)
+[IDirectXFileBinary](idirectxfilebinary.md)
 </dt> </dl>
 
  

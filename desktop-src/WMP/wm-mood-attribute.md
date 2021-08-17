@@ -1,9 +1,9 @@
 ---
-title: WM/Stimmungs Attribut
-description: Das WM/Mood-Attribut ist ein Kategoriename für die Stimmung des Inhalts.
+title: WM/Attribute
+description: Das WM/Ungsattribut ist ein Kategoriename für die Stimmung des Inhalts.
 ms.assetid: 06ba1a64-19e3-450b-bcd7-19df4da44554
 keywords:
-- WM/Stimmungs Attribut Windows Media Player
+- WM/Attributattribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,31 +12,31 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d81e2ac1cbf6645a3ce955f3045cfdf5c19b5d7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 040a0e4d16d49e358979b460e55e51451d041dfbdc13dcd7129fda1767d62d19
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368396"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118332085"
 ---
-# <a name="wmmood-attribute"></a>WM/Stimmungs Attribut
+# <a name="wmmood-attribute"></a>WM/Attribute
 
-Das **WM/Mood-** Attribut ist ein Kategoriename für die Stimmung des Inhalts.
+Das **WM/Ungsattribut** ist ein Kategoriename für die Stimmung des Inhalts.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
--   [Häufig verwendete Windows Media-Dateiattribute](commonly-used-windows-media-file-attributes.md)
+-   [Häufig verwendete Windows Mediendateiattribute](commonly-used-windows-media-file-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Attribut wird nur in der digitalen Mediendatei gespeichert.
 
-" **Mood** " ist ein Alias für dieses Attribut.
+**Die Stimmung** ist ein Alias für dieses Attribut.
 
-Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist g \_ wszwmmood.
+Die Windows Media Format SDK-Konstante für dieses Attribut ist g \_ wszWMMood.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,15 +44,15 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

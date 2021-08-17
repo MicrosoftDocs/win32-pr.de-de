@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. hueshift
-description: Das hueshift-Attribut gibt den Betrag an, um den der Farbton der Dropdown Bilder verschoben wird, oder ruft diesen ab.
+title: PLAYLIST.hueShift
+description: Das hueShift-Attribut gibt die Menge an, um die der Farbton der Dropdownbilder verschoben wird, oder ruft sie ab.
 ms.assetid: 9d4d8b73-527e-43f3-a921-0576b8897918
 keywords:
-- Wiedergabeliste. hueshift Windows Media Player
+- PLAYLIST.hueShift-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 99e9dbe89989ddd8f02d67ac8f14532b9b1fbf15
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4a615549c25b57ed9693843a09433200f73c8e4ffad131c2a4e4057932c5e92b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373606"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117747074"
 ---
-# <a name="playlisthueshift"></a>Wiedergabeliste. hueshift
+# <a name="playlisthueshift"></a>PLAYLIST.hueShift
 
-Das **hueshift** -Attribut gibt den Betrag an, um den der Farbton der Dropdown Bilder verschoben wird, oder ruft diesen ab.
+Das **hueShift-Attribut** gibt die Menge an, um die der Farbton der Dropdownbilder verschoben wird, oder ruft sie ab.
 
 ``` syntax
         elementID.hueShift
@@ -29,11 +29,11 @@ Das **hueshift** -Attribut gibt den Betrag an, um den der Farbton der Dropdown B
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibnummer (**float**) mit einem Wert zwischen 0,0 und 360,0 mit dem Standardwert 0,0. 
+Dieses Attribut ist eine Lese-/Schreibnummer **(** **float**) mit einem Wert zwischen 0,0 und 360,0 mit dem Standardwert 0,0.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ändert den Farbton Wert der Bilder, die durch das **dropdownbackgroundimage** -Attribut und das **dropdownimage** -Attribut angegeben werden, wenn Sie angegeben wurden, und verweisen auf 8-Bit-BMP-Bilder.
+Dieses Attribut ändert den Farbtonwert der Bilder, die durch die **Attribute dropDownBackgroundImage** und **dropDownImage** angegeben werden, wenn sie angegeben wurden und auf 8-Bit-BMP-Bilder verweisen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,20 +45,20 @@ Dieses Attribut ändert den Farbton Wert der Bilder, die durch das **dropdownbac
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> <dt>
 
-[**Wiedergabeliste. dropdownbackgroundimage**](playlist-dropdownbackgroundimage.md)
+[**PLAYLIST.dropDownBackgroundImage**](playlist-dropdownbackgroundimage.md)
 </dt> <dt>
 
-[**Wiedergabeliste. dropdownimage**](playlist-dropdownimage.md)
+[**PLAYLIST.dropDownImage**](playlist-dropdownimage.md)
 </dt> <dt>
 
-[**Wiedergabeliste. Sättigung**](playlist-saturation.md)
+[**PLAYLIST.saturation**](playlist-saturation.md)
 </dt> </dl>
 
  

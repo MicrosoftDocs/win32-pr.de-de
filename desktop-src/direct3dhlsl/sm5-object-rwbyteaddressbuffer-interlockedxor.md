@@ -1,9 +1,9 @@
 ---
-title: 'Rwbyteaddressbuffer:: interlockedxor-Funktion'
-description: Führt einen atomaren XOR-Wert für den Wert aus.
+title: RWByteAddressBuffer::InterlockedXor-Funktion
+description: Führt einen atomaren XOR für den Wert aus.
 ms.assetid: 692f8b5e-a81e-4700-8a8d-3594aba85671
 keywords:
-- Interlockedxor-Funktion HLSL
+- InterlockedXor-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,24 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 920ae912c599b66a03a25d7bc8ecc9b199036b26
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 7b9e0c719bb72116ba84a33f46c81cf243773d4c66e5ff0997066e7228b19db1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948762"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117905797"
 ---
-# <a name="interlockedxor-function"></a>Interlockedxor-Funktion
+# <a name="interlockedxor-function"></a>InterlockedXor-Funktion
 
-Führt einen atomaren **Xor** -Wert für den Wert aus.
+Führt einen atomaren **XOR** für den Wert aus.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 void InterlockedXor(
-  in  UINT dest,
-  in  UINT value,
-  out UINT original_value
+  in  UINT dest,
+  in  UINT value,
+  out UINT original_value
 );
 ```
 
@@ -38,28 +38,28 @@ void InterlockedXor(
 
 <dl> <dt>
 
-*dest* \[ in\]
+*dest* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Die Zieladresse.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*wert* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Der Eingabewert.
 
 </dd> <dt>
 
-*ursprünglicher \_ Wert* ausgehend \[\]
+*Ursprünglicher \_ Wert* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Der ursprüngliche Wert.
 
@@ -69,32 +69,32 @@ Der ursprüngliche Wert.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Vorgang kann nur für typisierte **int** -oder **uint** -Ressourcen und Shared Memory-Variablen ausgeführt werden. Es gibt drei Verwendungsmöglichkeiten für diese Funktion. Der erste ist, wenn R ein Variablentyp für den gemeinsamen Speicher ist. In diesem Fall führt die Funktion einen atomaren **Xor** -Wert mit dem Wert des freigegebenen Speicher Registers aus, auf das von *dest* verwiesen wird. Das zweite Szenario ist, wenn R ein Ressourcen Variablentyp ist. In diesem Szenario führt die-Funktion einen atomaren **Xor** -Wert mit dem Wert des Ressourcen Speicher Orts aus, auf den " *dest*" verweist. Das dritte Szenario ist, dass R ein lokaler Variablentyp ist. In diesem Szenario wird die Funktion auf einen **Xor** -Wert der Werte " *dest* " und " *value*" reduziert. Das Ergebnis des Vorgangs ersetzt den Wert in *dest*. Die überladene Funktion verfügt über eine zusätzliche Ausgabevariable, die auf den ursprünglichen Wert von *dest* festgelegt wird. Dieser überladene Vorgang ist nur verfügbar, wenn R lesbar und beschreibbar ist.
+Dieser Vorgang kann nur für **INT-** oder **UINT-typisierte** Ressourcen und Freigegebene Speichervariablen ausgeführt werden. Es gibt drei mögliche Verwendungsmöglichkeiten für diese Funktion. Die erste ist, wenn R ein Variablentyp für gemeinsam genutzten Arbeitsspeicher ist. In diesem Fall führt die Funktion ein atomares **XOR** mit dem Wert des Shared Memory-Registers aus, auf das vom *Dest* verwiesen wird. Das zweite Szenario ist, wenn R ein Ressourcenvariablentyp ist. In diesem Szenario führt die Funktion einen atomaren **XOR** mit dem Wert des Ressourcenspeicherorts aus, auf den vom *Dest* verwiesen wird. Schließlich ist das dritte Szenario, wenn R ein lokaler Variablentyp ist. In diesem Szenario reduziert die Funktion auf einen **XOR** der Werte *dest* und *value*. Das Ergebnis des Vorgangs ersetzt den Wert in *dest*. Die überladene Funktion verfügt über eine zusätzliche Ausgabevariable, die auf den ursprünglichen Wert von *dest* festgelegt wird. Dieser überladene Vorgang ist nur verfügbar, wenn R lesbar und schreibbar ist.
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| VS  | Jh  | DS  | GS  | PS  | CS  |
+| VS  | Hs  | DS  | GS  | PS  | CS  |
 |-----|-----|-----|-----|-----|-----|
 | x   |  x  | x   | x   | x   | x   |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Rwbyteaddressbuffer](sm5-object-rwbyteaddressbuffer.md)
+[RWByteAddressBuffer](sm5-object-rwbyteaddressbuffer.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

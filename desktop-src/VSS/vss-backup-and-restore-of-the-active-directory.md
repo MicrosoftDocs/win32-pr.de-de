@@ -1,45 +1,45 @@
 ---
-description: Für den Active Directory Writer sind bei Sicherungs Vorgängen keine besonderen Aktionen erforderlich.
+description: Der Active Directory Writer erfordert während Sicherungsvorgängen keine besonderen Aktionen.
 ms.assetid: 66efd5e5-e6c9-4179-b119-1b5b977b0f9f
-title: VSS-Sicherung und-Wiederherstellung des Active Directory
+title: VSS-Sicherung und -Wiederherstellung von Active Directory
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d9d4441a05e06e67c23467887857a0f7bbcde73f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9e8312e974d705cd193eaaecdaa163a2d408836aedfb14c21ff97f72486efbf7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117751483"
 ---
-# <a name="vss-backup-and-restore-of-the-active-directory"></a>VSS-Sicherung und-Wiederherstellung des Active Directory
+# <a name="vss-backup-and-restore-of-the-active-directory"></a>VSS-Sicherung und -Wiederherstellung von Active Directory
 
-Für den Active Directory Writer sind bei Sicherungs Vorgängen keine besonderen Aktionen erforderlich. Der Writer stellt dem Anforderer Informationen zu Komponenten-und Datei Satz Informationen zur Verfügung, und der Anforderer verwendet diese Informationen, um zu entscheiden, welche Dateien auf die Sicherungsmedien kopiert werden sollen. Zum Sichern des Active Directory müssen keine speziellen APIs verwendet werden.
+Der Active Directory Writer erfordert während Sicherungsvorgängen keine besonderen Aktionen. Der Writer stellt dem Anfordernden Komponenten- und Dateisatzinformationen zur Verfügung, und der Anfordernde verwendet diese Informationen, um zu entscheiden, welche Dateien auf Sicherungsmedien kopiert werden sollen. Es ist nicht notwendig, spezielle APIs zum Sichern von Active Directory zu verwenden.
 
-Die Art und Weise, wie eine Wiederherstellung ausgeführt wird, hängt davon ab, ob die Active Directory im Rahmen eines Notfall Wiederherstellungs Vorgangs wieder hergestellt wird oder ob die Wiederherstellung auf einem System ausgeführt wird, auf dem die Active Directory ausgeführt wird. Außerdem kann das Alter der Sicherungskopie des Active Directory Zustands aufgrund Active Directory Tombstones ein Problem sein.
+Wie eine Wiederherstellung durchgeführt wird, hängt davon ab, ob Active Directory im Rahmen eines Notfallwiederherstellungsvorgang wiederhergestellt wird oder ob die Wiederherstellung auf einem System erfolgt, auf dem Active Directory ausgeführt wird. Darüber hinaus kann das Alter der Sicherungskopie des Active Directory-Zustands aufgrund von Active Directory-Tombstones ein Problem sein.
 
-## <a name="active-directory-restoration-following-disaster-recovery"></a>Active Directory Wiederherstellung nach der Notfall Wiederherstellung
+## <a name="active-directory-restoration-following-disaster-recovery"></a>Active Directory-Wiederherstellung nach der Notfallwiederherstellung
 
-Nach einem Absturz, der eine Notfall Wiederherstellung erfordert, kann der Active Directory im Rahmen der Wiederherstellung des Betriebssystem Status wieder hergestellt werden.
+Nach einem Absturz, der eine Notfallwiederherstellung erfordert, kann Active Directory im Rahmen der Wiederherstellung des Betriebssystemstatus wiederhergestellt werden.
 
-Dieser Wiederherstellungs Vorgang ist im Wesentlichen eine Schreib lose Wiederherstellung.
+Dieser Wiederherstellungsvorgang ist im Wesentlichen eine schreiblose Wiederherstellung.
 
-## <a name="active-directory-restoration-on-the-system-where-it-is-running"></a>Active Directory Wiederherstellung auf dem System, auf dem es ausgeführt wird
+## <a name="active-directory-restoration-on-the-system-where-it-is-running"></a>Active Directory-Wiederherstellung auf dem System, auf dem es ausgeführt wird
 
-Das System muss im Modus für die Verzeichnisdienst Wiederherstellung neu gestartet werden, wenn die Active Directory derzeit auf dem Server ausgeführt wird.
+Das System muss im Verzeichnisdienst-Wiederherstellungsmodus neu gestartet werden, wenn das Active Directory derzeit auf dem Server ausgeführt wird.
 
-Das Betriebssystem wird dann ohne den Active Directory ausgeführt, und alle Benutzer Validierung erfolgt über den Security Accounts Manager (Sam) in der Registrierung. Nur der Administrator verfügt über die Berechtigung zum Wiederherstellen des Active Directory.
+Das Betriebssystem wird dann ohne Active Directory ausgeführt, und alle Benutzerüberprüfungen erfolgen über den Sicherheitskonten-Manager (SAM) in der Registrierung. Nur der Administrator verfügt über die Berechtigung zum Wiederherstellen von Active Directory.
 
-Im Verzeichnisdienst-Wiederherstellungs Modus kann eine VSS-Wiederherstellung normal fortgesetzt werden. Es gibt keinen Grund, nicht-VSS-Win32-Active Directory-APIs zu verwenden, um den Active Directory-Zustand wiederherzustellen.
+Im Wiederherstellungsmodus des Verzeichnisdiensts kann eine VSS-Wiederherstellung normal fortgesetzt werden. Es gibt keinen Grund, Nicht-VSS-Win32-Active Directory-APIs zum Wiederherstellen des Active Directory-Zustands zu verwenden.
 
-## <a name="active-directory-restores-and-active-directory-tombstones"></a>Active Directory Wiederherstellungen und Active Directory Tombstones
+## <a name="active-directory-restores-and-active-directory-tombstones"></a>Active Directory-Wiederherstellungen und Active Directory-Tombstones
 
-Jeder Wiederherstellungs Plan sollte sicherstellen, dass das Alter der Sicherung die Active Directory Tombstone-Lebensdauer (Standardwert 60 Tage) nicht überschreitet.
+Bei jedem Wiederherstellungsplan sollte sichergestellt werden, dass das Alter der Sicherung die Active Directory-Tombstonelebensdauer nicht überschreitet (Der Standardwert ist 60 Tage).
 
-Durch die Wiederherstellung einer Sicherung, die älter als der Tombstone ist, werden von einem Domänen Controller Objekte verwendet, die nicht auf den anderen Servern repliziert werden.
+Die Wiederherstellung einer Sicherung, die älter als der Tombstone ist, verursacht, dass ein Domänencontroller Objekte enthält, die nicht auf die anderen Server repliziert werden.
 
-Diese Objekte, die nicht repliziert werden, werden auf dem (wiederhergestellten) Domänen Controller nicht automatisch gelöscht, da die Tombstones dieser Objekte auf den anderen Replikaten bereits gelöscht wurden.
+Objekte, die nicht repliziert werden, werden auf diesem (wiederhergestellten) Domänencontroller nicht automatisch gelöscht, da die Tombstones dieser Objekte auf den anderen Replikaten bereits gelöscht wurden.
 
-Ein Administrator muss alle Objekte auf dem wiederhergestellten Domänen Controller, die nicht repliziert werden, manuell löschen. Inkrementelle Sicherungen der Active Directory werden nicht unterstützt. eine vollständige Sicherung ist erforderlich.
+Ein Administrator muss jedes nicht replizierte Objekt auf dem wiederhergestellten Domänencontroller manuell löschen. Inkrementelle Sicherungen von Active Directory werden nicht unterstützt. Eine vollständige Sicherung ist erforderlich.
 
  
 

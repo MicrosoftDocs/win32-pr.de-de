@@ -1,9 +1,9 @@
 ---
 title: Documentation (registrationInfoType)-Element
-description: Gibt eine beliebige zusätzliche Dokumentation für die Aufgabe an.
+description: Gibt eine zusätzliche Dokumentation für die Aufgabe an.
 ms.assetid: 5f0d2df3-4eef-430b-85a9-602bb29b85c7
 keywords:
-- Documentation-Element Taskplaner
+- Dokumentationselement Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -22,7 +22,7 @@ ms.locfileid: "118356868"
 ---
 # <a name="documentation-registrationinfotype-element"></a>Documentation (registrationInfoType)-Element
 
-Gibt eine beliebige zusätzliche Dokumentation für die Aufgabe an.
+Gibt eine zusätzliche Dokumentation für die Aufgabe an.
 
 ``` syntax
 <xs:element name="Documentation"
@@ -31,7 +31,7 @@ Gibt eine beliebige zusätzliche Dokumentation für die Aufgabe an.
  />
 ```
 
-Das **Documentation-Element** wird durch den komplexen [**registrationInfoType-Typ**](taskschedulerschema-registrationinfotype-complextype.md) definiert.
+Das **Documentation-Element** wird durch den komplexen [**RegistrationInfoType-Typ**](taskschedulerschema-registrationinfotype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -39,15 +39,15 @@ Das **Documentation-Element** wird durch den komplexen [**registrationInfoType-T
 
 | Element                                                                           | Abgeleitet von                                                                         | BESCHREIBUNG                                                                                                                         |
 |-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md) | [**registrationInfoType**](taskschedulerschema-registrationinfotype-complextype.md) | Gibt administrative Informationen über den Task an, z. B. den Ersteller der Aufgabe und das Datum, an dem der Task registriert ist.<br/> |
+| [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md) | [**registrationInfoType**](taskschedulerschema-registrationinfotype-complextype.md) | Gibt Administratorinformationen zum Task an, z. B. den Autor der Aufgabe und das Datum, an dem die Aufgabe registriert wird.<br/> |
 
 
 
 ## <a name="remarks"></a>Hinweise
 
-Für Skriptanwendungen wird zusätzliche Aufgabendokumentation mithilfe der [**RegistrationInfo.DocUmentation-Eigenschaft**](registrationinfo-documentation.md) angegeben.
+Für Skriptanwendungen wird zusätzliche Aufgabendokumentation mithilfe der -EigenschaftRegistrationInfo.Doc [**umentation**](registrationinfo-documentation.md) angegeben.
 
-Für C++-Anwendungen wird mithilfe der [**IRegistrationInfo::D ocumentation-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iregistrationinfo-get_documentation) eine zusätzliche Aufgabendokumentation angegeben.
+Für C++-Anwendungen wird die zusätzliche Aufgabendokumentation mithilfe der [**IRegistrationInfo::D ocumentation-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iregistrationinfo-get_documentation) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,7 +55,7 @@ Für C++-Anwendungen wird mithilfe der [**IRegistrationInfo::D ocumentation-Eige
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVec3TransformCoord-Funktion (D3dx9math.h): Transformiert einen 3D-Vektor durch eine bestimmte Matrix und projektiert das Ergebnis zurück in w = 1.'
+description: 'D3DXVec3TransformCoord-Funktion (D3dx9math.h): Transformiert einen 3D-Vektor durch eine bestimmte Matrix und projiziert das Ergebnis zurück in w = 1.'
 ms.assetid: 4075b067-1e64-46c9-be73-5fa765c9cb9d
 title: D3DXVec3TransformCoord-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e4e3514d4717262a7afab7ae808d747de3a1b635
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 12cb5f1b41cc4450173c3a2fc35d01afb00e1cab9984edabfa3684ab33b8228d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108115628"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117730808"
 ---
 # <a name="d3dxvec3transformcoord-function-d3dx9mathh"></a>D3DXVec3TransformCoord-Funktion (D3dx9math.h)
 
-Transformiert einen 3D-Vektor durch eine bestimmte Matrix und projektiert das Ergebnis zurück in w = 1.
+Transformiert einen 3D-Vektor durch eine bestimmte Matrix und projiziert das Ergebnis zurück in w = 1.
 
 ## <a name="syntax"></a>Syntax
 
@@ -75,17 +75,17 @@ Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
 Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die der transformierte Vektor ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion transformiert den Vektor *pV* (x, y, z, 1) durch die Matrix *pM* und projektiert das Ergebnis wieder in w=1.
+Diese Funktion transformiert den Vektor *pV* (x, y, z, 1) durch die Matrix *pM* und projiziert das Ergebnis zurück in w=1.
 
-Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXVec3TransformCoord-Funktion** als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXVec3TransformCoord-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

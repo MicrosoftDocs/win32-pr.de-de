@@ -1,11 +1,11 @@
 ---
-title: Runningtask. enginepid (Eigenschaft)
-description: Ruft bei der Skripterstellung die Prozess-ID für die Engine (Prozess) ab, die die Aufgabe ausführen soll.
+title: RunningTask.EnginePID (Eigenschaft)
+description: Für die Skripterstellung ruft die Prozess-ID für die Engine (den Prozess) ab, die die Aufgabe ausgeführt.
 ms.assetid: cb8a0f2f-ebe3-4f52-8fbd-b0cebb539728
 keywords:
-- Enginepid-Eigenschaft Taskplaner
-- Enginepid-Eigenschaft Taskplaner, runningtask-Objekt
-- Runningtask-Objekt Taskplaner, enginepid-Eigenschaft
+- EnginePID-Taskplaner
+- EnginePID-Eigenschaft Taskplaner , RunningTask-Objekt
+- RunningTask-Taskplaner , EnginePID-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2bd725c44fc85e82d3693d9467956d3040aad2bf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: eed259ccc92e954ae1acde076f0cc09167d15071ea71a33039e7298479875b5d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339166"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117759073"
 ---
-# <a name="runningtaskenginepid-property"></a>Runningtask. enginepid (Eigenschaft)
+# <a name="runningtaskenginepid-property"></a>RunningTask.EnginePID (Eigenschaft)
 
-Ruft bei der Skripterstellung die Prozess-ID für die Engine (Prozess) ab, die die Aufgabe ausführen soll.
+Für die Skripterstellung ruft die Prozess-ID für die Engine (den Prozess) ab, die die Aufgabe ausgeführt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -40,11 +40,11 @@ RunningTask.EnginePID As Integer
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Prozess-ID für die Engine, die die Aufgabe ausführen soll.
+Die Prozess-ID für die Engine, die den Task ausgeführt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die von dieser Eigenschaft zurückgegebene Prozess-ID kann nicht direkt an eine Zeichenfolge angehängt werden. Der zurückgegebene Wert muss zuerst in einen ganzzahligen Wert konvertiert werden, indem die [CInt](/previous-versions//fctcwhw9(v=vs.85)) -Funktion für den zurückgegebenen Wert aufgerufen wird.
+Die von dieser Eigenschaft zurückgegebene Prozess-ID kann nicht direkt an eine Zeichenfolge angefügt werden. Der zurückgegebene Wert muss zuerst durch Aufrufen der [CInt-Funktion](/previous-versions//fctcwhw9(v=vs.85)) für den zurückgegebenen Wert in einen ganzzahligen Wert konvertiert werden.
 
 
 ```VB
@@ -60,9 +60,9 @@ wscript.echo "Process Id of Engine is " & "ProcessId
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

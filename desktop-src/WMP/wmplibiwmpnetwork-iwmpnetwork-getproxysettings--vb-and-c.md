@@ -66,7 +66,7 @@ Eine **System.Int32-Datei,** die einer der folgenden Werte ist.
 
 
 
-| Wert | BESCHREIBUNG                                                                      |
+| Wert | Beschreibung                                                                      |
 |-------|----------------------------------------------------------------------------------|
 | 0     | Ein Proxyserver wird nicht verwendet.                                                |
 | 1     | Die Proxyeinstellungen für den aktuellen Browser werden verwendet (nur für HTTP gültig). |

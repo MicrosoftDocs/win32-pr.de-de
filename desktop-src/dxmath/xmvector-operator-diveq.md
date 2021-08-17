@@ -1,7 +1,7 @@
 ---
-description: Divisions Zuweisungs Operator.
+description: Divisionszuweisungsoperator.
 ms.assetid: 59dee8a1-48c5-4748-8eca-1d0939e90fe0
-title: Operator/=-Operatoren
+title: operator /=-Operatoren
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,16 +11,16 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: e4d0c20975a93215a62bdb6b08dedc839ca8d079
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ab9b0b003b3edea331ae617948176c38a9c7b47eca0972e63d6b54873d2669e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959254"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118087126"
 ---
-# <a name="operator--operators"></a>Operator/=-Operatoren
+# <a name="operator--operators"></a>operator /=-Operatoren
 
-Divisions Zuweisungs Operator.
+Divisionszuweisungsoperator.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -34,13 +34,13 @@ Divisions Zuweisungs Operator.
 <thead>
 <tr class="header">
 <th style="text-align: left;">Operator</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
+<th style="text-align: left;">Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><a href="/previous-versions/windows/desktop/legacy/ee421377(v=vs.85)"><strong>Xmvector:: Operator/= (xmvector&, float)</strong></a></td>
-<td style="text-align: left;">Dividiert eine <code>XMVECTOR</code> Instanz durch einen Gleit Komma Wert und gibt einen Verweis auf die aktualisierte Instanz zurück. <br/> Der <code>operator /=</code> dividiert jede Komponente der aktuellen Instanz des <a href="xmvector-data-type.md"><strong>xmvector-Datentyps</strong></a> durch einen angegebenen Gleit Komma Wert und gibt einen Verweis auf die aktualisierte aktuelle Instanz zurück. <br/>
+<td style="text-align: left;"><a href="/previous-versions/windows/desktop/legacy/ee421377(v=vs.85)"><strong>XMVECTOR::operator /= (XMVECTOR&,float)</strong></a></td>
+<td style="text-align: left;">Dividiert eine <code>XMVECTOR</code> Instanz durch einen Gleitkommawert und gibt einen Verweis auf die aktualisierte Instanz zurück. <br/> Dividiert jede Komponente der aktuellen Instanz des <code>operator /=</code> <a href="xmvector-data-type.md"><strong>XMVECTOR-Datentyps</strong></a> durch einen angegebenen Gleitkommawert und gibt einen Verweis auf die aktualisierte aktuelle Instanz zurück. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Operator ist nur unter C++ verfügbar.
@@ -48,8 +48,8 @@ Dieser Operator ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/previous-versions/windows/desktop/legacy/ee421378(v=vs.85)"><strong>Xmvector:: Operator/= (xmvector&, xmvector)</strong></a></td>
-<td style="text-align: left;">Dividiert eine- <code>XMVECTOR</code> Instanz durch eine zweite-Instanz und gibt einen Verweis auf die aktualisierte anfängliche Instanz zurück. <br/> Der <code>operator /=</code> dividiert jede Komponente der aktuellen Instanz des <a href="xmvector-data-type.md"><strong>xmvector-Datentyps</strong></a> durch die entsprechende Komponente in einer zweiten angegebenen Instanz von <code>XMVECTOR</code> und gibt einen Verweis auf die aktualisierte anfängliche Instanz zurück. <br/>
+<td style="text-align: left;"><a href="/previous-versions/windows/desktop/legacy/ee421378(v=vs.85)"><strong>XMVECTOR::operator /= (XMVECTOR&,XMVECTOR)</strong></a></td>
+<td style="text-align: left;">Dividiert eine <code>XMVECTOR</code> Instanz durch eine zweite Instanz und gibt einen Verweis auf die aktualisierte ursprüngliche Instanz zurück. <br/> Dividiert jede Komponente der aktuellen Instanz des <code>operator /=</code> <a href="xmvector-data-type.md"><strong>XMVECTOR-Datentyps</strong></a> durch die entsprechende Komponente in einer zweiten angegebenen Instanz von und gibt einen Verweis auf die aktualisierte <code>XMVECTOR</code> ursprüngliche Instanz zurück. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Operator ist nur unter C++ verfügbar.
@@ -61,17 +61,17 @@ Dieser Operator ist nur unter C++ verfügbar.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Xmvector-Operatoren](ovw-xmvector-operators.md)
+[XMVECTOR-Operatoren](ovw-xmvector-operators.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Xmvector-Datentyp**](xmvector-data-type.md)
+[**XMVECTOR-Datentyp**](xmvector-data-type.md)
 </dt> </dl>
 
  

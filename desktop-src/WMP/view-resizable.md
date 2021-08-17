@@ -1,9 +1,9 @@
 ---
-title: Ansicht. Größenänderung
-description: Das in der Größe änderbare Attribut Ruft einen Wert ab, der angibt, ob die Größe der Sicht geändert werden kann.
+title: VIEW.resizable
+description: Das Größenänderungsattribut ruft einen Wert ab, der angibt, ob die GRÖßE der VIEW geändert werden kann.
 ms.assetid: 4f0e4f31-cf16-498f-823f-da43566043b1
 keywords:
-- Ansicht. Größenänderung in Windows Media Player
+- VIEW.resizable Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ed4d61973e34891d336ea5729ea40478c6c32808
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 622c732ce6a1218fa16bbe70c1ef18d53ba4211abfde9d39fc794ec862348033
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365371"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118332908"
 ---
-# <a name="viewresizable"></a>Ansicht. Größenänderung
+# <a name="viewresizable"></a>VIEW.resizable
 
-Das in der **Größe** änderbare Attribut Ruft einen Wert ab, der angibt, ob die Größe der **Sicht** geändert werden kann.
+Das Größenänderungsattribut ruft einen Wert ab, der angibt, ob die GRÖßE der **VIEW** geändert werden kann. 
 
 ``` syntax
         elementID.resizable
@@ -29,22 +29,22 @@ Das in der **Größe** änderbare Attribut Ruft einen Wert ab, der angibt, ob di
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein Schreib geschützter **boolescher** Wert mit einem Standardwert, der dem **TitleBar** -Attribut entspricht.
+Dieses Attribut ist ein **schreibgeschützter boolescher** Wert mit einem Standardwert, der dem **Titlebar-Attribut** entspricht.
 
 
 
 | Werte | BESCHREIBUNG             |
 |--------|-------------------------|
-| true   | Die Größe der Sicht kann geändert werden.    |
-| false  | Die Größe der Sicht kann nicht geändert werden. |
+| true   | Die Größe der Ansicht kann geändert werden.    |
+| false  | Die Größe der Ansicht kann nicht geändert werden. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn keine **TitleBar** und somit kein Fenster oder Rahmen vorhanden ist, müssen Sie die size-Methode verwenden, um die **Größe** des **Ansichts** Elements zu ändern.
+Wenn keine **Titelleiste** und daher kein Fenster oder Rahmen vorhanden ist, müssen Sie die **Size-Methode** verwenden, um die Größe des **VIEW-Elements** zu ändern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,15 +52,15 @@ Wenn keine **TitleBar** und somit kein Fenster oder Rahmen vorhanden ist, müsse
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**View-Element**](view-element.md)
+[**VIEW-Element**](view-element.md)
 </dt> </dl>
 
  

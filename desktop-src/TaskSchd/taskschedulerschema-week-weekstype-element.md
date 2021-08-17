@@ -1,9 +1,9 @@
 ---
-title: Week (weekstype)-Element
+title: Week (weeksType)-Element
 description: Gibt eine bestimmte Woche des Monats an.
 ms.assetid: 0cec07da-e9e7-43ef-9f54-48d00114ba1f
 keywords:
-- Week-Element Taskplaner
+- Week-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0487aa07e1f1132c998b6cb2ba0f518a9db57ce2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a999eaa5ec7d4ed36b86fc292f4c0d5e8c474fd1df8f5f4b9da5b90f2dcca641
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342659"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117758206"
 ---
-# <a name="week-weekstype-element"></a>Week (weekstype)-Element
+# <a name="week-weekstype-element"></a>Week (weeksType)-Element
 
 Gibt eine bestimmte Woche des Monats an.
 
@@ -30,19 +30,19 @@ Gibt eine bestimmte Woche des Monats an.
  />
 ```
 
-Das **Week** -Element wird durch den komplexen [**weekstype**](taskschedulerschema-weekstype-complextype.md) -Typ definiert.
+Das **Week-Element** wird durch den komplexen [**WeeksType-Typ**](taskschedulerschema-weekstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                                        | Abgeleitet von                                                   | BESCHREIBUNG                                                           |
+| Element                                                                                                        | Abgeleitet von                                                   | Beschreibung                                                           |
 |----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
-| [**Wochen (monthlydayosweekscheduletype)**](taskschedulerschema-weeks-monthlydayofweekscheduletype-element.md) | [**weekstype**](taskschedulerschema-weekstype-complextype.md) | Gibt die Wochen des Monats an, in denen der Task ausgeführt wird.<br/> |
+| [**Weeks (monthlyDayOfWeekScheduleType)**](taskschedulerschema-weeks-monthlydayofweekscheduletype-element.md) | [**weeksType**](taskschedulerschema-weekstype-complextype.md) | Gibt die Wochen des Monats an, in denen die Aufgabe ausgeführt wird.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn Sie die Wochen des Monats angeben, verwenden Sie die Zahlen 1-4 für die ersten vier Wochen des Monats, oder verwenden Sie die Zeichenfolge "Last", um die letzte Woche des Monats anzugeben.
 
@@ -52,16 +52,16 @@ Wenn Sie die Wochen des Monats angeben, verwenden Sie die Zahlen 1-4 für die er
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

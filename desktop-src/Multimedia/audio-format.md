@@ -6,7 +6,7 @@ keywords:
 - WM_CAP_GET_AUDIOFORMAT-Nachricht
 - capGetAudioFormat-Makro
 - capGetAudioFormatSize-Makro
-- WM_CAP_SET_AUDIOFORMAT Nachricht
+- WM_CAP_SET_AUDIOFORMAT-Nachricht
 - capSetAudioFormat-Makro
 ms.topic: article
 ms.date: 05/31/2018

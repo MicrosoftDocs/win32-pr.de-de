@@ -37,7 +37,7 @@ Gibt den hyperbolischen Tangens des angegebenen Werts zurück.
 
 
 
-| Element                                                   | BESCHREIBUNG                                        |
+| Element                                                   | Beschreibung                                        |
 |--------------------------------------------------------|----------------------------------------------------|
 | <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der angegebene Wert im Bogenmaß.<br/> |
 
@@ -47,7 +47,7 @@ Gibt den hyperbolischen Tangens des angegebenen Werts zurück.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der hyperbolische Tangens  des x-Parameters.
+Der hyperbolische Tangens des *x-Parameters.*
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -56,13 +56,13 @@ Der hyperbolische Tangens  des x-Parameters.
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                           |
 |-------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------------|
 | *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
-| *Ret* | identisch mit eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(en) wie eingabe *x* |
+| *Ret* | identisch mit Eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(n) wie Eingabe *x* |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Shader-Mindestmodell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -70,8 +70,8 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                                       | Unterstützt           |
 |------------------------------------------------------------------------------------|---------------------|
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | ja                 |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | ja (im Vergleich \_ \_ zu nur 1 1) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja                 |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja (nur \_ im Vergleich \_ zu 1 1) |
 
 
 

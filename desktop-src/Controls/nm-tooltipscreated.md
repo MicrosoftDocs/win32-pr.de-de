@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118410313"
 ---
-# <a name="nm_tooltipscreated-notification-code"></a>NM \_ QUICKINFOCREATED-Benachrichtigungscode
+# <a name="nm_tooltipscreated-notification-code"></a>NM \_ TOOLTIPSCREATED-Benachrichtigungscode
 
 Benachrichtigt das übergeordnete Fenster eines Steuerelements, dass das Steuerelement ein QuickInfo-Steuerelement erstellt hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 

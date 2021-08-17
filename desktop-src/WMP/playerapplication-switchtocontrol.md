@@ -1,10 +1,10 @@
 ---
 title: PlayerApplication.switchToControl-Methode
-description: Die switchToControl-Methode schaltet ein remote Windows Media Player steuerelement in den angedockten Zustand um.
+description: Die switchToControl-Methode schaltet ein Remotesteuerelement Windows Media Player in den andockbaren Zustand um.
 ms.assetid: 3c321b8f-8208-4c55-8872-38626d8ef9c9
 keywords:
-- switchToControl-Windows Media Player
-- switchToControl-Windows Media Player , PlayerApplication-Klasse
+- switchToControl-Methode Windows Media Player
+- switchToControl-Methode Windows Media Player , PlayerApplication-Klasse
 - PlayerApplication-Klasse Windows Media Player , switchToControl-Methode
 topic_type:
 - apiref
@@ -25,7 +25,7 @@ ms.locfileid: "117747214"
 ---
 # <a name="playerapplicationswitchtocontrol-method"></a>PlayerApplication.switchToControl-Methode
 
-Die **switchToControl-Methode** schaltet ein remote Windows Media Player steuerelement in den angedockten Zustand um.
+Die **switchToControl-Methode** schaltet ein Remotesteuerelement Windows Media Player in den andockbaren Zustand um.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode wird nur beim Remoting des Windows Media Player verwendet.
+Diese Methode wird nur beim Remoting des Windows Media Player-Steuerelements verwendet.
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
@@ -56,7 +56,7 @@ Diese Methode wird nur beim Remoting des Windows Media Player verwendet.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player serie 9 oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 

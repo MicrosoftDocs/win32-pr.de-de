@@ -72,7 +72,7 @@ Vor dem Aufrufen dieser Methode benötigen Sie Lesezugriff auf die Bibliothek. W
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **isMemberOf** verwendet, um zu testen, ob das aktuelle Medienelement Mitglied der Wiedergabeliste mit dem Namen All Musik ist. Wenn dies nicht dere ist, wird das aktuelle Medienelement an die Wiedergabeliste angefügt. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
+Im folgenden Beispiel wird **isMemberOf** verwendet, um zu testen, ob das aktuelle Medienelement mitglied der Wiedergabeliste mit dem Namen All Musik ist. Wenn dies nicht dere ist, wird das aktuelle Medienelement an die Wiedergabeliste angefügt. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp

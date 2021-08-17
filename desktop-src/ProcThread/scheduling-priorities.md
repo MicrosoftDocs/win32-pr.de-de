@@ -1,7 +1,7 @@
 ---
 description: Die Ausführung von Threads wird basierend auf ihrer Planungspriorität geplant.
 ms.assetid: 8710cd56-6bf3-4317-a1f6-1a159394ce2a
-title: Zeitplanungsprioritäten
+title: Planungsprioritäten
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 359f86e6ef78ffe1e549045eebbe435674b50f25f25bd30598fce8581c06092a
@@ -11,65 +11,65 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117793312"
 ---
-# <a name="scheduling-priorities"></a>Zeitplanungsprioritäten
+# <a name="scheduling-priorities"></a>Planungsprioritäten
 
-Die Ausführung von Threads wird basierend auf ihrer *Planungspriorität geplant.* Jedem Thread wird eine Planungspriorität zugewiesen. Die Prioritätsstufen reichen von 0 (niedrigste Priorität) bis 31 (höchste Priorität). Nur der Nullseitenthread kann eine Priorität von 0 (null) haben. (Der Nullseitenthread ist ein Systemthread, der für das Nullen von freien Seiten verantwortlich ist, wenn keine anderen Threads ausgeführt werden müssen.)
+Die Ausführung von Threads wird basierend auf ihrer *Planungspriorität* geplant. Jedem Thread wird eine Planungspriorität zugewiesen. Die Prioritätsebenen reichen von 0 (niedrigste Priorität) bis 31 (höchste Priorität). Nur der Nullseitenthread kann die Priorität 0 (null) haben. (Der Nullseitenthread ist ein Systemthread, der dafür verantwortlich ist, alle freien Seiten auf null zu setzen, wenn keine anderen Threads ausgeführt werden müssen.)
 
-Das System behandelt alle Threads mit der gleichen Priorität als gleich. Das System weist allen Threads mit der höchsten Priorität Zeitslices in Roundrobin-Weise zu. Wenn keiner dieser Threads ausgeführt werden kann, weist das System allen Threads mit der nächsten höchsten Priorität Roundrobin-Zeitslices zu. Wenn ein Thread mit höherer Priorität für die Ausführung verfügbar wird, beendet das System die Ausführung des Threads mit niedrigerer Priorität (ohne dass er die Verwendung seines Zeitslices beenden kann) und weist dem Thread mit höherer Priorität einen Zeitslice zu. Weitere Informationen finden Sie unter [Kontextwechsel.](context-switches.md)
+Das System behandelt alle Threads mit der gleichen Priorität als gleich. Das System weist allen Threads mit der höchsten Priorität Zeitslices auf Roundrobin-Weise zu. Wenn keiner dieser Threads ausgeführt werden kann, weist das System allen Threads mit der nächstrangigen Priorität Roundrobin-Zeitslices zu. Wenn ein Thread mit höherer Priorität für die Ausführung verfügbar ist, beendet das System die Ausführung des Threads mit niedrigerer Priorität (ohne dass er die Verwendung seines Zeitslices beenden kann) und weist dem Thread mit höherer Priorität einen vollständigen Zeitslice zu. Weitere Informationen finden Sie unter [Kontextwechsel.](context-switches.md)
 
-Die Priorität der einzelnen Threads wird durch die folgenden Kriterien bestimmt:
+Die Priorität jedes Threads wird durch die folgenden Kriterien bestimmt:
 
 -   Die Prioritätsklasse des Prozesses
--   Die Prioritätsebene des Threads innerhalb der Prioritätsklasse des Prozesses.
+-   Die Prioritätsebene des Threads innerhalb der Prioritätsklasse des Prozesses
 
-Die Prioritätsklasse und die Prioritätsebene werden kombiniert, um die *Basispriorität eines* Threads zu bilden. Informationen zur dynamischen Priorität eines Threads finden Sie unter [Priority Boosts](priority-boosts.md).
+Die Prioritätsklasse und die Prioritätsebene werden kombiniert, um die *Basispriorität* eines Threads zu bilden. Informationen zur dynamischen Priorität eines Threads finden Sie unter [Prioritätssteigerungen.](priority-boosts.md)
 
 ## <a name="priority-class"></a>Priority-Klasse
 
 Jeder Prozess gehört zu einer der folgenden Prioritätsklassen:<dl> IDLE \_ \_ PRIORITY-KLASSE  
-UNTERHALB \_ DER \_ NORMAL \_ PRIORITY-KLASSE  
+BELOW \_ NORMAL \_ PRIORITY \_ CLASS  
 NORMAL \_ \_ PRIORITY-KLASSE  
-ÜBER \_ DER NORMAL \_ \_ PRIORITY-KLASSE  
-HIGH \_ \_ PRIORITY-KLASSE  
-REALTIME \_ \_ PRIORITY-KLASSE  
+OBERHALB \_ DER NORMALEN \_ \_ PRIORITÄTSKLASSE  
+KLASSE MIT HOHER \_ PRIORITÄT \_  
+REALTIME \_ PRIORITY \_ CLASS  
 </dl>
 
-Standardmäßig ist die Prioritätsklasse eines Prozesses NORMAL \_ PRIORITY \_ CLASS. Verwenden Sie [**die CreateProcess-Funktion,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) um die Prioritätsklasse eines untergeordneten Prozesses anzugeben, wenn Sie ihn erstellen. Wenn der aufrufende Prozess IDLE \_ PRIORITY CLASS oder BELOW NORMAL PRIORITY CLASS \_ \_ \_ \_ ist, erbt der neue Prozess diese Klasse. Verwenden Sie [**die GetPriorityClass-Funktion,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getpriorityclass) um die aktuelle Prioritätsklasse eines Prozesses zu bestimmen, und die [**SetPriorityClass-Funktion,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setpriorityclass) um die Prioritätsklasse eines Prozesses zu ändern.
+Standardmäßig ist die Prioritätsklasse eines Prozesses NORMAL \_ PRIORITY \_ CLASS. Verwenden Sie die [**CreateProcess-Funktion,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) um die Prioritätsklasse eines untergeordneten Prozesses anzugeben, wenn Sie ihn erstellen. Wenn der aufrufende Prozess IDLE \_ PRIORITY CLASS oder BELOW NORMAL PRIORITY CLASS \_ \_ \_ \_ ist, erbt der neue Prozess diese Klasse. Verwenden Sie die [**GetPriorityClass-Funktion,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getpriorityclass) um die aktuelle Prioritätsklasse eines Prozesses zu bestimmen, und die [**SetPriorityClass-Funktion,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setpriorityclass) um die Prioritätsklasse eines Prozesses zu ändern.
 
-Prozesse, die das System überwachen, z. B. Bildschirmschoner oder Anwendungen, die eine Anzeige regelmäßig aktualisieren, sollten IDLE \_ PRIORITY \_ CLASS verwenden. Dadurch wird verhindert, dass threads dieses Prozesses, die keine hohe Priorität haben, Threads mit höherer Priorität stören.
+Prozesse, die das System überwachen, z. B. Bildschirmschoner oder Anwendungen, die regelmäßig eine Anzeige aktualisieren, sollten IDLE \_ PRIORITY \_ CLASS verwenden. Dadurch wird verhindert, dass die Threads dieses Prozesses, die keine hohe Priorität haben, Threads mit höherer Priorität beeinträchtigen.
 
-Verwenden Sie HIGH \_ PRIORITY \_ CLASS mit Vorsicht. Wenn ein Thread für längere Zeiträume mit der höchsten Prioritätsebene ausgeführt wird, erhalten andere Threads im System keine Prozessorzeit. Wenn mehrere Threads gleichzeitig mit hoher Priorität festgelegt werden, verlieren die Threads ihre Effektivität. Die Klasse mit hoher Priorität sollte für Threads reserviert sein, die auf zeitkritische Ereignisse reagieren müssen. Wenn Ihre Anwendung eine Aufgabe ausführt, für die die Klasse mit hoher Priorität erforderlich ist, während die restlichen Aufgaben die normale Priorität haben, verwenden Sie [**SetPriorityClass,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setpriorityclass) um die Prioritätsklasse der Anwendung vorübergehend zu erhöhen. Reduzieren Sie sie dann, nachdem die zeitkritische Aufgabe abgeschlossen wurde. Eine andere Strategie besteht in der Erstellung eines Prozesses mit hoher Priorität, bei dem alle Threads die meiste Zeit blockiert werden, und Threads nur dann zu erzeugen, wenn kritische Aufgaben benötigt werden. Der wichtigste Punkt ist, dass ein Thread mit hoher Priorität für einen kurzen Zeitraum ausgeführt werden sollte, und nur dann, wenn zeitkritische Aufgaben ausgeführt werden müssen.
+Verwenden Sie HIGH \_ PRIORITY \_ CLASS mit Vorsicht. Wenn ein Thread über längere Zeiträume mit der höchsten Prioritätsstufe ausgeführt wird, erhalten andere Threads im System keine Prozessorzeit. Wenn mehrere Threads gleichzeitig mit hoher Priorität festgelegt werden, verlieren die Threads ihre Effektivität. Die Klasse mit hoher Priorität sollte für Threads reserviert werden, die auf zeitkritische Ereignisse reagieren müssen. Wenn Ihre Anwendung eine Aufgabe ausführt, die die Klasse mit hoher Priorität erfordert, während die restlichen Aufgaben eine normale Priorität haben, verwenden [**Sie SetPriorityClass,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setpriorityclass) um die Prioritätsklasse der Anwendung vorübergehend zu erhöhen. reduzieren Sie sie dann, nachdem die zeitkritische Aufgabe abgeschlossen wurde. Eine weitere Strategie besteht darin, einen Prozess mit hoher Priorität zu erstellen, bei dem die meiste Zeit alle Threads blockiert sind, und Threads nur dann wieder ins Laufen zu bringen, wenn wichtige Aufgaben erforderlich sind. Der wichtige Punkt ist, dass ein Thread mit hoher Priorität für einen kurzen Zeitraum und nur dann ausgeführt werden soll, wenn zeitkritische Aufgaben ausgeführt werden müssen.
 
-Sie sollten fast nie REALTIME PRIORITY CLASS verwenden, da dies Systemthreads unterbricht, die Mauseingaben, Tastatureingaben und Hintergrunddatenträger \_ \_ leeren. Diese Klasse kann für Anwendungen geeignet sein, die direkt mit der Hardware "sprechen" oder kurze Aufgaben ausführen, die eingeschränkte Unterbrechungen haben sollten.
+Sie sollten REALTIME PRIORITY CLASS fast nie \_ \_ verwenden, da dadurch Systemthreads unterbrochen werden, die Mauseingaben, Tastatureingaben und das Leeren von Hintergrunddatenträgern verwalten. Diese Klasse kann für Anwendungen geeignet sein, die direkt mit Hardware kommunizieren oder kurze Aufgaben ausführen, die begrenzte Unterbrechungen aufweisen sollten.
 
-## <a name="priority-level"></a>Prioritätsebene
+## <a name="priority-level"></a>Prioritätsstufe
 
-Im Folgenden finden Sie Prioritätsebenen innerhalb jeder Prioritätsklasse:<dl> \_THREADPRIORITÄT IM \_ LEERLAUF  
-\_THREADPRIORITÄT \_ NIEDRIGSTE  
+Im Folgenden sind Die Prioritätsebenen innerhalb jeder Prioritätsklasse:<dl> \_ \_ THREADPRIORITÄT IM LEERLAUF  
+\_ \_ THREADPRIORITÄT NIEDRIGSTE  
 \_THREADPRIORITÄT \_ UNTER \_ NORMAL  
 \_THREADPRIORITÄT \_ NORMAL  
-\_THREADPRIORITÄT \_ ÜBER \_ NORMAL  
-\_THREADPRIORITÄT \_ AM HÖCHSTEN  
-\_ \_ THREADPRIORITÄTSZEIT \_ KRITISCH  
+\_ \_ THREADPRIORITÄT ÜBER \_ NORMAL  
+\_HÖCHSTE \_ THREADPRIORITÄT  
+\_ZEITKRITISCH FÜR THREADPRIORITÄT \_ \_  
 </dl>
 
-Alle Threads werden mit THREAD \_ PRIORITY \_ NORMAL erstellt. Dies bedeutet, dass die Threadpriorität mit der Prozessprioritätsklasse identisch ist. Nachdem Sie einen Thread erstellt haben, verwenden Sie die [**SetThreadPriority-Funktion,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) um die Priorität relativ zu anderen Threads im Prozess anzupassen.
+Alle Threads werden mit THREAD \_ PRIORITY \_ NORMAL erstellt. Dies bedeutet, dass die Threadpriorität mit der Prozessprioritätsklasse identisch ist. Nachdem Sie einen Thread erstellt haben, verwenden Sie die [**SetThreadPriority-Funktion,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) um ihre Priorität relativ zu anderen Threads im Prozess anzupassen.
 
-Eine typische Strategie ist die Verwendung von THREAD PRIORITY ABOVE NORMAL oder THREAD PRIORITY HIGHEST für den Eingabethread des Prozesses, um sicherzustellen, dass die Anwendung \_ \_ auf den Benutzer \_ \_ \_ reagiert. Hintergrundthreads, insbesondere solche, die prozessorintensiv sind, können auf THREADPRIORITÄT UNTER NORMAL oder THREADPRIORITÄT NIEDRIGSTE festgelegt werden, um sicherzustellen, dass sie bei Bedarf \_ \_ \_ vorverlegt werden \_ \_ können. Wenn Sie jedoch einen Thread haben, der auf einen anderen Thread mit einer niedrigeren Priorität wartet, um eine Aufgabe auszuführen, stellen Sie sicher, dass Sie die Ausführung des wartenden Threads mit hoher Priorität blockieren. Verwenden Sie hierzu eine [Wartefunktion,](../sync/wait-functions.md) [einen](../sync/critical-section-objects.md)kritischen Abschnitt oder die [**Sleep-Funktion,**](/windows/win32/api/synchapi/nf-synchapi-sleep) [**SleepEx**](/windows/win32/api/synchapi/nf-synchapi-sleepex)oder [**SwitchToThread-Funktion.**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-switchtothread) Dies ist dem Ausführen einer Schleife durch den Thread vorzuziehen. Andernfalls kann der Prozess zu einem Deadlock werden, da der Thread mit niedrigerer Priorität nie geplant wird.
+Eine typische Strategie ist die Verwendung von THREAD \_ PRIORITY ABOVE NORMAL oder THREAD PRIORITY HIGHEST für den \_ \_ \_ \_ Eingabethread des Prozesses, um sicherzustellen, dass die Anwendung auf den Benutzer reagiert. Hintergrundthreads, insbesondere solche, die prozessorintensiv sind, können auf THREAD PRIORITY BELOW NORMAL oder THREAD PRIORITY LOWEST festgelegt \_ \_ \_ \_ \_ werden, um sicherzustellen, dass sie bei Bedarf vorzeitig beendet werden können. Wenn Sie jedoch einen Thread haben, der auf einen anderen Thread mit einer niedrigeren Priorität wartet, um eine Aufgabe abzuschließen, stellen Sie sicher, dass Sie die Ausführung des wartenden Threads mit hoher Priorität blockieren. Verwenden Sie hierzu eine [Wait-Funktion,](../sync/wait-functions.md)einen [kritischen Abschnitt](../sync/critical-section-objects.md)oder die [**Sleep-Funktion,**](/windows/win32/api/synchapi/nf-synchapi-sleep) [**SleepEx**](/windows/win32/api/synchapi/nf-synchapi-sleepex)oder die [**SwitchToThread-Funktion.**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-switchtothread) Dies ist dem Ausführen einer Schleife durch den Thread vorzuziehen. Andernfalls kann der Prozess zu einem Deadlock führen, da der Thread mit niedrigerer Priorität nie geplant ist.
 
 Verwenden Sie die [**GetThreadPriority-Funktion,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getthreadpriority) um die aktuelle Prioritätsebene eines Threads zu bestimmen.
 
 ## <a name="base-priority"></a>Basispriorität
 
-Die Prozessprioritätsklasse und threadprioritätsebene werden kombiniert, um die Basispriorität jedes Threads zu bilden.
+Die Prozessprioritätsklasse und die Threadprioritätsebene werden kombiniert, um die Basispriorität jedes Threads zu bilden.
 
-Die folgende Tabelle zeigt die Basispriorität für Kombinationen von Prozessprioritätsklasse und Threadprioritätswert.
+Die folgende Tabelle zeigt die Basispriorität für Kombinationen aus Prozessprioritätsklasse und Threadprioritätswert.
 
 
 <table>
 <tr>
 <th colspan="2">Prozessprioritätsklasse</th>
-<th>Threadprioritätsebene</th>
+<th>Threadprioritätsstufe</th>
 <th>Basispriorität</th>
 </tr>
 <tr>

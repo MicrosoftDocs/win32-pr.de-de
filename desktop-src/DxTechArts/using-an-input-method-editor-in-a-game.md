@@ -4,17 +4,17 @@ description: In diesem Artikel wird erläutert, wie Sie ein einfaches IME-Bearbe
 ms.assetid: 760ed960-08a3-e967-282e-7fbdbaeb7a4d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a119c5933aae14e2d3e45085dafa241a4dcb11e1
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 195d3272c4051adbafc25d910f01ac98ec036cead314c7f7b04301528508a494
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113118675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118396416"
 ---
 # <a name="using-an-input-method-editor-in-a-game"></a>Verwenden eines Eingabemethoden-Editors in einem Spiel
 
 > [!Note]  
-> In diesem Artikel wird die Arbeit mit dem Eingabemethoden-Editor (INPUT Method Editor, IME) von Windows XP ausführlich beschrieben. Es wurden Änderungen am IME für Windows Vista vorgenommen, die in diesem Artikel nicht vollständig beschrieben werden. Weitere Informationen zu Änderungen am IME für Windows Vista finden Sie unter [Eingabemethoden-Editoren (INPUT Method Editors, IME)](https://www.microsoft.com/globaldev/vista/Whats_New_Vista.mspx#e4eac) in [Windows Vista – Eine Ever-Expanding Ansicht der Internationalisierung](https://www.microsoft.com/globaldev/vista/Whats_New_Vista.mspx) im globalen Entwicklungs- und Computingportal von Microsoft.
+> In diesem Artikel wird die Arbeit mit dem Windows XP Input Method Editor (IME) ausführlich beschrieben. Es wurden Änderungen am IME für Windows Vista vorgenommen, die in diesem Artikel nicht vollständig beschrieben werden. Weitere Informationen zu Änderungen am IME für Windows Vista finden Sie unter Input Method Editors (IME) in Windows Vista – An Ever-Expanding View of Internationalization on the Microsoft Global Development and Computing Portal [(Eingabemethoden-Editoren (IME)](https://www.microsoft.com/globaldev/vista/Whats_New_Vista.mspx#e4eac) in Windows Vista – An Ever-Expanding View of Internationalization on the Microsoft Global Development and Computing Portal [(Ein Ever-Expanding Ansicht der Internationalisierung](https://www.microsoft.com/globaldev/vista/Whats_New_Vista.mspx) im Globalen Entwicklungs- und Computingportal von Microsoft).
 
  
 
@@ -41,10 +41,10 @@ Inhalte:
     -   [WM \_ IME \_ COMPOSITION](/windows)
     -   [WM \_ IME \_ ENDCOMPOSITION](/windows)
     -   [WM \_ IME \_ NOTIFY](/windows)
--   [Darstellung](#rendering)
+-   [Rendering](#rendering)
     -   [Eingabe-Gebietsschemaindikator](#input-locale-indicator)
     -   [Kompositionsfenster](#composition-window)
-    -   [Lesen und Kandidatenfenster](#reading-and-candidate-windows)
+    -   [Lesen und Kandidaten-Windows](#reading-and-candidate-windows)
 -   [Einschränkungen](#limitations)
 -   [Registrierungsinformationen](#registry-information)
 -   [Anhang A: CHT-Versionen pro Betriebssystem](#appendix-a-cht-versions-per-operating-system)
@@ -60,12 +60,12 @@ Eine typische IME zeigt mehrere Fenster an, um den Benutzer durch den Zeichenein
 
 ![ime zeigt mehrere Fenster an.](images/ime-elements.png)
 
-| Fenstertyp                                       | Beschreibung                                                                                                                                                                                                                                                                                                                 | IME-Ausgabe                                   |
+| Fenstertyp                                       | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                 | IME-Ausgabe                                   |
 |---------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
-| A. Lesefenster                                 | Enthält Tastatureingaben von der Tastatur. ändert sich in der Regel nach jeder Tastatureingabe.                                                                                                                                                                                                                                              | Lesen einer Zeichenfolge                               |
-| B. Kompositionsfenster                             | Enthält die Auflistung von Zeichen, die der Benutzer mit der IME zusammengesetzt hat. Diese Zeichen werden vom IME über der Anwendung gezeichnet. Wenn der Benutzer die IME benachrichtigt, dass die Kompositionszeichenfolge zufriedenstellend ist, sendet der IME die Kompositionszeichenfolge über eine Reihe von WM CHAR-Nachrichten an die \_ Anwendung. | Kompositionszeichenfolge                           |
-| C. Kandidatenfenster                               | Wenn der Benutzer eine gültige Aussprache eingegeben hat, zeigt die IME eine Liste der Kandidatenzeichen an, die alle mit der angegebenen Aussprache übereinstimmen. Der Benutzer wählt dann das gewünschte Zeichen aus dieser Liste aus, und die IME fügt dieses Zeichen der Anzeige des Kompositionsfensters hinzu.                                                    | das nächste Zeichen in der Kompositionszeichenfolge |
-| D: [Indikator für das Eingabeschema](/windows/desktop/Intl/nls-terminology) | Zeigt die Sprache an, die der Benutzer für die Tastatureingabe ausgewählt hat. Dieser Indikator ist in die Windows-Taskleiste eingebettet. Die Eingabesprache kann ausgewählt werden, indem Sie die Systemsteuerung Regionale optionen und Sprachoptionen öffnen und dann auf der Registerkarte Sprachen auf Details klicken.                                                               | \-                                           |
+| A. Lesefenster                                 | Enthält Tastatureingaben über die Tastatur. ändert sich in der Regel nach jeder Tastatureingabe.                                                                                                                                                                                                                                              | Lesen einer Zeichenfolge                               |
+| B. Kompositionsfenster                             | Enthält die Auflistung der Zeichen, die der Benutzer mit dem IME zusammengestellt hat. Diese Zeichen werden vom IME auf der Grundlage der Anwendung gezeichnet. Wenn der Benutzer die IME benachrichtigt, dass die Kompositionszeichenfolge zufriedenstellend ist, sendet der IME die Kompositionszeichenfolge über eine Reihe von WM CHAR-Nachrichten an die \_ Anwendung. | Kompositionszeichenfolge                           |
+| C. Kandidatenfenster                               | Wenn der Benutzer eine gültige Aussprache eingegeben hat, zeigt die IME eine Liste der Kandidatenzeichen an, die alle mit der angegebenen Aussprache übereinstimmen. Der Benutzer wählt dann das gewünschte Zeichen aus dieser Liste aus, und der IME fügt dieses Zeichen der Anzeige des Kompositionsfensters hinzu.                                                    | das nächste Zeichen in der Kompositionszeichenfolge |
+| D: [Indikator für das Eingabeschema](/windows/desktop/Intl/nls-terminology) | Zeigt die Sprache an, die der Benutzer für die Tastatureingabe ausgewählt hat. Dieser Indikator ist in die Windows Taskleiste eingebettet. Die Eingabesprache kann ausgewählt werden, indem Sie die Optionen Regional und Sprache Systemsteuerung öffnen und dann auf der Registerkarte Sprachen auf Details klicken.                                                               | \-                                           |
 
 
 
@@ -75,7 +75,7 @@ Eine typische IME zeigt mehrere Fenster an, um den Benutzer durch den Zeichenein
 
 In DXUT implementiert die CDXUTIMEEditBox-Klasse IME-Funktionen. Diese Klasse wird von der CDXUTEditBox-Klasse abgeleitet, dem grundlegenden Bearbeitungssteuerelement, das vom Framework bereitgestellt wird. CDXUTIMEEditBox erweitert dieses Bearbeitungssteuerelement, um IMEs zu unterstützen, indem die CDXUTIMEEditBox-Methoden überschrieben werden. Die Klassen sind auf diese Weise konzipiert, damit Entwickler lernen können, was sie aus dem Framework nutzen müssen, um IME-Unterstützung in ihren eigenen Bearbeitungssteuerelementen zu implementieren. Im weiteren Verlauf dieses Themas wird erläutert, wie das Framework und insbesondere CDXUTIMEEditBox ein grundlegendes Bearbeitungssteuerelement überschreiben, um IME-Funktionen zu implementieren.
 
-Die meisten IME-spezifischen Variablen in CDXUTIMEEditBox werden als statisch deklariert, da viele IME-Puffer und -Zustände für den Prozess spezifisch sind. Beispielsweise verfügt ein Prozess nur über einen Puffer für die Kompositionszeichenfolge. Selbst wenn der Prozess über zehn Bearbeitungssteuerelemente verfügt, verwenden sie alle denselben Kompositionszeichenfolgenpuffer. Der Kompositionszeichenfolgenpuffer für CDXUTIMEEditBox ist daher statisch und verhindert, dass die Anwendung unnötigen Speicherplatz einnimmt.
+Die meisten IME-spezifischen Variablen in CDXUTIMEEditBox werden als statisch deklariert, da viele IME-Puffer und -Zustände für den Prozess spezifisch sind. Beispielsweise verfügt ein Prozess nur über einen Puffer für die Kompositionszeichenfolge. Selbst wenn der Prozess über zehn Bearbeitungssteuerelemente verfügt, verwenden sie alle den gleichen Kompositionszeichenfolgenpuffer. Der Kompositionszeichenfolgenpuffer für CDXUTIMEEditBox ist daher statisch und verhindert, dass die Anwendung unnötigen Speicherplatz einnimmt.
 
 CDXUTIMEEditBox wird im folgenden DXUT-Code implementiert:
 
@@ -83,9 +83,9 @@ CDXUTIMEEditBox wird im folgenden DXUT-Code implementiert:
 
 ## <a name="overriding-the-default-ime-behavior"></a>Überschreiben des STANDARD-IME-Verhaltens
 
-Normalerweise verwendet ein IME Standardmäßige Windows-Prozeduren, um ein Fenster zu erstellen (siehe [Verwenden von Windows](/windows/desktop/winmsg/using-windows)). Unter normalen Umständen führt dies zu zufriedenstellenden Ergebnissen. Wenn die Anwendung jedoch wie bei Spielen üblich im Vollbildmodus angezeigt wird, funktionieren Standardfenster nicht mehr und werden möglicherweise nicht über der Anwendung angezeigt. Um dieses Problem zu beheben, muss die Anwendung die IME-Fenster selbst zeichnen, anstatt sich auf Windows zu verlassen, um diese Aufgabe auszuführen.
+Normalerweise verwendet ein IME standardmäßige Windows Verfahren zum Erstellen eines Fensters (siehe [Verwenden von Windows](/windows/desktop/winmsg/using-windows)). Unter normalen Umständen führt dies zu zufriedenstellenden Ergebnissen. Wenn die Anwendung jedoch wie bei Spielen üblich im Vollbildmodus angezeigt wird, funktionieren Standardfenster nicht mehr und werden möglicherweise nicht über der Anwendung angezeigt. Um dieses Problem zu beheben, muss die Anwendung die IME-Fenster selbst zeichnen, anstatt sich auf Windows verlassen zu müssen, um diese Aufgabe auszuführen.
 
-Wenn das Standardmäßige ImE-Fenstererstellungsverhalten nicht bereitstellt, was eine Anwendung erfordert, kann die Anwendung die Ime-Fensterverarbeitung überschreiben. Eine Anwendung kann dies erreichen, indem sie IME-bezogene Nachrichten verarbeitet und die IMM-API [(Input Method Manager)](/windows/desktop/Intl/input-method-manager) aufruft.
+Wenn das Standardmäßige Ime-Fenstererstellungsverhalten nicht die für eine Anwendung benötigten Informationen bereitstellt, kann die Anwendung die Verarbeitung des IME-Fensters außer Kraft setzen. Eine Anwendung kann dies erreichen, indem sie IME-bezogene Nachrichten verarbeitet und die IMM-API [(Input Method Manager)](/windows/desktop/Intl/input-method-manager) aufruft.
 
 Wenn ein Benutzer mit einer IME interagiert, um komplexe Zeichen einzugeben, sendet das IMM Nachrichten an die Anwendung, um sie über wichtige Ereignisse zu benachrichtigen, z. B. das Starten einer Komposition oder das Anzeigen des Kandidatenfensters. Eine Anwendung ignoriert diese Nachrichten in der Regel und übergibt sie an den Standardnachrichtenhandler, wodurch der IME sie verarbeitet. Wenn die Anwendung anstelle des Standardhandlers die Nachrichten verarbeitet, steuert sie genau, was bei den einzelnen IME-Ereignissen geschieht. Häufig ruft der Nachrichtenhandler den Inhalt der verschiedenen IME-Fenster ab, indem er die IMM-API aufruft. Sobald die Anwendung über diese Informationen verfügt, kann sie die IME-Fenster selbst ordnungsgemäß zeichnen, wenn sie auf der Anzeige gerendert werden muss.
 
@@ -119,7 +119,7 @@ lParam == 16, 17, 26, 27, 28 (CHT IME version 5.0, 5.1, 5.2 / CHS IME 5.3)
 
 ## <a name="examples"></a>Beispiele
 
-Die folgenden Beispiele veranschaulichen, wie Zeichenfolgeninformationen aus einer älteren IME gelesen werden, die nicht über GetReadingString() verfügen. Der Code generiert die folgenden Ausgaben:
+Die folgenden Beispiele veranschaulichen das Lesen von Zeichenfolgeninformationen aus einer älteren IME ohne GetReadingString(). Der Code generiert die folgenden Ausgaben:
 
 
 
@@ -222,9 +222,9 @@ Wenn der IMM eine WM \_ INPUTLANGCHANGE-Nachricht sendet, muss CDXUTIMEEditBox m
 
 Der IMM sendet eine WM \_ IME \_ SETCONTEXT-Nachricht, wenn ein Fenster der Anwendung aktiviert wird. Der lParam-Parameter dieser Meldung enthält ein Flag, das dem IME angibt, welche Fenster gezeichnet werden sollen und welche nicht. Da die Anwendung die ganze Zeichnung übernimmt, benötigt sie den IME nicht, um eines der IME-Fenster zu zeichnen. Daher legt der Meldungshandler der Anwendung einfach lParam auf 0 fest und gibt zurück.
 
-Damit Anwendungen IME unterstützen können, ist eine spezielle Verarbeitung für die IME-bezogene Nachricht WM \_ IME \_ SETCONTEXT erforderlich. Da Windows diese Nachricht in der Regel vor dem Aufruf der PanoramaInitialize()-Methode an die Anwendung sendet, hat Panorama keine Möglichkeit, die Benutzeroberfläche zum Anzeigen von Kandidatenlistenfenstern zu verarbeiten.
+Damit Anwendungen IME unterstützen können, ist eine spezielle Verarbeitung für die IME-bezogene Nachricht WM \_ IME \_ SETCONTEXT erforderlich. Da Windows diese Nachricht in der Regel vor dem Aufrufen der PanoramaInitialize()-Methode an die Anwendung sendet, hat Panorama keine Möglichkeit, die Benutzeroberfläche zum Anzeigen von Kandidatenlistenfenstern zu verarbeiten.
 
-Der folgende Codeausschnitt gibt windows-Anwendungen an, dass keine dem Kandidatenlistenfenster zugeordnete Benutzeroberfläche angezeigt wird, sodass Panorama diese Benutzeroberfläche speziell verarbeiten kann.
+Der folgende Codeausschnitt gibt an, Windows Anwendungen keine dem Kandidatenlistenfenster zugeordnete Benutzeroberfläche anzeigen soll, sodass Panorama diese Benutzeroberfläche speziell verarbeiten kann.
 
 ``` syntax
 case WM_IME_SETCONTEXT:
@@ -264,7 +264,7 @@ CDXUTIMEEditBox überprüft die folgenden Kompositionszeichenfolgendaten und ruf
 
 ### <a name="wm_ime_endcomposition"></a>WM \_ IME \_ ENDCOMPOSITION
 
-Das IMM sendet eine \_ WM-IME-ENDCOMPOSITION-Nachricht \_ an die Anwendung, wenn der IME-Kompositionsvorgang beendet wird. Dies kann auftreten, wenn der Benutzer die EINGABETASTE drückt, um die Kompositionszeichenfolge zu genehmigen, oder die ESC-Taste, um die Komposition abzubrechen. CDXUTIMEEditBox verarbeitet diese Nachricht, indem der Kompositionszeichenfolgenpuffer auf leer festgelegt wird. Anschließend wird \_ s bHideCaret auf FALSE festgelegt, da das Kompositionsfenster geschlossen ist und der Cursor im Bearbeitungsfeld wieder sichtbar sein sollte.
+Das IMM sendet eine \_ WM-IME-ENDCOMPOSITION-Nachricht \_ an die Anwendung, wenn der IME-Kompositionsvorgang beendet wird. Dies kann vorkommen, wenn der Benutzer die EINGABETASTE drückt, um die Kompositionszeichenfolge zu genehmigen, oder die ESC-Taste, um die Komposition abzubrechen. CDXUTIMEEditBox verarbeitet diese Nachricht, indem der Kompositionszeichenfolgenpuffer auf leer festgelegt wird. Anschließend wird \_ s bHideCaret auf FALSE festgelegt, da das Kompositionsfenster geschlossen ist und der Cursor im Bearbeitungsfeld wieder sichtbar sein sollte.
 
 Der CDXUTIMEEditBox-Meldungshandler legt auch \_ s bShowReadingWindow auf FALSE fest. Dieses Flag steuert, ob die Klasse das Lesefenster zeichnet, wenn das Bearbeitungsfeld selbst gerendert wird. Daher muss es auf FALSE festgelegt werden, wenn eine Komposition endet.
 
@@ -282,7 +282,7 @@ Das IMM sendet eine WM \_ IME \_ NOTIFY-Nachricht an die Anwendung, wenn sich ei
 <thead>
 <tr class="header">
 <th>IME-Befehl</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
@@ -296,10 +296,10 @@ Das IMM sendet eine WM \_ IME \_ NOTIFY-Nachricht an die Anwendung, wenn sich ei
 <ol>
 <li>CDXUTIMEEditBox legt das bShowWindow-Element der Kandidatenlistenstruktur s_CandList auf TRUE fest, um anzugeben, dass das Kandidatenfenster während des Framerenderings gezeichnet werden muss.</li>
 <li>CDXUTIMEEditBox ruft die Kandidatenliste ab, indem <a href="/windows/desktop/api/imm/nf-imm-immgetcandidatelista"><strong>ImmGetCandidateList</strong></a>aufgerufen wird, um zuerst die erforderliche Puffergröße abzurufen, und dann erneut, um die tatsächlichen Daten abzurufen.</li>
-<li>Die Private Candidate List-Struktur s_CandList wird mit den abgerufenen Kandidatendaten initialisiert.</li>
+<li>Die struktur der privaten Kandidatenliste s_CandList wird mit den abgerufenen Kandidatendaten initialisiert.</li>
 <li>Die Kandidatenzeichenfolgen werden als Array von Zeichenfolgen gespeichert.</li>
-<li>Der Index des ausgewählten Eintrags sowie der Seitenindex wird gespeichert.</li>
-<li>CDXUTIMEEditBox überprüft, ob der Stil des Kandidatenfensters vertikal oder horizontal ist. Wenn der Fensterstil horizontal ist, muss ein zusätzlicher Zeichenfolgenpuffer, der HoriCand-Member von s_CandList, mit allen Kandidatenzeichenfolgen initialisiert werden, wobei Zwischenraumzeichen zwischen allen benachbarten Zeichenfolgen eingefügt werden. Beim Rendern eines vertikalen Kandidatenfensters werden die einzelnen Kandidatenzeichenfolgen einzeln gezeichnet, wobei die y-Koordinaten für jede Zeichenfolge inkrementiert werden. Diese HoriCand-Zeichenfolge sollte jedoch beim Rendern eines horizontalen Kandidatenfensters verwendet werden, da das Leerzeichen die beste Möglichkeit ist, zwei angrenzende Zeichenfolgen in derselben Zeile zu trennen.</li>
+<li>Der Index des ausgewählten Eintrags sowie der Seitenindex werden gespeichert.</li>
+<li>CDXUTIMEEditBox überprüft, ob der Stil des Kandidatenfensters vertikal oder horizontal ist. Wenn der Fensterstil horizontal ist, muss ein zusätzlicher Zeichenfolgenpuffer, der HoriCand-Member von s_CandList, mit allen Kandidatenzeichenfolgen initialisiert werden, wobei Zwischenraumzeichen zwischen allen angrenzenden Zeichenfolgen eingefügt werden. Beim Rendern eines vertikalen Kandidatenfensters werden die einzelnen Kandidatenzeichenfolgen einzeln gezeichnet, wobei die y-Koordinaten für jede Zeichenfolge erhöht werden. Diese HoriCand-Zeichenfolge sollte jedoch beim Rendern eines horizontalen Kandidatenfensters verwendet werden, da das Leerzeichen die beste Möglichkeit ist, zwei angrenzende Zeichenfolgen in derselben Zeile zu trennen.</li>
 </ol></td>
 </tr>
 <tr class="odd">
@@ -327,11 +327,11 @@ Das Rendern der IME-Elemente und -Fenster ist einfach. MIT CDXUTIMEEditBox kann 
 
 ### <a name="input-locale-indicator"></a>Eingabe-Gebietsschemaindikator
 
-Der Eingabe-Gebietsschemaindikator wird vor allen anderen IME-Fenstern gerendert, da es sich um ein Element handelt, das immer angezeigt wird. Sie sollte daher unter anderen IME-Fenstern angezeigt werden. CDXUTIMEEditBox rendert den Indikator durch Aufrufen der RenderIndicator-Methode, bei der die Schriftfarbe des Indikators durch Untersuchen der \_ statischen ImeState-Variable bestimmt wird, die den aktuellen IME-Konvertierungsmodus widerspiegelt. Wenn die IME aktiviert ist und die native Konvertierung aktiv ist, verwendet die Methode m \_ IndicatorImeColor als Indikatorfarbe. Wenn die IME deaktiviert ist oder sich im nicht einheitlichen Konvertierungsmodus befindet, wird m \_ IndicatorImeColor verwendet, um den Indikatortext zu zeichnen. Standardmäßig wird das Indikatorfenster selbst rechts neben dem Bearbeitungsfeld gezeichnet. Anwendungen können dieses Verhalten ändern, indem sie die RenderIndicator-Methode überschreiben.
+Der Eingabe-Gebietsschemaindikator wird vor allen anderen IME-Fenstern gerendert, da es sich um ein Element handelt, das immer angezeigt wird. Sie sollte daher unter anderen IME-Fenstern angezeigt werden. CDXUTIMEEditBox rendert den Indikator durch Aufrufen der RenderIndicator-Methode, bei der die Schriftfarbe des Indikators durch Untersuchen der \_ statischen ImeState-Variable bestimmt wird, die den aktuellen IME-Konvertierungsmodus widerspiegelt. Wenn die IME aktiviert ist und die native Konvertierung aktiv ist, verwendet die Methode m \_ IndicatorImeColor als Indikatorfarbe. Wenn die IME deaktiviert ist oder sich im nicht nativen Konvertierungsmodus befindet, wird m \_ IndicatorImeColor verwendet, um den Indikatortext zu zeichnen. Standardmäßig wird das Indikatorfenster selbst rechts neben dem Bearbeitungsfeld gezeichnet. Anwendungen können dieses Verhalten ändern, indem sie die RenderIndicator-Methode überschreiben.
 
 Die folgende Abbildung zeigt die verschiedenen Darstellungen eines Eingabeschemaindikators für Englisch, Japanisch im alphanumerischen Konvertierungsmodus und Japanisch im einheitlichen Konvertierungsmodus:
 
-![unterschiedliche Darstellungen eines Eingabeschemaindikators für Englisch und Japanisch](images/ime-indicator.png)
+![unterschiedliche Darstellungen eines Eingabe-Gebietsschemaindikators für Englisch und Japanisch](images/ime-indicator.png)
 
 ### <a name="composition-window"></a>Kompositionsfenster
 
@@ -343,7 +343,7 @@ Das Zeichnen des Kompositionsfensters wird in der RenderComposition-Methode von 
 
 Der Cursor sollte für koreanische IMEs blinken, aber nicht für andere IMEs. RenderComposition bestimmt, ob der Cursor basierend auf Timerwerten sichtbar sein soll, wenn die koreanische IME verwendet wird.
 
-### <a name="reading-and-candidate-windows"></a>Lesen und Kandidatenfenster
+### <a name="reading-and-candidate-windows"></a>Lesen und Kandidaten-Windows
 
 Die Lese- und Kandidatenfenster werden von der gleichen CDXUTIMEEditBox-Methode gerendert, RenderCandidateReadingWindow. Beide Fenster enthalten ein Array von Zeichenfolgen für das vertikale Layout oder eine einzelne Zeichenfolge im Fall eines horizontalen Layouts. Der Großteil des Codes in RenderCandidateReadingWindow wird verwendet, um das Fenster so zu positionieren, dass kein Teil des Fensters außerhalb des Anwendungsfensters liegt und abgeschnitten wird.
 
@@ -357,7 +357,7 @@ Erweitertes traditionelles chinesisches IME mit erweiterter Kandidatenliste:
 
 Erweiterte japanische IME mit einigen Kandidateneinträgen, die zusätzlichen Text enthalten, um ihre Bedeutungen zu beschreiben:
 
-![advanced japanese ime with some candidate entries that contain additional text to describe their meanings (Erweiterte japanische Sprache mit einigen Kandidateneinträgen, die zusätzlichen Text enthalten, um ihre Bedeutungen zu beschreiben)](images/ime-advanced2.png)
+![erweiterte japanische Sprache mit einigen Kandidateneinträgen, die zusätzlichen Text enthalten, um ihre Bedeutungen zu beschreiben](images/ime-advanced2.png)
 
 Erweiterte koreanische IME, die ein Handschrifterkennungssystem enthält:
 
@@ -382,7 +382,7 @@ Where: IME \_ Name is MSTCIPH if the IME file version is 5.1 or later; andernfal
 Die Ausrichtung des Lesefensters ist horizontal, wenn einer der folgenden Istwerte zu sehen ist:
 
 -   Der IME ist Version 5.0, und der Wert für die Tastaturzuordnung 0x22 oder 0x23
--   Der IME ist Version 5.1 oder Version 5.2, und der Wert für die Tastaturzuordnung ist 0x22, 0x23 oder 0x24.
+-   Der IME ist Version 5.1 oder Version 5.2, und der Wert der Tastaturzuordnung ist 0x22, 0x23 oder 0x24.
 
 Wenn keine der Bedingungen erfüllt ist, ist das Lesefenster vertikal.
 
@@ -390,12 +390,12 @@ Wenn keine der Bedingungen erfüllt ist, ist das Lesefenster vertikal.
 
 
 
-| Operating System (Betriebssystem)           | CHT IME-Version |
+| Betriebssystem           | CHT IME-Version |
 |----------------------------|-----------------|
 | Windows 98                 | 4,2             |
 | Windows 2000               | 4.3             |
-| unknown                    | 4.4             |
-| Windows ME                 | 5.0             |
+| Unbekannt                    | 4.4             |
+| Windows Ich                 | 5.0             |
 | Office XP                  | 5,1             |
 | Windows XP                 | 5,2             |
 | Eigenständige Webdownloads | 6.0             |
@@ -473,7 +473,7 @@ Wenn der Rückgabewert größer als der Wert von uReadingBufLen ist, sind alle A
 
 Diese Funktion ist in CHT IME 6.0 oder höher implementiert und kann von GetProcAddress auf einem IME-Modulhandle erworben werden. Das IME-Modulhandle kann von ImmGetIMEFileName und LoadLibrary erworben werden.
 
-**Anforderungen**
+**Requirements**
 
 <dl> <dt>
 
@@ -519,7 +519,7 @@ Blendet das Lesefenster ein (oder blendet es aus).
 
 Gibt TRUE zurück, wenn erfolgreich, andernfalls FALSE.
 
-**Anforderungen**
+**Requirements**
 
 <dl> <dt>
 

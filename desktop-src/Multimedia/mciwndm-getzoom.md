@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_GETZOOM (Vfw.h)
+title: MCIWNDM_GETZOOM Meldung (Vfw.h)
 description: Die MCIWNDM \_ GETZOOM-Nachricht ruft den aktuellen Zoomwert ab, der von einem MCI-Gerät verwendet wird. Sie können diese Nachricht explizit oder mithilfe des MCIWndGetZoom-Makros senden.
 ms.assetid: 92db8df2-515a-4616-a0f5-245d466ba379
 keywords:
-- MCIWNDM_GETZOOM-Nachricht Windows Multimedia
+- MCIWNDM_GETZOOM nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -36,7 +36,7 @@ lParam = 0;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die neuesten Werte zurück, die mit [**MCIWNDM \_ SETZOOM verwendet werden.**](mciwndm-setzoom.md)
+Gibt die neuesten Werte zurück, die mit [**MCIWNDM \_ SETZOOM**](mciwndm-setzoom.md)verwendet werden.
 
 ## <a name="remarks"></a>Hinweise
 

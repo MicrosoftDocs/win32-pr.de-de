@@ -1,9 +1,9 @@
 ---
-title: RB_SETBANDWIDTH Meldung (Commctrl.h)
+title: RB_SETBANDWIDTH (Commctrl.h)
 description: Legt die Breite für ein angedocktes Band fest.
 ms.assetid: dca9dfe9-3e5a-40bb-8de7-a296e6be7d06
 keywords:
-- RB_SETBANDWIDTH Windows-Steuerelemente für Nachrichten
+- RB_SETBANDWIDTH von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118409180"
 ---
-# <a name="rb_setbandwidth-message"></a>RB \_ SETBANDWIDTH-Meldung
+# <a name="rb_setbandwidth-message"></a>RB \_ SETBANDWIDTH-Nachricht
 
 Legt die Breite für ein angedocktes Band fest.
 
@@ -45,7 +45,7 @@ Neue Breite in Pixel.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **TRUE** zurück, wenn der Wert festgelegt wurde, **andernfalls FALSE.**
+Gibt **TRUE zurück,** wenn der Wert festgelegt wurde, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,7 +53,7 @@ Gibt **TRUE** zurück, wenn der Wert festgelegt wurde, **andernfalls FALSE.**
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

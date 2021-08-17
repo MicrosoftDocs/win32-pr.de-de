@@ -1,12 +1,12 @@
 ---
-title: Session. aufrufen-Methode (WSManDisp. h)
+title: Session.Invoke-Methode (WSManDisp.h)
 description: Ruft eine Methode auf und gibt die Ergebnisse des Methodenaufrufs zurück.
 ms.assetid: c83d0631-2efb-47d9-abcf-ab0c8de06c36
 ms.tgt_platform: multiple
 keywords:
-- Methoden Windows-Remoteverwaltung aufrufen
-- Methoden Windows-Remoteverwaltung aufrufen, Sitzungs Objekt
-- Sitzungs Objekt Windows-Remoteverwaltung, Methode "aufrufen"
+- Aufrufen der Methode Windows Remoteverwaltung
+- Aufrufen der Methode Windows Remoteverwaltung, Sitzungsobjekt
+- Sitzungsobjekt Windows Remoteverwaltung, Invoke-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 117c688b616f377730524a09234b1dc38a4996c2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ac2afa20390890c53a7362d776c1df7c84d0a638e7fcb10269c901d194a50dea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117743251"
 ---
-# <a name="sessioninvoke-method"></a>Session. aufrufen-Methode
+# <a name="sessioninvoke-method"></a>Session.Invoke-Methode
 
 Ruft eine Methode auf und gibt die Ergebnisse des Methodenaufrufs zurück.
 
@@ -46,21 +46,21 @@ Session.Invoke( _
 
 <dl> <dt>
 
-*Aktions-URI* \[ in\]
+*actionUri* \[ In\]
 </dt> <dd>
 
-Der URI der aufzurufenden Methode.
+Der URI der aufzurufende Methode.
 
 </dd> <dt>
 
-*resourceUri* \[ in\]
+*resourceUri* \[ In\]
 </dt> <dd>
 
 Der Bezeichner der abzurufenden Ressource.
 
-Dieser Parameter kann einen der folgenden Parameter enthalten:
+Dieser Parameter kann eine der folgenden Elemente enthalten:
 
--   URI mit oder ohne [*Selektoren*](windows-remote-management-glossary.md). Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird der Schlüssel durch angegeben `Win32_Service?Name=winmgmt` .
+-   URI mit oder ohne [*Selektoren.*](windows-remote-management-glossary.md) Im folgenden Beispiel Visual Basic Scripting Edition (VBScript) wird der Schlüssel durch `Win32_Service?Name=winmgmt` angegeben.
 
     ```VB
     strResourceUri = "http://schemas.microsoft.com/wbem/wsman/1/" _ 
@@ -69,15 +69,15 @@ Dieser Parameter kann einen der folgenden Parameter enthalten:
 
     
 
--   [**ResourceLocator**](resourcelocator.md) -Objekt, das Selektoren, [*Fragmente*](windows-remote-management-glossary.md)oder [*Optionen*](windows-remote-management-glossary.md)enthalten kann.
--   Endpunkt Verweis der [*WS-Adressierung*](windows-remote-management-glossary.md) , wie im [WS-Management-Protokoll](ws-management-protocol.md) -Standard beschrieben. Weitere Informationen zur öffentlichen Spezifikation WS-Management Protokolls finden Sie unter [Verwaltungs Spezifikationen Index page](/previous-versions/dotnet/articles/ms951267(v=msdn.10)).
+-   [**ResourceLocator-Objekt,**](resourcelocator.md) das [*Selektoren, Fragmente*](windows-remote-management-glossary.md)oder [*Optionen*](windows-remote-management-glossary.md)enthalten kann.
+-   [*WS-Adressierungsendpunktverweis,*](windows-remote-management-glossary.md) wie im [WS-Management-Protokoll](ws-management-protocol.md) Standard beschrieben. Weitere Informationen zur öffentlichen Spezifikation für WS-Management-Protokoll finden Sie auf der Indexseite der [Verwaltungsspezifikationen.](/previous-versions/dotnet/articles/ms951267(v=msdn.10))
 
 </dd> <dt>
 
-*Parameter* \[ in\]
+*Parameter* \[ In\]
 </dt> <dd>
 
-Die XML-Darstellung der Eingabe für die Methode. Diese Zeichenfolge muss angegeben werden, oder diese Methode schlägt fehl.
+Die XML-Darstellung der Eingabe für die Methode. Diese Zeichenfolge muss angegeben werden, andernfalls schlägt diese Methode fehl.
 
 </dd> <dt>
 
@@ -90,11 +90,11 @@ Reserviert. Muss auf 0 festgelegt werden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die XML-Darstellung der Methoden Ausgabe.
+Die XML-Darstellung der Methodenausgabe.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Codebeispiel wird ein Calc.exe Prozess gestartet. Der *strinputparameters* -Parameter enthält die Eingabeparameter im XML-Format. Der einzige erforderliche Eingabeparameter für die [**Create**](/windows/desktop/CIMWin32Prov/create-method-in-class-win32-process) -Methode der WMI- [**Win32- \_ Prozess**](/windows/desktop/CIMWin32Prov/win32-process) Klasse ist die auszuführende Befehlszeile.
+Im folgenden VBScript-Codebeispiel wird ein Calc.exe Prozess gestartet. Der *parameter strInputParameters* enthält die Eingabeparameter im XML-Format. Der einzige erforderliche Eingabeparameter für die [**Create-Methode**](/windows/desktop/CIMWin32Prov/create-method-in-class-win32-process) der WMI [**Win32 \_ Process-Klasse**](/windows/desktop/CIMWin32Prov/win32-process) ist die auszuführende Befehlszeile.
 
 
 ```VB
@@ -139,7 +139,7 @@ End Sub
 
 
 
-Im folgenden VBScript-Codebeispiel wird die **Session. aufrufen** -Methode aufgerufen, um die [**Stop Service**](/windows/desktop/CIMWin32Prov/stopservice-method-in-class-win32-service) -Methode des [**Win32- \_ Dienstanbieter**](/windows/desktop/CIMWin32Prov/win32-service)auszuführen. Die **Stop Service** -Methode hat keine Eingabeparameter. Die **Aufruf** Methode erfordert jedoch eine XML-Zeichenfolge im *Parameter para* meters.
+Im folgenden VBScript-Codebeispiel wird die **Session.Invoke-Methode** aufgerufen, um die [**StopService-Methode**](/windows/desktop/CIMWin32Prov/stopservice-method-in-class-win32-service) des [**Win32-Diensts \_**](/windows/desktop/CIMWin32Prov/win32-service)auszuführen. Die **StopService-Methode** verfügt nicht über Eingabeparameter. Die **Invoke-Methode** erfordert jedoch eine XML-Zeichenfolge im *parameter-Parameter.*
 
 
 ```VB
@@ -203,18 +203,18 @@ End Sub
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>WSManDisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WSManDisp. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WSManDisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WSManDisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WSManDisp.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>WSManDisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WSMAuto.dll</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Sitzung**](session.md)
+[**Sitzungskonsistenz**](session.md)
 </dt> </dl>
 
  

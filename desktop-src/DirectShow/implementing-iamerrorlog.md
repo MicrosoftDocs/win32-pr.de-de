@@ -1,21 +1,21 @@
 ---
-description: Implementieren von iamerrorlog
+description: Implementieren von IAMErrorLog
 ms.assetid: 0a380854-f3a9-4077-a481-dda67737d4c8
-title: Implementieren von iamerrorlog
+title: Implementieren von IAMErrorLog
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 65eb968eb370d06fab6aca13af3215bb3b650257
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 446e193a6a28fc1cbd5515414b9914f2653e8bc27bb9b5a57e69d05dfc947d62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106343140"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118398080"
 ---
-# <a name="implementing-iamerrorlog"></a>Implementieren von iamerrorlog
+# <a name="implementing-iamerrorlog"></a>Implementieren von IAMErrorLog
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Die [**iamerrorlog**](iamerrorlog.md) -Schnittstelle enthält eine einzelne Methode, [**LogError**](iamerrorlog-logerror.md). Die Parameter für die-Methode enthalten Informationen zum aufgetretenen Fehler.
+Die [**IAMErrorLog-Schnittstelle**](iamerrorlog.md) enthält eine einzelne Methode, [**LogError.**](iamerrorlog-logerror.md) Die Parameter der -Methode enthalten Informationen zum aufgetretenen Fehler.
 
 
 ```C++
@@ -29,9 +29,9 @@ STDMETHODIMP LogError(
 
 
 
-Der Fehlercode und die Fehler Zeichenfolge werden durch DirectShow-Bearbeitungs Dienste definiert. Eine Liste der Fehler finden Sie unter [Rendern von Fehlern](rendering-errors.md).
+Der Fehlercode und die Fehlerzeichenfolge werden von DirectShow Editing Services definiert. Eine Liste der Fehler finden Sie unter [Renderingfehler.](rendering-errors.md)
 
-Der *pextrainfo* -Parameter enthält einen Zeiger auf einen Variant-Typ, der zusätzliche Informationen über den Fehler enthält. Der Datentyp und der Inhalt der Variante sind abhängig von dem spezifischen Fehler, der aufgetreten ist. Wenn der Fehler z. b. durch einen falschen Dateinamen verursacht wurde, ist die Variante eine Zeichenfolge mit dem ungültigen Dateinamen. Einige Fehler enthalten keine zusätzlichen Informationen, daher kann *pextrainfo* **null** sein. Der folgende Code zeigt, wie Sie das **VT** -Element der Variante, die den Datentyp angibt, testen und eine Nachricht entsprechend formatieren.
+Der *pExtraInfo-Parameter* enthält einen Zeiger auf einen VARIANT-Typ, der zusätzliche Informationen zum Fehler enthält. Der Datentyp und der Inhalt der VARIANT-Datei hängen vom spezifischen Aufgetretenen Fehler ab. Wenn der Fehler beispielsweise durch einen falschen Dateinamen verursacht wurde, ist variant eine Zeichenfolge mit dem ungültigen Dateinamen. Einige Fehler verfügen nicht über zusätzliche Informationen, *sodass pExtraInfo* möglicherweise **NULL** ist. Der folgende Code zeigt, wie sie den **vt-Member** des VARIANT testen, der den Datentyp angibt, und eine Nachricht entsprechend formatieren.
 
 
 ```C++
@@ -63,7 +63,7 @@ if( pExtraInfo )    // Report extra information, if any.
 
 
 > [!Note]  
-> Gibt die Variante nicht frei, auf die verweist.
+> Geben Sie den VARIANT, auf den von gezeigt wird, nicht frei.
 >
 > <span codelanguage=""></span>
 >
@@ -78,7 +78,7 @@ if( pExtraInfo )    // Report extra information, if any.
 > </tbody>
 > </table> 
 >
-> . Außerdem wird die Variante nach dem zurückkehren der Methode ungültig, sodass Sie später nicht darauf verweisen.
+> . Außerdem wird der VARIANT-Wert ungültig, nachdem die Methode zurückgegeben wurde. Verweisen Sie daher später nicht darauf.
 
  
 
@@ -86,7 +86,7 @@ if( pExtraInfo )    // Report extra information, if any.
 
 <dl> <dt>
 
-[Protokollierungs Fehler](logging-errors.md)
+[Protokollierungsfehler](logging-errors.md)
 </dt> </dl>
 
  

@@ -3,7 +3,7 @@ title: RB_GETUNICODEFORMAT (Commctrl.h)
 description: 'RB_GETUNICODEFORMAT Meldung: Ruft das Unicode-Zeichenformatflag für das Steuerelement ab.'
 ms.assetid: 48a4472b-dda4-41a2-b5bc-6f74b1cdc70b
 keywords:
-- RB_GETUNICODEFORMAT meldungssteuerelemente Windows
+- RB_GETUNICODEFORMAT von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:

@@ -23,7 +23,7 @@ In den folgenden Themen werden die Verwendungsmöglichkeiten und Features von KT
 -   [Interoperabilität mit anderen Windows Funktionen](interoperability-with-other-windows-features.md)
 -   [KTM-Sicherheit und -Zugriffsrechte](ktm-security-and-access-rights.md)
 
-KTM verwendet die Gemeinsames Protokolldateisystem [für](/previous-versions/windows/desktop/clfs/common-log-file-system-portal) den Betrieb. CLFS ist ein Protokollierungssystem, das Transaktionen aktivieren kann.
+KTM verwendet die Gemeinsames Protokolldateisystem [für](/previous-versions/windows/desktop/clfs/common-log-file-system-portal) den Vorgang. CLFS ist ein Protokollierungssystem, das Transaktionen aktivieren kann.
 
  
 

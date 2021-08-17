@@ -1,5 +1,5 @@
 ---
-description: Skaliert alle Stichproben, die einem angegebenen Untermesh zugeordnet sind. Die -Methode ist nützlich für die Berechnung der Oberflächens scattering.
+description: Skaliert alle Stichproben, die einem bestimmten Untermesh zugeordnet sind. Die -Methode ist nützlich für das Berechnen von Unteroberflächen-Punktdiagrammen.
 ms.assetid: abb9ca6a-5fc2-4986-8a38-29998fe5e537
 title: ID3DXPRTEngine::ScaleMeshChunk-Methode (D3DX9Mesh.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "117729584"
 ---
 # <a name="id3dxprtenginescalemeshchunk-method"></a>ID3DXPRTEngine::ScaleMeshChunk-Methode
 
-Skaliert alle Stichproben, die einem angegebenen Untermesh zugeordnet sind. Die -Methode ist nützlich für die Berechnung der Oberflächens scattering.
+Skaliert alle Stichproben, die einem bestimmten Untermesh zugeordnet sind. Die -Methode ist nützlich für das Berechnen von Unteroberflächen-Punktdiagrammen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ HRESULT ScaleMeshChunk(
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Position im Gitternetz, an dem mit der Skalierung von Stichproben begonnen werden soll.
+Position im Gitternetz, an der mit der Skalierung von Beispielen gestartet werden soll.
 
 </dd> <dt>
 
@@ -56,7 +56,7 @@ Position im Gitternetz, an dem mit der Skalierung von Stichproben begonnen werde
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Wert, mit dem jeder Vektor im Untermesh multipliziert werden soll.
+Der Wert, mit dem jeder Vektor im Untermesh multipliziert werden soll.
 
 </dd> <dt>
 
@@ -65,7 +65,7 @@ Wert, mit dem jeder Vektor im Untermesh multipliziert werden soll.
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein [**ID3DXPRTBuffer-Objekt,**](id3dxprtbuffer.md) um neu skalierte Beispiele im Untermesh zu erhalten.
+Zeiger auf ein [**ID3DXPRTBuffer-Objekt,**](id3dxprtbuffer.md) um neu skalierte Beispiele im Untermesh zu empfangen.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Zeiger auf ein [**ID3DXPRTBuffer-Objekt,**](id3dxprtbuffer.md) um neu skalierte 
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 

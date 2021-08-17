@@ -1,9 +1,9 @@
 ---
-title: Design. Version
-description: Das Versions Attribut gibt die Windows Media Player-Versionsnummer an, für die die Skin erstellt wurde, oder ruft Sie ab.
+title: THEME.version
+description: Das Versionsattribut gibt die Versionsnummer Windows Media Player, für die die Skin entwickelt wurde, oder ruft sie ab.
 ms.assetid: 74405b82-96a3-4ac2-aba2-24daceb0a429
 keywords:
-- Design. Version Windows Media Player
+- THEME.version Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 08a8d4050f76219481541d27394fef47434855af
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a224275a581faa35f85094813d0d2378938fdf17398d57ca2eda0d740e748c72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117932525"
 ---
-# <a name="themeversion"></a>Design. Version
+# <a name="themeversion"></a>THEME.version
 
-Das **Versions** Attribut gibt die Windows Media Player-Versionsnummer an, für die die Skin erstellt wurde, oder ruft Sie ab.
+Das  Versionsattribut gibt die Versionsnummer Windows Media Player, für die die Skin entwickelt wurde, oder ruft sie ab.
 
 ``` syntax
 theme.version
@@ -29,7 +29,7 @@ theme.version
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine **Zahl** (**float**). Das Angeben eines Werts für dieses Attribut zur Entwurfszeit oder zur Laufzeit hat keine Auswirkungen. Der Wert ist immer 1,0.
+Dieses Attribut ist eine **Zahl** (**float**). Die Angabe eines Werts für dieses Attribut zur Entwurfszeit oder Laufzeit hat keine Auswirkungen. Der Wert ist immer 1,0.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,15 +37,15 @@ Dieses Attribut ist eine **Zahl** (**float**). Das Angeben eines Werts für dies
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Design-Element**](theme-element.md)
+[**THEME-Element**](theme-element.md)
 </dt> </dl>
 
  

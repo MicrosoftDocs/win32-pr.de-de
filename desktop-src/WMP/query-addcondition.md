@@ -1,11 +1,11 @@
 ---
-title: Query. addcondition-Methode
-description: Die addcondition-Methode fügt dem Query-Objekt mithilfe der-und der-Logik eine Bedingung hinzu.
+title: Query.addCondition-Methode
+description: Die addCondition-Methode fügt dem Query-Objekt mithilfe der AND-Logik eine Bedingung hinzu.
 ms.assetid: 29b5d372-eddf-4b70-882b-d2dde79d9287
 keywords:
-- addcondition-Methode (Windows Media Player)
-- addcondition-Methode, Windows Media Player, Abfrage Klasse
-- Query-Klasse, Windows Media Player, addcondition-Methode
+- addCondition-Windows Media Player
+- addCondition-Methode Windows Media Player , Query-Klasse
+- Abfrageklasse Windows Media Player , addCondition-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4035d2877cf0081e9153277c88feb545a529568d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 53a3eed0a7923b93861eabc30d115a7726046d0595b7c57625d9a9afaf9c7523
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352893"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117746589"
 ---
-# <a name="queryaddcondition-method"></a>Query. addcondition-Methode
+# <a name="queryaddcondition-method"></a>Query.addCondition-Methode
 
-Die **addcondition** -Methode fügt dem **Query** -Objekt mithilfe der-und der-Logik eine Bedingung hinzu.
+Die **addCondition-Methode** fügt  dem Query-Objekt mithilfe der AND-Logik eine Bedingung hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,24 +44,24 @@ Query.addCondition(
 
 <dl> <dt>
 
-*Attribut* \[ in\]
+*Attribut* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Attributnamen enthält.
+**Eine Zeichenfolge,** die den Attributnamen enthält.
 
 </dd> <dt>
 
-*Operator* \[ in\]
+*Operator* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Operator enthält. Siehe Hinweise zu unterstützten Werten.
+**Eine Zeichenfolge,** die den Operator enthält. Unterstützte Werte finden Sie unter Hinweise.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*value* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Attribut Wert enthält.
+**Eine Zeichenfolge,** die den Attributwert enthält.
 
 </dd> </dl>
 
@@ -69,15 +69,15 @@ Query.addCondition(
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei Verbund Abfragen mit **Abfrage** wird die Groß-/Kleinschreibung nicht beachtet
+Bei zusammengesetzten Abfragen, die **Die Abfrage verwenden,** wird die Zwischenschreibung nicht beachtet.
 
-Eine Liste der Werte für den *Attribut* Parameter finden Sie im Abschnitt " [alphabetische Attribut Verweis](alphabetical-attribute-reference.md) ".
+Eine Liste der Werte für den *Attributparameter* finden Sie im Abschnitt [Alphabetische Attributreferenz.](alphabetical-attribute-reference.md)
 
-Bedingungen, die in einem **Abfrage** Objekt enthalten sind, werden in Bedingungs Gruppen organisiert. Mehrere Bedingungen innerhalb einer Bedingungs Gruppe werden stets mithilfe der-und der-Logik verkettet. Bedingungs Gruppen werden mit der-oder der-Logik immer aufeinander verkettet. Zum Starten einer neuen Bedingungs Gruppe aufrufen Sie **Query. beginnextgroup**.
+In einem **Query-Objekt** enthaltene Bedingungen werden in Bedingungsgruppen organisiert. Mehrere Bedingungen innerhalb einer Bedingungsgruppe werden immer mithilfe der AND-Logik verkettet. Bedingungsgruppen werden immer mithilfe der OR-Logik miteinander verkettet. Um eine neue Bedingungsgruppe zu starten, rufen **Sie Query.beginNextGroup auf.**
 
-In der folgenden Tabelle sind die unterstützten Werte für den- *Operator* aufgeführt.
+In der folgenden Tabelle sind die unterstützten Werte für den *Operator aufgeführt.*
 
 
 
@@ -85,12 +85,12 @@ In der folgenden Tabelle sind die unterstützten Werte für den- *Operator* aufg
 |---------------------|----------------|
 | BeginsWith          | Zeichenfolgen        |
 | Enthält            | Zeichenfolgen        |
-| Equals              | Alle Typen      |
+| Ist gleich              | Alle Typen      |
 | GreaterThan         | Zahlen, Datumsangaben |
 | Größer als oder gleich | Zahlen, Datumsangaben |
 | LessThan            | Zahlen, Datumsangaben |
 | Kleiner als oder gleich    | Zahlen, Datumsangaben |
-| Notbeginswith       | Zeichenfolgen        |
+| NotBeginsWith       | Zeichenfolgen        |
 | NotContains         | Zeichenfolgen        |
 | NotEquals           | Alle Typen      |
 
@@ -100,7 +100,7 @@ In der folgenden Tabelle sind die unterstützten Werte für den- *Operator* aufg
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird **Query. addcondition** und **Query. beginnextgroup** verwendet, um eine Beispiel Abfrage auszuführen.
+Im folgenden beispiel JScript **Query.addCondition** und **Query.beginNextGroup** verwendet, um eine Beispielabfrage auszuführen.
 
 
 ```JScript
@@ -145,23 +145,23 @@ var Playlist = Player.mediaCollection.getPlaylistByQuery(
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mediacollection. kreatequery**](mediacollection-createquery.md)
+[**MediaCollection.createQuery**](mediacollection-createquery.md)
 </dt> <dt>
 
-[**Mediacollection. getplaylistbyquery**](mediacollection-getplaylistbyquery.md)
+[**MediaCollection.getPlaylistByQuery**](mediacollection-getplaylistbyquery.md)
 </dt> <dt>
 
-[**Mediacollection. getstringcollectionbyquery**](mediacollection-getstringcollectionbyquery.md)
+[**MediaCollection.getStringCollectionByQuery**](mediacollection-getstringcollectionbyquery.md)
 </dt> <dt>
 
-[**Query-Objekt**](query-object.md)
+[**Abfrageobjekt**](query-object.md)
 </dt> <dt>
 
-[**Query. beginnextgroup**](query-beginnextgroup.md)
+[**Query.beginNextGroup**](query-beginnextgroup.md)
 </dt> </dl>
 
  

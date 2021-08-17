@@ -3,7 +3,7 @@ title: Player.MediaCollectionAttributeStringRemoved-Ereignis
 description: Das MediaCollectionAttributeStringRemoved-Ereignis tritt auf, wenn ein Attributwert aus der Bibliothek entfernt wird. | Player.MediaCollectionAttributeStringRemoved-Ereignis
 ms.assetid: f1253996-10d1-42fa-89f9-1e52ca830aea
 keywords:
-- MediaCollectionAttributeStringRemoved-Ereignis Windows Media Player
+- Ereignisereignis "MediaCollectionAttributeStringRemoved Windows Media Player
 - MediaCollectionAttributeStringRemoved-Ereignis Windows Media Player , Player-Klasse
 - Player-Klasse Windows Media Player , MediaCollectionAttributeStringRemoved-Ereignis
 topic_type:
@@ -46,14 +46,14 @@ Player.MediaCollectionAttributeStringRemoved(
 *bstrAttribName* 
 </dt> <dd>
 
-**Zeichenfolge,** die den Namen des Attributs angibt. Informationen zu den attributen, die von Windows Media Player unterstützt werden, finden Sie in der Windows Media Player [Attributreferenz.](attribute-reference.md)
+**Eine Zeichenfolge,** die den Namen des Attributs angibt. Informationen zu den attributes, die von Windows Media Player unterstützt werden, finden Sie in der Windows Media Player [Attribute Reference](attribute-reference.md).
 
 </dd> <dt>
 
 *bstrAttribVal* 
 </dt> <dd>
 
-**Zeichenfolge,** die den Wert des Attributs angibt.
+**Eine Zeichenfolge,** die den Wert des Attributs angibt.
 
 </dd> </dl>
 
@@ -65,7 +65,7 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 Wenn ein Medienelement aus der Bibliothek entfernt wird, werden seine Metadaten aus dem **MediaCollection-Objekt** entfernt, und dieses Ereignis wird für jedes entfernte Attribut ausgelöst.
 
-Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens in einer importierten JScript-Datei auf eine Methode zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt eingegeben werden, einschließlich Der Groß-/Großschreibung.
+Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens auf eine Methode in einer importierten JScript-Datei zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt typisieren, einschließlich Groß- und Groß-/Schreibanforderungen.
 
 **Windows Media Player 10 Mobile:** Dieses Ereignis wird nicht unterstützt.
 

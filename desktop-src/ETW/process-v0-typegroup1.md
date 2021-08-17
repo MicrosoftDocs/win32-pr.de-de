@@ -1,5 +1,5 @@
 ---
-description: 'Process_V0_TypeGroup1 Klasse: Diese Klasse ist die Ereignistypklasse für Prozessereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
+description: 'Process_V0_TypeGroup1 Klasse: Diese Klasse ist die Ereignistypklasse für Prozessereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: fcf2897d-32b4-42b9-892c-f0106687d3c2
 title: Process_V0_TypeGroup1-Klasse
 ms.topic: reference
@@ -16,18 +16,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 524d3c7da9f8ff76608da120834c5365eb1deb41
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0d42ed4704eafcbb335b29c2c2d8d83e2ea82591c75855a6da096cb1e11a7572
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118394436"
 ---
 # <a name="process_v0_typegroup1-class"></a>Process \_ V0 \_ TypeGroup1-Klasse
 
 Diese Klasse ist die Ereignistypklasse für Prozessereignisse.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,7 +57,7 @@ Die **Klasse Process \_ V0 \_ TypeGroup1** verfügt über diese Eigenschaften.
 ImageFileName
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -98,14 +98,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-Globaler Prozessbezeichner, den Sie zum Identifizieren eines Prozesses verwenden können. Der Wert ist gültig ab dem Zeitpunkt, zu dem ein Prozess erstellt wird, bis er beendet wird.
+Globaler Prozessbezeichner, den Sie zum Identifizieren eines Prozesses verwenden können. Der Wert ist ab dem Zeitpunkt gültig, zu dem ein Prozess erstellt wird, bis er beendet wird.
 
 </dd> <dt>
 
 UserSID
 </dt> <dd> <dl> <dt>
 
-Datentyp: **object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -122,10 +122,10 @@ Sicherheits-ID (SID) für den Benutzerkontext, unter dem das Ereignis eintritt.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

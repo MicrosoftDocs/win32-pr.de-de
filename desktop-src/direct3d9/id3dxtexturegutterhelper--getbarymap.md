@@ -1,7 +1,7 @@
 ---
-description: Ruft texzentrische texzentrische Koordinaten ab.
+description: Ruft balyzentrierte Texelkoordinaten ab.
 ms.assetid: f380a37f-b9c1-4433-b1d6-e9feeca79b30
-title: 'ID3DXTextureGutterHelper:: getbarymap-Methode (D3DX9Mesh. h)'
+title: ID3DXTextureGutterHelper::GetBaryMap-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 246117569b9106de18a31d08613146a3aa0d88c2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4183bf9bfa5065595073b8534e978367c3ec16bf76245d639da81292641afa81
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117729199"
 ---
-# <a name="id3dxtexturegutterhelpergetbarymap-method"></a>ID3DXTextureGutterHelper:: getbarymap-Methode
+# <a name="id3dxtexturegutterhelpergetbarymap-method"></a>ID3DXTextureGutterHelper::GetBaryMap-Methode
 
-Ruft texzentrische texzentrische Koordinaten ab.
+Ruft balyzentrierte Texelkoordinaten ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT GetBaryMap(
 
 <dl> <dt>
 
-*pbarydata* \[ in, out\]
+*pBaryData* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR2**](d3dxvector2.md)\***
 
-Ein Zeiger auf eine [**D3DXVECTOR2**](d3dxvector2.md) -Struktur, die die ersten beiden über die beiden texzentrischen Koordinaten jeder texenstruktur enthält.
+Zeiger auf eine [**D3DXVECTOR2-Struktur,**](d3dxvector2.md) die die ersten beiden baryzentrierten Koordinaten der einzelnen Texel enthält.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Ein Zeiger auf eine [**D3DXVECTOR2**](d3dxvector2.md) -Struktur, die die ersten 
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben. D3DERR \_ invalidcall
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, wird der folgende Wert zurückgegeben. D3DERR \_ INVALIDCALL
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die dritte barzentrierte Koordinate wird durch Folgendes angegeben:
+Die dritte baryzentrierte Koordinate wird angegeben durch:
 
 
 ```
@@ -66,15 +66,15 @@ Die dritte barzentrierte Koordinate wird durch Folgendes angegeben:
 
 
 
-Barzentrierte Koordinaten werden immer in Bezug auf das von [**ID3DXTextureGutterHelper:: getfacemap**](id3dxtexturegutterhelper--getfacemap.md)zurückgegebene Dreieck angegeben.
+Baryzentrierte Koordinaten werden immer in Bezug auf das von [**ID3DXTextureGutterHelper::GetFaceMap**](id3dxtexturegutterhelper--getfacemap.md)zurückgegebene Dreieck angegeben.
 
-Die von dieser Methode zurückgegebenen von dieser Methode zurückgegebenen, von dieser Methode zurückgegebenen Koordinaten sind nur gültig für gültige Texels (nicht Class 0). [**ID3DXTextureGutterHelper:: getguttermap**](id3dxtexturegutterhelper--getguttermap.md) gibt Werte ungleich 0 (null) für gültige Texels zurück.
+Die von dieser Methode zurückgegebenen baryzentrierten Koordinaten sind nur für gültige Texel (nicht der Klasse 0) gültig. [**ID3DXTextureGutterHelper::GetGutterMap**](id3dxtexturegutterhelper--getguttermap.md) gibt Werte ungleich 0 (null) für gültige Texel zurück.
 
-[**Class 2 texeln**](id3dxtexturegutterhelper.md) werden dem nächstgelegenen Punkt auf dem Dreieck im textraum zugeordnet.
+[**Texel der**](id3dxtexturegutterhelper.md) Klasse 2 werden dem nächstgelegenen Punkt im Dreieck im Texelbereich zugeordnet.
 
-Die Anwendung muss pbarydata zuordnen und verwalten.
+Die Anwendung muss pBaryData zuordnen und verwalten.
 
-In den Scheitel Punkten des Dreiecks wird ein Punkt innerhalb eines Dreiecks definiert. Eine ausführlichere Beschreibung von baryzentrischen Koordinaten finden Sie in [der Beschreibung von mathworld in der Beschreibung der baryzentrierten Koordinaten](https://mathworld.wolfram.com/BarycentricCoordinates.html).
+Baryzentrierte Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug auf die Scheitelpunkt des Dreiecks. Eine detailliertere Beschreibung der baryzentrierten Koordinaten finden Sie unter [Beschreibung der baryzentrierten Koordinaten von Mathworld.](https://mathworld.wolfram.com/BarycentricCoordinates.html)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,12 +82,12 @@ In den Scheitel Punkten des Dreiecks wird ein Punkt innerhalb eines Dreiecks def
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

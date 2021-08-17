@@ -1,144 +1,144 @@
 ---
 title: Informationen zu ComboBoxEx-Steuerelementen
-description: ComboBoxEx-Steuerelemente sind Kombinations Feld-Steuerelemente, die native Unterstützung für Element Bilder bereitstellen.
+description: ComboBoxEx-Steuerelemente sind Kombinationsfeld-Steuerelemente, die native Unterstützung für Elementbilder bereitstellen.
 ms.assetid: a4b1aa79-40c4-4eff-801c-4f308d86fb35
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 427abef015474047d1842d13e5fb40640d0406c5
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 993fa8db73246c62f8ceee805e767c13ffdcc15a12d0222e09f308324cc97bab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103858509"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117831836"
 ---
 # <a name="about-comboboxex-controls"></a>Informationen zu ComboBoxEx-Steuerelementen
 
-ComboBoxEx-Steuerelemente sind Kombinations Feld-Steuerelemente, die native Unterstützung für Element Bilder bereitstellen. Damit Element Bilder problemlos zugänglich sind, bietet das-Steuerelement Unterstützung für Bildlisten. Mithilfe dieses Steuer Elements können Sie die Funktionalität eines Kombinations Felds bereitstellen, ohne die Element Grafiken manuell zeichnen zu müssen.
+ComboBoxEx-Steuerelemente sind Kombinationsfeld-Steuerelemente, die native Unterstützung für Elementbilder bereitstellen. Damit Elementbilder leicht zugänglich sind, bietet das Steuerelement Unterstützung für Bildlisten. Mit diesem Steuerelement können Sie die Funktionalität eines Kombinationsfelds bereitstellen, ohne Elementgrafiken manuell zeichnen zu müssen.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Erstellen von ComboBoxEx-Steuerelementen](#creating-comboboxex-controls)
--   [ComboBoxEx-Steuerelement Stile](#comboboxex-control-styles)
--   [ComboBoxEx-Steuerelement Elemente](#comboboxex-control-items)
--   [Rückruf Elemente](#callback-items)
--   [Bildlisten des ComboBoxEx-Steuer Elements](#comboboxex-control-image-lists)
--   [Informationen zu ComboBoxEx-Steuerelement Benachrichtigungs Meldungen](#about-comboboxex-control-notification-messages)
--   [Nachrichten Weiterleitung durch ComboBoxEx-Steuerelement](#comboboxex-control-message-forwarding)
+-   [ComboBoxEx-Steuerelementstile](#comboboxex-control-styles)
+-   [ComboBoxEx-Steuerelementelemente](#comboboxex-control-items)
+-   [Rückrufelemente](#callback-items)
+-   [Bildlisten des ComboBoxEx-Steuerelements](#comboboxex-control-image-lists)
+-   [Informationen zu ComboBoxEx-Steuerelementbenachrichtigungsmeldungen](#about-comboboxex-control-notification-messages)
+-   [ComboBoxEx-Steuerungsnachrichtenweiterleitung](#comboboxex-control-message-forwarding)
 
 ## <a name="creating-comboboxex-controls"></a>Erstellen von ComboBoxEx-Steuerelementen
 
-Effektiv erstellt ein ComboBoxEx-Steuerelement ein untergeordnetes Kombinations Feld und führt auf der Grundlage einer zugewiesenen Bildliste für Sie Besitzer Zeichnungs Aufgaben aus. Aus diesem Grund ist der Stil des [**CBS- \_ Besitzers**](combo-box-styles.md) "," impliziert, und es ist nicht notwendig, ihn beim Erstellen des Steuer Elements zu verwenden. Da Bildlisten verwendet werden, um Element Grafiken bereitzustellen, kann der [**CBS \_**](combo-box-styles.md) -Besitzer von "Besitzer" nicht verwendet werden.
+Effektiv erstellt ein ComboBoxEx-Steuerelement ein untergeordnetes Kombinationsfeld und führt Aufgaben zum Zeichnen des Besitzers für Sie basierend auf einer zugewiesenen Bildliste aus. Daher wird der [**CBS \_ OWNERDRAWFIXED-Stil**](combo-box-styles.md) impliziert, und es ist nicht erforderlich, ihn beim Erstellen des Steuerelements zu verwenden. Da Bildlisten zum Bereitstellen von Elementgrafiken verwendet werden, kann [**der CBS \_ OWNERDRAWVARIABLE-Stil**](combo-box-styles.md) nicht verwendet werden.
 
-Ein ComboBoxEx-Steuerelement muss initialisiert werden, indem die [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) -Funktion aufgerufen wird, wobei die "ICC \_ userex"- \_ Klassen in der zugehörigen [**InitCommonControlsEx**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) -Struktur angegeben werden.
+Ein ComboBoxEx-Steuerelement muss initialisiert werden, indem die [**InitCommonControlsEx-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) aufruft und DABEI INITCOMMONCONTROLSEX CLASSES in der zugehörigen \_ \_ [**INITCOMMONCONTROLSEX-Struktur angegeben**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) wird.
 
-Sie können ein ComboBoxEx-Steuerelement erstellen, indem Sie die Funktion "up- [**windowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " verwenden und " [**WC \_ ComboBoxEx**](common-control-window-classes.md) " als Fenster Klasse angeben. Die-Klasse wird registriert, wenn die [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) -Funktion aufgerufen wird, wie oben erläutert.
+Sie können ein ComboBoxEx-Steuerelement erstellen, indem Sie die [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) verwenden und [**WC \_ COMBOBOXEX**](common-control-window-classes.md) als Fensterklasse angeben. Die -Klasse wird registriert, wenn [**die InitCommonControlsEx-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) wie oben beschrieben aufgerufen wird.
 
-ComboBoxEx-Steuerelemente werden ohne eine Standard Bildliste erstellt. Wenn Sie Element Bilder verwenden möchten, müssen Sie eine Bildliste für das ComboBoxEx-Steuerelement erstellen und es dem Steuerelement mithilfe der [**CBEM \_ SetImageList**](cbem-setimagelist.md) -Nachricht zuweisen. Wenn Sie dem ComboBoxEx-Steuerelement keine Bildliste zuweisen, zeigt das Steuerelement nur Element Text an.
+ComboBoxEx-Steuerelemente werden ohne Standardbildliste erstellt. Um Elementbilder zu verwenden, müssen Sie eine Bildliste für das ComboBoxEx-Steuerelement erstellen und dem Steuerelement mithilfe der [**CBEM \_ SETIMAGELIST-Nachricht**](cbem-setimagelist.md) zuweisen. Wenn Sie dem ComboBoxEx-Steuerelement keine Bildliste zuweisen, zeigt das Steuerelement nur Elementtext an.
 
-## <a name="comboboxex-control-styles"></a>ComboBoxEx-Steuerelement Stile
+## <a name="comboboxex-control-styles"></a>ComboBoxEx-Steuerelementstile
 
 ComboBoxEx-Steuerelemente unterstützen nur die folgenden ComboBox-Stile:
 
--   CBS \_ Simple
--   CBS- \_ Dropdown
--   CBS- \_ Dropdown Liste
--   untergeordnetes Element \_
+-   CBS \_ SIMPLE
+-   \_CBS-DROPDOWNLISTE
+-   \_CBS-DROPDOWNLISTE
+-   WS \_ CHILD
 
-Es gibt auch mehrere [erweiterbare Stile des ComboBoxEx-Steuer](comboboxex-control-extended-styles.md) Elements, die nur von ComboBoxEx verwendet werden.
+Es gibt auch mehrere [erweiterte ComboBoxEx-Steuerelementstile,](comboboxex-control-extended-styles.md) die nur von ComboBoxEx verwendet werden.
 
 > [!Note]  
-> Der [**\_ einfache CBS**](combo-box-styles.md) -Stil funktioniert in einigen Fällen möglicherweise nicht ordnungsgemäß.
+> Der [**CBS \_ SIMPLE-Stil**](combo-box-styles.md) funktioniert in einigen Fällen möglicherweise nicht ordnungsgemäß.
 
- 
+ 
 
-Da das ComboBoxEx-Steuerelement auf der Grundlage einer zugewiesenen Bildliste für Sie Besitzer zeichnen-Aufgaben ausführt, wird der " [**CBS Owner \_ drawfixed**](combo-box-styles.md) "-Stil impliziert; Sie müssen ihn bei der Erstellung des Steuer Elements nicht verwenden. Da Bildlisten verwendet werden, um Element Grafiken bereitzustellen, kann der [**CBS \_**](combo-box-styles.md) -Besitzer von "Besitzer" nicht verwendet werden. Das ComboBoxEx-Steuerelement unterstützt auch das [ComboBoxEx](comboboxex-control-extended-styles.md) -Steuerelement erweiterte Stile, die zusätzliche Funktionen bereitstellen.
+Da das ComboBoxEx-Steuerelement Besitzerzeichnungsaufgaben für Sie basierend auf einer zugewiesenen Bildliste ausführt, wird der [**CBS \_ OWNERDRAWFIXED-Stil**](combo-box-styles.md) impliziert. Sie müssen ihn beim Erstellen des Steuerelements nicht verwenden. Da Bildlisten zum Bereitstellen von Elementgrafiken verwendet werden, kann [**der CBS \_ OWNERDRAWVARIABLE-Stil**](combo-box-styles.md) nicht verwendet werden. Das ComboBoxEx-Steuerelement unterstützt auch [erweiterte ComboBoxEx-Steuerelementstile,](comboboxex-control-extended-styles.md) die zusätzliche Funktionen bereitstellen.
 
-## <a name="comboboxex-control-items"></a>ComboBoxEx-Steuerelement Elemente
+## <a name="comboboxex-control-items"></a>ComboBoxEx-Steuerelementelemente
 
-ComboBoxEx-Steuerelemente verwalten Element Informationen mithilfe einer [**COMBOBOXEXITEM**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) -Struktur. Diese Struktur schließt Elemente für Element Indizes, Bild Indizes (normal, Auswahl Zustand und Overlay), Einzugs Werte, Text Zeichenfolgen und Element spezifische Werte ein.
+ComboBoxEx-Steuerelemente verwalten Elementinformationen mithilfe einer [**COMBOBOXEXITEM-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) Diese Struktur umfasst Member für Elementindizes, Bildindizes (normal, Auswahlzustand und Überlagerung), Einzugswerte, Textzeichenfolgen und elementspezifische Werte.
 
-Das ComboBoxEx-Steuerelement ermöglicht den einfachen Zugriff auf und die Bearbeitung von Elementen über Messaging. Um ein Element hinzuzufügen oder zu löschen, senden Sie die Nachricht [**CBEM \_ InsertItem**](cbem-insertitem.md) oder [**CBEM \_ DeleteItem**](cbem-deleteitem.md) . Sie können Elemente, die sich derzeit im Steuerelement befinden, mithilfe der [**CBEM \_ -Nachricht "CBEM**](cbem-setitem.md) " ändern.
+Das ComboBoxEx-Steuerelement ermöglicht den einfachen Zugriff auf elemente und deren Bearbeitung durch Messaging. Um ein Element hinzuzufügen oder zu löschen, senden Sie die [**CBEM \_ INSERTITEM-**](cbem-insertitem.md) oder [**CBEM \_ DELETEITEM-Nachricht.**](cbem-deleteitem.md) Sie können elemente, die sich derzeit im -Steuerelement befindet, mithilfe der [**CBEM \_ SETITEM-Nachricht**](cbem-setitem.md) ändern.
 
-## <a name="callback-items"></a>Rückruf Elemente
+## <a name="callback-items"></a>Rückrufelemente
 
-ComboBoxEx-Steuerelemente unterstützen Rückruf Element Attribute. Sie können ein Element als Rückruf Element angeben, wenn Sie es mithilfe von [**CBEM \_ InsertItem**](cbem-insertitem.md)dem Steuerelement hinzufügen. Wenn Sie der [**COMBOBOXEXITEM**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) -Struktur eines Elements Werte zuweisen, müssen Sie die entsprechenden Rückruf Flagwerte angeben. Folgendes sind **COMBOBOXEXITEM** -Strukturmember und ihre entsprechenden Rückruf Kennzeichen-Werte.
+ComboBoxEx-Steuerelemente unterstützen Rückrufelementattribute. Sie können ein Element als Rückrufelement angeben, wenn Sie es dem Steuerelement mit [**CBEM \_ INSERTITEM hinzufügen.**](cbem-insertitem.md) Wenn Sie der [**COMBOBOXEXITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) eines Elements Werte zuweisen, müssen Sie die entsprechenden Rückrufflagwerte angeben. Im Folgenden finden Sie **COMBOBOXEXITEM-Strukturmitglieder** und die entsprechenden Rückrufflagwerte.
 
 
 
-| Member             | Rückruf Wert      |
+| Member             | Rückrufwert      |
 |--------------------|---------------------|
-| **Member pszText**        | LPSTR- \_ textcallback |
-| **iImage**         | I \_ imagecallback    |
-| **iSelectedImage** | I \_ imagecallback    |
-| **IOverlay**       | I \_ imagecallback    |
-| **iIndent**        | I \_ Einzug Rückruf   |
+| **pszText**        | LPSTR \_ TEXTCALLBACK |
+| **iImage**         | I \_ IMAGECALLBACK    |
+| **iSelectedImage** | I \_ IMAGECALLBACK    |
+| **iOverlay**       | I \_ IMAGECALLBACK    |
+| **iIndent**        | I \_ INDENTCALLBACK   |
 
 
 
- 
+ 
 
-Das-Steuerelement fordert Informationen zu Rückruf Elementen an, indem [cben \_ getdispinfo](cben-getdispinfo.md) -Benachrichtigungs Codes gesendet werden. Diese Benachrichtigung wird in Form einer WM-Benachrichtigungs Meldung gesendet. [**\_**](wm-notify.md) Wenn die Anwendung diese Nachricht verarbeitet, muss Sie die angeforderten Informationen für das Steuerelement bereitstellen. Wenn Sie das **Mask** -Element der zugehörigen [**COMBOBOXEXITEM**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) -Struktur auf cbeif \_ di \_ SetItem festlegen, speichert das-Steuerelement die Elementdaten und fordert Sie nicht erneut an.
+Das Steuerelement fordert Informationen zu Rückrufelementen an, indem [es CBEN \_ GETDISPINFO-Benachrichtigungscodes](cben-getdispinfo.md) sendet. Diese Benachrichtigung wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet. Wenn Ihre Anwendung diese Nachricht verarbeitet, muss sie die angeforderten Informationen für das Steuerelement bereitstellen. Wenn Sie den **Maskenelement** der zugehörigen [**COMBOBOXEXITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) auf CBEIF \_ DI SETITEM festlegen, werden die Elementdaten vom Steuerelement gespeichert und nicht \_ erneut anfordern.
 
-## <a name="comboboxex-control-image-lists"></a>Bildlisten des ComboBoxEx-Steuer Elements
+## <a name="comboboxex-control-image-lists"></a>Bildlisten des ComboBoxEx-Steuerelements
 
-Wenn Sie möchten, dass ein ComboBoxEx-Steuerelement Symbole mit Elementen anzeigt, müssen Sie eine Bildliste bereitstellen. ComboBoxEx-Steuerelemente unterstützen bis zu drei Bilder für ein Element – eine für den ausgewählten Zustand, eine für den nicht ausgewählten Zustand und eine für ein Überlagerungs Bild. Weisen Sie mithilfe der [**CBEM \_ SetImageList**](cbem-setimagelist.md) -Nachricht eine vorhandene Bildliste einem ComboBoxEx-Steuerelement zu.
+Wenn ein ComboBoxEx-Steuerelement Symbole mit Elementen anzeigen soll, müssen Sie eine Bildliste bereitstellen. ComboBoxEx-Steuerelemente unterstützen bis zu drei Bilder für ein Element – eines für den ausgewählten Zustand, eines für den nicht ausgewählten Zustand und eines für ein Überlagerungsbild. Weisen Sie einem ComboBoxEx-Steuerelement mithilfe der [**CBEM \_ SETIMAGELIST-Nachricht eine**](cbem-setimagelist.md) vorhandene Bildliste zu.
 
-Die [**COMBOBOXEXITEM**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) -Struktur enthält Elemente, die die Bild Indizes für jede Bildliste darstellen (ausgewählt, nicht ausgewählt und überlagern). Legen Sie für jedes Element diese Member fest, um die gewünschten Bilder anzuzeigen. Es ist nicht erforderlich, für jeden Bildtyp Bild Indizes anzugeben. Sie können Bild Typen beliebig kombinieren, aber immer den **Mask** -Member der **COMBOBOXEXITEM** -Struktur festlegen, um anzugeben, welche Member verwendet werden. Das-Steuerelement ignoriert Member, die nicht als gültig gekennzeichnet wurden.
+Die [**COMBOBOXEXITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) enthält Member, die die Bildindizes für jede Bildliste darstellen (ausgewählt, nicht ausgewählt und Überlagerung). Legen Sie für jedes Element diese Elemente so fest, dass die gewünschten Bilder angezeigt werden. Es ist nicht erforderlich, Bildindizes für jeden Imagetyp anzugeben. Sie können Bildtypen nach Be willen mischen  und ab suchen, aber immer den Masken-Member der **COMBOBOXEXITEM-Struktur** festlegen, um anzugeben, welche Member verwendet werden. Das -Steuerelement ignoriert Member, die nicht als gültig gekennzeichnet wurden.
 
 > [!Note]  
-> Wenn Sie den [**\_ einfachen CBS**](combo-box-styles.md) -Stil verwenden, werden keine Symbole angezeigt.
+> Wenn Sie den [**CBS \_ SIMPLE-Stil**](combo-box-styles.md) verwenden, werden keine Symbole angezeigt.
 
- 
+ 
 
-## <a name="about-comboboxex-control-notification-messages"></a>Informationen zu ComboBoxEx-Steuerelement Benachrichtigungs Meldungen
+## <a name="about-comboboxex-control-notification-messages"></a>Informationen zu ComboBoxEx-Steuerelementbenachrichtigungsmeldungen
 
-Ein ComboBoxEx-Steuerelement sendet Benachrichtigungs Meldungen, um Änderungen in sich selbst zu melden oder Rückruf Element Informationen anzufordern. Das übergeordnete Element des-Steuer Elements empfängt alle [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldungen aus dem Kombinations Feld, das im ComboBoxEx-Steuerelement enthalten ist. Das ComboBoxEx-Steuerelement sendet seine eigenen Benachrichtigungen mithilfe von [**WM- \_ Benachrichtigungs**](wm-notify.md) Nachrichten. Folglich muss der Besitzer des Steuer Elements darauf vorbereitet sein, beide Formen von Benachrichtigungs Meldungen zu verarbeiten.
+Ein ComboBoxEx-Steuerelement sendet Benachrichtigungsmeldungen, um Änderungen an sich selbst zu melden oder Rückrufelementinformationen an anforderungsaufgerufen. Das übergeordnete Element des Steuerelements empfängt alle [**WM \_ COMMAND-Meldungen**](/windows/desktop/menurc/wm-command) aus dem Kombinationsfeld, das im ComboBoxEx-Steuerelement enthalten ist. Das ComboBoxEx-Steuerelement sendet seine eigenen Benachrichtigungen mithilfe von [**WM \_ NOTIFY-Nachrichten.**](wm-notify.md) Daher muss der Besitzer des Steuerelements darauf vorbereitet sein, beide Formen von Benachrichtigungsmeldungen zu verarbeiten.
 
-Im folgenden finden Sie die ComboBoxEx-spezifischen Benachrichtigungs Codes, die über die WM-Benachrichtigungs Nachrichten gesendet werden. [**\_**](wm-notify.md)
+Im Folgenden finden Sie die ComboBoxEx-spezifischen Benachrichtigungscodes, die über [**WM \_ NOTIFY-Nachrichten gesendet**](wm-notify.md) werden.
 
 
 
 | Benachrichtigung                              | **Beschreibung**                                                                                                            |
 |-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| [cben \_ BeginEdit](cben-beginedit.md)     | Signalisiert, dass der Benutzer die Dropdown Liste aktiviert hat oder auf das Bearbeitungsfeld des Steuer Elements geklickt hat.                               |
-| [cben \_ EndEdit](cben-endedit.md)         | Signalisiert, dass der Benutzer ein Element aus der Dropdown Liste ausgewählt hat oder einen Bearbeitungsvorgang innerhalb des Bearbeitungs Felds abgeschlossen hat. |
-| [cben \_ DeleteItem](cben-deleteitem.md)   | Meldet, dass ein Element gelöscht wurde.                                                                                          |
-| [cben \_ getdispinfo](cben-getdispinfo.md) | Fordert Informationen zu den Attributen eines Elements an.                                                                           |
-| [cben \_ InsertItem](cben-insertitem.md)   | Signalisiert, dass ein Element in das Steuerelement eingefügt wurde.                                                                          |
+| [CBEN \_ BEGINEDIT](cben-beginedit.md)     | Signalisiert, dass der Benutzer die Dropdownliste aktiviert oder auf das Bearbeitungsfeld des Steuerelements geklickt hat.                               |
+| [CBEN \_ ENDEDIT](cben-endedit.md)         | Signalisiert, dass der Benutzer ein Element aus der Dropdownliste ausgewählt oder einen Bearbeitungsvorgang innerhalb des Bearbeitungsfelds abgeschlossen hat. |
+| [CBEN \_ DELETEITEM](cben-deleteitem.md)   | Meldet, dass ein Element gelöscht wurde.                                                                                          |
+| [CBEN \_ GETDISPINFO](cben-getdispinfo.md) | Fordert Informationen zu den Attributen eines Elements an.                                                                           |
+| [CBEN \_ INSERTITEM](cben-insertitem.md)   | Signalisiert, dass ein Element in das Steuerelement eingefügt wurde.                                                                          |
 
 
 
- 
+ 
 
-## <a name="comboboxex-control-message-forwarding"></a>Nachrichten Weiterleitung durch ComboBoxEx-Steuerelement
+## <a name="comboboxex-control-message-forwarding"></a>ComboBoxEx-Steuerungsnachrichtenweiterleitung
 
-Im folgenden finden Sie die standardmäßigen Kombinations Feld Meldungen, die ein ComboBoxEx-Steuerelement an das untergeordnete Kombinations Feld weiterleitet. Einige dieser Nachrichten können vom ComboBoxEx-Steuerelement entweder vor oder nach der Weiterleitung der Nachricht verarbeitet werden.
+Im Folgenden finden Sie die Standard-Kombinationsfeldmeldungen, die ein ComboBoxEx-Steuerelement an das untergeordnete Kombinationsfeld weiterleiten. Einige dieser Nachrichten können vom ComboBoxEx-Steuerelement verarbeitet werden, bevor oder nachdem die Nachricht weitergeleitet wurde.
 
--   [**CB \_ deletestring**](cb-deletestring.md)
--   [**CB- \_ FindStringExact**](cb-findstringexact.md)
--   [**CB- \_ GetCount**](cb-getcount.md)
--   [**CB \_ getcurrsel**](cb-getcursel.md)
--   [**CB \_ getdroppedcontrolrect**](cb-getdroppedcontrolrect.md)
--   [**CB \_ getdroppedstate**](cb-getdroppedstate.md)
--   [**CB \_ GetItemData**](cb-getitemdata.md)
--   [**CB- \_ GetItemHeight**](cb-getitemheight.md)
--   [**CB \_ getlbtext**](cb-getlbtext.md)
--   [**CB \_ getlbtextlen**](cb-getlbtextlen.md)
--   [**CB \_ getextendedui**](cb-getextendedui.md)
--   [**CB- \_ limittext**](cb-limittext.md)
--   [**CB \_ resetcontent**](cb-resetcontent.md)
--   [**CB \_ setcurrsel**](cb-setcursel.md)
--   [**CB \_ setdroppeer-DTH**](cb-setdroppedwidth.md)
--   [**CB- \_ textendedui**](cb-setextendedui.md)
--   [**CB- \_ Daten**](cb-setitemdata.md)
--   [**CB- \_ sitztemheight**](cb-setitemheight.md)
--   [**CB- \_ ShowDropDown**](cb-showdropdown.md)
+-   [**CB \_ DELETESTRING**](cb-deletestring.md)
+-   [**CB \_ FINDSTRINGEXACT**](cb-findstringexact.md)
+-   [**CB \_ GETCOUNT**](cb-getcount.md)
+-   [**CB \_ GETCURSEL**](cb-getcursel.md)
+-   [**CB \_ GETDROPPEDCONTROLRECT**](cb-getdroppedcontrolrect.md)
+-   [**CB \_ GETDROPPEDSTATE**](cb-getdroppedstate.md)
+-   [**CB \_ GETITEMDATA**](cb-getitemdata.md)
+-   [**CB \_ GETITEMHEIGHT**](cb-getitemheight.md)
+-   [**CB \_ GETLBTEXT**](cb-getlbtext.md)
+-   [**CB \_ GETLBTEXTLEN**](cb-getlbtextlen.md)
+-   [**CB \_ GETEXTENDEDUI**](cb-getextendedui.md)
+-   [**CB \_ LIMITTEXT**](cb-limittext.md)
+-   [**CB \_ RESETCONTENT**](cb-resetcontent.md)
+-   [**CB \_ SETCURSEL**](cb-setcursel.md)
+-   [**CB \_ SETDROPPEDWIDTH**](cb-setdroppedwidth.md)
+-   [**CB \_ SETEXTENDEDUI**](cb-setextendedui.md)
+-   [**CB \_ SETITEMDATA**](cb-setitemdata.md)
+-   [**CB \_ SETITEMHEIGHT**](cb-setitemheight.md)
+-   [**CB \_ SHOWDROPDOWN**](cb-showdropdown.md)
 
-Die folgenden Windows-Meldungen werden von einem ComboBoxEx-Steuerelement an das übergeordnete Fenster weitergeleitet:
+Im Folgenden sind die Windows-Meldungen aufgeführt, die ein ComboBoxEx-Steuerelement an das übergeordnete Fenster weiterleitet:
 
--   [**WM \_ (Dies**](/windows/desktop/menurc/wm-command) schließt alle CBN-Benachrichtigungen ein \_ .)
--   [**WM- \_ Benachrichtigung**](wm-notify.md)
+-   [**WM \_ COMMAND**](/windows/desktop/menurc/wm-command) (Dies schließt alle \_ CBN-Benachrichtigungen ein.)
+-   [**WM \_ NOTIFY**](wm-notify.md)
 
- 
+ 
 
- 
+ 

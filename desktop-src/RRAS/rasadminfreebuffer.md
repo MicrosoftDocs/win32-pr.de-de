@@ -1,9 +1,9 @@
 ---
-title: Rasadminfrebuffer-Funktion (rassapi. h)
-description: Die rasadminfrebuffer-Funktion gibt Arbeitsspeicher frei, der von RAS im Auftrag des Aufrufers zugeordnet wurde.
+title: RasAdminFreeBuffer-Funktion (Rassapi.h)
+description: Die RasAdminFreeBuffer-Funktion gibt Arbeitsspeicher frei, der vom RAS im Auftrag des Aufrufers zugeordnet wurde.
 ms.assetid: 6dfbba22-3af1-4771-8c22-506996f30c6b
 keywords:
-- Rasadminfrebuffer-Funktion (RAS)
+- RasAdminFreeBuffer-Funktion RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1bf86a3005a2b865b2096eddc5ffa9c0c33f848a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9550c072840fabf5d862e32f3bbdc6c26d3b32faf9cf6bf6dcfeae1be400e0a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117789095"
 ---
-# <a name="rasadminfreebuffer-function"></a>Rasadminfrebuffer-Funktion
+# <a name="rasadminfreebuffer-function"></a>RasAdminFreeBuffer-Funktion
 
-\[Diese Funktion wird nur aus Gründen der Abwärtskompatibilität mit Windows NT Server 4,0 bereitgestellt. Es wird ein Fehler zurückgegeben, \_ \_ \_ der auf Windows Server 2003 nicht implementiert ist. Anwendungen sollten die [**mpradminbufferfree**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminbufferfree) -Funktion verwenden.\]
+\[Diese Funktion wird nur aus Gründen der Abwärtskompatibilität mit Windows NT Server 4.0 bereitgestellt. Es wird ERROR \_ CALL NOT IMPLEMENTED auf Windows Server \_ \_ 2003 zurückgegeben. Anwendungen sollten die [**MprAdminBufferFree-Funktion**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminbufferfree) verwenden.\]
 
-Die **rasadminfrebuffer** -Funktion gibt Arbeitsspeicher frei, der von RAS im Auftrag des Aufrufers zugeordnet wurde.
+Die **RasAdminFreeBuffer-Funktion** gibt Arbeitsspeicher frei, der vom RAS im Auftrag des Aufrufers zugeordnet wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,34 +42,34 @@ DWORD RasAdminFreeBuffer(
 
 <dl> <dt>
 
-*Zeiger* \[ in\]
+*Zeiger* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Puffer, der freigegeben werden soll.
+Zeiger auf den frei zu werdenden Puffer.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR \_ SUCCESS.
 
-Wenn die Funktion fehlschlägt, kann der folgende Fehlercode als Rückgabewert zurückgegeben werden.
+Wenn die Funktion fehlschlägt, kann der Rückgabewert der folgende Fehlercode sein.
 
 
 
 | Wert                                                                                                    | Bedeutung                                        |
 |----------------------------------------------------------------------------------------------------------|------------------------------------------------|
-| <dl> <dt>**Fehler bei \_ ungültigem \_ Parameter**</dt> </dl> | Der *Zeiger* Parameter ist ungültig.<br/> |
+| <dl> <dt>**FEHLER \_ UNGÜLTIGER \_ PARAMETER**</dt> </dl> | Der *Zeigerparameter* ist ungültig.<br/> |
 
 
 
  
 
-Es sind keine erweiterten Fehlerinformationen für diese Funktion vorhanden. " [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)" nicht aufrufen.
+Es gibt keine erweiterten Fehlerinformationen für diese Funktion. Rufen Sie [**getLastError nicht auf.**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die **rasadminfreebuffer** -Funktion, um die Puffer freizugeben, die von den Funktionen [**rasadminportenum**](rasadminportenum.md) und [**rasadminportgetinfo**](rasadminportgetinfo.md) belegt werden.
+Verwenden Sie **die Funktion RasAdminFreeBuffer,** um die Puffer frei zu geben, die von den [**Funktionen RasAdminPortEnum**](rasadminportenum.md) und [**RasAdminPortGetInfo zugeordnet**](rasadminportgetinfo.md) werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,26 +79,26 @@ Verwenden Sie die **rasadminfreebuffer** -Funktion, um die Puffer freizugeben, d
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows 2000 Professional<br/>                                                   |
 | Ende des Supports (Server)<br/> | Windows 2000 Server<br/>                                                         |
-| Header<br/>                | <dl> <dt>Rassapi. h</dt> </dl>   |
-| Bibliothek<br/>               | <dl> <dt>Rassapi. lib</dt> </dl> |
+| Header<br/>                | <dl> <dt>Rassapi.h</dt> </dl>   |
+| Bibliothek<br/>               | <dl> <dt>Rassapi.lib</dt> </dl> |
 | DLL<br/>                   | <dl> <dt>Rassapi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Remote Zugriffs Dienst (RAS) (Übersicht)](about-remote-access-service.md)
+[Ras-Dienst (RAS): Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
-[RAS-Server-Verwaltungsfunktionen](ras-server-administration-functions.md)
+[RAS-Serververwaltungsfunktionen](ras-server-administration-functions.md)
 </dt> <dt>
 
-[**Rasadminportenum**](rasadminportenum.md)
+[**RasAdminPortEnum**](rasadminportenum.md)
 </dt> <dt>
 
-[**Rasadminportgetinfo**](rasadminportgetinfo.md)
+[**RasAdminPortGetInfo**](rasadminportgetinfo.md)
 </dt> </dl>
 
  

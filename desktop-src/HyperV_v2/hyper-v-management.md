@@ -1,5 +1,5 @@
 ---
-description: Hier wird beschrieben, wie Sie informationen zu virtuellen Computern verwalten oder abrufen.
+description: Hier wird beschrieben, wie Sie virtuelle Computer verwalten oder Informationen zu virtuellen Computern erhalten.
 ms.assetid: B0F5E19F-36A6-4965-A119-42AF601A64BE
 title: Hyper-V-Verwaltung
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118392564"
 ---
 # <a name="hyper-v-management"></a>Hyper-V-Verwaltung
 
-Hier wird beschrieben, wie Sie informationen zu virtuellen Computern verwalten oder abrufen.
+Hier wird beschrieben, wie Sie virtuelle Computer verwalten oder Informationen zu virtuellen Computern erhalten.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -22,7 +22,7 @@ Hier wird beschrieben, wie Sie informationen zu virtuellen Computern verwalten o
 | Thema                                                                       | BESCHREIBUNG                                                            |
 |-----------------------------------------------------------------------------|------------------------------------------------------------------------|
 | [Informationen zur Hyper-V-Verwaltung](about-hyper-v-management.md)<br/>         | Dieser Abschnitt enthält Informationen zur Hyper-V-Verwaltung.<br/>          |
-| [Referenz zur Hyper-V-Verwaltung](hyper-v-management-reference.md)<br/> | Dieser Abschnitt enthält die Referenz zur Hyper-V-Verwaltung.<br/> |
+| [Hyper-V-Verwaltungsreferenz](hyper-v-management-reference.md)<br/> | Dieser Abschnitt enthält die Referenz zur Hyper-V-Verwaltung.<br/> |
 
 
 

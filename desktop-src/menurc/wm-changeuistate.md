@@ -1,9 +1,9 @@
 ---
-title: WM_CHANGEUISTATE Meldung (Winuser. h)
-description: Eine Anwendung sendet die WM \_ changeuistate-Nachricht, um anzugeben, dass der Benutzeroberflächen Zustand geändert werden soll.
+title: WM_CHANGEUISTATE Meldung (Winuser.h)
+description: Eine Anwendung sendet die WM \_ CHANGEUISTATE-Nachricht, um anzugeben, dass der Benutzeroberflächenzustand geändert werden soll.
 ms.assetid: d8dfc2fe-c64f-4e7e-b021-127aa85d5dd6
 keywords:
-- WM_CHANGEUISTATE von Meldungs Menüs und anderen Ressourcen
+- WM_CHANGEUISTATE Meldung Menüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1cdfec2a26b3b3d160d3d207c338c8ebecd32bf2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3849f9a5d2ccd0cec1bcaba4280e125ea01a669c8535c2dc520ebb98c3a3fcdb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117869710"
 ---
-# <a name="wm_changeuistate-message"></a>WM \_ changeuistate-Meldung
+# <a name="wm_changeuistate-message"></a>WM \_ CHANGEUISTATE-Meldung
 
-Eine Anwendung sendet die **WM \_ changeuistate** -Nachricht, um anzugeben, dass der Benutzeroberflächen Zustand geändert werden soll.
+Eine Anwendung sendet die **WM \_ CHANGEUISTATE-Nachricht,** um anzugeben, dass der Benutzeroberflächenzustand geändert werden soll.
 
 
 ```C++
@@ -39,29 +39,29 @@ Eine Anwendung sendet die **WM \_ changeuistate** -Nachricht, um anzugeben, dass
 *wParam* 
 </dt> <dd>
 
-Das nieder wertige Wort gibt die Aktion an, die durchgeführt werden soll. Dieser Member kann einen der folgenden Werte aufweisen.
+Das Wort mit niedriger Reihenfolge gibt die Aktion an, die ausgeführt werden soll. Dieser Member kann einer der folgenden Werte sein.
 
 
 
 | Wert                                                                                                                                                                                                                   | Bedeutung                                                                                                                                            |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="UIS_CLEAR"></span><span id="uis_clear"></span><dl> <dt>**UIs \_ Löschen**</dt> <dt>2</dt> </dl>                | Die vom höherwertigen Wort angegebenen benutzeroberflächenstatusflags sollten gelöscht werden.<br/>                                                                  |
-| <span id="UIS_INITIALIZE"></span><span id="uis_initialize"></span><dl> <dt>**UIs \_ Initialisieren**</dt> <dt>3</dt> </dl> | Die vom höherwertigen Wort angegebenen benutzeroberflächenstatusflags sollten basierend auf dem letzten Eingabe Ereignis geändert werden. Weitere Informationen finden Sie in den Hinweisen.<br/> |
-| <span id="UIS_SET"></span><span id="uis_set"></span><dl> <dt>**UIs \_**</dt> <dt>1</dt> festlegen </dl>                      | Die vom höherwertigen Wort angegebenen benutzeroberflächenstatusflags müssen festgelegt werden.<br/>                                                                      |
+| <span id="UIS_CLEAR"></span><span id="uis_clear"></span><dl> <dt>**UIS \_ CLEAR**</dt> <dt>2</dt> </dl>                | Die vom Hochreihenfolgewort angegebenen Ui-Statusflags sollten gelöscht werden.<br/>                                                                  |
+| <span id="UIS_INITIALIZE"></span><span id="uis_initialize"></span><dl> <dt>**UIS \_ INITIALIZE**</dt> <dt>3</dt> </dl> | Die vom Wort in hoher Reihenfolge angegebenen Ui-Statusflags sollten basierend auf dem letzten Eingabeereignis geändert werden. Weitere Informationen finden Sie in den Hinweisen.<br/> |
+| <span id="UIS_SET"></span><span id="uis_set"></span><dl> <dt>**UIS \_ SET**</dt> <dt>1</dt> </dl>                      | Die vom Hochreihenfolgewort angegebenen Ui-Statusflags sollten festgelegt werden.<br/>                                                                      |
 
 
 
  
 
-Das hochwertige Wort gibt an, welche Benutzeroberflächen-Zustands Elemente betroffen sind, oder die Art des Steuer Elements. Dieser Member kann einen oder mehrere der folgenden Werte aufweisen.
+Das Wort in hoher Reihenfolge gibt an, welche Benutzeroberflächenzustandselemente oder das Format des Steuerelements betroffen sind. Bei diesem Member kann es sich um einen oder mehrere der folgenden Werte handelt.
 
 
 
 | Wert                                                                                                                                                                                                                     | Bedeutung                                                                     |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| <span id="UISF_ACTIVE"></span><span id="uisf_active"></span><dl> <dt>**Uisf \_ Aktiv**</dt> <dt>0x4</dt> </dl>          | Ein Steuerelement sollte in dem Format gezeichnet werden, das für aktive Steuerelemente verwendet wird.<br/> |
-| <span id="UISF_HIDEACCEL"></span><span id="uisf_hideaccel"></span><dl> <dt>**Uisf \_ Hideaccel**</dt> <dt>0x2</dt> </dl> | Tastaturbeschleuniger werden ausgeblendet.<br/>                                |
-| <span id="UISF_HIDEFOCUS"></span><span id="uisf_hidefocus"></span><dl> <dt>**Uisf \_ Hidefocus**</dt> <dt>0x1</dt> </dl> | Fokus Indikatoren werden ausgeblendet.<br/>                                     |
+| <span id="UISF_ACTIVE"></span><span id="uisf_active"></span><dl> <dt>**UISF \_ ACTIVE**</dt> <dt>0x4</dt> </dl>          | Ein Steuerelement sollte im Stil gezeichnet werden, der für aktive Steuerelemente verwendet wird.<br/> |
+| <span id="UISF_HIDEACCEL"></span><span id="uisf_hideaccel"></span><dl> <dt>**UISF \_ HIDEACCEL-0x2**</dt> <dt></dt> </dl> | Tastaturbeschleunigungen werden ausgeblendet.<br/>                                |
+| <span id="UISF_HIDEFOCUS"></span><span id="uisf_hidefocus"></span><dl> <dt>**UISF \_ HIDEFOCUS**</dt> <dt>0x1</dt> </dl> | Fokusindikatoren werden ausgeblendet.<br/>                                     |
 
 
 
@@ -76,11 +76,11 @@ Dieser Parameter wird nicht verwendet und muss 0 sein.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Nachricht sollte von einem Fenster an sich selbst oder über das übergeordnete Fenster gesendet werden, wenn die Benutzeroberflächen-Zustands Elemente aller Fenster in derselben Hierarchie geändert werden müssen. Die Fenster Prozedur muss die Verarbeitung dieser Nachricht durch [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) zulassen, damit die gesamte Fenster Struktur einen konsistenten Benutzeroberflächen Zustand aufweist. Wenn das Fenster der obersten Ebene die **WM \_ changeuistate** -Nachricht empfängt, sendet es eine [**WM- \_ updateuistate**](wm-updateuistate.md) -Nachricht mit denselben Parametern an alle untergeordneten Fenster. Wenn das System die **WM- \_ updateuistate** -Nachricht verarbeitet, wird die Änderung im Zustand der Benutzeroberfläche vorgenommen.
+Ein Fenster sollte diese Nachricht an sich selbst oder sein übergeordnetes Element senden, wenn es die Benutzeroberflächenzustandselemente aller Fenster in derselben Hierarchie ändern muss. Mit der Fensterprozedur muss [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) diese Meldung verarbeiten lassen, sodass die gesamte Fensterstruktur einen konsistenten Benutzeroberflächenzustand hat. Wenn das Fenster der obersten Ebene die **WM \_ CHANGEUISTATE-Nachricht** empfängt, sendet es eine [**WM \_ UPDATEUISTATE-Nachricht**](wm-updateuistate.md) mit den gleichen Parametern an alle untergeordneten Fenster. Wenn das System die **WM \_ UPDATEUISTATE-Nachricht** verarbeitet, nimmt es die Änderung im Benutzeroberflächenzustand vor.
 
-Wenn das nieder wertige Wort von *wParam* "UIs \_ Initialize" lautet, sendet das System die [**WM- \_ updateuistate**](wm-updateuistate.md) -Nachricht mit einem UI-Status, der auf dem letzten Eingabe Ereignis basiert. Wenn z. b. die letzte Eingabe von der Maus stammt, werden die Tastatur-Cues vom System ausgeblendet. Und wenn die letzte Eingabe von der Tastatur stammt, zeigt das System die Tastatur Hinweise an. Wenn der Status, der sich aus der Verarbeitung von **WM \_ changeuistate** ergibt, mit dem alten Zustand identisch ist, wird diese Meldung von [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) nicht gesendet.
+Wenn das *wParam-Wort* in niedriger Reihenfolge UIS \_ INITIALIZE lautet, sendet das System die [**WM \_ UPDATEUISTATE-Nachricht**](wm-updateuistate.md) mit einem Benutzeroberflächenzustand basierend auf dem letzten Eingabeereignis. Wenn beispielsweise die letzte Eingabe von der Maus stammt, blendet das System die Tastaturhinweise aus. Und wenn die letzte Eingabe von der Tastatur stammt, zeigt das System die Tastaturhinweise an. Wenn der Status, der sich aus der Verarbeitung von **WM \_ CHANGEUISTATE** ergibt, mit dem alten Zustand identisch ist, sendet [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) diese Nachricht nicht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,15 +90,15 @@ Wenn das nieder wertige Wort von *wParam* "UIs \_ Initialize" lautet, sendet das
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))
@@ -107,10 +107,10 @@ Wenn das nieder wertige Wort von *wParam* "UIs \_ Initialize" lautet, sendet das
 [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
 </dt> <dt>
 
-[**WM \_ queryuistate**](wm-queryuistate.md)
+[**WM \_ QUERYUISTATE**](wm-queryuistate.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Tastaturkürzel](keyboard-accelerators.md)

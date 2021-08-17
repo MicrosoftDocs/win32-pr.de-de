@@ -4,7 +4,7 @@ description: Die DRM \_ LICENSE \_ STATE \_ DATA-Struktur enthält Lizenzinforma
 ms.assetid: 5ca577b5-d28b-4e36-8af7-6fae4300d464
 keywords:
 - DRM_LICENSE_STATE_DATA struktur windows media format
-- Strukturfenster-Medienformat
+- Strukturfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -112,7 +112,7 @@ Null oder mehr der folgenden Flags in Kombination mit einem bitweisem **OR:**
 
 Diese Struktur wird (gekapselt in einer [**WM \_ LICENSE STATE \_ \_ DATA-Struktur)**](/previous-versions/windows/desktop/legacy/dd757942(v=vs.85)) von einem Aufruf von [**IWMDRMReader::GetDRMProperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty) zurückgegeben, wenn Sie eine der DRM-Lizenzstatuseigenschaften angeben. Diese Eigenschaften sind:
 
--   [**DRM \_ LicenseState \_ Playback**](drm-licensestate-playback.md)
+-   [**DRM \_ \_ LicenseState-Wiedergabe**](drm-licensestate-playback.md)
 -   [**DRM \_ LicenseState \_ CopyToCD**](drm-licensestate-copytocd.md)
 -   [**DRM \_ LicenseState \_ CopyToSDMIDevice**](drm-licensestate-copytosdmidevice.md)
 -   [**DRM \_ LicenseState \_ CopyToNonSDMIDevice**](drm-licensestate-copytononsdmidevice.md)
@@ -124,7 +124,7 @@ Wenn **dwCategory** **WM \_ DRM LICENSE STATE COUNT \_ FROM UNTIL \_ \_ \_ \_ is
 
 Die Elemente des **dwCount-Arrays** entsprechen den Datums- oder Datumsbereichen, die im **datetime-Array angegeben** sind. Wenn **dwCategory** **WM \_ DRM LICENSE STATE COUNT \_ FROM UNTIL \_ \_ \_ \_ ist** und **datetime** ein Datumspaar enthält, enthält **dwCount** ein Element. Wenn **datetime** zwei Datumspaare (vier Elemente) enthält, sollte **dwCount** zwei Elemente enthalten, eines für jedes Datumspaar.
 
-In einigen Fällen wurden Benutzern möglicherweise mehrere Lizenzen für eine Datei ausgestellt. Beispielsweise haben sie möglicherweise eine Lizenz erworben, die fünf Spiele bis zum Ende des Monats zugelassen hat, und später eine zweite Lizenz für unbegrenzte Rechte erworben. In einem solchen Fall wird das FLAG DRM \_ LICENSE STATE DATA ALGORITHM in \_ \_ \_ **dwVague** ( ) festgelegt, und die `dwVague & DRM_LICENSE_STATE_DATA_VAGUE != 0` DRM-Komponente verwendet einen Algorithmus, um den wahrscheinlichsten Satz von Rechten zu bestimmen, die angewendet wurden. Wenn eine Lizenz abläuft, überprüft die DRM-Komponente die verbleibenden Lizenzen und so weiter, bis alle Lizenzen abgelaufen sind.
+In einigen Fällen wurden Benutzern möglicherweise mehrere Lizenzen für eine Datei ausgestellt. Beispielsweise haben sie möglicherweise eine Lizenz erworben, die fünf Spiele bis zum Ende des Monats erlaubt hat, und später eine zweite Lizenz für unbegrenzte Rechte erworben. In einem solchen Fall wird das FLAG DRM \_ LICENSE STATE DATA ALGORITHM in \_ \_ \_ **dwVague** ( ) festgelegt, und die `dwVague & DRM_LICENSE_STATE_DATA_VAGUE != 0` DRM-Komponente verwendet einen Algorithmus, um den wahrscheinlichsten Satz von Rechten zu bestimmen, die angewendet wurden. Wenn eine Lizenz abläuft, überprüft die DRM-Komponente die verbleibenden Lizenzen und so weiter, bis alle Lizenzen abgelaufen sind.
 
 ## <a name="requirements"></a>Anforderungen
 

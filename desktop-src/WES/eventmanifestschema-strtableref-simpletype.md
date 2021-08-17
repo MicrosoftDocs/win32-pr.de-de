@@ -1,9 +1,9 @@
 ---
-title: der einfache Typ "strautableref"
-description: Definiert eine Zeichenfolge, die auf eine Meldungs Zeichenfolge verweist, die in einer Zeichen folgen Tabelle im Manifest oder in einer Nachrichtendatei (. MC) definiert ist.
+title: strTableRef Simple Type
+description: Definiert eine Zeichenfolge, die auf eine Meldungszeichenfolge verweist, die in einer Zeichenfolgentabelle im Manifest oder in einer Meldungsdatei (.mc) definiert ist.
 ms.assetid: ecbcefcb-3265-4508-be7d-17a0fe3fe911
 keywords:
-- "\"\" \"\"."
+- strTableRef – einfacher Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 95b7db446af056987e2aa25cd1483e9e53c01d39
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 97280b342015338be1cea089f8cb14121e2e51466506e89818501302c3fa891a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117750916"
 ---
-# <a name="strtableref-simple-type"></a>der einfache Typ "strautableref"
+# <a name="strtableref-simple-type"></a>strTableRef Simple Type
 
-Definiert eine Zeichenfolge, die auf eine Meldungs Zeichenfolge verweist, die in einer Zeichen folgen Tabelle im Manifest oder in einer Nachrichtendatei (. MC) definiert ist.
+Definiert eine Zeichenfolge, die auf eine Meldungszeichenfolge verweist, die in einer Zeichenfolgentabelle im Manifest oder in einer Meldungsdatei (.mc) definiert ist.
 
 ``` syntax
 <xs:simpleType name="strTableRef">
@@ -38,11 +38,11 @@ Definiert eine Zeichenfolge, die auf eine Meldungs Zeichenfolge verweist, die in
 
 ## <a name="patterns"></a>Muster
 
-Der einfache Typ " **strautableref** " ist eine " **xs: String** ", die durch das folgende Muster eingeschränkt ist:
+Der einfache **strTableRef-Typ** ist eine **xs:string-Zeichenfolge,** die durch das folgende Muster eingeschränkt ist:
 
 -   `(\$([Ss]tring\..*))|(\$([Mm][Cc]\..*))`
 
-    Die Zeichenfolge muss das Format haben, $String. *stringID* oder $MC.*symbolid*. Wenn die Zeichenfolge das Formular ist, $String. *stringID* muss im [**STRINGTABLE**](eventmanifestschema-stringtable-resources-element.md) -Abschnitt des Manifests auf eine Zeichenfolge verweisen. Wenn die Zeichenfolge das Format $MC.*symbolid* hat, muss Sie auf ein Symbol verweisen, das in der Nachrichtendatei definiert ist.
+    Die Zeichenfolge muss das Format haben, $string. *stringid* oder $mc.*symbolid*. Wenn die Zeichenfolge das Format auf hat, $string. *stringid*, muss im [**StringTable-Abschnitt**](eventmanifestschema-stringtable-resources-element.md) des Manifests auf eine Zeichenfolge verweisen. Wenn die Zeichenfolge das Format hat, $mc.*symbolid*, muss sie auf ein in der Meldungsdatei definiertes Symbol verweisen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Der einfache Typ " **strautableref** " ist eine " **xs: String** ", die durch da
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 

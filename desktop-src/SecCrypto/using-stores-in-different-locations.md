@@ -1,25 +1,25 @@
 ---
-description: Im folgenden Beispiel werden Aspekte beim Arbeiten mit dem Store-Objekt veranschaulicht. Es zeigt öffnende Filialen im CAPICOM \_ -Speicher Speicher \_ , im \_ aktuellen CAPICOM \_ \_ -Benutzerspeicher und im lokalen CAPICOM- \_ Computerspeicher \_ \_ .
+description: Im folgenden Beispiel werden Aspekte der Arbeit mit dem Store veranschaulicht. Sie zeigt die öffnenden Filialen im \_ CAPICOM-SPEICHER, \_ IM AKTUELLEN CAPICOM-BENUTZERSPEICHER und im \_ \_ \_ CAPICOM-SPEICHER FÜR \_ LOKALE \_ \_ COMPUTER.
 ms.assetid: bfb7ff48-1d6b-404f-9dd4-6de1898354b7
-title: Verwenden von speichern an unterschiedlichen Standorten
+title: Verwenden von Speichern an unterschiedlichen Standorten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e22fa4d4eca4748d6c4652a8b33d22a1db492a1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6e57e1c1584754f0b02b61438a7a6a83694c36cd77c633c52f6bec216721d7c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753440"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117971406"
 ---
-# <a name="using-stores-in-different-locations"></a>Verwenden von speichern an unterschiedlichen Standorten
+# <a name="using-stores-in-different-locations"></a>Verwenden von Speichern an unterschiedlichen Standorten
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfunktionen zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfeatures zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
 
-Im folgenden Beispiel werden Aspekte beim Arbeiten mit dem [**Store**](store.md) -Objekt veranschaulicht. Es zeigt öffnende Filialen im CAPICOM \_ -Speicher Speicher \_ , im \_ aktuellen CAPICOM \_ \_ -Benutzerspeicher und im lokalen CAPICOM- \_ Computerspeicher \_ \_ .
+Im folgenden Beispiel werden Aspekte der Arbeit mit dem -Objekt [**Store**](store.md) veranschaulicht. Sie zeigt die öffnenden Filialen im \_ CAPICOM-SPEICHER, \_ IM AKTUELLEN CAPICOM-BENUTZERSPEICHER und im \_ \_ \_ CAPICOM-SPEICHER FÜR \_ LOKALE \_ \_ COMPUTER.
 
-Das Beispiel zeigt das Exportieren von [*Zertifikaten*](../secgloss/c-gly.md) aus einem geöffneten [*Speicher*](../secgloss/c-gly.md), das Schreiben der exportierten Zertifikate in eine Datei, das zurück lesen und Importieren in einen anderen Speicher. Die neu importierten Zertifikate werden dann aufgezählt und angezeigt.
+Das Beispiel zeigt [](../secgloss/c-gly.md) das Exportieren von Zertifikaten aus einem geöffneten [*Speicher,*](../secgloss/c-gly.md)das Schreiben der exportierten Zertifikate in eine Datei, das Zurücklesen und das Importieren in einen anderen Speicher. Die neu importierten Zertifikate werden dann aufzählt und angezeigt.
 
-Bei einem beliebigen CAPICOM-Fehler wird der negative Dezimalwert **Err. Number** zurückgegeben. Weitere Informationen finden Sie unter [**CAPICOM- \_ Fehler \_ Code**](capicom-error-code.md). Informationen zu positiven Dezimalwerten von **Err. Number** finden Sie unter Winerror. h.
+Bei jedem CAPICOM-Fehler wird der negative Dezimalwert **Err.Number** zurückgegeben. Weitere Informationen finden Sie unter [**CAPICOM \_ ERROR \_ CODE**](capicom-error-code.md). Informationen zu positiven Dezimalwerten von **Err.Number finden** Sie unter Winerror.h.
 
 
 ```VB

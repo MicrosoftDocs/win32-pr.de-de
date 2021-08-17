@@ -17,7 +17,7 @@ ms.locfileid: "118370149"
 ---
 # <a name="video-capture-windows-multimedia"></a>Videoaufnahme (Windows Multimedia)
 
-Mithilfe der WINDOWCap-Fensterklasse können Sie ganz einfach Videoaufnahmefunktionen in Ihre Anwendung integrieren. AVICap bietet Anwendungen eine einfache, nachrichtenbasierte Schnittstelle für den Zugriff auf Video- und Waveform-Audio-Erfassungshardware und zum Steuern des Prozesses des Streamings von Videoaufnahmen auf den Datenträger.
+Mithilfe der FENSTER-Klasse AVICap können Sie ganz einfach Videoaufnahmefunktionen in Ihre Anwendung integrieren. AVICap bietet Anwendungen eine einfache, nachrichtenbasierte Schnittstelle für den Zugriff auf Video- und Waveform-Audio-Erfassungshardware und zum Steuern des Prozesses des Streamings von Videoaufnahmen auf den Datenträger.
 
 -   [Informationen zur Videoaufnahme](about-video-capture.md)
 -   [Verwenden von Video Capture](using-video-capture.md)

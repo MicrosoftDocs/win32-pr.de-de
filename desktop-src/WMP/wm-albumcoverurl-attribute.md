@@ -1,9 +1,9 @@
 ---
-title: WM/albumcoverurl-Attribut
-description: Das WM/albumcoverurl-Attribut ist die URL (Uniform Resource Serverlocatorpunkt) für Albumkunst oder ein Miniaturbild.
+title: WM/AlbumCoverURL-Attribut
+description: Das WM/AlbumCoverURL-Attribut ist der Uniform Resource Locator (URL) für Albumart oder ein Miniaturbild.
 ms.assetid: 0134867a-7c11-4d50-9ab5-b48c1ca6c473
 keywords:
-- WM/albumcoverurl-Attribut, Windows Media Player
+- WM/AlbumCoverURL-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6939c5451f3ae8f41214a817293e3c7f3cb3b66c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ce3e3d2948419761a139139493e737df1a9a709147613eadd3e077f0f5101f3a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357637"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118332626"
 ---
-# <a name="wmalbumcoverurl-attribute"></a>WM/albumcoverurl-Attribut
+# <a name="wmalbumcoverurl-attribute"></a>WM/AlbumCoverURL-Attribut
 
-Das **WM/albumcoverurl-** Attribut ist die URL (Uniform Resource Serverlocatorpunkt) für Albumkunst oder ein Miniaturbild.
+Das **WM/AlbumCoverURL-Attribut** ist der Uniform Resource Locator (URL) für Albumart oder ein Miniaturbild.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [**Audioelemente**](audio-item-attributes.md)
--   [**Foto Elemente**](photo-item-attributes.md)
--   [**Video Elemente**](video-item-attributes.md)
+-   [**Fotoelemente**](photo-item-attributes.md)
+-   [**Videoelemente**](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei einem Audioelement ist dieses Attribut die URL der Albumgrafik. Bei einem Foto-oder Video Element ist dieses Attribut die URL eines Miniatur Bilds.
+Bei einem Audioelement ist dieses Attribut die URL der Albumart. Bei einem Foto- oder Videoelement ist dieses Attribut die URL eines Miniaturbilds.
 
-Dieses Attribut ist für Medienelemente in der lokalen Bibliothek des aktuellen Benutzers nicht verfügbar. Sie ist nur für Medienelemente verfügbar, die zu einer Remote Bibliothek gehören. Das heißt, eine Bibliothek, die von einem anderen Benutzer im Heimnetzwerk verfügbar gemacht wurde. Um zu ermitteln, ob eine Medienbibliothek Remote ist, nennen Sie den [**\_ Typ iwmplibrary:: Get**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmplibrary-get_type).
+Dieses Attribut ist für Medienelemente in der lokalen Bibliothek des aktuellen Benutzers nicht verfügbar. Sie ist nur für Medienelemente verfügbar, die zu einer Remotebibliothek gehören. Das heißt, eine Bibliothek, die von einem anderen Benutzer im Heimnetzwerk zur Verfügung gestellt wurde. Um zu bestimmen, ob es sich bei einer Medienbibliothek um eine Remotebibliothek handelt, rufen [**Sie IWMPLibrary::get \_ type auf.**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmplibrary-get_type)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,11 +45,11 @@ Dieses Attribut ist für Medienelemente in der lokalen Bibliothek des aktuellen 
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

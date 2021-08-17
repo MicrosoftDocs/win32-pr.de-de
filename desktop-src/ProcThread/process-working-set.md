@@ -13,9 +13,9 @@ ms.locfileid: "117793508"
 ---
 # <a name="process-working-set"></a>Prozessarbeitssatz
 
-Der *Arbeitssatz eines* Programms ist eine Auflistung der Seiten im virtuellen Adressraum, auf die kürzlich verwiesen wurde. Sie umfasst sowohl freigegebene als auch private Daten. Die freigegebenen Daten enthalten Seiten, die alle Anweisungen enthalten, die Ihre Anwendung ausgeführt, einschließlich der in Ihren DLLs und den System-DLLs. Wenn die Arbeitssatzgröße zunimmt, steigt der Arbeitsspeicherbedarf.
+Der *Arbeitssatz eines* Programms ist eine Auflistung der Seiten im virtuellen Adressraum, auf die kürzlich verwiesen wurde. Sie umfasst sowohl freigegebene als auch private Daten. Die freigegebenen Daten enthalten Seiten, die alle Anweisungen enthalten, die Ihre Anwendung ausgeführt, einschließlich der Anweisungen in Ihren DLLs und den System-DLLs. Wenn die Arbeitssatzgröße zunimmt, steigt der Arbeitsspeicherbedarf.
 
-Ein Prozess verfügt über eine zugeordnete minimale Arbeitssatzgröße und maximale Arbeitssatzgröße. Jedes Mal, wenn [**Sie CreateProcess aufrufen,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa)wird die minimale Arbeitssatzgröße für den Prozess reserviert. Der Virtuelle Arbeitsspeicher-Manager versucht, genügend Arbeitsspeicher für den minimalen Arbeitssatz zu behalten, der sich befindet, wenn der Prozess aktiv ist, behält jedoch nicht mehr als die maximale Größe bei.
+Einem Prozess sind eine minimale Arbeitssatzgröße und eine maximale Arbeitssatzgröße zugeordnet. Jedes Mal, wenn [**Sie CreateProcess aufrufen,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa)wird die minimale Arbeitssatzgröße für den Prozess reserviert. Der Virtuelle Arbeitsspeicher-Manager versucht, genügend Arbeitsspeicher für den minimalen Arbeitssatz zu behalten, der sich befindet, wenn der Prozess aktiv ist, behält jedoch nicht mehr als die maximale Größe bei.
 
 Rufen Sie die [**GetProcessWorkingSetSize-Funktion**](/windows/desktop/api/memoryapi/nf-memoryapi-getprocessworkingsetsize) auf, um die angeforderten Mindest- und Höchstgrößen des Arbeitssets für Ihre Anwendung zu erhalten.
 

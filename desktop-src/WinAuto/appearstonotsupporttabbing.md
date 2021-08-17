@@ -17,11 +17,11 @@ ms.locfileid: "118326733"
 
 Die Anwendung unterstützt scheinbar keine Tabstopps.
 
-## <a name="type"></a>type
+## <a name="type"></a>Typ
 
 Fehler
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Die Anwendung unterstützt keine Standardtastaturnavigation (TAB ODER UMSCHALT+TAB).
 

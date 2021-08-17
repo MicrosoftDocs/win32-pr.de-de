@@ -1,30 +1,30 @@
 ---
-description: Lernen, wenn ein Ereignis eintritt
+description: Learning Wenn ein Ereignis auftritt
 ms.assetid: 4e44089b-676b-4220-9721-54ddf56bf760
-title: Lernen, wenn ein Ereignis eintritt
+title: Learning Wenn ein Ereignis auftritt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 19ed537430fd66818687b142f059399292c923e1
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 58696055bdf1e3cbf3cf36c4db4ae2258bda334956fcaa14f33eda96db249773
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104522067"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118397216"
 ---
-# <a name="learning-when-an-event-occurs"></a>Lernen, wenn ein Ereignis eintritt
+# <a name="learning-when-an-event-occurs"></a>Learning Wenn ein Ereignis auftritt
 
-Um DirectShow-Ereignisse zu verarbeiten, benötigt eine Anwendung eine Methode, um herauszufinden, wann Ereignisse in der Warteschlange warten. Der Filter Graph-Manager bietet zwei Möglichkeiten, dies zu erreichen:
+Zum Verarbeiten von DirectShow-Ereignissen benötigt eine Anwendung eine Möglichkeit, um herauszufinden, wann Ereignisse in der Warteschlange warten. Der Filter Graph-Manager bietet zwei Möglichkeiten:
 
--   **Fenster Benachrichtigung:** Der Filter Graph-Manager sendet eine benutzerdefinierte Windows-Meldung an ein Anwendungsfenster, wenn ein neues Ereignis vorhanden ist.
--   **Ereignis Signalisierung:** Der Filter Graph-Manager signalisiert einem Windows-Ereignis, wenn sich DirectShow-Ereignisse in der Warteschlange befinden, und setzt das Ereignis zurück, wenn die Warteschlange leer ist.
+-   **Fensterbenachrichtigung:** Der Filter Graph Manager sendet eine benutzerdefinierte Windows an ein Anwendungsfenster, wenn ein neues Ereignis vor liegt.
+-   **Ereignissignalisierung:** Der Filter Graph-Manager signalisiert ein Windows-Ereignis, wenn DirectShow-Ereignisse in der Warteschlange sind, und setzt das Ereignis zurück, wenn die Warteschlange leer ist.
 
-Eine Anwendung kann beide Techniken verwenden. Die Fenster Benachrichtigung ist in der Regel einfacher.
+Eine Anwendung kann beide Verfahren verwenden. Die Fensterbenachrichtigung ist in der Regel einfacher.
 
-**Fenster Benachrichtigung**
+**Fensterbenachrichtigung**
 
-Um eine Fenster Benachrichtigung einzurichten, müssen Sie die [**imediaeventex:: setnotifywindow**](/windows/desktop/api/Control/nf-control-imediaeventex-setnotifywindow) -Methode aufrufen und eine private Meldung angeben. Anwendungen können Nachrichtennummern im Bereich von WM- \_ app bis 0xbfff als private Nachrichten verwenden. Jedes Mal, wenn der Filter Diagramm-Manager eine neue Ereignis Benachrichtigung in der Warteschlange eingibt, wird diese Nachricht an das angegebene Fenster gesendet. Die Anwendung antwortet innerhalb der Nachrichten Schleife des Fensters auf die Nachricht.
+Rufen Sie zum Einrichten der Fensterbenachrichtigung die [**IMediaEventEx::SetNotifyWindow-Methode**](/windows/desktop/api/Control/nf-control-imediaeventex-setnotifywindow) auf, und geben Sie eine private Nachricht an. Anwendungen können Nachrichtennummern im Bereich von WM APP bis 0xBFFF \_ als private Nachrichten verwenden. Wenn der Filter Graph Manager eine neue Ereignisbenachrichtigung in der Warteschlange platziert, wird diese Nachricht an das designierte Fenster gesendet. Die Anwendung antwortet innerhalb der Meldungsschleife des Fensters auf die Nachricht.
 
-Im folgenden Codebeispiel wird gezeigt, wie das Benachrichtigungsfenster festgelegt wird.
+Das folgende Codebeispiel zeigt, wie das Benachrichtigungsfenster festgelegt wird.
 
 
 ```C++
@@ -34,9 +34,9 @@ pEvent->SetNotifyWindow((OAHWND)g_hwnd, WM_GRAPHNOTIFY, 0);
 
 
 
-Die Meldung ist eine normale Windows-Meldung und wird separat von der DirectShow-Ereignis Benachrichtigungs Warteschlange gepostet. Der Vorteil dieses Ansatzes besteht darin, dass die meisten Anwendungen bereits eine Nachrichten Schleife implementiert haben. Daher können Sie die DirectShow-Ereignis Behandlung ohne viel zusätzliche Arbeit integrieren.
+Die Nachricht ist eine normale Windows Nachricht und wird getrennt von der DirectShow-Ereignisbenachrichtigungswarteschlange veröffentlicht. Der Vorteil dieses Ansatzes ist, dass die meisten Anwendungen bereits eine Nachrichtenschleife implementieren. Aus diesem Grund können Sie die DirectShow-Ereignisbehandlung ohne viel zusätzliche Arbeit integrieren.
 
-Im folgenden Codebeispiel wird gezeigt, wie auf die Benachrichtigungs Meldung reagiert wird. Ein umfassendes Beispiel finden Sie unter [reagieren auf Ereignisse](responding-to-events.md).
+Das folgende Codebeispiel zeigt eine Gliederung der Reaktion auf die Benachrichtigungsnachricht. Ein vollständiges Beispiel finden Sie unter [Reagieren auf Ereignisse.](responding-to-events.md)
 
 
 ```C++
@@ -55,22 +55,22 @@ LRESULT CALLBACK WindowProc( HWND hwnd, UINT msg, UINT wParam, LONG lParam)
 
 
 
-Da Ereignis Benachrichtigung und Nachrichten Schleife asynchron sind, kann die Warteschlange mehr als ein Ereignis enthalten, wenn die Anwendung auf die Nachricht antwortet. Außerdem können Ereignisse manchmal aus der Warteschlange gelöscht werden, wenn Sie ungültig werden. Daher wird in Ihrem Ereignis Behandlungs Code [**iammediaevent:: GetEvent**](/windows/desktop/api/Control/nf-control-imediaevent-getevent) aufgerufen, bis ein Fehlercode zurückgegeben wird, der angibt, dass die Warteschlange leer ist.
+Da die Ereignisbenachrichtigung und die Nachrichtenschleife asynchron sind, kann die Warteschlange bis zu dem Zeitpunkt, zu dem Ihre Anwendung auf die Nachricht antwortet, mehr als ein Ereignis enthalten. Außerdem können Ereignisse manchmal aus der Warteschlange gelöscht werden, wenn sie ungültig werden. Rufen Sie daher in Ihrem Ereignisbehandlungscode [**IAMMediaEvent::GetEvent**](/windows/desktop/api/Control/nf-control-imediaevent-getevent) auf, bis ein Fehlercode zurückgegeben wird, der angibt, dass die Warteschlange leer ist.
 
-Bevor Sie den [**imediaeventex**](/windows/desktop/api/Control/nn-control-imediaeventex) -Zeiger freigeben, brechen Sie die Ereignis Benachrichtigung ab, indem Sie [**setnotifywindow**](/windows/desktop/api/Control/nf-control-imediaeventex-setnotifywindow) mit einem **null** -Zeiger aufrufen. Überprüfen Sie im Ereignis Verarbeitungs Code, ob der **imediaeventex** -Zeiger gültig ist, bevor Sie [**GetEvent**](/windows/desktop/api/Control/nf-control-imediaevent-getevent)aufrufen. Diese Schritte verhindern einen möglichen Fehler, bei dem die Anwendung die Ereignis Benachrichtigung empfängt, nachdem Sie den **imediaeventex** -Zeiger freigegeben hat.
+Bevor Sie den [**IMediaEventEx-Zeiger**](/windows/desktop/api/Control/nn-control-imediaeventex) veröffentlichen, brechen Sie die Ereignisbenachrichtigung ab, indem [**Sie SetNotifyWindow**](/windows/desktop/api/Control/nf-control-imediaeventex-setnotifywindow) mit einem **NULL-Zeiger** aufrufen. Überprüfen Sie in Ihrem Ereignisverarbeitungscode, ob der **IMediaEventEx-Zeiger** gültig ist, bevor Sie [**GetEvent aufrufen.**](/windows/desktop/api/Control/nf-control-imediaevent-getevent) Diese Schritte verhindern einen möglichen Fehler, bei dem die Anwendung die Ereignisbenachrichtigung empfängt, nachdem sie den **IMediaEventEx-Zeiger freigegeben** hat.
 
 **Ereignissignal**
 
-Der Filter Graph-Manager speichert ein manuelles Zurücksetzungs Ereignis, das den Status der Ereignis Warteschlange widerspiegelt. Wenn die Warteschlange ausstehende Ereignis Benachrichtigungen enthält, signalisiert der Filter Graph-Manager das Ereignis für manuelles Zurücksetzen. Wenn die Warteschlange leer ist, wird das Ereignis durch einen Aufrufe der [**imediaevent:: GetEvent**](/windows/desktop/api/Control/nf-control-imediaevent-getevent) -Methode zurückgesetzt. Eine Anwendung kann dieses Ereignis verwenden, um den Status der Warteschlange zu ermitteln.
+Der Filter Graph Manager behält ein Ereignis für die manuelle Zurücksetzung bei, das den Status der Ereigniswarteschlange widerspiegelt. Wenn die Warteschlange ausstehende Ereignisbenachrichtigungen enthält, signalisiert der Graph-Manager das Ereignis für die manuelle Zurücksetzung. Wenn die Warteschlange leer ist, setzt ein Aufruf der [**IMediaEvent::GetEvent-Methode**](/windows/desktop/api/Control/nf-control-imediaevent-getevent) das Ereignis zurück. Eine Anwendung kann dieses Ereignis verwenden, um den Status der Warteschlange zu bestimmen.
 
 > [!Note]  
-> Die Terminologie kann hier verwirrend sein. Das Ereignis für manuelles Zurücksetzen ist der Typ des Ereignisses, das von der Windows-Funktion " [**kreateevent**](/windows/win32/api/synchapi/nf-synchapi-createeventa) " erstellt wurde. Dies hat nichts mit den Ereignissen zu tun, die von DirectShow definiert werden.
+> Die Terminologie kann hier verwirrend sein. Das Ereignis zum manuellen Zurücksetzen ist der Typ des Ereignisses, das von der [**CreateEvent Windows funktion erstellt**](/windows/win32/api/synchapi/nf-synchapi-createeventa) wird. sie hat nichts mit den ereignissen zu tun, die von DirectShow definiert werden.
 
  
 
-Ruft die [**imediaevent:: geteventhandle**](/windows/desktop/api/Control/nf-control-imediaevent-geteventhandle) -Methode auf, um ein Handle für das manuelle Zurücksetzungs Ereignis zu erhalten. Warten Sie, bis das Ereignis signalisiert wird, indem Sie eine Funktion wie [**WaitForMultipleObjects**](/windows/win32/api/winuser/nf-winuser-msgwaitformultipleobjects)aufrufen. Nachdem das Ereignis signalisiert wurde, wenden Sie [**imediaevent:: GetEvent**](/windows/desktop/api/Control/nf-control-imediaevent-getevent) an, um das DirectShow-Ereignis abzurufen.
+Rufen Sie [**die IMediaEvent::GetEventHandle-Methode**](/windows/desktop/api/Control/nf-control-imediaevent-geteventhandle) auf, um ein Handle für das Manuelle Zurücksetzen-Ereignis zu erhalten. Warten Sie, bis das Ereignis signalisiert wird, indem Sie eine Funktion wie [**WaitForMultipleObjects aufrufen.**](/windows/win32/api/winuser/nf-winuser-msgwaitformultipleobjects) Nachdem das Ereignis signalisiert wurde, rufen [**Sie IMediaEvent::GetEvent auf,**](/windows/desktop/api/Control/nf-control-imediaevent-getevent) um das DirectShow-Ereignis zu erhalten.
 
-Das folgende Codebeispiel veranschaulicht diese Vorgehensweise. Er ruft das Ereignis Handle ab und wartet dann in Intervallen von 100 Millisekunden, bis das Ereignis signalisiert wird. Wenn das Ereignis signalisiert wird, ruft es **GetEvent** auf und druckt den Ereignis Code und die Ereignis Parameter im Konsolenfenster. Die Schleife wird beendet, wenn das [**EC \_ Complete**](ec-complete.md) -Ereignis auftritt, das angibt, dass die Wiedergabe abgeschlossen wurde.
+Das folgende Codebeispiel veranschaulicht diese Vorgehensweise. Er ruft das Ereignishandle ab und wartet dann in Intervallen von 100 Millisekunden, bis das Ereignis signalisiert wird. Wenn das Ereignis signalisiert wird, ruft es **GetEvent auf** und gibt den Ereigniscode und die Ereignisparameter im Konsolenfenster aus. Die -Schleife wird beendet, wenn [**das EC \_ COMPLETE-Ereignis**](ec-complete.md) auftritt, was angibt, dass die Wiedergabe abgeschlossen wurde.
 
 
 ```C++
@@ -100,7 +100,7 @@ while(!bDone)
 
 
 
-Da das Filter Diagramm das Ereignis nach Bedarf automatisch festlegt oder zurücksetzt, sollte Ihre Anwendung dies nicht tun. Beim Freigeben des Filter Diagramms schließt das Filter Diagramm auch das Ereignis handle. verwenden Sie daher nach diesem Punkt nicht das Ereignis handle.
+Da das Filterdiagramm das Ereignis bei Entsprechendkeit automatisch ein- oder zurückgesetzt, sollte Ihre Anwendung dies nicht tun. Wenn Sie das Filterdiagramm frei geben, schließt das Filterdiagramm auch das Ereignishand handle. Verwenden Sie daher nicht das Ereignishand handle nach diesem Punkt.
 
  
 

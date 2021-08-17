@@ -1,6 +1,6 @@
 ---
 title: Prädikationsabfragen
-description: Das D3D12PredicationQueries-Beispiel veranschaulicht okklusions-culling mit DirectX 12-Abfrageheaps und Prädikation. In der exemplarischen Vorgehensweise wird der zusätzliche Code beschrieben, der erforderlich ist, um das HelloConstBuffer-Beispiel für die Verarbeitung von Prädikationsabfragen zu erweitern.
+description: Das D3D12PredicationQueries-Beispiel veranschaulicht die Verdecken-Culling mit DirectX 12-Abfragehaps und -prädication. In der exemplarischen Vorgehensweise wird der zusätzliche Code beschrieben, der zum Erweitern des HelloConstBuffer-Beispiels zur Handhabung von Prädication-Abfragen erforderlich ist.
 ms.assetid: F61817BB-45BC-4977-BE4A-EE0FDAFBCB57
 ms.localizationpriority: high
 ms.topic: article
@@ -14,19 +14,19 @@ ms.locfileid: "117733396"
 ---
 # <a name="predication-queries"></a>Prädikationsabfragen
 
-Das **D3D12PredicationQueries-Beispiel** veranschaulicht okklusions-culling mit DirectX 12-Abfrageheaps und Prädikation. In der exemplarischen Vorgehensweise wird der zusätzliche Code beschrieben, der erforderlich ist, um das **HelloConstBuffer-Beispiel** für die Verarbeitung von Prädikationsabfragen zu erweitern.
+Das **D3D12PredicationQueries-Beispiel** veranschaulicht die Verdecken-Culling mit DirectX 12-Abfragehaps und -prädication. In der exemplarischen Vorgehensweise wird der zusätzliche Code beschrieben, der zum Erweitern des **HelloConstBuffer-Beispiels** zur Handhabung von Prädication-Abfragen erforderlich ist.
 
--   [Erstellen eines Tiefenschablonendeskriptorheaps und eines Verdeckungsabfrageheaps](#create-a-depth-stencil-descriptor-heap-and-an-occlusion-query-heap)
--   [Aktivieren von Alphablending](#enable-alpha-blending)
--   [Deaktivieren von Farb- und Tiefen-Schreibvorgängen](#disable-color-and-depth-writes)
+-   [Erstellen eines Tiefen-Schablonendeskriptor-Heaps und eines Okklusionsabfrage-Heaps](#create-a-depth-stencil-descriptor-heap-and-an-occlusion-query-heap)
+-   [Aktivieren des Alphablendings](#enable-alpha-blending)
+-   [Deaktivieren von Schreibvorgängen in Farbe und Tiefe](#disable-color-and-depth-writes)
 -   [Erstellen eines Puffers zum Speichern der Ergebnisse der Abfrage](#create-a-buffer-to-store-the-results-of-the-query)
--   [Zeichnen der Quader und Ausführen und Auflösen der Verdeckungsabfrage](#draw-the-quads-and-perform-and-resolve-the-occlusion-query)
+-   [Zeichnen der Quader und Ausführen und Auflösen der Okklusionsabfrage](#draw-the-quads-and-perform-and-resolve-the-occlusion-query)
 -   [Ausführen des Beispiels](#run-the-sample)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="create-a-depth-stencil-descriptor-heap-and-an-occlusion-query-heap"></a>Erstellen eines Tiefenschablonendeskriptorheaps und eines Verdeckungsabfrageheaps
+## <a name="create-a-depth-stencil-descriptor-heap-and-an-occlusion-query-heap"></a>Erstellen eines Tiefen-Schablonendeskriptor-Heaps und eines Okklusionsabfrage-Heaps
 
-Erstellen Sie in der **LoadPipeline-Methode** einen Tiefenschablonendeskriptorheap.
+Erstellen Sie **in der LoadPipeline-Methode** einen Tiefen-Schablonendeskriptor-Heap.
 
 ``` syntax
               // Describe and create a depth stencil view (DSV) descriptor heap.
@@ -42,7 +42,7 @@ Erstellen Sie in der **LoadPipeline-Methode** einen Tiefenschablonendeskriptorhe
 <table>
 <thead>
 <tr class="header">
-<th>Aufrufflow</th>
+<th>Aufruffluss</th>
 <th>Parameter</th>
 </tr>
 </thead>
@@ -64,7 +64,7 @@ Erstellen Sie in der **LoadPipeline-Methode** einen Tiefenschablonendeskriptorhe
 
  
 
-Erstellen Sie in der **LoadAssets-Methode** einen Heap für Okklusionsabfragen.
+Erstellen Sie **in der LoadAssets-Methode** einen Heap für Okklusionsabfragen.
 
 ``` syntax
      // Describe and create a heap for occlusion queries.
@@ -76,18 +76,18 @@ Erstellen Sie in der **LoadAssets-Methode** einen Heap für Okklusionsabfragen.
 
 
 
-| Aufrufflow                                                 | Parameter                                                |
+| Aufruffluss                                                 | Parameter                                                |
 |-----------------------------------------------------------|-----------------------------------------------------------|
-| [**\_ \_ D3D12-ABFRAGEHEAP-DESC \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_query_heap_desc) | [**\_D3D12-ABFRAGEHEAPTYP \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_query_heap_type) |
+| [**D3D12 \_ QUERY \_ HEAP \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_query_heap_desc) | [**D3D12 \_ QUERY \_ HEAP \_ TYPE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_query_heap_type) |
 | [**CreateQueryHeap**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createqueryheap)   |                                                           |
 
 
 
  
 
-## <a name="enable-alpha-blending"></a>Aktivieren von Alphablending
+## <a name="enable-alpha-blending"></a>Aktivieren des Alphablendings
 
-Dieses Beispiel zeichnet zwei Quader und veranschaulicht eine binäre Verdeckungsabfrage. Das Quad-Element im Vordergrund wird über den Bildschirm animiert, und das quad-Element im Hintergrund wird gelegentlich verdeckt. In der **LoadAssets-Methode** ist das Alphablending für dieses Beispiel aktiviert, damit wir sehen können, an welchem Punkt D3D das Quad in back occluded betrachtet.
+Dieses Beispiel zeichnet zwei Quader und veranschaulicht eine binäre Okklusionsabfrage. Das Quad im vorderen Bereich wird über den Bildschirm animiert, und das im Hintergrund wird gelegentlich verblendet. In der **LoadAssets-Methode** ist alpha blending für dieses Beispiel aktiviert, damit wir sehen können, an welchem Punkt D3D das Quad in back occluded betrachtet.
 
 ``` syntax
      // Enable alpha blending so we can visualize the occlusion query results.
@@ -107,7 +107,7 @@ Dieses Beispiel zeichnet zwei Quader und veranschaulicht eine binäre Verdeckung
 <table>
 <thead>
 <tr class="header">
-<th>Aufrufflow</th>
+<th>Aufruffluss</th>
 <th>Parameter</th>
 </tr>
 </thead>
@@ -128,11 +128,11 @@ Dieses Beispiel zeichnet zwei Quader und veranschaulicht eine binäre Verdeckung
 
  
 
-## <a name="disable-color-and-depth-writes"></a>Deaktivieren von Farb- und Tiefen-Schreibvorgängen
+## <a name="disable-color-and-depth-writes"></a>Deaktivieren von Schreibvorgängen in Farbe und Tiefe
 
-Die Verdeckungsabfrage wird ausgeführt, indem ein Quader gerendert wird, der den gleichen Bereich wie der Quader abdeckt, dessen Sichtbarkeit wir testen möchten. In komplexeren Szenen handelt es sich bei der Abfrage wahrscheinlich um ein begrenzungsvolumes und nicht um ein einfaches Quader. In beiden Fällen wird ein neuer Pipelinezustand erstellt, der das Schreiben in das Renderziel und den Z-Puffer deaktiviert, sodass sich die Verdeckungsabfrage selbst nicht auf die sichtbare Ausgabe des Renderingdurchlaufs auswirkt.
+Die Okklusionsabfrage wird ausgeführt, indem ein Quad gerendert wird, das den gleichen Bereich wie das Quader abdeckt, dessen Sichtbarkeit wir testen möchten. In komplexeren Szenen wäre die Abfrage wahrscheinlich ein begrenzungsgebundenes Volume und kein einfaches Quader. In beiden Fällen wird ein neuer Pipelinezustand erstellt, der das Schreiben in das Renderziel und den Z-Puffer deaktiviert, sodass die Okklusionsabfrage selbst keine Auswirkungen auf die sichtbare Ausgabe des Renderingpasses hat.
 
-Deaktivieren Sie in der **LoadAssets-Methode** Farb- und Tiefen-Schreibvorgänge für den Zustand der Verdeckungsabfrage.
+Deaktivieren Sie **in der LoadAssets-Methode** Farb- und Tiefenschreibvorgänge für den Zustand der Okklusionsabfrage.
 
 ``` syntax
  // Disable color writes and depth writes for the occlusion query's state.
@@ -144,7 +144,7 @@ Deaktivieren Sie in der **LoadAssets-Methode** Farb- und Tiefen-Schreibvorgänge
 
 
 
-| Aufrufflow                                                                            | Parameter                                                  |
+| Aufruffluss                                                                            | Parameter                                                  |
 |--------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | [**D3D12 \_ GRAPHICS \_ PIPELINE \_ STATE \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_graphics_pipeline_state_desc) | [**D3D12 \_ DEPTH \_ WRITE \_ MASK**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_depth_write_mask) |
 | [**CreateGraphicsPipelineState**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-creategraphicspipelinestate)      |                                                             |
@@ -155,7 +155,7 @@ Deaktivieren Sie in der **LoadAssets-Methode** Farb- und Tiefen-Schreibvorgänge
 
 ## <a name="create-a-buffer-to-store-the-results-of-the-query"></a>Erstellen eines Puffers zum Speichern der Ergebnisse der Abfrage
 
-In der **LoadAssets-Methode** muss ein Puffer erstellt werden, um die Ergebnisse der Abfrage zu speichern. Jede Abfrage erfordert 8 Bytes Speicherplatz im GPU-Arbeitsspeicher. In diesem Beispiel wird nur eine Abfrage ausgeführt, und der Einfachheit halber und der Lesbarkeit wird ein Puffer erstellt, der genau diese Größe aufweist (obwohl dieser Funktionsaufruf eine 64.000-Seite gpu-Arbeitsspeicher zuordnet– die meisten echten Apps würden wahrscheinlich einen größeren Puffer erstellen).
+In der **LoadAssets-Methode** muss ein Puffer erstellt werden, um die Ergebnisse der Abfrage zu speichern. Jede Abfrage benötigt 8 Bytes Speicherplatz im GPU-Arbeitsspeicher. In diesem Beispiel wird nur eine Abfrage ausgeführt. Der Einfachheit und Lesbarkeit halber wird ein Puffer erstellt, der genau diese Größe hat (obwohl dieser Funktionsaufruf eine Seite mit 64.000 GPU-Arbeitsspeicher zuteilen wird– die meisten echten Apps würden wahrscheinlich einen größeren Puffer erstellen).
 
 ``` syntax
  // Create the query result buffer.
@@ -176,7 +176,7 @@ In der **LoadAssets-Methode** muss ein Puffer erstellt werden, um die Ergebnisse
 <table>
 <thead>
 <tr class="header">
-<th>Aufrufflow</th>
+<th>Aufruffluss</th>
 <th>Parameter</th>
 </tr>
 </thead>
@@ -197,14 +197,14 @@ In der **LoadAssets-Methode** muss ein Puffer erstellt werden, um die Ergebnisse
 
  
 
-## <a name="draw-the-quads-and-perform-and-resolve-the-occlusion-query"></a>Zeichnen der Quader und Ausführen und Auflösen der Verdeckungsabfrage
+## <a name="draw-the-quads-and-perform-and-resolve-the-occlusion-query"></a>Zeichnen der Quader und Ausführen und Auflösen der Okklusionsabfrage
 
-Nach dem Setup wird die Main-Schleife in der **PopulateCommandLists-Methode** aktualisiert.
+Nach dem Setup wird die main-Schleife in der **PopulateCommandLists-Methode** aktualisiert.
 
-<dl> 1. Zeichnen Sie die Quads von zurück nach vorne, damit der Transparenzeffekt ordnungsgemäß funktioniert. Das Zurückstellen des Quaders nach vorn basiert auf dem Ergebnis der Abfrage des vorherigen Frames und ist hierfür eine recht gängige Technik.  
-2. Ändern Sie die PSO, um Renderziel- und Tiefenschablonen-Schreibvorgänge zu deaktivieren.  
-3. Führen Sie die Verdeckungsabfrage aus.  
-4. Lösen Sie die Verdeckungsabfrage auf.  
+<dl> 1. Zeichnen Sie die Quads von zurück nach vorn, damit der Transparenzeffekt ordnungsgemäß funktioniert. Das Zeichnen des Quads in "Back-to-Front" ist auf das Ergebnis der Abfrage des vorherigen Frames und eine ziemlich gängige Technik dafür.  
+2. Ändern Sie das PSO, um Renderziel- und Tiefen-Schablonen-Schreibvorgänge zu deaktivieren.  
+3. Führen Sie die Okklusionsabfrage aus.  
+4. Lösen Sie die Okklusionsabfrage auf.  
 </dl>
 
 ``` syntax
@@ -247,7 +247,7 @@ Nach dem Setup wird die Main-Schleife in der **PopulateCommandLists-Methode** ak
 <table>
 <thead>
 <tr class="header">
-<th>Aufrufflow</th>
+<th>Aufruffluss</th>
 <th>Parameter</th>
 </tr>
 </thead>
@@ -333,17 +333,17 @@ Nach dem Setup wird die Main-Schleife in der **PopulateCommandLists-Methode** ak
 
 ## <a name="run-the-sample"></a>Ausführen des Beispiels
 
-Nicht occluded:
+Nicht verblendet:
 
-![Zwei Felder, die nicht verblendet sind](images/not-occluded.png)
+![zwei Felder, die nicht verdeckt sind](images/not-occluded.png)
 
 Verdeckt:
 
-![Ein Feld vollständig verblendet](images/occluded.png)
+![Ein Feld ist vollständig verdeckt.](images/occluded.png)
 
-Teilweise verblendet:
+Teilweise verdeckt:
 
-![ein Feld teilweise verblendet](images/partially-occluded.png)
+![Ein Teilweise verdecktes Feld](images/partially-occluded.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

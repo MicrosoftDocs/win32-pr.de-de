@@ -1,17 +1,17 @@
 ---
-title: Benutzeroberfläche-Elementverweis
+title: Benutzeroberfläche Elementverweis
 description: In der folgenden Tabelle sind die vom System bereitgestellten Benutzeroberflächenelemente aufgeführt, die von Microsoft Active Accessibility bereitgestellt werden.
 ms.assetid: c09c14bd-61c4-4d4a-895c-0eaa26be0998
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e68ecc782f7a30bc7e6019ca4ef08774e8974da
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 3d18b4a69ce0bb017bc1528f9e66ba7aff43b24d535e1115973076882678b786
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111444021"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117744966"
 ---
-# <a name="user-interface-element-reference"></a>Benutzeroberfläche-Elementverweis
+# <a name="user-interface-element-reference"></a>Benutzeroberfläche Elementverweis
 
 In der folgenden Tabelle sind die vom System bereitgestellten Benutzeroberflächenelemente aufgeführt, die von Microsoft Active Accessibility bereitgestellt werden.
 

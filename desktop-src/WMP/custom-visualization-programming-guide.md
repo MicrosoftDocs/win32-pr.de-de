@@ -4,7 +4,7 @@ description: Programmierhandbuch für benutzerdefinierte Visualisierungen
 ms.assetid: a4e670b2-b70a-4f6b-8fc3-c4f5d855d723
 keywords:
 - Windows Media Player,Visualisierungen
-- Windows Media Player Plug-Ins,Visualisierungen
+- Windows Media Player-Plug-Ins,Visualisierungen
 - Plug-Ins, Visualisierungen
 - Visualisierungen,Programmierhandbuch
 - Benutzerdefinierte Visualisierungen, Programmierhandbuch
@@ -29,7 +29,7 @@ Im folgenden Thema wird das Erstellen einer Beispielvisualisierung beschrieben.
 
 
 
-| Thema                                  | BESCHREIBUNG                                     |
+| Thema                                  | Beschreibung                                     |
 |----------------------------------------|-------------------------------------------------|
 | [The Glow Sample](the-glow-sample.md) | Beschreibt, wie eine einfache Visualisierung erstellt wird. |
 

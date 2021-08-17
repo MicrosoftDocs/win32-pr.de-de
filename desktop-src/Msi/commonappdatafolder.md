@@ -1,19 +1,19 @@
 ---
-description: Die commonappdatafolder-Eigenschaft ist der vollständige Pfad zum Datei Verzeichnis, das Anwendungsdaten für alle Benutzer enthält.
+description: Die CommonAppDataFolder-Eigenschaft ist der vollständige Pfad zum Dateiverzeichnis, das Anwendungsdaten für alle Benutzer enthält.
 ms.assetid: 4fc6e56a-20e7-4dd6-827b-ebb66c04a2b4
-title: Commonappdatafolder (Eigenschaft)
+title: CommonAppDataFolder (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 80b82f54780ffdbda5e627cf67f3eab5b08e5d39
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: db9596e3b89a170c066d01e17e93aee92a3736a707755f5e29316690f7d8a063
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354205"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118380123"
 ---
-# <a name="commonappdatafolder-property"></a>Commonappdatafolder (Eigenschaft)
+# <a name="commonappdatafolder-property"></a>CommonAppDataFolder (Eigenschaft)
 
-Die **commonappdatafolder** -Eigenschaft ist der vollständige Pfad zum Datei Verzeichnis, das Anwendungsdaten für alle Benutzer enthält.
+Die **CommonAppDataFolder-Eigenschaft** ist der vollständige Pfad zum Dateiverzeichnis, das Anwendungsdaten für alle Benutzer enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -21,7 +21,7 @@ Die **commonappdatafolder** -Eigenschaft ist der vollständige Pfad zum Datei Ve
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: EM_GETOLEINTERFACE Meldung (RichEdit. h)
-description: Ruft ein iricheditole-Objekt ab, mit dem ein Client auf die Component Object Model (com)-Funktionalität eines Rich-Edit-Steuer Elements zugreifen kann.
+title: EM_GETOLEINTERFACE Nachricht (Richedit.h)
+description: Ruft ein IRichEditOle-Objekt ab, mit dem ein Client auf die COM-Funktionalität (Component Object Model) eines Rich Edit-Steuerelements zugreifen kann.
 ms.assetid: fa462c7b-29b9-4694-b7ad-6068c69ffb76
 keywords:
-- Windows-Steuerelemente für EM_GETOLEINTERFACE Meldung
+- EM_GETOLEINTERFACE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d7557d40c6dcec38ce629d949a8db9915714821
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e4e1799039081ed8250cb062aa3d1348a2fe8a8dbdcfa768fab74855d18d8e9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104817"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117831671"
 ---
-# <a name="em_getoleinterface-message"></a>EM \_ getoleinterface-Nachricht
+# <a name="em_getoleinterface-message"></a>EM \_ GETOLEINTERFACE-Nachricht
 
-Ruft ein [**iricheditole**](/windows/desktop/api/Richole/nn-richole-iricheditole) -Objekt ab, mit dem ein Client auf die Component Object Model (com)-Funktionalität eines Rich-Edit-Steuer Elements zugreifen kann.
+Ruft ein [**IRichEditOle-Objekt**](/windows/desktop/api/Richole/nn-richole-iricheditole) ab, mit dem ein Client auf die COM-Funktionalität (Component Object Model) eines Rich Edit-Steuerelements zugreifen kann.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Ruft ein [**iricheditole**](/windows/desktop/api/Richole/nn-richole-iricheditole
 *wParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet. Er muss NULL sein.
+Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Zeiger auf einen Zeiger, der das [**iricheditole**](/windows/desktop/api/Richole/nn-richole-iricheditole) -Objekt empfängt. Das-Steuerelement ruft vor der Rückgabe die [**adressf**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) -Methode für das-Objekt auf, sodass die aufrufende Anwendung die [**releasemethode**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) aufrufen muss, wenn Sie mit dem-Objekt ausgeführt wird.
+Zeiger auf einen Zeiger, der das [**IRichEditOle-Objekt**](/windows/desktop/api/Richole/nn-richole-iricheditole) empfängt. Das Steuerelement ruft die [**AddRef-Methode**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) für das -Objekt vor der Rückgabe auf, sodass die aufrufende Anwendung die [**Release-Methode**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) aufrufen muss, wenn sie mit dem -Objekt fertig ist.
 
 </dd> </dl>
 
@@ -55,17 +55,17 @@ Wenn der Vorgang fehlschlägt, ist der Rückgabewert 0 (null).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iricheditole**](/windows/desktop/api/Richole/nn-richole-iricheditole)
+[**IRichEditOle**](/windows/desktop/api/Richole/nn-richole-iricheditole)
 </dt> </dl>
 
  

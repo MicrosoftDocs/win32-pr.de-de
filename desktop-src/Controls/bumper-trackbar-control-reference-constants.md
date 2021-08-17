@@ -1,6 +1,6 @@
 ---
-title: Trackbar-Steuerelementkonstanten
-description: Trackbar-Steuerelementkonstanten
+title: Trackbar-Steuerelementkonst constants
+description: Trackbar-Steuerelementkonst constants
 ms.assetid: a1dba5fc-efa4-4901-b639-309398a1725f
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118414947"
 ---
-# <a name="trackbar-control-constants"></a>Trackbar-Steuerelementkonstanten
+# <a name="trackbar-control-constants"></a>Trackbar-Steuerelementkonst constants
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

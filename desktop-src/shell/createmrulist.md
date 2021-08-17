@@ -1,5 +1,5 @@
 ---
-description: Erstellt eine neue MRU-Liste (Most Recently Used).
+description: Erstellt eine neue LISTE der zuletzt verwendeten (MRU).
 title: CreateMRUListW-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Comctl32.dll
 ms.assetid: b2d9e3c7-8151-45ef-9658-bd33a87b4c9c
-ms.openlocfilehash: 34cd3dd9e5b9e62bbdd13b31d95e7205e4427de6
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: e5f97d1f50dae081eac00014415129d8a4c858a0e6e2c3406e1a6c4f6905c71c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109843381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117861397"
 ---
 # <a name="createmrulistw-function"></a>CreateMRUListW-Funktion
 
-Erstellt eine neue MRU-Liste (Most Recently Used).
+Erstellt eine neue LISTE der zuletzt verwendeten (MRU).
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,11 +53,11 @@ Ein Zeiger auf eine [**MRUINFO-Struktur,**](mruinfo.md) die die MRU-Liste defini
 
 Typ: **int**
 
-Gibt ein Handle für die neue MRU-Liste oder 0 (bei einem Fehler) zurück.
+Gibt ein Handle für die neue MRU-Liste oder bei einem Fehler 0 zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist nicht in einem öffentlichen Header oder einer öffentlichen Bibliothek enthalten. Der Zugriff kann über [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) erfolgen oder aus comctl32.dll durch die Ordnungszahl 400 für **CreateMRUListW** extrahiert werden.
+Diese Funktion ist nicht in einem öffentlichen Header oder einer öffentlichen Bibliothek enthalten. Auf sie kann über [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) zugegriffen oder aus comctl32.dll durch ihre Ordnungszahl extrahiert werden, die 400 für **CreateMRUListW ist.**
 
 ## <a name="requirements"></a>Anforderungen
 

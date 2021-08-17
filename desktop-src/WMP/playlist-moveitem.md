@@ -1,11 +1,11 @@
 ---
-title: Playlist. muveitem-Methode
-description: Die Methode "muveitem" ändert den Speicherort eines Elements in der Wiedergabeliste.
+title: Playlist.moveItem-Methode
+description: Die moveItem-Methode ändert den Speicherort eines Elements in der Wiedergabeliste.
 ms.assetid: 82a8de86-4419-48a7-89f8-f7b9084b51d4
 keywords:
-- Windows-Media Player für die Windows-
-- muveitem-Methode, Windows Media Player, Wiedergabelisten Klasse
-- Wiedergabelisten-Klasse, Windows Media Player, Methode "muveitem"
+- moveItem-Windows Media Player
+- moveItem-Methode Windows Media Player , Playlist-Klasse
+- Playlist-Klasse Windows Media Player , moveItem-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 06e2e48b2987af4becd8c07357ff2eecf137f31d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a725ae53e38d1903d31dc47a3362f90c29fb064e3a785b816de0d0b695998aee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117746852"
 ---
-# <a name="playlistmoveitem-method"></a>Playlist. muveitem-Methode
+# <a name="playlistmoveitem-method"></a>Playlist.moveItem-Methode
 
-Die Methode " **muveitem** " ändert den Speicherort eines Elements in der Wiedergabeliste.
+Die **moveItem-Methode** ändert den Speicherort eines Elements in der Wiedergabeliste.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ Playlist.moveItem(
 
 <dl> <dt>
 
-*OldIndex* \[ in\]
+*oldIndex* \[ In\]
 </dt> <dd>
 
-Die **Zahl** (**Long**), die den alten Index enthält.
+**Number** (**long**), die den alten Index enthält.
 
 </dd> <dt>
 
-" *nwindex* \[ " in\]
+*newIndex* \[ In\]
 </dt> <dd>
 
-**Zahl** (**Long**), die den neuen Index enthält.
+**Number** (**long**), die den neuen Index enthält.
 
 </dd> </dl>
 
@@ -61,11 +61,11 @@ Die **Zahl** (**Long**), die den alten Index enthält.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der Bibliothek gespeicherte Wiedergabelisten können sich außerhalb des Steuer Elements ändern. Achten Sie darauf, alle entsprechenden Wiedergabelisten bezogenen Ereignisse zu überwachen und zu verarbeiten, sodass die Reihenfolge der Elemente in der Wiedergabeliste nicht unerwartet geändert wird.
+Wiedergabelisten, die in der Bibliothek gespeichert sind, können sich außerhalb Ihres Steuerelements ändern. Achten Sie darauf, alle entsprechenden wiedergabelistenbezogenen Ereignisse zu überwachen und zu behandeln, damit sich die Reihenfolge der Elemente in der Wiedergabeliste nicht unerwartet ändert.
 
-Um diese Methode verwenden zu können, ist der vollständige Zugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist Vollzugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,22 +73,22 @@ Um diese Methode verwenden zu können, ist der vollständige Zugriff auf die Bib
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Objekt**](playlist-object.md)
+[**Wiedergabelistenobjekt**](playlist-object.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

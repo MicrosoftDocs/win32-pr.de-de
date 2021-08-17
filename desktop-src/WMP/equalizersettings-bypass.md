@@ -1,6 +1,6 @@
 ---
 title: EQUALIZERSETTINGS.bypass
-description: Das Bypass-Attribut gibt einen Wert an, der angibt, ob der Equalizerfilter im Filterdiagramm umgangen wird, oder ruft einen Wert ab.
+description: Das Bypass-Attribut gibt einen Wert an, der angibt, ob der Equalizer-Filter im Filterdiagramm umgangen wird, oder ruft einen Wert ab.
 ms.assetid: b189a6f1-e0d0-4cfa-9a99-73d3ccd705e0
 keywords:
 - EQUALIZERSETTINGS.bypass Windows Media Player
@@ -21,7 +21,7 @@ ms.locfileid: "117748938"
 ---
 # <a name="equalizersettingsbypass"></a>EQUALIZERSETTINGS.bypass
 
-Das **Bypass-Attribut** gibt einen Wert an, der angibt, ob der Equalizerfilter im Filterdiagramm umgangen wird, oder ruft einen Wert ab.
+Das **Bypass-Attribut** gibt einen Wert an, der angibt, ob der Equalizer-Filter im Filterdiagramm umgangen wird, oder ruft einen Wert ab.
 
 ``` syntax
         elementID.bypass
@@ -29,14 +29,14 @@ Das **Bypass-Attribut** gibt einen Wert an, der angibt, ob der Equalizerfilter i
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
+Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 
 
 | Wert | BESCHREIBUNG                                |
 |-------|--------------------------------------------|
-| true  | Standard. Der Equalizerfilter wird umgangen. |
-| false | Der Equalizerfilter wird verwendet.              |
+| true  | Standard. Der Equalizer-Filter wird umgangen. |
+| false | Der Equalizer-Filter wird verwendet.              |
 
 
 
@@ -44,7 +44,7 @@ Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn dieses Attribut nicht angegeben ist, wird der vorherige Wert beibehalten.
+Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,9 +1,9 @@
 ---
-title: 'Texture2D:: gatherblue (S, float, int2, int2, int2, int2)-Funktion'
-description: 'Gibt die blauen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden. | Texture2D:: gatherblue (S, float, int2, int2, int2, int2)-Funktion'
+title: Texture2D::GatherBlue(S,float,int2,int2,int2,int2)-Funktion
+description: Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden. | Texture2D::GatherBlue(S,float,int2,int2,int2,int2)-Funktion
 ms.assetid: 0FFD3D82-E849-4C19-BEBC-85B9CCA40CA0
 keywords:
-- Gatherblue-Funktion HLSL
+- GatherBlue-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 21f44482d82e8246391389289f0c90ea6c97de9a
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d71f166a6e4ea205a8d2e41579e3907576314ce93aaf14cbc926b86e2cbe09e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118507756"
 ---
-# <a name="gatherbluesfloatint2int2int2int2-function"></a>Gatherblue (S, float, int2, int2, int2, int2)-Funktion
+# <a name="gatherbluesfloatint2int2int2int2-function"></a>GatherBlue(S,float,int2,int2,int2,int2)-Funktion
 
-Gibt die blauen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.
+Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,72 +47,72 @@ TemplateType GatherBlue(
 *S* \[ in\]
 </dt> <dd>
 
-Typ: **samplerstate**
+Typ: **SamplerState**
 
-Der null basierte samplerindex.
+Der nullbasierte Samplerindex.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Die Beispiel Koordinaten (u, v).
+Die Beispielkoordinaten (u,v).
 
 </dd> <dt>
 
-*Offset1* \[ in\]
+*Offset1* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die erste Offset-Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die erste Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset2* \[ in\]
+*Offset2* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die zweite Offset Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die zweite Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset3* \[ in\]
+*Offset3* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die dritte Offset Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die dritte Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset4* \[ in\]
+*Offset4* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die vierte Offset-Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die vierte Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **TemplateType**
+Typ: **TemplateType**
 
-Ein vier komponentenwert, dessen Typ mit dem Vorlagentyp identisch ist.
+Ein Wert mit vier Komponenten, dessen Typ mit dem Vorlagentyp identisch ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Textur Beispiele können für bilineare Interpolationen verwendet werden.
+Die Texturbeispiele können für die bilineare Interpolation verwendet werden.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -124,7 +124,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Gatherblue-Methoden](texture2d-gatherblue.md)
+[GatherBlue-Methoden](texture2d-gatherblue.md)
 </dt> </dl>
 
  

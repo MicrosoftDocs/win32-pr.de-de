@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. splinetension
-description: Das splinetension-Attribut gibt die splinespannung für das Equalizer-Steuerelement an oder ruft diese ab.
+title: EQUALIZERSETTINGS.splineTension
+description: Das splineTension-Attribut gibt die Spline-Vergrenzung für das Equalizer-Steuerelement an oder ruft sie ab.
 ms.assetid: bd208310-eb31-4787-8975-bca921db0aae
 keywords:
-- Fenster "equalizersettings. splinetension" Media Player
+- EQUALIZERSETTINGS.splineTension Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 656e2a42504c87861f713a9e504a85a6727dff32
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0fa964380b669dd05006e2cca7b0877ca0a9d289e4a29c6e2ba17383e6145eac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117748675"
 ---
-# <a name="equalizersettingssplinetension"></a>Equalizersettings. splinetension
+# <a name="equalizersettingssplinetension"></a>EQUALIZERSETTINGS.splineTension
 
-Das **splinetension** -Attribut gibt die splinespannung für das Equalizer-Steuerelement an oder ruft diese ab.
+Das **splineTension-Attribut** gibt die Spline-Vergrenzung für das Equalizer-Steuerelement an oder ruft sie ab.
 
 ``` syntax
         elementID.splineTension
@@ -29,7 +29,7 @@ Das **splinetension** -Attribut gibt die splinespannung für das Equalizer-Steue
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibnummer (**float**) im Bereich von 0,0 (keine Spannung) bis 10,0 (vollständige Spannung) mit dem Standardwert 3,0. 
+Dieses Attribut ist eine  Lese-/Schreibnummer **(float)** im Bereich von 0,0 (keine Ausfälle) bis 10,0 (vollständige Ausfälle) mit einem Standardwert von 3,0.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,14 +41,14 @@ Dieses Attribut ist eine Lese-/schreibnummer (**float**) im Bereich von 0,0 (kei
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> <dt>
 
-[**Equalizersettings. enablesplinetension**](equalizersettings-enablesplinetension.md)
+[**EQUALIZERSETTINGS.enableSplineTension**](equalizersettings-enablesplinetension.md)
 </dt> </dl>
 
  

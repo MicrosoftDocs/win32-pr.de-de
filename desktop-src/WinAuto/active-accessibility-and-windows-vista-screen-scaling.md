@@ -13,7 +13,7 @@ ms.locfileid: "118327060"
 ---
 # <a name="active-accessibility-and-windows-vista-screen-scaling"></a>Active Accessibility und Windows Vista-Bildschirmskalierung
 
-Windows Mit Vista können Benutzer die DPI-Einstellung (Dots-per-Inch) ändern, sodass die meisten Benutzeroberflächenelemente auf dem Bildschirm größer erscheinen. Obwohl dieses Feature seit langem in Microsoft Windows verfügbar war, musste die Skalierung in früheren Versionen von Anwendungen implementiert werden. In Windows Vista führt Desktopfenster-Manager Standardskalierung für alle Anwendungen aus, die ihre eigene Skalierung nicht verarbeiten. Microsoft Active Accessibility Clientanwendungen müssen dieses Feature berücksichtigen.
+Windows Mit Vista können Benutzer die DPI-Einstellung (Dots-per-Inch) ändern, sodass die meisten Benutzeroberflächenelemente auf dem Bildschirm größer erscheinen. Obwohl dieses Feature seit langem in Microsoft Windows verfügbar war, musste die Skalierung in früheren Versionen von Anwendungen implementiert werden. In Windows Vista führt die Desktopfenster-Manager Standardskalierung für alle Anwendungen aus, die ihre eigene Skalierung nicht verarbeiten. Microsoft Active Accessibility Clientanwendungen müssen dieses Feature berücksichtigen.
 
 ## <a name="scaling-in-windows-vista"></a>Skalierung in Windows Vista
 
@@ -39,7 +39,7 @@ Microsoft Active Accessibility verwendet keine logischen Koordinaten. Die folgen
 -   [**IAccessible::accLocation**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acclocation)
 -   [**AccessibleObjectFromPoint**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfrompoint)
 
-Standardmäßig kann eine Microsoft Active Accessibility, die in einer Nicht-96-DPI-Umgebung ausgeführt wird, keine korrekten Ergebnisse aus diesen Aufrufen abrufen. Da sich die Cursorposition beispielsweise in logischen Koordinaten befindet, kann der Client diese Koordinaten nicht einfach an [**AccessibleObjectFromPoint**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfrompoint) übergeben, um das Element unter dem Cursor zu erhalten.
+Standardmäßig kann eine Microsoft Active Accessibility, die in einer Nicht-96-dpi-Umgebung ausgeführt wird, keine richtigen Ergebnisse aus diesen Aufrufen abrufen. Da sich die Cursorposition beispielsweise in logischen Koordinaten befindet, kann der Client diese Koordinaten nicht einfach an [**AccessibleObjectFromPoint**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfrompoint) übergeben, um das Element unter dem Cursor zu erhalten.
 
 Darüber hinaus erstellt eine Anwendung, die ein Fenster außerhalb des Clientbereichs erstellt, z. B. eine Barrierefreiheitsanwendung, die fokussierte Benutzeroberflächenelemente hebt, das Fenster nicht an der richtigen Bildschirmposition, da das Fenster an den logischen Koordinaten platziert wird, nicht an den physischen Koordinaten, die von [**IAccessible::accLocation zurückgegeben**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acclocation)werden.
 

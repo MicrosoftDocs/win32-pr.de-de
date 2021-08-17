@@ -1,54 +1,54 @@
 ---
-title: Kauf Integration für den Typ 2-Online Speicher
-description: Kauf Integration für den Typ 2-Online Speicher
+title: Integration des Kaufs für Onlineshops vom Typ 2
+description: Integration des Kaufs für Onlineshops vom Typ 2
 ms.assetid: aedaa6a0-d559-44b7-9c14-2abf44478b1c
 keywords:
-- Windows Media Player Online Stores, Kauf Integration
-- Online Stores, Kauf Integration
-- Typ 2 Online Stores, Kauf Integration
-- Windows Media Player Online Stores, integrieren von Käufen
-- Online Stores, integrieren von Käufen
-- Typ 2 Online Stores, integrieren von Käufen
-- Windows Media Player, Kauf Integration
-- Windows Media Player, integrieren von Käufen
-- Kauf Integration
+- Windows Media Player Onlineshops,Integration des Kaufs
+- Onlineshops,Integration des Kaufs
+- 'Typ 2: Onlineshops,Integration des Kaufs'
+- Windows Media Player Onlineshops,Integration von Käufen
+- Onlineshops,Integrieren von Käufen
+- 'Typ 2: Onlineshops,Integrieren von Käufen'
+- Windows Media Player,Integration des Kaufs
+- Windows Media Player,Integrieren von Käufen
+- Integration des Kaufs
 - Integrieren von Käufen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d3d8fb56b286b66de12bb59412e7f9077eb398f5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d854ecfd91cd0a887c242ad743874a6ec1a469ebcca3aa788bf57c2c59041d6f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117746694"
 ---
-# <a name="purchase-integration-for-type-2-online-stores"></a>Kauf Integration für den Typ 2-Online Speicher
+# <a name="purchase-integration-for-type-2-online-stores"></a>Integration des Kaufs für Onlineshops vom Typ 2
 
-Wenn Windows Media Player Inhalt digitaler Medien wieder gibt oder der Benutzer die **Suche nach Album Informationen** auswählt, bietet der Player dem Benutzer einen Link, um die CD oder DVD zu kaufen, von der der Inhalt stammt, wenn ein solcher Link verfügbar ist. Wenn der Benutzer auf den Link klickt, ruft Windows Media Player 10 oder höher den aktuellen Musikspeicher auf, um die Kauf Anforderung zu verarbeiten. In diesem Fall navigiert der Player zum ersten Dienstaufgaben Bereich (in Windows Media Player 10) oder der Registerkarte "Online Stores" (in Windows Media Player 11) und zeigt die Webseite an, die vom Attribut " **mediaplayerurl** " des Elements " **buycd** " des serviceInfo-Dokuments angegeben wird. (Die Attribute " **mediacenterurl** " und " **browserurl** " werden auf ähnliche Weise verwendet, um Aufrufe von Windows XP Media Center Edition 2004 und Windows XP Service Pack 2) zu verarbeiten.
+Wenn Windows Media Player Digitale Medieninhalte wieder gibt oder der Benutzer Albuminformationen suchen auswählt, bietet der Player dem Benutzer einen Link zum Kauf der CD oder DVD, von der der Inhalt stammt, wenn ein solcher Link verfügbar ist. Wenn der Benutzer auf den Link klickt, Windows Media Player 10 oder höher aufruft den aktuellen Musikspeicher, um die Kaufanforderung zu verarbeiten. In diesem Fall navigiert der Player zum ersten Dienst-Aufgabenbereich (in Windows Media Player 10) oder zur Registerkarte Onlineshops (in Windows Media Player 11) und zeigt die Webseite an, die durch das **MediaPlayerURL-Attribut** des **BuyCD-Elements** des ServiceInfo-Dokuments angegeben wird. (Die **Attribute MediaCenterURL** und **BrowserURL** werden auf ähnliche Weise verwendet, um Aufrufe von Windows XP Media Center Edition 2004 und Windows XP Service Pack 2) zu verarbeiten.
 
-Windows Media Player Fügt eine Abfrage Zeichenfolge an die URL an, um dem Online Shop Informationen zu den Inhalten bereitzustellen, die der Benutzer erworben hat. Die Abfrage Zeichenfolge enthält Attribute wie " **Title**", " **Album**" und " **Artist**", die der Online Shop zum Ermitteln des richtigen zu verkaufenden Albums verwenden kann. Die Referenz Dokumentation für das **buycd** -Element enthält die komplette Liste der Attribute der Abfrage Zeichenfolge und deren Beschreibungen.
+Windows Media Player fügt eine Abfragezeichenfolge an die URL an, um dem Onlineshop Informationen zu dem Inhalt zur Verfügung zu stellen, den der Benutzer kaufen wollte. Die Abfragezeichenfolge enthält Attribute wie **Title**, **Album** und **Interpret**, die der Onlineshop verwenden kann, um das richtige zu verkaufende Album zu bestimmen. Die Referenzdokumentation für das **BuyCD-Element** enthält die vollständige Liste der Abfragezeichenfolgenattribute und deren Beschreibungen.
 
-## <a name="guidelines-for-the-buycd-page"></a>Richtlinien für die Seite "buycd"
+## <a name="guidelines-for-the-buycd-page"></a>Richtlinien für die BuyCD-Seite
 
-Verwenden Sie beim Erstellen der Webseite für die buycd die folgenden Richtlinien:
+Wenn Sie Ihre BuyCD-Webseite erstellen, befolgen Sie die folgenden Richtlinien:
 
--   Die Seite muss den Online Store, der die Informationen bereitstellt, eindeutig identifizieren. Dies ist möglich, indem Sie Ihr Logo hervorgehoben anzeigen, z. b..
+-   Auf der Seite muss der Onlineshop, der die Informationen enthält, eindeutig identifiziert werden. Sie können dies tun, indem Sie z. B. Ihr Logo an prominenter Stelle anzeigen.
 -   Die Seite muss einen Link zu den Datenschutzbestimmungen Ihres Unternehmens enthalten.
--   Es empfiehlt sich, anfängliche Kauf Informationen bereitzustellen, ohne dass der Benutzer Programme installieren oder sich beim Online Shop anmelden muss.
+-   Es ist am besten, anfängliche Kaufinformationen zu liefern, ohne dass der Benutzer Programme installieren oder sich bei Ihrem Onlineshop anmelden muss.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen zu Typ 2 Online Stores**](about-type-2-online-stores.md)
+[**Informationen zu Onlineshops vom Typ 2**](about-type-2-online-stores.md)
 </dt> <dt>
 
-[**Buycd-Element**](buycd-element.md)
+[**BuyCD-Element**](buycd-element.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
 description: Eine benutzerdefinierte Aktion kann eine Funktion aufrufen, die in einer DLL (Dynamic Link Library) definiert ist, die in C oder C++ geschrieben wurde.
 ms.assetid: 605c7b97-70bd-467a-9438-47b05d8b6b5d
-title: Dynamic-Link Bibliotheken (Windows Installer)
+title: Dynamic-Link-Bibliotheken (Windows Installer)
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 6bcd2548851dcef4dcf08c53f168ec0f6b43ee036a1c250f9f65f072427a19e6
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118378262"
 ---
-# <a name="dynamic-link-libraries-windows-installer"></a>Dynamic-Link Bibliotheken (Windows Installer)
+# <a name="dynamic-link-libraries-windows-installer"></a>Dynamic-Link-Bibliotheken (Windows Installer)
 
 Eine benutzerdefinierte Aktion kann eine Funktion aufrufen, die in einer DLL (Dynamic Link Library) definiert ist, die in C oder C++ geschrieben wurde. Die DLL kann als Datei vorhanden sein, die während der aktuellen Installation installiert wurde, oder als temporärer binärer Datenstrom, der aus der [Binärtabelle](binary-table.md) der Installationsdatenbank stammt.
 

@@ -1,36 +1,36 @@
 ---
-description: Die mfplay-API ist veraltet.
+description: Die MFPlay-API ist veraltet.
 ms.assetid: 6f143c51-ec46-46d4-9a1e-b04fcc0d8bea
-title: MF Play
+title: MFPlay
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bc0231041afbb32025636ccb5c4738c3cce4cf0b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6f840888cd0b9f4941531664f811092b51a93eea69eff146afa93d80998a4d45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117871323"
 ---
-# <a name="mfplay"></a>MF Play
+# <a name="mfplay"></a>MFPlay
 
-\[MF Play ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. \]
+\[MFPlay ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. \]
 
-MF Play ist eine Microsoft Media Foundation-API zum Erstellen von Medienwiedergabe Anwendungen in C++.
+MFPlay ist eine Microsoft Media Foundation-API zum Erstellen von Medienwiedergabeanwendungen in C++.
 
 In diesem Abschnitt werden die folgenden Themen behandelt:
 
--   [Ersten Einstieg in MF Play](getting-started-with-mfplay.md)
--   [MF Play-Tutorial: Video Wiedergabe](mfplay-tutorial--video-playback.md)
+-   [Erste Schritte mit MFPlay](getting-started-with-mfplay.md)
+-   [MFPlay-Tutorial: Videowiedergabe](mfplay-tutorial--video-playback.md)
 -   [Verwalten der Audiositzung](managing-the-audio-session.md)
--   [Hinzufügen von Audio-oder Video Effekten](how-to-add-audio-or-video-effects.md)
--   [So erhalten Sie die Wiedergabedauer](how-to-get-the-playback-duration.md)
--   [Wiedergeben eines Datei Clips](how-to-play-a-file-clip.md)
--   [Wiedergabe einer Sequenz von Dateien](how-to-play-a-sequence-of-files.md)
+-   [Hinzufügen von Audio- oder Videoeffekten](how-to-add-audio-or-video-effects.md)
+-   [Abrufen der Wiedergabedauer](how-to-get-the-playback-duration.md)
+-   [Wiedergeben eines Dateiclips](how-to-play-a-file-clip.md)
+-   [Wiedergeben einer Sequenz von Dateien](how-to-play-a-sequence-of-files.md)
 -   [Suchen während der Wiedergabe](how-to-seek-during-playback.md)
 
 ## <a name="requirements"></a>Anforderungen
 
-MF Play erfordert Windows 7.
+MFPlay erfordert Windows 7.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

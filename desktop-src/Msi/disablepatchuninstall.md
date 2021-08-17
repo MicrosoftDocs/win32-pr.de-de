@@ -1,5 +1,5 @@
 ---
-description: Wenn diese Systemrichtlinie pro Computer auf 1 festgelegt ist, können Patches nicht von einem Benutzer oder Administrator vom Computer entfernt werden.
+description: Wenn diese computerspezifische Systemrichtlinie auf 1 festgelegt ist, können Patches nicht von einem Benutzer oder Administrator vom Computer entfernt werden.
 ms.assetid: e964cb2b-ceaa-4122-bf54-cf1eeab4bc25
 title: DisablePatchUninstall
 ms.topic: article
@@ -13,11 +13,11 @@ ms.locfileid: "118378568"
 ---
 # <a name="disablepatchuninstall"></a>DisablePatchUninstall
 
-Wenn diese [Systemrichtlinie](system-policy.md) pro Computer auf 1 festgelegt ist, können Patches nicht von einem Benutzer oder Administrator vom Computer entfernt werden. Der Windows Installer kann weiterhin einen Patch entfernen, der nicht mehr auf ein Produkt anwendbar ist. Wenn diese Richtlinie nicht festgelegt ist, kann ein Benutzer nur dann einen Patch vom Computer entfernen, wenn dem Benutzer Berechtigungen zum Entfernen des Patches erteilt wurden. Dies kann davon abhängen, ob der Benutzer Administrator ist, ob [DisableMsi-](disablemsi.md) und [AlwaysInstallElevated-Richtlinieneinstellungen](alwaysinstallelevated.md) festgelegt sind und ob der Patch in einem pro Benutzer verwalteten, nicht verwalteten benutzerbezogenen oder computerbezogenen Kontext installiert wurde.
+Wenn diese computerspezifische [Systemrichtlinie](system-policy.md) auf 1 festgelegt ist, können Patches nicht von einem Benutzer oder Administrator vom Computer entfernt werden. Der Windows Installer kann weiterhin einen Patch entfernen, der nicht mehr auf ein Produkt anwendbar ist. Wenn diese Richtlinie nicht festgelegt ist, kann ein Benutzer einen Patch nur dann vom Computer entfernen, wenn dem Benutzer Berechtigungen zum Entfernen des Patches erteilt wurden. Dies kann davon abhängen, ob der Benutzer Administrator ist, ob die Richtlinieneinstellungen [DisableMsi](disablemsi.md) und [AlwaysInstallElevated](alwaysinstallelevated.md) festgelegt sind und ob der Patch in einem benutzerspezifischen, benutzerspezifischen, nicht verwalteten oder computerspezifischen Kontext installiert wurde.
 
 ## <a name="registry-key"></a>Registrierungsschlüssel
 
-**HKEY \_ Local \_ MACHINE** \\ **Software** \\ **Policies** \\ **Microsoft** \\ **Windows** \\ **Installer**
+**HKEY \_ LOCAL \_** \\ **MACHINE-Softwarerichtlinien** \\  \\ **Microsoft** \\ **Windows** \\ **Installer**
 
 ## <a name="data-type"></a>Datentyp
 

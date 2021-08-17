@@ -1,9 +1,9 @@
 ---
-title: CBEM_GETIMAGELIST Meldung (kommstrg. h)
+title: CBEM_GETIMAGELIST (Commctrl.h)
 description: Ruft das Handle für eine Bildliste ab, die einem ComboBoxEx-Steuerelement zugewiesen ist.
 ms.assetid: d577f920-b8f7-4d51-9507-765b7f925408
 keywords:
-- Windows-Steuerelemente für CBEM_GETIMAGELIST Meldung
+- CBEM_GETIMAGELIST meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d143b8483fb5fb97ebd65fa2a98640089f6d548
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2564739a1904f93c9b1837a1afce2ae73645675ce04818fc9e76ea2ee38946f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339363"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118414080"
 ---
-# <a name="cbem_getimagelist-message"></a>CBEM \_ GetImageList-Meldung
+# <a name="cbem_getimagelist-message"></a>CBEM \_ GETIMAGELIST-Nachricht
 
 Ruft das Handle für eine Bildliste ab, die einem ComboBoxEx-Steuerelement zugewiesen ist.
 
@@ -37,7 +37,7 @@ Ruft das Handle für eine Bildliste ab, die einem ComboBoxEx-Steuerelement zugew
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für die Bildliste zurück, die dem Steuerelement bei erfolgreicher Zuweisung zugewiesen ist, andernfalls **null** .
+Gibt das Handle für die Bildliste zurück, die dem Steuerelement bei Erfolg zugewiesen ist, **andernfalls NULL.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt das Handle für die Bildliste zurück, die dem Steuerelement bei erfolgreic
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

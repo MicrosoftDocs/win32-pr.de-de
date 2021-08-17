@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: c7bef8671b38ec2e8208a6de0ec7542cf28ffa44
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1ef71912dd5c8efeb25f2ad30dd9746b1cb493aff2aa28dd2008ef764a1135ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117731298"
 ---
 # <a name="d3dxquaternionsquad-function-d3dx9mathh"></a>D3DXQuaternionSquad-Funktion (D3dx9math.h)
 
@@ -103,11 +103,11 @@ Parameter, der angibt, wie weit zwischen den Quaternionen interpoliert werden so
 
 Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
-Zeiger auf eine [**D3DXQUATERNION-Struktur,**](d3dxquaternion.md) die das Ergebnis der sphärischen Quadrangleinterpolation ist.
+Zeiger auf eine [**D3DXQUATERNION-Struktur,**](d3dxquaternion.md) die das Ergebnis der pherischen Quadrangleinterpolation ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion verwendet die folgende Sequenz von sphärischen linearen Interpolationsvorgängen:
+Diese Funktion verwendet die folgende Sequenz von pherischen linearen Interpolationsvorgängen:
 
 
 ```
@@ -116,17 +116,17 @@ Slerp(Slerp(pQ1, pC, t), Slerp(pA, pB, t), 2t(1 - t))
 
 
 
-Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXQuaternionSquad-Funktion** als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXQuaternionSquad-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
-Ein Beispiel für die Interpolation zwischen Quaternionen finden Sie im SkinnedMesh-Beispiel. Sie erhalten dieses Beispiel und erfahren mehr über das DirectX SDK. Informationen zum DirectX SDK finden Sie unter [Wo befindet sich das DirectX SDK?](../directx-sdk--august-2009-.md).
+Ein Beispiel für die Interpolation zwischen Quaternionen finden Sie im SkinnedMesh-Beispiel. Sie können dieses Beispiel erhalten und sich über das DirectX SDK darüber informieren. Informationen zum DirectX SDK finden Sie unter [Wo ist das DirectX SDK?](../directx-sdk--august-2009-.md).
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für alle Quaternioneingaben, die nicht bereits normalisiert sind.
+Verwenden [**Sie D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für alle Quaternioneingaben, die noch nicht normalisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

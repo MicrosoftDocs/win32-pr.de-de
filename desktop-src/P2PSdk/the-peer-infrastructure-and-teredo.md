@@ -1,19 +1,19 @@
 ---
-description: Benutzer können den Status der Teredo-Schnittstelle über die Eingabeaufforderung überprüfen, indem Sie Netsh Interface Teredo Show State eingeben und die Ausgabe untersuchen.
+description: Ein Benutzer kann den Status der Teredo-Schnittstelle über die Eingabeaufforderung überprüfen, indem er netsh interface teredo show state eintippen und die Ausgabe untersuchen.
 ms.assetid: b6ac1708-fb8a-449b-b30f-c889688a4bac
-title: Die Peer Infrastruktur und Teredo
+title: Peerinfrastruktur und Teredo
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2550d8da46339205de60c4a537d03c10940da4b0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 18dfa3fe075d0829358849b3783272aac74e60545c1e58e1d9bf1663738e3721
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104529120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117794237"
 ---
-# <a name="the-peer-infrastructure-and-teredo"></a>Die Peer Infrastruktur und Teredo
+# <a name="the-peer-infrastructure-and-teredo"></a>Peerinfrastruktur und Teredo
 
-Benutzer können den Status der [Teredo](https://msdn.microsoft.com/library/ms819742.aspx) -Schnittstelle über die Eingabeaufforderung überprüfen, indem Sie **Netsh Interface Teredo Show State** eingeben und die Ausgabe untersuchen. Wenn der Status "Offline" lautet, ist Teredo nicht aktiv, wodurch verhindert wird, dass der Benutzer über seine Teredo-Adressen eine Verbindung mit anderen Benutzern herstellt. Möglicherweise ist Teredo offline, da die Firewall deaktiviert ist oder [IPv6](/previous-versions/windows/embedded/ms898970(v=msdn.10))nicht unterstützt.
+Ein Benutzer kann den Status der [Teredo-Schnittstelle](https://msdn.microsoft.com/library/ms819742.aspx) über die Eingabeaufforderung überprüfen, indem er **netsh interface teredo show state** eintippen und die Ausgabe untersuchen. Wenn der Status "offline" ist, ist Teredo nicht aktiv, was verhindert, dass der Benutzer über seine Teredo-Adressen eine Verbindung mit anderen Benutzern herstellen kann. Es ist möglich, dass Teredo offline ist, da Ihre Firewall deaktiviert ist oder [IPv6 nicht unterstützt.](/previous-versions/windows/embedded/ms898970(v=msdn.10))
 
  
 

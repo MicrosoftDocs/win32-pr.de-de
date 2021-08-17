@@ -13,7 +13,7 @@ ms.locfileid: "117751142"
 ---
 # <a name="whats-new-in-vss-in-windows-vista"></a>Neues in VSS in Windows Vista
 
-Windows Vista führt die folgenden Änderungen an der Volumeschattenkopie-Dienst ein.
+Windows Vista führt die folgenden Änderungen an der Volumeschattenkopie-Dienst.
 
 Beachten Sie, dass alle Änderungen für Windows Vista auch für Windows Server 2008 und Windows Vista mit Service Pack 1 (SP1) gelten.
 
@@ -27,7 +27,7 @@ Beachten Sie, dass alle Änderungen für Windows Vista auch für Windows Server 
 
 [**IVssDifferentialSoftwareSnapshotMgmt2**](/windows/desktop/api/VsMgmt/nn-vsmgmt-ivssdifferentialsoftwaresnapshotmgmt2)
 
-[**IVssExwriterMetadataEx2**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssexaminewritermetadataex2)
+[**IVssExerklärenWriterMetadataEx2**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssexaminewritermetadataex2)
 
 ## <a name="new-vss-classes"></a>Neue VSS-Klassen
 
@@ -35,7 +35,7 @@ Beachten Sie, dass alle Änderungen für Windows Vista auch für Windows Server 
 
 ## <a name="new-vss-enumerations"></a>Neue VSS-Enumerationen
 
-[**VSS \_ \_ ROLLFORWARD-TYP**](/windows/desktop/api/Vss/ne-vss-vss_rollforward_type)
+[**VSS \_ ROLLFORWARD-TYP \_**](/windows/desktop/api/Vss/ne-vss-vss_rollforward_type)
 
 ## <a name="existing-vss-enumeration-modifications"></a>Vorhandene VSS-Enumerationsänderungen
 
@@ -46,10 +46,10 @@ Beachten Sie, dass alle Änderungen für Windows Vista auch für Windows Server 
 
 <dl> <dt>
 
-<span id="Added_values_"></span><span id="added_values_"></span><span id="ADDED_VALUES_"></span>Hinzugefügte Werte:
+<span id="Added_values_"></span><span id="added_values_"></span><span id="ADDED_VALUES_"></span>Werte hinzugefügt:
 </dt> <dd>
 
-\_AUTORITATIVE \_ WIEDERHERSTELLUNG VON VSS BS \_
+AUTORISIERENDE VSS \_ \_ \_ BS-WIEDERHERSTELLUNG
 
 VSS \_ BS \_ INDEPENDENT \_ SYSTEM \_ STATE
 
@@ -66,7 +66,7 @@ VSS \_ BS \_ ROLLFORWARD \_ RESTORE
 
 <dl> <dt>
 
-<span id="Added_values_"></span><span id="added_values_"></span><span id="ADDED_VALUES_"></span>Hinzugefügte Werte:
+<span id="Added_values_"></span><span id="added_values_"></span><span id="ADDED_VALUES_"></span>Werte hinzugefügt:
 </dt> <dd>
 
 VSS \_ CF \_ NOT \_ SYSTEM \_ STATE
@@ -80,25 +80,25 @@ VSS \_ CF \_ NOT \_ SYSTEM \_ STATE
 
 <dl> <dt>
 
-<span id="Added_values_"></span><span id="added_values_"></span><span id="ADDED_VALUES_"></span>Hinzugefügte Werte:
+<span id="Added_values_"></span><span id="added_values_"></span><span id="ADDED_VALUES_"></span>Werte hinzugefügt:
 </dt> <dd>
 
 VSS \_ VOLSNAP \_ ATTR \_ NO \_ AUTORECOVERY
 
-VSS \_ VOLSNAP \_ ATTR \_ NOT \_ TRANSACTED
+VSS \_ VOLSNAP \_ ATTR \_ NICHT \_ TRANSAKTIONIERT
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="vss-event-tracing-and-logging"></a>VSS-Ereignisablaufverfolgung und -protokollierung
 
--   Die VSS-Ablaufverfolgungsdatei kann jetzt auf jedem lokalen Volume gespeichert werden. In Versionen von Windows vor Windows Vista konnte sich die VSS-Ablaufverfolgungsdatei nicht auf einem Volume befinden, das sich im Schattenkopiesatz befand.
--   Viele Ereignisprotokolleinträge wurden umgeschrieben, um sie übersichtlicher zu machen.
+-   Die VSS-Ablaufverfolgungsdatei kann sich jetzt auf jedem lokalen Volume befinden. In Versionen von Windows vor Windows Vista konnte sich die VSS-Ablaufverfolgungsdatei nicht auf einem Volume befinden, das sich im Schattenkopiesatz befand.
+-   Viele Ereignisprotokolleinträge wurden umformuliert, um sie übersichtlicher zu machen.
 -   Alle VSS-Ereignisprotokolleinträge enthalten jetzt Kontextinformationen.
 
 ## <a name="vss-error-reporting"></a>VSS-Fehlerberichterstattung
 
--   Beschreibungen aller VSS-Fehlercodes können jetzt durch Aufrufen der [**FormatMessage-Funktion**](/windows/win32/api/winbase/nf-winbase-formatmessage) mit dem \_ im \_ \_ *dwFlags-Parameter* angegebenen FORMAT MESSAGE FROM HMODULE-Flag abgerufen werden.
--   Die VSS-Fehlermeldungen sind in vsstrace.dll enthalten. Ein Handle für dieses Modul muss im *lpSource-Parameter* angegeben werden.
+-   Beschreibungen aller VSS-Fehlercodes können jetzt abgerufen werden, indem die [**FormatMessage-Funktion**](/windows/win32/api/winbase/nf-winbase-formatmessage) mit dem im dwFlags-Parameter angegebenen FORMAT \_ MESSAGE FROM \_ \_ HMODULE-Flag *aufgerufen* wird.
+-   Die VSS-Fehlermeldungen sind in der vsstrace.dll. Ein Handle für dieses Modul muss im *lpSource-Parameter angegeben* werden.
 
 ## <a name="excluding-files-from-shadow-copies"></a>Ausschließen von Dateien aus Schattenkopien
 
@@ -106,7 +106,7 @@ Anwendungen oder Dienste können den Registrierungsschlüssel FilesNotToSnapshot
 
 ## <a name="backup-and-restore-application-compatibility"></a>Sicherungs- und Wiederherstellungsanwendungskompatibilität
 
-Entwickler von Sicherungs- und Wiederherstellungsanwendungen müssen bestimmte neue Features in Windows Vista und Windows Server 2008 kennen. Eine Prüfliste für die Anwendungskompatibilität finden Sie unter [Anwendungskompatibilität für Sicherung und Wiederherstellung.](application-compatibility-for-backup-and-restore.md)
+Entwickler von Sicherungs- und Wiederherstellungsanwendungen müssen bestimmte neue Features in Windows Vista und Windows Server 2008 kennen. Eine Prüfliste für die Anwendungskompatibilität finden Sie [unter Anwendungskompatibilität für Sicherung und Wiederherstellung.](application-compatibility-for-backup-and-restore.md)
 
  
 

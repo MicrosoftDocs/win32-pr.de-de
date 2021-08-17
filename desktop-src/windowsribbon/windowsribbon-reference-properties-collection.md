@@ -50,7 +50,7 @@ Referenzdokumentation zu Eigenschaftsschlüsseln für auflistungsbasierte Steuer
 [Katalog im Menüband](windowsribbon-controls-inribbongallery.md)
 </dt> <dt>
 
-[Split Button Gallery](windowsribbon-controls-splitbuttongallery.md)
+[Katalog mit geteilten Schaltflächen](windowsribbon-controls-splitbuttongallery.md)
 </dt> <dt>
 
 [Katalogbeispiel](windowsribbon-gallerysample.md)

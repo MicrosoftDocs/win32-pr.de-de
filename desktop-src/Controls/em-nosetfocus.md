@@ -1,9 +1,9 @@
 ---
-title: EM_NOSETFOCUS Meldung (kommstrg. h)
-description: Verhindert, dass ein einzeilige Bearbeitungs Steuerelement den Tastaturfokus erhält. Sie können diese Nachricht explizit oder mithilfe des " \_ nosetfocus"-Makros bearbeiten senden.
+title: EM_NOSETFOCUS (Commctrl.h)
+description: Verhindert, dass ein einzeilenbasiertes Bearbeitungssteuer steuerelement den Tastaturfokus erhält. Sie können diese Nachricht explizit oder mithilfe des Makros \_ Edit NoSetFocus senden.
 ms.assetid: aeb5ed6b-7d4f-4c0d-a172-6cee7cab959c
 keywords:
-- Windows-Steuerelemente für EM_NOSETFOCUS Meldung
+- EM_NOSETFOCUS der Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b82830cda3402d2089d3421debaa7c4dbf13de5d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 02ac35a30ff3deac7e9d6d227a6e8c403e6096e272ea89067dd817add9b2426e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105104"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117831193"
 ---
-# <a name="em_nosetfocus-message"></a>EM \_ nosetfocus-Nachricht
+# <a name="em_nosetfocus-message"></a>EM \_ NOSETFOCUS-Meldung
 
-\[Zur internen Verwendung vorgesehen. wird nicht für die Verwendung in Anwendungen empfohlen. Diese Meldung wird möglicherweise in zukünftigen Versionen von Windows nicht mehr unterstützt.\]
+\[Für die interne Verwendung vorgesehen; wird nicht für die Verwendung in Anwendungen empfohlen. Diese Meldung wird in zukünftigen Versionen des -Windows.\]
 
-Verhindert, dass ein einzeilige Bearbeitungs Steuerelement den Tastaturfokus erhält. Sie können diese Nachricht explizit oder mithilfe des " [**\_ nosetfocus**](/windows/desktop/api/Commctrl/nf-commctrl-edit_nosetfocus) "-Makros bearbeiten senden.
+Verhindert, dass ein einzeilenbasiertes Bearbeitungssteuer steuerelement den Tastaturfokus erhält. Sie können diese Nachricht explizit oder mithilfe des Makros [**\_ Edit NoSetFocus**](/windows/desktop/api/Commctrl/nf-commctrl-edit_nosetfocus) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -51,13 +51,13 @@ Der Rückgabewert wird nicht verwendet.
 
 ## <a name="security-considerations"></a>Überlegungen zur Sicherheit
 
-Die Verwendung dieser Nachricht kann die Sicherheit des Programms beeinträchtigen.
+Die Verwendung dieser Meldung kann die Sicherheit Ihres Programms gefährden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird ignoriert, wenn das Bearbeitungs Steuerelement kein einzeilige Bearbeitungs Steuerelement ist.
+Diese Meldung wird ignoriert, wenn das Bearbeitungssteuer steuerelement kein einzeilenbasiertes Bearbeitungssteuer steuerelement ist.
 
-Nachdem diese Nachricht gesendet wurde, ist der Effekt permanent.
+Nachdem diese Nachricht gesendet wurde, ist die Auswirkung dauerhaft.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,23 +65,23 @@ Nachdem diese Nachricht gesendet wurde, ist der Effekt permanent.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**\_Nosetfocus bearbeiten**](/windows/desktop/api/Commctrl/nf-commctrl-edit_nosetfocus)
+[**Bearbeiten \_ von NoSetFocus**](/windows/desktop/api/Commctrl/nf-commctrl-edit_nosetfocus)
 </dt> <dt>
 
-[**EM- \_ Fokus**](em-takefocus.md)
+[**EM \_ TAKEFOCUS**](em-takefocus.md)
 </dt> </dl>
 
  

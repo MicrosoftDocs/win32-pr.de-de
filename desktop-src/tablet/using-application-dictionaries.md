@@ -1,33 +1,33 @@
 ---
-description: Standardmäßig verwendet die Erkennung ein System Wörterbuch, das alle häufig geschriebenen Wörter in einer Sprache enthält.
+description: Standardmäßig verwendet die Recognizer ein Systemwörterbuch, das alle häufig geschriebenen Wörter in einer Sprache enthält.
 ms.assetid: 2ddf04dd-613b-4570-9474-0e33208c4012
-title: Anwendungs Wörterbücher verwenden
+title: Verwenden von Anwendungswörterbüchern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74dfda443a688af9dfcec44a81f0e5ed2d50846c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2c83013f704fe28b5754ab89fd95ed730e16d1cda5ab257d4fb411d0e7293347
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118449232"
 ---
-# <a name="using-application-dictionaries"></a>Anwendungs Wörterbücher verwenden
+# <a name="using-application-dictionaries"></a>Verwenden von Anwendungswörterbüchern
 
-Standardmäßig verwendet die Erkennung ein System Wörterbuch, das alle häufig geschriebenen Wörter in einer Sprache enthält. Außerdem verfügt die Erkennung über ein Benutzerwörterbuch, das Wörter enthält, die der Benutzer dem Wörterbuch hinzugefügt hat. Benutzer fügen dem Benutzerwörterbuch über den Tablet PC-Eingabebereich ein Wort hinzu, indem Sie Folgendes auswählen:
+Standardmäßig verwendet die Recognizer ein Systemwörterbuch, das alle häufig geschriebenen Wörter in einer Sprache enthält. Darüber hinaus verfügt die -Erkannt über ein Benutzerwörterbuch, das Wörter enthält, die der Benutzer dem Wörterbuch hinzugefügt hat. Benutzer fügen dem Benutzerwörterbuch über den Eingabebereich des Tablet-PCs ein Wort hinzu, und klicken dabei auf die folgenden Auswahlen:
 
--   Die Alternative Liste (beim Schreiben).
--   Das Sprach Tools-Menü (bei der Sprache).
+-   Die alternative Liste (beim Schreiben).
+-   Das Menü "Sprachtools" (beim Sprechen).
 
-Wenn Sie eine Anwendung entwerfen, in die Sie erwarten, dass der Benutzer Wörter schreibt, die nicht im System Wörterbuch oder im Benutzerwörterbuch gefunden werden, erstellen Sie ein Anwendungs Wörterbuch. Ein Anwendungs Wörterbuch verbessert die Erkennungsgenauigkeit weiter, indem dem Erkennungs Modul eine zusätzliche angepasste Liste von Wörtern bereitgestellt wird, die wahrscheinlich als Handschrift in eine Anwendung eingegeben werden.
+Wenn Sie eine Anwendung entwerfen, in die Sie erwarten, dass der Benutzer Wörter schreibt, die weder im Systemverzeichnis noch im Benutzerwörterbuch gefunden werden, erstellen Sie ein Anwendungswörterbuch. Ein Anwendungswörterbuch verbessert die Erkennungsgenauigkeit weiter, indem es der Erkennung eine zusätzliche benutzerdefinierte Liste von Wörtern zur Verfügung stellt, die wahrscheinlich als Handschrift in eine Anwendung eingegeben werden.
 
-Sie erstellen ein Anwendungs Wörterbuch mit dem [**WordList**](inkwordlist-class.md) -Objekt. Das resultierende Anwendungs Wörterbuch erhöht die Erkennungsgenauigkeit, indem der Erkennungs Modul eine Liste erwarteter Wörter bereitgestellt wird. Beispielsweise erhöht ein Anwendungs Wörterbuch, das die medizinische Terminologie enthält, die Erkennungsgenauigkeit innerhalb einer Anwendung, die für die medizinische Branche entwickelt wurde, in die die Begriffe wahrscheinlich geschrieben werden.
+Sie erstellen ein Anwendungswörterbuch mithilfe des [**WordList-Objekts.**](inkwordlist-class.md) Das nachfolgende Anwendungswörterbuch erhöht die Erkennungsgenauigkeit, indem es der Erkennung eine Liste der erwarteten Wörter zur Verfügung stellt. Beispielsweise erhöht ein Anwendungswörterbuch, das medizinische Terminologie enthält, die Erkennungsgenauigkeit innerhalb einer Anwendung, die für die medizinische Branche entwickelt wurde, in die die Begriffe wahrscheinlich geschrieben werden.
 
-Ein weiteres Beispiel: Wenn Sie ein Formular für jemanden zum Sortieren von Musikinstrumenten entwerfen, erstellen Sie ein [**WordList**](inkwordlist-class.md) -Objekt, das die Namen der am häufigsten erstellten Instrumentations Hersteller enthält. Legen Sie die [**WordList**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) -Eigenschaft des [**erkenzercontext**](inkrecognizercontext-class.md) -Objekts auf das von Ihnen erstellte **WordList** -Objekt fest. Diese Liste von Wörtern wird dann vom **erkenzercontext** -Objekt an die Erkennung weitergegeben. Das Anwendungs Wörterbuch erhöht die Erkennungsgenauigkeit, wenn diese Namen in einem Feld in der Anwendung geschrieben werden.
+Ein weiteres Beispiel: Wenn Sie ein Formular entwerfen, in dem jemand Musikinstrument bestellen kann, erstellen Sie ein [**WordList-Objekt,**](inkwordlist-class.md) das die Namen der gängigsten Instrumenthersteller enthält. Legen Sie [**die WordList-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) des [**RecognizerContext-Objekts**](inkrecognizercontext-class.md) auf das **wordList-Objekt** fest, das Sie erstellt haben. Diese Liste von Wörtern wird dann vom RecognizerContext-Objekt an die **Recognizer-Klasse** übergeben. Das Anwendungswörterbuch erhöht die Erkennungsgenauigkeit, wenn diese Namen in ein Feld in der Anwendung geschrieben werden.
 
-In den folgenden Themen wird die Verwendung von Anwendungs Wörterbüchern beschrieben.
+In den folgenden Themen wird die Verwendung von Anwendungswörterbüchern beschrieben.
 
--   [Grundlegendes zu Wortlisten, Erkennungs Kontext und Faktoiden](understanding-wordlists--the-recognizercontext--and-factoids.md)
--   [Verwenden von Anwendungs Wörterbüchern mit den Tablet PC Platform-APIs](using-application-dictionaries-with-the-tablet-pc-platform-apis.md)
+-   [Grundlegendes zu Wortlisten, Kontext der Wiedererkennung und Factoids](understanding-wordlists--the-recognizercontext--and-factoids.md)
+-   [Verwenden von Anwendungswörterbüchern mit den Plattform-APIs für Tablet-PCs](using-application-dictionaries-with-the-tablet-pc-platform-apis.md)
 -   [Erstellen benutzerdefinierter Wörterbücher für die Handschrifterkennung](creating-custom-dictionaries-for-handwriting-recognition-in-windows-7-and-windows-server-2008-r2.md)
 
  

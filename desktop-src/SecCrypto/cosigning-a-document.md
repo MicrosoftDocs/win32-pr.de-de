@@ -1,32 +1,32 @@
 ---
-description: Ein Dokument kann von mehreren Signatur Bezeichnerzeichen signiert werden.
+description: Ein Dokument kann von mehr als einem Signator signiert werden.
 ms.assetid: f81cbf7b-317d-4fab-9b30-88b6c6576db8
 title: Cosignieren eines Dokuments
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aa06cbbc95dc0fe558c6e704bd18102e80221dbc
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: eb384ef47001f1df85810ac37595988da96a356ff3b36b1b140d1a6f54d0d698
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106370360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117769385"
 ---
 # <a name="cosigning-a-document"></a>Cosignieren eines Dokuments
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfunktionen zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfeatures zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
 
-Ein Dokument kann von mehreren Signatur Bezeichnerzeichen signiert werden. Dies ist der Fall, wenn zwei oder mehr Parteien einen Vertrag oder einen Spesen Bericht signieren. Im folgenden Beispiel wird ein Dokument, das bereits signiert wurde, von einem zweiten Signatur Geber empfangen. Dieser Signatur Geber verwendet die [**cosign**](signeddata-cosign.md) -Methode, um dem Dokument eine zusätzliche Signatur anzufügen.
+Ein Dokument kann von mehr als einem Signator signiert werden. Dies geschieht beispielsweise, wenn zwei oder mehr Parteien einen Vertrag oder eine Spesenabrechnung unterzeichnen. Im folgenden Beispiel wird ein bereits signiertes Dokument von einem zweiten Signator empfangen. Dieser Signaturer verwendet die [**CoSign-Methode,**](signeddata-cosign.md) um dem Dokument eine zusätzliche Signatur anfügen.
 
-Wenn ein CAPICOM-Fehler auftritt, wird in der **Err. Number** -Eigenschaft ein negativer Wert zurückgegeben. Weitere Informationen zu CAPICOM-Fehlercodes finden Sie unter [**CAPICOM- \_ Fehler \_ Code**](capicom-error-code.md). Wenn der Fehlercode in der **Err. Number** -Eigenschaft ein positiver Wert ist, handelt es sich bei dem Fehler um einen Windows-Fehler. Informationen zu Windows-Fehlercodes finden Sie unter Winerror. h.
+Wenn ein CAPICOM-Fehler auftritt, wird in der **Err.Number-Eigenschaft** ein negativer Wert zurückgegeben. Weitere Informationen zu CAPICOM-Fehlercodes finden Sie unter [**CAPICOM \_ ERROR \_ CODE**](capicom-error-code.md). Wenn der Fehlercode in der **Err.Number-Eigenschaft** ein positiver Wert ist, ist der Fehler ein Windows Fehler. Informationen zu Windows Fehlercodes finden Sie unter Winerror.h.
 
 > [!Note]
-> Für das cosignieren eines Dokuments ist es auch erforderlich, dass der kosigner über ein verfügbares [*Zertifikat*](../secgloss/c-gly.md) mit einem [*privaten Schlüssel*](../secgloss/p-gly.md) zum Erstellen der Signatur verfügt. Wenn ein Signatur Geber im-Befehl der [**Sign**](signeddata-sign.md) -Methode nicht angegeben ist und kein Zertifikat im CAPICOM- \_ \_ Speicher mit einem zugeordneten privaten Schlüssel vorhanden ist, schlägt die Methode fehl. Wenn in CAPICOM \_ mein \_ Speicher mit einem zugeordneten privaten Schlüssel nur ein Zertifikat vorhanden ist, werden dieser Schlüssel und dieses Zertifikat verwendet. Wenn mehrere verwendbare Zertifikate vorhanden sind, wird eine Eingabeaufforderung angezeigt, die es dem Benutzer ermöglicht, das gewünschte Zertifikat auszuwählen.
+> Das Cosignieren eines Dokuments erfordert auch, [](../secgloss/c-gly.md) dass der Cosigner über ein verfügbares Zertifikat mit einem [*privaten*](../secgloss/p-gly.md) Schlüssel zum Erstellen der Signatur verfügen muss. Wenn ein Signator im Aufruf der [**Sign-Methode**](signeddata-sign.md) nicht angegeben ist und kein Zertifikat in CAPICOM MY STORE mit einem zugeordneten privaten Schlüssel verfügbar ist, schlägt die \_ Methode \_ fehl. Wenn es in CAPICOM MY STORE nur ein Zertifikat mit einem zugeordneten privaten Schlüssel gibt, werden dieser Schlüssel \_ \_ und das Zertifikat verwendet. Wenn es mehrere nutzbare Zertifikate gibt, wird eine Eingabeaufforderung angezeigt, damit der Benutzer das gewünschte Zertifikat auswählen kann.
 > 
-> Wenn die [**cosign**](signeddata-cosign.md) -Methode in einer webbasierten Anwendung verwendet wird, wird immer eine Eingabeaufforderung angezeigt, um die Berechtigung des Benutzers zu erhalten, bevor eine Signatur mit dem privaten Schlüssel des Signatur Gebers erstellt wird.
+> Wenn die [**CoSign-Methode**](signeddata-cosign.md) in einer webbasierten Anwendung verwendet wird, wird immer eine Eingabeaufforderung angezeigt, um die Berechtigung des Benutzers zu erhalten, bevor eine Signatur mit dem privaten Schlüssel dieses Signaturers erstellt wird.
 
  
 
-Im folgenden Beispiel werden Dateien, die das zu Signier Ende Dokument enthalten, und die aktuellen Signaturen in diesem Dokument gelesen, die Signatur cosigniert, und die neue Signatur wird in eine Datei geschrieben. Im Beispiel wird eine getrennte Signatur mit den signierten Daten und der Signatur in separaten Dateien verwendet.
+Im folgenden Beispiel werden Dateien gelesen, die das zu unterschreibende Dokument und die aktuellen Signaturen für dieses Dokument enthalten, die Signatur wird cosigniert, und die neue Signatur wird in eine Datei geschrieben. Im Beispiel wird eine getrennte Signatur mit den signierten Daten und die Signatur in separaten Dateien verwendet.
 
 
 ```VB
