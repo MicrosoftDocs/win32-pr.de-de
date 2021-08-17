@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientAdvancedSettings8 bandwidtherkennungs (Eigenschaft)
-description: Gibt an, ob Bandbreiten Änderungen automatisch erkannt werden.
+title: IMsRdpClientAdvancedSettings8 BandwidthDetection (Eigenschaft)
+description: Gibt an, ob Bandbreitenänderungen automatisch erkannt werden.
 ms.assetid: 30b2b7b3-9050-4a11-9929-2ad1dbf5ed2d
 ms.tgt_platform: multiple
 keywords:
-- Bandwidtherkennungs-Eigenschaft Remotedesktopdienste
-- Bandwidtherkennungs-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, bandwidtherkennungs (Eigenschaft)
+- BandwidthDetection-Eigenschaft Remotedesktopdienste
+- BandwidthDetection-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , BandwidthDetection -Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 1f915aeff1159e675026cfc13906e69c96208f29
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ab6fbe8291c0318e378add8041d0e2d2d0f30b6ee1e298c3a43a6a0ccd430c31
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338526"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119138783"
 ---
-# <a name="imsrdpclientadvancedsettings8bandwidthdetection-property"></a>IMsRdpClientAdvancedSettings8:: bandwidtherkennungs (Eigenschaft)
+# <a name="imsrdpclientadvancedsettings8bandwidthdetection-property"></a>IMsRdpClientAdvancedSettings8::BandwidthDetection (Eigenschaft)
 
-Gibt an, ob Bandbreiten Änderungen automatisch erkannt werden.
+Gibt an, ob Bandbreitenänderungen automatisch erkannt werden.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -44,7 +44,7 @@ HRESULT get_BandwidthDetection(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-**Variant \_ TRUE** , wenn Bandbreiten Änderungen automatisch erkannt werden, andernfalls **\_ false** .
+**VARIANT \_ TRUE,** wenn Bandbreitenänderungen automatisch erkannt werden, **andernfalls VARIANT \_ FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,7 +59,7 @@ HRESULT get_BandwidthDetection(
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

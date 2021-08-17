@@ -1,9 +1,9 @@
 ---
-title: RB_DELETEBAND Meldung (kommstrg. h)
-description: Löscht ein Band aus einem Grund leisten-Steuerelement.
+title: RB_DELETEBAND (Commctrl.h)
+description: Löscht ein Band aus einem Rebar-Steuerelement.
 ms.assetid: 15f2ea78-5c3f-4fe1-a020-025c33f00703
 keywords:
-- Windows-Steuerelemente für RB_DELETEBAND Meldung
+- RB_DELETEBAND der Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a15fd8593c816b64f0d7f82058b3779f256dd521
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0e85acfea41492cd68b98da0613f6014f0e4dabddf817d9402c93b7c143d8e02
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345311"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119642660"
 ---
-# <a name="rb_deleteband-message"></a>RB \_ DeleteBand-Meldung
+# <a name="rb_deleteband-message"></a>RB \_ DELETEBAND-Nachricht
 
-Löscht ein Band aus einem Grund leisten-Steuerelement.
+Löscht ein Band aus einem Rebar-Steuerelement.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Löscht ein Band aus einem Grund leisten-Steuerelement.
 *wParam* 
 </dt> <dd>
 
-Der null basierte Index des zu löschenden Bands.
+Nullbasierter Index des zu löschenden Bands.
 
 </dd> <dt>
 
@@ -41,7 +41,7 @@ Der null basierte Index des zu löschenden Bands.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

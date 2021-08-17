@@ -1,9 +1,9 @@
 ---
-title: Headerfield (headerfieldstype)-Element
-description: Enthält ein Feld für einen Header in einer e-Mail-Nachricht.
+title: HeaderField-Element (headerFieldsType)
+description: Enthält ein Feld für einen Header in einer E-Mail-Nachricht.
 ms.assetid: ec6fc593-8798-4dd0-b589-48657b7cdeb1
 keywords:
-- Headerfield-Element Taskplaner
+- HeaderField-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1f7ac79a16bb0464f6e81d90eba38384a3c2b483
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 918e432ce7a8ea2d43769b9d9ee1315a4b35bce6f2c0cb23f1153ec7afe1a599
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341041"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119139213"
 ---
-# <a name="headerfield-headerfieldstype-element"></a>Headerfield (headerfieldstype)-Element
+# <a name="headerfield-headerfieldstype-element"></a>HeaderField-Element (headerFieldsType)
 
-Enthält ein Feld für einen Header in einer e-Mail-Nachricht.
+Enthält ein Feld für einen Header in einer E-Mail-Nachricht.
 
 ``` syntax
 <xs:element name="HeaderField"
@@ -30,15 +30,15 @@ Enthält ein Feld für einen Header in einer e-Mail-Nachricht.
  />
 ```
 
-Das **headerfield** -Element wird durch den komplexen [**headerfieldstype**](taskschedulerschema-headerfieldstype-complextype.md) -Typ definiert.
+Das **HeaderField-Element** wird durch den komplexen [**headerFieldsType-Typ**](taskschedulerschema-headerfieldstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                        | Abgeleitet von                                                                 | BESCHREIBUNG                                                                                      |
+| Element                                                                        | Abgeleitet von                                                                 | Beschreibung                                                                                      |
 |--------------------------------------------------------------------------------|------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| [**Headerfields**](taskschedulerschema-headerfields-sendemailtype-element.md) | [**headerfieldstype**](taskschedulerschema-headerfieldstype-complextype.md) | Gibt die Header Felder und deren Werte an, die im Header der e-Mail-Nachricht verwendet werden.<br/> |
+| [**HeaderFields**](taskschedulerschema-headerfields-sendemailtype-element.md) | [**headerFieldsType**](taskschedulerschema-headerfieldstype-complextype.md) | Gibt die Headerfelder und deren Werte an, die im Header der E-Mail-Nachricht verwendet werden.<br/> |
 
 
 
@@ -46,18 +46,18 @@ Das **headerfield** -Element wird durch den komplexen [**headerfieldstype**](tas
 
 
 
-| Element                                                            | type                                                                    | BESCHREIBUNG                                                            |
+| Element                                                            | type                                                                    | Beschreibung                                                            |
 |--------------------------------------------------------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------|
-| [**Name**](taskschedulerschema-name-headerfieldtype-element.md)   | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md) | Gibt den Namen des Header Felds in einer e-Mail-Nachricht an.<br/> |
-| [**Wert**](taskschedulerschema-value-headerfieldtype-element.md) | **string**                                                              | Gibt den Wert eines Header Felds in einer e-Mail-Nachricht an.<br/>  |
+| [**Name**](taskschedulerschema-name-headerfieldtype-element.md)   | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md) | Gibt den Namen des Headerfelds in einer E-Mail an.<br/> |
+| [**Wert**](taskschedulerschema-value-headerfieldtype-element.md) | **string**                                                              | Gibt den Wert eines Headerfelds in einer E-Mail an.<br/>  |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**headerfields-Eigenschaft von iemailaction**](/windows/desktop/api/taskschd/nf-taskschd-iemailaction-get_headerfields).
+Informationen zur C++-Entwicklung finden Sie unter [**HeaderFields-Eigenschaft von IEmailAction**](/windows/desktop/api/taskschd/nf-taskschd-iemailaction-get_headerfields).
 
-Informationen zur Skript Entwicklung finden Sie unter [**emailaction. headerfields**](emailaction-headerfields.md).
+Informationen zur Skriptentwicklung finden Sie unter [**EmailAction.HeaderFields.**](emailaction-headerfields.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Informationen zur Skript Entwicklung finden Sie unter [**emailaction. headerfiel
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

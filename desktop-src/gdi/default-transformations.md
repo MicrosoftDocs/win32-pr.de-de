@@ -1,25 +1,25 @@
 ---
-description: Jedes Mal, wenn eine Anwendung einen Domänen Controller erstellt und sofort mit dem Aufrufen von GDI-Zeichnungs-oder-Ausgabefunktionen beginnt, nutzt Sie den standardmäßigen Seiten Raum für den Geräteraum und die Transformationen für den Geräte Speicherplatz auf dem Client Bereich.
+description: Wenn eine Anwendung einen DC erstellt und sofort mit dem Aufrufen von GDI-Zeichnungs- oder -Ausgabefunktionen beginnt, nutzt sie den Standardseitenbereich für Gerätebereich und Gerätebereich zu Clientbereichstransformationen.
 ms.assetid: 64465eb4-d23a-44e7-ad0d-060b195d37b3
-title: Standard Transformationen
+title: Standardtransformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ab5f13c764a92c005fad36c9f2599b99a654284f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1ba34effd9d6d43ab3b0abc740250c58788a8ce2f1556e89c92b78af823e58c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978688"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119469680"
 ---
-# <a name="default-transformations"></a>Standard Transformationen
+# <a name="default-transformations"></a>Standardtransformationen
 
-Jedes Mal, wenn eine Anwendung einen Domänen Controller erstellt und sofort mit dem Aufrufen von GDI-Zeichnungs-oder-Ausgabefunktionen beginnt, nutzt Sie den standardmäßigen Seiten Raum für den Geräteraum und die Transformationen für den Geräte Speicherplatz auf dem Client Bereich. Eine Transformation für Welt-zu-Seite-Speicherplatz kann erst auftreten, wenn die Anwendung die [**setgraphicsmode**](/windows/desktop/api/Wingdi/nf-wingdi-setgraphicsmode) -Funktion aufruft, um den Modus auf "GM Advanced" festzulegen, \_ und dann die Funktion " [**setworldtransform**](/windows/desktop/api/Wingdi/nf-wingdi-setworldtransform) " aufruft.
+Wenn eine Anwendung einen DC erstellt und sofort mit dem Aufrufen von GDI-Zeichnungs- oder -Ausgabefunktionen beginnt, nutzt sie den Standardseitenbereich für Gerätebereich und Gerätebereich zu Clientbereichstransformationen. Eine World-to-Page-Raumtransformation kann erst durchgeführt werden, wenn die Anwendung zuerst die [**SetGraphicsMode-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-setgraphicsmode) aufruft, um den Modus auf GM ADVANCED und dann die \_ [**SetWorldTransform-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-setworldtransform) aufruft.
 
-Die Verwendung von mm \_ -Text (die standardmäßige Transformation für den Seiten Raum für den Geräteraum) führt zu einer eins-zu-Eins-Zuordnung, d. h. ein angegebener Punkt im Seiten Raum wird dem gleichen Punkt im Geräteraum zugeordnet. Wie bereits erwähnt, wird diese Transformation nicht durch eine Matrix angegeben. Stattdessen wird Sie durch Aufteilen der Breite des Viewports durch die Breite des Fensters und durch die Höhe des Viewports um die Höhe des Fensters erreicht. Im Standardfall sind die Viewport-Dimensionen 1 Pixel und 1 Pixel, und die Fenster Dimensionen sind 1-Seiten-Einheit um 1-Seiteneinheit.
+Die Verwendung von MM TEXT (die Standardtransformation von Seitenbereich zu Gerätebereich) führt zu einer 1:1-Zuordnung, d. h., ein angegebener Punkt im Seitenbereich wird dem gleichen Punkt im Gerätebereich \_ angezeigt. Wie bereits erwähnt, wird diese Transformation nicht durch eine Matrix angegeben. Stattdessen wird die Breite des Viewports durch die Breite des Fensters und die Höhe des Viewports durch die Höhe des Fensters dividieren. Im Standardfall sind die Viewportdimensionen 1 Pixel by 1 Pixel und die Fensterdimensionen 1-Seiten-Einheit nach 1-Seiten-Einheit.
 
-Die Transformation für den Geräte Speicherplatz zu physischem Gerät (Client Bereich, Desktop oder Drucker) führt immer zu einer eins-zu-Eins-Zuordnung. Das heißt, eine Einheit im Gerätebereich entspricht immer einer Einheit im Client Bereich, auf dem Desktop oder auf einer Seite. Der einzige Zweck dieser Transformation ist die Übersetzung. Dadurch wird sichergestellt, dass die Ausgabe ordnungsgemäß im Fenster einer Anwendung angezeigt wird, unabhängig davon, wo das Fenster auf dem Desktop verschoben wird.
+Die Transformation zwischen Gerätebereich und physischem Gerät (Clientbereich, Desktop oder Druckerdruck) führt immer zu einer 1:1-Zuordnung. Das heißt, eine Einheit im Gerätebereich entspricht immer einer Einheit im Clientbereich, auf dem Desktop oder auf einer Seite. Der einzige Zweck dieser Transformation ist die Übersetzung. es stellt sicher, dass die Ausgabe im Fenster einer Anwendung ordnungsgemäß angezeigt wird, unabhängig davon, wo dieses Fenster auf dem Desktop verschoben wird.
 
-Der einzige eindeutige Aspekt von mm \_ -Text ist die Ausrichtung der y-Achse im Seitenbereich. In mm \_ -Text wird die positive y-Achse nach unten erweitert, und die negative y-Achse wird aufwärts erweitert.
+Der einzige eindeutige Aspekt von MM \_ TEXT ist die Ausrichtung der y-Achse im Seitenbereich. In MM \_ TEXT wird die positive y-Achse nach unten und die negative Y-Achse nach oben erweitert.
 
  
 

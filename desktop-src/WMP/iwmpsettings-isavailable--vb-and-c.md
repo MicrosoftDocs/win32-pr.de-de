@@ -1,9 +1,9 @@
 ---
-title: Iwmpsettings. IsAvailable (VB und C)
-description: Die IsAvailable-Eigenschaft (die get \_ IsAvailable-Methode in C \) Ruft einen Wert ab, der angibt, ob eine angegebene Aktion ausgeführt werden kann.
+title: IWMPSettings.isAvailable (VB und C )
+description: Die isAvailable-Eigenschaft (die get \_ isAvailable-Methode in C\) ruft einen Wert ab, der angibt, ob eine angegebene Aktion ausgeführt werden kann.
 ms.assetid: 9db1fc50-5c2a-4d2d-b1ed-02b8e6571372
 keywords:
-- Iwmpsettings. IsAvailable (VB und C) Windows Media Player
+- IWMPSettings.isAvailable (VB und C) Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e932f0adb325c4c2f9f88e9f80d75ecaecd3ca85
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 590979677e79073466f7511b3f382a4bfcebc8bf0fd8ad4cb10f6dcd957db28a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135373"
 ---
-# <a name="iwmpsettingsisavailable-vb-and-c"></a>Iwmpsettings. IsAvailable (VB und c#)
+# <a name="iwmpsettingsisavailable-vb-and-c"></a>IWMPSettings.isAvailable (VB und C#)
 
-Mit der **IsAvailable** -Eigenschaft (der **get \_ IsAvailable** -Methode in c#) wird ein Wert abgerufen, der angibt, ob eine bestimmte Aktion ausgeführt werden kann.
+Die **isAvailable-Eigenschaft** (die **get \_ isAvailable-Methode** in C#) ruft einen Wert ab, der angibt, ob eine angegebene Aktion ausgeführt werden kann.
 
 
 ```
@@ -47,26 +47,26 @@ System.Boolean get_isAvailable (
 
 ## <a name="parameters"></a>Parameter
 
-*bstritem*
+*bstrItem*
 
-Ein **System. String** -Wert, der einem der folgenden Werte entspricht.
+Eine **System.String,die** einer der folgenden Werte ist.
 
 
 
-| Wert              | BESCHREIBUNG                                                                                                             |
+| Wert              | Beschreibung                                                                                                             |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------|
-| AutoStart          | Ermittelt, ob die Autostart-Eigenschaft festgelegt werden kann, um anzugeben, dass Windows Media Player die Wiedergabe automatisch startet. |
-| Balance            | Ermittelt, ob die Balance-Eigenschaft verwendet werden kann, um den Stereo Saldo festzulegen.                                           |
-| Basis            | Ermittelt, ob die baseurl-Eigenschaft festgelegt werden kann, um eine Basis-URL anzugeben.                                                |
-| Defaultframe       | Ermittelt, ob die defaultframe-Eigenschaft festgelegt werden kann, um den Standard Frame anzugeben.                                    |
-| Enableerrordialogfelder | Ermittelt, ob die enableerrordialogs-Eigenschaft festgelegt werden kann, um das Anzeigen von Fehler Dialogfeldern zu aktivieren oder deaktivieren.        |
-| GetMode            | Ermittelt, ob die getMode-Methode verwendet werden kann, um die aktuelle Schleife oder den Streamingmodus abzurufen.                          |
-| Invokeurls         | Ermittelt, ob die invokeurls-Eigenschaft festgelegt werden kann, um anzugeben, ob URL-Ereignisse einen Webbrowser starten sollen.         |
-| Mute               | Ermittelt, ob die stumm Eigenschaft festgelegt werden kann, um anzugeben, ob die Audioausgabe ein-oder ausgeschaltet ist.                        |
-| Playcount          | Ermittelt, ob die playcount-Eigenschaft festgelegt werden kann, um anzugeben, wie oft ein Medien Element abgespielt werden soll.                 |
-| Rate               | Ermittelt, ob die Raten Eigenschaft festgelegt werden kann, um die Wiedergabe Rate zu steuern.                                            |
-| SetMode            | Ermittelt, ob die setmode-Methode verwendet werden kann, um die aktuelle Schleife oder den Shuffle-Modus anzugeben.                           |
-| Lautstärke             | Ermittelt, ob die Volumeeigenschaft festgelegt werden kann, um das audiovolume anzugeben.                                           |
+| AutoStart          | Ermittelt, ob die autoStart-Eigenschaft festgelegt werden kann, um anzugeben, dass Windows Media Player die Wiedergabe automatisch startet. |
+| Balance            | Ermittelt, ob die Balance-Eigenschaft verwendet werden kann, um den Stereosaldo festzulegen.                                           |
+| BaseURL            | Ermittelt, ob die baseURL-Eigenschaft festgelegt werden kann, um eine Basis-URL anzugeben.                                                |
+| DefaultFrame       | Ermittelt, ob die defaultFrame-Eigenschaft festgelegt werden kann, um den Standardframe anzugeben.                                    |
+| EnableErrorDialogs | Ermittelt, ob die enableErrorDialogs-Eigenschaft zum Aktivieren oder Deaktivieren der Anzeige von Fehlerdialogfeldern festgelegt werden kann.        |
+| GetMode            | Ermittelt, ob die getMode-Methode zum Abrufen der aktuellen Schleife oder des Shufflemodus verwendet werden kann.                          |
+| InvokeURLs         | Ermittelt, ob die invokeURLs-Eigenschaft festgelegt werden kann, um anzugeben, ob URL-Ereignisse einen Webbrowser starten sollen.         |
+| Mute               | Ermittelt, ob die Stummschaltungseigenschaft festgelegt werden kann, um anzugeben, ob die Audioausgabe ein- oder ausgeschaltet ist.                        |
+| PlayCount          | Ermittelt, ob die playCount-Eigenschaft festgelegt werden kann, um anzugeben, wie oft ein Medienelement wiedergegeben wird.                 |
+| Rate               | Ermittelt, ob die Rate-Eigenschaft festgelegt werden kann, um die Wiedergaberate zu steuern.                                            |
+| SetMode            | Ermittelt, ob die setMode-Methode verwendet werden kann, um die aktuelle Schleife oder den Shufflemodus anzugeben.                           |
+| Volume             | Ermittelt, ob die Volumeeigenschaft festgelegt werden kann, um das Audiovolume anzugeben.                                           |
 
 
 
@@ -74,15 +74,15 @@ Ein **System. String** -Wert, der einem der folgenden Werte entspricht.
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Boolean** -Wert, der angibt, ob die angegebene Aktion ausgeführt werden kann.
+Ein **System.Boolean-Wert,** der angibt, ob die angegebene Aktion ausgeführt werden kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Iwmpsettings. isidentical** ist eine Eigenschaft in Visual Basic, die einen-Parameter annimmt. In c# wird dies als **iwmpsettings. get \_ isidentical** -Methode bezeichnet.
+**IWMPSettings.isIdentical** ist eine Eigenschaft in Visual Basic, die einen Parameter annimmt. In C# wird dies als **IWMPSettings.get \_ isIdentical-Methode** bezeichnet.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird jede der **iwmpsettings** -Eigenschaften mithilfe der **IsAvailable** -Eigenschaft getestet (die **get \_ IsAvailable** -Methode in c#). Der Eigenschaftsname und das Ergebnis jedes Tests werden in einem mehrzeiligen Textfeld angezeigt. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird jede der **IWMPSettings-Eigenschaften** mithilfe der **isAvailable-Eigenschaft** getestet (die **get \_ isAvailable-Methode** in C#). Der Eigenschaftenname und das Ergebnis jedes Tests werden in einem mehrzeiligen Textfeld angezeigt. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -145,53 +145,53 @@ playerSettings.Lines = results
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpsettings-Schnittstelle (VB und c#)**](iwmpsettings--vb-and-c.md)
+[**IWMPSettings-Schnittstelle (VB und C#)**](iwmpsettings--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. Autostart (VB und c#)**](wmplibiwmpsettings-iwmpsettings-autostart--vb-and-c.md)
+[**IWMPSettings.autoStart (VB und C#)**](wmplibiwmpsettings-iwmpsettings-autostart--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. Balance (VB und c#)**](wmplibiwmpsettings-iwmpsettings-balance--vb-and-c.md)
+[**IWMPSettings.balance (VB und C#)**](wmplibiwmpsettings-iwmpsettings-balance--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. baseurl (VB und c#)**](wmplibiwmpsettings-iwmpsettings-baseurl--vb-and-c.md)
+[**IWMPSettings.baseURL (VB und C#)**](wmplibiwmpsettings-iwmpsettings-baseurl--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. defaultframe (VB und c#)**](wmplibiwmpsettings-iwmpsettings-defaultframe--vb-and-c.md)
+[**IWMPSettings.defaultFrame (VB und C#)**](wmplibiwmpsettings-iwmpsettings-defaultframe--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. enableerrordialogs (VB und c#)**](wmplibiwmpsettings-iwmpsettings-enableerrordialogs--vb-and-c.md)
+[**IWMPSettings.enableErrorDialogs (VB und C#)**](wmplibiwmpsettings-iwmpsettings-enableerrordialogs--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. getMode (VB und c#)**](wmplibiwmpsettings-iwmpsettings-getmode--vb-and-c.md)
+[**IWMPSettings.getMode (VB und C#)**](wmplibiwmpsettings-iwmpsettings-getmode--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. invokeurls (VB und c#)**](wmplibiwmpsettings-iwmpsettings-invokeurls--vb-and-c.md)
+[**IWMPSettings.invokeURLs (VB und C#)**](wmplibiwmpsettings-iwmpsettings-invokeurls--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. stumm (VB und c#)**](wmplibiwmpsettings-iwmpsettings-mute--vb-and-c.md)
+[**IWMPSettings.mute (VB und C#)**](wmplibiwmpsettings-iwmpsettings-mute--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. playcount (VB und c#)**](wmplibiwmpsettings-iwmpsettings-playcount--vb-and-c.md)
+[**IWMPSettings.playCount (VB und C#)**](wmplibiwmpsettings-iwmpsettings-playcount--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. Rate (VB und c#)**](wmplibiwmpsettings-iwmpsettings-rate--vb-and-c.md)
+[**IWMPSettings.rate (VB und C#)**](wmplibiwmpsettings-iwmpsettings-rate--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. SetMode (VB und c#)**](wmplibiwmpsettings-iwmpsettings-setmode--vb-and-c.md)
+[**IWMPSettings.setMode (VB und C#)**](wmplibiwmpsettings-iwmpsettings-setmode--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. Volume (VB und c#)**](wmplibiwmpsettings-iwmpsettings-volume--vb-and-c.md)
+[**IWMPSettings.volume (VB und C#)**](wmplibiwmpsettings-iwmpsettings-volume--vb-and-c.md)
 </dt> </dl>
 
  

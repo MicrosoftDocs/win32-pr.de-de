@@ -1,35 +1,35 @@
 ---
 title: Der Clientstub
-description: Das Client-Stub-Modul stellt für jeden Vorgang, der in der Eingabe-IDL-Datei definiert ist, Ersatz Punkte auf dem Client bereit.
+description: Das Clientstubmodul stellt Ersatzeinstiegspunkte auf dem Client für jeden der in der Eingabe-IDL-Datei definierten Vorgänge bereit.
 ms.assetid: 6b16a4ef-fa18-4cd0-b483-1365b8c2528b
 keywords:
-- Mittel l und RPC-Mittell, Schnittstellen, Clientstub
-- Schnittstellen-Mittell
-- Schnittstellen, Mittel l, Mittel l und RPC
+- MIDL und RPC MIDL, Schnittstellen, Clientstub
+- Schnittstellen MIDL
+- Schnittstellen MIDL, MIDL und RPC
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8254915a510e7d176ba315d7a92b049bd0b60926
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 260c718f0910c2e6834c93409b6d8cd4969e3d2bbe9c53c65821dc0fe0eb19ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146223"
 ---
 # <a name="the-client-stub"></a>Der Clientstub
 
-Das Client-Stub-Modul stellt für jeden Vorgang, der in der Eingabe-IDL-Datei definiert ist, Ersatz Punkte auf dem Client bereit.
+Das Clientstubmodul stellt Ersatzeinstiegspunkte auf dem Client für jeden der in der Eingabe-IDL-Datei definierten Vorgänge bereit.
 
-Wenn die Client Anwendung eine Remote Prozedur aufruft, wird der zugehörige-Befehl zuerst an die Ersatz Routine in der Client-Stub-Datei weitergeleitet. Die Client-Stub-Routine führt die folgenden Funktionen aus:
+Wenn die Clientanwendung die Remoteprozedur aufruft, wird der Aufruf zuerst an die Ersatzroutine in der Clientstubdatei durchgeführt. Die Clientstubroutine führt die folgenden Funktionen aus:
 
--   Marshalls-Argumente. Der Client-Stub verpackt Eingabeargumente in ein Formular, das an den Server übermittelt werden kann.
--   Ruft die Client Lauf Zeit Bibliothek auf, um Argumente an den Remote Adressraum zu übertragen, und ruft die Remote Prozedur im Server Adressbereich auf.
--   Gibt Ausgabe Argumente aus. Der Client-Stub entpackt Ausgabe Argumente und kehrt zum Aufrufer zurück.
+-   Marshallt Argumente. Der Clientstub verpackt Eingabeargumente in ein Formular, das an den Server übertragen werden kann.
+-   Ruft die Clientlaufzeitbibliothek auf, um Argumente an den Remoteadressraum zu übertragen, und ruft die Remoteprozedur im Serveradressraum auf.
+-   Unmarshals-Ausgabeargumente. Der Clientstub entpackt Ausgabeargumente und kehrt zum Aufrufer zurück.
 
-Der-Compilerschalter [**/Client**](-client.md), [**/cstub**](-cstub.md)und [**/out**](-out.md) wirkt sich auf die Client-Stub-Datei aus.
+Die MIDL-Compilerschalter [**/client,**](-client.md) [**/cstub**](-cstub.md)und [**/out**](-out.md) wirken sich auf die Clientstubdatei aus.
 
- 
+ 
 
- 
+ 
 
 
 

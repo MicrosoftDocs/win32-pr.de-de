@@ -3,11 +3,11 @@ title: Rangfolge
 description: Rangfolge
 ms.assetid: 3865ea8a-2489-4714-9a05-d1082589841f
 keywords:
-- Windows Media-Metadateien, Rangfolge
-- Windows Media-Metadateien, Rangfolge
-- Metadateien, Rangfolge
-- Metadateien, Rangfolge
-- Windows Media, Metafiles
+- Windows Medienmetadateien,Rangfolge
+- Windows Medienmetadateien,Rangfolge
+- Metadateien,Rangfolge
+- Metadateien,Rangfolge
+- Windows Medien,Metadateien
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -15,72 +15,72 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 9161d1e43f61ae1b1a7231c640e33c4c6ec6527f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 12b55f34dd18fa6122d3f1588111aaffe374f2d87c06ef9100cbac057efd4bd3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036615"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119467991"
 ---
 # <a name="order-of-precedence"></a>Rangfolge
 
-Nicht alle Metadatei-Element Attribute werden gleich erstellt. Einige Metadatei-Element Attribute überschreiben andere Element Attribute. Element Attribute können von ähnlichen Element Attributen abhängig von Position und Reihenfolge überschrieben werden. Alle Attribute einer metadateiwiedergabe Liste überschreiben diejenigen, die in einer referenzierten Windows-Mediendatei enthalten sind. Ein Attribut, das eine andere überschreibt, hat eine höhere Rangfolge.
+Nicht alle Metadateielementattribute werden gleich erstellt. Einige Metadateielementattribute überschreiben andere Elementattribute. Elementattribute können je nach Position und Reihenfolge durch ähnliche Elementattribute überschrieben werden. Alle Attribute einer Metadatei-Wiedergabeliste überschreiben die Attribute, die in einer Referenzdatei Windows Mediendatei enthalten sind. Ein Attribut, das ein anderes überschreibt, hat eine höhere Rangfolge.
 
-In der folgenden Tabelle wird die Hierarchie mit der höchsten Rangfolge als der niedrigste Wert angezeigt. Das Element mit der höchsten Rangfolge wird nie überschrieben.
+Die Hierarchie mit der höchsten Rangfolge zu der niedrigsten ist in der folgenden Tabelle dargestellt. Das Element mit der höchsten Rangfolge wird nie überschrieben.
 
 
 
-| Bereich                    | Hierarchy                                   |
+| `Scope`                    | Hierarchy                                   |
 |--------------------------|---------------------------------------------|
 | "Signierter DRM-Inhalt"     | Nie überschrieben.                           |
-| Verweis **Element Bereich**    | Wird nur von signiertem DRM-Inhalt überschrieben.      |
-| Bereich des **Einstiegs** Elements  | Überschreibt Elemente der unten aufgeführten Kategorien. |
-| Bereich von **ASX**            | Überschreibt Mediendatei Elemente.              |
-| Windows Media-Datei Bereich | Überschrieben von allen oben genannten.             |
+| **REF-Elementbereich**    | Wird nur von signierten DRM-Inhalten überschrieben.      |
+| **ENTRY-Elementbereich**  | Überschreibt Elemente der folgenden Kategorien. |
+| **ASX-Bereich**            | Überschreibt Mediendateielemente.              |
+| Windows Mediendateibereich | Wird von allen oben genannten überschrieben.             |
 
 
 
- 
+ 
 
--   "Signierter DRM-Inhalt"-digitales Signatur Objekt.
+-   "Signierter DRM-Inhalt": Digitales Signaturobjekt.
 
-    Attribute von signiertem DRM-Inhalt überschreiben alle anderen. Beispielsweise werden die Copyright Informationen von "signiertem DRM-Inhalt" nicht überschrieben. Sie wird immer gestreamt und präsentiert.
+    Attribute signierter DRM-Inhalte überschreiben alle anderen. Beispielsweise werden die Copyrightinformationen von "Signierten DRM-Inhalten" nicht überschrieben. Es wird immer gestreamt und angezeigt.
 
--   Verweis **Element Bereich**
+-   **REF-Elementbereich**
 
-    Attribute des **ref** -Elements überschreiben andere Element Attribute, aber keinen signierten DRM-Inhalt.
+    Attribute des **REF-Elements überschreiben** andere Elementattribute, aber keinen signierten DRM-Inhalt.
 
--   **Einstiegs** Bereich
+-   **ENTRY-Bereich**
 
-    Attribute des **Entry** -Elements werden durch das **ref** -Element Attribut überschrieben, überschreiben jedoch andere Element Attribute. Anstelle der Titelinformationen aus der Mediendatei werden **Titel** Metadaten aus dem **Entry** -Element angezeigt.
+    Attribute des **ENTRY-Elements** werden durch das REF-Elementattribut überschrieben, überschreiben jedoch andere Elementattribute.  **TITLE-Metadaten** **aus dem ENTRY-Element** werden anstelle der Titelinformationen aus der Mediendatei angezeigt.
 
--   Bereich von **ASX**
+-   **ASX-Bereich**
 
-    Alle Eigenschaften, die in der Metadatei eingegeben werden, überschreiben diejenigen, die in der Windows Media-Datei enthalten sind. Attribute des **Entry** -Elements überschreiben die **ASX** -Element Attribute. Während der referenzierte Medien Clip des **Eintrags** Elements abgespielt wird, werden **Titel** Metadaten aus dem **Entry** -Element anstelle von Titelinformationen **aus dem-** Element des-Elements angezeigt.
+    Alle Eigenschaften, die in die Metadatei eingegeben werden, überschreiben die eigenschaften, die in der Windows Mediendatei enthalten sind. Attribute des **ENTRY-Elements** überschreiben **ASX-Elementattribute.** Während der **Medienclip** des ENTRY-Elements, auf das verwiesen wird, abspielt, werden **TITLE-Metadaten** aus dem **ENTRY-Element** anstelle von Titelinformationen aus dem **ASX-Element** angezeigt.
 
--   Windows Media-Datei Bereich
+-   Windows Mediendateibereich
 
-    Attribute der Windows-Mediendatei werden von allen metadateiattributen überschrieben. Die Metadaten der Mediendatei werden nur angezeigt, wenn für dieses Element in der Metadatei keine Metadaten definiert sind.
+    Attribute der Windows Mediendatei werden von allen Metadateiattributen überschrieben. Metadaten der Mediendatei werden nur angezeigt, wenn in der Metadatei keine Metadaten für dieses Element definiert sind.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Erstellen von Metafile-Wiedergabelisten**](creating-metafile-playlists.md)
+[**Erstellen von Metadateiwiedergabelisten**](creating-metafile-playlists.md)
 </dt> <dt>
 
 [**Metafile-Wiedergabelisten**](metafile-playlists.md)
 </dt> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Leitfaden für Windows Media-Metadateien**](windows-media-metafile-guide.md)
+[**Windows Leitfaden zur Medienmetadatei**](windows-media-metafile-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

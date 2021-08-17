@@ -1,9 +1,9 @@
 ---
-title: LVM_SETOUTLINECOLOR (Commctrl.h)
-description: Legt die Farbe des Rahmens eines Listenansicht-Steuerelements fest, wenn der erweiterte Fensterstil LVS \_ EX \_ BORDERSELECT festgelegt ist.
+title: LVM_SETOUTLINECOLOR-Nachricht (Commctrl.h)
+description: Legt die Farbe des Rahmens eines Listenansichtssteuerelements fest, wenn der erweiterte Fensterstil LVS \_ EX \_ BORDERSELECT festgelegt ist.
 ms.assetid: c2b606fa-8d47-4192-94b7-d01c3cfdc514
 keywords:
-- LVM_SETOUTLINECOLOR der Windows Steuerelemente
+- LVM_SETOUTLINECOLOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119217390"
 ---
 # <a name="lvm_setoutlinecolor-message"></a>LVM \_ SETOUTLINECOLOR-Meldung
 
-Legt die Farbe des Rahmens eines Listenansicht-Steuerelements fest, wenn der [**erweiterte Fensterstil LVS \_ EX \_ BORDERSELECT**](extended-list-view-styles.md) festgelegt ist.
+Legt die Farbe des Rahmens eines Listenansichtssteuerelements fest, wenn der erweiterte [**Fensterstil LVS \_ EX \_ BORDERSELECT**](extended-list-view-styles.md) festgelegt ist.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,12 +37,12 @@ Legt die Farbe des Rahmens eines Listenansicht-Steuerelements fest, wenn der [**
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **die COLORREF-Struktur** zurück, die die Konturfarbe enthält.
+Gibt die **COLORREF-Struktur** zurück, die die Konturfarbe enthält.
 
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest angeben, das Comclt32.dll 6.0 an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
+> Um diese Meldung verwenden zu können, müssen Sie ein Manifest angeben, das Comclt32.dll Version 6.0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -52,7 +52,7 @@ Gibt **die COLORREF-Struktur** zurück, die die Konturfarbe enthält.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

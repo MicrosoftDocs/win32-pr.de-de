@@ -1,40 +1,40 @@
 ---
 title: Präsentation
-description: Präsentation ist der letzte Schritt im UPnP-Prozess.
+description: Die Präsentation ist der letzte Schritt im UPnP-Prozess.
 ms.assetid: e8d20ae6-2dd8-4de2-b07b-6cf4e725735e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 195399316882de71c148f2369dd2978c4cfbd728
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c92f8457a881dc0414713e996d230261330c10911f2aea285a2e365ad0d59320
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137193"
 ---
 # <a name="presentation"></a>Präsentation
 
-Präsentation ist der letzte Schritt im UPnP-Prozess. Wenn ein Gerät über eine URL zur Darstellung verfügt, kann ein Kontrollpunkt eine Seite aus dieser URL abrufen und die Seite in einen Browser laden. Abhängig von den Funktionen der Präsentationsseite und des Geräts kann der Steuerungspunkt das Gerät steuern und den Status des Geräts anzeigen.
+Die Präsentation ist der letzte Schritt im UPnP-Prozess. Wenn ein Gerät über eine URL für die Präsentation verfügt, kann ein Kontrollpunkt eine Seite aus dieser URL abrufen und die Seite in einen Browser laden. Abhängig von den Funktionen der Präsentationsseite und des Geräts kann der Steuerungspunkt das Gerät steuern und den Status des Geräts anzeigen.
 
-Der Ressourcen Pfad, der während der Registrierung an [**iupnpregistrinar**](/windows/desktop/api/Upnphost/nn-upnphost-iupnpregistrar) übermittelt wird, ist der Ort, an dem alle für die Darstellung des Geräts relevanten Dateien gefunden werden. Geräte Entwickler können für jedes eingebettete Gerät separate Seiten bereitstellen. Die Präsentations-URL in der Geräte Beschreibungs Vorlage kann entweder ein absolute URL oder ein relative URL sein. Bei relativen URLs, die relativ zum Ressourcen Pfad sind, sollte die Vorlage für die Geräte Beschreibung einen Dateinamen enthalten. **Iupnpregistrinar** konvertiert diese in eine URL mit dem tatsächlichen Speicherort. Bei absoluten URLs wird der Speicherort nicht geändert.
+Im Ressourcenpfad, der während der Registrierung [**an IUPnPRegistrar**](/windows/desktop/api/Upnphost/nn-upnphost-iupnpregistrar) übergeben wird, befinden sich alle Dateien, die für die Darstellung des Geräts relevant sind. Geräteentwickler können separate Seiten für jedes eingebettete Gerät bereitstellen. Die Präsentations-URL in der Gerätebeschreibungsvorlage kann entweder ein absolute URL oder ein relative URL. Für relative URLs, die relativ zum Ressourcenpfad sind, sollte die Gerätebeschreibungsvorlage einen Dateinamen enthalten. **IUPnPRegistrar** konvertiert dies in eine URL mit dem tatsächlichen Speicherort. Bei absoluten URLs wird der Speicherort nicht geändert.
 
-Zur Unterstützung von Client seitigen Skripts auf einer Präsentationsseite werden in der Regel zusätzliche Informationen in Form einer "Abfrage Zeichenfolge" an die URL angehängt. Die zusätzlichen Informationen, die angefügt werden, sind die URL zum Dokument mit der Geräte Beschreibung und der udn des Geräts oder eingebetteten Geräts. Die URL für die Geräte Beschreibung kann verwendet werden, um ein Beschreibungs Dokument in das Skript zu laden und das Gerät dann über seine Dienste zu steuern. Der udn wird verwendet, um ein eingebettetes Gerät aus dem Stamm Gerät auszuwählen.
+Zur Unterstützung clientseitiger Skripts auf einer Präsentationsseite werden normalerweise zusätzliche Informationen in Form einer "Abfragezeichenfolge" an die URL angefügt. Die zusätzlichen Informationen, die angefügt werden, sind die URL zum Dokument mit der Gerätebeschreibung und die UDN des Geräts oder eingebetteten Geräts. Die URL der Gerätebeschreibung kann verwendet werden, um ein Beschreibungsdokument in das Skript zu laden und dann das Gerät über seine Dienste zu steuern. Der UDN wird verwendet, um ein eingebettetes Gerät aus dem Stammgerät auszuwählen.
 
-Das Format der geänderten Präsentations-URL lautet: die tatsächliche Präsentations-URL, ein Fragezeichen ("?"), die URL für die Geräte Beschreibung, ein Pluszeichen ("+"), das udn des Geräts. Das Fragezeichen gibt den Anfang der Abfrage Zeichenfolge an.
+Das Format der geänderten Präsentations-URL lautet: die tatsächliche Präsentations-URL, ein Fragezeichen ("?"), die URL der Gerätebeschreibung, ein Pluszeichen ("+"), die Geräte-UDN. Das Fragezeichen gibt den Anfang der Abfragezeichenfolge an.
 
-Wenn die Präsentations-URL in der Geräte Beschreibungs Vorlage eine absolute URL ist, die bereits ein Fragezeichen ("?") enthielt, werden die zusätzlichen Informationen nicht der Präsentations-URL hinzugefügt.
+Wenn die Präsentations-URL in der Gerätebeschreibungsvorlage ein absolute URL und bereits ein Fragezeichen ("?") enthielt, werden die zusätzlichen Informationen nicht zur Präsentations-URL hinzugefügt.
 
 
 
-| BESCHREIBUNG                        | URL                                                                                                                                               |
+| Beschreibung                        | URL                                                                                                                                               |
 |------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| In der Vorlage Geräte Beschreibung | **presentationurl** MyDevice.html **/presentationURL**                                                                                              |
-| Vom Geräte Host generiert       | **presentationurl** https://machinename/deviceID/MyDevice.html/?https://machine/upnphost/udhisapi.dll?content=uuid:487394 ... + Udn **/presentationURL** |
+| In der Gerätebeschreibungsvorlage | **presentationURL** MyDevice.html **/presentationURL**                                                                                              |
+| Vom Gerätehost generiert       | **presentationURL** https://machinename/deviceID/MyDevice.html/?https://machine/upnphost/udhisapi.dll?content=uuid:487394 ... + UDN **/presentationURL** |
 
 
 
- 
+ 
 
-Ein Client seitiges Skript muss möglicherweise die URL der Geräte Beschreibung aus der Präsentations-URL extrahieren, um das [**iupnpdescriptiondocument**](/windows/desktop/api/Upnp/nn-upnp-iupnpdescriptiondocument) -Objekt zu laden. Dies erfolgt durch das übernehmen der Abfrage Zeichenfolge und das Beenden des Plus Zeichens ("+").
+Ein clientseitiges Skript muss möglicherweise die URL der Gerätebeschreibung aus der Präsentations-URL extrahieren, um das [**IUPnPDescriptionDocument-Objekt zu**](/windows/desktop/api/Upnp/nn-upnp-iupnpdescriptiondocument) laden. Dazu wird die Abfragezeichenfolge verwendet und am Pluszeichen ("+") beendet.
 
 
 ```VB
@@ -50,7 +50,7 @@ DescURLString = Trim(Mid(QueryString,2,Instr(QueryString,"+")-2))& vbCrLf
 
 
 
-Im Fall einer Präsentationsseite für ein eingebettetes Gerät sind einige zusätzliche Arbeitsschritte erforderlich. Nach dem Laden von [**upnpdescriptiondocument**](/windows/desktop/api/Upnp/nn-upnp-iupnpdescriptiondocument)muss das Skript die Sammlung eingebetteter Geräte abrufen und dann das Gerät auswählen, das mit dem udn in der Abfrage Zeichenfolge übereinstimmt. Das folgende Skript zeigt, wie Sie das eingebettete Gerät für die aktuelle Präsentationsseite auswählen. Es wird davon ausgegangen, dass lightdesc bereits geladen wurde.
+Im Fall einer Präsentationsseite für ein eingebettetes Gerät ist einige zusätzliche Arbeit erforderlich. Nach dem Laden [**von UPnPDescriptionDocument**](/windows/desktop/api/Upnp/nn-upnp-iupnpdescriptiondocument)muss das Skript die Sammlung eingebetteter Geräte abrufen und dann das Gerät auswählen, das mit dem UDN in der Abfragezeichenfolge übereinstimmen soll. Das folgende Skript zeigt, wie Sie das eingebettete Gerät für die aktuelle Präsentationsseite auswählen. Es wird davon ausgegangen, dass LightDesc bereits geladen ist.
 
 
 ```VB
@@ -69,9 +69,9 @@ set Item = EmbeddedDevices.Item(DeviceUdnString)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Vielleicht-Attribut
-description: Das Schlüsselwort \ vielleicht \ gibt an, dass der Remote Prozedur Aufruf nicht jedes Mal ausgeführt werden muss, wenn er aufgerufen wird und der Client keine Antwort erwartet. Beachten Sie, dass das \ Maybe \-Protokoll weder die Übermittlung noch den Abschluss des Aufrufens sicherstellt.
+title: maybe-Attribut
+description: Das Schlüsselwort \ maybe\ gibt an, dass der Remoteprozeduraufruf nicht jedes Mal ausgeführt werden muss, wenn er aufgerufen wird, und der Client keine Antwort erwartet. Beachten Sie, dass das Protokoll \maybe\ weder die Übermittlung noch den Abschluss des Aufrufs sicherstellt.
 ms.assetid: 163b9fd5-7dce-493e-95bc-63807f42a498
 keywords:
-- Vielleicht attributmittell
+- maybe attribute MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 68704e19d421150444933d74f6b78fc5bada46f6
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 178faf3d308f7dd282e31a8f0eabf8708bb8b3fe1a0d52a981e65adddb258ad1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067150"
 ---
-# <a name="maybe-attribute"></a>Vielleicht-Attribut
+# <a name="maybe-attribute"></a>maybe-Attribut
 
-Das Schlüsselwort gibt **\[ möglicherweise \]** an, dass der Remote Prozedur Aufruf nicht jedes Mal ausgeführt werden muss, wenn er aufgerufen wird und der Client keine Antwort erwartet. Beachten Sie, dass das **\[ vielleicht \]** -Protokoll weder die Übermittlung noch den Abschluss des Aufrufes ermöglicht
+Das Schlüsselwort gibt **\[ möglicherweise \]** an, dass der Remoteprozeduraufruf nicht jedes Mal ausgeführt werden muss, wenn er aufgerufen wird, und der Client erwartet keine Antwort. Beachten Sie, dass das **\[ \] maybe-Protokoll** weder die Übermittlung noch den Abschluss des Aufrufs sicherstellt.
 
 ``` syntax
 [
@@ -37,68 +37,68 @@ interface interface-name
 
 <dl> <dt>
 
-*Interface-Attribute-List* 
+*interface-attribute-list* 
 </dt> <dd>
 
-Gibt eine Liste von 0 (null) oder mehr IDL-Attributen an, die auf die gesamte Schnittstelle angewendet werden. Wenn zwei oder mehr Schnittstellen Attribute vorhanden sind, müssen diese durch Kommas getrennt werden.
+Gibt eine Liste von null oder mehr IDL-Attributen an, die für die gesamte Schnittstelle gelten. Wenn zwei oder mehr Schnittstellenattribute vorhanden sind, müssen sie durch Kommas getrennt werden.
 
 </dd> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
 Gibt den Namen der Schnittstelle an.
 
 </dd> <dt>
 
-*Attribut-List* 
+*Attributliste* 
 </dt> <dd>
 
 Gibt zusätzliche Attribute an, die auf die Funktion angewendet werden sollen. Trennen Sie mehrere Attribute durch Kommas.
 
 </dd> <dt>
 
-*ReturnType* 
+*returntype* 
 </dt> <dd>
 
 Gibt den Rückgabetyp der Funktion an.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
-Gibt den Namen der Funktion an, auf die das Attribut " **\[ vielleicht \]** " angewendet wird.
+Gibt den Namen der Funktion an, auf die das **\[ \] maybe-Attribut** angewendet wird.
 
 </dd> <dt>
 
 *params* 
 </dt> <dd>
 
-Funktionsparameter Liste.
+Funktionsparameterliste.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Aufruf mit dem Attribut " **\[ vielleicht \]** " kann keine Ausgabeparameter enthalten und ist implizit ein **\[** [**idempotenter**](idempotent.md) **\]** Aufruf.
+Ein Aufruf mit dem **\[ \] maybe-Attribut** darf keine Ausgabeparameter enthalten und ist implizit ein **\[** [**idempotenter**](idempotent.md) **\]** Aufruf.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**aus**](broadcast.md)
+[**Sendung**](broadcast.md)
 </dt> <dt>
 
 [**idempotent**](idempotent.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

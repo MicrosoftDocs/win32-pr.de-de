@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentouesf buffersexception-Konstruktor'
-title: Esentouesf buffersexception-Konstruktor
+description: 'Weitere Informationen zu: EsentOutOfBuffersException-Konstruktor'
+title: EsentOutOfBuffersException-Konstruktor
 TOCTitle: 'EsentOutOfBuffersException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentOutOfBuffersException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentoutofbuffersexception.esentoutofbuffersexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 78fecfe7277470c8423a6657df58ce343515a7d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 81b0f88ee8c5fd883636512e2fd73c11f41b879582da50c5d0ea294ba9402c8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959474"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119478470"
 ---
-# <a name="esentoutofbuffersexception-constructor"></a>Esentouesf buffersexception-Konstruktor
+# <a name="esentoutofbuffersexception-constructor"></a>EsentOutOfBuffersException-Konstruktor
 
-Initialisiert eine neue Instanz der esentouesf buffersexception-Klasse.
+Initialisiert eine neue Instanz der EsentOutOfBuffersException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentOutOfBuffersException()
 public EsentOutOfBuffersException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentouesf buffersexception-Klasse](./esentoutofbuffersexception-class.md)
+[EsentOutOfBuffersException-Klasse](./esentoutofbuffersexception-class.md)
 
-[Esentouto fbuffersexception-Elemente](./esentoutofbuffersexception-members.md)
+[EsentOutOfBuffersException-Member](./esentoutofbuffersexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: vistaapi-Klasse'
-title: Vistaapi-Klasse (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen zu: VistaApi-Klasse'
+title: VistaApi-Klasse (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: VistaApi class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Vista.VistaApi
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistaapi(v=EXCHG.10)
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 77f9b3ab7e3ab94ae6b4181253cf735ba92699f6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a2cec15da58bc53c44c5bf6ed588b5c6c6c71ea1a42e2f5eb488e2ba3d5b2c0f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344669"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119106904"
 ---
-# <a name="vistaapi-class"></a>Vistaapi-Klasse
+# <a name="vistaapi-class"></a>VistaApi-Klasse
 
-ESENT-APIs, die zuerst in Windows Vista unterstützt wurden.
+ESENT-APIs, die erstmals in Windows Vista unterstützt wurden.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  Microsoft. ISAM. ESENT. Interop. Vista. vistaapi  
+  Microsoft.Isam.Esent.Interop.Vista.VistaApi  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,10 +60,10 @@ public static class VistaApi
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistaapi-Member](./vistaapi-members.md)
+[VistaApi-Member](./vistaapi-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

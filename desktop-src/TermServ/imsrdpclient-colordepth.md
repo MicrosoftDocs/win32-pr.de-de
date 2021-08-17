@@ -1,30 +1,30 @@
 ---
-title: Imsrdpclient colortiefe-Eigenschaft
-description: Die Farbtiefe (in Bits pro Pixel) für die Verbindung des-Steuer Elements.
+title: IMsRdpClient ColorDepth (Eigenschaft)
+description: Die Farbtiefe (in Bits pro Pixel) für die Verbindung des Steuerelements.
 ms.assetid: 9ba4d8fe-20cd-40e9-a71a-0dce0ddd29fc
 ms.tgt_platform: multiple
 keywords:
-- Colortiefe-Eigenschaft Remotedesktopdienste
-- Colortiefe-Eigenschaft Remotedesktopdienste, imsrdpclient-Schnittstelle
-- Imsrdpclient-Schnittstelle Remotedesktopdienste, colortiefe-Eigenschaft
-- Colortiefe-Eigenschaft Remotedesktopdienste, IMsRdpClient2-Schnittstelle
-- IMsRdpClient2-Schnittstelle Remotedesktopdienste, colortiefe-Eigenschaft
-- Colortiefe-Eigenschaft Remotedesktopdienste, IMsRdpClient3-Schnittstelle
-- IMsRdpClient3-Schnittstelle Remotedesktopdienste, colortiefe-Eigenschaft
-- Colortiefe-Eigenschaft Remotedesktopdienste, IMsRdpClient4-Schnittstelle
-- IMsRdpClient4-Schnittstelle Remotedesktopdienste, colortiefe-Eigenschaft
-- Colortiefe-Eigenschaft Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5-Schnittstelle Remotedesktopdienste, colortiefe-Eigenschaft
-- Colortiefe-Eigenschaft Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6-Schnittstelle Remotedesktopdienste, colortiefe-Eigenschaft
-- Colortiefe-Eigenschaft Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, colortiefe-Eigenschaft
-- Colortiefe-Eigenschaft Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, colortiefe-Eigenschaft
-- Colortiefe-Eigenschaft Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, colortiefe-Eigenschaft
-- Colortiefe-Eigenschaft Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10-Schnittstelle Remotedesktopdienste, colortiefe-Eigenschaft
+- ColorDepth-Remotedesktopdienste
+- ColorDepth-Eigenschaft Remotedesktopdienste , IMsRdpClient-Schnittstelle
+- IMsRdpClient-Schnittstelle Remotedesktopdienste , ColorDepth-Eigenschaft
+- ColorDepth-Eigenschaft Remotedesktopdienste , IMsRdpClient2-Schnittstelle
+- IMsRdpClient2-Schnittstelle Remotedesktopdienste , ColorDepth-Eigenschaft
+- ColorDepth-Eigenschaft Remotedesktopdienste , IMsRdpClient3-Schnittstelle
+- IMsRdpClient3-Schnittstelle Remotedesktopdienste , ColorDepth-Eigenschaft
+- ColorDepth-Eigenschaft Remotedesktopdienste , IMsRdpClient4-Schnittstelle
+- IMsRdpClient4-Schnittstelle Remotedesktopdienste , ColorDepth-Eigenschaft
+- ColorDepth-Eigenschaft Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , ColorDepth-Eigenschaft
+- ColorDepth-Eigenschaft Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , ColorDepth-Eigenschaft
+- ColorDepth-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , ColorDepth-Eigenschaft
+- ColorDepth-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , ColorDepth-Eigenschaft
+- ColorDepth-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , ColorDepth-Eigenschaft
+- ColorDepth-Eigenschaft Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , ColorDepth-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -64,16 +64,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d5099deff3913d23173a466245cbf08fd5b95a6a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 995509385cabc18a7768300e29482b00f674ce347463b0b8aeb2c3af7e6a209b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119475750"
 ---
-# <a name="imsrdpclientcolordepth-property"></a>Imsrdpclient:: colortiefe-Eigenschaft
+# <a name="imsrdpclientcolordepth-property"></a>IMsRdpClient::ColorDepth -Eigenschaft
 
-Die Farbtiefe (in Bits pro Pixel) für die Verbindung des-Steuer Elements.
+Die Farbtiefe (in Bits pro Pixel) für die Verbindung des Steuerelements.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -98,9 +98,9 @@ Die Farbtiefe. Die Werte umfassen 8, 15, 16, 24 und 32 Bits pro Pixel.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Wenn die Methoden erfolgreich sind, wird **S \_ OK** zurückgegeben. Jeder andere **HRESULT** -Wert gibt an, dass der-Fehler aufgetreten ist.
+Wenn die Methoden erfolgreich sind, **wird S \_ OK** zurückgegeben. Jeder andere **HRESULT-Wert** gibt an, dass der Aufruf fehlgeschlagen ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Eigenschaft kann nicht festgelegt werden, wenn das Steuerelement verbunden ist.
 
@@ -116,15 +116,15 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imsrdpclient ist als 92b4a539-7115-4b7c-a5a9-e5d9efc2780a definiert.<br/>        |
+| IID<br/>                      | IID \_ IMsRdpClient ist als 92b4a539-7115-4b7c-a5a9-e5d9efc2780a definiert.<br/>        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpclient**](imsrdpclient-interface.md)
+[**IMsRdpClient**](imsrdpclient-interface.md)
 </dt> <dt>
 
 [**IMsRdpClient2**](imsrdpclient2.md)

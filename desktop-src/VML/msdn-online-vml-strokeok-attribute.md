@@ -1,50 +1,50 @@
 ---
-title: VML-Attribut "strokeok"
-description: VML-Attribut "strokeok"
+title: VML StrokeOK-Attribut
+description: VML StrokeOK-Attribut
 ms.assetid: f150f87b-1ed9-4c53-bf7f-ebe1e81642fd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d7a2875e3e6e8374238340ff2a596852e5ebce7c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5051f3a2d5e7ac8e4d509d8b8f65182f86799db41bbd8a4d71741961c3a1e406
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948951"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119475220"
 ---
-# <a name="vml-strokeok-attribute"></a>VML-Attribut "strokeok"
+# <a name="vml-strokeok-attribute"></a>VML StrokeOK-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob ein Strich angezeigt wird. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob ein Strich angezeigt wird. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
-[Pfad](msdn-online-vml-path-element.md)
+[Path](msdn-online-vml-path-element.md)
 
 **Tagsyntax**
 
-<v: *Element* strokeok = " *Expression* " >
+<v: *element* strokeok=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . strokeok = "*Ausdruck*"
+*element* .strokeok="*expression*"
 
-*Ausdruck* = *Element*. strokeok
+*expression* = *Element*.strokeok
 
 **Anmerkungen**
 
-Wenn der Wert **false** ist, kann der Pfad nicht gestreichelt werden. Der Standardwert ist **True**. Dieses Attribut überschreibt alle anderen Strich Attribute im Parent-oder **Stroke** -Element.
+False gibt an, dass der Pfad nicht strichen kann. Der Standardwert ist **True**. Dieses Attribut überschreibt alle anderen Strichattribute im übergeordneten Oder **Stroke-Element.**
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Der Pfad wird nicht mit Strichen gezeichnet.
+Der Pfad wird nicht mit Strichen strichen.
 
 
 ```HTML
@@ -58,6 +58,6 @@ Der Pfad wird nicht mit Strichen gezeichnet.
 
 
 
- 
+ 
 
- 
+ 

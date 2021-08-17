@@ -76,7 +76,7 @@ Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Bei einem Fehler 
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Der Header Fil \_ data.h befindet sich im Verzeichnis [Mapper Sample](mapper-sample.md) im Windows SDK.
+> Der Header Fil \_ data.h befindet sich im [Verzeichnis Mapper Sample](mapper-sample.md) im Windows SDK.
 
  
 
@@ -91,7 +91,7 @@ Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Bei einem Fehler 
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

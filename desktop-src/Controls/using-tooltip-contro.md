@@ -1,33 +1,33 @@
 ---
-title: Verwenden von Quick Infos
-description: Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie verschiedene Tooltipps erstellt werden.
+title: Verwenden von QuickInfo-Steuerelementen
+description: Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie verschiedene Arten von QuickInfos erstellt werden.
 ms.assetid: 4486b406-a069-4250-b7ab-671d895b79f9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 86fd4a0cef452be3f9700f8466959043ac8d30b7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d27bb6ac0f922df024adff15b8c67600338f2fcb17a8a97559ae9b0a41cdc191
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710025"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119318610"
 ---
-# <a name="using-tooltip-controls"></a>Verwenden von Quick Infos
+# <a name="using-tooltip-controls"></a>Verwenden von QuickInfo-Steuerelementen
 
-Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie verschiedene Tooltipps erstellt werden.
+Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie verschiedene Arten von QuickInfos erstellt werden.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                                    | BESCHREIBUNG                                                                                                                                                                                                                                                                      |
+| Thema                                                                                                    | Beschreibung                                                                                                                                                                                                                                                                      |
 |----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Erstellen einer QuickInfo für ein Steuerelement](create-a-tooltip-for-a-control.md)<br/>                   | Die folgende Beispiel Funktion erstellt eine QuickInfo und verknüpft Sie mit dem-Steuerelement, dessen Ressourcen-ID an Sie übermittelt wird. <br/>                                                                                                                                                  |
-| [Erstellen einer QuickInfo für einen rechteckigen Bereich](create-a-tooltip-for-a-rectangular-area.md)<br/> | Im folgenden Beispiel wird veranschaulicht, wie ein Standardmäßiges QuickInfo-Steuerelement für den gesamten Client Bereich eines Fensters erstellt wird. <br/>                                                                                                                                                       |
-| [Implementieren von Quick Infos für die Nachverfolgung](implement-tracking-tooltips.md)<br/>                         | Die nach Verfolgungs Quick Infos bleiben sichtbar, bis Sie explizit von der Anwendung geschlossen werden, und können die Position auf dem Bildschirm dynamisch ändern. Sie werden von [Version 4,70](common-control-versions.md) und höher der allgemeinen Steuerelemente unterstützt. <br/>                         |
-| [So implementieren Sie mehrzeilige Quick Infos](implement-multiline-tooltips.md)<br/>                       | Mehrzeilige Quick Infos ermöglichen das Anzeigen von Text in mehr als einer Zeile. <br/>                                                                                                                                                                                                 |
-| [Implementieren von Quick Infos zur Sprechblase](implement-balloon-tooltips.md)<br/>                           | Quick Infos für die Sprechblase ähneln Standard-Quick Infos, werden jedoch in einer "Sprechblase" im Zeichenstil angezeigt, wobei ein stem auf das Tool zeigt. Quick Infos für die Sprechblase können entweder einzeilige oder mehrzeilige Zeilen sein. Sie werden auf die gleiche Weise wie Standard-Quick Infos erstellt und behandelt. <br/> |
-| [Implementieren von Quick Infos für Status leisten Symbole](implement-tooltips-for-status-bar-icons.md)<br/> | Eine nicht eindringliche Möglichkeit, eine erklärende Meldung für ein Status leisten Symbol anzuzeigen, ist die Implementierung einer QuickInfo. Die QuickInfo wird beim Klicken nicht mehr angezeigt, Sie können aber auch einen Timeout Wert angeben. <br/>                                                                                |
-| [Implementieren von In-Place Quick Infos](implement-in-place-tooltips.md)<br/>                         | Direkte Quick Infos werden zum Anzeigen von Text Zeichenfolgen für Objekte verwendet, die abgeschnitten wurden. Eine Abbildung finden Sie unter [Informationen zu](tooltip-controls.md)QuickInfo-Steuerelementen. <br/>                                                                                                      |
+| [Erstellen einer QuickInfo für ein Steuerelement](create-a-tooltip-for-a-control.md)<br/>                   | Die folgende Beispielfunktion erstellt eine QuickInfo und ordnet sie dem Steuerelement zu, dessen Ressourcen-ID übergeben wird. <br/>                                                                                                                                                  |
+| [Erstellen einer QuickInfo für einen rechteckigen Bereich](create-a-tooltip-for-a-rectangular-area.md)<br/> | Im folgenden Beispiel wird veranschaulicht, wie Ein standardmäßiges QuickInfo-Steuerelement für den gesamten Clientbereich eines Fensters erstellt wird. <br/>                                                                                                                                                       |
+| [Implementieren von QuickInfos für die Nachverfolgung](implement-tracking-tooltips.md)<br/>                         | QuickInfos zur Nachverfolgung bleiben sichtbar, bis sie von der Anwendung explizit geschlossen werden, und können die Position auf dem Bildschirm dynamisch ändern. Sie werden von [Version 4.70](common-control-versions.md) und höher der allgemeinen Steuerelemente unterstützt. <br/>                         |
+| [Implementieren von mehrstufigen QuickInfos](implement-multiline-tooltips.md)<br/>                       | Mehrzeilen-QuickInfos ermöglichen das Anzeigen von Text in mehr als einer Zeile. <br/>                                                                                                                                                                                                 |
+| [Implementieren von QuickInfos für Sprechblasen](implement-balloon-tooltips.md)<br/>                           | QuickInfos für Sprechblasen ähneln Standard-QuickInfos, werden jedoch in einem "Sprechblasenstil" mit einem Stamm angezeigt, der auf das Tool zeigt. QuickInfos für Sprechblasen können entweder ein- oder mehrzeilenig sein. Sie werden ähnlich wie Standard-QuickInfos erstellt und verarbeitet. <br/> |
+| [Implementieren von QuickInfos für Statusleistensymbole](implement-tooltips-for-status-bar-icons.md)<br/> | Eine nicht inintrusive Möglichkeit, eine erläuternde Meldung für ein Statusleistensymbol anzuzeigen, besteht in der Implementierung einer QuickInfo. Die QuickInfo wird beim Klicken nicht mehr angezeigt, Sie können aber auch einen Time out-Wert angeben. <br/>                                                                                |
+| [Implementieren von In-Place QuickInfos](implement-in-place-tooltips.md)<br/>                         | QuickInfos werden verwendet, um Textzeichenfolgen für Objekte anzuzeigen, die abgeschnitten wurden. Eine Abbildung finden Sie unter [Informationen zu QuickInfo-Steuerelementen.](tooltip-controls.md) <br/>                                                                                                      |
 
 
 

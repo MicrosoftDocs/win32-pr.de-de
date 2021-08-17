@@ -1,11 +1,11 @@
 ---
-title: Lokalisierungs-Display-ID-Attribut
-description: Wird verwendet, um in die Datei Extrts.MC zu indizieren, um den lokalisierten Display Name für die Objekte zu UI-Zwecken zu erhalten.
+title: Localization-Display-Id-Attribut
+description: Wird zum Indizieren in die Datei Extrts.mc, um den lokalisierten displayName für die Objekte zu Benutzeroberflächenzwecken zu erhalten.
 ms.assetid: ed99d499-0064-4832-81ad-75fb3c8c548d
 ms.tgt_platform: multiple
 keywords:
-- "\"Localization-Display-ID\"-Attribut AD-Schema"
-- "\"localizationdisplayid\"-Attribut, AD-Schema"
+- LOCALIZATION-Display-Id-Attribut AD-Schema
+- localizationDisplayId-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b4d9453b04bd5c944784b68ff5e4442f00bf65f5
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 995a51d1d07409aa7b284e23d0ce72f182482a6a78e7dda4b89d2ed5113b33e6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119301880"
 ---
-# <a name="localization-display-id-attribute"></a>Lokalisierungs-Display-ID-Attribut
+# <a name="localization-display-id-attribute"></a>Localization-Display-Id-Attribut
 
-Wird verwendet, um in die Datei Extrts.MC zu indizieren, um den lokalisierten Display Name für die Objekte zu UI-Zwecken zu erhalten.
+Wird zum Indizieren in die Datei Extrts.mc, um den lokalisierten displayName für die Objekte zu Benutzeroberflächenzwecken zu erhalten.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Lokalisierung-Display-ID              |
-| LDAP-Display-Name | localizationdisplayid                |
+| CN                | Localization-Display-Id              |
+| Ldap-Anzeigename | localizationDisplayId                |
 | Size              | 4 Bytes                              |
-| Berechtigung aktualisieren  | Schema Administrator                 |
-| Aktualisierungshäufigkeit  | Eine ID sollte nie geändert werden.       |
+| Aktualisieren von Berechtigungen  | Schemaadministrator                 |
+| Updatehäufigkeit  | Eine ID sollte nie geändert werden.       |
 | Attribute-Id      | 1.2.840.113556.1.4.1353              |
-| System-ID-GUID    | a746f0d1-78d0-11d2-9916-0000f87a57d4 |
+| System-Id-Guid    | a746f0d1-78d0-11d2-9916-0000f87a57d4 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Wird verwendet, um in die Datei Extrts.MC zu indizieren, um den lokalisierten Di
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,11 +58,11 @@ Wird verwendet, um in die Datei Extrts.MC zu indizieren, um den lokalisierten Di
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Is-Single-Valued       | Richtig                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
@@ -71,7 +71,7 @@ Wird verwendet, um in die Datei Extrts.MC zu indizieren, um den lokalisierten Di
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,11 +79,11 @@ Wird verwendet, um in die Datei Extrts.MC zu indizieren, um den lokalisierten Di
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Is-Single-Valued       | Richtig                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
@@ -100,11 +100,11 @@ Wird verwendet, um in die Datei Extrts.MC zu indizieren, um den lokalisierten Di
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Is-Single-Valued       | Richtig                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
@@ -121,11 +121,11 @@ Wird verwendet, um in die Datei Extrts.MC zu indizieren, um den lokalisierten Di
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Is-Single-Valued       | Richtig                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
@@ -142,11 +142,11 @@ Wird verwendet, um in die Datei Extrts.MC zu indizieren, um den lokalisierten Di
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Is-Single-Valued       | Richtig                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
@@ -163,11 +163,11 @@ Wird verwendet, um in die Datei Extrts.MC zu indizieren, um den lokalisierten Di
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Is-Single-Valued       | Richtig                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
@@ -184,11 +184,11 @@ Wird verwendet, um in die Datei Extrts.MC zu indizieren, um den lokalisierten Di
 |------------------------|-----------------------------------------------------------------|
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
-| System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
-| Ist indiziert             | False                                                           |
-| Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| System-Only            | Falsch                                                           |
+| Is-Single-Valued       | Richtig                                                            |
+| Ist indiziert             | Falsch                                                           |
+| Im globalen Katalog      | Falsch                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |

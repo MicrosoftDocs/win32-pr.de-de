@@ -46,7 +46,7 @@ HRESULT GetVector(
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9).](handles.md)
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9)](handles.md).
 
 </dd> <dt>
 
@@ -63,11 +63,11 @@ Gibt einen 4D-Vektor zurück.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn der Zielvektor größer als der Quellvektor ist, werden nur die anfänglichen Komponenten des Zielvektors gefüllt, und die restlichen Komponenten werden auf 0 (null) festgelegt.
+Wenn der Zielvektor größer als der Quellvektor ist, werden nur die Anfangskomponenten des Zielvektors gefüllt, und die übrigen Komponenten werden auf 0 (null) festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 

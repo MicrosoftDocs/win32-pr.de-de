@@ -1,9 +1,9 @@
 ---
-title: ID2D1InkStyle setnibtransform-Methoden (D2d1 \_ 3. h)
-description: Legt fest, dass die Transformation auf die NIB-Form dieses Stils angewendet werden soll.
+title: ID2D1InkStyle SetNibTransform-Methoden (D2d1 \_ 3.h)
+description: Legt die Transformation fest, die auf die NIB-Form dieses Stils angewendet werden soll.
 ms.assetid: e2caee05-192c-1ea5-103c-e1d44e8c30a8
 keywords:
-- Setnibtransform-Methoden Direct2D
+- SetNibTransform-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -12,25 +12,25 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 981711e4ae40affb54eccc73ec12471ae4cd4156
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ab44baf88ee9511679210177989a0cfb495d113f98a18b14ce65c67f1d6950c0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361347"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119317950"
 ---
-# <a name="id2d1inkstylesetnibtransform-methods"></a>ID2D1InkStyle:: setnibtransform-Methoden
+# <a name="id2d1inkstylesetnibtransform-methods"></a>ID2D1InkStyle::SetNibTransform-Methoden
 
-Legt fest, dass die Transformation auf die NIB-Form dieses Stils angewendet werden soll.
+Legt die Transformation fest, die auf die NIB-Form dieses Stils angewendet werden soll.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                             | BESCHREIBUNG                                                       |
+| Methode                                                                             | Beschreibung                                                       |
 |:-----------------------------------------------------------------------------------|:------------------------------------------------------------------|
-| [**Setnibtransform (D2D1 \_ Matrix \_ 3x2 \_ F \* )**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1inkstyle-setnibtransform(constd2d1_matrix_3x2_f))  | Legt fest, dass die Transformation auf die NIB-Form dieses Stils angewendet werden soll.<br/> |
-| [**Setnibtransform (D2D1 \_ Matrix \_ 3x2 \_ F&)**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1inkstyle-setnibtransform(constd2d1_matrix_3x2_f_)) | Legt fest, dass die Transformation auf die NIB-Form dieses Stils angewendet werden soll.<br/> |
+| [**SetNibTransform (D2D1 \_ MATRIX \_ 3X2 \_ F \* )**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1inkstyle-setnibtransform(constd2d1_matrix_3x2_f))  | Legt die Transformation fest, die auf die NIB-Form dieses Stils angewendet werden soll.<br/> |
+| [**SetNibTransform (D2D1 \_ MATRIX \_ 3X2 \_ F&)**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1inkstyle-setnibtransform(constd2d1_matrix_3x2_f_)) | Legt die Transformation fest, die auf die NIB-Form dieses Stils angewendet werden soll.<br/> |
 
 
 
@@ -40,11 +40,11 @@ Legt fest, dass die Transformation auf die NIB-Form dieses Stils angewendet werd
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D2d1 \_ 3. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D2d1 \_ 3.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

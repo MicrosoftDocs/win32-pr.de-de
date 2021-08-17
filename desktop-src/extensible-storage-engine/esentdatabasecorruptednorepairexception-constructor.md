@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdatabasecorruptednorepirexception-Konstruktor'
-title: Esentdatabasecorruptednorepirexception-Konstruktor
+description: 'Weitere Informationen zu: EsentDatabaseCorruptedNoRepairException-Konstruktor'
+title: EsentDatabaseCorruptedNoRepairException-Konstruktor
 TOCTitle: 'EsentDatabaseCorruptedNoRepairException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDatabaseCorruptedNoRepairException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabasecorruptednorepairexception.esentdatabasecorruptednorepairexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1a106bc42c9ab9da812aff926f2ae7009fff6250
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d5a6871631e1858411a578db995718dfc0de6c17e866f52b343a2dc5ed23807d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120094190"
 ---
-# <a name="esentdatabasecorruptednorepairexception-constructor"></a>Esentdatabasecorruptednorepirexception-Konstruktor
+# <a name="esentdatabasecorruptednorepairexception-constructor"></a>EsentDatabaseCorruptedNoRepairException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdatabasecorruptednorepirexception-Klasse.
+Initialisiert eine neue Instanz der EsentDatabaseCorruptedNoRepairException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentDatabaseCorruptedNoRepairException()
 public EsentDatabaseCorruptedNoRepairException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabasecorruptednorepirexception-Klasse](./esentdatabasecorruptednorepairexception-class.md)
+[EsentDatabaseCorruptedNoRepairException-Klasse](./esentdatabasecorruptednorepairexception-class.md)
 
-[Esentdatabasecorruptednorepirexception-Elemente](./esentdatabasecorruptednorepairexception-members.md)
+[EsentDatabaseCorruptedNoRepairException-Member](./esentdatabasecorruptednorepairexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

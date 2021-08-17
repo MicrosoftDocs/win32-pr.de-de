@@ -1,9 +1,9 @@
 ---
 title: ncadg_ip_udp-Attribut
-description: Das Schlüsselwort ncadg \_ IP \_ UDP identifiziert die Datagramm-Version von TCP/IP als Protokollfamilie für den Endpunkt. Diese Protokollfamilie ist veraltet und sollte in neuen Anwendungen nicht verwendet werden.
+description: Das Schlüsselwort ncadg \_ ip \_ udp identifiziert die Datagrammversion von TCP/IP als Protokollfamilie für den Endpunkt. Diese Protokollfamilie ist veraltet und sollte nicht in neuen Anwendungen verwendet werden.
 ms.assetid: c9133fcc-6dc2-49da-9c6f-5ce3c51090d5
 keywords:
-- ncadg_ip_udp Attribut-Mittel l
+- ncadg_ip_udp-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 173ccd0b81eb5fa7d84a6fa4d2821162b852303d
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: f91db32fd7636f956e64dafc0db15efb520e643b435995dd977db7a631a20c78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101530"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067060"
 ---
-# <a name="ncadg_ip_udp-attribute"></a>ncadg \_ -IP- \_ UDP-Attribut
+# <a name="ncadg_ip_udp-attribute"></a>ncadg \_ ip \_ udp-Attribut
 
-Das Schlüsselwort **ncadg \_ IP \_ UDP** identifiziert die Datagramm-Version von TCP/IP als Protokollfamilie für den Endpunkt. Diese Protokollfamilie ist veraltet und sollte in neuen Anwendungen nicht verwendet werden.
+Das **Schlüsselwort ncadg \_ ip \_ udp** identifiziert die Datagrammversion von TCP/IP als Protokollfamilie für den Endpunkt. Diese Protokollfamilie ist veraltet und sollte nicht in neuen Anwendungen verwendet werden.
 
 ``` syntax
 endpoint("ncadg_ip_udp:server-name[port-name]")
@@ -34,25 +34,25 @@ endpoint("ncadg_ip_udp:server-name[port-name]")
 *Servername* 
 </dt> <dd>
 
-Gibt den Namen oder die Internetadresse für den Server oder Host Computer an. Der Name ist eine Zeichenfolge und kann ein voll qualifizierter Domänen Name sein. Die Internetadresse ist eine gängige Internet Adress Notation.
+Gibt den Namen oder die Internetadresse für den Server oder Hostcomputer an. Der Name ist eine Zeichenfolge und kann ein vollqualifizierter Domänenname sein. Die Internetadresse ist eine allgemeine Internetadressen-Notation.
 
 </dd> <dt>
 
 *Portname* 
 </dt> <dd>
 
-Gibt eine optionale 16-Bit-Zahl an. Werte, die kleiner als 1024 sind, sind normalerweise reserviert. Wenn kein Wert angegeben wird, wählt der Endpunkt Zuordnung einen gültigen *Portnamen* Wert aus.
+Gibt eine optionale 16-Bit-Zahl an. Werte kleiner als 1024 sind in der Regel reserviert. Wenn kein Wert angegeben wird, wählt der Endpunktzuordnungsdienst einen gültigen *Portnamenwert* aus.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgenden Einschränkungen gelten für die Datagramm-Protokolle [**ncadg \_ IPX**](ncadg-ipx.md) und **ncadg \_ IP \_ UDP**:
+Die folgenden Einschränkungen gelten für die Datagrammprotokolle [**ncadg \_ ipx**](ncadg-ipx.md) und **ncadg \_ ip \_ udp:**
 
--   Rückrufe werden nicht unterstützt. Alle Funktionen, die das **\[** [**Rückruf**](callback.md) **\]** Attribut verwenden, schlagen fehl.
--   Die [**Verwendung des pipetypkonstruktors**](pipe.md) wird nicht unterstützt.
+-   Rückrufe werden nicht unterstützt. Alle Funktionen, die das **\[** [](callback.md) **\]** Rückrufattribut verwenden, schlagen fehl.
+-   Sie unterstützen nicht die [](pipe.md) Verwendung des Pipetypkonstruktors.
 
-Die Syntax der TCP/IP-Transport Port Zeichenfolge, wie alle Port Zeichenfolgen, wird unabhängig von der IDL-Spezifikation definiert. Der Compiler führt einige Syntax Überprüfungen durch, gewährleistet jedoch nicht, dass die Endpunkt Spezifikation korrekt ist. Einige Fehler werden möglicherweise zur Laufzeit und nicht zur Kompilierzeit gemeldet.
+Die Syntax der TCP/IP-Transportportzeichenfolge wird wie alle Portzeichenfolgen unabhängig von der IDL-Spezifikation definiert. Der Compiler führt eine Syntaxüberprüfung durch, garantiert jedoch nicht, dass die Endpunktspezifikation korrekt ist. Einige Fehler können zur Laufzeit und nicht zur Kompilierzeit gemeldet werden.
 
 ## <a name="examples"></a>Beispiele
 
@@ -82,48 +82,48 @@ interface iface2
 
 <dl> <dt>
 
-[**Dreher**](endpoint.md)
+[**Endpunkt**](endpoint.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**ncacn \_ bei \_ DSP**](ncacn-at-dsp.md)
+[**ncacn \_ bei \_ dsp**](ncacn-at-dsp.md)
 </dt> <dt>
 
-[**ncacn \_ dnet \_ NSP**](ncacn-dnet-nsp.md)
+[**ncacn \_ dnet \_ nsp**](ncacn-dnet-nsp.md)
 </dt> <dt>
 
-[**ncacn \_ IP \_ TCP**](ncacn-ip-tcp.md)
+[**ncacn \_ ip \_ tcp**](ncacn-ip-tcp.md)
 </dt> <dt>
 
-[**ncacn \_ NB \_ IPX**](ncacn-nb-ipx.md)
+[**ncacn \_ nb \_ ipx**](ncacn-nb-ipx.md)
 </dt> <dt>
 
-[**ncacn- \_ SPX**](ncacn-spx.md)
+[**ncacn \_ spx**](ncacn-spx.md)
 </dt> <dt>
 
-[**ncacn \_ NB \_ NB**](ncacn-nb-nb.md)
+[**ncacn \_ nb \_ nb**](ncacn-nb-nb.md)
 </dt> <dt>
 
-[**ncacn \_ NB \_ TCP**](ncacn-nb-tcp.md)
+[**ncacn \_ nb \_ tcp**](ncacn-nb-tcp.md)
 </dt> <dt>
 
-[**ncacn \_ NP**](ncacn-np.md)
+[**ncacn \_ np**](ncacn-np.md)
 </dt> <dt>
 
-[**ncacn \_ VNS- \_ spp**](ncacn-vns-spp.md)
+[**ncacn \_ vns \_ spp**](ncacn-vns-spp.md)
 </dt> <dt>
 
-[**Ncalrpc**](ncalrpc.md)
+[**ncalrpc**](ncalrpc.md)
 </dt> <dt>
 
-[**ncadg \_ IPX**](ncadg-ipx.md)
+[**ncadg \_ ipx**](ncadg-ipx.md)
 </dt> <dt>
 
-[Zeichen folgen Bindung](/windows/desktop/Rpc/string-binding)
+[Zeichenfolgenbindung](/windows/desktop/Rpc/string-binding)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

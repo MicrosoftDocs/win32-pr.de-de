@@ -1,7 +1,7 @@
 ---
-description: Enthält ein kabelgebundenes Netzwerk Profil.
+description: Enthält ein Kabelnetzwerkprofil.
 ms.assetid: f5f9fcdc-febf-4730-8be4-5e1885d9ab08
-title: Lanprofile-Element
+title: LANProfile-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 58ad88c9f975455bdd2d77a0ef8ee028d9027d9f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6adaa0f4884ad275137a6c949dbc466416006f33bb6603dc61e87153d9b23361
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119065100"
 ---
-# <a name="lanprofile-element"></a>Lanprofile-Element
+# <a name="lanprofile-element"></a>LANProfile-Element
 
-Das lanprofile-Element enthält ein kabelgebundenes Netzwerk Profil. Dieses Element ist das eindeutige root-Element für ein Kabelnetzwerk Profil.
+Das LANProfile-Element enthält ein kabelgebundenes Netzwerkprofil. Dieses Element ist das eindeutige Stammelement für ein Kabelnetzwerkprofil.
 
-Der Ziel Namespace für das lanprofile-Element ist `https://www.microsoft.com/networking/LAN/profile/v1` .
+Der Zielnamespace für das LANProfile-Element ist `https://www.microsoft.com/networking/LAN/profile/v1` .
 
 ``` syntax
 <xs:element name="LANProfile">
@@ -74,18 +74,18 @@ Der Ziel Namespace für das lanprofile-Element ist `https://www.microsoft.com/ne
 
 
 
-| Element                                                                 | type    | BESCHREIBUNG                                                                                                                              |
+| Element                                                                 | type    | Beschreibung                                                                                                                              |
 |-------------------------------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------|
-| [**MSM**](lan-profileschema-msm-lanprofile-element.md)                 |         | Enthält Einstellungen für medienspezifische Module (MSM). <br/>                                                                               |
-| [**Onexaktiviert**](lan-profileschema-onexenabled-security-element.md)   | boolean | Gibt an, ob der Dienst für die automatische Konfiguration von Kabel Netzwerken mithilfe von 802.1 x eine Port Authentifizierung durchführen soll. <br/>      |
-| [**Onexerzwungen**](lan-profileschema-onexenforced-security-element.md) | boolean | Gibt an, ob für den automatischen Konfigurations Dienst für verkabelte Netzwerke die Verwendung von 802.1 x für die Port Authentifizierung erforderlich ist. <br/> |
-| [**Sicherung**](lan-profileschema-security-msm-element.md)              |         | Enthält Sicherheitseinstellungen. <br/>                                                                                                  |
+| [**Msm**](lan-profileschema-msm-lanprofile-element.md)                 |         | Enthält medienspezifische Moduleinstellungen (MEDIA-Specific Module, MSM). <br/>                                                                               |
+| [**OneXEnabled**](lan-profileschema-onexenabled-security-element.md)   | boolean | Gibt an, ob der automatische Konfigurationsdienst für kabelgebundene Netzwerke versucht, die Portauthentifizierung mit 802.1X zu versuchen. <br/>      |
+| [**OneXEnforced**](lan-profileschema-onexenforced-security-element.md) | boolean | Gibt an, ob der automatische Konfigurationsdienst für kabelgebundene Netzwerke die Verwendung von 802.1X für die Portauthentifizierung erfordert. <br/> |
+| [**Sicherheit**](lan-profileschema-security-msm-element.md)              |         | Enthält Sicherheitseinstellungen. <br/>                                                                                                  |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zum Anzeigen der Liste der untergeordneten Elemente in einer Struktur ähnlichen Struktur finden Sie unter [LAN- \_ Profil Schema Elemente](lan-profileschema-elements.md).
+Informationen zum Anzeigen der Liste der untergeordneten Elemente in einer strukturbasierten Struktur finden Sie unter [ \_ LAN-Profilschemaelemente](lan-profileschema-elements.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,8 +93,8 @@ Informationen zum Anzeigen der Liste der untergeordneten Elemente in einer Struk
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Reextendedregisterclass-Funktion
-description: Registriert die beiden Klassennamen REListBox20W und RECombobox20W, die verwendet werden können, um ein umfangreiches Bearbeitungs Listenfeld oder ComboBox-Fenster zu erstellen.
+title: REExtendedRegisterClass-Funktion
+description: Registriert zwei Klassennamen, REListBox20W und RECombobox20W, die zum Erstellen von Rich Edit-Listen- oder Kombinationsfeldfenstern verwendet werden können.
 ms.assetid: D27A97A8-8B44-4C07-9903-8D958BF97109
 keywords:
-- Windows-Steuerelemente der reextendedregisterclass-Funktion
+- REExtendedRegisterClass-Funktion Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 965394eaf71812e503c31aa2c65e0128a75dbfe3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1da26b1a978f85858e9943b212d4bcef8304ddbe2a4f2e9f25372776155db591
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360431"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119434810"
 ---
-# <a name="reextendedregisterclass-function"></a>Reextendedregisterclass-Funktion
+# <a name="reextendedregisterclass-function"></a>REExtendedRegisterClass-Funktion
 
-\[Zur internen Verwendung vorgesehen. wird nicht für die Verwendung in Anwendungen empfohlen. Diese Funktion wird in zukünftigen Versionen möglicherweise nicht mehr unterstützt.\]
+\[Für die interne Verwendung vorgesehen; wird nicht für die Verwendung in Anwendungen empfohlen. Diese Funktion wird in zukünftigen Versionen möglicherweise nicht unterstützt.\]
 
-Registriert die beiden Klassennamen REListBox20W und RECombobox20W, die verwendet werden können, um ein umfangreiches Bearbeitungs Listenfeld oder ComboBox-Fenster zu erstellen.
+Registriert zwei Klassennamen, REListBox20W und RECombobox20W, die zum Erstellen von Rich Edit-Listen- oder Kombinationsfeldfenstern verwendet werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt true zurück, wenn erfolgreich, andernfalls false.
+Gibt TRUE zurück, wenn erfolgreich, andernfalls FALSE.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt true zurück, wenn erfolgreich, andernfalls false.
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>None</dt> </dl>                                 |
-| DLL<br/>    | <dl> <dt>Riched20.dll (Rich Edit-Version 3,0)</dt> </dl> |
+| Header<br/> | <dl> <dt>Keine</dt> </dl>                                 |
+| DLL<br/>    | <dl> <dt>Riched20.dll (Rich Edit Version 3.0)</dt> </dl> |
 
 
 

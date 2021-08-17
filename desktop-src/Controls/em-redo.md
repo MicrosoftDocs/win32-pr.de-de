@@ -1,9 +1,9 @@
 ---
-title: EM_REDO Meldung (RichEdit. h)
-description: Sendet eine EM-Wiederholungs \_ Nachricht an ein Rich Edit-Steuerelement, um die nächste Aktion in der Wiederholungs Warteschlange des Steuer Elements wiederholen.
+title: EM_REDO Nachricht (Richedit.h)
+description: Sendet eine \_ EM-REDO-Nachricht an ein Rich-Edit-Steuerelement, um die nächste Aktion in der Wiederholungswarteschlange des Steuerelements zu wiederholen.
 ms.assetid: 28ec1ec2-a56d-442f-b3cb-9feeb92edaeb
 keywords:
-- Windows-Steuerelemente für EM_REDO Meldung
+- EM_REDO Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bba7a684db0d40ebcfeec4a540989c4dab4c5dd2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d39b679e8bf7e78cf7ce028d0bb440438770d0d0123516313fb418b2136ebc11
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477601"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119437860"
 ---
-# <a name="em_redo-message"></a>EM-Wiederholungs \_ Nachricht
+# <a name="em_redo-message"></a>\_EM-REDO-Nachricht
 
-Sendet eine **EM \_** -Wiederholungs Nachricht an ein Rich Edit-Steuerelement, um die nächste Aktion in der Wiederholungs Warteschlange des Steuer Elements wiederholen.
+Sendet eine **\_ EM-REDO-Nachricht** an ein Rich-Edit-Steuerelement, um die nächste Aktion in der Wiederholungswarteschlange des Steuerelements zu wiederholen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,13 +45,13 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der **Redo** -Vorgang erfolgreich ist, ist der Rückgabewert ein Wert ungleich 0 (null).
+Wenn der **Wiederholungsvorgang** erfolgreich ist, ist der Rückgabewert ein Wert ungleich 0 (null).
 
-Wenn der **Wiederholungs Vorgang fehl** schlägt, ist der Rückgabewert 0 (null).
+Wenn der **Wiederholungsvorgang** fehlschlägt, ist der Rückgabewert 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um zu ermitteln, ob in der Wiederholungs Warteschlange des Steuer Elements Aktionen vorhanden sind, senden Sie die [**EM \_ CanRedo**](em-canredo.md) -Nachricht.
+Um zu bestimmen, ob aktionen in der Wiederholungswarteschlange des Steuerelements vorhanden sind, senden Sie die [**EM \_ CANREDO-Nachricht.**](em-canredo.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,29 +59,29 @@ Um zu ermitteln, ob in der Wiederholungs Warteschlange des Steuer Elements Aktio
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ CanRedo**](em-canredo.md)
+[**EM \_ CANREDO**](em-canredo.md)
 </dt> <dt>
 
-[**EM \_ getredoname**](em-getredoname.md)
+[**EM \_ GETREDONAME**](em-getredoname.md)
 </dt> <dt>
 
-[**EM \_ getundoname**](em-getundoname.md)
+[**EM \_ GETUNDONAME**](em-getundoname.md)
 </dt> <dt>
 
-[**EM \_ rückgängig machen**](em-undo.md)
+[**EM \_ UNDO**](em-undo.md)
 </dt> </dl>
 
  

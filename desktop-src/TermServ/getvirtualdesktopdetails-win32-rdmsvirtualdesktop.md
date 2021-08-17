@@ -1,12 +1,12 @@
 ---
-title: Getvirtualdesktopdetails-Methode der Win32_RDMSVirtualDesktop-Klasse
+title: GetVirtualDesktopDetails-Methode der Win32_RDMSVirtualDesktop-Klasse
 description: Ruft die zusätzlichen Informationen zum virtuellen Desktop ab.
 ms.assetid: 487e3a02-4306-4639-a44e-5b9519163a67
 ms.tgt_platform: multiple
 keywords:
-- Getvirtualdesktopdetails-Methode Remotedesktopdienste
-- Getvirtualdesktopdetails-Methode Remotedesktopdienste, Win32_RDMSVirtualDesktop-Klasse
-- Win32_RDMSVirtualDesktop-Klasse Remotedesktopdienste, getvirtualdesktopdetails-Methode
+- GetVirtualDesktopDetails-Methode Remotedesktopdienste
+- GetVirtualDesktopDetails-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktop-Klasse
+- Win32_RDMSVirtualDesktop-Klasse Remotedesktopdienste , GetVirtualDesktopDetails-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f7382a7ea10b3e557cd7317bdf1ddb0c4bcea55d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b6ca1b552147623822ae007ca17abf8e4eaebfb149f5e80ac4760719f1ef7168
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477445"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119059488"
 ---
-# <a name="getvirtualdesktopdetails-method-of-the-win32_rdmsvirtualdesktop-class"></a>Getvirtualdesktopdetails-Methode der Win32 \_ -Klasse rdmsvirtualdesktop
+# <a name="getvirtualdesktopdetails-method-of-the-win32_rdmsvirtualdesktop-class"></a>GetVirtualDesktopDetails-Methode der Win32 \_ RDMSVirtualDesktop-Klasse
 
 Ruft die zusätzlichen Informationen zum virtuellen Desktop ab.
 
@@ -45,21 +45,21 @@ uint32 GetVirtualDesktopDetails(
 
 <dl> <dt>
 
-*Ramsizzumb* \[ vorgenommen\]
+*RAMSizeInMB* \[ out\]
 </dt> <dd>
 
-Empfängt die dem virtuellen Desktop zugewiesene RAM-Größe in Bytes.
+Empfängt die dem virtuellen Desktop zugewiesene RAM-Menge in Bytes.
 
 </dd> <dt>
 
-*Remotefxaktiviert* \[ vorgenommen\]
+*RemoteFXEnabled* \[ out\]
 </dt> <dd>
 
-Empfängt einen Wert, der angibt, ob remotefx auf dem virtuellen Desktop aktiviert ist. **True** , wenn remotefx aktiviert ist. andernfalls **false**.
+Empfängt einen Wert, der angibt, ob RemoteFX auf dem virtuellen Desktop aktiviert ist. **TRUE,** wenn RemoteFX aktiviert ist; Andernfalls **FALSE**.
 
 </dd> <dt>
 
-*OSVersion* \[ vorgenommen\]
+*OSVersion* \[ out\]
 </dt> <dd>
 
 Empfängt die Betriebssystemversion des virtuellen Desktops.
@@ -68,7 +68,7 @@ Empfängt die Betriebssystemversion des virtuellen Desktops.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,17 +78,17 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32 \_ rdmsvirtualdesktop**](win32-rdmsvirtualdesktop.md)
+[**Win32 \_ RDMSVirtualDesktop**](win32-rdmsvirtualdesktop.md)
 </dt> </dl>
 
  

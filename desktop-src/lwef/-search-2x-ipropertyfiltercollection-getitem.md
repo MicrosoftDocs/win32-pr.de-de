@@ -28,7 +28,7 @@ ms.locfileid: "119451082"
 # <a name="ipropertyfiltercollectiongetitem-property"></a>IPropertyFilterCollection::GetITem-Eigenschaft
 
 > [!NOTE]
-> Windows DesktopSuche 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API.](../search/-search-reference-entry-page.md) 
+> Windows DesktopSuche 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows-Suche-API.](../search/-search-reference-entry-page.md) 
 
 Gibt einen bestimmten Filter innerhalb der Auflistung zurück.
 

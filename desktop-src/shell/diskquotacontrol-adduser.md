@@ -13,12 +13,12 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: de20d016-83da-42ac-962f-86faf9b25419
-ms.openlocfilehash: 9dd69b78210ecda418e784681694d84b27b1732a
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 91e7165e621974c204a2b109251f8c66d71731e2661b5629479656d97ef6f3e4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841531"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090650"
 ---
 # <a name="diskquotacontroladduser-method"></a>DiskQuotaControl.AddUser-Methode
 
@@ -44,7 +44,7 @@ objRetVal = DiskQuotaControl.AddUser(
 
 Typ: **CHAR**
 
-Ein Zeichenfolgenwert, der den Anmeldenamen des Benutzers enthält. Verwenden Sie die [**UserNameResolution-Eigenschaft,**](diskquotacontrol-usernameresolution.md) um anzugeben, wie der Name aufgelöst werden soll.
+Ein Zeichenfolgenwert, der den Anmeldenamen des Benutzers enthält. Verwenden Sie [**die UserNameResolution-Eigenschaft,**](diskquotacontrol-usernameresolution.md) um anzugeben, wie der Name aufgelöst werden soll.
 
 </dd> </dl>
 
@@ -52,11 +52,11 @@ Ein Zeichenfolgenwert, der den Anmeldenamen des Benutzers enthält. Verwenden Si
 
 Typ: **Objekt**
 
-Gibt einen Objektausdruck zurück, der das [**DIDiskQuotaUser-Objekt**](didiskquotauser-object.md) des Benutzers ergibt.
+Gibt einen Objektausdruck zurück, der zum [**DIDiskQuotaUser-Objekt des Benutzers ausgewertet**](didiskquotauser-object.md) wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Das NTFS-Dateisystem erstellt automatisch einen Benutzerkontingenteintrag, wenn ein Benutzer zum ersten Mal auf das Volume schreibt. Einträgen, die auf diese Weise erstellt werden, werden der Standardmäßige Warnungsschwellenwert und die Festgelegten Kontingentgrenzwerte für das Volume zugewiesen. Mit dieser Methode können Sie einen Benutzerkontingenteintrag erstellen, bevor ein Benutzer Informationen auf das Volume schreibt. Es wird ein [**DIDiskQuotaUser-Objekt**](didiskquotauser-object.md) zurückgegeben, mit dem ein Warnungsschwellenwert oder ein Kontingentgrenzwert zugewiesen werden kann, der sich von den Standardeinstellungen für das Volume unterscheidet.
+Das NTFS-Dateisystem erstellt automatisch einen Benutzerkontingenteintrag, wenn ein Benutzer zum ersten Mal auf das Volume schreibt. Einträgen, die auf diese Weise erstellt werden, werden der Standardschwellenwert für Warnungen und die Grenzwerte für harte Kontingente für das Volume zugewiesen. Mit dieser Methode können Sie einen Benutzerkontingenteintrag erstellen, bevor ein Benutzer Informationen auf das Volume schreibt. Es gibt ein [**DIDiskQuotaUser-Objekt**](didiskquotauser-object.md) zurück, das verwendet werden kann, um einen Warnungsschwellenwert oder Kontingentgrenzwert zu zuweisen, der sich von den Standardeinstellungen für das Volume unterscheidet.
 
 Wenn der Benutzer bereits vorhanden ist, wird kein neuer Eintrag erstellt. Die -Methode gibt das [**DIDiskQuotaUser-Objekt**](didiskquotauser-object.md) zurück, das dem vorhandenen Eintrag zugeordnet ist.
 
@@ -72,7 +72,7 @@ Wenn der Benutzer bereits vorhanden ist, wird kein neuer Eintrag erstellt. Die -
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

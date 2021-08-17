@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Update. saveandgodebookmark-Methode'
-title: Update. saveandgodebookmark-Methode
+description: 'Weitere Informationen finden Sie unter: Update.SaveAndGotoBookmark-Methode'
+title: Update.SaveAndGotoBookmark-Methode
 TOCTitle: 'SaveAndGotoBookmark method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Update.SaveAndGotoBookmark
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.update.saveandgotobookmark(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d682657b9821f782af339a3d0c3253b6fa771d37
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 566be9b1af403a794b6ac87259a0fd6b6c0fea46c0b45287c536f336ee734b6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356512"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119106954"
 ---
-# <a name="updatesaveandgotobookmark-method"></a>Update. saveandgodebookmark-Methode
+# <a name="updatesaveandgotobookmark-method"></a>Update.SaveAndGotoBookmark-Methode
 
-Aktualisieren Sie TableID, und positionieren Sie TableID für den geänderten Datensatz. Dies kann hilfreich sein, wenn ein Datensatz eingefügt wird, da die TableID standardmäßig an der alten Position verbleibt.
+Aktualisieren Sie die tableid, und positionieren Sie die tableid im geänderten Datensatz. Dies kann beim Einfügen eines Datensatzes nützlich sein, da die tableid standardmäßig an ihrer alten Position verbleibt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,16 +53,16 @@ instance.SaveAndGotoBookmark()
 public void SaveAndGotoBookmark()
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Speichern ist der letzte Schritt beim Ausführen einer INSERT-oder Update-Ausführung. Das Update wird zunächst durch Aufrufen eines Update Objekts und anschließendes Aufrufen von jetsetcolumn oder jetsetcolumns gestartet, um den Daten Satz Status festzulegen. Zum Schluss wird das Update aufgerufen, um den Aktualisierungs Vorgang abzuschließen. Indizes werden nur durch Update oder nicht von jetsetcolumn oder jetsetcolumns aktualisiert.
+Speichern ist der letzte Schritt beim Ausführen eines Einfüge- oder Aktualisierungsschritts. Das Update wird gestartet, indem das Erstellen eines Update-Objekts und dann JetSetColumn oder JetSetColumns einmal oder mehrmals zum Festlegen des Datensatzzustands aufruft. Zum Schluss wird Update aufgerufen, um den Updatevorgang abschließen zu können. Indizes werden nur durch Update oder und nicht während JetSetColumn oder JetSetColumns aktualisiert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Update-Klasse](./update-class.md)
 
-[Mitglieder aktualisieren](./update-members.md)
+[Aktualisieren von Mitgliedern](./update-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

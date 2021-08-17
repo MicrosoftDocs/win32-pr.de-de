@@ -1,5 +1,5 @@
 ---
-description: Beschreibt einen Referenzpunkt Dienst für virtuelle Systeme.
+description: Beschreibt einen Verweispunktdienst des virtuellen Systems.
 ms.assetid: 888ecd21-4b59-46a9-b2e1-538e30dd2d1c
 title: Msvm_VirtualSystemReferencePointService-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0614349ed6f6358316826bbfc2cd10ac55cba953
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: f33ac35e9848b913978ef6fab91f60823e5c40e9a2bb652236b2ab902e4ea435
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106357149"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119340160"
 ---
-# <a name="msvm_virtualsystemreferencepointservice-class"></a>MSVM \_ virtualsystemreferencepointservice-Klasse
+# <a name="msvm_virtualsystemreferencepointservice-class"></a>Msvm \_ VirtualSystemReferencePointService-Klasse
 
-Beschreibt einen Referenzpunkt Dienst für virtuelle Systeme.
+Beschreibt einen Verweispunktdienst des virtuellen Systems.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -37,23 +37,23 @@ class Msvm_VirtualSystemReferencePointService : CIM_Service
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualsystemreferencepointservice** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualSystemReferencePointService-Klasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **MSVM \_ virtualsystemreferencepointservice** -Klasse verfügt über diese Methoden.
+Die **Msvm \_ VirtualSystemReferencePointService-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                       | BESCHREIBUNG                                                          |
+| Methode                                                                                                       | Beschreibung                                                          |
 |:-------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------|
-| [**"Kreatereferencepoint"**](msvm-virtualsystemreferencepointservice-createreferencepoint.md)                 | Erstellt einen Referenzpunkt eines virtuellen Systems.<br/>            |
-| [**Destroyreferencepoint**](msvm-virtualsystemreferencepointservice-destroyreferencepoint.md)               | Löscht den angegebenen Verweis Punkt.<br/>                    |
-| [**Exportreferencepoint**](msvm-virtualsystemreferencepointservice-exportreferencepoint.md)                 | Exportiert den Verweis Punkt des virtuellen Systems.<br/>        |
-| [**Importreferencepointmetadata**](msvm-virtualsystemreferencepointservice-importreferencepointmetadata.md) | Importiert Verweis Punkt Metadaten des virtuellen Systems.<br/>   |
-| [**Removeassociateddata**](msvm-virtualsystemreferencepointservice-removeassociateddata.md)                 | Entfernt das dem Bezugspunkt zugeordnete Datenprotokoll.<br/> |
+| [**CreateReferencePoint**](msvm-virtualsystemreferencepointservice-createreferencepoint.md)                 | Erstellt einen Verweispunkt eines virtuellen Systems.<br/>            |
+| [**DestroyReferencePoint**](msvm-virtualsystemreferencepointservice-destroyreferencepoint.md)               | Löscht den angegebenen Verweispunkt.<br/>                    |
+| [**ExportReferencePoint**](msvm-virtualsystemreferencepointservice-exportreferencepoint.md)                 | Exportiert den Verweispunkt des virtuellen Systems.<br/>        |
+| [**ImportReferencePointMetadata**](msvm-virtualsystemreferencepointservice-importreferencepointmetadata.md) | Importiert Verweispunktmetadaten des virtuellen Systems.<br/>   |
+| [**RemoveAssociatedData**](msvm-virtualsystemreferencepointservice-removeassociateddata.md)                 | Entfernt das dem Verweispunkt zugeordnete Datenprotokoll.<br/> |
 
 
 
@@ -65,19 +65,19 @@ Die **MSVM \_ virtualsystemreferencepointservice** -Klasse verfügt über diese 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Dienst**](cim-service.md)
+[**\_CIM-Dienst**](cim-service.md)
 </dt> </dl>
 
  

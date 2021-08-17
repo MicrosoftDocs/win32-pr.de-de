@@ -1,5 +1,5 @@
 ---
-description: Die CIM- \_ directoryspecificationfile-Zuordnung stellt das Verzeichnis dar, das die Datei enthält, die durch Verweisen auf die CIM- \_ directoryspecification-Klasse angegeben wird.
+description: Die CIM \_ DirectorySpecificationFile-Zuordnung stellt das Verzeichnis dar, das die durch Verweisen auf die CIM \_ DirectorySpecification-Klasse angegebene Datei enthält.
 ms.assetid: 57fe996e-6bd4-4070-9e99-460b2a36243f
 ms.tgt_platform: multiple
 title: CIM_DirectorySpecificationFile-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 1877d9864a76334c2b2e00fc7822adb09b91028b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: d26cf0ff32380d6d0fb1daaa7e10e06159664b98778a074327c5a6d8654fd270
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127184"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119321350"
 ---
-# <a name="cim_directoryspecificationfile-class"></a>CIM- \_ directoryspecificationfile-Klasse
+# <a name="cim_directoryspecificationfile-class"></a>CIM \_ DirectorySpecificationFile-Klasse
 
-Die **CIM- \_ directoryspecificationfile-Zuordnung** stellt das Verzeichnis dar, das die Datei enthält, die durch Verweisen auf die CIM- [**\_ directoryspecification**](cim-directoryspecification.md) -Klasse angegeben wird.
+Die **CIM \_ DirectorySpecificationFile-Zuordnung** stellt das Verzeichnis dar, das die datei enthält, die durch Verweisen auf die [**CIM \_ DirectorySpecification-Klasse**](cim-directoryspecification.md) angegeben wird.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,53 +47,53 @@ class CIM_DirectorySpecificationFile
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ directoryspecificationfile** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ DirectorySpecificationFile-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ directoryspecificationfile** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ DirectorySpecificationFile-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Directoriyspecification**
+**DirectorySpecification**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ directoriyspecification**
+Datentyp: **CIM \_ DirectorySpecification**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
+Qualifizierer: [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Min.**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
 </dt> </dl>
 
-Verweis auf die Verzeichnis Spezifikation.
+Verweis auf die Verzeichnisspezifikation.
 
 </dd> <dt>
 
-**File Specification**
+**FileSpecification**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ File Specification**
+Datentyp: **CIM \_ FileSpecification**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
+Qualifizierer: [**Min.**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
 </dt> </dl>
 
-Verweis auf die Datei Spezifikation.
+Verweis auf die Dateispezifikation.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,8 +103,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

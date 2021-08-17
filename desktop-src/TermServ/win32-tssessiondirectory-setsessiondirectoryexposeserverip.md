@@ -1,12 +1,12 @@
 ---
-title: Die Methode "szessiondirectoryexposeserverip" der Win32_TSSessionDirectory-Klasse
-description: Legt die sessiondirectoriyexposeserverip-Eigenschaft fest.
+title: SetSessionDirectoryExposeServerIP-Methode der Win32_TSSessionDirectory-Klasse
+description: Legt die SessionDirectoryExposeServerIP-Eigenschaft fest.
 ms.assetid: ae9a0c72-0a0a-42a0-a233-13da1efe60ef
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste der Methode "" der Methode "" der Methode "*"
-- Methode Remotedesktopdienste der Methode "" der Klasse "Win32_TSSessionDirectory"
-- Win32_TSSessionDirectory-Klasse Remotedesktopdienste, Methode "" der Methode ""
+- SetSessionDirectoryExposeServerIP-Methode Remotedesktopdienste
+- SetSessionDirectoryExposeServerIP-Methode Remotedesktopdienste , Win32_TSSessionDirectory-Klasse
+- Win32_TSSessionDirectory-Klasse Remotedesktopdienste , SetSessionDirectoryExposeServerIP-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bc03f175e780d63eed3881b9146116702a30a02a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7267a8462e89bdd995896a97fad82cb84ae4e8a36037e39767eca1239611af29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137603"
 ---
-# <a name="setsessiondirectoryexposeserverip-method-of-the-win32_tssessiondirectory-class"></a>Die Methode "tssessiondirectoryexposeserverip" der Win32- \_ Klasse "tssessiondirectory"
+# <a name="setsessiondirectoryexposeserverip-method-of-the-win32_tssessiondirectory-class"></a>SetSessionDirectoryExposeServerIP-Methode der Win32 \_ TSSessionDirectory-Klasse
 
-Legt die **sessiondirectoriyexposeserverip-** Eigenschaft fest.
+Legt die **SessionDirectoryExposeServerIP-Eigenschaft** fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,23 +43,23 @@ uint32 SetSessionDirectoryExposeServerIP(
 
 <dl> <dt>
 
-*Sessiondirectoriyexposeserverip* \[ in\]
+*SessionDirectoryExposeServerIP* \[ In\]
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Flag zum Deaktivieren oder Aktivieren der **sessiondirectoriyexposeserverip-** Eigenschaft, die das Abrufen der IP-Adresse für das Sitzungs Verzeichnis zulässt oder ablehnt.
+Flag zum Deaktivieren oder Aktivieren der **SessionDirectoryExposeServerIP-Eigenschaft,** die den Abruf der IP-Adresse für das Sitzungsverzeichnis zulässt oder verweigert.
 
 <dt>
 
 <span id="0"></span>
 
-<span id="0"></span>**1,0**
+<span id="0"></span>**0**
 
 
 </dt> <dd>
 
-Deaktivieren Sie die-Eigenschaft.
+Deaktivieren Sie die -Eigenschaft.
 
 </dd> <dt>
 
@@ -70,19 +70,19 @@ Deaktivieren Sie die-Eigenschaft.
 
 </dt> <dd>
 
-Aktivieren Sie die-Eigenschaft.
+Aktivieren Sie die -Eigenschaft.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) . Die-Methode gibt einen Fehler zurück, wenn die Einstellung Untergruppen Richtlinien Steuerung liegt.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md) Die -Methode gibt einen Fehler zurück, wenn die Einstellung der Gruppenrichtliniensteuerung unterliegt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,16 +93,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ tssessiondirectory**](win32-tssessiondirectory.md)
+[**Win32 \_ TSSessionDirectory**](win32-tssessiondirectory.md)
 </dt> </dl>
 
  

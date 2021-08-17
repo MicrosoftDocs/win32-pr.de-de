@@ -1,23 +1,23 @@
 ---
-description: Die lineagentstatusex- \_ Konstanten beschreiben den Status eines Agents.
+description: Die \_ LINEAGENTSTATUSEX-Konstanten beschreiben den Status eines Agents.
 ms.assetid: 4edebbb4-e031-468e-ad88-3226814a606b
-title: LINEAGENTSTATUSEX_ Konstanten (TAPI. h)
+title: LINEAGENTSTATUSEX_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ada704a79310233140425e71b95295a1b9c43d97
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c42fa69c4218bbf16a2017608190bbed28920e1906c92d402d6ab776346259ed
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352129"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682020"
 ---
-# <a name="lineagentstatusex_-constants"></a>Lineagentstatus usex- \_ Konstanten
+# <a name="lineagentstatusex_-constants"></a>\_LINEAGENTSTATUSEX-Konstanten
 
-Die **lineagentstatusex- \_ Konstanten** beschreiben den Status eines Agents.
+Die **\_ LINEAGENTSTATUSEX-Konstanten** beschreiben den Status eines Agents.
 
 <dl> <dt>
 
-<span id="LINEAGENTSTATUSEX_NEWAGENT"></span><span id="lineagentstatusex_newagent"></span>**lineagentstatus usex \_ newagent**
+<span id="LINEAGENTSTATUSEX_NEWAGENT"></span><span id="lineagentstatusex_newagent"></span>**LINEAGENTSTATUSEX \_ NEWAGENT**
 </dt> <dd> <dl> <dt>
 
 
@@ -27,22 +27,22 @@ Ein Agent wurde hinzugefügt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEAGENTSTATUSEX_STATE"></span><span id="lineagentstatusex_state"></span>**Status von lineagentstatusex \_**
+<span id="LINEAGENTSTATUSEX_STATE"></span><span id="lineagentstatusex_state"></span>**LINEAGENTSTATUSEX \_ STATE**
 </dt> <dd> <dl> <dt>
 
 
 
-Der aktuelle Agent-Status.
+Der aktuelle Agentstatus.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEAGENTSTATUSEX_UPDATEINFO"></span><span id="lineagentstatusex_updateinfo"></span>**lineagentstatus usex \_ Update Info**
+<span id="LINEAGENTSTATUSEX_UPDATEINFO"></span><span id="lineagentstatusex_updateinfo"></span>**LINEAGENTSTATUSEX \_ UPDATEINFO**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Agent-Status weist aktualisierte Informationen auf.
+Der Agent-Status enthält aktualisierte Informationen.
 
 
 </dt> </dl> </dd> </dl>
@@ -53,8 +53,8 @@ Der Agent-Status weist aktualisierte Informationen auf.
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,2<br/>                                                      |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.2<br/>                                                      |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

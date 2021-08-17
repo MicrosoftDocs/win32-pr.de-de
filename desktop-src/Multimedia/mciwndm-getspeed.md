@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_GETSPEED Meldung (Vfw.h)
+title: MCIWNDM_GETSPEED-Nachricht (Vfw.h)
 description: Die MCIWNDM \_ GETSPEED-Nachricht ruft die Wiedergabegeschwindigkeit eines MCI-Geräts ab. Sie können diese Nachricht explizit oder mithilfe des MCIWndGetSpeed-Makros senden.
 ms.assetid: d10a8f88-e85e-449b-8655-bb0832031d59
 keywords:
-- MCIWNDM_GETSPEED Nachricht Windows Multimedia
+- MCIWNDM_GETSPEED nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -50,7 +50,7 @@ Gibt bei Erfolg die Wiedergabegeschwindigkeit zurück. Der Wert für die Normalg
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

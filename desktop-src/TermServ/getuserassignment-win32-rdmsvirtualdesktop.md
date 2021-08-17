@@ -1,12 +1,12 @@
 ---
-title: Getuserzuweisungs-Methode der Win32_RDMSVirtualDesktop-Klasse
-description: Ruft den Benutzernamen und den Domänen Namen des Benutzers ab, der dem virtuellen Desktop zugewiesen ist.
+title: GetUserAssignment-Methode der Win32_RDMSVirtualDesktop Klasse
+description: Ruft den Benutzernamen und domänennamen des Benutzers ab, der dem virtuellen Desktop zugewiesen ist.
 ms.assetid: 1887c49d-85df-4fb4-9b40-42fb7763bf95
 ms.tgt_platform: multiple
 keywords:
-- Getuserzuweisungs-Methode Remotedesktopdienste
-- Getuserzuweisungs-Methode Remotedesktopdienste, Win32_RDMSVirtualDesktop-Klasse
-- Win32_RDMSVirtualDesktop-Klasse Remotedesktopdienste, getuserzuweisungs-Methode
+- GetUserAssignment-Remotedesktopdienste
+- GetUserAssignment-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktop-Klasse
+- Win32_RDMSVirtualDesktop klasse Remotedesktopdienste , GetUserAssignment-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 87293a471bb4f69b3f4c57de0f964fa0daa043cf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9ff3d63179ec68c38ada5738390979e4844ff2950f91decf82245a6b164dbab2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119059558"
 ---
-# <a name="getuserassignment-method-of-the-win32_rdmsvirtualdesktop-class"></a>Getuserzuweisungs-Methode der Win32 \_ rdmsvirtualdesktop-Klasse
+# <a name="getuserassignment-method-of-the-win32_rdmsvirtualdesktop-class"></a>GetUserAssignment-Methode der Win32 \_ RDMSVirtualDesktop-Klasse
 
-Ruft den Benutzernamen und den Domänen Namen des Benutzers ab, der dem virtuellen Desktop zugewiesen ist.
+Ruft den Benutzernamen und domänennamen des Benutzers ab, der dem virtuellen Desktop zugewiesen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ uint32 GetUserAssignment(
 
 <dl> <dt>
 
-*Benutzername* \[ vorgenommen\]
+*UserName* \[ out\]
 </dt> <dd>
 
 Empfängt den Benutzernamen.
 
 </dd> <dt>
 
-*Benutzer Domäne* \[ vorgenommen\]
+*UserDomain* \[ out\]
 </dt> <dd>
 
-Empfängt den Domänen Namen.
+Empfängt den Domänennamen.
 
 </dd> </dl>
 
@@ -70,17 +70,17 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2-Rdms \\<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32 \_ rdmsvirtualdesktop**](win32-rdmsvirtualdesktop.md)
+[**Win32 \_ RDMSVirtualDesktop**](win32-rdmsvirtualdesktop.md)
 </dt> </dl>
 
  

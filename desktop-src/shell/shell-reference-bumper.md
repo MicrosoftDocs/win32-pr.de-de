@@ -9,12 +9,12 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: b3b9ab1fa1b9e2568c4c731ce89599654eec3158
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 18a80060bc935ac1671f0a10de87c56506587cfb70ec63f57a09683446b8aee7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108104168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090150"
 ---
 # <a name="shell-reference"></a>Shellreferenz
 
@@ -22,11 +22,11 @@ ms.locfileid: "108104168"
 -   [Shellschnittstellen](interfaces.md)
 -   [Shellfunktionen](functions.md)
 -   [Shell-Rückruffunktionen](callbacks.md)
--   [Shellkonstanten, Enumerationen und Flags](consts-enums-flags.md)
--   [Einfache Shell-Hilfsprogrammfunktionen](shlwapi.md)
+-   [Shellkonst constants, Enumerations, and Flags](consts-enums-flags.md)
+-   [Shell-Lightweight-Hilfsprogrammfunktionen](shlwapi.md)
 -   [Shellmakros](macros.md)
--   [Shellnachrichten und -benachrichtigungen](messages.md)
--   [Shellobjekte für Skripterstellung und Microsoft Visual Basic](objects.md)
+-   [Shellmeldungen und -benachrichtigungen](messages.md)
+-   [Shellobjekte für Scripting und Microsoft Visual Basic](objects.md)
 -   [Shellobjekte für C++](objects-cpp.md)
 -   [Shellschemas](schemas.md)
 -   [Shellstrukturen](structures.md)

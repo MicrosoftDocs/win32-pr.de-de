@@ -1,11 +1,11 @@
 ---
-title: ITF contextrenderingmarkup GetRenderingMarkup-Methode
-description: Die ITF contextrenderingmarkup GetRenderingMarkup-Methode ruft einen Enumerator der rendermarkups für den angegebenen Bereich ab.
+title: ITfContextRenderingMarkup GetRenderingMarkup-Methode
+description: Die ITfContextRenderingMarkup GetRenderingMarkup-Methode ruft einen Enumerator der Renderingmarkups für den angegebenen Bereich ab.
 ms.assetid: fe060eab-8a6b-4eb7-9c7f-353b887657d8
 keywords:
-- GetRenderingMarkup-Methode-Text Dienst-Framework
-- GetRenderingMarkup Method Text Services Framework, ITF contextrenderingmarkup-Schnittstelle
-- ITF contextrenderingmarkup Interface Text Services Framework, GetRenderingMarkup-Methode
+- GetRenderingMarkup-Textdienstframework
+- GetRenderingMarkup-Methode Textdienstframework , ITfContextRenderingMarkup-Schnittstelle
+- ITfContextRenderingMarkup-Schnittstelle Textdienstframework , GetRenderingMarkup-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1f3ccfb97af6a6657c33982359640a2a924cad2f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 4a94c8a7cce8673560cf01091b819def343213bfde578df6ce1e8850e2721723
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728553"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119476954"
 ---
-# <a name="itfcontextrenderingmarkupgetrenderingmarkup-method"></a>ITF contextrenderingmarkup:: GetRenderingMarkup-Methode
+# <a name="itfcontextrenderingmarkupgetrenderingmarkup-method"></a>ITfContextRenderingMarkup::GetRenderingMarkup-Methode
 
-Die **ITF contextrenderingmarkup:: GetRenderingMarkup** -Methode ruft einen Enumerator der rendermarkups für den angegebenen Bereich ab.
+Die **ITfContextRenderingMarkup::GetRenderingMarkup-Methode** ruft einen Enumerator der Renderingmarkups für den angegebenen Bereich ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ HRESULT GetRenderingMarkup(
 
 <dl> <dt>
 
-*EC* \[ in\]
+*ec* \[ In\]
 </dt> <dd>
 
-\[in \] einem schreibgeschützten Bearbeitungs Cookie, um auf den Kontext zuzugreifen.
+\[in \] Ein schreibgeschütztes Bearbeitungscookie für den Zugriff auf den Kontext.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 \[in\]
@@ -60,7 +60,7 @@ HRESULT GetRenderingMarkup(
 
 | Wert                                                                                                                                                                                         | Bedeutung                                                                                      |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| <span id="TF_GRM_INCLUDE_PROPERTY"></span><span id="tf_grm_include_property"></span><dl> <dt>**TF \_ GRM \_ include- \_ Eigenschaft**</dt> </dl> | Wenn dieses Bit 1 ist, enthält der Enumerator die GUID- \_ Eigenschaft des prop- \_ Attributs.<br/> |
+| <span id="TF_GRM_INCLUDE_PROPERTY"></span><span id="tf_grm_include_property"></span><dl> <dt>**TF \_ GRM \_ \_ INCLUDE-EIGENSCHAFT**</dt> </dl> | Wenn dieses Bit 1 ist, enthält der Enumerator die EIGENSCHAFT GUID \_ PROP \_ ATTRIBUTE.<br/> |
 
 
 
@@ -68,17 +68,17 @@ HRESULT GetRenderingMarkup(
 
 </dd> <dt>
 
-*prangecover* \[ in\]
+*pRangeCover* \[ In\]
 </dt> <dd>
 
-\[in \] einem Zeiger auf eine [itfrange](/windows/desktop/api/Msctf/nn-msctf-itfrange) -Schnittstelle des Bereichs zum Aufzählen der rendermarkups.
+\[in \] Ein Zeiger auf eine [ITfRange-Schnittstelle](/windows/desktop/api/Msctf/nn-msctf-itfrange) des Bereichs zum Aufzählen der Renderingmarkups.
 
 </dd> <dt>
 
-*ppum* \[ vorgenommen\]
+*ppEnum* \[ out\]
 </dt> <dd>
 
-\[\]ein Zeiger zum Abrufen des [ienumtfrenderingmarkup](/windows/desktop/TSF/ienumtfrenderingmarkup) -Schnittstellen Zeigers.
+\[out \] Ein Zeiger zum Abrufen des [IEnumTfRenderingMarkup-Schnittstellenzeigers.](/windows/desktop/TSF/ienumtfrenderingmarkup)
 
 </dd> </dl>
 
@@ -96,10 +96,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Diese Methode befindet sich derzeit nicht in den öffentlichen Header Dateien. Um diese API verwenden zu können, müssen Sie den [Prototyp](prototypes.md)als Mittelpunkt kompilieren.
+> Diese Methode befindet sich derzeit nicht in den öffentlichen Headerdateien. Um diese API zu verwenden, müssen Sie den Prototyp [midl-kompilieren.](prototypes.md)
 
  
 

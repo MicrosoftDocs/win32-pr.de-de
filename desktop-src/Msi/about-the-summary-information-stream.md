@@ -1,25 +1,25 @@
 ---
-description: Der Datenstrom für Zusammenfassungs Informationen enthält Informationen über das Paket, das über Microsoft Windows-Explorer angezeigt werden kann.
+description: Der Zusammenfassungsinformationsstream enthält Informationen zum Paket, die über den Microsoft Windows Explorer angezeigt werden können.
 ms.assetid: b909955f-ddd6-4cf1-8e86-fcf89be80b41
-title: Informationen zum Datenstrom für Zusammenfassungs Informationen
+title: Informationen zum Zusammenfassungsinformationsstream
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ab931d7f9b6dd726fc6df3d7b805f4cc5c25caa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5178edc9fe2a94ddd2812abb8161c88423cc17cd033d228b066d5ce74b9f1694
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131509"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146033"
 ---
-# <a name="about-the-summary-information-stream"></a>Informationen zum Datenstrom für Zusammenfassungs Informationen
+# <a name="about-the-summary-information-stream"></a>Informationen zum Zusammenfassungsinformationsstream
 
-Der Datenstrom für Zusammenfassungs Informationen enthält Informationen über das Paket, das über Microsoft Windows-Explorer angezeigt werden kann. Diese Informationen sind über die **IStream** -Schnittstelle zugänglich. Der Autor muss die Werte für jede dieser Eigenschaften angeben.
+Der Zusammenfassungsinformationsstream enthält Informationen zum Paket, die über den Microsoft Windows Explorer angezeigt werden können. Auf diese Informationen kann über die **IStream-Schnittstelle zugegriffen** werden. Der Autor muss die Werte für jede dieser Eigenschaften bereitstellen.
 
-Der Zusammenfassungs Datenstrom verwendet com, um eine strukturierte Speicherung von Datenbanken bereitzustellen. COM unterstützt das Konzept des strukturierten Speichers, der über die **IStream** -Schnittstelle zugänglich ist. Die strukturierte Speicherung unterstützt wiederum das Konzept der Eigenschaften Sätze als flexible Methode für die Serialisierung von fast allen Informationen. Die com-Spezifikation definiert einen einzelnen Standardeigenschaften Satz, zusammenfassende Informationen, der verwendet wird, um die von Windows-Explorer sichtbaren Eigenschaften Blätter aufzufüllen. Daher können die im Zusammenfassungs Datenstrom gespeicherten Informationen von Benutzern angezeigt werden, wenn Sie mit der rechten Maustaste auf eine Installerdatenbank oder eine Transformation klicken und [Eigenschaften](about-properties.md)auswählen.
+Der Zusammenfassungsinformationsstream verwendet COM, um eine strukturierte Speicherung von Datenbanken zu ermöglichen. COM unterstützt das Konzept des strukturierten Speichers, auf den über die **IStream-Schnittstelle zugegriffen werden** kann. Der strukturierte Speicher unterstützt wiederum das Konzept von Eigenschaftssätzen als flexible Methode zum Serialisieren fast aller Informationen. Die COM-Spezifikation definiert einen einzelnen Standardeigenschaftssatz, Zusammenfassungsinformationen, der zum Auffüllen von Eigenschaftenblättern verwendet wird, die im Windows werden können. Daher können im Zusammenfassungsinformationsstream gespeicherte Informationen von Benutzern angezeigt werden, wenn sie mit der rechten Maustaste auf eine Installer-Datenbank klicken oder transformieren und Eigenschaften [auswählen.](about-properties.md)
 
-Eine Liste der Zusammenfassungs Eigenschaften Satzes finden Sie unter [Summary Information Stream-Eigenschaften Satz](summary-information-stream-property-set.md).
+Eine Liste der Zusammenfassungseigenschaftssatz finden Sie [unter Summary Information Stream Property Set](summary-information-stream-property-set.md).
 
-Eine kurze Beschreibung der Eigenschaften der Zusammenfassungs Informationen, die mit Datenbanken, Transformationen und Patches verwendet werden, finden Sie unter [Summary Property-Beschreibungen](summary-property-descriptions.md).
+Eine kurze Beschreibung der Eigenschaften von Zusammenfassungsinformationen, die mit Datenbanken, Transformationen und Patches verwendet werden, finden Sie unter [Zusammenfassungseigenschaftenbeschreibungen](summary-property-descriptions.md).
 
  
 

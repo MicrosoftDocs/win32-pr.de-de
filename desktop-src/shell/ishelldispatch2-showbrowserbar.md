@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 7143b55ae59c8fca845d256ddc1f79e69672364b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0b1380a44d2985b75e77dced43878c85e38d6a21b877fe06d9cdc7c10a8a2002
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108116938"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090330"
 ---
 # <a name="ishelldispatch2showbrowserbar-method"></a>IShellDispatch2.ShowBrowserBar-Methode
 
@@ -83,11 +83,11 @@ Typ: **\* Variant**
 
 Gibt **true** zurück, wenn erfolgreich. andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode wird implementiert und über die [**Shell.ShowBrowserBar-Methode**](./shell-showbrowserbar.md) aufgerufen.
 
-Sie können eine der Standard-Explorer-Balken anzeigen, indem Sie den *sCLSID-Parameter* auf die CLSID dieser Explorer-Leiste festlegen. Die standardmäßigen Explorer-Balken und ihre CLSID-Zeichenfolgen sind wie folgt:
+Sie können eine der Standard-Explorer-Balken anzeigen, indem Sie den *sCLSID-Parameter* auf die CLSID dieser Explorer-Leiste festlegen. Die Standard-Explorer-Balken und ihre CLSID-Zeichenfolgen sind wie folgt:
 
 
 
@@ -96,19 +96,19 @@ Sie können eine der Standard-Explorer-Balken anzeigen, indem Sie den *sCLSID-Pa
 | Favoriten    | {EFA24E61-B078-11d0-89E4-00C04FC9E26E} |
 | Ordner      | {EFA24E64-B078-11d0-89E4-00C04FC9E26E} |
 | Verlauf      | {EFA24E62-B078-11d0-89E4-00C04FC9E26E} |
-| Suche       | {30D02401-6A81-11d0-8274-00C04FD5AE38} |
+| Suchen,       | {30D02401-6A81-11d0-8274-00C04FD5AE38} |
 
 
 
  
 
-Diese Methode ist derzeit in Microsoft Visual Basic nicht verfügbar.
+Diese Methode ist in Microsoft Visual Basic derzeit nicht verfügbar.
 
 ## <a name="examples"></a>Beispiele
 
 In den folgenden Beispielen wird die Verwendung von **ShowBrowserBar** zum Anzeigen der **Browserleiste Favoriten** gezeigt. Die Verwendung wird für JScript und VBScript angezeigt.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -149,10 +149,10 @@ Vbscript:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |

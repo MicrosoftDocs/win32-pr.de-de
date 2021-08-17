@@ -1,7 +1,7 @@
 ---
-description: Definiert eine-Struktur, die einen oder mehrere-Werte enthält.
+description: Definiert eine -Struktur, die einen oder mehrere Zählerwerte enthält.
 ms.assetid: 3085d490-4ac1-491c-bce0-8af46b16fab9
-title: komplexer Strukturtyp
+title: Komplexer struct-Typ
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: dc59103a1a98b0baf1559ead159221ea42288936
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 29796a259810cd03739c45338709966bd765f0c1fd9026777f435acb2c5de253
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348013"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119978850"
 ---
-# <a name="struct-complex-type"></a>komplexer Strukturtyp
+# <a name="struct-complex-type"></a>Komplexer struct-Typ
 
-Definiert eine-Struktur, die einen oder mehrere-Werte enthält.
+Definiert eine -Struktur, die einen oder mehrere Zählerwerte enthält.
 
 ``` syntax
 <xs:complexType name="struct">
@@ -43,10 +43,10 @@ Definiert eine-Struktur, die einen oder mehrere-Werte enthält.
 
 
 
-| Name | type                                                                    | BESCHREIBUNG                                                                                                                                      |
+| Name | type                                                                    | Beschreibung                                                                                                                                      |
 |------|-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| name | [**man: csymboltype**](performance-counters-csymboltype-simple-type.md) | Der Name der Struktur.<br/>                                                                                                            |
-| type | [**man: csymboltype**](performance-counters-csymboltype-simple-type.md) | Ein symbolischer Name, der die-Struktur bezeichnet. Das [ctrpp](ctrpp.md) -Tool erstellt eine Struktur Variable mit diesem Namen, die Sie verwenden können.<br/> |
+| name | [**man:CSymbolType**](performance-counters-csymboltype-simple-type.md) | Der Name der Struktur.<br/>                                                                                                            |
+| Type | [**man:CSymbolType**](performance-counters-csymboltype-simple-type.md) | Ein symbolischer Name, der die Struktur identifiziert. Das [CTRPP-Tool](ctrpp.md) erstellt eine Strukturvariable mit diesem Namen, die Sie verwenden können.<br/> |
 
 
 
@@ -56,8 +56,8 @@ Definiert eine-Struktur, die einen oder mehrere-Werte enthält.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

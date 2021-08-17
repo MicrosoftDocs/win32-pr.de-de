@@ -1,37 +1,37 @@
 ---
-description: Dieses Ereignis benachrichtigt das Installationsprogramm, während das vorhandene Dialogfeld weiterhin ausgeführt wird, dass eine Funktion oder alle Funktionen von der Quelle ausgeführt werden sollen.
+description: Dieses Ereignis benachrichtigt das Installationsprogramm, während der aktuelle Dialog ausgeführt wird, dass ein Feature oder alle Features aus der Quelle ausgeführt werden sollen.
 ms.assetid: fd8d6433-87cc-4544-9f4f-57a90e5f2ea5
-title: Addsource-ControlEvent
+title: AddSource ControlEvent
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e7441fb6cdf10abf25798c5e56405b6b4eab11b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b0adff72ac14376c7084d6c3c005a77b2891019947cd22e8d73e58bfa09ad64
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119145953"
 ---
-# <a name="addsource-controlevent"></a>Addsource-ControlEvent
+# <a name="addsource-controlevent"></a>AddSource ControlEvent
 
-Dieses Ereignis benachrichtigt das Installationsprogramm, während das vorhandene Dialogfeld weiterhin ausgeführt wird, dass eine Funktion oder alle Funktionen von der Quelle ausgeführt werden sollen. Dieses Ereignis kann durch ein [PUSHBUTTON-Steuer](pushbutton-control.md)Element, ein [CheckBox-Steuer](checkbox-control.md)Element oder ein [SelectionTree-Steuer](selectiontree-control.md)Element veröffentlicht werden. Dieses Ereignis sollte in der [Tabelle ControlEvent](controlevent-table.md)erstellt werden.
+Dieses Ereignis benachrichtigt das Installationsprogramm, während der aktuelle Dialog ausgeführt wird, dass ein Feature oder alle Features aus der Quelle ausgeführt werden sollen. Dieses Ereignis kann von einem [PushButton-Steuerelement,](pushbutton-control.md)einem [Checkbox-Steuerelement](checkbox-control.md)oder einem [SelectionTree-Steuerelement veröffentlicht werden.](selectiontree-control.md) Dieses Ereignis sollte in der [ControlEvent-Tabelle verfasst werden.](controlevent-table.md)
 
-Diese ControlEvent erfordert, dass die Benutzeroberfläche auf der [*vollständigen*](f-gly.md) Benutzeroberfläche ausgeführt wird. Dieses Ereignis funktioniert nicht mit einer [*reduzierten Benutzer*](r-gly.md) Oberfläche oder [*grundlegender Benutzeroberfläche*](b-gly.md). Weitere Informationen finden Sie unter [Benutzeroberflächen Ebenen](user-interface-levels.md).
+Für dieses ControlEvent muss die Benutzeroberfläche auf der vollständigen [*Benutzeroberflächenebene ausgeführt*](f-gly.md) werden. Dieses Ereignis funktioniert nicht mit einer reduzierten [*Benutzeroberfläche oder*](r-gly.md) einer [*einfachen Benutzeroberfläche.*](b-gly.md) Weitere Informationen finden Sie unter [Benutzeroberfläche Levels](user-interface-levels.md).
 
 ## <a name="published-by"></a>Veröffentlicht von
 
-Diese ControlEvent wird vom Installationsprogramm veröffentlicht.
+Dieses ControlEvent wird vom Installationsprogramm veröffentlicht.
 
 ## <a name="argument"></a>Argument
 
-Eine Zeichenfolge, entweder der Name der Funktion oder "All".
+Eine Zeichenfolge, entweder der Name des Features oder "ALL".
 
 ## <a name="action-on-subscribers"></a>Aktion auf Abonnenten
 
-Diese ControlEvent führt keine Aktion für Abonnenten aus.
+Dieses ControlEvent führt keine Aktion auf Abonnenten aus.
 
 ## <a name="typical-use"></a>Typische Verwendung
 
-Ein [PUSHBUTTON](pushbutton-control.md) -Steuerelement in einem modalen Dialogfeld ist an dieses Ereignis gebunden und wird verwendet, um das Installationsprogramm zu benachrichtigen, ohne das Dialogfeld zu beenden.
+Ein [PushButton-Steuerelement](pushbutton-control.md) in einem modalen Dialogfeld ist an dieses Ereignis gebunden und wird verwendet, um das Installationsprogramm zu benachrichtigen, ohne das Dialogfeld zu beenden.
 
  
 

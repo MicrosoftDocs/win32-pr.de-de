@@ -1,27 +1,27 @@
 ---
-description: In diesem Thema wird beschrieben, wie Sie die Schnittstellen verwenden, die den Zugriff auf Seiten Verweise in einem XPS-OM ermöglichen.
+description: In diesem Thema wird beschrieben, wie die Schnittstellen verwendet werden, die den Zugriff auf Seitenverweise in einem XPS OM ermöglichen.
 ms.assetid: bb227536-3b29-4221-b2d5-bab5e9d91448
-title: Arbeiten mit ixpsompagereferenzierungsschnittstellen
+title: Arbeiten mit IXpsOMPageReference-Schnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f4526e6c561a962b77fa3f2fc62d56431359aa6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee38856075a967fbf0f66255c922e181961dc42f1214f75e05da7d4062d6c4a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865864"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119098682"
 ---
-# <a name="working-with-ixpsompagereference-interfaces"></a>Arbeiten mit ixpsompagereferenzierungsschnittstellen
+# <a name="working-with-ixpsompagereference-interfaces"></a>Arbeiten mit IXpsOMPageReference-Schnittstellen
 
-In diesem Thema wird beschrieben, wie Sie die Schnittstellen verwenden, die den Zugriff auf Seiten Verweise in einem XPS-OM ermöglichen.
+In diesem Thema wird beschrieben, wie die Schnittstellen verwendet werden, die den Zugriff auf Seitenverweise in einem XPS OM ermöglichen.
 
 
 
-| Schnittstellen Name                                                  | Logische untergeordnete Schnittstellen                    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                      |
+| Schnittstellenname                                                  | Logische untergeordnete Schnittstellen                    | Beschreibung                                                                                                                                                                                                                                                                                                                                                      |
 |-----------------------------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Ixpsompagereferenzierung**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference)<br/>   | [**Ixpsompage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompage)<br/> | Virtualisiert den Inhalt einer Dokument Seite. <br/> Ein Seiten Verweis enthält grundlegende Informationen über die Seite, einige Seiteneigenschaften und einen Link zum Seiten Inhalt. Die [**ixpsompage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompage) -Schnittstelle, die Seiteninhalte umfasst, wird von der [**ixpsompagereferen:: GetPage**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-getpage) -Methode zurückgegeben.<br/> |
-| [**Ixpsomnamecollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomnamecollection)<br/> | Keine<br/>                             | Enthält eine Liste von Seitenelementen, bei denen es sich um Linkziele handelt. Die Liste wird von der [**ixpsompagereferen:: collectlinktargets**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-collectlinktargets) -Methode zurückgegeben.<br/>                                                                                                                                                               |
-| [**Ixpsomparametresources**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompartresources)<br/>   | Keine<br/>                             | Enthält eine Liste der teilbasierten Ressourcen, die der Seite zugeordnet sind. Diese Liste wird von der [**ixpsompagereferen:: collectsamtresources**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-collectpartresources) -Methode zurückgegeben.<br/>                                                                                                                                     |
+| [**IXpsOMPageReference**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference)<br/>   | [**IXpsOMPage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompage)<br/> | Virtualisiert den Inhalt einer Dokumentseite. <br/> Ein Seitenverweis enthält grundlegende Informationen über die Seite, einige Seiteneigenschaften und einen Link zum Seiteninhalt. Die [**IXpsOMPage-Schnittstelle,**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompage) die Seiteninhalte umfasst, wird von der [**IXpsOMPageReference::GetPage-Methode**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-getpage) zurückgegeben.<br/> |
+| [**IXpsOMNameCollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomnamecollection)<br/> | Keine<br/>                             | Enthält eine Liste von Seitenelementen, die Linkziele sind. Die Liste wird von der [**IXpsOMPageReference::CollectLinkTargets-Methode**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-collectlinktargets) zurückgegeben.<br/>                                                                                                                                                               |
+| [**IXpsOMPartResources**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompartresources)<br/>   | Keine<br/>                             | Enthält eine Liste der teilbasierten Ressourcen, die der Seite zugeordnet sind. Diese Liste wird von der [**IXpsOMPageReference::CollectPartResources-Methode**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-collectpartresources) zurückgegeben.<br/>                                                                                                                                     |
 
 
 
@@ -29,15 +29,15 @@ In diesem Thema wird beschrieben, wie Sie die Schnittstellen verwenden, die den 
 
 ## <a name="code-examples"></a>Codebeispiele
 
-Die folgenden Codebeispiele veranschaulichen die Arbeit mit den Seiten Verweis Schnittstellen in einem Programm.
+Die folgenden Codebeispiele veranschaulichen die Arbeit mit den Seitenverweisschnittstellen in einem Programm.
 
--   [Inhalt der Seite erhalten](#get-the-page-contents)
--   [Hiermit wird die Liste der Hyperlink-Ziele auf dieser Seite angezeigt.](#get-the-list-of-hyperlink-targets-on-this-page)
--   [Hiermit werden die Teil Ressourcen angezeigt, die dieser Seite zugeordnet sind.](#get-the-part-resources-that-are-associated-with-this-page)
+-   [Anzeigen des Seiteninhalts](#get-the-page-contents)
+-   [Abrufen der Liste der Linkziele auf dieser Seite](#get-the-list-of-hyperlink-targets-on-this-page)
+-   [Hier finden Sie die Teilressourcen, die dieser Seite zugeordnet sind.](#get-the-part-resources-that-are-associated-with-this-page)
 
-### <a name="get-the-page-contents"></a>Inhalt der Seite erhalten
+### <a name="get-the-page-contents"></a>Anzeigen des Seiteninhalts
 
-Im folgenden Codebeispiel wird ein Zeiger auf die [**ixpsompage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompage) -Schnittstelle abgerufen, die den Seiten Inhalt umfasst. Wenn die Seite nicht in das XPS-OM geladen wurde [**, wird die**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-getpage) Seite in das XPS-OM geladen, wenn das XPS-OM durch Aufrufen von [**ixpsomobjectfactory:: createpackagefromfile**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createpackagefromfile)initialisiert wird.
+Das folgende Codebeispiel ruft einen Zeiger auf die [**IXpsOMPage-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompage) ab, die den Seiteninhalt enthält. Wenn die Seite nicht in die XPS OM geladen wurde, wie dies geschieht, wenn das XPS OM durch Aufrufen von [**IXpsOMObjectFactory::CreatePackageFromFile**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomobjectfactory-createpackagefromfile)initialisiert wird, wird die Seite durch Aufrufen von [**IXpsOMPageReference::GetPage**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-getpage) in das XPS OM geladen.
 
 
 ```C++
@@ -54,9 +54,9 @@ Im folgenden Codebeispiel wird ein Zeiger auf die [**ixpsompage**](/windows/desk
 
 
 
-### <a name="get-the-list-of-hyperlink-targets-on-this-page"></a>Hiermit wird die Liste der Hyperlink-Ziele auf dieser Seite angezeigt.
+### <a name="get-the-list-of-hyperlink-targets-on-this-page"></a>Abrufen der Liste der Linkziele auf dieser Seite
 
-Im folgenden Codebeispiel wird ein Zeiger auf die [**ixpsomnamecollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomnamecollection) -Schnittstelle abgerufen, die die Liste der Seitenelemente enthält, die Hyperlink-Ziele sind. Wenn die Seite nicht in das XPS-OM geladen wurde, wird die Liste der Hyperlink-Ziele aus dem Markup **Page Content. LinkTargets** gelesen. Wenn die Seite geladen wurde, überprüft [**collectlinktargets**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-collectlinktargets) jedes Element auf der Seite und gibt eine Liste von Elementen zurück, deren **ishyperlinktarget** -Attribut " **true**" ist.
+Das folgende Codebeispiel ruft einen Zeiger auf die [**IXpsOMNameCollection-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomnamecollection) ab, die die Liste der Seitenelemente enthält, die Linkziele sind. Wenn die Seite nicht in das XPS OM geladen wurde, wird die Liste der Linkziele aus dem **PageContent.LinkTargets-Markup** gelesen. Wenn die Seite geladen wurde, überprüft [**CollectLinkTargets**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompagereference-collectlinktargets) jedes Element auf der Seite und gibt eine Liste von Elementen zurück, deren **IsHyperlinkTarget-Attribut** **TRUE ist.**
 
 
 ```C++
@@ -104,9 +104,9 @@ Im folgenden Codebeispiel wird ein Zeiger auf die [**ixpsomnamecollection**](/wi
 
 
 
-### <a name="get-the-part-resources-that-are-associated-with-this-page"></a>Hiermit werden die Teil Ressourcen angezeigt, die dieser Seite zugeordnet sind.
+### <a name="get-the-part-resources-that-are-associated-with-this-page"></a>Hier finden Sie die Teilressourcen, die dieser Seite zugeordnet sind.
 
-Im folgenden Codebeispiel werden die Listen der verschiedenen Ressourcen abgerufen, die von dieser Seite verwendet werden.
+Das folgende Codebeispiel ruft die Listen der verschiedenen Ressourcen ab, die von dieser Seite verwendet werden.
 
 
 ```C++
@@ -134,16 +134,16 @@ Im folgenden Codebeispiel werden die Listen der verschiedenen Ressourcen abgeruf
 
 <dl> <dt>
 
-[**Ixpsomnamecollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomnamecollection)
+[**IXpsOMNameCollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomnamecollection)
 </dt> <dt>
 
-[**Ixpsompage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompage)
+[**IXpsOMPage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompage)
 </dt> <dt>
 
-[**Ixpsompagereferenzierung**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference)
+[**IXpsOMPageReference**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference)
 </dt> <dt>
 
-[**Ixpsomparametresources**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompartresources)
+[**IXpsOMPartResources**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompartresources)
 </dt> <dt>
 
 [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

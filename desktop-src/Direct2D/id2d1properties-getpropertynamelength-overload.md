@@ -1,9 +1,9 @@
 ---
-title: ID2D1Properties getpropertynamelength-Methoden
-description: Ruft die Anzahl der Zeichen für den angegebenen Eigenschaften Namen ab.
+title: ID2D1Properties GetPropertyNameLength-Methoden
+description: Ruft die Anzahl der Zeichen für den angegebenen Eigenschaftennamen ab.
 ms.assetid: EA0B4C07-AD15-42C3-9300-26E51E310420
 keywords:
-- Methoden der getpropertynamelength-Überladungs Methoden Direct2D
+- GetPropertyNameLength-Überladungsmethoden Direct2D
 topic_type:
 - apiref
 api_type:
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 4465c2aa1f05ff2da3c2fb007f9b345a82ed3c24
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 00d7e7bf726219a80fa3d72ef0a539a917899a6fb4e6ed7f98487315becb7f9c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039447"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119342710"
 ---
-# <a name="id2d1propertiesgetpropertynamelength-methods"></a>ID2D1Properties:: getpropertynamelength-Methoden
+# <a name="id2d1propertiesgetpropertynamelength-methods"></a>ID2D1Properties::GetPropertyNameLength-Methoden
 
-Ruft die Anzahl der Zeichen für den angegebenen Eigenschaften Namen ab.
+Ruft die Anzahl der Zeichen für den angegebenen Eigenschaftennamen ab.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,12 +29,12 @@ Ruft die Anzahl der Zeichen für den angegebenen Eigenschaften Namen ab.
 
 | Methode                                                                         | BESCHREIBUNG                                                                                        |
 |:-------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|
-| [**Getpropertynamelength (U)**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-getpropertynamelength(u))     | Ruft die Anzahl der Zeichen für den angegebenen Eigenschaften Namen ab. Dies ist eine Vorlagen Überladung.<br/> |
-| [**Getpropertynamelength (UInt32)**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-getpropertynamelength(uint32)) | Ruft die Anzahl der Zeichen für den angegebenen Eigenschaften Namen ab.<br/>                              |
+| [**GetPropertyNameLength(U)**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-getpropertynamelength(u))     | Ruft die Anzahl der Zeichen für den angegebenen Eigenschaftennamen ab. Dies ist eine Vorlagenüberladung.<br/> |
+| [**GetPropertyNameLength(UINT32)**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-getpropertynamelength(uint32)) | Ruft die Anzahl der Zeichen für den angegebenen Eigenschaftennamen ab.<br/>                              |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

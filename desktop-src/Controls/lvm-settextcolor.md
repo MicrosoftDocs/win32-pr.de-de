@@ -1,9 +1,9 @@
 ---
-title: LVM_SETTEXTCOLOR (Commctrl.h)
-description: Legt die Textfarbe eines Listenansicht-Steuerelements fest. Sie können diese Nachricht explizit oder mithilfe des ListView \_ SetTextColor-Makros senden.
+title: LVM_SETTEXTCOLOR-Nachricht (Commctrl.h)
+description: Legt die Textfarbe eines Listenansicht-Steuerelements fest. Sie können diese Nachricht explizit oder mithilfe des \_ ListView-Makros SetTextColor senden.
 ms.assetid: ff90c18b-0cd7-4331-bcd8-61044e891d1f
 keywords:
-- LVM_SETTEXTCOLOR meldungssteuerelemente Windows
+- LVM_SETTEXTCOLOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119217370"
 ---
 # <a name="lvm_settextcolor-message"></a>LVM \_ SETTEXTCOLOR-Meldung
 
-Legt die Textfarbe eines Listenansicht-Steuerelements fest. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ SetTextColor-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_settextcolor) senden.
+Legt die Textfarbe eines Listenansicht-Steuerelements fest. Sie können diese Nachricht explizit oder mithilfe des [**\_ ListView-Makros SetTextColor**](/windows/desktop/api/Commctrl/nf-commctrl-listview_settextcolor) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Legt die Textfarbe eines Listenansicht-Steuerelements fest. Sie können diese Na
 *lParam* 
 </dt> <dd>
 
-Eine [**COLORREF,**](/windows/desktop/gdi/colorref) die die neue Textfarbe angibt.
+Ein [**COLORREF,**](/windows/desktop/gdi/colorref) das die neue Textfarbe angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,7 +49,7 @@ Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

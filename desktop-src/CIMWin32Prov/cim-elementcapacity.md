@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ elementcapacity-Klasse ordnet ein CIM \_ physicalcapacity-Objekt einem oder mehreren physischen Elementen zu. Es ordnet eine Beschreibung der minimalen und maximalen Hardwareanforderungen (bzw.-Funktionen) den physischen Elementen zu, die beschrieben werden.
+description: Die \_ CIM-ElementCapacity-Klasse ordnet ein CIM \_ PhysicalCapacity-Objekt einem oder mehrere physischen Elementen zu. Sie ordnet den beschriebenen physischen Elementen eine Beschreibung der minimalen und maximalen Hardwareanforderungen (oder Funktionen) zu.
 ms.assetid: 368c31e8-d56b-4b90-ba3f-20d9b0de8730
 ms.tgt_platform: multiple
 title: CIM_ElementCapacity-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 7c6ecac913f6d4affcd9784a30d85fa08dfe0486
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e108fb959b95148b8eb3be2e56346e41d2b2a5ab4d5b97c81394d583b395e9ac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483374"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119924120"
 ---
-# <a name="cim_elementcapacity-class"></a>CIM \_ elementcapacity-Klasse
+# <a name="cim_elementcapacity-class"></a>\_CIM-ElementCapacity-Klasse
 
-Die **CIM \_ elementcapacity** -Klasse ordnet ein [**CIM \_ physicalcapacity**](cim-physicalcapacity.md) -Objekt einem oder mehreren physischen Elementen zu. Es ordnet eine Beschreibung der minimalen und maximalen Hardwareanforderungen (bzw.-Funktionen) den physischen Elementen zu, die beschrieben werden.
+Die **\_ CIM-ElementCapacity-Klasse** ordnet ein [**CIM \_ PhysicalCapacity-Objekt**](cim-physicalcapacity.md) einem oder mehrere physischen Elementen zu. Sie ordnet den beschriebenen physischen Elementen eine Beschreibung der minimalen und maximalen Hardwareanforderungen (oder Funktionen) zu.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,26 +47,26 @@ class CIM_ElementCapacity
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ elementcapacity** -Klasse verfügt über diese Typen von Membern:
+Die **\_ CIM-ElementCapacity-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ elementcapacity** -Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Klasse ElementCapacity** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Capacity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ physicalcapacity**
+Datentyp: **CIM \_ PhysicalCapacity**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verweis auf die [**CIM \_ physicalcapacity**](cim-physicalcapacity.md) -Klasse, die die minimalen und maximalen Anforderungen sowie die Möglichkeit zur Unterstützung verschiedener Hardwaretypen für ein physisches Element beschreibt.
+Verweis auf die [**CIM \_ PhysicalCapacity-Klasse,**](cim-physicalcapacity.md) die die minimalen und maximalen Anforderungen sowie die Fähigkeit beschreibt, verschiedene Hardwaretypen für ein physisches Element zu unterstützen.
 
 </dd> <dt>
 
@@ -82,15 +82,15 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Verweis auf das physische Element, das beschrieben wird.
+Verweis auf das beschriebene physische Element.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,8 +100,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

@@ -1,7 +1,7 @@
 ---
-description: Führt ein Upgrade des virtuellen Systems durch.
+description: Aktualisiert das virtuelle System.
 ms.assetid: 4b24aac9-b7b9-460f-9227-fd3c1e960191
-title: Upgradesystemversion-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: UpgradeSystemVersion-Methode der Msvm_VirtualSystemManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 4c34b33da14d8718f2c2414de3aea3079672bbb2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 64146c146bfd2c05d96e11d5193e246c76a6d1eb247d240b712cb46367a698c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342826"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148013"
 ---
-# <a name="upgradesystemversion-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Upgradesystemversion-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="upgradesystemversion-method-of-the-msvm_virtualsystemmanagementservice-class"></a>UpgradeSystemVersion-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Führt ein Upgrade des virtuellen Systems durch.
+Aktualisiert das virtuelle System.
 
-Bei Anwendung auf die Systemeinstellungen einer "aktuellen" virtuellen Systemkonfiguration
+Bei Anwendung auf die Systemeinstellungen einer "aktuellen" Konfiguration des virtuellen Systems
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,30 +43,30 @@ uint32 UpgradeSystemVersion(
 
 <dl> <dt>
 
-*Computersystem* \[ in\]
+*ComputerSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf ein [**CIM- \_ Computersystem**](cim-computersystem.md) , das das zu Aktualisier Ende virtuelle Computersystem darstellt.
+Ein Verweis auf ein [**\_ CIM-Computersystem,**](cim-computersystem.md) das das zu upgradende virtuelle Computersystem darstellt.
 
 </dd> <dt>
 
-*Upgraabsettingdata* \[ in\]
+*UpgradeSettingData* \[ In\]
 </dt> <dd>
 
-Die upgradeeinstellungsdaten.
+Die Upgradeeinstellungsdaten.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird 0 oder 4096 zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
+Bei Erfolg wird 0 oder 4096 zurückgegeben. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -76,7 +76,7 @@ Bei Erfolg wird 0 oder 4096 zurückgegeben. Andernfalls wird ein Fehler zurückg
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -85,22 +85,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-Nicht **kompatible Parameter** (6)
+**Inkompatible** Parameter (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -109,19 +109,19 @@ Nicht **kompatible Parameter** (6)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

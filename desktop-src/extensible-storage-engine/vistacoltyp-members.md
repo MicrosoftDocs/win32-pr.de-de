@@ -16,12 +16,12 @@ ms.locfileid: "119356330"
 ---
 # <a name="vistacoltyp-members"></a>VistaColtyp-Member
 
-Einschließen geschützter Member  
-Einschließen geerbter Member  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
 Spaltentypen, die der Vista-Version von ESENT hinzugefügt wurden.
 
-Der [VistaColtyp-Typ](./vistacoltyp-class.md) macht die folgenden Member verfügbar.
+Der [VistaColtyp macht](./vistacoltyp-class.md) die folgenden Member verfügbar.
 
 ## <a name="fields"></a>Felder
 
@@ -30,7 +30,7 @@ Der [VistaColtyp-Typ](./vistacoltyp-class.md) macht die folgenden Member verfüg
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
@@ -60,7 +60,7 @@ Der [VistaColtyp-Typ](./vistacoltyp-class.md) macht die folgenden Member verfüg
 
 Oben
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 #### <a name="reference"></a>Verweis
 

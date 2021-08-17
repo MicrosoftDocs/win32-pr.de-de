@@ -1,8 +1,8 @@
 ---
-description: Die ExecMethodAsync- \_ Methode von "errbemubject" führt asynchron eine Methode aus, die von einem Methoden Anbieter exportiert wird.
+description: Die ExecMethodAsync-Methode \_ von SWbemObject führt asynchron eine Methode aus, die ein Methodenanbieter exportiert.
 ms.assetid: b848b38b-c0c3-49cd-b1e2-b0a440b82d61
 ms.tgt_platform: multiple
-title: SWbemObject.ExecMethodAsync_-Methode (wbemdisp. h)
+title: SWbemObject.ExecMethodAsync_-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 8af1b7c10eed427423afea8b40a1df5bc237f99e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 37d7a0ab0b2e4d1ab893619eda4b3d32b8b4e1f60791e0981125d4445bda5f98
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119857350"
 ---
-# <a name="swbemobjectexecmethodasync_-method"></a>SWbemObject.Execmethodasync- \_ Methode
+# <a name="swbemobjectexecmethodasync_-method"></a>SWbemObject.Exe\_ cMethodAsync-Methode
 
-Die **ExecMethodAsync \_** -Methode von " [**errbemubject**](swbemobject.md) " führt asynchron eine Methode aus, die von einem Methoden Anbieter exportiert wird. Diese Methode ähnelt [**SWbemServices.Execmethodasync**](swbemservices-execmethodasync.md), funktioniert jedoch direkt mit dem-Objekt der auszuführenden Methode. Diese Methode wird von Windows-Verwaltungsinstrumentation (WMI) nicht implementiert. Der Anbieter implementiert diese Methode.
+Die **\_ ExecMethodAsync-Methode** von [**SWbemObject**](swbemobject.md) führt asynchron eine Methode aus, die ein Methodenanbieter exportiert. Diese Methode ähnelt [**SWbemServices.ExecMethodAsync**](swbemservices-execmethodasync.md), arbeitet jedoch direkt mit dem Objekt der auszuführenden Methode. Windows Die Verwaltungsinstrumentation (Management Instrumentation, WMI) implementiert diese Methode nicht. Der Anbieter implementiert diese Methode.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,139 +49,139 @@ objOutParams = .ExecMethodAsync_( _
 
 <dl> <dt>
 
-*objwbemsink* \[ in\]
+*objWbemSink* \[ In\]
 </dt> <dd>
 
-Erforderlich. Dies ist die Objekt Senke, die die Ergebnisse des Methoden Aufrufes empfängt. Die ausgehenden Parameter werden an das Ereignis " [**slibemsink. onobjectready**](swbemsink-onobjectready.md) " der angegebenen Objekt Senke gesendet. Die Ergebnisse des-aufrufungsmechanismus werden an das Ereignis " [**slibemsink. onabgeschlossene**](swbemsink-oncompleted.md) " der angegebenen Objekt Senke gesendet. Beachten Sie, dass " **taubemsink. onabgeschlossene** " nicht den Rückgabecode der Methode empfängt. Er empfängt jedoch den Rückgabecode des eigentlichen Rückrufmechanismus und ist nur nützlich, um zu überprüfen, ob der-Befehl aufgetreten ist, oder dass er aus mechanischen Gründen fehlgeschlagen ist. Der von der-Methode zurückgegebene Ergebniscode wird im ausgehenden Parameter Objekt zurückgegeben, das für " **Swap. onobjectready**" bereitgestellt wird. Wenn ein Fehlercode zurückgegeben wird, wird das angegebene [**iwbejebjectsink**](iwbemobjectsink.md) -Objekt nicht verwendet. Wenn der Aufruf erfolgreich ist, wird die **iwberobjectsink** -Implementierung des Benutzers aufgerufen, um das Ergebnis des Vorgangs anzuzeigen.
+Erforderlich. Dies ist die Objektsenke, die die Ergebnisse des Methodenaufrufs empfängt. Die ausgehenden Parameter werden an das [**SWbemSink.OnObjectReady-Ereignis**](swbemsink-onobjectready.md) der angegebenen Objektsenke gesendet. Die Ergebnisse des Aufrufmechanismus werden an das [**SWbemSink.OnCompleted-Ereignis**](swbemsink-oncompleted.md) der angegebenen Objektsenke gesendet. Beachten Sie, dass **SWbemSink.OnCompleted** nicht den Rückgabecode der -Methode empfängt. Er empfängt jedoch den Rückgabecode des tatsächlichen Aufrufrückgabemechanismus und ist nur nützlich, um zu überprüfen, ob der Aufruf aufgetreten ist oder dass er aus mechanischen Gründen fehlgeschlagen ist. Der von der -Methode zurückgegebene Ergebniscode wird im ausgehenden Parameterobjekt zurückgegeben, das für **SWbemSink.OnObjectReady** bereitgestellt wird. Wenn ein Fehlercode zurückgegeben wird, wird das angegebene [**IWbemObjectSink-Objekt**](iwbemobjectsink.md) nicht verwendet. Wenn der Aufruf erfolgreich ist, wird die **IWbemObjectSink-Implementierung** des Benutzers aufgerufen, um das Ergebnis des Vorgangs anzugeben.
 
 </dd> <dt>
 
-" *Name* \[ " in\]
+*strMethodName* \[ In\]
 </dt> <dd>
 
-Erforderlich. Dies ist der Name der-Methode für das-Objekt.
+Erforderlich. Dies ist der Name der Methode für das -Objekt.
 
 </dd> <dt>
 
-*objwbeminparameams* \[ in, optional\]
+*objwbemInParams* \[ in, optional\]
 </dt> <dd>
 
-Hierbei handelt es sich um ein Objekt vom [**typaustausch**](swbemobject.md) , das die Eingabeparameter für die Methode enthält, die ausgeführt wird. Standardmäßig ist dieser Parameter nicht definiert. Weitere Informationen finden Sie unter [Erstellen von inparameter-Objekten](constructing-inparameters-objects.md) und Überprüfen von [outparameter-Objekten](parsing-outparameters-objects.md).
+Dies ist ein [**SWbemObject-Objekt,**](swbemobject.md) das die Eingabeparameter für die ausgeführte Methode enthält. Dieser Parameter ist standardmäßig nicht definiert. Weitere Informationen finden Sie unter [Erstellen von InParameters-Objekten](constructing-inparameters-objects.md) und [Analysieren von OutParameters-Objekten.](parsing-outparameters-objects.md)
 
 </dd> <dt>
 
-*IFlags* \[ in, optional\]
+*iFlags* \[ in, optional\]
 </dt> <dd>
 
-Eine ganze Zahl, die das Verhalten des Aufrufes bestimmt. Dieser Parameter kann die folgenden Werte annehmen.
+Ganze Zahl, die das Verhalten des Aufrufs bestimmt. Dieser Parameter kann die folgenden Werte akzeptieren.
 
 <dt>
 
 <span id="wbemFlagSendStatus"></span><span id="wbemflagsendstatus"></span><span id="WBEMFLAGSENDSTATUS"></span>
 
-<span id="wbemFlagSendStatus"></span><span id="wbemflagsendstatus"></span><span id="WBEMFLAGSENDSTATUS"></span>wbemflagsendstatus * * * * (128 (0x80))
+<span id="wbemFlagSendStatus"></span><span id="wbemflagsendstatus"></span><span id="WBEMFLAGSENDSTATUS"></span>wbemFlagSendStatus** (128 (0x80))
 
 
 </dt> <dd>
 
-Bewirkt, dass asynchrone Aufrufe Statusaktualisierungen an den " [**slibemsink. OnProgress**](swbemsink-onprogress.md) "-Ereignishandler für die Objekt Senke senden.
+Bewirkt, dass asynchrone Aufrufe Statusupdates an den [**SWbemSink.OnProgress-Ereignishandler**](swbemsink-onprogress.md) für die Objektsenke senden.
 
 </dd> <dt>
 
 <span id="wbemFlagDontSendStatus"></span><span id="wbemflagdontsendstatus"></span><span id="WBEMFLAGDONTSENDSTATUS"></span>
 
-<span id="wbemFlagDontSendStatus"></span><span id="wbemflagdontsendstatus"></span><span id="WBEMFLAGDONTSENDSTATUS"></span>wbemflagdontsendstatus * * * * (0 (0x0))
+<span id="wbemFlagDontSendStatus"></span><span id="wbemflagdontsendstatus"></span><span id="WBEMFLAGDONTSENDSTATUS"></span>wbemFlagDontSendStatus( (0 (0x0))
 
 
 </dt> <dd>
 
-Verhindert, dass asynchrone Aufrufe Statusaktualisierungen an den [**OnProgress**](swbemsink-onprogress.md) -Ereignishandler für die Objekt Senke senden.
+Verhindert, dass asynchrone Aufrufe Statusupdates an den [**OnProgress-Ereignishandler**](swbemsink-onprogress.md) für die Objektsenke senden.
 
 </dd> </dl> </dd> <dt>
 
-*objwbemnamedvalueset* \[ in, optional\]
+*objwbemNamedValueSet* \[ in, optional\]
 </dt> <dd>
 
-In der Regel ist Sie nicht definiert. Andernfalls handelt es sich hierbei um ein-Objekt vom [**typswap namedvalueset**](swbemnamedvalueset.md) , dessen Elemente die Kontextinformationen darstellen, die von dem Anbieter verwendet werden können, der die Anforderung verarbeitet. Ein Anbieter, der solche Informationen unterstützt oder erfordert, muss die erkannten Wertnamen, den Datentyp des Werts, zulässige Werte und die Semantik dokumentieren.
+In der Regel ist sie nicht definiert. Andernfalls ist dies ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) dessen Elemente die Kontextinformationen darstellen, die vom Anbieter verwendet werden können, der die Anforderung wartet. Ein Anbieter, der solche Informationen unterstützt oder erfordert, muss die erkannten Wertnamen, den Datentyp des Werts, die zulässigen Werte und die Semantik dokumentieren.
 
 </dd> <dt>
 
-*objwbemasynccontext* \[ in, optional\]
+*objWbemAsyncContext* \[ in, optional\]
 </dt> <dd>
 
-Dabei handelt es sich um ein Objekt vom Typ " [**taubemnamedvalueset**](swbemnamedvalueset.md) ", das zur Objekt Senke zurückkehrt, um die Quelle für den ursprünglichen asynchronen aufzurufen. Verwenden Sie diesen Parameter, wenn Sie mehrere asynchrone Aufrufe mithilfe derselben Objekt Senke durchführen. Um diesen Parameter zu verwenden, erstellen Sie ein Objekt vom Typ " **Swap namedvalueset** ", und verwenden Sie die Methode " [**taubemnamedvalueset. Add**](swbemnamedvalueset-add.md) ", um einen Wert hinzuzufügen, der den von Ihnen ausgeführten asynchronen Befehl identifiziert. Dieses Objekt vom Typ " **Swap namedvalueset** " wird an die Objekt Senke zurückgegeben, und die Quelle des Aufrufes kann mithilfe der Methode " [**Swap Name. Item**](swbemnamedvalueset-item.md) " extrahiert werden. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+Dies ist ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) das zur Objektsenke zurückkehrt, um die Quelle des ursprünglichen asynchronen Aufrufs zu identifizieren. Verwenden Sie diesen Parameter, wenn Sie mehrere asynchrone Aufrufe mit derselben Objektsenke vornehmen. Um diesen Parameter zu verwenden, erstellen Sie ein **SWbemNamedValueSet-Objekt,** und verwenden Sie die [**SWbemNamedValueSet.Add-Methode,**](swbemnamedvalueset-add.md) um einen Wert hinzuzufügen, der den asynchronen Aufruf identifiziert, den Sie vornehmen. Dieses **SWbemNamedValueSet-Objekt** wird an die Objektsenke zurückgegeben, und die Quelle des Aufrufs kann mithilfe der [**SWbemNamedValueSet.Item-Methode**](swbemnamedvalueset-item.md) extrahiert werden. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode hat keine Rückgabewerte. Wenn der-Befehl erfolgreich ausgeführt wurde, wird ein [**OutParameters**](swbemmethod-outparameters.md) -Objekt, das auch ein " [**errbefubject**](swbemobject.md) "-Objekt ist, an die in *objwbemsink* angegebene Senke bereitgestellt. Das zurückgegebene **OutParameters** -Objekt enthält die Ausgabeparameter und den Rückgabewert für die Methode, die ausgeführt wird.
+Diese Methode verfügt über keine Rückgabewerte. Wenn der Aufruf erfolgreich ist, wird ein [**OutParameters-Objekt,**](swbemmethod-outparameters.md) das auch ein [**SWbemObject-Objekt**](swbemobject.md) ist, an die Senke bereitgestellt, die in *objWbemSink* angegeben ist. Das **zurückgegebene OutParameters-Objekt** enthält die Ausgabeparameter und den Rückgabewert für die ausgeführte Methode.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach Abschluss der **ExecMethodAsync \_** -Methode kann das [Err](/previous-versions//sbf5ze0e(v=vs.85)) -Objekt einen der Fehlercodes in der folgenden Liste enthalten.
+Nach Abschluss der **\_ ExecMethodAsync-Methode** kann das [Err-Objekt](/previous-versions//sbf5ze0e(v=vs.85)) einen der Fehlercodes in der folgenden Liste enthalten.
 
 <dl> <dt>
 
-**wbemErrFailed** -2147749889 (0x80041001)
+**wbemErrFailed** – 2147749889 (0x80041001)
 </dt> <dd>
 
 Unbekannter Fehler.
 
 </dd> <dt>
 
-**wbemErrInvalidClass** -2147749904 (0x80041010)
+**wbemErrInvalidClass** – 2147749904 (0x80041010)
 </dt> <dd>
 
 Die angegebene Klasse war ungültig.
 
 </dd> <dt>
 
-**wbemErrInvalidParameter** -2147749896 (0x80041008)
+**wbemErrInvalidParameter** – 2147749896 (0x80041008)
 </dt> <dd>
 
 Ein angegebener Parameter ist ungültig.
 
 </dd> <dt>
 
-**wbemErrOutOfMemory** -2147749894 (0x80041006)
+**wbemErrOutOfMemory** – 2147749894 (0x80041006)
 </dt> <dd>
 
-Der Arbeitsspeicher reicht nicht aus, um den Vorgang abzuschließen.
+Nicht genügend Arbeitsspeicher, um den Vorgang abzuschließen.
 
 </dd> <dt>
 
-**wbemErrInvalidMethod** -2147749934 (0x8004102e)
+**wbemErrInvalidMethod** – 2147749934 (0x8004102E)
 </dt> <dd>
 
 Die angeforderte Methode war nicht verfügbar.
 
 </dd> <dt>
 
-**wbemErrAccessDenied** -2147749891 (0x80041003)
+**wbemErrAccessDenied** – 2147749891 (0x80041003)
 </dt> <dd>
 
-Der aktuelle Benutzer war nicht autorisiert, die Methode auszuführen.
+Der aktuelle Benutzer war nicht berechtigt, die -Methode auszuführen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die **SWbemObject.Exe\_ cmethodasync** -Methode als Alternative zum direkten Zugriff auf die Ausführung einer [*Anbieter Methode*](gloss-p.md) , wenn Sie eine Methode nicht direkt ausführen können. Wenn Ihre Methode z. b. über out-Parameter verfügt, verwenden Sie die **SWbemObject.Exe\_ cmethodasync** -Methode mit einer Skriptsprache, die keine Ausgabeparameter unterstützt. Andernfalls wird empfohlen, eine Methode mithilfe des direkten Zugriffs aufzurufen. Weitere Informationen finden Sie unter Bearbeiten von [Klassen-und Instanzinformationen](manipulating-class-and-instance-information.md).
+Verwenden Sie die **SWbemObject.Exe\_ cMethodAsync-Methode** als Alternative zum direkten Zugriff zum Ausführen einer [*Anbietermethode,*](gloss-p.md) wenn Sie eine Methode nicht direkt ausführen können. Wenn Ihre Methode beispielsweise out-Parameter aufweist, verwenden Sie die **SWbemObject.Exe\_ cMethodAsync-Methode** mit einer Skriptsprache, die keine Ausgabeparameter unterstützt. Andernfalls wird empfohlen, eine Methode mithilfe des direkten Zugriffs aufzurufen. Weitere Informationen finden Sie unter [Bearbeiten von Klassen- und Instanzinformationen.](manipulating-class-and-instance-information.md)
 
-Dieser Rückruf wird sofort zurückgegeben. Die angeforderten Objekte und der Status werden an den Aufrufer zurückgegeben, wenn Rückrufe an die Senke gesendet werden, die in *objwbemsink* angegeben ist. Um jedes Objekt zu verarbeiten, sobald es eintrifft, erstellen Sie eine *objwbemsink*. [**Onobjectready**](swbemsink-onobjectready.md) -Ereignis Unterroutine. Nachdem alle Objekte zurückgegeben wurden, können Sie die endgültige Verarbeitung in ihrer Implementierung von *objwbemsink* durchführen. [**Onabgeschlossene**](swbemsink-oncompleted.md) -Ereignis.
+Dieser Aufruf wird sofort zurückgegeben. Die angeforderten Objekte und der Status werden dem Aufrufer über Rückrufe zurückgegeben, die an die Senke übermittelt werden, die in *objWbemSink* angegeben ist. Um jedes Objekt zu verarbeiten, wenn es eintrifft, erstellen Sie einen *objWbemSink*. [**OnObjectReady-Ereignisunterroutine.**](swbemsink-onobjectready.md) Nachdem alle Objekte zurückgegeben wurden, können Sie die endgültige Verarbeitung in Ihrer Implementierung von *objWbemSink* ausführen. [**OnCompleted-Ereignis.**](swbemsink-oncompleted.md)
 
-Ein asynchroner Rückruf ermöglicht einem nicht authentifizierten Benutzer das Bereitstellen von Daten für die Senke. Dies birgt Sicherheitsrisiken für Ihre Skripts und Anwendungen. Um die Risiken auszuschließen, verwenden Sie entweder die semisynchrone Kommunikation oder die synchrone Kommunikation. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+Ein asynchroner Rückruf ermöglicht es einem nicht authentifizierten Benutzer, Daten für die Senke bereitzustellen. Dies stellt Sicherheitsrisiken für Ihre Skripts und Anwendungen dar. Um die Risiken zu vermeiden, verwenden Sie entweder semisynchrone Kommunikation oder synchrone Kommunikation. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
-Wenn die ausgeführte Methode über Eingabeparameter verfügt, müssen das [**InParameters**](swbemmethod-inparameters.md) -Objekt und der *objwbeminparam* -Parameter erstellt werden, wie unter [Erstellen von inparameter-Objekten](constructing-inparameters-objects.md) und [Parsing outparameter-Objekten](parsing-outparameters-objects.md)beschrieben.
+Wenn die ausgeführte Methode Über Eingabeparameter verfügt, müssen das [**InParameters-Objekt**](swbemmethod-inparameters.md) und der *objWbemInParam-Parameter* wie unter [Erstellen von InParameters-Objekten](constructing-inparameters-objects.md) und [Analysieren von OutParameters-Objekten](parsing-outparameters-objects.md)beschrieben erstellt werden.
 
-Die **SWbemObject.Execmethodasync \_** -Methode geht davon aus, dass [**das durch das**](swbemobject.md) -Objekt dargestellte Objekt die auszuführende Methode enthält. Die [**SWbemServices.Execmethodasync**](swbemservices-execmethodasync.md) -Methode erfordert einen Objekt Pfad.
+Die **SWbemObject.ExecMethodAsync-Methode \_** geht davon aus, dass das durch [**SWbemObject**](swbemobject.md) dargestellte Objekt die auszuführende Methode enthält. Die [**SWbemServices.ExecMethodAsync-Methode**](swbemservices-execmethodasync.md) erfordert einen Objektpfad.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die [**ExecMethodAsync**](swbemservices-execmethodasync.md) -Methode. Das Skript erstellt ein [**Win32- \_ Prozess**](/windows/desktop/CIMWin32Prov/win32-process) Objekt, das einen Prozess darstellt, der Notepad ausgeführt wird. Es zeigt das Einrichten des [**InParameters**](swbemmethod-inparameters.md) -Objekts und das Abrufen von Ergebnissen von einem [**OutParameters**](swbemmethod-outparameters.md) -Objekt.
+Das folgende Beispiel zeigt die [**ExecMethodAsync-Methode.**](swbemservices-execmethodasync.md) Das Skript erstellt ein [**\_ Win32-Prozessobjekt,**](/windows/desktop/CIMWin32Prov/win32-process) das einen Prozess darstellt, der Editor ausgeführt wird. Es zeigt das Einrichten des [**InParameters-Objekts**](swbemmethod-inparameters.md) und das Abrufen von Ergebnissen aus einem [**OutParameters-Objekt.**](swbemmethod-outparameters.md)
 
-Informationen zu einem Skript, das die synchron ausgeführten Vorgänge anzeigt, finden Sie unter [**SWbemObject.Execmethod**](swbemobject-execmethod-.md). Ein Beispiel für die Verwendung des direkten Zugriffs finden Sie unter [**Create method \_ in der Win32-Klasse**](/windows/desktop/CIMWin32Prov/create-method-in-class-win32-process). Ein Beispiel für denselben Vorgang mit einem " [**Swap Services**](swbemservices.md) "-Objekt finden Sie unter [**SWbemServices.Execmethodasync**](swbemservices-execmethodasync.md).
+Ein Skript, das die gleichen Vorgänge zeigt, die synchron ausgeführt werden, finden Sie unter [**SWbemObject.ExecMethod**](swbemobject-execmethod-.md). Ein Beispiel für die Verwendung des direkten Zugriffs finden Sie unter [**Create Method in Class Win32 \_ Process**](/windows/desktop/CIMWin32Prov/create-method-in-class-win32-process). Ein Beispiel für den gleichen Vorgang mit einem [**SWbemServices-Objekt**](swbemservices.md) finden Sie unter [**SWbemServices.ExecMethodAsync**](swbemservices-execmethodasync.md).
 
 
 ```VB
@@ -248,11 +248,11 @@ end sub
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Austausch Objekt<br/>                                                           |
-| IID<br/>                      | IID \_ iswbemujekt<br/>                                                            |
+| CLSID<br/>                    | CLSID \_ SWbemObject<br/>                                                           |
+| IID<br/>                      | IID \_ ISWbemObject<br/>                                                            |
 
 
 
@@ -260,10 +260,10 @@ end sub
 
 <dl> <dt>
 
-[**Austausch Objekt**](swbemobject.md)
+[**Swbemobject**](swbemobject.md)
 </dt> <dt>
 
-[**SWbemServices.Execmethodasync**](swbemservices-execmethodasync.md)
+[**SWbemServices.ExecMethodAsync**](swbemservices-execmethodasync.md)
 </dt> </dl>
 
  

@@ -3,7 +3,7 @@ title: MonthlyTrigger.MonthsOfYear-Eigenschaft
 description: Ruft für die Skripterstellung die Monate des Jahres ab, in denen der Task ausgeführt wird, oder legt diese fest. | MonthlyTrigger.MonthsOfYear-Eigenschaft
 ms.assetid: cf26a815-7f4f-4b7a-8db8-a4bd9b77cf49
 keywords:
-- MonthsOfYear-Eigenschaft Taskplaner
+- MonthsOfYear-Eigenschafts-Taskplaner
 - MonthsOfYear-Eigenschaft Taskplaner , MonthlyTrigger-Objekt
 - MonthlyTrigger-Objekt Taskplaner , MonthsOfYear-Eigenschaft
 topic_type:

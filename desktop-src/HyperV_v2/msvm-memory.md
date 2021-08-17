@@ -1,5 +1,5 @@
 ---
-description: Stellt den Arbeitsspeicher dar, der einem virtuellen Computer zurzeit zugeordnet ist.
+description: Stellt den Arbeitsspeicher dar, der derzeit einem virtuellen Computer zugeordnet ist.
 ms.assetid: 4CAA64FC-5A06-409B-9E92-32DF3F47D5FD
 title: Msvm_Memory-Klasse
 ms.topic: reference
@@ -91,16 +91,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0ec6b287f3281fd0224e9c2efc39391781bd7f82
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d149c733bfc9ccf408b7798a37a762b947eac23b25888beeda375e77c60417f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868511"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148353"
 ---
-# <a name="msvm_memory-class"></a>MSVM- \_ Speicher Klasse
+# <a name="msvm_memory-class"></a>Msvm \_ Memory-Klasse
 
-Stellt den Arbeitsspeicher dar, der einem virtuellen Computer zurzeit zugeordnet ist.
+Stellt den Arbeitsspeicher dar, der derzeit einem virtuellen Computer zugeordnet ist.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -187,25 +187,25 @@ class Msvm_Memory : CIM_Memory
 
 ## <a name="members"></a>Member
 
-Die **MSVM- \_ Speicher** Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ Memory-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MSVM- \_ Speicher** Klasse verfügt über diese Methoden.
+Die **Msvm \_ Memory-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                       | BESCHREIBUNG                              |
+| Methode                                                       | Beschreibung                              |
 |:-------------------------------------------------------------|:-----------------------------------------|
 | **EnableDevice**                                             | Diese Methode wird nicht unterstützt.<br/> |
-| **Onlinedevice**                                             | Diese Methode wird nicht unterstützt.<br/> |
-| **Inaktiven Geräte**                                            | Diese Methode wird nicht unterstützt.<br/> |
-| [**RequestStateChange**](msvm-memory-requeststatechange.md) | Fordert eine Statusänderung an.<br/>      |
+| **OnlineDevice**                                             | Diese Methode wird nicht unterstützt.<br/> |
+| **QuiesceDevice**                                            | Diese Methode wird nicht unterstützt.<br/> |
+| [**RequestStateChange**](msvm-memory-requeststatechange.md) | Fordert eine Zustandsänderung an.<br/>      |
 | [**Zurücksetzen**](msvm-memory-reset.md)                           | Setzt den virtuellen Arbeitsspeicher zurück.<br/>    |
-| **Restoreproperties**                                        | Diese Methode wird nicht unterstützt.<br/> |
+| **RestoreProperties**                                        | Diese Methode wird nicht unterstützt.<br/> |
 | **SaveProperties**                                           | Diese Methode wird nicht unterstützt.<br/> |
 | **SetPowerState**                                            | Diese Methode wird nicht unterstützt.<br/> |
 
@@ -215,85 +215,85 @@ Die **MSVM- \_ Speicher** Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM- \_ Speicher** Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ Memory-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **zugreifen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Beschreibt die Lese-/Schreibeigenschaften des Mediums. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und ist standardmäßig auf 3 festgelegt (Lese-/Schreibzugriff wird unterstützt).
+Beschreibt die Lese-/Schreibeigenschaften des Mediums. Diese Eigenschaft wird von [**CIM \_ StorageExtent geerbt**](/windows/desktop/CIMWin32Prov/cim-storageextent)und standardmäßig auf 3 (Read/Write Supported) festgelegt.
 
 </dd> <dt>
 
-**Additionalavailability**
+**AdditionalAvailability**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt und ist auf 6 festgelegt (nicht zutreffend).
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)und auf 6 (Nicht zutreffend) festgelegt.
 
 </dd> <dt>
 
 **AdditionalErrorData**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher geerbt,**](/windows/desktop/CIMWin32Prov/cim-memory)aber nicht verwendet.
 
 </dd> <dt>
 
 **Verfügbarkeit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)
 
 </dd> <dt>
 
-**Availablerequestedstates**
+**AvailableRequestedStates**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die möglichen Werte für den *requestedstate* -Parameter der **requestStateChange** -Methode an. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Gibt die möglichen Werte für den *RequestedState-Parameter* der **RequestStateChange-Methode** an. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt.**](/previous-versions//cc136818(v=vs.85))
 
 </dd> <dt>
 
-**BlockSize**
+**Blöcke**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Größe (in Bytes) der Blöcke, die den Speicherblock bilden. Bei variabler Blockgröße sollte die maximale Blockgröße in Bytes angegeben werden. Wenn die Blockgröße unbekannt ist oder ein Block Konzept nicht gültig ist (z. b. für Aggregat Blöcke, Arbeitsspeicher oder logische Datenträger), geben Sie 1 (eins) ein. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und ist immer auf 1048576 festgelegt.
+Die Größe der Blöcke in Bytes, die den Speicherblock bilden. Bei variabler Blockgröße sollte die maximale Blockgröße in Bytes angegeben werden. Wenn die Blockgröße unbekannt ist oder ein Blockkonzept nicht gültig ist (z. B. für aggregierte Blockgrößen, Arbeitsspeicher oder logische Datenträger), geben Sie 1 (eins) ein. Diese Eigenschaft wird von [**CIM \_ StorageExtent geerbt**](/windows/desktop/CIMWin32Prov/cim-storageextent)und immer auf 1048576.
 
 </dd> <dt>
 
@@ -306,20 +306,20 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
-**Communicationstatus**
+**CommunicationStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
 
 <dl> <dt>
 
@@ -338,115 +338,115 @@ Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalte
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>**Kein Kontakt** (4)
 </dt> <dt>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 </dt> <dt>
 
-<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Anbieter reserviert** (0X8000.. )
+<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Reservierter Anbieter** (0x8000. )
 </dt> </dl>
 
 </dd> <dt>
 
-**Consumableblocks**
+**ConsumableBlocks**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Anzahl von Blöcken der Größe **Blockgröße**, die für die Nutzung verfügbar sind, wenn die Schichten Speicherblöcke mithilfe der BasedOn-Zuordnung erweitert werden. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und ist immer auf **null** festgelegt.
+Die maximale Anzahl von Blöcken der Größe **BlockSize,** die beim Überlagerung von Speicherblöcken mithilfe der BasedOn-Zuordnung zur Nutzung verfügbar sind. Diese Eigenschaft wird von [**CIM \_ StorageExtent geerbt**](/windows/desktop/CIMWin32Prov/cim-storageextent)und immer auf **NULL festgelegt.**
 
 </dd> <dt>
 
-**Korrektur Fehler**
+**CorrectableError**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher geerbt,**](/windows/desktop/CIMWin32Prov/cim-memory)aber nicht verwendet.
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Klasse oder Unterklasse, die bei der Erstellung einer-Instanz verwendet wird. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
+Der Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)
 
 </dd> <dt>
 
-**Dataorganization**
+**DataOrganization**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ der verwendeten Datenorganisation. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und ist immer auf 2 festgelegt.
+Der Typ der verwendeten Datenorganisation. Diese Eigenschaft wird von [**CIM \_ StorageExtent geerbt**](/windows/desktop/CIMWin32Prov/cim-storageextent)und immer auf 2 festgelegt.
 
 </dd> <dt>
 
-**Dataredundancy**
+**DataRedundancy**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl der kompletten Kopien von Daten, die zurzeit verwaltet werden. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und ist immer auf 1 festgelegt.
+Die Anzahl der vollständigen Kopien von Daten, die derzeit verwaltet werden. Diese Eigenschaft wird von [**CIM \_ StorageExtent**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und immer auf 1 festgelegt.
 
 </dd> <dt>
 
-**Delta Service**
+**DeltaReservation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Wert für die Delta Reservierung. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und immer auf 0 festgelegt.
+Der aktuelle Wert für die Deltareservierung. Diese Eigenschaft wird von [**CIM \_ StorageExtent**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und immer auf 0 festgelegt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **DetailedStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ergänzt die **primarystatus** -Eigenschaft mit zusätzlichen Status Details. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Ergänzt die **PrimaryStatus-Eigenschaft** um zusätzliche Statusdetails. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 <dl> <dt>
 
@@ -456,91 +456,91 @@ Ergänzt die **primarystatus** -Eigenschaft mit zusätzlichen Status Details. Ei
 <span id="No_Additional_Information"></span><span id="no_additional_information"></span><span id="NO_ADDITIONAL_INFORMATION"></span>**Keine zusätzlichen Informationen** (1)
 </dt> <dt>
 
-<span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>**Betont** (2)
+<span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>**Wird** (2)
 </dt> <dt>
 
 <span id="Predictive_Failure"></span><span id="predictive_failure"></span><span id="PREDICTIVE_FAILURE"></span>**Vorhersagefehler** (3)
 </dt> <dt>
 
-<span id="Non-Recoverable_Error"></span><span id="non-recoverable_error"></span><span id="NON-RECOVERABLE_ERROR"></span>**Nicht BEHEB barer Fehler** (4)
+<span id="Non-Recoverable_Error"></span><span id="non-recoverable_error"></span><span id="NON-RECOVERABLE_ERROR"></span>**Nicht wiederherstellbarer Fehler** (4)
 </dt> <dt>
 
-<span id="Supporting_Entity_in_Error"></span><span id="supporting_entity_in_error"></span><span id="SUPPORTING_ENTITY_IN_ERROR"></span>**Unterstützende Entität in Error** (5)
+<span id="Supporting_Entity_in_Error"></span><span id="supporting_entity_in_error"></span><span id="SUPPORTING_ENTITY_IN_ERROR"></span>**Unterstützende Entität im Fehler** (5)
 </dt> <dt>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 </dt> <dt>
 
-<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Anbieter reserviert** (0X8000.. )
+<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Reservierter Anbieter** (0x8000. )
 </dt> </dl>
 
 </dd> <dt>
 
-**DeviceID**
+**Deviceid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Adresse oder andere identifizierende Informationen, um das logische Gerät eindeutig zu benennen. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
+Eine Adresse oder andere identifizierende Informationen zum eindeutigen Benennen des logischen Geräts. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Enableddefault**
+**EnabledDefault**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Standard-oder Startkonfiguration eines Administrators für den aktivierten Zustand eines Elements. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Die Standard- oder Startkonfiguration eines Administrators für den aktivierten Zustand eines Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt.
 
 </dd> <dt>
 
 **EnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktivierte und deaktivierte Status eines Elements. Sie kann auch die Übergänge zwischen diesen angeforderten Zuständen angeben. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Der aktivierte und deaktivierte Status eines Elements. Sie kann auch die Übergänge zwischen diesen angeforderten Zuständen angeben. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt.
 
 
 
 | Wert                                                                                                                                                                                                                                                                       | Bedeutung                                                                                                                                                                                                                |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span><dl> <dt>**Unbekannter**</dt> Wert <dt>0</dt> </dl>                                                 | Der Zustand des Elements konnte nicht bestimmt werden.<br/>                                                                                                                                                           |
-| <span id="Other"></span><span id="other"></span><span id="OTHER"></span><dl> <dt>**Sonstige**</dt> <dt>1</dt> </dl>                                                         |                                                                                                                                                                                                                        |
-| <span id="Enabled"></span><span id="enabled"></span><span id="ENABLED"></span><dl> <dt>**Aktiviert**</dt> <dt>2</dt> </dl>                                                 | Das-Element wird ausgeführt.<br/>                                                                                                                                                                                     |
+| <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span><dl> <dt>**Unbekannt**</dt> <dt>0</dt> </dl>                                                 | Der Zustand des Elements konnte nicht bestimmt werden.<br/>                                                                                                                                                           |
+| <span id="Other"></span><span id="other"></span><span id="OTHER"></span><dl> <dt>**Andere**</dt> <dt>1</dt> </dl>                                                         |                                                                                                                                                                                                                        |
+| <span id="Enabled"></span><span id="enabled"></span><span id="ENABLED"></span><dl> <dt>**Aktiviert**</dt> <dt>2</dt> </dl>                                                 | Das Element wird ausgeführt.<br/>                                                                                                                                                                                     |
 | <span id="Disabled"></span><span id="disabled"></span><span id="DISABLED"></span><dl> <dt>**Deaktiviert**</dt> <dt>3</dt> </dl>                                             | Das Element ist deaktiviert.<br/>                                                                                                                                                                                  |
-| <span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span><dl> <dt>4</dt> wird <dt>**heruntergefahren**</dt> </dl>                         | Das Element wird gerade in den deaktivierten Zustand versetzt.<br/>                                                                                                                                                 |
-| <span id="Not_Applicable"></span><span id="not_applicable"></span><span id="NOT_APPLICABLE"></span><dl> <dt>**Nicht zutreffend**</dt> <dt>5</dt> </dl>                     | Das Element unterstützt das Aktivieren oder Deaktivieren des Elements nicht.<br/>                                                                                                                                                     |
-| <span id="Enabled_but_Offline"></span><span id="enabled_but_offline"></span><span id="ENABLED_BUT_OFFLINE"></span><dl> <dt>**Aktiviert, aber offline**</dt> <dt>6</dt> </dl> | Das Element kann Befehle abschließen und löscht alle neuen Anforderungen.<br/>                                                                                                                                |
-| <span id="In_Test"></span><span id="in_test"></span><span id="IN_TEST"></span><dl> <dt>**In Test**</dt> <dt>7</dt> </dl>                                                 | Das-Element befindet sich in einem Testzustand.<br/>                                                                                                                                                                             |
-| <span id="Deferred"></span><span id="deferred"></span><span id="DEFERRED"></span><dl> <dt></dt> Verzögert <dt>8</dt> </dl>                                             | Das Element kann Befehle abschließen, aber alle neuen Anforderungen werden in die Warteschlange eingereiht.<br/>                                                                                                                               |
-| <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span><dl> <dt>**Inesce**</dt> <dt>9</dt> </dl>                                                 | Das-Element ist aktiviert, befindet sich jedoch in einem eingeschränkten Modus. Das Verhalten des-Elements ähnelt dem aktivierten Status (2), aber es verarbeitet nur einen eingeschränkten Satz von Befehlen. Alle anderen Anforderungen werden in die Warteschlange eingereiht.<br/> |
-| <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span><dl> <dt>**Start**</dt> <dt>10</dt> </dl>                                            | Das Element wechselt in den Zustand "aktiviert" (2). Neue Anforderungen werden in die Warteschlange eingereiht.<br/>                                                                                                                    |
+| <span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span><dl> <dt>**Herunterfahren**</dt> <dt>4</dt> </dl>                         | Das Element befindet sich im Zustand Deaktiviert.<br/>                                                                                                                                                 |
+| <span id="Not_Applicable"></span><span id="not_applicable"></span><span id="NOT_APPLICABLE"></span><dl> <dt>**Nicht zutreffend**</dt> <dt>5</dt> </dl>                     | Das -Element unterstützt nicht das Aktivieren oder Deaktivieren.<br/>                                                                                                                                                     |
+| <span id="Enabled_but_Offline"></span><span id="enabled_but_offline"></span><span id="ENABLED_BUT_OFFLINE"></span><dl> <dt>**Aktiviert, aber offline**</dt> <dt>6</dt> </dl> | Das -Element kann Befehle abschließen und alle neuen Anforderungen löschen.<br/>                                                                                                                                |
+| <span id="In_Test"></span><span id="in_test"></span><span id="IN_TEST"></span><dl> <dt>**In Test**</dt> <dt>7</dt> </dl>                                                 | Das Element befindet sich in einem Testzustand.<br/>                                                                                                                                                                             |
+| <span id="Deferred"></span><span id="deferred"></span><span id="DEFERRED"></span><dl> <dt>**Verzögert 8**</dt> <dt></dt> </dl>                                             | Das Element schließt möglicherweise Befehle ab, stellt jedoch alle neuen Anforderungen in die Warteschlange.<br/>                                                                                                                               |
+| <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span><dl> <dt>**Stille**</dt> <dt>9</dt> </dl>                                                 | Das Element ist aktiviert, befindet sich aber im eingeschränkten Modus. Das Verhalten des Elements ähnelt dem Zustand Aktiviert (2), verarbeitet aber nur einen eingeschränkten Satz von Befehlen. Alle anderen Anforderungen werden in die Warteschlange eingereiht.<br/> |
+| <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span><dl> <dt>**Ab**</dt> <dt>10</dt> </dl>                                            | Das Element befindet sich im Zustand Aktiviert (2). Neue Anforderungen werden in die Warteschlange eingereiht.<br/>                                                                                                                    |
 
 
 
@@ -548,49 +548,49 @@ Der aktivierte und deaktivierte Status eines Elements. Sie kann auch die Überg�
 
 </dd> <dt>
 
-**"Endadresse"**
+**EndingAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Endadresse des zusammenhängenden Speicherblocks. Da die Eigenschaft " **StartingAddress** " immer 0 ist, spiegelt dieser Wert immer die Gesamtmenge des Arbeitsspeichers auf dem virtuellen Computer wider.
+Die Endadresse des zusammenhängenden Speicherblocks. Da die **StartingAddress-Eigenschaft** immer 0 ist, spiegelt dieser Wert immer die Gesamtmenge des Arbeitsspeichers auf dem virtuellen Computer wider.
 
 </dd> <dt>
 
 **ErrorAccess**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
 
 </dd> <dt>
 
 **ErrorAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
 
 </dd> <dt>
 
-**Errorgelöscht**
+**ErrorCleared**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -600,36 +600,36 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32P
 
 </dd> <dt>
 
-**ErrorData**
+**Errordata**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
 
 </dd> <dt>
 
 **ErrorDataOrder**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
 
 </dd> <dt>
 
 **ErrorDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -642,124 +642,124 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32P
 **ErrorInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
 
 </dd> <dt>
 
-**Errormethodmethodologie**
+**ErrorMethodology**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die den Typ der Fehlererkennung und-Korrektur beschreibt, die von diesem Speicherblock unterstützt werden. Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt und immer auf **null** festgelegt.
+Eine Zeichenfolge, die den Typ der von diesem Speicherumfang unterstützten Fehlererkennung und -korrektur beschreibt. Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt und immer auf **NULL** festgelegt.
 
 </dd> <dt>
 
 **ErrorResolution**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
 
 </dd> <dt>
 
 **ErrorTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory) geerbt, aber nicht verwendet.
+Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher**](/windows/desktop/CIMWin32Prov/cim-memory) geerbt, aber nicht verwendet.
 
 </dd> <dt>
 
 **ErrorTransferSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
 
 </dd> <dt>
 
-**Extentstatus**
+**ExtentStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Speicherblöcke verfügen über zusätzliche Statusinformationen, die über das in **OperationalStatus** erfasste und andere Eigenschaften verfügen, die von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt wurden. Diese zusätzlichen Informationen (z. b. "Schutz deaktiviert", Wert = 9) werden in der **Volumestatus** -Eigenschaft aufgezeichnet. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und ist immer auf 2 (keine/nicht zutreffend) festgelegt.
+Storage-Erweiterungen verfügen über zusätzliche Statusinformationen, die über die im **OperationalStatus** erfassten und anderen Eigenschaften hinausgehen, die von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt wurden. Diese zusätzlichen Informationen (z.B. "Protection Disabled", value=9) werden in der **VolumeStatus-Eigenschaft** erfasst. Diese Eigenschaft wird von [**CIM \_ StorageExtent**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und immer auf 2 festgelegt (Keine/Nicht zutreffend).
 
 </dd> <dt>
 
 **HealthState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Zustand des Elements. Dieses Attribut drückt den Zustand dieses Elements aus, aber nicht notwendigerweise dessen unter Komponenten. Mögliche Werte sind 0 bis 30, wobei 5 bedeutet, dass das Element vollständig fehlerfrei ist und 30 bedeutet, dass das Element vollständig nicht funktionsfähig ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf 5 festgelegt.
+Die aktuelle Integrität des Elements. Dieses Attribut drückt die Integrität dieses Elements aus, jedoch nicht notwendigerweise die Integrität seiner Unterkomponenten. Die möglichen Werte sind 0 bis 30, wobei 5 bedeutet, dass das Element vollständig fehlerfrei ist und 30 bedeutet, dass das Element vollständig nicht funktionslos ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und immer auf 5 festgelegt.
 
 </dd> <dt>
 
 **IdentifyingDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt und ist auf **null** festgelegt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt und auf **NULL** festgelegt.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit der Erstellung der Konfiguration der virtuellen Maschine. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Das Datum und die Uhrzeit der Erstellung der Konfiguration des virtuellen Computers. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -768,27 +768,27 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Isbasedonunderlyingredundancy**
+**IsBasedOnUnderlyingRedundancy**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** , wenn die zugrunde liegenden Speicherblöcke an einer Speicher Redundanz Gruppe teilnehmen. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und ist immer auf **false** festgelegt.
+**True,** wenn die zugrunde liegenden Speicherwerte an einer Storage Redundanzgruppe beteiligt sind. Diese Eigenschaft wird von [**CIM \_ StorageExtent**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und immer auf **False** festgelegt.
 
 </dd> <dt>
 
 **LastErrorCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -798,10 +798,10 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32P
 
 </dd> <dt>
 
-**Maxquiescetime**
+**MaxQuiesceTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -814,81 +814,81 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32P
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (1024), **override** ("Name")
+Qualifizierer: **MaxLen** (1024), **Außerkraftsetzung** ("Name")
 </dt> </dl>
 
-Die Bezeichnung, mit der das-Objekt bekannt ist. Bei einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und ist immer auf "*GUID*" festgelegt.
+Die Bezeichnung, mit der das Objekt bekannt ist. Bei Einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden. Diese Eigenschaft wird von [**CIM \_ StorageExtent**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und immer auf *"GUID"* festgelegt.
 
 </dd> <dt>
 
 **NameFormat**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und immer auf 0 festgelegt.
+Diese Eigenschaft wird von [**CIM \_ StorageExtent**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und immer auf 0 festgelegt.
 
 </dd> <dt>
 
-**Namenamespace**
+**NameNamespace**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und immer auf 0 festgelegt.
+Diese Eigenschaft wird von [**CIM \_ StorageExtent**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und immer auf 0 festgelegt.
 
 </dd> <dt>
 
-**Nosinglepoinpoffailure**
+**NoSinglePointOfFailure**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** , wenn keine Single Point of Failure vorhanden ist. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und ist immer auf **false** festgelegt.
+**True,** wenn kein Single Point of Failure vorhanden ist. Diese Eigenschaft wird von [**CIM \_ StorageExtent**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und immer auf **False** festgelegt.
 
 </dd> <dt>
 
 **NumberOfBlocks**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein berechneter Wert, der die Gesamtmenge des Arbeitsspeichers dividiert durch die **BLOCKSIZE** darstellt. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt.
+Ein berechneter Wert, der die Gesamtmenge des Arbeitsspeichers dividiert durch **BlockSize** darstellt. Diese Eigenschaft wird von [**CIM \_ StorageExtent**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt.
 
 </dd> <dt>
 
-**Operatingstatus**
+**OperatingStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit und kann verwendet werden, um weitere Details in Bezug auf den Wert der **enabledstate** -Eigenschaft bereitzustellen. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Stellt aktuelle Statusinformationen für die Betriebsbedingung des Elements bereit und kann zum Bereitstellen weiterer Details in Bezug auf den Wert der **EnabledState-Eigenschaft** verwendet werden. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 <dl> <dt>
 
@@ -901,10 +901,10 @@ Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit
 <span id="Servicing"></span><span id="servicing"></span><span id="SERVICING"></span>**Wartung** (2)
 </dt> <dt>
 
-<span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>Wird **gestartet** (3)
+<span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>**Ab** (3)
 </dt> <dt>
 
-<span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>Wird **beendet (4** )
+<span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>**Wird beendet** (4)
 </dt> <dt>
 
 <span id="Stopped"></span><span id="stopped"></span><span id="STOPPED"></span>**Beendet** (5)
@@ -913,7 +913,7 @@ Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit
 <span id="Aborted"></span><span id="aborted"></span><span id="ABORTED"></span>**Abgebrochen** (6)
 </dt> <dt>
 
-<span id="Dormant"></span><span id="dormant"></span><span id="DORMANT"></span>**Ruhende** (7)
+<span id="Dormant"></span><span id="dormant"></span><span id="DORMANT"></span>**Ruhend** (7)
 </dt> <dt>
 
 <span id="Completed"></span><span id="completed"></span><span id="COMPLETED"></span>**Abgeschlossen** (8)
@@ -922,31 +922,31 @@ Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit
 <span id="Migrating"></span><span id="migrating"></span><span id="MIGRATING"></span>**Migrieren** (9)
 </dt> <dt>
 
-<span id="Emigrating"></span><span id="emigrating"></span><span id="EMIGRATING"></span>**Migration** (10)
+<span id="Emigrating"></span><span id="emigrating"></span><span id="EMIGRATING"></span>**Sollgrating** (10)
 </dt> <dt>
 
-<span id="Immigrating"></span><span id="immigrating"></span><span id="IMMIGRATING"></span>**Migration** (11)
+<span id="Immigrating"></span><span id="immigrating"></span><span id="IMMIGRATING"></span>**Immigrating** (11)
 </dt> <dt>
 
-<span id="Snapshotting"></span><span id="snapshotting"></span><span id="SNAPSHOTTING"></span>**Snapshotts** (12)
+<span id="Snapshotting"></span><span id="snapshotting"></span><span id="SNAPSHOTTING"></span>**Momentaufnahmen** (12)
 </dt> <dt>
 
-<span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span>**Herunter** fahren (13)
+<span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span>**Herunterfahren** (13)
 </dt> <dt>
 
-<span id="In_Test"></span><span id="in_test"></span><span id="IN_TEST"></span>**In Test** (14)
+<span id="In_Test"></span><span id="in_test"></span><span id="IN_TEST"></span>**Im Test** (14)
 </dt> <dt>
 
 <span id="Transitioning"></span><span id="transitioning"></span><span id="TRANSITIONING"></span>**Übergang** (15)
 </dt> <dt>
 
-<span id="In_Service"></span><span id="in_service"></span><span id="IN_SERVICE"></span>**In Dienst** (16)
+<span id="In_Service"></span><span id="in_service"></span><span id="IN_SERVICE"></span>**In Service** (16)
 </dt> <dt>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 </dt> <dt>
 
-<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Anbieter reserviert** (0X8000.. )
+<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Reservierter Anbieter** (0x8000. )
 </dt> </dl>
 
 </dd> <dt>
@@ -954,143 +954,143 @@ Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit
 **OperationalStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die aktuellen Status des-Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Die aktuellen Status des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
 
 </dd> <dt>
 
-**Otherenabledstate**
+**OtherEnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktivierte oder deaktivierte Status des Elements, wenn die **enabledstate** -Eigenschaft auf 1 (Sonstiges) festgelegt ist. Diese Eigenschaft muss auf **null** festgelegt werden, wenn **enabledstate** ein anderer Wert als 1 ist. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt und ist immer auf **null** festgelegt.
+Der aktivierte oder deaktivierte Zustand des Elements, wenn die **EnabledState-Eigenschaft** auf 1 (Sonstige) festgelegt ist. Diese Eigenschaft muss auf NULL **festgelegt** werden, wenn **EnabledState** ein anderer Wert als 1 ist. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt**](/previous-versions//cc136818(v=vs.85))und immer auf NULL **festgelegt.**
 
 </dd> <dt>
 
-**Othererrordescription**
+**OtherErrorDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher geerbt,**](/windows/desktop/CIMWin32Prov/cim-memory)aber nicht verwendet.
 
 </dd> <dt>
 
 **OtherIdentifyingInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt und ist auf **null** festgelegt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)und auf NULL **festgelegt.**
 
 </dd> <dt>
 
-**Othernameformat**
+**OtherNameFormat**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Namespace der **Name** -Eigenschaft, wenn die **NameFormat** -Eigenschaft den Wert 1 (Other ") enthält. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und ist immer auf **null** festgelegt.
+Der Namespace der **Name-Eigenschaft,** wenn **die NameFormat-Eigenschaft** den Wert 1 (Other) enthält. Diese Eigenschaft wird von [**CIM \_ StorageExtent geerbt**](/windows/desktop/CIMWin32Prov/cim-storageextent)und immer auf **NULL festgelegt.**
 
 </dd> <dt>
 
-**Othernamenamespace**
+**OtherNameNamespace**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Namespace der **Name** -Eigenschaft, wenn die **namenamespace** -Eigenschaft den Wert 1 (Sonstiges) enthält. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und ist immer auf **null** festgelegt.
+Der Namespace der **Name-Eigenschaft,** wenn **die NameNamespace-Eigenschaft** den Wert 1 (Sonstige) enthält. Diese Eigenschaft wird von [**CIM \_ StorageExtent geerbt**](/windows/desktop/CIMWin32Prov/cim-storageextent)und immer auf **NULL festgelegt.**
 
 </dd> <dt>
 
-**Packageredundancy**
+**PackageRedundancy**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl von physischen Paketen, die derzeit ohne Datenverlust fehlschlagen können. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und immer auf 0 festgelegt.
+Die Anzahl physischer Pakete, die derzeit ohne Datenverlust fehlschlagen können. Diese Eigenschaft wird von [**CIM \_ StorageExtent geerbt**](/windows/desktop/CIMWin32Prov/cim-storageextent)und immer auf 0 festgelegt.
 
 </dd> <dt>
 
-**Powermanagementfunktionen**
+**PowerManagementCapabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)aber nicht verwendet.
 
 </dd> <dt>
 
-**Powermanagementsupported**
+**PowerManagementSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)aber nicht verwendet.
 
 </dd> <dt>
 
-**Poweronhours**
+**PowerOnHours**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)aber nicht verwendet.
 
 </dd> <dt>
 
-**Primarystatus**
+**PrimaryStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt Statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der Eigenschaft **detailedstatus** verwendet werden, um einen hohen und detaillierten Integritäts Status des Elements und seiner unter Komponenten bereitzustellen. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Stellt Statusinformationen auf hoher Ebene zur Verfügung. Diese Eigenschaft sollte in Verbindung mit der **DetailedStatus-Eigenschaft** verwendet werden, um einen hohen und detaillierten Integritätsstatus des Elements und seiner Unterkomponenten zu bieten. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
 
 <dl> <dt>
 
@@ -1100,16 +1100,16 @@ Stellt Statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in V
 <span id="OK"></span><span id="ok"></span>**OK** (1)
 </dt> <dt>
 
-<span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>Herunter **gestuft (2** )
+<span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>**Heruntergestuft** (2)
 </dt> <dt>
 
 <span id="Error"></span><span id="error"></span><span id="ERROR"></span>**Fehler** (3)
 </dt> <dt>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 </dt> <dt>
 
-<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Anbieter reserviert** (0X8000.. )
+<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Reservierter Anbieter** (0x8000. )
 </dt> </dl>
 
 </dd> <dt>
@@ -1117,201 +1117,201 @@ Stellt Statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in V
 **Ursprünglich**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** , wenn das enthaltende System dieses Betriebs Element nicht erstellen oder löschen kann. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt.
+**True,** wenn das enthaltende System nicht in der Lage ist, dieses Betriebselement zu erstellen oder zu löschen. Diese Eigenschaft wird von [**CIM \_ StorageExtent geerbt.**](/windows/desktop/CIMWin32Prov/cim-storageextent)
 
 </dd> <dt>
 
 **Zweck**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die die Medien und deren Verwendung beschreibt. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und ist immer auf "System Speicher" festgelegt.
+Eine Zeichenfolge, die das Medium und seine Verwendung beschreibt. Diese Eigenschaft wird von [**CIM \_ StorageExtent geerbt**](/windows/desktop/CIMWin32Prov/cim-storageextent)und immer auf "Systemspeicher" festgelegt.
 
 </dd> <dt>
 
 **RequestedState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der zuletzt angeforderte oder gewünschte Zustand für das Element. Der tatsächliche Zustand des Elements wird durch **enabledstate** dargestellt. Diese Eigenschaft wird bereitgestellt, um die zuletzt angeforderten und aktuell aktivierten oder deaktivierten Zustände zu vergleichen. Eine bestimmte Instanz von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85)) unterstützt möglicherweise nicht die **requestStateChange** -Methode. Wenn dies auftritt, wird der Wert 12 (nicht zutreffend) verwendet. Diese Eigenschaft wird von **CIM \_ enabledlogicalelement** geerbt.
+Der zuletzt angeforderte oder gewünschte Zustand für das Element. Der tatsächliche Zustand des Elements wird durch **EnabledState dargestellt.** Diese Eigenschaft wird bereitgestellt, um den zuletzt angeforderten und den aktuell aktivierten oder deaktivierten Zustand zu vergleichen. Eine bestimmte Instanz von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85)) unterstützt möglicherweise die **RequestStateChange-Methode** nicht. In diesem Fall wird der Wert 12 (Nicht zutreffend) verwendet. Diese Eigenschaft wird von **CIM \_ EnabledLogicalElement geerbt.**
 
 </dd> <dt>
 
 **SequentialAccess**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** , wenn ein Medien Zugriffsgerät sequenziell auf den Speicher zugreift. Eine Band Partition ist ein Beispiel für einen Speicherblock, auf den sequenziell zugegriffen wird. Speichervolumes, Datenträger Partitionen und logische Datenträger stellen nach dem Zufallsprinzip zugriffene Blöcke dar. Diese Eigenschaft wird von [**CIM \_ storageblock**](/windows/desktop/CIMWin32Prov/cim-storageextent)geerbt und ist immer auf **false** festgelegt.
+**TRUE,** wenn ein Medienzugriffsgerät sequenziell auf den Speicher zutrifft. Eine Bandpartition ist ein Beispiel für einen sequenziell zugänglichen Speicherspeicher. Storage Volumes, Datenträgerpartitionen und logischen Datenträgern stellen zufällig zugängliche Extent dar. Diese Eigenschaft wird von [**CIM \_ StorageExtent geerbt**](/windows/desktop/CIMWin32Prov/cim-storageextent)und immer auf **False festgelegt.**
 
 </dd> <dt>
 
 **StartingAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anfangsadresse, auf die von einer Anwendung oder einem Betriebssystem verwiesen wird und die von einem Speichercontroller für dieses Speicher Objekt zugeordnet wird. Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt und immer auf 0 festgelegt.
+Die Anfangsadresse, auf die von einer Anwendung oder einem Betriebssystem verwiesen wird und die von einem Speichercontroller für dieses Speicherobjekt zugeordnet wird. Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher geerbt**](/windows/desktop/CIMWin32Prov/cim-memory)und immer auf 0 festgelegt.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt,**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)aber nicht verwendet.
 
 </dd> <dt>
 
-**Status Beschreibungen**
+**StatusDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeichen folgen, die die verschiedenen **OperationalStatus** -Array Werte beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Zeichenfolgen, die die verschiedenen **OperationalStatus-Arraywerte** beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
 
 </dd> <dt>
 
 **StatusInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)aber nicht verwendet.
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des Bereichs Systems. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
+Der Name der Erstellungsklasse des Bereichssystems. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)
 
 </dd> <dt>
 
 **SystemLevelAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher geerbt,**](/windows/desktop/CIMWin32Prov/cim-memory)aber nicht verwendet.
 
 </dd> <dt>
 
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der eindeutige Bezeichner für die Bereichs bezogene virtuelle Maschine. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt.
+Der eindeutige Bezeichner für den virtuellen Bereichscomputer. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)
 
 </dd> <dt>
 
-**Timeoflaststatechange**
+**TimeOfLastStateChange**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum oder die Uhrzeit, zu dem der aktivierte Status des Elements zuletzt geändert wurde. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt und ist immer auf "Null" festgelegt.
+Das Datum oder die Uhrzeit der letzten Änderung des aktivierten Zustands des Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt**](/previous-versions//cc136818(v=vs.85))und immer auf "NULL" festgelegt.
 
 </dd> <dt>
 
-**Totalpoweronhours**
+**TotalPowerOnHours**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)aber nicht verwendet.
 
 </dd> <dt>
 
-**Transitioningumstate**
+**TransitioningToState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Ziel Status an, in den die-Instanz übergeht. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Gibt den Zielzustand an, in den die Instanz übergibt. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt.**](/previous-versions//cc136818(v=vs.85))
 
 </dd> <dt>
 
-**Ständigem**
+**Volatil**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Speicher flüchtig ist. Diese Eigenschaft wird vom [**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)geerbt und ist immer auf " **true**" festgelegt.
+Gibt an, ob der Arbeitsspeicher flüchtig ist. Diese Eigenschaft wird vom [**\_ CIM-Arbeitsspeicher geerbt**](/windows/desktop/CIMWin32Prov/cim-memory)und immer auf **True festgelegt.**
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM- \_ Speicher** Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ Memory-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -1319,25 +1319,25 @@ Der Zugriff auf die **MSVM- \_ Speicher** Klasse kann durch die UAC-Filterung ei
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Speicher**](cim-memory.md)
+[**\_CIM-Arbeitsspeicher**](cim-memory.md)
 </dt> <dt>
 
-[**CIM- \_ Speicher**](/windows/desktop/CIMWin32Prov/cim-memory)
+[**\_CIM-Arbeitsspeicher**](/windows/desktop/CIMWin32Prov/cim-memory)
 </dt> <dt>
 
-[Speicher Klassen](memory-classes.md)
+[Speicherklassen](memory-classes.md)
 </dt> </dl>
 
  

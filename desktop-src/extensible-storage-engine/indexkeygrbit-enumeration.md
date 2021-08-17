@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der indexkeygrbit-Enumeration.
-title: Indexkeygrbit-Enumeration
+description: Weitere Informationen finden Sie unter IndexKeyGrbit-Enumeration.
+title: IndexKeyGrbit-Enumeration
 TOCTitle: IndexKeyGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.IndexKeyGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.indexkeygrbit(v=EXCHG.10)
@@ -28,21 +28,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f28a3f0c7d69f8ce7e8e688b6fb7b2fecafcce44
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ff5ea8eecefdbc68a07fef0dd51776428f2b8ef159b89b7d6d4ecd5deb49a2b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214910"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120093630"
 ---
-# <a name="indexkeygrbit-enumeration"></a>Indexkeygrbit-Enumeration
+# <a name="indexkeygrbit-enumeration"></a>IndexKeyGrbit-Enumeration
 
-Schlüssel Definitions-grbits. Wird beim Abrufen von Informationen zu einem Index verwendet.
+Schlüsseldefinitions-Grbits. Wird beim Abrufen von Informationen zu einem Index verwendet.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -73,19 +73,19 @@ public enum IndexKeyGrbit
 <tr class="odd">
 <td></td>
 <td>Aufsteigend</td>
-<td>Das Schlüssel Segment ist aufsteigend.</td>
+<td>Das Schlüsselsegment ist aufsteigend.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Absteigend</td>
-<td>Das Schlüssel Segment ist absteigend.</td>
+<td>Das Schlüsselsegment ist absteigend.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

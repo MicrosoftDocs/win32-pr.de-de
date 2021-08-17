@@ -1,32 +1,32 @@
 ---
-description: Windows sendet allen Fenstern der obersten Ebene eine Reihe von standardmäßigen WM \_ devicechange-Nachrichten, wenn neue Geräte oder Medien (z. b. eine CD oder DVD) hinzugefügt und verfügbar werden und vorhandene Geräte oder Medien entfernt werden.
+description: Windows sendet allen Fenstern der obersten Ebene eine Reihe von STANDARD-WM DEVICECHANGE-Nachrichten, wenn neue Geräte oder Medien (z. B. eine CD oder DVD) hinzugefügt und verfügbar werden und vorhandene Geräte oder Medien entfernt \_ werden.
 ms.assetid: 26baa3aa-e54d-42fe-b2b2-a3fcca6dee91
-title: Erkennen von Medien einfügen oder entfernen
+title: Erkennen des Einfügens oder Entfernens von Medien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e6cfd4539d6f2ce5eac41e355f56a5a87835505
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 3f3f6d579ed654ae2d2f77d00f70b88dc1441d03bbce59c0f8cb39ca6800c6af
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104132169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119318350"
 ---
-# <a name="detecting-media-insertion-or-removal"></a>Erkennen von Medien einfügen oder entfernen
+# <a name="detecting-media-insertion-or-removal"></a>Erkennen des Einfügens oder Entfernens von Medien
 
-Windows sendet allen Fenstern der obersten Ebene eine Reihe von standardmäßigen [**WM \_ devicechange**](wm-devicechange.md) -Nachrichten, wenn neue Geräte oder Medien (z. b. eine CD oder DVD) hinzugefügt und verfügbar werden und vorhandene Geräte oder Medien entfernt werden. Sie müssen sich nicht registrieren, um diese Standard Meldungen zu empfangen. Ausführliche Informationen dazu, welche Nachrichten standardmäßig gesendet werden, finden Sie im Abschnitt "Hinweise" unter [**registerdevicenotifi.**](/windows/desktop/api/Winuser/nf-winuser-registerdevicenotificationa) Die Nachrichten im folgenden Codebeispiel gehören zu den Standard Meldungen.
+Windows allen Fenstern der obersten Ebene eine Reihe von [**STANDARD-WM \_ DEVICECHANGE-Nachrichten,**](wm-devicechange.md) wenn neue Geräte oder Medien (z. B. eine CD oder DVD) hinzugefügt und verfügbar werden und vorhandene Geräte oder Medien entfernt werden. Sie müssen sich nicht registrieren, um diese Standardnachrichten zu empfangen. Weitere Informationen dazu, welche Nachrichten standardmäßig gesendet werden, finden Sie im Abschnitt "Hinweise" in [**RegisterDeviceNotification.**](/windows/desktop/api/Winuser/nf-winuser-registerdevicenotificationa) Die Nachrichten im folgenden Codebeispiel gehören zu den Standardmeldungen.
 
 > [!Note]  
-> Windows sendet nur [**WM \_ devicechange**](wm-devicechange.md) -Nachrichten für CD-oder DVD-Medienereignisse an Fenster der obersten Ebene, die sich im Besitz von Anwendungen befinden, die in der aktiven Konsolen Sitzung ausgeführt werden. Fenster der obersten Ebene, die sich im Besitz von Anwendungen befinden, die in einer Remote Desktop Sitzung ausgeführt werden, empfangen keine [**WM \_ devicechange**](wm-devicechange.md) -Nachrichten für CD-oder DVD-Medienereignisse.
+> Windows werden nur [**WM \_ DEVICECHANGE-Nachrichten**](wm-devicechange.md) für CD- oder DVD-Medienereignisse an Fenster der obersten Ebene gesendet, die sich im Besitz von Anwendungen befinden, die in der aktiven Konsolensitzung ausgeführt werden. Fenster der obersten Ebene, die sich im Besitz von Anwendungen befinden, die in einer Remotedesktopsitzung ausgeführt werden, empfangen keine [**WM \_ DEVICECHANGE-Nachrichten**](wm-devicechange.md) für CD- oder DVD-Medienereignisse.
 
  
 
-Jede [**WM \_ devicechange**](wm-devicechange.md) -Nachricht verfügt über ein zugeordnetes Ereignis, das die Änderung beschreibt, und eine Struktur, die ausführliche Informationen zur Änderung bereitstellt. Die Struktur besteht aus einem Ereignis unabhängigen Header ( [**dev \_ Broadcast \_ HDR**](/windows/desktop/api/Dbt/ns-dbt-dev_broadcast_hdr)), gefolgt von Ereignis abhängigen Membern. Die Ereignis abhängigen Member beschreiben das Gerät, für das das Ereignis gilt. Um diese Struktur verwenden zu können, müssen Anwendungen zuerst den Ereignistyp und den Gerätetyp ermitteln. Anschließend können Sie die richtige-Struktur verwenden, um die entsprechende Aktion durchführen.
+Jede [**WM \_ DEVICECHANGE-Nachricht**](wm-devicechange.md) verfügt über ein zugeordnetes Ereignis, das die Änderung beschreibt, und eine Struktur, die ausführliche Informationen zur Änderung enthält. Die -Struktur besteht aus einem ereignisunabhängigen Header, [**DEV \_ BROADCAST \_ HDR,**](/windows/desktop/api/Dbt/ns-dbt-dev_broadcast_hdr)gefolgt von ereignisabhängigen Membern. Die ereignisabhängigen Member beschreiben das Gerät, für das das Ereignis gilt. Um diese Struktur zu verwenden, müssen Anwendungen zuerst den Ereignistyp und den Gerätetyp bestimmen. Anschließend können sie die richtige Struktur verwenden, um entsprechende Maßnahmen zu ergreifen.
 
-Wenn der Benutzer eine neue CD oder DVD in ein Laufwerk einfügt, erhalten Anwendungen eine [**WM \_ devicechange**](wm-devicechange.md) -Nachricht mit einem [DBT \_ devicearrival](dbt-devicearrival.md) -Ereignis. Die Anwendung muss das Ereignis überprüfen, um sicherzustellen, dass der Typ des eintreffenden Geräts ein Volume ist (der **dbch \_ den DeviceType "** -Member ist **DBT \_ \_ devypvolume**) und dass sich die Änderung auf die Medien auswirkt (der **dbcv- \_ Flags** -Member ist **dbtf- \_ Medien**).
+Wenn der Benutzer eine neue CD oder DVD in ein Laufwerk einfüge, erhalten Anwendungen eine [**WM \_ DEVICECHANGE-Nachricht**](wm-devicechange.md) mit einem [DBT \_ DEVICEARRARRARR-Ereignis.](dbt-devicearrival.md) Die Anwendung muss das Ereignis überprüfen, um sicherzustellen, dass der Typ des eintreffenden Geräts ein Volume ist **(das dbch \_ devicetype-Member** **ist DBT \_ DEVTYP \_ VOLUME),** und dass sich die Änderung auf das Medium auswirken (dbcv **\_ flags-Member** ist **DBTF \_ MEDIA).**
 
-Wenn der Benutzer eine CD oder DVD von einem Laufwerk entfernt, erhalten Anwendungen eine [**WM \_ devicechange**](wm-devicechange.md) -Nachricht mit einem [DBT \_ deviceremovecomplete](dbt-deviceremovecomplete.md) -Ereignis. Die Anwendung muss das Ereignis erneut überprüfen, um sicherzustellen, dass das Gerät, das entfernt wird, ein Volume ist und dass sich die Änderung auf die Medien auswirkt.
+Wenn der Benutzer eine CD oder DVD von einem Laufwerk entfernt, erhalten Anwendungen eine [**WM \_ DEVICECHANGE-Nachricht**](wm-devicechange.md) mit einem [DBT \_ DEVICEREMOVECOMPLETE-Ereignis.](dbt-deviceremovecomplete.md) Auch hier muss die Anwendung das Ereignis überprüfen, um sicherzustellen, dass das zu entfernende Gerät ein Volume ist und dass sich die Änderung auf die Medien auswirken kann.
 
-Der folgende Code veranschaulicht, wie Sie das Einfügen oder Entfernen einer CD oder DVD überprüfen.
+Der folgende Code veranschaulicht, wie sie das Einfügen oder Entfernen einer CD oder DVD überprüfen.
 
 
 ```C++
@@ -129,7 +129,7 @@ char FirstDriveFromMask( ULONG unitmask )
 
 <dl> <dt>
 
-[Geräte Ereignisse](device-events.md)
+[Geräteereignisse](device-events.md)
 </dt> </dl>
 
  

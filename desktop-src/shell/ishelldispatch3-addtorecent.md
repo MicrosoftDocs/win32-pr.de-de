@@ -1,5 +1,5 @@
 ---
-description: 'IShellDispatch3.AddToRecent-Methode: Fügt der Liste der zuletzt verwendeten Dateien (MRU) eine Datei hinzu.'
+description: 'IShellDispatch3.AddToRecent-Methode: Fügt der Liste zuletzt verwendeter Dateien (MRU) eine Datei hinzu.'
 ms.assetid: aa5aef31-7f3f-4cc4-949d-1484de243ef3
 title: IShellDispatch3.AddToRecent-Methode (Shldisp.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 8d31d05e9eef889d9018e4806cf4c882dba3060e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 8f5507755a6929cee9811f1f935e93b347aed9ebe57f2e0237365cdfbbf4b109
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108116928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090320"
 ---
 # <a name="ishelldispatch3addtorecent-method"></a>IShellDispatch3.AddToRecent-Methode
 
-Fügt der Liste der zuletzt verwendeten Dateien (MRU) eine Datei hinzu.
+Fügt der Liste zuletzt verwendeter Dateien (MRU) eine Datei hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ Typ: **Variant**
 
 Eine **Zeichenfolge,** die den Pfad der Datei enthält, die der Liste der zuletzt verwendeten Dokumente hinzugefügt werden soll.
 
-**Windows Vista:** Legen Sie diesen Parameter auf **NULL fest,** um den Ordner der letzten Dokumente zu löschen.
+**Windows Vista:** Legen Sie diesen Parameter auf **NULL** fest, um den ordner recent documents zu löschen.
 
 </dd> <dt>
 
@@ -85,7 +85,7 @@ Diese Methode gibt keinen Wert zurück.
 
 Die folgenden Beispiele zeigen die Verwendung von **AddToRecent** für JScript, VBScript und Visual Basic.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -178,10 +178,10 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6.0 oder höher)</dt> </dl> |

@@ -1,30 +1,30 @@
 ---
-title: Erhalten von Fehlermeldungen aus einer Senke
-description: Erhalten von Fehlermeldungen aus einer Senke
+title: Abrufen von Fehlermeldungen aus einer Senke
+description: Abrufen von Fehlermeldungen aus einer Senke
 ms.assetid: c948d06f-7728-4d89-8dc4-40d192c94099
 keywords:
-- Advanced Systems Format (ASF), Fehlermeldungen von senken
-- ASF (Advanced Systems Format), Fehlermeldungen von senken
-- Advanced Systems Format (ASF), senken
-- ASF (Advanced Systems Format), senken
-- senken, Fehlermeldungen
+- Advanced Systems Format (ASF), Fehlermeldungen von Senken
+- ASF (Advanced Systems Format), Fehlermeldungen von Senken
+- Advanced Systems Format (ASF),sinks
+- ASF (Advanced Systems Format), sinks
+- sinks,error messages
 - Fehlermeldungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c6b3fbb43d72107dbffc13eb27425e253bc13839
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: e432f805b5e33de0e830a2f319713bccec328d429f8eb04064d87edc56bf375c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104101266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119930870"
 ---
-# <a name="getting-error-messages-from-a-sink"></a>Erhalten von Fehlermeldungen aus einer Senke
+# <a name="getting-error-messages-from-a-sink"></a>Abrufen von Fehlermeldungen aus einer Senke
 
-Das Writer-Objekt sendet keine Nachrichten an die [**iwmstatuscallback:: OnStatus**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstatuscallback-onstatus) -Rückruf Methode. Sie können jedoch Writer-senken festlegen, um Nachrichten an OnStatus zu senden. Jede Senke muss so festgelegt werden, dass Sie den Status separat bereitstellt, aber alle senken können an denselben Rückruf Berichten.
+Das Writer-Objekt sendet keine Nachrichten an die [**IWMStatusCallback::OnStatus-Rückrufmethode.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstatuscallback-onstatus) Sie können jedoch Writer-Senken festlegen, um Nachrichten an OnStatus zu senden. Jede Senke muss so festgelegt werden, dass der Status separat zu liefern ist, aber alle Senken können einen Bericht an denselben Rückruf erstellen.
 
-Um eine Senke für die übermitteln von Statusmeldungen an **OnStatus** festzulegen, rufen Sie die [**iwmregistercallback:: Empfehlung**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmregistercallback-advise) -Methode auf.
+Um eine Senke für die Zustellung von Statusmeldungen an **OnStatus zu** festlegen, rufen Sie [**die IWMRegisterCallback::Advise-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmregistercallback-advise) auf.
 
-Der folgende Beispielcode veranschaulicht, wie Sie alle senken festlegen, um Statusmeldungen an einen **OnStatus** -Rückruf zu übermitteln. In diesem Beispiel wird der Index jeder Senke als Kontext Parameter verwendet, sodass die **OnStatus** -Methode zwischen Nachrichten von den verschiedenen senken unterscheiden kann. Weitere Informationen zur Verwendung dieses Codes finden Sie unter [Verwenden der Codebeispiele](using-the-code-examples.md).
+Der folgende Beispielcode veranschaulicht, wie alle Senken festgelegt werden, um Statusmeldungen an einen **OnStatus-Rückruf** zu senden. In diesem Beispiel wird der Index jeder Senke als Kontextparameter verwendet, sodass die **OnStatus-Methode** zwischen Nachrichten aus den verschiedenen Senken unterscheiden kann. Weitere Informationen zur Verwendung dieses Codes finden Sie unter [Verwenden der Codebeispiele.](using-the-code-examples.md)
 
 
 ```C++
@@ -83,15 +83,15 @@ Exit:
 
 <dl> <dt>
 
-[**Iwmregistercallback-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmregistercallback)
+[**IWMRegisterCallback-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmregistercallback)
 </dt> <dt>
 
-[**Arbeiten mit Writer-senken**](working-with-writer-sinks.md)
+[**Arbeiten mit Writer-Senken**](working-with-writer-sinks.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

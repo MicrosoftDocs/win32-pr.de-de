@@ -1,19 +1,19 @@
 ---
-description: Angeben von Client Informationen
+description: Angeben von Clientinformationen
 ms.assetid: 275fda71-61ef-4b50-96fe-bdc0c0266646
-title: Angeben von Client Informationen
+title: Angeben von Clientinformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4f6ca094b627b6c2cee16ec587a8c850cd17f78
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b437c4d0c0ce9d04f55bb00a1fd4b666d30cf29228050151072e43f87edb11a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217510"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119445500"
 ---
-# <a name="specifying-client-information"></a>Angeben von Client Informationen
+# <a name="specifying-client-information"></a>Angeben von Clientinformationen
 
-Die im zweiten Argument bereitgestellten Client Informationen werden von einigen Gerätetreibern verwendet, um die Geräteleistung zu optimieren. Die Anwendung sollte mindestens eine Zeichenfolge bereitstellen, die den Namen, eine Hauptversionsnummer, eine neben Versionsnummer und eine Revisionsnummer enthält. Dies sind die Felder, die von der Beispielanwendung bereitgestellt werden.
+Die im zweiten Argument angegebenen Clientinformationen werden von einigen Gerätetreibern verwendet, um die Geräteleistung zu optimieren. Ihre Anwendung sollte mindestens eine Zeichenfolge mit ihrem Namen, einer Hauptversionsnummer, einer Nebenversionsnummer und einer Revisionsnummer bereitstellen. Dies sind die Felder, die von der Beispielanwendung bereitgestellt werden.
 
 
 ```C++
@@ -25,7 +25,7 @@ Die im zweiten Argument bereitgestellten Client Informationen werden von einigen
 
 
 
-Die `GetClientInformation` -Funktion in der Beispielanwendung erstellt und füllt eine **iportabledevicevalues** -Schnittstelle mit Client Informationen. Diese Funktion verfügt über zwei primäre Teile. Der erste Teil erstellt eine Instanz eines portablen Geräte Wert Objekts durch Aufrufen der CoCreateInstance-Funktion.
+Die `GetClientInformation` Funktion in der Beispielanwendung erstellt eine **IPortableDeviceValues-Schnittstelle** und füllt sie mit Clientinformationen auf. Diese Funktion besteht aus zwei Hauptteilen. Der erste Teil erstellt eine Instanz eines portablen Gerätewertobjekts durch Aufrufen der CoCreateInstance-Funktion.
 
 
 ```C++
@@ -37,7 +37,7 @@ HRESULT hr = CoCreateInstance(CLSID_PortableDeviceValues,
 
 
 
-Im zweiten Teil werden die Client Informationen im Objekt für tragbare Geräte Werte festgelegt.
+Der zweite Teil legt die Clientinformationen im portablen Device Values-Objekt fest.
 
 
 ```C++
@@ -88,10 +88,10 @@ else
 
 <dl> <dt>
 
-[**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
+[**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
 </dt> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

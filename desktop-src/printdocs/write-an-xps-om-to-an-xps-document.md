@@ -1,27 +1,27 @@
 ---
-description: Beschreibt, wie der Inhalt eines XPS-om in einem Programm in eine XPS-Dokument Datei geschrieben wird.
+description: Beschreibt, wie der Inhalt einer XPS OM in ein Programm in eine XPS-Dokumentdatei geschrieben wird.
 ms.assetid: 8bee8059-b901-4a99-a7e4-60dad831c239
-title: Schreiben eines XPS-om in ein XPS-Dokument
+title: Schreiben einer XPS OM in ein XPS-Dokument
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 811f773394ee9dbbcf77dc75d1429322bb733631
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 40f6ef79f592ad241e54e9a01fb5e4fe72cc41573e75c78f347109cdfb1c6f32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119098557"
 ---
-# <a name="write-an-xps-om-to-an-xps-document"></a>Schreiben eines XPS-om in ein XPS-Dokument
+# <a name="write-an-xps-om-to-an-xps-document"></a>Schreiben einer XPS OM in ein XPS-Dokument
 
-Beschreibt, wie der Inhalt eines XPS-om in einem Programm in eine XPS-Dokument Datei geschrieben wird.
+Beschreibt, wie der Inhalt einer XPS OM in ein Programm in eine XPS-Dokumentdatei geschrieben wird.
 
-Wenn ein Programm über ein XPS-OM verfügt, das ein umfassendes Dokument enthält, kann das Programm das XPS-om in eine Datei als XPS-Dokument schreiben, indem die Methode " [**Write-ToFile**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-writetofile) " der [**ixpsompackage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage) -Schnittstelle aufgerufen wird.
+Wenn ein Programm über eine XPS OM verfügt, die ein vollständiges Dokument enthält, kann das Programm die XPS OM als XPS-Dokument in eine Datei schreiben, indem die [**WriteToFile-Methode**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-writetofile) der [**IXpsOMPackage-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage) aufgerufen wird.
 
-Bevor Sie diese Codebeispiele in einem Programm verwenden, lesen Sie den Haftungsausschluss in [Allgemeine XPS-Dokument Programmieraufgaben](common-xps-document-tasks.md).
+Bevor Sie diese Codebeispiele in einem Programm verwenden, lesen Sie den Haftungsausschluss unter [Common XPS Document Programming Tasks (Allgemeine XPS-Dokumentprogrammierungsaufgaben).](common-xps-document-tasks.md)
 
-## <a name="writing-a-complete-xps-om-to-an-xps-document"></a>Schreiben eines kompletten XPS-om in ein XPS-Dokument
+## <a name="writing-a-complete-xps-om-to-an-xps-document"></a>Schreiben einer vollständigen XPS OM in ein XPS-Dokument
 
-Nachdem Sie den Inhalt eines XPS-Maps festgelegt haben, können Sie das XPS-OM als XPS-Dokument in einer Datei speichern, indem Sie die Methode " [**Write-ToFile**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-writetofile) " der [**ixpsompackage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage) -Schnittstelle aufrufen.
+Nachdem Sie den Inhalt einer XPS OM festgelegt haben, können Sie die XPS OM in einer Datei als XPS-Dokument speichern, indem Sie die [**WriteToFile-Methode**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompackage-writetofile) der [**IXpsOMPackage-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage) aufrufen.
 
 
 ```C++
@@ -39,16 +39,16 @@ Nachdem Sie den Inhalt eines XPS-Maps festgelegt haben, können Sie das XPS-OM a
 
 
 > [!Note]  
-> Wenn Sie ein XPS-om in eine Datei oder einen Stream schreiben, wird nicht automatisch eine Miniaturansicht für das XPS-Dokument erstellt. Verwenden Sie zum Erstellen einer Miniaturansicht des XPS-Dokuments die [**ixpsomthumbnailgenerator**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomthumbnailgenerator) -Schnittstelle.
+> Das Schreiben einer XPS OM in eine Datei oder einen Stream erstellt nicht automatisch eine Miniaturansicht für das XPS-Dokument. Verwenden Sie die [**IXpsOMThumbnailGenerator-Schnittstelle,**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomthumbnailgenerator) um eine Miniaturansicht des XPS-Dokuments zu erstellen.
 
  
 
 ## <a name="incrementally-writing-an-xps-document"></a>Inkrementelles Schreiben eines XPS-Dokuments
 
-Die [**ixpsompackagewriter**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackagewriter) -Schnittstelle kann verwendet werden, um die Teile eines XPS-Dokuments inkrementell zu schreiben; beispielsweise, wenn die Dokument Teile nacheinander erstellt oder verarbeitet werden.
+Die [**IXpsOMPackageWriter-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackagewriter) kann verwendet werden, um die Teile eines XPS-Dokuments inkrementell zu schreiben. Beispielsweise, wenn die Dokumentteile nacheinander erstellt oder verarbeitet werden.
 
 > [!Note]  
-> Wenn Sie ein XPS-om in eine Datei oder einen Stream schreiben, wird nicht automatisch eine Miniaturansicht für das XPS-Dokument erstellt. Verwenden Sie zum Erstellen einer Miniaturansicht des XPS-Dokuments die [**ixpsomthumbnailgenerator**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomthumbnailgenerator) -Schnittstelle.
+> Das Schreiben einer XPS OM in eine Datei oder einen Stream erstellt nicht automatisch eine Miniaturansicht für das XPS-Dokument. Verwenden Sie die [**IXpsOMThumbnailGenerator-Schnittstelle,**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomthumbnailgenerator) um eine Miniaturansicht des XPS-Dokuments zu erstellen.
 
  
 
@@ -59,28 +59,28 @@ Die [**ixpsompackagewriter**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmo
 **Next Steps**
 </dt> <dt>
 
-[Drucken eines XPS-OM](print-an-xps-om.md)
+[Drucken einer XPS OM](print-an-xps-om.md)
 </dt> <dt>
 
-**In diesem Abschnitt verwendet**
+**Wird in diesem Abschnitt verwendet**
 </dt> <dt>
 
-[**Iopcparamei**](/previous-versions/windows/desktop/api/msopc/nn-msopc-iopcparturi)
+[**IOpcPartUri**](/previous-versions/windows/desktop/api/msopc/nn-msopc-iopcparturi)
 </dt> <dt>
 
-[**Ixpsompackage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage)
+[**IXpsOMPackage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage)
 </dt> <dt>
 
-[**Ixpsomthumbnailgenerator**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomthumbnailgenerator)
+[**IXpsOMThumbnailGenerator**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomthumbnailgenerator)
 </dt> <dt>
 
 **Weitere Informationen**
 </dt> <dt>
 
-[Initialisieren eines XPS-OMS](xps-object-model-initialization.md)
+[Initialisieren einer XPS OM](xps-object-model-initialization.md)
 </dt> <dt>
 
-[XPS-Dokument-API-Referenz](xps-programming-reference.md)
+[REFERENZ ZUR XPS-Dokument-API](xps-programming-reference.md)
 </dt> <dt>
 
 [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

@@ -1,19 +1,19 @@
 ---
-description: Das- <name> Element gibt den Namen dieser Bibliothek an. Dieses Element ist erforderlich und besitzt keine Attribute oder untergeordneten Elemente.
+description: Das <name> -Element gibt den Namen dieser Bibliothek an. Dieses Element ist erforderlich und verfügt über keine Attribute oder untergeordneten Elemente.
 ms.assetid: 1F433405-5943-4579-BDAD-423C4E1A6E76
-title: Name-Element (Bibliotheks Schema)
+title: name-Element (Bibliotheksschema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 54d38baa32587ee04c62c8c3086d5353e8eed9e1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 179d8b4a1f4358ccb441cc38c6c0765a6dc4d9ade8b3c32a1504be2151cfedaa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104995175"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119883940"
 ---
-# <a name="name-element-library-schema"></a>Name-Element (Bibliotheks Schema)
+# <a name="name-element-library-schema"></a>name-Element (Bibliotheksschema)
 
-Das- <name> Element gibt den Namen dieser Bibliothek an. Dieses Element ist erforderlich und besitzt keine Attribute oder untergeordneten Elemente.
+Das <name> -Element gibt den Namen dieser Bibliothek an. Dieses Element ist erforderlich und verfügt über keine Attribute oder untergeordneten Elemente.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,15 +33,15 @@ Das- <name> Element gibt den Namen dieser Bibliothek an. Dieses Element ist erfo
 
 | Übergeordnetes Element                                                               | Untergeordnete Elemente |
 |------------------------------------------------------------------------------|----------------|
-| [librarydescription-Element (Bibliotheks Schema)](schema-librarydescription.md) |                |
+| [libraryDescription-Element (Bibliotheksschema)](schema-librarydescription.md) |                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Name ist der Anzeige Name der Bibliothek, der in Windows-Explorer angezeigt wird. Der Name kann <dllname> <index> wie im folgenden Beispiel in einem Format wie im folgenden Beispiel angegeben werden.
+Der Name ist der Anzeigename der Bibliothek, der in Windows Explorer angezeigt wird. Der Name kann im Format , wie im folgenden Beispiel angegeben <dllname> <index> werden.
 
 
 ```
@@ -58,10 +58,10 @@ Der Name ist der Anzeige Name der Bibliothek, der in Windows-Explorer angezeigt 
 
 <dl> <dt>
 
-[librarydescription-Element (Bibliotheks Schema)](schema-librarydescription.md)
+[libraryDescription-Element (Bibliotheksschema)](schema-librarydescription.md)
 </dt> <dt>
 
-[Suchdienst-Beschreibungs Schema](../search/search-sconn-desc-schema-entry.md)
+[Suchconnectorbeschreibungsschema](../search/search-sconn-desc-schema-entry.md)
 </dt> </dl>
 
  

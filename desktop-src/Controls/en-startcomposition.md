@@ -1,9 +1,9 @@
 ---
-title: EN_STARTCOMPOSITION Benachrichtigungs Code (RichEdit. h)
-description: Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements, dass der Benutzer mit der Eingabe mit dem IME-oder Text Dienst Framework begonnen
+title: EN_STARTCOMPOSITION Benachrichtigungscode (Richedit.h)
+description: Benachrichtigt ein übergeordnetes Fenster des Rich-Edit-Steuerelements, dass der Benutzer mit der Eingabe von IME oder Textdienstframework.
 ms.assetid: 755C0C5F-061B-44AF-98A5-776AEE1B7AF8
 keywords:
-- Windows-Steuerelemente für EN_STARTCOMPOSITION Benachrichtigungs
+- EN_STARTCOMPOSITION Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a103431427a9325a6b74c27927fb56e65f6fe771
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4b182322175d03ab1c6906132c8f5970ce1d716e7e1c745406b009e5b224ec2c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105555"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119436670"
 ---
-# <a name="en_startcomposition-notification-code"></a>EN \_ StartComposition-Benachrichtigungs Code
+# <a name="en_startcomposition-notification-code"></a>EN \_ STARTCOMPOSITION-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements, dass der Benutzer mit der Eingabe mit dem IME-oder [Text Dienst Framework](/windows/desktop/TSF/text-services-framework)begonnen
+Benachrichtigt ein übergeordnetes Fenster mit rich edit-Steuerelementen, dass der Benutzer mit der Eingabe von ime oder [Textdienstframework.](/windows/desktop/TSF/text-services-framework)
 
 
 ```C++
@@ -41,7 +41,7 @@ EN_STARTCOMPOSITION
 *lParam* 
 </dt> <dd>
 
-Eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur.
+Eine [**NMHDR-Struktur.**](/windows/desktop/api/richedit/ns-richedit-nmhdr)
 
 </dd> </dl>
 
@@ -51,9 +51,9 @@ Eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 

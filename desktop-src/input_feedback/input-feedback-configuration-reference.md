@@ -1,6 +1,6 @@
 ---
-title: Referenz zur Eingabe von Feedback Konfigurationen
-description: Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für die Konfiguration des Eingabe-Feedbacks.
+title: Konfigurationsreferenz für Eingabefeedback
+description: Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für die Konfiguration von Eingabefeedback.
 ms.assetid: 0C28CE75-9DD2-403C-A805-88B525765A54
 keywords:
 - Benutzereingriff
@@ -12,26 +12,26 @@ keywords:
 - Tablettstift
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: 8cd3814fcdb4fce74ea8734f43b74d1c212b27de
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 1779bba1d244dbb451ce03c51bec322ebb0cf58c701c40f1fe34478b1517c2c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104315104"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119466660"
 ---
-# <a name="input-feedback-configuration-reference"></a>Referenz zur Eingabe von Feedback Konfigurationen
+# <a name="input-feedback-configuration-reference"></a>Konfigurationsreferenz für Eingabefeedback
 
-Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für die [Konfiguration des Eingabe-Feedbacks](input-feedback-configuration-portal.md).
+Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [die Konfiguration von Eingabefeedback.](input-feedback-configuration-portal.md)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                       | BESCHREIBUNG                                                                                                                                                          |
+| Thema                                       | Beschreibung                                                                                                                                                          |
 |---------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Konstanten**](constants.md)<br/>   | Dieser Abschnitt enthält die Referenz Spezifikationen für [Eingabe-Feedback-Konfigurations](input-feedback-configuration-portal.md) Konstanten.<br/>                 |
-| [Enumerationen](enumerations.md)<br/> | Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für die [Eingabe von Feedback-Konfigurations](input-feedback-configuration-portal.md) Enumerationen.<br/> |
-| [Funktionen](functions.md)<br/>       | Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für Konfigurationsfunktionen für das [Eingabe Feedback](input-feedback-configuration-portal.md) .<br/>    |
+| [**Konstanten**](constants.md)<br/>   | Dieser Abschnitt enthält die Referenzspezifikationen für [Input Feedback Configuration-Konstanten.](input-feedback-configuration-portal.md)<br/>                 |
+| [Enumerationen](enumerations.md)<br/> | Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [Input Feedback Configuration-Enumerationen.](input-feedback-configuration-portal.md)<br/> |
+| [Funktionen](functions.md)<br/>       | Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [Input Feedback Configuration-Funktionen.](input-feedback-configuration-portal.md)<br/>    |
 
 
 
@@ -41,10 +41,10 @@ Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für die [
 
 <dl> <dt>
 
-[Eingabe-Feedback-Konfiguration](input-feedback-configuration-portal.md)
+[Konfiguration des Eingabefeedbacks](input-feedback-configuration-portal.md)
 </dt> <dt>
 
-[**SystemParametersInfo**](/windows/win32/api/winuser/nf-winuser-systemparametersinfoa)
+[**Systemparametersinfo**](/windows/win32/api/winuser/nf-winuser-systemparametersinfoa)
 </dt> </dl>
 
  

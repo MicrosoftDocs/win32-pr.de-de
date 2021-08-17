@@ -1,7 +1,7 @@
 ---
-description: Enthält Informationen über einen Prozessor.
+description: Enthält Informationen zu einem Prozessor.
 ms.assetid: fa8c533c-3a54-4eb5-893f-649dfd8b4609
-title: PROCESSOR_POWER_INFORMATION Struktur
+title: PROCESSOR_POWER_INFORMATION-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 500a346080d7bf0c44d392a63a71310db74225a3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3bdb6a3bb8ae5b768c42609817c76934c203989ba6dea665fc6cc0a6896659de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104345488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119143333"
 ---
-# <a name="processor_power_information-structure"></a>Struktur der Prozessor \_ Energie \_ Informationen
+# <a name="processor_power_information-structure"></a>STRUKTUR DER \_ \_ PROZESSORLEISTUNGSINFORMATIONEN
 
-Enthält Informationen über einen Prozessor.
+Enthält Informationen zu einem Prozessor.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,48 +46,48 @@ typedef struct _PROCESSOR_POWER_INFORMATION {
 **Number**
 </dt> <dd>
 
-Die System Prozessornummer.
+Die Systemprozessornummer.
 
 </dd> <dt>
 
-**Maxmhz**
+**MaxMhz**
 </dt> <dd>
 
-Die maximale angegebene Taktfrequenz des System Prozessors in Megahertz.
+Die maximal angegebene Taktfrequenz des Systemprozessors in Megahertz.
 
 </dd> <dt>
 
-**Currentmhz**
+**CurrentMhz**
 </dt> <dd>
 
-Die Prozessor Taktfrequenz in Megahertz. Diese Zahl entspricht der maximalen angegebenen Prozessor Taktfrequenz, multipliziert mit der aktuellen Prozessor Drosselung.
+Die Prozessortaktfrequenz in Megahertz. Diese Zahl ist die maximal angegebene Prozessortaktfrequenz multipliziert mit der aktuellen Prozessordrosselung.
 
 </dd> <dt>
 
-**Mhzlimit**
+**MhzLimit**
 </dt> <dd>
 
-Der Grenzwert für die Prozessor Taktfrequenz in Megahertz. Diese Zahl entspricht der maximalen angegebenen Prozessor Taktfrequenz, multipliziert mit der aktuellen Prozessor-Grenzwert für die wärmedrosselung.
+Der Grenzwert für die Prozessortaktfrequenz in Megahertz. Diese Zahl ist die maximal angegebene Prozessortaktfrequenz multipliziert mit der aktuellen Prozessordrosselungsgrenze.
 
 </dd> <dt>
 
-**Maxidlestate**
+**MaxIdleState**
 </dt> <dd>
 
-Der maximale Leerlauf Status dieses Prozessors.
+Der maximale Leerlaufzustand dieses Prozessors.
 
 </dd> <dt>
 
-**"Ustidlestate"**
+**CurrentIdleState**
 </dt> <dd>
 
-Der aktuelle Leerlauf Status dieses Prozessors.
+Der aktuelle Leerlaufzustand dieses Prozessors.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass diese Struktur Definition versehentlich aus "Winnt. h" weggelassen wurde. Dieser Fehler wird in Zukunft korrigiert. Fügen Sie in der Zwischenzeit die Struktur Definition, die in diesem Thema enthalten ist, in Ihren Quellcode ein, um die Anwendung zu kompilieren.
+Beachten Sie, dass diese Strukturdefinition versehentlich in WinNT.h ausgelassen wurde. Dieser Fehler wird in Zukunft behoben. Um ihre Anwendung zu kompilieren, schließen Sie in der Zwischenzeit die in diesem Thema enthaltene Strukturdefinition in Ihren Quellcode ein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,16 +95,16 @@ Beachten Sie, dass diese Struktur Definition versehentlich aus "Winnt. h" weggel
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Callntpowerinformation**](/windows/desktop/api/Powerbase/nf-powerbase-callntpowerinformation)
+[**CallNtPowerInformation**](/windows/desktop/api/Powerbase/nf-powerbase-callntpowerinformation)
 </dt> </dl>
 
  
