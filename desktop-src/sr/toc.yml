@@ -1,7 +1,7 @@
 - name: Systemwiederherstellung
   href: system-restore-portal.md
   items:
-    - name: Informationen zur System Wiederherstellung
+    - name: Informationen zur Systemwiederherstellung
       href: about-system-restore.md
       items:
         - name: System überwachen
@@ -10,60 +10,60 @@
           href: restoring-the-system.md
         - name: Wiederherstellungspunkte
           href: restore-points.md
-        - name: API zur System Wiederherstellung
+        - name: Systemwiederherstellungs-API
           href: system-restore-api.md
           items:
-            - name: Aufrufen von srsettrestorepoint
+            - name: Aufrufen von SRSetRestorePoint
               href: calling-srsetrestorepoint.md
-            - name: Wiederherstellungspunkt-Beschreibungs Text
+            - name: Beschreibungstext des Wiederherstellungspunkts
               href: restore-point-description-text.md
-            - name: Aufgerufenen Aufrufe von srsettrestorepoint
+            - name: Geschachtelte Aufrufe von SRSetRestorePoint
               href: nested-calls-to-srsetrestorepoint.md
-            - name: Konfigurieren der System Wiederherstellung
+            - name: Konfigurieren der Systemwiederherstellung
               href: configuring-system-restore.md
-    - name: Verwenden der System Wiederherstellung
+    - name: Verwenden der Systemwiederherstellung
       href: using-system-restore.md
-    - name: Referenz zur System Wiederherstellung
+    - name: Referenz zur Systemwiederherstellung
       href: system-restore-reference.md
       items:
-        - name: System Wiederherstellungs Funktionen
+        - name: Systemwiederherstellungsfunktionen
           href: system-restore-functions.md
           items:
-            - name: Srremoverestorepoint
+            - name: SRRemoveRestorePoint
               href: /windows/desktop/api/SRRestorePtAPI/nf-srrestoreptapi-srremoverestorepoint
-            - name: Srsertrestorepoint
+            - name: SRSetRestorePoint
               href: /windows/desktop/api/SRRestorePtAPI/nf-srrestoreptapi-srsetrestorepointa
-        - name: System Wiederherstellungs Strukturen
+        - name: Systemwiederherstellungsstrukturen
           href: system-restore-structures.md
           items:
-            - name: Restorepointinfo
+            - name: RESTOREPOINTINFO
               href: /windows/win32/api/srrestoreptapi/ns-srrestoreptapi-restorepointinfoa
-            - name: Statemgrstatus
+            - name: STATEMGRSTATUS
               href: /windows/win32/api/srrestoreptapi/ns-srrestoreptapi-statemgrstatus
-        - name: WMI-Klassen für System Wiederherstellung
+        - name: WMI-Klassen für die Systemwiederherstellung
           href: system-restore-wmi-classes.md
           items:
             - name: SystemRestore
               href: systemrestore.md
               items:
-                - name: Methode "foraterestorepoint"
+                - name: CreateRestorePoint-Methode
                   href: createrestorepoint-systemrestore.md
-                - name: Methode deaktivieren
+                - name: Disable-Methode
                   href: disable-systemrestore.md
                 - name: Enable-Methode
                   href: enable-systemrestore.md
-                - name: Getlastrestorestatus-Methode
+                - name: GetLastRestoreStatus-Methode
                   href: getlastrestorestatus-systemrestore.md
                 - name: Restore-Methode
                   href: restore-systemrestore.md
-            - name: Systemrestoreconfig
+            - name: SystemRestoreConfig
               href: systemrestoreconfig.md
-        - name: Überwachte Dateinamen Erweiterungen
+        - name: Überwachte Dateinamenerweiterungen
           href: monitored-file-extensions.md
-    - name: Ältere System Wiederherstellungs Referenz
+    - name: Referenz zur Legacysystemwiederherstellung
       href: legacy-system-restore-reference.md
       items:
-        - name: Legacy-System Wiederherstellungs Strukturen
+        - name: Legacysystemwiederherstellungsstrukturen
           href: legacy-system-restore-structures.md
           items:
             - name: CHANGE_LOG_ENTRY

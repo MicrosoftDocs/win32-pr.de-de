@@ -1,10 +1,10 @@
 ---
-title: IWMPMedia3-Schnittstelle (VB und C) (WMP. h)
-description: Stellt zusätzliche Methoden für den Zugriff auf die Eigenschaften eines Medien Elements bereit.
+title: IWMPMedia3-Schnittstelle (VB und C ) (Wmp.h)
+description: Stellt zusätzliche Methoden für den Zugriff auf die Eigenschaften eines Medienelements zur
 ms.assetid: e16aa5e2-ae44-41c2-8c61-fb688c2e89e2
 keywords:
-- IWMPMedia3 (VB und C) Interface Windows Media Player
-- IWMPMedia3 (VB und C) Interface Windows Media Player, beschrieben
+- IWMPMedia3-Schnittstelle (VB und C) Windows Media Player
+- IWMPMedia3 -Schnittstelle (VB und C) Windows Media Player , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,47 +15,47 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: edb5438ad4d80031d5b45c738c6b6cc9335018af
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1d536f792f0acc8003669be05448ec1f68f82830ccbadf75483bbbc6b84610ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373593"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119415919"
 ---
-# <a name="iwmpmedia3-vb-and-c-interface"></a>IWMPMedia3-Schnittstelle (VB und c#)
+# <a name="iwmpmedia3-vb-and-c-interface"></a>IWMPMedia3-Schnittstelle (VB und C#)
 
-Stellt zusätzliche Methoden für den Zugriff auf die Eigenschaften eines Medien Elements bereit.
+Stellt zusätzliche Methoden für den Zugriff auf die Eigenschaften eines Medienelements zur
 
 ## <a name="members"></a>Member
 
-Die IWMPMedia3-Schnittstelle **(VB und c#)** verfügt über diese Typen von Membern:
+Die **IWMPMedia3-Schnittstelle (VB und C#)** verfügt über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die IWMPMedia3-Schnittstelle **(VB und c#)** verfügt über diese Methoden.
+Die **IWMPMedia3-Schnittstelle (VB und C#)** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                           | BESCHREIBUNG                                                                                            |
+| Methode                                                                                           | Beschreibung                                                                                            |
 |:-------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------|
-| [**getattributecountrytbytype**](wmplibiwmpmedia3-iwmpmedia3-getattributecountbytype--vb-and-c.md) | Gibt die Anzahl der Attribute zurück, die dem angegebenen Attributtyp zugeordnet sind.<br/>              |
+| [**getAttributeCountByType**](wmplibiwmpmedia3-iwmpmedia3-getattributecountbytype--vb-and-c.md) | Gibt die Anzahl der Attribute zurück, die dem angegebenen Attributtyp zugeordnet sind.<br/>              |
 | [**getItemInfoByType**](wmplibiwmpmedia3-iwmpmedia3-getiteminfobytype--vb-and-c.md)             | Gibt den Wert des Attributs zurück, das dem angegebenen Attributtyp und Index entspricht.<br/> |
 
 
 
  
 
-Abrufen einer **IWMPMedia3** -Schnittstelle durch Umwandeln des Werts, der von einer der folgenden Eigenschaften oder Methoden zurückgegeben wird, auf die über das folgende Objekt oder die folgende Schnittstelle
+Sie erhalten **eine IWMPMedia3-Schnittstelle,** indem Sie den Wert, der von einer der folgenden Eigenschaften oder Methoden zurückgegeben wird, umgeformt werden, auf die über das folgende Objekt oder die folgende Schnittstelle zugegriffen wird.
 
 
 
 | Objekt oder Schnittstelle                                               | Eigenschaft oder Methode                                                                                                                |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| [Iwmpcontrols](iwmpcontrols--vb-and-c.md)                        | [currentItem](wmplibiwmpcontrols-iwmpcontrols-currentitem--vb-and-c.md)                                                          |
-| [AxWindowsMediaPlayer](axwindowsmediaplayer-object--vb-and-c.md) | [currentMedia](axwmplib-axwindowsmediaplayer-currentmedia--vb-and-c.md) , [newmedia](axwmplib-axwindowsmediaplayer-newmedia.md) |
-| [Iwmpwiedergabe](iwmpplaylist--vb-and-c.md)                        | [Item](iwmpplaylist-item--vb-and-c.md) ( **\_ Element** in c# Get)                                                                   |
+| [IWMPControls](iwmpcontrols--vb-and-c.md)                        | [Currentitem](wmplibiwmpcontrols-iwmpcontrols-currentitem--vb-and-c.md)                                                          |
+| [AxWindowsMediaPlayer](axwindowsmediaplayer-object--vb-and-c.md) | [currentMedia,](axwmplib-axwindowsmediaplayer-currentmedia--vb-and-c.md) [newMedia](axwmplib-axwindowsmediaplayer-newmedia.md) |
+| [IWMPPlaylist](iwmpplaylist--vb-and-c.md)                        | [Item](iwmpplaylist-item--vb-and-c.md) ( **element \_ in** C#)                                                                   |
 
 
 
@@ -67,21 +67,21 @@ Abrufen einer **IWMPMedia3** -Schnittstelle durch Umwandeln des Werts, der von e
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMP. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Schnittstellen für Visual Basic .net und C #**](interfaces-for-visual-basic--net-and-c.md)
+[**Schnittstellen für Visual Basic .NET und C #**](interfaces-for-visual-basic--net-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPMedia2-Schnittstelle (VB und c#)**](iwmpmedia2--vb-and-c.md)
+[**IWMPMedia2-Schnittstelle (VB und C#)**](iwmpmedia2--vb-and-c.md)
 </dt> </dl>
 
  

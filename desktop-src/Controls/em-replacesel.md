@@ -1,9 +1,9 @@
 ---
-title: EM_REPLACESEL Meldung (Winuser. h)
-description: Ersetzt den markierten Text in einem Bearbeitungs Steuerelement oder in einem Rich-Edit-Steuerelement durch den angegebenen Text.
+title: EM_REPLACESEL-Nachricht (Winuser.h)
+description: Ersetzt den ausgewählten Text in einem Bearbeitungssteuerelement oder einem Rich Edit-Steuerelement durch den angegebenen Text.
 ms.assetid: 525e6f5a-f52f-4bab-bc76-caa484729897
 keywords:
-- Windows-Steuerelemente für EM_REPLACESEL Meldung
+- EM_REPLACESEL Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d9745b870a310626a6cbbbddbef118a63c64479
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 478550432aa8c03a081e8de214cdd7e8337a46eca2676a0531b177a81ff20a54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117831181"
 ---
-# <a name="em_replacesel-message"></a>EM \_ replacesel-Nachricht
+# <a name="em_replacesel-message"></a>EM \_ REPLACESEL-Nachricht
 
-Ersetzt den markierten Text in einem Bearbeitungs Steuerelement oder in einem Rich-Edit-Steuerelement durch den angegebenen Text.
+Ersetzt den ausgewählten Text in einem Bearbeitungssteuerelement oder einem Rich Edit-Steuerelement durch den angegebenen Text.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Ersetzt den markierten Text in einem Bearbeitungs Steuerelement oder in einem Ri
 *wParam* 
 </dt> <dd>
 
-Gibt an, ob der Ersetzungs Vorgang rückgängig gemacht werden kann. Wenn dies **zutrifft**, kann der Vorgang rückgängig gemacht werden. Wenn dies **false** ist, kann der Vorgang nicht rückgängig gemacht werden.
+Gibt an, ob der Ersetzungsvorgang rückgängig sein kann. Wenn dies **TRUE** ist, kann der Vorgang rückgängig macht werden. Wenn dies **FALSE** ist, kann der Vorgang nicht rückgängig gemacht werden.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Ersetzungstext enthält.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Ersetzungstext enthält.
 
 </dd> </dl>
 
@@ -47,15 +47,15 @@ Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Ersetzungstext enthä
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die **EM \_ replacesel** -Nachricht, um nur einen Teil des Texts in einem Bearbeitungs Steuerelement zu ersetzen. Um den gesamten Text zu ersetzen, verwenden Sie die [**WM- \_ SetText**](/windows/desktop/winmsg/wm-settext) -Nachricht.
+Verwenden Sie die **EM \_ REPLACESEL-Nachricht,** um nur einen Teil des Texts in einem Bearbeitungssteuerelement zu ersetzen. Um den gesamten Text zu ersetzen, verwenden Sie die [**WM \_ SETTEXT-Meldung.**](/windows/desktop/winmsg/wm-settext)
 
-Wenn keine Auswahl vorhanden ist, wird der Ersetzungstext an der Einfügemarke eingefügt.
+Wenn keine Auswahl vorhanden ist, wird der Ersatztext am Caretzeichen eingefügt.
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Rich Edit:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
-In einem Rich-Edit-Steuerelement übernimmt der Ersetzungstext die Formatierung des Zeichens bei der Einfügemarke oder, wenn eine Auswahl vorliegt, das erste Zeichen in der Auswahl.
+In einem Rich-Edit-Steuerelement übernimmt der Ersetzungstext die Formatierung des Zeichens am Caretzeichen oder , wenn eine Auswahl vorhanden ist, des ersten Zeichens in der Auswahl.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,17 +63,17 @@ In einem Rich-Edit-Steuerelement übernimmt der Ersetzungstext die Formatierung 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**WM- \_ SetText**](/windows/desktop/winmsg/wm-settext)
+[**WM \_ SETTEXT**](/windows/desktop/winmsg/wm-settext)
 </dt> </dl>
 
  

@@ -1,44 +1,44 @@
 ---
-description: Für viele der Funktionen sind Zertifikat-oder Nachrichten Codierungs Typen erforderlich.
+description: Viele der Funktionen erfordern Zertifikat- oder Nachrichtencodierungstypen.
 ms.assetid: 97b25435-aec2-4fdb-a4c6-89ec2e26f51d
-title: Zertifikat-und Nachrichten Codierungs Typen
+title: Zertifikat- und Nachrichtencodierungstypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a3193b321d27892f8df9535ef81b8a988bf558e5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 185be8d3cc781786c93ac809c042c86d3601a45d86eaa39452f0bcbf44203a1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484694"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117771976"
 ---
-# <a name="certificate-and-message-encoding-types"></a>Zertifikat-und Nachrichten Codierungs Typen
+# <a name="certificate-and-message-encoding-types"></a>Zertifikat- und Nachrichtencodierungstypen
 
-Für viele der Funktionen sind Zertifikat-oder [*Nachrichten Codierungs Typen*](../secgloss/m-gly.md)erforderlich. Dieser Codierungstyp ist ein **DWORD**, das möglicherweise sowohl den Zertifikat-als auch den Nachrichten Codierungstyp enthält. Der zertifikatcodierungstyp wird im nieder wertigen Wort gespeichert. Der Nachrichten Codierungstyp wird im hohen Bestell Wort gespeichert. Für einige Funktionen oder Struktur Felder ist nur einer der Codierungs Typen erforderlich, aber es ist immer akzeptabel, beide Codierungs Typen anzugeben. Ein Beispiel für die Angabe beider Codierungs Typen finden Sie unter [ \# includes und \# Definitionen](-includes-and--defines.md).
+Viele der Funktionen erfordern zertifikat- oder [*nachrichtencodierungstypen.*](../secgloss/m-gly.md) Dieser Codierungstyp ist ein **DWORD-Typ,** der möglicherweise sowohl den Zertifikat- als auch den Nachrichtencodierungstyp enthält. Der Zertifikatcodierungstyp wird im Wort der niedrigen Ordnung gespeichert. Der Nachrichtencodierungstyp wird im hohen Wort gespeichert. Einige Funktionen oder Strukturfelder erfordern nur einen der Codierungstypen, aber es ist immer akzeptabel, beide Codierungstypen anzugeben. Ein Beispiel für die Angabe beider Codierungstypen finden Sie unter [ \# includes und \# defines](-includes-and--defines.md).
 
-Die folgende Parameter Benennungs Konvention wird verwendet, um die erforderlichen Codierungs Typen anzugeben.
+Die folgende Parameterbenennungskonvention wird verwendet, um die erforderlichen Codierungstypen anzugeben.
 
 
 
 | Name                       | Kommentare                                                                                                                                                                                                                                                                                                                |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *dwmsgandcertencodingtype* | Beide Codierungs Typen sind erforderlich.                                                                                                                                                                                                                                                                                       |
-| *dwmsgencodingtype*        | Nur der Nachrichten Codierungstyp ist erforderlich.                                                                                                                                                                                                                                                                             |
-| *dwcertencodingtype*       | Nur der zertifikatcodierungstyp ist erforderlich.                                                                                                                                                                                                                                                                         |
-| *dwencodingtype*           | Es ist entweder ein Nachrichten-oder zertifikatcodierungstyp erforderlich. Wenn das nieder wertige Wort, das den Zertifikat Codierungstyp enthält, nicht NULL ist, wird es verwendet. Andernfalls wird das höchst wertige Wort verwendet, das den Nachrichten Codierungstyp enthält. Wenn beide angegeben werden, wird der Zertifikat Codierungstyp in der nieder wertigen Word verwendet. |
+| *dwMsgAndCertEncodingType* | Beide Codierungstypen sind erforderlich.                                                                                                                                                                                                                                                                                       |
+| *dwMsgEncodingType*        | Nur der Nachrichtencodierungstyp ist erforderlich.                                                                                                                                                                                                                                                                             |
+| *dwCertEncodingType*       | Nur der Zertifikatcodierungstyp ist erforderlich.                                                                                                                                                                                                                                                                         |
+| *dwEncodingType*           | Es ist entweder ein Nachrichten- oder Zertifikatcodierungstyp erforderlich. Wenn das niedrig geordnete Wort, das den Zertifikatcodierungstyp enthält, ungleich 0 (null) ist, wird es verwendet. Andernfalls wird das hohe Wort verwendet, das den Nachrichtencodierungstyp enthält. Wenn beide angegeben sind, wird der Zertifikatcodierungstyp im niedrig geordneten Wort verwendet. |
 
 
 
  
 
-Die in der folgenden Tabelle aufgeführten aktuellen Codierungs Typen sind aktuell definiert.
+Derzeit definierte Codierungstypen sind in der folgenden Tabelle aufgeführt.
 
 
 
 | Codierungstyp          | Wert      |
 |------------------------|------------|
-| Crypt- \_ ASN- \_ Codierung   | 0x00000001 |
-| X509- \_ ASN- \_ Codierung    | 0x00000001 |
-| PKCS \_ 7- \_ ASN- \_ Codierung | 0x00010000 |
+| CRYPT \_ \_ ASN-CODIERUNG   | 0x00000001 |
+| \_X509-ASN-CODIERUNG \_    | 0x00000001 |
+| PKCS \_ 7 \_ ASN-CODIERUNG \_ | 0x00010000 |
 
 
 

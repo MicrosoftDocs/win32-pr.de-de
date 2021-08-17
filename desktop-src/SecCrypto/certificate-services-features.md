@@ -1,33 +1,33 @@
 ---
-description: Mithilfe der Zertifikat Dienste kann eine Organisation das ausstellen, erneuern und Sperren von Zertifikaten verwalten.
+description: Mit Zertifikatdiensten kann eine Organisation die Ausstellung, Verlängerung und Sperrung von Zertifikaten verwalten.
 ms.assetid: b8b2d22f-c8ac-4ca8-bef8-057db50f2c30
-title: Funktionen der Zertifikat Dienste
+title: Features von Zertifikatdiensten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 25a3425d6efb9f7c6aa61336f5c8244323dcb7f3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 528c22e9d2eb2522003b8fd08964b84f045634ff5b4caf777edf74feab227884
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117771150"
 ---
-# <a name="certificate-services-features"></a>Funktionen der Zertifikat Dienste
+# <a name="certificate-services-features"></a>Features von Zertifikatdiensten
 
-Mithilfe der Zertifikat Dienste kann eine Organisation das ausstellen, erneuern und Sperren von Zertifikaten verwalten. Es verfügt über eine Reihe von Features, die es für Organisationen wertvoll machen, die sich nicht auf externe Zertifizierungsstellen verlassen und ein flexibles Tool benötigen, das an die Anforderungen der Organisation angepasst werden kann. In den folgenden Abschnitten werden bestimmte Details erläutert.
+Mit Zertifikatdiensten kann eine Organisation die Ausstellung, Verlängerung und Sperrung von Zertifikaten verwalten. Es verfügt über eine Reihe von Features, die es für Organisationen nützlich machen, die sich nicht auf externe Zertifizierungsstellen verlassen und ein flexibles Tool benötigen, das an die Anforderungen der Organisation angepasst werden kann. Die folgenden Abschnitte enthalten spezifische Details.
 
 
 
-| `Section`                                              | Inhalt                            |
+| `Section`                                              | Content                            |
 |------------------------------------------------------|------------------------------------|
 | [Active Directory](active-directory.md)             | Active Directory-Integration       |
 | [Einhaltung von Standards](adherence-to-standards.md) | Einhaltung von Standards             |
-| [Anwendungs Verwendung](application-uses.md)             | Anwendungs Verwendung                   |
+| [Anwendungsverwendungen](application-uses.md)             | Anwendungsverwendungen                   |
 | [Erweiterbarkeit](extensibility.md)                   | Erweiterbares Framework               |
-| [Hardware Kryptografie](hardware-cryptography.md)   | Unterstützung der Kryptografie von Hardware      |
-| [Hierarchien](hierarchies.md)                       | Hierarchie Unterstützung                  |
-| [Unabhängigkeit der Richtlinie](policy-independence.md)       | Informationen zur Richtlinien Unabhängigkeit    |
+| [Hardwarekryptografie](hardware-cryptography.md)   | Hardwarekryptografieunterstützung      |
+| [Hierarchien](hierarchies.md)                       | Hierarchieunterstützung                  |
+| [Richtlinienunabhängigkeit](policy-independence.md)       | Informationen zur Richtlinienunabhängigkeit    |
 | [Anforderungen](requests.md)                             | Anfordern von Support                    |
-| [Transport Unabhängigkeit](transport-independence.md) | Informationen zur Transport Unabhängigkeit |
+| [Transportunabhängigkeit](transport-independence.md) | Informationen zur Transportunabhängigkeit |
 
 
 

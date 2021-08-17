@@ -4,12 +4,12 @@ ms.assetid: 36c5ce63-4e46-4196-827b-9e26d26ff244
 title: manufacturerURL-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a14de46d10b30488bd5bb8affb874ca9d1f6c439
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 1b2db8ee5b0355af80b1d8f626883a55d212945d86571204906d79f56f0011cb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998737"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119954820"
 ---
 # <a name="manufacturerurl-element"></a>manufacturerURL-Element
 
@@ -33,9 +33,9 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                                                   | BESCHREIBUNG                                                                                          |
+| Element                                                   | Beschreibung                                                                                          |
 |-----------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [**thisModelMetadata**](thismodelmetadata.md)<br/> | Definiert die Hersteller- und Modellmetadaten für das zu implementierte Gerät.<br/> <br/> |
+| [**thisModelMetadata**](thismodelmetadata.md)<br/> | Definiert die Hersteller- und Modellmetadaten für das zu implementierende Gerät.<br/> <br/> |
 
 
 

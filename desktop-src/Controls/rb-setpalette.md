@@ -1,9 +1,9 @@
 ---
-title: RB_SETPALETTE Meldung (kommstrg. h)
-description: Legt die aktuelle Palette des Grund leisten-Steuer Elements fest.
+title: RB_SETPALETTE Nachricht (Commctrl.h)
+description: Legt die aktuelle Palette des Rebar-Steuerelements fest.
 ms.assetid: 85f0726a-21fd-41b3-aa52-6a0a0c1947fa
 keywords:
-- Windows-Steuerelemente für RB_SETPALETTE Meldung
+- RB_SETPALETTE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7ee47985c05bcd8a857620e7fe501bddf53bdec
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 85cd2968fa5fa74915e37f40f30dd47751e2316e8d91d0f51f9d3c7145b893fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956797"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119434940"
 ---
-# <a name="rb_setpalette-message"></a>RB- \_ SetPalette-Nachricht
+# <a name="rb_setpalette-message"></a>RB \_ SETPALETTE-Meldung
 
-Legt die aktuelle Palette des Grund leisten-Steuer Elements fest.
+Legt die aktuelle Palette des Rebar-Steuerelements fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,17 +35,17 @@ Legt die aktuelle Palette des Grund leisten-Steuer Elements fest.
 *lParam* 
 </dt> <dd>
 
-Eine **hpalette** , die die neue Palette angibt, die vom Grund leisten-Steuerelement verwendet wird.
+Eine **HPALETTE,** die die neue Palette angibt, die das Neuleistensteuerelement verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt eine **hpalette** zurück, die die vorherige Palette des Grund leisten-Steuer Elements angibt.
+Gibt eine **HPALETTE** zurück, die die vorherige Palette des Rebar-Steuerelements angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung, die diese Nachricht sendet, ist dafür verantwortlich, die in dieser Nachricht übergebenen **hpalette** zu löschen (siehe [**DeleteObject**](/windows/desktop/api/wingdi/nf-wingdi-deleteobject)). Das Grund leisten-Steuerelement löscht keinen **hpalette** -Satz mit dieser Meldung.
+Es liegt in der Verantwortung der Anwendung, die diese Nachricht sendet, die in dieser Nachricht übergebene **HPALETTE** zu löschen (siehe [**DeleteObject**](/windows/desktop/api/wingdi/nf-wingdi-deleteobject)). Das Steuerelement für die Neuleiste löscht keinen **HPALETTE-Satz** mit dieser Meldung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,17 +53,17 @@ Die Anwendung, die diese Nachricht sendet, ist dafür verantwortlich, die in die
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**RB \_ getpalette**](rb-getpalette.md)
+[**RB \_ GETPALETTE**](rb-getpalette.md)
 </dt> </dl>
 
  

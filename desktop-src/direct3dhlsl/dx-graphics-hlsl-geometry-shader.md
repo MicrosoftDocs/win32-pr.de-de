@@ -11,12 +11,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: e06bbc184a4b5f82d5edaaf7fdbfbd55f1906f12
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 5b95f0bb99bd3a225afb7a63824b301b102030a4f132caa7a2a4ff1743eefb58
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113120615"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119120144"
 ---
 # <a name="geometry-shader-object"></a>Geometry-Shader-Objekt
 
@@ -107,11 +107,11 @@ Das folgende Diagramm zeigt die verschiedenen primitiven Typen für ein Geometri
 
 Das folgende Diagramm zeigt Geometry-Shaderaufrufe.
 
-![Abbildung von Geometry-Shaderaufrufen](images/d3d11-gsinputs2.png)
+![Abbildung von Geometrie-Shaderaufrufen](images/d3d11-gsinputs2.png)
 
 ## <a name="examples"></a>Beispiele
 
-Dieses Beispiel ist aus Übung 1 des [Direct3D 10 Shader Model 4.0 Workshop.](https://msdn.microsoft.com/library/Ee416554(v=VS.85).aspx)
+Dieses Beispiel ist aus Übung 1 des [Direct3D 10 Shader Model 4.0 Workshop .](https://msdn.microsoft.com/library/Ee416554(v=VS.85).aspx)
 
 
 ```
@@ -143,7 +143,7 @@ Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                        | Unterstützt |
 |---------------------------------------------------------------------|-----------|
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md) und höher– Shadermodelle | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md) und höher – Shadermodelle | Ja       |
 
 
 

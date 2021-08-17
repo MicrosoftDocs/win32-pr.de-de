@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d12bddec3fac5dc918f06d926fe5e5656b70d84d
-ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
+ms.openlocfilehash: 955b70986640fab8cefe9f02b28b02015397c964f1b10fc26057533fc79a3809
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111387646"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117753562"
 ---
 # <a name="ivmguestosgetparameter-method"></a>IVMGuestOS::GetParameter-Methode
 
-\[Windows Virtual PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Ruft einen benannten Parameter im Gastbetriebssystem ab.
 
@@ -65,13 +65,13 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                                    | BESCHREIBUNG                                                                  |
+| Rückgabecode/-wert                                                                                                                                                                    | Beschreibung                                                                  |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                          | Der Vorgang wurde durchgeführt.<br/>                                     |
 | <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>                         | Ein Parameter ist ungültig oder nicht angegeben.<br/>                        |
 | <dl> <dt>**E \_ POINTER**</dt> <dt>0x80004003</dt> </dl>                            | Der Parameter ist **NULL.**<br/>                                        |
-| <dl> <dt>**VM \_ E \_ TIMED \_ OUT**</dt> <dt>0xA0040202</dt> </dl>                     | Der Vorgang wurde nicht rechtzeitig abgeschlossen.<br/>                |
-| <dl> <dt>**VM \_ E \_ VM WIRD NICHT \_ \_ AUSGEFÜHRT**</dt> <dt>0xA0040206</dt> </dl>               | Der virtuelle Computer wird nicht ausgeführt.<br/>                               |
+| <dl> <dt>**VM \_ E \_ \_ TIMED OUT**</dt> <dt>0xA0040202</dt> </dl>                     | Der Vorgang wurde nicht rechtzeitig abgeschlossen.<br/>                |
+| <dl> <dt>**VM \_ E \_ VM WIRD NICHT \_ \_ AUSGEFÜHRT,**</dt> <dt>0xA0040206</dt> </dl>               | Der virtuelle Computer wird nicht ausgeführt.<br/>                               |
 | <dl> <dt>**VM \_ E \_ VM \_ PAUSED**</dt> <dt>0xA00400507</dt> </dl>                    | Der virtuelle Computer wird angehalten.<br/>                                    |
 | <dl> <dt>**VM \_ E \_ ADDITIONS \_ FEATURE NOT \_ \_ AVAIL**</dt> <dt>0XA0040505</dt> </dl> | Integrationskomponenten werden auf diesem virtuellen Computer nicht installiert.<br/> |
 | <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>                    | Ein unerwarteter Fehler ist aufgetreten.<br/>                                 |
@@ -95,22 +95,22 @@ Wenn das Gastbetriebssystem gestartet wird, werden die folgenden Werte der Regis
 -   **PhysicalHostNameFullyQualified**
 -   **VirtualMachineName**
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ 7-Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
-| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
 | Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 | IID<br/>                      | IID \_ IVMGuestOS ist als 99fea0db-4880-499a-b6d8-73dff9bc91be definiert.<br/>                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

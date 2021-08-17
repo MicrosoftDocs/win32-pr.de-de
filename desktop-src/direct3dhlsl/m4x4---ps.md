@@ -1,6 +1,6 @@
 ---
-title: M4x4-PS
-description: Multipliziert einen 4-Komponenten Vektor mit einer 4 x 4-Matrix. | M4x4-PS
+title: m4x4 – ps
+description: Multipliziert einen Vierkomponentenvektor mit einer 4x4-Matrix. | m4x4 – ps
 ms.assetid: 2a9915a3-f396-4108-97f7-d70c5262ff59
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 93f2da73c45151f5287f3acf773efb4bd57d21e1
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: f7dfba3713bcd376c369a17d4856b64965e2e83c22ff03b282d4c9880d6c8700
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117906859"
 ---
-# <a name="m4x4---ps"></a>M4x4-PS
+# <a name="m4x4---ps"></a>m4x4 – ps
 
-Multipliziert einen 4-Komponenten Vektor mit einer 4 x 4-Matrix.
+Multipliziert einen Vierkomponentenvektor mit einer 4x4-Matrix.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| M4x4 DST, src0, Quelle1 |
+| m4x4 dst, src0, src1 |
 |----------------------|
 
 
@@ -33,15 +33,15 @@ Multipliziert einen 4-Komponenten Vektor mit einer 4 x 4-Matrix.
 
 where
 
--   DST ist das Ziel Register. Das Ergebnis ist ein Vektor mit 4 Komponenten.
--   src0 ist ein Quell Register, das einen 4-Komponenten Vektor darstellt.
--   Quelle1 ist ein Quell Register, das eine 4X4-Matrix darstellt, die dem ersten von vier aufeinander folgenden Registern entspricht.
+-   dst ist das Zielregister. Das Ergebnis ist ein 4-Komponenten-Vektor.
+-   src0 ist ein Quellregister, das einen 4-Komponenten-Vektor darstellt.
+-   src1 ist ein Quellregister, das eine 4x4-Matrix darstellt, die dem ersten von vier aufeinanderfolgenden Registern entspricht.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | m4x4                  |      |      |      |      | x    | x    | x     | x    | x     |
 
@@ -49,11 +49,11 @@ where
 
  
 
-Die xyzw-Maske (Standard) ist für das Ziel Register erforderlich. Negate-und Swizzle-Modifizierern sind für src0, aber nicht für Quelle1 zulässig.
+Die Xyzw-Maske (Standardmaske) ist für das Zielregister erforderlich. Negate- und swizzle-Modifizierer sind für src0, aber nicht für src1 zulässig.
 
-Die Modifizierern "Swizzle" und "Negation" sind für das src0 Register ungültig. Die DST-und src0-Register dürfen nicht identisch sein.
+Swizzle- und negate-Modifizierer sind für das src0-Register ungültig. Die Register dst und src0 können nicht identisch sein.
 
-Der folgende Code Ausschnitt zeigt die ausgeführten Vorgänge.
+Der folgende Codeausschnitt zeigt die ausgeführten Vorgänge.
 
 
 ```
@@ -65,9 +65,9 @@ dest.w = (src0.x*src4.x) + (src0.y*src4.y) + (src0.z*src4.z) + (src0.w*src4.w);
 
 
 
-Der Eingabe Vektor befindet sich im Register src0. Die Eingabe 4X4-Matrix befindet sich in Register Quelle1 und die nächsten drei höheren Register, wie in der folgenden Erweiterung gezeigt.
+Der Eingabevektor befindet sich im Register src0. Die Eingabematrix 4x4 befindet sich im Register src1 und die nächsten drei höheren Register, wie in der folgenden Erweiterung gezeigt.
 
-Dieser Vorgang wird häufig verwendet, um eine Position durch eine Projektions Matrix zu transformieren. Diese Anweisung wird als Satz von Punkt Produkten implementiert, wie hier gezeigt.
+Dieser Vorgang wird häufig zum Transformieren einer Position durch eine Projektionsmatrix verwendet. Diese Anweisung wird wie hier gezeigt als Satz von Punktprodukten implementiert.
 
 
 ```

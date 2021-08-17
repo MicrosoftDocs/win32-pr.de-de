@@ -1,21 +1,21 @@
 ---
-description: Das folgende Beispiel zeigt den Code zum empfangen und Überprüfen einer signierten Nachricht. In diesem Beispiel werden der Signatur Puffer und seine Größe in signaturebuffer und signaturebuffersize sowie der Nachrichten Puffer und seine Größe in MessageBuffer und messagebuffersize empfangen.
+description: Das folgende Beispiel zeigt Code zum Empfangen und Überprüfen einer signierten Nachricht. Das Beispiel empfängt den Signaturpuffer und seine Größe in SignatureBuffer und SignatureBufferSize sowie den Nachrichtenpuffer und seine Größe in MessageBuffer und MessageBufferSize.
 ms.assetid: 3e71aa0f-d135-4311-96f3-305762543627
 title: Überprüfen einer Nachricht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ebf62be707efcbd3ab3a5eca5345261ca1a0fde
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a90850a88ede875ae41549bca79aceb2d7bdea17db6f50eeb1a3a5e6dfb9a921
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118915089"
 ---
 # <a name="verifying-a-message"></a>Überprüfen einer Nachricht
 
-Das folgende Beispiel zeigt den Code zum empfangen und Überprüfen einer signierten Nachricht. In diesem Beispiel werden der Signatur Puffer und seine Größe in signaturebuffer und signaturebuffersize sowie der Nachrichten Puffer und seine Größe in MessageBuffer und messagebuffersize empfangen.
+Das folgende Beispiel zeigt Code zum Empfangen und Überprüfen einer signierten Nachricht. Das Beispiel empfängt den Signaturpuffer und seine Größe in SignatureBuffer und SignatureBufferSize sowie den Nachrichtenpuffer und seine Größe in MessageBuffer und MessageBufferSize.
 
-Im Beispiel wird davon ausgegangen, dass eine **sechandle** -Variable namens phcontext und eine **Socketstruktur** mit dem Namen s initialisiert werden. Informationen zu den Deklarationen und Initiierungen dieser Variablen finden [Sie unter Verwenden von SSPI mit einem Windows Sockets-Client](using-sspi-with-a-windows-sockets-client.md) und [Verwenden von SSPI mit einem Windows Sockets-Server](using-sspi-with-a-windows-sockets-server.md). Dieser Code enthält Aufrufe von Funktionen in Secur32. lib, die in den Linkbibliotheken enthalten sein müssen.
+Im Beispiel wird davon ausgegangen, dass eine **SecHandle-Variable** namens phContext und eine **SOCKET-Struktur** mit dem Namen s initialisiert werden. Die Deklarationen und Initiierungen dieser Variablen finden Sie unter [Verwenden von SSPI mit einem Windows Sockets-Client](using-sspi-with-a-windows-sockets-client.md) und [Verwenden von SSPI mit einem Windows Sockets Server.](using-sspi-with-a-windows-sockets-server.md) Dieser Code enthält Aufrufe von Funktionen in Secur32.lib, die in den Linkbibliotheken enthalten sein müssen.
 
 
 ```C++

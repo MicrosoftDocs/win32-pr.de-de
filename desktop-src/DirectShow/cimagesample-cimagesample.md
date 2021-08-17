@@ -1,5 +1,5 @@
 ---
-description: 'CImageSample.CImageSample-Konstruktor: Konstruktormethode.'
+description: 'CImageSample.CImageSample-Konstruktor : Konstruktormethode.'
 ms.assetid: d7550c38-d728-41b2-80a6-20728abf6012
 title: CImageSample.CImageSample-Konstruktor (Winutil.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ecab52e347e03b698adccb79b77da879d26612b4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 4eeb15ec42daed1fa835eff28a4953b223d9782859bfcc23b174dee8fee65019
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118402530"
 ---
 # <a name="cimagesamplecimagesample-constructor"></a>CImageSample.CImageSample-Konstruktor
 
@@ -81,18 +81,18 @@ Die Länge des Puffers.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**CImageAllocator-Klasse**](cimageallocator.md) erstellt einen DIB mithilfe eines Dateizuordnungsobjekts, das von der Auslagerungsdatei des Betriebssystems erstellt wird. Das Handle für das Dateizuordnungsobjekt wird im **hMapping-Member** der **m \_ DibData-Struktur** gespeichert.
+Die [**CImageAllocator-Klasse**](cimageallocator.md) erstellt ein DIB mithilfe eines Dateizuordnungsobjekts, das von der Auslagerungsdatei des Betriebssystems unterstützt wird. Das Handle für das Dateizuordnungsobjekt wird im **hMapping-Member** der **m \_ DibData-Struktur** gespeichert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

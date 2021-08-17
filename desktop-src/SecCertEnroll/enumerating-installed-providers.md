@@ -1,19 +1,19 @@
 ---
-description: Im folgenden Beispiel wird gezeigt, wie Sie die Zertifikatregistrierungs-API verwenden, um die auf einem Computer installierten Anbieter aufzuzählen.
+description: Das folgende Beispiel zeigt, wie Sie die Zertifikatregistrierungs-API verwenden, um die auf einem Computer installierten Anbieter aufzählen.
 ms.assetid: d7fa03d5-775c-41f3-9fef-8929bd25ed92
-title: Auflisten installierter Anbieter
+title: Aufzählen installierter Anbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cddefe6cb85bc57c42313693ac86f4e2ea763d45
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dcc29e017e78ecda9c8f3bf12ac0b9925c1817dee3de836b5cf6091bbe6ec3c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117779890"
 ---
-# <a name="enumerating-installed-providers"></a>Auflisten installierter Anbieter
+# <a name="enumerating-installed-providers"></a>Aufzählen installierter Anbieter
 
-Im folgenden Beispiel wird gezeigt, wie Sie die Zertifikatregistrierungs-API verwenden, um die auf einem Computer installierten Anbieter aufzuzählen.
+Das folgende Beispiel zeigt, wie Sie die Zertifikatregistrierungs-API verwenden, um die auf einem Computer installierten Anbieter aufzählen.
 
 ``` syntax
 // enumeratinginstalledproviders.cpp : Defines the entry point for the console application.

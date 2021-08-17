@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings shadobitmap (Eigenschaft)
-description: Gibt an, ob Schatten Bitmaps verwendet werden sollen.
+title: IMsRdpClientAdvancedSettings ShadowBitmap (Eigenschaft)
+description: Gibt an, ob Schattenbitmaps verwendet werden sollen.
 ms.assetid: b329e367-7579-466d-877a-16253f85e5a2
 ms.tgt_platform: multiple
 keywords:
-- Shadowbitmap-Eigenschaft Remotedesktopdienste
-- Shadowbitmap-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, shadowbitmap-Eigenschaft
-- Shadowbitmap-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste, shadowbitmap-Eigenschaft
-- Shadowbitmap-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste, shadowbitmap-Eigenschaft
-- Shadowbitmap-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste, shadowbitmap-Eigenschaft
-- Shadowbitmap-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste, shadowbitmap-Eigenschaft
-- Shadowbitmap-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste, shadowbitmap-Eigenschaft
-- Shadowbitmap-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste, shadowbitmap-Eigenschaft
-- Shadowbitmap-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste, shadowbitmap-Eigenschaft
+- ShadowBitmap-Remotedesktopdienste
+- ShadowBitmap-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , ShadowBitmap-Eigenschaft
+- ShadowBitmap-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , ShadowBitmap-Eigenschaft
+- ShadowBitmap-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , ShadowBitmap-Eigenschaft
+- ShadowBitmap-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , ShadowBitmap-Eigenschaft
+- ShadowBitmap-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , ShadowBitmap-Eigenschaft
+- ShadowBitmap-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , ShadowBitmap-Eigenschaft
+- ShadowBitmap-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , ShadowBitmap-Eigenschaft
+- ShadowBitmap-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , ShadowBitmap-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,20 +54,20 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fc6c43862b498fe5828d2746666c5e414de4c71e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d04e41845bc3c7ebb32b5b6300c5ccd1bc9d1444ef86497e613bc833c220cec1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475231"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117757437"
 ---
-# <a name="imsrdpclientadvancedsettingsshadowbitmap-property"></a>Imsrdpclientadvancedsettings:: shadowbitmap-Eigenschaft
+# <a name="imsrdpclientadvancedsettingsshadowbitmap-property"></a>IMsRdpClientAdvancedSettings::ShadowBitmap (Eigenschaft)
 
-\[Diese Eigenschaft wird nicht unterstützt. Ab Windows Server 2008 und Windows 7 geben Aufrufe von **shadowbitmap** immer **\_ false** zurück.\]
+\[Diese Eigenschaft wird nicht unterstützt. Ab Windows Server 2008 und Windows 7 geben Aufrufe von **ShadowBitmap** immer **S FALSE \_ zurück.**\]
 
-Gibt an, ob Schatten Bitmaps verwendet werden sollen.
+Gibt an, ob Schattenbitmaps verwendet werden sollen.
 
-Schatten Bitmaps sind immer im Vollbildmodus deaktiviert. Daher hat diese Eigenschaft im Vollbildmodus keine Auswirkung.
+Schattenbitmaps sind immer im Vollbildmodus deaktiviert, daher hat diese Eigenschaft keine Auswirkungen, wenn sie sich im Vollbildmodus befindet.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -88,9 +88,9 @@ HRESULT get_ShadowBitmap(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf 0 fest, um die Funktion zu deaktivieren, oder einen Wert ungleich NULL, um das Feature zu aktivieren. Das Deaktivieren dieses Features verbessert in der Regel die Leistung, kann jedoch beim Zeichnen von Bildschirmen zu Artefakten führen.
+Legen Sie diesen Parameter auf 0 fest, um das Feature oder einen Wert ungleich 0 (null) zu deaktivieren, um das Feature zu aktivieren. Das Deaktivieren dieses Features verbessert in der Regel die Leistung, kann jedoch beim Malen von Bildschirmen zu Artefakten führen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -106,11 +106,11 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Ende des Supports (Server)<br/>    | Nicht unterstützt<br/>                                                                       |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -135,7 +135,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

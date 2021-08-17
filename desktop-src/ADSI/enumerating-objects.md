@@ -1,26 +1,26 @@
 ---
-title: Auflisten von Objekten
-description: Zum Anzeigen des untergeordneten Objekts eines Containers, z. b. einer Organisationseinheit (OE), zählen Sie das Container Objekt.
+title: Aufzählen von Objekten
+description: Um das untergeordnete Objekt eines Containers anzuzeigen, z. B. eine Organisationseinheit (OE), müssen Sie das Containerobjekt aufzählen.
 ms.assetid: 06995281-d269-42ce-839f-2938a2f6af22
 ms.tgt_platform: multiple
 keywords:
-- Auflisten von Objekten
+- Aufzählen von Objekten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c26b78f084f95ac59c909b326be10d42c4a6696a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d8e4bcead2d3fc8f98daeada89cdd10b3ad30bed855563efd89b3eebce8995f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961949"
 ---
-# <a name="enumerating-objects"></a>Auflisten von Objekten
+# <a name="enumerating-objects"></a>Aufzählen von Objekten
 
-Zum Anzeigen des untergeordneten Objekts eines Containers, z. b. einer Organisationseinheit (OE), zählen Sie das Container Objekt. Um eine Analogie zu einem Dateisystem zu erstellen, entspricht das untergeordnete Objekt den Dateien im Verzeichnis, während der Container, der das übergeordnete Objekt ist, dem Verzeichnis selbst entspricht. Sie können auch den auflisten-Vorgang verwenden, wenn Sie das übergeordnete Objekt eines Objekts abrufen möchten.
+Um das untergeordnete Objekt eines Containers anzuzeigen, z. B. eine Organisationseinheit (OE), müssen Sie das Containerobjekt aufzählen. Um eine Analogie zu einem Dateisystem herzustellen, würde das untergeordnete Objekt Dateien im Verzeichnis entsprechen, während der Container, bei dem es sich um das übergeordnete Objekt handelt, dem Verzeichnis selbst entspricht. Sie können auch den Enumerate-Vorgang verwenden, wenn Sie das übergeordnete Objekt eines Objekts abrufen möchten.
 
-Wenn Sie ein Objekt auflisten, binden Sie tatsächlich an ein Objekt im Verzeichnis, und für jedes Objekt wird eine [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) -Schnittstelle zurückgegeben.
+Wenn Sie ein Objekt auflisten, binden Sie tatsächlich an ein Objekt im Verzeichnis, und für jedes Objekt wird eine [**IADs-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iads) zurückgegeben.
 
-Im folgenden Codebeispiel wird gezeigt, wie die untergeordneten Elemente eines Containers aufgelistet werden.
+Das folgende Codebeispiel zeigt, wie die untergeordneten Elemente eines Containers aufzählt werden.
 
 
 ```VB
@@ -43,7 +43,7 @@ Cleanup:
 
 
 
-Sie können die Typen von Objekten filtern, die von der-Enumeration zurückgegeben werden. Wenn Sie z. b. nur Benutzer und Gruppen anzeigen möchten, verwenden Sie das folgende Codebeispiel vor der-Enumeration.
+Sie können die Typen von Objekten filtern, die von der -Enumeration zurückgegeben werden. Um beispielsweise nur Benutzer und Gruppen anzuzeigen, verwenden Sie das folgende Codebeispiel vor der -Enumeration.
 
 
 ```VB
@@ -52,7 +52,7 @@ Ou.Filter = Array("user", "group")
 
 
 
-Wenn Sie über einen Objekt Verweis verfügen, können Sie das übergeordnete Objekt des Objekts mit der über [**geordneten**](iads-property-methods.md) [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) -Eigenschaft erhalten. Im folgenden Codebeispiel wird gezeigt, wie eine Bindung an das übergeordnete Objekt erfolgen kann.
+Wenn Sie über einen Objektverweis verfügen, können Sie das übergeordnete Objekt des Objekts mithilfe der [**übergeordneten IADs-Eigenschaft**](/windows/desktop/api/Iads/nn-iads-iads) [](iads-property-methods.md) abrufen. Das folgende Codebeispiel zeigt, wie eine Bindung an das übergeordnete Objekt erfolgen kann.
 
 
 ```VB
@@ -62,7 +62,7 @@ Set parent = GetObject(parentPath)
 
 
 
-Weitere Informationen finden Sie unter Auflisten von [ADSI-Objekten](enumerating-adsi-objects.md).
+Weitere Informationen finden Sie unter [Aufzählen von ADSI-Objekten.](enumerating-adsi-objects.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -71,9 +71,9 @@ Weitere Informationen finden Sie unter Auflisten von [ADSI-Objekten](enumerating
 [Suchen nach Objekten](searching-for-objects.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

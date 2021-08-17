@@ -1,5 +1,5 @@
 ---
-description: Generiert Funktionen, die Ereignisquellenklassen erstellen.
+description: Generiert Funktionen, die Ereignisquellklassen erstellen.
 ms.assetid: 002e5b2c-8853-4500-bf53-71f839da97f3
 title: eventSourceBuilderImplementations-Element
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118311762"
 ---
 # <a name="eventsourcebuilderimplementations-element"></a>eventSourceBuilderImplementations-Element
 
-Generiert Funktionen, die Ereignisquellenklassen erstellen.
+Generiert Funktionen, die Ereignisquellklassen erstellen.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -31,9 +31,9 @@ Es gibt keine Attribute.
 
 
 
-| Element                                     | BESCHREIBUNG                                                                           |
+| Element                                     | Beschreibung                                                                           |
 |---------------------------------------------|---------------------------------------------------------------------------------------|
-| [**proxyClass**](proxyclass.md)<br/> | Klassenname, der aus der Ereignisquellen-Generatorfunktion generiert werden soll.<br/> <br/> |
+| [**proxyClass**](proxyclass.md)<br/> | Klassenname, der aus der Ereignisquell-Generatorfunktion generiert werden soll.<br/> <br/> |
 
 
 
@@ -47,7 +47,7 @@ proxyClass
 
 
 
-| Element                         | BESCHREIBUNG                                                    |
+| Element                         | Beschreibung                                                    |
 |---------------------------------|----------------------------------------------------------------|
 | [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 

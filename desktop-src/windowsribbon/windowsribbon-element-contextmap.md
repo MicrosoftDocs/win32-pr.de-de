@@ -3,7 +3,7 @@ title: ContextMap-Element
 description: Stellt eine ContextMenu- und MiniToolbar-Paarzuordnung dar.
 ms.assetid: 84379578-24c6-4bf7-8dcf-8e21e5665d29
 keywords:
-- ContextMap-Element Im Windows-Menüband
+- ContextMap-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4754fc75ca09e39cdc7eabbeae2a0a2d2630c31f
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: aa8fd3a6b082d4bba54fdc3d43848d6a6cbe5ff6deacb4e041dba5cb4c0e3b09
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119931460"
 ---
 # <a name="contextmap-element"></a>ContextMap-Element
 
 Stellt eine [**ContextMenu-**](windowsribbon-element-contextmenu.md) und [**MiniToolbar-Paarzuordnung**](windowsribbon-element-minitoolbar.md) dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <ContextMap
@@ -47,9 +47,9 @@ Stellt eine [**ContextMenu-**](windowsribbon-element-contextmenu.md) und [**Mini
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -95,7 +95,7 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann ein oder mehrere Male für jedes [**ContextPopup.ContextMaps-Objekt auftreten.**](windowsribbon-element-contextpopup-contextmaps.md)
 
@@ -198,7 +198,7 @@ Dieser Codeabschnitt zeigt eine Reihe von **ContextMap-Steuerelementdeklaratione
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

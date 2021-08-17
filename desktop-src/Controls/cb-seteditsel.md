@@ -1,9 +1,9 @@
 ---
-title: CB_SETEDITSEL Meldung (Winuser. h)
-description: Eine Anwendung sendet eine CB \_ seteditsel-Meldung, um Zeichen im Bearbeitungs Steuerelement eines Kombinations Felds auszuwählen.
+title: CB_SETEDITSEL Meldung (Winuser.h)
+description: Eine Anwendung sendet eine CB \_ SETEDITSEL-Nachricht, um Zeichen im Bearbeitungssteuerelement eines Kombinationsfelds auszuwählen.
 ms.assetid: 25a07341-a21c-42a9-a220-62650997757b
 keywords:
-- Windows-Steuerelemente für CB_SETEDITSEL Meldung
+- CB_SETEDITSEL Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a54e09697e266b4e0c4260104e90f454a5e3edfb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0e8deb133559332ea8f727758086e19cb17483b4c343f8b3f8f1a3694911eedd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117832268"
 ---
-# <a name="cb_seteditsel-message"></a>CB-nach \_ richten-Nachricht
+# <a name="cb_seteditsel-message"></a>CB \_ SETEDITSEL-Nachricht
 
-Eine Anwendung sendet eine **CB \_ seteditsel** -Meldung, um Zeichen im Bearbeitungs Steuerelement eines Kombinations Felds auszuwählen.
+Eine Anwendung sendet eine **CB \_ SETEDITSEL-Nachricht,** um Zeichen im Bearbeitungssteuerelement eines Kombinationsfelds auszuwählen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -36,22 +36,22 @@ Dieser Parameter wird nicht verwendet.
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) von *LPARAM* gibt die Anfangsposition an. Wenn das **LoWord** -1 ist, wird die Auswahl ggf. entfernt.
+[**LowORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) von *lParam* gibt die Anfangsposition an. Wenn **LOWORD** -1 ist, wird ggf. die Auswahl entfernt.
 
-Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) von *LPARAM* gibt die Endposition an. Wenn das **HIWORD** -1 ist, wird der gesamte Text von der Anfangsposition bis zum letzten Zeichen im Bearbeitungs Steuerelement ausgewählt.
+Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) von *lParam* gibt die Endposition an. Wenn **HIWORD** -1 ist, wird der gesamte Text von der Anfangsposition bis zum letzten Zeichen im Bearbeitungssteuerelement ausgewählt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Nachricht erfolgreich ist, ist der Rückgabewert " **true**". Wenn die Nachricht an ein Kombinations Feld mit dem Format " [**CBS \_ DropDownList**](combo-box-styles.md) " gesendet wird, ist es CB \_ Err.
+Wenn die Nachricht erfolgreich ist, ist der Rückgabewert **TRUE.** Wenn die Nachricht an ein Kombinationsfeld mit dem [**\_ CBS-DROPDOWNLIST-Format**](combo-box-styles.md) gesendet wird, handelt es sich um CB \_ ERR.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Positionen sind NULL basiert. Das erste Zeichen des Bearbeitungs Steuer Elements befindet sich an der Nullposition. Das erste Zeichen nach dem letzten ausgewählten Zeichen befindet sich an der Endposition. Wenn Sie z. b. die ersten vier Zeichen des Bearbeitungs Steuer Elements auswählen möchten, verwenden Sie die Startposition 0 und die Endposition 4.
+Die Positionen sind nullbasiert. Das erste Zeichen des Bearbeitungssteuerelements befindet sich an der Nullposition. Das erste Zeichen nach dem letzten ausgewählten Zeichen befindet sich an der Endposition. Um beispielsweise die ersten vier Zeichen des Bearbeitungssteuerelements auszuwählen, verwenden Sie eine Anfangsposition von 0 und eine Endposition von 4.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,26 +59,26 @@ Die Positionen sind NULL basiert. Das erste Zeichen des Bearbeitungs Steuer Elem
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CB \_ geteditsel**](cb-geteditsel.md)
+[**CB \_ GETEDITSEL**](cb-geteditsel.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**Makelparam**](/windows/desktop/api/winuser/nf-winuser-makelparam)
+[**MAKELPARAM**](/windows/desktop/api/winuser/nf-winuser-makelparam)
 </dt> </dl>
 
  

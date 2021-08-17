@@ -1,11 +1,11 @@
 ---
-title: IPSec-ISAKMP-Reference-Attribut
-description: Das IPSec-ISAKMP-Reference-Attribut ist nur für die interne Verwendung vorgesehen.
+title: Ipsec-ISAKMP-Reference-Attribut
+description: Das Ipsec-ISAKMP-Reference-Attribut ist nur für die interne Verwendung vorgesehen.
 ms.assetid: a21513e8-9ae5-4690-a7a3-c1caaf9579cc
 ms.tgt_platform: multiple
 keywords:
-- IPSec-ISAKMP-Verweis Attribut AD-Schema
-- ipsecisakmpreference-Attribut, AD-Schema
+- IPsec-ISAKMP-Reference-Attribut AD-Schema
+- IPSECISAKMPReference-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0afa1f753fe86f5953d805610c0d60c721c60abe
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 3ba959bf501fa2954671c5474347ff75a8cb21fa4a3e578161ade403a43d7467
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859432"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119322540"
 ---
-# <a name="ipsec-isakmp-reference-attribute"></a>IPSec-ISAKMP-Reference-Attribut
+# <a name="ipsec-isakmp-reference-attribute"></a>Ipsec-ISAKMP-Reference-Attribut
 
-Das **IPSec-ISAKMP-Reference-** Attribut ist nur für die interne Verwendung vorgesehen.
+Das **Ipsec-ISAKMP-Reference-Attribut** ist nur für die interne Verwendung vorgesehen.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | IPSec-ISAKMP-Verweis                  |
-| LDAP-Display-Name | ipmencisachmpreference                    |
+| CN                | Ipsec-ISAKMP-Referenz                  |
+| Ldap-Anzeigename | ipsecISAKMPReference                    |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.626                  |
 | System-ID-GUID    | b40ff820-427a-11d1-a9c2-0000f80367c1    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
@@ -43,7 +43,7 @@ Das **IPSec-ISAKMP-Reference-** Attribut ist nur für die interne Verwendung vor
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Das **IPSec-ISAKMP-Reference-** Attribut ist nur für die interne Verwendung vor
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Ist einwertig       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
@@ -70,7 +70,7 @@ Das **IPSec-ISAKMP-Reference-** Attribut ist nur für die interne Verwendung vor
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Das **IPSec-ISAKMP-Reference-** Attribut ist nur für die interne Verwendung vor
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Ist einwertig       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
@@ -100,10 +100,10 @@ Das **IPSec-ISAKMP-Reference-** Attribut ist nur für die interne Verwendung vor
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Ist einwertig       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
@@ -121,10 +121,10 @@ Das **IPSec-ISAKMP-Reference-** Attribut ist nur für die interne Verwendung vor
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
@@ -142,10 +142,10 @@ Das **IPSec-ISAKMP-Reference-** Attribut ist nur für die interne Verwendung vor
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
@@ -163,10 +163,10 @@ Das **IPSec-ISAKMP-Reference-** Attribut ist nur für die interne Verwendung vor
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |

@@ -4,7 +4,7 @@ description: Flags, die bestimmen, wo ein Computer seine Richtlinie erhält. Loc
 ms.assetid: 1f2fa723-507a-4e27-a325-8bd6f6cb6bd6
 ms.tgt_platform: multiple
 keywords:
-- Local-Policy-Flags-Attribut AD-Schema
+- AD-Schema des Attributs "Local-Policy-Flags"
 - localPolicyFlags-Attribut AD-Schema
 topic_type:
 - apiref
@@ -29,13 +29,13 @@ Flags, die bestimmen, wo ein Computer seine Richtlinie erhält. Local-Policy-Ref
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Lokale Richtlinienflags                   |
+| CN                | Local-Policy-Flags                   |
 | Ldap-Anzeigename | localPolicyFlags                     |
 | Size              | \-                                   |
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.56                |
-| System-ID-GUID    | bf96799e-0de6-11d0-a285-00aa003049e2 |
+| System-Id-Guid    | bf96799e-0de6-11d0-a285-00aa003049e2 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -57,10 +57,10 @@ Flags, die bestimmen, wo ein Computer seine Richtlinie erhält. Local-Policy-Ref
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist einwertig       | True                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
+| System-Only            | Falsch                                     |
+| Is-Single-Valued       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
@@ -78,10 +78,10 @@ Flags, die bestimmen, wo ein Computer seine Richtlinie erhält. Local-Policy-Ref
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist einwertig       | True                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
+| System-Only            | Falsch                                     |
+| Is-Single-Valued       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
@@ -99,10 +99,10 @@ Flags, die bestimmen, wo ein Computer seine Richtlinie erhält. Local-Policy-Ref
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist einwertig       | True                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
+| System-Only            | Falsch                                     |
+| Is-Single-Valued       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
@@ -120,10 +120,10 @@ Flags, die bestimmen, wo ein Computer seine Richtlinie erhält. Local-Policy-Ref
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist einwertig       | True                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
+| System-Only            | Falsch                                     |
+| Ist einwertig       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
@@ -141,10 +141,10 @@ Flags, die bestimmen, wo ein Computer seine Richtlinie erhält. Local-Policy-Ref
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist einwertig       | True                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
+| System-Only            | Falsch                                     |
+| Ist einwertig       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
@@ -162,10 +162,10 @@ Flags, die bestimmen, wo ein Computer seine Richtlinie erhält. Local-Policy-Ref
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist einwertig       | True                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
+| System-Only            | Falsch                                     |
+| Ist einwertig       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |

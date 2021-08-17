@@ -1,29 +1,29 @@
 ---
 title: Die type_free_inst-Funktion
-description: Die stuften geben den Typ " \_ Free \_ inst" an, um dem dargestellten Typ zugeordneten Arbeitsspeicher freizugeben.
+description: Die Stubs rufen den Typ \_ free \_ inst function auf, um Arbeitsspeicher frei zu geben, der dem dargestellten Typ zugeordnet ist.
 ms.assetid: 4ee2e6a6-b506-445f-adaf-3705228defa7
 keywords:
 - type_free_inst
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3754106cf8e0cc6e338f91d6c233181aa33038eb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e0dc71c8d3557c62eec39fe9a90855ef3ed057d29c21ec60a82ddc7fe04207f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856164"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118923709"
 ---
-# <a name="the-type_free_inst-function"></a>Die \_ typfreie \_ inst-Funktion
+# <a name="the-type_free_inst-function"></a>Der \_ typfreie \_ inst-Funktion
 
-Die stuften **geben den Typ " \_ Free \_ inst** " an, um dem dargestellten Typ zugeordneten Arbeitsspeicher freizugeben. Die-Funktion ist wie folgt definiert:
+Die Stubs rufen den Typ **\_ free \_ inst** function auf, um Arbeitsspeicher frei zu geben, der dem dargestellten Typ zugeordnet ist. Die Funktion ist wie die folgenden definiert:
 
 ``` syntax
 void __RPC_USER <type>_free_inst(<type> __RPC_FAR *)
 ```
 
-Der-Parameter verweist auf die präsentierte Typinstanz. Dieses Objekt sollte nicht freigegeben werden. Eine Erläuterung dazu, wann die-Funktion aufgerufen werden muss, finden Sie unter "über [tragen \_ als](the-transmit-as-attribute.md)"-Attribut.
+Der -Parameter verweist auf die dargestellte Typinstanz. Dieses Objekt sollte nicht frei werden. Eine Diskussion darüber, wann die Funktion aufruft werden soll, finden Sie unter [Die Übertragung \_ als Attribut](the-transmit-as-attribute.md).
 
-Im folgenden Beispiel wird die Liste mit doppelten verknüpften freigegeben, indem Sie die Liste bis zum Ende durchlaufen und dann jedes Element der Liste sichern und freigeben.
+Im folgenden Beispiel wird die doppelt verknüpfte Liste durch das Durchgehen der Liste bis zum Ende des Listenendes und anschließendes Sichern und Frei geben der einzelnen Elemente der Liste frei.
 
 
 ```C++
@@ -45,9 +45,9 @@ void __RPC_USER DOUBLE_LINK_TYPE_free_inst(
 
 
 
- 
+ 
 
- 
+ 
 
 
 

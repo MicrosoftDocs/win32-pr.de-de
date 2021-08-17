@@ -1,56 +1,56 @@
 ---
-description: Behandeln von com+-Verwaltungsfehlern
+description: Behandeln von COM+-Verwaltungsfehlern
 ms.assetid: 03f00c19-ff81-478b-b545-048f3dbe5eda
-title: Behandeln von com+-Verwaltungsfehlern
+title: Behandeln von COM+-Verwaltungsfehlern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e7e5838d7fee7616a23f5e361df1aef65421492
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 965276fff68edf45ae27423ee4ed707e4bb7f1476b0237dab270538e0fa0f1be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346444"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118306708"
 ---
-# <a name="handling-com-administration-errors"></a>Behandeln von com+-Verwaltungsfehlern
+# <a name="handling-com-administration-errors"></a>Behandeln von COM+-Verwaltungsfehlern
 
-Fehler, die bei der Verwendung der COMAdmin-Objekte generiert werden, werden auf zwei Arten wie folgt gemeldet:
+Fehler, die bei Verwendung der COMAdmin-Objekte generiert werden, werden wie folgt auf zwei Arten gemeldet:
 
--   Verwendung von für die COMAdmin-Bibliothek spezifischen Fehlercodes.
--   Verwendung erweiterter Fehlerinformationen, die in einer speziellen [**errorInfo**](errorinfo.md) -Sammlung verfügbar sind.
+-   Verwenden von spezifischen Fehlercodes für die COMAdmin-Bibliothek.
+-   Verwenden erweiterter Fehlerinformationen, die in einer speziellen [**ErrorInfo-Auflistung verfügbar**](errorinfo.md) sind.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Sie behandeln Verwaltungsfehler Codes wie jede beliebige com-Fehlermeldung. In Microsoft Visual C++ werden diese Codes als **HRESULT** -Werte zurückgegeben. In Microsoft Visual Basic werden Sie als Ausnahmen ausgelöst, die Sie erfassen können. Für C++-Programmierer sind die com+-Verwaltungsfehler Codes in WinError. h definiert. Für Visual Basic Programmierer sind Sie über die Visual Basic IDE verfügbar.
+Sie behandeln Fehlercodes für die Verwaltung wie alle COM-Fehlermeldungen. In Microsoft Visual C++ werden diese Codes als **HRESULT-Werte** zurückgegeben. In Microsoft Visual Basic werden sie als Ausnahmen ausgelöst, die Sie abfangen können. Für C++-Programmierer werden die COM+-Verwaltungsfehlercodes in Winerror.h definiert. Für Visual Basic Programmierer sind sie über die Visual Basic IDE verfügbar.
 
-## <a name="errorinfo-collection"></a>ErrorInfo-Sammlung
+## <a name="errorinfo-collection"></a>ErrorInfo-Auflistung
 
-Wenn ein Fehler auftritt, der durch eine Art von Fehlercode signalisiert wird, sind möglicherweise ausführlichere Informationen verfügbar, abhängig von der Art des Fehlers. Die COMAdmin-Objekte bieten erweiterte Informationen in Situationen, in denen die genaue Ursache des Fehlers ohne einen detaillierten Bericht, z. b. mit mehreren Lese-und Schreibvorgängen, schwer zu bestimmen ist.
+Wenn ein Fehler auftritt, der durch eine Art von Fehlercode signalisiert wird, sind je nach Art des Fehlers möglicherweise ausführlichere Informationen verfügbar. Die COMAdmin-Objekte stellen erweiterte Informationen in Situationen zur Verfügung, in denen die genaue Ursache des Fehlers ohne detaillierten Bericht schwierig zu ermitteln ist, z. B. bei mehreren Lese- und Schreibvorgängen.
 
-Wenn Sie z. b. [**Methoden wie "auffüllen" und "**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-populate) [**SaveChanges**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges) " für ein [**comadmincatalogcollection**](comadmincatalogcollection.md) -Objekt verwenden, können Sie Daten für jedes Element in der Sammlung lesen oder schreiben. Komplizierte Fehler können auftreten, und Sie können auf Grundlage eines einzelnen numerischen Fehlercodes schwierig zu diagnostizieren sein. Aus diesem Grund werden durch die COMAdmin-Bibliothek Erweiterte Fehlerinformationen über eine spezielle Sammlung ausgegeben.
+Wenn Sie beispielsweise Methoden wie [**Populate**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-populate) und [**SaveChanges**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-savechanges) für ein [**COMAdminCatalogCollection-Objekt**](comadmincatalogcollection.md) verwenden, können Sie Daten für jedes Element in der Auflistung lesen oder schreiben. Komplizierte Fehler können auftreten, und es kann schwierig sein, sie basierend auf einem einzelnen numerischen Fehlercode zu diagnostizieren. Aus diesem Grund erstellt die COMAdmin-Bibliothek erweiterte Fehlerinformationen über eine spezielle Sammlung.
 
-Wenn erweiterte Fehlerinformationen verfügbar sind, werden Sie in der [**errorInfo**](errorinfo.md) -Auflistung platziert, die mit der ursprünglichen Auflistung verknüpft ist, in der der Fehler aufgetreten ist. Um den Fehlerbericht abzurufen, rufen Sie die **errorInfo** -Auflistung ab, die mit der ursprünglichen Auflistung verknüpft ist, und untersuchen Sie die darin enthaltenen Elemente. Sie können die **errorInfo** -Auflistung mithilfe von [**GetCollection**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-getcollection) in [**comadmincatalogcollection**](comadmincatalogcollection.md)abrufen und den zweiten Parameter leer lassen, wo Sie normalerweise die Schlüsseleigenschaft eines übergeordneten Elements angeben.
+Wenn erweiterte Fehlerinformationen verfügbar sind, werden sie in der [**ErrorInfo-Auflistung**](errorinfo.md) platziert, die mit der ursprünglichen Auflistung verknüpft ist, bei der der Fehler aufgetreten ist. Rufen Sie zum Abrufen des Fehlerberichts die **ErrorInfo-Auflistung** ab, die sich auf die ursprüngliche Sammlung bezieht, und untersuchen Sie die elemente, die sie enthält. Sie können die **ErrorInfo-Sammlung** abrufen, indem Sie [**GetCollection**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-getcollection) für [**COMAdminCatalogCollection**](comadmincatalogcollection.md)verwenden und den zweiten Parameter leer lassen, in dem Sie normalerweise die Key-Eigenschaft eines übergeordneten Elements angeben würden.
 
-Wenn Sie eine Fehlermeldung erhalten, müssen Sie die [**errorInfo**](errorinfo.md) -Auflistung sofort für die Auflistung, bei der ein Fehler aufgetreten ist, erhalten und Auffüllen, ohne weitere Vorgänge für diese Sammlung auszuführen. Andernfalls wird die **errorInfo** -Auflistung zurückgesetzt, und der Fehler wird nicht ausführlich erläutert.
+Wenn sie einen Fehler erhalten, müssen Sie sofort die [**ErrorInfo-Auflistung**](errorinfo.md) für die fehlgeschlagene Sammlung erhalten und auffüllen, ohne andere Vorgänge für diese Sammlung ausführen zu müssen. Andernfalls wird **die ErrorInfo-Auflistung** zurückgesetzt und gibt diesen Fehler nicht an.
 
-Die Elemente in der [**errorInfo**](errorinfo.md) -Auflistung machen die speziellen Fehler Berichterstattungs Eigenschaften majorref und MinorRef verfügbar, die die jeweilige Ursache des Fehlers detailliert beschreiben. Weitere Informationen finden Sie unter **errorInfo**.
+Die Elemente in der [**ErrorInfo-Auflistung**](errorinfo.md) machen die speziellen Fehlerberichterstattungseigenschaften MajorRef und MinorRef verfügbar, die die spezielle Ursache des Fehlers detailliert beschreiben. Weitere Informationen finden Sie unter **ErrorInfo**.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Com+-Verwaltungsvorgänge in Transaktionen](com--administration-operations-within-transactions.md)
+[COM+-Verwaltungsvorgänge innerhalb von Transaktionen](com--administration-operations-within-transactions.md)
 </dt> <dt>
 
-[Einführ Endes Beispiel mit dem com+-Verwaltungs Katalog](introductory-example-using-the-com--administration-catalog.md)
+[Einführendes Beispiel mit dem COM+-Verwaltungskatalog](introductory-example-using-the-com--administration-catalog.md)
 </dt> <dt>
 
 [Übersicht über die COMAdmin-Objekte](overview-of-the-comadmin-objects.md)
 </dt> <dt>
 
-[Abrufen von Auflistungen im com+-Katalog](retrieving-collections-on-the-com--catalog.md)
+[Abrufen von Sammlungen im COM+-Katalog](retrieving-collections-on-the-com--catalog.md)
 </dt> <dt>
 
-[Festlegen von Eigenschaften und Speichern von Änderungen am com+-Katalog](setting-properties-and-saving-changes-to-the-com--catalog.md)
+[Festlegen von Eigenschaften und Speichern von Änderungen am COM+-Katalog](setting-properties-and-saving-changes-to-the-com--catalog.md)
 </dt> </dl>
 
  

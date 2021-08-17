@@ -1,7 +1,7 @@
 ---
-description: Im Autorisierungs-Manager ist eine Aufgabe eine allgemeine Aktion, die Benutzer einer Anwendung ausführen müssen.
+description: Im Autorisierungs-Manager ist eine Aufgabe eine übergeordnete Aktion, die Benutzer einer Anwendung ausführen müssen.
 ms.assetid: a266dde7-86f8-4537-99a5-be7142e765c6
-title: Gruppieren von Vorgängen in Aufgaben in Skripts
+title: Gruppieren von Vorgängen in Tasks in Skripts
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -9,18 +9,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: fb7fc1d4a84cd42dc0ae48af4fcbf02412b93337
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 29c7dedb9944a208e5ba128f0341a8cbde3e787056c099d527be8f79260c6f7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867831"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118913574"
 ---
-# <a name="grouping-operations-into-tasks-in-script"></a>Gruppieren von Vorgängen in Aufgaben in Skripts
+# <a name="grouping-operations-into-tasks-in-script"></a>Gruppieren von Vorgängen in Tasks in Skripts
 
-Im Autorisierungs-Manager ist eine Aufgabe eine allgemeine Aktion, die Benutzer einer Anwendung ausführen müssen. Aufgaben bestehen aus Vorgängen, bei denen es sich um Low-Level-Funktionen und-Methoden der Anwendung handelt. Anschließend wird eine Aufgabe den Rollen zugewiesen, die diese Aufgabe ausführen müssen. Eine Aufgabe wird durch ein [**iaztask**](/windows/desktop/api/Azroles/nn-azroles-iaztask) -Objekt dargestellt. Weitere Informationen zu Vorgängen und Aufgaben finden Sie unter [Vorgänge und Aufgaben](operations-and-tasks.md).
+Im Autorisierungs-Manager ist eine Aufgabe eine übergeordnete Aktion, die Benutzer einer Anwendung ausführen müssen. Aufgaben bestehen aus Vorgängen, bei denen es sich um Funktionen und Methoden auf niedriger Ebene der Anwendung handelt. Eine Aufgabe wird dann den Rollen zugewiesen, die diese Aufgabe ausführen müssen. Eine Aufgabe wird durch ein [**IAzTask-Objekt**](/windows/desktop/api/Azroles/nn-azroles-iaztask) dargestellt. Weitere Informationen zu Vorgängen und Aufgaben finden Sie unter [Vorgänge und Aufgaben.](operations-and-tasks.md)
 
-Im folgenden Beispiel wird gezeigt, wie Sie Vorgänge gruppieren, um eine Aufgabe zu erstellen. Im Beispiel wird davon ausgegangen, dass ein vorhandener XML-Richtlinien Speicher namens MyStore.xml im Stammverzeichnis des Laufwerks C vorhanden ist, dass dieser Speicher eine Anwendung mit dem Namen "Kosten" enthält und dass diese Anwendung Vorgänge enthält, die im Thema [Definieren von Vorgängen im Skript](defining-operations-in-script.md)definiert sind.
+Das folgende Beispiel zeigt, wie Vorgänge gruppiert werden, um eine Aufgabe zu erstellen. Im Beispiel wird davon ausgegangen, dass im Stammverzeichnis von Laufwerk C ein vorhandener XML-Richtlinienspeicher mit dem Namen MyStore.xml vorhanden ist, dass dieser Speicher eine Anwendung mit dem Namen Expense enthält und dass diese Anwendung Vorgänge enthält, die im Thema [Definieren von Vorgängen in Skript](defining-operations-in-script.md)definiert sind.
 
 
 ```VB

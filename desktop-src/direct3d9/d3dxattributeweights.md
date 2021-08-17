@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: 7a833d2a58db0f434f836126926e461cd2ee3ea0
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: fa40476bdd1f65dddf0f78b57cfca2b20ac7bd8186eaf78546ddda9b3fa8771a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108115968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118096595"
 ---
 # <a name="d3dxattributeweights-structure"></a>D3DXATTRIBUTEWEIGHTS-Struktur
 
@@ -112,7 +112,7 @@ Acht Texturkoordinaten.
 
 </dd> <dt>
 
-**Tangente**
+**Tangens**
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -134,9 +134,9 @@ Binormal.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur beschreibt, wie bei einem Vereinfachungsvorgang Scheitelpunktdaten berücksichtigt werden, wenn relative Kosten zwischen reduzierenden Kanten berechnet werden. Wenn das Feld Normal z. B. 0,0 ist, ignoriert der Vereinfachungsvorgang die Vertexnorm normal-Komponente beim Berechnen des Fehlers für das Reduzieren. Wenn das Feld Normal jedoch 1,0 ist, verwendet der Vereinfachungsvorgang die Vertex normal-Komponente. Wenn das Feld Normal 2,0 ist, doppelt so viele Fehler. , wenn das Feld Normal den Wert 4,0 aufweist, verdreiffachen Sie die Anzahl der Fehler usw.
+Diese Struktur beschreibt, wie ein Vereinfachungsvorgang Scheitelpunktdaten beim Berechnen relativer Kosten zwischen reduzierenden Kanten berücksichtigt. Wenn das Feld Normal z. B. 0,0 ist, ignoriert der Vereinfachungsvorgang die Vertexnorm normal-Komponente beim Berechnen des Fehlers für das Reduzieren. Wenn das Feld Normal jedoch 1,0 ist, verwendet der Vereinfachungsvorgang die Vertex normal-Komponente. Wenn das Feld Normal 2,0 ist, doppelt so viele Fehler. , wenn das Feld Normal den Wert 4,0 aufweist, verdreiffachen Sie die Anzahl der Fehler usw.
 
 Der LPD3DXATTRIBUTEWEIGHTS-Typ wird als Zeiger auf die **D3DXATTRIBUTEWEIGHTS-Struktur** definiert.
 
@@ -152,7 +152,7 @@ Der LPD3DXATTRIBUTEWEIGHTS-Typ wird als Zeiger auf die **D3DXATTRIBUTEWEIGHTS-St
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 

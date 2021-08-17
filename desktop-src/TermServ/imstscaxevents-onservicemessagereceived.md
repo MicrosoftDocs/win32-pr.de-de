@@ -1,12 +1,12 @@
 ---
-title: Imstscaxevents onservicemess agereceived-Methode
+title: IMsTscAxEvents OnServiceMessageReceived-Methode
 description: Wird aufgerufen, wenn der Client eine Systemmeldung empfängt.
 ms.assetid: 9D230AA3-30F8-4BDF-89D6-D33AF42D0E85
 ms.tgt_platform: multiple
 keywords:
-- Onservicemess agereceived-Methode Remotedesktopdienste
-- Onservicemess agereceived-Methode Remotedesktopdienste, imstscaxevents-Schnittstelle
-- Imstscaxevents-Schnittstelle Remotedesktopdienste, onservicemess agereceived-Methode
+- OnServiceMessageReceived-Methode Remotedesktopdienste
+- OnServiceMessageReceived-Methode Remotedesktopdienste , IMsTscAxEvents-Schnittstelle
+- IMsTscAxEvents-Schnittstelle Remotedesktopdienste , OnServiceMessageReceived-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 05a26b78fa31667fb550848d4edd7918aa2bde3e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9ca511710834f8aa9fdda02565c33c4732e4cba9300e74ad3b48276d74890bc2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117757248"
 ---
-# <a name="imstscaxeventsonservicemessagereceived-method"></a>Imstscaxevents:: onservicemess agereceived-Methode
+# <a name="imstscaxeventsonservicemessagereceived-method"></a>IMsTscAxEvents::OnServiceMessageReceived-Methode
 
 Wird aufgerufen, wenn der Client eine Systemmeldung empfängt.
 
@@ -43,7 +43,7 @@ void OnServiceMessageReceived(
 
 <dl> <dt>
 
-*servicemess* \[ in\]
+*serviceMessage* \[ In\]
 </dt> <dd>
 
 Gibt die Systemmeldung an.
@@ -54,9 +54,9 @@ Gibt die Systemmeldung an.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu Systemnachrichten finden Sie unter [configure Messaging for a Remotedesktop Gateway Server](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd834700(v=ws.11)).
+Weitere Informationen zu Systemmeldungen finden Sie unter [Konfigurieren von Messaging für einen Remotedesktop Gatewayserver.](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd834700(v=ws.11))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,15 +68,15 @@ Weitere Informationen zu Systemnachrichten finden Sie unter [configure Messaging
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                      |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | Imstscaxevents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
+| IID<br/>                      | IMsTscAxEvents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imstscaxevents**](imstscaxevents-interface.md)
+[**IMsTscAxEvents**](imstscaxevents-interface.md)
 </dt> </dl>
 
  

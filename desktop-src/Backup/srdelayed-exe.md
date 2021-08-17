@@ -1,127 +1,127 @@
 ---
 title: Srdelayed.exe
-description: Anwendungen, die Systemstatus Wiederherstellungs Vorgänge früh beim Start des Betriebssystems ausführen, können möglicherweise die Dateiverwaltungsfunktionen nicht verwenden, um den Kurznamen bestimmter Systemdateien zu verschieben, zu löschen oder festzulegen.
+description: Anwendungen, die systemstatuswiederherstellungsvorgänge frühzeitig beim Start des Betriebssystems ausführen, können die Dateiverwaltungsfunktionen möglicherweise nicht verwenden, um den Kurznamen bestimmter Systemdateien zu verschieben, zu löschen oder fest zu legen.
 ms.assetid: cedeb48e-bc1d-48d1-9bee-0b8b0132c3e5
 keywords:
-- Srdelayed.exe Sicherung
-- Sicherung der Systemstatus Wiederherstellung
+- Srdelayed.exe-Sicherung
+- Systemstatuswiederherstellung – Sicherung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a5f6b281c07f5b0ad8d6cd7e59b4f93ec9208a5
-ms.sourcegitcommit: 46376be61d3fa308f9b1a06d7e2fa122a39755af
+ms.openlocfilehash: cfdf95ff77fd17a578b85e6037c71146666eae9522d066bc1c4629fb9a2c24e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "104474571"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117835538"
 ---
 # <a name="srdelayedexe"></a>Srdelayed.exe
 
-Anwendungen, die Systemstatus Wiederherstellungs Vorgänge früh beim Start des Betriebssystems ausführen, können möglicherweise die Dateiverwaltungsfunktionen nicht verwenden, um den Kurznamen bestimmter Systemdateien zu verschieben, zu löschen oder festzulegen. Srdelayed.exe ist eine ausführbare Datei, die mit der Funktion Windows Server-Sicherung (WSB) in Windows Server 2008 bereitgestellt wird, mit der Systemstatus-Wiederherstellungs Anwendungen den Kurznamen von Systemdateien verschieben, löschen und festlegen können.
+Anwendungen, die systemstatuswiederherstellungsvorgänge frühzeitig beim Start des Betriebssystems ausführen, können die Dateiverwaltungsfunktionen möglicherweise nicht verwenden, um den Kurznamen bestimmter Systemdateien zu verschieben, zu löschen oder fest zu legen. Srdelayed.exe ist eine ausführbare Datei, die mit der WSB-Funktion (Windows Server Backup) in Windows Server 2008 bereitgestellt wird, die es Anwendungen zur Wiederherstellung des Systemstatus ermöglichen kann, systemstatuswiederherstellungsanwendungen zu verschieben, zu löschen und den Kurznamen von Systemdateien fest zu setzen.
 
-Das srverzögert-Tool ist für Systemstatus-Wiederherstellungs Anwendungen vorgesehen. die Dateiverwaltungsfunktionen werden nicht ersetzt. Dieses Tool sollte nur verwendet werden, wenn die Anwendung nicht in der Lage ist, den Kurznamen einer Systemdatei mithilfe der Funktionen [**MoveFileEx**](/windows/desktop/api/winbase/nf-winbase-movefileexa), [**DeleteFile**](/windows/desktop/api/fileapi/nf-fileapi-deletefilea)und [**setfileshortname**](/windows/desktop/api/winbase/nf-winbase-setfileshortnamea) zu verschieben, zu löschen oder festzulegen. Während der Wiederherstellung des Systemstatus und des Neustarts wird Srdelayed.exe von der Systemwiederherstellung verwendet. das Befehlszeilen Tool wbadmin.exe verwendet, um den Kurznamen für bestimmte Systemdateien zu verschieben, zu löschen und festzulegen. Srverzögert kann daher für Entwickler nützlich sein, die die Möglichkeit haben, diese Systemdateien in ihren eigenen Systemstatus-Wiederherstellungs Anwendungen wiederherzustellen.
+Das srdelayed-Tool ist für Anwendungen zur Wiederherstellung des Systemstatus vorgesehen. Die Dateiverwaltungsfunktionen werden nicht ersetzt. Dieses Tool sollte nur verwendet werden, wenn die Anwendung den Kurznamen einer Systemdatei mithilfe der [**Funktionen MoveFileEx,**](/windows/desktop/api/winbase/nf-winbase-movefileexa) [**DeleteFile**](/windows/desktop/api/fileapi/nf-fileapi-deletefilea)und [**SetFileShortName**](/windows/desktop/api/winbase/nf-winbase-setfileshortnamea) nicht verschieben, löschen oder festlegen kann. Während einer Wiederherstellung und eines Neustarts des Systemstatus wird Srdelayed.exe von der Systemwiederherstellung und dem wbadmin.exe-Befehlszeilentool verwendet, um den Kurznamen für bestimmte Systemdateien zu verschieben, zu löschen und fest zu legen. Srdelayed kann daher für Entwickler nützlich sein, die die Möglichkeit benötigen, diese Systemdateien in ihren eigenen Anwendungen zur Wiederherstellung des Systemstatus wiederherzustellen.
 
-Mit srverzögert können die folgenden Vorgänge durchgeführt werden:
+Srdelayed kann die folgenden Vorgänge ausführen:
 
--   Ein Vorgang zum Verschieben einer Datei, der der [**MoveFileEx**](/windows/desktop/api/winbase/nf-winbase-movefileexa) -Funktion mit dem Flag " **MoveFile \_ Delay \_ until \_ Reboot** " ähnelt
--   Ein Vorgang zum Löschen einer Datei ähnlich der [**DeleteFile**](/windows/desktop/api/fileapi/nf-fileapi-deletefilea) -Funktion
--   Ein Kurznamen-Vorgang, der der Funktion [**setfileshortname**](/windows/desktop/api/winbase/nf-winbase-setfileshortnamea) ähnelt.
+-   Ein Vorgang zum Verschieben einer Datei ähnlich der [**MoveFileEx-Funktion**](/windows/desktop/api/winbase/nf-winbase-movefileexa) mit dem **Flag MOVEFILE \_ DELAY UNTIL \_ \_ REBOOT**
+-   Ein Löschvorgang ähnlich der [**DeleteFile-Funktion**](/windows/desktop/api/fileapi/nf-fileapi-deletefilea)
+-   Ein Set-Short-Name-Vorgang, der der [**SetFileShortName-Funktion**](/windows/desktop/api/winbase/nf-winbase-setfileshortnamea) ähnelt
 
-Zur Verwendung von srverzögert benötigt die Anwendung den vollständigen Pfad zum Speicherort der Srdelayed.exe Datei und den vollständigen Pfad zu einer von Ihnen erstellten Unicode-Textdatei, die die Informationen enthält, die das Tool benötigt, um alle angeforderten Datei Verwaltungsvorgänge auszuführen. Die Anwendung ist dafür verantwortlich, sicherzustellen, dass diese Textdatei keine redundanten Anforderungen für einen Vorgang enthält und dass Sie jede erforderliche Reihenfolge der Datei Verwaltungsvorgänge behandelt. Da ein Ordner z. b. leer sein muss, um gelöscht zu werden, muss die Anwendung sicherstellen, dass in der Textdatei das Entfernen aller Dateien im Ordner angegeben ist, bevor der Ordner gelöscht wird.
+Um Srdelayed verwenden zu können, benötigt Ihre Anwendung den vollständigen Pfad zum Speicherort der Srdelayed.exe-Datei und den vollständigen Pfad zu einer Unicode-Textdatei, die Sie erstellt haben, um die Informationen zu enthalten, die das Tool zum Ausführen aller angeforderten Dateiverwaltungsvorgänge benötigt. Ihre Anwendung ist dafür verantwortlich, sicherzustellen, dass diese Textdatei keine redundanten Anforderungen für einen Vorgang enthält und dass alle erforderlichen Reihenfolgen der Dateiverwaltungsvorgänge verarbeitet werden. Da beispielsweise ein Ordner leer sein muss, um gelöscht zu werden, muss Ihre Anwendung sicherstellen, dass die Textdatei das Entfernen aller Dateien innerhalb des Ordners angibt, bevor der Ordner gelöscht werden soll.
 
-Wenn der Eintrag **SetupExecute** nicht bereits in der Registrierung vorhanden ist, muss die Anwendung einen **reg \_ \_ MultiSZ** -typeintrag mit dem Namen **SetupExecute** unter dem folgenden Registrierungsschlüssel erstellen: **HKEY \_ local \_ Machine** \\ **System** \\ **CurrentControlSet** \\ **Control** \\ **Session Manager**.
+Wenn der **Eintrag SetupExecute** noch nicht in der Registrierung vorhanden ist, muss Ihre Anwendung einen **REG MULTI \_ \_ SZ-Typeintrag** namens **SetupExecute** unter dem folgenden Registrierungsschlüssel erstellen: **HKEY LOCAL \_ \_ MACHINE** \\ **System** \\ **CurrentControlSet** \\ **Control Session** \\ **Manager**.
 
-Die Anwendung sollte das folgende Format verwenden, um den Wert von **SetupExecute** auf den vollständigen Pfad zum Speicherort der Srdelayed.exe Datei und den vollständigen Pfad zum Speicherort der Textdatei festzulegen. Stellen \\ \\ \\ Sie dem Pfad der Textdatei das Präfix "??" folgendermaßen voran:
+Ihre Anwendung sollte das folgende Format verwenden, um den Wert von **SetupExecute** auf den vollständigen Pfad zum Speicherort der Srdelayed.exe-Datei und den vollständigen Pfad zum Speicherort der Textdatei zu setzen. Stellen Sie \\ \\ dem Pfad der Textdatei das Präfix "??" \\ wie folgt voran:
 
-*Vollständiger Pfad zu Srdelayed.exe* \\ \\ ?? \\ *Vollständiger Pfad zur Textdatei*  
-
-
-Der folgende Wert für **SetupExecute** gibt beispielsweise an, dass sich die Srdelayed.exe im Ordner System32 befindet und die Textdatei den Namen delayedoperations hat:
-
-C: \\ Windows \\ system32 \\srdelayed.exe \\ \\ ?? \\ C: \\ Temp \\ delayedoperations  
+*Vollständiger Pfad zum Srdelayed.exe* \\ \\ ?? \\ *Vollständiger Pfad zur Textdatei*  
 
 
-Leerzeichen im Pfad und Namen müssen hexadezimal codiert sein. Codieren Sie z. b. für *Programmdateien* den Pfad in " \\ \\ ?? \\ C:Program%20dateien \\a.dll ".
+Der folgende Wert für **SetupExecute** gibt beispielsweise an, dass sich die Srdelayed.exe im Ordner System32 und die Textdatei delayedOperations befindet:
 
-Wenn die Registrierung oder das System nach dem Neustart wieder hergestellt wird, muss die Anwendung sicherstellen, dass **SetupExecute** in der richtigen Registrierungs Struktur geschrieben wird. Die Wiederherstellung der Registrierung wird ausgeführt, bevor Srdelayed.exe ausgeführt wird. Die Anwendung muss **SetupExecute** in die wiederhergestellte Version der Registrierung schreiben, da dies die gelesene Version ist.
+C: \\ Windows \\ System32 \\srdelayed.exe \\ \\ ?? \\ C: \\ temp \\ DelayedOperations  
 
-## <a name="format-for-the-srdelayed-input-file"></a>Format für die srverzögert-Eingabedatei
 
-Alle Informationen, die für die Ausführung von Datei Verwaltungsvorgängen erforderlich sind, werden als Zeichenfolge von Unicode-Zeichen in einer Unicode-Textdatei angegeben. Die Zeichenfolge von Unicode-Zeichen wird in Datensätze partitioniert, die selbst jeweils in vier Felder partitioniert sind. Jeder Datensatz gibt eine einzelne Datei zum Verschieben, löschen oder Festlegen eines Kurznamens an. Die vier Felder der einzelnen Datensätze enthalten die Parameter für den Vorgang. Srdelayed.exe führt jeden Vorgang in der Reihenfolge aus, in der die Datensätze in der Zeichenfolge auftreten. Die Anwendung sollte alle doppelten Datensätze in dieser Datei überprüfen und die Duplikate entfernen.
+Leerzeichen im Pfad und Namen sollten hexadezimal codiert sein. Codieren Sie z. *B.* für Programme den Pfad als " \\ \\ ?? \\ C:Program%20Files \\a.dll".
 
-Die folgende Zeichenfolge veranschaulicht das Format einer Datei, die zwei Vorgänge anfordert und aus zwei Datensätzen besteht. Jedes Parameterfeld endet mit einem einzelnen L- \\ Zeichen (0). Ein Datensatz besteht aus vier aufeinander folgenden Feldern. Ein zusätzliches einzelnes L- \\ Zeichen ' 0 ' wird an das Ende aller Datensätze angehängt.
+Wenn die Registrierung oder das System beim Neustart wiederhergestellt wird, muss Ihre Anwendung sicherstellen, dass **SetupExecute** in die richtige Registrierungsstruktur geschrieben wird. Die Wiederherstellung der Registrierung wird ausgeführt, bevor Srdelayed.exe ausgeführt wird. Die Anwendung muss **SetupExecute in die** wiederhergestellte Version der Registrierung schreiben, da dies die Version ist, die gelesen wird.
+
+## <a name="format-for-the-srdelayed-input-file"></a>Format für die srdelayed-Eingabedatei
+
+Alle Informationen, die srdelayed zum Ausführen von Dateiverwaltungsvorgängen benötigt, werden als Unicode-Zeichenzeichenfolge in einer Unicode-Textdatei angegeben. Die Unicode-Zeichenzeichenfolge wird in Datensätze partitioniert, die jeweils in vier Felder partitioniert sind. Jeder Datensatz gibt eine einzelne Aktion zum Verschieben, Löschen oder Festlegen eines Kurznamens an. Die vier Felder jedes Datensatzes enthalten die Parameter für den Vorgang. Srdelayed.exe führt jeden Vorgang in der Reihenfolge aus, in der die Datensätze in der Zeichenfolge auftreten. Ihre Anwendung sollte auf doppelte Datensätze in dieser Datei überprüfen und die Duplikate entfernen.
+
+Die folgende Zeichenfolge veranschaulicht das Format für eine Datei, die zwei Vorgänge angibt und aus zwei Datensätzen besteht. Jedes Parameterfeld endet mit einem einzelnen \\ L'0'-Zeichen. Ein Datensatz besteht aus vier aufeinander folgenden Feldern. Am Ende aller Datensätze wird ein zusätzliches einzelnes \\ L'0'-Zeichen angefügt.
 
 `<ParamA1>L'\0'<ParamA2>L'\0'<ParamA3>L'\0'<ParamA4>L'\0'<ParamB1>L'\0'<ParamB2>L'\0'<ParamB3>L'\0'<ParamB4>L'\0'L'\0'`  
 `|-----------------------RecordA------------------------|------------------------RecordB------------------------|`  
 
 
-Die Bedeutung der ersten, zweiten, dritten und vierten Parameter Felder hängt davon ab, ob der Datensatz einen Vorgang zum Verschieben, löschen oder Festlegen eines Kurznamens beschreibt.
+Die Bedeutung des ersten, zweiten, dritten und vierten Parameterfelds hängt davon ab, ob der Datensatz einen Vorgang zum Verschieben, Löschen oder Festlegen eines Kurznamens beschreibt.
 
-## <a name="format-for-a-move-file-record"></a>Format für einen Verschiebungs Datei-Datensatz
+## <a name="format-for-a-move-file-record"></a>Format für einen Dateidatensatz verschieben
 
-Feld 1 identifiziert dies als Anforderung zum Verschieben einer Datei. Der Wert in diesem Feld lautet immer L "muvefile", und es wird die Groß-/Kleinschreibung beachtet.
+Feld 1 identifiziert dies als Anforderung zum Verschieben einer Datei. Der Wert in diesem Feld ist immer L"MoveFile" und berücksichtigt die Kleinschreibung.
 
-Field 2 gibt den Quell Speicherort der Datei an. Der srverzögert-Vorgang zum Verschieben von Dateien unterstützt nicht das Verschieben eines Ordners. In diesem Feld muss eine Datei angegeben werden. Der Wert für dieses Feld ist der vollständige Pfad der Datei, die an " \\ \\ ??" angehängt wird \\ , es sei denn, der Pfad enthält eine Globally Unique Identifier (GUID), die " \\ \\ ? \\ " als Präfix verwendet. Entfernen \\ \\ Sie "? \\ ", bevor Sie an " \\ \\ ?? \\ " Anhängen.
+Feld 2 gibt den Quellspeicherort der Datei an. Der Srdelayed-Vorgang zum Verschieben von Dateien unterstützt das Verschieben eines Ordners nicht. In diesem Feld muss eine Datei angegeben werden. Der Wert für dieses Feld ist der vollständige Pfad der Datei, die an " ?? " angefügt ist, es sei denn, der Pfad enthält einen \\ \\ guiD (Globally Unique Identifier), der " ? " als Präfix \\ \\ \\ \\ verwendet. Entfernen Sie " \\ \\ ? " vor dem \\ Anfügen an " \\ \\ ?? \\ ".
 
-Field 3 gibt das Ziel der Datei an. Der Vorgang zum Verschieben von Dateien funktioniert nur innerhalb eines Volumes. Quelle und Ziel müssen sich auf demselben Volume befinden. Der Wert für dieses Feld ist der vollständige Pfad der Datei, die an " \\ \\ ??" angehängt wird \\ , es sei denn, der Pfad enthält eine Globally Unique Identifier (GUID), die " \\ \\ ? \\ " als Präfix verwendet. Entfernen \\ \\ Sie "? \\ ", bevor Sie an " \\ \\ ?? \\ " Anhängen.
+Feld 3 gibt das Ziel der Datei an. Der Vorgang zum Verschieben einer Datei funktioniert nur innerhalb eines Volumes. Quelle und Ziel müssen sich auf demselben Volume befingen. Der Wert für dieses Feld ist der vollständige Pfad der Datei, die an " ?? " angefügt ist, es sei denn, der Pfad enthält einen \\ \\ guiD (Globally Unique Identifier), der " ? " als Präfix \\ \\ \\ \\ verwendet. Entfernen Sie " \\ \\ ? " vor dem \\ Anfügen an " \\ \\ ?? \\ ".
 
-In Feld 4 werden Statusinformationen von srverzögert empfangen. Der Wert in diesem Feld sollte für einen neuen Datensatz auf L "notexecuted" festgelegt werden.
+Feld 4 empfängt Statusinformationen von Srdelayed. Der Wert in diesem Feld sollte für einen neuen Datensatz auf L"NotExecuted" festgelegt werden.
 
-Im folgenden Beispiel wird auf die Datei nach Laufwerks Pfad verwiesen. Wenn der Pfad und der Name der Quelle C: \\ Stage \\a.dll sind, fordert dieser Datensatz an, dass srverzögertes verschieben in c: \\ Tempa.dll erfolgt \\ .
+Im folgenden Beispiel wird auf die Datei nach Laufwerkpfad verwiesen. Wenn der Pfad und name der Quelle C: Stagea.dll ist, fordert dieser Datensatz an, dass Srdelayed ihn in \\ \\ C: \\ temp \\a.dll.
 
-\\ \\ ? \\ C: \\ Stufen \\a.dll \\ \\ ?? \\ C: \\ Temp \\a.dll notexecuted  
-
-
-Im folgenden Beispiel wird auf die Datei mit dem GUID-Pfad des Volumes verwiesen. Wenn der Pfad und der Name der Quelle sind \\ \\ ? \\ Volume {26a21bda-a627-11d7-9931-806e6f6e6963}- \\ Phasen \\a.dll. dieser Datensatz fordert die Anforderung an, dass Sie von srverzögert verschoben wird \\ \\ ? \\ Volume {26a21bda-a627-11d7-9931-806e6f 6e6963} \\ Temp \\a.dll
-
- \\ \\ ? \\ Volume {26a21bda-a627-11d7-9931-806e6l6e6963} \\ Phase \\a.dll \\ \\ ? \\ Volume {26a21bda-a627-11d7-9931-806e6f 6e6963} \\ Temp \\a.dll notexecuted  
+MoveFile \\ \\ ?? \\ C: \\ Stage \\a.dll \\ \\ ?? \\ C: \\ temp \\a.dll NotExecuted  
 
 
-## <a name="format-for-a-delete-file-record"></a>Format für einen Lösch Datei Daten Satz
+Im folgenden Beispiel wird auf die Datei nach Volume-GUID-Pfad verwiesen. Wenn der Pfad und name der Quelle \\ \\ ist? \\ Volume{26a21bda-a627-11d7-9931-806e6f6e6963} Stagea.dll: Dieser Datensatz fordert \\ \\ an, dass Srdelayed \\ \\ es nach ? \\ Volume{26a21bda-a627-11d7-9931-806e6f6e6963} \\ temp \\a.dll
 
-Feld 1 identifiziert dies als Anforderung zum Löschen einer Datei. Der Wert in diesem Feld lautet immer L "DeleteFile", und es wird die Groß-/Kleinschreibung beachtet.
-
-Feld 2 wird nicht verwendet. Der Wert in diesem Feld sollte auf L "nicht verwendet" festgelegt werden.
-
-Field 3 gibt die zu entfernende Datei an. Ein Ordner muss leer sein, um entfernt werden zu können. Verwenden Sie Vorgänge zum Löschen von Dateien, um alle Dateien im Ordner zu entfernen, bevor Sie den Ordner entfernen. Der Wert für dieses Feld ist der vollständige Pfad der Datei, die an " \\ \\ ??" angehängt wird \\ , es sei denn, der Pfad enthält eine Globally Unique Identifier (GUID), die " \\ \\ ? \\ " als Präfix verwendet. Entfernen \\ \\ Sie "? \\ ", bevor Sie an " \\ \\ ?? \\ " Anhängen.
-
-In Feld 4 werden Statusinformationen von srverzögert empfangen. Der Wert in diesem Feld sollte für einen neuen Datensatz auf L "notexecuted" festgelegt werden.
-
-Im folgenden Beispiel wird auf die Datei nach Laufwerks Pfad verwiesen. Wenn der Pfad und der Name C: \\ Temp \\b.dll sind, fordert dieser Datensatz an, dass die Datei von srverzögert gelöscht wird.
-
-DeleteFile nicht verwendet \\ \\ ?? \\ C: \\ Temp \\b.dll notexecuted  
+ MoveFile \\ \\ ?? \\ Volume{26a21bda-a627-11d7-9931-806e6f6e6963} \\ Stage \\a.dll \\ \\ ?? \\ Volume{26a21bda-a627-11d7-9931-806e6f6e6963} \\ temp \\a.dll NotExecuted  
 
 
-Im folgenden Beispiel wird auf die Datei mit der VolumeGuid verwiesen. Wenn Pfad und Name \\ \\ ? \\ Volume {26a21bda-a627-11d7-9931-806e6bda-a d e6fi6e6963} temporäre \\ \\b.dll. dieser Datensatz fordert an, dass srverzögert die Datei entfernt.
+## <a name="format-for-a-delete-file-record"></a>Format für einen Dateidatensatz löschen
 
-DeleteFile nicht verwendet \\ \\ ?? \\ Volume {26a21bda-a627-11d7-9931-806e6f 6e6963} \\ Temp \\b.dll\\ notexecuted  
+Feld 1 identifiziert dies als Anforderung zum Löschen einer Datei. Der Wert in diesem Feld ist immer L"DeleteFile" und berücksichtigt die Kleinschreibung.
+
+Feld 2 wird nicht verwendet. Der Wert in diesem Feld sollte auf L"Unused" festgelegt werden.
+
+Feld 3 gibt die zu entfernende Datei an. Ein Ordner muss leer sein, um entfernt zu werden. Verwenden Sie Dateilöschvorgänge, um alle Dateien im Ordner zu entfernen, bevor Sie den Ordner entfernen. Der Wert für dieses Feld ist der vollständige Pfad der Datei, die an " ?? " angefügt ist, es sei denn, der Pfad enthält einen \\ \\ guiD (Globally Unique Identifier), der " ? " als Präfix \\ \\ \\ \\ verwendet. Entfernen Sie " \\ \\ ? " vor dem \\ Anfügen an " \\ \\ ?? \\ ".
+
+Feld 4 empfängt Statusinformationen von Srdelayed. Der Wert in diesem Feld sollte für einen neuen Datensatz auf L"NotExecuted" festgelegt werden.
+
+Im folgenden Beispiel wird auf die Datei nach Laufwerkpfad verwiesen. Wenn pfad und name C: tempb.dll ist, fordert dieser Datensatz \\ \\ an, dass Srdelayed die Datei löscht.
+
+DeleteFile Unused \\ \\ ?? \\ C: \\ temp \\b.dll NotExecuted  
 
 
-## <a name="format-for-set-short-name-record"></a>Format für Short-Name Datensatz festlegen
+Im folgenden Beispiel wird auf die Datei nach Volume-GUID verwiesen. Wenn der Pfad und name \\ \\ ist? \\ Volume{26a21bda-a627-11d7-9931-806e6f6e6963} tempb.dll. Dieser Datensatz fordert \\ \\ an, dass Srdelayed die Datei entfernt.
 
-Feld 1 identifiziert dies als Anforderung zum Festlegen des Kurznamens einer Datei. Der Wert in diesem Feld lautet immer L "setfileshortname", und es wird die Groß-/Kleinschreibung beachtet.
+DeleteFile Unused \\ \\ ?? \\ Volume{26a21bda-a627-11d7-9931-806e6f6e6963} \\ temp \\b.dll\\ NotExecuted  
+
+
+## <a name="format-for-set-short-name-record"></a>Format für Set Short-Name Record
+
+Feld 1 identifiziert dies als Anforderung zum Festlegen des Kurznamens einer Datei. Der Wert in diesem Feld ist immer L"SetFileShortName" und berücksichtigt die Kleinschreibung.
 
 Feld 2 gibt den Kurznamen an.
 
-Feld 3: gibt den Pfad und den langen Namen an, um den Kurznamen zu erhalten. Der Wert für dieses Feld ist der Pfad und der lange Name der Datei, die an " \\ \\ ??" angehängt wird \\ , es sei denn, der Pfad enthält eine Globally Unique Identifier (GUID), die " \\ \\ ? \\ " als Präfix verwendet. Entfernen \\ \\ Sie "? \\ ", bevor Sie an " \\ \\ ?? \\ " Anhängen.
+Feld 3 gibt den Pfad und den langen Namen an, um den Kurznamen zu erhalten. Der Wert für dieses Feld ist der Pfad und der lange Name der Datei, die an " ?? " angefügt ist, es sei denn, der Pfad enthält einen \\ \\ \\ guiD (Globally Unique Identifier), der "?" als Präfix \\ \\ \\ verwendet. Entfernen Sie " \\ \\ ? " vor dem \\ Anfügen an " \\ \\ ?? \\ ".
 
-In Feld 4 werden Statusinformationen von srverzögert empfangen. Der Wert in diesem Feld sollte für einen neuen Datensatz auf L "notexecuted" festgelegt werden.
+Feld 4 empfängt Statusinformationen von Srdelayed. Der Wert in diesem Feld sollte für einen neuen Datensatz auf L"NotExecuted" festgelegt werden.
 
-Im folgenden Beispiel wird auf die Datei nach Laufwerks Pfad verwiesen. Wenn der Pfad und der Name der Datei C: \\ Temp \\ShortFileName.dll sind, fordert dieser Datensatz an, dass die Datei einen Kurznamen, shortn ~1.dll erhält.
+Im folgenden Beispiel wird auf die Datei nach Laufwerkpfad verwiesen. Wenn der Pfad und der Name der Datei C: tempShortFileName.dll ist, fordert dieser Datensatz an, dass die Datei den Kurznamen \\ \\ ShortN~1.dll.
 
-Setfileshortname-shortn ~1.dll \\ \\ ?? \\ C: \\ Temp \\ShortFileName.dll notexecuted  
-
-
-Im folgenden Beispiel wird auf die Datei mit der VolumeGuid verwiesen. Wenn der Pfad und der Name der Datei \\ \\ ? \\ Volume {26a21bda-a627-11d7-9931-806e6bda-a d e6f 6e6963} temporäre \\ \\ShortFileName.dll\\ . dieser Datensatz fordert an, dass die Datei einen Kurznamen, shortn ~1.dll erhält.
-
-Setfileshortname-shortn ~1.dll \\ \\ ?? \\ Volume {26a21bda-a627-11d7-9931-806e6f 6e6963} \\ Temp \\ShortFileName.dll\\ notexecuted  
+SetFileShortName ShortN~1.dll \\ \\ ?? \\ C: \\ temp \\ShortFileName.dll NotExecuted  
 
 
-## <a name="srdelayed-operations-status"></a>Status der srverzögerten Vorgänge
+Im folgenden Beispiel wird auf die Datei nach Volume-GUID verwiesen. Wenn der Pfad und der Name der Datei \\ \\ ist? \\ Volume{26a21bda-a627-11d7-9931-806e6f6e6963} tempShortFileName.dlldieser Datensatz fordert an, dass die Datei einen \\ \\ Kurznamen, \\ ShortN~1.dll.
 
-Srverzögert schreibt die Zeichenfolge L "SC =*xxxxxxx*" in das vierte Feld jedes Datensatzes der Textdatei, wobei *xxxxxxx* ein Hexadezimalwert ist, der den Status des angeforderten Vorgangs angibt. Der Wert NULL gibt an, dass der Vorgang erfolgreich war.
+SetFileShortName ShortN~1.dll \\ \\ ?? \\ Volume{26a21bda-a627-11d7-9931-806e6f6e6963} \\ temp \\ShortFileName.dll\\ NotExecuted  
 
-Srverzögert erstellt einen Registrierungsschlüssel mit dem Namen **SystemRestore** unter **HKEY \_ local \_ Machine** \\ **Software** \\ **Microsoft** \\ **Windows NT** \\ **CurrentVersion** , um das Ergebnis des gesamten Wiederherstellungs Vorgangs zu protokollieren. Wenn srverzögert alle angeforderten Vorgänge erfolgreich ausführt, wird der Name restorestatus result unter diesem Schlüssel mit einem Wert von 0 (null) geschrieben. Wenn srverzögert keine der angeforderten Vorgänge ausführen kann, werden die Namen restorestatus result und restorestatus Details unter diesem Schlüssel mit Werten ungleich NULL geschrieben. Der Name restorestatus Details wird nur unter diesem Schlüssel geschrieben, wenn srverzögert keine angeforderten Vorgänge ausführen kann. Wenn ein Vorgang zum Festlegen des Kurznamens einer Datei nicht erfolgreich ist, wird srverzögert mit dem nächsten Vorgang fortgesetzt. Bei srverzögert werden die Vorgänge "Datei verschieben" und "Datei löschen" als kritisch angesehen und nicht fortgesetzt, wenn ein verschiebe-oder Löschvorgang nicht erfolgreich ist.
 
- 
+## <a name="srdelayed-operations-status"></a>Status von überdelayierten Vorgängen
 
- 
+Srdelayed schreibt die Zeichenfolge L"SC=*xxxxxxx*" in das vierte Feld jedes Datensatzes der Textdatei, wobei *xxxxxxx* ein Hexadezimalwert ist, der den Status des angeforderten Vorgangs angibt. Der Wert 0 (null) gibt an, dass der Vorgang erfolgreich war.
+
+Srdelayed erstellt unter **HKEY \_ LOCAL \_ MACHINE** Software Microsoft Windows NT CurrentVersion einen Registrierungsschlüssel namens **SystemRestore,** um das Ergebnis des gesamten Wiederherstellungsvorgang \\  \\  \\  \\  zu protokollieren. Wenn Srdelayed alle angeforderten Vorgänge erfolgreich ausführt, wird der Name RestoreStatusResult unter diesem Schlüssel mit einem Wert von 0 (null) geschrieben. Wenn Srdelayed keine der angeforderten Vorgänge ausführen kann, werden die Namen RestoreStatusResult und RestoreStatusDetails unter diesem Schlüssel mit Werten ungleich 0 (null) geschrieben. Der Name RestoreStatusDetails wird nur unter diesem Schlüssel geschrieben, wenn Srdelayed keine angeforderten Vorgänge ausführen kann. Wenn ein Vorgang zum Festlegen des Kurznamens einer Datei nicht erfolgreich ist, fährt Srdelayed mit dem nächsten Vorgang fort. Srdelayed betrachtet die Vorgänge zum Verschieben und Löschen von Dateien als kritisch und wird nicht fortgesetzt, wenn ein Verschieben oder Löschen nicht erfolgreich ist.
+
+ 
+
+ 

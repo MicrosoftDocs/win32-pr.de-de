@@ -1,7 +1,7 @@
 ---
-description: Gibt die Uhrzeit Position im lokalen Zeitrahmen eines Animations Satzes zurück.
+description: Gibt die Zeitposition im lokalen Zeitrahmen eines Animationssets zurück.
 ms.assetid: d822e1d8-f371-43a1-bbcf-2223e28a200a
-title: 'ID3DXAnimationSet:: GetPeriodicPosition-Methode (D3dx9anim. h)'
+title: ID3DXAnimationSet::GetPeriodicPosition-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a3c4f2e8e57efdfe0681b8ae691e0b5de42624e1
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8451e3332b61d7e6e993de7df0832a78c0c45c0240633fd5f421998816f7f26f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119122061"
 ---
-# <a name="id3dxanimationsetgetperiodicposition-method"></a>ID3DXAnimationSet:: GetPeriodicPosition-Methode
+# <a name="id3dxanimationsetgetperiodicposition-method"></a>ID3DXAnimationSet::GetPeriodicPosition-Methode
 
-Gibt die Uhrzeit Position im lokalen Zeitrahmen eines Animations Satzes zurück.
+Gibt die Zeitposition im lokalen Zeitrahmen eines Animationssets zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,24 +40,24 @@ DOUBLE GetPeriodicPosition(
 
 <dl> <dt>
 
-*Position* \[ in\]
+*Position* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Lokale Zeit des Animations Satzes.
+Ortszeit des Animationssets.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Die Zeit Position, gemessen im Zeitrahmen des Animations Satzes. Dieser Wert wird durch den Zeitraum des Animations Satzes begrenzt.
+Die Zeitposition, die im Zeitrahmen des Animationssets gemessen wird. Dieser Wert wird durch den Zeitraum des Animationssets gebunden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die von dieser Methode zurückgegebene Zeit Position kann als PeriodicPosition-Parameter von [**ID3DXAnimationSet:: gezrt**](id3dxanimationset--getsrt.md)verwendet werden.
+Die von dieser Methode zurückgegebene Zeitposition kann als PeriodicPosition-Parameter von [**ID3DXAnimationSet::GetSRT verwendet werden.**](id3dxanimationset--getsrt.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,12 +65,12 @@ Die von dieser Methode zurückgegebene Zeit Position kann als PeriodicPosition-P
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-description: 'IFeedbackHubAppInfo::GetAumidFromAppListEntry-Methode: Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.'
+description: 'IFeedbackHubAppInfo::GetAumidFromAppListEntry-Methode: Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden.'
 ms.assetid: F205911F-7AA3-464F-A408-3BF549E1112A
 title: IFeedbackHubAppInfo::GetAumidFromAppListEntry-Methode
 ms.topic: reference
@@ -21,7 +21,7 @@ ms.locfileid: "118404546"
 ---
 # <a name="ifeedbackhubappinfogetaumidfromapplistentry-method"></a>IFeedbackHubAppInfo::GetAumidFromAppListEntry-Methode
 
-Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
+Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,14 +42,14 @@ virtual void GetAumidFromAppListEntry(
 *appListEntry* \[ in, optional\]
 </dt> <dd>
 
-Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
+Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden.
 
 </dd> <dt>
 
-*wert* \[ out, optional\]
+*value* \[ out, optional\]
 </dt> <dd>
 
-Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
+Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden.
 
 </dd> </dl>
 
