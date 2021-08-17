@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen finden Sie unter ColumnInfo-Elemente.
+description: Weitere Informationen zu ColumnInfo-Membern
 title: ColumnInfo-Elemente
 TOCTitle: ColumnInfo members
 ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.ColumnInfo
@@ -16,10 +16,10 @@ ms.locfileid: "119455130"
 ---
 # <a name="columninfo-members"></a>ColumnInfo-Elemente
 
-Geschützte Member enthalten  
-Geerbte Member enthalten  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-Informationen zu einer Esent-Spalte. Dies ist keine Interop-Klasse, wird jedoch von den Metadaten-Hilfsmethoden verwendet.
+Informationen zu einer Esent-Spalte. Dies ist keine Interop-Klasse, sondern wird von den Metadatenhilfsmethoden verwendet.
 
 Der [ColumnInfo-Typ](./columninfo-class.md) macht die folgenden Member verfügbar.
 
@@ -30,7 +30,7 @@ Der [ColumnInfo-Typ](./columninfo-class.md) macht die folgenden Member verfügba
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -82,7 +82,7 @@ Oben
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -114,7 +114,7 @@ Oben
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="dn334183(v=exchg.10).md">ToString</a></td>
-<td>Gibt eine <a href="/dotnet/api/system.string">Zeichenfolge</a> zurück, die die aktuelle <a href="dn334128(v=exchg.10).md">ColumnInfo darstellt.</a> (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>.)</td>
+<td>Gibt eine <a href="/dotnet/api/system.string">Zeichenfolge</a> zurück, die die aktuelle <a href="dn334128(v=exchg.10).md">ColumnInfo</a>darstellt. (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>.)</td>
 </tr>
 </tbody>
 </table>

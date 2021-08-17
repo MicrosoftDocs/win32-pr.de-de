@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVec3Project-Funktion (D3dx9math.h): Projiziert einen 3D-Vektor aus dem Objektraum in den Bildschirmraum.'
+description: 'D3DXVec3Project-Funktion (D3dx9math.h): Projiziert einen 3D-Vektor aus dem Objektbereich in den Bildschirmbereich.'
 ms.assetid: b012771d-052f-4bf9-b39c-387d8a63fa59
 title: D3DXVec3Project-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a5a9abcb54c883d74bde831570b9df0b40fedfae
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1bb0d7b962dd4595ec9246c036d4ff9e459e062f366b6e62f46cce1a5a3ebab9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108115648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118803812"
 ---
 # <a name="d3dxvec3project-function-d3dx9mathh"></a>D3DXVec3Project-Funktion (D3dx9math.h)
 
-Projektet einen 3D-Vektor aus dem Objektbereich in den Bildschirmbereich.
+Projiziert einen 3D-Vektor aus dem Objektbereich in den Bildschirmbereich.
 
 ## <a name="syntax"></a>Syntax
 
@@ -105,7 +105,7 @@ Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
 Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) bei der es sich um den Vektor handelt, der vom Objektbereich in den Bildschirmbereich projiziert wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXVec3Project-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
@@ -113,7 +113,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Paramet
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

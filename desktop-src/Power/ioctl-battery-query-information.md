@@ -1,7 +1,7 @@
 ---
 description: Ruft eine Vielzahl von Informationen für den Akku ab.
 ms.assetid: 4cc89b89-ab33-47c2-8327-9627cbd1595e
-title: IOCTL_BATTERY_QUERY_INFORMATION Steuerungs Code (poclass. h)
+title: IOCTL_BATTERY_QUERY_INFORMATION -Steuerelementcode (Poclass.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - Poclass.h
 - BatClass.h
-ms.openlocfilehash: ee4010e055686c0df2987c34b48b133975b434ce
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a48514b81ddf5d8f7c0d84d4404eb01752413e73ade43db089fbb6dade673bc1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119143532"
 ---
-# <a name="ioctl_battery_query_information-control-code"></a>Steuerungs Code der IOCTL- \_ Akku \_ Abfrage \_ Informationen
+# <a name="ioctl_battery_query_information-control-code"></a>IOCTL \_ BATTERY \_ QUERY \_ INFORMATION-Steuerungscode
 
 Ruft eine Vielzahl von Informationen für den Akku ab.
 
-Um diesen Vorgang auszuführen, müssen Sie die Funktion [**DeviceIoControl**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol) mit den folgenden Parametern abrufen.
+Um diesen Vorgang durchzuführen, rufen Sie die [**Funktion DeviceIoControl**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -47,54 +47,54 @@ BOOL DeviceIoControl(
 
 <dl> <dt>
 
-*hdevice* 
+*hDevice* 
 </dt> <dd>
 
-Ein Handle für den Akku, auf dem Informationen zurückgegeben werden sollen. Rufen Sie zum Abrufen eines Geräte [**Handles die Funktion**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) "-Funktion" auf.
+Ein Handle für den Akku, über den Informationen zurückgegeben werden sollen. Um ein Gerätehand handle abzurufen, rufen Sie die [**CreateFile-Funktion**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) auf.
 
 </dd> <dt>
 
 *dwIoControlCode* 
 </dt> <dd>
 
-Der Steuerelement Code für den Vorgang. Dieser Wert identifiziert den spezifischen Vorgang, der ausgeführt werden soll, und den Typ des Geräts, auf dem es ausgeführt werden soll. Verwenden Sie für diesen Vorgang **IOCTL- \_ Akku \_ Abfrage \_ Informationen** .
+Der Steuerungscode für den Vorgang. Dieser Wert gibt den spezifischen Vorgang an, der ausgeführt werden soll, und den Typ des Geräts, auf dem er ausgeführt werden soll. Verwenden **Sie IOCTL \_ BATTERY QUERY \_ \_ INFORMATION** für diesen Vorgang.
 
 </dd> <dt>
 
-*lpinbuffer* 
+*lpInBuffer* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**Akku \_ Abfrage \_ Informations**](battery-query-information-str.md) Struktur.
+Ein Zeiger auf eine [**BATTERY \_ QUERY \_ INFORMATION-Struktur.**](battery-query-information-str.md)
 
 </dd> <dt>
 
 *nInBufferSize* 
 </dt> <dd>
 
-Die Größe des Eingabe Puffers in Bytes.
+Die Größe des Eingabepuffers in Bytes.
 
 </dd> <dt>
 
-*lpoutbuffer* 
+*lpOutBuffer* 
 </dt> <dd>
 
-Ein Zeiger auf den Rückgabe Puffer. Der Datentyp (und somit die Größe) des Rückgabe Puffers hängt von den Informationen ab, die in der **Akku \_ Abfrage Informations \_ \_ Ebene** der Eingabe- [**Akku- \_ Abfrage \_ Informations**](battery-query-information-str.md) Struktur angefordert werden.
+Ein Zeiger auf den Rückgabepuffer. Der Datentyp (und somit die Größe) des Rückgabepuffers hängt von den Informationen ab, die im **BATTERY \_ QUERY INFORMATION \_ \_ LEVEL-Member** der [**INPUT BATTERY QUERY \_ \_ INFORMATION-Struktur angefordert**](battery-query-information-str.md) werden.
 
-In der folgenden Tabelle werden die von einer bestimmten Informationsebene zurückgegebenen Daten angezeigt.
+Die folgende Tabelle zeigt die Von einer bestimmten Informationsebene zurückgegebenen Daten.
 
 
 
 | Informationsebene                 | Zurückgegebene Daten                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Batterydevicename**             | Eine mit **null** beendete Unicode-Zeichenfolge, die den Namen des Akkus angibt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **Batteryestimatedtime**          | Ein **ulong** -Wert, der die geschätzte Akkulaufzeit in Sekunden angibt. Wenn die für das **atrate** -Element der Struktur der [**Akku \_ Abfrage \_ Informationen**](battery-query-information-str.md) angegebene Ausgleichs Rate 0 (null) ist, basiert diese Berechnung auf der aktuellen Rate des Ausgleichs. Wenn **atate** ungleich NULL ist, ist die zurückgegebene Zeit die erwartete Laufzeit für die angegebene Rate. Wenn die geschätzte Zeit unbekannt ist (z. b. wenn der Akku nicht entladen wird und **atate** NULL ist), wird die **\_ unbekannte Akku \_ Zeit** zurückgegeben. Beachten Sie, dass dieser Wert für einige Akku Systeme nicht sehr genau ist. Der Wert kann abhängig von der aktuellen Stromversorgung, die von der Datenträger Aktivität und anderen Faktoren betroffen sein könnte, stark variieren. Es gibt keinen Benachrichtigungs Mechanismus für Änderungen dieses Werts. |
-| **Batterygranularityinformation** | Ein Array variabler Länge mit [**Akku \_ Berichterstattungs- \_ Skalierungs**](/windows/desktop/api/WinNT/ns-winnt-battery_reporting_scale) Strukturen, das die Granularität der Berichterstellung für die Akkukapazität enthält, die vom [**IOCTL- \_ Akku \_ Abfrage \_ Status**](ioctl-battery-query-status.md)zurückgegeben wird. Wenn die Granularität von der aktuellen Kapazität des Akkus abhängt, werden mehrere Einträge zurückgegeben. Die Interpretation des Arrays von Einträgen finden Sie unter **Akku \_ Bericht \_** Erstellung. Die Anzahl der Einträge wird durch die Größe des zurückgegebenen Puffers angegeben und kann als (*lpbytesgab* /sizeof (**Akku \_ Berichterstattungs \_ Skala**)) berechnet werden. Die maximale Anzahl von Einträgen, die zurückgegeben werden, ist vier.                                                                                                |
-| **Akku Informationen**            | Eine [**Akku \_ Informations**](battery-information-str.md) Struktur.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| **Batterymanufacturedate**        | Eine [**Akku \_ Herstellungs \_ Datums**](battery-manufacture-date-str.md) Struktur.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| **Batterymanufacturename**        | Eine auf **null** endenden Unicode-Zeichenfolge, die den Namen des Herstellers des Akkus enthält.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| **Akku serialNumber**           | Eine mit **null** beendete Unicode-Zeichenfolge, die die Seriennummer des Akkus enthält.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| **Akku Temperatur**            | Ein **ulong** -Wert, der die aktuelle Temperatur des Akkus in Zehntel Grad Kelvin enthält.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| **Batteryuniqueid**               | Eine mit **null** beendete Unicode-Zeichenfolge, die den Akku eindeutig identifiziert. Dieser Wert kann verwendet werden, um einen bestimmten Akku zu verfolgen. Im Fall von intelligenten Akkus ist diese ID die Verkettung aus dem Namen des Herstellers, dem Gerätenamen, dem Erstellungsdatum und der druckbaren Darstellung der Seriennummer. Dieser Wert sollte nicht für den Benutzer angezeigt werden.<br/>                                                                                                                                                                                                                                                                                                                                                                                              |
+| **BatteryDeviceName**             | **Mit NULL** beendete Unicode-Zeichenfolge, die den Namen des Akkus angibt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **BatteryEstimatedTime**          | Ein **ULONG-Wert,** der die geschätzte Akkulaufzeit in Sekunden angibt. Wenn die im **AtRate-Member** der [**BATTERY \_ QUERY \_ INFORMATION-Struktur**](battery-query-information-str.md) bereitgestellte Entleerungsrate null ist, basiert diese Berechnung auf der aktuellen Entleerungsrate. Wenn **AtRate** ungleich 0 (null) ist, ist die zurückgegebene Zeit die erwartete Laufzeit für die gegebene Rate. Wenn die geschätzte Zeit unbekannt ist (z. B. wird der Akku nicht entladen, und **AtRate** ist 0 (null) ), **wird BATTERY UNKNOWN \_ \_ TIME** zurückgegeben. Beachten Sie, dass dieser Wert bei einigen Akkusystemen nicht sehr genau ist. Der Wert kann je nach aktuellem Energieverbrauch stark variieren, was von der Datenträgeraktivität und anderen Faktoren beeinflusst werden kann. Es gibt keinen Benachrichtigungsmechanismus für Änderungen an diesem Wert. |
+| **BatteryGranularityInformation** | Ein Array variabler Länge von [**BATTERY \_ REPORTING \_ SCALE-Strukturen,**](/windows/desktop/api/WinNT/ns-winnt-battery_reporting_scale) das die Berichtgranularität für die Akkukapazität enthält, die von [**IOCTL \_ BATTERY QUERY STATUS zurückgegeben \_ \_ wird.**](ioctl-battery-query-status.md) Mehrere Einträge werden zurückgegeben, wenn die Granularität von der aktuellen Kapazität des Akkus abhängt. Informationen zur Interpretation des Arrays von Einträgen finden Sie unter **BATTERY \_ REPORTING \_ SCALE.** Die Anzahl der Einträge wird durch die Größe des zurückgegebenen Puffers angegeben und kann als (*lpBytesReturned* /sizeof (**BATTERY REPORTING \_ \_ SCALE**)) berechnet werden. Die maximale Anzahl von Einträgen, die zurückgegeben werden, beträgt vier.                                                                                                |
+| **BatteryInformation**            | Eine [**BATTERY \_ INFORMATION-Struktur.**](battery-information-str.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **BatteryManufactureDate**        | Eine [**BATTERY \_ MANUFACTURE \_ DATE-Struktur.**](battery-manufacture-date-str.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **BatteryManufactureName**        | **Mit NULL** beendete Unicode-Zeichenfolge, die den Namen des Herstellers des Akkus enthält.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **BatterySerialNumber**           | **Mit NULL** beendete Unicode-Zeichenfolge, die die Seriennummer des Akkus enthält.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **BatteryTemperature**            | Ein **ULONG,** das die aktuelle Temperatur des Akkus in 10-Grad-Grad-Kelvin enthält.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **BatteryUniqueID**               | **Mit NULL** beendete Unicode-Zeichenfolge, die den Akku eindeutig identifiziert. Dieser Wert kann zum Nachverfolgen eines bestimmten Akkus verwendet werden. Bei intelligenten Akkus ist diese ID die Verkettung des Herstellernamens, des Gerätenamens, des Herstellungsdatums und einer druckbaren Darstellung der Seriennummer. Dieser Wert soll dem Benutzer nicht angezeigt werden.<br/>                                                                                                                                                                                                                                                                                                                                                                                              |
 
 
 
@@ -105,53 +105,53 @@ In der folgenden Tabelle werden die von einer bestimmten Informationsebene zurü
 *nOutBufferSize* 
 </dt> <dd>
 
-Die Größe des Ausgabepuffers in Bytes. Abhängig von der Informationsebene der angeforderten Daten kann dies ein Puffer mit variabler Größe sein.
+Die Größe des Ausgabepuffers in Bytes. Abhängig von der angeforderten Informationsebene der Daten kann dies ein Puffer mit unterschiedlicher Größe sein.
 
 </dd> <dt>
 
-*lpbyteszurück gegeben* 
+*lpBytesReturned* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Größe der im *lpoutbuffer* -Puffer zurückgegebenen Daten (in Bytes) empfängt.
+Ein Zeiger auf eine Variable, die die Größe der im *lpOutBuffer-Puffer* zurückgegebenen Daten in Bytes empfängt.
 
-Wenn der Ausgabepuffer zu klein ist, um Daten zurückzugeben, dann schlägt der-Befehl fehl, [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt den Fehlercode **Fehler \_ unzureichend \_** zurück, und die zurückgegebene Byte Anzahl ist 0 (null).
+Wenn der Ausgabepuffer zu klein ist, um Daten zurückgibt, schlägt der Aufruf fehl. [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt den Fehlercode **ERROR INSUFFICIENT \_ \_ BUFFER** zurück, und die zurückgegebene Byteanzahl ist 0 (null).
 
-Wenn *lpoverllapp* den Wert **null** hat (nicht überlappende e/a), kann *lpbytesgab* nicht **null** sein.
+Wenn *lpOverlapped* **NULL** ist (nicht übersprungene E/A), *kann lpBytesReturned* nicht **NULL sein.**
 
-Wenn *lpoverllapp* nicht **null** (überlappende e/a) ist, kann *lpbytesgab* **null** sein. Wenn dies ein überlappende Vorgang ist, können Sie die Anzahl der zurückgegebenen Bytes abrufen, indem Sie die [**GetOverLappedResult**](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) -Funktion aufrufen. Wenn *hdevice* einem e/a-Abschlussport zugeordnet ist, können Sie die Anzahl der Bytes abrufen, die durch Aufrufen der [**GetQueuedCompletionStatus**](/windows/desktop/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) -Funktion zurückgegeben werden.
+Wenn *lpOverlapped* nicht **NULL** (überlappende E/A) ist, *kann lpBytesReturned* **NULL sein.** Wenn es sich um einen überlappenden Vorgang handelt, können Sie die Anzahl der zurückgegebenen Bytes abrufen, indem Sie die [**GetOverlappedResult-Funktion**](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) aufrufen. Wenn *hDevice einem* E/A-Abschlussport zugeordnet ist, können Sie die Anzahl der zurückgegebenen Bytes abrufen, indem Sie die [**GetQueuedCompletionStatus-Funktion**](/windows/desktop/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) aufrufen.
 
 </dd> <dt>
 
-*lpoverlgetauscht* 
+*lpOverlapped* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**über**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur.
+Ein Zeiger auf eine [**OVERLAPPED-Struktur.**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped)
 
-Wenn *hdevice* mit dem überlappenden Flag für das **\_ \_ Dateiflag** geöffnet wurde, muss *lpoverlgetauscht* auf eine gültige [**über**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur zeigen. In diesem Fall wird [**DeviceIoControl**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol) als überlappende (asynchrone) Operation ausgeführt. Wenn das Gerät mit dem überlappenden Flag für das **\_ Dateiflag \_** geöffnet wurde und *lpoverlgetauscht* den Wert **null** hat, schlägt die Funktion auf unvorhersehbare Weise fehl.
+Wenn *hDevice mit* dem **FLAG FILE FLAG \_ \_ OVERLAPPED** geöffnet wurde, *muss lpOverlapped* auf eine gültige [**OVERLAPPED-Struktur**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) verweisen. In diesem Fall wird [**DeviceIoControl**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol) als überlappende (asynchrone) Operation ausgeführt. Wenn das Gerät mit dem **FLAG FILE \_ FLAG \_ OVERLAPPED** geöffnet wurde und *lpOverlapped* **NULL** ist, schlägt die Funktion auf unvorhersehbare Weise fehl.
 
-Wenn *hdevice* ohne Angabe des überlappenden Flag für das **\_ \_ Dateiflag** geöffnet wurde, wird *lpoverlgetauscht* ignoriert, und die [**DeviceIoControl**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol) -Funktion gibt nicht zurück, bis der Vorgang abgeschlossen ist oder ein Fehler auftritt.
+Wenn *hDevice* geöffnet wurde, ohne das **FLAG FILE FLAG \_ \_ OVERLAPPED** anzugeben, wird *lpOverlapped* ignoriert, und die [**DeviceIoControl-Funktion**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol) gibt erst dann zurück, wenn der Vorgang abgeschlossen ist oder ein Fehler auftritt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Vorgang erfolgreich abgeschlossen wird, gibt [**DeviceIoControl**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol) einen Wert ungleich 0 (null) zurück.
+Wenn der Vorgang erfolgreich abgeschlossen wurde, [**gibt DeviceIoControl**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol) einen Wert ungleich 0 (null) zurück.
 
-Wenn der Vorgang fehlschlägt oder aussteht, gibt [**DeviceIoControl**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol) den Wert 0 (null) zurück. Um erweiterte Fehlerinformationen zu erhalten, rufen Sie [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) auf.
+Wenn der Vorgang fehlschlägt oder aussteht, [**gibt DeviceIoControl**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol) 0 (null) zurück. Um erweiterte Fehlerinformationen zu erhalten, rufen Sie [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) auf.
 
-Einige Informationen zu Akkus sind optional oder für einige Akkus bedeutungslos. Wenn der jeweilige angeforderte Datentyp für den aktuellen Akku nicht verfügbar ist, wird **die \_ Fehler \_ Funktion "ungültig** " zurückgegeben.
+Einige Informationen zu Akkus sind optional oder für einige Akkus bedeutungslos. Wenn der angeforderte Datentyp für den aktuellen Akku nicht verfügbar ist, wird **ERROR \_ INVALID \_ FUNCTION** zurückgegeben.
 
-Alle Anforderungen für Akku Informationen werden mit dem Status der **Fehler \_ Datei \_ nicht \_ gefunden** , wenn das Element " **batterytag** " der Anforderung nicht mit der des aktuellen Akku Tags identisch ist. Dadurch wird sichergestellt, dass die zurückgegebenen Akku Informationen mit denen des angeforderten Akkus übereinstimmen. (Weitere Informationen finden Sie unter [Akku-Tags](battery-information.md) .)
+Alle Anforderungen für Akkuinformationen werden mit dem Status **\_ FEHLERDATEI \_ NICHT \_ GEFUNDEN** abgeschlossen, wenn das **BatteryTag-Element** der Anforderung nicht mit dem des aktuellen Akkutags übereinstimmen. Dadurch wird sichergestellt, dass die zurückgegebenen Akkuinformationen mit denen des angeforderten Akkus in Übereinstimmung sind. (Weitere [Informationen finden Sie unter Akkutags.)](battery-information.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Akku-ioctl Ruft eine Vielzahl von Informationen für den Akku ab. Die Eingabeparameter Struktur, die [**Akku \_ Abfrage \_ Informationen**](battery-query-information-str.md), gibt den Typ der Informationen an, die zurückgegeben werden sollen, und wann die Akku Informationen zurückgegeben werden sollen. Der Datentyp und der Inhalt des Ausgabepuffers variieren basierend auf den angeforderten Daten.
+Diese Akku-IOCTL ruft eine Vielzahl von Informationen für den Akku ab. Die Eingabeparameterstruktur [**BATTERY \_ QUERY \_ INFORMATION**](battery-query-information-str.md)gibt an, welche Art von Informationen zurückgegeben werden sollen und wann die Akkuinformationen zurückgegeben werden sollen. Der Datentyp und der Inhalt des Ausgabepuffers variieren basierend auf den angeforderten Daten.
 
-Informationen zu den Auswirkungen von überlappenden e/a-Vorgängen für diesen Vorgang finden Sie im Abschnitt "Hinweise" des Themas " [**DeviceIoControl**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol) ".
+Informationen zu den Auswirkungen von überlappenden E/A-Daten auf diesen Vorgang finden Sie im Abschnitt "Hinweise" des [**Themas DeviceIoControl.**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol)
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel finden Sie unter Auflisten von [Akku Geräten](enumerating-battery-devices.md).
+Ein Beispiel finden Sie unter [Aufzählen von Akkugeräten.](enumerating-battery-devices.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -159,38 +159,38 @@ Ein Beispiel finden Sie unter Auflisten von [Akku Geräten](enumerating-battery-
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                                                                                                                                                                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                                                                                                                                                                                |
-| Header<br/>                   | <dl> <dt>Poclass. h; </dt> <dt>Batclass. h unter Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                                                                                                                                                                                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                                                                                                                                                                                |
+| Header<br/>                   | <dl> <dt>Poclass.h;</dt> <dt>BatClass.h auf Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003</dt> und Windows XP </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Akku Informationen](battery-information.md)
+[Akkuinformationen](battery-information.md)
 </dt> <dt>
 
-[Steuerungs Codes der Energie Verwaltung](power-management-control-codes.md)
+[Energieverwaltungs-Steuerungscodes](power-management-control-codes.md)
 </dt> <dt>
 
-[**DeviceIoControl**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol)
+[**Deviceiocontrol**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol)
 </dt> <dt>
 
-[**Akku \_ Abfrage \_ Informationen**](battery-query-information-str.md)
+[**\_ \_ AKKUABFRAGEINFORMATIONEN**](battery-query-information-str.md)
 </dt> <dt>
 
-[**\_Skalierung von Akku Berichten \_**](/windows/desktop/api/WinNT/ns-winnt-battery_reporting_scale)
+[**BATTERY \_ REPORTING \_ SCALE**](/windows/desktop/api/WinNT/ns-winnt-battery_reporting_scale)
 </dt> <dt>
 
-[**IOCTL \_ Akku \_ Query- \_ Status**](ioctl-battery-query-status.md)
+[**IOCTL \_ BATTERY \_ QUERY \_ STATUS**](ioctl-battery-query-status.md)
 </dt> <dt>
 
-[**IOCTL \_ Akku \_ - \_ abfragetag**](ioctl-battery-query-tag.md)
+[**IOCTL \_ BATTERY \_ QUERY \_ TAG**](ioctl-battery-query-tag.md)
 </dt> <dt>
 
-[**IOCTL- \_ Akku \_ Satz \_ Informationen**](ioctl-battery-set-information.md)
+[**\_IOCTL-AKKUSATZINFORMATIONEN \_ \_**](ioctl-battery-set-information.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-title: dcl_output oDepth (sm4 – asm)
+title: dcl_output oDepth (sm4 - asm)
 description: dcl \_ output oDepth (sm4 - asm)
 ms.assetid: 7ee3026d-507f-4aa8-8335-d92c5f649f46
 ms.topic: reference
@@ -18,7 +18,7 @@ ms.locfileid: "118793146"
 ---
 # <a name="dcl_output-odepth-sm4---asm"></a>dcl \_ output oDepth (sm4 - asm)
 
-Deklariert, dass ein Pixel-Shader das Ausgabetieferegister verwendet.
+Deklariert, dass ein Pixel-Shader das Ausgabetiefenregister verwendet.
 
 
 
@@ -29,7 +29,7 @@ Deklariert, dass ein Pixel-Shader das Ausgabetieferegister verwendet.
 
  
 
-Der Wert im Ausgabetieferegister wird während eines Tiefenvergleichs verwendet (wenn der Tiefenvergleich aktiviert ist).
+Der Wert im Ausgabetiefenregister wird während eines Tiefenvergleichs verwendet (wenn der Tiefenvergleich aktiviert ist).
 
 Diese Anweisung gilt für die folgenden Shaderstufen:
 
@@ -43,7 +43,7 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Sie können keinen Shader in der Assemblysprache mit shader Model 4 erstellen.
+Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu erleichtern. Sie können mit shader Model 4 keinen Shader in der Assemblysprache erstellen.
 
 ## <a name="example"></a>Beispiel
 
@@ -56,7 +56,7 @@ dcl_output oDepth
 
 
 
-## <a name="minimum-shader-model"></a>Shader-Mindestmodell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -64,12 +64,12 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -79,7 +79,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

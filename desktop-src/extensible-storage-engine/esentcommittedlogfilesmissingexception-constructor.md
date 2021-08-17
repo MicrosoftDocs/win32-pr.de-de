@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentcommittedlogfilesmissingexception-Konstruktor'
-title: Esentcommittedlogfilesmissingexception-Konstruktor
+description: 'Weitere Informationen zu: EsentCommittedLogFilesMissingException-Konstruktor'
+title: EsentCommittedLogFilesMissingException-Konstruktor
 TOCTitle: 'EsentCommittedLogFilesMissingException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentCommittedLogFilesMissingException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcommittedlogfilesmissingexception.esentcommittedlogfilesmissingexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 12e0d9764d0c0ae1a99c106e285e08e35634e8db
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b973747cafa588801a57f682b3f405da7dbf9720814dce1e9a1d4bfbf2fef12e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344034"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119116560"
 ---
-# <a name="esentcommittedlogfilesmissingexception-constructor"></a>Esentcommittedlogfilesmissingexception-Konstruktor
+# <a name="esentcommittedlogfilesmissingexception-constructor"></a>EsentCommittedLogFilesMissingException-Konstruktor
 
-Initialisiert eine neue Instanz der esentcommittedlogfilesmissingexception-Klasse.
+Initialisiert eine neue Instanz der EsentCommittedLogFilesMissingException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentCommittedLogFilesMissingException()
 public EsentCommittedLogFilesMissingException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcommittedlogfilesmissingexception-Klasse](./esentcommittedlogfilesmissingexception-class.md)
+[EsentCommittedLogFilesMissingException-Klasse](./esentcommittedlogfilesmissingexception-class.md)
 
-[Esentcommittedlogfilesmissingexception-Elemente](./esentcommittedlogfilesmissingexception-members.md)
+[EsentCommittedLogFilesMissingException-Member](./esentcommittedlogfilesmissingexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

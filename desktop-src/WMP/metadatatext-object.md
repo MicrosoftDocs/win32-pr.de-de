@@ -1,9 +1,9 @@
 ---
 title: MetadataText-Objekt
-description: Das MetadataText-Objekt bietet eine Möglichkeit, Metadaten für komplexe textmetadatenattribute abzurufen.
+description: Das MetadataText-Objekt bietet eine Möglichkeit, Metadaten für komplexe Textmetadatenattribute abzurufen.
 ms.assetid: cf8e4524-6fc5-4534-9542-6bdc7d34bca4
 keywords:
-- MetadataText-Objekt Fenster Media Player
+- MetadataText-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,31 +13,31 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b043a9050d03ca562159aa5be0c113084ac152fb
-ms.sourcegitcommit: 4f5016b1fbfd703dbf769c508db464c2518c0fa5
+ms.openlocfilehash: 2f79c4f4bb80855cf84d576c126e30dc5301c45ca6f1a7c34c5d54e57844abfb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104389368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135023"
 ---
 # <a name="metadatatext-object"></a>MetadataText-Objekt
 
-Das **MetadataText** -Objekt bietet eine Möglichkeit, Metadaten für komplexe textmetadatenattribute abzurufen.
+Das **MetadataText-Objekt** bietet eine Möglichkeit, Metadaten für komplexe Textmetadatenattribute abzurufen.
 
-Das **MetadataText** -Objekt unterstützt die folgenden Eigenschaften.
+Das **MetadataText-Objekt** unterstützt die folgenden Eigenschaften.
 
 
 
-| Eigenschaft                                    | BESCHREIBUNG                                   |
+| Eigenschaft                                    | Beschreibung                                   |
 |---------------------------------------------|-----------------------------------------------|
-| [Beschreibung](metadatatext-description.md) | Ruft eine Beschreibung des metadatentexts ab. |
-| [text](metadatatext-text.md)               | Ruft den metadatentext ab.                  |
+| [description](metadatatext-description.md) | Ruft eine Beschreibung des Metadatentexts ab. |
+| [text](metadatatext-text.md)               | Ruft den Metadatentext ab.                  |
 
 
 
- 
+ 
 
-Der Zugriff auf das **MetadataText** -Objekt erfolgt über die folgende Methode.
+Der **Zugriff auf das MetadataText-Objekt** erfolgt über die folgende Methode.
 
 
 
@@ -47,20 +47,20 @@ Der Zugriff auf das **MetadataText** -Objekt erfolgt über die folgende Methode.
 
 
 
- 
+ 
 
-Dient zur Veranschaulichung des *Players*. *currentMedia*. **getItemInfoByType**(*Name*, *Sprache*, *Index*) wird in den Abschnitten der Verweis Syntax verwendet.
+Zur Veranschaulichung: *Player*. *currentMedia*. **getItemInfoByType**(*name*, *language*, *index*) wird in den Referenzsyntaxabschnitten verwendet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Objektmodell Referenz für die Skripterstellung**](object-model-reference-for-scripting.md)
+[**Objektmodellreferenz für die Skripterstellung**](object-model-reference-for-scripting.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: 'Die StartAt-Methode informiert die PIN, wann mit der Übermittlung von Daten begonnen werden soll. Diese Methode implementiert die iamstreamcontrol:: StartAt-Methode.'
+description: Die StartAt-Methode informiert den Pin, wann mit der Übermittlung von Daten begonnen werden soll. Diese Methode implementiert die IAMStreamControl::StartAt-Methode.
 ms.assetid: fd2943e8-8d35-4122-a99e-96d12459b335
-title: Cbasestreamcontrol. StartAt-Methode ("strinmctl. h")
+title: CBaseStreamControl.StartAt-Methode (Strmctl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a7adcf7cbd435992333bb8ae59d5ab1674056223
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b40570933e7eed054694b2da927d71e077b86941aea816ff2ca6de5c91372b9d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370492"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119814110"
 ---
-# <a name="cbasestreamcontrolstartat-method"></a>Cbasestreamcontrol. StartAt-Methode
+# <a name="cbasestreamcontrolstartat-method"></a>CBaseStreamControl.StartAt-Methode
 
-Die- `StartAt` Methode informiert den PIN, wann die Übermittlung von Daten beginnen soll. Diese Methode implementiert die [**iamstreamcontrol:: startat**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-startat) -Methode.
+Die `StartAt` -Methode informiert den Pin, wann mit der Übermittlung von Daten begonnen werden soll. Diese Methode implementiert die [**IAMStreamControl::StartAt-Methode.**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-startat)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ HRESULT StartAt(
 
 <dl> <dt>
 
-*ptstart* 
+*ptStart* 
 </dt> <dd>
 
-Ein Zeiger auf einen [**Verweis \_ Zeitwert**](reference-time.md) , der angibt, wann die PIN mit der Übermittlung von Daten beginnen soll.
+Zeiger auf einen [**REFERENCE \_ TIME-Wert,**](reference-time.md) der angibt, wann der Pin mit der Übermittlung von Daten beginnen soll.
 
 </dd> <dt>
 
 *dwCookie* 
 </dt> <dd>
 
-Gibt einen Wert an, der zusammen mit der Start Benachrichtigung gesendet werden soll.
+Gibt einen Wert an, der zusammen mit der Startbenachrichtigung gesendet werden soll.
 
 </dd> </dl>
 
@@ -67,16 +67,16 @@ Gibt S \_ OK zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Strauch. h" (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Strmctl.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasestreamcontrol-Klasse**](cbasestreamcontrol.md)
+[**CBaseStreamControl-Klasse**](cbasestreamcontrol.md)
 </dt> </dl>
 
  

@@ -13,7 +13,7 @@ ms.locfileid: "119449774"
 ---
 # <a name="about-the-transcode-api"></a>Informationen zur Transcodierungs-API
 
-Das folgende Diagramm zeigt, wie sich die Transcodierungs-API auf den Rest der Media Foundation-Codierungspipeline bezieht.
+Das folgende Diagramm zeigt, wie sich die Transcodierungs-API auf den Rest der Media Foundation Codierungspipeline bezieht.
 
 ![Ein Diagramm, das die Transcodierungs-API zeigt.](images/encoding08.png)
 

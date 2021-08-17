@@ -1,7 +1,7 @@
 ---
-description: Gibt die Anbieter-ID des Mobil Funknetzwerks an.
+description: Gibt die Anbieter-ID des Mobilfunknetzes an.
 ms.assetid: 5528dfec-eb1b-4af3-8d7d-03b458e5ae75
-title: ProviderID (ProviderType)-Element
+title: ProviderID -Element (providerType)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,20 +11,20 @@ api_name:
 - ProviderID
 api_type:
 - Schema
-ms.openlocfilehash: 750e6c3f4397f710bb1ccbcea0286be68a89e145
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b40ac5abab2abf850d927c21f0de66ad419987f594f28dffcd380ead7f982d63
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214697"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119959790"
 ---
-# <a name="providerid-providertype-element"></a>ProviderID (ProviderType)-Element
+# <a name="providerid-providertype-element"></a>ProviderID -Element (providerType)
 
-Das **ProviderType-Element (ProviderType)** gibt die Anbieter-ID des Mobil Funk Netzwerks an.
+Das **ProviderID (providerType)-Element** gibt die Anbieter-ID des Mobilfunknetzes an.
 
-Das-Element ist eine Sequenz von Ziffern mit maximal 6 Ziffern.
+Das Element ist eine Sequenz von Ziffern mit maximal sechs Ziffern.
 
-Dieses Element ist im [**Provider**](schema-provider-dataroamingpartners-element.md) -Element erforderlich.
+Dieses Element ist innerhalb des [**Provider-Elements**](schema-provider-dataroamingpartners-element.md) erforderlich.
 
 ``` syntax
 <xs:element name="ProviderID"
@@ -32,7 +32,7 @@ Dieses Element ist im [**Provider**](schema-provider-dataroamingpartners-element
  />
 ```
 
-Das **ProviderID** -Element wird durch den komplexen [**ProviderType**](schema-providertype-complextype.md) -Typ definiert.
+Das **ProviderID-Element** wird vom komplexen [**providerType-Typ**](schema-providertype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -40,25 +40,25 @@ Das **ProviderID** -Element wird durch den komplexen [**ProviderType**](schema-p
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Provider Type**](schema-providertype-complextype.md)
+[**Providertype**](schema-providertype-complextype.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Anbieter (dataroamingpartners)**](schema-provider-dataroamingpartners-element.md)
+[**Anbieter (DataRoamingPartners)**](schema-provider-dataroamingpartners-element.md)
 </dt> </dl>
 
  

@@ -4,18 +4,18 @@ ms.assetid: DD6836EE-DF73-4A07-9DF1-0F5A959DDE8F
 title: Autorisierung für Webseiten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 88c26e9bc8333d74d18989c5c581cc54054a29ab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 73e4f64cbbf3dd9ac38a13719cd8835a198f1fbb3b522e8ac368ffaf4e759fc1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863535"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119141327"
 ---
 # <a name="authorization-for-web-pages"></a>Autorisierung für Webseiten
 
 Die Autorisierung legt fest, auf welche Ressourcen Sie Zugriff haben.
 
-**Ziel:** , Um Benutzern den Zugriff auf Ihre APP zu ermöglichen.
+**Ziel:** So ermöglichen Sie Benutzern den Zugriff auf Ihre App.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -27,25 +27,25 @@ Keine
 
 ### <a name="1-authorization"></a>1. Autorisierung
 
-Wenn der Benutzer seine Anmelde Informationen eingibt und auf die Anmelde Schaltfläche klickt, wird die Seite Berechtigungen angezeigt. Diese Seite ermöglicht es Benutzern, differenzierte Berechtigungen zu steuern, um der APP den Zugriff auf die Daten von "appto" zu gewähren. ![Seite "Berechtigungen" für "Seite"](images/wab-figure9.png)
+Wenn der Benutzer seine Anmeldeinformationen ein gibt und auf die Schaltfläche Anmelden klickt, wird die Berechtigungsseite angezeigt. Auf dieser Seite können Benutzer am besten präzise Berechtigungen steuern, um der App Zugriff auf die Daten von Contoso zu gewähren. ![Contoso-Berechtigungsseite](images/wab-figure9.png)
 
 ### <a name="2-how-to-use-the-sample"></a>2. Verwenden des Beispiels
 
-Sie müssen sich über die folgenden HTML-und CSS-Dateien informieren.
+Sie müssen die folgenden HTML- und CSS-Dateien kennen.
 
-1.  Die folgenden HTML-Dateien entsprechen den beiden Seiten im webautorisierungs Fluss.
+1.  Die folgenden HTML-Dateien entsprechen den beiden Seiten im Webautorisierungsfluss.
     -   WebAuthLogin.html – Beispiel-HTML für die Anmeldeseite
-    -   WebAuthPermissions.html – Beispiel-HTML für die Seite "Berechtigungen"
-2.  Die CSS-Dateien enthalten Windows 8-Stile zum Erstellen einer Windows Store-App-Webseite.
-    -   "UI-Light. CSS – dies wurde aus dem Basis Stylesheet für Windows 8-Steuerelemente abgeleitet.
-    -   UI-webauth. CSS – diese Methode bietet inkrementelles formatieren zum Optimieren des Layouts für Webauthentifizierungs Seiten.
-    -   Theme-Colors. CSS – bietet das inkrementelle formatieren zum Überschreiben der Standard Akzentfarben von Steuerelementen mit der Markenfarbe des Anbieters.
+    -   WebAuthPermissions.html – Beispiel-HTML für die Berechtigungsseite
+2.  Die CSS-Dateien enthalten Windows 8 Formatvorlagen zum Erstellen einer Windows Store-App-Webseite.
+    -   ui-light.css: Dies wurde aus dem Basis-Stylesheet für Windows 8 abgeleitet.
+    -   ui-webauth.css: Bietet inkrementelle Formatierungen zum Optimieren des Layouts für Webauthentifizierungsseiten.
+    -   theme-colors.css: Stellt die inkrementelle Formatierung zur Außerkraftsetzung von Standardakzentfarben von Steuerelementen mit der Markenfarbe des Anbieters zurVerfeinern.
 
 ## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
-Zusammenfassungs- [Tutorial zum Authentifizieren von Webseiten](tutorial-for-authenticating-web-pages.md)
+[Zusammenfassungstutorial für die Authentifizierung von Webseiten](tutorial-for-authenticating-web-pages.md)
 
-Nächste [bewährte Methoden für das Entwerfen von Authentifizierungs Webseiten](best-practices-for-designing-authentication-web-pages.md)
+Nächste [bewährte Methoden für das Entwerfen von Authentifizierungswebseiten](best-practices-for-designing-authentication-web-pages.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -54,7 +54,7 @@ Nächste [bewährte Methoden für das Entwerfen von Authentifizierungs Webseiten
 [Überlegungen für die Webseitenentwicklung](considerations-for-the-web-page-development.md)
 </dt> <dt>
 
-[Beispiel-App für das Web Authentication Broker SDK](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker)
+[Beispiel-App für das Webauthentifizierungsbroker-SDK](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker)
 </dt> <dt>
 
 [**Windows.Security.Authentication.Web**](/uwp/api/Windows.Security.Authentication.Web)

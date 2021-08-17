@@ -1,54 +1,54 @@
 ---
 title: UI_PKEY_Categories
-description: Bezeichnet die Eigenschaft der UI- \_ pkey- \_ Kategorien.
+description: Identifiziert die \_ PKEY Categories-Eigenschaft der \_ Benutzeroberfläche.
 ms.assetid: 15f97307-ea3d-407a-a276-46b82f81bdbc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c7666ee9eba6639f1f39b96f012b464854191ff0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e4aa812673f289b80b000710dd48a449656368f00d0beb51dcb489e60328e6a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106342141"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119086547"
 ---
-# <a name="ui_pkey_categories"></a>UI- \_ pkey- \_ Kategorien
+# <a name="ui_pkey_categories"></a>\_PKEY-Kategorien der Benutzeroberfläche \_
 
-Bezeichnet die Eigenschaft der UI- \_ pkey- \_ Kategorien.
+Identifiziert die \_ PKEY Categories-Eigenschaft der \_ Benutzeroberfläche.
 
 ```
 propertyDescription
-   name = UI_PKEY_Categories
-   shellPKey = UI_PKEY_Categories
-   formatID = 00000102-7363-696e-8441798acf5aebb7
-   propID = 102
-   typeInfo
-      type = IUICollection
+   name = UI_PKEY_Categories
+   shellPKey = UI_PKEY_Categories
+   formatID = 00000102-7363-696e-8441798acf5aebb7
+   propID = 102
+   typeInfo
+      type = IUICollection
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-UI- \_ pkey- \_ Kategorien werden von einer Anwendung verwendet, um die Kategorien abzufragen, die zum Gruppieren verwandter Elemente in einem Katalog-Steuerelement verwendet werden.
+\_Benutzeroberflächen-PKEY-Kategorien \_ werden von einer Anwendung verwendet, um die Kategorien abzufragen, die zum Gruppieren verwandter Elemente in einem Katalogsteuerelement verwendet werden.
 
-Der Eigenschafts Wert ist ein [**iuicollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) -Objekt, in dem jedes Element in der Auflistung eine Kategorie darstellt.
+Der Eigenschaftswert ist ein [**IUICollection-Objekt,**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) bei dem jedes Element in der Auflistung eine Kategorie darstellt.
 
-Jedes Element in dieser [**iuicollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) muss [**iuisimplepropertyset**](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) implementieren, um die schreibgeschützten Eigenschaften, die dem Element zugeordnet sind, wie z. b. die Bezeichnung oder das Bild verfügbar zu machen.
+Jedes Element in dieser [**IUICollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) muss [**IUISimplePropertySet**](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) implementieren, um die schreibgeschützten Eigenschaften verfügbar zu machen, die dem Element zugeordnet sind, z. B. die Bezeichnung oder das Bild.
 
-Um Elemente in einem Katalog-Steuerelement zur Laufzeit hinzuzufügen oder zu löschen, verwenden Sie die verschiedenen Methoden von [**iuicollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection).
+Verwenden Sie zum Hinzufügen oder Löschen von Elementen in einem Katalogsteuerelement zur Laufzeit die verschiedenen Methoden von [**IUICollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection).
 
-Der folgende Screenshot veranschaulicht die Verwendung von zwei Kategorien, **Auswahl Formen** und **Auswahl Optionen** in einem [**SplitButton**](windowsribbon-element-splitbutton.md) -Menü.
+Der folgende Screenshot veranschaulicht die Verwendung von zwei Kategorien: **Auswahlformen** und **Auswahloptionen** in einem [**SplitButton-Menü.**](windowsribbon-element-splitbutton.md)
 
-![Screenshot, der zwei Kategorien, Auswahl Formen und Auswahl Optionen in einem splitbuttongallery-Steuerelement anzeigt.](images/properties/ui-pkey-collection-categories2.png)
+![Screenshot mit zwei Kategorien: Auswahlformen und Auswahloptionen in einem Splitbuttongallery-Steuerelement.](images/properties/ui-pkey-collection-categories2.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Sammlungs Eigenschaften](windowsribbon-reference-properties-collection.md)
+[Sammlungseigenschaften](windowsribbon-reference-properties-collection.md)
 </dt> <dt>
 
-[Benutzeroberflächen- \_ pkey \_ CategoryID](windowsribbon-reference-properties-uipkey-categoryid.md)
+[\_PKEY-Kategorie-ID der Benutzeroberfläche \_](windowsribbon-reference-properties-uipkey-categoryid.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

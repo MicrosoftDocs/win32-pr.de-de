@@ -4,8 +4,8 @@ description: Die CheckCertForRevocation-Methode bestimmt, ob ein Zertifikat wide
 ms.assetid: 3efde398-f2ba-486e-b017-6787ca402e4c
 keywords:
 - CheckCertForRevocation-Methode windows Media Format
-- CheckCertForRevocation-Methode windows Media Format , IWMDRMSecurity-Schnittstelle
-- IWMDRMSecurity-Schnittstelle windows Media Format , CheckCertForRevocation-Methode
+- CheckCertForRevocation-Methode windows Media Format, IWMDRMSecurity-Schnittstelle
+- IWMDRMSecurity interface windows Media Format , CheckCertForRevocation method
 topic_type:
 - apiref
 api_name:
@@ -56,7 +56,7 @@ GUID, die die zu verwendende Sperrliste identifiziert. Legen Sie auf einen der W
 | GUID-Konstante                 | Beschreibung                                                                                |
 |-------------------------------|--------------------------------------------------------------------------------------------|
 | WMDRM \_ \_ REVOCATIONTYPE-APP    | Gibt die Sperrliste des Anwendungszertifikats an.                                     |
-| WMDRM \_ REVOCATIONTYPE \_ DEVICE | Gibt die Sperrliste des Gerätezertifikats an.                                          |
+| WMDRM \_ \_ REVOCATIONTYPE-GERÄT | Gibt die Gerätezertifikatsperrliste an.                                          |
 | WMDRM \_ REVOCATIONTYPE \_ CARDEA | Gibt die Zertifikatsperrliste microsoft Windows Media DRM für Netzwerkgeräte an. |
 
 
@@ -68,7 +68,7 @@ GUID, die die zu verwendende Sperrliste identifiziert. Legen Sie auf einen der W
 *pbCert* \[ In\]
 </dt> <dd>
 
-Puffer, der das zu suchde Zertifikat enthält.
+Puffer mit dem zu suchenden Zertifikat.
 
 </dd> <dt>
 
@@ -82,7 +82,7 @@ Größe des Puffers *pbCert* in Bytes.
 *fRevoked* \[ out\]
 </dt> <dd>
 
-Gibt in der Ausgabe an, ob das Zertifikat in der Sperrliste vorhanden ist.
+Gibt bei der Ausgabe an, ob das Zertifikat in der Sperrliste vorhanden ist.
 
 </dd> </dl>
 

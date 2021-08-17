@@ -1,11 +1,11 @@
 ---
-title: Attribut mit Proxy Generierung
-description: TRUE, wenn die Proxy Generierung aktiviert ist.
+title: Attribut "Proxygenerierung aktiviert"
+description: TRUE, wenn die Proxygenerierung aktiviert ist.
 ms.assetid: 8a9ee22d-531d-4ba7-90ba-094f0afb161f
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Proxy Generierung-aktiviertes Attribut
-- proxygenerationaktiviertes Attribut AD-Schema
+- AD-Schema des Attributs "Proxygenerierung aktiviert"
+- ad schema des proxyGenerationEnabled-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e44aaf416821a6cda8bd170f4431b253e00dffc2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 97e5f609202251371a9d255c18a72af3607ae77e8074eb713f3e0e1dd4da7702
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104106995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117836790"
 ---
-# <a name="proxy-generation-enabled-attribute"></a>Attribut mit Proxy Generierung
+# <a name="proxy-generation-enabled-attribute"></a>Attribut "Proxygenerierung aktiviert"
 
-**True** , wenn die Proxy Generierung aktiviert ist.
+**TRUE,** wenn die Proxygenerierung aktiviert ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Proxy Generierung aktiviert             |
-| LDAP-Display-Name | proxygenerationaktivierte               |
+| CN                | Proxygenerierung aktiviert             |
+| Ldap-Anzeigename | proxyGenerationEnabled               |
 | Size              | 4 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.2.523               |
-| System-ID-GUID    | 5F d424d6-1262-11D0-a060-00aa006c33ed |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-ID-GUID    | 5fd424d6-1262-11d0-a060-00aa006c33ed |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,38 +56,38 @@ ms.locfileid: "104106995"
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
-| MAPI-Id                | 0x81b1                                                   |
-| System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
-| Ist indiziert             | False                                                    |
-| Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| MAPI-Id                | 0x81B1                                                   |
+| System-Only            | Falsch                                                    |
+| Ist einwertig       | Richtig                                                     |
+| Ist indiziert             | Falsch                                                    |
+| Im globalen Katalog      | Falsch                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000000                                               |
-| In verwendete Klassen        | [**Address-Template**](c-addresstemplate.md)<br/> |
+| In verwendete Klassen        | [**Adressvorlage**](c-addresstemplate.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
-| MAPI-Id                | 0x81b1                                                   |
-| System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
-| Ist indiziert             | False                                                    |
-| Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| MAPI-Id                | 0x81B1                                                   |
+| System-Only            | Falsch                                                    |
+| Ist einwertig       | Richtig                                                     |
+| Ist indiziert             | Falsch                                                    |
+| Im globalen Katalog      | Falsch                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000000                                               |
-| In verwendete Klassen        | [**Address-Template**](c-addresstemplate.md)<br/> |
+| In verwendete Klassen        | [**Adressvorlage**](c-addresstemplate.md)<br/> |
 
 
 
@@ -98,17 +98,17 @@ ms.locfileid: "104106995"
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
-| MAPI-Id                | 0x81b1                                                   |
-| System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
-| Ist indiziert             | False                                                    |
-| Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| MAPI-Id                | 0x81B1                                                   |
+| System-Only            | Falsch                                                    |
+| Ist einwertig       | Richtig                                                     |
+| Ist indiziert             | Falsch                                                    |
+| Im globalen Katalog      | Falsch                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000000                                               |
-| In verwendete Klassen        | [**Address-Template**](c-addresstemplate.md)<br/> |
+| In verwendete Klassen        | [**Adressvorlage**](c-addresstemplate.md)<br/> |
 
 
 
@@ -119,17 +119,17 @@ ms.locfileid: "104106995"
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
-| MAPI-Id                | 0x81b1                                                   |
-| System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
-| Ist indiziert             | False                                                    |
-| Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| MAPI-Id                | 0x81B1                                                   |
+| System-Only            | Falsch                                                    |
+| Is-Single-Valued       | Richtig                                                     |
+| Ist indiziert             | Falsch                                                    |
+| Im globalen Katalog      | Falsch                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000000                                               |
-| In verwendete Klassen        | [**Address-Template**](c-addresstemplate.md)<br/> |
+| In verwendete Klassen        | [**Adressvorlage**](c-addresstemplate.md)<br/> |
 
 
 
@@ -140,17 +140,17 @@ ms.locfileid: "104106995"
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
-| MAPI-Id                | 0x81b1                                                   |
-| System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
-| Ist indiziert             | False                                                    |
-| Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| MAPI-Id                | 0x81B1                                                   |
+| System-Only            | Falsch                                                    |
+| Is-Single-Valued       | Richtig                                                     |
+| Ist indiziert             | Falsch                                                    |
+| Im globalen Katalog      | Falsch                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000000                                               |
-| In verwendete Klassen        | [**Address-Template**](c-addresstemplate.md)<br/> |
+| In verwendete Klassen        | [**Adressvorlage**](c-addresstemplate.md)<br/> |
 
 
 
@@ -161,17 +161,17 @@ ms.locfileid: "104106995"
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
-| MAPI-Id                | 0x81b1                                                   |
-| System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
-| Ist indiziert             | False                                                    |
-| Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| MAPI-Id                | 0x81B1                                                   |
+| System-Only            | Falsch                                                    |
+| Is-Single-Valued       | Richtig                                                     |
+| Ist indiziert             | Falsch                                                    |
+| Im globalen Katalog      | Falsch                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000000                                               |
-| In verwendete Klassen        | [**Address-Template**](c-addresstemplate.md)<br/> |
+| In verwendete Klassen        | [**Adressvorlage**](c-addresstemplate.md)<br/> |
 
 
 

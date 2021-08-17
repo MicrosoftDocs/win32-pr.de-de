@@ -3,7 +3,7 @@ title: ControlNameMap-Element
 description: Stellt einen Container für Steuerelementnamen in einer benutzerdefinierten SizeDefinition-Layoutvorlage dar.
 ms.assetid: b4bceb90-a9a3-42d7-a85b-bf6e4e02784b
 keywords:
-- ControlNameMap-Element Im Windows-Menüband
+- ControlNameMap-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 42654af7f81730d01f9c699de7041ba24be185e9
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: c0c4ac8856af52b47db18f52c6dd0147819444427aefb34c2484f6661f0f010d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111442911"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117850989"
 ---
 # <a name="controlnamemap-element"></a>ControlNameMap-Element
 
 Stellt einen Container für Steuerelementnamen in einer benutzerdefinierten [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <ControlNameMap>
@@ -40,7 +40,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                                                 | BESCHREIBUNG                                        |
+| Element                                                                                 | Beschreibung                                        |
 |-----------------------------------------------------------------------------------------|----------------------------------------------------|
 | [**ControlNameDefinition**](windowsribbon-element-controlnamedefinition.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
@@ -58,9 +58,9 @@ Es gibt keine Attribute.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann für jedes [**SizeDefinition-Element mindestens einmal**](windowsribbon-element-sizedefinition.md) auftreten.
+Kann höchstens einmal für jedes [**SizeDefinition-Element**](windowsribbon-element-sizedefinition.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
@@ -161,7 +161,7 @@ Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinie
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

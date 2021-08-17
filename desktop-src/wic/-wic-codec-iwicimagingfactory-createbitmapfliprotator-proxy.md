@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Methode "kreatebitmapfliprotator".
+description: Proxyfunktion für die CreateBitmapFlipRotator-Methode.
 ms.assetid: 1dc55744-8ae1-4d8b-9ffd-735ee45ceb47
 title: IWICImagingFactory_CreateBitmapFlipRotator_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: dea33ea75ad9d9626b327ee0173abc2f28a3e417
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9f54d4f38b84ad9e91a6b7aca6696e54fdf07d9f1b331c13b611e81a1fbfa8db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363679"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119088342"
 ---
-# <a name="iwicimagingfactory_createbitmapfliprotator_proxy-function"></a>IWICImagingFactory-Funktion für die \_ Funktion "endbitmapfliprotator" \_
+# <a name="iwicimagingfactory_createbitmapfliprotator_proxy-function"></a>IWICImagingFactory \_ CreateBitmapFlipRotator-Proxyfunktion \_
 
-Proxy Funktion für die Methode " [**kreatebitmapfliprotator**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createbitmapfliprotator) ".
+Proxyfunktion für die [**CreateBitmapFlipRotator-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createbitmapfliprotator)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,19 +41,19 @@ HRESULT IWICImagingFactory_CreateBitmapFlipRotator_Proxy(
 
 <dl> <dt>
 
-*pfactory* \[ in\]
+*pFactory* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) \** _
+Typ: **[ **IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory)\***
 
 </dd> <dt>
 
-_ppIBitmapFlipRotator * \[ out\]
+*ppIBitmapFlipRotator* \[ out\]
 </dt> <dd>
 
 Typ: **[ **IWICBitmapFlipRotator**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapfliprotator)\*\***
 
-Ein Zeiger, der einen Zeiger auf ein neues [**IWICBitmapFlipRotator**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapfliprotator)-Element empfängt.
+Ein Zeiger, der einen Zeiger auf einen neuen [**IWICBitmapFlipRotator**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapfliprotator)empfängt.
 
 </dd> </dl>
 
@@ -61,7 +61,7 @@ Ein Zeiger, der einen Zeiger auf ein neues [**IWICBitmapFlipRotator**](/windows/
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -71,9 +71,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

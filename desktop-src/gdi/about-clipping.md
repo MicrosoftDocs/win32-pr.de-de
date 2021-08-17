@@ -13,13 +13,13 @@ ms.locfileid: "119452380"
 ---
 # <a name="about-clipping"></a>Informationen zum Clipping
 
-Clipping wird von Anwendungen auf unterschiedliche Weise verwendet. Word-Verarbeitungs- und Tabellenkalkulationsanwendungen beschneiden Tastatureingaben, damit sie nicht an den Rändern einer Seite oder eines Arbeitsblatts angezeigt werden. Computergestütztes Design (CAD) und Zeichnungsanwendungen beschneiden die Grafikausgabe, damit sie die Ränder einer Zeichnung oder eines Bilds nicht überschreibt.
+Clipping wird von Anwendungen auf unterschiedliche Weise verwendet. Textverarbeitungs- und Tabellenkalkulationsanwendungen beschneiden Tastatureingaben, damit sie nicht an den Rändern einer Seite oder eines Arbeitsblatts angezeigt werden. Computergestütztes Design (CAD) und Zeichnungsanwendungen clipen Grafikausgabe, um zu halten, dass sie die Ränder einer Zeichnung oder eines Bilds nicht überschreiben.
 
-Ein *Clippingbereich* ist ein Bereich mit Kanten, die entweder gerade Linien oder Kurven sind. Ein *Clippfad* ist ein Bereich mit Kanten, die gerade Linien, Bézierkurven oder Kombinationen von beidem sind. Weitere Informationen zu Regionen finden Sie unter [Regionen.](regions.md) Weitere Informationen zu Pfaden finden Sie unter [Pfade.](paths.md)
+Ein *Ausschneidebereich* ist ein Bereich mit Kanten, die entweder gerade Linien oder Kurven sind. Ein *Clippfad ist* ein Bereich mit Kanten, die gerade Linien, Bézierkurven oder Kombinationen aus beidem sind. Weitere Informationen zu Regionen finden Sie unter [Regionen](regions.md). Weitere Informationen zu Pfaden finden Sie unter [Pfade](paths.md).
 
 In dieser Übersicht werden die folgenden Themen behandelt:
 
--   [Beschneidungsregionen](clipping-regions.md)
+-   [Ausschneiden von Regionen](clipping-regions.md)
 -   [Clippfade](clip-paths.md)
 
  

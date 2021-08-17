@@ -1,19 +1,19 @@
 ---
-description: Der timestamp-Datentyp enthält Informationen über die Gültigkeitsdauer von Sicherheits Token. Das Format des Werts des timestamp-Datentyps entspricht dem Format der FILETIME-Struktur.
+description: Der TimeStamp-Datentyp enthält Informationen zur Zeitgültigkeitsdauer von Sicherheitstoken. Das Format des Werts des TimeStamp-Datentyps ist mit dem der FILETIME-Struktur identisch.
 ms.assetid: 0a609b32-dbd7-4905-8990-65ebabcd0668
-title: Timestamp (SSPI. h)
+title: TimeStamp (Sspi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4898e85b0c11f55e5bb0dba2dbdefe2a3b6a2e4e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e521818c9001213396c0046b92f8f0bd9727dddfeaf99b2e23b652a48f8ff95d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356651"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117786365"
 ---
 # <a name="timestamp"></a>TimeStamp
 
-Der **timestamp** -Datentyp enthält Informationen über die Gültigkeitsdauer von Sicherheits Token. Das Format des Werts des **timestamp** -Datentyps entspricht dem Format der [**FILETIME**](/windows/win32/api/minwinbase/ns-minwinbase-filetime) -Struktur.
+Der **TimeStamp-Datentyp** enthält Informationen zur Zeitgültigkeitsdauer von Sicherheitstoken. Das Format des Werts des **TimeStamp-Datentyps** ist mit dem der [**FILETIME-Struktur**](/windows/win32/api/minwinbase/ns-minwinbase-filetime) identisch.
 
 
 ```C++
@@ -28,9 +28,9 @@ typedef SECURITY_INTEGER TimeStamp, *PTimeStamp;
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>SSPI. h (Include Security. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Sspi.h (einschließlich Security.h)</dt> </dl> |
 
 
 

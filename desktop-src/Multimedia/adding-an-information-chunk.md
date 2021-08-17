@@ -1,21 +1,21 @@
 ---
-title: Hinzufügen eines Informations Blocks
-description: Hinzufügen eines Informations Blocks
+title: Hinzufügen eines Informationsblöckes
+description: Hinzufügen eines Informationsblöckes
 ms.assetid: ebba5079-1f67-4236-9260-e36ff72ad51c
 keywords:
-- capflesetinfochunk-Makro
+- capFileSetInfoChunk-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bacb99fb29e4b1882b4f257c428315f42ee3a360
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 420181fd0da326ebf3ccc6f921e55161c2005d17c3f8713cd104481147b40f1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119145133"
 ---
-# <a name="adding-an-information-chunk"></a>Hinzufügen eines Informations Blocks
+# <a name="adding-an-information-chunk"></a>Hinzufügen eines Informationsblöckes
 
-Wenn Sie zusätzlich zu Audioinformationen und Videos Weitere Informationen in Ihre Anwendung einschließen müssen, können Sie Informationsblöcke erstellen und in eine Aufzeichnungsdatei einfügen. Informationsblöcke können mehrere Arten von Informationen enthalten, einschließlich der Details eines Copyright Hinweises, der Identifizierung der Videoquelle oder externer Zeit Steuerungsinformationen. Im folgenden Beispiel werden die Informationen zur externen Zeitangabe a SMPTE (Society of Motion Picture and TV Engineers) Zeitcode in einem Informationsblock gespeichert und mithilfe des [**capflesetinfochunk**](/windows/desktop/api/Vfw/nf-vfw-capfilesetinfochunk) -Makros in eine Aufzeichnungsdatei eingefügt.
+Wenn Sie neben Audio und Video weitere Informationen in Ihre Anwendung aufnehmen müssen, können Sie Informationsblöcke erstellen und in eine Aufzeichnungsdatei einfügen. Informationsblöcke können verschiedene Arten von Informationen enthalten, einschließlich der Details eines Urheberrechtshinweises, der Identifizierung der Videoquelle oder externer Zeitsteuerungsinformationen. Im folgenden Beispiel werden externe Zeitsteuerungsinformationen in einem SMPTE-Zeitcode (Society of Motion Picture and Tv Engineers) in einem Informationsblöcke gespeichert und mithilfe des Makros [**capFileSetInfoChunk**](/windows/desktop/api/Vfw/nf-vfw-capfilesetinfochunk) einer Erfassungsdatei hinzugefügt.
 
 
 ```C++
@@ -38,12 +38,12 @@ capFileSetInfoChunk (hwndC, &cic);
 
 <dl> <dt>
 
-[Verwenden der Video Erfassung](using-video-capture.md)
+[Verwenden von Video capture](using-video-capture.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

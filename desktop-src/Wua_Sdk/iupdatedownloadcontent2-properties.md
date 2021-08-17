@@ -4,30 +4,30 @@ ms.assetid: c3d1e746-7e4e-404d-99bf-a0e5a923c4b3
 title: IUpdateDownloadContent2-Eigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f58dc9a4842aae263afaeb94c636011d9934bd37
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2cb30ce491d5108d56481bcc46f0c3f299a6fe48d37b6fc5c87cedc05ff1ee45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129625"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117738393"
 ---
 # <a name="iupdatedownloadcontent2-properties"></a>IUpdateDownloadContent2-Eigenschaften
 
-Die [**IUpdateDownloadContent2**](/windows/desktop/api/Wuapi/nn-wuapi-iupdatedownloadcontent2) -Schnittstelle definiert die folgende Eigenschaft.
+Die [**IUpdateDownloadContent2-Schnittstelle**](/windows/desktop/api/Wuapi/nn-wuapi-iupdatedownloadcontent2) definiert die folgende Eigenschaft.
 
 
 
-| Eigenschaft                                                                             | BESCHREIBUNG                                                                                     |
+| Eigenschaft                                                                             | Beschreibung                                                                                     |
 |--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| [**Isdelta tacompressedcontent**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatedownloadcontent2-get_isdeltacompressedcontent) | Ruft einen booleschen Wert ab, der angibt, ob ein Update ein binäres Update oder ein vollständiges Datei Update ist. |
+| [**IsDeltaCompressedContent**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatedownloadcontent2-get_isdeltacompressedcontent) | Ruft einen booleschen Wert ab, der angibt, ob es sich bei einem Update um ein binäres Update oder ein Update mit vollständiger Datei handelt. |
 
 
 
  
 
-Informationen zu den Membern, die von dieser Schnittstelle geerbt werden, finden Sie in der folgenden Schnittstelle.
+Informationen zu den von dieser Schnittstelle geerbten Membern finden Sie auf der folgenden Schnittstelle.
 
--   [**Iupdatedownloadcontent**](/windows/desktop/api/Wuapi/nn-wuapi-iupdatecollection)
+-   [**IUpdateDownloadContent**](/windows/desktop/api/Wuapi/nn-wuapi-iupdatecollection)
 
  
 

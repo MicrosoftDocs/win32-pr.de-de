@@ -1,29 +1,29 @@
 ---
-description: Eine Effekt Technik wird mit der folgenden Syntax deklariert.
+description: Eine Effekttechnik wird mit der folgenden Syntax deklariert.
 ms.assetid: 84f9b74d-8397-4cd5-91a0-7f910ba7b19e
-title: Effekt Technik Syntax (Direct3D 10)
+title: Effekttechniksyntax (Direct3D 10)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f781a0e1ea247e9ffae02e6afc9de77c8e0c6b68
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e3c0ff0c0f1b5e9c1fac4cdb12aac21e42d89771c0eae89d1cd9538d0281acee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117914485"
 ---
-# <a name="effect-technique-syntax-direct3d-10"></a>Effekt Technik Syntax (Direct3D 10)
+# <a name="effect-technique-syntax-direct3d-10"></a>Effekttechniksyntax (Direct3D 10)
 
-Eine Effekt Technik wird mit der folgenden Syntax deklariert.
+Eine Effekttechnik wird mit der folgenden Syntax deklariert.
 
-technique10 *techniquename* \[ -Anmerkungen  <  > \]
+technique10 *TechniqueName-Anmerkungen* \[  <  > \]
 
 {
 
-<dl> Übergabe von *passname* \[ -Anmerkungen  <  > \]  
+<dl>  \[  < *PassName-Anmerkungen* übergeben > \]  
 {
-<dl> \[*Setstategroup*; \] \[ *Setstategroup*;\]  
+<dl> \[*SetStateGroup*; \] \[ *SetStateGroup*;\]  
 ...  
-\[*Setstategroup*;\]
+\[*SetStateGroup*;\]
 </dl> </dd> }  
 </dl>
 
@@ -40,38 +40,38 @@ Erforderliches Schlüsselwort.
 
 </dd> <dt>
 
-<span id="TechniqueName"></span><span id="techniquename"></span><span id="TECHNIQUENAME"></span>*Techniquename*
+<span id="TechniqueName"></span><span id="techniquename"></span><span id="TECHNIQUENAME"></span>*TechniqueName*
 </dt> <dd>
 
-Dies ist optional. Eine ASCII-Zeichenfolge, die den Namen der Effekt Technik eindeutig identifiziert.
+Optional. Eine ASCII-Zeichenfolge, die den Namen der Effekttechnik eindeutig identifiziert.
 
 </dd> <dt>
 
 <span id="Annotations"></span><span id="annotations"></span><span id="ANNOTATIONS"></span>*Anmerkungen*
 </dt> <dd>
 
-\[in \] optional. Ein oder mehrere Teile der vom Benutzer bereitgestellten Informationen (Metadaten), die vom Effektsystem ignoriert werden. Informationen zur Syntax finden Sie unter [Annotation-Syntax (Direct3D 10)](d3d10-effect-annotation-syntax.md).
+\[in \] Optional. Eine oder mehrere vom Benutzer bereitgestellte Informationen (Metadaten), die vom Effektsystem ignoriert werden. Informationen zur Syntax finden Sie unter [Anmerkungssyntax (Direct3D 10).](d3d10-effect-annotation-syntax.md)
 
 </dd> <dt>
 
-<span id="pass"></span><span id="PASS"></span>Tage
+<span id="pass"></span><span id="PASS"></span>bestehen
 </dt> <dd>
 
 Erforderliches Schlüsselwort.
 
 </dd> <dt>
 
-<span id="PassName"></span><span id="passname"></span><span id="PASSNAME"></span>*Passname*
+<span id="PassName"></span><span id="passname"></span><span id="PASSNAME"></span>*PassName*
 </dt> <dd>
 
-\[in \] optional. Eine ASCII-Zeichenfolge, die den Namen des bestanden eindeutig identifiziert.
+\[in \] Optional. Eine ASCII-Zeichenfolge, die den Namen des Durchlaufs eindeutig identifiziert.
 
 </dd> <dt>
 
-<span id="SetStateGroup"></span><span id="setstategroup"></span><span id="SETSTATEGROUP"></span>*Setstategroup*
+<span id="SetStateGroup"></span><span id="setstategroup"></span><span id="SETSTATEGROUP"></span>*SetStateGroup*
 </dt> <dd>
 
-\[Legen Sie in mindestens \] eine Statusgruppe fest, z. b.:
+\[in \] Legen Sie eine oder mehrere Statusgruppen fest, z. B.:
 
 
 
@@ -82,13 +82,13 @@ Erforderliches Schlüsselwort.
 </colgroup>
 <thead>
 <tr class="header">
-<th>Umbenennen</th>
+<th>StateGroup</th>
 <th>Syntax</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Blend-Status</td>
+<td>Blendzustand</td>
 <td><span data-codelanguage=""></span>
 <table>
 <colgroup>
@@ -101,10 +101,10 @@ Erforderliches Schlüsselwort.
 </tbody>
 </table>
 
-<p>Die Argumentliste finden Sie unter [<strong>omsetblendstate</strong>] (/Windows/Desktop/API/d3d10/NF-d3d10-id3d10device-omsetblendstate).</p></td>
+<p>Die Argumentliste finden Sie unter [<strong>OMSetBlendState</strong>](/windows/desktop/api/D3D10/nf-d3d10-id3d10device-omsetblendstate).</p></td>
 </tr>
 <tr class="even">
-<td>Status der tiefen Schablone</td>
+<td>Tiefenschablonenzustand</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
@@ -119,10 +119,10 @@ Erforderliches Schlüsselwort.
 </table>
 
 </div>
-<p>Weitere Informationen finden Sie unter <a href="/windows/desktop/api/D3D10/nf-d3d10-id3d10device-omsetdepthstencilstate"><strong>omsetdepthstencilstate</strong></a> für die Argumentliste.</p></td>
+<p>Die Argumentliste finden Sie unter <a href="/windows/desktop/api/D3D10/nf-d3d10-id3d10device-omsetdepthstencilstate"><strong>OMSetDepthStencilState.</strong></a></p></td>
 </tr>
 <tr class="odd">
-<td>Status des Rasterizers</td>
+<td>Rasterizerstatus</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
@@ -137,10 +137,10 @@ Erforderliches Schlüsselwort.
 </table>
 
 </div>
-<p>Die Argumentliste finden Sie unter [<strong>rssetstate</strong>] (/Windows/Desktop/API/d3d10/NF-d3d10-id3d10device-rssetstate).</p></td>
+<p>Die Argumentliste finden Sie unter [<strong>RSSetState</strong>](/windows/desktop/api/D3D10/nf-d3d10-id3d10device-rssetstate).</p></td>
 </tr>
 <tr class="even">
-<td>Shader-Status</td>
+<td>Shaderstatus</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
@@ -185,7 +185,7 @@ Erforderliches Schlüsselwort.
 </table>
 
 </div>
-<p>Setxxxshader ist eine der Methoden <strong>setvertexshader</strong>, <strong>setgeometryshader</strong>oder <strong>setpixelshader</strong> (die den API-Methoden <a href="/windows/desktop/api/D3D10/nf-d3d10-id3d10device-vssetshader"><strong>vssetshader</strong></a>, <a href="/windows/desktop/api/D3D10/nf-d3d10-id3d10device-gssetshader"><strong>gssetshader</strong></a>und <a href="/windows/desktop/api/D3D10/nf-d3d10-id3d10device-pssetshader"><strong>pssetshader</strong></a>ähneln).</p></td>
+<p>SetXXXShader ist eine von <strong>SetVertexShader,</strong> <strong>SetGeometryShader</strong>oder <strong>SetPixelShader</strong> (die den API-Methoden <a href="/windows/desktop/api/D3D10/nf-d3d10-id3d10device-vssetshader"><strong>VSSetShader,</strong></a> <a href="/windows/desktop/api/D3D10/nf-d3d10-id3d10device-gssetshader"><strong>GSSetShader</strong></a>und <a href="/windows/desktop/api/D3D10/nf-d3d10-id3d10device-pssetshader"><strong>PSSetShader</strong></a>ähneln).</p></td>
 </tr>
 </tbody>
 </table>
@@ -196,11 +196,11 @@ Erforderliches Schlüsselwort.
 
 </dd> </dl>
 
-Effekt Zustands Gruppen werden im [Zustand "wirksam](d3d10-effect-states.md)" aufgelistet.
+Effect-Zustandsgruppen werden im [Effect-Zustand](d3d10-effect-states.md)aufgelistet.
 
 ## <a name="examples"></a>Beispiele
 
-In diesem Beispiel (aus [cubemapgs](https://msdn.microsoft.com/library/Ee416398(v=VS.85).aspx)-Beispiel) wird der Mischungs Zustand festgelegt.
+In diesem Beispiel (aus dem [CubeMapGS-Beispiel)](https://msdn.microsoft.com/library/Ee416398(v=VS.85).aspx)wird der Blendingzustand festgelegt.
 
 
 ```
@@ -223,7 +223,7 @@ technique10
 
 
 
-In diesem Beispiel wird der Status des Rasterizers zum Rendering eines Objekts in Wireframe eingerichtet.
+In diesem Beispiel wird der Rasterizerzustand so eingerichtet, dass ein Objekt in Wireframe gerendert wird.
 
 
 ```
@@ -243,7 +243,7 @@ technique10
 
 
 
-In diesem Beispiel wird der Shader-Status (aus [BasicHLSL10 Sample](https://msdn.microsoft.com/library/Ee416395(v=VS.85).aspx)) festgelegt. , der einen Scheitelpunkt und einen Pixel-Shader verwendet.
+In diesem Beispiel wird der Shaderzustand festgelegt (aus dem [BasicHLSL10-Beispiel).](https://msdn.microsoft.com/library/Ee416395(v=VS.85).aspx) , der einen Scheitelpunkt und einen Pixel-Shader verwendet.
 
 
 ```
@@ -264,7 +264,7 @@ technique10 RenderSceneWithTexture1Light
 
 <dl> <dt>
 
-[Effekt Format](d3d10-effect-format.md)
+[Effektformat](d3d10-effect-format.md)
 </dt> </dl>
 
  

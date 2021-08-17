@@ -1,32 +1,32 @@
 ---
 description: Arbeiten mit Videos
 ms.assetid: ef361c85-8f3b-4719-80f2-853c84ae7277
-title: Arbeiten mit Videos (Microsoft Media Foundation)
+title: Arbeiten mit Video (Microsoft Media Foundation)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 002b32fab6dafea91fb9c15d59a4ca3cca2f03f2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd9819c7f3c949f841b040ec2c73bf37a9957f8cc40d7f595b2fd65f723dd762
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117688140"
 ---
-# <a name="working-with-video-microsoft-media-foundation"></a>Arbeiten mit Videos (Microsoft Media Foundation)
+# <a name="working-with-video-microsoft-media-foundation"></a>Arbeiten mit Video (Microsoft Media Foundation)
 
-Obwohl die einzelnen Video Codecs ihre eigenen Besonderheiten aufweisen, verwenden alle die gleichen grundlegenden Prozeduren. In diesem Abschnitt wird beschrieben, wie Sie Videos mit den Windows Media Video Codecs codieren und decodieren und die jeweiligen Features der jeweiligen Features adressiert werden. In diesem Abschnitt werden die folgenden Themen behandelt:
+Obwohl die einzelnen Videocodecs ihre eigenen Gemeinsamkeiten haben, verwenden alle dieselben grundlegenden Prozeduren. In diesem Abschnitt wird beschrieben, wie Sie Videos mit den Windows Media Video-Codecs codieren und decodieren. Darüber hinaus werden die jeweiligen Features behandelt. In diesem Abschnitt werden die folgenden Themen behandelt:
 
 
 
-| Thema                                                                                                        | BESCHREIBUNG                                                                                             |
+| Thema                                                                                                        | Beschreibung                                                                                             |
 |--------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [Auswählen eines Videocodecs](choosingavideocodec.md)                                                            | Beschreibt die Inhaltstypen, die sich am besten für die Komprimierung mit den einzelnen Windows Media Video Codecs eignen. |
-| [Konfigurieren der Video Codierung](configuringvideoencoding.md)                                                   | Beschreibt, wie die Video Encoder-DMOS konfiguriert werden.                                                      |
-| [Konfigurieren der Video Decodierung](configuringvideodecoding.md)                                                   | Hier wird beschrieben, wie der Video Decoder-DMOS konfiguriert wird.                                                      |
-| [Erzwungene Keyframe-Einfügung](forcedkeyframeinsertion.md)                                                    | Beschreibt, wie angefordert wird, dass ein Beispiel als Keyframe codiert wird.                                       |
-| [Video Codierung mit Zeilen Sprung](interlacedvideoencoding.md)                                                     | Hier wird beschrieben, wie Sie in Windows Media Video Streams eine Verschachtelung erhalten.                                   |
-| [Verwenden des Windows Media Video 9 Advanced Profile Codec](usingthewindowsmediavideo9advancedprofilecodec.md) | Beschreibt die Verwendung des Advanced Profile Codec für Windows Media Video 9.                                  |
-| [Verwenden des Windows Media Video 9-Bildschirm Codecs](usingthewindowsmediavideo9screencodec.md)                    | Beschreibt die Verwendung des Windows Media Video 9-Bildschirm Codecs.                                            |
-| [Verwenden des Windows Media Video 9,1-Abbild Codecs](usingthewindowsmediavideo9imagecodec.md)                    | Beschreibt die Verwendung des Windows Media Video 9,1-Bildcodecs.                                           |
+| [Auswählen eines Videocodecs](choosingavideocodec.md)                                                            | Beschreibt die Inhaltstypen, die sich am besten für die Komprimierung mit jedem der Windows Media Video-Codecs eignen. |
+| [Konfigurieren der Videocodierung](configuringvideoencoding.md)                                                   | Beschreibt, wie die Videoencoder-DMOs konfiguriert werden.                                                      |
+| [Konfigurieren der Videodecodierung](configuringvideodecoding.md)                                                   | Beschreibt, wie die Videodecoder-DMOs konfiguriert werden.                                                      |
+| [Erzwungenes Einfügen eines Keyframes](forcedkeyframeinsertion.md)                                                    | Beschreibt, wie sie anfordern, dass ein Beispiel als Keyframe codiert wird.                                       |
+| [Interlaced Video Encoding](interlacedvideoencoding.md)                                                     | Beschreibt, wie Interlacing in medienvideostreams Windows verwaltet wird.                                   |
+| [Verwenden des Windows Media Video 9 Advanced Profile Codec](usingthewindowsmediavideo9advancedprofilecodec.md) | Beschreibt die Verwendung des Windows Media Video 9 Advanced Profile-Codecs.                                  |
+| [Verwenden des Windows Media Video 9-Bildschirmcodecs](usingthewindowsmediavideo9screencodec.md)                    | Beschreibt die Verwendung des Windows Media Video 9 Screen-Codecs.                                            |
+| [Verwenden des Windows Media Video 9.1-Bildcodecs](usingthewindowsmediavideo9imagecodec.md)                    | Beschreibt die Verwendung des Windows Media Video 9.1-Bildcodecs.                                           |
 
 
 

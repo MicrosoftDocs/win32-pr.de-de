@@ -1,55 +1,55 @@
 ---
-title: Treffer Test-Rückgabewerte
-description: In diesem Abschnitt werden die Treffer Test-Codewerte aufgelistet, die im pwhittestcode-Parameter der hittesttemebackground-Funktion zurückgegeben werden.
+title: Treffertest-Rückgabewerte
+description: In diesem Abschnitt werden die Treffertestcodewerte aufgeführt, die im pwHitTestCode-Parameter der HitTestThemeBackground-Funktion zurückgegeben werden.
 ms.assetid: 95b4fc1a-2f9b-4464-b672-552d36b60c42
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 219cb59115bae56ac6cc3ba7f05384c331969b34
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 020765e6f766efc2c79e869a1b06cfceac2c13a451cc381d88ae066cc1478c11
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036802"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119797600"
 ---
-# <a name="hit-test-return-values"></a>Treffer Test-Rückgabewerte
+# <a name="hit-test-return-values"></a>Treffertest-Rückgabewerte
 
-In diesem Abschnitt werden die Treffer Test-Codewerte aufgelistet, die im *pwhittestcode* -Parameter der [**hittesttemebackground**](/windows/desktop/api/Uxtheme/nf-uxtheme-hittestthemebackground) -Funktion zurückgegeben werden. Welche Codewerte zurückgegeben werden, hängt von den Treffer Test Optionen ab, die im *dwOptions* -Parameter der Funktion " **hittestpoinmebackground** " angegeben sind. Eine Liste der Optionen finden Sie unter [Treffer Test Optionen](theme-hit-test-options.md).
+In diesem Abschnitt werden die Treffertestcodewerte aufgeführt, die im *pwHitTestCode-Parameter* der [**HitTestThemeBackground-Funktion zurückgegeben**](/windows/desktop/api/Uxtheme/nf-uxtheme-hittestthemebackground) werden. Die zurückgegebenen Codewerte hängen von den Treffertestoptionen ab, die im *dwOptions-Parameter* der **HitTestThemeBackground-Funktion angegeben** sind. Eine Liste der Optionen finden Sie unter [Treffertestoptionen.](theme-hit-test-options.md)
 
 ## <a name="return-values"></a>Rückgabewerte
 
-In der folgenden Tabelle sind die Treffer Test Optionen und die entsprechenden Rückgabecodes aufgeführt.
+In der folgenden Tabelle sind die Treffertestoptionen und die entsprechenden Rückgabecodes aufgeführt.
 
 
 
-| Option                       | Rückgabecodes  | BESCHREIBUNG                                                                                                        |
+| Option                       | Rückgabecodes  | Beschreibung                                                                                                        |
 |------------------------------|---------------|--------------------------------------------------------------------------------------------------------------------|
-| httb \_ backgroundgg          | Htbottom      | Der Treffer Test war erfolgreich im unteren Rahmen Segment.                                                                   |
-|                              | Htbottomleft  | Der Treffer Test war im unteren und linken Rahmen Bereich erfolgreich.                                                     |
-|                              | Htbottomright | Der Treffer Test war im unteren und rechten Rahmen Bereich erfolgreich.                                                    |
-|                              | Htclient      | Der Treffer Test war erfolgreich im mittleren Hintergrund Segment.                                                               |
-|                              | Htleft        | Der Treffer Test war im linken Rahmen Segment erfolgreich.                                                                     |
-|                              | Htnirgendwo     | Der Treffer Test war außerhalb des Steuer Elements oder eines transparenten Bereichs erfolgreich.                                                   |
-|                              | Htright       | Der Treffer Test war erfolgreich im rechten Rahmen Segment.                                                                    |
-|                              | Httop         | Der Treffer Test war erfolgreich im oberen Rahmen Segment.                                                                      |
-|                              | Httopleft     | Der Treffer Test war erfolgreich in der oberen und linken Rahmen Schnittmenge.                                                            |
-|                              | Httopright    | Der Treffer Test war am oberen und rechten Randbereich erfolgreich.                                                       |
-| httb- \_ Beschriftung                | Htcaption     | Der Treffer Test war erfolgreich in den ersten, oberen linken oder oberen rechten Hintergrund Segmenten.                                         |
-|                              | Htnirgendwo     | Der Treffer Test war außerhalb des Steuer Elements oder eines transparenten Bereichs erfolgreich.                                                   |
-| httb \_ fixedborder            | "Htborder"      | Der Treffer Test war in einem beliebigen Hintergrund Segment außer dem mittleren Hintergrund Segment erfolgreich.                                 |
-|                              | Htclient      | Der Treffer Test war erfolgreich im mittleren Hintergrund Segment.                                                               |
-| httb \_ resizingborder         | "Htborder"      | Fehler beim Treffer Test im mittleren Hintergrund Segment und in der Größe der Zonen Größe, jedoch in einem Hintergrund Rahmen Segment. |
-| httb \_ resizingborder \_ Bottom | Htbottom      | Der Treffer Test war erfolgreich im unteren Rahmen Segment.                                                                   |
-| httb \_ resizingborder \_ left   | Htleft        | Der Treffer Test war im linken Rahmen Segment erfolgreich.                                                                     |
-| httb \_ resizingborder \_ right  | Htright       | Der Treffer Test war erfolgreich im rechten Rahmen Segment.                                                                    |
-| httb \_ resizingborder \_ Top    | Httop         | Der Treffer Test war erfolgreich im oberen Rahmen Segment.                                                                      |
+| HTTB \_ BACKGROUNDSEG          | HTBOTTOM      | Der Treffertest war im unteren Rahmensegment erfolgreich.                                                                   |
+|                              | HTBOTTOMLEFT  | Der Treffertest war in der unteren und linken Rahmenüberschnittmenge erfolgreich.                                                     |
+|                              | HTBOTTOMRIGHT | Der Treffertest war am unteren und rechten Rand erfolgreich.                                                    |
+|                              | HTCLIENT      | Der Treffertest war im mittleren Hintergrundsegment erfolgreich.                                                               |
+|                              | HTLEFT        | Der Treffertest war im linken Rahmensegment erfolgreich.                                                                     |
+|                              | HTNOWHERE     | Der Treffertest war außerhalb des Steuerelements oder in einem transparenten Bereich erfolgreich.                                                   |
+|                              | HTRIGHT       | Der Treffertest war im rechten Rahmensegment erfolgreich.                                                                    |
+|                              | HTTOP         | Der Treffertest war im oberen Rahmensegment erfolgreich.                                                                      |
+|                              | HTTOPLEFT     | Der Treffertest war in der Schnittmenge des oberen und linken Rahmens erfolgreich.                                                            |
+|                              | HTTOPRIGHT    | Der Treffertest war am oberen und rechten Rand erfolgreich.                                                       |
+| HTTB \_ CAPTION                | BESENAPTION     | Der Treffertest war in den Hintergrundsegmenten oben links oder oben rechts erfolgreich.                                         |
+|                              | HTNOWHERE     | Der Treffertest war außerhalb des Steuerelements oder in einem transparenten Bereich erfolgreich.                                                   |
+| HTTB \_ FIXEDBORDER            | HTBORDER      | Der Treffertest war in jedem Hintergrundsegment mit Ausnahme des mittleren Hintergrundsegments erfolgreich.                                 |
+|                              | HTCLIENT      | Der Treffertest war im mittleren Hintergrundsegment erfolgreich.                                                               |
+| HTTB \_ RESIZINGBORDER         | HTBORDER      | Fehler beim Treffertest im mittleren Hintergrundsegment und beim Ändern der Größe von Zonen, aber erfolgreich in einem Hintergrund-Rahmensegment. |
+| HTTB \_ RESIZINGBORDER \_ BOTTOM | HTBOTTOM      | Der Treffertest war im unteren Rahmensegment erfolgreich.                                                                   |
+| HTTB \_ RESIZINGBORDER \_ LEFT   | HTLEFT        | Der Treffertest war im linken Rahmensegment erfolgreich.                                                                     |
+| HTTB \_ RESIZINGBORDER \_ RIGHT  | HTRIGHT       | Der Treffertest war im rechten Rahmensegment erfolgreich.                                                                    |
+| HTTB \_ RESIZINGBORDER \_ TOP    | HTTOP         | Der Treffertest war im oberen Rahmensegment erfolgreich.                                                                      |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

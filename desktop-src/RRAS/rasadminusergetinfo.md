@@ -1,9 +1,9 @@
 ---
-title: Rasadminusergetinfo-Funktion (rassapi. h)
-description: Die rasadminusergetinfo-Funktion Ruft die RAS-Berechtigungen und Rückruf Telefonnummer-Informationen für einen angegebenen Benutzer ab.
+title: RasAdminUserGetInfo-Funktion (Rassapi.h)
+description: Die RasAdminUserGetInfo-Funktion ruft die RAS-Berechtigungen und Rückruf-Telefonnummerninformationen für einen angegebenen Benutzer ab.
 ms.assetid: 178ff775-9cd2-43f0-9a9a-dbae337c5fe8
 keywords:
-- Rasadminusergetinfo-Funktion (RAS)
+- RasAdminUserGetInfo-Funktion RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 89fe08a918a958ffb5a656ce2c76cecec31cbb61
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a4cda41447af832bd4ae04a14c6f8038fee4b61a17ac98c919c0b085261b242d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352981"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117788688"
 ---
-# <a name="rasadminusergetinfo-function"></a>Rasadminusergetinfo-Funktion
+# <a name="rasadminusergetinfo-function"></a>RasAdminUserGetInfo-Funktion
 
-\[Diese Funktion wird nur aus Gründen der Abwärtskompatibilität mit Windows NT Server 4,0 bereitgestellt. Es wird ein Fehler zurückgegeben, \_ \_ \_ der auf Windows Server 2003 nicht implementiert ist. Anwendungen sollten die [**mpradminusergetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminusergetinfo) -Funktion verwenden.\]
+\[Diese Funktion wird nur aus Gründen der Abwärtskompatibilität mit Windows NT Server 4.0 bereitgestellt. Auf \_ Windows \_ Server 2003 wird ERROR CALL NOT \_ IMPLEMENTED zurückgegeben. Anwendungen sollten die [**MprAdminUserGetInfo-Funktion**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminusergetinfo) verwenden.\]
 
-Die **rasadminusergetinfo** -Funktion Ruft die RAS-Berechtigungen und Rückruf Telefonnummer-Informationen für einen angegebenen Benutzer ab.
+Die **RasAdminUserGetInfo-Funktion** ruft die RAS-Berechtigungen und Rückruf-Telefonnummerninformationen für einen angegebenen Benutzer ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,44 +44,44 @@ DWORD RasAdminUserGetInfo(
 
 <dl> <dt>
 
-*lpszuseraccountserver* \[ in\]
+*lpszUserAccountServer* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Unicode-Zeichenfolge, die den Namen des primären oder Sicherungs Domänen Controllers mit der Benutzerkonten Datenbank angibt. Verwenden Sie die [**rasadmingetuseraccountserver**](rasadmingetuseraccountserver.md) -Funktion, um diesen Servernamen abzurufen.
+Zeiger auf eine auf NULL endende Unicode-Zeichenfolge, die den Namen des primären oder Sicherungsdomänencontrollers angibt, der über die Benutzerkontodatenbank verfügt. Verwenden Sie die [**RasAdminGetUserAccountServer-Funktion,**](rasadmingetuseraccountserver.md) um diesen Servernamen abzurufen.
 
 </dd> <dt>
 
-*lpszuser* \[ in\]
+*lpszUser* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine mit NULL endenden Unicode-Zeichenfolge, die den Namen des Benutzers angibt, für den RAS-Informationen zu erhalten sind.
+Zeiger auf eine auf NULL endende Unicode-Zeichenfolge, die den Namen des Benutzers angibt, für den RAS-Informationen abzurufen sind.
 
 </dd> <dt>
 
 *pRasUser0* 
 </dt> <dd>
 
-Ein Zeiger auf die [**RAS- \_ Benutzer- \_ 0**](ras-user-0-str.md) -Struktur, die die RAS-Daten für den angegebenen Benutzer empfängt.
+Zeiger auf die [**RAS \_ USER \_ 0-Struktur,**](ras-user-0-str.md) die die RAS-Daten für den angegebenen Benutzer empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert ERROR \_ SUCCESS.
 
-Wenn die Funktion fehlschlägt, kann der folgende Fehlercode als Rückgabewert zurückgegeben werden.
+Wenn die Funktion fehlschlägt, kann der Rückgabewert der folgende Fehlercode sein.
 
 
 
 | Wert                                                                                            | Bedeutung                                                  |
 |--------------------------------------------------------------------------------------------------|----------------------------------------------------------|
-| <dl> <dt>**Nr \_ buf**</dt> </dl> | Nicht genügend Arbeitsspeicher zum Ausführen dieser Funktion.<br/> |
+| <dl> <dt>**NERR \_ BufTooSmall**</dt> </dl> | Nicht genügend Arbeitsspeicher, um diese Funktion auszuführen.<br/> |
 
 
 
  
 
-Es sind keine erweiterten Fehlerinformationen für diese Funktion vorhanden. " [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)" nicht aufrufen.
+Für diese Funktion sind keine erweiterten Fehlerinformationen vorhanden. Rufen [**Sie getLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)nicht auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,29 +91,29 @@ Es sind keine erweiterten Fehlerinformationen für diese Funktion vorhanden. " [
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows 2000 Professional<br/>                                                   |
 | Ende des Supports (Server)<br/> | Windows 2000 Server<br/>                                                         |
-| Header<br/>                | <dl> <dt>Rassapi. h</dt> </dl>   |
-| Bibliothek<br/>               | <dl> <dt>Rassapi. lib</dt> </dl> |
+| Header<br/>                | <dl> <dt>Rassapi.h</dt> </dl>   |
+| Bibliothek<br/>               | <dl> <dt>Rassapi.lib</dt> </dl> |
 | DLL<br/>                   | <dl> <dt>Rassapi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Remote Zugriffs Dienst (RAS) (Übersicht)](about-remote-access-service.md)
+[Remotezugriffsdienst (RAS) – Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
-[RAS-Server-Verwaltungsfunktionen](ras-server-administration-functions.md)
+[RAS-Serververwaltungsfunktionen](ras-server-administration-functions.md)
 </dt> <dt>
 
-[**RAS- \_ Benutzer \_ 0**](ras-user-0-str.md)
+[**\_RAS-BENUTZER \_ 0**](ras-user-0-str.md)
 </dt> <dt>
 
-[**Rasadmingetuseraccountserver**](rasadmingetuseraccountserver.md)
+[**RasAdminGetUserAccountServer**](rasadmingetuseraccountserver.md)
 </dt> <dt>
 
-[**Rasadminusereintinfo**](rasadminusersetinfo.md)
+[**RasAdminUserSetInfo**](rasadminusersetinfo.md)
 </dt> </dl>
 
  

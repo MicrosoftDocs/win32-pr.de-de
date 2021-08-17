@@ -1,25 +1,25 @@
 ---
-title: Multicast Routing Protokoll
-description: Ein Multicast Routing Protokoll ist ein Dienst Anbietertyp, der als Client innerhalb des Frameworks der routerarchitektur fungiert. Die Routing Architektur ist so konzipiert, dass Sie durch solche Router-Client Module erweitert wird.
+title: Multicastroutingprotokoll
+description: Ein Multicastroutingprotokoll ist eine Art von Dienstanbieter, der als Client innerhalb des Frameworks der Routerarchitektur fungiert. Die Routingarchitektur ist so konzipiert, dass sie durch solche Routerclientmodule erweitert wird.
 ms.assetid: 40a5c1e7-04f5-40be-8e95-3c754030a838
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 962e585070bff7d09a5853edbb4af9912a7813bb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8f99398919abe76721f39014e95c1e40e6d089f284cb56a002b9a4113fb2f229
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117790404"
 ---
-# <a name="multicast-routing-protocol"></a>Multicast Routing Protokoll
+# <a name="multicast-routing-protocol"></a>Multicastroutingprotokoll
 
-Ein Multicast Routing Protokoll ist ein Dienst Anbietertyp, der als Client innerhalb des Frameworks der routerarchitektur fungiert. Die Routing Architektur ist so konzipiert, dass Sie durch solche Router-Client Module erweitert wird.
+Ein Multicastroutingprotokoll ist eine Art von Dienstanbieter, der als Client innerhalb des Frameworks der Routerarchitektur fungiert. Die Routingarchitektur ist so konzipiert, dass sie durch solche Routerclientmodule erweitert wird.
 
-Ein Multicast Routing Protokoll verwaltet die Gruppenmitgliedschaft und steuert den Pfad, den Multicast Daten über das Netzwerk übernehmen. Beispiele für Multicast-Routing Protokolle sind: Protokoll unabhängige Multicast-Multicast (PIM), Multicast Open kürzeste Path First (MUF) und Distance Vector Multicast Routing Protocol (DVMRP). Das Internet Group Management Protocol (IGMP) ist ein spezielles Multicast Routing Protokoll, das als Vermittler zwischen Hosts und Routern fungiert.
+Ein Multicastroutingprotokoll verwaltet die Gruppenmitgliedschaft und steuert den Pfad, den Multicastdaten über das Netzwerk übernehmen. Beispiele für Multicastroutingprotokolle sind: Protocol Independent Multicast (PIM), Multicast Open Shortest Path First (MOSPF) und Distance Vector Multicast Routing Protocol (DVMRP). IgMP (Internet Group Management Protocol) ist ein spezielles Multicastroutingprotokoll, das als Vermittler zwischen Hosts und Routern fungiert.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,26 +1,26 @@
 ---
-description: 'Die folgenden Enumerationstypen werden mit Energie Schemas verwendet:'
+description: 'Die folgenden Enumerationstypen werden mit Energieschemas verwendet:'
 ms.assetid: f78cd97f-586f-4091-ab4a-5f109a0f679a
-title: Aufzählungs Typen der Energie Verwaltung
+title: Energieverwaltungsenumerationstypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d76393803043a87d334e17b5bf5b5efc68a1c97
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2f1df0a8ac3c0b9e26960c04ec978c5f88744e5d672613714c0c9f7036b7baaf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350226"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119961450"
 ---
-# <a name="power-management-enumeration-types"></a>Aufzählungs Typen der Energie Verwaltung
+# <a name="power-management-enumeration-types"></a>Energieverwaltungsenumerationstypen
 
-Die folgenden Enumerationstypen werden mit Energie Schemas verwendet:
+Die folgenden Enumerationstypen werden mit Energieschemas verwendet:
 
 <dl>
 
 [**EFFECTIVE_POWER_MODE**](/windows/desktop/api/powersetting/ne-powersetting-effective_power_mode)  
-[**Energie \_ Aktion**](/windows/desktop/api/WinNT/ne-winnt-power_action)  
-[**Power \_ Data- \_ Accessor**](/windows/desktop/api/PowrProf/ne-powrprof-power_data_accessor)  
-[**Power \_ Platform- \_ Rolle**](/windows/desktop/api/WinNT/ne-winnt-power_platform_role)  
-[**System \_ Energie \_ Zustand**](/windows/desktop/api/WinNT/ne-winnt-system_power_condition)  
-[**System \_ Energie \_ Zustand**](/windows/desktop/api/WinNT/ne-winnt-system_power_state)  
+[**POWER \_ ACTION**](/windows/desktop/api/WinNT/ne-winnt-power_action)  
+[**POWER \_ DATA \_ ACCESSOR**](/windows/desktop/api/PowrProf/ne-powrprof-power_data_accessor)  
+[**POWER \_ \_ PLATFORM-ROLLE**](/windows/desktop/api/WinNT/ne-winnt-power_platform_role)  
+[**\_ \_ SYSTEMSTROMBEDINGUNG**](/windows/desktop/api/WinNT/ne-winnt-system_power_condition)  
+[**\_ \_ SYSTEMSTROMZUSTAND**](/windows/desktop/api/WinNT/ne-winnt-system_power_state)  
 </dl>

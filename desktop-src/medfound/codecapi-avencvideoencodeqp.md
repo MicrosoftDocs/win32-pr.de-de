@@ -1,17 +1,17 @@
 ---
 description: Gibt den Quantisierungsparameter (QP) für die Videocodierung an.
 ms.assetid: 9E3B5E2D-3583-4C89-BC2A-4AC3C5545673
-title: CODECAPI_AVEncVideoEncodeQP-Eigenschaft (codecapi. h)
+title: CODECAPI_AVEncVideoEncodeQP (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eec6c746f2f3c902ca416097571abaf5953956cb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a9ed7ba8e3cf522c1e3cfa07d22cf5e37639717c230ca571ffd89d9e1d513a0d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106339723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974889"
 ---
-# <a name="codecapi_avencvideoencodeqp-property"></a>Codecapi \_ avencvideoencodeqp (Eigenschaft)
+# <a name="codecapi_avencvideoencodeqp-property"></a>CODECAPI \_ AVEncVideoEncodeQP (Eigenschaft)
 
 Gibt den Quantisierungsparameter (QP) für die Videocodierung an.
 
@@ -21,24 +21,24 @@ Gibt den Quantisierungsparameter (QP) für die Videocodierung an.
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencvideoencodeqp**
+**CODECAPI \_ AVEncVideoEncodeQP**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Satz von 4 16-Bit-Feldern, die verwendet werden, um die Frame-QPS in der Fixed-QP-Codierung anzugeben.
+Ein Satz von vier 16-Bit-Feldern, die verwendet werden, um die Frame-QPs in der Fixed QP-Codierung anzugeben.
 
-Die Felder lauten:
+Die Felder sind:
 
 -   Bits 0-15: Standard-QP
--   Bits 16-31: für I-Frames verwendetes QP
--   Bits 32-47: für P-Frames verwendetes QP
--   Bits 48-63: für B-Frames verwendetes QP
+-   Bits 16-31: QP für I-Frames
+-   Bits 32-47: QP für P-Frames
+-   Bits 48-63: QP für B-Frames
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft wird auch mit [H. 264 UVC 1,5-Kamera Codierern](camera-encoder-h264-uvc-1-5.md)verwendet.
+Diese Eigenschaft wird auch mit [H.264 UVC 1.5-Kameraencodern verwendet.](camera-encoder-h264-uvc-1-5.md)
 
-Um eine konsistente Verwendung für verschiedene Encoder sicherzustellen, sollten Sie davon ausgehen, dass Encoder nur das Standard-QP betrachten und QP-Werte für e/a/B-Bilder ignorieren können.
+Um eine konsistente Nutzung für verschiedene Encoder zu ermöglichen, sollten Sie davon ausgehen, dass Encoder nur den Standard-QP betrachten und QP-Werte für E/A-Bilder ignorieren können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,20 +46,20 @@ Um eine konsistente Verwendung für verschiedene Encoder sicherzustellen, sollte
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
-[**Icodecapi**](/windows/desktop/api/strmif/nn-strmif-icodecapi)
+[**ICodecAPI**](/windows/desktop/api/strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

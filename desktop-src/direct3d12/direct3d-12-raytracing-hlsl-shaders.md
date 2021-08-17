@@ -5,12 +5,12 @@ ms.assetid: ''
 ms.localizationpriority: low
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ca19081b1ea963851e82d18912153434c3e38d1
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: cfc2321511be2ef912a6dce6710b233cb59dcc7712e9e8f63db890d8707822c7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112394835"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117733773"
 ---
 # <a name="direct3d-12-raytracing-hlsl-shaders"></a>Direct3D 12-Raytracing, HLSL-Shader
 
@@ -23,7 +23,7 @@ Die folgenden HLSL-Shader unterstützen die Direct3D 12-Raytracingpipeline. Bei 
 | Thema                                                                                                       | Beschreibung                                                                                                                                                                                                                                                                                             |
 |-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Any Hit-Shader**](any-hit-shader.md)<br/>                              | Ein Shader, der aufgerufen wird, wenn Strahlschnittmengen nicht deckend sind.<br/>                                                                                                                                                                                                                                              |
-| [**Callable-Shader**](callable-shader.md)<br/>                              | Ein Shader, der von einem anderen Shader mit der systeminternen **CallShader-Eigenschaft** aufgerufen wird.<br/>                                                                                                                                                                                                                                              |
+| [**Callable-Shader**](callable-shader.md)<br/>                              | Ein Shader, der von einem anderen Shader mit der **systeminternen CallShader-Eigenschaft** aufgerufen wird.<br/>                                                                                                                                                                                                                                              |
 | [**Closest Hit-Shader**](closest-hit-shader.md)<br/>                              | Ein Shader, der aufgerufen wird, wenn er aktiviert ist und der nächste Treffer bestimmt wurde oder die Suche nach Strahlschnitten beendet wurde.<br/>                                                                                                                                                                                                                                              |
 | [**Intersection-Shader**](intersection-shader.md)<br/>                              | Ein Shader, der verwendet wird, um benutzerdefinierte Schnittmengenprimitive für Lichtstrahl zu implementieren, der ein zugeordnetes umgebendes Volumen (begrenzungsfeld) überschneidet.<br/>                                                                                                                                                                                                                                              |
 | [**Miss-Shader**](miss-shader.md)<br/>                              | Ein Shader, der aufgerufen wird, wenn keine Strahlkreuzungen gefunden oder akzeptiert werden.<br/>                                                                                                                                                                                                                                              |

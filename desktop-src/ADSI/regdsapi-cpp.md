@@ -18,14 +18,14 @@ In der Beispielanbieterkomponente befinden sich Funktionen, die eine API darstel
 
 
 
-| Methode                             | BESCHREIBUNG                                                                                                                                                                                    |
+| Methode                             | Beschreibung                                                                                                                                                                                    |
 |------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **SampleDSOpenObject**             | Öffnen Sie dieses Objekt nach Namen. Wenn der Typparameter der Schemaklasse **NULL ist,** geben Sie den gefundenen Typ ein. Ruft ein Handle für das -Objekt ab.                                                             |
 | **SampleDSCloseObject**            | Verwenden Sie das von **SampleDSOpenObject abgerufene Handle.**                                                                                                                                            |
 | **SampleDSRDNEnum**                | Rufen Sie das Handle für ein Enumeratorobjekt ab, um die Enumeration relativer Distinguished Names (RDNs) aus einem Containerobjekt zu verwalten.                                                          |
 | **SampleDSNextRDN**                | Rufen Sie mithilfe des von **SampleDSRDNEnum abgerufenen** Handles den nächsten relativen Distinguished Name aus diesem Containerobjekt ab.                                                                        |
 | **SampleDSFreeEnum**               | Geben Sie das in **SampleDSRDNEnum** zugeordnete Enumeratorobjekt frei.                                                                                                                                   |
-| **SampleDSModifyObject**           | Ändern Sie die Eigenschaften eines Objekts im Verzeichnisdienst mit dem Handle des Objekts und einer Liste von Attributen und deren Werten.                                                              |
+| **SampleDSModifyObject**           | Ändern Sie die Eigenschaften eines Objekts im Verzeichnisdienst, indem Sie das Handle des Objekts und eine Liste von Attributen und deren Werten angeben.                                                              |
 | **SampleDSReadObject**             | Liest die Eigenschaften des Objekts aus dem Verzeichnisdienst. Ordnen Sie die Syntax aus dem nativen Speicher den entsprechenden ADS-Syntaxwerten zu. Behandeln Sie Eigenschaften mit mehreren Werten entsprechend. |
 | **SampleDSGetPropertyDefinition**  | Suchen Sie im Schema alle Eigenschaftendefinitionen und deren Attribute für diesen Typ von Schemaklassenobjekt.                                                                                     |
 | **SampleDSGetPropertyDefinition**  | Suchen Sie im Schema nach dieser Eigenschaft und ihren Attributen nach Namen.                                                                                                                               |

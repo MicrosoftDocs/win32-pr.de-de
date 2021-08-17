@@ -4,8 +4,8 @@ description: Der TCP-Verbindungspunkt.
 ms.assetid: f61f7d54-958e-4f34-852e-222338c26de0
 ms.tgt_platform: multiple
 keywords:
-- AD-SQL MS-SQL-TCPIP-Attribut
-- AD-Schema des mS-SQL-TCPIP-Attributs
+- AD-Schema des MS-SQL-TCPIP-Attributs
+- mS-SQL-TCPIP-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Der TCP-Verbindungspunkt.
 | Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.            |
 | Updatehäufigkeit  | Beim Systemstart.                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1377                     |
-| System-Id-Guid    | 8ac263a6-ccee-11d2-9993-0000f87a57d4        |
+| System-ID-GUID    | 8ac263a6-ccee-11d2-9993-0000f87a57d4        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -57,10 +57,10 @@ Der TCP-Verbindungspunkt.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | Falsch                                                     |
-| Is-Single-Valued       | Richtig                                                      |
-| Ist indiziert             | Falsch                                                     |
-| Im globalen Katalog      | Falsch                                                     |
+| System-Only            | False                                                     |
+| Ist einwertig       | True                                                      |
+| Ist indiziert             | False                                                     |
+| Im globalen Katalog      | False                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
@@ -78,10 +78,10 @@ Der TCP-Verbindungspunkt.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | Falsch                                                     |
-| Is-Single-Valued       | Richtig                                                      |
-| Ist indiziert             | Falsch                                                     |
-| Im globalen Katalog      | Falsch                                                     |
+| System-Only            | False                                                     |
+| Ist einwertig       | True                                                      |
+| Ist indiziert             | False                                                     |
+| Im globalen Katalog      | False                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
@@ -99,10 +99,10 @@ Der TCP-Verbindungspunkt.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | Falsch                                                     |
-| Is-Single-Valued       | Richtig                                                      |
-| Ist indiziert             | Falsch                                                     |
-| Im globalen Katalog      | Falsch                                                     |
+| System-Only            | False                                                     |
+| Ist einwertig       | True                                                      |
+| Ist indiziert             | False                                                     |
+| Im globalen Katalog      | False                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
@@ -120,10 +120,10 @@ Der TCP-Verbindungspunkt.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | Falsch                                                     |
-| Ist einwertig       | Richtig                                                      |
-| Ist indiziert             | Falsch                                                     |
-| Im globalen Katalog      | Falsch                                                     |
+| System-Only            | False                                                     |
+| Ist einwertig       | True                                                      |
+| Ist indiziert             | False                                                     |
+| Im globalen Katalog      | False                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
@@ -141,10 +141,10 @@ Der TCP-Verbindungspunkt.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | Falsch                                                     |
-| Ist einwertig       | Richtig                                                      |
-| Ist indiziert             | Falsch                                                     |
-| Im globalen Katalog      | Falsch                                                     |
+| System-Only            | False                                                     |
+| Ist einwertig       | True                                                      |
+| Ist indiziert             | False                                                     |
+| Im globalen Katalog      | False                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
@@ -162,10 +162,10 @@ Der TCP-Verbindungspunkt.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | Falsch                                                     |
-| Ist einwertig       | Richtig                                                      |
-| Ist indiziert             | Falsch                                                     |
-| Im globalen Katalog      | Falsch                                                     |
+| System-Only            | False                                                     |
+| Ist einwertig       | True                                                      |
+| Ist indiziert             | False                                                     |
+| Im globalen Katalog      | False                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |

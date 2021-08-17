@@ -1,12 +1,12 @@
 ---
-title: Setvirtualipactive-Methode der Win32_TSVirtualIP-Klasse
-description: Legt den Wert der virtualipactive-Eigenschaft fest.
+title: SetVirtualIPActive-Methode der Win32_TSVirtualIP-Klasse
+description: Legt den VirtualIPActive-Eigenschaftswert fest.
 ms.assetid: e485aeb1-afdf-4572-bac7-daa80d903edc
 ms.tgt_platform: multiple
 keywords:
-- Setvirtualipactive-Methode Remotedesktopdienste
-- Setvirtualipactive-Methode Remotedesktopdienste, Win32_TSVirtualIP-Klasse
-- Win32_TSVirtualIP-Klasse Remotedesktopdienste, setvirtualipactive-Methode
+- SetVirtualIPActive-Methode Remotedesktopdienste
+- SetVirtualIPActive-Methode Remotedesktopdienste , Win32_TSVirtualIP-Klasse
+- Win32_TSVirtualIP-Klasse Remotedesktopdienste , SetVirtualIPActive-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 06534c967c5d86a7a19c060254b3b988ff98b17e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2ab43a007a2a8b04e91d5225e648d5667a87c468cbd52c005d85f4ba6496c919
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118850919"
 ---
-# <a name="setvirtualipactive-method-of-the-win32_tsvirtualip-class"></a>Setvirtualipactive-Methode der Win32- \_ Klasse "tvirtualip"
+# <a name="setvirtualipactive-method-of-the-win32_tsvirtualip-class"></a>SetVirtualIPActive-Methode der Win32 \_ TSVirtualIP-Klasse
 
-Legt den Wert der **virtualipactive** -Eigenschaft fest.
+Legt den **VirtualIPActive-Eigenschaftswert** fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,34 +43,34 @@ uint32 SetVirtualIPActive(
 
 <dl> <dt>
 
-*Virtualipactive* \[ in\]
+*VirtualIPActive* \[ In\]
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Gibt an, ob die IP-Virtualisierung auf dem Server aktiv ist. Dies kann einer der folgenden Werte sein:
+Gibt an, ob die IP-Virtualisierung auf dem Server aktiv ist. Dies kann einer der folgenden Werte sein.
 
 <dt>
 
 Null
 </dt> <dd>
 
-Die IP-Virtualisierung ist nicht aktiv.
+DIE IP-Virtualisierung ist nicht aktiv.
 
 </dd> <dt>
 
-ungleich NULL
+Nonzero
 </dt> <dd>
 
-Die IP-Virtualisierung ist aktiv.
+IP-Virtualisierung ist aktiv.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) . Die-Methode gibt einen Fehler zurück, wenn die Einstellung Untergruppen Richtlinien Steuerung liegt.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden [Sie unter Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md) Die -Methode gibt einen Fehler zurück, wenn die Einstellung der Gruppenrichtliniensteuerung unterliegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,16 +81,16 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. E
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                       |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ virtualialip**](win32-tsvirtualip.md)
+[**Win32 \_ TSVirtualIP**](win32-tsvirtualip.md)
 </dt> </dl>
 
  

@@ -1,32 +1,32 @@
 ---
-title: Konfiguration des Kompressors und dekompressors
-description: Konfiguration des Kompressors und dekompressors
+title: Konfiguration von "Metrik" und "Dekomprimierung"
+description: Konfiguration von "Metrik" und "Dekomprimierung"
 ms.assetid: 677241d2-3ddd-423a-a1e7-b5fa3ce0a4eb
 keywords:
-- Videokomprimierungs-Manager (VCM), Konfigurieren von Kompressoren
-- VCM (Videokomprimierungs-Manager), Konfigurieren von Kompressoren
+- Videokomprimierungs-Manager (VCM), Konfigurieren von Patienten
+- VCM (Videokomprimierungs-Manager),Konfigurieren von Patienten
 - ICM_CONFIGURE Meldung
-- Icqueryconfigure-Makro
+- ICQueryConfigure-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a38fbbeb852d09296e5be7929738c9d4d71f118e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c8905ea35d65fc3eda3ddee130039503d8e26555665aae9efa517cb399349475
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947642"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144975"
 ---
-# <a name="compressor-and-decompressor-configuration"></a>Konfiguration des Kompressors und dekompressors
+# <a name="compressor-and-decompressor-configuration"></a>Konfiguration von "Metrik" und "Dekomprimierung"
 
-Die Anwendung kann den Kompressor oder die Debug-Konfiguration automatisch konfigurieren oder die Konfiguration durch den Benutzer zulassen. Wenn dies praktikabel ist, gestatten Sie dem Benutzer die Konfiguration des Kompressors oder der Debug-Konfiguration. Dies gibt Ihnen die Möglichkeit, alle Optionen für den-Kompressor oder-Dekompressor zu berücksichtigen.
+Ihre Anwendung kann die Entpackung oder den Dekomprimierer automatisch konfigurieren oder dem Benutzer erlauben, sie zu konfigurieren. Wenn dies praktikabel ist, erlauben Sie es dem Benutzer, den Entpackungs- oder Dekomprimierer zu konfigurieren. dadurch können Sie nicht alle Optionen für die Sprech- oder Dekomprimierung in Betracht ziehen.
 
-Der Benutzer kann den Kompressor oder Dekompressor mithilfe eines Konfigurations Dialogfelds konfigurieren. Sie können die [**ICM \_ configure**](icm-configure.md) -Nachricht an VCM senden (oder das [**icqueryconfigure**](/windows/desktop/api/Vfw/nf-vfw-icqueryconfigure) -Makro verwenden), um zu bestimmen, ob ein Kompressor oder Dekompressor ein Konfigurations Dialogfeld anzeigen kann. Wenn dies der Fall ist, senden Sie die ICM- \_ Konfigurations Nachricht (oder verwenden Sie das [**icconfigure**](/windows/desktop/api/Vfw/nf-vfw-icconfigure) -Makro), um Sie anzuzeigen.
+Der Benutzer kann die Entpackung oder den Dekomprimierer mithilfe eines Konfigurationsdialogfelds konfigurieren. Sie können die [**ICM \_ CONFIGURE-Nachricht**](icm-configure.md) an den VCM senden (oder das [**ICQueryConfigure-Makro**](/windows/desktop/api/Vfw/nf-vfw-icqueryconfigure) verwenden), um zu bestimmen, ob ein Komprimierungs- oder Dekomprimierer ein Konfigurationsdialogfeld anzeigen kann. Wenn ja, senden Sie die ICM \_ CONFIGURE-Nachricht (oder verwenden Sie das [**ICConfigure-Makro),**](/windows/desktop/api/Vfw/nf-vfw-icconfigure) um sie anzuzeigen.
 
-Die Anwendung kann die [**ICM \_ GetState**](icm-getstate.md) -und [**ICM \_ SetState**](icm-setstate.md) -Meldungen senden (oder die Makros [**icgetstatesize**](/windows/desktop/api/Vfw/nf-vfw-icgetstatesize), [**icgetstate**](/windows/desktop/api/Vfw/nf-vfw-icgetstate)und [**icsetstate**](/windows/desktop/api/Vfw/nf-vfw-icsetstate) verwenden), um den Status für einen Kompressor oder Dekompressor zu erhalten und festzulegen. Wenn die Anwendung den Status erstellt oder ändert, muss Sie vor dem Wiederherstellen des Status das Layout der Daten des Kompressors oder dekompressors abrufen. Wenn Ihre Anwendung den Status von einem Kompressor oder Dekompressor erhält und Sie zum Wiederherstellen des Status in einer nachfolgenden Sitzung verwendet, muss sichergestellt werden, dass nur die Statusinformationen wieder hergestellt werden, die vom verwendeten Kompressor oder Dekompressor abgerufen wurden.
+Ihre Anwendung kann die [**ICM \_ GETSTATE-**](icm-getstate.md) und [**ICM \_ SETSTATE-Nachrichten**](icm-setstate.md) senden (oder die [**IcGetStateSize-,**](/windows/desktop/api/Vfw/nf-vfw-icgetstatesize) [**ICGetState-**](/windows/desktop/api/Vfw/nf-vfw-icgetstate)und [**ICSetState-Makros**](/windows/desktop/api/Vfw/nf-vfw-icsetstate) verwenden), um den Status für einen Veralten oder Dekomprimierer abzurufen und festzulegen. Wenn Ihre Anwendung den Status erstellt oder ändert, muss sie das Layout der Druck- oder Dekomprimierungsdaten abrufen, bevor der Status wiederhergestellt wird. Wenn Ihre Anwendung den Status von einem Komprimierungs- oder Dekomprimierer erhält und sie verwendet, um den Status in einer nachfolgenden Sitzung wiederherzustellen, muss sie auch sicherstellen, dass nur Statusinformationen wiederhergestellt werden, die von der aktuell verwendeten Füllung oder dekomprimierung abgerufen wurden.
 
- 
+ 
 
- 
+ 
 
 
 

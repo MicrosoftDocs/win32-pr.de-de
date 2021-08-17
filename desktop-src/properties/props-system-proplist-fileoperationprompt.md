@@ -1,5 +1,5 @@
 ---
-description: Die Liste der Eigenschaften, die im Bestätigungsdialogfeld des Dateivorgangs angezeigt werden sollen.
+description: Die Liste der Eigenschaften, die im Bestätigungsdialogfeld für den Dateivorgang angezeigt werden.
 ms.assetid: 0280d798-c76a-4de6-9b83-ce5c0fe98fdb
 title: System.PropList.FileOperationPrompt
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118723002"
 ---
 # <a name="systemproplistfileoperationprompt"></a>System.PropList.FileOperationPrompt
 
-Die Liste der Eigenschaften, die im Bestätigungsdialogfeld des Dateivorgangs angezeigt werden sollen. Eigenschaften mit leeren Werten werden nicht angezeigt. Wenn diese Liste nicht angegeben ist, wird stattdessen die InfoTip-Eigenschaftenliste verwendet. Registrieren Sie sich unter dem regvalue von "FileOperationPrompt".
+Die Liste der Eigenschaften, die im Bestätigungsdialogfeld für den Dateivorgang angezeigt werden. Eigenschaften mit leeren Werten werden nicht angezeigt. Wenn diese Liste nicht angegeben ist, wird stattdessen die InfoTip-Eigenschaftenliste verwendet. Registrieren Sie sich unter dem regvalue von "FileOperationPrompt".
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

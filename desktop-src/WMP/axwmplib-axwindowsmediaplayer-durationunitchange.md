@@ -1,9 +1,9 @@
 ---
-title: Durationunitchange-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das durationunitchange-Ereignis ist für die zukünftige Verwendung reserviert.
+title: DurationUnitChange-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das DurationUnitChange-Ereignis ist für die zukünftige Verwendung reserviert.
 ms.assetid: d8d7da21-bc61-49f8-91bd-4c232295c1ac
 keywords:
-- Das durationunitchange-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- DurationUnitChange-Ereignis des AxWindowsMediaPlayer-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f90aa052c61893d83683d10f482cd05841a49fab
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1efa872389ad88a236808de64ed299dd3afc123cee59f39f1215f7a16bcb589f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365175"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136043"
 ---
-# <a name="durationunitchange-event-of-the-axwindowsmediaplayer-object"></a>Durationunitchange-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="durationunitchange-event-of-the-axwindowsmediaplayer-object"></a>DurationUnitChange-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das durationunitchange-Ereignis ist für die zukünftige Verwendung reserviert.
+Das DurationUnitChange-Ereignis ist für die zukünftige Verwendung reserviert.
 
 ``` syntax
 [C#]
@@ -41,19 +41,19 @@ Private Sub player_DurationUnitChange(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ durationunitchangeeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ durationunitchangeevent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ DurationUnitChangeEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ DurationUnitChangeEvent**, die die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft        | BESCHREIBUNG                               |
+| Eigenschaft        | Beschreibung                               |
 |-----------------|-------------------------------------------|
-| newdurationunit | **System. Int32** Nicht unterstützt.<br/> |
+| newDurationUnit | **System.Int32** Nicht unterstützt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Ereignis ist für die zukünftige Verwendung reserviert.
 
@@ -69,11 +69,11 @@ Dieses Ereignis ist für die zukünftige Verwendung reserviert.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> </dl>
 
  

@@ -1,42 +1,42 @@
 ---
 title: Remotedesktop ActiveX-Steuerelement
-description: Beschreibt, wie das Remotedesktop ActiveX-Steuerelement verwendet wird.
+description: Beschreibt die Verwendung des Remotedesktop ActiveX-Steuerelements.
 ms.assetid: 28DA1103-549F-4C56-B421-54CDFD1A4AF1
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 79a80b9793432a46b5baec5841c18b591c031f34
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 63d2fb83de4d779421b1b2f933dadc0bbca490332ab81f8c43d823575ec64989
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106337200"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119058648"
 ---
 # <a name="remote-desktop-activex-control"></a>Remotedesktop ActiveX-Steuerelement
 
-Beschreibt, wie das Remotedesktop ActiveX-Steuerelement verwendet wird.
+Beschreibt die Verwendung des Remotedesktop ActiveX-Steuerelements.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[Verwenden des Remotedesktop ActiveX-Steuer Elements](using-remote-desktop-web-connection.md)
+[Verwenden des Remotedesktop ActiveX-Steuerelements](using-remote-desktop-web-connection.md)
 </dt> <dd>
 
-So können Sie das Remotedesktop ActiveX-Steuerelement verwenden, um die Remotedesktopdienste Benutzer Darstellung anzupassen.
+Wie Sie das Remotedesktop ActiveX-Steuerelement verwenden können, um die Remotedesktopdienste Benutzerfreundlichkeit anzupassen.
 
 </dd> <dt>
 
-[Remotedesktop ActiveX-Steuerelement Verweis](remote-desktop-activex-control-reference.md)
+[referenz zum Remotedesktop ActiveX-Steuerelement](remote-desktop-activex-control-reference.md)
 </dt> <dd>
 
-Die folgenden Programmier Elemente werden mit dem Remotedesktop ActiveX-Steuerelement verwendet.
+Die folgenden Programmierelemente werden mit dem Remotedesktop ActiveX-Steuerelement verwendet.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

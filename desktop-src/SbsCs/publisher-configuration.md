@@ -1,32 +1,32 @@
 ---
-description: Eine Verleger Konfigurationsdatei leitet Anwendungen und Assemblys mit Abhängigkeit von einer Version einer parallelen Assembly Global um, um eine andere Version derselben Assembly zu verwenden.
+description: Eine Herausgeberkonfigurationsdatei leitet Anwendungen und Assemblys global um, die von einer Version einer parallelen Assembly abhängig sind, um eine andere Version derselben Assembly zu verwenden.
 ms.assetid: 9146c81e-8f43-4854-bbc4-1daaeb5fdda8
-title: Herausgeber Konfiguration
+title: Publisher Konfiguration
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c50ceb5263830cb1778aaaede673974cd7faca75
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1134fa29775fc34384f5da19e660d91de10532110304caf8b6ecacbb92fec87e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119141953"
 ---
-# <a name="publisher-configuration"></a>Herausgeber Konfiguration
+# <a name="publisher-configuration"></a>Publisher Konfiguration
 
-Eine [Verleger Konfigurationsdatei](publisher-configuration-files.md) leitet Anwendungen und Assemblys mit Abhängigkeit von einer Version einer parallelen Assembly Global um, um eine andere Version derselben Assembly zu verwenden. Dies ermöglicht es Anwendungen und Assemblys, die aktualisierte Assembly zu verwenden, ohne alle betroffenen Anwendungen neu erstellen zu müssen.
+Eine [Herausgeberkonfigurationsdatei](publisher-configuration-files.md) leitet Anwendungen und Assemblys global um, die von einer Version einer parallelen Assembly abhängig sind, um eine andere Version derselben Assembly zu verwenden. Dadurch können Anwendungen und Assemblys die aktualisierte Assembly verwenden, ohne alle betroffenen Anwendungen neu erstellen zu müssen.
 
-Die [Verleger Konfigurationsdateien](publisher-configuration-files.md) können vom Verleger einer Assembly bereitgestellt werden, wenn eine neue Version der Assembly mit kompatiblen Fehlerbehebungen oder Sicherheitsupdates ausgegeben wird. Die aktualisierte Version sollte vollständig abwärts kompatibel sein. Eine Verleger Konfigurationsdatei sollte nie zum Hinzufügen neuer Features verwendet werden, es sei denn, das Update ist vollständig abwärts kompatibel. Die Verleger Konfigurationsdateien sollten niemals verwendet werden, um die Haupt-oder neben Version einer Assembly zu erhöhen. Umleiten Sie z. b. die Assemblyversion 6.0.0.0 nicht an 7.0.0.0 oder 6.1.0.0.
+[Publisher Konfigurationsdateien](publisher-configuration-files.md) können vom Herausgeber einer Assembly bereitgestellt werden, wenn eine neue Version der Assembly mit kompatiblen Fehlerbehebungen oder Sicherheitsupdates ausgegeben wird. Die aktualisierte Version sollte vollständig abwärtskompatibel sein. Eine Herausgeberkonfigurationsdatei sollte niemals verwendet werden, um neue Features hinzuzufügen, es sei denn, das Update ist vollständig abwärtskompatibel. Publisher Konfigurationsdateien sollten nie verwendet werden, um die Haupt- oder Nebenversion einer Assembly zu erhöhen. Leiten Sie beispielsweise Assemblyversion 6.0.0.0 nicht zu 7.0.0.0 oder 6.1.0.0 um.
 
-Die Verleger Konfigurationsdateien sollten nur vom Verleger der Assembly ausgestellt werden. Assemblyentwickler sollten freigegebene parallele Assemblys und Verleger Konfigurationsdateien signieren. Verwenden Sie den gleichen Schlüssel, um die Assembly und die zugehörigen Verleger Konfigurationsdateien zu signieren. Die Verleger Konfigurationsdateien sollten mithilfe der gleichen Tools wie für Assemblys signiert werden. Informationen hierzu finden Sie unter [Beispiel für Assemblysignierung](assembly-signing-example.md) und [Erstellen signierter Dateien](creating-signed-files-and-catalogs.md)
+Publisher Konfigurationsdateien sollten nur vom Herausgeber der Assembly ausgegeben werden. Assemblyentwickler sollten freigegebene nebeneinander verwendete Assemblys und Herausgeberkonfigurationsdateien signieren. Verwenden Sie den gleichen Schlüssel, um die Assembly und die zugehörigen Herausgeberkonfigurationsdateien zu signieren. Publisher Konfigurationsdateien mit den gleichen Tools signiert werden sollten, die auch für Assemblys verwendet werden, finden Sie unter [AssemblySignierungsbeispiel](assembly-signing-example.md) und [Erstellen von signierten Dateien und Katalogen.](creating-signed-files-and-catalogs.md)
 
-In der Regel werden die neue Version einer Assembly und die zugehörige Verleger Konfigurationsdatei in einem Service Pack Update installiert. Die Verleger Konfigurationsdateien sollten nie als verteilbare Anwendungen mit Anwendungen bereitgestellt werden, da die Installation einer Verleger Konfigurationsdatei die Assemblys auf dem System Global umleitet. Wenn die zu Aktualisier Ende Assembly als verteilbare Komponente bereitgestellt wird, sollte der Herausgeber beide der folgenden Optionen bereitstellen.
+In der Regel werden die neue Version einer Assembly und die zugehörige Herausgeberkonfigurationsdatei in einem Service Pack-Update installiert. Publisher Konfigurationsdateien sollten niemals mit Anwendungen als weitervertreverteilbar bereitgestellt werden, da durch die Installation einer Herausgeberkonfigurationsdatei Assemblys global auf dem System umgeleitet werden. Wenn die zu aktualisierende Assembly als verteilbare Assembly bereitgestellt wird, sollte der Herausgeber beides bereitstellen:
 
--   Ein Windows Installer Paket (MSI-Datei), das die neue Version der Assembly mit der Verleger Konfiguration enthält. Dies kann als Service Pack oder QFE installiert werden, da der Kunde in diesem Fall das System global aktualisieren möchte. Diese Version des Pakets sollte nie von Anwendungen installiert werden.
--   Ein Windows Installer Mergemodul (MSM-Datei), das nur die neue Version der Assembly enthält. Diese Version ist möglicherweise in-Anwendungen enthalten.
+-   Ein Windows Installer-Paket (.msi-Datei), das die neue Version der Assembly mit Herausgeberkonfiguration enthält. Dies kann als Service Pack oder QFE installiert werden, da sich der Kunde in diesem Fall für eine globale Aktualisierung des Systems entschieden hat. Diese Version des Pakets sollte nie von Anwendungen installiert werden.
+-   Ein Windows Installer-Mergemodul (MSM-Datei), das nur die neue Version der Assembly enthält. Diese Version kann in Anwendungen enthalten sein.
 
-Anwendungen, die eine Mindestversion der Assembly benötigen, sollten ihre Abhängigkeit von der Mindestversion angeben. wenn die Mindestversion auf einem System nicht verfügbar ist, kann die Anwendung nicht gestartet werden. Wenn Sie als verteilbare Komponente verfügbar ist, sollte Sie in das Setup der Anwendung eingeschlossen werden.
+Anwendungen, die eine Mindestversion der Assembly erfordern, sollten ihre Abhängigkeit von der Mindestversion aufweisen. Wenn die Mindestversion auf einem System nicht verfügbar ist, kann die Anwendung nicht gestartet werden. Wenn sie als weitervertrendbar verfügbar ist, sollte sie in das Anwendungssetup aufgenommen werden.
 
-Wenn Sie beispielsweise die folgende [Verleger Konfigurationsdatei](publisher-configuration-files.md) installieren, wird die Bindung von Version 2.0.0.0 von Microsoft. Windows. SampleAssembly an Version 2.0.1.0 umgeleitet. Dadurch wird eine neue Richtlinie mit dem Namen 1.1.0.0. Policy unter% System Drive% \\ Windows \\ WinSxS \\ Policies \\ x86 \_ Policy. 2.0. Microsoft. Windows. SampleAssembly \_ 75e377300ab7b886 \_ x-WW \_ < *HashValue*> hinzugefügt.
+Wenn Sie beispielsweise die folgende [Herausgeberkonfigurationsdatei](publisher-configuration-files.md) installieren, wird die Bindung von Version 2.0.0.0 von Microsoft umgeleitet. Windows. SampleAssembly auf Version 2.0.1.0. Dadurch wird unter %systemDrive% windows winsxs policies x86 policy.2.0.Microsoft.Windows eine neue Richtlinie mit dem Namen \\ \\ \\ \\ \_ 1.1.0.0.Policy hinzugefügt. SampleAssembly \_ 75e377300ab7b886 \_ x-ww \_ < *hashvalue*>.
 
 ``` syntax
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -41,7 +41,7 @@ Wenn Sie beispielsweise die folgende [Verleger Konfigurationsdatei](publisher-co
 </assembly>
 ```
 
-Wenn Sie die folgende Verleger Konfigurationsdatei für dieselbe Assembly installieren, wird die Bindung von der 2.0.0.0-Version von Microsoft. Windows. SampleAssembly an Version 2.0.3.0 umgeleitet. Dadurch wird eine weitere Richtlinie mit dem Namen 2.1.0.0. Policy unter% System Drive% \\ Windows \\ WinSxS \\ Policies \\ x86 \_ Policy. 2.0. Microsoft. Windows. SampleAssembly \_ 75e377300ab7b886 \_ x-WW \_ < *HashValue*> hinzugefügt.
+Wenn Sie die folgende Herausgeberkonfigurationsdatei für dieselbe Assembly installieren, wird die Bindung von Version 2.0.0.0 von Microsoft umgeleitet. Windows. SampleAssembly auf Version 2.0.3.0. Dadurch wird unter %systemDrive% windows winsxs policies x86 policy.2.0.Microsoft.Windows eine weitere Richtlinie mit dem Namen \\ \\ \\ \\ \_ 2.1.0.0.Policy hinzugefügt. SampleAssembly \_ 75e377300ab7b886 \_ x-ww \_ < *hashvalue*>.
 
 ``` syntax
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>

@@ -4,12 +4,12 @@ description: Diese Dokumentation enthält eine Liste der 8 Blockmodi und Bitzuor
 ms.assetid: B1CEB729-6694-49BF-ACB9-FD1EFAB0B0D1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f9756582d7d5ac52d4c16b2f4734decebbd66ae8
-ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
+ms.openlocfilehash: 2f96bfd9c90697b47587048684239ecf084dd43a76e0ef76b9717fe09d3b3630
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "114436105"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119126165"
 ---
 # <a name="bc7-format-mode-reference"></a>REFERENZ ZUM BC7-Formatmodus
 
@@ -139,10 +139,10 @@ In BC7 können Sie die Alphakomponente auf eine der folgenden Arten codieren:
 -   Blocktypen mit getrennten Farb- und Alphakomponenten. In diesen Blöcken werden die Farb- und Alphawerte separat angegeben, jeweils mit einem eigenen Satz von Indizes. Daher verfügen sie über einen effektiven Vektor und einen separat codierten Skalarkanal, wobei der Vektor häufig die Farbkanäle R, G, B und der Skalar den Alphakanal \[ A \] \[ \] angibt. Zur Unterstützung dieses Ansatzes wird ein separates 2-Bit-Feld in der Codierung bereitgestellt, das die Angabe der separaten Kanalcodierung als Skalarwert ermöglicht. Daher kann der -Block eine der folgenden vier verschiedenen Darstellungen dieser Alphacodierung haben (wie durch das 2-Bit-Feld angegeben):
     -   RGB \| A: Alphakanal getrennt
     -   COLOR \| R: "roter" Farbkanal getrennt
-    -   TIPP \| G: "grüner" Farbkanal getrennt
+    -   SENDER \| G: "green" color channel separate
     -   RGA \| B: "blauer" Farbkanal getrennt
 
-    Der Decoder ordnet die Kanal reihenfolge nach der Decodierung wieder zu RGBA zurück, sodass das interne Blockformat für den Entwickler nicht sichtbar ist. Blöcke mit separaten Farb- und Alphakomponenten verfügen auch über zwei Sätze von Indexdaten: einen für den vektorierten Satz von Kanälen und einen für den Skalarkanal. (Im Fall von Modus 4 haben diese Indizes eine unterschiedliche Breite \[ von 2 oder 3 \] Bits. Modus 4 enthält auch einen 1-Bit-Selektor, der angibt, ob der Vektor oder der Skalarkanal die 3-Bit-Indizes verwendet.)
+    Der Decoder ordnet die Kanalreihenfolge nach der Decodierung wieder in RGBA an, sodass das interne Blockformat für den Entwickler nicht sichtbar ist. Blöcke mit separaten Farb- und Alphakomponenten verfügen auch über zwei Sätze von Indexdaten: einen für den vektorisierten Satz von Kanälen und einen für den skalaren Kanal. (Im Modus 4 weisen diese Indizes eine unterschiedliche Breite von \[ 2 oder 3 Bits \] auf. Modus 4 enthält auch eine 1-Bit-Auswahl, die angibt, ob der Vektor oder der Skalarkanal die 3-Bit-Indizes verwendet.)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

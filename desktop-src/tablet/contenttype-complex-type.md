@@ -12,12 +12,12 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 462c9df0ec4e5ded26c3b4aeefa94af79f380a95
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8c066263e932cdb958a489cb8702b046e8489e6c021c89557c439ae84e266c56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359562"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119092954"
 ---
 # <a name="contenttype-complex-type"></a>Komplexer ContentType-Typ
 
@@ -33,7 +33,7 @@ Definiert den Typ, der eine Form von Inhalt in einer Journal-XML-Datei enthält.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                     |
 
 

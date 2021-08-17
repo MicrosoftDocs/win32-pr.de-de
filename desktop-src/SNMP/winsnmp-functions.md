@@ -1,33 +1,33 @@
 ---
 title: WinSNMP-Funktionen
-description: Die mit WinSNMP verwendeten Funktionen sind in die folgenden funktionalen Gruppierungen unterteilt. Eine alphabetische Liste folgt.
+description: Die mit WinSNMP verwendeten Funktionen fallen in die folgenden Funktionsgruppierungen. Es folgt eine alphabetische Liste.
 ms.assetid: ae95ac47-81ff-4715-b3e9-e19c07223712
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9d7c5ebb49e8ec56c0d0b1174fd667d847c09d3f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e29169e8cf86b7f21ebbc40ced2ac37a46668c727183a9b2970eb368c7e81d85
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101942"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119142803"
 ---
 # <a name="winsnmp-functions"></a>WinSNMP-Funktionen
 
-\[SNMP ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen [Windows-Remoteverwaltung](/windows/desktop/WinRM/portal), bei dem es sich um die Microsoft-Implementierung von WS-man handelt.\]
+\[SNMP ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen [Windows Remoteverwaltung](/windows/desktop/WinRM/portal), bei dem es sich um die Microsoft-Implementierung von WS-Man handelt.\]
 
-Die mit WinSNMP verwendeten Funktionen sind in die folgenden funktionalen Gruppierungen unterteilt. Eine alphabetische Liste folgt.
+Die mit WinSNMP verwendeten Funktionen fallen in die folgenden Funktionsgruppierungen. Es folgt eine alphabetische Liste.
 
 -   [Kommunikationsfunktionen](#winsnmp-communications-functions)
--   [Entitäts-und Kontextfunktionen](#winsnmp-entity-and-context-functions)
+-   [Entitäts- und Kontextfunktionen](#winsnmp-entity-and-context-functions)
 -   [Datenbankfunktionen](#winsnmp-database-functions)
 -   [PDU-Funktionen](#winsnmp-pdu-functions)
 -   [Hilfsfunktionen](#winsnmp-utility-functions)
--   [Variablen Bindungsfunktionen](#winsnmp-variable-binding-functions)
+-   [Variablenbindungsfunktionen](#winsnmp-variable-binding-functions)
 -   [Alphabetische Liste der WinSNMP-Funktionen](/windows)
 
 ## <a name="winsnmp-communications-functions"></a>WinSNMP-Kommunikationsfunktionen
 
-Die WinSNMP-Kommunikationsfunktionen stellen eine Schnittstelle zwischen der aufrufenden WinSNMP-Anwendung und der Microsoft WinSNMP-Implementierung bereit. Die-Implementierung übernimmt die Kommunikation zwischen der Anwendung und anderen Verwaltungs Entitäten.
+Die WinSNMP-Kommunikationsfunktionen stellen eine Schnittstelle zwischen der aufrufenden WinSNMP-Anwendung und der Microsoft WinSNMP-Implementierung bereit. Die Implementierung übernimmt die Kommunikation zwischen der Anwendung und anderen Verwaltungsentitäten.
 
 
 
@@ -39,64 +39,64 @@ Die WinSNMP-Kommunikationsfunktionen stellen eine Schnittstelle zwischen der auf
 <thead>
 <tr class="header">
 <th>Funktion</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcancelmsg"><strong>Snmpcancelmsg</strong></a></td>
-<td>Fordert an, dass von der Microsoft WinSNMP-Implementierung Neuübertragungs Versuche und Timeout Benachrichtigungen für eine SNMP-Anforderungs Nachricht abgebrochen werden.</td>
+<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcancelmsg"><strong>SnmpCancelMsg</strong></a></td>
+<td>Fordert an, dass die Microsoft WinSNMP-Implementierung Neuübertragungsversuche und Time out-Benachrichtigungen für eine SNMP-Anforderungsnachricht abbricht.</td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcleanup"><strong>Snmpcleanup</strong></a></td>
-<td>Informiert die Implementierung, dass eine Anwendung die Verbindung trennt und keine zugeordneten Ressourcen mehr erfordert.</td>
+<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcleanup"><strong>SnmpCleanup</strong></a></td>
+<td>Informiert die Implementierung, dass eine Anwendung die Verbindung trennt und keine zugeordneten Ressourcen mehr benötigt.</td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcleanupex"><strong>Snmpcleanupex</strong></a></td>
-<td>Führt eine Bereinigung durch, wenn keine ausstehenden erfolgreichen Aufrufe von <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartup"><strong>SnmpStartup</strong></a> oder <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartupex"><strong>snmpstartupex</strong></a> innerhalb einer WinSNMP-Anwendung vorhanden sind.</td>
+<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcleanupex"><strong>SnmpCleanupEx</strong></a></td>
+<td>Führt eine Bereinigung aus, wenn in einer WinSNMP-Anwendung keine ausstehenden erfolgreichen Aufrufe von <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartup"><strong>SnmpStartup</strong></a> oder <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartupex"><strong>SnmpStartupEx</strong></a> vorhanden sind.</td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpclose"><strong>Snmpclose</strong></a></td>
-<td>Ermöglicht der Implementierung, die Zuordnung von Ressourcen, die einer Sitzung zugeordnet sind, und das Schließen der Kommunikationsmechanismen zu trennen.</td>
+<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpclose"><strong>SnmpClose</strong></a></td>
+<td>Ermöglicht der Implementierung das Zuordnen von Ressourcen, die einer Sitzung zugeordnet sind, und das Schließen von Kommunikationsmechanismen.</td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession"><strong>Snmpkreatesession</strong></a></td>
-<td>Fordert die-Implementierung auf, eine WinSNMP-Sitzung zu öffnen und Ressourcen und Kommunikationsmechanismen zuzuordnen. Beim Entwickeln neuer WinSNMP-Anwendungen wird empfohlen, dass Sie die <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession"><strong>snmpcreatesession</strong></a> -Funktion aufrufen, um eine WinSNMP-Sitzung zu öffnen, anstatt die <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpopen"><strong>snmpopen</strong></a> -Funktion aufzurufen.</td>
+<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession"><strong>SnmpCreateSession</strong></a></td>
+<td>Fordert die Implementierung auf, eine WinSNMP-Sitzung zu öffnen und Ressourcen und Kommunikationsmechanismen zuzuordnen. Beim Entwickeln neuer WinSNMP-Anwendungen wird empfohlen, die <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession"><strong>SnmpCreateSession-Funktion</strong></a> aufzurufen, um eine WinSNMP-Sitzung zu öffnen, anstatt die <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpopen"><strong>SnmpOpen-Funktion</strong></a> aufzurufen.</td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmplisten"><strong>Snmplauschen</strong></a></td>
-<td>Registriert oder hebt die Registrierung einer WinSNMP-Anwendung als SNMP-Agent auf.</td>
+<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmplisten"><strong>SnmpListen</strong></a></td>
+<td>Registriert oder entfernt die Registrierung einer WinSNMP-Anwendung als SNMP-Agent.</td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpopen"><strong>Snmpopen</strong></a></td>
-<td>Fordert die-Implementierung auf, eine WinSNMP-Sitzung zu öffnen und Ressourcen und Kommunikationsmechanismen zuzuordnen. Beim Entwickeln neuer WinSNMP-Anwendungen wird empfohlen, dass Sie die <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession"><strong>snmpcreatesession</strong></a> -Funktion aufrufen, um eine WinSNMP-Sitzung zu öffnen, anstatt die <strong>snmpopen</strong> -Funktion aufzurufen.</td>
+<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpopen"><strong>SnmpOpen</strong></a></td>
+<td>Fordert die Implementierung auf, eine WinSNMP-Sitzung zu öffnen und Ressourcen und Kommunikationsmechanismen zuzuordnen. Beim Entwickeln neuer WinSNMP-Anwendungen wird empfohlen, die <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession"><strong>SnmpCreateSession-Funktion</strong></a> aufzurufen, um eine WinSNMP-Sitzung zu öffnen, anstatt die <strong>SnmpOpen-Funktion</strong> aufzurufen.</td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg"><strong>Snmprecvmsg</strong></a></td>
-<td>Gibt SNMP-Nachrichten und ausstehende Trap Daten und Benachrichtigungen zurück.</td>
+<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg"><strong>SnmpRecvMsg</strong></a></td>
+<td>Gibt SNMP-Nachrichten und ausstehende Trapdaten und Benachrichtigungen zurück.</td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpregister"><strong>Snmpregiester</strong></a></td>
-<td>Informiert die-Implementierung, dass sich die Anwendung für Traps und Benachrichtigungen registrieren oder deren Registrierung aufheben muss.</td>
+<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpregister"><strong>SnmpRegister</strong></a></td>
+<td>Informiert die Implementierung darüber, dass die Anwendung die Registrierung für Traps und Benachrichtigungen aufheben muss.</td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg"><strong>Snmpsendmsg</strong></a></td>
-<td>Fordert an, dass die-Implementierung eine Protokolldaten Einheit überträgt.</td>
+<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg"><strong>SnmpSendMsg</strong></a></td>
+<td>Fordert an, dass die Implementierung eine Protokolldateneinheit überträgt.</td>
 </tr>
 <tr class="odd">
 <td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartup"><strong>SnmpStartup</strong></a></td>
-<td>Benachrichtigt die-Implementierung, Initialisierungs Prozeduren für die Anwendung auszuführen. Eine Anwendung muss die <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartup"><strong>SnmpStartup</strong></a> -Funktion erfolgreich aufrufen, bevor Sie eine andere WinSNMP-Funktion aufruft.</td>
+<td>Benachrichtigt die Implementierung, Initialisierungsverfahren für die Anwendung auszuführen. Eine Anwendung muss die <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartup"><strong>SnmpStartup-Funktion</strong></a> erfolgreich aufrufen, bevor sie eine andere WinSNMP-Funktion aufruft.</td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartupex"><strong>Snmpstartupex</strong></a></td>
-<td>Benachrichtigt die Microsoft WinSNMP-Implementierung, dass die WinSNMP-Anwendung die Dienste der Implementierung erfordert. <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartupex"><strong>Snmpstartupex</strong></a> ermöglicht die Unterstützung für mehrere unabhängige Softwaremodule, die WinSNMP innerhalb derselben Anwendung verwenden.</td>
+<td><a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartupex"><strong>SnmpStartupEx</strong></a></td>
+<td>Benachrichtigt die Microsoft WinSNMP-Implementierung, dass die WinSNMP-Anwendung die Dienste der Implementierung erfordert. <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartupex"><strong>SnmpStartupEx</strong></a> ermöglicht die Unterstützung mehrerer unabhängiger Softwaremodule, die WinSNMP innerhalb derselben Anwendung verwenden.</td>
 </tr>
 <tr class="odd">
 <td><a href="/windows/desktop/api/Winsnmp/nc-winsnmp-snmpapi_callback"><strong>SNMPAPI_CALLBACK</strong></a></td>
 <td>Benachrichtigt eine WinSNMP-Sitzung, dass eine SNMP-Nachricht oder ein asynchrones Ereignis verfügbar ist.
 <blockquote>
 [!Note]<br />
-Diese Rückruffunktion gilt nur für Sitzungen, die als Ergebnis eines Aufrufs der <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession"><strong>snmpkreatesession</strong></a> -Funktion geöffnet wurden.
+Diese Rückruffunktion gilt nur für Sitzungen, die als Ergebnis eines Aufrufs der <a href="/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession"><strong>SnmpCreateSession-Funktion</strong></a> geöffnet wurden.
 </blockquote>
 <br/></td>
 </tr>
@@ -107,21 +107,21 @@ Diese Rückruffunktion gilt nur für Sitzungen, die als Ergebnis eines Aufrufs d
 
  
 
-## <a name="winsnmp-entity-and-context-functions"></a>WinSNMP-Entitäts-und Kontextfunktionen
+## <a name="winsnmp-entity-and-context-functions"></a>WinSNMP-Entitäts- und Kontextfunktionen
 
-Mit den WinSNMP-Entitäts-und Kontextfunktionen kann eine WinSNMP-Anwendung benutzerfreundliche Namen für SNMP-Entitäten und-Kontexte angeben. Die Microsoft WinSNMP-Implementierung übersetzt den Namen mithilfe der-Implementierungs Datenbank in seine SNMPv1-oder SNMPv2C-Komponenten.
+Die WinSNMP-Entitäts- und Kontextfunktionen ermöglichen es einer WinSNMP-Anwendung, benutzerfreundliche Namen für SNMP-Entitäten und -Kontexte anzugeben. Die Microsoft WinSNMP-Implementierung übersetzt den Namen mithilfe der Datenbank der Implementierung in die SNMPv1- oder SNMPv2C-Komponenten.
 
 
 
-| Funktion                                     | BESCHREIBUNG                                                                                                            |
+| Funktion                                     | Beschreibung                                                                                                            |
 |----------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [**Snmpcontexttstr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcontexttostr) | Gibt eine Zeichenfolge zurück, die einen SNMP-Kontext (eine Gruppe von verwalteten Objektressourcen) identifiziert.                                  |
-| [**Snmpentitytstr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpentitytostr)   | Gibt eine Zeichenfolge zurück, die eine SNMP-Verwaltungs Entität identifiziert.                                                            |
-| [**Snmpfreecontext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreecontext)   | Gibt die von der [**snmpstraudecontext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtocontext) -Funktion zugeordneten Ressourcen für einen SNMP-kontextfrei.         |
-| [**Snmpfreentity**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreeentity)     | Gibt Ressourcen frei, die von der [**snmpstraudeentity**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtoentity) -Funktion für eine SNMP-Verwaltungs Entität zugeordnet sind. |
-| [**Snmpsetport**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetport)           | Ändert den Port, der einer SNMP-Ziel Entität zugewiesen ist.                                                               |
-| [**Snmpstraudecontext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtocontext) | Gibt ein Handle für SNMP-Kontextinformationen zurück, die für die-Implementierung spezifisch sind.                                   |
-| [**Snmpstrauch-Entität**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtoentity)   | Gibt ein Handle für die SNMP-Verwaltungs Entitäts Informationen zurück, die für die-Implementierung spezifisch sind.                         |
+| [**SnmpContextToStr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcontexttostr) | Gibt eine Zeichenfolge zurück, die einen SNMP-Kontext (einen Satz verwalteter Objektressourcen) identifiziert.                                  |
+| [**SnmpEntityToStr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpentitytostr)   | Gibt eine Zeichenfolge zurück, die eine SNMP-Verwaltungsentität identifiziert.                                                            |
+| [**SnmpFreeContext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreecontext)   | Gibt Ressourcen frei, die von der [**SnmpStrToContext-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtocontext) für einen SNMP-Kontext zugeordnet werden.         |
+| [**SnmpFreeEntity**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreeentity)     | Gibt Ressourcen frei, die von der [**SnmpStrToEntity-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtoentity) für eine SNMP-Verwaltungsentität zugeordnet werden. |
+| [**SnmpSetPort**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetport)           | Ändert den Port, der einer SNMP-Zielentität zugewiesen ist.                                                               |
+| [**SnmpStrToContext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtocontext) | Gibt ein Handle für SNMP-Kontextinformationen zurück, das für die Implementierung spezifisch ist.                                   |
+| [**SnmpStrToEntity**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtoentity)   | Gibt ein Handle für SNMP-Verwaltungsentitätsinformationen zurück, die für die Implementierung spezifisch sind.                         |
 
 
 
@@ -129,80 +129,80 @@ Mit den WinSNMP-Entitäts-und Kontextfunktionen kann eine WinSNMP-Anwendung benu
 
 ## <a name="winsnmp-database-functions"></a>WinSNMP-Datenbankfunktionen
 
-Die WinSNMP-Datenbankfunktionen stellen eine WinSNMP-Anwendung mit Zugriff auf die aktuellen Einstellungen im Speicher der Microsoft WinSNMP-Implementierung der administrativen Informationen bereit. Diese Funktionen ermöglichen das Ändern des Neuübertragungs Modus und des Entitäts-und Kontext Übersetzungsmodus. Die Datenbankfunktionen bieten der Anwendung außerdem die Möglichkeit, die Werte für Timeout und Wiederholungs Anzahl zu ändern.
+Die WinSNMP-Datenbankfunktionen bieten einer WinSNMP-Anwendung Zugriff auf die aktuellen Einstellungen im Speicher administrativer Informationen der Microsoft WinSNMP-Implementierung. Diese Funktionen ermöglichen das Ändern des Neuübertragungsmodus und des Entitäts- und Kontextübersetzungsmodus. Die Datenbankfunktionen bieten der Anwendung auch die Möglichkeit, time-out- und retry count-Werte zu bearbeiten.
 
 
 
-| Funktion                                               | BESCHREIBUNG                                                                                           |
+| Funktion                                               | Beschreibung                                                                                           |
 |--------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| [**Snmpgetretransmitmode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetretransmitmode) | Gibt die aktuelle Einstellung des Neuübertragungs Modus zurück.                                               |
-| [**Snmpgetretry**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetretry)                   | Gibt den Wert für die Wiederholungs Anzahl in Einheiten für die erneute Übertragung von SNMP-Nachrichten Anforderungen zurück.             |
-| [**Snmpgettimeout**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgettimeout)               | Gibt den Timeout Wert (in Hundertstel Sekunden) für die Übertragung von SNMP-Nachrichten Anforderungen zurück. |
-| [**Snmpgettranslatemode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgettranslatemode)   | Gibt die aktuelle Einstellung des Entitäts-und Kontext Übersetzungsmodus zurück.                               |
-| [**Snmpgetvendorinfo**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetvendorinfo)         | Ruft Informationen ab, die den WinSNMP-Anbieter identifizieren.                                             |
-| [**Snmpstretransmitmode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetretransmitmode) | Ändert den Modus für Neuübertragungen.                                                                      |
-| [**Snmpabtretry**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetretry)                   | Ändert den Wert für die Wiederholungs Anzahl für die erneute Übertragung von SNMP-Nachrichten Anforderungen.                        |
-| [**Snmpsettimeout**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsettimeout)               | Ändert den Timeout Wert für die Übertragung von SNMP-Nachrichten Anforderungen.                             |
-| [**Snmpsettranslatemode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsettranslatemode)   | Ändert den Entitäts-und Kontext Übersetzungsmodus.                                                      |
+| [**SnmpGetRetransmitMode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetretransmitmode) | Gibt die aktuelle Einstellung des Neuübertragungsmodus zurück.                                               |
+| [**SnmpGetRetry**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetretry)                   | Gibt den Wert für die Wiederholungsanzahl in Einheiten für die erneute Übertragung von SNMP-Nachrichtenanforderungen zurück.             |
+| [**SnmpGetTimeout**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgettimeout)               | Gibt den Time out-Wert in Hundertstel einer Sekunde für die Übertragung von SNMP-Nachrichtenanforderungen zurück. |
+| [**SnmpGetTranslateMode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgettranslatemode)   | Gibt die aktuelle Einstellung des Entitäts- und Kontextübersetzungsmodus zurück.                               |
+| [**SnmpGetVendorInfo**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetvendorinfo)         | Ruft Informationen ab, die den WinSNMP-Anbieter identifizieren.                                             |
+| [**SnmpSetRetransmitMode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetretransmitmode) | Ändert den Neuübertragungsmodus.                                                                      |
+| [**SnmpSetRetry**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetretry)                   | Ändert den Wert der Wiederholungsanzahl für die erneute Übertragung von SNMP-Nachrichtenanforderungen.                        |
+| [**SnmpSetTimeout**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsettimeout)               | Ändert den Time out-Wert für die Übertragung von SNMP-Nachrichtenanforderungen.                             |
+| [**SnmpSetTranslateMode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsettranslatemode)   | Ändert den Entitäts- und Kontextübersetzungsmodus.                                                      |
 
 
 
  
 
-## <a name="winsnmp-pdu-functions"></a>WinSNMP PDU-Funktionen
+## <a name="winsnmp-pdu-functions"></a>WinSNMP-PDU-Funktionen
 
-Mit den WinSNMP PDU-Funktionen können WinSNMP-Anwendungen die Datenelemente (oder Felder) eines PDU extrahieren und aktualisieren. Dies schließt PDUs ein, die von einem Rückruf der [**snmprecvmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg) -Funktion oder der [**snmpdecodemsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpdecodemsg) -Funktion zurückgegeben werden. Die PDU-Funktionen konstruieren auch PDUs zur Verwendung in den Funktionen [**snmpsendmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg) und [**snmpencodemsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpencodemsg) .
+Die WinSNMP-PDU-Funktionen ermöglichen WinSNMP-Anwendungen das Extrahieren und Aktualisieren der Datenelemente (oder Felder) einer PDU. Dies schließt PDUs ein, die durch einen Aufruf der [**SnmpRecvMsg-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg) oder der [**SnmpDecodeMsg-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpdecodemsg) zurückgegeben werden. Die PDU-Funktionen erstellen auch PDUs für die Verwendung in den Funktionen [**SnmpSendMsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg) und [**SnmpEncodeMsg.**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpencodemsg)
 
 
 
-| Funktion                                     | BESCHREIBUNG                                                                                                                                                                       |
+| Funktion                                     | Beschreibung                                                                                                                                                                       |
 |----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Snmpkreatepdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatepdu)       | Erstellt und Initialisiert eine SNMP-Protokolldaten Einheit.                                                                                                                               |
-| [**Snmpduplialisiepdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatepdu) | Dupliziert eine SNMP-Protokolldaten Einheit.                                                                                                                                            |
-| [**Snmpfreepdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreepdu)           | Gibt Ressourcen frei, die mit einer SNMP-Protokolldaten Einheit verknüpft sind, die von der [**snmpcreatepdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatepdu) -Funktion oder der [**snmpdupliaseepdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatepdu) -Funktion erstellt wurde |
-| [**Snmpgetpdudata**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetpdudata)     | Gibt ausgewählte Datenelemente aus einer angegebenen SNMP-Protokolldaten Einheit zurück.                                                                                                          |
-| [**Snmpsetpdudata**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetpdudata)     | Aktualisiert die ausgewählten Datenelemente in einer angegebenen SNMP-Protokolldaten Einheit.                                                                                                            |
+| [**SnmpCreatePdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatepdu)       | Erstellt und initialisiert eine SNMP-Protokolldateneinheit.                                                                                                                               |
+| [**SnmpDuplicatePdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatepdu) | Dupliziert eine SNMP-Protokolldateneinheit.                                                                                                                                            |
+| [**SnmpFreePdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreepdu)           | Gibt Ressourcen frei, die einer SNMP-Protokolldateneinheit zugeordnet sind, die von der [**SnmpCreatePdu-**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatepdu) oder [**der SnmpDuplicatePdu-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatepdu) erstellt wurde. |
+| [**SnmpGetPduData**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetpdudata)     | Gibt ausgewählte Datenelemente aus einer angegebenen SNMP-Protokolldateneinheit zurück.                                                                                                          |
+| [**SnmpSetPduData**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetpdudata)     | Aktualisiert ausgewählte Datenelemente in einer angegebenen SNMP-Protokolldateneinheit.                                                                                                            |
 
 
 
  
 
-## <a name="winsnmp-utility-functions"></a>WinSNMP-Dienstprogramm Funktionen
+## <a name="winsnmp-utility-functions"></a>WinSNMP-Hilfsprogrammfunktionen
 
-Mit den Hilfsprogrammfunktionen von WinSNMP kann eine WinSNMP-Anwendung Objekte und SNMP-Nachrichten über die WinSNMP-Schnittstelle verwalten.
+Die WinSNMP-Hilfsfunktionen ermöglichen einer WinSNMP-Anwendung die Verwaltung von Objekten und SNMP-Nachrichten über die WinSNMP-Schnittstelle.
 
 
 
-| Funktion                                         | BESCHREIBUNG                                                                                                         |
+| Funktion                                         | Beschreibung                                                                                                         |
 |--------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| [**Snmpdecodemsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpdecodemsg)           | Decodiert eine codierte oder serialisierte SNMP-Nachricht in ihre Bestandteile.                                      |
-| [**Snmpencodemsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpencodemsg)           | Erstellt eine verschlüsselte SNMP-Nachricht.                                                                                    |
-| [**Snmpfredescriptor**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreedescriptor) | Signalisiert der Microsoft WinSNMP-Implementierung, dass der für einen bestimmten Deskriptor zugewiesene Arbeitsspeicher freigegeben werden soll. |
-| [**Snmpgetlasterror**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetlasterror)     | Gibt den letzten Fehlercode für den letzten SNMP-Vorgang zurück.                                                      |
-| [**Snmpoidcompare**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcompare)         | Vergleicht zwei SNMP-Objekt Bezeichner.                                                                               |
-| [**Snmpoidcopy**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcopy)               | Kopiert einen SNMP-Objekt Bezeichner.                                                                                   |
-| [**Snmpoidin**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidtostr)             | Konvertiert die interne binäre Darstellung eines SNMP-Objekt Bezeichners in das gepunktete numerische Zeichen folgen Format.       |
-| [**Snmpstrau| OID**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtooid)             | Konvertiert das punktierte numerische Zeichen folgen Format eines SNMP-Objekt Bezeichners in seine interne binäre Darstellung.       |
+| [**SnmpDecodeMsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpdecodemsg)           | Decodiert eine codierte oder serialisierte SNMP-Nachricht in die zugehörigen Komponenten.                                      |
+| [**SnmpEncodeMsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpencodemsg)           | Erstellt eine codierte SNMP-Nachricht.                                                                                    |
+| [**SnmpFreeDescriptor**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreedescriptor) | Signalisiert der Microsoft WinSNMP-Implementierung, dass der für einen bestimmten Deskriptor belegte Arbeitsspeicher freigegeben werden soll. |
+| [**SnmpGetLastError**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetlasterror)     | Gibt den Codewert für den letzten Fehler für den letzten SNMP-Vorgang zurück.                                                      |
+| [**SnmpOidCompare**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcompare)         | Vergleicht zwei SNMP-Objektbezeichner.                                                                               |
+| [**SnmpOidCopy**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcopy)               | Kopiert einen SNMP-Objektbezeichner.                                                                                   |
+| [**SnmpOidToStr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidtostr)             | Konvertiert die interne binäre Darstellung eines SNMP-Objektbezeichners in das gepunktete numerische Zeichenfolgenformat.       |
+| [**SnmpStrToOid**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtooid)             | Konvertiert das gepunktete numerische Zeichenfolgenformat eines SNMP-Objektbezeichners in seine interne binäre Darstellung.       |
 
 
 
  
 
-## <a name="winsnmp-variable-binding-functions"></a>WinSNMP-Variablen Bindungsfunktionen
+## <a name="winsnmp-variable-binding-functions"></a>WinSNMP-Variablenbindungsfunktionen
 
-Mit den WinSNMP-Variablen Bindungsfunktionen können WinSNMP-Anwendungen Variablen Bindungs Listen erstellen und bearbeiten und Sie in PDUs einschließen.
+Mit den WinSNMP-Variablenbindungsfunktionen können WinSNMP-Anwendungen Variablenbindungslisten erstellen und bearbeiten und in PDUs einschließen.
 
 
 
-| Funktion                                     | BESCHREIBUNG                                                                                                                                                                     |
+| Funktion                                     | Beschreibung                                                                                                                                                                     |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Snmpzähltvbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcountvbl)         | Listet die Variablen Bindungs Einträge in einer angegebenen Variablen Bindungs Liste auf.                                                                                                   |
-| [**Snmpkreatevbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatevbl)       | Erstellt eine neue Variablen Bindungs Liste.                                                                                                                                            |
-| [**Snmpdeletevb**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpdeletevb)         | Entfernt einen Variablen Bindungs Eintrag aus einer Variablen Bindungs Liste.                                                                                                                  |
-| [**Snmpduplimpevbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatevbl) | Kopiert eine Variablen Bindungs Liste.                                                                                                                                                 |
-| [**Snmpfreevbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreevbl)           | Gibt Ressourcen für eine Variablen Bindungs Liste frei, die zuvor von der [**snmpcreatevbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatevbl) oder der [**snmpdupliaseevbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatevbl) -Funktion zugeordnet wurde. |
-| [**Snmpgetvb**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetvb)               | Ruft Informationen aus einem angegebenen Variablen Bindungs Eintrag ab.                                                                                                                  |
-| [**Snmpsetvb**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetvb)               | Ändert Variablen Bindungs Einträge in einer Variablen Bindungs Liste. Fügt neue Variablen Bindungs Einträge an eine vorhandene Variablen Bindungs Liste an.                                         |
+| [**SnmpCountVbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcountvbl)         | Listet die Variablenbindungseinträge in einer angegebenen Variablenbindungsliste auf.                                                                                                   |
+| [**SnmpCreateVbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatevbl)       | Erstellt eine neue Variablenbindungsliste.                                                                                                                                            |
+| [**SnmpDeleteVb**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpdeletevb)         | Entfernt einen Variablenbindungseintrag aus einer Variablenbindungsliste.                                                                                                                  |
+| [**SnmpDuplicateVbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatevbl) | Kopiert eine Variablenbindungsliste.                                                                                                                                                 |
+| [**SnmpFreeVbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreevbl)           | Gibt Ressourcen für eine Variablenbindungsliste frei, die zuvor von der [**Funktion SnmpCreateVbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatevbl) oder [**SnmpDuplicateVbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatevbl) zugeordnet wurde. |
+| [**SnmpGetVb**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetvb)               | Ruft Informationen aus einem angegebenen Variablenbindungseintrag ab.                                                                                                                  |
+| [**SnmpSetVb**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetvb)               | Ändert Variablenbindungseinträge in einer Variablenbindungsliste. fügt neue Variablenbindungseinträge an eine vorhandene Variablenbindungsliste an.                                         |
 
 
 
@@ -210,53 +210,53 @@ Mit den WinSNMP-Variablen Bindungsfunktionen können WinSNMP-Anwendungen Variabl
 
 ## <a name="winsnmp-functions---alphabetic-list"></a>Alphabetische Liste der WinSNMP-Funktionen
 
--   [**Snmpapi- \_ Rückruf**](/windows/desktop/api/Winsnmp/nc-winsnmp-snmpapi_callback)
--   [**Snmpcancelmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcancelmsg)
--   [**Snmpcleanup**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcleanup)
--   [**Snmpclose**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpclose)
--   [**Snmpcontexttstr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcontexttostr)
--   [**Snmpzähltvbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcountvbl)
--   [**Snmpkreatepdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatepdu)
--   [**Snmpkreatesession**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession)
--   [**Snmpkreatevbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatevbl)
--   [**Snmpdecodemsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpdecodemsg)
--   [**Snmpdeletevb**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpdeletevb)
--   [**Snmpduplialisiepdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatepdu)
--   [**Snmpduplimpevbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatevbl)
--   [**Snmpencodemsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpencodemsg)
--   [**Snmpentitytstr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpentitytostr)
--   [**Snmpfreecontext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreecontext)
--   [**Snmpfredescriptor**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreedescriptor)
--   [**Snmpfreentity**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreeentity)
--   [**Snmpfreepdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreepdu)
--   [**Snmpfreevbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreevbl)
--   [**Snmpgetlasterror**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetlasterror)
--   [**Snmpgetpdudata**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetpdudata)
--   [**Snmpgetretransmitmode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetretransmitmode)
--   [**Snmpgetretry**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetretry)
--   [**Snmpgettimeout**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgettimeout)
--   [**Snmpgettranslatemode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgettranslatemode)
--   [**Snmpgetvb**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetvb)
--   [**Snmpgetvendorinfo**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetvendorinfo)
--   [**Snmplauschen**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmplisten)
--   [**Snmpoidcompare**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcompare)
--   [**Snmpoidcopy**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcopy)
--   [**Snmpoidin**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidtostr)
--   [**Snmpopen**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpopen)
--   [**Snmprecvmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg)
--   [**Snmpregiester**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpregister)
--   [**Snmpsendmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg)
--   [**Snmpsetpdudata**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetpdudata)
--   [**Snmpsetport**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetport)
--   [**Snmpstretransmitmode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetretransmitmode)
--   [**Snmpabtretry**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetretry)
--   [**Snmpsettimeout**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsettimeout)
--   [**Snmpsettranslatemode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsettranslatemode)
--   [**Snmpsetvb**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetvb)
+-   [**\_SNMPAPI-RÜCKRUF**](/windows/desktop/api/Winsnmp/nc-winsnmp-snmpapi_callback)
+-   [**SnmpCancelMsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcancelmsg)
+-   [**SnmpCleanup**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcleanup)
+-   [**SnmpClose**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpclose)
+-   [**SnmpContextToStr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcontexttostr)
+-   [**SnmpCountVbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcountvbl)
+-   [**SnmpCreatePdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatepdu)
+-   [**SnmpCreateSession**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession)
+-   [**SnmpCreateVbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatevbl)
+-   [**SnmpDecodeMsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpdecodemsg)
+-   [**SnmpDeleteVb**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpdeletevb)
+-   [**SnmpDuplicatePdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatepdu)
+-   [**SnmpDuplicateVbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpduplicatevbl)
+-   [**SnmpEncodeMsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpencodemsg)
+-   [**SnmpEntityToStr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpentitytostr)
+-   [**SnmpFreeContext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreecontext)
+-   [**SnmpFreeDescriptor**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreedescriptor)
+-   [**SnmpFreeEntity**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreeentity)
+-   [**SnmpFreePdu**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreepdu)
+-   [**SnmpFreeVbl**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreevbl)
+-   [**SnmpGetLastError**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetlasterror)
+-   [**SnmpGetPduData**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetpdudata)
+-   [**SnmpGetRetransmitMode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetretransmitmode)
+-   [**SnmpGetRetry**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetretry)
+-   [**SnmpGetTimeout**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgettimeout)
+-   [**SnmpGetTranslateMode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgettranslatemode)
+-   [**SnmpGetVb**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetvb)
+-   [**SnmpGetVendorInfo**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetvendorinfo)
+-   [**SnmpListen**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmplisten)
+-   [**SnmpOidCompare**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcompare)
+-   [**SnmpOidCopy**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcopy)
+-   [**SnmpOidToStr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidtostr)
+-   [**SnmpOpen**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpopen)
+-   [**SnmpRecvMsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg)
+-   [**SnmpRegister**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpregister)
+-   [**SnmpSendMsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsendmsg)
+-   [**SnmpSetPduData**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetpdudata)
+-   [**SnmpSetPort**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetport)
+-   [**SnmpSetRetransmitMode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetretransmitmode)
+-   [**SnmpSetRetry**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetretry)
+-   [**SnmpSetTimeout**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsettimeout)
+-   [**SnmpSetTranslateMode**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsettranslatemode)
+-   [**SnmpSetVb**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpsetvb)
 -   [**SnmpStartup**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstartup)
--   [**Snmpstraudecontext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtocontext)
--   [**Snmpstrauch-Entität**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtoentity)
--   [**Snmpstrau| OID**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtooid)
+-   [**SnmpStrToContext**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtocontext)
+-   [**SnmpStrToEntity**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtoentity)
+-   [**SnmpStrToOid**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtooid)
 
  
 

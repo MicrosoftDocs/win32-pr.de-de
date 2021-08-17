@@ -1,23 +1,23 @@
 ---
-description: Das Attribute-Objekt macht die folgenden Eigenschaften verfügbar.
+description: Das Attributes-Objekt macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 11275C74-584E-42F2-BF4A-2FD95A62861E
-title: Attribut Eigenschaften
+title: Eigenschaften von Attributen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9ae1c7acb96a3a6b9b35fa2a39cb9e2e249a99f3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6e962dee31ea094db03756e1a8c909c70bcf00c1c167138bab9b4e93dcf5083e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352362"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117773235"
 ---
-# <a name="attributes-properties"></a>Attribut Eigenschaften
+# <a name="attributes-properties"></a>Eigenschaften von Attributen
 
-Das [**Attribute**](attributes.md) -Objekt macht die folgenden Eigenschaften verfügbar.
+Das [**Attributes-Objekt**](attributes.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**\_Eigenschaft "netwenum"**](attributes-newenum.md)
+-   [**\_NewEnum-Eigenschaft**](attributes-newenum.md)
 -   [**Count-Eigenschaft**](attributes-count.md)
 -   [**Item-Eigenschaft**](attributes-item.md)
 

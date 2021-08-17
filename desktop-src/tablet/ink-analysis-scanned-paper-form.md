@@ -36,7 +36,7 @@ Das Beispiel ist als Windows Forms- oder Windows Presentation Foundation-Anwendu
 Die Windows Presentation Foundation Version verweist IAWinFX.dll zusätzlich zu den Kern-Windows Presentation Foundation-DLLs.
 
 > [!Note]  
-> Die Windows Presentation Foundation Version dieses Beispiels (im XAML-Verzeichnis zu finden) erfordert, dass die Windows Presentation Foundation-Erweiterungen für Microsoft Visual Studio 2005 auf dem System installiert sind.
+> Die Windows Presentation Foundation Version dieses Beispiels (im XAML-Verzeichnis) erfordert, dass die Windows Presentation Foundation-Erweiterungen für Microsoft Visual Studio 2005 auf dem System installiert sind.
 
  
 

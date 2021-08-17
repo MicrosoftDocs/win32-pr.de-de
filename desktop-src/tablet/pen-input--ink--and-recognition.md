@@ -13,21 +13,21 @@ ms.locfileid: "118716263"
 ---
 # <a name="pen-input-ink-and-recognition"></a>Stifteingabe, Ink und Erkennung
 
-Ein interessantes neues Feature von Tablet PC ist das Stifteingabesystem. Alle Tablet PC-Computer verfügen über einen Digitizer unter dem Bildschirm, der Stifteingaben akzeptiert. Dieser neue Eingabemechanismus erfordert, dass Sie überlegen, wie Sie Anwendungen speziell für Tablet PC erstellen. Die Anwendungsprogrammierschnittstelle (API) der Tablet PC-Plattform hilft Ihnen dabei.
+Ein interessantes neues Feature von Tablet PC ist das Stifteingabesystem. Alle Tablet PC-Computer verfügen über einen Digitizer unterhalb des Bildschirms, der Stifteingaben akzeptiert. Dieser neue Eingabemechanismus erfordert, dass Sie überlegen, wie Sie Anwendungen speziell für Tablet PC erstellen. Die Api (Application Programming Interface) der Tablet PC-Plattform unterstützt Sie dabei.
 
 ## <a name="collection-data-management-and-recognition"></a>Sammlung, Datenverwaltung und Erkennung
 
 Die Tablet PC-Plattform kann in drei verschiedene Bereiche unterteilt werden:
 
--   Ink-Sammlung (Objekte, die zum Sammeln von Ink aus dem Digitizer verwendet werden).
--   Ink-Datenverwaltung (Objekte, die zum Verwalten der gesammelten Ink-Objekte verwendet werden).
--   Ink-Erkennung (Objekte, die zum Konvertieren der gesammelten Ink-Daten in andere Datentypen verwendet werden, z. B. Text).
+-   Ink-Auflistung (Objekte, die zum Sammeln von Ink aus dem Digitizer verwendet werden).
+-   Verwaltung von Ink-Daten (Objekte, die zum Verwalten der gesammelten Ink verwendet werden).
+-   Ink-Erkennung (Objekte, die verwendet werden, um die gesammelte Ink-Datei in andere Datentypen wie Text zu konvertieren).
 
-Die folgende Abbildung zeigt auf hoher Ebene, wie die Ink Collection-API (Stift-API), die Ink Datenverwaltung-API (Ink-API) und die Ink Recognition API (Recognition API) auf der Tablet PC-Plattform zusammenarbeiten.
+Die folgende Abbildung zeigt auf hoher Ebene, wie die Ink Collection-API (Stift-API), die Ink-Datenverwaltung-API (Ink-API) und die Ink-Erkennungs-API (Erkennungs-API) auf der Tablet PC-Plattform zusammenarbeiten.
 
-![Darstellung der Zusammenarbeit von Stift-API, Ink-API und Erkennungs-API](images/aabc298b-fd64-435b-87bc-eb7cd11524e8.jpg)
+![illustrationon showing how pen api, ink api, and recognition api work together (Veranschaulichung der Zusammenarbeit von Stift-API, Ink-API und Erkennungs-API)](images/aabc298b-fd64-435b-87bc-eb7cd11524e8.jpg)
 
-Die Tablet PC-Plattform-API ist in verwalteten APIs sowie in einer COM-Bibliothek verfügbar. Die folgenden Themen beschreiben die Objekte in der API und veranschaulichen, wie Anwendungen diese Objekte verwenden:
+Die Tablet PC-Plattform-API ist sowohl in verwalteten APIs als auch in einer COM-Bibliothek verfügbar. Die folgenden Themen beschreiben die Objekte in der API und veranschaulichen, wie Anwendungen diese Objekte verwenden:
 
 -   [Ink-Sammlung](ink-collection.md)
 -   [Ink-Daten](ink-data.md)

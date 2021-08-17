@@ -1,28 +1,28 @@
 ---
-title: Implementieren von Rendering Sample
-description: Implementieren von Rendering Sample
+title: Implementieren eines Renderbeispiels
+description: Implementieren eines Renderbeispiels
 ms.assetid: 5791f6ea-ddad-49e6-8c6f-8093592895d4
 keywords:
-- Visualisierungen, Glüh Beispiel
-- benutzerdefinierte Visualisierungen, Glüh Beispiel
-- Programmier Handbuch, Visualisierungen
-- Beispiele, Glanz Visualisierung
-- Beispiel für Glanz Visualisierung
-- Visualisierungen, Rendering-Funktion
-- benutzerdefinierte Visualisierungen, Rendering-Funktion
-- Funktion "Rendering", Glanz Beispiel
+- Visualisierungen,Leuchtbeispiel
+- Benutzerdefinierte Visualisierungen, Beispiel "Leucht"
+- Programmierhandbuch,Visualisierungen
+- Beispiele,Leuchtvisualisierung
+- Beispiel für die Visualisierung von Leuchtern
+- Visualisierungen,Render-Funktion
+- Benutzerdefinierte Visualisierungen, Renderfunktion
+- Renderfunktion,Leuchtbeispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dabc816283113a82c1d5d677dfc0ca8e8887d344
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 8c00b57f15655468e5bd0000ccc3b5120e19c2af58d5a1ad6b5493b535c7253f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104517330"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135573"
 ---
-# <a name="implementing-render-sample"></a>Implementieren von Rendering Sample
+# <a name="implementing-render-sample"></a>Implementieren eines Renderbeispiels
 
-Der folgende Code wird verwendet, um die Funktion " **Rendering** " zu implementieren:
+Der folgende Code wird verwendet, um die **Render-Funktion zu** implementieren:
 
 
 ```C++
@@ -65,25 +65,25 @@ STDMETHODIMP CGlow::Render(TimedLevel *pLevels, HDC hdc, RECT *prc)
 
 
 
-Im folgenden finden Sie eine Erläuterung des Codes:
+Im Folgenden finden Sie eine Erläuterung des Codes:
 
-Eine Variable mit dem Namen " *myColor* " wird für die Farbe des Leucht Stoffs verwendet und mit **COLORREF** deklariert. Für alle Farben sollte der **COLORREF** -Datentyp verwendet werden.
+Eine Variable namens *mycolor* wird für die Farbe des Lichts verwendet und mit **COLORREF deklariert.** Alle Farben sollten den **COLORREF-Datentyp** verwenden.
 
-Eine Variable mit dem Namen " *mylevel* " wird für die Momentaufnahme der Audiowaveform-Ebene verwendet. Dieser Wert hängt von der tatsächlichen Stromversorgung zum Zeitpunkt der Momentaufnahme ab.
+Eine Variable mit dem *Namen mylevel* wird für die Audiomomentaufnahme auf Waveformebene verwendet. Dieser Wert hängt vom tatsächlichen Energiestand zum Zeitpunkt der Momentaufnahme ab.
 
-Die **Switch** -Anweisung wird von der Voreinstellung festgelegt, die der Benutzer unter Windows Media Player ausgewählt hat. Mit der Auswahl wird " *myColor* " auf die gewünschte Farbe (rot, grün oder blau) festgelegt. Die genaue Farbe wird jedoch durch die audiostromebene bestimmt. Wenn z. b. die rote Voreinstellung ausgewählt wird, ist die Farbe ein ausgefülltes, aber je nach Audiowaveform zum Zeitpunkt der Momentaufnahme heller oder dunkler. Stellen Sie sicher, dass Sie das **RBG** -Makro verwenden, um die Farbe zu erstellen.
+Die **switch-Anweisung** wird durch die Voreinstellung festgelegt, die der Benutzer für die Windows Media Player. Die Auswahl setzt *mycolor auf* die gewünschte Farbe (Rot, Grün oder Blau). Die genaue Farbe wird jedoch durch den Audioleistungsgrad bestimmt. Wenn z. B. die rote Voreinstellung ausgewählt wird, ist die Farbe vollrot, aber je nach Audio waveform zum Zeitpunkt der Momentaufnahme heller oder dunkler. Stellen Sie sicher, dass Sie das **RBG-Makro** verwenden, um Ihre Farbe zu erstellen.
 
-Es wird ein Pinsel namens *hnewbrush* erstellt, der verwendet wird, um das von Windows Media Player bereitgestellte *PRC* -Rechteck auszufüllen. Die Zeichen Oberfläche ist der *hdc* -Gerätekontext, der von Windows Media Player bereitgestellt wird.
+Ein Pinsel mit dem Namen *hNewBrush* wird erstellt und zum Ausfüllen des *prc-Rechtecks* verwendet, das von Windows Media Player. Die Zeichenoberfläche ist der *hdc-Gerätekontext,* der von Windows Media Player.
 
-Der Pinsel wird von **DeleteObject** gelöscht. Stellen Sie immer sicher, dass Sie alle von Ihnen erstellten Stifte oder Pinsel löschen.
+Der Pinsel wird von **DeleteObject gelöscht.** Achten Sie immer darauf, alle von Ihnen erstellten Stifte oder Pinsel zu löschen.
 
-Nachdem der **rendercode** abgeschlossen ist, zeigt Windows Media Player die *hdc* -Grafiken in einem Fenster an, das von der verwendeten Skin bestimmt wird.
+Sobald der **Rendercode** abgeschlossen ist, Windows Media Player *hdc-Grafiken* in einem Fenster angezeigt, das von der verwendeten Skin bestimmt wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Das Glüh Beispiel**](the-glow-sample.md)
+[**The Glow Sample**](the-glow-sample.md)
 </dt> </dl>
 
  

@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118706720"
 ---
-# <a name="ui_pkey_fontproperties_underline"></a>\_PKEY-Schriftart \_ der BenutzeroberflächeEigenschaften \_ unterstrich
+# <a name="ui_pkey_fontproperties_underline"></a>UI \_ PKEY \_ FontProperties \_ Underline
 
 Identifiziert die \_ PKEY \_ FontProperties \_ Underline-Eigenschaft der Benutzeroberfläche.
 
@@ -55,7 +55,7 @@ In der folgenden Tabelle werden die Eigenschaften und das Ergebnis der Benutzero
 
 <dl> <dt>
 
-[Eigenschaften des Schriftartsteuersteuer steuerelements](windowsribbon-reference-properties-fontcontrol.md)
+[Eigenschaften des Schriftart-Steuerelements](windowsribbon-reference-properties-fontcontrol.md)
 </dt> <dt>
 
 [**\_BENUTZEROBERFLÄCHENSCHRIFTARTUNDERLINE**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontunderline)

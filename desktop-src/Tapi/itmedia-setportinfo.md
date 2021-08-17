@@ -1,21 +1,21 @@
 ---
-description: Die setportinfo-Methode legt den Wert für den 16-Bit-Port für den ersten Port und die Anzahl der für eine Sitzung benötigten Ports fest.
+description: Die SetPortInfo-Methode legt den 16-Bit-Portwert für den ersten Port und die Anzahl der ports fest, die für eine Sitzung erforderlich sind.
 ms.assetid: 4726b39b-cd10-4630-8f38-8671db4f432b
-title: 'ITmedia:: setportinfo-Methode (sdpblb. h)'
+title: ITMedia::SetPortInfo-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c605c1768316871f6c3c9ec10f991f21c1643794
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0db052c631fee1427b4d31c9149a2ef68f8819d8cacb24b632dc9b2f61d198c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119140313"
 ---
-# <a name="itmediasetportinfo-method"></a>ITmedia:: setportinfo-Methode
+# <a name="itmediasetportinfo-method"></a>ITMedia::SetPortInfo-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Steuerelemente und Schnittstellen für Rendezvous-IP-Telefoniekonferenzen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **setportinfo** -Methode legt den Wert für den 16-Bit-Port für den ersten Port und die Anzahl der für eine Sitzung benötigten Ports fest.
+Die **SetPortInfo-Methode** legt den 16-Bit-Portwert für den ersten Port und die Anzahl der ports fest, die für eine Sitzung erforderlich sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,17 +33,17 @@ HRESULT SetPortInfo(
 
 <dl> <dt>
 
-*Startport* \[ in\]
+*StartPort* \[ In\]
 </dt> <dd>
 
-Startport. Hierbei kann es sich um einen Wert im Bereich 0-65535 handeln.
+Startport. Dies kann ein Wert im Bereich von 0 bis 65535 sein.
 
 </dd> <dt>
 
-*Numports* \[ in\]
+*NumPorts* \[ In\]
 </dt> <dd>
 
-Anzahl von Ports. Hierbei kann es sich um einen Wert im Bereich 0-65535 handeln.
+Anzahl der Ports. Dies kann ein Wert im Bereich von 0 bis 65535 sein.
 
 </dd> </dl>
 
@@ -56,18 +56,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *startport-Parameter oder der numports* -Parameter ist ungültig.<br/>  |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *StartPort- oder NumPorts-Parameter* ist ungültig.<br/>  |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion kann Daten in unverschlüsselter Form über das Netzwerk senden. aus diesem Grund kann ein Benutzer, der sich im Netzwerk befindet, möglicherweise die Daten lesen. Das Sicherheitsrisiko, dass Daten im Klartext gesendet werden, sollte vor der Verwendung dieser Methode berücksichtigt werden.
+Diese Funktion kann Daten unverschlüsselt über das Netzwerk senden. Aus diesem Grund kann eine Person, die im Netzwerk abhört, die Daten lesen. Das Sicherheitsrisiko des Sendens der Daten in Klartext sollte vor der Verwendung dieser Methode berücksichtigt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,18 +75,18 @@ Diese Funktion kann Daten in unverschlüsselter Form über das Netzwerk senden. 
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ITmedia**](itmedia.md)
+[**ITMedia**](itmedia.md)
 </dt> </dl>
 
  

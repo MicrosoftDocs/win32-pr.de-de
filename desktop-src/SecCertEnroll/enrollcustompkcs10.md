@@ -1,40 +1,40 @@
 ---
-description: Erstellt eine benutzerdefinierte PKCS \# 10-Anforderung, übergibt sie an eine eigenständige Zertifizierungsstelle (Certification Authority, ca) und installiert das ausgegebene Zertifikat im Zertifikat Speicher.
+description: Erstellt eine benutzerdefinierte PKCS \# 10-Anforderung, sendet sie an eine eigenständige Zertifizierungsstelle und installiert das ausgestellte Zertifikat im Zertifikatspeicher.
 ms.assetid: dcb69d7e-457e-457b-9eea-15676ed710aa
 title: enrollCustomPKCS10
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 86ad95f483d4bc82136865e94a70ad46e90e1c24
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 937b1e955ecd369794e832f16afff1594ed1df1271494d7172832132d4cb7863
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359891"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117780029"
 ---
 # <a name="enrollcustompkcs10"></a>enrollCustomPKCS10
 
-Das enrollCustomPKCS10-Beispiel erstellt eine benutzerdefinierte PKCS \# 10-Anforderung, sendet Sie an eine eigenständige Zertifizierungsstelle (Certification Authority, ca) und installiert das ausgegebene Zertifikat im Zertifikat Speicher. Eine eigenständige Zertifizierungsstelle erfordert keine Active Directory und verwendet keine Vorlagen.
+Im Beispiel enrollCustomPKCS10 wird eine benutzerdefinierte PKCS \# 10-Anforderung erstellt, an eine eigenständige Zertifizierungsstelle übermittelt und das ausgestellte Zertifikat im Zertifikatspeicher installiert. Für eine eigenständige Zertifizierungsstelle ist Active Directory nicht erforderlich, und es werden keine Vorlagen verwendet.
 
 ## <a name="location"></a>Standort
 
-Wenn Sie das Microsoft Windows Software Development Kit (SDK) installieren, wird das Beispiel standardmäßig im Ordner *% Program Files%* \\ Microsoft SDKs \\ Windows \\ v 7.0 \\ Samples \\ Security \\ X509 Certificate Einschreibung \\ VC \\ enrollCustomPKCS10 installiert.
+Wenn Sie das Microsoft Windows Software Development Kit (SDK) installieren, wird das Beispiel standardmäßig im Ordner *%ProgramFiles%* \\ Microsoft SDKs Windows \\ \\ v7.0 \\ Samples Security \\ \\ X509 Certificate Enrollment \\ VC \\ enrollCustomPKCS10 installiert.
 
-## <a name="discussion"></a>Diskussion
+## <a name="discussion"></a>Diskussion (Discussion)
 
-Das enrollCustomPKCS10-Beispiel:
+Das Beispiel enrollCustomPKCS10:
 
-1.  Verarbeitet die Befehlszeilenargumente. Die Befehlszeile muss den Antragsteller Namen des X. 500-Zertifikats, den e-Mail-Namen (RFC822) und eine EKU-Objekt Kennung (Enhanced Key Usage, EKU) enthalten. Sie können z. b. die folgenden Argumente angeben, die registriert werden sollen *user1@example.com* :
-    -   Antragsteller Name: "*CN = user1, DC = example, DC = com*"
-    -   RFC822 Name: *user1@example.com*
-    -   Clientauthentifizierungs-EKU-OID: 1.3.6.1.5.5.7.3.2
-2.  Erstellt ein [**IX509CertificateRequestPkcs10**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestpkcs10) -Objekt und initialisiert es für den Endbenutzer, indem der **contextUser** -Wert der [**X509CertificateEnrollmentContext**](/windows/desktop/api/CertEnroll/ne-certenroll-x509certificateenrollmentcontext) -Enumeration angegeben wird.
-3.  Erstellt ein [**IX500DistinguishedName**](/windows/desktop/api/CertEnroll/nn-certenroll-ix500distinguishedname) -Objekt, verwendet das-Objekt, um den Betreffnamen in ein Bytearray zu codieren, und fügt das Array dem PKCS \# 10-Anforderungs Objekt hinzu.
-4.  Erstellt ein [**iobjectid**](/windows/desktop/api/CertEnroll/nn-certenroll-iobjectid) -Objekt, initialisiert es mithilfe der in der Befehlszeile angegebenen EKU-Objekt Kennung (OID), erstellt eine [**iobjectids**](/windows/desktop/api/CertEnroll/nn-certenroll-iobjectids) -Auflistung, fügt das neue **iobjectid** -Objekt (EKU) der Auflistung hinzu, verwendet die-Auflistung, um ein [**IX509ExtensionEnhancedKeyUsage**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509extensionenhancedkeyusage) -Objekt zu initialisieren, und fügt dieses-Objekt der Anforderung hinzu.
-5.  Erstellt ein [**ialternativename**](/windows/desktop/api/CertEnroll/nn-certenroll-ialternativename) -Objekt, initialisiert es mit dem in der Befehlszeile angegebenen RFC822-Namen, erstellt eine [**ialternativenames**](/windows/desktop/api/CertEnroll/nn-certenroll-ialternativenames) -Auflistung, fügt das neue **ialternativename** (RFC822 Name)-Objekt der-Auflistung hinzu, erstellt ein [**IX509ExtensionAlternativeNames**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509extensionalternativenames) -Objekt und fügt dieses-Objekt der Anforderung hinzu.
-6.  Erstellt ein [**IX509Enrollment**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) -Objekt, initialisiert es mit dem [**IX509CertificateRequestPkcs10**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestpkcs10) -Objekt und ruft eine Zeichenfolge ab, die eine Base64-codierte Anforderung enthält.
-7.  Erstellt ein [**ICertConfig**](/windows/desktop/api/certcli/nn-certcli-icertconfig) -Objekt und verwendet es, um eine Zeichenfolge abzurufen, die die Zertifizierungsstellen Konfiguration enthält.
-8.  Erstellt ein CryptoAPI [**ICertRequest2**](/windows/desktop/api/certcli/nn-certcli-icertrequest2) -Objekt und verwendet es sowie die Zeichen folgen, die die Zertifizierungsstellen Konfiguration enthalten, und die Zertifikat Anforderung zum übermitteln der Anforderung an die Zertifizierungsstelle.
-9.  Überprüft den Übermittlungs Status und installiert das Zertifikat im Zertifikat Speicher, wenn die Registrierung erfolgreich ist.
+1.  Verarbeitet die Befehlszeilenargumente. Die Befehlszeile sollte den X.500-Zertifikatssubjektnamen, den E-Mail-Namen (RFC822) und einen EKU-Objektbezeichner (Enhanced Key Usage, erweiterte Schlüsselverwendung) enthalten. Sie können z. B. die folgenden Argumente angeben, um zu *user1@example.com* registrieren:
+    -   Antragstellername: "*CN=user1,DC=example,DC=com*"
+    -   RFC822-Name: *user1@example.com*
+    -   EKU-OID für Clientauthentifizierung: 1.3.6.1.5.5.7.3.2
+2.  Erstellt ein [**IX509CertificateRequestPkcs10-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestpkcs10) und initialisiert es für den Endbenutzer, indem der **ContextUser-Wert** der [**X509CertificateEnrollmentContext-Enumeration**](/windows/desktop/api/CertEnroll/ne-certenroll-x509certificateenrollmentcontext) angegeben wird.
+3.  Erstellt ein [**IX500DistinguishedName-Objekt,**](/windows/desktop/api/CertEnroll/nn-certenroll-ix500distinguishedname) verwendet das -Objekt, um den Antragstellernamen in ein Bytearray zu codieren, und fügt das Array dem PKCS \# 10-Anforderungsobjekt hinzu.
+4.  Erstellt ein [**IObjectId-Objekt,**](/windows/desktop/api/CertEnroll/nn-certenroll-iobjectid) initialisiert es mithilfe des in der Befehlszeile angegebenen EKU-Objektbezeichners (OID), erstellt eine [**IObjectIds-Auflistung,**](/windows/desktop/api/CertEnroll/nn-certenroll-iobjectids) fügt der Auflistung das neue **IObjectId-Objekt** (EKU) hinzu, verwendet die Auflistung, um ein [**IX509ExtensionEnhancedKeyUsage-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509extensionenhancedkeyusage) zu initialisieren, und fügt dieses Objekt der Anforderung hinzu.
+5.  Erstellt ein [**IAlternativeName-Objekt,**](/windows/desktop/api/CertEnroll/nn-certenroll-ialternativename) initialisiert es mit dem in der Befehlszeile angegebenen RFC822-Namen, erstellt eine [**IAlternativeNames-Auflistung,**](/windows/desktop/api/CertEnroll/nn-certenroll-ialternativenames) fügt der Auflistung das neue **IAlternativeName** -Objekt (RFC822-Name ) hinzu, erstellt ein [**IX509ExtensionAlternativeNames-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509extensionalternativenames) und fügt dieses Objekt der Anforderung hinzu.
+6.  Erstellt ein [**IX509Enrollment-Objekt,**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) initialisiert es mit dem [**IX509CertificateRequestPkcs10-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestpkcs10) und ruft eine Zeichenfolge ab, die eine Base64-codierte Anforderung enthält.
+7.  Erstellt ein [**ICertConfig-Objekt**](/windows/desktop/api/certcli/nn-certcli-icertconfig) und verwendet es, um eine Zeichenfolge abzurufen, die die Zertifizierungsstellenkonfiguration enthält.
+8.  Erstellt ein [**CryptoAPI-ICertRequest2-Objekt**](/windows/desktop/api/certcli/nn-certcli-icertrequest2) und verwendet es sowie die Zeichenfolgen, die die Zertifizierungsstellenkonfiguration und die Zertifikatanforderung enthalten, um die Anforderung an die Zertifizierungsstelle zu übermitteln.
+9.  Überprüft den Übermittlungsstatus und installiert bei erfolgreicher Registrierung das Zertifikat im Zertifikatspeicher.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

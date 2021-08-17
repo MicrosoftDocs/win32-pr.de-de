@@ -1,21 +1,21 @@
 ---
-description: Die Put \_ adressstype-Methode legt den Adresstyp fest.
+description: Die put \_ AddressType-Methode legt den Adresstyp fest.
 ms.assetid: 73c64904-925c-4a35-a8f9-88b196b59b1e
-title: Itconnection::p ut_AddressType-Methode (sdpblb. h)
+title: ITConnection::p ut_AddressType-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7cb9bc9b83a71f78a68b6efc2fa73c259c4afe9e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cd89f37b7631fe9eb496ef11e91ec356d6d310bd8ca43db66b4f93532d15f354
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364644"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060968"
 ---
-# <a name="itconnectionput_addresstype-method"></a>Itconnection::p UT- \_ adressatormethode
+# <a name="itconnectionput_addresstype-method"></a>ITConnection::p ut \_ AddressType-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Put \_ adressstype** -Methode legt den Adresstyp fest.
+Die **put \_ AddressType-Methode** legt den Adresstyp fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT put_AddressType(
 
 <dl> <dt>
 
-*padresssstype* \[ in\]
+*pAddressType* \[ In\]
 </dt> <dd>
 
-Zeiger auf einen **BSTR** -Wert, der den adrestyp enthält.
+Zeiger auf einen **BSTR,** der den Adresstyp enthält.
 
 </dd> </dl>
 
@@ -48,18 +48,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *padresssstype* -Parameter ist ungültig.<br/>           |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *pAddressType-Parameter* ist ungültig.<br/>           |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung muss " [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) " verwenden, um Speicher für den *padresstype* -Parameter zuzuweisen, und " [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) " verwenden, um den Arbeitsspeicher freizugeben, wenn die Variable nicht mehr benötigt wird.
+Die Anwendung muss [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) verwenden, um Speicher für den *pAddressType-Parameter* zuzuordnen, und [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) verwenden, um den Arbeitsspeicher freizugeben, wenn die Variable nicht mehr benötigt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,21 +67,21 @@ Die Anwendung muss " [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itconnection**](itconnection.md)
+[**ITConnection**](itconnection.md)
 </dt> <dt>
 
-[**Itconnection:: get \_ adressstype**](itconnection-get-addresstype.md)
+[**ITConnection::get \_ AddressType**](itconnection-get-addresstype.md)
 </dt> </dl>
 
  

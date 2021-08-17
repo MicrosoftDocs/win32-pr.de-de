@@ -1,19 +1,19 @@
 ---
-description: Erläutert die Verwendung der SSPI-Nachrichten Unterstützung.
+description: Erläutert die Verwendung der SSPI-Nachrichtenunterstützung.
 ms.assetid: 14d4813e-413e-4ef9-85f0-96986c3c1eca
-title: Verwenden der Nachrichten Unterstützung
+title: Verwenden der Nachrichtenunterstützung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d75a2475609afed1647d99552a3719479d84fbd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 08c6a14c28cc9eb9e1b606574659412a22f375ad935ee0d7d1bdd898781c230d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352230"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117785920"
 ---
-# <a name="using-message-support"></a>Verwenden der Nachrichten Unterstützung
+# <a name="using-message-support"></a>Verwenden der Nachrichtenunterstützung
 
-Nachdem ein Hand Shake Vorgang abgeschlossen und eine sichere Verbindung hergestellt wurde, kann eine Anwendung die Funktionen [**makesignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature), [**verschlüsseltmessage (allgemein)**](/windows/win32/api/sspi/nf-sspi-encryptmessage), [**VerifySignature**](/windows/desktop/api/Sspi/nf-sspi-verifysignature)und [**DecryptMessage (allgemein)**](/windows/win32/api/sspi/nf-sspi-decryptmessage) zum Austauschen von signierten oder verschlüsselten Anwendungsdaten mit dem Remote Computer verwenden.
+Nachdem ein Handshake abgeschlossen und eine sichere Verbindung hergestellt wurde, kann eine Anwendung die Funktionen [**MakeSignature,**](/windows/desktop/api/Sspi/nf-sspi-makesignature) [**EncryptMessage (Allgemein),**](/windows/win32/api/sspi/nf-sspi-encryptmessage) [**VerifySignature**](/windows/desktop/api/Sspi/nf-sspi-verifysignature)und [**DecryptMessage (Allgemein)**](/windows/win32/api/sspi/nf-sspi-decryptmessage) verwenden, um signierte oder verschlüsselte Anwendungsdaten mit dem Remotecomputer auszutauschen.
 
 Beispiele, die diese Funktionen verwenden, nachdem ein [*Sicherheitskontext*](../secgloss/s-gly.md) eingerichtet wurde, werden in den folgenden Abschnitten veranschaulicht:
 

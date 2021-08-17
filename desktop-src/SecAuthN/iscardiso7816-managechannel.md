@@ -22,13 +22,13 @@ ms.locfileid: "119481119"
 ---
 # <a name="iscardiso7816managechannel-method"></a>ISCardISO7816::ManageChannel-Methode
 
-\[Die **ManageChannel-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
+\[Die **ManageChannel-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
 Die **ManageChannel-Methode** erstellt einen APDU-Befehl [*(Application Protocol Data Unit),*](../secgloss/a-gly.md) der logische Kanäle öffnet und schließt.
 
-Die open-Funktion öffnet einen anderen logischen Kanal als den grundlegenden. Optionen werden für die Karte bereitgestellt, um eine logische Kanalnummer zuzuweisen, oder für die logische Kanalnummer, die der Karte bereitgestellt werden soll.
+Die open-Funktion öffnet einen neuen logischen Kanal, der nicht der grundlegende Kanal ist. Optionen werden für die Karte bereitgestellt, um eine logische Kanalnummer zu zuweisen, oder für die logische Kanalnummer, die der Karte bereitgestellt werden soll.
 
-Die close-Funktion schließt explizit einen anderen logischen Kanal als den grundlegenden. Nach dem erfolgreichen Schließen muss der logische Kanal wiederverwendet werden können.
+Die close-Funktion schließt explizit einen anderen logischen Kanal als den grundlegenden Kanal. Nach dem erfolgreichen Schließen muss der logische Kanal zur erneuten Verwendung verfügbar sein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,11 +50,11 @@ HRESULT ManageChannel(
 *byChannelState* \[ In\]
 </dt> <dd>
 
-Bit b8 von P1 wird verwendet, um die offene Funktion oder die close-Funktion anzugeben. Wenn b8 0 ist, sollte MANAGE CHANNEL einen logischen Kanal öffnen, und wenn b8 1 ist, schließt MANAGE CHANNEL einen logischen Kanal:
+Bit b8 von P1 wird verwendet, um die open-Funktion oder die close-Funktion anzugeben. Wenn b8 0 ist, dann öffnet MANAGE CHANNEL einen logischen Kanal, und wenn b8 1 ist, schließt MANAGE CHANNEL einen logischen Kanal:
 
-P1 = '00' zu öffnen
+P1 = '00' zum Öffnen
 
-P1 = '80' zum Schließen
+P1 = '80' zu schließen
 
 Andere Werte sind RFU.
 
@@ -63,11 +63,11 @@ Andere Werte sind RFU.
 *byChannel* \[ In\]
 </dt> <dd>
 
-Für die open-Funktion (P1 = '00') werden die Bits b1 und b2 von P2 verwendet, um die logische Kanalnummer auf die gleiche Weise wie im Klassen-Byte zu codieren. Die anderen Bits von P2 sind RFU.
+Für die open-Funktion (P1 = '00') werden die Bits b1 und b2 von P2 verwendet, um die logische Kanalnummer auf die gleiche Weise wie im Klassen-Byte zu codieren, die anderen Bits von P2 sind RFU.
 
 Wenn b1 und b2 von P2 **NULL** sind, weist die Karte eine logische Kanalnummer zu, die in den Bits b1 und b2 des Datenfelds zurückgegeben wird.
 
-Wenn b1 und/oder b2 von P2 nicht **NULL** sind, codieren sie eine andere logische Kanalnummer als die einfache. dann öffnet die Karte die extern zugewiesene logische Kanalnummer.
+Wenn b1 und/oder b2 von P2 nicht **NULL** sind, codierung eine andere logische Kanalnummer als die einfache; Dann öffnet die Karte die extern zugewiesene logische Kanalnummer.
 
 </dd> <dt>
 
@@ -76,7 +76,7 @@ Wenn b1 und/oder b2 von P2 nicht **NULL** sind, codieren sie eine andere logisch
 
 Bei der Eingabe ein Zeiger auf ein [**ISCardCmd-Schnittstellenobjekt**](iscardcmd.md) oder **NULL.**
 
-Bei der Rückgabe wird er mit dem APDU-Befehl gefüllt, der von diesem Vorgang erstellt wurde. Wenn *ppCmd* auf **NULL** festgelegt wurde, wird intern ein [**ISCardCmd-Smartcardobjekt**](iscardcmd.md) erstellt und mit dem *ppCmd-Zeiger* zurückgegeben. [](../secgloss/s-gly.md)
+Bei der Rückgabe wird er mit dem von diesem Vorgang erstellten APDU-Befehl gefüllt. Wenn *ppCmd auf* **NULL festgelegt** wurde, wird intern ein [**SMARTCARD-ISCardCmd-Objekt**](iscardcmd.md) erstellt und mit dem *ppCmd-Zeiger* zurückgegeben. [](../secgloss/s-gly.md)
 
 </dd> </dl>
 
@@ -90,7 +90,7 @@ Die -Methode gibt einen der folgenden möglichen Werte zurück.
 |-----------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/> |
 | <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ungültiger Parameter.<br/>                |
-| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein ungültiger Zeiger wurde übergeben.<br/>      |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Ein fehlerhafter Zeiger wurde übergeben.<br/>      |
 | <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
 
 
@@ -99,15 +99,15 @@ Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die open-Funktion erfolgreich über den grundlegenden logischen Kanal ausgeführt wird, muss der MF implizit als aktueller DF ausgewählt werden, und der Sicherheitsstatus des neuen logischen Kanals sollte mit dem grundlegenden logischen Kanal nach ATR übereinstimmen. Der Sicherheitsstatus des neuen logischen Kanals sollte von dem eines anderen logischen Kanals getrennt sein.
+Wenn die open-Funktion erfolgreich über den grundlegenden logischen Kanal ausgeführt wird, muss die MF implizit als aktuelle DF ausgewählt werden, und der Sicherheitsstatus des neuen logischen Kanals sollte mit dem grundlegenden logischen Kanal nach ATR identisch sein. Der Sicherheitsstatus des neuen logischen Kanals sollte von dem eines anderen logischen Kanals getrennt sein.
 
-Wenn die open-Funktion erfolgreich über einen logischen Kanal ausgeführt wird, der nicht der grundlegende Kanal ist, wird der aktuelle DF des logischen Kanals, der den Befehl ausgegeben hat, als aktueller DF ausgewählt. Darüber hinaus sollte der Sicherheitsstatus für den neuen logischen Kanal mit dem Sicherheitsstatus des logischen Kanals übereinstimmen, von dem aus die geöffnete Funktion ausgeführt wurde.
+Wenn die open-Funktion erfolgreich über einen logischen Kanal ausgeführt wird, der nicht der grundlegende Kanal ist, wird das aktuelle DF des logischen Kanals, der den Befehl ausgegeben hat, als aktuelles DF ausgewählt. Darüber hinaus sollte der Sicherheitsstatus für den neuen logischen Kanal mit dem Sicherheitsstatus des logischen Kanals identisch sein, über den die offene Funktion ausgeführt wurde.
 
-Nach einer erfolgreichen Schließfunktion geht der Sicherheitsstatus im Zusammenhang mit diesem logischen Kanal verloren.
+Nach einer erfolgreichen Close-Funktion geht der Sicherheitsstatus im Zusammenhang mit diesem logischen Kanal verloren.
 
 Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardISO7816**](iscardiso7816.md).
 
-Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen Smartcardfehlercode zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes gibt diese Schnittstelle möglicherweise einen Smartcard-Fehlercode zurück, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung zu erfüllen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,7 +115,7 @@ Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle e
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
 | Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |

@@ -1,5 +1,5 @@
 ---
-description: In den folgenden Beispielen wird die Verwendung der PDH-API veranschaulicht.
+description: Die folgenden Beispiele veranschaulichen die Verwendung der PDH-API.
 ms.assetid: 6df682cf-5f7c-4add-80bf-0ea471607b76
 title: PDH-Beispiele
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "117793923"
 ---
 # <a name="pdh-examples"></a>PDH-Beispiele
 
-In den folgenden Beispielen wird die Verwendung der PDH-API veranschaulicht.
+Die folgenden Beispiele veranschaulichen die Verwendung der PDH-API.
 
 -   [Aufzählen von Prozessobjekten](enumerating-process-objects.md)
 -   [Durchsuchen von Leistungsindikatoren](browsing-performance-counters.md)

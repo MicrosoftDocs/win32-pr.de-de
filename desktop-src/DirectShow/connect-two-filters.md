@@ -1,29 +1,29 @@
 ---
-description: In diesem Thema werden einige Hilfsfunktionen zum Verbinden von DirectShow-Filtern erläutert.
+description: In diesem Thema werden einige Hilfsfunktionen zum Verbinden von DirectShow-Filtern gezeigt.
 ms.assetid: cfd85944-7ae7-49e6-948f-9e190cdeed12
-title: Zwei Filter verbinden
+title: Verbinden Zwei Filter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a7e70e607c510490e7ed841ea44303153a94e83f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: ab83e8608c088fde6d06c0a44621f1c066f177ecf76cbc8ba3f55d31218b49ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954209"
 ---
-# <a name="connect-two-filters"></a>Zwei Filter verbinden
+# <a name="connect-two-filters"></a>Verbinden Zwei Filter
 
-In diesem Thema werden einige Hilfsfunktionen zum Verbinden von DirectShow-Filtern erläutert.
+In diesem Thema werden einige Hilfsfunktionen zum Verbinden von DirectShow-Filtern gezeigt.
 
-Um zwei Filter miteinander zu verbinden, müssen Sie für den upstreamfilter eine nicht verbundene Ausgabe-PIN und für den downstreamfilter eine nicht verbundene Eingabe-PIN finden.
+Um zwei Filter zu verbinden, müssen Sie einen nicht verbundenen Ausgabepin im Upstreamfilter und einen nicht verbundenen Eingabepin für den Downstreamfilter finden.
 
-Wenn Sie bereits über Zeiger auf beide Pins verfügen, müssen Sie die [**igraphbuilder:: Connect**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-connect) -Methode zum Herstellen einer Verbindung abrufen. Wenn die Pins keine direkte Verbindung herstellen können, fügt die **igraphbuilder:: Connect** -Methode möglicherweise zusätzliche Filter ein, um die Verbindung abzuschließen. Weitere Informationen finden Sie unter [Intelligent Connect](intelligent-connect.md).
+Wenn Sie bereits Zeiger auf beide Stecknadeln haben, rufen Sie die [**IGraphBuilder::Verbinden-Methode**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-connect) auf, um sie zu verbinden. Wenn die Pins nicht direkt miteinander verbunden werden können, fügt die **IGraphBuilder::Verbinden-Methode** möglicherweise zusätzliche Filter ein, um die Verbindung herzustellen. Weitere Informationen finden Sie unter [Intelligent Verbinden](intelligent-connect.md).
 
-Wenn Sie über einen Zeiger auf die Filter, aber nicht über die Pins verfügen, müssen Sie die [**ibasefilter:: enumpins**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-enumpins) -Methode verwenden, um die Pins zu suchen. (Weitere Informationen finden Sie unter Auflisten von [Pins](enumerating-pins.md).) Diese Technik wird in den Hilfsfunktionen in diesem Thema veranschaulicht.
+Wenn Sie einen Zeiger auf die Filter, aber nicht die Stecknadeln haben, müssen Sie die [**IBaseFilter::EnumPins-Methode**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-enumpins) verwenden, um die Stecknadeln zu finden. (Siehe [Enumerating Pins](enumerating-pins.md).) Die Hilfsfunktionen in diesem Thema veranschaulichen diese Technik.
 
-### <a name="output-pin-to-filter"></a>Anzufilternde Ausgabe-PIN
+### <a name="output-pin-to-filter"></a>An Filter anheften der Ausgabe
 
-Die folgende Funktion nimmt zwei Parameter an: einen Zeiger auf eine Ausgabe-PIN und einen Zeiger auf einen Filter. Die-Funktion verbindet die Ausgabe-PIN mit der ersten verfügbaren Eingabe-PIN für den Filter.
+Die folgende Funktion verwendet zwei Parameter: einen Zeiger auf einen Ausgabepin und einen Zeiger auf einen Filter. Die Funktion verbindet den Ausgabepin mit dem ersten verfügbaren Eingabepin im Filter.
 
 
 ```C++
@@ -52,12 +52,12 @@ HRESULT ConnectFilters(
 
 Diese Funktion führt Folgendes aus:
 
-1.  Ruft die- `FindUnconnectedPin` Funktion auf, um eine nicht verbundene Eingabe-PIN zu erhalten. Diese Funktion wird im Thema [Suchen einer nicht verbundenen PIN für einen Filter](find-an-unconnected-pin-on-a-filter.md)gezeigt.
-2.  Ruft [**igraphbuilder:: Connect**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-connect) auf, um die beiden Pins zu verbinden.
+1.  Ruft die `FindUnconnectedPin` Funktion auf, um einen nicht verbundenen Eingabepin zu erhalten. Diese Funktion wird im Thema Suchen einer [nicht verbundenen Stecknadel in einem Filter gezeigt.](find-an-unconnected-pin-on-a-filter.md)
+2.  Ruft [**IGraphBuilder::Verbinden**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-connect) auf, um die beiden Stecknadeln zu verbinden.
 
-### <a name="filter-to-input-pin"></a>An Eingabe-PIN Filtern
+### <a name="filter-to-input-pin"></a>Filtern nach Eingabepin
 
-Die Next-Funktion nimmt einen Zeiger auf einen Filter und einen Zeiger auf eine Eingabe-PIN. Er verbindet die Eingabe-PIN mit dem ersten verfügbaren Ausgabepin für den Filter.
+Die nächste Funktion verwendet einen Zeiger auf einen Filter und einen Zeiger auf einen Eingabepin. Er verbindet den Eingabepin mit dem ersten verfügbaren Ausgabepin im Filter.
 
 
 ```C++
@@ -81,9 +81,9 @@ HRESULT ConnectFilters(IGraphBuilder *pGraph, IBaseFilter *pSrc, IPin *pIn)
 
 
 
-### <a name="filter-to-filter"></a>Filter zum Filtern
+### <a name="filter-to-filter"></a>Filtern nach Filter
 
-Die dritte Funktion nimmt einen Zeiger auf einen upstreamfilter und einen Zeiger auf einen downstreamfilter und versucht, beide Filter zu verbinden.
+Die dritte Funktion verwendet einen Zeiger auf einen Upstreamfilter und einen Zeiger auf einen Downstreamfilter und versucht, beide Filter zu verbinden.
 
 
 ```C++
@@ -113,7 +113,7 @@ HRESULT ConnectFilters(IGraphBuilder *pGraph, IBaseFilter *pSrc, IBaseFilter *pD
 [Allgemeine Graph-Building Techniken](general-graph-building-techniques.md)
 </dt> <dt>
 
-[**ICaptureGraphBuilder2:: RenderStream**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream)
+[**ICaptureGraphBuilder2::RenderStream**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream)
 </dt> </dl>
 
  

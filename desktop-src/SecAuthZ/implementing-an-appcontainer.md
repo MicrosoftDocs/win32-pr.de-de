@@ -1,35 +1,35 @@
 ---
-description: Ein appcontainer wird implementiert, indem dem Prozess Token neue Informationen hinzugefügt werden, wobei seaccesscheck () so geändert wird, dass alle veralteten, nicht geänderten Zugriffs Steuerungs Listen (ACL-Objekte) Zugriffs Anforderungen von appcontainer-Prozessen standardmäßig blockieren, sowie für appcontainers verfügbare reacl-Objekte.
+description: Ein AppContainer wird implementiert, indem dem Prozesstoken neue Informationen hinzugefügt und SeAccessCheck() so geändert wird, dass alle älteren, unveränderten ACL-Objekte (Access Control List) standardmäßig Zugriffsanforderungen von AppContainer-Prozessen blockieren und ACL-Objekte erneut erstellen, die für AppContainers verfügbar sein sollten.
 ms.assetid: C70A2F8C-27CB-4298-AA31-8F5099616625
-title: Implementieren eines appcontainer
+title: Implementieren eines AppContainers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a6fc4c8d807d6a45f27f4f7a79d69ceb97edeb3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: df4d50c0a5aa9f80755084886554a533fe1c82a6791840a9ff4ea4fdcf1476fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119670800"
 ---
-# <a name="implementing-an-appcontainer"></a>Implementieren eines appcontainer
+# <a name="implementing-an-appcontainer"></a>Implementieren eines AppContainers
 
-Ein appcontainer wird implementiert, indem dem Prozess Token neue Informationen hinzugefügt werden, wobei [**seaccesscheck ()**](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-seaccesscheck) so geändert wird, dass alle veralteten, nicht geänderten Zugriffs Steuerungs Listen (ACL-Objekte) Zugriffs Anforderungen von appcontainer-Prozessen standardmäßig blockieren, sowie für appcontainers verfügbare reacl-Objekte.
+Ein AppContainer wird implementiert, indem dem Prozesstoken neue Informationen hinzugefügt und [**SeAccessCheck()**](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-seaccesscheck) so geändert wird, dass alle älteren, unveränderten ACL-Objekte (Access Control List) standardmäßig Zugriffsanforderungen von AppContainer-Prozessen blockieren und ACL-Objekte erneut erstellen, die für AppContainers verfügbar sein sollten.
 
 ## <a name="the-process"></a>Der Prozess
 
-Fügen Sie zunächst neue Informationen für das Prozess Token hinzu. Ändern Sie dann **seaccesscheck ()** , damit alle veralteten, nicht geänderten ACLs standardmäßig Zugriffs Anforderungen von appcontainer-Prozessen blockieren. Zum Schluss sollten Sie Ressourcen für die Ressourcen bereitstellungscontainer bereitstellen.
+Fügen Sie zunächst neue Informationen für das Prozesstoken hinzu. Ändern Sie **dann SeAccessCheck(),** sodass alle veralteten, unveränderten ACLs Zugriffsanforderungen von AppContainer-Prozessen standardmäßig blockieren. Schließlich müssen ACL-Ressourcen, die für AppContainers verfügbar sein sollen, erneut hinzugefügt werden.
 
-Die appcontainer-sid ist ein beständiger eindeutiger Bezeichner für den appcontainer. Funktionen-SIDs gewähren Zugriff auf Gruppen von Ressourcen für Gruppen von appcontainers. Eine appcontainernumber ist ein vorübergehendes **DWORD** , mit dem zwischen appcontainers unterschieden werden kann. Es sollte jedoch nicht als Identität für den appcontainer verwendet werden.
+Die AppContainer-SID ist ein dauerhafter eindeutiger Bezeichner für den App-Container. Funktions-SIDs gewähren Gruppen von AppContainers Zugriff auf Ressourcengruppen. Eine AppContainerNumber ist ein vorübergehendes **DWORD,** das verwendet wird, um zwischen AppContainers zu unterscheiden. Sie sollte jedoch nicht als Identität für den AppContainer verwendet werden.
 
-Damit ein einzelner appcontainer auf eine Ressource zugreifen kann, fügen Sie seine appcontainersid der ACL für diese Ressource hinzu.
+Damit ein einzelner AppContainer auf eine Ressource zugreifen kann, fügen Sie dessen AppContainerSID der ACL für diese Ressource hinzu.
 
-Fügen Sie alle zugehörigen appcontainersids der ACL für diese Ressource hinzu, damit mehrere bestimmte appcontainers auf eine Ressource zugreifen können.
+Damit mehrere bestimmte AppContainer auf eine Ressource zugreifen können, fügen Sie der ACL für diese Ressource alle AppContainerSIDs hinzu.
 
-Erstellen Sie zum Verwalten von Berechtigungs Gruppen eine Funktions-sid (GUID), und legen Sie diese Funktions-sid für alle Ressourcen fest, die gewährt werden sollen. Fügen Sie dann die Funktions-sid zum Prozess Token hinzu.
+Um Gruppen von Berechtigungen zu verwalten, erstellen Sie eine Funktions-SID (eine GUID), und legen Sie diese Funktions-SID für alle Ressourcen ab, die gewährt werden sollen. Fügen Sie ihrem Prozesstoken dann die Funktions-SID hinzu.
 
-Damit alle appcontainers auf eine Ressource zugreifen können, fügen Sie die SID **alle Anwendungspakete** der ACL für diese Ressource hinzu. Dies verhält sich wie ein Platzhalter.
+Damit alle AppContainer auf eine Ressource zugreifen können, fügen Sie der ACL für diese Ressource die **SID** ALLE ANWENDUNGSPAKETE hinzu. Dies verhält sich wie ein Platzhalter.
 
-Sowohl appcontainersid als auch capabilitysid unterstützen Zugriffs Masken in Access Control Einträgen (ACE). Legen Sie nach Bedarf fest.
+Sowohl AppContainerSID als auch CapabilitySID unterstützen Zugriffsmasken in Access Control Entries (ACE). Legen Sie entsprechend fest.
 
  
 

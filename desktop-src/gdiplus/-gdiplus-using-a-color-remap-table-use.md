@@ -1,25 +1,25 @@
 ---
-description: Beim Neuzuordnen werden die Farben in einem Bild entsprechend einer Farb Umwandlungs Tabelle umgerechnet. Die Farb Umwandlungs Tabelle ist ein Array von ColorMap-Strukturen. Jede ColorMap-Struktur im Array verfügt über einen OldColor-Member und einen NewColor-Member.
+description: Bei der Neuzuordnung werden die Farben in einem Bild entsprechend einer Farbumrechnungstabelle konvertiert. Die Farbzuordnungstabelle ist ein Array von ColorMap-Strukturen. Jede ColorMap-Struktur im Array verfügt über ein oldColor-Member und ein newColor-Member.
 ms.assetid: 2b56ccd5-b9f3-4c5e-8a0b-4b3d1f2b7122
 title: Verwenden von Farbneuzuordnungstabellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fe1c07bc0a67a02ea07aeaa3931e661af5665e33
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a00f36c493bbdc696fa672b2899d4d7c6d3231a9e40c0e4162b5113d78a67164
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119036298"
 ---
 # <a name="using-a-color-remap-table"></a>Verwenden von Farbneuzuordnungstabellen
 
-Beim Neuzuordnen werden die Farben in einem Bild entsprechend einer Farb Umwandlungs Tabelle umgerechnet. Die Farb Umwandlungs Tabelle ist ein Array von [**ColorMap**](/windows/win32/api/Gdipluscolormatrix/ns-gdipluscolormatrix-colormap) -Strukturen. Jede **ColorMap** -Struktur im Array verfügt über einen **OldColor** -Member und einen **NewColor** -Member.
+Bei der Neuzuordnung werden die Farben in einem Bild entsprechend einer Farbumrechnungstabelle konvertiert. Die Farbzuordnungstabelle ist ein Array von [**ColorMap-Strukturen.**](/windows/win32/api/Gdipluscolormatrix/ns-gdipluscolormatrix-colormap) Jede **ColorMap-Struktur** im Array verfügt über ein **oldColor-Member** und ein **newColor-Member.**
 
-Wenn GDI+ ein Bild zeichnet, wird jedes Pixel des Bilds mit dem Array Alter Farben verglichen. Wenn die Farbe eines Pixels mit einer alten Farbe übereinstimmt, wird seine Farbe in die entsprechende neue Farbe geändert. Die Farben werden nur für das Rendering geändert – die Farbwerte des Bilds selbst (in einem [**Bild**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) -oder [**Bitmap**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) -Objekt gespeichert) werden nicht geändert.
+Wenn GDI+ Bild zeichnet, wird jedes Pixel des Bilds mit dem Array alter Farben verglichen. Wenn die Farbe eines Pixels einer alten Farbe entspricht, wird seine Farbe in die entsprechende neue Farbe geändert. Die Farben werden nur für das Rendering geändert. Die Farbwerte des Bilds selbst (gespeichert in einem [**Bild-**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) oder [**Bitmapobjekt)**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) werden nicht geändert.
 
-Um ein neu zugeordnetes Bild zu zeichnen, initialisieren Sie ein Array von [**ColorMap**](/windows/win32/api/Gdipluscolormatrix/ns-gdipluscolormatrix-colormap) -Strukturen. Übergeben Sie die Adresse des Arrays an die [**imageattribute:: SetRemapTable**](/windows/win32/api/Gdiplusimageattributes/nf-gdiplusimageattributes-imageattributes-setremaptable) -Methode eines [**imageattribute**](/windows/win32/api/gdiplusimageattributes/nl-gdiplusimageattributes-imageattributes) -Objekts, und übergeben Sie dann die Adresse des **imageattributobjekts** an die [DrawImage-Methoden](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawimage(inimage_inconstpointf_inint)) Methode eines [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekts.
+Initialisieren Sie ein Array von [**ColorMap-Strukturen,**](/windows/win32/api/Gdipluscolormatrix/ns-gdipluscolormatrix-colormap) um ein neu zugeordnetes Bild zu zeichnen. Übergeben Sie die Adresse dieses Arrays an die [**ImageAttributes::SetRemapTable-Methode**](/windows/win32/api/Gdiplusimageattributes/nf-gdiplusimageattributes-imageattributes-setremaptable) eines [**ImageAttributes-Objekts,**](/windows/win32/api/gdiplusimageattributes/nl-gdiplusimageattributes-imageattributes) und übergeben Sie dann die Adresse des **ImageAttributes-Objekts** an die [DrawImage Methods-Methode](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawimage(inimage_inconstpointf_inint)) eines [**Graphics-Objekts.**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics)
 
-Im folgenden Beispiel wird ein [**Image**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) -Objekt aus dem Datei RemapInput.bmp erstellt. Der Code erstellt eine Farb Umwandlungs Tabelle, die aus einer einzelnen [**ColorMap**](/windows/win32/api/Gdipluscolormatrix/ns-gdipluscolormatrix-colormap) -Struktur besteht. Der **OldColor** -Member der **ColorMap** -Struktur ist rot, und der **NewColor** -Member ist blau. Das Bild wird einmal ohne Neuzuordnen und einmal mit Neuzuordnung gezeichnet. Der neuzustellungs Prozess ändert alle roten Pixel in blau.
+Im folgenden Beispiel wird ein [**Image-Objekt**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) aus der Datei RemapInput.bmp. Der Code erstellt eine Farbzuordnungstabelle, die aus einer einzelnen [**ColorMap-Struktur**](/windows/win32/api/Gdipluscolormatrix/ns-gdipluscolormatrix-colormap) besteht. Das **oldColor-Member** der **ColorMap-Struktur** ist rot, und das **newColor-Member** ist blau. Das Bild wird einmal ohne Neu- und einmal mit Neuveranschnappung gezeichnet. Bei der Neuveränderung werden alle roten Pixel in Blau geändert.
 
 
 ```
@@ -48,9 +48,9 @@ graphics.DrawImage(
 
 
 
-Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und das neu zugeordnete Bild auf der rechten Seite.
+Die folgende Abbildung zeigt das ursprüngliche Bild links und das neu zugeordnete Bild auf der rechten Seite.
 
-![Abbildung mit zwei Versionen eines mehrfarbigen Bilds der Rote Bereich in der ersten Version ist in der zweiten Version blau.](images/colortrans7.png)
+![Abbildung, die zwei Versionen eines mehrfarbigen Bilds zeigt; Der rote Bereich in der ersten Version ist in der zweiten Version blau.](images/colortrans7.png)
 
  
 

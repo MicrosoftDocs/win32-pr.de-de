@@ -1,29 +1,29 @@
 ---
-description: Wird von einem asynchronen Media Foundation Transform (MFT) gesendet, wenn ein Ausgleichs Vorgang beendet ist.
+description: Wird von einer asynchronen Media Foundation Transformation (MFT) gesendet, wenn ein Entleerungsvorgang abgeschlossen ist.
 ms.assetid: 923055e5-a09a-402e-983b-6fa3cebb1b3a
-title: Metransformdraunvollereignis (mfobjects. h)
+title: METransformDrainComplete-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ed291f9edacb11ba6edf7f5bd50a0715ae61a281
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd5ab03ac5027d1dc7549e7b7f0b8494cd8066b07afb64c5df17415a4986866e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974029"
 ---
-# <a name="metransformdraincomplete-event"></a>Metransformdraunvollständiges Ereignis
+# <a name="metransformdraincomplete-event"></a>METransformDrainComplete-Ereignis
 
-Wird von einem asynchronen Media Foundation Transform (MFT) gesendet, wenn ein Ausgleichs Vorgang beendet ist.
+Wird von einer asynchronen Media Foundation Transformation (MFT) gesendet, wenn ein Entleerungsvorgang abgeschlossen ist.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG               |
+| VARTYPE              | Beschreibung               |
 |----------------------|---------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> |
 
 
 
@@ -33,17 +33,17 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 
 
-| Attribut                                                                        | BESCHREIBUNG                                                                      |
+| attribute                                                                        | Beschreibung                                                                      |
 |----------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| [\_ \_ MFT- \_ Eingabedaten \_ Strom- \_ ID des MF-Ereignisses](mf-event-mft-input-stream-id.md)<br/> | Der Bezeichner des Datenstroms, der entladen wurde.<br/>*Benötigten*<br/> |
+| [\_ \_ \_ \_ MFT-EINGABESTREAM-ID des MF-EREIGNISSES \_](mf-event-mft-input-stream-id.md)<br/> | Der Bezeichner des Datenstroms, der entladen wurde.<br/>*(Erforderlich)*<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Asynchrone MFTs Senden dieses Ereignis über die [**IMF mediaeventgenerator**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator) -Schnittstelle. Dieses Ereignis wird von synchronen MFTs niemals gesendet.
+Asynchrone MFTs senden dieses Ereignis über die [**INTERFACESMediaEventGenerator-Schnittstelle.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator) Synchrone MFTs senden dieses Ereignis nie.
 
-Um einen MFT zu entleeren, wenden Sie [**imftransform::P rocess Message**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage) mit der **MFT- \_ Nachrichten \_ Befehls \_** Ausgleichs Meldung an. Geben Sie den Eingabedaten Strom an, der im *ulparam* -Parameter geleert werden soll. Wenn der Ausgleichs Vorgang abgeschlossen ist, sendet eine asynchrone MFT das metransformdraunvoll-Ereignis. Das [MF- \_ Ereignis \_ MFT-Eingabedaten Strom- \_ \_ \_ ID](mf-event-mft-input-stream-id.md) -Attribut des Ereignisses enthält den im *ulparam* -Parameter angegebenen Datenstrom Bezeichner.
+Um einen MFT zu entladen, rufen Sie [**ÜBERTRANSFORM::P rocessMessage**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage) mit der **Meldung MFT \_ MESSAGE COMMAND \_ \_ DRAIN** auf. Geben Sie den Eingabestream an, der im *ulParam-Parameter* entladen werden soll. Wenn der Entleerungsvorgang abgeschlossen ist, sendet ein asynchroner MFT das METransformDrainComplete-Ereignis. Das [MF \_ EVENT \_ MFT INPUT STREAM \_ \_ \_ ID-Attribut](mf-event-mft-input-stream-id.md) des Ereignisses enthält den Streambezeichner, der im *ulParam-Parameter* angegeben ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,17 +51,17 @@ Um einen MFT zu entleeren, wenden Sie [**imftransform::P rocess Message**](/wind
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                  |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                  |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> <dt>
 
 [Asynchrone MFTs](asynchronous-mfts.md)

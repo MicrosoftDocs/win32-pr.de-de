@@ -1,37 +1,37 @@
 ---
-description: Durch das Aktivieren einer Berechtigung in einem Zugriffs Token kann der Prozess Aktionen auf Systemebene durchführen, die zuvor nicht möglich waren.
+description: Wenn Sie eine Berechtigung in einem Zugriffstoken aktivieren, kann der Prozess Aktionen auf Systemebene ausführen, die zuvor nicht möglich waren.
 ms.assetid: aa2d3fe7-01ee-4243-b72c-3e8b90068e22
 title: Aktivieren und Deaktivieren von Berechtigungen in C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 354f3ac2b27a7c027bd7c48e753263c43b676dd3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dbc36e3db162b1a7a7f12f1849ab7708bda19d90991e58a65135d0eb4c0abd04
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117781726"
 ---
 # <a name="enabling-and-disabling-privileges-in-c"></a>Aktivieren und Deaktivieren von Berechtigungen in C++
 
-Durch das Aktivieren einer Berechtigung in einem Zugriffs Token kann der Prozess Aktionen auf Systemebene durchführen, die zuvor nicht möglich waren. Die Anwendung sollte gründlich überprüfen, ob die Berechtigung für den Kontotyp geeignet ist, insbesondere für die folgenden leistungsstarken Berechtigungen.
+Wenn Sie eine Berechtigung in einem Zugriffstoken aktivieren, kann der Prozess Aktionen auf Systemebene ausführen, die zuvor nicht möglich waren. Ihre Anwendung sollte gründlich überprüfen, ob die Berechtigung für den Typ des Kontos geeignet ist, insbesondere für die folgenden leistungsstarken Berechtigungen.
 
 
 
-| Berechtigungs Konstante           | Zeichenfolgenwert                  | `Display name`                        |
+| Berechtigungskonstante           | Zeichenfolgenwert                  | Anzeigename                        |
 |------------------------------|-------------------------------|-------------------------------------|
-| Name des zugriffsdiensts "SE" \_ \_ | SeAssignPrimaryTokenPrivilege | Ersetzen eines Tokens auf Prozessebene       |
-| Name der SE- \_ Sicherung \_             | SeBackupPrivilege             | Sichern von Dateien und Verzeichnissen       |
-| SE \_ - \_ debugname              | SeDebugPrivilege              | Debuggen von Programmen                      |
-| \_ansteigende \_ Kontingent \_ Name für SE    | SeIncreaseQuotaPrivilege      | Anpassen von Speicherkontingenten für einen Prozess  |
-| SE \_ TCB- \_ Name                | SeTcbPrivilege                | Einsetzen als Teil des Betriebssystems |
+| \_SE ASSIGNPRIMARYTOKEN-NAME \_ | SeAssignPrimaryTokenPrivilege | Ersetzen eines Tokens auf Prozessebene       |
+| \_SE \_SICHERUNGSNAME             | SeBackupPrivilege             | Sichern von Dateien und Verzeichnissen       |
+| \_SE \_DEBUGNAME              | SeDebugPrivilege              | Debuggen von Programmen                      |
+| \_SE ERHÖHEN DES \_ \_ KONTINGENTNAMENS    | SeIncreaseQuotaPrivilege      | Anpassen von Speicherkontingenten für einen Prozess  |
+| \_SE \_TCB-NAME                | SeTcbPrivilege                | Einsetzen als Teil des Betriebssystems |
 
 
 
  
 
-Bevor Sie diese potenziell gefährlichen Berechtigungen aktivieren, stellen Sie fest, dass Funktionen oder Vorgänge in Ihrem Code tatsächlich die Berechtigungen erfordern. So erfordern beispielsweise nur wenige Funktionen im Betriebssystem " **SeTcbPrivilege**". Eine Liste aller verfügbaren Berechtigungen finden Sie unter [Berechtigungs Konstanten](authorization-constants.md).
+Bevor Sie diese potenziell gefährlichen Berechtigungen aktivieren, bestimmen Sie, ob Funktionen oder Vorgänge in Ihrem Code die Berechtigungen tatsächlich benötigen. Beispielsweise erfordern nur sehr wenige Funktionen im Betriebssystem tatsächlich **seTcbPrivilege**. Eine Liste aller verfügbaren Berechtigungen finden Sie unter [Berechtigungskonstanten.](authorization-constants.md)
 
-Im folgenden Beispiel wird gezeigt, wie Sie eine Berechtigung in einem [*Zugriffs Token*](/windows/desktop/SecGloss/a-gly)aktivieren oder deaktivieren. Im Beispiel wird die [**LookupPrivilegeValue**](/windows/desktop/api/Winbase/nf-winbase-lookupprivilegevaluea) -Funktion aufgerufen, um den [*lokal eindeutigen Bezeichner*](/windows/desktop/SecGloss/l-gly) (LUID) zu erhalten, den das lokale System zur Identifizierung der Berechtigung verwendet. Im Beispiel wird die Funktion "- [**tokenprivilegien**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-adjusttokenprivileges) " aufgerufen, die entweder die Berechtigung aktiviert oder deaktiviert, die vom Wert des Parameters " *benableprivilege* " abhängt.
+Das folgende Beispiel zeigt, wie Sie eine Berechtigung in einem [*Zugriffstoken*](/windows/desktop/SecGloss/a-gly)aktivieren oder deaktivieren. Das Beispiel ruft die [**LookupPrivilegeValue-Funktion**](/windows/desktop/api/Winbase/nf-winbase-lookupprivilegevaluea) auf, um den [*lokal eindeutigen Bezeichner*](/windows/desktop/SecGloss/l-gly) (LUID) abzurufen, den das lokale System zum Identifizieren der Berechtigung verwendet. Anschließend ruft das Beispiel die [**AdjustTokenPrivileges-Funktion**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-adjusttokenprivileges) auf, die die Berechtigung aktiviert oder deaktiviert, die vom Wert des *bEnablePrivilege-Parameters* abhängt.
 
 
 ```C++

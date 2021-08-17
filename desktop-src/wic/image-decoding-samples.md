@@ -19,6 +19,6 @@ Dieser Abschnitt enthält die Beispiele für die Bilddecodierung.
 
 | Thema | Beschreibung |
 |-|-|
-| [Beispiel für die progressive WIC-Decodierung](-wic-sample-progressive-decoding.md) | In diesem Beispiel wird die Verwendung von Windows Imaging Component (WIC) zum Decodieren eines Bilds veranschaulicht, das mit progressiven Ebenen codiert ist. |
+| [Beispiel für progressive WIC-Decodierung](-wic-sample-progressive-decoding.md) | In diesem Beispiel wird die Verwendung von Windows Imaging Component (WIC) zum Decodieren eines Bilds veranschaulicht, das mit progressiven Ebenen codiert ist. |
 | [WIC-Bildanzeige mit Direct2D-Beispiel](-wic-sample-d2d-viewer.md) | In diesem Beispiel wird die Verwendung von WIC zum Decodieren einer Bilddatei und Direct2D zum Rendern des Bilds auf dem Bildschirm veranschaulicht. |
-| [Animiertes GIF-Beispiel für WIC](-wic-sample-animated-gif.md) | Dieses Beispiel veranschaulicht das Decodieren verschiedener Frames in einer GIF-Datei, das Lesen der entsprechenden Metadaten für jeden Frame, das Erstellen von Frames und das Rendern der Animation mit Direct2D. |
+| [Animiertes GIF-Beispiel für WIC](-wic-sample-animated-gif.md) | Dieses Beispiel veranschaulicht das Decodieren verschiedener Frames in einer GIF-Datei, das Lesen der entsprechenden Metadaten für jeden Frame, das Zusammenstellen von Frames und das Rendern der Animation mit Direct2D. |

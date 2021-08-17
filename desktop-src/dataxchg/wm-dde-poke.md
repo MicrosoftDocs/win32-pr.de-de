@@ -1,9 +1,9 @@
 ---
-title: WM_DDE_POKE Meldung (DDE. h)
-description: Eine DDE-Client Anwendung (dynamischer Datenaustausch) sendet eine WM- \_ DDE- \_ Poke-Nachricht an eine DDE-Serveranwendung.
+title: WM_DDE_POKE (Dde.h)
+description: Eine dynamische Daten Exchange-Clientanwendung (DDE) sendet eine WM \_ DDE \_ POKE-Nachricht an eine DDE-Serveranwendung.
 ms.assetid: 848142b7-a7ef-4206-9bb3-b511388cfaaa
 keywords:
-- WM_DDE_POKE Nachrichten Datenaustausch
+- WM_DDE_POKE der Exchange
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 001697cbd5328b9c8d9eb72ebddff5f86ef6381c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: df1329c6667698a0b633deb2726c47469b515e8fcd78d735a3949e7c8e19a4dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743696"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117736287"
 ---
-# <a name="wm_dde_poke-message"></a>WM- \_ DDE- \_ Poke-Nachricht
+# <a name="wm_dde_poke-message"></a>WM \_ DDE \_ POKE-Nachricht
 
-Eine DDE-Client Anwendung (dynamischer Datenaustausch) sendet eine **WM- \_ DDE- \_ Poke** -Nachricht an eine DDE-Serveranwendung. Ein Client verwendet diese Nachricht, um den Server aufzufordern, ein nicht angefordertes Datenelement zu akzeptieren. Der Server antwortet mit einer [**WM- \_ DDE \_**](wm-dde-ack.md) -Bestätigungsmeldung, die angibt, ob das Datenelement akzeptiert wurde.
+Eine dynamische Daten Exchange -Clientanwendung (DDE) sendet eine **WM \_ DDE \_ POKE-Nachricht** an eine DDE-Serveranwendung. Ein Client verwendet diese Meldung, um den Server anfordert, ein nicht angefordertes Datenelement zu akzeptieren. Es wird erwartet, dass der Server mit einer [**WM \_ DDE \_ ACK-Meldung**](wm-dde-ack.md) antwortet, die angibt, ob er das Datenelement akzeptiert hat.
 
-Um diese Nachricht zu veröffentlichen, wenden Sie die [**PostMessage**](/windows/desktop/api/winuser/nf-winuser-postmessagea) -Funktion mit den folgenden Parametern an.
+Um diese Nachricht zu veröffentlichen, rufen Sie die [**PostMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-postmessagea) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -41,41 +41,41 @@ Um diese Nachricht zu veröffentlichen, wenden Sie die [**PostMessage**](/window
 *wParam* 
 </dt> <dd>
 
-Ein Handle für das Client Fenster, das die Meldung bereitstellen soll.
+Ein Handle für das Clientfenster, in dem die Nachricht angezeigt wird.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das nieder wertige Wort ist ein Handle für ein globales Speicher Objekt, das eine [**DDEPoke**](/windows/desktop/api/Dde/ns-dde-ddepoke) -Struktur mit den Daten und zusätzlichen Informationen enthält.
+Das Wort in niedriger Reihenfolge ist ein Handle für ein globales Speicherobjekt, das eine [**DDEPOKE-Struktur**](/windows/desktop/api/Dde/ns-dde-ddepoke) mit den Daten und zusätzlichen Informationen enthält.
 
-Das höchst wertige Wort enthält ein globales Atom, das das Datenelement identifiziert, für das die Daten oder Benachrichtigungen gesendet werden.
+Das obere Wort enthält ein globales Atom, das das Datenelement identifiziert, für das die Daten oder Benachrichtigungen gesendet werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-### <a name="posting"></a>Veröffentlichen
+### <a name="posting"></a>Entsendung
 
-Die Client Anwendung muss Speicher für das globale Speicher Objekt mithilfe der [**GlobalAlloc**](/windows/desktop/api/winbase/nf-winbase-globalalloc) -Funktion zuweisen. Die Client Anwendung muss das-Objekt löschen, wenn eine der folgenden Bedingungen zutrifft:
+Die Clientanwendung muss mithilfe der [**GlobalAlloc-Funktion**](/windows/desktop/api/winbase/nf-winbase-globalalloc) Arbeitsspeicher für das globale Speicherobjekt zuordnen. Die Clientanwendung muss das Objekt löschen, wenn eine der folgenden Bedingungen zutrifft:
 
--   Die Serveranwendung antwortet mit einer negativen [**WM- \_ DDE \_**](wm-dde-ack.md) -Bestätigungsmeldung.
--   Der **frelease** -Member ist **false**, aber die Serveranwendung antwortet entweder mit einer positiven oder negativen [**WM- \_ DDE \_**](wm-dde-ack.md)-Bestätigung.
+-   Die Serveranwendung antwortet mit einer negativen [**WM \_ DDE \_ ACK-Meldung.**](wm-dde-ack.md)
+-   Der **fRelease-Member** ist **FALSE,** aber die Serveranwendung antwortet entweder mit einer positiven oder negativen [**WM \_ DDE \_ ACK**](wm-dde-ack.md).
 
-Die Client Anwendung muss das Atom mithilfe der [**globaladdatom**](/windows/desktop/api/Winbase/nf-winbase-globaladdatoma) -Funktion erstellen.
+Die Clientanwendung muss das Atom mithilfe der [**GlobalAddAtom-Funktion**](/windows/desktop/api/Winbase/nf-winbase-globaladdatoma) erstellen.
 
-Die Client Anwendung muss den **WM- \_ DDE \_ Poke** - *LPARAM* -Parameter durch Aufrufen der [**packddelta param**](/windows/desktop/api/Dde/nf-dde-packddelparam) -Funktion oder der [**reuseddelta param**](/windows/desktop/api/Dde/nf-dde-reuseddelparam) -Funktion erstellen oder wieder verwenden.
+Die Clientanwendung muss den **WM \_ DDE \_ POKE** *lParam-Parameter* durch Aufrufen der [**PackDDElParam-Funktion**](/windows/desktop/api/Dde/nf-dde-packddelparam) oder der [**ReuseDDElParam-Funktion**](/windows/desktop/api/Dde/nf-dde-reuseddelparam) erstellen oder wiederverwenden.
 
 ### <a name="receiving"></a>Empfangen
 
-Die Serveranwendung sollte die " [**WM \_ DDE \_ ACK**](wm-dde-ack.md) "-Nachricht senden, um positiv oder negativ zu reagieren. Beim Veröffentlichen der **WM- \_ DDE \_**-Bestätigung kann der Server entweder das Atom wieder verwenden oder es löschen und ein neues erstellen.
+Die Serveranwendung sollte die [**WM \_ DDE \_ ACK-Nachricht**](wm-dde-ack.md) veröffentlichen, um positiv oder negativ zu reagieren. Beim Veröffentlichen **von WM \_ DDE \_ ACK** kann der Server entweder das Atom wiederverwenden oder es löschen und ein neues erstellen.
 
-Der Server muss den " [**WM \_ DDE \_ ACK**](wm-dde-ack.md) *LPARAM* "-Parameter durch Aufrufen der [**packddelta param**](/windows/desktop/api/Dde/nf-dde-packddelparam) -Funktion oder der [**reuseddelta param**](/windows/desktop/api/Dde/nf-dde-reuseddelparam) -Funktion erstellen oder wieder verwenden.
+Der Server muss den [**WM \_ DDE \_ ACK**](wm-dde-ack.md) *lParam-Parameter* erstellen oder wiederverwenden, indem er die [**PackDDElParam-Funktion**](/windows/desktop/api/Dde/nf-dde-packddelparam) oder die [**ReuseDDElParam-Funktion**](/windows/desktop/api/Dde/nf-dde-reuseddelparam) aufruft.
 
-Um das globale Speicher Objekt freizugeben, sollte der Server die [**GlobalFree**](/windows/desktop/api/winbase/nf-winbase-globalfree) -Funktion aufruft. Wenn das Datenformat entweder [**CF \_ dspmetafilepict**](clipboard-formats.md) oder **CF \_ MetafilePict** ist, muss der Server außerdem [**DeleteMetaFile**](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) mit dem eingebetteten metadateihandle aufrufen. Diese beiden Formate haben eine zusätzliche Dereferenzierungsebene. Das heißt, eine Anwendung muss das Objekt Sperren, um einen Zeiger auf ein Handle zu erhalten, und dann das Handle sperren, um einen Zeiger auf eine [**MetafilePict**](/windows/win32/api/wingdi/ns-wingdi-metafilepict) -Struktur zu erhalten, und schließlich **DeleteMetaFile** mit dem Handle aus dem **HMF** -Member der **MetafilePict** -Struktur aufrufen.
+Um das globale Speicherobjekt frei zu geben, sollte der Server die [**GlobalFree-Funktion**](/windows/desktop/api/winbase/nf-winbase-globalfree) aufrufen. Wenn das Datenformat entweder [**CF \_ DSPMETAFILEPICT**](clipboard-formats.md) oder **CF \_ METAFILEPICT** ist, muss der Server außerdem [**DeleteMetaFile**](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) mit dem eingebetteten Metadateihand handle aufrufen. Diese beiden Formate verfügen über eine zusätzliche Deskriptionsebene. Das heißt, eine Anwendung muss das -Objekt sperren, um einen Zeiger auf ein Handle zu erhalten, dann dieses Handle sperren, um einen Zeiger auf eine [**METAFILEPICT-Struktur**](/windows/win32/api/wingdi/ns-wingdi-metafilepict) zu erhalten, und schließlich **DeleteMetaFile** mit dem Handle aus dem **hMF-Member** der **METAFILEPICT-Struktur** aufrufen.
 
-Um das Objekt freizugeben, sollte der Server die Funktion " [**freeddelta param**](/windows/desktop/api/Dde/nf-dde-freeddelparam) " anrufen.
+Um das Objekt frei zu geben, sollte der Server die [**FreeDDElParam-Funktion**](/windows/desktop/api/Dde/nf-dde-freeddelparam) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,51 +85,51 @@ Um das Objekt freizugeben, sollte der Server die Funktion " [**freeddelta param*
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>DDE. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Dde.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**DDE Poke**](/windows/desktop/api/Dde/ns-dde-ddepoke)
+[**DDEPOKE**](/windows/desktop/api/Dde/ns-dde-ddepoke)
 </dt> <dt>
 
-[**Freeddelta param**](/windows/desktop/api/Dde/nf-dde-freeddelparam)
+[**FreeDDElParam**](/windows/desktop/api/Dde/nf-dde-freeddelparam)
 </dt> <dt>
 
-[**Globaladdatom**](/windows/desktop/api/Winbase/nf-winbase-globaladdatoma)
+[**GlobalAddAtom**](/windows/desktop/api/Winbase/nf-winbase-globaladdatoma)
 </dt> <dt>
 
-[**MetafilePict**](/windows/win32/api/wingdi/ns-wingdi-metafilepict)
+[**METAFILEPICT**](/windows/win32/api/wingdi/ns-wingdi-metafilepict)
 </dt> <dt>
 
-[**Packddelta param**](/windows/desktop/api/Dde/nf-dde-packddelparam)
+[**PackDDElParam**](/windows/desktop/api/Dde/nf-dde-packddelparam)
 </dt> <dt>
 
 [**PostMessage**](/windows/desktop/api/winuser/nf-winuser-postmessagea)
 </dt> <dt>
 
-[**Reuseddelta param**](/windows/desktop/api/Dde/nf-dde-reuseddelparam)
+[**ReuseDDElParam**](/windows/desktop/api/Dde/nf-dde-reuseddelparam)
 </dt> <dt>
 
 [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-sendmessage)
 </dt> <dt>
 
-[**Unpackddelta param**](/windows/desktop/api/Dde/nf-dde-unpackddelparam)
+[**UnpackDDElParam**](/windows/desktop/api/Dde/nf-dde-unpackddelparam)
 </dt> <dt>
 
-[**WM-DDE-Bestätigung \_ \_**](wm-dde-ack.md)
+[**WM \_ DDE \_ ACK**](wm-dde-ack.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Informationen zu dynamischer Datenaustausch](about-dynamic-data-exchange.md)
+[Informationen dynamische Daten Exchange](about-dynamic-data-exchange.md)
 </dt> </dl>
 
  

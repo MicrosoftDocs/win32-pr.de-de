@@ -1,27 +1,27 @@
 ---
-description: Ein Anbieter muss keine partiellen instanzvorgänge unterstützen. Ein Anbieter muss jedoch entweder die gesamte Semantik eines partiellen instanzvorgangs unterstützen, eine vollständige Instanz verarbeiten oder den \_ nicht unterstützten WBEM E-Parameter zurückgeben \_ \_ .
+description: Ein Anbieter ist nicht erforderlich, um Teilinstanzvorgänge zu unterstützen. Ein Anbieter muss jedoch entweder die gesamte Semantik eines partiellen Instanzvorgangs unterstützen, eine vollständige Instanz verarbeiten oder WBEM \_ E \_ UNSUPPORTED \_ PARAMETER zurückgeben.
 ms.assetid: bc498655-ad6d-44f5-912d-9b7ee95825ec
 ms.tgt_platform: multiple
-title: Unterstützung Partial-Instance Vorgänge
+title: Unterstützen von Partial-Instance Vorgängen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 05bf656688ffbcc6981c6a3e55dc480570ad0f98
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9a2043c09ca129acab6976cabda2b854be464d26036cb5b9df1bc5b82989ccc4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347317"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117922850"
 ---
-# <a name="supporting-partial-instance-operations"></a>Unterstützung Partial-Instance Vorgänge
+# <a name="supporting-partial-instance-operations"></a>Unterstützen von Partial-Instance Vorgängen
 
-Ein Anbieter muss keine partiellen instanzvorgänge unterstützen. Ein Anbieter muss jedoch entweder die gesamte Semantik eines partiellen instanzvorgangs unterstützen, eine vollständige Instanz verarbeiten oder den **\_ \_ nicht unterstützten \_ WBEM E-Parameter** zurückgeben.
+Ein Anbieter ist nicht erforderlich, um Teilinstanzvorgänge zu unterstützen. Ein Anbieter muss jedoch entweder die gesamte Semantik eines partiellen Instanzvorgangs unterstützen, eine vollständige Instanz verarbeiten oder **WBEM \_ E \_ UNSUPPORTED \_ PARAMETER** zurückgeben.
 
-Beim Erstellen eines Anbieters, der partielle instanzvorgänge unterstützt, müssen Sie die folgenden Regeln beachten:
+Beim Erstellen eines Anbieters, der Teilinstanzvorgänge unterstützt, müssen Sie die folgenden Regeln beachten:
 
--   Wieder verwenden des gleichen Kontext Objekts, das von WMI an den Anbieter gesendet wird. WMI verwendet den \_ \_ \_ benannten Wert "Get Ext \_ Client \_ Request", um Deadlocks zu verhindern und den Client zu entfernen, bevor das Kontext Objekt an einen Anbieter weitergeleitet wird.
--   Für Wiedereintritts fähige Aufrufe an WMI, die keinen partiellen Instanzvorgang erfordern, müssen Sie sicherstellen, dass das gleiche Kontext Objekt ohne Änderungen zurückgegeben wird. WMI empfängt das Kontext Objekt ohne den \_ \_ \_ benannten Wert "Get Ext \_ Client \_ Request" und löscht alle benannten Werte, die partiellen instanzvorgängen zugeordnet sind, aus dem Kontext Objekt, bevor es an andere Anbieter übergeben wird. Wenn Sie das Kontext Objekt nicht ändern, werden von anderen Anbietern keine partiellen Instanzen Abruf Vorgänge empfangen, die für ein anderes, nicht verwandtes Objekt vorgesehen sind.
--   Zum Ausführen eines wieder eintretende partiellen instanzvorgangs bei der Ausführung einer Anforderung legen Sie den fehlenden " \_ \_ get \_ Ext \_ Client \_ Request"-Wert und die Eigenschaft "Clear" fest. Optional können Sie die Eigenschaften im \_ \_ \_ benannten Wert "Get Ext \_ Properties" ändern, bevor Sie das Kontext Objekt mit dem Wiedereintritts fähige-Befehl zurück an WMI senden.
--   Greifen Sie nicht auf das Kontext Objekt zu, nachdem Sie es während eines Wiedereinstiegs Aufrufes an WMI zurückgegeben haben. andere Anbieter können die Eigenschaften Listen oder andere Werte während des erneuten Eintritts ändern. Sie können das Kontext Objekt nur für die Dauer des von Ihnen implementierten [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Aufrufes überprüfen oder ändern.
+-   Verwenden Sie dasselbe Kontextobjekt wieder, das WMI an den Anbieter sendet. WMI verwendet den \_ \_ benannten Wert "GET \_ EXT \_ CLIENT \_ REQUEST", um Deadlocks zu verhindern und diesen Client zu entfernen, bevor das Kontextobjekt an einen Anbieter weitergeleitet wird.
+-   Stellen Sie bei erneuten Aufrufen an WMI, die keinen Teilinstanzvorgang erfordern, sicher, dass dasselbe Kontextobjekt ohne Änderungen zurückübergibt. WMI empfängt das Kontextobjekt ohne den \_ \_ benannten Wertsatz "GET \_ EXT \_ CLIENT \_ REQUEST" und löscht alle benannten Werte, die Teilinstanzvorgängen zugeordnet sind, aus dem Kontextobjekt, bevor es an andere Anbieter übergeben wird. Wenn das Kontextobjekt nicht geändert wird, wird verhindert, dass andere Anbieter Teilweiseinstanzabrufvorgänge empfangen, die für ein anderes, nicht verknüpftes Objekt vorgesehen sind.
+-   Legen Sie den fehlenden "GET EXT CLIENT REQUEST"-Wert und die fehlende \_ \_ Eigenschaft "GET EXT CLIENT REQUEST" als \_ \_ "clear" fest, um einen erneuten, teilweisen Instanzvorgang auszuführen, während eine Anforderung ausgeführt \_ wird. Optional können Sie die Eigenschaften im \_ \_ benannten Wert "GET EXT PROPERTIES" ändern, \_ bevor Sie das \_ Kontextobjekt mit dem erneuten Aufruf an WMI zurücksenden.
+-   Greifen Sie nicht auf das Kontextobjekt zu, nachdem Sie es während eines erneuten Aufrufs an WMI zurückgegeben haben. andere Anbieter können die Eigenschaftenlisten oder andere Werte während der Erneutinvarianz ändern. Sie können das Kontextobjekt nur für die Dauer des von Ihnen implementierten [**IWbemServices-Aufrufs**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) untersuchen oder ändern.
 
  
 

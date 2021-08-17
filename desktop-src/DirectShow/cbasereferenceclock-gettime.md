@@ -1,7 +1,7 @@
 ---
-description: 'Die getTime-Methode ruft die aktuelle Verweis Zeit ab. Diese Methode implementiert die IReferenceClock:: getTime-Methode.'
+description: Die GetTime-Methode ruft die aktuelle Verweiszeit ab. Diese Methode implementiert die IReferenceClock::GetTime-Methode.
 ms.assetid: 4e4e5954-b899-4741-8b7c-7bc98a3f0404
-title: Cbasereferenceclock. getTime-Methode (Ref. h)
+title: CBaseReferenceClock.GetTime-Methode (Refclock.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a91f0015756d2ccfb545c4039d67434eb6d3c403
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5a1ffd021ac917a7aa1e12f3d3dc9c4a62ea1f883f126bca1d9c1300d335bdae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954979"
 ---
-# <a name="cbasereferenceclockgettime-method"></a>Cbasereferenceclock. getTime-Methode
+# <a name="cbasereferenceclockgettime-method"></a>CBaseReferenceClock.GetTime-Methode
 
-Die- `GetTime` Methode ruft die aktuelle Verweis Zeit ab. Diese Methode implementiert die [**IReferenceClock:: getTime**](/windows/desktop/api/Strmif/nf-strmif-ireferenceclock-gettime) -Methode.
+Die `GetTime` -Methode ruft die aktuelle Verweiszeit ab. Diese Methode implementiert die [**IReferenceClock::GetTime-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ireferenceclock-gettime)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,32 +42,32 @@ HRESULT GetTime(
 
 <dl> <dt>
 
-*PTIME* 
+*pTime* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die aktuelle Uhrzeit in 100-Nanosecond-Einheiten empfängt.
+Zeiger auf eine Variable, die die aktuelle Zeit in Einheiten von 100 Nanosekunden empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                                                 |
 |-------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | **Null** -Zeigerargument.<br/>                       |
-| <dl> <dt>**S \_ false**</dt> </dl>   | Die zurückgegebene Uhrzeit ist mit dem vorherigen Wert identisch.<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl> |  NULL-Zeigerargument.<br/>                       |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>   | Die zurückgegebene Zeit ist mit dem vorherigen Wert identisch.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg.<br/>                                         |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**cbasereferenceclock:: getprivatetime**](cbasereferenceclock-getprivatetime.md) -Methode auf, um die tatsächliche Uhrzeit zu bestimmen. Wenn die Uhrzeitangabe streng größer als der vorherige Wert ist, `GetTime` verwendet die Uhrzeitangabe und gibt S \_ OK zurück. Andernfalls wird `GetTime` der vorherige Wert von verwendet und S \_ false zurückgegeben. Daher kann die interne Uhr für einen kurzen Zeitraum rückwärts ausgeführt werden, ohne dass die Bezugszeit rückwärts ausgeführt wird. Stattdessen wird die Verweis Zeit mit demselben Wert "Stall", bis die interne Uhr abfängt.
+Diese Methode ruft die [**CBaseReferenceClock::GetPrivateTime-Methode**](cbasereferenceclock-getprivatetime.md) auf, um die Echtzeituhrzeit zu bestimmen. Wenn die Uhrzeit strikt größer als der vorherige Wert ist, verwendet die Uhrzeit und `GetTime` gibt S \_ OK zurück. Andernfalls `GetTime` verwendet den vorherigen Wert und gibt S \_ FALSE zurück. Daher kann die interne Uhr für einen kurzen Zeitraum rückwärts ausgeführt werden, ohne dass die Verweiszeit rückwärts ausgeführt wird. Stattdessen wird die Referenzzeit bei demselben Wert "stocken", bis die interne Uhr aufholt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Diese Methode ruft die [**cbasereferenceclock:: getprivatetime**](cbasereference
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ref. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Refclock.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -84,7 +84,7 @@ Diese Methode ruft die [**cbasereferenceclock:: getprivatetime**](cbasereference
 
 <dl> <dt>
 
-[**Cbasereferenceclock-Klasse**](cbasereferenceclock.md)
+[**CBaseReferenceClock-Klasse**](cbasereferenceclock.md)
 </dt> </dl>
 
  

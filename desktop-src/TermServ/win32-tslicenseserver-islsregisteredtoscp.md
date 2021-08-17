@@ -1,12 +1,12 @@
 ---
-title: Islsregistereddescp-Methode der Win32_TSLicenseServer-Klasse
-description: Ruft ab, ob der Remotedesktop Lizenzserver als Dienst Verbindungspunkt in Active Directory Domain Services registriert ist.
+title: IsLSRegisteredToSCP-Methode der Win32_TSLicenseServer-Klasse
+description: Ruft ab, ob Remotedesktop Lizenzserver als Dienstverbindungspunkt in der Active Directory Domain Services.
 ms.assetid: 013C3711-7C55-4DB4-9229-C3C60E751EF2
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste der Methode "islsregistereddescp"
-- Remotedesktopdienste der Methode "islsregistereddescp", Win32_TSLicenseServer Klasse
-- Win32_TSLicenseServer-Klasse Remotedesktopdienste, islsregistereddescp-Methode
+- IsLSRegisteredToSCP-Remotedesktopdienste
+- IsLSRegisteredToSCP-Methode Remotedesktopdienste , Win32_TSLicenseServer-Klasse
+- Win32_TSLicenseServer klasse Remotedesktopdienste , IsLSRegisteredToSCP-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b203ff580c5ff8871d023c7f349626acdd693f9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a47ca9eadbdbaaba49311b212e83528ee391387e7aca1512a1ab0001a2bbae8a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119058338"
 ---
-# <a name="islsregisteredtoscp-method-of-the-win32_tslicenseserver-class"></a>Islsregistereddescp-Methode der Win32- \_ Klasse "zlicenseserver"
+# <a name="islsregisteredtoscp-method-of-the-win32_tslicenseserver-class"></a>IsLSRegisteredToSCP-Methode der Win32 \_ TSLicenseServer-Klasse
 
-Ruft ab, ob der Remotedesktop Lizenzserver als Dienst Verbindungspunkt in Active Directory Domain Services registriert ist.
+Ruft ab, ob Remotedesktop Lizenzserver als Dienstverbindungspunkt in der Active Directory Domain Services.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,22 +43,22 @@ uint32 IsLSRegisteredToSCP(
 
 <dl> <dt>
 
-*Registriert* \[ vorgenommen\]
+*Registriert* \[ out\]
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob der Remotedesktop Lizenzserver als Dienst Verbindungspunkt in Active Directory Domain Services registriert ist.
+Boolescher Wert, der angibt, ob Remotedesktop Lizenzserver als Dienstverbindungspunkt in der Active Directory Domain Services.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,16 +69,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                         |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ Lizenznehmer**](win32-tslicenseserver.md)
+[**Win32 \_ TSLicenseServer**](win32-tslicenseserver.md)
 </dt> </dl>
 
  

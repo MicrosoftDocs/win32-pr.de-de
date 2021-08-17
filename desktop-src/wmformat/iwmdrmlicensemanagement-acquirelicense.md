@@ -1,10 +1,10 @@
 ---
 title: IWMDRMLicenseManagement AcquireLicense-Methode (Wmdrmsdk.h)
-description: Die AcquireLicense-Methode erhält asynchron eine Lizenz von einer angegebenen URL.
+description: Die AcquireLicense-Methode ruft asynchron eine Lizenz von einer angegebenen URL ab.
 ms.assetid: 2e134f39-1f45-4d3a-b7c7-460aa0a250d0
 keywords:
-- 'AcquireLicense-Methode : Windows Media Format'
-- AcquireLicense-Methode windows Media Format, IWMDRMLicenseManagement-Schnittstelle
+- AcquireLicense-Methode windows Media Format
+- AcquireLicense-Methode windows Media Format , IWMDRMLicenseManagement-Schnittstelle
 - IWMDRMLicenseManagement-Schnittstelle windows Media Format , AcquireLicense-Methode
 topic_type:
 - apiref
@@ -26,7 +26,7 @@ ms.locfileid: "118701126"
 ---
 # <a name="iwmdrmlicensemanagementacquirelicense-method"></a>IWMDRMLicenseManagement::AcquireLicense-Methode
 
-Die **AcquireLicense-Methode** erhält asynchron eine Lizenz von einer angegebenen URL.
+Die **AcquireLicense-Methode** ruft asynchron eine Lizenz von einer angegebenen URL ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,26 +50,26 @@ HRESULT AcquireLicense(
 *bstrURL* \[ In\]
 </dt> <dd>
 
-URL des Lizenzservers, von dem die Lizenz erworben werden soll. Übergeben **Sie NULL,** damit die Methode die URL aus dem Inhaltsheader analysiert.
+URL des Lizenzservers, von dem die Lizenz erworben werden soll. Übergeben Sie **NULL,** damit die -Methode die URL aus dem Inhaltsheader analysiert.
 
 </dd> <dt>
 
 *bstrHeaderData* \[ In\]
 </dt> <dd>
 
-Inhaltsheader, der an den Lizenzserver übergeben werden soll. Wenn *bstrURL* NULL **ist,** analysiert die Methode die URL aus diesem Header. Wenn *dwFlags* auf WMDRM ACQUIRE LICENSE LEGACY NONSILENT festgelegt ist, legen Sie diesen Wert auf die Schlüssel-ID statt auf den \_ \_ gesamten \_ \_ Inhaltsheader fest.
+Inhaltsheader, der an den Lizenzserver übergeben werden soll. Wenn *bstrURL* **NULL** ist, analysiert die Methode die URL aus diesem Header. Wenn *dwFlags* auf WMDRM \_ ACQUIRE LICENSE LEGACY \_ \_ \_ NONSILENT festgelegt ist, legen Sie diesen Wert auf die Schlüssel-ID anstelle des gesamten Inhaltsheaders fest.
 
 </dd> <dt>
 
 *bstrActions* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die 0 (null) oder mehr Aktionen enthält, für die die Berechtigung in der Lizenz anfordern werden soll. Die Zeichenfolge muss wie folgt formatiert sein:
+Zeichenfolge, die 0 (null) oder mehr Aktionen enthält, für die die Berechtigung in der Lizenz angefordert werden soll. Die Zeichenfolge muss wie folgt formatiert werden:
 
 -   Jede Aktion muss innerhalb eines ACTION-Elements definiert werden. Die Daten des Elements sind die Aktionszeichenfolge.
 -   Alle ACTION-Elemente müssen in einem ACTIONLIST-Element enthalten sein.
 
-    Die Zeichenfolge zum Anfordern einer Lizenz für die Wiedergabe von Inhalten ist beispielsweise wie die folgende formatiert:
+    Die Zeichenfolge zum Anfordern einer Lizenz zum Wiedergeben von Inhalten ist beispielsweise wie folgt formatiert:
 
     ```C++
     <ACTIONLIST><ACTION></ACTION></ACTIONLIST>
@@ -82,15 +82,15 @@ Eine Zeichenfolge, die 0 (null) oder mehr Aktionen enthält, für die die Berech
 *dwFlags* \[ In\]
 </dt> <dd>
 
-Flags für Lizenzerwerbsoption. Legen Sie auf eine der Konstanten in der folgenden Tabelle fest.
+Lizenzerwerbsoptionsflags. Legen Sie auf eine der Konstanten in der folgenden Tabelle fest.
 
 
 
 | Konstante                                   | Beschreibung                                                                                                              |
 |--------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| WMDRM \_ ACQUIRE \_ LICENSE \_ SILENT            | Die Lizenz wird ohne Bestätigung durch die Clientanwendung direkt über das Internet ausgestellt.              |
-| WMDRM \_ ACQUIRE \_ LICENSE \_ NONSILENT         | Das DRM-Subsystem erstellt eine Lizenzanforderung, die asynchron für die Veröffentlichung auf dem Lizenzserver zurückgegeben wird. |
-| WMDRM \_ ACQUIRE \_ LICENSE \_ LEGACY \_ NONSILENT | Identisch mit WMDRM \_ ACQUIRE \_ LICENSE NONSILENT, mit der Ausnahme, dass eine DRM-Lizenzausforderung der Version \_ 1 erstellt wird.           |
+| WMDRM \_ – LIZENZ IM \_ HINTERGRUND ERWERBEN \_            | Die Lizenz wird ohne Bestätigung durch die Clientanwendung direkt über das Internet ausgestellt.              |
+| WMDRM \_ – \_ LIZENZ \_ NICHTSILENT ERWERBEN         | Das DRM-Subsystem erstellt eine Lizenzanforderung, die asynchron für die Bereitstellung an den Lizenzserver zurückgegeben wird. |
+| WMDRM \_ ACQUIRE \_ LICENSE \_ LEGACY \_ NONSILENT | Identisch mit WMDRM \_ ACQUIRE \_ LICENSE \_ NONSILENT, mit der Ausnahme, dass eine DRM-Lizenzaufforderung der Version 1 erstellt wird.           |
 
 
 
@@ -101,7 +101,7 @@ Flags für Lizenzerwerbsoption. Legen Sie auf eine der Konstanten in der folgend
 *ppunkCancelationCookie* \[ out\]
 </dt> <dd>
 
-Zeiger, der einen Zeiger auf die **IUnknown-Schnittstelle** eines Objekts empfängt, das diesen asynchronen Aufruf identifiziert. Dieser Schnittstellenzeiger kann verwendet werden, um den asynchronen Aufruf abzubricht, indem die [**IWMDRMEventGenerator::CancelAsyncOperation-Methode aufgerufen**](iwmdrmeventgenerator-cancelasyncoperation.md) wird.
+Zeiger, der einen Zeiger auf die **IUnknown-Schnittstelle** eines Objekts empfängt, das diesen asynchronen Aufruf identifiziert. Dieser Schnittstellenzeiger kann verwendet werden, um den asynchronen Aufruf abzubrechen, indem die [**IWMDRMEventGenerator::CancelAsyncOperation-Methode**](iwmdrmeventgenerator-cancelasyncoperation.md) aufgerufen wird.
 
 </dd> </dl>
 
@@ -121,9 +121,9 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode wird asynchron ausgeführt. Er wird unmittelbar nach dem Aufgerufenen zurückgegeben und generiert dann ein **MEWMDRMLicenseAcquisitionCompleted-Ereignis,** wenn die Verarbeitung abgeschlossen ist. Bei Nicht-automatischen Lizenzerwerbsvorgängen ist der Wert des Ereignisses, das durch Aufrufen **vonGEFmediaEvent::GetValue** ermittelt wird, ein **IUnknown-Zeiger.** Sie können die **QueryInterface-Methode** der abgerufenen **IUnknown-Schnittstelle** aufrufen, um eine Instanz der [**IWMDRMNonSilentLicenseAquisition-Schnittstelle abzurufen.**](iwmdrmnonsilentlicenseaquisition.md)
+Diese Methode wird asynchron ausgeführt. Er gibt sofort nach dem Aufruf zurück und generiert dann ein **MEWMDRMLicenseAcquisitionCompleted-Ereignis,** wenn die Verarbeitung abgeschlossen ist. Bei Nicht-unbeaufsichtigten Lizenzerwerbsvorgängen ist der Wert des Ereignisses, das durch Aufrufen von **POINTERMediaEvent::GetValue** abgerufen wird, ein **IUnknown-Zeiger.** Sie können die **QueryInterface-Methode** der abgerufenen **IUnknown-Schnittstelle** aufrufen, um eine Instanz der [**IWMDRMNonSilentLicenseAquisition-Schnittstelle**](iwmdrmnonsilentlicenseaquisition.md) abzurufen.
 
-Weitere Informationen zur Verwendung der asynchronen Methoden der erweiterten APIs des Windows Media DRM-Clients finden Sie unter [Verwenden des Media Foundation-Ereignismodells.](using-the-media-foundation-model.md)
+Weitere Informationen zur Verwendung der asynchronen Methoden der erweiterten APIs des Windows Media DRM-Clients finden Sie unter [Verwenden des Media Foundation Ereignismodells.](using-the-media-foundation-model.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -143,7 +143,7 @@ Weitere Informationen zur Verwendung der asynchronen Methoden der erweiterten AP
 [**IWMDRMLicenseManagement-Schnittstelle**](iwmdrmlicensemanagement.md)
 </dt> <dt>
 
-[**Automatischer Lizenzerwerb**](silent-license-acquisition.md)
+[**Unbeaufsichtigter Lizenzerwerb**](silent-license-acquisition.md)
 </dt> </dl>
 
  

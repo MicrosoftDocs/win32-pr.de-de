@@ -1,5 +1,5 @@
 ---
-description: Ruft den Namen des Benutzers ab, für den die Zertifikatregistrierung vorgesehen ist.
+description: Ruft den Namen des Benutzers ab, in dessen Namen die Zertifikatregistrierung vorgesehen ist.
 ms.assetid: 7bd71944-f7dd-4c92-a71c-ecc5c0afd5b2
 title: ISCrdEnr::getUserName-Methode
 ms.topic: reference
@@ -23,9 +23,9 @@ ms.locfileid: "119409447"
 ---
 # <a name="iscrdenrgetusername-method"></a>ISCrdEnr::getUserName-Methode
 
-Die **getUserName-Methode** ruft den Namen des Benutzers ab, für den die Zertifikatregistrierung vorgesehen ist.
+Die **getUserName-Methode** ruft den Namen des Benutzers ab, in dessen Namen die Zertifikatregistrierung vorgesehen ist.
 
-Vor dem Aufrufen dieser Methode müssen Sie den Benutzernamen in einem Aufruf von [**ISCrdEnr::selectUserName**](iscrdenr-selectusername.md) oder [**ISCrdEnr::setUserName angeben.**](iscrdenr-setusername.md)
+Vor dem Aufrufen dieser Methode müssen Sie den Benutzernamen in einem Aufruf von [**ISCrdEnr::selectUserName**](iscrdenr-selectusername.md) oder [**ISCrdEnr::setUserName**](iscrdenr-setusername.md)angeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,11 +59,11 @@ SCrdEnr.getUserName( _
 
 Dieser Wert muss entweder null (0), SCARD \_ ENROLL \_ UPN \_ NAME oder SCARD ENROLL SAM \_ COMPATIBLE NAME \_ \_ \_ sein.
 
-Wenn dieser Wert SCARD \_ ENROLL \_ UPN \_ NAME ist, gibt **getUserName** den Universal Principal Name (UPN) des Benutzers zurück, z. B. " someone@example.com ".
+Wenn dieser Wert SCARD \_ ENROLL \_ UPN \_ NAME lautet, gibt **getUserName** den Universellen Prinzipalnamen (UPN) des Benutzers zurück, z. B. " someone@example.com ".
 
-Wenn dieser Wert SCARD ENROLL SAM COMPATIBLE NAME ist, gibt die Methode den Sam-Namen (Security Access Manager) des Benutzers im Format \_ \_ \_ \_ "DOMAIN \\ USER" zurück.
+Wenn dieser Wert SCARD \_ ENROLL SAM COMPATIBLE NAME \_ \_ \_ ist, gibt die Methode den Sam-Namen (Security Access Manager) des Benutzers im Format "DOMÄNENBENUTZER" \\ zurück.
 
-Wenn dieser Wert 0 (null) ist, gibt die Methode den UPN-Namen des Benutzers zurück, sofern vorhanden. Wenn der Benutzer keinen UPN-Namen hat, gibt die Methode den SAM-Namen des Benutzers zurück.
+Wenn dieser Wert 0 (null) ist, gibt die Methode den UPN-Namen des Benutzers zurück, sofern er vorhanden ist. Wenn der Benutzer keinen UPN-Namen hat, gibt die Methode den SAM-Namen des Benutzers zurück.
 
 </dd> <dt>
 
@@ -80,15 +80,15 @@ Ein Zeiger auf eine Zeichenfolge, die den Namen des Benutzers zurückgibt.
 
 Wenn die Methode erfolgreich ist, gibt die Methode S \_ OK zurück.
 
-Wenn bei der Methode ein Fehler auftritt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte.](common-hresult-values.md)
+Wenn die Methode fehlschlägt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte.](common-hresult-values.md)
 
 ### <a name="vb"></a>VB
 
-Eine Zeichenfolge, die den Namen des Benutzers darstellt.
+Zeichenfolge, die den Namen des Benutzers darstellt.
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können den Namen des Benutzers [](../secgloss/s-gly.md) angeben, für den die Smartcard ausgestellt wird, indem Sie [**entweder ISCrdEnr::setUserName**](iscrdenr-setusername.md) oder [**ISCrdEnr::selectUserName aufrufen.**](iscrdenr-selectusername.md) Nachdem ein Benutzername angegeben wurde, kann sein Wert durch Aufrufen von **getUserName abgerufen werden.**
+Sie können den Namen des Benutzers angeben, für den die [*Smartcard*](../secgloss/s-gly.md) ausgestellt wird, indem Sie entweder [**ISCrdEnr::setUserName**](iscrdenr-setusername.md) oder [**ISCrdEnr::selectUserName**](iscrdenr-selectusername.md)aufrufen. Nachdem ein Benutzername angegeben wurde, kann sein Wert durch Aufrufen von **getUserName** abgerufen werden.
 
 ## <a name="requirements"></a>Anforderungen
 

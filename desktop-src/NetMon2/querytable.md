@@ -1,7 +1,7 @@
 ---
-description: Die QueryTable-Struktur enthält eine Liste der Computer, die derzeit Netzwerkmonitor zum Erfassen von Netzwerkdaten verwenden.
+description: Die QUERYTABLE-Struktur stellt eine Liste der Computer zur Verfügung, die derzeit Netzwerkmonitor, um Netzwerkdaten zu erfassen.
 ms.assetid: b701a6d5-df6d-4ee9-b008-a568a410dc14
-title: QueryTable-Struktur (Netmon. h)
+title: QUERYTABLE-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 2b2976a56b43c55fccb9acb0c593b0dfd37e4404
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b8f291f055bfba159309b6c75a54d95514ed9c7614eb0456a4870e657f04209
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347954"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119555370"
 ---
-# <a name="querytable-structure"></a>QueryTable-Struktur
+# <a name="querytable-structure"></a>QUERYTABLE-Struktur
 
-Die **QueryTable** -Struktur enthält eine Liste der Computer, die derzeit Netzwerkmonitor zum Erfassen von Netzwerkdaten verwenden.
+Die **QUERYTABLE-Struktur** stellt eine Liste der Computer zur Verfügung, die derzeit Netzwerkmonitor zum Erfassen von Netzwerkdaten verwenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,27 +40,27 @@ typedef struct _QUERYTABLE {
 
 <dl> <dt>
 
-**nstationqueries**
+**nStationQueries**
 </dt> <dd>
 
-Bei Eingabe die maximale Anzahl von Computern, die Netzwerkmonitor zurückgegeben werden soll.
+Bei der Eingabe die maximale Anzahl von Computern, die von Netzwerkmonitor werden soll.
 
-Bei Ausgabe die Anzahl der [stationquery](stationquery.md) -Strukturen, die von Netzwerkmonitor zurückgegeben werden. Jede **stationquery** -Struktur stellt einen Computer dar, der zurzeit Daten erfasst.
+Bei der Ausgabe wird die Anzahl der [stationquery-Strukturen,](stationquery.md) die von zurückgegeben werden, Netzwerkmonitor. Jede **STATIONQUERY-Struktur** stellt einen Computer dar, der derzeit Daten erfasst.
 
 </dd> <dt>
 
-**Stationquery**
+**StationQuery**
 </dt> <dd>
 
-Bei Eingabe ein Array leerer [stationquery](stationquery.md) -Strukturen, das die Anzahl der in **nstationqueries** angegebenen Elemente enthält.
+Bei der Eingabe ein Array leerer [STATIONQUERY-Strukturen,](stationquery.md) das die Anzahl der in **nStationQueries angegebenen Elemente enthält.**
 
-Bei Ausgabe eine gefüllte [Stations Abfrage](stationquery.md) Struktur für jeden Computer, der Daten erfasst. Die Anzahl der gefüllten Elemente wird von **nstationqueries** zurückgegeben.
+Bei der Ausgabe eine gefüllte [STATIONQUERY-Struktur](stationquery.md) für jeden Computer, der Daten erfasst. Die Anzahl der ausgefüllten Elemente wird von **nStationQueries zurückgegeben.**
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Arbeitsspeicher für diese Struktur und das [stationquery](stationquery.md) -Array müssen von der aufrufenden Anwendung zugeordnet und freigegeben werden, nachdem die Informationen nicht mehr benötigt werden.
+Der Arbeitsspeicher für diese Struktur und das [STATIONQUERY-Array](stationquery.md) muss von der aufrufenden Anwendung zugeordnet und wieder frei werden, nachdem die Informationen nicht mehr benötigt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,27 +70,27 @@ Der Arbeitsspeicher für diese Struktur und das [stationquery](stationquery.md) 
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Idelta-DC:: querystations](idelaydc-querystations.md)
+[IDelaydC::QueryStations](idelaydc-querystations.md)
 </dt> <dt>
 
-[IESP:: querystations](iesp-querystations.md)
+[IESP::QueryStations](iesp-querystations.md)
 </dt> <dt>
 
-["Iran:: querystations"](irtc-querystations.md)
+[IRTC::QueryStations](irtc-querystations.md)
 </dt> <dt>
 
-[IStats:: querystations](istats-querystations.md)
+[IStats::QueryStations](istats-querystations.md)
 </dt> <dt>
 
-[Stationquery](stationquery.md)
+[STATIONQUERY](stationquery.md)
 </dt> </dl>
 
  

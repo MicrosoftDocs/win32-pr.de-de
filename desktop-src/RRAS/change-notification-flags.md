@@ -1,38 +1,38 @@
 ---
-title: Benachrichtigungshub ändern
-description: Benachrichtigungshub ändern
+title: Ändern von Benachrichtigungsflags
+description: Ändern von Benachrichtigungsflags
 ms.assetid: 1f1aef71-a2b7-49ad-a0bc-f61f10b701c9
 keywords:
-- Änderung
-- Benachrichtigungshub ändern
+- Change
+- Ändern von Benachrichtigungsflags
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f3e6d3015be29c84b6b93b47b373d05f96f4388b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3f5311e3313bf23c92972395143d288483181e7a69212115082a2f150d7d1bb2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310187"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117791834"
 ---
-# <a name="change-notification-flags"></a>Benachrichtigungshub ändern
+# <a name="change-notification-flags"></a>Ändern von Benachrichtigungsflags
 
 
 
-| Konstante                         | Wert      | BESCHREIBUNG                                                                                                                                                           |
+| Konstante                         | Wert      | Beschreibung                                                                                                                                                           |
 |----------------------------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| RTM \_ NUM- \_ Änderungs \_ Typen          | 3          | Gibt die Anzahl der Änderungs Typen an, die zurzeit vom Routing Tabellen-Manager verwendet werden.                                                                            |
-| RTM \_ - \_ Änderungstyp \_ alle           | 0x0001     | Benachrichtigt den Client über alle Änderungen an einem Ziel.                                                                                                                   |
-| RTM \_ - \_ Änderungstyp \_ am besten          | 0x0002     | Benachrichtigt den Client über Änderungen an der besten Route oder wenn die beste Route geändert wird.                                                                                     |
-| RTM \_ - \_ Änderungstyp \_ Weiterleitung    | 0x0004     | Benachrichtigt den Client über alle optimalen Weiterleitungs Änderungen, die sich auf die Weiterleitung auswirken (z. b. Änderungen am nächsten Hop).                                                                      |
-| RTM \_ benachrichtigt \_ nur \_ markierte \_ Geräte-Geräte | 0x00010000 | Benachrichtigt den Client über Änderungen an Zielen, die der Client markiert hat. Wenn dieses Flag nicht angegeben wird, werden Änderungs Benachrichtigungs Meldungen für alle Ziele gesendet. |
+| \_ \_ RTM-NUM-ÄNDERUNGSTYPEN \_          | 3          | Gibt die Anzahl der Änderungstypen an, die derzeit vom Routingtabellen-Manager verwendet werden.                                                                            |
+| RTM \_ CHANGE \_ TYPE \_ ALL           | 0x0001     | Benachrichtigt den Client über jede Änderung an einem Ziel.                                                                                                                   |
+| \_RTM-ÄNDERUNGSTYP \_ \_ AM BESTEN          | 0x0002     | Benachrichtigt den Client über Änderungen an der besten Route oder über Änderungen an der besten Route.                                                                                     |
+| \_ \_ RTM-ÄNDERUNGSTYPWEITERLEITUNG \_    | 0x0004     | Benachrichtigt den Client über alle am besten geeigneten Routenänderungen, die sich auf die Weiterleitung auswirken (z. B. Änderungen am nächsten Hop).                                                                      |
+| RTM \_ NOTIFY \_ ONLY \_ MARKED \_ DESTS | 0x00010000 | Benachrichtigt den Client über Änderungen an Zielen, die der Client markiert hat. Wenn dieses Flag nicht angegeben ist, werden Änderungsbenachrichtigungsmeldungen für alle Ziele gesendet. |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

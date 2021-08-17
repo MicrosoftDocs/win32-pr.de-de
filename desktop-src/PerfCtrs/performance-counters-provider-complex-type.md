@@ -1,7 +1,7 @@
 ---
-description: Definiert einen Anbieter und die Leistungsindikatoren, die er bereitstellt.
+description: Definiert einen Anbieter und die leistungsindikatoren, die er bietet.
 ms.assetid: 85299b01-5679-40f8-8aec-5c2ff8d7cfc8
-title: komplexer Anbietertyp
+title: provider Complex Type
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 6eec52139710d0ffafe06f22504a735e59312818
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4470754e710faf9f7abe5a94cfb2e08e6e79c1b0415110b96dbac35807556911
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061067"
 ---
-# <a name="provider-complex-type"></a>komplexer Anbietertyp
+# <a name="provider-complex-type"></a>provider Complex Type
 
-Definiert einen Anbieter und die Leistungsindikatoren, die er bereitstellt.
+Definiert einen Anbieter und die leistungsindikatoren, die er bietet.
 
 ``` syntax
 <xs:complexType name="provider">
@@ -157,9 +157,9 @@ Definiert einen Anbieter und die Leistungsindikatoren, die er bereitstellt.
 
 
 
-| Element        | type                                                                   | BESCHREIBUNG                                                                                 |
+| Element        | type                                                                   | Beschreibung                                                                                 |
 |----------------|------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| **counterSet** | [**man: CounterSet**](performance-counters-counterset-complex-type.md) | Identifiziert den Indikatorensatz, der mindestens einen logisch verknüpften Zähler enthält.<br/> |
+| **Counterset** | [**man:counterSet**](performance-counters-counterset-complex-type.md) | Identifiziert den Indikatorsatz, der einen oder mehrere logisch verknüpfte Leistungsindikatoren enthält.<br/> |
 
 
 
@@ -177,34 +177,34 @@ Definiert einen Anbieter und die Leistungsindikatoren, die er bereitstellt.
 <tr class="header">
 <th>Name</th>
 <th>type</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>ApplicationIdentity</td>
+<td>Applicationidentity</td>
 <td><strong>xs:string</strong></td>
-<td>Der Name der Binärdatei, die die lokalisierten Ressourcen Zeichenfolgen enthält, entweder eine exe-oder DLL-Datei (der Pfad zur Binärdatei ist nicht enthalten).<br/> Das Lodctr.exe-Hilfsprogramm verwendet den Pfad des optionalen [<em>path</em>]-Parameters, um die Binärdatei zu suchen. Beispielsweise <strong>Lodctr</strong> [<strong>/m:</strong><em>Manifest</em> [<em>path</em>]]. Wenn Sie den Parameter [<em>path</em>] nicht einschließen, durchsucht Lodctr.exe den Ordner, der das Manifest enthält.<br/></td>
+<td>Der Name der Binärdatei, die die lokalisierten Ressourcenzeichenfolgen enthält, entweder eine .exe- oder .dll-Datei (ohne den Pfad zur Binärdatei).<br/> Das Lodctr.exe verwendet den Pfad aus dem optionalen Parameter [<em>path</em>] , um nach der Binärdatei zu suchen. Beispiel: <strong>lodctr</strong> [<strong>/m:</strong><em>manifest</em> [<em>pfad</em>]]. Wenn Sie den Parameter [<em>path</em>] nicht angeben, Lodctr.exe den Ordner, der das Manifest enthält, durchsucht.<br/></td>
 </tr>
 <tr class="even">
 <td>Rückruf</td>
 
-<td>Dieses Attribut gibt an, dass Sie eine Benachrichtigung erhalten möchten, wenn ein Consumer bestimmte Aktionen ausführt. <br/> Wenn Sie dieses Attribut einschließen, verwendet das ctrpp-Tool die alternative <a href="counterinitialize.md"><strong>counterinitialize</strong></a> -Funktions Signatur, die Sie verwenden, um den Namen der Funktion zu übergeben, die die <a href="/windows/desktop/api/Perflib/nc-perflib-perflibrequest"><strong>controlcallback</strong></a> -Rückruffunktion implementiert.<br/> Als Alternative zur Angabe dieses Attributs können Sie das <strong>-notificationcallback-</strong><a href="ctrpp.md">ctrpp</a> -Argument verwenden.<br/> <strong>Windows Vista:</strong> Der einzige gültige Wert für dieses Attribut ist " &quot; Custom" &quot; . Das Hilfsprogramm <a href="ctrpp.md">ctrpp</a> generiert die Vorlage für eine <a href="/windows/desktop/api/Perflib/nc-perflib-perflibrequest"><strong>controlcallback</strong></a> -Rückruffunktion. Die Vorlage ist in der c-Datei enthalten, die von ctrpp generiert wurde. <br/> <br/></td>
+<td>Dieses Attribut gibt an, dass Sie eine Benachrichtigung erhalten möchten, wenn ein Consumer bestimmte Aktionen ausführt. <br/> Wenn Sie dieses Attribut angeben, verwendet das CTRPP-Tool die alternative <a href="counterinitialize.md"><strong>CounterInitialize-Funktionssignatur,</strong></a> mit der Sie den Namen Ihrer Funktion übergeben, die die <a href="/windows/desktop/api/Perflib/nc-perflib-perflibrequest"><strong>ControlCallback-Rückruffunktion</strong></a> implementiert.<br/> Alternativ zur Angabe dieses Attributs können Sie das <strong>CTRPP-Argument -NotificationCallback</strong><a href="ctrpp.md"></a> verwenden.<br/> <strong>Windows Vista:</strong> Der einzige gültige Wert für dieses Attribut ist &quot; der benutzerdefinierte &quot; . Das <a href="ctrpp.md">CTRPP-Hilfsprogramm</a> generiert die Vorlage für eine <a href="/windows/desktop/api/Perflib/nc-perflib-perflibrequest"><strong>ControlCallback-Rückruffunktion.</strong></a> Die Vorlage ist in der C-Datei enthalten, die von CTRPP generiert wurde. <br/> <br/></td>
 </tr>
 <tr class="odd">
-<td>ProviderGUID</td>
-<td><a href="performance-counters-guidtype-simple-type.md"><strong>man: guidtype</strong></a></td>
-<td>Zeichen folgen-GUID, die den Anbieter im Manifest eindeutig identifiziert. Die GUID muss innerhalb des Manifests eindeutig sein.<br/> Sie müssen eine neue GUID nur dann angeben, wenn sich die Version der Anwendung ändert (wenn Sie parallele Installationen unterstützen).<br/></td>
+<td>providerGuid</td>
+<td><a href="performance-counters-guidtype-simple-type.md"><strong>man:GUIDType</strong></a></td>
+<td>Zeichenfolgen-GUID, die den Anbieter im Manifest eindeutig identifiziert. Die GUID muss innerhalb des Manifests eindeutig sein.<br/> Sie müssen nur dann eine neue GUID bereitstellen, wenn sich die Version der Anwendung ändert (wenn Sie nebenseitige Installationen unterstützen).<br/></td>
 </tr>
 <tr class="even">
 <td>providerName</td>
 <td><strong>xs:string</strong></td>
-<td>Der Name, der verwendet wird, um den WMI-Win32_PerfRawData Klassennamen zu erstellen. Wenn Sie keinen Namen angeben, wird der &quot; &quot; Name der Klasse als Name verwendet.<br/></td>
+<td>Der Name, der zum Erstellen des WMI-Win32_PerfRawData Klassennamens verwendet wird. Wenn Sie keinen Namen angeben, wird &quot; Counters &quot; als Name der Klasse verwendet.<br/></td>
 </tr>
 <tr class="odd">
-<td>Provider Type</td>
+<td>Providertype</td>
 
-<td>Gibt an, ob der Anbieter ein benutzermodusanbieter, kernelmodusanbieter oder Treiber Anbieter ist. Die folgenden Werte sind möglich.<br/> 
+<td>Gibt an, ob der Anbieter ein Benutzermodusanbieter, Kernelmodusanbieter oder Treiberanbieter ist. Die folgenden Werte sind möglich.<br/> 
 <table>
 <thead>
 <tr class="header">
@@ -214,12 +214,12 @@ Definiert einen Anbieter und die Leistungsindikatoren, die er bereitstellt.
 </thead>
 <tbody>
 <tr class="odd">
-<td><span id="userMode"></span><span id="usermode"></span><span id="USERMODE"></span>userMode<br/></td>
-<td>Geben Sie diesen Modus für eine Benutzermoduskomponente an, z. b. eine Anwendung, eine DLL oder einen Benutzermodustreiber. Die typischen Erweiterungen für Benutzermoduskomponenten sind exe oder dll. Dies ist die Standardoption.<br/></td>
+<td><span id="userMode"></span><span id="usermode"></span><span id="USERMODE"></span>Usermode<br/></td>
+<td>Geben Sie diesen Modus für eine Benutzermoduskomponente an, z. B. eine Anwendung, eine DLL oder einen Benutzermodustreiber. Die typischen Erweiterungen für Benutzermoduskomponenten sind .exe oder .dll. Dies ist die Standardoption.<br/></td>
 </tr>
 <tr class="even">
-<td><span id="kernel"></span><span id="KERNEL"></span>-<br/></td>
-<td>Geben Sie diesen Modus für eine Kernelmoduskomponente an, z. b. einen WDM-oder WDF-Treiber. Die typische Erweiterung für Kernelmoduskomponenten ist. sys.<br/> <strong>Windows Vista und Windows Server 2008:</strong> Dieser Wert wird bis Windows 7 und Windows Server 2008 R2 nicht unterstützt.<br/></td>
+<td><span id="kernel"></span><span id="KERNEL"></span>Kernel<br/></td>
+<td>Geben Sie diesen Modus für eine Kernelmoduskomponente an, z. B. einen WDM- oder WDF-Treiber. Die typische Erweiterung für Kernelmoduskomponenten ist .sys.<br/> <strong>Windows Vista und Windows Server 2008:</strong> Dieser Wert wird erst ab 7 Windows server 2008 R2 Windows Server 2008 R2 unterstützt.<br/></td>
 </tr>
 </tbody>
 </table>
@@ -227,15 +227,15 @@ Definiert einen Anbieter und die Leistungsindikatoren, die er bereitstellt.
 <p> </p></td>
 </tr>
 <tr class="even">
-<td>resourcebase</td>
-<td><a href="performance-counters-uint32type-simple-type.md"><strong>man: UInt32Type</strong></a></td>
-<td><p>Definiert den Startwert für den Ressourcen Index, den <a href="ctrpp.md">ctrpp</a> zum Generieren der Ressourcen Bezeichner verwendet.</p></td>
+<td>resourceBase</td>
+<td><a href="performance-counters-uint32type-simple-type.md"><strong>man:UInt32Type</strong></a></td>
+<td><p>Definiert den Indexwert der Startressource, den <a href="ctrpp.md">CTRPP</a> zum Generieren der Ressourcenbezeichner verwendet.</p></td>
 </tr>
 <tr class="odd">
 <td>Symbol</td>
-<td><a href="performance-counters-csymboltype-simple-type.md"><strong>man: csymboltype</strong></a></td>
-<td><p>Ein symbolischer Name, der den Anbieter identifiziert. Das <a href="ctrpp.md">ctrpp</a> -Tool erstellt eine Handle-Variable, die Sie verwenden können, wenn Sie Funktionen aufrufen, die ein Handle für den Anbieter erfordern (z. b. <a href="/windows/desktop/api/Perflib/nf-perflib-perfsetulongcountervalue"><strong>perfsetulongcountervalue</strong></a>). Der symbolische Name ist der Name der Variablen.</p>
-<p>Wenn Sie das <strong>-prefix-</strong> Argument beim Aufrufen von <a href="ctrpp.md">ctrpp</a>einschließen, wird die Präfix Zeichenfolge am Anfang des symbolischen Namens hinzugefügt.</p></td>
+<td><a href="performance-counters-csymboltype-simple-type.md"><strong>man:CSymbolType</strong></a></td>
+<td><p>Ein symbolischer Name, der den Anbieter identifiziert. Das <a href="ctrpp.md">CTRPP-Tool</a> erstellt eine HANDLE-Variable, die Sie beim Aufrufen von Funktionen verwenden können, die ein Handle für den Anbieter erfordern (z. B. <a href="/windows/desktop/api/Perflib/nf-perflib-perfsetulongcountervalue"><strong>PerfSetULongCounterValue</strong></a>). Der symbolische Name ist der Name der Variablen.</p>
+<p>Wenn Sie das <strong>Argument -prefix beim</strong> Aufrufen von <a href="ctrpp.md">STRPP</a>angeben, wird die Präfixzeichenfolge am Anfang des symbolischen Namens hinzugefügt.</p></td>
 </tr>
 </tbody>
 </table>
@@ -248,8 +248,8 @@ Definiert einen Anbieter und die Leistungsindikatoren, die er bereitstellt.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

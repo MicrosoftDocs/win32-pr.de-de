@@ -1,6 +1,6 @@
 ---
 title: Informationen zu IP-Adresssteuerelementen
-description: Mit einem IP-Adresssteuerelement (Internet Protocol) kann der Benutzer eine IP-Adresse in einem leicht verständlichen Format eingeben.
+description: Mit einem IP-Adresssteuersystem (InternetProtokoll) kann der Benutzer eine IP-Adresse in einem leicht verständlichen Format eingeben.
 ms.assetid: cf6a59fc-661c-420a-a67f-a42619946357
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,44 +13,44 @@ ms.locfileid: "119435594"
 ---
 # <a name="about-ip-address-controls"></a>Informationen zu IP-Adresssteuerelementen
 
-Mit einem IP-Adresssteuerelement (Internet Protocol) kann der Benutzer eine IP-Adresse in einem leicht verständlichen Format eingeben. Mit diesem Steuerelement kann die Anwendung die Adresse auch in numerischer Form und nicht in Textform abrufen.
+Mit einem IP-Adresssteuersystem (InternetProtokoll) kann der Benutzer eine IP-Adresse in einem leicht verständlichen Format eingeben. Dieses Steuerelement ermöglicht es der Anwendung auch, die Adresse in numerischer Form und nicht in Textform zu erhalten.
 
 -   [Informationen zu IP-Adresssteuerelementen](#about-ip-address-controls)
--   [Erstellen eines IP-Adresssteuerelements](#creating-an-ip-address-control)
--   [Ist ein IP-Adresssteuerelement ein Bearbeitungssteuerelement?](#is-an-ip-address-control-an-edit-control)
+-   [Erstellen eines IP-Adresssteuer steuerelements](#creating-an-ip-address-control)
+-   [Ist ein IP-Adresssteuer steuerelement ein Bearbeitungssteuer steuerelement?](#is-an-ip-address-control-an-edit-control)
 
 ## <a name="about-ip-address-controls"></a>Informationen zu IP-Adresssteuerelementen
 
-Windows Internet Explorer Version 4.0 wird das IP-Adresssteuerelement eingeführt, ein neues Steuerelement, das einem Bearbeitungssteuerelement ähnelt, mit dem der Benutzer eine numerische Adresse im IP-Format (Internet protocol) eingeben kann. Dieses Format besteht aus vier dreistelligen Feldern. Jedes Feld wird einzeln behandelt. die Feldnummern nullbasiert sind und von links nach rechts fortgesetzt werden, wie in dieser Abbildung dargestellt.
+Windows Internet Explorer Version 4.0 führt das IP-Adresssteuersystem ein, ein neues Steuerelement, das einem Bearbeitungssteuerwert ähnelt, mit dem der Benutzer eine numerische Adresse im IP-Format (Internetprotokoll) eingeben kann. Dieses Format besteht aus vier dreistelligen Feldern. Jedes Feld wird einzeln behandelt. Die Feldnummern sind nullbasierte Und fahren von links nach rechts fort, wie in dieser Abbildung dargestellt.
 
-![Diagramm mit Werten in jedem der vier Felder eines IP-Adresssteuerelements](images/ipa-scrn.png)
+![Diagramm mit Werten in jedem der vier Felder eines IP-Adresssteuerfelds](images/ipa-scrn.png)
 
-Das -Steuerelement lässt zu, dass nur numerischer Text in jedes der Felder eingegeben wird. Nachdem drei Ziffern in ein bestimmtes Feld eingegeben wurden, wird der Tastaturfokus automatisch in das nächste Feld verschoben. Wenn das Ausfüllen des gesamten Felds für die Anwendung nicht erforderlich ist, kann der Benutzer weniger als drei Ziffern eingeben. Wenn das Feld beispielsweise nur die Zahl 21 enthalten soll, wird der Benutzer durch Eingabe von "21" und Drücken der TASTE zum nächsten Feld.
+Mit dem -Steuerelement kann nur numerischer Text in jedes der Felder eingegeben werden. Nachdem drei Ziffern in ein bestimmtes Feld eingegeben wurden, wird der Tastaturfokus automatisch in das nächste Feld verschoben. Wenn die Anwendung das gesamte Feld nicht ausfüllen muss, kann der Benutzer weniger als drei Ziffern eingeben. Wenn das Feld z. B. nur die Zahl 21 enthalten soll, wird der Benutzer durch Eingeben von "21" und Drücken der Taste zum nächsten Feld.
 
 Der Standardbereich für jedes Feld ist 0 bis 255, aber die Anwendung kann den Bereich mit der [**IPM \_ SETRANGE-Nachricht**](ipm-setrange.md) auf beliebige Werte zwischen diesen Grenzwerten festlegen.
 
 > [!Note]  
-> Die IP-Adresssteuerung wird in Version 4.71 und höher von Comctl32.dll implementiert.
+> Die IP-Adresssteuerung ist in Version 4.71 und höher von Comctl32.dll.
 
  
 
-## <a name="creating-an-ip-address-control"></a>Erstellen eines IP-Adresssteuerelements
+## <a name="creating-an-ip-address-control"></a>Erstellen eines IP-Adresssteuer steuerelements
 
-Rufen Sie vor dem Erstellen eines IP-Adresssteuerelements [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) auf, und legen Sie das **FLAG INTERNET \_ \_ CLASSES** im **dwICC-Member** der [**INITCOMMONCONTROLSEX-Struktur**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) fest.
+Rufen Sie vor dem Erstellen eines IP-Adresssteuerzeichens [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) auf, und legen Sie dabei das **FLAG FÜR \_ \_ INTERNETKLASSEN VON INTERNET AUF,** das im **dwICC-Member** der [**INITCOMMONCONTROLSEX-Struktur festgelegt**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) ist.
 
-Verwenden Sie die [**Funktion CreateWindow**](/windows/desktop/api/winuser/nf-winuser-createwindowa) oder [**CreateWindowEx,**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) um ein IP-Adresssteuerelement zu erstellen. Der Klassenname für das Steuerelement lautet [**WC \_ IPADDRESS**](common-control-window-classes.md), der in Commctrl.h definiert ist. Es sind keine steuerungsspezifischen Stile für IP-Adressen vorhanden. Da es sich hierbei jedoch um ein untergeordnetes Steuerelement handelt, verwenden Sie mindestens den [**WS \_ CHILD-Stil.**](/windows/desktop/winmsg/window-styles)
+Verwenden Sie [**die Funktion CreateWindow**](/windows/desktop/api/winuser/nf-winuser-createwindowa) oder [**CreateWindowEx,**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) um ein IP-Adresssteuer steuerelement zu erstellen. Der Klassenname für das Steuerelement ist [**WC \_ IPADDRESS,**](common-control-window-classes.md)der in Commctrl.h definiert ist. Es sind keine ipadressensteuersteuerspezifischen Stile vorhanden. Da es sich jedoch um ein untergeordnetes Steuerelement handelt, verwenden Sie mindestens [**den WS \_ CHILD-Stil.**](/windows/desktop/winmsg/window-styles)
 
-## <a name="is-an-ip-address-control-an-edit-control"></a>Ist ein IP-Adresssteuerelement ein Bearbeitungssteuerelement?
+## <a name="is-an-ip-address-control-an-edit-control"></a>Ist ein IP-Adresssteuer steuerelement ein Bearbeitungssteuer steuerelement?
 
-Ein IP-Adresssteuerelement ist kein Bearbeitungssteuerelement und reagiert nicht auf \_ EM-Nachrichten. Sie sendet dem Besitzerfenster jedoch die folgenden Bearbeitungssteuerelementbenachrichtigungen über die [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command) Beachten Sie, dass das IP-Adresssteuerelement auch private \_ IPN-Benachrichtigungen über die [**WM \_ NOTIFY-Nachricht**](wm-notify.md) sendet.
+Ein IP-Adresssteuer steuerelement ist kein Bearbeitungssteuer steuerelement und reagiert nicht auf \_ EM-Nachrichten. Sie sendet jedoch die folgenden Bearbeitungssteuerungsbenachrichtigungen über die [**WM \_ COMMAND-Meldung**](/windows/desktop/menurc/wm-command) an das Besitzerfenster. Beachten Sie, dass das IP-Adresssteuersystem auch private IPN-Benachrichtigungen über \_ die [**WM \_ NOTIFY-Nachricht**](wm-notify.md) sendet.
 
 
 
 |     Benachrichtigung                              |     Grund für die Benachrichtigung                                                                                                                                                                                                    |
 |-----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [EN \_ SETFOCUS](en-setfocus.md)   | Wird gesendet, wenn das IP-Adresssteuerelement den Tastaturfokus erhält.                                                                                                                                              |
-| [EN \_ KILLFOCUS](en-killfocus.md) | Wird gesendet, wenn das IP-Adresssteuerelement den Tastaturfokus verliert.                                                                                                                                              |
-| [EN \_ CHANGE](en-change.md)       | Wird gesendet, wenn sich ein Feld im IP-Adresssteuerelement ändert. Wie die [EN \_ CHANGE-Benachrichtigung](en-change.md) eines Standardbearbeitungssteuerelements wird diese Benachrichtigung empfangen, nachdem der Bildschirm aktualisiert wurde. |
+| [EN \_ SETFOCUS](en-setfocus.md)   | Wird gesendet, wenn das IP-Adresssteuer steuerelement den Tastaturfokus erhält.                                                                                                                                              |
+| [EN \_ KILLFOCUS](en-killfocus.md) | Wird gesendet, wenn das IP-Adresssteuer steuerelement den Tastaturfokus verliert.                                                                                                                                              |
+| [EN \_ CHANGE](en-change.md)       | Wird gesendet, wenn sich ein Feld im IP-Adresssteuerfeld ändert. Wie bei [der EN \_ CHANGE-Benachrichtigung](en-change.md) von einem Standardbearbeitungssteuer steuerelement wird diese Benachrichtigung empfangen, nachdem der Bildschirm aktualisiert wurde. |
 
 
 

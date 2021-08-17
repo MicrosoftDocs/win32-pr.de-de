@@ -1,11 +1,11 @@
 ---
 title: IMsRdpExtendedSettings-Schnittstelle
-description: Wird zum Festlegen und Abrufen benannter Eigenschaften für das Clientsteuersatz verwendet.
+description: Wird verwendet, um benannte Eigenschaften für das Clientsteuerelement festzulegen und abzurufen.
 ms.assetid: b78eebc1-e514-4201-becf-770ee4a15187
 ms.tgt_platform: multiple
 keywords:
-- IMsRdpExtendedSettings-Remotedesktopdienste
-- IMsRdpExtendedSettings-Schnittstelle Remotedesktopdienste , beschrieben
+- IMsRdpExtendedSettings-Schnittstelle Remotedesktopdienste
+- IMsRdpExtendedSettings-Schnittstelle Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -25,11 +25,11 @@ ms.locfileid: "119058898"
 ---
 # <a name="imsrdpextendedsettings-interface"></a>IMsRdpExtendedSettings-Schnittstelle
 
-Wird zum Festlegen und Abrufen benannter Eigenschaften für das Clientsteuersatz verwendet.
+Wird verwendet, um benannte Eigenschaften für das Clientsteuerelement festzulegen und abzurufen.
 
 ## <a name="members"></a>Member
 
-Die **IMsRdpExtendedSettings-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IMsRdpExtendedSettings** verfügt auch über diese Membertypen:
+Die **IMsRdpExtendedSettings-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IMsRdpExtendedSettings** verfügt auch über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -39,7 +39,7 @@ Die **IMsRdpExtendedSettings-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                       | Zugriffstyp           | BESCHREIBUNG                           |
+| Eigenschaft                                                       | Zugriffstyp           | Beschreibung                           |
 |:---------------------------------------------------------------|:----------------------|:--------------------------------------|
 | [**Eigenschaft**](imsrdpextendedsettings-property.md)<br/> | Lesen/Schreiben<br/> | Enthält eine benannte Eigenschaft.<br/> |
 

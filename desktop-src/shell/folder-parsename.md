@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein folderItem-Objekt, das ein bestimmtes Element darstellt, und gibt es zurück.
+description: Erstellt ein FolderItem-Objekt, das ein angegebenes Element darstellt, und gibt es zurück.
 ms.assetid: 3af7052c-fb81-4a96-9bf9-379b0365a376
-title: Folder. para Name-Methode (Shldisp. h)
+title: Folder.ParseName-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: ea9a8090a794f23693ae4fef10556bc207f16531
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 582341c97b6373fa0c04abf69642930328a34223a7c7b0dbc7792d8c7aec4680
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749176"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119093090"
 ---
-# <a name="folderparsename-method"></a>Folder. Parser Name-Methode
+# <a name="folderparsename-method"></a>Folder.ParseName-Methode
 
-Erstellt ein [**folderItem**](folderitem.md) -Objekt, das ein bestimmtes Element darstellt, und gibt es zurück.
+Erstellt ein [**FolderItem-Objekt,**](folderitem.md) das ein angegebenes Element darstellt, und gibt es zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ retVal = Folder.ParseName(
 
 <dl> <dt>
 
-*bName* \[ in\]
+*bName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
@@ -50,19 +50,19 @@ Eine Zeichenfolge, die den Namen des Elements angibt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **[ **folderItem**](folderitem.md)\*\***
+Typ: **[ **FolderItem**](folderitem.md)\*\***
 
-Ein Objekt Verweis auf das [**folderItem**](folderitem.md) -Objekt.
+Ein Objektverweis auf das [**FolderItem-Objekt.**](folderitem.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-" **Parser Name** " sollte nicht für virtuelle Ordner wie "eigene Dokumente" verwendet werden.
+**ParseName** sollte nicht für virtuelle Ordner wie Eigene Dokumente.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird " **Parser Name** " verwendet, um ein Objekt zu erstellen, das das Ordner Element Clock.avi im Ordner "C: Windows" darstellt \\ . Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **ParseName verwendet,** um ein Objekt zu erstellen, das das Ordnerelement darstellt, Clock.avi im Ordner C: \\ Windows ist. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -89,7 +89,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -146,17 +146,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

@@ -72,7 +72,7 @@ Geben Sie das Beispiel nach dem Aufruf dieser Methode frei. Der Eingabepin kann 
 
 Halten Sie den kritischen Abschnitt des Filters, bevor Sie diese Methode aufrufen. Andernfalls wird die Verbindung mit dem Pin während des Methodenaufrufs möglicherweise getrennt. Wenn der Filter einen Arbeitsthread verwendet, um Beispiele zu liefern, halten Sie den kritischen Abschnitt, wenn der Filter bereit ist, ein Beispiel zu liefern. Andernfalls können Sie den kritischen Abschnitt in der [**IMemInputPin::Receive-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) des Filters halten, in der der Filter Stichproben verarbeitet.
 
-Arbeitsthreads können einen potenziellen Deadlock erzeugen. Wenn der Thread den kritischen Abschnitt enthält, kann er auf eine Zustandsänderung im Filter warten. Gleichzeitig kann die Zustandsänderung auf den Abschluss des Threads warten. Um dies zu verhindern, sollte der Code zur Zustandsänderung ein Ereignis signalisieren, das den Thread beendet, und dann warten, bis der Thread den Abschluss signalisiert.
+Arbeitsthreads können zu einem potenziellen Deadlock führen. Wenn der Thread den kritischen Abschnitt enthält, kann er auf eine Zustandsänderung im Filter warten. Gleichzeitig kann die Zustandsänderung auf den Abschluss des Threads warten. Um dies zu verhindern, sollte der Code zur Zustandsänderung ein Ereignis signalisieren, das den Thread beendet, und dann warten, bis der Thread den Abschluss signalisiert.
 
 ## <a name="requirements"></a>Anforderungen
 

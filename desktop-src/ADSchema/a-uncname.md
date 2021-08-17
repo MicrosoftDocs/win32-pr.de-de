@@ -66,7 +66,7 @@ Der Name der universellen Namenskonvention für freigegebene Volumes und Drucker
 | Range-Upper            | \-                                                                                                                                                   |
 | Search-Flags           | 0x00000001                                                                                                                                           |
 | System-Flags           | 0x00000010                                                                                                                                           |
-| In verwendete Klassen        | [**Index-Server-Catalog**](c-indexservercatalog.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> [**Volume**](c-volume.md)<br/> |
+| In verwendete Klassen        | [**Index-Server-Catalog**](c-indexservercatalog.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> [**Umfang**](c-volume.md)<br/> |
 
 
 
@@ -87,7 +87,7 @@ Der Name der universellen Namenskonvention für freigegebene Volumes und Drucker
 | Range-Upper            | \-                                                                                                                                                                                        |
 | Search-Flags           | 0x00000001                                                                                                                                                                                |
 | System-Flags           | 0x00000010                                                                                                                                                                                |
-| In verwendete Klassen        | [**FT-Dfs**](c-ftdfs.md)<br/> [**Index-Server-Catalog**](c-indexservercatalog.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> [**Volume**](c-volume.md)<br/> |
+| In verwendete Klassen        | [**FT-Dfs**](c-ftdfs.md)<br/> [**Index-Server-Catalog**](c-indexservercatalog.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> [**Umfang**](c-volume.md)<br/> |
 
 
 
@@ -108,7 +108,7 @@ Der Name der universellen Namenskonvention für freigegebene Volumes und Drucker
 | Range-Upper            | \-                                                                                                                                                                                                                                                                   |
 | Search-Flags           | 0x00000001                                                                                                                                                                                                                                                           |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                           |
-| In verwendete Klassen        | [**FT-Dfs**](c-ftdfs.md)<br/> [**Index-Server-Catalog**](c-indexservercatalog.md)<br/> [**ms-Print-ConnectionPolicy**](c-msprint-connectionpolicy.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> [**Volume**](c-volume.md)<br/> |
+| In verwendete Klassen        | [**FT-Dfs**](c-ftdfs.md)<br/> [**Index-Server-Catalog**](c-indexservercatalog.md)<br/> [**ms-Print-ConnectionPolicy**](c-msprint-connectionpolicy.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> [**Umfang**](c-volume.md)<br/> |
 
 
 
@@ -121,7 +121,7 @@ Der Name der universellen Namenskonvention für freigegebene Volumes und Drucker
 | Link-ID                | \-                                                                                                                                                                                                                                                                   |
 | MAPI-Id                | \-                                                                                                                                                                                                                                                                   |
 | System-Only            | Falsch                                                                                                                                                                                                                                                                |
-| Ist einwertig       | Richtig                                                                                                                                                                                                                                                                 |
+| Is-Single-Valued       | Richtig                                                                                                                                                                                                                                                                 |
 | Ist indiziert             | Richtig                                                                                                                                                                                                                                                                 |
 | Im globalen Katalog      | Richtig                                                                                                                                                                                                                                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                         |
@@ -129,7 +129,7 @@ Der Name der universellen Namenskonvention für freigegebene Volumes und Drucker
 | Range-Upper            | \-                                                                                                                                                                                                                                                                   |
 | Search-Flags           | 0x00000001                                                                                                                                                                                                                                                           |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                           |
-| In verwendete Klassen        | [**FT-Dfs**](c-ftdfs.md)<br/> [**Index-Server-Catalog**](c-indexservercatalog.md)<br/> [**ms-Print-ConnectionPolicy**](c-msprint-connectionpolicy.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> [**Volume**](c-volume.md)<br/> |
+| In verwendete Klassen        | [**FT-Dfs**](c-ftdfs.md)<br/> [**Index-Server-Catalog**](c-indexservercatalog.md)<br/> [**ms-Print-ConnectionPolicy**](c-msprint-connectionpolicy.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> [**Umfang**](c-volume.md)<br/> |
 
 
 
@@ -142,7 +142,7 @@ Der Name der universellen Namenskonvention für freigegebene Volumes und Drucker
 | Link-ID                | \-                                                                                                                                                                                                                                                                   |
 | MAPI-Id                | \-                                                                                                                                                                                                                                                                   |
 | System-Only            | Falsch                                                                                                                                                                                                                                                                |
-| Ist einwertig       | Richtig                                                                                                                                                                                                                                                                 |
+| Is-Single-Valued       | Richtig                                                                                                                                                                                                                                                                 |
 | Ist indiziert             | Richtig                                                                                                                                                                                                                                                                 |
 | Im globalen Katalog      | Richtig                                                                                                                                                                                                                                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                         |
@@ -150,7 +150,7 @@ Der Name der universellen Namenskonvention für freigegebene Volumes und Drucker
 | Range-Upper            | \-                                                                                                                                                                                                                                                                   |
 | Search-Flags           | 0x00000001                                                                                                                                                                                                                                                           |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                           |
-| In verwendete Klassen        | [**FT-Dfs**](c-ftdfs.md)<br/> [**Index-Server-Catalog**](c-indexservercatalog.md)<br/> [**ms-Print-ConnectionPolicy**](c-msprint-connectionpolicy.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> [**Volume**](c-volume.md)<br/> |
+| In verwendete Klassen        | [**FT-Dfs**](c-ftdfs.md)<br/> [**Index-Server-Catalog**](c-indexservercatalog.md)<br/> [**ms-Print-ConnectionPolicy**](c-msprint-connectionpolicy.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> [**Umfang**](c-volume.md)<br/> |
 
 
 
@@ -163,7 +163,7 @@ Der Name der universellen Namenskonvention für freigegebene Volumes und Drucker
 | Link-ID                | \-                                                                                                                                                                                                                                                                   |
 | MAPI-Id                | \-                                                                                                                                                                                                                                                                   |
 | System-Only            | Falsch                                                                                                                                                                                                                                                                |
-| Ist einwertig       | Richtig                                                                                                                                                                                                                                                                 |
+| Is-Single-Valued       | Richtig                                                                                                                                                                                                                                                                 |
 | Ist indiziert             | Richtig                                                                                                                                                                                                                                                                 |
 | Im globalen Katalog      | Richtig                                                                                                                                                                                                                                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                         |
@@ -171,7 +171,7 @@ Der Name der universellen Namenskonvention für freigegebene Volumes und Drucker
 | Range-Upper            | \-                                                                                                                                                                                                                                                                   |
 | Search-Flags           | 0x00000001                                                                                                                                                                                                                                                           |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                           |
-| In verwendete Klassen        | [**FT-Dfs**](c-ftdfs.md)<br/> [**Index-Server-Catalog**](c-indexservercatalog.md)<br/> [**ms-Print-ConnectionPolicy**](c-msprint-connectionpolicy.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> [**Volume**](c-volume.md)<br/> |
+| In verwendete Klassen        | [**FT-Dfs**](c-ftdfs.md)<br/> [**Index-Server-Catalog**](c-indexservercatalog.md)<br/> [**ms-Print-ConnectionPolicy**](c-msprint-connectionpolicy.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> [**Umfang**](c-volume.md)<br/> |
 
 
 

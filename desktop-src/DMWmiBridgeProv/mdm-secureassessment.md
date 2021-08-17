@@ -4,7 +4,7 @@ description: Die MDM \_ SecureAssessment-Klasse wird verwendet, um Konfiguration
 ms.assetid: ad456f01-c77d-428b-a8bf-03e9ae106e60
 keywords:
 - MDM_SecureAssessment-Klasse
-- MDM_SecureAssessment-Klasse beschrieben
+- MDM_SecureAssessment-Klasse, beschrieben
 topic_type:
 - apiref
 api_name:

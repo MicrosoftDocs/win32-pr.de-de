@@ -1,31 +1,31 @@
 ---
-description: Direct3D-Anwendungen verwenden die-Verwendung, um zu steuern, welche Pixel von einem bestimmten primitiven Bild auf die Renderingzieloberfläche gezeichnet werden. Anwendungen wenden die Abbilder von primitiven an, damit Coplanar-Polygone ordnungsgemäß wieder hergestellt werden können.
+description: Direct3D-Anwendungen verwenden die Dekalierung, um zu steuern, welche Pixel von einem bestimmten primitiven Bild auf die Renderingzieloberfläche gezeichnet werden. Anwendungen wenden Abschärfungen auf die Bilder von Primitiven an, damit koplanare Polygone ordnungsgemäß gerendert werden können.
 ms.assetid: 0d57983c-c8f3-4095-9495-a3ec5d280bda
-title: Wird abgebrochen (Direct3D 9)
+title: Dekalierung (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a5606bdbc798d8b1e834aff53b04984f659af650
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: e16b07eefcbf43bf2a3c71deb1a1073a656bb8d637696af71484a7a3e478ff8c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104123877"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117910216"
 ---
-# <a name="decaling-direct3d-9"></a>Wird abgebrochen (Direct3D 9)
+# <a name="decaling-direct3d-9"></a>Dekalierung (Direct3D 9)
 
-Direct3D-Anwendungen verwenden die-Verwendung, um zu steuern, welche Pixel von einem bestimmten primitiven Bild auf die Renderingzieloberfläche gezeichnet werden. Anwendungen wenden die Abbilder von primitiven an, damit Coplanar-Polygone ordnungsgemäß wieder hergestellt werden können.
+Direct3D-Anwendungen verwenden die Dekalierung, um zu steuern, welche Pixel von einem bestimmten primitiven Bild auf die Renderingzieloberfläche gezeichnet werden. Anwendungen wenden Abschärfungen auf die Bilder von Primitiven an, damit koplanare Polygone ordnungsgemäß gerendert werden können.
 
-Wenn beispielsweise Reifen Markierungen und gelbe Linien auf eine Straßenebene angewendet werden, sollten die Markierungen direkt auf der Straße angezeigt werden. Die z-Werte der Markierungen und der Straße sind jedoch identisch. Daher erzeugt der tiefen Puffer möglicherweise keine saubere Trennung zwischen den beiden. Einige Pixel im Hintergrundtyp können über dem Front-primitiv und umgekehrt gerendert werden. Das resultierende Bild wird angezeigt, um von Frame zu Rahmen zu vershicheln. Dieser Effekt heißt *z-Fighting* oder *Flimmern*.
+Wenn Sie z. B. Reifenmarkierungen und gelbe Linien auf eine Straße anwenden, sollten die Markierungen direkt über der Straße angezeigt werden. Die z-Werte der Markierungen und der Straße sind jedoch identisch. Daher erzeugt der Tiefenpuffer möglicherweise keine saubere Trennung zwischen den beiden. Einige Pixel im primitiven Hintergrundtyp werden möglicherweise über dem primitiven Anfang und umgekehrt gerendert. Das resultierende Bild scheint von Frame zu Frame zu schrumpfen. Dieser Effekt wird als *Z-Fighting oder* *Flimmering bezeichnet.*
 
-Um dieses Problem zu beheben, verwenden Sie eine Schablone, um den Abschnitt des hintergrundprimitivs zu maskieren, in dem die Client Zugriffslizenz angezeigt wird. Deaktivieren Sie die z-Pufferung, und Renderern Sie das Bild des Front-Primitivs in den maskierten Bereich der Renderziel-Oberfläche.
+Um dieses Problem zu beheben, verwenden Sie eine Schablone, um den Abschnitt des Hintergrundprimitiven zu maskieren, in dem die Decal angezeigt wird. Deaktivieren Sie die Z-Pufferung, und rendern Sie das Bild des primitiven Front-Primitivs im maskierten Bereich der Renderzieloberfläche.
 
-Obwohl mehrere Textur Mischungs Möglichkeiten verwendet werden können, um dieses Problem zu lösen, schränkt dies die Anzahl anderer spezieller Effekte ein, die Ihre Anwendung erzeugen kann. Wenn Sie den Schablonen Puffer zum Anwenden von Decals verwenden, werden Textur Mischungs Phasen für andere Effekte freigegeben.
+Obwohl mehrere Texturmischungen verwendet werden können, um dieses Problem zu lösen, schränkt dies die Anzahl anderer Sondereffekte ein, die Ihre Anwendung erzeugen kann. Durch die Verwendung des Schablonenpuffers zum Anwenden von Decals werden Texturmischungsphasen für andere Effekte frei.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Techniken für Schablonen Puffer](stencil-buffer-techniques.md)
+[Schablonenpuffertechniken](stencil-buffer-techniques.md)
 </dt> </dl>
 
  

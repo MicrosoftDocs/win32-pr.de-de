@@ -1,9 +1,9 @@
 ---
-title: Type (baseeapparameters) Element-Benutzereigenschaften
-description: Definiert das Platzhalter Element für den ausgewählten Methodentyp und die Methoden spezifischen Anmelde Informationen.
+title: Type(BaseEapParameters)-Element – Benutzereigenschaften
+description: Definiert das Platzhalterelement für den ausgewählten Methodentyp und methodenspezifische Anmeldeinformationen.
 ms.assetid: c9ff9a81-b9a5-41f8-b0f0-49561bca4ea0
 keywords:
-- Type-Element EAPHost
+- Typelement EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c5e8ae944d8268df7524c3519523ff4f8cb35856
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: dbb8d2d95b1c4d09d08567688ef90e61d93362658647b07240ecb3b3d344d5b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104356227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119117620"
 ---
-# <a name="type-baseeapparameters-element-for-user-properties"></a>Type (baseeapparameters)-Element für Benutzereigenschaften
+# <a name="type-baseeapparameters-element-for-user-properties"></a>Type(BaseEapParameters)-Element für Benutzereigenschaften
 
-Das **Type (baseeapparameters)** -Element definiert das Platzhalter Element für den ausgewählten Methodentyp und die Methoden spezifischen Anmelde Informationen.
+Das **Type-Element (BaseEapParameters)** definiert das Platzhalterelement für den ausgewählten Methodentyp und methodenspezifische Anmeldeinformationen.
 
 ``` syntax
 <xs:element name="Type"
@@ -31,7 +31,7 @@ Das **Type (baseeapparameters)** -Element definiert das Platzhalter Element für
  />
 ```
 
-Das **Type** -Element wird durch den komplexen [**baseeapparameters**](baseeapuserpropertiesv1schema-baseeapparameters-complextype.md) -Typ definiert.
+Das **Type-Element** wird durch den komplexen [**BaseEapParameters-Typ**](baseeapuserpropertiesv1schema-baseeapparameters-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,28 +39,28 @@ Das **Type** -Element wird durch den komplexen [**baseeapparameters**](baseeapus
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Baseeapparameters**](baseeapuserpropertiesv1schema-baseeapparameters-complextype.md)
+[**BaseEapParameters**](baseeapuserpropertiesv1schema-baseeapparameters-complextype.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**EAP**](baseeapuserpropertiesv1schema-eap-element.md)
+[**Eap**](baseeapuserpropertiesv1schema-eap-element.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [baseeapuserpropertiesv1-Schema](baseeapuserpropertiesv1schema-schema.md)

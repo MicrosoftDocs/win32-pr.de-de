@@ -1,7 +1,7 @@
 ---
-description: Die ID3DXSprite-Schnittstelle stellt eine Reihe von Methoden bereit, die das Zeichnen von Sprites mithilfe von Microsoft Direct3D vereinfachen.
+description: Die ID3DXSprite-Schnittstelle stellt eine Reihe von Methoden bereit, die das Zeichnen von Sprites mit Microsoft Direct3D vereinfachen.
 ms.assetid: ccf34fac-91a7-4734-bc62-aedaf4d66522
-title: ID3DXSprite-Schnittstelle (D3dx9core. h)
+title: ID3DXSprite-Schnittstelle (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,54 +14,54 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 3703132cd8a0f7744119d9b8cb5d9d48f260094c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7d5786096fb9c38188d73d613fd11efd97c2401e9f8ae9c7eb4a05dfe1dc1e6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103870135"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117729246"
 ---
 # <a name="id3dxsprite-interface"></a>ID3DXSprite-Schnittstelle
 
-Die ID3DXSprite-Schnittstelle stellt eine Reihe von Methoden bereit, die das Zeichnen von Sprites mithilfe von Microsoft Direct3D vereinfachen.
+Die ID3DXSprite-Schnittstelle stellt eine Reihe von Methoden bereit, die das Zeichnen von Sprites mit Microsoft Direct3D vereinfachen.
 
 ## <a name="members"></a>Member
 
-Die **ID3DXSprite** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **ID3DXSprite** verfügt auch über die folgenden Typen von Membern:
+Die **ID3DXSprite-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **ID3DXSprite** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ID3DXSprite** -Schnittstelle verfügt über diese Methoden.
+Die **ID3DXSprite-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                | BESCHREIBUNG                                                                                                                                                                                                                  |
+| Methode                                                | Beschreibung                                                                                                                                                                                                                  |
 |:------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Starten**](id3dxsprite--begin.md)                   | Bereitet ein Gerät zum Zeichnen von Sprites vor.<br/>                                                                                                                                                                            |
-| [**Draw**](id3dxsprite--draw.md)                     | Fügt der Liste der im Batch verarbeiteten Sprites ein Sprite hinzu.<br/>                                                                                                                                                                     |
-| [**ENDE**](id3dxsprite--end.md)                       | Ruft [**ID3DXSprite:: Flush**](id3dxsprite--flush.md) auf und stellt den Gerätezustand vor dem Aufrufen von [**ID3DXSprite:: begin**](id3dxsprite--begin.md) wieder her.<br/>                                            |
-| [**Leerung**](id3dxsprite--flush.md)                   | Erzwingt, dass alle Batch-Sprites an das Gerät übermittelt werden. Gerätezustände verbleiben nach dem letzten [**ID3DXSprite:: begin**](id3dxsprite--begin.md)-Rückruf. Die Liste der im Batch verarbeiteten Sprites wird dann gelöscht.<br/> |
+| [**Starten**](id3dxsprite--begin.md)                   | Bereitet ein Gerät für das Zeichnen von Sprites vor.<br/>                                                                                                                                                                            |
+| [**Draw**](id3dxsprite--draw.md)                     | Fügt der Liste der Batch-Sprites einen Sprite hinzu.<br/>                                                                                                                                                                     |
+| [**Ende**](id3dxsprite--end.md)                       | Ruft [**ID3DXSprite::Flush**](id3dxsprite--flush.md) auf und stellt den Zustand des Geräts wieder her, wie er vor dem Aufruf von [**ID3DXSprite::Begin**](id3dxsprite--begin.md) war.<br/>                                            |
+| [**Leerung**](id3dxsprite--flush.md)                   | Erzwingt, dass alle Batch-Sprites an das Gerät übermittelt werden. Gerätezustände bleiben unverändert nach dem letzten Aufruf von [**ID3DXSprite::Begin**](id3dxsprite--begin.md). Die Liste der Batch-Sprites wird dann gelöscht.<br/> |
 | [**GetDevice**](id3dxsprite--getdevice.md)           | Ruft das Gerät ab, das dem Sprite-Objekt zugeordnet ist.<br/>                                                                                                                                                           |
-| [**GetTransform**](id3dxsprite--gettransform.md)     | Ruft die Sprite-Transformation ab.<br/>                                                                                                                                                                                        |
-| [**OnLostDevice**](id3dxsprite--onlostdevice.md)     | Verwenden Sie diese Methode, um alle Verweise auf Videospeicher Ressourcen freizugeben und alle stateblocks zu löschen. Diese Methode sollte immer dann aufgerufen werden, wenn ein Gerät verloren geht oder ein Gerät zurückgesetzt wird.<br/>                              |
-| [**OnResetDevice**](id3dxsprite--onresetdevice.md)   | Verwenden Sie diese Methode, um Ressourcen erneut abzurufen und den Anfangszustand zu speichern.<br/>                                                                                                                                                   |
-| [**SetTransform**](id3dxsprite--settransform.md)     | Legt die Sprite-Transformation fest.<br/>                                                                                                                                                                                        |
-| [**SetWorldViewLH**](id3dxsprite--setworldviewlh.md) | Legt die linke Seite "World-View Transform" für ein Sprite fest. Ein Aufrufe dieser Methode ist vor dem abgleichen oder Sortieren von Sprites erforderlich.<br/>                                                                                 |
-| [**SetWorldViewRH**](id3dxsprite--setworldviewrh.md) | Legt die von rechts ausgebene World-View-Transformation für ein Sprite fest. Ein Aufrufe dieser Methode ist vor dem abgleichen oder Sortieren von Sprites erforderlich.<br/>                                                                                |
+| [**GetTransform**](id3dxsprite--gettransform.md)     | Ruft die Spritetransformation ab.<br/>                                                                                                                                                                                        |
+| [**OnLostDevice**](id3dxsprite--onlostdevice.md)     | Verwenden Sie diese Methode, um alle Verweise auf Videospeicherressourcen freizugeben und alle Zustandsblöcke zu löschen. Diese Methode sollte immer dann aufgerufen werden, wenn ein Gerät verloren geht oder bevor ein Gerät zurückgesetzt wird.<br/>                              |
+| [**OnResetDevice**](id3dxsprite--onresetdevice.md)   | Verwenden Sie diese Methode, um Ressourcen erneut zu erhalten und den Anfangszustand zu speichern.<br/>                                                                                                                                                   |
+| [**SetTransform**](id3dxsprite--settransform.md)     | Legt die Spritetransformation fest.<br/>                                                                                                                                                                                        |
+| [**SetWorldViewLH**](id3dxsprite--setworldviewlh.md) | Legt die Linkshänder-Weltansichtstransformation für einen Sprite fest. Vor dem Aufstellen oder Sortieren von Sprites ist ein Aufruf dieser Methode erforderlich.<br/>                                                                                 |
+| [**SetWorldViewRH**](id3dxsprite--setworldviewrh.md) | Legt die rechtshändige Weltansichtstransformation für einen Sprite fest. Vor dem Aufstellen oder Sortieren von Sprites ist ein Aufruf dieser Methode erforderlich.<br/>                                                                                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **ID3DXSprite** -Schnittstelle wird durch Aufrufen der [**D3DXCreateSprite**](d3dxcreatesprite.md) -Funktion abgerufen.
+Die **ID3DXSprite-Schnittstelle** wird durch Aufrufen der [**D3DXCreateSprite-Funktion**](d3dxcreatesprite.md) abgerufen.
 
-Die Anwendung ruft in der Regel zuerst [**ID3DXSprite:: begin**](id3dxsprite--begin.md)auf und ermöglicht so die Kontrolle über den Geräte Rendering, die Alpha Mischung und die Sprite-Transformation und-Sortierung. Nennen Sie dann für jedes Sprite, das angezeigt werden soll, [**ID3DXSprite::D RAW**](id3dxsprite--draw.md). **ID3DXSprite::D RAW** kann wiederholt aufgerufen werden, um eine beliebige Anzahl von Sprites zu speichern. Um die Batch Verarbeitung für das Gerät anzuzeigen, müssen Sie [**ID3DXSprite:: End**](id3dxsprite--end.md) oder [**ID3DXSprite:: Flush**](id3dxsprite--flush.md)aufrufen.
+Die Anwendung ruft in der Regel zuerst [**ID3DXSprite::Begin**](id3dxsprite--begin.md)auf, was die Steuerung des Geräterenderingzustands, der Alphamischung und der Spritetransformation und -sortierung ermöglicht. Rufen Sie dann für jedes anzuzeigende Sprite [**ID3DXSprite::D raw**](id3dxsprite--draw.md)auf. **ID3DXSprite::D raw** kann wiederholt aufgerufen werden, um eine beliebige Anzahl von Sprites zu speichern. Um die Batch-Sprites auf dem Gerät anzuzeigen, rufen [**Sie ID3DXSprite::End**](id3dxsprite--end.md) oder [**ID3DXSprite::Flush auf.**](id3dxsprite--flush.md)
 
-Der LPD3DXSPRITE-Typ wird als Zeiger auf die **ID3DXSprite** -Schnittstelle definiert.
+Der LPD3DXSPRITE-Typ wird als Zeiger auf die **ID3DXSprite-Schnittstelle** definiert.
 
 
 ```
@@ -77,12 +77,12 @@ typedef interface ID3DXSprite *LPD3DXSPRITE;
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

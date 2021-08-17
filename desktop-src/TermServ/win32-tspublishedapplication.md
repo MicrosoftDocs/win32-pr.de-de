@@ -1,11 +1,11 @@
 ---
 title: Win32_TSPublishedApplication-Klasse
-description: Definiert die Anwendungen, die für die Remote Verwendung über Windows Server 2008 R2 RemoteApp verfügbar gemacht werden.
+description: Definiert die Anwendungen, die über Windows Server 2008 R2 RemoteApp für die Remoteverwendung verfügbar gemacht werden.
 ms.assetid: 5b9cb36b-3d8d-4105-acea-c79440d977fe
 ms.tgt_platform: multiple
 keywords:
 - Win32_TSPublishedApplication-Klasse Remotedesktopdienste
-- Win32_TSPublishedApplication Klasse Remotedesktopdienste, beschrieben
+- Win32_TSPublishedApplication -Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -33,16 +33,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3825087d05b622818c74f011f30b325ed8ff7f60
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9f3330a2fb20238c34f6eecb0d78cd7d126a8895a5260abb338ab445713f988e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137663"
 ---
-# <a name="win32_tspublishedapplication-class"></a>Win32 \_ tspublishedappliationklasse
+# <a name="win32_tspublishedapplication-class"></a>Win32 \_ TSPublishedApplication-Klasse
 
-Definiert die Anwendungen, die für die Remote Verwendung über Windows Server 2008 R2 RemoteApp verfügbar gemacht werden.
+Definiert die Anwendungen, die über Windows Server 2008 R2 RemoteApp für die Remoteverwendung verfügbar gemacht werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -71,20 +71,20 @@ class Win32_TSPublishedApplication : CIM_LogicalElement
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ tspublishedappliationklasse** verfügt über diese Typen von Membern:
+Die **Win32 \_ TSPublishedApplication-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ tspublishedappliationklasse** verfügt über diese Eigenschaften.
+Die **Win32 \_ TSPublishedApplication-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Alias**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -93,38 +93,38 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Der Alias der Anwendung. Der Alias ist ein eindeutiger Bezeichner für das Programm, das standardmäßig auf den Dateinamen des Programms (ohne Erweiterung) festgelegt ist.
+Der Alias der Anwendung. Der Alias ist ein eindeutiger Bezeichner für das Programm, der standardmäßig auf den Dateinamen des Programms (ohne Erweiterung) zurückgeht.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Beschreibung (einzeilige Zeichenfolge) des-Objekts.
+Kurze Beschreibung (einzeilige Zeichenfolge) des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**Commandlinesesetting**
+**CommandLineSetting**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Befehlszeilenargumente-Einstellung für die Anwendung. Die folgenden Werte sind möglich.
+Die Einstellung für Befehlszeilenargumente für die Anwendung. Die folgenden Werte sind möglich.
 
 <dt>
 
@@ -138,14 +138,14 @@ Befehlszeilenargumente dürfen nicht zugelassen werden.
 1
 </dt> <dd>
 
-Hiermit werden Befehlszeilenargumente zugelassen.
+Lassen Sie alle Befehlszeilenargumente zu.
 
 </dd> <dt>
 
 2
 </dt> <dd>
 
-Verwenden Sie immer die erforderlichen Befehlszeilenargumente (in "Requirements **dcommandline**" angegeben).
+Verwenden Sie immer die erforderlichen Befehlszeilenargumente (angegeben in **RequiredCommandLine**).
 
 </dd> </dl>
 
@@ -154,7 +154,7 @@ Verwenden Sie immer die erforderlichen Befehlszeilenargumente (in "Requirements 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -166,16 +166,16 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Iconcontent**
+**IconContents**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Byte Inhalt des Symbols, das der Anwendung entspricht.
+Der Byteinhalt des Symbols, das der Anwendung entspricht.
 
 </dd> <dt>
 
@@ -195,29 +195,29 @@ Der Index oder die ID des Symbols.
 **IconPath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Pfad des Anwendungs Symbols.
+Der Pfad des Anwendungssymbols.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 ")
+Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5")
 </dt> </dl>
 
-Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Das Datum, an dem das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -226,7 +226,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -238,10 +238,10 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Pfad**
+**Path**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -251,10 +251,10 @@ Pfad der Anwendung.
 
 </dd> <dt>
 
-**Pathist vorhanden**
+**PathExists**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -264,10 +264,10 @@ Gibt an, ob der Anwendungspfad gültig ist.
 
 </dd> <dt>
 
-**Rdpfilecontents**
+**RDPFileContents**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -277,10 +277,10 @@ Der Inhalt der RDP-Datei, die der Anwendung entspricht.
 
 </dd> <dt>
 
-**"Requirements dcommandline"**
+**RequiredCommandLine**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -293,42 +293,42 @@ Die Befehlszeilenargumente, die für die Anwendung erforderlich sind.
 **SecurityDescriptor**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Ein Sicherheits Deskriptor, der den Zugriff auf die Anwendung im SDDL-Format steuert. Eine leere Zeichenfolge impliziert den gesamten Zugriff. Diese Sicherheits Beschreibung unterstützt keine deny-ACEs oder ACEs, die auf Benutzer oder Gruppen von nicht-Domänen verweisen.
+Ein Sicherheitsdeskriptor, der den Zugriff auf die Anwendung im SDDL-Format steuert. Eine leere Zeichenfolge impliziert, dass der gesamte Zugriff zugelassen wird. Dieser Sicherheitsdeskriptor unterstützt keine DENY-ACEs oder ACEs, die auf Nichtdomänenbenutzer oder -gruppen verweisen.
 
 </dd> <dt>
 
-**Showinportal**
+**ShowInPortal**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Anwendung in RD-Webzugriff angezeigt werden soll.
+Gibt an, ob die Anwendung im RD-Webzugriff angezeigt werden soll.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -392,24 +392,24 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Vpath**
+**VPath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der virtuelle Pfad der Anwendung, d. h. der Pfad mit Umgebungsvariablen.
+Der virtuelle Pfad der Anwendung, d. h. der Pfad mit enthaltenen Umgebungsvariablen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um Eigenschaften mithilfe dieser Klasse festzulegen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um Eigenschaften mit dieser Klasse festzulegen.
 
-Zum Herstellen einer Verbindung mit dem \\ root \\ CIMV2 \\ TerminalServices-Namespace muss die Authentifizierungs Ebene den Datenschutz für das Paket enthalten. Bei C/C++-aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene für den **\_ \_ \_ \_ Pkt- \_ Datenschutz auf RPC-C-Ebene**, die mithilfe der com-Funktion [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) festgelegt werden kann. Bei Visual Basic-und Skript aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene von **wbemauthenticationlevelpzprivacy** oder "PKTPRIVACY" mit einem Wert von 6. Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird gezeigt, wie eine Verbindung mit einem Remote Computer mit Paket Datenschutz hergestellt wird.
+Um eine Verbindung mit dem \\ \\ CIMV2 \\ TerminalServices-Stammnamespace herzustellen, muss die Authentifizierungsebene Paketdatenschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC C \_ \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**, die mithilfe der [**COM-Funktion CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) festgelegt werden kann. Bei Visual Basic- und Skriptaufrufen ist dies eine Authentifizierungsebene von **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Beispiel Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -420,7 +420,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -431,7 +431,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tsallow. MOF</dt> </dl>  |
+| MOF<br/>                      | <dl> <dt>Tsallow.mof</dt> </dl>  |
 | DLL<br/>                      | <dl> <dt>TsPubWmi.dll</dt> </dl> |
 
 

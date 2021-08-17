@@ -1,27 +1,27 @@
 ---
-description: Die meisten Zeichen folgen Operationen können die gleiche Logik für Unicode und für Windows-Codepages verwenden.
+description: Die meisten Zeichenfolgenvorgänge können dieselbe Logik für Unicode und Windows Codepages verwenden.
 ms.assetid: 5364ec09-68e1-444c-9493-ca9426ac9c34
 title: Windows-Datentypen für Zeichenfolgen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e24be1024736ce324e040e58f6ac45636a11d4d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2a2bef3dc98b7b8649b6cb0fc5bd9450c6f22c8b2bb6e3345790dab0dd24587f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050606"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146813"
 ---
 # <a name="windows-data-types-for-strings"></a>Windows-Datentypen für Zeichenfolgen
 
-Die meisten Zeichen folgen Operationen können die gleiche Logik für [Unicode](unicode.md) und für [Windows-Codepages](code-pages.md)verwenden. Der einzige Unterschied besteht darin, dass die grundlegende Betriebseinheit ein 16-Bit-Zeichen (auch als breit Zeichen bezeichnet) für Unicode und ein 8-Bit-Zeichen für Windows-Codepages ist. Die Windows-Header Dateien bieten mehrere Typdefinitionen, die das Erstellen von Quellen erleichtern, die für Unicode oder für Windows-Codepages kompiliert werden können.
+Die meisten Zeichenfolgenvorgänge können dieselbe Logik für [Unicode](unicode.md) und Windows [Codepages verwenden.](code-pages.md) Der einzige Unterschied ist, dass die grundlegende Vorgangseinheit ein 16-Bit-Zeichen (auch als Breitzeichen bezeichnet) für Unicode und ein 8-Bit-Zeichen für Windows Codepages ist. Die Windows-Headerdateien stellen mehrere Typdefinitionen zur Verfügung, die das Erstellen von Quellen, die für Unicode oder für codepages Windows können, einfach machen.
 
-Windows unterstützt drei Sätze von Zeichen-und Zeichen folgen Datentypen: eine Reihe von generischen Typdefinitionen, die für Unicode-oder Windows-Codepages und zwei Sätze spezifischer Typdefinitionen kompiliert werden können. Ein Satz spezifischer Typdefinitionen dient zur Verwendung mit Unicode, der andere für die Verwendung mit Windows-Codepages.
+Windows unterstützt drei Sätze von Zeichen- und Zeichenfolgendatentypen: einen Satz generischer Typdefinitionen, die entweder für Unicode- oder Windows-Codepages kompiliert werden können, und zwei Sätze spezifischer Typdefinitionen. Ein Satz spezifischer Typdefinitionen ist für die Verwendung mit Unicode und der andere für die Verwendung mit Windows Codepages.
 
-Eine Anwendung, die generische Datentypen verwendet, kann einfach durch Definieren von "Unicode" vor den **\# include** -Anweisungen für die Header Dateien oder während der Kompilierung kompiliert werden. Neue Windows-Anwendungen sollten Unicode verwenden, um Inkonsistenzen von verschiedenen Codepages zu vermeiden und die Lokalisierung zu vereinfachen. Sie sollten mit generischen Datentypen geschrieben werden und sollten "Unicode" definieren, damit diese Typen in Unicode-Typen kompiliert werden können. An den wenigen Stellen, an denen eine Anwendung mit 8-Bit-Zeichendaten arbeiten muss, kann Sie die Typen für Windows-Codepages explizit verwenden.
+Eine Anwendung, die generische Datentypen verwendet, kann für Unicode kompiliert werden, indem einfach "UNICODE" vor den **\# Include-Anweisungen** für die Headerdateien oder während der Kompilierung definiert wird. Neue Windows sollten Unicode verwenden, um inkonsistente Codepages zu vermeiden und die Lokalisierung zu vereinfachen. Sie sollten mit generischen Datentypen geschrieben werden und "UNICODE" definieren, um diese Typen in Unicode-Typen zu kompilieren. An den wenigen Stellen, an denen eine Anwendung mit 8-Bit-Zeichendaten arbeiten muss, kann sie explizit die Typen für Windows verwenden.
 
-Die Möglichkeit zum Kompilieren der generischen Typen in Typen für Windows-Codepages besteht hauptsächlich darin, ältere Anwendungen zu unterstützen. Zur Kompilierung für Windows-Codepages lässt die Anwendung lediglich die Unicode-Definition aus.
+Die Möglichkeit zum Kompilieren der generischen Typen in Typen für Windows Codepages besteht hauptsächlich zur Unterstützung von Legacyanwendungen. Um für Windows Codepages zu kompilieren, lässt die Anwendung nur die UNICODE-Definition aus.
 
-Das folgende Beispiel zeigt die-Methode, die in den Windows-Header Dateien zum Definieren der drei Sätze von Datentypen verwendet wird. Informationen zur Implementierung finden Sie in der Header Datei "Winnt. h".
+Das folgende Beispiel zeigt die -Methode, die in Windows Headerdateien verwendet wird, um die drei Sätze von Datentypen zu definieren. Informationen zur Implementierung finden Sie in der Headerdatei Winnt.h.
 
 
 ```C++
@@ -48,7 +48,7 @@ typedef WCHAR *LPWSTR, *LPWCH;
 
 
 
-Der Buchstabe "T" in einer Typdefinition, z. b. TCHAR oder LPTSTR, legt einen generischen Typ fest, der für Windows-Codepages oder Unicode kompiliert werden kann. Der Buchstabe "W" in einer Typdefinition, z. b. "WCHAR" oder "LPWSTR", bezeichnet einen Unicode-Typ. Da Windows-Codepages die ältere Form aufweisen, verfügen Sie über einfache Typdefinitionen, wie z. b. Char und LPStr. Eine umfassende Beschreibung der Datentypen in Windows finden Sie unter [Windows-Datentypen](../winprog/windows-data-types.md).
+Der Buchstabe "T" in einer Typdefinition, z. B. TCHAR oder LPTSTR, bezeichnet einen generischen Typ, der für Windows Codepages oder Unicode kompiliert werden kann. Der Buchstabe "W" in einer Typdefinition, z. B. WCHAR oder LPWSTR, bezeichnet einen Unicode-Typ. Da Windows Codepages die ältere Form haben, verfügen sie über einfache Typdefinitionen wie CHAR und LPSTR. Eine vollständige Beschreibung der Datentypen in Windows finden Sie unter [Windows Datentypen](../winprog/windows-data-types.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

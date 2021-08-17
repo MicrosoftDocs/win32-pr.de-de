@@ -1,24 +1,24 @@
 ---
-description: Benachrichtigt Anwendungen, dass das System aus dem Standbymodus oder Ruhezustand wieder aufgenommen wird. Dieses Ereignis wird jedes Mal übermittelt, wenn das System fortgesetzt wird, und gibt nicht an, ob ein Benutzer vorhanden ist.
+description: Benachrichtigt Anwendungen, dass das System aus dem Ruhezustand oder Ruhezustand wieder besteht. Dieses Ereignis wird jedes Mal übermittelt, wenn das System fortgesetzt wird, und gibt nicht an, ob ein Benutzer vorhanden ist.
 ms.assetid: cd331f79-b64d-479e-aea8-5118ccc87224
-title: PBT_APMRESUMEAUTOMATIC-Ereignis (Winuser. h)
+title: PBT_APMRESUMEAUTOMATIC -Ereignis (WinUser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a7a481dee356c85b3831fcace0c1ff127b0b276
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 43e66fcd2201e9fb3c4feeb135843e92a350303b89a5c5045836428b9a326a30
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119143343"
 ---
-# <a name="pbt_apmresumeautomatic-event"></a>PBT \_ apmresumeautomatic-Ereignis
+# <a name="pbt_apmresumeautomatic-event"></a>PBT \_ APMRESUMEAUTOMATIC-Ereignis
 
-Benachrichtigt Anwendungen, dass das System aus dem Standbymodus oder Ruhezustand wieder aufgenommen wird. Dieses Ereignis wird jedes Mal übermittelt, wenn das System fortgesetzt wird, und gibt nicht an, ob ein Benutzer vorhanden ist.
+Benachrichtigt Anwendungen, dass das System aus dem Ruhezustand oder Ruhezustand wieder besteht. Dieses Ereignis wird jedes Mal übermittelt, wenn das System fortgesetzt wird, und gibt nicht an, ob ein Benutzer vorhanden ist.
 
-Ein Fenster empfängt dieses Ereignis über die [**WM- \_ powerbroadcast**](wm-powerbroadcast.md) -Nachricht. Die *wParam* -Parameter und die *LPARAM* -Parameter werden wie folgt festgelegt.
+Ein Fenster empfängt dieses Ereignis über die [**WM \_ POWERBROADCAST-Nachricht.**](wm-powerbroadcast.md) Die *Parameter wParam* *und lParam* werden wie folgt festgelegt.
 
 > [!Note]  
-> Wenn das System in Windows 10, Version 1507, oder höher, nur wieder aus dem Standbymodus wechselt, um sofort in den Ruhezustand zu wechseln, wird dieses Ereignis nicht übermittelt. In diesem Fall wird keine [**WM- \_ powerbroadcast**](wm-powerbroadcast.md) -Nachricht gesendet.
+> In Windows 10 Systemen der Version 1507 oder höher wird dieses Ereignis nicht übermittelt, wenn das System nur aus dem Ruhezustand wieder in den Ruhezustand überträgt. In [**diesem Fall wird keine WM \_ POWERBROADCAST-Nachricht**](wm-powerbroadcast.md) gesendet.
 
  
 
@@ -38,16 +38,16 @@ WindowProc( HWND hwnd,      // handle to window
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Ein Handle für Fenster.
+Ein Handle für ein Fenster.
 
-</dd> <dt>*Umschlag*</dt> <dd> 
+</dd> <dt>*uMsg*</dt> <dd> 
 
 | Wert                                                                                                                                                                                                                                                                   | Bedeutung                        |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|
-| <span id="WM_POWERBROADCAST"></span><span id="wm_powerbroadcast"></span><dl> <dt>**[**WM \_ Powerbroadcast**](wm-powerbroadcast.md)**</dt> <dt>536 (0x218)</dt> </dl> | Nachrichten-ID.<br/> |
+| <span id="WM_POWERBROADCAST"></span><span id="wm_powerbroadcast"></span><dl> <dt>**[**WM \_ POWERBROADCAST**](wm-powerbroadcast.md)**</dt> <dt>536 (0x218)</dt> </dl> | Nachrichtenbezeichner.<br/> |
 
 
 
@@ -57,7 +57,7 @@ Ein Handle für Fenster.
 
 | Wert                                                                                                                                                                                                                                                   | Bedeutung                      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
-| <span id="PBT_APMRESUMEAUTOMATIC"></span><span id="pbt_apmresumeautomatic"></span><dl> <dt>**PBT \_ Apmresumeautomatic**</dt> <dt>18 (0x12)</dt> </dl> | Ereignis Bezeichner.<br/> |
+| <span id="PBT_APMRESUMEAUTOMATIC"></span><span id="pbt_apmresumeautomatic"></span><dl> <dt>**PBT \_ APMRESUMEAUTOMATIC**</dt> <dt>18 (0x12)</dt> </dl> | Ereignisbezeichner.<br/> |
 
 
 
@@ -68,7 +68,7 @@ Ein Handle für Fenster.
 *lParam* 
 </dt> <dd>
 
-Bleiben muss 0 (null) sein.
+Reserviert; muss 0 (null) sein.
 
 </dd> </dl>
 
@@ -76,9 +76,9 @@ Bleiben muss 0 (null) sein.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das System nach der Übertragung von PBT \_ apmresumeautomatic eine Benutzeraktivität erkennt, sendet es ein [PBT \_ apmresumesuspend](pbt-apmresumesuspend.md) -Ereignis, um Anwendungen mitzuteilen, dass die vollständige Interaktion mit dem Benutzer fortgesetzt werden kann.
+Wenn das System nach der Übertragung von PBT APMRESUMEAUTOMATIC eine Benutzeraktivität erkennt, sendet es ein \_ [PBT \_ APMRESUMESUSPEND-Ereignis,](pbt-apmresumesuspend.md) um Anwendungen darüber zu informieren, dass sie die vollständige Interaktion mit dem Benutzer fortsetzen können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,26 +86,26 @@ Wenn das System nach der Übertragung von PBT \_ apmresumeautomatic eine Benutze
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>WinUser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[System Aktivierungs Ereignisse](system-wake-up-events.md)
+[Systemreaktivingsereignisse](system-wake-up-events.md)
 </dt> <dt>
 
-[Energie Verwaltungs Ereignisse](power-management-events.md)
+[Energieverwaltungsereignisse](power-management-events.md)
 </dt> <dt>
 
-[PBT \_ apmresumesuspend](pbt-apmresumesuspend.md)
+[PBT \_ APMRESUMESUSPEND](pbt-apmresumesuspend.md)
 </dt> <dt>
 
-[**WM- \_ powerbroadcast**](wm-powerbroadcast.md)
+[**WM \_ POWERBROADCAST**](wm-powerbroadcast.md)
 </dt> </dl>
 
  
