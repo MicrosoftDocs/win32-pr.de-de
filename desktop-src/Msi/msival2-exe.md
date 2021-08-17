@@ -1,5 +1,5 @@
 ---
-description: 'Msival2.exe ist ein Befehlszeilenprogramm, das eine Sammlung interner Konsistenzauswertungen ausführen kann: ICEs.'
+description: 'Msival2.exe ist ein Befehlszeilenprogramm, das eine Reihe von internen Konsistenzauswertungen ausführen kann: ICEs.'
 ms.assetid: c48f4584-732a-468d-a651-2c09ce3c9ddd
 title: Msival2.exe
 ms.topic: article
@@ -13,27 +13,27 @@ ms.locfileid: "118943877"
 ---
 # <a name="msival2exe"></a>Msival2.exe
 
-Msival2.exe ist ein Befehlszeilenprogramm, das eine Sammlung interner [Konsistenzauswertungen](internal-consistency-evaluators-ices.md)ausführen kann: ICEs.
+Msival2.exe ist ein Befehlszeilenprogramm, das eine Reihe von internen Konsistenzauswertungen [ausführen kann: ICEs](internal-consistency-evaluators-ices.md).
 
-Dieses Tool ist nur in den [Windows SDK-Komponenten für Windows Installer-Entwickler](platform-sdk-components-for-windows-installer-developers.md)verfügbar.
+Dieses Tool ist nur in Windows [SDK-Komponenten für Windows Installer-Entwickler verfügbar.](platform-sdk-components-for-windows-installer-developers.md)
 
 Weitere Informationen zu ICEs und der CUB-Datei finden Sie unter [Verwenden von internen Konsistenzauswertungen.](using-internal-consistency-evaluators.md)
 
 ## <a name="syntax"></a>Syntax
 
-**Msival2** *{database}{CUB file} \[ -f \] \[ -l {logfile} \] \[ -i {ICE Id} \[ :{ICE \] \] Id}...*
+**Msiva2** *{database}{CUB file} \[ -f \] \[ -l {logfile} \] \[ -i {ICE Id} \[ :{ICE \] \] Id}...*
 
 ## <a name="command-line-options"></a>Befehlszeilenoptionen
 
-Msival2.exe verwendet die folgenden Befehlszeilenoptionen, bei der die Groß-/Kleinschreibung nicht beachtet wird. Anstelle eines Bindestrichs kann auch ein Schrägstrichtrennzeichen verwendet werden.
+Msival2.exe verwendet die folgenden Befehlszeilenoptionen, bei der die Groß-/Kleinschreibung nicht beachtet wird. Ein Schrägstrichtrennzeichen kann auch statt eines Bindestrichs verwendet werden.
 
 
 
-| Option | BESCHREIBUNG                                                                                                                                                                                                                                                                                               |
+| Option | Beschreibung                                                                                                                                                                                                                                                                                               |
 |--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | -f     | Filtern Sie alle Informationsmeldungen aus den angezeigten Ergebnissen heraus. Alle anderen Nachrichtentypen werden angezeigt.                                                                                                                                                                                              |
-| -i     | Führen Sie nur die in der Befehlszeile aufgeführten ICEs in der angegebenen Reihenfolge aus. Jede benutzerdefinierte ICE-Aktion sollte so aufgelistet werden, wie sie in der [CustomAction-Tabelle](customaction-table.md) der CUB-Datei angezeigt wird. Wenn diese Option weggelassen wird, führt das Tool den vom Autor der CUB-Datei angegebenen Standardsatz von ICEs aus. |
-| -l     | Schreibt Ergebnisse in die angegebene Datei. Die Datei darf nicht bereits vorhanden sein. Wenn die Datei vorhanden ist, wird sie nicht überschrieben.                                                                                                                                                                                          |
+| -i     | Führen Sie nur die ICEs aus, die in der angegebenen Reihenfolge in der Befehlszeile aufgeführt sind. Jede benutzerdefinierte ICE-Aktion sollte so aufgeführt werden, wie sie in der [CustomAction-Tabelle](customaction-table.md) der CUB-Datei angezeigt wird. Wenn diese Option weggelassen wird, führt das Tool den Vom Autor der CUB-Datei angegebenen Standardsatz von ICEs aus. |
+| -l     | Schreiben Sie Ergebnisse in die angegebene Datei. Die Datei darf nicht bereits vorhanden sein. Wenn die Datei vorhanden ist, wird sie nicht überschrieben.                                                                                                                                                                                          |
 
 
 
@@ -43,7 +43,7 @@ Msival2.exe verwendet die folgenden Befehlszeilenoptionen, bei der die Groß-/Kl
 
 <dl> <dt>
 
-[Windows Installationsentwicklungstools](windows-installer-development-tools.md)
+[Windows Installer-Entwicklungstools](windows-installer-development-tools.md)
 </dt> <dt>
 
 [Interne Konsistenzauswertungen – ICEs](internal-consistency-evaluators-ices.md)

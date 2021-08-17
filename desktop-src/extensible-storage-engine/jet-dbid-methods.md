@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: JET_DBID Methoden'
-title: JET_DBID Methoden
+description: Weitere Informationen zu JET_DBID-Methoden
+title: JET_DBID-Methoden
 TOCTitle: JET_DBID methods
 ms:assetid: Methods.T:Microsoft.Isam.Esent.Interop.JET_DBID
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_dbid_methods(v=EXCHG.10)
@@ -14,12 +14,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118766612"
 ---
-# <a name="jet_dbid-methods"></a>JET_DBID Methoden
+# <a name="jet_dbid-methods"></a>JET_DBID-Methoden
 
-Geschützte Member enthalten  
-Geerbte Member enthalten  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-Der [JET_DBID](./jet-dbid-structure.md) macht die folgenden Member verfügbar.
+Der [JET_DBID-Typ](./jet-dbid-structure.md) macht die folgenden Member verfügbar.
 
 ## <a name="methods"></a>Methoden
 
@@ -28,7 +28,7 @@ Der [JET_DBID](./jet-dbid-structure.md) macht die folgenden Member verfügbar.
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
@@ -65,7 +65,7 @@ Der [JET_DBID](./jet-dbid-structure.md) macht die folgenden Member verfügbar.
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="hh596160(v=exchg.10).md">ToString()</a></td>
-<td>Generiert eine Zeichenfolgendarstellung der -Struktur. (Überschreibt <a href="/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a>.)</td>
+<td>Generieren Sie eine Zeichenfolgendarstellung der -Struktur. (Überschreibt <a href="/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>

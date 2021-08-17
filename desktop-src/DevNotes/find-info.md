@@ -52,42 +52,42 @@ typedef struct _FIND_INFO {
 **tiIndex**
 </dt> <dd>
 
-Die **TAGID** für den zu durchsuchenden Index.
+Die **TAGID** für den index, der durchsucht werden soll.
 
 </dd> <dt>
 
 **tiCurrent**
 </dt> <dd>
 
-Die **TAGID** für das aktuelle Element, das sich befand.
+Die **TAGID** für das aktuelle Element, das sich befindet.
 
 </dd> <dt>
 
 **tiEndIndex**
 </dt> <dd>
 
-Die **TAGID für** den letzten Datensatz nach FindFirst, wenn der Index UNIQUE ist.
+Die **TAGID** für den letzten Datensatz nach FindFirst, wenn der Index UNIQUE ist.
 
 </dd> <dt>
 
 **tName**
 </dt> <dd>
 
-Der Typ des zu befindenden Elements. Weitere Informationen [finden Sie unter TAG-Typen.](tag-types.md)
+Der Typ des elements, das gefunden werden soll. Weitere Informationen finden Sie unter [TAG-Typen.](tag-types.md)
 
 </dd> <dt>
 
 **dwIndexRec**
 </dt> <dd>
 
-Ein interner Zähler, mit dem nachverfolgt wird, wo im Index der nächste Find-Vorgang gestartet werden soll.
+Ein interner Indikator, mit dem nachverfolgt wird, wo im Index der nächste Suchvorgang beginnen soll.
 
 </dd> <dt>
 
 **dwFlags**
 </dt> <dd>
 
-Dieser Member kann 0 oder **SHIMDB \_ INDEX \_ UNIQUE \_ KEY** (0x00000001) sein, was angibt, dass es sich um einen eindeutigen Schlüsselindex handelt.
+Dieser Member kann 0 oder **SHIMDB \_ INDEX \_ UNIQUE \_ KEY** (0x00000001) sein. Dies gibt an, dass es sich um einen eindeutigen Schlüsselindex handelt.
 
 </dd> <dt>
 
@@ -101,21 +101,21 @@ Der Schlüssel für den aktuellen Eintrag.
 **Szname**
 </dt> <dd>
 
-Die aktuelle Zeichenfolge (wenn der Tagtyp **TAG \_ TYPE \_ STRINGREF ist).**
+Die aktuelle Zeichenfolge (wenn der Tagtyp **TAG \_ TYPE \_ STRINGREF** ist).
 
 </dd> <dt>
 
 **dwName**
 </dt> <dd>
 
-Der aktuelle **DWORD-Wert** (wenn der Tagtyp **TAG TYPE \_ \_ DWORD ist).**
+Der aktuelle **DWORD-Wert** (wenn der Tagtyp **TAG TYPE \_ \_ DWORD** ist).
 
 </dd> <dt>
 
 **pguidName**
 </dt> <dd>
 
-Der aktuelle GUID-Wert (wenn der Tagtyp **TAG \_ TYPE \_ BINARY** und das TAG TAG **DATABASE ID \_ \_ ist).**
+Der aktuelle GUID-Wert (wenn der Tagtyp **\_ TAGTYP \_ BINARY** und das TAG **TAG DATABASE \_ \_ ID** ist).
 
 </dd> </dl>
 
@@ -125,7 +125,7 @@ Der aktuelle GUID-Wert (wenn der Tagtyp **TAG \_ TYPE \_ BINARY** und das TAG TA
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

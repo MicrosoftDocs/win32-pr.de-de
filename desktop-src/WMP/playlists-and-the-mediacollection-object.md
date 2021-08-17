@@ -1,48 +1,48 @@
 ---
-title: Wiedergabelisten und das mediacollection-Objekt
-description: Wiedergabelisten und das mediacollection-Objekt
+title: Wiedergabelisten und das MediaCollection-Objekt
+description: Wiedergabelisten und das MediaCollection-Objekt
 ms.assetid: 3c98ceed-2545-4774-998b-c1db0d172a81
 keywords:
-- Windows Media Player, Wiedergabelisten
-- Windows Media Player-Objektmodell, Wiedergabelisten
-- Objektmodell, Wiedergabelisten
-- Windows Media Player Mobile, Wiedergabelisten
-- Windows Media Player ActiveX-Steuerelement, Wiedergabelisten
-- Windows Media Player Mobile ActiveX-Steuerelement, Wiedergabelisten
-- ActiveX-Steuerelement, Wiedergabelisten
-- Wiedergabelisten, mediacollection-Objekt
-- Metadatei-Wiedergabelisten, mediacollection-Objekt
-- Windows Media Metadatei-Wiedergabelisten, mediacollection-Objekt
-- Mediacollection-Objekt
+- Windows Media Player,Wiedergabelisten
+- Windows Media Player-Objektmodell,Wiedergabelisten
+- Objektmodell,Wiedergabelisten
+- Windows Media Player Mobil, Wiedergabelisten
+- Windows Media Player ActiveX,Wiedergabelisten
+- Windows Media Player Mobile ActiveX-Steuerelement,Wiedergabelisten
+- ActiveX,Wiedergabelisten
+- playlists,MediaCollection-Objekt
+- Metafile-Wiedergabelisten, MediaCollection-Objekt
+- Windows Medienmetadatei-Wiedergabelisten,MediaCollection-Objekt
+- MediaCollection-Objekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 334b693046e6c78e92a4af901816b57bb9c4cddc
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9b1a0bba2e966e51523dc24965c2f2a066767b059f26a08fde9ee5856a1694df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118334453"
 ---
-# <a name="playlists-and-the-mediacollection-object"></a>Wiedergabelisten und das mediacollection-Objekt
+# <a name="playlists-and-the-mediacollection-object"></a>Wiedergabelisten und das MediaCollection-Objekt
 
-Das **mediacollection** -Objekt ermöglicht Ihnen den Zugriff auf eine Vielzahl von speziellen Wiedergabelisten und umfasst eine Methode zum Erstellen einer neuen Wiedergabeliste aus einer Metadatei.
+Das **MediaCollection-Objekt** bietet Ihnen Zugriff auf eine Vielzahl von speziellen Wiedergabelisten und enthält eine Methode zum Erstellen einer neuen Wiedergabeliste aus einer Metadatei.
 
-Die folgenden Methoden rufen besondere Wiedergabelisten ab:
+Die folgenden Methoden rufen spezielle Wiedergabelisten ab:
 
--   **"GetAll"**
--   **getbyalbum**
--   **getbyattribute**
--   **getbyauthor**
+-   **getAll**
+-   **getBy Instanz**
+-   **getByAttribute**
+-   **getByAuthor**
 -   **getByGenre**
 -   **getByName**
 
-Wie ihre Namen vermuten, rufen diese Methoden Wiedergabelisten ab, die alle Medienelemente in der Bibliothek enthalten, die bestimmten Kriterien entsprechen.
+Wie ihre Namen vermuten lassen, rufen diese Methoden Wiedergabelisten ab, die alle Medienelemente in der Bibliothek enthalten, die bestimmte Kriterien erfüllen.
 
-Achten Sie darauf, die *mediacollection* nicht zu verwechseln. **getByName** -Methode mit *playlistcollection*. **getByName** -Methode. Die **mediacollection** -Methode gibt ein **Wiedergabe** Listen Objekt zurück, das alle Medienelemente mit dem angegebenen Namen enthält. Die **playlistcollection** -Methode gibt ein **playlistarray** -Objekt zurück, das alle Wiedergabelisten mit dem angegebenen Namen enthält.
+Achten Sie darauf, die *MediaCollection nicht zu verwechseln.* **getByName-Methode** mit der *PlaylistCollection.* **getByName-Methode.** Die **MediaCollection-Methode** gibt ein **Playlist-Objekt** zurück, das alle Medienelemente mit dem angegebenen Namen enthält. Die **PlaylistCollection-Methode** gibt ein **PlaylistArray-Objekt** zurück, das alle Wiedergabelisten mit dem angegebenen Namen enthält.
 
-Sie können das *mediacollection*-Ereignis verwenden. **fügen Sie** eine Methode hinzu, um Wiedergabelisten und Medienelemente der Bibliothek hinzuzufügen. Zum Hinzufügen einer Wiedergabeliste übergeben Sie der-Methode den Pfad an die Metadatendatei, die die Wiedergabeliste definiert. Die-Methode gibt immer ein **Medien** Objekt zurück. Zwischen **Medien** -und **Wiedergabe** Listen Objekten kann nicht umgewandelt werden. Wenn Sie mit der Wiedergabeliste arbeiten möchten, die Sie hinzugefügt haben, rufen Sie das **Wiedergabe** Listen Objekt ab, das denselben Namen wie das **Medien** Objekt aufweist.
+Sie können *mediaCollection verwenden.* **Fügen Sie** die -Methode hinzu, um Wiedergabelisten sowie Medienelemente zur Bibliothek hinzuzufügen. Um eine Wiedergabeliste hinzuzufügen, übergeben Sie der -Methode den Pfad zur Metadatei, die die Wiedergabeliste definiert. Die -Methode gibt immer ein **Media-Objekt** zurück. Sie können nicht zwischen **Medien- und** **Wiedergabelistenobjekten** umstellen. Um mit der wiedergabeliste zu arbeiten, die Sie hinzugefügt haben, rufen Sie das **Playlist-Objekt** ab, das den gleichen Namen wie das **Medienobjekt** hat.
 
-Im folgenden c#-Beispiel wird veranschaulicht, wie Medien mithilfe von **mediacollection** nach Typ abgerufen werden. **getbyattribute** -Methode. Dieser Code Ruft die Namen aller Attribute ab, die einem bestimmten Typ zugeordnet sind, sowie den Lese-/Schreib-oder schreibgeschützten Status dieser Attribute. Es wird eine einzelne Datei generiert, die Listen mit Attributen für die Typen Audiodaten, Video, Radio, Wiedergabeliste, andere, Musik und Foto enthält.
+Im folgenden C#-Beispiel wird veranschaulicht, wie Medien mithilfe von MediaCollection nach Typ **abgerufen werden.** **getByAttribute-Methode.** Dieser Code ruft die Namen aller Attribute ab, die einem bestimmten Typ zugeordnet sind, sowie den Lese-/Schreibstatus oder den schreibgeschützten Status dieser Attribute. Es wird eine einzelne Datei generiert, die Listen mit Attributen für die Typen Audio, Video, Radio, Playlist, Other, Musik und Photo enthält.
 
 
 ```C++
@@ -100,7 +100,7 @@ return strResult;
 
 
 
-Im folgenden c#-Beispiel wird veranschaulicht, wie der Bibliothek eine Wiedergabeliste aus einer Metadatei hinzugefügt wird.
+Im folgenden C#-Beispiel wird veranschaulicht, wie der Bibliothek eine Wiedergabeliste aus einer Metadatei hinzugefügt wird.
 
 
 ```C++
@@ -111,7 +111,7 @@ IWMPMedia Media = Player.mediaCollection.add("c:\\testPlayList.asx");
 
 
 
-Statische Wiedergabelisten enthalten bestimmte Medienelemente. Automatische Wiedergabelisten durchsuchen die Bibliothek jedes Mal, wenn Sie geöffnet werden, und können zu unterschiedlichen Zeitpunkten unterschiedliche Medienelemente enthalten. Sie können der Bibliothek mithilfe von *mediacollection* sowohl statische als auch automatische Wiedergabelisten hinzufügen. Methode **Hinzufügen** . Sie können statische Wiedergabelisten auch mithilfe von *playlistcollection* hinzufügen. **importwiedergabe** -Methode.
+Statische Wiedergabelisten enthalten bestimmte Medienelemente. Automatische Wiedergabelisten durchsuchen die Bibliothek jedes Mal, wenn sie geöffnet werden, und enthalten möglicherweise zu unterschiedlichen Zeiten unterschiedliche Medienelemente. Sie können der Bibliothek sowohl statische als auch automatische Wiedergabelisten hinzufügen, indem Sie *mediaCollection verwenden.* **add-Methode.** Sie können statische Wiedergabelisten auch mithilfe der *PlaylistCollection hinzufügen.* **importPlaylist-Methode.**
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -120,24 +120,24 @@ Statische Wiedergabelisten enthalten bestimmte Medienelemente. Automatische Wied
 [**Verwalten von Wiedergabelisten**](managing-playlists.md)
 </dt> <dt>
 
-[**Mediacollection-Objekt**](mediacollection-object.md)
+[**MediaCollection-Objekt**](mediacollection-object.md)
 </dt> <dt>
 
-[**Wiedergabelisten Objekt**](playlist-object.md)
+[**Wiedergabelistenobjekt**](playlist-object.md)
 </dt> <dt>
 
-[**Playlistcollection-Objekt**](playlistcollection-object.md)
+[**PlaylistCollection-Objekt**](playlistcollection-object.md)
 </dt> <dt>
 
-[**Wiedergabelisten und das playlistcollection-Objekt**](playlists-and-the-playlistcollection-object.md)
+[**Wiedergabelisten und das PlaylistCollection-Objekt**](playlists-and-the-playlistcollection-object.md)
 </dt> <dt>
 
 [**Statische und automatische Wiedergabelisten**](static-and-auto-playlists.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

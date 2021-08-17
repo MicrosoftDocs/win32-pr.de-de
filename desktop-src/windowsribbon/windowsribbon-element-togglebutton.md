@@ -46,7 +46,7 @@ Stellt ein [Umschaltfläche-Steuerelement](windowsribbon-controls-togglebutton.m
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
 <th>Beschreibung</th>
 </tr>
@@ -134,7 +134,7 @@ Dieser Codeabschnitt zeigt eine **ToggleButton-Elementdeklaration** innerhalb de
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

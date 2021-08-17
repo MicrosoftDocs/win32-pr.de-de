@@ -13,15 +13,15 @@ ms.locfileid: "118636698"
 ---
 # <a name="file-installation"></a>Dateiinstallation
 
-Nach Abschluss der [Dateikosten](file-costing.md) verfügt das Installationsprogramm über alle Informationen, die zum Verarbeiten der beiden Dateibearbeitungsaktionen erforderlich sind: [DuplicateFiles](duplicatefiles-action.md) und [MoveFiles.](movefiles-action.md)
+Nach [Abschluss der Dateikosten](file-costing.md) verfügt das Installationsprogramm über alle Informationen, die zum Verarbeiten der beiden Dateibearbeitungsaktionen erforderlich sind: [DuplicateFiles](duplicatefiles-action.md) und [MoveFiles](movefiles-action.md).
 
-Verwenden Sie die [DuplicateFiles-Aktion,](duplicatefiles-action.md) um die Dateien anzugeben, die das Installationsprogramm in der [DuplicateFile-Tabelle duplizieren](duplicatefile-table.md)soll. Verwenden Sie die [MoveFiles-Aktion,](movefiles-action.md)um zu bestimmen, welche Dateien verschoben werden sollen, indem Sie die [MoveFile-Tabelle](movefile-table.md)abfragen.
+Verwenden Sie die [DuplicateFiles-Aktion,](duplicatefiles-action.md) um die Dateien anzugeben, die das Installationsprogramm in der [DuplicateFile-Tabelle duplizieren soll.](duplicatefile-table.md) Verwenden Sie die [MoveFiles-Aktion,](movefiles-action.md)um zu bestimmen, welche Dateien durch Abfragen der [MoveFile-Tabelle zu verschieben sind.](movefile-table.md)
 
-Beachten Sie, dass das Feld Optionen der [Tabelle MoveFile](movefile-table.md) angibt, ob die ursprüngliche Datei vom aktuellen Speicherort gelöscht werden soll. Dateien, die von der MoveFiles-Aktion verschoben oder kopiert werden, werden nicht gelöscht, wenn das Produkt deinstalliert wird.
+Beachten Sie, dass das Feld Optionen der [MoveFile-Tabelle](movefile-table.md) angibt, ob die ursprüngliche Datei aus ihrem aktuellen Speicherort gelöscht werden soll. Dateien, die von der MoveFiles-Aktion verschoben oder kopiert werden, werden nicht gelöscht, wenn das Produkt deinstalliert wird.
 
-Die [InstallFiles-Aktion](installfiles-action.md) wird aufgerufen, sobald alle anderen Dateibearbeitungsvorgänge abgeschlossen sind. Die InstallFiles-Aktion verarbeitet die [Medientabelle,](media-table.md)die [Dateitabelle](file-table.md)und die [Komponententabelle,](component-table.md) um zu bestimmen, welche Dateien aus der Quelle in das Ziel kopiert werden.
+Die [InstallFiles-Aktion](installfiles-action.md) wird aufgerufen, sobald alle anderen Dateibearbeitungsvorgänge abgeschlossen sind. Die InstallFiles-Aktion [](media-table.md)verarbeitet die Media-Tabelle, die [File-Tabelle](file-table.md)und die [Component-Tabelle,](component-table.md) um zu bestimmen, welche Dateien aus der Quelle in das Ziel kopiert werden.
 
-Die [Aktion InstallFiles](installfiles-action.md) erstellt die Verzeichnisstruktur, die zum Installieren aller Dateien erforderlich ist. Wenn ein explizit leerer Ordner installiert werden muss, kann die [CreateFolders-Aktion](createfolders-action.md) aufgerufen werden, um ihn zu erstellen.
+Die [Aktion InstallFiles erstellt](installfiles-action.md) die Verzeichnisstruktur, die zum Installieren aller Dateien erforderlich ist. Wenn ein explizit leerer Ordner installiert werden muss, kann die [CreateFolders-Aktion](createfolders-action.md) aufgerufen werden, um ihn zu erstellen.
 
  
 

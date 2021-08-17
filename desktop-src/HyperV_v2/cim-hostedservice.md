@@ -1,7 +1,7 @@
 ---
-description: Stellt eine Zuordnung zwischen einem Dienst und dem System dar, das den Dienst hostet. Ein System kann viele Dienste hosten, diese Klasse stellt jedoch keine Dienste dar, die über mehrere Systeme gehostet werden.
+description: Stellt eine Zuordnung zwischen einem Dienst und dem System dar, das den Dienst hostet. Ein System kann viele Dienste hosten, diese Klasse stellt jedoch keine Dienste dar, die auf mehreren Systemen gehostet werden.
 ms.assetid: ede67a81-cf1b-41aa-b907-5b635cf80423
-title: CIM_HostedService -Klasse (Hyper-V-Verwaltung)
+title: CIM_HostedService-Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -22,9 +22,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118648555"
 ---
-# <a name="cim_hostedservice-class-hyper-v-management"></a>CIM_HostedService -Klasse (Hyper-V-Verwaltung)
+# <a name="cim_hostedservice-class-hyper-v-management"></a>CIM_HostedService-Klasse (Hyper-V-Verwaltung)
 
-Stellt eine Zuordnung zwischen einem Dienst und dem System dar, das den Dienst hostet. Ein System kann viele Dienste hosten, diese Klasse stellt jedoch keine Dienste dar, die über mehrere Systeme gehostet werden.
+Stellt eine Zuordnung zwischen einem Dienst und dem System dar, das den Dienst hostet. Ein System kann viele Dienste hosten, diese Klasse stellt jedoch keine Dienste dar, die auf mehreren Systemen gehostet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ class CIM_HostedService : CIM_HostedDependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ HostedService-Klasse** verfügt über diese Membertypen:
+Die **CIM \_ HostedService-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -58,7 +58,7 @@ Datentyp: **\_ CIM-System**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**Min(**](/windows/desktop/WmiSdk/standard-qualifiers) 1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
 Das Hostsystem.
@@ -74,7 +74,7 @@ Datentyp: **\_ CIM-Dienst**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig"), [**Schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("abhängig"), [**Schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
 Der auf dem System gehostete Dienst.
@@ -89,13 +89,13 @@ Der auf dem System gehostete Dienst.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

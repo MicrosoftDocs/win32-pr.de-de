@@ -50,7 +50,7 @@ Typ: **[ **D3DCOLORVALUE**](d3dcolorvalue.md)**
 
 </dd> <dd>
 
-Wert, der die diffuse Farbe des Materials angibt. Siehe [**D3DCOLORVALUE.**](d3dcolorvalue.md)
+Wert, der die diffuse Farbe des Materials an gibt. Siehe [**D3DCOLORVALUE**](d3dcolorvalue.md).
 
 </dd> <dt>
 
@@ -61,7 +61,7 @@ Typ: **[ **D3DCOLORVALUE**](d3dcolorvalue.md)**
 
 </dd> <dd>
 
-Wert, der die Umgebungsfarbe des Materials angibt. Siehe [**D3DCOLORVALUE.**](d3dcolorvalue.md)
+Wert, der die Umgebungsfarbe des Materials an gibt. Siehe [**D3DCOLORVALUE**](d3dcolorvalue.md).
 
 </dd> <dt>
 
@@ -72,7 +72,7 @@ Typ: **[ **D3DCOLORVALUE**](d3dcolorvalue.md)**
 
 </dd> <dd>
 
-Wert, der die Glanzfarbe des Materials angibt. Siehe [**D3DCOLORVALUE.**](d3dcolorvalue.md)
+Wert, der die Winkelfarbe des Materials an gibt. Siehe [**D3DCOLORVALUE**](d3dcolorvalue.md).
 
 </dd> <dt>
 
@@ -83,7 +83,7 @@ Typ: **[ **D3DCOLORVALUE**](d3dcolorvalue.md)**
 
 </dd> <dd>
 
-Wert, der die freizügige Farbe des Materials angibt. Siehe [**D3DCOLORVALUE.**](d3dcolorvalue.md)
+Wert, der die zierliche Farbe des Materials an gibt. Siehe [**D3DCOLORVALUE**](d3dcolorvalue.md).
 
 </dd> <dt>
 
@@ -94,15 +94,15 @@ Typ: **float**
 
 </dd> <dd>
 
-Gleitkommawert, der die Schärfe von Glanzlichter angibt. Je höher der Wert, desto schärfer die Hervorhebung.
+Gleitkommawert, der die Schärfe von Glanzlichtern an gibt. Je höher der Wert, desto schärfer ist die Hervorhebung.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Um Glanzlichter zu deaktivieren, legen Sie D3DRS \_ SPECULARENABLE mithilfe von [**D3DRENDERSTATETYPE**](./d3drenderstatetype.md)auf **FALSE** fest. Dies ist die schnellste Option, da keine Glanzlichter berechnet werden.
+Um glanzliche Highlights zu deaktivieren, legen Sie D3DRS \_ SPECULARENABLE mithilfe von [**D3DRENDERSTATETYPE auf**](./d3drenderstatetype.md) **FALSE** fest. Dies ist die schnellste Option, da keine Glanzlichter berechnet werden.
 
-Weitere Informationen zur Verwendung des Beleuchtungsmoduls zum Berechnen der Glanzlichter finden Sie unter [Specular Lighting (Direct3D 9) ( Glanzlicht (Direct3D 9)](specular-lighting.md)).
+Weitere Informationen zur Verwendung des Beleuchtungsmoduls zum Berechnen der Specular-Beleuchtung finden Sie unter [Specular Lighting (Direct3D 9) ( Specular Lighting (Direct3D 9)).](specular-lighting.md)
 
 ## <a name="requirements"></a>Anforderungen
 

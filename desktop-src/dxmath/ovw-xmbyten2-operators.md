@@ -26,7 +26,7 @@ Die [**XMBYTEN2-Struktur**](/windows/desktop/api/DirectXPackedVector/ns-directxp
 
 | Methoden                                               | BESCHREIBUNG                                                                                                          |
 |-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| [**operator =**](/windows/win32/api/directxpackedvector/nf-directxpackedvector-xmbyten2-operator-assign)<br/> | Weist die Vektorkomponentendaten aus einer Instanz von `XMBYTEN2` der aktuellen Instanz von `XMBYTEN2` zu. <br/> |
+| [**operator =**](/windows/win32/api/directxpackedvector/nf-directxpackedvector-xmbyten2-operator-assign)<br/> | Weist der aktuellen Instanz von die Vektorkomponentendaten von `XMBYTEN2` einer Instanz von `XMBYTEN2` zu. <br/> |
 
 
 

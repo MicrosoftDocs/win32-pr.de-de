@@ -29,7 +29,7 @@ g \_ wszWMYear
 
 ## <a name="data-type"></a>Datentyp
 
-**\_ \_ WMT-TYPZEICHENFOLGE**
+**\_WMT-TYPZEICHENFOLGE \_**
 
 ## <a name="example"></a>Beispiel
 

@@ -1,43 +1,43 @@
 ---
 description: Geräteeigenschaften
 ms.assetid: ad8753ba-ad20-4122-b0f2-eb165f98db67
-title: Geräteeigenschaften (Core-audioapis)
+title: Geräteeigenschaften (Kernaudio-APIs)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 14a868e4bb806bd49d934febed164bcd70fba39f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 47e1a5068329ea2da794b68b777aa989a2e8b4a665df082982916942aa15b56e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340100"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118407018"
 ---
-# <a name="device-properties-core-audio-apis"></a>Geräteeigenschaften (Core-audioapis)
+# <a name="device-properties-core-audio-apis"></a>Geräteeigenschaften (Kernaudio-APIs)
 
-Beim Auflisten von [audioendpunktgeräten](audio-endpoint-devices.md)kann eine Client Anwendung die Endpunkt Objekte für Ihre Geräteeigenschaften Abfragen. Die Geräteeigenschaften werden in der mmdevice-API-Implementierung der **IPropertyStore** -Schnittstelle verfügbar gemacht. Bei einem Verweis auf die [**immdevice**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdevice) -Schnittstelle eines Endpunkt Objekts kann ein Client einen Verweis auf den Eigenschaften Speicher des Endpunkt Objekts abrufen, indem er die [**immdevice:: openpropertystore**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-openpropertystore) -Methode aufrufen.
+Während des Aufzählens von [Audioendpunktgeräten](audio-endpoint-devices.md)kann eine Clientanwendung die Endpunktobjekte für ihre Geräteeigenschaften abfragen. Die Geräteeigenschaften werden in der Implementierung der MMDevice-API der **IPropertyStore-Schnittstelle** verfügbar gemacht. Bei einem Verweis auf die [**IMMDevice-Schnittstelle**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdevice) eines Endpunktobjekts kann ein Client einen Verweis auf den Eigenschaftenspeicher des Endpunktobjekts abrufen, indem er die [**IMMDevice::OpenPropertyStore-Methode aufruft.**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-openpropertystore)
 
-Das Property-Store-Objekt macht eine **IPropertyStore** -Schnittstelle verfügbar. Die beiden primären Methoden in dieser Schnittstelle sind **IPropertyStore:: GetValue**, der einen Geräte Eigenschafts Wert abruft, und **IPropertyStore:: SetValue**, der einen Wert für die Geräte Eigenschaft festlegt. Weitere Informationen zu **IPropertyStore** finden Sie in der Windows SDK-Dokumentation.
+Das PropertyStore-Objekt macht eine **IPropertyStore-Schnittstelle** verfügbar. Die beiden primären Methoden in dieser Schnittstelle sind **IPropertyStore::GetValue**, die einen Geräteeigenschaftswert abrufen, und **IPropertyStore::SetValue**, mit dem ein Geräteeigenschaftswert festgelegt wird. Weitere Informationen zu **IPropertyStore** finden Sie in der Windows SDK-Dokumentation.
 
-Die Implementierung des Eigenschafts Speicher der mmdevice-API unterscheidet sich vom standardmäßigen shelleigenschafts-Speicher Objekt. Um einen Eigenschafts Wert zu ändern, muss die Client Anwendung die **IPropertyStore:: SetValue** -Methode aufrufen. Während dieses Aufrufes werden die neuen Werte festgelegt und in der Registrierung geschrieben. Daher muss die Anwendung die **IPropertyStore:: Commit** -Methode nach dem **SetValue** -Befehl nicht aufrufen. Das Handle für die Registrierung wird nur geschlossen, wenn der Client den Schnittstellen Zeiger freigibt.
+Die Implementierung des Eigenschaftenspeichers der MMDevice-API unterscheidet sich vom Standard-Shelleigenschaftenspeicherobjekt. Um einen Eigenschaftswert zu ändern, muss die Clientanwendung die **IPropertyStore::SetValue-Methode** aufrufen. Während dieses Aufrufs werden die neuen Werte festgelegt und in die Registrierung geschrieben. Daher muss die Anwendung die **IPropertyStore::Commit-Methode** nach dem **SetValue-Aufruf** nicht aufrufen. Das Handle für die Registrierung wird nur geschlossen, wenn der Client den Schnittstellenzeiger freigibt.
 
-In der Regel wird von Drittanbieter-Client Anwendungen die **GetValue** -Methode, jedoch nicht die **SetValue** -Methode aufgerufen. Der Endpunkt-Manager legt die grundlegenden Geräteeigenschaften für Endpunkte fest. Der Endpunkt-Manager ist die Komponente von Windows Vista, die für das Erkennen des Vorhandenseins von audioendpunktgeräten verantwortlich ist.
+In der Regel rufen Clientanwendungen von Drittanbietern die **GetValue-Methode** auf, jedoch nicht die **SetValue-Methode.** Der Endpunkt-Manager legt die grundlegenden Geräteeigenschaften für Endpunkte fest. Der Endpunkt-Manager ist die Windows Vista-Komponente, die für die Erkennung des Vorhandenseins von Audioendpunktgeräten verantwortlich ist.
 
-Jeder pkey \_ xxx-Eigenschaften Bezeichner in der folgenden Liste ist eine Konstante vom Typ **PropertyKey** , die in der Header Datei functiondiscoverykeys \_ devpkey. h definiert ist. Alle audioendpunktgeräte verfügen über diese drei Geräteeigenschaften.
+Jeder PKEY \_ Xxx-Eigenschaftenbezeichner in der folgenden Liste ist eine Konstante vom Typ **PROPERTYKEY,** die in der Headerdatei Functiondiscoverykeys \_ devpkey.h definiert ist. Alle Audioendpunktgeräte verfügen über diese drei Geräteeigenschaften.
 
 
 
-| Eigenschaft                                                                         | BESCHREIBUNG                                                                                                                                                                                                                                                                       |
+| Eigenschaft                                                                         | Beschreibung                                                                                                                                                                                                                                                                       |
 |----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Pkey-Geräte \_ Name (tviceinterface \_ FriendlyName)**](pkey-deviceinterface-friendlyname.md) | Der Anzeige Name des audioadapters, an den das Endpunkt Gerät angefügt wird (z. b. "XYZ-Audioadapter"). Das **PROPVARIANT** -Element **VT** ist auf VT \_ LPWSTR festgelegt, und der Member **pwszval** verweist auf eine NULL-terminierte Zeichenfolge mit breit Zeichen, die den anzeigen Amen enthält. |
-| [**Pkey- \_ Gerät \_ devicedebug**](pkey-device-devicedesc.md)                       | Die Geräte Beschreibung des Endpunkt Geräts (z. b. "Sprecher"). Der **PROPVARIANT** -Member **VT** ist auf VT \_ LPWSTR festgelegt, und der Member **pwszval** verweist auf eine mit NULL endenden Zeichenfolge mit breit Zeichen, die die Geräte Beschreibung enthält.                                       |
-| [**Pkey- \_ Gerät \_ FriendlyName**](pkey-device-friendlyname.md)                   | Der Anzeige Name des Endpunkt Geräts (z. b. "Sprecher (XYZ-Audioadapter)"). Das **PROPVARIANT** -Element **VT** ist auf VT \_ LPWSTR festgelegt, und der Member **pwszval** verweist auf eine NULL-terminierte Zeichenfolge mit breit Zeichen, die den anzeigen Amen enthält.                             |
+| [**PKEY \_ DeviceInterface \_ FriendlyName**](pkey-deviceinterface-friendlyname.md) | Der Anzeigename des Audioadapters, an den das Endpunktgerät angefügt ist (z. B. "XYZ-Audioadapter"). **PROPVARIANT** member **vt** ist auf VT \_ LPWSTR festgelegt, und der Member **pwszVal** zeigt auf eine auf NULL endende Zeichenfolge mit Breitzeichen, die den Anzeigenamen enthält. |
+| [**PKEY \_ Device \_ DeviceDesc**](pkey-device-devicedesc.md)                       | Die Gerätebeschreibung des Endpunktgeräts (z. B. "Lautsprecher"). **Propvariant** member **vt** is set to VT \_ LPWSTR and **member pwszVal** points to a null-terminated, wide-character string that contains the device description.                                       |
+| [**PKEY \_ Device \_ FriendlyName**](pkey-device-friendlyname.md)                   | Der Anzeigename des Endpunktgeräts (z. B. "Lautsprecher (XYZ-Audioadapter)"). **PROPVARIANT** member **vt** ist auf VT \_ LPWSTR festgelegt, und der Member **pwszVal** zeigt auf eine auf NULL endende Zeichenfolge mit Breitzeichen, die den Anzeigenamen enthält.                             |
 
 
 
  
 
-Einige audioendpunktgeräte verfügen möglicherweise über zusätzliche Eigenschaften, die nicht in der vorangehenden Liste angezeigt werden. Weitere Informationen zu zusätzlichen Eigenschaften finden Sie unter [Eigenschaften für audioendpunkte](audio-endpoint-properties.md). Weitere Informationen zu **PropertyKey** finden Sie in der Windows SDK-Dokumentation.
+Einige Audioendpunktgeräte verfügen möglicherweise über zusätzliche Eigenschaften, die nicht in der vorherigen Liste angezeigt werden. Weitere Informationen zu zusätzlichen Eigenschaften finden Sie unter [Audioendpunkteigenschaften.](audio-endpoint-properties.md) Weitere Informationen zu **PROPERTYKEY** finden Sie in der Windows SDK-Dokumentation.
 
-Im folgenden Codebeispiel werden die anzeigen Amen aller audiorendering-Endpunkt Geräte im System ausgegeben:
+Im folgenden Codebeispiel werden die Anzeigenamen aller Audiorendering-Endpunktgeräte im System gedruckt:
 
 
 ```C++
@@ -134,15 +134,15 @@ Exit:
 
 
 
-Das fehlgeschlagene Makro im vorangehenden Codebeispiel ist in der Header Datei Winerror. h definiert.
+Das FAILED-Makro im vorherigen Codebeispiel ist in der Headerdatei Winerror.h definiert.
 
-Im vorangehenden Codebeispiel ruft der **for**-Loop-Text in der printendpointnames-Funktion die [**immdevice:: GetId**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-getid) -Methode auf, um die [Endpunkt-ID-Zeichenfolge](endpoint-id-strings.md) für das audioendpunkt-Gerät abzurufen, das von der **immdevice** -Schnittstellen Instanz dargestellt wird. Durch die Zeichenfolge wird das Gerät in Bezug auf alle anderen audioendpunktgeräte im System eindeutig identifiziert. Ein Client kann die Zeichenfolge der Endpunkt-ID verwenden, um eine Instanz des audioendpunktgeräts zu einem späteren Zeitpunkt oder in einem anderen Prozess zu erstellen, indem die [**immdeviceenumerator:: getdevice**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-getdevice) -Methode aufgerufen wird. Clients sollten den Inhalt der Endpunkt-ID-Zeichenfolge als nicht transparent behandeln. Das heißt, Clients sollten nicht versuchen, den Inhalt der Zeichenfolge zu analysieren, um Informationen über das Gerät zu erhalten. Der Grund hierfür ist, dass das Zeichen folgen Format nicht definiert ist und sich möglicherweise von einer Implementierung der mmdevice-API zum nächsten ändert.
+Im vorherigen Codebeispiel ruft der for-loop-Text in der PrintEndpointNames-Funktion die [**IMMDevice::GetId-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-getid) auf, um die [Endpunkt-ID-Zeichenfolge](endpoint-id-strings.md) für das Audioendpunktgerät abzurufen, das von der **IMMDevice-Schnittstelleninstanz** dargestellt wird. Die Zeichenfolge identifiziert das Gerät eindeutig in Bezug auf alle anderen Audioendpunktgeräte im System. Ein Client kann die Endpunkt-ID-Zeichenfolge verwenden, um eine Instanz des Audioendpunktgeräts zu einem späteren Zeitpunkt oder in einem anderen Prozess zu erstellen, indem er die [**IMMDeviceEnumerator::GetDevice-Methode aufruft.**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-getdevice) Clients sollten den Inhalt der Endpunkt-ID-Zeichenfolge als nicht transparent behandeln. Das heißt, Clients sollten nicht versuchen, den Inhalt der Zeichenfolge zu analysieren, um Informationen zum Gerät abzurufen. Der Grund dafür ist, dass das Zeichenfolgenformat nicht definiert ist und sich von einer Implementierung der MMDevice-API zur nächsten ändern kann.
 
-Die benutzerfreundlichen Gerätenamen und Endpunkt-ID-Zeichen folgen, die von der printendpointnames-Funktion im vorangehenden Codebeispiel abgerufen werden, sind identisch mit den benutzerfreundlichen Gerätenamen und Endpunkt-ID-Zeichen folgen, die von DirectSound während der Geräte Enumeration bereitgestellt werden. Weitere Informationen finden Sie unter [Audioereignisse für Legacy-Audioanwendungen](audio-events-for-legacy-audio-applications.md).
+Die Anzeigegerätenamen und Endpunkt-ID-Zeichenfolgen, die von der PrintEndpointNames-Funktion im vorherigen Codebeispiel abgerufen werden, sind identisch mit den anzeigefreundlichen Gerätenamen und Endpunkt-ID-Zeichenfolgen, die von DirectSound während der Geräteenumeration bereitgestellt werden. Weitere Informationen finden Sie unter [Audioereignisse für Ältere Audioanwendungen.](audio-events-for-legacy-audio-applications.md)
 
-Im vorangehenden Codebeispiel ruft die Funktion printendpointnames die **cokreateinstance** -Funktion auf, um einen Enumerator für die audioendpunktgeräte im System zu erstellen. Wenn das aufrufende Programm die **CoInitialize** -Funktion oder die **CoInitializeEx** -Funktion nicht zum Initialisieren der com-Bibliothek aufgerufen hat, tritt beim **CoCreateInstance** -Aufruf ein Fehler auf. Weitere Informationen zu **cokreateinstance**, **CoInitialize** und **CoInitializeEx** finden Sie in der Windows SDK-Dokumentation.
+Im vorherigen Codebeispiel ruft die PrintEndpointNames-Funktion die **CoCreateInstance-Funktion** auf, um einen Enumerator für die Audioendpunktgeräte im System zu erstellen. Der **CoCreateInstance-Aufruf** schlägt fehl, es sei denn, das aufrufende Programm hat zuvor entweder die **CoInitialize-** oder **CoInitializeEx-Funktion** aufgerufen, um die COM-Bibliothek zu initialisieren. Weitere Informationen zu **CoCreateInstance,** **CoInitialize** und **CoInitializeEx** finden Sie in der Windows SDK-Dokumentation.
 
-Weitere Informationen zu den Schnittstellen " **immdeviceenumerator**", " **immdevicecollection**" und " **immdevice** " finden Sie unter [mmdevice-API](mmdevice-api.md).
+Weitere Informationen zu den Schnittstellen **IMMDeviceEnumerator,** **IMMDeviceCollection** und **IMMDevice** finden Sie unter [MMDevice-API.](mmdevice-api.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

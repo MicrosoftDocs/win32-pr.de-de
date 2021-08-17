@@ -1,19 +1,19 @@
 ---
-title: Iagentuserinput getallitemdata
-description: Iagentuserinput getallitemdata
+title: IAgentUserInput GetAllItemData
+description: IAgentUserInput GetAllItemData
 ms.assetid: d1857b28-c745-4ed2-b49e-774f247e7348
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ced6a618d4fbbc093bf54c19fc393b7e195f2069
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d74c59e05e021fdff05ee8991c4563a7a4be918f6ecb244c26402b5234b240b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470741"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119105146"
 ---
-# <a name="iagentuserinputgetallitemdata"></a>Iagentuserinput:: getallitemdata
+# <a name="iagentuserinputgetallitemdata"></a>IAgentUserInput::GetAllItemData
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT GetAllItemData(
@@ -23,50 +23,50 @@ HRESULT GetAllItemData(
 );
 ```
 
-Ruft die Daten für alle [**Befehls**](command-event.md) Alternativen ab, die an einen [**iagentnotifysink:: Command**](iagentnotifysink--command.md) -Rückruf übermittelt werden.
+Ruft die Daten für alle [**Befehlsalternativen**](command-event.md) ab, die an einen [**IAgentNotifySink::Command-Rückruf**](iagentnotifysink--command.md) übergeben werden.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="pdwItemIndices"></span><span id="pdwitemindices"></span><span id="PDWITEMINDICES"></span>*pdwitemindices*
+<span id="pdwItemIndices"></span><span id="pdwitemindices"></span><span id="PDWITEMINDICES"></span>*pdwItemIndices*
 </dt> <dd>
 
-Adresse einer Variablen, die die IDs der [**Befehle**](command-event.md) empfängt, die an den [**iagentnotifysink:: Command**](iagentnotifysink--command.md) -Rückruf übermittelt werden.
+Adresse einer Variablen, die die IDs von [**Befehlen**](command-event.md) empfängt, die an den [**IAgentNotifySink::Command-Rückruf**](iagentnotifysink--command.md) übergeben werden.
 
 </dd> <dt>
 
-<span id="plConfidences"></span><span id="plconfidences"></span><span id="PLCONFIDENCES"></span>*plconfidential*
+<span id="plConfidences"></span><span id="plconfidences"></span><span id="PLCONFIDENCES"></span>*plConfidences*
 </dt> <dd>
 
-Adresse einer Variablen, die die Vertrauens Ergebnisse für [**Befehls**](command-event.md) Alternativen empfängt, die an den [**iagentnotifysink:: Command**](iagentnotifysink--command.md) -Rückruf übermittelt werden.
+Adresse einer Variablen, die die Zuverlässigkeitsbewertungen für [**Befehlsalternativen**](command-event.md) empfängt, die an den [**IAgentNotifySink::Command-Rückruf**](iagentnotifysink--command.md) übergeben werden.
 
 </dd> <dt>
 
-<span id="pbszText"></span><span id="pbsztext"></span><span id="PBSZTEXT"></span>*pbsztext*
+<span id="pbszText"></span><span id="pbsztext"></span><span id="PBSZTEXT"></span>*pbszText*
 </dt> <dd>
 
-Adresse einer Variablen, die den sprach Text für [**Befehls**](command-event.md) Alternativen empfängt, die an den [**iagentnotifysink:: Command**](iagentnotifysink--command.md) -Rückruf übermittelt werden.
+Adresse einer Variablen, die den Sprachtext für [**Befehlsalternativen**](command-event.md) empfängt, die an den [**IAgentNotifySink::Command-Rückruf**](iagentnotifysink--command.md) übergeben werden.
 
 </dd> </dl>
 
-Wenn die Spracheingabe [**iagentnotifysink:: Command**](iagentnotifysink--command.md)auslöst, gibt der Server die beste Entsprechung zurück, die zweitbeste Entsprechung und die beste Entsprechung, wenn diese von der Sprach-Engine bereitgestellt werden. Sie stellt die relativen Vertrauens Ergebnisse im Bereich von-100 bis 100 und den tatsächlichen Text "Heard" der Sprach-Engine bereit. Wenn die beste Entsprechung ein vom Server bereitgestellter Befehl war, sendet der Server eine NULL-ID, sendet jedoch dennoch eine Vertrauenswürdigkeit und den [**Stimm**](voice-property.md) Text.
+Wenn die Spracheingabe [**IAgentNotifySink::Command**](iagentnotifysink--command.md)auslöst, gibt der Server die beste Übereinstimmung, die zweitbeste Übereinstimmung und die dritte beste Übereinstimmung zurück, wenn diese von der Sprach-Engine bereitgestellt werden. Sie stellt die relativen Zuverlässigkeitsbewertungen im Bereich von -100 bis 100 und den tatsächlichen Text bereit, der von der Sprach-Engine "gehört" wird. Wenn die beste Übereinstimmung ein vom Server bereitgestellter Befehl war, sendet der Server eine NULL-ID, sendet aber trotzdem eine Zuverlässigkeitsbewertung und den [**Sprachtext.**](voice-property.md)
 
-, Wenn die Spracheingabe nicht die Quelle für das Ereignis war. Wenn der Benutzer z. b. den Befehl aus dem Popupmenü des Zeichens ausgewählt hat, gibt der Microsoft-Agent-Server die ID des ausgewählten [**Befehls**](command-event.md) mit einem Vertrauens Ergebnis von 100 und einem sprach Text als NULL zurück. Die anderen Alternativen geben als NULL zurück, wenn die Vertrauenswürdigkeit NULL (0) und der sprach Text NULL ist.
+Wenn die Spracheingabe nicht die Quelle für das Ereignis war, Wenn der Benutzer beispielsweise den Befehl im Popupmenü des Zeichens ausgewählt hat, gibt der Microsoft-Agent-Server die ID des ausgewählten [**Befehls**](command-event.md) mit einer Zuverlässigkeitsbewertung von 100 und Sprachtext als NULL zurück. Die anderen Alternativen geben als NULL mit Konfidenzbewertungen von null (0) und Sprachtext als NULL zurück.
 
 > [!Note]  
-> Nicht alle Spracherkennungs-Engines geben möglicherweise alle Werte für alle Parameter dieses Ereignisses zurück. Wenden Sie sich an den Hersteller Ihrer Hersteller, um zu ermitteln, ob die Engine die Microsoft Speech API-Schnittstelle für das Zurückgeben von Alternativen und Vertrauens Bewertungen
+> Nicht alle Spracherkennungs-Engines geben möglicherweise alle Werte für alle Parameter dieses Ereignisses zurück. Wenden Sie sich an Ihren Engine-Anbieter, um zu ermitteln, ob die Engine die Microsoft Speech-API-Schnittstelle für die Rückgabe von Alternativen und Zuverlässigkeitsbewertungen unterstützt.
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentuserinput:: getitemconfidence**](iagentuserinput--getitemconfidence.md), [**iagentuserinput:: GetItemText**](iagentuserinput--getitemtext.md), [**iagentuserinput:: getItemID**](iagentuserinput--getitemid.md)
+[**IAgentUserInput::GetItemConfidence**](iagentuserinput--getitemconfidence.md), [**IAgentUserInput::GetItemText**](iagentuserinput--getitemtext.md), [**IAgentUserInput::GetItemID**](iagentuserinput--getitemid.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

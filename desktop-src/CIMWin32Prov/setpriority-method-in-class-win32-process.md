@@ -2,7 +2,7 @@
 description: SetPriority&\# 32; Die WMI-Klassenmethode versucht, die Ausführungspriorität des Prozesses zu ändern.
 ms.assetid: ef012e9e-ff65-4881-835e-ddab23af9333
 ms.tgt_platform: multiple
-title: SetPriority-Methode der Win32_Process-Klasse
+title: SetPriority-Methode der Win32_Process Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -25,7 +25,7 @@ ms.locfileid: "118675569"
 
 Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **SetPriority** versucht, die Ausführungspriorität des Prozesses zu ändern.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ uint32 SetPriority(
 *Priorität* \[ In\]
 </dt> <dd>
 
-Neue Prioritätsklasse für den Prozess. Beachten Sie, dass sich diese Werte von denen unterscheiden, die explizit in der **Priority-Eigenschaft** von [**Win32 \_ Process**](win32-process.md)angegeben sind.
+Neue Prioritätsklasse für den Prozess. Beachten Sie, dass sich diese Werte von den werten unterscheiden, die explizit in der **Priority-Eigenschaft** von [**Win32 \_ Process angegeben sind.**](win32-process.md)
 
 <dt>
 
@@ -56,18 +56,18 @@ Neue Prioritätsklasse für den Prozess. Beachten Sie, dass sich diese Werte von
 
 </dt> <dd>
 
-Wird für einen Prozess mit Threads angegeben, die nur ausgeführt werden, wenn sich das System im Leerlauf befindet. Die Threads des Prozesses werden durch die Threads eines Prozesses vorzeitig beendet, der in einer Klasse mit höherer Priorität ausgeführt wird, z. B. einem Bildschirmschoner. Die Klasse mit Leerlaufpriorität wird von untergeordneten Prozessen geerbt.
+Wird für einen Prozess mit Threads angegeben, die nur ausgeführt werden, wenn sich das System im Leerlauf befindet. Die Threads des Prozesses werden durch die Threads eines Prozesses, die in einer Klasse mit höherer Priorität ausgeführt werden, wie z. B. ein Bildschirmschoner, vorab aus dem Prozess. Die Klasse mit Leerlaufpriorität wird von untergeordneten Prozessen geerbt.
 
 </dd> <dt>
 
 <span id="Below_Normal"></span><span id="below_normal"></span><span id="BELOW_NORMAL"></span>
 
-<span id="Below_Normal"></span><span id="below_normal"></span><span id="BELOW_NORMAL"></span>Below Normal (16384) **(Unter normal** (16384))
+<span id="Below_Normal"></span><span id="below_normal"></span><span id="BELOW_NORMAL"></span>**Unter normal** (16384)
 
 
 </dt> <dd>
 
-Gibt einen Prozess an, der **prioritätsüber IDLE \_ PRIORITY \_ CLASS**, aber unter **NORMAL PRIORITY CLASS \_ \_ verfügt.**
+Gibt einen Prozess an, der prioritäts höher als **IDLE \_ PRIORITY \_ CLASS,** aber unter **NORMAL PRIORITY CLASS \_ \_ ist.**
 
 </dd> <dt>
 
@@ -84,12 +84,12 @@ Wird für einen Prozess ohne besondere Planungsanforderungen angegeben.
 
 <span id="Above_Normal"></span><span id="above_normal"></span><span id="ABOVE_NORMAL"></span>
 
-<span id="Above_Normal"></span><span id="above_normal"></span><span id="ABOVE_NORMAL"></span>**Über Normal** (32768)
+<span id="Above_Normal"></span><span id="above_normal"></span><span id="ABOVE_NORMAL"></span>**Über normal** (32768)
 
 
 </dt> <dd>
 
-Gibt einen Prozess an, der prioritätsmäßig über **NORMAL \_ PRIORITY \_ CLASS**, aber **unterHALB von HIGH PRIORITY CLASS \_ \_ verfügt.**
+Gibt einen Prozess an, der prioritäts höher als **NORMAL \_ PRIORITY \_ CLASS,** aber **unterHALB von HIGH PRIORITY CLASS \_ \_ ist.**
 
 </dd> <dt>
 
@@ -100,7 +100,7 @@ Gibt einen Prozess an, der prioritätsmäßig über **NORMAL \_ PRIORITY \_ CLAS
 
 </dt> <dd>
 
-Wird für einen Prozess angegeben, der zeitkritische Aufgaben ausführt, die sofort ausgeführt werden müssen. Die Threads des Prozesses haben Vorrang vor den Threads von Prozessen in den Prioritätsklassen mit normaler oder Leerlaufpriorität. Ein Beispiel ist die Aufgabenliste, die beim Aufruf durch den Benutzer schnell reagieren muss, unabhängig von der Auslastung des Betriebssystems. Verwenden Sie äußerste Sorgfalt bei der Verwendung der Klasse mit hoher Priorität, da eine Anwendung mit hoher Priorität fast die gesamte verfügbare CPU-Zeit nutzen kann.
+Wird für einen Prozess angegeben, der zeitkritische Aufgaben ausführt, die sofort ausgeführt werden müssen. Die Threads des Prozesses haben Vorrang vor den Threads von Prozessen in den Prioritätsklassen mit normaler oder Leerlaufpriorität. Ein Beispiel ist die Aufgabenliste, die schnell reagieren muss, wenn sie vom Benutzer aufgerufen wird, unabhängig von der Auslastung des Betriebssystems. Verwenden Sie die Klasse mit hoher Priorität mit äußerster Sorgfalt, da eine Anwendung mit hoher Priorität nahezu die ganze verfügbare CPU-Zeit nutzen kann.
 
 </dd> <dt>
 
@@ -111,13 +111,13 @@ Wird für einen Prozess angegeben, der zeitkritische Aufgaben ausführt, die sof
 
 </dt> <dd>
 
-Wird für einen Prozess mit der höchsten möglichen Priorität angegeben. Die Threads des Prozesses sind den Threads aller anderen Prozesse voraus, einschließlich Betriebssystemprozessen, die wichtige Aufgaben ausführen. Beispielsweise kann ein Echtzeitprozess, der für mehr als ein sehr kurzes Intervall ausgeführt wird, dazu führen, dass Datenträgercaches nicht geleert werden oder eine Maus nicht reagiert.
+Wird für einen Prozess mit der höchsten möglichen Priorität angegeben. Die Threads des Prozesses verdrängen die Threads aller anderen Prozesse, einschließlich der Betriebssystemprozesse, die wichtige Aufgaben ausführen. Beispielsweise kann ein Echtzeitprozess, der länger als ein sehr kurzes Intervall ausgeführt wird, dazu führen, dass Datenträgercaches nicht geleert werden oder eine Maus nicht reagiert.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes.](/windows/desktop/Debug/system-error-codes)
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -139,16 +139,16 @@ Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wer
 **Ungültiger Parameter** (21)
 </dt> <dt>
 
-**Sonstige** (22 4294967295)
+**Andere** (22 4294967295)
 </dt> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Um die Priorität auf Realtime festzulegen, muss der Aufrufer **über SeIncreaseBasePriorityPrivilege** ( SE INC BASE PRIORITY PRIVILEGE )**\_ \_ \_ \_ verfügen.** Ohne diese Berechtigung kann die höchste Priorität auf "Hohe Priorität" festgelegt werden.
+Um die Priorität auf Realtime festlegen zu können, muss der Aufrufer **seIncreaseBasePriorityPrivilege** (**SE INC BASE PRIORITY PRIVILEGE ) \_ \_ \_ \_ haben.** Ohne diese Berechtigung kann die höchste Priorität auf "Hohe Priorität" festgelegt werden.
 
 ## <a name="examples"></a>Beispiele
 
-Im VbScript-Beispiel [Ändern der Priorität eines ausgeführten Prozesses](https://Gallery.TechNet.Microsoft.Com/23615ee7-cccb-43c2-b994-6106ce2fc05e) wird die Priorität einer ausgeführten Instanz von Notepad.exe von Normal in Oberhalb von Normal geändert.
+Im VBScript-Beispiel Modify [the Priority Of a Running Process](https://Gallery.TechNet.Microsoft.Com/23615ee7-cccb-43c2-b994-6106ce2fc05e) (Priorität eines ausgeführten Prozesses ändern) ändert sich die Priorität einer ausgeführten Instanz von Notepad.exe normal in Oberhalb von Normal.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -164,14 +164,14 @@ Im VbScript-Beispiel [Ändern der Priorität eines ausgeführten Prozesses](http
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**\_Win32-Prozess**](win32-process.md)
+[**Win32-Prozess \_**](win32-process.md)
 </dt> </dl>
 
  

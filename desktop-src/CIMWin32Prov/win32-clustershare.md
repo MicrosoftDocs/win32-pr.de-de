@@ -73,7 +73,7 @@ Die **Win32 \_ ClusterShare-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                    | BESCHREIBUNG                                                      |
+| Methode                                                    | Beschreibung                                                      |
 |:----------------------------------------------------------|:-----------------------------------------------------------------|
 | [**Erstellen**](create-win32-clustershare.md)               | Erstellt eine neue **Win32 \_ ClusterShare-Instanz.**<br/>       |
 | [**Löschen**](delete-win32-clustershare.md)               | Löscht eine **Win32 \_ ClusterShare-Instanz.**<br/>           |
@@ -120,7 +120,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Network Management Structures SHARE INFO \| [**\_ \_ 502**](/windows/desktop/api/lmshare/ns-lmshare-share_info_502) \| shi502 \_ max \_ uses")
 </dt> </dl>
 
-Die Anzahl gleichzeitiger Benutzer für diese Ressource wurde eingeschränkt. True **gibt an,** dass der Wert in **der MaximumAllowed-Eigenschaft** ignoriert wird.
+Die Anzahl gleichzeitiger Benutzer für diese Ressource wurde eingeschränkt. True **gibt an,** dass der Wert in der **MaximumAllowed-Eigenschaft** ignoriert wird.
 
 Diese Eigenschaft wird von [**Win32 Share \_ geerbt.**](win32-share.md)
 
@@ -129,7 +129,7 @@ Diese Eigenschaft wird von [**Win32 Share \_ geerbt.**](win32-share.md)
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -147,7 +147,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managed
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -201,7 +201,7 @@ Diese Eigenschaft wird von [**Win32 Share \_ geerbt.**](win32-share.md)
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -212,7 +212,7 @@ Qualifizierer: [**schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**Mappi
 
 Alias für einen Pfad, der als Freigabe auf einem Computersystem eingerichtet ist, auf dem Windows.
 
-Windows 2008-Beispiel: \\ "SERVER01 \\ public" – Windows Server 2008 erfordert, dass Sie die UNC in den Namen eingeben.
+Windows 2008: \\ "SERVER01 \\ public" – Windows Server 2008 erfordert, dass Sie die UNC in den Namen eingeben.
 
 Diese Eigenschaft wird von [**Win32 Share \_ geerbt.**](win32-share.md)
 
@@ -221,7 +221,7 @@ Diese Eigenschaft wird von [**Win32 Share \_ geerbt.**](win32-share.md)
 **Path**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -241,7 +241,7 @@ Diese Eigenschaft wird von [**Win32 Share \_ geerbt.**](win32-share.md)
 **ServerName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -257,7 +257,7 @@ Der Clusterserver, auf dem die Freigabe gehostet wird.
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -313,14 +313,14 @@ Folgende Werte sind gültig:
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-**Wird** gestartet ("Wird gestartet")
+**Wird gestartet** ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-**Wird beendet** ("Wird beendet")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -334,7 +334,7 @@ Folgende Werte sind gültig:
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Striche** ("Strich")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
@@ -355,7 +355,7 @@ Folgende Werte sind gültig:
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Lost Comm** ("Lost Comm")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
@@ -371,12 +371,12 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Network Management Structures SHARE INFO \| [**\_ \_ 502**](/windows/desktop/api/lmshare/ns-lmshare-share_info_502) \| shi502 \_ type")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API-Netzwerkverwaltungsstrukturen \| SHARE INFO \| [**\_ \_ 502**](/windows/desktop/api/lmshare/ns-lmshare-share_info_502) \| shi502-Typ") \_
 </dt> </dl>
 
-Der Typ der Ressource, die freigegeben wird. Folgende Typen sind möglich: Laufwerke, Druckwarteschlangen, prozessübergreifende Kommunikation (Interprocess Communications, IPC) und allgemeine Geräte.
+Typ der Ressource, die freigegeben wird. Zu den Typen gehören Datenträgerlaufwerke, Druckwarteschlangen, prozessübergreifende Kommunikation (Interprocess Communications, IPC) und allgemeine Geräte.
 
-Diese Eigenschaft wird von [**Win32 Share \_ geerbt.**](win32-share.md)
+Diese Eigenschaft wird von [**Win32 \_ Share**](win32-share.md)geerbt.
 
 <dt>
 
@@ -410,7 +410,7 @@ Diese Eigenschaft wird von [**Win32 Share \_ geerbt.**](win32-share.md)
 
 <span id="Disk_Drive_Admin"></span><span id="disk_drive_admin"></span><span id="DISK_DRIVE_ADMIN"></span>
 
-**Datenträgerlaufwerkadministrator** (2147483648)
+**Datenträgeradministrator** (2147483648)
 
 
 </dt> <dd></dd> <dt>
@@ -431,7 +431,7 @@ Diese Eigenschaft wird von [**Win32 Share \_ geerbt.**](win32-share.md)
 
 <span id="IPC_Admin"></span><span id="ipc_admin"></span><span id="IPC_ADMIN"></span>
 
-**IPC Admin** (2147483651)
+**IPC-Administrator** (2147483651)
 
 
 </dt> <dd></dd> </dl>
@@ -456,7 +456,7 @@ Diese Eigenschaft wird von [**Win32 Share \_ geerbt.**](win32-share.md)
 
 <dl> <dt>
 
-[**Win32-Freigabe \_**](win32-share.md)
+[**\_Win32-Freigabe**](win32-share.md)
 </dt> </dl>
 
  

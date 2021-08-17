@@ -1,9 +1,9 @@
 ---
-title: CDM_GETFOLDERIDLIST Nachricht (Commdlg.h)
-description: Ruft die Adresse der Elementbezeichnerliste ab, die dem Ordner entspricht, in dem derzeit ein Dialogfeld im Explorer-Stil Geöffnet oder Speichern unter geöffnet ist.
+title: CDM_GETFOLDERIDLIST (Commdlg.h)
+description: Ruft die Adresse der Elementbezeichnerliste ab, die dem Ordner entspricht, der derzeit im Dialogfeld Öffnen oder Speichern im Explorer-Stil geöffnet ist.
 ms.assetid: 9d2d2c35-ff1d-43de-ab0b-c96e0f1e9e24
 keywords:
-- Dialogfelder für CDM_GETFOLDERIDLIST Meldung
+- CDM_GETFOLDERIDLIST-Dialogfelder
 topic_type:
 - apiref
 api_name:
@@ -23,9 +23,9 @@ ms.locfileid: "118786192"
 ---
 # <a name="cdm_getfolderidlist-message"></a>CDM \_ GETFOLDERIDLIST-Nachricht
 
-\[Ab Windows Vista wurden die Dialogfelder **Öffnen** und **Speichern unter** durch das [Dialogfeld "Allgemeines Element"](../shell/common-file-dialog.md)ersetzt. Es wird empfohlen, die DIALOGFELD-API für allgemeine Elemente anstelle dieser Dialogfelder aus der Common Dialog Box Library zu verwenden.\]
+\[Ab Windows Vista wurden **die** allgemeinen  Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
 
-Ruft die Adresse der Elementbezeichnerliste ab, die dem Ordner entspricht, in dem derzeit ein Dialogfeld im Explorer-Stil **Geöffnet** oder **Speichern unter** geöffnet ist. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
+Ruft die Adresse der Elementbezeichnerliste ab, die  dem Ordner entspricht, der derzeit im Dialogfeld Öffnen oder Speichern **im** Explorer-Stil geöffnet ist. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
 
 
 ```C++

@@ -1,6 +1,6 @@
 ---
 title: SystemMonitor.ClearData-Methode
-description: Löscht alle Datenfelder im -Steuerelement.
+description: Löschen aller Datenfelder im -Steuerelement.
 ms.assetid: 6d7e510c-7f76-42b1-b470-1110d124448f
 keywords:
 - ClearData-Methode SysMon
@@ -25,7 +25,7 @@ ms.locfileid: "118882645"
 ---
 # <a name="systemmonitorcleardata-method"></a>SystemMonitor.ClearData-Methode
 
-Löscht alle Datenfelder im -Steuerelement.
+Löschen aller Datenfelder im -Steuerelement.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
 | DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 

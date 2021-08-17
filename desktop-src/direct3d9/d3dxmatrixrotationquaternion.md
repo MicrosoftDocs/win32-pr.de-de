@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 4b30de0c45c8d78b2e07d6ff57a4e94b9753298a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 8aac453ce7a2cfec9c31d5807714c1b80c3e4251ca0c68ae684c4547096d04c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118198"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118525270"
 ---
 # <a name="d3dxmatrixrotationquaternion-function-d3dx9mathh"></a>D3DXMatrixRotationQuaternion-Funktion (D3dx9math.h)
 
@@ -65,7 +65,7 @@ Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
 Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die aus der Quell quaternion erstellt wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXMatrixRotationQuaternion-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
@@ -75,7 +75,7 @@ Informationen zum Berechnen von Quaternionswerten aus einem Richtungsvektor ( x,
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

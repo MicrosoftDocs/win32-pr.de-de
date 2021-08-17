@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_DBINFOUPGRADE Struktur'
+description: 'Weitere Informationen zu: JET_DBINFOUPGRADE-Struktur'
 title: JET_DBINFOUPGRADE-Struktur
 TOCTitle: JET_DBINFOUPGRADE Structure
 ms:assetid: dd8a881a-33b5-4314-8cfb-b1d75ad37b21
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9652b0050805ad116a7087cb2ec4cd146255b6a0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f8a62245ee4b09ec3e8764e6d4e51841fa057c789bdc2fb4a142380d62e8d598
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345054"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119112179"
 ---
 # <a name="jet_dbinfoupgrade-structure"></a>JET_DBINFOUPGRADE-Struktur
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_dbinfoupgrade-structure"></a>JET_DBINFOUPGRADE-Struktur
 
-Die **JET_DBINFOUPGRADE** Struktur enthält Informationen zum Upgradestatus der Datenbank. Dieser Wert wird nur abgerufen, wenn **JET_DBINFOUPGRADE** an [jetgetdatabaseingefo](./jetgetdatabaseinfo-function.md) oder [jetgetdatabasefilinput Info](./jetgetdatabasefileinfo-function.md)übermittelt wurde. Diese Struktur ist für aktuelle Betriebssystemversionen der Datenbank-Engine nicht erforderlich.
+Die **JET_DBINFOUPGRADE-Struktur** enthält Informationen zum Upgradestatus der Datenbank. Dieser Wert wird nur abgerufen, wenn **JET_DBINFOUPGRADE** an [JetGetDatabaseInfo](./jetgetdatabaseinfo-function.md) oder [JetGetDatabaseFileInfo](./jetgetdatabasefileinfo-function.md)übergeben wurde. Diese Struktur ist für aktuelle Betriebssystemversionen der Datenbank-Engine nicht erforderlich.
 
 ```cpp
     typedef struct {
@@ -53,43 +53,43 @@ Die **JET_DBINFOUPGRADE** Struktur enthält Informationen zum Upgradestatus der 
 
 **cbStruct**
 
-Legen Sie auf die Größe der **JET_DBINFOUPGRADE** Struktur in Bytes fest.
+Wird auf die Größe der **JET_DBINFOUPGRADE-Struktur** in Bytes festgelegt.
 
-**cbfilesizelow**
+**cbFilesizeLow**
 
-Das niedrige **DWORD** , das die aktuelle Dateigröße für die Datenbank widerspiegelt.
+Das niedrige **DWORD,** das die aktuelle Dateigröße für die Datenbank widerspiegelt.
 
-**cbfilesizehigh**
+**cbFilesizeHigh**
 
-Das hohe **DWORD** , das die aktuelle Dateigröße für die Datenbank widerspiegelt.
+Der hohe **DWORD-Ausdruck,** der die aktuelle Dateigröße für die Datenbank wiedergibt.
 
-**cbfreespacerequiredlow**
+**cbFreeSpaceRequiredLow**
 
-Das niedrige **DWORD** des geschätzten freien Speicherplatzes, der für ein direktes Upgrade benötigt wird.
+Das niedrige **DWORD** des geschätzten freien Speicherplatzes, der für ein upgrade in-place erforderlich ist.
 
-**cbfreespacerequiredhigh**
+**cbFreeSpaceRequiredHigh**
 
-Das hohe **DWORD** des geschätzten freien Speicherplatzes, der für ein direktes Upgrade benötigt wird.
+Das hohe **DWORD** des geschätzten freien Speicherplatzes, der für ein upgrade in-place erforderlich ist.
 
-**csectoupgrade**
+**csecToUpgrade**
 
-Die geschätzte Zeit, die für das Upgrade benötigt wird (in Sekunden).
+Die geschätzte Zeit, die für das Upgrade benötigt wird(in Sekunden).
 
 **ulFlags**
 
-Ein Bitfeld, das aus null oder mehr der folgenden Flags besteht: **fupgradable**, **falsoryupgrade**.
+Ein Bitfeld, das aus 0 (null) oder mehr der folgenden Flags besteht: **fUpgradable**, **fAlreadyUpgraded**.
 
-**fupgradable**
+**fUpgradable**
 
 Die Datenbank kann aktualisiert werden.
 
-**falsch aktualisiert**
+**fAlreadyUpgraded**
 
 Die Datenbank wird auf das aktuelle Datenbankformat aktualisiert.
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Eine **JET_DBINFOUPGRADE** Struktur wird durch einen Aufrufen von [jetgetdatabaseinfo](./jetgetdatabaseinfo-function.md) oder [jetgetdatabasefileinfo](./jetgetdatabasefileinfo-function.md)aufgefüllt. Wenn die Funktion nicht erfolgreich ausgeführt werden kann, ist der Inhalt der-Struktur nicht definiert.
+Eine **JET_DBINFOUPGRADE** Struktur wird durch einen Aufruf von [JetGetDatabaseInfo](./jetgetdatabaseinfo-function.md) oder [JetGetDatabaseFileInfo](./jetgetdatabasefileinfo-function.md)aufgefüllt. Wenn die Funktion nicht erfolgreich ist, ist der Inhalt der Struktur nicht definiert.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -109,7 +109,7 @@ Eine **JET_DBINFOUPGRADE** Struktur wird durch einen Aufrufen von [jetgetdatabas
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 </tbody>
 </table>
@@ -121,7 +121,7 @@ Eine **JET_DBINFOUPGRADE** Struktur wird durch einen Aufrufen von [jetgetdatabas
 [JET_GRBIT](./jet-grbit.md)  
 [JET_SESID](./jet-sesid.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetgetindexinfo](./jetgetindexinfo-function.md)  
-[Jetgetobjectinfo](./jetgetobjectinfo-function.md)  
-[Jetgettableindexinfo](./jetgettableindexinfo-function.md)  
-[Jetgettableinfo](./jetgettableinfo-function.md)
+[JetGetIndexInfo](./jetgetindexinfo-function.md)  
+[JetGetObjectInfo](./jetgetobjectinfo-function.md)  
+[JetGetTableIndexInfo](./jetgettableindexinfo-function.md)  
+[JetGetTableInfo](./jetgettableinfo-function.md)

@@ -13,7 +13,7 @@ ms.locfileid: "118477096"
 ---
 # <a name="iagentnotifysinkbookmark"></a>IAgentNotifySink::Bookmark
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT Bookmark(
@@ -21,7 +21,7 @@ HRESULT Bookmark(
 );                          
 ```
 
-Benachrichtigt eine Clientanwendung, wenn ihr Lesezeichen abgeschlossen ist.
+Benachrichtigt eine Clientanwendung, wenn das Lesezeichen abgeschlossen ist.
 
 -   Kein Rückgabewert.
 
@@ -30,15 +30,15 @@ Benachrichtigt eine Clientanwendung, wenn ihr Lesezeichen abgeschlossen ist.
 <span id="dwBookMarkID"></span><span id="dwbookmarkid"></span><span id="DWBOOKMARKID"></span>*dwBookMarkID*
 </dt> <dd>
 
-Bezeichner des Lesezeichens, das zum Auslösen des Ereignisses geführt hat.
+Bezeichner des Lesezeichens, das zum Auslösen des Ereignisses führte.
 
 </dd> </dl>
 
-Wenn Sie Lesezeichentags in eine [**Speak-Methode**](speak-method.md) einschließen, können Sie nachverfolgen, wann sie bei diesem Ereignis auftreten.
+Wenn Sie Lesezeichentags in eine [**Speak-Methode**](speak-method.md) einfügen, können Sie nachverfolgen, wann sie mit diesem Ereignis auftreten.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**IAgentCharacter::Speak**](iagentcharacter--speak.md), [Microsoft Agent Speech Output Tags](microsoft-agent-speech-output-tags.md)
+[**IAgentCharacter::Speak**](iagentcharacter--speak.md), [Microsoft Agent Speech-Ausgabetags](microsoft-agent-speech-output-tags.md)
 
 
  

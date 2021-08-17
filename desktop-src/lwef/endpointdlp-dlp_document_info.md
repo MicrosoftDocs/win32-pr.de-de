@@ -44,7 +44,7 @@ typedef struct _DLP_DOCUMENT_INFO {
 *Version* \[ In\]
 </dt> <dd>
 
-Ein DWORD, das die API-Version angibt. Dieser Wert sollte immer **DLP_DOCUMENT_INFO_V_LATEST** sein. Diese Konstante wird in der Beispielheaderdatei endpointdlp.h im Artikel Endpoint data loss prevention (Verhindern von [Endpunktdatenverlust)](endpointdlp-endpoint-data-loss-prevention.md)definiert.
+Ein DWORD, das die API-Version an gibt. Dieser Wert sollte immer **DLP_DOCUMENT_INFO_V_LATEST.** Diese Konstante wird in der Auflistung der Endpointdlp.h-Beispielheaderdatei im Artikel [Endpoint data loss prevention definiert.](endpointdlp-endpoint-data-loss-prevention.md)
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Ein DWORD, das die API-Version angibt. Dieser Wert sollte immer **DLP_DOCUMENT_I
 *PersistentFileName* \[ In\]
 </dt> <dd>
 
-Ein LPCWSTR, der den ursprünglichen Pfad des Dokuments angibt.
+Ein LPCWSTR, der den ursprünglichen Pfad des Dokuments an gibt.
 
 </dd> </dl>
 
@@ -62,7 +62,7 @@ Ein LPCWSTR, der den ursprünglichen Pfad des Dokuments angibt.
 *LocalFileName* \[ In\]
 </dt> <dd>
 
-Ein LPCWSTR, der den Pfad zur tatsächlichen Sicherungsdatei des Dokuments angibt.
+Ein LPCWSTR, der den Pfad zur tatsächlichen Hintergrunddatei des Dokuments an gibt.
 
 </dd> </dl>
 

@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119441520"
 ---
-# <a name="ui_pkey_categoryid"></a>\_PKEY-Kategorie-ID der Benutzeroberfläche \_
+# <a name="ui_pkey_categoryid"></a>UI \_ PKEY \_ CategoryId
 
 Identifiziert die \_ PKEY \_ CategoryId-Eigenschaft der Benutzeroberfläche.
 
@@ -27,13 +27,13 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Ui \_ PKEY \_ CategoryId wird von einer Anwendung verwendet, um die IDs der Kategorien abzufragen, die zum Gruppieren verwandter Elemente in einem Katalogsteuerelement verwendet werden.
+Ui PKEY CategoryId wird von einer Anwendung verwendet, um die IDs der Kategorien abfragt, die verwendet werden, um verwandte Elemente \_ \_ in einem Katalogsteuerelementen zu gruppen.
 
-Der Eigenschaftswert ist der nullbasierte Index eines Elements in einer Kategorieauflistung.
+Der Eigenschaftswert ist der nullbasierte Index eines Elements in einer Kategoriesammlung.
 
-Der folgende Screenshot veranschaulicht die Verwendung von Kategorien in einem [**SplitButton-Menü,**](windowsribbon-element-splitbutton.md) in dem **Auswahlformen** die ID 0 und **Auswahloptionen** die ID 1 aufweisen.
+Der folgende Screenshot veranschaulicht die Verwendung von Kategorien in  einem [**SplitButton-Menü,**](windowsribbon-element-splitbutton.md) in dem Auswahlformen die ID 0 und die **Auswahloptionen** die ID 1 haben.
 
-![Screenshot: Kategorien in einem Menübandkatalog](images/properties/ui-pkey-collection-categories2.png)
+![Screenshot, der Kategorien in einem Menübandkatalog zeigt.](images/properties/ui-pkey-collection-categories2.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -42,7 +42,7 @@ Der folgende Screenshot veranschaulicht die Verwendung von Kategorien in einem [
 [Sammlungseigenschaften](windowsribbon-reference-properties-collection.md)
 </dt> <dt>
 
-[\_PKEY-Kategorien der Benutzeroberfläche \_](windowsribbon-reference-properties-uipkey-categories.md)
+[\_PKEY-Kategorien für die \_ Benutzeroberfläche](windowsribbon-reference-properties-uipkey-categories.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Freeisolationinfo-Funktion (naputil. h)
+title: FreeIsolationInfo-Funktion (NapUtil.h)
 description: Gibt eine IsolationInfo-Datenstruktur frei.
 ms.assetid: 639cfa74-0823-4a19-9cbe-dd6f0a38e7eb
 keywords:
-- Freeisolationinfo-Funktion NAP
+- NAP-Funktion "FreeIsolationInfo"
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 45ed154d35b32edab0f1a68d84f78c10cfd1cfe0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 031fd49bbdda7c0b36481776ba3c9dca8ea6d1c236b0010ada319b9a51f989df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118940647"
 ---
-# <a name="freeisolationinfo-function"></a>Freeisolationinfo-Funktion
+# <a name="freeisolationinfo-function"></a>FreeIsolationInfo-Funktion
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **freeisolationinfo** -Funktion gibt eine [**IsolationInfo**](/windows/win32/api/naptypes/ns-naptypes-isolationinfo) -Datenstruktur frei.
+Die **FreeIsolationInfo-Funktion** gibt eine [**IsolationInfo-Datenstruktur**](/windows/win32/api/naptypes/ns-naptypes-isolationinfo) frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,22 +45,22 @@ NAPAPI VOID WINAPI FreeIsolationInfo(
 
 <dl> <dt>
 
-*IsolationInfo* \[ in\]
+*isolationInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die zu freie [**IsolationInfo**](/windows/win32/api/naptypes/ns-naptypes-isolationinfo) -Datenstruktur.
+Ein Zeiger [](/windows/win32/api/naptypes/ns-naptypes-isolationinfo) auf die isolationInfo-Datenstruktur, die freigegeben werden soll.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle vom NAP-System unterstützten com-Schnittstellen verwenden Standard-com-Speicher Verwaltungsregeln und die com-Speicher Belegungs Funktion (**cotaskmembelegc** und **CoTaskMemFree**):
+Alle com-Schnittstellen, die vom NAP-System unterstützt werden, verwenden COM-Standardspeicherverwaltungsregeln und die COM-Speicherbezuweisungen (**CoTaskMemAlloc** und **CoTaskMemFree**):
 
--   **In** -Parameter werden vom Aufrufer zugeordnet und freigegeben.
--   Out-Parameter werden vom **aufgerufenen** zugeordnet und vom Aufrufer mithilfe von **cotaskmem** freigegeben.
--   **In/out-** Parameter werden vom Aufrufer zugeordnet, vom aufgerufenen freigegeben und neu zugeordnet und schließlich mit **cotaskmem** vom Aufrufer freigegeben.
+-   **In** werden Parameter vom Aufrufer zugeordnet und freigegeben.
+-   **Out-Parameter** werden vom Aufgerufenen zugeordnet und vom Aufrufer mit **coTaskMem** freigegeben.
+-   **Ein-/Aus-Parameter** werden vom Aufrufer zugeordnet, vom Aufgerufenen freigegeben und neu zugeordnet und schließlich vom Aufrufer freigegeben, indem **CoTaskMem** verwendet wird.
 
-Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten Zeiger.
+Alle NAP-Funktionen zum Freigeben von Arbeitsspeicher gibt auch alle eingebetteten Zeiger frei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,9 +68,9 @@ Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Naputil. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>NapUtil.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl> |
 
 

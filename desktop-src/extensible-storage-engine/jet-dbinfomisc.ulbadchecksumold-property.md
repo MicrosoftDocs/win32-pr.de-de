@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: JET_DBINFOMISC.ulBadChecksumOld-Eigenschaft'
+description: 'Weitere Informationen finden Sie unter: JET_DBINFOMISC.ulBadChecksumOld-Eigenschaft'
 title: JET_DBINFOMISC.ulBadChecksumOld-Eigenschaft
 TOCTitle: 'ulBadChecksumOld property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.ulBadChecksumOld
@@ -35,7 +35,7 @@ ms.locfileid: "118766164"
 ---
 # <a name="jet_dbinfomisculbadchecksumold-property"></a>JET_DBINFOMISC.ulBadChecksumOld-Eigenschaft
 
-Ruft ab, wie oft vor der letzten Reparatur ein nicht behebbarer Prüfsummenfehler gefunden wurde.
+Ruft ab, wie oft vor der letzten Reparatur ein nicht behebter Prüfsummenfehler gefunden wurde.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -68,6 +68,6 @@ Typ: [System.Int32](/dotnet/api/system.int32)
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[JET_DBINFOMISC-Member](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC Member](./jet-dbinfomisc-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

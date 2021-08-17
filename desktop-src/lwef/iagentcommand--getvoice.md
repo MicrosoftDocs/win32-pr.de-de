@@ -21,7 +21,7 @@ HRESULT GetVoice(
 );
 ```
 
-Ruft den Wert der [**Voicetext-Eigenschaft**](voice-property.md) für einen [**Befehl ab.**](/windows/desktop/lwef/the-command-object)
+Ruft den Wert der [**Texteigenschaft Voice**](voice-property.md) für einen [**Befehl ab.**](/windows/desktop/lwef/the-command-object)
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
@@ -30,11 +30,11 @@ Ruft den Wert der [**Voicetext-Eigenschaft**](voice-property.md) für einen [**B
 <span id="pbszVoice"></span><span id="pbszvoice"></span><span id="PBSZVOICE"></span>*pbszVoice*
 </dt> <dd>
 
-Die Adresse eines BSTR, der die [**Voicetext-Eigenschaft**](voice-property.md) für einen [**Befehl empfängt.**](/windows/desktop/lwef/the-command-object)
+Die Adresse eines BSTR, der die [**Sprachtexteigenschaft**](voice-property.md) für einen [**Befehl empfängt.**](/windows/desktop/lwef/the-command-object)
 
 </dd> </dl>
 
-Auf [**einen Befehl,**](/windows/desktop/lwef/the-command-object) dessen [**Voice-Eigenschaft**](voice-property.md) und [**die Enabled-Eigenschaft**](enabled-property.md) auf **True** festgelegt ist, kann auf die Stimme zugegriffen werden. Wenn die [**Caption-Eigenschaft**](caption-property.md) ebenfalls festgelegt ist, wird sie im Fenster Sprachbefehle angezeigt. Wenn die [**Visible-Eigenschaft**](visible-property.md) auf **True festgelegt** ist, wird sie im Popupmenü des Zeichens angezeigt.
+Ein [**Befehl,**](/windows/desktop/lwef/the-command-object) dessen [**Voice-Eigenschaft**](voice-property.md) und die [**Enabled-Eigenschaft**](enabled-property.md) auf **True** festgelegt sind, sind sprachanrufbar. Wenn die [**Caption-Eigenschaft**](caption-property.md) ebenfalls festgelegt ist, wird sie im Fenster Sprachbefehle angezeigt. Wenn die [**Visible-Eigenschaft**](visible-property.md) auf **True festgelegt ist,** wird sie im Popupmenü des Zeichens angezeigt.
 
 ## <a name="see-also"></a>Weitere Informationen
 

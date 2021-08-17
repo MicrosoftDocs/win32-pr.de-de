@@ -1,5 +1,5 @@
 ---
-description: Die GetErrorValue-Methode ruft einen HRESULT-Wert (Typ VT \_ ERROR) ab, der durch einen Schlüssel angegeben wird.
+description: Die GetErrorValue-Methode ruft einen HRESULT-Wert (Typ VT ERROR) ab, \_ der durch einen Schlüssel angegeben wird.
 ms.assetid: af57ddbd-5503-4b9b-bd75-ba9c9c202b73
 title: IPortableDeviceValues::GetErrorValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118697149"
 ---
 # <a name="iportabledevicevaluesgeterrorvalue-method"></a>IPortableDeviceValues::GetErrorValue-Methode
 
-Die **GetErrorValue-Methode** ruft einen **HRESULT-Wert** (Typ VT \_ ERROR) ab, der durch einen Schlüssel angegeben wird.
+Die **GetErrorValue-Methode** ruft einen **HRESULT-Wert** (Typ VT ERROR) ab, \_ der durch einen Schlüssel angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ HRESULT GetErrorValue(
 
 <dl> <dt>
 
-*key* \[ In\]
+*Key* \[ In\]
 </dt> <dd>
 
 Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.
@@ -64,8 +64,8 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 | Rückgabecode                                                                                                            | Beschreibung                                                            |
 |------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                   | Die Methode wurde erfolgreich ausgeführt.<br/>                                       |
-| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>                   | Die vom *Schlüssel* angegebene Eigenschaft ist kein **HRESULT-Typ.**<br/> |
-| <dl> <dt>**HRESULT \_ AUS \_ WIN32 (FEHLER \_ NICHT \_ GEFUNDEN)**</dt> </dl> | Die vom *Schlüssel* angegebene Eigenschaft befindet sich nicht in der Auflistung.<br/>   |
+| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>                   | Die durch key angegebene *Eigenschaft* ist kein **HRESULT-Typ.**<br/> |
+| <dl> <dt>**HRESULT \_ FROM \_ WIN32(ERROR \_ NOT \_ FOUND)**</dt> </dl> | Die durch key angegebene *Eigenschaft* ist nicht in der Auflistung.<br/>   |
 
 
 

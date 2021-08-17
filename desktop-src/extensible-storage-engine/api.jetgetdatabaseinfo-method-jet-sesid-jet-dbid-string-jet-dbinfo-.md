@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen zur Api.JetGetDatabaseInfo-Methode (JET_SESID, JET_DBID, String, JET_DbInfo)
+description: 'Weitere Informationen finden Sie unter: Api.JetGetDatabaseInfo-Methode (JET_SESID, JET_DBID, String, JET_DbInfo)'
 title: Api.JetGetDatabaseInfo-Methode (JET_SESID, JET_DBID, String, JET_DbInfo)
 TOCTitle: JetGetDatabaseInfo method (JET_SESID, JET_DBID, String, JET_DbInfo)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetGetDatabaseInfo(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_DBID,System.String@,Microsoft.Isam.Esent.Interop.JET_DbInfo)
@@ -87,7 +87,7 @@ public static void JetGetDatabaseInfo(
   - infoLevel  
     Typ: [Microsoft.Isam.Esent.Interop.JET_DbInfo](./jet-dbinfo-enumeration.md)  
     
-    Die spezifischen abzurufende Daten.
+    Die spezifischen abzurufenden Daten.
 
 ## <a name="see-also"></a>Weitere Informationen
 

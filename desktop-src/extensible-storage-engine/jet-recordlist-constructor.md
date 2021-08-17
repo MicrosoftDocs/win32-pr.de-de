@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RECORDLIST-Konstruktor'
-title: JET_RECORDLIST-Konstruktor
+description: 'Weitere Informationen finden Sie unter: JET_RECORDLIST Konstruktor'
+title: JET_RECORDLIST Konstruktor
 TOCTitle: 'JET_RECORDLIST constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_RECORDLIST.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_recordlist.jet_recordlist(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7f8251a0f70ed6948873a609225c5e2f5eafdbc6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c353038239f6d2c24ee44c781fce32a747c56a4cdb0127b1e9bda973d47bfc78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359532"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119107579"
 ---
-# <a name="jet_recordlist-constructor"></a>JET_RECORDLIST-Konstruktor
+# <a name="jet_recordlist-constructor"></a>JET_RECORDLIST Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ Dim instance As New JET_RECORDLIST()
 public JET_RECORDLIST()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_RECORDLIST-Klasse](./jet-recordlist-class.md)
 
-[Mitglieder JET_RECORDLIST](./jet-recordlist-members.md)
+[JET_RECORDLIST Member](./jet-recordlist-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

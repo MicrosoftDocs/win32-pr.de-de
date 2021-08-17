@@ -47,7 +47,7 @@ Die angegebenen Einheiten werden in Bytes angegeben.
 
 </dd> <dt>
 
-<span id="WPD_SECTION_DATA_UNITS_MILLISECONDS"></span><span id="wpd_section_data_units_milliseconds"></span>**WPD \_ SECTION DATA UNITS MILLISECONDS (WPD-ABSCHNITTSDATENEINHEITEN \_ IN \_ \_ MILLISEKUNDEN)**
+<span id="WPD_SECTION_DATA_UNITS_MILLISECONDS"></span><span id="wpd_section_data_units_milliseconds"></span>**\_ \_ WPD-ABSCHNITTSDATENEINHEITEN \_ \_ IN MILLISEKUNDEN**
 </dt> <dd>
 
 Die angegebenen Einheiten werden in Millisekunden angegeben.

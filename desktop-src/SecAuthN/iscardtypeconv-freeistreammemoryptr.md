@@ -1,5 +1,5 @@
 ---
-description: Gibt den Bytezeiger frei, der auf den HGLOBAL-Speicherblock, der von einer IStream COM-Schnittstelle verwaltet wird, verweisen.
+description: Gibt den Bytezeiger frei, der auf den HGLOBAL-Speicherblock, der von einer IStream COM-Schnittstelle verwaltet wird, zeigen.
 ms.assetid: a76c97a9-d0e9-4eb0-9f97-15f22111187d
 title: ISCardTypeConv::FreeIStreamMemoryPtr-Methode (Scarddat.h)
 ms.topic: reference
@@ -67,7 +67,7 @@ Die -Methode gibt einen der folgenden möglichen Werte zurück:
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Arbeitsspeicher erfolgreich zugeordnet.<br/>                                                        |
 | <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Es liegt ein Fehler mit einem oder mehr parametern vor, die an die Funktion übergeben werden.<br/> |
 | <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Ein Parameter vom Zeigertyp war falsch.<br/>                                            |
-| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend freier Arbeitsspeicher zum Erfüllen der Anforderung.<br/>                                            |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend freier Arbeitsspeicher, um die Anforderung zu erfüllen.<br/>                                            |
 
 
 
@@ -75,7 +75,7 @@ Die -Methode gibt einen der folgenden möglichen Werte zurück:
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion gibt den Bytezeiger, der auf den von der **IStream-Schnittstelle** verwalteten HGLOBAL-Speicherblockzeigt, vollständig und sauber frei. Der Bytezeiger wird durch einen Aufruf von [**GetAtIStreamMemory erhalten.**](iscardtypeconv-getatistreammemory.md)
+Diese Funktion gibt den Bytezeiger, der auf den von der **IStream-Schnittstelle** verwalteten HGLOBAL-Speicherblockzeigt, vollständig und sauber frei. Der Bytezeiger wird durch einen Aufruf von [**GetAtIStreamMemory erworben.**](iscardtypeconv-getatistreammemory.md)
 
 ## <a name="requirements"></a>Anforderungen
 

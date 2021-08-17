@@ -1,5 +1,5 @@
 ---
-description: Das Objektmodell für Mergemod.dll Version 1.0.
+description: Das Objektmodell für Mergemod.dll 1.0.
 ms.assetid: f4180fd6-23a2-4cd9-b309-016f7333e381
 title: Objektmodell für Mergemod.dll Version 1.0
 ms.topic: article
@@ -17,7 +17,7 @@ Das Objektmodell für Mergemod.dll ist wie folgt organisiert:
 
 ![Objektmodell für mergemod.dll](images/mergobj.png)
 
-Das [Merge-Objekt](merge-object.md) ist das primäre Objekt des Modells. Das [**GetFiles-Objekt**](getfiles-object.md) ist ein sekundäres -Objekt. Abhängigkeiten sind Auflistungen von [**Abhängigkeitsobjekten.**](dependency-object.md) Fehler sind Auflistungen von [**Error-Objekten.**](error-object.md)
+Das [Merge-Objekt](merge-object.md) ist das primäre Objekt des Modells. Das [**GetFiles-Objekt**](getfiles-object.md) ist ein sekundäres Objekt. Abhängigkeiten sind Auflistungen von [**Dependency-Objekten.**](dependency-object.md) Fehler sind Auflistungen von [**Error-Objekten.**](error-object.md)
 
  
 

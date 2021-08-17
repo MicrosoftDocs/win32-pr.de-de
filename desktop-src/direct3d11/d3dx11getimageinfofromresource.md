@@ -1,6 +1,6 @@
 ---
 title: D3DX11GetImageInfoFromResource-Funktion (D3DX11tex.h)
-description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Hinweis Anstatt diese Funktion zu verwenden, wird empfohlen, Ressourcenfunktionen zu verwenden und dann die DirectXTex-Bibliothek (Tools), LoadFromXXXMemory (wobei XXX WIC, DDS oder TGA ist) zu verwenden. WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Art-Source-Format für Spiele). Ruft Informationen zu einem bestimmten Bild in einer Ressource ab.
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt. Hinweis Anstatt diese Funktion zu verwenden, wird empfohlen, Ressourcenfunktionen zu verwenden und dann die DirectXTex-Bibliothek (Tools), LoadFromXXXMemory (wobei XXX WIC, DDS oder TGA ist) zu verwenden. WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Art-Source-Format für Spiele). Ruft Informationen zu einem bestimmten Bild in einer Ressource ab.
 ms.assetid: e4752eb3-38d5-4922-b3c8-5fdcd0cc0610
 keywords:
 - D3DX11GetImageInfoFromResource-Funktion Direct3D 11
@@ -25,7 +25,7 @@ ms.locfileid: "118535955"
 # <a name="d3dx11getimageinfofromresource-function"></a>D3DX11GetImageInfoFromResource-Funktion
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 
  
 
@@ -121,7 +121,7 @@ Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definie
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

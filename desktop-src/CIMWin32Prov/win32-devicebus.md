@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse für die Win32 DeviceBus-Zuordnung verbindet einen Systembus und ein logisches Gerät mithilfe des Bus. Diese Klasse wird verwendet, um zu entdecken, welche Geräte sich in welchem Bus befinden.
+description: Die WMI-Klasse für die Win32 \_ DeviceBus-Zuordnung verknüpft einen Systembus und ein logisches Gerät, das den Bus verwendet. Diese Klasse wird verwendet, um zu ermitteln, welche Geräte sich in welchem Bus befinden.
 ms.assetid: 2d7d83a5-c058-40c0-aab3-7700f4067a16
 ms.tgt_platform: multiple
 title: Win32_DeviceBus-Klasse
@@ -25,7 +25,7 @@ ms.locfileid: "119439160"
 ---
 # <a name="win32_devicebus-class"></a>Win32 \_ DeviceBus-Klasse
 
-Die **WMI-Klasse \_ für die Win32 DeviceBus-Zuordnung** verbindet einen Systembus und ein logisches Gerät mithilfe des Bus. [](/windows/desktop/WmiSdk/retrieving-a-class) Diese Klasse wird verwendet, um zu entdecken, welche Geräte sich in welchem Bus befinden.
+Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) für **die Win32 \_ DeviceBus-Zuordnung** verknüpft einen Systembus und ein logisches Gerät, das den Bus verwendet. Diese Klasse wird verwendet, um zu ermitteln, welche Geräte sich in welchem Bus befinden.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
@@ -42,7 +42,7 @@ class Win32_DeviceBus : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ DeviceBus-Klasse** verfügt über die folgenden Membertypen:
+Die **Win32 \_ DeviceBus-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -61,7 +61,7 @@ Datentyp: **Win32 \_ Bus**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ Bus")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ Bus")
 </dt> </dl>
 
 Ein [**\_ Win32-Bus,**](win32-bus.md) der die Eigenschaften des Systembus beschreibt, der vom logischen Gerät verwendet wird.
@@ -80,13 +80,13 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \| CIM \_ LogicalDevice")
 </dt> </dl>
 
-Ein [**CIM \_ LogicalDevice,**](cim-logicaldevice.md) das die Eigenschaften des logischen Geräts beschreibt, das den Systembus verwendet.
+Ein [**CIM \_ LogicalDevice,**](cim-logicaldevice.md) der die Eigenschaften des logischen Geräts beschreibt, das den Systembus verwendet.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ DeviceBus-Klasse** wird von der [**\_ CIM-Abhängigkeit abgeleitet.**](cim-dependency.md)
+Die **Win32 \_ DeviceBus-Klasse** wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -102,14 +102,14 @@ Die **Win32 \_ DeviceBus-Klasse** wird von der [**\_ CIM-Abhängigkeit abgeleite
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> <dt>
 
-[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

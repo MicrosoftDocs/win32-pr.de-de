@@ -20,7 +20,7 @@ ms.locfileid: "118498712"
 
 Das Baseeapmethodconfig-Schema definiert allgemeine Konfigurationsschemaelemente.
 
--   [baseeapmethodconfig Schema Complex Types](baseeapmethodconfigschema-complex-types.md)
+-   [Komplexe Baseeapmethodconfig-Schematypen](baseeapmethodconfigschema-complex-types.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

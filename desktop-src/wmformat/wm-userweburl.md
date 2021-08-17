@@ -3,7 +3,7 @@ title: WM/UserWebURL
 description: Das WM/UserWebURL-Attribut enthält die Adresse einer Website und eine Beschreibung der Website.
 ms.assetid: 22ef04fd-9da8-47a5-a2c7-31f6a48e2859
 keywords:
-- WM/UserWebURL-Windows-Medienformat
+- WM/UserWebURL windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -29,7 +29,7 @@ g \_ wszWMUserWebURL
 
 ## <a name="data-type"></a>Datentyp
 
-[**WM \_ \_ \_ BENUTZER-WEB-URL**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_user_web_url) (**BINÄRER \_ WMT-TYP \_**)
+[**WM \_ \_ \_ BENUTZER-WEB-URL**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_user_web_url) (**\_ WMT-TYP \_ BINARY**)
 
 ## <a name="see-also"></a>Weitere Informationen
 

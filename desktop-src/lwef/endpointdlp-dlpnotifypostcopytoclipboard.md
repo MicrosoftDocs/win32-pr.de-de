@@ -1,5 +1,5 @@
 ---
-description: Stellt dem System Informationen zu einem Dokument zur Verfügung, nachdem ein Kopiervorgang in die Zwischenablage abgeschlossen wurde.
+description: Stellt dem System Informationen zu einem Dokument bereit, nachdem ein Kopiervorgang in die Zwischenablage abgeschlossen wurde.
 title: DlpNotifyPostCopyToClipboard-Funktion (endpointdlp.h)
 ms.topic: reference
 ms.date: 03/18/2021
@@ -21,7 +21,7 @@ ms.locfileid: "118751849"
 ---
 # <a name="dlpnotifypostcopytoclipboard-function"></a>DlpNotifyPostCopyToClipboard-Funktion
 
-Stellt dem System Informationen zu einem Dokument zur Verfügung, nachdem ein Kopiervorgang in die Zwischenablage abgeschlossen wurde.
+Stellt dem System Informationen zu einem Dokument bereit, nachdem ein Kopiervorgang in die Zwischenablage abgeschlossen wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ void WINAPI DlpNotifyPostCopyToClipboard(_In_ const PDLP_DOCUMENT_INFO DocumentI
 *DocumentInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [PDLP_DOCUMENT_INFO](endpointdlp-dlp_document_info.md) Struktur, die Informationen über das Dokument enthält, aus dem Der Inhalt kopiert wurde.
+Ein Zeiger auf eine [PDLP_DOCUMENT_INFO](endpointdlp-dlp_document_info.md) Struktur, die Informationen über das Dokument enthält, aus dem Inhalt kopiert wurde.
 
 </dd> </dl>
 
@@ -48,7 +48,7 @@ Ein Zeiger auf eine [PDLP_DOCUMENT_INFO](endpointdlp-dlp_document_info.md) Struk
 *OpStatus* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf [](enpointdlp-dlp_postop_status.md) eine DLP_POSTOP_STATUS-Struktur, die Statusinformationen zum Kopiervorgang in die Zwischenablage enthält.
+Ein Zeiger [](enpointdlp-dlp_postop_status.md) auf eine DLP_POSTOP_STATUS-Struktur, die Statusinformationen zum Kopiervorgang in die Zwischenablage enthält.
 
 </dd> </dl>
 

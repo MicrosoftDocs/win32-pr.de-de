@@ -1,11 +1,11 @@
 ---
-title: INapEnforcementClientConnection2 getinstalledshvs-Methode (napforcementclient. h)
-description: Wird vom NAP-Agent verwendet, um die installierten System Integritätsprüfungen (SHVs) auf dem Client abzufragen.
+title: INapEnforcementClientConnection2 GetInstalledShvs-Methode (NapEnforcementClient.h)
+description: Wird vom NAP-Agent verwendet, um die installierten System health Validators (SHVs) auf dem Client abfragt.
 ms.assetid: b2e3ab29-90bf-4117-bc2e-2ff2827ee15c
 keywords:
-- Getinstalledshvs-Methode NAP
-- Getinstalledshvs-Methode NAP, INapEnforcementClientConnection2-Schnittstelle
-- INapEnforcementClientConnection2 Interface NAP, getinstalledshvs-Methode
+- GetInstalledShvs-Methode NAP
+- GetInstalledShvs-Methode NAP, INapEnforcementClientConnection2-Schnittstelle
+- INapEnforcementClientConnection2-Schnittstelle NAP, GetInstalledShvs-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa54d09a0c3d3c524262231982f662c497920a0b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 40cb18f749adc9a1b7003a777cc821fb5e003b83322a7d54c2efda4b8e5739f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479356"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118939641"
 ---
-# <a name="inapenforcementclientconnection2getinstalledshvs-method"></a>INapEnforcementClientConnection2:: getinstalledshvs-Methode
+# <a name="inapenforcementclientconnection2getinstalledshvs-method"></a>INapEnforcementClientConnection2::GetInstalledShvs-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **getinstalledshvs** -Methode wird vom NAP-Agent verwendet, um die installierten System Integritätsprüfungen (SHVs) auf dem Client abzufragen.
+Die **GetInstalledShvs-Methode** wird vom NAP-Agent verwendet, um die installierten System health Validators (SHVs) auf dem Client abfragt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,30 +48,30 @@ HRESULT GetInstalledShvs(
 
 <dl> <dt>
 
-*Anzahl* \[ vorgenommen\]
+*count* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen [systemhealthentitycount](nap-datatypes.md) -Wert, der die Anzahl der installierten SHVs in *IDs* angibt.
+Ein Zeiger auf einen [SystemHealthEntityCount-Wert,](nap-datatypes.md) der die Anzahl der installierten SHVs in *ids angibt.*
 
 </dd> <dt>
 
-*IDs* \[ vorgenommen\]
+*ids* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf ein Array von [systemhealthentityid](nap-datatypes.md) -Werten, die die installierten SHV-IDs enthalten.
+Ein Zeiger auf ein Array von [SystemHealthEntityId-Werten,](nap-datatypes.md) die die installierten SHV-IDs enthalten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Es können auch andere COM-spezifische Fehlercodes zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                              |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Vorgang erfolgreich.<br/>                          |
-| <dl> <dt>**E \_ InvalidArg**</dt> </dl> | Ein ungültiges Argument wurde an die-Methode übermittelt.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Ein ungültiges Argument wurde an die -Methode übergeben.<br/> |
 
 
 
@@ -83,15 +83,15 @@ Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napforcementclient. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napforcementclient. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

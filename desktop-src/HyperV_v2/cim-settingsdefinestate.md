@@ -39,7 +39,7 @@ class CIM_SettingsDefineState
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ SettingsDefineState-Klasse** verfügt über die folgenden Membertypen:
+Die **CIM \_ SettingsDefineState-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -89,7 +89,7 @@ Die Einstellungsdaten in der Zuordnung.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 

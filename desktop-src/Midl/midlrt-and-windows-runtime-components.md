@@ -20,7 +20,7 @@ ms.locfileid: "118642904"
 Zeigt, wie Metadatendateien (WINMD) erstellt werden, die die API für benutzerdefinierte Windows Runtime-Komponenten darstellen.
 
 
-Verwenden Sie den MIDLRT-Compiler, um Metadatendateien (WINMD) für Ihre benutzerdefinierten Windows Runtime-Komponenten zu erstellen.
+Verwenden Sie den MIDLRT-Compiler, um Metadatendateien (.winmd) für Ihre benutzerdefinierten Windows Runtime-Komponenten zu erstellen.
 
 Wenn Ihre Metadatendateien generiert werden, können Sie sie mithilfe des MDMERGE-Hilfsprogramms in einem effizienteren Paket zusammenstellen. Weitere Informationen finden Sie unter [MDMERGE und Metadatendateien.](mdmerge-and-metadata-files.md)
 

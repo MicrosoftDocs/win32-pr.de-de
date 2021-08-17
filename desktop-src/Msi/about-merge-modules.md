@@ -1,5 +1,5 @@
 ---
-description: Mergemodule sind im Wesentlichen .msi Dateien vereinfacht. Dies ist die Dateierweiterung für ein Installationspaket Windows Installer. Ein Standardzusammenführungsmodul hat die Dateinamenerweiterung MSM.
+description: Mergemodule sind im Wesentlichen .msi Dateien vereinfacht. Dies ist die Dateierweiterung für Windows Installer-Installationspaket. Ein Standardzusammenführungsmodul hat die Dateinamenerweiterung MSM.
 ms.assetid: 580fe58a-4636-4f9a-a68d-4fd0e281e949
 title: Informationen zu Mergemodulen
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118640162"
 ---
 # <a name="about-merge-modules"></a>Informationen zu Mergemodulen
 
-Mergemodule sind im Wesentlichen .msi Dateien vereinfacht. Dies ist die Dateierweiterung für ein Installationspaket Windows Installer. Ein Standardzusammenführungsmodul hat die Dateinamenerweiterung MSM.
+Mergemodule sind im Wesentlichen .msi Dateien vereinfacht. Dies ist die Dateierweiterung für Windows Installer-Installationspaket. Ein Standardzusammenführungsmodul hat die Dateinamenerweiterung MSM.
 
 Ein Mergemodul kann nicht allein installiert werden, da es nicht über einige wichtige Datenbanktabellen verfügt, die in einer Installationsdatenbank vorhanden sind. Mergemodule enthalten auch zusätzliche Tabellen, die für sich selbst eindeutig sind. Um die informationen zu installieren, die von einem Mergemodul mit einer Anwendung bereitgestellt werden, muss das Modul zuerst in der Anwendungsdatei .msi werden.
 

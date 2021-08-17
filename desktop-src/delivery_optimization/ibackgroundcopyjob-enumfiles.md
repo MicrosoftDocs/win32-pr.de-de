@@ -46,13 +46,13 @@ HRESULT EnumFiles(
 *ppEnumFiles* \[ out\]
 </dt> <dd>
 
-[**IEnumBackgroundCopyFiles-Schnittstellenzeiger,**](ienumbackgroundcopyfiles-.md) den Sie zum Aufzählen der Dateien im Auftrag verwenden. Geben *Sie ppEnumFiles frei,* wenn Sie fertig sind.
+[**IEnumBackgroundCopyFiles-Schnittstellenzeiger,**](ienumbackgroundcopyfiles-.md) den Sie zum Aufzählen der Dateien im Auftrag verwenden. Geben Sie *ppEnumFiles* frei, wenn Sie fertig sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt **S_OK** bei Erfolg oder einen der STANDARDMÄßIGEN COM **HRESULT-Werte** bei einem Fehler zurück.
+Diese Methode gibt **S_OK** bei Erfolg oder einen der COM **HRESULT-Standardwerte** bei Einem Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,8 +60,8 @@ Diese Methode gibt **S_OK** bei Erfolg oder einen der STANDARDMÄßIGEN COM **HR
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1709 \[\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
 | Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
@@ -70,7 +70,7 @@ Diese Methode gibt **S_OK** bei Erfolg oder einen der STANDARDMÄßIGEN COM **HR
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

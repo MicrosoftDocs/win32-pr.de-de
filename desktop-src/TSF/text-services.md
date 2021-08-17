@@ -1,32 +1,32 @@
 ---
-title: Text Dienste
-description: Text Dienste
+title: Textdienste
+description: Textdienste
 ms.assetid: 870ed892-dc68-4f36-a450-1400747211d6
 keywords:
-- Text Dienste-Framework (TSF), Text Dienste
-- TSF (Text Dienst Framework), Text Dienste
-- Text Dienste, Info
+- Textdienstframework (TSF), Textdienste
+- TSF (Textdienstframework),Textdienste
+- Textdienste, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e86d6d537687afe22ba618657c6591cb733ccef2
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: dd67185325d33a0bc8b01147ec21cd1f0ee362b5db8b1ca55accaea6ac59f041
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036897"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118874761"
 ---
-# <a name="text-services"></a>Text Dienste
+# <a name="text-services"></a>Textdienste
 
-Die folgenden Programmier Elemente werden von einem [Text Dienst](architecture.md)verwendet oder implementiert.
+Die folgenden Programmierelemente werden von einem [Textdienst](architecture.md)verwendet oder implementiert.
 
--   [Text Dienst Registrierung](text-service-registration.md)
--   [Sprach Leiste](language-bar.md)
+-   [Textdienstregistrierung](text-service-registration.md)
+-   [Sprachleiste](language-bar.md)
 -   [Bearbeitungssitzungen](edit-sessions.md)
--   [Bereitstellen von Anzeige Attributen](providing-display-attributes.md)
+-   [Bereitstellen von Anzeigeattributen](providing-display-attributes.md)
 
- 
+ 
 
- 
+ 
 
 
 

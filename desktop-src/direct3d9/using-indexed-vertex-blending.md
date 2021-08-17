@@ -1,5 +1,5 @@
 ---
-description: Die Transformationszustände 256-511 sind für die Speicherung von bis zu 256 Matrizen reserviert, die mithilfe von 8-Bit-Indizes indiziert werden können.
+description: Transformationszustände 256-511 sind für die Speicherung von bis zu 256 Matrizen reserviert, die mithilfe von 8-Bit-Indizes indiziert werden können.
 ms.assetid: 4c15cfc5-afdf-48d4-8fd1-b10cbe596a1c
 title: Verwenden von indizierter Vertexmischung (Direct3D 9)
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118519475"
 ---
 # <a name="using-indexed-vertex-blending-direct3d-9"></a>Verwenden von indizierter Vertexmischung (Direct3D 9)
 
-Die Transformationszustände 256-511 sind für die Speicherung von bis zu 256 Matrizen reserviert, die mithilfe von 8-Bit-Indizes indiziert werden können. Verwenden Sie das [**Makro D3DTS \_ WORLDMATRIX,**](d3dts-worldmatrix.md) um die Indizes 0-255 den entsprechenden Transformationszuständen zu zuordnen. Das folgende Codebeispiel zeigt, wie sie die [**IDirect3DDevice9::SetTransform-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settransform) verwendet, um die Matrix bei der Transformationszustandsnummer 256 auf eine Identitätsmatrix zu setzen.
+Transformationszustände 256-511 sind für die Speicherung von bis zu 256 Matrizen reserviert, die mithilfe von 8-Bit-Indizes indiziert werden können. Verwenden Sie das [**Makro D3DTS \_ WORLDMATRIX,**](d3dts-worldmatrix.md) um die Indizes 0-255 den entsprechenden Transformationszuständen zu zuordnen. Das folgende Codebeispiel zeigt, wie sie die [**IDirect3DDevice9::SetTransform-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settransform) verwendet, um die Matrix bei der Transformationszustandsnummer 256 auf eine Identitätsmatrix zu setzen.
 
 
 ```
@@ -42,7 +42,7 @@ m_pD3DDevice->SetRenderState( D3DRS_VERTEXBLEND, D3DVBF_3WEIGHTS );
 
 
 
-## <a name="determining-indexed-vertex-blending-support"></a>Bestimmen der Unterstützung für indiziertes Scheitelpunktblending
+## <a name="determining-indexed-vertex-blending-support"></a>Bestimmen der Unterstützung für das Mischen indizierter Scheitelpunkte
 
 Um die maximale Größe für die indizierte Vertexmischungsmatrix zu bestimmen, überprüfen Sie das MaxVertexBlendMatrixIndex-Member der [**D3DCAPS9-Struktur.**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) Im folgenden Codebeispiel wird die [**IDirect3DDevice9::GetDeviceCaps-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getdevicecaps) verwendet, um diese Größe abzurufen.
 
@@ -65,7 +65,7 @@ Wenn der in MaxVertexBlendMatrixIndex festgelegte Wert 0 ist, unterstützt das G
 
 ## <a name="passing-matrix-indices-to-direct3d"></a>Übergeben von Matrixindizes an Direct3D
 
-Weltmatrixindizes können mithilfe von Legacy-Vertex-Shadern (FVF) oder Deklarationen an Direct3D übergeben werden.
+Weltmatrixindizes können mithilfe von Legacy-Vertex-Shadern ( FVF ) oder Deklarationen an Direct3D übergeben werden.
 
 Das folgende Codebeispiel zeigt, wie Ältere Vertex-Shader verwendet werden.
 
@@ -85,9 +85,9 @@ struct VERTEX
 
 
 
-Wenn ein Legacy-Vertex-Shader verwendet wird, werden Matrixindizes zusammen mit Scheitelpunktpositionen mithilfe von D3DFVF \_ XYZBn-Flags übergeben. Matrixindizes werden als Bytes innerhalb eines DWORD übergeben und müssen unmittelbar nach der letzten Scheitelpunktgewichtung vorhanden sein. Scheitelpunktgewichtungen werden auch mit D3DFVF \_ XYZBn übergeben. Ein gepacktes DWORD enthält index3, index2, index1 und index0, wobei index0 sich im niedrigsten Byte des DWORD befindet. Die Anzahl der verwendeten Weltmatrixindizes entspricht der Zahl, die an die Anzahl der Matrizen übergeben wird, die für das Mischen verwendet werden, wie von [**D3DRS \_ VERTEXBLEND definiert.**](./d3drenderstatetype.md)
+Wenn ein Legacy-Vertex-Shader verwendet wird, werden Matrixindizes zusammen mit Scheitelpunktpositionen mithilfe von D3DFVF \_ XYZBn-Flags übergeben. Matrixindizes werden als Bytes innerhalb eines DWORD übergeben und müssen unmittelbar nach der letzten Scheitelpunktgewichtung vorhanden sein. Scheitelpunktgewichtungen werden auch mit D3DFVF \_ XYZBn übergeben. Ein gepacktes DWORD enthält index3, index2, index1 und index0, wobei index0 sich im niedrigsten Byte des DWORD befindet. Die Anzahl der verwendeten Weltmatrixindizes entspricht der Zahl, die an die Anzahl der Matrizen übergeben wird, die für das Mischen verwendet werden, wie durch [**D3DRS \_ VERTEXBLEND definiert.**](./d3drenderstatetype.md)
 
-Wenn eine Deklaration verwendet wird, definiert D3DVSDE \_ BLENDINDICES das Eingabevertexregister zum Erhalten von Matrixindizes. Matrixindizes müssen als D3DVSDT \_ UBYTE4 übergeben werden.
+Wenn eine Deklaration verwendet wird, definiert D3DVSDE BLENDINDICES das Eingabevertexregister zum Erhalten \_ von Matrixindizes. Matrixindizes müssen als D3DVSDT \_ UBYTE4 übergeben werden.
 
 Das folgende Codebeispiel zeigt, wie Deklarationen verwendet werden. Beachten Sie, dass die Reihenfolge der Komponenten nur dann von Bedeutung ist, wenn ein Vertex-Shader mit fester Funktion verwendet wird.
 

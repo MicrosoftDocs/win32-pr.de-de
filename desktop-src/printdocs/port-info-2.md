@@ -1,7 +1,7 @@
 ---
-description: Die \_ Struktur Port Info \_ 2 identifiziert einen unterstützten Druckerport.
+description: Die \_ PORT INFO \_ 2-Struktur identifiziert einen unterstützten Druckerport.
 ms.assetid: 93675294-61d4-40e4-b84c-f252978e0285
-title: PORT_INFO_2 Struktur (winspool. h)
+title: PORT_INFO_2-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 1d2186193318387bb6e37a228bd4d2fd64eca6b6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 053745ff90e022ef2ed466518a9210d6dde18d3562fdb4232d9f4d262460ea7f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118470940"
 ---
-# <a name="port_info_2-structure"></a>Port \_ Info \_ 2-Struktur
+# <a name="port_info_2-structure"></a>PORT \_ INFO \_ 2-Struktur
 
-Die Struktur **Port \_ Info \_ 2** identifiziert einen unterstützten Druckerport.
+Die **PORT \_ INFO \_ 2-Struktur** identifiziert einen unterstützten Druckerport.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,58 +45,58 @@ typedef struct _PORT_INFO_2 {
 
 <dl> <dt>
 
-**pportname**
+**pPortName**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die einen unterstützten Druckerport identifiziert (z. b. "LPT1:").
+Zeiger auf eine auf NULL endende Zeichenfolge, die einen unterstützten Druckerport identifiziert (z.B. "LPT1:").
 
 </dd> <dt>
 
-**pmonitorname**
+**pMonitorName**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die einen installierten Monitor identifiziert (z. b. "PJL-Monitor"). Dieser Wert kann **null** sein.
+Zeiger auf eine auf NULL endende Zeichenfolge, die einen installierten Monitor identifiziert (z.B. "PJL-Monitor"). Dies kann **NULL** sein.
 
 </dd> <dt>
 
-**pdescription**
+**pDescription**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Port ausführlicher beschreibt (z. b. wenn " **pportname** " den Wert "LPT1:" hat, " **pdescription** " ist "Printer Port"). Dieser Wert kann **null** sein.
+Zeiger auf eine auf NULL endende Zeichenfolge, die den Port ausführlicher beschreibt (wenn **pPortName** z. B. "LPT1:" lautet, ist **pDescription** "Druckerport"). Dies kann **NULL** sein.
 
 </dd> <dt>
 
-**"f"**
+**fPortType**
 </dt> <dd>
 
-Bitmaske, die den Porttyp beschreibt. Dieser Member kann eine Kombination der folgenden Werte sein:
+Bitmaske, die den Typ des Ports beschreibt. Dieser Member kann eine Kombination der folgenden Werte sein:
 
 <dl><span id="PORT_TYPE_WRITE"></span><span id="port_type_write"></span><dt>
 
-**\_Porttyp \_ schreiben**
+**PORTTYP \_ \_ WRITE**
 </dt><span id="PORT_TYPE_READ"></span><span id="port_type_read"></span><dt>
 
-**\_Porttyp \_ Lesen**
+**PORTTYP \_ \_ READ**
 </dt><span id="PORT_TYPE_REDIRECTED"></span><span id="port_type_redirected"></span><dt>
 
-**\_umgeleitete Porttyp \_**
+**PORTTYP \_ \_ UMGELEITET**
 </dt><span id="PORT_TYPE_NET_ATTACHED"></span><span id="port_type_net_attached"></span><dt>
 
-**\_Porttyp \_ Netzwerk \_ angefügt**
+**PORTTYP \_ \_ NET \_ ATTACHED**
 </dt> </dl> </dd> <dt>
 
 **Reserved**
 </dt> <dd>
 
-Bleiben muss 0 (null) sein.
+Reserviert; muss 0 (null) sein.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die **Port \_ Info \_ 2** -Struktur beim Aufrufen von [**enumports**](enumports.md) , wenn mehrere Monitore installiert sind, die die gleichen Ports unterstützen.
+Verwenden Sie die **PORT \_ INFO \_ 2-Struktur** beim Aufrufen von [**EnumPorts,**](enumports.md) wenn mehrere Monitore installiert sind, die dieselben Ports unterstützen.
 
-Der **fporttype** -Member kann abgefragt werden, um Informationen über den Port zu ermitteln. Beachten Sie, dass die Port Einstellungen keine Drucker Attribute beeinflussen (wie vom **Attribute** -Member von [**Printer \_ Info \_ 2**](printer-info-2.md)zurückgegeben).
+Der **fPortType-Member** kann abgefragt werden, um Informationen zum Port zu ermitteln. Beachten Sie, dass die Porteinstellungen keine Auswirkungen auf Druckerattribute haben (wie vom **Attributes-Member** von [**PRINTER INFO \_ \_ 2**](printer-info-2.md)zurückgegeben).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -106,19 +106,19 @@ Der **fporttype** -Member kann abgefragt werden, um Informationen über den Port
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Port \_ Info \_ 2W** (Unicode) und **\_ Port \_ Info \_ 2a** (ANSI)<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ PORT \_ INFO \_ 2W** (Unicode) und **\_ PORT INFO \_ \_ 2A** (ANSI)<br/>                                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
 [**EnumPorts**](enumports.md)

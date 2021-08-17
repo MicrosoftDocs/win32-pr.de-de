@@ -1,5 +1,5 @@
 ---
-description: Wenn diese Systemrichtlinie pro Computer auf &\# 0034;1&\# 0034; festgelegt ist, verhindert das Installationsprogramm, dass Nichtadministratoren das Patchen von Benutzerkontensteuerung (User Account Control, UAC) für alle auf dem Computer installierten Anwendungen verwenden.
+description: Wenn diese computerspezifische Systemrichtlinie auf &\# 0034;1&0034; festgelegt ist, verhindert das Installationsprogramm, dass \# Nichtadministratoren Benutzerkontensteuerungspatches (User Account Control, UAC) für anwendungen verwenden, die auf dem Computer installiert sind.
 ms.assetid: b122d6f4-2be6-4b9b-b8e0-ca08fe9c4f94
 title: DisableLUAPatching
 ms.topic: article
@@ -13,15 +13,15 @@ ms.locfileid: "118637777"
 ---
 # <a name="disableluapatching"></a>DisableLUAPatching
 
-Wenn diese Systemrichtlinie pro Computer auf "1" festgelegt ist, verhindert das Installationsprogramm, dass Nichtadministratoren das Patchen der [Benutzerkontensteuerung (User Account Control, UAC)](user-account-control--uac--patching.md) für alle auf dem Computer installierten Anwendungen verwenden. Wenn die Systemrichtlinie pro Computer nicht auf 0 festgelegt oder auf 0 festgelegt ist, können Nichtadministratoren Benutzerpatches mit den geringsten Rechten auf Anwendungen anwenden, die für das Patchen von Benutzerkonten mit den geringsten Rechten aktiviert sind.
+Wenn diese computerspezifische Systemrichtlinie auf "1" festgelegt ist, verhindert das Installationsprogramm, dass Nichtadministratoren Benutzerkontensteuerungspatches [(User Account Control, UAC)](user-account-control--uac--patching.md) für anwendungen verwenden, die auf dem Computer installiert sind. Wenn die Systemrichtlinie pro Computer nicht auf 0 festgelegt oder festgelegt ist, können Nichtadministratoren Benutzerpatches mit den geringsten Rechten auf Anwendungen anwenden, die für das Patchen von Benutzerkonten mit den geringsten Rechten aktiviert sind.
 
-Verwenden Sie die [**MSIDISABLELUAPATCHING-Eigenschaft,**](msidisableluapatching.md) um das Patchen einer Anwendung mit den geringsten Rechten zu verhindern.
+Verwenden Sie [**die MSIDISABLELUAPATCHING-Eigenschaft,**](msidisableluapatching.md) um das Patchen mit den geringsten Rechten einer Anwendung zu verhindern.
 
-Die Richtlinie DisableLUAPatching ist ab Windows Installer Version 3.0 verfügbar.
+Die DisableLUAPatching-Richtlinie ist ab Windows Installer-Version 3.0 verfügbar.
 
 ## <a name="registry-key"></a>Registrierungsschlüssel
 
-**HKEY \_ Local \_ MACHINE** \\ **Software** \\ **Policies** \\ **Microsoft** \\ **Windows** \\ **Installer**
+**HKEY \_ LOCAL \_** \\ **MACHINE-Softwarerichtlinien** \\  \\ **Microsoft** \\ **Windows** \\ **Installer**
 
 ## <a name="data-type"></a>Datentyp
 

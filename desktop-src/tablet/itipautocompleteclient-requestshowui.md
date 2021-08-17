@@ -1,5 +1,5 @@
 ---
-description: Bestimmt, ob der Eingabebereich für die Automatische Vervollständigungsliste bereit ist.
+description: Bestimmt, ob der Eingabebereich bereit ist, damit die Liste der automatischen Vervollstehung angezeigt wird.
 ms.assetid: 1e0d4bc6-e6a3-4123-a381-00a41ed9c848
 title: ITipAutocompleteClient::RequestShowUI-Methode (TipAutoComplete.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118449793"
 ---
 # <a name="itipautocompleteclientrequestshowui-method"></a>ITipAutocompleteClient::RequestShowUI-Methode
 
-Bestimmt, ob der Eingabebereich für die Automatische Vervollständigungsliste bereit ist.
+Bestimmt, ob der Eingabebereich bereit ist, damit die Liste der automatischen Vervollstehung angezeigt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,14 +43,14 @@ HRESULT RequestShowUI(
 *hWndACList* \[ In\]
 </dt> <dd>
 
-Fensterhandle der Benutzeroberfläche für die automatische Vervollständigung der Liste.
+Fensterhand handle der Benutzeroberfläche für die automatisch abgeschlossene Liste.
 
 </dd> <dt>
 
 *pfAllowShowing* \[ out\]
 </dt> <dd>
 
-**FALSE,** wenn der Client empfiehlt, die Benutzeroberfläche der automatischen Vervollständigungsliste nicht anzuzeigen. **TRUE,** wenn der Anbieter für die automatische Vervollständigung die Benutzeroberfläche der Liste anzeigen kann.
+**FALSE,** wenn der Client empfiehlt, die Benutzeroberfläche für die Liste automatisch abschließen nicht zu zeigen. **TRUE,** wenn der AutoVervollständigen-Anbieter die Benutzeroberfläche der Liste anzeigen kann.
 
 </dd> </dl>
 
@@ -71,9 +71,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode wird vom Anbieter für die automatische Vervollständigung aufgerufen, wenn die Benutzeroberfläche für die automatische Vervollständigung angezeigt wird. Wenn der interne Zustand des Clients nicht zulässt, dass der Anbieter die Benutzeroberfläche anzeigen kann, wird *pfAllowShowing* auf **FALSE** festgelegt. Wenn der Text z. B. vom Handschriftskin im Tablet PC-Eingabebereich an das Feld gesendet wird und der Benutzer sofort mit dem Freihandeingaben beginnt, empfiehlt der Client, die automatisch vollständige Benutzeroberfläche nicht anzuzeigen, um eine Destruktion des Freihandeingabens des Benutzers zu vermeiden, indem *pfAllowShowing* auf **FALSE** festgelegt wird.
+Diese Methode wird vom AutoVervollständigen-Anbieter aufgerufen, wenn die Benutzeroberfläche für die automatische Vervollstehung angezeigt wird. Wenn der interne Zustand des Clients dem Anbieter das Anzeigen der Benutzeroberfläche nicht erlaubt, wird *pfAllowShowing* auf **FALSE festgelegt.** Wenn der Text z. B. von der Handschrift-Skin im Eingabebereich des Tablet-PCs an das Feld gesendet wird und der Benutzer sofort mit dem Freihandeingaben beginnt, empfiehlt der Client, die benutzeroberfläche für die automatische Vervollst duplizierung nicht zu zeigen, um zu verhindern, dass die Freihandeingabe des Benutzers zerstört wird, indem *pfAllowShowing auf* FALSE festgelegt **wird.**
 
-Rufen Sie **RequestShowUI** auf, um das Popuphandle für das Automatische Abschließen des Listenfensters festzulegen, bevor Sie die [**ITipAutocompleteClient::P referredRects-Methode**](itipautocompleteclient-preferredrects.md)aufrufen. Wenn Sie dies nicht tun, tritt beim Aufrufen von **PreferredRects** ein **E \_ INVALIDARG-Fehler** auf.
+Rufen **Sie RequestShowUI auf,** um das Popuphandl des Listenfensters für die automatische Vervollständigung vor dem Aufrufen der [**ITipAutocompleteClient::P referredRects-Methode fest.**](itipautocompleteclient-preferredrects.md) Wenn Sie dies nicht tun, tritt beim Aufrufen von PreferredRects ein **E \_ INVALIDARG-Fehler** **auf.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,7 +88,7 @@ Rufen Sie **RequestShowUI** auf, um das Popuphandle für das Automatische Abschl
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

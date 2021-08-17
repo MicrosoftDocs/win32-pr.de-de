@@ -1,6 +1,6 @@
 ---
 title: COM-Fehlercodes
-description: Die folgenden Themen enthalten Listen mit Fehlercodes, die von COM-basierten APIs verwendet werden. Diese Werte werden in der Winerror.h-Headerdatei definiert.
+description: Die folgenden Themen enthalten Listen mit Fehlercodes, die von COM-basierten APIs verwendet werden. Diese Werte werden in der Headerdatei Winerror.h definiert.
 ms.assetid: 373671fe-489e-4f12-afe5-b7541f32441b
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118550603"
 ---
 # <a name="com-error-codes"></a>COM-Fehlercodes
 
-Die folgenden Themen enthalten Listen mit Fehlercodes, die von COM-basierten APIs verwendet werden. Diese Werte werden in der Winerror.h-Headerdatei definiert.
+Die folgenden Themen enthalten Listen mit Fehlercodes, die von COM-basierten APIs verwendet werden. Diese Werte werden in der Headerdatei Winerror.h definiert.
 
 -   [**COM-Fehlercodes (generisch)**](com-error-codes-1.md)
 -   [**COM-Fehlercodes (XACT, SCHED, OLE)**](com-error-codes-2.md)

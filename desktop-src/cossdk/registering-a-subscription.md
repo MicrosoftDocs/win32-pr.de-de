@@ -13,7 +13,7 @@ ms.locfileid: "118547110"
 ---
 # <a name="registering-a-subscription"></a>Registrieren eines Abonnements
 
-Nachdem Sie eine Ereignisklasse im COM+-Katalog registriert haben, können Sie Abonnenten zur Ereignisklasse und Abonnements für die Abonnenten hinzufügen. Abonnements können eine einzelne Methode oder alle Methoden einer Schnittstelle abonnieren. Um Aufrufe von mehr als einer Methode (aber nicht jeder Methode) einer Schnittstelle zu empfangen, müssen Sie für jede Methode, für die Sie einen Aufruf empfangen möchten, ein Abonnement hinzufügen. Das Verwaltungstool für Komponentendienste kann den COM+-Katalog nach registrierten Ereignisklassen durchsuchen, die die vom Abonnenten implementierten Schnittstellen unterstützen und Ihnen die Auswahl zum Abonnieren bieten. Wählen Sie den Herausgeber aus, der Ihnen die gewünschten Ereignisse anbietet.
+Nachdem Sie eine Ereignisklasse im COM+-Katalog registriert haben, können Sie Abonnenten zur Ereignisklasse und Abonnements für die Abonnenten hinzufügen. Abonnements können eine einzelne Methode oder alle Methoden einer Schnittstelle abonnieren. Um Aufrufe für mehrere Methoden – aber nicht für jede Methode – einer Schnittstelle zu empfangen, müssen Sie für jede Methode, für die Sie einen Aufruf empfangen möchten, ein Abonnement hinzufügen. Das Verwaltungstool für Komponentendienste kann den COM+-Katalog nach registrierten Ereignisklassen durchsuchen, die die vom Abonnenten implementierten Schnittstellen unterstützen und Ihnen die Auswahl zum Abonnieren bieten. Wählen Sie den Herausgeber aus, der Ihnen die gewünschten Ereignisse anbietet.
 
 Um Abonnenten zur Abonnentenkomponente hinzuzufügen, führen Sie die folgenden Schritte aus:
 

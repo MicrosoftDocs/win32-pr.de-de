@@ -1,25 +1,25 @@
 ---
-description: Installieren einer COM+-Anwendung mit der Windows Installer
+description: Installieren einer COM+-Anwendung mit dem Windows Installer
 ms.assetid: 75c3c287-36c6-49b3-aa28-89e5a99f4c54
-title: Installieren einer COM+-Anwendung mit der Windows Installer
+title: Installieren einer COM+-Anwendung mit dem Windows Installer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a5c50cf7203f8c580abb3125b1eadf1b8d968ae6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 86a5d8ee81d10077e0c08e80d1caa261772ab7e13bd609d6baad2d75644c04f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118946098"
 ---
-# <a name="installing-a-com-application-with-the-windows-installer"></a>Installieren einer COM+-Anwendung mit der Windows Installer
+# <a name="installing-a-com-application-with-the-windows-installer"></a>Installieren einer COM+-Anwendung mit dem Windows Installer
 
-Die folgenden Aktionen und die Tabelle für die Installation von com+-Anwendungen sind in Windows Installer verfügbar:
+Die folgenden Aktionen und Tabellen zum Installieren von COM+-Anwendungen sind im Windows verfügbar:
 
--   [ComPlus-Tabelle](complus-table.md)
--   [Registercomplus-Aktion](registercomplus-action.md)
--   [Unregistercomplus-Aktion](unregistercomplus-action.md)
+-   [Complus-Tabelle](complus-table.md)
+-   [RegisterComPlus-Aktion](registercomplus-action.md)
+-   [UnregisterComPlus-Aktion](unregistercomplus-action.md)
 
-Informationen zur Installation von com+-Anwendungen finden Sie im Abschnitt Bereitstellen von [com+-Anwendungen](../cossdk/deploying-com--applications.md) in der [com+-Dokumentation (Komponenten Dienste)](../cossdk/component-services-portal.md) .
+Informationen zum Installieren von COM+-Anwendungen finden Sie im Abschnitt [Bereitstellen von COM+-Anwendungen](../cossdk/deploying-com--applications.md) in der [COM+-Dokumentation (Komponentendienste).](../cossdk/component-services-portal.md)
 
  
 

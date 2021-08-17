@@ -1,25 +1,25 @@
 ---
-description: Im folgenden Beispiel wird eine Klartext-Nachricht aus einer Datei gelesen, und ein Zertifikat Speicher, der die Zertifikate der gewünschten Nachrichtenempfänger enthält, wird geöffnet.
+description: Im folgenden Beispiel wird eine Klartextnachricht aus einer Datei eingelesen, und ein Zertifikatspeicher, der die Zertifikate der vorgesehenen Nachrichtenempfänger enthält, wird geöffnet.
 ms.assetid: 7ae672d3-e11d-453c-b9c0-354d21830ae4
-title: Senden einer eingeschlossenen Daten Nachricht
+title: Senden einer Umschlagdatennachricht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f59c04418a2f1d0186ddc0d88c30e7cc790c715b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9d93c73e22a9ac98e08d12164e78aa585a6b2ba3da6f47bf53675a7320bc206e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393633"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118900360"
 ---
-# <a name="sending-an-enveloped-data-message"></a>Senden einer eingeschlossenen Daten Nachricht
+# <a name="sending-an-enveloped-data-message"></a>Senden einer Umschlagdatennachricht
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfunktionen zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfeatures zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
 
-Im folgenden Beispiel wird eine Klartext-Nachricht aus einer Datei gelesen, und ein Zertifikat Speicher, der die Zertifikate der gewünschten Nachrichtenempfänger enthält, wird geöffnet. Alle Zertifikate im Speicher werden als Empfänger der Nachricht hinzugefügt, die Nachricht ist umgeschrieben, und die eingeschlossene Nachricht wird in eine Datei geschrieben.
+Im folgenden Beispiel wird eine Klartextnachricht aus einer Datei eingelesen, und ein Zertifikatspeicher, der die Zertifikate der vorgesehenen Nachrichtenempfänger enthält, wird geöffnet. Alle Zertifikate im Speicher werden als Empfänger der Nachricht hinzugefügt, die Nachricht wird umgeschrieben, und die umgeschriebene Nachricht wird in eine Datei geschrieben.
 
-Zusätzlicher Code kann hinzugefügt werden, um die Zertifikate anzuzeigen, die als Nachrichtenempfänger hinzugefügt werden, um diese Zertifikate zu überprüfen, bevor Sie als beabsichtigte Empfänger hinzugefügt werden, oder um die hinzu zufügenden Zertifikate anderweitig auszuwählen.
+Zusätzlicher Code kann hinzugefügt werden, um die Zertifikate anzuzeigen, die als Nachrichtenempfänger hinzugefügt werden, um diese Zertifikate zu überprüfen, bevor sie als beabsichtigte Empfänger hinzugefügt werden, oder um die Zertifikate, die hinzugefügt werden sollen, auf andere Weise zu wählen.
 
-Bei einem beliebigen CAPICOM-Fehler wird der negative Dezimalwert **Err. Number** zurückgegeben. Weitere Informationen finden Sie unter [**CAPICOM- \_ Fehler \_ Code**](capicom-error-code.md). Informationen zu positiven Dezimalwerten von **Err. Number** finden Sie unter Winerror. h.
+Bei jedem CAPICOM-Fehler wird der negative Dezimalwert **Err.Number** zurückgegeben. Weitere Informationen finden Sie unter [**CAPICOM \_ ERROR \_ CODE**](capicom-error-code.md). Informationen zu positiven Dezimalwerten von **Err.Number finden** Sie unter Winerror.h.
 
 
 ```VB

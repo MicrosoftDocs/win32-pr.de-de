@@ -4,7 +4,7 @@ description: Der Typ der Vertrauensstellung, z. B. Windows NT oder MIT.
 ms.assetid: ad3640cd-d634-4ec1-8be8-1fb8272e4b23
 ms.tgt_platform: multiple
 keywords:
-- Trust-Type AD-Attributschema
+- Trust-Type AD-Schema
 - trustType-Attribut AD-Schema
 topic_type:
 - apiref
@@ -35,7 +35,7 @@ Der Typ der Vertrauensstellung, z. B. Windows NT oder MIT.
 | Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.     |
 | Updatehäufigkeit  | Wenn eine neue Vertrauensstellung erstellt wird.         |
 | Attribute-Id      | 1.2.840.113556.1.4.136               |
-| System-ID-GUID    | bf967a60-0de6-11d0-a285-00aa003049e2 |
+| System-Id-Guid    | bf967a60-0de6-11d0-a285-00aa003049e2 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -58,7 +58,7 @@ Der Typ der Vertrauensstellung, z. B. Windows NT oder MIT.
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | Falsch                                                |
-| Ist einwertig       | Richtig                                                 |
+| Is-Single-Valued       | Richtig                                                 |
 | Ist indiziert             | Falsch                                                |
 | Im globalen Katalog      | Falsch                                                |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                         |
@@ -66,7 +66,7 @@ Der Typ der Vertrauensstellung, z. B. Windows NT oder MIT.
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
 | System-Flags           | 0x00000010                                           |
-| In verwendete Klassen        | [**Vertrauenswürdige Domäne**](c-trusteddomain.md)<br/> |
+| In verwendete Klassen        | [**Trusted-Domain**](c-trusteddomain.md)<br/> |
 
 
 
@@ -79,7 +79,7 @@ Der Typ der Vertrauensstellung, z. B. Windows NT oder MIT.
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | Falsch                                                |
-| Ist einwertig       | Richtig                                                 |
+| Is-Single-Valued       | Richtig                                                 |
 | Ist indiziert             | Falsch                                                |
 | Im globalen Katalog      | Richtig                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                         |
@@ -87,7 +87,7 @@ Der Typ der Vertrauensstellung, z. B. Windows NT oder MIT.
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
 | System-Flags           | 0x00000010                                           |
-| In verwendete Klassen        | [**Vertrauenswürdige Domäne**](c-trusteddomain.md)<br/> |
+| In verwendete Klassen        | [**Trusted-Domain**](c-trusteddomain.md)<br/> |
 
 
 
@@ -100,7 +100,7 @@ Der Typ der Vertrauensstellung, z. B. Windows NT oder MIT.
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | Falsch                                                |
-| Ist einwertig       | Richtig                                                 |
+| Is-Single-Valued       | Richtig                                                 |
 | Ist indiziert             | Falsch                                                |
 | Im globalen Katalog      | Richtig                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                         |
@@ -108,7 +108,7 @@ Der Typ der Vertrauensstellung, z. B. Windows NT oder MIT.
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
 | System-Flags           | 0x00000010                                           |
-| In verwendete Klassen        | [**Vertrauenswürdige Domäne**](c-trusteddomain.md)<br/> |
+| In verwendete Klassen        | [**Trusted-Domain**](c-trusteddomain.md)<br/> |
 
 
 
@@ -121,7 +121,7 @@ Der Typ der Vertrauensstellung, z. B. Windows NT oder MIT.
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | Falsch                                                |
-| Ist einwertig       | Richtig                                                 |
+| Is-Single-Valued       | Richtig                                                 |
 | Ist indiziert             | Falsch                                                |
 | Im globalen Katalog      | Richtig                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                         |
@@ -129,7 +129,7 @@ Der Typ der Vertrauensstellung, z. B. Windows NT oder MIT.
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
 | System-Flags           | 0x00000010                                           |
-| In verwendete Klassen        | [**Vertrauenswürdige Domäne**](c-trusteddomain.md)<br/> |
+| In verwendete Klassen        | [**Trusted-Domain**](c-trusteddomain.md)<br/> |
 
 
 
@@ -142,7 +142,7 @@ Der Typ der Vertrauensstellung, z. B. Windows NT oder MIT.
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | Falsch                                                |
-| Ist einwertig       | Richtig                                                 |
+| Is-Single-Valued       | Richtig                                                 |
 | Ist indiziert             | Falsch                                                |
 | Im globalen Katalog      | Richtig                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                         |
@@ -150,7 +150,7 @@ Der Typ der Vertrauensstellung, z. B. Windows NT oder MIT.
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
 | System-Flags           | 0x00000010                                           |
-| In verwendete Klassen        | [**Vertrauenswürdige Domäne**](c-trusteddomain.md)<br/> |
+| In verwendete Klassen        | [**Trusted-Domain**](c-trusteddomain.md)<br/> |
 
 
 
@@ -163,7 +163,7 @@ Der Typ der Vertrauensstellung, z. B. Windows NT oder MIT.
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | Falsch                                                |
-| Ist einwertig       | Richtig                                                 |
+| Is-Single-Valued       | Richtig                                                 |
 | Ist indiziert             | Falsch                                                |
 | Im globalen Katalog      | Richtig                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                         |
@@ -171,7 +171,7 @@ Der Typ der Vertrauensstellung, z. B. Windows NT oder MIT.
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
 | System-Flags           | 0x00000010                                           |
-| In verwendete Klassen        | [**Vertrauenswürdige Domäne**](c-trusteddomain.md)<br/> |
+| In verwendete Klassen        | [**Trusted-Domain**](c-trusteddomain.md)<br/> |
 
 
 

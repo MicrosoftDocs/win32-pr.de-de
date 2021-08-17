@@ -42,7 +42,7 @@ R mips.Operator[][](
 
 Typ: **uint**
 
-Der MIP-Sliceindex.
+Der Index des Mipslices.
 
 </dd> <dt>
 

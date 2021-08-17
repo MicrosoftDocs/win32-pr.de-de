@@ -1,6 +1,6 @@
 ---
 title: Shaderreferenz (Direct3D 12-Grafiken)
-description: In diesem Abschnitt werden direct3D 12-APIs behandelt, die in d3d12shader.h deklariert sind und die Erstellung und Verwaltung von programmierbaren Shadern unterstützen. Shader sind ausführbare Programme, die ausschließlich mit HLSL programmiert werden.
+description: In diesem Abschnitt werden Direct3D 12-APIs behandelt, die in d3d12shader.h deklariert sind. Dadurch können programmierbare Shader erstellt und verwaltet werden. Shader sind ausführbare Programme, die ausschließlich mit HLSL programmiert werden.
 ms.assetid: d2e414bd-02ed-4f55-90ad-d17c322ec728
 ms.localizationpriority: low
 ms.topic: article
@@ -14,13 +14,13 @@ ms.locfileid: "118530618"
 ---
 # <a name="shader-reference-direct3d-12-graphics"></a>Shaderreferenz (Direct3D 12-Grafiken)
 
-In diesem Abschnitt werden direct3D 12-APIs behandelt, die in d3d12shader.h deklariert sind und die Erstellung und Verwaltung von programmierbaren Shadern unterstützen. Shader sind ausführbare Programme, die ausschließlich mit HLSL programmiert werden.
+In diesem Abschnitt werden Direct3D 12-APIs behandelt, die in d3d12shader.h deklariert sind. Dadurch können programmierbare Shader erstellt und verwaltet werden. Shader sind ausführbare Programme, die ausschließlich mit HLSL programmiert werden.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                          | Beschreibung                                                                                             |
+| Thema                                                                          | BESCHREIBUNG                                                                                             |
 |--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 | [Shader-Schnittstellen](d3d12-graphics-reference-shader-interfaces.md)<br/> | d3d12shader.h deklariert die folgenden Schnittstellen. <br/>                                            |
 | [Shader-Strukturen](d3d12-graphics-reference-shader-structures.md)<br/> | d3d12shader.h deklariert die folgenden Strukturen, die zum Erstellen und Verwenden von Shadern verwendet werden. <br/>  |

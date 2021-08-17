@@ -1,5 +1,5 @@
 ---
-description: Gibt einen FVF-Code (Flexible Vertex Format) von einem Deklarator zurück.
+description: Gibt einen flexiblen Vertexformatcode (FVF) von einem Deklarator zurück.
 ms.assetid: 4f30087e-0042-44bc-a7a5-5386b18fcad7
 title: D3DXFVFFromDeclarator-Funktion (D3DX9Mesh.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118525647"
 ---
 # <a name="d3dxfvffromdeclarator-function"></a>D3DXFVFFromDeclarator-Funktion
 
-Gibt einen FVF-Code (Flexible Vertex Format) von einem Deklarator zurück.
+Gibt einen flexiblen Vertexformatcode (FVF) von einem Deklarator zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ HRESULT D3DXFVFFromDeclarator(
 
 Typ: **const [**LPD3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
 
-Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) das den FVF-Code beschreibt.
+Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) die den FVF-Code beschreiben.
 
 </dd> <dt>
 
@@ -55,7 +55,7 @@ Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) das den FVF-C
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Zeiger auf einen DWORD-Wert, der die zurückgegebene Kombination von [D3DFVF](d3dfvf.md) darstellt, die das vom Deklarator zurückgegebene Scheitelpunktformat beschreibt.
+Zeiger auf einen DWORD-Wert, der die zurückgegebene Kombination von [D3DFVF darstellt,](d3dfvf.md) die das vom Deklarator zurückgegebene Scheitelpunktformat beschreibt.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Zeiger auf einen DWORD-Wert, der die zurückgegebene Kombination von [D3DFVF](d3
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion schlägt für jeden Deklarator fehl, der nicht direkt einer FVF zugeordnet wird.
+Diese Funktion kann nicht für jeden Deklarator verwendet werden, der einer FVF nicht direkt zufällt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,7 +84,7 @@ Diese Funktion schlägt für jeden Deklarator fehl, der nicht direkt einer FVF z
 
 <dl> <dt>
 
-[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> <dt>
 
 [**D3DXDeclaratorFromFVF**](d3dxdeclaratorfromfvf.md)

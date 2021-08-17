@@ -1,39 +1,39 @@
 ---
-description: Das Network Service-Konto ist ein vordefiniertes lokales Konto, das vom Dienststeuerungs-Manager verwendet wird.
+description: Das NetworkService-Konto ist ein vordefiniertes lokales Konto, das vom Dienststeuerungs-Manager verwendet wird.
 ms.assetid: f90d9346-10ed-4eba-bae2-9a1f1e6dc6b7
-title: Network Service-Konto
+title: NetworkService-Konto
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c319518dbe925a146882014211d131c30420a282
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 24f8256a15b43d9a9c0403067a61f9a7cbf6b9d2df0d78936c4d9c06f6dfd87c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373242"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118889394"
 ---
-# <a name="networkservice-account"></a>Network Service-Konto
+# <a name="networkservice-account"></a>NetworkService-Konto
 
-Das Network Service-Konto ist ein vordefiniertes lokales Konto, das vom Dienststeuerungs-Manager verwendet wird. Dieses Konto wird vom Sicherheits Subsystem nicht erkannt, sodass Sie seinen Namen nicht in einem aufzurufenden [**LookupAccountName**](/windows/desktop/api/winbase/nf-winbase-lookupaccountnamea) -Funktion angeben können. Er verfügt über minimale Berechtigungen auf dem lokalen Computer und fungiert als Computer im Netzwerk.
+Das NetworkService-Konto ist ein vordefiniertes lokales Konto, das vom Dienststeuerungs-Manager verwendet wird. Dieses Konto wird vom Sicherheitssubsystem nicht erkannt, daher können Sie seinen Namen nicht in einem Aufruf der [**LookupAccountName-Funktion**](/windows/desktop/api/winbase/nf-winbase-lookupaccountnamea) angeben. Sie verfügt über mindestberechtigungen auf dem lokalen Computer und fungiert als Computer im Netzwerk.
 
-Dieses Konto kann in einem aufzurufenden Rückruf [**der Funktionen**](/windows/desktop/api/Winsvc/nf-winsvc-createservicea) "-Funktion" und " [**ChangeServiceConfig**](/windows/desktop/api/Winsvc/nf-winsvc-changeserviceconfiga) " angegeben werden. Beachten Sie, dass dieses Konto nicht über ein Kennwort verfügt, sodass alle Kenn Wort Informationen, die Sie in diesem Bericht angeben, ignoriert werden. Obwohl das Sicherheits Subsystem diesen Kontonamen lokalisiert, unterstützt der SCM keine lokalisierten Namen. Aus diesem Grund erhalten Sie einen lokalisierten Namen für dieses Konto von der [**LookupAccountSid**](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) -Funktion. der Name des Kontos muss jedoch NT Authority \\ Network Service lauten, wenn Sie " **kreateservice** " oder " **ChangeServiceConfig**" aufrufen, unabhängig vom Gebiets Schema, oder unerwartete Ergebnisse auftreten können.
+Dieses Konto kann in einem Aufruf der Funktionen [**CreateService**](/windows/desktop/api/Winsvc/nf-winsvc-createservicea) und [**ChangeServiceConfig angegeben**](/windows/desktop/api/Winsvc/nf-winsvc-changeserviceconfiga) werden. Beachten Sie, dass dieses Konto nicht über ein Kennwort verfügt, sodass alle Kennwortinformationen, die Sie in diesem Aufruf angeben, ignoriert werden. Während das Sicherheitssubsystem diesen Kontonamen lokalisiert, unterstützt der SCM keine lokalisierten Namen. Daher erhalten Sie einen lokalisierten Namen für dieses Konto von der [**LookupAccountSid-Funktion,**](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) aber der Name des Kontos muss NT AUTHORITY NetworkService sein, wenn Sie \\ **CreateService** oder **ChangeServiceConfig** aufrufen, unabhängig vom Lokalen, oder es können unerwartete Ergebnisse auftreten.
 
-Ein Dienst, der im Kontext des Network Service-Kontos ausgeführt wird, stellt die Anmelde Informationen des Computers für Remote Server dar. Standardmäßig enthält das Remote Token SIDs für die Gruppen "jeder" und "authentifizierte Benutzer". Die Benutzer-SID wird aus dem RID-Wert des **Security \_ Network \_ Service \_** erstellt.
+Ein Dienst, der im Kontext des NetworkService-Kontos ausgeführt wird, stellt den Remoteservern die Anmeldeinformationen des Computers zur Verfügung. Standardmäßig enthält das Remotetoken SIDs für die Gruppen "Jeder" und "Authentifizierte Benutzer". Die Benutzer-SID wird aus dem **SECURITY \_ NETWORK SERVICE \_ \_ RID-Wert** erstellt.
 
-Das Network Service-Konto verfügt über einen eigenen Unterschlüssel unter dem Registrierungsschlüssel für **HKEY- \_ Benutzer** . Daher ist der Registrierungsschlüssel des **aktuellen HKEY- \_ \_ Benutzers** dem NetworkService-Konto zugeordnet.
+Das NetworkService-Konto verfügt über einen eigenen Unterschlüssel unter dem **Registrierungsschlüssel HKEY \_ USERS.** Daher ist der **Registrierungsschlüssel HKEY \_ CURRENT \_ USER** dem NetworkService-Konto zugeordnet.
 
-Das Network Service-Konto verfügt über die folgenden Berechtigungen:
+Das NetworkService-Konto verfügt über die folgenden Berechtigungen:
 
--   **SE \_ \_Name des zugriffsmarytokens** (deaktiviert)
--   **SE \_ Überwachungs \_ Name** (deaktiviert)
--   **SE \_ \_Benachrichtigungs \_ Name ändern** (aktiviert)
--   **SE \_ \_Globalen \_ Namen erstellen** (aktiviert)
--   **SE \_ Identität des \_ namens** annehmen (aktiviert)
--   **SE \_ \_Kontingent \_ Namen erhöhen** (deaktiviert)
--   **SE \_ \_Name des herunter** Fahrens (deaktiviert)
--   **SE \_ \_Name der nicht-Dock** (deaktiviert)
+-   **SE \_ ASSIGNPRIMARYTOKEN \_ NAME** (deaktiviert)
+-   **SE \_ AUDIT \_ NAME** (deaktiviert)
+-   **SE \_ CHANGE \_ NOTIFY \_ NAME** (aktiviert)
+-   **SE \_ CREATE \_ GLOBAL \_ NAME** (aktiviert)
+-   **SE \_ IMPERSONATE \_ NAME** (aktiviert)
+-   **SE \_ INCREASE \_ QUOTA \_ NAME** (deaktiviert)
+-   **SE \_ SHUTDOWN \_ NAME** (deaktiviert)
+-   **SE \_ UNDOCK \_ NAME** (deaktiviert)
 -   Alle Berechtigungen, die Benutzern und authentifizierten Benutzern zugewiesen sind
 
-Weitere Informationen finden Sie unter [Dienst Sicherheit und Zugriffsrechte](service-security-and-access-rights.md).
+Weitere Informationen finden Sie unter [Dienstsicherheit und Zugriffsrechte.](service-security-and-access-rights.md)
 
  
 

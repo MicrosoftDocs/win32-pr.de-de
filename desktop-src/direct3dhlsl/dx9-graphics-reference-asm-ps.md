@@ -1,6 +1,6 @@
 ---
-title: Pixelshader
-description: Pixelshader
+title: Pixel-Shader
+description: Pixel-Shader
 ms.assetid: d5a6a9a6-5866-4b20-8529-97ce807ec5b6
 ms.topic: article
 ms.date: 05/31/2018
@@ -16,15 +16,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118512840"
 ---
-# <a name="pixel-shaders"></a>Pixelshader
+# <a name="pixel-shaders"></a>Pixel-Shader
 
 -   [ps \_ 1 \_ 1, ps \_ 1 \_ 2, ps \_ 1 \_ 3, ps \_ 1 \_ 4](dx9-graphics-reference-asm-ps-1-x.md)
 -   [ps \_ 2 \_ 0](dx9-graphics-reference-asm-ps-2-0.md)
--   [ps \_ 2 \_ x](dx9-graphics-reference-asm-ps-2-x.md)
--   [ps \_ 3 \_ 0](dx9-graphics-reference-asm-ps-3-0.md)
+-   [PS \_ 2 \_ x](dx9-graphics-reference-asm-ps-2-x.md)
+-   [PS \_ 3 \_ 0](dx9-graphics-reference-asm-ps-3-0.md)
 -   [Register](dx9-graphics-reference-asm-ps-registers.md)
--   [Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
--   [Unterschiede beim Pixelshader](dx9-graphics-reference-asm-ps-differences.md)
+-   [Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
+-   [Unterschiede zwischen Pixel-Shadern](dx9-graphics-reference-asm-ps-differences.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

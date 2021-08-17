@@ -1,5 +1,5 @@
 ---
-description: Stellt Operatorüberladungen und Typcasts für D3DXFLOAT16-Strukturen zurEntspricht.
+description: Stellt Operatorüberladungen und Typcasts für D3DXFLOAT16-Strukturen zur Verfügung.
 ms.assetid: d287efb5-d15e-46dc-924d-012e1a108efc
 title: D3DXFLOAT16-Erweiterungen (D3dx9math.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118526144"
 ---
 # <a name="d3dxfloat16-extensions"></a>D3DXFLOAT16-Erweiterungen
 
-Stellt Operatorüberladungen und Typcasts für [**D3DXFLOAT16-Strukturen**](d3dxfloat16.md) zurEntspricht.
+Stellt Operatorüberladungen und Typcasts für [**D3DXFLOAT16-Strukturen**](d3dxfloat16.md) zur Verfügung.
 
 ``` syntax
 typedef struct D3DXFLOAT16
@@ -50,7 +50,7 @@ Abgeleitete Typen: \* LPD3DXFLOAT16
 
 ## <a name="members"></a>Member
 
-Weitere Informationen zu Strukturmitgliedern finden Sie unter D3DXFLOAT16.
+Weitere Informationen zu Strukturmembern finden Sie unter D3DXFLOAT16.
 
 ## <a name="remarks"></a>Hinweise
 

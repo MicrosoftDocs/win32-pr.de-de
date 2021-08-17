@@ -1,6 +1,6 @@
 ---
 title: Beispielcode für die Überprüfung auf Rechte zum Erstellen von Schemaobjekten
-description: Das folgende C/C++-Codebeispiel zeigt eine Funktion, die das allowedChildClassesEffective-Attribut für den Schemacontainer überprüft (IADs-Zeiger auf Schemacontainer wird als Parameter übergeben) für die AttributeSchema- und classSchema-Klassen.
+description: Das folgende C/C++-Codebeispiel zeigt eine Funktion, die das allowedChildClassesEffective-Attribut im Schemacontainer (der IADs-Zeiger auf den Schemacontainer wird als Parameter übergeben) für die Klassen attributeSchema und classSchema überprüft.
 ms.assetid: 3abc2351-a3cf-4a6c-9a13-15dd51723883
 ms.tgt_platform: multiple
 keywords:
@@ -16,7 +16,7 @@ ms.locfileid: "118694482"
 ---
 # <a name="example-code-for-checking-for-rights-to-create-schema-objects"></a>Beispielcode für die Überprüfung auf Rechte zum Erstellen von Schemaobjekten
 
-Das folgende C/C++-Codebeispiel zeigt eine Funktion, die das **allowedChildClassesEffective-Attribut** für den Schemacontainer überprüft (IADs-Zeiger auf Schemacontainer wird als Parameter übergeben) für die **AttributeSchema-** und **classSchema-Klassen.** Sie gibt **S \_ OK** zurück, wenn beide Klassen in **allowedChildClassesEffective** aufgeführt sind. Wenn beide nicht sind, wird **S \_ FALSE** zurückgegeben.
+Das folgende C/C++-Codebeispiel zeigt eine Funktion, die das **allowedChildClassesEffective-Attribut** im Schemacontainer (der IADs-Zeiger auf den Schemacontainer wird als Parameter übergeben) für die **Klassen attributeSchema** und **classSchema** überprüft. Es wird **S \_ OK zurückgegeben,** wenn beide Klassen in **allowedChildClassesEffective aufgeführt sind.** Wenn beides nicht der Wert ist, wird **S \_ FALSE zurückgegeben.**
 
 
 ```C++

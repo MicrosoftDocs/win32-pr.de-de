@@ -1,8 +1,8 @@
 ---
-description: Die statische Methode setTcpUseRFC1122 Auslassungspunkte der WMI-Klasse wird verwendet, um anzugeben, ob TCP die RFC 1122-Spezifikation für dringende Daten oder den von BSD abgeleiteten Systemen (California Software Design) verwendet.
+description: Die statische WMI-Klasse SetTcpUseRFC1122 RfcentPointer wird verwendet, um anzugeben, ob TCP die RFC 1122-Spezifikation für dringende Daten oder den Modus verwendet, der von abgeleiteten BSD-Systemen (California Software Design) verwendet wird.
 ms.assetid: f8d07690-2723-4bc3-b15f-a24d575456a7
 ms.tgt_platform: multiple
-title: SetTcpUseRFC1122ClassentPointer-Methode der Win32_NetworkAdapterConfiguration-Klasse
+title: SetTcpUseRFC1122 WietPointer-Methode der Win32_NetworkAdapterConfiguration Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -21,11 +21,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119439240"
 ---
-# <a name="settcpuserfc1122urgentpointer-method-of-the-win32_networkadapterconfiguration-class"></a>SetTcpUseRFC1122ClassentPointer-Methode der Win32 \_ NetworkAdapterConfiguration-Klasse
+# <a name="settcpuserfc1122urgentpointer-method-of-the-win32_networkadapterconfiguration-class"></a>SetTcpUseRFC1122 WietPointer-Methode der Win32 \_ NetworkAdapterConfiguration-Klasse
 
-Die statische **Methode setTcpUseRFC1122 Auslassungspunkte** der [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) wird verwendet, um anzugeben, ob TCP die RFC 1122-Spezifikation für dringende Daten oder den von BSD abgeleiteten Systemen (California Software Design) verwendet.
+Die statische [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) **SetTcpUseRFC1122 RfcentPointer** wird verwendet, um anzugeben, ob TCP die RFC 1122-Spezifikation für dringende Daten oder den Modus verwendet, der von abgeleiteten BSD-Systemen (California Software Design) verwendet wird.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ uint32 SetTcpUseRFC1122UrgentPointer(
 
 <dl> <dt>
 
-*TcpUseRFC1122RolentPointer* \[ In\]
+*TcpUseRFC1122 WietPointer* \[ In\]
 </dt> <dd>
 
-True gibt **an,** dass TCP die RFC 1122-Spezifikation verwendet. False gibt an, dass dringende Daten in dem von BSD abgeleiteten Modus gesendet werden.
+True **gibt an,** dass TCP die RFC 1122-Spezifikation verwendet. False **gibt an,** dass dringende Daten im Modus gesendet werden, der von von BSD abgeleiteten Systemen verwendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert 0 (null) für einen erfolgreichen Abschluss zurück, wenn kein Neustart erforderlich ist, 1 (eins) für einen erfolgreichen Abschluss, wenn ein Neustart erforderlich ist, und eine andere Zahl, wenn ein Fehler auftritt. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum.**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum) Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes.](/windows/desktop/Debug/system-error-codes)
+Gibt den Wert 0 (null) für einen erfolgreichen Abschluss zurück, wenn kein Neustart erforderlich ist, 1 (eins) für einen erfolgreichen Abschluss, wenn ein Neustart erforderlich ist, und eine andere Zahl, wenn ein Fehler auftritt. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -73,12 +73,12 @@ Erfolgreicher Abschluss, Neustart erforderlich.
 
 </dd> <dt>
 
-**Die Methode wird auf dieser Plattform nicht unterstützt.**
+**Methode wird auf dieser Plattform nicht unterstützt**
 </dt> <dd>
 
 64
 
-Die Methode wird auf dieser Plattform nicht unterstützt.
+Methode wird auf dieser Plattform nicht unterstützt.
 
 </dd> <dt>
 
@@ -100,12 +100,12 @@ Ungültige Subnetzmaske.
 
 </dd> <dt>
 
-**Fehler beim Verarbeiten einer zurückgegebenen Instanz**
+**Fehler beim Verarbeiten einer instanz, die zurückgegeben wurde**
 </dt> <dd>
 
 67
 
-Fehler beim Verarbeiten einer zurückgegebenen Instanz.
+Fehler beim Verarbeiten einer instanz, die zurückgegeben wurde.
 
 </dd> <dt>
 
@@ -118,12 +118,12 @@ Ungültiger Eingabeparameter.
 
 </dd> <dt>
 
-**Mehr als 5 Gateways angegeben**
+**Mehr als fünf Gateways angegeben**
 </dt> <dd>
 
 69
 
-Mehr als fünf Gateways angegeben.
+Es wurden mehr als fünf Gateways angegeben.
 
 </dd> <dt>
 
@@ -145,12 +145,12 @@ Ungültige Gateway-IP-Adresse.
 
 </dd> <dt>
 
-**Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen**
+**Fehler beim Zugreifen auf die Registrierung für die angeforderten Informationen**
 </dt> <dd>
 
 72
 
-Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen.
+Fehler beim Zugreifen auf die Registrierung für die angeforderten Informationen.
 
 </dd> <dt>
 
@@ -177,7 +177,7 @@ Ungültiger Hostname.
 
 75
 
-Es wurde kein primärer oder sekundärer WINS-Server definiert.
+Kein primärer oder sekundärer WINS-Server definiert.
 
 </dd> <dt>
 
@@ -222,7 +222,7 @@ Ungültiger Sicherheitsparameter.
 
 80
 
-Tcp/IP-Dienst kann nicht konfiguriert werden.
+Der TCP/IP-Dienst kann nicht konfiguriert werden.
 
 </dd> <dt>
 
@@ -231,11 +231,11 @@ Tcp/IP-Dienst kann nicht konfiguriert werden.
 
 81
 
-Dhcp-Dienst kann nicht konfiguriert werden.
+DHCP-Dienst kann nicht konfiguriert werden.
 
 </dd> <dt>
 
-**DHCP-Lease kann nicht erneuert werden**
+**DHCP-Lease kann nicht verlängert werden**
 </dt> <dd>
 
 82
@@ -253,7 +253,7 @@ DHCP-Lease kann nicht veröffentlicht werden.
 
 </dd> <dt>
 
-**IP auf Adapter nicht aktiviert**
+**IP-Adresse auf Adapter nicht aktiviert**
 </dt> <dd>
 
 84
@@ -267,16 +267,16 @@ DIE IP-Adresse ist auf dem Adapter nicht aktiviert.
 
 85
 
-IPX für Adapter nicht aktiviert.
+IPX ist auf adapter nicht aktiviert.
 
 </dd> <dt>
 
-**Frame-/Netzwerknummern-Begrenzungsfehler**
+**Frame-/Netzwerknummer-Begrenzungsfehler**
 </dt> <dd>
 
 86
 
-Frame- oder Netzwerknummern-Begrenzungsfehler.
+Frame- oder Netzwerknummer-Begrenzungsfehler.
 
 </dd> <dt>
 
@@ -307,12 +307,12 @@ Doppelte Netzwerknummer.
 
 </dd> <dt>
 
-**Parameter außerhalb der Grenzen**
+**Parameter über grenzenlose Grenzen**
 </dt> <dd>
 
 90
 
-Parameter außerhalb der Grenzen.
+Parameter, der nicht an grenzende Grenzen gebunden ist.
 
 </dd> <dt>
 
@@ -348,7 +348,7 @@ Ist bereits vorhanden.
 
 94
 
-Pfad, Datei oder Objekt nicht gefunden.
+Pfad, Datei oder Objekt wurden nicht gefunden.
 
 </dd> <dt>
 
@@ -388,12 +388,12 @@ Nicht alle DHCP-Leases konnten freigegeben oder erneuert werden.
 
 </dd> <dt>
 
-**DHCP für Adapter nicht aktiviert**
+**DHCP auf Adapter nicht aktiviert**
 </dt> <dd>
 
 100
 
-DHCP für Adapter nicht aktiviert.
+DHCP ist auf dem Adapter nicht aktiviert.
 
 </dd> <dt>
 
@@ -410,7 +410,7 @@ RFC 1122 und BSD interpretieren den dringenden Zeiger im TCP-Header und die Län
 
 ## <a name="examples"></a>Beispiele
 
-Im VBScript-Beispiel Ändern der [dringenden Zeigerverwendung für alle Netzwerkadapter](https://Gallery.TechNet.Microsoft.Com/0ff22a90-0be6-4914-8db7-aaf72cbea9cb) wird ein Computer so konfiguriert, dass er die RFC 1122-Spezifikation für dringende Daten verwendet.
+Das VBScript-Beispiel [Modify Urgent Pointer Use for All Network Adapters](https://Gallery.TechNet.Microsoft.Com/0ff22a90-0be6-4914-8db7-aaf72cbea9cb) konfiguriert einen Computer für die Verwendung der RFC 1122-Spezifikation für dringende Daten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -426,11 +426,11 @@ Im VBScript-Beispiel Ändern der [dringenden Zeigerverwendung für alle Netzwerk
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Computersystemhardwareklassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> <dt>
 
 [**Win32 \_ NetworkAdapterConfiguration**](win32-networkadapterconfiguration.md)

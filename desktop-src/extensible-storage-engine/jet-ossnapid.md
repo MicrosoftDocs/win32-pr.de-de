@@ -61,7 +61,7 @@ Ein Handle für eine Momentaufnahme der Datenbank. Dieses Handle wird in JET-API
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In Esent.h deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>

@@ -37,7 +37,7 @@ Die InstallFiles-Aktion muss nach der [InstallValidate-Aktion](installvalidate-a
 
 Die Aktion InstallFiles wird für Dateien verwendet, die in der [Dateitabelle angegeben sind.](file-table.md) Jede Datei wird basierend auf dem Installationsstatus der zugeordneten Komponente der Datei in der [Component-Tabelle installiert.](component-table.md) Nur die Dateien, deren Komponenten in den **MsiInstallStatelocal-Zustand** aufgelöst werden, sind zum Kopieren berechtigt.
 
-Die InstallFiles-Aktion implementiert die folgenden Spalten der File-Tabelle.
+Die Aktion InstallFiles implementiert die folgenden Spalten der File-Tabelle.
 
 -   Die Spalte FileName gibt den Namen der Zieldatei an.
 -   Die Spalte Version gibt die Dateiversion an.
@@ -60,7 +60,7 @@ Die angegebene Datei wird nur kopiert, wenn eine der folgenden Bedingungen zutri
 
 Das Quellverzeichnis für jede zu kopierende Datei wird durch den sourceMode bestimmt, der wiederum vom Wert in der Spalte "Cabinet" der Media-Tabelle abhängt. Eine vollständige Erörterung des Quellmodus finden Sie in der [Media-Tabelle](media-table.md).
 
-Wenn sich das Quellverzeichnis für eine zu kopierende Datei auf Wechselmedien wie z. B. einer Diskette oder CD-ROM befindet, überprüft die InstallFiles-Aktion, ob das richtige Quellmedium eingefügt wird, bevor versucht wird, die Datei zu kopieren. InstallFiles sucht nach Medien desselben Wechseldatenträgertyps mit einer Volumebezeichnung, die mit dem in der Spalte VolumeLabel der Media-Tabelle angegebenen Wert identisch ist. [](v-gly.md) Wenn ein entsprechendes bereitgestelltes Volume gefunden wird, wird der Dateikopiervorgang fortgesetzt. Wenn keine Übereinstimmung gefunden wird, fordert ein Dialogfeld den Benutzer auf, die richtigen Medien einfügungen. In diesem Fall verwendet das Dialogfeld den Mediennamen in der DiskPrompt-Spalte der Media-Tabelle als Teil der Eingabeaufforderung.
+Wenn sich das Quellverzeichnis für eine zu kopierende Datei auf Wechselmedien wie z. B. einer Diskette oder CD-ROM befindet, überprüft die InstallFiles-Aktion, ob das richtige Quellmedium eingefügt wird, bevor versucht wird, die Datei zu kopieren. InstallFiles sucht nach Medien desselben Wechseldatenträgertyps mit einer Volumebezeichnung, die dem In der Spalte VolumeLabel der Media-Tabelle angegebenen Wert entspricht. [](v-gly.md) Wenn ein entsprechendes bereitgestelltes Volume gefunden wird, wird der Dateikopiervorgang fortgesetzt. Wenn keine Übereinstimmung gefunden wird, fordert ein Dialogfeld den Benutzer auf, die richtigen Medien einfügungen. In diesem Fall verwendet das Dialogfeld den Mediennamen in der DiskPrompt-Spalte der Media-Tabelle als Teil der Eingabeaufforderung.
 
 Es muss Vorsicht geboten werden, da die Aktion InstallFiles eine ursprüngliche Datei löschen und nicht ersetzen kann. Dies tritt auf, wenn bei der Aktion InstallFiles beim Ersetzen einer älteren Datei ein Fehler auftritt und der Benutzer den Fehler ignoriert. Das Standardverhalten des Installationsprogramms besteht im Löschen einer alten Datei, bevor sichergestellt wird, dass die neue Datei ordnungsgemäß kopiert wird.
 

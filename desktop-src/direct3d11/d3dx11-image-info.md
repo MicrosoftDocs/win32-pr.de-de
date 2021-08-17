@@ -1,6 +1,6 @@
 ---
-title: D3DX11_IMAGE_INFO -Struktur (D3DX11tex.h)
-description: 'Hinweis: Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Stellen Sie optional Informationen für Texturlader-APIs zur Verfügung, um zu steuern, wie Texturen geladen werden. | D3DX11_IMAGE_INFO -Struktur (D3DX11tex.h)'
+title: D3DX11_IMAGE_INFO-Struktur (D3DX11tex.h)
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Stellen Sie optional Informationen zu Texturladeprogramm-APIs bereit, um zu steuern, wie Texturen geladen werden. | D3DX11_IMAGE_INFO-Struktur (D3DX11tex.h)
 ms.assetid: 981f4f1d-7609-416a-8f92-c7223d8b2773
 keywords:
 - D3DX11_IMAGE_INFO-Struktur Direct3D 11
@@ -25,11 +25,11 @@ ms.locfileid: "118536867"
 # <a name="d3dx11_image_info-structure"></a>D3DX11 \_ IMAGE \_ INFO-Struktur
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 
  
 
-Stellen Sie optional Informationen für Texturlader-APIs zur Verfügung, um zu steuern, wie Texturen geladen werden. Der Wert D3DX11 DEFAULT für einen dieser Parameter führt dazu, dass D3DX automatisch den Wert \_ aus der Quelldatei verwendet.
+Stellen Sie optional Informationen zu Texturladeprogramm-APIs bereit, um zu steuern, wie Texturen geladen werden. Der D3DX11 \_ DEFAULT-Wert für einen dieser Parameter bewirkt, dass D3DX den Wert aus der Quelldatei automatisch verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -83,7 +83,7 @@ Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Die Tiefe der Textur. Dies gilt nur für Volumetexturen.
+Die Tiefe der Textur. Dies gilt nur für Volumentexturen.
 
 </dd> <dt>
 
@@ -105,7 +105,7 @@ Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Die maximale Anzahl von Mipmapebenen in der Textur. Weitere Informationen finden Sie in den Anmerkungen unter [**D3D11 \_ TEX1D \_ SRV**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_tex1d_srv). Wenn Sie 0 oder D3DX11 DEFAULT verwenden, wird \_ eine vollständige Mipmapkette erstellt.
+Die maximale Anzahl von Mipmapebenen in der Textur. Weitere Informationen finden Sie in den Hinweisen in [**D3D11 \_ TEX1D \_ SRV**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_tex1d_srv). Wenn Sie 0 oder D3DX11 DEFAULT verwenden, \_ wird eine vollständige Mipmapkette erstellt.
 
 </dd> <dt>
 
@@ -116,7 +116,7 @@ Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Verschiedene Ressourceneigenschaften, die mit einem [**FLAG D3D11 \_ RESOURCE \_ MISC FLAG \_ angegeben**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_resource_misc_flag) werden.
+Verschiedene Ressourceneigenschaften, die mit einem [**D3D11 \_ RESOURCE \_ MISC \_ FLAG-Flag**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_resource_misc_flag) angegeben wurden.
 
 </dd> <dt>
 
@@ -127,7 +127,7 @@ Typ: **[ **DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_
 
 </dd> <dd>
 
-Eine [**DXGI \_ FORMAT-Enumeration,**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) die das Format an gibt, in dem sich die Textur befindet, nachdem sie geladen wurde.
+Eine [**DXGI \_ FORMAT-Enumeration,**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) die das Format angibt, in dem sich die Textur nach dem Laden befindet.
 
 </dd> <dt>
 
@@ -167,7 +167,7 @@ Diese Struktur wird von Methoden wie [**D3DX11GetImageInfoFromFile,**](d3dx11get
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

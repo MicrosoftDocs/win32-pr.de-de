@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: JET_LS'
+description: 'Weitere Informationen finden Sie unter: JET_LS'
 title: JET_LS
 TOCTitle: JET_LS
 ms:assetid: 8e4e7902-84b1-404b-8654-bb430a0952aa
@@ -29,9 +29,9 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_ls"></a>JET_LS
 
-Der **JET_LS** Datentyp enthält ein Kontexthandle für den lokalen Speicher (LS). Dieses Handle kann einem Cursor oder einer Tabelle zugeordnet sein und auf dynamisch zugeordnete Ressourcen verweisen.
+Der **JET_LS-Datentyp** enthält ein Kontexthandl für den lokalen Speicher (LS). Dieses Handle kann einem Cursor oder einer Tabelle zugeordnet sein und auf dynamisch zugeordnete Ressourcen verweisen.
 
-**Windows XP: JET_LS** wird in Windows XP eingeführt.
+**Windows XP: JET_LS** xp wird in Windows XP eingeführt.
 
 ```cpp
     typedef JET_API_PTR JET_LS;
@@ -41,15 +41,15 @@ Der **JET_LS** Datentyp enthält ein Kontexthandle für den lokalen Speicher (LS
 
 JET_LS
 
-Der Wert JET_LSNil gibt ein ungültiges Kontexthandle an.
+Der Wert JET_LSNil gibt ein ungültiges Kontexthand handle an.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Kontexthandle wird anfänglich dem **JET_LS** Datentyp zugeordnet, wobei [JetSetLS](./jetsetls-function.md)verwendet wird. Das Kontexthandle kann mithilfe von [JetGetLS](./jetgetls-function.md)aus dem **JET_LS** Datentyp abgerufen werden.
+Ein Kontexthandl wird anfänglich mithilfe von [JetSetLS](./jetsetls-function.md) **dem** JET_LS zugeordnet. Das Kontexthandl kann mithilfe von [JetGetLS](./jetgetls-function.md) **aus** dem JET_LS abgerufen werden.
 
-Das Kontexthandle kann mithilfe von [JetGetLS](./jetgetls-function.md) mit JET_bitLSReset explizit vom **datentyp JET_LS** entfernt werden. Alternativ kann die Zuordnung des Kontexthandle zum **JET_LS** Datentyp implizit getrennt werden, wenn das zugrunde liegende Objekt durch die Datenbank-Engine aufgrund direkter oder indirekter Aktionen durch die Anwendung freigegeben wird. Im impliziten Fall wird ein Laufzeitrückruf an die Anwendung ausgegeben, damit sie das Kontexthandle bereinigen kann. Weitere Informationen zum impliziten Aufheben der Zuordnung zum **datentyp JET_LS** finden Sie unter [JetSetLS](./jetsetls-function.md).
+Das Kontexthandl kann explizit vom Datentyp  JET_LS, indem [JetGetLS](./jetgetls-function.md) mit JET_bitLSReset. Alternativ kann das Kontexthand handle implizit vom **JET_LS-Datentyp** disassoziiert werden, wenn das zugrunde liegende Objekt durch die Datenbank-Engine als Ergebnis einer direkten oder indirekten Aktion durch die Anwendung freigegeben wird. Im impliziten Fall wird ein Laufzeitrückruf an die Anwendung ausgegeben, damit sie das Kontexthand handle bereinigen kann. Weitere Informationen zur impliziten Disassoziierung vom **JET_LS-Datentyp** finden Sie unter [JetSetLS](./jetsetls-function.md).
 
-Die folgenden Flags sind dem datentyp JET_LS zugeordnet.
+Die folgenden Flags sind dem JET_LS zugeordnet.
 
 <table>
 <colgroup>
@@ -65,19 +65,19 @@ Die folgenden Flags sind dem datentyp JET_LS zugeordnet.
 <tbody>
 <tr class="odd">
 <td><p>JET_bitLSReset</p></td>
-<td><p>Die Zuordnung des Kontexthandle zum -Objekt wird entfernt.</p></td>
+<td><p>Die Zuordnung des Kontexthandpunkts zum -Objekt wird entfernt.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_bitLSCursor</p></td>
-<td><p>Legen Sie den lokalen Speicher fest, der einem Tabellencursor zugeordnet ist, oder rufen Sie den lokalen Speicher ab.</p></td>
+<td><p>Legen Sie den lokalen Speicher fest, der einem Tabellencursor zugeordnet ist, oder rufen Sie diesen ab.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_bitLSTable</p></td>
-<td><p>Legen Sie den lokalen Speicher fest, der einer Tabelle zugeordnet ist, oder rufen Sie den lokalen Speicher ab.</p></td>
+<td><p>Legen Sie den lokalen Speicher fest, der einer Tabelle zugeordnet ist, oder rufen Sie diesen ab.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_LSNil</p></td>
-<td><p>Das Kontexthandle ist ungültig.</p></td>
+<td><p>Das Kontexthand handle ist ungültig.</p></td>
 </tr>
 </tbody>
 </table>
@@ -101,7 +101,7 @@ Die folgenden Flags sind dem datentyp JET_LS zugeordnet.
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>Deklariert in Esent.h.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>

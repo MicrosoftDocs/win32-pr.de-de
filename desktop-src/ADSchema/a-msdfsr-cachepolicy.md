@@ -1,11 +1,11 @@
 ---
 title: ms-DFSR-CachePolicy-Attribut
-description: Bedarfsbasierte Cacherichtlinienoptionen.
+description: Optionen für bedarfsorientierte Cacherichtlinien.
 ms.assetid: a8754b4f-ebb3-446e-81ca-8b009f55a716
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ms-DFSR-CachePolicy-Attributs
-- AD-Schema des msDFSR-CachePolicy-Attributs
+- MS-DFSR-CachePolicy-Attribut AD-Schema
+- MSDFSR-CachePolicy-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118686056"
 ---
 # <a name="ms-dfsr-cachepolicy-attribute"></a>ms-DFSR-CachePolicy-Attribut
 
-Bedarfsbasierte Cacherichtlinienoptionen.
+Optionen für bedarfsorientierte Cacherichtlinien.
 
 
 
@@ -35,7 +35,7 @@ Bedarfsbasierte Cacherichtlinienoptionen.
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.29           |
-| System-Id-Guid    | db7a08e7-fc76-4569-a45f-f5ecb66a88b5 |
+| System-ID-GUID    | db7a08e7-fc76-4569-a45f-f5ecb66a88b5 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -55,7 +55,7 @@ Bedarfsbasierte Cacherichtlinienoptionen.
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | Falsch                                                            |
-| Is-Single-Valued       | Richtig                                                             |
+| Ist einwertig       | Richtig                                                             |
 | Ist indiziert             | Falsch                                                            |
 | Im globalen Katalog      | Falsch                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
@@ -76,7 +76,7 @@ Bedarfsbasierte Cacherichtlinienoptionen.
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | Falsch                                                            |
-| Is-Single-Valued       | Richtig                                                             |
+| Ist einwertig       | Richtig                                                             |
 | Ist indiziert             | Falsch                                                            |
 | Im globalen Katalog      | Falsch                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
@@ -97,7 +97,7 @@ Bedarfsbasierte Cacherichtlinienoptionen.
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | Falsch                                                            |
-| Is-Single-Valued       | Richtig                                                             |
+| Ist einwertig       | Richtig                                                             |
 | Ist indiziert             | Falsch                                                            |
 | Im globalen Katalog      | Falsch                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                     |

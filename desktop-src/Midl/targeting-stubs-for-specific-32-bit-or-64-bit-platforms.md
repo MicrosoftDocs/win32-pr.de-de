@@ -31,13 +31,13 @@ Der releaseabhängige Schutz wird durch eine Reihe von Features in den verarbeit
 
 Die in Rpcndr.h definierten Schutzmakros hängen von der Einstellung von WINVER und WIN32 WINNT ab und werden vom \_ \_ C/C++-Compiler ausgewertet.
 
-Wenn Sie zur C-Kompilierungszeit eine Fehlermeldung erhalten, die angibt, dass Sie eine bestimmte Plattform zum Ausführen eines Stubs benötigen, überprüfen Sie zunächst, ob Sie ein Feature verwendet haben, das auf dieser Plattform nicht verfügbar ist. Die Features, die einen bestimmten Wächter auslösen, werden im Text des Wächters aufgeführt. Im vorherigen Beispiel hat der Compilerschalter -Oicf den Schutz ausgelöst. Zu den wichtigsten Features dieser Art gehören der Schalter [**/robust**](-robust.md) und das asynchrone Attribut, das unter \[ [](async.md) \] Windows 2000 [](pipe.md) und höher verfügbar ist, der Pipetypkonstruktor, die Compileroption /Oif und die Marshall- und \[ [**\_**](user-marshal.md) \] \[ [**Wire \_ Marshal-Attribute**](wire-marshal.md) des \] Benutzers. Stubs, die diese Features verwenden, werden auf früheren Systemen nicht ausgeführt.
+Wenn Sie zur C-Kompilierungszeit eine Fehlermeldung erhalten, die angibt, dass Sie eine bestimmte Plattform zum Ausführen eines Stubs benötigen, überprüfen Sie zunächst, ob Sie kein Feature verwendet haben, das auf dieser Plattform nicht verfügbar ist. Die Features, die einen bestimmten Wächter auslösen, werden im Text des Wächters aufgeführt. Im vorherigen Beispiel hat der Compilerschalter -Oicf den Schutz ausgelöst. Zu den wichtigsten Features dieser Art gehören der Schalter [**/robust**](-robust.md) und das asynchrone Attribut, das unter \[ [](async.md) \] Windows 2000 [](pipe.md) und höher verfügbar ist, der Pipetypkonstruktor, die Compileroption /Oif und die Marshall- und \[ [**\_**](user-marshal.md) \] \[ [**Wire \_ Marshal-Attribute**](wire-marshal.md) des \] Benutzers. Stubs, die diese Features verwenden, werden auf früheren Systemen nicht ausgeführt.
 
 Wenn Sie wissen, dass Ihre Zielplattform für die von Ihnen verwendeten Features korrekt ist und trotzdem ein Fehler auftritt, müssen Sie die Umgebungsvariablen möglicherweise entsprechend festlegen.
 
 **So erstellen Sie für Windows 2000 oder höher**
 
--   Fügen Sie Ihrem Makefile diese Zeile hinzu:
+-   Fügen Sie Ihrer Makefile-Datei diese Zeile hinzu:
 
     ``` syntax
     CFLAGS = $(CFLAGS) -D_WIN32_WINNT=0x500

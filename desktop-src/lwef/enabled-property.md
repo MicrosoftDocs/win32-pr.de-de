@@ -1,6 +1,6 @@
 ---
 title: Enabled-Eigenschaft (Balloon-Objekt)
-description: Erfahren Sie mehr über die Enabled Balloon-Objekteigenschaft. Microsoft Agent ist ab 7 Windows veraltet.
+description: Erfahren Sie mehr über die Enabled Balloon-Objekteigenschaft. Der Microsoft-Agent ist ab Windows 7 veraltet.
 ms.assetid: 4d73acda-6fcc-4912-a466-570849aeb807
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,14 +13,14 @@ ms.locfileid: "118752002"
 ---
 # <a name="enabled-property-balloon-object"></a>Enabled-Eigenschaft (Balloon-Objekt)
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt zurück, ob das Wort balloon für das angegebene Zeichen aktiviert ist.
+Gibt zurück, ob die Wortsprechblase für das angegebene Zeichen aktiviert ist.
 
 </dd> <dt>
 
@@ -44,7 +44,7 @@ Gibt zurück, ob das Wort balloon für das angegebene Zeichen aktiviert ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Enabled-Eigenschaft** gibt einen booleschen Wert zurück, der angibt, ob die Sprechblase aktiviert ist. Der Standardzustand des Wortsprechblasens wird als Teil der Definition eines Zeichens festgelegt, wenn das Zeichen im Microsoft Agent-Zeichen-Editor kompiliert wird. Wenn ein Zeichen so definiert ist, dass es das Wort Balloon nicht unterstützt, ist diese Eigenschaft für das Zeichen **immer** FALSE.
+Die **Enabled-Eigenschaft** gibt einen booleschen Wert zurück, der angibt, ob die Sprechblase aktiviert ist. Der Standardzustand des Sprechblasens wird als Teil der Definition eines Zeichens festgelegt, wenn das Zeichen im Microsoft-Agent-Zeichen-Editor kompiliert wird. Wenn ein Zeichen so definiert ist, dass es die Wortsprechblase nicht unterstützt, ist diese Eigenschaft für das Zeichen immer **False.**
 
  
 

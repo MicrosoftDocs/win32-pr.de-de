@@ -60,7 +60,7 @@ Gibt bei Erfolg S \_ OK oder einen der folgenden Fehlercodes zurück.
 |------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
 | <dl> <dt>**E \_ FAIL**</dt> </dl>        | Das Bild kann nicht eingefügt werden. <br/>                          |
 | <dl> <dt>**E \_ INVALIDARG**</dt> </dl>   | Der *lParam-Parameter* ist NULL oder verweist auf ein ungültiges Bild. |
-| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher verfügbar.<br/>                  |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher verfügbar.<br/>                  |
 
 
 
@@ -82,7 +82,7 @@ Wenn die Auswahl eine Einfügemarke ist, wird das Bildblob an der Einfügemarke 
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

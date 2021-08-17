@@ -1,6 +1,6 @@
 ---
 title: UI_PKEY_Label
-description: Identifiziert die \_ \_ PKEY-Bezeichnungseigenschaft der Benutzeroberfläche.
+description: Identifiziert die \_ PKEY \_ Label-Eigenschaft der Benutzeroberfläche.
 ms.assetid: 4d704133-bba7-4c32-a552-d748b66455eb
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118706431"
 ---
-# <a name="ui_pkey_label"></a>\_PKEY-Bezeichnung der \_ Benutzeroberfläche
+# <a name="ui_pkey_label"></a>\_ \_ UI-PKEY-Bezeichnung
 
-Identifiziert die \_ \_ PKEY-Bezeichnungseigenschaft der Benutzeroberfläche.
+Identifiziert die \_ PKEY \_ Label-Eigenschaft der Benutzeroberfläche.
 
 ```
 propertyDescription
@@ -27,25 +27,25 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Benutzeroberflächen-PKEY-Bezeichnung wird von einer Anwendung verwendet, um den Bezeichnungstext von Registerkarten, Gruppen, Schaltflächen, Katalogelementen und \_ anderen Menüband-Steuerelementen \_ abfragt.
+Ui \_ PKEY \_ Label wird von einer Anwendung verwendet, um den Bezeichnungstext von Registerkarten, Gruppen, Schaltflächen, Katalogelementen und anderen Menübandsteuerelementen abzufragen.
 
 > [!Note]  
-> Windows 8 und neuer: Bild der [Anwendungsmenüschaltfläche](windowsribbon-controls-applicationmenu.md) wurde in Bezeichnung geändert: **Datei**. Es wird empfohlen, datei nicht als Bezeichnung für ihre eigenen Registerkarten zu verwenden.
+> Windows 8 und neuer: Bild der Schaltfläche ["Anwendungsmenü"](windowsribbon-controls-applicationmenu.md) wurde in die Bezeichnung **Datei** geändert. Es wird empfohlen, Datei nicht als Bezeichnung für ihre eigenen Registerkarten zu verwenden.
 
  
 
-Der -Eigenschaftswert ist eine Zeichenfolge, die auf eine beliebige Folge von Zeichen beschränkt ist, einschließlich Leerzeichen und Zeilenumbruchzeichen.
+Der -Eigenschaftswert ist eine Zeichenfolge, die auf eine beliebige Zeichensequenz beschränkt ist, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.
 
 > [!Note]  
-> Verwenden Sie den UCS-XML-Zeichenverweis (Universal Character Set), `&#xA;` um einen Zeilenumbruch anzugeben.
+> Verwenden Sie den UCS-XML-Zeichenverweis (Universal Character Set), `&#xA;` um einen Zeilenbreak anzugeben.
 
  
 
-Die richtige Ausrichtung wird nicht unterstützt.
+Die rechte Ausrichtung wird nicht unterstützt.
 
-Die maximale Länge der \_ \_ PKEY-Bezeichnung der Benutzeroberfläche ist ungebunden.
+Die maximale Länge der \_ Ui-PKEY-Bezeichnung \_ ist nicht gebunden.
 
-Wenn ein Befehl über ein Menüelement verfügbar gemacht wird und der Wert von [**Command.LabelTitle**](windowsribbon-element-command-labeltitle.md) oder UI PKEY Label einen Buchstaben enthält, dem ein ampersand vorangestellt ist, wie im folgenden Beispiel gezeigt, wird dieser Buchstabe sowohl als Tastenkombination als auch als Tastenkombination für diesen Befehl vom Menübandframework \_ \_ behandelt.
+Wenn ein Befehl über ein Menüelement verfügbar gemacht wird und der Wert von [**Command.LabelTitle**](windowsribbon-element-command-labeltitle.md) oder UI \_ PKEY \_ Label einen Buchstaben enthält, dem ein ampersand vorangestellt ist, wie im folgenden Beispiel gezeigt, wird dieser Buchstabe sowohl als KeyTip als auch als Tastaturtaste für diesen Befehl vom Menübandframework behandelt.
 
 
 ```XML
@@ -58,7 +58,7 @@ Wenn ein Befehl über ein Menüelement verfügbar gemacht wird und der Wert von 
 
 
 
-Um ein ampersand-Zeichen in einer Bezeichnung anzuzeigen, versehen Sie die Sonderzeichenbezeichnung mit einem doppelten Ampersand ( ), wie `&&` im folgenden Beispiel gezeigt.
+Um ein ampersand in einer Bezeichnung anzuzeigen, escapen Sie die Sonderzeichenbezeichnung mit einem doppelten Ampersand ( `&&` ), wie im folgenden Beispiel gezeigt.
 
 
 ```XML

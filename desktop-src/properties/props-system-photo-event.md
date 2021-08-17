@@ -1,5 +1,5 @@
 ---
-description: Das Ereignis, bei dem das Foto aufgenommen wurde. Der Endbenutzer stellt diesen Wert bereit.
+description: Das Ereignis, in dem das Foto aufgenommen wurde. Der Endbenutzer gibt diesen Wert an.
 ms.assetid: 6fc350fa-9597-484a-bd6d-7a343ba58eca
 title: System.Photo.Event
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118723895"
 ---
 # <a name="systemphotoevent"></a>System.Photo.Event
 
-Das Ereignis, bei dem das Foto aufgenommen wurde. Der Endbenutzer stellt diesen Wert bereit.
+Das Ereignis, in dem das Foto aufgenommen wurde. Der Endbenutzer gibt diesen Wert an.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

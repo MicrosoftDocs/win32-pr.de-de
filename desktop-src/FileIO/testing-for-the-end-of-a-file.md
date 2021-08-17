@@ -1,21 +1,21 @@
 ---
-description: Beispielcode, der zeigt, wie das Dateiende während eines synchronen Lesevorgangs und während eines asynchronen Lesevorgangs getestet werden kann.
+description: Beispielcode, der zeigt, wie während eines synchronen Lesevorgang und während eines asynchronen Lesevorganges auf das Dateiende testt wird.
 ms.assetid: 93fa9e29-1ff1-496d-9551-99ae88ba7253
-title: Testen für das Ende einer Datei
+title: Testen auf das Ende einer Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 25e6b60f8e17fc452b0638b820be5978775ea5ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b1b345a0b908e88cfbb98129bc05350c2e265db8bc943d10151a89a17a10fc14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950999"
 ---
-# <a name="testing-for-the-end-of-a-file"></a>Testen für das Ende einer Datei
+# <a name="testing-for-the-end-of-a-file"></a>Testen auf das Ende einer Datei
 
-Die Funktion "read [**File**](/windows/desktop/api/FileAPI/nf-fileapi-readfile) " prüft bei synchronen und asynchronen Lesevorgängen unterschiedlich das Dateiende (EOF). Wenn ein synchroner Lesevorgang am Ende einer Datei ausgeführt wird, gibt " **Infofile** " den Wert " **true** " zurück und legt die Variable, auf die der *lpnumofbytesread* -Parameter verweist, auf NULL fest. Bei einem asynchronen Lesevorgang kann das Ende einer Datei während des initiierenden Aufrufens einer **Datei oder während** nachfolgenden asynchronen Vorgängen auftreten, wenn der Dateizeiger über das Ende der Datei Programm gesteuert hinaus erweitert wird.
+Die [**ReadFile-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-readfile) überprüft auf synchrone und asynchrone Lesevorgänge anders auf die End-of-File-Bedingung (End-of-File Condition, EOF). Wenn ein synchroner Lesevorgang an das Ende einer Datei geht, gibt **ReadFile** **TRUE** zurück und legt die Variable, auf die der *lpNumberOfBytesRead-Parameter* zeigt, auf 0 (null) fest. Bei einem asynchronen Lesevorgang kann das Ende einer Datei während des initiierenden Aufrufs von **ReadFile** oder bei nachfolgenden asynchronen Vorgängen auftreten, wenn der Dateizeiger programmgesteuert über das Ende der Datei hinaus erweitert wird.
 
-Im folgenden Beispiel wird gezeigt, wie Sie während eines synchronen Lesevorgangs auf das Ende einer Datei testen.
+Das folgende C++-Beispiel zeigt, wie sie während eines synchronen Lesevorganges auf das Ende einer Datei testen.
 
 
 ```C++
@@ -31,9 +31,9 @@ Im folgenden Beispiel wird gezeigt, wie Sie während eines synchronen Lesevorgan
 
 
 
-Der Test für das Dateiende während eines asynchronen Lesevorgangs ist etwas komplizierter als bei einem ähnlichen synchronen Lesevorgang. Der Dateiende-Indikator für asynchrone Lesevorgänge ist, wenn [**GetOverLappedResult**](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) **false** zurückgibt und [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) das **Fehler \_ handle \_ EOF** zurückgibt.
+Der Test für das Dateiende während eines asynchronen Lesevorgang ist etwas schwieriger als bei einem ähnlichen synchronen Lesevorgang. Der End-of-File-Indikator für asynchrone Lesevorgänge ist, wenn [**GetOverlappedResult**](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) **FALSE** und [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) **ERROR HANDLE \_ \_ EOF zurückgibt.**
 
-Im folgenden Beispiel wird gezeigt, wie das Dateiende während eines asynchronen Lesevorgangs getestet werden kann.
+Das folgende C++-Beispiel zeigt, wie sie während eines asynchronen Lesevorganges auf das Dateiende testen.
 
 
 ```C++

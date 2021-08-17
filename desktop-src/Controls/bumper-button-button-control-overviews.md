@@ -1,6 +1,6 @@
 ---
-title: Übersicht über Schaltflächensteuerelement
-description: Übersicht über Schaltflächensteuerelement
+title: Übersichten über das Schaltflächensteuerfeld
+description: Übersichten über das Schaltflächensteuerfeld
 ms.assetid: f976dab1-21fe-44e9-b1e1-e0367aba840b
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119439089"
 ---
-# <a name="button-control-overviews"></a>Übersicht über Schaltflächensteuerelement
+# <a name="button-control-overviews"></a>Übersichten über das Schaltflächensteuerfeld
 
 -   [Informationen zu Schaltflächen](about-buttons.md)
 -   [Verwenden von Schaltflächen](using-buttons.md)

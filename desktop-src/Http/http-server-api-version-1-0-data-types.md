@@ -1,35 +1,35 @@
 ---
-title: HTTP Server-API, Version 1,0, Datentypen
-description: Die HTTP-Server-API verwendet verschiedene in der http. h-Header Datei deklarierte Typen von speziellen Zweck Bezeichnern als 64-Bit-Ganzzahlen ohne Vorzeichen.
+title: HTTP Server API Version 1.0-Datentypen
+description: Die HTTP-Server-API verwendet verschiedene Bezeichnertypen für spezielle Zwecke, die in der Http.h-Headerdatei als 64-Bit-Ganzzahlen ohne Vorzeichen deklariert sind.
 ms.assetid: bec1d41e-0c80-49bc-84e1-b16c409cd0f3
 keywords:
-- HTTP_CONNECTION_ID http-Typ
-- HTTP_RAW_CONNECTION_ID http-Typ
-- HTTP_REQUEST_ID http-Typ
-- HTTP_URL_CONTEXT http-Typ
+- HTTP_CONNECTION_ID HTTP-Typ
+- HTTP_RAW_CONNECTION_ID HTTP-Typ
+- HTTP_REQUEST_ID HTTP-Typ
+- HTTP_URL_CONTEXT HTTP-Typ
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 681e24c06334a9010287e2084d9d6a04428ca6a1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 151ef975470ca21c6e82e5bc7bd7bd8b99a70573385375e8552b6660ce78f631
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950799"
 ---
-# <a name="http-server-api-version-10-data-types"></a>HTTP Server-API, Version 1,0, Datentypen
+# <a name="http-server-api-version-10-data-types"></a>HTTP Server API Version 1.0-Datentypen
 
-Die HTTP-Server-API verwendet verschiedene Typen von speziellen Zweck Bezeichnern, die in der http. h-Header Datei als 64-Bit-Ganzzahlen ohne Vorzeichen (**ulonglongs**) deklariert sind:
+Die HTTP-Server-API verwendet verschiedene spezielle Bezeichnertypen, die in der Http.h-Headerdatei als 64-Bit-Ganzzahlen ohne Vorzeichen deklariert sind (**ULONGLONGs**):
 
--   HTTP- \_ Verbindungs- \_ ID
--   HTTP \_ - \_ rohverbindungs- \_ ID
--   HTTP- \_ Anforderungs- \_ ID
--   HTTP- \_ URL- \_ Kontext
+-   \_ \_ HTTP-VERBINDUNGS-ID
+-   \_ \_ HTTP-ROHVERBINDUNGS-ID \_
+-   \_ \_ HTTP-ANFORDERUNGs-ID
+-   \_HTTP-URL-KONTEXT \_
 
-Eine Anwendung sollte nicht versuchen, einen Bezeichner zu generieren oder zu ändern, der zu einem dieser Typen gehört.
+Eine Anwendung sollte nicht versuchen, bezeichner zu generieren oder zu ändern, die zu einem dieser Typen gehören.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: D3DX11_FILTER_FLAG-Enumeration (D3DX11tex.h)
-description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Flags für die Texturfilterung.
+title: D3DX11_FILTER_FLAG -Enumeration (D3DX11tex.h)
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Texturfilterflags.
 ms.assetid: 083a6a19-1933-4831-9501-36d4867f3dce
 keywords:
 - D3DX11_FILTER_FLAG-Enumeration Direct3D 11
@@ -25,11 +25,11 @@ ms.locfileid: "118537001"
 # <a name="d3dx11_filter_flag-enumeration"></a>D3DX11 \_ FILTER \_ FLAG-Enumeration
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
 
  
 
-Flags für die Texturfilterung.
+Texturfilterflags.
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,97 +69,97 @@ Es erfolgt keine Skalierung oder Filterung. Pixel außerhalb der Grenzen des Que
 <span id="D3DX11_FILTER_POINT"></span><span id="d3dx11_filter_point"></span>**D3DX11-FILTERPUNKT \_ \_**
 </dt> <dd>
 
-Jedes Zielpixel wird berechnet, indem das nächste Pixel aus dem Quellbild entnommen wird.
+Jedes Zielpixel wird durch Sampling des nächstgelegenen Pixels aus dem Quellbild berechnet.
 
 </dd> <dt>
 
 <span id="D3DX11_FILTER_LINEAR"></span><span id="d3dx11_filter_linear"></span>**D3DX11 \_ FILTER \_ LINEAR**
 </dt> <dd>
 
-Jedes Zielpixel wird berechnet, indem die vier nächsten Pixel aus dem Quellbild entnommen werden. Dieser Filter funktioniert am besten, wenn die Skala auf beiden Achsen kleiner als zwei ist.
+Jedes Zielpixel wird durch Sampling der vier nächstgelegenen Pixel aus dem Quellbild berechnet. Dieser Filter funktioniert am besten, wenn die Skalierung auf beiden Achsen kleiner als zwei ist.
 
 </dd> <dt>
 
-<span id="D3DX11_FILTER_TRIANGLE"></span><span id="d3dx11_filter_triangle"></span>**D3DX11– \_ \_ FILTERDREIECK**
+<span id="D3DX11_FILTER_TRIANGLE"></span><span id="d3dx11_filter_triangle"></span>**D3DX11 \_ \_ FILTERDREIECK**
 </dt> <dd>
 
-Jedes Pixel im Quellbild trägt gleichermaßen zum Zielbild bei. Dies ist der langsamste Filter.
+Jedes Pixel im Quellbild trägt gleichermaßen zum Zielbild bei. Dies ist die langsamste der Filter.
 
 </dd> <dt>
 
 <span id="D3DX11_FILTER_BOX"></span><span id="d3dx11_filter_box"></span>**D3DX11-FILTERFELD \_ \_**
 </dt> <dd>
 
-Jedes Pixel wird berechnet, indem der Mittelwert eines 2x2(x2)-Felds von Pixeln aus dem Quellbild berechnet wird. Dieser Filter funktioniert nur, wenn die Abmessungen des Ziels halb so sind wie bei Mipmaps.
+Jedes Pixel wird berechnet, indem ein 2x2(x2)-Feld aus Pixeln aus dem Quellbild durchschnittlich berechnet wird. Dieser Filter funktioniert nur, wenn die Dimensionen des Ziels die Hälfte der Quelldimensionen sind, wie dies bei Mipmaps der Fall ist.
 
 </dd> <dt>
 
 <span id="D3DX11_FILTER_MIRROR_U"></span><span id="d3dx11_filter_mirror_u"></span>**D3DX11 \_ \_ \_ FILTERSPIEGELUNG U**
 </dt> <dd>
 
-Pixel am Rand der Textur auf der U-Achse sollten gespiegelt und nicht umschlossen werden.
+Pixel vom Rand der Textur auf der U-Achse sollten gespiegelt und nicht umschlossen werden.
 
 </dd> <dt>
 
-<span id="D3DX11_FILTER_MIRROR_V"></span><span id="d3dx11_filter_mirror_v"></span>**D3DX11 \_ FILTER \_ MIRROR \_ V**
+<span id="D3DX11_FILTER_MIRROR_V"></span><span id="d3dx11_filter_mirror_v"></span>**D3DX11 \_ \_ \_ FILTERSPIEGELUNG V**
 </dt> <dd>
 
-Pixel am Rand der Textur auf der V-Achse sollten gespiegelt und nicht umschlossen werden.
+Pixel vom Rand der Textur auf der V-Achse sollten gespiegelt und nicht umschlossen werden.
 
 </dd> <dt>
 
 <span id="D3DX11_FILTER_MIRROR_W"></span><span id="d3dx11_filter_mirror_w"></span>**D3DX11 \_ \_ \_ FILTERSPIEGELUNG W**
 </dt> <dd>
 
-Pixel am Rand der Textur auf der W-Achse sollten gespiegelt und nicht umschlossen werden.
+Pixel vom Rand der Textur auf der W-Achse sollten gespiegelt und nicht umschlossen werden.
 
 </dd> <dt>
 
-<span id="D3DX11_FILTER_MIRROR"></span><span id="d3dx11_filter_mirror"></span>**D3DX11-FILTERSPIEGEL \_ \_**
+<span id="D3DX11_FILTER_MIRROR"></span><span id="d3dx11_filter_mirror"></span>**D3DX11 \_ \_ FILTERSPIEGELUNG**
 </dt> <dd>
 
-Die Angabe dieses Flags entspricht der Angabe der W-Flags D3DX \_ FILTER \_ MIRROR \_ U, D3DX FILTER MIRROR V und \_ \_ \_ D3DX \_ FILTER \_ \_ MIRROR.
+Die Angabe dieses Flags ist identisch mit der Angabe der Flags D3DX \_ FILTER \_ MIRROR \_ U, D3DX FILTER MIRROR V und \_ \_ \_ D3DX \_ FILTER MIRROR \_ \_ W.
 
 </dd> <dt>
 
 <span id="D3DX11_FILTER_DITHER"></span><span id="d3dx11_filter_dither"></span>**D3DX11 \_ FILTER \_ DITHER**
 </dt> <dd>
 
-Das resultierende Bild muss mithilfe eines 4x4-geordneten Ditheralgorithmus geblendet werden. Dies geschieht beim Konvertieren von einem Format in ein anderes.
+Das resultierende Bild muss mithilfe eines 4x4-geordneten Ditheralgorithmus gedithert werden. Dies geschieht bei der Konvertierung von einem Format in ein anderes.
 
 </dd> <dt>
 
-<span id="D3DX11_FILTER_DITHER_DIFFUSION"></span><span id="d3dx11_filter_dither_diffusion"></span>**D3DX11 \_ FILTER \_ DITHER \_ WIEDERVERZWEIGT**
+<span id="D3DX11_FILTER_DITHER_DIFFUSION"></span><span id="d3dx11_filter_dither_diffusion"></span>**D3DX11 \_ FILTER \_ \_ DITHERANTE**
 </dt> <dd>
 
-Verwenden Sie diffuses Dithering auf dem Bild, wenn Sie von einem Format in ein anderes wechseln.
+Machen Sie diffuses Dithering auf dem Bild, wenn Sie von einem Format in ein anderes wechseln.
 
 </dd> <dt>
 
 <span id="D3DX11_FILTER_SRGB_IN"></span><span id="d3dx11_filter_srgb_in"></span>**D3DX11 \_ FILTER \_ SRGB \_ IN**
 </dt> <dd>
 
-Eingabedaten sind im Standardfarbraum RGB (sRGB) enthalten. Siehe Bemerkungen.
+Die Eingabedaten sind im STANDARDMÄßIGEN RGB-Farbraum (sRGB) gespeichert. Siehe Bemerkungen.
 
 </dd> <dt>
 
 <span id="D3DX11_FILTER_SRGB_OUT"></span><span id="d3dx11_filter_srgb_out"></span>**D3DX11 \_ FILTER \_ SRGB \_ OUT**
 </dt> <dd>
 
-Ausgabedaten sind im STANDARD-RGB-Farbraum (sRGB) enthalten. Siehe Bemerkungen.
+Die Ausgabedaten werden im STANDARDMÄßIGEN RGB-Farbraum (sRGB) angezeigt. Siehe Bemerkungen.
 
 </dd> <dt>
 
 <span id="D3DX11_FILTER_SRGB"></span><span id="d3dx11_filter_srgb"></span>**D3DX11 \_ FILTER \_ SRGB**
 </dt> <dd>
 
-Entspricht der Angabe von D3DX \_ FILTER \_ SRGB \_ IN \| D3DX \_ FILTER \_ SRGB \_ OUT. Siehe Bemerkungen.
+Identisch mit der Angabe von D3DX \_ FILTER \_ SRGB \_ IN \| D3DX \_ FILTER \_ SRGB \_ OUT. Siehe Bemerkungen.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Bemerkungen
 
-D3DX11 führt beim Laden von Texturdaten automatisch eine Gammakorrektur durch (um Farbdaten aus dem RGB-Raum in den RGB-Standardbereich zu konvertieren). Dies erfolgt beispielsweise automatisch, wenn RGB-Daten aus einer .png-Datei in eine sRGB-Textur geladen werden. Verwenden Sie die SRGB-Filterflags, um anzugeben, ob die Daten nicht in sRGB-Speicherplatz konvertiert werden müssen.
+D3DX11 führt beim Laden von Texturdaten automatisch eine Gammakorrektur durch (um Farbdaten aus dem RGB-Raum in den RGB-Standardraum zu konvertieren). Dies erfolgt beispielsweise automatisch, wenn RGB-Daten aus einer .png in eine sRGB-Textur geladen werden. Verwenden Sie die SRGB-Filterflags, um anzugeben, ob die Daten nicht in sRGB-Speicherplatz konvertiert werden müssen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -171,7 +171,7 @@ D3DX11 führt beim Laden von Texturdaten automatisch eine Gammakorrektur durch (
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

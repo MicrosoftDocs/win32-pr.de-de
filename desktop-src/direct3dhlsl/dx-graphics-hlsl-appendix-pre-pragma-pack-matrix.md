@@ -1,9 +1,9 @@
 ---
-title: pack_matrix Pragma-Direktive
+title: pack_matrix Pragmadirektive
 description: Pragma-Direktive, die die Komprimierungsausrichtung für Matrizen angibt.
 ms.assetid: e77dc007-d915-4d78-9fff-d44d4999e4da
 keywords:
-- pack_matrix Pragmadirektive HLSL
+- pack_matrix Pragma-Direktive HLSL
 topic_type:
 - apiref
 api_name:

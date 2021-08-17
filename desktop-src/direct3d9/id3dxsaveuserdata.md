@@ -37,7 +37,7 @@ Die **ID3DXSaveUserData-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                              | Beschreibung                                                        |
+| Methode                                                                              | BESCHREIBUNG                                                        |
 |:------------------------------------------------------------------------------------|:-------------------------------------------------------------------|
 | [**AddFrameChildData**](id3dxsaveuserdata--addframechilddata.md)                   | Fügen Sie dem Frame untergeordnete Daten hinzu.<br/>                            |
 | [**AddMeshChildData**](id3dxsaveuserdata--addmeshchilddata.md)                     | Fügen Sie dem Gitternetz untergeordnete Daten hinzu.<br/>                             |

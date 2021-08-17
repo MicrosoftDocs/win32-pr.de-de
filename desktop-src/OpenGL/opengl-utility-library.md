@@ -3,7 +3,7 @@ title: OpenGL-Hilfsprogrammbibliothek
 description: OpenGL-Hilfsprogrammbibliothek
 ms.assetid: 54a7cdce-b38d-416a-a59d-827b6fb76b47
 keywords:
-- OpenGL,OpenGL Utility (GLU)
+- OpenGL,OpenGL-Hilfsprogramm (GLU)
 - OpenGL-Hilfsprogramm (GLU)
 - GLU-Bibliothek OpenGL
 ms.topic: article

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: Implizite Sitzungskonvertierung (Sitzung in JET_SESID)'
+description: Weitere Informationen finden Sie unter Implizite Sitzungskonvertierung (Sitzung in JET_SESID)
 title: Implizite Sitzungskonvertierung (Sitzung in JET_SESID)
 TOCTitle: Implicit conversion (Session to JET_SESID)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Session.op_Implicit(Microsoft.Isam.Esent.Interop.Session)~Microsoft.Isam.Esent.Interop.JET_SESID
@@ -34,7 +34,7 @@ ms.locfileid: "118485509"
 ---
 # <a name="session-implicit-conversion-session-to-jet_sesid"></a>Implizite Sitzungskonvertierung (Sitzung in JET_SESID)
 
-Impliziter Konvertierungsoperator von einer Sitzung in eine JET_SESID. Dadurch kann eine Sitzung mit APIs verwendet werden, die eine JET_SESID erwarten.
+Impliziter Konvertierungsoperator von einer Sitzung in JET_SESID. Dadurch kann eine Sitzung mit APIs verwendet werden, die eine JET_SESID.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)

@@ -1,39 +1,39 @@
 ---
-description: Enthält einen vom Aufrufer definierten Wert für ein metransformmarker-Ereignis.
+description: Enthält einen vom Aufrufer definierten Wert für ein METransformMarker-Ereignis.
 ms.assetid: c6ab20d9-c2bc-43ba-a018-2c6682bf0485
-title: MF_EVENT_MFT_CONTEXT-Attribut (mfapi. h)
+title: MF_EVENT_MFT_CONTEXT-Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d61e8920c119da151df1215e8de8ce0d526220e5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9518853030ec52a687f02ac0288c3fd3ffcf55b676be56c7036b349e1dec9aa0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119104846"
 ---
-# <a name="mf_event_mft_context-attribute"></a>\_ \_ MFT- \_ Kontext Attribut für das MF-Ereignis
+# <a name="mf_event_mft_context-attribute"></a>MF \_ EVENT \_ MFT \_ CONTEXT-Attribut
 
-Enthält einen vom Aufrufer definierten Wert für ein [metransformmarker](metransformmarker.md) -Ereignis.
+Enthält einen vom Aufrufer definierten Wert für ein [METransformMarker-Ereignis.](metransformmarker.md)
 
 ## <a name="data-type"></a>Datentyp
 
-**Ulong \_** Als **UINT64** gespeicherter PTR
+**ULONG \_ PTR** als **UINT64** gespeichert
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUINT64 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT64 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF Media Event**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaevent)
+[**WFMEDIAEVENT**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaevent)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird mit dem [metransformmarker](metransformmarker.md) -Ereignis verwendet. Der Wert des-Attributs wird aus dem *ulparam* -Parameter der [**IMF Transform::P rocess Message**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage) -Methode entnommen.
+Dieses Attribut wird mit dem [METransformMarker-Ereignis](metransformmarker.md) verwendet. Der Wert des Attributs wird aus dem *ulParam-Parameter* der [**PARAMETERSTransform::P rocessMessage-Methode**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage) übernommen.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,13 +41,13 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                     |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentTaggedNotNULLException-Konstruktor'
+description: 'Weitere Informationen zu: EsentTaggedNotNULLException-Konstruktor'
 title: EsentTaggedNotNULLException-Konstruktor
 TOCTitle: 'EsentTaggedNotNULLException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentTaggedNotNULLException.#ctor

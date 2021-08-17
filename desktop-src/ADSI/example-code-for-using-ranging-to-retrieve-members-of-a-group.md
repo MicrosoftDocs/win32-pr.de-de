@@ -19,7 +19,7 @@ ms.locfileid: "118691843"
 
 Im folgenden Codebeispiel wird mit ActiveX Directory Objects (ADO) zum Abrufen der Mitglieder einer Gruppe verwendet.
 
-Der folgende Codeausschnitt erfordert einen Verweis auf die Microsoft ActiveX Data Objects 6.0-Bibliothek.
+Der folgende Codeausschnitt erfordert einen Verweis auf microsoft ActiveX Data Objects 6.0 Library.
 
 
 ```VB

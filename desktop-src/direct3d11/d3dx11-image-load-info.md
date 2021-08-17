@@ -1,6 +1,6 @@
 ---
 title: D3DX11_IMAGE_LOAD_INFO -Struktur (D3DX11tex.h)
-description: 'Hinweis: Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Stellen Sie optional Informationen für Texturlader-APIs zur Verfügung, um zu steuern, wie Texturen geladen werden. | D3DX11_IMAGE_LOAD_INFO -Struktur (D3DX11tex.h)'
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Stellen Sie optional Informationen für Texturlader-APIs zur Verfügung, um zu steuern, wie Texturen geladen werden. | D3DX11_IMAGE_LOAD_INFO -Struktur (D3DX11tex.h)
 ms.assetid: 6cd2f590-4e15-41e6-9f04-cd91eeb082db
 keywords:
 - D3DX11_IMAGE_LOAD_INFO-Struktur Direct3D 11
@@ -109,7 +109,7 @@ Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Die maximale Anzahl von Mipmapebenen in der Textur. Weitere Informationen finden Sie in den Anmerkungen unter [**D3D11 \_ TEX1D \_ SRV**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_tex1d_srv). Wenn Sie 0 oder D3DX11 DEFAULT verwenden, wird \_ eine vollständige Mipmapkette erstellt.
+Die maximale Anzahl von Mipmapebenen in der Textur. Weitere Informationen finden Sie unter [**D3D11 \_ TEX1D \_ SRV**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_tex1d_srv). Wenn Sie 0 oder D3DX11 DEFAULT verwenden, wird \_ eine vollständige Mipmapkette erstellt.
 
 </dd> <dt>
 
@@ -120,7 +120,7 @@ Typ: **[ **D3D11 \_ USAGE**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage)**
 
 </dd> <dd>
 
-Die Art und Weise, wie die Texturressource verwendet werden soll. Siehe [**D3D11 \_ USAGE**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage).
+Die Art und Weise, wie die Texturressource verwendet werden soll. Weitere Informationen [**finden Sie unter D3D11 \_ USAGE**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage).
 
 </dd> <dt>
 
@@ -175,7 +175,7 @@ Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Filtern Sie die Textur mithilfe des angegebenen Filters (nur beim Resampling). Siehe [**D3DX11 \_ FILTER \_ FLAG**](d3dx11-filter-flag.md).
+Filtern Sie die Textur mithilfe des angegebenen Filters (nur beim Resampling). Weitere Informationen [**finden Sie unter D3DX11 \_ FILTER \_ FLAG**](d3dx11-filter-flag.md).
 
 </dd> <dt>
 
@@ -186,7 +186,7 @@ Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Filtern Sie die Textur-Mip-Ebenen mithilfe des angegebenen Filters (nur, wenn Mipmaps generiert werden). Gültige Werte sind D3DX11 \_ FILTER \_ NONE, D3DX11 \_ FILTER \_ POINT, D3DX11 \_ FILTER LINEAR oder \_ D3DX11 \_ FILTER \_ TRIANGLE. Siehe [**D3DX11 \_ FILTER \_ FLAG**](d3dx11-filter-flag.md).
+Filtern Sie die Textur-Mip-Ebenen mithilfe des angegebenen Filters (nur, wenn Mipmaps generiert werden). Gültige Werte sind D3DX11 \_ FILTER \_ NONE, D3DX11 \_ FILTER \_ POINT, D3DX11 \_ FILTER LINEAR oder \_ D3DX11 \_ FILTER \_ TRIANGLE. Weitere Informationen [**finden Sie unter D3DX11 \_ FILTER \_ FLAG**](d3dx11-filter-flag.md).
 
 </dd> <dt>
 
@@ -260,7 +260,7 @@ D3DX11_IMAGE_LOAD_INFO LoadInfo;
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
